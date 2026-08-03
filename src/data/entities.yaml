@@ -1108,14 +1108,14 @@ people:
         organizacion: ministerio_hacienda
         desde: 2026-03-11
     notas: Cuestiona designación de Sedini como vocera
-  pedro_tamayo:
-    nombre: Pedro Tamayo
+  mauro_tamayo:
+    nombre: Mauro Tamayo
     cargo: Alcalde de Cerro Navia
     cargos:
       - cargo: Alcalde de Cerro Navia
-        organizacion: ministerio_hacienda
+        organizacion: municipalidad_cerro_navia
         desde: 2024-12-06
-    notas: Propuso salida de la ACHM por apoyo a megarreforma
+    notas: Cuestionó al Gobierno por los homicidios en la comuna (31 julio 2026). Propuso salida de la ACHM por apoyo a megarreforma
   jaime_bassa:
     nombre: Jaime Bassa
     cargo: Constitucionalista (FA)
@@ -1785,6 +1785,35 @@ people:
   monica_rincon:
     nombre: Mónica Rincón
     cargo: Periodista y conductora de CNN Chile
+  sebastian_terraza:
+    nombre: Sebastián Terraza
+    cargo: Exvicepresidente del Partido Nacional Libertario en Los Ríos
+    cargos:
+      - cargo: Vicepresidente regional del Partido Nacional Libertario
+        organizacion: partido_nacional_libertario
+        hasta: 2026-07-31
+    notas: Expulsado por el tribunal regional del PNL por participar en el estallido social de 2019; apeló al Tribunal Supremo del partido alegando participación como "periodista encubierto".
+  maria_teresa_vial:
+    nombre: María Teresa Vial
+    cargo: Presidenta de la Cámara de Comercio de Santiago
+    cargos:
+      - cargo: Presidenta de la Cámara de Comercio de Santiago
+        organizacion: camara_comercio_santiago
+    notas: Habló en el 107° aniversario de la CCS (31 julio 2026), antes del discurso del presidente Kast.
+  carmen_cifuentes:
+    nombre: Carmen Cifuentes
+    cargo: Investigadora de CLAPES UC
+    cargos:
+      - cargo: Investigadora de CLAPES UC
+        organizacion: clapes_uc
+    notas: Alertó que "no se está creando empleo, se está destruyendo" ante el desempleo de 9,4% (agosto 2026).
+  paula_benavides:
+    nombre: Paula Benavides
+    cargo: Presidenta del Consejo Fiscal Autónomo
+    cargos:
+      - cargo: Presidenta del Consejo Fiscal Autónomo
+        organizacion: consejo_fiscal_autonomo
+    notas: Expuso ante la Comisión de Hacienda del Senado los riesgos fiscales de la megarreforma (8 junio 2026).
   hotuiti_teao:
     nombre: Hotuiti Teao Drago
     cargo: Diputado (Independiente, ex-PNL)
@@ -2444,6 +2473,26 @@ people:
     nombre: Marcelo Peña
     cargo: Académico de la Universidad Central
     notas: "Académico de la Universidad Central. Explicó a The Clinic el significado de los umbrales de detección en test de drogas de pelo (500 ng/g vs 300 ng/g) en el contexto del caso del exsubsecretario de Hacienda Juan Pablo Rodríguez."
+  gabriel_rodriguez:
+    nombre: Gabriel Rodríguez
+    cargo: Periodista y escritor
+    notas: "Periodista y escritor, Premio Nacional a la Trayectoria Literaria 2024. Autor del libro 'Auschwitz, Colonia Dignidad y más, historias de héroes y canallas'. Denunció que el seremi de las Culturas del Maule, Pablo Amaro, censuró la presentación de su libro en el Museo O'Higginiano de Talca (agosto 2026)."
+  rocio_alorda:
+    nombre: Rocío Alorda
+    cargo: Presidenta del Colegio de Periodistas de Chile
+    notas: "Periodista, presidenta del Colegio de Periodistas de Chile. Calificó como censura previa la suspensión de la presentación del libro de Gabriel Rodríguez en Talca (agosto 2026)."
+  roberto_celedon:
+    nombre: Roberto Celedón
+    cargo: Diputado independiente
+    notas: "Diputado independiente afín al Frente Amplio. Criticó como censura previa la suspensión de la presentación del libro de Gabriel Rodríguez en Talca (agosto 2026)."
+  rosanna_costa:
+    nombre: Rosanna Costa
+    cargo: Presidenta del Banco Central de Chile
+    notas: "Presidenta del Banco Central de Chile. Impulsó mesas de trabajo con la industria para desarrollar pagos inmediatos interoperables estilo Pix; se refirió al tema en el Chile Day de Nueva York (mayo 2026)."
+  juan_antonio_figueroa:
+    nombre: Juan Antonio Figueroa
+    cargo: Director ejecutivo de ChilePay
+    notas: "Director ejecutivo de ChilePay, organismo que reúne a los medios de pago en Chile. Comentó el desarrollo de un sistema de pagos inmediatos estilo Pix chileno (agosto 2026)."
 organizations:
   criteria:
     nombre: Criteria
@@ -3334,6 +3383,36 @@ organizations:
     tipo: encuestadora
     pais: Chile
     notas: "Consultora de investigación de mercados y estudios. Realizó el estudio de victimización y percepción de seguridad de la Región Metropolitana correspondiente al bimestre mayo-junio de 2026. Pavel Castillo es su gerente de Intelligence y economista conductual."
+  chilepay:
+    nombre: ChilePay
+    tipo: gremio
+    pais: Chile
+    notas: "Organismo que reúne a los medios de pago en Chile. Su director ejecutivo, Juan Antonio Figueroa, comentó el desarrollo de un sistema de pagos inmediatos interoperables estilo Pix chileno impulsado por los bancos (agosto 2026)."
+  colegio_periodistas:
+    nombre: Colegio de Periodistas de Chile
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio de periodistas. Su presidenta, Rocío Alorda, calificó como censura previa la suspensión de la presentación del libro de Gabriel Rodríguez en Talca (agosto 2026)."
+  camara_comercio_santiago:
+    nombre: Cámara de Comercio de Santiago (CCS)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio empresarial. En su 107° aniversario (31 julio 2026), el presidente Kast llamó a los partidos oficialistas a concentrarse en la agenda del Gobierno. Su presidenta es María Teresa Vial."
+  consejo_fiscal_autonomo:
+    nombre: Consejo Fiscal Autónomo (CFA)
+    tipo: organismo_publico
+    pais: Chile
+    notas: "Organismo técnico autónomo. Su presidenta, Paula Benavides, alertó ante el Senado que la megarreforma mantiene riesgos para las finanzas del Estado (8 junio 2026)."
+  clapes_uc:
+    nombre: CLAPES UC
+    tipo: centro_estudios
+    pais: Chile
+    notas: "Centro Latinoamericano de Políticas Económicas y Sociales de la Pontificia Universidad Católica. La investigadora Carmen Cifuentes alertó sobre la destrucción de empleo formal (agosto 2026)."
+  municipalidad_cerro_navia:
+    nombre: Municipalidad de Cerro Navia
+    tipo: municipalidad
+    pais: Chile
+    notas: "Comuna de la Región Metropolitana. Su alcalde, Mauro Tamayo, denunció que los homicidios de 2026 ya igualan la cifra de todo 2025 (31 julio 2026)."
 cifras:
   beneficio_iva_panales:
     nombre: Beneficio per cápita diario proyecto IVA pañales y medicamentos (PDG)
@@ -3781,3 +3860,43 @@ cifras:
     nombre: Reducción de quema de maquinaria en la Macrozona Sur
     unidad_default: "%"
     notas: "Reducción del 80% citada por el ministro Arrau el 28 de julio de 2026. Reportes preliminares señalan reducciones de entre 70% y 80% según provincia, sin desglose público oficial del 80%."
+  aprobacion_kast_pulso_ago:
+    nombre: Aprobación Kast encuesta Pulso Ciudadano agosto 2026
+    unidad_default: "%"
+    notas: "25,6%, el nivel más bajo desde que asumió. Baja de 3,3 puntos respecto de la medición anterior (28,9% en julio). Activa Research, 2 de agosto de 2026."
+  desaprobacion_kast_pulso_ago:
+    nombre: Desaprobación Kast encuesta Pulso Ciudadano agosto 2026
+    unidad_default: "%"
+    notas: "58,9%, la cifra más alta registrada desde el inicio de su administración. Subió 2,3 puntos respecto de la medición anterior. Activa Research, 2 de agosto de 2026."
+  aporte_fcm_las_condes_exencion:
+    nombre: Menor aporte de Las Condes al FCM por exención de contribuciones
+    unidad_default: millones_pesos
+    notas: "$24,7 mil millones, un 15% de lo que aporta actualmente al Fondo Común Municipal. Cifra de Hacienda vía Ley de Transparencia (La Tercera, 1 de agosto de 2026)."
+  aporte_fcm_vitacura_exencion:
+    nombre: Menor aporte de Vitacura al FCM por exención de contribuciones
+    unidad_default: millones_pesos
+    notas: "$14,1 mil millones, un 18,8% de lo que aporta al Fondo Común Municipal. Cifra de Hacienda vía Ley de Transparencia (La Tercera, 1 de agosto de 2026)."
+  aporte_fcm_lo_barnechea_exencion:
+    nombre: Menor aporte de Lo Barnechea al FCM por exención de contribuciones
+    unidad_default: millones_pesos
+    notas: "$12,5 mil millones, un 16,4% de lo que aporta al Fondo Común Municipal. Cifra de Hacienda vía Ley de Transparencia (La Tercera, 1 de agosto de 2026)."
+  perdida_total_fcm_exencion:
+    nombre: Pérdida total de recaudación municipal por exención de contribuciones a mayores de 65
+    unidad_default: millones_pesos
+    notas: "$122.527 millones que los municipios dejarán de recaudar por la exención; el Fisco los repondrá vía Tesorería General de la República. Hacienda vía Ley de Transparencia (La Tercera, 1 de agosto de 2026)."
+  homicidios_cerro_navia_2025:
+    nombre: Homicidios en Cerro Navia durante todo 2025
+    unidad_default: personas
+    notas: "Cifra citada por el alcalde Mauro Tamayo: a julio 2026 la comuna ya había alcanzado la misma cantidad de homicidios que todo el año 2025 (31 julio 2026)."
+  reduccion_secuestros_ene_jul_2026:
+    nombre: Reducción de secuestros enero-julio 2026 vs 2025
+    unidad_default: "%"
+    notas: "46% menos según cifras citadas por el presidente Kast en el 107° aniversario de la CCS (31 julio 2026), en comparación con el mismo período del año anterior."
+  reduccion_homicidios_ene_jul_2026:
+    nombre: Reducción de homicidios enero-julio 2026 vs 2025
+    unidad_default: "%"
+    notas: "17,6% menos según cifras citadas por el presidente Kast en el 107° aniversario de la CCS (31 julio 2026). Coincide con la cifra de 17,62% del balance preliminar de Carabineros y PDI."
+  impactos_balisticos_coquimbo:
+    nombre: Impactos balísticos en edificio consistorial de Coquimbo
+    unidad_default: impactos
+    notas: "Al menos tres proyectiles impactaron en los ventanales del sexto piso del edificio consistorial (madrugada del 31 julio 2026). Sin heridos."
