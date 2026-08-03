@@ -1,0 +1,73 @@
+---
+import Base from '../../layouts/Base.astro';
+import EventCard from '../../components/EventCard.astro';
+import { getAllOrganizations, getAllEvents, eventHasOrg } from '../../lib/queries';
+import { ArrowLeft, Building2, Layers, Globe, Calendar } from 'lucide-astro';
+
+export async function getStaticPaths() {
+  const orgs = await getAllOrganizations();
+  return orgs.map((org) => ({
+    params: { id: org.id },
+    props: { org },
+  }));
+}
+
+const { org } = Astro.props;
+
+const allEvents = await getAllEvents();
+const relatedEvents = allEvents.filter((e) => eventHasOrg(e.id, org.id));
+---
+
+<Base title={org.data.nombre}>
+  <div class="mb-6">
+    <a href="/organizations" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg transition-colors">
+      <ArrowLeft class="h-3.5 w-3.5" />
+      <span>Volver a Organizaciones</span>
+    </a>
+  </div>
+
+  <header class="mb-8 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+    <div class="flex items-start gap-4">
+      <div class="h-12 w-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg shrink-0">
+        <Building2 class="h-6 w-6" />
+      </div>
+      <div class="min-w-0 flex-1">
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{org.data.nombre}</h1>
+        {org.data.tipo && (
+          <p class="flex items-center gap-1.5 text-sm text-gray-700 font-medium mt-1">
+            <Layers class="h-4 w-4 text-gray-400 shrink-0" />
+            <span>{org.data.tipo}</span>
+          </p>
+        )}
+        {org.data.pais && (
+          <p class="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
+            <Globe class="h-3.5 w-3.5 text-gray-400 shrink-0" />
+            <span>País: {org.data.pais}</span>
+          </p>
+        )}
+      </div>
+    </div>
+  </header>
+
+  {org.data.bio && (
+    <div class="prose prose-gray max-w-none mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm leading-relaxed" set:html={org.data.bio} />
+  )}
+
+  <section class="mt-8">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+        <Calendar class="h-5 w-5 text-blue-600" />
+        <span>Eventos relacionados ({relatedEvents.length})</span>
+      </h2>
+    </div>
+    <div class="grid gap-4">
+      {relatedEvents.map((event) => <EventCard event={event} />)}
+      {relatedEvents.length === 0 && (
+        <p class="text-sm text-gray-500 bg-white p-8 rounded-xl border border-dashed border-gray-300 text-center">
+          No hay eventos registrados para esta organización.
+        </p>
+      )}
+    </div>
+  </section>
+</Base>
+

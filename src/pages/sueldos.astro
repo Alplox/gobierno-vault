@@ -1,0 +1,159 @@
+---
+import Base from '../layouts/Base.astro';
+import { DollarSign } from 'lucide-astro';
+
+const cargos = [
+  {
+    cargo: 'Jefe de asesores (Segundo Piso)',
+    kast: { nombre: 'Alejandro Irarrázaval', sueldo: 6_990_000 },
+    boric: { nombre: 'Aisén Etcheverry', sueldo: 6_050_221 },
+  },
+  {
+    cargo: 'Jefa de gabinete presidencial',
+    kast: { nombre: 'Catalina Ugarte', sueldo: 6_990_000 },
+    boric: { nombre: 'Carlos Durán', sueldo: 6_096_017 },
+  },
+  {
+    cargo: 'Jefa de comunicaciones',
+    kast: { nombre: 'María Paz Fadel', sueldo: 6_500_000 },
+    boric: { nombre: 'Nicole Vergara', sueldo: 5_403_752 },
+  },
+  {
+    cargo: 'Asesor internacional',
+    kast: { nombre: 'Eitán Bloch', sueldo: 6_500_000 },
+    boric: { nombre: 'Carlos Figueroa', sueldo: 4_520_921 },
+  },
+  {
+    cargo: 'Administrador de La Moneda',
+    kast: { nombre: 'Julio Feres', sueldo: 7_866_893 },
+    boric: { nombre: 'Antonia Illanes', sueldo: 7_724_792 },
+  },
+];
+
+const topes = [
+  { rango: 'Asesores del Presidente', topeKast: 9_963_058, topeBoric: 5_490_352 },
+  { rango: 'Asesores comité político', topeKast: 8_199_480, topeBoric: null },
+  { rango: 'Asesores resto ministerios', topeKast: 7_415_182, topeBoric: null },
+  { rango: 'Honorarios gabinetes (tope)', topeKast: 5_490_352, topeBoric: null },
+];
+
+const formatCLP = (n: number) => '$' + n.toLocaleString('es-CL');
+const pct = (a: number, b: number) => ((a - b) / b * 100).toFixed(1);
+---
+
+<Base title="Sueldos de confianza">
+  <article class="max-w-4xl mx-auto">
+    <header class="mb-8">
+      <div class="flex items-center gap-2 mb-1">
+        <DollarSign class="h-6 w-6 text-blue-600 shrink-0" />
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Sueldos de cargos de confianza</h1>
+      </div>
+      <p class="text-gray-500 text-sm">Comparación remuneraciones del Segundo Piso: gobierno de Kast vs. Boric. Fuente: The Clinic (19 may 2026), Dipres Oficio Circular N°15.</p>
+    </header>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Topes salariales fijados por Dipres</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Rango</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Kast (tope)</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Boric (tope)</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Diferencia</th>
+            </tr>
+          </thead>
+          <tbody>
+            {topes.map((t) => (
+              <tr class="border-b border-gray-100">
+                <td class="py-2 px-3 text-gray-900">{t.rango}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(t.topeKast)}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-gray-500">
+                  {t.topeBoric ? formatCLP(t.topeBoric) : '—'}
+                </td>
+                <td class="py-2 px-3 text-right tabular-nums text-red-600 font-medium">
+                  {t.topeBoric ? `+${pct(t.topeKast, t.topeBoric)}%` : '—'}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Comparación cargo a cargo (abril 2026)</h2>
+      <p class="text-sm text-gray-500 mb-3">
+        Primer mes completo con sueldo íntegro. Kast asumió el 11 de marzo; marzo fue proporcional.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Cargo</th>
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Kast</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Sueldo</th>
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Boric</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Sueldo</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Δ</th>
+            </tr>
+          </thead>
+          <tbody>
+            {cargos.map((c) => (
+              <tr class="border-b border-gray-100 hover:bg-gray-50">
+                <td class="py-2 px-3 text-gray-900 font-medium">{c.cargo}</td>
+                <td class="py-2 px-3 text-gray-700">{c.kast.nombre}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(c.kast.sueldo)}</td>
+                <td class="py-2 px-3 text-gray-500">{c.boric.nombre}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-gray-500">{formatCLP(c.boric.sueldo)}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-red-600 font-medium">
+                  +{pct(c.kast.sueldo, c.boric.sueldo)}%
+                </td>
+              </tr>
+            ))}
+          </tbody>
+          <tfoot>
+            <tr class="border-t-2 border-gray-300 font-bold">
+              <td class="py-2 px-3" colspan={2}>Promedio</td>
+              <td class="py-2 px-3 text-right tabular-nums">
+                {formatCLP(Math.round(cargos.reduce((s, c) => s + c.kast.sueldo, 0) / cargos.length))}
+              </td>
+              <td class="py-2 px-3" colspan={2}></td>
+              <td class="py-2 px-3 text-right tabular-nums text-red-600">
+                +{pct(
+                  cargos.reduce((s, c) => s + c.kast.sueldo, 0) / cargos.length,
+                  cargos.reduce((s, c) => s + c.boric.sueldo, 0) / cargos.length
+                )}%
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Contexto</h2>
+      <div class="prose prose-sm text-gray-700 space-y-3">
+        <p>
+          El 17 de marzo de 2026, la Dipres emitió el Oficio Circular N°15 que fijó los nuevos topes salariales
+          para asesores estratégicos del Presidente y ministros. La medida fue firmada por el ministro de Hacienda
+          <span class="font-medium">Jorge Quiroz</span>.
+        </p>
+        <p>
+          Durante el gobierno de Boric, los asesores percibían entre 25% y 90% de la remuneración del subsecretario
+          correspondiente, con un tope real de alrededor de $5,5 millones. El nuevo esquema de Kast eleva ese tope a
+          casi $10 millones, con un mínimo del 70% de la remuneración de la autoridad asesorada.
+        </p>
+        <p>
+          La medida se produce en un contexto de "emergencia" declarada por el propio gobierno, que ha anunciado
+          recortes presupuestarios en diversas áreas, incluyendo un recorte de $706 millones al presupuesto de la
+          Presidencia de la República.
+        </p>
+        <p class="text-gray-500 text-xs">
+          Evento registrado: <a href="/events/2026/20260320-2" class="text-blue-600 hover:underline">20260320-2</a>
+          · Evento MEPCO (impacto en precios): <a href="/events/2026/20260326-1" class="text-blue-600 hover:underline">20260326-1</a>
+        </p>
+      </div>
+    </section>
+  </article>
+</Base>

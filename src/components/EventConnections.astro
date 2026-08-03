@@ -1,0 +1,88 @@
+---
+import RelationLink from './RelationLink.astro';
+import { inferredToEdge, type EventConnections, type InferredEdge } from '../lib/relations';
+import { GitFork, ArrowUpRight, ArrowDownRight, Layers } from 'lucide-astro';
+
+interface Props {
+  connections: EventConnections;
+  topicsMap: Map<string, string>;
+}
+
+const { connections, topicsMap } = Astro.props;
+const { outgoing, incoming, inferred } = connections;
+const hasExplicit = outgoing.length > 0 || incoming.length > 0;
+const hasInferred = inferred.length > 0;
+
+if (!hasExplicit && !hasInferred) return null;
+
+function inferredReason(edge: InferredEdge): string {
+  const parts: string[] = [];
+  if (edge.sharedTemas.length > 0) {
+    parts.push(edge.sharedTemas.map((id) => topicsMap.get(id) ?? id).join(', '));
+  }
+  if (edge.sharedEtiquetas.length > 0) {
+    parts.push(edge.sharedEtiquetas.slice(0, 2).join(', '));
+  }
+  return parts.join(' · ');
+}
+---
+
+<section class="mb-10 border-t border-gray-200/80 pt-8">
+  <div class="flex items-center gap-2 mb-1">
+    <GitFork class="h-5 w-5 text-blue-600 shrink-0" />
+    <h2 class="text-lg font-bold tracking-tight text-gray-900 text-balance">Conexiones</h2>
+  </div>
+  <p class="mb-6 text-sm leading-relaxed text-gray-600">
+    Sigue el hilo entre acontecimientos relacionados de forma explicita o por contexto compartido.
+  </p>
+
+  {hasExplicit && (
+    <div class="grid gap-6 md:grid-cols-2">
+      {outgoing.length > 0 && (
+        <div>
+          <h3 class="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-600">
+            <ArrowUpRight class="h-4 w-4 text-blue-600" />
+            Desde este evento
+          </h3>
+          <div class="space-y-2.5">
+            {outgoing.map((edge) => (
+              <RelationLink edge={edge} />
+            ))}
+          </div>
+        </div>
+      )}
+
+      {incoming.length > 0 && (
+        <div>
+          <h3 class="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-600">
+            <ArrowDownRight class="h-4 w-4 text-emerald-600" />
+            Vinculado desde
+          </h3>
+          <div class="space-y-2.5">
+            {incoming.map((edge) => (
+              <RelationLink edge={edge} />
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  )}
+
+  {hasInferred && (
+    <div class:list={[hasExplicit ? 'mt-8 border-t border-gray-100 pt-6' : '']}>
+      <h3 class="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-600">
+        <Layers class="h-4 w-4 text-amber-600" />
+        Mismo contexto
+      </h3>
+      <p class="mb-3 text-xs text-gray-500">
+        Eventos con temas o etiquetas en comun.
+      </p>
+      <div class="space-y-2.5">
+        {inferred.map((edge) => (
+          <RelationLink edge={inferredToEdge(edge)} subtitle={inferredReason(edge)} />
+        ))}
+      </div>
+    </div>
+  )}
+</section>
+

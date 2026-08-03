@@ -1,0 +1,27 @@
+{
+  "name": "gobierno-vault",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "validate": "node scripts/validate.mjs",
+    "generate-index": "node scripts/generate-index.mjs",
+    "add-source": "node scripts/add-source.mjs",
+    "build": "node scripts/validate.mjs && set NODE_OPTIONS=--experimental-global-customevent&& astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/markdown-remark": "^7.2.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "@lucide/astro": "^1.26.0",
+    "@tailwindcss/typography": "^0.5.20",
+    "astro": "^7.1.1",
+    "d3-force": "^3.0.0",
+    "lucide-astro": "^0.556.0",
+    "mermaid": "^11.16.0",
+    "remark-wiki-link": "^2.0.1",
+    "tailwindcss": "^3.4.19",
+    "unist-util-visit": "^5.1.0",
+    "yaml": "^2.9.0"
+  }
+}

@@ -1,0 +1,217 @@
+---
+import { ChevronDown, Layers, X } from 'lucide-astro';
+
+interface NavSection {
+  id: string;
+  label: string;
+  railLabel?: string;
+  level?: string;
+  children?: NavSection[];
+}
+
+const { sections = [] } = Astro.props;
+const flatSections: NavSection[] = [];
+for (const s of sections) {
+  flatSections.push(s);
+  if (s.children) flatSections.push(...s.children);
+}
+
+const railLabelClass = (level?: string) =>
+  level === 'decade'
+    ? 'text-xs font-bold text-gray-500 hover:text-blue-600'
+    : level === 'year'
+      ? 'text-[11px] font-semibold text-gray-400 hover:text-blue-600'
+      : 'text-[10px] font-medium text-gray-300 hover:text-blue-600';
+---
+
+{sections.length > 0 && (
+  <>
+    <nav
+      id="timeline-rail"
+      class="fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-1 lg:flex"
+      aria-label="Índice temporal"
+    >
+      {flatSections.map((s) => (
+        <a
+          href={`#${s.id}`}
+          class={`timeline-rail-label group rounded px-1.5 py-0.5 leading-none transition-colors ${railLabelClass(s.level)}`}
+          data-target={s.id}
+          data-label={s.id}
+          aria-label={s.label}
+        >
+          {s.railLabel ?? s.label}
+        </a>
+      ))}
+    </nav>
+
+    <button
+      id="timeline-fab"
+      class="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white shadow-lg transition-transform hover:scale-105 lg:hidden"
+      aria-label="Abrir índice temporal"
+      aria-expanded="false"
+    >
+      <Layers class="h-5 w-5" />
+    </button>
+
+    <div id="timeline-sheet" class="pointer-events-none fixed inset-x-0 bottom-0 z-50 lg:hidden" aria-hidden="true">
+      <div id="timeline-sheet-backdrop" class="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-200" />
+      <div class="relative mx-auto max-h-[70vh] w-full max-w-xl translate-y-full overflow-y-auto rounded-t-2xl bg-white p-4 shadow-2xl transition-transform duration-300">
+        <div class="mb-3 flex items-center justify-between">
+          <h3 class="text-sm font-bold text-gray-900">Índice temporal</h3>
+          <button id="timeline-sheet-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100" aria-label="Cerrar">
+            <X class="h-4 w-4" />
+          </button>
+        </div>
+        <div class="space-y-1">
+          {sections.map((decade) => (
+            <div>
+              <button type="button" class="timeline-sheet-toggle group flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left text-sm font-semibold text-gray-900 hover:bg-gray-100" data-toggle-group={`sheet-${decade.id}`} aria-expanded="true">
+                <ChevronDown class="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform duration-200 group-aria-expanded:rotate-180" />
+                {decade.label}
+              </button>
+              <div id={`sheet-${decade.id}`} class="ml-4 space-y-0.5 border-l border-gray-200 pl-3">
+                {decade.children?.map((year) => (
+                  <div>
+                    <button type="button" class="timeline-sheet-toggle group flex w-full items-center gap-2 rounded-lg px-2 py-1 text-left text-sm font-medium text-gray-700 hover:bg-gray-100" data-toggle-group={`sheet-${year.id}`} aria-expanded="true">
+                      <ChevronDown class="h-3 w-3 shrink-0 text-gray-400 transition-transform duration-200 group-aria-expanded:rotate-180" />
+                      {year.label}
+                    </button>
+                    <div id={`sheet-${year.id}`} class="ml-4 flex flex-wrap gap-1 pb-1">
+                      {year.children?.map((month) => (
+                        <a href={`#${month.id}`} class="timeline-sheet-link rounded-md bg-gray-100 px-1.5 py-0.5 text-[11px] text-gray-600 hover:bg-blue-50 hover:text-blue-700" data-target={month.id}>
+                          {month.label}
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </>
+)}
+
+<script>
+  const rail = document.getElementById('timeline-rail');
+  const fab = document.getElementById('timeline-fab');
+  const sheet = document.getElementById('timeline-sheet');
+  const sheetBackdrop = document.getElementById('timeline-sheet-backdrop');
+  const sheetClose = document.getElementById('timeline-sheet-close');
+  const sheetPanel = sheet?.querySelector('.translate-y-full');
+
+  const railIsVisible = () => {
+    if (!rail) return false;
+    const main = document.querySelector('main');
+    if (!main) return true;
+    const mainRight = main.getBoundingClientRect().right;
+    return window.innerWidth - mainRight >= 64;
+  };
+
+  const updateRailVisibility = () => {
+    if (!rail) return;
+    rail.classList.toggle('opacity-0', !railIsVisible());
+    rail.classList.toggle('pointer-events-none', !railIsVisible());
+    rail.classList.toggle('transition-opacity', true);
+    rail.classList.toggle('duration-300', true);
+  };
+
+  updateRailVisibility();
+  window.addEventListener('resize', updateRailVisibility);
+  const ro = new ResizeObserver(updateRailVisibility);
+  const mainEl = document.querySelector('main');
+  if (mainEl) ro.observe(mainEl);
+
+  const openSheet = () => {
+    if (!sheet) return;
+    sheet.setAttribute('aria-hidden', 'false');
+    sheet.classList.remove('pointer-events-none');
+    sheetBackdrop?.classList.remove('opacity-0');
+    sheetPanel?.classList.remove('translate-y-full');
+    fab?.setAttribute('aria-expanded', 'true');
+  };
+
+  const closeSheet = () => {
+    if (!sheet) return;
+    sheet.setAttribute('aria-hidden', 'true');
+    sheet.classList.add('pointer-events-none');
+    sheetBackdrop?.classList.add('opacity-0');
+    sheetPanel?.classList.add('translate-y-full');
+    fab?.setAttribute('aria-expanded', 'false');
+  };
+
+  fab?.addEventListener('click', () => {
+    const isOpen = sheet?.getAttribute('aria-hidden') === 'false';
+    if (isOpen) closeSheet();
+    else openSheet();
+  });
+  sheetBackdrop?.addEventListener('click', closeSheet);
+  sheetClose?.addEventListener('click', closeSheet);
+
+  document.querySelectorAll<HTMLButtonElement>('.timeline-sheet-toggle').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const group = btn.dataset.toggleGroup;
+      const container = document.getElementById(group ?? '');
+      if (!container) return;
+      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+      container.classList.toggle('hidden', isExpanded);
+      btn.setAttribute('aria-expanded', String(!isExpanded));
+    });
+  });
+
+  const expandAncestors = (targetId: string) => {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    let current: HTMLElement | null = el;
+    while (current) {
+      const details = current.parentElement?.closest('details[data-persist]') as HTMLDetailsElement | null;
+      if (details && !details.open) details.open = true;
+      current = details ?? current.parentElement;
+    }
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
+
+  document.querySelectorAll<HTMLAnchorElement>('[data-target]').forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.dataset.target!;
+      expandAncestors(targetId);
+      closeSheet();
+    });
+  });
+
+  const dots = new Map<string, HTMLElement>();
+  document.querySelectorAll<HTMLElement>('[data-label]').forEach((dot) => {
+    dots.set(dot.dataset.label!, dot);
+  });
+
+  const targetEls = [...dots.keys()]
+    .map((id) => document.getElementById(id))
+    .filter((el): el is HTMLElement => el !== null);
+
+  const setActiveDot = (activeId: string | null) => {
+    dots.forEach((label, id) => {
+      const isActive = id === activeId;
+      label.classList.toggle('!text-blue-600', isActive);
+      label.classList.toggle('!bg-blue-50', isActive);
+      label.classList.toggle('rounded', isActive);
+    });
+  };
+
+  if ('IntersectionObserver' in window && targetEls.length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((e) => e.isIntersecting);
+        if (visible.length === 0) return;
+        visible.sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top);
+        setActiveDot(visible[0].target.id);
+      },
+      { rootMargin: '-80px 0px -65% 0px', threshold: 0 }
+    );
+    targetEls.forEach((el) => observer.observe(el));
+  }
+
+  window.addEventListener('beforeunload', () => ro.disconnect());
+</script>

@@ -1,0 +1,253 @@
+---
+import { eventBasename, eventYearFromDate, RELATION_LABELS, countExplicitConnections, type EventConnections, type RelationEdge } from '../lib/relations';
+import { TIPO_LABELS, TIPO_COLORS } from '../lib/eventTypes';
+
+interface Props {
+  events: any[];
+  connectionIndex: Map<string, EventConnections>;
+  size: 'mini' | 'full';
+}
+
+const { events, connectionIndex, size } = Astro.props;
+
+const edgeColorMap: Record<string, string> = {
+  contradice: '#ef4444', confirma: '#10b981', cumple: '#10b981',
+  incumple: '#ef4444', amplia: '#0ea5e9', corrige: '#f59e0b',
+  rectifica: '#f59e0b', responde_a: '#8b5cf6', deriva_en: '#6366f1',
+  provoca: '#f97316', cita: '#78716c', reemplaza: '#06b6d4',
+  actualiza: '#3b82f6', mismo_contexto: '#a8a29e',
+};
+
+// Filter for mini mode: last 3 months + their direct connections
+let graphEvents = events;
+if (size === 'mini' && events.length > 0) {
+  const now = new Date();
+  const threeMonthsAgo = new Date(now.getFullYear(), now.getMonth() - 3, 1);
+  const recentIds = new Set<string>();
+  for (const e of events) {
+    if (new Date(e.data.fecha) >= threeMonthsAgo) {
+      recentIds.add(eventBasename(e.id));
+    }
+  }
+  // Also include events that connect to/from recent ones
+  const connectedIds = new Set<string>();
+  for (const id of recentIds) {
+    const conn = connectionIndex.get(id);
+    if (!conn) continue;
+    for (const edge of [...conn.outgoing, ...conn.incoming]) {
+      connectedIds.add(edge.eventId);
+    }
+  }
+  const allRelevantIds = new Set([...recentIds, ...connectedIds]);
+  graphEvents = events.filter((e) => allRelevantIds.has(eventBasename(e.id)));
+}
+
+if (graphEvents.length === 0) {
+  return null;
+}
+
+// Compute positions
+const dates = graphEvents.map((e) => new Date(e.data.fecha).getTime());
+const minTime = Math.min(...dates);
+const maxTime = Math.max(...dates);
+const timeSpan = maxTime - minTime || 1;
+
+const PAD_X = 60;
+const PAD_Y = 40;
+const width = size === 'mini' ? 800 : 1200;
+const height = size === 'mini' ? 280 : 600;
+const plotW = width - PAD_X * 2;
+const plotH = height - PAD_Y * 2;
+
+// Group by month for Y distribution
+const monthGroups = new Map<string, number[]>();
+for (let i = 0; i < graphEvents.length; i++) {
+  const d = new Date(graphEvents[i].data.fecha);
+  const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+  if (!monthGroups.has(key)) monthGroups.set(key, []);
+  monthGroups.get(key)!.push(i);
+}
+
+// Assign Y positions: spread within each month group
+const positions: { x: number; y: number }[] = new Array(graphEvents.length);
+const sortedMonths = [...monthGroups.keys()].sort();
+const monthStep = sortedMonths.length > 1 ? plotH / (sortedMonths.length - 1) : plotH / 2;
+
+for (let mi = 0; mi < sortedMonths.length; mi++) {
+  const indices = monthGroups.get(sortedMonths[mi])!;
+  const centerY = PAD_Y + mi * monthStep;
+  const spacing = size === 'mini' ? 28 : 36;
+  const startY = centerY - ((indices.length - 1) * spacing) / 2;
+  for (let ii = 0; ii < indices.length; ii++) {
+    const idx = indices[ii];
+    const t = (dates[idx] - minTime) / timeSpan;
+    positions[idx] = {
+      x: PAD_X + t * plotW,
+      y: Math.max(PAD_Y, Math.min(height - PAD_Y, startY + ii * spacing)),
+    };
+  }
+}
+
+// Collect edges to draw (only explicit connections between visible events)
+const visibleIds = new Set(graphEvents.map((e) => eventBasename(e.id)));
+type GraphEdge = { from: number; to: number; tipo: string; label: string };
+const graphEdges: GraphEdge[] = [];
+const drawnEdges = new Set<string>();
+
+for (let i = 0; i < graphEvents.length; i++) {
+  const id = eventBasename(graphEvents[i].id);
+  const conn = connectionIndex.get(id);
+  if (!conn) continue;
+  for (const edge of [...conn.outgoing, ...conn.incoming]) {
+    if (!visibleIds.has(edge.eventId)) continue;
+    const j = graphEvents.findIndex((e) => eventBasename(e.id) === edge.eventId);
+    if (j < 0) continue;
+    const key = [Math.min(i, j), Math.max(i, j), edge.tipo].join('-');
+    if (drawnEdges.has(key)) continue;
+    drawnEdges.add(key);
+    graphEdges.push({
+      from: edge.direction === 'outgoing' ? i : j,
+      to: edge.direction === 'outgoing' ? j : i,
+      tipo: edge.tipo,
+      label: RELATION_LABELS[edge.tipo] ?? edge.tipo,
+    });
+  }
+}
+
+const markers = [...new Set(graphEdges.map((e) => e.tipo))];
+
+// Build graph data for client-side interactivity
+const graphNodes = graphEvents.map((event, i) => ({
+  id: eventBasename(event.id),
+  label: event.data.titulo,
+  color: TIPO_COLORS[event.data.tipo] ?? '#6b7280',
+  year: eventYearFromDate(event.data.fecha),
+  tipo: event.data.tipo,
+  tipoLabel: TIPO_LABELS[event.data.tipo] || event.data.tipo,
+  fecha: new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' }),
+  connections: (() => { const c = connectionIndex.get(eventBasename(event.id)); return c ? countExplicitConnections(c) : 0; })(),
+  x: positions[i].x,
+  y: positions[i].y,
+  url: `/events/${eventYearFromDate(event.data.fecha)}/${eventBasename(event.id)}`,
+}));
+
+const graphLinks = graphEdges.map((e) => ({
+  source: graphNodes[e.from].id,
+  target: graphNodes[e.to].id,
+  tipo: e.tipo,
+  label: e.label,
+}));
+---
+
+<div class:list={[
+  'relative overflow-hidden rounded-xl border border-gray-200 bg-white',
+  size === 'mini' ? 'mb-6' : '',
+]}>
+  {size === 'full' && (
+    <div class="border-b border-gray-100 px-5 py-3">
+      <h2 class="text-sm font-semibold text-gray-800">Grafo de relaciones</h2>
+      <p class="text-xs text-gray-500">Nodos = eventos, flechas = relaciones explicitas. Arrastra nodos, scroll para zoom, shift+drag para mover vista.</p>
+    </div>
+  )}
+  <div id="graph-container" data-width={width} data-height={height} class:list={[
+    size === 'mini' ? 'mb-6' : '',
+  ]}>
+    <svg
+      id={`graph-svg-${size}`}
+      viewBox={`0 0 ${width} ${height}`}
+      class:list={[size === 'mini' ? 'w-full' : 'min-w-[1200px]']}
+      font-family="system-ui, -apple-system, sans-serif"
+    >
+      <defs>
+        {markers.map((tipo) => (
+          <marker id={`arrow-${tipo}-${size}`} viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+            <path d="M0,0 L10,3 L0,6" fill={edgeColorMap[tipo] ?? '#78716c'} />
+          </marker>
+        ))}
+      </defs>
+      <g id={`graph-content-${size}`}>
+        {/* Edges */}
+        {graphEdges.map((edge) => {
+          const from = positions[edge.from];
+          const to = positions[edge.to];
+          if (!from || !to) return null;
+          const color = edgeColorMap[edge.tipo] ?? '#78716c';
+          const dx = to.x - from.x;
+          const dy = to.y - from.y;
+          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
+          const r = size === 'mini' ? 6 : 8;
+          const sx = from.x + (dx / dist) * r;
+          const sy = from.y + (dy / dist) * r;
+          const ex = to.x - (dx / dist) * (r + 8);
+          const ey = to.y - (dy / dist) * (r + 8);
+          return (
+            <g class="graph-edge" data-source={graphNodes[edge.from]?.id ?? ''} data-target={graphNodes[edge.to]?.id ?? ''}>
+              <line x1={sx} y1={sy} x2={ex} y2={ey} stroke={color} stroke-width="1.5" stroke-opacity="0.5" marker-end={`url(#arrow-${edge.tipo}-${size})`} />
+              {size === 'full' && (
+                <text x={(sx + ex) / 2} y={(sy + ey) / 2 - 4} text-anchor="middle" fill={color} font-size="9" font-weight="500" opacity="0.8">
+                  {edge.label}
+                </text>
+              )}
+            </g>
+          );
+        })}
+
+        {/* Nodes */}
+        {graphEvents.map((event, i) => {
+          const pos = positions[i];
+          if (!pos) return null;
+          const id = eventBasename(event.id);
+          const year = eventYearFromDate(event.data.fecha);
+          const color = TIPO_COLORS[event.data.tipo] ?? '#6b7280';
+          const conn = connectionIndex.get(id);
+          const count = conn ? countExplicitConnections(conn) : 0;
+          const r = size === 'mini' ? 6 : 8;
+          const title = event.data.titulo;
+          const maxChars = size === 'mini' ? 28 : 42;
+          const label = title.length > maxChars ? title.slice(0, maxChars) + '...' : title;
+          const fechaStr = new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' });
+          return (
+            <g class="graph-node" data-id={id} data-url={`/events/${year}/${id}`}>
+              <circle cx={pos.x} cy={pos.y} r={r} fill={color} stroke="white" stroke-width="2" style="cursor: pointer;" />
+              {count > 0 && size === 'full' && (
+                <circle cx={pos.x + r + 4} cy={pos.y - r - 2} r="7" fill="#3b82f6" stroke="white" stroke-width="1.5" />
+              )}
+              {count > 0 && size === 'full' && (
+                <text x={pos.x + r + 4} y={pos.y - r + 1} text-anchor="middle" fill="white" font-size="8" font-weight="600" style="pointer-events: none;">
+                  {count}
+                </text>
+              )}
+              <text
+                x={pos.x}
+                y={pos.y + r + (size === 'mini' ? 12 : 14)}
+                text-anchor="middle"
+                fill="#44403c"
+                font-size={size === 'mini' ? '9' : '11'}
+                font-weight="500"
+                style="pointer-events: none;"
+              >
+                {label}
+              </text>
+              {size === 'full' && (
+                <text x={pos.x} y={pos.y + r + 26} text-anchor="middle" fill="#a8a29e" font-size="9" style="pointer-events: none;">
+                  {fechaStr}
+                </text>
+              )}
+              <title>{`${title}\n${TIPO_LABELS[event.data.tipo] || event.data.tipo} · ${fechaStr}${count > 0 ? `\n${count} vinculo(s)` : ''}`}</title>
+            </g>
+          );
+        })}
+      </g>
+    </svg>
+  </div>
+  {size === 'full' && (
+    <div class="pointer-events-none absolute bottom-4 right-4 flex flex-col gap-1">
+      <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-50 text-sm font-bold" title="Zoom in">+</button>
+      <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-50 text-sm font-bold" title="Zoom out">−</button>
+      <button id="zoom-reset" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-50 text-xs" title="Reset view">⟲</button>
+    </div>
+  )}
+  <div id="graph-tooltip" class="pointer-events-none fixed z-50 hidden max-w-xs rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-gray-700 shadow-lg" />
+</div>
+
+  <script type="application/json" id="graph-data" set:html={JSON.stringify({ nodes: graphNodes, links: graphLinks, size })} />

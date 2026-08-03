@@ -1,0 +1,459 @@
+---
+import { getEventEntities, getPeopleMap, getTopicsMap, getAllEvents } from '../lib/queries';
+import {
+  buildConnectionIndex,
+  countExplicitConnections,
+  eventBasename,
+  eventYearFromDate,
+  RELATION_LABELS,
+} from '../lib/relations';
+import { Clock, User, Tag, GitFork, ChevronRight, ChevronDown, AlertCircle } from 'lucide-astro';
+import { TIPO_LABELS, TIPO_STYLES } from '../lib/eventTypes';
+import TimelineNav from './TimelineNav.astro';
+
+const { events } = Astro.props;
+
+const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const monthShort = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
+const weekdayNames = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
+
+const [peopleMap, topicsMap, allEvents] = await Promise.all([
+  getPeopleMap(),
+  getTopicsMap(),
+  getAllEvents(),
+]);
+const connectionIndex = buildConnectionIndex(allEvents);
+
+function formatEventTime(date: Date): string | null {
+  const parts = new Intl.DateTimeFormat('es-CL', {
+    timeZone: 'America/Santiago',
+    hour: '2-digit',
+    minute: '2-digit',
+    hour12: false,
+  }).formatToParts(date);
+  const hour = parts.find((p) => p.type === 'hour')?.value ?? '00';
+  const minute = parts.find((p) => p.type === 'minute')?.value ?? '00';
+  if (hour === '00' && minute === '00') return null;
+  return `${hour}:${minute}`;
+}
+
+function dayKey(date: Date): string {
+  return new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Santiago',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).format(date);
+}
+
+interface DayGroup {
+  key: string;
+  day: number;
+  month: number;
+  year: number;
+  weekday: string;
+  events: typeof events;
+}
+interface MonthGroup {
+  key: string;
+  month: number;
+  year: number;
+  days: DayGroup[];
+}
+interface YearGroup {
+  year: number;
+  months: MonthGroup[];
+}
+interface DecadeGroup {
+  decade: number;
+  years: YearGroup[];
+}
+
+const decades: DecadeGroup[] = [];
+
+for (const event of events) {
+  const d = new Date(event.data.fecha);
+  const year = eventYearFromDate(d);
+  const month = parseInt(
+    new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', month: '2-digit' }).format(d),
+    10
+  );
+  const key = dayKey(d);
+  const day = parseInt(key.slice(-2), 10);
+  const weekday = weekdayNames[d.getDay()];
+
+  const decadeIndex = Math.floor(year / 10);
+  let decade = decades.find((d) => d.decade === decadeIndex);
+  if (!decade) {
+    decade = { decade: decadeIndex, years: [] };
+    decades.push(decade);
+  }
+  let yearGroup = decade.years.find((y) => y.year === year);
+  if (!yearGroup) {
+    yearGroup = { year, months: [] };
+    decade.years.push(yearGroup);
+  }
+  const monthKey = `${year}-${String(month).padStart(2, '0')}`;
+  let monthGroup = yearGroup.months.find((m) => m.key === monthKey);
+  if (!monthGroup) {
+    monthGroup = { key: monthKey, month, year, days: [] };
+    yearGroup.months.push(monthGroup);
+  }
+  let dayGroup = monthGroup.days.find((dg) => dg.key === key);
+  if (!dayGroup) {
+    dayGroup = { key, day, month, year, weekday, events: [] };
+    monthGroup.days.push(dayGroup);
+  }
+  dayGroup.events.push(event);
+}
+
+for (const decade of decades) {
+  decade.years.sort((a, b) => b.year - a.year);
+  for (const yearGroup of decade.years) {
+    yearGroup.months.sort((a, b) => (b.key < a.key ? -1 : 1));
+    for (const monthGroup of yearGroup.months) {
+      monthGroup.days.sort((a, b) => (b.key < a.key ? -1 : 1));
+      for (const dayGroup of monthGroup.days) {
+        dayGroup.events.sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
+      }
+    }
+  }
+}
+decades.sort((a, b) => b.decade - a.decade);
+
+const currentYear = new Date().getFullYear();
+
+const navSections = decades.map((d) => ({
+  id: `decade-${d.decade}`,
+  label: `${d.decade}0s`,
+  railLabel: `${d.decade}0s`,
+  level: 'decade',
+  children: d.years.map((y) => ({
+    id: `year-${y.year}`,
+    label: `${y.year}`,
+    railLabel: `${y.year}`,
+    level: 'year',
+    children: y.months.map((m) => ({
+      id: `month-${m.key}`,
+      label: `${monthNames[m.month - 1]} ${m.year}`,
+      railLabel: `${monthShort[m.month - 1]} ${String(m.year).slice(-2)}`,
+      level: 'month',
+    })),
+  })),
+}));
+---
+
+{events.length === 0 ? (
+  <div class="rounded-xl border border-dashed border-gray-200 bg-white px-6 py-16 text-center">
+    <AlertCircle class="mx-auto h-8 w-8 text-gray-400 mb-2" />
+    <p class="text-sm font-medium text-gray-800">Sin eventos registrados</p>
+    <p class="mt-1 text-sm text-gray-500">Los acontecimientos apareceran aqui cuando se agreguen a la base.</p>
+  </div>
+) : (
+  <>
+    <div id="timeline-crumb" class="sticky z-30 -mx-4 mb-4 border-b border-gray-200 bg-white/90 px-4 py-2 backdrop-blur-md" style="top: 52px">
+      <nav class="flex items-center gap-1 overflow-x-auto whitespace-nowrap text-[13px] text-gray-500" aria-label="Posición actual">
+        <span class="shrink-0">Estás en</span>
+        <ChevronRight class="h-3.5 w-3.5 shrink-0 text-gray-300" />
+        <a id="crumb-decade" href="#" data-crumb-seg="decade" class="hidden shrink-0 rounded px-1 py-0.5 font-semibold text-gray-800 hover:bg-gray-100">
+          <span data-crumb-text></span>
+        </a>
+        <ChevronRight class="h-3.5 w-3.5 shrink-0 text-gray-300" data-crumb-sep="year" />
+        <a id="crumb-year" href="#" data-crumb-seg="year" class="hidden shrink-0 rounded px-1 py-0.5 font-medium text-gray-700 hover:bg-gray-100">
+          <span data-crumb-text></span>
+        </a>
+        <ChevronRight class="h-3.5 w-3.5 shrink-0 text-gray-300" data-crumb-sep="month" />
+        <a id="crumb-month" href="#" data-crumb-seg="month" class="hidden shrink-0 rounded px-1 py-0.5 font-medium text-gray-700 hover:bg-gray-100">
+          <span data-crumb-text></span>
+        </a>
+        <ChevronRight class="h-3.5 w-3.5 shrink-0 text-gray-300" data-crumb-sep="day" />
+        <a id="crumb-day" href="#" data-crumb-seg="day" class="hidden shrink-0 rounded px-1 py-0.5 font-semibold text-blue-700 hover:bg-gray-100">
+          <span data-crumb-text></span>
+        </a>
+      </nav>
+    </div>
+
+    <div class="relative">
+    <div
+      class="absolute bottom-3 left-[15px] top-3 w-[2px] rounded-full bg-gradient-to-b from-gray-400/70 via-gray-200 to-gray-100"
+      aria-hidden="true"
+    />
+
+    <div class="space-y-10">
+      {decades.map((decade) => (
+        <section id={`decade-${decade.decade}`} class="scroll-mt-32" data-crumb-level="decade" data-crumb-label={`${decade.decade}0s`}>
+          <details class="group/decade" open={decade.decade === Math.floor(currentYear / 10)} data-persist={`decade-${decade.decade}`}>
+            <summary class="flex cursor-pointer list-none items-center gap-3 py-2 [&::-webkit-details-marker]:hidden">
+              <ChevronRight class="h-5 w-5 shrink-0 text-gray-400 transition-transform duration-200 group-open/decade:hidden" />
+              <ChevronDown class="h-5 w-5 shrink-0 text-blue-600 transition-transform duration-200 hidden group-open/decade:block" />
+              <div class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-900 text-[11px] font-semibold tabular-nums text-white ring-2 ring-gray-100">
+                {String(decade.decade).slice(-2)}s
+              </div>
+              <div class="min-w-0">
+                <h2 class="text-xl font-bold tracking-tight text-gray-900 sm:text-2xl">
+                  {decade.decade}0s
+                </h2>
+                <p class="text-xs text-gray-500">
+                  {decade.years.reduce((acc, y) => acc + y.months.reduce((a, m) => a + m.days.reduce((b, dg) => b + dg.events.length, 0), 0), 0)} eventos
+                </p>
+              </div>
+            </summary>
+
+            <div class="mt-4 space-y-10">
+              {decade.years.map((yearGroup) => (
+                <section id={`year-${yearGroup.year}`} class="scroll-mt-32" data-crumb-level="year" data-crumb-label={`Año ${yearGroup.year}`}>
+                  <details class="group/year" open={yearGroup.year === currentYear} data-persist={`year-${yearGroup.year}`}>
+                    <summary class="relative flex cursor-pointer list-none items-center gap-2 border-b border-gray-200 py-2 pl-12 [&::-webkit-details-marker]:hidden">
+                      <span class="pointer-events-none absolute left-[15px] top-0 h-full w-8 border-b-2 border-l-2 border-gray-300 rounded-bl-[10px]" aria-hidden="true" />
+                      <ChevronRight class="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open/year:hidden" />
+                      <ChevronDown class="h-4 w-4 shrink-0 text-blue-600 transition-transform duration-200 hidden group-open/year:block" />
+                      <span class="text-sm font-bold uppercase tracking-wide text-gray-500">
+                        Año {yearGroup.year}
+                      </span>
+                      <span class="ml-auto text-xs text-gray-400">
+                        {yearGroup.months.reduce((a, m) => a + m.days.reduce((b, dg) => b + dg.events.length, 0), 0)} eventos
+                      </span>
+                    </summary>
+
+                    <div class="space-y-10 pt-4">
+                      {yearGroup.months.map((monthGroup) => (
+                        <section id={`month-${monthGroup.key}`} class="scroll-mt-32" data-crumb-level="month" data-crumb-label={`${monthNames[monthGroup.month - 1]} ${monthGroup.year}`}>
+                          <details class="group/month" open data-persist={`month-${monthGroup.key}`}>
+                            <summary class="relative flex cursor-pointer list-none items-center gap-3 pb-2 pl-[72px] [&::-webkit-details-marker]:hidden">
+                              <span class="pointer-events-none absolute left-[15px] top-0 h-full w-14 border-b-2 border-l-2 border-gray-300 rounded-bl-[10px]" aria-hidden="true" />
+                              <ChevronRight class="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open/month:hidden" />
+                              <ChevronDown class="h-4 w-4 shrink-0 text-blue-600 transition-transform duration-200 hidden group-open/month:block" />
+                              <div class="relative z-10 flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gray-900 text-[11px] font-semibold tabular-nums text-white ring-2 ring-gray-100">
+                                {monthGroup.month}
+                              </div>
+                              <div class="min-w-0">
+                                <h3 class="text-base font-semibold tracking-tight text-gray-900">
+                                  {monthNames[monthGroup.month - 1]} {monthGroup.year}
+                                </h3>
+                                <p class="text-xs text-gray-500">
+                                  {monthGroup.days.reduce((a, dg) => a + dg.events.length, 0)} {monthGroup.days.reduce((a, dg) => a + dg.events.length, 0) === 1 ? 'evento' : 'eventos'}
+                                </p>
+                              </div>
+                            </summary>
+
+                          <div class="space-y-3 bg-white pt-2">
+                            {monthGroup.days.map((dayGroup) => (
+                              <details id={`day-${dayGroup.key}`} class="group/day scroll-mt-32" open data-persist={`day-${dayGroup.key}`} data-crumb-level="day" data-crumb-label={`${dayGroup.day} ${monthNames[dayGroup.month - 1]}`}>
+                                <summary class="relative flex cursor-pointer list-none items-center gap-2.5 py-2 pl-24 [&::-webkit-details-marker]:hidden">
+                                  <span class="pointer-events-none absolute left-[15px] top-0 h-full w-20 border-b-2 border-l-2 border-gray-300 rounded-bl-[10px]" aria-hidden="true" />
+                                  <ChevronRight class="h-3.5 w-3.5 shrink-0 text-gray-400 transition-transform duration-200 group-open/day:hidden" />
+                                  <ChevronDown class="h-3.5 w-3.5 shrink-0 text-blue-600 transition-transform duration-200 hidden group-open/day:block" />
+                                  <span class="text-sm font-semibold tabular-nums text-gray-800">
+                                    {dayGroup.day} {monthNames[dayGroup.month - 1]}
+                                  </span>
+                                  <span class="text-[11px] font-medium uppercase tracking-wide text-gray-400">
+                                    {dayGroup.weekday}
+                                  </span>
+                                  <span class="ml-auto text-[11px] text-gray-400">
+                                    {dayGroup.events.length} {dayGroup.events.length === 1 ? 'evento' : 'eventos'}
+                                  </span>
+                                </summary>
+
+                                <div class="ml-24 space-y-0.5 border-l-2 border-gray-200 pl-4">
+                                  {dayGroup.events.map((event) => {
+                                    const d = new Date(event.data.fecha);
+                                    const yearNum = eventYearFromDate(event.data.fecha);
+                                    const filename = eventBasename(event.id);
+                                    const entities = getEventEntities(event.id);
+                                    const tLabel = TIPO_LABELS[event.data.tipo] || event.data.tipo;
+                                    const personaNames = entities.personas.map((id) => peopleMap.get(id) ?? id);
+                                    const temaNombres = event.data.tema.map((id) => topicsMap.get(id) ?? id);
+                                    const timeStr = formatEventTime(d);
+                                    const connections = connectionIndex.get(filename)!;
+                                    const explicitCount = countExplicitConnections(connections);
+                                    const previewEdges = [...connections.outgoing, ...connections.incoming].slice(0, 2);
+
+                                    return (
+                                      <a
+                                        href={`/events/${yearNum}/${filename}`}
+                                        class="group flex gap-3 rounded-lg py-3 transition-colors hover:bg-gray-50/80"
+                                      >
+                                        <article class="min-w-0 flex-1">
+                                          <div class="flex items-start justify-between gap-3">
+                                            <div class="min-w-0 flex-1">
+                                              <div class="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
+                                                <span class={`inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide ring-1 ring-inset ${TIPO_STYLES[event.data.tipo] || 'bg-gray-100 text-gray-600 ring-gray-200'}`}>
+                                                  {tLabel}
+                                                </span>
+                                                {timeStr && (
+                                                  <time class="inline-flex items-center gap-1 text-[11px] tabular-nums text-gray-500">
+                                                    <Clock class="h-3 w-3 text-gray-400" />
+                                                    {timeStr}
+                                                  </time>
+                                                )}
+                                                {explicitCount > 0 && (
+                                                  <span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[10px] font-medium text-blue-800 ring-1 ring-inset ring-blue-200/70">
+                                                    <GitFork class="h-3 w-3 shrink-0 text-blue-600" />
+                                                    {explicitCount} {explicitCount === 1 ? 'vinculo' : 'vinculos'}
+                                                  </span>
+                                                )}
+                                              </div>
+                                              <h4 class="text-sm font-semibold leading-snug text-gray-900 text-balance transition-colors group-hover:text-blue-600 sm:text-[15px]">
+                                                {event.data.titulo}
+                                              </h4>
+                                              {personaNames.length > 0 && (
+                                                <p class="mt-1.5 flex items-center gap-1.5 truncate text-xs text-gray-500">
+                                                  <User class="h-3.5 w-3.5 shrink-0 text-gray-400" />
+                                                  <span class="truncate">{personaNames.join(', ')}</span>
+                                                </p>
+                                              )}
+                                              {temaNombres.length > 0 && (
+                                                <div class="mt-2 flex flex-wrap gap-1">
+                                                  {temaNombres.map((nombre) => (
+                                                    <span class="inline-flex items-center gap-1 rounded-md bg-gray-100 px-2 py-0.5 text-[11px] font-medium text-gray-600">
+                                                      <Tag class="h-3 w-3 text-gray-400" />
+                                                      {nombre}
+                                                    </span>
+                                                  ))}
+                                                </div>
+                                              )}
+                                              {previewEdges.length > 0 && (
+                                                <div class="mt-2.5 flex flex-wrap gap-1.5">
+                                                  {previewEdges.map((edge) => {
+                                                    const label = RELATION_LABELS[edge.tipo] ?? edge.tipo;
+                                                    return (
+                                                      <span class="inline-flex max-w-full items-center gap-1 rounded-md bg-gray-100/80 px-2 py-0.5 text-[10px] font-medium text-gray-600">
+                                                        <span class="shrink-0 font-semibold text-gray-700">{label}:</span>
+                                                        <span class="truncate text-gray-500">{edge.titulo}</span>
+                                                      </span>
+                                                    );
+                                                  })}
+                                                </div>
+                                              )}
+                                            </div>
+                                            <ChevronRight class="mt-5 h-4 w-4 shrink-0 text-gray-300 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-blue-600" />
+                                          </div>
+                                        </article>
+                                      </a>
+                                    );
+                                  })}
+                                </div>
+                              </details>
+                            ))}
+                          </div>
+                          </details>
+                        </section>
+                      ))}
+                    </div>
+                  </details>
+                </section>
+              ))}
+            </div>
+          </details>
+        </section>
+      ))}
+    </div>
+
+    <TimelineNav sections={navSections} />
+    </div>
+  </>
+)}
+
+<script>
+  const STORAGE_KEY = 'gobierno-vault-timeline-collapsed';
+
+  function loadPersisted(): Record<string, boolean> {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}');
+    } catch {
+      return {};
+    }
+  }
+
+  document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
+    el.addEventListener('toggle', () => {
+      const state = loadPersisted();
+      state[el.dataset.persist!] = !el.open;
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    });
+  });
+
+  const persisted = loadPersisted();
+  document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
+    const key = el.dataset.persist!;
+    if (persisted[key] !== undefined) {
+      el.open = !persisted[key];
+    }
+  });
+
+  const crumb = document.getElementById('timeline-crumb');
+  if (crumb) {
+    const nav = document.querySelector('nav');
+    const setCrumbTop = () => {
+      crumb.style.top = `${(nav?.offsetHeight ?? 0) + 0}px`;
+    };
+    setCrumbTop();
+    window.addEventListener('resize', setCrumbTop);
+
+    const order = ['decade', 'year', 'month', 'day'] as const;
+    const segEls = new Map<string, HTMLElement>();
+    document.querySelectorAll<HTMLElement>('[data-crumb-seg]').forEach((el) => segEls.set(el.dataset.crumbSeg!, el));
+    const sepEls = new Map<string, HTMLElement>();
+    document.querySelectorAll<HTMLElement>('[data-crumb-sep]').forEach((el) => sepEls.set(el.dataset.crumbSep!, el));
+
+    const targets: { el: HTMLElement; level: string; label: string }[] = [];
+    document.querySelectorAll<HTMLElement>('[data-crumb-level]').forEach((el) => {
+      targets.push({ el, level: el.dataset.crumbLevel!, label: el.dataset.crumbLabel ?? '' });
+    });
+
+    const updateCrumb = () => {
+      const line = crumb.getBoundingClientRect().bottom + 4;
+      let currentEl: HTMLElement | null = null;
+      for (const t of targets) {
+        const rect = t.el.getBoundingClientRect();
+        if (rect.width === 0 && rect.height === 0) continue;
+        if (rect.top <= line) currentEl = t.el;
+        else break;
+      }
+      const chain = new Map<string, { label: string; el: HTMLElement }>();
+      if (currentEl) {
+        let node: HTMLElement | null = currentEl;
+        while (node) {
+          const lvl = node.dataset.crumbLevel;
+          if (lvl) chain.set(lvl, { label: node.dataset.crumbLabel ?? '', el: node });
+          node = node.parentElement?.closest<HTMLElement>('[data-crumb-level]') ?? null;
+        }
+      }
+      for (const level of order) {
+        const seg = segEls.get(level);
+        if (!seg) continue;
+        const span = seg.querySelector('[data-crumb-text]');
+        if (span) span.textContent = chain.get(level)?.label ?? '';
+        if (chain.has(level)) seg.dataset.crumbTarget = chain.get(level)!.el.id;
+        else delete seg.dataset.crumbTarget;
+        seg.classList.toggle('hidden', !chain.has(level));
+        sepEls.get(level)?.classList.toggle('hidden', !chain.has(level));
+        seg.classList.toggle('font-bold', chain.has(level) && level === order[order.length - 1]);
+        seg.classList.toggle('text-blue-700', chain.has(level) && level === order[order.length - 1]);
+      }
+    };
+
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        try {
+          updateCrumb();
+        } finally {
+          ticking = false;
+        }
+      });
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    document.querySelectorAll<HTMLElement>('[data-crumb-seg]').forEach((a) => {
+      a.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = a.dataset.crumbTarget;
+        const target = targetId ? document.getElementById(targetId) : null;
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    });
+    updateCrumb();
+  }
+</script>

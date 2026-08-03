@@ -1,0 +1,159 @@
+---
+import Base from '../../layouts/Base.astro';
+import EventCard from '../../components/EventCard.astro';
+import QuoteCard from '../../components/QuoteCard.astro';
+import { getAllPeople, getAllEvents, eventHasPerson, getQuotesForPerson } from '../../lib/queries';
+import { getOrganizationsRegistry } from '../../lib/registry';
+import type { QuoteEntry } from '../../lib/extractEntities';
+import { ArrowLeft, Briefcase, Building2, Calendar } from 'lucide-astro';
+
+export async function getStaticPaths() {
+  const people = await getAllPeople();
+  return people.map((person) => ({
+    params: { id: person.id },
+    props: { person },
+  }));
+}
+
+const { person } = Astro.props;
+
+const allEvents = await getAllEvents();
+const relatedEvents = allEvents.filter((e) => eventHasPerson(e.id, person.id));
+const quotes = getQuotesForPerson(person.id);
+
+const quotesByEvent = new Map<string, QuoteEntry[]>();
+for (const q of quotes) {
+  const existing = quotesByEvent.get(q.eventId) ?? [];
+  existing.push(q);
+  quotesByEvent.set(q.eventId, existing);
+}
+
+const orgNames = new Map(getOrganizationsRegistry().map((o) => [o.id, o.data.nombre]));
+const cargos = person.data.cargos ?? [];
+const datedCargos = cargos.filter((c) => c.desde);
+
+const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+function fechaEs(iso?: string): string | null {
+  if (!iso) return null;
+  const [y, m, d] = iso.split('-').map(Number);
+  if (!y || !m) return null;
+  return d ? `${d} de ${meses[m - 1]} de ${y}` : `${meses[m - 1]} de ${y}`;
+}
+function orgNombre(id?: string): string | null {
+  return id ? (orgNames.get(id) ?? id) : null;
+}
+
+const mermaidTimeline = datedCargos.length
+  ? `timeline\n    title Cargos de ${person.data.nombre}\n` +
+    datedCargos
+      .map((c) => {
+        const org = orgNombre(c.organizacion);
+        const rango = c.hasta ? `${c.desde} → ${c.hasta}` : `desde ${c.desde}`;
+        const label = [c.cargo, org, rango].filter(Boolean).join(' · ').replace(/:/g, '\\:');
+        return `    ${c.desde} : ${label}`;
+      })
+      .join('\n')
+  : null;
+---
+
+<Base title={person.data.nombre}>
+  <div class="mb-6">
+    <a href="/people" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg transition-colors">
+      <ArrowLeft class="h-3.5 w-3.5" />
+      <span>Volver a Personas</span>
+    </a>
+  </div>
+
+  <header class="mb-8 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+    <div class="flex items-start gap-6">
+      <div class="h-16 w-16 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-2xl shrink-0">
+        {person.data.nombre.charAt(0)}
+      </div>
+      <div class="min-w-0 flex-1">
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{person.data.nombre}</h1>
+        {(person.data.cargo ?? cargos.at(-1)?.cargo) && (
+          <p class="flex items-center gap-1.5 text-sm text-gray-700 font-medium mt-1">
+            <Briefcase class="h-4 w-4 text-gray-400 shrink-0" />
+            <span>{person.data.cargo ?? cargos.at(-1)?.cargo}</span>
+          </p>
+        )}
+        {(person.data.organizacion ?? cargos.at(-1)?.organizacion) && (
+          <p class="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
+            <Building2 class="h-3.5 w-3.5 text-gray-400 shrink-0" />
+            <span>{orgNombre(person.data.organizacion ?? cargos.at(-1)?.organizacion)}</span>
+          </p>
+        )}
+      </div>
+    </div>
+  </header>
+
+  {person.data.bio && (
+    <div class="prose prose-gray max-w-none mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm leading-relaxed" set:html={person.data.bio} />
+  )}
+
+  {cargos.length > 0 && (
+    <section class="mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <h2 class="text-lg font-bold text-gray-900 mb-4">Cargos</h2>
+      <ul class="space-y-3">
+        {cargos.map((c) => {
+          const org = orgNombre(c.organizacion);
+          const desde = fechaEs(c.desde);
+          const hasta = fechaEs(c.hasta);
+          return (
+            <li class="flex items-start gap-3">
+              <span class="mt-1 h-2.5 w-2.5 rounded-full bg-blue-600 shrink-0" />
+              <div>
+                <p class="font-semibold text-gray-900 text-sm">{c.cargo}</p>
+                {(org || desde) && (
+                  <p class="text-xs text-gray-500 mt-0.5">
+                    {[org, desde && `desde ${desde}`, hasta && `hasta ${hasta}`].filter(Boolean).join(' · ')}
+                  </p>
+                )}
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+      {mermaidTimeline && <div class="overflow-x-auto"><pre class="mermaid mt-6">{mermaidTimeline}</pre></div>}
+    </section>
+  )}
+
+  <section class="mt-8">
+    <div class="flex items-center justify-between mb-4">
+      <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2">
+        <Calendar class="h-5 w-5 text-blue-600" />
+        <span>Eventos relacionados ({relatedEvents.length})</span>
+        {quotes.length > 0 && (
+          <span class="text-sm font-medium text-gray-500">
+            · Declaraciones ({quotes.length})
+          </span>
+        )}
+      </h2>
+    </div>
+    <div class="grid gap-4">
+      {relatedEvents.map((event) => {
+        const eventQuotes = quotesByEvent.get(event.id) ?? [];
+        return (
+          <div class="space-y-3 min-w-0 max-w-full">
+            <EventCard event={event} />
+            {eventQuotes.length > 0 && <QuoteCard quotes={eventQuotes} />}
+          </div>
+        );
+      })}
+      {relatedEvents.length === 0 && (
+        <p class="text-sm text-gray-500 bg-white p-8 rounded-xl border border-dashed border-gray-300 text-center">
+          No hay eventos registrados para esta persona.
+        </p>
+      )}
+    </div>
+  </section>
+</Base>
+
+{datedCargos.length > 0 && (
+  <script>
+    import mermaid from 'mermaid';
+    mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
+    mermaid.run().catch((err) => console.error('Mermaid error:', err));
+  </script>
+)}
+

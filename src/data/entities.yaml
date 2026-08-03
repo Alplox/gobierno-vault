@@ -1,0 +1,3655 @@
+people:
+  alicia_cebrian:
+    nombre: Alicia Cebrian
+    cargo: Directora Nacional de Senapred
+    cargos:
+      - cargo: Directora Nacional de Senapred
+        organizacion: senapred
+        desde: 2024-10-01
+    organizacion: senapred
+  ali_manouchehri:
+    nombre: Ali Manouchehri
+    cargo: Alcalde de Coquimbo
+    cargos:
+      - cargo: Alcalde de Coquimbo
+        organizacion: municipalidad_coquimbo
+        desde: 2024-12-06
+    organizacion: municipalidad_coquimbo
+  alejandra_pizarro:
+    nombre: Alejandra Pizarro
+    cargo: Subsecretaria de Salud Publica
+    cargos:
+      - cargo: Subsecretaria de Salud Publica
+        organizacion: ministerio_salud
+        desde: 2026-03-11
+    organizacion: ministerio_salud
+  julio_montt:
+    nombre: Julio Montt
+    cargo: Subsecretario de Redes Asistenciales
+    cargos:
+      - cargo: Subsecretario de Redes Asistenciales
+        organizacion: ministerio_salud
+        desde: 2026-03-11
+    organizacion: ministerio_salud
+  catalina_ugarte:
+    nombre: Catalina Ugarte Millán
+    cargo: Jefa de gabinete de la Presidencia
+    cargos:
+      - cargo: Jefa de gabinete de la Presidencia
+        organizacion: presidencia_chile
+        desde: 2025-12-19
+    organizacion: presidencia_chile
+    notas: "Concejala de Las Condes (2021-2024) y fundadora del Partido Republicano. Abogada con paso por el sector público (CPEIP del Mineduc, primer gobierno de Piñera) y el privado (fusiones y adquisiciones). Asumió en reemplazo de Carolina Araya, quien estaba con prenatal."
+  claudio_alvarado:
+    nombre: Claudio Alvarado
+    cargo: Biministro del Interior y Segegob
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 2026-03-11
+        hasta: 2026-05-19
+      - cargo: Biministro del Interior y Segegob
+        organizacion: ministerio_interior
+        desde: 2026-05-19
+    organizacion: ministerio_interior
+  isabel_valenzuela_ahumada:
+    nombre: Isabel Valenzuela Ahumada
+    cargo: Alcaldesa de Colina
+    notas: Colaboradora de opinión en BioBioChile; defendió el rol del servicio público durante el sistema frontal.
+  cristian_valenzuela:
+    nombre: Cristián Valenzuela Bustos
+    cargo: Coordinador de asesores del gabinete presidencial
+    cargos:
+      - cargo: Coordinador de asesores del gabinete presidencial
+        organizacion: presidencia_chile
+        desde: 2026-03-11
+    organizacion: presidencia_chile
+    notas: Rasputin de Kast. Contrato 80,9M por 9 meses.
+  enrique_basaletti:
+    nombre: Enrique Basaletti
+    cargo: Diputado (Republicanos)
+    notas: "Diputado oficialista del Partido Republicano. Expresó preocupación por el recorte presupuestario a Carabineros."
+  enrique_van_rysselberghe:
+    nombre: Enrique Van Rysselberghe
+    cargo: Senador (UDI)
+    cargos:
+      - cargo: Senador (UDI)
+        organizacion: ministerio_defensa
+        desde: 2026-03-11
+  fernando_barros:
+    nombre: Fernando Barros
+    cargo: Ministro de Defensa
+    cargos:
+      - cargo: Ministro de Defensa
+        organizacion: ministerio_defensa
+        desde: 2026-03-11
+    organizacion: ministerio_defensa
+  gabriel_boric:
+    nombre: Gabriel Boric Font
+    cargo: Presidente de la Republica de Chile
+    cargos:
+      - cargo: Presidente de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    organizacion: presidencia_chile
+  izkia_siches:
+    nombre: Izkia Siches Pastén
+    cargo: Exministra del Interior
+    cargos:
+      - cargo: Ministra del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2022-03-11
+        hasta: 2022-09-07
+    organizacion: ministerio_interior
+  german_codina:
+    nombre: German Codina
+    cargo: Delegado Presidencial Region Metropolitana
+    cargos:
+      - cargo: Delegado Presidencial Region Metropolitana
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+  gustavo_sanhueza:
+    nombre: Gustavo Sanhueza
+    cargo: Senador (UDI)
+    cargos:
+      - cargo: Senador (UDI)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+  ivan_flores:
+    nombre: Ivan Flores
+    cargo: Senador (DC)
+    cargos:
+      - cargo: Senador (DC)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+  javier_macaya:
+    nombre: Javier Macaya
+    cargo: Senador (UDI)
+    cargos:
+      - cargo: Senador (UDI)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+  jorge_quiroz:
+    nombre: Jorge Antonio Quiroz Castro
+    cargo: Ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    organizacion: ministerio_hacienda
+  alvaro_gonzalez:
+    nombre: Álvaro González
+    cargo: Subsecretario de Minería
+    cargos:
+      - cargo: Subsecretario de Minería
+        organizacion: municipalidad_de_santiago
+        desde: 2026-03-11
+    notas: Encabezó delegación chilena en reactivación del Tratado Minero Binacional (julio 2026).
+  jose_antonio_kast:
+    nombre: José Antonio Kast Rist
+    cargo: Presidente de la República de Chile
+    cargos:
+      - cargo: Presidente de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2026-03-11
+    aliases:
+      - Kast
+      - JAK
+  lee_jae_myung:
+    nombre: Lee Jae Myung
+    cargo: Presidente de la República de Corea del Sur
+    cargos:
+      - cargo: Presidente de la República de Corea del Sur
+        organizacion: municipalidad_de_santiago
+        desde: 2025-06-01
+    notas: "Presidente de Corea del Sur del Partido Demócrata. Asumió en junio de 2025. Realizó visita oficial a Chile el 30 de julio de 2026."
+  javier_milei:
+    nombre: Javier Milei
+    cargo: Presidente de Argentina
+    cargos:
+      - cargo: Presidente de Argentina
+        organizacion: municipalidad_de_santiago
+        desde: 2023-12-10
+    notas: Aliado ideológico de Kast
+  gustavo_petro:
+    nombre: Gustavo Petro
+    cargo: Expresidente de Colombia
+    cargos:
+      - cargo: Presidente de Colombia
+        organizacion: municipalidad_de_santiago
+        desde: 2022-08-07
+    notas: Cuestionó la conducta de Kast tras el incidente en Villarrica
+  juan_luis_castro:
+    nombre: Juan Luis Castro
+    cargo: Senador (PS)
+    cargos:
+      - cargo: Senador (PS)
+        organizacion: municipalidad_de_santiago
+        desde: 2026-03-11
+    jefe_comite: Socialismo Democratico
+  louis_de_grange:
+    nombre: Louis de Grange
+    cargo: Ministro de Transporte y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transporte y Telecomunicaciones
+        organizacion: municipalidad_de_santiago
+        desde: 2026-03-11
+        hasta: 2026-05-19
+      - cargo: Biministro de Obras Públicas y Transportes
+        organizacion: municipalidad_de_santiago
+        desde: 2026-05-19
+    notas: Independiente.
+  magdalena_retamal:
+    nombre: Magdalena Retamal
+    notas: Rescatada en Cajón del Maipo
+  manuel_orellana:
+    nombre: Manuel Orellana
+    notas: Rescatado en Cajón del Maipo
+  mario_desbordes:
+    nombre: Mario Desbordes
+    cargo: Alcalde de Santiago
+    cargos:
+      - cargo: Alcalde de Santiago
+        organizacion: municipalidad_de_santiago
+        desde: 2024-12-06
+    organizacion: municipalidad_de_santiago
+  mara_sedini:
+    nombre: Mara Sedini Viancos
+    cargo: Ex vocera de Gobierno
+    cargos:
+      - cargo: Vocera de Gobierno (Segegob)
+        organizacion: segegob
+        desde: 2026-03-11
+        hasta: 2026-05-19
+    organizacion: segegob
+    notas: Removida a los 69 dias. Polémica "Estado en quiebra".
+  martina_nunez:
+    nombre: Martina Nunez
+    notas: Rescatada en Cajón del Maipo, 22 años
+  maximo_pavez:
+    nombre: Maximo Pavez
+    cargo: Subsecretario del Interior
+    cargos:
+      - cargo: Subsecretario del Interior
+        organizacion: ministerio_interior
+        desde: 2026-03-11
+    organizacion: ministerio_interior
+  may_chomali:
+    nombre: May Chomali
+    cargo: Ministra de Salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2026-03-11
+    organizacion: ministerio_salud
+  begona_yarza:
+    nombre: Begoña Yarza
+    cargo: Ex Ministra de Salud
+    organizacion: ministerio_salud
+    notas: Ministra de Salud del gobierno de Gabriel Boric; aludida por May Chomali en la caída de los compromisos de gestión de la red hospitalaria.
+  ximena_aguilera:
+    nombre: Ximena Aguilera
+    cargo: Ex Ministra de Salud
+    organizacion: ministerio_salud
+    notas: Ministra de Salud del gobierno de Gabriel Boric; aludida por May Chomali en la caída de los compromisos de gestión de la red hospitalaria.
+  paula_daza:
+    nombre: Paula Daza
+    cargo: Ex Subsecretaria de Salud Pública
+    organizacion: ministerio_salud
+    notas: Exsubsecretaria de Salud Pública del segundo gobierno de Piñera; atribuyó el problema de gestión hospitalaria a la escasa autonomía de los directores y a procesos poco modernizados.
+  nicolas_grau:
+    nombre: Nicolas Grau Veloso
+  paulina_nunez:
+    nombre: Paulina Nunez
+    cargo: Presidenta del Senado (RN)
+    cargos:
+      - cargo: Senadora (RN)
+        organizacion: armada_chile
+        desde: 2026-03-11
+      - cargo: Presidenta del Senado
+        organizacion: senado
+        desde: 2026-03-11
+  sebastian_pinera:
+    nombre: Sebastián Piñera Echenique
+    cargo: Expresidente de la República (2010-2014, 2018-2022)
+    cargos:
+      - cargo: Presidente de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2010-03-11
+        hasta: 2014-03-11
+      - cargo: Presidente de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2018-03-11
+        hasta: 2022-03-11
+  rojo_edwards:
+    nombre: Rojo Edwards
+    cargo: Senador (Ind-RN)
+    cargos:
+      - cargo: Senador (Ind-RN)
+        organizacion: armada_chile
+        desde: 2026-03-11
+  matias_walker:
+    nombre: Matias Walker
+    cargo: Senador (Ind)
+    cargos:
+      - cargo: Senador (Ind)
+        organizacion: armada_chile
+        desde: 2026-03-11
+  alberto_soto:
+    nombre: Alberto Soto Valenzuela
+    cargo: Vicealmirante (r), Comisionado Presidencial Macrozona Norte
+    cargos:
+      - cargo: Vicealmirante (r), Comisionado Presidencial Macrozona Norte
+        organizacion: armada_chile
+        desde: 2026-03-11
+    organizacion: armada_chile
+  ivan_poduje:
+    nombre: Ivan Poduje
+    cargo: Ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2026-03-11
+    organizacion: ministerio_vivienda
+  constanza_castillo:
+    nombre: Constanza Castillo
+    cargo: Subsecretaria General de la Presidencia
+    cargos:
+      - cargo: Subsecretaria General de la Presidencia
+        organizacion: segpres
+        desde: 2026-03-11
+    organizacion: segpres
+  juan_pablo_rodriguez:
+    nombre: Juan Pablo Rodríguez
+    cargo: Ex Subsecretario de Hacienda
+    cargos:
+      - cargo: Ex Subsecretario de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+        hasta: 2026-07-23
+    notas: Renunció tras test de drogas positivo. Negó consumo, pidió exámenes
+      adicionales. Reemplazado por Tomás Bunster.
+  tomas_bunster:
+    nombre: Tomás Bunster Bustamante
+    cargo: Subrogante Subsecretaría de Hacienda
+    cargos:
+      - cargo: Subsecretario de Hacienda (subrogante)
+        organizacion: ministerio_hacienda
+        desde: 2026-07-23
+    organizacion: ministerio_hacienda
+  eduardo_mundt:
+    nombre: Eduardo Mundt
+    cargo: Jefe de Gabinete de la Subsecretaría de Hacienda
+    organizacion: ministerio_hacienda
+  trinidad_undurraga:
+    nombre: Trinidad Undurraga Viveros
+    cargo: Secretaria Ejecutiva del Fondo Nacional de Reconstrucción
+    cargos:
+      - cargo: Secretaria Ejecutiva del Fondo Nacional de Reconstrucción
+        organizacion: ministerio_hacienda
+        desde: 2010-03-23
+    organizacion: ministerio_hacienda
+  trinidad_steinert:
+    nombre: Trinidad Steinert
+    cargo: Ex Ministra de Seguridad Publica
+    cargos:
+      - cargo: Ex Ministra de Seguridad Publica
+        organizacion: ministerio_seguridad
+        desde: 2026-03-11
+        hasta: 2026-05-19
+    organizacion: ministerio_seguridad
+    notas: Removida a los 69 dias.
+  martin_arrau:
+    nombre: Martin Arrau
+    cargo: Ministro de Seguridad Publica
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_seguridad
+        desde: 2026-03-11
+        hasta: 2026-05-19
+      - cargo: Ministro de Seguridad Pública
+        organizacion: ministerio_seguridad
+        desde: 2026-05-19
+    organizacion: ministerio_seguridad
+  marco_cosne:
+    nombre: Marco Cosme
+    cargo: Suboficial Mayor (fallecido)
+    organizacion: carabineros
+    notas: Asesinado en operativo contra "El Rana". Asesinato del cabo Eugenio Naín
+      en 2020.
+  luis_silva:
+    nombre: Luis Silva
+    cargo: Subsecretario de Justicia
+    cargos:
+      - cargo: Subsecretario de Justicia
+        organizacion: ministerio_justicia
+        desde: 2026-03-11
+    organizacion: ministerio_justicia
+  jose_garcia_ruminot:
+    nombre: Jose Garcia Ruminot
+    cargo: Ministro Secretario General de la Presidencia
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2026-03-11
+    organizacion: segpres
+  peter_thiel:
+    nombre: Peter Thiel
+    cargo: Empresario tecnológico
+    notas: Cofundador de PayPal y Palantir Technologies. Inversionista en IA, datos
+      y vigilancia. Reunión reservada con Kast en La Moneda (mayo 2026).
+  johannes_kaiser:
+    nombre: Johannes Kaiser
+    cargo: Diputado (Libertario)
+    cargos:
+      - cargo: Diputado (Libertario)
+        organizacion: sermig
+        desde: 2026-03-11
+    notas: Reveló interés de Thiel en invertir en minería en Chile y Argentina.
+  felipe_kast:
+    nombre: Felipe Kast
+    cargo: Senador (Evópoli)
+    organizacion: evopoli
+    notas: "Hermano del Presidente José Antonio Kast. Fundador de Evópoli. Impulsor del proyecto de ley contra el nepotismo en 2018."
+  jaime_manalich:
+    nombre: Jaime Mañalich
+    cargo: Exministro de Salud
+    notas: "Exministro de Salud del segundo gobierno de Piñera. Defendido por Kast por su gestión durante la pandemia."
+  jose_pinera:
+    nombre: José Piñera
+    notas: Exministro, creador del sistema de AFP y del Código Minero. Reunión
+      reservada con Thiel en Santiago.
+  gonzalo_winter:
+    nombre: Gonzalo Winter
+    cargo: Diputado (Frente Amplio)
+    cargos:
+      - cargo: Diputado (Frente Amplio)
+        organizacion: sermig
+        desde: 2026-03-11
+    notas: Impulsó oficios de transparencia sobre la reunión Kast-Thiel.
+  juan_orlando_hernandez:
+    nombre: Juan Orlando Hernández
+    cargo: Expresidente de Honduras
+    cargos:
+      - cargo: Presidente de Honduras
+        organizacion: sermig
+        desde: 2014-01-27
+        hasta: 2022-01-27
+    notas: Condenado por narcotráfico en EE.UU., indultado por Trump. Operador
+      político clave en la trama Hondurasgate.
+  nasry_asfura:
+    nombre: Nasry Asfura
+    cargo: Presidente de Honduras
+    notas: Involucrado en audios filtrados de Hondurasgate.
+  maria_antonieta_mejia:
+    nombre: María Antonieta Mejía
+    cargo: Vicepresidenta de Honduras
+    notas: Aparece en audios filtrados de Hondurasgate.
+  benjamin_netanyahu:
+    nombre: Benjamin Netanyahu
+    cargo: Primer Ministro de Israel
+    cargos:
+      - cargo: Primer Ministro de Israel
+        organizacion: sermig
+        desde: 2022-12-29
+    notas: Aparece en audios Hondurasgate como gestor del indulto de Hernández ante
+      Trump.
+  frank_sauerbaum:
+    nombre: Frank Sauerbaum
+    cargo: Director del Servicio Nacional de Migraciones
+    organizacion: sermig
+  cristian_vial:
+    nombre: Cristian Vial
+    cargo: Senador (Republicano), general (r) del Ejercito
+    cargos:
+      - cargo: Senador (Republicano), general (r) del Ejercito
+        organizacion: gendarmeria_chile
+        desde: 2026-03-11
+    notas: Disenador del Plan Escudo Fronterizo
+  danisa_astudillo:
+    nombre: Danisa Astudillo
+    cargo: Senadora (PS), presidenta Comision de Gobierno del Senado
+    cargos:
+      - cargo: Senadora (PS), presidenta Comision de Gobierno del Senado
+        organizacion: gendarmeria_chile
+        desde: 2026-03-11
+  daniel_nunez:
+    nombre: Daniel Nunez
+    cargo: Senador (PC)
+    cargos:
+      - cargo: Senador (PC)
+        organizacion: gendarmeria_chile
+        desde: 2026-03-11
+  ruben_perez:
+    nombre: Ruben Perez
+    cargo: Director Nacional de Gendarmeria
+    organizacion: gendarmeria_chile
+  rafael_araos:
+    nombre: Rafael Araos
+    cargo: Ex Subsecretario de Ciencia, Tecnologia, Conocimiento e Innovacion
+    cargos:
+      - cargo: Ex Subsecretario de Ciencia, Tecnologia, Conocimiento e Innovacion
+        organizacion: ministerio_mujer
+        desde: 2026-03-11
+        hasta: 2026-05-11
+    notas: Renuncio en mayo por diferencias con ministra Lincolao
+  andrea_abarca:
+    nombre: Andrea Abarca
+    cargo: Portavoz de la CONFECH
+    notas: "Portavoz de la Confederación de Estudiantes de Chile. Criticó los recortes presupuestarios del gobierno en salud y educación."
+  andres_jouannet:
+    nombre: Andres Jouannet
+    cargo: Ex Subsecretario de Seguridad Publica
+    cargos:
+      - cargo: Ex Subsecretario de Seguridad Publica
+        organizacion: ministerio_mujer
+        desde: 2026-03-11
+        hasta: 2026-06-02
+    notas: Renuncio en junio, reestructuracion Arrau
+  ana_victoria_quintana:
+    nombre: Ana Victoria Quintana
+    cargo: Ex Subsecretaria de Prevencion del Delito
+    cargos:
+      - cargo: Ex Subsecretaria de Prevencion del Delito
+        organizacion: ministerio_mujer
+        desde: 2026-03-11
+        hasta: 2026-06-02
+    notas: Renuncio en junio, reestructuracion Arrau
+  daniela_gallegos:
+    nombre: Daniela Gallegos Porcile
+    cargo: Seremi de Economía de Atacama (nombramiento no concretado)
+    cargos:
+      - cargo: Seremi de Economía de Atacama (no concretado)
+        organizacion: seremi_economia_atacama
+        desde: 2026-03-25
+    notas: "Ingeniera en Administración de Empresas (INACAP). Su nombramiento como seremi de Economía de Atacama nunca se formalizó tras requerimiento ante la Contraloría por no cumplir el requisito de título profesional de 10 semestres. La cartera se ejerció por subrogancia."
+  daniela_castro:
+    nombre: Daniela Castro
+    cargo: Ex Subsecretaria de la Mujer y Equidad de Genero
+    cargos:
+      - cargo: Ex Subsecretaria de la Mujer y Equidad de Genero
+        organizacion: ministerio_mujer
+        desde: 2026-03-11
+        hasta: 2026-06-16
+    notas: Removida en junio por conflictos con ministra Marin
+  judith_marin:
+    nombre: Judith Marin
+    cargo: Ministra de la Mujer y Equidad de Genero
+    cargos:
+      - cargo: Ministra de la Mujer y Equidad de Genero
+        organizacion: ministerio_mujer
+        desde: 2026-03-11
+    organizacion: ministerio_mujer
+  jorge_heiden:
+    nombre: Jorge Heiden Campbell
+    cargo: Ex Seremi de Agricultura de Arica y Parinacota
+    cargos:
+      - cargo: Ex Seremi de Agricultura de Arica y Parinacota
+        organizacion: ministerio_agricultura
+        desde: 2026-03-11
+        hasta: 2026-06-25
+    notas: Militante Republicano, renuncio junio tras positivo test drogas.
+      Precedente del caso Rodriguez
+  aldo_ibani:
+    nombre: Aldo Ibani Chamorro
+    cargo: Ex Seremi de Salud de Valparaíso
+    cargos:
+      - cargo: Ex Seremi de Salud de Valparaíso
+        organizacion: ministerio_agricultura
+        desde: 2026-04-02
+        hasta: 2026-04-05
+  luis_ignacio_de_la_torre:
+    nombre: Luis Ignacio de la Torre
+    cargo: Presidente del Colegio Médico de Valparaíso
+  manuel_millones:
+    nombre: Manuel Millones
+    cargo: Delegado presidencial regional de Valparaíso
+    notas: Medico cirujano, renuncio tras 3 dias por cuestionamientos a su idoneidad
+      y acusaciones de venta de productos falsificados. Anuncio acciones
+      legales.
+  nataly_cruz:
+    nombre: Nataly Cruz Plaza
+    cargo: Ex Seremi de Trabajo de Arica y Parinacota
+    cargos:
+      - cargo: Ex Seremi de Trabajo de Arica y Parinacota
+        organizacion: ministerio_agricultura
+        desde: 2026-03-31
+        hasta: 2026-04-08
+    notas: Enfermera de 26 anos, renuncio tras 8 dias por no acreditar experiencia
+      profesional de 2 anos. Presidenta regional del PSC.
+  carlos_montero:
+    nombre: Carlos Montero
+    cargo: Ex Seremi de Trabajo de Valparaíso
+    cargos:
+      - cargo: Ex Seremi de Trabajo de Valparaíso
+        organizacion: ministerio_agricultura
+        desde: 2026-04-02
+        hasta: 2026-04-07
+    notas: Contador publico U. de Chile, renuncio a los 5 dias por presunta
+      incompatibilidad. Ex DT.
+  jorge_ravelo:
+    nombre: Jorge Ravelo Fuentes
+    cargo: Ex Seremi de Energía de Los Lagos
+    notas: Juventudes UDI, nombramiento revocado por no tener estudios superiores de
+      10 semestres.
+  lizet_tapia:
+    nombre: Lizet Tapia Martin
+    cargo: Ex Seremi de Desarrollo Social de Antofagasta
+    cargos:
+      - cargo: Ex Seremi de Desarrollo Social de Antofagasta
+        organizacion: ministerio_agricultura
+        desde: 2026-03-11
+        hasta: 2026-04-09
+    notas: Licenciada en Historia, renuncio por no tener titulo profesional de 10
+      semestres (solo 8).
+  karina_trujillo:
+    nombre: Karina Trujillo
+    cargo: Ex Seremi de Justicia de Antofagasta
+    cargos:
+      - cargo: Ex Seremi de Justicia de Antofagasta
+        organizacion: ministerio_agricultura
+        desde: 2026-03-11
+        hasta: 2026-04-14
+    notas: Republicana, renuncio por cuestionamientos a su defensa en casos de
+      trafico de drogas.
+  jaime_campos:
+    nombre: Jaime Campos
+    cargo: Ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2026-03-11
+    organizacion: ministerio_agricultura
+  pedro_araya:
+    nombre: Pedro Araya
+    cargo: Senador (PPD)
+    cargos:
+      - cargo: Senador (PPD)
+        organizacion: secom
+        desde: 2026-03-11
+  beatriz_sanchez:
+    nombre: Beatriz Sanchez
+    cargo: Senadora (FA)
+    cargos:
+      - cargo: Senadora (FA)
+        organizacion: secom
+        desde: 2026-03-11
+  miguel_calisto:
+    nombre: Miguel Angel Calisto
+    cargo: Senador (independiente)
+    cargos:
+      - cargo: Senador (independiente)
+        organizacion: secom
+        desde: 2026-03-11
+    notas: Voto clave para aprobar megarreforma en Senado
+  patricio_rojas:
+    nombre: Patricio Rojas
+    cargo: Economista, Rojas y Asociados
+  rafael_romero:
+    nombre: Rafael Romero
+    cargo: Academico Universidad Alberto Hurtado
+  felipe_costabal:
+    nombre: Felipe Costabal
+    cargo: Secretario de Comunicaciones (Secom)
+    cargos:
+      - cargo: Secretario de Comunicaciones (Secom)
+        organizacion: secom
+        desde: 2026-03-11
+    organizacion: secom
+    notas: Autor de la minuta "cierre epico"
+  michelle_bachelet:
+    nombre: Michelle Bachelet
+    cargo: Expresidenta de Chile y ex Alta Comisionada de Derechos Humanos de la ONU
+    cargos:
+      - cargo: Presidenta de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2006-03-11
+        hasta: 2010-03-11
+      - cargo: Presidenta de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2014-03-11
+        hasta: 2018-03-11
+      - cargo: Alta Comisionada de Derechos Humanos de la ONU
+        organizacion: fenats
+        desde: 2018-09-01
+        hasta: 2022-08-31
+  emerson_berrios:
+    nombre: Emerson Berríos
+    cargo: Presidente Fenats Nacional
+    organizacion: fenats
+  ximena_ordenes:
+    nombre: Ximena Órdenes
+    cargo: Senadora por Aysén (Ind-PS-PPD-PL)
+    cargos:
+      - cargo: Senadora por Aysén (Ind-PS-PPD-PL)
+        organizacion: ministerio_salud
+        desde: 2026-03-11
+  evelyn_brintrup:
+    nombre: Evelyn Brintrup
+    cargo: Seremi de Salud de Los Lagos
+    cargos:
+      - cargo: Seremi de Salud de Los Lagos
+        organizacion: ministerio_salud
+        desde: 2026-03-11
+    organizacion: ministerio_salud
+  alexis_diaz:
+    nombre: Alexis Díaz
+    cargo: Presidente regional de funcionarios de la autoridad sanitaria de Los Lagos
+  jaime_araya:
+    nombre: Jaime Araya
+    cargo: Diputado IND-PPD
+    cargos:
+      - cargo: Diputado IND-PPD
+        organizacion: presidencia_chile
+        desde: 2026-03-11
+    notas: Filtró la minuta de Secom
+  sergio_turra:
+    nombre: Sergio Turra
+    cargo: Jefe de Contenidos Digitales de La Moneda
+    cargos:
+      - cargo: Jefe de Contenidos Digitales de La Moneda
+        organizacion: presidencia_chile
+        desde: 2026-03-11
+    organizacion: presidencia_chile
+    notas: Encargado de redes del Presidente. Denunció el hackeo ante la PDI.
+  carolina_rudnick:
+    nombre: Carolina Rudnick
+    cargo: Presidenta y cofundadora de Fundación Libera
+    organizacion: fundacion_libera
+    notas: Abogada U. de Concepción, máster LSE. Diseñó primer plan nacional contra
+      trata de personas (2013-2014).
+  antonio_walker:
+    nombre: Antonio Walker
+    cargo: Presidente de la Sociedad Nacional de Agricultura (SNA)
+    organizacion: sna
+  loreto_seguel:
+    nombre: Loreto Seguel
+    cargo: Presidenta ejecutiva del Consejo del Salmón
+    organizacion: consejo_salon
+  franco_parisi:
+    nombre: Franco Parisi
+    cargo: Fundador del Partido de la Gente
+    organizacion: pdg
+    notas: Candidato presidencial en tres oportunidades por el PDG
+  denisse_catalan:
+    nombre: Denisse Catalán
+    cargo: Presidenta subrogante del Partido de la Gente
+    organizacion: pdg
+  rodrigo_vattuone:
+    nombre: Rodrigo Vattuone
+    cargo: Ex presidente del Partido de la Gente
+    organizacion: pdg
+    notas: Renunció por "razones personales" en julio de 2026
+  luis_moreno:
+    nombre: Luis Moreno
+    cargo: Ex presidente del Partido de la Gente
+    organizacion: pdg
+    notas: Investigado por presunta falsificación de documentos y obtención
+      fraudulenta de fondos públicos
+  gino_lorenzini:
+    nombre: Gino Lorenzini
+    cargo: Cofundador del Partido de la Gente
+    organizacion: pdg
+    notas: Denunció a Luis Moreno por presunta falsificación de documentos
+  marjorie_catalan:
+    nombre: Marjorie Catalán
+    cargo: Exmilitante y dirigente del PDG
+    notas: Firmas falsificadas en actas fundacionales del PDG
+  raul_garcia:
+    nombre: Raúl García
+    cargo: Director del Servicio Electoral (Servel)
+  miguel_azar:
+    nombre: Miguel Azar
+    cargo: Exadministrador general de fondos del PDG
+  rodolfo_carter:
+    nombre: Rodolfo Carter
+    cargo: Senador electo (Ind-UDI), exalcalde de La Florida
+    cargos:
+      - cargo: Alcalde de La Florida
+        organizacion: municipalidad_la_florida
+        desde: 2016-12-06
+        hasta: 2024-12-06
+      - cargo: Senador (Ind-UDI)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Hermano del diputado Álvaro Carter
+  gloria_fernandez:
+    nombre: Gloria Fernández Cruz
+    cargo: Madre de Rodolfo y Álvaro Carter
+    notas: Contratada irregularmente en Municipalidad de La Florida
+  gloria_naveillan:
+    nombre: Gloria Naveillán
+    cargo: Diputada (Partido Nacional Libertario)
+    notas: "Diputada del PNL. Cuestionó el estado de los vehículos de PDI y Carabineros en La Araucanía ante el recorte presupuestario."
+  daniel_reyes:
+    nombre: Daniel Reyes
+    cargo: Alcalde de La Florida (Republicano)
+    cargos:
+      - cargo: Alcalde de La Florida (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2024-12-06
+    notas: Ex administrador municipal de Carter, contrató a Gloria Fernández
+  ana_maria_gazmuri:
+    nombre: Ana María Gazmuri
+    cargo: Diputada Distrito 12
+    cargos:
+      - cargo: Diputada Distrito 12
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Denunció la contratación irregular ante Contraloría
+  alvaro_carter:
+    nombre: Álvaro Carter
+    cargo: Diputado (Republicano)
+    cargos:
+      - cargo: Diputado (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Hermano de Rodolfo Carter
+  jose_seves:
+    nombre: José Seves
+    cargo: Concejal de La Florida (PC)
+    cargos:
+      - cargo: Concejal de La Florida (PC)
+        organizacion: partido_nacional_libertario
+        desde: 2024-12-06
+    notas: Denunció la contratación de Gloria Fernández
+  vanessa_kaiser:
+    nombre: Vanessa Kaiser
+    cargo: Diputada (Republicano)
+    cargos:
+      - cargo: Diputada (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Esposa de Urruticoechea, defiende proyecto de aborto "Escucha tu corazón"
+  cristobal_urruticoechea:
+    nombre: Cristóbal Urruticoechea
+    cargo: Diputado (Republicano)
+    cargos:
+      - cargo: Diputado (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Autor del proyecto de aborto "Escucha tu corazón"
+  amaya_forch:
+    nombre: Amaya Forch
+    cargo: Actriz
+    notas: Víctima de violación hace 30 años. Criticó el proyecto "Escucha su
+      corazón" en carta publicada en El Mercurio (19 jul 2026).
+  andres_celis:
+    nombre: Andrés Celis
+    cargo: Diputado (RN), presidente de la Comisión de Salud
+    notas: Descartó priorizar el proyecto "Escucha su corazón" por el impacto en
+      mujeres víctimas de violación
+  lorenzo_cancino:
+    nombre: Lorenzo Cancino
+    cargo: Diputado (RN)
+    cargos:
+      - cargo: Diputado (RN)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Coautor del proyecto "Escucha tu corazón" de Urruticoechea
+  luisa_villarin:
+    nombre: Luisa Villarín
+    cargo: Ministra de Desarrollo Social
+    cargos:
+      - cargo: Ministra de Desarrollo Social
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Organiza misas semanales en La Moneda para funcionarios públicos
+  marcos_cosme:
+    nombre: Marcos Javier Cosme Barquero
+    cargo: Cabo primero de Carabineros (GOPE)
+    notas: Falleció en acto de servicio el 18/07/2026 en Valdivia, durante operativo
+      para capturar prófugo del caso Naín. 32 años, 13 en la institución.
+  juan_pablo_pavez:
+    nombre: Juan Pablo Pavez
+    notas: Exdirector de Azul Azul. Denunció corrupción, sobreprecios y
+      multipropiedad en Universidad de Chile.
+  mauricio_stay:
+    nombre: Mauricio Stay
+    cargo: Presidente Cooperativa Control Pisquero
+    notas: Crítico de declaraciones del ministro Campos sobre daños agrícolas por
+      sistema frontal
+  clara_carmona:
+    nombre: Clara Carmona
+    cargo: Cooperadora Cooperativa Control Pisquero (Chilecito)
+    notas: Reacción emotiva ante declaraciones de Campos, pidió apoyo del gobierno a
+      agricultores
+  hector_cortes:
+    nombre: Héctor Cortés
+    cargo: Cooperador Cooperativa Control Pisquero
+    notas: Calificó de "indignantes" las declaraciones del ministro Campos sobre
+      daños agrícolas
+  joaquin_lyon:
+    nombre: Joaquín Lyon
+    cargo: Director de América Transparente
+    notas: Cuestionó la reserva sobre la reunión Kast-Thiel y pidió reformar la
+      Ley de Lobby
+  jean_gipoulou:
+    nombre: Jean Gipoulou
+    cargo: Secretaria del Club Deportes Valdivia
+    notas: Calificó la gestión de Jorge Salazar como un perjuicio para el club
+  kevin_roberts:
+    nombre: Kevin Roberts
+    cargo: Presidente de la Heritage Foundation
+    notas: Calificó la toma de mando de Kast como "un movimiento ascendente"
+  patricio_gonzalez:
+    nombre: Patricio González
+    cargo: Agroclimatólogo Universidad de Talca
+    notas: Experto en efectos meteorológicos sobre agricultura, declaró sobre
+      erosión de suelos y daños en parronales
+  alvaro_jofre:
+    nombre: Álvaro Jofré
+    cargo: Diputado (PNL)
+    cargos:
+      - cargo: Diputado (PNL)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Coautor del proyecto "Escucha su corazón"
+  chiara_barchiesi:
+    nombre: Chiara Barchiesi
+    cargo: Diputada (Republicano)
+    cargos:
+      - cargo: Diputada (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Coautora del proyecto "Escucha su corazón"
+  catalina_del_real:
+    nombre: Catalina del Real
+    cargo: Diputada (Republicano)
+    cargos:
+      - cargo: Diputada (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Coautora del proyecto "Escucha su corazón"
+  claudia_reyes:
+    nombre: Claudia Reyes
+    cargo: Diputada (Republicano)
+    cargos:
+      - cargo: Diputada (Republicano)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Coautora del proyecto "Escucha su corazón"
+  ximena_ossondon:
+    nombre: Ximena Ossandón
+    cargo: Diputada (RN)
+    cargos:
+      - cargo: Diputada (RN)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: Coautora del proyecto "Escucha su corazón"; posteriormente retiró su
+      patrocinio
+  antonia_orellana:
+    nombre: Antonia Orellana
+    cargo: Exministra de Derechos Humanos
+    notas: Publicó carta "Crueldad legislativa" cuestionando el proyecto de latidos
+      fetales
+  italo_omegna:
+    nombre: Ítalo Omegna
+    cargo: Asesor legislativo PNL, ex Director de Vinculación Instituto Mises Cono Sur
+    organizacion: partido_nacional_libertario
+    notas: Jefe de gabinete del diputado Marowski. Presidente de Fundación Novum.
+      Panelista de La Cofradía. Desvinculado por video con burlas a niños
+      autistas.
+  hans_marowski:
+    nombre: Hans Marowski
+    cargo: Diputado (PNL)
+    cargos:
+      - cargo: Diputado (PNL)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    organizacion: partido_nacional_libertario
+    notas: Ex oficial del Ejército. Contrató a Omegna como asesor con sueldo de
+      $1.200.000.
+  emiliano_fernandez:
+    nombre: Emiliano Fernández
+    notas: Panelista del programa de streaming La Cofradía. Aparece en el video
+      junto a Omegna.
+  fernando_ortiz:
+    nombre: Fernando Ortiz
+    notas: Panelista del programa de streaming La Cofradía. Cumpleañero en el video
+      de la polémica.
+  fabiola_campillai:
+    nombre: Fabiola Campillai
+    cargo: Senadora (Ind.)
+    cargos:
+      - cargo: Senadora (Ind.)
+        organizacion: seremi_salud_magallanes
+        desde: 2026-03-11
+    notas: Criticó duramente el video, calificando a los participantes como
+      "repulsivos".
+  tamara_ramirez:
+    nombre: Tamara Ramírez
+    cargo: Subjefa de bancada (PDG)
+    notas: Exigió explicaciones públicas y responsabilidades por el video.
+  anuar_quesille:
+    nombre: Anuar Quesille
+    cargo: Defensor de la Niñez
+  fabian_ossandon:
+    nombre: Fabián Ossandón
+    cargo: Diputado (PDG)
+    cargos:
+      - cargo: Diputado (PDG)
+        organizacion: seremi_salud_magallanes
+        desde: 2026-03-11
+    notas: Condenó el video, lo calificó de " aberrante".
+  alex_nahuelquin:
+    nombre: Alex Nahuelquín
+    cargo: Diputado (PDG)
+    cargos:
+      - cargo: Diputado (PDG)
+        organizacion: seremi_salud_magallanes
+        desde: 2026-03-11
+    notas: Condenó el video junto a Paula Olmos.
+  alvaro_jalaff:
+    nombre: Álvaro Jalaff
+    cargo: Empresario, socio fundador de Grupo Patio y Factop
+    notas: Condenado a 5 años de presidio por cohecho e infracciones tributarias en caso Audios-Factop. Cumple en libertad vigilada.
+  paula_olmos:
+    nombre: Paula Olmos
+    cargo: Diputada (PDG)
+    cargos:
+      - cargo: Diputada (PDG)
+        organizacion: seremi_salud_magallanes
+        desde: 2026-03-11
+    notas: Condenó el video junto a Alex Nahuelquín.
+  fabin_barrientos_andrade:
+    nombre: Fabián Barrientos Andrade
+    cargo: Ex Seremi de Salud de Magallanes
+    cargos:
+      - cargo: Ex Seremi de Salud de Magallanes
+        organizacion: seremi_salud_magallanes
+        desde: 2026-03-11
+        hasta: 2026-07-25
+    organizacion: seremi_salud_magallanes
+    notas: Detenido por abuso sexual a menor de 17 años. Renuncia solicitada por
+      MinSal. Formalizado el 28 de julio de 2026 con cargos de reiteración de
+      abuso sexual a menor de 16 años e infracción a la ley de menores.
+  javiera_niemann:
+    nombre: Javiera Niemann
+    cargo: Delegada Presidencial de Magallanes
+    cargos:
+      - cargo: Delegada Presidencial de Magallanes
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+  francisco_san_martin:
+    nombre: Francisco San Martín Álvarez
+    cargo: Empresario minero, exprecandidato a alcalde (Republicano, Coquimbo)
+    notas: Líder de la "Operación Oro Rojo", red de robo y exportación de cobre.
+      Prisión preventiva desde abril 2025.
+  jack_lundin:
+    nombre: Jack Lundin
+    cargo: CEO de Lundin Mining
+    notas: Participó en reunión secreta con canciller Pérez Mackenna (15 abril 2026),
+      oculto del registro de lobby por 3 meses.
+  ronald_hochstein:
+    nombre: Ronald Hochstein
+    cargo: CEO de Vicuña
+    notas: Participó en reunión con canciller Pérez Mackenna (15 abril 2026).
+  jose_morea:
+    nombre: José Morea
+    cargo: Director para Argentina y Chile de Vicuña
+    notas: Reuniones con Quiroz (Hacienda) y Mas (Minería). Declaró reuniones "antes
+      de que asumiera el gobierno".
+  daniel_manouchehri:
+    nombre: Daniel Manouchehri
+    cargo: Diputado (PS)
+    cargos:
+      - cargo: Diputado (PS)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Integrante Comisión Investigadora CEI 72 (robo cables de cobre)
+  daniella_cicardini:
+    nombre: Daniella Cicardini
+    cargo: Senadora (PS)
+    cargos:
+      - cargo: Senadora (PS)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Denunció ante Contraloría el uso de recursos públicos en el almuerzo de Kast con excompañeros de la UC en La Moneda
+  nathalie_castillo:
+    nombre: Nathalie Castillo
+    cargo: Diputada (PC)
+    cargos:
+      - cargo: Diputada (PC)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Integrante Comisión Investigadora CEI 72 (robo cables de cobre)
+  carolina_tello:
+    nombre: Carolina Tello
+    cargo: Diputada (FA)
+    cargos:
+      - cargo: Diputada (FA)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Integrante Comisión Investigadora CEI 72 (robo cables de cobre)
+  alvaro_ortiz:
+    nombre: Álvaro Ortiz
+    cargo: Diputado (DC)
+    cargos:
+      - cargo: Diputado (DC)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Crítico de megarreforma, llamó "mentiroso" a Quiroz
+  carlos_mulet:
+    nombre: Carlos Mulet
+    cargo: Senador (PDG)
+    cargos:
+      - cargo: Senador (PDG)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Cuestiona designación de Sedini como vocera
+  pedro_tamayo:
+    nombre: Pedro Tamayo
+    cargo: Alcalde de Cerro Navia
+    cargos:
+      - cargo: Alcalde de Cerro Navia
+        organizacion: ministerio_hacienda
+        desde: 2024-12-06
+    notas: Propuso salida de la ACHM por apoyo a megarreforma
+  jaime_bassa:
+    nombre: Jaime Bassa
+    cargo: Constitucionalista (FA)
+    notas: Dice que Sedini reveló lucha fratricida en las derechas
+  tomas_brito:
+    nombre: Tomás Brito
+    cargo: Diputado (FA)
+    cargos:
+      - cargo: Diputado (FA)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Critica al Ejecutivo por dichos de Sedini
+  consuelo_veloso:
+    nombre: Consuelo Veloso
+    cargo: Diputada (RD)
+    cargos:
+      - cargo: Diputada (RD)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Llamó "manga de cobardes y sinvergüenzas" a Kast y Quiroz
+  jose_castillo:
+    nombre: José Castillo
+    cargo: Diputado (PC)
+    cargos:
+      - cargo: Diputado (PC)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Anunció Comisión Investigadora por respuesta tardía al sistema frontal
+  gonzalo_fuentes:
+    nombre: Gonzalo Fuentes
+    cargo: Gobernador Regional
+    notas: Acusó al ministro Poduje de crear conflictos artificiales
+  patricia_rojas:
+    nombre: Patricia Rojas
+    cargo: Vicepresidenta de la UDI
+    notas: Acusó a Sedini de ser desleal y no tener códigos
+  nelson_haase_mazzei:
+    nombre: Nelson Haase Mazzei
+    cargo: Exoficial del Ejército (r)
+    notas: Último prófugo condenado por homicidio y secuestro de Víctor Jara y
+      Littré Quiroga. Detenido el 25 de julio de 2026 en Puyehue. Exintegrante
+      de Tejas Verdes y la DINA
+  nelson_venegas:
+    nombre: Nelson Venegas
+    cargo: Diputado (PS)
+    cargos:
+      - cargo: Diputado (PS)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Firmó la denuncia ante Contraloría por el almuerzo de Kast con excompañeros en La Moneda
+  victor_jara:
+    nombre: Víctor Jara
+    cargo: Cantautor
+    notas: Asesinado en septiembre de 1973 en el Estadio Chile durante la dictadura
+      cívico-militar
+  littre_quiroga:
+    nombre: Littré Quiroga
+    cargo: Exdirector General de Prisiones
+    notas: Asesinado en septiembre de 1973 junto a Víctor Jara en el Estadio Chile
+  paola_plaza:
+    nombre: Paola Plaza
+    cargo: Ministra en visita de la Corte de Apelaciones de Santiago
+    notas: Ordenó el ingreso a prisión de Nelson Haase Mazzei
+  carlos_bianchi:
+    nombre: Carlos Bianchi
+    cargo: Diputado (PPD-Ind)
+    cargos:
+      - cargo: Diputado (PPD-Ind)
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Calificó de "publicidad engañosa" el proyecto de IVA pañales del PDG
+  jorge_jeri:
+    nombre: "Jose Jeri"
+    cargo: "Presidente de la Republica del Peru"
+    notas: "Recibio a Kast en su primera visita bilateral, Lima 7 enero 2026"
+  daniel_mas:
+    nombre: Daniel Mas
+    cargo: Biministro de Economía y Minería
+    cargos:
+      - cargo: Biministro de Economía y Minería
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
+    notas: Ingeniero Agrónomo de la PUC, único biministro del gabinete Kast. Ex vicepresidente de la CPC y ex presidente de la CChC de La Serena. Dirige la empresa familiar Ecomac (ex Constructora Carel). Agenda anti-permisología. En 2016 CIPER vinculó a la Inmobiliaria Ecomac, bajo su control, con pagos de $25 millones en facturas falsas que habrían financiado la campaña de Laurence Golborne.
+  manuel_viera:
+    nombre: Manuel Viera
+    cargo: Presidente de la Cámara Minera de Chile
+    organizacion: camara_minera
+    notas: Criticó la designación de Daniel Mas como ministro de Minería por ser agrónomo.
+  felipe_larrain:
+    nombre: Felipe Larraín
+    cargo: Exministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    organizacion: ministerio_hacienda
+    notas: Exministro de Hacienda del segundo gobierno de Sebastián Piñera (2018-2022).
+  natalia_duco:
+    nombre: Natalia Duco
+    cargo: Ministra del Deporte
+    cargos:
+      - cargo: Ministra del Deporte
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Atleta olímpica, especialista en lanzamiento de peso.
+  tomas_rau:
+    nombre: Tomás Rau
+    cargo: Ministro de Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro de Trabajo y Previsión Social
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Abogado laborista, independiente.
+  francisco_perez_mackenna:
+    nombre: Francisco Pérez Mackenna
+    cargo: Ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Ingeniero comercial, CEO de Quiñenco. Independiente.
+  catalina_parot:
+    nombre: Catalina Parot
+    cargo: Ministra de Bienes Nacionales
+    cargos:
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Abogada, militante de Evópoli. Exministra de Bienes Nacionales durante el
+      primer gobierno de Piñera.
+  fernando_rabat:
+    nombre: Fernando Rabat
+    cargo: Ministro de Justicia y Derechos Humanos
+    cargos:
+      - cargo: Ministro de Justicia y Derechos Humanos
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Abogado, independiente.
+  francisca_toledo:
+    nombre: Francisca Toledo
+    cargo: Ministra del Medio Ambiente
+    cargos:
+      - cargo: Ministra del Medio Ambiente
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Ingeniera Civil Industrial. Trabajó en los dos gobiernos de Piñera.
+  ximena_lincolao:
+    nombre: Ximena Lincolao
+    cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
+    cargos:
+      - cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Independiente.
+  luz_reidel:
+    nombre: Luz Reidel
+    cargo: Abogada de Fundación Miles
+    notas: "Abogada de Fundación Miles. Cuestionó el proyecto de audición de latidos fetales como violencia gineco-obstétrica."
+  luis_cordero:
+    nombre: Luis Cordero
+    cargo: Ministro de Seguridad Pública
+    notas: Designado durante la crisis de incendios forestales de enero 2026.
+  sergio_grez:
+    nombre: Sergio Grez
+    cargo: Historiador
+    notas: "Historiador de la Universidad de Chile. Criticó los sueldos de los asesores del gobierno de Kast."
+  sergio_giacaman:
+    nombre: Sergio Giacaman
+    cargo: Gobernador Regional del Biobío
+    notas: Calificó los incendios de enero 2026 como "tragedia pocas veces vista".
+  sofia_cid:
+    nombre: Sofía Cid Versalovic
+    cargo: Delegada presidencial regional de Atacama
+    cargos:
+      - cargo: Delegada presidencial regional de Atacama
+        organizacion: delegacion_presidencial_atacama
+        desde: 2026-03-11
+    notas: "Ex RN y ex seremi de Economía de Atacama. Oficializó los primeros nombramientos del gabinete regional, incluida la fallida designación de Daniela Gallegos como seremi de Economía."
+  luis_abinader:
+    nombre: Luis Abinader
+    cargo: Presidente de la República Dominicana
+    cargos:
+      - cargo: Presidente de la República Dominicana
+        organizacion: partido_republicano
+        desde: 2020-08-16
+    notas: Mostró a Kast la barrera fronteriza con Haití como modelo de control
+      migratorio.
+  nayib_bukele:
+    nombre: Nayib Bukele
+    cargo: Presidente de El Salvador
+    cargos:
+      - cargo: Presidente de El Salvador
+        organizacion: partido_republicano
+        desde: 2019-06-01
+    notas: Recibió a Kast en el CECOT, ofreció asesoría en sistema penitenciario.
+  lula_da_silva:
+    nombre: Lula da Silva
+    cargo: Presidente de Brasil
+    cargos:
+      - cargo: Presidente de Brasil
+        organizacion: partido_republicano
+        desde: 2023-01-01
+    notas: Se reunió con Kast en el Foro CAF de Panamá.
+  daniel_noboa:
+    nombre: Daniel Noboa
+    cargo: Presidente de Ecuador
+    cargos:
+      - cargo: Presidente de Ecuador
+        organizacion: partido_republicano
+        desde: 2023-11-23
+    notas: Se reunió con Kast en el Foro CAF de Panamá.
+  bernardo_arevalo:
+    nombre: Bernardo Arévalo
+    cargo: Presidente de Guatemala
+    cargos:
+      - cargo: Presidente de Guatemala
+        organizacion: partido_republicano
+        desde: 2024-01-14
+    notas: Se reunió con Kast en el Foro CAF de Panamá.
+  alexander_nanjari:
+    nombre: Alexander Nanjarí
+    cargo: Ex Seremi de Educación del Biobío (nunca asumió)
+    notas: Nombramiento revocado antes de asumir por tuits polemicos de 2024-2025.
+      Presentó recurso de protección.
+  jorge_salazar:
+    nombre: Jorge Salazar Ruiz
+    cargo: Ex Seremi de Obras Públicas de Los Ríos (nunca asumió)
+    notas: Nombramiento dejado sin efecto por cuestionamientos a su gestión en
+      Deportes Valdivia.
+  patricia_dinamarca:
+    nombre: Patricia Dinamarca Reyes
+    cargo: Ex Seremi de Educación de Los Lagos
+    cargos:
+      - cargo: Ex Seremi de Educación de Los Lagos
+        organizacion: partido_republicano
+        desde: 2026-03-26
+        hasta: 2026-04-01
+    notas: Prof. Educación Física, nombramiento revocado tras 6 días por posts a
+      favor del estallido social. Denunció hackeo.
+  luis_hernandez_pr:
+    nombre: Luis Hernández
+    cargo: Presidente regional del Partido Republicano en Los Lagos
+    organizacion: partido_republicano
+  angel_colque:
+    nombre: Ángel Colque
+    cargo: Ex Seremi de la Mujer de Antofagasta
+    cargos:
+      - cargo: Ex Seremi de la Mujer de Antofagasta
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-04-08
+    notas: Egresada de Derecho UCN, no contaba con título profesional.
+  mauricio_montealegre:
+    nombre: Mauricio Montealegre
+    cargo: Ex Seremi de Obras Públicas de Tarapacá (nunca asumió)
+    notas: Ingeniero Civil U. de Chile, renunció por motivos personales antes de
+      asumir.
+  patrick_dungan:
+    nombre: Patrick Dungan
+    cargo: Ex Seremi de Energía de La Araucanía
+    cargos:
+      - cargo: Ex Seremi de Energía de La Araucanía
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-04-15
+    notas: RN, ex seremi de Hacienda bajo Piñera. Se ausentó del cargo y dejó sin
+      efecto su nombramiento.
+  gustavo_baehr:
+    nombre: Gustavo Baehr
+    cargo: Ex Seremi de Culturas y Artes de la RM
+    cargos:
+      - cargo: Ex Seremi de Culturas y Artes de la RM
+        organizacion: partido_republicano
+        desde: 2026-03-31
+        hasta: 2026-04-14
+  carolina_arredondo:
+    nombre: Carolina Arredondo
+    cargo: Ministra de Cultura
+    notas: Abogado PUC, 29 años, evangélico, renunció tras 2 semanas por falta de
+      experiencia.
+  renato_munster:
+    nombre: Renato Münster
+    cargo: Ex Seremi de Culturas y Artes de la RM
+    cargos:
+      - cargo: Ex Seremi de Culturas y Artes de la RM
+        organizacion: partido_republicano
+        desde: 2026-04-14
+        hasta: 2026-04-15
+    notas: Reemplazó a Baehr, renunció al día siguiente por motivos personales
+      (enfermedad familiar).
+  viviana_torres:
+    nombre: Viviana Torres
+    cargo: Ex Seremi de Trabajo de Coquimbo
+    cargos:
+      - cargo: Ex Seremi de Trabajo de Coquimbo
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-04-21
+    notas: Contador Auditor, renunció por no cumplir requisito de 10 semestres.
+  angela_valdebenito:
+    nombre: Ángela Valdebenito
+    cargo: Ex Seremi de Culturas y Artes de Aysén
+    cargos:
+      - cargo: Ex Seremi de Culturas y Artes de Aysén
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-04-17
+    notas: UDI, concejala de Chile Chico, renunció por falta de experiencia para el
+      cargo.
+  antaris_varela:
+    nombre: Antaris Varela
+    cargo: Ex Seremi de la Mujer de Biobío (nunca asumió)
+    notas: Fundadora Partido Conservador Cristiano, ex asesora de Kast. Designación
+      dejó sin efecto por licencia de embarazo de la antecesora.
+  eduardo_leiva:
+    nombre: Eduardo Leiva
+    cargo: Ex Seremi de Culturas y Artes de Los Lagos
+    cargos:
+      - cargo: Ex Seremi de Culturas y Artes de Los Lagos
+        organizacion: partido_republicano
+        desde: 2026-03-30
+        hasta: 2026-07-21
+    notas: Renunció por motivos personales tras 113 días en el cargo.
+  cristian_cabezas:
+    nombre: Cristián Andrés Cabezas Mundaca
+    cargo: Ex Seremi de Trabajo de Tarapacá
+    cargos:
+      - cargo: Ex Seremi de Trabajo de Tarapacá
+        organizacion: partido_republicano
+        desde: 2026-03-30
+        hasta: 2026-07-27
+    notas: Profesor, renunció julio 2026 por denuncias de acoso y maltrato laboral.
+      Asumió 30 marzo.
+  camila_alonso:
+    nombre: Camila Alonso Klaric
+    cargo: Ex Seremi de Bienes Nacionales de Antofagasta
+    cargos:
+      - cargo: Ex Seremi de Bienes Nacionales de Antofagasta
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-05-06
+    notas: Abogada U. de Antofagasta, magíster en Derecho Público. Renunció por
+      motivos personales.
+  veronica_figueroa:
+    nombre: Verónica Figueroa Foitzick
+    cargo: Ex Seremi de Transportes de Aysén
+    cargos:
+      - cargo: Ex Seremi de Transportes de Aysén
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-06-01
+    notas: Renunció tras incidente en comisaría de Coyhaique donde intervino por su
+      esposo detenido.
+  jorge_carrillo:
+    nombre: Jorge Carrillo
+    cargo: Ex Seremi de Salud de Ñuble
+    cargos:
+      - cargo: Ex Seremi de Salud de Ñuble
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-06-12
+    notas: Nutricionista U. del Desarrollo, magíster (c). Minsal le pidió renuncia
+      sin dar motivos.
+  marcela_fuentes:
+    nombre: Marcela Fuentes
+    cargo: Directora de la Escuela de Obstetricia UDP
+    notas: "Matrona, directora de la Escuela de Obstetricia de la UDP y de Fundación Miles. Calificó el proyecto de 'tortura psicológica'."
+  marcelo_vergara:
+    nombre: Marcelo Vergara Albarracín
+    cargo: Ex Seremi de Hacienda de Arica y Parinacota
+    cargos:
+      - cargo: Ex Seremi de Hacienda de Arica y Parinacota
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-07-17
+    notas: Ingeniero comercial, MBA. Renunció voluntariamente julio 17. Razones no
+      divulgadas.
+  marcia_raphael:
+    nombre: Marcia Raphael Mora
+    cargo: Ex Seremi de Desarrollo Social de Aysén
+    cargos:
+      - cargo: Subsecretaria de la Mujer y Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2026-06-16
+    notas: RN, exdiputada. Promovida a subsecretaria de la Mujer tras salida de
+      Daniela Castro.
+  mario_sepulveda:
+    nombre: Mario Sepúlveda Peralta
+    cargo: Ex seremi de Seguridad de La Araucanía
+    cargos:
+      - cargo: Ex seremi de Seguridad de La Araucanía
+        organizacion: seremi_seguridad_araucania
+        desde: 2026-04-01
+        hasta: 2026-04-17
+    notas: "Ex jefe de la XVI Zona de Carabineros de Ñuble. Reemplazado tras 16 días en el cargo; el motivo no se informó públicamente."
+  gael_yeomans:
+    nombre: Gael Yeomans
+    cargo: Diputada (FA)
+    cargos:
+      - cargo: Diputada (FA)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Diputada frenteamplista, criticó sueldos de asesores presidenciales.
+  dorothy_perez:
+    nombre: Dorothy Pérez
+    cargo: Contralora General de la República
+    notas: Requerimiento a Secom por publicaciones Estado quebrado.
+  antonio_orellana:
+    nombre: Antonio Orellana
+    cargo: Diputado (PDG)
+    cargos:
+      - cargo: Diputado (PDG)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Diputado del Partido de la Gente.
+  diego_munoz:
+    nombre: Diego Muñoz Urbina
+    cargo: Ex Seremi de Bienes Nacionales de Tarapacá
+    cargos:
+      - cargo: Ex Seremi de Bienes Nacionales de Tarapacá
+        organizacion: partido_republicano
+        desde: 2026-03-28
+        hasta: 2026-05-01
+    notas: Abogado U. de Concepción, renunció tras 34 días por motivos personales.
+  keiko_fujimori:
+    nombre: Keiko Fujimori
+    cargo: Presidenta de Perú
+    cargos:
+      - cargo: Presidenta de Perú
+        organizacion: partido_republicano
+        desde: 2026-07-28
+    notas: Líder de Fuerza Popular, asumió el 28 de julio de 2026. Hija de Alberto Fujimori.
+  eduardo_frei:
+    nombre: Eduardo Frei Ruiz-Tagle
+    cargo: Expresidente de Chile, embajador en misión especial
+    cargos:
+      - cargo: Presidente de la República de Chile
+        organizacion: presidencia_chile
+        desde: 1994-03-11
+        hasta: 2000-03-11
+    notas: Expresidente (1994-2006), viajó con Kast a Perú como invitado especial.
+  paula_estevez:
+    nombre: Paula Estévez
+    cargo: Subsecretaria de Relaciones Económicas Internacionales
+    cargos:
+      - cargo: Subsecretaria de Relaciones Económicas Internacionales
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Coordinó estrategia comercial ante arancel de 12,5% de EEUU.
+  cristian_matus:
+    nombre: Cristián Matus
+    cargo: Director (s) de Senapred Ñuble
+    notas: Entregó recomendaciones ante tornados en Ñuble.
+  diego_sepulveda:
+    nombre: Diego Sepúlveda
+    cargo: Delegado presidencial de Ñuble
+    cargos:
+      - cargo: Delegado presidencial de Ñuble
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Cifró en 107 las personas afectadas por sistema frontal en Ñuble.
+  danilo_herrera:
+    nombre: Danilo Herrera
+    cargo: Periodista, editor de Monitoreo Legislativo
+    notas: Editor del sitio recorteshacienda.cl, que publica los decretos de recorte
+      presupuestario notificados a Contraloría, y del registro Renuncias Kast.
+  arnaldo_zuniga:
+    nombre: Arnaldo Zúñiga
+    cargo: Meteorólogo de la DMC
+    notas: Indicó que sistema frontal llegaría a zona central el lunes 27.
+  jamieson_greer:
+    nombre: Jamieson Greer
+    cargo: Representante Comercial de Estados Unidos (USTR)
+    notas: Concluyó investigación contra Chile y 59 economías por Sección 301.
+  pablo_amaro_valenzuela:
+    nombre: Pablo Amaro Valenzuela
+    cargo: Seremi de Culturas, Artes y Patrimonio del Maule
+    cargos:
+      - cargo: Seremi de Culturas, Artes y Patrimonio del Maule
+        organizacion: partido_republicano
+        desde: 2026-04-01
+    notas: Periodista. Designado en abril 2026. Contraloría detectó pagos por
+      $30M sin respaldo en Municipalidad de Villa Alegre.
+  patricio_ponce:
+    nombre: Patricio Ponce Arqueros
+    cargo: Ex seremi de Vivienda y Urbanismo del Maule
+    cargos:
+      - cargo: Ex seremi de Vivienda y Urbanismo del Maule
+        organizacion: partido_republicano
+        desde: 2026-03-11
+        hasta: 2026-07-27
+    notas: Renunció en julio 2026 tras <5 meses por nuevo marco de remuneraciones.
+  agustin_romero:
+    nombre: Agustín Romero
+    cargo: Diputado (REP)
+    cargos:
+      - cargo: Diputado (REP)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    organizacion: partido_republicano
+    notas: Integrante de la Comisión de Salud. Impulsa proyecto para sancionar venta de Misoprostol.
+  paz_charpentier:
+    nombre: Paz Charpentier
+    cargo: Diputada (REP)
+    cargos:
+      - cargo: Diputada (REP)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    organizacion: partido_republicano
+    notas: Impulsora de proyectos de agenda valórica, como acción judicial por derecho preferente de los padres en educación.
+  jose_antonio_kast_adriasola:
+    nombre: José Antonio Kast Adriasola
+    cargo: Diputado (REP)
+    cargos:
+      - cargo: Diputado (REP)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    organizacion: partido_republicano
+    notas: Hijo del presidente Kast. Diputado por el Distrito 11.
+  beate_thoresen:
+    nombre: Beate Thoresen
+    cargo: Jefa de Sección para América Latina y Desarrollo Organizacional y Políticas Públicas
+    organizacion: norwegian_people_aid
+    notas: Confirmó aporte de USD $500.000 a comunidades lafkenche en Chile.
+  per_anders_nilsen:
+    nombre: Per Anders Nilsen
+    cargo: Embajador de Noruega en Chile
+    notas: Negó injerencia extranjera por financiamiento de NPA a lafkenches.
+  juan_carlos_cardenas:
+    nombre: Juan Carlos Cárdenas
+    cargo: Director de Ecoceanos
+    organizacion: ecoceanos
+    notas: Compareció ante USTR en Washington junto a Fundación Libera denunciando trabajo forzoso en salmonicultura.
+  alejandro_bernales:
+    nombre: Alejandro Bernales
+    cargo: Diputado (PL), presidente Comisión de Pesca y Acuicultura
+    cargos:
+      - cargo: Diputado (PL), presidente Comisión de Pesca y Acuicultura
+        organizacion: municipalidad_vina_del_mar
+        desde: 2026-03-11
+    notas: Exigió transparencia en financiamiento de ONG tras caso NPA.
+  mauro_gonzalez:
+    nombre: Mauro González
+    cargo: Diputado (RN)
+    cargos:
+      - cargo: Diputado (RN)
+        organizacion: municipalidad_vina_del_mar
+        desde: 2026-03-11
+    notas: Propuso modificar Ley Lafkenche ante aportes de NPA.
+  victor_quiroz:
+    nombre: Víctor Quiroz Castro
+    cargo: Arquitecto, socio principal de Quiroz y Puelma Arquitectos
+    notas: Hermano del ministro de Hacienda Jorge Quiroz.
+  macarena_ripamonti:
+    nombre: Macarena Ripamonti
+    cargo: Alcaldesa de Viña del Mar
+    cargos:
+      - cargo: Alcaldesa de Viña del Mar
+        organizacion: municipalidad_vina_del_mar
+        desde: 2024-12-06
+    organizacion: municipalidad_vina_del_mar
+    notas: Cuestionó públicamente proyectos inmobiliarios en dunas de Concón.
+  juan_jose_lyon:
+    nombre: Juan José Lyon
+    cargo: Director Ejecutivo de Fundación América Transparente
+    organizacion: fundacion_america_transparente
+    notas: Criticó omisión del ministro Quiroz en declaración de intereses.
+  camila_vallejo:
+    nombre: Camila Vallejo Dowling
+    cargo: Exvocera de Gobierno, diputada (PC)
+    cargos:
+      - cargo: Vocera de Gobierno
+        organizacion: segegob
+        desde: 2022-03-11
+        hasta: 2026-03-11
+      - cargo: Diputada (PC)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Exvocera del gobierno de Gabriel Boric. Criticó duramente las promesas de seguridad de Kast en entrevista con Animales Políticos.
+  evelyn_matthei:
+    nombre: Evelyn Matthei Fornet
+    cargo: Exalcaldesa de Providencia, excandidata presidencial (UDI)
+    cargos:
+      - cargo: Alcaldesa de Providencia
+        organizacion: partido_republicano
+        desde: 2016-12-06
+        hasta: 2024-12-06
+    notas: Se cuadró con Camila Vallejo en críticas a promesa de seguridad del gobierno Kast. También criticó a la prensa por cobertura sexista.
+  alvaro_elizalde:
+    nombre: Álvaro Elizalde Soto
+    cargo: Ministro del Interior y Seguridad Pública
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    notas: Vocero de gobierno. Criticó propuesta de Republicanos de privatizar Codelco.
+  camila_flores:
+    nombre: Camila Flores
+    cargo: Senadora (RN)
+    cargos:
+      - cargo: Senadora (RN)
+        organizacion: renovacion_nacional
+        desde: 2026-03-11
+      - cargo: Diputada (RN)
+        organizacion: camara_diputados
+        hasta: 2026-03-11
+    notas: Senadora de Renovación Nacional. Investigada por presunto fraude al fisco en el llamado "caso cuota Flores" por supuestos cobros irregulares a colaboradores durante su etapa como diputada. La Fiscalía incautó su teléfono en mayo de 2026 y en julio pidió al Congreso documentación del proyecto de reforma notarial.
+  carlos_swett:
+    nombre: Carlos Swett
+    cargo: Presidente de la Asociación de Notarios y Conservadores de Chile
+    organizacion: asociacion_notarios_conservadores
+  hector_ulloa:
+    nombre: Héctor Ulloa
+    cargo: Diputado (PDG)
+    cargos:
+      - cargo: Diputado (PDG)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Criticó declaraciones de Kast sobre alza de combustibles en Cuenta Pública.
+  lautaro_carmona:
+    nombre: Lautaro Carmona
+    cargo: Presidente del Partido Comunista
+    cargos:
+      - cargo: Presidente del Partido Comunista
+        organizacion: partido_comunista
+        desde: 2023-01-01
+    notas: Criticó el primer mes del gobierno de Kast, definiéndolo como un mandato carente de empatía.
+  matias_fernandez:
+    nombre: Matías Fernández
+    cargo: Diputado (FA)
+    cargos:
+      - cargo: Diputado (FA)
+        organizacion: frente_amplio
+        desde: 2026-03-11
+    notas: Criticó el proceso de instalación del gobierno de Kast, acusando que la ciudadanía paga las consecuencias de la crisis internacional.
+  mario_marcel:
+    nombre: Mario Marcel
+    cargo: Exministro de Hacienda (Gobierno de Gabriel Boric)
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    notas: Cuestionó la narrativa de "descontrol" del gasto público durante la transición al gobierno de Kast.
+  monica_rincon:
+    nombre: Mónica Rincón
+    cargo: Periodista y conductora de CNN Chile
+  hotuiti_teao:
+    nombre: Hotuiti Teao Drago
+    cargo: Diputado (Independiente, ex-PNL)
+    cargos:
+      - cargo: Diputado (Independiente, ex-PNL)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Viajó a Francia e Inglaterra durante la semana distrital de julio 2026, generando controversia sobre salidas de diputados al extranjero.
+  henry_kunstmann:
+    nombre: Henry Kunstmann
+    cargo: Diputado (Independiente)
+    cargos:
+      - cargo: Diputado (Independiente)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: Su viaje al extranjero durante el período legislativo generó controversia previa sobre salidas de diputados.
+  jeannette_jara:
+    nombre: Jeannette Jara
+    cargo: Exministra del Trabajo y excandidata presidencial (Unidad por Chile)
+    cargos:
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: partido_republicano
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    notas: Candidata oficialista en la segunda vuelta presidencial 2025. Obtuvo 41,84% de los votos.
+  arturo_squella:
+    nombre: Arturo Squella
+    cargo: Presidente del Partido Republicano
+    organizacion: partido_republicano
+  hector_barria:
+    nombre: Héctor Barría
+    cargo: Diputado (DC)
+  marlene_perez:
+    nombre: Marlene Pérez
+    cargo: Diputada (UDI)
+    organizacion: union_democrata_independiente
+  diego_hernandez:
+    nombre: Diego Hernández
+    cargo: Expresidente ejecutivo de Codelco
+    cargos:
+      - cargo: Presidente ejecutivo de Codelco
+        organizacion: codelco
+        desde: 2014-01-01
+        hasta: 2016-12-31
+    organizacion: codelco
+    notas: Ingeniero civil de minas, fue presidente ejecutivo de Codelco entre 2014 y 2016.
+  karim_bianchi:
+    nombre: Karim Bianchi
+    cargo: Senador (Independiente)
+    cargos:
+      - cargo: Senador (Independiente)
+        organizacion: ministerio_seguridad
+        desde: 2026-03-11
+  maria_pilar_giannini:
+    nombre: María del Pilar Giannini
+    cargo: Subsecretaria de Seguridad Pública
+    organizacion: ministerio_seguridad
+  tomas_vodanovic:
+    nombre: Tomás Vodanovic
+    cargo: Alcalde de Maipú (Frente Amplio)
+    cargos:
+      - cargo: Alcalde de Maipú (Frente Amplio)
+        organizacion: municipalidad_maipu
+        desde: 2024-12-06
+    organizacion: municipalidad_maipu
+  maurice_poirrier:
+    nombre: Maurice Poirrier
+    cargo: Director de la Secretaría de Gobierno Digital
+    organizacion: secretaria_gobierno_digital
+  maria_fernanda_rebolledo:
+    nombre: María Fernanda Rebolledo
+    cargo: Exjefa de cabina de la FACh
+    organizacion: fach
+  jorge_del_pozo:
+    nombre: Jorge del Pozo
+    cargo: Alcalde de Chillán Viejo
+    cargos:
+      - cargo: Alcalde de Chillán Viejo
+        organizacion: municipalidad_chillan_viejo
+        desde: 2024-12-06
+    organizacion: municipalidad_chillan_viejo
+  karla_kepec:
+    nombre: Karla Kepec
+    cargo: Exseremi de Salud de Arica y Parinacota
+    organizacion: seremi_salud_arica
+    cargos:
+      - cargo: Seremi de Salud de Arica y Parinacota
+        organizacion: seremi_salud_arica
+        desde: 2026-03-26
+        hasta: 2026-07-30
+      - cargo: Presidenta regional del Partido Republicano en Arica y Parinacota
+        organizacion: partido_republicano
+        desde: 2024-01-01
+    notas: Médica cirujana de la Universidad de Concepción. Presidenta regional del
+      Partido Republicano en Arica y Parinacota. Asumió como seremi el 26 de marzo
+      de 2026 y el Minsal le solicitó la renuncia el 30 de julio de 2026 tras
+      filtrarse un mensaje que condicionaba cupos laborales a la militancia republicana.
+  luis_malla:
+    nombre: Luis Malla
+    cargo: Diputado por Arica (Partido Liberal)
+    cargos:
+      - cargo: Diputado por Arica (Partido Liberal)
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+  jose_luis_daza:
+    nombre: José Luis Daza
+    cargo: Viceministro de Política Económica de Argentina
+    organizacion: ministerio_economia_argentina
+  brandon_judd:
+    nombre: Brandon Judd
+    cargo: Embajador de Estados Unidos en Chile
+    organizacion: embajada_eeuu_chile
+  constanza_schonhaut:
+    nombre: Constanza Schönhaut
+    cargo: Diputada Frente Amplio
+    cargos:
+      - cargo: Diputada Frente Amplio
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+  carolina_cucumides:
+    nombre: Carolina Cucumides
+    cargo: Diputada Partido Socialista
+    cargos:
+      - cargo: Diputada Partido Socialista
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+  lorena_fries:
+    nombre: Lorena Fries
+    cargo: Diputada Frente Amplio
+    cargos:
+      - cargo: Diputada Frente Amplio
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+  zandra_parisi:
+    nombre: Zandra Parisi
+    cargo: Diputada Partido de la Gente
+    cargos:
+      - cargo: Diputada Partido de la Gente
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+  ivan_moreira:
+    nombre: Iván Moreira
+    cargo: Senador UDI
+    cargos:
+      - cargo: Senador UDI
+        organizacion: senado
+        desde: 2026-03-11
+    organizacion: senado
+  marco_enriquez_ominami:
+    nombre: Marco Enríquez-Ominami
+    cargo: Excandidato presidencial (PRO)
+    organizacion: partido_progresista
+    notas: Candidato presidencial en la elección de 2021. Criticó el primer mes del gobierno de Boric.
+  daniel_jadue:
+    nombre: Daniel Jadue
+    cargo: Exalcalde de Recoleta (PC)
+    organizacion: partido_comunista
+    notas: Expresó críticas desde Venezuela al programa y el primer mes del gobierno de Boric.
+  diego_ibanez:
+    nombre: Diego Ibáñez
+    cargo: Senador Frente Amplio
+    cargos:
+      - cargo: Senador Frente Amplio
+        organizacion: senado
+        desde: 2026-03-11
+    organizacion: senado
+  fernando_solabarrieta:
+    nombre: Fernando Solabarrieta
+    cargo: Periodista y conductor de TV
+  bernardo_fontaine:
+    nombre: Bernardo Fontaine
+    cargo: Presidente del Directorio de Codelco
+    cargos:
+      - cargo: Presidente del Directorio de Codelco
+        organizacion: codelco
+        desde: 2026-05-27
+    organizacion: codelco
+  pablo_longueira:
+    nombre: Pablo Longueira
+    cargo: Exsenador (UDI)
+    cargos:
+      - cargo: Senador (UDI)
+        organizacion: armada_chile
+        desde: 2010-03-11
+        hasta: 2014-03-11
+    notas: Figura central del caso Corpesca por lobby a favor de la industria pesquera durante tramitación de la Ley de Pesca.
+  bruno_villalobos:
+    nombre: Bruno Villalobos
+    cargo: General director (r) de Carabineros
+    notas: Condenado por fraude al fisco en caso Pacogate por uso irregular de fondos reservados de Carabineros.
+  ivan_fuentes:
+    nombre: Iván Fuentes
+    cargo: Exsenador
+    cargos:
+      - cargo: Senador
+        organizacion: armada_chile
+        desde: 2014-03-11
+        hasta: 2022-03-11
+    notas: Involucrado en caso Corpesca por lobby pesquero.
+  jonathan_richards_gaete:
+    nombre: Jonathan David Richards Gaete
+    cargo: "Cabo 1° de la Armada"
+    organizacion: armada_chile
+    notas: "Imputado por cuasidelito de homicidio tras atropello múltiple en feria Caupolicán de Viña del Mar (12 jul 2026). Prisión preventiva en recinto militar."
+  marcelo_araya:
+    nombre: Marcelo Araya
+    cargo: General Director de Carabineros
+    cargos:
+      - cargo: General Director de Carabineros
+        organizacion: carabineros
+        desde: 2024-09-30
+    organizacion: carabineros
+    notas: "Máxima autoridad institucional de Carabineros de Chile. Su esposa Janet Morales fue investigada por cirugías estéticas cubiertas por Dipreca."
+  janet_morales:
+    nombre: Janet Morales Jara
+    cargo: Presidenta de la Corporación de Ayuda a la Familia de Carabineros
+    notas: "Esposa del general director Marcelo Araya. Sometida a cuatro cirugías estéticas en Hospital de Carabineros, cubiertas por Dipreca."
+  gonzalo_yuseff:
+    nombre: Gonzalo Yuseff
+    cargo: Abogado defensor
+    notas: "Defendió a Jonathan Richards Gaete ante la Corte de Apelaciones de Valparaíso, logrando traslado a recinto militar."
+  jonathan_richards:
+    nombre: Jonathan Richards Gaete
+    cargo: Cabo de la Armada imputado por cuasidelito de homicidio
+    organizacion: armada_chile
+    notas: "Atropelló a tres personas en feria Caupolicán (12 jul 2026). Decretada prisión preventiva en recinto militar."
+  geraldine_burgos:
+    nombre: Geraldine Burgos
+    cargo: Víctima de atropello en feria Caupolicán
+    notas: "Sobreviviente del atropello múltiple. Sufrió fractura de pelvis y fémur. Su madre Patricia demandó al Estado."
+  ximena_matus:
+    nombre: Ximena Matus
+    cargo: Alcaldesa de Viña del Mar
+    cargos:
+      - cargo: Alcaldesa de Viña del Mar
+        organizacion: municipalidad_vina_del_mar
+        desde: 2024-12-06
+    organizacion: municipalidad_vina_del_mar
+    notas: "Alcaldesa de Viña del Mar. Condenó el atropello en feria Caupolicán y pidió celeridad en la investigación."
+  carlos_arrau:
+    nombre: Carlos Arrau
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2026-03-11
+    notas: "Ordenó sumario sanitario por cirugías estéticas a esposa de general director de Carabineros."
+  delcy_rodriguez:
+    nombre: Delcy Rodríguez
+    cargo: Presidenta encargada de Venezuela
+    cargos:
+      - cargo: Presidenta encargada de Venezuela
+        organizacion: venezuela
+        desde: 2026-01-05
+    organizacion: venezuela
+    notas: "Asumió como presidenta encargada el 5 de enero de 2026, tras la captura de Nicolás Maduro en Caracas. Lideró el acercamiento diplomático con Chile."
+  roberto_arroyo:
+    nombre: Roberto Arroyo
+    cargo: Diputado (Independiente)
+    cargos:
+      - cargo: Diputado (Independiente)
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+    notas: "Ingresó proyecto de ley para sancionar penalmente la ofensa racial junto a Flor Contreras."
+  flor_contreras:
+    nombre: Flor Contreras
+    cargo: Diputada (PDG)
+    cargos:
+      - cargo: Diputada (PDG)
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+    notas: "Ingresó proyecto de ley para sancionar penalmente la ofensa racial junto a Roberto Arroyo."
+  ana_carolina_cruz:
+    nombre: Ana Carolina Cruz
+    cargo: Influencer brasileña, creadora de contenido de viajes y turismo
+    notas: "Denunció insultos xenófobos y racistas de un instructor en un centro de esquí chileno (Valle Nevado)."
+  francisca_corthorn:
+    nombre: Francisca Corthorn Bravo
+    cargo: Gerenta general de Corthorn Health
+    organizacion: corthorn_health
+    notas: "Informó el rechazo a derivar la contramuestra de Juan Pablo Rodríguez a otro laboratorio."
+  arturo_barrios:
+    nombre: Arturo Barrios
+    cargo: Diputado
+    organizacion: partido_socialista
+    notas: "Diputado del Partido Socialista. Criticó que el gobierno de Kast haya dejado una agenda de Estado por una perspectiva ideológica."
+  jorge_burgos:
+    nombre: Jorge Burgos
+    cargo: Ex Ministro del Interior
+    organizacion: ministerio_interior
+    notas: Exministro del Interior del segundo gobierno de Bachelet; valoró la continuidad del plan de seguridad entre gobiernos.
+  andres_couble:
+    nombre: Andrés Couble
+    cargo: Secretario general del Frente Amplio
+    organizacion: frente_amplio
+    notas: "Secretario general del Frente Amplio. Cuestionó la flexibilización laboral del gobierno de Kast."
+  barbara_figueroa:
+    nombre: Bárbara Figueroa
+    cargo: Secretaria general del Partido Comunista
+    organizacion: partido_comunista
+    notas: "Secretaria general del Partido Comunista de Chile. Acusó improvisación en la agenda de seguridad del gobierno de Kast."
+  vicente_bruna:
+    nombre: Vicente Bruna
+    cargo: Secretario general del Partido Republicano
+    cargos:
+      - cargo: Secretario general del Partido Republicano
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    organizacion: partido_republicano
+    notas: "Secretario general del Partido Republicano. Criticó a Boric por repostear dichos del músico Matías Ávila."
+  matias_avila:
+    nombre: Matías Ávila
+    cargo: Cantante, guitarrista y fundador de Candelabro
+    organizacion: candelabro
+    notas: "Vocalista y fundador de la banda Candelabro, además de profesor de música."
+  carlos_dettleff:
+    nombre: Carlos Dettleff
+    cargo: Director nacional de Fronteras y Límites del Estado
+    cargos:
+      - cargo: Director nacional de Fronteras y Límites del Estado
+        organizacion: difrol
+        desde: 2026-03-11
+    organizacion: difrol
+    notas: "Director nacional de la Dirección de Fronteras y Límites del Estado (Difrol). Presentó ante la ONU la plataforma continental extendida de Juan Fernández."
+  luis_calderon:
+    nombre: Luis Calderón
+    cargo: Seremi de Seguridad de La Araucanía
+    cargos:
+      - cargo: Seremi de Seguridad de La Araucanía
+        organizacion: seremi_seguridad_araucania
+        desde: 2026-04-17
+      - cargo: Coordinador de la Unidad de Macrozona Sur
+        desde: 2020-01-01
+        hasta: 2022-12-31
+    organizacion: seremi_seguridad_araucania
+    notas: "Abogado. Asumió como seremi de Seguridad de La Araucanía el 17 de abril de 2026, presentado por el delegado presidencial regional Francisco Ljubetic. Entre 2020 y 2022 fue coordinador de la Unidad de Macrozona Sur, articulando al Gobierno con policías, Fuerzas Armadas y el Ministerio Público."
+  francisco_farias:
+    nombre: Francisco Farías
+    cargo: Ex seremi del Trabajo de La Araucanía
+    cargos:
+      - cargo: Ex seremi del Trabajo de La Araucanía
+        organizacion: seremi_trabajo_araucania
+        desde: 2026-03-11
+        hasta: 2026-04-13
+    notas: "Militante UDI. Renunció el 13 de abril de 2026 por motivos personales. Su empresa Farías y Hernández Ltda. fue beneficiada con 21 millones en un programa de reactivación de 2022 cuyas rendiciones rechazó el GORE."
+  francisco_ljubetic:
+    nombre: Francisco Ljubetic
+    cargo: Delegado presidencial regional de La Araucanía
+    cargos:
+      - cargo: Delegado presidencial regional de La Araucanía
+        organizacion: delegacion_presidencial_araucania
+        desde: 2026-03-11
+    organizacion: delegacion_presidencial_araucania
+    notas: "Delegado presidencial regional de La Araucanía del gobierno de José Antonio Kast. Presentó al abogado Luis Calderón como nuevo seremi de Seguridad de la región."
+  nicolas_cataldo:
+    nombre: Nicolás Cataldo Astorga
+    cargo: Exministro de Educación del gobierno de Boric
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    organizacion: ministerio_educacion
+    notas: "Exministro de Educación del gobierno de Gabriel Boric. Reconoció que la promesa de condonación del CAE pudo influir en la morosidad."
+  alex_wiesner:
+    nombre: Alex Wiesner
+    cargo: Fundador y CEO de gimnasios Energy; health coach del presidente Kast
+    cargos:
+      - cargo: Health coach del presidente de la República
+        organizacion: presidencia_chile
+        desde: 2025-01-01
+    organizacion: energy
+    notas: "Empresario del rubro fitness. Fundador y CEO hace 30 años de los gimnasios Energy. Health coach de José Antonio Kast desde enero de 2025, tras la campaña presidencial."
+  juan_carlos_munoz:
+    nombre: Juan Carlos Muñoz
+    cargo: Exministro de Transportes y Telecomunicaciones de Gabriel Boric
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    organizacion: ministerio_transportes
+    notas: "Ingeniero civil. Ministro de Transportes y Telecomunicaciones del gobierno de Gabriel Boric. En 2026 protagonizó la controversia por la concesión del cable submarino Chile-China Express: firmó y luego anuló el decreto de concesión, y fue uno de los tres funcionarios sancionados por EE.UU."
+  alberto_van_klaveren:
+    nombre: Alberto van Klaveren
+    cargo: Exministro de Relaciones Exteriores de Gabriel Boric
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2023-03-10
+        hasta: 2026-03-11
+    organizacion: ministerio_relaciones_exteriores
+    notas: "Académico y diplomático. Ministro de Relaciones Exteriores del gobierno de Gabriel Boric. En febrero de 2026 protagonizó la respuesta chilena a la revocación de visas de tres funcionarios por parte de EE.UU. por el cable submarino China-Chile Express, citando al embajador estadounidense Brandon Judd."
+  claudio_araya:
+    nombre: Claudio Araya
+    cargo: Exsubsecretario de Telecomunicaciones de Gabriel Boric
+    cargos:
+      - cargo: Subsecretario de Telecomunicaciones
+        organizacion: subtel
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    organizacion: subtel
+    notas: "Subsecretario de Telecomunicaciones del gobierno de Gabriel Boric. Uno de los tres funcionarios chilenos a quienes EE.UU. revocó la visa en 2026 por el proyecto de cable submarino China-Chile Express."
+  guillermo_petersen:
+    nombre: Guillermo Petersen
+    cargo: Exjefe de gabinete de la Subtel
+    cargos:
+      - cargo: Jefe de gabinete de la Subsecretaría de Telecomunicaciones
+        organizacion: subtel
+        desde: 2022-03-11
+        hasta: 2026-03-11
+    organizacion: subtel
+    notas: "Jefe de gabinete de la Subsecretaría de Telecomunicaciones (Subtel) durante el gobierno de Gabriel Boric. Uno de los tres funcionarios chilenos a quienes EE.UU. revocó la visa en 2026 por el cable submarino China-Chile Express. Solicitó la anulación del decreto de concesión del proyecto."
+  marco_rubio:
+    nombre: Marco Rubio
+    cargo: Secretario de Estado de Estados Unidos
+    cargos:
+      - cargo: Secretario de Estado
+        organizacion: departamento_estado_eeuu
+        desde: 2025-01-20
+    organizacion: departamento_estado_eeuu
+    notas: "Político estadounidense del Partido Republicano. Secretario de Estado en la administración de Donald Trump. En febrero de 2026 firmó la declaración que impuso restricciones de visa a tres funcionarios del gobierno de Gabriel Boric por el proyecto de cable submarino China-Chile Express."
+  andres_chadwick:
+    nombre: Andrés Chadwick
+    cargo: Exministro del Interior de Sebastián Piñera
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2018-03-11
+        hasta: 2019-10-28
+    organizacion: ministerio_interior
+    notas: "Primo de Sebastián Piñera. Imputado en el caso Hermosilla por su rol en gestiones para influir en la Fiscalía y cerrar causas por financiamiento ilegal de la política."
+  luis_hermosilla:
+    nombre: Luis Hermosilla
+    cargo: Abogado imputado en el caso Audios
+    notas: "Abogado penalista. Imputado en el caso Audios. Acusado de intermediar entre Andrés Chadwick y el exfiscal Manuel Guerra para influir en investigaciones judiciales."
+  manuel_guerra:
+    nombre: Manuel Guerra
+    cargo: Exfiscal Regional Metropolitano Oriente en prisión preventiva
+    notas: "Expersecutor Oriente. Cumple prisión preventiva desde marzo de 2026 por cohecho, prevaricación y revelación de secreto en el caso Hermosilla."
+  santiago_valdes:
+    nombre: Santiago Valdés
+    cargo: Exadministrador electoral de la campaña presidencial de Sebastián Piñera (2009-2010)
+    notas: "Exadministrador electoral de la campaña presidencial de Sebastián Piñera 2009-2010 e hijo de uno de sus mejores amigos. Investigado por facturas falsas que habrían financiado ilegalmente la campaña."
+  paulina_vodanovic:
+    nombre: Paulina Vodanovic
+    cargo: Senadora y presidenta del Partido Socialista
+    cargos:
+      - cargo: Presidenta del Partido Socialista
+        organizacion: partido_socialista
+        desde: 2022-06-11
+    organizacion: partido_socialista
+    notas: "Senadora. Asumió la presidencia del PS el 11 de junio de 2022 y fue reelecta el 16 de marzo de 2025 encabezando la lista 'Unidad Socialista'."
+  gabriela_pizarro:
+    nombre: Gabriela Pizarro
+    cargo: Editora de Reportea
+    organizacion: reportea
+    notas: "Periodista de investigación. Editora de Reportea, medio que destapó los chats de Hermosilla con Andrés Chadwick."
+  nicolas_sepulveda:
+    nombre: Nicolás Sepúlveda
+    cargo: Director de Reportea
+    organizacion: reportea
+    notas: "Periodista de investigación. Director de Reportea. Coautor del reportaje sobre los chats de Hermosilla con Chadwick."
+  ignacio_walker:
+    nombre: Ignacio Walker
+    cargo: Excanciller
+    notas: "Abogado y político democratacristiano. Exministro de Relaciones Exteriores (2006-2009) y exsenador. Criticó la diplomacia de EE.UU. hacia Chile."
+  juan_gabriel_valdes:
+    nombre: Juan Gabriel Valdés
+    cargo: Excanciller
+    notas: "Político de la Concertación. Exministro de Relaciones Exteriores (1999-2000) y embajador de Chile ante la ONU. Criticó el tono del embajador de EE.UU. Brandon Judd."
+  bettina_horst:
+    nombre: Bettina Horst
+    cargo: Economista de Libertad y Desarrollo
+    organizacion: libertad_y_desarrollo
+    notas: "Economista de Libertad y Desarrollo. Ha cuestionado la lógica proteccionista de la administración Trump hacia Chile."
+  nicolas_eyzaguirre:
+    nombre: Nicolás Eyzaguirre
+    cargo: Exministro de Hacienda
+    notas: "Economista y político PPD. Exministro de Hacienda (2006-2010). Afirmó que 'Estados Unidos actúa como un matón' y que 'el ofensor se da por ofendido' respecto al arancel de 12,5%."
+  cristian_monckeberg:
+    nombre: Cristián Monckeberg
+    cargo: Exministro y expresidente de Renovación Nacional
+    notas: "Abogado y político RN. Expresidente de Renovación Nacional y exministro. Criticó que el embajador Judd mande 'a leer el tratado' a ministros chilenos."
+  leonardo_prieto:
+    nombre: Leonardo Prieto
+    cargo: Socio y conductor de Porcel TV
+    organizacion: porcel_tv
+    notas: "Realizador audiovisual, propietario de Porcel TV SpA a través de La Cava del Capitán SpA. Exsocio de Felipe Costabal. Arrendatario del Estudio 5 de TVN para el programa Próceres."
+  patricio_dussaillant:
+    nombre: Patricio Dussaillant
+    cargo: Presidente del directorio de TVN
+    organizacion: tvn
+    notas: "Presidente del directorio de Televisión Nacional de Chile. Exdirector de Periodismo de la Universidad de Los Andes. Conoce a Felipe Costabal desde 2001."
+  renato_garin:
+    nombre: Renato Garín
+    cargo: Exdiputado
+    notas: "Exdiputado. Conductor del programa Sin Filtros. Reveló que Porcel TV realiza su programa en dependencias de TVN."
+  macarena_santelices:
+    nombre: Macarena Santelices
+    cargo: Diputada (Republicanos)
+    notas: "Diputada del Partido Republicano. Cónyuge de Leonardo Prieto. Felipe Costabal fue proveedor de campaña de la parlamentaria."
+  pamela_le_roy:
+    nombre: Pamela Le Roy
+    cargo: Conductora de Próceres (Porcel TV)
+    organizacion: porcel_tv
+    notas: "Exintegrante del equipo de CQC. Conduce el programa Próceres de Porcel TV junto a Gonzalo Feito, realizado en un estudio de TVN."
+  gonzalo_feito:
+    nombre: Gonzalo Feito
+    cargo: Conductor de Próceres (Porcel TV)
+    organizacion: porcel_tv
+    notas: "Exintegrante del equipo de CQC. Conduce el programa Próceres de Porcel TV junto a Pamela Le Roy, realizado en un estudio de TVN."
+  jose_francisco_lagos:
+    nombre: José Francisco Lagos
+    cargo: Subsecretario General de Gobierno (Segegob)
+    notas: "Subsecretario General de Gobierno. Dio a conocer en el Congreso el proyecto de ley que crearía un fondo patrimonial de US$30 millones para TVN."
+  jose_luis_murillo:
+    nombre: José Luis Murillo
+    cargo: Gerente general de Aguas del Valle
+    notas: "Gerente general de la sanitaria Aguas del Valle. Describió los daños en las instalaciones tras el desbordamiento del río Elqui en julio de 2026."
+  miguel_krassnoff:
+    nombre: Miguel Krassnoff
+    cargo: Brigadier (r) del Ejército
+    notas: "Exoficial de la DINA. Condenado por crímenes de lesa humanidad, suma más de mil años de condena. Recluso en el ex penal Punta Peuco."
+  alvaro_corbalan:
+    nombre: Álvaro Corbalán
+    cargo: Teniente coronel (r) del Ejército
+    notas: "Exjefe de operaciones de la CNI. Condenado por crímenes de lesa humanidad, incluyendo la Operación Albania. Recluso en el ex penal Punta Peuco."
+  carlos_herrera_jimenez:
+    nombre: Carlos Herrera Jiménez
+    cargo: Mayor (r) del Ejército
+    notas: "Exagente de la CNI. Condenado por el asesinato del presidente de la ANEF, Tucapel Jiménez. Recluso en el ex penal Punta Peuco."
+  raul_iturriaga:
+    nombre: Raúl Iturriaga Neumann
+    cargo: General (r) del Ejército
+    notas: "Exjefe de la División Exterior de la DINA. Condenado por crímenes de lesa humanidad. Recluso en el ex penal Punta Peuco."
+  jaime_gajardo:
+    nombre: Jaime Gajardo
+    cargo: Exministro de Justicia
+    notas: "Exministro de Justicia del gobierno de Gabriel Boric. Criticó la idea de restituir a Punta Peuco como cárcel especial."
+  maria_jesus_wulf:
+    nombre: María Jesús Wulf
+    cargo: Ministra de Desarrollo Social y Familia
+    organizacion: ministerio_desarrollo_social
+    notas: "Ministra de Desarrollo Social y Familia del gobierno de José Antonio Kast. Anunció el proyecto que estudia usar ClaveÚnica para verificación de edad en redes sociales."
+  diego_schalper:
+    nombre: Diego Schalper
+    cargo: Diputado (Renovación Nacional)
+    organizacion: renovacion_nacional
+    notas: "Diputado RN. Impulsor del proyecto que prohíbe el acceso de menores de 16 años a redes sociales y plataformas digitales."
+  joel_velasco:
+    nombre: Joel Velasco
+    cargo: Vicepresidente de UnitedHealth Group
+    organizacion: unitedhealth_group
+    notas: "Ejecutivo estadounidense, vicepresidente de UnitedHealth Group, dueño del 96% de Banmédica desde 2018. Participó en el almuerzo de José Antonio Kast en Washington D.C. en noviembre de 2021."
+  maria_paulina_uribe:
+    nombre: María Paulina Uribe
+    cargo: Gerenta de Marketing de PepsiCo
+    organizacion: pepsico
+    notas: "Ejecutiva colombiana, gerenta de Marketing de PepsiCo. Participó en el almuerzo de José Antonio Kast en Washington D.C. en noviembre de 2021."
+  isa_kort:
+    nombre: Isa Kort
+    cargo: Embajador de Chile ante la OEA
+    notas: "Embajador de Chile ante la Organización de Estados Americanos (OEA). Llegó y se retiró del restaurante La Taberna del Alabardero a la misma hora que José Antonio Kast durante su almuerzo en Washington D.C. (noviembre de 2021), aunque no participó de la reunión."
+  luis_araya_valdecchy:
+    nombre: Luis Araya Valdecchy
+    cargo: Candidato a vicepresidencia regional del Partido Republicano en Arica
+    organizacion: partido_republicano
+    notas: "Representante en Chile del Grupo de Transporte Internacional Vargas Nogales SRL de Bolivia. Imputado por contaminación grave imprudente tras el derrame de aceite en el Lago Chungará (noviembre de 2025). Excandidato a consejero regional y aspirante a la vicepresidencia regional del Partido Republicano en Arica. Fue requerido por Interpol por presunto contrabando en Perú."
+  diego_paco:
+    nombre: Diego Paco
+    cargo: Gobernador regional de Arica y Parinacota
+    notas: "Gobernador regional de Arica y Parinacota. Solicitó al Consejo de Defensa del Estado ampliar la querella por el derrame de aceite en el Lago Chungará a la empresa transportista."
+  stephani_jeldres:
+    nombre: Stephani Jeldres
+    cargo: Diputada
+    notas: "Diputada. Apareció haciendo campaña en redes sociales junto a Luis Araya Valdecchy, candidato a la vicepresidencia regional del Partido Republicano en Arica."
+  osvaldo_zuniga:
+    nombre: Osvaldo Zúñiga
+    cargo: Presidente de la Confederación Nacional Ranquil
+    organizacion: confederacion_ranquil
+    notas: "Dirigente agrario. Presidente de la Confederación Nacional Ranquil, que agrupa sindicatos y federaciones de campesinos. Rechazó la consulta pública del SAG sobre comercialización de semillas (2026) por permitir la privatización de semillas vía UPOV 91."
+  danae_castanon:
+    nombre: Danae Castañón
+    cargo: Integrante de Semilla Soberana
+    organizacion: semilla_soberana
+    notas: "Integrante de Semilla Soberana, red que agrupa a Colectivo Ecológico en Acción, Escuela de Activismo Agroecológico Reberde, Dedos Verdes, Ruka Wichan Mapu de Laja, Agrupación Cultural Newen Mapuche y Coordinadora No al TPP. Se opuso a la consulta no vinculante del SAG sobre semillas (2026)."
+  aly_valderrama:
+    nombre: Aly Valderrama
+    cargo: Ex delegada presidencial de Linares
+    notas: "Ingeniera agrónoma y doctora en ciencias con mención en investigación y desarrollo de productos bioactivos de la Universidad de Talca; posdoctorada de la Universidad Autónoma de México. Ex delegada presidencial de Linares. Advirtió riesgos para la seguridad alimentaria por la resolución del SAG sobre semillas (2026)."
+  maria_elena_rozas:
+    nombre: María Elena Rozas
+    cargo: Coordinadora nacional de RAP-Chile
+    organizacion: rap_chile
+    notas: "Coordinadora nacional de la Red de Acción en Plaguicidas y sus Alternativas (RAP-Chile). Autora de la columna 'Una aclaración no protege las semillas' en Interferencia (julio 2026), que pidió retirar el proyecto de resolución del SAG sobre comercialización de semillas."
+  leo_ferres:
+    nombre: Leo Ferres
+    cargo: Investigador principal del Instituto de Data Science UDD
+    organizacion: instituto_data_science_udd
+    notas: "Científico de datos. Investigador principal del estudio sobre el impacto de las alertas SAE durante los incendios de Valparaíso de 2024, colaboración entre la UDD, L3S (Alemania), Central European University (Austria) e ISI Foundation (Italia)."
+  natalia_flores_gonzalez:
+    nombre: Natalia Flores González
+    cargo: Coordinadora de Feminismo del Instituto Igualdad
+    organizacion: instituto_igualdad
+    notas: "Autora de la columna de opinión en El Mostrador sobre el fin del Programa Mujeres Rurales (julio 2026)."
+organizations:
+  criteria:
+    nombre: Criteria
+    tipo: encuestadora
+    notas: Encuestadora chilena, realiza sondeos de opinion publica y aprobacion
+      presidencial.
+  cadem:
+    nombre: Cadem
+    tipo: encuestadora
+    notas: Encuestadora chilena, sondeo Plaza Publica semanal de opinion politica.
+  pulso_ciudadano:
+    nombre: Pulso Ciudadano
+    tipo: encuestadora
+    notas: Encuestadora chilena.
+  aguas_del_valle:
+    nombre: Aguas del Valle
+    tipo: empresa_sanitaria
+    pais: Chile
+  cooperativa_control_pisquero:
+    nombre: Cooperativa Control Pisquero
+    tipo: gremio_agricola
+    pais: Chile
+    notas: Gremio de productores pisqueros de Coquimbo. Crítico de declaraciones del
+      ministro Campos sobre daños por sistema frontal
+  banco_central_chile:
+    nombre: Banco Central de Chile
+    tipo: banco_central
+    pais: Chile
+  barrick_chile:
+    nombre: Barrick Chile
+    tipo: empresa_minera
+    pais: Chile
+  vicuna_corp:
+    nombre: Vicuña Corp
+    tipo: proyecto_minero_binacional
+    pais: Chile-Argentina
+    notas: Proyecto binacional Filo del Sol/Josemaría, US$18B. Controlada por Lundin Mining y BHP.
+  cde:
+    nombre: Consejo de Defensa del Estado
+    tipo: organismo_estado
+    pais: Chile
+  ministerio_defensa:
+    nombre: Ministerio de Defensa Nacional
+    tipo: ministerio
+    pais: Chile
+  ministerio_educacion:
+    nombre: Ministerio de Educacion
+    tipo: ministerio
+    pais: Chile
+  ministerio_trabajo:
+    nombre: Ministerio del Trabajo y Previsión Social
+    tipo: ministerio
+    pais: Chile
+  junaeb:
+    nombre: Junaeb - Junta Nacional de Auxilio Escolar y Becas
+    tipo: servicio_publico
+    pais: Chile
+    notas: Organismo público a cargo del Programa de Alimentación Escolar (PAE) y otros apoyos a estudiantes. Depende del Ministerio de Educación.
+  ministerio_hacienda:
+    nombre: Ministerio de Hacienda
+    tipo: ministerio
+    pais: Chile
+  ministerio_interior:
+    nombre: Ministerio del Interior y Seguridad Publica
+    tipo: ministerio
+    pais: Chile
+  ministerio_obras_publicas:
+    nombre: Ministerio de Obras Publicas y Transporte
+    tipo: ministerio
+    pais: Chile
+  ministerio_salud:
+    nombre: Ministerio de Salud
+    tipo: ministerio
+    pais: Chile
+  seremi_salud_magallanes:
+    nombre: Secretaría Regional Ministerial de Salud de Magallanes
+    tipo: seremi
+    pais: Chile
+    notas: Representación regional del Ministerio de Salud en la Región de
+      Magallanes y Antártica Chilena.
+  ministerio_vivienda:
+    nombre: Ministerio de Vivienda y Urbanismo
+    tipo: ministerio
+    pais: Chile
+  ministerio_medio_ambiente:
+    nombre: Ministerio del Medio Ambiente
+    tipo: ministerio
+    pais: Chile
+  ejercito_chile:
+    nombre: Ejercito de Chile
+    tipo: institucion
+    pais: Chile
+  dina:
+    nombre: Dirección de Inteligencia Nacional (DINA)
+    tipo: policia_secreta
+    pais: Chile
+    notas: Policía secreta de la dictadura de Pinochet (1973-1977). Haase integró
+      sus primeros cuadros
+  municipalidad_la_florida:
+    nombre: Municipalidad de La Florida
+    tipo: municipalidad
+    pais: Chile
+  pascua_lama:
+    nombre: Pascua-Lama
+    tipo: proyecto_minero
+    pais: Chile
+  presidencia_chile:
+    nombre: Presidencia de la Republica de Chile
+    tipo: poder_ejecutivo
+    pais: Chile
+  segpres:
+    nombre: Secretaria General de la Presidencia
+    tipo: organismo_estado
+    pais: Chile
+  senapred:
+    nombre: SENAPRED - Servicio Nacional de Prevencion y Respuesta ante Desastres
+    tipo: servicio_publico
+    pais: Chile
+  ministerio_seguridad:
+    nombre: Ministerio de Seguridad Publica
+    tipo: ministerio
+    pais: Chile
+  gendarmeria_chile:
+    nombre: Gendarmeria de Chile
+    tipo: institucion
+    pais: Chile
+  sermig:
+    nombre: Servicio Nacional de Migraciones
+    tipo: servicio_publico
+    pais: Chile
+  ministerio_agricultura:
+    nombre: Ministerio de Agricultura
+    tipo: ministerio
+    pais: Chile
+  ministerio_justicia:
+    nombre: Ministerio de Justicia y Derechos Humanos
+    tipo: ministerio
+    pais: Chile
+  ministerio_relaciones_exteriores:
+    nombre: Ministerio de Relaciones Exteriores
+    tipo: ministerio
+    pais: Chile
+    notas: Cancillería.
+  dipres:
+    nombre: Direccion de Presupuestos
+    tipo: servicio_publico
+    pais: Chile
+    organizacion: ministerio_hacienda
+  tesoreria_general:
+    nombre: Tesoreria General de la Republica
+    tipo: servicio_publico
+    pais: Chile
+  convencion_constitucional:
+    nombre: Convención Constitucional
+    tipo: organismo_estado
+    pais: Chile
+  banco_estado:
+    nombre: Banco del Estado de Chile
+    tipo: empresa_estatal
+    pais: Chile
+  coordinadora_deudores_cae:
+    nombre: Coordinadora Nacional de Deudores del CAE
+    tipo: organizacion_social
+    pais: Chile
+  secom:
+    nombre: Secretaría de Comunicaciones del Gobierno
+    tipo: organismo_estado
+    pais: Chile
+    notas: Filtración de minuta "cierre épico"
+  anicib:
+    nombre: Agencia Nacional de Ciberseguridad
+    tipo: agencia
+    pais: Chile
+  pdi:
+    nombre: Policía de Investigaciones de Chile
+    tipo: policia
+    pais: Chile
+  fenats:
+    nombre: Federación Nacional de Funcionarios de la Subsecretaría de Salud Pública
+    tipo: sindicato
+    pais: Chile
+  contraloria:
+    nombre: Contraloría General de la República
+    tipo: organismo_estado
+    pais: Chile
+  escudo_fronterizo:
+    nombre: Escudo Fronterizo
+    tipo: plan_gobierno
+    pais: Chile
+    notas: "Plan integral de seguridad fronteriza: zanja + vigilancia + complejo"
+  fundacion_libera:
+    nombre: Fundación Libera contra la Trata de Personas y la Esclavitud en Todas
+      sus Formas
+    tipo: ong
+    pais: Chile
+  sna:
+    nombre: Sociedad Nacional de Agricultura
+    tipo: gremio
+    pais: Chile
+  municipalidad_maipu:
+    nombre: Municipalidad de Maipú
+    tipo: municipalidad
+    pais: Chile
+  consejo_salon:
+    nombre: Consejo del Salmón
+    tipo: gremio
+    pais: Chile
+  salmonchile:
+    nombre: SalmonChile
+    tipo: gremio
+    pais: Chile
+  ecoceanos:
+    nombre: Centro Ecoceanos
+    tipo: ong
+    pais: Chile
+  norwegian_people_aid:
+    nombre: Norwegian People's Aid (Ayuda Popular Noruega)
+    tipo: ong
+    pais: Noruega
+    notas: Organización humanitaria noruega fundada en 1939. Financiada mayoritariamente por el Estado noruego vía Norad. Financió a Identidad Territorial Lafkenche.
+  identidad_territorial_lafkenche:
+    nombre: Identidad Territorial Lafkenche (ITL)
+    tipo: organizacion_indigena
+    pais: Chile
+    notas: Organización mapuche-lafkenche que defiende el borde costero. Impulsora de la Ley 20.249. Socio único de NPA en Chile desde 2012.
+  pdg:
+    nombre: Partido de la Gente
+    tipo: partido_politico
+    pais: Chile
+    notas: Obtuvo más de 2,5 millones de votos en elecciones presidenciales de 2025.
+      Impulsó proyecto de devolución IVA pañales y medicamentos a cambio de
+      apoyo a megarreforma
+  biblioteca_del_congreso:
+    nombre: Biblioteca del Congreso Nacional de Chile
+    tipo: organismo_estado
+    pais: Chile
+    notas: Elaboró informe técnico que reveló bajo impacto del proyecto de IVA
+      pañales y medicamentos
+  servel:
+    nombre: Servicio Electoral
+    tipo: servicio_publico
+    pais: Chile
+    notas: Organismo encargado de fiscalizar partidos políticos
+  tricel:
+    nombre: Tribunal Calificador de Elecciones
+    tipo: tribunal
+    pais: Chile
+  fiscalia_alta_complejidad_centro_norte:
+    nombre: Fiscalía de Alta Complejidad Centro Norte
+    tipo: fiscalia
+    pais: Chile
+  carabineros:
+    nombre: Carabineros de Chile
+    tipo: policia
+    pais: Chile
+  municipalidad_de_santiago:
+    nombre: Municipalidad de Santiago
+    tipo: municipalidad
+    pais: Chile
+  parque_forestral:
+    nombre: Parque Forestal
+    tipo: espacio_publico
+    pais: Chile
+    notas: Parque ubicado en Santiago, sede del Centro Cultural Liquén
+  chilevision:
+    nombre: Chilevisión
+    tipo: canal_television
+    pais: Chile
+  huachipato:
+    nombre: Club Deportivo Huachipato
+    tipo: club_futbol
+    pais: Chile
+    notas: Club de fútbol de la Región de Biobío. Vinculado a denuncias de
+      sobreprecios en traspasos a Azul Azul.
+  achm:
+    nombre: Asociación Chilena de Municipalidades
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: Gremio que agrupa a municipalidades de Chile. Tensión interna por postura
+      frente a megarreforma.
+  indh:
+    nombre: Instituto Nacional de Derechos Humanos
+    tipo: organismo_estado
+    pais: Chile
+    notas: Organismo autónomo encargado de promover y proteger los derechos humanos
+      en Chile.
+  partido_nacional_libertario:
+    nombre: Partido Nacional Libertario
+    tipo: partido_politico
+    pais: Chile
+    notas: Partido fundado por disidencias del Partido Republicano. Enfrentó
+      polémica por video de asesor con burlas a niños autistas.
+  fenaut:
+    nombre: Federación Nacional de Autismo
+    tipo: ong
+    pais: Chile
+    notas: Organización que agrupa a personas con autismo y sus familias. Exigió
+      renuncia de Omegna.
+  fundacion_fuan:
+    nombre: Fundación FUAN
+    tipo: fundacion
+    pais: Chile
+    notas: Fundación que condenó las expresiones del video, destacando
+      vulnerabilidad de personas autistas ante violencia sexual.
+  instituto_mises_cono_sur:
+    nombre: Instituto Mises Cono Sur
+    tipo: think_tank
+    pais: Chile
+    notas: Organización liberal. Desvinculó a Ítalo Omegna como Director de
+      Vinculación tras el video.
+  fundacion_novum:
+    nombre: Fundación Novum
+    tipo: fundacion
+    pais: Chile
+    notas: Organización que trabaja con niños vulnerables. Ítalo Omegna es su
+      presidente.
+  la_cofradia:
+    nombre: La Cofradía
+    tipo: programa_streaming
+    pais: Chile
+    notas: Programa de streaming donde se grabó el video polémico con burlas a niños
+      autistas.
+  partido_republicano:
+    nombre: Partido Republicano de Chile
+    tipo: partido_politico
+    pais: Chile
+    notas: Partido fundado por José Antonio Kast. Ganó la segunda vuelta
+      presidencial de diciembre 2025.
+  partido_social_cristiano:
+    nombre: Partido Social Cristiano
+    tipo: partido_politico
+    pais: Chile
+    notas: Partido político de centroderecha. La seremi fallida de Economía de
+      Atacama, Daniela Gallegos, fue candidata a diputada por este partido.
+  conaf:
+    nombre: Corporación Nacional Forestal
+    tipo: servicio_publico
+    pais: Chile
+    notas: Servicio público encargado de la prevención y combate de incendios
+      forestales en Chile.
+  bolivia:
+    nombre: Bolivia
+    tipo: pais
+    notas: Estado plurinacional de Bolivia.
+  ministerio_de_obras_publicas:
+    nombre: Ministerio de Obras Públicas
+    tipo: ministerio
+    notas: Ministerio encargado de infraestructura pública en Chile.
+  udi:
+    nombre: Unión Demócrata Independiente
+    tipo: partido
+    notas: Partido político chileno de derecha, fundado por Carlos Bombal y Sergio
+      Larraín.
+  minsal:
+    nombre: Ministerio de Salud
+    tipo: ministerio
+    notas: Ministerio de Salud de Chile.
+  pd:
+    nombre: Partido de la Gente
+    tipo: partido
+    notas: Partido político fundado por Franco Parisi y Kast.
+  federacion_nacional_autismo:
+    nombre: Federación Nacional del Autismo
+    tipo: organizacion_social
+    notas: Organización que agrupa a personas con autismo y sus familias en Chile.
+  ustr:
+    nombre: Office of the United States Trade Representative
+    tipo: organismo_internacional
+    notas: Representante Comercial de Estados Unidos. Investigó a Chile bajo Sección 301 por "trabajo forzoso".
+  sofofa:
+    nombre: Sociedad de Fomento Fabril
+    tipo: gremio
+    notas: Gremio empresarial chileno. Participó en reunión con cancillería por arancel de 12,5%.
+  cpc:
+    nombre: Confederación de la Producción y el Comercio
+    tipo: gremio
+    notas: Confederación empresarial. Calificó arancel de 12,5% como "retroceso para la economía chilena".
+  camara_minera:
+    nombre: Cámara Minera de Chile
+    tipo: gremio
+    notas: Gremio minero que criticó el nombramiento de un agrónomo al frente del Ministerio de Minería.
+  frutas_de_chile:
+    nombre: Frutas de Chile
+    tipo: gremio
+    notas: Gremio exportador de fruta fresca. Expuso ante USTR que oferta chilena complementa la producción estadounidense.
+  dmc:
+    nombre: Dirección Meteorológica de Chile
+    tipo: servicio_publico
+    notas: Servicio meteorológico estatal. Emite alertas y pronósticos de sistemas frontales.
+  quiroz_puelma_arquitectos:
+    nombre: Quiroz y Puelma Arquitectos
+    tipo: empresa
+    pais: Chile
+    notas: Estudio de arquitectura de Viña del Mar. Liderado por Víctor Quiroz, hermano del ministro de Hacienda. Diseñó el proyecto Alto Santorini y el edificio Kandinsky.
+  lote21_spa:
+    nombre: Lote 21 SpA
+    tipo: empresa
+    pais: Chile
+    notas: Inmobiliaria impulsora del proyecto Alto Santorini en dunas de Concón. Inversión de US$35 millones.
+  vimac:
+    nombre: Inmobiliaria Vimac
+    tipo: empresa
+    pais: Chile
+    notas: Inmobiliaria dueña original del proyecto Alto Santorini. Tiene 8 proyectos entre Viña del Mar y Concón.
+  fundacion_yarur_bascunan:
+    nombre: Fundación Yarur Bascuñán
+    tipo: fundacion
+    pais: Chile
+    notas: Fundación que busca declarar ilegal el permiso de edificación del proyecto Alto Santorini.
+  duna_viva:
+    nombre: Duna Viva
+    tipo: organizacion_social
+    pais: Chile
+    notas: Agrupación ciudadana que defiende el Campo Dunar de Concón. Litigó contra el proyecto Alto Santorini.
+  fundacion_america_transparente:
+    nombre: Fundación América Transparente
+    tipo: ong
+    pais: Chile
+    notas: Organización dedicada a la transparencia y probidad pública. Su director Juan José Lyon criticó al ministro Quiroz.
+  sea:
+    nombre: Servicio de Evaluación Ambiental
+    tipo: servicio_publico
+    pais: Chile
+    notas: Organismo público que evalúa el impacto ambiental de proyectos. Aprobó el EIA de Alto Santorini.
+  municipalidad_vina_del_mar:
+    nombre: Municipalidad de Viña del Mar
+    tipo: municipio
+    pais: Chile
+    notas: Municipio que modificó el Plan Regulador para impedir nuevas edificaciones en dunas de Concón.
+  codelco:
+    nombre: Corporación Nacional del Cobre de Chile
+    tipo: empresa_estatal
+    pais: Chile
+    notas: Empresa estatal minera de cobre. Propuesta de privatización por Republicanos generó controversia.
+  senado:
+    nombre: Senado de Chile
+    tipo: institucion_publica
+    pais: Chile
+    notas: Cámara alta del Congreso Nacional de Chile.
+  camara_diputados:
+    nombre: Cámara de Diputadas y Diputados de Chile
+    tipo: institucion_publica
+    pais: Chile
+    notas: Cámara baja del Congreso Nacional de Chile. Tramita proyectos de ley.
+  secretaria_gobierno_digital:
+    nombre: Secretaría de Gobierno Digital
+    tipo: institucion_publica
+    pais: Chile
+    notas: Organismo del Ministerio de Hacienda a cargo de ClaveÚnica y gobierno digital.
+  claveunica:
+    nombre: ClaveÚnica
+    tipo: institucion_publica
+    pais: Chile
+    notas: Sistema de autenticación electrónica del Estado chileno. Emitida por el Servicio de Registro Civil e Identificación, permite acceder a servicios públicos en línea. Más de 16 millones de usuarios activos.
+  ministerio_desarrollo_social:
+    nombre: Ministerio de Desarrollo Social y Familia
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Ministerio a cargo de políticas sociales y protección de la infancia. En 2026 lidera el Plan Nacional de Entornos Digitales Seguros."
+  municipalidad_chillan_viejo:
+    nombre: Municipalidad de Chillán Viejo
+    tipo: institucion_publica
+    pais: Chile
+    notas: Municipio de la comuna de Chillán Viejo, Región de Ñuble.
+  seremi_salud_arica:
+    nombre: Seremi de Salud de Arica y Parinacota
+    tipo: seremi
+    pais: Chile
+    notas: Secretaría Regional Ministerial de Salud de Arica y Parinacota.
+  seremi_seguridad_araucania:
+    nombre: Seremi de Seguridad de La Araucanía
+    tipo: seremi
+    pais: Chile
+    notas: Secretaría Regional Ministerial de Seguridad de La Araucanía, dependiente del Ministerio de Seguridad Pública.
+  seremi_trabajo_araucania:
+    nombre: Seremi del Trabajo de La Araucanía
+    tipo: seremi
+    pais: Chile
+    notas: Secretaría Regional Ministerial del Trabajo y Previsión Social de La Araucanía.
+  seremi_economia_atacama:
+    nombre: Seremi de Economía de Atacama
+    tipo: seremi
+    pais: Chile
+    notas: Secretaría Regional Ministerial de Economía, Fomento y Turismo de Atacama.
+  delegacion_presidencial_araucania:
+    nombre: Delegación Presidencial Regional de La Araucanía
+    tipo: institucion_publica
+    pais: Chile
+    notas: Representación del Gobierno central en la Región de La Araucanía. Depende del Ministerio del Interior.
+  delegacion_presidencial_atacama:
+    nombre: Delegación Presidencial Regional de Atacama
+    tipo: institucion_publica
+    pais: Chile
+    notas: Representación del Gobierno central en la Región de Atacama. Depende del Ministerio del Interior.
+  embajada_eeuu_chile:
+    nombre: Embajada de Estados Unidos en Chile
+    tipo: mision_diplomatica
+    pais: Chile
+    notas: Representación diplomática de EE.UU. en Chile.
+  ministerio_economia_argentina:
+    nombre: Ministerio de Economia de Argentina
+    tipo: institucion_publica
+    pais: Argentina
+    notas: Cartera economica del gobierno argentino.
+  atlas_network:
+    nombre: Atlas Network
+    tipo: think_tank
+    pais: Estados Unidos
+    notas: "Red global de think tanks neoliberales fundada en 1981 por Antony Fisher. 589 entidades en 103 paises. Financiada por grandes corporaciones (Exxon, Koch, Philip Morris). Vinculada a campanas de desinformacion y desestabilizacion politica global."
+  fundacion_participa:
+    nombre: Fundacion Participa
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank progresista ligado al PPD. Ha recibido $1.669 millones desde el Estado (2017-2023). Dirigido por Daniel Ibanez."
+  centro_estudios_desarrollo:
+    nombre: Centro de Estudios del Desarrollo (CED)
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank historico ligado a la DC. Fundado en 1981 por Gabriel Valdes. Ha recibido $1.449 millones desde el Estado (2005-2019)."
+  ical:
+    nombre: Instituto de Ciencias Alejandro Lipschutz (ICAL)
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank vinculado al Partido Comunista. Ha recibido $932 millones desde el Estado (2005-2018)."
+  instituto_libertad:
+    nombre: Instituto Libertad
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank ligado a RN. Ha recibido $262 millones desde municipalidades, principalmente Vitacura. Socio de Atlas Network."
+  fundacion_jaime_guzman:
+    nombre: Fundacion Jaime Guzman
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank ligado a la UDI. Ha recibido $284 millones desde el Estado, 91% de municipios UDI/RN."
+  horizontal:
+    nombre: Horizontal
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank ligado a Evopoli. Recibio $4 millones del Injuv en 2018 para trabajos voluntarios en La Araucania. Socio de Atlas Network."
+  idea_pais:
+    nombre: Idea Pais
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank socialcristiano. Recibio $55 millones del Injuv en 2014 que debio reintegrar. Plataforma de Diego Schalper."
+  chile_21:
+    nombre: Chile 21
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank de centroizquierda. Ha recibido $221 millones desde el Estado. Fundado en 1992."
+  fundacion_horizonte_ciudadano:
+    nombre: Fundacion Horizonte Ciudadano
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank de la expresidenta Michelle Bachelet. Recibio $379 millones del GORE Biobio en 2022, investigado por fiscalia."
+  libertad_y_desarrollo:
+    nombre: Libertad y Desarrollo (LyD)
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank ligado a la UDI. Socio de Atlas Network. Fundado en 1990."
+  fundacion_para_el_progreso:
+    nombre: Fundacion para el Progreso (FPP)
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank liberal. Socio de Atlas Network. Creado por el empresario Nicolas Ibanez Scott."
+  ciper_chile:
+    nombre: CIPER Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Centro de Investigacion Periodistica. Medio de investigacion chileno."
+  clacso:
+    nombre: CLACSO
+    tipo: organismo_academico
+    pais: Argentina
+    notas: "Consejo Latinoamericano de Ciencias Sociales. Red de centros de investigacion."
+  el_mercurio:
+    nombre: El Mercurio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Periodico chileno de倾向 conservadora. Fundado en 1900. Uno de los principales diarios del pais."
+  la_tercera:
+    nombre: La Tercera
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Periodico chileno. Fundado en 1950. Medio de referencia en informacion politica y economica."
+  el_libero:
+    nombre: El Líbero
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Periodico digital chileno de derecha nacional-populista. Fundado en 2014."
+  grupo_penta:
+    nombre: Grupo Penta
+    tipo: holding_empresarial
+    pais: Chile
+    notas: "Grupo economico controlado por Carlos Alberto Delano y Carlos Eugenio Lavin. Protagonista del caso Penta de financiamiento ilegal de la politica."
+  sqm:
+    nombre: SQM (Soquimich)
+    tipo: minera
+    pais: Chile
+    notas: "Minera no metalica, productora de fertilizantes y litio. Protagonista del caso SQM de financiamiento ilegal de la politica."
+  corpesca:
+    nombre: Corpesca
+    tipo: pesquera
+    pais: Chile
+    notas: "Empresa pesquera del grupo Angelini. Protagonista del caso Corpesca de lobby y financiamiento irregular a parlamentarios durante la Ley de Pesca."
+  caval:
+    nombre: Caval
+    tipo: consultora_inmobiliaria
+    pais: Chile
+    notas: "Consultora inmobiliaria vinculada a la familia de Sebastian Pinera. Protagonista del caso Caval de conflicto de intereses."
+  armada_chile:
+    nombre: Armada de Chile
+    tipo: institucion_armada
+    pais: Chile
+    notas: "Rama naval de las Fuerzas Armadas de Chile. Involucrada en caso Pacogate por uso irregular de fondos reservados."
+  union_democrata_independiente:
+    nombre: Unión Demócrata Independiente (UDI)
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido politico chileno de derecha. Fundado en 1983 por Jaime Guzman."
+  renovacion_nacional:
+    nombre: Renovación Nacional (RN)
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido politico chileno de centroderecha. Fundado en 1987."
+  unitedhealth_group:
+    nombre: UnitedHealth Group
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Conglomerado estadounidense de seguros de salud. Dueño del 96% de las acciones de Banmédica desde 2018, con presencia en Chile, Perú y Colombia."
+  banmedica:
+    nombre: Banmédica
+    tipo: empresa
+    pais: Chile
+    notas: "Isapre chilena. Desde 2018, UnitedHealth Group es dueña del 96% de sus acciones."
+  pepsico:
+    nombre: PepsiCo
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Multinacional estadounidense de alimentos y bebidas, dueña de la marca Pepsi."
+  oea:
+    nombre: Organización de Estados Americanos (OEA)
+    tipo: organizacion_internacional
+    pais: Estados Unidos
+    notas: "Organismo internacional de los países americanos. El embajador de Chile ante la OEA era Isa Kort en 2021."
+  grupo_vargas_nogales:
+    nombre: Grupo de Transporte Internacional Vargas Nogales SRL
+    tipo: empresa
+    pais: Bolivia
+    notas: "Empresa boliviana de transporte internacional. Representada en Chile por Luis Araya Valdecchy. Uno de sus camiones derramó 25.000 litros de aceite de soya en el Lago Chungará en noviembre de 2025."
+  evopoli:
+    nombre: Evópoli
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido politico chileno liberal de centroderecha. Fundado por Felipe Kast en 2012."
+  the_clinic:
+    nombre: The Clinic
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de comunicacion chileno, conocido por su linea editorial critica e independiente. Fundado en 1998."
+  tvn:
+    nombre: Televisión Nacional de Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de televisión pública chileno. Fundado en 1969."
+  porcel_tv:
+    nombre: Porcel TV
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de streaming chileno. Arrienda el Estudio 5 de TVN para el programa Próceres. Uno de sus socios fue Felipe Costabal, director de la Secom."
+  segegob:
+    nombre: Secretaría General de Gobierno
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Ministerio Secretaría General de Gobierno (Segegob). Trabaja en un proyecto de ley para evitar la quiebra de TVN, con un fondo patrimonial de US$30 millones."
+  hospital_carabineros:
+    nombre: Hospital de Carabineros
+    tipo: hospital
+    pais: Chile
+    notas: "Hospital institucional de Carabineros de Chile. Involucrado en sumario sanitario por cirugías estéticas a esposa del general director."
+  municipalidad_concon:
+    nombre: Municipalidad de Concón
+    tipo: municipio
+    pais: Chile
+    notas: "Municipio de la Región de Valparaíso. Involucrado en caso de camionetas decomisadas que prestaban servicios a piñeristas."
+  enami:
+    nombre: Empresa Nacional de Minería
+    tipo: empresa_estatal
+    pais: Chile
+    notas: "Empresa estatal minera chilena. Firmó MoU de cooperación minera con Komir (Corea del Sur) en julio de 2026."
+  venezuela:
+    nombre: Venezuela
+    tipo: pais
+    notas: "República Bolivariana de Venezuela. Relaciones bilaterales con Chile rotas desde enero de 2025; hoja de ruta de normalización anunciada el 30 de julio de 2026."
+  subsecretaria_turismo:
+    nombre: Subsecretaría de Turismo
+    tipo: organismo
+    pais: Chile
+    notas: "Subsecretaría dependiente del Ministerio de Economía. Planteó desprotección legal frente a agresiones verbales por nacionalidad o etnia."
+  valle_nevado:
+    nombre: Valle Nevado
+    tipo: empresa
+    pais: Chile
+    notas: "Centro de esquí en la cordillera de Santiago. Un instructor fue acusado de xenofobia por la influencer brasileña Ana Carolina Cruz."
+  corthorn_health:
+    nombre: Corthorn Health Limitada
+    tipo: empresa
+    pais: Chile
+    notas: "Laboratorio designado para el test de drogas de autoridades. Realizó dos peritajes independientes sobre la muestra de Juan Pablo Rodríguez, ambos positivos."
+  senda:
+    nombre: Servicio Nacional para la Prevención y Rehabilitación del Consumo de Drogas y Alcohol (Senda)
+    tipo: servicio
+    pais: Chile
+    notas: "Servicio público encargado de la prevención y rehabilitación del consumo de drogas y alcohol. Recibió la notificación de Corthorn Health sobre el caso Rodríguez."
+  asociacion_notarios_conservadores:
+    nombre: Asociación de Notarios y Conservadores de Chile
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio que agrupa a notarios y conservadores de Chile. Su presidente Carlos Swett aparece vinculado al caso cuota Flores."
+  fiscalia_regional_valparaiso:
+    nombre: Fiscalía Regional de Valparaíso
+    tipo: fiscalia
+    pais: Chile
+    notas: "Ministerio Público en la Región de Valparaíso. Investiga el caso cuota Flores contra la senadora Camila Flores."
+  fiscalia_metropolitana_oriente:
+    nombre: Fiscalía Metropolitana Oriente
+    tipo: fiscalia
+    pais: Chile
+    notas: "Ministerio Público a cargo de la Región Metropolitana Oriente. Fue dirigida por el exfiscal Manuel Guerra."
+  defensoria_penal_publica:
+    nombre: Defensoría Penal Pública
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Organismo público encargado de la defensa penal de imputados sin recursos. Sus nombramientos habrían sido influidos por la dupla Hermosilla-Chadwick según Reportea."
+  reportea:
+    nombre: Reportea
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital de investigación periodística. Destapó los chats de Luis Hermosilla con Andrés Chadwick y Manuel Guerra."
+  partido_socialista:
+    nombre: Partido Socialista de Chile
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido de centroizquierda. Formó parte del oficialismo de la administración anterior y ahora integra la oposición al gobierno de Kast."
+  frente_amplio:
+    nombre: Frente Amplio
+    tipo: partido_politico
+    pais: Chile
+    notas: "Coalición política de izquierda. Integra la oposición al gobierno de Kast."
+  partido_comunista:
+    nombre: Partido Comunista de Chile
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político de izquierda. Integra la oposición al gobierno de Kast."
+  instituto_nacional_estadisticas:
+    nombre: Instituto Nacional de Estadísticas (INE)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo público que elabora las estadísticas oficiales del país, incluida la Encuesta Nacional de Empleo (ENE)."
+  candelabro:
+    nombre: Candelabro
+    tipo: banda
+    pais: Chile
+    notas: "Banda chilena de rock. Su vocalista y fundador Matías Ávila se hizo viral por críticas al gobierno de Kast."
+  difrol:
+    nombre: Dirección de Fronteras y Límites del Estado (Difrol)
+    tipo: servicio_publico
+    pais: Chile
+    organizacion: ministerio_relaciones_exteriores
+    notas: "Depende de la Cancillería. Su director presentó ante la ONU la plataforma continental extendida de Juan Fernández."
+  onu:
+    nombre: Organización de las Naciones Unidas (ONU)
+    tipo: organismo_internacional
+    notas: "Organismo internacional. Su Comisión de Límites de la Plataforma Continental (CLPC) evalúa los límites marítimos de los estados."
+  energy:
+    nombre: Gimnasios Energy
+    tipo: empresa
+    pais: Chile
+    notas: "Cadena de gimnasios fundada hace 30 años por Alex Wiesner, health coach del presidente José Antonio Kast. Acumula 67 demandas laborales entre 2023 y 2026."
+  clan_chen:
+    nombre: Clan Chen
+    tipo: organizacion_criminal
+    pais: Chile
+    notas: "Organización criminal de origen chino que, según la fiscalía, lavó más de US$180 millones en Chile mediante empresas de fachada, criptoestafas y ejecutivos bancarios. Operaba desde Zona Franca de Iquique."
+  ministerio_transportes:
+    nombre: Ministerio de Transportes y Telecomunicaciones
+    tipo: ministerio
+    pais: Chile
+  subtel:
+    nombre: Subsecretaría de Telecomunicaciones
+    tipo: servicio_publico
+    pais: Chile
+  departamento_estado_eeuu:
+    nombre: Departamento de Estado de Estados Unidos
+    tipo: entidad_gubernamental
+    pais: Estados Unidos
+    notas: "Ministerio de Relaciones Exteriores de EE.UU. En febrero de 2026 anunció la revocación de visas de tres funcionarios chilenos por el proyecto de cable submarino China-Chile Express."
+  china_mobile:
+    nombre: China Mobile
+    tipo: empresa_telecomunicaciones
+    pais: China
+    notas: "Empresa estatal china de telecomunicaciones. Promotora del proyecto de cable submarino Chile-China Express (fibra óptica que uniría Valparaíso con Hong Kong), cuya concesión en 2026 desató una crisis diplomática con EE.UU. y tensionó la transición de mando entre Boric y Kast."
+  sag:
+    nombre: Servicio Agrícola y Ganadero (SAG)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio dependiente del Ministerio de Agricultura. En 2026 impulsó un proyecto de resolución sobre comercialización de semilla corriente, con consulta pública no vinculante, que generó rechazo de organizaciones campesinas."
+  confederacion_ranquil:
+    nombre: Confederación Nacional Ranquil
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Confederación que agrupa sindicatos y federaciones de campesinos de todo el país. Rechazó la consulta pública del SAG sobre comercialización de semillas (2026)."
+  semilla_soberana:
+    nombre: Semilla Soberana
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Red que agrupa a Colectivo Ecológico en Acción, Escuela de Activismo Agroecológico Reberde, Dedos Verdes, Ruka Wichan Mapu de Laja, Agrupación Cultural Newen Mapuche y Coordinadora No al TPP. Se opuso a la consulta no vinculante del SAG sobre semillas (2026)."
+  rap_chile:
+    nombre: Red de Acción en Plaguicidas y sus Alternativas (RAP-Chile)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Red chilena del movimiento internacional RAP-AL. Su coordinadora nacional, María Elena Rozas, pidió retirar el proyecto de resolución del SAG sobre semillas (2026)."
+  cloc_viacampesina:
+    nombre: CLOC-Vía Campesina Chile
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Coordinadora Latinoamericana de Organizaciones del Campo, sección chilena de La Vía Campesina. Impulsó el artículo sobre libre uso e intercambio de semillas tradicionales en la propuesta de Nueva Constitución (2022)."
+  ociedad_nacional_agricultura:
+    nombre: Sociedad Nacional de Agricultura (SNA)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio empresarial agrícola. Su presidente, José Luis Daza, criticó la consulta pública del SAG sobre semillas (2026)."
+  indap:
+    nombre: Instituto de Desarrollo Agropecuario (INDAP)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público dependiente del Ministerio de Agricultura. Ejecuta, en convenio con PRODEMU, el Programa Mujeres Rurales."
+  prodemu:
+    nombre: Fundación PRODEMU
+    tipo: fundacion
+    pais: Chile
+    notas: "Fundación que ejecuta programas con enfoque de género. Conviene con INDAP el Programa Mujeres Rurales y depende institucionalmente del Ministerio de la Mujer."
+  sernameg:
+    nombre: Servicio Nacional de la Mujer y la Equidad de Género (SERNAMEG)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público dependiente del Ministerio de la Mujer y la Equidad de Género."
+  ministerio_mujer:
+    nombre: Ministerio de la Mujer y la Equidad de Género
+    tipo: ministerio
+    pais: Chile
+  instituto_igualdad:
+    nombre: Instituto Igualdad
+    tipo: think_tank
+    pais: Chile
+    notas: "Think tank ligado al Partido Socialista. Es el espacio desde el cual se difundió la denuncia sobre el fin del Programa Mujeres Rurales."
+  instituto_data_science_udd:
+    nombre: Instituto de Data Science de la Universidad del Desarrollo
+    tipo: institucion
+    pais: Chile
+    notas: "Unidad académica de la UDD. Participó en el estudio sobre las alertas SAE en incendios de Valparaíso (2025)."
+cifras:
+  beneficio_iva_panales:
+    nombre: Beneficio per cápita diario proyecto IVA pañales y medicamentos (PDG)
+    unidad_default: pesos
+    notas: Segun informe BCN, alcanza para ~1/3 de un pana infantil. $42.410
+      anuales, $3.534 mensuales
+  fallecidos:
+    nombre: Fallecidos
+    unidad_default: personas
+  fallecidos_sistema_frontal:
+    nombre: Fallecidos por sistema frontal
+    unidad_default: personas
+    notas: Muertes causadas por el sistema frontal de junio-julio 2026
+  reos_traslados_punta_peuco:
+    nombre: Reos trasladados a Punta Peuco
+    unidad_default: reos
+    notas: Traslado desde Colina 1, mayoría exagentes dictadura
+  reclusos_punta_peuco:
+    nombre: Reclusos por violaciones a los DDHH en Punta Peuco
+    unidad_default: personas
+    notas: Reporte de Gendarmería de julio de 2025
+  establecimientos_salud_afectados:
+    nombre: Establecimientos de salud afectados
+    unidad_default: establecimientos
+    notas: Red asistencial con problemas de funcionamiento por sistema frontal
+  desaparecidos:
+    nombre: Desaparecidos
+    unidad_default: personas
+  aislados:
+    nombre: Aislados
+    unidad_default: personas
+  evacuados:
+    nombre: Evacuados
+    unidad_default: personas
+  damnificados:
+    nombre: Damnificados
+    unidad_default: personas
+  albergados:
+    nombre: Albergados
+    unidad_default: personas
+  lesionados:
+    nombre: Lesionados
+    unidad_default: personas
+  viviendas_destruidas:
+    nombre: Viviendas destruidas
+    unidad_default: viviendas
+  viviendas_danadas:
+    nombre: Viviendas con dano
+    unidad_default: viviendas
+  clientes_sin_electricidad:
+    nombre: Clientes sin electricidad
+    unidad_default: clientes
+  clientes_sin_agua:
+    nombre: Clientes sin agua potable
+    unidad_default: clientes
+  mensajes_sae:
+    nombre: Mensajes SAE enviados
+    unidad_default: mensajes
+  camaras_fronterizas:
+    nombre: Camaras fronterizas
+    unidad_default: camaras
+  patrullas_fronterizas:
+    nombre: Patrullas fronterizas
+    unidad_default: patrullas
+  pacientes_cancer_espera:
+    nombre: Pacientes en lista de espera oncologica
+    unidad_default: pacientes
+  porcentaje_ges:
+    nombre: Porcentaje de pacientes en lista GES
+    unidad_default: "%"
+  diagnosticos_cancer_anuales:
+    nombre: Diagnosticos de cancer al ano en Chile
+    unidad_default: personas
+    notas: "60.000 personas diagnosticadas de cancer cada ano, segun la ministra Chomali en la Cuenta Publica Minsal 2026."
+  fallecidos_cancer_anuales:
+    nombre: Fallecimientos anuales por cancer en Chile
+    unidad_default: personas
+    notas: "Cerca de 30.000 fallecimientos al ano. El cancer supero a las enfermedades cardiovasculares como primera causa de muerte."
+  patologias_ges:
+    nombre: Patologias cubiertas actualmente por el GES
+    unidad_default: patologias
+    notas: "90 patologias forman parte del GES (Plan AUGE), entre ellas algunos canceres."
+  registros_oncologicos_espera:
+    nombre: Registros de prestaciones oncologicas con espera prolongada
+    unidad_default: registros
+    notas: "33.702 registros de prestaciones oncologicas con tiempos de espera prolongados (GES y no GES) al inicio del Plan de Alerta Oncologica."
+  registros_oncologicos_resueltos:
+    nombre: Registros oncologicos resueltos por el Plan de Alerta Oncologica
+    unidad_default: registros
+    notas: "28.681 registros resueltos al 14 de julio de 2026: 17.344 garantias GES atrasadas y 11.337 prestaciones no GES. Avance del 95% de la lista."
+  dias_espera_ges_oncologia:
+    nombre: Promedio de dias de espera en garantias GES atrasadas
+    unidad_default: dias
+    notas: "76 dias de espera promedio en las atenciones GES retrasadas de la lista oncologica."
+  dias_espera_noges_oncologia:
+    nombre: Dias de espera en prestaciones oncologicas no GES
+    unidad_default: dias
+    notas: "Mas de 248 dias de espera en prestaciones no GES."
+  medicos_especialistas_formacion:
+    nombre: Medicos en formacion de especialistas
+    unidad_default: medicos
+    notas: "236 medicos en formacion, anunciados por Chomali para potenciar la formacion de especialistas."
+  cosam_nuevos:
+    nombre: Nuevos centros comunitarios de salud mental (Cosam)
+    unidad_default: centros
+    notas: "50 nuevos Cosam contemplados en la Agenda Estrategica 2026-2030."
+  sobregasto_red_salud_2026:
+    nombre: Sobregasto proyectado de la red publica de salud en 2026
+    unidad_default: billones_de_pesos
+    notas: "2,5 billones de pesos proyectados de sobregasto durante 2026, segun Chomali. El costo de operar la red supera permanentemente los recursos aprobados."
+  aumento_casos_vih:
+    nombre: Aumento de casos de VIH en Chile en los ultimos 10 anos
+    unidad_default: "%"
+    notas: "86% de aumento de casos de VIH en 10 anos. Nueva garantia GES ampliara las alternativas terapeuticas."
+  tasa_corporativa_27:
+    nombre: Tasa impositiva corporativa actual
+    unidad_default: "%"
+  tasa_corporativa_23:
+    nombre: Tasa impositiva corporativa proyectada
+    unidad_default: "%"
+  internos_repas:
+    nombre: Internos en el REPAS
+    unidad_default: internos
+  internos_maxima_seguridad_repas:
+    nombre: Internos en seccion de maxima seguridad del REPAS
+    unidad_default: internos
+  horas_encierro:
+    nombre: Horas de encierro diarias en maxima seguridad
+    unidad_default: horas
+  nuevas_plazas_carcerales:
+    nombre: Nuevas plazas carcelarias prometidas
+    unidad_default: plazas
+  desempleo_trim1:
+    nombre: Tasa de desempleo trimestre 1 2026
+    unidad_default: "%"
+  desocupacion_trim_amj_2026:
+    nombre: Tasa de desocupación trimestre abril-junio 2026
+    unidad_default: "%"
+  alza_bencina_mepco:
+    nombre: Alza de bencina por colapso MEPCO
+    unidad_default: pesos por litro
+  alza_diesel_mepco:
+    nombre: Alza de diesel por colapso MEPCO
+    unidad_default: pesos por litro
+  costo_fiscal_mepco:
+    nombre: Costo fiscal semanal del MEPCO
+    unidad_default: millones de USD
+  ponderacion_bencina_ipc:
+    nombre: Ponderacion de bencina en canasta IPC
+    unidad_default: "%"
+  porcentaje_bienes_transporte_diesel:
+    nombre: Porcentaje de bienes transportados por diesel
+    unidad_default: "%"
+  impacto_mepco_ipc:
+    nombre: Impacto combinado MEPCO en IPC
+    unidad_default: puntos porcentuales
+  aumento_sueldo_asesores:
+    nombre: Aumento promedio sueldos asesores Kast vs Boric
+    unidad_default: "%"
+  aprobacion_kast_cep:
+    nombre: Aprobacion Kast encuesta CEP junio 2026
+    unidad_default: "%"
+  desaprobacion_kast_cep:
+    nombre: Desaprobacion Kast encuesta CEP junio 2026
+    unidad_default: "%"
+  aprobacion_kast_cadem_jul:
+    nombre: Aprobacion Kast Cadem julio 2026
+    unidad_default: "%"
+  desaprobacion_kast_cadem_jul:
+    nombre: Desaprobacion Kast Cadem julio 2026
+    unidad_default: "%"
+  pesimismo_futuro_chile_cadem_jul:
+    nombre: Pesimismo sobre futuro del pais (Cadem julio 2026)
+    unidad_default: "%"
+  creencia_situacion_empeorara_cadem_jul:
+    nombre: Creencia que situacion economica empeorara segundo semestre (Cadem julio 2026)
+    unidad_default: "%"
+  estimacion_delincuencia_empeorara_cadem_jul:
+    nombre: Estimacion que delincuencia empeorara (Cadem julio 2026)
+    unidad_default: "%"
+  estimacion_situacion_politica_empeorara_cadem_jul:
+    nombre: Estimacion que situacion politica empeorara (Cadem julio 2026)
+    unidad_default: "%"
+  aprobacion_kast_criteria_jul:
+    nombre: Aprobacion Kast encuesta Criteria julio 2026
+    unidad_default: "%"
+  desaprobacion_kast_criteria_jul:
+    nombre: Desaprobacion Kast encuesta Criteria julio 2026
+    unidad_default: "%"
+  rechazo_escucha_corazon:
+    nombre: Rechazo proyecto Escucha tu Corazon (Criteria julio 2026)
+    unidad_default: "%"
+  desaprobacion_gobierno_emergencia_criteria:
+    nombre: Desaprobacion gestion gobierno emergencia (Criteria julio 2026)
+    unidad_default: "%"
+  sueldo_valenzuela_mensual:
+    nombre: Sueldo mensual Cristian Valenzuela (tope)
+    unidad_default: pesos chilenos
+  total_honorarios_valenzuela:
+    nombre: Total honorarios Cristian Valenzuela contrato 2026
+    unidad_default: pesos chilenos
+  ipc_julio_2026:
+    nombre: Proyeccion IPC julio 2026 (EOF)
+    unidad_default: "%"
+  ipc_agosto_2026:
+    nombre: Proyeccion IPC agosto 2026 (EOF)
+    unidad_default: "%"
+  ipc_septiembre_2026:
+    nombre: Proyeccion IPC septiembre 2026 (EOF)
+    unidad_default: "%"
+  migrantes_irregulares_330k:
+    nombre: Migrantes irregulares totales estimados
+    unidad_default: personas
+  ingresos_irregulares_bajaron_90_porciento:
+    nombre: Bajada de ingresos irregulares por zona norte
+    unidad_default: "%"
+  zanja_fronteriza_dimensiones:
+    nombre: Dimensiones zanja fronteriza
+    unidad_default: metros
+  extension_zanja_fronteriza:
+    nombre: Extension total zanja fronteriza
+    unidad_default: kilometros
+  migrantes_irregulares_expulsados:
+    nombre: Migrantes irregulares que dejaron el pais
+    unidad_default: personas
+  puente_clandestino_zanja:
+    nombre: Puentes clandestinos detectados cruzando zanja
+    unidad_default: puentes
+  kilometros_zanja_excavados:
+    nombre: kilometros excavados en zanja Colchane
+    unidad_default: kilometros
+  kilometros_zanja_planificados:
+    nombre: kilometros planificados zanja Colchane
+    unidad_default: kilometros
+  avance_zanja_colchane:
+    nombre: Avance porcentaje zanja Colchane
+    unidad_default: "%"
+  ingresos_irregulares_marzo:
+    nombre: Ingresos irregulares detectados marzo 2026
+    unidad_default: personas
+  ingresos_irregulares_junio:
+    nombre: Ingresos irregulares detectados junio 2026
+    unidad_default: personas
+  porcentaje_bajada_ingresos_irregulares:
+    nombre: Porcentaje bajada ingresos irregulares marzo-junio
+    unidad_default: "%"
+  avance_complejo_chacalluta:
+    nombre: Avance porcentaje complejo Chacalluta
+    unidad_default: "%"
+  costo_complejo_chacalluta:
+    nombre: Costo complejo Chacalluta
+    unidad_default: millones de pesos chilenos
+  costo_nueva_comisaria_carabineros:
+    nombre: Costo nueva comisaria Carabineros frontera
+    unidad_default: millones de pesos chilenos
+  arancel_propuesto_ustr:
+    nombre: Arancel propuesto por USTR a productos chilenos
+    unidad_default: porcentaje
+  muertes_salmonera_2013_2026:
+    nombre: Muertes verificables en industria salmonera 2013-2026
+    unidad_default: personas
+  personas_esclavitud_moderna:
+    nombre: Personas en situación de esclavitud moderna en Chile
+    unidad_default: personas
+  exportaciones_agricultura_2025:
+    nombre: Exportaciones totales agricultura 2025
+    unidad_default: millones_usd
+  exportaciones_salmon_2025:
+    nombre: Exportaciones totales salmón 2025
+    unidad_default: millones_usd
+  exportaciones_salmón_eeuu_2025:
+    nombre: Exportaciones salmón a Estados Unidos 2025
+    unidad_default: millones_usd
+  porcentaje_exportaciones_salmón_eeuu:
+    nombre: Porcentaje de exportaciones de salmón a EE.UU.
+    unidad_default: porcentaje
+  exportaciones_chile_eeuu_2025:
+    nombre: Exportaciones totales de Chile a Estados Unidos 2025
+    unidad_default: millones_usd
+  exportaciones_mineras_eeuu_2025:
+    nombre: Exportaciones mineras de Chile a Estados Unidos 2025
+    unidad_default: millones_usd
+  votos_pdg_2025:
+    nombre: Votos obtenidos por PDG en elecciones presidenciales 2025
+    unidad_default: votos
+  perdida_aportes_pdg:
+    nombre: Pérdida de aportes estatales del PDG por balances rechazados
+    unidad_default: millones_pesos
+  fondos_retenidos_pdg_2024:
+    nombre: Fondos retenidos al PDG por observaciones balance 2024
+    unidad_default: millones_pesos
+  gastos_campana_parisi:
+    nombre: Gastos totales última campaña presidencial Franco Parisi
+    unidad_default: millones_pesos
+  gastos_digitales_parisi:
+    nombre: Gastos en gestión de contenidos digitales campaña Parisi
+    unidad_default: millones_pesos
+  estipendio_alumnos_carabineros:
+    nombre: Estipendio mensual alumnos Carabineros (nuevo)
+    unidad_default: pesos
+  gratificacion_especial_riesgo_tope:
+    nombre: Tope gratificación especial de riesgo Carabineros
+    unidad_default: porcentaje
+  efectivos_liberados_administracion:
+    nombre: Efectivos liberados de labores administrativas
+    unidad_default: efectivos
+  chalecos_antibalas_carabineros:
+    nombre: Chalecos antibalas para Carabineros 2027-2031
+    unidad_default: unidades
+  telefonos_moviles_carabineros:
+    nombre: Teléfonos móviles para Carabineros 2027-2031
+    unidad_default: unidades
+  camaras_corporales_carabineros:
+    nombre: Cámaras corporales para Carabineros 2027-2031
+    unidad_default: unidades
+  venezolanos_residentes_chile:
+    nombre: Venezolanos residentes en Chile
+    unidad_default: personas
+    notas: "Comunidad migrante más numerosa de Chile tras la crisis de desplazamiento venezolana. Más de 700.000 según cifras oficiales."
+  chilenos_residentes_venezuela:
+    nombre: Chilenos residentes en Venezuela
+    unidad_default: personas
+    notas: "Cerca de 25.000 chilenos viven en territorio venezolano."
+  ordenes_expulsion_pendientes:
+    nombre: Órdenes de expulsión pendientes en Chile
+    unidad_default: ordenes
+    notas: "Más de 75.000 órdenes, más de la mitad corresponden a ciudadanos venezolanos. Proceso dificultado por ausencia de canales diplomáticos con Caracas."
+  homicidios_ene_jul_2025:
+    nombre: Homicidios consumados 1 enero a 19 julio 2025
+    unidad_default: personas
+    notas: "Cifras oficiales consolidadas por el Observatorio de Homicidios, según FastCheck."
+  homicidios_ene_jul_2026:
+    nombre: Homicidios consumados 1 enero a 19 julio 2026
+    unidad_default: personas
+    notas: "Cifras preliminares informadas por Carabineros y PDI. Un 17,62% menos que 2025."
+  homicidios_2025:
+    nombre: Homicidios consumados durante 2025
+    unidad_default: personas
+    notas: "1.091 víctimas, la cifra más baja en cuatro años según el último informe del gobierno de Boric."
+  homicidios_2018:
+    nombre: Homicidios consumados durante 2018
+    unidad_default: personas
+    notas: "845 víctimas. Nivel que el ministro Arrau espera alcanzar en un año plazo."
+  superficie_plataforma_juan_fernandez:
+    nombre: Ampliación de territorio por plataforma continental de Juan Fernández
+    unidad_default: km2
+    notas: "71.000 km² de suelo y subsuelo marino bajo soberanía nacional si la ONU aprueba la presentación."
+  lavado_clan_chen_pesos:
+    nombre: Dinero lavado por el Clan Chen en Chile
+    unidad_default: millones_pesos
+    notas: "Unos 160.000 millones de pesos chilenos (más de US$180 millones) infiltrados al sistema financiero nacional según la fiscalía."
+  lavado_clan_chen_dolares:
+    nombre: Dinero lavado por el Clan Chen en Chile
+    unidad_default: millones_usd
+    notas: "Más de US$180 millones provenientes de criptoestafas internacionales blanqueados en Chile según la fiscalía."
+  perjuicio_estimado_clan_chen:
+    nombre: Perjuicio estimado caso Clan Chen
+    unidad_default: millones_usd
+    notas: "Cerca de 300 millones de dólares de perjuicio según la exministra Steinert, por lavado de activos, estafas tipo pig butchering y crimen organizado transnacional."
+  demandas_laborales_energy:
+    nombre: Demandas laborales contra Gimnasios Energy
+    unidad_default: demandas
+    notas: "67 causas laborales entre 2023 y 2026 contra Alex Wiesner como representante legal de Energy, con desembolsos por $472 millones en avenimientos."
+  desembolso_demandas_energy:
+    nombre: Desembolso por avenimientos laborales de Gimnasios Energy
+    unidad_default: millones_pesos
+    notas: "$472 millones pagados entre 2023 y 2026 para terminar conflictos laborales."
+  beneficiarios_seguro_social_enero2026:
+    nombre: Pensionados que recibieron beneficios del Seguro Social en enero 2026
+    unidad_default: personas
+    notas: "Más de 1.370.000 personas recibieron el Beneficio por Años Cotizados (BAC) y/o la Compensación por Expectativa de Vida (CEV) en enero de 2026, tras la reforma de pensiones."
+  aumento_pension_bac:
+    nombre: Aumento mensual por Beneficio por Años Cotizados (BAC)
+    unidad_default: pesos
+    notas: "0,1 UF por cada 12 meses cotizados con tope de 25 años; hasta casi $100.000 mensuales para quienes cumplen el máximo."
+  pensionadas_compensacion_cev:
+    nombre: Pensionadas que reciben Compensación por Expectativa de Vida
+    unidad_default: personas
+    notas: "Más de 730.000 mujeres con piso mínimo de 0,25 UF (aprox. $9.900)."
+  cotizacion_empleador_reforma:
+    nombre: Cotización de cargo del empleador tras reforma de pensiones
+    unidad_default: porcentaje
+    notas: "Comienza con 1% en 2025 y sube un punto por año hasta 7% en 2033. En agosto de 2026 llega al 2%."
+  expulsados_vuelo_24mayo:
+    nombre: Personas expulsadas en el tercer vuelo de expulsión
+    unidad_default: personas
+    notas: "80 personas (58 colombianas y 22 bolivianas) expulsadas el 24 de mayo de 2026. Primer vuelo en aerolínea comercial. 60 administrativas y 20 judiciales."
+  expulsiones_total_2026:
+    nombre: Expulsiones ejecutadas durante 2026
+    unidad_default: personas
+    notas: "780 expulsiones en lo que va de 2026: 683 administrativas y 97 judiciales. A fines de mayo, 484 desde el 11 de marzo."
+  salidas_voluntarias_2026:
+    nombre: Salidas voluntarias de migrantes en 2026
+    unidad_default: personas
+    notas: "2.446 salidas voluntarias en 2026 a fines de mayo, 90% de ellas de ciudadanos venezolanos."
+  ingresos_pasos_no_habilitados:
+    nombre: Ingresos por pasos no habilitados en 2026
+    unidad_default: personas
+    notas: "4.324 ingresos a la fecha frente a 18.403 en el mismo periodo de 2022, según el Plan Escudo Fronterizo."
+  presupuesto_mujeres_rurales:
+    nombre: Presupuesto anual del Programa Mujeres Rurales
+    unidad_default: millones_de_pesos
+    notas: "Unos 3.300 millones de pesos anuales ejecutados en convenio entre INDAP y PRODEMU."
+  anios_mujeres_rurales:
+    nombre: Años de funcionamiento del Programa Mujeres Rurales
+    unidad_default: años
+    notas: "34 años ininterrumpidos desde 1992 al momento del cese de ingreso en 2026."
+  recorte_prodemu:
+    nombre: Recorte aplicado a PRODEMU
+    unidad_default: "%"
+    notas: "8% según la denuncia, más del doble del 3% que el Ejecutivo anunció como criterio general de ajuste."
+  reduccion_convenio_sernameg:
+    nombre: Reducción del convenio SERNAMEG-PRODEMU
+    unidad_default: millones_de_pesos
+    notas: "Superior a 800 millones de pesos según la denuncia."
+  votos_proyecto_acuerdo_mujeres_rurales:
+    nombre: Votos a favor del proyecto de acuerdo para mantener el Programa Mujeres Rurales
+    unidad_default: votos
+    notas: "106 votos a favor en la Cámara de Diputadas y Diputados."
+  votos_en_contra_proyecto_acuerdo_mujeres_rurales:
+    nombre: Votos en contra del proyecto de acuerdo para mantener el Programa Mujeres Rurales
+    unidad_default: votos
+    notas: "29 votos en contra, con rechazo casi exclusivo de las bancadas oficialistas."

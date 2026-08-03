@@ -1,0 +1,157 @@
+---
+import { Copy } from 'lucide-astro';
+import type { QuoteEntry } from '../lib/queries';
+import { getSourcesRegistry, getPeopleRegistry, getOrganizationsRegistry } from '../lib/registry';
+
+interface Props {
+  quotes: QuoteEntry[];
+}
+
+const { quotes } = Astro.props;
+const first = quotes[0];
+
+const sourcesRegistry = getSourcesRegistry();
+const allSourceIds = [...new Set(quotes.flatMap((q) => q.sources))];
+const sourceDetails = allSourceIds.map((id) => ({
+  id,
+  medio: sourcesRegistry[id]?.medio ?? id,
+  titulo: sourcesRegistry[id]?.titulo ?? id,
+  url: sourcesRegistry[id]?.url,
+}));
+
+const peopleMap = new Map(getPeopleRegistry().map((p) => [p.id, p.data.nombre]));
+const orgsMap = new Map(getOrganizationsRegistry().map((o) => [o.id, o.data.nombre]));
+
+function renderQuoteText(text: string): string {
+  return text
+    .replace(/\[\[person\/([^\]]+)\]\]/g, (_, id) =>
+      `<span class="entity-ref entity-person">${peopleMap.get(id) ?? id}</span>`)
+    .replace(/\[\[org\/([^\]]+)\]\]/g, (_, id) =>
+      `<span class="entity-ref entity-org">${orgsMap.get(id) ?? id}</span>`);
+}
+
+const payload = {
+  quotes: quotes.map((q) => ({
+    text: q.text,
+    person: peopleMap.get(q.personId) ?? q.personId,
+    personId: q.personId,
+    sources: q.sources,
+    fecha: q.fecha,
+  })),
+  titulo: first.titulo,
+  sources: Object.fromEntries(sourceDetails.map((s) => [s.id, { medio: s.medio, url: s.url }])),
+};
+---
+
+<div class="quote-card md:ml-5 border-l-2 border-blue-200 pl-4 pt-1 pb-2 min-w-0" data-quote-payload={JSON.stringify(payload)}>
+  <div class="flex items-center justify-between mb-2">
+    <span class="text-[11px] font-semibold uppercase tracking-wide text-blue-600">
+      Declaraciones ({quotes.length})
+    </span>
+    <div class="flex gap-1.5">
+      <button
+        type="button"
+        data-copy="apa"
+        class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-gray-600 bg-gray-100 hover:bg-blue-100 hover:text-blue-700 px-2 py-1 rounded-md transition-colors"
+        title="Copiar cita en formato APA"
+      >
+        <Copy class="h-3 w-3 shrink-0" />
+        <span class="copy-label">APA</span>
+      </button>
+      <button
+        type="button"
+        data-copy="md"
+        class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-gray-600 bg-gray-100 hover:bg-blue-100 hover:text-blue-700 px-2 py-1 rounded-md transition-colors"
+        title="Copiar cita en formato markdown (wikilinks del vault)"
+      >
+        <Copy class="h-3 w-3 shrink-0" />
+        <span class="copy-label">MD</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="flex flex-col gap-2">
+    {quotes.map((q) => (
+      <blockquote class="text-sm text-gray-700 leading-relaxed italic border-l-2 border-blue-100 pl-3">
+        &ldquo;<Fragment set:html={renderQuoteText(q.text)} />&rdquo;
+      </blockquote>
+    ))}
+  </div>
+  {sourceDetails.length > 0 && (
+    <div class="mt-2.5 flex gap-1.5 flex-wrap">
+      {sourceDetails.map((s) => (
+        s.url ? (
+          <a
+            href={s.url}
+            target="_blank"
+            rel="noopener"
+            class="inline-flex items-center gap-1 text-[10px] font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 px-2 py-0.5 rounded-md transition-colors max-w-full break-all"
+            title={s.titulo}
+          >
+            {s.id}
+          </a>
+        ) : (
+          <span class="text-[10px] font-medium text-gray-500 bg-gray-50 px-2 py-0.5 rounded-md max-w-full break-all">
+            {s.id}
+          </span>
+        )
+      ))}
+    </div>
+  )}
+</div>
+
+<script>
+  const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+  function fechaApa(iso: string): string {
+    const d = new Date(iso);
+    if (isNaN(d.getTime())) return iso;
+    return `${d.getFullYear()}, ${d.getDate()} de ${meses[d.getMonth()]}`;
+  }
+
+  function copyText(text: string, btn: HTMLElement): void {
+    navigator.clipboard.writeText(text).then(() => {
+      const label = btn.querySelector('.copy-label');
+      btn.classList.add('bg-green-100', 'text-green-700');
+      if (label) label.textContent = 'Copiado';
+      setTimeout(() => {
+        btn.classList.remove('bg-green-100', 'text-green-700');
+        if (label) label.textContent = btn.dataset.copy === 'apa' ? 'APA' : 'MD';
+      }, 1600);
+    });
+  }
+
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement | null;
+    const btn = target?.closest('.copy-btn') as HTMLButtonElement | null;
+    if (!btn) return;
+    const card = btn.closest('.quote-card');
+    if (!card) return;
+    const data = JSON.parse((card as HTMLElement).dataset.quotePayload ?? '{}');
+    const format = btn.dataset.copy;
+
+    const sourceLink = (id: string): string => {
+      const s = data.sources?.[id];
+      return s?.url ? `[${s.medio}](${s.url})` : id;
+    };
+
+    if (format === 'apa') {
+      const apa = data.quotes
+        .map((q: any) => {
+          const urls = q.sources
+            .map((id: string) => data.sources?.[id]?.url)
+            .filter((u: string | undefined) => u);
+          return `${q.person} (${fechaApa(q.fecha)}). “${q.text}”. ${data.titulo}.${urls.length ? ` Recuperado de ${urls.join(', ')}` : ''}`;
+        })
+        .join('\n\n');
+      copyText(apa, btn);
+      return;
+    }
+
+    const md = data.quotes
+      .map((q: any) =>
+        `> ${q.text} - ${q.person}. Fuente: ${q.sources.map(sourceLink).join(', ')}`)
+      .join('\n\n');
+    copyText(md, btn);
+  });
+</script>

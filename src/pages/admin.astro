@@ -1,0 +1,658 @@
+---
+import Base from '../layouts/Base.astro';
+import { getEditorData } from '../lib/editorData';
+import { Edit3, FileText, Check, Copy, Plus } from 'lucide-astro';
+
+const data = getEditorData();
+---
+
+<Base title="Editor de Eventos">
+  <div class="flex flex-col gap-6">
+    <header class="flex items-center justify-between bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm">
+      <div class="flex items-center gap-2">
+        <Edit3 class="h-6 w-6 text-blue-600 shrink-0" />
+        <h1 class="text-xl font-bold text-gray-900">Editor de Eventos</h1>
+      </div>
+      <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Markdown interactivo</span>
+    </header>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* ── Frontmatter ── */}
+      <section class="bg-white rounded-lg border p-4 flex flex-col gap-3">
+        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Frontmatter</h2>
+
+        <label class="flex flex-col gap-1">
+          <span class="text-xs font-medium text-gray-600">Titulo *</span>
+          <input id="fm-titulo" type="text" required class="border rounded px-2 py-1.5 text-sm" placeholder="Titulo del evento" />
+        </label>
+
+        <div class="grid grid-cols-2 gap-3">
+          <label class="flex flex-col gap-1">
+            <span class="text-xs font-medium text-gray-600">Fecha *</span>
+            <input id="fm-fecha" type="datetime-local" required class="border rounded px-2 py-1.5 text-sm" />
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs font-medium text-gray-600">Tipo *</span>
+            <select id="fm-tipo" required class="border rounded px-2 py-1.5 text-sm">
+              <option value="">Seleccionar...</option>
+              {data.eventTipos.map(t => <option value={t}>{t}</option>)}
+            </select>
+          </label>
+        </div>
+
+        <label class="flex flex-col gap-1">
+          <span class="text-xs font-medium text-gray-600">Temas</span>
+          <select id="fm-tema" multiple class="border rounded px-2 py-1.5 text-sm h-24">
+            {data.topics.map(t => <option value={t.id}>{t.nombre}</option>)}
+          </select>
+        </label>
+
+        <label class="flex flex-col gap-1 relative">
+          <span class="text-xs font-medium text-gray-600">Etiquetas</span>
+          <input id="fm-etiquetas" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separadas por coma" autocomplete="off" />
+          <div id="ac-etiquetas" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-white border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
+        </label>
+
+        <div class="grid grid-cols-2 gap-3">
+          <label class="flex flex-col gap-1 relative">
+            <span class="text-xs font-medium text-gray-600">Colectivos</span>
+            <input id="fm-colectivos" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separados por coma" autocomplete="off" />
+            <div id="ac-colectivos" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-white border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
+          </label>
+          <label class="flex flex-col gap-1 relative">
+            <span class="text-xs font-medium text-gray-600">Sectores</span>
+            <input id="fm-sectores" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separados por coma" autocomplete="off" />
+            <div id="ac-sectores" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-white border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
+          </label>
+        </div>
+
+        <div id="fm-relaciones-container" class="flex flex-col gap-2">
+          <span class="text-xs font-medium text-gray-600">Relaciones</span>
+          <div id="fm-relaciones-list" class="flex flex-col gap-2"></div>
+          <button id="add-relation" type="button" class="text-xs text-blue-600 hover:underline self-start">+ Agregar relacion</button>
+        </div>
+
+        <div class="grid grid-cols-2 gap-3">
+          <label class="flex flex-col gap-1">
+            <span class="text-xs font-medium text-gray-600">Creado</span>
+            <input id="fm-creado" type="date" class="border rounded px-2 py-1.5 text-sm" />
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs font-medium text-gray-600">Actualizado</span>
+            <input id="fm-actualizado" type="date" class="border rounded px-2 py-1.5 text-sm" />
+          </label>
+        </div>
+      </section>
+
+      {/* ── Body Editor ── */}
+      <section class="bg-white rounded-lg border p-4 flex flex-col gap-3 relative">
+        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Cuerpo del Evento</h2>
+
+        <div class="flex gap-1 flex-wrap">
+          <button data-action="bold" class="px-2 py-1 text-xs border rounded hover:bg-gray-100 font-bold" title="Negrita">B</button>
+          <button data-action="italic" class="px-2 py-1 text-xs border rounded hover:bg-gray-100 italic" title="Cursiva">I</button>
+          <button data-action="h2" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Heading 2">H2</button>
+          <button data-action="h3" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Heading 3">H3</button>
+          <button data-action="quote" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Cita">❝</button>
+          <button data-action="list" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Lista">&bull;</button>
+          <button data-action="link" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Enlace">🔗</button>
+          <button data-action="wiki" class="px-2 py-1 text-xs border rounded hover:bg-gray-100 font-mono" title="Wikilink">[[</button>
+        </div>
+
+        <div class="relative flex-1">
+          <textarea id="body-editor" class="border rounded px-3 py-2 text-sm w-full h-64 font-mono resize-y" placeholder="Escribe el contenido del evento aqui...
+
+Usa [[person/nombre]] para referenciar personas.
+Usa [[org/nombre]] para referenciar organizaciones.
+Usa [[source/id-fuente]] para referenciar fuentes.
+Usa [[cifra/concepto/valor/unidad]] para cifras.
+Usa > texto - [[person/id]] para citas (blockquote).
+
+Ejemplo:
+## Anuncio del Presidente
+El [[person/jose_antonio_kast]] declaro Estado de Catastrofe en [[org/gobierno_regional_coquimbo]] por el sistema frontal que afecta a la zona.
+
+Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/15568/viviendas]]."></textarea>
+
+          {/* Autocomplete dropdown */}
+          <div id="ac-dropdown" class="hidden absolute z-50 bg-white border rounded-lg shadow-lg max-h-56 overflow-y-auto w-80 text-sm"></div>
+        </div>
+
+        {/* Cifra builder */}
+        <div id="cifra-builder" class="hidden bg-blue-50 border border-blue-200 rounded p-3 flex flex-col gap-2">
+          <span class="text-xs font-medium text-blue-700">Insertar Cifra</span>
+          <div class="flex gap-2 items-end">
+            <label class="flex flex-col gap-1 flex-1">
+              <span class="text-xs text-blue-600">Concepto</span>
+              <select id="cifra-concept" class="border rounded px-2 py-1 text-sm">
+                {data.cifras.map(c => <option value={c.id}>{c.nombre}</option>)}
+              </select>
+            </label>
+            <label class="flex flex-col gap-1 w-24">
+              <span class="text-xs text-blue-600">Valor</span>
+              <input id="cifra-value" type="text" class="border rounded px-2 py-1 text-sm" placeholder="5" />
+            </label>
+            <label class="flex flex-col gap-1 w-24">
+              <span class="text-xs text-blue-600">Unidad</span>
+              <input id="cifra-unit" type="text" class="border rounded px-2 py-1 text-sm" placeholder="personas" />
+            </label>
+            <button id="cifra-insert" type="button" class="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700">Insertar</button>
+            <button id="cifra-cancel" type="button" class="px-3 py-1 text-sm text-gray-500 hover:text-gray-700">X</button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    {/* ── Preview ── */}
+    <section class="bg-white rounded-lg border p-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Vista Previa</h2>
+        <button id="toggle-preview" type="button" class="text-xs text-gray-400 hover:text-gray-600">ocultar</button>
+      </div>
+      <div id="preview-content" class="prose prose-sm max-w-none text-gray-700"></div>
+    </section>
+
+    {/* ── Output ── */}
+    <section class="bg-white rounded-lg border p-4">
+      <div class="flex items-center justify-between mb-3">
+        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Markdown Generado</h2>
+        <div class="flex gap-2">
+          <button id="btn-copy" type="button" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm rounded transition-colors">Copiar</button>
+          <button id="btn-download" type="button" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm rounded transition-colors">Descargar .md</button>
+        </div>
+      </div>
+      <textarea id="output" readonly class="border rounded px-3 py-2 text-sm w-full h-48 font-mono bg-gray-50 resize-y"></textarea>
+      <p id="output-filename" class="text-xs text-gray-400 mt-2"></p>
+    </section>
+  </div>
+
+  <script define:vars={{ data }}>
+    // ── Data ──
+    const people = data.people;
+    const orgs = data.orgs;
+    const cifras = data.cifras;
+    const sourceList = data.sourceList;
+    const topics = data.topics;
+    const etiquetasSuggestions = data.etiquetas;
+    const colectivosSuggestions = data.colectivos;
+    const sectoresSuggestions = data.sectores;
+    const eventIds = data.eventIds;
+    const sourceTipos = data.sourceTipos;
+    const eventTipos = data.eventTipos;
+    const relationTipos = data.relationTipos;
+
+    // ── Elements ──
+    const fm = {
+      titulo: document.getElementById('fm-titulo'),
+      fecha: document.getElementById('fm-fecha'),
+      tipo: document.getElementById('fm-tipo'),
+      tema: document.getElementById('fm-tema'),
+      etiquetas: document.getElementById('fm-etiquetas'),
+      colectivos: document.getElementById('fm-colectivos'),
+      sectores: document.getElementById('fm-sectores'),
+      relaciones: document.getElementById('fm-relaciones-list'),
+      creado: document.getElementById('fm-creado'),
+      actualizado: document.getElementById('fm-actualizado'),
+    };
+    const bodyEditor = document.getElementById('body-editor');
+    const acDropdown = document.getElementById('ac-dropdown');
+    const cifraBuilder = document.getElementById('cifra-builder');
+    const cifraConcept = document.getElementById('cifra-concept');
+    const cifraValue = document.getElementById('cifra-value');
+    const cifraUnit = document.getElementById('cifra-unit');
+    const cifraInsert = document.getElementById('cifra-insert');
+    const cifraCancel = document.getElementById('cifra-cancel');
+    const outputEl = document.getElementById('output');
+    const previewEl = document.getElementById('preview-content');
+    const filenameEl = document.getElementById('output-filename');
+    const togglePreview = document.getElementById('toggle-preview');
+
+    // ── Tag autocomplete helper ──
+    function setupTagAutocomplete(inputId, dropdownId, suggestions) {
+      const input = document.getElementById(inputId);
+      const dropdown = document.getElementById(dropdownId);
+      if (!input || !dropdown) return;
+
+      input.addEventListener('input', () => {
+        const val = input.value;
+        const parts = val.split(',').map(s => s.trim());
+        const last = parts[parts.length - 1];
+        if (!last) { dropdown.classList.add('hidden'); return; }
+
+        const matches = suggestions.filter(s => s.toLowerCase().includes(last.toLowerCase()) && !parts.slice(0, -1).includes(s));
+        if (matches.length === 0) { dropdown.classList.add('hidden'); return; }
+
+        dropdown.innerHTML = matches.slice(0, 8).map(m =>
+          `<div class="px-3 py-1.5 cursor-pointer hover:bg-blue-50">${m}</div>`
+        ).join('');
+        dropdown.classList.remove('hidden');
+      });
+
+      dropdown.addEventListener('click', (e) => {
+        const item = e.target.closest('div');
+        if (!item) return;
+        const val = input.value;
+        const parts = val.split(',').map(s => s.trim());
+        parts[parts.length - 1] = item.textContent;
+        input.value = parts.filter(Boolean).join(', ');
+        dropdown.classList.add('hidden');
+        updateOutput();
+      });
+
+      input.addEventListener('blur', () => {
+        setTimeout(() => dropdown.classList.add('hidden'), 150);
+      });
+    }
+
+    setupTagAutocomplete('fm-etiquetas', 'ac-etiquetas', etiquetasSuggestions);
+    setupTagAutocomplete('fm-colectivos', 'ac-colectivos', colectivosSuggestions);
+    setupTagAutocomplete('fm-sectores', 'ac-sectores', sectoresSuggestions);
+
+    // ── Relations ──
+    let relationCount = 0;
+    document.getElementById('add-relation').addEventListener('click', () => {
+      const id = relationCount++;
+      const row = document.createElement('div');
+      row.className = 'flex gap-2 items-end';
+      row.innerHTML = `
+        <select class="border rounded px-2 py-1 text-sm flex-1 rel-tipo">
+          ${relationTipos.map(t => `<option value="${t}">${t}</option>`).join('')}
+        </select>
+        <input type="text" class="border rounded px-2 py-1 text-sm flex-1 rel-objetivo" placeholder="ID del evento" list="event-ids-list" autocomplete="off" />
+        <button type="button" class="text-xs text-red-400 hover:text-red-600 px-1 del-relation">X</button>
+      `;
+      row.querySelector('.del-relation').addEventListener('click', () => row.remove());
+      fm.relaciones.appendChild(row);
+    });
+
+    // ── Toolbar ──
+    document.querySelectorAll('[data-action]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const action = btn.dataset.action;
+        const start = bodyEditor.selectionStart;
+        const end = bodyEditor.selectionEnd;
+        const text = bodyEditor.value;
+        const sel = text.substring(start, end);
+
+        let before = text.substring(0, start);
+        let after = text.substring(end);
+        let insert = '';
+
+        switch (action) {
+          case 'bold': insert = `**${sel || 'texto'}**`; break;
+          case 'italic': insert = `*${sel || 'texto'}*`; break;
+          case 'h2': insert = `\n## ${sel || 'Titulo'}`; break;
+          case 'h3': insert = `\n### ${sel || 'Subtitulo'}`; break;
+          case 'quote': insert = `\n> ${sel || 'texto de la cita'} - [[person/]]`; break;
+          case 'list': insert = `\n- ${sel || 'item'}`; break;
+          case 'link': insert = `[${sel || 'texto'}](url)`; break;
+          case 'wiki':
+            showCifraBuilder();
+            return;
+        }
+
+        bodyEditor.value = before + insert + after;
+        bodyEditor.focus();
+        updateOutput();
+      });
+    });
+
+    // ── Wikilink autocomplete ──
+    let acState = { active: false, type: null, query: '', start: 0, items: [], selected: 0 };
+
+    function showCifraBuilder() {
+      cifraBuilder.classList.remove('hidden');
+      cifraValue.focus();
+    }
+
+    cifraCancel.addEventListener('click', () => {
+      cifraBuilder.classList.add('hidden');
+    });
+
+    cifraInsert.addEventListener('click', () => {
+      const concept = cifraConcept.value;
+      const value = cifraValue.value.trim();
+      const unit = cifraUnit.value.trim() || cifras.find(c => c.id === concept)?.unidad_default || '';
+      if (!value) return;
+
+      const wikilink = `[[cifra/${concept}/${value}/${unit}]]`;
+      const start = bodyEditor.selectionStart;
+      bodyEditor.value = bodyEditor.value.substring(0, start) + wikilink + bodyEditor.value.substring(start);
+      bodyEditor.focus();
+      cifraValue.value = '';
+      cifraUnit.value = '';
+      cifraBuilder.classList.add('hidden');
+      updateOutput();
+    });
+
+    function getAllEntities() {
+      return [
+        ...people.map(p => ({ type: 'person', id: p.id, label: p.nombre, desc: p.cargo })),
+        ...orgs.map(o => ({ type: 'org', id: o.id, label: o.nombre, desc: o.tipo })),
+        ...sourceList.map(s => ({ type: 'source', id: s.id, label: s.titulo, desc: s.medio })),
+        ...cifras.map(c => ({ type: 'cifra', id: c.id, label: c.nombre, desc: c.unidad_default })),
+      ];
+    }
+
+    function filterEntities(query, typeFilter) {
+      const all = getAllEntities();
+      return all.filter(e => {
+        if (typeFilter && e.type !== typeFilter) return false;
+        if (!query) return true;
+        const q = query.toLowerCase();
+        return e.id.toLowerCase().includes(q) || e.label.toLowerCase().includes(q);
+      });
+    }
+
+    function showAcDropdown(items, selectedIdx) {
+      if (items.length === 0) { hideAcDropdown(); return; }
+
+      acDropdown.innerHTML = items.map((item, i) => {
+        const icons = { person: '👤', org: '🏢', source: '📰', cifra: '📊' };
+        const bg = i === selectedIdx ? 'bg-blue-50' : '';
+        return `<div class="px-3 py-2 cursor-pointer hover:bg-blue-50 ${bg} flex items-start gap-2" data-idx="${i}">
+          <span class="text-base">${icons[item.type] || '•'}</span>
+          <div class="flex flex-col">
+            <span class="font-medium text-gray-800">${item.label}</span>
+            <span class="text-xs text-gray-400">${item.type}/${item.id}${item.desc ? ' — ' + item.desc : ''}</span>
+          </div>
+        </div>`;
+      }).join('');
+
+      // Position near cursor
+      const ta = bodyEditor;
+      const rect = ta.getBoundingClientRect();
+      acDropdown.style.top = (rect.height / 2) + 'px';
+      acDropdown.style.left = '0px';
+      acDropdown.classList.remove('hidden');
+    }
+
+    function hideAcDropdown() {
+      acDropdown.classList.add('hidden');
+      acState.active = false;
+      acState.type = null;
+      acState.query = '';
+      acState.items = [];
+      acState.selected = 0;
+    }
+
+    function insertWikilink(item) {
+      const start = acState.start;
+      const before = bodyEditor.value.substring(0, start);
+      const after = bodyEditor.value.substring(bodyEditor.selectionStart);
+      const link = `[[${item.type}/${item.id}]]`;
+      bodyEditor.value = before + link + after;
+      hideAcDropdown();
+      bodyEditor.focus();
+      updateOutput();
+    }
+
+    bodyEditor.addEventListener('input', (e) => {
+      const pos = bodyEditor.selectionStart;
+      const text = bodyEditor.value.substring(0, pos);
+      const lastOpen = text.lastIndexOf('[[');
+
+      if (lastOpen === -1 || (text.indexOf(']]', lastOpen) !== -1 && text.indexOf(']]', lastOpen) < lastOpen)) {
+        if (acState.active) hideAcDropdown();
+        return;
+      }
+
+      const afterOpen = text.substring(lastOpen + 2);
+      const parts = afterOpen.split('/');
+
+      if (!acState.active) {
+        acState.active = true;
+        acState.start = lastOpen;
+        acState.type = null;
+        acState.query = '';
+        acState.selected = 0;
+      }
+
+      if (parts.length === 1 && !afterOpen.includes('/')) {
+        // Still selecting type or filtering
+        acState.type = null;
+        acState.query = afterOpen;
+        const items = filterEntities(afterOpen, null);
+        acState.items = items.slice(0, 15);
+        acState.selected = 0;
+        showAcDropdown(acState.items, 0);
+      } else if (parts.length >= 2) {
+        const typePrefix = parts[0];
+        const validTypes = ['person', 'org', 'source', 'cifra'];
+        if (!validTypes.includes(typePrefix)) {
+          acState.type = null;
+          acState.query = afterOpen;
+        } else {
+          acState.type = typePrefix;
+          acState.query = parts.slice(1).join('/');
+        }
+        const items = filterEntities(acState.query, acState.type);
+        acState.items = items.slice(0, 15);
+        acState.selected = 0;
+        showAcDropdown(acState.items, 0);
+      }
+    });
+
+    bodyEditor.addEventListener('keydown', (e) => {
+      if (!acState.active) return;
+
+      if (e.key === 'ArrowDown') {
+        e.preventDefault();
+        acState.selected = Math.min(acState.selected + 1, acState.items.length - 1);
+        showAcDropdown(acState.items, acState.selected);
+      } else if (e.key === 'ArrowUp') {
+        e.preventDefault();
+        acState.selected = Math.max(acState.selected - 1, 0);
+        showAcDropdown(acState.items, acState.selected);
+      } else if (e.key === 'Enter' || e.key === 'Tab') {
+        if (acState.items.length > 0) {
+          e.preventDefault();
+          insertWikilink(acState.items[acState.selected]);
+        }
+      } else if (e.key === 'Escape') {
+        e.preventDefault();
+        hideAcDropdown();
+      }
+    });
+
+    acDropdown.addEventListener('click', (e) => {
+      const item = e.target.closest('[data-idx]');
+      if (item) {
+        const idx = parseInt(item.dataset.idx);
+        insertWikilink(acState.items[idx]);
+      }
+    });
+
+    // ── Output generation ──
+    function parseList(val) {
+      if (!val || !val.trim()) return [];
+      return val.split(',').map(s => s.trim()).filter(Boolean);
+    }
+
+    function generateFrontmatter() {
+      const lines = [];
+      const titulo = fm.titulo.value.trim();
+      const fecha = fm.fecha.value;
+      const tipo = fm.tipo.value;
+
+      if (!titulo || !fecha || !tipo) return null;
+
+      const fechaStr = fecha.replace('T', ' ');
+      lines.push(`titulo: "${titulo.replace(/"/g, '\\"')}"`);
+      lines.push(`fecha: ${fechaStr}`);
+
+      const temas = Array.from(fm.tema.selectedOptions).map(o => o.value);
+      if (temas.length > 0) {
+        if (temas.length === 1) {
+          lines.push(`tema: ${temas[0]}`);
+        } else {
+          lines.push('tema:');
+          temas.forEach(t => lines.push(`  - ${t}`));
+        }
+      }
+
+      const etiquetas = parseList(fm.etiquetas.value);
+      if (etiquetas.length > 0) {
+        if (etiquetas.length === 1) {
+          lines.push(`etiquetas: ${etiquetas[0]}`);
+        } else {
+          lines.push('etiquetas:');
+          etiquetas.forEach(e => lines.push(`  - ${e}`));
+        }
+      }
+
+      lines.push(`tipo: ${tipo}`);
+
+      const colectivos = parseList(fm.colectivos.value);
+      const sectores = parseList(fm.sectores.value);
+      if (colectivos.length > 0 || sectores.length > 0) {
+        lines.push('impacto:');
+        if (colectivos.length > 0) {
+          if (colectivos.length === 1) {
+            lines.push(`  colectivos: ${colectivos[0]}`);
+          } else {
+            lines.push('  colectivos:');
+            colectivos.forEach(c => lines.push(`    - ${c}`));
+          }
+        }
+        if (sectores.length > 0) {
+          if (sectores.length === 1) {
+            lines.push(`  sectores: ${sectores[0]}`);
+          } else {
+            lines.push('  sectores:');
+            sectores.forEach(s => lines.push(`    - ${s}`));
+          }
+        }
+      }
+
+      const rows = fm.relaciones.querySelectorAll('.rel-tipo');
+      if (rows.length > 0) {
+        lines.push('relaciones:');
+        rows.forEach(row => {
+          const tipoEl = row.closest('.flex').querySelector('.rel-tipo');
+          const objetivoEl = row.closest('.flex').querySelector('.rel-objetivo');
+          lines.push(`  - tipo: ${tipoEl.value}`);
+          lines.push(`    objetivo: "${objetivoEl.value.trim()}"`);
+        });
+      }
+
+      if (fm.creado.value) lines.push(`creado: ${fm.creado.value}`);
+      if (fm.actualizado.value) lines.push(`actualizado: ${fm.actualizado.value}`);
+
+      return lines.join('\n');
+    }
+
+    function generateFilename() {
+      const fecha = fm.fecha.value;
+      if (!fecha) return 'evento.md';
+      const d = fecha.substring(0, 10).replace(/-/g, '');
+      const year = fecha.substring(0, 4);
+      const month = fecha.substring(5, 7);
+      return `${year}/${month}/${d}-1.md`;
+    }
+
+    function updateOutput() {
+      const fmText = generateFrontmatter();
+      const body = bodyEditor.value;
+      if (fmText === null) {
+        outputEl.value = body;
+        filenameEl.textContent = '';
+      } else {
+        outputEl.value = `---\n${fmText}\n---\n\n${body}`;
+        filenameEl.textContent = generateFilename();
+      }
+      updatePreview();
+    }
+
+    // ── Preview ──
+    let sourceCounter = 0;
+    const sourceMap = new Map();
+
+    function simpleMarkdown(md) {
+      sourceCounter = 0;
+      sourceMap.clear();
+
+      return md
+        .replace(/^### (.+)$/gm, '<h3>$1</h3>')
+        .replace(/^## (.+)$/gm, '<h2 class="text-lg font-bold mt-4 mb-2">$1</h2>')
+        .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.+?)\*/g, '<em>$1</em>')
+        .replace(/^> (.+)$/gm, '<blockquote class="border-l-4 border-gray-300 pl-3 italic text-gray-600 my-2">$1</blockquote>')
+        .replace(/^- (.+)$/gm, '<li class="ml-4">$1</li>')
+        .replace(/\[\[person\/([^\]]+)\]\]/g, (_, id) => {
+          const p = people.find(x => x.id === id);
+          return `<span class="entity-ref">${p?.nombre || id}</span>`;
+        })
+        .replace(/\[\[org\/([^\]]+)\]\]/g, (_, id) => {
+          const o = orgs.find(x => x.id === id);
+          return `<span class="entity-ref">${o?.nombre || id}</span>`;
+        })
+        .replace(/\[\[source\/([^\]]+)\]\]/g, (_, id) => {
+          if (!sourceMap.has(id)) {
+            sourceMap.set(id, ++sourceCounter);
+          }
+          return `<sup class="text-blue-600 font-mono text-[0.7rem]">[${sourceMap.get(id)}]</sup>`;
+        })
+        .replace(/\[\[cifra\/([^\]]+)\/([^\]]+)\/([^\]]+)\]\]/g, (_, concept, val, unit) => {
+          return `<span class="cifra-badge">${val}</span>`;
+        })
+        .replace(/\n\n/g, '<br><br>')
+        .replace(/\n/g, '<br>');
+    }
+
+    function updatePreview() {
+      const text = outputEl.value;
+      // Strip frontmatter for preview
+      const body = text.replace(/^---[\s\S]*?---\n*/, '');
+      previewEl.innerHTML = simpleMarkdown(body);
+    }
+
+    // ── Events ──
+    [fm.titulo, fm.fecha, fm.tipo, fm.etiquetas, fm.colectivos, fm.sectores, fm.creado, fm.actualizado].forEach(el => {
+      el.addEventListener('input', updateOutput);
+    });
+    fm.tema.addEventListener('change', updateOutput);
+    bodyEditor.addEventListener('input', updateOutput);
+
+    document.getElementById('add-relation').addEventListener('click', () => {
+      setTimeout(updateOutput, 10);
+    });
+
+    // Delegate change events for relation inputs
+    fm.relaciones.addEventListener('input', updateOutput);
+
+    document.getElementById('btn-copy').addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(outputEl.value);
+        const btn = document.getElementById('btn-copy');
+        btn.textContent = 'Copiado!';
+        setTimeout(() => btn.textContent = 'Copiar', 2000);
+      } catch { outputEl.select(); document.execCommand('copy'); }
+    });
+
+    document.getElementById('btn-download').addEventListener('click', () => {
+      const filename = generateFilename();
+      const blob = new Blob([outputEl.value], { type: 'text/markdown' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = filename.split('/').pop();
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    let previewVisible = true;
+    togglePreview.addEventListener('click', () => {
+      previewVisible = !previewVisible;
+      previewEl.style.display = previewVisible ? '' : 'none';
+      togglePreview.textContent = previewVisible ? 'ocultar' : 'mostrar';
+    });
+
+    // ── Init ──
+    const today = new Date().toISOString().substring(0, 10);
+    fm.creado.value = today;
+    fm.actualizado.value = today;
+    fm.fecha.value = today + 'T12:00';
+    updateOutput();
+  </script>
+</Base>

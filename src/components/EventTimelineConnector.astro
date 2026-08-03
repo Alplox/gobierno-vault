@@ -1,0 +1,78 @@
+---
+import { RELATION_LABELS, RELATION_CHIP_CLASS, DEFAULT_RELATION_CHIP, type EventConnections } from '../lib/relations';
+
+interface Props {
+  connections: EventConnections;
+}
+
+const { connections } = Astro.props;
+const { outgoing, incoming } = connections;
+
+if (outgoing.length === 0 && incoming.length === 0) return null;
+
+function edgeFecha(edge: { fecha: Date }): string {
+  return edge.fecha.toLocaleDateString('es-CL', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+    timeZone: 'America/Santiago',
+  });
+}
+---
+
+<section class="mb-8">
+  <h2 class="mb-4 text-lg font-semibold tracking-tight text-gray-900 text-balance">Linea de tiempo</h2>
+  <div class="relative ml-4 border-l-2 border-gray-200 pl-6 space-y-0">
+    {incoming.map((edge) => {
+      const label = RELATION_LABELS[edge.tipo] ?? edge.tipo;
+      const chipClass = RELATION_CHIP_CLASS[edge.tipo] ?? DEFAULT_RELATION_CHIP;
+      return (
+        <div class="relative pb-6 last:pb-0">
+          <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-gray-300 ring-2 ring-white" />
+          <a href={`/events/${edge.year}/${edge.eventId}`} class="group block rounded-lg border border-gray-200/80 bg-white px-4 py-3 transition-colors hover:border-gray-300 hover:bg-gray-50/80">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[10px] font-medium uppercase tracking-wide text-gray-400">Siguiente</span>
+              <span class={`inline-flex rounded-md px-1.5 py-0.5 text-[10px] font-medium ring-1 ring-inset ${chipClass}`}>
+                {label}
+              </span>
+            </div>
+            <p class="text-sm font-medium leading-snug text-gray-900 text-balance group-hover:text-blue-800">{edge.titulo}</p>
+            <time class="mt-1 block text-[11px] tabular-nums text-gray-500">{edgeFecha(edge)}</time>
+          </a>
+        </div>
+      );
+    })}
+
+    <div class="relative pb-6 last:pb-0">
+      <div class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-blue-600 ring-4 ring-white" />
+      <div class="rounded-lg border-2 border-blue-200 bg-blue-50/50 px-4 py-3">
+        <span class="text-[10px] font-medium uppercase tracking-wide text-blue-500">Este evento</span>
+        <div class="mt-1 flex items-center gap-2">
+          <svg class="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    {outgoing.map((edge) => {
+      const label = RELATION_LABELS[edge.tipo] ?? edge.tipo;
+      const chipClass = RELATION_CHIP_CLASS[edge.tipo] ?? DEFAULT_RELATION_CHIP;
+      return (
+        <div class="relative pb-6 last:pb-0">
+          <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-gray-300 ring-2 ring-white" />
+          <a href={`/events/${edge.year}/${edge.eventId}`} class="group block rounded-lg border border-gray-200/80 bg-white px-4 py-3 transition-colors hover:border-gray-300 hover:bg-gray-50/80">
+            <div class="flex items-center gap-2 mb-1">
+              <span class="text-[10px] font-medium uppercase tracking-wide text-gray-400">Anterior</span>
+              <span class={`inline-flex rounded-md px-1.5 py-0.5 text-[10px] font-medium ring-1 ring-inset ${chipClass}`}>
+                {label}
+              </span>
+            </div>
+            <p class="text-sm font-medium leading-snug text-gray-900 text-balance group-hover:text-blue-800">{edge.titulo}</p>
+            <time class="mt-1 block text-[11px] tabular-nums text-gray-500">{edgeFecha(edge)}</time>
+          </a>
+        </div>
+      );
+    })}
+  </div>
+</section>

@@ -1,0 +1,463 @@
+gobierno:
+  nombre: Gobierno y gestion presidencial
+  descripcion: Aprobacion y desaprobacion presidencial, gestion de gobierno, gabinete y politica interna de La Moneda.
+  relacionados:
+    - politica
+
+emergencia:
+  nombre: Emergencia y catástrofes
+  descripcion: Eventos de emergencia, desastres naturales, sistemas frontales, terremotos, inundaciones y gestión de crisis
+  relacionados: []
+
+economia:
+  nombre: Economia
+  descripcion: Politica economica, crecimiento, empleo y finanzas publicas.
+  relacionados:
+    - impuestos
+    - finanzas_publicas
+
+defensa_seguridad:
+  nombre: Defensa y seguridad
+  descripcion: Políticas de defensa nacional, seguridad pública, estados de excepción y Fuerzas Armadas
+  relacionados: []
+
+derechos_humanos:
+  nombre: Derechos humanos
+  descripcion: Memoria, verdad, justicia transicional, políticas de reparación, protección de derechos fundamentales, DDHH y organismos internacionales
+  relacionados:
+    - justicia
+    - relaciones_internacionales
+    - vulneracion_derechos_humanos
+
+finanzas_publicas:
+  nombre: Finanzas publicas
+  descripcion: Gestion del gasto, deuda, balance fiscal, presupuesto y reglas fiscales del Estado.
+  relacionados:
+    - economia
+    - impuestos
+
+impuestos:
+  nombre: Impuestos
+  descripcion: Politica tributaria, reformas fiscales y medidas de recaudacion.
+  relacionados:
+    - economia
+
+politica:
+  nombre: Politica
+  descripcion: Hechos politicos, governabilidad, relaciones entre poderes del Estado.
+  relacionados:
+    - legislativo
+
+legislativo:
+  nombre: Proceso legislativo
+  descripcion: Tramitacion de proyectos de ley, comisiones mixtas, votaciones en Congreso.
+  relacionados:
+    - politica
+
+tecnologia:
+  nombre: Tecnologia
+  descripcion: Regulacion tecnologica, inteligencia artificial, plataformas digitales.
+  relacionados:
+    - derechos_digitales
+    - inteligencia_artificial
+
+derechos_digitales:
+  nombre: Derechos digitales
+  descripcion: Proteccion de datos personales, privacidad, regulacion de contenido digital.
+  relacionados:
+    - tecnologia
+
+inteligencia_artificial:
+  nombre: Inteligencia artificial
+  descripcion: Regulacion y uso de IA, deepfakes, automatizacion.
+  relacionados:
+    - tecnologia
+    - derechos_digitales
+
+salud:
+  nombre: Salud publica
+  descripcion: Politicas de salud, vacunacion, atencion medica, emergencias sanitarias.
+  relacionados: []
+
+justicia:
+  nombre: Justicia
+  descripcion: Acciones judiciales, consejos de defensa del Estado, responsabilidad.
+  relacionados: []
+
+mineria:
+  nombre: Mineria
+  descripcion: Actividad minera, faenas, trabajadores del sector.
+  relacionados:
+    - trabajadores
+
+trabajadores:
+  nombre: Trabajadores
+  descripcion: Condiciones laborales, sindicatos, empleo.
+  relacionados:
+    - mineria
+
+trabajo:
+  nombre: Trabajo
+  descripcion: Politicas laborales, empleo, seremis de Trabajo, requisitos de cargo publico.
+  relacionados:
+    - trabajadores
+    - administracion_publica
+
+desarrollo_social:
+  nombre: Desarrollo social
+  descripcion: Politicas sociales, FONASIS, familias, bienestar social.
+  relacionados:
+    - salud_publica
+
+educacion:
+  nombre: Educacion
+  descripcion: Politicas educativas, suspension de clases, sistema escolar.
+  relacionados: []
+
+cultura:
+  nombre: Cultura
+  descripcion: Politicas culturales, artes, patrimonio, seremis de Culturas y Artes.
+  relacionados: []
+
+servicios_basicos:
+  nombre: Servicios basicos
+  descripcion: Agua potable, electricidad, saneamiento, telecomunicaciones.
+
+migracion:
+  nombre: Migracion
+  descripcion: Politica migratoria, control fronterizo, inmigracion ilegal y deportacion.
+  relacionados:
+    - defensa_seguridad
+    - fronteras
+
+fronteras:
+  nombre: Fronteras
+  descripcion: Control de fronteras, barreras fisicas, cooperacion internacional, paso de personas y mercancias.
+  relacionados:
+    - migracion
+    - defensa_seguridad
+
+infraestructura:
+  nombre: Infraestructura
+  descripcion: Concesiones de obras publicas, carreteras, vivienda, transporte.
+  relacionados: []
+
+energia:
+  nombre: Energia
+  descripcion: Transicion energetica, fuentes renovables, politica energetica.
+  relacionados:
+    - combustibles
+
+combustibles:
+  nombre: Combustibles y precios
+  descripcion: Precios de bencina, diesel, MEPCO, inflacion de combustibles, costo de vida.
+  relacionados:
+    - economia
+    - impuestos
+    - energia
+
+sueldos_publicos:
+  nombre: Sueldos publicos
+  descripcion: Remuneraciones de cargos de confianza, asesores, honorarios, transparencia salarial.
+  relacionados:
+    - anticorrupcion
+
+anticorrupcion:
+  nombre: Anticorrupcion
+  descripcion: Transparencia publica, eliminacion de apitutados, gasto fiscal responsable.
+  relacionados:
+    - finanzas_publicas
+
+previsiones:
+  nombre: Previsiones
+  descripcion: Pensiones, reforma previsional, PGU, sistema de ahorro previsional.
+  relacionados:
+    - economia
+
+sistema_penitenciario:
+  nombre: Sistema penitenciario
+  descripcion: Infraestructura carcelaria, segregacion de presos, maxima seguridad, reinsercion.
+  relacionados:
+    - justicia
+    - defensa_seguridad
+
+comunicacion_gobierno:
+  nombre: Comunicacion gubernamental
+  descripcion: Estrategias comunicacionales, vocerias, filtraciones de minutas, control de daños political.
+  relacionados:
+    - politica
+
+ciberseguridad:
+  nombre: Ciberseguridad
+  descripcion: Ciberataques, hackeos, vulneraciones de cuentas, agencias de ciberseguridad y proteccion digital del Estado.
+  relacionados:
+    - defensa_seguridad
+    - comunicacion_gobierno
+
+desinformacion:
+  nombre: Desinformacion
+  descripcion: Bulos, fake news, desmentidos, verificacion de hechos, contenido falso en redes sociales.
+  relacionados:
+    - comunicacion_gobierno
+    - politica
+
+relaciones_internacionales:
+  nombre: Relaciones internacionales
+  descripcion: Politica exterior, acuerdos comerciales, disputas diplomaticas, organismos internacionales.
+  relacionados:
+    - economia
+    - defensa_seguridad
+
+trabajo_forzoso:
+  nombre: Trabajo forzoso
+  descripcion: Denuncias de trabajo forzoso, explotacion laboral, trata de personas, estandares laborales internacionales.
+  relacionados:
+    - trabajadores
+    - relaciones_internacionales
+
+vulneracion_derechos_humanos:
+  nombre: Violación de derechos humanos
+  descripcion: Violaciones a derechos fundamentales, muertes en situaciones de vulnerabilidad, negligencia institucional, ocultamiento de evidencia.
+  relacionados:
+    - emergencia
+
+aborto:
+  nombre: Aborto
+  descripcion: Legislación sobre aborto, proyecto Escucha su Corazón, Misoprostol, debate sobre interrupción del embarazo y agenda valórica.
+  relacionados:
+    - politica
+    - proceso_legislativo
+    - religion
+    - salud_publica
+religion:
+  nombre: Religión y Estado
+  descripcion: Relación entre Iglesia y Estado, actividades religiosas en recintos públicos, secularización.
+  relacionados:
+    - politica
+
+corrupcion_transnacional:
+  nombre: Corrupción transnacional
+  descripcion: Escándalos de corrupción con alcance internacional, redes de desinformación, financiamiento irregular de campañas, injerencia extranjera.
+  relacionados:
+    - desinformacion
+    - relaciones_internacionales
+
+salud_publica:
+  nombre: Salud pública
+  descripcion: Políticas sanitarias, vacunación, alertas epidemiológicas, funcionamiento de la red asistencial, emergencias de salud.
+  relacionados:
+    - emergencia
+
+drogas:
+  nombre: Drogas y antisecreto
+  descripcion: Políticas de drogas, test de sustancias, escándalos por consumo de estupefacientes en autoridades.
+  relacionados:
+    - finanzas_publicas
+
+comercio_exterior:
+  nombre: Comercio exterior
+  descripcion: Tratados de libre comercio, aranceles, exportaciones, importaciones y relaciones comerciales internacionales.
+  relacionados:
+    - economia
+    - relaciones_internacionales
+
+discriminacion:
+  nombre: Discriminación
+  descripcion: Actos de discriminación, burlas, odio o violencia contra personas por condición, discapacidad, etnia u otra característica.
+  relacionados:
+    - vulneracion_derechos_humanos
+
+elecciones:
+  nombre: Elecciones y procesos electorales
+  descripcion: Proclamación de candidatos, cómputo de votos, proclamación de resultados, credenciales electorales.
+  relacionados:
+    - politica
+
+medio_ambiente:
+  nombre: Medio ambiente y bosques
+  descripcion: Incendios forestales, gestión de bosques, protección ambiental, CONAF.
+  relacionados:
+    - emergencia
+    - urbanismo
+
+urbanismo:
+  nombre: Urbanismo y ordenamiento territorial
+  descripcion: Planificación urbana, permisos de construcción, desarrollo inmobiliario, protección de zonas costeras y dunas.
+  relacionados:
+    - medio_ambiente
+
+ciencia:
+  nombre: Ciencia e investigación
+  descripcion: Política científica, investigación y desarrollo, congresos de ciencia, I+D.
+  relacionados:
+    - tecnologia
+
+transparencia:
+  nombre: Transparencia
+  descripcion: Transparencia pública, acceso a información pública, datos abiertos.
+  relacionados:
+    - anticorrupcion
+
+discurso_publico:
+  nombre: Discurso público
+  descripcion: Declaraciones públicas, discursos oficiales, comunicaciones presidenciales.
+  relacionados:
+    - comunicacion_gobierno
+
+transparencia_publica:
+  nombre: Transparencia pública
+  descripcion: Acceso a información pública, portales de transparencia, datos abiertos.
+  relacionados:
+    - anticorrupcion
+    - transparencia
+
+frontera:
+  nombre: Frontera
+  descripcion: Control fronterizo, pasos fronterizos, cooperación internacional.
+  relacionados:
+    - fronteras
+    - migracion
+
+seguridad:
+  nombre: Seguridad pública
+  descripcion: Seguridad ciudadana, prevención del delito, policía.
+  relacionados:
+    - defensa_seguridad
+
+ciencia_tecnologia:
+  nombre: Ciencia y tecnología
+  descripcion: Investigación científica, desarrollo tecnológico, innovación.
+  relacionados:
+    - ciencia
+    - tecnologia
+
+administracion_publica:
+  nombre: Administración pública
+  descripcion: Gestión pública, modernización del Estado, eficiencia administrativa.
+  relacionados:
+    - gobierno
+
+genero:
+  nombre: Género
+  descripcion: Igualdad de género, políticas feministas, violencia de género.
+  relacionados:
+    - vulneracion_derechos_humanos
+
+tributario:
+  nombre: Tributario
+  descripcion: Política tributaria, reformas tributarias, recaudación.
+  relacionados:
+    - impuestos
+    - economia
+
+fiscalidad:
+  nombre: Fiscalidad
+  descripcion: Política fiscal, gasto público, regla fiscal.
+  relacionados:
+    - finanzas_publicas
+    - economia
+
+deportes:
+  nombre: Deportes
+  descripcion: Política deportiva, infraestructura deportiva, selecciones nacionales.
+  relacionados: []
+
+corrupcion:
+  nombre: Corrupción
+  descripcion: Actos de corrupción, sobornos, mal uso de recursos públicos.
+  relacionados:
+    - anticorrupcion
+
+responsabilidad:
+  nombre: Responsabilidad
+  descripcion: Responsabilidad del Estado, indemnizaciones, rendición de cuentas.
+  relacionados:
+    - justicia
+
+vialidad:
+  nombre: Vialidad
+  descripcion: Estado de carreteras, señalización, infraestructura vial.
+  relacionados:
+    - infraestructura
+
+cambios_gabinete:
+  nombre: Cambios en el gabinete
+  descripcion: Renuncias, remociones, nombramientos y rotación de ministros, subsecretarios y seremis.
+  relacionados:
+    - politica
+
+conflicto_social:
+  nombre: Conflicto social
+  descripcion: Denuncias de acoso, protestas, tensiones sociales y conflictos laborales en el ámbito público.
+  relacionados:
+    - derechos_humanos
+
+test_drogas:
+  nombre: Test de drogas y transparencia obligatoria
+  descripcion: Exámenes de consumo de sustancias estupefacientes a autoridades públicas, remociones por positivo y reformas legales关联adas.
+  relacionados:
+    - drogas
+    - transparencia
+
+sistema_frontal:
+  nombre: Sistema frontal y emergencia climática
+  descripcion: Sistemas frontales, tormentas, tornados, crecidas de ríos, evacuaciones y gestión de emergencia climática en Chile.
+  relacionados:
+    - emergencia
+    - medio_ambiente
+
+aranceles:
+  nombre: Aranceles y comercio internacional
+  descripcion: Imposición de aranceles por parte de otros países, guerras comerciales, negociaciones bilaterales y su impacto en exportaciones chilenas.
+  relacionados:
+    - comercio_exterior
+    - economia
+
+reforma_constitucional:
+  nombre: Reforma constitucional
+  descripcion: Proyectos de reforma a la Constitución, cambios normativos y procesos legislativos de alta complejidad.
+  relacionados:
+    - legislativo
+
+diplomacia:
+  nombre: Diplomacia y relaciones internacionales
+  descripcion: Viajes presidenciales, ceremonias de cambio de mando, reuniones bilaterales y cooperación internacional.
+  relacionados:
+    - relaciones_internacionales
+
+emergencia_climatica:
+  nombre: Emergencia climática
+  descripcion: Eventos climáticos extremos, sequías, inundaciones, olas de calor y sus efectos en la población y la infraestructura.
+  relacionados:
+    - emergencia
+    - medio_ambiente
+
+prensa:
+  nombre: Prensa y medios
+  descripcion: Periodismo, medios de comunicación, libertad de prensa, cobertura mediática y rol de la prensa.
+  relacionados:
+    - politica
+
+consumo:
+  nombre: Consumo y precios
+  descripcion: Precios de bienes de consumo, inflación de alimentos, costos de vida y abastecimiento.
+  relacionados:
+    - economia
+
+comercio:
+  nombre: Comercio
+  descripcion: Política comercial, aranceles, acuerdos comerciales, exportaciones e importaciones.
+  relacionados:
+    - relaciones_internacionales
+
+lobby:
+  nombre: Lobby
+  descripcion: Reuniones de lobby, registro de lobby, cumplimiento de la Ley de Lobby.
+
+conflicto_intereses:
+  nombre: Conflicto de intereses
+  descripcion: Situaciones donde autoridades públicas tienen intereses privados que pueden influir en sus decisiones.
+  relacionados:
+    - lobby
+    - transparencia_publica
+    - economia
