@@ -229,12 +229,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `npm run generate-index`
 
-**Total de eventos:** 287
+**Total de eventos:** 298
 
 **Eventos por año:**
-- 2026: 265
-- 2025: 13
-- 2024: 1
+- 2026: 274
+- 2025: 14
+- 2024: 2
 - 2023: 1
 - 2022: 1
 - 2021: 1
@@ -243,32 +243,32 @@ Cuando descubras algo no documentado aqui:
 - 2015: 2
 
 **Temas más frecuentes (Top 10):**
-- Politica (95)
+- Politica (100)
 - Economia (47)
 - Cambios en el gabinete (46)
-- Emergencia y catástrofes (36)
-- Justicia (34)
+- Emergencia y catástrofes (38)
+- Justicia (35)
 - Administración pública (32)
-- Relaciones internacionales (28)
+- Relaciones internacionales (31)
 - Defensa y seguridad (26)
 - Finanzas publicas (24)
 - Proceso legislativo (21)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (83)
-- declaracion (44)
-- reaccion (32)
+- accion (85)
+- declaracion (48)
+- reaccion (33)
+- resultado (25)
 - anuncio (24)
-- resultado (24)
 - investigacion (21)
-- publicacion (14)
+- publicacion (17)
 - proyecto (10)
 - fallo_judicial (9)
 - entrevista (8)
 
 **Entidades registradas:**
-- Personas: 349
-- Organizaciones: 180
-- Cifras: 126
-- Fuentes: 1043
+- Personas: 361
+- Organizaciones: 186
+- Cifras: 132
+- Fuentes: 1070
 - Temas: 74

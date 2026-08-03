@@ -156,6 +156,15 @@ people:
     aliases:
       - Kast
       - JAK
+  niu_qingbao:
+    nombre: Niu Qingbao
+    cargo: Embajador de China en Chile
+    cargos:
+      - cargo: Embajador Extraordinario y Plenipotenciario de China en Chile
+        organizacion: embajada_china_chile
+        desde: 2021-02-22
+    organizacion: embajada_china_chile
+    notas: "Nacido en julio de 1965 en Huixian, provincia de Henan. Máster en literatura. Embajador de China en Chile desde 2021; previamente embajador en Jamaica (2015-2017) y cónsul general en Mumbai y Auckland. Se reunió con el presidente Kast en La Moneda el 31 de julio de 2026."
   lee_jae_myung:
     nombre: Lee Jae Myung
     cargo: Presidente de la República de Corea del Sur
@@ -1266,6 +1275,26 @@ people:
     nombre: Luz Reidel
     cargo: Abogada de Fundación Miles
     notas: "Abogada de Fundación Miles. Cuestionó el proyecto de audición de latidos fetales como violencia gineco-obstétrica."
+  margarita_pena:
+    nombre: Margarita Peña
+    cargo: Vocera de la Coordinadora Feminista 8M
+    notas: "Vocera de la Coordinadora Feminista 8M. Criticó el proyecto 'Escucha su corazón' como cruel durante la marcha del 31 de julio de 2026."
+  juan_atienza_hormazabal:
+    nombre: Juan Atienza Hormazábal
+    cargo: Exjefe del Departamento de Protección Contra Incendios Forestales de CONAF Valparaíso
+    notas: "Funcionario de CONAF señalado por la PDI en el megaincendio de Valparaíso (2024) por ordenar anotar alertas falsas en la bitácora oficial."
+  luis_correa_jimenez:
+    nombre: Luis Correa Jiménez
+    cargo: Comandante de Incidente de CONAF durante el megaincendio de Valparaíso 2024
+    notas: "Apuntado por la Fiscalía de Valparaíso junto a Juan Atienza como responsable de las decisiones operativas durante el megaincendio de febrero de 2024."
+  juan_ilarrazabal:
+    nombre: Juan Ilarrázabal
+    cargo: Exfuncionario de Cencor
+    notas: "Su testimonio fue clave para que la PDI concluyera que la bitácora de CONAF fue adulterada por orden de la jefatura del Departamento de Protección Contra Incendios Forestales durante el megaincendio de Valparaíso 2024."
+  marcela_vega:
+    nombre: Marcela Vega
+    cargo: Exjefa de la Unidad de Análisis y Predicción de CONAF
+    notas: "Ingeniera forestal que denunció acoso laboral tras negarse a manipular una simulación computacional del megaincendio de Valparaíso 2024 con la que se buscaba exculpar a Juan Atienza."
   luis_cordero:
     nombre: Luis Cordero
     cargo: Ministro de Seguridad Pública
@@ -2370,6 +2399,51 @@ people:
     cargo: Coordinadora de Feminismo del Instituto Igualdad
     organizacion: instituto_igualdad
     notas: "Autora de la columna de opinión en El Mostrador sobre el fin del Programa Mujeres Rurales (julio 2026)."
+  jose_joaquin_brunner:
+    nombre: José Joaquín Brunner
+    cargo: Académico y exministro secretario general de Gobierno
+    notas: "Sociólogo, académico y político chileno. Exministro secretario general de Gobierno de Eduardo Frei Ruiz-Tagle y exdirector de FLACSO. Autor de la columna 'La estrategia de Kast: lo que conocemos y lo que aún desconocemos' en El Líbero (diciembre 2025), que analiza la estrategia de ocultamiento valórico de José Antonio Kast."
+  rodrigo_paz:
+    nombre: Rodrigo Paz
+    cargo: Presidente de Bolivia
+    cargos:
+      - cargo: Presidente de Bolivia
+        organizacion: bolivia
+        desde: 2025-11-01
+    organizacion: bolivia
+    notas: "Presidente de Bolivia. Asistió a la investidura de José Antonio Kast en marzo de 2026 y ha manifestado su intención de avanzar en una nueva agenda comercial con Chile. Su gobierno enfrentó protestas y bloqueos de carreteras en 2026 promovidos por sindicatos campesinos, la COB y sectores afines a Evo Morales."
+  evo_morales:
+    nombre: Evo Morales
+    cargo: Expresidente de Bolivia (2006-2019)
+    cargos:
+      - cargo: Presidente de Bolivia
+        organizacion: bolivia
+        desde: 2006-01-22
+        hasta: 2019-11-10
+    organizacion: bolivia
+    notas: "Expresidente de Bolivia (2006-2019). Sectores afines a Morales impulsaron las protestas y bloqueos de carreteras contra el gobierno de Rodrigo Paz en 2026 que provocaron desabastecimiento en el país."
+  jaime_gazmuri:
+    nombre: Jaime Gazmuri
+    cargo: Embajador de Chile en Venezuela (retirado 2024)
+    notas: "Embajador de Chile en Venezuela. En abril de 2024 fue llamado a consultas por el presidente Gabriel Boric en medio de las tensiones bilaterales, y en julio de 2024 Nicolás Maduro ordenó su retiro junto al resto del cuerpo diplomático chileno tras las críticas del gobierno de Boric al proceso electoral venezolano."
+  felix_plasencia:
+    nombre: Félix Plasencia
+    cargo: Canciller de Venezuela
+    cargos:
+      - cargo: Canciller de Venezuela
+        organizacion: venezuela
+        desde: 2026-01-05
+    organizacion: venezuela
+    notas: "Canciller de Venezuela durante la presidencia encargada de Delcy Rodríguez. Difundió en redes sociales el anuncio conjunto del 30 de julio de 2026 sobre la reactivación de las relaciones consulares con Chile."
+  pavel_castillo:
+    nombre: Pavel Castillo
+    cargo: Gerente de Intelligence y economista conductual de CORPA
+    organizacion: corpa
+    notas: "Gerente de Intelligence y economista conductual de la consultora CORPA. Comentó el estudio de victimización del bimestre mayo-junio 2026 de la Región Metropolitana."
+  marcelo_pena:
+    nombre: Marcelo Peña
+    cargo: Académico de la Universidad Central
+    notas: "Académico de la Universidad Central. Explicó a The Clinic el significado de los umbrales de detección en test de drogas de pelo (500 ng/g vs 300 ng/g) en el contexto del caso del exsubsecretario de Hacienda Juan Pablo Rodríguez."
 organizations:
   criteria:
     nombre: Criteria
@@ -2710,6 +2784,11 @@ organizations:
     pais: Chile
     notas: Servicio público encargado de la prevención y combate de incendios
       forestales en Chile.
+  coordinadora_feminista_8m:
+    nombre: Coordinadora Feminista 8M
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Coordinadora feminista que convocó la marcha del 31 de julio de 2026 contra el proyecto 'Escucha su corazón' en distintos puntos del país."
   bolivia:
     nombre: Bolivia
     tipo: pais
@@ -2869,6 +2948,11 @@ organizations:
     tipo: mision_diplomatica
     pais: Chile
     notas: Representación diplomática de EE.UU. en Chile.
+  embajada_china_chile:
+    nombre: Embajada de China en Chile
+    tipo: mision_diplomatica
+    pais: Chile
+    notas: "Representación diplomática de la República Popular China en Chile. Embajador: Niu Qingbao desde 2021."
   ministerio_economia_argentina:
     nombre: Ministerio de Economia de Argentina
     tipo: institucion_publica
@@ -3230,6 +3314,26 @@ organizations:
     tipo: institucion
     pais: Chile
     notas: "Unidad académica de la UDD. Participó en el estudio sobre las alertas SAE en incendios de Valparaíso (2025)."
+  fach:
+    nombre: Fuerza Aérea de Chile
+    tipo: fuerza_armada
+    pais: Chile
+    notas: "Fuerza Aérea de Chile. Transportó el primer paquete de ayuda humanitaria chilena a Bolivia (21 de mayo de 2026) en un avión Hércules que aterrizó en La Paz."
+  cob:
+    nombre: Central Obrera Boliviana
+    tipo: organizacion_social
+    pais: Bolivia
+    notas: "Central sindical boliviana. Promovió junto a sindicatos campesinos y sectores afines a Evo Morales las protestas y bloqueos de carreteras contra el gobierno de Rodrigo Paz en 2026."
+  universidad_catolica:
+    nombre: Red UC Christus / Universidad Católica de Chile
+    tipo: institucion
+    pais: Chile
+    notas: "Red de salud de la Pontificia Universidad Católica. Su laboratorio realizó el examen de pelo del exsubsecretario de Hacienda Juan Pablo Rodríguez en julio de 2026, cuyo resultado fue negativo para el consumo de drogas; la muestra fue procesada en un laboratorio de Estados Unidos."
+  corpa:
+    nombre: CORPA
+    tipo: encuestadora
+    pais: Chile
+    notas: "Consultora de investigación de mercados y estudios. Realizó el estudio de victimización y percepción de seguridad de la Región Metropolitana correspondiente al bimestre mayo-junio de 2026. Pavel Castillo es su gerente de Intelligence y economista conductual."
 cifras:
   beneficio_iva_panales:
     nombre: Beneficio per cápita diario proyecto IVA pañales y medicamentos (PDG)
@@ -3653,3 +3757,27 @@ cifras:
     nombre: Votos en contra del proyecto de acuerdo para mantener el Programa Mujeres Rurales
     unidad_default: votos
     notas: "29 votos en contra, con rechazo casi exclusivo de las bancadas oficialistas."
+  fallecidos_crisis_bolivia_2026:
+    nombre: Fallecidos por la crisis de bloqueos en Bolivia 2026
+    unidad_default: personas
+    notas: "Al menos 16 muertos, 13 de ellos por falta de acceso oportuno a atención médica según EFE/BioBioChile (13 de junio de 2026)."
+  perdidas_economicas_bloqueos_bolivia:
+    nombre: Pérdidas económicas por bloqueos en Bolivia 2026
+    unidad_default: millones_de_dolares
+    notas: "2.500 millones de dólares estimados según EFE/BioBioChile (13 de junio de 2026)."
+  ingresos_irregulares_2026:
+    nombre: Ingresos irregulares detectados 1 enero a 19 julio 2026
+    unidad_default: personas
+    notas: "1.168 ingresos irregulares, una caída del 86% respecto de igual período de 2025 y del 95% frente a 2022, según fuentes de gobierno citadas por La Tercera (30 de julio de 2026)."
+  aumento_incautaciones_droga_2026:
+    nombre: Aumento de incautaciones de droga 2026 vs 2025
+    unidad_default: "%"
+    notas: "Un 61% más que en igual período de 2025 al 19 de julio de 2026, según fuentes de gobierno citadas por La Tercera. El balance del comité policial del 27 de julio reportó 60%."
+  eventos_violencia_macrozona_sur:
+    nombre: Eventos de violencia en la Macrozona Sur
+    unidad_default: casos
+    notas: "De 190 a 157 casos, una baja del 17% con foco en las provincias bajo estado de excepción, según fuentes de gobierno citadas por La Tercera (30 de julio de 2026)."
+  quema_maquinaria_macrozona_sur:
+    nombre: Reducción de quema de maquinaria en la Macrozona Sur
+    unidad_default: "%"
+    notas: "Reducción del 80% citada por el ministro Arrau el 28 de julio de 2026. Reportes preliminares señalan reducciones de entre 70% y 80% según provincia, sin desglose público oficial del 80%."

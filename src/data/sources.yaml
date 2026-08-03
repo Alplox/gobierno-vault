@@ -6245,6 +6245,55 @@ cooperativa-2026-07-30-minsal-cancer-ges:
   autor: Cooperativa.cl
   fecha: 2026-07-30
   url: https://www.cooperativa.cl/noticias/pais/salud/minsal-anuncio-ingreso-progresivo-de-todos-los-cancer-al-ges/2026-07-30/100630.html
+ciper-2026-07-28-megaincendio-valparaiso-pdi-conaf:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Megaincendio de Valparaíso: PDI concluyó que funcionario de Conaf ordenó anotar alertas falsas"
+  autor: Equipo CIPER
+  fecha: 2026-07-28
+  url: https://www.ciperchile.cl/2026/07/28/megaincendio-de-valparaiso-pdi-concluyo-que-funcionario-de-conaf-ordeno-anotar-alertas-falsas/
+cooperativa-2026-07-31-marcha-feminista:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Marcha feminista llegó hasta La Moneda en contra del proyecto 'Escucha su corazón'"
+  autor: Cooperativa.cl
+  fecha: 2026-07-31
+  url: https://www.cooperativa.cl/noticias/site/artic/20260731/pags-amp/20260731212455.html
+biobiochile-2026-08-01-marcha-feminista:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Marcha feminista llegó a La Moneda en rechazo al proyecto 'Escucha su corazón'"
+  autor: Antonio González
+  fecha: 2026-08-01
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/01/multitudinaria-marcha-feminista-llego-a-la-moneda-en-rechazo-al-proyecto-escucha-su-corazon.shtml
+interferencia-2026-08-01-marcha-feminista:
+  tipo: prensa
+  medio: Interferencia
+  titulo: "Marcha feminista colma el centro de Santiago en rechazo al proyecto 'Escucha su corazón'"
+  autor: Francisca Santander Faúndez
+  fecha: 2026-08-01
+  url: https://interferencia.cl/articulos/marcha-feminista-colma-el-centro-de-santiago-en-rechazo-al-proyecto-escucha-su-corazon
+biobiochile-2026-07-31-kast-china-niu-qingbao:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Presidente Kast se reúne con el embajador de China en Chile, Niu Qingbao, en La Moneda"
+  autor: Lindy Sandoval
+  fecha: 2026-07-31
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/07/31/presidente-kast-se-reune-con-el-embajador-de-china-en-chile-niu-qingbao-en-la-moneda.shtml
+embajadachina-2026-07-31-niu-reunion-kast:
+  tipo: comunicado_oficial
+  medio: Embajada de China en Chile
+  titulo: "El Embajador Niu Qingbao sostuvo una reunión con S.E. el Presidente Kast"
+  autor: Embajada de la República Popular China en Chile
+  fecha: 2026-07-31
+  url: https://cl.china-embassy.gov.cn/esp/sgxw/
+embajadachina-curriculum-niu-qingbao:
+  tipo: documento
+  medio: Embajada de China en Chile
+  titulo: "Currículum Vitae - Embajador Niu Qingbao"
+  autor: Embajada de la República Popular China en Chile
+  fecha: 2021-02-22
+  url: https://cl.china-embassy.gov.cn/esp/dsjl/
 biobiochile-2026-07-30-kast-corea-corazon:
   tipo: prensa
   medio: BioBioChile
@@ -7730,4 +7779,162 @@ reddit-2026-08-01-chile-mujeres-rurales:
   autor: r/chile
   fecha: 2026-08-01
   url: https://old.reddit.com/r/chile/comments/1vcbf2z/fin_del_programa_mujeres_rurales_el_gobierno_de/
+biobiochile-2026-06-13-ayuda-humanitaria-bolivia:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno chileno envía 6 toneladas de ayuda humanitaria a Bolivia"
+  autor: Christian Ovalle
+  fecha: 2026-06-13
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/13/gobierno-chileno-envia-6-toneladas-de-ayuda-humanitaria-a-bolivia.shtml
+  notas: "Con información de Agencia EFE. Primer envío de ayuda partió el 21 de mayo en avión de la FACh que aterrizó en La Paz. Crisis boliviana: bloqueos de 38 días contra el gobierno de Rodrigo Paz, al menos 16 muertos y pérdidas económicas estimadas en 2.500 millones de dólares."
+efe-2026-06-13-chile-ayuda-bolivia:
+  tipo: prensa
+  medio: EFE
+  titulo: "Chile hace un nuevo envío de ayuda humanitaria a Bolivia para enfrentar desabastecimiento"
+  autor: Agencia EFE
+  fecha: 2026-06-13
+  url: https://efe.com/mundo/2026-06-13/chile-ayuda-humanitaria-bolivia/
+infobae-2026-06-13-chile-ayuda-bolivia:
+  tipo: prensa
+  medio: Infobae
+  titulo: "Chile envió seis toneladas de ayuda humanitaria a Bolivia para enfrentar la escasez de productos básicos"
+  autor: Infobae
+  fecha: 2026-06-13
+  url: https://www.infobae.com/america/america-latina/2026/06/13/chile-envio-seis-toneladas-de-ayuda-humanitaria-a-bolivia-para-enfrentar-la-escasez-de-productos-basicos/
+24horas-2026-07-31-rodriguez-negativo-pelo:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "El exsubsecretario Rodríguez da negativo a examen de pelo: 'Espero poder volver al Gobierno'"
+  autor: 24 Horas
+  fecha: 2026-07-31
+  url: https://www.24horas.cl/actualidad/nacional/el-exsubsecretario-de-hacienda-juan-pablo-rodriguez-da-negativo-test-pelo-gobierno
+  notas: "Entrevista exclusiva. Examen de pelo realizado en el laboratorio de la Universidad Católica de Chile arrojó negativo para el consumo de drogas. Rodríguez afirmó haberse realizado además exámenes de orina y de pelo en distintos laboratorios del país."
+latercera-2026-08-02-rodriguez-adn-muestra:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Tras nuevo test de drogas negativo, exsubsecretario Rodríguez pide examen de ADN a muestra que dio positiva"
+  autor: La Tercera
+  fecha: 2026-08-02
+  url: https://www.latercera.com/politica/noticia/nuevo-examen-de-pelo-negativo-y-criticas-al-laboratorio-los-descargos-del-exsubsecretario-juan-pablo-rodriguez/
+  notas: "Rodríguez se sometió a nuevos exámenes en la Red UC Christus (muestra de pelo procesada en un laboratorio de Estados Unidos) y en el laboratorio Bionet (orina), ambos negativos. Exigió una prueba genética: 'Que un laboratorio que tenga estándares internacionales le haga un examen de ADN a ese pelo, porque yo no sé si es mi pelo'."
+radioagricultura-2024-04-14-kast-venezuela:
+  tipo: prensa
+  medio: Radio Agricultura
+  titulo: "José Antonio Kast: 'Yo habría roto relaciones con Venezuela hace bastante tiempo'"
+  autor: Radio Agricultura
+  fecha: 2024-04-14
+  url: https://www.radioagricultura.cl/noticias/politica/kast-yo-habria-roto-relaciones-con-ellos-hace-bastante-tiempo_20240414/
+  notas: "Declaraciones en Mesa Central de Canal 13 sobre el llamado a consultas del embajador de Chile en Venezuela, Jaime Gazmuri, y las tensiones bilaterales. Kast también se refirió a los vínculos de Bolivia con Irán y criticó al entonces canciller Alberto van Klaveren."
+latercera-2026-07-30-chile-venezuela-consulares:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Chile y Venezuela acuerdan reactivar relaciones consulares"
+  autor: José Navarrete
+  fecha: 2026-07-30
+  url: https://www.latercera.com/politica/noticia/chile-y-venezuela-acuerdan-reactivar-relaciones-consulares/
+  notas: "Declaración conjunta de ambos gobiernos. Kast agradeció el trabajo de la Cancillería y valoró la disposición de la presidenta encargada Delcy Rodríguez. Pérez Mackenna detalló que las conversaciones comenzaron el 11 de marzo y que buscan asistencia consular para los 700.000 venezolanos en Chile y los cerca de 25.000 chilenos en Venezuela. Las relaciones estaban congeladas desde julio de 2024, cuando Maduro retiró al embajador chileno Jaime Gazmuri tras las críticas de Boric al CNE."
+lanacion-2026-07-28-arrau-responde-vallejo:
+  tipo: prensa
+  medio: La Nación
+  titulo: "Arrau responde a Vallejo: 'La evidencia mata cualquier relato falso'"
+  autor: Patricia Schüller Gamboa
+  fecha: 2026-07-28
+  url: https://www.lanacion.cl/arrau-responde-a-vallejo-la-evidencia-mata-cualquier-relato-falso/
+  notas: "Según consignó T13, Arrau respondió a la exvocera Camila Vallejo tras su entrevista en el podcast Animales Políticos. Cifras citadas por el ministro: ingresos irregulares reducidos 80% por el decreto del día uno del gobierno de Kast, decomisos de drogas al 250% respecto del año pasado en provincias del norte, y quema de maquinaria en la Macrozona Sur reducida 80%."
+adnradio-2026-05-25-vallejo-plan-boric:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Camila Vallejo arremete contra el Ejecutivo: 'El Gobierno de Kast por fin dice cuál es su Plan de Seguridad, el Plan del Gobierno de Boric'"
+  autor: ADN Radio
+  fecha: 2026-05-25
+  url: https://www.adnradio.cl/2026/05/25/camila-vallejo-arremete-contra-el-ejecutivo-el-gobierno-de-kast-por-fin-dice-cual-es-su-plan-de-seguridad-el-plan-del-gobierno-de-boric/
+  notas: "Crítica de la exvocera de Boric tras el anuncio de Arrau de operar bajo la Política Nacional de Seguridad Pública heredada del gobierno anterior. Vallejo: 'El Gobierno de Kast por fin dice cuál es su Plan de Seguridad: el Plan del Gobierno de Boric. Parece chiste, pero es evidente que nunca tuvieron un plan propio'."
+biobiochile-2026-05-25-vallejo-plan-propio:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'Nunca tuvieron plan propio': Camila Vallejo arremete contra gobierno de Kast por anuncio en Seguridad"
+  autor: Antonio González
+  fecha: 2026-05-25
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/25/nunca-tuvieron-plan-propio-camila-vallejo-arremete-contra-gobierno-de-kast-por-anuncio-en-seguridad.shtml
+  notas: "Cubre la crítica de Vallejo en X y la defensa de Arrau: 'Lo primero es que exista una Política Nacional de Seguridad Pública. Esa está vigente, la promulgó el presidente Boric; dura seis años y nosotros creemos que esa política es suficiente, es amplia'."
+emol-2026-05-25-vallejo-critica-kast:
+  tipo: prensa
+  medio: Emol
+  titulo: "'Parece chiste': Vallejo acusa que Gobierno de Kast 'nunca tuvo un plan propio' en seguridad"
+  autor: Emol
+  fecha: 2026-05-25
+  url: https://www.emol.com/noticias/Nacional/2026/05/25/1200966/seguridad-vallejo-critica-kast.html
+  notas: "Validación adicional de la crítica de Vallejo al plan de seguridad del gobierno de Kast."
+adnradio-2026-05-26-arrau-plan-seguridad:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Ministro Arrau descarta falta de plan de seguridad: 'Tenemos claro lo que hay que hacer'"
+  autor: ADN Radio
+  fecha: 2026-05-26
+  url: https://www.adnradio.cl/2026/05/26/ministro-arrau-descarta-falta-de-plan-de-seguridad-tenemos-claro-lo-que-hay-que-hacer/
+  notas: "Arrau descartó la falta de plan y anunció que presentará la estrategia de seguridad ante el Senado, con suma urgencia para más de 20 proyectos de ley. Destacó repotenciar el Plan Cuadrante: 'Hace más de un año estaba trabajando en el grupo de seguridad del Partido Republicano'."
+radio-uchile-2026-05-26-arrau-estrategia:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "'Plan, por supuesto que hay': Arrau anuncia nueva estrategia de seguridad en medio de críticas por falta de plan del Gobierno"
+  autor: Radio U. de Chile
+  fecha: 2026-05-26
+  url: https://radio.uchile.cl/2026/05/26/plan-por-supuesto-que-hay-arrau-anuncia-nueva-estrategia-de-seguridad-en-medio-de-criticas-por-falta-de-plan-del-gobierno/
+  notas: "Validación adicional de la respuesta de Arrau del 26 de mayo: 'Plan, por supuesto que hay. El Presidente José Antonio Kast fue electo por su contundente plan y estrategia en cuanto al combate del delito'."
+adnradio-2026-06-25-arrau-responde-matthei:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Ministro Arrau responde a Matthei tras críticas: 'Le invito a informarse de buena manera'"
+  autor: ADN Radio
+  fecha: 2026-06-25
+  url: https://www.adnradio.cl/2026/06/25/ministro-arrau-responde-a-matthei-tras-criticas-le-invito-a-informarse-de-buena-manera/
+  notas: "Arrau respondió a las críticas de Evelyn Matthei sobre la falta de plan: 'El plan fue presentado al Congreso, está ahí disponible. Tiene 7 focos de gestión, más de 20 proyectos de ley priorizados y más de 40 iniciativas prácticas y operativas'. Abordó también el asesinato de un niño de 12 años en San Bernardo."
+emol-2026-06-25-arrau-responde-matthei:
+  tipo: prensa
+  medio: Emol
+  titulo: "'La invito a informarse de buena manera': Arrau responde a crítica de Matthei por gestión en seguridad"
+  autor: María Luisa Cisternas
+  fecha: 2026-06-25
+  url: https://www.emol.com/noticias/Nacional/2026/06/25/1203872/arrau-responde-matthei-seguridad.html
+  notas: "Respuesta de Arrau tras el Consejo Nacional de Seguridad en La Moneda. Matthei había dicho en Tú Día de Canal 13: 'acá prometieron a todo Chile que tenían el mejor plan contra la delincuencia. No tenían nada, ni siquiera ministros'. Arrau: 'No me voy a hacer cargo de críticas personales o destempladas cuando estamos implementando un plan operativo con resultados concretos'."
+theclinic-2026-07-31-rodriguez-umbral-ng:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Nuevo examen del exsubsecretario de Hacienda que dio negativo tiene un estándar menos exigente que el aplicado al resto de las autoridades del Gobierno"
+  autor: Martín Browne y Pablo Serey
+  fecha: 2026-07-31
+  url: https://www.theclinic.cl/2026/07/31/nuevo-examen-del-exsubsecretario-de-hacienda-que-dio-negativo-tiene-un-estandar-menos-exigente-que-el-que-se-le-aplico-a-las-autoridades-del-gobierno/
+  notas: "El examen de pelo de Rodríguez en la Red UC Christus usa un estándar de detección de 500 ng/g para anfetaminas y cocaína, frente al de 300 ng/g aplicado por Corthorn Health (designado por Senda). Según el doctor Marcelo Peña (U. Central), el umbral de 500 es menos estricto en un 66%. Fuentes de La Moneda indican que la sustancia que dio positivo fue cocaína."
+ellibero-2025-12-16-estrategia-kast-brunner:
+  tipo: prensa
+  medio: El Líbero
+  titulo: "La estrategia de Kast: lo que conocemos y lo que aún desconocemos"
+  autor: José Joaquín Brunner
+  fecha: 2025-12-16
+  url: https://ellibero.cl/columnas-de-opinion/la-estrategia-de-kast-lo-que-conocemos-y-lo-que-aun-desconocemos/
+  notas: "Columna de opinión de José Joaquín Brunner, exministro y exdirector de FLACSO. Analiza la 'división del trabajo' entre Kast y Kaiser, el ocultamiento táctico de la agenda valórica de Kast (2021 vs 2026), y los referentes globales del posliberalismo (Müller, Vermeule, Deneen), el modelo húngaro de Orbán y el 'autoritarismo eficaz' de Bukele. También republicada en Trópico Absoluto (16/12/2025)."
+adnradio-2026-07-20-corpa-victimizacion:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "¿Santiago se vuelve más hostil? Victimización se dispara y el transporte público se convierte en el nuevo foco del delito"
+  autor: ADN Radio
+  fecha: 2026-07-20
+  url: https://www.adnradio.cl/2026/07/20/santiago-se-vuelve-mas-hostil-victimizacion-se-dispara-y-el-transporte-publico-se-convierte-en-el-nuevo-foco-del-delito/
+  notas: "Estudio CORPA bimestre mayo-junio 2026: victimización sube de 18% a 23%, robos con violencia caen de 44% a 32%, percepción de inseguridad sube de 25% a 27%, delitos en transporte público suben de 21% a 29% (vía pública baja de 65% a 58%). Cita de Pavel Castillo, gerente de Intelligence de CORPA."
+publimetro-2026-07-22-corpa-victimizacion:
+  tipo: prensa
+  medio: Publimetro
+  titulo: "La paradoja de la seguridad en Santiago: Violencia en los robos cae a 32%, pero la victimización y la inseguridad vuelven a subir"
+  autor: Publimetro
+  fecha: 2026-07-22
+  url: https://www.publimetro.cl/noticias/2026/07/22/la-paradoja-de-la-seguridad-en-santiago-violencia-en-los-robos-cae-a-32-pero-la-victimizacion-y-la-inseguridad-vuelven-a-subir/
+  notas: "Validación adicional del estudio CORPA mayo-junio 2026."
+mediabanco-2026-07-22-corpa-inseguridad:
+  tipo: prensa
+  medio: Mediabanco
+  titulo: "La violencia en los robos caen de 44% a 32%, pero la sensación de inseguridad aumenta de 25% a 27% en Santiago"
+  autor: Mediabanco
+  fecha: 2026-07-22
+  url: https://www.mediabanco.com/la-violencia-en-los-robos-caen-de-44-a-32-pero-la-sensacion-de-inseguridad-aumenta-de-25-a-27-en-santiago/
+  notas: "Validación adicional del estudio CORPA mayo-junio 2026."
 
