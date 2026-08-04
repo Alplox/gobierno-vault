@@ -93,6 +93,10 @@ people:
         desde: 2022-03-11
         hasta: 2026-03-11
     organizacion: presidencia_chile
+  helmuth_frenz:
+    nombre: Helmut Frenz
+    cargo: Obispo de la Iglesia Evangélica Luterana en Chile (1969-1975)
+    notas: "Obispo luterano, figura clave en la creación del Comité Nacional de Ayuda a los Refugiados (CONAR, 24 septiembre 1973) y cofundador en octubre de 1973 del Comité de Cooperación para la Paz en Chile (Copachi) junto al obispo católico Fernando Ariztía. Expulsado de Chile en 1975 por su defensa de los perseguidos políticos. Recibió en 1979 la medalla Fridtjof Nansen del ACNUR."
   izkia_siches:
     nombre: Izkia Siches Pastén
     cargo: Exministra del Interior
@@ -156,6 +160,11 @@ people:
     aliases:
       - Kast
       - JAK
+  patricio_elgueta:
+    nombre: Patricio Elgueta
+    cargo: Presidente de la Federación de Trabajadores del Cobre (FTC)
+    organizacion: federacion_trabajadores_cobre
+    notas: "Dirigente sindical, presidente de la Federación de Trabajadores del Cobre. En diciembre de 2021 llamó a votar por Gabriel Boric en la segunda vuelta ante la 'amenaza real de que Chile pierda su principal fuente de ingresos', aludiendo a Codelco y a las interpretaciones sobre una eventual privatización planteada por José Antonio Kast."
   niu_qingbao:
     nombre: Niu Qingbao
     cargo: Embajador de China en Chile
@@ -267,8 +276,38 @@ people:
     cargo: Ex Subsecretaria de Salud Pública
     organizacion: ministerio_salud
     notas: Exsubsecretaria de Salud Pública del segundo gobierno de Piñera; atribuyó el problema de gestión hospitalaria a la escasa autonomía de los directores y a procesos poco modernizados.
+  francisco_toledo:
+    nombre: Francisca Toledo
+    cargo: Ministra del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    notas: "Ministra del Medio Ambiente del gobierno de José Antonio Kast. A una semana de la instalación del gobierno, su cartera suspendió el proceso de sitios prioritarios del SBAP y solicitó a Contraloría el retiro de 43 decretos supremos ingresados por la administración anterior (marzo 2026)."
+  jose_ignacio_vial:
+    nombre: José Ignacio Vial
+    cargo: Subsecretario del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    notas: "Subsecretario del Medio Ambiente (RN) del gobierno de José Antonio Kast. En marzo de 2026 firmó el oficio a Contraloría solicitando el retiro de 43 decretos supremos de la cartera enviados durante el gobierno de Gabriel Boric."
   nicolas_grau:
     nombre: Nicolas Grau Veloso
+  david_bravo:
+    nombre: David Bravo
+    cargo: Director del Centro UC de Encuestas y Estudios Longitudinales
+    organizacion: centro_uc_encuestas
+    notas: "Economista laboral, director del Centro UC de Encuestas y Estudios Longitudinales. Sobre la entrada en vigencia de las 42 horas (abril 2026) advirtió que implica un incremento de 4,8% en los costos laborales y un golpe al empleo sin que haya aumentado la productividad."
+  juan_bravo:
+    nombre: Juan Bravo
+    cargo: Director del Observatorio del Contexto Económico de la UDP (OCEC-UDP)
+    organizacion: ocec_udp
+    notas: "Economista, director del OCEC-UDP. Sobre las 42 horas (abril 2026) estimó un aumento del costo salarial por hora de 4,8% en los segmentos sin opciones de reorganización productiva, afectando a ocupaciones de atención a público, vigilancia, cuidadores y choferes."
+  jose_pakomio:
+    nombre: José Pakomio
+    cargo: Presidente de la Cámara Nacional de Comercio (CNC)
+    organizacion: cnc
+    notas: "Presidente de la CNC. Ante la entrada en vigencia de las 42 horas (abril 2026) alertó por el aumento del costo laboral directo de las empresas y recordó que el comercio está compuesto en un 96% por pymes."
+  paola_assael:
+    nombre: Paola Assael
+    cargo: Directora de Black & White
+    organizacion: black_white
+    notas: "Directora de la encuestadora Black & White. Comentó los resultados del sondeo de abril 2026 sobre el Plan de Reconstrucción Nacional: mayoría de acuerdo con eliminar el IVA a viviendas nuevas (74%), subsidio a la contratación (71%) y eximición de contribuciones a adultos mayores (68%)."
   paulina_nunez:
     nombre: Paulina Nunez
     cargo: Presidenta del Senado (RN)
@@ -978,6 +1017,56 @@ people:
     nombre: Fernando Ortiz
     notas: Panelista del programa de streaming La Cofradía. Cumpleañero en el video
       de la polémica.
+  marcelo_anabalon:
+    nombre: Marcelo Anabalón
+    cargo: Asesor del diputado Pier Karlezi y exfuncionario de la Municipalidad de La Reina
+    notas: "Integrante del programa de streaming La Cofradía. Antes del escándalo figuraba como empleado de la Municipalidad de La Reina (lo desvincularon tras los hechos) y asesor del diputado Pier Karlezi (PNL), percibiendo $5.954.241 mensuales. Investigación de El Mostrador (agosto 2026) sobre el financiamiento del ecosistema libertario."
+  milton_izamith:
+    nombre: Milton Izamith
+    cargo: Fundador de la Casa Escuela de Legua Emergencia
+    notas: "Profesor de la población Legua Emergencia, fundador de la Casa Escuela con la que colabora la Fundación Novum de Ítalo Omegna. El Mostrador cuestionó sus credenciales académicas: la PUC afirmó que nunca cursó Ingeniería Comercial ni que exista la carrera de Contador Auditor en esa casa de estudios (agosto 2026)."
+  pier_karlezi:
+    nombre: Pier Karlezi
+    cargo: Diputado (PNL)
+    cargos:
+      - cargo: Diputado
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: "Diputado del Partido Nacional Libertario. Marcelo Anabalón, integrante de La Cofradía, figuraba como su asesor antes del escándalo (El Mostrador, agosto 2026)."
+  claudio_crespo:
+    nombre: Claudio Crespo
+    cargo: Exteniente coronel de Carabineros
+    organizacion: carabineros
+    notas: "Exteniente coronel de Fuerzas Especiales de Carabineros. Absuelto en enero de 2026 por el Cuarto Tribunal Oral en lo Penal de Santiago por las lesiones graves a Gustavo Gatica durante el estallido social de 2019 (aplicación de la Ley Nain Retamal y legítima defensa privilegiada). El 3 de agosto de 2026 la Corte de Apelaciones rechazó anular el juicio, dejando firme la absolución."
+  gustavo_gatica:
+    nombre: Gustavo Gatica
+    cargo: Diputado
+    notas: "Diputado que perdió la visión durante una manifestación en noviembre de 2019, en el contexto del estallido social, tras recibir perdigones disparados por el exteniente coronel de Carabineros Claudio Crespo. La Corte de Apelaciones confirmó en agosto de 2026 la absolución de Crespo."
+  ximena_chong:
+    nombre: Ximena Chong
+    cargo: Fiscal de la Fiscalía Centro Norte
+    notas: "Fiscal de la Fiscalía Centro Norte que lideró la investigación del caso Gatica. Tras el fallo de la Corte de Apelaciones que confirmó la absolución de Claudio Crespo (agosto 2026), señaló que se analizará la presentación de un recurso de queja."
+  pedro_orthusteguy:
+    nombre: Pedro Orthusteguy
+    cargo: Abogado defensor de Claudio Crespo
+    notas: "Abogado defensor del exteniente coronel de Carabineros Claudio Crespo. Celebró en X el fallo de la Corte de Apelaciones que rechazó todos los recursos de nulidad en el caso Gatica (agosto 2026), calificándolo de 'triunfo absoluto, unánime, limpio e inapelable' tras seis años de persecución penal."
+  beatriz_contreras:
+    nombre: Beatriz Contreras
+    cargo: Jefa regional metropolitana del INDH
+    organizacion: indh
+    notas: "Jefa regional metropolitana del Instituto Nacional de Derechos Humanos. Tras el fallo que confirmó la absolución de Claudio Crespo (agosto 2026), manifestó la 'profunda preocupación' del organismo por el impacto en otras causas de graves violaciones de derechos humanos del estallido social y advirtió que constituye 'una nueva señal de impunidad'."
+  jacqueline_metayer:
+    nombre: Jacqueline Metayer
+    cargo: Exfuncionaria del Ministerio de la Mujer
+    notas: "Cientista política y exfuncionaria del Ministerio de la Mujer ligada a la exsubsecretaria Daniela Castro. Se le habría ascendido de grado 9 a 12 minutos antes de la salida de Castro el 16 de junio de 2026 (Resolución RA 121583-134-2026). Dejó de ser parte de la cartera el 3 de agosto de 2026 en el marco de la 'poda' de la ministra Judith Marín."
+  paula_figueroa:
+    nombre: Paula Figueroa
+    cargo: Exjefa de la División Jurídica del Ministerio de la Mujer
+    notas: "Exjefa de la División Jurídica del Ministerio de la Mujer, exfuncionaria de la alcaldía de Maipú en la administración de Cathy Barriga. Obtuvo un aumento de $1.881.823 por funciones críticas (haberes totales de $8.878.400, superiores a los de la ministra). Dejó de ser parte de la cartera el 3 de agosto de 2026."
+  michel_cartes:
+    nombre: Michel Cartes
+    cargo: Exasesor de la ministra de la Mujer Judith Marín
+    notas: "Arquitecto y asesor cercano a la ministra de la Mujer Judith Marín, parte del movimiento socialcristiano. Cuestionado por la falta de título de arquitecto, renunció voluntariamente el 29 de junio de 2026 con efecto al 1 de agosto (remuneración superior a $3 millones). The Clinic accedió a su carta de renuncia."
   fabiola_campillai:
     nombre: Fabiola Campillai
     cargo: Senadora (Ind.)
@@ -1199,6 +1288,34 @@ people:
         organizacion: ministerio_hacienda
         desde: 2026-03-11
     notas: Ingeniero Agrónomo de la PUC, único biministro del gabinete Kast. Ex vicepresidente de la CPC y ex presidente de la CChC de La Serena. Dirige la empresa familiar Ecomac (ex Constructora Carel). Agenda anti-permisología. En 2016 CIPER vinculó a la Inmobiliaria Ecomac, bajo su control, con pagos de $25 millones en facturas falsas que habrían financiado la campaña de Laurence Golborne.
+  carlos_smith:
+    nombre: Carlos Smith
+    cargo: Docente investigador del CIES-UDD
+    organizacion: cies_udd
+    notas: "Docente investigador del Centro de Investigación en Empresa y Sociedad de la Universidad del Desarrollo. Tras la ENE abril-junio 2026 alertó que el empleo formal 'cayó en más de 2%' mientras crecía el trabajo por cuenta propia e informal: 'Chile no está creando empleo, está cambiando empleo bueno por empleo precario'."
+  guillermo_riquelme:
+    nombre: Guillermo Riquelme
+    cargo: Académico de postgrado de la Universidad Autónoma
+    organizacion: universidad_autonoma
+    notas: "Académico de postgrado de la Universidad Autónoma. Tras la ENE abril-junio 2026 alertó por la intensificación de la informalidad, especialmente entre las mujeres (cerca del 30%), y anticipó que julio y agosto podrían mostrar tasas aún mayores por el impacto rezagado de la emergencia climática."
+  julio_anativia:
+    nombre: Julio Anativia
+    cargo: Delegado presidencial regional del Bío Bío
+    notas: "Delegado presidencial regional del Bío Bío. Ante el desempleo regional de 10,4% (julio 2026) evitó la autocrítica y aseguró que es parte de una realidad compleja con la que se recibió el país."
+  mikel_capetillo:
+    nombre: Mikel Capetillo
+    cargo: Presidente de la CUT provincial del Bío Bío
+    organizacion: cut
+    notas: "Presidente de la Central Unitaria de Trabajadores provincial del Bío Bío. Ante el desempleo regional de 10,4% (julio 2026) exigió que desde la institucionalidad se muestren soluciones concretas a la crisis laboral."
+  ivan_montes:
+    nombre: Iván Montes
+    cargo: Vocero de la Mesa de Defensa del Empleo del Bío Bío
+    notas: "Vocero de la Mesa de Defensa del Empleo del Bío Bío. Calificó de 'alarmante' el panorama regional tras el desempleo de 10,4% (julio 2026)."
+  gustavo_diaz:
+    nombre: Gustavo Díaz
+    cargo: Economista del Instituto Libertad
+    organizacion: instituto_libertad
+    notas: "Economista del Instituto Libertad. Tras la ENE abril-junio 2026 advirtió que el empleo asalariado privado cayó 1,6% anual mientras el trabajo por cuenta propia crece 8,6%, señalando que 'las empresas siguen postergando nuevas contrataciones' y que hay una precarización de las oportunidades laborales."
   manuel_viera:
     nombre: Manuel Viera
     cargo: Presidente de la Cámara Minera de Chile
@@ -1271,6 +1388,11 @@ people:
         organizacion: partido_republicano
         desde: 2026-03-11
     notas: Independiente.
+  cristobal_martinez:
+    nombre: Cristóbal Martínez
+    cargo: Diputado UDI
+    organizacion: udi
+    notas: "Diputado UDI. Autor del proyecto de ley ingresado a la Cámara de Diputados el 14 de enero de 2026 que prohíbe el acceso a redes sociales a menores de 16 años, con sistema de verificación de identidad de edad y multas de 500 a 2.000 UTM a las plataformas incumplidoras. Avanza por carriles separados del plan Entornos Digitales Seguros del gobierno (abril 2026)."
   luz_reidel:
     nombre: Luz Reidel
     cargo: Abogada de Fundación Miles
@@ -1577,7 +1699,21 @@ people:
         organizacion: presidencia_chile
         desde: 1994-03-11
         hasta: 2000-03-11
-    notas: Expresidente (1994-2006), viajó con Kast a Perú como invitado especial.
+    notas: Expresidente (1994-2006), viajó con Kast a Perú como invitado especial. Confirmó su asistencia al cambio de mando del 11 de marzo de 2026.
+  ricardo_lagos:
+    nombre: Ricardo Lagos
+    cargo: Expresidente de Chile
+    cargos:
+      - cargo: Presidente de la República de Chile
+        organizacion: presidencia_chile
+        desde: 2000-03-11
+        hasta: 2006-03-11
+    notas: "Expresidente de Chile (2000-2006) y militante PPD, retirado de la vida pública desde enero de 2024. Se excusó de asistir al cambio de mando de José Antonio Kast el 11 de marzo de 2026."
+  ricardo_lagos_weber:
+    nombre: Ricardo Lagos Weber
+    cargo: Senador PPD
+    organizacion: senado
+    notas: "Senador PPD, hijo del expresidente Ricardo Lagos. Se despidió del Congreso el 11 de marzo de 2026 tras 16 años como parlamentario."
   paula_estevez:
     nombre: Paula Estévez
     cargo: Subsecretaria de Relaciones Económicas Internacionales
@@ -1785,6 +1921,60 @@ people:
   monica_rincon:
     nombre: Mónica Rincón
     cargo: Periodista y conductora de CNN Chile
+  baldemar_higueras:
+    nombre: Baldemar Higueras Vivar
+    cargo: Seremi de Transportes y Telecomunicaciones del Maule
+    cargos:
+      - cargo: Seremi de Transportes y Telecomunicaciones del Maule
+        organizacion: delegacion_presidencial_maule
+        desde: 2026-04-01
+    notas: "Ex secretario ejecutivo de la CNTC y considerado la 'mano derecha' del dirigente camionero Sergio Pérez. Tuvo participación protagónica en las negociaciones del paro de camioneros de 2022. También fue seremi de Transportes del Maule entre 2006 y 2010."
+  sergio_perez:
+    nombre: Sergio Pérez
+    cargo: Presidente de la Confederación Nacional del Transporte de Carga (CNTC)
+    cargos:
+      - cargo: Presidente de la Confederación Nacional del Transporte de Carga
+        organizacion: cnct
+    notas: "Dirigente del gremio de camioneros. Baldemar Higueras, designado seremi de Transportes del Maule, fue considerado su 'mano derecha' y secretario ejecutivo de la CNTC."
+  ximena_rincon:
+    nombre: Ximena Rincón
+    cargo: Ministra de Energía
+    cargos:
+      - cargo: Ministra de Energía
+        organizacion: ministerio_energia
+        desde: 2026-03-11
+    notas: "Declaró en abril de 2026 que el subsidio eléctrico 'termina ahora' y no estaba contemplada su renovación, dejando expuestos a 2 millones de hogares. El Ministerio rectificó el 19 de abril."
+  flor_weisse:
+    nombre: Flor Weisse
+    cargo: Diputada (UDI) y jefa de bancada
+    cargos:
+      - cargo: Diputada (UDI) y jefa de bancada
+        organizacion: udi
+        desde: 2026-03-11
+    notas: "Reaccionó al 'tirón de orejas' de Kast en la CCS (31 julio 2026): 'nos parece bien que el Presidente Kast coincida con lo que hemos planteado respecto de cuáles son las urgencias de los chilenos'."
+  claudia_mora:
+    nombre: Claudia Mora
+    cargo: Diputada (RN)
+    cargos:
+      - cargo: Diputada (RN)
+        organizacion: renovacion_nacional
+        desde: 2026-03-11
+    notas: "Sobre el reproche de Kast a los partidos (31 julio 2026): 'el Presidente tiene derecho a priorizar los temas que considera más relevantes', pero los partidos también pueden hacer contribuciones a la agenda."
+  guillermo_ramirez:
+    nombre: Guillermo Ramírez
+    cargo: Timonel de la UDI
+    cargos:
+      - cargo: Timonel de la UDI
+        organizacion: udi
+    notas: "Presionó al Gobierno para que acogiera propuestas en temas valóricos y pidió 'reconsiderar' la postura de abocarse solo al gobierno de emergencia (julio 2026)."
+  ignacio_achurra:
+    nombre: Ignacio Achurra
+    cargo: Diputado (FA)
+    cargos:
+      - cargo: Diputado (FA)
+        organizacion: frente_amplio
+        desde: 2026-03-11
+    notas: "Junto a Gonzalo Winter (FA) cuestionó la estrategia del documento filtrado 'Desafío 90', acusando que buscaba saltarse la deliberación democrática (29 mayo 2026)."
   sebastian_terraza:
     nombre: Sebastián Terraza
     cargo: Exvicepresidente del Partido Nacional Libertario en Los Ríos
@@ -1879,6 +2069,38 @@ people:
         organizacion: municipalidad_maipu
         desde: 2024-12-06
     organizacion: municipalidad_maipu
+  karina_delfino:
+    nombre: Karina Delfino
+    cargo: Alcaldesa de Quinta Normal (PS)
+    notas: "Alcaldesa de Quinta Normal del Partido Socialista. Líder del municipalismo progresista en el debate por la compensación del Fondo Común Municipal (agosto 2026), crítica del mecanismo del gobierno y firmante de la declaración de más de 100 alcaldes que pidió veto presidencial."
+  claudio_castro:
+    nombre: Claudio Castro
+    cargo: Alcalde de Renca
+    notas: "Alcalde de Renca. Firmante de la declaración de 104 alcaldes de oposición contra el mecanismo de compensación del FCM (agosto 2026). Anticipó un posible 'quiebre' al interior de la Asociación Chilena de Municipalidades (AChM) por el tema."
+  camila_merino:
+    nombre: Camila Merino
+    cargo: Alcaldesa de Vitacura
+    notas: "Alcaldesa de Vitacura. Firmó la carta de los 162 alcaldes oficialistas que respaldaron la fórmula de compensación del gobierno (agosto 2026). Según Tomás Vodanovic, le habría señalado que su municipio podría adaptarse a una reducción de $10 mil millones si se aplicara gradualmente, de 10% a 10% por año."
+  felipe_fleischmann:
+    nombre: Felipe Fleischmann Ruiz
+    cargo: Representante legal de DC Terranova SPA
+    notas: "Representante legal del proyecto Data Center Alto Jahuel (DC Terranova SPA), parte de la familia que hasta el año pasado fue dueña de Fleischmann S.A., empresa constructora de data centers vendida a la española ACS (julio-agosto 2026)."
+  jose_yuraszceck:
+    nombre: José Yuraszceck
+    cargo: Empresario, controlador de Inversiones Santa Cecilia
+    notas: "Empresario controlador de Inversiones Santa Cecilia, matriz de negocios vinculada al proyecto Data Center Alto Jahuel a través de su gerente general Álvaro Pipino, representante legal del proyecto junto a Felipe Fleischmann (agosto 2026)."
+  alvaro_pipino:
+    nombre: Álvaro Pipino
+    cargo: Gerente general de Inversiones Santa Cecilia
+    notas: "Gerente general de Inversiones Santa Cecilia, matriz de negocios de José Yuraszceck. Figura como representante legal del proyecto Data Center Alto Jahuel (DC Terranova SPA) junto a Felipe Fleischmann (julio 2026)."
+  catalina_san_martin:
+    nombre: Catalina San Martín
+    cargo: Alcaldesa de Las Condes
+    notas: "Alcaldesa de Las Condes. En el debate por la compensación a los municipios por la exención de contribuciones (agosto 2026) defendió la autonomía financiera de su comuna: 'El Estado no financia a Las Condes'."
+  gustavo_alessandri:
+    nombre: Gustavo Alessandri
+    cargo: Alcalde de Zapallar y expresidente de la AChM
+    notas: "Alcalde de Zapallar y expresidente de la Asociación Chilena de Municipalidades (AChM). En agosto 2026 buscó evitar que la disputa por la compensación del Fondo Común Municipal fracture a la AChM."
   maurice_poirrier:
     nombre: Maurice Poirrier
     cargo: Director de la Secretaría de Gobierno Digital
@@ -1911,6 +2133,28 @@ people:
       Partido Republicano en Arica y Parinacota. Asumió como seremi el 26 de marzo
       de 2026 y el Minsal le solicitó la renuncia el 30 de julio de 2026 tras
       filtrarse un mensaje que condicionaba cupos laborales a la militancia republicana.
+  edgardo_diaz_navarrete:
+    nombre: Edgardo Díaz Navarrete
+    cargo: Director del Servicio de Salud Metropolitano Sur
+    notas: "Director del Servicio de Salud Metropolitano Sur. La Subsecretaría de Redes Asistenciales le solicitó la renuncia el 3 de agosto de 2026 'atendiendo a razones de pérdida de confianza'."
+  veronica_yannez_gonzalez:
+    nombre: Verónica Yáñez González
+    cargo: Directora del Servicio de Salud de Magallanes
+    notas: "Directora del Servicio de Salud de Magallanes. La Subsecretaría de Redes Asistenciales le solicitó la renuncia el 3 de agosto de 2026 por 'razones de pérdida de confianza'."
+  haroldo_faundez_romero:
+    nombre: Haroldo Faúndez Romero
+    cargo: Subrogante del Servicio de Salud Viña del Mar-Quillota
+    notas: "Saliente del Servicio de Salud Viña del Mar-Quillota, removido el 3 de agosto de 2026 tras modificarse el orden de subrogancia del servicio para 'asegurar la continuidad de la gestión'."
+  leoncio_oporto_duhart:
+    nombre: Leoncio Oporto Duhart
+    cargo: Exsubcomisario de la PDI
+    organizacion: pdi
+    notas: "Exsubcomisario de la PDI, exdotación de la BIRO Oriente. Condenado en agosto de 2026 por el Juzgado de Garantía de Arica (procedimiento abreviado) a penas que suman casi cinco años por asociación criminal, cohecho pasivo impropio, revelación de secreto y tenencia ilegal de armas, por vender datos del sistema BRAIN a la banda 'Los Kussy Boys', dedicada al tráfico de ketamina."
+  claudio_solans_marchant:
+    nombre: Claudio Solans Marchant
+    cargo: Excomisario de la PDI en retiro
+    organizacion: pdi
+    notas: "Excomisario de la PDI en retiro, exdotación de la BIA (luego BIRO). Condenado en agosto de 2026 por el Juzgado de Garantía de Arica a poco más de cuatro años por asociación criminal, cohecho activo y tenencia ilegal de arma de fuego, por actuar como intermediario ('Tío Rafa') vendiendo datos policiales a la banda 'Los Kussy Boys'."
   luis_malla:
     nombre: Luis Malla
     cargo: Diputado por Arica (Partido Liberal)
@@ -2243,7 +2487,11 @@ people:
         organizacion: departamento_estado_eeuu
         desde: 2025-01-20
     organizacion: departamento_estado_eeuu
-    notas: "Político estadounidense del Partido Republicano. Secretario de Estado en la administración de Donald Trump. En febrero de 2026 firmó la declaración que impuso restricciones de visa a tres funcionarios del gobierno de Gabriel Boric por el proyecto de cable submarino China-Chile Express."
+    notas: "Político estadounidense del Partido Republicano. Secretario de Estado en la administración de Donald Trump. En febrero de 2026 firmó la declaración que impuso restricciones de visa a tres funcionarios del gobierno de Gabriel Boric por el proyecto de cable submarino China-Chile Express. En febrero de 2026 se confirmó que encabezará la delegación de EE.UU. en el cambio de mando del 11 de marzo."
+  donald_trump:
+    nombre: Donald Trump
+    cargo: Presidente de Estados Unidos
+    notas: "Presidente de Estados Unidos en su segundo mandato (desde enero de 2025). Su administración buscó relanzar los lazos bilaterales con Chile tras la asunción de José Antonio Kast, con el envío de Marco Rubio al cambio de mando del 11 de marzo de 2026."
   andres_chadwick:
     nombre: Andrés Chadwick
     cargo: Exministro del Interior de Sebastián Piñera
@@ -2293,6 +2541,38 @@ people:
     nombre: Juan Gabriel Valdés
     cargo: Excanciller
     notas: "Político de la Concertación. Exministro de Relaciones Exteriores (1999-2000) y embajador de Chile ante la ONU. Criticó el tono del embajador de EE.UU. Brandon Judd."
+  jose_miguel_insulza:
+    nombre: José Miguel Insulza
+    cargo: Excanciller y exsecretario general de la OEA
+    notas: "Político socialista. Exministro de Relaciones Exteriores (1994-1999), exministro del Interior y secretario general de la OEA (2005-2015). Sobre el primer sondeo de la ONU que dejó a Bachelet en cuarto lugar, dijo en Radio Duna que 'lo preocupante son los cinco desestímulos' y que quedaba espacio para revertir el resultado."
+  jose_antonio_viera_gallo:
+    nombre: José Antonio Viera-Gallo
+    cargo: Exministro y exembajador
+    notas: "Abogado y político del PPD. Exministro secretario general de la Presidencia (1990-1994) y embajador de Chile ante la ONU. Tras el primer sondeo de la ONU señaló que la candidatura de Bachelet tenía un escollo en el gobierno de Donald Trump."
+  heraldo_munoz:
+    nombre: Heraldo Muñoz
+    cargo: Excanciller
+    notas: "Político y académico del PPD. Exministro de Relaciones Exteriores (2014-2018) y embajador de Chile ante la ONU. Tras el primer sondeo de la ONU explicó que 'no hay nada resuelto y vienen varias votaciones informales más' y que Bachelet analizaría los resultados con Brasil y México."
+  alejandro_irarrazaval:
+    nombre: Alejandro Irarrázaval
+    cargo: Jefe del grupo de asesores del Presidente
+    notas: "Abogado y analista político de derecha. El hombre más influyente del equipo de gobierno de José Antonio Kast y jefe de sus asesores en el Segundo Piso de La Moneda. Participó junto a Kast y al ministro Jorge Quiroz en la definición final del paquete económico (abril 2026)."
+  irina_karamanos:
+    nombre: Irina Karamanos
+    cargo: Expareja del presidente Gabriel Boric y exdirectora de la Fundación Cultural
+    notas: "Socióloga y cientista política, expareja de Gabriel Boric y exdirectora de la Fundación Cultural. Su lenguaje se volvió símbolo del esfuerzo identitario del Frente Amplio; se llegó a ironizar con que había inventado un 'idioma propio', el 'karamanés' (La Tercera, marzo 2026)."
+  alfredo_joignant:
+    nombre: Alfredo Joignant
+    cargo: Sociólogo y académico de la UDP
+    notas: "Sociólogo y politólogo, doctor en Ciencias Políticas de la Universidad de París y profesor de la UDP. Autor junto a Mauro Basaure del libro 'La gran desconexión' sobre la crisis del lenguaje de la izquierda: 'la lengua de la izquierda puede terminar convertida en una lengua muerta, como el latín' (La Tercera, marzo 2026)."
+  eugenio_tironi:
+    nombre: Eugenio Tironi
+    cargo: Sociólogo y consultor
+    notas: "Sociólogo, académico y consultor. Analizó cómo Irina Karamanos se convirtió en símbolo del esfuerzo identitario del Frente Amplio y por qué ese discurso no conectaba con el común de la gente (La Tercera, marzo 2026)."
+  javiera_toro:
+    nombre: Javiera Toro
+    cargo: Ministra de Desarrollo Social y Familia
+    notas: "Abogada y militante de Comunes. Ministra de Desarrollo Social y Familia del gobierno de Gabriel Boric. Defendió al Frente Amplio del 'lenguaje caricaturesco' que instaló la derecha sobre su agenda (La Tercera, marzo 2026)."
   bettina_horst:
     nombre: Bettina Horst
     cargo: Economista de Libertad y Desarrollo
@@ -2493,12 +2773,282 @@ people:
     nombre: Juan Antonio Figueroa
     cargo: Director ejecutivo de ChilePay
     notas: "Director ejecutivo de ChilePay, organismo que reúne a los medios de pago en Chile. Comentó el desarrollo de un sistema de pagos inmediatos estilo Pix chileno (agosto 2026)."
+  sergio_bobadilla:
+    nombre: Sergio Bobadilla
+    cargo: Diputado (UDI)
+    cargos:
+      - cargo: Diputado
+        organizacion: udi
+        desde: 2026-03-11
+    notas: "Diputado por el distrito 20 (Provincia de Concepción). Encabezó el ranking de gastos 2025 en arriendo de vehículos de los diputados del Biobío con $20.446.757, según reportaje de Aquí Biobío/El Mostrador (julio 2026). Justificó arrendar dos vehículos: uno para el distrito y otro para viajar de Santiago a Valparaíso."
+  francesca_munoz:
+    nombre: Francesca Muñoz
+    cargo: Diputada (PSC)
+    cargos:
+      - cargo: Diputada
+        organizacion: partido_social_cristiano
+        desde: 2026-03-11
+    notas: "Diputada por el distrito 20 o 21 (Región del Biobío). Gastó $11.689.442 en arriendo de vehículos en 2025 (4° del ranking del Biobío) y $915.241 en taxis, según reportaje de Aquí Biobío/El Mostrador (julio 2026)."
+  leonidas_romero:
+    nombre: Leonidas Romero
+    cargo: Diputado (PNL)
+    cargos:
+      - cargo: Diputado
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: "Diputado por el distrito 20 o 21 (Región del Biobío). Gastó $8.378.429 en arriendo de vehículos en 2025, según reportaje de Aquí Biobío/El Mostrador (julio 2026)."
+  felix_gonzalez:
+    nombre: Félix González
+    cargo: Diputado (PEV)
+    cargos:
+      - cargo: Diputado
+        organizacion: partido_ecologista_verde
+        desde: 2026-03-11
+    notas: "Diputado por el distrito 20 (Provincia de Concepción), del Partido Ecologista Verde. Gastó $5.903.504 en arriendo de vehículos en 2025 (no arrendó en febrero) y $390.607 en mantención de auto particular, según reportaje de Aquí Biobío/El Mostrador (julio 2026)."
+  joanna_perez:
+    nombre: Joanna Pérez
+    cargo: Diputada (Demócratas)
+    cargos:
+      - cargo: Diputada
+        organizacion: partido_democratas
+        desde: 2026-03-11
+    notas: "Diputada por el distrito 21 (Región del Biobío). No registró arriendos de vehículos con fondos públicos en 2025, pero pidió $2.439.760 para mantención de su auto particular, el mayor monto de ese ítem entre los diputados del Biobío. Explicó que no usa arriendos y que en 2025 sufrió la pérdida total de un vehículo de trabajo (Aquí Biobío/El Mostrador, julio 2026)."
+  eric_aedo:
+    nombre: Eric Aedo
+    cargo: Diputado (DC)
+    cargos:
+      - cargo: Diputado
+        organizacion: partido_democratacristiano
+        desde: 2026-03-11
+    notas: "Diputado por el distrito 20 (Provincia de Concepción). No registró arriendos de vehículos con fondos públicos en 2025, según reportaje de Aquí Biobío/El Mostrador (julio 2026)."
+  maria_candelaria_acevedo:
+    nombre: María Candelaria Acevedo
+    cargo: Diputada (PC)
+    cargos:
+      - cargo: Diputada
+        organizacion: partido_comunista
+        desde: 2026-03-11
+    notas: "Diputada por el distrito 20 o 21 (Región del Biobío). No registró arriendos de vehículos con fondos públicos en 2025, según reportaje de Aquí Biobío/El Mostrador (julio 2026)."
+  clara_sagardia:
+    nombre: Clara Sagardía
+    cargo: Diputada (FA)
+    cargos:
+      - cargo: Diputada
+        organizacion: frente_amplio
+        desde: 2026-03-11
+    notas: "Diputada por el distrito 20 o 21 (Región del Biobío). No registró arriendos de vehículos en 2025, pero solicitó $811.104 para mantención de auto particular y $1.254.209 en peajes y tag, según reportaje de Aquí Biobío/El Mostrador (julio 2026)."
+  karen_medina:
+    nombre: Karen Medina
+    cargo: Diputada (PDG)
+    cargos:
+      - cargo: Diputada
+        organizacion: pdg
+        desde: 2026-03-11
+    notas: "Diputada por el distrito 20 o 21 (Región del Biobío). No registró arriendos de vehículos, pero rindió $1.965.000 en taxis, el mayor monto de ese ítem entre los diputados del Biobío (Aquí Biobío/El Mostrador, julio 2026)."
+  jorge_guzman:
+    nombre: Jorge Guzmán
+    cargo: Diputado (Evópoli)
+    cargos:
+      - cargo: Diputado
+        organizacion: evopoli
+        desde: 2026-03-11
+    notas: "Diputado de Evópoli. Calificó de 'paradójico que el Partido Republicano, que es el corazón del Gobierno, sea el primero en poner obstáculos' a la agenda del Ejecutivo, emplazando a Kast a 'dejar de escuchar tanto al corazón' (julio 2026)."
+  tomas_hirsch:
+    nombre: Tomás Hirsch
+    cargo: Exdiputado y activista humanista
+    notas: "Exdiputado humanista y activista. Autor del proyecto de ley que busca prohibir y sancionar la organización de carreras de perros en Chile (tramitado en la Cámara de Diputados, votación del 3 de agosto de 2026)."
+  mayra_cabezas:
+    nombre: Mayra Cabezas
+    cargo: Directora de Incidencia de la Fundación Derecho y Defensa Animal
+    organizacion: fundacion_derecho_defensa_animal
+    notas: "Directora de Incidencia de la Fundación Derecho y Defensa Animal. Ante la votación sobre carreras de perros y canódromos (julio 2026) señaló que 'regular canódromos sin resolver las apuestas ilegales, el dopaje y el maltrato documentado no es ordenar una actividad, es blanquearla' y llamó a que Chile se sume a la región y las prohíba."
+  diego_rojas:
+    nombre: Diego Rojas
+    cargo: Abogado
+    notas: "Abogado citado por El Desconcierto en el análisis del decreto que modifica el Reglamento de Seguridad Minera (julio 2026). Cuestionó el traslado del análisis de riesgos desde la Administración a los particulares y el desacople de la RCA respecto de la autorización minera de Sernageomin."
+  felipe_sepulveda:
+    nombre: Felipe Sepúlveda
+    cargo: Fiscal jefe de Alta Complejidad (Metropolitana Oriente)
+    notas: "Fiscal jefe de Alta Complejidad de la Fiscalía Metropolitana Oriente. Argumentó en el juicio abreviado del Caso Factop (julio 2026) que varias personas aportaron fondos a Factop y que Álvaro Jalaff tuvo participación relevante para que los engaños se produjeran."
+  sergio_gahona:
+    nombre: Sergio Gahona
+    cargo: Senador UDI
+    organizacion: senado
+    notas: "Senador UDI. En el marco de la votación de la Ley de Reconstrucción Nacional (agosto 2026), habría terminado votando a favor del informe de la Comisión Mixta, pese a haber condicionado su voto."
+  eduardo_cretton:
+    nombre: Eduardo Cretton
+    cargo: Diputado UDI
+    organizacion: camara_diputados
+    notas: "Diputado UDI. Junto al subjefe de bancada Sergio Bobadilla anunció (agosto 2026) el reingreso en septiembre del proyecto que establece el pago de la dieta de expresidentes desde los 65 años, en reacción al reposteo del expresidente Gabriel Boric."
+  andres_longton:
+    nombre: Andrés Longton
+    cargo: Senador RN
+    organizacion: senado
+    notas: "Senador de Renovación Nacional. Ante la propuesta del gobierno de crear un quinto estado de excepción con despliegue de FF.AA. (agosto 2026), pidió conocer primero en qué se diferenciaría esta nueva herramienta del actual estado de emergencia."
+  luis_fernando_sanchez:
+    nombre: Luis Fernando Sánchez
+    cargo: Diputado Partido Republicano
+    organizacion: partido_republicano
+    notas: "Diputado del Partido Republicano. Valoró el avance del proyecto que faculta a militares a realizar controles de identidad en estados de excepción (junio 2026), señalando que permite un uso más eficiente del recurso humano."
+  jaime_mulet:
+    nombre: Jaime Mulet
+    cargo: Diputado y presidente de la Comisión de Constitución de la Cámara (FRVS)
+    organizacion: frente_regionalista_verde_social
+    notas: "Diputado de la Federación Regionalista Verde Social (FRVS) y presidente de la Comisión de Constitución de la Cámara. Aprobó en general el proyecto de controles de identidad de militares (junio 2026) pero advirtió sobre un eventual uso malicioso en un golpe de Estado, planteando la hipótesis de que un presidente use las FF.AA. para detener opositores."
+  ximena_ossandon:
+    nombre: Ximena Ossandón
+    cargo: Diputada RN
+    organizacion: renovacion_nacional
+    notas: "Diputada RN. En febrero de 2026 advirtió que 'las lealtades se construyen con gestos' ante la baja representación partidaria en la nómina de subsecretarios de José Antonio Kast. Junto al jefe de bancada Diego Schalper solicitó al Gobierno (agosto 2026) poner urgencia al proyecto que permite el apoyo de las Fuerzas Armadas a las policías, presentado el 6 de julio de 2026."
+  henry_leal:
+    nombre: Henry Leal
+    cargo: Diputado UDI
+    organizacion: udi
+    notas: "Diputado UDI. En febrero de 2026 defendió el derecho de José Antonio Kast a armar su gabinete de subsecretarios sin condiciones partidarias, ante el debate por la baja representación de Chile Vamos."
+  stephan_schubert:
+    nombre: Stephan Schubert
+    cargo: Diputado y presidente de la Comisión de Relaciones Exteriores de la Cámara
+    organizacion: camara_diputados
+    notas: "Diputado y presidente de la Comisión de Relaciones Exteriores de la Cámara de Diputados. Valoró el cambio en la relación bilateral con Venezuela tras la reactivación consular (agosto 2026)."
+  gilberto_aranda:
+    nombre: Gilberto Aranda
+    cargo: Analista internacional de la Universidad de Chile
+    notas: "Analista internacional de la Universidad de Chile. Sobre la reactivación consular con Venezuela (agosto 2026) destacó que recuperar los servicios permitirá resolver problemas de documentos de venezolanos y cooperar contra el crimen organizado."
+  luis_felipe_vergara:
+    nombre: Luis Felipe Vergara
+    cargo: Analista internacional de la Universidad Andrés Bello
+    notas: "Analista internacional de la Universidad Andrés Bello. Sobre la reactivación consular con Venezuela (agosto 2026) señaló que el acercamiento debería consolidarse en el corto y mediano plazo."
+  nicolas_valenzuela:
+    nombre: Nicolás Valenzuela
+    cargo: Jefe de diseño de la Secretaría de Comunicaciones (Secom)
+    organizacion: secom
+    notas: "Jefe de diseño de la Secom del gobierno de José Antonio Kast. En un chat de WhatsApp filtrado admitió que la gráfica presentada el 11 de marzo de 2026 era 'horrible' y no un logo nuevo, sino 'una acción rápida para instaurar rápido el slogan', aclarando que el logo original (de 2020) se mantiene con nuevo slogan."
+  hernan_nunez:
+    nombre: Hernán Núñez
+    cargo: Director general de Asuntos Consulares
+    notas: "Director general de Asuntos Consulares de la Cancillería. Encabezó la avanzada que viajó a Caracas a inicios de agosto de 2026 para habilitar los servicios consulares entre Chile y Venezuela."
+  claudio_soto:
+    nombre: Claudio Soto Solís
+    cargo: Concejal de Lago Verde
+    notas: "Concejal de Lago Verde (Aysén), de 43 años. Falleció en un incendio en el hospedaje Casona El Bosque, en Villa Amengual, donde se alojaba con la delegación municipal que participaría en el Festival de la Lana (1 agosto 2026)."
+  claudia_valdes:
+    nombre: Claudia Valdés
+    cargo: Alcaldesa de Lago Verde
+    notas: "Alcaldesa de Lago Verde (Aysén). Tras el incendio en que falleció el concejal Claudio Soto (agosto 2026) expresó sus condolencias y calificó lo sucedido como una tragedia que enluta a la comunidad."
+  luz_maria_vicuna:
+    nombre: Luz María Vicuña
+    cargo: Delegada presidencial regional de Aysén
+    notas: "Delegada presidencial regional de Aysén. Confirmó que la Fiscalía instruyó diligencias a la SIP y al Labocar de Coyhaique tras el incendio en Villa Amengual que cobró la vida del concejal Claudio Soto (agosto 2026)."
+  daniel_diaz:
+    nombre: Daniel Díaz Olguín
+    cargo: Director de Codelco (cupo FTC)
+    organizacion: codelco
+    notas: "Dirigente del Sindicato Minero de Chuquicamata y consejero nacional de la Federación de Trabajadores del Cobre. El 28 de mayo de 2026 fue designado por el presidente José Antonio Kast como director de Codelco en representación de los trabajadores (2026-2030), elegido de la quina de la FTC. La investigación de Contrapoder Chile (mayo 2026) denunció que posee empresas ligadas a la minería (NEDX SpA, Global Commodity Brokers SpA) y nexos con empresarios chinos en Calama, lo que él desmintió."
+  hector_roco:
+    nombre: Héctor Roco Aguilar
+    cargo: Presidente de la Federación de Trabajadores del Cobre
+    organizacion: federacion_trabajadores_cobre
+    notas: "Presidente de la Federación de Trabajadores del Cobre. La investigación de Contrapoder Chile (mayo 2026) señaló que habría impulsado activamente la nominación de Daniel Díaz Olguín al cupo laboral del directorio de Codelco."
+  juan_carlos_olguin:
+    nombre: Juan Carlos Olguín
+    cargo: Expresidente de la Federación de Trabajadores del Cobre
+    organizacion: federacion_trabajadores_cobre
+    notas: "Expresidente de la FTC. Mencionado en la investigación de Contrapoder Chile sobre la designación de Daniel Díaz al directorio de Codelco (mayo 2026); ejerció su derecho a réplica señalando que su relación con Díaz fue institucional y que la sociedad que compartieron fue un emprendimiento familiar de helados que nunca operó."
+  osvaldo_urrutia:
+    nombre: Osvaldo Urrutia
+    cargo: Subsecretario de Pesca y Acuicultura
+    notas: "Subsecretario de Pesca y Acuicultura (SUBPESCA). A inicios de agosto de 2026 manifestó que el gobierno está abierto a evaluar el levantamiento de la veda y una eventual caza selectiva de lobos marinos ante los conflictos con la pesca artesanal del sur, lo que generó rechazo ambientalista. El 3 de agosto respondió a la petición de los pescadores ante la Comisión de Pesca señalando que cualquier cambio requerirá respaldo técnico y científico."
+  dionisio_ulloa:
+    nombre: Dionisio Ulloa
+    cargo: Abogado defensor
+    notas: "Abogado defensor del excarabinero de la Subcomisaría de Paillaco absuelto en agosto de 2026 en el segundo juicio por violación. Tras la absolución por deficiencia probatoria, anunció que presentará recursos administrativos para buscar el reintegro del exfuncionario a Carabineros."
+  jorge_bustos:
+    nombre: Jorge Bustos
+    cargo: Presidente del Consejo Regional para la Pesca Artesanal (Corepa)
+    organizacion: corepa
+    notas: "Presidente del Consejo Regional para la Pesca Artesanal (Corepa). Expuso ante la Comisión de Pesca de la Cámara de Diputados en agosto de 2026 pidiendo levantar la veda de caza del lobo marino por los daños a las faenas de pesca artesanal."
+  jose_verdugo:
+    nombre: José Verdugo
+    cargo: Representante de pescadores artesanales de Puerto Montt
+    notas: "Pescador artesanal de Puerto Montt. Ante la Comisión de Pesca de la Cámara en agosto de 2026 denunció el daño económico que los lobos marinos causan a las capturas de merluza, jurel y a los equipos de pesca."
+  carlos_gatica:
+    nombre: Carlos Gatica
+    cargo: Alcalde de Coyhaique
+    notas: "Alcalde de Coyhaique (Aysén). Presentó en agosto de 2026 la 'aldea de emergencia' municipal con capacidad para 200 personas ante la ola de frío y nevadas, financiada por el GORE de Aysén y el municipio."
+  lorena_castillo:
+    nombre: Lorena Castillo
+    cargo: Directora nacional subrogante del IND
+    notas: "Directora nacional subrogante del Instituto Nacional de Deportes. La ministra del Deporte Natalia Duco habría solicitado su destitución, según reportó ADN Radio (agosto 2026), en el marco de las tensiones por el concierto de BTS en el Estadio Nacional."
+  jorge_silva:
+    nombre: Jorge Silva
+    cargo: Jefe subrogante del Departamento de Alto Rendimiento del IND
+    notas: "Jefe subrogante del Departamento de Alto Rendimiento del IND. El Mindep defendió su asignación por su trayectoria en gestión deportiva, en el contexto del conflicto entre la ministra Natalia Duco y los funcionarios del IND (agosto 2026)."
+  andres_otero:
+    nombre: Andrés Otero
+    cargo: Subsecretario del Deporte
+    notas: "Subsecretario del Deporte. Junto a la ministra Natalia Duco fue señalado por la Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID) como responsable de no responder a las solicitudes de reunión de los trabajadores del IND (julio-agosto 2026)."
+  sebastian_edwards:
+    nombre: Sebastián Edwards
+    cargo: Economista de la UCLA
+    notas: "Economista de la Universidad de California en Los Ángeles. En el seminario de Moneda Patria Investment (julio 2026) dijo que Codelco necesita una 'cirugía' mayor, en el marco del debate sobre capitales privados en la estatal."
+  felipe_morande:
+    nombre: Felipe Morandé
+    cargo: Presidente del Consejo Directivo del Sistema de Empresas SEP
+    notas: "Presidente del Consejo Directivo del Sistema de Empresas Públicas (SEP). Descartó en agosto de 2026 una privatización inmediata de las empresas del sistema, aunque no descartó la entrada de privados en un plazo mayor si hay estabilidad financiera."
+  marcos_barraza:
+    nombre: Marcos Barraza
+    cargo: Diputado Partido Comunista
+    organizacion: partido_comunista
+    notas: "Diputado del Partido Comunista. Participó junto a Jaime Araya y Consuelo Veloso en el streaming 'Un Día Menos' donde se originó la polémica por los dichos sobre el Servel (julio 2026)."
+  dario_quiroga:
+    nombre: Darío Quiroga
+    cargo: Exasesor de Jeannette Jara y conductor del streaming 'Un Día Menos'
+    notas: "Exasesor de la exministra del Trabajo Jeannette Jara. Conduce el streaming 'Un Día Menos', espacio donde los diputados Jaime Araya y Consuelo Veloso cuestionaron la credibilidad del Servel (julio 2026)."
+  alejandro_riquelme:
+    nombre: Alejandro Riquelme
+    cargo: Diputado Partido Republicano
+    organizacion: partido_republicano
+    notas: "Diputado del Partido Republicano. Tras los dichos de Araya y Veloso sobre el Servel (julio 2026) calificó como 'impresionante la desfachatez' de los parlamentarios y defendió la institucionalidad electoral."
+  felipe_ross:
+    nombre: Felipe Ross
+    cargo: Diputado Partido Republicano
+    organizacion: partido_republicano
+    notas: "Diputado del Partido Republicano. Cuestionó especialmente a la diputada Consuelo Veloso por los dichos sobre el Servel (julio 2026), señalando que 'está cuestionando la votación más contundente de la historia de nuestra democracia'."
 organizations:
   criteria:
     nombre: Criteria
     tipo: encuestadora
     notas: Encuestadora chilena, realiza sondeos de opinion publica y aprobacion
       presidencial.
+  black_white:
+    nombre: Black & White
+    tipo: encuestadora
+    notas: "Encuestadora chilena. Su sondeo semanal de abril 2026 midió el apoyo al Plan de Reconstrucción Nacional de José Antonio Kast: 52% de acuerdo en general, con 74% a favor de eliminar el IVA a viviendas nuevas y 71% del subsidio a la contratación."
+  centro_uc_encuestas:
+    nombre: Centro UC de Encuestas y Estudios Longitudinales
+    tipo: centro_estudios
+    pais: Chile
+    notas: "Centro de investigación de la Pontificia Universidad Católica de Chile dirigido por David Bravo. Sus académicos alertaron sobre el impacto en costos y empleo de la segunda etapa de la Ley de 40 horas (abril 2026)."
+  ocec_udp:
+    nombre: Observatorio del Contexto Económico de la Universidad Diego Portales (OCEC-UDP)
+    tipo: centro_estudios
+    pais: Chile
+    notas: "Observatorio económico de la Universidad Diego Portales, dirigido por Juan Bravo. Analizó el impacto de las 42 horas en los costos laborales (abril 2026)."
+  cies_udd:
+    nombre: Centro de Investigación en Empresa y Sociedad de la Universidad del Desarrollo (CIES-UDD)
+    tipo: centro_estudios
+    pais: Chile
+    notas: "Centro de investigación de la Universidad del Desarrollo. Su investigador Carlos Smith alertó tras la ENE abril-junio 2026 que Chile 'no está creando empleo, está cambiando empleo bueno por empleo precario'."
+  universidad_autonoma:
+    nombre: Universidad Autónoma de Chile
+    tipo: universidad
+    pais: Chile
+    notas: "Universidad chilena. Su académico Guillermo Riquelme advirtió tras la ENE abril-junio 2026 sobre la intensificación de la informalidad, especialmente entre las mujeres, y un posible deterioro mayor del mercado laboral en julio-agosto."
+  cut:
+    nombre: Central Unitaria de Trabajadores (CUT)
+    tipo: sindicato
+    pais: Chile
+    notas: "Principal central sindical de Chile. Su dirigente provincial del Bío Bío, Mikel Capetillo, exigió soluciones concretas ante el desempleo regional de 10,4% (julio 2026)."
   cadem:
     nombre: Cadem
     tipo: encuestadora
@@ -2559,6 +3109,11 @@ organizations:
     nombre: Ministerio del Interior y Seguridad Publica
     tipo: ministerio
     pais: Chile
+  subsecretaria_prevencion_delito:
+    nombre: Subsecretaría de Prevención del Delito
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Dependiente del Ministerio del Interior. En agosto de 2026 tenía en estudio parte de la propuesta del ministro de Seguridad Martín Arrau para crear un quinto estado de excepción constitucional."
   ministerio_obras_publicas:
     nombre: Ministerio de Obras Publicas y Transporte
     tipo: ministerio
@@ -2744,6 +3299,11 @@ organizations:
     nombre: Fiscalía de Alta Complejidad Centro Norte
     tipo: fiscalia
     pais: Chile
+  fiscalia_centro_norte:
+    nombre: Fiscalía Metropolitana Centro Norte
+    tipo: fiscalia
+    pais: Chile
+    notas: Fiscalía que lideró la investigación del caso Gustavo Gatica, a cargo de la fiscal Ximena Chong. Recurrió de nulidad contra la absolución de Claudio Crespo, recurso rechazado por la Corte de Apelaciones de Santiago en agosto de 2026.
   carabineros:
     nombre: Carabineros de Chile
     tipo: policia
@@ -2821,6 +3381,11 @@ organizations:
     pais: Chile
     notas: Partido fundado por José Antonio Kast. Ganó la segunda vuelta
       presidencial de diciembre 2025.
+  chile_vamos:
+    nombre: Chile Vamos
+    tipo: partido_politico
+    pais: Chile
+    notas: "Coalición de centroderecha integrada por la UDI, Renovación Nacional y Evópoli. En febrero de 2026 manifestó su desazón por la baja representación partidaria en la nómina de subsecretarios de José Antonio Kast."
   partido_social_cristiano:
     nombre: Partido Social Cristiano
     tipo: partido_politico
@@ -2932,6 +3497,46 @@ organizations:
     tipo: empresa_estatal
     pais: Chile
     notas: Empresa estatal minera de cobre. Propuesta de privatización por Republicanos generó controversia.
+  google:
+    nombre: Google
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Empresa tecnológica estadounidense. En agosto de 2026 ingresó una nueva consulta de pertinencia al SEA por el Data Center Cerrillos (US$200 millones), que en su versión anterior fue revocado por el Tribunal Ambiental por su consumo de agua para enfriamiento; la nueva versión no usará agua."
+  grenergy:
+    nombre: Grenergy
+    tipo: empresa
+    pais: España
+    notas: "Empresa española de energías renovables. A través de su plataforma GR Data proyecta data centers en Alto Jahuel (US$20 millones, GR Huiña SPA), Polpaico y Antofagasta, sumando 1.000 MW de capacidad, según el Diario Financiero (mayo 2026)."
+  federacion_trabajadores_cobre:
+    nombre: Federación de Trabajadores del Cobre (FTC)
+    tipo: sindicato
+    pais: Chile
+    notas: "Agrupación de sindicatos de la minería del cobre, liderada en 2021 por Patricio Elgueta. En la segunda vuelta presidencial de 2021 llamó a votar por Gabriel Boric ante la amenaza de una eventual privatización de Codelco."
+  fesuc:
+    nombre: Federación de Supervisores del Cobre (FESUC)
+    tipo: sindicato
+    pais: Chile
+    notas: "Sindicato de supervisores de la minería del cobre. En julio de 2026 manifestó su 'más absoluto rechazo' a cualquier iniciativa de privatizar total o parcialmente Codelco, tras la propuesta del presidente del Partido Republicano, Arturo Squella: 'Codelco no es un juguete del gobierno de turno, ni del Congreso Nacional'."
+  sindicatos_codelco_norte:
+    nombre: Sindicatos de Codelco Norte
+    tipo: sindicato
+    pais: Chile
+    notas: "Sindicatos de la división Codelco Norte (Chuquicamata, Radomiro Tomic, Ministro Hales). En diciembre de 2021 publicaron una misiva declarando a José Antonio Kast 'persona no grata' en Calama durante la campaña de segunda vuelta."
+  conar:
+    nombre: Comité Nacional de Ayuda a los Refugiados (CONAR)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Primer comité de ayuda a víctimas de la dictadura cívico-militar. Comenzó a funcionar el 24 de septiembre de 1973, impulsado por las iglesias protestantes y evangélicas y presidido por el obispo luterano Helmut Frenz. Operó en Avenida Ricardo Lyon 565, Providencia (donde funcionaba Diaconía). Autorización inicial de solo tres meses. Reubicó aproximadamente 5.000 refugiados en el extranjero. Su continuador fue FASIC (abril 1975)."
+  fasic:
+    nombre: Fundación de Ayuda Social de las Iglesias Cristianas (FASIC)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organismo ecuménico de defensa de los derechos humanos, continuador directo del CONAR. Inició funciones en abril de 1975, asumiendo programas de apoyo a prisioneros políticos, familiares y víctimas de tortura. Su archivo documental (CONAR 1973-1974 y FASIC 1975-1990, unos 420 metros lineales) fue declarado Monumento Histórico mediante el Decreto Nº 509 de 2017 y forma parte de los archivos reconocidos por la UNESCO en el programa Memoria del Mundo."
+  diaconia:
+    nombre: Diaconía
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización de desarrollo y servicio social de las iglesias protestantes. En sus dependencias de Avenida Ricardo Lyon 565 (Providencia) comenzó a funcionar el 24 de septiembre de 1973 el Comité Nacional de Ayuda a los Refugiados (CONAR)."
   senado:
     nombre: Senado de Chile
     tipo: institucion_publica
@@ -3256,6 +3861,11 @@ organizations:
     tipo: partido_politico
     pais: Chile
     notas: "Partido político de izquierda. Integra la oposición al gobierno de Kast."
+  frente_regionalista_verde_social:
+    nombre: Federación Regionalista Verde Social (FRVS)
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político de centroizquierda con vocación regionalista. Su diputado Jaime Mulet preside la Comisión de Constitución de la Cámara de Diputados."
   instituto_nacional_estadisticas:
     nombre: Instituto Nacional de Estadísticas (INE)
     tipo: servicio_publico
@@ -3398,6 +4008,16 @@ organizations:
     tipo: gremio
     pais: Chile
     notas: "Gremio empresarial. En su 107° aniversario (31 julio 2026), el presidente Kast llamó a los partidos oficialistas a concentrarse en la agenda del Gobierno. Su presidenta es María Teresa Vial."
+  cnc:
+    nombre: Cámara Nacional de Comercio, Servicios y Turismo (CNC)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio del comercio, servicios y turismo. En abril de 2026 alertó sobre la complejidad operativa y el aumento de costos laborales por la entrada en vigencia de la jornada de 42 horas."
+  cepal:
+    nombre: Comisión Económica para América Latina y el Caribe (CEPAL)
+    tipo: organismo_internacional
+    pais: Chile
+    notas: "Organismo regional de Naciones Unidas. En abril de 2026 recortó la proyección de crecimiento de Chile para 2026 de 2,2% a 2% por el escenario internacional complejo."
   consejo_fiscal_autonomo:
     nombre: Consejo Fiscal Autónomo (CFA)
     tipo: organismo_publico
@@ -3413,6 +4033,86 @@ organizations:
     tipo: municipalidad
     pais: Chile
     notas: "Comuna de la Región Metropolitana. Su alcalde, Mauro Tamayo, denunció que los homicidios de 2026 ya igualan la cifra de todo 2025 (31 julio 2026)."
+  cnct:
+    nombre: Confederación Nacional del Transporte de Carga de Chile (CNTC)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio de transportistas de carga liderado por Sergio Pérez. Su ex secretario ejecutivo, Baldemar Higueras, fue designado seremi de Transportes del Maule (abril 2026)."
+  ministerio_energia:
+    nombre: Ministerio de Energía
+    tipo: ministerio
+    pais: Chile
+    notas: "Cartera liderada por Ximena Rincón. En abril de 2026 se vio envuelto en la polémica por el supuesto fin del subsidio eléctrico, rectificada el 19 de abril."
+  delegacion_presidencial_maule:
+    nombre: Delegación Presidencial Regional del Maule
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Confirmó la designación de Baldemar Higueras como seremi de Transportes y Telecomunicaciones del Maule (1 abril 2026)."
+  subdere:
+    nombre: Subsecretaría de Desarrollo Regional y Administrativo (SUBDERE)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Dependiente del Ministerio del Interior. Retiró de la Contraloría el reglamento de la Ley Cholito (orden N°0014/2026) para una revisión integral (marzo 2026)."
+  enap:
+    nombre: Empresa Nacional del Petróleo (ENAP)
+    tipo: empresa_estatal
+    pais: Chile
+    notas: "Empresa estatal chilena de petróleo. Publica el informe semanal de precios de combustibles (bencinas, diésel, kerosene y GLP vehicular), precisando que no fija ni regula los precios finales, que determinan las distribuidoras en un mercado abierto y competitivo."
+  sernageomin:
+    nombre: Servicio Nacional de Geología y Minería (Sernageomin)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público dependiente del Ministerio de Minería. Un decreto de 2026 modificó el Reglamento de Seguridad Minera reemplazando 21 autorizaciones previas por declaraciones juradas y cambiando su rol de aprobador a fiscalizador posterior."
+  partido_ecologista_verde:
+    nombre: Partido Ecologista Verde
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político ecologista. El diputado Félix González, del distrito 20 (Concepción), militó en esta colectividad."
+  partido_democratas:
+    nombre: Partido Demócratas
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político de centro, surgido de la fusión de Ciudadanos y Demócratas. La diputada Joanna Pérez (distrito 21) es una de sus parlamentarias."
+  fundacion_derecho_defensa_animal:
+    nombre: Fundación Derecho y Defensa Animal
+    tipo: organizacion_social
+    pais: Chile
+    notas: "ONG de protección animal. Ante la votación sobre carreras de perros y canódromos (julio-agosto 2026) llamó a aprobar la prohibición y rechazar la legalización de los canódromos, habilitando el sitio #No más carreras."
+  instituto_nacional_deportes:
+    nombre: Instituto Nacional de Deportes (IND)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo público encargado del deporte. En agosto de 2026 la Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID) se declaró en 'alerta institucional' tras las tensiones con la ministra del Deporte Natalia Duco."
+  anfuchid:
+    nombre: Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID)
+    tipo: sindicato
+    pais: Chile
+    notas: "Asociación de funcionarios del deporte. En agosto de 2026 acusó a la ministra Natalia Duco de presentar ante el presidente Kast una propuesta para modificar la institucionalidad del IND sin diálogo y se declaró en 'estado de alerta institucional'."
+  corepa:
+    nombre: Consejo Regional para la Pesca Artesanal (Corepa)
+    tipo: gremio
+    pais: Chile
+    notas: "Consejo Regional para la Pesca Artesanal, gremio del sector. Su presidente, Jorge Bustos, expuso en agosto de 2026 ante la Comisión de Pesca de la Cámara de Diputados pidiendo levantar la veda de caza del lobo marino por los daños a las faenas."
+  subpesca:
+    nombre: Subsecretaría de Pesca y Acuicultura (SUBPESCA)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo dependiente del Ministerio de Economía que administra la actividad pesquera. En agosto de 2026 evaluó alternativas frente a los conflictos entre la pesca artesanal y los lobos marinos, generando debate por una eventual cuota de caza."
+  ministerio_del_deporte:
+    nombre: Ministerio del Deporte (Mindep)
+    tipo: ministerio
+    pais: Chile
+    notas: "Cartera liderada por la ministra Natalia Duco. En agosto de 2026 desmintió que la ministra haya presentado al presidente un proyecto de reestructuración del IND y confirmó que las modificaciones se trabajarán en una mesa técnica."
+  municipalidad_coyhaique:
+    nombre: Municipalidad de Coyhaique
+    tipo: municipalidad
+    pais: Chile
+    notas: "Comuna capital de la Región de Aysén. En agosto de 2026 instaló una 'aldea de emergencia' municipal con capacidad para 200 personas ante la ola de frío y nevadas."
+  gore_aysen:
+    nombre: Gobierno Regional de Aysén
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Gobierno Regional de Aysén. Cofinanció junto al municipio la 'aldea de emergencia' de Coyhaique (agosto 2026)."
 cifras:
   beneficio_iva_panales:
     nombre: Beneficio per cápita diario proyecto IVA pañales y medicamentos (PDG)
@@ -3900,3 +4600,235 @@ cifras:
     nombre: Impactos balísticos en edificio consistorial de Coquimbo
     unidad_default: impactos
     notas: "Al menos tres proyectiles impactaron en los ventanales del sexto piso del edificio consistorial (madrugada del 31 julio 2026). Sin heridos."
+  hogares_subsidio_electrico_expuestos:
+    nombre: Hogares expuestos ante el fin del subsidio eléctrico
+    unidad_default: hogares
+    notas: "Unos 2 millones de hogares vulnerables habrían quedado expuestos según El Mostrador (16 abril 2026) tras las declaraciones de la ministra Ximena Rincón. El Ministerio de Energía rectificó el 19 de abril que el subsidio continúa."
+  recursos_pampilla_reconstruccion:
+    nombre: Recursos de La Pampilla destinados a reconstrucción
+    unidad_default: millones_pesos
+    notas: "Más de $1.800 millones que el municipio de Coquimbo destinaría a La Pampilla 2026 fueron reasignados a la reconstrucción tras la cancelación de la fiesta (30 julio 2026)."
+  deterioro_fiscal_pib_megarreforma:
+    nombre: Deterioro fiscal permanente de la megarreforma en régimen
+    unidad_default: pct_pib
+    notas: "0,43% del PIB hacia 2050 sin el efecto del crecimiento, según el CFA (5 mayo 2026). En 2030 el balance seguiría deficitario en 0,3% del PIB."
+  aporte_codelco_fisco_2025:
+    nombre: Aporte de Codelco al Fisco en 2025
+    unidad_default: millones_usd
+    notas: "US$1.778 millones según resultados oficiales de Codelco (27 marzo 2026), un 16% más que en 2024 (US$1.534 millones). En el debate de julio 2026 sobre privatización, el oficialismo citó 'más de US$4.000 millones anuales', cifra que no corresponde a los aportes recientes: en 2022 el aporte fue US$2.301 millones y en 2021 los excedentes récord alcanzaron US$7.394 millones."
+  aporte_codelco_fisco_2024:
+    nombre: Aporte de Codelco al Fisco en 2024
+    unidad_default: millones_usd
+    notas: "US$1.534 millones según resultados oficiales de Codelco (marzo 2026)."
+  aporte_codelco_fisco_2022:
+    nombre: Aporte de Codelco al Fisco en 2022
+    unidad_default: millones_usd
+    notas: "US$2.301 millones, una caída de 58,7% respecto a 2021, afectado por menores precios y ventas de cobre (La Tercera, 31 marzo 2023)."
+  excedentes_codelco_2021:
+    nombre: Excedentes de Codelco en 2021
+    unidad_default: millones_usd
+    notas: "US$7.394 millones en 2021, el mejor resultado en nueve años, impulsado por el alto precio del cobre (La Tercera, febrero 2022)."
+  utilidad_codelco_2025:
+    nombre: Utilidad consolidada de Codelco en 2025
+    unidad_default: millones_usd
+    notas: "US$2.423 millones al cierre de 2025, con un incremento de US$2.178 millones respecto a 2024, impulsada por la utilidad excepcional de US$2.035 millones por la adquisición del 50% más una acción de Novandino Litio. Excluida esa utilidad excepcional, la utilidad fue US$388 millones (Codelco, 27 marzo 2026)."
+  gasto_arriendos_vehiculos_diputados_biobio:
+    nombre: Gasto anual en arriendo de vehículos de los 13 diputados del Biobío
+    unidad_default: pesos
+    notas: "$92.463.000 en 2025 (año de campaña electoral) según solicitud de transparencia de Aquí Biobío/El Mostrador a la Cámara (julio 2026). Ocho diputados concentraron el gasto, encabezados por Sergio Bobadilla (UDI, $20.446.757) y Flor Weisse (UDI, $15.480.000)."
+  multa_jalaff_factop:
+    nombre: Multa total de Álvaro Jalaff en juicio abreviado Caso Factop
+    unidad_default: millones_pesos
+    notas: "Multa total de $720 millones a beneficio fiscal, que según Emol se descompone en $220 millones por cohecho y soborno y $500 millones por infracciones tributarias (totalizando más de $700 millones). ChileVisión consigna los $720 millones pagaderos en 60 cuotas mensuales de aproximadamente $12 millones (60 x 12 = 720), más una sanción de 12 UTM por los delitos de estafa (julio 2026)."
+  autorizaciones_seguridad_minera_declaraciones:
+    nombre: Autorizaciones del Reglamento de Seguridad Minera reemplazadas por declaraciones juradas
+    unidad_default: autorizaciones
+    notas: "21 artículos del Reglamento de Seguridad Minera (DS 132) vieron reemplazada su autorización previa de Sernageomin por declaración jurada, y 16 artículos fueron derogados y consolidados en un nuevo artículo 22 que crea la figura del Proyecto Minero (decreto 2026)."
+  umbral_pequena_mineria_toneladas:
+    nombre: Umbral de pequeña minería para régimen simplificado
+    unidad_default: toneladas_mensuales
+    notas: "Elevado de 5.000 a 10.000 toneladas mensuales por el decreto que modifica el Reglamento de Seguridad Minera (artículo 594), ampliando el acceso al régimen simplificado de Declaración Minera (DM)."
+  deuda_codelco_2026:
+    nombre: Deuda de Codelco
+    unidad_default: mil_millones_usd
+    notas: "Cerca de US$25 mil millones, según el expresidente ejecutivo de Codelco Diego Hernández en julio de 2026, quien advirtió que ese nivel de deuda dificulta cualquier proceso de apertura al mercado o venta y castigaría el valor de la empresa y sus activos."
+  medidas_paquete_economico:
+    nombre: Medidas del paquete económico del gobierno de Kast
+    unidad_default: medidas
+    notas: "Alrededor de 45 medidas según Ex-Ante (7 abril 2026) durante la preparación del paquete que se anunciaría como Plan de Reconstrucción Nacional el 15 de abril de 2026, manteniendo el corazón del proyecto de Lirquén del 14 de marzo con ajustes de beneficios a la clase media."
+  votos_aconsejo_bachelet_onu:
+    nombre: Votos 'aconsejo' de Bachelet en primer straw poll ONU
+    unidad_default: votos
+    notas: "6 votos 'aconsejo' (respaldos) en el primer sondeo informal y no vinculante del Consejo de Seguridad de la ONU por la Secretaría General (30 julio 2026), junto a 5 'desaconsejo' y 4 sin opinión, dejándola en cuarto lugar tras Grynspan (10), Rodrigues-Birkett (9) y Grossi (7)."
+  votos_desaconsejo_bachelet_onu:
+    nombre: Votos 'desaconsejo' contra Bachelet en primer straw poll ONU
+    unidad_default: votos
+    notas: "5 votos 'desaconsejo' (rechazos) en el primer sondeo del Consejo de Seguridad de la ONU (30 julio 2026), una de las cifras más altas entre los siete postulantes, solo superada por Macky Sall con 7. El origen de los votos negativos, y si alguno proviene de un miembro permanente con veto, se desconoce por el carácter secreto de la consulta."
+  imacec_junio_2026:
+    nombre: Imacec de junio de 2026
+    unidad_default: pct
+    notas: "Crecimiento de 2,4% interanual en junio de 2026 según el Banco Central, rompiendo una racha de cinco meses de contracciones (enero a mayo de 2026) y permitiendo que el segundo trimestre creciera 0,1% y evitara la recesión técnica. La serie desestacionalizada avanzó 0,6% mensual y 1,4% en doce meses. El primer semestre cerró con un promedio de -0,2%, el peor desde la pandemia."
+  desaprobacion_kast_cadem_ago:
+    nombre: Desaprobación de Kast en encuesta Cadem de agosto
+    unidad_default: pct
+    notas: "60% de desaprobación (dos puntos más que la medición anterior) según la encuesta Plaza Pública de Cadem publicada el 2 de agosto de 2026. La aprobación se ubicó en 36%. El Mandatario cerró julio con un promedio de 37% de aprobación, cinco puntos menos que en junio, con caídas en todos los segmentos, especialmente entre quienes se identifican con la derecha."
+  aprobacion_kast_cadem_ago:
+    nombre: Aprobación de Kast en encuesta Cadem de agosto
+    unidad_default: pct
+    notas: "36% de aprobación según la encuesta Plaza Pública de Cadem publicada el 2 de agosto de 2026, frente a una desaprobación de 60%. La caída del respaldo se registró en todos los segmentos políticos."
+  percepcion_pais_dividido_cadem_ago:
+    nombre: Percepción de país dividido según Cadem de agosto
+    unidad_default: pct
+    notas: "76% de los consultados considera que la sociedad chilena está muy o bastante dividida, principalmente por la política (encuesta Cadem publicada el 2 de agosto de 2026). El 56% cree que Chile vive una 'batalla cultural'. Las mayores tensiones: entre personas de izquierda y derecha (84%), entre votantes de Kast y Jara (76%), entre ricos y pobres (71%) y entre chilenos e inmigrantes (70%)."
+  ingresos_mensuales_anabalon:
+    nombre: Ingresos mensuales de Marcelo Anabalón
+    unidad_default: pesos
+    notas: "$5.954.241 mensuales que percibía Marcelo Anabalón, integrante de La Cofradía, como empleado de la Municipalidad de La Reina y asesor del diputado Pier Karlezi (PNL), antes de su desvinculación tras el escándalo (El Mostrador, 3 agosto 2026)."
+  sueldo_omegna_congreso:
+    nombre: Sueldo de Ítalo Omegna en el Congreso
+    unidad_default: pesos
+    notas: "$1.800.000 que ganaba Ítalo Omegna como asesor legislativo antes de renunciar tras la polémica por sus dichos sobre niños con TEA (El Mostrador, 3 agosto 2026)."
+  becas_mises_cono_sur:
+    nombre: Becas internacionales del Instituto Mises Cono Sur
+    unidad_default: euros
+    notas: "Becas internacionales de 20.000 euros para investigaciones sobre anarco-capitalismo patrocinadas por el Instituto Mises Cono Sur junto a la Fundación Jesús Huerta de Soto (El Mostrador, 3 agosto 2026)."
+  capacidad_tren_rapido:
+    nombre: Capacidad del tren rápido Santiago-Chillán
+    unidad_default: pasajeros
+    notas: "238 pasajeros por tren, según la publicación del ministro de Transportes Louis de Grange en redes sociales (agosto 2026). Es el único tren bimodal (eléctrico y diésel) de Sudamérica."
+  aprobacion_kast_pulso_mar:
+    nombre: Aprobación de Kast según Pulso Ciudadano Activa (marzo 2026)
+    unidad_default: pct
+    notas: "34,7% en la quincena del 26-27 de marzo de 2026, una caída de 12,8 puntos desde el 47,5% de la primera quincena. La desaprobación subió de 26,3% a 48,7%. Sondeo realizado tras la polémica por el 'bencinazo' (no activación del MEPCO) y el retiro del apoyo a Bachelet en la ONU."
+  desaprobacion_kast_pulso_mar:
+    nombre: Desaprobación de Kast según Pulso Ciudadano Activa (marzo 2026)
+    unidad_default: pct
+    notas: "48,7% en marzo Q2 2026, un alza desde el 26,3% de la primera quincena de marzo. El 57,2% se mostró en desacuerdo o muy en desacuerdo con la decisión del gobierno de no activar el MEPCO."
+  aprobacion_gabinete_pulso_mar:
+    nombre: Aprobación del gabinete según Pulso Ciudadano Activa (marzo 2026)
+    unidad_default: pct
+    notas: "29,0% de aprobación del gabinete ministerial, con 53,6% de desaprobación, en el sondeo de marzo Q2 2026 de Pulso Ciudadano Activa Research."
+  aprobacion_kast_criteria_mar:
+    nombre: Aprobación de Kast según Agenda Criteria (marzo 2026)
+    unidad_default: pct
+    notas: "43% en la medición de marzo 2026, una caída de 7 puntos desde el 50% de inicios de mes. Por primera vez desde el inicio del gobierno, la desaprobación (47%) superó a la aprobación."
+  desaprobacion_kast_criteria_mar:
+    nombre: Desaprobación de Kast según Agenda Criteria (marzo 2026)
+    unidad_default: pct
+    notas: "47% en marzo 2026, un alza de 10 puntos desde el 37%. El 64% de los encuestados declaró confiar poco o nada en las explicaciones del gobierno sobre el alza de combustibles."
+  desconfianza_razones_bencinazo_criteria:
+    nombre: Desconfianza en razones del gobierno por alza de combustibles (Criteria)
+    unidad_default: pct
+    notas: "64% de los encuestados declaró confiar poco o nada en las explicaciones del gobierno por el alza de combustibles (marzo 2026). Un 42% atribuyó el alza a factores internacionales y un 34% responsabilizó al gobierno de Kast."
+  aprobacion_kast_blackwhite_abr:
+    nombre: Aprobación de Kast según Black & White (abril 2026)
+    unidad_default: pct
+    notas: "40% aprueba la forma en que el presidente Kast está conduciendo su gobierno, un alza de 6 puntos respecto de la medición anterior (abril 2026). Un 56% evalúa con nota 1 a 4 al gobierno (promedio 3,6)."
+  apoyo_plan_reconstruccion_blackwhite:
+    nombre: Apoyo al Plan de Reconstrucción Nacional en general (Black & White)
+    unidad_default: pct
+    notas: "52% muy de acuerdo (31%) o de acuerdo (21%) con el Plan de Reconstrucción Nacional en general, según Black & White (abril 2026). El apoyo aumenta entre hombres, el segmento ABC1 y a mayor edad. El 61% considera que las medidas deben aprobarse una por una."
+  apoyo_eliminacion_iva_viviendas:
+    nombre: Apoyo a la eliminación del IVA a viviendas nuevas
+    unidad_default: pct
+    notas: "74% muy de acuerdo o de acuerdo con la eliminación del IVA a viviendas nuevas, una de las medidas con mayor apoyo del Plan de Reconstrucción (Black & White, abril 2026). El subsidio a la contratación formal alcanzó 71% de apoyo y la eximición de contribuciones a adultos mayores 68%."
+  aumento_costos_laborales_42_horas:
+    nombre: Aumento de costos laborales por la entrada en vigencia de las 42 horas
+    unidad_default: pct
+    notas: "4,8% de incremento de los costos laborales estimado por los economistas David Bravo y Juan Bravo ante la reducción de la jornada de 44 a 42 horas (abril 2026), dado que los trabajadores mantienen sus remuneraciones con dos horas menos."
+  proyeccion_crecimiento_chile_cepal_2026:
+    nombre: Proyección de crecimiento de Chile 2026 según CEPAL
+    unidad_default: pct
+    notas: "2,0%, un recorte desde el 2,2% estimado en diciembre de 2025, por mayor tensión global, condiciones financieras restrictivas y presiones inflacionarias (CEPAL, abril 2026). Para América Latina y el Caribe la proyección bajó de 2,3% a 2,2%."
+  caja_fisco_cierre_2025:
+    nombre: Caja del fisco al cierre de 2025
+    unidad_default: millones_usd
+    notas: "US$40 millones al 31 de diciembre de 2025, según el ministro de Hacienda Jorge Quiroz (13 de marzo de 2026). El exministro Nicolás Grau refutó la cifra señalando que el último dato público era de US$1.406 millones a fines de enero y alrededor de US$800 millones a inicios de la semana."
+  recorte_transversal_gasto:
+    nombre: Recorte transversal del gasto de ministerios
+    unidad_default: pct
+    notas: "Rebaja transversal de 3% del gasto bruto de cada ministerio, aplicada de forma uniforme por la Dipres a los distintos subtítulos presupuestarios mediante decreto de Hacienda (marzo 2026). Se suma una rebaja adicional de US$1.000 millones focalizada por cada cartera, que debían reportar espacios de eficiencia a la Dipres antes del 20 de marzo de 2026."
+  aprobacion_kast_cadem_abr:
+    nombre: Aprobación de Kast según Cadem (abril 2026)
+    unidad_default: pct
+    notas: "40% en la quinta semana de abril de 2026, una caída de un punto. Es la medición más baja desde el inicio del mandato, con una desaprobación récord de 57%."
+  desaprobacion_kast_cadem_abr:
+    nombre: Desaprobación de Kast según Cadem (abril 2026)
+    unidad_default: pct
+    notas: "57% en la quinta semana de abril de 2026, un alza de cuatro puntos y el nivel más alto desde el inicio de su mandato. Un 63% cree que el Estado tiene suficientes recursos para financiar sus compromisos (+20 pts), mientras que solo un 8% piensa que enfrenta una situación fiscal crítica (-25 pts)."
+  informalidad_amj_2026:
+    nombre: Tasa de ocupación informal trimestre abril-junio 2026
+    unidad_default: "%"
+    notas: "27,0% a nivel nacional, un incremento de 1,0 punto en 12 meses. En mujeres la ocupación informal fue de 28,9% y en hombres de 25,5%. Los ocupados informales aumentaron 4,7%, incididos por comercio y servicios administrativos (INE, julio 2026)."
+  desocupacion_mujeres_amj_2026:
+    nombre: Tasa de desocupación femenina trimestre abril-junio 2026
+    unidad_default: "%"
+    notas: "10,4%, un aumento de 0,5 puntos en un año, debido a que la fuerza de trabajo femenina creció 2,3% frente al 1,7% de las ocupadas (INE, julio 2026). La tasa supera los dos dígitos, por encima de la masculina."
+  desocupacion_hombres_amj_2026:
+    nombre: Tasa de desocupación masculina trimestre abril-junio 2026
+    unidad_default: "%"
+    notas: "8,7%, un aumento de 0,6 puntos en un año, con un alza de la fuerza de trabajo masculina de 0,9% y de solo 0,3% en los ocupados (INE, julio 2026)."
+  desocupacion_biobio:
+    nombre: Tasa de desocupación en la Región del Bío Bío (abril-junio 2026)
+    unidad_default: "%"
+    notas: "10,4%, sobre el promedio nacional de 9,4%. La región se ubica entre las de mayor desempleo del país, superada solo por Ñuble (10,5%). La desocupación femenina regional llegó a 11,3% y la informalidad a 28,3% (+3,1 pp en 12 meses) (INE, julio 2026)."
+  desocupacion_nuble:
+    nombre: Tasa de desocupación en Ñuble (abril-junio 2026)
+    unidad_default: "%"
+    notas: "10,5%, la más alta del país según Amigos Penquistas citando al INE (julio 2026), por encima del promedio nacional de 9,4%."
+  desocupacion_ohiggins:
+    nombre: Tasa de desocupación en O'Higgins (abril-junio 2026)
+    unidad_default: "%"
+    notas: "10,4%, un aumento de 1,1 puntos en doce meses y un punto sobre el promedio nacional. Los desocupados aumentaron 11,8% en un año, llegando a 51.293 personas, con destrucción efectiva de empleo: los ocupados cayeron 0,8% (INE, julio 2026)."
+  desocupacion_mujeres_ohiggins:
+    nombre: Tasa de desocupación femenina en O'Higgins (abril-junio 2026)
+    unidad_default: "%"
+    notas: "14,2%, un alza de 5,0 puntos en un año, frente al 7,7% de los hombres en la región (INE, julio 2026). Es el impacto más duro del desempleo regional."
+  informalidad_ohiggins:
+    nombre: Tasa de ocupación informal en O'Higgins (abril-junio 2026)
+    unidad_default: "%"
+    notas: "30,3%, afectando a casi un tercio de la fuerza laboral regional, como refugio ante la pérdida de empleo formal (INE, julio 2026)."
+  informalidad_biobio:
+    nombre: Tasa de ocupación informal en el Bío Bío (abril-junio 2026)
+    unidad_default: "%"
+    notas: "28,3%, con un alza de 3,1 puntos en un año, según el INE (julio 2026)."
+  rechazo_privatizacion_codelco_criteria:
+    nombre: Rechazo a la privatización de Codelco (Agenda Criteria)
+    unidad_default: "%"
+    notas: "74% en el sondeo del 2 de agosto de 2026, estable frente al 73% de 2018 y el 72% de mayo 2026. Un 49% prefiere mantenerla 100% estatal mejorando su gestión, un 31% incorporaría capital privado conservando el control estatal y solo un 5% opta por privatización mayoritaria."
+  aprobacion_kast_criteria_ago:
+    nombre: Aprobación de Kast según Agenda Criteria (agosto 2026)
+    unidad_default: "%"
+    notas: "34% en el sondeo del 2 de agosto de 2026, una caída de 2 puntos respecto de la medición del 26 de julio (36%). La desaprobación alcanzó 55% y un 11% respondió no saber."
+  desaprobacion_kast_criteria_ago:
+    nombre: Desaprobación de Kast según Agenda Criteria (agosto 2026)
+    unidad_default: "%"
+    notas: "55% en el sondeo del 2 de agosto de 2026, un punto más que la medición del 26 de julio (54%). La aprobación cayó a 34%."
+  percepcion_negativa_megarreforma_criteria:
+    nombre: Percepción negativa de la megarreforma (Agenda Criteria)
+    unidad_default: "%"
+    notas: "38% consideró que la Ley de Reconstrucción tendrá un efecto más bien negativo, frente a un 33% positivo y un 29% sin claridad (2 de agosto de 2026). Es la tercera medición consecutiva en que la opinión negativa supera a la positiva, con una distancia de cinco puntos."
+  compensacion_municipal_megarreforma:
+    nombre: Compensación municipal por exención de contribuciones en la megarreforma
+    unidad_default: millones_usd
+    notas: "US$200 millones comprometidos por el gobierno para compensar a los municipios por la exención de contribuciones a mayores de 65 años. Los alcaldes de oposición pidieron que los recursos vayan íntegramente al Fondo Común Municipal; el gobierno propone transferencias proporcionales a lo que cada comuna deje de percibir (agosto 2026)."
+  alcaldes_firmantes_veto:
+    nombre: Alcaldes firmantes de la declaración pidiendo veto presidencial
+    unidad_default: alcaldes
+    notas: "104 alcaldes (más de 100, casi un tercio de los 345 de todo Chile), en su mayoría de oposición, firmaron la declaración pidiendo al presidente Kast un veto aditivo a la compensación por la exención de contribuciones (2 de agosto 2026). Representan a municipios donde residen más de 7,2 millones de personas."
+  alcaldes_oficialistas_compensacion:
+    nombre: Alcaldes oficialistas que respaldaron la fórmula de compensación
+    unidad_default: alcaldes
+    notas: "161-162 alcaldes firmaron la carta oficialista que respaldó la fórmula de compensación del gobierno y pidió al Senado aprobarla para las 345 comunas, frente a los 104 de la oposición (agosto 2026). Representan a municipios con unos 5,3 millones de habitantes."
+  umbral_combustible_sin_evaluacion:
+    nombre: Umbral de almacenamiento de combustible sin evaluación ambiental
+    unidad_default: litros
+    notas: "1 millón de litros (1.000 toneladas) desde el cambio reglamentario de la administración Boric vigente desde enero 2026, doce veces más que los 80 mil litros anteriores. Permite que los data centers acopien diésel para respaldo sin ingresar al SEIA."
+  inversion_data_center_alto_jahuel:
+    nombre: Inversión del Data Center Alto Jahuel
+    unidad_default: millones_usd
+    notas: "US$25 millones. Proyecto de DC Terranova SPA en Buin, a pocos kilómetros de la casa del presidente Kast y de la Viña Santa Rita. Almacenará 990 toneladas de diésel (bajo el límite de 1.000) y se conectará a la subestación Maipo a 250 metros. Primer data center eximido del SEIA por el SEA el 24 de julio de 2026."
+  refugiados_reubicados_conar:
+    nombre: Refugiados reubicados en el extranjero por el CONAR
+    unidad_default: personas
+    notas: "Aproximadamente 5.000 personas fueron reubicadas en el extranjero por el Comité Nacional de Ayuda a los Refugiados (CONAR, 1973-1974), según la Vicaría de la Solidaridad, con salvoconductos y apoyo legal y material. Incluye extranjeros perseguidos residentes en Chile y opositores nacionales."

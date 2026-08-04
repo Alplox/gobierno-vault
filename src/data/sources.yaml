@@ -5538,6 +5538,7 @@ biobio-2026-07-29-desborde-rio-bueno:
   autor: BioBioChile
   fecha: 2026-07-29
   url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/07/29/desborde-del-rio-bueno-obliga-a-declarar-alerta-roja-para-san-pablo-reportan-15-familias-aisladas.shtml
+  notas: "Discrepancia de cifras: el titular fue actualizado a 'más de 80 familias aisladas', pero el conteo oficial de Senapred Los Lagos y la Municipalidad de San Pablo confirmó 15 familias aisladas por el corte de la Ruta U-220. La cifra de 80 correspondería a una estimación inicial de familias en riesgo en sectores ribereños. Se mantiene la cifra oficial de 15 familias aisladas."
 diarioavisale-2026-02-15-forado-fiscal:
   tipo: prensa
   medio: Diario Avísale
@@ -8378,3 +8379,1458 @@ reddit-2026-06-18-indemnizacion-todo-evento:
   fecha: 2026-06-18
   url: https://www.reddit.com/r/chile/comments/1ua49yb/ministro_del_trabajo_confirma_que_gobierno_eval%C3%BAa/
   notas: "Hilo de Reddit replicando la confirmación del ministro Tomás Rau sobre la indemnización a todo evento."
+reddit-2026-04-01-higueras-seremi-transportes:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Gobierno de Kast designa a mano derecha del dirigente del gremio de camioneros como nuevo seremi de Transportes"
+  autor: Reddit r/chile
+  fecha: 2026-04-01
+  url: https://www.reddit.com/r/chile/comments/1s9r51v/gobierno_de_kast_designa_a_mano_derecha_del/
+  notas: "Hilo de Reddit (punto de partida) sobre la designación de Baldemar Higueras como seremi de Transportes del Maule, ex mano derecha de Sergio Pérez de la CNTC. Noticia primaria: ADN Radio, El Periódico, Cambio21."
+adnradio-2026-04-01-higueras-seremi-transportes-maule:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Gobierno designa como seremi de Transportes en el Maule a exdirigente ligado al gremio camionero"
+  autor: ADN Radio
+  fecha: 2026-04-01
+  url: https://www.adnradio.cl/2026/04/01/gobierno-designa-como-seremi-de-transportes-en-el-maule-a-exdirigente-ligado-al-gremio-camionero/
+  notas: "La Delegación Presidencial del Maule confirmó la designación de Baldemar Higueras como seremi de Transportes y Telecomunicaciones. Más de 15 años en transporte de carga, secretario ejecutivo de la CNTC y mano derecha de Sergio Pérez."
+elperiodico-2026-04-01-higueras-seremi-maule:
+  tipo: prensa
+  medio: El Periódico
+  titulo: "Exdirigente de gremio camionero es designado como nuevo seremi de Transportes en el Maule"
+  autor: El Periódico
+  fecha: 2026-04-01
+  url: https://elperiodico.cl/se-va-aclarando-todo-exdirigente-de-gremio-camionero-es-designado-como-nuevo-seremi-de-transportes-en-el-maule/
+  notas: "Higueras fue secretario ejecutivo de la CNTC, mano derecha del dirigente Sergio Pérez, con participación protagónica en el paro de camioneros de 2022. También fue seremi de Transportes del Maule entre 2006 y 2010."
+cambio21-2026-04-01-higueras-seremi-transportes:
+  tipo: prensa
+  medio: Cambio21
+  titulo: "Gobierno de Kast designa a mano derecha del presidente de camioneros Sergio Pérez como nuevo seremi de Transportes"
+  autor: Cambio21
+  fecha: 2026-04-01
+  url: https://cambio21.cl/pais/obvio-que-no-se-iban-a-movilizar-gobierno-de-kast-designa-a-mano-derecha-del-presidente-de-camioneros-sergio-perez-como-nuevo-seremi-de-transportes-69cf3e3810dbdf38aa7c85dc
+  notas: "Noticia primaria que da origen al hilo de Reddit. Contexto: la 'sospechosa' calma del gremio camionero bajo el gobierno de Kast."
+reddit-2026-04-16-subsidio-electrico:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Gobierno corta la luz al subsidio eléctrico: 2 millones de hogares expuestos justo antes de tarifazo"
+  autor: Reddit r/chile
+  fecha: 2026-04-16
+  url: https://www.reddit.com/r/chile/comments/1snnnbp/gobierno_corta_la_luz_al_subsidio_el%C3%A9ctrico_2/
+  notas: "Hilo de Reddit (punto de partida) replicando la noticia de El Mostrador del 16 de abril de 2026 sobre el fin del subsidio eléctrico. El Ministerio de Energía rectificó el 19 de abril que el subsidio continúa."
+elmostrador-2026-04-16-corta-luz-subsidio-electrico:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Gobierno corta la luz al subsidio eléctrico: 2 millones de hogares expuestos justo antes de tarifazo"
+  autor: El Mostrador
+  fecha: 2026-04-16
+  url: https://www.elmostrador.cl/noticias/pais/2026/04/16/gobierno-corta-la-luz-al-subsidio-electrico-2-millones-de-hogares-expuestos-justo-antes-de-tarifazo/
+  notas: "La ministra de Energía Ximena Rincón declaró a La Tercera que el subsidio eléctrico 'termina ahora' y que no estaba contemplada su renovación, dejando expuestos a unos 2 millones de hogares vulnerables antes del tarifazo de julio 2026."
+emol-2026-04-19-gobierno-descarta-fin-subsidio:
+  tipo: prensa
+  medio: Emol
+  titulo: "Gobierno descarta fin del subsidio eléctrico: continúa vigente conforme a la ley"
+  autor: Emol
+  fecha: 2026-04-19
+  url: https://www.emol.com/noticias/Economia/2026/04/19/1197658/gobierno-descarta-fin-subsidio-electrico.html
+  notas: "Tras la polémica, el Ministerio de Energía emitió un comunicado el 19 de abril rectificando: el subsidio se mantiene vigente, se confirmó la quinta convocatoria y la postulación automática para beneficiarios actuales."
+latercera-2026-04-19-continuidad-subsidio-electrico:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Gobierno confirma continuidad del subsidio eléctrico y busca fórmula para deuda de distribuidoras"
+  autor: La Tercera (Pulso)
+  fecha: 2026-04-19
+  url: https://www.latercera.com/pulso/noticia/gobierno-confirma-continuidad-del-subsidio-electrico-y-busca-formula-para-deuda-de-distribuidoras/
+  notas: "Confirma la vigencia del subsidio y el proyecto 'Ordenemos las Cuentas' para abordar la deuda de las distribuidoras (más de $831.982 millones) sin recargar al usuario."
+meganoticias-2026-04-17-rincon-subsidio-electrico:
+  tipo: prensa
+  medio: Meganoticias
+  titulo: "Ministra de Energía Ximena Rincón anuncia que no se renovará subsidio eléctrico ante nuevas alzas de la luz"
+  autor: Meganoticias
+  fecha: 2026-04-17
+  url: https://www.meganoticias.cl/nacional/519760-ministra-energia-ximena-rincon-anuncia-que-no-se-renovara-subsidio-electrico-nuevas-alzas-de-la-luz-17-04-2026.html
+  notas: "Cobertura de la declaración de la ministra Ximena Rincón sobre la no renovación del subsidio eléctrico y las nuevas alzas de la luz."
+reddit-2026-03-31-ley-cholito-reglamento:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Gobierno de Kast retiró de Contraloría nuevo reglamento de la Ley Cholito: Preocupación en comunidades y agrupaciones animalistas"
+  autor: Reddit r/chile
+  fecha: 2026-03-31
+  url: https://www.reddit.com/r/chile/comments/1s9wuhi/gobierno_de_kast_retir%C3%B3_de_contralor%C3%ADa_nuevo/
+  notas: "Hilo de Reddit (punto de partida). Noticia primaria: El Ciudadano y Chilevisión (31 marzo 2026) sobre el retiro del reglamento de la Ley Cholito de la Contraloría."
+elciudadano-2026-03-31-ley-cholito-reglamento:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Gobierno retiró de Contraloría nuevo reglamento de la Ley Cholito: Preocupación en comunidades y agrupaciones animalistas"
+  autor: El Ciudadano
+  fecha: 2026-03-31
+  url: https://www.elciudadano.com/animal/gobierno-de-kast-retiro-de-contraloria-nuevo-reglamento-de-la-ley-cholito-preocupacion-en-comunidades-y-agrupaciones-animalistas/03/31/
+  notas: "El reglamento fue retirado de la Contraloría mediante la orden N°0014/2026 (19 de marzo de 2026). Incluía microchip obligatorio, prohibición de collar de ahorque, mutilaciones estéticas y uso de mascotas para caza de fauna nativa."
+elmostrador-2026-04-04-ley-cholito-reglamento:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Gobierno retira reglamento que buscaba actualizar la Ley Cholito y que prohibía mutilaciones estéticas"
+  autor: El Mostrador
+  fecha: 2026-04-04
+  url: https://www.elmostrador.cl/noticias/pais/2026/04/04/gobierno-retira-reglamento-que-buscaba-actualizar-ley-cholito-prohibia-mutilaciones-esteticas-2/
+  notas: "La Subdere (Ministerio del Interior) retiró el decreto de la toma de razón para una revisión integral. Fundación Derecho y Defensa Animal expresó preocupación y el senador Diego Ibáñez anunció fiscalización."
+chilevision-2026-03-31-ley-cholito-reglamento:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "Gobierno retiró el nuevo reglamento de la Ley Cholito que impedía mutilaciones estéticas en animales"
+  autor: Chilevisión
+  fecha: 2026-03-31
+  url: https://www.chilevision.cl/noticias/nacional/gobierno-retiro-el-nuevo-reglamento-de-la-ley-cholito-impedia-mutilaciones-esteticas-en-animales/
+  notas: "Cobertura complementaria del retiro del reglamento de la Ley Cholito de la Contraloría."
+theclinic-2026-07-30-pampilla-cancelada:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Manouchehri anuncia la cancelación de La Pampilla 2026 y manifiesta críticas al Gobierno por la falta de recursos inmediatos para la reconstrucción en Coquimbo"
+  autor: The Clinic
+  fecha: 2026-07-30
+  url: https://www.theclinic.cl/2026/07/30/alcalde-manouchehri-anuncia-la-cancelacion-de-la-pampilla-2026-y-manifiesta-criticas-al-gobierno-por-la-falta-de-recursos-inmediatos-para-la-reconstruccion-en-coquimbo/
+  notas: "El alcalde Ali Manouchehri anunció la cancelación de La Pampilla 2026 y el traspaso de los más de $1.800 millones a la reconstrucción. Criticó al Gobierno: 'propusimos alternativas para contar con recursos inmediatos, pero no fuimos escuchados. Nuestra gente necesita ayuda hoy, no el próximo año'."
+reddit-2026-05-06-kast-cfa-megarreforma:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Kast asegura que responderán a inquietudes tras lapidario informe del CFA sobre megaproyecto"
+  autor: Reddit r/chile
+  fecha: 2026-05-06
+  url: https://www.reddit.com/r/chile/comments/1t5y0nt/kast_asegura_que_responder%C3%A1n_a_inquietudes_tras/
+  notas: "Hilo de Reddit (punto de partida) sobre la respuesta del presidente Kast al informe crítico del CFA del 5 de mayo de 2026."
+latercera-2026-05-05-cfa-9-riesgos-megarreforma:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "CFA hace dura crítica a megarreforma y detecta nueve riesgos directos para las arcas fiscales"
+  autor: La Tercera (Pulso)
+  fecha: 2026-05-05
+  url: https://www.latercera.com/pulso/noticia/cfa-hace-dura-critica-a-megarreforma-y-detecta-nueve-riesgos-directos-para-las-arcas-fiscales/
+  notas: "El CFA presentó ante la Comisión de Hacienda de la Cámara su análisis de la megarreforma: impacto fiscal neto negativo 2026-2031, dependencia crítica del crecimiento, deterioro fiscal permanente de 0,43% del PIB en régimen y nueve riesgos directos."
+latercera-2026-05-06-kast-responde-cfa:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Presidente Kast dice que el gobierno mantendrá urgencia a la megarreforma pese a la advertencia del CFA"
+  autor: La Tercera (Pulso)
+  fecha: 2026-05-06
+  url: https://www.latercera.com/pulso/noticia/presidente-kast-dice-que-el-gobierno-mantendra-urgencia-a-la-megarreforma-pese-a-la-advertencia-del-cfa/
+  notas: "Desde Puerto Montt (Salmon Summit), Kast dijo: 'El Consejo Fiscal Autónomo ha hecho siempre informes que nosotros valoramos. Este también lo valoramos para mejorar. Pero lo que no vamos a hacer es detener el avance para que Chile vuelva a crecer'. Y: 'lo que hemos visto hasta ahora son slogans'."
+latercera-2026-05-06-quiroz-cfa-observaciones:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Quiroz califica las críticas del CFA como 'observaciones de detalle' contestadas por la Dipres"
+  autor: La Tercera (Pulso)
+  fecha: 2026-05-06
+  url: https://www.latercera.com/pulso/noticia/quiroz-califica-las-criticas-del-cfa-como-observaciones-de-detalle-y-que-fueron-contestadas-por-la-dipres/
+  notas: "El ministro de Hacienda Jorge Quiroz restó peso a las críticas del CFA, calificándolas de 'observaciones de detalle'."
+theclinic-2026-07-31-tiron-orejas-kast-oficialismo:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "El tirón de orejas de Kast a los partidos por 'copar' la agenda y cómo el oficialismo asumió el reproche"
+  autor: The Clinic
+  fecha: 2026-07-31
+  url: https://www.theclinic.cl/2026/07/31/el-tiron-de-orejas-de-kast-a-los-partidos-por-copar-la-agenda-y-como-el-oficialismo-asumio-el-reproche/
+  notas: "Kast en el 107° aniversario de la CCS (30 julio por la noche): '¿Serán alguno de esos temas los que debieran estar primando en la agenda?'. El comentario fue leído como reproche al auge de la agenda valórica (proyecto 'Escucha su corazón', venta de Misoprostol). Reacciones: Flor Weisse (UDI), Claudia Mora (RN), Hans Marowski (PNL). Guillermo Ramírez (UDI) había presionado por agenda valórica."
+elciudadano-2026-07-31-tello-pampilla-prioridades:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Diputada Carolina Tello tras cancelación de la Pampilla 2026 en Coquimbo: 'Ahora le toca al Gobierno de Kast definir sus prioridades y liberar recursos para la reconstrucción'"
+  autor: El Ciudadano (Cata Hernández)
+  fecha: 2026-07-31
+  url: https://www.elciudadano.com/chile/diputada-carolina-tello-tras-cancelacion-de-la-pampilla-2026-en-coquimbo-ahora-le-toca-al-gobierno-de-kast-definir-sus-prioridades-y-liberar-recursos-para-la-reconstruccion/07/31/
+  notas: "La diputada Tello (FA) pidió al gobierno de Kast que 'deje los anuncios grandilocuentes' y garantice que 'los recursos lleguen ahora, porque la Pampilla puede esperar un año, pero las familias afectadas no'."
+biobiochile-2026-04-05-auditoria-externa-desestimada:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Pese a promesa de campaña: Gobierno finalmente desestima auditoría externa internacional"
+  autor: BioBioChile
+  fecha: 2026-04-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/04/05/pese-a-promesa-de-campana-gobierno-finalmente-desestima-auditoria-externa-internacional.shtml
+  notas: "El gobierno desechó la contratación de auditoras externas internacionales (Big Four) para auditar al Estado, pese a la promesa de campaña de Kast. Motivo: estrechez fiscal y costo enorme. En su lugar usará auditores internos del propio Estado (más de mil auditores, 500 servicios)."
+latercera-2026-04-05-big-four-auditoria-externa:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "El encargo que no llegó a las Big Four: Gobierno desecha auditoría externa internacional al Estado por estrechez fiscal"
+  autor: La Tercera (Pulso)
+  fecha: 2026-04-05
+  url: https://www.latercera.com/pulso/noticia/el-encargo-que-no-llego-as-big-four-gobierno-desecha-auditoria-externa-internacional-al-estado-por-estrechez-fiscal/
+  notas: "La decisión fue confirmada por la Subsecretaría General de la Presidencia y respaldada por la vocera Mara Sedini. La promesa de campaña contemplaba involucrar a Contraloría y firmas internacionales para detectar sobreprecios y contrataciones indebidas."
+t13-2026-04-05-auditoria-externa-desestimada:
+  tipo: prensa
+  medio: T13
+  titulo: "Gobierno desestimó auditoría externa internacional al Estado por estrechez fiscal"
+  autor: T13
+  fecha: 2026-04-05
+  url: https://www.t13.cl/noticia/politica/gobierno-desestimo-auditoria-externa-internacional-5-4-2026
+  notas: "Cobertura complementaria de la desestimación de la auditoría externa internacional."
+biobiochile-2026-04-06-sedini-auditoria-costo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sedini confirma que no habrá auditoría internacional: 'Es un costo enorme'"
+  autor: BioBioChile
+  fecha: 2026-04-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/04/06/sedini-confirma-que-no-habra-auditoria-internacional-es-un-costo-enorme.shtml
+  notas: "La vocera de gobierno Mara Sedini confirmó la marcha atrás de la auditoría externa internacional al Estado, argumentando que tenía un costo enorme."
+reddit-2026-07-31-red-movilidad-osorno:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Gobierno frena implementación del sistema Red Movilidad en Osorno: Demora sería de 4 años"
+  autor: Reddit r/chile
+  fecha: 2026-07-31
+  url: https://www.reddit.com/r/chile/comments/1stzps9/gobierno_frena_implementaci%C3%B3n_del_sistema_red/
+  notas: "Hilo de Reddit (punto de partida) sobre la postergación del sistema RED/electromovilidad en Osorno. Noticia primaria: BioBioChile (3 junio 2026) sobre el proyecto de electromovilidad de Osorno en duda por reajuste presupuestario en Transportes."
+biobiochile-2026-06-03-electromovilidad-osorno-duda:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Proyecto de electromovilidad para Osorno estaría en duda por reajuste presupuestario en Transportes"
+  autor: BioBioChile
+  fecha: 2026-06-03
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/06/03/proyecto-de-electromovilidad-para-osorno-estaria-en-duda-por-reajuste-presupuestario-en-transportes.shtml
+  notas: "El proyecto de electromovilidad para Osorno (más de 100 buses eléctricos y de alto estándar licitados) podría enfrentar retrasos por ajustes presupuestarios en el Ministerio de Transportes. Generó críticas de parlamentarios de Los Lagos y del Concejo Municipal."
+biobiochile-2026-07-13-senadores-los-lagos-electromovilidad:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Senadores por Los Lagos critican dudas del Gobierno sobre proyecto de electromovilidad en Osorno"
+  autor: BioBioChile
+  fecha: 2026-07-13
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/07/13/senadores-por-los-lagos-critican-dudas-del-gobierno-sobre-proyecto-de-electromovilidad-en-osorno.shtml
+  notas: "Senadores de la Región de Los Lagos criticaron la falta de claridad del gobierno sobre los plazos del proyecto de electromovilidad de Osorno."
+biobiochile-2026-07-09-concejo-osorno-seremi:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Concejo de Osorno critica a seremi por incierto futuro de buses eléctricos: 'No nos deja nada claro'"
+  autor: BioBioChile
+  fecha: 2026-07-09
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/07/09/concejo-de-osorno-critica-a-seremi-por-incierto-futuro-de-buses-electricos-no-nos-deja-nada-claro.shtml
+  notas: "El Concejo Municipal de Osorno criticó al seremi de Transportes por la falta de claridad sobre el futuro de los buses eléctricos."
+biobiochile-2026-07-22-electromovilidad-osorno-en-pie:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Tras reunión en Santiago: concejal asegura que electromovilidad en Osorno sigue en pie y sin retrasos"
+  autor: BioBioChile
+  fecha: 2026-07-22
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/07/22/tras-reunion-en-santiago-concejal-asegura-que-electromovilidad-en-osorno-sigue-en-pie-y-sin-retrasos.shtml
+  notas: "Tras gestiones de concejales en Santiago con el Ministerio de Transportes, se aseguró que el proyecto de electromovilidad de Osorno se mantiene en pie dentro de la planificación general."
+reddit-2026-05-29-desafio-90-filtracion:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "'La estrategia es agobiar': Diputados interpelan al Gobierno por 'Desafío 90' tras filtración de polémico documento"
+  autor: Reddit r/chile
+  fecha: 2026-05-29
+  url: https://www.reddit.com/r/chile/comments/1tsbf63/la_estrategia_es_agobiar_diputados_interpelan_al/
+  notas: "Hilo de Reddit (punto de partida) sobre la filtración del documento 'Desafío 90' y la interpelación de diputados. Noticia primaria: Chilevisión, Interferencia, El Mostrador, Emol."
+chilevision-2026-05-29-desafio-90-filtracion:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "'La estrategia es agobiar': Diputados interpelan al Gobierno por 'Desafío 90' tras filtración de polémico documento"
+  autor: Chilevisión
+  fecha: 2026-05-29
+  url: https://www.chilevision.cl/noticias/nacional/la-estrategia-es-agobiar-diputados-interpelan-al-gobierno-por-desafio-90-tras-filtracion-de-polemico-documento/
+  notas: "Filtración a fines de mayo 2026 (ad portas de los 90 días de gobierno y de la primera Cuenta Pública del 1 de junio) de un documento reservado con lineamientos del plan 'Desafío 90': copar el debate, agobiar a quienes se opongan, instalar la narrativa de Estado en quiebra e inflar a periodistas afines. Diputados Gonzalo Winter e Ignacio Achurra (FA) cuestionaron la estrategia."
+interferencia-2026-06-01-desafio-90-cuenta-publica:
+  tipo: prensa
+  medio: Interferencia
+  titulo: "Del 'Desafío 90' a la realidad y las 'metáforas': Kast enfrenta su primera Cuenta Pública"
+  autor: Interferencia
+  fecha: 2026-06-01
+  url: https://interferencia.cl/articulos/del-desafio-90-la-realidad-y-las-metaforas-kast-enfrenta-su-primera-cuenta-publica-con
+  notas: "Análisis del estado del plan 'Desafío 90' (anunciado en agosto 2025, coordinado por Bernardo Fontaine) al momento de la primera Cuenta Pública de Kast."
+emol-2026-05-06-desafio-90-plan-campana:
+  tipo: prensa
+  medio: Emol
+  titulo: "¿Y el Desafío 90?: La evolución del plan estrella de la campaña que Kast recordó para hacer frente a las críticas"
+  autor: Emol
+  fecha: 2026-05-06
+  url: https://www.emol.com/noticias/Nacional/2026/05/06/1199191/desafio-90-plan-campana-kast.html
+  notas: "Contexto del plan 'Desafío 90': 90 medidas legislativas y de gestión para los primeros tres meses de gobierno, presentado en agosto de 2025 durante la campaña."
+elmostrador-2026-06-01-desafio-90-que-no-fue:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "'Desafío 90', el plan que no fue: ¿se puede esperar algo de la Cuenta Pública?"
+  autor: El Mostrador (columna de opinión)
+  fecha: 2026-06-01
+  url: https://www.elmostrador.cl/noticias/opinion/2026/06/01/desafio-90-el-plan-que-no-fue-se-puede-esperar-algo-de-la-cuenta-publica/
+  notas: "Columna sobre el balance del plan 'Desafío 90' al cumplirse los tres meses de gobierno."
+latercera-2021-12-05-kast-no-privatizar-codelco:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Kast insiste en que 'no vamos a privatizar Codelco': este martes presentará nuevo programa de gobierno con ajustes"
+  autor: Catalina Martínez
+  fecha: 2021-12-05
+  url: https://www.latercera.com/politica/noticia/kast-insiste-en-que-no-vamos-a-privatizar-codelco-este-martes-presentara-nuevo-programa-de-gobierno-con-ajustes/AM5RXKJV4FETTDNBST5TL54IAQ/
+  notas: "Desde Antofagasta, en su gira por el norte (5 dic 2021), Kast desmintió una eventual privatización de Codelco: 'no vamos a privatizar Codelco'. Contexto: misiva del 3 dic de sindicatos de Codelco Norte declarándolo persona no grata en Calama, llamados de la FTC (Patricio Elgueta) a votar por Boric, y anuncio del nuevo programa de gobierno con ajustes para el 7 dic 2021."
+biobiochile-2021-12-04-sindicatos-codelco-norte-kast-persona-no-grata:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sindicatos de Codelco Norte declaran a Kast 'persona no grata' en Calama"
+  autor: BioBioChile
+  fecha: 2021-12-04
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2021/12/04/sindicatos-de-codelco-norte-declaran-a-kast-persona-no-grata-en-calama.shtml
+  notas: "El 4 de diciembre de 2021, sindicatos de Codelco Norte declararon a Kast persona no grata en Calama por la llegada del candidato a la comuna en plena campaña de segunda vuelta, señalando que 'su programa no recoge las principales demandas de los movimientos sociales'."
+chilevision-2021-12-04-campana-partio-en-el-norte:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "La campaña partió en el norte: las estrategias de Boric y Kast para ganar los votos de Parisi"
+  autor: Chilevisión
+  fecha: 2021-12-04
+  url: https://www.chilevision.cl/noticias/reportajes/cronicas/la-campana-partio-en-el-norte-las-estrategias-de-boric-y-kast-para-ganar-los-votos-de-parisi/
+  notas: "Crónica del 4 dic 2021: a dos semanas de la segunda vuelta, Boric (Apruebo Dignidad) y Kast (Frente Social Cristiano) se desplegaron en el norte de Chile, región que concentró la mayoría de las preferencias de Franco Parisi. Apruebo Dignidad inició su recorrido liderado por Izkia Siches en Arica; Kast recibió un banderazo en Calama."
+youtube-2021-12-04-chv-noticias-central-kast-codelco:
+  tipo: video
+  medio: YouTube (CHV Noticias)
+  titulo: "CHV Noticias Central: Sábado 4 de diciembre de 2021 — Kast: 'No vamos a privatizar Codelco' (min 4:52)"
+  autor: CHV Noticias
+  fecha: 2021-12-04
+  url: https://youtu.be/C1Ex8dCDsRQ?t=292
+  notas: "Noticiero central de CHV del 4 dic 2021. En el minuto 4:52 (t=292) aparece la declaración de José Antonio Kast: 'No vamos a privatizar Codelco'. Video original de la noticia."
+youtube-2021-12-05-kast-no-vamos-a-privatizar-codelco:
+  tipo: video
+  medio: YouTube (Está Pasando)
+  titulo: "Kast: 'No vamos a privatizar Codelco'"
+  autor: Está Pasando
+  fecha: 2021-12-05
+  url: https://www.youtube.com/watch?v=ytSRf7Lgkmg
+  notas: "Clip resubido por el usuario 'Está Pasando' con la cita exacta de José Antonio Kast: 'No vamos a privatizar Codelco'."
+codelco-2026-03-27-resultados-2025:
+  tipo: comunicado_oficial
+  medio: Codelco
+  titulo: "Codelco cerró 2025 con un Ebitda de US$6.670 millones, una utilidad consolidada de US$2.423 millones y un aporte al Fisco de US$1.778 millones"
+  autor: Codelco
+  fecha: 2026-03-27
+  url: https://www.codelco.com/prensa/2026/codelco-cerro-2025-con-un-ebitda-de-us-6-670-millones-una-utilidad
+  notas: "Comunicado oficial de resultados 2025: aporte al Fisco US$1.778 millones (+16% vs 2024, cuando fue US$1.534 millones); Ebitda US$6.670 millones (+23%); utilidad consolidada US$2.423 millones incluyendo US$2.035 millones excepcionales por Novandino Litio (excluida esa partida: US$388 millones); producción propia 1.334.445 tmf; Capex récord US$5.073 millones. Sirve para verificar la cifra 'US$4.000 millones anuales' citada por el oficialismo en el debate de privatización de julio 2026."
+latercera-2023-03-31-aportes-codelco-2022:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Aportes de Codelco al Fisco en 2022 cayeron casi 60%"
+  autor: Víctor Guillou
+  fecha: 2023-03-31
+  url: https://www.latercera.com/pulso/noticia/aportes-de-codelco-al-fisco-cayeron-mas-de-60-en-2022-afectados-por-menores-precios-y-ventas-de-cobre/TA37YJ7TN5DYJMCSBS3L2SPP6M/
+  notas: "Los excedentes de Codelco en 2022 llegaron a US$2.746 millones (-62,9% vs 2021) y el aporte al Fisco a US$2.301 millones (-58,7%). En 2021 los excedentes récord fueron US$7.394 millones, el mejor resultado en nueve años."
+latercera-2022-02-25-codelco-excedentes-2021:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Codelco registró excedentes por US$7.394 millones el 2021 y anotó su mejor resultado en nueve años"
+  autor: La Tercera (Pulso)
+  fecha: 2022-02-25
+  url: https://www.latercera.com/pulso/noticia/codelco-registro-excedentes-por-us7394-millones-el-2021-y-anoto-su-mejor-resultado-en-9-anos/WS3GCDNAYBA7TOD6JIY4CMAGQQ/
+  notas: "Excedentes récord de Codelco en 2021 por el alto precio del cobre: US$7.394 millones, el mejor resultado en nueve años."
+chilevision-2026-07-29-jalaff-condena-factop:
+  tipo: prensa
+  medio: ChileVisión
+  titulo: "Caso Factop: Álvaro Jalaff es condenado a 5 años de libertad vigilada y el pago de millonaria multa"
+  autor: Fernanda Valdenegro
+  fecha: 2026-07-29
+  url: https://www.chilevision.cl/noticias/nacional/caso-factop-alvaro-jalaff-es-condenado-a-5-anos-de-libertad-vigilada-y-el-pago-de-millonaria-multa/
+  notas: "Mediante juicio abreviado, Jalaff fue condenado a 5 años de libertad vigilada intensiva y multa de $720 millones más 12 UTM por estafa, pagadera en 60 cuotas de ~$12 millones. Delitos: cohecho, tributarios, estafas, administración desleal e infracciones a la Ley de Mercado de Valores. El fiscal jefe de Alta Complejidad, Felipe Sepúlveda, argumentó que varios aportantes de Factop fueron engañados con participación relevante de Jalaff. El empresario reconoció haber entregado cerca de $410 millones al abogado Luis Hermosilla para gestionar autorizaciones del Minvu en un proyecto inmobiliario."
+t13-2026-07-29-alza-bencinas-enap:
+  tipo: prensa
+  medio: T13
+  titulo: "Confirman alza en el precio de las bencinas: gasolina de 93 y 97 octanos subirán $32,9 y el diésel $28,5"
+  autor: Javier Thomson N.
+  fecha: 2026-07-29
+  url: https://www.t13.cl/noticia/negocios/confirman-fuerte-alza-bencinas-gasolina-93-97-octanos-subiran-32-9-diesel-28-5-29-7-2026
+  notas: "Informe semanal de ENAP: +$32,9/L en gasolinas de 93 y 97 octanos y +$28,5/L en diésel. Kerosene y GLP vehicular sin variación. ENAP reitera que no fija ni regula los precios finales, que fijan las distribuidoras en mercado abierto."
+cnnchile-2026-07-29-daza-respalda-quiroz:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "José Luis Daza respalda la gestión del ministro Jorge Quiroz: 'Es el economista ideal para dirigir el programa económico chileno'"
+  autor: CNN Chile
+  fecha: 2026-07-29
+  url: https://www.cnnchile.com/negocios/jose-luis-daza-respalda-la-gestion-del-ministro-jorge-quiroz-es-el-economista-ideal-para-dirigir-el-programa-economico-chileno/
+  notas: "Daza, viceministro de Política Económica de Argentina, en el XXI Seminario Anual de Moneda Patria Investments. 'Chile va muy bien', dijo. Reveló que al final de la primera campaña de Kast le dijo que Chile no necesitaba más académicos sino alguien que conociera el detalle de la micro, y que en ese momento hablaron de Jorge Quiroz. Sobre Argentina: 'le rompimos la espalda a la inflación' aunque la interanual ronda 30%."
+eldesconcierto-2026-07-29-embajador-judd-raya-cancha:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "No ayuda a Chile: Embajador de EEUU raya la cancha al gobierno tras dichos provocativos por arancel de 12,5%"
+  autor: El Desconcierto
+  fecha: 2026-07-29
+  url: https://eldesconcierto.cl/actualidad/no-ayuda-chile-embajador-eeuu-raya-la-cancha-al-gobierno-dichos-provocativos-arancel-125-n5460891
+  notas: "Comunicado del embajador Brandon Judd consultado por Radio Bío Bío: deslegitimó los dichos de los ministros Barros y Campos calificándolos de 'provocativos'. 'Si dos ministros que no son parte de la negociación quieren hacer comentarios provocativos que socaven la habilidad de sus colegas de negociar, es tema de ellos'. Destacó logros: memorándum de minerales críticos, programa insignia antidrogas, Pax Silica para IA, US$22 mil millones en IED de los cuales US$10,5 mil millones provinieron de EE.UU."
+eldesconcierto-2026-07-29-decreto-seguridad-minera:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Decreto de Kast simplifica control del Estado sobre seguridad minera y deja responsabilidad en propias empresas"
+  autor: Álvaro Marchant Cuevas y María del Mar Parra
+  fecha: 2026-07-29
+  url: https://eldesconcierto.cl/reportajes/decreto-kast-simplifica-control-del-estado-seguridad-minera-y-deja-responsabilidad-propias-empresas-n5460758
+  notas: "Reportaje sobre el decreto del Ministerio de Minería que modifica el Reglamento de Seguridad Minera (DS 132): reemplaza 21 autorizaciones previas de Sernageomin por declaraciones juradas (artículos 89, 119, 128, 154, 164, 228, 239, 250, 254, 313, 329, 330, 365, 480, 485, 504, 518, 527, 539, 589 y 643), deroga 16 artículos completos (24, 59, 96, 110, 136, 168, 172, 203, 209, 222, 229, 243, 259, 271, 285, 290) y consolida su contenido en un nuevo artículo 22 que crea la figura del 'Proyecto Minero' con plazo de 50 días hábiles para faenas de más de 10.000 toneladas mensuales. La RCA deja de ser requisito para la tramitación minera ante Sernageomin. El servicio pasa de aprobador a fiscalizador posterior (artículos 686-687), con multas de hasta 100 UTA y remisión al Ministerio Público por información falsa. El umbral de pequeña minería sube de 5.000 a 10.000 toneladas mensuales (artículo 594). Análisis del abogado Diego Rojas."
+ocmal-2026-07-29-decreto-seguridad-minera:
+  tipo: prensa
+  medio: OCMAL (Observatorio de Conflictos Mineros de América Latina)
+  titulo: "Decreto de Kast simplifica control del Estado sobre seguridad minera y deja responsabilidad en propias empresas"
+  autor: Álvaro Marchant Cuevas y María del Mar Parra
+  fecha: 2026-07-29
+  url: https://ocmal.org/decreto-de-kast-simplifica-control-del-estado-sobre-seguridad-minera-y-deja-responsabilidad-en-propias-empresas
+  notas: "Réplica del reportaje de El Desconcierto en el Observatorio de Conflictos Mineros de América Latina (fundación ligada al activismo socioambiental). Fuente secundaria para contrastar el enfoque crítico."
+latercera-2026-08-03-simplificacion-permisos-mineria:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Gobierno ingresa a Contraloría modificación que simplifica 55 permisos mineros en 13 trámites para empujar la inversión"
+  autor: David Nogales
+  fecha: 2026-08-03
+  url: https://www.latercera.com/pulso/noticia/gobierno-ingresa-a-contraloria-modificacion-que-simplifica-55-permisos-mineros-en-13-tramites-para-empujar-la-inversion/
+  notas: "Anuncio del biministro Daniel Mas en la primera Cuenta Pública de Minería (Iquique, 3 agosto 2026): envío a Contraloría de modificación al Reglamento de Seguridad Minera que simplifica 55 autorizaciones sectoriales en 13 permisos y 18 'técnicas habilitantes alternativas' (THA) que operarán como declaraciones juradas, adecuándose a la Ley Marco de Autorizaciones Sectoriales. Plan 'Minería en Marcha' y plan de gobierno minero 2026-2030. Récord de 15 proyectos mineros por US$24 mil millones ingresados al SEIA desde el 11 de marzo."
+elmostrador-2026-07-29-diputados-arriendos-vehiculos:
+  tipo: prensa
+  medio: El Mostrador (Aquí Biobío)
+  titulo: "Diputados gastan millones en arriendos de vehículos y reparan autos propios con dinero público"
+  autor: Cristian Ascencio Ojeda
+  fecha: 2026-07-29
+  url: https://www.elmostrador.cl/noticias/pais/2026/07/29/diputados-gastan-millones-en-arriendos-de-vehiculos-y-reparan-autos-propios-con-dinero-publico/
+  notas: "Reportaje de Aquí Biobío vía transparencia sobre gastos operacionales 2025 de los 13 diputados de los distritos 20 y 21 (Región del Biobío): $92.463.000 en arriendo de vehículos, encabezados por Sergio Bobadilla (UDI, $20.446.757), Flor Weisse (UDI, $15.480.000), Cristóbal Urruticoechea (PNL, $14.130.758), Francesca Muñoz (PSC, $11.689.442), Roberto Arroyo (PSC, $8.624.071), Leonidas Romero (PNL, $8.378.429), Marlene Pérez (Ind-UDI, $7.810.478) y Félix González (PEV, $5.903.504). Seis diputados además pidieron fondos para mantención de autos particulares. Solo dos rindieron taxis: Karen Medina ($1.965.000) y Francesca Muñoz ($915.241)."
+resumen-2026-07-29-diputados-biobio-arriendos:
+  tipo: prensa
+  medio: Resumen.cl
+  titulo: "Diputados del Biobío cercanos a Kast gastaron más de $70 millones en arriendo de vehículos"
+  autor: Resumen.cl
+  fecha: 2026-07-29
+  url: https://resumen.cl/articulos/diputados-del-biobio-cercanos-a-kast-gastaron-mas-de-70-millones-en-arriendo-de-vehiculos
+  notas: "Cobertura regional del reportaje de Aquí Biobío/El Mostrador. Fuente secundaria de validación. Cifras del ranking coinciden con el reportaje original."
+cooperativa-2026-07-29-corazon-gobierno-arritmias:
+  tipo: prensa
+  medio: Radio Cooperativa
+  titulo: "'El corazón del Gobierno' amenaza con provocar arritmias"
+  autor: Cooperativa.cl
+  fecha: 2026-07-29
+  url: https://www.cooperativa.cl/noticias/pais/politica/partido-republicano/-el-corazon-del-gobierno-amenaza-con-provocar-arritmias/2026-07-29/145249.html
+  notas: "Análisis de la tensión entre el Partido Republicano (considerado por Kast el 'corazón del Gobierno') y el Ejecutivo por la agenda valórica: aborto ('Escucha su corazón'), indultos y privatización de Codelco. Agustín Romero (REP) defendió que 'no puede ocurrir que en Chile haya ciertos temas que están vedados'. En Evópoli creen 'paradójico' que el partido fundado por Kast 'sea el primero en poner obstáculos'."
+mestizos-2026-07-29-canodromos-carreras-perros:
+  tipo: prensa
+  medio: Mestizos Magazine
+  titulo: "La Cámara decide si Chile prohíbe las carreras de perros o legaliza los canódromos"
+  autor: Daniela Prieto
+  fecha: 2026-07-29
+  url: https://www.mestizos.cl/actualidad-animal/2026/07/29/la-camara-decide-si-chile-prohibe-las-carreras-de-perros-o-legaliza-los-canodromos.html
+  notas: "La Sala votará dos proyectos opuestos: el que prohíbe las carreras de perros y el Boletín 12.786-12 que otorga reconocimiento legal a los canódromos, recintos que operan en la clandestinidad. La Fundación Derecho y Defensa Animal llama a aprobar la prohibición y rechazar la regulación, que llega a Sala con vicio de tramitación constitucional (artículo 14 quáter modificado sin consulta a la Corte Suprema, requisito del artículo 77 de la Constitución). Contexto: canódromo de José Arrieta en Peñalolén funcionó más de dos décadas sin permiso hasta su demolición en septiembre de 2025; en 2020 la PDI detuvo a 12 personas en una carrera clandestina en Quereo (Los Vilos). Chile es el único país de la región con un proyecto para legalizar los canódromos (Argentina prohibió en 2016 por Ley 27.330, Uruguay por decreto en 2018, Panamá en 2012)."
+adnradio-2026-08-03-carreras-galgos-camara:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Cámara vota hoy prohibición de carreras de galgos: proyecto divide a diputados entre 'maltrato' y 'tradición'"
+  autor: ADN Radio
+  fecha: 2026-08-03
+  url: https://www.adnradio.cl/2026/08/03/camara-vota-hoy-prohibicion-de-carreras-de-galgos-proyecto-divide-a-diputados-entre-maltrato-y-tradicion/
+  notas: "Confirmación del día de votación (lunes 3 de agosto de 2026) de la prohibición de las carreras de perros en la Cámara de Diputados. La diputada Claudia Mora (RN) respaldó la iniciativa."
+adnradio-2026-07-29-hernandez-codelco-peor-momento:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'Es el peor momento': expresidente de Codelco arremete contra propuesta de privatizar Codelco"
+  autor: ADN Radio
+  fecha: 2026-07-29
+  url: https://www.adnradio.cl/2026/07/29/es-el-peor-momento-expresidente-de-codelco-arremete-contra-propuesta-de-privatizar-codelco/
+  notas: "Diego Hernández, expresidente ejecutivo de Codelco, en conversación con CNN: 'no estoy de acuerdo y, sobre todo, creo que es el peor momento para plantear esa alternativa'. Argumentó que Codelco enfrenta una deuda cercana a los US$25 mil millones, lo que dificulta cualquier apertura al mercado: 'Es difícil vender o incluso abrir a la bolsa una empresa con ese nivel de deuda'. Apuntó al modelo de financiamiento: la estatal no tuvo fondos para reinvertir y debió recurrir a la deuda."
+biobiochile-2026-07-29-quiroz-cierra-puerta-codelco:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Quiroz cierra la puerta a privatizar Codelco y proyecta alianzas con privados para 'sacarla adelante'"
+  autor: BioBioChile
+  fecha: 2026-07-29
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/07/29/quiroz-cierra-la-puerta-a-privatizar-codelco-y-proyecta-alianzas-con-privados-para-sacarla-adelante.shtml
+  notas: "El ministro de Hacienda, Jorge Quiroz, cerró la puerta a la privatización de Codelco pero proyectó alianzas con privados para 'sacarla adelante'. Declaraciones en el marco del debate abierto por la propuesta del presidente del Partido Republicano, Arturo Squella."
+cnnchile-2026-07-29-ps-codelco-cobre-no-se-vende:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Partido Socialista rechaza idea de privatizar Codelco: 'El cobre no se vende'"
+  autor: CNN Chile
+  fecha: 2026-07-29
+  url: https://www.cnnchile.com/pais/partido-socialista-rechaza-idea-de-privatizar-codelco-el-cobre-no-se-vende/
+  notas: "La Comisión Política del Partido Socialista manifestó su rechazo a la ofensiva de Republicanos para privatizar Codelco, impulsada por su presidente y senador Arturo Squella. El PS sostiene que el gobierno hizo los primeros movimientos con la venta de activos estratégicos; por ello argumentan que 'el cobre no se vende'. Recuerdan que la nacionalización del cobre fue una de las iniciativas del expresidente Salvador Allende y 'constituye una de las mayores conquistas de nuestra historia'."
+theclinic-2026-07-29-fesuc-codelco-no-se-vende:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "'Codelco no se vende': La dura respuesta de funcionarios a la propuesta de Republicanos de privatizar la estatal"
+  autor: Victoria García
+  fecha: 2026-07-29
+  url: https://www.theclinic.cl/2026/07/29/codelco-no-se-vende-la-dura-respuesta-de-funcionarios-a-la-propuesta-de-republicanos-de-privatizar-la-estatal/
+  notas: "La Federación de Supervisores del Cobre (FESUC) manifestó su 'más absoluto rechazo' a cualquier iniciativa destinada a privatizar, total o parcialmente, Codelco, tras la propuesta del senador republicano Arturo Squella. 'Codelco no es un juguete del gobierno de turno, ni del Congreso Nacional', señalaron, y pidieron fortalecer la empresa pública mediante cambios en gestión, productividad, seguridad y capacidad de inversión."
+latercera-2026-07-28-nunez-escucha-corazon:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Nuñez no comparte proyecto 'Escucha su Corazón' y expresa dudas por nueva causal de cesación del cargo por consumo de drogas"
+  autor: Joaquín Barrientos
+  fecha: 2026-07-28
+  url: https://www.latercera.com/politica/noticia/paulina-nunez-no-comparte-proyecto-escucha-su-corazon-y-expresa-dudas-por-nueva-causal-de-cesacion-del-cargo-por-consumo-de-drogas/
+  notas: "La presidenta del Senado, Paulina Núñez (RN), calificó de 'innecesario' y dijo que 'no le parece' el proyecto 'Escucha su Corazón' impulsado por el Partido Nacional Libertario, que condiciona el aborto bajo las tres causales a escuchar los latidos del embrión. También expresó dudas sobre la reforma constitucional de test de drogas que establece la destitución como sanción para autoridades elegidas democráticamente."
+gamba-2026-07-28-nunez-escucha-corazon:
+  tipo: prensa
+  medio: Gamba.cl
+  titulo: "Paulina Núñez rechazó aberrante proyecto escucha su corazón"
+  autor: Gamba.cl
+  fecha: 2026-07-28
+  url: https://www.gamba.cl/2026/07/paulina-nunez-escucha-su-corazon/
+  notas: "Cobertura con línea editorial crítica de la reacción de la presidenta del Senado, Paulina Núñez (RN), al proyecto 'Escucha su corazón'. Fuente secundaria; la declaración original fue consignada por La Tercera el 28 de julio de 2026."
+biobiochile-2026-08-01-megarreforma-26-votos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Ley de Reconstrucción Nacional: contra el tiempo, el Gobierno busca asegurar 26 votos antes del martes"
+  autor: BioBioChile
+  fecha: 2026-08-01
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/01/ley-de-reconstruccion-nacional-contra-el-tiempo-el-gobierno-busca-asegurar-26-votos-antes-del-martes.shtml
+  notas: "El Gobierno de José Antonio Kast busca asegurar los 26 votos para aprobar la Ley de Reconstrucción Nacional el martes 4 de agosto. Los senadores UDI Sergio Gahona y Gustavo Sanhueza terminarían votando a favor, este último a la espera de gestos concretos. El independiente Matías Walker exige un acuerdo por escrito que entregue fondos a Coquimbo y la provincia de Huasco. Además, el Gobierno ingresará al menos dos vetos la próxima semana: al 'anatocismo' y al 'olvido financiero'."
+cnnchile-2026-08-01-romero-agenda-ideologica:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Diputado Romero por llamado de atención de Kast: 'Tenemos derecho a poner la agenda ideológica de un sector importante de la población'"
+  autor: CNN Chile
+  fecha: 2026-08-01
+  url: https://www.cnnchile.com/pais/diputado-romero-por-llamado-de-atencion-de-kast-tenemos-derecho-a-poner-la-agenda-ideologica-de-un-sector-importante-de-la-poblacion/
+  notas: "El diputado del Partido Republicano Agustín Romero defendió la agenda valórica impulsada por parlamentarios del oficialismo tras el llamado de atención de Kast en el aniversario de la CCS. El presidente advirtió que hay partidos que impulsan proyectos que desenfocan la agenda de seguridad y economía, mencionando 'Escucha tu corazón', la privatización de Codelco y la cárcel para la venta de misoprostol fuera de las tres causales. Fuente única para esta declaración; la polémica por la agenda valórica del oficialismo también está cubierta por The Clinic y Radio Universidad de Chile (ver 20260731-15)."
+elmostrador-2026-08-01-ind-duco-alerta:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "En alerta institucional: Funcionarios del IND en pie de guerra con Natalia Duco"
+  autor: El Mostrador
+  fecha: 2026-08-01
+  url: https://www.elmostrador.cl/noticias/deportes/2026/08/01/en-alerta-institucional-funcionarios-del-ind-en-pie-de-guerra-con-natalia-duco/
+  notas: "Cobertura de validación del conflicto entre ANFUCHID y la ministra del Deporte Natalia Duco. El gremio acusó falta de diálogo desde marzo con la ministra y el subsecretario Andrés Otero, denunció que conoció por vías no oficiales un proyecto de ley que modificaría la institucionalidad deportiva, y expresó inquietud por decisiones en el Plan Olímpico y el alto rendimiento."
+cooperativa-2026-08-01-ind-duco-alerta:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Funcionarios del IND entraron en 'alerta institucional' por negativa de Duco al diálogo"
+  autor: Cooperativa
+  fecha: 2026-08-01
+  url: https://www.cooperativa.cl/noticias/site/artic/20260801/pags-amp/20260801155025.html
+  notas: "Cobertura de validación del comunicado de ANFUCHID: el gremio denunció que desde marzo intenta reunirse con la ministra Natalia Duco y el subsecretario Andrés Otero, que tras el anuncio ante la Comisión de Deportes de la Cámara usó la Ley del Lobby sin respuesta, y que conoció por antecedentes no oficiales un proyecto de ley sobre la institucionalidad del deporte."
+eldinamo-2026-08-01-ind-duco-alerta:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Funcionarios del IND declaran 'alerta institucional' y arremeten contra reforma impulsada por ministra Natalia Duco"
+  autor: El Dínamo
+  fecha: 2026-08-01
+  url: https://www.eldinamo.cl/pais/2026/08/01/funcionarios-del-ind-declaran-alerta-institucional-y-arremeten-contra-reforma-impulsada-por-ministra-natalia-duco/
+  notas: "Cobertura de validación: la Asociación Nacional de Funcionarios del IND manifestó su inquietud por el alcance de las modificaciones anunciadas por Duco ante la Comisión de Deportes de la Cámara, denunciando que los intentos de reunión, incluida la Ley del Lobby, no obtuvieron respuesta favorable."
+ladiscusion-2026-08-01-carcel-chillan:
+  tipo: prensa
+  medio: La Discusión (Chillán)
+  titulo: "Ocho celulares, 40 armas blancas, licor y envoltorios incautan en cárcel de Chillán"
+  autor: La Discusión
+  fecha: 2026-08-01
+  url: https://ladiscusion.cl/ocho-celulares-40-armas-blancas-licor-y-envoltorios-incautan-en-carcel-de-chillan/
+  notas: "Cobertura regional de validación del allanamiento en el Centro de Cumplimiento Penitenciario de Chillán: 282 internos intervenidos, 94 funcionarios y ocho canes, con incautación de ocho celulares, 40 armas blancas artesanales, siete objetos contundentes, licor artesanal y sustancias. Incluye declaraciones del ministro Martín Arrau y del plan de infraestructura para Gendarmería."
+radiointeramericana-2026-08-01-las-trancas-transito:
+  tipo: prensa
+  medio: Radio Interamericana
+  titulo: "Sistema frontal en Ñuble: Suspenden tránsito a Las Trancas y sólo se podrá acceder con reserva previa"
+  autor: Radio Interamericana
+  fecha: 2026-08-01
+  url: https://radiointeramericana.cl/sistema-frontal-en-nuble-suspenden-transito-a-las-trancas-y-solo-se-podra-acceder-con-reserva-previa/
+  notas: "Cobertura de validación (reproducción del comunicado de Carabineros): corte preventivo del tránsito en la Ruta N-55 hacia Nevados de Chillán por precipitaciones de lluvia/nieve, saturación de agua en el terreno y alta congestión vehicular. Control de Carabineros en el kilómetro 69 para verificar que quien ingrese sea residente o cuente con reserva previa."
+emol-2026-07-25-votos-reconstruccion-senadores:
+  tipo: prensa
+  medio: Emol
+  titulo: "Apoyo condicionado: Qué piden los tres senadores que el Gobierno necesita convencer para aprobar Reconstrucción"
+  autor: Emol
+  fecha: 2026-07-25
+  url: https://www.emol.com/noticias/Nacional/2026/07/25/1206676/votos-reconstruccion-senadores-respaldo-megarreforma.html
+  notas: "Antecedente de validación: Emol detalló las condiciones de los senadores Sergio Gahona y Matías Walker (inclusión de Coquimbo y el Huasco en la reconstrucción) y de Gustavo Sanhueza (controles al uso de recursos municipales y pago de deudas a trabajadores de educación y salud municipales), que pusieron en suspenso los 26 votos requeridos tras el aplazamiento del 22 de julio."
+latercera-2026-08-03-megarreforma-platas-municipales:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Megarreforma: gobierno queda a un paso de aprobar platas municipales y se inclina por solo dos vetos"
+  autor: José Miguel Wilson
+  fecha: 2026-08-03
+  url: https://www.latercera.com/politica/noticia/megarreforma-gobierno-queda-a-un-paso-de-aprobar-platas-municipales-y-se-inclina-por-solo-dos-vetos/
+  notas: "Validación posterior: La Tercera confirmó que el Senado votará el martes 4 de agosto el artículo pendiente sobre compensación fiscal a municipios, que requiere 26 votos por ser cambio a la Ley Orgánica sobre Municipalidades. Walker mantuvo el suspenso pero abrió la puerta a compromisos escritos (glosas en la Ley de Presupuestos y catastro en el Fondo Nacional de Reconstrucción de la Ley 20.444), y el gobierno se inclinó por vetar el anatocismo y el derecho al olvido financiero. Sanhueza adelantó que no sería obstáculo tras reunirse con García Ruminot."
+latercera-2026-08-03-walker-coquimbo-voto:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Senador Walker: 'Si se garantizan los recursos para la reconstrucción de Coquimbo, voto a favor del trámite final'"
+  autor: La Tercera
+  fecha: 2026-08-03
+  url: https://www.latercera.com/politica/noticia/senador-walker-si-se-garantizan-los-recursos-para-la-reconstruccion-de-coquimbo-voto-a-favor-de-tramite-final-del-megaproyecto/
+  notas: "Entrevista de La Tercera (programa Desde La Redacción) al senador Matías Walker, quien condicionó su voto favorable al trámite final de la megarreforma a que La Moneda garantice por escrito recursos para la reconstrucción de Coquimbo, evaluando glosas en la Ley de Presupuestos y el Fondo Nacional de Reconstrucción."
+adnradio-2026-08-01-ind-duco-alerta-institucional:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "El IND lanza un duro comunicado contra la ministra Duco y se declara en 'alerta institucional'"
+  autor: ADN Radio
+  fecha: 2026-08-01
+  url: https://www.adnradio.cl/2026/08/01/el-ind-lanza-un-duro-comunicado-contra-la-ministra-duco-y-se-declara-en-alerta-institucional/
+  notas: "La Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID) acusó a la ministra del Deporte, Natalia Duco, de presentar ante el presidente Kast una propuesta para modificar la institucionalidad del IND sin diálogo con los trabajadores, y se declaró en 'estado de alerta institucional'. El Mindep desmintió que se haya presentado un proyecto de reestructuración y confirmó que las modificaciones se trabajarán en una mesa técnica con todos los actores."
+latercera-2026-08-01-arrau-allanamiento-chillan:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Ministro Arrau supervisa allanamiento en cárcel de Chillán: 40 armas blancas y ocho celulares incautados"
+  autor: Felipe Rivera
+  fecha: 2026-08-01
+  url: https://www.latercera.com/nacional/noticia/ministro-arrau-supervisa-allanamiento-en-carcel-de-chillan-40-armas-blancas-y-ocho-celulares-incautados/
+  notas: "El ministro de Seguridad Pública, Martín Arrau, supervisó un allanamiento de Gendarmería en el Centro de Cumplimiento Penitenciario de Chillán que dejó 40 armas blancas artesanales, ocho celulares, siete objetos contundentes, licor artesanal y tres envoltorios con sustancias sin identificar. Se intervino a 282 internos con 94 funcionarios y ocho perros. Acompañaron al ministro el delegado presidencial de Ñuble Diego Sepúlveda, el seremi de Seguridad Héctor Ponce y la seremi de Justicia Natalia Reyes."
+adnradio-2026-07-31-pampilla-gobierno-responde:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Tras cancelación de la Pampilla 2026: Gobierno responde a Manouchehri y afirma que decisión 'es del alcalde'"
+  autor: ADN Radio
+  fecha: 2026-07-31
+  url: https://www.adnradio.cl/2026/07/31/tras-cancelacion-de-la-pampilla-2026-gobierno-responde-a-manouchehri-y-afirma-que-decision-es-del-alcalde/
+  notas: "El subsecretario del Interior, Máximo Pavez, respondió a las críticas del alcalde de Coquimbo, Ali Manouchehri, por la cancelación de la Pampilla 2026: 'la decisión final respecto a la Pampilla es una situación del alcalde y no del Gobierno' y 'los recursos han estado, están y van a estar'. Pavez informó que comenzó el pago del bono de recuperación para más de 12 mil hogares damnificados, y la ministra de Desarrollo Social, María Jesús Wulf, precisó el pago de segundas y terceras nóminas de las FIBE a 12 mil hogares, con montos entre $750 mil y $1,5 millones."
+biobiochile-2026-08-01-las-trancas-suspension:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sistema frontal en Ñuble: Suspenden tránsito a Las Trancas y sólo se podrá acceder con reserva previa"
+  autor: Alejandro Alarcón
+  fecha: 2026-08-01
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-nuble/2026/08/01/sistema-frontal-en-nuble-suspenden-transito-a-las-trancas-y-solo-se-podra-acceder-con-reserva-previa.shtml
+  notas: "La tarde del sábado 1 de agosto, personal de la Tenencia Las Trancas (comuna de Pinto, Región de Ñuble) suspendió el tránsito hacia el sector y solo se podrá acceder con reserva previa, en el marco del sistema frontal que afecta a la zona."
+biobiochile-2026-08-01-concejal-lago-verde-incendio:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Concejal de Lago Verde muere tras incendiarse hotel donde se hospedaba con su delegación"
+  autor: BioBioChile
+  fecha: 2026-08-01
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-aysen/2026/08/01/concejal-de-lago-verde-muere-tras-incendiarse-hotel-donde-se-hospedaba-con-su-delegacion.shtml
+  notas: "Un incendio en el hospedaje Casona El Bosque, en Villa Amengual (Aysén), cobró la vida de Claudio Soto Solís, de 43 años, concejal de Lago Verde. En el recinto se alojaba una delegación municipal que participaría en el Festival de la Lana, suspendido tras lo ocurrido. La Fiscalía instruyó diligencias a la SIP y Labocar de Coyhaique; la alcaldesa Claudia Valdés lamentó la tragedia."
+biobiochile-2026-08-01-venezuela-consular-avanzada:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Tras dos años y excluyendo por ahora las expulsiones: Chile y Venezuela reactivan relación consular"
+  autor: BioBioChile
+  fecha: 2026-08-01
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/01/tras-dos-anos-y-excluyendo-por-ahora-las-expulsiones-chile-y-venezuela-reactivan-relacion-consular.shtml
+  notas: "El primer paso concreto de la reactivación consular comenzó este fin de semana con una avanzada encabezada por el director general de Asuntos Consulares, Hernán Núñez, que viajó a Caracas. La hoja de ruta contempla recuperar dos oficinas: Caracas y Puerto Ordaz. Una vez operativas permitirán la emisión de pasaportes y asistencia consular a cerca de 700 mil venezolanos en Chile y 25 mil chilenos en Venezuela. La reapertura no incluye por ahora materias judiciales ni procesos de expulsión."
+emol-2026-07-31-oficialismo-critica-servel:
+  tipo: prensa
+  medio: Emol
+  titulo: "'Es una actitud inaceptable': Araya (IND-PPD) y Veloso (FA) cuestionan al Servel y desatan críticas en el oficialismo"
+  autor: Gabriela Valdés
+  fecha: 2026-07-31
+  url: https://www.emol.com/noticias/Nacional/2026/07/31/1207248/oficialismo-critica-dichos-servel-oposicion.html
+  notas: "Cobertura primaria de Emol sobre el origen de la polémica: en el streaming 'Un Día Menos' conducido por Darío Quiroga, el diputado Jaime Araya sostuvo que 'variada gente me ha planteado la inquietud de que está en juego la credibilidad del Servel, porque es impresionante cómo nadie votó por Kast y sacó esa tremenda mayoría'. La diputada FA Consuelo Veloso respaldó la apreciación y aludió a investigaciones de intervención electoral en la región. Las diputadas UDI Flor Weisse y Marlene Pérez calificaron los dichos como 'absolutamente irresponsables e inaceptables' y emplazaron al PPD y al FA a desmarcarse; los republicanos Alejandro Riquelme y Felipe Ross también condenaron las declaraciones."
+emol-2026-07-31-araya-servel-dichos-editados:
+  tipo: prensa
+  medio: Emol
+  titulo: "Diputado Araya (Ind-PPD) descarta críticas al Servel y afirma que dichos en streaming fueron 'editados'"
+  autor: I. Guerra
+  fecha: 2026-07-31
+  url: https://www.emol.com/noticias/Nacional/2026/07/31/1207304/araya-servel-criticas-dichos-editados.html
+  notas: "Cobertura primaria de Emol de la reacción de Araya: tras el revuelo, el diputado se desdijo de las críticas al Servel, asegurando que sus palabras se trataban de 'ironía' y que el registro audiovisual fue 'editado' de manera malintencionada. 'Es grave que la UDI y Republicanos crean cualquier estupidez que escribe una cuenta falsa en redes sociales. Eso explica de buena forma el fracaso del gobierno: no sabemos si son flojos, malintencionados o torpes, pero en todos los casos es una mala cosa para el país', afirmó. Añadió que 'quedaron en ridículo por el simple hecho de tragarse una noticia falsa'."
+elsereno-2026-08-01-video-servel-bots:
+  tipo: redes
+  medio: El Sereno (Talca)
+  titulo: "Denuncian operación política con fake news y bots contra Araya y Veloso"
+  autor: El Sereno
+  fecha: 2026-08-01
+  url: https://www.facebook.com/elserenonoticias/posts/denuncian-operaci%C3%B3n-pol%C3%ADtica-con-fake-news-y-bots-contra-araya-y-velosoun-video-/1041503535301060/
+  notas: "Publicación en Facebook del medio local El Sereno (Talca) denunciando que el video recortado fue difundido inicialmente desde cuentas bot presuntamente asociadas al Partido Republicano, recogido luego por Emol y replicado por diputados republicanos y por Guillermo Ramírez, jefe de bancada de la UDI. Fuente complementaria de redes sociales con línea editorial crítica al oficialismo; la cobertura primaria del episodio está en Emol."
+contrapoder-2026-08-01-araya-video-manipulado:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "'No sabemos si son flojos o torpes': Diputado Jaime Araya cuestiona a bancada UDI por difundir un video manipulado"
+  autor: Contrapoder Chile
+  fecha: 2026-08-01
+  url: https://contrapoderchile.cl/no-sabemos-si-son-flojos-o-torpes-diputado-jaime-araya-cuestiona-a-bancada-udi-por-difundir-un-video-manipulado/
+  notas: "El diputado Jaime Araya (IND-PPD) cuestionó la difusión por parlamentarios y dirigentes de la UDI y Republicanos de un video editado de un podcast que una cuenta falsa en X descontextualizó para fingir una crítica al Servel. 'Es grave que la UDI y Republicanos crean cualquier estupidez que escribe una cuenta falsa en redes sociales', afirmó. Medio con línea editorial de oposición; la cobertura primaria del episodio está en Emol (31/07/2026)."
+latercera-2026-08-01-udi-dieta-expresidentes:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "UDI reingresará proyecto para que dieta de expresidentes se pague desde los 65 años tras polémica publicación de Boric"
+  autor: Javiera Ortiz
+  fecha: 2026-08-01
+  url: https://www.latercera.com/politica/noticia/udi-reingresara-proyecto-para-que-dieta-de-expresidentes-se-pague-desde-los-65-anos-tras-polemica-publicacion-de-boric/
+  notas: "La bancada UDI, a través del subjefe Sergio Bobadilla y el diputado Eduardo Cretton, anunció el reingreso en septiembre del proyecto que establece el pago de la dieta de expresidentes desde los 65 años (hombres) y 60 (mujeres), en reacción al reposteo del expresidente Gabriel Boric de una entrevista al vocalista de Candelabro que llamó 'imbéciles' a miembros del gobierno. La iniciativa fue rechazada en septiembre de 2025 por falta de quórum."
+reddit-2026-08-01-udi-dieta-expresidentes:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "UDI reingresará proyecto para postergar dieta de expresidentes aludiendo a publicación de Boric"
+  autor: Reddit r/chile
+  fecha: 2026-08-01
+  url: https://old.reddit.com/r/chile/comments/1vd0f9z/udi_reingresar%C3%A1_proyecto_para_postergar_dieta_de/
+  notas: "Hilo de Reddit replicando la noticia de El Mostrador y La Tercera sobre el anuncio de la UDI de reingresar el proyecto de dieta de expresidentes desde los 65 años. Fuente complementaria; la noticia primaria está en La Tercera."
+latercera-2026-08-01-rn-ffaa-policias-urgencia:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Diputados RN piden al Gobierno poner urgencia a proyecto que permite apoyo de las Fuerzas Armadas a las policías"
+  autor: Sebastián Escobar F.
+  fecha: 2026-08-01
+  url: https://www.latercera.com/politica/noticia/diputados-rn-piden-al-gobierno-poner-urgencia-a-proyecto-que-permite-apoyo-de-las-fuerzas-armadas-a-las-policias/
+  notas: "La diputada Ximena Ossandón y el jefe de bancada de RN, Diego Schalper, solicitaron al Gobierno urgencia para la reforma constitucional presentada el 6 de julio de 2026 que establece un régimen transitorio para que las Fuerzas Armadas apoyen a Carabineros y la PDI en zonas afectadas por el crimen organizado. El oficio fue dirigido a los ministros José García Ruminot y Martín Arrau. La moción la firman Ossandón, Beltrán, Celis, Durán, René Manuel García, Mauro González, Orrego, Pardo, Schalper y Tomás Kast."
+latercera-2026-08-01-coyhaique-aldea-emergencia:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Coyhaique instala aldea de emergencia para 200 personas ante ola de frío y nevadas"
+  autor: Javiera Ortiz
+  fecha: 2026-08-01
+  url: https://www.latercera.com/nacional/noticia/coyhaique-instala-aldea-de-emergencia-para-200-personas-ante-ola-de-frio-y-nevadas/
+  notas: "La municipalidad de Coyhaique instaló una 'aldea de emergencia' con financiamiento del Gobierno Regional de Aysén y del municipio: seis carpas habitacionales calefaccionadas, una carpa central de operaciones, seis módulos dobles de baños, torres de iluminación, internet satelital y una cuatrimoto, con capacidad para 200 personas ante temperaturas que podrían llegar a -14°C. El alcalde Carlos Gatica dijo que la infraestructura pionera en Chile se pondrá a disposición de otros municipios."
+latercera-2026-08-01-batalla-cultural-privatizacion:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "El nuevo eslabón de la 'batalla cultural' que irrumpe con el impulso privatizador de Quiroz"
+  autor: Julio Nahuelhual
+  fecha: 2026-08-01
+  url: https://www.latercera.com/pulso/noticia/el-nuevo-eslabon-de-la-batalla-cultural-que-irrumpe-con-el-impulso-privatizador-de-quiroz/
+  notas: "Análisis de Pulso sobre el impulso privatizador del ministro de Hacienda Jorge Quiroz como parte de una 'batalla cultural'. Fuentes de La Moneda reconocen que la idea de privatizar empresas públicas se discute desde que Quiroz fue designado en enero. Se evalúa incorporar capital privado a Enap y, en menor medida, a BancoEstado. El presidente del Partido Republicano, Arturo Squella, planteó que tras la megarreforma debería venir la privatización de Codelco; el diputado Agustín Romero afirmó que 'nunca es mal momento para hacer lo correcto'. En el seminario de Moneda Patria Investment, José Luis Daza llamó a no limitar las ambiciones, y el presidente del Consejo del SEP, Felipe Morandé, descartó una privatización inmediata."
+ftc-2026-05-28-daniel-diaz-director-codelco:
+  tipo: institucional
+  medio: Federación de Trabajadores del Cobre (FTC)
+  titulo: "Consejero Nacional Daniel Díaz es nombrado Director de Codelco"
+  autor: FTC
+  fecha: 2026-05-28
+  url: https://www.ftc.cl/consejero-nacional-daniel-diaz-es-nombrado-director-de-codelco/
+  notas: "Comunicado institucional de la FTC confirmando que el 28 de mayo el Presidente de la República formalizó el nombramiento de Daniel Díaz Olguín, director del Sindicato Minero de Chuquicamata y consejero nacional de la FTC, como director de Codelco en representación de la Federación, hasta mayo de 2030."
+latercera-2026-05-28-daniel-diaz-director-codelco:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Daniel Díaz, dirigente de Chuquicamata, será el representante de los trabajadores en directorio de Codelco"
+  autor: Ignacio Badal
+  fecha: 2026-05-28
+  url: https://www.latercera.com/pulso/noticia/daniel-diaz-dirigente-de-chuquicamata-sera-el-representante-de-los-trabajadores-en-directorio-de-codelco/
+  notas: "La Tercera confirmó que Daniel Díaz Olguín integrará el directorio de Codelco como representante de los trabajadores entre el 27 de mayo de 2026 y el 26 de mayo de 2030, elegido de la quina presentada en abril por la FTC. Reemplaza a Nelson Cáceres Hernández. Con su designación se completa la nómina del nuevo directorio que preside Bernardo Fontaine."
+contrapoder-2026-05-daniel-diaz-codelco-denuncia:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "Fue designado por Kast: Denuncian que nuevo director de Codelco posee empresas mineras y nexos con empresarios chinos"
+  autor: Contrapoder Chile
+  fecha: 2026-05-28
+  url: https://contrapoderchile.cl/seria-designado-por-kast-denuncian-que-candidato-a-directorio-de-codelco-posee-empresas-mineras-y-nexos-con-empresarios-chinos/
+  notas: "Reportaje de Contrapoder Chile (mayo 2026) que denuncia que Daniel Díaz Olguín, designado director de Codelco por Kast en el cupo de la FTC, posee dos empresas ligadas a la minería (NEDX SpA y Global Commodity Brokers SpA) y se reunió con empresarios chinos en Calama, según escrituras públicas. Incluye derechos a réplica de Juan Carlos Olguín y del propio Díaz. Medio con línea editorial de oposición; las escrituras citadas son verificables."
+eldesconcierto-2026-08-03-lobos-marinos-veda:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Gobierno evaluaría levantar la veda y autorizar la eventual caza de lobos marinos"
+  autor: El Desconcierto
+  fecha: 2026-08-03
+  url: https://eldesconcierto.cl/actualidad/gobierno-evaluaria-levantar-la-veda-y-autorizar-la-eventual-caza-lobos-marinos-n5460979
+  notas: "La Subsecretaría de Pesca confirmó que analiza alternativas frente a los conflictos con pescadores artesanales, aunque cualquier cambio requerirá respaldo técnico. La normativa vigente establece una veda extractiva para el lobo marino común; la legislación más reciente renovó la veda extractiva de mamíferos marinos por 30 años desde el 11 de noviembre de 2025."
+diariousach-2026-08-03-lobos-marinos-ambientalistas:
+  tipo: prensa
+  medio: Diario Usach
+  titulo: "'Destruir el ecosistema y especies no es viable': Ambientalistas cuestionan dichos de subsecretario de Pesca para levantar la veda y caza del lobo marino"
+  autor: Diario Usach
+  fecha: 2026-08-03
+  url: https://www.diariousach.cl/destruir-el-ecosistema-y-especies-no-es-viable-ambientalistas-cuestionan
+  notas: "Las declaraciones del subsecretario de Pesca y Acuicultura, Osvaldo Urrutia, sobre evaluar el levantamiento de la veda y una eventual caza de lobos marinos ante el impacto en la pesca artesanal del sur generaron rechazo de organizaciones ambientalistas, que señalaron que los censos oficiales muestran una población estable y que 'destruir el ecosistema y especies no es viable'."
+reddit-2026-08-02-subpesca-lobos-marinos:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "URGENTE: SUBPESCA evalúa cuota de caza de lobos marinos"
+  autor: Reddit r/chile
+  fecha: 2026-08-02
+  url: https://old.reddit.com/r/chile/comments/1vd50tz/urgente_subpesca_eval%C3%BAa_cuota_de_caza_de_lobos/
+  notas: "Video publicado en r/chile denunciando que SUBPESCA evalúa una cuota de caza de lobos marinos, con contexto histórico de las campañas de protección (100 mil firmas de 2012). Fuente complementaria; la noticia primaria fue publicada por El Desconcierto y Diario Usach el 3 de agosto de 2026."
+rln-2026-08-01-villa-amengual-incendio:
+  tipo: prensa
+  medio: Radio Las Nieves
+  titulo: "Incendio ocurrido en Villa Amengual dejó una víctima fatal"
+  autor: Radio Las Nieves
+  fecha: 2026-08-01
+  url: https://www.rln.cl/destacado/153228-incendio-ocurrido-en-villa-amengual-dejo-una-victima-fatal/
+  notas: "Cobertura regional de Aysén. Incendio cerca de las 5:00 horas en el restaurante y hospedaje 'La Casona del Bosque' de Villa Amengual. Confirmó desde el municipio que la víctima es el concejal Claudio Soto Solís, quien participaría del Día del Campesino y la Fiesta de la Lana. En el lugar trabajaron Bomberos, Carabineros y el municipio; el Ministerio Público dispuso la intervención de Labocar y el SML."
+emol-2026-08-01-udi-dieta-expresidentes:
+  tipo: prensa
+  medio: Emol
+  titulo: "Tras video compartido por Boric con insultos a Kast: UDI reactivará proyecto que fija dieta de expresidentes desde los 65"
+  autor: Nicolás Stevenson
+  fecha: 2026-08-01
+  url: https://www.emol.com/noticias/Nacional/2026/08/01/1207344/boric-udi-proyecto-dieta-expresidentes.html
+  notas: "Confirmó que el proyecto fue rechazado el 16 de septiembre de 2025 con 78 votos a favor (no alcanzó el quórum) y solo podía reingresarse un año después. Reproduce el comunicado de Bobadilla y Cretton."
+t13-2026-08-01-udi-dieta-expresidentes:
+  tipo: prensa
+  medio: T13
+  titulo: "UDI reingresará proyecto para que la dieta de expresidentes se pague desde los 65 años"
+  autor: T13
+  fecha: 2026-08-01
+  url: https://www.t13.cl/noticia/politica/udi-reingresara-proyecto-para-dieta-expresidentes-se-pague-desde-65-anos-1-8-2026
+  notas: "Cobertura de validación. La iniciativa había sido rechazada en septiembre de 2025 por no alcanzar el quórum. Incluye las citas de Bobadilla y Cretton sobre la publicación de Boric."
+redimin-2026-05-28-daniel-diaz-director-codelco:
+  tipo: prensa
+  medio: Revista Digital Minera (Redimin)
+  titulo: "Daniel Díaz asumirá cupo laboral en Codelco y completa nuevo directorio hasta 2030"
+  autor: Redimin
+  fecha: 2026-05-28
+  url: https://www.redimin.cl/daniel-diaz-asumira-cupo-laboral-en-codelco-y-completa-nuevo-directorio-hasta-2030
+  notas: "Fuente minera especializada. Confirmó la quina del 15 de abril ante La Moneda (Nelson Cáceres, Juan Cantillana, Rodrigo Delgado, Daniel Díaz y Andrés Pizarro), el período 27/05/2026-26/05/2030 según la página de transparencia de Codelco y el directorio completo 2026-2030 presidido por Bernardo Fontaine: Alfredo Moreno, Tamara Agnic, Eduardo Bitran, Ricardo Álvarez, Ricardo Calderón, Luz Granier y Alejandro Canut."
+emol-2026-02-13-deficit-estructural-2025:
+  tipo: prensa
+  medio: Emol
+  titulo: "La herencia fiscal de Boric es peor a la esperada: Déficit estructural en 2025 fue de 3,6% del PIB"
+  autor: Tomás Molina J.
+  fecha: 2026-02-13
+  url: https://www.emol.com/noticias/Economia/2026/02/13/1191475/gobierno-boric-deficit-2025.html
+  notas: "Validación primaria del IFP del cuarto trimestre 2025. Confirmó el déficit estructural de 3,55% del PIB (US$12.028 millones), la desviación de ingresos por unos $1,3 billones, la deuda bruta estable en 41,7% del PIB y las palabras de la directora de Presupuestos Javiera Martínez."
+reddit-2026-02-13-herencia-fiscal-boric:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "La herencia fiscal de Boric es peor a la esperada: Déficit estructural en 2025 fue de 3,6% del PIB"
+  autor: Reddit r/chile
+  fecha: 2026-02-13
+  url: https://www.reddit.com/r/chile/comments/1r42yji/la_herencia_fiscal_de_boric_es_peor_a_la_esperada/
+  notas: "Hilo de Reddit (102 puntos) replicando la noticia de Emol. Fuente complementaria; el dato verificado del IFP es 3,55% del PIB (el título del hilo redondea a 3,6%)."
+latercera-2026-03-08-lenguaje-boric-cuatro-anos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cómo cambió el lenguaje del gobierno de Boric en cuatro años"
+  autor: Francisco Artaza y Catalina Aliste
+  fecha: 2026-03-08
+  url: https://www.latercera.com/politica/noticia/como-cambio-el-lenguaje-del-gobierno-de-boric-en-cuatro-anos/
+  notas: "Análisis de fin de mandato sobre la evolución del lenguaje del gobierno de Boric: del Wallmapu, 'caletas con perspectiva de género', 'personas gestantes' y el 'karamanés' de Irina Karamanos, hacia un tono más tecnocrático. Cita a Alfredo Joignant, Eugenio Tironi, Alberto Mayol, Gonzalo Winter, Tomás Vodanovic, Ignacio Achurra, Andrés Couble y Javiera Toro. Publicado el 8 de marzo de 2026, tres días antes del cambio de mando."
+reddit-2026-03-09-lenguaje-boric-cuatro-anos:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Cómo cambió el lenguaje del gobierno de Boric en cuatro años"
+  autor: Reddit r/chile
+  fecha: 2026-03-09
+  url: https://www.reddit.com/r/chile/comments/1rox8kc/c%C3%B3mo_cambi%C3%B3_el_lenguaje_del_gobierno_de_boric_en/
+  notas: "Hilo de Reddit replicando el análisis de La Tercera. Fuente complementaria."
+t13-2026-04-07-paquete-economico-kast:
+  tipo: prensa
+  medio: T13 (Ex-Ante)
+  titulo: "Paquete económico de Kast: Las medidas, los ajustes y cómo será defendido en el Congreso"
+  autor: Ex-Ante
+  fecha: 2026-04-07
+  url: https://www.t13.cl/noticia/ex-ante/paquete-economico-kast-las-medidas-ajustes-como-sera-defendido-congreso-7-4-2026
+  notas: "Antecedente del anuncio del Plan de Reconstrucción Nacional. Detalló que el paquete mantendría el corazón del proyecto anunciado el 14 de marzo en Lirquén con alrededor de 45 medidas, con ajustes de beneficios a la clase media. Confirmó la estrategia de tramitarlo como un solo paquete en la Comisión de Hacienda y el riesgo de fragmentación opositora y recurso al TC. Mencionó la reunión en La Moneda entre Kast, el ministro Jorge Quiroz y el asesor Alejandro Irarrázaval."
+emol-2026-07-31-bachelet-onu-sondeo:
+  tipo: prensa
+  medio: Emol
+  titulo: "Carrera a la ONU: El análisis del bacheletismo tras la dura votación preliminar que la dejó en el cuarto lugar"
+  autor: María Cristina Romero
+  fecha: 2026-07-31
+  url: https://www.emol.com/noticias/Nacional/2026/07/31/1207225/analisis-votacion-preliminar-bachelet-onu.html
+  notas: "Cobertura del primer sondeo informal del Consejo de Seguridad de la ONU. Bachelet obtuvo 6 'aconsejo', 5 'desaconsejo' y 4 sin opinión, quedando cuarta tras Grynspan, Rodrigues-Birkett y Grossi. Incluye análisis de los excancilleres Heraldo Muñoz, Ignacio Walker, Juan Gabriel Valdés, José Miguel Insulza y José Antonio Viera-Gallo, que vincularon el resultado al retiro del apoyo del gobierno de Kast."
+elmostrador-2026-07-30-bachelet-onu-sondeo:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Bachelet parte cuesta arriba en carrera por la ONU: recibe cinco votos en contra en primer sondeo"
+  autor: Mesa de noticias de El Mostrador/Agencias
+  fecha: 2026-07-30
+  url: https://www.elmostrador.cl/noticias/pais/2026/07/30/bachelet-parte-cuesta-arriba-en-carrera-por-la-onu-recibe-cinco-votos-en-contra-en-primer-sondeo/
+  notas: "Validación del primer sondeo informal del Consejo de Seguridad. Confirmó los cinco votos en contra de Bachelet (una de las cifras más altas entre los siete postulantes, solo superada por Macky Sall con siete), el liderazgo de Grynspan (10 apoyos) y que la segunda consulta se realizaría en agosto."
+latercera-2026-07-30-bachelet-onu-sondeo:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Medio especializado en la ONU proyecta primeros sondeos del Consejo de Seguridad y ubica a Bachelet en cuarto lugar"
+  autor: Alonso Aranda y David Tralma
+  fecha: 2026-07-30
+  url: https://www.latercera.com/politica/noticia/medio-especializado-en-la-onu-proyecta-primeros-sondeos-del-consejo-de-seguridad-y-ubica-a-bachelet-en-cuarto-lugar/
+  notas: "La publicación especializada Passblue proyectó los primeros straw polls: Bachelet cuarta con 6 alientos, 5 desalientos y 4 sin opinión; Grynspan líder con 10. El sondeo es informal y reservado; una segunda consulta se realizaría en agosto."
+emol-2026-03-11-logo-gobierno-kast:
+  tipo: prensa
+  medio: Emol
+  titulo: "\"Trabajando para usted\": Administración de Kast estrena logo y eslogan del Gobierno en redes sociales"
+  autor: Sofía Campos
+  fecha: 2026-03-11
+  url: https://www.emol.com/noticias/Nacional/2026/03/11/1194016/logo-gobierno-chile-presidente-kast.html
+  notas: "Fuente primaria verificada. Pasadas las 15:30 del 11 de marzo las cuentas oficiales de Gobierno y ministerios en Instagram y X estrenaron la nueva imagen: círculo azul con marco rojo, 'Gobierno de Chile' en blanco, estrella arriba y el eslogan 'trabajando para usted' sobre una franja blanca. A las 12:24 la administración de Boric se despidió de las cuentas."
+theclinic-2026-03-11-logo-gobierno-kast:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "\"Trabajando para usted\": Gobierno de Kast estrena nuevos logos en ministerios y cambia los de la administración Boric"
+  autor: Jorge Palacios
+  fecha: 2026-03-11
+  url: https://www.theclinic.cl/2026/03/11/trabajando-para-usted-gobierno-de-kast-estrena-nuevos-logos-en-ministerios-y-cambia-los-de-la-administracion-boric/
+  notas: "Fuente primaria verificada. Los ministerios de Educación y Culturas fueron las primeras carteras en mostrar la nueva imagen; se elimina el tren en movimiento de Boric (lema 'Chile avanza contigo') y se añade una estrella con el nuevo mensaje. Solo dos de las 25 carteras estrenaron la imagen el 11 de marzo."
+lacuarta-2026-03-12-logo-gobierno-kast:
+  tipo: prensa
+  medio: La Cuarta
+  titulo: "Confesó todo y admitió que el logo es \"horrible\": Filtran Whatsapp del diseñador del Gobierno de Kast"
+  autor: Erasmo Tauran
+  fecha: 2026-03-12
+  url: https://www.lacuarta.com/chile/noticia/confeso-todo-y-admitio-que-el-logo-es-horrible-filtran-whatsapp-del-disenador-del-gobierno-de-kast/
+  notas: "Fuente primaria verificada. Según supo The Clinic, se filtraron capturas de un grupo de WhatsApp de la Secom en las que el jefe de diseño, Nicolás Valenzuela, admitió que la gráfica presentada 'ayer (horrible)' no era un logo nuevo sino 'una acción rápida para instaurar rápido el slogan', y que el logo original (de 2020) se mantiene con nuevo slogan. El objetivo era reforzar el relato de 'gobierno de emergencia' con 'menos recursos publicitarios y más trabajo'."
+infotarapaca-2026-03-17-logo-gobierno-kast:
+  tipo: prensa
+  medio: Info Tarapacá
+  titulo: "Gobierno vuelve a modificar logo de sus redes sociales tras críticas"
+  autor: Info Tarapacá
+  fecha: 2026-03-17
+  url: https://infotarapaca.cl/2026/03/17/gobierno-vuelve-a-modificar-logo-de-sus-redes-sociales-tras-criticas/
+  notas: "Fuente primaria verificada. Tras las críticas por 'ruido visual' y dificultades de legibilidad en formatos pequeños, el equipo de comunicaciones aclaró que se trataba de una gráfica temporal y las cuentas institucionales volvieron a modificar la imagen el 17 de marzo."
+reddit-2026-03-12-logo-gobierno-kast:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "lo primero que odio del logo de gobierno (8)"
+  autor: Reddit r/chile
+  fecha: 2026-03-12
+  url: https://www.reddit.com/r/chile/comments/1rrqwzh/lo_primero_que_odio_del_logo_de_gobierno_8/
+  notas: "Hilo de humor con 994 puntos (98% upvoted) sobre el nuevo logo del gobierno de Kast. Fuente complementaria; la cobertura primaria es Emol, The Clinic y La Cuarta."
+reddit-2026-03-15-logo-gobierno-kast:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Logo de Gobierno"
+  autor: Reddit r/chile
+  fecha: 2026-03-15
+  url: https://www.reddit.com/r/chile/comments/1rudh7m/logo_de_gobierno/
+  notas: "Hilo (73 puntos) preguntando si el logo del gobierno había cambiado, sigue igual o son dos para distintos usos. Fuente complementaria; refleja la confusión pública por la gráfica temporal."
+emol-2026-08-03-imacec-junio-24:
+  tipo: prensa
+  medio: Emol
+  titulo: "Imacec de junio sube 2,4% y rompe negativa racha: Economía habría logrado esquivar la recesión"
+  autor: Martín Garretón
+  fecha: 2026-08-03
+  url: https://www.emol.com/noticias/Economia/2026/08/03/1207411/imacec-de-junio-banco-central.html
+  notas: "Fuente primaria verificada. El Banco Central informó que el Imacec creció 2,4% en junio interanual, rompiendo cinco meses de contracciones y permitiendo al segundo trimestre crecer 0,1% (evitando la recesión técnica). Desestacionalizado +0,6% mensual y +1,4% en doce meses. Explicado por minería (cobre), servicios y comercio; industria cayó 0,7%. Incluye reacciones de Quiroz ('punto de inflexión', 'no hay visos de recesión') y Rau."
+biobiochile-2026-08-03-gobierno-imacec:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno celebra repunte de actividad: \"Recibimos la economía estancada, pero estamos revirtiendo eso\""
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/08/03/gobierno-resalta-el-ultimo-imacec-recibimos-una-economia-estacada-pero-estamos-revirtiendo-eso.shtml
+  notas: "Fuente primaria verificada (vía defuddle). Reacciones del gobierno al Imacec de junio: el biministro Daniel Mas calificó la cifra como una 'buena noticia', dijo que 'recibimos una economía estancada... estamos comenzando a revertir esa tendencia' y reafirmó la meta de 300 mil nuevos empleos; Quiroz destacó que 'la economía está volviendo a crecer' con cautela sobre el largo plazo."
+latercera-2026-08-03-imacec-junio-24:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "La economía chilena evita la temida recesión tras el primer Imacec positivo del año"
+  autor: David Nogales
+  fecha: 2026-08-03
+  url: https://www.latercera.com/pulso/noticia/imacec-junio-24-por-ciento-supera-expectativas/
+  notas: "Fuente primaria verificada. Confirmó el alza de 2,4% en junio (mejor desempeño desde septiembre de 2025), el fin de la racha de cinco caídas consecutivas (enero a mayo: -0,9%, -0,3%, -0,2%, -1,2%, -0,9%), el primer semestre con promedio de -0,2% (peor desde la pandemia) y el aporte de la minería (9,8% anual, 1,1 punto), servicios (1,7%) y comercio (5,4%). Incluye el tuit de Daniel Mas."
+cooperativa-2026-08-03-imacec-junio-24:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Imacec de junio superó las expectativas y Chile evita la recesión"
+  autor: Cooperativa.cl
+  fecha: 2026-08-03
+  url: https://www.cooperativa.cl/noticias/site/artic/20260803/pags-amp/20260803083646.html
+  notas: "Fuente primaria verificada. Confirmó el 2,4% interanual y el 0,6% mensual desestacionalizado, las citas de Daniel Mas y Jorge Quiroz (junio 'marcaba un cambio de tendencia'), y que el Banco Central entregará las Cuentas Nacionales del segundo trimestre el 18 de agosto."
+biobiochile-2026-08-03-minsal-renuncia-directores-ss:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno pide la renuncia a directores de los Servicios de Salud Metropolitano Sur y Magallanes"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/03/gobierno-pide-la-renuncia-a-directores-de-los-servicios-de-salud-metropolitano-sur-y-magallanes.shtml
+  notas: "Fuente primaria verificada (vía defuddle). La Subsecretaría de Redes Asistenciales solicitó la renuncia 'atendiendo a razones de pérdida de confianza' de Edgardo Díaz Navarrete (SS Metropolitano Sur) y Verónica Yáñez González (SS Magallanes), y modificó el orden de subrogancia del SS Viña del Mar-Quillota (salida de Haroldo Faúndez Romero). Incluye el comunicado oficial."
+cnnchile-2026-08-03-minsal-renuncia-directores-ss:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Minsal solicita la renuncia de los directores de Servicios de Salud Metropolitano Sur y de Magallanes"
+  autor: CNN Chile
+  fecha: 2026-08-03
+  url: https://www.cnnchile.com/pais/minsal-solicita-renuncia-seremi-salud-arica-parinacota-karla-kepec/
+  notas: "Fuente primaria verificada (vía defuddle). Confirmó la solicitud de renuncia a los directores de los SS Metropolitano Sur y Magallanes, el agradecimiento de la cartera y la modificación de la subrogancia del SS Viña del Mar-Quillota 'para asegurar la continuidad de la gestión'. Nota: la URL corresponde a la noticia sobre la seremi de Arica (cuyo evento ya está cubierto en 20260730-16); el contenido actual del artículo trata de la salida de los directores de los SS."
+biobiochile-2026-08-03-chomali-escucha-corazon:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Ministra de Salud lapida proyecto Escucha su Corazón: \"No agrega nada ni tiene evidencia científica\""
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/03/ministra-de-salud-lapida-proyecto-escucha-su-corazon-no-agrega-nada-ni-tiene-evidencia-cientifica.shtml
+  notas: "Fuente primaria verificada (vía defuddle). La ministra May Chomali criticó en T13 Radio el proyecto 'Escucha su corazón' (impulsado por PNL y Republicanos, presentado el 25 de junio por Cristóbal Urruticoechea): 'no existe evidencia científica' de que escuchar los latidos cambie la decisión, 'médicamente no agrega nada', y que las ecografías se hacen igual en las tres causales. Incluye la crítica de Antonia Orellana por el efecto coercitivo."
+elmostrador-2026-08-03-pdi-exoficiales-condenados:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Dos exoficiales de la PDI condenados por vender datos a narcos"
+  autor: Carlos Basso Prieto
+  fecha: 2026-08-03
+  url: https://www.elmostrador.cl/noticias/opinion/columnas/2026/08/03/corrupcion-policial-dos-exoficiales-de-la-pdi-condenados-por-vender-datos-a-narcos/
+  notas: "Fuente primaria verificada. El Juzgado de Garantía de Arica condenó en procedimiento abreviado a Leoncio Oporto Duhart (exsubcomisario BIRO Oriente, penas que suman casi 5 años por asociación criminal, cohecho, revelación de secreto y tenencia ilegal de armas) y a Claudio Solans Marchant (excomisario BIA en retiro, poco más de 4 años), por vender datos policiales a la banda 'Los Kussy Boys' que traficaba ketamina desde Tacna (más de 220 kilos). Menciona también a los detectives del Tren de Aragua Nicolás Ortega y Sebastián Peredo a la espera de juicio oral."
+theclinic-2026-08-03-alvarado-indh-rabat:
+  tipo: redes
+  medio: The Clinic (X)
+  titulo: "Alvarado tras declaraciones de Rabat por el INDH"
+  autor: The Clinic
+  fecha: 2026-08-03
+  url: https://x.com/thecliniccl/status/2084331272797561057
+  notas: "Tweet de The Clinic con la reacción del ministro del Interior Claudio Alvarado a las declaraciones del ministro de Justicia Fernando Rabat sobre el INDH: 'Lo que comparto con las palabras del ministro de Justicia es que el INDH tiene que ser una institución que dé garantías a todos los sectores políticos'. Fuente única (red social); no se encontró cobertura primaria adicional del episodio."
+biobiochile-2026-08-03-imacec-24-elude-recesion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Actividad económica logra crecer 2,4% en junio y Chile eludiría con margen mínimo la recesión técnica"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/08/03/actividad-economica-logra-crecer-24-en-junio-y-chile-elude-recesion-tecnica-tras-5-meses-de-caidas.shtml
+  notas: "Fuente primaria verificada (vía defuddle). Nota principal de BioBio sobre el Imacec de junio 2026: crecimiento 2,4% interanual tras cinco meses de caídas, análisis de Ignacio Mieres (XTB), el IPI de junio del INE (producción minera +6,0%, manufactura -3,2%) y la tasa de desocupación de 9,4% en abril-junio."
+adnradio-2026-08-03-alvarado-exsubsecretario-hacienda:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Alvarado descarta reintegro de exsubsecretario de Hacienda y anuncia que nuevo titular se conocerá en próximos días"
+  autor: ADN Radio
+  fecha: 2026-08-03
+  url: https://www.adnradio.cl/2026/08/03/alvarado-descarta-reintegro-de-exsubsecretario-de-hacienda-y-anuncia-que-nuevo-titular-se-conocera-en-proximos-dias/
+  notas: "Fuente primaria verificada. El biministro de Gobierno y portavoz Claudio Alvarado ratificó que el nuevo subsecretario de Hacienda se conocerá 'en los próximos días', defendió la desvinculación de Juan Pablo Rodríguez bajo la ley de presupuesto y el artículo 110 de la ley de reajuste sobre exámenes de sustancias, y descartó cualquier reintegro incluso si la contramuestra del test de drogas resultara negativa: 'Tres veces le he dicho que en los próximos días el gobierno va a dar a conocer al próximo subsecretario de Hacienda'."
+theclinic-2026-08-03-poda-ministerio-mujer:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La poda en el Ministerio de la Mujer para dejar atrás los escándalos: funcionarias ligadas a alza irregular de sueldos ya no son parte de la cartera"
+  autor: Eduardo Monrroy y Rodrigo Córdova
+  fecha: 2026-08-03
+  url: https://www.theclinic.cl/2026/08/03/la-poda-en-el-ministerio-de-la-mujer-para-dejar-atras-los-escandalos-funcionarias-ligadas-a-alza-irregular-de-sueldos-ya-no-son-parte-de-la-cartera/
+  notas: "Fuente primaria verificada (vía defuddle). La ministra Judith Marín comunicó la salida de Jacqueline Metayer (ascendida de grado 9 a 12 minutos antes de la salida de la exsubsecretaria Daniela Castro, Resolución RA 121583-134-2026) y Paula Figueroa (exjefa de División Jurídica, aumento de $1.881.823 por funciones críticas, total $8.878.400). También renunció el asesor Michel Cartes, cuestionado por su título de arquitecto. Contexto: denuncia de ANFUMMEG ante Contraloría."
+adnradio-2026-08-02-cadem-desaprobacion-kast-60:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Cadem: desaprobación del Presidente Kast alcanza un 60% y un 76% cree que Chile está dividido por política"
+  autor: Pablo Ovalle Isasmendi
+  fecha: 2026-08-02
+  url: https://www.adnradio.cl/2026/08/02/cadem-desaprobacion-del-presidente-kast-alcanza-un-60-y-un-76-cree-que-chile-esta-dividido-por-politica/
+  notas: "Fuente primaria verificada. Sondeo Plaza Pública Cadem publicado el 2 de agosto: desaprobación de Kast sube a 60% (+2) y aprobación a 36%; el Mandatario cerró julio con promedio de 37% de aprobación (cinco puntos menos que junio). El 76% cree que la sociedad está muy o bastante dividida, principalmente por política; 56% cree que Chile vive una 'batalla cultural'. Tensiones: izquierda-derecha (84%), entre votantes de Kast y Jara (76%), ricos y pobres (71%), chilenos e inmigrantes (70%)."
+biobiochile-2026-08-03-de-grange-tren-rapido:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "El giro del ministro De Grange: de destrozar el \"tren rápido\" a decir que es \"una gran experiencia\""
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/03/el-giro-del-ministro-de-grange-de-destrozar-el-tren-rapido-a-decir-que-es-una-gran-experiencia.shtml
+  notas: "Fuente primaria verificada (vía defuddle). El ministro de Transportes Louis de Grange difundió un video elogiando el tren rápido Santiago-Chillán ('¿Sabías que el tren más rápido de Sudamérica está aquí?', 238 pasajeros, bimodal eléctrico/diésel, 3.400 likes), tras haberlo criticado el 20 de octubre de 2024 en X: 'escasamente supera los 80 o 90 km/h'. El servicio fue impulsado bajo el gobierno de Boric con el entonces ministro Juan Carlos Muñoz."
+biobiochile-2026-08-03-crespo-gatica-fallo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Fallo unánime: Corte rechaza anular juicio contra Claudio Crespo y confirma absolución en caso Gatica"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/03/justicia-rechaza-anular-juicio-contra-claudio-crespo-y-confirma-absolucion-en-caso-gustavo-gatica.shtml
+  notas: "Fuente primaria verificada (vía defuddle). La Corte de Apelaciones de Santiago, en decisión unánime, rechazó los recursos de nulidad del Ministerio Público, el INDH, el CDE y el querellante particular contra la absolución del exteniente coronel de Carabineros Claudio Crespo por las lesiones a Gustavo Gatica (noviembre 2019). Queda firme la sentencia del Cuarto TOP de enero, que aplicó la Ley Nain Retamal y la legítima defensa privilegiada (Gatica portaba una piedra). Incluye reacciones del abogado Pedro Orthusteguy, la fiscal Ximena Chong (evaluará recurso de queja) y la jefa regional del INDH Beatriz Contreras."
+twitter-2026-08-03-crespo-gatica-fallo:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Abogado defensor de Crespo celebra fallo de la Corte de Apelaciones que confirma absolución en caso Gatica"
+  autor: Pedro Orthusteguy
+  fecha: 2026-08-03 
+  url: https://x.com/PORTHUSTEGUY/status/2084337609380159631
+elmostrador-2026-08-03-crespo-gatica-corte:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Corte confirma absolución de Claudio Crespo y rechaza anular juicio por caso Gatica"
+  autor: El Mostrador
+  fecha: 2026-08-03
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/03/corte-confirma-absolucion-de-claudio-crespo-y-rechaza-anular-juicio-por-caso-gatica/
+  notas: "Fuente primaria de validación del fallo de la Corte de Apelaciones de Santiago que rechazó por unanimidad los recursos de nulidad de la Fiscalía Centro Norte, el CDE y el INDH, confirmando la absolución de Claudio Crespo en el caso Gustavo Gatica."
+cooperativa-2026-08-03-crespo-gatica-corte:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Corte rechazó nulidad y confirmó absolución de Claudio Crespo por caso Gustavo Gatica"
+  autor: Cooperativa
+  fecha: 2026-08-03
+  url: https://www.cooperativa.cl/noticias/pais/judicial/casos-emblematicos/corte-rechazo-nulidad-y-confirmo-absolucion-de-claudio-crespo-por-caso/2026-08-03/145531.html
+  notas: "Fuente primaria de validación. Detalla que los recursos de nulidad fueron interpuestos por la Fiscalía Metropolitana Centro Norte, el CDE y el INDH."
+radiouchile-2026-08-03-crespo-gatica-corte:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Caso Gatica: Corte de Santiago confirma sentencia absolutoria para Claudio Crespo"
+  autor: Radio Universidad de Chile
+  fecha: 2026-08-03
+  url: https://radio.uchile.cl/2026/08/03/caso-gatica-corte-de-santiago-confirma-sentencia-absolutoria-para-claudio-crespo/
+  notas: "Fuente primaria de validación del fallo que confirma la absolución de Crespo."
+pauta-2026-08-03-crespo-gatica-corte:
+  tipo: prensa
+  medio: Pauta
+  titulo: "Corte de Apelaciones mantiene absolución de Claudio Crespo y descarta repetir el juicio"
+  autor: Pauta
+  fecha: 2026-08-03
+  url: https://www.pauta.cl/actualidad/2026/08/03/corte-de-apelaciones-mantiene-absolucion-de-claudio-crespo-y-descarta-repetir-el-juicio.html
+  notas: "Fuente primaria de validación. Menciona que la defensa de Gatica evalúa acudir a organismos internacionales de derechos humanos."
+elmostrador-2026-08-03-cofradia-financiamiento:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "La cofradía: el opaco circuito de financiamiento de los libertarios que se burlan de niños TEA"
+  autor: Claudio Pizarro Sanguesa
+  fecha: 2026-08-03
+  url: https://www.elmostrador.cl/unidad-de-investigacion/2026/08/03/la-cofradia-las-redes-publicas-y-privadas-de-los-libertarios-que-se-burlan-de-ninos-tea/
+  notas: "Fuente primaria verificada. Investigación de la Unidad de Investigación de El Mostrador sobre el financiamiento del ecosistema libertario tras el caso La Cofradía: Ítalo Omegna (exasesor de Hans Marowski y del Instituto Mises Cono Sur, presidente de la Fundación Novum que trabaja en La Legua), Marcelo Anabalón (municipalidad de La Reina y asesor del diputado Pier Karlezi, $5.954.241 mensuales), Emiliano Fernández (canal La Mano Invisible, denuncias por amenazas), la pugna por la marca Mises Chile, y la denuncia de la Federación Nacional de Autismo y la Defensoría de la Niñez ante el Ministerio Público."
+emol-2026-08-02-cadem-kast-julio:
+  tipo: prensa
+  medio: Emol
+  titulo: "Cadem: Kast cierra julio con un apoyo promedio de 37%, cinco puntos menos que el mes anterior"
+  autor: I. Guerra, Emol
+  fecha: 2026-08-02
+  url: https://www.emol.com/noticias/Nacional/2026/08/02/1207399/cadem-kast-aprobacion-promedio-julio.html
+  notas: "Fuente primaria de validación de la encuesta Plaza Pública Cadem del 2 de agosto de 2026: aprobación de Kast de 36% y desaprobación de 60% (+2 pts), cierre de julio con promedio de 37%. Confirma también el 76% que cree que Chile está muy o bastante dividido por la política y el 56% de la 'batalla cultural'."
+latercera-2026-08-03-cadem-aranceles:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cadem: 87% rechaza alza de aranceles de EE.UU. y 57% desaprueba cómo el gobierno ha gestionado la relación con Washington"
+  autor: Cristóbal Palacios
+  fecha: 2026-08-03
+  url: https://www.latercera.com/politica/noticia/cadem-87-rechaza-alza-de-aranceles-de-eeuu-y-57-desaprueba-como-el-gobierno-ha-gestionado-la-relacion-con-washington/
+  notas: "Fuente primaria de validación de la encuesta Cadem del 2 de agosto de 2026: confirma el 76% que cree que la sociedad chilena está muy o bastante dividida, la aprobación de Kast de 36% y la desaprobación de 60%, junto con el rechazo del 87% a los aranceles de EE.UU."
+biobiochile-2026-08-03-excarabinero-paillaco-absuelto:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Absuelven en segundo juicio a excarabinero acusado de violación: en el primero fue hallado culpable"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-rios/2026/08/03/absuelven-en-segundo-juicio-a-excarabinero-acusado-de-violacion-en-el-primero-fue-hallado-culpable.shtml
+  notas: "Fuente primaria verificada por lectura directa. El Tribunal de Juicio Oral de Valdivia absolvió por unanimidad a un exteniente de la Subcomisaría de Paillaco acusado de violar a una funcionaria durante una celebración en junio de 2022 en el sector Huichahue Alto. Fue condenado a 3 años en el primer juicio (abril 2025), la Corte Suprema acogió el recurso de nulidad (marzo 2026) y en el nuevo juicio fue absuelto por deficiencia probatoria. El abogado Dionisio Ulloa buscará su reintegro a Carabineros."
+desenfoque-2026-08-03-excarabinero-paillaco:
+  tipo: prensa
+  medio: Desenfoque
+  titulo: "Justicia absuelve de forma unánime a excarabinero de Paillaco en segundo juicio por violación"
+  autor: Redacción Desenfoque
+  fecha: 2026-08-03
+  url: https://desenfoque.cl/2026/08/03/justicia-absuelve-de-forma-unanime-a-excarabinero-de-paillaco-en-segundo-juicio-por-violacion/
+  notas: "Fuente primaria de validación verificada por lectura directa. Confirma la absolución unánime del exteniente de la Subcomisaría de Paillaco por el TOP de Valdivia, la anulación de la condena de 3 años y un día por la Corte Suprema en marzo de 2026 y las declaraciones del abogado Dionisio Ulloa sobre la 'deficiencia probatoria' y el sumario administrativo vigente."
+noticiaslosrios-2026-03-04-suprema-anula-paillaco:
+  tipo: prensa
+  medio: Noticias Los Ríos
+  titulo: "Corte Suprema anula condena por violación contra excarabinero en Paillaco y ordena nuevo juicio"
+  autor: Noticias Los Ríos
+  fecha: 2026-03-04
+  url: https://www.noticiaslosrios.cl/2026/03/04/corte-suprema-anula-condena-por-violacion-contra-excarabinero-en-paillaco-y-ordena-nuevo-juicio/
+  notas: "Antecedente verificado por lectura directa: la Corte Suprema acogió el recurso de nulidad en marzo de 2026, invalidando la condena de 3 años y un día dictada en abril de 2025 por el TOP de Valdivia, y ordenó un nuevo juicio oral. La defensa alegó vulneración de garantías fundamentales y demora excesiva de más de 20 meses en la fijación de la audiencia."
+emol-2026-08-03-pescadores-caza-lobo-marino:
+  tipo: prensa
+  medio: Emol
+  titulo: "Pescadores artesanales piden levantar prohibición de caza a lobo marino: Afirman que dañan proceso de extracción"
+  autor: Daniela Toro
+  fecha: 2026-08-03
+  url: https://www.emol.com/noticias/Nacional/2026/08/03/1207425/pescadores-caza-lobo-marino.html
+  notas: "Fuente primaria verificada por lectura directa. Pescadores artesanales pidieron ante la Comisión de Pesca de la Cámara levantar la veda vigente desde 1995 (renovada en 2021) para permitir de forma controlada la captura de lobos marinos. El subsecretario Osvaldo Urrutia señaló que el gobierno está abierto a revisar la petición en base a evidencia científica. Citas de Jorge Bustos (Corepa) y José Verdugo (Puerto Montt)."
+portalagrochile-2026-07-28-semillas-sag:
+  tipo: prensa
+  medio: Portal Agro Chile
+  titulo: "Consulta del SAG para regular venta de semillas despierta desconfianza en organizaciones campesinas"
+  autor: Equipo Prensa Portal Agro Chile
+  fecha: 2026-07-28
+  url: https://www.portalagrochile.cl/2026/07/28/consulta-del-sag-para-regular-venta-de-semillas-despierta-desconfianza-en-organizaciones-campesinas/
+  notas: "Fuente primaria de validación verificada por lectura directa. Detalla la consulta pública del SAG sobre comercialización de semilla corriente (abierta el 8 de junio, cierre 10 de agosto de 2026), la controversia sobre el trafkintu y el intercambio de semillas tradicionales, y las críticas de María Elena Rozas (RAP Chile) a la figura del 'representante de la variedad'."
+mejorsintlc-2026-07-18-guia-semillas-sag:
+  tipo: organizacion
+  medio: Chile Mejor Sin TLC
+  titulo: "Guía Ciudadana Red Semillas Libres para Consulta Pública SAG"
+  autor: Red de Semillas Libres Chile
+  fecha: 2026-07-18
+  url: https://mejorsintlc.cl/guia-ciudadana-red-semillas-libres-para-consulta-publica-sag/
+  notas: "Fuente de organización civil (Red de Semillas Libres Chile vía Chile Mejor Sin TLC). Guía con 19 observaciones preparadas para la consulta pública del SAG sobre comercialización de semilla corriente, con plazo de envío hasta el 10 de agosto de 2026. Complementaria a la cobertura de medios; no es una fuente periodística."
+emol-2026-02-06-debate-chile-vamos-subsecretarios:
+  tipo: prensa
+  medio: Emol
+  titulo: "'Las lealtades se construyen con gestos': El debate en Chile Vamos por el poco espacio en las subsecretarías de Kast"
+  autor: María Luisa Cisternas
+  fecha: 2026-02-06
+  url: https://www.emol.com/noticias/Nacional/2026/02/06/1190810/debate-chile-vamos-subsecretarios-kast.html
+  notas: "Fuente primaria verificada por lectura directa. Antecede el anuncio del 7 de febrero: el acotado espacio para partidos en la nómina de 40 subsecretarías generó debate en UDI, RN y Evópoli. Citas de Henry Leal (UDI) y Ximena Ossandón (RN) sobre lealtades y construcción política."
+emol-2026-02-07-militancias-subsecretarios:
+  tipo: prensa
+  medio: Emol
+  titulo: "Independientes, alta presencia de Chile Vamos y nula del PSC: Las militancias en la 'segunda línea' de Kast"
+  autor: Javiera Riquelme Escobar
+  fecha: 2026-02-07
+  url: https://www.emol.com/noticias/Nacional/2026/02/07/1190877/militancias-subsecretarios-delegados-gobierno-kast.html
+  notas: "Fuente primaria verificada por lectura directa. Detalla las militancias de los subsecretarios y delegados presidenciales anunciados el 7 de febrero: 5 de RN, 3 de la UDI, presencia de Amarillos (Jouannet en Seguridad Pública) y Demócratas, nula del PSC, y nombres clave del Partido Republicano (Luis Silva en Justicia, Sebastián Figueroa en Subdere)."
+elmostrador-2026-02-07-subsecretarios-delegados:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Guiño a los partidos políticos: Kast presenta a subsecretarios y delegados presidenciales"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-02-07
+  url: https://www.elmostrador.cl/noticias/pais/2026/02/07/kast-presenta-a-subsecretarios-y-delegados-presidenciales/
+  notas: "Fuente primaria verificada por lectura directa. Presentación en el Hotel Radisson de Las Condes de los subsecretarios y delegados presidenciales del gobierno que asumirá el 11 de marzo. Lista completa de los 38 subsecretarios y 16 delegados; quedó pendiente el subsecretario de las Fuerzas Armadas."
+latercera-2026-02-08-rubio-cambio-mando:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Marco Rubio vendrá a Chile al cambio de mando y da fuerte señal de acercamiento a La Moneda tras salida de Boric"
+  autor: Francisco Artaza
+  fecha: 2026-02-08
+  url: https://www.latercera.com/politica/noticia/marco-rubio-vendra-a-chile-al-cambio-de-mando-y-da-fuerte-senal-de-acercamiento-a-la-moneda-tras-salida-de-boric/
+  notas: "Fuente primaria verificada por lectura directa. El secretario de Estado de EE.UU., Marco Rubio, encabezará la delegación estadounidense en el cambio de mando del 11 de marzo, hito en la relación bilateral. Contexto: llamada de Rubio a Kast tras la victoria del 14 de diciembre y el enfriamiento de los nexos durante el gobierno de Boric."
+latercera-2026-02-25-bachelet-lagos-excusas:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Michelle Bachelet y Ricardo Lagos se excusan de asistir al cambio de mando... Eduardo Frei no se lo pierde"
+  autor: Cristóbal Fuentes
+  fecha: 2026-02-25
+  url: https://www.latercera.com/politica/noticia/michelle-bachelet-y-ricardo-lagos-se-excusan-de-asistir-al-cambio-de-mando-eduardo-frei-no-se-lo-pierde/
+  notas: "Fuente primaria verificada por lectura directa. Bachelet (por un viaje a la CSW70 en Nueva York) y Lagos (retirado de la vida pública) no asistirán al cambio de mando del 11 de marzo; Eduardo Frei sí estará. Contexto de la candidatura de Bachelet a la ONU que tensiona al equipo de Kast."
+emol-2026-03-07-gira-kast-miami-trump:
+  tipo: prensa
+  medio: Emol
+  titulo: "Encuentro con Trump, bilaterales y acuerdo de 'coalición militar': Cómo fue la última gira de Kast antes del cambio de mando"
+  autor: Ignacio Guerra, Emol
+  fecha: 2026-03-07
+  url: https://www.emol.com/noticias/Nacional/2026/03/07/1193639/resumen-gira-kast-eeuu-trump.html
+  notas: "Fuente primaria verificada por lectura directa. Gira del presidente electo José Antonio Kast a Miami para la cumbre 'Escudo de las Américas' organizada por Donald Trump (5-8 de marzo): felicitaciones de Trump, anuncio de una 'coalición militar' regional contra el narcotráfico, bilaterales con mandatarios de la región y almuerzo con Marco Rubio. Kast no firmó el documento por su calidad de presidente electo."
+emol-2026-03-18-reseteo-gobierno-kast:
+  tipo: prensa
+  medio: Emol
+  titulo: "Recortes y decretos retirados: El 'reseteo' impulsado por el Gobierno de Kast a una semana de su instalación"
+  autor: Daniela Toro, Emol
+  fecha: 2026-03-18
+  url: https://www.emol.com/noticias/Nacional/2026/03/18/1194616/revision-proyectos-retiro-gobierno-kast.html
+  notas: "Fuente primaria verificada por lectura directa. Una semana después de asumir, el Gobierno impulsó recortes transversales (3% del gasto bruto por ministerio más US$1.000 millones focalizados), el retiro de 43 decretos supremos de Medio Ambiente (incluidos los de Ranita de Darwin y pingüino de Humboldt), el retiro de la negociación ramal, y el límite a la gratuidad universitaria. Incluye la polémica por la caja fiscal: Quiroz dijo que Boric dejó US$40 millones; Grau lo refutó con cifras de enero."
+biobiochile-2026-03-29-pulso-ciudadano-caida:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Pulso Ciudadano Activa: aprobación a presidente Kast cae más de 12 puntos tras polémica semana"
+  autor: BioBioChile
+  fecha: 2026-03-29
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/03/29/pulso-ciudadano-activa-aprobacion-a-presidente-kast-cae-mas-de-12-puntos-tras-polemica-semana.shtml
+  notas: "Fuente primaria verificada por lectura directa. Encuesta Pulso Ciudadano Activa Research (sondeos del 26-27 de marzo): aprobación de Kast cae de 47,5% a 34,7% (-12,8 pts) y la desaprobación sube de 26,3% a 48,7%. 57,2% en desacuerdo con la decisión del MEPCO. Aprobación del gabinete: 29,0%."
+biobiochile-2026-03-29-criteria-desaprobacion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Criteria: aumenta desaprobación de presidente Kast y 64% no confía en razones por alza de combustibles"
+  autor: BioBioChile
+  fecha: 2026-03-29
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/03/29/desaprobacion-de-presidente-kast-sube-10-segun-criteria.shtml
+  notas: "Fuente primaria verificada por lectura directa. Encuesta Agenda Criteria del 29 de marzo: aprobación de Kast baja de 50% a 43% y la desaprobación sube de 37% a 47% (por primera vez la supera). 64% no confía en las razones del gobierno para el alza de combustibles. 43% considera que el gobierno va por un camino incorrecto."
+emol-2026-04-24-black-white-reconstruccion:
+  tipo: prensa
+  medio: Emol
+  titulo: "Reconstrucción: Eliminación de IVA a viviendas nuevas (74%) y subsidio a la contratación (71%) tienen mayor apoyo"
+  autor: Daniela Toro, Emol
+  fecha: 2026-04-24
+  url: https://www.emol.com/noticias/Nacional/2026/04/24/1198099/reconstruccion-iva-viviendas-subsidio-contratacion.html
+  notas: "Fuente primaria verificada por lectura directa. Encuesta Black & White de la quinta semana de abril sobre el Plan de Reconstrucción: 74% apoya eliminar el IVA a viviendas nuevas, 71% el subsidio a la contratación formal, 68% la eximición de contribuciones a adultos mayores; la rebaja del impuesto corporativo registra 44% de 'muy en desacuerdo'. 52% de acuerdo general con el plan."
+emol-2026-04-26-entornos-digitales-seguros:
+  tipo: prensa
+  medio: Emol
+  titulo: "Desarrollo Social impulsa agenda que busca restringir acceso de menores a redes sociales"
+  autor: Leonardo Vallejos, Emol
+  fecha: 2026-04-26
+  url: https://www.emol.com/noticias/Nacional/2026/04/26/1198292/desarrollo-social-restringir-redes-sociales.html
+  notas: "Fuente primaria verificada por lectura directa. El Ministerio de Desarrollo Social, junto al senador Arturo Squella, diseña el 'Plan Entornos Digitales Seguros' para prohibir el uso de redes sociales a menores de 16 años, con un proyecto de ley que se presentaría en las próximas semanas y una segunda etapa para los juegos online."
+emol-2026-04-27-ley-42-horas:
+  tipo: prensa
+  medio: Emol
+  titulo: "En vigencia las 42 horas: Comercio advierte complejidad operativa y expertos alertan impacto en costos y empleo"
+  autor: José Tomás Guzmán, Emol
+  fecha: 2026-04-27
+  url: https://www.emol.com/noticias/Economia/2026/04/27/1198397/efectos-aplicacion-42-horas.html
+  notas: "Fuente primaria verificada por lectura directa. Entra en vigencia la segunda etapa de la Ley de 40 horas: la jornada baja de 44 a 42 horas semanales. David Bravo (Centro UC) alerta de un alza de 4,8% en costos laborales y del golpe al empleo; la CCS y la CNC advierten complejidad operativa."
+emol-2026-04-27-cepal-proyeccion-chile:
+  tipo: prensa
+  medio: Emol
+  titulo: "Cepal recorta proyección de crecimiento para Chile en 2026 por mayor tensión global e inflación"
+  autor: José Tomás Guzmán, Emol
+  fecha: 2026-04-27
+  url: https://www.emol.com/noticias/Economia/2026/04/27/1198383/cepal-crecimiento-chile-2026.html
+  notas: "Fuente primaria verificada por lectura directa. La CEPAL recorta la proyección de crecimiento de Chile en 2026 de 2,2% a 2%, por el escenario internacional complejo: petróleo 74% más caro que en diciembre, tensiones en Medio Oriente e inflación global."
+latercera-2026-04-30-cadem-aprobacion-peak:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cadem: aprobación de Kast baja al 40% y rechazo a su gestión llega a un peak de 57%"
+  autor: Cristóbal Palacios
+  fecha: 2026-04-30
+  url: https://www.latercera.com/politica/noticia/cadem-aprobacion-de-kast-baja-al-40-y-rechazo-a-su-gestion-llega-a-un-peak-de-57/
+  notas: "Fuente primaria verificada por lectura directa. Encuesta Plaza Pública Cadem de la quinta semana de abril: aprobación de Kast baja a 40% y la desaprobación alcanza 57%, su nivel más alto desde el inicio del mandato. Cae a 8% quienes creen que el Estado enfrenta una situación fiscal crítica."
+eldinamo-2026-04-27-entornos-digitales-squella:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Con exigencias a las compañías: el proyecto de ley que busca limitar el acceso de menores de 16 años a redes sociales"
+  autor: El Dínamo
+  fecha: 2026-04-27
+  url: https://www.eldinamo.cl/pais/2026/04/27/con-exigencias-a-las-companias-el-proyecto-del-gobierno-que-busca-limitar-el-acceso-de-menores-de-16-anos-a-redes-sociales/
+  notas: "Fuente primaria verificada por lectura directa. Detalla el Plan Entornos Digitales Seguros: menores de 16 años no tendrán perfiles en redes sociales sin autorización parental, mayores exigencias de verificación de edad a las plataformas, y referencia a la legislación australiana de diciembre 2025. Menciona además el proyecto UDI de Cristóbal Martínez ingresado el 14 de enero de 2026 que avanza por carriles separados."
+theclinic-2026-07-31-desempleo-expertos:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Desempleo llega a 9,4%: Gobierno celebra contención, pero expertos alertan alza de informalidad y anticipan deterioro del mercado laboral"
+  autor: The Clinic
+  fecha: 2026-07-31
+  url: https://www.theclinic.cl/2026/07/31/desempleo-llega-a-94-gobierno-celebra-contencion-pero-expertos-alertan-alza-de-informalidad-y-anticipan-deterioro-del-mercado-laboral/
+  notas: "Fuente primaria verificada por lectura directa. Tras la ENE abril-junio 2026 (desempleo 9,4%, informalidad 27%), el biministro Daniel Mas destacó el 'Modo Empleo'. Los expertos Carlos Smith (CIES-UDD) y Guillermo Riquelme (U. Autónoma) alertaron que no se crea empleo formal y anticiparon un deterioro mayor en julio-agosto, especialmente entre las mujeres, por el impacto rezagado de la emergencia climática."
+amigospenquistas-2026-07-31-desempleo-biobio:
+  tipo: prensa
+  medio: Amigos Penquistas
+  titulo: "Región del Bío Bío registra alza del desempleo: tasa llega a 10,4% y queda sobre el promedio nacional"
+  autor: Amigos Penquistas
+  fecha: 2026-07-31
+  url: https://amigospenquistas.cl/2026/07/31/region-del-bio-bio-registra-alza-del-desempleo-tasa-llega-a-104-y-queda-sobre-el-promedio-nacional/
+  notas: "Fuente primaria regional verificada por lectura directa. Desempleo del Bío Bío en 10,4%, superado solo por Ñuble (10,5%). La desocupación femenina regional llegó a 11,3% (+1 pp en 12 meses) y la informalidad a 28,3% (+3,1 pp). Incluye reacciones del delegado presidencial Julio Anativia, el presidente de la CUT provincial Mikel Capetillo y el vocero de la Mesa de Defensa del Empleo, Iván Montes."
+eltipografo-2026-07-31-desempleo-ohiggins:
+  tipo: prensa
+  medio: El Tipógrafo
+  titulo: "Desempleo en O'Higgins vuelve a superar el promedio nacional"
+  autor: El Tipógrafo
+  fecha: 2026-07-31
+  url: https://eltipografo.cl/2026/07/desempleo-en-ohiggins-vuelve-a-superar-el-promedio-nacional
+  notas: "Fuente primaria regional verificada por lectura directa. Desempleo de O'Higgins en 10,4% (+1,1 pp en 12 meses), con destrucción efectiva de empleo: ocupados cayeron 0,8%, con desplomes en minería (-30,8%), enseñanza (-8,3%) y agricultura (-3,2%). Desocupación femenina de 14,2% (+5,0 pp) vs 7,7% en hombres; informalidad regional de 30,3%."
+t13-2026-07-31-empleo-sectores:
+  tipo: prensa
+  medio: T13
+  titulo: "Empleo según actividad económica: Transporte al alza y el sector que presenta el mayor descenso"
+  autor: T13
+  fecha: 2026-07-31
+  url: https://www.t13.cl/noticia/negocios/empleo-segun-actividad-economica-transporte-al-alza-sector-presenta-descenso-31-7-2026
+  notas: "Fuente primaria verificada por lectura directa (mirror r.jina.ai). Desglose sectorial de la ENE abril-junio 2026: la ocupación creció por transporte (6,8%), servicios administrativos (12,9%) y salud (5,1%); los mayores descensos en comunicaciones (-15,2%), minería (-8,9%) y administración pública (-3,1%). Desocupación de hombres 8,7% (+0,6 pp) y mujeres 10,4% (+0,5 pp); promedio de horas trabajadas 36,7 semanales (-0,7%)."
+elmostrador-2026-07-31-desempleo-adelanto-mas:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Se cumple el adelanto de Daniel Mas: desocupación se ubica en el 9,4%, 0,5 pp. más en doce meses"
+  autor: El Mostrador
+  fecha: 2026-07-31
+  url: https://www.elmostrador.cl/mercados/2026/07/31/se-cumple-el-adelanto-de-daniel-mas-desocupacion-se-ubica-en-el-94-05pp-mas-en-doce-meses/
+  notas: "Fuente primaria verificada por lectura directa. Contexto: la tasa iguala el trimestre anterior (marzo-mayo) y se mantiene en su nivel más alto desde junio de 2021, completando 42 meses consecutivos con desocupación igual o superior al 8%. Confirma el adelanto del biministro Daniel Mas del martes, que anticipó 'malas noticias' en empleo para julio y agosto por la temporada invernal."
+diarioestrategia-2026-07-31-instituto-libertad:
+  tipo: prensa
+  medio: Diario Estrategia
+  titulo: "Instituto Libertad: 'las cifras de desempleo indican que las empresas siguen postergando las contrataciones'"
+  autor: Diario Estrategia
+  fecha: 2026-07-31
+  url: https://www.diarioestrategia.cl/texto-diario/mostrar/5972323/instituto-libertad-cifras-desempleo-indican-empresas-siguen-postergando-contrataciones
+  notas: "Fuente primaria verificada por lectura directa. El economista Gustavo Díaz, del Instituto Libertad, advirtió que el empleo asalariado privado cayó 1,6% anual mientras el trabajo por cuenta propia crece 8,6%, reflejando que 'las empresas siguen postergando nuevas contrataciones' y una precarización de las oportunidades laborales."
+elciudadano-2026-08-03-codelco-criteria:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Codelco no se toca: 74% rechaza privatizarla"
+  autor: El Ciudadano
+  fecha: 2026-08-03
+  url: https://www.elciudadano.com/mineria/codelco-no-se-toca-74-rechaza-privatizarla/08/03/
+  notas: "Fuente primaria verificada por lectura directa. Encuesta Agenda Criteria del 2 de agosto de 2026: 74% rechaza la privatización de Codelco, 49% prefiere mantenerla 100% estatal mejorando su gestión y 31% incorporaría capital privado conservando el control estatal; solo 5% opta por privatización mayoritaria. El rechazo es estable frente a 2018 (73%) y mayo 2026 (72%). Además registró aprobación de Kast en 34% y desaprobación de 55%."
+biobiochile-2026-08-03-cgr-carabineros-doble-contrato:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "CGR detecta que 36 funcionarios de Carabineros tenían dos contratos para realizar las mismas funciones"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/03/cgr-detecta-que-36-funcionarios-de-carabineros-tenian-dos-contratos-para-realizar-las-mismas-funciones.shtml
+  notas: "Fuente primaria verificada por lectura directa. Auditoría de la CGR (INVE N° 540 de 2025) a la Dirección Nacional de Personal de Carabineros: 36 abogados mantenían dos contratos de 22 horas semanales realizando las mismas funciones, incumpliendo el dictamen N° 13.912 de 2017. 144 oficiales de justicia recibieron más de $5.540 millones en 2024; los 36 con doble contrato percibieron más de $1.944 millones. Se detectaron pagos en exceso por $9.048.041 y $881.527."
+biobiochile-2026-06-30-militares-control-identidad:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Avanza proyecto que autoriza a militares a realizar controles de identidad pese a reparos de oposición"
+  autor: BioBioChile
+  fecha: 2026-06-30
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/30/avanza-proyecto-que-autoriza-a-militares-a-realizar-controles-de-identidad-pese-a-reparos-de-oposicion.shtml
+  notas: "Fuente primaria verificada por lectura directa. La Comisión de Constitución de la Cámara aprobó en general el proyecto del Ejecutivo que faculta a militares a realizar controles preventivos de identidad durante estados de excepción constitucional. Plazo de indicaciones hasta el 8 de julio. Reparos de la oposición por uso indebido; el presidente de la comisión, Jaime Mulet (FRVS), advirtió un eventual uso malicioso."
+biobiochile-2026-06-30-explica-control-identidad:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "El proyecto de ley que permitiría a militares hacer control de identidad durante estados de excepción"
+  autor: BioBioChile
+  fecha: 2026-06-30
+  url: https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/06/30/el-proyecto-de-ley-que-permitiria-a-militares-hacer-control-de-identidad-durante-estados-de-excepcion.shtml
+  notas: "Nota explicativa de BioBioChile (BBCL Explica) sobre el proyecto de ley que permite a militares hacer controles de identidad durante estados de excepción, contexto del debate sobre el rol de las Fuerzas Armadas en labores de seguridad (junio 2026). Fuente complementaria."
+biobiochile-2026-08-03-estado-excepcion-seguridad:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno busca crear nuevo estado de excepción para reforzar seguridad con militares en las calles"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/03/gobierno-busca-crear-nuevo-estado-de-excepcion-para-reforzar-seguridad-con-militares-en-las-calles.shtml
+  notas: "Fuente primaria verificada por lectura directa. El ministro de Seguridad Martín Arrau prepara una reforma constitucional en seguridad que contempla un quinto estado de excepción, 'más simple', ante una 'afección pública' que permita desplegar las FF.AA. en barrios específicos. Surge tras reveses en el TC (ley Escuelas Protegidas). Reacciones de Andrés Longton (RN), Karim Bianchi y Juan Luis Castro (PS)."
+emol-2026-08-02-rabat-agenda-seguridad:
+  tipo: prensa
+  medio: Emol
+  titulo: "Apoyo de FF.AA. a policías y responsabilidad penal juvenil: La agenda de seguridad que impulsará el Gobierno esta semana"
+  autor: Emol
+  fecha: 2026-08-02
+  url: https://www.emol.com/noticias/Nacional/2026/08/02/1207369/rabat-ministro-seguridad-gobierno-kast.html
+  notas: "Fuente primaria verificada por lectura directa. El ministro de Justicia Fernando Rabat adelantó la agenda de seguridad de la semana: agencia para liquidar bienes incautados, reforma constitucional para que las FF.AA. en estados de excepción puedan hacer controles de identidad y detenciones en flagrancia, indicaciones a la Ley de Responsabilidad Penal Adolescente, plan de infraestructura carcelaria (9.000 plazas + 11 adicionales) y dichos sobre el INDH (eliminar facultad de deducir querellas)."
+latercera-2026-08-02-angol-ejercito-resguardo:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "'Sus viviendas van a estar seguras': Gobierno despliega al Ejército para resguardar sectores evacuados en Angol por el sistema frontal"
+  autor: La Tercera
+  fecha: 2026-08-02
+  url: https://www.latercera.com/nacional/noticia/sus-viviendas-van-a-estar-seguras-gobierno-despliega-al-ejercito-para-resguardar-sectores-evacuados-en-angol-por-el-sistema-frontal/
+  notas: "Fuente primaria verificada por lectura directa. El biministro del Interior Claudio Alvarado anunció el despliegue del Ejército, en coordinación con Carabineros, para resguardar viviendas en sectores evacuados de Angol (Las Rocas y Coñuñuco) por el desborde de un río. Cita: 'sus viviendas van a estar seguras durante la noche'. Incluye motobombas de alto flujo y suspensión de clases para el lunes 3 de agosto."
+cnnchile-2026-08-02-criteria-codelco:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Encuesta Criteria: 74% rechaza privatizar Codelco y 31% incorporaría capital privado conservando el control del Estado"
+  autor: CNN Chile
+  fecha: 2026-08-02
+  url: https://www.cnnchile.com/pais/encuesta-criteria-74-rechaza-privatizar-codelco-y-31-incorporaria-capital-privado-conservando-el-control-del-estado/
+  notas: "Fuente primaria de validación verificada por lectura directa. Confirma los resultados de Agenda Criteria del 2 de agosto: 74% rechaza privatizar Codelco, 49% mantenerla 100% estatal, 31% incorporar capital privado con control estatal; aprobación de Kast 34% y desaprobación 55%. Sobre la megarreforma, 33% cree que tendrá efectos positivos y 38% negativos."
+latercera-2026-08-02-criteria-codelco:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Criteria: desaprobación de Presidente Kast llega a 55% y aprobación se ubica en 34%"
+  autor: La Tercera
+  fecha: 2026-08-02
+  url: https://www.latercera.com/politica/noticia/criteria-desaprobacion-de-presidente-kast-llega-a-55-y-aprobacion-se-ubica-en-34/
+  notas: "Fuente primaria de validación verificada por lectura directa. Confirma Agenda Criteria del 2 de agosto: desaprobación de Kast 55% (+1 punto), aprobación 34% (-2), y rechazo a la privatización de Codelco en 74% (frente a 73% en 2018 y 72% en mayo 2026). Catalina Parot lideró la evaluación ministerial con 57%. Percepción negativa de la megarreforma creció a 38%."
+theclinic-2026-08-02-alcaldes-veto-compensacion:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Más de 100 alcaldes llaman a Kast a salir del tono 'todo o nada' y solicitan el veto presidencial al mecanismo de compensación a los municipios"
+  autor: The Clinic
+  fecha: 2026-08-02
+  url: https://www.theclinic.cl/2026/08/02/mas-de-100-alcaldes-llaman-a-kast-a-salir-del-tono-todo-o-nada-y-solicitan-el-veto-presidencial-al-mecanismo-de-compensacion-a-los-municipios/
+  notas: "Fuente primaria verificada por lectura directa. Más de 100 alcaldes (casi un tercio de los 345), en su mayoría de oposición, firmaron una declaración pidiendo al presidente Kast un veto aditivo a la compensación por la exención de contribuciones, y solicitan que los US$200 millones comprometidos vayan íntegramente al Fondo Común Municipal. Representan a municipios donde residen más de 7,2 millones de personas, frente a los 5,3 millones de los 76 alcaldes oficialistas de la semana anterior. Incluye lista de 105 firmantes."
+cnnchile-2026-08-02-alcaldes-162-vs-104:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "162 versus 104: Alcaldes oficialistas responden a la oposición y llaman al Senado a respaldar la fórmula de compensación del Gobierno"
+  autor: CNN Chile
+  fecha: 2026-08-02
+  url: https://www.cnnchile.com/pais/162-versus-104-alcaldes-oficialistas-responden-a-la-oposicion-y-llaman-al-senado-a-respaldar-la-formula-de-compensacion-del-gobierno-para-los-municipios-en-la-megarreforma/
+  notas: "Fuente primaria verificada por lectura directa. El Senado revisará el 4 de agosto el informe de la comisión mixta con la fórmula de compensación. 104 jefes comunales de oposición pidieron que los US$200 millones vayan íntegros al FCM, y 161-162 alcaldes oficialistas respondieron pidiendo al Senado aprobar la compensación del 100% de los recursos para las 345 comunas. El alcalde Claudio Castro anticipó un posible quiebre al interior de la AChM. Incluye las listas de firmantes de ambas cartas."
+latercera-2026-08-02-vodanovic-subdere-transparencia:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Compensación por exención de contribuciones: Vodanovic pide que Subdere transparente cuánto recibirá cada comuna"
+  autor: La Tercera
+  fecha: 2026-08-02
+  url: https://www.latercera.com/politica/noticia/compensacion-por-exencion-de-contribuciones-vodanovic-pide-que-subdere-transparente-cuanto-recibira-cada-comuna/
+  notas: "Fuente primaria verificada por lectura directa. El alcalde Tomás Vodanovic emplazó a la Subdere a publicar una comparación entre el mecanismo del gobierno y la propuesta de inyectar los US$200 millones al FCM para las 345 comunas, y a someterla a votación de los alcaldes. Afirmó que al menos la mitad de los 162 alcaldes oficialistas retiraría su firma si viera ambas proyecciones, y que la distribución vía FCM beneficiaría a más del 75% de los municipios. Planteó que la eliminación de la focalización 'rompe el acuerdo' y propuso una redistribución gradual."
+eldinamo-2026-08-02-alcaldes-veto-contribuciones:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Más de 100 alcaldes cuestionan propuesta del Gobierno y piden veto presidencial por contribuciones"
+  autor: El Dínamo
+  fecha: 2026-08-02
+  url: https://eldinamo.cl/politica/2026/08/02/mas-de-100-alcaldes-cuestionan-propuesta-del-gobierno-y-piden-veto-presidencial-por-contribuciones
+  notas: "Fuente primaria de validación del mismo hecho: la declaración de más de 100 alcaldes pidiendo veto presidencial al mecanismo de compensación por la exención de contribuciones en la megarreforma (agosto 2026). Complementa la cobertura de The Clinic y CNN."
+t13-2026-08-02-alcaldes-compensacion:
+  tipo: prensa
+  medio: T13
+  titulo: "Más de 100 alcaldes piden veto presidencial a la compensación por fin de contribuciones"
+  autor: T13
+  fecha: 2026-08-02
+  url: https://www.t13.cl/noticia/politica/mas-100-alcaldes-compensacion-por-fin-contribuciones-2-8-2026
+  notas: "Fuente primaria de validación del mismo hecho: la petición de veto presidencial de más de 100 alcaldes a la compensación por la exención de contribuciones (2 de agosto 2026). Complementa la cobertura de The Clinic y CNN."
+elmostrador-2026-08-02-municipalismo-ascenso:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Municipalismo en ascenso: los alcaldes que desafían al poder central"
+  autor: El Mostrador
+  fecha: 2026-08-02
+  url: https://www.elmostrador.cl/politica/2026/08/02/municipalismo-en-ascenso-los-alcaldes-que-desafian-al-poder-central
+  notas: "Fuente primaria de análisis verificada por lectura directa. El Mostrador analizó cómo la disputa por el Fondo Común Municipal y la respuesta a los temporales consolidaron a los alcaldes como actores nacionales: Vodanovic (rostro presidenciable, Frente Amplio), Delfino (municipalismo progresista), San Martín (defensa de la autonomía financiera de Las Condes, 'deja de mentir' a Vodanovic), Gustavo Alessandri (presidente AChM), Manouchehri (emergencia como plataforma) y Amtmann (humedales como seguro de vida)."
+robotlabot-2026-08-02-data-center-alto-jahuel:
+  tipo: newsletter
+  medio: RobotLabot (LaBot)
+  titulo: "Luz verde para primer data center sin evaluación ambiental"
+  autor: LaBot
+  fecha: 2026-08-02
+  url: https://robotlabot.substack.com/p/luz-verde-para-primer-data-center
+  notas: "Investigación periodística del newsletter de LaBot (fundación periodística sin fines de lucro), validada por El Desconcierto y Fundación Terram. El SEA emitió el 24 de julio su primer pronunciamiento declarando que el Data Center Alto Jahuel (DC Terranova SPA, US$25 millones, Buin, a pocos km de la casa de Kast) no está obligado a someterse al SEIA, gracias a un cambio reglamentario de la administración Boric vigente desde enero que subió el umbral de combustible de 80 mil a 1 millón de litros y eliminó la evaluación de líneas de transmisión menores a 2 km. Detecta un polo en formación en Alto Jahuel (Grenergy, OData) y nuevas consultas de Google (Cerrillos) y DCI Partners (La Pólvora)."
+eldesconcierto-2026-08-02-sea-data-center-alto-jahuel:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "SEA autoriza primer data center sin evaluación ambiental en Alto Jahuel, a metros de la casa de Kast"
+  autor: El Desconcierto
+  fecha: 2026-08-02
+  url: https://eldesconcierto.cl/actualidad/sea-autoriza-primer-data-center-evaluacion-ambiental-alto-jahuel-metros-la-casa-kast-n5461002
+  notas: "Fuente primaria de validación verificada por lectura directa. Confirma la investigación de LaBot: el SEA emitió el 24 de julio su primer pronunciamiento eximiendo al Data Center Alto Jahuel del SEIA. DC Terranova SPA, representada por Felipe Fleischmann Ruiz y Álvaro Pipino (Inversiones Santa Cecilia de José Yuraszceck), almacenará 990 toneladas de diésel (bajo el límite de 1.000 toneladas) y se conectará a la subestación Maipo a 250 metros, con inversión de US$25 millones. Incluye el polo en formación (Grenergy, OData) y las consultas de Google Cerrillos y DCI Partners."
+terram-2026-08-02-data-center-norma:
+  tipo: organizacion
+  medio: Fundación Terram
+  titulo: "Nueva norma habilita data centers sin evaluación ambiental al multiplicar litros de diésel que se pueden acopiar sin permiso"
+  autor: Fundación Terram
+  fecha: 2026-08-02
+  url: https://www.terram.cl/nueva-norma-habilita-data-centers-sin-evaluacion-ambiental-al-multiplicar-litros-de-diesel-que-se-pueden-acopiar-sin-permiso/
+  notas: "Fuente de contexto verificada por lectura directa. La Fundación Terram documenta que el cambio reglamentario aprobado por el Consejo de Ministros en junio de 2025 (durante la administración Boric) multiplicó por 12 el umbral de almacenamiento de sustancias inflamables sin evaluación ambiental, de 80 mil a 1 millón de litros, habilitando data centers sin evaluación. De los 17 data centers evaluados históricamente por acopio de combustible, 15 habrían podido aprobarse sin evaluación."
+df-2026-05-27-grenergy-data-center-hub:
+  tipo: prensa
+  medio: Diario Financiero
+  titulo: "La firma española Grenergy apuesta por convertir a Chile en el gran hub de data centers de Latinoamérica"
+  autor: Diario Financiero
+  fecha: 2026-05-27
+  url: https://www.df.cl/empresas/energia/exclusivo-espanola-grenergy-apuesta-por-convertir-a-chile-en-el-gran-hub
+  notas: "Fuente primaria de contexto (mayo 2026) identificada por el investigador web. Grenergy, a través de su plataforma GR Data, proyecta data centers en Alto Jahuel (US$20 millones, GR Huiña SPA), Polpaico y Antofagasta, sumando 1.000 MW de capacidad, cifra cercana a la capacidad instalada total de la industria en América Latina según InvestChile. Contexto del polo de data centers en Chile."
+fasic-2016-09-26-conar-inicio-funcionamiento:
+  tipo: institucional
+  medio: FASIC
+  titulo: "El 24 de septiembre de 1973, comenzó a funcionar el CONAR"
+  autor: FASIC
+  fecha: 2016-09-26
+  url: https://fasic.cl/wp/2016/09/el-24-de-septiembre-de-1973-comienza-a-funcional-el-conar/
+  notas: "Nota histórica de FASIC. El 24 de septiembre de 1973 comenzó a funcionar el Comité Nacional de Ayuda a los Refugiados (CONAR), primer comité de ayuda a víctimas de la dictadura, dirigido por las iglesias protestantes y evangélicas, en Avenida Ricardo Lyon 565 (donde funcionaba Diaconía). Autorización inicial de solo tres meses. Helmut Frenz fue clave en su creación. El continuador del CONAR fue FASIC, que inició funciones en abril de 1975. El extracto corresponde al Informe de la Operación del ACNUR en Chile de Ernest Schlatter (29 marzo 1974)."
+vicaria-solidaridad-pasaporte-5-mil-refugiados:
+  tipo: institucional
+  medio: Vicaría de la Solidaridad
+  titulo: "Pasaporte a unos 5 mil refugiados"
+  autor: Vicaría de la Solidaridad
+  fecha: 2022-01-01
+  url: https://www.vicariadelasolidaridad.cl/noticias/pasaporte-unos-5-mil-refugiados
+  notas: "Ficha histórica de la Vicaría de la Solidaridad sobre el CONAR: comenzó sus funciones el 24 de septiembre de 1973 (con decreto el 3 de octubre), impulsado por las iglesias cristianas para asistir a extranjeros perseguidos. Fue presidido por el obispo luterano Helmut Frenz, reubicó aproximadamente 5.000 personas en el extranjero, y Frenz recibió en 1979 la medalla Fridtjof Nansen del ACNUR, tras ser expulsado de Chile en 1975. Frenz también cofundó el Comité de Cooperación para la Paz en Chile (octubre 1973)."
+minjusticia-catastro-sitios-memoria-conar-fasic:
+  tipo: institucional
+  medio: Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)
+  titulo: "Catastro de Sitios de Memoria y Testimonios: CONAR/FASIC"
+  autor: Ministerio de Justicia y Derechos Humanos de Chile
+  fecha: 2026-08-03
+  url: https://memoriahistorica.minjusticia.gob.cl/catastro-sitios-de-memoria-testimonios/
+  notas: "Ficha del catastro de sitios de memoria del Ministerio de Justicia: el CONAR fue creado el 24 de septiembre de 1973 por las iglesias protestantes y evangélicas, con ubicación histórica en Ricardo Lyon 565, Providencia. Su autorización inicial fue de tres meses (1973-1974). Su continuadora, FASIC, fue fundada oficialmente el 1 de abril de 1975."
+monumentos-gob-cl-archivo-fasic-monumento-historico:
+  tipo: institucional
+  medio: Consejo de Monumentos Nacionales
+  titulo: "Archivo de la Fundación de Ayuda Social de las Iglesias Cristianas (FASIC)"
+  autor: Consejo de Monumentos Nacionales de Chile
+  fecha: 2018-01-01
+  url: https://www.monumentos.gob.cl/monumentos/monumentos-historicos/archivo-de-la-fundacion-de-ayuda-social-de-las-iglesias-cristianas
+  notas: "Ficha del CMN: el archivo de FASIC fue declarado Monumento Histórico mediante el Decreto Nº 509 (22 de diciembre de 2017). Comprende registros del CONAR entre 1973 y 1974 y de FASIC entre 1975 y 1990, con unos 420 metros lineales, y forma parte de los Archivos de Organizaciones de Derechos Humanos de Chile reconocidos por la UNESCO en el programa Memoria del Mundo."
