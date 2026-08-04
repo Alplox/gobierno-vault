@@ -177,6 +177,8 @@ npm run dev      # preview local
 El build usa `set NODE_OPTIONS=--experimental-global-customevent` (Windows).
 Si falla, revisar frontmatter (YAML parse error) o wikilinks rotos.
 
+**CI (Netlify/Vercel):** el archivo `.npmrc` con `legacy-peer-deps=true` es obligatorio para que `npm clean-install` no falle. `@astrojs/tailwind@6` declara peer `astro@^3||^4||^5` pero el proyecto usa Astro 7; la combinación funciona (el lockfile la resuelve) y `legacy-peer-deps` evita la validación estricta de peers del CI. No eliminar `.npmrc`.
+
 ## Extraccion de contenido web
 
 Cuando `webfetch` no logre leer una URL (bloqueo, JS rendering, paywall), intentar con estos servicios que devuelven markdown limpio:
