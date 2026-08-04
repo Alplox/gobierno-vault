@@ -348,6 +348,9 @@
 - [2026/08/20260803-12 - Gobierno estudia crear un quinto estado de excepción constitucional para desplegar militares en barrios específicos](src/content/events/2026/08/20260803-12.md)
 - [2026/08/20260803-13 - Contraloría detecta que 36 funcionarios de Carabineros tenían dos contratos para realizar las mismas funciones](src/content/events/2026/08/20260803-13.md)
 - [2026/08/20260803-14 - Encuesta Criteria: 74% rechaza privatizar Codelco y la desaprobación de Kast escala a 55%](src/content/events/2026/08/20260803-14.md)
+- [2026/08/20260803-15 - Gobierno confirma que vetará la norma del pago a 30 días a las pymes de la megarreforma](src/content/events/2026/08/20260803-15.md)
+- [2026/08/20260803-16 - Fast Check vincula a exdirigentes de Confenats con presuntas platas negras del senador Calisto](src/content/events/2026/08/20260803-16.md)
+- [2026/08/20260803-17 - Autoridades de Antofagasta presentan plan de acción laboral y destacan baja del desempleo regional a 6,2%](src/content/events/2026/08/20260803-17.md)
 - [2026/08/20260803-2 - Imacec de junio sube 2,4% y rompe racha de cinco meses de caídas: Chile esquiva la recesión técnica](src/content/events/2026/08/20260803-2.md)
 - [2026/08/20260803-3 - Minsal pide la renuncia a los directores de los Servicios de Salud Metropolitano Sur y Magallanes](src/content/events/2026/08/20260803-3.md)
 - [2026/08/20260803-4 - Ministra de Salud Chomali lapida el proyecto 'Escucha su corazón': 'No agrega nada ni tiene evidencia científica'](src/content/events/2026/08/20260803-4.md)
@@ -356,6 +359,10 @@
 - [2026/08/20260803-7 - Ministerio de la Mujer comunica la salida de funcionarias ligadas a alzas irregulares de sueldos en medio de la 'poda' de la ministra Marín](src/content/events/2026/08/20260803-7.md)
 - [2026/08/20260803-8 - Corte de Apelaciones rechaza anular el juicio y confirma la absolución de Claudio Crespo en el caso Gustavo Gatica](src/content/events/2026/08/20260803-8.md)
 - [2026/08/20260803-9 - El giro del ministro De Grange: de destrozar el tren rápido a decir que es 'una gran experiencia'](src/content/events/2026/08/20260803-9.md)
+- [2026/08/20260804-1 - Kast valora fallo que confirma la absolución de Claudio Crespo: 'la justicia ha hablado fuerte y claro'](src/content/events/2026/08/20260804-1.md)
+- [2026/08/20260804-2 - Hacienda congela la adjudicación de corredores de transporte público del Gran Concepción al Grupo Azvi](src/content/events/2026/08/20260804-2.md)
+- [2026/08/20260804-3 - Quiroz contradice a Alvarado y dice que aún no hay nombre para la subsecretaría de Hacienda](src/content/events/2026/08/20260804-3.md)
+- [2026/08/20260804-4 - Framing editorial de El Mercurio ante el Imacec: 'desilusiona' con el 3,1% de Boric y 'rompe racha' con el 2,4% de Kast](src/content/events/2026/08/20260804-4.md)
 
 ## 2025
 

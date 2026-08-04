@@ -386,6 +386,19 @@ people:
         organizacion: ministerio_hacienda
         desde: 2026-07-23
     organizacion: ministerio_hacienda
+  katherine_lopez:
+    nombre: Katherine López Rivera
+    cargo: Delegada Presidencial Regional de Antofagasta
+    organizacion: delegacion_presidencial_antofagasta
+    notas: Delegada presidencial regional de Antofagasta. Preside la Mesa Regional Pro Empleo (julio 2026), con cupo de 1.500 nuevos empleos en el marco de la meta nacional de 50.000 plazas.
+  paola_solari:
+    nombre: Paola Solari Montenegro
+    cargo: Seremi del Trabajo y Previsión Social de Antofagasta
+    notas: Seremi del Trabajo y Previsión Social de la Región de Antofagasta. Integrante de la Mesa Regional Pro Empleo; alertó por el crecimiento de la informalidad laboral regional.
+  pablo_pomareda:
+    nombre: Pablo Pomareda
+    cargo: Seremi de Economía de Antofagasta
+    notas: Seremi de Economía, Fomento y Turismo de la Región de Antofagasta. Participó en la presentación de cifras de empleo regional de agosto de 2026.
   eduardo_mundt:
     nombre: Eduardo Mundt
     cargo: Jefe de Gabinete de la Subsecretaría de Hacienda
@@ -690,7 +703,39 @@ people:
       - cargo: Senador (independiente)
         organizacion: secom
         desde: 2026-03-11
-    notas: Voto clave para aprobar megarreforma en Senado
+    notas: "Voto clave para aprobar megarreforma en Senado. Investigado desde 2021 por fraude al Fisco vinculado a asesorías (causa de la Fiscalía de Aysén; CDE demandó $131 millones; TC suspendió temporalmente la causa en julio de 2026)."
+  roland_carcamo:
+    nombre: Roland Cárcamo
+    cargo: Exjefe de campaña de Miguel Ángel Calisto (imputado)
+    notas: "Exhombre de confianza y exjefe de campaña del senador Miguel Ángel Calisto, imputado en la causa por fraude al Fisco junto a su esposa Carla Graf. Declaró en junio de 2026 que el entorno del parlamentario habría sobornado al exfiscal regional de Aysén Carlos Palma a cambio de cerrar causas judiciales, y que Calisto habría entregado dinero en efectivo a exdirigentes de Confenats (Berta Brito y Pedro Nova) para pagar su defensa."
+  carla_graf:
+    nombre: Carla Graf
+    cargo: Exasesora de Miguel Ángel Calisto (imputada)
+    notas: "Exasesora externa contratada por el Congreso a solicitud del entonces diputado Miguel Ángel Calisto (2018-2022). Imputada junto a su esposo Roland Cárcamo en la causa por fraude al Fisco ($105 millones por supuesta asesoría fantasma). Fast Check reportó que la tesis de asesorías por WhatsApp se debilitó al constatar solo cinco conversaciones entre 2018 y 2022."
+  carlos_palma:
+    nombre: Carlos Palma
+    cargo: Exfiscal regional de Aysén (suspendido)
+    notas: "Exfiscal regional de Aysén, suspendido. Roland Cárcamo declaró en junio de 2026 que el entorno del senador Calisto lo habría sobornado a cambio de cerrar causas judiciales. Fast Check reportó millonarias asesorías de una empresa ligada a Palma a Confenats sin respaldos que las acrediten (julio 2026)."
+  berta_brito:
+    nombre: Berta Brito
+    cargo: Exdirigente de Confenats
+    notas: "Exdirigente de la Confederación Nacional de Trabajadores de la Salud. Apuntada en el reportaje de Fast Check (3 de agosto de 2026) como testaferro y mediadora de Roland Cárcamo, exjefe de campaña del senador Miguel Ángel Calisto, en la presunta entrega de dinero en efectivo para pagar la defensa de Cárcamo."
+  pedro_nova:
+    nombre: Pedro Nova
+    cargo: Exdirigente de Confenats
+    notas: "Exdirigente de la Confederación Nacional de Trabajadores de la Salud. Apuntado en el reportaje de Fast Check (3 de agosto de 2026) como testaferro y mediador de Roland Cárcamo en la presunta entrega de dinero en efectivo para la defensa del exjefe de campaña del senador Miguel Ángel Calisto."
+  priscila_fuentes:
+    nombre: Priscila Fuentes
+    cargo: Coordinadora del Comité de Auditoría Parlamentaria del Congreso
+    notas: "Coordinadora del Comité de Auditoría Parlamentaria. Declaró en mayo de 2024 ante la Fiscalía que el organismo solo revisa la coherencia formal de informes y boletas y carece de personal y presupuesto para comprobar si las asesorías de Carla Graf se realizaron (El Mostrador, julio 2026)."
+  hernan_libedinsky:
+    nombre: Hernán Libedinsky
+    cargo: Fiscal regional de Aysén
+    notas: "Fiscal regional de Aysén. El 26 de junio de 2026 presentó la acusación contra el senador Miguel Ángel Calisto pidiendo 12 años de cárcel por fraude al Fisco de $105 millones vinculado a una asesoría fantasma de Carla Graf."
+  cesar_ramos:
+    nombre: César Ramos
+    cargo: Abogado defensor de Miguel Ángel Calisto
+    notas: "Abogado del senador Miguel Ángel Calisto en la causa por fraude al Fisco. Se mostró conforme con la suspensión temporal del proceso penal decretada por el TC en julio de 2026."
   patricio_rojas:
     nombre: Patricio Rojas
     cargo: Economista, Rojas y Asociados
@@ -3084,6 +3129,21 @@ organizations:
     nombre: Consejo de Defensa del Estado
     tipo: organismo_estado
     pais: Chile
+  grupo_azvi:
+    nombre: Grupo Azvi
+    tipo: empresa_construccion
+    pais: España
+    notas: "Constructora española. En agosto de 2026 el Gobierno de Kast, a través de Hacienda, congeló los trámites que le adjudicaban los corredores de transporte público Ruta 160 y Ruta 150-Autopista del Gran Concepción (US$400 millones) por compromisos fiscales no asumibles."
+  confenats:
+    nombre: Confederación Nacional de Trabajadores de la Salud (Confenats)
+    tipo: sindicato
+    pais: Chile
+    notas: "Gremio nacional de trabajadores de la salud. Vinculado en reportajes de Fast Check (julio-agosto 2026) con presuntas platas negras del senador Miguel Ángel Calisto a través de los exdirigentes Berta Brito y Pedro Nova y de asesorías de una empresa ligada al exfiscal Carlos Palma."
+  fiscalia_aysen:
+    nombre: Fiscalía Regional de Aysén
+    tipo: organismo_estado
+    pais: Chile
+    notas: "A cargo del fiscal regional Hernán Libedinsky. Presentó acusación contra el senador Miguel Ángel Calisto por fraude al Fisco de $105 millones (junio 2026)."
   ministerio_defensa:
     nombre: Ministerio de Defensa Nacional
     tipo: ministerio
@@ -3597,6 +3657,11 @@ organizations:
     tipo: institucion_publica
     pais: Chile
     notas: Representación del Gobierno central en la Región de Atacama. Depende del Ministerio del Interior.
+  delegacion_presidencial_antofagasta:
+    nombre: Delegación Presidencial Regional de Antofagasta
+    tipo: institucion_publica
+    pais: Chile
+    notas: Representación del Gobierno central en la Región de Antofagasta. Depende del Ministerio del Interior. Su titular es la delegada Katherine López.
   embajada_eeuu_chile:
     nombre: Embajada de Estados Unidos en Chile
     tipo: mision_diplomatica
@@ -3692,6 +3757,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Periodico chileno. Fundado en 1950. Medio de referencia en informacion politica y economica."
+  diario_financiero:
+    nombre: Diario Financiero
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Periodico chileno de economia y negocios. Fuente primaria de la exclusiva del congelamiento de los corredores de transporte del Gran Concepción (agosto 2026)."
   el_libero:
     nombre: El Líbero
     tipo: medio_comunicacion
@@ -4114,6 +4184,22 @@ organizations:
     pais: Chile
     notas: "Gobierno Regional de Aysén. Cofinanció junto al municipio la 'aldea de emergencia' de Coyhaique (agosto 2026)."
 cifras:
+  desocupacion_antofagasta_amj_2026:
+    nombre: Tasa de desocupación de la Región de Antofagasta (abril-junio 2026)
+    unidad_default: porciento
+    notas: "6,2% según boletín INE del trimestre abril-junio 2026, -0,2 puntos porcentuales en 12 meses. Informalidad regional 22,3% (+4,6 pp). Antofagasta provincia 5,7%, El Loa 7,0%."
+  meta_empleos_antofagasta:
+    nombre: Meta de nuevos empleos para la Región de Antofagasta
+    unidad_default: empleos
+    notas: "Cupo de 1.500 nuevos puestos de trabajo asignado por el Presidente Kast a la Región de Antofagasta dentro de la meta nacional de 50.000 plazas (Mesa Regional Pro Empleo, julio 2026)."
+  inversion_corredores_gran_concepcion:
+    nombre: Inversión en corredores de transporte público del Gran Concepción
+    unidad_default: millones_usd
+    notas: "US$400 millones en los corredores Ruta 160 y Ruta 150-Autopista (adjudicación al Grupo Azvi), congelados por Hacienda en agosto de 2026."
+  fraude_calisto_asesorias:
+    nombre: Fraude al Fisco imputado a Calisto
+    unidad_default: millones_pesos
+    notas: "$105 millones por asesoría fantasma (acusación de la Fiscalía de Aysén, junio 2026). El CDE demandó $131 millones por la vía civil."
   beneficio_iva_panales:
     nombre: Beneficio per cápita diario proyecto IVA pañales y medicamentos (PDG)
     unidad_default: pesos
@@ -4664,6 +4750,10 @@ cifras:
     nombre: Votos 'desaconsejo' contra Bachelet en primer straw poll ONU
     unidad_default: votos
     notas: "5 votos 'desaconsejo' (rechazos) en el primer sondeo del Consejo de Seguridad de la ONU (30 julio 2026), una de las cifras más altas entre los siete postulantes, solo superada por Macky Sall con 7. El origen de los votos negativos, y si alguno proviene de un miembro permanente con veto, se desconoce por el carácter secreto de la consulta."
+  imacec_junio_2025:
+    nombre: Imacec de junio de 2025
+    unidad_default: pct
+    notas: "Crecimiento de 3,1% interanual en junio de 2025 según el Banco Central, por debajo del 3,3% proyectado en la Encuesta de Expectativas Económicas (EEE). La serie desestacionalizada cayó 0,4%. Publicado el 1 de agosto de 2025 durante el gobierno de Gabriel Boric."
   imacec_junio_2026:
     nombre: Imacec de junio de 2026
     unidad_default: pct

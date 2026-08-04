@@ -8307,6 +8307,46 @@ latercera-2026-06-16-marcel-sala-cuna-indicaciones:
   fecha: 2026-06-16
   url: https://www.latercera.com/politica/noticia/mario-marcel-respalda-indicaciones-del-gobierno-de-kast-a-sala-cuna-universal-y-llama-a-la-oposicion-a-aprobar-la-reforma/
   notas: "El exministro de Hacienda Mario Marcel, en el podcast 'Cómo te lo explico' (16 de junio de 2026), calificó las indicaciones como 'una buena noticia' y 'un win-win', valorando el financiamiento con redistribución del aporte al Seguro de Cesantía. Llamó a la oposición a aprobar la reforma: 'sacar adelante una reforma que quedó trunca es muy positivo'."
+timeline-2026-07-31-desempleo-antofagasta-62:
+  tipo: prensa
+  medio: Timeline Antofagasta
+  titulo: "Desempleo en la Región de Antofagasta baja a 6,2%, pero aumenta con fuerza la informalidad laboral"
+  autor: Franco Fernández
+  fecha: 2026-07-31
+  url: https://www.timeline.cl/desempleo-en-la-region-de-antofagasta-baja-a-62-pero-aumenta-con-fuerza-la-informalidad-laboral/
+  notas: "Boletín INE trimestre abril-junio 2026: desocupación regional 6,2% (-0,2 pp en 12 meses), 366.818 ocupados (+10.513, +3,0%). Informalidad al 22,3% (+4,6 pp). Minería cayó 12,6% en ocupados; Antofagasta provincia 5,7%, El Loa 7,0%."
+dprantofagasta-2026-07-07-mesa-pro-empleo:
+  tipo: comunicado_oficial
+  medio: Delegación Presidencial Regional de Antofagasta
+  titulo: "Gobierno activa Mesa Pro Empleo en Antofagasta con meta de 1.500 nuevos puestos de trabajo"
+  autor: Delegación Presidencial Regional de Antofagasta
+  fecha: 2026-07-07
+  url: https://dprantofagasta.dpr.gob.cl/noticias/2026/07/07/gobierno-activa-mesa-pro-empleo-en-antofagasta-con-meta-de-1-500-nuevos-puestos-de-trabajo/
+  notas: "Mesa técnica intersectorial liderada por la delegada Katherine López, en el marco del mandato del Presidente Kast de 50.000 plazas a nivel nacional (cupo de 1.500 para Antofagasta). Incluye subsidios Sence de ~50% de un sueldo mínimo ($270.000) con tope de 200 por empresa. Cifra de desempleo femenino regional 8,8%."
+theclinic-2026-08-04-udi-quiroz-corredores:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "'¡Es una región importante!': El duro intercambio entre diputados UDI con Quiroz tras congelamiento de concesiones en el Biobío por US$ 400 millones"
+  autor: Redacción The Clinic
+  fecha: 2026-08-04
+  url: https://www.theclinic.cl/2026/08/04/es-una-region-importante-el-duro-intercambio-entre-diputados-udi-con-quiroz-tras-congelamiento-de-concesiones-en-el-biobio-por-us-400-millones/
+  notas: "Validación cruzada del congelamiento de corredores: la exclusiva es del Diario Financiero. Diputados UDI Flor Weisse, Marlene Pérez y Sergio Bobadilla increparon a Quiroz en el Congreso. Quiroz mencionó conversaciones con el biministro de Obras Públicas Louis de Grange y prometió esfuerzos para detener el desempleo regional."
+df-2026-08-04-hacienda-congela-corredores:
+  tipo: prensa
+  medio: Diario Financiero
+  titulo: "Hacienda congela corredores de transporte público por US$400 millones en el Gran Concepción"
+  autor: Redacción Diario Financiero
+  fecha: 2026-08-04
+  url: https://www.df.cl/empresas/industria/hacienda-congela-corredores-de-transporte-publico-por-us-400-millones-en
+  notas: "Fuente primaria de la exclusiva del congelamiento (citada por The Clinic y BioBioChile). Detiene la tramitación de los decretos que adjudicaban al Grupo Azvi los corredores Ruta 160 y Ruta 150 de la Autopista Concepción-Talcahuano. Contenido detrás de paywall; URL verificada por lectura directa (status 200) y por cita en The Clinic."
+twitter-2026-08-03-tlantofagasta-cifras-empleo:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Autoridades de Antofagasta presentan cifras: plan de acción laboral y baja del desempleo regional"
+  autor: Timeline Antofagasta
+  fecha: 2026-08-03
+  url: https://x.com/TLAntofagasta/status/2084327581331910721
+  notas: "Complementaria. Video de la presentación de cifras con la delegada presidencial Katherine López, la seremi del Trabajo Paola Solari y el seremi de Economía Pablo Pomareda. Los datos de fondo (desempleo 6,2% y Mesa Pro Empleo de 1.500 empleos) están verificados en fuentes primarias no-Twitter."
 latercera-2026-06-18-pulso-indemnizacion-todo-evento:
   tipo: prensa
   medio: La Tercera (Pulso)
@@ -9834,3 +9874,187 @@ monumentos-gob-cl-archivo-fasic-monumento-historico:
   fecha: 2018-01-01
   url: https://www.monumentos.gob.cl/monumentos/monumentos-historicos/archivo-de-la-fundacion-de-ayuda-social-de-las-iglesias-cristianas
   notas: "Ficha del CMN: el archivo de FASIC fue declarado Monumento Histórico mediante el Decreto Nº 509 (22 de diciembre de 2017). Comprende registros del CONAR entre 1973 y 1974 y de FASIC entre 1975 y 1990, con unos 420 metros lineales, y forma parte de los Archivos de Organizaciones de Derechos Humanos de Chile reconocidos por la UNESCO en el programa Memoria del Mundo."
+biobiochile-2026-08-04-corredores-gran-concepcion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno frena corredores de transporte público en Gran Concepción en que invertirían US$400 millones"
+  autor: BioBioChile
+  fecha: 2026-08-04
+  url: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/08/04/gobierno-frena-corredores-de-transporte-publico-en-gran-concepcion-en-que-invertirian-us400-millones.shtml
+  notas: "Fuente primaria (vía paywallskip). El Gobierno, a través del Ministerio de Hacienda, decidió congelar los trámites que adjudican al Grupo Azvi dos proyectos de transporte público en Gran Concepción por inversiones de US$400 millones: corredores Ruta 160 y Ruta 150-Autopista. Hacienda envió oficio al MOP indicando que los compromisos fiscales no son asumibles."
+biobiochile-2026-08-04-giacaman-corredores-pesima:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Giacaman tilda de 'pésima decisión' freno a corredores del transporte en el Gran Concepción"
+  autor: BioBioChile
+  fecha: 2026-08-04
+  url: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/08/04/giacaman-tilda-de-pesima-decision-freno-a-corredores-del-transporte-en-el-gran-concepcion.shtml
+  notas: "Reacción del gobernador regional del Biobío, Sergio Giacaman, al congelamiento por Hacienda de la adjudicación de corredores de transporte (Ruta 160 y Ruta 150) al Grupo Azvi. Calificó la decisión como 'pésima'."
+biobiochile-2026-08-03-veto-pago-30-dias-pymes:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Megarreforma: Gobierno dice es 'altamente probable' que se ingrese un veto al pago a 30 días a pymes"
+  autor: BioBioChile
+  fecha: 2026-08-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/03/megarreforma-gobierno-dice-es-altamente-probable-que-se-ingrese-un-veto-al-pago-a-30-dias-a-pymes.shtml
+  notas: "Fuente primaria (vía paywallskip). El biministro del Interior y la Segegob, Claudio Alvarado, dijo que es 'altamente probable' que el Ejecutivo ingrese un tercer veto a la Ley de Reconstrucción Nacional, centrado en la norma del pago a 30 días a las pymes. Reafirmó la compensación del 100% a los municipios por la exención de contribuciones a mayores de 65 años y mencionó la propuesta de redistribuir los permisos de circulación al Fondo Común Municipal. Dos vetos ya confirmados: olvido financiero y fin del anatocismo."
+latercera-2026-08-03-megarreforma-tres-vetos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Megarreforma: gobierno define vetar tres artículos, pero el Congreso le pone otra vez freno a Quiroz"
+  autor: José Miguel Wilson, Rocío Latorre y Nicolás Quiñones
+  fecha: 2026-08-03
+  url: https://www.latercera.com/politica/noticia/megarreforma-gobierno-define-vetar-tres-articulos-pero-el-congreso-le-pone-otra-vez-freno-a-quiroz/
+  notas: "Fuente primaria de validación. En el comité político del lunes 3 de agosto, el Ejecutivo resolvió objetar tres normas: derecho al olvido financiero por deudas, prohibición del cobro de intereses sobre intereses (anatocismo) y los ajustes para garantizar el pago a 30 días a las pymes. Alvarado: 'esperamos el miércoles ingresar vetos'. Autoridades de la Cámara (Alessandri, Leiva, Romero, Bobadilla) advirtieron que es casi imposible votar las observaciones esta semana."
+latercera-2026-08-03-megarreforma-platas-municipales-dos-vetos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Megarreforma: gobierno queda a un paso de aprobar platas municipales y se inclina por solo dos vetos"
+  autor: José Miguel Wilson
+  fecha: 2026-08-03
+  url: https://www.latercera.com/politica/noticia/megarreforma-gobierno-queda-a-un-paso-de-aprobar-platas-municipales-y-se-inclina-por-solo-dos-vetos/
+  notas: "Fuente primaria de validación. El Senado votaría el martes 4 de agosto el último artículo pendiente (compensación fiscal a municipios por rebaja de contribuciones), con el voto de Sanhueza y Walker. El gobierno se inclinaba por dos vetos (anatocismo y olvido financiero), con un compromiso con libertarios y republicanos de vetar el olvido financiero. Los vetos supresivos requieren dos tercios para ser rechazados (103 diputados, 33 senadores)."
+latercera-2026-08-04-kast-crespo-absolucion:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Kast valora decisión de la Corte de Apelaciones que confirma absolución de Claudio Crespo por lesiones a diputado Gustavo Gatica"
+  autor: Rodrigo Gómez S.
+  fecha: 2026-08-04
+  url: https://www.latercera.com/nacional/noticia/kast-valora-decision-de-la-corte-de-suprema-que-confirma-absolucion-de-claudio-crespo-por-lesiones-a-diputado-gustavo-gatica/
+  notas: "Fuente primaria (vía AMP). El Presidente José Antonio Kast valoró la noche del lunes 3 de agosto la decisión de la Corte de Apelaciones de Santiago que ratificó la absolución del excarabinero Claudio Crespo en el caso Gustavo Gatica, tras rechazarse el recurso de nulidad de la Fiscalía Metropolitana Centro Norte. Kast: 'la justicia ha hablado en el caso de Claudio Crespo y lo ha hecho fuerte y claro' y 'se confirma que actuó en legítima defensa'. Nota: el título de la URL menciona 'Corte de Suprema', pero el fallo corresponde a la Corte de Apelaciones de Santiago."
+emol-2026-08-04-kast-crespo-absolucion:
+  tipo: prensa
+  medio: Emol
+  titulo: "Presidente Kast y fallo que confirma la absolución de Crespo: 'Actuó en legítima defensa'"
+  autor: Javiera Riquelme
+  fecha: 2026-08-04
+  url: https://www.emol.com/noticias/Nacional/2026/08/04/1207504/kast-celebra-absolucion-crespo.html
+  notas: "Validación cruzada de la reacción de Kast. Cita textual del tuit del Mandatario: 'La justicia ha hablado en el caso de Claudio Crespo y lo ha hecho fuerte y claro. Luego de años de acusaciones, ha sido exonerado de todos los cargos y se confirma que actuó en legítima defensa'. Incluye declaraciones de la fiscal Ximena Chong."
+cooperativa-2026-08-04-kast-crespo-absolucion:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Kast valoró absolución definitiva de Crespo: 'La justicia habló fuerte y claro'"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-04
+  url: https://www.cooperativa.cl/noticias/pais/dd-hh/kast-valoro-absolucion-definitiva-de-crespo-la-justicia-hablo-fuerte-y/2026-08-04/010059.html
+  notas: "Validación cruzada de la reacción de Kast al fallo que confirmó la absolución de Crespo en el caso Gatica."
+elmostrador-2026-08-04-kast-crespo-absolucion:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Presidente Kast valora fallo que mantiene absolución de Claudio Crespo en caso Gatica"
+  autor: Agencia UNO
+  fecha: 2026-08-04
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/04/presidente-kast-valora-fallo-que-mantiene-absolucion-de-claudio-crespo-en-caso-gatica/
+  notas: "Validación cruzada. Reproduce la reacción de Kast en X y detalla que la revisión de los recursos de nulidad quedó fijada para el 3 de agosto tras los alegatos de julio. Menciona que Amnistía Internacional criticó la absolución."
+biobiochile-2026-08-04-kast-celebra-crespo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'La justicia ha hablado fuerte y claro': Kast celebra absolución de Claudio Crespo en caso Gatica"
+  autor: BioBioChile
+  fecha: 2026-08-04
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/04/la-justicia-ha-hablado-fuerte-y-claro-kast-celebra-absolucion-de-caludio-crespo-en-caso-gatica.shtml
+  notas: "Validación cruzada de la reacción del Presidente a través de su cuenta de X."
+biobiochile-2026-08-04-quiroz-subsecretaria-hacienda:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "¿Desacuerdo?: Quiroz contradice a Alvarado y dice que aún no hay nombre para subsecretaría de Hacienda"
+  autor: BioBioChile
+  fecha: 2026-08-04
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/04/desacuerdo-quiroz-contradice-a-alvarado-y-dice-que-aun-no-hay-nombre-para-subsecretaria-de-hacienda.shtml
+  notas: "Fuente primaria (vía paywallskip). El ministro de Hacienda, Jorge Quiroz, desmintió los dichos de Claudio Alvarado sobre el nombramiento de un nuevo subsecretario para su cartera, reiterando que aún no hay un nombre definido tras la salida de Juan Pablo Rodríguez."
+latercera-2026-08-04-quiroz-subsecretario-malentendido:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "'Puede haber ahí un malentendido': Ministro Quiroz aclara que aún no hay un nombre para el reemplazo de Juan Pablo Rodríguez"
+  autor: David Nogales
+  fecha: 2026-08-04
+  url: https://www.latercera.com/pulso/noticia/puede-haber-ahi-un-malentendido-ministro-quiroz-aclara-que-aun-no-hay-un-nombre-para-el-reemplazo-de-juan-pablo-rodriguez/
+  notas: "Fuente primaria de validación. Quiroz: 'No, no hay nombre todavía... Puede haber ahí un malentendido. Estamos en proceso de tener que buscar ese cargo y lo tengo que hacer con mucha seriedad'. La decisión sobre una eventual reincorporación de Rodríguez corresponde al gobierno (Interior). Elogió la labor del exsubsecretario."
+emol-2026-08-04-alvarado-pavez-squella:
+  tipo: prensa
+  medio: Emol
+  titulo: "Alvarado respalda a Pavez ante crítica de Squella: 'Tiene que aprender a separar los sentimientos de las decisiones'"
+  autor: María Luisa Cisternas
+  fecha: 2026-08-04
+  url: https://www.emol.com/noticias/Nacional/2026/08/04/1207536/alvarado-defiende-pavez-squella-exsubsecretaroio.html
+  notas: "Validación cruzada de la disputa oficialista. Alvarado defendió al subsecretario Máximo Pavez tras la arremetida de Arturo Squella en el chat de exmiembros de la Fundación Jaime Guzmán por el caso Rodríguez. Confirmó que se están entrevistando candidatos que evaluará Quiroz."
+t13-2026-08-04-alvarado-defiende-pavez:
+  tipo: prensa
+  medio: T13
+  titulo: "Alvarado defiende a Pavez ante críticas de Squella por salida de exsubsecretario de Hacienda: 'Aplicó las obligaciones que señala la ley'"
+  autor: Caroline Castillo
+  fecha: 2026-08-04
+  url: https://www.t13.cl/noticia/politica/alvarado-defiende-pavez-ante-criticas-squella-salida-exsubsecretario-hacienda-4-8-2026
+  notas: "Validación cruzada. Reproduce los mensajes de Squella en el chat de 200 exmiembros de la Fundación Jaime Guzmán (filtrado por Ex-Ante) exigiendo disculpas de Pavez a Rodríguez y la defensa de Alvarado basada en el artículo 110 de la Ley de Reajustes y los protocolos de la Contraloría. Los exámenes de contramuestra (pelo en UC Christus y orina en Bionet) resultaron negativos."
+fastcheck-2026-08-03-calisto-confenats-platas:
+  tipo: investigacion
+  medio: Fast Check CL
+  titulo: "'Calisto les entregó dinero en efectivo': las pistas que vinculan a exdirigentes de Confenats con presuntas platas negras ligadas al senador"
+  autor: Benjamín Bravo Yusta y Elías Miranda
+  fecha: 2026-08-03
+  url: https://www.fastcheck.cl/2026/08/03/calisto-les-entrego-dinero-en-efectivo-las-pistas-que-vinculan-a-exdirigentes-de-confenats-con-presuntas-platas-negras-ligadas-al-senador/
+  notas: "Reportaje de Fast Check CL (IFCN). En la causa de la Fiscalía contra el senador Miguel Ángel Calisto, la Fiscalía tiene la declaración de una persona de la directiva de Confenats que aseguró que Calisto, a través de dos exdirigentes del gremio (Berta Brito y Pedro Nova, apuntados como testaferros y mediadores de Roland Cárcamo), entregó dinero en efectivo para pagar la defensa de su exjefe de campaña Roland Cárcamo. El asesor comunicacional de Calisto prestó servicios a la gremial de salud."
+fastcheck-2026-07-30-calisto-palma-confenats:
+  tipo: investigacion
+  medio: Fast Check CL
+  titulo: "Caso Calisto: las millonarias asesorías de empresa ligada a exfiscal Palma a Confenats y las dudas sobre los respaldos que las acreditan"
+  autor: Benjamín Bravo Yusta y Elías Miranda
+  fecha: 2026-07-30
+  url: https://www.fastcheck.cl/2026/07/30/caso-calisto-las-millonarias-asesorias-de-empresa-ligada-a-exfiscal-palma-a-confenats-y-las-dudas-sobre-los-respaldos-que-las-acreditan/
+  notas: "Reportaje previo de Fast Check CL (IFCN). Roland Cárcamo, exhombre de confianza de Calisto, declaró en junio que el entorno del parlamentario habría sobornado al exfiscal regional de Aysén Carlos Palma a cambio de cerrar causas judiciales. Millonarias asesorías de una empresa ligada a Palma a Confenats carecen de respaldos."
+latercera-2026-07-12-calisto-entrevista:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Miguel Ángel Calisto: 'La Fiscalía debería chequear que sus procesos se hagan bien, ya que alteran los quórums y eso afecta la democracia'"
+  autor: Juan Manuel Ojeda
+  fecha: 2026-07-12
+  url: https://www.latercera.com/nacional/noticia/miguel-angel-calisto-la-fiscalia-deberia-chequear-que-sus-procesos-se-hagan-bien-ya-que-alteran-los-quorums-y-eso-afecta-la-democracia/
+  notas: "Entrevista a Calisto. El fiscal regional de Aysén, Hernán Libedinsky, presentó el 26 de junio la acusación pidiendo 12 años de cárcel por fraude de $105 millones ('asesoría fantasma' de Carla Graf). Calisto niega los hechos, asegura que la relación con Cárcamo y Graf era de amistad y que la asesoría existió. Contexto: voto clave en la megarreforma."
+elmostrador-2026-07-24-tc-calisto-suspension:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "TC suspende temporalmente causa contra Calisto mientras revisa recurso de inaplicabilidad"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-07-24
+  url: https://www.elmostrador.cl/noticias/pais/2026/07/24/tc-suspende-temporalmente-causa-contra-calisto-mientras-revisa-recurso-de-inaplicabilidad/
+  notas: "La Primera Sala del TC suspendió el proceso penal contra Calisto (resolución del 23 de julio) y dejó sin efecto la audiencia del 27 de julio en el Juzgado de Garantía de Coyhaique. La defensa cuestiona una norma del Código Procesal Penal. La Fiscalía pidió 12 años por fraude al Fisco."
+elmostrador-2026-07-27-auditora-calisto:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Auditora del Congreso reconoce que no puede verificar asesorías ligadas a Calisto"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-07-27
+  url: https://www.elmostrador.cl/noticias/pais/2026/07/27/auditora-del-congreso-reconoce-que-no-puede-verificar-asesorias-ligadas-a-calisto/
+  notas: "La coordinadora del Comité de Auditoría Parlamentaria, Priscila Fuentes, declaró ante la Fiscalía que el organismo solo revisa la coherencia formal de informes y boletas y carece de personal para comprobar si las asesorías de Carla Graf se realizaron. Refuerza la tesis de la Fiscalía."
+cooperativa-2026-07-08-cde-calisto-131:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Consejo de Defensa del Estado demandó al senador Calisto por 131 millones"
+  autor: Redacción Cooperativa
+  fecha: 2026-07-08
+  url: https://www.cooperativa.cl/noticias/pais/judicial/denuncias-de-corrupcion/consejo-de-defensa-del-estado-demando-al-senador-calisto-por-131-millones/2026-07-08/171251.html
+  notas: "Acción civil del CDE para recuperar $131 millones presuntamente defraudados por Calisto a través de asesores falsos, incluyendo $26 millones recibidos del Gobierno Regional de Aysén para capacitaciones laborales que nunca se realizaron. Corre en paralelo a la indagatoria penal que pide 12 años de cárcel."
+emol-2026-07-23-calisto-cambio-fiscal:
+  tipo: prensa
+  medio: Emol
+  titulo: "Defensa de senador Calisto pide cambio de fiscal y que TC suspenda su causa penal"
+  autor: Emol
+  fecha: 2026-07-23
+  url: https://www.emol.com/noticias/Nacional/2026/07/23/1206443/calisto-cambio-fiscal-tc-causa.html
+  notas: "La defensa de Calisto pidió al fiscal nacional Ángel Valencia un cambio de persecutores por conflicto de interés (la jurisdicción investigándose a sí misma) y que el TC suspenda la causa. Indagado por fraude al fisco de cerca de $150 millones cuando era diputado (2018-2022)."
+emol-2025-08-01-imacec-junio-31-desilusiona:
+  tipo: prensa
+  medio: Emol
+  titulo: "Economía chilena desilusiona: Imacec anota un crecimiento bajo lo esperado en junio"
+  autor: Pablo San Martín
+  fecha: 2025-08-01
+  url: https://www.emol.com/noticias/Economia/2025/08/01/1173780/imacec-junio-economia.html
+  notas: "Verificada por lectura directa (status 200). Titular de Emol/El Mercurio para el Imacec de junio 2025 (gobierno de Gabriel Boric): 3,1% en doce meses, por debajo del 3,3% proyectado en la Encuesta de Expectativas Económicas (EEE). Serie desestacionalizada cayó 0,4%."
+twitter-2026-08-04-daniloherrera-framing-imacec:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "El Mercurio y sus definiciones editoriales: con Boric 3,1% 'crece menos de lo esperado'; con Kast 2,4% 'supera las expectativas'"
+  autor: Danilo Herrera
+  fecha: 2026-08-04
+  url: https://x.com/daniloherrerad/status/2084683462368223365
+  notas: "Complementaria. El periodista Danilo Herrera compara el framing editorial de El Mercurio ante el Imacec: con el gobierno de Boric, un 3,1% fue titulado como 'crece menos de lo esperado'; con el gobierno de Kast, un 2,4% fue presentado como 'supera las expectativas'. La comparación de titulares es verificable en las notas de Emol del 1/8/2025 y 3/8/2026."
