@@ -367,13 +367,17 @@
 ## 2025
 
 - [2025/01/20250125-1 - Venezuela afirmó que las relaciones con Chile están rotas desde agosto](src/content/events/2025/01/20250125-1.md)
+- [2025/01/20250129-1 - Congreso despacha a ley la reforma previsional de Boric tras años de debate y dos proyectos fallidos](src/content/events/2025/01/20250129-1.md)
 - [2025/01/20250131-1 - Tensión por 'suspensión' de relaciones diplomáticas con Venezuela: parlamentarios piden ruptura](src/content/events/2025/01/20250131-1.md)
+- [2025/02/20250214-1 - Caso Factop: Álvaro Jalaff en prisión preventiva y su defensa recurre de amparo ante la Corte Suprema](src/content/events/2025/02/20250214-1.md)
+- [2025/03/20250327-1 - INE entrega los primeros resultados del Censo 2024: Chile tiene 18.480.432 habitantes](src/content/events/2025/03/20250327-1.md)
 - [2025/04/20250409-1 - Estudio UDD revela impacto desigual de las alertas SAE en los incendios de Valparaíso de 2024](src/content/events/2025/04/20250409-1.md)
 - [2025/04/20250424-1 - Kast vinculado a líder de banda criminal detenido por robo de cobre en Coquimbo (2025)](src/content/events/2025/04/20250424-1.md)
 - [2025/05/20250519-1 - José Antonio Kast presenta el Plan Implacable de seguridad durante campaña presidencial](src/content/events/2025/05/20250519-1.md)
 - [2025/06/20250601-1 - Boric anuncia el fin de Punta Peuco como cárcel especial](src/content/events/2025/06/20250601-1.md)
 - [2025/08/20250813-1 - Kast no asiste a comisión investigadora por robo de cables de cobre](src/content/events/2025/08/20250813-1.md)
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md)
+- [2025/09/20250923-1 - Boric presenta la candidatura de Bachelet a la Secretaría General de la ONU](src/content/events/2025/09/20250923-1.md)
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md)
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md)
 - [2025/12/20251203-1 - Atlas Network: la desinformacion como arma neoliberal](src/content/events/2025/12/20251203-1.md)
@@ -386,18 +390,38 @@
 
 ## 2024
 
+- [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué deja al menos 134 fallecidos y un estado de excepción](src/content/events/2024/02/20240202-1.md)
+- [2024/02/20240221-1 - Secuestro y homicidio del exmilitar venezolano Ronald Ojeda: la Fiscalía vincula el crimen al Tren de Aragua](src/content/events/2024/02/20240221-1.md)
 - [2024/04/20240414-1 - Kast afirma que habría roto relaciones con Venezuela hace bastante tiempo](src/content/events/2024/04/20240414-1.md)
 - [2024/05/20240510-1 - Pacogate: condena a 28 carabineros por fraude al fisco](src/content/events/2024/05/20240510-1.md)
 - [2024/07/20240730-1 - Boric condena expulsión de diplomáticos chilenos, pero descarta romper relaciones con Venezuela](src/content/events/2024/07/20240730-1.md)
 - [2024/08/20240804-1 - Van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'](src/content/events/2024/08/20240804-1.md)
+- [2024/08/20240821-1 - Caso Audios: comienza la formalización de Luis Hermosilla, Leonarda Villalobos y otros por soborno y cohecho](src/content/events/2024/08/20240821-1.md)
+- [2024/10/20241017-1 - Manuel Monsalve renuncia como subsecretario del Interior tras denuncia de abuso sexual](src/content/events/2024/10/20241017-1.md)
+- [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md)
 
 ## 2023
 
+- [2023/01/20230117-1 - Acuerdo por Chile: fuerzas políticas firman nuevo itinerario constituyente para 2023](src/content/events/2023/01/20230117-1.md)
+- [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md)
+- [2023/04/20230411-1 - Congreso aprueba la ley de 40 horas: la jornada laboral se reducirá gradualmente a 40 horas semanales](src/content/events/2023/04/20230411-1.md)
+- [2023/04/20230419-1 - Crisis migratoria en el norte: gobierno mantiene expulsiones y activa Ley de Infraestructura Crítica](src/content/events/2023/04/20230419-1.md)
+- [2023/05/20230507-1 - Elección de consejeros constitucionales: Republicanos arrasa y controlará el Consejo junto a Chile Vamos](src/content/events/2023/05/20230507-1.md)
+- [2023/06/20230616-1 - Caso Convenios: reportaje destapa millonarios traspasos a la Fundación Democracia Viva y gatilla indagatoria nacional](src/content/events/2023/06/20230616-1.md)
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md)
+- [2023/11/20231114-1 - Caso Hermosilla: Ciper revela audio que destapa coimas al SII y la CMF y sacude al sistema judicial](src/content/events/2023/11/20231114-1.md)
+- [2023/12/20231217-1 - Plebiscito constitucional 2023: el En Contra gana con 55,76% y se cierra el segundo proceso constituyente](src/content/events/2023/12/20231217-1.md)
 
 ## 2022
 
+- [2022/03/20220311-1 - Gabriel Boric asume la Presidencia de Chile a los 36 años, el Mandatario más joven de la historia](src/content/events/2022/03/20220311-1.md)
 - [2022/04/20220417-1 - Excandidatos presidenciales critican el primer mes del gobierno de Boric](src/content/events/2022/04/20220417-1.md)
+- [2022/05/20220524-1 - Boric compromete desde Justicia una agenda de reparación para víctimas de violaciones a los DD.HH. del estallido social](src/content/events/2022/05/20220524-1.md)
+- [2022/08/20220803-1 - Boric presenta el Plan PACTO de reparación integral para víctimas de trauma ocular del 18-O](src/content/events/2022/08/20220803-1.md)
+- [2022/09/20220904-1 - Plebiscito de salida: la opción Rechazo gana con 61,86% y la propuesta de nueva Constitución es derrotada](src/content/events/2022/09/20220904-1.md)
+- [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md)
+- [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md)
+- [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md)
 
 ## 2021
 

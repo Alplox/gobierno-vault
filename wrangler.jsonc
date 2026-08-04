@@ -1,0 +1,12 @@
+{
+  // Deploy estático del sitio Astro (output: static) como Static Assets de Workers.
+  // Con esta config, `npx wrangler deploy` no entra en el flujo interactivo de
+  // auto-detección (que fallaba en CI buscando public/.assetsignore) y despliega
+  // directamente el contenido de ./dist, generado por `npm run build`.
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "gobierno-vault",
+  "compatibility_date": "2026-07-01",
+  "assets": {
+    "directory": "./dist"
+  }
+}

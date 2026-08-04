@@ -106,6 +106,24 @@ people:
         desde: 2022-03-11
         hasta: 2022-09-07
     organizacion: ministerio_interior
+  carolina_toha:
+    nombre: Carolina Tohá
+    cargo: Exministra del Interior
+    cargos:
+      - cargo: Ministra del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2022-09-06
+        hasta: 2026-03-11
+    organizacion: ministerio_interior
+    notas: "Exalcaldesa de Santiago (PPD). Asumió el Ministerio del Interior y Seguridad Pública el 6 de septiembre de 2022, tras la salida de Izkia Siches, y permaneció en el cargo hasta el fin del gobierno de Boric."
+  ronald_ojeda:
+    nombre: Ronald Ojeda Moreno
+    cargo: Exmilitar venezolano y disidente político
+    notas: "Teniente (R) del Ejército de Venezuela asilado en Chile. Secuestrado la madrugada del 21 de febrero de 2024 en Independencia por sujetos disfrazados de la PDI; su cuerpo fue hallado el 1 de marzo de 2024 bajo un bloque de cemento en una toma de Maipú. La Fiscalía ECOH vinculó el crimen a células del Tren de Aragua y apuntó a un posible encargo político del régimen de Nicolás Maduro."
+  antonio_jalaff:
+    nombre: Antonio Jalaff
+    cargo: Empresario, cofundador de Factop
+    notas: "Hermano de Álvaro Jalaff e imputado en el caso Audios-Factop. La minuta de formalización de enero de 2025 detalla cómo los hermanos Jalaff recibieron financiamiento de Factop disimulado como operaciones de factoring."
   german_codina:
     nombre: German Codina
     cargo: Delegado Presidencial Region Metropolitana
@@ -689,6 +707,15 @@ people:
       - cargo: Senador (PPD)
         organizacion: secom
         desde: 2026-03-11
+  manuel_monsalve:
+    nombre: Manuel Monsalve Benavides
+    cargo: Ex Subsecretario del Interior
+    cargos:
+      - cargo: Subsecretario del Interior
+        organizacion: ministerio_interior
+        desde: 2022-03-11
+        hasta: 2024-10-17
+    notas: "Subsecretario del Interior del gobierno de Gabriel Boric (2022-2024), considerado el 'hombre fuerte' de la seguridad. Renunció el 17 de octubre de 2024 tras una denuncia de abuso sexual presentada por una funcionaria de Gobierno. Fue detenido en noviembre de 2024."
   beatriz_sanchez:
     nombre: Beatriz Sanchez
     cargo: Senadora (FA)
@@ -3264,6 +3291,16 @@ organizations:
     nombre: Convención Constitucional
     tipo: organismo_estado
     pais: Chile
+  consejo_constitucional_2023:
+    nombre: Consejo Constitucional (2023)
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Órgano del segundo proceso constituyente (2023), elegido el 7 de mayo de 2023. El Partido Republicano obtuvo 23 de 50 escaños (~36% de los votos). Su propuesta de texto fue rechazada en el plebiscito del 17 de diciembre de 2023 con el triunfo del 'En Contra' (55,76%)."
+  fundacion_democracia_viva:
+    nombre: Fundación Democracia Viva
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Fundación vinculada a militantes de Revolución Democrática, protagonista del caso Convenios: recibió millonarios convenios directos de la Seremi de Vivienda de Antofagasta en 2023, destapados el 16 de junio de 2023 por Timeline."
   banco_estado:
     nombre: Banco del Estado de Chile
     tipo: empresa_estatal
@@ -3441,6 +3478,11 @@ organizations:
     pais: Chile
     notas: Partido fundado por José Antonio Kast. Ganó la segunda vuelta
       presidencial de diciembre 2025.
+  partido_progresista:
+    nombre: Partido Progresista
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido fundado por Marco Enríquez-Ominami."
   chile_vamos:
     nombre: Chile Vamos
     tipo: partido_politico
@@ -3966,6 +4008,16 @@ organizations:
     tipo: organizacion_criminal
     pais: Chile
     notas: "Organización criminal de origen chino que, según la fiscalía, lavó más de US$180 millones en Chile mediante empresas de fachada, criptoestafas y ejecutivos bancarios. Operaba desde Zona Franca de Iquique."
+  tren_de_aragua:
+    nombre: Tren de Aragua
+    tipo: organizacion_criminal
+    pais: Venezuela
+    notas: "Organización criminal transnacional venezolana. La Fiscalía ECOH estableció la participación operativa de células asociadas al Tren de Aragua en el secuestro y homicidio del exmilitar Ronald Ojeda (febrero de 2024)."
+  factop:
+    nombre: Factop SpA
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de factoring de los hermanos Álvaro y Antonio Jalaff, epicentro de la arista financiera del caso Audios (caso Factop-Audio). Los hermanos recibieron préstamos disimulados como operaciones de factoring."
   ministerio_transportes:
     nombre: Ministerio de Transportes y Telecomunicaciones
     tipo: ministerio
@@ -4922,3 +4974,39 @@ cifras:
     nombre: Refugiados reubicados en el extranjero por el CONAR
     unidad_default: personas
     notas: "Aproximadamente 5.000 personas fueron reubicadas en el extranjero por el Comité Nacional de Ayuda a los Refugiados (CONAR, 1973-1974), según la Vicaría de la Solidaridad, con salvoconductos y apoyo legal y material. Incluye extranjeros perseguidos residentes en Chile y opositores nacionales."
+  rechazo_plebiscito_salida_2022:
+    nombre: Votos del Rechazo en el plebiscito de salida (septiembre 2022)
+    unidad_default: porciento
+    notas: "61,86% de los votos válidos (7.882.238 votos) para la opción Rechazo, contra la propuesta de nueva Constitución de la Convención Constitucional. Participación del 85,86% del padrón."
+  en_contra_plebiscito_2023:
+    nombre: Votos del En Contra en el plebiscito constitucional (diciembre 2023)
+    unidad_default: porciento
+    notas: "55,76% de los votos válidos (6.890.826 votos) para la opción En Contra, rechazando el texto del Consejo Constitucional. El A Favor obtuvo 44,24%."
+  escaños_republicanos_consejo_2023:
+    nombre: Escaños del Partido Republicano en el Consejo Constitucional
+    unidad_default: escaños
+    notas: "23 de 50 escaños (con ~36% de los sufragios) en la elección del 7 de mayo de 2023. Sumando Chile Vamos, la oposición alcanzó 34 escaños, sobre los dos tercios."
+  fallecidos_megaincendio_vina_2024:
+    nombre: Fallecidos por el megaincendio de Viña del Mar (febrero 2024)
+    unidad_default: personas
+    notas: "Al menos 134 fallecidos confirmados por el SML al 23 de febrero de 2024; la cifra final se elevó a 136 según informes posteriores de la Fiscalía."
+  votos_40_horas_2023:
+    nombre: Votos a favor de la ley de 40 horas
+    unidad_default: votos
+    notas: "127 votos a favor en la Cámara de Diputadas y Diputados (abril 2023), que redujo gradualmente la jornada laboral de 45 a 40 horas semanales (Ley 21.561)."
+  votos_reforma_previsional_senado:
+    nombre: Votos a favor de la reforma previsional en el Senado
+    unidad_default: votos
+    notas: "40 votos a favor y 7 en contra en la aprobación en general de la reforma previsional (27 de enero de 2025). La Cámara de Diputados despachó a ley el 29 de enero de 2025."
+  votos_reforma_tributaria_rechazo:
+    nombre: Votos en contra de la idea de legislar la reforma tributaria
+    unidad_default: votos
+    notas: "71 votos en contra (frente a 73 a favor y 3 abstenciones) en la votación de la idea de legislar, que rechazó la reforma tributaria de Boric en la Cámara de Diputados el 8 de marzo de 2023."
+  poblacion_censo_2024:
+    nombre: Población censada en Chile (Censo 2024)
+    unidad_default: personas
+    notas: "18.480.432 personas censadas entre marzo y julio de 2024. En el Censo 2017 fueron 17.574.003. Primeros resultados entregados por el INE el 27 de marzo de 2025; el 40% se concentra en la Región Metropolitana."
+  municipios_adicionales_chile_vamos_2024:
+    nombre: Municipios adicionales ganados por Chile Vamos en las elecciones 2024
+    unidad_default: municipios
+    notas: "Chile Vamos sumó 35 municipios respecto de 2021 en las elecciones municipales y regionales de octubre de 2024, con retroceso del oficialismo."
