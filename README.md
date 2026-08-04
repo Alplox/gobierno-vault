@@ -9,6 +9,7 @@ Gobierno Vault es una base de conocimiento estática sobre eventos relacionados 
 - Se hace uso de LLM's para asistencia en investigacion tanto como redaccion de eventos, pero proyecto esta pensado para ser facilmente editable sin ayuda de estas herramientas (formato Markdown).
 - De momento no existen plantillas/reglas para contribuir a proyecto, favor referirse a archivo `AGENTS.md` para mayor entendimiento de estructuras esperadas en caso de querer aportar.
 - ¿Encontraste una falla? ¿Evento no usa lenguaje objetivo/neutro? ¿Falta contexto? Crea un pull request con aquel corrección o un issue con todos los detalles.
+- https://xkcd.com/927/
 
 ## Características
 
