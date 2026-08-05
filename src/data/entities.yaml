@@ -15,6 +15,72 @@ people:
         organizacion: municipalidad_coquimbo
         desde: 2024-12-06
     organizacion: municipalidad_coquimbo
+  matias_toledo:
+    nombre: Matías Toledo
+    cargo: Alcalde de Puente Alto (Ind.)
+    cargos:
+      - cargo: Alcalde de Puente Alto
+        organizacion: municipalidad_puente_alto
+        desde: 2024-12-06
+    organizacion: municipalidad_puente_alto
+    notas: "Alcalde independiente de Puente Alto, la comuna más poblada de Chile. El 5 de agosto de 2026 acusó abandono del gobierno y criticó al ministro de Seguridad Martín Arrau y al delegado presidencial de la RM Germán Codina, afirmando que 'la agenda de seguridad está para la tele'."
+  paulina_bobadilla:
+    nombre: Paulina Bobadilla
+    cargo: Alcaldesa de Quilicura
+    cargos:
+      - cargo: Alcaldesa de Quilicura
+        organizacion: municipalidad_quilicura
+        desde: 2024-12-06
+    organizacion: municipalidad_quilicura
+    notas: "Alcaldesa de Quilicura. Tras el cuarto incendio de la planta química Panimex (agosto 2026) exigió el cierre de la empresa y criticó que las multas previas no impidieran su funcionamiento."
+  filomena_navia:
+    nombre: Filomena Navia
+    cargo: Alcaldesa de La Cruz
+    cargos:
+      - cargo: Alcaldesa de La Cruz
+        organizacion: municipalidad_la_cruz
+        desde: 2024-12-06
+    organizacion: municipalidad_la_cruz
+    notas: "Alcaldesa de La Cruz (Región de Valparaíso). En agosto de 2026 quedó en el centro de una polémica por un audio filtrado en que regaña a un funcionario que habría detectado una plantación de marihuana con drones, lo que motivó un oficio de la Contraloría Regional de Valparaíso."
+  jorge_coloma:
+    nombre: Jorge Coloma
+    cargo: Presidente regional de la CChC de Concepción
+    organizacion: cchc
+    notas: "Presidente regional de la Cámara Chilena de la Construcción de Concepción. Tras el congelamiento de los corredores de transporte del Gran Concepción (agosto 2026) calificó la medida como 'un nuevo golpe al empleo y al desarrollo' de la región."
+  victor_hugo_robles:
+    nombre: Víctor Hugo Robles
+    cargo: Activista y panelista de Sin Filtros
+    notas: "Activista LGTB conocido como el Che de los Gays. Panelista de Sin Filtros. En agosto de 2026 abandonó el programa junto a otros tres panelistas tras la aparición como invitado de Claudio Crespo, a quien trató de 'carnicero'."
+  ignacio_briones:
+    nombre: Ignacio Briones
+    cargo: Expresidente de Horizontal, exministro de Hacienda
+    organizacion: horizontal
+    notas: "Economista, exministro de Hacienda del segundo gobierno de Piñera y presidente del think tank Horizontal. En agosto de 2026 valoró la megarreforma pero criticó la falta de compensaciones fiscales, la permisología 'corta' y la exención de contribuciones para mayores de 65 años como 'probablemente la política más regresiva de la que tengamos registro'."
+  gloria_de_la_fuente:
+    nombre: Gloria de la Fuente
+    cargo: Exsubsecretaria de Relaciones Exteriores
+    notas: "Exsubsecretaria de Relaciones Exteriores (gobierno de Boric). Tras el anuncio del retiro de Chile del Movimiento de Países No Alineados (agosto 2026) cuestionó la decisión: 'Es difícil saber qué está buscando el Gobierno' y advirtió que dilapidar la autonomía estratégica es un riesgo para el prestigio internacional de Chile."
+  salvador_allende:
+    nombre: Salvador Allende
+    cargo: Expresidente de Chile (1970-1973)
+    notas: "Presidente de Chile entre 1970 y 1973. Durante su gobierno (1971) Chile se incorporó al Movimiento de Países No Alineados."
+  felipe_parada:
+    nombre: Felipe Parada
+    cargo: Panelista de Sin Filtros
+    notas: "Panelista de Sin Filtros. En agosto de 2026 abandonó el programa tras la aparición del excarabinero Claudio Crespo, calificando su presencia como un 'lavado de imagen'."
+  inti_salamanca:
+    nombre: Inti Salamanca
+    cargo: Panelista de Sin Filtros
+    notas: "Panelista de Sin Filtros. En agosto de 2026 abandonó el programa tras la aparición como invitado del excarabinero Claudio Crespo."
+  natalia_paredes:
+    nombre: Natalia Paredes
+    cargo: Gerente general de Cheaf Chile
+    organizacion: cheaf
+    notas: "Gerente general de la plataforma Cheaf Chile, autora del análisis de la encuesta sobre el costo de los alimentos en los hogares chilenos (agosto 2026)."
+  paulina_zamorano:
+    nombre: Paulina Zamorano
+    cargo: Vocera de organizaciones de derechos humanos
+    notas: "Vocera de las agrupaciones chilenas que presentaron ante la CIDH (agosto 2026) un informe que acusa retrocesos y 'desmantelamiento' institucional en materia de derechos humanos bajo el gobierno de Kast."
   alejandra_pizarro:
     nombre: Alejandra Pizarro
     cargo: Subsecretaria de Salud Publica
@@ -74,7 +140,7 @@ people:
     cargo: Senador (UDI)
     cargos:
       - cargo: Senador (UDI)
-        organizacion: ministerio_defensa
+        organizacion: udi
         desde: 2026-03-11
   fernando_barros:
     nombre: Fernando Barros
@@ -129,28 +195,28 @@ people:
     cargo: Delegado Presidencial Region Metropolitana
     cargos:
       - cargo: Delegado Presidencial Region Metropolitana
-        organizacion: ministerio_hacienda
+        organizacion: delegacion_presidencial_rm
         desde: 2026-03-11
   gustavo_sanhueza:
     nombre: Gustavo Sanhueza
     cargo: Senador (UDI)
     cargos:
       - cargo: Senador (UDI)
-        organizacion: ministerio_hacienda
+        organizacion: udi
         desde: 2026-03-11
   ivan_flores:
     nombre: Ivan Flores
     cargo: Senador (DC)
     cargos:
       - cargo: Senador (DC)
-        organizacion: ministerio_hacienda
+        organizacion: partido_democratacristiano
         desde: 2026-03-11
   javier_macaya:
     nombre: Javier Macaya
     cargo: Senador (UDI)
     cargos:
       - cargo: Senador (UDI)
-        organizacion: ministerio_hacienda
+        organizacion: udi
         desde: 2026-03-11
   jorge_quiroz:
     nombre: Jorge Antonio Quiroz Castro
@@ -165,7 +231,7 @@ people:
     cargo: Subsecretario de Minería
     cargos:
       - cargo: Subsecretario de Minería
-        organizacion: municipalidad_de_santiago
+        organizacion: ministerio_mineria
         desde: 2026-03-11
     notas: Encabezó delegación chilena en reactivación del Tratado Minero Binacional (julio 2026).
   jose_antonio_kast:
@@ -197,7 +263,7 @@ people:
     cargo: Presidente de la República de Corea del Sur
     cargos:
       - cargo: Presidente de la República de Corea del Sur
-        organizacion: municipalidad_de_santiago
+        organizacion: corea_del_sur
         desde: 2025-06-01
     notas: "Presidente de Corea del Sur del Partido Demócrata. Asumió en junio de 2025. Realizó visita oficial a Chile el 30 de julio de 2026."
   javier_milei:
@@ -205,7 +271,7 @@ people:
     cargo: Presidente de Argentina
     cargos:
       - cargo: Presidente de Argentina
-        organizacion: municipalidad_de_santiago
+        organizacion: argentina
         desde: 2023-12-10
     notas: Aliado ideológico de Kast
   gustavo_petro:
@@ -213,7 +279,7 @@ people:
     cargo: Expresidente de Colombia
     cargos:
       - cargo: Presidente de Colombia
-        organizacion: municipalidad_de_santiago
+        organizacion: colombia
         desde: 2022-08-07
     notas: Cuestionó la conducta de Kast tras el incidente en Villarrica
   juan_luis_castro:
@@ -221,7 +287,7 @@ people:
     cargo: Senador (PS)
     cargos:
       - cargo: Senador (PS)
-        organizacion: municipalidad_de_santiago
+        organizacion: partido_socialista
         desde: 2026-03-11
     jefe_comite: Socialismo Democratico
   louis_de_grange:
@@ -229,11 +295,11 @@ people:
     cargo: Ministro de Transporte y Telecomunicaciones
     cargos:
       - cargo: Ministro de Transporte y Telecomunicaciones
-        organizacion: municipalidad_de_santiago
+        organizacion: ministerio_transportes
         desde: 2026-03-11
         hasta: 2026-05-19
       - cargo: Biministro de Obras Públicas y Transportes
-        organizacion: municipalidad_de_santiago
+        organizacion: ministerio_transportes
         desde: 2026-05-19
     notas: Independiente.
   magdalena_retamal:
@@ -331,7 +397,7 @@ people:
     cargo: Presidenta del Senado (RN)
     cargos:
       - cargo: Senadora (RN)
-        organizacion: armada_chile
+        organizacion: renovacion_nacional
         desde: 2026-03-11
       - cargo: Presidenta del Senado
         organizacion: senado
@@ -368,14 +434,14 @@ people:
     cargo: Senador (Ind-RN)
     cargos:
       - cargo: Senador (Ind-RN)
-        organizacion: armada_chile
+        organizacion: renovacion_nacional
         desde: 2026-03-11
   matias_walker:
     nombre: Matias Walker
     cargo: Senador (Ind)
     cargos:
       - cargo: Senador (Ind)
-        organizacion: armada_chile
+        organizacion: senado
         desde: 2026-03-11
   alberto_soto:
     nombre: Alberto Soto Valenzuela
@@ -495,10 +561,10 @@ people:
       y vigilancia. Reunión reservada con Kast en La Moneda (mayo 2026).
   johannes_kaiser:
     nombre: Johannes Kaiser
-    cargo: Diputado (Libertario)
+    cargo: Diputado (PNL)
     cargos:
-      - cargo: Diputado (Libertario)
-        organizacion: sermig
+      - cargo: Diputado (PNL)
+        organizacion: partido_nacional_libertario
         desde: 2026-03-11
     notas: Reveló interés de Thiel en invertir en minería en Chile y Argentina.
   felipe_kast:
@@ -509,7 +575,22 @@ people:
   jaime_manalich:
     nombre: Jaime Mañalich
     cargo: Exministro de Salud
-    notas: "Exministro de Salud del segundo gobierno de Piñera. Defendido por Kast por su gestión durante la pandemia."
+    notas: "Exministro de Salud del segundo gobierno de Piñera. Confirmó el primer caso de COVID-19 en Chile el 3 de marzo de 2020: 'En algún momento tenía que llegar'. Defendido por Kast por su gestión durante la pandemia."
+  sebastian_sichel:
+    nombre: Sebastián Sichel
+    cargo: Exministro de Desarrollo Social (2020)
+    organizacion: ministerio_desarrollo_social
+    notas: "Ministro de Desarrollo Social y Familia del segundo gobierno de Piñera (2019-2020). Presentó junto al Presidente el proyecto de Ingreso Familiar de Emergencia (IFE) en abril de 2020. Candidato presidencial en 2021."
+  alejandra_candia:
+    nombre: Alejandra Candia
+    cargo: Exsubsecretaria de Evaluación Social (2020)
+    organizacion: ministerio_desarrollo_social
+    notas: "Subsecretaria de Evaluación Social del gobierno de Piñera. Participó en la presentación del proyecto de Ingreso Familiar de Emergencia (IFE) en abril de 2020."
+  fernando_arab:
+    nombre: Fernando Arab
+    cargo: Ministro del Trabajo y Previsión Social subrogante (2020)
+    organizacion: ministerio_trabajo
+    notas: "Ministro del Trabajo y Previsión Social subrogante (S) del segundo gobierno de Piñera. Firmó el decreto de promulgación de la Ley 21.248 (retiro del 10% de los fondos de pensiones, julio 2020)."
   jose_pinera:
     nombre: José Piñera
     notas: Exministro, creador del sistema de AFP y del Código Minero. Reunión
@@ -519,7 +600,7 @@ people:
     cargo: Diputado (Frente Amplio)
     cargos:
       - cargo: Diputado (Frente Amplio)
-        organizacion: sermig
+        organizacion: frente_amplio
         desde: 2026-03-11
     notas: Impulsó oficios de transparencia sobre la reunión Kast-Thiel.
   juan_orlando_hernandez:
@@ -527,7 +608,7 @@ people:
     cargo: Expresidente de Honduras
     cargos:
       - cargo: Presidente de Honduras
-        organizacion: sermig
+        organizacion: honduras
         desde: 2014-01-27
         hasta: 2022-01-27
     notas: Condenado por narcotráfico en EE.UU., indultado por Trump. Operador
@@ -545,7 +626,7 @@ people:
     cargo: Primer Ministro de Israel
     cargos:
       - cargo: Primer Ministro de Israel
-        organizacion: sermig
+        organizacion: israel
         desde: 2022-12-29
     notas: Aparece en audios Hondurasgate como gestor del indulto de Hernández ante
       Trump.
@@ -558,7 +639,7 @@ people:
     cargo: Senador (Republicano), general (r) del Ejercito
     cargos:
       - cargo: Senador (Republicano), general (r) del Ejercito
-        organizacion: gendarmeria_chile
+        organizacion: partido_republicano
         desde: 2026-03-11
     notas: Disenador del Plan Escudo Fronterizo
   danisa_astudillo:
@@ -566,14 +647,14 @@ people:
     cargo: Senadora (PS), presidenta Comision de Gobierno del Senado
     cargos:
       - cargo: Senadora (PS), presidenta Comision de Gobierno del Senado
-        organizacion: gendarmeria_chile
+        organizacion: partido_socialista
         desde: 2026-03-11
   daniel_nunez:
     nombre: Daniel Nunez
     cargo: Senador (PC)
     cargos:
       - cargo: Senador (PC)
-        organizacion: gendarmeria_chile
+        organizacion: partido_comunista
         desde: 2026-03-11
   ruben_perez:
     nombre: Ruben Perez
@@ -584,7 +665,7 @@ people:
     cargo: Ex Subsecretario de Ciencia, Tecnologia, Conocimiento e Innovacion
     cargos:
       - cargo: Ex Subsecretario de Ciencia, Tecnologia, Conocimiento e Innovacion
-        organizacion: ministerio_mujer
+        organizacion: ministerio_ciencia
         desde: 2026-03-11
         hasta: 2026-05-11
     notas: Renuncio en mayo por diferencias con ministra Lincolao
@@ -597,7 +678,7 @@ people:
     cargo: Ex Subsecretario de Seguridad Publica
     cargos:
       - cargo: Ex Subsecretario de Seguridad Publica
-        organizacion: ministerio_mujer
+        organizacion: ministerio_seguridad
         desde: 2026-03-11
         hasta: 2026-06-02
     notas: Renuncio en junio, reestructuracion Arrau
@@ -606,7 +687,7 @@ people:
     cargo: Ex Subsecretaria de Prevencion del Delito
     cargos:
       - cargo: Ex Subsecretaria de Prevencion del Delito
-        organizacion: ministerio_mujer
+        organizacion: subsecretaria_prevencion_delito
         desde: 2026-03-11
         hasta: 2026-06-02
     notas: Renuncio en junio, reestructuracion Arrau
@@ -650,7 +731,7 @@ people:
     cargo: Ex Seremi de Salud de Valparaíso
     cargos:
       - cargo: Ex Seremi de Salud de Valparaíso
-        organizacion: ministerio_agricultura
+        organizacion: ministerio_salud
         desde: 2026-04-02
         hasta: 2026-04-05
   luis_ignacio_de_la_torre:
@@ -667,7 +748,7 @@ people:
     cargo: Ex Seremi de Trabajo de Arica y Parinacota
     cargos:
       - cargo: Ex Seremi de Trabajo de Arica y Parinacota
-        organizacion: ministerio_agricultura
+        organizacion: ministerio_trabajo
         desde: 2026-03-31
         hasta: 2026-04-08
     notas: Enfermera de 26 anos, renuncio tras 8 dias por no acreditar experiencia
@@ -677,7 +758,7 @@ people:
     cargo: Ex Seremi de Trabajo de Valparaíso
     cargos:
       - cargo: Ex Seremi de Trabajo de Valparaíso
-        organizacion: ministerio_agricultura
+        organizacion: ministerio_trabajo
         desde: 2026-04-02
         hasta: 2026-04-07
     notas: Contador publico U. de Chile, renuncio a los 5 dias por presunta
@@ -692,7 +773,7 @@ people:
     cargo: Ex Seremi de Desarrollo Social de Antofagasta
     cargos:
       - cargo: Ex Seremi de Desarrollo Social de Antofagasta
-        organizacion: ministerio_agricultura
+        organizacion: ministerio_desarrollo_social
         desde: 2026-03-11
         hasta: 2026-04-09
     notas: Licenciada en Historia, renuncio por no tener titulo profesional de 10
@@ -702,7 +783,7 @@ people:
     cargo: Ex Seremi de Justicia de Antofagasta
     cargos:
       - cargo: Ex Seremi de Justicia de Antofagasta
-        organizacion: ministerio_agricultura
+        organizacion: ministerio_justicia
         desde: 2026-03-11
         hasta: 2026-04-14
     notas: Republicana, renuncio por cuestionamientos a su defensa en casos de
@@ -720,7 +801,7 @@ people:
     cargo: Senador (PPD)
     cargos:
       - cargo: Senador (PPD)
-        organizacion: secom
+        organizacion: partido_por_la_democracia
         desde: 2026-03-11
   manuel_monsalve:
     nombre: Manuel Monsalve Benavides
@@ -736,14 +817,14 @@ people:
     cargo: Senadora (FA)
     cargos:
       - cargo: Senadora (FA)
-        organizacion: secom
+        organizacion: frente_amplio
         desde: 2026-03-11
   miguel_calisto:
     nombre: Miguel Angel Calisto
     cargo: Senador (independiente)
     cargos:
       - cargo: Senador (independiente)
-        organizacion: secom
+        organizacion: senado
         desde: 2026-03-11
     notas: "Voto clave para aprobar megarreforma en Senado. Investigado desde 2021 por fraude al Fisco vinculado a asesorías (causa de la Fiscalía de Aysén; CDE demandó $131 millones; TC suspendió temporalmente la causa en julio de 2026)."
   roland_carcamo:
@@ -818,7 +899,7 @@ people:
     cargo: Senadora por Aysén (Ind-PS-PPD-PL)
     cargos:
       - cargo: Senadora por Aysén (Ind-PS-PPD-PL)
-        organizacion: ministerio_salud
+        organizacion: senado
         desde: 2026-03-11
   evelyn_brintrup:
     nombre: Evelyn Brintrup
@@ -836,7 +917,7 @@ people:
     cargo: Diputado IND-PPD
     cargos:
       - cargo: Diputado IND-PPD
-        organizacion: presidencia_chile
+        organizacion: partido_por_la_democracia
         desde: 2026-03-11
     notas: Filtró la minuta de Secom
   sergio_turra:
@@ -906,7 +987,7 @@ people:
         desde: 2016-12-06
         hasta: 2024-12-06
       - cargo: Senador (Ind-UDI)
-        organizacion: partido_nacional_libertario
+        organizacion: udi
         desde: 2026-03-11
     notas: Hermano del diputado Álvaro Carter
   gloria_fernandez:
@@ -922,7 +1003,7 @@ people:
     cargo: Alcalde de La Florida (Republicano)
     cargos:
       - cargo: Alcalde de La Florida (Republicano)
-        organizacion: partido_nacional_libertario
+        organizacion: municipalidad_la_florida
         desde: 2024-12-06
     notas: Ex administrador municipal de Carter, contrató a Gloria Fernández
   ana_maria_gazmuri:
@@ -930,7 +1011,7 @@ people:
     cargo: Diputada Distrito 12
     cargos:
       - cargo: Diputada Distrito 12
-        organizacion: partido_nacional_libertario
+        organizacion: camara_diputados
         desde: 2026-03-11
     notas: Denunció la contratación irregular ante Contraloría
   alvaro_carter:
@@ -938,7 +1019,7 @@ people:
     cargo: Diputado (Republicano)
     cargos:
       - cargo: Diputado (Republicano)
-        organizacion: partido_nacional_libertario
+        organizacion: partido_republicano
         desde: 2026-03-11
     notas: Hermano de Rodolfo Carter
   jose_seves:
@@ -946,22 +1027,22 @@ people:
     cargo: Concejal de La Florida (PC)
     cargos:
       - cargo: Concejal de La Florida (PC)
-        organizacion: partido_nacional_libertario
+        organizacion: partido_comunista
         desde: 2024-12-06
     notas: Denunció la contratación de Gloria Fernández
   vanessa_kaiser:
     nombre: Vanessa Kaiser
-    cargo: Diputada (Republicano)
+    cargo: Senadora (PNL)
     cargos:
-      - cargo: Diputada (Republicano)
+      - cargo: Senadora (PNL)
         organizacion: partido_nacional_libertario
         desde: 2026-03-11
     notas: Esposa de Urruticoechea, defiende proyecto de aborto "Escucha tu corazón"
   cristobal_urruticoechea:
     nombre: Cristóbal Urruticoechea
-    cargo: Diputado (Republicano)
+    cargo: Diputado (PNL)
     cargos:
-      - cargo: Diputado (Republicano)
+      - cargo: Diputado (PNL)
         organizacion: partido_nacional_libertario
         desde: 2026-03-11
     notas: Autor del proyecto de aborto "Escucha tu corazón"
@@ -980,7 +1061,7 @@ people:
     cargo: Diputado (RN)
     cargos:
       - cargo: Diputado (RN)
-        organizacion: partido_nacional_libertario
+        organizacion: renovacion_nacional
         desde: 2026-03-11
     notas: Coautor del proyecto "Escucha tu corazón" de Urruticoechea
   luisa_villarin:
@@ -1046,7 +1127,7 @@ people:
     cargo: Diputada (Republicano)
     cargos:
       - cargo: Diputada (Republicano)
-        organizacion: partido_nacional_libertario
+        organizacion: partido_republicano
         desde: 2026-03-11
     notas: Coautora del proyecto "Escucha su corazón"
   catalina_del_real:
@@ -1054,7 +1135,7 @@ people:
     cargo: Diputada (Republicano)
     cargos:
       - cargo: Diputada (Republicano)
-        organizacion: partido_nacional_libertario
+        organizacion: partido_republicano
         desde: 2026-03-11
     notas: Coautora del proyecto "Escucha su corazón"
   claudia_reyes:
@@ -1062,18 +1143,9 @@ people:
     cargo: Diputada (Republicano)
     cargos:
       - cargo: Diputada (Republicano)
-        organizacion: partido_nacional_libertario
+        organizacion: partido_republicano
         desde: 2026-03-11
     notas: Coautora del proyecto "Escucha su corazón"
-  ximena_ossondon:
-    nombre: Ximena Ossandón
-    cargo: Diputada (RN)
-    cargos:
-      - cargo: Diputada (RN)
-        organizacion: partido_nacional_libertario
-        desde: 2026-03-11
-    notas: Coautora del proyecto "Escucha su corazón"; posteriormente retiró su
-      patrocinio
   antonia_orellana:
     nombre: Antonia Orellana
     cargo: Exministra de Derechos Humanos
@@ -1159,10 +1231,24 @@ people:
     cargo: Senadora (Ind.)
     cargos:
       - cargo: Senadora (Ind.)
-        organizacion: seremi_salud_magallanes
+        organizacion: senado
         desde: 2026-03-11
     notas: Criticó duramente el video, calificando a los participantes como
       "repulsivos".
+  patricio_maturana:
+    nombre: Patricio Maturana
+    cargo: Excapitán de Carabineros, condenado
+    organizacion: carabineros
+    notas: "Excapitán de Carabineros condenado a 12 años y 183 días de presidio efectivo por apremios ilegítimos con resultado de lesiones gravísimas: el 26 de noviembre de 2019, en San Bernardo, percutió una bomba lacrimógena que dejó ciega a Fabiola Campillai. Con beneficio de salida dominical desde febrero de 2026. En marzo de 2025, José Antonio Kast anunció que revisaría su caso e impulsaría su indulto."
+  nubia_vivanco:
+    nombre: Nubia Vivanco
+    cargo: Abogada defensora de Patricio Maturana
+    notas: "Abogada de Patricio Maturana. Ingresó el escrito de solicitud de indulto particular ante el Ministerio de Justicia un día después de la asunción de José Antonio Kast como presidente."
+  alfredo_echavarria:
+    nombre: Alfredo Echavarría
+    cargo: Presidente de la Cámara Chilena de la Construcción
+    organizacion: cchc
+    notas: "Presidente de la CChC. Celebró la ampliación del subsidio a la tasa hipotecaria a 6.000 UF (agosto 2026) como una iniciativa 'largamente esperada por nuestro sector'."
   tamara_ramirez:
     nombre: Tamara Ramírez
     cargo: Subjefa de bancada (PDG)
@@ -1175,7 +1261,7 @@ people:
     cargo: Diputado (PDG)
     cargos:
       - cargo: Diputado (PDG)
-        organizacion: seremi_salud_magallanes
+        organizacion: pdg
         desde: 2026-03-11
     notas: Condenó el video, lo calificó de " aberrante".
   alex_nahuelquin:
@@ -1183,7 +1269,7 @@ people:
     cargo: Diputado (PDG)
     cargos:
       - cargo: Diputado (PDG)
-        organizacion: seremi_salud_magallanes
+        organizacion: pdg
         desde: 2026-03-11
     notas: Condenó el video junto a Paula Olmos.
   alvaro_jalaff:
@@ -1195,7 +1281,7 @@ people:
     cargo: Diputada (PDG)
     cargos:
       - cargo: Diputada (PDG)
-        organizacion: seremi_salud_magallanes
+        organizacion: pdg
         desde: 2026-03-11
     notas: Condenó el video junto a Alex Nahuelquín.
   fabin_barrientos_andrade:
@@ -1215,7 +1301,7 @@ people:
     cargo: Delegada Presidencial de Magallanes
     cargos:
       - cargo: Delegada Presidencial de Magallanes
-        organizacion: ministerio_hacienda
+        organizacion: delegacion_presidencial_magallanes
         desde: 2026-03-11
   francisco_san_martin:
     nombre: Francisco San Martín Álvarez
@@ -1241,7 +1327,7 @@ people:
     cargo: Diputado (PS)
     cargos:
       - cargo: Diputado (PS)
-        organizacion: ministerio_hacienda
+        organizacion: partido_socialista
         desde: 2026-03-11
     notas: Integrante Comisión Investigadora CEI 72 (robo cables de cobre)
   daniella_cicardini:
@@ -1249,7 +1335,7 @@ people:
     cargo: Senadora (PS)
     cargos:
       - cargo: Senadora (PS)
-        organizacion: ministerio_hacienda
+        organizacion: partido_socialista
         desde: 2026-03-11
     notas: Denunció ante Contraloría el uso de recursos públicos en el almuerzo de Kast con excompañeros de la UC en La Moneda
   nathalie_castillo:
@@ -1257,7 +1343,7 @@ people:
     cargo: Diputada (PC)
     cargos:
       - cargo: Diputada (PC)
-        organizacion: ministerio_hacienda
+        organizacion: partido_comunista
         desde: 2026-03-11
     notas: Integrante Comisión Investigadora CEI 72 (robo cables de cobre)
   carolina_tello:
@@ -1265,7 +1351,7 @@ people:
     cargo: Diputada (FA)
     cargos:
       - cargo: Diputada (FA)
-        organizacion: ministerio_hacienda
+        organizacion: frente_amplio
         desde: 2026-03-11
     notas: Integrante Comisión Investigadora CEI 72 (robo cables de cobre)
   alvaro_ortiz:
@@ -1273,7 +1359,7 @@ people:
     cargo: Diputado (DC)
     cargos:
       - cargo: Diputado (DC)
-        organizacion: ministerio_hacienda
+        organizacion: partido_democratacristiano
         desde: 2026-03-11
     notas: Crítico de megarreforma, llamó "mentiroso" a Quiroz
   carlos_mulet:
@@ -1281,7 +1367,7 @@ people:
     cargo: Senador (PDG)
     cargos:
       - cargo: Senador (PDG)
-        organizacion: ministerio_hacienda
+        organizacion: pdg
         desde: 2026-03-11
     notas: Cuestiona designación de Sedini como vocera
   mauro_tamayo:
@@ -1301,7 +1387,7 @@ people:
     cargo: Diputado (FA)
     cargos:
       - cargo: Diputado (FA)
-        organizacion: ministerio_hacienda
+        organizacion: frente_amplio
         desde: 2026-03-11
     notas: Critica al Ejecutivo por dichos de Sedini
   consuelo_veloso:
@@ -1309,7 +1395,7 @@ people:
     cargo: Diputada (RD)
     cargos:
       - cargo: Diputada (RD)
-        organizacion: ministerio_hacienda
+        organizacion: camara_diputados
         desde: 2026-03-11
     notas: Llamó "manga de cobardes y sinvergüenzas" a Kast y Quiroz
   jose_castillo:
@@ -1317,7 +1403,7 @@ people:
     cargo: Diputado (PC)
     cargos:
       - cargo: Diputado (PC)
-        organizacion: ministerio_hacienda
+        organizacion: partido_comunista
         desde: 2026-03-11
     notas: Anunció Comisión Investigadora por respuesta tardía al sistema frontal
   gonzalo_fuentes:
@@ -1339,7 +1425,7 @@ people:
     cargo: Diputado (PS)
     cargos:
       - cargo: Diputado (PS)
-        organizacion: ministerio_hacienda
+        organizacion: partido_socialista
         desde: 2026-03-11
     notas: Firmó la denuncia ante Contraloría por el almuerzo de Kast con excompañeros en La Moneda
   victor_jara:
@@ -1360,7 +1446,7 @@ people:
     cargo: Diputado (PPD-Ind)
     cargos:
       - cargo: Diputado (PPD-Ind)
-        organizacion: ministerio_hacienda
+        organizacion: partido_por_la_democracia
         desde: 2026-03-11
     notas: Calificó de "publicidad engañosa" el proyecto de IVA pañales del PDG
   jorge_jeri:
@@ -1372,7 +1458,7 @@ people:
     cargo: Biministro de Economía y Minería
     cargos:
       - cargo: Biministro de Economía y Minería
-        organizacion: ministerio_hacienda
+        organizacion: ministerio_economia
         desde: 2026-03-11
     notas: Ingeniero Agrónomo de la PUC, único biministro del gabinete Kast. Ex vicepresidente de la CPC y ex presidente de la CChC de La Serena. Dirige la empresa familiar Ecomac (ex Constructora Carel). Agenda anti-permisología. En 2016 CIPER vinculó a la Inmobiliaria Ecomac, bajo su control, con pagos de $25 millones en facturas falsas que habrían financiado la campaña de Laurence Golborne.
   carlos_smith:
@@ -1423,7 +1509,7 @@ people:
     cargo: Ministra del Deporte
     cargos:
       - cargo: Ministra del Deporte
-        organizacion: partido_republicano
+        organizacion: ministerio_del_deporte
         desde: 2026-03-11
     notas: Atleta olímpica, especialista en lanzamiento de peso.
   tomas_rau:
@@ -1431,7 +1517,7 @@ people:
     cargo: Ministro de Trabajo y Previsión Social
     cargos:
       - cargo: Ministro de Trabajo y Previsión Social
-        organizacion: partido_republicano
+        organizacion: ministerio_trabajo
         desde: 2026-03-11
     notas: Abogado laborista, independiente.
   francisco_perez_mackenna:
@@ -1439,7 +1525,7 @@ people:
     cargo: Ministro de Relaciones Exteriores
     cargos:
       - cargo: Ministro de Relaciones Exteriores
-        organizacion: partido_republicano
+        organizacion: ministerio_relaciones_exteriores
         desde: 2026-03-11
     notas: Ingeniero comercial, CEO de Quiñenco. Independiente.
   catalina_parot:
@@ -1447,7 +1533,7 @@ people:
     cargo: Ministra de Bienes Nacionales
     cargos:
       - cargo: Ministra de Bienes Nacionales
-        organizacion: partido_republicano
+        organizacion: ministerio_bienes_nacionales
         desde: 2026-03-11
     notas: Abogada, militante de Evópoli. Exministra de Bienes Nacionales durante el
       primer gobierno de Piñera.
@@ -1456,7 +1542,7 @@ people:
     cargo: Ministro de Justicia y Derechos Humanos
     cargos:
       - cargo: Ministro de Justicia y Derechos Humanos
-        organizacion: partido_republicano
+        organizacion: ministerio_justicia
         desde: 2026-03-11
     notas: Abogado, independiente.
   francisca_toledo:
@@ -1464,7 +1550,7 @@ people:
     cargo: Ministra del Medio Ambiente
     cargos:
       - cargo: Ministra del Medio Ambiente
-        organizacion: partido_republicano
+        organizacion: ministerio_medio_ambiente
         desde: 2026-03-11
     notas: Ingeniera Civil Industrial. Trabajó en los dos gobiernos de Piñera.
   ximena_lincolao:
@@ -1472,7 +1558,7 @@ people:
     cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
     cargos:
       - cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
-        organizacion: partido_republicano
+        organizacion: ministerio_ciencia
         desde: 2026-03-11
     notas: Independiente.
   cristobal_martinez:
@@ -1529,7 +1615,7 @@ people:
     cargo: Presidente de la República Dominicana
     cargos:
       - cargo: Presidente de la República Dominicana
-        organizacion: partido_republicano
+        organizacion: republica_dominicana
         desde: 2020-08-16
     notas: Mostró a Kast la barrera fronteriza con Haití como modelo de control
       migratorio.
@@ -1538,7 +1624,7 @@ people:
     cargo: Presidente de El Salvador
     cargos:
       - cargo: Presidente de El Salvador
-        organizacion: partido_republicano
+        organizacion: el_salvador
         desde: 2019-06-01
     notas: Recibió a Kast en el CECOT, ofreció asesoría en sistema penitenciario.
   lula_da_silva:
@@ -1546,7 +1632,7 @@ people:
     cargo: Presidente de Brasil
     cargos:
       - cargo: Presidente de Brasil
-        organizacion: partido_republicano
+        organizacion: brasil
         desde: 2023-01-01
     notas: Se reunió con Kast en el Foro CAF de Panamá.
   daniel_noboa:
@@ -1554,7 +1640,7 @@ people:
     cargo: Presidente de Ecuador
     cargos:
       - cargo: Presidente de Ecuador
-        organizacion: partido_republicano
+        organizacion: ecuador
         desde: 2023-11-23
     notas: Se reunió con Kast en el Foro CAF de Panamá.
   bernardo_arevalo:
@@ -1562,7 +1648,7 @@ people:
     cargo: Presidente de Guatemala
     cargos:
       - cargo: Presidente de Guatemala
-        organizacion: partido_republicano
+        organizacion: guatemala
         desde: 2024-01-14
     notas: Se reunió con Kast en el Foro CAF de Panamá.
   alexander_nanjari:
@@ -1580,7 +1666,7 @@ people:
     cargo: Ex Seremi de Educación de Los Lagos
     cargos:
       - cargo: Ex Seremi de Educación de Los Lagos
-        organizacion: partido_republicano
+        organizacion: ministerio_educacion
         desde: 2026-03-26
         hasta: 2026-04-01
     notas: Prof. Educación Física, nombramiento revocado tras 6 días por posts a
@@ -1594,7 +1680,7 @@ people:
     cargo: Ex Seremi de la Mujer de Antofagasta
     cargos:
       - cargo: Ex Seremi de la Mujer de Antofagasta
-        organizacion: partido_republicano
+        organizacion: ministerio_mujer
         desde: 2026-03-11
         hasta: 2026-04-08
     notas: Egresada de Derecho UCN, no contaba con título profesional.
@@ -1608,7 +1694,7 @@ people:
     cargo: Ex Seremi de Energía de La Araucanía
     cargos:
       - cargo: Ex Seremi de Energía de La Araucanía
-        organizacion: partido_republicano
+        organizacion: ministerio_energia
         desde: 2026-03-11
         hasta: 2026-04-15
     notas: RN, ex seremi de Hacienda bajo Piñera. Se ausentó del cargo y dejó sin
@@ -1618,7 +1704,7 @@ people:
     cargo: Ex Seremi de Culturas y Artes de la RM
     cargos:
       - cargo: Ex Seremi de Culturas y Artes de la RM
-        organizacion: partido_republicano
+        organizacion: ministerio_culturas
         desde: 2026-03-31
         hasta: 2026-04-14
   carolina_arredondo:
@@ -1631,7 +1717,7 @@ people:
     cargo: Ex Seremi de Culturas y Artes de la RM
     cargos:
       - cargo: Ex Seremi de Culturas y Artes de la RM
-        organizacion: partido_republicano
+        organizacion: ministerio_culturas
         desde: 2026-04-14
         hasta: 2026-04-15
     notas: Reemplazó a Baehr, renunció al día siguiente por motivos personales
@@ -1641,7 +1727,7 @@ people:
     cargo: Ex Seremi de Trabajo de Coquimbo
     cargos:
       - cargo: Ex Seremi de Trabajo de Coquimbo
-        organizacion: partido_republicano
+        organizacion: ministerio_trabajo
         desde: 2026-03-11
         hasta: 2026-04-21
     notas: Contador Auditor, renunció por no cumplir requisito de 10 semestres.
@@ -1650,7 +1736,7 @@ people:
     cargo: Ex Seremi de Culturas y Artes de Aysén
     cargos:
       - cargo: Ex Seremi de Culturas y Artes de Aysén
-        organizacion: partido_republicano
+        organizacion: ministerio_culturas
         desde: 2026-03-11
         hasta: 2026-04-17
     notas: UDI, concejala de Chile Chico, renunció por falta de experiencia para el
@@ -1665,7 +1751,7 @@ people:
     cargo: Ex Seremi de Culturas y Artes de Los Lagos
     cargos:
       - cargo: Ex Seremi de Culturas y Artes de Los Lagos
-        organizacion: partido_republicano
+        organizacion: ministerio_culturas
         desde: 2026-03-30
         hasta: 2026-07-21
     notas: Renunció por motivos personales tras 113 días en el cargo.
@@ -1674,7 +1760,7 @@ people:
     cargo: Ex Seremi de Trabajo de Tarapacá
     cargos:
       - cargo: Ex Seremi de Trabajo de Tarapacá
-        organizacion: partido_republicano
+        organizacion: ministerio_trabajo
         desde: 2026-03-30
         hasta: 2026-07-27
     notas: Profesor, renunció julio 2026 por denuncias de acoso y maltrato laboral.
@@ -1684,7 +1770,7 @@ people:
     cargo: Ex Seremi de Bienes Nacionales de Antofagasta
     cargos:
       - cargo: Ex Seremi de Bienes Nacionales de Antofagasta
-        organizacion: partido_republicano
+        organizacion: ministerio_bienes_nacionales
         desde: 2026-03-11
         hasta: 2026-05-06
     notas: Abogada U. de Antofagasta, magíster en Derecho Público. Renunció por
@@ -1694,7 +1780,7 @@ people:
     cargo: Ex Seremi de Transportes de Aysén
     cargos:
       - cargo: Ex Seremi de Transportes de Aysén
-        organizacion: partido_republicano
+        organizacion: ministerio_transportes
         desde: 2026-03-11
         hasta: 2026-06-01
     notas: Renunció tras incidente en comisaría de Coyhaique donde intervino por su
@@ -1704,7 +1790,7 @@ people:
     cargo: Ex Seremi de Salud de Ñuble
     cargos:
       - cargo: Ex Seremi de Salud de Ñuble
-        organizacion: partido_republicano
+        organizacion: ministerio_salud
         desde: 2026-03-11
         hasta: 2026-06-12
     notas: Nutricionista U. del Desarrollo, magíster (c). Minsal le pidió renuncia
@@ -1718,7 +1804,7 @@ people:
     cargo: Ex Seremi de Hacienda de Arica y Parinacota
     cargos:
       - cargo: Ex Seremi de Hacienda de Arica y Parinacota
-        organizacion: partido_republicano
+        organizacion: ministerio_hacienda
         desde: 2026-03-11
         hasta: 2026-07-17
     notas: Ingeniero comercial, MBA. Renunció voluntariamente julio 17. Razones no
@@ -1746,7 +1832,7 @@ people:
     cargo: Diputada (FA)
     cargos:
       - cargo: Diputada (FA)
-        organizacion: partido_republicano
+        organizacion: frente_amplio
         desde: 2026-03-11
     notas: Diputada frenteamplista, criticó sueldos de asesores presidenciales.
   dorothy_perez:
@@ -1758,7 +1844,7 @@ people:
     cargo: Diputado (PDG)
     cargos:
       - cargo: Diputado (PDG)
-        organizacion: partido_republicano
+        organizacion: pdg
         desde: 2026-03-11
     notas: Diputado del Partido de la Gente.
   diego_munoz:
@@ -1766,7 +1852,7 @@ people:
     cargo: Ex Seremi de Bienes Nacionales de Tarapacá
     cargos:
       - cargo: Ex Seremi de Bienes Nacionales de Tarapacá
-        organizacion: partido_republicano
+        organizacion: ministerio_bienes_nacionales
         desde: 2026-03-28
         hasta: 2026-05-01
     notas: Abogado U. de Concepción, renunció tras 34 días por motivos personales.
@@ -1775,7 +1861,7 @@ people:
     cargo: Presidenta de Perú
     cargos:
       - cargo: Presidenta de Perú
-        organizacion: partido_republicano
+        organizacion: peru
         desde: 2026-07-28
     notas: Líder de Fuerza Popular, asumió el 28 de julio de 2026. Hija de Alberto Fujimori.
   eduardo_frei:
@@ -1818,7 +1904,7 @@ people:
     cargo: Delegado presidencial de Ñuble
     cargos:
       - cargo: Delegado presidencial de Ñuble
-        organizacion: partido_republicano
+        organizacion: delegacion_presidencial_nuble
         desde: 2026-03-11
     notas: Cifró en 107 las personas afectadas por sistema frontal en Ñuble.
   danilo_herrera:
@@ -1843,7 +1929,7 @@ people:
     cargo: Seremi de Culturas, Artes y Patrimonio del Maule
     cargos:
       - cargo: Seremi de Culturas, Artes y Patrimonio del Maule
-        organizacion: partido_republicano
+        organizacion: ministerio_culturas
         desde: 2026-04-01
     notas: Periodista. Designado en abril 2026. Contraloría detectó pagos por
       $30M sin respaldo en Municipalidad de Villa Alegre.
@@ -1852,7 +1938,7 @@ people:
     cargo: Ex seremi de Vivienda y Urbanismo del Maule
     cargos:
       - cargo: Ex seremi de Vivienda y Urbanismo del Maule
-        organizacion: partido_republicano
+        organizacion: ministerio_vivienda
         desde: 2026-03-11
         hasta: 2026-07-27
     notas: Renunció en julio 2026 tras <5 meses por nuevo marco de remuneraciones.
@@ -1902,7 +1988,7 @@ people:
     cargo: Diputado (PL), presidente Comisión de Pesca y Acuicultura
     cargos:
       - cargo: Diputado (PL), presidente Comisión de Pesca y Acuicultura
-        organizacion: municipalidad_vina_del_mar
+        organizacion: camara_diputados
         desde: 2026-03-11
     notas: Exigió transparencia en financiamiento de ONG tras caso NPA.
   mauro_gonzalez:
@@ -1910,7 +1996,7 @@ people:
     cargo: Diputado (RN)
     cargos:
       - cargo: Diputado (RN)
-        organizacion: municipalidad_vina_del_mar
+        organizacion: renovacion_nacional
         desde: 2026-03-11
     notas: Propuso modificar Ley Lafkenche ante aportes de NPA.
   victor_quiroz:
@@ -1940,7 +2026,7 @@ people:
         desde: 2022-03-11
         hasta: 2026-03-11
       - cargo: Diputada (PC)
-        organizacion: partido_republicano
+        organizacion: partido_comunista
         desde: 2026-03-11
     notas: Exvocera del gobierno de Gabriel Boric. Criticó duramente las promesas de seguridad de Kast en entrevista con Animales Políticos.
   evelyn_matthei:
@@ -1948,7 +2034,7 @@ people:
     cargo: Exalcaldesa de Providencia, excandidata presidencial (UDI)
     cargos:
       - cargo: Alcaldesa de Providencia
-        organizacion: partido_republicano
+        organizacion: municipalidad_providencia
         desde: 2016-12-06
         hasta: 2024-12-06
     notas: Se cuadró con Camila Vallejo en críticas a promesa de seguridad del gobierno Kast. También criticó a la prensa por cobertura sexista.
@@ -1981,7 +2067,7 @@ people:
     cargo: Diputado (PDG)
     cargos:
       - cargo: Diputado (PDG)
-        organizacion: partido_republicano
+        organizacion: pdg
         desde: 2026-03-11
     notas: Criticó declaraciones de Kast sobre alza de combustibles en Cuenta Pública.
   lautaro_carmona:
@@ -2017,7 +2103,7 @@ people:
     cargo: Seremi de Transportes y Telecomunicaciones del Maule
     cargos:
       - cargo: Seremi de Transportes y Telecomunicaciones del Maule
-        organizacion: delegacion_presidencial_maule
+        organizacion: ministerio_transportes
         desde: 2026-04-01
     notas: "Ex secretario ejecutivo de la CNTC y considerado la 'mano derecha' del dirigente camionero Sergio Pérez. Tuvo participación protagónica en las negociaciones del paro de camioneros de 2022. También fue seremi de Transportes del Maule entre 2006 y 2010."
   sergio_perez:
@@ -2116,7 +2202,7 @@ people:
     cargo: Exministra del Trabajo y excandidata presidencial (Unidad por Chile)
     cargos:
       - cargo: Ministra del Trabajo y Previsión Social
-        organizacion: partido_republicano
+        organizacion: ministerio_trabajo
         desde: 2022-03-11
         hasta: 2026-03-11
     notas: Candidata oficialista en la segunda vuelta presidencial 2025. Obtuvo 41,84% de los votos. Ganó las primarias de Unidad por Chile el 29 de junio de 2025 con 60,16%.
@@ -2159,7 +2245,7 @@ people:
     cargo: Senador (Independiente)
     cargos:
       - cargo: Senador (Independiente)
-        organizacion: ministerio_seguridad
+        organizacion: senado
         desde: 2026-03-11
   maria_pilar_giannini:
     nombre: María del Pilar Giannini
@@ -2349,7 +2435,7 @@ people:
     cargo: Exsenador (UDI)
     cargos:
       - cargo: Senador (UDI)
-        organizacion: armada_chile
+        organizacion: udi
         desde: 2010-03-11
         hasta: 2014-03-11
     notas: Figura central del caso Corpesca por lobby a favor de la industria pesquera durante tramitación de la Ley de Pesca.
@@ -2362,7 +2448,7 @@ people:
     cargo: Exsenador
     cargos:
       - cargo: Senador
-        organizacion: armada_chile
+        organizacion: senado
         desde: 2014-03-11
         hasta: 2022-03-11
     notas: Involucrado en caso Corpesca por lobby pesquero.
@@ -3001,9 +3087,13 @@ people:
     notas: "Diputado de la Federación Regionalista Verde Social (FRVS) y presidente de la Comisión de Constitución de la Cámara. Aprobó en general el proyecto de controles de identidad de militares (junio 2026) pero advirtió sobre un eventual uso malicioso en un golpe de Estado, planteando la hipótesis de que un presidente use las FF.AA. para detener opositores."
   ximena_ossandon:
     nombre: Ximena Ossandón
-    cargo: Diputada RN
+    cargo: Diputada (RN)
     organizacion: renovacion_nacional
-    notas: "Diputada RN. En febrero de 2026 advirtió que 'las lealtades se construyen con gestos' ante la baja representación partidaria en la nómina de subsecretarios de José Antonio Kast. Junto al jefe de bancada Diego Schalper solicitó al Gobierno (agosto 2026) poner urgencia al proyecto que permite el apoyo de las Fuerzas Armadas a las policías, presentado el 6 de julio de 2026."
+    cargos:
+      - cargo: Diputada (RN)
+        organizacion: renovacion_nacional
+        desde: 2026-03-11
+    notas: "Diputada RN. En febrero de 2026 advirtió que 'las lealtades se construyen con gestos' ante la baja representación partidaria en la nómina de subsecretarios de José Antonio Kast. Junto al jefe de bancada Diego Schalper solicitó al Gobierno (agosto 2026) poner urgencia al proyecto que permite el apoyo de las Fuerzas Armadas a las policías, presentado el 6 de julio de 2026. Fue coautora del proyecto 'Escucha su corazón'; posteriormente retiró su patrocinio."
   henry_leal:
     nombre: Henry Leal
     cargo: Diputado UDI
@@ -3151,7 +3241,7 @@ people:
   romina_cifuentes:
     nombre: Romina Cifuentes González
     cargo: Seremi de Economía de Arica y Parinacota
-    organizacion: partido_republicano
+    organizacion: ministerio_economia
     notas: "Seremi de Economía de la Región de Arica y Parinacota y vicepresidenta nacional del Partido Republicano. Según la Unidad de Investigación de El Mostrador (agosto 2026), recibió el correo del director (S) del Sernac de Arica, Marcos Oviedo, solicitando autorización para contrataciones directas de militantes de 'RN o Republicanos'."
   francisco_undurraga:
     nombre: Francisco Undurraga
@@ -3236,6 +3326,76 @@ people:
     nombre: Francisco Huenchumilla
     cargo: Senador (DC)
     notas: "Senador. El 4 de agosto de 2026 hizo reserva de constitucionalidad de la fórmula de compensación municipal de la megarreforma y votó en contra de ella en la Sala."
+  ruth_hurtado:
+    nombre: Ruth Hurtado
+    cargo: Secretaria general del Partido Republicano
+    organizacion: partido_republicano
+    notas: "Secretaria general del Partido Republicano durante la campaña presidencial de segunda vuelta de 2025. Integró la barra de Kast en el debate ARCHI del 3 de diciembre y, previo al debate ANATEL del 9 de diciembre, expresó su esperanza de que el foro 'no sea algo tan confrontacional'."
+  alejandra_krauss:
+    nombre: Alejandra Krauss
+    cargo: Exministra del Trabajo (DC)
+    organizacion: partido_democratacristiano
+    notas: "Figura de la Democracia Cristiana y exministra del Trabajo. Integró el comando de Jeannette Jara en la campaña de segunda vuelta de 2025 y acompañó a la candidata en el debate ARCHI del 3 de diciembre de 2025."
+  susana_gonzalez:
+    nombre: Susana González
+    cargo: Jefa de comunicaciones del comando de Jeannette Jara
+    organizacion: partido_comunista
+    notas: "Jefa de comunicaciones del comando de Jeannette Jara en la campaña de segunda vuelta de 2025. Participó junto a Ricardo Solari en la preparación de la candidata previo al debate ARCHI del 3 de diciembre."
+  ricardo_solari:
+    nombre: Ricardo Solari
+    cargo: Exministro del Trabajo (PS)
+    organizacion: partido_socialista
+    notas: "Exministro del Trabajo durante el gobierno de Ricardo Lagos. Uno de los principales asesores del comando de Jeannette Jara en la campaña de segunda vuelta de 2025; participó en la preparación de la candidata previo al debate ARCHI del 3 de diciembre."
+  carlos_montes:
+    nombre: Carlos Montes
+    cargo: Ministro de Vivienda y Urbanismo (PS)
+    notas: "Ministro de Vivienda y Urbanismo del gobierno de Gabriel Boric. En el debate ANATEL del 9 de diciembre de 2025, la candidata Jeannette Jara discrepó públicamente de sus dichos sobre las filas para acceder a la vivienda en el contexto de la megatoma de San Antonio."
+  jose_carlos_meza:
+    nombre: José Carlos Meza
+    cargo: Diputado (Partido Republicano)
+    organizacion: partido_republicano
+    notas: "Diputado del Partido Republicano. Sus dichos sobre la posibilidad de otorgar indultos humanitarios a violadores de niños con enfermedades terminales abrieron uno de los mayores flancos de la campaña de José Antonio Kast en la segunda vuelta de 2025 y fueron abordados en el debate ANATEL del 9 de diciembre."
+  carolina_urrejola:
+    nombre: Carolina Urrejola
+    cargo: Periodista (TVN)
+    organizacion: tvn
+    notas: "Periodista de TVN. Moderó el debate presidencial ANATEL del 9 de diciembre de 2025 entre Jeannette Jara y José Antonio Kast."
+  julia_vial:
+    nombre: Julia Vial
+    cargo: Periodista (TV+)
+    notas: "Periodista de TV+. Moderó el debate presidencial ANATEL del 9 de diciembre de 2025 entre Jeannette Jara y José Antonio Kast."
+  ivan_valenzuela:
+    nombre: Iván Valenzuela
+    cargo: Periodista (Canal 13)
+    notas: "Periodista de Canal 13. Moderó el debate presidencial ANATEL del 9 de diciembre de 2025 entre Jeannette Jara y José Antonio Kast."
+  constanza_santa_maria:
+    nombre: Constanza Santa María
+    cargo: Periodista (Mega)
+    notas: "Periodista de Mega. Moderó el debate presidencial ANATEL del 9 de diciembre de 2025 entre Jeannette Jara y José Antonio Kast."
+  macarena_pizarro:
+    nombre: Macarena Pizarro
+    cargo: Periodista (Chilevisión)
+    notas: "Periodista de Chilevisión. Moderó el debate presidencial ANATEL del 9 de diciembre de 2025 entre Jeannette Jara y José Antonio Kast."
+  javier_iturriaga:
+    nombre: Javier Iturriaga del Campo
+    cargo: General de Ejército (r), ex jefe de la Defensa Nacional
+    organizacion: ejercito_chile
+    notas: "General de Ejército designado como jefe de la Defensa Nacional tras el estado de emergencia decretado el 19 de octubre de 2019 por el estallido social, con el Ejército a cargo de la seguridad en Santiago. Decretó el primer toque de queda en la capital desde 1987 y declaró que 'no estoy en guerra con nadie', contrastando con la frase de Piñera de estar 'en guerra'."
+  sergio_micco:
+    nombre: Sergio Micco
+    cargo: Ex director del Instituto Nacional de Derechos Humanos
+    organizacion: indh
+    notas: "Director del Instituto Nacional de Derechos Humanos entre 2018 y 2022. El 23 de diciembre de 2019 presentó el Informe Anual 2019 del INDH, centrado en el estallido social, calificando las violaciones a los derechos humanos como 'graves y muy numerosas' y 'las más graves desde 1989'."
+  jaime_quintana:
+    nombre: Jaime Quintana
+    cargo: Senador (PPD), expresidente del Senado
+    notas: "Senador PPD y presidente del Senado en 2019. Encabezó el anuncio del Acuerdo por la Paz Social y la Nueva Constitución, firmado el 15 de noviembre de 2019 en el ex Congreso Nacional."
+  carmen_hertz:
+    nombre: Carmen Hertz
+    cargo: Diputada (PC), abogada de derechos humanos
+    organizacion: partido_comunista
+    notas: "Diputada del Partido Comunista y abogada de derechos humanos. Impulsora de la acusación constitucional contra Sebastián Piñera por las violaciones a los DD.HH. del estallido social (2019). Tras su rechazo en la Cámara (12 de diciembre de 2019) declaró que buscarían 'otras vías' porque 'esto ha sido una política de Estado'."
+
 organizations:
   criteria:
     nombre: Criteria
@@ -3275,6 +3435,35 @@ organizations:
     nombre: Cadem
     tipo: encuestadora
     notas: Encuestadora chilena, sondeo Plaza Publica semanal de opinion politica.
+  descifra:
+    nombre: Descifra
+    tipo: encuestadora
+    notas: "Encuestadora chilena, sondeo Termometro Politico (Alianza Copesa-Artool). Su medicion de julio-agosto 2026 registro 63% de rechazo a la gestion del ministro de Hacienda Jorge Quiroz y 50% de escepticismo sobre los resultados de la megarreforma."
+  contrapoder_chile:
+    nombre: Contrapoder Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de investigacion y actualidad. Publico el reportaje sobre los ministros del gabinete de Kast beneficiados por la exencion de contribuciones (abril 2026) y la investigacion sobre la designacion de Daniel Diaz en el directorio de Codelco (mayo 2026)."
+  cchc:
+    nombre: Camara Chilena de la Construccion
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio del sector construccion. Su presidente Alfredo Echavarria celebro la ampliacion del subsidio a la tasa hipotecaria a 6.000 UF (agosto 2026). Publica el Informe Nacional Inmobiliario con datos de oferta de viviendas."
+  panimex:
+    nombre: Panimex
+    tipo: empresa_quimica
+    pais: Chile
+    notas: "Empresa quimica de Quilicura dedicada a resinas, plastificantes y materias primas para plasticos y pinturas. Acumula cuatro incendios de gran magnitud en 13 anos (2013, 2014, 2017 y 2026)."
+  agrosuper:
+    nombre: Agrosuper
+    tipo: empresa_agroindustrial
+    pais: Chile
+    notas: "Productora avicola chilena (Agrícola Agrosuper S.A.). Condenada junto a Ariztia y Don Pollo por la colusion de los pollos (TDLC, Sentencia 139/2014, multa de 20.000 UTA). El ministro Jorge Quiroz fue identificado como gestor del modelo de proyeccion de consumo usado por el cartel, sin sancion legal."
+  ariztia:
+    nombre: Ariztía
+    tipo: empresa_agroindustrial
+    pais: Chile
+    notas: "Empresa avicola chilena (Empresas Ariztia S.A.). Condenada por la colusion de los pollos (TDLC, Sentencia 139/2014, multa de 20.000 UTA)."
   pulso_ciudadano:
     nombre: Pulso Ciudadano
     tipo: encuestadora
@@ -4485,7 +4674,312 @@ organizations:
     tipo: fundacion
     pais: Chile
     notas: "Fundación que organiza la campaña benéfica televisada Teletón y mantiene institutos de rehabilitación para personas con discapacidad física en todo Chile. Solicitó al Congreso la creación del Día Nacional de la Teletón y el Día Nacional del Encuentro Familiar; su directora general es María José Zaldívar. La campaña 2026 está programada para el 6 y 7 de noviembre."
+  argentina:
+    nombre: Argentina
+    tipo: pais
+  brasil:
+    nombre: Brasil
+    tipo: pais
+  colombia:
+    nombre: Colombia
+    tipo: pais
+  corea_del_sur:
+    nombre: República de Corea (Corea del Sur)
+    tipo: pais
+  ecuador:
+    nombre: Ecuador
+    tipo: pais
+  el_salvador:
+    nombre: El Salvador
+    tipo: pais
+  guatemala:
+    nombre: Guatemala
+    tipo: pais
+  honduras:
+    nombre: Honduras
+    tipo: pais
+  israel:
+    nombre: Estado de Israel
+    tipo: pais
+  peru:
+    nombre: Perú
+    tipo: pais
+  republica_dominicana:
+    nombre: República Dominicana
+    tipo: pais
+  partido_democratacristiano:
+    nombre: Partido Demócrata Cristiano
+    tipo: partido_politico
+    pais: Chile
+  partido_por_la_democracia:
+    nombre: Partido por la Democracia (PPD)
+    tipo: partido_politico
+    pais: Chile
+  ministerio_bienes_nacionales:
+    nombre: Ministerio de Bienes Nacionales
+    tipo: ministerio
+    pais: Chile
+  ministerio_ciencia:
+    nombre: Ministerio de Ciencia, Tecnología, Conocimiento e Innovación
+    tipo: ministerio
+    pais: Chile
+  ministerio_economia:
+    nombre: Ministerio de Economía, Fomento y Turismo
+    tipo: ministerio
+    pais: Chile
+  ministerio_mineria:
+    nombre: Ministerio de Minería
+    tipo: ministerio
+    pais: Chile
+  delegacion_presidencial_rm:
+    nombre: Delegación Presidencial Regional Metropolitana
+    tipo: servicio_publico
+    pais: Chile
+  delegacion_presidencial_magallanes:
+    nombre: Delegación Presidencial Regional de Magallanes
+    tipo: servicio_publico
+    pais: Chile
+  delegacion_presidencial_nuble:
+    nombre: Delegación Presidencial Regional de Ñuble
+    tipo: servicio_publico
+    pais: Chile
+  municipalidad_providencia:
+    nombre: Municipalidad de Providencia
+    tipo: municipalidad
+    pais: Chile
+
+  municipalidad_coquimbo:
+    nombre: Municipalidad de Coquimbo
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_puente_alto:
+    nombre: Municipalidad de Puente Alto
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_quilicura:
+    nombre: Municipalidad de Quilicura
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_la_cruz:
+    nombre: Municipalidad de La Cruz
+    tipo: municipalidad
+    pais: Chile
+  cidh:
+    nombre: Comisión Interamericana de Derechos Humanos
+    tipo: organismo_internacional
+    pais: Estados Unidos
+    notas: "Organismo de la OEA con sede en Washington. En agosto de 2026 celebró la audiencia 'Impacto de las políticas administrativas en los derechos humanos en Chile' solicitada por organizaciones chilenas."
+  londres_38:
+    nombre: Londres 38, espacio de memorias
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Espacio de memoria y derechos humanos. Integró la delegación que presentó ante la CIDH el informe sobre retrocesos en DDHH bajo el gobierno de Kast (agosto 2026)."
+  anef:
+    nombre: Asociación Nacional de Empleados Fiscales
+    tipo: sindicato
+    pais: Chile
+    notas: "Sindicato de funcionarios públicos. Participó en la audiencia de la CIDH de agosto 2026 exponiendo cuestionamientos por desvinculaciones de funcionarios desde el cambio de gobierno."
+  colonia_dignidad:
+    nombre: Colonia Dignidad
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Ex enclave alemán en la Región del Maule, centro de detención y tortura durante la dictadura. El gobierno de Kast abandonó el proceso de expropiación para transformarla en sitio de memoria, cuestión denunciada ante la CIDH en agosto de 2026."
+  sin_filtros:
+    nombre: Sin Filtros
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Programa de streaming de análisis político conducido por Fernando Solabarrieta. En agosto de 2026 vivió un episodio tenso cuando cuatro panelistas abandonaron el set tras la aparición del excarabinero Claudio Crespo, terminando el programa anticipadamente."
+  cheaf:
+    nombre: Cheaf Chile
+    tipo: empresa
+    pais: Chile
+    notas: "Plataforma de gestión de despensa y ahorro alimentario. Realizó una encuesta a 2.007 usuarios en julio de 2026 sobre el costo de los alimentos en los hogares chilenos."
+  mnoal:
+    nombre: Movimiento de Países No Alineados
+    tipo: organismo_internacional
+    notas: "Organización internacional surgida en la Guerra Fría como alternativa de autonomía frente a los bloques de Estados Unidos y la Unión Soviética. Chile integró el movimiento desde 1971 hasta su retiro en agosto de 2026, bajo el gobierno de José Antonio Kast. Su presidencia la ejerce Uganda."
+  prensa_opal:
+    nombre: Prensa Opal
+    tipo: medio_comunicacion
+    pais: Chile
+  biobiochile:
+    nombre: BioBioChile
+    tipo: medio_comunicacion
+    pais: Chile
+  anatel:
+    nombre: Asociación Nacional de Televisión (ANATEL)
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Asociación Nacional de Televisión de Chile. Organizó el debate presidencial de la segunda vuelta de 2025 (9 de diciembre), transmitido en cadena por los canales de televisión abierta desde el Estudio 2 de TVN."
+  archi:
+    nombre: Asociación de Radiodifusores de Chile (ARCHI)
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Asociación de Radiodifusores de Chile. Organizó el debate presidencial del 3 de diciembre de 2025 entre Jeannette Jara y José Antonio Kast, realizado en el Campus Oriente de la Universidad Católica."
+  panel_ciudadano_udd:
+    nombre: Panel Ciudadano UDD
+    tipo: encuestadora
+    pais: Chile
+    notas: "Encuestadora de la Universidad del Desarrollo. En la primera semana tras la primera vuelta de 2025 (17-23 de noviembre) publicó dos mediciones del balotaje entre Jeannette Jara y José Antonio Kast: una que dio 61% a 39% entre quienes manifestaron preferencia decidida, y una segunda que midió la transferencia de votos de Parisi, Matthei y Kaiser hacia ambos candidatos."
+  partido_radical:
+    nombre: Partido Radical
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político chileno. En la votación del 12 de diciembre de 2019 sus diputados Carlos Abel Jarpa y Fernando Meza votaron a favor de la 'cuestión previa' que hizo caer la acusación constitucional contra Sebastián Piñera, junto a sectores de la DC y de la ex Nueva Mayoría."
+
 cifras:
+  cesantia_biobio_2026:
+    nombre: Cesantía en la Región del Biobío
+    unidad_default: "%"
+    notas: "9,2% de desempleo regional según la columna de BioBioChile sobre los recortes del MOP en el Biobío (agosto 2026)."
+  informalidad_biobio_2026:
+    nombre: Informalidad laboral en la Región del Biobío
+    unidad_default: "%"
+    notas: "28,2% de informalidad laboral en el Biobío, según la columna de BioBioChile (agosto 2026)."
+  fondo_far_biobio:
+    nombre: Fondo de Apoyo Regional (FAR) del Biobío
+    unidad_default: millones_usd
+    notas: "US$650 millones en depósitos bancarios del FAR, fondo destinado a la conectividad vial urbana pública del Biobío (agosto 2026)."
+  empleos_perdidos_biobio_3anos:
+    nombre: Empleos perdidos en el Biobío en 3 años
+    unidad_default: empleos
+    notas: "Más de 35.000 empleos perdidos en los últimos 3 años en sectores como industria forestal y pesquera del Biobío (agosto 2026)."
+  aserraderos_cerrados_biobio:
+    nombre: Aserraderos cerrados en el Biobío
+    unidad_default: aserraderos
+    notas: "Más de 200 aserraderos cerrados en la Región del Biobío (agosto 2026)."
+  inversion_becas_chile:
+    nombre: Inversión estatal en Becas Chile
+    unidad_default: millones_pesos
+    notas: "Más de $690 mil millones invertidos en el programa Becas Chile desde su creación para financiar estudios de posgrado en el extranjero (agosto 2026)."
+  becarios_becas_chile:
+    nombre: Becarios del programa Becas Chile
+    unidad_default: becarios
+    notas: "11.340 becarios beneficiados por Becas Chile con una inversión superior a los $690 mil millones (agosto 2026)."
+  becarios_incumplimiento_becas_chile:
+    nombre: Becarios de Becas Chile en incumplimiento
+    unidad_default: becarios
+    notas: "1.666 beneficiarios de Becas Chile en incumplimiento de sus obligaciones de retorno, con una deuda cercana a los $92 mil millones (agosto 2026)."
+  deuda_becas_chile_incumplimiento:
+    nombre: Deuda de becarios de Becas Chile en incumplimiento
+    unidad_default: millones_pesos
+    notas: "Cerca de $92 mil millones adeudados por 1.666 becarios de Becas Chile que no cumplieron las obligaciones del beneficio (agosto 2026)."
+  alza_alimentos_2021_2026:
+    nombre: Alza acumulada de los alimentos entre 2021 y 2026
+    unidad_default: "%"
+    notas: "Los productos de la división 'Alimentos y bebidas no alcohólicas' del IPC acumulan un incremento cercano al 40% entre junio de 2021 y junio de 2026 (INE)."
+  hogares_gasto_comida_aumentado:
+    nombre: Hogares que afirman que su gasto en comida aumentó en 5 años
+    unidad_default: "%"
+    notas: "87% de los 2.007 encuestados por Cheaf afirma que el gasto mensual de su hogar en comida aumentó en los últimos cinco años (julio 2026)."
+  encuestados_preocupados_costo_alimentos:
+    nombre: Encuestados preocupados por el costo de los alimentos
+    unidad_default: "%"
+    notas: "92,3% de los encuestados por Cheaf declaró sentirse 'muy' o 'bastante' preocupado por el valor de los insumos básicos (julio 2026)."
+  hogares_reducen_desperdicio_alimentos:
+    nombre: Hogares que reducen el desperdicio de alimentos
+    unidad_default: "%"
+    notas: "88,1% de los encuestados por Cheaf intentó reducir el desperdicio de alimentos durante el último año para cuidar sus finanzas (julio 2026)."
+  encuestados_cheaf:
+    nombre: Usuarios encuestados por Cheaf
+    unidad_default: usuarios
+    notas: "2.007 usuarios encuestados por la plataforma Cheaf durante la última semana de julio de 2026 sobre el costo de los alimentos."
+  programas_evaluacion_presupuestaria_2027:
+    nombre: Programas estatales en evaluación presupuestaria 2027
+    unidad_default: programas
+    notas: "Cerca de 142 programas estatales incorporados al proceso de evaluación presupuestaria para el Presupuesto 2027 que, según las organizaciones de DDHH, podrían verse afectados (agosto 2026)."
+  causas_indultos_pasivos_cidh:
+    nombre: Causas por 'indultos pasivos' denunciadas ante la CIDH
+    unidad_default: causas
+    notas: "Nueve causas relacionadas con cuatro condenados por crímenes de lesa humanidad en que el Estado habría dejado de oponerse a beneficios penitenciarios, según informe presentado ante la CIDH (agosto 2026)."
+  condenados_indultos_pasivos_cidh:
+    nombre: Condenados por lesa humanidad vinculados a 'indultos pasivos'
+    unidad_default: condenados
+    notas: "Cuatro condenados por crímenes de lesa humanidad en nueve causas donde el Programa de DDHH no habría intervenido activamente, según informe ante la CIDH (agosto 2026)."
+  expedientes_pendientes_pueblos_indigenas:
+    nombre: Expedientes pendientes tras eliminación de Unidad de Pueblos Indígenas
+    unidad_default: expedientes
+    notas: "Cerca de 16 mil expedientes pendientes en La Araucanía tras la eliminación de la Unidad de Pueblos Indígenas del Ministerio de Bienes Nacionales (agosto 2026)."
+  funcionarios_salida_migraciones_2026:
+    nombre: Funcionarios que salieron del Servicio Nacional de Migraciones
+    unidad_default: funcionarios
+    notas: "27 funcionarios salieron del Servicio Nacional de Migraciones tras su reestructuración bajo el gobierno de Kast (agosto 2026)."
+  recursos_total_reconstruccion_coquimbo:
+    nombre: Recursos totales para reconstrucción en Coquimbo en primera etapa
+    unidad_default: millones_pesos
+    notas: "Más de $3.300 millones que el municipio de Coquimbo dispondrá en la primera etapa de reconstrucción: $1.800 millones liberados por la suspensión de La Pampilla 2026 más $1.500 millones anunciados previamente (30 julio 2026)."
+  gremios_pyme_respaldan_veto:
+    nombre: Gremios pyme que respaldan el veto al pago a 30 dias
+    unidad_default: gremios
+    notas: "48 organizaciones gremiales de micro, pequenas y medianas empresas respaldaron el veto presidencial al cambio en el regimen de pago a 30 dias (agosto 2026)."
+  ministros_beneficiados_contribuciones:
+    nombre: Ministros del gabinete que se beneficiarían de la exención de contribuciones
+    unidad_default: ministros
+    notas: "Al menos seis ministros (Barros, Campos, Pérez Mackenna, Alvarado, García Ruminot y Parot) con primera vivienda y mayores de 65 años, según declaraciones de patrimonio revisadas por Contrapoder Chile (abril 2026)."
+  casos_hantavirus_2026:
+    nombre: Casos de hantavirus en 2026
+    unidad_default: casos
+    notas: "46 contagios hasta julio de 2026, previo a la alerta sanitaria declarada por el Minsal."
+  fallecidos_hantavirus_2026:
+    nombre: Fallecidos por hantavirus en 2026
+    unidad_default: personas
+    notas: "18 fallecidos hasta julio de 2026, según el Minsal."
+  letalidad_hantavirus_2026:
+    nombre: Letalidad del hantavirus en 2026
+    unidad_default: porciento
+    notas: "39% de letalidad en 2026 (46 contagios y 18 fallecidos), frente al 18% de 2025."
+  casos_hantavirus_2025:
+    nombre: Casos de hantavirus en 2025
+    unidad_default: casos
+    notas: "44 contagios en todo 2025."
+  fallecidos_hantavirus_2025:
+    nombre: Fallecidos por hantavirus en 2025
+    unidad_default: personas
+    notas: "8 fallecidos por hantavirus en 2025 (letalidad de 18%)."
+  regiones_alerta_hantavirus:
+    nombre: Regiones bajo alerta sanitaria por hantavirus
+    unidad_default: regiones
+    notas: "13 regiones, desde Atacama hasta Magallanes (2026-2027)."
+  subsidios_tasa_hipotecaria_total:
+    nombre: Total de cupos del subsidio a la tasa hipotecaria tras ampliacion
+    unidad_default: subsidios
+    notas: "Aumento de 50.000 a 80.000 subsidios (proyecto ingresado agosto 2026)."
+  tope_vivienda_subsidio_hipotecario:
+    nombre: Tope del valor de la vivienda para el subsidio a la tasa hipotecaria
+    unidad_default: uf
+    notas: "Ampliacion de 4.000 a 6.000 UF para viviendas nuevas (agosto 2026)."
+  creditos_hipotecarios_formalizados_subsidio:
+    nombre: Creditos hipotecarios formalizados bajo el subsidio
+    unidad_default: creditos
+    notas: "31.640 creditos formalizados y mas de 40 mil solicitudes a agosto de 2026, según Hacienda."
+  oferta_viviendas_nuevas_cchc:
+    nombre: Oferta disponible de viviendas nuevas (CChC)
+    unidad_default: unidades
+    notas: "104.047 unidades al primer trimestre de 2026, según el Informe Nacional Inmobiliario de la CChC; 19.022 en el tramo de 4.000 a 6.000 UF."
+  cobertura_stock_viviendas_subsidio:
+    nombre: Cobertura de la oferta de viviendas con el nuevo tope de subsidio
+    unidad_default: porciento
+    notas: "88,1% de la oferta disponible quedaría cubierta con el tope de 6.000 UF, según Hacienda."
+  desacuerdo_megarreforma_cadem:
+    nombre: Desacuerdo con la megarreforma (Cadem)
+    unidad_default: porciento
+    notas: "50% de los encuestados en desacuerdo con la megarreforma del gobierno de Kast (Cadem, agosto 2026)."
+  rechazo_rebaja_impuesto_empresas:
+    nombre: Rechazo a la reduccion gradual del impuesto a las empresas (Cadem)
+    unidad_default: porciento
+    notas: "56% de los encuestados rechaza la reduccion gradual del impuesto a las empresas contemplada en la megarreforma (Cadem, agosto 2026)."
+  rechazo_gestion_quiroz_descifra:
+    nombre: Rechazo a la gestion de Jorge Quiroz (Descifra)
+    unidad_default: porciento
+    notas: "63% evalua negativamente la gestion del ministro de Hacienda Jorge Quiroz, frente a 34% que la valora positivamente (Descifra, julio-agosto 2026)."
+  duda_resultados_megarreforma:
+    nombre: Escepticismo sobre los resultados de la megarreforma (Descifra)
+    unidad_default: porciento
+    notas: "50% de los encuestados cree que la megarreforma no lograra resultados (Descifra, julio-agosto 2026)."
+  incendios_panimex_13_anos:
+    nombre: Incendios de la planta Panimex en 13 anos
+    unidad_default: incendios
+    notas: "Cuatro grandes incendios entre 2013 y 2026 en la planta quimica Panimex de Quilicura."
   desocupacion_antofagasta_amj_2026:
     nombre: Tasa de desocupación de la Región de Antofagasta (abril-junio 2026)
     unidad_default: porciento
@@ -5348,3 +5842,155 @@ cifras:
     nombre: Personas atendidas por Teletón en un año
     unidad_default: personas
     notas: "Más de 31.000 personas atendidas y cerca de un millón de prestaciones de rehabilitación en los institutos de Teletón durante el último año, según el ministro Segpres José García Ruminot en la sesión del 4 de agosto de 2026."
+  kast_intencion_voto_cadem_2v:
+    nombre: Intención de voto de José Antonio Kast en la segunda vuelta 2025 según Cadem
+    unidad_default: "%"
+    notas: "58% en la medición Plaza Pública Cadem del 23 de noviembre de 2025 y 58% nuevamente en la última medición publicable del 29 de noviembre de 2025 (16 puntos sobre Jeannette Jara). Su estudio privado durante la veda proyectó el mismo 58%, coincidente con el resultado final."
+  jara_intencion_voto_cadem_2v:
+    nombre: Intención de voto de Jeannette Jara en la segunda vuelta 2025 según Cadem
+    unidad_default: "%"
+    notas: "42% en las mediciones Plaza Pública Cadem del 23 y del 29 de noviembre de 2025, 16 puntos bajo José Antonio Kast."
+  diferencia_cadem_2v:
+    nombre: Diferencia entre Kast y Jara en la intención de voto (Cadem)
+    unidad_default: puntos_porcentuales
+    notas: "16 puntos porcentuales de ventaja de José Antonio Kast (58%) sobre Jeannette Jara (42%) en las mediciones Plaza Pública Cadem del 23 y 29 de noviembre de 2025."
+  kast_criteria_2v:
+    nombre: Intención de voto de José Antonio Kast en la segunda vuelta 2025 según Criteria
+    unidad_default: "%"
+    notas: "50% en la medición de Criteria publicada el 23 de noviembre de 2025, ante la pregunta cerrada de voto en el balotaje."
+  jara_criteria_2v:
+    nombre: Intención de voto de Jeannette Jara en la segunda vuelta 2025 según Criteria
+    unidad_default: "%"
+    notas: "36% en la medición de Criteria publicada el 23 de noviembre de 2025."
+  kast_black_white_2v:
+    nombre: Intención de voto de José Antonio Kast en la segunda vuelta 2025 según Black & White
+    unidad_default: "%"
+    notas: "56% en el sondeo de Black & White de la semana del 23 de noviembre de 2025, 21 puntos sobre Jara."
+  jara_black_white_2v:
+    nombre: Intención de voto de Jeannette Jara en la segunda vuelta 2025 según Black & White
+    unidad_default: "%"
+    notas: "35% en el sondeo de Black & White de la semana del 23 de noviembre de 2025."
+  kast_panel_ciudadano_2v:
+    nombre: Intención de voto de José Antonio Kast en la segunda vuelta 2025 según Panel Ciudadano UDD
+    unidad_default: "%"
+    notas: "61% contra 39% de Jara entre quienes manifestaron preferencia decidida en la primera medición de Panel Ciudadano UDD tras la primera vuelta de 2025 (54% contra 34% considerando el 12% que no votaría, no sabía o anularía)."
+  jara_panel_ciudadano_2v:
+    nombre: Intención de voto de Jeannette Jara en la segunda vuelta 2025 según Panel Ciudadano UDD
+    unidad_default: "%"
+    notas: "39% entre quienes manifestaron preferencia decidida en la primera medición de Panel Ciudadano UDD tras la primera vuelta de 2025 (34% considerando el 12% que no votaría, no sabía o anularía)."
+  votos_parisi_a_kast_cadem_2v:
+    nombre: Transferencia de votos de Franco Parisi hacia José Antonio Kast (Cadem)
+    unidad_default: "%"
+    notas: "De los votantes de Franco Parisi en la primera vuelta 2025, un 34% habría votado por Kast en la medición Cadem del 23 de noviembre (22% a Jara, 44% indecisos o nulos) y un 37% en la del 29 de noviembre (22% a Jara, 41% indecisos)."
+  votos_kaiser_a_kast_cadem_2v:
+    nombre: Transferencia de votos de Johannes Kaiser hacia José Antonio Kast (Cadem)
+    unidad_default: "%"
+    notas: "De los votantes de Johannes Kaiser en la primera vuelta 2025, un 92% habría votado por Kast en la medición Cadem del 23 de noviembre y un 89% en la del 29 de noviembre, sin transferencia relevante hacia Jara."
+  votos_matthei_a_kast_cadem_2v:
+    nombre: Transferencia de votos de Evelyn Matthei hacia José Antonio Kast (Cadem)
+    unidad_default: "%"
+    notas: "De los votantes de Evelyn Matthei en la primera vuelta 2025, un 60% habría votado por Kast en las mediciones Cadem del 23 y 29 de noviembre (21-22% a Jara)."
+  expectativa_kast_presidente_cadem:
+    nombre: Expectativa de que José Antonio Kast sea el próximo Presidente (Cadem)
+    unidad_default: "%"
+    notas: "62% de los encuestados por Cadem creía en noviembre de 2025 que Kast sería el próximo Presidente (28% pensaba en Jara el 23 de noviembre; 25% el 29 de noviembre). Su sondeo privado de la veda registró 61% de expectativas."
+  votos_kast_segunda_vuelta_2025:
+    nombre: Porcentaje de José Antonio Kast en la segunda vuelta presidencial 2025
+    unidad_default: "%"
+    notas: "58,16% de los votos válidamente emitidos en el balotaje del 14 de diciembre de 2025, que consagró a Kast como presidente electo sobre Jeannette Jara (41,84%). Resultado documentado en el evento 20251214-1 con cobertura de Cooperativa y Emol."
+  votos_jara_segunda_vuelta_2025:
+    nombre: Porcentaje de Jeannette Jara en la segunda vuelta presidencial 2025
+    unidad_default: "%"
+    notas: "41,84% de los votos válidamente emitidos en el balotaje del 14 de diciembre de 2025. Resultado documentado en el evento 20251214-1 con cobertura de Cooperativa y Emol."
+  tarifa_metro_punta_2019:
+    nombre: Tarifa del Metro de Santiago en horario punta (octubre 2019)
+    unidad_default: pesos
+    notas: "$830 en horario punta desde el 6 de octubre de 2019, $30 más que los $800 anteriores, tras el reajuste anunciado por el Panel de Expertos el 4 de octubre. El alza detonó las evasiones masivas que desencadenaron el estallido social del 18 de octubre."
+  estaciones_metro_afectadas_18o:
+    nombre: Estaciones del Metro afectadas tras el 18-O
+    unidad_default: estaciones
+    notas: "77 estaciones del Metro de Santiago afectadas por los disturbios de la jornada del 18-19 de octubre de 2019, según informó Metro tras el primer día del estallido social."
+  detenidos_19_oct_2019:
+    nombre: Detenidos tras el primer día del estallido social
+    unidad_default: personas
+    notas: "Más de 300 detenidos reportados el 19 de octubre de 2019, tras decretarse el estado de emergencia en Santiago, Chacabuco, Puente Alto y San Bernardo."
+  votos_cuestion_previa_pinera:
+    nombre: Votos a favor de la cuestión previa contra la acusación constitucional a Piñera
+    unidad_default: votos
+    notas: "79 votos a favor y 73 en contra en la votación del 12 de diciembre de 2019 en la Cámara de Diputados, que acogió la 'cuestión previa' y dejó como no interpuesta la acusación constitucional contra Sebastián Piñera. La oposición necesitaba 78 votos para que prosperara."
+  heridas_oculares_indh_2019:
+    nombre: Personas con heridas oculares durante el estallido (Informe INDH 2019)
+    unidad_default: personas
+    notas: "347 personas con heridas oculares al 30 de noviembre de 2019 según el Informe Anual del INDH (estallidos de globo ocular, pérdida de visión por trauma ocular irreversible y traumas oculares); el INDH había presentado 29 querellas por ese tipo de afectaciones."
+  querellas_tortura_indh_2019:
+    nombre: Querellas del INDH por torturas y tratos crueles (estallido 2019)
+    unidad_default: querellas
+    notas: "476 querellas por torturas y tratos crueles, inhumanos y degradantes presentadas por el INDH entre el 19 de octubre y el 30 de noviembre de 2019, en favor de 568 víctimas: 433 contra funcionarios de Carabineros, 33 con participación de miembros de las Fuerzas Armadas y 10 de la PDI. En los nueve años previos del INDH (2010-primer semestre 2019) las querellas contra Carabineros por tortura habían sido 174."
+  querellas_tortura_violencia_sexual_indh:
+    nombre: Querellas del INDH por torturas con violencia sexual (estallido 2019)
+    unidad_default: querellas
+    notas: "96 querellas por torturas o tratos crueles con violencia sexual presentadas por el INDH durante el estallido social de 2019, con 135 víctimas: 71 mujeres (53%) y 64 hombres."
+  muertos_estallido_dic_2019:
+    nombre: Fallecidos durante el estallido social (a diciembre de 2019)
+    unidad_default: personas
+    notas: "Al menos 24 fallecidos a mediados de diciembre de 2019 según BBC Mundo, de los cuales 5 atribuidos a agentes del Estado. El gobierno reportaba 23 muertos el 23 de noviembre de 2019 y 19 el 23 de octubre; la cifra oficial continuó ajustándose durante 2020."
+  edad_primer_caso_covid_chile:
+    nombre: Edad del primer caso de COVID-19 en Chile
+    unidad_default: años
+    notas: "El primer caso confirmado de COVID-19 en Chile (3 de marzo de 2020) fue un médico de 33 años, oriundo de San Javier, Región del Maule, que había viajado un mes por el Sudeste Asiático (Singapur, Malasia, Indonesia, Maldivas y España) y regresó el 25 de febrero en vuelo desde Madrid."
+  casos_covid_18_mar_2020:
+    nombre: Casos acumulados de COVID-19 al decretarse el estado de catástrofe
+    unidad_default: casos
+    notas: "238 contagios acumulados de COVID-19 en Chile al 18 de marzo de 2020 (37 nuevos ese día), según el Gobierno de Chile, al decretarse el Estado de Excepción Constitucional de Catástrofe."
+  retiro_10_afp_2020:
+    nombre: Retiro del 10% de los fondos de pensiones (2020)
+    unidad_default: porciento
+    notas: "10% de los fondos acumulados en las cuentas de capitalización individual que la reforma constitucional de la Ley 21.248 (2020) permitió retirar por única vez, con un tope máximo de 150 UF y un mínimo de 35 UF."
+  tope_retiro_afp_2020:
+    nombre: Tope máximo del retiro del 10% de los fondos de pensiones
+    unidad_default: uf
+    notas: "150 UF (aproximadamente $4.300.000 al día de publicación de la Ley 21.248, 30 de julio de 2020) como tope máximo del retiro excepcional del 10% de los fondos de pensiones."
+  minimo_retiro_afp_2020:
+    nombre: Monto mínimo del retiro del 10% de los fondos de pensiones
+    unidad_default: uf
+    notas: "35 UF (aproximadamente $1.000.000 al día de publicación de la Ley 21.248) como monto mínimo del retiro excepcional; quien tuviera menos de 35 UF en su cuenta podía retirar la totalidad."
+  votos_camara_retiro_10_2020:
+    nombre: Votos a favor del retiro del 10% en la Cámara de Diputados
+    unidad_default: votos
+    notas: "116 votos a favor, 28 en contra y 5 abstenciones en el tercer trámite de la Cámara de Diputados el 23 de julio de 2020, que aprobó de manera definitiva la reforma del retiro del 10%."
+  votos_senado_retiro_10_2020:
+    nombre: Votos a favor del retiro del 10% en el Senado
+    unidad_default: votos
+    notas: "29 votos a favor, 13 en contra y 1 abstención en el Senado (22 de julio de 2020) para la reforma del retiro del 10% de los fondos de pensiones."
+  afiliados_retiro_10_2020:
+    nombre: Personas habilitadas para el retiro del 10% (2020)
+    unidad_default: personas
+    notas: "10,9 millones de personas podían solicitar el retiro del 10% de sus fondos de pensiones tras la aprobación de la reforma en julio de 2020, hasta $4,3 millones (150 UF) cada una."
+  hogares_ife_2020:
+    nombre: Hogares beneficiarios del Ingreso Familiar de Emergencia (2020)
+    unidad_default: hogares
+    notas: "1.780.000 hogares, integrados en promedio por 2,5 personas, llegando a al menos 4,5 millones de personas, beneficiarios del Ingreso Familiar de Emergencia anunciado por el Gobierno de Piñera en abril de 2020."
+  monto_ife_familia_4_2020:
+    nombre: Monto mensual del IFE para familia de 4 personas (2020)
+    unidad_default: pesos
+    notas: "Hasta $260.000 mensuales para una familia de 4 personas sin ingresos formales perteneciente al 40% más vulnerable, durante el primer mes del Ingreso Familiar de Emergencia (2020)."
+  apruebo_plebiscito_2020:
+    nombre: Votación por la opción Apruebo en el plebiscito de 2020
+    unidad_default: porciento
+    notas: "78,27% de las preferencias para la opción Apruebo en el plebiscito de entrada del 25 de octubre de 2020 (La Tercera reportó 78,3% con casi el 100% de las mesas escrutadas)."
+  rechazo_plebiscito_2020:
+    nombre: Votación por la opción Rechazo en el plebiscito de 2020
+    unidad_default: porciento
+    notas: "21,73% de las preferencias para la opción Rechazo en el plebiscito de entrada del 25 de octubre de 2020."
+  convencion_constitucional_plebiscito_2020:
+    nombre: Votación por la Convención Constitucional en el plebiscito de 2020
+    unidad_default: porciento
+    notas: "78,99% de los votos para la opción Convención Constitucional frente a la Convención Mixta en el plebiscito de entrada de 2020, según el BCN (La Tercera reportó 79%)."
+  participacion_plebiscito_2020:
+    nombre: Participación electoral en el plebiscito de 2020
+    unidad_default: porciento
+    notas: "50,9% de participación en el plebiscito de entrada del 25 de octubre de 2020, la más alta desde el voto voluntario (2012) según el BCN; La Tercera reportó 50,8% del padrón de 14.855.000 personas."
+  votos_plebiscito_2020:
+    nombre: Votantes del plebiscito de entrada de 2020
+    unidad_default: personas
+    notas: "7.545.000 personas votaron en el plebiscito del 25 de octubre de 2020 (50,8% del padrón de 14.855.000), según La Tercera."
