@@ -336,6 +336,21 @@ people:
       - cargo: Presidenta del Senado
         organizacion: senado
         desde: 2026-03-11
+  jorge_alessandri:
+    nombre: Jorge Alessandri
+    cargo: Presidente de la Cámara de Diputados (UDI)
+    organizacion: camara_diputados
+    notas: "Diputado UDI y presidente de la Cámara de Diputados. A fines de julio de 2026 se reunió con la presidenta del Senado, Paulina Núñez, para abordar las altas remuneraciones de funcionarios del Congreso y de la Biblioteca del Congreso, debate que se amplió a otros organismos del Estado como las superintendencias."
+  luis_alvarez:
+    nombre: Luis Álvarez
+    cargo: Director del Liceo Rahue de Osorno
+    organizacion: liceo_rahue
+    notas: "Director del Liceo Rahue de Osorno. Tras el episodio del 3 de agosto de 2026 en que un estudiante de primero medio amenazó con un destornillador a la comunidad escolar y fue reducido por Carabineros, calificó el hecho de 'grave' y de 'descontrol', señalando que el establecimiento debió extremar sus protocolos."
+  dalmiro_yanez:
+    nombre: Dalmiro Yáñez
+    cargo: Seremi de Educación de Los Lagos
+    organizacion: ministerio_educacion
+    notas: "Seremi de Educación de la Región de Los Lagos. Tras el incidente de violencia escolar del Liceo Rahue de Osorno (agosto 2026) pidió protección y tratamiento psicológico para la alumna agredida y atención de salud para el estudiante involucrado, subrayando que todo alumno tiene derecho a educación."
   sebastian_pinera:
     nombre: Sebastián Piñera Echenique
     cargo: Expresidente de la República (2010-2014, 2018-2022)
@@ -1811,6 +1826,10 @@ people:
     cargo: Periodista, editor de Monitoreo Legislativo
     notas: Editor del sitio recorteshacienda.cl, que publica los decretos de recorte
       presupuestario notificados a Contraloría, y del registro Renuncias Kast.
+  roberto_merken:
+    nombre: Roberto Merken
+    cargo: Comentarista de opinión en X
+    notas: "Cuenta de opinión 'Ciudadano Roberto Kiltro' (@RobertoMerken). En agosto de 2026 difundió una comparación viral del tratamiento del Imacec entre los gobiernos de Boric (junio 2025, +3,1%) y Kast (junio 2026, +2,4%), con más de 54 mil visualizaciones."
   arnaldo_zuniga:
     nombre: Arnaldo Zúñiga
     cargo: Meteorólogo de la DMC
@@ -2100,7 +2119,20 @@ people:
         organizacion: partido_republicano
         desde: 2022-03-11
         hasta: 2026-03-11
-    notas: Candidata oficialista en la segunda vuelta presidencial 2025. Obtuvo 41,84% de los votos.
+    notas: Candidata oficialista en la segunda vuelta presidencial 2025. Obtuvo 41,84% de los votos. Ganó las primarias de Unidad por Chile el 29 de junio de 2025 con 60,16%.
+  angela_vivanco:
+    nombre: Ángela Vivanco
+    cargo: Exministra de la Corte Suprema removida en 2024
+    organizacion: corte_suprema
+    notas: "Ministra de la Corte Suprema removida por unanimidad del Pleno el 10 de octubre de 2024 por tráfico de influencias y coordinación de fallos revelados en los chats de Luis Hermosilla (caso Audios). El Senado aprobó su acusación constitucional el 16 de octubre de 2024, inhabilitándola por 5 años."
+  harold_mayne_nicholls:
+    nombre: Harold Mayne-Nicholls
+    cargo: Excandidato presidencial independiente (2025)
+    notas: Exdirector de la ANFP. Candidato presidencial independiente en la primera vuelta de noviembre de 2025, donde obtuvo 1,26% de los votos.
+  eduardo_artes:
+    nombre: Eduardo Artés
+    cargo: Candidato presidencial (Unión Patriótica)
+    notas: Candidato presidencial por la Unión Patriótica en la primera vuelta de noviembre de 2025, donde obtuvo 0,66% de los votos.
   arturo_squella:
     nombre: Arturo Squella
     cargo: Presidente del Partido Republicano
@@ -3086,6 +3118,124 @@ people:
     cargo: Diputado Partido Republicano
     organizacion: partido_republicano
     notas: "Diputado del Partido Republicano. Cuestionó especialmente a la diputada Consuelo Veloso por los dichos sobre el Servel (julio 2026), señalando que 'está cuestionando la votación más contundente de la historia de nuestra democracia'."
+  alejandra_valdebenito:
+    nombre: Alejandra Valdebenito
+    cargo: Diputada UDI
+    organizacion: udi
+    notas: "Diputada de la UDI e integrante de la Comisión de Derechos Humanos de la Cámara. En agosto de 2026 impulsó la ofensiva presupuestaria de su bancada contra el INDH por el contrato de $250 millones con la productora Ditecsur, afirmando que 'este despilfarro de plata' justifica la posición de eliminar la institución por considerarla 'políticamente capturada por la extrema izquierda'."
+  juan_antonio_coloma:
+    nombre: Juan Antonio Coloma
+    cargo: Secretario general de la UDI
+    organizacion: udi
+    notas: "Secretario general de la UDI. El 4 de agosto de 2026 adelantó que la directiva del partido llevaría al Presidente José Antonio Kast, en la cita en Cerro Castillo, peticiones de seguridad centradas en la protección y fortalecimiento de las policías."
+  consuelo_contreras:
+    nombre: Consuelo Contreras
+    cargo: Exdirectora del INDH
+    organizacion: indh
+    notas: "Exdirectora del Instituto Nacional de Derechos Humanos. Sus viajes a la sede de la ONU en Ginebra (Suiza) para las asambleas anuales de la GANHRI —por $8.183.208 en marzo de 2023 y $4.440.910 en marzo de 2025— fueron cuestionados por la bancada UDI en su ofensiva presupuestaria de agosto de 2026 contra el organismo."
+  gaston_saavedra:
+    nombre: Gastón Saavedra
+    cargo: Senador PS por la Región del Biobío
+    organizacion: partido_socialista
+    notas: "Senador del Partido Socialista por la circunscripción del Biobío (2022-2030), exalcalde de Talcahuano. Autor de la columna de opinión en BioBioChile del 4 de agosto de 2026 'Tantos años queriendo ser Presidente de Chile para que quien mande... sea el Ministro de Hacienda', que critica que Hacienda paralice la inversión pública anunciada por el Presidente."
+  marcos_oviedo:
+    nombre: Marcos Oviedo González
+    cargo: Director regional (S) del Sernac de Arica y Parinacota
+    organizacion: sernac
+    notas: "Director regional subrogante del Servicio Nacional del Consumidor de Arica y Parinacota y excandidato a consejero regional por Renovación Nacional (2017). Según la Unidad de Investigación de El Mostrador (agosto 2026), solicitó por correo a la seremi de Economía de la región autorización para contrataciones directas de militantes de 'RN o Republicanos'."
+  evelyn_milos:
+    nombre: Evelyn Milos Cáceres
+    cargo: Asistente social contratada en el Sernac de Arica
+    organizacion: renovacion_nacional
+    notas: "Asistente social, militante de Renovación Nacional desde el 4 de abril de 2026. Fue contratada a contrata en el Sernac de Arica desde el 1 de julio de 2026 (grado 8, $4.030.777). En octubre de 2017 fue detenida en Tacna (Perú) junto a otras tres mujeres de su familia con 47 kilos de marihuana cripy ocultos en un vehículo con patente chilena. Caso revelado por El Mostrador en agosto de 2026."
+  romina_cifuentes:
+    nombre: Romina Cifuentes González
+    cargo: Seremi de Economía de Arica y Parinacota
+    organizacion: partido_republicano
+    notas: "Seremi de Economía de la Región de Arica y Parinacota y vicepresidenta nacional del Partido Republicano. Según la Unidad de Investigación de El Mostrador (agosto 2026), recibió el correo del director (S) del Sernac de Arica, Marcos Oviedo, solicitando autorización para contrataciones directas de militantes de 'RN o Republicanos'."
+  francisco_undurraga:
+    nombre: Francisco Undurraga
+    cargo: Ministro de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    notas: "Ministro de las Culturas, las Artes y el Patrimonio. Ante la interpelación de la senadora Beatriz Sánchez en la Comisión de Cultura del Senado (3 de agosto de 2026) por la suspensión del lanzamiento del libro de Gabriel Rodríguez en Talca, declaró que la decisión 'inconsulta' del seremi del Maule, Pablo Amaro, no era de conocimiento del ministerio."
+  fidel_espinoza:
+    nombre: Fidel Espinoza
+    cargo: Senador PS
+    organizacion: partido_socialista
+    notas: "Senador del Partido Socialista. Se inhabilitó en la votación del Senado del 4 de agosto de 2026 que aprobó el mecanismo de compensación a los municipios de la megarreforma, sin efectos en el resultado (27 a favor, 22 en contra)."
+  elia_piedras:
+    nombre: Elia Piedras
+    cargo: Presidenta del Colegio de Periodistas de Maule Norte
+    organizacion: colegio_periodistas
+    notas: "Presidenta del Colegio de Periodistas de Maule Norte. En agosto de 2026 calificó como 'acto de censura' la suspensión del lanzamiento del libro de Gabriel Rodríguez en Talca ordenada por el seremi de las Culturas del Maule, Pablo Amaro, señalando que atenta contra la libertad de expresión y el derecho de la ciudadanía a acceder a la cultura."
+  michelle_vera:
+    nombre: Michelle Vera Machuca
+    cargo: Seremi de la Mujer y Equidad de Género del Bío Bío
+    organizacion: ministerio_mujer
+    notas: "Fonoaudióloga egresada de la Universidad de Las Américas (UDLA) con posgrado en la Universidad Católica de Temuco, militante del Partido Cristiano de Chile (PCC). Asumió el 1 de agosto de 2026 como seremi de la Mujer y Equidad de Género del Bío Bío, completando el gabinete regional tras la vacancia dejada por la licencia por embarazo de Camila Contreras."
+  claudio_orrego:
+    nombre: Claudio Orrego
+    cargo: Gobernador de la Región Metropolitana
+    organizacion: gore_metropolitano
+    notas: "Gobernador de la Región Metropolitana. En el marco del caso ProCultura impulsó desde el inicio las acciones administrativas y judiciales para cobrar las pólizas de garantía del programa 'Quédate' a la aseguradora ASPOR, que la Corte Suprema confirmó el 4 de agosto de 2026: 'Lo dijimos desde el primer día, Aspor debía pagar'."
+  daniel_pacheco:
+    nombre: Daniel Pacheco
+    cargo: Seremi de Gobierno del Bío Bío
+    organizacion: segegob
+    notas: "Seremi de Gobierno de la Región del Bío Bío. En agosto de 2026 confirmó la designación de Michelle Vera como seremi de la Mujer y Equidad de Género, señalando que con ella el gabinete regional quedó completo."
+  camila_contreras:
+    nombre: Camila Contreras
+    cargo: Exseremi de la Mujer del Bío Bío
+    organizacion: ministerio_mujer
+    notas: "Exseremi de la Mujer y Equidad de Género del Bío Bío. Presentó licencia por embarazo durante 2026, lo que impidió que su reemplazante, Antaris Varela, asumiera la titularidad; la vacancia se resolvió en agosto de 2026 con la designación de Michelle Vera."
+  yerko_ljubetic:
+    nombre: Yerko Ljubetic
+    cargo: Director Nacional del INDH
+    organizacion: indh
+    notas: "Director Nacional del Instituto Nacional de Derechos Humanos. El 4 de agosto de 2026, en Radio 13C, discrepó de la absolución de Claudio Crespo: 'un joven perdió la vista y el autor de esas lesiones quedó sin castigo'."
+  raul_leiva:
+    nombre: Raúl Leiva
+    cargo: Diputado (PS)
+    organizacion: partido_socialista
+    notas: "Diputado del Partido Socialista. El 4 de agosto de 2026 sostuvo que los Presidentes no debieran emitir opiniones calificando resoluciones judiciales, en el marco del fallo de Crespo."
+  marcos_ilabaca:
+    nombre: Marcos Ilabaca
+    cargo: Diputado (PS)
+    organizacion: partido_socialista
+    notas: "Diputado del Partido Socialista. El 4 de agosto de 2026 señaló que los fallos se respetan y que no corresponde comentarlos desde el Ejecutivo, en el marco del caso Crespo."
+  tatiana_urrutia:
+    nombre: Tatiana Urrutia
+    cargo: Diputada (Frente Amplio)
+    organizacion: frente_amplio
+    notas: "Diputada del Frente Amplio. El 4 de agosto de 2026 emplazó al Presidente Kast a frenar los indultos para carabineros condenados que promueven diputados de su partido, tras su opinión sobre el fallo de Crespo."
+  benjamin_moreno:
+    nombre: Benjamín Moreno
+    cargo: Jefe de bancada de diputados republicanos
+    organizacion: partido_republicano
+    notas: "Diputado y jefe de bancada del Partido Republicano. El 4 de agosto de 2026 defendió el pronunciamiento del Presidente Kast sobre el fallo de Crespo: 'es la justicia la que señala si se actuó conforme a la ley'."
+  francisco_orrego:
+    nombre: Francisco Orrego
+    cargo: Diputado (Ind-RN)
+    organizacion: renovacion_nacional
+    notas: "Diputado independiente en renovación nacional. El 4 de agosto de 2026 celebró el post de Kast sobre Crespo y pidió una ley de indultos para carabineros condenados por el estallido social."
+  maria_jose_zaldivar:
+    nombre: María José Zaldívar
+    cargo: Directora General de Fundación Teletón
+    organizacion: fundacion_teleton
+    notas: "Directora General de la Fundación Teletón. El 4 de agosto de 2026 valoró el respaldo transversal del Senado al proyecto del Día Nacional de la Teletón y confió en igual acogida en la Cámara de Diputadas y Diputados."
+  sebastian_keitel:
+    nombre: Sebastián Keitel
+    cargo: Senador, presidente de la Comisión de Adulto Mayor y Discapacidad
+    organizacion: senado
+    notas: "Senador y presidente de la Comisión de Adulto Mayor y Discapacidad, que aprobó por unanimidad el proyecto del Día Nacional de la Teletón. El 4 de agosto de 2026 destacó en Sala que la iniciativa busca que el día posterior a la campaña sea una instancia de encuentro familiar."
+  claudia_pascual:
+    nombre: Claudia Pascual
+    cargo: Senadora (PC)
+    notas: "Senadora. El 4 de agosto de 2026 hizo reserva de constitucionalidad de la fórmula de compensación municipal de la megarreforma aprobada por la Sala."
+  francisco_huenchumilla:
+    nombre: Francisco Huenchumilla
+    cargo: Senador (DC)
+    notas: "Senador. El 4 de agosto de 2026 hizo reserva de constitucionalidad de la fórmula de compensación municipal de la megarreforma y votó en contra de ella en la Sala."
 organizations:
   criteria:
     nombre: Criteria
@@ -3383,6 +3533,16 @@ organizations:
     pais: Chile
     notas: Elaboró informe técnico que reveló bajo impacto del proyecto de IVA
       pañales y medicamentos
+  liceo_rahue:
+    nombre: Liceo Rahue de Osorno
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo de enseñanza media de Osorno (Región de Los Lagos). El 3 de agosto de 2026 un estudiante de primero medio agredió a una compañera y amenazó con un destornillador a la comunidad escolar, siendo reducido y detenido por Carabineros. El establecimiento activó el protocolo Aula Segura, suspendió la jornada de la tarde y convocó a apoderados para el 11 de agosto."
+  corte_suprema:
+    nombre: Corte Suprema de Chile
+    tipo: tribunal
+    pais: Chile
+    notas: "Máximo tribunal del país. En octubre de 2024 removió por unanimidad a la ministra Ángela Vivanco (caso Audios), la primera destitución de un ministro del Pleno en 23 años."
   servel:
     nombre: Servicio Electoral
     tipo: servicio_publico
@@ -4235,6 +4395,96 @@ organizations:
     tipo: institucion_publica
     pais: Chile
     notas: "Gobierno Regional de Aysén. Cofinanció junto al municipio la 'aldea de emergencia' de Coyhaique (agosto 2026)."
+  ditecsur:
+    nombre: Ditecsur
+    tipo: empresa
+    pais: Chile
+    notas: "Productora de eventos contratada por el INDH en noviembre de 2025 por $250 millones, vigente durante 2026, para la organización de eventos institucionales como la ceremonia de entrega del Informe Anual sobre la Situación de los Derechos Humanos, la Cuenta Pública y el Premio Nacional de Derechos Humanos. Su contrato fue cuestionado por la bancada UDI y defendido por el INDH como adjudicado mediante licitación pública."
+  sernac:
+    nombre: Servicio Nacional del Consumidor (Sernac)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público encargado de la protección de los derechos de las y los consumidores. En agosto de 2026, su dirección regional subrogante de Arica y Parinacota fue vinculada por El Mostrador a contrataciones directas de militantes de RN o Republicanos."
+  injuv:
+    nombre: Instituto Nacional de la Juventud (INJUV)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Instituto Nacional de la Juventud. Según la respuesta oficial del Sernac de Arica, la asistente social Evelyn Milos provenía del INJUV, lo que habría justificado no requerir su certificado de antecedentes por 'continuidad en el desempeño dentro de la Administración del Estado'."
+  ministerio_culturas:
+    nombre: Ministerio de las Culturas, las Artes y el Patrimonio
+    tipo: ministerio
+    pais: Chile
+    notas: "Cartera responsable de las políticas culturales y patrimoniales. En agosto de 2026 su seremi del Maule, Pablo Amaro, fue señalado como responsable de la suspensión de la presentación del libro de Gabriel Rodríguez en Talca, decisión que el ministro Francisco Undurraga dijo desconocer."
+  partido_cristiano:
+    nombre: Partido Cristiano de Chile (PCC)
+    tipo: partido
+    pais: Chile
+    notas: "Partido político chileno. Conservó el cupo de la seremi de la Mujer del Bío Bío con la designación de Michelle Vera Machuca en agosto de 2026, tras la vacancia dejada por la licencia por embarazo de Camila Contreras."
+  senama:
+    nombre: Servicio Nacional del Adulto Mayor (Senama)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público dependiente del Ministerio de Desarrollo Social. Antaris Varela, la primera designada como seremi de la Mujer del Bío Bío del gobierno de Kast, se trasladó al Senama como coordinadora regional tras ejercer solo como subrogante."
+  gore_metropolitano:
+    nombre: Gobierno Regional Metropolitano (Gobierno de Santiago)
+    tipo: gobierno_regional
+    pais: Chile
+    notas: "Gobierno Regional de la Región Metropolitana. Financió en 2022 con $1.600 millones el programa de prevención del suicidio 'Quédate', ejecutado por ProCultura; en el caso ProCultura exigió a la aseguradora ASPOR el pago de las pólizas de garantía por cerca de $1.000 millones sin ejecutar."
+  procultura:
+    nombre: Fundación ProCultura
+    tipo: organizacion_civil
+    pais: Chile
+    notas: "Fundación ejecutora del programa 'Quédate' (prevención del suicidio) financiado por el Gobierno de Santiago. Su cese de funciones en el marco del caso Convenios (2023) dejó cerca de $1.000 millones sin ejecutar, desencadenando el cobro de las pólizas de garantía a la aseguradora ASPOR."
+  aspor:
+    nombre: Aseguradora Porvenir S.A. (ASPOR)
+    tipo: empresa
+    pais: Chile
+    notas: "Aseguradora que emitió las pólizas de garantía del programa 'Quédate' de ProCultura. La CMF la multó con 1.000 UF por no pagar al primer requerimiento del Gobierno de Santiago; la Corte Suprema confirmó la multa el 4 de agosto de 2026, quedando pendiente el cobro de cerca de $1.000 millones en una causa civil paralela."
+  cmf:
+    nombre: Comisión para el Mercado Financiero (CMF)
+    tipo: regulador
+    pais: Chile
+    notas: "Organismo regulador del mercado financiero. Aplicó la multa de 1.000 UF a la aseguradora ASPOR por incumplir el pago de las pólizas de garantía del programa 'Quédate' (caso ProCultura), sanción confirmada por la Corte Suprema el 4 de agosto de 2026."
+  cordon_secundario:
+    nombre: Cordón Secundario
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Coordinadora que agrupa a centros de estudiantes de Santiago. El 4 de agosto de 2026 convocó la marcha de secundarios en la Alameda contra el gobierno de José Antonio Kast para 'visibilizar el descontento de los estudiantes'."
+  liceo_instituto_nacional:
+    nombre: Instituto Nacional José Miguel Carrera
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo emblemático de Santiago Centro. Fue tomado por sus estudiantes en la mañana del 4 de agosto de 2026, en el marco de la movilización de secundarios convocada por el Cordón Secundario."
+  liceo_barros_borgoño:
+    nombre: Liceo Manuel Barros Borgoño
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo emblemático de Santiago Centro. Fue tomado por sus estudiantes el 4 de agosto de 2026; la comunidad resguardó a los estudiantes del Programa de Integración Escolar (PIE) y de 7° y 8° básico a la espera de sus apoderados."
+  metro_santiago:
+    nombre: Metro de Santiago
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de transporte subterráneo de Santiago. El 4 de agosto de 2026 cerró la estación Universidad Católica y suspendió la detención de trenes durante la marcha de estudiantes secundarios."
+  slep_santiago_centro:
+    nombre: SLEP Santiago Centro
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio Local de Educación Pública a cargo de los liceos de Santiago Centro. El 4 de agosto de 2026 confirmó las tomas de cuatro establecimientos emblemáticos (Instituto Nacional, Liceo N°1 Javiera Carrera, Barros Borgoño y Liceo de Aplicación), activó protocolos, solicitó la orden de desalojo y reportó su restitución voluntaria sin incidentes."
+  liceo_1_javiera_carrera:
+    nombre: Liceo N°1 Javiera Carrera
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo emblemático de Santiago Centro. Fue ocupado por estudiantes en la mañana del 4 de agosto de 2026 y restituido voluntariamente, según el SLEP Santiago Centro."
+  liceo_de_aplicacion:
+    nombre: Liceo de Aplicación
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo emblemático de Santiago Centro. Fue ocupado por estudiantes en la mañana del 4 de agosto de 2026 y restituido voluntariamente, según el SLEP Santiago Centro."
+  fundacion_teleton:
+    nombre: Fundación Teletón
+    tipo: fundacion
+    pais: Chile
+    notas: "Fundación que organiza la campaña benéfica televisada Teletón y mantiene institutos de rehabilitación para personas con discapacidad física en todo Chile. Solicitó al Congreso la creación del Día Nacional de la Teletón y el Día Nacional del Encuentro Familiar; su directora general es María José Zaldívar. La campaña 2026 está programada para el 6 y 7 de noviembre."
 cifras:
   desocupacion_antofagasta_amj_2026:
     nombre: Tasa de desocupación de la Región de Antofagasta (abril-junio 2026)
@@ -5010,3 +5260,91 @@ cifras:
     nombre: Municipios adicionales ganados por Chile Vamos en las elecciones 2024
     unidad_default: municipios
     notas: "Chile Vamos sumó 35 municipios respecto de 2021 en las elecciones municipales y regionales de octubre de 2024, con retroceso del oficialismo."
+  votos_jara_primarias_2025:
+    nombre: Porcentaje de Jeannette Jara en las primarias de Unidad por Chile 2025
+    unidad_default: "%"
+    notas: "60,16% de los votos (825.835) en la primaria presidencial de Unidad por Chile del 29 de junio de 2025, que la consagró como candidata del pacto oficialista."
+  votos_jara_primera_vuelta_2025:
+    nombre: Votos de Jeannette Jara en la primera vuelta presidencial 2025
+    unidad_default: votos
+    notas: "3.483.490 votos (26,85%) en la primera vuelta del 16 de noviembre de 2025, el primer lugar que la llevó a la segunda vuelta."
+  votos_kast_primera_vuelta_2025:
+    nombre: Votos de José Antonio Kast en la primera vuelta presidencial 2025
+    unidad_default: votos
+    notas: "3.104.458 votos (23,93%) en la primera vuelta del 16 de noviembre de 2025, el segundo lugar que lo llevó a la segunda vuelta."
+  participacion_primera_vuelta_2025:
+    nombre: Participación en la primera vuelta presidencial 2025
+    unidad_default: "%"
+    notas: "85,42% del padrón (13.478.426 votantes de 15.779.102 habilitados) en la primera vuelta del 16 de noviembre de 2025, con voto obligatorio."
+  sueldo_presidente_kast_2026:
+    nombre: Sueldo bruto mensual del Presidente de la República (2026)
+    unidad_default: pesos chilenos
+    notas: "La comisión autónoma creada por la Ley 21.233 fijó un sueldo bruto de $11,07 millones para el Presidente de la República desde el 11 de marzo de 2026 (adecuación al IPC; Boric percibía alrededor de $7 millones). Emol y Meganoticias reportan la renta bruta de Kast en torno a los $11,3 millones."
+  contrato_indh_ditecsur:
+    nombre: Contrato del INDH con la productora Ditecsur (2026)
+    unidad_default: millones_pesos
+    notas: "$250 millones suscritos en noviembre de 2025 y vigentes durante 2026 para la organización y producción de eventos del INDH, como la ceremonia de entrega del Informe Anual sobre la Situación de los Derechos Humanos."
+  presupuesto_indh_2026:
+    nombre: Presupuesto del INDH 2026
+    unidad_default: millones_pesos
+    notas: "$16.339 millones de fondos totales para el INDH en 2026, provenientes de la partida del Tesoro Público."
+  viaje_contreras_ginebra_2023:
+    nombre: Costo del viaje de la exdirectora del INDH a Ginebra (2023)
+    unidad_default: pesos chilenos
+    notas: "$8.183.208 destinados al viaje de la exdirectora del INDH Consuelo Contreras a la asamblea anual de la GANHRI en Ginebra (Suiza) el 19 de marzo de 2023. Un segundo viaje, el 8 de marzo de 2025, costó $4.440.910."
+  droga_tacna_milos_2017:
+    nombre: Droga incautada a Evelyn Milos en Tacna (2017)
+    unidad_default: kilos
+    notas: "47 kilos de marihuana tipo cripy incautados en octubre de 2017 en la frontera de Tacna (Perú) a un grupo de cuatro mujeres chilenas de la misma familia —incluida Evelyn Milos Cáceres— en 44 paquetes ocultos en la carrocería de un vehículo, tasados en cerca de US$282 mil."
+  condenados_libertad_vigilada_delitos_sexuales:
+    nombre: Condenados por delitos sexuales contra menores de 14 años en libertad vigilada
+    unidad_default: personas
+    notas: "8.815 personas condenadas por delitos sexuales contra menores de 14 años cumplen su pena bajo libertad vigilada sin haber pasado por prisión como condenados, según datos de Gendarmería obtenidos por Ciper vía Ley de Transparencia (agosto 2026)."
+  total_condenados_delitos_sexuales_menores:
+    nombre: Total de condenados por delitos sexuales contra menores de 14 años
+    unidad_default: personas
+    notas: "11.668 personas cumplen actualmente condenas por delitos sexuales contra menores de 14 años, de las cuales solo 2.853 están recluidas, según estadísticas de Gendarmería entregadas a Ciper (agosto 2026)."
+  reclusos_delitos_sexuales_menores:
+    nombre: Recluidos por delitos sexuales contra menores de 14 años
+    unidad_default: personas
+    notas: "2.853 personas condenadas por delitos sexuales contra menores de 14 años se encuentran recluidas en prisión, frente a las 8.815 que cumplen en libertad vigilada (datos de Gendarmería a Ciper, agosto 2026)."
+  total_libertad_vigilada_chile:
+    nombre: Total de personas en libertad vigilada en Chile
+    unidad_default: personas
+    notas: "96.984 personas cumplen penas en libertad vigilada en Chile, cifra superior a las 64.991 personas recluidas al 30 de junio de 2026 (42.596 condenadas y 22.394 imputadas), según Gendarmería."
+  multa_aspor_cmf:
+    nombre: Multa de la CMF a la aseguradora ASPOR (caso ProCultura)
+    unidad_default: UF
+    notas: "1.000 UF de multa aplicada por la CMF a la aseguradora ASPOR por incumplir el pago de las pólizas de garantía del programa 'Quédate' (caso ProCultura), confirmada por la Corte Suprema el 4 de agosto de 2026. Las pólizas sumaban más de 31 mil UF (más de $1.000 millones)."
+  fondos_programa_quedate:
+    nombre: Fondos del programa Quédate (2022)
+    unidad_default: millones_pesos
+    notas: "$1.600 millones financiados en 2022 por el Gobierno de Santiago para el programa de prevención del suicidio 'Quédate', ejecutado por la Fundación ProCultura, que alcanzó un 40% de ejecución y atendió a casi 12 mil personas."
+  sin_ejecutar_procultura:
+    nombre: Recursos sin ejecutar del programa Quédate
+    unidad_default: millones_pesos
+    notas: "Cerca de $1.000 millones quedaron sin ejecutar cuando ProCultura dejó de transferir fondos a las fundaciones especializadas del programa 'Quédate', monto cuyo pago exige el Gobierno de Santiago a la aseguradora ASPOR por las pólizas de garantía."
+  senadores_aprueban_teleton_2026:
+    nombre: Senadores que aprobaron el Día Nacional de la Teletón
+    unidad_default: senadores
+    notas: "40 senadores presentes votaron a favor, sin votos en contra ni abstenciones, en la Sesión N°47 del Senado del 4 de agosto de 2026 (Boletín 18231-35)."
+  alcaldes_apoyan_megarreforma:
+    nombre: Alcaldes que firmaron a favor de la megarreforma
+    unidad_default: alcaldes
+    notas: "174 alcaldes, poco más del 50% de las 345 municipalidades, adhirieron a una declaración pública del 4 de agosto de 2026 pidiendo al Senado aprobar la megarreforma y su compensación municipal."
+  alcaldes_opositores_megarreforma:
+    nombre: Alcaldes en contra de la compensación de la megarreforma
+    unidad_default: alcaldes
+    notas: "104 alcaldes de oposición, encabezados por Tomás Vodanovic (Maipú), firmaron una declaración contra la compensación municipal incluida en la megarreforma, calificada por Vodanovic de 'injusta y regresiva'."
+  compensacion_fcm_megarreforma:
+    nombre: Compensación anual al Fondo Común Municipal por la megarreforma
+    unidad_default: millones_pesos
+    notas: "110 mil millones de pesos que la Tesorería entregará anualmente al Fondo Común Municipal para compensar la exención de contribuciones de adultos mayores, según la fórmula aprobada por el Senado el 4 de agosto de 2026; montos estimados por el SII."
+  compensacion_municipios_directa:
+    nombre: Compensación directa anual a municipios por la megarreforma
+    unidad_default: millones_pesos
+    notas: "80 mil millones de pesos que la Tesorería entregará anualmente directamente a los municipios para compensar la rebaja del impuesto territorial a adultos mayores, según la fórmula aprobada el 4 de agosto de 2026."
+  atenciones_teleton_anuales:
+    nombre: Personas atendidas por Teletón en un año
+    unidad_default: personas
+    notas: "Más de 31.000 personas atendidas y cerca de un millón de prestaciones de rehabilitación en los institutos de Teletón durante el último año, según el ministro Segpres José García Ruminot en la sesión del 4 de agosto de 2026."

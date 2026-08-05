@@ -8,8 +8,8 @@
     "generate-index": "node scripts/generate-index.mjs",
     "add-source": "node scripts/add-source.mjs",
     "build": "node scripts/validate.mjs && set NODE_OPTIONS=--experimental-global-customevent&& astro build",
-    "preview": "npm run build && npx wrangler dev",
-    "deploy": "npm run build && npx wrangler deploy"
+    "preview": "npm run build && npx wrangler pages dev dist --port 4321",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name gobierno-vault --branch main"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "^7.2.1",

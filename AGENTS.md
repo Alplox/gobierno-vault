@@ -11,6 +11,10 @@ Astro 7 + Tailwind, output `static` (SSG). Lenguaje: espanol.
 
 Archivo `EVENTS_INDEX.md` permite contexto rápido para agentes y usuarios.
 
+Archivo `TAREAS.md` es la bitácora de eventos detectados como faltantes (recency bias):
+cuando se detecte un evento pendiente que no se implementará en el momento, registrarlo ahí
+con fecha, tipo sugerido y estado (`⬜ pendiente`). Al crearlo, marcar `✅ hecho` con el ID.
+
 ## Arquitectura
 
 ```
@@ -179,6 +183,8 @@ Si falla, revisar frontmatter (YAML parse error) o wikilinks rotos.
 
 **CI (Netlify/Vercel):** el archivo `.npmrc` con `legacy-peer-deps=true` es obligatorio para que `npm clean-install` no falle. `@astrojs/tailwind@6` declara peer `astro@^3||^4||^5` pero el proyecto usa Astro 7; la combinación funciona (el lockfile la resuelve) y `legacy-peer-deps` evita la validación estricta de peers del CI. No eliminar `.npmrc`.
 
+**Despliegue (Cloudflare Pages):** el sitio se despliega con `npm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `npm run preview` (`wrangler pages dev dist`).
+
 ## Extraccion de contenido web
 
 Cuando `webfetch` no logre leer una URL (bloqueo, JS rendering, paywall), intentar con estos servicios que devuelven markdown limpio:
@@ -231,12 +237,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `npm run generate-index`
 
-**Total de eventos:** 416
+**Total de eventos:** 435
 
 **Eventos por año:**
-- 2026: 359
-- 2025: 21
-- 2024: 10
+- 2026: 375
+- 2025: 23
+- 2024: 11
 - 2023: 9
 - 2022: 8
 - 2021: 3
@@ -246,32 +252,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (143)
-- Economia (78)
-- Cambios en el gabinete (52)
-- Justicia (49)
-- Administración pública (47)
+- Politica (153)
+- Economia (79)
+- Justicia (55)
+- Cambios en el gabinete (53)
+- Administración pública (50)
 - Emergencia y catástrofes (44)
 - Relaciones internacionales (42)
+- Proceso legislativo (41)
+- Finanzas publicas (41)
 - Defensa y seguridad (40)
-- Proceso legislativo (37)
-- Finanzas publicas (37)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (110)
-- declaracion (61)
-- reaccion (48)
-- resultado (42)
-- anuncio (38)
-- publicacion (32)
-- investigacion (31)
-- fallo_judicial (12)
+- accion (114)
+- declaracion (63)
+- reaccion (50)
+- resultado (44)
+- anuncio (39)
+- investigacion (34)
+- publicacion (34)
+- fallo_judicial (14)
+- votacion (11)
 - proyecto (11)
-- votacion (10)
 
 **Entidades registradas:**
-- Personas: 489
-- Organizaciones: 238
-- Cifras: 214
-- Fuentes: 1388
+- Personas: 520
+- Organizaciones: 258
+- Cifras: 236
+- Fuentes: 1435
 - Temas: 74

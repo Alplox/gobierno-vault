@@ -3,4 +3,6 @@ dist/
 .astro/
 .remark-debug.log
 
+.wrangler
+
 *.log

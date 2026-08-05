@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { DollarSign } from 'lucide-astro';
+import { DollarSign, Scale, TrendingUp, BookOpen } from 'lucide-astro';
 
 const cargos = [
   {
@@ -37,19 +37,234 @@ const topes = [
   { rango: 'Honorarios gabinetes (tope)', topeKast: 5_490_352, topeBoric: null },
 ];
 
+// Sueldo bruto mensual del Presidente (fuentes verificadas)
+const presidentes = [
+  {
+    presidente: 'Gabriel Boric',
+    periodo: '2022–2026',
+    sueldo: 7_000_000,
+    detalle: 'Base bruta en torno a los $7 millones. Entre noviembre y diciembre de 2025 el bono PMG (cumplimiento de metas, 99,44%) elevó su sueldo bruto a unos $10 millones.',
+    fuente: 'Emol (19/02/2026) · La Cuarta (23/03/2026)',
+  },
+  {
+    presidente: 'José Antonio Kast',
+    periodo: '2026–2030',
+    sueldo: 11_070_064,
+    detalle: 'Fijado por la Comisión para la Fijación de Remuneraciones (Ley 21.233), vigente desde el 11/03/2026. Emol lo reporta en $11,3 millones brutos. En marzo de 2026 Kast anunció su intención de rebajarlo de forma estructural.',
+    fuente: 'La Cuarta (23/03/2026) · Emol (11/03/2026) · Emol (03/08/2026) · Meganoticias (03/08/2026) · The Clinic (31/03/2026)',
+  },
+];
+
+// Sueldo mínimo (ingreso mínimo mensual, 18 a 65 años) — Anexo Wikipedia + leyes BCN + Senado + prensa
+const sueldoMinimo = [
+  { desde: '01/07/2010', monto: 172_000, gobierno: 'Piñera I', ley: 'Ley 20.449' },
+  { desde: '01/07/2014', monto: 225_000, gobierno: 'Bachelet II', ley: 'Ley 20.763' },
+  { desde: '01/01/2018', monto: 276_000, gobierno: 'Bachelet II', ley: 'Ley 20.935' },
+  { desde: '01/09/2018', monto: 288_000, gobierno: 'Piñera II', ley: 'Ley 21.112' },
+  { desde: '01/05/2022', monto: 380_000, gobierno: 'Boric', ley: 'Ley 21.456' },
+  { desde: '01/08/2022', monto: 400_000, gobierno: 'Boric', ley: 'Ley 21.456' },
+  { desde: '01/05/2023', monto: 440_000, gobierno: 'Boric', ley: 'Ley 21.578' },
+  { desde: '01/09/2023', monto: 460_000, gobierno: 'Boric', ley: 'Ley 21.578' },
+  { desde: '01/07/2024', monto: 500_000, gobierno: 'Boric', ley: 'Ley 21.578' },
+  { desde: '01/01/2025', monto: 510_636, gobierno: 'Boric', ley: 'Ley 21.578 (reajuste IPC)' },
+  { desde: '01/05/2025', monto: 529_000, gobierno: 'Boric', ley: 'Ley 21.751' },
+  { desde: '01/01/2026', monto: 539_000, gobierno: 'Boric', ley: 'Ley 21.751' },
+  { desde: '01/05/2026', monto: 553_553, gobierno: 'Kast', ley: 'Ley 21.830' },
+];
+
+// Cálculos propios sobre datos verificados (sueldo presidente ÷ sueldo mínimo vigente)
+const ratios = [
+  { gobierno: 'Boric', veces: 7_000_000 / 529_000, divisor: '$529.000 (mínimo desde mayo 2025)' },
+  { gobierno: 'Kast', veces: 11_070_064 / 553_553, divisor: '$553.553 (mínimo desde mayo 2026)' },
+];
+
 const formatCLP = (n: number) => '$' + n.toLocaleString('es-CL');
 const pct = (a: number, b: number) => ((a - b) / b * 100).toFixed(1);
+
+// PGU y contexto de costo de vida (fuentes verificadas)
+const pgu = { topeMax: 250_275, topeBase: 231_732 };
+const cutIdeal = 637_000; // Radio U. de Chile: "alrededor de $637 mil"; Infobae: $637.700
+
+const fuentes = [
+  { grupo: 'Sueldo mínimo', titulo: 'Anexo: Salario mínimo en Chile (tabla histórica 1958–2027 con leyes)', medio: 'Wikipedia', url: 'https://es.wikipedia.org/wiki/Anexo:Salario_m%C3%ADnimo_en_Chile' },
+  { grupo: 'Sueldo mínimo', titulo: 'A ley reajuste al ingreso mínimo mensual — IMM $553.553 desde mayo 2026', medio: 'Senado de Chile', url: 'https://www.senado.cl/comunicaciones/noticias/ley-reajuste-al-ingreso-minimo-mensual' },
+  { grupo: 'Sueldo mínimo', titulo: 'Chile: el gobierno subió al doble su propuesta de reajuste al salario mínimo ($539.000 → $553.553; CUT pedía $637.700)', medio: 'Infobae', url: 'https://www.infobae.com/america/america-latina/2026/05/13/chile-el-gobierno-subio-al-doble-su-propuesta-de-reajuste-al-salario-minimo/' },
+  { grupo: 'Sueldo mínimo', titulo: 'CUT rechaza propuesta del Gobierno por reajuste del sueldo mínimo (desde enero 2026 el IMM es $539.000)', medio: 'Diario y Radio Universidad de Chile', url: 'https://radio.uchile.cl/2026/04/29/cut-rechaza-propuesta-del-gobierno-por-reajuste-del-sueldo-minimo/' },
+  { grupo: 'Sueldo del Presidente', titulo: 'Presidente, ministros y parlamentarios: entra en vigencia el nuevo sistema de sueldos para altas autoridades (~$11 millones brutos)', medio: 'Emol', url: 'https://www.emol.com/noticias/Economia/2026/03/11/1194011/sueldos-estado-chile.html' },
+  { grupo: 'Sueldo del Presidente', titulo: 'Un máximo de casi $10 millones mensuales: aclaran cómo se fija el tope de sueldo de los asesores del Presidente (sueldo bruto presidencial $11,07 millones)', medio: 'La Cuarta', url: 'https://www.lacuarta.com/chile/noticia/un-maximo-de-casi-10-millones-mensuales-aclaran-como-se-fija-el-tope-de-sueldo-de-los-asesores-del-presidente/' },
+  { grupo: 'Sueldo del Presidente', titulo: 'Presidente Boric recibió bono por cumplimiento de metas que incrementó en $3 millones su sueldo (de $7 a $10 millones)', medio: 'Emol', url: 'https://www.emol.com/noticias/Nacional/2026/02/19/1191970/presidente-boric-sueldo-bono-metas.html' },
+  { grupo: 'Sueldo del Presidente', titulo: '¿Puede el Presidente bajarse el sueldo? Kast anunció rebaja estructural; su sueldo supera los $11 millones brutos', medio: 'The Clinic', url: 'https://www.theclinic.cl/2026/03/31/puede-el-presidente-bajarse-el-sueldo-la-formula-que-evalua-la-moneda-tras-anuncio-de-kast-y-la-imposibilidad-de-ajustar-sus-remuneraciones/' },
+  { grupo: 'Sueldo del Presidente', titulo: 'Superintendencias: 46 funcionarios ganaron en junio lo mismo o más que el Presidente (renta bruta de Kast en $11,3 millones)', medio: 'Emol', url: 'https://www.emol.com/noticias/Nacional/2026/08/03/1207403/superintendencias-funcionarios-remuneraciones-superiores-presidente.html' },
+  { grupo: 'Sueldo del Presidente', titulo: 'Revelan que 46 funcionarios de superintendencias ganaron en junio lo mismo o más que el Presidente Kast (renta bruta bordea $11,3 millones)', medio: 'Meganoticias', url: 'https://www.meganoticias.cl/amp/nacional/528485-altos-sueldos-funcionarios-publicos-superintendencias-presidente-kast-03-08-2026.html' },
+  { grupo: 'Segundo Piso (asesores)', titulo: 'Segundo Piso de Kast vs. el de Boric: asesores del Presidente reciben en promedio sueldos superiores en un 19% a sus predecesores', medio: 'The Clinic', url: 'https://www.theclinic.cl/2026/05/19/segundo-piso-de-kast-vs-el-de-boric-asesores-del-presidente-reciben-en-promedio-sueldos-superiores-en-un-19-a-sus-predecesores/' },
+  { grupo: 'Segundo Piso (asesores)', titulo: 'Oficio Circular N°15 de la Dipres con los topes para asesores de confianza', medio: 'Dipres (vía The Clinic/La Cuarta)', url: 'https://www.theclinic.cl/2026/03/20/gobierno-de-kast-elevo-el-techo-para-pago-de-asesores-de-confianza-de-55-millones-en-la-administracion-de-boric-a-99-millones/' },
+  { grupo: 'Costo de vida', titulo: 'Índice de Precios al Consumidor (IPC) de diciembre presentó una variación mensual de -0,2% (inflación acumulada 2025: 3,5%)', medio: 'INE', url: 'https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/01/08/%C3%ADndice-de-precios-al-consumidor-(ipc)-de-diciembre-present%C3%B3-una-variaci%C3%B3n-mensual-de--0-2' },
+  { grupo: 'Costo de vida', titulo: 'Aumento de la Pensión Garantizada Universal (PGU) — topes $250.275 y $231.732 desde febrero 2026', medio: 'ChileAtiende / IPS', url: 'https://www.chileatiende.gob.cl/fichas/130457-aumento-de-la-pension-garantizada-universal-pgu' },
+  { grupo: 'Costo de vida', titulo: 'Canasta básica de alimentos y líneas de pobreza (indicador oficial; valores por consulta)', medio: 'Observatorio Social, Ministerio de Desarrollo Social', url: 'https://observatorio.ministeriodesarrollosocial.gob.cl/' },
+  { grupo: 'Costo de vida', titulo: 'Informe de Canasta Familiar (Fiscalía Nacional Económica; valores trimestrales)', medio: 'FNE', url: 'https://www.fne.gob.cl/' },
+];
+const grupos = [...new Set(fuentes.map((f) => f.grupo))];
 ---
 
-<Base title="Sueldos de confianza">
+<Base title="Sueldos y brecha salarial">
   <article class="max-w-4xl mx-auto">
     <header class="mb-8">
       <div class="flex items-center gap-2 mb-1">
         <DollarSign class="h-6 w-6 text-blue-600 shrink-0" />
-        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Sueldos de cargos de confianza</h1>
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Sueldos del sector público y brecha salarial</h1>
       </div>
-      <p class="text-gray-500 text-sm">Comparación remuneraciones del Segundo Piso: gobierno de Kast vs. Boric. Fuente: The Clinic (19 may 2026), Dipres Oficio Circular N°15.</p>
+      <p class="text-gray-500 text-sm">
+        Sueldo del Presidente, sueldo mínimo por gobierno, asesores de confianza y contexto de costo de vida.
+        Todos los datos están verificados contra las fuentes listadas al final de la página.
+      </p>
     </header>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <Scale class="h-5 w-5 text-blue-600 shrink-0" />
+        <h2 class="text-lg font-semibold text-gray-900">Sueldo bruto del Presidente por gobierno</h2>
+      </div>
+      <p class="text-sm text-gray-500 mb-3">
+        El 11 de marzo de 2026 entró en vigencia el nuevo sistema de remuneraciones para altas autoridades, fijado por la
+        Comisión para la Fijación de Remuneraciones (Ley 21.233), que ordena la escala salarial del sector público.
+        Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales.
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Presidente</th>
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Período</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Sueldo bruto mensual</th>
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Detalle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {presidentes.map((p) => (
+              <tr class="border-b border-gray-100 align-top">
+                <td class="py-2 px-3 text-gray-900 font-medium whitespace-nowrap">{p.presidente}</td>
+                <td class="py-2 px-3 text-gray-500 whitespace-nowrap">{p.periodo}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium whitespace-nowrap">{formatCLP(p.sueldo)}</td>
+                <td class="py-2 px-3 text-gray-600 text-xs leading-relaxed">
+                  {p.detalle}
+                  <span class="block mt-1 text-gray-400">Fuentes: {p.fuente}</span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-400 mt-3">
+        No se incluyen cifras de los presidentes Bachelet ni Piñera porque no se encontraron fuentes accesibles y
+        verificables con sus montos exactos; conforme a la regla del proyecto, no se publican datos no verificados.
+      </p>
+    </section>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <TrendingUp class="h-5 w-5 text-blue-600 shrink-0" />
+        <h2 class="text-lg font-semibold text-gray-900">¿Cuántos sueldos mínimos gana el Presidente?</h2>
+      </div>
+      <p class="text-sm text-gray-500 mb-4">
+        Razón entre la dieta presidencial y el ingreso mínimo mensual vigente (cálculo propio sobre datos verificados).
+      </p>
+      <div class="space-y-4">
+        {ratios.map((r) => {
+          const width = Math.min(100, Math.round((r.veces / 22) * 100));
+          return (
+            <div>
+              <div class="flex justify-between text-sm mb-1">
+                <span class="font-medium text-gray-800">Gobierno de {r.gobierno}</span>
+                <span class="tabular-nums text-gray-600">{r.veces.toFixed(1).replace('.', ',')} veces el sueldo mínimo</span>
+              </div>
+              <div class="h-5 bg-gray-100 rounded-full overflow-hidden" aria-hidden="true">
+                <div
+                  class={`h-full rounded-full ${r.gobierno === 'Kast' ? 'bg-blue-600' : 'bg-gray-400'}`}
+                  style={`width: ${width}%`}
+                ></div>
+              </div>
+              <p class="text-xs text-gray-400 mt-1">Divisor: {r.divisor}</p>
+            </div>
+          );
+        })}
+      </div>
+      <div class="mt-4 p-3 rounded-lg bg-gray-50 border border-gray-100 text-sm text-gray-600">
+        La dieta de Kast equivale a <span class="font-semibold">20 veces</span> el sueldo mínimo de mayo de 2026
+        (según el monto de $11.070.064 fijado por la comisión autónoma). La base bruta de Boric (~$7 millones) equivalía a
+        <span class="font-semibold">unas 13 veces</span> el mínimo vigente en 2025.
+      </div>
+    </section>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <DollarSign class="h-5 w-5 text-blue-600 shrink-0" />
+        <h2 class="text-lg font-semibold text-gray-900">Sueldo mínimo (Ingreso Mínimo Mensual) por gobierno</h2>
+      </div>
+      <p class="text-sm text-gray-500 mb-3">
+        Monto bruto mensual para trabajadores entre 18 y 65 años, según las leyes de reajuste. Tabla resumida
+        (serie completa 1958–2027 en la fuente de Wikipedia).
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-gray-200">
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Desde</th>
+              <th class="text-right py-2 px-3 font-medium text-gray-700">Monto</th>
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Gobierno</th>
+              <th class="text-left py-2 px-3 font-medium text-gray-700">Norma</th>
+            </tr>
+          </thead>
+          <tbody>
+            {sueldoMinimo.map((s) => (
+              <tr class={`border-b border-gray-100 ${s.gobierno === 'Kast' ? 'bg-blue-50/60' : ''}`}>
+                <td class="py-2 px-3 tabular-nums text-gray-700 whitespace-nowrap">{s.desde}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium whitespace-nowrap">{formatCLP(s.monto)}</td>
+                <td class="py-2 px-3 text-gray-800">{s.gobierno}</td>
+                <td class="py-2 px-3 text-gray-500 text-xs">{s.ley}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-gray-400 mt-3">
+        El reajuste de mayo de 2026 ($553.553) fue despachado por el Senado el 16 de junio de 2026 (Ley 21.830) tras una
+        negociación sin acuerdo con la CUT, que pedía cerca de $637.000. Desde enero de 2027 el IMM se reajustará por IPC.
+      </p>
+    </section>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <BookOpen class="h-5 w-5 text-blue-600 shrink-0" />
+        <h2 class="text-lg font-semibold text-gray-900">Canasta familiar y costo de vida</h2>
+      </div>
+      <div class="prose prose-sm text-gray-700 space-y-3">
+        <p>
+          En Chile se usan dos referencias de canasta: la <strong>Canasta Básica de Alimentos</strong> (INE / Ministerio de
+          Desarrollo Social), base de las líneas de pobreza, y la <strong>Canasta Familiar</strong> que publica
+          trimestralmente la Fiscalía Nacional Económica (FNE) para una familia de cuatro personas, junto al
+          "sueldo ideal" que permitiría cubrirla.
+        </p>
+        <p>
+          La discusión del reajuste del sueldo mínimo en 2026 giró en torno a esa brecha. En el debate del Senado
+          (16/06/2026), senadores de diversos sectores sostuvieron que el incremento aprobado "es incapaz de ganarle a la
+          inflación acumulada y al valor de los servicios más básicos" y que "es incapaz de cubrir las necesidades de las
+          familias".
+        </p>
+        <p>
+          La CUT rechazó la propuesta del gobierno —que ofrecía un alza cercana a $23.000 por IPC— y planteó un sueldo mínimo
+          de <span class="font-medium">alrededor de $637.000</span>, argumentando que "hoy día las cosas son más caras en el mes de
+          abril que en el mes de enero" y que el sueldo mínimo tiene "menos poder adquisitivo por el alza del petróleo".
+          Referencias de contexto: la inflación acumulada de 2025 fue de 3,5% (INE) y la PGU máxima pasó a $250.275 desde
+          febrero de 2026 (ChileAtiende), es decir, cerca del 45% de un sueldo mínimo.
+        </p>
+        <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm">
+          <strong>Nota de verificación:</strong> los montos puntuales en pesos de la canasta básica (INE) y de la canasta
+          familiar (FNE) para 2025–2026 no pudieron ser verificados en fuentes accesibles durante la elaboración de esta
+          página. Conforme a la regla del proyecto (no publicar datos no verificados ni inventados), se omiten valores
+          puntuales; las referencias oficiales para consulta figuran en la sección de fuentes.
+        </div>
+      </div>
+    </section>
 
     <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
       <h2 class="text-lg font-semibold text-gray-900 mb-3">Topes salariales fijados por Dipres</h2>
@@ -147,13 +362,39 @@ const pct = (a: number, b: number) => ((a - b) / b * 100).toFixed(1);
         <p>
           La medida se produce en un contexto de "emergencia" declarada por el propio gobierno, que ha anunciado
           recortes presupuestarios en diversas áreas, incluyendo un recorte de $706 millones al presupuesto de la
-          Presidencia de la República.
+          Presidencia de la República. En marzo de 2026, el propio Kast anunció su intención de rebajar su sueldo de
+          forma estructural, aunque técnicamente la dieta es fijada por la comisión autónoma y no puede ajustarse por
+          decreto.
         </p>
         <p class="text-gray-500 text-xs">
           Evento registrado: <a href="/events/2026/20260320-2" class="text-blue-600 hover:underline">20260320-2</a>
           · Evento MEPCO (impacto en precios): <a href="/events/2026/20260326-1" class="text-blue-600 hover:underline">20260326-1</a>
+          · 46 funcionarios de superintendencias con sueldo igual o mayor al del Presidente: <a href="/events/2026/20260803-18" class="text-blue-600 hover:underline">20260803-18</a>
         </p>
       </div>
+    </section>
+
+    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <h2 class="text-lg font-semibold text-gray-900 mb-3">Fuentes verificadas</h2>
+      <p class="text-sm text-gray-500 mb-4">
+        Cada dato de esta página se respalda con al menos una fuente leída directamente (y donde fue posible, tres o más).
+        Se indica el grupo al que respalda cada fuente.
+      </p>
+      {grupos.map((g) => (
+        <div class="mb-4">
+          <h3 class="text-sm font-semibold text-gray-800 uppercase tracking-wide mb-2">{g}</h3>
+          <ul class="space-y-1.5">
+            {fuentes.filter((f) => f.grupo === g).map((f) => (
+              <li class="text-sm">
+                <a href={f.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">
+                  {f.medio}
+                </a>
+                <span class="text-gray-500"> — {f.titulo}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </section>
   </article>
 </Base>

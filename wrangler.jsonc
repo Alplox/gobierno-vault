@@ -1,12 +1,12 @@
 {
-  // Deploy estático del sitio Astro (output: static) como Static Assets de Workers.
-  // Con esta config, `npx wrangler deploy` no entra en el flujo interactivo de
-  // auto-detección (que fallaba en CI buscando public/.assetsignore) y despliega
-  // directamente el contenido de ./dist, generado por `npm run build`.
+  // Deploy estático del sitio Astro (output: static) en Cloudflare Pages.
+  // `npm run deploy` ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main`,
+  // lo que genera la URL https://gobierno-vault.pages.dev (subdominio .pages.dev, no .workers.dev).
+  // Crear el proyecto UNA sola vez (requiere login/token de Cloudflare):
+  //   npx wrangler pages project create gobierno-vault --production-branch main
+  // Preview local: `npm run preview` (wrangler pages dev dist).
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
   "name": "gobierno-vault",
   "compatibility_date": "2026-07-01",
-  "assets": {
-    "directory": "./dist"
-  }
+  "pages_build_output_dir": "./dist"
 }

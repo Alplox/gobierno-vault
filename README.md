@@ -33,7 +33,8 @@ Gobierno Vault es una base de conocimiento estática sobre eventos relacionados 
 - `npm install` - instala dependencias.
 - `npm run dev` - ejecuta el servidor de desarrollo.
 - `npm run build` - valida y construye el sitio estático.
-- `npm run preview` - previsualiza el sitio construido.
+- `npm run preview` - previsualiza el sitio construido (servidor local).
+- `npm run deploy` - despliega a Cloudflare Pages (`https://gobierno-vault.pages.dev`).
 - `npm run validate` - valida contenido y estructura.
 - `npm run generate-index` - regenera índices y estadísticas del repositorio.
 - `npm run add-source -- <URL>` - extrae metadatos de una fuente y sugiere un bloque para `sources.yaml`.
