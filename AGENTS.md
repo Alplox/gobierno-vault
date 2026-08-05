@@ -209,6 +209,35 @@ en `sources.yaml`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[sour
 - Flags: `--append` (agrega el bloque directo al final de `sources.yaml`), `--mirror` (fuerza espejo).
 - Siempre imprime la URL del articulo original (nunca el mirror), y avisa si el ID ya existe.
 
+## Respaldo / Restauracion (backup offline publico)
+
+El repo puede morir por el contenido sensible (politica/corrupcion), por eso se genera un
+respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son archivos
+`.gvault`: Brotli (integrado en Node, mejor ratio que gzip para texto) + checksums
+SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requiere
+dependencias nuevas.
+
+Scripts (ver `scripts/gvault-util.mjs` para el formato compartido):
+- `npm run backup` — genera DOS archivos en la raiz: `.light.gvault` (solo contenido
+  actual: `src/**` + docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`)
+  y `.full.gvault` (lo anterior + `git bundle --all` con historial completo).
+- `npm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).
+- `npm run restore -- <archivo.gvault> [--dest <ruta>]` — extrae los archivos; si es
+  `.full` tambien extrae `git-history.bundle` para `git clone`.
+- Flags de backup: `--shallow` (solo `src/content`+`src/data`), `--no-full`, `--no-light`,
+  `--out <prefijo>`.
+
+Convenciones:
+- Los `.gvault` se COMMITEAN al repo (no estan en `.gitignore`): quedan descargables por cualquiera
+  desde GitHub con un solo clic. Al generar respaldo nuevo, agrega ambos archivos y commitea.
+- Ademas, se recomienda que quien descargue una copia la guarde FUERA del repo (USB, Drive, otras
+  personas), para que sobreviva aunque el repo/plataforma desaparezca.
+- No incluyen password/cifrado a proposito (custodia publica); la integridad la dan los hashes
+  SHA-256, no el secreto. Al ser contenido sin cifrar, es tan sensible como el propio repo:
+  protegelo igual (mismo contenido que el vault).
+- El `.full.gvault` crece con cada commit (incluye el historial); si el repo se hace muy grande,
+  se puede commitecar solo el `.light` generando el `.full` bajo demanda.
+
 ## Auto-evolucion
 
 Cuando descubras algo no documentado aqui:
@@ -237,15 +266,15 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `npm run generate-index`
 
-**Total de eventos:** 476
+**Total de eventos:** 482
 
 **Eventos por año:**
 - 2026: 398
 - 2025: 29
 - 2024: 11
 - 2023: 9
-- 2022: 10
-- 2021: 3
+- 2022: 13
+- 2021: 6
 - 2020: 7
 - 2019: 4
 - 2018: 2
@@ -253,7 +282,7 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (180)
+- Politica (182)
 - Economia (91)
 - Justicia (59)
 - Cambios en el gabinete (53)
@@ -261,14 +290,14 @@ Cuando descubras algo no documentado aqui:
 - Emergencia y catástrofes (49)
 - Proceso legislativo (46)
 - Finanzas publicas (45)
+- Defensa y seguridad (44)
 - Relaciones internacionales (44)
-- Defensa y seguridad (42)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (120)
-- declaracion (72)
-- reaccion (53)
-- resultado (48)
+- accion (121)
+- declaracion (73)
+- reaccion (54)
+- resultado (50)
 - publicacion (41)
 - anuncio (40)
 - investigacion (36)
@@ -277,8 +306,8 @@ Cuando descubras algo no documentado aqui:
 - proyecto (12)
 
 **Entidades registradas:**
-- Personas: 552
-- Organizaciones: 302
-- Cifras: 312
-- Fuentes: 1524
+- Personas: 553
+- Organizaciones: 304
+- Cifras: 337
+- Fuentes: 1539
 - Temas: 74

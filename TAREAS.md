@@ -15,7 +15,7 @@
 | 2015-2018 | 4 | investigacion | Solo casos de financiamiento (Penta, Caval, SQM) |
 | 2019 | 4 | accion | Cubierto: estallido 18-O, Acuerdo 15-nov, acusación constitucional a Piñera, Informe INDH; falta plebiscito de entrada abril-2020 y Convención 2021 |
 | 2020 | 6 | resultado | Cubierto: primer caso COVID (3-mar), estado de catástrofe (18-mar), IFE (20-abr), retiro 10% (jul), plebiscito de entrada (25-oct) |
-| 2021 | 3 | reaccion | Convención Constitucional, elección Boric ausentes |
+| 2021 | 6 | reaccion | Cubierto: campaña 2ª vuelta (3 eventos) + Convención `20210515-1`, vacunación masiva `20210203-1`, 2ª vuelta `20211219-1`. El supuesto ANDP (nov-2021) no es verificable: el "Acuerdo por Chile" real es de 13-dic-2022 |
 | 2022 | 8 | accion | Solo hitos Boric; falta estado de excepción macrozona norte |
 | 2023 | 9 | investigacion | Faltan reacciones/protestas, presupuesto, primarias |
 | 2024 | 10 | resultado | Falta remoción Vivanco, primarias, detención Monsalve |
@@ -48,18 +48,18 @@
 
 | Evento | Fecha | Tipo | Estado |
 |---|---|---|---|
-| Elección de la Convención Constitucional (155 miembros, escaños reservados, paridad) | 2021-05-15/16 | resultado | ⬜ |
-| Inicio de la vacunación masiva contra COVID-19 en Chile (primer país en ritmo) | 2021-02-03 | accion | ⬜ |
-| Gabriel Boric gana la segunda vuelta presidencial a Kast (55,87%) | 2021-12-19 | resultado | ⬜ |
-| Acuerdo Nacional por el Desarrollo y la Paz Social (ANDP, antecedente del Acuerdo por Chile) | 2021-11 | documento | ⬜ |
+| Elección de la Convención Constitucional (155 miembros, escaños reservados, paridad) | 2021-05-15/16 | resultado | ✅ `20210515-1` (independientes 48, Apruebo Dignidad 28, Lista del Apruebo 25, Lista del Pueblo 24, Chile Vamos 37; paridad 77/78; participación 43%) |
+| Inicio de la vacunación masiva contra COVID-19 en Chile (primer país en ritmo) | 2021-02-03 | accion | ✅ `20210203-1` (Ernestina Godoy, 93 años, primera inoculada en Futrono; 1.400+ puntos; 6M Pfizer + 4M AstraZeneca) |
+| Gabriel Boric gana la segunda vuelta presidencial a Kast (55,87%) | 2021-12-19 | resultado | ✅ `20211219-1` (55,87% vs 44,13%; 4.620.890 votos; participación 55,64%) |
+| ~~Acuerdo Nacional por el Desarrollo y la Paz Social (ANDP, antecedente del Acuerdo por Chile)~~ | ~~2021-11~~ | documento | ⛔ **No verificable**: 0 resultados del nombre en Wikipedia, DDG, Bing, Google News y Ecosia. El "Acuerdo por Chile" real se firmó el **13-dic-2022** (CNN Chile, La Tercera, Wikisource), no en nov-2021; y en nov-2021 no existe registro de un acuerdo con ese nombre (CDX de Emol/BioBio 23-24-nov-2021 sin artículos del tipo). El evento como está descrito parece un error de la bitácora. Pendiente de re-plantear: el hecho real de nov-2021 fue el arranque de la campaña de 2ª vuelta tras la 1ª (21-nov). |
 
 ## 2022 — Gobierno Boric (prioridad media)
 
 | Evento | Fecha | Tipo | Estado |
 |---|---|---|---|
-| Estado de excepción en la macrozona norte (crisis migratoria en Colchane) | 2022-03 | decreto | ⬜ |
-| Protestas estudiantiles 2022 (Confech/Aces, jornada 8-sep) | 2022-09-08 | reaccion | ⬜ |
-| Cadena nacional / discursos clave de Boric con impacto público | 2022 | declaracion | ⬜ |
+| Estado de excepción en la macrozona norte (crisis migratoria en Colchane) | 2022-03-16 | decreto | ✅ 20220316-1 (prórroga aprobada por el Senado 39-1-2, primer respaldo legislativo a Boric; el decreto original fue de Piñera, 14-feb-2022 — Cooperativa, Infinita, Emol, El Mostrador) |
+| Protestas estudiantiles 2022 (jornada 8-sep) | 2022-09-08 | reaccion | ✅ 20220908-1 (tercer día consecutivo, convocadas por la Coordinadora Secundaria Revolucionaria — no Confech/Aces como sugería la bitácora; 2 buses quemados, 2 detenidos de 14 años — CNN Español, Resumen Latinoamericano) |
+| Cadena nacional de Boric tras la entrega de la propuesta de nueva Constitución | 2022-07-04 | declaracion | ✅ 20220704-1 (11 capítulos, 355 artículos, 57 disposiciones transitorias, chilevotainformado.cl, convocatoria al plebiscito del 4-sep — Prensa Presidencia id=197397, EL PAÍS) |
 
 ## 2023 — Gobierno Boric (prioridad media-alta)
 
@@ -112,8 +112,8 @@
 - **Primarias 2024 (2024-06-09):** La Tercera `minuto-a-minuto-este-domingo-se-realizan-las-elecciones-primarias-2024`
 - **Estallido 18-O:** ✅ `20191018-1` (Emol cronología + DW cronología)
 - **Plebiscito 2020:** ✅ `20201025-1` — BCN `procesoconstituyente/plebiscito2020` (78,27% Apruebo, 78,99% Convención, participación 50,9%) + La Tercera `en-historico-plebiscito-chile-aprueba-por-amplia-mayoria-tener-una-nueva-constitucion` (78,3%/21,7%, 7.545.000 votos)
-- **Convención 2021:** Wikipedia/Servel (155 miembros, 17 escaños reservados, paridad)
-- **Elección 2021:** Servel (55,87% Boric, participación 55,64%)
+- **Convención 2021:** ✅ `20210515-1` — BBC `noticias-america-latina-57139669` (48 independientes, AD 28, Lista del Apruebo 25, Chile Vamos 37, participación 43%) + France24 `20210518-chile-resultados-constituyente-estallido-social-equidad` (Lista del Pueblo 24, paridad 77/78) + BBC guía `noticias-america-latina-57072118` (155 miembros, 17 escaños reservados, paridad)
+- **Elección 2021:** ✅ `20211219-1` — BBC `noticias-america-latina-59722345` (55,87% Boric, mayor caudal de la historia) + Emol `participacion-segunda-vuelta-elecciones-comunas` (participación por comuna) + Wikipedia/Servel (55,64% participación)
 - **Retiro AFP:** ✅ `20200730-1` — BCN LeyChile `idNorma=1147862` (Ley 21.248, promulgada 24-jul, DOE 30-jul) + France24 `20200723-chile-senado-aprueba-el-retiro-anticipado-de-pensiones` (votaciones 116-28-5 y 29-13-1)
 - **Cambio de mando 2026:** El País `2026-03-11` — **ya cubierto** por el vault (verificar cobertura completa en `20260105-1`, `20260120-1`, `20260224-1`, `20260618-2`)
 

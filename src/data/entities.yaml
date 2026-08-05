@@ -812,6 +812,15 @@ people:
         desde: 2022-03-11
         hasta: 2024-10-17
     notas: "Subsecretario del Interior del gobierno de Gabriel Boric (2022-2024), considerado el 'hombre fuerte' de la seguridad. Renunció el 17 de octubre de 2024 tras una denuncia de abuso sexual presentada por una funcionaria de Gobierno. Fue detenido en noviembre de 2024."
+  giorgio_jackson:
+    nombre: Giorgio Jackson
+    cargo: Exministro Secretario General de la Presidencia (Segpres)
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2022-03-11
+        hasta: 2023-08-08
+    notas: "Ministro de la Segpres del gobierno de Gabriel Boric (marzo 2022-agosto 2023). Exdiputado de Revolución Democrática y del Frente Amplio, una de las figuras más cercanas al presidente. En marzo de 2022 acompañó a la ministra Izkia Siches en el Congreso durante la votación de la prórroga del estado de excepción en la Macrozona norte. Renunció en agosto de 2023 en el marco de la crisis por el caso Convenios."
   beatriz_sanchez:
     nombre: Beatriz Sanchez
     cargo: Senadora (FA)
@@ -3837,6 +3846,16 @@ organizations:
     tipo: partido_politico
     pais: Chile
     notas: "Coalición de centroderecha integrada por la UDI, Renovación Nacional y Evópoli. En febrero de 2026 manifestó su desazón por la baja representación partidaria en la nómina de subsecretarios de José Antonio Kast."
+  apruebo_dignidad:
+    nombre: Apruebo Dignidad
+    tipo: partido_politico
+    pais: Chile
+    notas: "Coalición de izquierda (Frente Amplio, Partido Comunista y Partido Socialista) que llevó a Gabriel Boric a la presidencia en 2021. En la elección de la Convención Constitucional de mayo de 2021 obtuvo 28 escaños."
+  lista_del_pueblo:
+    nombre: Lista del Pueblo
+    tipo: partido_politico
+    pais: Chile
+    notas: "Agrupación de candidatos independientes de izquierda surgida del estallido social de 2019. En la elección de la Convención Constitucional de mayo de 2021 obtuvo 24 escaños."
   partido_social_cristiano:
     nombre: Partido Social Cristiano
     tipo: partido_politico
@@ -5994,3 +6013,103 @@ cifras:
     nombre: Votantes del plebiscito de entrada de 2020
     unidad_default: personas
     notas: "7.545.000 personas votaron en el plebiscito del 25 de octubre de 2020 (50,8% del padrón de 14.855.000), según La Tercera."
+  escanos_independientes_convencion_2021:
+    nombre: Escaños de independientes en la Convención Constitucional 2021
+    unidad_default: escaños
+    notas: "Los candidatos independientes lograron 48 de los 155 escaños de la Convención Constitucional electa el 15-16 de mayo de 2021, casi un tercio de la asamblea, según BBC News Mundo."
+  escanos_apruebo_dignidad_convencion_2021:
+    nombre: Escaños de Apruebo Dignidad en la Convención Constitucional 2021
+    unidad_default: escaños
+    notas: "Apruebo Dignidad obtuvo 28 escaños en la elección de la Convención Constitucional de mayo de 2021, según BBC News Mundo."
+  escanos_lista_apruebo_convencion_2021:
+    nombre: Escaños de la Lista del Apruebo en la Convención Constitucional 2021
+    unidad_default: escaños
+    notas: "La Lista del Apruebo obtuvo 25 escaños en la elección de la Convención Constitucional de mayo de 2021, según BBC News Mundo."
+  escanos_chile_vamos_convencion_2021:
+    nombre: Escaños de la derecha oficialista en la Convención Constitucional 2021
+    unidad_default: escaños
+    notas: "La lista oficialista Vamos por Chile/Chile Vamos obtuvo 37 escaños (20,56% de los votos), lejos de los 52 necesarios para vetar normas de la nueva Constitución, según BBC News Mundo y France 24."
+  escanos_lista_pueblo_convencion_2021:
+    nombre: Escaños de la Lista del Pueblo en la Convención Constitucional 2021
+    unidad_default: escaños
+    notas: "La Lista del Pueblo se hizo con 24 escaños en la elección de la Convención Constitucional de mayo de 2021, según France 24."
+  escanos_reservados_convencion_2021:
+    nombre: Escaños reservados para pueblos indígenas en la Convención 2021
+    unidad_default: escaños
+    notas: "La Convención Constitucional electa en mayo de 2021 contó con 17 escaños reservados para los pueblos originarios, según BBC News Mundo."
+  mujeres_convencion_2021:
+    nombre: Mujeres electas en la Convención Constitucional 2021
+    unidad_default: mujeres
+    notas: "77 mujeres y 78 hombres integraron la Convención Constitucional electa en mayo de 2021, resultado del mecanismo de paridad inédito en el mundo, según France 24."
+  participacion_convencion_2021:
+    nombre: Participación en la elección de la Convención Constitucional 2021
+    unidad_default: porciento
+    notas: "La participación en la elección de la Convención Constitucional (15-16 de mayo de 2021) alcanzó 43% según el Servel, citado por BBC News Mundo y France 24."
+  votos_boric_segunda_vuelta_2021:
+    nombre: Votos de Gabriel Boric en la segunda vuelta de 2021
+    unidad_default: personas
+    notas: "Gabriel Boric obtuvo 4.620.890 votos (55,87%) en la segunda vuelta del 19 de diciembre de 2021, el mayor caudal de votos de un presidente en la historia de Chile, según BBC News Mundo y Wikipedia."
+  pct_boric_segunda_vuelta_2021:
+    nombre: Porcentaje de Boric en la segunda vuelta de 2021
+    unidad_default: porciento
+    notas: "Boric ganó la segunda vuelta del 19 de diciembre de 2021 con 55,87% de los votos, según BBC News Mundo."
+  pct_kast_segunda_vuelta_2021:
+    nombre: Porcentaje de Kast en la segunda vuelta de 2021
+    unidad_default: porciento
+    notas: "José Antonio Kast obtuvo 44,13% de los votos en la segunda vuelta del 19 de diciembre de 2021, según BBC News Mundo."
+  votantes_segunda_vuelta_2021:
+    nombre: Votantes de la segunda vuelta de 2021
+    unidad_default: personas
+    notas: "8.364.534 personas votaron en la segunda vuelta del 19 de diciembre de 2021, según Wikipedia y BBC News Mundo (8,3 millones)."
+  participacion_segunda_vuelta_2021:
+    nombre: Participación en la segunda vuelta de 2021
+    unidad_default: porciento
+    notas: "La participación en la segunda vuelta del 19 de diciembre de 2021 fue de 55,64% según las cifras oficiales del Servel (citadas por Wikipedia y la bitácora del vault); BBC News Mundo reportó 55,5% y 8,3 millones de votos. Fue la más alta desde la implementación del voto voluntario en 2012."
+  puntos_vacunacion_masiva_2021:
+    nombre: Puntos de vacunación de la campaña masiva 2021
+    unidad_default: puntos
+    notas: "Chile habilitó más de 1.400 puntos de vacunación para la campaña de vacunación masiva iniciada el 3 de febrero de 2021, según Radio Agricultura."
+  vacunas_pfizer_2021:
+    nombre: Dosis de Pfizer-BioNTech comprometidas en 2021
+    unidad_default: dosis
+    notas: "El gobierno anunció que recibiría cerca de 6 millones de dosis de Pfizer-BioNTech y 4 millones de AstraZeneca-Oxford durante el primer semestre de 2021, según Radio Agricultura."
+  votos_senado_prorroga_macrozona_2022:
+    nombre: Votos a favor de la prórroga del estado de excepción en la Macrozona norte (Senado)
+    unidad_default: votos
+    notas: "39 votos a favor, 1 en contra y 2 abstenciones en el Senado (16 de marzo de 2022), primer respaldo legislativo al gobierno de Gabriel Boric, según Emol."
+  votos_contra_prorroga_macrozona_2022:
+    nombre: Votos en contra de la prórroga del estado de excepción en la Macrozona norte (Senado)
+    unidad_default: votos
+    notas: "1 voto en contra en el Senado (16 de marzo de 2022), según Emol."
+  abstenciones_prorroga_macrozona_2022:
+    nombre: Abstenciones en la prórroga del estado de excepción en la Macrozona norte (Senado)
+    unidad_default: votos
+    notas: "2 abstenciones en el Senado (16 de marzo de 2022), según Emol."
+  militares_macrozona_norte_2022:
+    nombre: Militares desplegados en la Macrozona norte
+    unidad_default: militares
+    notas: "672 militares desplegados tras la declaración del estado de emergencia en febrero de 2022, según Infinita."
+  carabineros_macrozona_norte_2022:
+    nombre: Carabineros de refuerzo en la Macrozona norte
+    unidad_default: carabineros
+    notas: "100 carabineros de refuerzo tras la declaración del estado de emergencia en febrero de 2022, según Infinita."
+  buses_quemados_protestas_sep_2022:
+    nombre: Buses quemados en protestas estudiantiles de septiembre de 2022
+    unidad_default: buses
+    notas: "2 buses del transporte público quemados el 8 de septiembre de 2022 en Santiago, según CNN Español y Resumen Latinoamericano."
+  detenidos_protestas_sep_2022:
+    nombre: Detenidos en protestas estudiantiles de septiembre de 2022
+    unidad_default: personas
+    notas: "2 detenidos, ambos de 14 años, reportados por Carabineros el 8 de septiembre de 2022, según CNN Español."
+  articulos_nueva_constitucion_2022:
+    nombre: Artículos de la propuesta de nueva Constitución de 2022
+    unidad_default: articulos
+    notas: "355 artículos en la propuesta entregada por la Convención Constitucional el 4 de julio de 2022, según EL PAÍS."
+  disposiciones_transitorias_nueva_constitucion_2022:
+    nombre: Disposiciones transitorias de la propuesta de nueva Constitución de 2022
+    unidad_default: disposiciones
+    notas: "57 disposiciones transitorias en la propuesta de nueva Constitución de 2022, señaladas por el presidente Boric en su cadena nacional del 4 de julio de 2022."
+  capitulos_nueva_constitucion_2022:
+    nombre: Capítulos de la propuesta de nueva Constitución de 2022
+    unidad_default: capitulos
+    notas: "11 capítulos en la propuesta de nueva Constitución de 2022, señalados por el presidente Boric en su cadena nacional del 4 de julio de 2022."
