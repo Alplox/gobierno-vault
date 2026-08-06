@@ -1267,11 +1267,33 @@ people:
     nombre: Patricio Maturana
     cargo: Excapitán de Carabineros, condenado
     organizacion: carabineros
-    notas: "Excapitán de Carabineros condenado a 12 años y 183 días de presidio efectivo por apremios ilegítimos con resultado de lesiones gravísimas: el 26 de noviembre de 2019, en San Bernardo, percutió una bomba lacrimógena que dejó ciega a Fabiola Campillai. Con beneficio de salida dominical desde febrero de 2026. En marzo de 2025, José Antonio Kast anunció que revisaría su caso e impulsaría su indulto."
+    notas: "Excapitán de Carabineros condenado a 12 años y 183 días de presidio efectivo por apremios ilegítimos con resultado de lesiones gravísimas: el 26 de noviembre de 2019, en San Bernardo, percutió una bomba lacrimógena que dejó ciega a Fabiola Campillai. En el sumario interno que ventiló su caso (febrero-marzo 2020) declaró no haberse percatado de personas heridas y conocer el comentario '¿se la pitió?' solo tras revisar el video. Con beneficio de salida dominical desde febrero de 2026. En marzo de 2025, José Antonio Kast anunció que revisaría su caso e impulsaría su indulto."
   nubia_vivanco:
     nombre: Nubia Vivanco
     cargo: Abogada defensora de Patricio Maturana
     notas: "Abogada de Patricio Maturana. Ingresó el escrito de solicitud de indulto particular ante el Ministerio de Justicia un día después de la asunción de José Antonio Kast como presidente."
+  jaime_fernandez_sepulveda:
+    nombre: Capitán Jaime Fernández Sepúlveda
+    cargo: Capitán de Carabineros de la Tenencia de San Bernardo
+    organizacion: carabineros
+    notas: "Capitán de Carabineros de la Tenencia de San Bernardo. Portaba la cámara GoPro en el pecho que grabó el video del caso Campillai. En el sumario administrativo confirmó haber dicho '¿se la pitió, verdad?' y 'El Matu parece que le pegó, le pegó con una' al interior de la patrulla, pero declaró no poder precisar quién efectuó el tercer disparo."
+  jorge_guaita:
+    nombre: Mayor Jorge Guaita
+    cargo: Fiscal de Carabineros en el caso Campillai
+    organizacion: carabineros
+    notas: "Mayor de Carabineros, fiscal general de su institución que —tras el estallido social— quedó a cargo del sumario administrativo por el caso Campillai. En su informe del 20 de febrero de 2020 reportó que en el video grabado con la GoPro del capitán Fernández se registraba el diálogo '¿se la pitió, verdad?' y pidió que se designara a un nuevo fiscal de la policía uniformada."
+  mario_vargas:
+    nombre: Mario Vargas
+    cargo: Abogado de Patricio Maturana
+    notas: "Abogado defensor del capitán Patricio Maturana durante el sumario interno por el caso Campillai. El 24 de abril de 2020 la institución le entregó copia del sumario; prevaleció que no existían antecedentes suficientes para atribibir responsabilidad a Maturana."
+  patricia_negretti:
+    nombre: Patricia Negretti
+    cargo: Perito forense del Servicio Médico Legal
+    notas: "Perito forense del SML. En su informe sobre el caso Campillai concluyó que 'existe concordancia entre los hallazgos del examen y los alegaciones de abuso', detallando que las lesiones eran explicables por un objeto contundente de alta energía y determinando secuelas funcionales permanentes."
+  paola_zarate_ruiz:
+    nombre: Paola Zárate Ruiz
+    cargo: Fiscal del Ministerio Público
+    notas: "Fiscal del Ministerio Público (Fiscalía Occidente). El 9 de abril de 2020 solicitó a Carabinos el sumario administrativo del caso Campillai, incorporado la investigación penal. El sumario acumuló 222 carillas."
   alfredo_echavarria:
     nombre: Alfredo Echavarría
     cargo: Presidente de la Cámara Chilena de la Construcción
@@ -1659,6 +1681,10 @@ people:
     nombre: Sergio Giacaman
     cargo: Gobernador Regional del Biobío
     notas: Calificó los incendios de enero 2026 como "tragedia pocas veces vista".
+  alejandro_navarro_brain:
+    nombre: Alejandro Navarro Brain
+    cargo: Exsenador de la República
+    notas: Exsenador por la Región del Biobío (2006-2022). Autor de la columna de opinión en BioBioChile que criticó el recorte del presupuesto del MOP en el Biobío y llamó a una marcha regional a Santiago en octubre de 2026.
   sofia_cid:
     nombre: Sofía Cid Versalovic
     cargo: Delegada presidencial regional de Atacama
@@ -3837,6 +3863,15 @@ organizations:
     nombre: Carabineros de Chile
     tipo: policia
     pais: Chile
+  servicio_medico_legal:
+    nombre: Servicio Médico Legal
+    tipo: servicio_publico
+    pais: Chile
+  fiscalia_occidente:
+    nombre: Fiscalía de Alta Complejidad Occidente
+    tipo: fiscalia
+    pais: Chile
+    notas: Fiscalía a cargo de la investigación penal por el caso Campillai.
   municipalidad_de_santiago:
     nombre: Municipalidad de Santiago
     tipo: municipalidad

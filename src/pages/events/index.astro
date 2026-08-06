@@ -180,6 +180,14 @@ const lazyData = lazyEvents.map((event) => {
 
   <script>
     import { initEventList } from '../../scripts/eventListClient.js';
+    // initEventList debe re-ejecutarse en cada navegacion (View Transitions
+    // reconstruye el DOM; sin esto el observer mira nodos viejos y los meses
+    // quedan sin tarjetas). El script del modulo solo corre una vez, por eso
+    // el listener se registra en astro:page-load.
+    if (!(window as any).__gvEventListPageLoad) {
+      (window as any).__gvEventListPageLoad = true;
+      document.addEventListener('astro:page-load', initEventList);
+    }
     initEventList();
   </script>
 

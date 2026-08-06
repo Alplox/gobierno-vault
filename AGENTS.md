@@ -29,7 +29,12 @@ El sitio usa `ClientRouter` de `astro:transitions` (habilitado en `src/layouts/B
 - **Reglas para scripts:** los scripts de página se re-ejecutan en cada navegación. Los listeners
   globales de `window`/`document` deben registrarse una sola vez (guard `window.__gvXxxInit`) y
   limpiarse antes de re-montar (patrón `cleanupFns` + `cleanup()`). No usar `DOMContentLoaded`;
-  usar `astro:page-load` si el código depende del DOM intercambiado.
+  usar `astro:page-load` si el código depende del DOM intercambiado. **Ojo:** los `<script>`
+  bundleados sólo se ejecutan UNA vez (no re-ejecutan en cada navegación View Transition). Todo
+  init que monta un IntersectionObserver/puntos contra el DOM del mes actual (ej.
+  `initTimeline`/`initEventList`) debe registrarse en `astro:page-load` y desconectar el observer
+  previo (nunca cortocircuitar el init entero con `window.__gvXxxInit`), si no el observer queda
+  apuntando a nodos viejos y los meses quedan atascados en "… cargando".
 
 ## Lazy load + navegacion por rail temporal (TimelineNav)
 
@@ -308,16 +313,16 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 492
+**Total de eventos:** 494
 
 **Eventos por año:**
 - 2026: 406
 - 2025: 30
 - 2024: 11
 - 2023: 9
-- 2022: 13
+- 2022: 14
 - 2021: 7
-- 2020: 7
+- 2020: 8
 - 2019: 4
 - 2018: 2
 - 2015: 2
@@ -326,13 +331,13 @@ Cuando descubras algo no documentado aqui:
 **Temas más frecuentes (Top 10):**
 - Politica (189)
 - Economia (92)
-- Justicia (61)
+- Justicia (63)
 - Administración pública (54)
 - Cambios en el gabinete (53)
 - Emergencia y catástrofes (50)
+- Defensa y seguridad (47)
 - Proceso legislativo (47)
 - Finanzas publicas (47)
-- Defensa y seguridad (45)
 - Relaciones internacionales (44)
 
 **Tipos de eventos más frecuentes (Top 10):**
@@ -340,16 +345,16 @@ Cuando descubras algo no documentado aqui:
 - declaracion (76)
 - reaccion (58)
 - resultado (51)
-- publicacion (41)
+- publicacion (42)
 - anuncio (40)
 - investigacion (37)
+- fallo_judicial (15)
 - votacion (14)
-- fallo_judicial (14)
 - proyecto (12)
 
 **Entidades registradas:**
-- Personas: 564
-- Organizaciones: 308
+- Personas: 571
+- Organizaciones: 310
 - Cifras: 342
-- Fuentes: 1572
+- Fuentes: 1581
 - Temas: 74

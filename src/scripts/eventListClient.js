@@ -111,8 +111,15 @@ export function forceFillMonth(key) {
 }
 
 export function initEventList() {
-  if (window.__gvEventListInit) return;
-  window.__gvEventListInit = true;
+  // Los scripts de pagina se re-ejecutan en cada navegacion (View Transitions).
+  // En vez de un guard persistente, se desconecta el observer previo y se
+  // reconstruye con el DOM nuevo; byMonth es module-level y persiste entre
+  // navegaciones SPA, por eso se limpia antes de re-poblar.
+  if (window.__gvEventListObserver) {
+    window.__gvEventListObserver.disconnect();
+    window.__gvEventListObserver = null;
+  }
+  byMonth.clear();
 
   window.__gvFillMonth = forceFillMonth;
 
@@ -146,6 +153,7 @@ export function initEventList() {
       },
       { rootMargin: '600px 0px' }
     );
+    window.__gvEventListObserver = observer;
     for (const key of byMonth.keys()) {
       const sec = document.getElementById(`month-${key}`);
       if (sec) {

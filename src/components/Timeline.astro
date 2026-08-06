@@ -439,6 +439,14 @@ const navSections = decades.map((d) => ({
 
   <script>
     import { initTimeline } from '../scripts/timelineClient.js';
+    // initTimeline debe re-ejecutarse en cada navegacion (View Transitions
+    // reconstruye el DOM del mes actual; sin esto el observer mira nodos
+    // viejos y los meses quedan en "cargando…"). El script del modulo solo
+    // corre una vez, por eso el listener se registra en astro:page-load.
+    if (!(window as any).__gvTimelinePageLoad) {
+      (window as any).__gvTimelinePageLoad = true;
+      document.addEventListener('astro:page-load', initTimeline);
+    }
     initTimeline();
   </script>
 )}

@@ -111,8 +111,13 @@ export function forceFillMonth(key) {
 }
 
 export function initTimeline() {
-  if (window.__gvTimelineInit) return;
-  window.__gvTimelineInit = true;
+  // Los scripts de pagina se re-ejecutan en cada navegacion (View Transitions).
+  // En vez de un guard persistente (que dejaba el observer sin recrear al volver),
+  // se desconecta el observer previo y se reconstruye con el DOM nuevo.
+  if (window.__gvTimelineObserver) {
+    window.__gvTimelineObserver.disconnect();
+    window.__gvTimelineObserver = null;
+  }
 
   window.__gvFillMonth = forceFillMonth;
 
@@ -124,6 +129,7 @@ export function initTimeline() {
     return;
   }
 
+  // Marcas de meses ya cargados anteriormente no aplican en el DOM nuevo.
   const buttons = Array.from(document.querySelectorAll('[data-load-month]'));
   if (!buttons.length) return;
 
@@ -139,6 +145,7 @@ export function initTimeline() {
       },
       { rootMargin: '600px 0px' }
     );
+    window.__gvTimelineObserver = observer;
     for (const btn of buttons) observer.observe(btn);
   } else {
     for (const btn of buttons) fillMonth(btn.dataset.year, btn.dataset.month);
