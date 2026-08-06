@@ -213,6 +213,8 @@ export function countExplicitConnections(connections: EventConnections): number 
 }
 
 export function buildConnectionIndex(allEvents: EventEntry[]): Map<string, EventConnections> {
+  const signature = allEvents.map((e) => eventBasename(e.id)).join(',');
+  if (connectionIndexCache?.signature === signature) return connectionIndexCache.index;
   const eventsByBasename = buildEventsByBasename(allEvents);
   const incomingIndex = buildIncomingIndex(allEvents);
   const index = new Map<string, EventConnections>();
@@ -224,8 +226,11 @@ export function buildConnectionIndex(allEvents: EventEntry[]): Map<string, Event
     );
   }
 
+  connectionIndexCache = { signature, index };
   return index;
 }
+
+let connectionIndexCache: { signature: string; index: Map<string, EventConnections> } | null = null;
 
 export function formatRelationSummary(edge: RelationEdge): string {
   const label = RELATION_LABELS[edge.tipo] ?? edge.tipo;

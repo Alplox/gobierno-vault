@@ -15,6 +15,37 @@ Archivo `TAREAS.md` es la bitácora de eventos detectados como faltantes (recenc
 cuando se detecte un evento pendiente que no se implementará en el momento, registrarlo ahí
 con fecha, tipo sugerido y estado (`⬜ pendiente`). Al crearlo, marcar `✅ hecho` con el ID.
 
+## Transiciones de página (View Transitions)
+
+El sitio usa `ClientRouter` de `astro:transitions` (habilitado en `src/layouts/Base.astro`).
+
+- **Navegación SPA con morphing:** los títulos de eventos, personas, organizaciones, temas y
+  fuentes usan `transition:name` compartido entre la tarjeta/índice y la página de detalle
+  (ej: `event-title-${basename}`), lo que produce el efecto de "expandir el título".
+- **Nav persistente:** `<nav transition:persist>` mantiene la barra sin parpadeo; el estado
+  activo se recalcula en cliente vía `astro:page-load` (`updateNavActive` en Base.astro).
+- **Prefetch:** `astro.config.mjs` define `prefetch: { prefetchAll: true, defaultStrategy: 'hover' }`
+  para precargar páginas al hover (elimina la sensación de carga lenta).
+- **Reglas para scripts:** los scripts de página se re-ejecutan en cada navegación. Los listeners
+  globales de `window`/`document` deben registrarse una sola vez (guard `window.__gvXxxInit`) y
+  limpiarse antes de re-montar (patrón `cleanupFns` + `cleanup()`). No usar `DOMContentLoaded`;
+  usar `astro:page-load` si el código depende del DOM intercambiado.
+
+## Lazy load + navegacion por rail temporal (TimelineNav)
+
+`TimelineNav.astro` (partes de load bajo demanda de home y `/events`) necesita conocer pistas:
+
+- **Expandiendo un `<details>` colapsado NO recalcula el layout de inmediato.** Un `scrollIntoView`
+  en el mismo tick tras abrir `details` aterriza en la posicion del detalle colapsado, dejando el
+  destino fuera de viewport. Hacer el scroll en `requestAnimationFrame` Y re-ajustar tras
+  `setTimeout(~400ms)`, porque el IntersectionObserver sigue llenando meses del nuevo viewport y
+  el documento crece desplazando el objetivo.
+- **El rail salta a un mes en un año/decada colapsado**: el destino puede no estar en el DOM
+  (SSR no emite el `<section>` si el año esta cerrado). Ambos renderers exponen
+  `window.__gvFillMonth(key)` (`timelineClient.js` para home, `eventListClient.js` para `/events`);
+  `expandAncestors` lo llama para forzar la carga del mes objetivo al hacer clic, en lugar de
+  depender solo del IntersectionObserver.
+
 ## Arquitectura
 
 ```
@@ -174,16 +205,25 @@ Solo agregar fechas verificables (de eventos/notas). Dependencia `mermaid` en `p
 ## Build y verificacion
 
 ```bash
-npm run build    # debe completar sin errores
-npm run dev      # preview local
+pnpm run build    # debe completar sin errores
+pnpm run dev      # preview local
 ```
 
 El build usa `set NODE_OPTIONS=--experimental-global-customevent` (Windows).
 Si falla, revisar frontmatter (YAML parse error) o wikilinks rotos.
 
-**CI (Netlify/Vercel):** el archivo `.npmrc` con `legacy-peer-deps=true` es obligatorio para que `npm clean-install` no falle. `@astrojs/tailwind@6` declara peer `astro@^3||^4||^5` pero el proyecto usa Astro 7; la combinación funciona (el lockfile la resuelve) y `legacy-peer-deps` evita la validación estricta de peers del CI. No eliminar `.npmrc`.
+**Gestor de paquetes: pnpm** (migrado desde npm). Lockfile: `pnpm-lock.yaml`.
+Instalacion: `pnpm install`. No usar npm ni regenerar `package-lock.json`.
 
-**Despliegue (Cloudflare Pages):** el sitio se despliega con `npm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `npm run preview` (`wrangler pages dev dist`).
+**CI (Netlify/Vercel):** el archivo `.npmrc` configura `auto-install-peers=true` y
+`strict-peer-dependencies=false`; así pnpm resuelve la combinación de
+`@astrojs/tailwind@6` (peer `astro@^3||^4||^5`) con Astro 7 sin fallar. Ya no se
+necesita `legacy-peer-deps=true`. El archivo `pnpm-workspace.yaml` declara
+`onlyBuiltDependencies: [esbuild]` para que pnpm 10+ ejecute el postinstall de
+build de esbuild (necesario para el binario nativo; sin esto el build de Astro
+falla con `ERR_PNPM_IGNORED_BUILDS`). No eliminar ninguno de los dos archivos.
+
+**Despliegue (Cloudflare Pages):** el sitio se despliega con `pnpm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `pnpm run preview` (`wrangler pages dev dist`).
 
 ## Extraccion de contenido web
 
@@ -200,7 +240,7 @@ Formato paywallskip: `https://www.paywallskip.com/article?url=https://ejemplo.co
 
 ## Generador de fuentes (script)
 
-`npm run add-source -- <URL>` (o `npm run add-source` sin URL para modo interactivo) extrae
+`pnpm run add-source -- <URL>` (o `pnpm run add-source` sin URL para modo interactivo) extrae
 automaticamente `titulo`, `autor` y `fecha` de la URL y genera el bloque YAML listo para pegar
 en `sources.yaml`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[source/id]]`.
 
@@ -218,11 +258,11 @@ SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requier
 dependencias nuevas.
 
 Scripts (ver `scripts/gvault-util.mjs` para el formato compartido):
-- `npm run backup` — genera DOS archivos en la raiz: `.light.gvault` (solo contenido
+- `pnpm run backup` — genera DOS archivos en la raiz: `.light.gvault` (solo contenido
   actual: `src/**` + docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`)
   y `.full.gvault` (lo anterior + `git bundle --all` con historial completo).
-- `npm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).
-- `npm run restore -- <archivo.gvault> [--dest <ruta>]` — extrae los archivos; si es
+- `pnpm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).
+- `pnpm run restore -- <archivo.gvault> [--dest <ruta>]` — extrae los archivos; si es
   `.full` tambien extrae `git-history.bundle` para `git clone`.
 - Flags de backup: `--shallow` (solo `src/content`+`src/data`), `--no-full`, `--no-light`,
   `--out <prefijo>`.
@@ -245,7 +285,7 @@ Cuando descubras algo no documentado aqui:
 2. Manten la seccion concisa — nada de prosa innecesaria.
 3. Si borras o renombras un campo, actualiza TODO lo que lo referencie.
 4. Si agregas una coleccion nueva, documenta su schema y donde vive.
-5. Despues de cambios significativos (muchos eventos nuevos, cambios en estructura), ejecuta `npm run generate-index` para actualizar el indice de eventos y las estadisticas del vault.
+5. Despues de cambios significativos (muchos eventos nuevos, cambios en estructura), ejecuta `pnpm run generate-index` para actualizar el indice de eventos y las estadisticas del vault.
 
 ## Archivos clave para revisar antes de cambiar algo
 
@@ -264,17 +304,17 @@ Cuando descubras algo no documentado aqui:
 
 ## Estadísticas del vault
 
-> Esta sección se genera automáticamente con `npm run generate-index`
+> Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 482
+**Total de eventos:** 488
 
 **Eventos por año:**
-- 2026: 398
-- 2025: 29
+- 2026: 402
+- 2025: 30
 - 2024: 11
 - 2023: 9
 - 2022: 13
-- 2021: 6
+- 2021: 7
 - 2020: 7
 - 2019: 4
 - 2018: 2
@@ -282,32 +322,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (182)
+- Politica (186)
 - Economia (91)
-- Justicia (59)
+- Justicia (60)
 - Cambios en el gabinete (53)
-- Administración pública (52)
-- Emergencia y catástrofes (49)
+- Administración pública (53)
+- Emergencia y catástrofes (50)
 - Proceso legislativo (46)
-- Finanzas publicas (45)
+- Finanzas publicas (46)
 - Defensa y seguridad (44)
 - Relaciones internacionales (44)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (121)
-- declaracion (73)
-- reaccion (54)
-- resultado (50)
+- accion (122)
+- declaracion (75)
+- reaccion (55)
+- resultado (51)
 - publicacion (41)
 - anuncio (40)
-- investigacion (36)
+- investigacion (37)
 - votacion (14)
 - fallo_judicial (14)
 - proyecto (12)
 
 **Entidades registradas:**
-- Personas: 553
-- Organizaciones: 304
-- Cifras: 337
-- Fuentes: 1539
+- Personas: 560
+- Organizaciones: 306
+- Cifras: 339
+- Fuentes: 1550
 - Temas: 74

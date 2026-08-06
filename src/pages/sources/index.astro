@@ -2,7 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import { getAllEvents, getEventEntities } from '../../lib/queries';
 import { getSourcesRegistry } from '../../lib/registry';
-import { BookOpen, ExternalLink, Calendar, FileText, ChevronRight } from 'lucide-astro';
+import { BookOpen, Calendar, FileText } from 'lucide-astro';
 
 const events = await getAllEvents();
 const sources = getSourcesRegistry();
@@ -42,6 +42,22 @@ for (const e of events) {
 
 const allRefs = [...refMap.values()].sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
 
+// La primera tanda se renderiza en SSR (pintado inmediato + SEO); el resto viaja
+// como JSON compacto y se pinta bajo demanda en el cliente con "Cargar más fuentes".
+const SSR_LIMIT = 60;
+const ssrRefs = allRefs.slice(0, SSR_LIMIT);
+const lazyRefs = allRefs.slice(SSR_LIMIT);
+const ssrIds = new Set(ssrRefs.map((r) => r.id));
+
+const lazyData = lazyRefs.map((r) => ({
+  id: r.id,
+  titulo: r.titulo,
+  medio: r.medio,
+  tipo: r.tipo,
+  fechaStr: r.fecha.toLocaleDateString('es-ES'),
+  eventCount: r.eventCount,
+}));
+
 const tipoLabels: Record<string, string> = {
   oficial: 'Oficial', prensa: 'Prensa', agencia: 'Agencia',
   documento: 'Documento', entrevista: 'Entrevista', video: 'Video',
@@ -60,12 +76,12 @@ const tipoLabels: Record<string, string> = {
     <p class="text-gray-500 text-sm">Catálogo verificable de medios, documentos y fuentes primarias citadas en el vault.</p>
   </div>
 
-  <div class="grid gap-3">
-    {allRefs.map((ref) => (
+  <div id="sources-index-root" class="grid gap-3">
+    {ssrRefs.map((ref) => (
       <div class="group block border border-gray-200/80 shadow-sm rounded-xl p-5 hover:border-blue-300 hover:shadow-md transition-all duration-200 bg-white">
         <div class="flex items-start justify-between gap-3">
           <div class="min-w-0 flex-1">
-            <a href={`/sources/${ref.id}`} class="font-bold text-gray-900 text-base leading-snug group-hover:text-blue-600 transition-colors block">
+            <a transition:name={`source-title-${ref.id}`} href={`/sources/${ref.id}`} class="font-bold text-gray-900 text-base leading-snug group-hover:text-blue-600 transition-colors block">
               {ref.titulo}
             </a>
             <div class="flex flex-wrap items-center gap-2 mt-1.5 text-xs text-gray-500">
@@ -88,7 +104,7 @@ const tipoLabels: Record<string, string> = {
               {ref.eventCount} {ref.eventCount === 1 ? 'evento' : 'eventos'}
             </span>
             <a href={`/sources/${ref.id}`} class="p-1 text-gray-300 group-hover:text-blue-600 transition-colors">
-              <ChevronRight class="h-5 w-5" />
+              <span class="block text-lg leading-none">›</span>
             </a>
           </div>
         </div>
@@ -100,5 +116,22 @@ const tipoLabels: Record<string, string> = {
       </p>
     )}
   </div>
-</Base>
 
+  {lazyRefs.length > 0 && (
+    <div class="mt-6 flex justify-center">
+      <button
+        id="load-more-sources"
+        class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-50"
+      >
+        <span class="source-more-label">Cargar más fuentes ({lazyRefs.length} restantes)</span>
+      </button>
+    </div>
+  )}
+
+  <script type="application/json" id="sources-index-data" set:html={JSON.stringify(lazyData)} />
+
+  <script>
+    import { initSourceList } from '../../scripts/sourceListClient.js';
+    initSourceList();
+  </script>
+</Base>

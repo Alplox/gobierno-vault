@@ -28,7 +28,8 @@ const railLabelClass = (level?: string) =>
   <>
     <nav
       id="timeline-rail"
-      class="fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-1 lg:flex"
+      class="fixed right-4 top-1/2 z-40 hidden -translate-y-1/2 flex-col items-end gap-1 overflow-y-auto py-1 lg:flex [scrollbar-width:thin] [scrollbar-color:#cbd5e1_transparent]"
+      style="max-height: 76vh"
       aria-label="Índice temporal"
     >
       {flatSections.map((s) => (
@@ -95,6 +96,20 @@ const railLabelClass = (level?: string) =>
 )}
 
 <script>
+  const cleanupFns: (() => void)[] = [];
+  let ro: ResizeObserver | null = null;
+
+  function cleanup() {
+    while (cleanupFns.length) {
+      const fn = cleanupFns.pop();
+      try { fn(); } catch { /* noop */ }
+    }
+    ro?.disconnect();
+    ro = null;
+  }
+
+  cleanup();
+
   const rail = document.getElementById('timeline-rail');
   const fab = document.getElementById('timeline-fab');
   const sheet = document.getElementById('timeline-sheet');
@@ -119,8 +134,10 @@ const railLabelClass = (level?: string) =>
   };
 
   updateRailVisibility();
-  window.addEventListener('resize', updateRailVisibility);
-  const ro = new ResizeObserver(updateRailVisibility);
+  const onResize = () => updateRailVisibility();
+  window.addEventListener('resize', onResize);
+  cleanupFns.push(() => window.removeEventListener('resize', onResize));
+  ro = new ResizeObserver(updateRailVisibility);
   const mainEl = document.querySelector('main');
   if (mainEl) ro.observe(mainEl);
 
@@ -170,7 +187,18 @@ const railLabelClass = (level?: string) =>
       if (details && !details.open) details.open = true;
       current = details ?? current.parentElement;
     }
-    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    const monthMatch = /^month-/.test(targetId);
+    if (monthMatch && typeof window.__gvFillMonth === 'function') {
+      window.__gvFillMonth(targetId.slice(6));
+    }
+    // El IO llena meses del nuevo viewport tras el salto y el documento crece,
+    // desplazando el destino. Salto instant + re-ajuste tras asentarse.
+    requestAnimationFrame(() =>
+      el.scrollIntoView({ behavior: 'instant', block: 'start' })
+    );
+    setTimeout(() => {
+      el.scrollIntoView({ behavior: 'instant', block: 'start' });
+    }, 400);
   };
 
   document.querySelectorAll<HTMLAnchorElement>('[data-target]').forEach((link) => {
@@ -213,5 +241,4 @@ const railLabelClass = (level?: string) =>
     targetEls.forEach((el) => observer.observe(el));
   }
 
-  window.addEventListener('beforeunload', () => ro.disconnect());
 </script>

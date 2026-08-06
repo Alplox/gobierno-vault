@@ -30,17 +30,19 @@ Gobierno Vault es una base de conocimiento estática sobre eventos relacionados 
 
 ## Comandos útiles
 
-- `npm install` - instala dependencias.
-- `npm run dev` - ejecuta el servidor de desarrollo.
-- `npm run build` - valida y construye el sitio estático.
-- `npm run preview` - previsualiza el sitio construido (servidor local).
-- `npm run deploy` - despliega a Cloudflare Pages (`https://gobierno-vault.pages.dev`).
-- `npm run validate` - valida contenido y estructura.
-- `npm run generate-index` - regenera índices y estadísticas del repositorio.
-- `npm run add-source -- <URL>` - extrae metadatos de una fuente y sugiere un bloque para `sources.yaml`.
-- `npm run backup` - genera los respaldos públicos `.gvault` (light y full) en la raíz.
-- `npm run verify -- <archivo.gvault>` - verifica la integridad de un respaldo.
-- `npm run restore -- <archivo.gvault> --dest <ruta>` - restaura un respaldo a disco.
+El proyecto usa **pnpm** como gestor de paquetes (no npm).
+
+- `pnpm install` - instala dependencias.
+- `pnpm run dev` - ejecuta el servidor de desarrollo.
+- `pnpm run build` - valida y construye el sitio estático.
+- `pnpm run preview` - previsualiza el sitio construido (servidor local).
+- `pnpm run deploy` - despliega a Cloudflare Pages (`https://gobierno-vault.pages.dev`).
+- `pnpm run validate` - valida contenido y estructura.
+- `pnpm run generate-index` - regenera índices y estadísticas del repositorio.
+- `pnpm run add-source -- <URL>` - extrae metadatos de una fuente y sugiere un bloque para `sources.yaml`.
+- `pnpm run backup` - genera los respaldos públicos `.gvault` (light y full) en la raíz.
+- `pnpm run verify -- <archivo.gvault>` - verifica la integridad de un respaldo.
+- `pnpm run restore -- <archivo.gvault> --dest <ruta>` - restaura un respaldo a disco.
 
 ## Ayudar con los respaldos (sin ser técnico)
 
@@ -101,7 +103,7 @@ cualquiera sabrá cómo se llama, cómo verificar su integridad y cómo restaura
 1. Revisa `AGENTS.md` para entender las convenciones del repositorio.
 2. Agrega nuevos eventos en `src/content/events/YYYY/MM/YYYYMMDD-N.md`.
 3. Añade nuevas entidades o fuentes en los archivos YAML correspondientes.
-4. Ejecuta `npm run validate` y `npm run build` antes de enviar cambios.
+4. Ejecuta `pnpm run validate` y `pnpm run build` antes de enviar cambios.
 
 ## Recursos adicionales
 
@@ -112,6 +114,7 @@ cualquiera sabrá cómo se llama, cómo verificar su integridad y cómo restaura
 ## Requisitos
 
 - Node.js compatible con Astro 7.
+- **pnpm** como gestor de paquetes (instalar con `npm i -g pnpm` o `corepack enable`).
 - Dependencias del proyecto declaradas en `package.json`.
 
 ---

@@ -6,9 +6,10 @@ interface Props {
   edge: RelationEdge;
   compact?: boolean;
   subtitle?: string;
+  transitionName?: string;
 }
 
-const { edge, compact = false, subtitle } = Astro.props;
+const { edge, compact = false, subtitle, transitionName } = Astro.props;
 const label = RELATION_LABELS[edge.tipo] ?? edge.tipo;
 const chipClass = RELATION_CHIP_CLASS[edge.tipo] ?? DEFAULT_RELATION_CHIP;
 const fechaStr = edge.fecha.toLocaleDateString('es-CL', {
@@ -46,6 +47,7 @@ const fechaStr = edge.fecha.toLocaleDateString('es-CL', {
     </span>
     <div class="min-w-0 flex-1">
       <p
+        transition:name={transitionName}
         class:list={[
           'font-semibold leading-snug text-gray-900 text-balance group-hover:text-blue-600',
           compact ? 'text-xs' : 'text-sm',

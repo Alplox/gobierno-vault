@@ -1,0 +1,5 @@
+# pnpm 10+ bloquea por defecto los scripts de build de las dependencias.
+# esbuild necesita su postinstall para instalar el binario nativo (Astro lo usa);
+# sin esta autorización el build falla con ERR_PNPM_IGNORED_BUILDS.
+allowBuilds:
+  esbuild: true

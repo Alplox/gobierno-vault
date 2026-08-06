@@ -13,6 +13,27 @@ import TimelineNav from './TimelineNav.astro';
 
 const { events } = Astro.props;
 
+// Solo el mes actual se renderiza en SSR; los demas meses cargan bajo demanda.
+const now = new Date();
+const currentMonthKey = new Intl.DateTimeFormat('en-CA', {
+  timeZone: 'America/Santiago', year: 'numeric', month: '2-digit',
+}).format(now).slice(0, 7);
+
+interface LazyEvent {
+  id: string;
+  year: number;
+  month: number;
+  day: number;
+  weekday: string;
+  timeStr: string | null;
+  tipo: string;
+  titulo: string;
+  personas: string[];
+  temas: string[];
+  links: number;
+  previews: { tipo: string; titulo: string }[];
+}
+
 const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 const monthShort = ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun', 'Jul', 'Ago', 'Sep', 'Oct', 'Nov', 'Dic'];
 const weekdayNames = ['dom', 'lun', 'mar', 'mié', 'jue', 'vie', 'sáb'];
@@ -122,6 +143,55 @@ for (const decade of decades) {
 decades.sort((a, b) => b.decade - a.decade);
 
 const currentYear = new Date().getFullYear();
+// El mes actual se renderiza en SSR pero con un tope: los primeros 12 eventos.
+const CURRENT_SSR_LIMIT = 12;
+const ssrCurrentIds = new Set<string>();
+let ssrCount = 0;
+for (const month of months()) {
+  if (month.key !== currentMonthKey) continue;
+  for (const day of month.days) {
+    for (const event of day.events) {
+      if (ssrCount >= CURRENT_SSR_LIMIT) break;
+      ssrCurrentIds.add(eventBasename(event.id));
+      ssrCount++;
+    }
+    if (ssrCount >= CURRENT_SSR_LIMIT) break;
+  }
+}
+
+// JSON compacto para el cliente: todos los eventos, agrupados por mes para carga bajo demanda.
+const lazyData: LazyEvent[] = [];
+for (const month of months()) {
+  for (const day of month.days) {
+    for (const event of day.events) {
+      const d = new Date(event.data.fecha);
+      const filename = eventBasename(event.id);
+      const entities = getEventEntities(event.id);
+      const connections = connectionIndex.get(filename)!;
+      lazyData.push({
+        id: filename,
+        year: month.year,
+        month: month.month,
+        day: day.day,
+        weekday: day.weekday,
+        timeStr: formatEventTime(d),
+        tipo: event.data.tipo,
+        titulo: event.data.titulo,
+        personas: entities.personas.map((id) => peopleMap.get(id) ?? id),
+        temas: event.data.tema.map((id) => topicsMap.get(id) ?? id),
+        links: countExplicitConnections(connections),
+        previews: [...connections.outgoing, ...connections.incoming].slice(0, 2).map((edge) => ({
+          tipo: edge.tipo,
+          titulo: edge.titulo,
+        })),
+      });
+    }
+  }
+}
+
+function* months() {
+  for (const decade of decades) for (const y of decade.years) for (const m of y.months) yield m;
+}
 
 const navSections = decades.map((d) => ({
   id: `decade-${d.decade}`,
@@ -237,7 +307,9 @@ const navSections = decades.map((d) => ({
                             </summary>
 
                           <div class="space-y-3 bg-white pt-2">
-                            {monthGroup.days.map((dayGroup) => (
+                            {monthGroup.key === currentMonthKey && monthGroup.days
+                              .filter((dg) => dg.events.every((e) => ssrCurrentIds.has(eventBasename(e.id))))
+                              .map((dayGroup) => (
                               <details id={`day-${dayGroup.key}`} class="group/day scroll-mt-32" open data-persist={`day-${dayGroup.key}`} data-crumb-level="day" data-crumb-label={`${dayGroup.day} ${monthNames[dayGroup.month - 1]}`}>
                                 <summary class="relative flex cursor-pointer list-none items-center gap-2.5 py-2 pl-24 [&::-webkit-details-marker]:hidden">
                                   <span class="pointer-events-none absolute left-[15px] top-0 h-full w-20 border-b-2 border-l-2 border-gray-300 rounded-bl-[10px]" aria-hidden="true" />
@@ -293,7 +365,7 @@ const navSections = decades.map((d) => ({
                                                   </span>
                                                 )}
                                               </div>
-                                              <h4 class="text-sm font-semibold leading-snug text-gray-900 text-balance transition-colors group-hover:text-blue-600 sm:text-[15px]">
+                                              <h4 transition:name={`event-title-${filename}`} class="text-sm font-semibold leading-snug text-gray-900 text-balance transition-colors group-hover:text-blue-600 sm:text-[15px]">
                                                 {event.data.titulo}
                                               </h4>
                                               {personaNames.length > 0 && (
@@ -335,6 +407,16 @@ const navSections = decades.map((d) => ({
                                 </div>
                               </details>
                             ))}
+                            {(monthGroup.key !== currentMonthKey || monthGroup.days.some((dg) => dg.events.some((e) => !ssrCurrentIds.has(eventBasename(e.id))))) && (
+                              <div
+                                class="month-loader ml-24 py-3 pl-4 text-xs font-medium text-gray-400"
+                                data-load-month
+                                data-year={monthGroup.year}
+                                data-month={monthGroup.month}
+                              >
+                                {monthGroup.days.reduce((a, dg) => a + dg.events.length, 0)} {monthGroup.days.reduce((a, dg) => a + dg.events.length, 0) === 1 ? 'evento' : 'eventos'} · cargando…
+                              </div>
+                            )}
                           </div>
                           </details>
                         </section>
@@ -352,10 +434,25 @@ const navSections = decades.map((d) => ({
     <TimelineNav sections={navSections} />
     </div>
   </>
+
+  <script type="application/json" id="timeline-index-data" set:html={JSON.stringify(lazyData)} />
+
+  <script>
+    import { initTimeline } from '../scripts/timelineClient.js';
+    initTimeline();
+  </script>
 )}
 
 <script>
   const STORAGE_KEY = 'gobierno-vault-timeline-collapsed';
+  const cleanupFns: (() => void)[] = [];
+
+  function cleanup() {
+    while (cleanupFns.length) {
+      const fn = cleanupFns.pop();
+      try { fn(); } catch { /* noop */ }
+    }
+  }
 
   function loadPersisted(): Record<string, boolean> {
     try {
@@ -364,6 +461,8 @@ const navSections = decades.map((d) => ({
       return {};
     }
   }
+
+  cleanup();
 
   document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
     el.addEventListener('toggle', () => {
@@ -388,7 +487,9 @@ const navSections = decades.map((d) => ({
       crumb.style.top = `${(nav?.offsetHeight ?? 0) + 0}px`;
     };
     setCrumbTop();
-    window.addEventListener('resize', setCrumbTop);
+    const onResize = () => setCrumbTop();
+    window.addEventListener('resize', onResize);
+    cleanupFns.push(() => window.removeEventListener('resize', onResize));
 
     const order = ['decade', 'year', 'month', 'day'] as const;
     const segEls = new Map<string, HTMLElement>();
@@ -446,6 +547,7 @@ const navSections = decades.map((d) => ({
       });
     };
     window.addEventListener('scroll', onScroll, { passive: true });
+    cleanupFns.push(() => window.removeEventListener('scroll', onScroll));
     document.querySelectorAll<HTMLElement>('[data-crumb-seg]').forEach((a) => {
       a.addEventListener('click', (e) => {
         e.preventDefault();

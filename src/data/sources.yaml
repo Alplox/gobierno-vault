@@ -10552,6 +10552,46 @@ lacuarta-2026-03-23-tope-sueldos-asesores:
   fecha: 2026-03-23
   url: https://www.lacuarta.com/chile/noticia/un-maximo-de-casi-10-millones-mensuales-aclaran-como-se-fija-el-tope-de-sueldo-de-los-asesores-del-presidente/
   notas: "Contexto verificado por lectura directa. La comisión autónoma creada por la Ley 21.233 fijó un sueldo bruto de $11,07 millones para el Presidente de la República desde el 11 de marzo de 2026 (adecuación al IPC; Boric percibía alrededor de $7 millones). De ahí se desprende el tope del 90% ($9.963.058) para asesores estratégicos."
+partidorepublicano-2021-08-23-kast-bajar-sueldo:
+  tipo: comunicado_oficial
+  medio: Partido Republicano de Chile
+  titulo: "Kast compromete bajar el sueldo presidencial, reducir 12 ministerios y un gobierno de austeridad para enfrentar grave crisis económica"
+  autor: Prensa (Partido Republicano)
+  fecha: 2021-08-23
+  url: https://partidorepublicanodechile.cl/campana/2021/08/kast-compromete-bajar-el-sueldo-presidencial-reducir-12-ministerios-y-un-gobierno-de-austeridad-para-enfrentar-grave-crisis-economica/
+  notas: "Fuente primaria del propio partido, verificada por lectura directa (status 200). Comunicado de la proclamación de José Antonio Kast como candidato presidencial del Partido Republicano en el cerro Ñielol de Temuco (22 de agosto de 2021): comprometió que de llegar a La Moneda 'Bajaré mi sueldo como Presidente a la mitad y disminuiremos significativamente los sueldos y asignaciones de las altas autoridades del Estado, incluyendo a ministros, senadores, diputados, jueces y fiscales', un primer gabinete de apenas 12 ministerios (fusionando los 24) y 'gobernar con el ejemplo'. Fuente partidaria: usar como complemento de la cobertura de prensa."
+t13-2021-08-22-kast-rebajar-sueldo-mitad:
+  tipo: prensa
+  medio: T13
+  titulo: "Kast lanza su campaña presidencial: 'Si salgo electo me voy a rebajar el sueldo a la mitad'"
+  autor: T13
+  fecha: 2021-08-22
+  url: https://www.t13.cl/noticia/elecciones-2021/politica/kast-lanza-su-campana-presidencial-si-salgo-electo-me-voy-rebajar-sueldo-mitad
+  notas: "Verificada por lectura directa (status 200). Proclamación oficial de José Antonio Kast como candidato presidencial del Partido Republicano en el cerro Ñielol de Temuco el 22 de agosto de 2021: 'Bajaré mi sueldo como Presidente a la mitad y disminuiremos significativamente los sueldos y asignaciones de las altas autoridades del Estado, incluyendo a ministros, senadores, diputados, jueces y fiscales' y un primer gabinete de 12 ministerios (de 24)."
+diariousach-2025-12-24-voltereta-kast-renta:
+  tipo: prensa
+  medio: Diario Usach
+  titulo: "La voltereta de Kast sobre su renta presidencial: De la promesa de rebajar su sueldo a afirmar que el monto 'es una norma legal'"
+  autor: Diario Usach
+  fecha: 2025-12-24
+  url: https://www.diariousach.cl/la-voltereta-de-kast-sobre-su-renta-presidencial-de-la-promesa-de-rebajar
+  notas: "Verificada por lectura directa vía espejo r.jina.ai (status 200). Reporta la decisión de la Comisión para la Fijación de Remuneraciones de elevar el sueldo del Jefe de Estado sobre los 10 millones brutos en 2026 ($11.070.064 desde el 11 de marzo, según El Mercurio) frente a la renta bruta de Boric de $7.033.974 en noviembre de 2025 (promedio mensualizado del trimestre: $7.787.000). Reproduce las declaraciones de Kast a Canal 13: 'nosotros nunca hemos señalado lo que algunos han planteado. Nosotros no hemos debatido el monto del sueldo' y que el monto 'eso lo decidió el Congreso, es una norma legal'. Recuerda la promesa de 2021 en el cerro Ñielol."
+t13-2025-12-24-sueldo-proximo-presidente:
+  tipo: prensa
+  medio: T13
+  titulo: "A cuánto aumentará el sueldo del próximo Presidente tras la decisión de la Comisión para la Fijación de Remuneraciones"
+  autor: T13
+  fecha: 2025-12-24
+  url: https://www.t13.cl/noticia/politica/cuanto-aumentara-sueldo-del-proximo-presidente-tras-decision-comision-24-12-2025
+  notas: "Verificada por lectura directa (status 200). La Comisión para la Fijación de Remuneraciones (Felipe Larraín, Enrique Marshall, Patricia Arriagada, Diego Paulsen y Alejandro Weber) decidió que el Presidente reciba la renta más alta del Estado: el sueldo de Kast ascenderá a $11.070.064 brutos (Boric: $7.033.974 brutos y $5.765.081 líquidos en noviembre de 2025; Kast recibirá $4.036.090 más). En entrevista con T13, Kast señaló que el monto 'es una norma legal' que 'decidió el Congreso' y que 'nosotros no hemos debatido el monto del sueldo'."
+latercera-2025-12-21-kast-no-debatido-monto-sueldo:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "'No hemos debatido el monto del sueldo': Kast evita comprometer una rebaja en su remuneración como Presidente"
+  autor: La Tercera
+  fecha: 2025-12-21
+  url: https://www.latercera.com/nacional/noticia/no-hemos-debatido-el-monto-del-sueldo-kast-evita-comprometer-una-rebaja-en-su-remuneracion-como-presidente/
+  notas: "Verificada por lectura directa (status 200, título y bajada legibles; cuerpo parcial por suscripción). El mandatario electo evitó comprometer una rebaja en su remuneración, que aumentará a partir de 2026, y abordó también la controversia por la llamada norma de 'amarre' en el empleo público incluida en el reajuste salarial."
 twitter-2026-08-03-robertomerken-framing-imacec:
   tipo: redes
   medio: X (Twitter)
@@ -11324,6 +11364,60 @@ theclinic-2026-08-05-chile-mnoal-retiro:
   fecha: 2026-08-05
   url: https://www.theclinic.cl/2026/08/05/el-golpe-de-timon-de-la-cancilleria-en-la-onu-chile-se-retira-del-movimiento-de-paises-no-alineados-de-las-naciones-unidas-tras-55-anos/
   notas: "Chile abandonará de manera completa e inmediata el Movimiento de Países No Alineados (MNOAL), al que pertenece desde 1971 (ingreso bajo Salvador Allende). La instrucción fue enviada la semana pasada a la misión chilena ante la ONU y formalizada con una nota verbal recibida por la presidencia del MNOAL (Uganda). La Cancillería argumenta que la organización no responde a la realidad internacional actual. La exsubsecretaria Gloria de la Fuente y diplomáticos advierten riesgos para la candidatura de Valparaíso a la secretaría del BBNJ y por la señal política."
+t13-2026-08-05-alvarado-contribuciones:
+  tipo: prensa
+  medio: T13
+  titulo: "Alvarado dice que seguirá pagando contribuciones: 'Las personas de más
+    altos ingresos, espero que hagan el análisis'"
+  autor: Caroline Castillo
+  fecha: 2026-08-05
+  url: https://www.t13.cl/noticia/politica/biministro-alvarado-confirma-seguira-pagando-contribuciones-5-8-2026
+  notas: "Verificada por lectura directa (texto completo). El biministro del Interior y Segegob, Claudio Alvarado, confirmó en Radio 13c que seguirá pagando el impuesto territorial mientras ejerza un cargo público, pese a que la exención de contribuciones para mayores de 65 años aprobada con la megarreforma 'es discrecional de quien pueda acogerse o no al beneficio, es voluntario'. Espera que 'las personas de más altos ingresos' hagan 'el análisis y la reflexión'. Además dio por terminada la polémica por la salida del exsubsecretario de Hacienda Juan Pablo Rodríguez (test de drogas) y las diferencias con el presidente del Partido Republicano, Arturo Squella, con quien dijo haber conversado: 'es un tema superado. Yo doy vuelta la página'."
+biobiochile-2026-08-05-contraloria-sumario-sernac-arica:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Contraloría abre sumario en Sernac Arica tras contratación de funcionaria
+    detenida en 2017"
+  autor: Génesis Friz
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-arica-y-parinacota/2026/08/05/contraloria-abre-sumario-en-sernac-arica-tras-contratacion-de-funcionaria-detenida-en-2017.shtml
+  notas: "Verificada por lectura directa (texto completo vía r.jina.ai). La Contraloría General de la República instruyó un sumario administrativo en el Sernac y en los demás servicios públicos pertinentes por eventuales irregularidades en la contratación de personal en la Dirección Regional de Arica y Parinacota, tras la controversia por la incorporación de la asistente social Evelyn Milos (cupo RN, detenida en 2017 con 47 kilos de droga). Resolución firmada el 5 de agosto de 2026: 'atendidos los hechos de público conocimiento difundidos por medios de comunicación sobre eventuales irregularidades y faltas a la probidad administrativa'."
+biobiochile-2026-08-05-hermosilla-arresto-domiciliario:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Luis Hermosilla incumplió su arresto domiciliario nocturno: no atendió
+    a Carabineros en fiscalización"
+  autor: Noelia Ortega Sanhueza
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/05/luis-hermosilla-incumplio-su-arresto-domiciliario-nocturno-no-atendio-a-carabineros-en-fiscalizacion.shtml
+  notas: "Verificada por lectura directa (texto completo vía r.jina.ai). El imputado del caso Audios, Luis Hermosilla, incumplió su arresto domiciliario nocturno: la madrugada del 25 de julio de 2026 a las 03:15, Carabineros de la 37ª Comisaría de Vitacura concurrió a su domicilio para fiscalizar la medida y no fue atendido ('No sale a atender a Carabineros; se registra con cámara corporal a 1652'). El parte fue remitido al 4º Juzgado de Garantía de Santiago. El 31 de julio su defensa (encabezada por su hermano, el abogado Juan Pablo Hermosilla) informó un cambio de domicilio de Vitacura a Providencia."
+nubleonline-2026-08-05-kits-emergencia-nuble:
+  tipo: prensa
+  medio: Ñuble Online
+  titulo: "SEREMI del Trabajo y Previsión Social de Ñuble participa en entrega de
+    kits de emergencia a familias afectadas por el sistema frontal"
+  autor: Prensa Ñuble Online
+  fecha: 2026-08-05
+  url: https://nubleonline.cl/seremi-del-trabajo-y-prevision-social-de-nuble-participa-en-entrega-de-kits-de-emergencia-a-familias-afectadas-por-el-sistema-frontal/
+  notas: "Verificada por lectura directa (texto completo). El 4 de agosto de 2026 el seremi del Trabajo y Previsión Social de Ñuble, Edmundo Novoa Puga, se desplegó en terreno en Chillán (sector Oro Verde, Callejón Valle del Sol) para participar en la entrega de kits de emergencia a familias afectadas por el sistema frontal, en el marco de la respuesta coordinada del Gobierno vía SENAPRED. La distribución continuará coordinada con las municipalidades de la región."
+adnradio-2026-08-04-camara-indulto-maturana:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Cámara solicita al Presidente Kast indultar a Patricio Maturana: senadora
+    Campillai acusa 'odio, clasismo y revictimización'"
+  autor: ADN Radio
+  fecha: 2026-08-04
+  url: https://www.adnradio.cl/2026/08/04/camara-solicita-al-presidente-kast-indultar-a-patricio-maturana-senadora-campillai-acusa-odio-clasismo-y-revictimizacion/
+  notas: "Verificada por lectura directa (texto completo). Cobertura independiente de la resolución aprobada por 73 votos a favor, 51 en contra y 16 abstenciones que solicita el indulto particular para Patricio Maturana. Aporta las reacciones posteriores: Fabiola Campillai ('Esto es odio, esto es clasismo, revictimización pura y dura'; 'con estos actos la derecha está manchando la institucionalidad de este Congreso Nacional'), la diputada Ana María Gazmuri (Acción Humanista) calificó la señal de 'profundamente cruel', el diputado Hans Marowski (PNL) celebró 'un paso importante' y Javier Olivares (PDG) destacó que se aprobó con 'amplia mayoría'."
+biobiochile-2026-08-04-sernac-arica-cupo-oficialista:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sernac de Arica contrata a mujer que fue detenida con 47 kilos de droga
+    bajo cupo oficialista RN"
+  autor: BioBioChile
+  fecha: 2026-08-04
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-arica-y-parinacota/2026/08/04/sernac-de-arica-contrata-a-mujer-que-fue-detenida-con-47-kilos-de-droga-bajo-cupo-oficialista.shtml
+  notas: "Cobertura independiente (mismo día) del caso revelado por El Mostrador: confirma la contratación de la asistente social Evelyn Milos en el Sernac de Arica bajo un cupo vinculado a Renovación Nacional, tras haber sido detenida en 2017 con 47 kilos de marihuana. Verificada URL con status 200."
 biobiochile-2025-11-16-boric-felicita-jara-kast:
   tipo: prensa
   medio: BioBioChile
@@ -11665,3 +11759,83 @@ cnn-2022-09-08-protestas-estudiantiles:
   autor: Cristopher Ulloa
   fecha: 2022-09-08
   url: https://cnnespanol.cnn.com/2022/09/08/ultimas-noticias-breves-del-mundo-hoy-8-de-septiembre/
+biobiochile-2026-08-05-kast-cadena-acot:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Presidente Kast anuncia en cadena nacional su megarreforma en seguridad: 'Seremos implacables'"
+  autor: Antonio González
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/05/presidente-kast-anuncia-en-cadena-nacional-su-megarreforma-en-seguridad.shtml
+  notas: "Cobertura principal de la cadena nacional del 5 de agosto 2026 (21:00, duración aprox. 17 min). Kad anunció la Agenda contra el Crimen Organizado y el Terrorismo (ACOT): agenda de cerca de 30 proyectos de ley; contexto de semanas turbulentas (caída de aprobación, salida del exsubsecretario de Hacienda por test de drogas). Cifras al 26 de julio: homicidio -18,7% (112 víctimas menos), secuestros PDI -45%, robos violentos -7 mil, ingresos irregulares -86,5%, Macrozona Sur -18,8%, droga +60%. Cuatro ejes: perseguir, capturar (flagrancia 12 a 24h, retención migratoria, frontera con zanjas/drones), juzgar (legítima defensa de uniformados, barricadas, reclutamiento de menores), condenar (reforma constitucional seguridad como deber del Estado, pertenencia a organización criminal como delito, régimen penitenciario especial, agencia de decomiso). Instrucción a Martín Arrau para aprobar ACOT antes de Navidad. Referencia al Imacec de junio (+2,4%)."
+cooperativa-2026-08-05-kast-agenda-crimen-organizado:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Kast presentó en cadena nacional su 'Agenda contra el Crimen Organizado y el Terrorismo'"
+  autor: Cooperativa
+  fecha: 2026-08-05
+  url: https://www.cooperativa.cl/noticias/pais/presidente-kast/kast-presento-en-cadena-nacional-su-agenda-contra-el-crimen-organizado/2026-08-05/211447.html
+  notas: "Validación cruzada. Confirma los cuatro ejes (perseguir/atrapar/juzgar/condenar), los 30 proyectos, la reforma constitucional y la instrucción a Arrau con meta pre-Navidad. Agrega duración de 'poco más de 15 minutos'. Cita a la oposición (Víctor Ram, FA): 'si la seguridad se va a tratar ahora de un debate constitucional, creo que estaremos perdiendo el tiempo'. Arrau precisó que la reforma 'va a ser ingresada en las próximas semanas' y puso ejemplo de los muertos en 2022."
+emol-2026-08-05-kast-cadena-nacional:
+  tipo: prensa
+  medio: El Mercurio
+  titulo: "Kast instala la seguridad como nuevo eje y recalca que el Gobierno 'no se va a dejar confundir' por ruido de polémicas"
+  autor: María Cristina Romero
+  fecha: 2026-08-05
+  url: https://www.emol.com/noticias/Nacional/2026/08/05/1207714/kast-cadena-nacional-anuncios.html
+  notas: "Fuente independiente (redacción propia) que corrobora las cifras del balance (homicidios 18,8%, secuestros 47%, robos, ingresos fronterizos, Macrozona Sur) y los cuatros ejes, la reforma constitucional, el plazo de flagrancia y la frase 'no hay marcha atrás'. Encuadre: seguridad como nuevo eje tras la megarreforma."
+latercera-2026-08-06-anuncios-seguridad-kast-reforma:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Los anuncios de seguridad de Kast: reforma constitucional, más atribuciones policiales y ofensiva contra el crimen organizado"
+  autor: La Tercera
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/los-anuncios-de-seguridad-de-kast-reforma-constitucional-mas-atribuciones-policiales-y-ofensiva-contra-el-crimen-organizado/
+  notas: "Cronica y análisis del día siguiente. Corrobora la agenda de más de 30 iniciativas y la reforma. Enmarca la reforma constitucional como instrumento para esquivar las recientes derrotas del Ejecutivo ante el TC (Ley de Escuelas Protegidas y quinto estado de excepción) y como el anuncio de mayor alcance político. Cita a Arrau y la meta."
+t13-2026-08-05-kast-agenda-seguridad-acot:
+  tipo: prensa
+  medio: T13
+  titulo: "'Seremos implacables': Kast anuncia agenda de seguridad con más de 30 proyectos contra el crimen organizado"
+  autor: T13
+  fecha: 2026-08-05
+  url: https://www.t13.cl/noticia/politica/seremos-implacables-kast-anuncia-agenda-seguridad-mas-30-proyectos-crimen-organizado-5-8-2026
+  notas: "Corrobora la primera cadena nacional tras la megarreforma, la ACOT como más de 30 proyectos, el foco en Arrau, los anuncios de flagrancia, retención, control fronterico, delito autónomo y régimen penitenciario, y la meta pre-Navidad."
+theclinic-2026-08-05-kast-acot-30-proyectos:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Kast anuncia la Agenda contra el Crimen Organizado y el Terrorismo: más de 30 proyectos de ley que pretende aprobar antes de fin de año"
+  autor: The Clinic
+  fecha: 2026-08-05
+  url: https://www.theclinic.cl/2026/08/05/kast-anuncia-la-agenda-contra-el-crimen-organizado-y-el-terrorismo-mas-de-30-proyectos-de-ley-que-pretende-aprobar-antes-de-fin-de-ano/
+  notas: "Transcribe los cuatro ejes textualmente (perseguir sin descanso, capturar sin excusas, juzgar con todo el peso de la ley, condenar sin beneficios) y la instrucción a Arrau con meta fin de año."
+adnradio-2026-08-05-acot-cuatro-ejes:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Agenda contra el Crimen Organizado y el Terrorismo (ACOT): los 4 ejes de la nueva apuesta legislativa del Gobierno"
+  autor: Mario Vergara
+  fecha: 2026-08-05
+  url: https://www.adnradio.cl/2026/08/05/agenda-contra-el-crimen-organizado-y-el-terrorismo-acot-los-4-ejes-de-la-nueva-apuesta-legislativa-del-gobierno/
+  notas: "Desglose independiente de los cuatro ejes: 50 barrios críticos, flagrancia 12 a 24h, expulsión de extranjeros ilegales, frontera con zanjas/ánones/tecnología, sus espaldas a uniformados en legítima defensa, barricadas como delito, reclutamiento de menores, reforma constitucional, régimen carcelario especial, agencia de decomiso. Meta pre-Navidad, instrucción a Arrau. Frase 'no hay marcha atrás'."
+biobiochile-2026-08-05-ejes-acot:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Estos son los ejes de la megarreforma de seguridad ACOT de Kast para perseguir el crimen organizado"
+  autor: BioBioChile
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/05/estos-son-los-ejes-de-la-megarreforma-de-seguridad-acot-de-kast-para-perseguir-el-crimen-organizado.shtml
+  notas: "Detalle complementario de los cuatro ejes del discurso y los 50 barrios críticos."
+biobiochile-2026-08-05-oposicion-agenda-seguridad:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Oficialismo valora agenda ACOT pero diputadas libertarias critican falta de respaldo a uniformados"
+  autor: Antonio González
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/05/oficialismo-valora-agenda-acot-pero-diputadas-libertarias-critican-falta-de-respaldo-a-uniformados.shtml
+  notas: "Reacción interna del oficialismo. RN y Evópoli elogian la ACOT y el anuncio de estado de excepción con FF.AA., mientras el Partido Nacional Libertario (diputadas libertarias) critica que no hubo 'una movida potente' ni respaldo explícito a los uniformados querellados, pese a que el discurso promete proteger la legítima defensa."
+gobierno-2026-08-05-cadena-nacional-kast-acot:
+  tipo: video
+  medio: Gobierno de Chile
+  titulo: "Ahora Le Toca a Chile — El Presidente, José Antonio Kast, se dirige al país en cadena nacional"
+  autor: Gobierno de Chile
+  fecha: 2026-08-05
+  url: https://www.youtube.com/watch?v=9-amwvyUYdQ
+  notas: "Fuente primaria oficial: video de la cadena nacional del 5 de agosto de 2026 transmitido en vivo desde el Palacio de La Moneda por el canal oficial del Gobierno de Chile. La transcripción completa de la alocución incluye el detalle de los cuatro ejes de la ACOT (perseguir sin descanso, capturar sin excusas, juzgar con todo el peso de la ley, condenar sin beneficios), la reforma constitucional para consagrar la seguridad como deber del Estado y la meta de aprobar todas las herramientas antes de Navidad. Incluye la frase 'no hay marcha atrás' y las cifras al 26 de julio."

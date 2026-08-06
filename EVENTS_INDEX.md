@@ -1,6 +1,6 @@
 # Índice de Eventos
 
-> Este archivo se genera automáticamente con `npm run generate-index`
+> Este archivo se genera automáticamente con `pnpm run generate-index`
 
 ## 2026
 
@@ -394,7 +394,11 @@
 - [2026/08/20260805-16 - Cae director del Sernac de Arica por contratar a militantes de partidos 'alineados' al Gobierno: aceptan su renuncia e instruyen sumario](src/content/events/2026/08/20260805-16.md)
 - [2026/08/20260805-17 - Chile se retira del Movimiento de Países No Alineados tras 55 años: golpe de timón de la Cancillería en la ONU](src/content/events/2026/08/20260805-17.md)
 - [2026/08/20260805-18 - Ignacio Briones: la megarreforma 'se quedó corta en la permisología' y la exención de contribuciones es 'la política más regresiva'](src/content/events/2026/08/20260805-18.md)
+- [2026/08/20260805-19 - Alvarado confirma que seguirá pagando contribuciones pese a la exención para mayores de 65 años: 'es voluntario'](src/content/events/2026/08/20260805-19.md)
 - [2026/08/20260805-2 - Encuestas post-despacho de la megareforma: Cadem registra 50% de desacuerdo y Descifra mide 63% de rechazo a la gestión de Quiroz](src/content/events/2026/08/20260805-2.md)
+- [2026/08/20260805-20 - Contraloría abre sumario en el Sernac de Arica por la contratación de la funcionaria detenida en 2017 con 47 kilos de droga](src/content/events/2026/08/20260805-20.md)
+- [2026/08/20260805-21 - Revelan que Luis Hermosilla incumplió su arresto domiciliario nocturno: no atendió a Carabineros en una fiscalización](src/content/events/2026/08/20260805-21.md)
+- [2026/08/20260805-22 - Seremi del Trabajo de Ñuble participa en entrega de kits de emergencia a familias afectadas por el sistema frontal en Chillán](src/content/events/2026/08/20260805-22.md)
 - [2026/08/20260805-3 - Cuarto incendio en 13 años en la planta química Panimex de Quilicura: tercera alarma, humo tóxico y suspensión de clases](src/content/events/2026/08/20260805-3.md)
 - [2026/08/20260805-4 - Debate en r/chile tras la celebración de Quiroz: críticas a la megareforma, memes de colusión y teorías sobre el incendio de Quilicura](src/content/events/2026/08/20260805-4.md)
 - [2026/08/20260805-5 - Gobierno ingresa con urgencia proyecto que eleva a 6.000 UF el subsidio a la tasa hipotecaria y amplía de 50.000 a 80.000 los cupos](src/content/events/2026/08/20260805-5.md)
@@ -434,6 +438,7 @@
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md)
 - [2025/12/20251219-2 - Columna de opinión advierte que enfoque de seguridad de Kast profundizará fallas estructurales](src/content/events/2025/12/20251219-2.md)
 - [2025/12/20251224-1 - Equipo de Kast confirma criterio anti-nepotismo: sin ministros con familiares en el Congreso, con posibles excepciones](src/content/events/2025/12/20251224-1.md)
+- [2025/12/20251224-2 - Comisión para la Fijación de Remuneraciones eleva el sueldo del Presidente a $11,07 millones y Kast evita comprometer una rebaja: 'es una norma legal'](src/content/events/2025/12/20251224-2.md)
 
 ## 2024
 
@@ -481,6 +486,7 @@
 
 - [2021/02/20210203-1 - Chile inicia la vacunación masiva contra el COVID-19: Ernestina Godoy, de 93 años, es la primera inoculada](src/content/events/2021/02/20210203-1.md)
 - [2021/05/20210515-1 - Elección de la Convención Constitucional: independientes y oposición dominan la asamblea que escribirá la nueva Constitución](src/content/events/2021/05/20210515-1.md)
+- [2021/08/20210822-1 - Kast es proclamado candidato presidencial del Partido Republicano y promete rebajar su sueldo a la mitad](src/content/events/2021/08/20210822-1.md)
 - [2021/11/20211130-1 - El misterioso almuerzo de José Antonio Kast en Washington D.C. con ejecutivos de UnitedHealth y PepsiCo](src/content/events/2021/11/20211130-1.md)
 - [2021/12/20211204-1 - Sindicatos de Codelco Norte declaran a Kast 'persona no grata' en Calama; Kast insiste en que no privatizará Codelco](src/content/events/2021/12/20211204-1.md)
 - [2021/12/20211204-2 - La campaña partió en el norte: estrategias de Boric y Kast para ganar los votos de Parisi](src/content/events/2021/12/20211204-2.md)

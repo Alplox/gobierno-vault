@@ -15,6 +15,14 @@ const hasInferred = inferred.length > 0;
 
 if (!hasExplicit && !hasInferred) return null;
 
+// Guard: cada evento relacionado puede tener un solo view-transition-name en la página.
+const usedEventIds = new Set<string>();
+function transitionNameFor(eventId: string): string | undefined {
+  if (usedEventIds.has(eventId)) return undefined;
+  usedEventIds.add(eventId);
+  return `event-title-${eventId}`;
+}
+
 function inferredReason(edge: InferredEdge): string {
   const parts: string[] = [];
   if (edge.sharedTemas.length > 0) {
@@ -46,7 +54,7 @@ function inferredReason(edge: InferredEdge): string {
           </h3>
           <div class="space-y-2.5">
             {outgoing.map((edge) => (
-              <RelationLink edge={edge} />
+              <RelationLink edge={edge} transitionName={transitionNameFor(edge.eventId)} />
             ))}
           </div>
         </div>
@@ -60,7 +68,7 @@ function inferredReason(edge: InferredEdge): string {
           </h3>
           <div class="space-y-2.5">
             {incoming.map((edge) => (
-              <RelationLink edge={edge} />
+              <RelationLink edge={edge} transitionName={transitionNameFor(edge.eventId)} />
             ))}
           </div>
         </div>
@@ -79,7 +87,7 @@ function inferredReason(edge: InferredEdge): string {
       </p>
       <div class="space-y-2.5">
         {inferred.map((edge) => (
-          <RelationLink edge={inferredToEdge(edge)} subtitle={inferredReason(edge)} />
+          <RelationLink edge={inferredToEdge(edge)} subtitle={inferredReason(edge)} transitionName={transitionNameFor(inferredToEdge(edge).eventId)} />
         ))}
       </div>
     </div>

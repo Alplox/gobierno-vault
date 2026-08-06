@@ -8,7 +8,22 @@ const EDGE_COLORS = {
   actualiza: '#3b82f6', mismo_contexto: '#a8a29e',
 };
 
+const cleanupFns = [];
+
+function cleanup() {
+  while (cleanupFns.length) {
+    const fn = cleanupFns.pop();
+    try { fn(); } catch { /* noop */ }
+  }
+}
+
+function addWindowListener(type, handler) {
+  window.addEventListener(type, handler);
+  cleanupFns.push(() => window.removeEventListener(type, handler));
+}
+
 function init() {
+  cleanup();
   const dataEl = document.getElementById('graph-data');
   const container = document.getElementById('graph-container');
   if (!dataEl || !container) return;
@@ -211,7 +226,7 @@ function init() {
     });
   });
 
-  window.addEventListener('mousemove', e => {
+  addWindowListener('mousemove', e => {
     if (!dragNode) return;
     if (Math.abs(e.clientX - dragSX) > 3 || Math.abs(e.clientY - dragSY) > 3) dragMoved = true;
     const r = svg.getBoundingClientRect();
@@ -219,7 +234,7 @@ function init() {
     dragNode.fy = (e.clientY - r.top - ty) / scale;
   });
 
-  window.addEventListener('mouseup', () => {
+  addWindowListener('mouseup', () => {
     if (dragNode) {
       if (!dragMoved) window.location.href = dragNode.url;
       dragNode.fx = null;
@@ -256,14 +271,14 @@ function init() {
     svg.style.cursor = 'grabbing';
   });
 
-  window.addEventListener('mousemove', e => {
+  addWindowListener('mousemove', e => {
     if (!isPanning) return;
     tx = e.clientX - panSX;
     ty = e.clientY - panSY;
     applyTransform();
   });
 
-  window.addEventListener('mouseup', () => {
+  addWindowListener('mouseup', () => {
     if (isPanning) { isPanning = false; svg.style.cursor = 'grab'; }
   });
 
@@ -310,8 +325,9 @@ function init() {
   });
 }
 
-if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', init);
-} else {
-  init();
+// Se ejecuta en cada carga de página, incluida la navegación con View Transitions.
+// (astro:page-load se dispara también en la carga inicial tras el swap del DOM.)
+if (!window.__gvGraphInit) {
+  window.__gvGraphInit = true;
+  document.addEventListener('astro:page-load', init);
 }

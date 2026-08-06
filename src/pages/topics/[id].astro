@@ -1,7 +1,8 @@
 ---
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
-import { getAllTopics, getTopicById, getAllEvents } from '../../lib/queries';
+import { getAllTopics, getTopicById, getAllEvents, getPeopleMap, getTopicsMap, getEventEntities } from '../../lib/queries';
+import { buildConnectionIndex, eventBasename, eventYearFromDate, countExplicitConnections } from '../../lib/relations';
 import { ArrowLeft, Tag, Layers, Calendar } from 'lucide-astro';
 
 export async function getStaticPaths() {
@@ -14,8 +15,40 @@ export async function getStaticPaths() {
 
 const { topic } = Astro.props;
 
+const connectionIndex = buildConnectionIndex(await getAllEvents());
 const allEvents = await getAllEvents();
 const relatedEvents = allEvents.filter((e) => e.data.tema.includes(topic.id));
+
+// La primera tanda en SSR; el resto viaja como JSON compacto (auto-carga por scroll).
+const SSR_LIMIT = 12;
+const ssrEvents = relatedEvents.slice(0, SSR_LIMIT);
+const ssrIds = new Set(ssrEvents.map((e) => eventBasename(e.id)));
+const lazyEvents = relatedEvents.slice(SSR_LIMIT);
+
+const [peopleMap, topicsMap] = await Promise.all([getPeopleMap(), getTopicsMap()]);
+const lazyData = lazyEvents.map((event) => {
+  const id = eventBasename(event.id);
+  const d = new Date(event.data.fecha);
+  const conn = connectionIndex.get(id);
+  const previews = conn ? [...conn.outgoing, ...conn.incoming].slice(0, 2) : [];
+  const entities = getEventEntities(event.id);
+  return {
+    id,
+    year: eventYearFromDate(d),
+    month: parseInt(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', month: '2-digit' }).format(d), 10),
+    fechaStr: d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+    tipo: event.data.tipo,
+    titulo: event.data.titulo,
+    personas: entities.personas.map((p) => peopleMap.get(p) ?? p),
+    temas: event.data.tema.map((t) => topicsMap.get(t) ?? t),
+    links: conn ? countExplicitConnections(conn) : 0,
+    previews: previews.map((edge) => ({
+      tipo: edge.tipo,
+      arrow: edge.direction === 'outgoing' ? '→' : '←',
+      titulo: edge.titulo,
+    })),
+  };
+});
 ---
 
 <Base title={topic.data.nombre}>
@@ -33,7 +66,7 @@ const relatedEvents = allEvents.filter((e) => e.data.tema.includes(topic.id));
       </div>
       <div class="min-w-0 flex-1">
         <span class="text-[11px] font-mono font-medium text-gray-400 block mb-1">{topic.id}</span>
-        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{topic.data.nombre}</h1>
+        <h1 transition:name={`topic-title-${topic.id}`} class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{topic.data.nombre}</h1>
         {topic.data.descripcion && (
           <p class="text-sm text-gray-600 mt-2 leading-relaxed">{topic.data.descripcion}</p>
         )}
@@ -69,8 +102,8 @@ const relatedEvents = allEvents.filter((e) => e.data.tema.includes(topic.id));
         <span>Eventos en este tema ({relatedEvents.length})</span>
       </h2>
     </div>
-    <div class="grid gap-4">
-      {relatedEvents.map((event) => <EventCard event={event} />)}
+    <div id="topic-events-root" class="grid gap-4">
+      {ssrEvents.map((event) => <EventCard event={event} />)}
       {relatedEvents.length === 0 && (
         <p class="text-sm text-gray-500 bg-white p-8 rounded-xl border border-dashed border-gray-300 text-center">
           No hay eventos registrados para este tema.
@@ -79,4 +112,11 @@ const relatedEvents = allEvents.filter((e) => e.data.tema.includes(topic.id));
     </div>
   </section>
 </Base>
+
+<script type="application/json" id="topic-events-data" set:html={JSON.stringify(lazyData)} />
+
+<script>
+  import { initTopicList } from '../../scripts/topicListClient.js';
+  initTopicList();
+</script>
 

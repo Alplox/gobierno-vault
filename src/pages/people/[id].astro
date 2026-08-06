@@ -2,10 +2,15 @@
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
-import { getAllPeople, getAllEvents, eventHasPerson, getQuotesForPerson } from '../../lib/queries';
+import { getAllPeople, getAllEvents, eventHasPerson, getQuotesForPerson, getEventEntities, getPeopleMap, getTopicsMap } from '../../lib/queries';
 import { getOrganizationsRegistry } from '../../lib/registry';
+import { eventBasename } from '../../lib/relations';
 import type { QuoteEntry } from '../../lib/extractEntities';
 import { ArrowLeft, Briefcase, Building2, Calendar } from 'lucide-astro';
+
+function yearOf(fecha: Date): number {
+  return Number(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', year: 'numeric' }).format(fecha));
+}
 
 export async function getStaticPaths() {
   const people = await getAllPeople();
@@ -31,6 +36,30 @@ for (const q of quotes) {
 const orgNames = new Map(getOrganizationsRegistry().map((o) => [o.id, o.data.nombre]));
 const cargos = person.data.cargos ?? [];
 const datedCargos = cargos.filter((c) => c.desde);
+
+// Lazy de eventos relacionados: el SSR pinta los primeros; el resto viaja como JSON.
+const PERSON_EVENTS_LIMIT = 12;
+const ssrEvents = relatedEvents.slice(0, PERSON_EVENTS_LIMIT);
+const lazyEvents = relatedEvents.slice(PERSON_EVENTS_LIMIT);
+const ssrEventIds = new Set(ssrEvents.map((e) => eventBasename(e.id)));
+const [peopleNames, topicsNames] = await Promise.all([getPeopleMap(), getTopicsMap()]);
+
+const lazyEventData = lazyEvents.map((event) => {
+  const entities = getEventEntities(event.id);
+  const d = new Date(event.data.fecha);
+  return {
+    year: yearOf(event.data.fecha),
+    month: parseInt(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', month: '2-digit' }).format(d), 10),
+    id: eventBasename(event.id),
+    fechaStr: d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+    tipo: event.data.tipo,
+    titulo: event.data.titulo,
+    personas: entities.personas.map((p) => peopleNames.get(p) ?? p),
+    temas: event.data.tema.map((t) => topicsNames.get(t) ?? t),
+    links: 0,
+    previews: [],
+  };
+});
 
 const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 function fechaEs(iso?: string): string | null {
@@ -70,7 +99,7 @@ const mermaidTimeline = datedCargos.length
         {person.data.nombre.charAt(0)}
       </div>
       <div class="min-w-0 flex-1">
-        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{person.data.nombre}</h1>
+        <h1 transition:name={`person-title-${person.id}`} class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{person.data.nombre}</h1>
         {(person.data.cargo ?? cargos.at(-1)?.cargo) && (
           <p class="flex items-center gap-1.5 text-sm text-gray-700 font-medium mt-1">
             <Briefcase class="h-4 w-4 text-gray-400 shrink-0" />
@@ -130,8 +159,8 @@ const mermaidTimeline = datedCargos.length
         )}
       </h2>
     </div>
-    <div class="grid gap-4">
-      {relatedEvents.map((event) => {
+    <div id="person-events-root" class="grid gap-4">
+      {ssrEvents.map((event) => {
         const eventQuotes = quotesByEvent.get(event.id) ?? [];
         return (
           <div class="space-y-3 min-w-0 max-w-full">
@@ -146,14 +175,35 @@ const mermaidTimeline = datedCargos.length
         </p>
       )}
     </div>
+    {lazyEvents.length > 0 && (
+      <div class="mt-6 flex justify-center">
+        <button
+          id="load-more-person-events"
+          class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-50"
+          data-root="person-events-root"
+          data-data-id="person-events-data"
+        >
+          <span class="person-event-more-label">Cargar más eventos de {person.data.nombre} ({lazyEvents.length} restantes)</span>
+        </button>
+      </div>
+    )}
   </section>
 </Base>
 
+<script type="application/json" id="person-events-data" set:html={JSON.stringify(lazyEventData)} />
+
+<script>
+  import { initPersonEventList } from '../../scripts/personEventClient.js';
+  initPersonEventList();
+</script>
+
 {datedCargos.length > 0 && (
   <script>
-    import mermaid from 'mermaid';
-    mermaid.initialize({ startOnLoad: false, theme: 'neutral' });
-    mermaid.run().catch((err) => console.error('Mermaid error:', err));
+    (async () => {
+      const mermaid = await import('mermaid');
+      mermaid.default.initialize({ startOnLoad: false, theme: 'neutral' });
+      mermaid.default.run().catch((err) => console.error('Mermaid error:', err));
+    })();
   </script>
 )}
 

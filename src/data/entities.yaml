@@ -1177,6 +1177,15 @@ people:
     organizacion: partido_nacional_libertario
     notas: Ex oficial del Ejército. Contrató a Omegna como asesor con sueldo de
       $1.200.000.
+  javier_olivares:
+    nombre: Javier Olivares
+    cargo: Diputado (PDG)
+    cargos:
+      - cargo: Diputado (PDG)
+        organizacion: pdg
+        desde: 2026-03-11
+    organizacion: pdg
+    notas: Diputado del Partido de la Gente. El 4 de agosto de 2026 celebró que la Cámara aprobara con "amplia mayoría" la solicitud de indulto particular para el excapitán de Carabineros Patricio Maturana.
   emiliano_fernandez:
     nombre: Emiliano Fernández
     notas: Panelista del programa de streaming La Cofradía. Aparece en el video
@@ -1512,7 +1521,27 @@ people:
         desde: 2018-03-11
         hasta: 2022-03-11
     organizacion: ministerio_hacienda
-    notas: Exministro de Hacienda del segundo gobierno de Sebastián Piñera (2018-2022).
+    notas: "Exministro de Hacienda del segundo gobierno de Sebastián Piñera (2018-2022). Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 fijó el sueldo del Presidente de la República en $11.070.064 brutos."
+  enrique_marshall:
+    nombre: Enrique Marshall
+    cargo: Miembro de la Comisión para la Fijación de Remuneraciones
+    organizacion: comision_fijacion_remuneraciones
+    notas: "Exvicepresidente del Banco Central de Chile. Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del próximo mandatario en $11.070.064."
+  patricia_arriagada:
+    nombre: Patricia Arriagada
+    cargo: Miembro de la Comisión para la Fijación de Remuneraciones
+    organizacion: comision_fijacion_remuneraciones
+    notas: "Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del próximo mandatario en $11.070.064."
+  diego_paulsen:
+    nombre: Diego Paulsen
+    cargo: Miembro de la Comisión para la Fijación de Remuneraciones
+    organizacion: comision_fijacion_remuneraciones
+    notas: "Exdiputado RN y exministro del Deporte. Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del próximo mandatario en $11.070.064."
+  alejandro_weber:
+    nombre: Alejandro Weber
+    cargo: Miembro de la Comisión para la Fijación de Remuneraciones
+    organizacion: comision_fijacion_remuneraciones
+    notas: "Exsubsecretario de Hacienda del segundo gobierno de Sebastián Piñera. Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del próximo mandatario en $11.070.064."
   natalia_duco:
     nombre: Natalia Duco
     cargo: Ministra del Deporte
@@ -1908,6 +1937,15 @@ people:
     nombre: Cristián Matus
     cargo: Director (s) de Senapred Ñuble
     notas: Entregó recomendaciones ante tornados en Ñuble.
+  edmundo_novoa_puga:
+    nombre: Edmundo Novoa Puga
+    cargo: Seremi del Trabajo y Previsión Social de Ñuble
+    cargos:
+      - cargo: Seremi del Trabajo y Previsión Social de Ñuble
+        organizacion: seremi_trabajo_nuble
+        desde: 2026-03-11
+    organizacion: seremi_trabajo_nuble
+    notas: "Seremi del Trabajo y Previsión Social de Ñuble. El 4 de agosto de 2026 se desplegó en Chillán (sector Oro Verde, Callejón Valle del Sol) junto a su equipo para participar en la entrega de kits de emergencia a familias afectadas por el sistema frontal, coordinada con SENAPRED."
   diego_sepulveda:
     nombre: Diego Sepúlveda
     cargo: Delegado presidencial de Ñuble
@@ -2704,7 +2742,11 @@ people:
   luis_hermosilla:
     nombre: Luis Hermosilla
     cargo: Abogado imputado en el caso Audios
-    notas: "Abogado penalista. Imputado en el caso Audios. Acusado de intermediar entre Andrés Chadwick y el exfiscal Manuel Guerra para influir en investigaciones judiciales."
+    notas: "Abogado penalista. Imputado en el caso Audios. Acusado de intermediar entre Andrés Chadwick y el exfiscal Manuel Guerra para influir en investigaciones judiciales. Cumple arresto domiciliario nocturno desde que se le sustituyera el arresto domiciliario total; en agosto de 2026 se reveló que incumplió la medida al no atender a Carabineros en una fiscalización."
+  juan_pablo_hermosilla:
+    nombre: Juan Pablo Hermosilla
+    cargo: Abogado defensor de Luis Hermosilla
+    notas: "Hermano y abogado defensor de Luis Hermosilla. El 31 de julio de 2026 informó al 4º Juzgado de Garantía de Santiago el cambio de domicilio de su hermano desde Vitacura a Providencia, solicitando notificar a Carabineros para asegurar el cumplimiento del arresto domiciliario nocturno."
   manuel_guerra:
     nombre: Manuel Guerra
     cargo: Exfiscal Regional Metropolitano Oriente en prisión preventiva
@@ -3631,6 +3673,11 @@ organizations:
     tipo: servicio_publico
     pais: Chile
     organizacion: ministerio_hacienda
+  comision_fijacion_remuneraciones:
+    nombre: Comisión para la Fijación de Remuneraciones
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Órgano autónomo creado por la Ley 21.233. En diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del mandatario en $11.070.064 desde el 11 de marzo de 2026 (Boric percibía alrededor de $7 millones brutos). Integrada por Felipe Larraín, Enrique Marshall, Patricia Arriagada, Diego Paulsen y Alejandro Weber."
   tesoreria_general:
     nombre: Tesoreria General de la Republica
     tipo: servicio_publico
@@ -4052,6 +4099,11 @@ organizations:
     tipo: seremi
     pais: Chile
     notas: Secretaría Regional Ministerial del Trabajo y Previsión Social de La Araucanía.
+  seremi_trabajo_nuble:
+    nombre: Seremi del Trabajo de Ñuble
+    tipo: seremi
+    pais: Chile
+    notas: Secretaría Regional Ministerial del Trabajo y Previsión Social de Ñuble. El 4 de agosto de 2026 su titular, Edmundo Novoa Puga, participó en la entrega de kits de emergencia en Chillán a familias afectadas por el sistema frontal.
   seremi_economia_atacama:
     nombre: Seremi de Economía de Atacama
     tipo: seremi
@@ -5793,6 +5845,14 @@ cifras:
     nombre: Sueldo bruto mensual del Presidente de la República (2026)
     unidad_default: pesos chilenos
     notas: "La comisión autónoma creada por la Ley 21.233 fijó un sueldo bruto de $11,07 millones para el Presidente de la República desde el 11 de marzo de 2026 (adecuación al IPC; Boric percibía alrededor de $7 millones). Emol y Meganoticias reportan la renta bruta de Kast en torno a los $11,3 millones."
+  sueldo_presidente_boric_2025:
+    nombre: Sueldo bruto mensual del Presidente Gabriel Boric (noviembre 2025)
+    unidad_default: pesos chilenos
+    notas: "Renta bruta de $7.033.974 percibida por el presidente Gabriel Boric en noviembre de 2025 (líquido $5.765.081), según Transparencia. La Comisión para la Fijación de Remuneraciones calculó un promedio mensualizado de $7.787.000 para el trimestre. Reportado por T13 y Diario Usach el 24 de diciembre de 2025."
+  diferencia_sueldo_kast_boric:
+    nombre: Diferencia de sueldo bruto entre Kast y Boric (2026)
+    unidad_default: pesos chilenos
+    notas: "$4.036.090 más que el presidente saliente recibirá el presidente electo José Antonio Kast según la renta bruta ($11.070.064 vs $7.033.974 de Boric en noviembre de 2025), tras la decisión de la Comisión para la Fijación de Remuneraciones de diciembre de 2025."
   contrato_indh_ditecsur:
     nombre: Contrato del INDH con la productora Ditecsur (2026)
     unidad_default: millones_pesos

@@ -39,6 +39,7 @@ export async function getStaticPaths() {
 
 const { event } = Astro.props;
 const { titulo, fecha, tipo, tema, etiquetas, impacto, creado, actualizado } = event.data;
+const filename = event.id.split('/').pop() ?? event.id;
 const { Content } = await render(event);
 
 const dateObj = new Date(fecha);
@@ -77,7 +78,7 @@ const connections = getEventConnections(event, allEvents, buildEventsByBasename(
           <span>Volver a Eventos</span>
         </a>
       </div>
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight text-balance">{titulo}</h1>
+      <h1 transition:name={`event-title-${filename}`} class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight text-balance">{titulo}</h1>
       <div class="flex flex-wrap items-center gap-3 text-xs text-gray-600">
         <span class={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md font-semibold ring-1 ring-inset ${TIPO_STYLES[tipo] || 'bg-gray-100 text-gray-700 ring-gray-200'}`}>
           <FileText class="h-3.5 w-3.5 shrink-0" />
@@ -131,7 +132,7 @@ const connections = getEventConnections(event, allEvents, buildEventsByBasename(
           </h3>
           <div class="flex gap-1.5 flex-wrap">
             {temaNombres.map((t) => (
-              <a href={`/topics/${t.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
+              <a href={`/topics/${t.id}`} transition:name={`topic-title-${t.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
                 <Tag class="h-3 w-3 text-gray-400" />
                 {t.nombre}
               </a>
@@ -147,7 +148,7 @@ const connections = getEventConnections(event, allEvents, buildEventsByBasename(
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {personaNombres.map((p) => (
-                <a href={`/people/${p.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
+                <a href={`/people/${p.id}`} transition:name={`person-title-${p.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
                   <User class="h-3 w-3 text-gray-400" />
                   {p.nombre}
                 </a>
@@ -164,7 +165,7 @@ const connections = getEventConnections(event, allEvents, buildEventsByBasename(
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {orgNombres.map((o) => (
-                <a href={`/organizations/${o.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
+                <a href={`/organizations/${o.id}`} transition:name={`org-title-${o.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
                   <Building2 class="h-3 w-3 text-gray-400" />
                   {o.nombre}
                 </a>

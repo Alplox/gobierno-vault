@@ -121,7 +121,7 @@ const payload = {
     });
   }
 
-  document.addEventListener('click', (e) => {
+  function handleClick(e: Event): void {
     const target = e.target as HTMLElement | null;
     const btn = target?.closest('.copy-btn') as HTMLButtonElement | null;
     if (!btn) return;
@@ -153,5 +153,12 @@ const payload = {
         `> ${q.text} - ${q.person}. Fuente: ${q.sources.map(sourceLink).join(', ')}`)
       .join('\n\n');
     copyText(md, btn);
-  });
+  }
+
+  // Registra el listener una sola vez (el document persiste entre navegaciones;
+  // el primer closure de handleClick consulta el DOM en el momento del click).
+  if (!(window as any).__gvQuoteCopyInit) {
+    (window as any).__gvQuoteCopyInit = true;
+    document.addEventListener('click', handleClick);
+  }
 </script>

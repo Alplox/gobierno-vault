@@ -5,6 +5,11 @@ import remarkWikiLinks from './src/lib/remarkWikiLinks.mjs';
 
 export default defineConfig({
   output: 'static',
+  // Precarga las páginas al hover (compatible con ClientRouter de View Transitions)
+  prefetch: {
+    prefetchAll: true,
+    defaultStrategy: 'hover',
+  },
   integrations: [tailwind()],
   markdown: {
     processor: unified({

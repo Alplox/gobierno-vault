@@ -4,8 +4,8 @@ import EventCard from '../../components/EventCard.astro';
 import EventGraph from '../../components/EventGraph.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import TimelineNav from '../../components/TimelineNav.astro';
-import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, eventHasPerson, eventHasOrg, getTopicsMap, getPeopleMap, getOrgsMap } from '../../lib/queries';
-import { buildConnectionIndex, eventYearFromDate } from '../../lib/relations';
+import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, eventHasPerson, eventHasOrg, getTopicsMap, getPeopleMap, getOrgsMap, getEventEntities } from '../../lib/queries';
+import { buildConnectionIndex, eventBasename, eventYearFromDate, countExplicitConnections } from '../../lib/relations';
 import { Calendar, ChevronDown } from 'lucide-astro';
 
 const allEvents = await getAllEvents();
@@ -32,6 +32,13 @@ let filtered = allEvents;
 if (tema) filtered = filtered.filter((e) => e.data.tema.includes(tema));
 if (persona) filtered = filtered.filter((e) => eventHasPerson(e.id, persona));
 if (org) filtered = filtered.filter((e) => eventHasOrg(e.id, org));
+
+// La primera tanda se renderiza en SSR (pintado inmediato + SEO); el resto viaja
+// como JSON compacto y se pinta bajo demanda en el cliente al hacer scroll.
+const SSR_LIMIT = 12;
+const ssrEvents = filtered.slice(0, SSR_LIMIT);
+const lazyEvents = filtered.slice(SSR_LIMIT);
+const ssrIds = new Set(ssrEvents.map((e) => eventBasename(e.id)));
 
 const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
 
@@ -83,6 +90,31 @@ const navSections = years.map((y) => ({
     label: `${monthNames[m.month - 1]} ${m.year}`,
   })),
 }));
+
+// JSON compacto para el cliente: solo lo que necesita la tarjeta.
+const lazyData = lazyEvents.map((event) => {
+  const id = eventBasename(event.id);
+  const d = new Date(event.data.fecha);
+  const conn = connectionIndex.get(id);
+  const previews = conn ? [...conn.outgoing, ...conn.incoming].slice(0, 2) : [];
+  const entities = getEventEntities(event.id);
+  return {
+    id,
+    year: eventYearFromDate(d),
+    month: parseInt(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', month: '2-digit' }).format(d), 10),
+    fechaStr: d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+    tipo: event.data.tipo,
+    titulo: event.data.titulo,
+    personas: entities.personas.map((p) => peopleMap.get(p) ?? p),
+    temas: event.data.tema.map((t) => topicsMap.get(t) ?? t),
+    links: conn ? countExplicitConnections(conn) : 0,
+    previews: previews.map((edge) => ({
+      tipo: edge.tipo,
+      arrow: edge.direction === 'outgoing' ? '→' : '←',
+      titulo: edge.titulo,
+    })),
+  };
+});
 ---
 
 <Base title="Eventos">
@@ -104,7 +136,7 @@ const navSections = years.map((y) => ({
     </p>
   ) : (
     <div class="relative mt-6">
-      <div class="space-y-8">
+      <div id="event-index-root" class="space-y-8">
         {years.map((yearGroup) => (
           <section id={`year-${yearGroup.year}`} class="scroll-mt-32">
             <details class="group/year" open={yearGroup.year === currentYear || activeFilters} data-persist={`events-year-${yearGroup.year}`}>
@@ -126,8 +158,11 @@ const navSections = years.map((y) => ({
                         {monthGroup.events.length} {monthGroup.events.length === 1 ? 'evento' : 'eventos'}
                       </span>
                     </h2>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {monthGroup.events.map((event) => <EventCard event={event} connectionIndex={connectionIndex} />)}
+                    <div class="event-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+                      {monthGroup.events.map((event) => {
+                        if (!ssrIds.has(eventBasename(event.id))) return null;
+                        return <EventCard event={event} connectionIndex={connectionIndex} />;
+                      })}
                     </div>
                   </section>
                 ))}
@@ -140,6 +175,13 @@ const navSections = years.map((y) => ({
       <TimelineNav sections={navSections} />
     </div>
   )}
+
+  <script type="application/json" id="event-index-data" set:html={JSON.stringify(lazyData)} />
+
+  <script>
+    import { initEventList } from '../../scripts/eventListClient.js';
+    initEventList();
+  </script>
 
   <script>
     import '../../scripts/force-graph.js';

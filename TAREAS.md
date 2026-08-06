@@ -96,7 +96,7 @@
 
 | Evento | Fecha | Tipo | Estado |
 |---|---|---|---|
-| Cadena nacional de Kast tras el despacho de la megareforma (contenido de la alocución del 5-ago, 21:00) | 2026-08-05 | declaracion | ⬜ (la preparación está en `20260804-14`; se verificó el 5-ago que aún no había cobertura publicada del contenido — revisar el 6-ago y siguientes) |
+| Cadena nacional de Kast tras el despacho de la megareforma (contenido de la alocución del 5-ago, 21:00) | 2026-08-05 | declaracion | ✅ `20260805-13` (cadena pública ACOT; verificar que la reforma constitucional efectivamente ingrese al Congreso en semanas siguientes) |
 | Contenido efectivo de los tres vetos a la megareforma y su tramitación en la Cámara | 2026-08 (segunda semana) | accion | ✅ `20260805-6` (ingreso del veto supresivo: olvido financiero, anatocismo, pago 30 días) y `20260805-7` (48 gremios pyme respaldan); tramitación en Comisión de Hacienda en curso |
 | Cruce de las senadoras Campillai y Flores en el Senado: se enrostraron contratos a "amante" y a "yerno delincuente" | 2026-08-05 | reaccion | ⬜ |
 | Ministro Poduje no descarta relocalizar familias en Angol tras graves daños en viviendas por el sistema frontal | 2026-08-05 | declaracion | ⬜ |

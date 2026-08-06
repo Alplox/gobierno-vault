@@ -67,7 +67,7 @@ events.sort((a, b) => a.id.localeCompare(b.id));
 
 // Generate EVENTS_INDEX.md
 let eventsIndex = '# Índice de Eventos\n\n';
-eventsIndex += '> Este archivo se genera automáticamente con `npm run generate-index`\n\n';
+eventsIndex += '> Este archivo se genera automáticamente con `pnpm run generate-index`\n\n';
 
 // Group by year
 const eventsByYear = {};
@@ -144,7 +144,7 @@ const totalTopics = Object.keys(topicsData).length;
 
 // Generate stats section for AGENTS.md
 let statsSection = '## Estadísticas del vault\n\n';
-statsSection += '> Esta sección se genera automáticamente con `npm run generate-index`\n\n';
+statsSection += '> Esta sección se genera automáticamente con `pnpm run generate-index`\n\n';
 statsSection += `**Total de eventos:** ${stats.totalEvents}\n\n`;
 statsSection += '**Eventos por año:**\n';
 const sortedYearsStats = Object.keys(stats.eventsByYear).sort((a, b) => b.localeCompare(a));

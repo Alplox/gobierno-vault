@@ -44,7 +44,7 @@ const tipoLabels: Record<string, string> = {
       </div>
       <div class="min-w-0 flex-1">
         <span class="text-[11px] font-mono font-medium text-gray-400 block mb-1">{id}</span>
-        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{source.titulo}</h1>
+        <h1 transition:name={`source-title-${id}`} class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{source.titulo}</h1>
         
         <div class="flex flex-wrap items-center gap-3 mt-3 text-xs text-gray-600">
           <span class="font-bold text-gray-800">{source.medio}</span>

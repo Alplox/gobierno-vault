@@ -56,7 +56,7 @@ function encodeFile(buf) {
 
 const ROOT_FILES = [
   'package.json',
-  'package-lock.json',
+  'pnpm-lock.yaml',
   'astro.config.mjs',
   'tailwind.config.mjs',
   'tsconfig.json',
@@ -158,9 +158,9 @@ function buildInfo(meta) {
     '',
     'RESTAURAR LOS ARCHIVOS',
     '----------------------',
-    'Con el proyecto (Node + npm):',
-    '  npm run verify --  <archivo.gvault>',
-    '  npm run restore -- <archivo.gvault> --dest <carpeta-destino>',
+    'Con el proyecto (Node + pnpm):',
+    '  pnpm run verify --  <archivo.gvault>',
+    '  pnpm run restore -- <archivo.gvault> --dest <carpeta-destino>',
     '',
     'Sin el proyecto (solo Node): decodifica el payload base64 que va',
     'despues de la linea ===METADATA=== y descomprimelo con brotli',

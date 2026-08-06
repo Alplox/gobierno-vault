@@ -43,7 +43,7 @@ const previewEdges = connections ? [...connections.outgoing, ...connections.inco
     )}
   </div>
 
-  <h3 class="font-semibold text-gray-900 text-balance text-base leading-snug mb-2 group-hover:text-blue-600">{titulo}</h3>
+  <h3 transition:name={`event-title-${id}`} class="font-semibold text-gray-900 text-balance text-base leading-snug mb-2 group-hover:text-blue-600">{titulo}</h3>
 
   {personaNombres.length > 0 && (
     <div class="flex items-center gap-1.5 text-xs text-gray-600 mb-2.5 min-w-0">
