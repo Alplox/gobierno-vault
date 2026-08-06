@@ -219,9 +219,11 @@ Instalacion: `pnpm install`. No usar npm ni regenerar `package-lock.json`.
 `strict-peer-dependencies=false`; así pnpm resuelve la combinación de
 `@astrojs/tailwind@6` (peer `astro@^3||^4||^5`) con Astro 7 sin fallar. Ya no se
 necesita `legacy-peer-deps=true`. El archivo `pnpm-workspace.yaml` declara
-`onlyBuiltDependencies: [esbuild]` para que pnpm 10+ ejecute el postinstall de
+`allowBuilds: { esbuild: true }` para que pnpm 10+ ejecute el postinstall de
 build de esbuild (necesario para el binario nativo; sin esto el build de Astro
-falla con `ERR_PNPM_IGNORED_BUILDS`). No eliminar ninguno de los dos archivos.
+falla con `ERR_PNPM_IGNORED_BUILDS`). Debe incluir `packages: []` (si falta, pnpm 10
+del CI falla con `packages field missing or empty` al correr `pnpm install --frozen-lockfile`).
+No eliminar ninguno de los dos archivos.
 
 **Despliegue (Cloudflare Pages):** el sitio se despliega con `pnpm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `pnpm run preview` (`wrangler pages dev dist`).
 
@@ -306,10 +308,10 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 488
+**Total de eventos:** 492
 
 **Eventos por año:**
-- 2026: 402
+- 2026: 406
 - 2025: 30
 - 2024: 11
 - 2023: 9
@@ -322,21 +324,21 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (186)
-- Economia (91)
-- Justicia (60)
+- Politica (189)
+- Economia (92)
+- Justicia (61)
+- Administración pública (54)
 - Cambios en el gabinete (53)
-- Administración pública (53)
 - Emergencia y catástrofes (50)
-- Proceso legislativo (46)
-- Finanzas publicas (46)
-- Defensa y seguridad (44)
+- Proceso legislativo (47)
+- Finanzas publicas (47)
+- Defensa y seguridad (45)
 - Relaciones internacionales (44)
 
 **Tipos de eventos más frecuentes (Top 10):**
 - accion (122)
-- declaracion (75)
-- reaccion (55)
+- declaracion (76)
+- reaccion (58)
 - resultado (51)
 - publicacion (41)
 - anuncio (40)
@@ -346,8 +348,8 @@ Cuando descubras algo no documentado aqui:
 - proyecto (12)
 
 **Entidades registradas:**
-- Personas: 560
-- Organizaciones: 306
-- Cifras: 339
-- Fuentes: 1550
+- Personas: 564
+- Organizaciones: 308
+- Cifras: 342
+- Fuentes: 1572
 - Temas: 74

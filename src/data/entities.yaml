@@ -41,7 +41,17 @@ people:
         organizacion: municipalidad_la_cruz
         desde: 2024-12-06
     organizacion: municipalidad_la_cruz
-    notas: "Alcaldesa de La Cruz (Región de Valparaíso). En agosto de 2026 quedó en el centro de una polémica por un audio filtrado en que regaña a un funcionario que habría detectado una plantación de marihuana con drones, lo que motivó un oficio de la Contraloría Regional de Valparaíso."
+    notas: "Alcaldesa de La Cruz (Región de Valparaíso). En agosto de 2026 quedó en el centro de una polémica por un audio filtrado en que regaña a un funcionario que habría detectado una plantación de marihuana con drones, lo que motivó un oficio de la Contraloría Regional de Valparaíso. En la charla le pide al funcionario no actuar contra el hallazgo ('mi rol no es perseguir la delincuencia') y habla de una 'limpieza estratégica' al demoler casas del sector."
+  maria_francisca_mella:
+    nombre: María Francisca Mella
+    cargo: Concejala de La Cruz
+    organizacion: municipalidad_la_cruz
+    notas: "Concejala de La Cruz. Tras la filtración del audio de la alcaldesa Filomena Navia sobre un terreno con marihuana (agosto 2026), anunció que ingresó dos oficios: uno dirigido a la alcaldesa y otro a la Unidad de Control Municipal, solicitando información sobre la situación contractual de un funcionario y sobre los protocolos aplicados."
+  valentina_rodriguez:
+    nombre: Valentina Rodríguez
+    cargo: Concejala de La Cruz
+    organizacion: municipalidad_la_cruz
+    notas: "Concejala de La Cruz. Tras la filtración del audio de la alcaldesa Filomena Navia sobre un terreno con marihuana (agosto 2026), calificó los antecedentes como 'bastante graves' y pidió que sean esclarecidos con total transparencia, cuestionando el tono de la alcaldesa hacia un funcionario municipal."
   jorge_coloma:
     nombre: Jorge Coloma
     cargo: Presidente regional de la CChC de Concepción
@@ -1959,6 +1969,10 @@ people:
     cargo: Periodista, editor de Monitoreo Legislativo
     notas: Editor del sitio recorteshacienda.cl, que publica los decretos de recorte
       presupuestario notificados a Contraloría, y del registro Renuncias Kast.
+  ale_valle:
+    nombre: Ale Valle
+    cargo: Periodista de La Voz de los que Sobran
+    notas: "Periodista del programa La Voz de los que Sobran. En agosto de 2026 exhibió y criticó el gráfico 'Crecimiento económico' de TVN sobre el IMACEC de junio (+2,4%), señalando que la escala distorsionada genera la ilusión de un salto descomunal: 'Es como si la economía hubiese subido un 20%. Un gráfico al estilo Piñera'."
   roberto_merken:
     nombre: Roberto Merken
     cargo: Comentarista de opinión en X
@@ -2310,6 +2324,10 @@ people:
     nombre: Karina Delfino
     cargo: Alcaldesa de Quinta Normal (PS)
     notas: "Alcaldesa de Quinta Normal del Partido Socialista. Líder del municipalismo progresista en el debate por la compensación del Fondo Común Municipal (agosto 2026), crítica del mecanismo del gobierno y firmante de la declaración de más de 100 alcaldes que pidió veto presidencial."
+  javiera_reyes:
+    nombre: Javiera Reyes
+    cargo: Alcaldesa de Lo Espejo
+    notas: "Alcaldesa de Lo Espejo (Partido Comunista). Tras el despacho de la megarreforma (agosto 2026) criticó el mecanismo de compensación municipal: denunció que de los 80 mil millones de pesos de compensación directa, la mitad beneficiará a seis comunas de altos ingresos mientras las otras 339 municipalidades se reparten el resto."
   claudio_castro:
     nombre: Claudio Castro
     cargo: Alcalde de Renca
@@ -4304,6 +4322,15 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Canal de televisión pública chileno. Fundado en 1969."
+  la_voz_de_los_que_sobran:
+    nombre: La Voz de los que Sobran
+    tipo: programa_tv
+    notas: "Programa de radio y TV. En agosto de 2026 la periodista Ale Valle exhibió en este espacio las críticas al gráfico de TVN sobre el IMACEC de junio."
+  el_periodico:
+    nombre: El Periódico
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario regional chileno editado en La Araucanía (Temuco)."
   porcel_tv:
     nombre: Porcel TV
     tipo: medio_comunicacion
@@ -5769,6 +5796,18 @@ cifras:
     nombre: Compensación municipal por exención de contribuciones en la megarreforma
     unidad_default: millones_usd
     notas: "US$200 millones comprometidos por el gobierno para compensar a los municipios por la exención de contribuciones a mayores de 65 años. Los alcaldes de oposición pidieron que los recursos vayan íntegramente al Fondo Común Municipal; el gobierno propone transferencias proporcionales a lo que cada comuna deje de percibir (agosto 2026)."
+  compensacion_municipal_directa_total:
+    nombre: Compensación municipal directa total aprobada en la megarreforma
+    unidad_default: millones_pesos
+    notas: "80 mil millones de pesos de compensación directa para los municipios aprobados en la megarreforma (agosto 2026). La alcaldesa de Lo Espejo, Javiera Reyes, denunció que la mitad del monto beneficiará a seis comunas de altos ingresos."
+  compensacion_comunas_menos_ingresos:
+    nombre: Compensación a comunas de menores ingresos en la megarreforma
+    unidad_default: millones_pesos
+    notas: "Unos 13 mil millones de pesos destinados a las comunas de menores ingresos según la alcaldesa de Quinta Normal, Karina Delfino, en el debate por la compensación municipal de la megarreforma (agosto 2026)."
+  compensacion_comunas_altos_ingresos:
+    nombre: Compensación a comunas de altos ingresos en la megarreforma
+    unidad_default: millones_pesos
+    notas: "Alrededor de 30 mil millones de pesos para Las Condes, Vitacura y Lo Barnechea, según la alcaldesa de Quinta Normal, Karina Delfino, crítico del mecanismo de compensación de la megarreforma (agosto 2026)."
   alcaldes_firmantes_veto:
     nombre: Alcaldes firmantes de la declaración pidiendo veto presidencial
     unidad_default: alcaldes
