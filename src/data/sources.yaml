@@ -896,6 +896,30 @@ elmostrador-2026-06-10-cep-kast:
   autor: Redacción
   fecha: 2026-06-10
   url: https://www.elmostrador.cl/noticias/pais/2026/06/10/la-primera-cep-del-presidente-kast-desaprobacion-alcanza-el-52/
+elclarin-2026-07-16-megarreforma-nueva-etapa:
+  tipo: prensa
+  medio: El Clarín de Chile
+  titulo: "La noche que cambió el rumbo: la megarreforma abre una nueva etapa política para Chile"
+  autor: El Clarín de Chile
+  fecha: 2026-07-16
+  url: https://www.elclarin.cl/2026/07/16/la-noche-que-cambio-el-rumbo-la-megarreforma-abre-una-nueva-etapa-politica-para-chile/
+  notas: "Análisis de la aprobación de la megarreforma por 26 votos (la mayoría más estrecha posible y sin votos de la oposición) en la madrugada del 16 de julio: plantea que más que una reforma tributaria redefine la relación entre el Estado y el mercado, traslada la disputa al Tribunal Constitucional y pregunta si una mayoría parlamentaria circunstancial puede fijar las reglas económicas del país por décadas."
+biobiochile-2026-07-16-megarreforma-camara-ajustes:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Lo que debes saber: Megarreforma vuelve a la Cámara con ajustes clave y reservas de constitucionalidad"
+  autor: Jean Valencia
+  fecha: 2026-07-16
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/07/16/lo-que-debes-saber-megarreforma-vuelve-a-la-camara-con-ajustes-clave-y-reservas-de-constitucionalidad.shtml
+  notas: "Resumen de la votación en particular del Senado (madrugada del 16 de julio): aprobada con 26 votos del oficialismo contra 24 de la oposición en los puntos clave; rebajas del impuesto a grandes empresas, exención de contribuciones para mayores de 65 años, restitución de gastos por proyectos ambientales revocados, invariabilidad tributaria y tasa corporativa."
+ambito-2026-08-05-megarreforma-obstaculos:
+  tipo: prensa
+  medio: Ámbito (Argentina)
+  titulo: "Chile aprobó la mega reforma económica de José Antonio Kast, pero su entrada en vigor enfrenta nuevos obstáculos"
+  autor: Ámbito
+  fecha: 2026-08-05
+  url: https://www.ambito.com/mundo/chile-aprobo-la-mega-reforma-economica-jose-antonio-kast-pero-su-entrada-vigor-enfrenta-nuevos-obstaculos-n6307346
+  notas: "Cobertura internacional del despacho de la megarreforma: la aplicación no será inmediata porque el Gobierno anunció un veto parcial y varias disposiciones quedaron sujetas al Tribunal Constitucional. La reforma modifica 36 leyes y 15 decretos. Incluye declaraciones de Quiroz ('Chile comienza nuevamente a crecer, vuelve a abrirle las puertas a la inversión')."
 t13-2026-07-16-senado-megarreforma:
   tipo: prensa
   medio: T13
@@ -4375,6 +4399,30 @@ elperiodista-2026-04-24-hacienda-recortes-educacion:
   autor: Diego Cabanillas
   fecha: 2026-04-24
   url: https://www.elperiodista.cl/2026/04/incluye-junaeb-y-otros-14-programas-el-oficio-de-hacienda-que-busca-recortes-en-educacion/
+elperiodista-2026-04-23-instructivo-justicia:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Polémico instructivo en Justicia: correo oficial contradice a Rabat y Subsecretaría reconoce revisión 'caso a caso'"
+  autor: El Periodista
+  fecha: 2026-04-23
+  url: https://www.elperiodista.cl/2026/04/polemico-instructivo-en-justicia-correo-oficial-contradice-a-rabat-y-subsecretaria-reconoce-revision-caso-a-caso/
+  notas: "Reportaje que recoge el correo interno de la directora del Programa de DDHH, Constanza Garrido, revelado por BioBioChile: 'he recibido instrucciones en orden a no alegar o apelar en causas en etapa de cumplimiento'. El ministro Fernando Rabat había negado la existencia de una instrucción. La Subsecretaría de DDHH respondió que las actuaciones se rigen por protocolos vigentes desde 2017 y que toda decisión se adopta 'caso a caso'."
+biobiochile-2026-04-22-correo-programa-ddhh:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "El correo del Gobierno que expone orden de no intervenir en causas de DDHH y tensiona versión oficial"
+  autor: BioBioChile
+  fecha: 2026-04-22
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/04/22/el-correo-del-gobierno-a-programa-ddhh-que-revela-orden-de-no-intervenir-en-causas-ddhh-y-tensiona-version-oficial-de-justicia.shtml
+  notas: "Fuente primaria que reveló el correo interno de Constanza Garrido, directora del Programa de DDHH, en que reconoce instrucciones de 'no alegar o apelar en causas en etapa de cumplimiento', contradiciendo la versión oficial del ministro Fernando Rabat de que no existía tal instrucción."
+eldiariosantiago-2026-04-23-correo-interno-rabat:
+  tipo: prensa
+  medio: Diario Santiago
+  titulo: "Polémico instructivo en Justicia: correo interno contradice a Rabat y Subsecretaría reconoce revisión 'caso a caso'"
+  autor: Diario Santiago
+  fecha: 2026-04-23
+  url: https://eldiariosantiago.cl/2026/04/23/correo-interno-contradice-rabat-instructivo-justicia/
+  notas: "Cobertura de la polémica por el correo interno del Programa de DDHH que contradice la versión oficial del ministro Rabat sobre la instrucción de no alegar en causas de lesa humanidad."
 epicentrochile-2026-04-24-hacienda-recortes-educacion:
   tipo: prensa
   medio: Epicentro Chile
@@ -6771,6 +6819,30 @@ emol-2026-06-10-cataldo-promesa-condonacion-cae:
   autor: El Mercurio S.A.P.
   fecha: 2026-06-10
   url: https://www.emol.com/noticias/Nacional/2026/06/10/1202455/cataldo-autocritica-promesa-condonacion-cae.html
+biobiochile-2026-06-10-quiroz-crecimiento-meta-2030:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Quiroz recalca que sí aspiran crecer 4% al 2030 pese a que proyección del Gobierno queda bajo la meta"
+  autor: Franco López
+  fecha: 2026-06-10
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/06/10/quiroz-recalca-que-si-aspiran-crecer-4-al-2030-pese-a-que-proyeccion-del-gobierno-queda-bajo-la-meta.shtml
+  notas: "En la Comisión de Hacienda del Senado, el ministro Jorge Quiroz proyectó crecimiento de 3,0% para 2027-2028 y 3,5% para 2030, asegurando que la aspiración siempre ha sido alcanzar el 4% al final del mandato y que son 'extremadamente conservadores' en las metas fiscales."
+biobiochile-2026-06-10-quiroz-baja-meta-35:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Quiroz baja a 3,5% meta de crecimiento al final del Gobierno tras sincerar que no habrá déficit cero"
+  autor: Franco López
+  fecha: 2026-06-10
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/06/10/quiroz-baja-a-35-meta-de-crecimiento-al-final-del-gobierno-tras-sincerar-que-no-habria-deficit-cero.shtml
+  notas: "Complementaria: Quiroz explica la provisión conservadora del 3,5%: 'preferimos ponernos un espacio, tomar una provisión, y por eso nos pusimos un parámetro de 3,5%, porque somos extremadamente conservadores en esa materia'."
+chilepaisminero-2026-06-11-crecimiento-3-2028:
+  tipo: prensa
+  medio: Chile País Minero
+  titulo: "Chile proyecta crecimiento económico de 3% al 2028"
+  autor: Chile País Minero
+  fecha: 2026-06-11
+  url: https://chilepaisminero.com/chile-proyecta-crecimiento-economico-de-3-al-2028/
+  notas: "Cobertura sectorial minera de la proyección de Hacienda: 3% para 2027 y 2028 y 3,5% hacia 2030; relevancia de la inversión y la minería (Antofagasta, Tarapacá, Atacama y Coquimbo) para reactivar la economía. Informe de Finanzas Públicas del 1T 2026: deuda bruta del Gobierno Central desde 43,1% del PIB en 2026 hasta 45,4% en 2028."
 df-2026-02-06-wiesner-kast-gimnasio:
   tipo: prensa
   medio: Diario Financiero
@@ -7212,6 +7284,223 @@ ciper-2026-02-10-quiroz-rol-colusiones:
   autor: Benjamín Miranda
   fecha: 2026-02-10
   url: https://www.ciperchile.cl/2026/02/10/los-15-registros-que-describen-el-rol-del-futuro-ministro-de-hacienda-jorge-quiroz-a-favor-de-empresas-sancionadas-por-colusion/
+ex-ante-2025-03-20-andinista-quiroz-boric:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "Andinista, escritor y opositor a Pinochet: La historia de Jorge Quiroz, el economista que irritó a Boric"
+  autor: Ex-Ante
+  fecha: 2025-03-20
+  url: https://www.ex-ante.cl/andinista-escritor-y-opositor-a-pinochet-la-historia-de-jorge-quiroz-el-economista-que-irrito-a-boric/
+ex-ante-2025-07-01-quiroz-estrecho-vinculo:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "La economía de Jorge Quiroz y el estrecho vínculo del economista en campaña de Kast"
+  autor: Jaime Troncoso
+  fecha: 2025-07-01
+  url: https://www.ex-ante.cl/el-estrecho-vinculo-del-economista-jorge-quiroz-en-campana-de-kast-y-sus-propuestas-programaticas/
+t13-2025-11-21-quiroz-ebriedad:
+  tipo: prensa
+  medio: T13
+  titulo: "Asesor de Kast fue condenado en 2015 por manejar ebrio"
+  autor: T13
+  fecha: 2025-11-21
+  url: https://www.t13.cl/noticia/elecciones-2025/politica/quiroz-asesor-economico-kast-condenado-2015-por-manejar-estado-ebriedad-21-11-2025
+theclinic-2025-11-21-quiroz-condena-ebriedad:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La causa que pena a Jorge Quiroz, principal asesor económico de Kast: fue condenado por manejar en estado de ebriedad en Zapallar en 2015"
+  autor: Agustín Morel
+  fecha: 2025-11-21
+  url: https://www.theclinic.cl/2025/11/21/la-causa-que-pena-a-jorge-quiroz-principal-asesor-economico-de-kast-fue-condenado-por-manejar-en-estado-de-ebriedad-en-zapallar-en-2015/
+elciudadano-2026-02-11-quiroz-15-documentos-colusion:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: '"Experto" de empresas condenadas por colusión: 15 documentos vinculan a Quiroz con defensas ante el TDLC'
+  autor: Leonardo Buitrago
+  fecha: 2026-02-11
+  url: https://www.elciudadano.com/politica/experto-de-empresas-condenadas-por-colusion-15-documentos-vinculan-a-quiroz-con-defensas-ante-el-tdlc/02/11/
+elclarin-2026-02-12-quiroz-colusion:
+  tipo: prensa
+  medio: El Clarín de Chile
+  titulo: "El prontuario técnico del próximo ministro: los informes de Jorge Quiroz en defensa de empresas coludidas"
+  autor: El Clarín de Chile
+  fecha: 2026-02-12
+  url: https://www.elclarin.cl/2026/02/12/el-prontuario-tecnico-del-proximo-ministro-los-informes-de-jorge-quiroz-en-defensa-de-empresas-coludidas/
+tdlc-sentencia-148-2015-asfaltos:
+  tipo: documento
+  medio: Tribunal de Defensa de la Libre Competencia
+  titulo: "Sentencia N° 148/2015: Requerimiento de la FNE contra Asfaltos Chilenos S.A. y otros (C 280-14)"
+  autor: TDLC
+  fecha: 2015-12-23
+  url: https://www.tdlc.cl/tdlc-sentencias/sentencia-148-2015-requerimiento-de-la-fne-contra-asfaltos-chilenos-s-a-y-otros/
+fne-tdlc-multa-asfaltos:
+  tipo: documento
+  titulo: "TDLC aplica multa de US$ 3 millones por colusión a empresas proveedoras de asfalto"
+  autor: Fiscalía Nacional Económica
+  fecha: 2015-12-31
+  url: https://www.fne.gob.cl/tdlc-aplica-multa-de-us-3-millones-por-colusion-a-empresas-proveedoras-de-asfalto/
+emol-2015-12-31-colusion-asfaltos:
+  tipo: prensa
+  medio: Emol
+  titulo: "Tres empresas proveedoras de asfalto deberán pagar US$ 3 millones por coludirse entre 2011 y 2012"
+  autor: El Mercurio S.A.P.
+  fecha: 2015-12-31
+  url: https://www.emol.com/noticias/Economia/2015/12/31/766297/Tres-empresas-proveedoras-de-asfalto-deberan-pagar-US-3-millones-por-coludirse-entre-2011-y-2012.html
+tdlc-sentencia-171-2019-navieras:
+  tipo: documento
+  medio: Tribunal de la Libre Competencia
+  titulo: "Sentencia N° 171/2019: Requerimiento de la FNE contra CCNI S.A. y otras (C 292-15)"
+  autor: TDLC
+  fecha: 2019-04-24
+  url: https://www.tdlc.cl/tdlc-sentencias/sentencia-171-2019-requerimiento-de-la-fne-contra-ccni-s-a-y-otras/
+fne-multas-navieras:
+  tipo: documento
+  titulo: "TDLC aplica multa de US$ 9 millones a navieras que integraron cartel del transporte marítimo de vehículos hacia Chile"
+  autor: Fiscalía Nacional Económica
+  fecha: 2019-04-24
+  url: https://www.fne.gob.cl/tdlc-aplica-multa-de-us-9-millones-a-navieras-que-integraron-cartel-del-transporte-maritimo-de-vehiculos-hacia-chile/
+fne-multas-navieras-corte-suprema-us305:
+  tipo: documento
+  titulo: "Corte Suprema acoge parcialmente reclamación de la FNE y sanciona a todas las navieras con multas totales de US$ 30,5 millones"
+  autor: FNE
+  fecha: 2020-08-14
+  url: https://www.fne.gob.cl/corte-suprema-acoge-parcialmente-reclamacion-de-la-fne-y-sanciona-a-todas-las-navieras-que-integraron-cartel-del-transporte-maritimo-de-vehiculos-hacia-chile-con-multas-totales-de-us-305-millones/
+youtube-2026-08-06-biobio-confusam-alameda:
+  tipo: video
+  medio: YouTube (BioBioChile)
+  titulo: "Incidentes en la Alameda: Marcha por recortes presupuestarios a la salud"
+  autor: Bio Bio (BioBioChile)
+  fecha: 2026-08-06
+  url: https://www.youtube.com/watch?v=j4ipCEm54-I
+  notas: "Video de BioBioChile del 6 de agosto de 2026. Funcionarios de la salud y la Confusam se movilizaron en la Alameda contra los recortes presupuestarios del sector. La marcha no autorizada provocó el cierre de las estaciones Moneda y U. de Chile del Metro, registrando detenciones e intervención de Carabineros frente a La Moneda."
+biobiochile-2026-08-06-confusam-incidentes-moneda:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Incidentes y detenidos marcan protesta de la Confusam a las afueras de La Moneda"
+  autor: Kevin Vejar
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/06/incidentes-y-detenidos-marcan-protesta-de-la-confusam-a-las-afueras-de-la-moneda.shtml
+  notas: "Cobertura de la protesta de Confusam del 6 de agosto de 2026. Carabineros usó carro lanza aguas y lacrimógenas; se cerraron las estaciones La Moneda y Universidad de Chile del Metro. La presidenta del gremio, Gabriela Flores, señaló que entregaron una carta por segunda vez en menos de dos meses sin respuesta y denunció represión 'con una violencia extrema', con gas pimienta lanzado al rostro. Señaló que las comunas reciben el per cápita con valor 2025."
+elmaipo-2026-08-06-confusam-deuda-21-mil-millones:
+  tipo: prensa
+  medio: El Maipo
+  titulo: "Confusam protesta frente a La Moneda por deuda de $21 mil millones y denuncia recortes en salud"
+  autor: El Maipo
+  fecha: 2026-08-06
+  url: https://elmaipo.cl/confusam-protesta-frente-a-la-moneda-por-deuda-de-21-mil-millones-y-denuncia-recortes-en-salud/
+  notas: "La marcha recorrió la Alameda y concluyó frente a La Moneda, donde Confusam entregó una carta al presidente José Antonio Kast por la deuda superior a $21 mil millones del reajuste per cápita y los recortes. Confusam reúne a más de 70 mil trabajadores. La manifestación terminó con incidentes, intervención de Carabineros y el cierre temporal de las estaciones La Moneda y Universidad de Chile del Metro."
+adnradio-2026-08-06-confusam-deuda-21-mil-millones:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Confusam protesta frente La Moneda y exige al Gobierno pago de deuda por más de $21 mil millones a municipios"
+  autor: ADN Radio
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/confusam-protesta-frente-la-moneda-y-exige-al-gobierno-pago-de-deuda-por-mas-de-21-mil-millones-a-municipios/
+  notas: "Cobertura de ADN Radio de la protesta de Confusam del 6 de agosto de 2026 frente a La Moneda por la deuda de más de $21 mil millones del reajuste per cápita a los municipios."
+epicentro_chile-2026-08-06-confusam-deuda-salud-municipal:
+  tipo: prensa
+  medio: Epicentro Chile
+  titulo: "Confusam protesta en La Moneda por deuda de $21 mil millones en salud municipal"
+  autor: Epicentro Chile
+  fecha: 2026-08-06
+  url: https://www.epicentrochile.com/2026/08/06/confusam-protesta-la-moneda-deuda-salud-municipal/
+  notas: "El gremio de la salud municipalizada exige al Gobierno regularizar el pago del IPC per cápita y denuncia recortes en salud. Cobertura de la protesta del 6 de agosto de 2026."
+elmostrador-2026-07-08-confusam-gran-represion:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Confusam denuncia 'gran represión' tras incidentes frente a La Moneda: al menos ocho detenidos"
+  autor: El Mostrador
+  fecha: 2026-07-08
+  url: https://www.elmostrador.cl/noticias/pais/2026/07/08/confusam-denuncia-gran-represion-tras-incidentes-frente-a-la-moneda-al-menos-ocho-detenidos/
+  notas: "Protesta de Confusam del 8 de julio de 2026 frente a La Moneda, en el marco de las actividades por los 200 años de la Presidencia. Terminó con enfrentamientos con Carabineros, uso del carro lanzaaguas y al menos ocho detenidos. El gremio denunció 'gran represión' y advirtió que más de 40 programas de atención primaria están en peligro de ser eliminados desde 2027."
+biobiochile-2026-07-08-confusam-ocho-detenidos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Con ocho detenidos terminan incidentes tras protesta de la Confusam afuera de La Moneda"
+  autor: BioBioChile
+  fecha: 2026-07-08
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/07/08/reportan-incidentes-y-personas-detenidas-por-manifestaciones-de-confusam-afuera-de-la-moneda.shtml
+  notas: "Cobertura de la protesta de Confusam del 8 de julio de 2026. La presidenta del gremio, Gabriela Flores, explicó que la movilización responde al decreto per cápita pendiente hace seis meses (más de $21.800 millones) y a los recortes a la atención primaria. Fuerzas Especiales de Carabineros usó carros lanza agua y lanza gases; denunció agresión 'brutal' a dirigentes y ocho detenidos."
+radio-uchile-2026-07-08-confusam-carta-kast:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Confusam entrega carta a Kast en rechazo a los recortes de la Atención Primaria: manifestación termina con detenidos"
+  autor: Radio Universidad de Chile
+  fecha: 2026-07-08
+  url: https://radio.uchile.cl/2026/07/08/confusam-entrega-carta-a-kast-en-rechazo-a-los-recortes-a-la-atencion-primaria-manifestacion-termina-con-detenidos/
+  notas: "Confusam entregó una carta al presidente José Antonio Kast firmada por más de 600 dirigentes, denunciando el recorte del gasto público de 2,8 billones, el congelamiento del per cápita basal por segundo año consecutivo y la incertidumbre sobre cerca de 40 programas de salud. La presidenta Gabriela Flores Salgado detalló que la deuda del reajuste supera los $21.800 millones."
+youtube-2021-07-14-forensic-architecture-tear-gas:
+  tipo: video
+  medio: YouTube (Forensic Architecture)
+  titulo: "Tear Gas en la Plaza de la Dignidad (Español)"
+  autor: Forensic Architecture
+  fecha: 2021-07-14
+  url: https://www.youtube.com/watch?v=Eb7Q1-QpvRg
+  notas: "Video de Forensic Architecture en español que documenta la investigación conjunta con No+Más Lacrimógenas sobre el uso de gas lacrimógeno en Plaza de la Dignidad el 20 de diciembre de 2019: línea de tiempo de la represión policial, conteo de 594 cartuchos, simulación de dinámica de fluidos (con Dr. Salvador Navarro-Martinez) y medición de toxicidad de hasta 40 veces el límite del Manual de Carabineros."
+interferencia-2020-12-20-lacrimogenas-135-veces:
+  tipo: prensa
+  medio: Interferencia
+  titulo: "Lacrimógenas en Plaza Dignidad: investigación inglesa registró concentraciones 135 veces superiores a límite establecido por Carabineros"
+  autor: Interferencia
+  fecha: 2020-12-20
+  url: https://interferencia.cl/articulos/lacrimogenas-en-plaza-dignidad-investigacion-inglesa-registro-concentraciones-135-veces
+  notas: "Cobertura de la investigación de Forensic Architecture publicada en paralelo. El 20 de diciembre de 2019 se registraron concentraciones de 54 mg/m3 de gas CS, 135 veces el límite de 0,4 mg/m3 de Carabineros y 27 veces los 2 mg/m3 IDLH de NIOSH/OSHA. Reporta el conteo de 594 granadas de gas lacrimógeno CS."
+forensic-architecture-2020-12-20-tear-gas-plaza-dignidad:
+  tipo: documento
+  medio: Forensic Architecture
+  titulo: "Tear Gas in Plaza de la Dignidad"
+  autor: Forensic Architecture
+  fecha: 2020-12-20
+  url: https://forensic-architecture.org/investigation/tear-gas-in-plaza-de-la-dignidad
+  notas: "Investigación de Forensic Architecture con No+Más Lacrimógenas: análisis automatizado de video que contó y ubicó 594 cartuchos de gas lacrimógeno (la página oficial señala 596), simulación de dinámica de fluidos con el Dr. Salvador Navarro-Martinez (Imperial College London) que midió niveles de toxicidad de hasta 40 veces el límite reconocido por Carabineros, y apoyo a la denuncia de la Comisión Chilena de Derechos Humanos por uso ilegal de armas químicas."
+muac-2021-05-17-guion-gases-lacrimogenos:
+  tipo: documento
+  medio: Museo Universitario Arte Contemporáneo (MUAC-UNAM)
+  titulo: "Guion de Gases lacrimógenos en Plaza de la Dignidad"
+  autor: Forensic Architecture
+  fecha: 2021-05-17
+  url: https://muac.unam.mx/guionde-gases-lacrimogenos-en-plaza-de-la-dignidad
+  notas: "Guion de la exposición virtual del MUAC (17 de mayo al 15 de agosto de 2021) con la reconstrucción temporal del 20 de diciembre de 2019: carros lanza agua a las 17:40, primera nube de gas a las 17:50, 186 cartuchos a las 19:12, atropello de un manifestante a las 19:37, 82 cartuchos en 10 minutos desde las 20:30 y 594 cartuchos mapeados."
+biobiochile-2019-12-20-turba-cerco-baquedano:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Turba rompe cerco policial y comienzan desmanes en Plaza Baquedano"
+  autor: BioBioChile
+  fecha: 2019-12-20
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2019/12/20/turba-rompe-cerco-policial-y-comienzan-desmanes-en-plaza-baquedano.shtml
+  notas: "Cobertura de la jornada del 20 de diciembre de 2019 en Plaza Baquedano: una turba rompió el cerco policial, comenzaron desmanes y Carabineros disparó una gran cantidad de gas lacrimógeno para dispersar a los manifestantes."
+radio-uchile-2019-12-20-copamiento-dignidad:
+  tipo: prensa
+  medio: Diario y Radio Universidad Chile
+  titulo: "Copamiento no acaba con la Dignidad: el día 62 de las movilizaciones sociales"
+  autor: Diario UChile
+  fecha: 2019-12-20
+  url: https://radio.uchile.cl/2019/12/20/copamiento-no-acaba-con-la-dignidad-el-dia-62-de-las-movilizaciones-sociales/
+  notas: "Cronología de la jornada del 20 de diciembre de 2019: el intendente Felipe Guevara anunció 'tolerancia cero' y el despliegue de Fuerzas Especiales para el copamiento de Plaza Baquedano con más de mil carabineros. A las 19:00 la plaza fue tomada nuevamente; se reportó un atropello a un manifestante entre dos carros policiales y el cierre de las estaciones Salvador y Universidad Católica del Metro. Cita: Piensa Chile."
+ciper-2020-11-20-manual-carabineros-gas-cs:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Manual interno de Carabineros reconoce alto riesgo para la salud por uso intensivo de gas irritante"
+  autor: Mauricio Weibel Barahona
+  fecha: 2020-11-20
+  url: https://www.ciperchile.cl/2020/11/20/manual-interno-de-carabineros-reconoce-alto-riesgo-para-la-salud-por-uso-intensivo-de-gas-irritante/
+  notas: "Reportaje de Ciper que accedió al Manual de Operaciones para el Control del Orden Público de Carabineros (más de 200 páginas). El documento reconoce que la exposición a gases irritantes tipo CS genera 'peligrosidad inmediata para la vida y la salud' a 2 mg/m3 y fija el límite de exposición en 0,4 mg/m3 según NIOSH y OSHA, pero no informa con cuántas descargas ni en qué lapso se alcanzan esos niveles. Documenta además que en Chile no se usan gases lacrimógenos sino irritantes potentes (Ortoclorobenzolmalononitrilo CS), que el manual prohíbe usarlos cerca de hospitales o centros educativos y que el 10 de diciembre de 2019 Fuerzas Especiales lanzó 403 descargas en Plaza Italia (34 granadas de mano y 369 cartuchos) entre las 16:30 y las 21:45."
+lavozdelosquesobran-2020-11-21-manual-carabineros:
+  tipo: prensa
+  medio: La Voz de los que Sobran
+  titulo: "Carabineros reconoce alto riesgo para la salud por uso de bombas lacrimógenas"
+  autor: La Voz de los que Sobran
+  fecha: 2020-11-21
+  url: https://lavozdelosquesobran.cl/hoy/carabineros-reconoce-alto-riesgo-para-la-salud-por-uso-de-bombas-lacrimogenas/21112020
+  notas: "Medio digital que replicó la revelación de Ciper del manual interno de Carabineros: el Manual de Operaciones para el Control del Orden Público reconoce la 'peligrosidad inmediata para la vida y la salud' del gas CS a 2 mg/m3 y el límite de exposición de 0,4 mg/m3, sin protocolos para evitar la sobreexposición. Confirma que en Chile no se usan gases lacrimógenos sino irritantes más poderosos."
+interferencia-2020-11-27-isp-lacrimogenas-componentes:
+  tipo: prensa
+  medio: Interferencia
+  titulo: "ISP: componentes de lacrimógenas pueden dañar sangre, corazón y sistema nervioso"
+  autor: Interferencia
+  fecha: 2020-11-27
+  url: https://interferencia.cl/articulos/isp-componentes-de-lacrimogenas-pueden-danar-sangre-corazon-y-sistema-nervioso
+  notas: "Reportaje de Interferencia que complementó la revelación del manual de Carabineros: el Instituto de Salud Pública (ISP), por encargo del Departamento de Armamento y Municiones de Carabineros, elaboró un informe técnico sobre la granada de humo SS-601/BR que documenta efectos nocivos a largo plazo de sus componentes: problemas sanguíneos, daños al sistema nervioso central y periférico, trastornos del tracto digestivo, dermatitis y bronquitis crónica. Obtenido vía Ley de Transparencia."
 cnnchile-2026-06-15-kast-meses-dificiles-empleo:
   tipo: prensa
   medio: CNN Chile
@@ -9986,6 +10275,14 @@ t13-2026-08-04-alvarado-defiende-pavez:
   fecha: 2026-08-04
   url: https://www.t13.cl/noticia/politica/alvarado-defiende-pavez-ante-criticas-squella-salida-exsubsecretario-hacienda-4-8-2026
   notas: "Validación cruzada. Reproduce los mensajes de Squella en el chat de 200 exmiembros de la Fundación Jaime Guzmán (filtrado por Ex-Ante) exigiendo disculpas de Pavez a Rodríguez y la defensa de Alvarado basada en el artículo 110 de la Ley de Reajustes y los protocolos de la Contraloría. Los exámenes de contramuestra (pelo en UC Christus y orina en Bionet) resultaron negativos."
+t13-2026-08-04-alvarado-empleo-megarreforma:
+  tipo: prensa
+  medio: T13
+  titulo: "'En un par de años las oportunidades laborales se van a multiplicar': Biministro Alvarado proyecta efectos de la megarreforma"
+  autor: T13
+  fecha: 2026-08-04
+  url: https://www.t13.cl/noticia/politica/en-par-anos-las-oportunidades-laborales-se-van-multiplicar-biministro-alvarado-4-8-2026
+  notas: "El biministro del Interior y Segegob, Claudio Alvarado, defendió la megarreforma tras el despacho a ley: 'en un par de años las oportunidades laborales se van a multiplicar'. Citó la tasa de desempleo de 9,4% con más de 48 meses sobre el 8%, defendió la compensación a municipios ('ningún municipio recibe más ni recibe menos') y cuestionó a la oposición durante la tramitación."
 fastcheck-2026-08-03-calisto-confenats-platas:
   tipo: investigacion
   medio: Fast Check CL
@@ -11160,6 +11457,14 @@ adnradio-2026-08-05-gremios-pyme-veto-pago-30-dias:
   fecha: 2026-08-05
   url: https://www.adnradio.cl/2026/08/05/megarreforma-gremios-pyme-respaldan-veto-presidencial-por-cambios-a-la-ley-de-pago-a-30-dias/
   notas: "48 organizaciones gremiales pyme respaldan el veto del Ejecutivo al cambio en el régimen de pago a 30 días y piden discutirlo en el futuro Estatuto Pyme 2.0. Participarán en la Comisión de Hacienda de la Cámara que analizará los vetos. Advierten que un régimen excesivamente punitivo podría llevar a reemplazar proveedores pyme."
+adnradio-2026-08-05-recorte-aps-arica:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Recorte de más de $1.300 millones obliga a consultorios de Arica a reducir sus horarios de atención"
+  autor: Martín Neut
+  fecha: 2026-08-05
+  url: https://www.adnradio.cl/2026/08/05/recorte-de-mas-de-1300-millones-obliga-a-consultorios-de-arica-a-reducir-sus-horarios-de-atencion/
+  notas: "La baja en el financiamiento de la APS Universal obligó a los consultorios (Cesfam) de Arica a reducir sus horarios de atención, afectando principalmente la atención de los días sábado. Se enmarca en los recortes a la atención primaria denunciados por Confusam."
 cooperativa-2026-08-04-votacion-final-megarreforma:
   tipo: prensa
   medio: Cooperativa
@@ -11248,6 +11553,70 @@ biobiochile-2026-08-05-ddhh-cidh-kast:
   fecha: 2026-08-05
   url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/05/las-acusaciones-derechos-humanos-contra-el-gobierno-de-kast-que-llegan-a-la-cidh.shtml
   notas: "Cuatro organizaciones chilenas (Red de Observadoras en Justicia y Memoria, Londres 38, Agrupación por la Memoria Histórica Providencia Antofagasta, Asociación por la Memoria y los DDHH Colonia Dignidad, más la ANEF) presentaron ante la CIDH en Washington un informe que acusa 'desmantelamiento' institucional y retrocesos en DDHH bajo el gobierno de Kast: unidades eliminadas o vaciadas (UBAFI, Unidad de Pueblos Indígenas, Programa de DDHH, PNB), reajustes presupuestarios que afectarían a 142 programas, 'indultos pasivos' en nueve causas de cuatro condenados por lesa humanidad, y el abandono de la expropiación de Colonia Dignidad. El gobierno presentará descargos (Rabat)."
+elmostrador-2026-08-06-gobierno-dejo-de-alegar-exagentes:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "El Gobierno dejó de alegar en 20 audiencias de exagentes de la dictadura"
+  autor: El Mostrador (Unidad de Investigación)
+  fecha: 2026-08-06
+  url: https://www.elmostrador.cl/unidad-de-investigacion/2026/08/06/el-gobierno-dejo-de-alegar-en-20-audiencias-de-exagentes-de-la-dictadura/
+  notas: "Cobertura de la audiencia de la CIDH en Washington (5 de agosto de 2026): organizaciones de DDHH (Magdalena Garcés, Tamara Lagos, Paulina Zamorano, Paola Peebles, Erika Hennings, Nuvia Guajardo) denunciaron que el Programa de Derechos Humanos no se presentó a alegar en 20 de 23 audiencias de exagentes de la dictadura; 47 exagentes presentaron solicitudes de beneficios penitenciarios en 2026; dos liberaciones inmediatas y una reducción de condena. Incluye casos: Héctor Osses Yáñez (seis audiencias), César Manríquez, Raúl Areyte, Viviana Ugarte, Jorge Mandiola, Walter Klug Rivera. Versión del gobierno: José Miguel Castro (OEA), Felipe Kipreos (cancillería) y Jorge Hagedorn (Subsecretaría DDHH)."
+latercera-2026-08-06-tc-admite-requerimientos-megarreforma:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "TC admite a trámite y declara admisibles los tres requerimientos que presentó la oposición contra la megarreforma"
+  autor: La Tercera
+  fecha: 2026-08-06
+  url: https://www.latercera.com/nacional/noticia/tc-admite-a-tramite-y-declara-admisibles-los-tres-requerimientos-que-presento-la-oposicion-contra-la-megarreforma/
+  notas: "El Pleno del Tribunal Constitucional admitió a trámite y declaró admisibles los tres requerimientos de senadores y diputados opositores contra la megarreforma (Ley de Reconstrucción Nacional), superando la revisión de forma. Fijó la audiencia de alegatos para el jueves 13 de agosto de 2026."
+t13-2026-08-06-tc-admite-requerimientos-megarreforma:
+  tipo: prensa
+  medio: T13
+  titulo: "TC declara admisible y admite a trámite los tres requerimientos de la oposición en contra de Megarreforma"
+  autor: T13
+  fecha: 2026-08-06
+  url: https://www.t13.cl/noticia/politica/tc-declara-admisible-admite-tramite-requerimiento-oposicion-megarreforma
+  notas: "Cobertura de la admisibilidad de los tres requerimientos de la oposición ante el TC contra la megarreforma: dos de senadores (21 senadores) y uno de diputados (62 diputados). Coordinación jurídica de Tomás Jordán."
+biobiochile-2026-08-06-tc-admite-requerimientos-megarreforma:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "TC admite a trámite y declara admisibles los requerimientos en contra de la megarreforma"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/tribunal-constitucional-admite-a-tramite-y-declara-admisible-requerimientos-en-contra-de-megarreforma.shtml
+  notas: "Cobertura de la decisión del Pleno del TC del 6 de agosto de 2026 sobre los tres requerimientos de la oposición contra la megarreforma."
+cnnchile-2026-08-06-tc-requerimientos-admisibles:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "TC declara admisibles requerimientos por inconstitucionalidad presentados por la oposición contra la mega reforma del Gobierno"
+  autor: Héctor Basoalto
+  fecha: 2026-08-06
+  url: https://www.cnnchile.com/pais/tc-declara-admisibles-requerimientos-por-inconstitucionalidad-presentados-por-la-oposicion-contra-la-mega-reforma-del-gobierno/
+  notas: "Cobertura de la admisibilidad por unanimidad de los tres requerimientos de inconstitucionalidad (Rol N° 17.828-26-CPT, Boletín N° 18.216-05). El TC otorgó cinco días corridos al Presidente, al Senado y a la Cámara para manifestar sus posturas."
+adnradio-2026-08-05-tamayo-cerro-navia-seguridad:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'En estos cuatro meses, no ha cambiado nada': alcalde de Cerro Navia pone en duda agenda de seguridad de Presidente Kast"
+  autor: Javiera Rivera
+  fecha: 2026-08-05
+  url: https://www.adnradio.cl/2026/08/05/en-estos-cuatro-meses-no-ha-cambiado-nada-alcalde-de-cerro-navia-pone-en-duda-agenda-de-seguridad-de-presidente-kast/
+  notas: "El alcalde de Cerro Navia, Mauro Tamayo, aseguró tras la cadena nacional que las medidas anunciadas por el Ejecutivo aún no se traducen en resultados concretos para su comuna: 'en estos cuatro meses, no ha cambiado nada'."
+eldesconcierto-2026-08-06-toledo-agenda-seguridad:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "'La agenda de seguridad está para la tele': el duro cuestionamiento de Matías Toledo al Gobierno de Kast"
+  autor: El Desconcierto
+  fecha: 2026-08-06
+  url: https://eldesconcierto.cl/actualidad/la-agenda-seguridad-esta-la-tele-el-duro-cuestionamiento-matias-toledo-al-gobierno-kast-n5461101
+  notas: "Cobertura de las declaraciones del alcalde de Puente Alto, Matías Toledo, acusando abandono del Ministerio de Seguridad y cuestionando que la estrategia del Gobierno priorice acciones mediáticas ('la agenda de seguridad está para la tele'). Complementa la entrevista original de La Tercera del 5 de agosto."
+elpais-cl-2026-07-22-oposicion-tc-megarreforma:
+  tipo: prensa
+  medio: El País (Chile)
+  titulo: "La oposición lleva a la megarreforma de Kast al Tribunal Constitucional con tres requerimientos"
+  autor: El País
+  fecha: 2026-07-22
+  url: https://elpais.com/chile/2026-07-22/la-oposicion-lleva-a-la-megarreforma-de-kast-al-tribunal-constitucional-con-tres-requerimientos.html
+  notas: "Contexto: presentación de los tres requerimientos de la oposición ante el TC contra la megarreforma de Kast."
 latercera-2026-08-05-contraloria-la-cruz-marihuana:
   tipo: prensa
   medio: La Tercera
@@ -11382,6 +11751,112 @@ biobiochile-2026-08-05-contraloria-sumario-sernac-arica:
   fecha: 2026-08-05
   url: https://www.biobiochile.cl/noticias/nacional/region-de-arica-y-parinacota/2026/08/05/contraloria-abre-sumario-en-sernac-arica-tras-contratacion-de-funcionaria-detenida-en-2017.shtml
   notas: "Verificada por lectura directa (texto completo vía r.jina.ai). La Contraloría General de la República instruyó un sumario administrativo en el Sernac y en los demás servicios públicos pertinentes por eventuales irregularidades en la contratación de personal en la Dirección Regional de Arica y Parinacota, tras la controversia por la incorporación de la asistente social Evelyn Milos (cupo RN, detenida en 2017 con 47 kilos de droga). Resolución firmada el 5 de agosto de 2026: 'atendidos los hechos de público conocimiento difundidos por medios de comunicación sobre eventuales irregularidades y faltas a la probidad administrativa'."
+chilevision-2026-08-06-espinoza-vif-fiscalia:
+  tipo: prensa
+  medio: CHV Noticias
+  titulo: "Fiscalía confirma investigación por violencia intrafamiliar en caso que
+    involucra al senador Fidel Espinoza"
+  autor: CHV Noticias
+  fecha: 2026-08-06
+  url: https://www.chilevision.cl/noticias/nacional/fiscalia-confirma-investigacion-por-violencia-intrafamiliar-en-caso-que-involucra-al-senador-fidel-espinoza/
+  notas: "Verificada por lectura directa (texto completo). La Fiscalía confirmó que Carabineros atendió un llamado por presunta violencia intrafamiliar que involucra al senador Fidel Espinoza: el hecho quedó al descubierto pasadas las 20 horas del miércoles 5 de agosto en un departamento del sector Nueva Aurora, Viña del Mar. Al ingresar, la policía observó desorden y daños en especies; las dos personas entregaron versiones contrapuestas, ambas atribuyendo a la otra actos de agresión. Pese a que ambos manifestaron no querer formular denuncia formal ni concurrir a un centro asistencial, al tratarse de hechos constitutivos de VIF la investigación continuará: se tomará declaración a ambas personas en calidad de imputadas, al conserje y a los funcionarios policiales, además de empadronamiento de testigos, documentación de daños y cámaras de seguridad."
+biobiochile-2026-08-06-ps-causa-espinoza-tribunal-supremo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "PS abre causa contra senador Espinoza ante Tribunal Supremo tras
+    investigación por presunta VIF"
+  autor: Génesis Friz
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/ps-abre-causa-contra-senador-espinoza-ante-tribunal-supremo-tras-investigacion-por-presunta-vif.shtml
+  notas: "Verificada por lectura directa (texto completo vía r.jina.ai). El Partido Socialista decidió suspender la militancia del senador Fidel Espinoza y abrir una causa en su Tribunal Supremo, luego de que quedara bajo investigación por un caso de presunta violencia intrafamiliar. La mesa directiva del partido tomó esta determinación tras conocer los antecedentes que involucran al legislador en una violenta discusión con su pareja en Viña del Mar."
+biobiochile-2026-08-06-espinoza-pareja-vif:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Investigan a senador Espinoza y su pareja por presunta VIF tras discusión
+    con daños en departamento"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/investigan-a-senador-espinoza-y-su-pareja-por-presunta-vif-tras-discusion-con-danos-en-departamento.shtml
+  notas: "Cobertura independiente del mismo caso: la investigación alcanza al senador Fidel Espinoza y a su pareja por presunta violencia intrafamiliar tras una discusión que dejó daños en el departamento de Viña del Mar. Corrobora los hechos reportados por CHV Noticias y ADN."
+adnradio-2026-08-06-espinoza-vif-silencio:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Senador Fidel Espinoza rompe el silencio por investigación VIF: 'No existe
+    denuncia en mi contra'"
+  autor: ADN Radio
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/denuncian-a-senador-fidel-espinoza-por-presunto-episodio-de-violencia-intrafamiliar/
+  notas: "Verificada por lectura directa. Tras la confirmación de la Fiscalía, el senador Fidel Espinoza emitió una declaración pública: 'los hechos señalados tienen que ver con una situación de carácter personal que se produjo en el contexto de una discusión entre dos personas adultas', 'no existió de parte de nadie ningún acto de violencia física ni verbal' y 'no existe denuncia en mi contra ni he sido formalizado por delito alguno'. Anunció que no realizará más declaraciones por respeto a la privacidad de los involucrados."
+lahora-2026-08-06-espinoza-vif-monsalve:
+  tipo: prensa
+  medio: La Hora
+  titulo: "Fiscalía investiga denuncia de violencia intrafamiliar que involucra a
+    Fidel Espinoza: senador es vecino de Manuel Monsalve"
+  autor: La Hora
+  fecha: 2026-08-06
+  url: https://lahora.cl/cronica/2026/08/06/fiscalia-investiga-denuncia-de-violencia-intrafamiliar-que-involucra-a-fidel-espinoza-senador-es-vecino-de-manuel-monsalve/
+  notas: "Cobertura del caso con un dato de contexto: el senador Fidel Espinoza reside en el edificio donde también lo hace el exsubsecretario del Interior Manuel Monsalve, procesado por abuso sexual. Corrobora la investigación de la Fiscalía por presunta VIF en Viña del Mar."
+adnradio-2026-08-05-bus-gendarmeria-la-cisterna:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Giro en caso de bus penitenciario: Fiscalía descarta intento de rescate
+    de reos tras choque contra bus de Gendarmería en La Cisterna"
+  autor: Martín Neut
+  fecha: 2026-08-05
+  url: https://www.adnradio.cl/2026/08/05/giro-en-caso-de-bus-penitenciario-fiscalia-descarta-intento-de-rescate-de-reos-tras-choque-contra-bus-de-gendarmeria-en-la-cisterna/
+  notas: "Verificada por lectura directa. La Fiscalía descartó que el choque contra un bus de Gendarmería en La Cisterna fuera un intento de rescate de reos: los ocupantes del vehículo habrían escapado tras un robo con intimidación. Uno de ellos quedó en prisión preventiva luego del incidente."
+t13-2026-08-05-bus-gendarmeria-descarta-rescate:
+  tipo: prensa
+  medio: T13
+  titulo: "Fiscalía descarta intento de rescate de reos tras detención de sujeto que
+    chocó bus de Gendarmería en La Cisterna"
+  autor: Daniela Lobos
+  fecha: 2026-08-05
+  url: https://www.t13.cl/noticia/nacional/fiscalia-descarta-intento-rescate-reos-tras-detencion-sujeto-choco-bus-gendarmeria-5-8-2026
+  notas: "Verificada por lectura directa. El sujeto detenido tras el incidente del bus de Gendarmería en La Cisterna fue formalizado por robo con intimidación y quedó en prisión preventiva, en el mismo giro de la investigación reportado por ADN: la Fiscalía descartó un intento de rescate de reos."
+emol-2026-08-05-bus-gendarmeria-descartan-rescate:
+  tipo: prensa
+  medio: Emol
+  titulo: "Descartan rescate de reos de Gendarmería"
+  autor: El Mercurio S.A.P.
+  fecha: 2026-08-05
+  url: https://www.emol.com/noticias/Nacional/2026/08/05/1207661/descartan-rescate-reos-gendarmeria.html
+  notas: "Cobertura independiente del giro en la investigación del bus de Gendarmería en La Cisterna: la Fiscalía descartó el intento de rescate de reos. Corrobora la formalización por robo con intimidación."
+biobiochile-2026-08-05-bus-gendarmeria-vuelco:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Vuelco en incidente de bus de Gendarmería: Fiscalía descarta intento de
+    rescate de reos"
+  autor: BioBioChile
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/05/vuelco-en-incidente-de-bus-de-gendarmeria-fiscalia-descarta-intento-de-rescate-de-reos.shtml
+  notas: "Cobertura regional independiente del mismo giro: la Fiscalía descartó el intento de rescate de reos tras el choque contra el bus de Gendarmería en La Cisterna."
+elmostrador-2026-08-05-contraloria-escala-caso-sernac:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Contraloría escala caso Sernac y extiende investigación a otros servicios
+    públicos"
+  autor: El Mostrador
+  fecha: 2026-08-05
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/05/contraloria-escala-caso-sernac-y-extiende-investigacion-a-otros-servicios-publicos/
+  notas: "Verificada por lectura directa (texto completo). La Contraloría General de la República instruyó un sumario administrativo (resolución del 5 de agosto de 2026, Rol N.º 352203/2026) para determinar eventuales responsabilidades por posibles irregularidades y faltas a la probidad en el Sernac de Arica, y resolvió extender las indagatorias a 'los demás servicios públicos pertinentes'. La decisión se produjo un día después de que la Unidad de Investigación de El Mostrador revelara la contratación directa de militantes de RN (incluida Evelyn Milos, detenida con 47 kilos de droga). El organismo remitió los antecedentes al Departamento de Procesos Disciplinarios para que una Fiscalía Administrativa Permanente lleve adelante la investigación. Es la tercera consecuencia institucional en 48 horas tras la renuncia del director regional (S) Marcos Oviedo y el sumario interno del servicio."
+elmostrador-2026-08-06-gobierno-blinda-cifuentes:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Gobierno blinda a Vicepresidenta de Partido Republicano en caso Sernac"
+  autor: El Mostrador
+  fecha: 2026-08-06
+  url: https://www.elmostrador.cl/unidad-de-investigacion/2026/08/06/gobierno-blinda-a-vicepresidenta-de-partido-republicano-en-caso-sernac/
+  notas: "Verificada por lectura directa (texto completo, Unidad de Investigación). La seremi de Economía de Arica y Parinacota, Romina Cifuentes —vicepresidenta nacional del Partido Republicano— se mantiene en la cuerda floja pese al blindaje del Gobierno tras la contratación irregular en el Sernac de Arica (correo de Marcos Oviedo del 11 de junio solicitando autorización para contratar a 'militantes de RN o Republicanos'). Reporta antecedentes: sumario de noviembre de 2024 por uso del vehículo fiscal con fines particulares; el 27 de junio de 2026 la Contraloría le aplicó la multa del 20% de su remuneración mensual (art. 121 letra b) en relación con el art. 123 letra c) de la Ley 18.834, con anotación de demérito de 4 puntos en su hoja de vida. A diferencia de la exseremi de Salud Karla Kepec (desvinculada), el Gobierno mantiene a Cifuentes, nombrada por el propio Presidente Kast. El diputado DC Jorge Díaz pidió su renuncia."
+cambio21-2026-08-06-diez-partidos-cifuentes:
+  tipo: prensa
+  medio: Cambio21
+  titulo: "Diez partidos exigen renuncia de seremi de Economía de Arica y Parinacota
+    por contratar solo a militantes del Gobierno"
+  autor: Cambio21
+  fecha: 2026-08-06
+  url: https://cambio21.cl/politica/diez-partidos-exigen-renuncia-de-seremi-de-economia-de-arica-y-parinacota-por-contratar-solo-a-militantes-del-gobierno-entre-ellas-hay-una-militante-de-rn-detenida-con-47-kilos-de-droga-6a73844c61885c28184c1ef5
+  notas: "Verificada por lectura directa (texto completo). La DC, el PPD, el PC, la Federación Regionalista Verde Social, Izquierda Cristiana, Acción Humanista, el Partido Radical, el Frente Amplio, el PS y el Partido Liberal emitieron una declaración pública conjunta denunciando un patrón sistemático de uso del aparato del Estado con fines de proselitismo político en Arica y Parinacota, y exigen la renuncia de la seremi Romina Cifuentes. Recuerdan que Karla Kepec fue destituida por instrucción directa de la Presidencia (seremi número 31 en dejar el cargo) y contrastan los hechos con la promesa de Kast de proveer los cargos por mérito y no por cuoteo político."
 biobiochile-2026-08-05-hermosilla-arresto-domiciliario:
   tipo: prensa
   medio: BioBioChile
@@ -11839,6 +12314,38 @@ gobierno-2026-08-05-cadena-nacional-kast-acot:
   fecha: 2026-08-05
   url: https://www.youtube.com/watch?v=9-amwvyUYdQ
   notas: "Fuente primaria oficial: video de la cadena nacional del 5 de agosto de 2026 transmitido en vivo desde el Palacio de La Moneda por el canal oficial del Gobierno de Chile. La transcripción completa de la alocución incluye el detalle de los cuatro ejes de la ACOT (perseguir sin descanso, capturar sin excusas, juzgar con todo el peso de la ley, condenar sin beneficios), la reforma constitucional para consagrar la seguridad como deber del Estado y la meta de aprobar todas las herramientas antes de Navidad. Incluye la frase 'no hay marcha atrás' y las cifras al 26 de julio."
+prensa-presidencia-2026-08-05-cadena-nacional-kast:
+  tipo: documento
+  medio: Prensa Presidencia
+  titulo: "Presidente Kast anuncia Agenda Contra el Crimen Organizado y Terrorismo (ACOT) en Cadena Nacional"
+  autor: Gobierno de Chile
+  fecha: 2026-08-05
+  url: https://prensa.presidencia.cl/comunicado.aspx?id=337093
+  notas: "Transcripción oficial de la cadena nacional del 5 de agosto de 2026: texto completo de la alocución de Kast desde La Moneda, con el agradecimiento a los parlamentarios por la Ley de Reconstrucción ('Abre una nueva etapa para el progreso de Chile'), el diagnóstico de la seguridad heredada y el anuncio de la ACOT con la reforma constitucional."
+adnradio-2026-08-05-kast-cadena-mediocridad:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'Llegó la hora de dejar de administrar la mediocridad': Presidente Kast celebra en cadena nacional aprobación de la megarreforma"
+  autor: Mario Vergara
+  fecha: 2026-08-05
+  url: https://www.adnradio.cl/2026/08/05/llego-la-hora-de-dejar-de-administrar-la-mediocridad-presidente-kast-celebra-en-cadena-nacional-aprobacion-de-la-megarreforma/
+  notas: "Cobertura de la cadena nacional del 5 de agosto: Kast promulgó la Ley de Reconstrucción, anunció un paquete de más de 30 medidas legislativas contra el narcotráfico (ACOT) y emplazó a quienes defienden políticas que 'fracasaron'."
+panampost-2026-08-05-kast-reforma-constitucional-seguridad:
+  tipo: prensa
+  medio: PanAm Post (EFE)
+  titulo: "Kast anuncia reforma constitucional en seguridad para 'ampliar' acción contra el crimen"
+  autor: EFE
+  fecha: 2026-08-05
+  url: https://panampost.com/efe-panampost/2026/08/05/kast-promete-nueva-etapa-para-el-progreso-de-chile-con-aprobacion-de-su-megarreforma/
+  notas: "Cobertura internacional (EFE) de la cadena nacional: la reforma constitucional que consagre 'que proteger la seguridad de las personas es un deber del Estado' y la instrucción a Arrau para sacar adelante la ACOT antes de Navidad."
+gobcl-2026-08-05-plan-reconstruccion-medidas:
+  tipo: documento
+  medio: Gobierno de Chile (gob.cl)
+  titulo: "Principales medidas del Plan de Reconstrucción Nacional"
+  autor: Gobierno de Chile
+  fecha: 2026-08-05
+  url: https://www.gob.cl/noticias/principales-medidas-plan-reconstruccion-nacional-detalles/
+  notas: "Página oficial de gobierno con el detalle de las principales medidas del Plan de Reconstrucción Nacional (megarreforma). Contenido verificado parcialmente (página protegida por CAPTCHA); el título y la URL oficiales fueron confirmados."
 biobiochile-2026-08-05-campillai-flores-enfrentamiento:
   tipo: prensa
   medio: BioBioChile
@@ -11911,6 +12418,78 @@ youtube-2026-08-05-campill-flores-enfrentamiento-video-2:
   fecha: 2026-08-05
   url: https://www.youtube.com/watch?v=xi45ppkqy3M
   notas: "Mirror alternativo del registro audiovisual del cruce entre las Flores y Campillai en el Senado el 5 de agosto de 2026."
+youtube-2026-08-05-bio-bio-pelea-senadoras:
+  tipo: video
+  medio: YouTube
+  titulo: "Mira aquí la pelea entre las senadoras Fabiola Campillai y Camila Flores"
+  autor: Bio Bio
+  fecha: 2026-08-05
+  url: https://www.youtube.com/watch?v=DBuCfMrWrtk
+  notas: "Registro audiovisual del cruce publicado por BioBioChile."
+youtube-2026-08-05-flores-campillai-24-horas:
+  tipo: video
+  medio: YouTube
+  titulo: "'Una vergüenza': duro encontrón entre senadoras Fabiola Campillai y Camila Flores"
+  autor: 24 Horas - TVN Chile
+  fecha: 2026-08-05
+  url: https://www.youtube.com/watch?v=l36LgMlW-xA
+  notas: "Registro audiovisual del cruce publicado por 24 Horas TVN."
+cambio21-2026-08-05-flores-campillai-cruce:
+  tipo: prensa
+  medio: Cambio 21
+  titulo: "VIDEO de la pelea. 'Delincuente, cuma' y 'Señora de feria': el feo y duro fuego cruzado entre senadoras Camila Flores y Fabiola Campillai en el Senado"
+  autor: Cambio 21
+  fecha: 2026-08-05
+  url: https://cambio21.cl/pais/video-de-la-pelea-delincuente-cuma-y-senora-de-feria-eres-abogada-y-no-te-sabes-las-leyes-el-feo-y-duro-fuego-cruzado-entre-senadoras-camila-flores-y-fabiola-campillai-en-el-senado-6a73c33ae9e3bc77346ccfa5
+  notas: "Cronología del cruce con frases textuales: 'Una delincuente defendiendo a un delincuente' (Campillai), 'eres abogada y no te sabes las leyes' (Campillai), y el cierre de Flores 'Contrólese, señora, usted necesita más que un médico'."
+x-2026-08-05-fotohistoriacl-feria-2017:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Camila Flores en una feria, 2017 (contexto del uso de 'señora de feria' como descalificación)"
+  autor: Foto Historia Chile (@fotohistoriacl)
+  fecha: 2026-08-05
+  url: https://x.com/fotohistoriacl/status/2085377225222668339
+  notas: "Complementaria: fotografía histórica de Camila Flores en una feria (2017), difundida tras el cruce para ilustrar la ironía de usar 'señora de feria' como insulto contra Campillai. Red social: solo complementaria, no fuente única."
+adnradio-2026-08-06-asof-mujer-feria:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'Ser mujer de feria es un orgullo': ASOF rechaza uso despectivo de la expresión tras cruce en el Senado"
+  autor: Juan Castillo
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/ser-mujer-de-feria-es-un-orgullo-asof-rechaza-uso-despectivo-de-la-expresion-tras-cruce-en-el-senado/
+  notas: "La Confederación Nacional de Ferias Libres de Chile (ASOF), presidida por Paola Morales, rechazó el uso despectivo de 'señora de feria': 'Si alguien cree que decirle a una mujer señora de feria es un insulto, demuestra un profundo desconocimiento de quiénes somos. Ser mujer de feria es un orgullo' y 'Las mujeres de feria alimentamos Chile. Somos emprendedoras, administradoras, trabajadoras incansables y sostenemos buena parte de la economía familiar de nuestro país'."
+biobiochile-2026-08-06-ferias-libres-rechazan-frase:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'Ser mujer de feria es un orgullo': Ferias Libres rechazan frase de Flores (RN) en cruce con Campillai"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/ser-mujer-de-feria-es-un-orgullo-ferias-libres-rechazan-frase-de-flores-rn-en-cruce-con-campillai.shtml
+  notas: "Cobertura adicional de la reacción de ASOF al cruce del 5 de agosto."
+24horas-2026-08-06-ferias-libres-rechazan-frase:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "'Ser mujer de feria es un orgullo': Ferias Libres rechazan frase de Flores contra Campillai"
+  autor: 24 Horas
+  fecha: 2026-08-06
+  url: https://www.24horas.cl/actualidad/nacional/ferias-libres-rechazan-frase-flores-campillai
+  notas: "Cobertura adicional de la reacción de ASOF al cruce del 5 de agosto."
+adnradio-2026-08-05-campillai-justicia-no-se-negocia:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'La justicia no se negocia y menos se borra': La dura embestida de la senadora Campillai contra iniciativa que beneficia a uniformados condenados"
+  autor: Gonzalo Miranda
+  fecha: 2026-08-05
+  url: https://www.adnradio.cl/2026/08/05/la-justicia-no-se-negocia-y-menos-se-borra-la-dura-embestida-de-la-senadora-campillai-contra-iniciativa-que-beneficia-a-uniformados-condenados/
+  notas: "Declaraciones de Fabiola Campillai el 5 de agosto de 2026: '¿Ustedes aceptarían que el delincuente, que el asesino, el violador, el criminal de un familiar suyo quede libre de polvo y paja porque un grupo de senadores decidió que el delito ocurrió bajo un contexto desfavorable?' y 'la justicia no se negocia y menos se borra por decreto'. Incluye video de la senadora."
+eldesconcierto-2026-08-05-campillai-odio-clasismo:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "'Esto es odio, clasismo, revictimización': Fabiola Campillai por petición de Cámara para indultar a Patricio Maturana"
+  autor: El Desconcierto
+  fecha: 2026-08-05
+  url: https://eldesconcierto.cl/actualidad/esto-es-odio-clasismo-revictimizacion-fabiola-campillai-peticion-camara-indultar-patricio-maturana-n5461062
+  notas: "Campillai rechazó la resolución de la Cámara que solicita a Kast el indulto de Patricio Maturana: 'Hoy la Cámara de Diputadas y Diputados aprobó un aberrante proyecto de resolución solicitando el indulto a la persona que me disparó y me dejó ciega de por vida. Es una obsesión enfermiza contra mi persona, por el solo hecho de ser Fabiola Campillai'."
 
 eldesconcierto-2026-08-05-dia-negro-municipalidades-megarreforma:
   tipo: prensa
@@ -12008,3 +12587,531 @@ twitter-piensaprensa-2020-07-06-se-la-pitio-campillai:
   fecha: 2022-09-01
   url: https://www.24horas.cl/actualidad/nacional/caso-fabiola-campillai-carabineros-patricio-maturana
   notas: "Cobertura de la sentencia del Tribunal Oral en lo Penal de San Bernardo que declaró culpable al excapitán Patricio Maturana por apremios ilegítimos con resultado de lesiones graves gravísimas, descartando el delito de lesa humanidad por no comprobarse dolo específico. El tribunal determinó que el actuar policial fue 'desproporcionado y desmedido', sin riesgo real para los funcionarios, y que el disparo se efectuó 'desatendiendo la circular sobre el uso de la fuerza'. La Fiscalía pidió 12 años de cárcel efectiva. Maturana fue detenido el 28/08/2020 con prisión preventiva, luego cambiada a arresto domiciliario total."
+radiouchile-2026-05-05-iglesias-contribuciones:
+  tipo: prensa
+  medio: Diario y Radio Universidad de Chile
+  titulo: "Alcalde de Independencia y eventual eliminación de contribuciones: 'Tendríamos que recortar parte importante de lo que hace el municipio'"
+  autor: Diario y Radio Universidad de Chile
+  fecha: 2026-05-05
+  url: https://radio.uchile.cl/2026/05/05/alcalde-de-independencia-y-eventual-eliminacion-de-contribuciones-tendriamos-que-recortar-parte-importante-de-lo-que-hace-el-municipio/
+  notas: "El alcalde de Independencia y militante de la UDI, Agustín Iglesias, se sumó en mayo de 2026 a las críticas de otros jefes comunales por el impacto de la eliminación del pago de contribuciones en los ingresos del Fondo Común Municipal, advirtiendo que el municipio tendría que recortar parte importante de lo que hace. Primer registro de su postura previa al desmarque de julio."
+latercera-2026-07-27-iglesias-desmarque-compensacion:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Megarreforma: Iglesias se desmarca de alcaldes oficialistas, cuestiona propuesta de compensación y pide veto de Kast"
+  autor: La Tercera
+  fecha: 2026-07-27
+  url: https://www.latercera.com/nacional/noticia/megarreforma-iglesias-se-desmarca-de-alcaldes-oficialistas-cuestiona-propuesta-de-compensacion-y-pide-veto-de-kast/
+  notas: "El alcalde de Independencia, Agustín Iglesias (UDI), manifestó su rechazo al mecanismo propuesto por el gobierno de José Antonio Kast para compensar a los municipios por la pérdida de ingresos derivada de la eliminación de las contribuciones: 'Me parece una mala propuesta', y pidió que el Presidente haga uso del veto aditivo. Primer registro del desmarque de un alcalde oficialista en el debate."
+cnnchile-2026-07-28-iglesias-desmarque-oficialistas:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Megarreforma: Agustín Iglesias se desmarca de los alcaldes oficialistas y cuestiona la fórmula de compensación del gobierno a los municipios"
+  autor: CNN Chile
+  fecha: 2026-07-28
+  url: https://www.cnnchile.com/pais/megarreforma-agustin-iglesias-se-desmarca-de-los-alcaldes-oficialistas-y-cuestiona-la-formula-de-compensacion-del-gobierno-a-los-municipios/
+  notas: "Cobertura del desmarque del alcalde de Independencia, Agustín Iglesias (UDI), de la posición de los alcaldes oficialistas respecto de la fórmula de compensación municipal por la exención de contribuciones de la megarreforma."
+latercera-2026-07-30-iglesias-quiroz-alcaldes-punta:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Alcalde Agustín Iglesias: 'Tanto el ministro Quiroz como los alcaldes de izquierda se pasaron para la punta'"
+  autor: La Tercera
+  fecha: 2026-07-30
+  url: https://www.latercera.com/politica/noticia/alcalde-agustin-iglesias-tanto-el-ministro-quiroz-como-los-alcaldes-de-izquierda-se-pasaron-para-la-punta/
+  notas: "En el programa de streaming de La Tercera 'Desde la Redacción' (29 de julio), el alcalde de Independencia Agustín Iglesias cuestionó la propuesta del gobierno para resarcir a los municipios por el cambio en el pago de contribuciones y dijo que espera que se 'caiga' en el Senado, apostando a que el presidente Kast ingrese un veto de reposición con modificaciones."
+futurocl-2026-07-30-iglesias-contribuciones-entrevista:
+  tipo: prensa
+  medio: Radio Futuro (futuro.cl)
+  titulo: "Agustín Iglesias y el debate por las contribuciones: 'Es una brutalidad usar impuestos generales para compensar a las comunas más ricas de Chile'"
+  autor: Héctor Muñoz Tapia
+  fecha: 2026-07-30
+  url: https://www.futuro.cl/2026/07/agustin-iglesias-y-el-debate-por-las-contribuciones-es-una-brutalidad-usar-impuestos-generales-para-compensar-a-las-comunas-mas-ricas-de-chile/
+  notas: "Entrevista de Palabra Que Es Noticia (PQN) de Radio Futuro al alcalde de Independencia Agustín Iglesias. Señala que los municipios perderían unos $170.000 millones (US$170 millones) por la exención universal de contribuciones a mayores de 65 años (60% FCM repuesto con impuestos generales, 40% recaudación directa inicialmente no repuesta, con Las Condes perdiendo $13.000 millones y Providencia $6.000 millones). 'Reponer 70.000 millones de pesos con impuestos generales, a mi parecer, es una brutalidad... Es una medida profundamente regresiva poner más recursos de impuestos para compensar, principalmente, a las comunas más ricas de Chile'. Agrega que es plata que el Estado podría haber gastado en hospitales o vivienda, y que la focalización la impulsó el hermano del presidente en los años 90."
+cnnchile-2026-08-04-iglesias-derecha-se-equivoco:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "'En esta pasada la derecha se equivocó': Alcalde de Independencia cuestiona la compensación municipal y exención del pago de contribuciones a adultos mayores"
+  autor: CNN Chile
+  fecha: 2026-08-04
+  url: https://www.cnnchile.com/lodijeronencnn/alcalde-de-independencia-cuestiona-la-compensacion-municipal-y-exencion-del-pago-de-contribuciones-a-adultos-mayores/
+  notas: "Entrevista de Hoy es Noticia (CNN Chile) al alcalde Agustín Iglesias tras la aprobación del mecanismo de compensación en el Senado: 'Me siento parte de la derecha y el Gobierno, pero creo que en esta pasada la derecha se equivocó'. Criticó el 'error inicial' de la exención universal sin focalizar, sostuvo que la fórmula 'termina compensando... con impuestos generales a las comunas principalmente más ricas', que 'los municipios pagaron la cuenta de un gustito ideológico de exención masiva y universal' y que se decidió 'solamente por salvar al 34% de algunas comunas de Chile' (170 alcaldes firmaron la carta de respaldo)."
+lun-2026-08-05-iglesias-crispacion-municipal:
+  tipo: prensa
+  medio: Las Últimas Noticias (LUN)
+  titulo: "'Esta discusión ha generado un clima de crispación dentro del mundo municipal'"
+  autor: Las Últimas Noticias
+  fecha: 2026-08-05
+  url: https://lunmas.cl/esta-discusion-ha-generado-un-clima-de-crispacion-dentro-del-mundo-municipal/
+  notas: "El alcalde de Independencia Agustín Iglesias, en la víspera de la votación del último artículo de la megarreforma en el Senado (4 de agosto), afirmó que la discusión por la exención de contribuciones generó 'un clima de crispación dentro del mundo municipal'. Fuente complementaria de su postura."
+reddit-2026-08-05-iglesias-contribuciones:
+  tipo: red_social
+  medio: Reddit (r/chile)
+  titulo: "Agustín Iglesias y el debate por las contribuciones: 'Es una brutalidad usar impuestos generales para compensar a las comunas más ricas de Chile'"
+  autor: r/chile
+  fecha: 2026-08-05
+  url: https://old.reddit.com/r/chile/comments/1vglwna/agust%C3%ADn_iglesias_y_el_debate_por_las/
+  notas: "Hilo de r/chile (206 puntos, 96% upvotes) que viralizó la entrevista de Agustín Iglesias. Fuente complementaria de la conversación pública: no es fuente primaria de datos. Los comentarios cruzaron la crítica de Iglesias con recortes a hospitales y Junaeb (documentados en los eventos 20260625-1 y 20260425-1) y con el beneficio concentrado en Las Condes, Lo Barnechea y Vitacura (evento 20260801-1); la anécdota específica sobre ceftolozano/tazobactam no tiene respaldo verificable puntual, aunque el desabastecimiento sistémico de medicamentos críticos está documentado (Andes Pediátrica, abril 2026)."
+scielo-andespediatr-2026-04-16-desabastecimiento-medicamentos:
+  tipo: documento
+  medio: Andes Pediátrica (SciELO)
+  titulo: "Desabastecimiento de medicamentos en Chile: Una realidad subvalorada y potencialmente prevenible"
+  autor: Daisy Alejandra Miranda Capetanópulos y Jorge Morales Vallespín
+  fecha: 2026-04-16
+  url: https://www.scielo.cl/scielo.php?pid=S2452-60532026005000421&script=sci_arttext
+  notas: "Carta al editor de farmacéuticos del Hospital Dr. Luis Calvo Mackenna (Andes pediatr. vol.97 no.2, Santiago, abril 2026; Epub 16-abr-2026, DOI 10.32641/andespediatr.v97i2.6196). Documenta el desabastecimiento crónico y 'subvalorado' de medicamentos en Chile: quiebres de stock en insumos para nutrición parenteral, sedación, fórmulas enterales, quimioterapia (metotrexato inyectable, vincristina) y medicamentos huérfanos (mitomicina, ampollas de agua destilada), atribuidos a la dependencia de importaciones, la concentración de proveedores y los mercados pequeños. No menciona ceftolozano/tazobactam."
+biobiochile-2026-08-06-lavin-leon-arresto-domiciliario:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Revocan prisión preventiva de Lavín León y pasa a arresto domiciliario: sale hoy de Capitán Yáber"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/joaquin-lavin-leon-deja-la-prision-preventiva-y-pasa-a-arresto-domiciliario-total.shtml
+  notas: "La Segunda Sala de la Corte de Apelaciones de Santiago revocó por dos votos contra uno la prisión preventiva del exparlamentario UDI Joaquín Lavín León, quien permanecía en el Anexo Penitenciario Capitán Yáber desde el 8 de mayo (formalizado por fraude al fisco e infracciones electorales), y la sustituyó por arresto domiciliario total, considerando el tiempo en prisión como atenuante. El abogado defensor Cristóbal Bonacic sostuvo que 'ninguna razón de fondo' justificaba la prisión preventiva."
+latercera-2026-08-06-lavin-prision-revertida:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Exdiputado Joaquín Lavín logra revertir su prisión preventiva y quedará con arresto domiciliario total"
+  autor: José Navarrete
+  fecha: 2026-08-06
+  url: https://www.latercera.com/nacional/noticia/exdiputado-joaquin-lavin-logra-revertir-su-prision-preventiva-y-quedara-con-arresto-domiciliario-total/
+  notas: "Cobertura de La Tercera del fallo de la Segunda Sala: la Fiscalía Oriente remarcó que el tribunal no cuestionó los presupuestos materiales de la causa (existencia de los delitos y participación del imputado acreditadas) y que la Corte argumentó 'la necesidad de cautela' considerando el transcurso del tiempo como antecedente."
+t13-2026-08-06-lavin-arresto-domiciliario:
+  tipo: prensa
+  medio: T13
+  titulo: "Revocan prisión preventiva de Joaquín Lavín León: cumplirá arresto domiciliario total"
+  autor: T13
+  fecha: 2026-08-06
+  url: https://www.t13.cl/noticia/politica/revocan-prision-preventiva-joaquin-lavin-leon-cumplira-arresto-domiciliario-total-6-8-2026
+  notas: "La decisión de la Segunda Sala fue adoptada por dos votos contra uno. El abogado Cristóbal Bonacic había sostenido en revisiones previas que la prisión preventiva carecía de proporcionalidad: 'la resolución parte indicando que la prisión preventiva no es el único medio idóneo para poder garantizar los fines del procedimiento'."
+cooperativa-2026-08-06-lavin-prision-revocada:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Corte de Apelaciones revocó prisión preventiva de Joaquín Lavín León"
+  autor: Cooperativa.cl
+  fecha: 2026-08-06
+  url: https://www.cooperativa.cl/noticias/site/artic/20260806/pags-amp/20260806123302.html
+  notas: "El exdiputado cumplirá arresto domiciliario total en su casa en Peñaflor. La decisión dejó sin efecto la determinación del Séptimo Juzgado de Garantía. Está imputado por fraude al Fisco, tráfico de influencias, falsificación y uso malicioso de instrumento privado mercantil, además de delitos electorales. Cita a Bonacic y al abogado del municipio de Maipú (querellante), José Pedro Silva: 'el único argumento que sostuvo la Corte para revocar la prisión preventiva y decretar el arresto domiciliario total fue el transcurso del tiempo'."
+24horas-2026-08-06-lavin-arresto-domiciliario:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "Corte revoca prisión preventiva de Joaquín Lavín León y decreta arresto domiciliario total"
+  autor: 24 Horas
+  fecha: 2026-08-06
+  url: https://www.24horas.cl/amp/actualidad/nacional/corte-revoca-prision-preventiva-de-joaquin-lavin-leon
+  notas: "La resolución se fundamentó en 'el tiempo que Lavín León ha permanecido bajo la medida cautelar más gravosa'; los magistrados estimaron que una medida de menor intensidad no afectaría el desarrollo de la indagatoria."
+elmostrador-2026-08-06-lavin-arresto-domiciliario:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Corte revoca prisión preventiva de Joaquín Lavín León y ordena arresto domiciliario total"
+  autor: Mesa de noticias
+  fecha: 2026-08-06
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/06/corte-revoca-prision-preventiva-de-joaquin-lavin-leon-y-ordena-arresto-domiciliario-total/
+  notas: "La Segunda Sala revocó por dos votos contra uno la prisión preventiva. El tribunal precisó que la modificación no implica cuestionar los antecedentes de la investigación. La cobertura relacionada señala que la Fiscalía sumó nuevos cargos y elevó el fraude a más de $200 millones."
+biobiochile-2026-08-06-rin-raja-identidad-arrieta:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Revelan identidad de empresario preso por retener y amenazar de muerte a niños por jugar al 'rin raja'"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/06/revelan-identidad-del-empresario-preso-retener-y-amenazar-de-muerte-a-ninos-que-jugaban-al-rin-raja.shtml
+  notas: "Se reveló la identidad del imputado del caso 'ring raja' de Vitacura: Andrés Arrieta, emprendedor y exreservista del Ejército, gerente general de Restomarket, empresa que lo suspendió de todas sus funciones. Contexto del incidente del 10 de julio: persiguió en su camioneta a niños que tocaron su timbre jugando 'rin raja', subió a siete al vehículo y los amenazó de muerte con una pistola; dos escaparon y denunciaron. Formalizado por sustracción de menores, lesiones menos graves y amenazas, con prisión preventiva por casi un mes."
+t13-2026-08-05-rin-raja-arrieta-relato-padres:
+  tipo: prensa
+  medio: T13
+  titulo: "'Los alcanzó en la camioneta y les dijo que los iba a matar': padres de menores que jugaban ring-raja relatan noche de terror en Vitacura"
+  autor: Daniela Lobos
+  fecha: 2026-08-05
+  url: https://www.t13.cl/noticia/nacional/los-alcanzo-camioneta-les-dijo-iba-matar-padres-menores-jugaban-ring-raja-5-8-2026
+  notas: "T13 Central reconstruyó con las familias los cerca de 40 minutos que los menores permanecieron dentro de la camioneta del imputado Andrés Arrieta el viernes 10 de julio en Vitacura. Formalizado por sustracción de menores, lesiones menos graves, amenazas y porte ilegal de arma de fuego. Relatos de los padres: les quitó los celulares, dijo estar armado y bajo efectos de sustancias; dos menores escaparon y pidieron ayuda a un automovilista; al final había seis personas dentro del vehículo."
+biobiochile-2026-08-05-excarabinera-mafil-suprema:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Última carta: excarabinera dada de baja por usar patrulla para comprar en Máfil acude a la Suprema"
+  autor: BioBioChile
+  fecha: 2026-08-05
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-rios/2026/08/05/ultima-carta-excarabinera-dada-de-baja-por-usar-patrulla-para-comprar-en-mafil-acude-a-la-suprema.shtml
+  notas: "La excarabinera dada de baja por usar una patrulla para comprar artículos de aseo y alimentos en un local de Máfil (Región de Los Ríos) apeló a la Corte Suprema tras el rechazo por dos votos contra uno de la Corte de Apelaciones de Valdivia a su recurso de protección. Su abogado, Luis Parra, sostiene que la desvinculación fue arbitraria e ilegal y denuncia discriminación de género: era la única mujer de la Tenencia Carreteras Valdivia Norte y atravesaba una contingencia biológica al momento de las compras."
+x-2026-08-06-lmrendon-injustamente-condenados:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Los «injustamente condenados» por hacer su trabajo"
+  autor: Luis Mariano Rendón (@lmrendon)
+  fecha: 2026-08-06
+  url: https://x.com/lmrendon/status/2085247834400456772
+  notas: "Publicación de Luis Mariano Rendón que cita el tweet del senador Rodolfo Carter ('Es hora de hacer justicia indultando a los carabineros y uniformados que fueron injustamente condenados por hacer su trabajo durante el estallido social') y lo responde con el mensaje 'Los «injustamente condenados» por hacer su trabajo' junto a un video de 49 segundos que compila imágenes de carabineros golpeando a manifestantes pacíficos. Fuente complementaria de redes sociales que da cuenta del debate público sobre los indultos; el video no está verificado por medios."
+biobiochile-2026-08-06-silencio-kast-indultos-exuniformados:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Silencio de Kast sobre indultos a exuniformados abre tensión entre partidos del sector"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/silencio-de-kast-sobre-indultos-a-exuniformados-abre-tension-entre-partidos-del-sector.shtml
+  notas: "Tras la cadena nacional del 5 de agosto en que el presidente Kast no anunció indultos a exuniformados, Republicanos y el Partido Nacional Libertario esperaban al menos una señal política que no llegó. Diego Schalper (RN) pidió 'no torear' al Presidente; la diputada Javiera Rodríguez (REP) reafirmó el compromiso con los indultos tomando distancia del tono de Schalper; Johannes Kaiser (PNL) emplazó al gobierno a resolver la situación de los exuniformados privados de libertad. El ministro de Justicia Fernando Rabat reiteró que cada solicitud será analizada individualmente, con expediente administrativo y resolución fundada."
+telegram-archivandochile-videos-estallido:
+  tipo: red_social
+  medio: Telegram
+  titulo: "Archivando Chile (canal @ArchivandoChile)"
+  autor: "@ArchivandoChile"
+  fecha: 2019-10-01
+  url: https://t.me/s/ArchivandoChile
+  notas: "Canal público de Telegram 'Archivando Chile', surgido durante el periodo de marchas del estallido social de 2019, cuyo historial contiene miles de registros ciudadanos (videos, declaraciones, opiniones) de las protestas, incluidas grabaciones de grupos de carabineros golpeando, dando lumazos y pateando a manifestantes pacíficos que no representaban amenaza. Fuente complementaria de archivo ciudadano: los registros no han sido verificados por medios noticiosos ni constituyen evidencia judicial por sí mismos."
+drive-2019-compilacion-videos-estallido:
+  tipo: documento
+  medio: Google Drive (compilación ciudadana)
+  titulo: "Compilación de videos de las protestas de Chile (2019)"
+  autor: u/beatripit (Reddit)
+  fecha: 2019-11-06
+  url: https://drive.google.com/drive/folders/1xO5rwXFK1gOTuEzDf4wdtJFvyVqSqEXL
+  notas: "Carpeta pública en Google Drive que compila videos de las protestas del estallido social chileno de 2019, compartida por el usuario u/beatripit en el hilo de r/DataHoarder 'Anyone hoarding Chile protest videos?' (6 de noviembre de 2019). Complementa el registro de incidentes policiales durante las marchas que en muchos casos no fueron difundidos por medios noticiosos. Fuente complementaria de archivo ciudadano."
+dropbox-2019-compilacion-videos-estallido:
+  tipo: documento
+  medio: Dropbox (compilación ciudadana)
+  titulo: "Compilación de videos de las protestas de Chile (2019)"
+  autor: "@el_gamer_qlo (Twitter)"
+  fecha: 2019-10-01
+  url: https://www.dropbox.com/sh/90int9i5w5pqkig/AAA-3nBgN5qEkU2BgRKtOGS-a?dl=0
+  notas: "Carpeta pública en Dropbox que compila videos de acciones policiales y abusos de poder durante las marchas del estallido social chileno de 2019, difundida por el usuario @el_gamer_qlo en Twitter (https://twitter.com/el_gamer_qlo/status/1187034417442775041). Fuente complementaria de archivo ciudadano, no verificada por medios."
+fiscalia-2025-10-17-informe-estadistico-estallido:
+  tipo: oficial
+  medio: Fiscalía de Chile (División de Estudios, Unidad de DDHH)
+  titulo: "Informe Estadístico del Estallido Social (18 de octubre de 2019 a 31 de marzo de 2020)"
+  autor: Fiscalía de Chile
+  fecha: 2025-10-17
+  url: https://www.fiscaliadechile.cl/sites/default/files/documentos/Informe_Estallido%20Social_161025_FINAL.pdf
+  notas: "Primer informe del Ministerio Público con cifras integrales del estallido social. Registra 35.146 delitos (21.766 imputados y 20.727 víctimas), 11.506 causas por violencia institucional de agentes del Estado (el delito más frecuente, 34,1%), 464 víctimas de trauma ocular (84% por proyectiles, 230 con algún grado de pérdida visual y 2 casos de ceguera bilateral total), 30 fallecidos (93% hombres), y de las más de 12 mil denuncias por violencia institucional solo 219 terminaron en sentencia condenatoria."
+radiouchile-2025-10-17-fiscalia-464-trauma-ocular:
+  tipo: prensa
+  medio: Diario y Radio de la Universidad de Chile
+  titulo: "Fiscalía confirma 464 víctimas de trauma ocular y 30 fallecidos a 6 años del estallido social"
+  autor: Diario Uchile
+  fecha: 2025-10-17
+  url: https://radio.uchile.cl/2025/10/17/estallido-social-fiscalia-revela-464-victimas-de-trauma-ocular-y-30-fallecidos-a-6-anos-del-18-o/
+  notas: "Cobertura del lanzamiento del Informe Estadístico del Estallido (Fiscalía, octubre 2025). Cifras clave: 35.146 delitos, 21.766 imputados y 20.727 víctimas; el delito más frecuente fue la violencia institucional de agentes del Estado (34,1%); 464 víctimas de trauma ocular (84% por proyectiles y 230 con pérdida visual y 2 cegueras bilaterales); 30 fallecidos (93% hombres). De más de 12,1 mil denuncias por violencia institucional solo 219 terminaron en sentencia condenada."
+reddit-2019-11-06-datahoarder-videos-estallido:
+  type: red_social
+  medio: Reddit (r/DataHoarder)
+  titulo: "Anyone hoarding Chile protest videos?"
+  autor: DwazeKnaap
+  fecha: 2019-11-06
+  url: https://old.reddit.com/r/DataHoarder/comments/dsilcn/anyone_hoarding_chile_protest_videos/
+  notas: "Hilo de r/DataHoarder del 6 de noviembre de 2019 (46 puntos) en que usuarios coordinaron la preservación de videos de las protestas chilenas del estallido social; de ahí se derivaron las compilaciones en Google Drive y Dropbox y un enlace torrent (http://mgnet.me/dRVn4G6). El hilo fue parcialmente anonimizado con Redact. Fuente complementaria de archivo ciudadano."
+emol-2026-05-08-lavin-leon-prision-preventiva:
+  tipo: prensa
+  medio: Emol
+  titulo: "Dictan prisión preventiva para Joaquín Lavín León por fraude al fisco y tráfico de influencias"
+  autor: M. Silva, Emol
+  fecha: 2026-05-08
+  url: https://www.emol.com/noticias/Nacional/2026/05/08/1199486/joaquin-lavin-leon-prision-preventiva.html
+  notas: "El Séptimo Juzgado de Garantía de Santiago dictó prisión preventiva al exdiputado Joaquín Lavín León y a su exasesor Arnaldo Domínguez por fraude al fisco, tráfico de influencias y falsificación de instrumento privado mercantil, tras cinco días de audiencia. El juez Daniel Urrutia fundamentó la medida en la gravedad de las penas probables y en que la libertad de los imputados constituye un peligro para la seguridad de la sociedad; se fijó un plazo de 90 días de investigación. La Fiscalía Metropolitana Oriente (fiscal Constanza Encina) y el Consejo de Defensa del Estado (Rodrigo Álvarez) valoraron el fallo."
+emol-2026-05-08-juez-urrutia-lavin-prision:
+  tipo: prensa
+  medio: Emol
+  titulo: "'Violación masiva de derechos': Los argumentos del juez Urrutia para dictar prisión preventiva a Lavín León"
+  autor: M. Silva, Emol
+  fecha: 2026-05-08
+  url: https://www.emol.com/noticias/Nacional/2026/05/08/1199496/juez-urrutia-lavin-leon-prision.html
+  notas: "Fundamentos de la resolución del juez Daniel Urrutia del Séptimo Juzgado de Garantía: Lavín León se aprovechó de su condición de diputado y esposo de la entonces alcaldesa Cathy Barriga para imponer una 'posición de injerencia' sobre la Municipalidad de Maipú, con interés económico (obtención irregular de bases de datos para fines electorales) y político. Se detalla el esquema de cohecho entre 2015 y 2022 con las imprentas MMG y Total Print (contratos en el municipio por al menos $88 millones entre 2017 y 2021). Urrutia calificó el fenómeno de 'macrocriminalidad' y 'corrupción sistémica': 'la corrupción no es un problema de manzanas podridas, sino de huertos capturados'."
+elmostrador-2026-05-08-lavin-prision-preventiva:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "SocialTazk: Justicia decretó prisión preventiva para Joaquín Lavín León por fraude al fisco"
+  autor: El Mostrador
+  fecha: 2026-05-08
+  url: https://www.elmostrador.cl/noticias/pais/2026/05/08/socialtazk-justicia-decreto-prision-preventiva-para-joaquin-lavin-leon-por-fraude-al-fisco/
+  notas: "Cobertura de la formalización del 8 de mayo de 2026: el Séptimo Juzgado de Garantía decretó prisión preventiva para Joaquín Lavín León y su exasesor Arnaldo Domínguez (penal Santiago 1), en la investigación liderada por la Fiscalía de Alta Complejidad Oriente. El perjuicio fiscal superaba los $104 millones e incluiría el uso de asignaciones parlamentarias para financiar campañas, material gráfico y plataformas de mensajería con bases de datos del Servel (SocialTazk). Se menciona el vínculo con pagos irregulares a asesores de la campaña presidencial de Joaquín Lavín Infante en las primarias de Chile Vamos de 2021. La Corte Suprema había ratificado el desafuero en febrero de 2026."
+diariodevaldivia-2026-06-22-cabo-patrulla-civil:
+  tipo: prensa
+  medio: Diario de Valdivia
+  titulo: "Dan de baja a cabo de Carabineros por conducir patrulla vestida de civil"
+  autor: Pablo Santiesteban
+  fecha: 2026-06-22
+  url: https://www.diariodevaldivia.cl/noticia/actualidad/2026/06/dan-de-baja-a-cabo-de-carabineros-por-conducir-patrulla-vestida-de-civil
+  notas: "Cobertura local de la baja de la cabo 2° Jennifer Marihan Bacovic Rodríguez, de la Tenencia de Carreteras Valdivia Norte, por conducta mala con efectos inmediatos. Los hechos ocurrieron la noche del viernes 19 de junio de 2026: solicitó autorización al suboficial de guardia para usar un vehículo policial y comprar en un minimarket de Máfil (esquina San Martín con Arturo Prat). Compró artículos de aseo, una bebida, comida, una botella de pisco y una bolsa de hielo (según el regente del local). No poseía la licencia Clase F para conducir vehículos institucionales (solo Clase B). Con 6 años y 5 meses de servicio, quedó desvinculada a la espera del sumario administrativo."
+biobiochile-2026-06-22-carabinera-patrulla-mafil:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Dan de baja a carabinera que habría utilizado una patrulla policial para comprar alcohol en Máfil"
+  autor: BioBioChile
+  fecha: 2026-06-22
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-rios/2026/06/22/dan-de-baja-a-carabinera-que-habria-utilizado-una-patrulla-policial-para-comprar-alcohol-en-mafil.shtml
+  notas: "Carabineros dio de baja de forma inmediata a la cabo segundo de la Tenencia Carreteras Valdivia Norte tras viralizarse un video donde se le ve de civil conduciendo una patrulla frente a un minimarket de Máfil. La mujer compró útiles de aseo, una bebida y comida, pero el propietario del local señaló que también adquirió alcohol. El Jefe de Zona en Los Ríos, general Carlos Contreras, confirmó la baja y la instrucción de un sumario administrativo que también busca determinar la participación del oficial que autorizó el uso del vehículo. Los antecedentes fueron enviados al Juzgado de Policía Local de Mariquina por conducción sin la licencia correspondiente."
+biobiochile-2026-06-23-carabineros-sumario-mafil:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Carabineros indaga a más funcionarios por cabo que usó patrulla para comprar alcohol en Máfil"
+  autor: BioBioChile
+  fecha: 2026-06-23
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/23/carabineros-indaga-a-mas-funcionarios-por-cabo-que-uso-patrulla-para-comprar-alcohol-en-mafil.shtml
+  notas: "El sumario administrativo por el uso indebido de la patrulla en Máfil busca establecer responsabilidades de otros uniformados. El prefecto de Valdivia, coronel Juan González, confirmó que la funcionaria habría contado con la autorización de otro carabinero para usar el móvil fiscal pese a no contar con la licencia correspondiente, y que el sumario determinará las responsabilidades administrativas de él o de más personas."
+emol-2026-08-05-ring-raja-vitacura-caso:
+  tipo: prensa
+  medio: Emol
+  titulo: "Por amenazar a niños tras juego del 'ring raja': El caso de sujeto en prisión preventiva que remece a Vitacura"
+  autor: Sofía Campos, Emol
+  fecha: 2026-08-05
+  url: https://www.emol.com/noticias/Nacional/2026/08/05/1207675/ring-raja-vitacura-apoderado-detenido.html
+  notas: "Contexto del caso difundido inicialmente por The Clinic: la noche del 10 de julio de 2026, estudiantes del Colegio Sagrados Corazones de Manquehue jugaban a tocar timbres en Vitacura. El imputado salió exaltado y persiguió en su camioneta 4x4 a siete menores, subiendo a dos a la fuerza y amenazándolos de muerte con un arma de fuego, para luego hacer lo mismo con los otros cinco. La Fiscalía Metropolitana Oriente confirmó la prisión preventiva por sustracción de menores, en investigación liderada por el fiscal de Las Condes Rodrigo Mena; se realizarán entrevistas videograbadas (Ley 21.057). El colegio, cuya rectora es Sandra Durán, activó protocolos de apoyo."
+24horas-2026-08-05-ring-raja-prision-preventiva:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "Niños le hicieron 'ring raja': sujeto persiguió con pistola y retuvo a niños en Vitacura"
+  autor: 24 Horas
+  fecha: 2026-08-05
+  url: https://www.24horas.cl/actualidad/nacional/empresario-de-vitacura-en-prision-preventiva-ninos-ring-raja
+  notas: "El hecho ocurrió el 10 de julio de 2026 cuando siete niños tocaron el timbre de la vivienda dos veces. El hombre salió exaltado, abordó su camioneta y persiguió a los menores; golpeó a los niños y los obligó a subir al vehículo. Dos lograron escapar por una puerta trasera; los otros cinco permanecieron retenidos. Habría amenazado con un arma de fuego. Ante el temor de que los dos fugados lo denunciaran, condujo hasta una esquina y liberó al resto. Permanece en prisión preventiva por sustracción de menores de edad; la Fiscalía Oriente solicitó entrevistas investigativas videograbadas."
+t13-2026-08-06-rin-raja-quien-es-arrieta:
+  tipo: prensa
+  medio: T13
+  titulo: "Es exreservista del Ejército: Quién es el hombre acusado de perseguir, retener y amenazar a menores por jugar al 'ring raja'"
+  autor: T13
+  fecha: 2026-08-06
+  url: https://www.t13.cl/noticia/nacional/quien-hombre-acusado-perseguir-retener-amenazar-nueve-menores-por-jugar-al-rin-6-8-2026
+  notas: "El imputado fue identificado como Andrés Arrieta Arriagada, de 47 años, emprendedor y exreservista del Ejército, gerente general de Restomarket (suspendido de sus funciones tras el hecho). El 10 de julio de 2026, tras la broma del 'ring ring raja' en Vitacura, persiguió en su camioneta Ford New Ranger 4x4 a los menores, subió a siete al vehículo y los amenazó de muerte con una pistola. Es la identidad del empresario detenido en prisión preventiva por sustracción de menores."
+emol-2026-05-11-lavin-visita-hijo-prision:
+  tipo: prensa
+  medio: Emol
+  titulo: "Joaquín Lavín concurre a Capitán Yáber: 'Confío 100% en la inocencia de Cathy y de mi hijo'"
+  autor: M. Silva, Emol
+  fecha: 2026-05-11
+  url: https://www.emol.com/noticias/Nacional/2026/05/11/1199675/joaquin-lavin-visita-hijo-prision.html
+  notas: "El 11 de mayo de 2026, el exministro y exalcalde Joaquín Lavín Infante concurrió al Anexo Penitenciario Capitán Yáber para enrolarse en Gendarmería y poder visitar a su hijo Joaquín Lavín León, en prisión preventiva desde el 8 de mayo por fraude al fisco, tráfico de influencias y malversación de instrumento privado mercantil. Declaró que confía '100 por 100 en la inocencia de Cathy y de Joaquín', pidió no prejuzgar y se refirió a la intención de la Fiscalía de investigarlo por eventual uso irregular de recursos públicos en 2021 durante su precandidatura presidencial, vinculada a asesores parlamentarios de Lavín León."
+dw-2026-08-05-kast-reforma-crimen-organizado:
+  tipo: prensa
+  medio: Deutsche Welle (DW)
+  titulo: "Chile: Kast impulsa reforma para combatir crimen organizado"
+  autor: DW
+  fecha: 2026-08-05
+  url: https://www.dw.com/es/chile-kast-impulsa-reforma-legislativa-contra-crimen-organizado/a-78258899
+  notas: "Cobertura internacional de la cadena nacional del 5 de agosto de 2026 en que el presidente Kast anunció un paquete de más de 30 proyectos contra el crimen organizado (ACOT): reforma constitucional para consagrar el deber del Estado de resguardar la seguridad, pertenencia a organización criminal como delito por sí solo con penas agravadas, endurecimiento de penas por captar menores, ampliación del plazo de flagrancia de 12 a 24 horas, ampliación de la retención de migrantes irregulares (plazo actual de cinco días) y mayor capacidad de expulsión. Aporta el contexto de la tasa de homicidios de Chile: 5,4 por cada 100.000 habitantes en 2025, el doble que hace una década. Menciona además la salida de la ministra Trinidad Steinert tras 69 días en el cargo."
+sabescl-2026-08-05-exseremi-mujer-biobio-tortura:
+  tipo: prensa
+  medio: Sabes.cl
+  titulo: "Exseremi deja el cargo y se despide con polémico mensaje: 'Último día en esta tortura llamada ser seremi de Kast'"
+  autor: Sabes.cl
+  fecha: 2026-08-05
+  url: https://sabes.cl/2026/08/05/exseremi-deja-el-cargo-y-se-despide-con-polemico-mensaje-ultimo-dia-en-esta-tortura-llamada-ser-seremi-de-kast/
+  notas: "Cobertura regional del Biobío: la exseremi de la Mujer y Equidad de Género, Camila Contreras, dejó oficialmente sus funciones tras acogerse durante varios meses al fuero maternal que le permitió mantenerse como titular pese al cambio de administración entre los gobiernos de Boric y Kast. Se despidió con una historia de Instagram: 'Último día en esta tortura llamada ser seremi de Kast, desde mañana libre soy'. El delegado presidencial del Biobío, Julio Anativia, pidió 'actitud republicana' a quienes ejercen funciones públicas. Con su salida, la cartera quedó bajo Michelle Vera, que asumió como seremi titular el 1 de agosto."
+theclinic-2026-08-06-contreras-descargo-tortura:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "'Último día de esta tortura de ser seremi de Kast': Exseremi de la Mujer explica polémico mensaje y asegura que fue un descargo por su exposición"
+  autor: The Clinic
+  fecha: 2026-08-06
+  url: https://www.theclinic.cl/2026/08/06/ultimo-dia-de-esta-tortura-de-ser-seremi-de-kast-exseremi-de-la-mujer-explica-polemico-mensaje-y-asegura-que-fue-un-descargo-por-su-exposicion/
+  notas: "Cobertura del descargo de Camila Contreras tras el polémico mensaje. Explicó en un extenso video que 'la tortura' aludía a la exposición y las críticas que enfrentó como autoridad regional, no a un ataque personal contra Kast: 'me refería a eso con la frase, al último día de ser autoridad, de sentirme expuesta, de sentirme criticada'. Relató que renunció el 11 de marzo ante Boric, se enteró dos semanas después de su embarazo y el Ministerio de la Mujer decidió respetar su fuero maternal manteniéndola en el cargo. Defendió el trato de la administración actual ('no he tenido ningún problema con la ministra, la subsecretaria') y pidió que se respete el fuero laboral. Ejerció el cargo desde marzo de 2024; su reemplazante, Michelle Vera Machuca, fue presentada el lunes previo."
+adnradio-2026-08-06-contreras-descargo-polemico:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'Último día de esta tortura de ser seremi de Kast': exseremi de la Mujer realiza descargo tras polémico mensaje"
+  autor: ADN Radio
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/ultimo-dia-de-esta-tortura-de-ser-seremi-de-kast-exseremi-de-la-mujer-realiza-descargo-tras-polemico-mensaje/
+  notas: "Cobertura del descargo de Camila Contreras, profesora de historia y una de las últimas autoridades designadas por el expresidente Boric que se mantenía en el gobierno de Kast. La exseremi descartó que sus dichos constituyeran un ataque personal contra el Mandatario y aclaró que aludían al desgaste emocional por el escrutinio público: 'cuando hablo de que se termina la tortura (...) tiene que ver con la exposición, que es lo que ha sido más doloroso y más horrible para mí'. Contextualizó su permanencia: presentó su renuncia el 11 de marzo, confirmó su embarazo dos semanas después y el ministerio decidió respetar su situación de maternidad. La repartición quedó encabezada por Michelle Vera Machuca."
+biobiochile-2009-12-20-frei-invita-pc-campana:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Frei invita a Partido Comunista a unirse a su campaña presidencial"
+  autor: BioBioChile
+  fecha: 2009-12-20
+  url: https://www.biobiochile.cl/noticias/2009/12/20/frei-invita-a-partido-comunista-a-unirse-a-su-campana-presidencial.shtml
+  notas: "El candidato presidencial de la Concertación, Eduardo Frei, no escondió su intención de obtener el apoyo del Partido Comunista en la segunda vuelta presidencial del 17 de enero de 2010 contra Sebastián Piñera. La invitación la formuló en el relanzamiento de su campaña en Valparaíso y Viña del Mar (Quinta Región), con acto cultural, recorrido por la feria del Marga-Marga y una tallarinata, acompañado de la nueva vocera del comando, Carolina Tohá, y del ministro de Hacienda, Andrés Velasco."
+radio-uchile-2009-12-20-pc-oficializa-apoyo-frei:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "PC oficializa su apoyo a Frei para la segunda vuelta"
+  autor: Radio Universidad de Chile
+  fecha: 2009-12-20
+  url: https://radio.uchile.cl/2009/12/20/pc-oficializa-su-apoyo-a-frei-para-la-segunda-vuelta/
+  notas: "El Partido Comunista anunció que respaldará a Eduardo Frei en el balotaje del 17 de enero de 2010 contra Sebastián Piñera. La resolución fue anunciada en el frontis de la Municipalidad de San Miguel tras el plenario del Comité Central. El comando de Frei suscribió un documento de 12 puntos comprometiendo reformas políticas e institucionales (nueva Constitución, fortalecimiento de Codelco estatal, cambio tributario para aliviar el 7% de los jubilados y término del sistema binominal). Guillermo Teillier afirmó: 'Nosotros vamos a trabajar por el triunfo de Eduardo Frei'. Carolina Tohá destacó el acuerdo y Frei agradeció el apoyo en San Ramón. El PC aclaró que no formará parte de un eventual gobierno de la Concertación ni del comando, trabajando desde un comando paralelo, sin descartar la participación activa de Jorge Arrate."
+theclinic-2025-11-25-frei-pc-2009:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "El día en que Eduardo Frei pidió el voto de los militantes del PC en su intento por volver a La Moneda en 2009"
+  autor: The Clinic
+  fecha: 2025-11-25
+  url: https://www.theclinic.cl/2025/11/25/el-dia-en-que-eduardo-frei-pidio-el-voto-de-los-militantes-del-pc-en-su-intento-por-volver-a-la-moneda-en-2009/
+  notas: "Retrospectiva sobre el balotaje de 2009: tras pasar a segunda vuelta frente a Sebastián Piñera, Eduardo Frei buscó al electorado de Jorge Arrate, candidato del Partido Comunista ese año, obteniendo posteriormente el respaldo del PC, incluido el de su presidente Guillermo Teillier. Artículo publicado en 2025 en el contexto de la cercanía entre Frei y José Antonio Kast, que reactivó las críticas por este episodio."
+biobiochile-2010-01-19-suprema-fiscales-casinos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Suprema declara ilegal prohíbir a fiscales el ingreso a casinos de juego"
+  autor: BioBioChile
+  fecha: 2010-01-19
+  url: https://www.biobiochile.cl/noticias/2010/01/19/suprema-declara-ilegal-prohibir-a-fiscales-el-ingreso-a-casinos-de-juego.shtml
+  notas: "La Tercera Sala de la Corte Suprema revocó la medida dispuesta por el fiscal nacional Sabas Chahuán que impedía el ingreso de los fiscales adjuntos a las salas de juego de los casinos del país, acogiendo el recurso de protección presentado por la Asociación Nacional de Fiscales. Se pronunciaron los ministros Adalis Oyarzún, Héctor Carreño, Pedro Pierry y Haroldo Brito, con el voto en contra de la ministra Sonia Araneda. El fallo sostiene que el fiscal nacional no está facultado para ello porque la Constitución declara estas cuestiones materia de ley, e invade un campo que excede sus prerrogativas reglamentarias. Se ordenó dejar sin efecto la instrucción general en la parte que prohíbe a los fiscales adjuntos asistir a las salas de juego."
+emol-2010-01-19-suprema-fiscales-casinos:
+  tipo: prensa
+  medio: Emol
+  titulo: "Suprema declara ilegal prohibición de Fiscal Nacional a que fiscales vayan a los casinos"
+  autor: Emol
+  fecha: 2010-01-19
+  url: https://www.emol.com/noticias/nacional/2010/01/19/394649/suprema-declara-ilegal-prohibicion-de-fiscal-nacional-a-que-fiscales-vayan-a-los-casinos.html
+  notas: "La Tercera Sala de la Corte Suprema declaró ilegal la decisión del fiscal nacional Sabas Chahuán de prohibir el ingreso de los fiscales adjuntos a las salas de juego de los casinos del país, revocando la decisión adoptada en su oportunidad. Cobertura independiente de Emol que corrobora el fallo del 19 de enero de 2010."
+cooperativa-2010-01-19-fiscales-casinos-luz-verde:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Corte Suprema dio luz verde a los fiscales para ingresar a casinos"
+  autor: Cooperativa
+  fecha: 2010-01-19
+  url: https://www.cooperativa.cl/noticias/pais/judicial/ministerio-publico/corte-suprema-dio-luz-verde-a-los-fiscales-para-ingresar-a-casinos/2010-01-19/192946.html
+  notas: "La Corte Suprema dio luz verde a los fiscales para ingresar a los casinos, al acoger el recurso de la Asociación Nacional de Fiscales contra la instrucción del fiscal nacional Sabas Chahuán. Cobertura de Cooperativa que corrobora el fallo de la Tercera Sala del 19 de enero de 2010."
+biobiochile-2010-01-20-chahuan-responde-fallo-casinos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sabas Chahuán responde a fallo de la Corte Suprema que deja libre a fiscales para ingresar a casinos de juegos"
+  autor: BioBioChile
+  fecha: 2010-01-20
+  url: https://www.biobiochile.cl/noticias/2010/01/20/sabas-chahuan-responde-a-fallo-de-la-corte-suprema-que-deja-libre-a-fiscales-para-ingresar-a-casinos-de-juegos.shtml
+  notas: "En una reunión protocolar con el presidente de la Corte Suprema, Milton Juica, el fiscal nacional Sabas Chahuán se refirió al fallo de la Tercera Sala que revocó la medida que impedía el ingreso de los fiscales adjuntos a las salas de juego de los casinos. El fiscal nacional dijo que no queda nada más que respetar y acatar este fallo del tribunal máximo del país."
+latercera-2010-01-20-chahuan-casinos-acatar:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Sabas Chahuán y fallo que autoriza ingreso de fiscales a casinos: 'Tendremos que acatarlo'"
+  autor: La Tercera
+  fecha: 2010-01-20
+  url: https://www.latercera.com/noticia/sabas-chahuan-y-fallo-que-autoriza-ingreso-de-fiscales-a-casinostendremos-que-acatarlo/
+  notas: "El fiscal nacional Sabas Chahuán dio por cerrada la polémica por su ordenanza que buscaba impedir el ingreso de fiscales a los casinos de juego, luego que la Corte Suprema acogiera un recurso de la Asociación Nacional de Fiscales contra la medida: 'Tendremos que acatarlo'. Cobertura de La Tercera del 20 de enero de 2010."
+biobiochile-2009-11-23-municipios-perros-tenencia:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Municipios e Intendencia de Santiago iniciarán campaña de tenencia responsable para reducir perros abandonados"
+  autor: BioBioChile
+  fecha: 2009-11-23
+  url: https://www.biobiochile.cl/noticias/2009/11/23/municipios-e-intendencia-de-santiago-iniciaran-campana-de-tenencia-responsable-para-reducir-numero-de-perros-abandonados.shtml
+  notas: "La Asociación Chilena de Municipalidades y la Intendencia Metropolitana iniciaron una campaña masiva de tenencia responsable de mascotas y más recursos para esterilizaciones para reducir los más de 250 mil perros abandonados de Santiago, de un total de casi 1.200.000 canes en la RM (50% con dueño irresponsable). El intendente Igor Garafulic consideró fundamental sumar una campaña publicitaria; Gonzalo Navarrete (comisión de salud de la Asociación de Municipios) descartó la eutanasia masiva; el seremi de salud Roberto Belmar aclaró que el tema no pasa por mayores acciones punitivas. Los ediles pidieron que el proyecto de ley de tenencia de mascotas en trámite (votado en la Comisión de Salud del Senado, camino a Hacienda) provea financiamiento para las nuevas atribuciones municipales."
+chilevision-2021-12-10-perros-abandonados-ley:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "Hay 300 mil perros abandonados: Las críticas a la ley de tenencia responsable de mascotas"
+  autor: Chilevisión
+  fecha: 2021-12-10
+  url: https://www.chilevision.cl/noticias/reportajes/a-fondo/hay-300-mil-perros-abandonados-la-criticas-a-la-ley-de-tenencia-responsable-de-mascotas/
+  notas: "Reportaje de contexto (2021) sobre la implementación de la Ley Cholito de tenencia responsable: más de un año después de su entrada en vigor, apenas un 39,4% de los municipios aprobó las ordenanzas requeridas y se estimaban 300 mil perros abandonados. Corrobora la persistencia del problema documentado en 2009 por la campaña de la Asociación Chilena de Municipalidades."
+biobiochile-2010-01-08-quillota-fondos-concursables:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Municipio de Quillota entrega catastro de Fondos Concursables 2010 a organizaciones de la comuna"
+  autor: BioBioChile
+  fecha: 2010-01-08
+  url: https://www.biobiochile.cl/noticias/2010/01/08/municipio-de-quillota-entrega-catastro-de-fondos-concursables-2010-a-organizaciones-de-la-comuna.shtml
+  notas: "La Municipalidad de Quillota preparó un catastro de las distintas alternativas de financiamiento para 2010, consistente en un listado de alrededor de veinte fondos concursables y programas sociales, culturales y deportivos a los que pueden postular las organizaciones territoriales, funcionales y no gubernamentales. El catastro se entregaba en la oficina N°11 de O'Higgins 480 y se realizaron reuniones informativas en los territorios de La Said y El Sendero (sede Manuela Figueroa)."
+biobiochile-2009-12-21-sence-directora-chapa-frei:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sence amonesta verbalmente a su directora en la X Región tras usar chapa de Frei en actividad pública"
+  autor: BioBioChile
+  fecha: 2009-12-21
+  url: https://www.biobiochile.cl/noticias/2009/12/21/sence-amonesta-verbalmente-a-su-directora-en-la-x-region-tras-usar-chapa-de-frei-en-actividad-publica.shtml
+  notas: "La dirección nacional del Sence reconoció que la directora regional de Los Lagos, Gloria González, cometió un error al portar una chapita de Eduardo Frei en una actividad pública el jueves 17 de diciembre de 2009. En un comunicado firmado por el director nacional Juan Manuel Castro Rebolledo, se determinó que la funcionaria cometió el error por olvido involuntario, se la amonestó verbalmente invocando las instrucciones de la presidenta Michelle Bachelet que prohíben la actividad política de funcionarios públicos en horario laboral, y se emitió un documento escrito advirtiendo a todos los directores regionales del Sence. Se recuerda que semanas antes el intendente de Los Ríos, Iván Flores, renunció por un episodio similar (folleto de Frei) y que en la Intendencia de Los Lagos se mantenía una investigación por un correo enviado desde un computador fiscal invitando a una actividad pro Frei."
+latercera-2009-12-19-funcionaria-chapita-frei:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Funcionaria Regional usa chapita de Frei en acto público"
+  autor: La Tercera
+  fecha: 2009-12-19
+  url: https://www.latercera.com/noticia/funcionaria-regional-usa-chapita-de-frei-en-acto-publico/
+  notas: "La directora regional del Sence en la Región de Los Lagos, Gloria González, participó en la cuenta pública de la Seremi del Trabajo en el salón azul de la Intendencia de Puerto Montt luciendo una chapita roja con letras blancas que decía 'Vamos a vivir mejor, Frei'. Dio entrevistas a la prensa con la chapita puesta, como mostró el canal regional Vertice TV. Cobertura previa al comunicado de amonestación del 21 de diciembre de 2009."
+biobiochile-2010-01-14-concejal-ortiz-violencia-intrafamiliar:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Concejal de Concepción Álvaro Ortiz condenado por violencia intrafamiliar"
+  autor: BioBioChile
+  fecha: 2010-01-14
+  url: https://www.biobiochile.cl/noticias/2010/01/14/concejal-de-concepcion-alvaro-ortiz-condenado-por-violencia-intrafamiliar.shtml
+  notas: "El director regional del INJUV del Bío-Bío y concejal de Concepción, Álvaro Ortiz Vera (DC), fue condenado por el Juzgado de Familia de Concepción por violencia intrafamiliar denunciada por su conviviente. La magistrada Mireya Celis determinó que Ortiz es responsable de los hechos y deberá pagar una multa a beneficio de la Gobernación por el valor de 2 UTM, además de someterse a un tratamiento de control de impulsos y agresividad. La lectura de sentencia quedó fijada para el día siguiente. El concejal afrontaba además otro proceso en el Juzgado de Garantía de San Pedro de la Paz: formalizado por conducción en estado de ebriedad y daños tras derribar un poste en la población Padre Hurtado II, más una querella por obstrucción a la justicia y falsificación de instrumento público contra los carabineros que hicieron el parte (fiscal Paolo Muñoz)."
+emol-2010-01-14-concejal-ortiz-vif:
+  tipo: prensa
+  medio: Emol
+  titulo: "Concejal de Concepción fue condenado por violencia intrafamiliar"
+  autor: Emol
+  fecha: 2010-01-14
+  url: https://www.emol.com/noticias/nacional/2010/01/14/393895/concejal-de-concepcion-fue-condenado-por-violencia-intrafamiliar.html
+  notas: "El director del INJUV de la Región del Bío-Bío y concejal de Concepción, Álvaro Ortiz Vera, deberá pagar una multa a beneficio de la Gobernación por el valor de dos Unidades Tributarias Mensuales por ser responsable de violencia intrafamiliar en contra de su conviviente. La jueza Mireya Celis, titular del Juzgado de la Familia de Concepción, determinó además que Ortiz deberá someterse a un tratamiento para control de impulso y agresividad. Se menciona el proceso paralelo en el Juzgado de Garantía de San Pedro de la Paz por conducción en estado de ebriedad y daños."
+dw-2019-10-25-marcha-millon-santiago:
+  tipo: prensa
+  medio: Deutsche Welle (DW)
+  titulo: "Santiago protests: 1 million people take part in the biggest march in Chile"
+  autor: DW
+  fecha: 2019-10-25
+  url: https://www.dw.com/en/santiago-protests-1-million-people-take-part-in-the-biggest-march-in-chile/a-50996118
+  notas: "Cobertura internacional de la marcha del 25 de octubre de 2019, la más grande de la historia de Chile, con alrededor de un millón de personas en las calles de Santiago pidiendo la renuncia de Sebastián Piñera. Incluye el tuit de la intendenta Karla Rubilar ('un día histórico') y la reacción de Piñera ('todos hemos escuchado el mensaje'), el contexto de 19 muertos en una semana, 7.000 detenidos, el estado de emergencia, la evacuación del Congreso en Valparaíso y la entrevista al canciller Teodoro Ribera. Cifra de 1,2 millones según organizadores."
+reuters-2019-10-25-millon-chilenos-marcha:
+  tipo: prensa
+  medio: Reuters
+  titulo: "One million Chileans march in Santiago, city grinds to halt"
+  autor: Reuters
+  fecha: 2019-10-25
+  url: https://www.reuters.com/article/world/one-million-chileans-march-in-santiago-city-grinds-to-halt-idUSKBN1X41NG/
+  notas: "Crónica de Reuters sobre la marcha del 25 de octubre de 2019: un millón de personas en Santiago, la ciudad paralizada, manifestantes con banderas chilenas frente a Plaza Italia y el toque de queda de las 23:00. La protesta más grande del país desde el retorno a la democracia."
+reuters-2019-11-15-constitucion-triunfo-manifestantes:
+  tipo: prensa
+  medio: Reuters
+  titulo: "Chile to re-write Pinochet-era constitution in win for protesters"
+  autor: Reuters
+  fecha: 2019-11-15
+  url: https://www.reuters.com/article/us-chile-protests-idUSKBN1XL1I1
+  notas: "Cobertura de Reuters del Acuerdo por la Paz Social y la Nueva Constitución del 15 de noviembre de 2019: los partidos políticos acuerdan reescribir la Constitución de la era Pinochet, en una victoria para los manifestantes del estallido social. Referencia al plebiscito de abril de 2020."
+guardian-2019-10-30-retratos-manifestantes-pinera:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Chile protesters: 'We are subjugated by the rich. It's time for that to end'"
+  autor: The Guardian
+  fecha: 2019-10-30
+  url: https://www.theguardian.com/world/2019/oct/30/chile-protests-portraits-protesters-sebastian-pinera
+  notas: "Retratos y testimonios de manifestantes chilenos del estallido social publicados por The Guardian el 30 de octubre de 2019, una semana después de la marcha del millón. Contexto de las demandas de desigualdad y del hartazgo con el modelo económico."
+guardian-2020-10-03-menor-puente-mapocho:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Chilean police throw boy, 16, off bridge during protests"
+  autor: The Guardian
+  fecha: 2020-10-03
+  url: https://www.theguardian.com/world/2020/oct/03/chilean-police-throw-boy-16-off-bridge-during-protests
+  notas: "El viernes 2 de octubre de 2020, durante la represión a manifestantes en Plaza Italia, un adolescente de 16 años fue lanzado por un carabinero desde el puente Pío Nono al canal del río Mapocho, cayendo 7 metros. El general Enrique Monrás no descartó responsabilidad institucional y afirmó que el joven 'perdió el equilibrio'. El menor quedó estable en la Clínica Santa María. El fiscal reportó 8.575 violaciones a los DDHH atribuidas a Carabineros desde octubre de 2019 con solo 16 agentes dados de baja."
+bbc-mundo-2020-10-03-puente-pio-nono:
+  tipo: prensa
+  medio: BBC Mundo
+  titulo: "Joven cae al Mapocho: indignación en Chile al precipitarse al río un menor desde 7 metros de altura tras ser empujado por un policía"
+  autor: BBC Mundo
+  fecha: 2020-10-03
+  url: https://www.bbc.com/mundo/noticias-america-latina-54408601
+  notas: "Cobertura de BBC Mundo del caso Pío Nono: la Fiscalía Centro Norte anunció la detención del agente por homicidio frustrado (fiscal Ximena Chong), la caída de 7 metros, fracturas de muñeca y TEC, el comunicado de la Clínica Santa María sobre A.J.A.A., la versión inicial de Carabineros (teniente coronel Rodrigo Soto) que habló de 'accidente', la condena de la Defensoría de la Niñez, la querella del INDH (Sergio Micco) y los pedidos de renuncia de Mario Rozas y Víctor Pérez."
+elciudadano-2021-02-18-pio-nono-declaracion:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Joven lanzado por carabinero al río Mapocho: 'Sentí un empujón que me levantó y choqué con la baranda poniente del puente Pío Nono'"
+  autor: El Ciudadano
+  fecha: 2021-02-18
+  url: https://www.elciudadano.com/justicia/joven-lanzado-por-carabinero-al-rio-mapocho-senti-un-empujon-que-me-levanto-y-choque-con-la-baranda-poniente-del-puente-pio-nono/02/18/
+  notas: "Publicación de la declaración judicial del adolescente de 17 años víctima del caso Pío Nono, entregada el 12 de enero de 2021 en la Brigada de Derechos Humanos de la PDI (consignada por El Mercurio). Relata el empujón por la espalda a la altura de la mochila, la caída desde la baranda poniente, su recuperación física y psicológica. Confirma la formalización del ex carabinero Sebastián Zamora por homicidio frustrado con prisión preventiva y la querella de la defensora de la Niñez Patricia Muñoz."
+independent-2019-11-12-laser-drones:
+  tipo: prensa
+  medio: The Independent
+  titulo: "Protesters take on shotgun-wielding police with lasers"
+  autor: The Independent
+  fecha: 2019-11-12
+  url: https://www.independent.co.uk/news/world/americas/chile-protest-lasers-drone-riot-police-santiago-a9205591.html
+  notas: "El 12 de noviembre de 2019 manifestantes en Santiago derribaron con láseres un dron de monitoreo policial, táctica difundida desde las protestas de Hong Kong. La policía había advertido tres días antes que apuntar láseres a los pilotos de helicópteros era delito por el riesgo a la seguridad del vuelo. Contexto: 25 muertos y miles de heridos en el primer mes del estallido."
+clarin-2024-10-23-inba-molotov:
+  tipo: prensa
+  medio: Clarín
+  titulo: "Estalla una bomba molotov manipulada por alumnos en el baño de una escuela en Chile: hay 35 heridos, 15 de ellos de gravedad"
+  autor: Clarín
+  fecha: 2024-10-23
+  url: https://www.clarin.com/mundo/estalla-bomba-molotov-manipulada-alumnos-bano-escuela-chile-20-heridos_0_oPTa6vFpqx.html
+  notas: "El 23 de octubre de 2024 un cóctel molotov que estudiantes manipulaban en el baño del Internado Nacional Barros Arana (INBA) explotó, dejando 35 heridos, 15 de gravedad por quemaduras y 4 en riesgo vital con quemaduras del 20 al 30% de las vías respiratorias. Los alumnos se preparaban para salir a manifestarse en el quinto aniversario del estallido. El coronel Fernando Albornoz (Prefectura Santiago Central) detalló los hechos y se indicó que una docente también resultó afectada. Con información de AP y Emol."
+latercera-2024-10-24-inba-coctel-molotov:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Un cóctel de molotovs: qué pasó en el baño del INBA previo a la tragedia"
+  autor: La Tercera PM
+  fecha: 2024-10-24
+  url: https://www.latercera.com/la-tercera-pm/noticia/un-coctel-de-molotovs-que-paso-en-el-bano-del-inba-previo-a-la-tragedia/GQRFAGHETNAVPL7XPV3RIXXJDU/
+  notas: "Reportaje de La Tercera PM sobre el caso INBA: el Laboratorio de Criminalística de Carabineros (Labocar) realizó peritajes a los líquidos inflamables que manipulaban los estudiantes en uno de los baños cuando uno de los artefactos estalló, generando una serie de detonaciones. La Fiscalía Centro Norte investigó la participación de los estudiantes."
+biobiochile-2019-10-20-7-muertos-toque-de-queda-14-ciudades:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Chile crisis: 7 dead, curfew imposed in 14 cities as government tries to face riots, looting, arson"
+  autor: BioBioChile English
+  fecha: 2019-10-20
+  url: https://www.biobiochile.cl/noticias/biobiochile-english/english-chile/2019/10/20/chile-crisis-7-dead-curfew-imposed-in-14-cities-as-government-tries-to-face-riots-looting-arson.shtml
+  notas: "Cobertura en inglés de BioBioChile del 20 de octubre de 2019: 7 muertos y toque de queda en 14 ciudades mientras el gobierno de Piñera intentaba contener los disturbios, saqueos e incendios del estallido social. Complementa la cronología del evento 20191018-1."

@@ -15,6 +15,63 @@ people:
         organizacion: municipalidad_coquimbo
         desde: 2024-12-06
     organizacion: municipalidad_coquimbo
+  agustin_iglesias:
+    nombre: Agustín Iglesias
+    cargo: Alcalde de Independencia (UDI)
+    cargos:
+      - cargo: Alcalde de Independencia
+        organizacion: municipalidad_independencia
+        desde: 2024-12-06
+    organizacion: municipalidad_independencia
+    notas: "Alcalde de Independencia, militante de la UDI. Se desmarcó públicamente del oficialismo por la exención universal de contribuciones y la fórmula de compensación municipal de la megarreforma (julio-agosto 2026): calificó de 'brutalidad' reponer con impuestos generales los recursos de las comunas más ricas, pidió veto presidencial y afirmó que 'en esta pasada la derecha se equivocó'. En mayo de 2026 ya había advertido que la eliminación de contribuciones obligaría a recortar parte importante de lo que hace el municipio."
+  joaquin_lavin_leon:
+    nombre: Joaquín Lavín León
+    cargo: Exparlamentario UDI
+    organizacion: union_democrata_independiente
+    notas: "Exparlamentario de la UDI, hijo del exalcalde de Las Condes Joaquín Lavín. Formalizado el 8 de mayo de 2026 por fraude al Fisco, tráfico de influencias, falsificación, uso malicioso de instrumento privado mercantil e infracciones electorales, cumplió prisión preventiva en el Anexo Penitenciario Capitán Yáber. El 6 de agosto de 2026 la Segunda Sala de la Corte de Apelaciones de Santiago revocó la medida por dos votos contra uno y la sustituyó por arresto domiciliario total en su domicilio de Peñaflor."
+  arnaldo_dominguez:
+    nombre: Arnaldo Domínguez
+    cargo: Exasesor parlamentario
+    notas: "Exasesor del exparlamentario Joaquín Lavín León y coimputado en la causa por corrupción que derivó en la formalización del 8 de mayo de 2026. El Séptimo Juzgado de Garantía de Santiago le decretó prisión preventiva por cohecho, infracciones tributarias y delitos electorales, entre otros; fue derivado al penal Santiago 1. Según la tesis del juez Daniel Urrutia, ejercía influencias sobre funcionarios municipales para favorecer a la imprenta MMG."
+  cathy_barriga:
+    nombre: Cathy Barriga
+    cargo: Exalcaldesa de Maipú
+    organizacion: municipalidad_maipu
+    notas: "Exalcaldesa de Maipú (2016-2021) y esposa del exparlamentario Joaquín Lavín León. El juez Daniel Urrutia sostuvo en la formalización del 8 de mayo de 2026 que Lavín se aprovechó de su condición de esposo de la entonces alcaldesa para imponer una 'posición de injerencia' sobre el municipio maipucino, contexto en que se adjudicó material de campaña a las imprentas MMG y Total Print. Su propio proceso judicial por fraude al Fisco contra el municipio se tramita por separado; el padre de Lavín, Joaquín Lavín Infante, declaró en mayo de 2026 que cree '100 por 100 en la inocencia' de ambos."
+  joaquin_lavin_infante:
+    nombre: Joaquín Lavín Infante
+    cargo: Exministro y exalcalde de Las Condes
+    notas: "Exministro de Educación y de Desarrollo Social, exalcalde de Las Condes y padre del exparlamentario Joaquín Lavín León. El 11 de mayo de 2026 concurrió al Anexo Penitenciario Capitán Yáber para enrolarse en Gendarmería y visitar a su hijo tras la prisión preventiva, declarando que cree '100 por 100 en la inocencia de Cathy y de Joaquín' y pidió no prejuzgar. Su campaña presidencial en las primarias de Chile Vamos de 2021 aparece vinculada a pagos irregulares a asesores detectados en la investigación."
+  daniel_urrutia:
+    nombre: Daniel Urrutia
+    cargo: Juez de Garantía
+    notas: "Magistrado del Séptimo Juzgado de Garantía de Santiago. El 8 de mayo de 2026 dictó prisión preventiva para Joaquín Lavín León y Arnaldo Domínguez tras cinco días de audiencia, calificando los hechos como 'macrocriminalidad' y 'corrupción sistémica': 'la corrupción no es un problema de manzanas podridas, sino de huertos capturados'."
+  cristobal_bonacic:
+    nombre: Cristóbal Bonacic
+    cargo: Abogado defensor
+    notas: "Abogado defensor del exparlamentario Joaquín Lavín León en la causa por fraude al Fisco e infracciones electorales. Tras la revocación de la prisión preventiva (agosto 2026) sostuvo que 'ninguna razón de fondo' justificaba mantener a su cliente privado de libertad."
+  andres_arrieta:
+    nombre: Andrés Arrieta
+    cargo: Gerente general de Restomarket
+    organizacion: restomarket
+    notas: "Empresario y exreservista del Ejército, gerente general de Restomarket. Detenido y formalizado por sustracción de menores, lesiones menos graves, amenazas y porte ilegal de arma de fuego tras retener y amenazar de muerte a niños que jugaban 'ring raja' en Vitacura (10 de julio de 2026). La empresa lo suspendió de todas sus funciones mientras dura la investigación."
+  jennifer_bacovic:
+    nombre: Jennifer Marihan Bacovic Rodríguez
+    cargo: Ex cabo 2° de Carabineros
+    organizacion: carabineros
+    notas: "Ex cabo segundo de la Tenencia de Carreteras Valdivia Norte de Carabineros. La noche del viernes 19 de junio de 2026, tras su turno, usó un vehículo policial para compras personales en un minimarket de Máfil: artículos de aseo, una bebida, comida, una botella de pisco y una bolsa de hielo (según el regente del local), sin poseer la licencia Clase F requerida. Carabineros le decretó la baja por conducta mala con efectos inmediatos el 22 de junio de 2026, tras viralizarse un video del hecho. Con 6 años y 5 meses de servicio, quedó desvinculada a la espera del sumario administrativo. Su abogado, Luis Parra, denunció discriminación de género y recurrió de protección, rechazado por la Corte de Apelaciones de Valdivia (2-1) y apelado ante la Corte Suprema en agosto de 2026."
+  luis_parra:
+    nombre: Luis Parra
+    cargo: Abogado
+    notas: "Abogado de la excarabinera Jennifer Bacovic en la causa por su baja de Carabineros tras usar una patrulla para compras personales en Máfil. Sostiene que la desvinculación fue arbitraria e ilegal y denuncia discriminación de género: la uniformada era la única mujer de la Tenencia Carreteras Valdivia Norte y atravesaba una contingencia biológica al momento de las compras."
+  rodrigo_mena_vogel:
+    nombre: Rodrigo Mena Vogel
+    cargo: Fiscal de Las Condes
+    notas: "Fiscal de la Fiscalía Metropolitana Oriente a cargo de la investigación del caso del empresario que persiguió, retuvo y amenazó de muerte a niños que jugaban 'ring raja' en Vitacura (10 de julio de 2026). Bajo su dirección el imputado Andrés Arrieta fue formalizado por sustracción de menores, lesiones menos graves, amenazas y porte ilegal de arma de fuego y quedó en prisión preventiva."
+  luis_mariano_rendon:
+    nombre: Luis Mariano Rendón Escobar
+    cargo: Activista y abogado
+    notas: "Activista y abogado. En agosto de 2026 respondió al llamado del senador Rodolfo Carter a indultar a los 'injustamente condenados' por hacer su trabajo durante el estallido social con un video que compila imágenes de carabineros golpeando a manifestantes pacíficos, bajo el mensaje 'Los «injustamente condenados» por hacer su trabajo'."
   matias_toledo:
     nombre: Matías Toledo
     cargo: Alcalde de Puente Alto (Ind.)
@@ -91,6 +148,59 @@ people:
     nombre: Paulina Zamorano
     cargo: Vocera de organizaciones de derechos humanos
     notas: "Vocera de las agrupaciones chilenas que presentaron ante la CIDH (agosto 2026) un informe que acusa retrocesos y 'desmantelamiento' institucional en materia de derechos humanos bajo el gobierno de Kast."
+  magdalena_garces:
+    nombre: Magdalena Garcés
+    cargo: Abogada de derechos humanos
+    notas: "Abogada de organizaciones de DDHH. Expuso ante la CIDH (5 de agosto de 2026) denunciando que el Ministerio de Justicia y DDHH habría prohibido a los abogados del Programa de Derechos Humanos intervenir en procesos de revisión de penas de condenados por graves violaciones a los DDHH: 47 exagentes presentaron solicitudes de reducción de penas y el Programa no se presentó a alegar en 20 de 23 audiencias."
+  tamara_lagos:
+    nombre: Tamara Lagos
+    cargo: Representante de organizaciones de derechos humanos
+    notas: "Representante de organizaciones de DDHH chilenas que expusieron ante la CIDH en Washington el 5 de agosto de 2026."
+  paola_peebles:
+    nombre: Paola Peebles
+    cargo: Hija de víctima de Colonia Dignidad
+    notas: "Hija de Enrique Peebles, sobreviviente de torturas en Colonia Dignidad. Expuso ante la CIDH (5 de agosto de 2026) recordando que más de 100 personas desaparecieron allí y cuestionó que el enclave siga siendo propiedad privada de los perpetradores."
+  erika_hennings:
+    nombre: Erika Hennings
+    cargo: Representante de organizaciones de derechos humanos
+    notas: "Representante de organizaciones de DDHH chilenas que expusieron ante la CIDH en Washington el 5 de agosto de 2026."
+  nuvia_guajardo:
+    nombre: Nuvia Guajardo
+    cargo: Representante de organizaciones de derechos humanos
+    notas: "Representante de organizaciones de DDHH chilenas que expusieron ante la CIDH en Washington el 5 de agosto de 2026."
+  jose_miguel_castro:
+    nombre: José Miguel Castro
+    cargo: Representante de Chile ante la OEA
+    notas: "Exdiputado de Renovación Nacional y representante de Chile ante la OEA. Encabezó los descargos del gobierno de Kast en la audiencia de la CIDH del 5 de agosto de 2026, calificando de 'absolutamente incompatibles con la realidad fáctica' las denuncias de desmantelamiento de la institucionalidad de DDHH."
+  felipe_kipreos:
+    nombre: Felipe Kipreos
+    cargo: Abogado de la cancillería
+    notas: "Abogado del Ministerio de Relaciones Exteriores. En la audiencia de la CIDH del 5 de agosto de 2026 defendió los despidos en el Programa de DDHH como parte de un 'reordenamiento organizacional' y rechazó el calificativo de 'gobierno de ultraderecha' usado por las organizaciones denunciantes."
+  jorge_hagedorn:
+    nombre: Jorge Hagedorn
+    cargo: Abogado de la Subsecretaría de DDHH
+    notas: "Abogado de la Subsecretaría de Derechos Humanos. En la audiencia de la CIDH del 5 de agosto de 2026 negó la existencia de una instrucción general de no comparecer en causas de exagentes, afirmando que el análisis es 'caso a caso'."
+  hector_osses_yanez:
+    nombre: Héctor Osses Yáñez
+    cargo: Exoficial de Carabineros condenado por crímenes de lesa humanidad
+    notas: "Exoficial de Carabineros que encabezó la matanza de pobladores de La Granja. Según la denuncia ante la CIDH (agosto 2026), fue el exagente con más audiencias de revisión de pena en 2026: seis, en ninguna de las cuales el Programa de DDHH se presentó a alegar."
+  cesar_manriquez:
+    nombre: César Manríquez Bravo
+    cargo: Exagente de la DINA condenado por crímenes de lesa humanidad
+    notas: "Exagente de la DINA condenado por crímenes de lesa humanidad. Según la denuncia de las organizaciones ante la CIDH (agosto 2026), la justicia determinó su excarcelación y entrega a su esposa en 2026, en un caso en que el Programa de DDHH no intervino."
+  walter_klug_rivera:
+    nombre: Walter Klug Rivera
+    cargo: Exoficial del SIM condenado por crímenes de lesa humanidad
+    notas: "Exoficial del Servicio de Inteligencia Militar, condenado por siete homicidios calificados y 23 secuestros calificados en el marco del caso Endesa (Bío Bío). Posee pasaporte alemán; fue detenido en 2019 en Parma (Italia), se fugó hacia Argentina y fue recapturado en Buenos Aires en 2021. Según la denuncia ante la CIDH (2026), el Programa de DDHH no se presentó a alegar contra su pretensión de unificación de penas, que le fue favorable."
+  tomas_jordan:
+    nombre: Tomás Jordán
+    cargo: Abogado constitucionalista
+    notas: "Abogado constitucionalista que coordinó la ofensiva jurídica de la oposición ante el Tribunal Constitucional contra la megarreforma de Kast en 2026 (tres requerimientos: dos de senadores y uno de diputados)."
+  constanza_garrido:
+    nombre: Constanza Garrido
+    cargo: Directora del Programa de Derechos Humanos
+    organizacion: programa_derechos_humanos
+    notas: "Directora del Programa de Derechos Humanos del Ministerio de Justicia y DDHH. En abril de 2026 fue autora de un correo interno, revelado por BioBioChile, en el que reconoce haber recibido instrucciones de 'no alegar o apelar en causas en etapa de cumplimiento' de condenados por crímenes de lesa humanidad, contradiciendo la versión oficial del ministro Fernando Rabat. El correo fue usado por las organizaciones de DDHH en la denuncia ante la CIDH (agosto 2026) como evidencia de los 'indultos pasivos'."
   alejandra_pizarro:
     nombre: Alejandra Pizarro
     cargo: Subsecretaria de Salud Publica
@@ -182,6 +292,41 @@ people:
         desde: 2022-03-11
         hasta: 2022-09-07
     organizacion: ministerio_interior
+  sabas_chahuan:
+    nombre: Sabas Chahuán
+    cargo: Fiscal Nacional
+    organizacion: ministerio_publico
+    notas: "Fiscal Nacional de Chile (2007-2015). En enero de 2010 dictó una instrucción general que prohibía a los fiscales adjuntos ingresar a las salas de juego de los casinos del país, medida que la Tercera Sala de la Corte Suprema declaró ilegal el 19 de enero de 2010 (recurso de protección de la Asociación Nacional de Fiscales). Tras el fallo señaló que no quedaba más que respetarlo y acatarlo."
+  milton_juica:
+    nombre: Milton Juica
+    cargo: Presidente de la Corte Suprema
+    organizacion: corte_suprema
+    notas: "Ministro y presidente de la Corte Suprema de Chile (2010-2012). El 20 de enero de 2010 sostuvo una reunión protocolar con el fiscal nacional Sabas Chahuán, quien se refirió al fallo de la Tercera Sala que revocó la prohibición de ingreso de fiscales a los casinos de juego."
+  guillermo_teillier:
+    nombre: Guillermo Teillier
+    cargo: Presidente del Partido Comunista
+    organizacion: partido_comunista
+    notas: "Presidente del Partido Comunista de Chile (2005-2021) y diputado. En diciembre de 2009 oficializó el apoyo del PC a la candidatura de Eduardo Frei para la segunda vuelta presidencial del 17 de enero de 2010 contra Sebastián Piñera, tras suscribir el comando de Frei un documento programático de 12 puntos."
+  jorge_arrate:
+    nombre: Jorge Arrate
+    cargo: Exministro y excandidato presidencial
+    notas: "Exministro de Estado (Educación y Minería, 2006-2010), excandidato presidencial del Juntos Podemos en 2009. Tras quedar fuera de la segunda vuelta, respaldó a Eduardo Frei en el balotaje del 17 de enero de 2010; el Partido Comunista anunció que no descartaba su participación activa en la campaña de Frei."
+  andres_velasco:
+    nombre: Andrés Velasco
+    cargo: Ministro de Hacienda
+    notas: "Economista y ministro de Hacienda del gobierno de Michelle Bachelet (2006-2010). En diciembre de 2009 acompañó al candidato presidencial Eduardo Frei en el relanzamiento de su campaña en Valparaíso y Viña del Mar, reconociendo que la tarea de Frei sería mejorar la calidad de la política chilena."
+  igor_garafulic:
+    nombre: Igor Garafulic
+    cargo: Intendente Metropolitano
+    notas: "Intendente de la Región Metropolitana (2006-2010) bajo el gobierno de Michelle Bachelet. En noviembre de 2009 impulsó con la Asociación Chilena de Municipalidades una campaña masiva de tenencia responsable de mascotas para reducir los más de 250 mil perros abandonados de la RM."
+  roberto_belmar:
+    nombre: Roberto Belmar
+    cargo: Seremi de Salud de la Región Metropolitana
+    notas: "Seremi de Salud de la Región Metropolitana en 2009. En el marco de la campaña de tenencia responsable de mascotas señaló que el problema no pasa por mayores acciones punitivas."
+  gonzalo_navarrete:
+    nombre: Gonzalo Navarrete
+    cargo: Presidente de la Comisión de Salud de la Asociación Chilena de Municipalidades
+    notas: "Edil y presidente de la comisión de salud de la Asociación Chilena de Municipalidades en 2009. Descartó la eutanasia masiva como solución para reducir el número de perros abandonados en la Región Metropolitana."
   carolina_toha:
     nombre: Carolina Tohá
     cargo: Exministra del Interior
@@ -221,6 +366,10 @@ people:
       - cargo: Senador (DC)
         organizacion: partido_democratacristiano
         desde: 2026-03-11
+      - cargo: Intendente de Los Ríos
+        desde: 2008-01
+        hasta: 2009-12
+    notas: "Senador DC desde 2026. En diciembre de 2009 renunció a la Intendencia de Los Ríos tras ser captado con un folleto de campaña de Eduardo Frei en un acto oficial, en plena segunda vuelta presidencial. Su renuncia fue citada por el Sence como antecedente en la amonestación a la directora regional de Los Lagos por usar una chapita de Frei."
   javier_macaya:
     nombre: Javier Macaya
     cargo: Senador (UDI)
@@ -232,10 +381,15 @@ people:
     nombre: Jorge Antonio Quiroz Castro
     cargo: Ministro de Hacienda
     cargos:
+      - cargo: Coordinador económico de campaña de José Antonio Kast
+        organizacion: partido_republicano
+        desde: 2025-07-10
+        hasta: 2026-03-11
       - cargo: Ministro de Hacienda
         organizacion: ministerio_hacienda
         desde: 2026-03-11
     organizacion: ministerio_hacienda
+    bio: "<p>Economista chileno nacido en Valparaíso en 1962, hijo de profesores universitarios humanistas. Estudió en el Colegio Alemán de Valparaíso y la Escuela Experimental de la Universidad Santa María de Viña del Mar, y luego Ingeniería Comercial en la Universidad de Chile. Obtuvo un doctorado en economía en Duke University, institución donde también estudiaron Ricardo Lagos y Walter Molano.</p><p>Fue académico de la Pontificia Universidad Católica, de ILADES Georgetown (1991-94) y profesor adjunto de la Facultad de Ingeniería Industrial de la Universidad de Chile (1994-99). Cofundó la consultora Gerens junto al economista Patricio Arrau y en 2001 fundó la consultora Quiroz y Asociados, donde se dedicó durante más de dos décadas a asesorar a empresas en litigios económicos y de libre competencia. Forma parte del directorio de la Bolsa de Comercio de Santiago.</p><p>Autor de los libros 'Cuentos Pendientes' (2015) y 'Chile entre sus dos terremotos' (2017, con su hija), ha sido columnista de El Mercurio. Durante la campaña presidencial de José Antonio Kast fue coordinador económico, y asumió como ministro de Hacienda el 11 de marzo de 2026.</p>"
   alvaro_gonzalez:
     nombre: Álvaro González
     cargo: Subsecretario de Minería
@@ -913,6 +1067,33 @@ people:
     nombre: Emerson Berríos
     cargo: Presidente Fenats Nacional
     organizacion: fenats
+  mauricio_weibel:
+    nombre: Mauricio Weibel Barahona
+    cargo: Periodista de investigación
+    organizacion: ciper_chile
+    notas: "Periodista de Ciper Chile. Autor del reportaje del 20 de noviembre de 2020 que reveló el Manual de Operaciones para el Control del Orden Público de Carabineros, en el que la institución reconoce que la exposición a gases irritantes CS genera 'peligrosidad inmediata para la vida y la salud' a partir de 2 mg/m3."
+  fernanda_cavieres:
+    nombre: Fernanda Cavieres
+    cargo: Toxicóloga, académica de la Universidad de Valparaíso
+    notas: "Toxicóloga y académica de la Universidad de Valparaíso. Tras la revelación del manual interno de Carabineros (Ciper, noviembre 2020) planteó la necesidad de que existan normas validadas legalmente en Chile sobre el uso del gas CS."
+  lucia_dammert:
+    nombre: Lucía Dammert
+    cargo: Socióloga y experta en seguridad pública
+    notas: "Socióloga chilena, experta en seguridad pública. Tras la revelación del manual interno de Carabineros (Ciper, noviembre 2020) señaló que 'Carabineros ha logrado establecer normas ajustadas a derecho y eso es reconocido, pero el punto es que nadie revisa el accionar'."
+  felipe_guevara:
+    nombre: Felipe Guevara
+    cargo: Intendente de la Región Metropolitana (2019)
+    notas: "Intendente de la Región Metropolitana durante el estallido social. El 20 de diciembre de 2019 anunció 'tolerancia cero' frente a las manifestaciones no autorizadas y ordenó el despliegue de Fuerzas Especiales para el copamiento de Plaza Baquedano, con más de mil carabineros."
+  gabriela_flores:
+    nombre: Gabriela Flores Salgado
+    cargo: Presidenta de Confusam
+    organizacion: confusam
+    notas: "Presidenta nacional de la Confederación Nacional de Funcionarios y Funcionarias de la Salud Municipalizada (Confusam). En julio y agosto de 2026 lideró las protestas frente a La Moneda por la deuda del reajuste per cápita (más de $21.800 millones) y los recortes a la atención primaria, entregando cartas al presidente José Antonio Kast sin respuesta."
+  makarena_albornoz:
+    nombre: Makarena Albornoz
+    cargo: Dirigenta nacional de Confusam
+    organizacion: confusam
+    notas: "Dirigenta nacional de la Confederación Nacional de Funcionarios y Funcionarias de la Salud Municipalizada (Confusam). Tras los incidentes de la protesta del 8 de julio de 2026 frente a La Moneda denunció 'gran represión' por parte de Carabineros."
   ximena_ordenes:
     nombre: Ximena Órdenes
     cargo: Senadora por Aysén (Ind-PS-PPD-PL)
@@ -1411,7 +1592,23 @@ people:
       - cargo: Diputado (DC)
         organizacion: partido_democratacristiano
         desde: 2026-03-11
-    notas: Crítico de megarreforma, llamó "mentiroso" a Quiroz
+      - cargo: Director regional del INJUV del Bío-Bío
+        organizacion: injuv
+        desde: 2009-01
+        hasta: 2010-01
+      - cargo: Concejal de Concepción
+        organizacion: municipalidad_de_concepcion
+        desde: 2008-01
+        hasta: 2016-12
+    notas: "Político DC. Concejal de Concepción y director regional del INJUV del Bío-Bío en 2009-2010, cuando fue condenado por el Juzgado de Familia de Concepción por violencia intrafamiliar (multa de 2 UTM y tratamiento de control de impulsos, enero 2010) y formalizado por conducción en estado de ebriedad y daños en San Pedro de la Paz. Diputado DC desde 2026, crítico de la megarreforma."
+  gloria_gonzalez:
+    nombre: Gloria González
+    cargo: Exdirectora regional del Sence de Los Lagos
+    notas: "Directora regional del Servicio Nacional de Capacitación y Empleo (Sence) en la Región de Los Lagos en 2009. El 17 de diciembre de 2009 participó en la cuenta pública de la Seremi del Trabajo en Puerto Montt luciendo una chapita de campaña de Eduardo Frei ('Vamos a vivir mejor, Frei'), lo que la dirección nacional del Sence calificó como un error por olvido involuntario, amonestándola verbalmente por infringir la instrucción de la presidenta Michelle Bachelet que prohíbe la actividad política de funcionarios públicos en horario laboral."
+  juan_manuel_castro:
+    nombre: Juan Manuel Castro Rebolledo
+    cargo: Director nacional del Sence
+    notas: "Director nacional del Servicio Nacional de Capacitación y Empleo (Sence) en 2009. Firmó el comunicado del 21 de diciembre de 2009 en que la dirección nacional reconoció que la directora regional de Los Lagos, Gloria González, cometió un error al portar una chapita de Eduardo Frei en una actividad pública, y anunció su amonestación verbal, invocando las instrucciones de la presidenta Michelle Bachelet que prohíben la actividad política de los funcionarios públicos en horario laboral. Emitió además un documento escrito advirtiendo a todos los directores regionales del Sence."
   carlos_mulet:
     nombre: Carlos Mulet
     cargo: Senador (PDG)
@@ -1496,6 +1693,35 @@ people:
     nombre: Littré Quiroga
     cargo: Exdirector General de Prisiones
     notas: Asesinado en septiembre de 1973 junto a Víctor Jara en el Estadio Chile
+  victor_perez:
+    nombre: Víctor Pérez Varela
+    cargo: Exministro del Interior y Seguridad Pública
+    organizacion: ministerio_del_interior
+    notas: "Ministro del Interior y Seguridad Pública del segundo gobierno de Sebastián Piñera entre 2020 y 2021. En octubre de 2020, tras el caso Pío Nono (menor lanzado desde un puente por un carabinero), sectores de la oposición pidieron su renuncia junto a la del director general de Carabineros, Mario Rozas."
+  mario_rozas:
+    nombre: Mario Rozas Córdova
+    cargo: Exdirector general de Carabineros
+    organizacion: carabineros
+    notas: "Director general de Carabineros entre 2018 y 2020, durante el estallido social. Tras el caso Pío Nono (2 de octubre de 2020), la oposición pidió su renuncia y la del ministro del Interior, Víctor Pérez, por las violaciones a los derechos humanos de la represión policial."
+  karla_rubilar:
+    nombre: Karla Rubilar Barahona
+    cargo: Exintendenta de la Región Metropolitana
+    notas: "Intendenta de la Región Metropolitana durante el estallido social (2019-2020). El 25 de octubre de 2019 calificó en Twitter la marcha de alrededor de un millón de personas como 'un día histórico' en que 'la Región Metropolitana es la protagonista de una marcha pacífica'. Exministra de Desarrollo Social y secretaria general de Gobierno."
+  enrique_monras:
+    nombre: Enrique Monrás
+    cargo: Exvocero de Carabineros
+    organizacion: carabineros
+    notas: "General de Carabineros y vocero institucional en 2020. Tras la caída de un adolescente desde el puente Pío Nono al río Mapocho (2 de octubre de 2020), señaló en una alocución televisada que el joven 'perdió el equilibrio y cayó' durante una detención, aunque no descartó la responsabilidad de la institución."
+  sebastian_zamora:
+    nombre: Sebastián Zamora
+    cargo: Excarabinero formalizado por el caso Pío Nono
+    organizacion: carabineros
+    notas: "Carabinero formalizado en octubre de 2020 por homicidio en grado de frustrado tras la caída de un adolescente de 16 años desde el puente Pío Nono al río Mapocho durante la represión de una manifestación (2 de octubre de 2020). Quedó en prisión preventiva. Su defensa argumentó que el joven se habría lanzado, mientras peritajes de cámaras y el testimonio de la víctima indicaron que el impacto de Zamora causó la caída."
+  patricia_munoz:
+    nombre: Patricia Muñoz
+    cargo: Exdefensora de la Niñez
+    organizacion: defensoria_de_la_ninez
+    notas: "Defensora de la Niñez entre 2018 y 2022. En el caso Pío Nono (2020), como querellante, pidió que el carabinero Sebastián Zamora permaneciera en prisión preventiva y condenó la 'acción criminal' de Carabineros contra el adolescente lanzado desde el puente Pío Nono."
   paola_plaza:
     nombre: Paola Plaza
     cargo: Ministra en visita de la Corte de Apelaciones de Santiago
@@ -3356,7 +3582,16 @@ people:
     nombre: Fidel Espinoza
     cargo: Senador PS
     organizacion: partido_socialista
-    notas: "Senador del Partido Socialista. Se inhabilitó en la votación del Senado del 4 de agosto de 2026 que aprobó el mecanismo de compensación a los municipios de la megarreforma, sin efectos en el resultado (27 a favor, 22 en contra)."
+    notas: "Senador del Partido Socialista. Se inhabilitó en la votación del Senado del 4 de agosto de 2026 que aprobó el mecanismo de compensación a los municipios de la megarreforma, sin efectos en el resultado (27 a favor, 22 en contra). En agosto de 2026 quedó bajo investigación de la Fiscalía por un episodio de presunta violencia intrafamiliar en Viña del Mar, tras lo cual el PS suspendió su militancia y abrió una causa en su Tribunal Supremo."
+  jorge_diaz:
+    nombre: Jorge Díaz
+    cargo: Diputado (DC)
+    cargos:
+      - cargo: Diputado (DC)
+        organizacion: partido_democratacristiano
+        desde: 2026-03-11
+    organizacion: partido_democratacristiano
+    notas: "Diputado de la Democracia Cristiana. En el marco del caso Sernac de Arica (agosto 2026) solicitó la renuncia de la seremi de Economía, Romina Cifuentes, señalando que si conocía los antecedentes de la contratación irregular debía explicarlos y asumir responsabilidades."
   elia_piedras:
     nombre: Elia Piedras
     cargo: Presidenta del Colegio de Periodistas de Maule Norte
@@ -3381,7 +3616,7 @@ people:
     nombre: Camila Contreras
     cargo: Exseremi de la Mujer del Bío Bío
     organizacion: ministerio_mujer
-    notas: "Exseremi de la Mujer y Equidad de Género del Bío Bío. Presentó licencia por embarazo durante 2026, lo que impidió que su reemplazante, Antaris Varela, asumiera la titularidad; la vacancia se resolvió en agosto de 2026 con la designación de Michelle Vera."
+    notas: "Exseremi de la Mujer y Equidad de Género del Bío Bío, profesora de historia designada en marzo de 2024 bajo el gobierno de Boric y una de las últimas autoridades de esa administración que se mantuvo en el gobierno de Kast gracias al fuero maternal (renunció el 11 de marzo de 2026, confirmó su embarazo dos semanas después y el Ministerio de la Mujer la mantuvo en el cargo). Su embarazo impidió que su reemplazante, Antaris Varela, asumiera la titularidad. En agosto de 2026 dejó el cargo despidiéndose con un polémico mensaje en Instagram ('último día en esta tortura llamada ser seremi de Kast'), que luego aclaró como un descargo por la exposición y las críticas públicas, no como un ataque al presidente. La vacancia se resolvió con la designación de Michelle Vera."
   yerko_ljubetic:
     nombre: Yerko Ljubetic
     cargo: Director Nacional del INDH
@@ -3499,6 +3734,23 @@ people:
     cargo: Diputada (PC), abogada de derechos humanos
     organizacion: partido_comunista
     notas: "Diputada del Partido Comunista y abogada de derechos humanos. Impulsora de la acusación constitucional contra Sebastián Piñera por las violaciones a los DD.HH. del estallido social (2019). Tras su rechazo en la Cámara (12 de diciembre de 2019) declaró que buscarían 'otras vías' porque 'esto ha sido una política de Estado'."
+  patricio_arrau:
+    nombre: Patricio Arrau
+    cargo: Economista
+    notas: "Economista chileno, cofundador de la consultora Gerens junto a Jorge Quiroz."
+  paola_morales:
+    nombre: Paola Morales
+    cargo: Presidenta de ASOF (Confederación Nacional de Ferias Libres de Chile)
+    organizacion: asof
+    notas: "Presidenta de la Confederación Nacional de Ferias Libres de Chile (ASOF). Tras el cruce entre las senadoras Camila Flores y Fabiola Campillai (5 de agosto de 2026), en el que Flores usó la expresión 'señora de feria' como descalificación, respondió que 'ser mujer de feria es un orgullo' y llamó a no utilizar la identidad de las feriantes como un calificativo ofensivo."
+  felipe_givovich:
+    nombre: Felipe Givovich
+    cargo: Economista
+    notas: "Economista de la consultora Quiroz y Asociados. Cofirmó junto a Jorge Quiroz el informe 'Estructura, Características y Funcionamiento del Mercado del Asfalto en Chile' elaborado para la defensa de Asfaltos Chilenos en la colusión del asfalto."
+  paula_hurtado:
+    nombre: Paula Hurtado
+    cargo: Economista
+    notas: "Economista de la consultora Quiroz y Asociados. Cofirmó junto a Jorge Quiroz el informe 'Mercado relevante del car carrier hacia Chile y participación de MOL' encargado por la naviera MOL en 2016."
 
 organizations:
   criteria:
@@ -3774,6 +4026,26 @@ organizations:
     nombre: Federación Nacional de Funcionarios de la Subsecretaría de Salud Pública
     tipo: sindicato
     pais: Chile
+  confusam:
+    nombre: Confederación Nacional de Funcionarios y Funcionarias de la Salud Municipalizada (Confusam)
+    tipo: sindicato
+    pais: Chile
+    notas: "Gremio que reúne a más de 70 mil trabajadores de la salud municipalizada (atención primaria). Presidenta: Gabriela Flores Salgado. En 2026 protestó frente a La Moneda por la deuda del reajuste per cápita (más de $21.800 millones) y los recortes a la atención primaria (protestas del 8 de julio y 6 de agosto de 2026)."
+  forensic_architecture:
+    nombre: Forensic Architecture
+    tipo: ong
+    pais: Reino Unido
+    notas: "Agencia de investigación con sede en la Universidad Goldsmiths de Londres, especializada en investigaciones espaciales y mediáticas de violaciones de derechos humanos. En 2020, a petición de la organización chilena No+Más Lacrimógenas, investigó el uso de gas lacrimógeno en Plaza de la Dignidad durante el 20 de diciembre de 2019, publicando 'Tear Gas in Plaza de la Dignidad' con simulación de dinámica de fluidos."
+  no_mas_lacrimogenas:
+    nombre: No + Lacrimógenas
+    tipo: ong
+    pais: Chile
+    notas: "Agrupación médico-activista y vecinal chilena que visibiliza las consecuencias para la salud de los vecinos del uso de gas lacrimógeno. Encargó a Forensic Architecture la investigación 'Tear Gas in Plaza de la Dignidad' sobre el uso de gas CS durante la jornada del 20 de diciembre de 2019."
+  comision_chilena_ddhh:
+    nombre: Comisión Chilena de Derechos Humanos
+    tipo: ong
+    pais: Chile
+    notas: "Organización de derechos humanos. En diciembre de 2020 presentó una denuncia contra las unidades de control de orden público de Carabineros por el uso ilegal de armas químicas contra manifestantes en Plaza de la Dignidad entre octubre y diciembre de 2020, documentando infecciones químicas y dermatitis."
   contraloria:
     nombre: Contraloría General de la República
     tipo: organismo_estado
@@ -3836,6 +4108,26 @@ organizations:
     tipo: establecimiento_educacional
     pais: Chile
     notas: "Liceo de enseñanza media de Osorno (Región de Los Lagos). El 3 de agosto de 2026 un estudiante de primero medio agredió a una compañera y amenazó con un destornillador a la comunidad escolar, siendo reducido y detenido por Carabineros. El establecimiento activó el protocolo Aula Segura, suspendió la jornada de la tarde y convocó a apoderados para el 11 de agosto."
+  ministerio_publico:
+    nombre: Ministerio Público de Chile
+    tipo: organismo_publico
+    pais: Chile
+    notas: "Institución autónoma a cargo de la persecución penal (Fiscalía de Chile). En 2010 su fiscal nacional, Sabas Chahuán, dictó una instrucción que prohibía a los fiscales adjuntos ingresar a las salas de juego de los casinos, declarada ilegal por la Tercera Sala de la Corte Suprema el 19 de enero de 2010 por invadir materias propias de ley."
+  asociacion_nacional_fiscales:
+    nombre: Asociación Nacional de Fiscales del Ministerio Público
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Asociación gremial que agrupa a los fiscales del Ministerio Público. En enero de 2010 presentó un recurso de protección contra la instrucción del fiscal nacional Sabas Chahuán que prohibía a los fiscales adjuntos ingresar a las salas de juego de los casinos, recurso que fue acogido por la Tercera Sala de la Corte Suprema."
+  asociacion_chilena_municipalidades:
+    nombre: Asociación Chilena de Municipalidades
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización que reúne a los municipios de Chile. En noviembre de 2009, junto a la Intendencia Metropolitana, impulsó una campaña masiva de tenencia responsable de mascotas para reducir los más de 250 mil perros abandonados de la Región Metropolitana y exigió que el proyecto de ley de tenencia de mascotas en trámite proveyera financiamiento para las nuevas atribuciones municipales."
+  intendencia_metropolitana:
+    nombre: Intendencia Metropolitana
+    tipo: organismo_publico
+    pais: Chile
+    notas: "Autoridad administrativa de la Región Metropolitana durante el gobierno de Michelle Bachelet (hasta marzo de 2010), a cargo del intendente Igor Garafulic. En noviembre de 2009 coordinó con la Asociación Chilena de Municipalidades una campaña de tenencia responsable de mascotas."
   corte_suprema:
     nombre: Corte Suprema de Chile
     tipo: tribunal
@@ -3903,6 +4195,21 @@ organizations:
     pais: Chile
     notas: Organismo autónomo encargado de promover y proteger los derechos humanos
       en Chile.
+  programa_derechos_humanos:
+    nombre: Programa de Derechos Humanos
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Programa del Ministerio de Justicia y DDHH que ejerce la querella criminal y representa al Estado en las causas por crímenes de lesa humanidad de la dictadura. En 2026, según la denuncia de organizaciones de DDHH ante la CIDH (5 de agosto), habría dejado de alegar en 20 de 23 audiencias de exagentes por instrucciones del Ministerio de Justicia; el gobierno lo atribuyó a un 'reordenamiento organizacional' y a un análisis 'caso a caso'."
+  tribunal_constitucional:
+    nombre: Tribunal Constitucional
+    tipo: poder_judicial
+    pais: Chile
+    notas: "Órgano encargado del control de constitucionalidad. El 6 de agosto de 2026 admitió a trámite y declaró admisibles los tres requerimientos de la oposición contra la megarreforma (Ley de Reconstrucción Nacional), fijando la audiencia de alegatos para el jueves 13 de agosto de 2026."
+  instituto_salud_publica:
+    nombre: Instituto de Salud Pública (ISP)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Instituto de Salud Pública de Chile, dependiente del Ministerio de Salud. En 2020 elaboró por encargo del Departamento de Armamento y Municiones de Carabineros un informe técnico sobre la granada de humo SS-601/BR, obtenido vía Ley de Transparencia, que documenta efectos nocivos a largo plazo de sus componentes: problemas sanguíneos, daños al sistema nervioso central y periférico, dermatitis y bronquitis crónica."
   partido_nacional_libertario:
     nombre: Partido Nacional Libertario
     tipo: partido_politico
@@ -4791,6 +5098,20 @@ organizations:
     tipo: establecimiento_educacional
     pais: Chile
     notas: "Liceo emblemático de Santiago Centro. Fue tomado por sus estudiantes el 4 de agosto de 2026; la comunidad resguardó a los estudiantes del Programa de Integración Escolar (PIE) y de 7° y 8° básico a la espera de sus apoderados."
+  inba:
+    nombre: Internado Nacional Barros Arana (INBA)
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo emblemático de Santiago Centro. El 23 de octubre de 2024 un cóctel molotov que estudiantes manipulaban en el baño del establecimiento explotó, dejando 35 heridos —15 de gravedad y 4 en riesgo vital— cuando se preparaban para salir a manifestarse en el aniversario del estallido social. La Fiscalía Centro Norte investigó el caso."
+  ministerio_del_interior:
+    nombre: Ministerio del Interior y Seguridad Pública
+    tipo: ministerio
+    pais: Chile
+  defensoria_de_la_ninez:
+    nombre: Defensoría de la Niñez
+    tipo: organismo_publico
+    pais: Chile
+    notas: "Organismo público autónomo creado en 2018 para la protección de los derechos de niños, niñas y adolescentes. En el caso Pío Nono (octubre de 2020) se querelló contra Carabineros y pidió prisión preventiva para el carabinero Sebastián Zamora, condenando la 'acción criminal' contra el adolescente lanzado desde el puente."
   metro_santiago:
     nombre: Metro de Santiago
     tipo: empresa
@@ -4906,6 +5227,35 @@ organizations:
     nombre: Municipalidad de La Cruz
     tipo: municipalidad
     pais: Chile
+  sence:
+    nombre: Servicio Nacional de Capacitación y Empleo (Sence)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público dependiente del Ministerio del Trabajo y Previsión Social, encargado de la capacitación y el empleo. En diciembre de 2009 su dirección nacional amonestó verbalmente a la directora regional de Los Lagos, Gloria González, por lucir una chapita de campaña de Eduardo Frei en una actividad pública, invocando la instrucción de la presidenta Michelle Bachelet que prohíbe la actividad política de funcionarios en horario laboral."
+  municipalidad_quillota:
+    nombre: Municipalidad de Quillota
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipio de la Región de Valparaíso. En enero de 2010 preparó un catastro de unos veinte fondos concursables y programas sociales, culturales y deportivos para informar a las organizaciones de la comuna sobre alternativas de financiamiento, con reuniones informativas en los territorios de La Said y El Sendero."
+  municipalidad_de_concepcion:
+    nombre: Municipalidad de Concepción
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipio de la Región del Bío-Bío. En 2010 su concejal Álvaro Ortiz Vera fue condenado por violencia intrafamiliar por el Juzgado de Familia de Concepción, además de enfrentar un proceso por conducción en estado de ebriedad y daños en San Pedro de la Paz."
+  municipalidad_independencia:
+    nombre: Municipalidad de Independencia
+    tipo: municipalidad
+    pais: Chile
+  restomarket:
+    nombre: Restomarket
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de retail de alimentos. En agosto de 2026 suspendió de todas sus funciones a su gerente general, Andrés Arrieta, tras su formalización por el caso de los niños que jugaban 'ring raja' en Vitacura."
+  colegio_manquehue:
+    nombre: Colegio Sagrados Corazones de Manquehue
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Establecimiento educacional de Vitacura del que eran estudiantes los menores afectados por el caso 'ring raja' (10 de julio de 2026) y del que el imputado Andrés Arrieta era apoderado y exlíder de exalumnos. Tras hacerse público el caso, la rectora Sandra Durán emitió un comunicado activando protocolos internos de apoyo y acompañamiento psicológico para estudiantes y familias, sin emitir juicios sobre el proceso judicial."
   cidh:
     nombre: Comisión Interamericana de Derechos Humanos
     tipo: organismo_internacional
@@ -4968,8 +5318,153 @@ organizations:
     tipo: partido_politico
     pais: Chile
     notas: "Partido político chileno. En la votación del 12 de diciembre de 2019 sus diputados Carlos Abel Jarpa y Fernando Meza votaron a favor de la 'cuestión previa' que hizo caer la acusación constitucional contra Sebastián Piñera, junto a sectores de la DC y de la ex Nueva Mayoría."
+  tdlc:
+    nombre: Tribunal de Defensa de la Libre Competencia
+    tipo: servicio_publico
+    pais: Chile
+  fne:
+    nombre: Fiscalía Nacional Económica
+    tipo: servicio_publico
+    pais: Chile
+  asfaltos_chilenos:
+    nombre: Asfaltos Chilenos S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa chilena de productos asfálticos. Condenada por el TDLC (Sentencia 148/2015) junto a Dynal, Enex y Química Latinoamericana por acuerdos de reparto de mercado en la provisión de asfalto a constructoras entre 2011 y 2012, con multa de 1.630 UTA. Jorge Quiroz elaboró un informe y declaró como testigo en su defensa ante el TDLC."
+  dynal:
+    nombre: Dynal Industrial S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa chilena de productos asfálticos. Condenada por el TDLC (Sentencia 148/2015) junto a Asfaltos Chilenos, Enex y Química Latinoamericana por reparto de mercado en la provisión de asfalto, con multa de 718 UTA."
+  enex:
+    nombre: Empresa Nacional de Energía Enex S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa chilena de combustibles y asfalto. En la colusión del asfalto (Sentencia TDLC 148/2015) se acogió a delación compensada ante la FNE en 2012 y quedó eximida de multa."
+  quimica_latinoamericana:
+    nombre: Química Latinoamericana S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa chilena de productos asfálticos. Condenada por el TDLC (Sentencia 148/2015) por reparto de mercado en la provisión de asfalto, con la mayor multa del caso: 1.790 UTA."
+  mol:
+    nombre: Mitsui O.S.K. Lines Ltd.
+    tipo: empresa
+    pais: Japón
+    notas: "Naviera japonesa condenada por el TDLC (Sentencia 171/2019) por integrar el cartel del transporte marítimo de vehículos hacia Chile. Jorge Quiroz elaboró un informe encargado por MOL cuestionando el monto de la multa solicitada por la FNE (US$ 12 millones), que finalmente fue fijada en US$ 2,5 millones."
+  csav:
+    nombre: Compañía Sudamericana de Vapores
+    tipo: empresa
+    pais: Chile
+    notas: "Naviera chilena del grupo Luksic. En la colusión del transporte marítimo de vehículos (Sentencia TDLC 171/2019) fue eximida de multa por delación compensada. Se acogió también a colaboración en los carteles globales investigados en EE.UU. y Canadá desde 2012."
+  cmc:
+    nombre: Compañía Marítima de Chile
+    tipo: empresa
+    pais: Chile
+    notas: "Naviera chilena, ex Compañía Chilena de Navegación Interoceánica (CCNI). Sancionada por la Corte Suprema (2020) por integrar el cartel del transporte marítimo de vehículos hacia Chile, con multa de 7.636 UTA, después de quedar absuelta en primera instancia por prescripción."
+  eukor:
+    nombre: Eukor Car Carriers Inc.
+    tipo: empresa
+    pais: Corea del Sur
+    notas: "Naviera coreana de transporte de vehículos. Sancionada por la Corte Suprema (2020) en la colusión del transporte marítimo hacia Chile, con multa de 10.517 UTA, tras quedar absuelta en primera instancia del TDLC por prescripción."
+  kline:
+    nombre: Kawasaki Kisen Kaisha Ltd.
+    tipo: empresa
+    pais: Japón
+    notas: "Naviera japonesa. Sancionada por la Corte Suprema (2020) en la colusión del transporte marítimo de vehículos hacia Chile, con multa de 7.636 UTA, al acogerse parcialmente la reclamación de la FNE contra su absolución de primera instancia."
+  nyk:
+    nombre: Nippon Yusen Kabushiki Kaisha
+    tipo: empresa
+    pais: Japón
+    notas: "Naviera japonesa. Condenada por el TDLC (Sentencia 171/2019) como segundo delator en la colusión del transporte marítimo de vehículos hacia Chile, con multa inicial de US$ 6,5 millones que la Corte Suprema incrementó en 3.818 UTA adicionales."
+  quiroz_asociados:
+    nombre: Quiroz y Asociados
+    tipo: empresa
+    pais: Chile
+    notas: "Consultora de consultoría económica fundada por Jorge Quiroz en 2001, dedicada a asesorar a empresas en litigios económicos, procesos tarifarios, estrategia competitiva y análisis de libre competencia. Elaboró informes en defensa de empresas condenadas por colusión (pollos, farmacias, asfalto, navieras)."
+  gerens:
+    nombre: Gerens
+    tipo: empresa
+    pais: Chile
+    notas: "Consultora de gestión cofundada por el economista Jorge Quiroz junto a Patricio Arrau."
+  bolsa_santiago:
+    nombre: Bolsa de Comercio de Santiago
+    tipo: empresa
+    pais: Chile
+    notas: "Principal bolsa de valores de Chile. Jorge Quiroz forma parte de su directorio."
+  salcobrand:
+    nombre: Salcobrand S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Cadena chilena de farmacias. Condenada junto a Cruz Verde y Farmacias Ahumada por colusión en el precio de medicamentos (TDLC, 2012). Jorge Quiroz elaboró informes y declaró como perito de Salcobrand ante el TDLC negando la existencia de colusión."
+  don_pollo:
+    nombre: Don Pollo S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Productora avícola chilena. Condenada junto a Agrosuper y Ariztía por la colusión de los pollos (TDLC, Sentencia 139/2014, multa de 12.000 UTA)."
+  asociacion_productores_avicolas:
+    nombre: Asociación de Productores Avícolas de Chile
+    tipo: gremio
+    pais: Chile
+    notas: "Asociación gremial de productores de pollo. Disuelta por el TDLC (Sentencia 139/2014) tras acreditarse la colusión de los pollos; su modelo de proyección de consumo fue identificado como el 'modelo Quiroz'."
+  asof:
+    nombre: Confederación Nacional de Ferias Libres de Chile (ASOF)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio nacional de ferias libres presidido por Paola Morales. El 6 de agosto de 2026 rechazó el uso despectivo de la expresión 'señora de feria' tras el cruce entre las senadoras Camila Flores y Fabiola Campillai, reivindicando que 'ser mujer de feria es un orgullo' y que las feriantes 'alimentan a Chile' y sostienen parte de la economía familiar."
 
 cifras:
+  perros_abandonados_santiago_2009:
+    nombre: Perros abandonados en Santiago en 2009
+    unidad_default: canes
+    notas: "Más de 250 mil perros abandonados en la Región Metropolitana en 2009, de un total de casi 1.200.000 canes; de ellos, el 50% tiene dueño que no se hace responsable de su mascota. Cifra citada en la campaña de tenencia responsable impulsada por la Asociación Chilena de Municipalidades y la Intendencia Metropolitana (noviembre 2009)."
+  canes_region_metropolitana_2009:
+    nombre: Población canina estimada de la Región Metropolitana en 2009
+    unidad_default: canes
+    notas: "Casi 1.200.000 canes en la Región Metropolitana en 2009, de los cuales más de 250 mil se encontraban abandonados, según las estimaciones citadas en la campaña de tenencia responsable de mascotas (noviembre 2009)."
+  multa_vif_ortiz_2010:
+    nombre: Multa por violencia intrafamiliar impuesta a Álvaro Ortiz en 2010
+    unidad_default: utm
+    notas: "2 UTM de multa a beneficio de la Gobernación impuesta en enero de 2010 al concejal de Concepción y director regional del INJUV del Bío-Bío, Álvaro Ortiz, condenado por el Juzgado de Familia de Concepción (jueza Mireya Celis) por violencia intrafamiliar denunciada por su conviviente, además de un tratamiento de control de impulsos y agresividad."
+  violaciones_ddhh_carabineros_2020:
+    nombre: Denuncias de violaciones a los DDHH atribuidas a Carabineros desde octubre de 2019
+    unidad_default: denuncias
+    notas: "8.575 denuncias de presuntas violaciones a los derechos humanos perpetradas por Carabineros en la represión de las protestas desde octubre de 2019, reportadas por el Ministerio Público en octubre de 2020, con solo 16 agentes dados de baja. Cifra citada por The Guardian en la cobertura del caso Pío Nono."
+  limite_exposicion_gas_cs_2020:
+    nombre: Límite de exposición al gas CS según el manual de Carabineros
+    unidad_default: mg_m3
+    notas: "0,4 mg/m3 de gas CS como límite de exposición según las normas internacionales NIOSH y OSHA, citado en el Manual de Operaciones para el Control del Orden Público de Carabineros (revelado por Ciper en noviembre de 2020)."
+  concentracion_peligrosa_gas_cs_2020:
+    nombre: Concentración de peligrosidad inmediata del gas CS
+    unidad_default: mg_m3
+    notas: "2 mg/m3 de gas CS como concentración de 'peligrosidad inmediata para la vida o salud' según el Manual de Operaciones para el Control del Orden Público de Carabineros (revelado por Ciper en noviembre de 2020)."
+  descargas_gas_plaza_italia_10dic2019:
+    nombre: Descargas de gas irritante en Plaza Italia el 10 de diciembre de 2019
+    unidad_default: descargas
+    notas: "403 descargas de gas irritante (34 granadas de mano y 369 cartuchos) lanzadas por Fuerzas Especiales en las inmediaciones de Plaza Italia el 10 de diciembre de 2019, Día Internacional de los Derechos Humanos, entre las 16:30 y las 21:45 según los reportes de Carabineros a la Justicia citados por Ciper: más de una descarga por minuto."
+  cartuchos_gas_lacrimogeno_20dic2019:
+    nombre: Cartuchos de gas lacrimógeno lanzados en Plaza de la Dignidad el 20 de diciembre de 2019
+    unidad_default: cartuchos
+    notas: "594 cartuchos de gas lacrimógeno CS lanzados por Carabineros en Plaza de la Dignidad el 20 de diciembre de 2019, según el conteo de Forensic Architecture difundido por Interferencia (la página oficial de la investigación señala 596). A las 19:12 ya se habían usado 186 cartuchos y entre las 20:30 y las 20:40 se identificaron al menos 82 en 10 minutos."
+  concentracion_cs_plaza_dignidad:
+    nombre: Concentración de gas CS en Plaza de la Dignidad el 20 de diciembre de 2019
+    unidad_default: mg_m3
+    notas: "54 mg/m3 de gas CS, 135 veces el límite de exposición de 0,4 mg/m3 establecido por Carabineros en su Manual de Operaciones para el Control del Orden Público, y 27 veces los 2 mg/m3 que la NIOSH/OSHA reconocen como IDLH. Medición de Forensic Architecture difundida por Interferencia."
+  deuda_per_capita_salud_municipal_2026:
+    nombre: Deuda del reajuste per cápita de salud municipal
+    unidad_default: millones_pesos
+    notas: "Más de $21.800 millones que el Estado adeuda a los municipios por el reajuste IPC del per cápita basal de salud, congelado por segundo año consecutivo. El gremio Confusam cifró la deuda en $21.800 millones y los medios la reportaron como 'más de $21 mil millones' (julio-agosto 2026)."
+  recorte_atencion_primaria_salud_2026:
+    nombre: Recorte previo a la atención primaria de salud
+    unidad_default: millones_pesos
+    notas: "Recorte del 0,5% al presupuesto de atención primaria de aproximadamente $18.000 millones, mencionado por la presidenta de Confusam, Gabriela Flores, al compararlo con la deuda per cápita pendiente (2026)."
+  programas_atencion_primaria_en_riesgo:
+    nombre: Programas de atención primaria en riesgo de eliminación
+    unidad_default: programas
+    notas: "Más de 40 programas de atención primaria en peligro de ser eliminados a partir de 2027 según Confusam, ante el desfinanciamiento progresivo de la salud municipal (julio 2026)."
+  detenidos_protesta_confusam_jul_2026:
+    nombre: Detenidos en protesta de Confusam del 8 de julio de 2026
+    unidad_default: personas
+    notas: "Al menos 8 personas detenidas tras los incidentes de la protesta de Confusam frente a La Moneda el 8 de julio de 2026, según BioBioChile y El Mostrador."
   cesantia_biobio_2026:
     nombre: Cesantía en la Región del Biobío
     unidad_default: "%"
@@ -5038,6 +5533,14 @@ cifras:
     nombre: Condenados por lesa humanidad vinculados a 'indultos pasivos'
     unidad_default: condenados
     notas: "Cuatro condenados por crímenes de lesa humanidad en nueve causas donde el Programa de DDHH no habría intervenido activamente, según informe ante la CIDH (agosto 2026)."
+  audiencias_sin_alegar_programa_ddhh:
+    nombre: Audiencias en que el Programa de DDHH no alegó
+    unidad_default: audiencias
+    notas: "20 de 23 audiencias en contra de exagentes de la dictadura en que el Programa de Derechos Humanos no se presentó a alegar o se desistió de recursos, por instrucciones del Ministerio de Justicia, según la denuncia de organizaciones de DDHH ante la CIDH (5 de agosto de 2026). En dos casos se produjo la liberación inmediata del agente y en un tercero la reducción de la condena."
+  exagentes_solicitudes_penas_2026:
+    nombre: Exagentes con solicitudes de beneficios penitenciarios en 2026
+    unidad_default: exagentes
+    notas: "47 exagentes condenados por crímenes de lesa humanidad presentaron en lo que va de 2026 solicitudes de reducción de penas, arresto domiciliario, libertades condicionales y acumulación de penas, según la denuncia de organizaciones de DDHH ante la CIDH (5 de agosto de 2026)."
   expedientes_pendientes_pueblos_indigenas:
     nombre: Expedientes pendientes tras eliminación de Unidad de Pueblos Indígenas
     unidad_default: expedientes
@@ -5608,6 +6111,34 @@ cifras:
     nombre: Pérdida total de recaudación municipal por exención de contribuciones a mayores de 65
     unidad_default: millones_pesos
     notas: "$122.527 millones que los municipios dejarán de recaudar por la exención; el Fisco los repondrá vía Tesorería General de la República. Hacienda vía Ley de Transparencia (La Tercera, 1 de agosto de 2026)."
+  perdida_municipal_contribuciones_iglesias:
+    nombre: Pérdida municipal total por exención de contribuciones según Agustín Iglesias
+    unidad_default: millones_pesos
+    notas: "$170.000 millones (unos US$170 millones) de pérdida total para los municipios por la exención de contribuciones a mayores de 65 años, según el alcalde de Independencia Agustín Iglesias (entrevista Radio Futuro PQN, 30 de julio de 2026): 60% corresponde al Fondo Común Municipal y 40% a recaudación directa. La cifra difiere de los $122.527 millones de Hacienda vía Ley de Transparencia (La Tercera, 1 de agosto), que corresponde al aporte que deja de recibir el FCM."
+  aporte_directo_las_condes_exencion:
+    nombre: Recaudación directa que Las Condes dejaría de percibir por exención según Agustín Iglesias
+    unidad_default: millones_pesos
+    notas: "$13.000 millones que Las Condes dejaría de percibir por recaudación directa de contribuciones, monto que el gobierno inicialmente no reponía en su fórmula de compensación (entrevista Radio Futuro PQN, 30 de julio de 2026)."
+  aporte_directo_providencia_exencion:
+    nombre: Recaudación directa que Providencia dejaría de percibir por exención según Agustín Iglesias
+    unidad_default: millones_pesos
+    notas: "$6.000 millones que Providencia dejaría de percibir por recaudación directa de contribuciones, según el alcalde de Independencia Agustín Iglesias (entrevista Radio Futuro PQN, 30 de julio de 2026)."
+  fraude_lavin_leon:
+    nombre: Fraude al Fisco imputado a Joaquín Lavín León
+    unidad_default: millones_pesos
+    notas: "Monto del fraude al Fisco que la Fiscalía imputa al exparlamentario Joaquín Lavín León, elevado a más de $200 millones con los nuevos cargos (agosto 2026), vinculado a un aparente uso irregular de asignaciones parlamentarias."
+  fraude_lavin_leon_formalizacion:
+    nombre: Perjuicio fiscal estimado en la formalización de Joaquín Lavín León
+    unidad_default: millones_pesos
+    notas: "Perjuicio fiscal que la Fiscalía Metropolitana Oriente estimó en más de $104 millones al formalizar a Joaquín Lavín León el 8 de mayo de 2026 por fraude al Fisco, tráfico de influencias y falsificación. La cifra fue posteriormente elevada por nuevos cargos (agosto 2026)."
+  menores_afectados_ring_raja:
+    nombre: Menores afectados por el caso 'ring raja' de Vitacura
+    unidad_default: personas
+    notas: "Nueve menores de edad que jugaban 'ring raja' en Vitacura fueron perseguidos por el empresario Andrés Arrieta en su camioneta la noche del 10 de julio de 2026; siete fueron subidos al vehículo (dos lograron escapar por la puerta trasera) y retenidos cerca de 40 minutos bajo amenazas de muerte con un arma de fuego. Doce padres presentaron una querella conjunta."
+  minutos_retencion_ring_raja:
+    nombre: Duración de la retención de menores en el caso 'ring raja'
+    unidad_default: minutos
+    notas: "Cerca de 40 minutos que el empresario Andrés Arrieta mantuvo retenidos a los menores en su camioneta la noche del 10 de julio de 2026 en Vitacura, según el relato de los padres y los antecedentes de la causa."
   homicidios_cerro_navia_2025:
     nombre: Homicidios en Cerro Navia durante todo 2025
     unidad_default: personas
@@ -5764,6 +6295,30 @@ cifras:
     nombre: Aumento de costos laborales por la entrada en vigencia de las 42 horas
     unidad_default: pct
     notas: "4,8% de incremento de los costos laborales estimado por los economistas David Bravo y Juan Bravo ante la reducción de la jornada de 44 a 42 horas (abril 2026), dado que los trabajadores mantienen sus remuneraciones con dos horas menos."
+  proyeccion_crecimiento_chile_2027_2028:
+    nombre: Proyección de crecimiento de Chile 2027-2028 (Hacienda)
+    unidad_default: '%'
+    notas: "El Ministerio de Hacienda proyectó un crecimiento de 3,0% para 2027 y 2028, presentado por el ministro Jorge Quiroz ante la Comisión de Hacienda del Senado el 10 de junio de 2026, bajo la meta de 4% del gobierno."
+  proyeccion_crecimiento_chile_2030:
+    nombre: Proyección de crecimiento de Chile 2030 (Hacienda)
+    unidad_default: '%'
+    notas: "El Ministerio de Hacienda proyectó un crecimiento de 3,5% hacia 2030, por debajo de la meta de 4% aspirada por el gobierno de Kast, según lo presentado por Jorge Quiroz el 10 de junio de 2026."
+  meta_crecimiento_chile_2030:
+    nombre: Meta de crecimiento de Chile al 2030 (gobierno Kast)
+    unidad_default: '%'
+    notas: "La aspiración de crecimiento del gobierno de Kast es alcanzar 4% al final de su mandato en 2030, pese a que la proyección oficial de Hacienda es de 3,5% (10 de junio de 2026)."
+  deuda_bruta_gobierno_central_2026:
+    nombre: Deuda bruta del Gobierno Central 2026
+    unidad_default: pct_pib
+    notas: "La deuda bruta del Gobierno Central proyectada en 43,1% del PIB para 2026, según el Informe de Finanzas Públicas del primer trimestre de 2026."
+  deuda_bruta_gobierno_central_2028:
+    nombre: Deuda bruta del Gobierno Central 2028
+    unidad_default: pct_pib
+    notas: "La deuda bruta del Gobierno Central proyectada en 45,4% del PIB para 2028, superando ese año el nivel considerado prudente por la autoridad fiscal, según el Informe de Finanzas Públicas del primer trimestre de 2026."
+  recorte_aps_arica_2026:
+    nombre: Recorte de financiamiento APS Universal en Arica
+    unidad_default: millones_pesos
+    notas: "Recorte de más de $1.300 millones en el financiamiento de la Atención Primaria de Salud (APS) Universal que obligó a los consultorios (Cesfam) de Arica a reducir sus horarios de atención, afectando principalmente la atención de los días sábado (agosto 2026)."
   proyeccion_crecimiento_chile_cepal_2026:
     nombre: Proyección de crecimiento de Chile 2026 según CEPAL
     unidad_default: pct
@@ -6096,6 +6651,22 @@ cifras:
     nombre: Fallecidos durante el estallido social (a diciembre de 2019)
     unidad_default: personas
     notas: "Al menos 24 fallecidos a mediados de diciembre de 2019 según BBC Mundo, de los cuales 5 atribuidos a agentes del Estado. El gobierno reportaba 23 muertos el 23 de noviembre de 2019 y 19 el 23 de octubre; la cifra oficial continuó ajustándose durante 2020."
+  fallecidos_estallido_fiscalia_2025:
+    nombre: Fallecidos durante el estallido social (Informe de la Fiscalía, 2025)
+    unidad_default: personas
+    notas: "30 personas fallecidas entre el 18 de octubre de 2019 y el 31 de marzo de 2020 según el Informe Estadístico del Estallido Social de la Fiscalía (octubre 2025). 93% de las víctimas fatales eran hombres; las principales causas fueron incendios, desórdenes públicos y violencia institucional de agentes del Estado."
+  trauma_ocular_fiscalia_2025:
+    nombre: Víctimas de trauma ocular en el estallido (Informe de la Fiscalía 2025)
+    unidad_default: personas
+    notas: "464 víctimas de trauma ocular según el Informe Estadístico del Estallido Social de la Fiscalía (octubre 2025). El 84% sufrió lesiones por proyectiles y 230 personas tuvieron algún grado de pérdida visual, de las cuales dos casos de ceguera total bilateral."
+  delitos_estallido_fiscalia_2025:
+    nombre: Delitos registrados durante el estallido (Informe Fiscalía 2025)
+    unidad_default: delitos
+    notas: "35.146 delitos registrados entre el 18 de octubre de 2019 y el 31 de marzo de 2020 según el Informe Estadístico del Estallido Social de la Fiscalía (octubre 2025), con 21.766 imputados conocidos y 20.727 víctimas. El delito más frecuente fue la violencia institucional de agentes del Estado (34,1%), seguido de saqueos y delitos contra la propiedad (31,7%) y desórdenes públicos (22,7%)."
+  causas_violencia_institucional_fiscalia_2025:
+    nombre: Causas por violencia institucional en el estallido (Fiscalía 2025)
+    unidad_default: causas
+    notas: "11.506 causas por violencia institucional cometida por agentes del Estado registradas entre el 18 de octubre de 2019 y el 31 de marzo de 2020 según el Informe de la Fiscalía (octubre 2025). De las más de 12 mil denuncias por violencia institucional, solo 219 terminaron con sentencia condenatoria."
   edad_primer_caso_covid_chile:
     nombre: Edad del primer caso de COVID-19 en Chile
     unidad_default: años
