@@ -1426,6 +1426,15 @@ people:
         organizacion: camara_diputados
         desde: 2026-03-11
     notas: Llamó "manga de cobardes y sinvergüenzas" a Kast y Quiroz
+  daniel_matamala:
+    nombre: Daniel Matamala
+    cargo: Periodista
+    notas: "Periodista y conductor del podcast Animales Políticos junto a Cristóbal Bellolio. Entrevistó a Camila Vallejo en julio de 2026."
+  francisco_pulgar:
+    nombre: Francisco Pulgar
+    cargo: Diputado (UDI)
+    organizacion: union_democrata_independiente
+    notas: "Diputado por el Maule. Impulsó junto a la diputada Consuelo Veloso las denuncias que llevaron al informe de Contraloría sobre pagos irregulares en la Municipalidad de Villa Alegre (2026)."
   jose_castillo:
     nombre: José Castillo
     cargo: Diputado (PC)
@@ -4508,7 +4517,7 @@ organizations:
     tipo: organizacion_social
     pais: Chile
     notas: "Coordinadora Latinoamericana de Organizaciones del Campo, sección chilena de La Vía Campesina. Impulsó el artículo sobre libre uso e intercambio de semillas tradicionales en la propuesta de Nueva Constitución (2022)."
-  ociedad_nacional_agricultura:
+  sociedad_nacional_agricultura:
     nombre: Sociedad Nacional de Agricultura (SNA)
     tipo: gremio
     pais: Chile
