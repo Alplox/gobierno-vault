@@ -411,6 +411,35 @@ Se crearon tres eventos a partir de la revisión de fuentes (Contrapoder y DF):
 - ⬜ **Conducta imprudente de pasajero en Línea 5 (5-ago):** Cooperativa reportó servicio parcial por "conducta imprudente de pasajero"; confirmar si amerita evento propio.
 - ⬜ **Reapertura de estación Santa Isabel (4-ago):** quedó incorporada en `20260727-16`; si se desea granularidad, evaluar evento separado con fuentes adicionales.
 
+- **Mesa de Reactivación Laboral (evento creado `20260630-3`):** las 22 propuestas del informe Bravo entregadas el 30-jun-2026 (sala cuna urgente, jornada con periodo de referencia de 4 a 15/52 semanas y techo de 52 horas, reducción temporal de jornada financiada con Seguro de Cesantía, eliminación gradual de la indemnización por años de servicio a cambio de indemnización a todo evento, polifuncionalidad, SUE, Talento Joven). Seguimiento: (1) qué propuestas se transforman en proyectos de ley y la respuesta del Gobierno (Quiroz ya anticipó la 'segunda etapa' laboral: jornada hasta 52h en ciclos, indemnización a todo evento con cotización al Seguro de Cesantía, contratos por hora — ver `20260806-33`); (2) la reacción de la CUT y los sindicatos; (3) la tramitación de sala cuna universal y el SUE; (4) la 'mesa Trabajo-Justicia' por judicialización. Nota metodológica: el informe cita 9,1% de desocupación en feb-abr (10,5% femenina) mientras la ENE publicada el mismo día marcó 9,4% en marzo-mayo (`20260630-3` registra ambas con sus fuentes).
+- **Tope de 11 años en indemnizaciones — evento histórico creado (`20250718-1`):** advertencia de Mario Marcel (jul-2025, era Boric) ante la moción de FA/PC aprobada en la Comisión de Trabajo de la Cámara (15-jul-2025). Verificar el estado legislativo de la moción (si avanzó o murió) y el vínculo conceptual con la propuesta 2026 de la Mesa de Reactivación Laboral.
+- **Fuentes sin procesar del lote de la Mesa (8-ago):** (1) df.cl 'Indemnización a todo evento y contratos por hora: Kast presenta sus propuestas en materia laboral' — bloqueada por paywall/branded content incluso vía r.jina.ai; determinar fecha (¿campaña 2025?) y si aporta algo nuevo a `20250822-1` (programa de gobierno) o a la 'segunda etapa' de Quiroz; (2) chilenoticias.cl 'La eliminación del tope en indemnizaciones divide opiniones' — blog agregador de baja calidad sin fecha clara (trata el debate 2025 del Panel Laboral UNAB: 92% de head hunters contra la eliminación del tope de 11 años); no usado como fuente.
+
+## Codelco — revisión de la cartera de inversiones (creación 7-ago-2026)
+
+Se creó el evento `20260807-2` (cartera de US$34 mil millones bajo revisión, Fontaine anticipa 'cuatro años difíciles': producción -16%, costos +82%, deuda +50%) con BioBioChile (7-ago) + La Tercera Pulso (30-jul, inviabilidad del plan y consulta de pertinencia de Andina por US$175 millones) + reacciones CESCO/UANDES.
+
+**Seguimiento:**
+- ⬜ **Impacto concreto de la revisión:** qué proyectos se priorizan, postengan o rediseñan (p. ej. Andina vs. El Teniente), y si se materializan asociaciones con privados (Andina/Anglo American) o ventas de activos; el debate del royalty minero y el precio récord del cobre (`20260806-24`) pueden alterar las condiciones.
+- ⬜ **Evento pendiente por cubrir:** 'Tres mil trabajadores y 4 empresas: la afectación por suspensión de proyecto de Codelco en El Teniente' (BioBioChile, 5-ago-2026) — verificar si amerita evento propio (suspensión de proyecto con impacto laboral directo).
+- ⬜ **Contexto ya cubierto:** el 'portazo de Fontaine a la privatización' (30-jul) y sus críticas a las proyecciones históricas (28-jul) no tienen evento propio; evaluar si consolidarlos con `20260728-5`/`20260730-1`.
+
+## ACOT — detalles de la Escuela de Carabineros (creación 7-ago-2026)
+
+Se creó el evento `20260806-48` (presentación de los 28 proyectos + reforma constitucional en la Escuela de Carabineros: fin del monopolio del SML en pesquisas de ADN vía LABOCAR/LACRIM, Frontera Cero, destrucción de drogas con Servicios de Salud, modificación de la Ley Antibarricadas sin requisito de violencia, nuevo estado de excepción). Fuentes: Emol + Cooperativa x2 (verificado; la nota de El Dínamo/T13 sobre interceptación de telecomunicaciones quedó de contexto).
+
+**Seguimiento:**
+- ⬜ **Ingreso efectivo de los proyectos:** cuáles de los 9-15 proyectos nuevos ingresan al Congreso en las próximas semanas y sus urgencias; la diferencia de conteos entre medios (28 de Cooperativa vs. 'más de 30' de Emol) se documentó en el evento.
+- ⬜ **Reforma constitucional:** ingreso formal del proyecto que consagra la seguridad como deber del Estado y estado de excepción por grave alteración de la seguridad pública (ver `20260803-12`), y la tramitación en el Senado (el evento `20260806-11` ya cubre el debate del art. 1°).
+
+## Caso Gatica — contrainterrogatorio de Chong a Crespo (creación 7-ago-2026)
+
+Se creó el evento histórico `20241227-1` (jornada 35 del juicio: video inédito del mechón de pelo, grupo de WhatsApp 'La Tijera' con 'le hice un peinado a la moda a un encapuchado', objeciones de Orthusteguy y jueza Cristina Cabello).
+
+**Pendiente / validación cruzada:**
+- ⬜ **Segunda fuente del 27-dic-2024:** el evento usa como fuente única La Tercera PM (Juan Pablo Andrews); buscar cobertura de Emol/El Mostrador/Ex-Ante de la misma audiencia para robustecerlo (regla de mínimo 2 fuentes de medios distintos).
+- ⬜ **Vínculo con los videos de CIPER (`20250429-1`):** verificar si alguno de los siete videos publicados en abril de 2025 corresponde al incidente del mechón de pelo de noviembre de 2019; si es así, enlazar ambos eventos.
+
 ## Reglas para retomar
 
 1. Cada tarea debe crear el evento siguiendo `TEMPLATE.md` (frontmatter completo, wikilinks, fuentes inline).

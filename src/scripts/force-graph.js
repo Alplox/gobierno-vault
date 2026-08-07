@@ -216,10 +216,33 @@ function init() {
       });
     });
 
-  // Drag
+  // Interacción: Pointer Events unifican mouse y táctil (arrastrar nodos, pan con
+  // un dedo, pinch-zoom con dos, tap para navegar). touch-action:none evita que el
+  // navegador secuestre el gesto para scrollear la página en móviles.
+  svg.style.touchAction = 'none';
+  svg.style.userSelect = 'none';
+  svg.style.webkitUserSelect = 'none';
+
+  let scale = 1, tx = 0, ty = 0;
+  let isPanning = false, panSX = 0, panSY = 0;
   let dragNode = null, dragMoved = false, dragSX = 0, dragSY = 0;
+  const pointers = new Map();
+  let pinchDist = 0;
+
+  function applyTransform() {
+    g.setAttribute('transform', `translate(${tx},${ty}) scale(${scale})`);
+  }
+
+  function svgRect() {
+    return svg.getBoundingClientRect();
+  }
+
+  // Nodos: arrastrar con un puntero. Si el gesto no se movió, se navega al evento.
+  // El listener va en el grupo (n._el) para dar un área de toque mayor en móvil.
   nodes.forEach(n => {
-    n._circle.addEventListener('mousedown', e => {
+    n._el.addEventListener('pointerdown', e => {
+      if (pointers.size >= 2) return;
+      pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       dragNode = n;
       dragMoved = false;
       dragSX = e.clientX;
@@ -232,35 +255,90 @@ function init() {
     });
   });
 
-  addWindowListener('mousemove', e => {
-    if (!dragNode) return;
-    if (Math.abs(e.clientX - dragSX) > 3 || Math.abs(e.clientY - dragSY) > 3) dragMoved = true;
-    const r = svg.getBoundingClientRect();
-    dragNode.fx = (e.clientX - r.left - tx) / scale;
-    dragNode.fy = (e.clientY - r.top - ty) / scale;
+  // Fondo: pan con un dedo, pinch-zoom con dos.
+  svg.addEventListener('pointerdown', e => {
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (pointers.size === 1) {
+      isPanning = true;
+      panSX = e.clientX - tx;
+      panSY = e.clientY - ty;
+      svg.style.cursor = 'grabbing';
+    } else if (pointers.size === 2) {
+      const [a, b] = [...pointers.values()];
+      pinchDist = Math.hypot(a.x - b.x, a.y - b.y);
+    }
+    e.preventDefault();
+  }, { passive: false });
+
+  addWindowListener('pointermove', e => {
+    const prev = pointers.get(e.pointerId);
+    pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
+    if (!prev) return;
+
+    // Pinch: dos punteros activos → zoom centrado en el punto medio.
+    if (pointers.size >= 2) {
+      const [a, b] = [...pointers.values()];
+      const dist = Math.hypot(a.x - b.x, a.y - b.y);
+      if (pinchDist > 0 && dist > 0) {
+        const cx = (a.x + b.x) / 2;
+        const cy = (a.y + b.y) / 2;
+        const ns = Math.min(Math.max(scale * (dist / pinchDist), 0.1), 5);
+        tx = cx - (cx - tx) * (ns / scale);
+        ty = cy - (cy - ty) * (ns / scale);
+        scale = ns;
+        applyTransform();
+      }
+      pinchDist = dist;
+      return;
+    }
+
+    if (dragNode) {
+      if (Math.abs(e.clientX - dragSX) > 3 || Math.abs(e.clientY - dragSY) > 3) dragMoved = true;
+      const r = svgRect();
+      dragNode.fx = (e.clientX - r.left - tx) / scale;
+      dragNode.fy = (e.clientY - r.top - ty) / scale;
+      return;
+    }
+
+    if (isPanning) {
+      tx = e.clientX - panSX;
+      ty = e.clientY - panSY;
+      applyTransform();
+    }
   });
 
-  addWindowListener('mouseup', () => {
+  function endPointer(e) {
+    pointers.delete(e.pointerId);
+    if (pointers.size < 2) pinchDist = 0;
     if (dragNode) {
-      if (!dragMoved) window.location.href = dragNode.url;
+      if (!dragMoved) {
+        // Click en un anchor temporal: el ClientRouter de Astro intercepta el
+        // evento y navega con View Transitions (no recarga la página completa).
+        const a = document.createElement('a');
+        a.href = dragNode.url;
+        a.style.display = 'none';
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+      }
       dragNode.fx = null;
       dragNode.fy = null;
       simulation.alphaTarget(0);
       dragNode = null;
     }
-  });
-
-  // Zoom & pan
-  let scale = 1, tx = 0, ty = 0;
-  let isPanning = false, panSX = 0, panSY = 0;
-
-  function applyTransform() {
-    g.setAttribute('transform', `translate(${tx},${ty}) scale(${scale})`);
+    if (pointers.size === 0 && isPanning) {
+      isPanning = false;
+      svg.style.cursor = 'grab';
+    }
   }
 
+  addWindowListener('pointerup', endPointer);
+  addWindowListener('pointercancel', endPointer);
+
+  // Wheel (desktop)
   svg.addEventListener('wheel', e => {
     e.preventDefault();
-    const r = svg.getBoundingClientRect();
+    const r = svgRect();
     const cx = e.clientX - r.left, cy = e.clientY - r.top;
     const ns = Math.min(Math.max(scale * (1 + (e.deltaY < 0 ? 0.1 : -0.1)), 0.1), 5);
     tx = cx - (cx - tx) * (ns / scale);
@@ -269,24 +347,33 @@ function init() {
     applyTransform();
   }, { passive: false });
 
-  svg.addEventListener('mousedown', e => {
-    if (e.button !== 0 || e.target !== svg) return;
-    isPanning = true;
-    panSX = e.clientX - tx;
-    panSY = e.clientY - ty;
-    svg.style.cursor = 'grabbing';
-  });
-
-  addWindowListener('mousemove', e => {
-    if (!isPanning) return;
-    tx = e.clientX - panSX;
-    ty = e.clientY - panSY;
+  // Encuadra todos los nodos visibles en el viewport (crucial en móvil: la
+  // simulación puede dejar nodos fuera del viewBox original y sin pan no se veían).
+  function fitView() {
+    let minX = Infinity, maxX = -Infinity, minY = Infinity, maxY = -Infinity;
+    for (const n of nodes) {
+      if (n.x == null || n.y == null) continue;
+      minX = Math.min(minX, n.x); maxX = Math.max(maxX, n.x);
+      minY = Math.min(minY, n.y); maxY = Math.max(maxY, n.y);
+    }
+    if (!isFinite(minX) || !isFinite(maxX) || !isFinite(minY) || !isFinite(maxY)) return;
+    const pad = 48;
+    const r = svgRect();
+    const vw = r.width || W;
+    const vh = r.height || H;
+    const bw = (maxX - minX) || 1;
+    const bh = (maxY - minY) || 1;
+    const ns = Math.min(Math.max(Math.min((vw - pad * 2) / bw, (vh - pad * 2) / bh), 0.1), 1);
+    tx = (vw - (minX + maxX) * ns) / 2;
+    ty = (vh - (minY + maxY) * ns) / 2;
+    scale = ns;
     applyTransform();
-  });
+  }
 
-  addWindowListener('mouseup', () => {
-    if (isPanning) { isPanning = false; svg.style.cursor = 'grab'; }
-  });
+  // Encuadre inicial tras el primer asentamiento de la simulación y al cambiar
+  // el tamaño del contenedor (rotación de pantalla en móvil).
+  setTimeout(fitView, 400);
+  addWindowListener('resize', () => setTimeout(fitView, 150));
 
   // Tooltip
   const tip = document.getElementById('graph-tooltip');
@@ -338,10 +425,8 @@ function init() {
     cleanupFns.push(() => zoomOut.removeEventListener('click', onZoomOut));
   }
   if (zoomReset) {
-    const onZoomReset = () => {
-      scale = 1; tx = 0; ty = 0;
-      applyTransform();
-    };
+    // El reset re-encuadra todos los nodos (mejor que volver a 1,0,0 en móvil).
+    const onZoomReset = () => fitView();
     zoomReset.addEventListener('click', onZoomReset);
     cleanupFns.push(() => zoomReset.removeEventListener('click', onZoomReset));
   }

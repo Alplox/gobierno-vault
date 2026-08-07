@@ -1,7 +1,12 @@
-﻿// Renderer de cliente: agrega tarjetas de evento a los grids de mes ya emitidos por SSR.
-// Lee el JSON embebido en <script type="application/json" id="event-index-data">.
-// Los shells de año/mes ya existen en el DOM (los pinta el SSR); cada mes vacío
-// se llena en cuanto entra al viewport (carga bajo demanda por scroll).
+﻿// Renderer de cliente: agrega tarjetas de evento a los grids de mes ya emitidos por SSR
+// y aplica en cliente los filtros/búsqueda (?tema, ?persona, ?org, ?q).
+//
+// Por qué en cliente: el sitio es SSG (estático), así que la página /events se genera
+// sin query string y Astro.url.searchParams no existe en runtime. El dataset completo
+// viaja en <script type="application/json" id="event-index-data"> y aquí se filtra.
+//
+// Los shells de año/mes ya existen en el DOM (los pinta el SSR); cada mes vacío se
+// llena en cuanto entra al viewport (carga bajo demanda por scroll).
 
 const TIPO_LABELS = {
   declaracion: 'Declaracion', accion: 'Accion', anuncio: 'Anuncio', decreto: 'Decreto',
@@ -40,6 +45,13 @@ function esc(s) {
 function chip(tipo) {
   return RELATION_CHIPS[tipo] || 'bg-gray-100 text-gray-700 ring-gray-200/80';
 }
+// Normaliza minúsculas + sin acentos para la búsqueda.
+function norm(s) {
+  return String(s ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+const byMonth = new Map();
+const state = { maps: { topics: {}, people: {}, orgs: {} }, events: [] };
 
 function gridFor(year, month) {
   const sec = document.getElementById(`month-${year}-${month}`);
@@ -64,35 +76,36 @@ export function createEventGrid(year, month) {
 }
 
 function cardHTML(e) {
+  const maps = state.maps;
+  const personaNames = (e.personas || []).map((id) => maps.people[id] || id);
+  const temaNames = (e.temas || []).map((id) => maps.topics[id] || id);
   const previews = (e.previews || [])
     .map(
       (p) =>
         `<span class="inline-flex max-w-full items-center gap-1.5 rounded-md px-2 py-0.5 text-[11px] font-medium ring-1 ring-inset ${chip(p.tipo)}"><span class="shrink-0">${p.arrow}</span><span class="shrink-0 font-semibold">${esc(RELATION_LABELS[p.tipo] || p.tipo)}</span><span class="truncate">${esc(p.titulo)}</span></span>`
     )
     .join('');
-  const temas = (e.temas || [])
+  const temas = (temaNames || [])
     .map((t) => `<span class="inline-flex items-center gap-1 text-xs bg-gray-100/80 text-gray-600 px-2 py-0.5 rounded-md font-medium"><span>${esc(t)}</span></span>`)
     .join('');
   const vinculo = e.links
     ? `<span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 ring-1 ring-inset ring-blue-200/70"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
     : '';
 
-  return `<a href="/events/${e.year}/${e.id}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden">
+  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-search="${esc(e.search || '')}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden">
   <div class="flex flex-wrap items-center gap-2 mb-2 text-xs">
     <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-gray-100 text-gray-700 ring-gray-200'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
     <span class="inline-flex items-center gap-1 text-gray-500 font-medium"><span>${esc(e.fechaStr)}</span></span>
     ${vinculo}
   </div>
   <h3 style="view-transition-name:event-title-${e.id}" class="font-semibold text-gray-900 text-balance text-base leading-snug mb-2 group-hover:text-blue-600">${esc(e.titulo)}</h3>
-  ${e.personas?.length ? `<div class="flex items-center gap-1.5 text-xs text-gray-600 mb-2.5 min-w-0"><span class="truncate">${esc(e.personas.join(', '))}</span></div>` : ''}
+  ${personaNames.length ? `<div class="flex items-center gap-1.5 text-xs text-gray-600 mb-2.5 min-w-0"><span class="truncate">${esc(personaNames.join(', '))}</span></div>` : ''}
   ${temas ? `<div class="flex gap-1.5 flex-wrap mb-3">${temas}</div>` : ''}
   ${previews ? `<div class="pt-2 border-t border-gray-100 flex flex-wrap gap-1.5">${previews}</div>` : ''}
 </a>`;
 }
 
 export { cardHTML as eventCardHTML, gridFor as eventGridFor };
-
-const byMonth = new Map();
 
 function fillMonth(key) {
   const sec = document.getElementById(`month-${key}`);
@@ -110,8 +123,151 @@ export function forceFillMonth(key) {
   return fillMonth(key);
 }
 
+// Llena todos los meses pendientes de una vez (necesario para filtrar sobre el DOM completo).
+// Nota: el dataset JSON ya excluye los eventos renderizados en SSR (ver index.astro),
+// así que byMonth solo contiene tarjetas no emitidas; no hace falta un guard anti-duplicado.
+function forceFillAll() {
+  for (const key of [...byMonth.keys()]) {
+    const sec = document.getElementById(`month-${key}`);
+    if (!sec) continue;
+    const grid = sec.querySelector(':scope > .event-grid');
+    if (!grid) continue;
+    grid.insertAdjacentHTML('beforeend', (byMonth.get(key) || []).map(cardHTML).join(''));
+    byMonth.delete(key);
+  }
+}
+
+function currentFilters() {
+  const p = new URLSearchParams(window.location.search);
+  return {
+    tema: (p.get('tema') || '').trim(),
+    persona: (p.get('persona') || '').trim(),
+    org: (p.get('org') || '').trim(),
+    q: norm(p.get('q') || '').trim(),
+  };
+}
+
+function matchesFilter(card, f) {
+  if (f.tema) {
+    const ids = (card.dataset.tema || '').split(',').filter(Boolean);
+    if (!ids.includes(f.tema)) return false;
+  }
+  if (f.persona) {
+    const ids = (card.dataset.personas || '').split(',').filter(Boolean);
+    if (!ids.includes(f.persona)) return false;
+  }
+  if (f.org) {
+    const ids = (card.dataset.orgs || '').split(',').filter(Boolean);
+    if (!ids.includes(f.org)) return false;
+  }
+  if (f.q && !(card.dataset.search || '').includes(f.q)) return false;
+  return true;
+}
+
+export function applyFilters() {
+  const f = currentFilters();
+  const active = Boolean(f.tema || f.persona || f.org || f.q);
+
+  // Sincroniza los controles del FilterBar con la URL.
+  const setSelect = (name, val) => {
+    const el = document.querySelector(`select[data-filter-select="${name}"]`);
+    if (el) el.value = val;
+  };
+  setSelect('tema', f.tema);
+  setSelect('persona', f.persona);
+  setSelect('org', f.org);
+  const qInput = document.querySelector('input[data-search-input]');
+  if (qInput && document.activeElement !== qInput) qInput.value = f.q;
+
+  // Botón limpiar + grafo mini (se oculta con filtros activos para no confundir).
+  const clearBtn = document.getElementById('clear-filters');
+  if (clearBtn) clearBtn.classList.toggle('hidden', !active);
+  const graph = document.getElementById('graph-container');
+  if (graph) graph.style.display = active ? 'none' : '';
+
+  const empty = document.getElementById('no-results');
+  const root = document.getElementById('event-index-root');
+  const cards = document.querySelectorAll('#event-index-root .event-grid > a[href^="/events/"]');
+
+  if (!active) {
+    // Sin filtros: restaura todo lo que un filtrado previo pudo ocultar.
+    cards.forEach((card) => (card.style.display = ''));
+    document.querySelectorAll('#event-index-root .event-grid').forEach((grid) => {
+      const monthSec = grid.closest('section[id^="month-"]');
+      if (monthSec) monthSec.style.display = '';
+    });
+    document.querySelectorAll('#event-index-root > section[id^="year-"]').forEach((ys) => (ys.style.display = ''));
+    if (empty) empty.classList.add('hidden');
+    if (root) root.classList.remove('hidden');
+    return;
+  }
+
+  forceFillAll();
+
+  // Con filtros activos se abren todos los años para que los resultados queden visibles.
+  // La apertura es programática: no debe persistirse en localStorage (el listener de
+  // toggle en events/index.astro respeta window.__gvSkipPersist).
+  const prevSkip = window.__gvSkipPersist;
+  window.__gvSkipPersist = true;
+  document.querySelectorAll('details[data-persist]').forEach((d) => (d.open = true));
+  window.__gvSkipPersist = prevSkip;
+
+  let visible = 0;
+  cards.forEach((card) => {
+    const ok = matchesFilter(card, f);
+    card.style.display = ok ? '' : 'none';
+    if (ok) visible++;
+  });
+
+  // Oculta meses y años sin resultados.
+  document.querySelectorAll('#event-index-root .event-grid').forEach((grid) => {
+    const monthSec = grid.closest('section[id^="month-"]');
+    const hasVisible = grid.querySelector('a[href^="/events/"]:not([style*="display: none"])');
+    if (monthSec) monthSec.style.display = hasVisible ? '' : 'none';
+  });
+  document.querySelectorAll('#event-index-root > section[id^="year-"]').forEach((yearSec) => {
+    const hasVisible = yearSec.querySelector('a[href^="/events/"]:not([style*="display: none"])');
+    yearSec.style.display = hasVisible ? '' : 'none';
+  });
+
+  if (empty) empty.classList.toggle('hidden', visible > 0);
+  if (root) root.classList.toggle('hidden', visible === 0);
+}
+
+function wireFilterForm() {
+  const form = document.querySelector('#filter-form');
+  if (!form) return;
+  if (form.__gvWired) return;
+  form.__gvWired = true;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const fd = new FormData(form);
+    const p = new URLSearchParams();
+    for (const [k, v] of fd) {
+      if (String(v).trim()) p.set(k, String(v).trim());
+    }
+    const qs = p.toString();
+    history.pushState({}, '', qs ? `${location.pathname}?${qs}` : location.pathname);
+    applyFilters();
+  });
+  const clearBtn = document.getElementById('clear-filters');
+  if (clearBtn && !clearBtn.__gvWired) {
+    clearBtn.__gvWired = true;
+    clearBtn.addEventListener('click', () => {
+      history.pushState({}, '', location.pathname);
+      applyFilters();
+    });
+  }
+}
+
+// popstate (botón atrás/adelante) se registra una sola vez por sesión.
+if (!window.__gvEventPopstate) {
+  window.__gvEventPopstate = true;
+  window.addEventListener('popstate', () => applyFilters());
+}
+
 export function initEventList() {
-  // Los scripts de pagina se re-ejecutan en cada navegacion (View Transitions).
+  // Los scripts de página se re-ejecutan en cada navegación (View Transitions).
   // En vez de un guard persistente, se desconecta el observer previo y se
   // reconstruye con el DOM nuevo; byMonth es module-level y persiste entre
   // navegaciones SPA, por eso se limpia antes de re-poblar.
@@ -125,16 +281,18 @@ export function initEventList() {
 
   const script = document.getElementById('event-index-data');
   if (!script) return;
-  let data = [];
+  let payload = { maps: {}, events: [] };
   try {
-    data = JSON.parse(script.textContent || '[]');
+    payload = JSON.parse(script.textContent || '{}');
   } catch {
     return;
   }
-  if (!data.length) return;
+  state.maps = payload.maps || { topics: {}, people: {}, orgs: {} };
+  state.events = payload.events || [];
+  if (!state.events.length) return;
 
   // Agrupar por mes: mes -> eventos lazy pendientes.
-  for (const e of data) {
+  for (const e of state.events) {
     const key = `${e.year}-${String(e.month).padStart(2, '0')}`;
     if (!byMonth.has(key)) byMonth.set(key, []);
     byMonth.get(key).push(e);
@@ -164,4 +322,7 @@ export function initEventList() {
   } else {
     for (const key of byMonth.keys()) fillMonth(key);
   }
+
+  wireFilterForm();
+  applyFilters();
 }

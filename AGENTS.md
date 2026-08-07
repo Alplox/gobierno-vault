@@ -113,10 +113,15 @@ actualizado: 2026-07-20
 | `[[org/id]]` | `<span class="entity-ref entity-org">Nombre</span>` | `[[org/senapred]]` |
 | `[[source/id]]` | `[N]` con tooltip | `[[source/latercera-2026-07-20-balance]]` |
 | `[[cifra/concepto/valor/unidad]]` | `<span class="cifra-badge">valor</span>` | `[[cifra/fallecidos/5/personas]]` |
+| `[[event/20260720-1]]` | `<a class="event-ref">Titulo</a>` | `[[event/20260720-1]]` |
 
 - Fuentes se numeran secuencialmente por primera aparicion en el doc.
 - Misma fuente reutiliza su numero en todas sus repeticiones.
 - `[[source/...]]` genera anchor a `#ref-N` en la seccion de Referencias.
+- **IDs de evento desnudos en prosa** (ej. `ver evento 20260618-3`) se auto-enlazan
+  a la página de detalle con su título como texto del enlace (`remarkWikiLinks.mjs`,
+  patrón `\b20\d{6}-\d{1,3}\b`). Solo se enlazan si el ID existe en el índice.
+  Usar `[[event/ID]]` cuando se quiera enlazar explícitamente.
 
 #### Formato de citas (declaraciones)
 
@@ -185,6 +190,27 @@ El equipo presidencial decidió interponer denuncia ante la PDI [[source/theclin
     - Segun corresponda intentar obtener mayor contexto para reducir sesgos usando fuentes listadas en `FUENTES_GUBERNAMENTALES.md`.
 11. **Personas/orgs nuevas**: agregar a `entities.yaml`.
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
+
+## Pagina /events: filtros y busqueda en cliente
+
+El sitio es SSG, por lo que `Astro.url.searchParams` NO existe en runtime: la página
+`/events` se genera sin query string. Los filtros (`?tema`, `?persona`, `?org`, `?q`)
+y la busqueda se aplican en el cliente sobre un dataset JSON completo que viaja en
+`<script id="event-index-data">` (ver `eventListClient.js`).
+
+- **Dataset**: la primera tanda de tarjetas se renderiza en SSR (`SSR_LIMIT = 12` en
+  `events/index.astro`); el resto viaja como JSON y se pinta bajo demanda al scroll
+  (IntersectionObserver por mes). El JSON **excluye** los IDs ya emitidos en SSR
+  (`ssrIds`): si viajaran tambien, `fillMonth` los re-insertaría (duplicados).
+- **Filtros**: `applyFilters()` lee la URL, fuerza el llenado de todos los meses
+  (`forceFillAll`), oculta las tarjetas que no matchean `data-tipo`/`data-tema`/
+  `data-personas`/`data-orgs`/`data-search` y oculta meses/años vacíos.
+- **Busqueda**: `data-search` es texto normalizado (minúsculas + sin acentos, NFD)
+  de titulo, etiquetas, personas, orgs, temas, tipo, ID y fecha. La normalizacion
+  debe ser IDENTICA entre `EventCard.astro` (SSR) y `eventListClient.js` (cliente).
+- **Persistencia**: abrir los `<details>` programáticamente al filtrar NO debe
+  guardarse en localStorage — el listener de `toggle` en `events/index.astro`
+  respeta `window.__gvSkipPersist` (lo setea `applyFilters`).
 
 ## Campo `cargos` (historial de cargos de personas)
 
@@ -313,12 +339,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 600
+**Total de eventos:** 605
 
 **Eventos por año:**
-- 2026: 478
-- 2025: 34
-- 2024: 12
+- 2026: 481
+- 2025: 35
+- 2024: 13
 - 2023: 10
 - 2022: 14
 - 2021: 8
@@ -333,32 +359,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (228)
-- Economia (112)
-- Justicia (106)
+- Politica (229)
+- Economia (115)
+- Justicia (107)
 - Administración pública (69)
-- Defensa y seguridad (68)
+- Defensa y seguridad (69)
 - Cambios en el gabinete (56)
-- Finanzas publicas (55)
+- Finanzas publicas (56)
+- Proceso legislativo (54)
 - Emergencia y catástrofes (54)
-- Proceso legislativo (53)
-- Derechos humanos (49)
+- Derechos humanos (50)
 
 **Tipos de eventos más frecuentes (Top 10):**
 - accion (144)
-- declaracion (85)
+- declaracion (86)
 - reaccion (79)
-- resultado (61)
-- publicacion (57)
+- resultado (62)
+- publicacion (58)
 - investigacion (50)
-- anuncio (43)
+- anuncio (45)
 - fallo_judicial (24)
 - votacion (14)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 691
-- Organizaciones: 377
-- Cifras: 430
-- Fuentes: 1927
+- Personas: 704
+- Organizaciones: 382
+- Cifras: 440
+- Fuentes: 1945
 - Temas: 74

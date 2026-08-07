@@ -163,6 +163,7 @@
 - [2026/06/20260627-1 - La semana en que se enquistaron las dos almas del Gobierno de Kast](src/content/events/2026/06/20260627-1.md)
 - [2026/06/20260630-1 - Senado rechaza acusación constitucional contra exministro de Hacienda Nicolás Grau](src/content/events/2026/06/20260630-1.md)
 - [2026/06/20260630-2 - Comisión de Constitución aprueba en general proyecto que autoriza a militares a realizar controles de identidad en estados de excepción](src/content/events/2026/06/20260630-2.md)
+- [2026/06/20260630-3 - Mesa de Reactivación Laboral entrega 22 propuestas al Gobierno: jornada hasta 52 horas en ciclos, indemnización a todo evento y sala cuna urgente](src/content/events/2026/06/20260630-3.md)
 - [2026/07/20260702-1 - Contraloría concluye que exministra Steinert actuó ilegalmente al solicitar datos a la PDI](src/content/events/2026/07/20260702-1.md)
 - [2026/07/20260703-1 - Primera etapa de la zanja fronteriza en etapa final; ingresos irregulares bajaron 90%](src/content/events/2026/07/20260703-1.md)
 - [2026/07/20260705-1 - Corrupción y redes de ultraderecha: El flanco Orbán abierto en Chile](src/content/events/2026/07/20260705-1.md)
@@ -476,12 +477,14 @@
 - [2026/08/20260806-45 - Diputada Parisi (PDG) ingresa proyecto para declarar feriado nacional el 17 de septiembre y extender las Fiestas Patrias](src/content/events/2026/08/20260806-45.md)
 - [2026/08/20260806-46 - Economistas extrañan pilares estructurales en la megarreforma: Bergoeing y Wagner marcan deudas en educación, mercado laboral y modernización del Estado](src/content/events/2026/08/20260806-46.md)
 - [2026/08/20260806-47 - Poduje plantea demoler viviendas en zonas de inundación tras denuncia de 70 inmuebles con fallas estructurales en Villa Santa Fe de Bulnes: 'estándares chantas'](src/content/events/2026/08/20260806-47.md)
+- [2026/08/20260806-48 - Arrau detalla la ACOT en la Escuela de Carabineros: fin del monopolio del SML en pesquisas de ADN, destrucción de bienes incautados y modificación a la Ley Antibarricadas](src/content/events/2026/08/20260806-48.md)
 - [2026/08/20260806-5 - Fiscalía confirma investigación por presunta VIF que involucra al senador Fidel Espinoza; PS suspende su militancia y abre causa en el Tribunal Supremo](src/content/events/2026/08/20260806-5.md)
 - [2026/08/20260806-6 - Gobierno blinda a la seremi de Economía de Arica y vicepresidenta de Republicanos, Romina Cifuentes, en el caso Sernac; diez partidos exigen su renuncia](src/content/events/2026/08/20260806-6.md)
 - [2026/08/20260806-7 - Corte de Apelaciones revoca prisión preventiva de Joaquín Lavín León y decreta arresto domiciliario total](src/content/events/2026/08/20260806-7.md)
 - [2026/08/20260806-8 - Revelan la identidad del imputado del caso 'ring raja' de Vitacura: Andrés Arrieta, gerente de Restomarket, en prisión preventiva](src/content/events/2026/08/20260806-8.md)
 - [2026/08/20260806-9 - Silencio de Kast sobre indultos a exuniformados abre tensión en el oficialismo; Carter pide indultar a los 'injustamente condenados' y Rendón responde con videos del estallido](src/content/events/2026/08/20260806-9.md)
 - [2026/08/20260807-1 - Denuncian a Kast ante Contraloría por la cifra de '218 mil robos violentos' de su cadena nacional: Rendón acusa falta a la probidad y el Ministerio de Seguridad admite 'error de referencia'](src/content/events/2026/08/20260807-1.md)
+- [2026/08/20260807-2 - Codelco pone en revisión su cartera de inversiones por US$34 mil millones y Fontaine anticipa 'cuatro años difíciles'](src/content/events/2026/08/20260807-2.md)
 
 ## 2025
 
@@ -496,6 +499,7 @@
 - [2025/05/20250519-1 - José Antonio Kast presenta el Plan Implacable de seguridad durante campaña presidencial](src/content/events/2025/05/20250519-1.md)
 - [2025/06/20250601-1 - Boric anuncia el fin de Punta Peuco como cárcel especial](src/content/events/2025/06/20250601-1.md)
 - [2025/06/20250629-1 - Primarias presidenciales 2025: Jeannette Jara gana la primaria de Unidad por Chile](src/content/events/2025/06/20250629-1.md)
+- [2025/07/20250718-1 - Mario Marcel advierte que eliminar el tope de 11 años en las indemnizaciones por años de servicio podría generar más despidos](src/content/events/2025/07/20250718-1.md)
 - [2025/08/20250813-1 - Kast no asiste a comisión investigadora por robo de cables de cobre](src/content/events/2025/08/20250813-1.md)
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md)
 - [2025/09/20250923-1 - Boric presenta la candidatura de Bachelet a la Secretaría General de la ONU](src/content/events/2025/09/20250923-1.md)
@@ -534,6 +538,7 @@
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md)
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md)
 - [2024/12/20241205-1 - Fiscalía detalla cómo operaba la 'mafia del fuego' detrás del megaincendio de Valparaíso](src/content/events/2024/12/20241205-1.md)
+- [2024/12/20241227-1 - Fiscal Chong exhibe video inédito en el contrainterrogatorio a Crespo: le arrancó un mechón de pelo a un detenido y lo envió al grupo de WhatsApp 'La Tijera'](src/content/events/2024/12/20241227-1.md)
 
 ## 2023
 

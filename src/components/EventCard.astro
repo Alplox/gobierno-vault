@@ -5,7 +5,7 @@ import { Calendar, User, Tag, GitFork } from 'lucide-astro';
 import { TIPO_LABELS, TIPO_STYLES } from '../lib/eventTypes';
 
 const { event, connectionIndex } = Astro.props;
-const { titulo, fecha, tipo, tema } = event.data;
+const { titulo, fecha, tipo, tema, etiquetas = [] } = event.data;
 const id = eventBasename(event.id);
 
 const dateObj = new Date(fecha);
@@ -24,9 +24,22 @@ const year = dateObj.getFullYear();
 const connections: EventConnections | undefined = connectionIndex?.get(id);
 const explicitCount = connections ? countExplicitConnections(connections) : 0;
 const previewEdges = connections ? [...connections.outgoing, ...connections.incoming].slice(0, 2) : [];
+
+// Texto plano normalizado (sin acentos, minúsculas) para la búsqueda del cliente.
+function normalizeSearch(s: string) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
 ---
 
-<a href={`/events/${year}/${id}`} class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden">
+<a
+  href={`/events/${year}/${id}`}
+  data-tipo={tipo}
+  data-tema={tema.join(',')}
+  data-personas={entities.personas.join(',')}
+  data-orgs={entities.organizaciones.join(',')}
+  data-search={normalizeSearch([titulo, ...etiquetas, ...personaNombres, ...temaNombres.map((t) => t.nombre), TIPO_LABELS[tipo] || tipo, id, fechaStr, year].join(' '))}
+  class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden"
+>
   <div class="flex flex-wrap items-center gap-2 mb-2 text-xs">
     <span class={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ring-1 ring-inset ${TIPO_STYLES[tipo] || 'bg-gray-100 text-gray-700 ring-gray-200'}`}>
       {TIPO_LABELS[tipo] || tipo}

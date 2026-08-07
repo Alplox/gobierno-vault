@@ -86,6 +86,22 @@ const currentPath = Astro.url.pathname;
         border-radius: 4px;
         font-weight: 500;
       }
+      .event-ref {
+        display: inline-block;
+        color: #1d4ed8;
+        background: #eff6ff;
+        padding: 1px 6px;
+        border-radius: 4px;
+        font-weight: 500;
+        white-space: nowrap;
+        text-decoration: none;
+        border: 1px solid #dbeafe;
+      }
+      .event-ref:hover {
+        background: #dbeafe;
+        border-color: #bfdbfe;
+        text-decoration: underline;
+      }
       @keyframes ref-pulse {
         0%   { box-shadow: 0 0 0 0 rgba(0,0,0,0.08); }
         25%  { box-shadow: 0 2px 12px rgba(0,0,0,0.12); }

@@ -621,7 +621,46 @@ people:
     nombre: David Bravo
     cargo: Director del Centro UC de Encuestas y Estudios Longitudinales
     organizacion: centro_uc_encuestas
-    notas: "Economista laboral, director del Centro UC de Encuestas y Estudios Longitudinales. Sobre la entrada en vigencia de las 42 horas (abril 2026) advirtió que implica un incremento de 4,8% en los costos laborales y un golpe al empleo sin que haya aumentado la productividad."
+    notas: "Economista laboral, director del Centro UC de Encuestas y Estudios Longitudinales. Sobre la entrada en vigencia de las 42 horas (abril 2026) advirtió que implica un incremento de 4,8% en los costos laborales y un golpe al empleo sin que haya aumentado la productividad. Presidió la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  alejandro_micco:
+    nombre: Alejandro Micco
+    cargo: Exsubsecretario de Hacienda (2014-2017)
+    organizacion: ministerio_hacienda
+    notas: "Economista, exsubsecretario de Hacienda durante el primer gobierno de Bachelet. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  benjamin_villena_roldan:
+    nombre: Benjamín Villena-Roldán
+    cargo: Economista y académico de la Universidad Andrés Bello
+    notas: "Economista laboral, académico de la Universidad Andrés Bello. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  carlo_arqueros:
+    nombre: Carlo Arqueros
+    cargo: Diputado (Partido Republicano)
+    organizacion: partido_republicano
+    notas: "Diputado republicano. Ante las 22 propuestas de la Mesa de Reactivación Laboral (junio 2026) se mostró a favor de avanzar en una agenda de adaptabilidad laboral, 'siempre resguardando el promedio legal de la jornada, los descansos, las remuneraciones y los derechos de los trabajadores'."
+  cecilia_cifuentes:
+    nombre: Cecilia Cifuentes
+    cargo: Directora del Centro de Estudios Financieros del ESE Business School (Universidad de los Andes)
+    notas: "Economista. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026. En agosto de 2026 advirtió que el estancamiento y la destrucción de puestos formales han afectado profundamente a la masa laboral."
+  claudia_martinez:
+    nombre: Claudia Martínez
+    cargo: Directora del Instituto de Economía de la Pontificia Universidad Católica de Chile
+    organizacion: universidad_catolica
+    notas: "Economista, directora del Instituto de Economía UC. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  maria_cuky_perez:
+    nombre: María 'Cuky' Pérez
+    cargo: Doctora en Economía de la Educación (Universidad de Stanford)
+    notas: "Economista de la educación, doctora por la Universidad de Stanford. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  maria_jose_abud:
+    nombre: María José Abud
+    cargo: Exsubsecretaria de la Mujer y la Equidad de Género
+    notas: "Exsubsecretaria de la Mujer y la Equidad de Género. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  ricardo_ruiz_de_vinaspre:
+    nombre: Ricardo Ruiz de Viñaspre
+    cargo: Exdirector del Sence
+    notas: "Exdirector del Servicio Nacional de Capacitación y Empleo (Sence). Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  sebastian_videla:
+    nombre: Sebastián Videla
+    cargo: Diputado
+    notas: "Diputado. Ante las 22 propuestas de la Mesa de Reactivación Laboral (junio 2026) se mostró crítico: 'a primera instancia creo que es un retroceso para los trabajadores'."
   juan_bravo:
     nombre: Juan Bravo
     cargo: Director del Observatorio del Contexto Económico de la UDP (OCEC-UDP)
@@ -4066,6 +4105,26 @@ people:
     cargo: Exalcalde de Puerto Montt
     notas: "Alcalde de Puerto Montt al momento del paro de camioneros de agosto de 2020. Exigió al gobierno acción ante el bloqueo de camioneros que impidió el paso de los recolectores de basura en plena pandemia, advirtiendo riesgo sanitario y criticando la inacción del Ministerio del Interior."
 
+  cristina_cabello:
+    nombre: Cristina Cabello
+    cargo: Jueza presidenta del Cuarto Tribunal Oral en lo Penal de Santiago
+    notas: "Jueza presidenta del Cuarto Tribunal Oral en lo Penal de Santiago durante el juicio contra Claudio Crespo por el caso Gustavo Gatica. En la jornada 35 (27 de diciembre de 2024) consideró 'irrelevante para el tribunal' detenerse en el detalle del mechón de pelo exhibido por la fiscal Ximena Chong en el contrainterrogatorio."
+
+  francisco_ledesma:
+    nombre: Francisco Ledesma
+    cargo: Fiscal del caso Gustavo Gatica
+    notas: "Fiscal que imputó a Claudio Crespo haber disparado a Gustavo Gatica con 'ánimo' de castigarlo durante el estallido social, según el relato del propio Crespo en su contrainterrogatorio del 27 de diciembre de 2024."
+
+  jorge_cantallopts:
+    nombre: Jorge Cantallopts
+    cargo: Director ejecutivo del Centro de Estudios del Cobre y la Minería (CESCO)
+    notas: "Director ejecutivo de CESCO. Tras el anuncio de revisión de la cartera de inversiones de Codelco (agosto de 2026) señaló que no necesariamente implica una crisis, sino una práctica habitual de la industria, advirtiendo por el impacto en proyectos estratégicos y en los contratistas."
+
+  alvaro_garcia:
+    nombre: Álvaro García
+    cargo: Decano de la Facultad de Ciencias Económicas y Empresariales de la Universidad de los Andes
+    notas: "Decano de la FCEyE de la Universidad de los Andes. Sobre la revisión de la cartera de inversiones de Codelco (agosto de 2026) planteó la tensión entre mantener los aportes de la estatal al Estado y disponer de recursos para financiar su plan de inversiones, sugiriendo que parte de la venta de activos podría financiar el plan estratégico."
+
 organizations:
   criteria:
     nombre: Criteria
@@ -4197,6 +4256,21 @@ organizations:
     nombre: Ministerio del Trabajo y Previsión Social
     tipo: ministerio
     pais: Chile
+  seguro_de_cesantia:
+    nombre: Seguro de Cesantía
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Seguro social de cesantía financiado con cotizaciones de trabajadores y empleadores. La Mesa de Reactivación Laboral (junio 2026) propuso financiar con una cotización adicional al Seguro de Cesantía la indemnización a todo evento y compensar parcialmente las horas reducidas en el mecanismo de reducción temporal de jornada ante shocks económicos."
+  superintendencia_pensiones:
+    nombre: Superintendencia de Pensiones
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Organismo fiscalizador del sistema de pensiones. La Mesa de Reactivación Laboral (junio 2026) pidió que el INE explique técnicamente las discrepancias entre la estimación de cotizantes de la ENE y los registros administrativos de la Superintendencia."
+  chilevalora:
+    nombre: ChileValora (Comisión Sistema Nacional de Certificación de Competencias Laborales)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Comisión encargada de certificar competencias laborales. La Mesa de Reactivación Laboral (junio 2026) propuso integrarla al Sistema de Desarrollo Continuo de Habilidades Productivas (SDCHP) con un portal único."
   direccion_del_trabajo:
     nombre: Dirección del Trabajo (DT)
     tipo: servicio_publico
@@ -4768,6 +4842,16 @@ organizations:
     tipo: empresa_estatal
     pais: Chile
     notas: Empresa estatal minera de cobre. Propuesta de privatización por Republicanos generó controversia.
+  cesco:
+    nombre: Centro de Estudios del Cobre y la Minería
+    tipo: think_tank
+    pais: Chile
+    notas: "Centro de estudios especializado en minería del cobre, cuyo director ejecutivo es Jorge Cantallopts."
+  universidad_andes:
+    nombre: Universidad de los Andes
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Universidad privada chilena. Su decano de la Facultad de Ciencias Económicas y Empresariales, Álvaro García, analizó la revisión de inversiones de Codelco en agosto de 2026."
   affindh:
     nombre: Asociación de Funcionarias y Funcionarios del INDH (AFFINDH)
     tipo: sindicato
@@ -6327,6 +6411,22 @@ cifras:
   desocupacion_trim_amj_2026:
     nombre: Tasa de desocupación trimestre abril-junio 2026
     unidad_default: "%"
+  desocupacion_trim_mam_2026:
+    nombre: Tasa de desocupación trimestre marzo-mayo 2026
+    unidad_default: "%"
+    notas: "9,4% según la ENE publicada el 30 de junio de 2026, máximo en casi cinco años. El informe de la Mesa de Reactivación Laboral citaba además 9,1% en el trimestre febrero-abril y desocupación femenina de 10,5%."
+  desocupacion_femenina_fma_2026:
+    nombre: Tasa de desocupación femenina trimestre febrero-abril 2026
+    unidad_default: "%"
+    notas: "10,5% según el informe de la Mesa de Reactivación Laboral entregado el 30 de junio de 2026."
+  desocupados_chile_2026:
+    nombre: Personas desempleadas en Chile (mediados de 2026)
+    unidad_default: personas
+    notas: "Cerca de 980 mil personas desempleadas, según el Ministerio del Trabajo al recibir el informe de la Mesa de Reactivación Laboral (junio-julio 2026)."
+  meses_desocupacion_sobre_8:
+    nombre: Meses consecutivos con tasa de desocupación igual o superior al 8%
+    unidad_default: meses
+    notas: "40 meses consecutivos, según el informe de la Mesa de Reactivación Laboral entregado el 30 de junio de 2026."
   alza_bencina_mepco:
     nombre: Alza de bencina por colapso MEPCO
     unidad_default: pesos por litro
@@ -7501,4 +7601,28 @@ cifras:
     nombre: Entidades que respaldaron la audiencia ante la CIDH
     unidad_default: entidades
     notas: "Según Mala Espina (agosto de 2026), la audiencia de la CIDH solicitada por organizaciones de DDHH sobre el impacto de las políticas administrativas en los derechos humanos de Chile contó con el respaldo de 82 entidades."
+  cartera_inversiones_codelco:
+    nombre: Cartera de inversiones de Codelco bajo revisión
+    unidad_default: millones_de_dolares
+    notas: "US$34.000 millones es el plan de inversiones a cinco años de Codelco que la administración de Bernardo Fontaine considera inviable de financiar, según La Tercera Pulso (30 de julio de 2026) y BioBioChile (7 de agosto de 2026)."
+  caida_produccion_codelco_4_anios:
+    nombre: Caída de la producción de Codelco en los últimos cuatro años
+    unidad_default: por_ciento
+    notas: "La producción de Codelco cayó 16% en los últimos cuatro años según el diagnóstico del presidente del directorio Bernardo Fontaine (BioBioChile, 7 de agosto de 2026)."
+  alza_costos_codelco_4_anios:
+    nombre: Alza de costos por tonelada de Codelco en los últimos cuatro años
+    unidad_default: por_ciento
+    notas: "Los costos por tonelada de Codelco aumentaron 82% en los últimos cuatro años según Bernardo Fontaine (BioBioChile, 7 de agosto de 2026)."
+  crecimiento_deuda_codelco_4_anios:
+    nombre: Crecimiento de la deuda de Codelco en los últimos cuatro años
+    unidad_default: por_ciento
+    notas: "La deuda de Codelco creció 50% en los últimos cuatro años según Bernardo Fontaine (BioBioChile, 7 de agosto de 2026)."
+  proyectos_acot_en_congreso:
+    nombre: Proyectos de la ACOT ya en tramitación en el Congreso
+    unidad_default: proyectos
+    notas: "Cooperativa contabilizó 19 proyectos de la ACOT ya en el Congreso al 6 de agosto de 2026, mientras Emol consignó '20 proyectos en trámite' según el propio ministro Arrau."
+  proyectos_acot_nuevos:
+    nombre: Nuevas iniciativas de la ACOT anunciadas por el Ejecutivo
+    unidad_default: proyectos
+    notas: "Cooperativa contabilizó 9 nuevas iniciativas de la ACOT al 6 de agosto de 2026; Arrau habló ante Emol de 'cerca de una quincena de proyectos de ley que iremos ingresando en las próximas semanas y meses'."
 

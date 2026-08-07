@@ -4,8 +4,9 @@ import EventCard from '../../components/EventCard.astro';
 import EventGraph from '../../components/EventGraph.astro';
 import FilterBar from '../../components/FilterBar.astro';
 import TimelineNav from '../../components/TimelineNav.astro';
-import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, eventHasPerson, eventHasOrg, getTopicsMap, getPeopleMap, getOrgsMap, getEventEntities } from '../../lib/queries';
+import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, getTopicsMap, getPeopleMap, getOrgsMap, getEventEntities } from '../../lib/queries';
 import { buildConnectionIndex, eventBasename, eventYearFromDate, countExplicitConnections } from '../../lib/relations';
+import { TIPO_LABELS } from '../../lib/eventTypes';
 import { Calendar, ChevronDown } from 'lucide-astro';
 
 const allEvents = await getAllEvents();
@@ -24,20 +25,14 @@ const topics = topicIds.map((id) => ({ id, label: topicsMap.get(id) ?? id }));
 const people = personIds.map((id) => ({ id, label: peopleMap.get(id) ?? id }));
 const orgs = orgIds.map((id) => ({ id, label: orgsMap.get(id) ?? id }));
 
-const tema = Astro.url.searchParams.get('tema');
-const persona = Astro.url.searchParams.get('persona');
-const org = Astro.url.searchParams.get('org');
-
-let filtered = allEvents;
-if (tema) filtered = filtered.filter((e) => e.data.tema.includes(tema));
-if (persona) filtered = filtered.filter((e) => eventHasPerson(e.id, persona));
-if (org) filtered = filtered.filter((e) => eventHasOrg(e.id, org));
+// Nota: el sitio es SSG (estático), por lo que Astro.url.searchParams no existe en
+// runtime. Los filtros y la búsqueda se aplican en el cliente sobre el dataset
+// completo que viaja en <script id="event-index-data"> (ver eventListClient.js).
 
 // La primera tanda se renderiza en SSR (pintado inmediato + SEO); el resto viaja
 // como JSON compacto y se pinta bajo demanda en el cliente al hacer scroll.
 const SSR_LIMIT = 12;
-const ssrEvents = filtered.slice(0, SSR_LIMIT);
-const lazyEvents = filtered.slice(SSR_LIMIT);
+const ssrEvents = allEvents.slice(0, SSR_LIMIT);
 const ssrIds = new Set(ssrEvents.map((e) => eventBasename(e.id)));
 
 const monthNames = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
@@ -46,7 +41,7 @@ interface MonthGroup {
   key: string;
   month: number;
   year: number;
-  events: typeof filtered;
+  events: typeof allEvents;
 }
 interface YearGroup {
   year: number;
@@ -54,7 +49,7 @@ interface YearGroup {
 }
 
 const years: YearGroup[] = [];
-for (const event of filtered) {
+for (const event of allEvents) {
   const d = new Date(event.data.fecha);
   const year = eventYearFromDate(d);
   const month = parseInt(
@@ -80,7 +75,6 @@ for (const yearGroup of years) {
 }
 
 const currentYear = new Date().getFullYear();
-const activeFilters = Boolean(tema || persona || org);
 
 const navSections = years.map((y) => ({
   id: `year-${y.year}`,
@@ -91,28 +85,59 @@ const navSections = years.map((y) => ({
   })),
 }));
 
-// JSON compacto para el cliente: solo lo que necesita la tarjeta.
-const lazyData = lazyEvents.map((event) => {
+// Texto plano normalizado (sin acentos, minúsculas) para la búsqueda del cliente.
+function normalizeSearch(s: string) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+// Dataset completo para el cliente: maps (id -> nombre) + todos los eventos con
+// campos filtrables (ids de tema/persona/org, etiquetas) y texto de búsqueda.
+const mapsData = {
+  topics: Object.fromEntries(topics.map((t) => [t.id, t.label])),
+  people: Object.fromEntries(people.map((p) => [p.id, p.label])),
+  orgs: Object.fromEntries(orgs.map((o) => [o.id, o.label])),
+};
+
+// El dataset excluye los eventos ya renderizados en SSR (ssrIds): si viajaran
+// también como JSON, fillMonth los re-insertaría al llenar el mes (duplicados).
+const eventData = allEvents.filter((event) => !ssrIds.has(eventBasename(event.id))).map((event) => {
   const id = eventBasename(event.id);
   const d = new Date(event.data.fecha);
   const conn = connectionIndex.get(id);
   const previews = conn ? [...conn.outgoing, ...conn.incoming].slice(0, 2) : [];
   const entities = getEventEntities(event.id);
+  const fechaStr = d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' });
+  const etiquetas = event.data.etiquetas ?? [];
+  const search = normalizeSearch(
+    [
+      event.data.titulo,
+      ...etiquetas,
+      ...entities.personas.map((p) => peopleMap.get(p) ?? p),
+      ...entities.organizaciones.map((o) => orgsMap.get(o) ?? o),
+      ...event.data.tema.map((t) => topicsMap.get(t) ?? t),
+      TIPO_LABELS[event.data.tipo] ?? event.data.tipo,
+      id,
+      fechaStr,
+    ].join(' ')
+  );
   return {
     id,
     year: eventYearFromDate(d),
     month: parseInt(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', month: '2-digit' }).format(d), 10),
-    fechaStr: d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+    fechaStr,
     tipo: event.data.tipo,
     titulo: event.data.titulo,
-    personas: entities.personas.map((p) => peopleMap.get(p) ?? p),
-    temas: event.data.tema.map((t) => topicsMap.get(t) ?? t),
+    temas: event.data.tema,
+    personas: entities.personas,
+    orgs: entities.organizaciones,
+    etiquetas,
     links: conn ? countExplicitConnections(conn) : 0,
     previews: previews.map((edge) => ({
       tipo: edge.tipo,
       arrow: edge.direction === 'outgoing' ? '→' : '←',
       titulo: edge.titulo,
     })),
+    search,
   };
 });
 ---
@@ -128,55 +153,53 @@ const lazyData = lazyEvents.map((event) => {
 
   <FilterBar topics={topics} people={people} orgs={orgs} />
 
-  <EventGraph events={filtered} connectionIndex={connectionIndex} size="mini" />
+  <EventGraph events={allEvents} connectionIndex={connectionIndex} size="mini" />
 
-  {filtered.length === 0 ? (
-    <p class="text-sm text-gray-500 bg-white p-12 rounded-2xl border border-dashed border-gray-300 text-center">
+  <div class="relative mt-6">
+    <div id="event-index-root" class="space-y-8">
+      {years.map((yearGroup) => (
+        <section id={`year-${yearGroup.year}`} class="scroll-mt-32">
+          <details class="group/year" open={yearGroup.year === currentYear} data-persist={`events-year-${yearGroup.year}`}>
+            <summary class="flex cursor-pointer list-none items-center gap-2 border-b-2 border-gray-200 py-2 [&::-webkit-details-marker]:hidden">
+              <ChevronDown class="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open/year:rotate-180" />
+              <span class="text-lg font-bold tracking-tight text-gray-900">{yearGroup.year}</span>
+              <span class="text-xs text-gray-400">
+                {yearGroup.months.reduce((a, m) => a + m.events.length, 0)} {yearGroup.months.reduce((a, m) => a + m.events.length, 0) === 1 ? 'evento' : 'eventos'}
+              </span>
+            </summary>
+
+            <div class="pt-4">
+              {yearGroup.months.map((monthGroup) => (
+                <section id={`month-${monthGroup.key}`} class="scroll-mt-32 mb-8">
+                  <h2 class="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-gray-500">
+                    <span class="h-1.5 w-1.5 rounded-full bg-gray-400" />
+                    {monthNames[monthGroup.month - 1]} {monthGroup.year}
+                    <span class="ml-auto text-[11px] font-normal normal-case text-gray-400">
+                      {monthGroup.events.length} {monthGroup.events.length === 1 ? 'evento' : 'eventos'}
+                    </span>
+                  </h2>
+                  <div class="event-grid grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {monthGroup.events.map((event) => {
+                      if (!ssrIds.has(eventBasename(event.id))) return null;
+                      return <EventCard event={event} connectionIndex={connectionIndex} />;
+                    })}
+                  </div>
+                </section>
+              ))}
+            </div>
+          </details>
+        </section>
+      ))}
+    </div>
+
+    <p id="no-results" class="hidden text-sm text-gray-500 bg-white p-12 rounded-2xl border border-dashed border-gray-300 text-center">
       No se encontraron eventos con los filtros seleccionados.
     </p>
-  ) : (
-    <div class="relative mt-6">
-      <div id="event-index-root" class="space-y-8">
-        {years.map((yearGroup) => (
-          <section id={`year-${yearGroup.year}`} class="scroll-mt-32">
-            <details class="group/year" open={yearGroup.year === currentYear || activeFilters} data-persist={`events-year-${yearGroup.year}`}>
-              <summary class="flex cursor-pointer list-none items-center gap-2 border-b-2 border-gray-200 py-2 [&::-webkit-details-marker]:hidden">
-                <ChevronDown class="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open/year:rotate-180" />
-                <span class="text-lg font-bold tracking-tight text-gray-900">{yearGroup.year}</span>
-                <span class="text-xs text-gray-400">
-                  {yearGroup.months.reduce((a, m) => a + m.events.length, 0)} {yearGroup.months.reduce((a, m) => a + m.events.length, 0) === 1 ? 'evento' : 'eventos'}
-                </span>
-              </summary>
 
-              <div class="pt-4">
-                {yearGroup.months.map((monthGroup) => (
-                  <section id={`month-${monthGroup.key}`} class="scroll-mt-32 mb-8">
-                    <h2 class="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-gray-500">
-                      <span class="h-1.5 w-1.5 rounded-full bg-gray-400" />
-                      {monthNames[monthGroup.month - 1]} {monthGroup.year}
-                      <span class="ml-auto text-[11px] font-normal normal-case text-gray-400">
-                        {monthGroup.events.length} {monthGroup.events.length === 1 ? 'evento' : 'eventos'}
-                      </span>
-                    </h2>
-                    <div class="event-grid grid grid-cols-1 md:grid-cols-2 gap-4">
-                      {monthGroup.events.map((event) => {
-                        if (!ssrIds.has(eventBasename(event.id))) return null;
-                        return <EventCard event={event} connectionIndex={connectionIndex} />;
-                      })}
-                    </div>
-                  </section>
-                ))}
-              </div>
-            </details>
-          </section>
-        ))}
-      </div>
+    <TimelineNav sections={navSections} />
+  </div>
 
-      <TimelineNav sections={navSections} />
-    </div>
-  )}
-
-  <script type="application/json" id="event-index-data" set:html={JSON.stringify(lazyData)} />
+  <script type="application/json" id="event-index-data" set:html={JSON.stringify({ maps: mapsData, events: eventData })} />
 
   <script>
     import { initEventList } from '../../scripts/eventListClient.js';
@@ -208,6 +231,9 @@ const lazyData = lazyEvents.map((event) => {
 
     document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
       el.addEventListener('toggle', () => {
+        // La apertura programática de los filtros (eventListClient) no debe
+        // sobrescribir la preferencia de colapso guardada por el usuario.
+        if ((window as any).__gvSkipPersist) return;
         const state = loadPersisted();
         state[el.dataset.persist!] = !el.open;
         localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
