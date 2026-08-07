@@ -19,6 +19,10 @@ people:
     nombre: José Toribio Merino
     cargo: Almirante, miembro de la Junta Militar
     notas: "Almirante de la Armada, miembro de la Junta Militar de Gobierno de la dictadura de Pinochet (1973-1990) y comandante en jefe de la Armada. Bajo su control operaba la Oficina de Estudios Sociológicos de la Armada (OESA), unidad que diseñó la estrategia de cierre de la dictadura tras la derrota en el plebiscito de 1988, según los 'Papeles de la Dictadura' de CIPER (2023)."
+  angel_valencia:
+    nombre: Ángel Valencia
+    cargo: Fiscal Nacional de Chile
+    notas: "Fiscal Nacional de Chile. En julio de 2026 resolvió que la Fiscalía Centro Norte asuma la investigación por la denuncia del Servicio Electoral (Servel) contra el Partido de la Gente (PDG) por gastos no acreditados, tras el análisis de la Unidad Especializada en Anticorrupción."
   augusto_pinochet:
     nombre: Augusto Pinochet
     cargo: Dictador de Chile (1973-1990)
@@ -102,8 +106,9 @@ people:
     notas: "Fiscal de la Fiscalía Metropolitana Oriente a cargo de la investigación del caso del empresario que persiguió, retuvo y amenazó de muerte a niños que jugaban 'ring raja' en Vitacura (10 de julio de 2026). Bajo su dirección el imputado Andrés Arrieta fue formalizado por sustracción de menores, lesiones menos graves, amenazas y porte ilegal de arma de fuego y quedó en prisión preventiva."
   luis_mariano_rendon:
     nombre: Luis Mariano Rendón Escobar
-    cargo: Activista y abogado
-    notas: "Activista y abogado. En agosto de 2026 respondió al llamado del senador Rodolfo Carter a indultar a los 'injustamente condenados' por hacer su trabajo durante el estallido social con un video que compila imágenes de carabineros golpeando a manifestantes pacíficos, bajo el mensaje 'Los «injustamente condenados» por hacer su trabajo'."
+    cargo: Activista, abogado y presidente de la Fundación Memoria Histórica
+    organizacion: fundacion_memoria_historica
+    notas: "Activista y abogado, presidente de la Fundación Memoria Histórica. En febrero de 2026 denunció ante la Contraloría el uso del escudo nacional en la banda presidencial de José Antonio Kast. En agosto de 2026 respondió al llamado del senador Rodolfo Carter a indultar a los 'injustamente condenados' por hacer su trabajo durante el estallido social con un video que compila imágenes de carabineros golpeando a manifestantes pacíficos, y el 7 de agosto denunció ante la Contraloría al presidente Kast por la cifra de '218 mil robos violentos' entregada en su cadena nacional del 5 de agosto, que el CEAD contrasta con 69.777 casos reales en 2025."
   matias_toledo:
     nombre: Matías Toledo
     cargo: Alcalde de Puente Alto (Ind.)
@@ -194,12 +199,14 @@ people:
     notas: "Hija de Enrique Peebles, sobreviviente de torturas en Colonia Dignidad. Expuso ante la CIDH (5 de agosto de 2026) recordando que más de 100 personas desaparecieron allí y cuestionó que el enclave siga siendo propiedad privada de los perpetradores."
   erika_hennings:
     nombre: Erika Hennings
-    cargo: Representante de organizaciones de derechos humanos
-    notas: "Representante de organizaciones de DDHH chilenas que expusieron ante la CIDH en Washington el 5 de agosto de 2026."
+    cargo: Presidenta de Londres 38, espacio de memorias
+    organizacion: londres_38
+    notas: "Presidenta de la corporación Londres 38, espacio de memorias. En la audiencia de la CIDH del 5 de agosto de 2026 alertó por la situación de los sitios de memoria y su financiamiento, exponiendo que en Chile existen 1.132 lugares identificados como centros de detención, tortura y exterminio, aunque solo 72 cuentan con reconocimiento oficial como sitios de memoria."
   nuvia_guajardo:
     nombre: Nuvia Guajardo
-    cargo: Representante de organizaciones de derechos humanos
-    notas: "Representante de organizaciones de DDHH chilenas que expusieron ante la CIDH en Washington el 5 de agosto de 2026."
+    cargo: Directora Nacional de la ANEF
+    organizacion: anef
+    notas: "Directora Nacional de la Agrupación Nacional de Empleados Fiscales (ANEF). En la audiencia de la CIDH del 5 de agosto de 2026 advirtió que las medidas del gobierno no corresponden 'solo a ajustes presupuestarios' sino a 'la reducción sistemática de las capacidades del Estado chileno para garantizar derechos humanos', cuestionó la modificación del presupuesto mediante decreto ('Gobernar por decreto es, en sí mismo, violatorio de la propia carta fundamental') y sostuvo que la reforma tributaria del gobierno erosionará la recaudación en US$4.500 millones anuales."
   jose_miguel_castro:
     nombre: José Miguel Castro
     cargo: Representante de Chile ante la OEA
@@ -389,6 +396,38 @@ people:
       - cargo: Delegado Presidencial Region Metropolitana
         organizacion: delegacion_presidencial_rm
         desde: 2026-03-11
+  carlos_melo:
+    nombre: Carlos Melo
+    cargo: Gerente corporativo de Planificación y Clientes de Metro de Santiago
+    cargos:
+      - cargo: Gerente corporativo de Planificación y Clientes
+        organizacion: metro_santiago
+  felipe_bravo:
+    nombre: Felipe Bravo
+    cargo: Gerente general de Metro de Santiago
+    cargos:
+      - cargo: Gerente general
+        organizacion: metro_santiago
+  ariel_lopez:
+    nombre: Ariel López
+    cargo: Ingeniero en Transportes y columnista de Contrapoder
+    notas: "Ingeniero en Transportes que publica columnas en el medio digital Contrapoder Chile. El 6 de agosto de 2026 difundió una columna advirtiendo que varias estaciones de la Línea 5 del Metro no contarían con extintores tras el incendio de Santa Isabel."
+  carmen_soza:
+    nombre: Carmen Soza del Río
+    cargo: Abogada y exdirectora ejecutiva de Ideas Republicanas
+    notas: "Abogada y directora ejecutiva de Ideas Republicanas, el centro de estudios del Partido Republicano, gestora del programa de gobierno de José Antonio Kast y parte del 'círculo de hierro' del presidente. Quedó fuera del gabinete en 2026. El 6 de agosto de 2026 renunció a la dirección de Ideas Republicanas por 'diferencias insalvables' en la gestión interna y el trato en el proyecto, tras diferencias con el jefe de asesores del Segundo Piso, Alejandro Irarrázaval."
+  alfredo_ugarte:
+    nombre: Alfredo Ugarte
+    cargo: Académico de la Universidad de Chile y abogado en derecho tributario
+    notas: "Abogado y académico de la Universidad de Chile, experto en derecho financiero tributario. El 6 de agosto de 2026 criticó en The Clinic y Cambio21 la invariabilidad tributaria de la megarreforma como inconstitucional."
+  aisen_etcheverry:
+    nombre: Aisén Etcheverry
+    cargo: Exministra de Ciencia, Tecnología, Conocimiento e Innovación
+    notas: "Exministra de Ciencia de la administración de Gabriel Boric. El 6 de agosto de 2026 envió una carta a El Mercurio alertando por los cambios al Fondecyt bajo el gobierno de Kast."
+  teresa_paneque:
+    nombre: Teresa Paneque
+    cargo: Astrónoma y divulgadora científica
+    notas: "Astrónoma y divulgadora científica chilena. En agosto de 2026 cuestionó los cambios a las bases del Fondecyt que priorizan áreas y exigen residencia definitiva a investigadores extranjeros."
   gustavo_sanhueza:
     nombre: Gustavo Sanhueza
     cargo: Senador (UDI)
@@ -1865,6 +1904,15 @@ people:
     nombre: Paola Plaza
     cargo: Ministra en visita de la Corte de Apelaciones de Santiago
     notas: Ordenó el ingreso a prisión de Nelson Haase Mazzei
+  camila_davagnino:
+    nombre: Camila Davagnino
+    cargo: Concejala de Santiago
+    notas: "Concejala de la Municipalidad de Santiago. En marzo de 2026 cuestionó la contratación de la empresa Fullclean Servicios Generales, ligada a la familia del excarabinero Claudio Crespo, por la gestión del alcalde Mario Desbordes, señalando que no se deben utilizar vínculos políticos para beneficiar a empresas ligadas a la ultraderecha y que los concejales deben revisar con más cuidado los antecedentes de las empresas contratadas."
+  cristian_araya:
+    nombre: Cristián Araya
+    cargo: Diputado (Partido Republicano)
+    organizacion: partido_republicano
+    notas: "Diputado del Partido Republicano por el distrito 11 (Las Condes, Lo Barnechea, Vitacura, La Reina y Peñalolén). En agosto de 2026 quedó en el centro de las críticas por viajar a España entre el 23 y el 31 de julio, coincidiendo con parte de la semana distrital, tras informar su salida al presidente de la Cámara de Diputados, Jorge Alessandri, por 'motivos personales' (artículo 34 del reglamento interno de la corporación)."
   carlos_bianchi:
     nombre: Carlos Bianchi
     cargo: Diputado (PPD-Ind)
@@ -1873,6 +1921,10 @@ people:
         organizacion: partido_por_la_democracia
         desde: 2026-03-11
     notas: Calificó de "publicidad engañosa" el proyecto de IVA pañales del PDG
+  javier_couso:
+    nombre: Javier Couso
+    cargo: Abogado constitucionalista y director del Doctorado en Derecho de la UDP
+    notas: "Abogado constitucionalista, director del Doctorado en Derecho de la Universidad Diego Portales (UDP). En agosto de 2026 rebatió el anuncio del presidente José Antonio Kast de consagrar por primera vez en la Constitución la obligación estatal de proteger a la población, señalando que el artículo 1° de la Constitución de 1980 ya establece que 'es deber del Estado resguardar la seguridad nacional, dar protección a la población y a la familia' y que 'eso es falso' (entrevista con Al Pan Pan de El Mostrador)."
   jorge_jeri:
     nombre: "Jose Jeri"
     cargo: "Presidente de la Republica del Peru"
@@ -2962,6 +3014,10 @@ people:
         desde: 2024-09-30
     organizacion: carabineros
     notas: "Máxima autoridad institucional de Carabineros de Chile. Su esposa Janet Morales fue investigada por cirugías estéticas cubiertas por Dipreca."
+  mauricio_bascur:
+    nombre: Mauricio Bascur
+    cargo: Abogado y excarabinero, especialista en derecho administrativo
+    notas: "Excarabinero y abogado especialista en derecho administrativo que integra la defensa de Claudio Crespo. Tras la absolución confirmada en el caso Gatica (agosto 2026), presentó junto a Pedro Orthusteguy una solicitud al general director de Carabineros, Marcelo Araya, para reabrir el sumario administrativo que dispuso la desvinculación de Crespo y lograr su reincorporación a la institución."
   janet_morales:
     nombre: Janet Morales Jara
     cargo: Presidenta de la Corporación de Ayuda a la Familia de Carabineros
@@ -3923,6 +3979,25 @@ people:
     cargo: Presidenta de ASOF (Confederación Nacional de Ferias Libres de Chile)
     organizacion: asof
     notas: "Presidenta de la Confederación Nacional de Ferias Libres de Chile (ASOF). Tras el cruce entre las senadoras Camila Flores y Fabiola Campillai (5 de agosto de 2026), en el que Flores usó la expresión 'señora de feria' como descalificación, respondió que 'ser mujer de feria es un orgullo' y llamó a no utilizar la identidad de las feriantes como un calificativo ofensivo."
+  gonzalo_bustamante:
+    nombre: Gonzalo Bustamante
+    cargo: Alcalde de Bulnes
+    organizacion: municipalidad_bulnes
+    notas: "Alcalde de Bulnes (región de Ñuble). El 6 de agosto de 2026 denunció ante la Comisión de Vivienda de la Cámara que 70 inmuebles del comité de la Villa Santa Fe de la comuna presentaban fallas estructurales tras el sistema frontal, pidiendo solución a las familias afectadas."
+  raphael_bergoeing:
+    nombre: Raphael Bergoeing
+    cargo: Economista, académico UAI
+    organizacion: universidad_adolfo_ibanez
+    notas: "Economista y académico de la Universidad Adolfo Ibáñez, expresidente de la Comisión Nacional de Productividad. En El Primer Café de Cooperativa (6 de agosto de 2026) sostuvo que la megarreforma mantiene deudas estructurales en tres pilares: educación, mercado laboral y modernización del Estado."
+  rodrigo_wagner:
+    nombre: Rodrigo Wagner
+    cargo: Economista, académico UAI
+    organizacion: universidad_adolfo_ibanez
+    notas: "Economista y académico de la Universidad Adolfo Ibáñez. En El Primer Café de Cooperativa (6 de agosto de 2026) afirmó que la megarreforma generará más actividad económica, pero menor de la que se espera."
+  alejandro_kusanovic:
+    nombre: Alejandro Kusanovic
+    cargo: Senador independiente por Magallanes
+    notas: "Senador independiente por Magallanes (periodo 2022-2030). En agosto de 2026 figuraba entre los senadores imputados por la Fiscalía que podrían ser desaforados, factor considerado por el gobierno al definir la estrategia de tramitación de la reforma constitucional de seguridad por el Senado."
   miguel_angel_aguilera:
     nombre: Miguel Ángel Aguilera
     cargo: Exalcalde de San Ramón
@@ -3959,6 +4034,37 @@ people:
     nombre: Juan Miguel Ovalle
     cargo: Director ejecutivo de la APA
     notas: "Director ejecutivo de la Asociación de Productores Avícolas (APA) durante la colusión de los pollos. Según el expediente del TDLC, operó como articulador del cartel: fijaba precios de referencia, enviaba proyecciones de ventas y coordinaba las 'cargas' de producción entre Agrosuper, Ariztía y Don Pollo."
+  victoria_escalante_gonzalez:
+    nombre: Victoria Escalante González
+    cargo: Presidenta de FENADAJ
+    organizacion: fenadaj
+    notas: "Presidenta de la Federación Nacional de Acceso a la Justicia (FENADAJ). En agosto de 2026 confirmó el respaldo de la federación a la denuncia ante la CIDH por los recortes presupuestarios del gobierno de Kast, advirtiendo que la reducción de recursos compromete el ejercicio de derechos fundamentales y los riesgos para la implementación del Servicio Nacional de Acceso a la Justicia y Defensoría de Víctimas."
+  margarita_romero_mendez:
+    nombre: Margarita Romero Méndez
+    cargo: Presidenta de la Asociación por la Memoria y los DDHH Colonia Dignidad
+    notas: "Médica, defensora de los DDHH y presidenta de la Asociación por la Memoria y los Derechos Humanos Colonia Dignidad. En agosto de 2026 publicó una columna en El Mostrador sobre la audiencia ante la CIDH ('cuatro meses en que Chile retrocedió décadas en materia de DDHH'), denunciando que los decretos de ajuste presupuestario recortaron más de $1.800 millones que afectan a programas de reparación y salud, y describiendo los cambios como 'un patrón coherente de debilitamiento institucional'."
+  montserrat_solano:
+    nombre: Montserrat Solano
+    cargo: Representante del ACNUDH para las Américas
+    organizacion: acnudh
+    notas: "Representante de la Oficina Regional para las Américas del Alto Comisionado de Naciones Unidas para los Derechos Humanos (ACNUDH). En la audiencia de la CIDH del 5 de agosto de 2026 recordó que Chile construyó desde el retorno a la democracia una 'arquitectura institucional relevante y robusta' en DDHH y pidió que cualquier modificación institucional o presupuestaria que afecte al Programa de Derechos Humanos o al Plan Nacional de Búsqueda sea evaluada a la luz de las obligaciones internacionales, evitando retrocesos."
+  claudio_nash:
+    nombre: Claudio Nash
+    cargo: Académico y coordinador de la cátedra de DDHH de la U. de Chile
+    notas: "Coordinador de la cátedra de derechos humanos de la Facultad de Derecho de la Universidad de Chile. Citado por IPS (julio 2026) afirmando que los cambios del gobierno de Kast revelan 'una estrategia coordinada de desmantelamiento progresivo de la institucionalidad de protección de derechos humanos'."
+  nelson_caucoto:
+    nombre: Nelson Caucoto
+    cargo: Abogado de derechos humanos
+    notas: "Abogado chileno que ha llevado más de 300 causas de derechos humanos. Citado por IPS (julio 2026) sobre las políticas negacionistas del gobierno de Kast: 'Nadie puede sorprenderse de lo que están actuando en derechos humanos porque las nuevas autoridades son completamente refractarias a esta temática partiendo por el presidente que es pinochetista'."
+  benjamin_salas_kantor:
+    nombre: Benjamín Salas Kantor
+    cargo: Exasesor internacional de la Presidencia
+    notas: "Exasesor internacional de la Presidencia. Autor de la columna de Nuevo Poder (6 de agosto de 2026) 'Exigencia de rigor a la CIDH', que critica la decisión de la Comisión Interamericana de convocar la audiencia sobre el supuesto 'desmantelamiento' de la institucionalidad de DDHH en Chile, planteando que la CIDH debería actuar con mayor prudencia y rigor."
+
+  gervoy_paredes:
+    nombre: Gervoy Paredes
+    cargo: Exalcalde de Puerto Montt
+    notas: "Alcalde de Puerto Montt al momento del paro de camioneros de agosto de 2020. Exigió al gobierno acción ante el bloqueo de camioneros que impidió el paso de los recolectores de basura en plena pandemia, advirtiendo riesgo sanitario y criticando la inacción del Ministerio del Interior."
 
 organizations:
   criteria:
@@ -4119,6 +4225,11 @@ organizations:
     nombre: Ministerio del Interior y Seguridad Publica
     tipo: ministerio
     pais: Chile
+  cead:
+    nombre: Centro de Estudios y Análisis del Delito (CEAD)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Centro de Estudios y Análisis del Delito, unidad estadística de la Subsecretaría de Prevención del Delito del Ministerio del Interior. Sus registros de robos con violencia e intimidación de 2025 (69.777 casos; 109.419 sumando robos por sorpresa) fueron la base del chequeo de Fast Check a la cifra de '218 mil robos violentos' del presidente Kast en la cadena nacional del 5 de agosto de 2026, que la calificó como falsa."
   subsecretaria_prevencion_delito:
     nombre: Subsecretaría de Prevención del Delito
     tipo: servicio_publico
@@ -4421,6 +4532,19 @@ organizations:
     nombre: Municipalidad de Santiago
     tipo: municipalidad
     pais: Chile
+  municipalidad_bulnes:
+    nombre: Municipalidad de Bulnes
+    tipo: municipalidad
+    pais: Chile
+  universidad_adolfo_ibanez:
+    nombre: Universidad Adolfo Ibáñez
+    tipo: universidad
+    pais: Chile
+  fundacion_memoria_historica:
+    nombre: Fundación Memoria Histórica
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización de derechos humanos. Su presidente es el abogado Luis Mariano Rendón Escobar, quien en 2026 presentó denuncias ante la Contraloría relacionadas con el presidente José Antonio Kast (uso del escudo nacional en la banda presidencial, febrero 2026; cifras de la cadena nacional sobre robos violentos, agosto 2026)."
   parque_forestral:
     nombre: Parque Forestal
     tipo: espacio_publico
@@ -5393,6 +5517,20 @@ organizations:
     tipo: organismo_publico
     pais: Chile
     notas: "Organismo público autónomo creado en 2018 para la protección de los derechos de niños, niñas y adolescentes. En el caso Pío Nono (octubre de 2020) se querelló contra Carabineros y pidió prisión preventiva para el carabinero Sebastián Zamora, condenando la 'acción criminal' contra el adolescente lanzado desde el puente."
+  anid:
+    nombre: Agencia Nacional de Investigación y Desarrollo (ANID)
+    tipo: organismo_publico
+    pais: Chile
+    notas: "Agencia pública chilena que financia la investigación científica y tecnológica, responsable de administrar el Fondo Nacional de Desarrollo Científico y Tecnológico (Fondecyt) y las Becas Chile."
+  universidad_de_chile:
+    nombre: Universidad de Chile
+    tipo: universidad
+    pais: Chile
+  ideas_republicanas:
+    nombre: Ideas Republicanas
+    tipo: centro_de_estudios
+    pais: Chile
+    notas: "Centro de estudios asociado al Partido Republicano. Su directora ejecutiva fue la abogada Carmen Soza, que renunció el 6 de agosto de 2026 por 'diferencias insalvables' en la gestión interna."
   metro_santiago:
     nombre: Metro de Santiago
     tipo: empresa
@@ -5527,6 +5665,21 @@ organizations:
     nombre: Municipalidad de Independencia
     tipo: municipalidad
     pais: Chile
+  fenadaj:
+    nombre: Federación Nacional de Acceso a la Justicia
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Federación Nacional de Acceso a la Justicia (FENADAJ). En agosto de 2026 confirmó su respaldo a la denuncia ante la CIDH por los recortes presupuestarios del gobierno de Kast, advirtiendo los riesgos para la implementación del Servicio Nacional de Acceso a la Justicia y Defensoría de Víctimas y para el acceso de la población a la justicia."
+  acnudh:
+    nombre: Alto Comisionado de Naciones Unidas para los Derechos Humanos
+    tipo: organismo_internacional
+    pais: Estados Unidos
+    notas: "Alto Comisionado de las Naciones Unidas para los Derechos Humanos (ACNUDH). En la audiencia de la CIDH del 5 de agosto de 2026 su Oficina Regional para las Américas, representada por Montserrat Solano, llamó a preservar las capacidades estatales en materia de DDHH y a evaluar los cambios institucionales y presupuestarios a la luz de las obligaciones internacionales de Chile."
+  red_observadoras_justicia_y_memoria:
+    nombre: Red de Observadoras en Justicia y Memoria
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Red chilena que integró la delegación de organizaciones de DDHH ante la CIDH (5 de agosto de 2026), con Tamara Lagos, Magdalena Garcés y Paulina Zamorano. Denunció un patrón de 'desmantelamiento institucional' del Estado en verdad, justicia, reparación y memoria."
   restomarket:
     nombre: Restomarket
     tipo: empresa
@@ -5709,6 +5862,18 @@ organizations:
     notas: "Gremio nacional de ferias libres presidido por Paola Morales. El 6 de agosto de 2026 rechazó el uso despectivo de la expresión 'señora de feria' tras el cruce entre las senadoras Camila Flores y Fabiola Campillai, reivindicando que 'ser mujer de feria es un orgullo' y que las feriantes 'alimentan a Chile' y sostienen parte de la economía familiar."
 
 cifras:
+  quorum_reforma_constitucional:
+    nombre: Quórum para reformas constitucionales en Chile
+    unidad_default: por_ciento
+    notas: "El quórum para modificar la Constitución en Chile es de 4/7 de los parlamentarios en ejercicio (57,1%), tras la moción impulsada por los senadores Matías Walker, Pedro Araya, Iván Flores y la exsenadora Ximena Rincón que rebajó el quórum desde los 2/3 anteriores. Es el más bajo de las últimas décadas."
+  rechazo_propuesta_constitucional_2023:
+    nombre: Rechazo a la propuesta constitucional de 2023
+    unidad_default: por ciento
+    notas: "La propuesta constitucional redactada por el Consejo Constitucional (con el Partido Republicano como bancada más numerosa) fue rechazada por el 55,76% de los votos válidamente emitidos en el plebiscito del 17 de diciembre de 2023, frente a un 44,24% a favor, según los resultados oficiales del Servel."
+  viviendas_fallas_bulnes_villa_santa_fe:
+    nombre: Inmuebles con fallas estructurales en Villa Santa Fe de Bulnes
+    unidad_default: inmuebles
+    notas: "70 inmuebles del comité de la Villa Santa Fe de Bulnes (región de Ñuble) presentaban fallas estructurales tras el sistema frontal, según la denuncia del alcalde Gonzalo Bustamante ante la Comisión de Vivienda de la Cámara (6 de agosto de 2026), recogida por CNN Chile."
   carabineros_operativo_plaza_armas:
     nombre: Funcionarios de Carabineros en el operativo de Plaza de Armas
     unidad_default: efectivos
@@ -7271,6 +7436,22 @@ cifras:
     nombre: Dosis de Pfizer-BioNTech comprometidas en 2021
     unidad_default: dosis
     notas: "El gobierno anunció que recibiría cerca de 6 millones de dosis de Pfizer-BioNTech y 4 millones de AstraZeneca-Oxford durante el primer semestre de 2021, según Radio Agricultura."
+  sitios_centros_detencion_tortura_identificados_chile:
+    nombre: Lugares identificados como centros de detención, tortura y exterminio en Chile
+    unidad_default: lugares
+    notas: "Según Londres 38 ante la CIDH (agosto de 2026), en Chile existen 1.132 lugares identificados como centros de detención, tortura y exterminio durante la dictadura."
+  sitios_memoria_reconocidos_chile:
+    nombre: Sitios de memoria con reconocimiento oficial en Chile
+    unidad_default: sitios
+    notas: "De los 1.132 lugares identificados como centros de detención, tortura y exterminio, solo 72 cuentan con reconocimiento oficial como sitios de memoria, según Londres 38 ante la CIDH (agosto de 2026)."
+  erosion_recaudacion_reforma_tributaria_anef:
+    nombre: Erosión anual de la recaudación estimada por la ANEF por la reforma tributaria
+    unidad_default: millones de dólares
+    notas: "Cifra señalada por Nuvia Guajardo (ANEF) ante la CIDH (agosto de 2026): la reforma tributaria del gobierno de Kast erosionará la recaudación en US$4.500 millones anuales para beneficiar a los sectores de mayores ingresos."
+  recorte_decretos_ajuste_presupuestario_ddhh:
+    nombre: Recorte por decretos de ajuste presupuestario que afectan programas de DDHH
+    unidad_default: millones de pesos
+    notas: "Más de $1.800 millones recortados en decretos de ajuste presupuestario que afectan también a programas de reparación y salud, según la columna de Margarita Romero Méndez en El Mostrador (agosto de 2026)."
   votos_senado_prorroga_macrozona_2022:
     nombre: Votos a favor de la prórroga del estado de excepción en la Macrozona norte (Senado)
     unidad_default: votos
@@ -7311,3 +7492,13 @@ cifras:
     nombre: Capítulos de la propuesta de nueva Constitución de 2022
     unidad_default: capitulos
     notas: "11 capítulos en la propuesta de nueva Constitución de 2022, señalados por el presidente Boric en su cadena nacional del 4 de julio de 2022."
+  granos_en_riesgo_puerto_san_antonio_2020:
+    nombre: Toneladas de granos en riesgo por el paro de camioneros en el puerto de San Antonio
+    unidad_default: toneladas
+    notas: "Según el puerto de San Antonio (agosto de 2020), 40.000 toneladas de granos (trigo, maíz y soya) comenzaban a perderse por el paro de camioneros; el puerto Panul, que abastece de granos al 90% de la industria chilena, no podía transferir productos por falta de camiones."
+
+  entidades_respaldo_audiencia_cidh:
+    nombre: Entidades que respaldaron la audiencia ante la CIDH
+    unidad_default: entidades
+    notas: "Según Mala Espina (agosto de 2026), la audiencia de la CIDH solicitada por organizaciones de DDHH sobre el impacto de las políticas administrativas en los derechos humanos de Chile contó con el respaldo de 82 entidades."
+
