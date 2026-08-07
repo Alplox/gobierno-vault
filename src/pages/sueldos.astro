@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
-import { DollarSign, Scale, TrendingUp, BookOpen } from 'lucide-astro';
+import SourceRef from '../components/SourceRef.astro';
+import { DollarSign, Scale, TrendingUp, BookOpen, ExternalLink } from 'lucide-astro';
 
 const cargos = [
   {
@@ -44,14 +45,14 @@ const presidentes = [
     periodo: '2022–2026',
     sueldo: 7_000_000,
     detalle: 'Base bruta en torno a los $7 millones. Entre noviembre y diciembre de 2025 el bono PMG (cumplimiento de metas, 99,44%) elevó su sueldo bruto a unos $10 millones.',
-    fuente: 'Emol (19/02/2026) · La Cuarta (23/03/2026)',
+    refs: [7],
   },
   {
     presidente: 'José Antonio Kast',
     periodo: '2026–2030',
     sueldo: 11_070_064,
     detalle: 'Fijado por la Comisión para la Fijación de Remuneraciones (Ley 21.233), vigente desde el 11/03/2026. Emol lo reporta en $11,3 millones brutos. En marzo de 2026 Kast anunció su intención de rebajarlo de forma estructural. El monto contradice su promesa de campaña de 2021 de rebajarse el sueldo a la mitad ("gobernar con el ejemplo"); al ser consultado en diciembre de 2025 respondió que el monto "es una norma legal" que "decidió el Congreso".',
-    fuente: 'La Cuarta (23/03/2026) · Emol (11/03/2026) · Emol (03/08/2026) · Meganoticias (03/08/2026) · The Clinic (31/03/2026) · Diario Usach (24/12/2025) · T13 (24/12/2025) · La Tercera (21/12/2025)',
+    refs: [5, 8, 9, 10, 11, 12, 13, 14, 15],
   },
 ];
 
@@ -81,10 +82,9 @@ const ratios = [
 const formatCLP = (n: number) => '$' + n.toLocaleString('es-CL');
 const pct = (a: number, b: number) => ((a - b) / b * 100).toFixed(1);
 
-// PGU y contexto de costo de vida (fuentes verificadas)
-const pgu = { topeMax: 250_275, topeBase: 231_732 };
-const cutIdeal = 637_000; // Radio U. de Chile: "alrededor de $637 mil"; Infobae: $637.700
-
+// Orden de referencia: los números [N] inline del texto corresponden a la posición
+// (1-based) de cada fuente en este array. Al insertar/eliminar una fuente, re-numerar
+// los <SourceRef index=...> para que sigan apuntando a la referencia correcta.
 const fuentes = [
   { grupo: 'Sueldo mínimo', titulo: 'Anexo: Salario mínimo en Chile (tabla histórica 1958–2027 con leyes)', medio: 'Wikipedia', url: 'https://es.wikipedia.org/wiki/Anexo:Salario_m%C3%ADnimo_en_Chile' },
   { grupo: 'Sueldo mínimo', titulo: 'A ley reajuste al ingreso mínimo mensual — IMM $553.553 desde mayo 2026', medio: 'Senado de Chile', url: 'https://www.senado.cl/comunicaciones/noticias/ley-reajuste-al-ingreso-minimo-mensual' },
@@ -108,7 +108,6 @@ const fuentes = [
   { grupo: 'Costo de vida', titulo: 'Canasta básica de alimentos y líneas de pobreza (indicador oficial; valores por consulta)', medio: 'Observatorio Social, Ministerio de Desarrollo Social', url: 'https://observatorio.ministeriodesarrollosocial.gob.cl/' },
   { grupo: 'Costo de vida', titulo: 'Informe de Canasta Familiar (Fiscalía Nacional Económica; valores trimestrales)', medio: 'FNE', url: 'https://www.fne.gob.cl/' },
 ];
-const grupos = [...new Set(fuentes.map((f) => f.grupo))];
 ---
 
 <Base title="Sueldos y brecha salarial">
@@ -132,7 +131,7 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
       <p class="text-sm text-gray-500 mb-3">
         El 11 de marzo de 2026 entró en vigencia el nuevo sistema de remuneraciones para altas autoridades, fijado por la
         Comisión para la Fijación de Remuneraciones (Ley 21.233), que ordena la escala salarial del sector público.
-        Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales.
+        Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales <SourceRef id="emol-sistema-sueldos" index={5} href="#ref-5" /><SourceRef id="usach-voltereta" index={9} href="#ref-9" /><SourceRef id="t13-aumento-sueldo" index={10} href="#ref-10" />.
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -152,7 +151,12 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
                 <td class="py-2 px-3 text-right tabular-nums font-medium whitespace-nowrap">{formatCLP(p.sueldo)}</td>
                 <td class="py-2 px-3 text-gray-600 text-xs leading-relaxed">
                   {p.detalle}
-                  <span class="block mt-1 text-gray-400">Fuentes: {p.fuente}</span>
+                  <span class="block mt-1 text-gray-400">
+                    Fuentes:{' '}
+                    {p.refs.map((n) => (
+                      <SourceRef id={`ref-${n}`} index={n} href={`#ref-${n}`} />
+                    ))}
+                  </span>
                 </td>
               </tr>
             ))}
@@ -195,8 +199,8 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
       </div>
       <div class="mt-4 p-3 rounded-lg bg-gray-50 border border-gray-100 text-sm text-gray-600">
         La dieta de Kast equivale a <span class="font-semibold">20 veces</span> el sueldo mínimo de mayo de 2026
-        (según el monto de $11.070.064 fijado por la comisión autónoma). La base bruta de Boric (~$7 millones) equivalía a
-        <span class="font-semibold">unas 13 veces</span> el mínimo vigente en 2025.
+        (según el monto de $11.070.064 fijado por la comisión autónoma <SourceRef id="emol-sistema-sueldos" index={5} href="#ref-5" /><SourceRef id="t13-aumento-sueldo" index={10} href="#ref-10" />). La base bruta de Boric (~$7 millones) equivalía a
+        <span class="font-semibold">unas 13 veces</span> el mínimo vigente en 2025 <SourceRef id="emol-boric-bono-metas" index={7} href="#ref-7" />.
       </div>
     </section>
 
@@ -207,7 +211,7 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
       </div>
       <p class="text-sm text-gray-500 mb-3">
         Monto bruto mensual para trabajadores entre 18 y 65 años, según las leyes de reajuste. Tabla resumida
-        (serie completa 1958–2027 en la fuente de Wikipedia).
+        (serie completa 1958–2027 en la fuente de Wikipedia <SourceRef id="wikipedia-salario-minimo" index={1} href="#ref-1" />).
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -232,8 +236,8 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
         </table>
       </div>
       <p class="text-xs text-gray-400 mt-3">
-        El reajuste de mayo de 2026 ($553.553) fue despachado por el Senado el 16 de junio de 2026 (Ley 21.830) tras una
-        negociación sin acuerdo con la CUT, que pedía cerca de $637.000. Desde enero de 2027 el IMM se reajustará por IPC.
+        El reajuste de mayo de 2026 ($553.553) fue despachado por el Senado el 16 de junio de 2026 (Ley 21.830 <SourceRef id="senado-reajuste-imas" index={2} href="#ref-2" />) tras una
+        negociación sin acuerdo con la CUT, que pedía cerca de $637.000 <SourceRef id="infobae-reajuste" index={3} href="#ref-3" /><SourceRef id="radio-uchile-cut" index={4} href="#ref-4" />. Desde enero de 2027 el IMM se reajustará por IPC.
       </p>
     </section>
 
@@ -242,11 +246,11 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
         <BookOpen class="h-5 w-5 text-blue-600 shrink-0" />
         <h2 class="text-lg font-semibold text-gray-900">Canasta familiar y costo de vida</h2>
       </div>
-      <div class="prose prose-sm text-gray-700 space-y-3">
+      <div class="prose prose-sm max-w-none text-gray-700 space-y-3">
         <p>
           En Chile se usan dos referencias de canasta: la <strong>Canasta Básica de Alimentos</strong> (INE / Ministerio de
-          Desarrollo Social), base de las líneas de pobreza, y la <strong>Canasta Familiar</strong> que publica
-          trimestralmente la Fiscalía Nacional Económica (FNE) para una familia de cuatro personas, junto al
+          Desarrollo Social <SourceRef id="observatorio-social-canasta" index={20} href="#ref-20" />), base de las líneas de pobreza, y la <strong>Canasta Familiar</strong> que publica
+          trimestralmente la Fiscalía Nacional Económica (FNE <SourceRef id="fne-canasta" index={21} href="#ref-21" />) para una familia de cuatro personas, junto al
           "sueldo ideal" que permitiría cubrirla.
         </p>
         <p>
@@ -257,10 +261,10 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
         </p>
         <p>
           La CUT rechazó la propuesta del gobierno —que ofrecía un alza cercana a $23.000 por IPC— y planteó un sueldo mínimo
-          de <span class="font-medium">alrededor de $637.000</span>, argumentando que "hoy día las cosas son más caras en el mes de
+          de <span class="font-medium">alrededor de $637.000</span> <SourceRef id="infobae-reajuste" index={3} href="#ref-3" /><SourceRef id="radio-uchile-cut" index={4} href="#ref-4" />, argumentando que "hoy día las cosas son más caras en el mes de
           abril que en el mes de enero" y que el sueldo mínimo tiene "menos poder adquisitivo por el alza del petróleo".
-          Referencias de contexto: la inflación acumulada de 2025 fue de 3,5% (INE) y la PGU máxima pasó a $250.275 desde
-          febrero de 2026 (ChileAtiende), es decir, cerca del 45% de un sueldo mínimo.
+          Referencias de contexto: la inflación acumulada de 2025 fue de 3,5% (INE <SourceRef id="ine-ipc" index={18} href="#ref-18" />) y la PGU máxima pasó a $250.275 desde
+          febrero de 2026 (ChileAtiende <SourceRef id="chileatiende-pgu" index={19} href="#ref-19" />), es decir, cerca del 45% de un sueldo mínimo.
         </p>
         <div class="p-3 rounded-lg bg-amber-50 border border-amber-200 text-amber-900 text-sm">
           <strong>Nota de verificación:</strong> los montos puntuales en pesos de la canasta básica (INE) y de la canasta
@@ -273,6 +277,10 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
 
     <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
       <h2 class="text-lg font-semibold text-gray-900 mb-3">Topes salariales fijados por Dipres</h2>
+      <p class="text-sm text-gray-500 mb-3">
+        Límites de remuneración para asesores de confianza definidos por el Oficio Circular N°15 de la Dipres, firmado por
+        el ministro de Hacienda <span class="font-medium">Jorge Quiroz</span> <SourceRef id="theclinic-oficio-15" index={17} href="#ref-17" />.
+      </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
           <thead>
@@ -304,7 +312,8 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
     <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
       <h2 class="text-lg font-semibold text-gray-900 mb-3">Comparación cargo a cargo (abril 2026)</h2>
       <p class="text-sm text-gray-500 mb-3">
-        Primer mes completo con sueldo íntegro. Kast asumió el 11 de marzo; marzo fue proporcional.
+        Primer mes completo con sueldo íntegro. Kast asumió el 11 de marzo; marzo fue proporcional. Comparación basada en
+        el reportaje de The Clinic sobre el Segundo Piso de Kast vs. el de Boric <SourceRef id="theclinic-segundo-piso" index={16} href="#ref-16" />.
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -353,53 +362,70 @@ const grupos = [...new Set(fuentes.map((f) => f.grupo))];
 
     <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
       <h2 class="text-lg font-semibold text-gray-900 mb-3">Contexto</h2>
-      <div class="prose prose-sm text-gray-700 space-y-3">
+      <div class="prose prose-sm max-w-none text-gray-700 space-y-3">
         <p>
           El 17 de marzo de 2026, la Dipres emitió el Oficio Circular N°15 que fijó los nuevos topes salariales
           para asesores estratégicos del Presidente y ministros. La medida fue firmada por el ministro de Hacienda
-          <span class="font-medium">Jorge Quiroz</span>.
+          <span class="font-medium">Jorge Quiroz</span> <SourceRef id="theclinic-oficio-15" index={17} href="#ref-17" />.
         </p>
         <p>
           Durante el gobierno de Boric, los asesores percibían entre 25% y 90% de la remuneración del subsecretario
-          correspondiente, con un tope real de alrededor de $5,5 millones. El nuevo esquema de Kast eleva ese tope a
-          casi $10 millones, con un mínimo del 70% de la remuneración de la autoridad asesorada.
+          correspondiente, con un tope real de alrededor de $5,5 millones <SourceRef id="theclinic-segundo-piso" index={16} href="#ref-16" />. El nuevo esquema de Kast eleva ese tope a
+          casi $10 millones <SourceRef id="theclinic-oficio-15" index={17} href="#ref-17" /><SourceRef id="lacuarta-topes" index={6} href="#ref-6" />, con un mínimo del 70% de la remuneración de la autoridad asesorada.
         </p>
         <p>
           La medida se produce en un contexto de "emergencia" declarada por el propio gobierno, que ha anunciado
           recortes presupuestarios en diversas áreas, incluyendo un recorte de $706 millones al presupuesto de la
           Presidencia de la República. En marzo de 2026, el propio Kast anunció su intención de rebajar su sueldo de
-          forma estructural, aunque técnicamente la dieta es fijada por la comisión autónoma y no puede ajustarse por
+          forma estructural <SourceRef id="theclinic-bajarse-sueldo" index={8} href="#ref-8" />, aunque técnicamente la dieta es fijada por la comisión autónoma y no puede ajustarse por
           decreto.
         </p>
         <p class="text-gray-500 text-xs">
           Evento registrado: <a href="/events/2026/20260320-2" class="text-blue-600 hover:underline">20260320-2</a>
           · Evento MEPCO (impacto en precios): <a href="/events/2026/20260326-1" class="text-blue-600 hover:underline">20260326-1</a>
-          · 46 funcionarios de superintendencias con sueldo igual o mayor al del Presidente: <a href="/events/2026/20260803-18" class="text-blue-600 hover:underline">20260803-18</a>
+          · 46 funcionarios de superintendencias con sueldo igual o mayor al del Presidente <SourceRef id="emol-46-funcionarios" index={14} href="#ref-14" /><SourceRef id="meganoticias-46-funcionarios" index={15} href="#ref-15" />: <a href="/events/2026/20260803-18" class="text-blue-600 hover:underline">20260803-18</a>
         </p>
       </div>
     </section>
 
     <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
-      <h2 class="text-lg font-semibold text-gray-900 mb-3">Fuentes verificadas</h2>
+      <div class="flex items-center gap-2 mb-4">
+        <BookOpen class="h-5 w-5 text-blue-600 shrink-0" />
+        <h2 class="text-base font-bold text-gray-900">Referencias y Fuentes ({fuentes.length})</h2>
+      </div>
       <p class="text-sm text-gray-500 mb-4">
         Cada dato de esta página se respalda con al menos una fuente leída directamente (y donde fue posible, tres o más).
-        Se indica el grupo al que respalda cada fuente.
+        Los números <sup class="text-blue-600 font-mono text-xs">[N]</sup> en el texto apuntan a estas referencias; los
+        enlaces a la derecha abren mirrors automáticos de cada artículo original.
       </p>
-      {grupos.map((g) => (
-        <div class="mb-4">
-          <h3 class="text-sm font-semibold text-gray-800 uppercase tracking-wide mb-2">{g}</h3>
-          <ul class="space-y-1.5">
-            {fuentes.filter((f) => f.grupo === g).map((f) => (
-              <li class="text-sm">
-                <a href={f.url} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline font-medium">
-                  {f.medio}
-                </a>
-                <span class="text-gray-500"> — {f.titulo}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
+      <ol class="space-y-3 text-sm">
+        {fuentes.map((f, i) => (
+          <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-gray-700 scroll-mt-20 p-2.5 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200/60">
+            <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-blue-100 text-blue-700 font-mono text-xs shrink-0 font-semibold mt-0.5">
+              {i + 1}
+            </span>
+            <div class="min-w-0 flex-1">
+              <a href={f.url} class="inline-flex items-center gap-1 font-semibold text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
+                <span>{f.titulo}</span>
+                <ExternalLink class="h-3.5 w-3.5 shrink-0 text-blue-500" />
+              </a>
+              <span class="inline-flex items-center gap-1 ml-2">
+                <a href={`https://web.archive.org/web/${f.url}`} class="text-[10px] font-medium text-gray-400 hover:text-blue-500 transition-colors" target="_blank" rel="noopener" title="Wayback Machine">Archive</a>
+                <a href={`https://archive.ph/${f.url}`} class="text-[10px] font-medium text-gray-400 hover:text-orange-500 transition-colors" target="_blank" rel="noopener" title="archive.ph">archive.ph</a>
+                <a href={`https://ghostarchive.org/search?term=${encodeURIComponent(f.url)}`} class="text-[10px] font-medium text-gray-400 hover:text-purple-500 transition-colors" target="_blank" rel="noopener" title="Ghostarchive">Ghost</a>
+                <a href={`https://timetravel.mementoweb.org/memento/${f.url}`} class="text-[10px] font-medium text-gray-400 hover:text-teal-500 transition-colors" target="_blank" rel="noopener" title="Memento Time Travel">Memento</a>
+                <a href={`https://r.jina.ai/${f.url}`} class="text-[10px] font-medium text-gray-400 hover:text-green-500 transition-colors" target="_blank" rel="noopener" title="Versión Texto Limpio">Reader</a>
+                <a href={`https://www.paywallskip.com/article?url=${encodeURIComponent(f.url)}`} class="text-[10px] font-medium text-gray-400 hover:text-amber-500 transition-colors" target="_blank" rel="noopener" title="Paywall Skip">Paywall</a>
+                <a href={`https://defuddle.md/${f.url}`} class="text-[10px] font-medium text-gray-400 hover:text-indigo-500 transition-colors" target="_blank" rel="noopener" title="Defuddle">Defuddle</a>
+                <a href={`https://markdown.new/${f.url}`} class="text-[10px] font-medium text-gray-400 hover:text-pink-500 transition-colors" target="_blank" rel="noopener" title="Markdown">MD</a>
+              </span>
+              <p class="text-xs text-gray-500 mt-0.5">
+                Medio: <span class="font-medium text-gray-700">{f.medio}</span> · Grupo: {f.grupo}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ol>
     </section>
   </article>
 </Base>

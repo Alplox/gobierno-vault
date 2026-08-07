@@ -96,8 +96,15 @@ const railLabelClass = (level?: string) =>
 )}
 
 <script>
+  // Patrón del vault: los <script> bundleados corren UNA sola vez (no se
+  // re-ejecutan en cada navegación View Transitions). Todo init que consulta
+  // el DOM debe registrarse en astro:page-load (se dispara también en la carga
+  // inicial) y llamarse directo, para re-enganchar listeners al DOM nuevo tras
+  // cada swap. cleanup() desconecta observers y remueve listeners previos para
+  // no duplicarlos si init corre dos veces sobre el mismo DOM.
   const cleanupFns: (() => void)[] = [];
   let ro: ResizeObserver | null = null;
+  let io: IntersectionObserver | null = null;
 
   function cleanup() {
     while (cleanupFns.length) {
@@ -106,139 +113,165 @@ const railLabelClass = (level?: string) =>
     }
     ro?.disconnect();
     ro = null;
+    io?.disconnect();
+    io = null;
   }
 
-  cleanup();
+  function initTimelineNav() {
+    cleanup();
 
-  const rail = document.getElementById('timeline-rail');
-  const fab = document.getElementById('timeline-fab');
-  const sheet = document.getElementById('timeline-sheet');
-  const sheetBackdrop = document.getElementById('timeline-sheet-backdrop');
-  const sheetClose = document.getElementById('timeline-sheet-close');
-  const sheetPanel = sheet?.querySelector('.translate-y-full');
+    const rail = document.getElementById('timeline-rail');
+    const fab = document.getElementById('timeline-fab');
+    const sheet = document.getElementById('timeline-sheet');
+    const sheetBackdrop = document.getElementById('timeline-sheet-backdrop');
+    const sheetClose = document.getElementById('timeline-sheet-close');
+    const sheetPanel = sheet?.querySelector('.translate-y-full');
 
-  const railIsVisible = () => {
-    if (!rail) return false;
-    const main = document.querySelector('main');
-    if (!main) return true;
-    const mainRight = main.getBoundingClientRect().right;
-    return window.innerWidth - mainRight >= 64;
-  };
+    const railIsVisible = () => {
+      if (!rail) return false;
+      const main = document.querySelector('main');
+      if (!main) return true;
+      const mainRight = main.getBoundingClientRect().right;
+      return window.innerWidth - mainRight >= 64;
+    };
 
-  const updateRailVisibility = () => {
-    if (!rail) return;
-    rail.classList.toggle('opacity-0', !railIsVisible());
-    rail.classList.toggle('pointer-events-none', !railIsVisible());
-    rail.classList.toggle('transition-opacity', true);
-    rail.classList.toggle('duration-300', true);
-  };
+    const updateRailVisibility = () => {
+      if (!rail) return;
+      rail.classList.toggle('opacity-0', !railIsVisible());
+      rail.classList.toggle('pointer-events-none', !railIsVisible());
+      rail.classList.toggle('transition-opacity', true);
+      rail.classList.toggle('duration-300', true);
+    };
 
-  updateRailVisibility();
-  const onResize = () => updateRailVisibility();
-  window.addEventListener('resize', onResize);
-  cleanupFns.push(() => window.removeEventListener('resize', onResize));
-  ro = new ResizeObserver(updateRailVisibility);
-  const mainEl = document.querySelector('main');
-  if (mainEl) ro.observe(mainEl);
+    updateRailVisibility();
+    const onResize = () => updateRailVisibility();
+    window.addEventListener('resize', onResize);
+    cleanupFns.push(() => window.removeEventListener('resize', onResize));
+    ro = new ResizeObserver(updateRailVisibility);
+    const mainEl = document.querySelector('main');
+    if (mainEl) ro.observe(mainEl);
 
-  const openSheet = () => {
-    if (!sheet) return;
-    sheet.setAttribute('aria-hidden', 'false');
-    sheet.classList.remove('pointer-events-none');
-    sheetBackdrop?.classList.remove('opacity-0');
-    sheetPanel?.classList.remove('translate-y-full');
-    fab?.setAttribute('aria-expanded', 'true');
-  };
+    const openSheet = () => {
+      if (!sheet) return;
+      sheet.setAttribute('aria-hidden', 'false');
+      sheet.classList.remove('pointer-events-none');
+      sheetBackdrop?.classList.remove('opacity-0');
+      sheetPanel?.classList.remove('translate-y-full');
+      fab?.setAttribute('aria-expanded', 'true');
+    };
 
-  const closeSheet = () => {
-    if (!sheet) return;
-    sheet.setAttribute('aria-hidden', 'true');
-    sheet.classList.add('pointer-events-none');
-    sheetBackdrop?.classList.add('opacity-0');
-    sheetPanel?.classList.add('translate-y-full');
-    fab?.setAttribute('aria-expanded', 'false');
-  };
+    const closeSheet = () => {
+      if (!sheet) return;
+      sheet.setAttribute('aria-hidden', 'true');
+      sheet.classList.add('pointer-events-none');
+      sheetBackdrop?.classList.add('opacity-0');
+      sheetPanel?.classList.add('translate-y-full');
+      fab?.setAttribute('aria-expanded', 'false');
+    };
 
-  fab?.addEventListener('click', () => {
-    const isOpen = sheet?.getAttribute('aria-hidden') === 'false';
-    if (isOpen) closeSheet();
-    else openSheet();
-  });
-  sheetBackdrop?.addEventListener('click', closeSheet);
-  sheetClose?.addEventListener('click', closeSheet);
-
-  document.querySelectorAll<HTMLButtonElement>('.timeline-sheet-toggle').forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const group = btn.dataset.toggleGroup;
-      const container = document.getElementById(group ?? '');
-      if (!container) return;
-      const isExpanded = btn.getAttribute('aria-expanded') === 'true';
-      container.classList.toggle('hidden', isExpanded);
-      btn.setAttribute('aria-expanded', String(!isExpanded));
-    });
-  });
-
-  const expandAncestors = (targetId: string) => {
-    const el = document.getElementById(targetId);
-    if (!el) return;
-    let current: HTMLElement | null = el;
-    while (current) {
-      const details = current.parentElement?.closest('details[data-persist]') as HTMLDetailsElement | null;
-      if (details && !details.open) details.open = true;
-      current = details ?? current.parentElement;
+    if (fab) {
+      const onFab = () => {
+        const isOpen = sheet?.getAttribute('aria-hidden') === 'false';
+        if (isOpen) closeSheet();
+        else openSheet();
+      };
+      fab.addEventListener('click', onFab);
+      cleanupFns.push(() => fab.removeEventListener('click', onFab));
     }
-    const monthMatch = /^month-/.test(targetId);
-    if (monthMatch && typeof window.__gvFillMonth === 'function') {
-      window.__gvFillMonth(targetId.slice(6));
+    if (sheetBackdrop) {
+      sheetBackdrop.addEventListener('click', closeSheet);
+      cleanupFns.push(() => sheetBackdrop.removeEventListener('click', closeSheet));
     }
-    // El IO llena meses del nuevo viewport tras el salto y el documento crece,
-    // desplazando el destino. Salto instant + re-ajuste tras asentarse.
-    requestAnimationFrame(() =>
-      el.scrollIntoView({ behavior: 'instant', block: 'start' })
-    );
-    setTimeout(() => {
-      el.scrollIntoView({ behavior: 'instant', block: 'start' });
-    }, 400);
-  };
+    if (sheetClose) {
+      sheetClose.addEventListener('click', closeSheet);
+      cleanupFns.push(() => sheetClose.removeEventListener('click', closeSheet));
+    }
 
-  document.querySelectorAll<HTMLAnchorElement>('[data-target]').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const targetId = link.dataset.target!;
-      expandAncestors(targetId);
-      closeSheet();
+    document.querySelectorAll<HTMLButtonElement>('.timeline-sheet-toggle').forEach((btn) => {
+      const onToggle = () => {
+        const group = btn.dataset.toggleGroup;
+        const container = document.getElementById(group ?? '');
+        if (!container) return;
+        const isExpanded = btn.getAttribute('aria-expanded') === 'true';
+        container.classList.toggle('hidden', isExpanded);
+        btn.setAttribute('aria-expanded', String(!isExpanded));
+      };
+      btn.addEventListener('click', onToggle);
+      cleanupFns.push(() => btn.removeEventListener('click', onToggle));
     });
-  });
 
-  const dots = new Map<string, HTMLElement>();
-  document.querySelectorAll<HTMLElement>('[data-label]').forEach((dot) => {
-    dots.set(dot.dataset.label!, dot);
-  });
+    const expandAncestors = (targetId: string) => {
+      const el = document.getElementById(targetId);
+      if (!el) return;
+      let current: HTMLElement | null = el;
+      while (current) {
+        const details = current.parentElement?.closest('details[data-persist]') as HTMLDetailsElement | null;
+        if (details && !details.open) details.open = true;
+        current = details ?? current.parentElement;
+      }
+      const monthMatch = /^month-/.test(targetId);
+      if (monthMatch && typeof window.__gvFillMonth === 'function') {
+        window.__gvFillMonth(targetId.slice(6));
+      }
+      // El IO llena meses del nuevo viewport tras el salto y el documento crece,
+      // desplazando el destino. Salto instant + re-ajuste tras asentarse.
+      requestAnimationFrame(() =>
+        el.scrollIntoView({ behavior: 'instant', block: 'start' })
+      );
+      setTimeout(() => {
+        el.scrollIntoView({ behavior: 'instant', block: 'start' });
+      }, 400);
+    };
 
-  const targetEls = [...dots.keys()]
-    .map((id) => document.getElementById(id))
-    .filter((el): el is HTMLElement => el !== null);
-
-  const setActiveDot = (activeId: string | null) => {
-    dots.forEach((label, id) => {
-      const isActive = id === activeId;
-      label.classList.toggle('!text-blue-600', isActive);
-      label.classList.toggle('!bg-blue-50', isActive);
-      label.classList.toggle('rounded', isActive);
+    document.querySelectorAll<HTMLAnchorElement>('[data-target]').forEach((link) => {
+      const onClick = (e: Event) => {
+        e.preventDefault();
+        const targetId = link.dataset.target!;
+        expandAncestors(targetId);
+        closeSheet();
+      };
+      link.addEventListener('click', onClick);
+      cleanupFns.push(() => link.removeEventListener('click', onClick));
     });
-  };
 
-  if ('IntersectionObserver' in window && targetEls.length > 0) {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const visible = entries.filter((e) => e.isIntersecting);
-        if (visible.length === 0) return;
-        visible.sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top);
-        setActiveDot(visible[0].target.id);
-      },
-      { rootMargin: '-80px 0px -65% 0px', threshold: 0 }
-    );
-    targetEls.forEach((el) => observer.observe(el));
+    const dots = new Map<string, HTMLElement>();
+    document.querySelectorAll<HTMLElement>('[data-label]').forEach((dot) => {
+      dots.set(dot.dataset.label!, dot);
+    });
+
+    const targetEls = [...dots.keys()]
+      .map((id) => document.getElementById(id))
+      .filter((el): el is HTMLElement => el !== null);
+
+    const setActiveDot = (activeId: string | null) => {
+      dots.forEach((label, id) => {
+        const isActive = id === activeId;
+        label.classList.toggle('!text-blue-600', isActive);
+        label.classList.toggle('!bg-blue-50', isActive);
+        label.classList.toggle('rounded', isActive);
+      });
+    };
+
+    if ('IntersectionObserver' in window && targetEls.length > 0) {
+      io = new IntersectionObserver(
+        (entries) => {
+          const visible = entries.filter((e) => e.isIntersecting);
+          if (visible.length === 0) return;
+          visible.sort((a, b) => b.boundingClientRect.top - a.boundingClientRect.top);
+          setActiveDot(visible[0].target.id);
+        },
+        { rootMargin: '-80px 0px -65% 0px', threshold: 0 }
+      );
+      targetEls.forEach((el) => io?.observe(el));
+    }
   }
 
+  // Los <script> bundleados corren una sola vez; por eso el listener se registra
+  // en astro:page-load (se dispara tambien en la carga inicial) y ademas se
+  // llama directo, por si el evento ya ocurrio antes de evaluar este modulo.
+  if (!(window as any).__gvTimelineNavInit) {
+    (window as any).__gvTimelineNavInit = true;
+    document.addEventListener('astro:page-load', initTimelineNav);
+  }
+  initTimelineNav();
 </script>

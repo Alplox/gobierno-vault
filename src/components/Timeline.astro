@@ -452,6 +452,11 @@ const navSections = decades.map((d) => ({
 )}
 
 <script>
+  // Patrón del vault: los <script> bundleados corren UNA sola vez (no se
+  // re-ejecutan en cada navegación View Transitions). Todo init que consulta
+  // el DOM debe registrarse en astro:page-load (se dispara también en la carga
+  // inicial) y llamarse directo. cleanup() remueve listeners previos para que
+  // init sea idempotente si corre dos veces sobre el mismo DOM.
   const STORAGE_KEY = 'gobierno-vault-timeline-collapsed';
   const cleanupFns: (() => void)[] = [];
 
@@ -470,26 +475,30 @@ const navSections = decades.map((d) => ({
     }
   }
 
-  cleanup();
+  function initTimelineExtras() {
+    cleanup();
 
-  document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
-    el.addEventListener('toggle', () => {
-      const state = loadPersisted();
-      state[el.dataset.persist!] = !el.open;
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
+      const onToggle = () => {
+        const state = loadPersisted();
+        state[el.dataset.persist!] = !el.open;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      };
+      el.addEventListener('toggle', onToggle);
+      cleanupFns.push(() => el.removeEventListener('toggle', onToggle));
     });
-  });
 
-  const persisted = loadPersisted();
-  document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
-    const key = el.dataset.persist!;
-    if (persisted[key] !== undefined) {
-      el.open = !persisted[key];
-    }
-  });
+    const persisted = loadPersisted();
+    document.querySelectorAll<HTMLDetailsElement>('details[data-persist]').forEach((el) => {
+      const key = el.dataset.persist!;
+      if (persisted[key] !== undefined) {
+        el.open = !persisted[key];
+      }
+    });
 
-  const crumb = document.getElementById('timeline-crumb');
-  if (crumb) {
+    const crumb = document.getElementById('timeline-crumb');
+    if (!crumb) return;
+
     const nav = document.querySelector('nav');
     const setCrumbTop = () => {
       crumb.style.top = `${(nav?.offsetHeight ?? 0) + 0}px`;
@@ -505,12 +514,22 @@ const navSections = decades.map((d) => ({
     const sepEls = new Map<string, HTMLElement>();
     document.querySelectorAll<HTMLElement>('[data-crumb-sep]').forEach((el) => sepEls.set(el.dataset.crumbSep!, el));
 
-    const targets: { el: HTMLElement; level: string; label: string }[] = [];
-    document.querySelectorAll<HTMLElement>('[data-crumb-level]').forEach((el) => {
-      targets.push({ el, level: el.dataset.crumbLevel!, label: el.dataset.crumbLabel ?? '' });
-    });
+    // Los días de meses lazy se agregan al DOM en el cliente (timelineClient),
+    // así que los targets se refrescan cuando cambia la cantidad de secciones.
+    let targets: { el: HTMLElement; level: string; label: string }[] = [];
+    const refreshTargets = () => {
+      const els = document.querySelectorAll<HTMLElement>('[data-crumb-level]');
+      if (els.length === targets.length) return;
+      targets = Array.from(els).map((el) => ({
+        el,
+        level: el.dataset.crumbLevel!,
+        label: el.dataset.crumbLabel ?? '',
+      }));
+    };
+    refreshTargets();
 
     const updateCrumb = () => {
+      refreshTargets();
       const line = crumb.getBoundingClientRect().bottom + 4;
       let currentEl: HTMLElement | null = null;
       for (const t of targets) {
@@ -556,14 +575,27 @@ const navSections = decades.map((d) => ({
     };
     window.addEventListener('scroll', onScroll, { passive: true });
     cleanupFns.push(() => window.removeEventListener('scroll', onScroll));
+
     document.querySelectorAll<HTMLElement>('[data-crumb-seg]').forEach((a) => {
-      a.addEventListener('click', (e) => {
+      const onClick = (e: Event) => {
         e.preventDefault();
         const targetId = a.dataset.crumbTarget;
         const target = targetId ? document.getElementById(targetId) : null;
         if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      });
+      };
+      a.addEventListener('click', onClick);
+      cleanupFns.push(() => a.removeEventListener('click', onClick));
     });
+
     updateCrumb();
   }
+
+  // Los <script> bundleados corren una sola vez; por eso el listener se registra
+  // en astro:page-load (se dispara tambien en la carga inicial) y ademas se
+  // llama directo, por si el evento ya ocurrio antes de evaluar este modulo.
+  if (!(window as any).__gvTimelineExtrasInit) {
+    (window as any).__gvTimelineExtrasInit = true;
+    document.addEventListener('astro:page-load', initTimelineExtras);
+  }
+  initTimelineExtras();
 </script>

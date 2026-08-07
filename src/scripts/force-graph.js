@@ -15,6 +15,11 @@ function cleanup() {
     const fn = cleanupFns.pop();
     try { fn(); } catch { /* noop */ }
   }
+  // Remueve SVGs interactivos creados en inits previos. Si init corre dos veces
+  // sobre el mismo DOM (llamada directa + astro:page-load en la carga inicial),
+  // sin esto se apilarian dos SVGs. El SVG estatico de fallback no se toca aqui:
+  // el init siguiente lo vuelve a ocultar (idempotente).
+  document.querySelectorAll('svg[data-gv-graph]').forEach((el) => el.remove());
 }
 
 function addWindowListener(type, handler) {
@@ -46,6 +51,7 @@ function init() {
 
   // Create interactive SVG
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  svg.setAttribute('data-gv-graph', '1');
   svg.setAttribute('width', '100%');
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.style.cursor = 'grab';
@@ -300,29 +306,45 @@ function init() {
     });
   }
 
-  // Zoom buttons (full mode only — they don't exist in mini)
-  document.getElementById('zoom-in')?.addEventListener('click', () => {
-    const r = svg.getBoundingClientRect();
-    const cx = r.width / 2, cy = r.height / 2;
-    const ns = Math.min(scale * 1.2, 5);
-    tx = cx - (cx - tx) * (ns / scale);
-    ty = cy - (cy - ty) * (ns / scale);
-    scale = ns;
-    applyTransform();
-  });
-  document.getElementById('zoom-out')?.addEventListener('click', () => {
-    const r = svg.getBoundingClientRect();
-    const cx = r.width / 2, cy = r.height / 2;
-    const ns = Math.max(scale / 1.2, 0.1);
-    tx = cx - (cx - tx) * (ns / scale);
-    ty = cy - (cy - ty) * (ns / scale);
-    scale = ns;
-    applyTransform();
-  });
-  document.getElementById('zoom-reset')?.addEventListener('click', () => {
-    scale = 1; tx = 0; ty = 0;
-    applyTransform();
-  });
+  // Zoom buttons (full mode only — they don't exist in mini). Los listeners se
+  // registran con cleanup para no duplicarse si init corre mas de una vez.
+  const zoomIn = document.getElementById('zoom-in');
+  const zoomOut = document.getElementById('zoom-out');
+  const zoomReset = document.getElementById('zoom-reset');
+  if (zoomIn) {
+    const onZoomIn = () => {
+      const r = svg.getBoundingClientRect();
+      const cx = r.width / 2, cy = r.height / 2;
+      const ns = Math.min(scale * 1.2, 5);
+      tx = cx - (cx - tx) * (ns / scale);
+      ty = cy - (cy - ty) * (ns / scale);
+      scale = ns;
+      applyTransform();
+    };
+    zoomIn.addEventListener('click', onZoomIn);
+    cleanupFns.push(() => zoomIn.removeEventListener('click', onZoomIn));
+  }
+  if (zoomOut) {
+    const onZoomOut = () => {
+      const r = svg.getBoundingClientRect();
+      const cx = r.width / 2, cy = r.height / 2;
+      const ns = Math.max(scale / 1.2, 0.1);
+      tx = cx - (cx - tx) * (ns / scale);
+      ty = cy - (cy - ty) * (ns / scale);
+      scale = ns;
+      applyTransform();
+    };
+    zoomOut.addEventListener('click', onZoomOut);
+    cleanupFns.push(() => zoomOut.removeEventListener('click', onZoomOut));
+  }
+  if (zoomReset) {
+    const onZoomReset = () => {
+      scale = 1; tx = 0; ty = 0;
+      applyTransform();
+    };
+    zoomReset.addEventListener('click', onZoomReset);
+    cleanupFns.push(() => zoomReset.removeEventListener('click', onZoomReset));
+  }
 }
 
 // Se ejecuta en cada carga de página, incluida la navegación con View Transitions.
@@ -331,3 +353,8 @@ if (!window.__gvGraphInit) {
   window.__gvGraphInit = true;
   document.addEventListener('astro:page-load', init);
 }
+// Llamada directa (patrón del vault): si astro:page-load ya se disparó antes de
+// que este módulo se evaluara (carga inicial o SPA donde el módulo llega tarde),
+// init() no correría por listener. init es idempotente (cleanup remueve el SVG
+// interactivo previo antes de recrearlo).
+init();

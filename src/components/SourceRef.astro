@@ -1,7 +1,7 @@
 ---
-const { id, index } = Astro.props;
+const { id = '', index, href = `/sources/${id}`, title = `Referencia ${index}` } = Astro.props;
 ---
 
 <sup class="text-blue-600 font-mono text-xs">
-  <a href={`/sources/${id}`} title={id}>[{index}]</a>
+  <a href={href} title={title}>[{index}]</a>
 </sup>
