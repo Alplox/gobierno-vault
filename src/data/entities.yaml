@@ -1,4 +1,36 @@
 people:
+  romy_rutherford:
+    nombre: Romy Rutherford
+    cargo: Ministra de la Corte de Apelaciones de Santiago
+    notas: "Ministra de la Corte de Apelaciones de Santiago. Desde 2017 investiga causas de corrupción militar (fraudes en el Ejército con fondos de la Ley Reservada del Cobre), procesando a ex comandantes en Jefe como Humberto Oviedo y Juan Miguel Fuente-Alba. En 2021 denunció espionaje en su despacho por agentes de la Dirección de Inteligencia del Ejército (DINE), antecedentes que envió al Ministerio Público."
+  cesar_neira_medina:
+    nombre: César Neira Medina
+    cargo: Sargento primero del Regimiento de Inteligencia N° 1 "Soberanía" (DINE)
+    notas: "Sargento primero del Ejército destinado a la Dirección de Inteligencia del Ejército (DINE). Identificado por CIPER (2021) junto a otro agente haciendo 'punto fijo' frente al despacho de la ministra Romy Rutherford en 2019. Fue reconocido por el ex sargento Juan Pablo Díaz, testigo de los procesos por corrupción militar."
+  juan_pablo_diaz:
+    nombre: Juan Pablo Díaz
+    cargo: Ex sargento segundo del Ejército y testigo de causas de corrupción militar
+    notas: "Ex sargento segundo del Ejército, antiguo miembro del área de Inteligencia. Testigo en los procesos de corrupción castrense que lleva la ministra Romy Rutherford y blanco de la Operación Topógrafo (interceptaciones ilegales del Ejército a los denunciantes). Organizó la grabación de los agentes de la DINE que espiaban el despacho de la jueza (CIPER, 2021)."
+  mauricio_daza:
+    nombre: Mauricio Daza
+    cargo: Abogado y exconvencional constituyente
+    notas: "Abogado, magíster en Derecho Penal (UDP), exconstituyente de la Convención Constitucional por el distrito 28 (Magallanes, 2021-2022). El 6 de agosto de 2026 criticó la reforma constitucional de la Agenda ACOT de Kast señalando que el anuncio del deber del Estado de proteger la seguridad ya está en el artículo 1° de la Constitución vigente: 'Kast es tan iluminado que anuncia como gran medida el primer artículo que ya está en la Constitución'."
+  jose_toribio_merino:
+    nombre: José Toribio Merino
+    cargo: Almirante, miembro de la Junta Militar
+    notas: "Almirante de la Armada, miembro de la Junta Militar de Gobierno de la dictadura de Pinochet (1973-1990) y comandante en jefe de la Armada. Bajo su control operaba la Oficina de Estudios Sociológicos de la Armada (OESA), unidad que diseñó la estrategia de cierre de la dictadura tras la derrota en el plebiscito de 1988, según los 'Papeles de la Dictadura' de CIPER (2023)."
+  augusto_pinochet:
+    nombre: Augusto Pinochet
+    cargo: Dictador de Chile (1973-1990)
+    notas: "General del Ejército, líder de la dictadura militar chilena (1973-1990) tras el golpe de Estado del 11 de septiembre de 1973. Derrotado en el plebiscito de 1988. Los 'Papeles de la Dictadura' de CIPER documentan la estrategia de su régimen para condicionar la transición a la democracia."
+  patricio_aylwin:
+    nombre: Patricio Aylwin
+    cargo: Presidente de Chile (1990-1994)
+    notas: "Presidente de Chile entre 1990 y 1994, primer mandatario tras la dictadura. Líder de la Concertación. La estrategia de cierre de la dictadura diseñada por la Armada buscó evitar que la oposición fuese liderada por alguien más radical que Aylwin."
+  maria_angelica_de_miguel:
+    nombre: María Angélica de Miguel
+    cargo: Fiscal jefe de Osorno
+    notas: "Fiscal jefe de la Fiscalía Local de Osorno. En agosto de 2026 detalló la formalización del estudiante de 15 años del Liceo Rahue por amenazas y delitos contra la autoridad de Carabineros, tras el incidente con destornillador."
   alicia_cebrian:
     nombre: Alicia Cebrian
     cargo: Directora Nacional de Senapred
@@ -345,6 +377,11 @@ people:
     nombre: Antonio Jalaff
     cargo: Empresario, cofundador de Factop
     notas: "Hermano de Álvaro Jalaff e imputado en el caso Audios-Factop. La minuta de formalización de enero de 2025 detalla cómo los hermanos Jalaff recibieron financiamiento de Factop disimulado como operaciones de factoring."
+  victor_pino:
+    nombre: Víctor Pino
+    cargo: Delegado presidencial de Coquimbo
+    organizacion: ministerio_interior
+    notas: "Diputado de Demócratas. Asumió como delegado presidencial regional de Coquimbo en el gobierno de José Antonio Kast, cargo en el que participó de la tramitación de la megareforma. El organigrama del gobierno de El País (11-mar-2026) lo confirma entre los 16 delegados regionales."
   german_codina:
     nombre: German Codina
     cargo: Delegado Presidencial Region Metropolitana
@@ -581,6 +618,10 @@ people:
     cargo: Seremi de Educación de Los Lagos
     organizacion: ministerio_educacion
     notas: "Seremi de Educación de la Región de Los Lagos. Tras el incidente de violencia escolar del Liceo Rahue de Osorno (agosto 2026) pidió protección y tratamiento psicológico para la alumna agredida y atención de salud para el estudiante involucrado, subrayando que todo alumno tiene derecho a educación."
+  gloria_hutt:
+    nombre: Gloria Hutt
+    cargo: Exministra de Transportes y Telecomunicaciones (2018-2020)
+    notas: "Ministra de Transportes y Telecomunicaciones del segundo gobierno de Sebastián Piñera. Durante el estallido social de octubre de 2019 descartó rebajar la tarifa del Metro y calificó de 'incomprensible' la destrucción de infraestructura en las protestas, mientras señalaba que los estudiantes pagan tarifa plana."
   sebastian_pinera:
     nombre: Sebastián Piñera Echenique
     cargo: Expresidente de la República (2010-2014, 2018-2022)
@@ -1246,6 +1287,61 @@ people:
         organizacion: partido_nacional_libertario
         desde: 2026-03-11
     notas: Autor del proyecto de aborto "Escucha tu corazón"
+  eric_grohs:
+    nombre: Eric Grohs
+    cargo: Diputado (PNL)
+    cargos:
+      - cargo: Diputado (PNL)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: "Diputado del Partido Nacional Libertario, integrante de la Comisión de Trabajo y principal impulsor del proyecto para suspender por cinco años la Ley Karin (agosto 2026)."
+  paulina_munoz:
+    nombre: Paulina Muñoz
+    cargo: Diputada (PNL)
+    cargos:
+      - cargo: Diputada (PNL)
+        organizacion: partido_nacional_libertario
+        desde: 2026-03-11
+    notas: "Diputada del Partido Nacional Libertario. Cofirmante del proyecto para suspender por cinco años la Ley Karin (agosto 2026), argumentando falencias en el diseño y la implementación de la ley."
+  diego_vergara:
+    nombre: Diego Vergara
+    cargo: Diputado (Republicano)
+    cargos:
+      - cargo: Diputado (Republicano)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    notas: "Diputado del Partido Republicano. Cofirmante del proyecto para suspender por cinco años la Ley Karin (agosto 2026)."
+  daniel_valenzuela:
+    nombre: Daniel Valenzuela
+    cargo: Diputado independiente (bancada RN)
+    cargos:
+      - cargo: Diputado independiente (bancada RN)
+        organizacion: renovacion_nacional
+        desde: 2026-03-11
+    notas: "Diputado independiente de la bancada de Renovación Nacional. Cofirmante del proyecto para suspender por cinco años la Ley Karin (agosto 2026): 'hoy los tribunales laborales y las inspecciones del trabajo están sobrecargadas y copadas'."
+  patricio_briones:
+    nombre: Patricio Briones
+    cargo: Diputado (PDG)
+    cargos:
+      - cargo: Diputado (PDG)
+        organizacion: pdg
+        desde: 2026-03-11
+    notas: "Diputado del Partido De la Gente. Respaldó el proyecto para suspender por cinco años la Ley Karin (agosto 2026), planteando que se requiere 'un respiro legislativo y administrativo'. Su firma no quedó en el texto por un problema digital."
+  alicia_lira:
+    nombre: Alicia Lira
+    cargo: Presidenta de la Agrupación de Familiares de Ejecutados Políticos
+    organizacion: agrupacion_familiares_ejecutados_politicos
+    notas: "Presidenta de la Agrupación de Familiares de Ejecutados Políticos (AFEP). En agosto de 2026 alertó ante la ANEF y la CIDH por el eventual desmantelamiento del Plan Nacional de Búsqueda y los recortes presupuestarios del gobierno de Kast."
+  jose_perez:
+    nombre: José Pérez
+    cargo: Presidente de la ANEF
+    organizacion: anef
+    notas: "Presidente de la Asociación Nacional de Empleados Fiscales (ANEF). En agosto de 2026 advirtió que los servicios públicos esenciales están siendo afectados por los recortes presupuestarios del gobierno de Kast."
+  karen_palma:
+    nombre: Karen Palma
+    cargo: Vicepresidenta de la Mujer e Igualdad de Género de la CUT
+    organizacion: cut
+    notas: "Dirigenta sindical, vicepresidenta de la Mujer e Igualdad de Género de la CUT. Rechazó tajantemente los intentos de suspender o debilitar la Ley Karin (agosto 2026), argumentando que el alto volumen de denuncias refleja una demanda contenida de protección y que las mujeres son las principales víctimas."
   amaya_forch:
     nombre: Amaya Forch
     cargo: Actriz
@@ -1435,6 +1531,10 @@ people:
     nombre: Michel Cartes
     cargo: Exasesor de la ministra de la Mujer Judith Marín
     notas: "Arquitecto y asesor cercano a la ministra de la Mujer Judith Marín, parte del movimiento socialcristiano. Cuestionado por la falta de título de arquitecto, renunció voluntariamente el 29 de junio de 2026 con efecto al 1 de agosto (remuneración superior a $3 millones). The Clinic accedió a su carta de renuncia."
+  oscar_guardiola_rivera:
+    nombre: Oscar Guardiola-Rivera
+    cargo: Académico y autor
+    notas: "Académico, abogado y autor colombiano-británico, profesor en Birkbeck (Universidad de Londres). Autor de la columna de opinión en The Guardian (24 de octubre de 2019) 'The risk to democracy in Chile isn't from protesters. It's from Piñera and the 1%', donde sostiene que la represión del estallido evocaba los métodos de la dictadura de Pinochet y que el modelo neoliberal chileno estaba en el origen de la crisis."
   fabiola_campillai:
     nombre: Fabiola Campillai
     cargo: Senadora (Ind.)
@@ -1693,6 +1793,40 @@ people:
     nombre: Littré Quiroga
     cargo: Exdirector General de Prisiones
     notas: Asesinado en septiembre de 1973 junto a Víctor Jara en el Estadio Chile
+  juan_barros:
+    nombre: Juan Barros Madrid
+    cargo: Exobispo de Osorno
+    notas: "Obispo de Osorno designado en 2015 pese a las denuncias de encubrimiento de los abusos del sacerdote Fernando Karadima. Su designación provocó protestas masivas en la diócesis y el Papa Francisco lo respaldó públicamente en octubre de 2015, llamando 'tontos' y 'zurdos' a los manifestantes. En 2018 renunció al obispado tras el escándalo de abusos de la Iglesia chilena."
+  fernando_karadima:
+    nombre: Fernando Karadima
+    cargo: Exsacerdote condenado por abusos sexuales
+    notas: "Párroco de El Bosque (Santiago), condenado por la Santa Sede en 2011 por abusos sexuales a menores. Su caso destapó la red de encubrimiento en la Iglesia chilena que involucró a obispos como Juan Barros y Juan Pablo Barros, y motivó las protestas en Osorno tras la designación de Barros."
+  erika_guevara_rosas:
+    nombre: Erika Guevara-Rosas
+    cargo: Directora para las Américas de Amnistía Internacional
+    organizacion: amnistia_internacional
+    notas: "Directora para las Américas de Amnistía Internacional. El 29 de julio de 2018 condenó el apuñalamiento de tres mujeres en la marcha por el aborto libre de Santiago y criticó 'las tímidas declaraciones del gobierno', señalando que enviaban un mensaje preocupante de que exigir derechos representa un riesgo."
+  macarena_castaneda:
+    nombre: Macarena Castañeda
+    cargo: Portavoz de Mesa de Acción por el Aborto
+    notas: "Portavoz de la Mesa de Acción por el Aborto, grupo que lideraba la lucha por el acceso al aborto libre en Chile. El 29 de julio de 2018 calificó de 'terrorismo' el apuñalamiento de tres mujeres en la marcha: 'cuando un grupo quiere intimidar a otro para impedirle expresar sus ideas libremente'."
+  natalia_valdebenito:
+    nombre: Natalia Valdebenito
+    cargo: Comediante y comunicadora
+    notas: "Comediante y conductora radial chilena. El 29 de julio de 2018 difundió en vivo por Instagram el apuñalamiento de tres mujeres en una marcha por el aborto libre en Santiago, denunciando que la prensa no cubrió el ataque y que el gobierno no lo condenó."
+  jose_miguel_vivanco:
+    nombre: José Miguel Vivanco
+    cargo: Exdirector para las Américas de Human Rights Watch
+    notas: "Abogado chileno, director de la División de las Américas de Human Rights Watch hasta 2022. En noviembre de 2019 lideró la investigación de HRW sobre las violaciones a los derechos humanos de Carabineros durante el estallido social, reunión con Piñera el 26 de noviembre y el informe 'Chile: Police Reforms Needed in the Wake of Protests'."
+  karina_soza:
+    nombre: Karina Soza
+    cargo: Exjefa de Derechos Humanos de Carabineros
+    organizacion: carabineros
+    notas: "Teniente coronel de Carabineros y jefa de Derechos Humanos de la institución durante el estallido social. En noviembre de 2019, ante la Comisión de DD.HH. del Senado, defendió que los efectivos de Fuerzas Especiales captados en el video viral 'pacos jalando' inhalaban Mentholatum para combatir los gases lacrimógenos, lo que fue desmentido por bioquímicos y científicos. Su declaración fue calificada de 'sumamente grave e irresponsable' por los investigadores."
+  claudio_olea_azar:
+    nombre: Claudio Olea Azar
+    cargo: Bioquímico e investigador de la Universidad de Chile
+    notas: "Doctor en Ciencias mención Química e investigador de la Facultad de Ciencias Químicas y Farmacéuticas de la Universidad de Chile. En noviembre de 2019 encabezó el informe de bioquímicos y químicos farmacéuticos que desmintió que el Mentholatum alivie los efectos de los gases lacrimógenos, señalando que incluso podía potenciarlos."
   victor_perez:
     nombre: Víctor Pérez Varela
     cargo: Exministro del Interior y Seguridad Pública
@@ -2573,6 +2707,25 @@ people:
     nombre: María del Pilar Giannini
     cargo: Subsecretaria de Seguridad Pública
     organizacion: ministerio_seguridad
+  christopher_white:
+    nombre: Christopher White
+    cargo: Alcalde de San Bernardo
+    cargos:
+      - cargo: Alcalde de San Bernardo
+        organizacion: municipalidad_san_bernardo
+    notas: "Alcalde de San Bernardo. El 6 de agosto de 2026 refutó en Cooperativa el optimismo del gobierno de Kast en seguridad: 'hay un Chile A donde los discursos dicen que todo mejora, pero en comunas como la nuestra la gente vive una sensación de miedo terrible'; denunció cifras negras, crimen organizado y falta de carabineros y herramientas."
+  jose_nicolas_khamis:
+    nombre: José Nicolás Khamis Thomas
+    cargo: Ciudadano chileno de ascendencia palestina
+    notas: "Chileno de 32 años de ascendencia palestina. El 27 de julio de 2026 fue retenido cerca de 35-36 horas en el aeropuerto Ben-Gurión de Tel Aviv y expulsado de Israel, pese a contar con pasaporte, visa aprobada y carta de invitación; las autoridades israelíes le negaron el ingreso por motivos de seguridad tras interrogarlo sobre sus opiniones políticas y su postura sobre el 7 de octubre. Su caso motivó la exigencia de 21 parlamentarios oficialistas chilenos para que la Cancillería solicite antecedentes a Israel."
+  peleg_lewi:
+    nombre: Peleg Lewi
+    cargo: Embajador de Israel en Chile
+    notas: "Embajador de Israel en Chile. En agosto de 2026 defendió la expulsión del chileno José Nicolás Khamis invocando el derecho soberano de Israel a decidir sobre el ingreso de extranjeros para 'prevenir actos de carácter injerencista, provocativo o que afecten la seguridad nacional'. Sus declaraciones fueron calificadas de 'especialmente graves' por 21 parlamentarios oficialistas chilenos."
+  carel_fleming:
+    nombre: Carel Fleming
+    cargo: Periodista de Interferencia (corresponsal en Washington)
+    notas: "Periodista de Interferencia, corresponsal desde Washington D.C. Autor de la columna 'Los nuevos postulantes a la DINA de Kast' (febrero de 2026), sobre el riesgo de que sectores militares y policiales se sientan reivindicados bajo el gobierno de Kast y de que la Agencia Nacional de Inteligencia (ANI) se vuelva política en lugar de técnica."
   tomas_vodanovic:
     nombre: Tomás Vodanovic
     cargo: Alcalde de Maipú (Frente Amplio)
@@ -3171,7 +3324,17 @@ people:
     nombre: Diego Schalper
     cargo: Diputado (Renovación Nacional)
     organizacion: renovacion_nacional
-    notas: "Diputado RN. Impulsor del proyecto que prohíbe el acceso de menores de 16 años a redes sociales y plataformas digitales."
+    notas: "Diputado RN. Jefe de bancada. Impulsor del proyecto que prohíbe el acceso de menores de 16 años a redes sociales y plataformas digitales. El 6 de agosto de 2026 calificó la Agenda ACOT de Kast como 'respuesta clara y contundente'."
+  maria_jose_gatica:
+    nombre: María José Gatica
+    cargo: Senadora (Renovación Nacional)
+    organizacion: renovacion_nacional
+    notas: "Senadora RN y jefa de bancada. El 6 de agosto de 2026 respaldó la Agenda ACOT de Kast como 'firme para combatir el crimen organizado', destacando la colaboración de las Fuerzas Armadas con las policías."
+  constanza_martinez:
+    nombre: Constanza Martínez
+    cargo: Presidenta del Frente Amplio
+    organizacion: frente_amplio
+    notas: "Presidenta del Frente Amplio y carta de la continuidad en la elección interna de la colectividad. El 6 de agosto de 2026 criticó con dureza el plan de seguridad de Kast, afirmando que 'acusaron el golpe' y que apelan a 'normas represivas que no resuelven el problema en las poblaciones'."
   joel_velasco:
     nombre: Joel Velasco
     cargo: Vicepresidente de UnitedHealth Group
@@ -3743,6 +3906,14 @@ people:
     cargo: Presidenta de ASOF (Confederación Nacional de Ferias Libres de Chile)
     organizacion: asof
     notas: "Presidenta de la Confederación Nacional de Ferias Libres de Chile (ASOF). Tras el cruce entre las senadoras Camila Flores y Fabiola Campillai (5 de agosto de 2026), en el que Flores usó la expresión 'señora de feria' como descalificación, respondió que 'ser mujer de feria es un orgullo' y llamó a no utilizar la identidad de las feriantes como un calificativo ofensivo."
+  miguel_angel_aguilera:
+    nombre: Miguel Ángel Aguilera
+    cargo: Exalcalde de San Ramón
+    notas: "Exalcalde de San Ramón (2012-2021) y exmilitante socialista. CIPER reveló en 2018 que compró una propiedad en La Reina por cerca de $350 millones con fondos ilícitos. En 2025 fue condenado por lavado de activos (4 años de reclusión bajo libertad vigilada y multa de 200 UTM) y aumento patrimonial injustificado (multa de $246.918.500). En agosto de 2026 el Sexto Tribunal Oral en lo Penal de Santiago confirmó que la casa pasa al fisco. En 2021 demandó a CIPER por $1.700 millones por daño moral; abandonó el proceso."
+  jorge_chino_pinto:
+    nombre: Jorge "Chino" Pinto
+    cargo: Narcotraficante
+    notas: "Narcotraficante vinculado al exalcalde de San Ramón Miguel Ángel Aguilera, nexos revelados por Informe Especial en octubre de 2018 en plena crisis del edil, que también enfrentaba investigaciones de la Fiscalía y la Contraloría."
   felipe_givovich:
     nombre: Felipe Givovich
     cargo: Economista
@@ -3751,6 +3922,26 @@ people:
     nombre: Paula Hurtado
     cargo: Economista
     notas: "Economista de la consultora Quiroz y Asociados. Cofirmó junto a Jorge Quiroz el informe 'Mercado relevante del car carrier hacia Chile y participación de MOL' encargado por la naviera MOL en 2016."
+  ramon_avila:
+    nombre: Ramón Ávila
+    cargo: Exgerente comercial de Salcobrand
+    notas: "Exgerente comercial de Salcobrand. Autor del correo del 19 de diciembre de 2007 al jefe de control de gestión de la cadena en que proponía coordinar con los laboratorios el alza de precios ('ofrecimos ser la cadena que primero subiera los precios'), que el TDLC consideró en la sentencia de la colusión de las farmacias una 'prueba manifiesta de la existencia de una coordinación expresa entre las cadenas de farmacias'."
+  jorge_ariztia:
+    nombre: Jorge Ariztía
+    cargo: Gerente general de Empresas Ariztía
+    notas: "Gerente general de Empresas Ariztía durante la colusión de los pollos. Declaró ante el TDLC que las avícolas no solo utilizaban las proyecciones de demanda de Jorge Quiroz (el 'modelo Quiroz') sino que el economista también las ajustaba cuando se requería."
+  guillermo_diaz:
+    nombre: Guillermo Díaz del Río
+    cargo: Gerente general de Agrosuper
+    notas: "Gerente general de Agrosuper durante la colusión de los pollos. Declaró ante el TDLC que se encargó un modelo de proyecciones de ventas a 'don Jorge Quiroz' y que incluso se pidió una segunda versión del modelo. Su correo electrónico con José Guzmán fue clave para evidenciar las instrucciones de cargas coordinadas desde la APA."
+  maria_soledad_valenzuela:
+    nombre: María Soledad Valenzuela
+    cargo: Gerenta de estudios de la APA
+    notas: "Gerenta del área de estudios de la Asociación de Productores Avícolas (APA) durante la colusión de los pollos. Declaró ante el TDLC que con el estudio de Jorge Quiroz se elaboraron las proyecciones de venta de Agrosuper, Ariztía y Don Pollo; la FNE obtuvo sus cuadernos con apuntes de reuniones con Quiroz para discutir su modelo."
+  juan_miguel_ovalle:
+    nombre: Juan Miguel Ovalle
+    cargo: Director ejecutivo de la APA
+    notas: "Director ejecutivo de la Asociación de Productores Avícolas (APA) durante la colusión de los pollos. Según el expediente del TDLC, operó como articulador del cartel: fijaba precios de referencia, enviaba proyecciones de ventas y coordinaba las 'cargas' de producción entre Agrosuper, Ariztía y Don Pollo."
 
 organizations:
   criteria:
@@ -3878,6 +4069,11 @@ organizations:
     nombre: Ministerio del Trabajo y Previsión Social
     tipo: ministerio
     pais: Chile
+  direccion_del_trabajo:
+    nombre: Dirección del Trabajo (DT)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público dependiente del Ministerio del Trabajo, encargado de fiscalizar el cumplimiento de la normativa laboral. Receptor de las denuncias por acoso laboral en el marco de la Ley Karin; según cifras oficiales ingresaron 44.212 denuncias entre agosto de 2024 y junio de 2025."
   junaeb:
     nombre: Junaeb - Junta Nacional de Auxilio Escolar y Becas
     tipo: servicio_publico
@@ -3887,6 +4083,16 @@ organizations:
     nombre: Ministerio de Hacienda
     tipo: ministerio
     pais: Chile
+  comunidad_palestina_chile:
+    nombre: Comunidad Palestina de Chile
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Comunidad de origen palestino en Chile, una de las más numerosas fuera de Palestina. En agosto de 2026 respaldó al chileno José Nicolás Khamis tras su expulsión de Israel y denunció un patrón de hostigamiento hacia chilenos de origen palestino en fronteras israelíes."
+  agencia_nacional_inteligencia:
+    nombre: Agencia Nacional de Inteligencia (ANI)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio de inteligencia del Estado de Chile. En la columna de Interferencia 'Los nuevos postulantes a la DINA de Kast' (febrero 2026) se advierte sobre el riesgo de que la ANI se vuelva 'más política que técnica, más operativa que analítica' bajo el gobierno de Kast."
   ministerio_interior:
     nombre: Ministerio del Interior y Seguridad Publica
     tipo: ministerio
@@ -4022,6 +4228,21 @@ organizations:
     nombre: Policía de Investigaciones de Chile
     tipo: policia
     pais: Chile
+  municipalidad_huechuraba:
+    nombre: Municipalidad de Huechuraba
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de la comuna de Huechuraba (Región Metropolitana). En agosto de 2026 denunció acceso ilícito de un exfuncionario de soporte técnico que sustraía archivos personales de los computadores del municipio y almacenaba material pornográfico infantil."
+  agrupacion_familiares_ejecutados_politicos:
+    nombre: Agrupación de Familiares de Ejecutados Políticos (AFEP)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización de derechos humanos que agrupa a familiares de ejecutados políticos de la dictadura. Presidida por Alicia Lira. En agosto de 2026 alertó ante la ANEF y la CIDH por el eventual desmantelamiento del Plan Nacional de Búsqueda."
+  plan_nacional_busqueda:
+    nombre: Plan Nacional de Búsqueda
+    tipo: programa_estado
+    pais: Chile
+    notas: "Programa estatal para la búsqueda de personas detenidas desaparecidas y ejecutadas durante la dictadura. En 2026 los gremios de DDHH advirtieron sobre su eventual desmantelamiento por recortes presupuestarios del gobierno de Kast."
   fenats:
     nombre: Federación Nacional de Funcionarios de la Subsecretaría de Salud Pública
     tipo: sindicato
@@ -4064,6 +4285,11 @@ organizations:
     nombre: Sociedad Nacional de Agricultura
     tipo: gremio
     pais: Chile
+  municipalidad_san_bernardo:
+    nombre: Municipalidad de San Bernardo
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de la comuna de San Bernardo. Su alcalde, Christopher White, ha criticado la situación de seguridad en la comuna denunciando cifras negras, crimen organizado y falta de carabineros y herramientas (agosto de 2026)."
   municipalidad_maipu:
     nombre: Municipalidad de Maipú
     tipo: municipalidad
@@ -4151,6 +4377,11 @@ organizations:
     tipo: fiscalia
     pais: Chile
     notas: Fiscalía que lideró la investigación del caso Gustavo Gatica, a cargo de la fiscal Ximena Chong. Recurrió de nulidad contra la absolución de Claudio Crespo, recurso rechazado por la Corte de Apelaciones de Santiago en agosto de 2026.
+  fuerzas_especiales:
+    nombre: Fuerzas Especiales de Carabineros
+    tipo: unidad_policial
+    pais: Chile
+    notas: "Unidad de control de disturbios de Carabineros de Chile. En octubre de 2019, tres de sus efectivos fueron captados en un video viral aspirando una sustancia blanca en plena calle durante el estallido social ('pacos jalando'); Carabineros atribuyó la sustancia al Mentholatum, explicación desmentida por científicos. También son la unidad responsable de la represión con gases lacrimógenos y escopetas antidisturbios en las protestas."
   carabineros:
     nombre: Carabineros de Chile
     tipo: policia
@@ -4189,6 +4420,9 @@ organizations:
     pais: Chile
     notas: Gremio que agrupa a municipalidades de Chile. Tensión interna por postura
       frente a megarreforma.
+  amnistia_internacional:
+    nombre: Amnistía Internacional
+    notas: "Organización internacional de derechos humanos. Su directora para las Américas, Erika Guevara-Rosas, condenó el apuñalamiento de tres mujeres en la marcha por el aborto libre de julio de 2018 y criticó las declaraciones del gobierno chileno."
   indh:
     nombre: Instituto Nacional de Derechos Humanos
     tipo: organismo_estado
@@ -5401,11 +5635,26 @@ organizations:
     tipo: empresa
     pais: Chile
     notas: "Productora avícola chilena. Condenada junto a Agrosuper y Ariztía por la colusión de los pollos (TDLC, Sentencia 139/2014, multa de 12.000 UTA)."
+  cruz_verde:
+    nombre: Farmacias Cruz Verde S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Cadena chilena de farmacias. Condenada por el TDLC (Sentencia 119/2012) junto a Salcobrand por colusión en el precio de 206 medicamentos, con multa máxima de 20.000 UTA (≈US$ 19 millones), confirmada por la Corte Suprema en septiembre de 2012."
+  farmacias_ahumada:
+    nombre: Farmacias Ahumada S.A. (FASA)
+    tipo: empresa
+    pais: Chile
+    notas: "Cadena chilena de farmacias. Participó en la colusión de las farmacias (2007-2008) pero se acogió a la delación compensada ante la FNE en abril de 2009, confesando el cartel y quedando eximida de la sanción del TDLC de 2012 tras pagar cerca de US$ 1 millón."
   asociacion_productores_avicolas:
     nombre: Asociación de Productores Avícolas de Chile
     tipo: gremio
     pais: Chile
     notas: "Asociación gremial de productores de pollo. Disuelta por el TDLC (Sentencia 139/2014) tras acreditarse la colusión de los pollos; su modelo de proyección de consumo fue identificado como el 'modelo Quiroz'."
+  rumbo_colectivo:
+    nombre: Rumbo Colectivo
+    tipo: think_tank
+    pais: Chile
+    notas: "Centro de pensamiento ligado al Frente Amplio. Su director es Nicolás Grau, exministro de Hacienda y Economía del gobierno de Gabriel Boric, quien ha criticado la megarreforma tributaria de José Antonio Kast."
   asof:
     nombre: Confederación Nacional de Ferias Libres de Chile (ASOF)
     tipo: gremio
@@ -5413,6 +5662,82 @@ organizations:
     notas: "Gremio nacional de ferias libres presidido por Paola Morales. El 6 de agosto de 2026 rechazó el uso despectivo de la expresión 'señora de feria' tras el cruce entre las senadoras Camila Flores y Fabiola Campillai, reivindicando que 'ser mujer de feria es un orgullo' y que las feriantes 'alimentan a Chile' y sostienen parte de la economía familiar."
 
 cifras:
+  carabineros_operativo_plaza_armas:
+    nombre: Funcionarios de Carabineros en el operativo de Plaza de Armas
+    unidad_default: efectivos
+    notas: "60 funcionarios de Carabineros desplegados en el operativo de copamiento liderado por el presidente José Antonio Kast en la Plaza de Armas de Santiago el 6 de agosto de 2026, según La Tercera."
+  pdi_operativo_plaza_armas:
+    nombre: Efectivos de la PDI en el operativo de Plaza de Armas
+    unidad_default: efectivos
+    notas: "55 efectivos de la Policía de Investigaciones (PDI) desplegados junto a 60 carabineros en el operativo de la Plaza de Armas de Santiago del 6 de agosto de 2026, con apoyo de Seguridad Municipal, según La Tercera."
+  medicamentos_coludidos_farmacias:
+    nombre: Medicamentos coludidos por las farmacias
+    unidad_default: medicamentos
+    notas: "Al menos 206 medicamentos (anticonceptivos, antibióticos y fármacos para enfermedades crónicas como diabetes o Parkinson) cuyos precios las cadenas Cruz Verde, Ahumada y Salcobrand subieron concertadamente entre diciembre de 2007 y marzo de 2008, según la Sentencia 119/2012 del TDLC."
+  multa_farmacias_uta:
+    nombre: Multa máxima aplicada a Cruz Verde y Salcobrand
+    unidad_default: uta
+    notas: "20.000 UTA (≈US$ 19 millones) para cada una de las cadenas Cruz Verde y Salcobrand, la multa máxima del D.L. 211 vigente a la fecha de los hechos, impuesta por el TDLC (Sentencia 119/2012) y confirmada por la Corte Suprema el 7 de septiembre de 2012."
+  alzas_simultaneas_farmacias:
+    nombre: Alzas simultáneas de precios detectadas por el TDLC
+    unidad_default: alzas
+    notas: "286 alzas simultáneas de medicamentos entre las cadenas acusadas en la colusión de las farmacias, de las cuales 249 siguieron el patrón '1-2-3' descrito por el TDLC (una cadena sube un día, la segunda otro y la tercera un tercero)."
+  mails_salcobrand_revisados_quiroz:
+    nombre: Correos de Salcobrand revisados por Quiroz y Asociados
+    unidad_default: correos
+    notas: "19.768 correos de Salcobrand del período de la posible colusión revisados por la consultora de Jorge Quiroz para su informe de julio de 2009, en el que concluyó que 'no se puede concluir existencia de acuerdo de precios'. Quiroz declaró que además pesquisó otros 25.000 correos anteriores (20.000 enviados por la farmacia)."
+  anios_colusion_pollos:
+    nombre: Años de duración de la colusión de los pollos
+    unidad_default: años
+    notas: "Unos 16 años de colusión avícola entre 1994/1995 y 2010: el TDLC (Sentencia 139/2014) acreditó que Agrosuper, Ariztía y Don Pollo se repartieron la oferta de pollo en cuotas mediante el intercambio permanente de información en el seno de la APA."
+  multa_pollos_cs_total:
+    nombre: Multas totales ratificadas por la Corte Suprema en el caso pollos
+    unidad_default: millones_usd
+    notas: "Cerca de US$ 60 millones en multas totales confirmadas por la Corte Suprema el 29 de octubre de 2015 contra Agrosuper, Ariztía y Don Pollo por la colusión de los pollos, más la disolución de la APA y el pago adicional de 2.000 UTA por la asociación (Emol)."
+  multa_apa_cs:
+    nombre: Multa adicional a la APA por la Corte Suprema
+    unidad_default: uta
+    notas: "2.000 UTA (cerca de $1.000 millones) que la Corte Suprema ordenó pagar a la Asociación de Productores Avícolas (APA) al confirmar la sentencia 139/2014 del TDLC por la colusión de los pollos, además de ratificar su disolución."
+  retencion_khamis_israel:
+    nombre: Horas de retención del chileno José Nicolás Khamis en Israel
+    unidad_default: horas
+    notas: "José Nicolás Khamis Thomas fue retenido cerca de 35 horas (36 según BioBioChile) en el aeropuerto Ben-Gurión de Tel Aviv, en condiciones precarias, antes de ser expulsado de Israel el 27 de julio de 2026."
+  contagios_covid_chile_mayo_2020:
+    nombre: Casos acumulados de COVID-19 en Chile a fines de mayo de 2020
+    unidad_default: personas
+    notas: "Chile superaba los 50.000 contagios acumulados de covid-19 a fines de mayo de 2020 (3.520 nuevos casos el 22 de mayo, el mayor aumento diario hasta entonces) y más de 630 fallecidos, según Daily Mail. El 90% de las camas de cuidados intensivos de Santiago estaba ocupado."
+  imagenes_pornografia_infantil_huechuraba:
+    nombre: Imágenes de pornografía infantil halladas al exinformático de Huechuraba
+    unidad_default: imagenes
+    notas: "Más de 100 fotografías (113 según el vocero de la Fiscalía Centro Norte, Emanuel Ibaceta) de material pornográfico infantil almacenadas en el computador laboral del exinformático de la Municipalidad de Huechuraba, detectadas por la Brigada de Cibercrimen de la PDI en agosto de 2026."
+  recorte_ine_2026:
+    nombre: Recorte presupuestario al INE en 2026
+    unidad_default: millones_pesos
+    notas: "Recorte de 652 millones de pesos sufrido por el Instituto Nacional de Estadísticas (INE) en 2026, expuesto por los gremios de trabajadores y DDHH ante la ANEF y la CIDH como ejemplo de los recortes presupuestarios del gobierno de Kast."
+  denuncias_ley_karin_dic2025:
+    nombre: Denuncias Ley Karin a diciembre de 2025
+    unidad_default: denuncias
+    notas: "Más de 66 mil denuncias (66.596 según el Diario Financiero) asociadas a la Ley Karin a diciembre de 2025, sostenidas en torno a 22 mil por semestre (cerca de cien diarias). Cifra citada por los impulsores del proyecto de suspensión por cinco años de la ley."
+  denuncias_ley_karin_2024_2025:
+    nombre: Denuncias Ley Karin entre agosto 2024 y junio 2025
+    unidad_default: denuncias
+    notas: "44.212 denuncias ingresadas entre el 1 de agosto de 2024 y el 30 de junio de 2025 según la Dirección del Trabajo y la Superintendencia de Seguridad Social: 42% preclasificado como materia propia de la ley (18.367), 40% otras materias (17.980) y 18% pendiente de clasificación (7.865)."
+  perdida_fiscal_megarreforma_grau:
+    nombre: Pérdida fiscal anual estimada por la megarreforma según Grau
+    unidad_default: millones_usd
+    notas: "Estimación del exministro de Hacienda Nicolás Grau: la megarreforma de Kast implicaría perder del orden de US$2.000 millones por año en ingresos fiscales (entrevista con T13, agosto 2026)."
+  casa_aguilera_la_reina:
+    nombre: Valor de la casa del exalcalde Aguilera en La Reina
+    unidad_default: millones_pesos
+    notas: "Propiedad comprada por el exalcalde de San Ramón Miguel Ángel Aguilera por cerca de $350 millones (~350 millones de pesos). CIPER la reveló en 2018; en agosto de 2026 el Sexto Tribunal Oral en lo Penal de Santiago confirmó que pasa al fisco por haber sido financiada con fondos ilícitos."
+  multa_aguilera_aumento_patrimonial:
+    nombre: Multa por aumento patrimonial injustificado de Aguilera
+    unidad_default: pesos
+    notas: "Multa de $246.918.500 impuesta al exalcalde de San Ramón Miguel Ángel Aguilera por aumento patrimonial injustificado, equivalente al incremento patrimonial indebido (sentencia 2025)."
+  demanda_aguilera_ciper:
+    nombre: Demanda de Aguilera contra CIPER por daño moral
+    unidad_default: millones_pesos
+    notas: "Demanda civil del exalcalde Miguel Ángel Aguilera contra CIPER por $1.700 millones por daño moral (2021), patrocinada por los abogados Eduardo Lagos y Mario Vargas. No prosperó por abandono de procedimiento."
   perros_abandonados_santiago_2009:
     nombre: Perros abandonados en Santiago en 2009
     unidad_default: canes
@@ -5429,6 +5754,18 @@ cifras:
     nombre: Denuncias de violaciones a los DDHH atribuidas a Carabineros desde octubre de 2019
     unidad_default: denuncias
     notas: "8.575 denuncias de presuntas violaciones a los derechos humanos perpetradas por Carabineros en la represión de las protestas desde octubre de 2019, reportadas por el Ministerio Público en octubre de 2020, con solo 16 agentes dados de baja. Cifra citada por The Guardian en la cobertura del caso Pío Nono."
+  heridos_estallido_nov_2019:
+    nombre: Heridos atendidos por servicios de emergencia durante el estallido social
+    unidad_default: heridos
+    notas: "11.564 personas heridas atendidas por los servicios de emergencia durante las manifestaciones entre el 18 de octubre y el 22 de noviembre de 2019, según datos del Ministerio de Salud reportados por Human Rights Watch, de las cuales más de 1.100 presentaban lesiones moderadas o graves."
+  condenas_estallido_2026:
+    nombre: Condenas por violaciones a los DDHH del estallido social
+    unidad_default: condenas
+    notas: "Solo 219 condenas de las más de 11.500 causas presentadas por violaciones a los derechos humanos durante el estallido social de 2019, según datos citados por The Guardian en febrero de 2026 en la cobertura de la absolución de Claudio Crespo en el caso Gatica."
+  victimas_lesiones_oculares_estallido:
+    nombre: Víctimas de lesiones oculares durante el estallido social
+    unidad_default: personas
+    notas: "464 chilenos fueron víctimas de lesiones oculares durante las protestas del estallido social de 2019, según la Fiscalía de Chile, citados por The Guardian en febrero de 2026 en la cobertura de la absolución de Claudio Crespo."
   limite_exposicion_gas_cs_2020:
     nombre: Límite de exposición al gas CS según el manual de Carabineros
     unidad_default: mg_m3
@@ -5983,6 +6320,46 @@ cifras:
     nombre: Homicidios consumados durante 2018
     unidad_default: personas
     notas: "845 víctimas. Nivel que el ministro Arrau espera alcanzar en un año plazo."
+  promedio_homicidios_2018_2025:
+    nombre: Promedio anual de homicidios consumados 2018-2025
+    unidad_default: homicidios_por_año
+    notas: "8.669 homicidios consumados entre 2018 y 2025 según el Informe de Víctimas de Homicidios Consumados 2025 del Centro para la Prevención de Homicidios y Delitos Violentos, lo que da un promedio anual de 1.083,6, tal como afirmó el presidente Kast en la cadena nacional ACOT (verificado #Real por Fast Check, 6-ago-2026). El mínimo fue 845 en 2018 y el pico 1.330 en 2022."
+  homicidios_consumados_2022:
+    nombre: Homicidios consumados durante 2022
+    unidad_default: personas
+    notas: "1.330 víctimas, el pico de la serie 2018-2025 según el Informe de Víctimas de Homicidios Consumados 2025 del Centro para la Prevención de Homicidios y Delitos Violentos."
+  robos_violentos_2025:
+    nombre: Robos con violencia o intimidación en 2025
+    unidad_default: casos
+    notas: "69.777 casos en 2025 (61.575 robos con violencia o intimidación + 8.202 robos violentos de vehículo motorizado) según el CEAD de la Subsecretaría para Prevención del Delito. Contradice la cifra de 218.000 robos violentos que el presidente Kast dio en la cadena nacional ACOT (verificado #Falso por Fast Check, 6-ago-2026)."
+  robos_violentos_sorpresa_2025:
+    nombre: Robos violentos con robos por sorpresa en 2025
+    unidad_default: casos
+    notas: "109.419 casos si se suman los robos por sorpresa a los 69.777 robos con violencia o intimidación de 2025 (CEAD). Aun así, muy lejos de los 218.000 afirmados por el presidente Kast en la cadena nacional ACOT."
+  ingresos_irregulares_ene_jul_2026:
+    nombre: Ingresos irregulares detectados enero-julio 2026
+    unidad_default: personas
+    notas: "1.175 ingresos irregulares detectados por la PDI en la Macrozona Norte entre enero y julio de 2026, validado por el Servicio Nacional de Migraciones (Sermig). Representa una caída del 86,5% respecto a los 8.610 del mismo periodo de 2025, cifra citada por Kast en la cadena nacional ACOT y verificada #Real por Fast Check (6-ago-2026)."
+  ingresos_irregulares_ene_jul_2025:
+    nombre: Ingresos irregulares detectados enero-julio 2025
+    unidad_default: personas
+    notas: "8.610 ingresos irregulares detectados por la PDI en la Macrozona Norte entre enero y julio de 2025 (BioBioChile, 6-ago-2026)."
+  denuncias_paso_no_habilitado_2026:
+    nombre: Denuncias de ingreso por paso no habilitado enero-julio 2026
+    unidad_default: denuncias
+    notas: "11.242 denuncias de ingreso por paso no habilitado contabilizadas por Sermig en enero-julio 2026, un 33% menos que el mismo periodo del año anterior. Fast Check aclara que la denuncia no necesariamente se realiza el mismo año en que ingresó la persona, por lo que no pueden atribuirse directamente a 2026."
+  presupuesto_carabineros_2012:
+    nombre: Presupuesto vigente de Carabineros de Chile 2012
+    unidad_default: miles_de_pesos_2012
+    notas: "Serie histórica DIPRES de ejecución presupuestaria de Carabineros de Chile (Partida 05, Capítulo 31, Programa 01, Ministerio del Interior y Seguridad Pública) en miles de $ de 2012: 2008: 470.836.900; 2009: 513.364.103; 2010: 623.347.599; 2011: 702.234.701; 2012: 786.645.294 (presupuesto vigente). Ejecución acumulada a agosto 2012: 397.559.433."
+  presupuesto_carabineros_2008:
+    nombre: Presupuesto vigente de Carabineros de Chile 2008
+    unidad_default: miles_de_pesos_2012
+    notas: "470.836.900 miles de $ de 2012 (serie histórica DIPRES, Partida 05, Capítulo 31, Programa 01)."
+  recorte_carabineros_2026:
+    nombre: Recorte al presupuesto de Carabineros en 2026
+    unidad_default: millones_pesos
+    notas: "$51.612 millones (71% del recorte de $72 mil millones al Ministerio de Seguridad Pública anunciado el 23 de marzo de 2026 por la ministra Trinidad Steinert y el subsecretario Andrés Jouannet). El mayor ítem afectado es la compra de vehículos: $33.271 millones (70,6% de ese ítem), seguido de gasto de personal ($11.000 millones), bienes y servicios ($4.700 millones), el Hospital de Carabineros ($1.583 millones) e inversión ($1.057 millones)."
   superficie_plataforma_juan_fernandez:
     nombre: Ampliación de territorio por plataforma continental de Juan Fernández
     unidad_default: km2

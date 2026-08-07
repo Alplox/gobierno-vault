@@ -6658,6 +6658,46 @@ fastcheck-2026-07-30-homicidios-17:
   autor: FastCheck
   fecha: 2026-07-30
   url: https://www.fastcheck.cl/2026/07/30/homicidios-en-2026-han-disminuido-en-un-17-respecto-al-ano-anterior/
+fastcheck-2026-08-06-cadena-nacional-kast:
+  tipo: fact_check
+  medio: Fast Check
+  titulo: "Fact-checking a la segunda Cadena Nacional del presidente José Antonio Kast"
+  autor: Fast Check
+  fecha: 2026-08-06
+  url: https://www.fastcheck.cl/2026/08/06/fact-checking-a-la-segunda-cadena-nacional-del-presidente-jose-antonio-kast/
+  notas: "Verificación de tres afirmaciones de la cadena nacional ACOT del 5-ago-2026: (1) #Real 'promediábamos más de 1.000 homicidios al año' (8.669 homicidios 2018-2025, promedio 1.083,6; Informe de Víctimas de Homicidios Consumados 2025); (2) #Falso '218.000 robos violentos solo el año pasado' (en 2025 fueron 69.777 robos con violencia o intimidación, o 109.419 sumando robos por sorpresa, según CEAD); (3) #Real 'los ingresos irregulares por nuestras fronteras cayeron un 86,5%' (1.175 ingresos irregulares ene-jul 2026 vs 8.610 en 2025, validado por Sermig; 11.242 denuncias por paso no habilitado, -33%)."
+dipres-2026-serie-carabineros-2008-2012:
+  tipo: documento_oficial
+  medio: Dirección de Presupuestos (DIPRES)
+  titulo: "Serie histórica 2008-2012: Información de ejecución presupuestaria - Carabineros de Chile"
+  autor: DIPRES
+  fecha: 2026-08-06
+  url: https://www.dipres.gob.cl/597/articles-91047_doc_pdf.pdf
+  notas: "PDF de la DIPRES con la serie histórica de ejecución presupuestaria de Carabineros de Chile (Partida 05, Capítulo 31, Programa 01, Ministerio del Interior y Seguridad Pública) en miles de $ de 2012: presupuesto vigente 2008: 470.836.900; 2009: 513.364.103; 2010: 623.347.599; 2011: 702.234.701; 2012: 786.645.294; ejecución acumulada a agosto 2012: 397.559.433. Fuente primaria de las cuentas públicas de Carabineros."
+archivonacional-carabineros-historia:
+  tipo: documento
+  medio: Archivo Nacional de Chile
+  titulo: "Carabineros de Chile - Historia institucional"
+  autor: Archivo Nacional de Chile
+  fecha: 2026-08-06
+  url: https://www.archivonacional.gob.cl/carabineros-de-chile
+  notas: "Página del Archivo Nacional con la historia institucional de Carabineros de Chile: el 27 de abril de 1927 el general Carlos Ibáñez del Campo, como vicepresidente, firmó el decreto con fuerza de ley N°2.484 que fusionó los servicios policiales y carabineros en una sola institución. Antecedentes: alguacil mayor de Pedro de Valdivia (25-abr-1541, Juan Gómez de Almagro), Cuerpo de Vigilantes de Policía de Diego Portales, Regimiento de Gendarmes (1902) y Regimiento de Carabineros (1906). Referencia: Fondo Ministerio del Interior N°6631."
+datosgobcl-carabineros-datos-abiertos:
+  tipo: datos_abiertos
+  medio: Portal de Datos Abiertos del Estado (datos.gob.cl)
+  titulo: "Carabineros de Chile - Catálogo de datos abiertos (10 datasets XLSX)"
+  autor: Carabineros de Chile
+  fecha: 2015-10-30
+  url: https://datos.gob.cl/id/organization/carabineros_de_chile?res_format=xlsx
+  notas: "Portal de datos abiertos con 10 datasets de Carabineros de Chile en formato XLSX (creados 2015-10-30): encargos y hallazgos de vehículos 2009-2011, llamadas al nivel 133 (año 2012), accidentes de tránsito 2010-2011, delitos de mayor connotación social/VIF y fiscalizaciones a la seguridad privada. Datos estadísticos oficiales de la institución."
+x-2023-01-17-mrranger-listas-espera-manalich:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Tuit de Mr. Ranger Rojo sobre Mañalich y las listas de espera"
+  autor: MrRangerR1
+  fecha: 2023-01-17
+  url: https://x.com/MrRangerR1/status/1615341161094291456
+  notas: "Fuente COMPLEMENTARIA (no única): tuit viral que recuerda el dicho de Jaime Mañalich 'Vamos a terminar con las listas de espera' y la práctica de eliminar pacientes de las listas (polémica del Ministerio de Salud bajo su gestión, 2019-2020). Punto de partida para investigar la polémica de las listas de espera del Minsal; el dato debe verificarse con fuentes primarias."
 latercera-2026-07-30-cifras-seguridad-vallejo:
   tipo: prensa
   medio: La Tercera
@@ -7281,9 +7321,130 @@ ciper-2026-02-10-quiroz-rol-colusiones:
   tipo: prensa
   medio: CIPER
   titulo: "Los 15 registros que describen el rol del futuro ministro de Hacienda, Jorge Quiroz, a favor de empresas sancionadas por colusión"
-  autor: Benjamín Miranda
+  autor: Benjamín Miranda y Diego Ortiz
   fecha: 2026-02-10
   url: https://www.ciperchile.cl/2026/02/10/los-15-registros-que-describen-el-rol-del-futuro-ministro-de-hacienda-jorge-quiroz-a-favor-de-empresas-sancionadas-por-colusion/
+  notas: "Investigación basada en cientos de documentos de los expedientes del TDLC que reconstruye 15 registros del rol de Jorge Quiroz (informes, declaraciones, correos y testimonios de ejecutivos) en defensa de empresas condenadas por colusión: pollos (modelo de proyección de demanda 2008 + informe 2013 con Felipe Givovich), farmacias (informes 2009 y 2011 + testimonio 14-dic-2009 para Salcobrand), asfalto (informe + testimonio 27-nov-2014 para Asfaltos Chilenos) y navieras (informe 2016 para MOL). Sus hipótesis fueron desestimadas por el TDLC y la Corte Suprema en tres de los cuatro casos. Quiroz respondió de forma genérica que nunca estuvo 'vinculado ni facilitado ni diseñado' ningún esquema de colusión ni cartel."
+tdlc-sentencia-119-2012-farmacias:
+  tipo: comunicado_oficial
+  medio: Tribunal de Defensa de la Libre Competencia
+  titulo: "TDLC condena a Farmacias Cruz Verde S.A. y Salcobrand S.A. por colusión en el mercado de distribución de productos farmacéuticos"
+  autor: TDLC
+  fecha: 2012-01-27
+  url: https://www.tdlc.cl/tdlc-condena-a-farmacias-cruz-verde-s-a-y-salcobrand-s-a-por-colusion-en-el-mercado-de-distribuion-de-productos-farmaceuticos/
+  notas: "Comunicado del TDLC: decisión unánime que acoge el requerimiento de la FNE (diciembre de 2008) y condena a Cruz Verde y Salcobrand a 20.000 UTA (≈US$ 19 millones) por colusión en 206 medicamentos entre diciembre de 2007 y marzo de 2008, con el patrón de alzas '1-2-3' iniciado casi siempre por Salcobrand."
+fne-sentencia-119-2012-farmacias-pdf:
+  tipo: documento
+  medio: Fiscalía Nacional Económica
+  titulo: "Sentencia N° 119/2012 del TDLC en el caso de la colusión de las farmacias (PDF)"
+  autor: TDLC
+  fecha: 2012-01-30
+  url: https://www.fne.gob.cl/wp-content/uploads/2012/01/Sentencia_119_2012.pdf
+  notas: "Texto oficial de la Sentencia N° 119/2012 del TDLC, dictada el 30 de enero de 2012, publicada por la FNE."
+cooperativa-2012-09-07-suprema-farmacias:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Suprema confirmó multa de 19 millones de dólares para SalcoBrand y Cruz Verde"
+  autor: Cooperativa.cl
+  fecha: 2012-09-07
+  url: https://www.cooperativa.cl/noticias/site/artic/20120907/pags-amp/20120907144001.html
+  notas: "La Corte Suprema confirmó el 7 de septiembre de 2012 las multas de 20.000 UTA (US$ 19 millones) contra Salcobrand y Cruz Verde; Farmacias Ahumada quedó excluida por su delación compensada (pagó US$ 1 millón). Quedaba pendiente el juicio penal contra 10 ejecutivos de las tres cadenas y el laboratorio Medipharm."
+theclinic-2012-09-07-suprema-farmacias:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Suprema le hace una tapa de 100 metros a farmacias por reclamación sobre multas en caso colusión"
+  autor: The Clinic Online
+  fecha: 2012-09-07
+  url: https://www.theclinic.cl/2012/09/07/suprema-le-hace-una-tapa-de-100-metros-a-farmacias-por-reclamo-sobre-multas-en-caso-colusion/
+  notas: "Cobertura del fallo de la Tercera Sala de la Corte Suprema que rechazó los recursos de reclamación de Cruz Verde y Salcobrand con la frase 'El interés económico se sobrepuso a la dignidad humana, a la vida y a la salud de las personas'; calificó la colusión como 'infracción de gravedad extrema'."
+latercera-2009-12-28-quiroz-informe-salcobrand:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Jorge Quiroz prepara otro informe para SalcoBrand en caso farmacias"
+  autor: La Tercera
+  fecha: 2009-12-28
+  url: https://www.latercera.com/diario-impreso/jorge-quiroz-prepara-otro-informe-para-salcobrand-en-caso-farmacias/
+  notas: "Tras declarar el 14 de diciembre de 2009 ante el TDLC ('no existen indicios de colusión en este mercado'), Quiroz anunció un nuevo informe sobre los errores del cronograma de precios del acuerdo FNE-FASA; con Felipe Givovich detectó 10.125 alzas y 5.136 bajas en el período cuestionado."
+tdlc-sentencia-139-2014-pollos:
+  tipo: documento
+  medio: Tribunal de Defensa de la Libre Competencia
+  titulo: "Sentencia N° 139/2014: Requerimiento de la FNE contra Agrícola Agrosuper S.A. y otros"
+  autor: TDLC
+  fecha: 2014-09-25
+  url: https://www.tdlc.cl/sentencias/sentencia-n-139-2014-requerimiento-de-la-fne-contra-agricola-agrosuper-s-a-y-otros/
+  notas: "Sentencia 139/2014 (rol C-236-11) que condenó a Agrosuper, Ariztía y Don Pollo por acuerdo o práctica concertada (art. 3° del D.L. 211) y ordenó la disolución de la APA; la Corte Suprema la revocó parcialmente."
+latercera-2014-09-30-formula-pollos-tdlc:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "La fórmula de las empresas de pollos para la colusión, según el TDLC"
+  autor: S. Sáez y L. Cárdenas
+  fecha: 2014-09-30
+  url: https://www.latercera.com/pulso/la-formula-de-las-empresas-de-pollos-para-la-colusion-segun-el-tdlc/
+  notas: "Detalle del expediente de la colusión de los pollos: proyecciones de consumo elaboradas a través de la APA desde 1995, correos y faxes del director ejecutivo Juan Miguel Ovalle, multas iniciales del TDLC (US$ 25 millones a Agrosuper y Ariztía y US$ 10 millones a Don Pollo) y anuncio de recurso ante la Corte Suprema."
+emol-2015-10-29-suprema-pollos:
+  tipo: prensa
+  medio: Emol
+  titulo: "Caso Pollos: Suprema ratifica multa de US$ 60 millones contra empresas coludidas"
+  autor: Emol
+  fecha: 2015-10-29
+  url: https://www.emol.com/noticias/Economia/2015/10/29/756762/Caso-Pollos-Suprema-ratifica-multa-de-US-60-millones-contra-empresas-culudidas.html
+  notas: "La Corte Suprema confirmó el 29 de octubre de 2015 las multas (cerca de US$ 60 millones en total) contra Agrosuper, Ariztía y Don Pollo, ratificó la disolución de la APA y le agregó el pago de 2.000 UTA; incluye las declaraciones de Agrosuper y Ariztía ('injusta y desproporcionada')."
+adnradio-2026-08-06-gatica-boric-nain-retamal-crespo:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Gustavo Gatica apunta a Boric por ley Naín-Retamal y critica a Kast tras apoyo a Crespo: 'No está a la altura del cargo'"
+  autor: ADN Radio
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/gustavo-gatica-apunta-a-boric-por-ley-nain-retamal-y-critica-a-kast-tras-apoyo-a-crespo-no-esta-a-la-altura-del-cargo/
+  notas: "Entrevista del diputado Gustavo Gatica en ADN Hoy (6 de agosto de 2026) tras la absolución confirmada de Claudio Crespo: evalúa recurrir a instancias internacionales, critica a Kast por celebrar el fallo ('no está a la altura de su cargo', 'acá no hay nada que celebrar'), apunta al gobierno de Boric por la Ley Naín-Retamal y duda de la reincorporación de Crespo a Carabineros (fue dado de baja por manipulación de cámaras, no por el disparo)."
+elperiodico-2026-08-06-gatica-boric-nain-retamal:
+  tipo: prensa
+  medio: El Periódico
+  titulo: "Gustavo Gatica responsabiliza a Gabriel Boric por absolución de Claudio Crespo"
+  autor: El Periódico
+  fecha: 2026-08-06
+  url: https://elperiodico.cl/gustavo-gatica-responsabiliza-a-gabriel-boric-por-absolucion-de-claudio-crespo/
+  notas: "Cobertura de El Periódico (6 de agosto de 2026) de la entrevista de Gustavo Gatica en ADN Hoy: apunta a la responsabilidad del gobierno de Boric en la tramitación de la Ley Naín-Retamal ('El gobierno de Gabriel Boric, sin duda, tiene una responsabilidad'), critica a Kast por celebrar el fallo ('acá no hay nada que celebrar, este es un hecho trágico', 'el mandatario nuevamente muestra no estar a la altura de su cargo') y confirma que su equipo evalúa recurrir a instancias internacionales y duda de la reincorporación de Crespo a Carabineros."
+latercera-2026-08-06-pc-declaracion-plan-seguridad:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "'Recién ahora': PC emite declaración con duro cuestionamiento a Kast y su plan de seguridad"
+  autor: Alonso Aranda
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/recien-ahora-pc-emite-declaracion-con-duro-cuestionamiento-a-kast-y-su-plan-de-seguridad/
+  notas: "Declaración pública del Partido Comunista difundida por su WhatsApp de difusión: critica que el plan de seguridad se presente 'recién ahora, tras cinco meses de gestión', el intento de recorte de 3% al presupuesto del Ministerio de Seguridad Pública, exige evidencia técnica para la reforma constitucional de estados de excepción en barrios y sostiene que 'Kast se preparó durante doce años' sin presentar un programa real."
+adnradio-2026-08-06-pc-fustiga-plan-seguridad:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Partido Comunista fustiga el plan de seguridad del Gobierno y acusa 'falta de un programa real'"
+  autor: ADN Radio
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/partido-comunista-fustiga-el-plan-de-seguridad-del-gobierno-y-acusa-falta-de-un-programa-real/
+  notas: "Cobertura de la declaración del PC contra el plan de seguridad de Kast: la colectividad advierte del riesgo de confundir la persecución del delito con la movilización social, defiende la gratuidad, las pensiones y los subsidios ('no son favores presidenciales, son derechos conquistados') y cierra con 'Los delincuentes deben perder su impunidad; los ciudadanos no deben perder sus derechos'."
+biobiochile-2026-08-06-kast-operativo-plaza-armas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'La mano ha cambiado': Presidente Kast lidera operativo policial en la Plaza de Armas de Santiago"
+  autor: Felipe Delgado
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/06/presidente-kast-lidera-operativo-policial-en-la-plaza-de-armas-de-santiago.shtml
+  notas: "Kast encabeza un operativo en la Plaza de Armas de Santiago con Carabineros y la PDI, acompañado del ministro Martín Arrau y el alcalde Mario Desbordes, tras anunciar la 'megarreforma de seguridad' en cadena nacional; elogia el trabajo policial y promete lucha contra el crimen organizado."
+latercera-2026-08-06-kast-operativo-plaza-armas:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Kast encabeza operativo policial en Plaza de Armas y asegura que 'la mano ha cambiado'"
+  autor: Claudio Portilla
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/kast-encabeza-operativo-policial-en-plaza-de-armas-y-asegura-que-la-mano-ha-cambiado/
+  notas: "Cobertura del operativo preventivo del 6 de agosto: despliegue de 60 funcionarios de Carabineros y 55 efectivos de la PDI con apoyo de Seguridad Municipal en el centro de Santiago; Kast afirma que 'juntos vamos a lograr que Chile vuelva a tener ese lugar... de ser el país más seguro de toda Latinoamérica'; Arrau detalla el 'copamiento policial' con fiscalizaciones y controles de identidad, vehiculares y migratorios, en la antesala de la presentación de la ACOT."
+biobiochile-2026-08-06-contreras-tortura-exposicion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Exseremi explica polémica publicación y asegura que 'tortura' fue la exposición durante cargo"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/08/06/exseremi-explica-polemica-publicacion-y-asegura-que-tortura-fue-la-exposicion-durante-cargo.shtml
+  notas: "Cobertura del descargo de la exseremi de la Mujer del Bío Bío, Camila Contreras, tras su polémico mensaje de despedida ('esta tortura llamada ser seremi de Kast'): aclara que la 'tortura' aludía a la exposición y las críticas públicas durante el ejercicio del cargo, no a un ataque al presidente."
 ex-ante-2025-03-20-andinista-quiroz-boric:
   tipo: prensa
   medio: Ex-Ante
@@ -13115,3 +13276,651 @@ biobiochile-2019-10-20-7-muertos-toque-de-queda-14-ciudades:
   fecha: 2019-10-20
   url: https://www.biobiochile.cl/noticias/biobiochile-english/english-chile/2019/10/20/chile-crisis-7-dead-curfew-imposed-in-14-cities-as-government-tries-to-face-riots-looting-arson.shtml
   notas: "Cobertura en inglés de BioBioChile del 20 de octubre de 2019: 7 muertos y toque de queda en 14 ciudades mientras el gobierno de Piñera intentaba contener los disturbios, saqueos e incendios del estallido social. Complementa la cronología del evento 20191018-1."
+guardian-2018-07-29-apunaladas-marcha-aborto:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Triple stabbing at Chile abortion rights rally sparks outcry"
+  autor: The Guardian
+  fecha: 2018-07-29
+  url: https://www.theguardian.com/world/2018/jul/29/chile-abortion-rights-rally-attack-stabbing
+  notas: "El miércoles 25 de julio de 2018, tres mujeres fueron apuñaladas por atacantes enmascarados durante una marcha por el aborto libre y legal en Santiago: una resultó herida en el estómago y dos en las piernas, además de un policía. El movimiento ultraderechista Social Patriota reivindicó la contraprotesta pero negó autoría de las puñaladas. La activista Antonia Orellana (Red Chilena contra la Violencia hacia las Mujeres) denunció el clima de intimidación, la víctima (estudiante de Derecho de 24 años) calificó el ataque de 'acto de terrorismo' y Bachelet condenó los hechos. La comediante Natalia Valdebenito difundió el ataque en vivo por Instagram denunciando la falta de cobertura mediática."
+nytimes-2015-10-08-papa-francisco-osorno-tontos:
+  tipo: prensa
+  medio: The New York Times
+  titulo: "Calling Protesters in Chile 'Dumb,' Pope Francis Sets Off Uproar"
+  autor: The New York Times
+  fecha: 2015-10-08
+  url: http://www.nytimes.com/2015/10/08/world/americas/calling-protesters-in-chile-dumb-pope-francis-sets-off-uproar.html
+  notas: "El 2 de octubre de 2015, de regreso de su gira por EE.UU., el Papa Francisco defendió al obispo de Osorno, Juan Barros, y calificó de 'tontos' y 'zurdos' a los manifestantes que protestaban contra su designación por su presunto vínculo con el caso Karadima. La frase generó indignación en Chile. Cobertura del NYT del 8 de octubre de 2015."
+elmostrador-2015-10-03-papa-barros-tontos-osorno:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Papa Francisco respalda a cuestionado obispo Barros y dice que Osorno sufre por tontos"
+  autor: El Mostrador
+  fecha: 2015-10-03
+  url: https://www.elmostrador.cl/noticias/pais/2015/10/03/papa-francisco-respalda-a-cuestionado-obispo-barros-y-dice-que-osorno-sufre-por-tontos/
+  notas: "Cobertura chilena de las declaraciones del Papa Francisco del 2-3 de octubre de 2015: respaldo al obispo de Osorno Juan Barros, denunciado como presunto encubridor de los abusos de Fernando Karadima, y descalificación de los manifestantes como 'tontos' y 'zurdos'. Corrobora la cobertura internacional del NYT."
+reuters-2019-11-16-indh-policia-impidio-rescate:
+  tipo: prensa
+  medio: Reuters
+  titulo: "Chile police stopped rescue workers helping dying protester - human rights watchdog"
+  autor: Reuters
+  fecha: 2019-11-16
+  url: https://www.reuters.com/article/world/chile-police-stopped-rescue-workers-helping-dying-protester-human-rights-watch-idUSKBN1XR00R/
+  notas: "El sábado 16 de noviembre de 2019, el Instituto Nacional de Derechos Humanos (INDH) anunció que presentaría una denuncia por homicidio contra carabineros que habrían impedido que personal médico atendiera a un manifestante con un ataque al corazón. El director del INDH, Sergio Micco, calificó el incidente de 'extremadamente grave' y señaló que era el sexto caso desde el inicio de las protestas de policías obstaculizando a los rescatistas."
+hrw-2019-11-26-reformas-carabineros:
+  tipo: prensa
+  medio: Human Rights Watch
+  titulo: "Chile: Police Reforms Needed in the Wake of Protests"
+  autor: Human Rights Watch
+  fecha: 2019-11-26
+  url: https://www.hrw.org/news/2019/11/26/chile-police-reforms-needed-wake-protests
+  notas: "Informe de Human Rights Watch del 26 de noviembre de 2019 tras reunirse con el presidente Piñera: documenta violaciones graves de Carabineros durante el estallido (uso excesivo de la fuerza, abusos en detención, golpizas, abuso sexual). Datos clave: 442 querellas criminales del INDH, 11.564 heridos atendidos por servicios de emergencia (más de 1.100 moderados o graves), más de 220 lesiones oculares, 16 pérdidas de visión, 15.000 detenidos, 26 muertes investigadas por la Fiscalía. Director Américas: José Miguel Vivanco. Pidió suspensión indefinida de las escopetas antidisturbios."
+guardian-2026-02-12-crespo-impunidad:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Chile impunity fears as riot officer who blinded protester walks free"
+  autor: The Guardian
+  fecha: 2026-02-12
+  url: https://www.theguardian.com/world/2026/feb/12/chile-riot-police-blinded-protester-aquitted
+  notas: "Reportaje del Guardian del 12 de febrero de 2026 sobre el caso Gustavo Gatica y la absolución del teniente coronel Claudio Crespo: el veredicto unánime reconoció que Crespo disparó y cegó a Gatica pero lo absolvió invocando legítima defensa. Contexto: más de 11.500 casos de violaciones a los DDHH con solo 219 condenas, 464 víctimas de lesiones oculares, 9 víctimas que se suicidaron, la ley de 2023 que favorece a oficiales en casos de uso legítimo de la fuerza, y la celebración de Crespo por la ultraderecha (incluida su aparición en el cierre de campaña de Johannes Kaiser). Kast asumía en marzo de 2026."
+infobae-2026-06-04-marcha-recortes-educacion:
+  tipo: prensa
+  medio: Infobae
+  titulo: "Miles de manifestantes se enfrentaron a la policía en la capital de Chile por la reducción presupuestaria a la educación"
+  autor: Infobae
+  fecha: 2026-06-04
+  url: https://www.infobae.com/america/america-latina/2026/06/04/miles-de-manifestantes-se-enfrentaron-a-la-policia-en-la-capital-de-chile-por-la-reduccion-presupuestaria-a-la-educacion/
+  notas: "Cobertura de la marcha del miércoles 3 de junio de 2026 convocada por la Confederación de Estudiantes Chilenos contra los recortes a la educación del gobierno de José Antonio Kast: miles de manifestantes (docentes, alumnos y colectivos) se enfrentaron a la policía en la capital, con la marcha restringida y reprimida tras avanzar unas cuadras desde Plaza Dignidad."
+ap-2026-06-03-protesta-estudiantes-recortes-kast:
+  tipo: prensa
+  medio: Associated Press
+  titulo: "Protesta de estudiantes contra recortes de Kast termina con violentos choques en Santiago"
+  autor: Associated Press
+  fecha: 2026-06-03
+  url: https://apnews.com/article/chile-protestas-educacion-kast-recortes-ea0edaf93c9fd588a398a1348d1489d6
+  notas: "Cobertura de AP del 3 de junio de 2026: la policía detiene a un estudiante durante la manifestación contra la propuesta del gobierno de Kast de recortar el presupuesto de educación, en Santiago. La marcha terminó con violentos choques."
+resumenlatinoamericano-2026-06-04-represion-marcha-recortes:
+  tipo: prensa
+  medio: Resumen Latinoamericano
+  titulo: "Chile. Brutal saldo de la represión policial en marcha contra recortes de Kast: estudiante queda con múltiples fracturas y debe ser operada"
+  autor: Resumen Latinoamericano (El Ciudadano)
+  fecha: 2026-06-04
+  url: https://www.resumenlatinoamericano.org/2026/06/04/chile-brutal-saldo-de-la-represion-policial-en-marcha-contra-recortes-de-kast-estudiante-queda-con-multiples-fracturas-y-debe-ser-operada/
+  notas: "Reportaje del 4 de junio de 2026 sobre el saldo de la represión policial en la marcha estudiantil contra los recortes de Kast: una joven de Derecho de la Universidad de Chile sufrió múltiples fracturas en el rostro y requirió cirugía. Fuente de izquierda (Resumen Latinoamericano/El Ciudadano), usada como complemento de Infobae y AP."
+unniepop-2026-07-05-army-protesta-bts:
+  tipo: prensa
+  medio: Unnie Pop
+  titulo: "ARMY Chile protesta en las calles por el futuro de los shows de BTS en el Estadio Nacional"
+  autor: Unnie Pop
+  fecha: 2026-07-05
+  url: https://unniepop.cl/2026/07/05/army-chile-protesta-en-las-calles-por-el-futuro-de-los-shows-de-bts-en-el-estadio-nacional/
+  notas: "El domingo 5 de julio de 2026, miles de ARMY (fans de BTS) realizaron marchas pacíficas en Santiago y otras ciudades de Chile para exigir una solución ante la incertidumbre sobre los conciertos de la gira ARIRANG en el Estadio Nacional. La cancelación de los shows estuvo ligada a la polémica sobre el montaje del escenario y el estado de la cancha."
+adnradio-2026-07-05-army-protesta-bts:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "ARMY protesta en diversos puntos de Chile por incertidumbre del concierto de BTS: esto es lo que exigen las fans"
+  autor: ADN Radio
+  fecha: 2026-07-05
+  url: https://www.adnradio.cl/2026/07/05/army-protesta-en-diversos-puntos-de-chile-por-incertidumbre-del-concierto-de-bts-esto-es-lo-que-exigen-las-fans/
+  notas: "Cobertura de ADN Radio del 5 de julio de 2026: las fans de BTS (ARMY) protestaron en diversos puntos de Chile por la incertidumbre sobre el concierto de la gira ARIRANG, exigiendo respuestas del Instituto Nacional del Deporte y del gobierno tras la suspensión de los shows programados para octubre en el Estadio Nacional por riesgos técnicos del montaje que podría dañar la cancha."
+biobiochile-2026-07-02-army-exige-claridad-bts:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Fans chilenos exigen claridad ante concierto de BTS"
+  autor: BioBioChile
+  fecha: 2026-07-02
+  url: https://www.biobiochile.cl/noticias/espectaculos/y-tv/k-pop/2026/07/02/army-chileno-exige-claridad-ante-concierto-de-bts-atacaron-las-redes-de-ministra-duco.shtml
+  notas: "El 2 de julio de 2026, los ARMY chilenos exigieron claridad ante el concierto de BTS y criticaron en redes sociales a la ministra del Deporte Natalia Duco por la situación de los shows en el Estadio Nacional. Antecedente directo de las marchas del 5 de julio."
+diariolibre-2026-07-05-army-bts-regreso:
+  tipo: prensa
+  medio: Diario Libre
+  titulo: "Los ARMY de BTS exigen el regreso de los conciertos de BTS en Chile"
+  autor: Diario Libre
+  fecha: 2026-07-05
+  url: https://www.diariolibre.com/revista/musica/2026/07/05/los-army-de-bts-exigen-el-regreso-de-los-conciertos-de-bts-en-chile/3590270
+  notas: "Cientos de seguidores de BTS (ARMY) protestaron en Santiago contra la suspensión de tres conciertos programados para octubre en el Estadio Nacional. La cancelación, según el Instituto Nacional del Deporte, se debe a riesgos técnicos por el montaje del escenario que podría dañar la cancha y afectar eventos futuros. Corrobora la cobertura de ADN Radio y Unnie Pop del 5 de julio de 2026."
+guardian-2019-10-27-cientos-disparados-golpeados:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Hundreds shot and beaten as Chile takes to the streets"
+  autor: The Guardian
+  fecha: 2019-10-27
+  url: https://www.theguardian.com/world/2019/oct/27/chile-hundreds-shot-and-beaten-street-protests
+  notas: "Reportaje de The Guardian del 27 de octubre de 2019 sobre la crisis hospitalaria del estallido: cientos de manifestantes con heridas de balines y golpes en la cabeza atendidos en la Posta Central, que operaba en turnos de 24 horas por el toque de queda. Documenta el testimonio de Christopher Madrid (baleado por el Ejército), la cifra oficial de 470 personas baleadas, la falta de insumos básicos (guantes, jeringas, mascarillas), la denuncia de la presidenta del Colegio Médico Izkia Siches sobre el 'apagón informativo' del ministro de Salud Jaime Mañalich, y la prohibición del subdirector de la Posta Central, Luis Carrasco, de ingresar a observadores de derechos humanos."
+pagina7-2019-10-20-carabineros-video-mentholatum:
+  tipo: prensa
+  medio: Página 7
+  titulo: "Carabineros y su explicación sobre video de uniformados acusados de drogarse durante manifestaciones"
+  autor: Página 7
+  fecha: 2019-10-20
+  url: https://www.pagina7.cl/actualidad/carabineros-y-su-explicacion-sobre-video-de-uniformados-acusados-de-estar-consumiendo-drogas/
+  notas: "El 20 de octubre de 2019 se viralizó un video de tres funcionarios de Fuerzas Especiales de Carabineros aspirando una sustancia desconocida en Diagonal Paraguay con Fray Camilo Henríquez, titulado 'pacos jalando'. Carabineros inició una investigación y adelantó que probablemente la sustancia era Mentholatum, ungüento que según la institución usan para 'aplacar' el efecto de los gases lacrimógenos. Incluye el tweet original de @gonzalosoyyo."
+twitter-2019-10-20-pacos-jalando:
+  tipo: redes_sociales
+  medio: Twitter/X
+  titulo: "PACOS JALANDO"
+  autor: "@gonzalosoyyo"
+  fecha: 2019-10-20
+  url: https://t.co/lByZsJcXo8
+  notas: "Tweet original de @gonzalosoyyo del 20 de octubre de 2019 que viralizó el video de tres carabineros de Fuerzas Especiales aspirando una sustancia blanca en la calle durante el estallido social, con el texto 'PACOS JALANDO!'. Punto de origen de la controversia del Mentholatum."
+theclinic-2019-11-18-bioquimicos-mentholatum:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Bioquímicos chilenos desmienten a Carabineros: Mentholatum no alivia e incluso empeora efecto de lacrimógenas"
+  autor: The Clinic
+  fecha: 2019-11-18
+  url: https://www.theclinic.cl/2019/11/18/bioquimicos-chilenos-desmienten-a-carabineros-mentholatum-no-alivia-e-incluso-empeora-efecto-de-lacrimogenas/
+  notas: "Un equipo de bioquímicos y químicos farmacéuticos encabezado por el investigador Claudio Olea Azar, con respaldo del Colegio de Químicos Farmacéuticos y Bioquímicos, entregó un informe que desmiente que el Mentholatum alivie los efectos de las bombas lacrimógenas: descongestiona las vías respiratorias facilitando la inhalación del gas, el mentol puede causar irritación potenciando el efecto, y las partículas del gas se adhieren a las superficies grasas empeorando la irritación. Calificaron de 'sumamente grave e irresponsable' la declaración de la teniente coronel Karina Soza."
+amigospenquistas-2019-11-18-mentholatum-desmienten:
+  tipo: prensa
+  medio: Amigos Penquistas
+  titulo: "Especialistas desmienten a Carabineros, Mentholatum NO SIRVE para aliviar efectos de las lacrimógenas"
+  autor: Amigos Penquistas
+  fecha: 2019-11-18
+  url: https://amigospenquistas.cl/2019/11/18/especialistas-desmienten-a-carabineros-mentholatum-no-sirve-para-aliviar-efectos-de-las-lacrimogenas/
+  notas: "Reproducción del informe de bioquímicos (Claudio Olea Azar, Colegio de Químicos Farmacéuticos y Bioquímicos, Facultad de Ciencias Químicas y Farmacéuticas de la U. de Chile) que desmiente las propiedades paliativas del Mentholatum contra los gases lacrimógenos y detalla la declaración de Karina Soza ante la Comisión de DD.HH. del Senado: 'nosotros ocupamos Mentholatum, y era eso lo que los funcionarios estaban haciendo ese día'. Fuente original: BioBioChile."
+cooperativa-2019-11-19-cientificos-mentholatum:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Científicos refutan a Carabineros: Mentholatum puede incluso potenciar efectos de lacrimógenas"
+  autor: Cooperativa
+  fecha: 2019-11-19
+  url: https://www.cooperativa.cl/noticias/pais/manifestaciones/cientificos-refutan-a-carabineros-mentholatum-puede-incluso-potenciar/2019-11-19/012941.html
+  notas: "Organizaciones de químicos farmacéuticos y bioquímicos aclararon que el Mentholatum no tiene efecto paliativo frente a los gases lacrimógenos y calificaron de 'irresponsable' la explicación de Carabineros. Corrobora el informe del 18 de noviembre."
+fastcheck-2019-11-20-mentholatum-falso:
+  tipo: prensa
+  medio: Fast Check CL
+  titulo: "¿El Mentholatum sirve para el gas lacrimógeno? Falso"
+  autor: Fast Check CL
+  fecha: 2019-11-20
+  url: https://www.fastcheck.cl/2019/11/20/el-mentholatum-sirve-para-el-gas-lacrimogeno-falso/
+  notas: "Verificación de Fast Check CL que califica como falsa la afirmación de que el Mentholatum sirve para el gas lacrimógeno, en línea con el informe de bioquímicos y químicos farmacéuticos."
+latercera-2019-10-21-fact-checking-emergencia:
+  tipo: prensa
+  medio: La Tercera PM
+  titulo: "Fact checking en medio de la emergencia: la verdad sobre lo que se dice y viraliza"
+  autor: La Tercera PM
+  fecha: 2019-10-21
+  url: https://www.latercera.com/la-tercera-pm/noticia/fact-checking-medio-la-emergencia-la-verdad-lo-se-dice-viraliza/871267/
+  notas: "Revisión de La Tercera PM sobre la veracidad de videos, declaraciones y supuestos hechos viralizados durante el estallido (Plan Punto Final del FA, incendio del Sótero del Río, río Aconcagua). Contexto de la crisis de desinformación en la que se inscribió el video 'pacos jalando'."
+cctt-2020-02-14-chile-adicto-mentholatum:
+  tipo: prensa
+  medio: Ciper Chile (vía cctt.cl)
+  titulo: "Chile adicto: militares y policías prefieren el mentholatum en polvo"
+  autor: Constanza Pastor y Matías Quezada (CIPER)
+  fecha: 2020-02-14
+  url: https://cctt.cl/2020/02/14/chile-adicto-militares-y-policias-prefieren-el-mentolatum-en-polvo/
+  notas: "Radiografía de CIPER al consumo de drogas en FF.AA. y policías entre 2015 y noviembre de 2019 vía Ley de Transparencia: más de 1.000 test positivos; Carabineros aplicó 169.182 test (0,09% positivos), la menor cantidad de exámenes en 2019 (15.370) y ninguno en noviembre de 2019 por la 'gran demanda horaria' del estallido; 2 tenientes y un capitán dieron positivo a cocaína sin aparecer en el listado de dados de baja; solo se sanciona a suboficiales."
+eldesconcierto-2020-02-12-carabineros-test-drogas:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Carabineros asegura que no realizó test de drogas a sus funcionarios durante el estallido social"
+  autor: El Desconcierto
+  fecha: 2020-02-12
+  url: https://eldesconcierto.cl/2020/02/12/carabineros-asegura-que-no-realizo-test-de-drogas-a-sus-funcionarios-durante-el-estallido-social
+  notas: "Carabineros confirmó vía transparencia a Ciper Chile que no realizó test de drogas durante el estallido social por la 'gran demanda horaria'. Revela además que 2 tenientes y un capitán que dieron positivo por cocaína no aparecen en el listado de dados de baja, y que solo los suboficiales han sido sancionados por consumo. Incluye el contexto completo de la polémica del Mentholatum y la declaración de Karina Soza."
+elilustrado-2019-11-02-mentholatum-viral:
+  tipo: prensa
+  medio: El Ilustrado
+  titulo: "Mentholatum: por qué es viral en redes sociales y se relaciona con Carabineros"
+  autor: El Ilustrado
+  fecha: 2019-11-02
+  url: https://www.ilustrado.cl/2019/11/02/mentholatum-por-que-es-viral-en-redes-sociales-y-se-relaciona-con-carabineros
+  notas: "Explica por qué el Mentholatum se hizo viral tras el video de los carabineros de Fuerzas Especiales aspirando la sustancia, y la relación con la explicación de Carabineros sobre su uso contra los gases lacrimógenos."
+dailymail-2019-10-21-carabineros-snorting:
+  tipo: prensa
+  medio: Daily Mail
+  titulo: "Chilean riot cops 'seen snorting drugs' before tackling protesters"
+  autor: Daily Mail
+  fecha: 2019-10-21
+  url: https://www.dailymail.com/news/article-7596463/Chile-scrambles-clean-mess-weekend-chaos-violent-protests.html
+  notas: "Cobertura internacional del video de tres carabineros chilenos aparentemente aspirando una sustancia en la calle antes de responder a las protestas violentas del fin de semana, en el contexto del caos del estallido social. Independiente de la prensa chilena."
+video-youtube-2019-pacos-jalando-5-3xynuoszk:
+  tipo: video
+  medio: YouTube
+  titulo: "Video del suceso carabineros 'pacos jalando' (backup)"
+  autor: Usuario de YouTube
+  fecha: 2019-10-20
+  url: https://www.youtube.com/watch?v=5-3XYnUoSzk
+  notas: "Video de respaldo del suceso de los carabineros aspirando una sustancia, para preservación del registro original."
+video-youtube-2019-pacos-jalando-a3d991:
+  tipo: video
+  medio: YouTube
+  titulo: "Video del suceso carabineros 'pacos jalando' (backup 2)"
+  autor: Usuario de YouTube
+  fecha: 2019-10-20
+  url: https://www.youtube.com/watch?v=A3d991doKbk
+  notas: "Video de respaldo del suceso de los carabineros aspirando una sustancia."
+video-imgur-2019-pacos-jalando:
+  tipo: video
+  medio: Imgur
+  titulo: "Cops in Chile snorting cocaine while doing riot control (backup)"
+  autor: Usuario de Imgur
+  fecha: 2019-10-20
+  url: https://imgur.com/gallery/cops-chile-snorting-cocaine-while-doing-riot-control-MooZ9ZD
+  notas: "Galería de respaldo con el video de los carabineros aspirando una sustancia durante control de disturbios. Fuente complementaria de registro audiovisual."
+video-youtube-shorts-2019-pacos-jalando:
+  tipo: video
+  medio: YouTube Shorts
+  titulo: "Video corto del suceso carabineros (backup)"
+  autor: Usuario de YouTube
+  fecha: 2019-10-20
+  url: https://www.youtube.com/shorts/la2vWGZz62o
+  notas: "Video corto de respaldo del suceso de los carabineros."
+reddit-2019-pacos-jalando-iatpos:
+  tipo: redes_sociales
+  medio: Reddit r/iamatotalpieceofshit
+  titulo: "Cops in Chile caught snorting cocaine before attacking students"
+  autor: r/iamatotalpieceofshit
+  fecha: 2019-10-20
+  url: https://www.reddit.com/r/iamatotalpieceofshit/comments/g4x71p/cops_in_chile_caught_snorting_cocaine_before/
+  notas: "Hilo de Reddit (complementario) que viralizó el video de los carabineros aspirando sustancia antes de atacar a estudiantes en protestas. Solo como fuente complementaria de contexto."
+facebook-acab-europe-2019-pacos-jalando:
+  tipo: redes_sociales
+  medio: Facebook (ACAB Europe)
+  titulo: "Cops in Chile snorting coke before attacking students in protest"
+  autor: ACAB Europe
+  fecha: 2019-10-20
+  url: https://web.facebook.com/acab.europe/videos/cops-in-chile-snorting-coke-before-attacking-students-in-protest-/695217350984393/
+  notas: "Video de respaldo del suceso difundido por la cuenta ACAB Europe en Facebook. Fuente complementaria de registro audiovisual."
+elarrebato-2026-05-26-plan-kast-es-plan-boric:
+  tipo: prensa
+  medio: El Arrebato
+  titulo: "Plot twist: el plan de seguridad de Kast es el plan de seguridad de Boric"
+  autor: Verónica Aravena Vega
+  fecha: 2026-05-26
+  url: https://elarrebato.cl/2026/05/26/plot-twist-el-plan-de-seguridad-de-kast-es-el-plan-de-seguridad-de-boric/
+  notas: "Columna de opinión que analiza la continuidad: el ministro de Seguridad Martín Arrau reconoció el 25 de mayo que la Política Nacional de Seguridad Pública de Boric 'entrega un marco suficiente'. Argumenta que la derecha de Kast ganó convirtiendo la palabra seguridad en un contenedor afectivo (miedo al migrante, deseo de castigo, fantasía de mano dura), y que el gobierno administra el aparato heredado mientras anuncia siete ejes para la Cuenta Pública del 1 de junio. Incluye la tesis de que la disputa por la seguridad es afectiva antes que técnica."
+biobiochile-2026-05-26-toha-pnsp-estado:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Tohá desdramatiza polémica por Política de Seguridad pero insta a Gobierno a seguir con paso pendiente"
+  autor: BioBioChile
+  fecha: 2026-05-26
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/26/toha-desdramatiza-polemica-por-politica-de-seguridad-pero-insta-a-gobierno-a-seguir-con-paso-pendiente.shtml
+  notas: "Carolina Tohá desdramatiza la polémica: la Política Nacional de Seguridad Pública no es del gobierno anterior sino del Estado, dura 6 años y su elaboración incluyó opiniones de todos los sectores. Pero advierte que el paso pendiente es la estrategia bienal que pide la nueva normativa, que Boric dejó casi lista y que el gobierno de Kast debe hacer pública agregando sus énfasis."
+radiopaulina-2026-05-25-arrau-mantiene-pnsp-boric:
+  tipo: prensa
+  medio: Radio Paulina
+  titulo: "Ministro Arrau confirma que Gobierno de Kast mantendrá actual Política Nacional de Seguridad impulsada en administración Boric"
+  autor: Radio Paulina
+  fecha: 2026-05-25
+  url: https://radiopaulina.cl/2026/05/25/ministro-arrau-confirma-que-gobierno-de-kast-mantendra-actual-politica-nacional-de-seguridad-impulsada-en-administracion-boric/
+  notas: "Confirmación del punto de prensa en La Moneda: Arrau mantendrá como base la PNSP de Boric, usará la normativa vigente mientras desarrolla estrategias operativas contra narcotráfico, crimen organizado y control fronterizo. Adelanta paquete legislativo robusto y reconoce reparos previos del Partido Republicano a crear nuevos organismos públicos por costo fiscal."
+minsegpublica-2025-10-22-pnsp-2025-2031:
+  tipo: documento
+  medio: Ministerio de Seguridad Pública
+  titulo: "Política Nacional de Seguridad Pública 2025-2031"
+  autor: Ministerio de Seguridad Pública
+  fecha: 2025-10-22
+  url: https://minsegpublica.cl/wp-content/uploads/2025/10/POLITICA-DE-SEGURIDAD-PUBLICA-DIGITAL2.pdf
+  notas: "Documento oficial de la PNSP 2025-2031 presentado el 22 de octubre de 2025 desde Limache por el presidente Boric y el ministro de Seguridad Luis Cordero. Aprobada por el Consejo Nacional de Seguridad Pública y el Consejo de Prevención del Delito en sesión conjunta del 3 de julio de 2025. Vigencia de 6 años según la Ley 21.730 que creó el Ministerio de Seguridad Pública."
+latercera-2025-10-22-boric-lanza-pnsp:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "A menos de cinco meses de dejar La Moneda, Boric lanza Política Nacional de Seguridad Pública 2025-2031"
+  autor: La Tercera
+  fecha: 2025-10-22
+  url: https://www.latercera.com/nacional/noticia/a-menos-de-cinco-meses-de-dejar-la-moneda-boric-lanza-politica-nacional-de-seguridad-publica-2025-2031/
+  notas: "Cobertura de la presentación de la PNSP 2025-2031 desde Limache. El presidente Boric lanzó el instrumento a menos de cinco meses de dejar La Moneda, junto al ministro Luis Cordero."
+latercera-2025-10-22-cordero-lineamientos-pnsp:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cordero detalla lineamientos de la Política Nacional de Seguridad Pública: obliga a las instituciones a trabajar conjuntamente"
+  autor: La Tercera
+  fecha: 2025-10-22
+  url: https://www.latercera.com/nacional/noticia/cordero-detalla-lineamientos-de-la-politica-nacional-de-seguridad-publica-obliga-a-las-instituciones-a-trabajar-conjuntamente/
+  notas: "El ministro Cordero detalla los lineamientos del sistema integrado de la PNSP: obliga a las instituciones a trabajar conjuntamente. Decreto Supremo 96 del Ministerio de Seguridad Pública, dictado el 22 de octubre de 2025."
+revistaseguridad-2025-07-04-consejo-pnsp:
+  tipo: prensa
+  medio: Revista Seguridad
+  titulo: "Consejos de seguridad pública"
+  autor: Revista Seguridad
+  fecha: 2025-07-04
+  url: https://revistaseguridad.cl/2025/07/04/consejos-de-seguridad-publica/
+  notas: "Contexto sobre el rol del Consejo Nacional de Seguridad Pública y el Consejo Nacional de Prevención del Delito creados por la Ley 21.730, órganos que respaldaron técnicamente la PNSP 2025-2031 en sesión conjunta del 3 de julio de 2025."
+centralnoticia-2025-12-10-kast-guagua-plaza-brasil:
+  tipo: prensa
+  medio: Central Noticia
+  titulo: "Kast cuestiona al Gobierno por seguridad y lanza duro mensaje a Boric: 'Sacaría a su guagua a pasear a las 2 de la mañana?'"
+  autor: Central Noticia
+  fecha: 2025-12-10
+  url: https://www.centralnoticia.cl/nacional/2025/12/10/kast-no-tiene-sus-ataques-hacia-el-presidente-gabriel-boric-y-lanza-polemico-mensaje-sacaria-a-su-guagua-a/386255/
+  notas: "En la recta final de la campaña, Kast respondió a los dichos del ministro de Seguridad Luis Cordero sobre la 'explotación del miedo como estrategia electoral': 'El miedo no es inventado'. Cuestionó las caminatas nocturnas de Boric por Plaza Brasil y mencionó a su hija de cinco meses: '¿El Presidente sacaría a su guagua a pasear en el coche, solo, a las 2 de la mañana a la Plaza Brasil?'."
+estapasando-2025-12-15-seguridad-cambio-escenario:
+  tipo: prensa
+  medio: Está Pasando
+  titulo: "Seguridad: el cambio de escenario entre Boric y Kast"
+  autor: Javiera Sanzana
+  fecha: 2025-12-15
+  url: https://estapasando.cl/nacional/seguridad-el-cambio-de-escenario-entre-boric-y-kast/
+  notas: "Análisis del traspaso en materia de seguridad: Boric asumió con la palabra seguridad mencionada una sola vez en su discurso inaugural y terminó con el eje más reiterado de su gestión. Cifras de contexto: 1.330 homicidios en 2022 (tasa 6,7 por 100 mil), 90,6% de percepción de aumento de la delincuencia (récord Enusc), 868 secuestros en 2024, Ley Nain-Retamal, Plan Calles Sin Violencia, ECOH, nuevo Ministerio de Seguridad Pública. Expertos: Pablo Carvacho (PUC) y Daniel Johnson (Paz Ciudadana)."
+video-youtube-radio13c-arrau-pnsp-suficiente:
+  tipo: video
+  medio: YouTube (Radio 13C)
+  titulo: "Security Minister asserts Boric's policy 'is sufficient' and announces robust legislative package"
+  autor: Radio 13C
+  fecha: 2026-05-26
+  url: https://www.youtube.com/watch?v=JbOizID_EYI
+  notas: "Video del punto de prensa de Martín Arrau (25-26 de mayo de 2026): afirma que la Política Nacional de Seguridad Pública de Boric 'es suficiente' y anuncia un paquete legislativo robusto. Registro audiovisual de respaldo de la polémica."
+video-youtube-meganoticias-kast-usara-plan-boric:
+  tipo: video
+  medio: YouTube (Meganoticias)
+  titulo: "José Antonio Kast's government will use the security plan enacted by Gabriel Boric"
+  autor: Meganoticias
+  fecha: 2026-05-26
+  url: https://www.youtube.com/watch?v=AsMaNg-E_Fo
+  notas: "Video de Meganoticias: el gobierno de José Antonio Kast usará el plan de seguridad promulgado por Gabriel Boric. Registro audiovisual de respaldo de la polémica sobre la continuidad de la PNSP."
+eldinamo-2026-08-06-reacciones-agenda-seguridad-kast:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "De 'se terminó la mano blanda' a 'demasiadas promesas': las reacciones a la agenda de seguridad de Kast"
+  autor: El Dínamo
+  fecha: 2026-08-06
+  url: https://www.eldinamo.cl/politica/2026/08/06/de-se-termino-la-mano-blanda-a-demasiadas-promesas-las-reacciones-a-la-agenda-de-seguridad-de-kast/
+  notas: "Reacciones parlamentarias a la Agenda ACOT presentada por Kast en cadena nacional: María José Gatica (RN) respalda la colaboración de FF.AA. con las policías; Diego Schalper (RN) la califica de 'respuesta clara y contundente'; Francisco Orrego (RN) afirma que 'se terminó la mano blanda'; Fabián Ossandón (PDG) pide resultados y no discursos; Raúl Leiva (PS) critica la presentación 'inconexa' de proyectos sin trabajo prelegislativo."
+nostalgica-2026-08-06-reacciones-parlamentarias-plan-kast:
+  tipo: prensa
+  medio: Nostálgica
+  titulo: "De 'respuesta clara' a 'demasiadas promesas': Las reacciones parlamentarias al plan de seguridad de Kast"
+  autor: Nostálgica (fuente T13)
+  fecha: 2026-08-06
+  url: https://www.nostalgica.cl/de-respuesta-clara-a-demasiadas-promesas-las-reacciones-parlamentarias-al-plan-de-seguridad-de-kast/
+  notas: "Reproduce las reacciones parlamentarias a la ACOT (fuente original T13): Schalper ('respuesta clara'), Orrego ('se terminó la mano blanda con los delincuentes'), Ossandón ('ya hemos escuchado demasiados anuncios y promesas'), Leiva (materias de orden público sin foco en crimen organizado)."
+t13-2026-08-06-reacciones-plan-seguridad-kast:
+  tipo: prensa
+  medio: T13
+  titulo: "Las reacciones parlamentarias al plan de seguridad de Kast"
+  autor: T13
+  fecha: 2026-08-06
+  url: https://www.t13.cl/noticia/politica/las-reacciones-parlamentarias-al-plan-seguridad-kast-6-8-2026
+  notas: "Fuente original de las reacciones parlamentarias a la Agenda ACOT de Kast. Incluye las declaraciones de Schalper, Orrego, Ossandón y Leiva del 6 de agosto de 2026."
+latercera-2026-08-06-martinez-fa-critica-plan-kast:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Presidenta del FA critica plan de Kast en seguridad: 'Son normas represivas que no resuelven el problema en las poblaciones'"
+  autor: La Tercera
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/presidenta-del-fa-critica-plan-de-kast-en-seguridad-son-normas-represivas-que-no-resuelven-el-problema-en-las-poblaciones/
+  notas: "Constanza Martínez, presidenta del Frente Amplio, critica con dureza el plan de seguridad de Kast en radio Universidad de Chile: 'acusaron el golpe' de no tener plan y ahora apelan a 'ser un gobierno mucho más duro en lo performático', con normas represivas que no resuelven la seguridad en las poblaciones. Defiende la unidad de la oposición y de los alcaldes."
+eldiariodesantiago-2026-08-06-plan-seguridad-kast-detalle:
+  tipo: prensa
+  medio: El Diario de Santiago
+  titulo: "Plan de seguridad de Kast: reforma constitucional, barrios críticos y mayor persecución al crimen organizado"
+  autor: El Diario de Santiago
+  fecha: 2026-08-06
+  url: https://eldiariodesantiago.cl/2026/08/06/plan-de-seguridad-de-kast-reforma-constitucional-barrios-criticos-y-mayor-persecucion-al-crimen-organizado/
+  notas: "Detalle del contenido de la cadena ACOT: reforma constitucional que consagra la seguridad como deber del Estado, pertenencia a organización criminal como delito, régimen carcelario especial para narcotraficantes, agencia estatal de decomiso, presencia policial permanente en 50 barrios críticos, flagrancia de 12 a 24 horas, protección legal para policías en legítima defensa y meta de aprobar la agenda antes de fin de año."
+pauta-2026-08-06-pavez-defiende-plan-kast:
+  tipo: prensa
+  medio: Radio Pauta
+  titulo: "Tras anuncios de Kast en seguridad, Pavez advierte: 'Es tan profunda la crisis que recibió este gobierno, que los resultados no se verán de la noche a la mañana'"
+  autor: María Alejandra Gallardo Contreras
+  fecha: 2026-08-06
+  url: https://www.pauta.cl/actualidad/2026/08/06/tras-anuncios-de-kast-en-seguridad-pavez-advierte-es-tan-profunda-la-crisis-que-recibio-este-gobierno-que-los-resultados-no-se-veran-de-la-noche-a-la-manana.html
+  notas: "El subsecretario del Interior Máximo Pavez defiende la agenda de seguridad de Kast en Primera Pauta: los resultados no se verán de la noche a la mañana por la profundidad de la crisis heredada; defiende la reforma constitucional del deber del Estado, aclara que las FF.AA. 'apoyan, no sustituyen' a las policías en los 50 barrios, y aborda la polémica de los test de drogas ('ningún error político', 'esto está regulado hace 20 años')."
+elpais-2026-03-11-organigrama-gobierno-kast:
+  tipo: prensa
+  medio: El País
+  titulo: "Quiénes son los ministros, subsecretarios y delegados presidenciales de José Antonio Kast"
+  autor: Sebastián Dote
+  fecha: 2026-03-11
+  url: https://elpais.com/chile/2026-03-11/quienes-son-los-ministros-subsecretarios-y-delegados-presidenciales-de-jose-antonio-kast.html
+  notas: "Organigrama completo del gobierno de Kast presentado el día de la asunción: 24 ministros (4 militantes de partidos políticos + 4 de partidos disueltos, el resto independientes), lista completa de subsecretarios y los 16 delegados presidenciales regionales. Destaca la escasa presencia de partidos de derecha y la ausencia del Partido Nacional Libertario de Kaiser."
+guardian-2019-10-19-estado-emergencia-santiago:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Chile protests: state of emergency declared in Santiago as violence escalates"
+  autor: The Guardian
+  fecha: 2019-10-19
+  url: https://www.theguardian.com/world/2019/oct/19/chile-protests-state-of-emergency-declared-in-santiago-as-violence-escalates
+  notas: "Cobertura internacional del 19 de octubre de 2019: Piñera declara estado de emergencia en Santiago en cadena nacional ('There will be no room for violence in a country with the rule of law at its core'), soldados en las calles por primera vez desde el terremoto de 2010, incendio de la torre de Enel, cacerolazos, aplicación de la Ley de Seguridad del Estado anunciada por el ministro del Interior Andrés Chadwick, declaración de la defensora de la Niñez Patricia Muñoz sobre la información 'unilateral' de las autoridades, y huelga nacional convocada por la Confech para el lunes 21."
+reuters-2019-10-19-tres-muertos-supermercado:
+  tipo: prensa
+  medio: Reuters
+  titulo: "Three die after supermarket set on fire, flights out of Santiago delayed due to Chile riots"
+  autor: Reuters
+  fecha: 2019-10-19
+  url: https://www.reuters.com/article/us-chile-protests/three-die-after-supermarket-set-on-fire-flights-out-of-santiago-delayed-due-to-chile-riots-idUSKBN1WZ0EP
+  notas: "Cobertura de Reuters del 19 de octubre de 2019: tres personas fallecieron tras el incendio de un supermercado durante los saqueos y vuelos desde Santiago demorados por los disturbios. (URL original bloqueada; datos corroborados por BBC, DW y La Opinión de Chiloé: supermercado Líder de Ochagavía con Lo Blanco en San Bernardo, dos mujeres calcinadas y un hombre fallecido en el Hospital El Pino.)"
+bloomberg-2019-10-19-estado-emergencia-metro:
+  tipo: prensa
+  medio: Bloomberg
+  titulo: "Chile Government Declares State of Emergency Amid Subway Riots"
+  autor: Bloomberg
+  fecha: 2019-10-19
+  url: https://www.bloomberg.com/news/articles/2019-10-19/chile-government-declares-state-of-emergency-amid-subway-riots
+  notas: "Cobertura de Bloomberg del 19 de octubre de 2019: el gobierno de Chile declara estado de emergencia en medio de los disturbios del Metro de Santiago tras la protesta por la evasión masiva. Corrobora la cobertura de The Guardian y Reuters del mismo día. (URL bloqueada por paywall, contenido corroborado por otras fuentes.)"
+independent-2018-07-29-apunaladas-marcha-aborto:
+  tipo: prensa
+  medio: The Independent
+  titulo: "Three women stabbed by masked gang at anti-abortion protest in Chile"
+  autor: The Independent
+  fecha: 2018-07-29
+  url: https://www.independent.co.uk/news/world/americas/santiago-anti-abortion-women-stabbed-chile-protest-a8469786.html
+  notas: "Cobertura internacional del apuñalamiento de tres mujeres en la marcha por el aborto libre del 25 de julio de 2018: alrededor de 40.000 mujeres marcharon; el movimiento Social Patriota reivindicó la contraprotesta pero negó autoría; el portavoz de Mesa de Acción por el Aborto lo calificó de 'terrorismo'; la directora para las Américas de Amnistía Internacional, Erika Guevara-Rosas, condenó el ataque y criticó 'las tímidas declaraciones del gobierno'."
+swissinfo-2019-10-20-aeropuerto-santiago-vuelos:
+  tipo: prensa
+  medio: Swissinfo
+  titulo: "Pasajeros varados y cancelación de vuelos en el aeropuerto de Santiago por las protestas"
+  autor: Swissinfo
+  fecha: 2019-10-20
+  url: https://www.swissinfo.ch/spa/pasajeros-varados-y-cancelaci%C3%B3n-de-vuelos-en-el-aeropuerto-de-santiago-por-las-protestas/45312826
+  notas: "Caos en el Aeropuerto Arturo Merino Benítez: LATAM canceló todos sus vuelos entre las 19:00 del 19 de octubre y las 10:00 del día siguiente (salvo vuelos a Lima y Madrid); JetSmart canceló 11 vuelos domésticos y uno a Lima; Sky canceló 20 vuelos. Miles de pasajeros varados durmieron en la terminal por el toque de queda."
+laopiniondechiloe-2019-10-saqueo-supermercado-3-muertos:
+  tipo: prensa
+  medio: La Opinión de Chiloé
+  titulo: "Saqueo de supermercado dejó 3 muertos tras incendio en medio de caos en Gran Santiago"
+  autor: La Opinión de Chiloé
+  fecha: 2019-10-19
+  url: https://laopiniondechiloe.cl/saqueo-de-supermercado-dejo-3-muertos-tras-incendio-en-medio-de-caos-en-gran-santiago/
+  notas: "Detalle del incendio del supermercado Líder de Ochagavía con Lo Blanco en San Bernardo (19-oct-2019): dos mujeres encontradas calcinadas y un hombre que falleció en el Hospital El Pino. Walmart y las autoridades descartaron que fueran trabajadores del establecimiento; la investigación apuntó a personas que ingresaron a saquear o intentar robar un cajero automático."
+hoffa-2019-11-reddit-bigquery-estallido:
+  tipo: documento
+  medio: Towards Data Science (Medium)
+  titulo: "Monitoring the crisis with Reddit and BigQuery: The 2019 Chilean protests"
+  autor: Felipe Hoffa
+  fecha: 2019-11
+  url: https://hoffa.medium.com/analyzing-the-crisis-with-reddit-and-bigquery-2019-chilean-press-c157fade9616
+  notas: "Análisis de datos del Developer Advocate de Google Cloud Felipe Hoffa: monitoreo de los comentarios de r/chile durante el estallido social usando BigQuery sobre datasets públicos de Reddit. Incluye consultas SQL y código. Fuente complementaria de análisis de datos; el artículo original en towardsdatascience.com ya no está disponible (redirect), pero sobrevive en el perfil Medium del autor."
+ciper-2021-03-23-espionaje-jueza-rutherford:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Estas son las imágenes de los agentes del Ejército investigados por espiar a la jueza Rutherford"
+  autor: CIPER Chile
+  fecha: 2021-03-23
+  url: https://www.ciperchile.cl/2021/03/23/estas-son-las-imagenes-de-los-agentes-del-ejercito-investigados-por-espiar-a-la-jueza-rutherford/
+  notas: "CIPER difundió imágenes y un video (septiembre 2019) de dos agentes de la Dirección de Inteligencia del Ejército (DINE) haciendo 'punto fijo' frente al despacho de la ministra Romy Rutherford en Morandé con Compañía. Uno de ellos, el sargento primero César Neira Medina del Regimiento de Inteligencia 'Soberanía', fue reconocido por el ex sargento Juan Pablo Díaz, testigo de los procesos por corrupción militar y blanco de la Operación Topógrafo. La denuncia por espionaje fue entregada a la jueza y llegó al fiscal Jaime Retamal (Unidad de Alta Complejidad Centro Norte). Antecedente previo: el 28 de agosto de 2020 Carabineros intentó controlar a dos agentes de la DINE frente a la ventana de la oficina de la magistrada, deteniendo a Aníbal Fernández Gajardo."
+ciper-2023-09-11-papeles-dictadura-merino:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "El equipo del almirante Merino que diseñó el cierre de la dictadura: aseguró que los militares conservaran el principio de autoridad sobre civiles"
+  autor: CIPER Chile
+  fecha: 2023-09-11
+  url: https://www.ciperchile.cl/2023/09/11/el-equipo-del-almirante-merino-que-diseno-el-cierre-de-la-dictadura-aseguro-que-los-militares-conservaran-el-principio-de-autoridad-sobre-civiles/
+  notas: "Investigación de CIPER basada en los 'Papeles de la Dictadura' (buscador online con archivos del régimen): la Oficina de Estudios Sociológicos de la Armada (OESA), bajo control del almirante José Toribio Merino, diseñó la estrategia de cierre de la dictadura tras la derrota de Pinochet en el plebiscito de 1988. El informe de junio de 1986 advertía de una 'American Squeeze Strategy' y recomendaba evitar una confrontación final, ceder reformas constitucionales menores, para mantener 'el principio de autoridad' de los militares sobre los civiles y que la oposición no fuese liderada por alguien más radical que Patricio Aylwin. Incluye contexto: informe del director de la CNI Humberto Gordon (22-jul-1985), degollados de Dicomcar, paro nacional de 1986, caso Quemado de Rodrigo Rojas."
+elinformadorchile-2026-08-06-escolar-venezolano-osorno:
+  tipo: prensa
+  medio: El Informador Chile
+  titulo: "Filtran amenaza de escolar venezolano que golpeó a compañera, amenazó a carabinero y quedó libre"
+  autor: El Informador Chile
+  fecha: 2026-08-06
+  url: https://www.elinformadorchile.cl/2026/08/06/filtran-amenaza-de-escolar-venezolano-que-golpeo-a-companera-amenazo-a-carabinero-y-quedo-libre/
+  notas: "Detalle del caso del estudiante de 15 años de nacionalidad venezolana detenido en el Liceo Rahue de Osorno: la fiscal jefe María Angélica de Miguel confirmó que el menor amenazó y golpeó a una compañera ('golpes de puño en zona del cráneo y tórax'), dijo tener armas de fuego y cortantes en su casa 'con las cuales posteriormente las mataría', amenazó a compañeros, al director y al profesorado con un desatornillador, y agredió a Carabineros al llegar, siendo reducido. Fue formalizado por amenazas y delitos contra la autoridad; el tribunal negó la internación provisoria y decretó prohibición de acercamiento."
+reddit-2026-08-06-daza-kast-articulo-constitucion:
+  tipo: redes_sociales
+  medio: Reddit (r/chile)
+  titulo: "Mauricio Daza: 'Kast es tan iluminado que anuncia como gran medida el primer artículo que ya está en la Constitución'"
+  autor: r/chile
+  fecha: 2026-08-06
+  url: https://old.reddit.com/r/chile/comments/1vhbdpl/mauricio_daza_kast_es_tan_iluminado_que_anuncia/
+  notas: "Hilo de r/chile del 6 de agosto de 2026 que difunde la crítica del abogado y exconvencional Mauricio Daza a la reforma constitucional de la Agenda ACOT de Kast: 'Kast es tan iluminado que anuncia como gran medida el primer artículo que ya está en la Constitución. ¿Cómo se tituló de abogado en la UC? Por movida parece'. Daza se refiere al artículo 1° de la Constitución vigente, que ya consagra que el Estado está al servicio de la persona humana y debe proteger a la familia y promover el bien común. Fuente complementaria de opinión; la declaración original proviene de un video difundido por la página 'De los que sobran' (Facebook)."
+bcn-constitucion-politica-chile:
+  tipo: documento
+  medio: Biblioteca del Congreso Nacional (LeyChile)
+  titulo: "Constitución Política de la República de Chile (Decreto 100, texto refundido 2005)"
+  autor: BCN LeyChile
+  fecha: 2005-09-22
+  url: https://www.bcn.cl/leychile/navegar?idNorma=242302
+  notas: "Texto vigente de la Constitución Política de la República. El artículo 1° establece que las personas nacen libres e iguales en dignidad y derechos, que el Estado está al servicio de la persona humana y que su finalidad es promover el bien común, y que es deber del Estado resguardar la seguridad nacional, dar protección a la población y a la familia, propender al fortalecimiento de ésta, promover la integración armónica de todos los sectores de la Nación y asegurar el derecho de las personas a participar con igualdad de oportunidades en la vida nacional."
+latercera-2026-08-06-grau-megarreforma-desigualdad:
+  tipo: prensa
+  medio: La Tercera (Pulso)
+  titulo: "Grau dice que la megarreforma va a aumentar la desigualdad y 'va a envejecer mal'"
+  autor: La Tercera
+  fecha: 2026-08-06
+  url: https://www.latercera.com/pulso/noticia/grau-dice-que-la-megarreforma-va-a-aumentar-la-desigualdad-y-descuida-las-finanzas-publicas-va-a-envejecer-mal/
+  notas: "Entrevista del exministro de Hacienda y Economía Nicolás Grau (director de Rumbo Colectivo) con T13. Critica la megarreforma de Kast: aumentará la desigualdad, generará un problema fiscal (US$2.000 millones anuales de menor recaudación), 'va a envejecer mal', es la primera reforma tributaria desde los 90 sin votos de la oposición, y afectará el gasto en salud, vivienda y programas sociales en el Presupuesto 2027. También critica la gestión de seguridad (sin expertos a cargo) y pide limitar el secreto bancario para la UAF."
+elciudadano-2026-08-06-barraza-prudencia-megarreforma:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "'El corazón de la megarreforma tributaria está cuestionado': Diputado Barraza llama al Gobierno de Kast a actuar con prudencia y evitar el exitismo"
+  autor: El Ciudadano
+  fecha: 2026-08-06
+  url: https://www.elciudadano.com/politica/el-corazon-de-la-megarreforma-tributaria-esta-cuestionado-diputado-barraza-llama-al-gobierno-de-kast-a-actuar-con-prudencia-y-evitar-el-exitismo/08/06/
+  notas: "Declaraciones del diputado Marcos Barraza (PC, distrito 8) tras la admisibilidad de los tres requerimientos del TC contra la megarreforma: cuestiona la invariabilidad tributaria, la indemnización a empresas que vulneran el medio ambiente, la ausencia de consulta indígena en proyectos de relocalización acuícola (Convenio 169 OIT y Ley 19.253) y la restricción de atribuciones de los tribunales ambientales. Llama al gobierno a 'actuar con prudencia y evitar el exitismo'."
+chilevision-2026-08-06-ferias-libres-flores:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "'Nos dolió': Ferias Libres emplazan a Camila Flores por polémica frase en cruce contra Fabiola Campillai"
+  autor: Chilevisión
+  fecha: 2026-08-06
+  url: https://www.chilevision.cl/noticias/nacional/nos-dolio-ferias-libres-emplazan-a-camila-flores-por-polemica-frase-en-cruce-contra-fabiola-campillai/
+  notas: "Cobertura del video de la presidenta de ASOF, Paola Morales, rechazando el uso despectivo de 'señora de feria' por Camila Flores: 'nos dolió escuchar la frase'. Destaca el orgullo de las mujeres feriantes ('levantarse de madrugada, trabajar bajo el frío, la lluvia o el calor') y el llamado a elevar el debate político. Declaración difundida también vía AgenciaUno."
+ciper-2026-08-05-confiscacion-casa-aguilera:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Tribunal confisca la casa que el exalcalde Aguilera compró con fondos ilícitos y que CIPER detectó en 2018"
+  autor: Benjamín Miranda (CIPER)
+  fecha: 2026-08-05
+  url: https://www.ciperchile.cl/2026/08/05/tribunal-confisca-la-casa-que-el-exalcalde-aguilera-compro-con-fondos-ilicitos-y-que-ciper-detecto-en-2018/
+  notas: "El 4 de agosto el Sexto Tribunal Oral en lo Penal de Santiago confirmó que la casa del exalcalde de San Ramón Miguel Ángel Aguilera (comprada en La Reina por ~$350 millones) pasa al fisco. Aguilera fue condenado en 2025 por lavado de activos (4 años libertad vigilada + 200 UTM) y aumento patrimonial injustificado (multa $246.918.500); absuelto de cohecho por prescripción. En 2021 demandó a CIPER por $1.700 millones de daño moral (patrocinado por Eduardo Lagos y Mario Vargas); abandonó el proceso."
+biobiochile-2026-08-06-suspension-ley-karin:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Diputados proponen suspender por 5 años Ley Karin mientras Gobierno prepara cambios al reglamento"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/diputados-proponen-suspender-por-5-anos-ley-karin-mientras-gobierno-prepara-cambios-al-reglamento.shtml
+  notas: "Proyecto de ley presentado por diputados del PNL (Eric Grohs, Paulina Muñoz, Cristóbal Urruticoechea, Álvaro Jofré), el republicano Diego Vergara y el independiente Daniel Valenzuela (bancada RN) para suspender por cinco años la Ley Karin (Ley 21.643). El Ministerio del Trabajo presentó al Consejo Superior Laboral un paquete de modificaciones al reglamento (filtro de admisibilidad, acortar plazos). Respaldado además por Patricio Briones y Javier Olivares (PDG). A diciembre de 2025 las denuncias superaban las 66 mil."
+latercera-2026-08-06-suspension-ley-karin:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Diputados oficialistas, libertarios y del PDG presentan proyecto para suspender la Ley Karin por cinco años"
+  autor: La Tercera
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/diputados-oficialistas-libertarios-y-del-pdg-presentan-proyecto-para-suspender-la-ley-karin-por-cinco-anos/
+  notas: "Detalle del proyecto de suspensión de la Ley Karin por cinco años: entre agosto 2024 y junio 2025 ingresaron 44.212 denuncias (42% preclasificadas como materia propia, 40% otras materias, 18% pendientes); demoras de 6 a 9 meses en investigaciones; propone restablecer umbral de acoso, precisar conceptos, etapa de admisibilidad y resguardos contra denuncias de mala fe. La suspensión constituiría 'un golpe para la izquierda' y el FA la ve como legado de Boric."
+biobiochile-2026-08-06-gremios-retroceso-derechos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gremios de trabajadores y de DDHH en alerta por lo que califican como 'retroceso' en derechos sociales"
+  autor: Camila Vargas (BioBioChile)
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/gremios-de-trabajadores-y-de-ddhh-en-alerta-por-lo-que-califican-como-retroceso-en-derechos-sociales.shtml
+  notas: "Gremios de trabajadores y organizaciones de DDHH se declararon en alerta ante 'retrocesos' en derechos sociales, reunidos en la sede de la ANEF. Alicia Lira (AFEP) advirtió por el eventual desmantelamiento del Plan Nacional de Búsqueda; expusieron ante la CIDH en Washington. Cifra: recorte de 652 millones de pesos al Instituto Nacional de Estadísticas. Declaraciones de José Pérez (ANEF) y Nayareth Quevedo (Conosur Internacional de Servicios Públicos)."
+biobiochile-2026-08-06-huechuraba-pornografia-infantil:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Así cayó el exinformático de Municipalidad de Huechuraba detenido por almacenar pornografía infantil"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/06/asi-cayo-el-exinformatico-de-municipalidad-de-huechuraba-detenido-por-almacenar-pornografia-infantil.shtml
+  notas: "La Brigada Investigadora del Cibercrimen Metropolitana de la PDI detuvo a un exfuncionario de soporte técnico de la Municipalidad de Huechuraba por almacenar material pornográfico infantil: más de 100 imágenes (113 según la fiscalía) en el computador laboral. Investigación iniciada por denuncias de acceso ilícito (sustraía archivos personales de funcionarias). Cooperación internacional detectó descargas. Formalizado por la Fiscalía Centro Norte, quedó en libertad con medidas cautelares (prohibición de salir del país y firma periódica)."
+df-2026-01-ley-karin-66-mil-denuncias:
+  tipo: prensa
+  medio: Diario Financiero
+  titulo: "Ley Karin: desde que entró en vigencia, se han presentado más de 66 mil denuncias"
+  autor: Diario Financiero
+  fecha: 2026-01-07
+  url: https://www.df.cl/economia-y-politica/laboral-personas/ley-karin-desde-que-entro-en-vigencia-se-han-presentado-mas-de-66-mil
+  notas: "Balance oficial citado en el debate legislativo: a diciembre de 2025 se habían ingresado 66.596 denuncias bajo la Ley Karin desde su entrada en vigencia (agosto 2024), sostenidas en torno a 22 mil por semestre. Solo un porcentaje cercano al 40-42% fue preclasificado como materia propia de la ley; el acoso laboral concentra el 86,9% de los casos aprobados y 66,7% de las denuncias aprobadas fueron presentadas por mujeres. Fuente de validación cruzada para el evento de suspensión."
+chanarcillo-2026-01-ley-karin-66-mil-denuncias:
+  tipo: prensa
+  medio: Diario Chañarcillo
+  titulo: "Más de 66 mil denuncias por Ley Karin revelan magnitud del acoso y la violencia laboral en Chile"
+  autor: Diario Chañarcillo
+  fecha: 2026-01-08
+  url: https://www.chanarcillo.cl/mas-de-66-mil-denuncias-por-ley-karin-revelan-magnitud-del-acoso-y-la-violencia-laboral-en-chile/
+  notas: "Cobertura del balance de la Dirección del Trabajo sobre las más de 66 mil denuncias por Ley Karin a diciembre de 2025. Fuente complementaria de validación de las cifras citadas por los impulsores del proyecto de suspensión."
+ciper-2025-04-29-videos-crespo-primera-linea:
+  tipo: redes_sociales
+  medio: CIPER Chile
+  titulo: "Estallido social: CIPER publica siete videos de los enfrentamientos de Claudio Crespo con la 'primera línea' grabados por cámaras de Carabineros"
+  autor: CIPER Chile
+  fecha: 2025-04-29
+  url: https://x.com/ciper/status/1917018291102503172
+  notas: "CIPER publicó en abril de 2025 siete videos de los enfrentamientos del exteniente coronel Claudio Crespo con la 'primera línea' durante el estallido social, grabados por cámaras de Carabineros. Uno de los videos muestra a Crespo sujetando violentamente del cuello a un manifestante. Material clave del contexto del caso Gustavo Gatica, que terminó con la absolución de Crespo en 2026 (Ley Nain Retamal). Fuente: cuenta oficial de CIPER en X."
+guardian-2019-10-24-opinion-pinera-1porciento:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "The 'risk to democracy' in Chile isn't from protesters. It's from Piñera and the 1%"
+  autor: Oscar Guardiola-Rivera
+  fecha: 2019-10-24
+  url: https://www.theguardian.com/commentisfree/2019/oct/24/democracy-chile-protesters-pinera-pinochet
+  notas: "Columna de opinión de Oscar Guardiola-Rivera: analiza el estallido como consecuencia del modelo neoliberal chileno diseñado en dictadura, critica el discurso de Piñera ('estamos en guerra') y equipara la criminalización de la protesta con los métodos de Pinochet. Datos: salario promedio £350/mes, gasto en transporte de £50-70, reajuste de $30 en el metro como chispa."
+guardian-2019-10-18-fare-dodging-ciudad:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Chile students' mass fare-dodging expands into city-wide protest"
+  autor: The Guardian
+  fecha: 2019-10-18
+  url: https://www.theguardian.com/world/2019/oct/18/chile-students-mass-fare-dodging-expands-into-city-wide-protest
+  notas: "Cobertura del 18 de octubre: miles de estudiantes secundarios y universitarios saltan torniquetes en protesta por el alza de la tarifa (830 pesos en hora punta, 230 para estudiantes), policía usa gases lacrimógenos en andenes y plataformas; vandalización de torniquetes y frenos de emergencia afectan a los 2,5 millones de pasajeros diarios. Piñera estudia invocar la Ley de Seguridad del Estado (penas de hasta 10 años). Cadem: 55% desaprueba la gestión."
+dailymail-2020-05-23-protestas-pandemia-santiago:
+  tipo: prensa
+  medio: Daily Mail
+  titulo: "Troops blast Santiago crowds with rubber bullets as anti-government riots break out in Chilean capital over lack of help for the poor during lockdown"
+  autor: Daily Mail
+  fecha: 2020-05-23
+  url: https://www.dailymail.com/news/article-8350465/Troops-blast-Santiago-crowds-rubber-bullets-riots-break-Chilean-capital.html
+  notas: "Cobertura de las protestas de mayo de 2020 en plena pandemia: soldados disparan balines en Santiago tras el rebrote de movilizaciones por el desempleo y la falta de ayuda durante la cuarentena. Despliegue militar en El Bosque y Cerrillos, saqueos a gasolineras, cacerolazos. Contexto: Chile superaba los 60 mil contagios y los 630 muertos por covid-19; el ministro de Salud Jaime Mañalich reconocía un momento 'muy difícil'."
+guardian-youtube-2020-10-19-mutilados-oculares:
+  tipo: video
+  medio: The Guardian (YouTube)
+  titulo: "Chile's blinded protesters seek justice after Covid lockdown: 'This is mutilation'"
+  autor: The Guardian
+  fecha: 2020-10-19
+  url: https://www.youtube.com/watch?v=WjB1-VmRJL4
+  notas: "Documental de The Guardian (19 de octubre de 2020, a un año del estallido) sobre los manifestantes que perdieron la vista por perdigones de Carabineros durante las protestas y que buscan justicia tras la pandemia. Incluye testimonios de víctimas de trauma ocular, referencias al general de Carabineros y al ministro del Interior, y la frase 'esto es mutilación'. Complementa el reportaje del New York Times 'It's Mutilation' (2019)."
+cooperativa-2026-08-06-parlamentarios-chileno-expulsado-israel:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Parlamentarios oficialistas piden 'esclarecer' caso de chileno expulsado de Israel"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-06
+  url: https://www.cooperativa.cl/noticias/pais/relaciones-exteriores/chilenos-en-el-exterior/parlamentarios-oficialistas-piden-esclarecer-caso-de-chileno-expulsado/2026-08-06/163053.html
+  notas: "Una veintena de legisladores oficialistas (desde Republicanos a Evópoli) calificó de 'especialmente graves' las declaraciones del embajador de Israel en Chile, Peleg Lewi, tras la expulsión del chileno de ascendencia palestina José Nicolás Khamis. Piden a la Cancillería solicitar oficialmente los antecedentes a Israel y revisar la práctica sistemática de restricciones a chilenos de origen árabe o palestino, además de aplicar el principio de reciprocidad."
+latercera-2026-08-04-chileno-ascendencia-palestina-deportado-israel:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "La trama de un chileno de ascendencia palestina deportado por Israel"
+  autor: La Tercera
+  fecha: 2026-08-04
+  url: https://www.latercera.com/mundo/noticia/la-trama-de-un-chileno-de-ascendencia-palestina-deportado-por-israel/
+  notas: "Relato del caso de José Nicolás Khamis Thomas, chileno de 32 años de ascendencia palestina, retenido cerca de 35 horas en el aeropuerto Ben-Gurión (27 de julio de 2026) y expulsado pese a contar con pasaporte, visa aprobada y carta de invitación. Fue interrogado sobre sus opiniones políticas, religión y postura frente al 7 de octubre; revisaron su teléfono e Instagram (fotos de Palestina, Club Palestino). Fuente de validación del evento de los parlamentarios."
+latercera-2026-08-06-parlamentarios-exigen-cancilleria-israel:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Parlamentarios oficialistas exigen que Cancillería pida antecedentes a Israel tras deportación de chileno de ascendencia palestina"
+  autor: La Tercera
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/parlamentarios-oficialistas-exigen-que-cancilleria-pida-antecedentes-a-israel-tras-deportacion-de-chileno-de-ascendencia-palestina/
+  notas: "Lista de los 21 parlamentarios oficialistas firmantes (desde Republicanos hasta Evópoli): Cristian Araya, Andrea Balladares, Sergio Bobadilla, Eduardo Cretton, Sebastián Cristoffanini, Camila Flores, Sergio Gahona, Sebastián Keitel, Alejandro Kusanovic, Andrés Longton, Cristóbal Martínez, Iván Moreira, Ricardo Neumann, Paulina Núñez, Mario Olavarría, Francisco Orrego, Javiera Rodríguez, Omar Sabat, Macarena Santelices, Diego Schalper y Hotuiti Teao. Exigen que el Ministerio de Relaciones Exteriores solicite antecedentes a Israel y revise la práctica contra chilenos de ascendencia árabe."
+cooperativa-2026-08-06-alcalde-san-bernardo-refuta-optimismo:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Alcalde de San Bernardo refuta optimismo del Gobierno: 'Pareciera que hay dos Chile'"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-06
+  url: https://www.cooperativa.cl/noticias/pais/gobierno/alcalde-de-san-bernardo-refuta-optimismo-del-gobierno-pareciera-que/2026-08-06/101152.html
+  notas: "El alcalde de San Bernardo, Christopher White, afirmó en Cooperativa que el Ejecutivo 'no le habla a todo el país' al destacar avances en seguridad: 'hay cifras negras y crimen organizado desatado, porque no tenemos los carabineros suficientes y no tenemos herramientas'. 'Hay un Chile A donde los discursos dicen que todo mejora, pero en comunas como la nuestra la gente vive una sensación de miedo terrible'."
+interferencia-2026-02-14-postulantes-dina-kast:
+  tipo: prensa
+  medio: Interferencia
+  titulo: "Los nuevos postulantes a la DINA de Kast"
+  autor: Carel Fleming
+  fecha: 2026-02-14
+  url: https://interferencia.cl/articulos/los-nuevos-postulantes-la-dina-de-kast
+  notas: "Columna de opinión de Carel Fleming (corresponsal en Washington): analiza el riesgo de que sectores de uniformados en retiro y servicio se sientan reivindicados bajo Kast —'se juntan en cafés para crear un servicio de inteligencia anexo, listas negras de opositores'— y de que la ANI se vuelva 'más política que técnica, más operativa que analítica'. Cita el careo Pinochet-Contreras (18-nov-2005) y el caso Crespo como advertencia de que las lealtades se rompen en tribunales. Artículo de opinión con citas no atribuidas a fuentes específicas."
