@@ -509,6 +509,11 @@ people:
   manuel_orellana:
     nombre: Manuel Orellana
     notas: Rescatado en Cajón del Maipo
+  lucho_miranda:
+    nombre: Lucho Miranda
+    cargo: Comediante y atleta paralímpico
+    organizacion: somo_fabuloso
+    notas: "Comediante chileno del canal de comedia y entretenimiento Somos Fabuloso (programa 'No Hacemos Uno'), expaciente de Teletón y medallista paralímpico. El 6 de agosto de 2026 respondió a los dichos de la senadora Camila Flores sobre Fabiola Campillai ('llegó al Congreso porque da pena') defendiendo que las personas con discapacidad no logran las cosas por lástima sino por mérito."
   mario_desbordes:
     nombre: Mario Desbordes
     cargo: Alcalde de Santiago
@@ -2741,7 +2746,19 @@ people:
   javiera_reyes:
     nombre: Javiera Reyes
     cargo: Alcaldesa de Lo Espejo
-    notas: "Alcaldesa de Lo Espejo (Partido Comunista). Tras el despacho de la megarreforma (agosto 2026) criticó el mecanismo de compensación municipal: denunció que de los 80 mil millones de pesos de compensación directa, la mitad beneficiará a seis comunas de altos ingresos mientras las otras 339 municipalidades se reparten el resto."
+    notas: "Alcaldesa de Lo Espejo (Partido Comunista). Tras el despacho de la megarreforma (agosto 2026) criticó el mecanismo de compensación municipal: denunció que de los 80 mil millones de pesos de compensación directa, la mitad beneficiará a seis comunas de altos ingresos mientras las otras 339 municipalidades se reparten el resto. En entrevista del 6 de agosto detalló que el presupuesto de Lo Espejo multiplicado por 16 equivale al de Las Condes, que los 200 mil millones debían ir íntegros al FCM y que unos 40 mil millones irán a seis comunas de altos ingresos sin consideración de necesidad."
+  maximiliano_luksic:
+    nombre: Maximiliano Luksic
+    cargo: Alcalde de Huechuraba (Ind.)
+    notas: "Alcalde de Huechuraba, independiente pro Chile Vamos. Tras la aprobación del mecanismo de compensación municipal de la megarreforma (agosto 2026) valoró la devolución de recursos pero reconoció que la discusión sobre equidad territorial sigue abierta; propuso incorporar la totalidad de los permisos de circulación al Fondo Común Municipal como apoyo adicional y advirtió que el reglamento definirá cómo se miden los requisitos (información a la Dipres y reducción de tiempos de permisos), lo que podría generar diferencias entre municipios."
+  jose_miguel_munoz:
+    nombre: José Miguel Muñoz
+    cargo: Alcalde de Mulchén
+    notas: "Alcalde de Mulchén. Valoró la aprobación de la Ley de Reconstrucción Nacional (agosto 2026) y el mecanismo de compensación a municipios por la exención de contribuciones a adultos mayores, señalando que el ministro Jorge Quiroz aclaró de dónde saldrán los fondos (control del gasto fiscal y crecimiento económico). Destacó además beneficios para el Biobío: exención de IVA a vivienda nueva e incentivos para la contratación en servicios digitales."
+  daniela_serrano:
+    nombre: Daniela Serrano
+    cargo: Diputada (PC), jefa de bancada
+    notas: "Diputada del Partido Comunista y jefa de su bancada. Tras la aprobación del mecanismo de compensación municipal de la megarreforma (agosto 2026) criticó la iniciativa por dejar en situación de vulnerabilidad financiera a numerosos municipios dependientes del Fondo Común Municipal y afirmó que la oposición utilizará todas las herramientas jurídicas disponibles para modificar el sistema aprobado."
   claudio_castro:
     nombre: Claudio Castro
     cargo: Alcalde de Renca
@@ -4025,6 +4042,11 @@ organizations:
     pais: Chile
     notas: Gremio de productores pisqueros de Coquimbo. Crítico de declaraciones del
       ministro Campos sobre daños por sistema frontal
+  cooperativa:
+    nombre: Cooperativa
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Cooperativa, radio y portal de noticias chileno. En abril de 2026 fue objeto de una noticia falsa que le atribuía una publicación vinculando a El Ciudadano con una red de desinformación internacional; el subdirector de medios digitales Raúl Martínez desmintió a Fast Check que el contenido hubiera existido en su sitio."
   banco_central_chile:
     nombre: Banco Central de Chile
     tipo: banco_central
@@ -4419,7 +4441,12 @@ organizations:
     tipo: asociacion_gremial
     pais: Chile
     notas: Gremio que agrupa a municipalidades de Chile. Tensión interna por postura
-      frente a megarreforma.
+      frente a megarreforma. Tras el despacho de la ley (agosto 2026) su presidente Gustavo Alessandri anunció como prioridades modernizar el Fondo Común Municipal y avanzar en una nueva Ley de Rentas Municipales.
+  crcp:
+    nombre: Cámara Regional del Comercio de Valparaíso
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio empresarial regional. Su 30° encuentro anual reunió al presidente José Antonio Kast el 5 de agosto de 2026, quien destacó allí el despacho de la megarreforma como un 'antes y un después'."
   amnistia_internacional:
     nombre: Amnistía Internacional
     notas: "Organización internacional de derechos humanos. Su directora para las Américas, Erika Guevara-Rosas, condenó el apuñalamiento de tres mujeres en la marcha por el aborto libre de julio de 2018 y criticó las declaraciones del gobierno chileno."
@@ -4617,6 +4644,26 @@ organizations:
     tipo: empresa_estatal
     pais: Chile
     notas: Empresa estatal minera de cobre. Propuesta de privatización por Republicanos generó controversia.
+  affindh:
+    nombre: Asociación de Funcionarias y Funcionarios del INDH (AFFINDH)
+    tipo: sindicato
+    pais: Chile
+    notas: "Gremio de funcionarias y funcionarios del Instituto Nacional de Derechos Humanos. El 6 de agosto de 2026 emitió un pronunciamiento público ante los cuestionamientos, propuestas de reformas regresivas y amagos de eliminación del organismo: 'en un Estado de Derecho, que las instituciones de derechos humanos incomoden a otros poderes demuestra que están cumpliendo su función, no se trata de una anomalía a corregir'. Rechazó las acusaciones de 'sesgada' o 'partidista' e invocó el principio de no regresividad."
+  cochilco:
+    nombre: Comisión Chilena del Cobre (Cochilco)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo técnico del Estado dependiente del Ministerio de Minería que analiza el mercado del cobre. El 6 de agosto de 2026 atribuyó el alza del metal a récords históricos (US$6,55/lb) principalmente a la decisión de la República Democrática del Congo de prohibir las exportaciones de concentrados de cobre y cobalto, a la caída de inventarios en Londres y a la presión por cobre de entrega inmediata."
+  somo_fabuloso:
+    nombre: Somos Fabuloso
+    tipo: empresa
+    pais: Chile
+    notas: "Canal chileno de comedia y entretenimiento transmitido por streaming en vivo, productor del programa 'No Hacemos Uno'. En agosto de 2026 el comediante Lucho Miranda respondió desde el espacio a los dichos de la senadora Camila Flores sobre Fabiola Campillai."
+  el_ciudadano:
+    nombre: El Ciudadano
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de comunicación digital chileno fundado en 2005. En noviembre de 2023 el Departamento de Estado de EE.UU. lo mencionó en su informe 'Esfuerzos del Kremlin para propagar desinformación encubiertamente en América Latina', lo que el medio desmintió categóricamente. En abril de 2026 circuló una noticia falsa atribuida a Cooperativa que lo vinculaba a una red de desinformación internacional; el alcalde de Santiago Mario Desbordes la compartió en X y luego la eliminó."
   google:
     nombre: Google
     tipo: empresa
@@ -6347,7 +6394,39 @@ cifras:
   denuncias_paso_no_habilitado_2026:
     nombre: Denuncias de ingreso por paso no habilitado enero-julio 2026
     unidad_default: denuncias
-    notas: "11.242 denuncias de ingreso por paso no habilitado contabilizadas por Sermig en enero-julio 2026, un 33% menos que el mismo periodo del año anterior. Fast Check aclara que la denuncia no necesariamente se realiza el mismo año en que ingresó la persona, por lo que no pueden atribuirse directamente a 2026."
+    notas: "11.242 denuncias de ingreso por paso no habilitado contabilizadas por Sermig en enero-julio 2026, un 33% menos que las 16.788 del mismo periodo de 2025 (Informe Estadístico Migratorio PDI, 6-ago-2026). Fast Check aclara que la denuncia no necesariamente se realiza el mismo año en que ingresó la persona, por lo que no pueden atribuirse directamente a 2026."
+  expulsiones_ene_jul_2026:
+    nombre: Expulsiones materializadas enero-julio 2026
+    unidad_default: personas
+    notas: "1.330 expulsiones materializadas entre enero y julio de 2026, un 76% más que las 753 del mismo periodo de 2025 y el nivel más alto de los últimos cinco años según el Informe Estadístico Migratorio de la PDI (6-ago-2026). Colombia encabeza con 549 casos, seguido de Venezuela (261) y Bolivia (234)."
+  expulsiones_administrativas_ene_jul_2026:
+    nombre: Expulsiones administrativas enero-julio 2026
+    unidad_default: personas
+    notas: "1.183 expulsiones administrativas entre enero y julio de 2026, un 105% más que las 577 del mismo periodo de 2025 (Informe Estadístico Migratorio PDI, 6-ago-2026)."
+  expulsiones_judiciales_ene_jul_2026:
+    nombre: Expulsiones judiciales enero-julio 2026
+    unidad_default: personas
+    notas: "147 expulsiones judiciales entre enero y julio de 2026, un 16% menos que las 176 del mismo periodo de 2025 (Informe Estadístico Migratorio PDI, 6-ago-2026)."
+  salidas_voluntarias_ene_jul_2026:
+    nombre: Salidas voluntarias de extranjeros enero-julio 2026
+    unidad_default: personas
+    notas: "7.501 extranjeros que ingresaron por pasos no habilitados y abandonaron Chile de manera regular sin orden de expulsión vigente, categoría incorporada por primera vez al Informe Estadístico Migratorio de la PDI (6-ago-2026). 5.826 corresponden a venezolanos (78%) y julio fue el mes con mayor cantidad (1.793). No se contabilizan como expulsiones materializadas."
+  vuelos_expulsion_ene_jul_2026:
+    nombre: Vuelos de expulsión enero-julio 2026
+    unidad_default: vuelos
+    notas: "Nueve vuelos de expulsión ejecutados entre enero y julio de 2026 (chárter o Fuerza Aérea), más del doble de los cuatro del mismo periodo de 2025; las personas expulsadas por esta vía subieron de 195 a 484 (+148%). Informe Estadístico Migratorio PDI, 6-ago-2026."
+  extranjeros_fiscalizados_ene_jul_2026:
+    nombre: Extranjeros controlados en fiscalizaciones enero-julio 2026
+    unidad_default: personas
+    notas: "30.155 extranjeros controlados en 1.318 operativos de fiscalización entre enero y julio de 2026, un 44% más que los 20.899 del mismo periodo de 2025 (Informe Estadístico Migratorio PDI, 6-ago-2026)."
+  movimiento_migratorio_regular_ene_jul_2026:
+    nombre: Movimientos migratorios regulares de ingreso enero-julio 2026
+    unidad_default: millones
+    notas: "7,58 millones de movimientos controlados de ingreso entre enero y julio de 2026, un 7,6% menos que los 8,2 millones del mismo periodo de 2025 (Informe Estadístico Migratorio PDI, 6-ago-2026)."
+  detecciones_tarapaca_ene_jul_2026:
+    nombre: Detecciones de ingresos irregulares en Tarapacá enero-julio 2026
+    unidad_default: personas
+    notas: "866 detecciones en la región de Tarapacá entre enero y julio de 2026, un 89% menos que las 8.145 del mismo periodo de 2025; la mayor caída de la Macrozona Norte (Informe Estadístico Migratorio PDI, 6-ago-2026)."
   presupuesto_carabineros_2012:
     nombre: Presupuesto vigente de Carabineros de Chile 2012
     unidad_default: miles_de_pesos_2012
@@ -6407,11 +6486,11 @@ cifras:
   expulsiones_total_2026:
     nombre: Expulsiones ejecutadas durante 2026
     unidad_default: personas
-    notas: "780 expulsiones en lo que va de 2026: 683 administrativas y 97 judiciales. A fines de mayo, 484 desde el 11 de marzo."
+    notas: "780 expulsiones en lo que va de 2026: 683 administrativas y 97 judiciales. A fines de mayo, 484 desde el 11 de marzo. Corte anterior al Informe Estadístico Migratorio PDI de agosto de 2026, que reporta 1.330 expulsiones materializadas a julio (ver expulsiones_ene_jul_2026)."
   salidas_voluntarias_2026:
     nombre: Salidas voluntarias de migrantes en 2026
     unidad_default: personas
-    notas: "2.446 salidas voluntarias en 2026 a fines de mayo, 90% de ellas de ciudadanos venezolanos."
+    notas: "2.446 salidas voluntarias en 2026 a fines de mayo, 90% de ellas de ciudadanos venezolanos. Corte anterior al Informe Estadístico Migratorio PDI de agosto de 2026, que contabiliza 7.501 salidas voluntarias a julio bajo la nueva categoría oficial (ver salidas_voluntarias_ene_jul_2026)."
   ingresos_pasos_no_habilitados:
     nombre: Ingresos por pasos no habilitados en 2026
     unidad_default: personas
@@ -6604,6 +6683,10 @@ cifras:
     nombre: Imacec de junio de 2026
     unidad_default: pct
     notas: "Crecimiento de 2,4% interanual en junio de 2026 según el Banco Central, rompiendo una racha de cinco meses de contracciones (enero a mayo de 2026) y permitiendo que el segundo trimestre creciera 0,1% y evitara la recesión técnica. La serie desestacionalizada avanzó 0,6% mensual y 1,4% en doce meses. El primer semestre cerró con un promedio de -0,2%, el peor desde la pandemia."
+  precio_cobre_record_2026:
+    nombre: Precio del cobre en máximo histórico (6 de agosto de 2026)
+    unidad_default: usd_libra
+    notas: "US$6,55 por libra al cierre de la jornada del 6 de agosto de 2026 (+2,03%), un nuevo máximo histórico en la Bolsa de Metales de Londres, superando por primera vez los US$6,5. Promedio mensual del metal: US$6,44/lb. Cochilco atribuyó el alza a la prohibición de la República Democrática del Congo de exportar concentrados de cobre y cobalto, a la caída de los inventarios de Londres y a la presión por cobre de entrega inmediata (parte localizada en EE.UU. por expectativas arancelarias)."
   desaprobacion_kast_cadem_ago:
     nombre: Desaprobación de Kast en encuesta Cadem de agosto
     unidad_default: pct
@@ -6868,6 +6951,30 @@ cifras:
     nombre: Diferencia de sueldo bruto entre Kast y Boric (2026)
     unidad_default: pesos chilenos
     notas: "$4.036.090 más que el presidente saliente recibirá el presidente electo José Antonio Kast según la renta bruta ($11.070.064 vs $7.033.974 de Boric en noviembre de 2025), tras la decisión de la Comisión para la Fijación de Remuneraciones de diciembre de 2025."
+  remuneraciones_reales_interanual_junio_2026:
+    nombre: Variación interanual del Índice Real de Remuneraciones (junio 2026)
+    unidad_default: "%"
+    notas: "+3,2% en doce meses según el boletín del INE publicado el 6 de agosto de 2026, favorecido por un IPC de 0% en junio. Mide la evolución de los sueldos descontando la inflación."
+  remuneraciones_reales_semestre_2026:
+    nombre: Acumulado del Índice Real de Remuneraciones enero-junio 2026
+    unidad_default: "%"
+    notas: "+2,3% en el primer semestre de 2026 según el boletín del INE del 6 de agosto de 2026, consolidando la recuperación del poder adquisitivo."
+  indice_nominal_remuneraciones_junio_2026:
+    nombre: Variación interanual del Índice Nominal de Remuneraciones (junio 2026)
+    unidad_default: "%"
+    notas: "+7,7% en comparación con igual mes del año anterior, según el INE (boletín del 6 de agosto de 2026). Comercio, industria manufacturera y construcción lideraron el avance."
+  indice_costos_laborales_junio_2026:
+    nombre: Variación interanual del Índice de Costos Laborales (junio 2026)
+    unidad_default: "%"
+    notas: "+8,4% en doce meses según el INE (boletín del 6 de agosto de 2026). El costo laboral medio por hora total se ubicó en $8.633 (+8,5% interanual)."
+  remuneracion_media_hora_junio_2026:
+    nombre: Remuneración media por hora ordinaria (junio 2026)
+    unidad_default: pesos_por_hora
+    notas: "$7.523 en junio de 2026 (+8% interanual). Mujeres: $7.328 (+8,4%); hombres: $7.703 (+7,7%). Fuente: INE, boletín del 6 de agosto de 2026."
+  brecha_salarial_hora_junio_2026:
+    nombre: Brecha salarial de género por hora (junio 2026)
+    unidad_default: "%"
+    notas: "-4,9% en remuneración media por hora (las mujeres ganan 4,9% menos que los hombres); -5,5% en costo laboral medio por hora total. Fuente: INE, boletín del 6 de agosto de 2026."
   contrato_indh_ditecsur:
     nombre: Contrato del INDH con la productora Ditecsur (2026)
     unidad_default: millones_pesos
