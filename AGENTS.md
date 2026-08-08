@@ -230,6 +230,18 @@ En tiempo de build NO se agenda nada; todo corre en cliente sobre el texto de `.
 - **Piper = CDN lazy**: `tts.voices()` (fetch a HF), `tts.predict()` baja el modelo
   (~60-75MB, una sola vez → OPFS) y sintetiza en el navegador. `voiceId` usada viene
   del value del `<option>` con prefijo `piper:`. El WASM/onnx salen de jsdelivr en runtime.
+- **`onnxruntime-web` está pineado a `1.22.0`** (dependencia directa en `package.json`,
+  no el peer resuelto por pnpm): es la versión para la que el fork fue construido y a la
+  que apunta su `ONNX_BASE` de CDN. NO subir la versión sin actualizar también el CDN.
+- **El `.wasm` local de onnxruntime NO se bundlea**: el fork lo carga del CDN en runtime
+  (`fallbackStrategy 'cdn'`, `wasmPaths = ONNX_BASE`), pero Vite lo emitía igual a
+  `dist/_astro/` (~25,6 MiB) por el patrón `new URL("ort-wasm-*.wasm", import.meta.url)`,
+  rompiendo el deploy de Cloudflare Pages (límite 25 MiB por archivo). El plugin
+  `drop-ort-wasm-assets` en `astro.config.mjs` (`vite.plugins`) elimina esos assets del
+  output (solo `.wasm`). Contrato implícito: el TTS depende de que el fork use SIEMPRE
+  la estrategia CDN; si alguien lo cambiara a `'auto'`/`'local'` (modo offline), el wasm
+  local ya no existiría en `dist` y el TTS rompería con un 404 silencioso. Si algún día
+  se quisiera usar el wasm local, hay que revertir ese plugin y re-verificar el deploy.
 - **Flags**: `window.__gvEventActionsInit` (una sola vez) para listeners globales;
   `astro:page-load` para llenar voces y cancelar reproducción (`gvStopAll`) al navegar.
 

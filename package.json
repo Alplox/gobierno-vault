@@ -29,6 +29,7 @@
     "d3-force": "^3.0.0",
     "lucide-astro": "^0.556.0",
     "mermaid": "^11.16.0",
+    "onnxruntime-web": "1.22.0",
     "remark-wiki-link": "^2.0.1",
     "tailwindcss": "^3.4.19",
     "unist-util-visit": "^5.1.0",
