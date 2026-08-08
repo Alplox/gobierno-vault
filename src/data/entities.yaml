@@ -78,6 +78,10 @@ people:
     nombre: Joaquín Lavín Infante
     cargo: Exministro y exalcalde de Las Condes
     notas: "Exministro de Educación y de Desarrollo Social, exalcalde de Las Condes y padre del exparlamentario Joaquín Lavín León. El 11 de mayo de 2026 concurrió al Anexo Penitenciario Capitán Yáber para enrolarse en Gendarmería y visitar a su hijo tras la prisión preventiva, declarando que cree '100 por 100 en la inocencia de Cathy y de Joaquín' y pidió no prejuzgar. Su campaña presidencial en las primarias de Chile Vamos de 2021 aparece vinculada a pagos irregulares a asesores detectados en la investigación."
+  daniela_riquelme:
+    nombre: Daniela Riquelme
+    cargo: Abogada de deudores del CAE
+    notas: "Abogada patrocinante, junto a Florencia Pinto, del recurso de protección acogido por la Corte de Apelaciones de La Serena que declaró ilegal el doble cobro del CAE por parte de la Tesorería General de la República (juicio civil + cobranza administrativa simultánea), ordenando paralizar el procedimiento administrativo (agosto 2026)."
   daniel_urrutia:
     nombre: Daniel Urrutia
     cargo: Juez de Garantía
@@ -177,6 +181,10 @@ people:
     nombre: Salvador Allende
     cargo: Expresidente de Chile (1970-1973)
     notas: "Presidente de Chile entre 1970 y 1973. Durante su gobierno (1971) Chile se incorporó al Movimiento de Países No Alineados."
+  florencia_pinto:
+    nombre: Florencia Pinto
+    cargo: Abogada de deudores del CAE
+    notas: "Abogada patrocinante, junto a Daniela Riquelme, del recurso de protección acogido por la Corte de Apelaciones de La Serena que declaró ilegal el doble cobro del CAE por parte de la Tesorería General de la República (agosto 2026)."
   felipe_parada:
     nombre: Felipe Parada
     cargo: Panelista de Sin Filtros
@@ -493,6 +501,11 @@ people:
     aliases:
       - Kast
       - JAK
+  patricio_pinilla:
+    nombre: Patricio Pinilla
+    cargo: Diputado (DC)
+    organizacion: partido_democratacristiano
+    notas: "Diputado de la DC, integrante de la comisión de Seguridad Ciudadana de la Cámara. Tras la revelación de las cirugías estéticas de Janet Morales, esposa del general director de Carabineros, planteó que era complicado llevar a cabo el sumario en contra del General Director y su esposa en una institución tan jerarquizada como Carabineros (agosto 2026)."
   patricio_elgueta:
     nombre: Patricio Elgueta
     cargo: Presidente de la Federación de Trabajadores del Cobre (FTC)
@@ -645,6 +658,10 @@ people:
     cargo: Director del Centro UC de Encuestas y Estudios Longitudinales
     organizacion: centro_uc_encuestas
     notas: "Economista laboral, director del Centro UC de Encuestas y Estudios Longitudinales. Sobre la entrada en vigencia de las 42 horas (abril 2026) advirtió que implica un incremento de 4,8% en los costos laborales y un golpe al empleo sin que haya aumentado la productividad. Presidió la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  abelardo_de_la_espriella:
+    nombre: Abelardo de la Espriella
+    cargo: Presidente electo de Colombia
+    notas: "Presidente electo de Colombia que asumió el poder en agosto de 2026. El 7 de agosto de 2026 se reunió con el presidente chileno José Antonio Kast en la Fundación FES de Cali, horas antes de su asunción."
   alejandro_micco:
     nombre: Alejandro Micco
     cargo: Exsubsecretario de Hacienda (2014-2017)
@@ -1700,6 +1717,10 @@ people:
     nombre: Mario Vargas
     cargo: Abogado de Patricio Maturana
     notas: "Abogado defensor del capitán Patricio Maturana durante el sumario interno por el caso Campillai. El 24 de abril de 2020 la institución le entregó copia del sumario; prevaleció que no existían antecedentes suficientes para atribibir responsabilidad a Maturana."
+  patricia_cerda:
+    nombre: Patricia Cerda
+    cargo: Fiscal de la Fiscalía Centro Norte
+    notas: "Fiscal del Ministerio Público a cargo de las investigaciones de la Fiscalía Centro Norte contra el Partido de la Gente (PDG) por la denuncia del Servel por gastos no acreditados (falsificación de firmas e irregularidades en rendición de gastos). En agosto de 2026 ordenó diligencias para el levantamiento patrimonial de Franco Parisi y otros 10 militantes del partido por presunto lavado de activos y fraude de subvenciones, requiriendo informes a la UAF."
   patricia_negretti:
     nombre: Patricia Negretti
     cargo: Perito forense del Servicio Médico Legal
@@ -3014,6 +3035,11 @@ people:
         organizacion: camara_diputados
         desde: 2026-03-11
     organizacion: camara_diputados
+  lorena_pizarro:
+    nombre: Lorena Pizarro
+    cargo: Diputada (PC)
+    organizacion: partido_comunista
+    notas: "Diputada del Partido Comunista y presidenta de la Agrupación de Familiares de Detenidos Desaparecidos (AFDD). En agosto de 2026 ofició a la Contraloría para que investigue las cirugías estéticas de Janet Morales, esposa del general director de Carabineros Marcelo Araya, cubiertas por Dipreca; la CGR dio plazo de 10 días a Carabineros y al Ministerio de Seguridad y solicitó una investigación especial de auditoría."
   lorena_fries:
     nombre: Lorena Fries
     cargo: Diputada Frente Amplio
@@ -3977,6 +4003,11 @@ people:
     cargo: Directora General de Fundación Teletón
     organizacion: fundacion_teleton
     notas: "Directora General de la Fundación Teletón. El 4 de agosto de 2026 valoró el respaldo transversal del Senado al proyecto del Día Nacional de la Teletón y confió en igual acogida en la Cámara de Diputadas y Diputados."
+  sebastian_urrejola:
+    nombre: Sebastián Urrejola Aranda
+    cargo: Delegado Presidencial Provincial de Chañaral
+    organizacion: delegacion_presidencial_chanaral
+    notas: "Delegado presidencial provincial de Chañaral designado por el gobierno de José Antonio Kast. En agosto de 2026 la Contraloría Regional de Atacama acreditó su ocupación ilegal de un bien fiscal de ~1.000 m² en el sector Portofino de Chañaral, con una ocupación de ~16 años, vulnerando la probidad administrativa; ordenó procedimiento disciplinario en la Subsecretaría del Interior, la restitución del terreno y un cobro retroactivo por el uso del bien."
   sebastian_keitel:
     nombre: Sebastián Keitel
     cargo: Senador, presidente de la Comisión de Adulto Mayor y Discapacidad
@@ -4379,6 +4410,12 @@ organizations:
     nombre: Ministerio del Interior y Seguridad Publica
     tipo: ministerio
     pais: Chile
+  subsecretaria_interior:
+    nombre: Subsecretaría del Interior
+    tipo: servicio_publico
+    pais: Chile
+    organizacion: ministerio_interior
+    notas: "Subsecretaría dependiente del Ministerio del Interior. En agosto de 2026 la Contraloría Regional de Atacama le instruyó iniciar un procedimiento disciplinario contra el delegado presidencial provincial de Chañaral, Sebastián Urrejola, por la ocupación ilegal de un bien fiscal en Portofino."
   cead:
     nombre: Centro de Estudios y Análisis del Delito (CEAD)
     tipo: servicio_publico
@@ -4476,6 +4513,11 @@ organizations:
     tipo: servicio_publico
     pais: Chile
     organizacion: ministerio_hacienda
+  dipreca:
+    nombre: Dirección de Previsión de Carabineros (Dipreca)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Dirección de Previsión de Carabineros, organismo de salud previsional de la institución. En julio-agosto de 2026 quedó en el centro de la polémica por la cobertura de las cirugías estéticas de Janet Morales, esposa del general director Marcelo Araya, realizadas en el Hospital de Carabineros, que funcionarios cuestionaron por presentarse como cirugías reconstructivas. El Plan de Salud Dipreca 2025 excluye los tratamientos cosméticos o modificaciones corporales voluntarias."
   comision_fijacion_remuneraciones:
     nombre: Comisión para la Fijación de Remuneraciones
     tipo: organismo_estado
@@ -4651,6 +4693,11 @@ organizations:
     tipo: tribunal
     pais: Chile
     notas: "Máximo tribunal del país. En octubre de 2024 removió por unanimidad a la ministra Ángela Vivanco (caso Audios), la primera destitución de un ministro del Pleno en 23 años."
+  corte_apelaciones_la_serena:
+    nombre: Corte de Apelaciones de La Serena
+    tipo: tribunal
+    pais: Chile
+    notas: "Tribunal de alzada de la Región de Coquimbo. En julio-agosto de 2026 acogió de forma unánime recursos de protección de deudores del CAE declarando ilegal el doble cobro de la Tesorería General de la República (juicio civil + cobranza administrativa simultánea), un precedente en la formación de jurisprudencia sobre la cobranza coactiva del CAE."
   servel:
     nombre: Servicio Electoral
     tipo: servicio_publico
@@ -4678,6 +4725,11 @@ organizations:
     nombre: Carabineros de Chile
     tipo: policia
     pais: Chile
+  servicio_impuestos_internos:
+    nombre: Servicio de Impuestos Internos (SII)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público encargado de la administración tributaria. En agosto de 2026, junto a la Cámara Nacional de Comercio (CNC), lanzó una plataforma para denunciar locales comerciales que operarían 'sin fachada' (sin local físico visible), en el marco del combate al comercio ilícito y la informalidad."
   servicio_medico_legal:
     nombre: Servicio Médico Legal
     tipo: servicio_publico
@@ -4927,6 +4979,11 @@ organizations:
     tipo: empresa_estatal
     pais: Chile
     notas: Empresa estatal minera de cobre. Propuesta de privatización por Republicanos generó controversia.
+  corfo:
+    nombre: Corporación de Fomento de la Producción (Corfo)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Corporación de Fomento de la Producción, organismo estatal que administra participaciones del Estado en empresas. En agosto de 2026 el Gobierno evaluaba cómo estructurar la venta de la participación estatal en las sanitarias Aguas Andinas, Essbio, Esval y Suralis a través de Corfo, en el marco de la revisión de activos prescindibles del biministro de Economía, Daniel Mas."
   cesco:
     nombre: Centro de Estudios del Cobre y la Minería
     tipo: think_tank
@@ -5057,6 +5114,10 @@ organizations:
     tipo: institucion_publica
     pais: Chile
     notas: Representación del Gobierno central en la Región de La Araucanía. Depende del Ministerio del Interior.
+  delegacion_presidencial_chanaral:
+    nombre: Delegación Presidencial Provincial de Chañaral
+    tipo: servicio_publico
+    pais: Chile
   delegacion_presidencial_atacama:
     nombre: Delegación Presidencial Regional de Atacama
     tipo: institucion_publica
