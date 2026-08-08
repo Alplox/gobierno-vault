@@ -120,6 +120,17 @@ for (const file of allFiles) {
     }
   }
 
+  // Regla AGENTS.md 13: el body de un evento no debe contener notas de editor
+  // ni metainstrucciones de gestión (para eso existe TAREAS.md).
+  const body = content.replace(/^---[\s\S]*?---/, '');
+  const editorNote = body.match(
+    /tareas\.md|nota de verificación|nota del editor|nota editorial|pendiente evento|queda pendiente de verificación|registrad[oa] para seguimiento|agenda de pendientes/i
+  );
+  if (editorNote) {
+    console.error(`✖ metanota de editor en body → ${eventId}: "${editorNote[0]}"`);
+    errors++;
+  }
+
   // Validate impacto.colectivos and impacto.sectores against YAML registries
   for (const [key, validIds] of [
     ['colectivos', validColectivos],

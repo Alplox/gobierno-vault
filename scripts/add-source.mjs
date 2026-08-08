@@ -18,7 +18,8 @@
  *                   y deja elegir un artículo; con --fecha y --medio filtra más
  *   --fecha YYYY-MM-DD  Filtro de fecha para --search
  *   --medio <slug>     Filtro de medio para --search (elclarin, biobiochile,
- *                   cooperativa, adnradio, factchecking, ciper)
+ *                   cooperativa, adnradio, factchecking, ciper, theclinic,
+ *                   elmostrador, fastcheck, latercera, cnnchile, eldinamo)
  *
  * Notas:
  * - Antes de hacer fetch, consulta el catálogo de sitemaps (si existe): si la
@@ -285,6 +286,9 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'theclinic.cl': 'theclinic',
   'elmostrador.cl': 'elmostrador',
   'fastcheck.cl': 'fastcheck',
+  'latercera.com': 'latercera',
+  'cnnchile.com': 'cnnchile',
+  'eldinamo.cl': 'eldinamo',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -297,6 +301,9 @@ const CATALOG_MEDIO_NAMES = {
   theclinic: 'The Clinic',
   elmostrador: 'El Mostrador',
   fastcheck: 'Fast Check CL',
+  latercera: 'La Tercera',
+  cnnchile: 'CNN Chile',
+  eldinamo: 'El Dínamo',
 };
 
 function catalogExists() {
@@ -384,7 +391,7 @@ async function catalogSearchAndPick(query, fechaFilter, medioFilter) {
     ? [medioFilter]
     : Object.keys(CATALOG_MEDIO_NAMES).filter((m) => m !== heavy).concat(heavy);
   if (!medioFilter) {
-    logInfo('Buscando en todo el catálogo (6 medios). Para acotar usa --medio <slug>.');
+    logInfo(`Buscando en todo el catálogo (${Object.keys(CATALOG_MEDIO_NAMES).length} medios). Para acotar usa --medio <slug>.`);
   }
   for (const medio of medios) {
     if (results.length >= MAX_RESULTS) break;

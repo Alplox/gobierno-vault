@@ -9,6 +9,9 @@ import {
   BarChart3,
   Edit3,
   DollarSign,
+  Volume2,
+  VolumeX,
+  Menu,
 } from 'lucide-astro';
 import { ClientRouter } from 'astro:transitions';
 
@@ -19,6 +22,17 @@ interface Props {
 
 const { title, description = 'Base de conocimiento de acontecimientos verificables' } = Astro.props;
 const currentPath = Astro.url.pathname;
+
+const navLinks = [
+  { href: '/events', label: 'Eventos', icon: Calendar },
+  { href: '/people', label: 'Personas', icon: Users },
+  { href: '/organizations', label: 'Organizaciones', icon: Building2 },
+  { href: '/sources', label: 'Fuentes', icon: BookOpen },
+  { href: '/topics', label: 'Temas', icon: Tag },
+  { href: '/stats', label: 'Estadisticas', icon: BarChart3 },
+  { href: '/sueldos', label: 'Sueldos', icon: DollarSign },
+  { href: '/admin', label: 'Editor', icon: Edit3, admin: true },
+];
 ---
 
 <!doctype html>
@@ -87,15 +101,16 @@ const currentPath = Astro.url.pathname;
         font-weight: 500;
       }
       .event-ref {
-        display: inline-block;
+        display: inline;
         color: #1d4ed8;
         background: #eff6ff;
         padding: 1px 6px;
         border-radius: 4px;
         font-weight: 500;
-        white-space: nowrap;
         text-decoration: none;
         border: 1px solid #dbeafe;
+        box-decoration-break: clone;
+        -webkit-box-decoration-break: clone;
       }
       .event-ref:hover {
         background: #dbeafe;
@@ -116,44 +131,37 @@ const currentPath = Astro.url.pathname;
   </head>
   <body class="bg-gray-50/70 text-gray-900 min-h-screen antialiased flex flex-col">
     <nav transition:persist class="bg-white/90 backdrop-blur-md border-b border-gray-200/80 sticky top-0 z-20 shadow-sm">
-      <div class="max-w-6xl mx-auto px-4 py-3 flex flex-wrap items-center justify-between gap-4">
-        <a href="/" class="flex items-center gap-2 font-bold text-lg text-gray-900 transition-colors hover:text-blue-600">
+      <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
+        <a href="/" class="flex items-center gap-2 font-bold text-lg text-gray-900 transition-colors hover:text-blue-600 shrink-0">
           <Shield class="h-6 w-6 text-blue-600 shrink-0" />
           <span>Gobierno Vault</span>
         </a>
-        <div class="flex items-center gap-1 sm:gap-2 text-sm font-medium overflow-x-auto py-1">
-          <a href="/events" data-nav-link data-nav-prefix="/events" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <Calendar class="h-4 w-4 shrink-0" />
-            <span>Eventos</span>
-          </a>
-          <a href="/people" data-nav-link data-nav-prefix="/people" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <Users class="h-4 w-4 shrink-0" />
-            <span>Personas</span>
-          </a>
-          <a href="/organizations" data-nav-link data-nav-prefix="/organizations" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <Building2 class="h-4 w-4 shrink-0" />
-            <span>Organizaciones</span>
-          </a>
-          <a href="/sources" data-nav-link data-nav-prefix="/sources" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <BookOpen class="h-4 w-4 shrink-0" />
-            <span>Fuentes</span>
-          </a>
-          <a href="/topics" data-nav-link data-nav-prefix="/topics" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <Tag class="h-4 w-4 shrink-0" />
-            <span>Temas</span>
-          </a>
-          <a href="/stats" data-nav-link data-nav-prefix="/stats" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <BarChart3 class="h-4 w-4 shrink-0" />
-            <span>Estadisticas</span>
-          </a>
-          <a href="/sueldos" data-nav-link data-nav-prefix="/sueldos" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-            <DollarSign class="h-4 w-4 shrink-0" />
-            <span>Sueldos</span>
-          </a>
-          <a href="/admin" data-nav-link data-nav-prefix="/admin" data-nav-admin class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-400 hover:text-gray-700 hover:bg-gray-100">
-            <Edit3 class="h-4 w-4 shrink-0" />
-            <span>Editor</span>
-          </a>
+        <div class="hidden sm:flex items-center gap-1 sm:gap-2 text-sm font-medium overflow-x-auto py-1">
+          {navLinks.map((l) => (
+            <a href={l.href} data-nav-link data-nav-prefix={l.href} {l.admin && 'data-nav-admin'} data-cuelume-hover="tick" class={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
+              <l.icon class="h-4 w-4 shrink-0" />
+              <span>{l.label}</span>
+            </a>
+          ))}
+        </div>
+        <div class="flex items-center gap-1 shrink-0">
+          <button id="btn-sound" type="button" data-cuelume-press="press" class="p-2 rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
+            <Volume2 id="icon-sound-on" class="h-5 w-5" />
+            <VolumeX id="icon-sound-off" class="h-5 w-5 hidden" />
+          </button>
+          <details id="mobile-menu" class="relative sm:hidden">
+            <summary class="list-none flex items-center p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer" aria-label="Menu de navegacion">
+              <Menu class="h-5 w-5" />
+            </summary>
+            <div class="absolute right-0 top-full mt-2 w-60 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
+              {navLinks.map((l) => (
+                <a href={l.href} data-nav-link data-nav-prefix={l.href} {l.admin && 'data-nav-admin'} class={`flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
+                  <l.icon class="h-4 w-4 shrink-0" />
+                  <span>{l.label}</span>
+                </a>
+              ))}
+            </div>
+          </details>
         </div>
       </div>
     </nav>
@@ -173,6 +181,8 @@ const currentPath = Astro.url.pathname;
       </div>
     </footer>
     <script>
+      import { bind, play, setEnabled } from 'cuelume';
+
       if (!(window as any).__gvTooltipInit) {
         (window as any).__gvTooltipInit = true;
         document.addEventListener('click', (e) => {
@@ -227,6 +237,39 @@ const currentPath = Astro.url.pathname;
         document.addEventListener('astro:page-load', updateNavActive);
       }
       updateNavActive();
+
+      // Sonidos de interfaz (cuelume): bind una sola vez; el toggle global se
+      // persiste en localStorage y setEnabled hace no-op de play() al apagar.
+      bind();
+      const SOUND_KEY = 'gv-sound';
+      let soundOn = localStorage.getItem(SOUND_KEY) !== '0';
+      const btnSound = document.getElementById('btn-sound');
+      const iconOn = document.getElementById('icon-sound-on');
+      const iconOff = document.getElementById('icon-sound-off');
+      function gvSetSound() {
+        setEnabled(soundOn);
+        btnSound?.setAttribute('aria-pressed', String(soundOn));
+        iconOn?.classList.toggle('hidden', !soundOn);
+        iconOff?.classList.toggle('hidden', soundOn);
+      }
+      gvSetSound();
+      // Llega la señal de "arrival" al navegar con View Transitions (tras la
+      // primera interacción del usuario; antes el navegador bloquea el audio).
+      document.addEventListener('astro:page-load', () => play('arrival'));
+      if (!(window as any).__gvSoundInit) {
+        (window as any).__gvSoundInit = true;
+        document.addEventListener('click', (e) => {
+          const t = e.target as HTMLElement | null;
+          if (t?.closest('#btn-sound')) {
+            soundOn = !soundOn;
+            localStorage.setItem(SOUND_KEY, soundOn ? '1' : '0');
+            gvSetSound();
+            return;
+          }
+          const menu = document.getElementById('mobile-menu') as HTMLDetailsElement | null;
+          if (menu && t?.closest('#mobile-menu a[data-nav-link]')) menu.open = false;
+        });
+      }
     </script>
   </body>
 </html>

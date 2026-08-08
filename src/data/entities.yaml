@@ -127,6 +127,15 @@ people:
         desde: 2024-12-06
     organizacion: municipalidad_quilicura
     notas: "Alcaldesa de Quilicura. Tras el cuarto incendio de la planta química Panimex (agosto 2026) exigió el cierre de la empresa y criticó que las multas previas no impidieran su funcionamiento."
+  mauricio_gonzalez_tobar:
+    nombre: Mauricio González Tobar
+    cargo: Jefe de gabinete de la senadora Camila Flores (RN)
+    organizacion: senado
+    notas: "Jefe de gabinete de la senadora Camila Flores (RN). Contrapoder Chile reveló (mayo 2026) que recibió un aumento salarial de $3.150.000 entre marzo y abril de 2026: pasó de percibir $450.000 como funcionario de la Cámara de Diputados a $3.600.000 mensuales como jefe de gabinete en el Senado. Empresario nocturno ligado al Pub Hollywood y al restaurante Casa Cochoa de la Quinta Región; candidato a concejal por Viña del Mar en 2008 (1% de los votos). Mencionado en la demanda de divorcio culposo de Percy Marín contra la senadora."
+  percy_marin:
+    nombre: Percy Marín
+    cargo: Exesposo de la senadora Camila Flores
+    notas: "Exesposo de la senadora Camila Flores (RN). En mayo de 2026 se filtró y viralizó la demanda por divorcio culposo que presentó contra la parlamentaria; el Juzgado de Familia de Viña del Mar decretó la prohibición de informar o divulgar el contenido de la acción judicial y la Corte de Apelaciones de Valparaíso inició una investigación para hallar a los responsables de la filtración."
   filomena_navia:
     nombre: Filomena Navia
     cargo: Alcaldesa de La Cruz
@@ -530,6 +539,20 @@ people:
         organizacion: partido_socialista
         desde: 2026-03-11
     jefe_comite: Socialismo Democratico
+  rodrigo_rettig:
+    nombre: Rodrigo Rettig
+    cargo: Abogado y analista
+    notas: "Abogado y militante del Partido Liberal, analista habitual de coyuntura política y seguridad en medios. El 7 de agosto de 2026 difundió en X un hilo cuestionando la cifra de '218 mil robos violentos' del presidente Kast en la cadena nacional ACOT, señalando que con los datos del CEAD se observa una curva descendente: 2025 habría registrado menos robos violentos que 2024 y 2023, y menos robos con violencia o intimidación que 2024, 2023, 2022, 2019 y 2018 (balance CEAD 2025: -9,8% vs 2024)."
+  raul_soto:
+    nombre: Raúl Soto
+    cargo: Diputado y presidente del PPD
+    organizacion: partido_por_la_democracia
+    notas: "Diputado y presidente del Partido por la Democracia (PPD). El 7 de agosto de 2026, tras la cadena nacional de la ACOT, señaló que 'el gran ausente de esta megarreforma de seguridad es el alzamiento del secreto bancario. No se puede perseguir la ruta del dinero, no se puede atacar el corazón del crimen organizado si no debilitamos su poder económico'."
+  juan_castaneda:
+    nombre: Juan Castañeda
+    cargo: Investigador de la Universidad Autónoma, experto en criminología
+    organizacion: universidad_autonoma
+    notas: "Investigador de la Universidad Autónoma y experto en criminología. El 7 de agosto de 2026, en el marco del debate por el levantamiento del secreto bancario en la ACOT, señaló a Emol que el marco legal ya permite levantarlo con autorización judicial, que perfeccionarlo 'está lejos de ser la única respuesta' y que la pretensión de que un funcionario del gobierno de turno pueda requerir la medida 'resulta altamente controversial a nivel internacional'."
   louis_de_grange:
     nombre: Louis de Grange
     cargo: Ministro de Transporte y Telecomunicaciones
@@ -4152,6 +4175,31 @@ people:
     cargo: Decano de la Facultad de Ciencias Económicas y Empresariales de la Universidad de los Andes
     notas: "Decano de la FCEyE de la Universidad de los Andes. Sobre la revisión de la cartera de inversiones de Codelco (agosto de 2026) planteó la tensión entre mantener los aportes de la estatal al Estado y disponer de recursos para financiar su plan de inversiones, sugiriendo que parte de la venta de activos podría financiar el plan estratégico."
 
+  diego_caceres_solis:
+    nombre: Diego Cáceres Solís
+    cargo: Arquitecto en ciberseguridad, docente de la Pontificia Universidad Católica
+    notas: "Especialista en hacking ético. En agosto de 2026 explicó a Bío Bío Investiga que el correo extorsivo recibido por cientos de fiscales (remitente asociadosanf-bounces@fiscales.cl) correspondía a una suplantación del dominio institucional: la casilla 'bounces' se usa para rebotes de correos y una configuración deficiente permitiría que terceros envíen mensajes que aparenten provenir del organismo."
+
+  veronica_oporto:
+    nombre: Verónica Oporto González
+    cargo: Madre de la senadora Camila Flores
+    notas: "Según el certificado de nacimiento de la senadora Camila Flores, Oporto González es su madre. En 2025 gestionaba la regularización de un inmueble rural en la Región de Los Ríos (comuna de Futrono, superficie inferior a 5.000 m², Ley 20.234), tramitación que la entonces diputada Flores impulsó con oficios a Bienes Nacionales (revelado por Contrapoder, 17-feb-2026)."
+
+  jorge_pacheco:
+    nombre: Jorge Pacheco
+    cargo: Secretario regional ministerial de Bienes Nacionales de la Región de Los Ríos (2025)
+    notas: "Respondió en menos de 24 horas al oficio del 28 de agosto de 2025 de la diputada Camila Flores sobre la tramitación del inmueble de Verónica Oporto González, indicando que el expediente estaba en etapa final y que debía consultarse a la Dirección de Obras de Futrono (Ley 20.234) y a DIFROL por tratarse de zona fronteriza."
+
+  karina_riquelme:
+    nombre: Karina Riquelme
+    cargo: Abogada de derechos humanos, defensora de los hijos de Julia Chuñil
+    notas: "Defensora de los hijos de la dirigenta mapuche Julia Chuñil (Región de Los Ríos). En agosto de 2026 el Ministerio Público utilizó 'fiscales sin rostro' en una causa en su contra; el persecutor, que compareció por videoconferencia, aseguró que no se investiga a la abogada (Araucanía Diario, 8-ago-2026)."
+
+  julia_chunil:
+    nombre: Julia Chuñil
+    cargo: Dirigenta mapuche de la Región de Los Ríos, desaparecida
+    notas: "Dirigenta mapuche desaparecida. Sus hijos fueron imputados por su homicidio (parricidio) tras el hallazgo de restos humanos en su predio en abril de 2026. En julio de 2026 una madre y su hijo fueron condenados a 7 años por amenazas a un fiscal del caso y tenencia de explosivos. El caso es seguido por el vault (evento 20260808-1)."
+
 organizations:
   criteria:
     nombre: Criteria
@@ -4239,6 +4287,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Cooperativa, radio y portal de noticias chileno. En abril de 2026 fue objeto de una noticia falsa que le atribuía una publicación vinculando a El Ciudadano con una red de desinformación internacional; el subdirector de medios digitales Raúl Martínez desmintió a Fast Check que el contenido hubiera existido en su sitio."
+  cnn_chile:
+    nombre: CNN Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de televisión y portal de noticias chileno. Su programa CNN Prime difunde entrevistas de actualidad política; el 7 de agosto de 2026 el exministro Luis Cordero declaró en el espacio sobre la necesidad del levantamiento del secreto bancario para combatir el crimen organizado, declaración difundida por la cuenta oficial del medio en X."
   banco_central_chile:
     nombre: Banco Central de Chile
     tipo: banco_central
@@ -4331,6 +4384,11 @@ organizations:
     tipo: servicio_publico
     pais: Chile
     notas: "Centro de Estudios y Análisis del Delito, unidad estadística de la Subsecretaría de Prevención del Delito del Ministerio del Interior. Sus registros de robos con violencia e intimidación de 2025 (69.777 casos; 109.419 sumando robos por sorpresa) fueron la base del chequeo de Fast Check a la cifra de '218 mil robos violentos' del presidente Kast en la cadena nacional del 5 de agosto de 2026, que la calificó como falsa."
+  uaf:
+    nombre: Unidad de Análisis Financiero (UAF)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público chileno encargado de prevenir e investigar el lavado de activos y el financiamiento del terrorismo. En junio de 2026 el Senado rechazó por tercera vez (empate 24-24) la norma del proyecto de inteligencia económica que le permitiría solicitar directamente a los bancos el levantamiento del secreto bancario sin orden judicial; el debate continuó en la Comisión Mixta de Inteligencia Financiera (constitución el 19 de agosto de 2026)."
   subsecretaria_prevencion_delito:
     nombre: Subsecretaría de Prevención del Delito
     tipo: servicio_publico
@@ -6674,7 +6732,11 @@ cifras:
   robos_violentos_sorpresa_2025:
     nombre: Robos violentos con robos por sorpresa en 2025
     unidad_default: casos
-    notas: "109.419 casos si se suman los robos por sorpresa a los 69.777 robos con violencia o intimidación de 2025 (CEAD). Aun así, muy lejos de los 218.000 afirmados por el presidente Kast en la cadena nacional ACOT."
+    notas: "109.419 casos en 2025 (CEAD): la cifra suma el robo por sorpresa a los 69.777 robos con violencia o intimidación (61.575 + 8.202 robos violentos de vehículo motorizado). Corresponde a la categoría agregada oficial de 'delitos de robos violentos' del balance de hechos delictuales 2025 (que bajó -9,8% vs los 120.548 de 2024). Aun así, muy lejos de los 218.000 afirmados por el presidente Kast en la cadena nacional ACOT."
+  robos_violentos_2024:
+    nombre: Robos violentos en 2024
+    unidad_default: casos
+    notas: "120.548 casos en 2024 según el balance de hechos delictuales 2025 del CEAD (Subsecretaría de Prevención del Delito), que registró 109.419 en 2025 (-9,8%). La comparación respalda la curva descendente señalada por el abogado Rodrigo Rettig en el debate por la cifra de '218 mil robos violentos' del presidente Kast."
   ingresos_irregulares_ene_jul_2026:
     nombre: Ingresos irregulares detectados enero-julio 2026
     unidad_default: personas
@@ -6979,6 +7041,18 @@ cifras:
     nombre: IALI de julio de 2026
     unidad_default: pct
     notas: "El Índice de Avisos Laborales de Internet (IALI) del Banco Central cayó 10,5% interanual en julio de 2026, segundo peor resultado del año tras -10,9% de mayo, completando nueve meses consecutivos en terreno negativo. Se construye con los avisos de trabajando.com, laborum.cl, Chiletrabajos.cl y bne.cl. En junio de 2026 había caído 6,1% (70,7 puntos)."
+  aumento_salarial_gonzalez_tobar:
+    nombre: Aumento salarial de Mauricio González Tobar (mar-abr 2026)
+    unidad_default: pesos
+    notas: "Diferencia entre el sueldo que percibía Mauricio González Tobar como funcionario de la Cámara de Diputados ($450.000) y su remuneración mensual como jefe de gabinete de la senadora Camila Flores en el Senado ($3.600.000), según los registros de personal de apoyo revelados por Contrapoder Chile (27-may-2026): $3.150.000 de aumento entre marzo y abril de 2026."
+  sueldo_gonzalez_tobar_camara:
+    nombre: Sueldo de Mauricio González Tobar en la Cámara de Diputados
+    unidad_default: pesos
+    notas: "Remuneración mensual de Mauricio González Tobar según el registro de personal de apoyo de marzo de 2026, cuando Camila Flores ejercía como diputada (Contrapoder Chile, 27-may-2026)."
+  sueldo_gonzalez_tobar_senado:
+    nombre: Sueldo de Mauricio González Tobar en el Senado
+    unidad_default: pesos
+    notas: "Remuneración mensual de Mauricio González Tobar como jefe de gabinete de la senadora Camila Flores según el registro de personal de apoyo del Senado de abril de 2026 (Contrapoder Chile, 27-may-2026). Es el sueldo más alto del equipo, seguido por la secretaria María Yolanda Olmos ($2.920.000) y el encargado de redes Boris Saavedra ($2.400.000)."
   precio_cobre_record_2026:
     nombre: Precio del cobre en máximo histórico (6 de agosto de 2026)
     unidad_default: usd_libra

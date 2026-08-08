@@ -102,6 +102,30 @@ const MEDIA = {
     // news.xml (títulos reales). Se descartan pages/categories/authors.xml.
     includeRe: /(?:posts-\d{4}|news)\.xml$/i,
   },
+  latercera: {
+    nombre: 'La Tercera',
+    robots: 'https://www.latercera.com/robots.txt',
+    // Arc XP: robots declara sitemap-index (paginado por from=N, 100 URLs
+    // por sub-sitemap, ~10.000 artículos) + news-sitemap-index (títulos
+    // reales, últimos ~400 artículos) + sitemap único. Los `<loc>` del index
+    // llegan con `&amp;` que extractSitemapIndexLocs decodifica a `&`.
+  },
+  cnnchile: {
+    nombre: 'CNN Chile',
+    robots: 'https://www.cnnchile.com/robots.txt',
+    // CMS propio: sitemap_index.xml (sub-sitemaps por mes desde 2011) +
+    // sitemap_lasts.xml (últimos artículos) + sitemap_news.xml (títulos).
+    // OJO: los sub-sitemaps mensuales regeneran el <lastmod> a la fecha del
+    // crawl (uniforme y falso: todos los artículos de 2011-2026 salen con la
+    // misma fecha). La fecha real del artículo está en el path YYYY/MM del
+    // sub-sitemap, así que se usa como fallback (dateFromSitemapPath).
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  eldinamo: {
+    nombre: 'El Dínamo',
+    robots: 'https://www.eldinamo.cl/robots.txt',
+    // Mismo CMS que CNN Chile: index por mes desde 2010 + lasts + news.
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -205,8 +229,12 @@ async function fetchText(url, { cacheKey, cacheDir, staleHours = 24, fresh = fal
 // ---------------------------------------------------------------------------
 // Parseo de XML con regex (sin dependencias, patrón del proyecto)
 // ---------------------------------------------------------------------------
-function extractPairs(xml) {
+function extractPairs(xml, { pathDate = null } = {}) {
   // Devuelve [{loc, lastmod, newsTitle, newsDate}] por bloque <url>...</url>
+  // pathDate: fecha derivada del nombre del sub-sitemap (YYYY-MM-01) para
+  // medios cuyo <lastmod> es la fecha de regeneración y no la del artículo
+  // (ver cnnchile/dateFromSitemapPath). Prevalencia: newsDate (real, con
+  // día) > pathDate (mes del sitemap) > lastmod (puede ser falso/uniforme).
   const out = [];
   const blockRe = /<url>([\s\S]*?)<\/url>/g;
   let m;
@@ -229,10 +257,13 @@ function extractPairs(xml) {
 
 function extractSitemapIndexLocs(xml) {
   // Devuelve las URLs de los sub-sitemaps de un sitemap index.
+  // Se decodifican entidades XML (`&amp;` → `&`): Arc XP (La Tercera, ADN)
+  // pagina sus sub-sitemaps con `?outputType=xml&amp;from=100`, que sin
+  // decodificar devolvería 404 al fetchear.
   const out = [];
   const re = /<loc>([\s\S]*?)<\/loc>/g;
   let m;
-  while ((m = re.exec(xml)) !== null) out.push(m[1].trim());
+  while ((m = re.exec(xml)) !== null) out.push(decodeEntities(m[1].trim()));
   return out;
 }
 
@@ -420,11 +451,14 @@ async function syncMedio(medio, conf, opts) {
       }
       continue;
     }
-    const batch = extractPairs(res.text);
+    // Fecha de fallback desde el path del sub-sitemap (ej. CNN: YYYY/MM).
+    const mm = conf.dateFromSitemapPath?.exec(u);
+    const pathDate = mm ? `${mm[1]}-${mm[2]}-01` : null;
+    const batch = extractPairs(res.text, { pathDate });
     for (const e of batch) {
       const seenBefore = seen.has(e.loc);
       if (!seenBefore) seen.add(e.loc);
-      const fecha = isoDate(e.newsDate) ?? isoDate(e.lastmod);
+      const fecha = isoDate(e.newsDate) ?? pathDate ?? isoDate(e.lastmod);
       if (!fecha) continue;
       const tSlug = e.newsTitle ? null : titleFromSlug(e.loc);
       const entry = {
@@ -440,7 +474,11 @@ async function syncMedio(medio, conf, opts) {
         map.set(e.loc, entry);
         added++;
         dirty.add(year);
-      } else if (titleQuality(entry) > titleQuality(prev)) {
+      } else if (titleQuality(entry) > titleQuality(prev) ||
+                 // Medios con dateFromSitemapPath (CNN): el lastmod puede ser
+                 // la fecha de regeneración (falsa); si la fecha derivada del
+                 // path del sub-sitemap difiere, se actualiza (más confiable).
+                 (conf.dateFromSitemapPath && entry.d !== prev.d)) {
         // Mejora real de título (ej. ahora el news-sitemap trae el real):
         // se actualiza sin borrar la URL. IMPORTANTE: esto puede ocurrir
         // aunque la URL ya se haya visto en OTRO sub-sitemap del mismo run

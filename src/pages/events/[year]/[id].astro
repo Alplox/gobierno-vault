@@ -6,6 +6,8 @@ import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildEventsByBasename, buildIncomingIndex } from '../../../lib/relations';
 import { resolveReferences } from '../../../lib/registry';
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
 import {
   ArrowLeft,
   Calendar,
@@ -20,6 +22,10 @@ import {
   Hash,
   Activity,
   FileText,
+  Volume2,
+  VolumeX,
+  Copy,
+  MessageCircle,
 } from 'lucide-astro';
 import { TIPO_LABELS, TIPO_STYLES } from '../../../lib/eventTypes';
 
@@ -41,6 +47,9 @@ const { event } = Astro.props;
 const { titulo, fecha, tipo, tema, etiquetas, impacto, creado, actualizado } = event.data;
 const filename = event.id.split('/').pop() ?? event.id;
 const { Content } = await render(event);
+
+// URL canónica del evento (origen) para incluirla al copiar.
+const eventUrl = new URL(`/events/${new Date(fecha).getFullYear()}/${filename}/`, Astro.site).href;
 
 const dateObj = new Date(fecha);
 const fechaStr = dateObj.toLocaleDateString('es-ES', {
@@ -67,6 +76,27 @@ const cifraConceptos = [...new Set(entities.cifras.map((c) => c.concepto))].map(
 const refs = resolveReferences(entities.fuentesAll);
 const allEvents = await getAllEvents();
 const connections = getEventConnections(event, allEvents, buildEventsByBasename(allEvents), buildIncomingIndex(allEvents));
+
+// Export markdown (SSG): base = el archivo .md fuente, más sección de referencias con URLs.
+const rawMd = readFileSync(join(process.cwd(), 'src', 'content', 'events', `${event.id}.md`), 'utf8');
+const bodyMd = rawMd.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim();
+const refLines = refs
+  .map((r, i) => `- [${i + 1}] ${r.titulo}${r.url ? ` — ${r.url}` : ''}${r.medio ? ` (${r.medio}${r.autor ? `, ${r.autor}` : ''})` : ''}`)
+  .join('\n');
+const exportMd = [
+  `# ${titulo}`,
+  '',
+  `${bodyMd}`,
+  '',
+  `---`,
+  '',
+  `**Fuente (Gobierno Vault):** ${eventUrl}`,
+  refLines ? `**Referencias:**\n${refLines}` : '',
+].join('\n');
+const chatPrompt = `Analiza y contextualiza este evento y propón fuentes o datos adicionales que lo confirmen o contradigan.\n\nTítulo: ${titulo}\n## Fuentes conocidas:\n${refLines}`;
+// Best-effort: chatgpt.com/?q= prefill el mensaje, pero las URLs se cortan; se usa un prompt corto.
+const chatPrefill = chatPrompt.slice(0, 1500);
+const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
 ---
 
 <Base title={titulo}>
@@ -91,9 +121,35 @@ const connections = getEventConnections(event, allEvents, buildEventsByBasename(
       </div>
     </header>
 
+    <div class="mb-5 flex flex-wrap items-center gap-2.5 not-prose">
+      <button id="btn-tts" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors min-w-[9rem] justify-center">
+        <Volume2 data-tts-icon="idle" class="h-4 w-4" />
+        <VolumeX data-tts-icon="playing" class="h-4 w-4 hidden" />
+        <span data-tts-label>Escuchar</span>
+      </button>
+      <label class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500">
+        Voz
+        <select id="tts-voice" class="text-xs border border-gray-200/70 rounded-lg bg-white px-2 py-1.5 text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 max-w-[16rem]"></select>
+      </label>
+      <span id="tts-msg" class="text-[11px] text-gray-400 font-medium" role="status"></span>
+    </div>
+
     <section class="prose prose-gray max-w-none mb-10 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-sm leading-relaxed text-gray-800">
       <Content />
+
+      <div class="mt-10 pt-5 border-t border-gray-200/70 flex flex-wrap items-center gap-2.5 not-prose">
+        <button id="btn-copy-md" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors">
+          <Copy class="h-4 w-4 shrink-0" />
+          <span data-copy-label>Copiar como Markdown</span>
+        </button>
+        <a id="btn-chatgpt" href={chatGptUrl} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg transition-colors snap-round">
+          <MessageCircle class="h-4 w-4 shrink-0" />
+          <span data-copy-label>Preguntar a ChatGPT</span>
+        </a>
+      </div>
     </section>
+
+    <div id="event-export-data" class="hidden" data-md={exportMd} data-prompt={chatPrompt} aria-hidden="true"></div>
 
     {impacto && (impacto.colectivos?.length > 0 || impacto.sectores?.length > 0) && (
       <section class="mb-8 bg-amber-50/50 border border-amber-200/70 rounded-2xl p-6">
@@ -262,4 +318,362 @@ const connections = getEventConnections(event, allEvents, buildEventsByBasename(
     </footer>
   </article>
 </Base>
+
+<script>
+  // TTS (con selector de voz: navegador + Piper neural) + copiar markdown + ChatGPT.
+  import * as tts from '@realtimex/piper-tts-web';
+  import { play } from 'cuelume';
+  const PIPER_PREFIX = 'piper:';
+  let gvPiperAudio: HTMLAudioElement | null = null;
+  let gvPiperUrl: string | null = null;
+  function gvStopAll() {
+    window.speechSynthesis?.cancel();
+    if (gvPiperAudio && !gvPiperAudio.paused) {
+      gvPiperAudio.pause();
+      gvPiperAudio.src = '';
+    }
+    if (gvPiperUrl) { URL.revokeObjectURL(gvPiperUrl); gvPiperUrl = null; }
+  }
+  if (!(window as any).__gvEventActionsInit) {
+    (window as any).__gvEventActionsInit = true;
+    document.addEventListener('astro:page-load', gvStopAll);
+  }
+  const TTS_KEY = 'gv-tts-voice';
+  function gvVoices() {
+    return window.speechSynthesis?.getVoices() ?? [];
+  }
+  // Voces neurales Piper (es): se descargan la primera vez desde HF CDN y se cachean en OPFS.
+  // 'es_AR-daniela-high' NO existe en el mirror de la librería (diffusionstudio), solo en
+  // rhasspy/piper-voices. Se registra en PATH_MAP y se baja de ahí a OPFS manualmente.
+  const AR_VOICE = 'es_AR-daniela-high';
+  const AR_VOICE_PATH = 'es/es_AR/daniela/high/es_AR-daniela-high.onnx';
+  const AR_BASE = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/';
+  function gvRegArVoice() {
+    try { (tts as any).PATH_MAP[AR_VOICE] = AR_VOICE_PATH; } catch { /* ya no soporta mutar */ }
+  }
+  // Descarga .onnx y .onnx.json directo a OPFS (misma estructura de cache que la librería).
+  async function gvCacheArFiles(onProgress?: (p: number) => void) {
+    const blame = (u: string) => u.split('/').at(-1) as string;
+    const opts = { method: 'GET' };
+    const total = 2;
+    let doneFiles = 0;
+    const root = await navigator.storage.getDirectory();
+    const dir = await root.getDirectoryHandle('piper', { create: true });
+    for (const suffix of ['', '.json']) {
+      const url = `${AR_BASE}${AR_VOICE_PATH}${suffix}`;
+      try {
+        const file = await dir.getFileHandle(blame(url), { create: false });
+        await file.getFile(); // existe ya → no re-descarga
+        doneFiles++;
+        onProgress?.(Math.round((doneFiles / total) * 100));
+        continue;
+      } catch { /* no existe, descargar */ }
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`HTTP ${res.status} para ${blame(url)}`);
+      const blob = await res.blob();
+      const file = await dir.getFileHandle(blame(url), { create: true });
+      const w = await file.createWritable();
+      await w.write(blob);
+      await w.close();
+      doneFiles++;
+      onProgress?.(Math.round((doneFiles / total) * 100));
+    }
+  }
+  let gvPiperFilled = false;
+  async function gvFillPiperVoices() {
+    if (gvPiperFilled) return;
+    const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
+    if (!sel) return;
+    try {
+      gvRegArVoice();
+      const all = await tts.voices();
+      const es = all.filter((v) => v.key.startsWith('es_'));
+      if (es.length === 0) return;
+      const saved = localStorage.getItem(TTS_KEY);
+      const group = document.createElement('optgroup');
+      group.label = 'Voz neural (Piper, descarga única)';
+      for (const v of es) {
+        const opt = document.createElement('option');
+        opt.value = PIPER_PREFIX + v.key;
+        opt.textContent = `${v.name} (${v.language?.code ?? v.key}) Piper`;
+        if (saved === opt.value) opt.selected = true;
+        group.appendChild(opt);
+      }
+      const arOpt = document.createElement('option');
+      arOpt.value = PIPER_PREFIX + AR_VOICE;
+      arOpt.textContent = 'Daniela (es_AR) Piper';
+      if (saved === arOpt.value) arOpt.selected = true;
+      group.appendChild(arOpt);
+      sel.appendChild(group);
+      sel.removeAttribute('disabled');
+      gvPiperFilled = true;
+    } catch (err) {
+      console.warn('Piper no disponible', err);
+    }
+  }
+  // Rellena el <select>: primero las voces en español de la plataforma/neurales,
+  // luego el resto (por si no hay es, que al menos sigan funcionando).
+  function gvFillVoices() {
+    const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
+    if (!sel || sel.options.length > 0) return;
+    const all = gvVoices();
+    const es = all.filter((v) => v.lang.toLowerCase().startsWith('es'));
+    const rest = all.filter((v) => !es.includes(v));
+    const sorted = [...es, ...rest];
+    if (sorted.length === 0) return;
+    // Voz guardada o, por defecto, la mejor es-CL/es-ES.
+    const saved = localStorage.getItem(TTS_KEY);
+    const best =
+      sorted.find((v) => v.name === saved) ??
+      sorted.find((v) => v.lang.startsWith('es-CL')) ??
+      sorted.find((v) => v.lang.startsWith('es-ES')) ??
+      sorted.find((v) => v.lang.startsWith('es')) ??
+      sorted[0];
+    for (const v of sorted) {
+      const opt = document.createElement('option');
+      opt.value = v.name;
+      opt.textContent = `${v.name} (${v.lang})`;
+      if (v === best) opt.selected = true;
+      sel.appendChild(opt);
+    }
+    sel.removeAttribute('disabled');
+  }
+  function gvSpanishVoice(voices: SpeechSynthesisVoice[]) {
+    return (
+      voices.find((v) => v.lang.startsWith('es-CL')) ??
+      voices.find((v) => v.lang.startsWith('es-ES')) ??
+      voices.find((v) => v.lang.startsWith('es'))
+    );
+  }
+  function gvSetTtsPlaying(playing: boolean) {
+    document.querySelector('[data-tts-icon="playing"]')?.classList.toggle('hidden', !playing);
+    document.querySelector('[data-tts-icon="idle"]')?.classList.toggle('hidden', playing);
+  }
+  function gvUtt(msg: HTMLElement) {
+    const label = document.querySelector('[data-tts-label]');
+    if (label) label.textContent = 'Escuchar';
+    gvSetTtsPlaying(false);
+    if (msg) msg.textContent = '';
+  }
+  let gvFilled = false;
+  function gvEnsureVoices() {
+    if (gvFilled || gvVoices().length > 0) { gvFillVoices(); gvFilled = true; }
+  }
+  // Piper: primera escucha descarga el modelo (~60-75MB, 1 vez, a OPFS); luego sintetiza offline.
+  let gvPiperBusy = false;
+  // Pre-descarga la voz al seleccionarla (evento 'change'), no al hacer play; evita la espera del modelo.
+  const gvPreloading = new Set<string>();
+  async function gvPreloadPiper(voiceId: string) {
+    if (gvPreloading.has(voiceId)) return;
+    gvPreloading.add(voiceId);
+    const label = document.querySelector('[data-tts-label]');
+    const msg = document.getElementById('tts-msg');
+    try {
+      const stored = await tts.stored();
+      if (stored.includes(voiceId)) return; // ya cacheada en OPFS, no bajar de nuevo
+      if (label) label.textContent = 'Descargando…';
+      if (msg) msg.textContent = 'Preparando voz… (primera vez)';
+      if (voiceId === AR_VOICE) {
+        await gvCacheArFiles((p) => {
+          if (msg) msg.textContent = `Preparando voz… ${p}%`;
+        });
+      } else {
+        // 'download' cachea en OPFS sin sintetizar; el play posterior es instantáneo.
+        await tts.download(voiceId, (p) => {
+          if (msg && p.total > 0) msg.textContent = `Preparando voz… ${Math.round((p.loaded / p.total) * 100)}%`;
+        });
+      }
+      if (label) label.textContent = 'Escuchar';
+      if (msg) msg.textContent = '';
+    } catch (err) {
+      console.warn('Pre-descarga Piper falló', err);
+    } finally {
+      gvPreloading.delete(voiceId);
+    }
+  }
+  function gvReadText(prose: Element | null): string {
+    if (!prose) return '';
+    const clone = prose.cloneNode(true) as Element;
+    clone.querySelectorAll('.source-ref-tip, .not-prose').forEach((el) => el.remove());
+    return (clone.textContent ?? '').replace(/\s+/g, ' ').trim();
+  }
+  async function gvPiperToggle(voiceId: string, prose: Element | null, msg: HTMLElement | null) {
+    const label = document.querySelector('[data-tts-label]');
+    if (gvPiperBusy) return;
+    if (gvPiperAudio && !gvPiperAudio.paused) { gvStopAll(); gvUtt(msg); return; }
+    const text = gvReadText(prose);
+    if (!text) return;
+    gvPiperBusy = true;
+    if (label) label.textContent = 'Descargando…';
+    if (msg) msg.textContent = 'Descargando modelo de voz (primera vez)…';
+    try {
+      // El phonemizer wasm falla con textos muy largos (codes espeak); se trocea y se unen los PCM.
+      const wav = await gvPiperSpeak(text, voiceId, (t) => {
+        if (msg) msg.textContent = t;
+      });
+      if (!gvPiperAudio) gvPiperAudio = new Audio();
+      gvPiperUrl = URL.createObjectURL(wav);
+      gvPiperAudio.src = gvPiperUrl;
+      gvPiperAudio.onended = () => { gvStopAll(); gvUtt(msg); };
+      await gvPiperAudio.play();
+      if (label) label.textContent = 'Detener';
+      gvSetTtsPlaying(true);
+      if (msg) msg.textContent = 'Leyendo con voz neural…';
+    } catch (err) {
+      console.error('Piper TTS falló', err);
+      gvUtt(msg);
+      if (msg) msg.textContent = 'Voz neural no disponible en tu red. Prueba una voz del navegador.';
+    } finally {
+      gvPiperBusy = false;
+    }
+  }
+  // Sintetiza por trozos de PCHUNK chars (el phononizer wasm aborta con inputs muy largos)
+  // y concatena los PCM mono 16-bit en un solo WAV (misma tasa, misma voz por llamada).
+  const PCHUNK = 900;
+  function gvChunkText(text: string, max: number): string[] {
+    if (text.length <= max) return [text];
+    const out: string[] = [];
+    let cur = '';
+    for (const para of text.split('\n')) {
+      if (cur.length + para.length + 1 > max && cur) {
+        out.push(cur.trim());
+        cur = '';
+      }
+      if (para.length > max) {
+        // párrafo gigante: cortar a la mitad aprox por palabra
+        let rest = para;
+        while (rest.length > max) {
+          let cut = rest.lastIndexOf(' ', max);
+          if (cut === -1) cut = max;
+          out.push(rest.slice(0, cut).trim());
+          rest = rest.slice(cut).trim();
+        }
+        cur = (cur + ' ' + rest).trim();
+      } else {
+        cur = (cur + ' ' + para).trim();
+      }
+    }
+    if (cur) out.push(cur.trim());
+    return out;
+  }
+  async function gvPiperSpeak(text: string, voiceId: string, onMsg: (m: string) => void): Promise<Blob> {
+    const parts: Int16Array[] = [];
+    let sampleRate = 22050;
+    const chunks = gvChunkText(text, PCHUNK);
+    for (let i = 0; i < chunks.length; i++) {
+      if (chunks.length > 1) onMsg(`Sintetizando… ${i + 1}/${chunks.length}`);
+      const wav = await tts.predict({ text: chunks[i], voiceId }, (p) => {
+        if (p.total > 0) onMsg(`Descargando voz… ${Math.round((p.loaded / p.total) * 100)}%`);
+      });
+      const buf = new Uint8Array(await wav.arrayBuffer());
+      if (buf.byteLength < 44) throw new Error('WAV inválido');
+      const dv = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
+      if (i === 0) sampleRate = dv.getUint32(24, true);
+      parts.push(new Int16Array(buf.buffer, buf.byteOffset + 44, (buf.byteLength - 44) / 2));
+    }
+    if (parts.length === 0) throw new Error('Sin audio');
+    const totalSamples = parts.reduce((n, p) => n + p.length, 0);
+    const pcm = new Int16Array(totalSamples);
+    let off = 0;
+    for (const p of parts) { pcm.set(p, off); off += p.length; }
+    return gvWav(pcm, sampleRate);
+  }
+  function gvWav(pcm: Int16Array, sampleRate: number): Blob {
+    const header = 44;
+    const ab = new ArrayBuffer(header + pcm.length * 2);
+    const v = new DataView(ab);
+    v.setUint32(0, 1179011410, true); // RIFF
+    v.setUint32(4, ab.byteLength - 8, true);
+    v.setUint32(8, 1163280727, true); // WAVE
+    v.setUint32(12, 544501094, true); // fmt
+    v.setUint32(16, 16, true);
+    v.setUint16(20, 1, true);
+    v.setUint16(22, 1, true);
+    v.setUint32(24, sampleRate, true);
+    v.setUint32(28, sampleRate * 2, true);
+    v.setUint16(32, 2, true);
+    v.setUint16(34, 16, true);
+    v.setUint32(36, 1635017060, true); // data
+    v.setUint32(40, pcm.length * 2, true);
+    new Int16Array(ab, header).set(pcm);
+    return new Blob([ab], { type: 'audio/wav' });
+  }
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const prose = document.querySelector('.prose');
+    const exportEl = document.getElementById('event-export-data');
+    const promptEl = document.getElementById('event-export-data');
+    gvEnsureVoices();
+
+    if (target.closest('#btn-tts')) {
+      e.preventDefault();
+      const msg = document.getElementById('tts-msg');
+      const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
+      const voiceId = sel?.value ?? '';
+      if (voiceId.startsWith(PIPER_PREFIX)) {
+        gvPiperToggle(voiceId.slice(PIPER_PREFIX.length), prose, msg);
+        return;
+      }
+      if (!window.speechSynthesis) return;
+      if (speechSynthesis.speaking || speechSynthesis.paused) {
+        speechSynthesis.cancel();
+        gvUtt(msg);
+        return;
+      }
+      const text = gvReadText(prose);
+      if (!text) return;
+      const utter = new SpeechSynthesisUtterance(text);
+      const voice = (sel && gvVoices().find((v) => v.name === sel.value)) || gvSpanishVoice(gvVoices());
+      if (voice) { utter.voice = voice; utter.lang = voice.lang; }
+      utter.rate = 0.98;
+      utter.onend = utter.onerror = () => gvUtt(msg);
+      speechSynthesis.speak(utter);
+      const label = document.querySelector('[data-tts-label]');
+      if (label) label.textContent = 'Detener';
+      gvSetTtsPlaying(true);
+      if (msg) msg.textContent = 'Lectura en voz alta en progreso…';
+      return;
+    }
+    if (target.closest('#tts-voice')) {
+      const selectEl = target as HTMLSelectElement;
+      localStorage.setItem(TTS_KEY, selectEl.value);
+      if (selectEl.value.startsWith(PIPER_PREFIX)) gvPreloadPiper(selectEl.value.slice(PIPER_PREFIX.length));
+      return;
+    }
+    if (target.closest('#btn-copy-md')) {
+      if (!exportEl) return;
+      const btn = target.closest('#btn-copy-md');
+      navigator.clipboard.writeText(exportEl.getAttribute('data-md') ?? '').then(() => {
+        play('success');
+        const label = btn?.querySelector('[data-copy-label]');
+        if (label) label.textContent = 'Copiado';
+        setTimeout(() => { if (label) label.textContent = 'Copiar como Markdown'; }, 2000);
+      });
+      return;
+    }
+    if (target.closest('#btn-chatgpt')) {
+      const btn = target.closest('#btn-chatgpt');
+      if (navigator.clipboard) {
+        navigator.clipboard.writeText(promptEl?.getAttribute('data-prompt') ?? '').then(() => {
+          play('success');
+          const label = btn?.querySelector('[data-copy-label]');
+          if (label) label.textContent = 'Prompt copiado';
+          setTimeout(() => { if (label) label.textContent = 'Preguntar a ChatGPT'; }, 2500);
+        }).catch(() => {});
+      }
+    }
+  });
+  // Chrome/Edge cargan las voces de forma asíncrona; re-llena cuando estén listas.
+  if (window.speechSynthesis) {
+    window.speechSynthesis.addEventListener?.('voiceschanged', () => { gvFillVoices(); gvFilled = true; });
+  }
+  document.addEventListener('astro:page-load', gvEnsureVoices);
+  document.addEventListener('astro:page-load', () => { gvFillPiperVoices(); });
+  document.addEventListener('change', (e) => {
+    const target = e.target as HTMLSelectElement | null;
+    if (target?.id === 'tts-voice' && target.value.startsWith(PIPER_PREFIX)) {
+      gvPreloadPiper(target.value.slice(PIPER_PREFIX.length));
+    }
+  });
+</script>
 

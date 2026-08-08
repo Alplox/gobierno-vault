@@ -101,6 +101,7 @@ const payload = {
 </div>
 
 <script>
+  import { play } from 'cuelume';
   const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
   function fechaApa(iso: string): string {
@@ -111,6 +112,7 @@ const payload = {
 
   function copyText(text: string, btn: HTMLElement): void {
     navigator.clipboard.writeText(text).then(() => {
+      play('success');
       const label = btn.querySelector('.copy-label');
       btn.classList.add('bg-green-100', 'text-green-700');
       if (label) label.textContent = 'Copiado';

@@ -195,6 +195,8 @@ El equipo presidencial decidió interponer denuncia ante la PDI [[source/theclin
     - Segun corresponda intentar obtener mayor contexto para reducir sesgos usando fuentes listadas en `FUENTES_GUBERNAMENTALES.md`.
 11. **Personas/orgs nuevas**: agregar a `entities.yaml`.
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
+13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS.md` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
+14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (`biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`, `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
 
 ## Pagina /events: filtros y busqueda en cliente
 
@@ -216,6 +218,20 @@ y la busqueda se aplican en el cliente sobre un dataset JSON completo que viaja 
 - **Persistencia**: abrir los `<details>` programáticamente al filtrar NO debe
   guardarse en localStorage — el listener de `toggle` en `events/index.astro`
   respeta `window.__gvSkipPersist` (lo setea `applyFilters`).
+
+## TTS del detalle de evento (voz del navegador + Piper neural)
+
+`src/pages/events/[year]/[id].astro` tiene lector TTS (`#btn-tts` + `<select id="tts-voice">`).
+En tiempo de build NO se agenda nada; todo corre en cliente sobre el texto de `.prose`.
+
+- **Voces**: primero las de `speechSynthesis` (es-CL/es-ES primero), y como `optgroup`
+  independiente las voces neurales Piper (`@realtimex/piper-tts-web`). Piper es un
+  peer de `onnxruntime-web` (postinstall de `protobufjs` autorizado en `allowBuilds`).
+- **Piper = CDN lazy**: `tts.voices()` (fetch a HF), `tts.predict()` baja el modelo
+  (~60-75MB, una sola vez → OPFS) y sintetiza en el navegador. `voiceId` usada viene
+  del value del `<option>` con prefijo `piper:`. El WASM/onnx salen de jsdelivr en runtime.
+- **Flags**: `window.__gvEventActionsInit` (una sola vez) para listeners globales;
+  `astro:page-load` para llenar voces y cancelar reproducción (`gvStopAll`) al navegar.
 
 ## Campo `cargos` (historial de cargos de personas)
 
@@ -260,6 +276,9 @@ build de esbuild (necesario para el binario nativo; sin esto el build de Astro
 falla con `ERR_PNPM_IGNORED_BUILDS`). Debe incluir `packages: []` (si falta, pnpm 10
 del CI falla con `packages field missing or empty` al correr `pnpm install --frozen-lockfile`).
 No eliminar ninguno de los dos archivos.
+`protobufjs` (transitiva de `onnxruntime-web`, peer de `@realtimex/piper-tts-web`) tambien
+esta en `allowBuilds` de `pnpm-workspace.yaml` porque tiene postinstall (sin autorizacion el
+`pnpm install` del CI falla con `ERR_PNPM_IGNORED_BUILDS` y el build aborta).
 
 **Despliegue (Cloudflare Pages):** el sitio se despliega con `pnpm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `pnpm run preview` (`wrangler pages dev dist`).
 
@@ -338,11 +357,14 @@ NO guarda el cuerpo de los artículos.
 | `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 100 | 1 |
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.415 | 18 |
+| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 226.812 | 16 |
 | `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.005 | 1 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.683 | 10 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 250.948 | 17 |
 | `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 101 | 1 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
 | `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 5.815 | 7 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 8.421 | 1 |
 | `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.756 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
@@ -363,14 +385,26 @@ Notas de plataforma (complemento manual, no se reescribe):
   `n:` — el parser acepta `news:` o `n:`).
 - **Fast Check CL**: sitemap custom con `includeRe` `/(?:posts-\d{4}|news)\.xml$/i` →
   `posts-YYYY.xml` + `news.xml` (títulos reales); descarta `pages/categories/authors.xml`.
-- **ADN Radio**: Arc XP (~100 URLs recientes, sin títulos). **BioBio**: sitemap mensual +
-  news-sitemap. **Cooperativa**: sitemap de páginas + news.
+- **ADN Radio**: Arc XP (~100 URLs recientes, sin títulos). **La Tercera**: Arc XP paginado
+  (`sitemap-index` → ~100 sub-sitemaps `?from=N`, ~10.000 artículos recientes; `news-sitemap-index`
+  trae títulos reales; los `<loc>` del index llegan con `&amp;` que el parser decodifica).
+  **BioBio**: sitemap mensual + news-sitemap. **Cooperativa**: sitemap de páginas + news.
+- **CNN Chile / El Dínamo** (mismo CMS): `_files/sitemaps/sitemap_index.xml` (sub-sitemaps por
+  mes desde 2011/2010) + `sitemap_lasts.xml` + `sitemap_news.xml` (títulos reales). Ojo CNN:
+  el `<lastmod>` de los sub-sitemaps mensuales es la fecha de regeneración (uniforme y falsa);
+  el script usa `dateFromSitemapPath` (path `YYYY/MM`) para fechar los artículos.
 
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~56MB (vs ~357MB raw / 127MB v1). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
 — si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
 pasada mejora la entrada (`news` > `slug`).
+
+**Corrección de fechas (CNN, `dateFromSitemapPath`):** en modo merge la fecha solo se actualiza
+si el cambio es dentro del mismo año (la URL se busca en el mapa del año de la nueva fecha). Si un
+medio quedó con fechas falsas por un `<lastmod>` uniforme (caso CNN con el crawl de 2026-04-08),
+reconstruir con `pnpm run sitemaps-sync -- cnnchile --replace` (el sitemap lista todo el historial,
+así que es seguro); después los resync incrementales no vuelven a degradar fechas.
 
 **Privacidad e integridad del .gvault:**
 - La cabecera INFORMACION usa **rutas portables** (relativas al repo o solo el
@@ -399,10 +433,31 @@ pasada mejora la entrada (`news` > `slug`).
   lista resultados más recientes primero y deja elegir. Filtros: `--medio <slug>` y
   `--fecha YYYY-MM-DD`.
 - Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
-  `ciper`, `theclinic`, `elmostrador`, `fastcheck`. Si el dominio no está en el catálogo,
-  el flujo es el clásico (fetch + mirrors).
+  `ciper`, `theclinic`, `elmostrador`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`.
+  Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
+
+### Uso del catálogo por agentes (antes de búsquedas online)
+
+Regla general (también en "Reglas al crear/modificar eventos", punto 14): al investigar un tema,
+los agentes deben consultar el catálogo local ANTES de hacer búsquedas web, al menos para los
+medios guardados:
+
+```bash
+# buscar artículos por término en un medio (URL + fecha + título si es news)
+grep -ih 'secreto bancario' sitemaps/theclinic/*.jsonl
+# buscar en todos los medios guardados a la vez
+for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
+```
+
+- El catálogo entrega solo URL + fecha (+ título real en los news-sitemaps de los últimos días);
+  NO contiene el cuerpo del artículo. Después del match hay que leer la URL (`read_url` o los
+  mirrors de la sección "Extraccion de contenido web").
+- Si el término no aparece o el medio no está en el catálogo, recién ahí usar búsquedas online.
+- Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
+  `adnradio`, `ciper`, `factchecking`, `fastcheck`. (Los JSONL no se commitean; regenerar con
+  `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 
 ## Respaldo / Restauracion (backup offline publico)
 
@@ -462,17 +517,17 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 614
+**Total de eventos:** 620
 
 **Eventos por año:**
-- 2026: 490
+- 2026: 495
 - 2025: 35
 - 2024: 13
 - 2023: 10
 - 2022: 14
 - 2021: 8
 - 2020: 15
-- 2019: 12
+- 2019: 13
 - 2018: 3
 - 2015: 5
 - 2014: 1
@@ -482,32 +537,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (231)
-- Economia (116)
-- Justicia (112)
-- Administración pública (70)
-- Defensa y seguridad (70)
-- Derechos humanos (56)
+- Politica (230)
+- Justicia (119)
+- Economia (115)
+- Defensa y seguridad (73)
+- Administración pública (71)
+- Derechos humanos (58)
 - Cambios en el gabinete (56)
-- Finanzas publicas (56)
 - Proceso legislativo (55)
 - Emergencia y catástrofes (54)
+- Finanzas publicas (54)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (146)
+- accion (147)
 - declaracion (86)
-- reaccion (80)
+- reaccion (82)
 - resultado (65)
 - publicacion (58)
-- investigacion (51)
+- investigacion (54)
 - anuncio (46)
 - fallo_judicial (25)
 - votacion (14)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 710
-- Organizaciones: 382
-- Cifras: 441
-- Fuentes: 1969
+- Personas: 720
+- Organizaciones: 384
+- Cifras: 445
+- Fuentes: 1996
 - Temas: 74

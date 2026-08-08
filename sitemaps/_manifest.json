@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-07T23:57:42.926Z",
+  "actualizado": "2026-08-08T15:37:33.853Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -65,6 +65,27 @@
       "articulos": 5815,
       "nuevos": 5815,
       "años": 7
+    },
+    "latercera": {
+      "nombre": "La Tercera",
+      "ultima_sync": "2026-08-08T15:35:46.098Z",
+      "articulos": 8421,
+      "nuevos": 8421,
+      "años": 1
+    },
+    "cnnchile": {
+      "nombre": "CNN Chile",
+      "ultima_sync": "2026-08-08T15:37:33.853Z",
+      "articulos": 226812,
+      "nuevos": 226812,
+      "años": 16
+    },
+    "eldinamo": {
+      "nombre": "El Dínamo",
+      "ultima_sync": "2026-08-08T15:36:04.160Z",
+      "articulos": 250948,
+      "nuevos": 250948,
+      "años": 17
     }
   }
 }
