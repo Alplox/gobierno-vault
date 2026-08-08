@@ -1,0 +1,8 @@
+# Catálogo de sitemaps — datos locales, NO commiteados (decisión 2026-08-07).
+# El catálogo JSONL y su snapshot .gvault (único o partido .partN) quedan solo
+# en disco local; son regenerables con `pnpm run sitemaps-sync` y
+# `pnpm run sitemaps-backup`.
+# Lo que SÍ se commitea: los scripts en `scripts/`, `package.json`,
+# `_manifest.json` (estado de sync) y `README.md` (índice regenerable).
+.cache/
+*.jsonl

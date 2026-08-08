@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
+  "actualizado": "2026-08-07T23:57:42.926Z",
+  "medios": {
+    "cooperativa": {
+      "nombre": "Cooperativa",
+      "ultima_sync": "2026-08-07T22:52:27.952Z",
+      "articulos": 1005,
+      "nuevos": 4,
+      "años": 1
+    },
+    "elclarin": {
+      "nombre": "El Clarín",
+      "ultima_sync": "2026-08-07T22:50:46.803Z",
+      "articulos": 20683,
+      "nuevos": 0,
+      "años": 10
+    },
+    "biobiochile": {
+      "nombre": "Radio Bío Bío",
+      "ultima_sync": "2026-08-07T22:50:49.540Z",
+      "articulos": 1170827,
+      "nuevos": 0,
+      "años": 18
+    },
+    "adnradio": {
+      "nombre": "ADN Radio",
+      "ultima_sync": "2026-08-07T22:50:49.542Z",
+      "articulos": 100,
+      "nuevos": 0,
+      "años": 1
+    },
+    "factchecking": {
+      "nombre": "Factchecking.cl",
+      "ultima_sync": "2026-08-07T22:50:49.543Z",
+      "articulos": 14,
+      "nuevos": 0,
+      "años": 5
+    },
+    "ciper": {
+      "nombre": "CIPER Chile",
+      "ultima_sync": "2026-08-07T22:50:49.568Z",
+      "articulos": 8415,
+      "nuevos": 0,
+      "años": 18
+    },
+    "theclinic": {
+      "nombre": "The Clinic",
+      "ultima_sync": "2026-08-07T23:57:42.926Z",
+      "articulos": 191756,
+      "nuevos": 191756,
+      "años": 19
+    },
+    "elmostrador": {
+      "nombre": "El Mostrador",
+      "ultima_sync": "2026-08-07T23:21:51.046Z",
+      "articulos": 101,
+      "nuevos": 0,
+      "años": 1
+    },
+    "fastcheck": {
+      "nombre": "Fast Check CL",
+      "ultima_sync": "2026-08-07T23:21:54.484Z",
+      "articulos": 5815,
+      "nuevos": 5815,
+      "años": 7
+    }
+  }
+}

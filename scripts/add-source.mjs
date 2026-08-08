@@ -7,13 +7,25 @@
  *   pnpm run add-source -- https://www.latercera.com/articulo/...
  *   pnpm run add-source -- --append https://www.t13.cl/noticia/...
  *   pnpm run add-source            (pregunta interactiva por la URL)
+ *   pnpm run add-source -- --search "reforma previsional"   (busca en el catálogo)
  *
  * Flags:
  *   --append   Agrega el bloque generado directamente al final de sources.yaml
  *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda
+ *   --catalog-only  No hace fetch web: usa los datos del catálogo de sitemaps
+ *                   (título/fecha/medio) si la URL está indexada
+ *   --search <texto>  Busca en el catálogo local de sitemaps (título/URL/fecha)
+ *                   y deja elegir un artículo; con --fecha y --medio filtra más
+ *   --fecha YYYY-MM-DD  Filtro de fecha para --search
+ *   --medio <slug>     Filtro de medio para --search (elclarin, biobiochile,
+ *                   cooperativa, adnradio, factchecking, ciper)
+ *
+ * Notas:
+ * - Antes de hacer fetch, consulta el catálogo de sitemaps (si existe): si la
+ *   URL ya está indexada, pre-carga título/fecha/medio y puede saltarse la red.
  */
 
-import { readFileSync, appendFileSync } from 'node:fs';
+import { readFileSync, appendFileSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import readline from 'node:readline/promises';
@@ -35,9 +47,15 @@ const COMMON_UA =
 // ---------------------------------------------------------------------------
 // Herramientas de terminal
 // ---------------------------------------------------------------------------
-const rl = readline.createInterface({ input, output });
+let rl = readline.createInterface({ input, output });
+let stdinEnded = false;
+// Si el stdin llega a EOF (entrada piped que se agota), las preguntas
+// restantes devuelven el default en vez de colgarse o reventar con
+// ERR_USE_AFTER_CLOSE. En uso interactivo (terminal) esto no ocurre.
+rl.on('close', () => { stdinEnded = true; });
 
 async function ask(question, defaultValue) {
+  if (stdinEnded) return defaultValue !== undefined ? String(defaultValue) : '';
   const suffix = defaultValue !== undefined ? ` [${defaultValue}]` : '';
   const answer = (await rl.question(`${question}${suffix}: `)).trim();
   return answer === '' && defaultValue !== undefined ? String(defaultValue) : answer;
@@ -252,6 +270,177 @@ function buildDomainMedioMap() {
 }
 
 // ---------------------------------------------------------------------------
+// Catálogo de sitemaps (índice local de prensa, ver sitemaps/README.md)
+// ---------------------------------------------------------------------------
+const CATALOG_DIR = join(ROOT, 'sitemaps');
+
+// dominio -> slug de medio en el catálogo
+const CATALOG_MEDIO_BY_DOMAIN = {
+  'elclarin.cl': 'elclarin',
+  'biobiochile.cl': 'biobiochile',
+  'cooperativa.cl': 'cooperativa',
+  'adnradio.cl': 'adnradio',
+  'factchecking.cl': 'factchecking',
+  'ciperchile.cl': 'ciper',
+  'theclinic.cl': 'theclinic',
+  'elmostrador.cl': 'elmostrador',
+  'fastcheck.cl': 'fastcheck',
+};
+
+const CATALOG_MEDIO_NAMES = {
+  elclarin: 'El Clarín',
+  biobiochile: 'Radio Bío Bío',
+  cooperativa: 'Cooperativa',
+  adnradio: 'ADN Radio',
+  factchecking: 'Factchecking.cl',
+  ciper: 'CIPER Chile',
+  theclinic: 'The Clinic',
+  elmostrador: 'El Mostrador',
+  fastcheck: 'Fast Check CL',
+};
+
+function catalogExists() {
+  return existsSync(CATALOG_DIR);
+}
+
+function catalogMedioForHost(host) {
+  return CATALOG_MEDIO_BY_DOMAIN[host] || null;
+}
+
+// Normaliza una URL para comparar con las del catálogo (quita hash, params de
+// tracking y slash final; minúsculas).
+function normalizeUrlForMatch(url) {
+  try {
+    const u = new URL(url);
+    u.hash = '';
+    u.hostname = u.hostname.replace(/^www\./i, ''); // el catálogo mezcla www y no-www
+    for (const k of [...u.searchParams.keys()]) {
+      if (/^(utm_|fbclid|gclid|ref|source|mc_|s|i|p)/i.test(k)) u.searchParams.delete(k);
+    }
+    return u.toString().replace(/\/+$/, '').toLowerCase();
+  } catch {
+    return String(url).replace(/\/+$/, '').toLowerCase();
+  }
+}
+
+// Año candidato dentro de una URL (sirve para acotar la búsqueda).
+function yearFromUrl(url) {
+  const m = String(url).match(/20\d{2}/);
+  return m ? m[0] : null;
+}
+
+// Archivos de un medio del catálogo, del año más reciente al más antiguo.
+function catalogFilesFor(medio) {
+  const dir = join(CATALOG_DIR, medio);
+  if (!existsSync(dir)) return [];
+  return readdirSync(dir)
+    .filter((f) => /^\d{4}\.jsonl$/.test(f))
+    .sort((a, b) => b.localeCompare(a));
+}
+
+// Busca una URL exacta en el catálogo. Devuelve { medio, entry, year } o null.
+function lookupCatalogUrl(url) {
+  if (!catalogExists()) return null;
+  const medio = catalogMedioForHost(hostnameOf(url));
+  if (!medio) return null;
+  const target = normalizeUrlForMatch(url);
+  // Pre-filtro barato: si el path no aparece crudo en el archivo, saltar.
+  let pathCore = '';
+  try {
+    pathCore = new URL(url).pathname.replace(/\/+$/, '').toLowerCase();
+  } catch { /* sin pathCore */ }
+  const yearHint = yearFromUrl(url);
+  const files = catalogFilesFor(medio);
+  const ordered = yearHint
+    ? files.filter((f) => f.startsWith(yearHint)).concat(files.filter((f) => !f.startsWith(yearHint)))
+    : files;
+  for (const f of ordered) {
+    const raw = readFileSync(join(CATALOG_DIR, medio, f), 'utf8');
+    if (pathCore && !raw.includes(pathCore)) continue;
+    for (const line of raw.split('\n')) {
+      if (!line.trim()) continue;
+      try {
+        const e = JSON.parse(line);
+        if (normalizeUrlForMatch(e.u) === target) {
+          return { medio, entry: e, year: f.slice(0, 4) };
+        }
+      } catch { /* línea corrupta: se omite */ }
+    }
+  }
+  return null;
+}
+
+// Busca por texto en el catálogo (título/URL/fecha) con filtros opcionales.
+// Devuelve hasta MAX_RESULTS resultados; los archivos (años) se recorren del
+// más reciente al más antiguo y los medios livianos antes que BioBio.
+async function catalogSearchAndPick(query, fechaFilter, medioFilter) {
+  const MAX_RESULTS = 25;
+  const results = [];
+  // BioBio tiene ~1.17M líneas / 307MB: escanearlo completo sin --medio es
+  // lento. Los medios livianos van primero (rompe temprano al llenar 25), y
+  // BioBio solo se lee si los demás no alcanzaron resultados.
+  const heavy = 'biobiochile';
+  const medios = medioFilter
+    ? [medioFilter]
+    : Object.keys(CATALOG_MEDIO_NAMES).filter((m) => m !== heavy).concat(heavy);
+  if (!medioFilter) {
+    logInfo('Buscando en todo el catálogo (6 medios). Para acotar usa --medio <slug>.');
+  }
+  for (const medio of medios) {
+    if (results.length >= MAX_RESULTS) break;
+    if (medio === heavy && !medioFilter) {
+      logWarn('Escaneando Radio Bío Bío (~307MB); si el término es raro esto puede tardar.');
+    }
+    const files = catalogFilesFor(medio);
+    for (const f of files) {
+      if (results.length >= MAX_RESULTS) break;
+      const year = f.slice(0, 4);
+      if (fechaFilter && year !== fechaFilter.slice(0, 4)) continue;
+      let raw;
+      try {
+        raw = readFileSync(join(CATALOG_DIR, medio, f), 'utf8');
+      } catch {
+        continue;
+      }
+      const q = String(query ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      for (const line of raw.split('\n')) {
+        if (!line.trim()) continue;
+        try {
+          const e = JSON.parse(line);
+          if (fechaFilter && e.d !== fechaFilter) continue;
+          if (q) {
+            const haystack = `${e.t ?? ''} ${e.u} ${e.d}`
+              .toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+            if (!haystack.includes(q)) continue;
+          }
+          results.push({ medio, entry: e, year });
+          if (results.length >= MAX_RESULTS) break;
+        } catch { /* línea corrupta */ }
+      }
+    }
+  }
+
+  if (results.length === 0) {
+    logWarn('Sin resultados en el catálogo. (Para búsquedas exhaustivas usa grep sobre sitemaps/<medio>/<año>.jsonl).');
+    return null;
+  }
+  logOk(`${results.length} resultado(s) en el catálogo de sitemaps:`);
+  results.forEach((r, i) => {
+    const nombre = CATALOG_MEDIO_NAMES[r.medio] ?? r.medio;
+    const titulo = r.entry.t ? ` — ${r.entry.t}` : '';
+    console.log(`  [${String(i + 1).padStart(2)}] ${r.entry.d} | ${nombre}${titulo}`);
+    console.log(`        ${r.entry.u}`);
+  });
+  console.log('');
+  const pick = await ask('Elegir un artículo (número) o Enter para salir');
+  const n = parseInt(pick, 10);
+  if (Number.isInteger(n) && n >= 1 && n <= results.length) {
+    return results[n - 1];
+  }
+  return null;
+}
+
+// ---------------------------------------------------------------------------
 // Fetch con fallback a espejo
 // ---------------------------------------------------------------------------
 async function fetchText(url, timeoutMs = 15000) {
@@ -307,13 +496,39 @@ function buildBlock(id, fields) {
 async function main() {
   const args = process.argv.slice(2);
   const flags = new Set(args.filter((a) => a.startsWith('--')));
-  const urlArg = args.find((a) => !a.startsWith('--'));
+  const flagWithValue = new Set(['--search', '--fecha', '--medio']);
+  const urlArg = args.find((a, i) => !a.startsWith('--') && !flagWithValue.has(args[i - 1]));
+  // Solo leer el valor de un flag si el flag existe: si `--fecha` no esta,
+  // indexOf devuelve -1 y args[0] seria el valor equivocado (bug real).
+  const flagValue = (name) => {
+    const i = args.indexOf(name);
+    return i >= 0 ? args[i + 1] : undefined;
+  };
+  const searchQuery = flagValue('--search');
+  const fechaFilter = flagValue('--fecha');
+  const medioFilter = flagValue('--medio');
+  const catalogOnly = flags.has('--catalog-only');
 
   logInfo('Generador de fuentes para sources.yaml');
   logInfo('--------------------------------------');
 
+  // --- Modo búsqueda en el catálogo (grep por fecha/medio) --
+  let catalogHit = null;
   let url = urlArg;
-  if (!url) {
+  if (flags.has('--search')) {
+    if (!catalogExists()) {
+      logErr('No existe el catálogo sitemaps/. Corre primero: pnpm run sitemaps-sync -- <medio>');
+      rl.close();
+      process.exit(1);
+    }
+    catalogHit = await catalogSearchAndPick(searchQuery, fechaFilter, medioFilter);
+    if (!catalogHit) {
+      rl.close();
+      process.exit(0);
+    }
+    url = catalogHit.entry.u;
+    logOk(`Artículo elegido del catálogo: ${catalogHit.entry.d} (${CATALOG_MEDIO_NAMES[catalogHit.medio] ?? catalogHit.medio})`);
+  } else if (!url) {
     url = await ask('Pega la URL del articulo');
     if (!url) {
       logErr('No se ingreso ninguna URL.');
@@ -343,12 +558,28 @@ async function main() {
     process.exit(1);
   }
 
-  // --- Fetch ------------------------------------------------
+  // --- Consulta al catálogo de sitemaps (antes del fetch) ---
+  if (!catalogHit && catalogExists()) {
+    catalogHit = lookupCatalogUrl(url);
+  }
+  if (catalogHit && catalogHit.entry.t) {
+    const fuente = catalogHit.entry.s === 'news' ? 'titulo real' : 'titulo aprox. (slug)';
+    logOk(`Indexado en el catálogo de sitemaps (${catalogHit.entry.d}, ${fuente}): ${catalogHit.entry.t}`);
+  } else if (catalogHit) {
+    logOk(`URL indexada en el catálogo de sitemaps (fecha ${catalogHit.entry.d}).`);
+  }
+
+  // --- Fetch (se puede saltar con --catalog-only o si el catálogo ya trae
+  // título real; con título aprox. del slug conviene intentar el fetch) -----
   let html = null;
   let jina = null;
   let resolvedUrl = url;
+  const skipFetch = catalogOnly || (catalogHit && catalogHit.entry.s === 'news');
+  if (catalogHit && !skipFetch && catalogHit.entry.t) {
+    logInfo('El catálogo solo trae título aproximado (slug). Intentando fetch para el título real...');
+  }
 
-  if (!flags.has('--mirror')) {
+  if (!skipFetch && !flags.has('--mirror')) {
     logInfo(`Obteniendo ${url} ...`);
     const res = await fetchText(url);
     if (res.ok && /<html[\s>]/i.test(res.text)) {
@@ -362,7 +593,7 @@ async function main() {
     }
   }
 
-  if (!html) {
+  if (!html && !skipFetch) {
     logInfo('Consultando espejo r.jina.ai ...');
     const res = await fetchText(MIRROR_PREFIXES.jina + url);
     if (res.ok && res.text.trim()) {
@@ -374,7 +605,7 @@ async function main() {
     }
   }
 
-  // --- Extraccion -------------------------------------------
+  // --- Extraccion (el catálogo gana si el fetch no aporta) --
   let titulo = html ? extractHtmlTitle(html) : null;
   let autor = html ? extractHtmlAuthor(html) : null;
   let fecha = html ? extractHtmlDate(html) : null;
@@ -386,12 +617,17 @@ async function main() {
     fecha = fecha || j.date;
   }
 
+  if (catalogHit) {
+    titulo = titulo || catalogHit.entry.t || null;
+    fecha = fecha || catalogHit.entry.d || null;
+  }
+
   // Normalizar la URL a la del articulo original (nunca el espejo).
   if (/^https?:\/\//i.test(resolvedUrl)) url = resolvedUrl;
 
   // --- Medio ------------------------------------------------
   const domainMedio = buildDomainMedioMap();
-  let medio = domainMedio[host] || '';
+  let medio = domainMedio[host] || (catalogHit ? CATALOG_MEDIO_NAMES[catalogHit.medio] : '') || '';
   if (medio) {
     if (!(await confirm(`Se detecto el medio "${medio}" (${host}). Es correcto?`))) {
       medio = await ask('Nombre del medio');
@@ -467,9 +703,27 @@ async function main() {
   rl.close();
 }
 
-main().catch((err) => {
-  console.error(err);
-  rl.close();
-  process.exit(1);
-});
+// Guard: solo ejecuta el flujo principal si se corre directo (no al importar),
+// para poder testear las funciones puras del catálogo desde otro módulo.
+const isMain =
+  process.argv[1] &&
+  fileURLToPath(import.meta.url).replace(/\\/g, '/').toLowerCase() ===
+    process.argv[1].replace(/\\/g, '/').toLowerCase();
+
+if (isMain) {
+  main().catch((err) => {
+    console.error(err);
+    rl.close();
+    process.exit(1);
+  });
+}
+
+export {
+  normalizeUrlForMatch,
+  lookupCatalogUrl,
+  catalogSearchAndPick,
+  buildBlock,
+  catalogExists,
+  CATALOG_MEDIO_NAMES,
+};
 

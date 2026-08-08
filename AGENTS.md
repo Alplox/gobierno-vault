@@ -72,6 +72,11 @@ src/
   components/          EventCard, FilterBar, Timeline, SourceRef, RelationBadge
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global + tooltip JS)
   pages/               rutas: /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin
+sitemaps/              catálogo local de prensa (JSONL por medio/año, NO commiteado)
+  .cache/              XML crudo descargado (regenerable, gitignored)
+  _manifest.json       estado de sync (commiteado)
+  README.md            índice generado por sitemaps-index (commiteado)
+  *.jsonl              datos del catálogo (gitignored — ver sección "Catálogo de sitemaps")
 ```
 
 ## Como funciona el contenido
@@ -279,8 +284,125 @@ en `sources.yaml`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[sour
 
 - Fetch del HTML directo; si falla o no hay titulo, relega a `r.jina.ai`.
 - El mapeo dominio → medio se precarga desde `sources.yaml` + un diccionario base en el script.
-- Flags: `--append` (agrega el bloque directo al final de `sources.yaml`), `--mirror` (fuerza espejo).
+- Consulta el catálogo de sitemaps antes del fetch (ver "Catálogo de sitemaps → Integración
+  con add-source.mjs").
+- Flags: `--append` (agrega el bloque directo al final de `sources.yaml`), `--mirror` (fuerza
+  espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
+  el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra).
 - Siempre imprime la URL del articulo original (nunca el mirror), y avisa si el ID ya existe.
+
+## Catálogo de sitemaps (índice local de prensa)
+
+Carpeta `sitemaps/` en la raíz: catálogo de artículos de prensa (URL + fecha + título si existe)
+extraído de los sitemaps públicos de cada medio. Evita fetch/búsquedas web redundantes: el valor
+está en la URL+fecha (post-sitemaps) y URL+fecha+título real (news-sitemaps, últimos 2-3 días).
+NO guarda el cuerpo de los artículos.
+
+### Regla clave: NO se commitea el catálogo
+
+- `sitemaps/*.jsonl`, `sitemaps/.cache/`, `sitemaps/sitemaps.gvault` y sus partes
+  `sitemaps.gvault.partN` están en `.gitignore` (decisión 2026-08-07): BioBio pesa ~307MB y el
+  catálogo es regenerable.
+- Lo que SÍ se commitea: los scripts (`scripts/sync-sitemaps.mjs`, `sitemaps-index.mjs`,
+  `sitemaps-backup.mjs`), `package.json`, `sitemaps/_manifest.json` (estado de sync) y
+  `sitemaps/README.md` (índice regenerable).
+- Si se clona el repo, hay que correr `pnpm run sitemaps-sync -- <medio>` para regenerar local.
+- **Excepción opcional (snapshot público)**: el catálogo completo comprimido pesa ~56MB
+  (357MB crudos → compacto lossless + Brotli binario). Con `--chunk-size <MB>` se parte en
+  trozos de ~28MB (`sitemaps.gvault.part1/2`), cada uno bajo el límite blando de 50MB de
+  GitHub. Quien descargue todas las partes puede regenerar el catálogo con `sitemaps-backup --restore`
+  (une las partes automáticamente) o `--join` (arma el .gvault único).
+
+### Formato JSONL
+
+`{ "u": url, "d": fecha ISO, "t": título (si existe), "s": "news"|"slug" }`
+- `s:"news"` = título real del news-sitemap. `s:"slug"` = título aproximado derivado de la URL.
+
+### Scripts
+
+| Comando | Función |
+|---|---|
+| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica |
+| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`) |
+| `pnpm run sitemaps-index` | genera `sitemaps/README.md` (década → año → mes, conteos + muestras) Y la sección "Medios registrados" de AGENTS.md (marcador `
+
+<!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->
+
+### Medios registrados (generado automáticamente)
+
+> Esta sección se genera con `pnpm run sitemaps-index` a partir del registro `MEDIA`
+> de `scripts/sync-sitemaps.mjs` y de `sitemaps/_manifest.json`. NO editar a mano.
+
+| Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
+|---|---|---|---|---|---|
+| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 100 | 1 |
+| `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
+| `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.415 | 18 |
+| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.005 | 1 |
+| `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.683 | 10 |
+| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 101 | 1 |
+| `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
+| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 5.815 | 7 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.756 | 19 |
+
+Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
+
+<!-- /AUTO-GENERATED-SITEMAPS-MEDIOS -->
+
+**Al agregar un medio nuevo** (a `MEDIA` en `sync-sitemaps.mjs`): además de `sitemaps-index`
+(que regenera la tabla y el README), hay que agregar el dominio y el nombre a
+`CATALOG_MEDIO_BY_DOMAIN`/`CATALOG_MEDIO_NAMES` de `scripts/add-source.mjs` para que el lookup
+del generador de fuentes lo reconozca.
+
+Notas de plataforma (complemento manual, no se reescribe):
+- WordPress-Yoast (`articleOnly`: solo `post-sitemap*.xml` y `news-sitemap*.xml`): **El Clarín**,
+  **Factchecking**, **CIPER**, **The Clinic**. Ojo: The Clinic está detrás de Cloudflare
+  challenge — curl/webfetch recibe 403 "Just a moment", pero Node fetch (el del script) sí lo
+  resuelve (200).
+- **El Mostrador**: `sitemap.xml` (~101 URLs) + `sitemap_news.xml` (títulos reales con prefijo
+  `n:` — el parser acepta `news:` o `n:`).
+- **Fast Check CL**: sitemap custom con `includeRe` `/(?:posts-\d{4}|news)\.xml$/i` →
+  `posts-YYYY.xml` + `news.xml` (títulos reales); descarta `pages/categories/authors.xml`.
+- **ADN Radio**: Arc XP (~100 URLs recientes, sin títulos). **BioBio**: sitemap mensual +
+  news-sitemap. **Cooperativa**: sitemap de páginas + news.
+
+| `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~56MB (vs ~357MB raw / 127MB v1). `--no-compact` guarda JSONL crudo |
+
+Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
+— si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
+pasada mejora la entrada (`news` > `slug`).
+
+**Privacidad e integridad del .gvault:**
+- La cabecera INFORMACION usa **rutas portables** (relativas al repo o solo el
+  nombre del archivo), nunca rutas absolutas locales: un .gvault anterior
+  incrustaba `C:\Users\<usuario>\...\sitemaps.gvault`, filtrando el nombre de
+  usuario y la ruta de disco de quien generó el backup. `displayPath()` en
+  `sitemaps-backup.mjs` centraliza esta regla (también en los mensajes de
+  consola).
+- `.gitattributes` marca `*.gvault` y `*.gvault.part*` como **binarios** (`binary`):
+  con `* text=auto` + `core.autocrlf=true` (Windows) git convertía LF→CRLF en el
+  payload Brotli, rompiendo el SHA-256 y haciendo el snapshot no restaurable.
+  Si los `.partN` se publican (excepción snapshot), deben regenerarse tras
+  cualquier cambio y verificarse con `--restore` a un directorio temporal.
+
+### Integración con add-source.mjs (IMPLEMENTADA)
+
+`add-source.mjs` consulta el catálogo ANTES de hacer fetch web:
+
+- **Lookup por URL**: si la URL pasada está indexada en el catálogo, pre-carga fecha y (si hay)
+  título sin tocar la red. Con `s:"news"` (título real) salta el fetch por completo; con
+  `s:"slug"` (título aproximado) intenta el fetch para obtener el título real y usa el catálogo
+  como fallback. Normaliza la URL (quita `www.`, params de tracking `utm_*`/`fbclid`, hash).
+- **`--catalog-only`**: nunca hace fetch; usa solo datos del catálogo (útil cuando el medio
+  bloquea o para construir la fuente sin red).
+- **`--search <texto>`**: busca en el catálogo (título/URL/fecha, normalizado sin acentos),
+  lista resultados más recientes primero y deja elegir. Filtros: `--medio <slug>` y
+  `--fecha YYYY-MM-DD`.
+- Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
+  `ciper`, `theclinic`, `elmostrador`, `fastcheck`. Si el dominio no está en el catálogo,
+  el flujo es el clásico (fetch + mirrors).
+- El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
+  `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
 
 ## Respaldo / Restauracion (backup offline publico)
 
@@ -331,6 +453,7 @@ Cuando descubras algo no documentado aqui:
 | Nueva fuente | `sources.yaml`, este archivo |
 | Nuevo tema | `topics.yaml`, este archivo |
 | Wikilink roto | `remarkWikiLinks.mjs` (resolve fallback) |
+| Scripts de sitemaps | `scripts/sync-sitemaps.mjs`, `scripts/sitemaps-index.mjs`, `scripts/sitemaps-backup.mjs`, sección "Catálogo de sitemaps" de este archivo |
 
 
 <!-- AUTO-GENERATED-STATS -->
@@ -339,10 +462,10 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 605
+**Total de eventos:** 614
 
 **Eventos por año:**
-- 2026: 481
+- 2026: 490
 - 2025: 35
 - 2024: 13
 - 2023: 10
@@ -359,32 +482,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (229)
-- Economia (115)
-- Justicia (107)
-- Administración pública (69)
-- Defensa y seguridad (69)
+- Politica (231)
+- Economia (116)
+- Justicia (112)
+- Administración pública (70)
+- Defensa y seguridad (70)
+- Derechos humanos (56)
 - Cambios en el gabinete (56)
 - Finanzas publicas (56)
-- Proceso legislativo (54)
+- Proceso legislativo (55)
 - Emergencia y catástrofes (54)
-- Derechos humanos (50)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (144)
+- accion (146)
 - declaracion (86)
-- reaccion (79)
-- resultado (62)
+- reaccion (80)
+- resultado (65)
 - publicacion (58)
-- investigacion (50)
-- anuncio (45)
-- fallo_judicial (24)
+- investigacion (51)
+- anuncio (46)
+- fallo_judicial (25)
 - votacion (14)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 704
+- Personas: 710
 - Organizaciones: 382
-- Cifras: 440
-- Fuentes: 1945
+- Cifras: 441
+- Fuentes: 1969
 - Temas: 74

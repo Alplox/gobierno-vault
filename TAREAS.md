@@ -180,6 +180,11 @@
 | Economistas extrañan pilares estructurales en la megarreforma: Bergoeing (educación, mercado laboral, modernización del Estado) y Wagner ('más actividad, pero menor de la esperada') en El Primer Café de Cooperativa | 2026-08-06 | declaracion | ✅ `20260806-46` (Cooperativa; fuente única, pendiente validación cruzada) |
 | Poduje plantea demoler viviendas en zonas de inundación tras denuncia del alcalde de Bulnes por 70 inmuebles con fallas en Villa Santa Fe: 'construir con estándares chantas y poca fiscalización nos está costando muy caro'; anuncia visita a la zona y endurecimiento contra constructoras | 2026-08-06 | declaracion | ✅ `20260806-47` (CNN Chile; amplia 20260802-1; fuente única, pendiente validación cruzada) |
 | Abogado Luis Mariano Rendón (Fundación Memoria Histórica) denuncia a Kast ante Contraloría por la cifra de '218 mil robos violentos' de la cadena nacional del 5-ago (CEAD: 69.777 casos en 2025, 109.419 sumando robos por sorpresa); acusa falta a la probidad por magnificar la situación heredada; el Ministerio de Seguridad admite 'error de referencia' (categoría amplia de 'robos y delitos violentos', ~220 mil casos) | 2026-08-07 | accion | ✅ `20260807-1` (BioBioChile; tweet de Roberto Merken complementario; amplia 20260805-13; pendiente pronunciamiento de Contraloría) |
+| Campaña del Día del Niño: el Gobierno interviene los logos de los ministerios con nombres infantiles ('Ministerio de la pega', 'de nosotras', 'que da luz', etc.) y el Ministerio del Medio Ambiente figura en Facebook como 'Ministerio de cuidar la plata' por ~20-25 minutos, error que la cartera de Francisca Toledo reconoció | 2026-08-07 | accion | ✅ `20260807-3` (Emol, BioBioChile, Chilevisión, El Reporte Diario, Central Noticia; Reddit complementario; amplia 20260311-4; pendiente: verificar si algún medio confirma el uso de IA en los logos — la acusación de marca de agua de Gemini solo circuló en Reddit, sin verificación de prensa) |
+| IALI del Banco Central cae 10,5% interanual en julio y suma nueve meses consecutivos de retrocesos en ofertas laborales (portales trabajando.com, laborum.cl, Chiletrabajos.cl, bne.cl) | 2026-08-07 | resultado | ✅ `20260807-4` (The Clinic; contexto Pauta 8-jul; pendiente: validación cruzada con Diario Financiero/Emol) |
+| Mañalich cuestiona el sistema de test de drogas del gobierno: 'la mitad de los funcionarios va a salir falsamente positivo al menos una vez' (screening vs confirmación) | 2026-08-07 | reaccion | ✅ `20260807-5` (CNN Chile, Radio Pauta, ADN Radio; responde_a 20260803-6) |
+| Gobierno prepara reforma al INDH para transformarlo en entidad consultiva y quitarle la facultad de querellarse (anteproyecto Subsecretaría de DDHH; Rabat acusa 'tinte de izquierda'; Fries y Bustos defienden el organismo) | 2026-08-07 | anuncio | ✅ `20260807-6` (BioBioChile, Pauta 3-ago, Radio U. de Chile 3-ago; amplia 20260805-12; pendiente: ingreso formal al Congreso y reacción del INDH) |
+| CIPER: Ejército pide al ministro Barros autorizar retiro con pensión de $2,7 millones para el capitán José Faúndez, condenado por el homicidio de Romario Veloz (La Serena, 2019); querella por desacato de la familia contra el alto mando y causa penal de la Fiscalía Centro Norte | 2026-08-07 | investigacion | ✅ `20260807-7` (CIPER; El Ciudadano 14-jun y 18-jul; amplia 20191018-1; pendiente: decisión del Ministerio de Defensa y evento propio del homicidio 2019) |
 
 ---
 
@@ -202,7 +207,7 @@
 | Golpiza de Carabineros a hombre en Puente Alto (día 107): audiencia revela frase "Dejen de pegarle, ya está muerto" | 2020-02-02 | investigacion | ⬜ |
 | CIPER revela al carabinero infiltrado en ollas comunes de Lo Hermida que incitaba al enfrentamiento con la policía | 2020-06 (revelado) | investigacion | ⬜ |
 | Incendio de la bodega Kayser en Renca (Yoshua Osorio, Andrés Ponce, Julián Pérez, Manuel Muga, Luis "Toño" Salas) y del supermercado Líder de Quinta Normal (Gustavo Landaverde): 6 fallecidos, la jornada con más muertos del estallido | 2019-10-20 | result/accion | ⬜ (fuente: estallidosocial.com hitos) |
-| Asesinato de Romario Veloz (26, ecuatoriano) por disparo de oficial del Ejército en El Bosque | 2019-10-20 | accion | ⬜ (fuente: estallidosocial.com no-olvidamos) |
+| Asesinato de Romario Veloz (26, ecuatoriano) por disparo de oficial del Ejército en La Serena (Mall Plaza La Serena, no El Bosque — corregido 7-ago-2026) | 2019-10-20 | accion | 🟡 contexto en `20260807-7` (CIPER 7-ago-2026: condena de Faúndez, retiro con pensión, querella por desacato); sigue pendiente el evento propio del homicidio del 20-oct-2019 |
 | Muerte de Manuel Rebolledo (22) atropellado por patrulla de la Armada en Talcahuano (población Libertad) | 2019-10-21 | accion | ⬜ (fuente: estallidosocial.com no-olvidamos) |
 | Brutal golpiza de Carabineros a Mario Acuña en Buin que lo dejó postrado con daño cerebral | 2019-10-23 | investigacion | ⬜ (fuente: estallidosocial.com no-olvidamos) |
 | Marasea histórica del 25-O: más de 1,2 millones de personas solo en Santiago (la marcha más grande de Chile) | 2019-10-25 | accion | ✅ `20191025-1` (DW, Reuters; tuit de Karla Rubilar, reacción de Piñera, Marta Lagos/Latinobarómetro) |
@@ -432,13 +437,25 @@ Se creó el evento `20260806-48` (presentación de los 28 proyectos + reforma co
 - ⬜ **Ingreso efectivo de los proyectos:** cuáles de los 9-15 proyectos nuevos ingresan al Congreso en las próximas semanas y sus urgencias; la diferencia de conteos entre medios (28 de Cooperativa vs. 'más de 30' de Emol) se documentó en el evento.
 - ⬜ **Reforma constitucional:** ingreso formal del proyecto que consagra la seguridad como deber del Estado y estado de excepción por grave alteración de la seguridad pública (ver `20260803-12`), y la tramitación en el Senado (el evento `20260806-11` ya cubre el debate del art. 1°).
 
-## Caso Gatica — contrainterrogatorio de Chong a Crespo (creación 7-ago-2026)
+## Caso Gatica — cronología judicial 2026 (creación 7-ago-2026)
 
-Se creó el evento histórico `20241227-1` (jornada 35 del juicio: video inédito del mechón de pelo, grupo de WhatsApp 'La Tijera' con 'le hice un peinado a la moda a un encapuchado', objeciones de Orthusteguy y jueza Cristina Cabello).
+Se completaron los hitos judiciales faltantes del caso con fuentes verificadas:
+
+| Hito | Evento | Fuentes |
+|---|---|---|
+| Alegatos finales del juicio (defensa: identificación balística/legítima defensa; acusación: 'ánimo de castigo') | `20260108-1` | CIPER (verificado vía r.jina.ai) |
+| **Absolución de Crespo** por el Cuarto TOP (Ley Naín-Retamal retroactiva + legítima defensa; reacciones de Crespo y Gatica) | `20260113-1` | El País (verificado vía r.jina.ai) |
+| Fiscalía, INDH, CDE y Gajardo presentan recurso de nulidad (22 medios de prueba no valorados) | `20260615-4` | BioBioChile (verificado vía defuddle) |
+| Corte de Apelaciones admite los recursos y revisará si anula el juicio | `20260625-6` | BioBioChile |
+
+La cadena enlaza: `20260108-1` → `20260113-1` → `20260615-4` → `20260625-6` → `20260803-8` (rechazo) → `20260806-19`/`20260806-40`.
 
 **Pendiente / validación cruzada:**
-- ⬜ **Segunda fuente del 27-dic-2024:** el evento usa como fuente única La Tercera PM (Juan Pablo Andrews); buscar cobertura de Emol/El Mostrador/Ex-Ante de la misma audiencia para robustecerlo (regla de mínimo 2 fuentes de medios distintos).
+- ⬜ **Segunda fuente del 27-dic-2024:** el evento `20241227-1` usa como fuente única La Tercera PM (Juan Pablo Andrews); buscar cobertura de Emol/El Mostrador/Ex-Ante de la misma audiencia para robustecerlo (regla de mínimo 2 fuentes de medios distintos).
+- ⬜ **Segunda fuente para la absolución del 13-ene-2026:** el evento `20260113-1` usa El País como fuente principal; buscar cobertura chilena del mismo día (Emol/La Tercera/El Mostrador) y el pronunciamiento del INDH (indh.cl) para validación cruzada.
 - ⬜ **Vínculo con los videos de CIPER (`20250429-1`):** verificar si alguno de los siete videos publicados en abril de 2025 corresponde al incidente del mechón de pelo de noviembre de 2019; si es así, enlazar ambos eventos.
+- ⬜ **Recurso de queja de la Fiscalía Centro Norte** (mencionado en `20260806-19`): verificar si se presentó tras el rechazo de la nulidad y su estado.
+- ⬜ **Evidencia pública sobre un delito previo de Gatica:** hasta los antecedentes públicos no existe sentencia ni resolución que establezca que Gatica cometía un delito al momento del disparo; la defensa de Crespo sostuvo participación en una agresión al piquete (posición procesal, no hecho acreditado). Documentado como marco de análisis en `20260108-1`/`20260113-1`.
 
 ## Reglas para retomar
 

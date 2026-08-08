@@ -39,7 +39,11 @@ El proyecto usa **pnpm** como gestor de paquetes (no npm).
 - `pnpm run deploy` - despliega a Cloudflare Pages (`https://gobierno-vault.pages.dev`).
 - `pnpm run validate` - valida contenido y estructura.
 - `pnpm run generate-index` - regenera índices y estadísticas del repositorio.
-- `pnpm run add-source -- <URL>` - extrae metadatos de una fuente y sugiere un bloque para `sources.yaml`.
+- `pnpm run add-source -- <URL>` - extrae metadatos de una fuente y sugiere un bloque para `sources.yaml`. Consulta el catálogo de sitemaps antes del fetch (flags: `--catalog-only` sin red, `--search <texto>` para buscar en el catálogo con `--medio`/`--fecha`).
+- `pnpm run sitemaps-sync -- <medio>` - sincroniza el catálogo local de artículos de prensa desde los sitemaps públicos (ver `sitemaps/README.md`).
+- `pnpm run sitemaps-resync` - resync manual diario (merge incremental, nunca borra datos) + regenera índice y backup.
+- `pnpm run sitemaps-index` - regenera `sitemaps/README.md` (índice del catálogo por década/año/mes).
+- `pnpm run sitemaps-backup` - empaqueta el catálogo en `sitemaps/sitemaps.gvault` (compresión **compacta lossless + binaria**: ~357MB de JSONL → ~56MB; `--restore` reconstruye el JSONL byte-idéntico). Con `--chunk-size 45` lo parte en trozos de ~28MB (`sitemaps.gvault.part1/2`), cada uno bajo el límite de GitHub; `--restore` une las partes automáticamente y `--join` arma el `.gvault` único. El catálogo no se commitea, pero las partes pueden commitecarse para que cualquiera las descargue y regenere sin re-sincronizar.
 - `pnpm run backup` - genera los respaldos públicos `.gvault` (light y full) en la raíz.
 - `pnpm run verify -- <archivo.gvault>` - verifica la integridad de un respaldo.
 - `pnpm run restore -- <archivo.gvault> --dest <ruta>` - restaura un respaldo a disco.

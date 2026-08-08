@@ -860,6 +860,33 @@ people:
     cargo: Senador (Evópoli)
     organizacion: evopoli
     notas: "Hermano del Presidente José Antonio Kast. Fundador de Evópoli. Impulsor del proyecto de ley contra el nepotismo en 2018."
+  daniel_mansuy:
+    nombre: Daniel Mansuy
+    cargo: Académico de la Universidad de los Andes y comentarista político
+    notas: "Académico de la Universidad de los Andes y cientista político. El 7 de agosto de 2026 criticó en The Clinic los cambios del Ministerio de Ciencias a las bases del Fondecyt que priorizan áreas definidas por el Gobierno (hasta 70% de las adjudicaciones), señalando que 'parece confirmar que la derecha que nos gobierna no tiene ningún interés en el pensamiento ni en la reflexión'."
+  pedro_varela:
+    nombre: Pedro Varela Sabando
+    cargo: Comandante en jefe del Ejército
+    organizacion: ejercito_chile
+    notas: "Comandante en jefe del Ejército de Chile. Solicitó el 31 de marzo de 2026 que el Gobierno autorice el retiro por enfermedad incurable (estrés postraumático) del capitán José Faúndez Sepúlveda, condenado a 15 años por el homicidio de Romario Veloz en La Serena (estallido social 2019). Junto a su antecesor Javier Iturriaga fue querellado por desacato por la familia Veloz por no ejecutar la baja por inhabilidad sobreviniente."
+  jose_faundez:
+    nombre: José Santiago Faúndez Sepúlveda
+    cargo: Capitán del Ejército condenado
+    organizacion: ejercito_chile
+    notas: "Capitán del Ejército condenado el 12 de septiembre de 2023 por el Tribunal de Juicio Oral en lo Penal de La Serena a 15 años de presidio como autor de violencia innecesaria con resultado de muerte (homicidio del manifestante ecuatoriano Romario Veloz) y lesiones graves a otras dos personas en las manifestaciones del 20 de octubre de 2019. Cumple condena en el Centro Penitenciario Colina I. El Ejército tramita desde 2024 un retiro por estrés postraumático con pensión de $2,7 millones, rechazado por la Subsecretaría de FF.AA. por inhabilidad sobreviniente."
+  romario_veloz:
+    nombre: Romario Veloz
+    cargo: Manifestante asesinado en el estallido social
+    notas: "Joven ecuatoriano de 26 años asesinado el 20 de octubre de 2019 en La Serena durante el estallido social: recibió un disparo de munición de guerra en el cuello cuando una unidad del Ejército al mando del capitán José Faúndez Sepúlveda abrió fuego contra manifestantes en los estacionamientos del Mall Plaza La Serena. Su caso derivó en la condena de Faúndez (2023) y en una querella por desacato de su familia contra el alto mando del Ejército (2026)."
+  adriana_rojas:
+    nombre: Adriana Rojas Pérez
+    cargo: Abogada de la familia de Romario Veloz
+    notas: "Abogada querellante de la familia de Romario Veloz. En junio de 2026 presentó una querella por desacato contra el comandante en jefe del Ejército, Pedro Varela, y su antecesor Javier Iturriaga, por no ejecutar la baja por inhabilidad sobreviniente del capitán José Faúndez y mantener en trámite un retiro médico con pensión."
+  rodrigo_bustos:
+    nombre: Rodrigo Bustos
+    cargo: Director ejecutivo de Amnistía Internacional Chile
+    organizacion: amnistia_internacional
+    notas: "Director ejecutivo de Amnistía Internacional Chile. En agosto de 2026 criticó la reforma del gobierno de Kast al INDH señalando que 'cercenaría gran parte de las atribuciones' del organismo y defendió la facultad de presentar querellas como 'fundamental en la labor del INDH'."
   jaime_manalich:
     nombre: Jaime Mañalich
     cargo: Exministro de Salud
@@ -6948,6 +6975,10 @@ cifras:
     nombre: Imacec de junio de 2026
     unidad_default: pct
     notas: "Crecimiento de 2,4% interanual en junio de 2026 según el Banco Central, rompiendo una racha de cinco meses de contracciones (enero a mayo de 2026) y permitiendo que el segundo trimestre creciera 0,1% y evitara la recesión técnica. La serie desestacionalizada avanzó 0,6% mensual y 1,4% en doce meses. El primer semestre cerró con un promedio de -0,2%, el peor desde la pandemia."
+  iali_julio_2026:
+    nombre: IALI de julio de 2026
+    unidad_default: pct
+    notas: "El Índice de Avisos Laborales de Internet (IALI) del Banco Central cayó 10,5% interanual en julio de 2026, segundo peor resultado del año tras -10,9% de mayo, completando nueve meses consecutivos en terreno negativo. Se construye con los avisos de trabajando.com, laborum.cl, Chiletrabajos.cl y bne.cl. En junio de 2026 había caído 6,1% (70,7 puntos)."
   precio_cobre_record_2026:
     nombre: Precio del cobre en máximo histórico (6 de agosto de 2026)
     unidad_default: usd_libra

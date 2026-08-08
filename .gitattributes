@@ -1,2 +1,10 @@
 # Auto detect text files and perform LF normalization
 * text=auto
+
+# Los .gvault (backups Brotli binarios) NO deben sufrir conversión de
+# saltos de línea: con `text=auto` + core.autocrlf=true (Windows) git
+# convierte LF→CRLF y corrompe el payload (el SHA-256 deja de coincidir).
+# Se marcan como binarios aunque estén gitignored (protege si se publican
+# como snapshot público).
+*.gvault binary
+*.gvault.part* binary
