@@ -185,6 +185,11 @@ people:
     nombre: Florencia Pinto
     cargo: Abogada de deudores del CAE
     notas: "Abogada patrocinante, junto a Daniela Riquelme, del recurso de protección acogido por la Corte de Apelaciones de La Serena que declaró ilegal el doble cobro del CAE por parte de la Tesorería General de la República (agosto 2026)."
+  felipe_harboe:
+    nombre: Felipe Harboe
+    cargo: Exsubsecretario de Prevención del Delito y exsenador (PPD)
+    organizacion: partido_por_la_democracia
+    notas: "Exsubsecretario de Prevención del Delito (2006-2010) y exsenador (2010-2022) del PPD. En agosto de 2026 criticó el copamiento policial del gobierno de Kast: 'no se logra disuadir al crimen organizado con copamiento policial', descartó la utilidad de un nuevo estado de excepción (despliegue militar en el sur renovado ~60 veces) y pidió un sistema robusto de protección de testigos."
   felipe_parada:
     nombre: Felipe Parada
     cargo: Panelista de Sin Filtros
@@ -561,6 +566,11 @@ people:
     cargo: Diputado y presidente del PPD
     organizacion: partido_por_la_democracia
     notas: "Diputado y presidente del Partido por la Democracia (PPD). El 7 de agosto de 2026, tras la cadena nacional de la ACOT, señaló que 'el gran ausente de esta megarreforma de seguridad es el alzamiento del secreto bancario. No se puede perseguir la ruta del dinero, no se puede atacar el corazón del crimen organizado si no debilitamos su poder económico'."
+  juan_cristobal_mera:
+    nombre: Juan Cristóbal Mera Muñoz
+    cargo: Ministro de la Corte de Apelaciones de Santiago
+    organizacion: corte_apelaciones_santiago
+    notas: "Ministro de la Corte de Apelaciones de Santiago que en 2026 presidió la Segunda Sala. Bío Bío Investiga documentó el 'Factor Mera': intervino cuatro veces en las causas de Joaquín Lavín León y Cathy Barriga (26-ene-2024, 27-mar-2025, 9-abr-2025 y 6-ago-2026) votando siempre a favor de sus intereses; su voto permitió a Lavín pasar a arresto domiciliario total. Su perfil aparece en los chats Hermosilla-Sabaj ('muy culto... de derecha al máximo')."
   juan_castaneda:
     nombre: Juan Castañeda
     cargo: Investigador de la Universidad Autónoma, experto en criminología
@@ -1311,6 +1321,11 @@ people:
         organizacion: partido_por_la_democracia
         desde: 2026-03-11
     notas: Filtró la minuta de Secom
+  sergio_bitar:
+    nombre: Sergio Bitar
+    cargo: Exministro y exvicepresidente de la Fundación Paz Ciudadana
+    organizacion: fundacion_paz_ciudadana
+    notas: "Exministro de Estado (Minería y Educación) en los gobiernos de la Concertación. Exvicepresidente de la Fundación Paz Ciudadana. En junio de 2026, consultado por VerificaUDP sobre la afirmación del presidente Kast de que Chile debe 'volver a ser el país más seguro de Latinoamérica', sostuvo que Chile siempre ha tenido de los más bajos índices de homicidios de la región y advirtió sobre la brecha entre cifras objetivas y percepción ciudadana."
   sergio_turra:
     nombre: Sergio Turra
     cargo: Jefe de Contenidos Digitales de La Moneda
@@ -3430,6 +3445,10 @@ people:
     nombre: Eugenio Tironi
     cargo: Sociólogo y consultor
     notas: "Sociólogo, académico y consultor. Analizó cómo Irina Karamanos se convirtió en símbolo del esfuerzo identitario del Frente Amplio y por qué ese discurso no conectaba con el común de la gente (La Tercera, marzo 2026)."
+  eugenia_pirzio_biroli:
+    nombre: Eugenia Pirzio-Biroli
+    cargo: Exalcaldesa de Cisnes
+    notas: "La 'bruja de Pinochet': nacida en Italia en 1906, llegó a Chile en 1947, fue autoridad en la Patagonia y alcaldesa de Cisnes durante la dictadura. Su supuesta influencia sobre el dictador a través de tarot y cartas astrales generó controversia (perfil histórico de BioBioChile, agosto 2026)."
   javiera_toro:
     nombre: Javiera Toro
     cargo: Ministra de Desarrollo Social y Familia
@@ -4350,6 +4369,11 @@ organizations:
     tipo: sindicato
     pais: Chile
     notas: "Gremio nacional de trabajadores de la salud. Vinculado en reportajes de Fast Check (julio-agosto 2026) con presuntas platas negras del senador Miguel Ángel Calisto a través de los exdirigentes Berta Brito y Pedro Nova y de asesorías de una empresa ligada al exfiscal Carlos Palma."
+  fima:
+    nombre: Fiscalía del Medio Ambiente (FIMA)
+    tipo: ong
+    pais: Chile
+    notas: "ONG ambientalista chilena. En agosto de 2026 solicitó al Tribunal Constitucional abrir una instancia de participación ciudadana en el proceso de la megarreforma, permitiendo que la sociedad civil exponga los efectos de las normas impugnadas sobre sus derechos."
   fiscalia_aysen:
     nombre: Fiscalía Regional de Aysén
     tipo: organismo_estado
@@ -4698,6 +4722,11 @@ organizations:
     tipo: tribunal
     pais: Chile
     notas: "Tribunal de alzada de la Región de Coquimbo. En julio-agosto de 2026 acogió de forma unánime recursos de protección de deudores del CAE declarando ilegal el doble cobro de la Tesorería General de la República (juicio civil + cobranza administrativa simultánea), un precedente en la formación de jurisprudencia sobre la cobranza coactiva del CAE."
+  corte_apelaciones_santiago:
+    nombre: Corte de Apelaciones de Santiago
+    tipo: tribunal
+    pais: Chile
+    notas: "Tribunal de alzada de la Región Metropolitana. Su ministro Juan Cristóbal Mera, presidente de la Segunda Sala en 2026, fue señalado por Bío Bío Investiga como quien 'siempre vota a favor de los Lavín-Barriga' en las causas de Joaquín Lavín León y Cathy Barriga (agosto 2026)."
   servel:
     nombre: Servicio Electoral
     tipo: servicio_publico
@@ -4756,6 +4785,11 @@ organizations:
     tipo: organizacion_social
     pais: Chile
     notas: "Organización de derechos humanos. Su presidente es el abogado Luis Mariano Rendón Escobar, quien en 2026 presentó denuncias ante la Contraloría relacionadas con el presidente José Antonio Kast (uso del escudo nacional en la banda presidencial, febrero 2026; cifras de la cadena nacional sobre robos violentos, agosto 2026)."
+  fundacion_paz_ciudadana:
+    nombre: Fundación Paz Ciudadana
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Fundación dedicada al estudio y prevención de la delincuencia. El exministro Sergio Bitar fue su vicepresidente. En junio de 2026, sus análisis fueron citados por VerificaUDP para contextualizar la afirmación del presidente Kast sobre la seguridad en América Latina."
   parque_forestral:
     nombre: Parque Forestal
     tipo: espacio_publico

@@ -627,6 +627,14 @@ latercera-2026-07-23-deepfakes-proteccion:
   autor: La Tercera
   fecha: 2026-07-23
   url: https://www.latercera.com/politica/noticia/camara-aprueba-proyecto-que-protege-a-personas-frente-a-deepfakes-generados-con-ia/
+meganoticias-2025-03-16-bruja-pinochet-pirzio-biroli:
+  tipo: prensa
+  medio: Mega (Viaje a lo Insólito)
+  titulo: "Pronosticó fallido atentado: La desconocida historia de Eugenia Pirzio-Biroli, la 'bruja' de Augusto Pinochet"
+  autor: Sebastián Paillafil
+  fecha: 2025-03-16
+  url: https://www.mega.cl/programas/viaje-a-lo-insolito/mejores-momentos/191514-viaje-a-lo-insolito-bruja-de-augusto-pinochet-historia-de-eugenia-pirzio-biroli.html
+  notas: "Capítulo de Viaje a lo Insólito (Mega, publicado el 16-mar-2025 y actualizado el 7-abr-2025) sobre el vínculo esotérico entre Augusto Pinochet y Eugenia Pirzio-Biroli: nacida en mayo de 1906 en Turín, hija del general Alessandro Pirzio-Biroli (del rey Víctor Manuel III y Mussolini); instalada en Santiago tras la Segunda Guerra Mundial; durante la dictadura Pinochet la consultaba como tarotista personal en sus viajes a la Carretera Austral. Verificado por lectura directa (HTTP 200)."
 meganoticias-2026-07-23-deepfakes:
   tipo: prensa
   medio: MegaNoticias
@@ -1073,6 +1081,14 @@ adnradio-2026-06-30-seremis-criticas:
   autor: Redacción ADN
   fecha: 2026-06-30
   url: https://www.adnradio.cl/2026/06/30/aumento-de-sueldo-a-seremis-de-salud-desata-criticas-alza-de-20-choca-con-millonarios-recortes/
+biobiochile-2026-06-24-megarreforma-senado-general:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Aprueban megarreforma en general en el Senado: volverá a Hacienda para su discusión en particular"
+  autor: BioBioChile
+  fecha: 2026-06-24
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/24/aprueban-megarreforma-en-su-segundo-tramite-volvera-a-hacienda-para-su-discusion-en-particular.shtml
+  notas: "Cobertura de la aprobación en general de la megarreforma (Ley Miscelánea / Ley de Reconstrucción Nacional) en el Senado el 24 de junio de 2026: tras el segundo trámite, la iniciativa volverá a la Comisión de Hacienda para su discusión en particular. Fuente identificada vía catálogo de sitemaps local y verificada por lectura (HTTP 200)."
 biobiochile-2026-06-24-ordenes-seremis:
   tipo: prensa
   medio: BioBioChile
@@ -1299,6 +1315,22 @@ latercera-2026-07-22-balance-sistema-frontal:
   autor: Rodrigo Gómez S.
   fecha: 2026-07-22
   url: https://www.latercera.com/nacional/noticia/sistema-frontal-fallecidos-aumentan-a-13-hay-siete-desaparecidos-y-mas-de-63-mil-personas-aisladas/
+elclarin-2026-05-05-comision-investigadora-kast-orban:
+  tipo: prensa
+  medio: El Clarín
+  titulo: "Impulsan en la Cámara de Diputados una comisión investigadora de los vínculos de Kast con la red internacional de Viktor Orbán"
+  autor: El Clarín
+  fecha: 2026-05-05
+  url: https://www.elclarin.cl/2026/05/05/impulsan-en-la-camara-de-diputados-una-comision-investigadora-de-los-vinculos-de-kast-con-la-red-internacional-de-viktor-orban/
+  notas: "Identificada vía catálogo de sitemaps local (título y fecha reales del news-sitemap de El Clarín). El sitio no respondió a la lectura directa (timeout en múltiples intentos y mirrors), por lo que el evento se apoya en esta fuente como confirmación independiente de la iniciativa parlamentaria junto a BioBioChile."
+elclarin-2026-05-04-flanco-orban-chile:
+  tipo: prensa
+  medio: El Clarín
+  titulo: "Corrupción y redes de ultraderecha: el flanco Orbán abierto en Chile"
+  autor: El Clarín
+  fecha: 2026-05-04
+  url: https://www.elclarin.cl/2026/05/04/corrupcion-y-redes-de-ultraderecha-el-flanco-orban-abierto-en-chile/
+  notas: "Publicación original de El Clarín del análisis que El Ciudadano republicó el 5 de julio de 2026 (el evento 20260705-1 cita la versión de El Ciudadano). Identificada vía catálogo de sitemaps local (título y fecha reales); el sitio no respondió a lectura directa (timeout). Se agrega como fuente de la publicación original."
 elmostrador-2026-06-01-hondurasgate-periodista:
   tipo: prensa
   medio: El Mostrador
@@ -1307,6 +1339,22 @@ elmostrador-2026-06-01-hondurasgate-periodista:
   autor: Claudio Pizarro Sanguesa (entrevista a Valeria Duarte)
   fecha: 2026-06-01
   url: https://www.elmostrador.cl/unidad-de-investigacion/2026/06/01/periodista-que-destapo-hondurasgate-hoy-el-conflicto-ya-no-es-es-solamente-ideologico/
+elmostrador-2026-05-17-hondurasgate-silencio-global:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "El silencio global del escándalo Hondurasgate"
+  autor: Equipo de Política de El Mostrador
+  fecha: 2026-05-17
+  url: https://www.elmostrador.cl/noticias/mundo/2026/05/17/el-silencio-global-del-escandalo-hondurasgate/
+  notas: "Análisis de El Mostrador sobre la cobertura del caso Hondurasgate: la filtración de audios sobre una operación financiada para desinformar y erosionar gobiernos progresistas latinoamericanos (Sheinbaum, Petro) fue minimizada por la gran prensa internacional. Conversación atribuida a Juan Orlando Hernández y Nasry Asfura: creación de un sitio de noticias latinoamericano con apoyo del Partido Republicano estadounidense, ayuda de Israel y financiamiento comprometido desde Argentina vía Javier Milei. Verificado por lectura directa (HTTP 200)."
+dw-2026-05-12-hondurasgate-audios-filtrados:
+  tipo: prensa
+  medio: Deutsche Welle
+  titulo: "Hondurasgate: qué se sabe y qué no de los audios filtrados"
+  autor: Deutsche Welle
+  fecha: 2026-05-12
+  url: https://www.dw.com/es/hondurasgate-qu%C3%A9-se-sabe-y-qu%C3%A9-no-de-los-audios-filtrados/a-77138562
+  notas: "Balance de DW sobre el Hondurasgate: 37 audios grabados según los medios en WhatsApp, Signal y Telegram entre enero y abril de 2026, con conversaciones atribuidas a Juan Orlando Hernández y Nasry Asfura (célula informativa en EE.UU., aporte de US$350.000 de Javier Milei, papel de Israel). Marco de verificación: sin confirmación independiente; Hondurasgate/Diario Red citan Phonexia Voice Inspector (voces humanas); los señalados califican los audios de falsos. Verificado por lectura directa (HTTP 200)."
 hondurasgate-2026-04-30-37-audios:
   tipo: investigacion
   medio: Hondurasgate.ch / Diario Red / Canal Red
@@ -1606,6 +1654,14 @@ eldesconcierto-2026-05-15-kast-punta-peuco:
   autor: Cristian Neira
   fecha: 2026-05-15
   url: https://eldesconcierto.cl/actualidad/kast-plantea-frenar-cambio-punta-peuco-penal-comun-y-regresarlo-solo-condenados-violaciones-ddhh-n5458799
+reportediario-2026-08-07-factor-mera-lavin:
+  tipo: prensa
+  medio: El Reporte Diario
+  titulo: "El ministro de la Corte de Apelaciones que siempre vota a favor de los Lavín"
+  autor: Redacción El Reporte Diario
+  fecha: 2026-08-07
+  url: https://reportediario.cl/2026/08/07/el-ministro-de-la-corte-de-apelaciones-que-siempre-vota-a-favor-de-los-lavin/
+  notas: "Réplica y ampliación del reportaje de Bío Bío Investiga sobre el 'Factor Mera': Juan Cristóbal Mera intervino en cuatro causas del matrimonio Lavín-Barriga y votó a favor en todas; su voto del 6 de agosto de 2026 permitió a Joaquín Lavín León salir de Capitán Yáber. Detalla el 26 de enero de 2024 (voto en minoría por rebajar cautelar de Barriga a nocturno), el 27 de marzo de 2025 (amparo acogido parcialmente) y las fuentes judiciales: 'duro con los robos y tráficos, pero blando con los delitos económicos'. Verificado por lectura directa (HTTP 200)."
 reportediario-2026-05-14-kast-punta-peuco:
   tipo: prensa
   medio: El Reporte Diario
@@ -2161,6 +2217,14 @@ elmostrador-2026-06-08-kast-thiel-transparencia:
   autor: Mesa de noticias de El Mostrador
   fecha: 2026-06-08
   url: https://www.elmostrador.cl/noticias/pais/2026/06/08/kast-si-se-reunio-con-peter-thiel-presidencia-confirma-cita-y-cierra-puerta-a-la-transparencia/
+theclinic-2026-06-10-cep-kast-34-aprobacion:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Encuesta CEP: Presidente Kast estrena su gobierno con un 34% de aprobación y Parisi figura entre los políticos mejor evaluados"
+  autor: Jorge Palacios
+  fecha: 2026-06-10
+  url: https://www.theclinic.cl/2026/06/10/encuesta-cep-presidente-kast-estrena-su-gobierno-con-un-34-de-aprobacion-y-parisi-figura-entre-los-politicos-mejor-evaluados/
+  notas: "Cobertura de la Encuesta CEP N.º 96 (abril-mayo 2026), primera medición de Kast como presidente: 34% de aprobación y 52% de desaprobación, mejor que los resultados de Boric al dejar el gobierno; Vodanovic lideró el podio de figuras políticas y Franco Parisi se sumó a los mejor evaluados. Verificado por lectura directa (HTTP 200)."
 theclinic-2026-06-08-kast-thiel-moneda-reserva:
   tipo: prensa
   medio: The Clinic
@@ -2169,6 +2233,14 @@ theclinic-2026-06-08-kast-thiel-moneda-reserva:
   autor: The Clinic
   fecha: 2026-06-08
   url: https://www.theclinic.cl/2026/06/08/presidencia-confirma-que-kast-se-reunio-con-el-magnate-tecnologico-peter-thiel-en-la-moneda-pero-mantiene-en-reserva-los-temas-abordados/
+theclinic-2026-06-09-peter-thiel-perfil:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Magnate libertario de PayPal y uno de los primeros donantes de Trump: quién es Peter Thiel, el empresario que se reunió con Kast en La Moneda"
+  autor: Jorge Palacios
+  fecha: 2026-06-09
+  url: https://www.theclinic.cl/2026/06/09/magnate-libertario-de-paypal-y-uno-de-los-primeros-donantes-de-trump-quien-es-peter-thiel-el-empresario-que-se-reunio-con-kast-en-la-moenda/
+  notas: "Perfil de Peter Thiel publicado por The Clinic tras la confirmación de su reunión con Kast: identificado como 'el intelectual de derecha más influyente de los últimos 20 años', libertario y conservador, cofundador de PayPal y Palantir Technologies (macrodatos para instituciones bélicas y de inteligencia), uno de los primeros donantes tecnológicos de Donald Trump en 2016. Kaiser: 'Es muy crítico del Estado como elemento de poder'. Paso por Chile a fines de abril e inicios de mayo: José Piñera compartió y luego eliminó una foto con él (anécdota de la estampilla de Thomas Jefferson). Interés en invertir en el sector minero chileno. Verificado por lectura directa."
 theclinic-2026-07-09-kast-thiel-ia-estados:
   tipo: prensa
   medio: The Clinic
@@ -6853,6 +6925,13 @@ biobiochile-2026-04-30-cupula-chen:
   autor: BBCL Investiga
   fecha: 2026-04-30
   url: https://www.biobiochile.cl/especial/bbcl-investiga/noticias/articulos/2026/04/30/la-cupula-chen-el-auge-y-caida-del-clan-chino-que-uso-chile-para-lavar-dinero-de-cripto-estafas.shtml
+biobiochile-2026-06-10-cep-kast-52-desaprobacion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Desaprobación al presidente Kast llega a 52% y aprobación al 34%, según Encuesta CEP"
+  autor: BioBioChile
+  fecha: 2026-06-10
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/10/desaprobacion-al-presidente-kast-llega-a-52-y-aprobacion-al-34-segun-encuesta-cep.shtml
 biobiochile-2026-06-10-cataldo-morosidad-cae:
   tipo: prensa
   medio: BioBioChile
@@ -14186,6 +14265,14 @@ adnradio-2026-04-06-desbordes-fake-news-el-ciudadano:
   fecha: 2026-04-06
   url: https://www.adnradio.cl/2026/04/06/acusan-a-alcalde-de-santiago-mario-desbordes-de-compartir-fake-news-contra-medio-chileno-en-redes-sociales/
   notas: "Verificada por lectura completa (vía r.jina.ai). Documenta la circulación el 6-abr-2026 de una supuesta noticia atribuida falsamente a Cooperativa que vinculaba a El Ciudadano con una red de desinformación internacional; Desbordes la compartió en X y la eliminó tras los desmentidos. Incluye la réplica del alcalde citando el informe real del Departamento de Estado de EE.UU. de noviembre de 2023 ('Esfuerzos del Kremlin para propagar desinformación encubiertamente en América Latina'), el desmentido del subdirector de medios digitales de Cooperativa Raúl Martínez a Fast Check y el comunicado de El Ciudadano negando vínculos con Rusia. El Ciudadano cubrió el episodio el mismo día (elciudadano.com, 6-abr-2026)."
+elpais-2026-08-07-feriado-17-septiembre:
+  tipo: prensa
+  medio: El País Chile
+  titulo: "Feriado del 17 de septiembre en Chile: qué dice el proyecto de ley que busca extender las Fiestas Patrias"
+  autor: Sebastián Dote
+  fecha: 2026-08-07
+  url: https://elpais.com/chile/2026-08-07/feriado-del-17-de-septiembre-en-chile-que-dice-el-proyecto-de-ley-que-busca-extender-las-fiestas-patrias.html
+  notas: "Explica el contenido de la moción de Zandra Parisi (PDG) para declarar feriado el 17 de septiembre de 2026 (sin irrenunciabilidad), el camino legislativo (comisiones de Hacienda y Economía, sala, Senado, comisión mixta y promulgación) y el rechazo del gobierno de Kast: el subsecretario del Interior Máximo Pavez dijo que 'no es necesario innovar'. Precedentes: moción similar rechazada en 2025, Ley N.º 21.482 (2022) y la norma de interferiado que se aplicó en 2024 (feriado del viernes 20). Verificado por lectura directa."
 elpais-2026-08-05-megarreforma-tiempo-record:
   tipo: publicacion
   medio: El País
@@ -15025,6 +15112,14 @@ pauta-2026-08-07-manalich-test-drogas-falsos-positivos:
   url: https://www.pauta.cl/actualidad/2026/08/07/manalich-cuestiona-protocolo-de-test-de-drogas-en-cuatro-anos-la-mitad-de-los-funcionarios-va-a-salir-falsamente-positivo-al-menos-una-vez.html
   notas: "Entrevista de Pauta de Análisis: el exministro Jaime Mañalich cuestionó el protocolo de test de drogas a autoridades, advirtió sobre falsos positivos en screening, pidió que solo un examen confirmatorio permita adoptar decisiones, y abordó el vapeo adolescente y el tráfico ilegal de cigarrillos."
 
+adnradio-2026-08-07-feriado-17-septiembre:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "¿Se alargan las Fiestas Patrias 2026? Qué dice el proyecto que busca establecer como feriado el 17 de septiembre"
+  autor: Agencia Uno
+  fecha: 2026-08-07
+  url: https://www.adnradio.cl/2026/08/07/se-alargan-las-fiestas-patrias-2026-que-dice-el-proyecto-que-busca-establecer-como-feriado-el-17-de-septiembre/
+  notas: "Cobertura de la moción de Zandra Parisi (PDG) para declarar feriado nacional el 17 de septiembre de 2026, de manera excepcional y sin carácter irrenunciable. Artículo único: 'Declárase feriado nacional el día 17 de septiembre de 2026'. Cita como precedente la Ley N.º 21.482 (2022, feriado del viernes 16 de septiembre). Verificado por lectura directa."
 adnradio-2026-08-07-manalich-test-drogas-falsos-positivos:
   tipo: prensa
   medio: ADN Radio
@@ -15490,6 +15585,150 @@ elzorronortino-2026-08-07-contraloria-chanaral:
   fecha: 2026-08-07
   url: https://www.elzorronortino.cl/actualidad/contraloria-confirma-ocupacion-ilegal-de-inmueble-fiscal-por-parte-de-delegado-de-chanaral-y-ordena-procedimiento-disciplinario/
   notas: "Confirma el dictamen de la Contraloría Regional de Atacama: la ocupación del inmueble fiscal en Portofino (Chañaral) por el delegado presidencial provincial Sebastián Urrejola se prolongó ~16 años; instruye a la Subsecretaría del Interior iniciar el procedimiento disciplinario y a la Seremi de Bienes Nacionales gestionar la restitución y el cobro retroactivo."
+
+biobiochile-2026-08-07-nunez-rechaza-suspension-ley-karin:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'No cuenten con mi voto': Presidenta del Senado rechaza propuesta para suspender por 5 años Ley Karin"
+  autor: BioBioChile
+  fecha: 2026-08-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/07/no-cuenten-con-mi-voto-presidenta-del-senado-rechaza-propuesta-para-suspender-por-5-anos-ley-karin.shtml
+  notas: "La presidenta del Senado, Paulina Núñez (RN), manifestó su rechazo a la propuesta de un grupo de diputados para suspender por cinco años la Ley Karin: 'No cuenten con mi voto', argumentando que desprotegería a quienes dependen de esta ley."
+
+emol-2026-08-07-kast-ley-karin-perfeccionar:
+  tipo: prensa
+  medio: Emol
+  titulo: "Kast e idea de modificar Ley Karin: 'Tiene que ser debatida siempre y con altura de miras, cuidando el fin de la norma'"
+  autor: María Luisa Cisternas
+  fecha: 2026-08-07
+  url: https://www.emol.com/noticias/Nacional/2026/08/07/1207872/kast-ley-karin.html
+  notas: "Desde Cali, Colombia, Kast respondió al proyecto de suspensión de la Ley Karin: 'las leyes se pueden perfeccionar', derivando el análisis al Consejo Superior Laboral tripartito y advirtiendo que la ley puede ser 'mal utilizada por algún grupo pequeño de personas para un fin distinto al que fue creada'."
+
+adnradio-2026-08-06-tc-audiencia-publica-megarreforma:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Tribunal Constitucional abre audiencia pública por megarreforma: quiénes pueden exponer y cómo inscribirse"
+  autor: ADN Radio
+  fecha: 2026-08-06
+  url: https://www.adnradio.cl/2026/08/06/tribunal-constitucional-abre-audiencia-publica-por-megarreforma-quienes-pueden-exponer-y-como-inscribirse/
+  notas: "El Pleno del TC abrió una instancia formal de participación ciudadana en el proceso de la megarreforma, impulsada tras una solicitud de la ONG FIMA. Toda persona u organización que acredite interés podrá exponer argumentos jurídicos y efectos concretos de las normas. Solicitudes por escrito vía web del TC hasta las 12:00 del lunes 10 de agosto; audiencia pública el miércoles 12 de agosto desde las 9:00; alegatos de las partes el jueves 13."
+
+cnnchile-2026-08-07-kast-ley-karin-perfeccionar:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Kast evita respaldar suspensión de Ley Karin, pero abre la puerta a cambios: 'Se puede perfeccionar'"
+  autor: CNN Chile
+  fecha: 2026-08-07
+  url: https://www.cnnchile.com/pais/kast-ley-karin-suspension-cambios-propuesta-parlamentaria/
+  notas: "Kast evitó respaldar directamente la propuesta de suspender por cinco años la Ley Karin pero abrió la puerta a revisar y modificar aspectos. Detalla los autores de la iniciativa (Grohs, Muñoz, Jofré, Urruticoechea del PNL; Diego Vergara republicano; Daniel Valenzuela ind-RN) y el objetivo de revisar los criterios de qué constituye acoso laboral."
+
+t13-2026-08-07-kast-ley-karin-perfeccionar:
+  tipo: prensa
+  medio: T13
+  titulo: "'Las leyes se pueden perfeccionar': Kast responde a propuesta que busca suspender la Ley Karin"
+  autor: T13
+  fecha: 2026-08-07
+  url: https://www.t13.cl/noticia/politica/las-leyes-se-pueden-perfeccionar-kast-responde-propuesta-suspender-ley-karin-7-8-2026
+  notas: "Kast abordó la propuesta del PNL para suspender la Ley Karin por cinco años: 'las leyes se pueden perfeccionar' y las propuestas parlamentarias 'siempre son acogidas'; reitera la solicitud al Consejo Superior Laboral tripartito y la existencia de situaciones 'discutibles' en la ley."
+
+24horas-2026-08-07-kast-ley-karin-perfeccionar:
+  tipo: prensa
+  medio: 24horas
+  titulo: "Presidente Kast y futuro de la Ley Karin: 'Todo tipo de legislación se puede perfeccionar'"
+  autor: 24horas
+  fecha: 2026-08-07
+  url: https://www.24horas.cl/actualidad/nacional/presidente-kast-ley-karin-futuro
+  notas: "Kast citó la Ley Lafkenche como ejemplo de norma 'creada con una muy buena intención' que 'derivó en un abuso por parte de algunas personas'; el ministro del Trabajo Tomás Rau confirmó cambios al reglamento de la Ley Karin pero no a su estructura, aclarando que un gran porcentaje de las denuncias no corresponde a la materia de la ley."
+
+cooperativa-2026-08-07-harboe-copamiento-crimen-organizado:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Felipe Harboe: No se logra disuadir al crimen organizado con copamiento policial"
+  autor: Cooperativa
+  fecha: 2026-08-07
+  url: https://www.cooperativa.cl/noticias/pais/policial/crimen-organizado/felipe-harboe-no-se-logra-disuadir-al-crimen-organizado-con-copamiento/2026-08-07/095451.html
+  notas: "El exsubsecretario de Prevención del Delito y exsenador Felipe Harboe (PPD) criticó el copamiento policial: 'no se logra disuadir al crimen organizado con copamiento policial' y se requieren intervenciones barriales más de fondo. Descartó la utilidad de crear otro estado de excepción: el despliegue militar en el sur se ha renovado unas 60 veces. Pide un sistema de protección de testigos robusto."
+
+latercera-2026-08-07-urrutia-estado-excepcion-militares:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Diputada Urrutia por nuevo estado de excepción en barrios: 'Los militares han sido formados para otro tipo de funciones'"
+  autor: Claudio Portilla
+  fecha: 2026-08-07
+  url: https://www.latercera.com/nacional/noticia/diputada-urrutia-por-nuevo-estado-de-excepcion-en-barrios-los-militares-han-sido-formados-para-otro-tipo-de-funciones/
+  notas: "La diputada del Frente Amplio Tatiana Urrutia cuestionó el estado de excepción en barrios: los militares 'han sido formados para otro tipo de funciones'; criticó el giro de Kast (hace un mes lo descartó) y el único precedente sería Colombia post-guerrilla. Echó de menos una agenda de prevención y control de armas, y criticó la falta de comunicación con la oposición ('le queda al ministro Arrau demostrar si va a ser el nuevo Quiroz')."
+
+latercera-2026-08-07-orrego-baquedano-velocidad:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Orrego defiende remodelación en Baquedano y afirma que no fue pensada para aumentar la velocidad de los automovilistas"
+  autor: Paula Pareja
+  fecha: 2026-08-07
+  url: https://www.latercera.com/nacional/noticia/orrego-defiende-remodelacion-en-baquedano-y-afirma-que-no-fue-pensada-para-aumentar-la-velocidad-de-los-automovilistas/
+  notas: "Estudio de la Universidad Diego Portales sobre la remodelación de Plaza Baquedano (Nueva Alameda): la velocidad relativa cayó un 67% (de 80% a 26% de la máxima permitida). El gobernador Claudio Orrego defendió las obras como un proyecto de priorización de peatones, transporte público y ciclistas; la exigencia de dos pistas fue de la Municipalidad de Providencia; no hay reevaluación en curso."
+
+biobiochile-2026-08-06-factor-mera-lavin-barriga:
+  tipo: prensa
+  medio: BioBioChile (Bío Bío Investiga)
+  titulo: "El 'Factor Mera': el ministro de la Corte de Santiago que siempre vota a favor de los Lavín-Barriga"
+  autor: Felipe Díaz Montero
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/08/06/el-factor-mera-el-ministro-de-la-corte-de-santiago-que-siempre-vota-a-favor-de-los-lavin-barriga.shtml
+  notas: "Reportaje de Bío Bío Investiga: el ministro Juan Cristóbal Mera ha intervenido cuatro veces en las causas de Joaquín Lavín León y Cathy Barriga, votando siempre a favor de sus intereses (26-ene-2024, 27-mar-2025, 9-abr-2025 y 6-ago-2026, cuando su voto permitió a Lavín pasar a arresto domiciliario total). Cita perfil de Mera en los chats Hermosilla-Sabaj ('muy culto... de derecha al máximo') y la frase de fuentes: 'duro con los robos y tráficos, pero blando con los delitos económicos'."
+
+biobiochile-2026-08-07-udi-servel-pc-cuba-fidel:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "UDI pide al Servel abrir procedimiento contra el PC por viaje a Cuba para homenajear a Fidel Castro"
+  autor: BioBioChile
+  fecha: 2026-08-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/07/udi-pide-al-servel-abrir-procedimiento-contra-el-pc-por-viaje-a-cuba-para-homenajear-a-fidel-castro.shtml
+  notas: "La bancada de diputados de la UDI ofició al Servel para solicitar la apertura de un procedimiento sancionatorio contra el Partido Comunista por el viaje de parte de su directiva a Cuba para homenajear a Fidel Castro, argumentando una posible infracción a la legislación de partidos políticos."
+
+biobiochile-2026-08-08-bruja-pinochet-pirzio-biroli:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "La historia de la 'bruja de Pinochet': La esotérica alcaldesa que vaticinaba el futuro del dictador"
+  autor: BioBioChile
+  fecha: 2026-08-08
+  url: https://www.biobiochile.cl/noticias/sociedad/historia/2026/08/08/la-historia-de-la-bruja-de-pinochet-la-esoterica-alcaldesa-que-vaticinaba-el-futuro-del-dictador.shtml
+  notas: "Reportaje histórico sobre Eugenia Pirzio-Biroli, la 'bruja de Pinochet': nacida en Italia en 1906, llegó a Chile en 1947, fue autoridad en la Patagonia y alcaldesa de Cisnes durante la dictadura. Su supuesta influencia sobre Pinochet mediante tarot y cartas astrales generó controversia. Perfil histórico-cultural: afirmaciones sobre influencia esotérica sin documentación primaria verificable."
+
+vergara240-2026-06-02-pais-mas-seguro-latinoamerica:
+  tipo: prensa
+  medio: Vergara 240 (VerificaUDP)
+  titulo: "Engañoso: 'Queremos que Chile vuelva a ser el país más seguro de Latinoamérica'"
+  autor: Constanza Carrasco y Karla Leiva
+  fecha: 2026-06-02
+  url: https://vergara240.udp.cl/enganoso-queremos-que-chile-vuelva-a-ser-el-pais-mas-seguro-de-latinoamerica/
+  notas: "Fact-check de VerificaUDP (Escuela de Periodismo UDP) sobre la frase del presidente José Antonio Kast en su primera Cuenta Pública (1-jun-2026): 'queremos que Chile vuelva a ser el país más seguro de Latinoamérica'. Calificado como engañoso: Chile ocupa el puesto 62 del Global Peace Index 2025 (3° de Sudamérica, tras Argentina y Uruguay) y el 2° lugar de Sudamérica en el Balance de Homicidios 2025 de InSight Crime con 5,4 por 100.000 habitantes (-10,4%), detrás de Argentina (3,7) y muy bajo el promedio regional (17,6). Cita a Sergio Bitar (exministro, exvicepresidente de Paz Ciudadana) y el Global Safety Report de Gallup (39% de chilenos se siente seguro de noche)."
+
+elmostrador-2023-11-27-delincuencia-cifras:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "La delincuencia en Chile: lo que dicen las cifras"
+  autor: Carlos Basso Prieto
+  fecha: 2023-11-27
+  url: https://www.elmostrador.cl/noticias/pais/2023/11/27/la-delincuencia-en-chile-lo-que-dicen-las-cifras/
+  notas: "Análisis de la Unidad de Investigación de El Mostrador sobre las cifras oficiales de delincuencia del Ministerio Público y Carabineros: ingresos de causas +50% entre 2006 y 2022 (944.547 a 1.425.712), homicidios +40% en 6 años según STOP (593 en 2017 a 832 en 2022), secuestros +140% en 10 años (343 en 2012 a 826 en 2022, uno de cada cuatro ligado a crimen organizado). Tasa de homicidios 4,7 por 100.000 habitantes en 2022 (Subsecretaría de Prevención del Delito), de las más bajas de América Latina según Insight Crime. Contexto: securitización de la política y embestida contra la ministra Tohá."
+
+lemondediplomatique-2024-04-crimen-organizado-chile:
+  tipo: prensa
+  medio: Le Monde Diplomatique (edición chilena)
+  titulo: "El crimen organizado se hace evidente en Chile"
+  autor: Ibán de Rementería
+  fecha: 2024-04-01
+  url: https://www.lemondediplomatique.cl/2024/04/el-crimen-organizado-se-hace-evidente-en-chile.html
+  notas: "Ensayo de abril 2024 sobre la 'atematización' de la política por la seguridad ciudadana: según ENUSC y Paz Ciudadana la delincuencia bajó de 28% (2017) a 17% (2021) mientras el temor creció a 90%; los homicidios sin imputados ('ajustes de cuenta') son la excepción del crimen organizado. Seguridad privada quintuplica a la pública; 17% de hogares padeció un delito (10% robo desde vehículo). Copamiento barrial del narco (narco fiestas, narco velorios, narco ayuda social). Artículo de opinión: afirmaciones requieren verificación con encuestas primarias."
+
+decidechile-chile-30-anos-seguridad-publica:
+  tipo: publicacion_web
+  medio: DecideChile (Unholster)
+  titulo: "Chile en 30 años: Seguridad pública"
+  autor: Unholster / DecideChile
+  fecha: 2023-03-25
+  url: https://new.decidechile.cl/chile-en-30-anos/seguridad/seguridad-publica
+  notas: "Sección del especial interactivo 'Chile en 30 años' de DecideChile (Unholster, en alianza con La Tercera), lanzado en marzo de 2023. Datos: DMCS -16,5% entre 2005 y 2023; aumento más drástico entre 2021 y 2022 (+45% casos policiales por 100.000 hab.); homicidios +48% (845 en 2018 a 1.248 en 2023, máximo 1.330 en 2022); RM concentra 44,7% de homicidios 2023; 141 comunas sin homicidios en 2024; brecha percepción-realidad. URL original con error TLS en la verificación (new.decidechile.cl); el contenido fue reconstruido vía investigación web."
 
 latercera-2025-09-11-factcheck-meo-homicidios:
   tipo: prensa

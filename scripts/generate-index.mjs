@@ -36,6 +36,16 @@ function parseEventFrontmatter(filePath) {
   return YAML.parse(fmMatch[1]);
 }
 
+// Count unique [[source/...]] IDs referenced in a file body
+function countSources(filePath) {
+  const content = readFileSync(filePath, 'utf8');
+  const ids = new Set();
+  for (const match of content.matchAll(/\[\[source\/([A-Za-z0-9_.-]+)\]\]/g)) {
+    ids.add(match[1]);
+  }
+  return ids.size;
+}
+
 // Collect all events
 const allFiles = walkMd(eventsDir);
 const events = [];
@@ -58,7 +68,8 @@ for (const file of allFiles) {
     year,
     tipo: fm.tipo,
     temas: Array.isArray(fm.tema) ? fm.tema : fm.tema ? String(fm.tema).split(',').map(t => t.trim()) : [],
-    fecha: fm.fecha
+    fecha: fm.fecha,
+    fuentes: countSources(file)
   });
 }
 
@@ -67,7 +78,26 @@ events.sort((a, b) => a.id.localeCompare(b.id));
 
 // Generate EVENTS_INDEX.md
 let eventsIndex = '# Índice de Eventos\n\n';
-eventsIndex += '> Este archivo se genera automáticamente con `pnpm run generate-index`\n\n';
+eventsIndex += '> Este archivo se genera automáticamente con `pnpm run generate-index`\n';
+eventsIndex += '> Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.\n\n';
+
+// Seguimiento: eventos con menos de 3 fuentes
+const lowSourceEvents = events
+  .filter((e) => e.fuentes < 3)
+  .sort((a, b) => a.fuentes - b.fuentes || a.id.localeCompare(b.id));
+
+const lowCount = lowSourceEvents.length;
+if (lowCount > 0) {
+  eventsIndex += `## ⚠️ Seguimiento: eventos con menos de 3 fuentes (${lowCount})\n\n`;
+  eventsIndex += `<details>\n<summary>Ver lista (${lowCount} eventos) — priorizar búsqueda de fuentes adicionales</summary>\n\n`;
+  for (const event of lowSourceEvents) {
+    const fuenteLabel = event.fuentes === 1 ? 'fuente' : 'fuentes';
+    eventsIndex += `- [${event.id} - ${event.title}](${event.path}) — **${event.fuentes} ${fuenteLabel}**\n`;
+  }
+  eventsIndex += '\n</details>\n\n';
+} else {
+  eventsIndex += '## ✅ Todos los eventos tienen al menos 3 fuentes\n\n';
+}
 
 // Group by year
 const eventsByYear = {};
@@ -84,7 +114,7 @@ const sortedYears = Object.keys(eventsByYear).sort((a, b) => b.localeCompare(a))
 for (const year of sortedYears) {
   eventsIndex += `## ${year}\n\n`;
   for (const event of eventsByYear[year]) {
-    eventsIndex += `- [${event.id} - ${event.title}](${event.path})\n`;
+    eventsIndex += `- [${event.id} - ${event.title}](${event.path}) — ${event.fuentes} ${event.fuentes === 1 ? 'fuente' : 'fuentes'}\n`;
   }
   eventsIndex += '\n';
 }
@@ -146,6 +176,7 @@ const totalTopics = Object.keys(topicsData).length;
 let statsSection = '## Estadísticas del vault\n\n';
 statsSection += '> Esta sección se genera automáticamente con `pnpm run generate-index`\n\n';
 statsSection += `**Total de eventos:** ${stats.totalEvents}\n\n`;
+statsSection += `**Cobertura de fuentes:** ${events.length - lowCount} de ${events.length} eventos con 3+ fuentes (${lowCount} requieren más fuentes para reducir sesgo)\n\n`;
 statsSection += '**Eventos por año:**\n';
 const sortedYearsStats = Object.keys(stats.eventsByYear).sort((a, b) => b.localeCompare(a));
 for (const year of sortedYearsStats) {
