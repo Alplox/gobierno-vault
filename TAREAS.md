@@ -496,6 +496,56 @@ La cadena enlaza: `20260108-1` → `20260113-1` → `20260615-4` → `20260625-6
 - ⬜ **Recurso de queja de la Fiscalía Centro Norte** (mencionado en `20260806-19`): verificar si se presentó tras el rechazo de la nulidad y su estado.
 - ⬜ **Evidencia pública sobre un delito previo de Gatica:** hasta los antecedentes públicos no existe sentencia ni resolución que establezca que Gatica cometía un delito al momento del disparo; la defensa de Crespo sostuvo participación en una agresión al piquete (posición procesal, no hecho acreditado). Documentado como marco de análisis en `20260108-1`/`20260113-1`.
 
+## ACOT — fuentes revisadas 8-ago-2026 (tanda ~55 URLs)
+
+- ✅ **Cadena nacional ACOT** (`20260805-13`): ampliado con El País "nueva etapa", Ex-Ante "hora de Arrau", CIPER Radar y Cooperativa (Callis/doctrina Quiroz).
+- ✅ **Reacciones parlamentarias** (`20260806-10`): ampliado con fast track oficialista (Radio UChile), senado.cl, CNN Chile (presidente Cámara), 24 Horas (Lagos/20 iniciativas) y The Clinic (Kaiser/Avaria).
+- ✅ **Crítica reforma constitucional** (`20260806-11`): ampliado con Correa Sutil (El Mostrador), Bianchi (La Tercera), Cooperativa "redundante" y Reporte Diario (estado de excepción acotado).
+- ✅ **Secreto bancario** (`20260807-9`): ampliado con BioBio (Arrau "mitos" + Castro emplaza), EstaPasando y G5 (Iván Flores/inteligencia económica).
+- ✅ **Plaza de Armas** (`20260806-21`): ampliado con munistgo.cl.
+- ✅ **White San Bernardo** (`20260806-18`): ampliado con La Nación.
+- ✅ **PC vs ACOT** (`20260806-20`): ampliado con El Siglo.
+- ✅ **Nuevo evento** `20260807-19`: análisis de El Clarín "Kast 2021 → 2026" (seguridad + INDH).
+- ⬜ **Fuentes no integradas de la tanda** (revisar si aportan ángulos nuevos): La Nación (San Bernardo) ya integrada; quedan sin uso directo: DF "rango constitucional", T13 Leiva, interior.gob.cl (comunicado), ellibero.cl, revistaseguridad.cl, tele13radio.cl, rvl.uv.cl, France24, La Izquierda Diario, minjusticia.gob.cl, desiertofm.cl, Lanación.com.ar, elconcecuente.cl, futuro.cl, soychile.cl, univision.com, infobae.com, nuevopoder.cl, radiogennesis.cl, ex-ante y latercera (quiroz/arrau), elmostrador (couso ya integrado), vergara240.udp.cl, lemondediplomatique.cl, decidechile.cl.
+- ⬜ **Sesiones extraordinarias del Congreso** (mencionado por presidente Cámara): verificar si se convocaron efectivamente tras el 6-ago para la ACOT.
+
+## Ley Karin / 40 horas / reforma laboral — fuentes revisadas 8-ago-2026
+
+- ✅ **Nuevo evento** `20251026-1`: Kast detalla en debate Canal 13 el recorte de US$6.000M sin tocar beneficios sociales (BioBio).
+- ✅ **Nuevo evento** `20251210-2`: enredo por Ley 40 Horas (propuesta kast.cl pymes + bajada comunicacional Kast/Arrau).
+- ✅ **Debate ANATEL** (`20251209-1`): ampliado con cita extendida del transcript 24 Horas (PGU, indemnización) + cruce Jara.
+- ✅ **Cuenta Pública** (`20260601-5`): ampliado con T13 (no tocarán beneficios sociales, ahorro 1,3 billones).
+- ✅ **Indemnización a todo evento** (`20260618-3`): ampliado con El País (cotización 1,8% Seguro de Cesantía, solo contratos nuevos).
+- ✅ **Jornada 52h Mesa Reactivación** (`20260630-3`): ampliado con El País (periodo promedio 4→15/52 semanas, art. 22 bis).
+- ✅ **Kast/Ley Karin Colombia** (`20260807-14`): ampliado con BioBio (evita apoyar suspensión).
+- ⬜ **t13 1-jun-2026 y df/latercera/cnn 40 horas dic-2025**: integradas en los eventos correspondientes; revisar si quedan ángulos sin cubrir (flexibilidad laboral para pymes).
+- ✅ **Síntesis promesa US$6.000M vs techo de deuda US$6.200M** (`20260609-2`): creado con Briones (marzo), SEC (mayo), proyecto endeudamiento (20260601-3), CFA (9-jun) y balance 100 días de austeridad.
+
+## Desafío 90 / paralelo Ley Bases — fuentes revisadas 8-ago-2026
+
+- ✅ **Evento `20260529-1` ampliado**: documento Scribd completo (fuente primaria de la estrategia de agobio), análisis crítico de El Arrebato, y sección verificada del paralelo con la Ley Bases de Milei (664 artículos, tratamiento exprés vs. táctica de leyes breves de Kast), respaldada por France 24.
+- ✅ **`20260805-13` ampliado**: detalles de implementación de ACOT (50 barrios críticos, FF.AA.) con Emol 6-ago.
+- ✅ **`20251203-2` ampliado**: radiografía de la estrategia de segunda vuelta (Radio U. de Chile).
+- ✅ **`20251216-1` ampliado**: PDF del Manifiesto Republicano 2021 (CentroCompetencia) como fuente primaria.
+- ✅ **`20250822-1` ampliado**: cobertura del lanzamiento del programa (Radio Agricultura).
+- ⬜ **Afiche Partido Igualdad (picnob/Instagram)**: campaña opositora que compara la estrategia de Kast con la Ley Bases de Milei. Es red social (solo complemento); el paralelo quedó verificado y documentado en `20260529-1`. Pendiente: cubrir la campaña del Partido Igualdad con fuente periodística si aparece.
+- ⬜ **Seguimiento del paralelo legislativo**: si se acumulan datos sobre el fast track de la "Ley de Reconstrucción Nacional" y la ACOT (votaciones exprés, sesiones maratónicas), evaluar un evento de síntesis sobre la estrategia legislativa del gobierno (Kast vs. Milei/órbita internacional).
+
+## Tributación / estrategia de Kast — fuentes revisadas 8-ago-2026
+
+- ✅ **Evento `20241126-1` creado**: reforma tributaria de Marcel (nov-2024): esquema dual grandes empresas (25% + 16% + 4%, carga 39,5%) y críticas de expertos (La Tercera + empresaslogros como contexto del sistema tributario).
+- ✅ **Evento `20250708-1` creado**: Ley 21.755 (promulgación 8-jul-2025): rebaja IR1 pymes al 12,5% 2025-2027, PPM a la mitad, 15% en 2028 (contapapaya + BCN + El Dínamo reforma pro-pymes).
+- ✅ **Evento `20250608-1` creado**: el "método Kast" en campaña (The Clinic, jun-2025): estrategia propositiva sin errores, Plan Reinicia, Punta Peuco vs Matthei.
+- ✅ **`20260318-1` ampliado**: "copamiento de agenda" / flood the zone de Bannon (El Dínamo 19-mar) + matriz ideológica del gobierno de emergencia (CIPER 29-mar, lectura schmittiana).
+- ✅ **`20231217-1` ampliado**: la apuesta de Kast por el "A favor" en el plebiscito 17D (El Mostrador oct-2023).
+- ✅ **`20250822-1` conectado**: promesa E7 (tasa pymes 10%) vinculada a la Ley 21.755 (12,5% real).
+- ⬜ **Empresaslogros y contapapaya**: blogs divulgativos usados como fuentes de contexto tributario (no como fuente primaria de eventos).
+
+## Procesamiento de PDFs — flujo de trabajo (8-ago-2026)
+
+- ✅ **Script `scripts/pdf-extract.mjs`** (npm: `pnpm run pdf-extract`): PDF → **markdown estructurado** con la librería `@firecrawl/pdf-inspector` (devDependency, núcleo Rust nativo via NAPI, sin OCR; conserva títulos H1-H4, listas, tablas, subrayados y orden de lectura). Flags: `--out`, `--json`, `--silent`, `--keep`. Avisa si el PDF es escaneado.
+- ⬜ **PDFs pendientes de procesar para verificar** (candidatos: planes filtrados, informes oficiales difíciles de archivar).
+
 ## Seguimiento de fuentes por evento
 
 > El conteo de fuentes únicas por evento se genera automáticamente en `EVENTS_INDEX.md` (sección "⚠️ Seguimiento: eventos con menos de 3 fuentes") con `pnpm run generate-index`. No mantener lista manual aquí: consultar el índice.

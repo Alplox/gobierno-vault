@@ -307,6 +307,20 @@ Cuando `webfetch` no logre leer una URL (bloqueo, JS rendering, paywall), intent
 Formato: `https://r.jina.ai/https://ejemplo.com/articulo`
 Formato paywallskip: `https://www.paywallskip.com/article?url=https://ejemplo.com/articulo`
 
+## Procesamiento de PDFs (lectura de documentos)
+
+`pnpm run pdf-extract -- <URL-del-PDF>` descarga el PDF y lo convierte a **Markdown estructurado**
+con la libreria `@firecrawl/pdf-inspector` (devDependency, nucleo Rust nativo via NAPI, sin OCR,
+sin modelos ML, offline; conserva titulos H1-H4, listas, tablas, negritas, subrayados y el orden
+de lectura multicolumna) para leer documentos primarios durante investigaciones/correcciones
+(planes filtrados, informes oficiales, fallos).
+
+- **Uso:** `pnpm run pdf-extract -- https://sitio.cl/doc.pdf` imprime el markdown a stdout
+  (o `--out <ruta>` para guardarlo). `--json` imprime clasificacion + markdown. Acepta tambien
+  un `.md` ya extraido como argumento posicional para re-imprimir sin red. Avisa si el PDF es
+  escaneado (pdfType distinto de TextBased/Mixed: requiere OCR) y tiene timeout de descarga +
+  chequeo del magic `%PDF`.
+
 ## Generador de fuentes (script)
 
 `pnpm run add-source -- <URL>` (o `pnpm run add-source` sin URL para modo interactivo) extrae
@@ -519,6 +533,7 @@ Cuando descubras algo no documentado aqui:
 | Nueva entidad | `entities.yaml`, este archivo |
 | Nueva fuente | `sources.yaml`, este archivo |
 | Nuevo tema | `topics.yaml`, este archivo |
+| Procesamiento de PDFs | `scripts/pdf-extract.mjs`, sección "Procesamiento de PDFs" de este archivo |
 | Wikilink roto | `remarkWikiLinks.mjs` (resolve fallback) |
 | Scripts de sitemaps | `scripts/sync-sitemaps.mjs`, `scripts/sitemaps-index.mjs`, `scripts/sitemaps-backup.mjs`, sección "Catálogo de sitemaps" de este archivo |
 

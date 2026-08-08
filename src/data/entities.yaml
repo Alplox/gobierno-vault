@@ -380,6 +380,10 @@ people:
     nombre: Igor Garafulic
     cargo: Intendente Metropolitano
     notas: "Intendente de la Región Metropolitana (2006-2010) bajo el gobierno de Michelle Bachelet. En noviembre de 2009 impulsó con la Asociación Chilena de Municipalidades una campaña masiva de tenencia responsable de mascotas para reducir los más de 250 mil perros abandonados de la RM."
+  rosario_navarro:
+    nombre: Rosario Navarro
+    cargo: Presidenta de la Sofofa
+    notas: "Presidenta de la Sociedad de Fomento Fabril (Sofofa). En noviembre de 2024, ante la propuesta de reforma tributaria de Hacienda (ministro Mario Marcel), valoró la rebaja del impuesto de primera categoría pero criticó el sistema dual por no simplificar el complejo sistema tributario chileno."
   roberto_belmar:
     nombre: Roberto Belmar
     cargo: Seremi de Salud de la Región Metropolitana
@@ -2050,10 +2054,22 @@ people:
     nombre: Javier Couso
     cargo: Abogado constitucionalista y director del Doctorado en Derecho de la UDP
     notas: "Abogado constitucionalista, director del Doctorado en Derecho de la Universidad Diego Portales (UDP). En agosto de 2026 rebatió el anuncio del presidente José Antonio Kast de consagrar por primera vez en la Constitución la obligación estatal de proteger a la población, señalando que el artículo 1° de la Constitución de 1980 ya establece que 'es deber del Estado resguardar la seguridad nacional, dar protección a la población y a la familia' y que 'eso es falso' (entrevista con Al Pan Pan de El Mostrador)."
+  jorge_correa_sutil:
+    nombre: Jorge Correa Sutil
+    cargo: Abogado constitucionalista, exsubsecretario del Interior y exvicepresidente del Banco Mundial
+    notas: "Abogado constitucionalista, exsubsecretario del Interior (2000-2005, gobierno de Ricardo Lagos), exconsejero del Banco Mundial y profesor de derecho. En agosto de 2026 advirtió junto a Javier Couso que la obligación de dar protección a la población ya figura en el artículo 1° inciso quinto de la Constitución vigente, por lo que presentarla como una innovación de la ACOT era impreciso (El Mostrador, 7-ago-2026)."
   jorge_jeri:
     nombre: "Jose Jeri"
     cargo: "Presidente de la Republica del Peru"
     notas: "Recibio a Kast en su primera visita bilateral, Lima 7 enero 2026"
+  ivette_avaria:
+    nombre: Ivette Avaria
+    cargo: Diputada del Partido Nacional Libertario
+    notas: "Diputada del Partido Nacional Libertario. En agosto de 2026 criticó junto a Johannes Kaiser la cadena nacional del presidente José Antonio Kast sobre la Agenda ACOT, calificándola de 'campañera' y cuestionando que las propuestas no atacaran el problema de fondo de la seguridad (The Clinic, 6-ago-2026)."
+  axel_callis:
+    nombre: Axel Callis
+    cargo: Abogado y académico, exfiscal
+    notas: "Abogado penalista y académico, exfiscal. En agosto de 2026 advirtió que el gobierno de José Antonio Kast no podrá aplicar en seguridad la llamada 'doctrina Quiroz' —uso de las Fuerzas Armadas en seguridad interior— sin antes modificar el marco legal vigente, en el contexto de la Agenda ACOT (Cooperativa, 6-ago-2026)."
   daniel_mas:
     nombre: Daniel Mas
     cargo: Biministro de Economía y Minería
@@ -4880,6 +4896,10 @@ organizations:
     nombre: Partido Republicano de Chile
     tipo: partido_politico
     pais: Chile
+  partido_igualdad:
+    nombre: Partido Igualdad
+    tipo: partido_politico
+    pais: Chile
     notas: Partido fundado por José Antonio Kast. Ganó la segunda vuelta
       presidencial de diciembre 2025.
   partido_progresista:
@@ -5337,6 +5357,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio de comunicacion chileno, conocido por su linea editorial critica e independiente. Fundado en 1998."
+  el_clarin:
+    nombre: El Clarín de Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de comunicacion chileno de izquierda, vinculado historicamente al Partido Comunista. Fundado en 1954; su edicion actual es digital. En agosto de 2026 publico un analisis comparando el programa presidencial de Jose Antonio Kast de 2021 con las iniciativas de su gobierno de 2026 en seguridad y derechos humanos."
   tvn:
     nombre: Televisión Nacional de Chile
     tipo: medio_comunicacion
@@ -5607,6 +5632,11 @@ organizations:
     tipo: organismo_internacional
     pais: Chile
     notas: "Organismo regional de Naciones Unidas. En abril de 2026 recortó la proyección de crecimiento de Chile para 2026 de 2,2% a 2% por el escenario internacional complejo."
+  sec_estados_unidos:
+    nombre: Comisión de Bolsa y Valores de Estados Unidos (SEC)
+    tipo: institucion
+    pais: Estados Unidos
+    notas: "Regulador estadounidense del mercado de valores (Securities and Exchange Commission). En mayo de 2026 registró el programa de US$6.000 millones para futuras emisiones de deuda externa de Chile, primera gestión de este tipo de la administración de José Antonio Kast."
   consejo_fiscal_autonomo:
     nombre: Consejo Fiscal Autónomo (CFA)
     tipo: organismo_publico

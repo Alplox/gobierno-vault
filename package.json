@@ -11,6 +11,7 @@
     "sitemaps-backup": "node scripts/sitemaps-backup.mjs",
     "sitemaps-resync": "node scripts/sitemaps-resync.mjs",
     "add-source": "node scripts/add-source.mjs",
+    "pdf-extract": "node scripts/pdf-extract.mjs",
     "backup": "node scripts/backup.mjs",
     "restore": "node scripts/restore.mjs",
     "verify": "node scripts/verify.mjs",
@@ -34,5 +35,8 @@
     "tailwindcss": "^3.4.19",
     "unist-util-visit": "^5.1.0",
     "yaml": "^2.9.0"
+  },
+  "devDependencies": {
+    "@firecrawl/pdf-inspector": "^1.12.0"
   }
 }
