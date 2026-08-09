@@ -20,8 +20,6 @@ Flags:
   --dest <ruta>    Directorio destino (default: carpeta actual)
   --test, --dry-run  Verifica integridad sin escribir nada
 
-Si el respaldo es .full, también se extrae 'git-history.bundle' en el destino,
-desde el cual puedes clonar el repo completo:  git clone git-history.bundle
 `);
   process.exit(file ? 0 : 1);
 }
@@ -51,15 +49,6 @@ try {
     mkdirSync(join(out, '..'), { recursive: true });
     writeFileSync(out, entryBytes(payload, entry));
     written++;
-  }
-
-  if (payload.gitBundle) {
-    const bundleOut = join(dest, payload.gitBundle.path.split('/').join('\\'));
-    mkdirSync(join(bundleOut, '..'), { recursive: true });
-    writeFileSync(bundleOut, Buffer.from(payload.gitBundle.b64, 'base64'));
-    written++;
-    console.log(`  extraído historial git → ${payload.gitBundle.path}`);
-    console.log(`  → clona con:  git clone ${payload.gitBundle.path}`);
   }
 
   console.log(`  ✔ ${written} archivo(s) restaurado(s) en: ${dest}`);

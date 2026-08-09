@@ -3,6 +3,12 @@ import { getPeopleMap, getTopicsMap, getEventEntities } from '../lib/queries';
 import { countExplicitConnections, eventBasename, RELATION_LABELS, RELATION_CHIP_CLASS, DEFAULT_RELATION_CHIP, type EventConnections } from '../lib/relations';
 import { Calendar, User, Tag, GitFork } from 'lucide-astro';
 import { TIPO_LABELS, TIPO_STYLES } from '../lib/eventTypes';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  event: CollectionEntry<'events'>;
+  connectionIndex?: Map<string, EventConnections>;
+}
 
 const { event, connectionIndex } = Astro.props;
 const { titulo, fecha, tipo, tema, etiquetas = [] } = event.data;

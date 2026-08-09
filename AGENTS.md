@@ -14,6 +14,9 @@ Archivo `EVENTS_INDEX.md` permite contexto rápido para agentes y usuarios.
 Archivo `TAREAS.md` es la bitácora de eventos detectados como faltantes (recency bias):
 cuando se detecte un evento pendiente que no se implementará en el momento, registrarlo ahí
 con fecha, tipo sugerido y estado (`⬜ pendiente`). Al crearlo, marcar `✅ hecho` con el ID.
+**Toda entrada pendiente debe incluir su origen: `Origen: <url>`** — la URL que entregó el
+usuario o la fuente que reveló la brecha (si el origen es una red social, además la URL de
+prensa que la valida). Así retomar la tarea no exige re-buscar por el titular.
 
 ## Transiciones de página (View Transitions)
 
@@ -494,25 +497,48 @@ SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requier
 dependencias nuevas.
 
 Scripts (ver `scripts/gvault-util.mjs` para el formato compartido):
-- `pnpm run backup` — genera DOS archivos en la raiz: `.light.gvault` (solo contenido
-  actual: `src/**` + docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`)
-  y `.full.gvault` (lo anterior + `git bundle --all` con historial completo).
+- `pnpm run backup` — genera UN archivo `.light.gvault` (solo contenido actual: `src/**` +
+  docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`, `public/`) DIRECTO en
+  `public/backup/` (ubicacion canonica, SE COMMITEA) junto con `manifest.json` (`archivo`,
+  `url`, `tamano`, `sha256` del archivo completo).
 - `pnpm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).
-- `pnpm run restore -- <archivo.gvault> [--dest <ruta>]` — extrae los archivos; si es
-  `.full` tambien extrae `git-history.bundle` para `git clone`.
-- Flags de backup: `--shallow` (solo `src/content`+`src/data`), `--no-full`, `--no-light`,
-  `--out <prefijo>`.
+- `pnpm run restore -- <archivo.gvault> [--dest <ruta>]` — extrae los archivos.
+- Flags de backup: `--shallow` (solo `src/content`+`src/data`), `--out <prefijo>`.
 
 Convenciones:
-- Los `.gvault` se COMMITEAN al repo (no estan en `.gitignore`): quedan descargables por cualquiera
-  desde GitHub con un solo clic. Al generar respaldo nuevo, agrega ambos archivos y commitea.
+- `public/backup/` se COMMITEA al repo (no esta en `.gitignore`): el respaldo queda descargable
+  por cualquiera desde GitHub con un solo clic Y el footer del sitio lo sirve en `/backup/` sin
+  CPU extra en build. Al generar respaldo nuevo, commitea `public/backup/`. NO hay `.gvault` en
+  la raiz: la unica copia vive en `public/backup/` (evita duplicacion; `public` está en
+  `EXCLUDE_DIRS` de `backup.mjs` para que el respaldo no se incluya a sí mismo).
 - Ademas, se recomienda que quien descargue una copia la guarde FUERA del repo (USB, Drive, otras
   personas), para que sobreviva aunque el repo/plataforma desaparezca.
 - No incluyen password/cifrado a proposito (custodia publica); la integridad la dan los hashes
   SHA-256, no el secreto. Al ser contenido sin cifrar, es tan sensible como el propio repo:
   protegelo igual (mismo contenido que el vault).
-- El `.full.gvault` crece con cada commit (incluye el historial); si el repo se hace muy grande,
-  se puede commitecar solo el `.light` generando el `.full` bajo demanda.
+- **Respaldo en el footer del sitio:** el footer de todas las páginas lee `manifest.json` por
+  fetch y ofrece: botón **"Descargar respaldo (.gvault)"** (descarga con el nombre versionado
+  real), botón **"Descargar repositorio (.zip)"** (ZIP estilo GitHub de `Alplox/gobierno-vault`,
+  `archive/refs/heads/main.zip`) y un panel desplegable (`<details id="gvault-copy">`) con
+  `<textarea>` que carga el contenido del archivo (lazy, al abrir) para **copiarlo directamente**; muestra el nombre,
+  tamaño y SHA-256 esperados del respaldo actual y la guía de verificación correcta (one-liner
+  de Node incluido en el propio archivo, o `sha256sum`/`Get-FileHash` contra el SHA mostrado).
+  Ojo: el `toggle` de `<details>` NO burbujea — el listener se registra en **fase de captura**
+  (`addEventListener('toggle', fn, true)`), si no el textarea nunca se llenaba. Si no existe
+  backup, el footer muestra un aviso y deshabilita la descarga.
+- **Corrección de integridad (BOM):** `scripts/backup.mjs` usa `TextDecoder` con `ignoreBOM: true`
+  en `encodeFile`; sin esto los archivos con BOM UTF-8 (ej. `src/scripts/eventListClient.js`)
+  perdían 3 bytes en el round-trip y `verify` reportaba hash incorrecto.
+- **Instrucciones para no técnicos embebidas en cada `.gvault`**: la cabecera INFORMACION explica
+  paso a paso cómo comprobar la integridad (instalar Node → abrir terminal → pegar el one-liner
+  `VERIFY_ONELINER`) y cómo recuperar los archivos sin el proyecto con un solo comando
+  (`RESTORE_ONELINER`, extrae todo a una carpeta). Ambos viven como consts en `scripts/backup.mjs`
+  y se interpolan en `buildInfo`. Usan
+  `lastIndexOf('===METADATA===')` a propósito: la cabecera contiene ese texto DENTRO del propio
+  one-liner de verificación, así que `indexOf` (primera aparición) apuntaría al lugar equivocado.
+  Cada regeneración debería validarse con una restauración de prueba (extraer a una carpeta
+  temporal y comparar con los originales; los one-liners se prueban también contra un archivo
+  corrupto: debe salir `CORRUPTO` con exit 1).
 
 ## Auto-evolucion
 
@@ -544,20 +570,21 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 638
+**Total de eventos:** 650
 
-**Cobertura de fuentes:** 355 de 638 eventos con 3+ fuentes (283 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 368 de 650 eventos con 3+ fuentes (282 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 509
-- 2025: 36
-- 2024: 14
+- 2026: 515
+- 2025: 40
+- 2024: 15
 - 2023: 12
 - 2022: 14
 - 2021: 8
 - 2020: 15
 - 2019: 13
 - 2018: 3
+- 2016: 1
 - 2015: 5
 - 2014: 1
 - 2012: 1
@@ -566,32 +593,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (243)
-- Justicia (125)
-- Economia (116)
-- Defensa y seguridad (83)
-- Administración pública (75)
-- Derechos humanos (61)
-- Proceso legislativo (57)
+- Politica (252)
+- Justicia (126)
+- Economia (122)
+- Defensa y seguridad (85)
+- Administración pública (76)
+- Derechos humanos (63)
+- Proceso legislativo (58)
+- Finanzas publicas (57)
 - Cambios en el gabinete (56)
 - Emergencia y catástrofes (54)
-- Finanzas publicas (54)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (149)
-- declaracion (88)
-- reaccion (84)
-- publicacion (65)
+- accion (150)
+- declaracion (90)
+- reaccion (86)
+- publicacion (68)
 - resultado (65)
-- investigacion (57)
-- anuncio (47)
+- investigacion (59)
+- anuncio (48)
 - fallo_judicial (26)
 - votacion (14)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 731
-- Organizaciones: 393
-- Cifras: 445
-- Fuentes: 2047
+- Personas: 740
+- Organizaciones: 401
+- Cifras: 454
+- Fuentes: 2124
 - Temas: 74

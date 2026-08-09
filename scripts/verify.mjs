@@ -21,9 +21,6 @@ try {
   console.log(`  fecha:    ${meta.created}`);
   console.log(`  tipo:     ${meta.kind}  (${meta.fileCount} archivos)`);
 
-  if (payload.gitBundle) {
-    console.log(`  git:      incluye historial completo (${payload.gitBundle.bytes} bytes, sha256 ${payload.gitBundle.sha256.slice(0, 12)}…)`);
-  }
 
   if (mismatches.length === 0) {
     console.log(`\n✔ INTEGRIDAD OK — ${payload.manifest.length} archivos verificados, sin discrepancias.`);

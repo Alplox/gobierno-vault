@@ -6,6 +6,12 @@
 > evento, prioridad y estado.
 >
 > Convenciones de estado: `⬜ pendiente` · `🟡 parcial` · `✅ hecho`
+>
+> **Origen de cada tarea**: toda entrada debe registrar la URL (o al menos medio+fecha)
+> que dio origen a la detección — `Origen: <url>` al final de su estado — para poder
+> retomar la tarea sin re-buscar por el titular. Si el origen es una red social
+> (reddit/x/instagram), anotar además la URL de prensa que la valida como punto de
+> partida de la verificación.
 
 ## Panorama de cobertura (agosto 2026)
 
@@ -87,6 +93,7 @@
 |---|---|---|---|
 | **Corte Suprema remueve por unanimidad a la ministra Ángela Vivanco** (caso Audios) | 2024-10-10 | fallo_judicial | ✅ `20241010-1` |
 | Le Monde Diplomatique (edición chilena) publica 'El crimen organizado se hace evidente en Chile' de Ibán de Rementería: paradoja de la delincuencia a la baja (28% en 2017 → 17% en 2021) con temor récord (90%); seguridad privada quintuplica a la pública | 2024-04-01 | publicacion | ✅ `20240401-1` (Le Monde Diplomatique; opinión — verificar con encuestas primarias) |
+| Ministerio de Ciencia publica la nómina pública de deudores de Becas Chile (5-abr-2024): 150 en incumplimiento declarado (82 BCh + 68 BN), 73 demandados y 548 en análisis, tras la auditoría de Contraloría a la ANID; Etcheverry anuncia reforma del sistema | 2024-04-05/10 | publicacion | ⬜ (Ex-Ante 10-abr-2024; contexto del balance 2026 en `20260805-15` y `20260807-20`; Origen: https://www.adnradio.cl/2026/08/07/luego-de-hacer-recortes-empieza-la-justificacion-exsubsecretaria-de-ciencia-cuestiona-cifra-de-morosos-de-becas-chile/) |
 | Primarias de gobernadores y alcaldes 2024 (Chile Vamos mide fuerzas) | 2024-06-09 | resultado | ⬜ |
 | Detención de Manuel Monsalve (nov 2024) y formalización posterior | 2024-11 | accion | ⬜ |
 | Segunda formalización del Caso Audios (lavado de activos) | 2024-2025 | resultado | ⬜ |
@@ -108,10 +115,22 @@
 
 ---
 
+## 2016 — Financiamiento ilegal de la política
+
+| Evento | Fecha | Tipo | Estado |
+|---|---|---|---|
+| CIPER revela la 'lista de Carrasco': diez empresas (BCI, Ripley, Inmobiliaria Ecomac, Grupo Said…) financiaron por fuera de la vía legal la campaña de Laurence Golborne; Ecomac (del grupo de Daniel Más, actual biministro) pagó $25M en dos facturas falsas a Asesorías VSA | 2016-02-11 | investigacion | ✅ `20160211-1` (CIPER x2, El Mostrador; amplia `20150303-1` caso Penta; llena el vacío de 2016) |
+
+---
+
 ## 2026 — Gobierno Kast (agosto)
 
 | Evento | Fecha | Tipo | Estado |
 |---|---|---|---|
+| Ministro del Interior Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar' y 'son personas que estaban defendiendo a la ciudadanía' (entrevista La Tercera) | 2026-03-15 | declaracion | ✅ `20260315-1` (La Tercera, El Mostrador, Cooperativa; contexto del anuncio del 12-mar) |
+| Anuncio de Kast de analizar indultos a carabineros y militares condenados por el estallido social | 2026-03-12 | declaracion | ⬜ (contexto citado en `20260315-1`; buscar fuente del anuncio del 12-mar; Origen: https://radio.uchile.cl/2026/03/15/ministro-alvarado-ante-criticas-por-indultos-fuimos-elegidos-para-gobernar-no-para-pensar-si-la-oposicion-se-va-a-molestar/, vía perfil r/chile del gabinete) |
+| Perfiles 'Quién es quién en el gabinete de Kast' (serie r/chile): Claudio Alvarado (Interior) y Daniel Más (Economía/Minería) revisados y verificados; quedan ~20 ministros por cubrir | 2026-03 | publicacion | 🟡 (perfiles de Alvarado y Más incorporados a entidades/eventos; serie r/chile como fuente complementaria, validar con prensa; Origen: https://www.reddit.com/r/chile/comments/1rxkd1y (Alvarado) y https://www.reddit.com/r/chile/comments/1qyt012 (Daniel Más)) |
+| Declaración de Alvarado en el drama Kast–Boric por el cable chino: "el gobierno no transparentó nada" (BioBioChile 2-mar) | 2026-03-02 | declaracion | ⬜ (Origen: https://www.biobiochile.cl/noticias/nacional/chile/2026/03/02/no-se-transparento-nada-alvarado-contradice-a-boric...; el evento `20260311-2` cubre un análisis estratégico, no la polémica ni el desmentido) |
 | Cadena nacional de Kast tras el despacho de la megareforma (contenido de la alocución del 5-ago, 21:00) | 2026-08-05 | declaracion | ✅ `20260805-13` (cadena pública ACOT, ampliada 6-ago con fact-check de Fast Check: homicidios #Real promedio 1.083,6/año, robos violentos 218.000 #Falso vs 69.777 reales, ingresos irregulares -86,5% #Real validado por Sermig; verificar que la reforma constitucional efectivamente ingrese al Congreso en semanas siguientes) |
 | 21 parlamentarios oficialistas (Republicanos a Evópoli) exigen a la Cancillería esclarecer la expulsión de Israel del chileno de ascendencia palestina José Nicolás Khamis (retenido 35 h en Ben-Gurión; embajador Peleg Lewi defiende la medida) | 2026-08-06 | reaccion | ✅ `20260806-17` (Cooperativa, La Tercera x2, BioBio) |
 | Alcalde de San Bernardo Christopher White refuta el optimismo del gobierno en seguridad: 'hay dos Chile', cifras negras y crimen organizado desatado por falta de carabineros y herramientas | 2026-08-06 | reaccion | ✅ `20260806-18` (Cooperativa; responde_a 20260805-13) |
@@ -207,7 +226,7 @@
 | Fallo de la Corte de Apelaciones de La Serena declara ilegal el doble cobro del CAE por la TGR (juicio civil + cobranza administrativa simultánea) tras recurso de protección de las abogadas Daniela Riquelme y Florencia Pinto; precedente para frenar embargos administrativos | 2026-08-07 | fallo_judicial | ✅ `20260807-12` (ADN Radio, The Clinic; contexto: Diario Constitucional Rol 825-2026 del 28-jul es un fallo distinto de la misma línea y El Desconcierto documenta dos fallos; amplia 20260615-1; pendiente: apelación del Fisco ante la Corte Suprema) |
 | Contraloría Regional de Atacama acredita ocupación ilegal de bien fiscal en Portofino, Chañaral (~1.000 m², ~16 años) por el delegado presidencial provincial Sebastián Urrejola, nombrado por Kast; ordena procedimiento disciplinario en la Subsecretaría del Interior, restitución, cobro retroactivo y eventual acción del CDE | 2026-08-07 | accion | ✅ `20260807-13` (BioBioChile, Atacama Noticias, Epicentro Chile, El Zorro Nortino; pendiente: desenlace del sumario y si el delegado es removido) |
 | Daniel Mas (biministro de Economía y Minería) dice en Radio Universo que no tiene 'ningún problema en achicar el Estado' si es más eficiente; el Gobierno evalúa vender la participación estatal en las sanitarias Aguas Andinas, Essbio, Esval y Suralis vía Corfo | 2026-08-07 | declaracion | ✅ ampliación de `20260802-6` (CNN Chile; contextos: 20260807-2 Codelco, 20260728-5 Mas descarta privatizar) |
-| Comisión rechaza proyecto de la oposición que buscaba facilitar pagos a deudores del CAE (mencionado en cobertura del fallo del doble cobro) | 2026-08-07 | votacion | ⬜ (mencionado por ADN Radio en nota del fallo CAE; verificar detalle y medio original) |
+| Comisión rechaza proyecto de la oposición que buscaba facilitar pagos a deudores del CAE (mencionado en cobertura del fallo del doble cobro) | 2026-08-07 | votacion | ⬜ (mencionado por ADN Radio en la nota del fallo CAE; verificar detalle y medio original; Origen: https://www.adnradio.cl/2026/08/07/inedito-fallo-a-favor-de-deudor-del-cae-justicia-declara-ilegal-el-doble-cobro-ejecutado-por-la-tgr/) |
 | VerificaUDP califica de 'engañoso' que Chile deba 'volver a ser el país más seguro de Latinoamérica' (frase de Kast en la Cuenta Pública del 1-jun): GPI 2025 puesto 62, 3° Sudamérica tras Argentina y Uruguay; tasa 5,4 homicidios/100 mil (-10,4%), 2° Sudamérica detrás de Argentina (3,7); Gallup 39% se siente seguro de noche | 2026-06-02 | publicacion | ✅ `20260602-5` (Vergara 240/VerificaUDP; Sergio Bitar; la frase se repitió en el operativo de Plaza de Armas, evento 20260806-21) |
 | Presidenta del Senado Paulina Núñez rechaza la suspensión de la Ley Karin: 'No cuenten con mi voto' | 2026-08-07 | reaccion | ✅ ampliación de `20260806-14` (BioBioChile) |
 | Kast desde Cali responde al proyecto de suspensión de la Ley Karin: 'las leyes se pueden perfeccionar', deriva el análisis al Consejo Superior Laboral y cita la Ley Lafkenche como precedente de abuso; ministro Rau confirma cambios al reglamento | 2026-08-07 | declaracion | ✅ ampliación de `20260807-14` (Emol, CNN Chile, T13, 24horas) |
@@ -218,7 +237,7 @@
 | UDI pide al Servel abrir procedimiento sancionatorio contra el PC por el viaje de su directiva a Cuba para homenajear a Fidel Castro | 2026-08-07 | accion | ✅ `20260807-18` (BioBioChile; pendiente: respuesta del Servel) |
 | Bío Bío Investiga revela el 'Factor Mera': el ministro de la Corte de Santiago que votó cuatro veces a favor de los Lavín-Barriga (incluido el voto clave que sacó a Lavín de Capitán Yáber); perfil citado en chats Hermosilla-Sabaj | 2026-08-06 | investigacion | ✅ `20260806-50` (BioBioChile; amplia 20260806-7; pendiente: reacciones del Poder Judicial) |
 | BioBioChile publica la historia de la 'bruja de Pinochet': Eugenia Pirzio-Biroli, la esotérica alcaldesa de Cisnes que vaticinaba el futuro del dictador | 2026-08-08 | publicacion | ✅ `20260808-4` (BioBioChile; perfil histórico-cultural, sin documentación primaria de la influencia esotérica) |
-| Se disparan 287% las consultas a la IA por cobros del CAE (mencionado en cobertura del fallo del doble cobro) | 2026-08-07 | resultado | ⬜ (mencionado por ADN Radio; verificar fuente de la métrica) |
+| Se disparan 287% las consultas a la IA por cobros del CAE (mencionado en cobertura del fallo del doble cobro) | 2026-08-07 | resultado | ⬜ (mencionado por ADN Radio; verificar fuente de la métrica; Origen: https://www.adnradio.cl/2026/08/07/inedito-fallo-a-favor-de-deudor-del-cae-justicia-declara-ilegal-el-doble-cobro-ejecutado-por-la-tgr/) |
 | SII y CNC lanzan plataforma para denunciar locales 'sin fachada' que operarían en la informalidad (encuesta del Observatorio del Comercio Ilícito de la CNC: 7 de cada 10 personas creen que aumentó su presencia; barberías, peluquerías, centros de estética, malls chinos, restaurantes y comida rápida los más mencionados; denuncias de municipios o personas naturales, seguras y confidenciales) | 2026-08-06 | anuncio | ✅ `20260806-49` (Cooperativa; pendiente: cobertura de otros medios y cifras de uso de la plataforma) |
 | Kast desde Colombia separa los indultos de la agenda de seguridad ('van por carriles separados') y abre la puerta a 'perfeccionar' la Ley Karin (reunión con el presidente electo De la Espriella en la Fundación FES de Cali; Consejo Superior Laboral como espacio de análisis) | 2026-08-07 | declaracion | ✅ `20260807-14` (ADN Radio, La Tercera, La Prensa Austral; X de The Clinic complementario; responde_a 20260806-9; pendiente: desenlace de las solicitudes de indulto y de la revisión de la Ley Karin) |
 | Columna de Jeannette Rosentreter en Prensa Opal advierte que el Registro Nacional de Actos Vandálicos e Incivilidades castigaría con pérdida de beneficios sociales (gratuidad en educación, PGU, Subsidio de Arriendo) y discriminaría a la población más pobre (53% de hogares en tramo de mayor vulnerabilidad a julio 2026; PIDESC ratificado 1972, principio de no regresividad) | 2026-08-08 | publicacion | ✅ `20260808-3` (Prensa Opal; amplia 20260601-2; columna de opinión — afirmaciones requieren verificación contra el texto del proyecto; pendiente: avance de la tramitación del registro en el Congreso) |
@@ -545,6 +564,31 @@ La cadena enlaza: `20260108-1` → `20260113-1` → `20260615-4` → `20260625-6
 
 - ✅ **Script `scripts/pdf-extract.mjs`** (npm: `pnpm run pdf-extract`): PDF → **markdown estructurado** con la librería `@firecrawl/pdf-inspector` (devDependency, núcleo Rust nativo via NAPI, sin OCR; conserva títulos H1-H4, listas, tablas, subrayados y orden de lectura). Flags: `--out`, `--json`, `--silent`, `--keep`. Avisa si el PDF es escaneado.
 - ⬜ **PDFs pendientes de procesar para verificar** (candidatos: planes filtrados, informes oficiales difíciles de archivar).
+
+## Descarga / copia del respaldo en el sitio (8-ago-2026)
+
+- ✅ **Footer con respaldo**: botón "Descargar respaldo (.gvault)" (descarga con el NOMBRE VERSIONADO real) + panel `<details>` con textarea que carga el contenido del archivo por fetch (lazy) y botón "Copiar todo". Muestra archivo/tamaño/SHA-256 del respaldo actual desde `public/backup/manifest.json`. Implementado en `src/layouts/Base.astro` (delegación en document, guard `__gvGvaultInit`).
+- ✅ **Generación directa en `public/backup/` (sin copia en build)**: `scripts/backup.mjs` escribe el `.light.gvault` versionado + `manifest.json` (archivo, url, tamano, sha256 del archivo completo). Eliminado `scripts/copy-web-backup.mjs`; `build`/`dev` ya no copian nada.
+- ✅ **Fix bug textarea vacío**: el evento `toggle` de `<details>` NO burbujea — el listener se registra ahora en fase de captura (`addEventListener('toggle', fn, true)`); antes el panel abría pero el textarea nunca se llenaba.
+- ✅ **Guía del footer corregida**: comandos reales de verificación (one-liner de Node incluido en el archivo; `sha256sum`/`Get-FileHash` contra el SHA mostrado) — antes daba `node scripts/verify.mjs light.gvault` que no aplica a un usuario que solo descarga el archivo.
+- ✅ **Instrucciones no técnicas dentro de cada `.gvault`**: la cabecera INFORMACION ahora explica paso a paso (instalar Node → abrir terminal → pegar comando) cómo VERIFICAR la integridad y cómo RESTAURAR los archivos sin el proyecto con un solo comando (`RESTORE_ONELINER`). Se probaron ambos one-liners reales extraídos del archivo: `OK, integro` en archivo sano, `CORRUPTO` (exit 1) en archivo alterado, y restauración de los 710 archivos byte-idénticos. Bug detectado en el camino: `indexOf('===METADATA===')` apuntaba a la aparición del texto dentro del one-liner de verificación; corregido a `lastIndexOf` (ver AGENTS.md).
+- ✅ **Fix integridad BOM en `backup.mjs`**: `TextDecoder` con `ignoreBOM: true` — antes `src/scripts/eventListClient.js` (con BOM UTF-8) fallaba el verify por round-trip no byte-idéntico.
+- ✅ **Respaldos regenerados y verificados**: `public/backup/gob-vault-backup-2026-08-08.light.gvault` (1.2 MB, 712 archivos) — `✔ INTEGRIDAD OK`. `public/backup/` se commitea (unica copia canonica); solo se genera la version light.
+- ⬜ Commitear los `.gvault` nuevos al repo (convención existente).
+
+## Caso Rutify / filtración de datos — fuentes revisadas 8-ago-2026
+
+- ✅ **Evento `20260501-2` creado**: presunta filtración masiva de datos de organismos públicos (TGR, Registro Civil, telecomunicaciones) revelada por Vecert Analyzer; actor Rutify compartiendo evidencia en Telegram; investigación de la ANCI; negativas de Gobierno Digital (ClaveÚnica "100% operativa") y Registro Civil; fact-check de Fast Check.
+- ✅ **Fuentes (6)**: Bío Bío (1 y 2 de mayo), CNN Chile (2-may), El Dínamo/Agencia Uno (2-may, fuente clave con Vecert/Rutify), Fast Check (9-may, fact-check), Instagram Reel de Annais Molina (8-ago, complementaria). Entidades nuevas: orgs `registro_civil`, `vecert_analyzer`, `rutify`; persona `annais_molina`.
+- ✅ **`20260729-12` (2FA ClaveÚnica) conectado**: relación `responde_a: 20260501-2` + párrafo de contexto.
+- ⬜ **Pendientes**: verificar en el tiempo si la ANCI confirmó alcance real (fuente original del Reel: nombres "Routify"/"Besart Analyzer" vs prensa "Rutify"/"Vecert Analyzer" — el Reel puede ser útil como pista para investigar más). Cuerpo completo de Fast Check es premium (solo entradilla verificada).
+
+## Tanda 8-ago-2026: megaoperativo ACOT + Becas Chile (fuentes del usuario)
+
+- ✅ **`20260808-5` (megaoperativo ACOT)**: Carabineros + PDI desplegaron 5.000 efectivos la noche del 7-ago (20:00-00:00) en 346 comunas, primer gran operativo tras el anuncio de ACOT. Consolidado: 1.341 detenidos (656 C + 685 PDI), 862 kilos de droga, 25 armas, 102 vehículos; 33.887 controles preventivos de Carabineros dentro de 36.416 actuaciones; PDI fiscalizó 1.464 extranjeros (300 infractores, 33 expulsiones). Fuentes (4): Bío Bío, 24 Horas, Emol, T13. Relación: amplia `20260805-13`.
+- ✅ **`20260807-20` (Gainza vs cifra Becas Chile)**: la exsubsecretaria Carolina Gainza cuestionó en ADN la cifra de 1.666 deudores/$92 mil millones de la ministra Lincolao (vs 150 en incumplimiento declarado según la nómina 2024 de Etcheverry, verificada por Ex-Ante), vinculándola a los recortes del 3% y a las bases del Fondecyt Posdoc 2027. Fuentes (4): ADN (declaraciones), El Dínamo x2 (contexto de la cifra y plan de reformulación), Ex-Ante 10-abr-2024 (cifra verificada del balance 2024). Relaciones: responde_a `20260805-15`, amplia `20260806-39`.
+- ✅ **Entidades**: personas `carolina_gainza`, `pilar_giannini`; cifras `detenidos_megaoperativo_acot`, `droga_incautada_megaoperativo_acot`, `controles_preventivos_megaoperativo_acot`, `armas_incautadas_megaoperativo_acot`, `efectivos_megaoperativo_acot`.
+- ✅ **Discrepancia 283/293 resuelta** (Ex-Ante 10-abr-2024, Juan Pablo Sallaberry, URL verificada): el balance 2024 de Etcheverry (nómina publicada el 5-abr-2024 tras la auditoría de Contraloría a la ANID) consignaba **150 personas en incumplimiento declarado** (82 Becas Chile + 68 Becas Nacionales), 73 con demandas judiciales y 548 casos en análisis — las cifras 283/293 citadas por ADN eran erróneas. `20260807-20` corregido con la cifra verificada y la fuente primaria. Pendiente: registrar el evento propio de la nómina 2024 (5-abr-2024) en la sección 2024.
 
 ## Seguimiento de fuentes por evento
 

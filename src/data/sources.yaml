@@ -1136,6 +1136,14 @@ elpais-cl-2026-06-27-dos-almas-gobierno:
   fecha: 2026-06-27
   url: https://elpais.com/chile/2026-06-27/la-semana-en-que-se-enquistaron-las-dos-almas-del-gobierno-de-kast.html
 
+exante-2024-04-10-becas-chile-etcheverry-nomina-deudores:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "Becas Chile: Ministra Etcheverry publica nómina de deudores y anuncia reforma al sistema tras duro informe de Contraloría"
+  autor: Juan Pablo Sallaberry
+  fecha: 2024-04-10
+  url: https://www.ex-ante.cl/politica/becas-chile-ministra-etcheverry-publica-nomina-de-deudores-y-anuncia-reforma-al-sistema-tras-duro-informe-de-contraloria/
+
 exante-2026-03-24-minuta-cierre-epico:
   tipo: prensa
   medio: Ex-Ante
@@ -5327,6 +5335,55 @@ cnnchile-2026-05-01-munoz-seremi-bienes-nacionales-tarapaca:
   fecha: 2026-05-01
   url: https://www.cnnchile.com/pais/2026/05/01/renuncia-seremi-bienes-nacionales-tarapaca/
 
+biobiochile-2026-05-01-anci-investiga-filtracion-tgr-registro-civil:
+  tipo: prensa
+  medio: Radio Bío Bío
+  titulo: "ANCI investiga presunta filtración de datos que afectaría a TGR y Registro Civil"
+  autor: "Bío Bío (noticia en desarrollo)"
+  fecha: 2026-05-01
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/01/anci-investiga-presunta-filtracion-de-datos-que-afectaria-a-tgr-y-registro-civil.shtml
+  notas: "Título y sumario verificados; el cuerpo no es extraíble (render JS del sitio). Confirma que la ANCI investiga desde su aparición en las últimas 48 horas una presunta filtración que afectaría a TGR y Registro Civil."
+biobiochile-2026-05-02-gobierno-no-evidencia-claveunica-afectada:
+  tipo: prensa
+  medio: Radio Bío Bío
+  titulo: "Gobierno informa que no hay evidencia de que base de datos de ClaveÚnica haya sido afectada"
+  autor: "Bío Bío"
+  fecha: 2026-05-02
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/02/gobierno-informa-que-no-hay-evidencia-de-que-base-de-datos-de-claveunica-haya-sido-afectada.shtml
+  notas: "Título y sumario verificados; cuerpo no extraíble (render JS). Respuesta oficial del Gobierno ante la presunta filtración de ClaveÚnica."
+cnnchile-2026-05-02-claveunica-100-operativa-segura:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Gobierno por reportes de filtración de datos: La ClaveÚnica se encuentra 100% operativa, segura y funcionando"
+  autor: "CNN Chile (Agencia Uno)"
+  fecha: 2026-05-02
+  url: https://www.cnnchile.com/pais/gobierno-por-reportes-de-filtracion-de-datos-la-claveunica-se-encuentra-100-operativa-segura-y-funcionando/
+  notas: "Verificada por lectura completa. Declaración de la Secretaría de Gobierno Digital descartando afectación a la base de ClaveÚnica; la ANCI indaga actividad maliciosa en organismos estatales y operadores de telecomunicaciones."
+eldinamo-2026-05-02-filtracion-datos-rutify-vecert:
+  tipo: prensa
+  medio: El Dínamo (Agencia Uno)
+  titulo: "Nombres, RUT y direcciones: alertan supuesta filtración de datos de organismos públicos"
+  autor: "Agencia Uno"
+  fecha: 2026-05-02
+  url: https://www.eldinamo.cl/pais/2026/05/02/nombres-rut-y-direcciones-alertan-supuesta-filtracion-de-datos-de-organismos-publicos/
+  notas: "Verificada por lectura completa. Fuente clave del caso: identifica a Vecert Analyzer como la empresa que alertó y al actor Rutify como quien compartió evidencia en Telegram (nombres, RUT, direcciones, correos, historial médico); Registro Civil negó afectación; la ANCI confirmó que analiza reportes de fuentes de inteligencia."
+fastcheck-2026-05-09-hackeo-estado-filtracion-claveunica:
+  tipo: prensa
+  medio: Fast Check CL
+  titulo: "¿Hubo hackeo al Estado? La filtración de datos digitales asociados a la ClaveÚnica"
+  autor: "Pablo Flores"
+  fecha: 2026-05-09
+  url: https://www.fastcheck.cl/2026/05/09/hubo-hackeo-al-estado-la-filtracion-de-datos-digitales-asociados-a-la-claveunica/
+  notas: "Fact-check (categoría Disputa). Entradilla y sumario verificados (cuerpo premium): la ANCI y la Secretaría de Gobierno Digital reconocieron la filtración de datos pero aclararon que la infraestructura y base de datos de ClaveÚnica no se vieron comprometidas."
+instagram-2026-08-08-annais-molina-rutify-claveunica:
+  tipo: red_social
+  medio: Instagram (Reel de Annais Molina)
+  titulo: "Análisis técnico del hackeo al Estado: Rutify, tokens de ClaveÚnica y TGR"
+  autor: "Annais Molina"
+  fecha: 2026-08-08
+  url: https://www.instagram.com/reels/DX_htONN1gp/
+  notas: "Reel con transcripción revisada. Fuente COMPLEMENTARIA (red social, análisis de divulgadora): el transcript deforma nombres (dice Routify/Besart Analyzer cuando la prensa identifica Rutify/Vecert Analyzer). Afirmaciones no verificadas de forma independiente: categoría Initial Access Broker, robo de tokens de autenticación activos, credenciales administrativas de la TGR, ausencia de responsible disclosure formal. No usar como fuente única de datos."
+
 latercera-2026-05-01-munoz-seremi-bienes-nacionales-tarapaca:
   tipo: nota
   medio: La Tercera
@@ -6910,6 +6967,53 @@ ciper-2015-03-03-caso-penta:
   fecha: 2015-03-03
   url: https://www.ciperchile.cl/2015/03/03/asi-funcionaba-la-maquina-de-evasion-tributaria-de-los-duenos-del-grupo-penta/
 
+ciper-2016-02-10-lista-roberto-carrasco:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "La lista de Roberto Carrasco, el otro 'garganta profunda' de las platas negras de la política"
+  autor: CIPER Chile
+  fecha: 2016-02-10
+  url: https://www.ciperchile.cl/2016/02/10/la-lista-de-roberto-carrasco-el-otro-garganta-profunda-de-las-platas-negras-de-la-politica/
+
+ciper-2016-02-11-lista-carrasco-nuevos-pagos:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Los secretos de la 'lista de Carrasco': nuevos pagos a campaña de Bachelet y candidatos UDI"
+  autor: Nicolás Sepúlveda
+  fecha: 2016-02-11
+  url: https://www.ciperchile.cl/2016/02/11/los-secretos-de-la-lista-de-carrasco-nuevos-pagos-a-campana-de-bachelet-y-candidatos-udi/
+
+elmostrador-2016-02-19-formalizacion-carrasco:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Formalizarán a testigo clave que involucró a Golborne con casos de financiamiento irregular de la política"
+  autor: El Mostrador
+  fecha: 2016-02-19
+  url: https://www.elmostrador.cl/noticias/pais/2016/02/19/formalizaran-a-testigo-clave-que-involucro-a-golborne-con-casos-de-financiamiento-irregular-de-la-politica/
+
+elmostrador-2026-03-15-alvarado-indultos-ciudadania:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Ministro Alvarado sobre plan de indultos: 'Son personas que estaban defendiendo a la ciudadanía'"
+  autor: El Mostrador
+  fecha: 2026-03-15
+  url: https://www.elmostrador.cl/noticias/pais/2026/03/15/ministro-alvarado-sobre-plan-de-indultos-son-personas-que-defendian-a-la-ciudadania/
+
+cooperativa-2026-03-15-alvarado-fuimos-elegidos-gobernar:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Ministro del Interior: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'"
+  autor: Cooperativa
+  fecha: 2026-03-15
+  url: https://www.cooperativa.cl/noticias/pais/gobierno/ministro-del-interior-fuimos-elegidos-para-gobernar-no-para-pensar-si/2026-03-15/204719.html
+
+latercera-2026-03-15-alvarado-entrevista-indultos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Claudio Alvarado, ministro del Interior: 'Fuimos elegidos por la ciudadanía para gobernar y no para pensar si la oposición se va a molestar o no'"
+  autor: La Tercera
+  fecha: 2026-03-15
+  url: https://www.latercera.com/politica/noticia/claudio-alvarado-ministro-del-interior-fuimos-elegidos-por-la-ciudadania-para-gobernar-y-no-para-pensar-si-la-oposicion-se-va-a-molestar-o-no/
 ciper-2018-04-16-caso-sqm:
   tipo: investigacion
   medio: CIPER Chile
@@ -18203,3 +18307,60 @@ youtube-2025-12-09-debate-anatel-40-horas:
   fecha: 2025-12-09
   url: https://www.youtube.com/watch?v=x0jiNwHqlbY
   notas: "Registro audiovisual del debate ANATEL (TVN, 9-dic-2025) con el intercambio completo entre Jara y Kast por las 40 horas: Jara citó que el programa de Kast 'lo dice explícitamente, que las va a suspender en las pymes' y lo emplazó a 'cambiar tu programa'; Kast respondió 'no vamos a tocar las 40 horas' y 'no vamos a terminar con la PGU, no vamos a terminar con las 40 horas, no vamos a terminar con la indemnización'. Fuente primaria audiovisual con transcripción verificada."
+biobiochile-2026-08-08-ronda-especial-carabineros-656-detenidos:
+  tipo: prensa
+  medio: Bío Bío
+  titulo: "656 detenidos deja ronda especial a nivel nacional de Carabineros en 33.887 controles preventivos"
+  autor: Bío Bío
+  fecha: 2026-08-08
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/08/656-detenidos-deja-ronda-especial-a-nivel-nacional-de-carabineros-en-33-887-controles-preventivos.shtml
+  notas: "Balance de Carabineros de la ronda especial nocturna del 7 de agosto (20:00-00:00): 656 detenidos y 33.887 controles preventivos. Cifras parciales del megaoperativo ACOT Carabineros+PDI (consolidado: 1.341 detenidos; la cobertura de las 346 comunas la aporta T13)."
+24horas-2026-08-08-megaoperativo-1341-detenidos-862-kilos:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "Megaoperativo nacional de Carabineros y la PDI deja 1.341 detenidos: incautan 862 kilos de droga"
+  autor: 24 Horas
+  fecha: 2026-08-08
+  url: https://www.24horas.cl/actualidad/nacional/megaoperativo-policial-1-300-detenidos-casi-una-tonelada-droga
+  notas: "Balance consolidado del megaoperativo nacional ACOT de Carabineros y PDI (noche del 7 de agosto): 1.341 detenidos y 862 kilos de droga incautados."
+emol-2026-08-08-megaoperativo-acot-1341-detenidos:
+  tipo: prensa
+  medio: Emol
+  titulo: 'Eso es ACOT: Gobierno destaca megaoperativo policial y eleva a 1.341 la cifra de detenidos'
+  autor: M. Silva
+  fecha: 2026-08-08
+  url: https://www.emol.com/noticias/Nacional/2026/08/08/1207954/megaoperativo-policial-gobierno-comunicado-seguridad.html
+  notas: "Declaraciones del ministro Martín Arrau ('Eso es ACOT…') y la subsecretaria Pilar Giannini. Desglose: 656 detenciones Carabineros + 685 PDI; 496 en flagrancia, 589 por órdenes judiciales, 256 arrestos de la PDI; 36.416 actuaciones (33.887 controles Carabineros + 1.065 fiscalizaciones a locales); PDI fiscalizó a 1.464 extranjeros (300 infractores migratorios, 33 expulsiones); 862 kilos de droga, 102 vehículos y 25 armas."
+t13-2026-08-08-megaoperativo-656-detenidos-primeras-horas:
+  tipo: prensa
+  medio: T13
+  titulo: "Megaoperativo nacional: 656 detenidos y 33.887 controles en las primeras horas"
+  autor: T13
+  fecha: 2026-08-08
+  url: https://www.t13.cl/noticia/nacional/megaoperativo-nacional-656-detenidos-33887-controles-las-primeras-horas-8-8-2026
+  notas: "Primer balance del megaoperativo (20:00-00:00 del 7 de agosto): 5.000 efectivos (3.500 Carabineros + 1.500 PDI), 656 detenidos (162 en la Región Metropolitana), 33.887 controles, 12 kilos de droga, 23 armas y 90 vehículos preliminares; 2.367 infracciones. Primera operación tras el anuncio de ACOT (5 de agosto). Comenzó en Macul. Declaraciones del prefecto Pablo Garay (PDI Migraciones)."
+adnradio-2026-08-07-gainza-becas-chile-cifra-morosos:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: 'Luego de hacer recortes, empieza la justificación: exsubsecretaria de Ciencia cuestiona cifra de morosos de Becas Chile'
+  autor: ADN Radio
+  fecha: 2026-08-07
+  url: https://www.adnradio.cl/2026/08/07/luego-de-hacer-recortes-empieza-la-justificacion-exsubsecretaria-de-ciencia-cuestiona-cifra-de-morosos-de-becas-chile/
+  notas: "Carolina Gainza Cortés (exsubsecretaria de Ciencia de Boric, hoy directora ejecutiva del proyecto Massi-Conocimientos 2030 de la UDP) cuestionó en Tu Nuevo ADN la cifra de deudores de Becas Chile presentada por la ministra Lincolao, comparándola con los 283 en incumplimiento reportados por Aisén Etcheverry en 2024, y la vinculó a los recortes del 3% exigidos a los ministerios. También alertó por las bases del Fondecyt de Postdoctorado 2027."
+eldinamo-2026-08-03-becas-chile-1666-deuda-92-mil-millones:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Becas Chile: 1.666 profesionales mantienen una deuda de $92 mil millones con el Estado"
+  autor: El Dínamo
+  fecha: 2026-08-03
+  url: https://www.eldinamo.cl/pais/2026/08/03/becas-chile-1-666-profesionales-mantienen-una-deuda-de-92-mil-millones-con-el-estado/
+  notas: "Revisión integral de Becas Chile encargada por la ministra Lincolao: 1.666 personas con incumplimientos por $92 mil millones; 12.589 subvenciones a 11.340 personas por $688 mil millones; 33% cumplió, 46% en retribución/período de gracia y 14% en incumplimiento; en 2027 vencen 990 becas con $82,7 mil millones en riesgo."
+eldinamo-2026-08-04-reformular-becas-chile:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Tras detectar deuda de $92 mil millones: cómo el Gobierno planea reformular Becas Chile"
+  autor: El Dínamo
+  fecha: 2026-08-04
+  url: https://www.eldinamo.cl/pais/2026/08/04/tras-detectar-deuda-de-92-mil-millones-como-el-gobierno-planea-reformular-becas-chile/
+  notas: "Plan del Ejecutivo para reformular Becas Chile tras la deuda detectada: priorizar la entrega de beneficios a estudios de posgrado vinculados a ciencia y tecnología."
+

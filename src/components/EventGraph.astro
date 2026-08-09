@@ -185,11 +185,6 @@ const graphLinks = graphEdges.map((e) => ({
           return (
             <g class="graph-edge" data-source={graphNodes[edge.from]?.id ?? ''} data-target={graphNodes[edge.to]?.id ?? ''}>
               <line x1={sx} y1={sy} x2={ex} y2={ey} stroke={color} stroke-width="1.5" stroke-opacity="0.5" marker-end={`url(#arrow-${edge.tipo}-${size})`} />
-              {size === 'full' && (
-                <text x={(sx + ex) / 2} y={(sy + ey) / 2 - 4} text-anchor="middle" fill={color} font-size="9" font-weight="500" opacity="0.8">
-                  {edge.label}
-                </text>
-              )}
             </g>
           );
         })}
@@ -211,14 +206,6 @@ const graphLinks = graphEdges.map((e) => ({
           return (
             <g class="graph-node" data-id={id} data-url={`/events/${year}/${id}`}>
               <circle cx={pos.x} cy={pos.y} r={r} fill={color} stroke="white" stroke-width="2" style="cursor: pointer;" />
-              {count > 0 && size === 'full' && (
-                <circle cx={pos.x + r + 4} cy={pos.y - r - 2} r="7" fill="#3b82f6" stroke="white" stroke-width="1.5" />
-              )}
-              {count > 0 && size === 'full' && (
-                <text x={pos.x + r + 4} y={pos.y - r + 1} text-anchor="middle" fill="white" font-size="8" font-weight="600" style="pointer-events: none;">
-                  {count}
-                </text>
-              )}
               <text
                 x={pos.x}
                 y={pos.y + r + (size === 'mini' ? 12 : 14)}
@@ -230,11 +217,6 @@ const graphLinks = graphEdges.map((e) => ({
               >
                 {label}
               </text>
-              {size === 'full' && (
-                <text x={pos.x} y={pos.y + r + 26} text-anchor="middle" fill="#a8a29e" font-size="9" style="pointer-events: none;">
-                  {fechaStr}
-                </text>
-              )}
               <title>{`${title}\n${TIPO_LABELS[event.data.tipo] || event.data.tipo} · ${fechaStr}${count > 0 ? `\n${count} vinculo(s)` : ''}`}</title>
             </g>
           );

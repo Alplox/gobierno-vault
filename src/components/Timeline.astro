@@ -10,6 +10,11 @@ import {
 import { Clock, User, Tag, GitFork, ChevronRight, ChevronDown, AlertCircle } from 'lucide-astro';
 import { TIPO_LABELS, TIPO_STYLES } from '../lib/eventTypes';
 import TimelineNav from './TimelineNav.astro';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  events: CollectionEntry<'events'>[];
+}
 
 const { events } = Astro.props;
 
@@ -463,7 +468,7 @@ const navSections = decades.map((d) => ({
   function cleanup() {
     while (cleanupFns.length) {
       const fn = cleanupFns.pop();
-      try { fn(); } catch { /* noop */ }
+      try { fn?.(); } catch { /* noop */ }
     }
   }
 

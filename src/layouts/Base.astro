@@ -12,6 +12,7 @@ import {
   Volume2,
   VolumeX,
   Menu,
+  Download,
 } from 'lucide-astro';
 import { ClientRouter } from 'astro:transitions';
 
@@ -22,6 +23,13 @@ interface Props {
 
 const { title, description = 'Base de conocimiento de acontecimientos verificables' } = Astro.props;
 const currentPath = Astro.url.pathname;
+
+// One-liner de verificación de integridad de un .gvault (solo Node, sin el proyecto).
+// Se renderiza en el footer; vive aquí para no escribir `{`/`}` como texto en el
+// template (Astro los interpretaría como expresiones).
+// OJO: este one-liner también vive en scripts/backup.mjs (VERIFY_ONELINER,
+// cabecera de cada .gvault). Mantenerlos IDENTICOS.
+const GV_VERIFY_CMD = `node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotliDecompressSync}=require('zlib');const t=readFileSync(process.argv[1],'utf8'),a=t.lastIndexOf('===METADATA==='),n1=t.indexOf('\\n',a),n2=t.indexOf('\\n',n1+1),m=JSON.parse(t.slice(n1+1,n2)),c=Buffer.from(t.slice(n2+1),'base64');if(createHash('sha256').update(c).digest('hex')!==m.sha256){console.error('CORRUPTO, descarta este archivo');process.exit(1)}console.log('OK, integro:',m.kind,m.fileCount,'archivos')" <nombre.gvault>`;
 
 const navLinks = [
   { href: '/events', label: 'Eventos', icon: Calendar },
@@ -138,7 +146,7 @@ const navLinks = [
         </a>
         <div class="hidden sm:flex items-center gap-1 sm:gap-2 text-sm font-medium overflow-x-auto py-1">
           {navLinks.map((l) => (
-            <a href={l.href} data-nav-link data-nav-prefix={l.href} {l.admin && 'data-nav-admin'} data-cuelume-hover="tick" class={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
+            <a href={l.href} data-nav-link data-nav-prefix={l.href} data-nav-admin={l.admin ? '' : undefined} data-cuelume-hover="tick" class={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
               <l.icon class="h-4 w-4 shrink-0" />
               <span>{l.label}</span>
             </a>
@@ -155,7 +163,7 @@ const navLinks = [
             </summary>
             <div class="absolute right-0 top-full mt-2 w-60 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
               {navLinks.map((l) => (
-                <a href={l.href} data-nav-link data-nav-prefix={l.href} {l.admin && 'data-nav-admin'} class={`flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
+                <a href={l.href} data-nav-link data-nav-prefix={l.href} data-nav-admin={l.admin ? '' : undefined} class={`flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
                   <l.icon class="h-4 w-4 shrink-0" />
                   <span>{l.label}</span>
                 </a>
@@ -178,6 +186,77 @@ const navLinks = [
         <div class="text-xs text-gray-400 text-center sm:text-right">
           Acontecimientos, decretos y publicaciones documentados con referencias.
         </div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-4 mt-6">
+        <details id="gvault-copy" class="group border border-gray-200/80 rounded-xl bg-gray-50/60 overflow-hidden">
+          <summary class="flex items-center justify-between gap-3 cursor-pointer list-none px-4 py-3 select-none hover:bg-gray-100/70 transition-colors">
+            <span class="flex items-center gap-2 font-semibold text-gray-700">
+              <Download class="h-4 w-4 text-blue-600 shrink-0" />
+              Respaldo del vault — descargar o copiar
+            </span>
+            <span class="text-xs text-gray-400 shrink-0 group-open:hidden">Mostrar contenido para copiar ▾</span>
+            <span class="text-xs text-gray-400 shrink-0 hidden group-open:inline">Ocultar ▴</span>
+          </summary>
+          <div class="px-4 pb-4 pt-1">
+            <div class="flex flex-col sm:flex-row sm:items-start gap-3 mb-3">
+              <div class="flex flex-col gap-2 shrink-0">
+                <a id="gvault-download-link" href="" download=""
+                   class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
+                   title="Respaldo light del vault (contenido actual del proyecto)">
+                  <Download class="h-4 w-4" /> Descargar respaldo (.gvault)
+                </a>
+                <a href="https://github.com/Alplox/gobierno-vault/archive/refs/heads/main.zip"
+                   class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50 hover:border-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
+                   title="Descarga el repositorio completo (todo el proyecto) en ZIP, como ofrece GitHub">
+                  <Download class="h-4 w-4 text-gray-500" /> Descargar repositorio (.zip)
+                </a>
+              </div>
+              <div class="text-xs text-gray-500 leading-relaxed space-y-1 min-w-0">
+                <p>
+                  El respaldo contiene el estado actual del proyecto (eventos, datos y config)
+                  comprimido con Brotli e íntegro (SHA-256). El archivo incluye sus propias
+                  instrucciones paso a paso (instalar Node, abrir la terminal y pegar un comando)
+                  para comprobarlo y para recuperar sus archivos. El botón "Descargar repositorio
+                  (.zip)" baja el proyecto completo como ZIP.
+                </p>
+                <ul class="list-disc pl-4 space-y-0.5">
+                  <li>
+                    Archivo: <code id="gvault-filename" class="font-mono text-gray-700">cargando…</code>
+                    <span class="text-gray-400">(</span><span id="gvault-size">…</span><span class="text-gray-400">)</span>
+                  </li>
+                  <li>
+                    SHA-256 del archivo: <code id="gvault-sha" class="font-mono text-gray-700 break-all">…</code>
+                  </li>
+                  <li>
+                    Verifica la integridad con solo Node (sin el proyecto):
+                    <code class="font-mono text-gray-600 break-all block mt-1">{GV_VERIFY_CMD}</code>
+                    — imprime <span class="text-green-700 font-semibold">OK</span> si es íntegro; o compara el
+                    SHA-256 de arriba con <code class="font-mono">sha256sum</code> / <code class="font-mono">Get-FileHash</code>.
+                    Si la ruta o el nombre tienen espacios, escríbelos entre comillas.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <span class="text-xs font-medium text-gray-500">Contenido del respaldo (texto) — copia todo y guárdalo como archivo:</span>
+              <div class="flex items-center gap-2">
+                <button id="gvault-select-btn" type="button"
+                        class="rounded-md bg-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-700 transition-colors hover:bg-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
+                  Seleccionar todo
+                </button>
+                <button id="gvault-copy-btn" type="button"
+                        class="rounded-md bg-gray-800 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
+                  Copiar todo
+                </button>
+                <span id="gvault-copy-status" class="text-xs text-gray-400" aria-live="polite"></span>
+              </div>
+            </div>
+            <textarea id="gvault-textarea" readonly rows="8" spellcheck="false"
+              class="w-full rounded-lg border border-gray-300 bg-gray-900 text-gray-100 font-mono text-[11px] leading-relaxed p-3 resize-y focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+              placeholder="El contenido se carga al abrir este panel…"></textarea>
+          </div>
+        </details>
       </div>
     </footer>
     <script>
@@ -269,6 +348,174 @@ const navLinks = [
           const menu = document.getElementById('mobile-menu') as HTMLDetailsElement | null;
           if (menu && t?.closest('#mobile-menu a[data-nav-link]')) menu.open = false;
         });
+      }
+
+      // Respaldo del vault (footer): lee public/backup/manifest.json — generado
+      // por `pnpm run backup`, que escribe el .light.gvault versionado DIRECTO en
+      // public/backup/ — para conocer el nombre actual, tamaño y SHA-256 del
+      // archivo, y al abrir el panel carga su contenido completo para copiarlo.
+      // El footer se re-renderiza en cada navegación (View Transitions) pero el
+      // bundle corre una sola vez: delegación en document (guard único), texto
+      // cacheado en variable para re-llenar el textarea nuevo tras navegar.
+      if (!(window as any).__gvGvaultInit) {
+        (window as any).__gvGvaultInit = true;
+
+        type GvManifest = { archivo: string; url: string; tamano: string; tamanoBytes: number; sha256: string; creado: string };
+        let gvaultManifest: GvManifest | null | undefined = undefined; // undefined = aún sin resolver
+        let gvaultText: string | null = null;
+        let gvaultTextInFlight: Promise<void> | null = null;
+
+        const GV_ERROR =
+          'Respaldo no disponible aún.\n\n' +
+          'Ejecuta `pnpm run backup` en el repositorio para generarlo (se escribe en public/backup/).\n' +
+          'Más info: AGENTS.md → sección "Respaldo / Restauracion".';
+
+        // Pinta nombre/tamaño/SHA y estado del botón según el manifest resuelto.
+        function renderFooter() {
+          const link = document.getElementById('gvault-download-link') as HTMLAnchorElement | null;
+          const fn = document.getElementById('gvault-filename');
+          const sz = document.getElementById('gvault-size');
+          const sha = document.getElementById('gvault-sha');
+          const m = gvaultManifest ?? null;
+          if (m) {
+            if (link) {
+              link.href = m.url;
+              link.setAttribute('download', m.archivo);
+              link.classList.remove('opacity-40', 'pointer-events-none');
+              link.removeAttribute('aria-disabled');
+            }
+            if (fn) fn.textContent = m.archivo;
+            if (sz) sz.textContent = m.tamano;
+            if (sha) {
+              sha.textContent = m.sha256;
+              sha.setAttribute('title', 'SHA-256 completo del archivo: ' + m.sha256);
+            }
+          } else {
+            if (link) {
+              link.href = '';
+              link.removeAttribute('download');
+              link.classList.add('opacity-40', 'pointer-events-none');
+              link.setAttribute('aria-disabled', 'true');
+              link.setAttribute('title', 'Respaldo no disponible: ejecutar pnpm run backup');
+            }
+            if (fn) fn.textContent = 'no disponible — ejecuta `pnpm run backup`';
+            if (sz) sz.textContent = '—';
+            if (sha) sha.textContent = '—';
+          }
+        }
+
+        async function ensureManifest() {
+          if (gvaultManifest !== undefined) return;
+          try {
+            const res = await fetch('/backup/manifest.json', { cache: 'no-store' });
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            gvaultManifest = (await res.json()) as GvManifest;
+          } catch {
+            gvaultManifest = null;
+          }
+          renderFooter();
+        }
+
+        async function ensureText(): Promise<void> {
+          if (gvaultText !== null) return;
+          if (gvaultTextInFlight) return gvaultTextInFlight;
+          gvaultTextInFlight = (async () => {
+            try {
+              if (!gvaultManifest) throw new Error('sin manifest');
+              const res = await fetch(gvaultManifest.url);
+              if (!res.ok) throw new Error('HTTP ' + res.status);
+              gvaultText = await res.text();
+            } catch {
+              // No cachear el fallo: solo cachear el texto exitoso, para que un
+              // backup generado después (dev) se cargue al reabrir el panel.
+              const ta = document.getElementById('gvault-textarea') as HTMLTextAreaElement | null;
+              if (ta) ta.value = GV_ERROR;
+              // Manifest existía pero el archivo no se sirvió (404): la descarga
+              // también fallaría, así que se deshabilita el botón igualmente.
+              const link = document.getElementById('gvault-download-link') as HTMLAnchorElement | null;
+              if (link) {
+                link.classList.add('opacity-40', 'pointer-events-none');
+                link.setAttribute('aria-disabled', 'true');
+                link.setAttribute('title', 'Respaldo no disponible (no se pudo descargar el archivo): ejecutar pnpm run backup');
+              }
+            } finally {
+              gvaultTextInFlight = null;
+            }
+          })();
+          return gvaultTextInFlight;
+        }
+
+        function fillGvault() {
+          const ta = document.getElementById('gvault-textarea') as HTMLTextAreaElement | null;
+          if (ta && gvaultText !== null) ta.value = gvaultText;
+        }
+
+        // Ojo: el evento `toggle` de <details> NO burbujea. Hay que escucharlo en
+        // fase de captura (tercer argumento `true`) para que la delegación en
+        // document funcione — sin esto el textarea nunca se llenaba al abrir.
+        document.addEventListener('toggle', (e) => {
+          const d = e.target as HTMLElement | null;
+          if (d?.id === 'gvault-copy' && (d as HTMLDetailsElement).open) {
+            void (async () => {
+              await ensureManifest();
+              await ensureText();
+              fillGvault();
+            })();
+          }
+        }, true);
+
+        document.addEventListener('click', async (e) => {
+          const t = e.target as HTMLElement | null;
+          const status = document.getElementById('gvault-copy-status');
+          if (t?.closest('#gvault-select-btn')) {
+            const taSel = document.getElementById('gvault-textarea') as HTMLTextAreaElement | null;
+            if (taSel) {
+              taSel.focus();
+              taSel.select();
+              taSel.setSelectionRange(0, taSel.value.length);
+            }
+            return;
+          }
+          if (!t?.closest('#gvault-copy-btn')) return;
+          let ta = document.getElementById('gvault-textarea') as HTMLTextAreaElement | null;
+          // Si el panel se abrió sin disparar toggle (navegación View Transition),
+          // intentar cargar el contenido igual antes de avisar que está vacío.
+          if (!ta || !ta.value) {
+            await ensureManifest();
+            await ensureText();
+            fillGvault();
+            // re-consultar tras los awaits: una View Transition pudo reemplazar el DOM
+            ta = document.getElementById('gvault-textarea') as HTMLTextAreaElement | null;
+          }
+          if (!ta || !ta.value) {
+            if (status) status.textContent = 'Vacío — el respaldo aún no se ha cargado.';
+            return;
+          }
+          try {
+            await navigator.clipboard.writeText(ta.value);
+            if (status) status.textContent = '✔ Copiado (' + new Intl.NumberFormat('es-CL').format(ta.value.length) + ' caracteres)';
+          } catch {
+            ta.select();
+            ta.setSelectionRange(0, ta.value.length);
+            document.execCommand('copy');
+            if (status) status.textContent = '✔ Copiado (selección manual)';
+          }
+        });
+
+        // Estado inicial + re-aplicar manifest/contenido tras cada navegación.
+        document.addEventListener('astro:page-load', () => {
+          void (async () => {
+            await ensureManifest();
+            renderFooter();
+            const d = document.getElementById('gvault-copy') as HTMLDetailsElement | null;
+            if (d?.open) {
+              await ensureText();
+              fillGvault();
+            }
+          })();
+        });
+
+        void ensureManifest();
       }
     </script>
   </body>

@@ -291,6 +291,26 @@ people:
     nombre: Claudio Alvarado
     cargo: Biministro del Interior y Segegob
     cargos:
+      - cargo: Diputado por Chiloé y Palena
+        organizacion: camara_diputados
+        desde: 1994-03-11
+        hasta: 2010-03-11
+      - cargo: Subsecretario General de la Presidencia
+        organizacion: ministerio_segpres
+        desde: 2010-03-11
+        hasta: 2014-03-11
+      - cargo: Subsecretario General de la Presidencia
+        organizacion: ministerio_segpres
+        desde: 2018-03-11
+        hasta: 2019-03-11
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: ministerio_segpres
+        desde: 2020-06-04
+        hasta: 2020-07-28
+      - cargo: Senador por Los Ríos
+        organizacion: senado
+        desde: 2020-07-28
+        hasta: 2026-03-11
       - cargo: Ministro del Interior
         organizacion: ministerio_interior
         desde: 2026-03-11
@@ -299,6 +319,7 @@ people:
         organizacion: ministerio_interior
         desde: 2026-05-19
     organizacion: ministerio_interior
+    notas: "Militante UDI desde 2001. Ingeniero Comercial de la Escuela de Negocios de Valparaíso. Alcalde designado de Quemchi (1985-1986) bajo Pinochet. Diputado por Chiloé y Palena 1994-2010. Fue subsecretario de la Segpres en ambos gobiernos de Piñera y ministro de la Segpres solo 54 días (jun-jul 2020), hasta asumir el cupo senatorial de Víctor Pérez. Rol histórico de negociador con la oposición; lideró el acuerdo constitucional de 2019. Autor de 9 proyectos que se convirtieron en ley (BCN). Historial de cargos según perfil de la serie r/chile 'Quién es quién en el gabinete' (complementario): fechas aproximadas, validar con BCN/prensa."
   isabel_valenzuela_ahumada:
     nombre: Isabel Valenzuela Ahumada
     cargo: Alcaldesa de Colina
@@ -2984,6 +3005,9 @@ people:
     nombre: Maurice Poirrier
     cargo: Director de la Secretaría de Gobierno Digital
     organizacion: secretaria_gobierno_digital
+  annais_molina:
+    nombre: Annais Molina
+    cargo: Experta en ciberseguridad y divulgadora de análisis técnico
   maria_fernanda_rebolledo:
     nombre: María Fernanda Rebolledo
     cargo: Exjefa de cabina de la FACh
@@ -4266,6 +4290,23 @@ people:
     cargo: Dirigenta mapuche de la Región de Los Ríos, desaparecida
     notas: "Dirigenta mapuche desaparecida. Sus hijos fueron imputados por su homicidio (parricidio) tras el hallazgo de restos humanos en su predio en abril de 2026. En julio de 2026 una madre y su hijo fueron condenados a 7 años por amenazas a un fiscal del caso y tenencia de explosivos. El caso es seguido por el vault (evento 20260808-1)."
 
+  carolina_gainza:
+    nombre: Carolina Gainza Cortés
+    cargo: Exsubsecretaria de Ciencia, Tecnología, Conocimiento e Innovación
+    notas: "Exsubsecretaria de Ciencia del gobierno de Gabriel Boric (2022-2024). Académica y directora ejecutiva del proyecto Massi-Conocimientos 2030 de la UDP. El 7 de agosto de 2026 cuestionó en ADN Radio la cifra de morosos de Becas Chile presentada por la ministra Ximena Lincolao."
+  pilar_giannini:
+    nombre: Pilar Giannini
+    cargo: Subsecretaria de Seguridad Pública
+    notas: "Subsecretaria de Seguridad Pública del gobierno de José Antonio Kast. El 8 de agosto de 2026 destacó el megaoperativo nacional ACOT de Carabineros y PDI."
+
+  laurence_golborne:
+    nombre: Laurence Golborne
+    cargo: Ex ministro de Minería y Obras Públicas de Piñera
+    notas: "Ex ministro de Minería (2010-2011) y de Obras Públicas (2011-2012) del primer gobierno de Sebastián Piñera. Precandidato presidencial UDI en 2013; su campaña fue financiada de forma irregular (caja Penta, 'lista de Carrasco'), lo que lo excluyó de la carrera y derivó en una querella del SII y una formalización por el caso Penta en 2016."
+  roberto_carrasco:
+    nombre: Roberto Carrasco
+    cargo: Empresario e ingeniero comercial
+    notas: "Dueño de las empresas Asesorías VSA y Siglo Outsourcing. Amigo personal de Laurence Golborne, declaró ante la Fiscalía de Alta Complejidad el 4 de noviembre de 2015 haber emitido facturas ideológicamente falsas para recaudar fondos para la campaña presidencial de Golborne ('lista de Carrasco'). Fue formalizado en febrero de 2016."
 organizations:
   criteria:
     nombre: Criteria
@@ -4450,6 +4491,11 @@ organizations:
     nombre: Ministerio del Interior y Seguridad Publica
     tipo: ministerio
     pais: Chile
+  ministerio_segpres:
+    nombre: Ministerio Secretaría General de la Presidencia
+    tipo: ministerio
+    pais: Chile
+    notas: Cartera encargada de la relación del Ejecutivo con el Congreso. Claudio Alvarado fue subsecretario en los gobiernos de Piñera y ministro en 2020.
   subsecretaria_interior:
     nombre: Subsecretaría del Interior
     tipo: servicio_publico
@@ -4566,6 +4612,18 @@ organizations:
   tesoreria_general:
     nombre: Tesoreria General de la Republica
     tipo: servicio_publico
+    pais: Chile
+  registro_civil:
+    nombre: Servicio de Registro Civil e Identificación
+    tipo: servicio_publico
+    pais: Chile
+  vecert_analyzer:
+    nombre: Vecert Analyzer
+    tipo: empresa
+    pais: Chile
+  rutify:
+    nombre: Rutify
+    tipo: organizacion_criminal
     pais: Chile
   convencion_constitucional:
     nombre: Convención Constitucional
@@ -6155,6 +6213,12 @@ organizations:
     pais: Chile
     notas: "Gremio nacional de ferias libres presidido por Paola Morales. El 6 de agosto de 2026 rechazó el uso despectivo de la expresión 'señora de feria' tras el cruce entre las senadoras Camila Flores y Fabiola Campillai, reivindicando que 'ser mujer de feria es un orgullo' y que las feriantes 'alimentan a Chile' y sostienen parte de la economía familiar."
 
+
+  inmobiliaria_ecomac:
+    nombre: Inmobiliaria Ecomac
+    tipo: empresa_privada
+    pais: Chile
+    notas: "Empresa del grupo familiar de Daniel Más Valdés (ex Constructora Carel, luego Ecomac). En 2016 CIPER la vinculó a la 'lista de Carrasco': pagó $25 millones en facturas falsas (dos de $12,5 millones) a Asesorías VSA de Roberto Carrasco, que financiaron la campaña presidencial de Laurence Golborne."
 cifras:
   quorum_reforma_constitucional:
     nombre: Quórum para reformas constitucionales en Chile
@@ -6331,7 +6395,7 @@ cifras:
   inversion_becas_chile:
     nombre: Inversión estatal en Becas Chile
     unidad_default: millones_pesos
-    notas: "Más de $690 mil millones invertidos en el programa Becas Chile desde su creación para financiar estudios de posgrado en el extranjero (agosto 2026)."
+    notas: "Más de $690 mil millones invertidos en el programa Becas Chile desde su creación para financiar estudios de posgrado en el extranjero (agosto 2026). El levantamiento del Ministerio de Ciencia (3-ago-2026) precisa $688 mil millones en 12.589 becas (El Dínamo); Bío Bío/Radio Agricultura reportan $690 mil millones."
   becarios_becas_chile:
     nombre: Becarios del programa Becas Chile
     unidad_default: becarios
@@ -6344,6 +6408,10 @@ cifras:
     nombre: Deuda de becarios de Becas Chile en incumplimiento
     unidad_default: millones_pesos
     notas: "Cerca de $92 mil millones adeudados por 1.666 becarios de Becas Chile que no cumplieron las obligaciones del beneficio (agosto 2026)."
+  incumplimiento_becas_chile_2024:
+    nombre: Beneficiarios en incumplimiento declarado de Becas Chile (nómina 2024)
+    unidad_default: personas
+    notas: "150 personas en incumplimiento declarado (82 de Becas Chile + 68 de Becas Nacionales), 73 con demandas judiciales en trámite, según la nómina pública publicada el 5 de abril de 2024 por el Ministerio de Ciencia (Etcheverry) tras la auditoría de la Contraloría a la ANID; además 548 casos en análisis de cumplimiento. ADN (7-ago-2026) citó erróneamente 283/293 personas en otra versión del balance."
   alza_alimentos_2021_2026:
     nombre: Alza acumulada de los alimentos entre 2021 y 2026
     unidad_default: "%"
@@ -7856,3 +7924,35 @@ cifras:
     unidad_default: proyectos
     notas: "Cooperativa contabilizó 9 nuevas iniciativas de la ACOT al 6 de agosto de 2026; Arrau habló ante Emol de 'cerca de una quincena de proyectos de ley que iremos ingresando en las próximas semanas y meses'."
 
+  detenidos_megaoperativo_acot:
+    nombre: Detenidos en el megaoperativo nacional ACOT
+    unidad_default: personas
+    notas: "1.341 detenidos en el megaoperativo nacional de Carabineros y PDI (noche del 7 de agosto de 2026): 656 de Carabineros y 685 de la PDI."
+  droga_incautada_megaoperativo_acot:
+    nombre: Droga incautada en el megaoperativo nacional ACOT
+    unidad_default: kilos
+    notas: "862 kilos de droga incautados en el megaoperativo nacional ACOT (7-8 de agosto de 2026)."
+  controles_preventivos_megaoperativo_acot:
+    nombre: Controles preventivos del megaoperativo nacional ACOT
+    unidad_default: controles
+    notas: "33.887 controles preventivos de Carabineros (19.519 de identidad y 14.368 vehiculares) dentro de las 36.416 actuaciones del megaoperativo ACOT."
+  armas_incautadas_megaoperativo_acot:
+    nombre: Armas incautadas en el megaoperativo nacional ACOT
+    unidad_default: armas
+    notas: "25 armas de fuego incautadas en el megaoperativo nacional ACOT (23 en el balance preliminar)."
+  efectivos_megaoperativo_acot:
+    nombre: Efectivos desplegados en el megaoperativo nacional ACOT
+    unidad_default: efectivos
+    notas: "5.000 efectivos (3.500 de Carabineros y 1.500 de la PDI) desplegados en el megaoperativo nacional ACOT del 7 de agosto de 2026."
+  aportes_ecomac_campana_golborne:
+    nombre: Aportes de Inmobiliaria Ecomac a la campaña de Golborne
+    unidad_default: millones_pesos
+    notas: "$25 millones pagados por Inmobiliaria Ecomac (grupo Daniel Más) en facturas falsas a Asesorías VSA de Roberto Carrasco para financiar la campaña presidencial de Laurence Golborne (2013), según CIPER y La Tercera (2016)."
+  aportes_bci_politica:
+    nombre: Aportes del Banco BCI a campañas políticas
+    unidad_default: millones_pesos
+    notas: "$259,5 millones reconocidos por el Banco BCI como transferencias a figuras jurídicas y personas naturales que no prestaron servicios (rectificaciones ante el SII de junio 2015), vinculadas mayoritariamente a dirigentes de la UDI y a la campaña de Laurence Golborne (caso Lista de Carrasco, CIPER 2016)."
+  aportes_penta_golborne:
+    nombre: Aportes del grupo Penta a la campaña de Golborne
+    unidad_default: millones_pesos
+    notas: "$120 millones aportados por el grupo Penta en seis pagos de $20 millones entre enero y junio de 2013 a la campaña presidencial de Laurence Golborne, según CIPER (caso Lista de Carrasco, 2016)."

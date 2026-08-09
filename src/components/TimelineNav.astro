@@ -9,6 +9,10 @@ interface NavSection {
   children?: NavSection[];
 }
 
+interface Props {
+  sections?: NavSection[];
+}
+
 const { sections = [] } = Astro.props;
 const flatSections: NavSection[] = [];
 for (const s of sections) {
@@ -109,7 +113,7 @@ const railLabelClass = (level?: string) =>
   function cleanup() {
     while (cleanupFns.length) {
       const fn = cleanupFns.pop();
-      try { fn(); } catch { /* noop */ }
+      try { fn?.(); } catch { /* noop */ }
     }
     ro?.disconnect();
     ro = null;
@@ -210,8 +214,11 @@ const railLabelClass = (level?: string) =>
         current = details ?? current.parentElement;
       }
       const monthMatch = /^month-/.test(targetId);
-      if (monthMatch && typeof window.__gvFillMonth === 'function') {
-        window.__gvFillMonth(targetId.slice(6));
+      // __gvFillMonth se expone en el cliente por timelineClient/eventListClient;
+      // no existe en el tipo Window, por eso el cast explicito.
+      const fillMonth = (window as any).__gvFillMonth as ((key: string) => void) | undefined;
+      if (monthMatch && typeof fillMonth === 'function') {
+        fillMonth(targetId.slice(6));
       }
       // El IO llena meses del nuevo viewport tras el salto y el documento crece,
       // desplazando el destino. Salto instant + re-ajuste tras asentarse.
