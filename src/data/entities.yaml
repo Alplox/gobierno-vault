@@ -1755,8 +1755,76 @@ people:
     notas: "Mayor de Carabineros, fiscal general de su institución que —tras el estallido social— quedó a cargo del sumario administrativo por el caso Campillai. En su informe del 20 de febrero de 2020 reportó que en el video grabado con la GoPro del capitán Fernández se registraba el diálogo '¿se la pitió, verdad?' y pidió que se designara a un nuevo fiscal de la policía uniformada."
   mario_vargas:
     nombre: Mario Vargas
-    cargo: Abogado de Patricio Maturana
-    notas: "Abogado defensor del capitán Patricio Maturana durante el sumario interno por el caso Campillai. El 24 de abril de 2020 la institución le entregó copia del sumario; prevaleció que no existían antecedentes suficientes para atribibir responsabilidad a Maturana."
+    cargo: Abogado penalista
+    notas: "Abogado penalista. En 2020 defendió al capitán Patricio Maturana en el sumario interno por el caso Campillai (el 24 de abril de 2020 la institución le entregó copia del sumario; prevaleció que no existían antecedentes suficientes para atribuir responsabilidad a Maturana). Junto a Eduardo Lagos y Gabriel Silber integró la sociedad de abogados que asesoró a Inmobiliaria Fundamenta y al Consorcio Bielorruso Belaz Movitec (trama bielorrusa) y está bajo la lupa por la arista Fundamenta del caso Audios (ver evento 20260805-29)."
+  eduardo_lagos:
+    nombre: Eduardo Lagos
+    cargo: Abogado penalista
+    notas: "Abogado penalista, asesor legal de Inmobiliaria Fundamenta junto a Mario Vargas y Gabriel Silber. Imputado en la 'trama bielorrusa' (causa Consorcio Belaz Movitec con Codelco) por soborno, cohecho y lavado de activos. En la arista Fundamenta del caso Audios, la Fiscalía Regional de Los Lagos detectó que ordenó un depósito de $13 millones a Gonzalo Migueles, pareja de la entonces ministra de la Corte Suprema Ángela Vivanco, cuatro días después del fallo favorable de la Tercera Sala (CIPER, 15-jul-2026)."
+  gabriel_silber:
+    nombre: Gabriel Silber
+    cargo: Abogado
+    notas: "Abogado integrante de la sociedad Lagos, Vargas y Silber que asesoró a Inmobiliaria Fundamenta en la disputa de Plaza Egaña SpA (fallo favorable de la Tercera Sala, 1-mar-2023). En julio de 2026 desclasificó una discusión con portazos y gritos en la oficina de Lagos y Vargas por los supuestos pagos a Gonzalo Migueles (La Tercera, 30-jul-2026)."
+  gonzalo_migueles:
+    nombre: Gonzalo Migueles
+    cargo: Pareja de la exministra de la Corte Suprema Ángela Vivanco
+    notas: "Pareja de la exministra de la Corte Suprema Ángela Vivanco. Recibió en su cuenta un depósito de $13 millones realizado el 28 de febrero de 2023 por Martín Peña por orden del abogado Eduardo Lagos, cuatro días después del fallo favorable a Inmobiliaria Fundamenta. El OS7 de Carabineros rastreó sus cuentas (informe del 29-jul-2026) por presunto lavado en el caso Fundamenta."
+  diego_simpertigue:
+    nombre: Diego Simpértigue
+    cargo: Exministro de la Corte Suprema
+    notas: "Exministro de la Corte Suprema que integró la Tercera Sala para el fallo clave a favor de Inmobiliaria Fundamenta (marzo de 2023) gracias a gestiones de la entonces ministra Ángela Vivanco. Amigo de los abogados Eduardo Lagos y Mario Vargas; viajó con ellos y sus parejas en un crucero por Europa financiado por Vargas (CIPER, nov-2025)."
+  sergio_munoz:
+    nombre: Sergio Muñoz Gajardo
+    cargo: Exministro de la Corte Suprema
+    notas: "Exministro de la Corte Suprema que fue inhabilitado en la causa de Inmobiliaria Fundamenta (Plaza Egaña SpA) tras conocerse que su hija, Graciel Muñoz, había firmado una promesa de compraventa en el edificio Egaña. Su salida de la sala destrabó el recurso que favorecía a la inmobiliaria (CIPER, caso Fundamenta)."
+  martin_pena:
+    nombre: Martín Peña
+    cargo: Mecánico, antiguo cliente del abogado Eduardo Lagos
+    notas: "Mecánico y antiguo cliente del abogado Eduardo Lagos. Declaró ante la Fiscalía Regional de Los Lagos que por orden de Lagos depositó $13 millones en efectivo en la cuenta de Gonzalo Migueles (28-feb-2023) tras cobrar el cheque de la venta de una retroexcavadora (caso Fundamenta)."
+  mario_carroza:
+    nombre: Mario Carroza
+    cargo: Ministro de la Corte Suprema
+    notas: "Ministro de la Corte Suprema que quedó a cargo de redactar el fallo a favor de Inmobiliaria Fundamenta (1-mar-2023). Declaró en la arista Fundamenta (24-jun-2026) que el fallo 'salió muy rápido' y que ello 'no es usual' para esa materia."
+  pablo_medina:
+    nombre: Pablo Medina
+    cargo: Gerente de Inmobiliaria Fundamenta
+    notas: "Ejecutivo de Inmobiliaria Fundamenta. Declaró ante la Fiscalía que el pago de 16 mil UF a los abogados Lagos, Vargas y Silber solo se haría si el fallo favorable en la Corte Suprema salía antes del 1 de marzo de 2023 (y desde el 2 de marzo bajaba a 8 mil UF)."
+  hector_barros:
+    nombre: Héctor Barros
+    cargo: Fiscal Regional Metropolitano Sur
+    notas: "Fiscal Regional Metropolitano Sur, a cargo de la Operación Tokio (jun-2026), que desarticuló la red de lavado de dinero del Tren de Aragua. Declaró: 'Por primera vez les pegamos donde más les duele'."
+  carlos_gomez_moreno:
+    nombre: Carlos Gómez Moreno
+    cargo: Jefe del Tren de Aragua en Chile (alias 'Bobby')
+    notas: "Líder del Tren de Aragua en Chile, alias 'Bobby', jefe de la célula 'Los Piratas'. Ordenó el secuestro y homicidio del teniente Ronald Ojeda y participó en la matanza de cinco personas en Batuco (abr-2023). Capturado en Colombia en diciembre de 2024 en un operativo con detectives chilenos y la DEA; desde la cárcel La Picota en Bogotá siguió dirigiendo extorsiones y la red de lavado desarticulada por la Operación Tokio."
+  jose_carlos_perez_asencio:
+    nombre: José Carlos Pérez Asencio
+    cargo: Ejecutivo de Banco Santander
+    notas: "Ciudadano venezolano, ejecutivo de Banco Santander desde 2019. Detenido en la Operación Tokio (jun-2026) por haber diseñado el esquema de apertura de cuentas corrientes para lavar dinero del Tren de Aragua."
+  rossana_blanco:
+    nombre: Rossana Blanco
+    cargo: Ejecutiva de BancoEstado
+    notas: "Ejecutiva de BancoEstado (funcionaria de una empresa externa que prestaba servicios al banco) formalizada en la Operación Tokio (jun-2026). La PDI allanó la sucursal de Huérfanos con Morandé tras confirmarse su participación en la red."
+  mario_cayul:
+    nombre: Mario Cayul
+    cargo: Juez del Séptimo Juzgado de Garantía de Santiago
+    notas: "Juez del Séptimo Juzgado de Garantía de Santiago. Decretó la prisión preventiva de Manuel Monsalve (19-nov-2024) por violación y abuso sexual; en 2026 conoció también la querella por injurias de Mario Desbordes contra un tuitero."
+  xavier_armendariz:
+    nombre: Xavier Armendáriz
+    cargo: Fiscal de la Fiscalía Metropolitana Centro Norte
+    notas: "Fiscal del Ministerio Público que expuso los hechos en la formalización de Manuel Monsalve por violación y abuso sexual (noviembre de 2024)."
+  maria_ines_horvitz:
+    nombre: María Inés Horvitz
+    cargo: Abogada defensora
+    notas: "Abogada penalista que encabezó la defensa de Manuel Monsalve en su formalización por violación y abuso sexual (noviembre de 2024), junto a Lino Disi y Cristian Arias."
+  maria_elena_santibanez:
+    nombre: María Elena Santibáñez
+    cargo: Abogada de la denunciante en el caso Monsalve
+    notas: "Abogada de la víctima en el caso Monsalve. Tras la prisión preventiva decretada el 19 de noviembre de 2024 señaló que su representada 'está muy emocionada' y que 'no está bien, está con tratamiento sicológico'."
+  alfonso_de_urresti:
+    nombre: Alfonso de Urresti
+    cargo: Senador PS
+    notas: "Senador PS. En abril de 2024 participó como invitado en la Comisión de Ciencias de la Cámara, donde denunció 'desorden y discrecionalidad' en la entrega de Becas Chile y criticó el procedimiento de cobranza 'extremadamente dilatorio' a los deudores."
   patricia_cerda:
     nombre: Patricia Cerda
     cargo: Fiscal de la Fiscalía Centro Norte
@@ -4307,6 +4375,82 @@ people:
     nombre: Roberto Carrasco
     cargo: Empresario e ingeniero comercial
     notas: "Dueño de las empresas Asesorías VSA y Siglo Outsourcing. Amigo personal de Laurence Golborne, declaró ante la Fiscalía de Alta Complejidad el 4 de noviembre de 2015 haber emitido facturas ideológicamente falsas para recaudar fondos para la campaña presidencial de Golborne ('lista de Carrasco'). Fue formalizado en febrero de 2016."
+  alonso_guzman:
+    nombre: Alonso Guzmán
+    cargo: Director financiero de Aclara Technologies
+    notas: "Director financiero de la filial Aclara Technologies de Aclara Resources. En una entrevista con el medio especializado MetalMiner (agosto 2026) confirmó que la empresa mantiene conversaciones con usuarios finales en Estados Unidos y Japón —incluidos contratistas militares— para la venta de tierras raras del proyecto Módulo Penco."
+  camila_arriagada:
+    nombre: Camila Arriagada
+    cargo: Vocera de Penco-Lirquén Libre de Mineras
+    notas: "Vocera de la campaña Penco-Lirquén Libre de Mineras. El 8 de agosto de 2026 advirtió que las tierras raras del proyecto Aclara en Penco podrían abastecer a la industria armamentista y denunció un acuerdo del gobierno de Kast con Donald Trump previo a la aprobación ambiental del proyecto."
+  oscar_carrillo_zuniga:
+    nombre: Oscar Carrillo Zúñiga
+    cargo: Integrante de la Corporación Parque para Penco
+    notas: "Integrante de la Corporación Parque para Penco; prepara presentaciones legales para impugnar la aprobación del proyecto minero de tierras raras de Aclara en Penco (agosto 2026)."
+  rodrigo_carcamo:
+    nombre: Rodrigo Cárcamo
+    cargo: Experto en defensa
+    notas: "Experto en defensa citado por El Periodista sobre el uso de tierras raras en la industria militar (aviones F-35, submarinos, drones, radares y sistemas de propulsión)."
+  rodrigo_vera_penco:
+    nombre: Rodrigo Vera
+    cargo: Alcalde de Penco
+    notas: "Alcalde de Penco (Región del Biobío). Junto a todo su concejo municipal ha manifestado rechazo al proyecto minero de tierras raras de Aclara."
+  julia_orostegui:
+    nombre: Julia Oróstegui
+    cargo: Directora ejecutiva del SLEP Puerto Cordillera
+    cargos:
+      - cargo: Directora ejecutiva del SLEP Puerto Cordillera
+        organizacion: slep_puerto_cordillera
+        desde: 2026-08-05
+    notas: "Directora ejecutiva del Servicio Local de Educación Pública (SLEP) Puerto Cordillera, designada por el presidente José Antonio Kast mediante el Sistema de Alta Dirección Pública y presentada el 5 de agosto de 2026. Fue multada (20% de remuneraciones) por salir de Chile con licencia médica; lo atribuye a una urgencia médica por enfermedad autoinmune."
+  pedro_larrain_aguirre:
+    nombre: Pedro Larraín Aguirre
+    cargo: Director de Educación Pública
+    notas: "Director de Educación Pública (ministerio de Educación). Presentó oficialmente a la directora del SLEP Puerto Cordillera el 5 de agosto de 2026."
+  marcelo_salvo_meneses:
+    nombre: Marcelo Salvo Meneses
+    cargo: Seremi de Educación de la Región de Coquimbo
+    notas: "Seremi de Educación de la Región de Coquimbo. Participó en la presentación oficial de la directora del SLEP Puerto Cordillera el 5 de agosto de 2026."
+  miguel_diaz_canel:
+    nombre: Miguel Díaz-Canel
+    cargo: Presidente de Cuba
+    notas: "Presidente de Cuba y primer secretario del Comité Central del Partido Comunista de Cuba. Se ha reunido con el presidente del PC chileno Lautaro Carmona en sus visitas a la isla."
+  luis_cuello:
+    nombre: Luis Cuello
+    cargo: Diputado (PC)
+    notas: "Diputado del Partido Comunista de Chile. Calificó como 'censuradora' la ofensiva de la UDI contra el viaje del PC a Cuba."
+  boris_barrera:
+    nombre: Boris Barrera
+    cargo: Diputado (PC)
+    notas: "Diputado del Partido Comunista de Chile. Respondió a la UDI por el viaje del PC a Cuba recordando el apoyo gremialista a la dictadura de Pinochet."
+  axel_kaiser:
+    nombre: Axel Kaiser
+    cargo: Subdirector académico de la Fundación Faro
+    notas: "Abogado y filósofo liberal chileno, hermano de Johannes Kaiser. Subdirector académico de la Fundación Faro (Argentina) desde noviembre de 2024 y figura del círculo del gobierno de Javier Milei."
+  federico_sturzenegger:
+    nombre: Federico Sturzenegger
+    cargo: Ministro de Desregulación y Transformación del Estado de Argentina
+    notas: "Ministro de Desregulación y Transformación del Estado de la Nación Argentina. Considerado el principal nexo entre el PNL chileno y la Casa Rosada."
+  victor_espinosa:
+    nombre: Víctor Espinosa
+    cargo: Encargado económico del programa presidencial del PNL
+    notas: "Economista, encargado del programa económico de Johannes Kaiser y principal referente económico del Partido Nacional Libertario. Se reunió en tres ocasiones con Federico Sturzenegger."
+  nicolas_marquez:
+    nombre: Nicolás Márquez
+    cargo: Biógrafo de Javier Milei
+    notas: "Escritor e influencer argentino, biógrafo de Javier Milei y autor de obras de derecha radical; organizador del Viva la Derecha Fest. Pregonó que Johannes Kaiser sería el próximo presidente de Chile."
+  agustin_laje:
+    nombre: Agustín Laje
+    cargo: Líder de la Fundación Faro
+    notas: "Escritor y conferencista argentino de la derecha radical, organizador del Viva la Derecha Fest y líder de la Fundación Faro, think tank cercano a Javier Milei."
+  ricardo_ramirez:
+    nombre: Ricardo Ramírez
+    cargo: Encargado del programa cultural del PNL
+    notas: "Militante del Partido Nacional Libertario, encargado del programa cultural del partido; expuso en el Viva la Derecha Fest de Buenos Aires (octubre 2024)."
+  irene_del_real:
+    nombre: Irene del Real
+    cargo: Geóloga de la Pontificia Universidad Católica de Chile
+    notas: "Geóloga de la UC que visitó la planta piloto de Aclara en San Pedro de la Paz; señaló que las tierras raras también se usan para material bélico y que no existe trazabilidad sobre su destino final."
 organizations:
   criteria:
     nombre: Criteria
@@ -6219,7 +6363,1022 @@ organizations:
     tipo: empresa_privada
     pais: Chile
     notas: "Empresa del grupo familiar de Daniel Más Valdés (ex Constructora Carel, luego Ecomac). En 2016 CIPER la vinculó a la 'lista de Carrasco': pagó $25 millones en facturas falsas (dos de $12,5 millones) a Asesorías VSA de Roberto Carrasco, que financiaron la campaña presidencial de Laurence Golborne."
+  inmobiliaria_fundamenta:
+    nombre: Inmobiliaria Fundamenta
+    tipo: empresa
+    pais: Chile
+    notas: "Inmobiliaria controladora de Plaza Egaña SpA, proyecto que implicaba una inversión de US$300 millones y obtuvo un fallo favorable de la Tercera Sala de la Corte Suprema el 1 de marzo de 2023 tras gestiones de la entonces ministra Ángela Vivanco. Asesorada por los abogados Eduardo Lagos, Mario Vargas y Gabriel Silber, les pagó más de $600 millones por el fallo. Epicentro de la arista Fundamenta del caso Audios."
+  os7:
+    nombre: OS7 de Carabineros
+    tipo: unidad_policial
+    pais: Chile
+    notas: "Sección de Investigación Patrimonial y Anticorrupción de Carabineros de Chile. En 2026 elaboró un informe pericial (25 páginas, enviado el 29-jul a la Fiscalía Regional de Los Lagos) que rastreó la ruta de los $13 millones recibidos por Gonzalo Migueles en el caso Fundamenta."
+  banco_santander:
+    nombre: Banco Santander Chile
+    tipo: empresa
+    pais: Chile
+    notas: "Banco chileno. En la Operación Tokio (jun-2026) se investigó a su ejecutivo José Carlos Pérez Asencio por diseñar el esquema de cuentas corrientes para lavar dinero del Tren de Aragua."
+  fiscalia_metropolitana_sur:
+    nombre: Fiscalía Regional Metropolitana Sur
+    tipo: fiscalia
+    pais: Chile
+    notas: "Fiscalía del Ministerio Público a cargo de la Operación Tokio (2026), que desarticuló la red de lavado de dinero del Tren de Aragua bajo la conducción del fiscal regional Héctor Barros."
+  fiscalia_regional_los_lagos:
+    nombre: Fiscalía Regional de Los Lagos
+    tipo: fiscalia
+    pais: Chile
+    notas: "Fiscalía del Ministerio Público que investiga la arista Fundamenta del caso Audios (fiscal Marco Muñoz): el depósito de $13 millones a Gonzalo Migueles y el alzamiento de secreto bancario autorizado el 8 de junio de 2026 por el Séptimo Juzgado de Garantía."
+
+  ## Medios de prensa (tipo medio_comunicacion) — registro canónico para wikilinks en prosa
+  t13:
+    nombre: T13
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de televisión chileno (Canal 13) y portal de noticias. Emite T13 Central y T13 Tarde; su sitio es t13.cl."
+  adn_radio:
+    nombre: ADN Radio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (Grupo Prisa). Portal adnradio.cl."
+  exante:
+    nombre: Ex-Ante
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de análisis político fundado por Juan Pablo Larraín y Sebastián Minay. Portal ex-ante.cl."
+  emol:
+    nombre: Emol
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal de noticias del diario El Mercurio (emol.com)."
+  eldinamo:
+    nombre: El Dínamo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno. Portal eldinamo.cl."
+  elmostrador:
+    nombre: El Mostrador
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Periódico digital chileno fundado en 2000. Portal elmostrador.cl."
+  24_horas:
+    nombre: 24 Horas
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Departamento de prensa de TVN; noticiero y portal 24horas.cl."
+  eldesconcierto:
+    nombre: El Desconcierto
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de izquierda fundado en 2010. Portal eldesconcierto.cl."
+  publimetro:
+    nombre: Publimetro
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario gratuito chileno (Grupo Metro Internacional) y portal publimetro.cl."
+  el_pais:
+    nombre: El País (Chile)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Edición chilena del diario español El País. Publica noticias de Chile desde su corresponsalía; no confundir con el país."
+  meganoticias:
+    nombre: Meganoticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Departamento de prensa de Mega; noticiero y portal meganoticias.cl."
+  el_siglo:
+    nombre: El Siglo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno vinculado históricamente al Partido Comunista (edición actual desde 2016). Portal elsiglo.cl."
+  interferencia:
+    nombre: Interferencia
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de investigación y análisis (Ciper) fundado en 2019. Portal interferencia.cl."
+  radio_universidad_chile:
+    nombre: Radio Universidad de Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio pública chilena (U. de Chile), 102.5 FM. Portal radio.uchile.cl."
+  diario_usach:
+    nombre: Diario USACH
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de comunicación de la Universidad de Santiago de Chile. Portal usach.cl/diariousach."
+  la_segunda:
+    nombre: La Segunda
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario vespertino chileno del grupo El Mercurio. Fundado en 1931."
+  canal_13:
+    nombre: Canal 13
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de televisión chileno. Fundado en 1959. Su departamento de prensa es T13."
+  la_cuarta:
+    nombre: La Cuarta
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno popular del grupo El Mercurio. Fundado en 1984."
+  la_nacion:
+    nombre: La Nación
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Periódico chileno. Su edición impresa cerró en 2010; desde 2017 existe como medio digital (lanacion.cl)."
+  el_periodista:
+    nombre: El Periodista
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elperiodista.cl)."
+  el_reporte_diario:
+    nombre: El Reporte Diario
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (reportediario.cl)."
+  infobae:
+    nombre: Infobae
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Medio digital argentino de alcance latinoamericano. Fundado en 2002. Portal infobae.com."
+  radio_pauta:
+    nombre: Radio Pauta
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de análisis político (pauta.cl)."
+  radio_agricultura:
+    nombre: Radio Agricultura
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena, 92.1 FM. Portal radioagricultura.cl."
+  fast_check:
+    nombre: Fast Check
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Fact-checking chileno de la Fundación para el Progreso. Portal fastcheck.cl."
+  g5_noticias:
+    nombre: G5 Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (g5noticias.cl)."
+  soychile:
+    nombre: SoyChile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Red de diarios regionales chilenos del grupo El Mercurio. Portal soychile.cl."
+  sabes_cl:
+    nombre: Sabes.cl
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de noticias (sabes.cl)."
+  cambion21:
+    nombre: Cambio21
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (cambio21.cl)."
+  el_ilustrado:
+    nombre: El Ilustrado
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elilustrado.cl)."
+  la_hora:
+    nombre: La Hora
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno vespertino. Su edición impresa cerró en 2015; existe edición digital."
+  the_guardian:
+    nombre: The Guardian
+    tipo: medio_comunicacion
+    pais: Reino Unido
+    notas: "Periódico británico fundado en 1821. Portal theguardian.com."
+  efe:
+    nombre: EFE
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Agencia de noticias internacional española. Portal efe.com."
+  reuters:
+    nombre: Reuters
+    tipo: medio_comunicacion
+    pais: Reino Unido
+    notas: "Agencia de noticias internacional. Portal reuters.com."
+  dw:
+    nombre: Deutsche Welle
+    tipo: medio_comunicacion
+    pais: Alemania
+    notas: "Emisora pública internacional de Alemania. Portal dw.com."
+  epicentro_chile:
+    nombre: Epicentro Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (epicentrochile.com)."
+  reddit:
+    nombre: Reddit r/chile
+    tipo: red_social
+    notas: "Plataforma social; el subreddit r/chile es un punto de partida de discusión pública chilena. Solo fuente complementaria, nunca única."
+  youtube:
+    nombre: YouTube
+    tipo: red_social
+    notas: "Plataforma de video. Solo fuente complementaria; se usa para videos de canales de prensa o difusiones oficiales."
+  cnn_espanol:
+    nombre: CNN en Español
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Señal internacional en español de la cadena CNN. Portal cnnespanol.cnn.com. No confundir con CNN Chile."
+  radio_paulina:
+    nombre: Radio Paulina
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio online chilena (radiopaulina.cl)."
+  x_twitter:
+    nombre: X (Twitter)
+    tipo: red_social
+    notas: "Red social X (antes Twitter). Solo fuente complementaria o punto de partida, nunca única."
+
+  ## Prensa internacional (medios con fuentes en el vault)
+  the_nytimes:
+    nombre: The New York Times
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Diario estadounidense fundado en 1851. Portal nytimes.com."
+  ap_news:
+    nombre: AP News
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Associated Press, agencia de noticias estadounidense fundada en 1846. Portal apnews.com."
+  france_24:
+    nombre: France 24
+    tipo: medio_comunicacion
+    pais: Francia
+    notas: "Canal internacional francés de noticias 24h. Portal france24.com (incluye edición en español)."
+  bbc_news_mundo:
+    nombre: BBC News Mundo
+    tipo: medio_comunicacion
+    pais: Reino Unido
+    notas: "Servicio en español de la BBC. Portal bbc.com/mundo."
+  the_independent:
+    nombre: The Independent
+    tipo: medio_comunicacion
+    pais: Reino Unido
+    notas: "Periódico británico digital. Portal independent.co.uk."
+  daily_mail:
+    nombre: Daily Mail
+    tipo: medio_comunicacion
+    pais: Reino Unido
+    notas: "Periódico británico. Portal dailymail.co.uk."
+  el_universal:
+    nombre: El Universal
+    tipo: medio_comunicacion
+    pais: México
+    notas: "Diario mexicano fundado en 1916. Portal eluniversal.com.mx."
+  clarin_argentina:
+    nombre: Clarín (Argentina)
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino fundado en 1945. Portal clarin.com. No confundir con El Clarín de Chile."
+  ambito_argentina:
+    nombre: Ámbito (Argentina)
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino de economía y finanzas. Portal ambito.com."
+  abc_color:
+    nombre: ABC Color
+    tipo: medio_comunicacion
+    pais: Paraguay
+    notas: "Diario paraguayo. Portal abc.com.py."
+  tn_argentina:
+    nombre: TN (Argentina)
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Canal argentino de noticias (Todo Noticias). Portal tn.com.ar."
+  la_nacion_argentina:
+    nombre: La Nación (Argentina)
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino fundado en 1870. Portal lanacion.com.ar. No confundir con La Nación de Chile."
+  el_tribuno:
+    nombre: El Tribuno
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino del norte. Portal eltribuno.com."
+  nodal:
+    nombre: NODAL
+    tipo: medio_comunicacion
+    notas: "Noticias de América Latina y el Caribe (nodal.am), red de medios alternativos."
+  el_observador_uruguay:
+    nombre: El Observador (Uruguay)
+    tipo: medio_comunicacion
+    pais: Uruguay
+    notas: "Diario uruguayo fundado en 1991. Portal elobservador.com.uy."
+  panamericana_tv:
+    nombre: Panamericana Televisión
+    tipo: medio_comunicacion
+    pais: Perú
+    notas: "Canal de televisión peruano. Portal panamericana.pe."
+  america_tv_peru:
+    nombre: América TV Perú
+    tipo: medio_comunicacion
+    pais: Perú
+    notas: "Canal de televisión peruano. Portal americatv.com.pe."
+  yonhap:
+    nombre: Yonhap News Agency
+    tipo: medio_comunicacion
+    pais: Corea del Sur
+    notas: "Agencia de noticias oficial de Corea del Sur. Portal en.yna.co.kr."
+  ultimas_noticias_venezuela:
+    nombre: Últimas Noticias (Venezuela)
+    tipo: medio_comunicacion
+    pais: Venezuela
+    notas: "Diario venezolano. Portal ultimasnoticias.com.ve."
+  swissinfo:
+    nombre: Swissinfo
+    tipo: medio_comunicacion
+    pais: Suiza
+    notas: "Servicio internacional de la radiotelevisión pública suiza. Portal swissinfo.ch."
+  ips_noticias:
+    nombre: IPS (Inter Press Service)
+    tipo: medio_comunicacion
+    notas: "Agencia internacional de noticias con foco en desarrollo. Portal ipsnoticias.net."
+  le_monde_diplomatique:
+    nombre: Le Monde Diplomatique
+    tipo: medio_comunicacion
+    pais: Francia
+    notas: "Publicación mensual francesa de análisis internacional, con ediciones locales (incl. chilena)."
+  pagina_12:
+    nombre: Página 12
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino fundado en 1987. Portal pagina12.com.ar."
+  bloomberg:
+    nombre: Bloomberg
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Agencia y medio financiero estadounidense. Portal bloomberg.com."
+  bloomberg_linea:
+    nombre: Bloomberg Línea
+    tipo: medio_comunicacion
+    notas: "Edición en español de Bloomberg para América Latina. Portal bloomberglinea.com."
+  ctxt:
+    nombre: CTXT
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Revista digital española de análisis político. Portal ctxt.es."
+  le_monde_diplomatique_chile:
+    nombre: Le Monde Diplomatique (edición chilena)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Edición chilena de Le Monde Diplomatique. Portal lemondediplomatique.cl."
+
+  ## Prensa chilena (medios regionales y nacionales)
+  vilas_radio:
+    nombre: Vilas Radio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio online chilena (vilasradio.cl)."
+  diario_concepcion:
+    nombre: Diario Concepción
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de la Región del Biobío. Portal diarioconcepcion.cl."
+  el_informador_chile:
+    nombre: El Informador Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elinformadorchile.cl)."
+  nuble_online:
+    nombre: Ñuble Online
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Ñuble (nubleonline.cl)."
+  amigos_penquistas:
+    nombre: Amigos Penquistas
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Concepción (amigospenquistas.cl)."
+  central_noticia:
+    nombre: Central Noticia
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (centralnoticia.cl)."
+  infogate:
+    nombre: Infogate
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (infogate.cl)."
+  diario_libre:
+    nombre: Diario Libre
+    tipo: medio_comunicacion
+    pais: República Dominicana
+    notas: "Diario dominicano. Portal diariolibre.com."
+  radar_biobio:
+    nombre: Radar BioBio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Revista/medio del grupo BioBioChile (radarbiobio.cl)."
+  radio_nuevo_mundo:
+    nombre: Radio Nuevo Mundo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (radionuevomundo.cl)."
+  nuevo_poder:
+    nombre: Nuevo Poder
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (nuevopoder.cl)."
+  diario_constitucional:
+    nombre: Diario Constitucional
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio chileno de derecho constitucional (diarioconstitucional.cl)."
+  estas_pasando:
+    nombre: Estás Pasando
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (estapasando.cl)."
+  el_observatodo:
+    nombre: El Observatodo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Coquimbo (elobservatodo.cl)."
+  mala_espina_check:
+    nombre: Mala Espina Check
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Fact-checking chileno. Portal malaespinacheck.cl."
+  publimicro:
+    nombre: Publimicro
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (publimicro.cl)."
+  vln_radio:
+    nombre: VLN Radio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de Valparaíso (vlnradio.cl)."
+  canal_9:
+    nombre: Canal 9
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de televisión chileno de la Región del Biobío (canal9.cl)."
+  revista_seguridad:
+    nombre: Revista Seguridad
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Revista chilena de seguridad (revistaseguridad.cl)."
+  la_prensa_austral:
+    nombre: La Prensa Austral
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de Punta Arenas (laprensaaustral.cl)."
+  pagina_7:
+    nombre: Página 7
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (pagina7.cl)."
+  puranoticia:
+    nombre: Puranoticia
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Punta Arenas (puranoticia.pnt.cl)."
+  noticias_los_rios:
+    nombre: Noticias Los Ríos
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Los Ríos (noticiaslosrios.cl)."
+  el_zorro_nortino:
+    nombre: El Zorro Nortino
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Antofagasta (elzorronortino.cl)."
+  timeline_antofagasta:
+    nombre: Timeline Antofagasta
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Antofagasta (timeline.cl)."
+  araucania_diario:
+    nombre: Araucanía Diario
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de La Araucanía (araucaniadiario.cl)."
+  resumen_latinoamericano:
+    nombre: Resumen Latinoamericano
+    tipo: medio_comunicacion
+    notas: "Medio digital latinoamericano (resumenlatinoamericano.org)."
+  el_arrebato:
+    nombre: El Arrebato
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elarrebato.cl)."
+  nostalgica:
+    nombre: Nostálgica
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (nostalgica.cl)."
+  el_diario_de_santiago:
+    nombre: El Diario de Santiago
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (eldiariodesantiago.cl)."
+  el_dia_la_serena:
+    nombre: El Día (La Serena)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de La Serena (diarioeldia.cl)."
+  novena_digital:
+    nombre: Novena Digital
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (novenadigital.cl)."
+  cronicas_de_chile:
+    nombre: Crónicas de Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (cronicasdechile.cl)."
+  publilegales:
+    nombre: Publilegales
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio chileno de derecho y legislación (publilegales.cl)."
+  el_vigilante:
+    nombre: El Vigilante
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elvigilante.cl)."
+  clg_medios:
+    nombre: CLG Medios
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (clgmedios.cl)."
+  pagina_19:
+    nombre: Página 19
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (pagina19.cl)."
+  atentos:
+    nombre: Atentos
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (atentos.cl)."
+  mi_radio_ls:
+    nombre: Mi Radio LS
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio online chilena (miradiols.cl)."
+  redgol:
+    nombre: Redgol
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio deportivo digital chileno (redgol.cl)."
+  el_periscopio:
+    nombre: El Periscopio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elperiscopio.cl)."
+  nuble_actual:
+    nombre: Ñuble Actual
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Ñuble (nubleactual.cl)."
+  fm_dos:
+    nombre: FM Dos
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de la Región del Biobío (fmdos.cl)."
+  itv_patagonia:
+    nombre: ITV Patagonia
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de televisión chileno de la Patagonia (itvpatagonia.com)."
+  informe_chile:
+    nombre: Informe Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (informechile.cl)."
+  geografas_chile:
+    nombre: Geógrafas Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (geografaschile.cl)."
+  chiloenews:
+    nombre: ChiloeNews
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Chiloé (chiloenews.cl)."
+  el_insular:
+    nombre: El Insular
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Chiloé (elinsular.cl)."
+  radio_45_sur:
+    nombre: Radio 45 Sur
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de la Región de Los Ríos (radio45sur.cl)."
+  linares_en_linea:
+    nombre: Linares en Línea
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno del Maule (linaresenlinea.cl)."
+  diario_la_prensa:
+    nombre: Diario La Prensa
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de Osorno (diariolaprensa.cl)."
+  redimin:
+    nombre: Redimin
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Revista digital minera chilena (redimin.cl)."
+  acero_y_roca:
+    nombre: Acero y Roca
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (aceroyroca.com)."
+  la_tribuna:
+    nombre: La Tribuna
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de la Región del Biobío (latribuna.cl)."
+  el_radar:
+    nombre: El Radar
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elradar.cl)."
+  contingencia_chile:
+    nombre: Contingencia Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (contingenciachile.cl)."
+  nexos_chile:
+    nombre: Nexos Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (nexos.cl)."
+  el_proa:
+    nombre: El Proa
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elproa.cl)."
+  diario_avisale:
+    nombre: Diario Avísale
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (diarioavisale.cl)."
+  araucania_noticias:
+    nombre: Araucanía Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de La Araucanía (araucanianoticias.cl)."
+  la_union_valpo:
+    nombre: La Unión Valpo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Valparaíso (launionvalpo.com)."
+  el_diario_de_la_araucania:
+    nombre: El Diario de la Araucanía
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de La Araucanía (eldiariodelaaraucania.cl)."
+  chile_pais_minero:
+    nombre: Chile País Minero
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de minería (chilepaisminero.com)."
+  tierramarillano:
+    nombre: Tierramarillano
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (tierramarillano.cl)."
+  el_orador_ilustrado:
+    nombre: El Orador Ilustrado
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (eloradorilustrado.cl)."
+  radio_atacama:
+    nombre: Radio Atacama
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de la Región de Atacama (radioatacama.cl)."
+  el_maipo:
+    nombre: El Maipo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región Metropolitana (elmaipo.cl)."
+  radio_futuro:
+    nombre: Radio Futuro
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (futuro.cl)."
+  diario_sur_noticias:
+    nombre: Diario Sur Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (diariosurnoticias.com)."
+  el_morrocotudo:
+    nombre: El Morrocotudo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Arica (elmorrocotudo.cl)."
+  la_izquierda_diario:
+    nombre: La Izquierda Diario
+    tipo: medio_comunicacion
+    notas: "Medio digital internacional de izquierda con edición chilena (laizquierdadiario.cl)."
+  mediabanco:
+    nombre: Mediabanco
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (mediabanco.com)."
+  resumen_cl:
+    nombre: Resumen.cl
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (resumen.cl)."
+  mestizos_magazine:
+    nombre: Mestizos Magazine
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Revista digital chilena (mestizos.cl)."
+  gamba:
+    nombre: Gamba.cl
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (gamba.cl)."
+  la_discusion_chillan:
+    nombre: La Discusión (Chillán)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de Chillán (ladiscusion.cl)."
+  radio_interamericana:
+    nombre: Radio Interamericana
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (radiointeramericana.cl)."
+  radio_las_nieves:
+    nombre: Radio Las Nieves
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de la Región de Los Ríos (rln.cl)."
+  info_tarapaca:
+    nombre: Info Tarapacá
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Tarapacá (infotarapaca.cl)."
+  desenfoque:
+    nombre: Desenfoque
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (desenfoque.cl)."
+  portal_agro_chile:
+    nombre: Portal Agro Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal chileno agropecuario (portalagrochile.cl)."
+  el_tipografo:
+    nombre: El Tipógrafo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario digital chileno de Rancagua (eltipografo.cl)."
+  diario_estrategia:
+    nombre: Diario Estrategia
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de economía y negocios (diarioestrategia.cl)."
+  diario_de_osorno:
+    nombre: Diario de Osorno
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de Osorno (diariodeosorno.cl)."
+  paislobo_prensa:
+    nombre: Paislobo Prensa
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (paislobo.cl)."
+  infinita:
+    nombre: Infinita
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (infinita.cl)."
+  san_carlos_online:
+    nombre: San Carlos Online
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de San Carlos (sancarlosonline.cl)."
+  las_ultimas_noticias_lun:
+    nombre: Las Últimas Noticias (LUN)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno popular del grupo El Mercurio. Portal lunmas.cl."
+  diario_de_valdivia:
+    nombre: Diario de Valdivia
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de Valdivia (diariodevaldivia.cl)."
+  unnie_pop:
+    nombre: Unnie Pop
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de cultura pop (unniepop.cl)."
+  la_opinion_de_chiloe:
+    nombre: La Opinión de Chiloé
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Chiloé (laopiniondechiloe.cl)."
+  diario_chanarcillo:
+    nombre: Diario Chañarcillo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de la Región de Atacama (chanarcillo.cl)."
+  radio_valentin_letelier:
+    nombre: Radio Valentín Letelier (UV)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio de la Universidad de Valparaíso (rvl.uv.cl)."
+  radio_la_senal:
+    nombre: Radio La Señal
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (radiolasenal.cl)."
+  diario_el_heraldo:
+    nombre: Diario El Heraldo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de la Región del Biobío (diarioelheraldo.cl)."
+  resonancia_diario:
+    nombre: Resonancia Diario
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (resonanciadiario.cl)."
+  prime_digital:
+    nombre: Prime Digital
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (primedigital.cl)."
+  orolonco_fm:
+    nombre: Orolonco FM
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (oroloncofm.cl)."
+  radio_contacto:
+    nombre: Radio Contacto
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (radiocontacto.cl)."
+  chicureo_hoy:
+    nombre: Chicureo Hoy
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Chicureo (chicureohoy.cl)."
+  el_sereno_talca:
+    nombre: El Sereno (Talca)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de Talca."
+  defensa_com:
+    nombre: defensa.com
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Portal español de noticias de defensa y seguridad (defensa.com)."
+  diario_red:
+    nombre: Diario Red
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Medio digital español fundado por Pablo Iglesias (diario-red.com)."
+  atacama_noticias:
+    nombre: Atacama Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Atacama (atacamanoticias.cl)."
+  mega:
+    nombre: Mega
+    tipo: canal_television
+    pais: Chile
+    notas: "Canal de televisión chileno privado (mega.cl)."
+  gda:
+    nombre: GDA
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Grupo de Diarios América (gda.com), red de periódicos latinoamericanos que distribuye contenidos de sus miembros (entre ellos El Mercurio)."
+  contraplano:
+    nombre: Contraplano
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (contraplano.cl), antes ContraPeso."
+  chocale:
+    nombre: Chocale
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Valparaíso (chocale.cl)."
+  fm_centro:
+    nombre: FM Centro
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio online chilena (fmcentro.cl)."
+  cronica_digital:
+    nombre: Crónica Digital
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (cronicadigital.cl)."
+  magallanes_check:
+    nombre: Magallanes Check
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de verificación de datos de la Región de Magallanes (magallanescheck.cl)."
+  diario_agricola:
+    nombre: Diario Agrícola
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno especializado en el agro (diarioagricola.com)."
+  ute_usach_noticias:
+    nombre: UTE USACH Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Plataforma de noticias de la Corporación UTE USACH (corporacionuteusach-noticias.cl)."
+  the_hour:
+    nombre: The Hour
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Diario estadounidense de Norwalk, Connecticut (thehour.com); distribuye despachos de AP."
+  the_times_latino:
+    nombre: The Times Latino
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno en español (thetimeslatino.com / thetimes.cl)."
+  panam_post:
+    nombre: PanAm Post
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Medio digital en español que cubre América Latina (panampost.com); incluye contenidos de EFE."
+  hondurasgate:
+    nombre: Hondurasgate.ch
+    tipo: medio_comunicacion
+    pais: Honduras
+    notas: "Sitio de investigación sobre corrupción y crimen organizado en Honduras (hondurasgate.ch)."
+  verifica_udp:
+    nombre: VerificaUDP
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Plataforma de verificación de datos de la Escuela de Periodismo UDP (vergara240.udp.cl, edificio Vergara 240)."
+  aclara_resources:
+    nombre: Aclara Resources
+    tipo: empresa_minera
+    pais: Canada
+    notas: "Empresa canadiense de tierras raras (TSX: ARA) que desarrolla el proyecto Módulo Penco en las comunas de Penco y Concepción (Región del Biobío) junto a Grupo CAP; su filial Aclara Technologies administra la comercialización del concentrado."
+  grupo_cap:
+    nombre: Grupo CAP
+    tipo: empresa
+    pais: Chile
+    notas: "Grupo siderúrgico y minero chileno (Compañía de Acero del Pacífico); socio de Aclara Resources en el proyecto de tierras raras de Penco."
+  municipalidad_penco:
+    nombre: Municipalidad de Penco
+    tipo: municipalidad
+    pais: Chile
+  penco_lirquen_libre_de_mineras:
+    nombre: Penco-Lirquén Libre de Mineras
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Campaña ciudadana de oposición a la minería de tierras raras en Penco y Lirquén (Región del Biobío)."
+  corporacion_parque_penco:
+    nombre: Corporación Parque para Penco
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización ciudadana de Penco que impulsa un parque urbano para la comuna y prepara impugnaciones legales al proyecto minero Aclara."
+  metalminer:
+    nombre: MetalMiner
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Medio especializado en metales, precios y mercado industrial (metalminer.com)."
+  reporte_minero:
+    nombre: Reporte Minero
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno especializado en minería (reporteminero.cl)."
+  el_libertario:
+    nombre: El Libertario
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de análisis liberal (ellibertario.cl)."
+  slep_puerto_cordillera:
+    nombre: Servicio Local de Educación Pública Puerto Cordillera
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio Local de Educación Pública (SLEP) Puerto Cordillera, de la Región de Coquimbo."
+  fundacion_faro:
+    nombre: Fundación Faro
+    tipo: organizacion_social
+    pais: Argentina
+    notas: "Think tank libertario lanzado en noviembre de 2024 en Buenos Aires con presencia de Javier Milei, liderado por Agustín Laje y con Axel Kaiser como subdirector académico."
+  el_dia:
+    nombre: El Día
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario regional de La Serena-Coquimbo (diarioeldia.cl)."
 cifras:
+  personas_fuera_sistema_financiero_tmc:
+    nombre: Personas fuera del sistema financiero por la TMC
+    unidad_default: personas
+    notas: "Entre 250 mil y 300 mil personas habrían quedado fuera del sistema financiero por la reforma de la Tasa Máxima Convencional de 2013, según el ministro de Hacienda Jorge Quiroz (agosto 2026)."
+  muertos_gaza_2023_2026:
+    nombre: Muertos en la Franja de Gaza desde el 7 de octubre de 2023
+    unidad_default: personas
+    notas: "Según el Ministerio de Sanidad de Gaza: más de 73.340 muertos desde el inicio de la ofensiva israelí (7 de octubre de 2023); más de 1.200 muertos desde el último alto el fuego pactado en octubre de 2025. Cifras cuestionadas por el embajador de Israel en Chile, Peleg Lewi (agosto 2026)."
   quorum_reforma_constitucional:
     nombre: Quórum para reformas constitucionales en Chile
     unidad_default: por_ciento
@@ -7956,3 +9115,35 @@ cifras:
     nombre: Aportes del grupo Penta a la campaña de Golborne
     unidad_default: millones_pesos
     notas: "$120 millones aportados por el grupo Penta en seis pagos de $20 millones entre enero y junio de 2013 a la campaña presidencial de Laurence Golborne, según CIPER (caso Lista de Carrasco, 2016)."
+  pago_migueles_fundamenta:
+    nombre: Depósito de $13 millones a Gonzalo Migueles
+    unidad_default: millones_pesos
+    notas: "Depósito en efectivo de $13 millones realizado por Martín Peña el 28 de febrero de 2023 en la cuenta de Gonzalo Migueles, pareja de la entonces ministra de la Corte Suprema Ángela Vivanco, por orden del abogado Eduardo Lagos, cuatro días después del fallo favorable a Inmobiliaria Fundamenta (arista Fundamenta del caso Audios, CIPER 15-jul-2026)."
+  honorarios_abogados_fundamenta:
+    nombre: Pagos de Inmobiliaria Fundamenta a sus abogados
+    unidad_default: millones_pesos
+    notas: "Más de $600 millones pagados por Inmobiliaria Fundamenta a la sociedad de abogados Lagos, Vargas y Silber (CIPER, nov-2025). El acuerdo contemplaba 16 mil UF si el fallo favorable salía antes del 1 de marzo de 2023 y 8 mil UF desde el 2 de marzo."
+  movimientos_migueles_os7:
+    nombre: Movimientos de la cuenta de Gonzalo Migueles (informe OS7)
+    unidad_default: pesos
+    notas: "$126.405.739 recibidos y gastados por Gonzalo Migueles entre el 1 de enero y el 30 de abril de 2023 según el informe del OS7 (29-jul-2026): $20 millones de cuentas de Ángela Vivanco, $12,4 millones del conservador de bienes raíces de Puente Alto Sergio Yáber, $4 millones de Yamil Najle, $2,5 millones de una empresa periodística vinculada a este último y $6.719.550 del notario de La Cisterna Fernando Martel; $9.357.747 se destinaron al arriendo de la vivienda compartida con Vivanco."
+  lavado_operacion_tokio:
+    nombre: Dinero lavado por la red del Tren de Aragua (Operación Tokio)
+    unidad_default: millones_pesos
+    notas: "Más de $78 mil millones lavados por la red del Tren de Aragua desarticulada en la Operación Tokio (jun-2026), con $58 mil millones a través de BexDigital Services SpA y $17.270 millones por Servicios Digitales BexGroup SpA; The Clinic (8-jun) reportó un total de más de $75 mil millones y unos US$84 millones transferidos al extranjero."
+  detenidos_operacion_tokio:
+    nombre: Detenidos en la Operación Tokio
+    unidad_default: personas
+    notas: "19 ciudadanos venezolanos capturados en la Operación Tokio (The Clinic, 5-jun-2026); 17 fueron formalizados el 7 de junio y 14 quedaron en prisión preventiva (BioBioChile)."
+  deuda_no_gestionada_anid:
+    nombre: Deuda no gestionada por la ANID (auditoría Contraloría 2024)
+    unidad_default: millones_pesos
+    notas: "$46 mil millones en transferencias a entidades públicas y privadas entre 2018 y 2022 cuyo cobro no se gestionó, según la auditoría financiera de Contraloría a la ANID publicada el 1 de abril de 2024."
+  demandas_incumplimiento_becas_2024:
+    nombre: Demandas judiciales por incumplimiento de Becas Chile (2024)
+    unidad_default: personas
+    notas: "73 personas con demanda judicial en trámite por incumplimiento de convenios (25 de Becas Chile en el extranjero y 48 de Becas Nacionales) entre las 150 en incumplimiento declarado, según la nómina publicada el 5 de abril de 2024."
+  casos_analisis_becas_2024:
+    nombre: Casos en análisis de cumplimiento de Becas (2024)
+    unidad_default: personas
+    notas: "548 casos en análisis de cumplimiento de obligaciones (221 en el extranjero y 327 en Chile) al momento de la nómina de abril de 2024."

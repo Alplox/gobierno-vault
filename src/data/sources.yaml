@@ -35,7 +35,7 @@ emol-2026-07-20-kast-viaja-coquimbo:
 
 elpais-2026-07-20-catastrofe-coquimbo:
   tipo: prensa
-  medio: El Pais Chile
+  medio: El País (Chile)
   titulo: Kast declara estado de catastrofe en Coquimbo por el sistema frontal que
     tiene a La Serena en una situacion dramatica
   autor: Antonia Laborde
@@ -44,7 +44,7 @@ elpais-2026-07-20-catastrofe-coquimbo:
 
 ap-thehour-2026-07-20-emergencia-chile-temporal:
   tipo: prensa
-  medio: The Hour (AP)
+  medio: The Hour
   titulo: Declaran estado de excepcion en algunas zonas de Chile por fuertes
     temporales; hay 5 muertos
   autor: Nayara Batschke
@@ -88,7 +88,7 @@ latercera-2026-07-20-kast-autocritica-emergencia:
 
 pauta-2026-07-20-kast-autocritica:
   tipo: prensa
-  medio: Pauta
+  medio: Radio Pauta
   titulo: "Presidente Kast por criticas a la gestion del sistema frontal: Habra
     oportunidad para hacer los analisis y la autocritica"
   autor: Pauta
@@ -247,7 +247,7 @@ theclinic-2025-06-08-metodo-kast:
   notas: "Reportaje sobre la estrategia de campaña de Kast en junio de 2025 (tercer intento presidencial): el 'método Kast' de mostrar un candidato propositivo y con el menor número de errores, la presentación del 'Plan Reinicia' contra abusos en el aparato público, el manejo calculado del tema Punta Peuco frente a Matthei, la instrucción de no celebrar los sondeos que lo ubicaban en empate técnico, y la inquietud interna por la falta de un equipo visible ('no se sabe aún quién sería su ministro de Hacienda'). Verificada por lectura completa."
 elpais-2025-12-14-propuestas-kast:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: Las propuestas de José Antonio Kast, el ultraconservador que llega a La
     Moneda en su tercer intento
   autor: Sebastián Dote
@@ -297,7 +297,7 @@ eldinamo-2025-12-24-kast-criterio-ministros:
 
 24horas-2025-12-24-kast-criterio-kaiser:
   tipo: prensa
-  medio: 24Horas
+  medio: 24 Horas
   titulo: 'Encargado del cambio de mando de Kast responde por criterio que impediría que Kaiser sea ministro'
   autor: 24Horas
   fecha: 2025-12-24
@@ -305,7 +305,7 @@ eldinamo-2025-12-24-kast-criterio-ministros:
 
 malaespinacheck-2025-10-01-propuestas-kast:
   tipo: verificacion
-  medio: Malaspina Check
+  medio: Mala Espina Check
   titulo: "José Antonio Kast: propuestas y programa de gobierno 2025"
   autor: Malaspina Check
   fecha: 2025-10-01
@@ -490,7 +490,7 @@ apnews-2026-03-16-wall-border-chile:
 
 elpais-cl-2026-03-16-escudo-fronterizo:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: Kast inaugura el 'Escudo Fronterizo' y ordena construir una zanja en la
     frontera con Argentina
   autor: Pedro Schwarze
@@ -561,7 +561,7 @@ t13-2026-03-20-alerta-oncologica:
 
 24horas-2026-03-20-alerta-oncologica:
   tipo: prensa
-  medio: 24Horas
+  medio: 24 Horas
   titulo: Gobierno decreta alerta oncológica nacional por listas de espera en cáncer
   autor: 24Horas
   fecha: 2026-03-20
@@ -596,7 +596,7 @@ biobiochile-2026-03-19-urgencia-migracion:
 
 contraplano-2026-03-19-urgencia-migratorio:
   tipo: prensa
-  medio: ContraPeso / ContraPlano
+  medio: Contraplano
   titulo: Gobierno envía urgencia legislativa para proyecto de delito de migración
     irregular
   autor: ContraPlano
@@ -623,7 +623,7 @@ latercera-2026-05-20-megarreforma-camara:
 
 elpais-cl-2026-05-20-megarreforma-camara:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: El pleno de la Cámara de Diputados aprueba la megarreforma de Kast y
     pasa al Senado
   autor: Maolis Castro
@@ -632,7 +632,7 @@ elpais-cl-2026-05-20-megarreforma-camara:
 
 radiou-chile-2026-05-20-megarreforma-camara:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: Cámara de Diputados aprueba en particular el megaproyecto de
     reconstrucción nacional
   autor: Catalina Araya
@@ -641,7 +641,7 @@ radiou-chile-2026-05-20-megarreforma-camara:
 
 radiou-chile-2026-06-01-cuenta-publica-kast:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: Kast presenta su primera Cuenta Pública ante el Congreso pleno
   autor: Radiou Chile
   fecha: 2026-06-01
@@ -684,7 +684,7 @@ t13-2026-07-12-secciones-maxima-seguridad:
 
 elpais-cl-2026-06-24-megarreforma-senado:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: El Senado aprueba por el mínimo la idea de legislar la megarreforma de Kast
   autor: Antonia Laborde
   fecha: 2026-06-24
@@ -719,7 +719,7 @@ latercera-2026-07-23-deepfakes-proteccion:
 
 meganoticias-2025-03-16-bruja-pinochet-pirzio-biroli:
   tipo: prensa
-  medio: Mega (Viaje a lo Insólito)
+  medio: Mega
   titulo: "Pronosticó fallido atentado: La desconocida historia de Eugenia Pirzio-Biroli, la 'bruja' de Augusto Pinochet"
   autor: Sebastián Paillafil
   fecha: 2025-03-16
@@ -728,7 +728,7 @@ meganoticias-2025-03-16-bruja-pinochet-pirzio-biroli:
 
 meganoticias-2026-07-23-deepfakes:
   tipo: prensa
-  medio: MegaNoticias
+  medio: Meganoticias
   titulo: Cámara aprueba proyecto que busca sancionar utilización de la IA para
     generar deepfakes
   autor: MegaNoticias
@@ -867,7 +867,7 @@ latercera-2025-10-08-parasitos-valenzuela:
 
 emol-2025-10-14-valenzuela-parasitos:
   tipo: prensa
-  medio: El Mercurio
+  medio: Emol
   titulo: "Polémica por 'parásitos': Asesor de Kast asegura que su columna 'en
     ningún caso' incluye a Chile Vamos"
   autor: María Cristina Romero
@@ -1017,7 +1017,7 @@ elciudadano-2026-07-24-pdg-servel-denuncia:
 
 elpais-cl-2026-05-20-sedini-salida:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: Sedini, la portavoz criticada por 'no comunicar' que deja el Gobierno de Kast
   autor: Maolis Castro
   fecha: 2026-05-20
@@ -1094,7 +1094,7 @@ t13-2026-07-16-normas-clave-megarreforma:
 
 radio-uchile-2026-07-21-camara-megarreforma:
   tipo: prensa
-  medio: Diario y Radio Universidad Chile
+  medio: Radio Universidad de Chile
   titulo: Cámara aprueba el corazón de la megarreforma mientras la oposición
     activa ofensiva ante el Tribunal Constitucional
   autor: Alexis Polo González
@@ -1112,7 +1112,7 @@ t13-2026-07-21-camara-megarreforma:
 
 elpais-cl-2026-07-21-camara-megarreforma:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: La Cámara de Diputados despacha la megarreforma de Kast y solo una
     enmienda pasa a la comisión mixta
   autor: Redacción
@@ -1130,7 +1130,7 @@ ap-2026-06-18-100-dias-kast:
 
 elpais-cl-2026-06-27-dos-almas-gobierno:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: La semana en que se enquistaron las dos almas del Gobierno de Kast
   autor: Antonia Laborde
   fecha: 2026-06-27
@@ -1214,7 +1214,7 @@ exante-2026-03-25-estado-quiebra:
 
 fastcheck-2026-03-24-minuta-gobierno:
   tipo: prensa
-  medio: FastCheck
+  medio: Fast Check
   titulo: "'Ceñirse al guion y no hablar de más': la minuta del control de daños"
   autor: César Leal
   fecha: 2026-03-24
@@ -1231,7 +1231,7 @@ biobiochile-2026-06-25-fenats-seremis:
 
 chilevision-2026-06-28-seremis-criticas:
   tipo: prensa
-  medio: ChileVisión
+  medio: Chilevisión
   titulo: "'Impresentable': Cuestionan aumento de sueldo a seremis de Salud en
     medio de recortes al sector"
   autor: Digitalproserver
@@ -1259,7 +1259,7 @@ biobiochile-2026-06-24-megarreforma-senado-general:
 biobiochile-2026-06-24-ordenes-seremis:
   tipo: prensa
   medio: BioBioChile
-  titulo: Senadora Ãrdenes critica alza de 20% en sueldos de seremis de Salud
+  titulo: Senadora Órdenes critica alza de 20% en sueldos de seremis de Salud
   autor: Redacción BioBioChile
   fecha: 2026-06-24
   url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/24/senadora-ordenes-critica-alza-de-20-en-sueldos-de-seremis-de-salud-me-parece-insolito.shtml
@@ -1310,7 +1310,7 @@ theclinic-2026-03-24-minuta-bachelet:
 
 biobiochile-2026-03-24-minuta-bachelet:
   tipo: prensa
-  medio: BioBio Chile
+  medio: BioBioChile
   titulo: "¿No es esto una vergüenza?: la minuta del Gobierno para enfrentar
     críticas tras no apoyar a Bachelet"
   autor: BioBio Chile
@@ -1364,7 +1364,7 @@ diarioeldia-2026-03-24-retiro-apoyo-bachelet:
 
 elclarin-2026-03-24-retiro-apoyo-bachelet:
   tipo: prensa
-  medio: El Clarín (Chile)
+  medio: El Clarín de Chile
   titulo: "Gobierno retira apoyo a Bachelet en la ONU: giro político y tensiones
     internas"
   autor: El Clarín
@@ -1433,7 +1433,7 @@ theclinic-2026-03-26-hackeo-pdi:
 
 tvn-2026-03-26-hackeo-kast:
   tipo: prensa
-  medio: TVN
+  medio: Televisión Nacional de Chile
   titulo: Gobierno confirma hackeo de cuentas del Presidente Kast en redes sociales
   autor: TVN
   fecha: 2026-03-26
@@ -1513,7 +1513,7 @@ latercera-2026-07-22-balance-sistema-frontal:
 
 elclarin-2026-05-05-comision-investigadora-kast-orban:
   tipo: prensa
-  medio: El Clarín
+  medio: El Clarín de Chile
   titulo: "Impulsan en la Cámara de Diputados una comisión investigadora de los vínculos de Kast con la red internacional de Viktor Orbán"
   autor: El Clarín
   fecha: 2026-05-05
@@ -1522,7 +1522,7 @@ elclarin-2026-05-05-comision-investigadora-kast-orban:
 
 elclarin-2026-05-04-flanco-orban-chile:
   tipo: prensa
-  medio: El Clarín
+  medio: El Clarín de Chile
   titulo: "Corrupción y redes de ultraderecha: el flanco Orbán abierto en Chile"
   autor: El Clarín
   fecha: 2026-05-04
@@ -1558,7 +1558,7 @@ dw-2026-05-12-hondurasgate-audios-filtrados:
 
 hondurasgate-2026-04-30-37-audios:
   tipo: investigacion
-  medio: Hondurasgate.ch / Diario Red / Canal Red
+  medio: Hondurasgate.ch
   titulo: 37 audios filtrados revelan trama de injerencia internacional desde Honduras
   autor: Hondurasgate
   fecha: 2026-04-30
@@ -1583,7 +1583,7 @@ elciudadano-2026-07-05-orban-chile-kast:
 
 radiouchile-2026-07-22-balance-sistema-frontal:
   tipo: prensa
-  medio: Radio UChile
+  medio: Radio Universidad de Chile
   titulo: "Sistema frontal: cifra oficial de fallecidos sube a 13 y hay 7
     desaparecidos"
   autor: Claudio Medrano
@@ -1609,7 +1609,7 @@ cnnchile-2026-07-24-balance-sistema-frontal:
 
 meganoticias-2026-07-24-balance-sistema-frontal:
   tipo: prensa
-  medio: MegaNoticias
+  medio: Meganoticias
   titulo: "Sistema frontal: 18 desaparecidos, 11 en Coquimbo y 7 en Atacama"
   autor: MegaNoticias
   fecha: 2026-07-24
@@ -1704,7 +1704,7 @@ t13-2026-07-24-quiroz-destaca-aporte-subsecretario-renuncio:
 
 elpais-cl-2026-07-24-kast-destituye-subsecretario-hacienda-drogas:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: Kast destituye al subsecretario de Hacienda tras dar positivo en un test
     de drogas
   autor: Maolis Castro
@@ -1775,7 +1775,7 @@ cnnchile-2026-06-02-jouannet-quintana-renuncian-seguridad:
 
 elpais-cl-2026-06-03-renuncias-subsecretarios-seguridad-kast:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: Renuncian subsecretarios de Seguridad y Prevención del Delito del
     gobierno de Kast
   autor: Maolis Castro
@@ -1987,7 +1987,7 @@ epicentro_chile-2026-07-03-zanja-mop-etapa-final:
   url: https://www.epicentrochile.cl/2026/07/03/zanja-mop-etapa-final/
 mop-2026-07-11-zanja-colchane-primer-trecho:
   tipo: comunicado
-  medio: Ministerio de Obras Publicas
+  medio: Ministerio de Obras Públicas
   titulo: Primera etapa de la zanja fronteriza en Colchane finalizara antes de julio
   autor: MOP
   fecha: 2026-07-11
@@ -1995,7 +1995,7 @@ mop-2026-07-11-zanja-colchane-primer-trecho:
 
 fastcheck-2026-03-17-macaya-zanja-falso:
   tipo: fact_check
-  medio: Fastcheck.cl
+  medio: Fast Check
   titulo: "Imagen compartida por el senador Macaya que muestra los avances de la
     zanja en el norte: #Falso"
   autor: Fastcheck.cl
@@ -2004,7 +2004,7 @@ fastcheck-2026-03-17-macaya-zanja-falso:
 
 clarin-2026-03-17-macaya-ia-analisis:
   tipo: opinion
-  medio: El Clarin
+  medio: El Clarín de Chile
   titulo: "La frontera distópica imaginada por Macaya: análisis de una imagen
     política generada con IA"
   autor: El Clarin
@@ -2013,7 +2013,7 @@ clarin-2026-03-17-macaya-ia-analisis:
 
 ilustrado-2026-03-17-macaya-zanja-falso:
   tipo: prensa
-  medio: Ilustrado
+  medio: El Ilustrado
   titulo: "Hay un muro: senador Macaya difunde imagen falsa para mostrar avances
     de la zanja"
   autor: Ilustrado
@@ -2075,7 +2075,7 @@ cooperativa-2026-07-16-sistema-frontal-balance:
 
 diarioagricola-2026-07-17-balance-sistema-frontal:
   tipo: prensa
-  medio: Diario Agricola
+  medio: Diario Agrícola
   titulo: Sistema frontal en Chile, tres fallecidos y mas de 300 mil hogares sin
     luz este viernes
   autor: Equipo periodistico Diario Agricola
@@ -2129,7 +2129,7 @@ biobio-2026-07-19-gobierno-balance-norte:
 
 publimetro-2026-07-21-balance-sistema-frontal:
   tipo: prensa
-  medio: Publimetro Chile
+  medio: Publimetro
   titulo: El devastador balance del sistema frontal anormal que golpea a Chile;
     casi 100 mil aislados y miles de viviendas danadas
   autor: Sebastian Huerta Viurcos
@@ -2156,7 +2156,7 @@ cooperativa-2026-07-21-alertas-sae-atacama-coquimbo:
 
 publimetro-2026-07-21-balance-sistema-frontal-2:
   tipo: prensa
-  medio: Publimetro Chile
+  medio: Publimetro
   titulo: "Estado de catástrofe en Chile: 10 fallecidos y mas de 100 mil aislados
     tras el paso del sistema frontal"
   autor: Sebastian Huerta Viurcos
@@ -2236,7 +2236,7 @@ latercera-2026-07-24-megarreforma-promulgar:
 
 radio-uchile-2026-07-24-reunion-kast-oficialismo:
   tipo: prensa
-  medio: Diario y Radio Universidad Chile
+  medio: Radio Universidad de Chile
   titulo: Emergencia climática y megarreforma marcan reunión de Kast con líderes
     oficialistas
   autor: Camilo Vega Martinez
@@ -2504,7 +2504,7 @@ hernan-sr-2026-06-25-villarrica-video:
 
 reddit-2026-06-25-chile-kast-villarrica:
   tipo: red_social
-  medio: Reddit
+  medio: Reddit r/chile
   titulo: Kast se pone a discutir en Villarrica
   autor: r/chile
   fecha: 2026-06-25
@@ -2609,7 +2609,7 @@ radio-uchile-2026-06-11-ley-lobby-thiel:
 
 canal9-2026-07-09-gobierno-reserva-thiel:
   tipo: prensa
-  medio: Canal 9 (Bío Bío)
+  medio: Canal 9
   titulo: Gobierno alega reserva y omite detalles de la reunión entre José Antonio
     Kast y Peter Thiel, sin actas ni registro
   autor: Canal 9
@@ -2765,7 +2765,7 @@ t13-2026-07-19-pulso-ciudadano-aprobacion-kast:
 
 emol-2026-07-19-pulso-ciudadano-aprobacion-kast:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: "Pulso Ciudadano: Aprobación del Presidente Kast tiene leve caída y
     llega al 28,9%"
   autor: Daniel Andrade
@@ -2801,7 +2801,7 @@ biobio-2025-08-08-kast-comision-investigadora-cables:
 
 publimetro-2025-08-13-kast-comision-cables:
   tipo: prensa
-  medio: Publimetro Chile
+  medio: Publimetro
   titulo: Kast no se presenta en comisión investigadora por robo de cable de cobre
     y acrecienta dudas sobre su vínculo con líder de banda criminal
   autor: Nibaldo Pérez Bravo
@@ -2837,7 +2837,7 @@ latercera-2025-08-07-citan-kast-comision-cables:
 
 emol-2025-08-08-kast-comision-cables:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: Comisión investigadora por robo de cables de cobre invita a Kast y
     republicanos acusa 'show político'
   autor: Beatriz Mellado
@@ -2891,7 +2891,7 @@ elmostrador-2025-04-22-detienen-san-martin-ororojo:
 
 biobio-2025-08-13-rey-oro-rojo-san-martin:
   tipo: prensa
-  medio: BioBioChile (bbcl_investiga)
+  medio: BioBioChile
   titulo: "El Rey del Oro Rojo: cómo empresario amasó su fortuna mediante blanqueo
     y exportación de cobre robado"
   autor: BioBioChile
@@ -2900,7 +2900,7 @@ biobio-2025-08-13-rey-oro-rojo-san-martin:
 
 publimetro-2025-04-24-vinculan-kast-san-martin:
   tipo: prensa
-  medio: Publimetro Chile
+  medio: Publimetro
   titulo: Vinculan a José Antonio Kast con líder de banda criminal detenido por
     robo de cobre en Coquimbo
   autor: Publimetro Chile
@@ -2962,7 +2962,7 @@ elobservatodo-2025-08-kast-comision-foto:
 
 radio-uchile-2026-06-09-economistas-senado-megarreforma:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: Economistas coinciden en necesidad de impulsar el crecimiento, pero
     advierten riesgos fiscales de la megarreforma
   autor: Alexis Polo González
@@ -2971,7 +2971,7 @@ radio-uchile-2026-06-09-economistas-senado-megarreforma:
 
 radio-uchile-2026-06-11-larrain-megarreforma-acuerdo:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Guillermo Larraín: Aprobar la megarreforma 'por un voto' puede
     incentivar futuros cambios tributarios"
   autor: Alexis Polo González
@@ -2989,7 +2989,7 @@ pauta-2026-07-07-ramos-megarreforma:
 
 emol-2026-07-15-grau-critica-megarreforma:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: "Grau sale a criticar megarreforma: 'Se funda en el mito de que la
     economía perdió dinamismo con Bachelet'"
   autor: El Mercurio
@@ -3007,7 +3007,7 @@ elperiodista-2026-07-grau-megarreforma:
 
 emol-2026-07-17-megarreforma-brotes-verdes:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: "Megarreforma: ¿Cuándo comenzarán a aparecer los brotes verdes?
     Economistas ponen fecha al posible repunte"
   autor: El Mercurio
@@ -3016,7 +3016,7 @@ emol-2026-07-17-megarreforma-brotes-verdes:
 
 radio-uchile-2026-07-24-larrain-megarreforma-debate:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "'Hubo un debate débil y pobre': economista Guillermo Larraín cuestiona
     tramitación de la megarreforma"
   autor: Alexis Polo González
@@ -3033,7 +3033,7 @@ gob-cl-2026-06-01-cuenta-publica-registro-vandalos:
 
 radionadn-2026-06-03-pavez-registro-vandalos:
   tipo: prensa
-  medio: Radio ADN
+  medio: ADN Radio
   titulo: "'Eso no es censura': Pávez defiende Registro Nacional de Vándalos"
   autor: Radio ADN
   fecha: 2026-06-03
@@ -3276,7 +3276,7 @@ adnradio-2026-07-25-pisqueros-respuesta-campos:
 theclinic-2026-07-24-pisqueros-critica-campos:
   tipo: prensa
   medio: The Clinic
-  titulo: "Ãl está allá sentado y no está acá viendo el problema: la dura crítica
+  titulo: "Él está allá sentado y no está acá viendo el problema: la dura crítica
     del gremio pisquero ante los dichos del ministro de Agricultura"
   autor: The Clinic
   fecha: 2026-07-24
@@ -3302,7 +3302,7 @@ miradiols-2026-07-24-pisqueros-rechazo-campos:
 
 cooperativa-2026-07-25-capel-pisqueros-campos:
   tipo: prensa
-  medio: Radio Cooperativa
+  medio: Cooperativa
   titulo: "Cooperativa Capel: Las declaraciones del ministro Campos son una falta
     de respeto"
   autor: Radio Cooperativa
@@ -3338,7 +3338,7 @@ latercera-2026-07-20-barros-hawai-respuesta:
 
 24horas-2026-07-20-barros-hawai:
   tipo: prensa
-  medio: 24horas
+  medio: 24 Horas
   titulo: "'No estábamos ni en el Mundial ni de vacaciones': ministro de Defensa
     responde a críticas por ausencia durante sistema frontal"
   autor: 24horas
@@ -3459,7 +3459,7 @@ adnradio-2026-07-14-latidos-fetales-tortura:
 
 elpais-2026-07-13-latidos-fetales-chile:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: Chile debate proyecto que obliga a mujeres a escuchar latidos fetales
     antes de aborto, imitando leyes de estados de EE.UU.
   autor: Redacción
@@ -3726,7 +3726,7 @@ canal9-2026-07-20-indh-modernizacion:
 
 radio-uchile-2026-07-13-indh-reforma:
   tipo: prensa
-  medio: Radio UChile
+  medio: Radio Universidad de Chile
   titulo: "Reformar sin debilitar: el desafío que abre el nuevo proyecto de ley
     para el INDH"
   autor: Redacción
@@ -3851,7 +3851,7 @@ theclinic-2026-07-25-haase-detencion:
 
 gda-2026-07-24-bcn-iva-panales:
   tipo: prensa
-  medio: GDA / El Mercurio
+  medio: GDA
   titulo: Proyecto PDG patrocinado por el Gobierno financiaría un tercio de un
     pañal diario para beneficiados
   autor: Redacción
@@ -3887,15 +3887,15 @@ t13-2026-07-26-burlas-ninos-tea-pnl:
 elinformadorchile-2026-07-29-claveunica-2fa:
   tipo: prensa
   medio: El Informador Chile
-  titulo: "Noticias Chile | ClaveÃnica incorpora un nuevo sistema de seguridad: así puedes activar la verificación adicional"
+  titulo: "Noticias Chile | ClaveÚnica incorpora un nuevo sistema de seguridad: así puedes activar la verificación adicional"
   autor: Editora Verónica
   fecha: 2026-07-29
   url: https://www.elinformadorchile.cl/2026/07/29/noticias-chile-claveunica-incorpora-un-nuevo-sistema-de-seguridad-asi-puedes-activar-la-verificacion-adicional/
 
 meganoticias-2026-07-28-claveunica-2fa:
   tipo: prensa
-  medio: MegaNoticias
-  titulo: "Segundo factor de autenticación de ClaveÃnica: Así puedes activar la 'segunda llave' que te protege de fraudes"
+  medio: Meganoticias
+  titulo: "Segundo factor de autenticación de ClaveÚnica: Así puedes activar la 'segunda llave' que te protege de fraudes"
   autor: Cristian Latorre
   fecha: 2026-07-28
   url: https://www.meganoticias.cl/dato-util/528034-como-activar-segundo-factor-autenticacion-clave-unica-paso-a-paso-28-07-2026.html
@@ -3903,7 +3903,7 @@ meganoticias-2026-07-28-claveunica-2fa:
 emol-2026-07-29-claveunica-segunda-llave:
   tipo: prensa
   medio: Emol
-  titulo: "ClaveÃnica suma 'segunda llave' de seguridad para evitar fraudes: Cómo funciona y los pasos para activarla"
+  titulo: "ClaveÚnica suma 'segunda llave' de seguridad para evitar fraudes: Cómo funciona y los pasos para activarla"
   autor: Sofía Campos
   fecha: 2026-07-29
   url: https://www.emol.com/noticias/Nacional/2026/07/29/1206995/clave-unica-seguridad-segunda-llave.html
@@ -3911,24 +3911,24 @@ emol-2026-07-29-claveunica-segunda-llave:
 biobiochile-2026-07-29-claveunica-2fa:
   tipo: prensa
   medio: BioBioChile
-  titulo: "Entra en vigencia nueva protección para ClaveÃnica: así funciona el paso adicional para iniciar sesión"
+  titulo: "Entra en vigencia nueva protección para ClaveÚnica: así funciona el paso adicional para iniciar sesión"
   autor: Nicolás Díaz
   fecha: 2026-07-29
   url: https://www.biobiochile.cl/noticias/servicios/explicado/2026/07/29/entra-en-vigencia-nueva-proteccion-para-claveunica-asi-funciona-el-paso-adicional-para-iniciar-sesion.shtml
 
 nubleonline-2026-07-29-chillan-viejo-seguridad:
   tipo: prensa
-  medio: Ãuble Online
+  medio: Ñuble Online
   titulo: "Chillán Viejo se posiciona como líder en seguridad: El modelo que logró desacoplarse de la crisis nacional"
-  autor: Prensa Ãuble Online
+  autor: Prensa Ñuble Online
   fecha: 2026-07-29
   url: https://nubleonline.cl/chillan-viejo-se-posiciona-como-lider-en-seguridad-el-modelo-que-logro-desacoplarse-de-la-crisis-nacional/
 
 nubleactual-2025-09-24-chillan-viejo-seguridad:
   tipo: prensa
-  medio: Ãuble Actual
+  medio: Ñuble Actual
   titulo: "Chillán Viejo Marca Pauta regional en Seguridad con Política de Tolerancia Cero"
-  autor: Ãuble Actual
+  autor: Ñuble Actual
   fecha: 2025-09-24
   url: https://www.nubleactual.cl/region-de-nuble/chillan-viejo-marca-pauta-regional-en-seguridad-con-politica-de-tolerancia-cero/
 
@@ -3958,7 +3958,7 @@ adnradio-2026-07-27-fach-ketamina:
 
 meganoticias-2026-07-27-fach-ketamina:
   tipo: prensa
-  medio: MegaNoticias
+  medio: Meganoticias
   titulo: "Caso narco FACh: El testimonio de exjefa de cabina investigada por tráfico de ketamina"
   autor: Mega Investiga
   fecha: 2026-07-27
@@ -4028,7 +4028,7 @@ elciudadano-2026-07-26-omegna-desvinculado-instituto-mises:
 
 mostrador-2026-07-26-video-omegna:
   tipo: redes_sociales
-  medio: El Mostrador (X/Twitter)
+  medio: El Mostrador
   titulo: Video de asesor del PNL con burlas a niños autistas
   autor: El Mostrador
   fecha: 2026-07-26
@@ -4036,8 +4036,8 @@ mostrador-2026-07-26-video-omegna:
 
 hernan_sr-2026-07-26-cofrafadia-pedofilos-pnl:
   tipo: redes_sociales
-  medio: X/Twitter
-  titulo: LA COFRADÍA DE PEDÃFILOS - Integrantes del PNL se burlan de niños TEA
+  medio: X (Twitter)
+  titulo: LA COFRADÍA DE PEDÓFILOS - Integrantes del PNL se burlan de niños TEA
   autor: Hernán SR (@hernan_sr)
   fecha: 2026-07-26
   url: https://x.com/hernan_sr/status/2081415717719576614
@@ -4122,7 +4122,7 @@ cooperativa-2026-07-26-chistes-pedofilia-autismo-pnl:
 
 robertomerken-2026-07-26-video-cofrafadia-pnl:
   tipo: redes_sociales
-  medio: X/Twitter
+  medio: X (Twitter)
   titulo: Hacer bromas sobre niños, TEA y violencia sexual es incompatible con la
     política
   autor: Ciudadano Roberto Kiltro (@RobertoMerken)
@@ -4393,7 +4393,7 @@ americatv-2026-01-07-kast-jeri-reunion:
 latercera-2026-01-18-incendios-biobio-nuble:
   tipo: prensa
   medio: La Tercera
-  titulo: Incendios forestales en el Biobío y Ãuble dejan al menos 19 muertos
+  titulo: Incendios forestales en el Biobío y Ñuble dejan al menos 19 muertos
   autor: La Tercera
   fecha: 2026-01-18
   url: https://www.latercera.com/nacional/noticia/incendios-forestales-biobio-nuble-muertos-excepcion/
@@ -4401,7 +4401,7 @@ latercera-2026-01-18-incendios-biobio-nuble:
 biobiochile-2026-01-18-incendios-biobio-nuble-16-muertos:
   tipo: prensa
   medio: BioBioChile
-  titulo: Gobierno confirma 16 muertos por incendios forestales en el Bío Bío y Ãuble
+  titulo: Gobierno confirma 16 muertos por incendios forestales en el Bío Bío y Ñuble
   autor: Alberto González
   fecha: 2026-01-18
   url: https://www.biobiochile.cl/noticias/nacional/chile/2026/01/18/gobierno-confirma-15-muertos-por-los-incendios-forestales-en-el-bio-bio.shtml
@@ -4409,7 +4409,7 @@ biobiochile-2026-01-18-incendios-biobio-nuble-16-muertos:
 cooperativa-2026-01-19-incendios-biobio-nuble-19-muertos:
   tipo: prensa
   medio: Cooperativa
-  titulo: "Incendios forestales en el Biobío y Ãuble: Expertos urgen avanzar hacia
+  titulo: "Incendios forestales en el Biobío y Ñuble: Expertos urgen avanzar hacia
     paisajes resilientes"
   autor: Javiera Mateluna Cuadra
   fecha: 2026-01-19
@@ -4419,7 +4419,7 @@ emol-2026-01-19-cronologia-incendios:
   tipo: prensa
   medio: Emol
   titulo: "Cronología de la tragedia: La jornada en que los incendios devastaron
-    Ãuble y Biobío"
+    Ñuble y Biobío"
   autor: F. Lagos
   fecha: 2026-01-19
   url: https://www.emol.com/noticias/Nacional/2026/01/19/1188959/cronologia-incendios-forestales-nuble-biobio.html
@@ -4515,7 +4515,7 @@ efe-2026-01-12-congreso-futuro-kast-ia:
 
 abc_com_py-2026-01-12-congreso-futuro-regulacion-ia:
   tipo: prensa
-  medio: ABC Color Paraguay
+  medio: ABC Color
   titulo: Chile debate regulación de IA en Congreso Futuro
   autor: ABC Color
   fecha: 2026-01-12
@@ -4570,7 +4570,7 @@ infobae-2026-01-21-gabinete-kast-pinochet:
 
 elpais-2026-01-22-gabinete-kast-derechos-humanos:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: Familiares de detenidos desaparecidos condenan designaciones de Kast
   autor: El País
   fecha: 2026-01-22
@@ -4578,14 +4578,14 @@ elpais-2026-01-22-gabinete-kast-derechos-humanos:
 
 tn_com_ar-2026-01-22-gabinete-kast-pinochet:
   tipo: prensa
-  medio: TN Argentina
+  medio: TN (Argentina)
   titulo: "Chile: polémica por ministros con pasado en dictadura"
   autor: TN
   fecha: 2026-01-22
   url: https://tn.com.ar/politica/2026/01/22/gabinete-kast-pinochet/
 elobservador_uy-2026-01-23-gabinete-kast-pinochet:
   tipo: prensa
-  medio: El Observador Uruguay
+  medio: El Observador (Uruguay)
   titulo: Kast defiende designación de ex abogados de Pinochet
   autor: El Observador
   fecha: 2026-01-23
@@ -4701,7 +4701,7 @@ latercera-2026-05-11-sociedades-cientificas-carta-abierta-kast:
 
 clarin-2026-05-11-premio-nacional-ciencias-kast:
   tipo: prensa
-  medio: El Clarín Chile
+  medio: El Clarín de Chile
   titulo: Premio Nacional de Ciencias cuestiona a Kast y defiende inversión en
     investigación
   autor: El Clarín
@@ -4710,7 +4710,7 @@ clarin-2026-05-11-premio-nacional-ciencias-kast:
 
 elpais-2026-05-11-kast-cientificos-critica-gasto-investigacion:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: El mundo científico critica en bloque los cuestionamientos de Kast sobre
     el gasto en investigación
   autor: El País
@@ -4754,7 +4754,7 @@ cnnchile-2026-05-06-kast-libro-precioso-biblioteca:
 
 noticiaslosrios-2026-05-06-kast-libro-precioso:
   tipo: prensa
-  medio: Noticias Los Rios
+  medio: Noticias Los Ríos
   titulo: "Kast contra investigaciones universitarias: Termina en un libro
     precioso y no generan ningun trabajo"
   autor: Sebastian Gallardo
@@ -5105,7 +5105,7 @@ biobiochile-2026-04-22-correo-programa-ddhh:
 
 eldiariosantiago-2026-04-23-correo-interno-rabat:
   tipo: prensa
-  medio: Diario Santiago
+  medio: El Diario de Santiago
   titulo: "Polémico instructivo en Justicia: correo interno contradice a Rabat y Subsecretaría reconoce revisión 'caso a caso'"
   autor: Diario Santiago
   fecha: 2026-04-23
@@ -5260,7 +5260,7 @@ biobiochile-2026-05-31-figueroa-seremi-transportes-aysen:
 latercera-2026-06-12-carrillo-seremi-salud-nuble:
   tipo: prensa
   medio: La Tercera
-  titulo: Minsal solicita renuncia del seremi de Salud de Ãuble, Jorge Carrillo
+  titulo: Minsal solicita renuncia del seremi de Salud de Ñuble, Jorge Carrillo
   autor: Daniela Silva
   fecha: 2026-06-12
   url: https://www.latercera.com/nacional/noticia/minsal-solicita-renuncia-del-seremi-de-salud-de-nuble-jorge-carrillo/
@@ -5268,7 +5268,7 @@ latercera-2026-06-12-carrillo-seremi-salud-nuble:
 emol-2026-06-12-carrillo-seremi-salud-nuble:
   tipo: prensa
   medio: Emol
-  titulo: "Minsal solicita renuncia al seremi de Ãuble: Es el número 22 que deja
+  titulo: "Minsal solicita renuncia al seremi de Ñuble: Es el número 22 que deja
     el cargo"
   autor: María Cristina Romero
   fecha: 2026-06-12
@@ -5337,7 +5337,7 @@ cnnchile-2026-05-01-munoz-seremi-bienes-nacionales-tarapaca:
 
 biobiochile-2026-05-01-anci-investiga-filtracion-tgr-registro-civil:
   tipo: prensa
-  medio: Radio Bío Bío
+  medio: BioBioChile
   titulo: "ANCI investiga presunta filtración de datos que afectaría a TGR y Registro Civil"
   autor: "Bío Bío (noticia en desarrollo)"
   fecha: 2026-05-01
@@ -5345,7 +5345,7 @@ biobiochile-2026-05-01-anci-investiga-filtracion-tgr-registro-civil:
   notas: "Título y sumario verificados; el cuerpo no es extraíble (render JS del sitio). Confirma que la ANCI investiga desde su aparición en las últimas 48 horas una presunta filtración que afectaría a TGR y Registro Civil."
 biobiochile-2026-05-02-gobierno-no-evidencia-claveunica-afectada:
   tipo: prensa
-  medio: Radio Bío Bío
+  medio: BioBioChile
   titulo: "Gobierno informa que no hay evidencia de que base de datos de ClaveÚnica haya sido afectada"
   autor: "Bío Bío"
   fecha: 2026-05-02
@@ -5361,7 +5361,7 @@ cnnchile-2026-05-02-claveunica-100-operativa-segura:
   notas: "Verificada por lectura completa. Declaración de la Secretaría de Gobierno Digital descartando afectación a la base de ClaveÚnica; la ANCI indaga actividad maliciosa en organismos estatales y operadores de telecomunicaciones."
 eldinamo-2026-05-02-filtracion-datos-rutify-vecert:
   tipo: prensa
-  medio: El Dínamo (Agencia Uno)
+  medio: El Dínamo
   titulo: "Nombres, RUT y direcciones: alertan supuesta filtración de datos de organismos públicos"
   autor: "Agencia Uno"
   fecha: 2026-05-02
@@ -5369,7 +5369,7 @@ eldinamo-2026-05-02-filtracion-datos-rutify-vecert:
   notas: "Verificada por lectura completa. Fuente clave del caso: identifica a Vecert Analyzer como la empresa que alertó y al actor Rutify como quien compartió evidencia en Telegram (nombres, RUT, direcciones, correos, historial médico); Registro Civil negó afectación; la ANCI confirmó que analiza reportes de fuentes de inteligencia."
 fastcheck-2026-05-09-hackeo-estado-filtracion-claveunica:
   tipo: prensa
-  medio: Fast Check CL
+  medio: Fast Check
   titulo: "¿Hubo hackeo al Estado? La filtración de datos digitales asociados a la ClaveÚnica"
   autor: "Pablo Flores"
   fecha: 2026-05-09
@@ -5377,7 +5377,7 @@ fastcheck-2026-05-09-hackeo-estado-filtracion-claveunica:
   notas: "Fact-check (categoría Disputa). Entradilla y sumario verificados (cuerpo premium): la ANCI y la Secretaría de Gobierno Digital reconocieron la filtración de datos pero aclararon que la infraestructura y base de datos de ClaveÚnica no se vieron comprometidas."
 instagram-2026-08-08-annais-molina-rutify-claveunica:
   tipo: red_social
-  medio: Instagram (Reel de Annais Molina)
+  medio: Instagram
   titulo: "Análisis técnico del hackeo al Estado: Rutify, tokens de ClaveÚnica y TGR"
   autor: "Annais Molina"
   fecha: 2026-08-08
@@ -5458,7 +5458,7 @@ cnnchile-2026-07-27-kast-viaja-peru:
 
 radiouchile-2026-07-27-gobierno-gremios-arancel:
   tipo: nota
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: Gobierno reúne a gremios para enfrentar arancel de 12,5%
   autor: Alexis Polo González
   fecha: 2026-07-27
@@ -5492,15 +5492,15 @@ radioagricultura-2025-08-22-lineamientos-programaticos-kast:
 biobiochile-2026-07-27-nuble-sistema-frontal:
   tipo: nota
   medio: BioBioChile
-  titulo: "Sistema frontal en Ãuble: Delegado cifra en 107 los afectados, 74 viviendas con daños y 40 albergados"
+  titulo: "Sistema frontal en Ñuble: Delegado cifra en 107 los afectados, 74 viviendas con daños y 40 albergados"
   autor: Alejandro Alarcón
   fecha: 2026-07-27
   url: https://www.biobiochile.cl/noticias/nacional/region-de-nuble/2026/07/27/sistema-frontal-en-nuble-delegado-cifra-en-107-los-afectados-74-viviendas-con-danos-y-40-albergados.shtml
 
 radiouchile-2026-07-27-nuble-sistema-frontal:
   tipo: nota
-  medio: Diario y Radio Universidad de Chile
-  titulo: Sistema frontal en Ãuble deja 107 personas afectadas y mantiene alerta por crecida de ríos
+  medio: Radio Universidad de Chile
+  titulo: Sistema frontal en Ñuble deja 107 personas afectadas y mantiene alerta por crecida de ríos
   autor: Claudio Medrano
   fecha: 2026-07-27
   url: https://radio.uchile.cl/2026/07/27/sistema-frontal-en-nuble-deja-107-personas-afectadas-y-mantiene-alerta-por-crecida-de-rios/
@@ -5508,7 +5508,7 @@ radiouchile-2026-07-27-nuble-sistema-frontal:
 cnnchile-2026-07-27-tornados-nuble:
   tipo: nota
   medio: CNN Chile
-  titulo: Tres tornados golpean distintas zonas de la Región de Ãuble tras llegada de nuevo sistema frontal
+  titulo: Tres tornados golpean distintas zonas de la Región de Ñuble tras llegada de nuevo sistema frontal
   autor: Redacción
   fecha: 2026-07-27
   url: https://www.cnnchile.com/pais/tres-tornados-golpean-distintas-zonas-de-la-region-de-nuble-tras-llegada-de-nuevo-sistema-frontal/
@@ -5684,7 +5684,7 @@ latercera-2026-07-27-balance-comite-policial-homicidios:
 latercera-2026-03-05-ultimo-informe-boric-homicidios:
   tipo: prensa
   medio: La Tercera
-  titulo: "Ãltimo informe del gobierno de Boric: homicidios disminuyeron 11% en 2025 y se alcanzó la cifra más baja en cuatro años"
+  titulo: "Último informe del gobierno de Boric: homicidios disminuyeron 11% en 2025 y se alcanzó la cifra más baja en cuatro años"
   autor: José Carvajal Vega
   fecha: 2026-03-05
   url: https://www.latercera.com/nacional/noticia/ultimo-informe-del-gobierno-de-boric-homicidios-disminuyeron-11-en-2025-y-se-alcanzo-la-cifra-mas-baja-en-cuatro-anos/
@@ -5891,7 +5891,7 @@ uteusach-2025-12-19-seguridad-kast:
 
 elpais-2026-06-01-cuenta-publica-kast:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "Kast en su Cuenta Pública: La seguridad no es algo que cambie de un día para otro"
   autor: Antonia Laborde
   fecha: 2026-06-01
@@ -5971,7 +5971,7 @@ biobiochile-2026-07-27-record-creacion-empresas:
 
 informador-2026-06-22-record-empresas-desafios:
   tipo: prensa
-  medio: Informador
+  medio: El Informador Chile
   titulo: "Emprendimiento en Chile: Un Récord de Nuevas Empresas y Desafíos"
   autor: Redacción
   fecha: 2026-06-22
@@ -6314,7 +6314,7 @@ cnnchile-2026-07-29-garcia-ruminot-codelco:
 
 emol-2026-07-28-barrientos-formalizado:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: "Formalizan a exseremi de Salud por violación: Quedó con prohibición de acercarse a la víctima"
   autor: Emol
   fecha: 2026-07-28
@@ -6338,7 +6338,7 @@ elmostrador-2026-07-28-gobierno-vallejo:
 
 emol-2026-07-28-arrau-auc:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: '"No hay delito, pero sí habría un mal uso": Arrau aborda aumento de solicitudes para AUC con fines migratorios'
   autor: M. Silva, Emol
   fecha: 2026-07-28
@@ -6346,7 +6346,7 @@ emol-2026-07-28-arrau-auc:
 
 emol-2026-07-28-campos-arancel:
   tipo: prensa
-  medio: El Mercurio (Emol)
+  medio: Emol
   titulo: "Ministro Campos y aranceles de EE.UU.: 'La chiva que inventaron para imponernos esta medida casi parece chiste'"
   autor: José Tomás Guzmán, Emol
   fecha: 2026-07-28
@@ -6418,14 +6418,14 @@ twitter-cnnchile-2026-07-29-vodanovic-veto-aditivo:
 
 radio.uchile-2026-07-26-cidh-audiencia-kast:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "CIDH realizará por primera vez una audiencia por cuestionamientos a políticas de derechos humanos del gobierno Kast"
   autor: Alexis Polo González
   fecha: 2026-07-26
   url: https://radio.uchile.cl/2026/07/26/cidh-realizara-por-primera-vez-una-audiencia-por-cuestionamientos-a-politicas-de-derechos-humanos-del-gobierno-kast/
 elpais-2026-07-29-cidh-gobierno-kast:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "La CIDH cita al Gobierno de Kast tras la denuncia de organizaciones que alertan de retrocesos en memoria y derechos humanos"
   autor: Ana María Sanhueza
   fecha: 2026-07-29
@@ -6449,7 +6449,7 @@ biobiochile-2026-07-28-lacrimogena-indemnizacion:
 
 radio.uchile-2026-07-29-indemnizacion-lacrimogena:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Corte ordena indemnizar a manifestante que sufrió daño neurológico en estallido"
   autor: Diario UCHILE
   fecha: 2026-07-29
@@ -6464,7 +6464,7 @@ t13-2026-07-29-alcaldes-veto-aditivo:
 
 pauta-2026-07-29-alcaldes-rechazo-compensacion:
   tipo: prensa
-  medio: Pauta
+  medio: Radio Pauta
   titulo: "Alcaldes de oposición rechazan compensación de la megarreforma y piden a Kast vetar el proyecto"
   autor: Nicolás Melelli Viveros
   fecha: 2026-07-29
@@ -6537,7 +6537,7 @@ biobio-2026-07-23-costo-rescate-cajon:
 
 elpais-2026-07-23-rescate-cajon-imprudencia:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "Rescate en el Cajón del Maipo: la imprudencia detrás de 'El Chino' y las parvularias que costó más de 100 millones de pesos"
   autor: El País
   fecha: 2026-07-23
@@ -6609,7 +6609,7 @@ eldinamo-2026-02-19-kast-salida-grau:
 
 elpais-2026-02-17-deficit-flanco-gobierno:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "El déficit fiscal abre un nuevo flanco entre el Gobierno de Boric y la futura administración de Kast"
   autor: El País
   fecha: 2026-02-17
@@ -6625,7 +6625,7 @@ publimetro-2026-02-17-kast-problema-presupuestario:
 
 moodys-2026-02-19-sorpresa-negativa-deficit:
   tipo: prensa
-  medio: Diario de Santiago
+  medio: El Diario de Santiago
   titulo: "Moody's Ratings tilda de 'sorpresa negativa' el déficit fiscal y advierte que gestión de Kast será decisiva para la nota de Chile"
   autor: Diario de Santiago
   fecha: 2026-02-19
@@ -6633,7 +6633,7 @@ moodys-2026-02-19-sorpresa-negativa-deficit:
 
 biobio-2026-07-29-ley-karin-seremi-salud-los-lagos:
   tipo: prensa
-  medio: Radio Bío Bío
+  medio: BioBioChile
   titulo: "Investigan por Ley Karin a seremi de Salud de Los Lagos, Evelyn Brintrup: hay 5 denuncias en su contra"
   autor: Redacción Bío Bío
   fecha: 2026-07-29
@@ -6737,7 +6737,7 @@ cnnchile-2026-07-30-ministra-mujer-misotrol:
 
 pauta-2026-07-30-ministra-mujer-misotrol:
   tipo: prensa
-  medio: Pauta
+  medio: Radio Pauta
   titulo: "Ministra de la Mujer respalda sancionar la venta ilegal de misoprostol y oposición cuestiona el foco del proyecto"
   autor: Nicolás Melelli Viveros
   fecha: 2026-07-30
@@ -7480,7 +7480,7 @@ infobae-2026-07-30-lee-jae-myung-llega-chile:
 
 yonhap-2026-07-30-kast-corea-cumbre:
   tipo: prensa
-  medio: Yonhap News Agency (Corea del Sur)
+  medio: Yonhap News Agency
   titulo: "Lee says S. Korea, Chile will reactivate committee to negotiate modernizing FTA"
   autor: Yonhap
   fecha: 2026-07-30
@@ -7488,7 +7488,7 @@ yonhap-2026-07-30-kast-corea-cumbre:
 
 chilevision-2026-07-30-gobierno-pide-renuncia-kepec:
   tipo: prensa
-  medio: Chilevision
+  medio: Chilevisión
   titulo: "Gobierno pide renuncia de seremi de Salud tras filtracion de mensaje: 'Republicano o hijo de'"
   autor: Sebastian Leyton
   fecha: 2026-07-30
@@ -7536,7 +7536,7 @@ adnradio-2026-07-30-minsal-renuncia-seremi-arica:
 
 24horas-2026-07-30-seremi-29-kepec:
   tipo: prensa
-  medio: 24 Horas (TVN)
+  medio: 24 Horas
   titulo: "Minsal pide renuncia a Karla Kepec: es la seremi numero 29 en dejar el Gobierno"
   autor: 24horas.cl
   fecha: 2026-07-30
@@ -7616,7 +7616,7 @@ cnnchile-2026-07-30-ofensa-racial-proyecto:
 
 elpais-2026-07-31-chile-venezuela-consulares:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Chile y Venezuela acuerdan reactivar sus relaciones consulares tras dos años de ruptura"
   autor: El País
   fecha: 2026-07-31
@@ -7688,7 +7688,7 @@ araucanianoticias-2026-07-30-ofensa-racial-carcel:
 
 elpais-2026-07-29-influencer-xenofobia:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Ana Carolina Cruz: Una 'influencer' brasileña acusa de xenofobia a un instructor de un centro de esquí en Chile"
   autor: El País
   fecha: 2026-07-29
@@ -7760,7 +7760,7 @@ ciper-2026-05-12-cuota-flores-reforma-notarial:
 
 fastcheck-2026-07-30-homicidios-17:
   tipo: prensa
-  medio: FastCheck
+  medio: Fast Check
   titulo: "Homicidios en 2026 han disminuido en un 17% respecto al año anterior"
   autor: FastCheck
   fecha: 2026-07-30
@@ -8072,7 +8072,7 @@ t13-2026-01-24-bono-anos-cotizados:
 
 radio.uchile-2026-01-09-seguro-social:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Reforma de pensiones: más de 1 millón 370 mil jubilados recibirán pago de beneficios del Seguro Social"
   autor: Jorge Zapata
   fecha: 2026-01-09
@@ -8103,7 +8103,7 @@ t13-2026-05-21-mensaje-kast-desfile:
 
 radio.uchile-2026-05-21-glorias-navales-kast:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Glorias Navales: Presidente Kast emplaza a líderes políticos a recuperar 'el amor por Chile' tras desfile"
   autor: Ignacio Espinoza
   fecha: 2026-05-21
@@ -8238,7 +8238,7 @@ infobae-2026-02-20-eeuu-retira-visas:
 
 elpais-2026-02-20-sancion-funcionarios-cable:
   tipo: prensa
-  medio: EL PAÍS América
+  medio: El País (Chile)
   titulo: "Estados Unidos acusa al Gobierno de Boric de 'socavar la seguridad regional' y sanciona a tres funcionarios chilenos"
   autor: Maolis Castro
   fecha: 2026-02-20
@@ -8262,7 +8262,7 @@ cnnchile-2026-02-20-cable-revocamiento-visas:
 
 elpais-2026-02-24-concesion-anulada:
   tipo: prensa
-  medio: EL PAÍS Chile
+  medio: El País (Chile)
   titulo: "La concesión del cable submarino entre Chile y China fue aprobada por el ministro de Boric, pero echó pie atrás dos días después"
   autor: Antonia Laborde
   fecha: 2026-02-24
@@ -8286,7 +8286,7 @@ df-2026-02-24-bitacora-cable-hong-kong:
 
 lanacioncl-2026-02-24-concesion-anulada:
   tipo: prensa
-  medio: La Nación Chile
+  medio: La Nación
   titulo: "Ministro Muñoz aprobó el 27 de enero la concesión del cable submarino entre China y Chile, pero se anuló dos días después"
   autor: Patricia Schüller Gamboa
   fecha: 2026-02-24
@@ -8374,7 +8374,7 @@ biobiochile-2026-07-31-manouchehri-megarreforma:
 
 cooperativa-2026-07-31-judd-tono-diplomatico:
   tipo: prensa
-  medio: Radio Cooperativa
+  medio: Cooperativa
   titulo: "'El ofensor se da por ofendido': El crítico juicio al tono del embajador Brandon Judd"
   autor: Redacción Cooperativa
   fecha: 2026-07-31
@@ -8422,7 +8422,7 @@ lanacion-2026-07-28-feito-porcel-tvn:
 
 malaespina-2026-07-29-38-autoridades:
   tipo: prensa
-  medio: Mala Espina
+  medio: Mala Espina Check
   titulo: "Las 38 autoridades que dejaron sus cargos o no alcanzaron a asumir en el gobierno de Kast"
   autor: Vicente Carrere
   fecha: 2026-07-29
@@ -8526,7 +8526,7 @@ interferencia-2025-07-22-quiroz-colusion-pollos:
 
 ciper-2026-02-10-quiroz-rol-colusiones:
   tipo: prensa
-  medio: CIPER
+  medio: CIPER Chile
   titulo: "Los 15 registros que describen el rol del futuro ministro de Hacienda, Jorge Quiroz, a favor de empresas sancionadas por colusión"
   autor: Benjamín Miranda y Diego Ortiz
   fecha: 2026-02-10
@@ -8735,6 +8735,7 @@ tdlc-sentencia-148-2015-asfaltos:
 
 fne-tdlc-multa-asfaltos:
   tipo: documento
+  medio: Fiscalía Nacional Económica
   titulo: "TDLC aplica multa de US$ 3 millones por colusión a empresas proveedoras de asfalto"
   autor: Fiscalía Nacional Económica
   fecha: 2015-12-31
@@ -8758,6 +8759,7 @@ tdlc-sentencia-171-2019-navieras:
 
 fne-multas-navieras:
   tipo: documento
+  medio: Fiscalía Nacional Económica
   titulo: "TDLC aplica multa de US$ 9 millones a navieras que integraron cartel del transporte marítimo de vehículos hacia Chile"
   autor: Fiscalía Nacional Económica
   fecha: 2019-04-24
@@ -8765,6 +8767,7 @@ fne-multas-navieras:
 
 fne-multas-navieras-corte-suprema-us305:
   tipo: documento
+  medio: Fiscalía Nacional Económica
   titulo: "Corte Suprema acoge parcialmente reclamación de la FNE y sanciona a todas las navieras con multas totales de US$ 30,5 millones"
   autor: FNE
   fecha: 2020-08-14
@@ -8772,7 +8775,7 @@ fne-multas-navieras-corte-suprema-us305:
 
 youtube-2026-08-06-biobio-confusam-alameda:
   tipo: video
-  medio: YouTube (BioBioChile)
+  medio: YouTube
   titulo: "Incidentes en la Alameda: Marcha por recortes presupuestarios a la salud"
   autor: Bio Bio (BioBioChile)
   fecha: 2026-08-06
@@ -8843,7 +8846,7 @@ radio-uchile-2026-07-08-confusam-carta-kast:
 
 youtube-2021-07-14-forensic-architecture-tear-gas:
   tipo: video
-  medio: YouTube (Forensic Architecture)
+  medio: YouTube
   titulo: "Tear Gas en la Plaza de la Dignidad (Español)"
   autor: Forensic Architecture
   fecha: 2021-07-14
@@ -8888,7 +8891,7 @@ biobiochile-2019-12-20-turba-cerco-baquedano:
 
 radio-uchile-2019-12-20-copamiento-dignidad:
   tipo: prensa
-  medio: Diario y Radio Universidad Chile
+  medio: Radio Universidad de Chile
   titulo: "Copamiento no acaba con la Dignidad: el día 62 de las movilizaciones sociales"
   autor: Diario UChile
   fecha: 2019-12-20
@@ -8980,7 +8983,7 @@ biobiochile-2026-04-13-kast-almuerzo-excompaneros:
 
 elpais-cl-2026-04-15-almuerzo-kast-moneda:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "El almuerzo en La Moneda con amigos que complica a Kast: empezó con la idea de una misa y de izar la bandera chilena"
   autor: Ana María Sanhueza, Rocío Montes
   fecha: 2026-04-15
@@ -9052,7 +9055,7 @@ biobiochile-2026-06-08-coordinadora-deudores-cae-kast:
 
 elpais-2026-06-12-embargos-cae-55-porciento-respaldo:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "Embargos por el CAE: un 55% respalda el retiro de dinero de las cuentas bancarias sin orden judicial"
   autor: Maolis Castro
   fecha: 2026-06-12
@@ -9092,7 +9095,7 @@ cnnchile-2026-06-16-gobierno-defiende-ugarte-subsidio:
 
 futuro-2022-04-17-kast-primer-mes-gobierno:
   tipo: prensa
-  medio: Futuro FM
+  medio: Radio Futuro
   titulo: "Kast y el primer mes de Gobierno: «Pareciera ser que hay mucho alumno en práctica»"
   autor: Equipo Futuro
   fecha: 2022-04-17
@@ -9116,7 +9119,7 @@ t13-2022-04-17-kast-alumno-practica:
 
 diariousach-2022-04-17-kast-alumno-practica:
   tipo: prensa
-  medio: Diario Usach
+  medio: Diario USACH
   titulo: "José Antonio Kast y evaluación del gobierno: «Pareciera ser que hay mucho alumno en práctica»"
   autor: Diario Usach
   fecha: 2022-04-17
@@ -9148,7 +9151,7 @@ bloomberglinea-2022-04-11-boric-primer-mes:
 
 dw-2022-04-11-boric-primer-mes-turbulencias:
   tipo: prensa
-  medio: DW Español
+  medio: Deutsche Welle
   titulo: "El Gobierno de Gabriel Boric cumple un mes entre turbulencias y errores"
   autor: DW Español
   fecha: 2022-04-11
@@ -9156,7 +9159,7 @@ dw-2022-04-11-boric-primer-mes-turbulencias:
 
 lanacion-2022-04-23-boric-despegue-turbulencias:
   tipo: prensa
-  medio: LA NACION
+  medio: La Nación
   titulo: "«Despegue con turbulencias»: los traspiés, errores no forzados e internas que dejaron a Gabriel Boric sin «luna de miel» en Chile"
   autor: LA NACION
   fecha: 2022-04-23
@@ -9204,7 +9207,7 @@ biobiochile-2026-04-13-jara-fanatismo-ideologico:
 
 diarioeldia-2026-04-13-primer-mes-kast:
   tipo: prensa
-  medio: Diario el Día
+  medio: El Día (La Serena)
   titulo: "Primer mes de Kast en La Moneda: alza en combustibles y caída en encuestas marcan inicio de gestión"
   autor: Diario el Día
   fecha: 2026-04-13
@@ -9212,7 +9215,7 @@ diarioeldia-2026-04-13-primer-mes-kast:
 
 elpais-2026-06-15-chile-verificacion-edad-redes:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Chile estudia prohibir el uso de redes sociales a menores y sigue la línea de Reino Unido"
   autor: Antonia Laborde
   fecha: 2026-06-15
@@ -9221,7 +9224,7 @@ elpais-2026-06-15-chile-verificacion-edad-redes:
 theclinic-2026-06-12-claveunica-menores-redes:
   tipo: prensa
   medio: The Clinic
-  titulo: "«Nos quedan varias conversaciones pendientes»: Gobierno evalúa usar Clave Ãnica para restringir acceso de menores de edad a redes sociales"
+  titulo: "«Nos quedan varias conversaciones pendientes»: Gobierno evalúa usar Clave Única para restringir acceso de menores de edad a redes sociales"
   autor: Carolina Mardones L.
   fecha: 2026-06-12
   url: https://www.theclinic.cl/2026/06/12/gobierno-evalua-usar-clave-unica-para-restringir-acceso-de-menores-de-edad-a-redes-sociales-nos-quedan-varias-conversaciones-pendientes/
@@ -9229,7 +9232,7 @@ theclinic-2026-06-12-claveunica-menores-redes:
 biobiochile-2026-06-12-claveunica-control-edad:
   tipo: prensa
   medio: BioBioChile
-  titulo: "Ministra Wulf adelantó posible control de edad en RRSS a través de ClaveÃnica: qué se sabe hasta ahora"
+  titulo: "Ministra Wulf adelantó posible control de edad en RRSS a través de ClaveÚnica: qué se sabe hasta ahora"
   autor: BioBioChile
   fecha: 2026-06-12
   url: https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/06/12/ministra-wulf-adelanto-posible-control-de-edad-en-rrss-a-traves-de-claveunica-que-se-sabe-hasta-ahora.shtml
@@ -9237,7 +9240,7 @@ biobiochile-2026-06-12-claveunica-control-edad:
 diariosurnoticias-2026-06-15-claveunica-entornos-digitales:
   tipo: prensa
   medio: Diario Sur Noticias
-  titulo: "Gobierno estudia exigir ClaveÃnica para que menores accedan a redes sociales"
+  titulo: "Gobierno estudia exigir ClaveÚnica para que menores accedan a redes sociales"
   autor: Boris Ulloa
   fecha: 2026-06-15
   url: https://www.diariosurnoticias.com/nacional/2026/06/15/gobierno-estudia-exigir-claveunica-para-que-menores-accedan-a-redes-sociales/
@@ -9518,7 +9521,7 @@ bcn-2024-ley-21681:
   titulo: "Ley N° 21.681: Modifica Ley N° 20.444 en materia de donaciones para obras específicas del Fondo Nacional de la Reconstrucción"
   fecha: 2024-07-01
   url: https://donaciones.hacienda.gob.cl/quienes-somos/normativa/ley-n-20-444
-  notas: "Ãltima modificación de la Ley 20.444 según BCN (01/07/2024). Agrega Art. 8º bis sobre donaciones materializadas directamente al Fondo/beneficiarios/terceros, y Art. 12 N° 3-4 sobre registro público de ejecutores. Ver normativa page donaciones.hacienda.gob.cl."
+  notas: "Última modificación de la Ley 20.444 según BCN (01/07/2024). Agrega Art. 8º bis sobre donaciones materializadas directamente al Fondo/beneficiarios/terceros, y Art. 12 N° 3-4 sobre registro público de ejecutores. Ver normativa page donaciones.hacienda.gob.cl."
 
 donaciones-hacienda-2026-07-23-activacion-fondo:
   tipo: comunicado_oficial
@@ -9555,7 +9558,7 @@ udd-2025-04-09-estudio-sae-valparaiso:
 
 elmostrador-2026-07-21-mujeres-rurales:
   tipo: prensa
-  medio: El Mostrador (Braga - Yo opino)
+  medio: El Mostrador
   titulo: "Fin del Programa Mujeres Rurales: el gobierno de Kast abandona a las jefas de hogar del campo"
   autor: Natalia Flores González
   fecha: 2026-07-21
@@ -9564,7 +9567,7 @@ elmostrador-2026-07-21-mujeres-rurales:
 
 reddit-2026-08-01-chile-mujeres-rurales:
   tipo: red_social
-  medio: Reddit
+  medio: Reddit r/chile
   titulo: "Fin del Programa Mujeres Rurales: el gobierno de Kast abandona a las jefas de hogar del campo"
   autor: r/chile
   fecha: 2026-08-01
@@ -9764,7 +9767,7 @@ biobiochile-2026-08-02-balance-senapred-sistema-frontal:
   autor: BioBioChile
   fecha: 2026-08-02
   url: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/08/02/balance-senapred-por-sistema-frontal-2-fallecidos-25-viviendas-destruidas-y-mas-de-6-mil-aislados.shtml
-  notas: "Balance entregado por el biministro del Interior y Segegob Claudio Alvarado, el subsecretario del Interior Máximo Pavez y la directora de Senapred Alicia Cebrián. 2 fallecidos en Los Ríos (ruta Panguipulli-Licán Ray), 1.142 damnificados, 6.243 aislados, 25 viviendas destruidas, 632 con daño mayor, 4.119 con daño menor y 1.123 en evaluación, 119 albergados. 10 alertas rojas y 9 amarillas vigentes. Se suspendieron las clases en 23 comunas de Maule, Ãuble y La Araucanía para el lunes 3 de agosto."
+  notas: "Balance entregado por el biministro del Interior y Segegob Claudio Alvarado, el subsecretario del Interior Máximo Pavez y la directora de Senapred Alicia Cebrián. 2 fallecidos en Los Ríos (ruta Panguipulli-Licán Ray), 1.142 damnificados, 6.243 aislados, 25 viviendas destruidas, 632 con daño mayor, 4.119 con daño menor y 1.123 en evaluación, 119 albergados. 10 alertas rojas y 9 amarillas vigentes. Se suspendieron las clases en 23 comunas de Maule, Ñuble y La Araucanía para el lunes 3 de agosto."
 
 latercera-2026-08-02-sistema-frontal-balance:
   tipo: prensa
@@ -9791,7 +9794,7 @@ t13-2026-08-02-suspension-clases-23-comunas:
   autor: T13
   fecha: 2026-08-02
   url: https://www.t13.cl/noticia/el-tiempo/nacional/todas-las-comunas-suspendieron-clases-para-este-lunes-3-agosto-por-sistema-fron-2-8-2026
-  notas: "Suspensión de clases en 23 comunas: Maule (Constitución y Molina), Ãuble (toda la provincia de Itata, Quillón, Bulnes y San Ignacio) y La Araucanía (Loncoche, Galvarino, Victoria, Traiguén, Lumaco, Purén, Los Sauces, Renaico, Angol, Ercilla y Cholchol)."
+  notas: "Suspensión de clases en 23 comunas: Maule (Constitución y Molina), Ñuble (toda la provincia de Itata, Quillón, Bulnes y San Ignacio) y La Araucanía (Loncoche, Galvarino, Victoria, Traiguén, Lumaco, Purén, Los Sauces, Renaico, Angol, Ercilla y Cholchol)."
 
 emol-2026-08-02-suspension-clases-23-comunas:
   tipo: prensa
@@ -9938,7 +9941,7 @@ latercera-2026-08-02-ppd-ampliar-reembolso-iva:
 
 latercera-2026-08-02-pix-chileno-bancos:
   tipo: prensa
-  medio: La Tercera Pulso
+  medio: La Tercera
   titulo: "El reservado proyecto de los bancos para lanzar el 'Pix chileno'"
   autor: La Tercera Pulso
   fecha: 2026-08-02
@@ -9965,7 +9968,7 @@ t13-2024-04-14-kast-venezuela:
 
 elpais-2024-08-04-van-klaveren-mediacion:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Alberto van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'"
   autor: El País
   fecha: 2024-08-04
@@ -9992,9 +9995,9 @@ cooperativa-2025-01-25-venezuela-ruptura:
 
 ultimasnoticias-2025-01-25-cinco-paises-ruptura:
   tipo: prensa
-  medio: Ãltimas Noticias (Venezuela)
+  medio: Últimas Noticias (Venezuela)
   titulo: "Solamente cinco países han roto con Venezuela, lo demás es bulla"
-  autor: Ãltimas Noticias
+  autor: Últimas Noticias
   fecha: 2025-01-25
   url: https://ultimasnoticias.com.ve/politica/solamente-cinco-paises-han-roto-con-venezuela-lo-demas-es-bulla/
   notas: "Perspectiva de prensa venezolana oficialista sobre la ruptura de relaciones de varios países con Venezuela. Fuente para cruzar datos y reducir sesgo."
@@ -10028,7 +10031,7 @@ reddit-2026-08-02-kaiser-matrimonio-adolescente:
 
 fastcheck-2025-06-26-kaiser-matrimonio-adolescente-real:
   tipo: prensa
-  medio: Fast Check CL
+  medio: Fast Check
   titulo: "Kaiser votó en contra de prohibir el matrimonio adolescente: Real"
   autor: Fast Check CL
   fecha: 2025-06-26
@@ -10118,7 +10121,7 @@ canal9-2026-07-31-pnl-expulsa-terraza:
 
 radiouchile-2026-07-31-kast-ccs-partidos-oficialistas:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "'No siempre aportan': Presidente Kast llama a partidos oficialistas a evitar instalar temas fuera de la agenda del Gobierno"
   autor: Diario UCHILE
   fecha: 2026-07-31
@@ -10217,7 +10220,7 @@ twitter-2026-08-03-tlantofagasta-cifras-empleo:
 
 latercera-2026-06-18-pulso-indemnizacion-todo-evento:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Ministro Rau plantea nuevo sistema de indemnización 'a todo evento' que baje costo al despido por necesidad de la empresa"
   autor: La Tercera (Pulso)
   fecha: 2026-06-18
@@ -10433,7 +10436,7 @@ reddit-2026-05-06-kast-cfa-megarreforma:
 
 latercera-2026-05-05-cfa-9-riesgos-megarreforma:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "CFA hace dura crítica a megarreforma y detecta nueve riesgos directos para las arcas fiscales"
   autor: La Tercera (Pulso)
   fecha: 2026-05-05
@@ -10442,7 +10445,7 @@ latercera-2026-05-05-cfa-9-riesgos-megarreforma:
 
 latercera-2026-05-06-kast-responde-cfa:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Presidente Kast dice que el gobierno mantendrá urgencia a la megarreforma pese a la advertencia del CFA"
   autor: La Tercera (Pulso)
   fecha: 2026-05-06
@@ -10451,7 +10454,7 @@ latercera-2026-05-06-kast-responde-cfa:
 
 latercera-2026-05-06-quiroz-cfa-observaciones:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Quiroz califica las críticas del CFA como 'observaciones de detalle' contestadas por la Dipres"
   autor: La Tercera (Pulso)
   fecha: 2026-05-06
@@ -10487,7 +10490,7 @@ biobiochile-2026-04-05-auditoria-externa-desestimada:
 
 latercera-2026-04-05-big-four-auditoria-externa:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "El encargo que no llegó a las Big Four: Gobierno desecha auditoría externa internacional al Estado por estrechez fiscal"
   autor: La Tercera (Pulso)
   fecha: 2026-04-05
@@ -10648,7 +10651,7 @@ chilevision-2021-12-04-campana-partio-en-el-norte:
 
 youtube-2021-12-04-chv-noticias-central-kast-codelco:
   tipo: video
-  medio: YouTube (CHV Noticias)
+  medio: YouTube
   titulo: "CHV Noticias Central: Sábado 4 de diciembre de 2021 â Kast: 'No vamos a privatizar Codelco' (min 4:52)"
   autor: CHV Noticias
   fecha: 2021-12-04
@@ -10657,7 +10660,7 @@ youtube-2021-12-04-chv-noticias-central-kast-codelco:
 
 youtube-2021-12-05-kast-no-vamos-a-privatizar-codelco:
   tipo: video
-  medio: YouTube (Está Pasando)
+  medio: YouTube
   titulo: "Kast: 'No vamos a privatizar Codelco'"
   autor: Está Pasando
   fecha: 2021-12-05
@@ -10675,7 +10678,7 @@ codelco-2026-03-27-resultados-2025:
 
 latercera-2023-03-31-aportes-codelco-2022:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Aportes de Codelco al Fisco en 2022 cayeron casi 60%"
   autor: Víctor Guillou
   fecha: 2023-03-31
@@ -10684,7 +10687,7 @@ latercera-2023-03-31-aportes-codelco-2022:
 
 latercera-2022-02-25-codelco-excedentes-2021:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Codelco registró excedentes por US$7.394 millones el 2021 y anotó su mejor resultado en nueve años"
   autor: La Tercera (Pulso)
   fecha: 2022-02-25
@@ -10693,7 +10696,7 @@ latercera-2022-02-25-codelco-excedentes-2021:
 
 chilevision-2026-07-29-jalaff-condena-factop:
   tipo: prensa
-  medio: ChileVisión
+  medio: Chilevisión
   titulo: "Caso Factop: Álvaro Jalaff es condenado a 5 años de libertad vigilada y el pago de millonaria multa"
   autor: Fernanda Valdenegro
   fecha: 2026-07-29
@@ -10747,7 +10750,7 @@ ocmal-2026-07-29-decreto-seguridad-minera:
 
 latercera-2026-08-03-simplificacion-permisos-mineria:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Gobierno ingresa a Contraloría modificación que simplifica 55 permisos mineros en 13 trámites para empujar la inversión"
   autor: David Nogales
   fecha: 2026-08-03
@@ -10756,7 +10759,7 @@ latercera-2026-08-03-simplificacion-permisos-mineria:
 
 elmostrador-2026-07-29-diputados-arriendos-vehiculos:
   tipo: prensa
-  medio: El Mostrador (Aquí Biobío)
+  medio: El Mostrador
   titulo: "Diputados gastan millones en arriendos de vehículos y reparan autos propios con dinero público"
   autor: Cristian Ascencio Ojeda
   fecha: 2026-07-29
@@ -10774,7 +10777,7 @@ resumen-2026-07-29-diputados-biobio-arriendos:
 
 cooperativa-2026-07-29-corazon-gobierno-arritmias:
   tipo: prensa
-  medio: Radio Cooperativa
+  medio: Cooperativa
   titulo: "'El corazón del Gobierno' amenaza con provocar arritmias"
   autor: Cooperativa.cl
   fecha: 2026-07-29
@@ -10910,7 +10913,7 @@ ladiscusion-2026-08-01-carcel-chillan:
 radiointeramericana-2026-08-01-las-trancas-transito:
   tipo: prensa
   medio: Radio Interamericana
-  titulo: "Sistema frontal en Ãuble: Suspenden tránsito a Las Trancas y sólo se podrá acceder con reserva previa"
+  titulo: "Sistema frontal en Ñuble: Suspenden tránsito a Las Trancas y sólo se podrá acceder con reserva previa"
   autor: Radio Interamericana
   fecha: 2026-08-01
   url: https://radiointeramericana.cl/sistema-frontal-en-nuble-suspenden-transito-a-las-trancas-y-solo-se-podra-acceder-con-reserva-previa/
@@ -10959,7 +10962,7 @@ latercera-2026-08-01-arrau-allanamiento-chillan:
   autor: Felipe Rivera
   fecha: 2026-08-01
   url: https://www.latercera.com/nacional/noticia/ministro-arrau-supervisa-allanamiento-en-carcel-de-chillan-40-armas-blancas-y-ocho-celulares-incautados/
-  notas: "El ministro de Seguridad Pública, Martín Arrau, supervisó un allanamiento de Gendarmería en el Centro de Cumplimiento Penitenciario de Chillán que dejó 40 armas blancas artesanales, ocho celulares, siete objetos contundentes, licor artesanal y tres envoltorios con sustancias sin identificar. Se intervino a 282 internos con 94 funcionarios y ocho perros. Acompañaron al ministro el delegado presidencial de Ãuble Diego Sepúlveda, el seremi de Seguridad Héctor Ponce y la seremi de Justicia Natalia Reyes."
+  notas: "El ministro de Seguridad Pública, Martín Arrau, supervisó un allanamiento de Gendarmería en el Centro de Cumplimiento Penitenciario de Chillán que dejó 40 armas blancas artesanales, ocho celulares, siete objetos contundentes, licor artesanal y tres envoltorios con sustancias sin identificar. Se intervino a 282 internos con 94 funcionarios y ocho perros. Acompañaron al ministro el delegado presidencial de Ñuble Diego Sepúlveda, el seremi de Seguridad Héctor Ponce y la seremi de Justicia Natalia Reyes."
 
 adnradio-2026-07-31-pampilla-gobierno-responde:
   tipo: prensa
@@ -10973,11 +10976,11 @@ adnradio-2026-07-31-pampilla-gobierno-responde:
 biobiochile-2026-08-01-las-trancas-suspension:
   tipo: prensa
   medio: BioBioChile
-  titulo: "Sistema frontal en Ãuble: Suspenden tránsito a Las Trancas y sólo se podrá acceder con reserva previa"
+  titulo: "Sistema frontal en Ñuble: Suspenden tránsito a Las Trancas y sólo se podrá acceder con reserva previa"
   autor: Alejandro Alarcón
   fecha: 2026-08-01
   url: https://www.biobiochile.cl/noticias/nacional/region-de-nuble/2026/08/01/sistema-frontal-en-nuble-suspenden-transito-a-las-trancas-y-solo-se-podra-acceder-con-reserva-previa.shtml
-  notas: "La tarde del sábado 1 de agosto, personal de la Tenencia Las Trancas (comuna de Pinto, Región de Ãuble) suspendió el tránsito hacia el sector y solo se podrá acceder con reserva previa, en el marco del sistema frontal que afecta a la zona."
+  notas: "La tarde del sábado 1 de agosto, personal de la Tenencia Las Trancas (comuna de Pinto, Región de Ñuble) suspendió el tránsito hacia el sector y solo se podrá acceder con reserva previa, en el marco del sistema frontal que afecta a la zona."
 
 biobiochile-2026-08-01-concejal-lago-verde-incendio:
   tipo: prensa
@@ -11071,7 +11074,7 @@ latercera-2026-08-01-coyhaique-aldea-emergencia:
 
 latercera-2026-08-01-batalla-cultural-privatizacion:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "El nuevo eslabón de la 'batalla cultural' que irrumpe con el impulso privatizador de Quiroz"
   autor: Julio Nahuelhual
   fecha: 2026-08-01
@@ -11089,7 +11092,7 @@ ftc-2026-05-28-daniel-diaz-director-codelco:
 
 latercera-2026-05-28-daniel-diaz-director-codelco:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Daniel Díaz, dirigente de Chuquicamata, será el representante de los trabajadores en directorio de Codelco"
   autor: Ignacio Badal
   fecha: 2026-05-28
@@ -11116,7 +11119,7 @@ eldesconcierto-2026-08-03-lobos-marinos-veda:
 
 diariousach-2026-08-03-lobos-marinos-ambientalistas:
   tipo: prensa
-  medio: Diario Usach
+  medio: Diario USACH
   titulo: "'Destruir el ecosistema y especies no es viable': Ambientalistas cuestionan dichos de subsecretario de Pesca para levantar la veda y caza del lobo marino"
   autor: Diario Usach
   fecha: 2026-08-03
@@ -11161,7 +11164,7 @@ t13-2026-08-01-udi-dieta-expresidentes:
 
 redimin-2026-05-28-daniel-diaz-director-codelco:
   tipo: prensa
-  medio: Revista Digital Minera (Redimin)
+  medio: Redimin
   titulo: "Daniel Díaz asumirá cupo laboral en Codelco y completa nuevo directorio hasta 2030"
   autor: Redimin
   fecha: 2026-05-28
@@ -11206,7 +11209,7 @@ reddit-2026-03-09-lenguaje-boric-cuatro-anos:
 
 t13-2026-04-07-paquete-economico-kast:
   tipo: prensa
-  medio: T13 (Ex-Ante)
+  medio: T13
   titulo: "Paquete económico de Kast: Las medidas, los ajustes y cómo será defendido en el Congreso"
   autor: Ex-Ante
   fecha: 2026-04-07
@@ -11368,7 +11371,7 @@ elmostrador-2026-08-03-pdi-exoficiales-condenados:
 
 theclinic-2026-08-03-alvarado-indh-rabat:
   tipo: redes
-  medio: The Clinic (X)
+  medio: The Clinic
   titulo: "Alvarado tras declaraciones de Rabat por el INDH"
   autor: The Clinic
   fecha: 2026-08-03
@@ -11484,7 +11487,7 @@ radiouchile-2026-08-03-crespo-gatica-corte:
 
 pauta-2026-08-03-crespo-gatica-corte:
   tipo: prensa
-  medio: Pauta
+  medio: Radio Pauta
   titulo: "Corte de Apelaciones mantiene absolución de Claudio Crespo y descarta repetir el juicio"
   autor: Pauta
   fecha: 2026-08-03
@@ -11723,7 +11726,7 @@ amigospenquistas-2026-07-31-desempleo-biobio:
   autor: Amigos Penquistas
   fecha: 2026-07-31
   url: https://amigospenquistas.cl/2026/07/31/region-del-bio-bio-registra-alza-del-desempleo-tasa-llega-a-104-y-queda-sobre-el-promedio-nacional/
-  notas: "Fuente primaria regional verificada por lectura directa. Desempleo del Bío Bío en 10,4%, superado solo por Ãuble (10,5%). La desocupación femenina regional llegó a 11,3% (+1 pp en 12 meses) y la informalidad a 28,3% (+3,1 pp). Incluye reacciones del delegado presidencial Julio Anativia, el presidente de la CUT provincial Mikel Capetillo y el vocero de la Mesa de Defensa del Empleo, Iván Montes."
+  notas: "Fuente primaria regional verificada por lectura directa. Desempleo del Bío Bío en 10,4%, superado solo por Ñuble (10,5%). La desocupación femenina regional llegó a 11,3% (+1 pp en 12 meses) y la informalidad a 28,3% (+3,1 pp). Incluye reacciones del delegado presidencial Julio Anativia, el presidente de la CUT provincial Mikel Capetillo y el vocero de la Mesa de Defensa del Empleo, Iván Montes."
 
 eltipografo-2026-07-31-desempleo-ohiggins:
   tipo: prensa
@@ -12114,7 +12117,7 @@ t13-2026-08-04-alvarado-empleo-megarreforma:
 
 fastcheck-2026-08-03-calisto-confenats-platas:
   tipo: investigacion
-  medio: Fast Check CL
+  medio: Fast Check
   titulo: "'Calisto les entregó dinero en efectivo': las pistas que vinculan a exdirigentes de Confenats con presuntas platas negras ligadas al senador"
   autor: Benjamín Bravo Yusta y Elías Miranda
   fecha: 2026-08-03
@@ -12123,7 +12126,7 @@ fastcheck-2026-08-03-calisto-confenats-platas:
 
 fastcheck-2026-07-30-calisto-palma-confenats:
   tipo: investigacion
-  medio: Fast Check CL
+  medio: Fast Check
   titulo: "Caso Calisto: las millonarias asesorías de empresa ligada a exfiscal Palma a Confenats y las dudas sobre los respaldos que las acreditan"
   autor: Benjamín Bravo Yusta y Elías Miranda
   fecha: 2026-07-30
@@ -12357,7 +12360,7 @@ emol-2022-09-06-siches-toha-cambio-gabinete:
 
 elpais-2022-10-18-boric-aniversario-estallido:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Boric, a tres años del estallido social chileno: 'Fue un clamor por mayor justicia, igualdad y el fin de los abusos'"
   autor: El País
   fecha: 2022-10-18
@@ -12366,7 +12369,7 @@ elpais-2022-10-18-boric-aniversario-estallido:
 
 24horas-2022-10-18-boric-estallido-no-delincuencia:
   tipo: prensa
-  medio: 24Horas
+  medio: 24 Horas
   titulo: "Boric a tres años del estallido social: 'El 18 de octubre no fue una pura ola de delincuencia'"
   autor: 24Horas
   fecha: 2022-10-18
@@ -12582,7 +12585,7 @@ latercera-2024-12-05-megaincendio-fiscalia-mafia-fuego:
 
 latercera-2024-11-26-expertos-esquema-tributacion-grandes:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Expertos tributarios plantean dudas y críticas al nuevo esquema de tributación para grandes empresas propuesto por Hacienda"
   autor: Carlos Alonso
   fecha: 2024-11-26
@@ -12662,7 +12665,7 @@ elmostrador-2024-10-10-suprema-destituye-vivanco:
 
 elpais-2024-10-11-remocion-vivanco-crisis-suprema:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "La remoción de la jueza Ángela Vivanco le da un respiro a la crisis de la Corte Suprema chilena"
   autor: El País
   fecha: 2024-10-11
@@ -12678,7 +12681,7 @@ gob-2025-06-29-primarias-presidenciales-2025:
 
 elpais-2025-06-30-resultados-primarias-2025:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Resultados de las elecciones primarias presidenciales de Chile 2025, en vivo"
   autor: El País
   fecha: 2025-06-30
@@ -12769,7 +12772,7 @@ partidorepublicano-2021-08-23-kast-bajar-sueldo:
   autor: Prensa (Partido Republicano)
   fecha: 2021-08-23
   url: https://partidorepublicanodechile.cl/campana/2021/08/kast-compromete-bajar-el-sueldo-presidencial-reducir-12-ministerios-y-un-gobierno-de-austeridad-para-enfrentar-grave-crisis-economica/
-  notas: "Fuente primaria del propio partido, verificada por lectura directa (status 200). Comunicado de la proclamación de José Antonio Kast como candidato presidencial del Partido Republicano en el cerro Ãielol de Temuco (22 de agosto de 2021): comprometió que de llegar a La Moneda 'Bajaré mi sueldo como Presidente a la mitad y disminuiremos significativamente los sueldos y asignaciones de las altas autoridades del Estado, incluyendo a ministros, senadores, diputados, jueces y fiscales', un primer gabinete de apenas 12 ministerios (fusionando los 24) y 'gobernar con el ejemplo'. Fuente partidaria: usar como complemento de la cobertura de prensa."
+  notas: "Fuente primaria del propio partido, verificada por lectura directa (status 200). Comunicado de la proclamación de José Antonio Kast como candidato presidencial del Partido Republicano en el cerro Ñielol de Temuco (22 de agosto de 2021): comprometió que de llegar a La Moneda 'Bajaré mi sueldo como Presidente a la mitad y disminuiremos significativamente los sueldos y asignaciones de las altas autoridades del Estado, incluyendo a ministros, senadores, diputados, jueces y fiscales', un primer gabinete de apenas 12 ministerios (fusionando los 24) y 'gobernar con el ejemplo'. Fuente partidaria: usar como complemento de la cobertura de prensa."
 
 t13-2021-08-22-kast-rebajar-sueldo-mitad:
   tipo: prensa
@@ -12778,16 +12781,16 @@ t13-2021-08-22-kast-rebajar-sueldo-mitad:
   autor: T13
   fecha: 2021-08-22
   url: https://www.t13.cl/noticia/elecciones-2021/politica/kast-lanza-su-campana-presidencial-si-salgo-electo-me-voy-rebajar-sueldo-mitad
-  notas: "Verificada por lectura directa (status 200). Proclamación oficial de José Antonio Kast como candidato presidencial del Partido Republicano en el cerro Ãielol de Temuco el 22 de agosto de 2021: 'Bajaré mi sueldo como Presidente a la mitad y disminuiremos significativamente los sueldos y asignaciones de las altas autoridades del Estado, incluyendo a ministros, senadores, diputados, jueces y fiscales' y un primer gabinete de 12 ministerios (de 24)."
+  notas: "Verificada por lectura directa (status 200). Proclamación oficial de José Antonio Kast como candidato presidencial del Partido Republicano en el cerro Ñielol de Temuco el 22 de agosto de 2021: 'Bajaré mi sueldo como Presidente a la mitad y disminuiremos significativamente los sueldos y asignaciones de las altas autoridades del Estado, incluyendo a ministros, senadores, diputados, jueces y fiscales' y un primer gabinete de 12 ministerios (de 24)."
 
 diariousach-2025-12-24-voltereta-kast-renta:
   tipo: prensa
-  medio: Diario Usach
+  medio: Diario USACH
   titulo: "La voltereta de Kast sobre su renta presidencial: De la promesa de rebajar su sueldo a afirmar que el monto 'es una norma legal'"
   autor: Diario Usach
   fecha: 2025-12-24
   url: https://www.diariousach.cl/la-voltereta-de-kast-sobre-su-renta-presidencial-de-la-promesa-de-rebajar
-  notas: "Verificada por lectura directa vía espejo r.jina.ai (status 200). Reporta la decisión de la Comisión para la Fijación de Remuneraciones de elevar el sueldo del Jefe de Estado sobre los 10 millones brutos en 2026 ($11.070.064 desde el 11 de marzo, según El Mercurio) frente a la renta bruta de Boric de $7.033.974 en noviembre de 2025 (promedio mensualizado del trimestre: $7.787.000). Reproduce las declaraciones de Kast a Canal 13: 'nosotros nunca hemos señalado lo que algunos han planteado. Nosotros no hemos debatido el monto del sueldo' y que el monto 'eso lo decidió el Congreso, es una norma legal'. Recuerda la promesa de 2021 en el cerro Ãielol."
+  notas: "Verificada por lectura directa vía espejo r.jina.ai (status 200). Reporta la decisión de la Comisión para la Fijación de Remuneraciones de elevar el sueldo del Jefe de Estado sobre los 10 millones brutos en 2026 ($11.070.064 desde el 11 de marzo, según El Mercurio) frente a la renta bruta de Boric de $7.033.974 en noviembre de 2025 (promedio mensualizado del trimestre: $7.787.000). Reproduce las declaraciones de Kast a Canal 13: 'nosotros nunca hemos señalado lo que algunos han planteado. Nosotros no hemos debatido el monto del sueldo' y que el monto 'eso lo decidió el Congreso, es una norma legal'. Recuerda la promesa de 2021 en el cerro Ñielol."
 
 t13-2025-12-24-sueldo-proximo-presidente:
   tipo: prensa
@@ -13079,9 +13082,9 @@ emol-2026-08-04-reacciones-kast-crespo:
 
 nubleonline-2026-08-04-dia-nacional-teleton:
   tipo: prensa
-  medio: Ãuble Online
+  medio: Ñuble Online
   titulo: "Senado aprueba por unanimidad proyecto que busca crear el Día Nacional de la Teletón"
-  autor: Prensa Ãuble Online
+  autor: Prensa Ñuble Online
   fecha: 2026-08-04
   url: https://nubleonline.cl/senado-aprueba-por-unanimidad-proyecto-que-busca-crear-el-dia-nacional-de-la-teleton/
   notas: "Fuente primaria (usuario). Leída completa. El Senado aprobó por unanimidad (40 senadores presentes) el proyecto que establece el primer sábado de noviembre como Día Nacional de la Teletón y el domingo siguiente como Día Nacional del Encuentro Familiar; continúa a segundo trámite en la Cámara de Diputadas y Diputados. Citas del ministro Segpres José García Ruminot y de la directora general de Fundación Teletón, María José Zaldívar."
@@ -13160,7 +13163,7 @@ biobiochile-2022-09-06-lagos-leon-tarapaca:
 
 publimicro-2022-09-08-lagos-panel-expertos:
   tipo: prensa
-  medio: PubliMicro
+  medio: Publimicro
   titulo: "Ricardo Lagos: \"Estoy disponible para integrar panel que redacte una nueva constitución\""
   autor: PubliMicro
   fecha: 2022-09-08
@@ -13207,7 +13210,7 @@ theclinic-2026-08-04-congreso-despacha-megarreforma:
 
 thetimes-2026-08-05-senado-megarreforma-quiroz:
   tipo: prensa
-  medio: The Times en Español
+  medio: The Times Latino
   titulo: Senado aprueba megarreforma y Quiroz afirma que Chile crece
   autor: The Times en Español
   fecha: 2026-08-05
@@ -13316,7 +13319,7 @@ reddit-2026-08-05-quiroz-celebra-despacho:
 
 vergara240-2025-11-18-quiroz-colusion-pollos-farmacias:
   tipo: prensa
-  medio: Vergara 240 (UDP)
+  medio: VerificaUDP
   titulo: "¿Qué rol tuvo el asesor económico de Kast, Jorge Quiroz, en la colusión
     de los pollos y las farmacias?"
   autor: Miguel Aburto y Silvana Campos
@@ -13800,7 +13803,7 @@ biobiochile-2026-08-05-contraloria-sumario-sernac-arica:
 
 chilevision-2026-08-06-espinoza-vif-fiscalia:
   tipo: prensa
-  medio: CHV Noticias
+  medio: Chilevisión
   titulo: "Fiscalía confirma investigación por violencia intrafamiliar en caso que
     involucra al senador Fidel Espinoza"
   autor: CHV Noticias
@@ -13928,13 +13931,13 @@ biobiochile-2026-08-05-hermosilla-arresto-domiciliario:
 
 nubleonline-2026-08-05-kits-emergencia-nuble:
   tipo: prensa
-  medio: Ãuble Online
-  titulo: "SEREMI del Trabajo y Previsión Social de Ãuble participa en entrega de
+  medio: Ñuble Online
+  titulo: "SEREMI del Trabajo y Previsión Social de Ñuble participa en entrega de
     kits de emergencia a familias afectadas por el sistema frontal"
-  autor: Prensa Ãuble Online
+  autor: Prensa Ñuble Online
   fecha: 2026-08-05
   url: https://nubleonline.cl/seremi-del-trabajo-y-prevision-social-de-nuble-participa-en-entrega-de-kits-de-emergencia-a-familias-afectadas-por-el-sistema-frontal/
-  notas: "Verificada por lectura directa (texto completo). El 4 de agosto de 2026 el seremi del Trabajo y Previsión Social de Ãuble, Edmundo Novoa Puga, se desplegó en terreno en Chillán (sector Oro Verde, Callejón Valle del Sol) para participar en la entrega de kits de emergencia a familias afectadas por el sistema frontal, en el marco de la respuesta coordinada del Gobierno vía SENAPRED. La distribución continuará coordinada con las municipalidades de la región."
+  notas: "Verificada por lectura directa (texto completo). El 4 de agosto de 2026 el seremi del Trabajo y Previsión Social de Ñuble, Edmundo Novoa Puga, se desplegó en terreno en Chillán (sector Oro Verde, Callejón Valle del Sol) para participar en la entrega de kits de emergencia a familias afectadas por el sistema frontal, en el marco de la respuesta coordinada del Gobierno vía SENAPRED. La distribución continuará coordinada con las municipalidades de la región."
 
 adnradio-2026-08-04-camara-indulto-maturana:
   tipo: prensa
@@ -14029,7 +14032,7 @@ biobiochile-2025-11-23-cadem-segunda-vuelta:
 emol-2025-11-29-ultima-cadem-balotaje:
   tipo: prensa
   medio: Emol
-  titulo: "Ãltima Cadem antes del balotaje: Kast obtendría 58% y superaría por 16 puntos a Jara (42%)"
+  titulo: "Última Cadem antes del balotaje: Kast obtendría 58% y superaría por 16 puntos a Jara (42%)"
   autor: M. Silva
   fecha: 2025-11-29
   url: https://www.emol.com/noticias/Nacional/2025/11/29/1184593/encuesta-cadem-balotaje-jara-kast.html
@@ -14037,7 +14040,7 @@ emol-2025-11-29-ultima-cadem-balotaje:
 biobiochile-2025-11-30-ultima-cadem-segunda-vuelta:
   tipo: prensa
   medio: BioBioChile
-  titulo: "Ãltima Cadem antes de segunda vuelta: Kast le sacaría 16 puntos de ventaja a Jara"
+  titulo: "Última Cadem antes de segunda vuelta: Kast le sacaría 16 puntos de ventaja a Jara"
   autor: BioBioChile
   fecha: 2025-11-30
   url: https://www.biobiochile.cl/noticias/nacional/chile/2025/11/30/ultima-cadem-antes-de-segunda-vuelta-kast-le-sacaria-16-puntos-de-ventaja-a-jara.shtml
@@ -14094,7 +14097,7 @@ senado-2019-11-15-acuerdo-nueva-constitucion:
 
 bbc-2019-12-13-acusacion-pinera-rechazada:
   tipo: prensa
-  medio: BBC Mundo
+  medio: BBC News Mundo
   titulo: "Protestas en Chile: la Cámara de Diputados rechaza la acusación constitucional contra Sebastián Piñera que buscaba su destitución"
   autor: BBC Mundo
   fecha: 2019-12-13
@@ -14200,7 +14203,7 @@ france24-2020-07-23-retiro-10-pensiones:
 
 france24-2024-06-28-milei-ley-bases:
   tipo: prensa
-  medio: France 24 (en español)
+  medio: France 24
   titulo: "Milei celebra aprobación de su polémica Ley Bases y da por terminada la primera fase de su gestión"
   autor: Guido Burdman
   fecha: 2024-06-28
@@ -14331,7 +14334,7 @@ prensapresidencia-2022-07-04-cadena-nacional-constitucion:
 
 elpais-2022-07-04-entrega-constitucion:
   tipo: prensa
-  medio: EL PAÍS
+  medio: El País (Chile)
   titulo: "La entrega de la nueva Constitución sella el inicio de una nueva era en Chile"
   autor: EL PAÍS
   fecha: 2022-07-04
@@ -14347,7 +14350,7 @@ resumenlatinoamericano-2022-09-08-protestas-estudiantiles:
 
 cnn-2022-09-08-protestas-estudiantiles:
   tipo: prensa
-  medio: CNN Español
+  medio: CNN en Español
   titulo: "Saqueos y dos buses quemados deja nueva jornada de protestas estudiantiles en Chile"
   autor: Cristopher Ulloa
   fecha: 2022-09-08
@@ -14373,7 +14376,7 @@ cooperativa-2026-08-05-kast-agenda-crimen-organizado:
 
 emol-2026-08-05-kast-cadena-nacional:
   tipo: prensa
-  medio: El Mercurio
+  medio: Emol
   titulo: "Kast instala la seguridad como nuevo eje y recalca que el Gobierno 'no se va a dejar confundir' por ruido de polémicas"
   autor: María Cristina Romero
   fecha: 2026-08-05
@@ -14463,7 +14466,7 @@ adnradio-2026-08-05-kast-cadena-mediocridad:
 
 panampost-2026-08-05-kast-reforma-constitucional-seguridad:
   tipo: prensa
-  medio: PanAm Post (EFE)
+  medio: PanAm Post
   titulo: "Kast anuncia reforma constitucional en seguridad para 'ampliar' acción contra el crimen"
   autor: EFE
   fecha: 2026-08-05
@@ -14491,11 +14494,11 @@ biobiochile-2026-08-05-campillai-flores-enfrentamiento:
 biobiochile-2026-08-05-mesa-senado-comision-etica-cruce:
   tipo: prensa
   medio: BioBioChile
-  titulo: "Mesa del Senado traslada a Comisión de Ãtica el tenso cruce entre parlamentarias Campillai y Flores"
+  titulo: "Mesa del Senado traslada a Comisión de Ética el tenso cruce entre parlamentarias Campillai y Flores"
   autor: BioBioChile
   fecha: 2026-08-05
   url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/05/mesa-del-senado-traslada-a-comision-de-etica-el-tenso-cruce-entre-parlamentarias-campillai-y-flores.shtml
-  notas: "Consecuencia institucional del cruce: la Mesa del Senado derivó el episodio a la Comisión de Ãtica para su análisis, tras las descalificaciones cruzadas entre las senadoras."
+  notas: "Consecuencia institucional del cruce: la Mesa del Senado derivó el episodio a la Comisión de Ética para su análisis, tras las descalificaciones cruzadas entre las senadoras."
 
 chilevision-2026-08-05-flores-campillai-cruce:
   tipo: prensa
@@ -14580,7 +14583,7 @@ youtube-2026-08-05-flores-campillai-24-horas:
 
 cambio21-2026-08-05-flores-campillai-cruce:
   tipo: prensa
-  medio: Cambio 21
+  medio: Cambio21
   titulo: "VIDEO de la pelea. 'Delincuente, cuma' y 'Señora de feria': el feo y duro fuego cruzado entre senadoras Camila Flores y Fabiola Campillai en el Senado"
   autor: Cambio 21
   fecha: 2026-08-05
@@ -14759,7 +14762,7 @@ twitter-piensaprensa-2020-07-06-se-la-pitio-campillai:
 
 radiouchile-2026-05-05-iglesias-contribuciones:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Alcalde de Independencia y eventual eliminación de contribuciones: 'Tendríamos que recortar parte importante de lo que hace el municipio'"
   autor: Diario y Radio Universidad de Chile
   fecha: 2026-05-05
@@ -14795,7 +14798,7 @@ latercera-2026-07-30-iglesias-quiroz-alcaldes-punta:
 
 futurocl-2026-07-30-iglesias-contribuciones-entrevista:
   tipo: prensa
-  medio: Radio Futuro (futuro.cl)
+  medio: Radio Futuro
   titulo: "Agustín Iglesias y el debate por las contribuciones: 'Es una brutalidad usar impuestos generales para compensar a las comunas más ricas de Chile'"
   autor: Héctor Muñoz Tapia
   fecha: 2026-07-30
@@ -14822,7 +14825,7 @@ lun-2026-08-05-iglesias-crispacion-municipal:
 
 reddit-2026-08-05-iglesias-contribuciones:
   tipo: red_social
-  medio: Reddit (r/chile)
+  medio: Reddit r/chile
   titulo: "Agustín Iglesias y el debate por las contribuciones: 'Es una brutalidad usar impuestos generales para compensar a las comunas más ricas de Chile'"
   autor: r/chile
   fecha: 2026-08-05
@@ -14975,7 +14978,7 @@ fiscalia-2025-10-17-informe-estadistico-estallido:
 
 radiouchile-2025-10-17-fiscalia-464-trauma-ocular:
   tipo: prensa
-  medio: Diario y Radio de la Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Fiscalía confirma 464 víctimas de trauma ocular y 30 fallecidos a 6 años del estallido social"
   autor: Diario Uchile
   fecha: 2025-10-17
@@ -15083,7 +15086,7 @@ emol-2026-05-11-lavin-visita-hijo-prision:
 
 dw-2026-08-05-kast-reforma-crimen-organizado:
   tipo: prensa
-  medio: Deutsche Welle (DW)
+  medio: Deutsche Welle
   titulo: "Chile: Kast impulsa reforma para combatir crimen organizado"
   autor: DW
   fecha: 2026-08-05
@@ -15254,7 +15257,7 @@ emol-2010-01-14-concejal-ortiz-vif:
 
 dw-2019-10-25-marcha-millon-santiago:
   tipo: prensa
-  medio: Deutsche Welle (DW)
+  medio: Deutsche Welle
   titulo: "Santiago protests: 1 million people take part in the biggest march in Chile"
   autor: DW
   fecha: 2019-10-25
@@ -15299,7 +15302,7 @@ guardian-2020-10-03-menor-puente-mapocho:
 
 bbc-mundo-2020-10-03-puente-pio-nono:
   tipo: prensa
-  medio: BBC Mundo
+  medio: BBC News Mundo
   titulo: "Joven cae al Mapocho: indignación en Chile al precipitarse al río un menor desde 7 metros de altura tras ser empujado por un policía"
   autor: BBC Mundo
   fecha: 2020-10-03
@@ -15326,7 +15329,7 @@ independent-2019-11-12-laser-drones:
 
 clarin-2024-10-23-inba-molotov:
   tipo: prensa
-  medio: Clarín
+  medio: Clarín (Argentina)
   titulo: "Estalla una bomba molotov manipulada por alumnos en el baño de una escuela en Chile: hay 35 heridos, 15 de ellos de gravedad"
   autor: Clarín
   fecha: 2024-10-23
@@ -15416,7 +15419,7 @@ infobae-2026-06-04-marcha-recortes-educacion:
 
 ap-2026-06-03-protesta-estudiantes-recortes-kast:
   tipo: prensa
-  medio: Associated Press
+  medio: AP News
   titulo: "Protesta de estudiantes contra recortes de Kast termina con violentos choques en Santiago"
   autor: Associated Press
   fecha: 2026-06-03
@@ -15488,7 +15491,7 @@ pagina7-2019-10-20-carabineros-video-mentholatum:
 
 twitter-2019-10-20-pacos-jalando:
   tipo: redes_sociales
-  medio: Twitter/X
+  medio: X (Twitter)
   titulo: "PACOS JALANDO"
   autor: "@gonzalosoyyo"
   fecha: 2019-10-20
@@ -15524,7 +15527,7 @@ cooperativa-2019-11-19-cientificos-mentholatum:
 
 fastcheck-2019-11-20-mentholatum-falso:
   tipo: prensa
-  medio: Fast Check CL
+  medio: Fast Check
   titulo: "¿El Mentholatum sirve para el gas lacrimógeno? Falso"
   autor: Fast Check CL
   fecha: 2019-11-20
@@ -15533,7 +15536,7 @@ fastcheck-2019-11-20-mentholatum-falso:
 
 latercera-2019-10-21-fact-checking-emergencia:
   tipo: prensa
-  medio: La Tercera PM
+  medio: La Tercera
   titulo: "Fact checking en medio de la emergencia: la verdad sobre lo que se dice y viraliza"
   autor: La Tercera PM
   fecha: 2019-10-21
@@ -15542,7 +15545,7 @@ latercera-2019-10-21-fact-checking-emergencia:
 
 cctt-2020-02-14-chile-adicto-mentholatum:
   tipo: prensa
-  medio: Ciper Chile (vía cctt.cl)
+  medio: CIPER Chile
   titulo: "Chile adicto: militares y policías prefieren el mentholatum en polvo"
   autor: Constanza Pastor y Matías Quezada (CIPER)
   fecha: 2020-02-14
@@ -15605,7 +15608,7 @@ video-imgur-2019-pacos-jalando:
 
 video-youtube-shorts-2019-pacos-jalando:
   tipo: video
-  medio: YouTube Shorts
+  medio: YouTube
   titulo: "Video corto del suceso carabineros (backup)"
   autor: Usuario de YouTube
   fecha: 2019-10-20
@@ -15623,7 +15626,7 @@ reddit-2019-pacos-jalando-iatpos:
 
 facebook-acab-europe-2019-pacos-jalando:
   tipo: redes_sociales
-  medio: Facebook (ACAB Europe)
+  medio: Facebook
   titulo: "Cops in Chile snorting coke before attacking students in protest"
   autor: ACAB Europe
   fecha: 2019-10-20
@@ -15713,7 +15716,7 @@ centralnoticia-2025-12-10-kast-guagua-plaza-brasil:
 
 estapasando-2025-12-15-seguridad-cambio-escenario:
   tipo: prensa
-  medio: Está Pasando
+  medio: Estás Pasando
   titulo: "Seguridad: el cambio de escenario entre Boric y Kast"
   autor: Javiera Sanzana
   fecha: 2025-12-15
@@ -15722,7 +15725,7 @@ estapasando-2025-12-15-seguridad-cambio-escenario:
 
 video-youtube-radio13c-arrau-pnsp-suficiente:
   tipo: video
-  medio: YouTube (Radio 13C)
+  medio: YouTube
   titulo: "Security Minister asserts Boric's policy 'is sufficient' and announces robust legislative package"
   autor: Radio 13C
   fecha: 2026-05-26
@@ -15731,7 +15734,7 @@ video-youtube-radio13c-arrau-pnsp-suficiente:
 
 video-youtube-meganoticias-kast-usara-plan-boric:
   tipo: video
-  medio: YouTube (Meganoticias)
+  medio: YouTube
   titulo: "José Antonio Kast's government will use the security plan enacted by Gabriel Boric"
   autor: Meganoticias
   fecha: 2026-05-26
@@ -15803,7 +15806,7 @@ pauta-2026-08-06-pavez-defiende-plan-kast:
 
 elpais-2026-03-11-organigrama-gobierno-kast:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Quiénes son los ministros, subsecretarios y delegados presidenciales de José Antonio Kast"
   autor: Sebastián Dote
   fecha: 2026-03-11
@@ -15902,7 +15905,7 @@ elinformadorchile-2026-08-06-escolar-venezolano-osorno:
 
 reddit-2026-08-06-daza-kast-articulo-constitucion:
   tipo: redes_sociales
-  medio: Reddit (r/chile)
+  medio: Reddit r/chile
   titulo: "Mauricio Daza: 'Kast es tan iluminado que anuncia como gran medida el primer artículo que ya está en la Constitución'"
   autor: r/chile
   fecha: 2026-08-06
@@ -15920,7 +15923,7 @@ bcn-constitucion-politica-chile:
 
 latercera-2026-08-06-grau-megarreforma-desigualdad:
   tipo: prensa
-  medio: La Tercera (Pulso)
+  medio: La Tercera
   titulo: "Grau dice que la megarreforma va a aumentar la desigualdad y 'va a envejecer mal'"
   autor: La Tercera
   fecha: 2026-08-06
@@ -16027,7 +16030,7 @@ piensachile-2026-08-06-oficial-de-carabineros-de-chile-claudio-crespo-te-vamos-a
 
 youtube-2025-04-28-videos-de-claudio-crespo-que-se-queme-el-culiao-que-se-queme-que-te-andai-preocupando-de-hueas:
   tipo: video
-  medio: Youtube
+  medio: YouTube
   titulo: "Videos de Claudio Crespo: \"Que se queme el culiao, que se queme. Qué te andai preocupando de hueás\""
   autor: CIPER Chile
   fecha: 2025-04-28
@@ -16036,7 +16039,7 @@ youtube-2025-04-28-videos-de-claudio-crespo-que-se-queme-el-culiao-que-se-queme-
 
 youtube-2025-04-28-videos-de-claudio-crespo-te-vamos-a-sacar-los-ojos-culiao-escuchaste-o-no-extracto:
   tipo: video
-  medio: Youtube
+  medio: YouTube
   titulo: "Videos de Claudio Crespo: \"Te vamos a sacar los ojos, culiao. ¿Escuchaste, o no?” (extracto)"
   autor: CIPER Chile
   fecha: 2025-04-28
@@ -16045,7 +16048,7 @@ youtube-2025-04-28-videos-de-claudio-crespo-te-vamos-a-sacar-los-ojos-culiao-esc
 
 youtube-2025-04-28-videos-de-claudio-crespo:
   tipo: video
-  medio: Youtube
+  medio: YouTube
   titulo: Videos de Claudio Crespo
   autor: CIPER Chile
   fecha: 2025-04-28
@@ -16054,7 +16057,7 @@ youtube-2025-04-28-videos-de-claudio-crespo:
 
 youtube-2025-04-28-videos-ineditos-de-claudio-crespo-durante-el-estallido-social-revelados-por-ciper:
   tipo: video
-  medio: Youtube
+  medio: YouTube
   titulo: "Videos INÉDITOS de CLAUDIO CRESPO durante el Estallido Social revelados por CIPER"
   autor: Sala de Prensa
   fecha: 2025-04-28
@@ -16098,7 +16101,7 @@ dailymail-2020-05-23-protestas-pandemia-santiago:
 
 guardian-youtube-2020-10-19-mutilados-oculares:
   tipo: video
-  medio: The Guardian (YouTube)
+  medio: YouTube
   titulo: "Chile's blinded protesters seek justice after Covid lockdown: 'This is mutilation'"
   autor: The Guardian
   fecha: 2020-10-19
@@ -16314,7 +16317,7 @@ adnradio-2026-04-06-desbordes-fake-news-el-ciudadano:
 
 elpais-2026-08-07-feriado-17-septiembre:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "Feriado del 17 de septiembre en Chile: qué dice el proyecto de ley que busca extender las Fiestas Patrias"
   autor: Sebastián Dote
   fecha: 2026-08-07
@@ -16323,7 +16326,7 @@ elpais-2026-08-07-feriado-17-septiembre:
 
 elpais-2026-08-05-megarreforma-tiempo-record:
   tipo: publicacion
-  medio: El País
+  medio: El País (Chile)
   titulo: "Kast logra aprobar su megarreforma económica en el Congreso en el tiempo récord de tres meses"
   autor: El País (Chile)
   fecha: 2026-08-05
@@ -16341,7 +16344,7 @@ lacuarta-2026-08-05-vodanovic-traicion-principios:
 
 opinion-cooperativa-2026-08-06-equidad-autonomia:
   tipo: opinion
-  medio: Cooperativa (opinión)
+  medio: Cooperativa
   titulo: "Se pierde en equidad y también en autonomía"
   autor: Ignacia Fernández Gatica
   fecha: 2026-08-06
@@ -16350,7 +16353,7 @@ opinion-cooperativa-2026-08-06-equidad-autonomia:
 
 opinion-cooperativa-2026-08-06-mega-incertidumbres:
   tipo: opinion
-  medio: Cooperativa (opinión)
+  medio: Cooperativa
   titulo: "La reforma de las MEGA incertidumbres"
   autor: Camila Musante Müller
   fecha: 2026-08-06
@@ -16404,7 +16407,7 @@ radarbiobio-2026-08-06-mulchen-compensacion:
 
 atacamanoticias-2026-08-05-udi-cerro-castillo:
   tipo: publicacion
-  medio: Atacama Noticias (vía BioBioChile)
+  medio: Atacama Noticias
   titulo: "'Seguimos siendo leales': diputados UDI se reúnen con Kast en medio de roces con Republicanos"
   autor: BioBioChile / Atacama Noticias
   fecha: 2026-08-05
@@ -16440,7 +16443,7 @@ nuevopoder-2026-08-05-oposicion-tc-compensacion:
 
 diariousach-2026-08-05-nunez-no-beneficios-empresas:
   tipo: publicacion
-  medio: Diario Usach
+  medio: Diario USACH
   titulo: "Presidenta del Senado y la megarreforma: 'No se votaban beneficios para las empresas, sino recursos para las familias'"
   autor: Diario Usach
   fecha: 2026-08-05
@@ -16476,7 +16479,7 @@ biobiochile-2026-08-06-alcaldes-valparaiso-fcm:
 
 radio-uchile-2026-08-05-chile-abandona-mnoal:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Cancillería marca giro en política exterior: Chile abandona el Movimiento de Países No Alineados"
   autor: Diario UCHILE
   fecha: 2026-08-05
@@ -16512,7 +16515,7 @@ soychile-2026-08-05-oposicion-no-cree-crecimiento:
 
 radio-uchile-2026-08-05-cidh-pide-antecedentes:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "CIDH pide antecedentes al gobierno de Kast tras denuncias por retrocesos en derechos humanos"
   autor: Alexis Polo González
   fecha: 2026-08-05
@@ -16530,7 +16533,7 @@ elciudadano-2026-08-06-kast-cidh-antecedentes:
 
 elclarin-2026-08-02-fenadaj-cidh-recortes:
   tipo: prensa
-  medio: El Clarin
+  medio: El Clarín de Chile
   titulo: "FENADAJ respaldará denuncia ante la CIDH por recortes presupuestarios del Gobierno de Kast"
   autor: El Clarín de Chile
   fecha: 2026-08-02
@@ -16645,7 +16648,7 @@ t13-2026-07-27-incendio-santa-isabel:
 
 elpais-2026-07-28-incendio-santa-isabel-linea5:
   tipo: prensa
-  medio: El Pais Chile
+  medio: El País (Chile)
   titulo: "Un incendio en la estación Santa Isabel de la Línea 5 del Metro de Santiago de Chile desata el caos en plena hora punta"
   fecha: 2026-07-28
   url: https://elpais.com/chile/2026-07-28/un-incendio-en-la-estacion-santa-isabel-de-la-linea-5-del-metro-de-santiago-de-chile-desata-el-caos-en-plena-hora-punta.html
@@ -16923,7 +16926,7 @@ biobiochile-2026-08-07-denuncia-kast-contraloria-cifras:
 
 x-2026-08-06-robertomerken-kast-robos-violentos:
   tipo: twitter
-  medio: X (Roberto Merken)
+  medio: X (Twitter)
   titulo: "Kast es pillado haciendo exactamente lo que él mismo condenaba: 218.000 robos violentos vs 69.777 registrados"
   fecha: 2026-08-06
   url: https://x.com/RobertoMerken/status/2085547234762924497
@@ -16931,7 +16934,7 @@ x-2026-08-06-robertomerken-kast-robos-violentos:
 
 x-2026-08-06-tribunal-constitucional-admisibilidad-requerimientos:
   tipo: twitter
-  medio: X (Tribunal Constitucional de Chile)
+  medio: X (Twitter)
   titulo: "El TC admitió a trámite y declaró admisibles los requerimientos de inconstitucionalidad en el Boletín N°18.216-05"
   fecha: 2026-08-06
   url: https://x.com/tribconst_chile/status/2085388200646775085
@@ -17189,7 +17192,7 @@ ciperchile-2026-01-08-termina-juicio-caso-gatica:
 
 elpais-2026-01-13-absuelven-claudio-crespo-caso-gatica:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "La justicia chilena absuelve a Claudio Crespo, el excarabinero acusado de dejar ciego a Gustavo Gatica en el estallido social"
   autor: El País (Chile)
   fecha: 2026-01-13
@@ -17198,7 +17201,7 @@ elpais-2026-01-13-absuelven-claudio-crespo-caso-gatica:
 
 biobiochile-2026-06-15-crespo-gatica-recurso-nulidad:
   tipo: prensa
-  medio: Radio Bío Bío
+  medio: BioBioChile
   titulo: "Fiscalía y querellantes piden anular juicio que absolvió a Claudio Crespo en caso Gatica"
   autor: Radio Bío Bío
   fecha: 2026-06-15
@@ -17207,7 +17210,7 @@ biobiochile-2026-06-15-crespo-gatica-recurso-nulidad:
 
 biobiochile-2026-06-25-caso-gatica-admiten-recursos-nulidad:
   tipo: prensa
-  medio: Radio Bío Bío
+  medio: BioBioChile
   titulo: "Caso Gustavo Gatica: admiten recursos y justicia revisará si anula juicio que absolvió a Crespo"
   autor: Radio Bío Bío
   fecha: 2026-06-25
@@ -17270,7 +17273,7 @@ adnradio-2026-08-07-manalich-test-drogas-falsos-positivos:
 
 biobiochile-2026-08-07-reforma-indh-quitar-facultad-querellarse:
   tipo: prensa
-  medio: Radio Bío Bío
+  medio: BioBioChile
   titulo: "La reforma que prepara el gobierno para redefinir el INDH y quitarle la facultad de querellarse"
   autor: Radio Bío Bío
   fecha: 2026-08-07
@@ -17288,7 +17291,7 @@ pauta-2026-08-03-reforma-indh-rabat-facultad-querellante:
 
 radiouchile-2026-08-03-reforma-indh-oposicion:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Reforma al INDH enfrenta al Gobierno con la oposición y organizaciones de derechos humanos"
   autor: Alexis Polo González
   fecha: 2026-08-03
@@ -17423,7 +17426,7 @@ latercera-2022-02-09-prision-preventiva-tres-militares-veloz:
 
 biobiochile-2023-08-31-condena-cuatro-militares-veloz:
   tipo: prensa
-  medio: Radio Bio Bio
+  medio: BioBioChile
   titulo: "Caso Romario Veloz: condenan a 4 funcionarios del Ejercito por violencia innecesaria causando muerte"
   autor: Florencia Ortiz
   fecha: 2023-08-31
@@ -17458,7 +17461,7 @@ theclinic-2026-06-09-gobierno-indicaciones-secreto-bancario:
 
 elclarin-2026-06-10-senado-rechaza-secreto-bancario-contradiccion:
   tipo: prensa
-  medio: El Clarín
+  medio: El Clarín de Chile
   titulo: "Senado rechaza levantamiento del secreto bancario y abre una enorme contradicción en la agenda de seguridad del Gobierno"
   autor: Simón del Valle
   fecha: 2026-06-10
@@ -17501,7 +17504,7 @@ adnradio-2026-08-07-arrau-defiende-secreto-bancario:
 
 x-2026-08-07-rodrigorettig-cead-robos-violentos:
   tipo: twitter
-  medio: X (Rodrigo Rettig)
+  medio: X (Twitter)
   titulo: "Hilo de Rodrigo Rettig: 'No tan solo mintió en la cifra de 218.000' — curva descendente de robos violentos según CEAD"
   autor: Rodrigo Rettig
   fecha: 2026-08-07
@@ -17510,7 +17513,7 @@ x-2026-08-07-rodrigorettig-cead-robos-violentos:
 
 x-2026-08-07-icarus3012-secreto-bancario-interceptacion:
   tipo: twitter
-  medio: X (cuenta ciudadana)
+  medio: X (Twitter)
   titulo: "Tuit de Icarus criticando la contradicción ACOT: no al secreto bancario (privacidad) pero sí a la interceptación de comunicaciones (seguridad)"
   autor: Icarus... Cold (@Icarus3012)
   fecha: 2026-08-07
@@ -17789,7 +17792,7 @@ biobiochile-2026-08-06-castro-emplaza-secreto-bancario:
 
 24horas-2026-08-07-kast-ley-karin-perfeccionar:
   tipo: prensa
-  medio: 24horas
+  medio: 24 Horas
   titulo: "Presidente Kast y futuro de la Ley Karin: 'Todo tipo de legislación se puede perfeccionar'"
   autor: 24horas
   fecha: 2026-08-07
@@ -17834,7 +17837,7 @@ biobiochile-2026-08-07-arrau-mitos-secreto-bancario:
 
 biobiochile-2026-08-06-factor-mera-lavin-barriga:
   tipo: prensa
-  medio: BioBioChile (Bío Bío Investiga)
+  medio: BioBioChile
   titulo: "El 'Factor Mera': el ministro de la Corte de Santiago que siempre vota a favor de los Lavín-Barriga"
   autor: Felipe Díaz Montero
   fecha: 2026-08-06
@@ -17888,7 +17891,7 @@ biobiochile-2026-08-08-bruja-pinochet-pirzio-biroli:
 
 vergara240-2026-06-02-pais-mas-seguro-latinoamerica:
   tipo: prensa
-  medio: Vergara 240 (VerificaUDP)
+  medio: VerificaUDP
   titulo: "Engañoso: 'Queremos que Chile vuelva a ser el país más seguro de Latinoamérica'"
   autor: Constanza Carrasco y Karla Leiva
   fecha: 2026-06-02
@@ -17916,7 +17919,7 @@ empresaslogros-2024-05-06-impuestos-empresas-chile:
   notas: "Guía divulgativa del sistema tributario chileno para pymes: Impuesto de Primera Categoría (IR1) con tasa general de 27%, regímenes especiales ProPyme (25% y 10% según año y régimen), Impuesto de Segunda Categoría progresivo sobre remuneraciones, e IVA de 19%. Detalla obligaciones (inscripción en SII, declaración F29, contabilidad). Fuente de contexto divulgativo sobre la estructura impositiva vigente antes de la Ley 21.755 (2025). Verificada por lectura completa."
 elmostrador-2023-10-10-estrategia-kast-plebiscito:
   tipo: prensa
-  medio: El Mostrador (columna de opinión)
+  medio: El Mostrador
   titulo: "La estrategia que se esconde detrás de la arriesgada apuesta de Kast"
   autor: Germán Silva Cuadra
   fecha: 2023-10-10
@@ -17969,7 +17972,7 @@ latercera-2025-09-11-factcheck-meo-homicidios:
 
 estapasando-2026-08-07-castro-secreto-bancario:
   tipo: prensa
-  medio: Esta Pasando
+  medio: Estás Pasando
   titulo: "Senador Castro desafía al gobierno por secreto bancario"
   autor: Esta Pasando
   fecha: 2026-08-07
@@ -17996,7 +17999,7 @@ latercera-2026-08-07-bianchi-reforma-innecesaria:
 
 lanacion-2026-08-06-alcalde-san-bernardo:
   tipo: prensa
-  medio: La Nación (Chile)
+  medio: La Nación
   titulo: "Alcalde de San Bernardo: 'El problema del gobierno es la falta de credibilidad'"
   autor: La Nación (Chile)
   fecha: 2026-08-06
@@ -18104,7 +18107,7 @@ radio-uchile-2026-08-06-acot-fast-track:
 
 radio-uchile-2025-12-07-estrategia-kast-segunda-vuelta:
   tipo: prensa
-  medio: Diario y Radio Universidad de Chile
+  medio: Radio Universidad de Chile
   titulo: "Radiografía a la silenciosa estrategia de José Antonio Kast en segunda vuelta: ¿Cálculo, aprendizaje o temor al error?"
   autor: Camilo Vega Martínez
   fecha: 2025-12-07
@@ -18139,7 +18142,7 @@ x-2026-08-08-theclinic-indultos-kast:
 
 reportediario-2026-08-07-estado-excepcion-acotado:
   tipo: analisis
-  medio: Reporte Diario
+  medio: El Reporte Diario
   titulo: "Estado de excepción acotado: la agenda para neutralizar bandas"
   autor: Reporte Diario
   fecha: 2026-08-07
@@ -18184,7 +18187,7 @@ exante-2026-08-07-hora-de-arrau:
 
 elpais-2026-08-06-nueva-etapa-seguridad:
   tipo: prensa
-  medio: El País
+  medio: El País (Chile)
   titulo: "Tras aprobar su megarreforma económica, Kast inaugura una nueva etapa enfocada en la seguridad"
   autor: Rocío Montes
   fecha: 2026-08-06
@@ -18228,7 +18231,7 @@ eldinamo-2026-06-09-cfa-alerta-deuda-us-6200:
 
 elpais-2026-07-02-jornada-52-horas-mesa-reactivacion:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "Jornada laboral de 52 horas en Chile: en qué consiste la propuesta de la Mesa de Reactivación Laboral"
   autor: Sebastián Dote
   fecha: 2026-07-02
@@ -18236,7 +18239,7 @@ elpais-2026-07-02-jornada-52-horas-mesa-reactivacion:
   notas: "Explicador de El País sobre la propuesta de la Mesa de Reactivación Laboral (informe entregado el 30-jun-2026): no busca eliminar las 40 horas ni que se trabajen 52 horas por semana, sino cambiar la distribución del tiempo de trabajo ampliando el periodo de cálculo del promedio (de 4 semanas a 15 o 52, estándares OCDE) con techo de 52 horas. Cita los argumentos del informe (artículo 22 bis) y la defensa de David Bravo en Radio ADN. Verificada por lectura completa."
 elpais-2026-07-06-indemnizacion-todo-evento:
   tipo: prensa
-  medio: El País Chile
+  medio: El País (Chile)
   titulo: "Indemnización a todo evento: cómo funciona la reforma que estudia el Gobierno de Kast"
   autor: Antonia Laborde
   fecha: 2026-07-06
@@ -18301,7 +18304,7 @@ theclinic-2026-05-15-sec-deuda-externa-6000:
   notas: "El Ministerio de Hacienda inscribió en la SEC un programa de US$6.000 millones para próximas colocaciones de bonos, comunicado el 13-may-2026 por el regulador estadounidense. Primera gestión ante la SEC de la administración Kast para habilitar emisiones de deuda externa, realizada bajo la autoridad del ministro Jorge Quiroz. Verificada por lectura completa."
 youtube-2025-12-09-debate-anatel-40-horas:
   tipo: video
-  medio: 24 Horas (YouTube)
+  medio: YouTube
   titulo: "Debate ANATEL: el cruce entre Jeannette Jara y José Antonio Kast por las 40 horas"
   autor: 24 Horas
   fecha: 2025-12-09
@@ -18309,7 +18312,7 @@ youtube-2025-12-09-debate-anatel-40-horas:
   notas: "Registro audiovisual del debate ANATEL (TVN, 9-dic-2025) con el intercambio completo entre Jara y Kast por las 40 horas: Jara citó que el programa de Kast 'lo dice explícitamente, que las va a suspender en las pymes' y lo emplazó a 'cambiar tu programa'; Kast respondió 'no vamos a tocar las 40 horas' y 'no vamos a terminar con la PGU, no vamos a terminar con las 40 horas, no vamos a terminar con la indemnización'. Fuente primaria audiovisual con transcripción verificada."
 biobiochile-2026-08-08-ronda-especial-carabineros-656-detenidos:
   tipo: prensa
-  medio: Bío Bío
+  medio: BioBioChile
   titulo: "656 detenidos deja ronda especial a nivel nacional de Carabineros en 33.887 controles preventivos"
   autor: Bío Bío
   fecha: 2026-08-08
@@ -18363,4 +18366,493 @@ eldinamo-2026-08-04-reformular-becas-chile:
   fecha: 2026-08-04
   url: https://www.eldinamo.cl/pais/2026/08/04/tras-detectar-deuda-de-92-mil-millones-como-el-gobierno-planea-reformular-becas-chile/
   notas: "Plan del Ejecutivo para reformular Becas Chile tras la deuda detectada: priorizar la entrega de beneficios a estudios de posgrado vinculados a ciencia y tecnología."
+biobiochile-2024-10-16-clausula-becas-chile-deuda:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "La cláusula de Becas Chile que perjudica a investigadores y convierte una beca en una deuda millonaria"
+  autor: BioBioChile
+  fecha: 2024-10-16
+  url: https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/ciencia/2024/10/16/la-clausula-de-becas-chile-que-perjudica-a-investigadores-y-convierte-una-beca-en-una-deuda-millonaria.shtml
+  notas: "Contexto de la deuda de Becas Chile: la cláusula de retorno convierte la beca en deuda millonaria para los investigadores que no cumplen las obligaciones (oct-2024)."
+elclarin-2024-11-14-detencion-monsalve:
+  tipo: prensa
+  medio: El Clarín de Chile
+  titulo: "Detienen al exsubsecretario Manuel Monsalve por violación y abuso sexual contra una subalterna"
+  autor: El Clarín de Chile
+  fecha: 2024-11-14
+  url: https://www.elclarin.cl/2024/11/14/detienen-al-exsubsecretario-manuel-monsalve-por-violacion-y-abuso-sexual-contra-una-subalterna/
+  notas: "Detención de Monsalve en Viña del Mar por orden del 7° Juzgado de Garantía de Santiago, solicitada por la Fiscalía Metropolitana Centro Norte por riesgo de fuga."
+theclinic-2024-11-14-pdi-detiene-monsalve:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "PDI detiene a Manuel Monsalve en Viña del Mar por acusación de violación en su contra y será trasladado a penal en Ñuñoa"
+  autor: Jorge Palacios
+  fecha: 2024-11-14
+  url: https://www.theclinic.cl/2024/11/14/pdi-detiene-a-manuel-monsalve-en-vina-del-mar-por-acusacion-de-violacion-en-su-contra-y-sera-trasladado-a-penal-en-nunoa/
+  notas: "Cobertura de la detención: salida de Monsalve con detectives a las 10:43 desde su departamento en Viña del Mar."
+eldinamo-2024-11-19-monsalve-prision-preventiva:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Manuel Monsalve queda en prisión preventiva tras ser formalizado por violación y abuso sexual"
+  autor: El Dínamo
+  fecha: 2024-11-19
+  url: https://www.eldinamo.cl/pais/2024/11/19/manuel-monsalve-prision-preventiva-tras-ser-formalizado-por-violacion-y-abuso-sexual/
+  notas: "Segunda jornada de formalización: el juez del 7° Juzgado de Garantía de Santiago, Mario Cayul, decretó prisión preventiva por peligro para la seguridad de la sociedad."
+theclinic-2026-06-05-operacion-tokio-masacre-lavado:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Operación Tokio: 'el after' que terminó en masacre y llevó a desmantelar la red de lavado de dinero del Tren de Aragua y detener a un ejecutivo bancario"
+  autor: Jaime Pinochet
+  fecha: 2026-06-05
+  url: https://www.theclinic.cl/2026/06/05/operacion-tokio-el-after-que-termino-en-masacre-y-llevo-a-desmantelar-la-red-de-lavado-de-dinero-del-tren-de-aragua-y-detener-a-un-ejecutivo-bancario/
+  notas: "Reportaje principal de la Operación Tokio: más de $78 mil millones lavados, sociedades fachada BexDigital/BexGroup, liderazgo de Carlos 'Bobby' Gómez Moreno desde la cárcel La Picota en Bogotá."
+theclinic-2026-06-08-operacion-tokio-bancoestado:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Operación Tokio suma a ejecutiva del BancoEstado: fue formalizada junto a otros 16 imputados"
+  autor: Michelle Gamboa
+  fecha: 2026-06-08
+  url: https://www.theclinic.cl/2026/06/08/operacion-tokio-suma-a-ejecutiva-del-bancoestado-fue-formalizada-junto-a-otros-16-imputados/
+  notas: "Revelación del fiscal Héctor Barros: una de las formalizadas se desempeñaba como ejecutiva de BancoEstado; confirma a José Carlos Pérez Asencio (Santander, 33) como el ejecutivo bancario detenido. Reporta más de $75 mil millones lavados y US$84 millones transferidos al extranjero."
+biobiochile-2026-06-07-formalizacion-tokio-17-imputados:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'Operación Tokio': inicia formalización a 17 imputados vinculados al Tren de Aragua"
+  autor: BioBioChile
+  fecha: 2026-06-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/07/inicia-formalizacion-a-imputados-vinculados-al-tren-de-aragua-por-operacion-tokio.shtml
+  notas: "Formalización de 17 imputados por lavado de dinero y delitos de crimen organizado."
+biobiochile-2026-06-07-prision-preventiva-tokio-14:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Operación Tokio: decretan prisión preventiva para 14 imputados vinculados al Tren de Aragua"
+  autor: BioBioChile
+  fecha: 2026-06-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/06/07/operacion-tokio-decretan-prision-preventiva-para-14-imputados-vinculados-al-tren-de-aragua.shtml
+  notas: "Prisión preventiva para 14 de los 17 formalizados."
+eldinamo-2026-06-09-tokio-allanamiento-bancoestado:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Operación Tokio: qué se llevó la PDI tras allanar sucursal del BancoEstado"
+  autor: El Dínamo
+  fecha: 2026-06-09
+  url: https://www.eldinamo.cl/pais/2026/06/09/operacion-tokio-que-se-llevo-la-pdi-tras-allanar-sucursal-del-bancoestado/
+  notas: "Allanamiento de la sucursal de Huérfanos con Morandé: la detenida era funcionaria de una empresa externa que prestaba servicios al banco (Rossana Blanco)."
+biobiochile-2026-06-25-cmf-bancos-operacion-tokio:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Operación Tokio: CMF confirma que hay aspectos de mejora y situaciones que corregir en los bancos"
+  autor: BioBioChile
+  fecha: 2026-06-25
+  url: https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/06/25/operacion-tokio-cmf-confirma-que-hay-aspectos-de-mejora-y-situaciones-que-corregir-en-los-bancos.shtml
+  notas: "La CMF confirmó aspectos de mejora y situaciones que corregir en la banca tras la Operación Tokio."
+ciper-2026-07-15-fundamenta-pago-13-millones-migueles:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Caso Fundamenta: Fiscalía detecta que Lagos ordenó un pago de $13 millones a pareja de la entonces jueza Vivanco"
+  autor: Paulina Toro, Diego Ortiz, Catalina Olate y Macarena Segovia
+  fecha: 2026-07-15
+  url: https://www.ciperchile.cl/2026/07/15/caso-fundamenta-fiscalia-detecta-que-lagos-ordeno-un-pago-de-13-millones-a-pareja-de-la-entonces-jueza-vivanco/
+  notas: "La Fiscalía Regional de Los Lagos (fiscal Marco Muñoz) detectó que Eduardo Lagos ordenó un depósito de $13 millones a Gonzalo Migueles cuatro días después del fallo a favor de Inmobiliaria Fundamenta; testimonios de funcionarios del Poder Judicial sobre cómo Vivanco apuró el fallo."
+ciper-2026-08-06-fundamenta-gastos-colombia-espana:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Caso Fundamenta: los gastos en Colombia y España que pareja de Vivanco financió tras depósito de $13 millones ordenado por Lagos"
+  autor: CIPER Chile
+  fecha: 2026-08-06
+  url: https://www.ciperchile.cl/2026/08/06/caso-fundamenta-los-gastos-en-colombia-y-espana-que-pareja-de-vivanco-financio-tras-deposito-de-13-millones-ordenado-por-lagos/
+  notas: "Registros bancarios: Migueles liberó el cupo de sus tarjetas (pagos de $3,3 y $6,4 millones) y viajó con Vivanco a Bogotá/Cartagena y a España (Cádiz, Madrid, Valencia, Barcelona, Zaragoza) tras el depósito; Vivanco declaró ante el OS7 el 5 y 6 de agosto."
+elmostrador-2026-08-07-os7-rastreo-13-millones-migueles:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "OS7 rastrea $13 millones recibidos por Migueles y los vincula con arista Fundamenta"
+  autor: El Mostrador
+  fecha: 2026-08-07
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/07/os7-rastrea-13-millones-recibidos-por-migueles-y-los-vincula-con-arista-fundamenta/
+  notas: "Informe reservado del OS7 (25 páginas, 29-jul): Migueles recibió y gastó $126.405.739 entre ene y abr-2023; $9.357.747 al arriendo de la vivienda compartida con Vivanco."
+latercera-2026-08-07-os7-informe-cuenta-migueles:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "El informe del OS7 que analizó la ruta de las platas de la cuenta de Migueles por presunto lavado en caso Fundamenta"
+  autor: María Catalina Batarce y José Carvajal Vega
+  fecha: 2026-08-07
+  url: https://www.latercera.com/nacional/noticia/el-informe-del-os7-que-analizo-la-ruta-de-las-platas-de-la-cuenta-de-migueles-por-presunto-lavado-en-caso-fundamenta/
+  notas: "Análisis pericial de la Sección de Investigación Patrimonial y Anticorrupción de Carabineros sobre el origen y destino de los recursos de Migueles."
+biobiochile-2026-08-06-estado-excepcion-barrios:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno plantea aplicar Estado de Excepción en barrios críticos donde FF.AA. apoyen a Carabineros"
+  autor: BioBioChile
+  fecha: 2026-08-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/06/gobierno-plantea-aplicar-estado-de-excepcion-en-barrios-criticos-donde-ff-aa-apoyen-a-carabineros.shtml
+  notas: "El Gobierno afirma que evalúa un proyecto para implementar un nuevo tipo de Estado de Excepción Constitucional focalizado en barrios críticos, con apoyo de las FF.AA. a Carabineros."
+theclinic-2026-08-05-estado-excepcion-barrios-alvarado:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Gobierno evalúa un nuevo estado de excepción constitucional focalizado en barrios, al mando de Carabineros y con 'colaboración' de las Fuerzas Armadas"
+  autor: Pablo Serey
+  fecha: 2026-08-05
+  url: https://www.theclinic.cl/2026/08/05/gobierno-evalua-un-nuevo-estado-de-excepcion-constitucional-focalizado-en-barrios-al-mando-de-carabineros-y-con-colaboracion-de-las-fuerzas-armadas/
+  notas: "El biministro Claudio Alvarado adelanta en 24 Horas, tras la cadena nacional de la ACOT, el nuevo estado de excepción focalizado bajo el mando de Carabineros con convenios de colaboración de las FF.AA."
+latercera-2026-08-06-estado-excepcion-barrios-carabineros:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Gobierno evalúa implementar estado de excepción en barrios por delincuencia: estarían a cargo de Carabineros con apoyo de las FF.AA."
+  autor: Cristóbal Palacios y Lya Rosen
+  fecha: 2026-08-06
+  url: https://www.latercera.com/politica/noticia/gobierno-evalua-implementar-estado-de-excepcion-en-barrios-por-delincuencia-estarian-a-cargo-de-carabineros-con-apoyo-de-las-ffaa/
+  notas: "Alvarado en 24H (mando de Carabineros, 'restringir la libertad') y Arrau en Mega (protección jurídica para policías y militares en cumplimiento del deber)."
+publimetro-2026-08-07-estado-excepcion:
+  tipo: prensa
+  medio: Publimetro
+  titulo: "Gobierno detalla nuevo estado de excepción: contempla toques de queda, restricciones y escuchas telefónicas en zonas críticas"
+  autor: Angélica Baeza
+  fecha: 2026-08-07
+  url: https://www.publimetro.cl/noticias/2026/08/07/gobierno-detalla-nuevo-estado-de-excepcion-contempla-toques-de-queda-restricciones-y-escuchas-telefonicas-en-zonas-criticas/
+  notas: "Arrau en T13 Central: toques de queda, restricción de reunión, interceptación de telecomunicaciones, FF.AA. en funciones específicas y aumento de plazos de retención administrativa de migrantes irregulares."
+eldinamo-2026-08-07-arrau-estado-excepcion:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Arrau precisó que nuevo estado de excepción de la ACOT incluiría toque de queda e interceptación de telecomunicaciones"
+  autor: El Dínamo
+  fecha: 2026-08-07
+  url: https://www.eldinamo.cl/politica/2026/08/07/arrau-preciso-que-nuevo-estado-de-excepcion-de-la-acot-incluiria-toque-de-queda-e-interceptacion-de-telecomunicaciones/
+  notas: "Corrobora las declaraciones de Arrau: ninguno de los cuatro estados de excepción actuales está diseñado para el crimen organizado y el terrorismo."
+elmostrador-2026-08-06-estado-excepcion-barrios:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Gobierno evalúa Estado de Excepción para barrios críticos con apoyo de las Fuerzas Armadas"
+  autor: El Mostrador
+  fecha: 2026-08-06
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/06/gobierno-evalua-estado-de-excepcion-para-barrios-criticos-con-apoyo-de-las-fuerzas-armadas/
+  notas: "El Ejecutivo estudia la intervención en los barrios críticos del plan ACOT mediante el nuevo estado de excepción con apoyo de las FF.AA."
+defensa-2026-08-07-estado-excepcion:
+  tipo: prensa
+  medio: defensa.com
+  titulo: "Chile estudia un nuevo estado de excepción constitucional focalizado en determinados sectores o barrios bajo mando de Carabineros y apoyo de Fuerzas Armadas"
+  autor: defensa.com
+  fecha: 2026-08-07
+  url: https://www.defensa.com/chile/chile-evalua-nuevo-estado-excepcion-constitucional-para-combatir
+  notas: "Portal especializado en defensa corrobora el estado de excepción focalizado bajo mando de Carabineros con apoyo de las FF.AA."
+nostalgica-2026-08-07-arrau-ffaa:
+  tipo: prensa
+  medio: Nostálgica
+  titulo: "'Para ciertas funciones específicas': Arrau explica posibilidad de que Fuerzas Armadas intervengan en zonas críticas"
+  autor: Nostálgica
+  fecha: 2026-08-07
+  url: https://www.nostalgica.cl/para-ciertas-funciones-especificas-arrau-explica-posibilidad-de-que-fuerzas-armadas-intervengan-en-zonas-criticas/
+  notas: "Radio regional corrobora la entrevista de Arrau a T13 Central sobre el quinto estado de excepción y las FF.AA. en 'funciones específicas'."
+chicureohoy-2026-08-08-militares-estado-excepcion:
+  tipo: prensa
+  medio: Chicureo Hoy
+  titulo: "Militares en las calles: Gobierno impulsa nuevo estado de excepción"
+  autor: Chicureo Hoy
+  fecha: 2026-08-08
+  url: https://www.chicureohoy.cl/actualidad/militares-en-las-calles-gobierno-impulsa-nuevo-estado-de-excepcion/
+  notas: "Medio local corrobora el quinto estado de excepción 'más simple', el contexto de los reveses del TC y las reacciones de Longton, Bianchi y Castro."
+estapasando-2026-08-07-arrau-ffaa:
+  tipo: prensa
+  medio: Estás Pasando
+  titulo: "Ministro Arrau abre la puerta a participación de las FF.AA. en zonas críticas por crimen organizado"
+  autor: EstaPasando
+  fecha: 2026-08-07
+  url: https://estapasando.cl/politica/ministro-arrau-abre-la-puerta-a-participacion-de-las-ff-aa-en-zonas-criticas-por-crimen-organizado/
+  notas: "Corrobora que el nuevo estado de excepción permitiría reforzar operativos en sectores afectados por narcotráfico y terrorismo."
 
+
+
+
+
+elciudadano-2026-08-08-aclara-contratistas-militares:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Confirman que contratistas militares estarían detrás del proyecto minero de Aclara en Penco: organizaciones alertan de 'situación geopolítica compleja'"
+  autor: Seguel Alfredo
+  fecha: 2026-08-08
+  url: https://www.elciudadano.com/actualidad/confirman-que-contratistas-militares-estarian-detras-del-proyecto-minero-de-aclara-en-penco-organizaciones-alertan-de-situacion-geopolitica-compleja/08/08/
+resumen-2026-08-05-aclara-contratistas-militares:
+  tipo: prensa
+  medio: Resumen.cl
+  titulo: "Tierras raras: director financiero de Aclara confirma que contratistas militares figuran entre sus usuarios finales"
+  autor: Equipo editorial de Resumen.cl
+  fecha: 2026-08-05
+  url: https://resumen.cl/articulos/tierras-raras-director-financiero-de-aclara-confirma-que-contratistas-militares-figuran-entre-sus-usuarios-finales
+reporteminero-2026-06-08-aclara-cap-aprobacion-ambiental:
+  tipo: prensa
+  medio: Reporte Minero
+  titulo: "Proyecto de tierras raras de Aclara y Grupo CAP obtiene aprobación ambiental en Biobío"
+  autor: Miguel Rifo
+  fecha: 2026-06-08
+  url: https://www.reporteminero.cl/noticia/noticias/2026/06/aclara-grupo-cap-aprobacion-ambiental-tierras-raras-biobio
+emol-2026-03-17-rebaja-impuestos-crecimiento-debate:
+  tipo: prensa
+  medio: Emol
+  titulo: "¿Se compensa la baja de impuestos con mayor crecimiento? El intenso debate que abrió el plan de Kast"
+  autor: José Tomás Guzmán
+  fecha: 2026-03-17
+  url: https://www.emol.com/noticias/Economia/2026/03/17/1194460/kast-impuesto-corporativo-chile.html
+t13-2026-04-15-kast-impuesto-empresas-23:
+  tipo: prensa
+  medio: T13
+  titulo: "'Chile compite contra el estancamiento': ¿Cómo sería la rebaja del impuesto corporativo que propone Kast?"
+  autor: Daniela Lobos
+  fecha: 2026-04-15
+  url: https://www.t13.cl/noticia/nacional/chile-compite-contra-estancamiento-kast-tras-proponer-reducir-impuesto-empresas-15-4-2026
+elmostrador-2026-04-11-hacienda-rebaja-impuesto-riesgo-fiscal:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Hacienda apuesta a bajar impuesto corporativo: expertos advierten riesgo fiscal y sesgo proempresa"
+  autor: Carlos Saldivia
+  fecha: 2026-04-11
+  url: https://www.elmostrador.cl/noticias/pais/2026/04/11/hacienda-apuesta-a-bajar-impuesto-corporativo-expertos-advierten-riesgo-fiscal-y-sesgo-proempresa/
+exante-2026-04-22-10-cambios-tributarios-kast:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "Los 10 cambios tributarios del plan de Kast: qué cambia, a quién beneficia y el costo fiscal del paquete"
+  autor: Ex-Ante
+  fecha: 2026-04-22
+  url: https://www.t13.cl/noticia/ex-ante/politica/los-10-cambios-tributarios-del-plan-kast-cambia-quien-beneficia-costo-fiscal-de-22-4-2026
+  notas: "Artículo de Ex-Ante reproducido por T13 el día del ingreso del proyecto al Congreso."
+eldiariodesantiago-2026-05-14-comision-hacienda-articulo-impuesto-empresas:
+  tipo: prensa
+  medio: El Diario de Santiago
+  titulo: "Gran triunfo del Gobierno: Aprobado el artículo que rebaja el impuesto a las empresas, corazón de la megarreforma"
+  autor: El Diario de Santiago
+  fecha: 2026-05-14
+  url: https://eldiariodesantiago.cl/2026/05/14/gran-triunfo-del-gobierno-aprobado-el-articulo-que-rebaja-el-impuesto-a-las-empresascorazon-de-la-megarreforma/
+  notas: "Nota con redacción automatizada (el propio sitio lo declara). Datos específicos: aprobación del artículo 10 en la Comisión de Hacienda de la Cámara (9-1-3) y cruce Quiroz-Hassler. Usar con cautela y cruzar con otros medios."
+biobiochile-2026-07-15-senado-26-24-rebaja-impuestos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Senado aprueba por 26 votos contra 24 la rebaja del impuesto a las empresas y reintegración tributaria"
+  autor: BioBioChile
+  fecha: 2026-07-15
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/07/15/senado-aprueba-por-26-votos-contra-24-la-rebaja-del-impuesto-a-las-empresas-y-reintegracion-tributaria.shtml
+elpais-2026-08-04-quiroz-gran-logro-rebaja-impuestos:
+  tipo: prensa
+  medio: El País (Chile)
+  titulo: "Jorge Quiroz y su gran logro: impulsar la primera rebaja de impuestos a las grandes empresas en cuatro décadas"
+  autor: Maolis Castro
+  fecha: 2026-08-04
+  url: https://elpais.com/chile/2026-08-04/jorge-quiroz-y-su-gran-logro-impulsar-la-primera-rebaja-de-impuestos-a-las-grandes-empresas-en-cuatro-decadas.html
+diarioconstitucional-2026-08-07-impuesto-corporativo-23:
+  tipo: prensa
+  medio: Diario Constitucional
+  titulo: "Se baja a 23% el impuesto corporativo"
+  autor: Diario Constitucional
+  fecha: 2026-08-07
+  url: https://www.diarioconstitucional.cl/2026/08/07/se-baja-a-23-el-impuesto-corporativo/
+  notas: "Análisis técnico-legal de la rebaja gradual del Impuesto de Primera Categoría (27%→23% hacia 2029) y del ajuste de los pagos provisionales mensuales (PPM) 2027-2029. Imagen generada con IA (ChatGPT/Elke)."
+24horas-2026-08-08-guia-megarreforma-cambios:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "Megarreforma aprobada: ¿Qué cambia para las empresas y para tu bolsillo?"
+  autor: 24 Horas
+  fecha: 2026-08-08
+  url: https://www.24horas.cl/actualidad/nacional/guia-definitiva-megarreforma-cambios-empresas-tu-bolsillo
+  notas: "Guía explicativa de la megarreforma publicada tras el despacho del 4 de agosto; fecha de publicación aproximada."
+g5noticias-2026-03-30-hermosilla-rebaja-impuestos-crecimiento:
+  tipo: prensa
+  medio: G5 Noticias
+  titulo: "La rebaja de impuestos del 27% al 23%, realmente ¿generará crecimiento económico?"
+  autor: Dr. Jonathan Hermosilla Cortés
+  fecha: 2026-03-30
+  url: https://g5noticias.cl/2026/03/30/la-rebaja-de-impuestos-del-27-al-23-realmente-generara-crecimiento-economico-por-dr-jonathan-hermosilla-cortes-vicedecano-facultad-de-economia-gobierno-y-comunicaciones-universidad-centra/
+  notas: "Columna de opinión del vicedecano de la Facultad de Economía, Gobierno y Comunicaciones de la Universidad Central (sede Coquimbo), crítica a la premisa de que la rebaja tributaria se autofinancia vía crecimiento. Sindicada también por La Tribuna, Diario Emprende, El Periodista, AricaOnline y El Informador."
+ellibertario-2026-06-09-reforma-tributaria-impuesto-23:
+  tipo: prensa
+  medio: El Libertario
+  titulo: "Reforma tributaria: el impuesto a las empresas bajaría del 27% al 23%"
+  autor: Francisco Friderichsen
+  fecha: 2026-06-09
+  url: https://www.ellibertario.cl/noticias/reforma-tributaria-tasa-23-empresas-chile
+  notas: "Análisis a favor de la rebaja del impuesto corporativo (150 mil empresas concentran ~90% de la inversión privada; recaudación chilena ~21% del PIB vs ~34% OCDE)."
+nuevopoder-2024-01-05-marcel-rebaja-impuesto-27-23:
+  tipo: prensa
+  medio: Nuevo Poder
+  titulo: "Marcel no descartó rebajar impuesto a empresas del 27% al 23%"
+  autor: Nuevo Poder
+  fecha: 2024-01-05
+  url: https://www.nuevopoder.cl/marcel-no-descarto-rebajar-impuesto-a-empresas-del-27-al-23/
+  notas: "Cobertura del seminario 'Visión económica 2024: cómo crecer al 4%' de la Sofofa (enero 2024): Mario Marcel abierto a debatir la propuesta gremial de 23%, por debajo del 25% del Gobierno; fecha de publicación aproximada."
+eldesconcierto-2024-01-03-pacto-fiscal-contrapropuesta-27-23:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Pacto Fiscal: Empresarios y contrapropuesta con reducción de impuestos de 27% a 23%"
+  autor: El Desconcierto
+  fecha: 2024-01-03
+  url: https://eldesconcierto.cl/2024/01/03/pacto-fiscal-empresarios-y-contrapropuesta-con-reduccion-de-impuestos-de-27-a-23
+latercera-2026-08-08-arrau-megaoperativo-5000-policias:
+  tipo: prensa
+  medio: La Tercera
+  titulo: 'Arrau encabeza megaoperativo con más de 5.000 policías y destaca agenda para fortalecer su protección'
+  autor: La Tercera
+  fecha: 2026-08-08
+  url: https://www.latercera.com/nacional/noticia/arrau-encabeza-megaoperativo-con-mas-de-5000-policias-y-destaca-agenda-para-fortalecer-su-proteccion/
+latercera-2026-08-08-megaoperativo-mas-600-detenidos-ronda-nacional:
+  tipo: prensa
+  medio: La Tercera
+  titulo: 'Megaoperativo de Carabineros y PDI: más de 600 personas son detenidas durante ronda nacional de seguridad'
+  autor: La Tercera
+  fecha: 2026-08-08
+  url: https://www.latercera.com/nacional/noticia/megaoperativo-de-carabineros-y-pdi-mas-de-600-personas-son-detenidas-durante-ronda-nacional-de-seguridad/
+biobiochile-2026-08-07-slep-orostegui-multa:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Revelan que nueva directora de SLEP Puerto Cordillera fue multada por salir de Chile con licencia"
+  autor: BioBioChile
+  fecha: 2026-08-07
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-coquimbo/2026/08/07/revelan-que-nueva-directora-de-slep-puerto-cordillera-fue-multada-por-salir-de-chile-con-licencia.shtml
+  notas: "Julia Oróstegui, directora ejecutiva del SLEP Puerto Cordillera designada por Kast vía ADP, fue multada por viajar al extranjero con licencia médica. Presentación oficial el 5 de agosto por Pedro Larraín (Director de Educación Pública) y Marcelo Salvo (seremi Educación Coquimbo)."
+biobiochile-2026-08-09-slep-orostegui-defensa:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Nueva directora de SLEP Puerto Cordillera defiende su nombramiento pese a cuestionamientos"
+  autor: BioBioChile
+  fecha: 2026-08-09
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-coquimbo/2026/08/09/nueva-directora-de-slep-puerto-cordillera-defiende-su-nombramiento-pese-a-cuestionamientos.shtml
+  notas: "Oróstegui atribuye su salida del país a una urgencia médica por enfermedad autoinmune, no a fines recreativos; multa del 20% de remuneraciones, espera notificación de Contraloría para pagar."
+latercera-2026-08-09-quiroz-comision-estatuto-administrativo:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Quiroz anuncia comisión transversal para abordar estatuto administrativo y anticipa definición de nuevo subsecretario"
+  autor: Sebastián Escobar F.
+  fecha: 2026-08-09
+  url: https://www.latercera.com/pulso/noticia/quiroz-anuncia-comision-transversal-para-abordar-estatuto-administrativo-y-anticipa-definicion-de-nuevo-subsecretario/
+  notas: "Entrevista a Jorge Quiroz en Estadio Nacional (TVN): comisión transversal dirigida por economista independiente para el estatuto administrativo; nuevo subsecretario de Hacienda 'la semana que viene'; TC debería pronunciarse sobre la megarreforma durante agosto; mercado de capitales como siguiente tema."
+biobiochile-2026-08-08-carmona-tercera-cuba-diaz-canel:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Lautaro Carmona viaja por tercera vez a Cuba y se reúne con Miguel Díaz-Canel"
+  autor: BioBioChile
+  fecha: 2026-08-08
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/08/lautaro-carmona-viaja-por-tercera-vez-a-cuba-y-se-reune-con-miguel-diaz-canel.shtml
+  notas: "Tercera visita de Carmona a Cuba junto a Bárbara Figueroa por los 100 años del natalicio de Fidel Castro (13 de agosto). Reunión con Díaz-Canel: 'agenda interpartidista' y 'relaciones de solidaridad y cooperación'."
+biobiochile-2026-08-07-diputados-pc-censuradora-udi:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Diputados PC tachan de 'censuradora' ofensiva de la UDI por viaje a Cuba y recuerdan apoyo a Pinochet"
+  autor: BioBioChile
+  fecha: 2026-08-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/07/diputados-pc-tachan-de-censuradora-ofensiva-de-la-udi-por-viaje-a-cuba-y-recuerdan-apoyo-a-pinochet.shtml
+  notas: "Respuesta del PC al oficio UDI ante el Servel: Luis Cuello ('actitud censuradora'), Boris Barrera (apoyo UDI a Pinochet); contexto: Carmona y Figueroa en La Habana por el I Coloquio Internacional 'Fidel: legado y futuro'."
+latercera-2026-08-09-kaiser-ley-karin-detractores:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Kaiser critica a detractores de suspensión de la ley Karin y acusa que 'no quieren hacerse cargo del desastre causado'"
+  autor: Javiera Ortiz
+  fecha: 2026-08-09
+  url: https://www.latercera.com/politica/noticia/kaiser-critica-a-detractores-de-suspension-de-la-ley-karin-y-acusa-que-no-quieren-hacerse-cargo-del-desastre-causado/
+  notas: "Kaiser respalda el proyecto de suspensión por 5 años y critica a sus detractores ('El populismo es el peor enemigo de la democracia'); Gael Yeomans (FA): 'Suspender por cinco años una ley de protección es derogarla con anestesia'. Cifras: 66 mil denuncias a diciembre 2025, ~22 mil por semestre, demoras de 6-9 meses."
+elmostrador-2026-08-09-horvitz-retiro-chats:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Horvitz califica de preocupante retiro de chats entre Chadwick y Hermosilla para 'depurarlos'"
+  autor: Carlos Basso Prieto
+  fecha: 2026-08-09
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/09/horvitz-califica-de-preocupante-retiro-de-chats-entre-chadwick-y-hermosilla-para-depurarlos/
+  notas: "Entrevista a María Inés Horvitz, querellante en el caso contra Manuel Guerra: chats Chadwick-Hermosilla fueron bajados de la carpeta virtual 'para depurarlos'; ella y Daza marginados de las tratativas; crítica al abreviado ofrecido a Guerra y a la lentitud de la formalización de Hermosilla."
+latercera-2026-08-09-red-internacional-johannes-kaiser:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "La red internacional de Johannes Kaiser"
+  autor: Andrés Gómez
+  fecha: 2026-08-09
+  url: https://www.latercera.com/politica/noticia/la-red-internacional-de-johannes-kaiser/
+  notas: "Fragmentos del libro de Benjamín Bravo y Francisco Lucero: red del PNL con el mileísmo (Viva la Derecha Fest, CPAC), Fundación Faro con Axel Kaiser, nexo Sturzenegger-Caputo, Victor Espinosa y el equipo de Trump."
+araucaniadiario-2026-08-08-riquelme-seguimiento-pdi:
+  tipo: prensa
+  medio: Araucanía Diario
+  titulo: "Abogada de los hijos de Julia Chuñil habría sido 'seguida' y fotografiada por la PDI"
+  autor: Araucanía Diario
+  fecha: 2026-08-08
+  url: https://araucaniadiario.cl/contenido/34714/abogada-de-los-hijos-de-julia-chunil-habria-sido-seguida-y-fotografiada-por-la-p
+  notas: "La defensa de Karina Riquelme presentó un recurso de amparo por la vigilancia policial 'ilegal' de la que fue objeto en Río Bueno."
+cnnchile-2026-08-08-portonazo-escolta-cordero:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Escolta del exministro Luis Cordero frustra portonazo a disparos en Vitacura: Persecución terminó con cinco detenidos"
+  autor: CNN Chile
+  fecha: 2026-08-08
+  url: https://www.cnnchile.com/pais/escolta-luis-cordero-frustra-portonazo-vitacura/
+  notas: "21:55 horas en Texas con Pasadena (Vitacura); escolta del equipo PPI de Carabineros disparó su arma de servicio; persecución desde Vitacura hasta Lo Espejo; cinco detenidos y revólver incautado."
+biobiochile-2026-08-09-prision-preventiva-asalto-escolta-cordero:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Prisión preventiva para tres imputados por intento de asalto a escolta de Luis Cordero"
+  autor: BioBioChile
+  fecha: 2026-08-09
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/09/prision-preventiva-para-tres-imputados-por-intento-de-asalto-a-escolta-de-luis-cordero.shtml
+  notas: "Formalización el 9 de agosto: 3 adultos y un adolescente de 14 años; robo con intimidación, porte ilegal y receptación de arma; prisión preventiva para los adultos e internación provisoria para el menor; revólver Taurus con denuncia de robo en San Bernardo; plazo de 90 días."
+biobiochile-2026-08-01-lewi-gaza-milicianos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Embajador de Israel en Chile cuestiona cifra de muertos en Gaza y dice que la mayoría 'son milicianos'"
+  autor: BioBioChile
+  fecha: 2026-08-01
+  url: https://www.biobiochile.cl/noticias/internacional/mediooriente/2026/08/01/embajador-de-israel-cuestiona-cifra-de-muertos-en-gaza-y-culpa-a-hamas-la-mayoria-son-milicianos.shtml
+  notas: "Peleg Lewi: 'la mayoría de los muertos (...) son milicianos'; Israel no desea quedarse en Gaza; comentó el anuncio de Trump sobre desarme total de Hamás. Cifras del Ministerio de Sanidad de Gaza: 73.340 muertos desde el 7-10-2023."
+elmostrador-2026-08-09-quiroz-ley-miscelanea:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Quiroz abre nueva ofensiva tras Ley Miscelánea: mercado de capitales y estatuto administrativo"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-09
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/09/quiroz-abre-nueva-ofensiva-tras-ley-miscelanea-mercado-de-capitales-y-estatuto-administrativo/
+  notas: "Cobertura del anuncio de Quiroz en 'Estado Nacional' de TVN: 'Esto es el fin del comienzo'; comisión transversal para un nuevo estatuto administrativo encabezada por economista independiente (nombre la próxima semana); reforma al mercado de capitales en septiembre (pymes, tasa máxima convencional, 250-300 mil personas fuera del sistema financiero); defensa del ajuste de combustibles (el Estado no debe subsidiar el diésel, pérdidas US$2.000 millones)."
+latercera-2026-08-09-carmona-cuba:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Lautaro Carmona (PC) arriba por tercera vez a Cuba y se reúne con presidente Miguel Díaz-Canel"
+  autor: La Tercera
+  fecha: 2026-08-09
+  url: https://www.latercera.com/politica/noticia/lautaro-carmona-pc-arriba-por-tercera-vez-a-cuba-y-se-reune-con-presidente-miguel-diaz-canel/
+  notas: "Cobertura secundaria del tercer viaje de Carmona a Cuba y su reunión con Díaz-Canel, junto a Bárbara Figueroa, por los 100 años del natalicio de Fidel Castro."
+diarioeldia-2026-08-08-slep-orostegui-sancion:
+  tipo: prensa
+  medio: El Día
+  titulo: "Directora de SLEP Puerto Cordillera responde a sanción: 'Fue por una urgencia médica'"
+  autor: Equipo El Día
+  fecha: 2026-08-08
+  url: https://www.diarioeldia.cl/noticias/2026/08/08/147163-directora-de-slep-puerto-cordillera-responde-a-sancion-fue-por-una-urgencia-medica
+  notas: "Detalle del sumario: multa del 20% por salir del país con licencia médica durante 2025 en el SLEP Chinchorro (Arica); ratificada por Contraloría (Resolución Exenta N°3781 del 30-mar-2026, firme sin recursos); Oróstegui dice que fue una urgencia dental en Tacna de 6-7 horas el mismo día, acreditada con informe PDI; salida del SLEP Chinchorro por pérdida de confianza política, no por el sumario."
+cnnchile-2026-03-07-trump-felicita-kast:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Trump felicita a Kast por triunfo presidencial en cumbre Escudo de las Américas: 'Me encanta cuando apoyo a alguien y no pierde'"
+  autor: CNN Chile
+  fecha: 2026-03-07
+  url: https://www.cnnchile.com/mundo/trump-felicita-a-kast-escudo-de-las-americas/
+  notas: "Detalle del saludo de Trump a Kast en la inauguración de la cumbre: 'Me piden apoyo, doy el apoyo y ganan por 30 puntos', '¿Hay alguna forma en la que me puedan pagar por esto?', 'Lo hago porque pienso que eres bueno'. En su discurso de apertura, Trump repasó operaciones contra Irán ('en tres días hemos noqueado 42 embarcaciones')."
+theclinic-2026-03-07-saludo-kast-trump:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "El saludo entre Kast y Trump en la cumbre en Miami y el reconocimiento que recibió por parte del presidente de EE.UU. tras su triunfo"
+  autor: Ignacia Munita
+  fecha: 2026-03-07
+  url: https://www.theclinic.cl/2026/03/07/el-saludo-entre-kast-y-trump-en-la-cumbre-en-miami-y-el-reconocimiento-que-recibio-por-parte-del-presidente-de-ee-uu-tras-su-triunfo/
+  notas: "Registro de la inauguración de la cumbre Escudo de las Américas: Trump nombró una a una a las autoridades y dedicó a Kast su felicitación, bromeando con que 'me ruegan por un apoyo y ganan por hasta 30 puntos y no recibo nada'."
+eldinamo-2026-03-08-kast-regresa-miami:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Kast regresa de Miami con una agenda de seguridad regional: vuelos de repatriación, lucha 'anticartel' y cooperación con Trump"
+  autor: El Dínamo
+  fecha: 2026-03-08
+  url: https://www.eldinamo.cl/politica/2026/03/07/kast-regresa-de-miami-con-una-agenda-de-seguridad-regional-vuelos-de-repatriacion-lucha-anticartel-y-cooperacion-con-trump/
+  notas: "Agenda de retorno del presidente electo tras la cumbre: crisis migratoria venezolana, coordinación contra el crimen organizado y una eventual asociación tecnológica con Estados Unidos; su futuro canciller Francisco Pérez Mackenna sumó el eje económico como parte de la estrategia de seguridad."
+biobiochile-2026-03-11-eeuu-colombia-escudo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "EEUU dejó fuera a Colombia del Escudo de las Américas por 'no cooperar lo suficiente' contra el narco"
+  autor: BioBioChile
+  fecha: 2026-03-11
+  url: https://www.biobiochile.cl/noticias/internacional/america-latina/2026/03/11/eeuu-dejo-fuera-a-colombia-del-escudo-de-las-americas-por-no-cooperar-lo-suficiente-contra-el-narco.shtml
+  notas: "La Casa Blanca afirmó que no invitó a Colombia a la alianza Escudo de las Américas por no cooperar lo suficiente contra el narcotráfico, definiendo el criterio de membresía de la coalición lanzada en la cumbre de Miami."
+elclarin-2026-03-12-escudo-patio-trasero:
+  tipo: prensa
+  medio: El Clarín de Chile
+  titulo: "El Escudo de las Américas: el retorno del 'patio trasero'"
+  autor: El Clarín de Chile
+  fecha: 2026-03-12
+  url: https://www.elclarin.cl/2026/03/12/el-escudo-de-las-americas-el-retorno-del-patio-trasero/
+  notas: "Análisis de la cumbre de Miami titulado 'El retorno del patio trasero'; el título evoca la crítica al esquema de dominación hemisférica de Washington. Verificado solo el título (vía catálogo de sitemaps), no el cuerpo del artículo."

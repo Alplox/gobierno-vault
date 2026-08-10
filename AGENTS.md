@@ -126,6 +126,16 @@ actualizado: 2026-07-20
 - Fuentes se numeran secuencialmente por primera aparicion en el doc.
 - Misma fuente reutiliza su numero en todas sus repeticiones.
 - `[[source/...]]` genera anchor a `#ref-N` en la seccion de Referencias.
+
+#### Medios de prensa en prosa (convencion de wikilinks)
+
+Los medios de prensa se registran como **organizaciones** (`entities.yaml` > `organizations`, `tipo: medio_comunicacion`) y se referencian en prosa con `[[org/id]]` siempre que se los mencione como actor o punto de partida de un evento ("según T13", "reveló CIPER", "El Dínamo complementó"). Esto estandariza el nombre visible (renderiza el `nombre` del YAML) y evita ambiguedades como "El País (Chile)" (el medio, no el país).
+
+- **Nombre canonico**: el campo `nombre` del YAML es lo que renderiza el wikilink. Usar el nombre comercial del medio (ej. `nombre: BioBioChile`, `nombre: El País (Chile)`), no variantes del campo `medio:` de `sources.yaml`.
+- **`sources.yaml`**: el campo `medio:` debe usar el MISMO nombre canonico que la org (ej. `medio: El País (Chile)`, no "El País" ni "El País Chile"). Si el medio tiene edicion chilena y homonimo extranjero, incluir "(Chile)".
+- **Redes sociales** (Reddit r/chile, X/Twitter, YouTube): `tipo: red_social` en organizations; solo complementarias, nunca fuente unica (ver TAREAS.md).
+- **ID de org**: snake_case del nombre (ej. `el_pais`, `24_horas`, `radio_universidad_chile`, `adn_radio`). Revisar `entities.yaml` antes de crear uno nuevo (hay ~54 medios registrados).
+- **Herramienta**: `pnpm run add-source -- <URL>` mapea dominio → medio; si el medio no esta registrado como org, agregarlo a `entities.yaml`.
 - **IDs de evento desnudos en prosa** (ej. `ver evento 20260618-3`) se auto-enlazan
   a la página de detalle con su título como texto del enlace (`remarkWikiLinks.mjs`,
   patrón `\b20\d{6}-\d{1,3}\b`). Solo se enlazan si el ID existe en el índice.
@@ -170,6 +180,7 @@ El equipo presidencial decidió interponer denuncia ante la PDI [[source/theclin
 |---|---|---|
 | Personas | `entities.yaml` > `people` | `getPeopleRegistry()` |
 | Organizaciones | `entities.yaml` > `organizations` | `getOrgsRegistry()` |
+| Medios de prensa | `entities.yaml` > `organizations` (`tipo: medio_comunicacion`) | `getOrgsRegistry()` |
 | Cifras | `entities.yaml` > `cifras` | `getCifrasRegistry()` |
 | Fuentes | `sources.yaml` | `getSourcesRegistry()` |
 | Temas | `topics.yaml` | `getTopicsRegistry()` |
@@ -266,6 +277,7 @@ Solo agregar fechas verificables (de eventos/notas). Dependencia `mermaid` en `p
 
 - `entities.yaml`: agregar persona/org/cifra nueva en su seccion correspondiente.
 - `sources.yaml`: formato `id-slug: { tipo, medio, titulo, autor, fecha, url }`.
+- **Campo `medio:` de `sources.yaml`**: debe ser EXACTAMENTE el `nombre` de una org de prensa de `entities.yaml` (tipo `medio_comunicacion` | `red_social` | `canal_television` | `programa_tv` | `programa_streaming`). Si el emisor NO es prensa (institucion del Estado, encuestadora, plataforma social/documento, publicacion academica), usar el nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate.mjs`. `pnpm run validate` (corre antes del build) falla con el ID de la fuente si el `medio:` no cumple la regla, y detecta mojibake de doble-encoding UTF-8 en los 5 YAML de datos.
 - `topics.yaml`: formato `id: { nombre, descripcion, relacionados: [] }`.
 - `colectivos.yaml` / `sectores.yaml`: agregar string al array plano.
 
@@ -570,14 +582,14 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 650
+**Total de eventos:** 661
 
-**Cobertura de fuentes:** 368 de 650 eventos con 3+ fuentes (282 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 377 de 661 eventos con 3+ fuentes (284 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 515
+- 2026: 524
 - 2025: 40
-- 2024: 15
+- 2024: 17
 - 2023: 12
 - 2022: 14
 - 2021: 8
@@ -593,32 +605,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (252)
-- Justicia (126)
-- Economia (122)
-- Defensa y seguridad (85)
-- Administración pública (76)
+- Politica (257)
+- Justicia (130)
+- Economia (124)
+- Defensa y seguridad (88)
+- Administración pública (78)
 - Derechos humanos (63)
+- Finanzas publicas (59)
 - Proceso legislativo (58)
-- Finanzas publicas (57)
 - Cambios en el gabinete (56)
 - Emergencia y catástrofes (54)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (150)
+- accion (153)
 - declaracion (90)
-- reaccion (86)
-- publicacion (68)
+- reaccion (87)
+- publicacion (70)
 - resultado (65)
-- investigacion (59)
-- anuncio (48)
+- investigacion (63)
+- anuncio (49)
 - fallo_judicial (26)
 - votacion (14)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 740
-- Organizaciones: 401
-- Cifras: 454
-- Fuentes: 2124
+- Personas: 775
+- Organizaciones: 603
+- Cifras: 464
+- Fuentes: 2186
 - Temas: 74

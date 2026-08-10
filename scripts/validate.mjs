@@ -21,6 +21,131 @@ const sectoresData = readYaml('sectores.yaml');
 const validColectivos = new Set(Array.isArray(colectivosData) ? colectivosData : Object.keys(colectivosData));
 const validSectores = new Set(Array.isArray(sectoresData) ? sectoresData : Object.keys(sectoresData));
 
+// Regla AGENTS.md (convención de medios): el campo `medio:` de cada fuente en
+// sources.yaml debe ser EXACTAMENTE el nombre (`nombre`) de una org de prensa
+// (tipo medio_comunicacion / red_social / canal_television / programa_tv /
+// programa_streaming) registrada en entities.yaml, o estar en la lista blanca
+// de instituciones/plataformas/documentos (que no son "medios de prensa" y por
+// lo tanto no requieren org). Esto impide que las variantes de nombre (y el
+// mojibake de doble-encoding UTF-8) vuelvan a degradar la convención.
+const entitiesData = readYaml('entities.yaml');
+const orgsData = entitiesData.organizations ?? {};
+const MEDIA_ORG_TYPES = new Set([
+  'medio_comunicacion',
+  'red_social',
+  'canal_television',
+  'programa_tv',
+  'programa_streaming',
+]);
+const mediaOrgNames = new Set(
+  Object.values(orgsData)
+    .filter((o) => o && MEDIA_ORG_TYPES.has(o.tipo) && typeof o.nombre === 'string')
+    .map((o) => o.nombre)
+);
+
+// Lista blanca: instituciones del Estado, organismos, encuestadoras,
+// plataformas sociales/documentos y publicaciones académicas que aparecen como
+// `medio:` de una fuente pero NO son medios de prensa (no necesitan org).
+// Solo agregar aquí lo que deliberadamente no sea prensa; los medios de prensa
+// nuevos deben registrarse en entities.yaml con tipo medio_comunicacion.
+const WHITELIST_MEDIOS = new Set([
+  'Senado de Chile',
+  'Gobierno de Chile',
+  'Gobierno de Chile (gob.cl)',
+  'Gob.cl',
+  'Gobierno de Santiago (GORE Metropolitano)',
+  'Presidencia de Chile',
+  'Presidencia de la República',
+  'Prensa Presidencia',
+  'SENAPRED',
+  'Ministerio de Hacienda',
+  'Ministerio de Salud',
+  'Ministerio de Salud (Minsal)',
+  'Ministerio del Interior',
+  'Subsecretaria del Interior',
+  'Subsecretaría del Interior',
+  'Ministerio de Obras Públicas',
+  'Ministerio de Vivienda y Urbanismo',
+  'Ministerio del Trabajo y Previsión Social',
+  'Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)',
+  'Ministerio de Seguridad Pública',
+  'Ministerio Secretaría General de Gobierno',
+  'Contraloría General de la República',
+  'Poder Judicial de Chile',
+  'Tribunal de la Libre Competencia',
+  'Tribunal de Defensa de la Libre Competencia',
+  'Fiscalía Nacional Económica',
+  'Fiscalía de Chile (División de Estudios, Unidad de DDHH)',
+  'Servicio Electoral (Servel)',
+  'Dirección de Presupuestos (DIPRES)',
+  'Tesorería General de la República',
+  'Instituto Nacional de Estadísticas (INE)',
+  'Banco Central de Chile',
+  'Codelco',
+  'Archivo Nacional de Chile',
+  'Biblioteca del Congreso Nacional',
+  'Biblioteca del Congreso Nacional (LeyChile)',
+  'Biblioteca del Congreso Nacional (Ley Chile)',
+  'BCN Historia de la Ley',
+  'Actualidad Jurídica DOE',
+  'Portal de Datos Abiertos del Estado (datos.gob.cl)',
+  'Delegación Presidencial Regional de La Araucanía',
+  'Delegación Presidencial Regional de Antofagasta',
+  'Consejo de Monumentos Nacionales',
+  'Municipalidad de Santiago',
+  'Municipalidad de Santiago (munistgo.cl)',
+  'Municipalidad de Antofagasta',
+  'Municipalidad de Coquimbo',
+  'Partido Republicano de Chile',
+  'Embajada de China en Chile',
+  'Centro de Estudios Públicos',
+  'Foro Madrid',
+  'La Vía Campesina',
+  'Chile Mejor Sin TLC',
+  'Observatorio de Datos UAI',
+  'Universidad del Desarrollo (Ingeniería)',
+  'Cuadernos del Centro de Estudios de Diseño y Comunicación (Universidad de Palermo)',
+  'Tramas y Redes (CLACSO)',
+  'OCMAL (Observatorio de Conflictos Mineros de América Latina)',
+  'Federación de Trabajadores del Cobre (FTC)',
+  'Museo Universitario Arte Contemporáneo (MUAC-UNAM)',
+  'Andes Pediátrica (SciELO)',
+  'Forensic Architecture',
+  'Fundación Terram',
+  'FASIC',
+  'Vicaría de la Solidaridad',
+  'Londres 38',
+  'Human Rights Watch',
+  'Programa de gobierno Kast 2025',
+  'CentroCompetencia (PDF programa Kast 2022-2026)',
+  'PiensaChile (PDF del documento filtrado)',
+  'piensaChile',
+  'RobotLabot (LaBot)',
+  'Contapapaya (asesoría contable)',
+  'Empresas Logros (blog)',
+  'DecideChile (Unholster)',
+  'Activa Research',
+  'Criteria',
+  'Cadem',
+  'XTB Chile',
+  'Alerta Prevencion (AGRICET)',
+  'Scribd',
+  'Scribd (documento filtrado)',
+  'Facebook',
+  'Instagram',
+  'TikTok',
+  'Telegram',
+  'Google Drive (compilación ciudadana)',
+  'Dropbox (compilación ciudadana)',
+  'Imgur',
+  // Subreddits distintos de r/chile: el org `reddit` es específico de r/chile;
+  // los demás subreddits quedan como plataforma complementaria en la lista blanca.
+  'Reddit r/RepublicadeChile',
+  'Reddit (r/DataHoarder)',
+  'Reddit r/iamatotalpieceofshit',
+  'Towards Data Science (Medium)',
+]);
+
 let errors = 0;
 
 function findDuplicates(list) {
@@ -72,6 +197,38 @@ for (const id of validSourceIds) {
 for (const id of referencedSources) {
   if (!validSourceIds.has(id)) {
     console.error(`✖ fuente citada sin registrar en sources.yaml: "[[source/${id}]]"`);
+    errors++;
+  }
+}
+
+// Convención de medios: `medio:` debe ser el nombre canónico de una org de
+// prensa o pertenecer a la lista blanca de instituciones/plataformas.
+const MEDIA_ORG_TYPES_LABEL = [...MEDIA_ORG_TYPES].join(' / ');
+for (const [id, src] of Object.entries(sourcesData)) {
+  if (!src || typeof src.medio !== 'string' || src.medio.trim() === '') {
+    console.error(`✖ fuente sin campo medio: "${id}"`);
+    errors++;
+    continue;
+  }
+  if (mediaOrgNames.has(src.medio)) continue;
+  if (WHITELIST_MEDIOS.has(src.medio)) continue;
+  console.error(
+    `✖ medio "${src.medio}" no corresponde al nombre de una org de prensa (${MEDIA_ORG_TYPES_LABEL}) ni esta en la lista blanca → fuente "${id}". Registrar la org en entities.yaml o agregar a WHITELIST_MEDIOS en validate.mjs si es institucion/plataforma.`
+  );
+  errors++;
+}
+
+// Mojibake: el doble-encoding UTF-8 degrada títulos, notas y nombres canónicos.
+// Firma C2/C3 + byte 0x80-0xBF: cubre tanto mayúsculas (Ñ→"Ã‘"=C2 91, Ó→C2 93,
+// É→C2 89, Ú→C2 9A) como minúsculas (é→"Ã©"=C2 A9, í→C2 AD, ó→C2 B3, ú→C2 BA,
+// ñ→"Ã±"=C2 B1). Un "Ã"/"Â" literal seguido de un carácter Latin-1 suplementario
+// es prácticamente siempre mojibake (sin falsos positivos reales).
+const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]/g;
+for (const f of ['sources.yaml', 'entities.yaml', 'topics.yaml', 'colectivos.yaml', 'sectores.yaml']) {
+  const raw = readFileSync(join(dataDir, f), 'utf8');
+  const matches = raw.match(MOJIBAKE_RE);
+  if (matches) {
+    console.error(`✖ mojibake (doble-encoding UTF-8) en ${f}: ${matches.length} ocurrencia(s) — corregir acentos/ñ dañados`);
     errors++;
   }
 }
