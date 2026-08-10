@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (292)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (290)
 
 <details>
-<summary>Ver lista (292 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (290 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — **1 fuente**
@@ -74,7 +74,6 @@
 - [2026/07/20260723-8 - 42 trabajadores de Pascua-Lama aislados mas de una semana en cordillera](src/content/events/2026/07/20260723-8.md) — **1 fuente**
 - [2026/07/20260724-17 - Cancillería confirma plan de acción tras nuevos aranceles de EEUU](src/content/events/2026/07/20260724-17.md) — **1 fuente**
 - [2026/07/20260724-2 - Gobierno habilita tránsito en Ruta 5 con horario restringido y escolta militar para abastecimiento](src/content/events/2026/07/20260724-2.md) — **1 fuente**
-- [2026/07/20260724-8 - Desarrollo Social organiza misas semanales en La Moneda y pide asistencia a subsecretarios](src/content/events/2026/07/20260724-8.md) — **1 fuente**
 - [2026/07/20260727-10 - Alcaldesa Ripamonti reabre debate por proyecto Alto Santorini en dunas de Concón](src/content/events/2026/07/20260727-10.md) — **1 fuente**
 - [2026/07/20260727-13 - Hotuiti Teao viaja a Europa en plena semana distrital y reaviva polémica por salidas de diputados al extranjero](src/content/events/2026/07/20260727-13.md) — **1 fuente**
 - [2026/07/20260727-7 - Seremi de Vivienda del Maule Patricio Ponce renuncia tras menos de cinco meses](src/content/events/2026/07/20260727-7.md) — **1 fuente**
@@ -251,7 +250,6 @@
 - [2026/07/20260729-7 - Ministro García Ruminot descarta que Gobierno busque privatizar Codelco: 'No está en los planes'](src/content/events/2026/07/20260729-7.md) — **2 fuentes**
 - [2026/07/20260730-10 - Condenan a Álvaro Jalaff a 5 años de presidio por delitos económicos en caso Audios-Factop; cumplirá en libertad](src/content/events/2026/07/20260730-10.md) — **2 fuentes**
 - [2026/07/20260730-11 - Corte de Apelaciones decreta prisión preventiva en recinto militar para cabo de la Armada por atropello múltiple en feria Caupolicán](src/content/events/2026/07/20260730-11.md) — **2 fuentes**
-- [2026/07/20260730-13 - Ministro Arrau ordena sumario sanitario en Hospital de Carabineros por cirugías estéticas a esposa de general director](src/content/events/2026/07/20260730-13.md) — **2 fuentes**
 - [2026/07/20260730-20 - Diputada Schönhaut critica a Kast por salida de seremis: '¿En 16 años no fue capaz de armar equipos?'](src/content/events/2026/07/20260730-20.md) — **2 fuentes**
 - [2026/07/20260730-23 - CIPER: TVN arrienda estudio a Porcel TV, de exsocio del jefe de la Secom Felipe Costabal, y se niega a transparentar el monto](src/content/events/2026/07/20260730-23.md) — **2 fuentes**
 - [2026/07/20260731-13 - Investigan ataque a tiros contra el edificio de la Municipalidad de Coquimbo](src/content/events/2026/07/20260731-13.md) — **2 fuentes**
@@ -542,7 +540,7 @@
 - [2026/07/20260724-4 - Servel denunciará al PDG ante la Fiscalía por gastos no acreditados](src/content/events/2026/07/20260724-4.md) — 7 fuentes
 - [2026/07/20260724-5 - Kast firma plan de fortalecimiento de Carabineros con incentivos económicos y modernización](src/content/events/2026/07/20260724-5.md) — 4 fuentes
 - [2026/07/20260724-7 - Vanessa Kaiser defiende proyecto de aborto de su esposo y cuestiona a victimas de violacion](src/content/events/2026/07/20260724-7.md) — 3 fuentes
-- [2026/07/20260724-8 - Desarrollo Social organiza misas semanales en La Moneda y pide asistencia a subsecretarios](src/content/events/2026/07/20260724-8.md) — 1 fuente
+- [2026/07/20260724-8 - Desarrollo Social organiza misa en La Moneda y abre debate sobre laicidad del Estado](src/content/events/2026/07/20260724-8.md) — 3 fuentes
 - [2026/07/20260724-9 - Kast anuncia reestructuración ministerial y gabinete reducido](src/content/events/2026/07/20260724-9.md) — 2 fuentes
 - [2026/07/20260725-1 - PDI detiene a Nelson Haase, último prófugo por asesinato de Víctor Jara y Littré Quiroga](src/content/events/2026/07/20260725-1.md) — 3 fuentes
 - [2026/07/20260725-2 - Detención del ex seremi de Salud de Magallanes por abuso sexual a menor](src/content/events/2026/07/20260725-2.md) — 18 fuentes
@@ -611,7 +609,7 @@
 - [2026/07/20260730-10 - Condenan a Álvaro Jalaff a 5 años de presidio por delitos económicos en caso Audios-Factop; cumplirá en libertad](src/content/events/2026/07/20260730-10.md) — 2 fuentes
 - [2026/07/20260730-11 - Corte de Apelaciones decreta prisión preventiva en recinto militar para cabo de la Armada por atropello múltiple en feria Caupolicán](src/content/events/2026/07/20260730-11.md) — 2 fuentes
 - [2026/07/20260730-12 - MOP inicia investigación administrativa tras viralización de video de pareja en dependencias de la seremi del Bío Bío](src/content/events/2026/07/20260730-12.md) — 3 fuentes
-- [2026/07/20260730-13 - Ministro Arrau ordena sumario sanitario en Hospital de Carabineros por cirugías estéticas a esposa de general director](src/content/events/2026/07/20260730-13.md) — 2 fuentes
+- [2026/07/20260730-13 - Ministro Arrau confirma sumario en Carabineros por cirugías estéticas a esposa de general director cubiertas con Dipreca](src/content/events/2026/07/20260730-13.md) — 3 fuentes
 - [2026/07/20260730-14 - Entrevista de Arturo Squella en TVN genera polémica y ola de críticas en redes sociales](src/content/events/2026/07/20260730-14.md) — 3 fuentes
 - [2026/07/20260730-15 - Presidente Kast recibe en La Moneda a su par de Corea del Sur, Lee Jae Myung: firman acuerdos de minería, seguridad y cooperación antártica](src/content/events/2026/07/20260730-15.md) — 10 fuentes
 - [2026/07/20260730-16 - Minsal solicita la renuncia de la seremi de Salud de Arica, Karla Kepec, tras filtrarse mensaje que exigía militancia republicana para cupos laborales](src/content/events/2026/07/20260730-16.md) — 13 fuentes

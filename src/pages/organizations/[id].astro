@@ -2,7 +2,8 @@
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
 import { getAllOrganizations, getAllEvents, eventHasOrg } from '../../lib/queries';
-import { ArrowLeft, Building2, Layers, Globe, Calendar } from 'lucide-astro';
+import { getCabinetByMinistry, periodoDe } from '../../lib/cabinet';
+import { ArrowLeft, Building2, Layers, Globe, Calendar, UserRound, History } from 'lucide-astro';
 
 export async function getStaticPaths() {
   const orgs = await getAllOrganizations();
@@ -16,6 +17,9 @@ const { org } = Astro.props;
 
 const allEvents = await getAllEvents();
 const relatedEvents = allEvents.filter((e) => eventHasOrg(e.id, org.id));
+
+// Titulares ministeriales de esta org (solo si es una cartera registrada).
+const ministerio = getCabinetByMinistry().find((c) => c.ministerioId === org.id);
 ---
 
 <Base title={org.data.nombre}>
@@ -51,6 +55,33 @@ const relatedEvents = allEvents.filter((e) => eventHasOrg(e.id, org.id));
 
   {org.data.bio && (
     <div class="prose prose-gray max-w-none mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm leading-relaxed" set:html={org.data.bio} />
+  )}
+
+  {ministerio && (
+    <section class="mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <h2 class="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+        <UserRound class="h-5 w-5 text-blue-600" />
+        <span>Titulares del ministerio</span>
+      </h2>
+      <ul class="space-y-3">
+        {ministerio.todos.map((a) => (
+          <li class="flex items-start gap-3">
+            <span class={`mt-1.5 h-2.5 w-2.5 rounded-full shrink-0 ${a === ministerio.actual ? 'bg-blue-600' : 'bg-gray-300'}`} />
+            <div>
+              <p class="text-sm font-semibold text-gray-900">
+                <a href={`/people/${a.personId}`} class="hover:text-blue-600 transition-colors">{a.nombre}</a>
+                {a === ministerio.actual && <span class="ml-2 text-[10px] font-bold uppercase tracking-wide bg-blue-100 text-blue-700 px-1.5 py-0.5 rounded-full">En ejercicio</span>}
+                {a.biministro && <span class="ml-2 text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">Biministro</span>}
+                {a.subrogante && <span class="ml-2 text-[10px] font-bold uppercase tracking-wide bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded-full">Subrogante</span>}
+              </p>
+              <p class="text-xs text-gray-500 mt-0.5">
+                <History class="inline h-3 w-3 text-gray-400 -mt-0.5 mr-1" />{a.cargo} · {periodoDe(a)}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
   )}
 
   <section class="mt-8">

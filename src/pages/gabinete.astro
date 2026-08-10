@@ -1,0 +1,110 @@
+---
+import Base from '../layouts/Base.astro';
+import { getCabinetByMinistry, periodoDe } from '../lib/cabinet';
+import { Landmark, UserRound, History, ChevronDown, Layers, Timer } from 'lucide-astro';
+
+const cabinet = getCabinetByMinistry();
+
+const carterasConTitular = cabinet.filter((c) => c.actual);
+const carterasVacantes = cabinet.filter((c) => !c.actual);
+const ministrosVigentes = new Set(
+  cabinet.map((c) => c.actual?.personId).filter(Boolean)
+).size;
+const biministros = new Set(
+  cabinet.flatMap((c) => [c.actual, ...c.historico]).filter((a) => a?.biministro).map((a) => a!.personId)
+).size;
+const historicos = cabinet.reduce((s, c) => s + c.historico.length, 0);
+
+---
+
+<Base title="Gabinete Ministerial">
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-1">
+      <Landmark class="h-6 w-6 text-blue-600 shrink-0" />
+      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Gabinete Ministerial</h1>
+    </div>
+    <p class="text-gray-500 text-sm">
+      Carteras ministeriales y sus titulares (actuales e históricos), generado automáticamente desde los cargos registrados en <code class="text-gray-600 bg-gray-100 px-1 py-0.5 rounded text-xs">entities.yaml</code>.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
+    <div class="bg-white rounded-xl border border-gray-200/80 shadow-sm p-4">
+      <p class="text-2xl font-bold text-gray-900">{carterasConTitular.length}<span class="text-gray-400 text-base font-medium">/{cabinet.length}</span></p>
+      <p class="text-xs text-gray-500 font-medium mt-0.5">Carteras con titular</p>
+    </div>
+    <div class="bg-white rounded-xl border border-gray-200/80 shadow-sm p-4">
+      <p class="text-2xl font-bold text-gray-900">{ministrosVigentes}</p>
+      <p class="text-xs text-gray-500 font-medium mt-0.5">Titulares en ejercicio</p>
+    </div>
+    <div class="bg-white rounded-xl border border-gray-200/80 shadow-sm p-4">
+      <p class="text-2xl font-bold text-gray-900">{biministros}</p>
+      <p class="text-xs text-gray-500 font-medium mt-0.5">Biministros</p>
+    </div>
+    <div class="bg-white rounded-xl border border-gray-200/80 shadow-sm p-4">
+      <p class="text-2xl font-bold text-gray-900">{historicos}</p>
+      <p class="text-xs text-gray-500 font-medium mt-0.5">Nombramientos históricos</p>
+    </div>
+  </div>
+
+  <div class="space-y-4">
+    {cabinet.map((c) => (
+      <section class="bg-white rounded-2xl border border-gray-200/80 shadow-sm overflow-hidden">
+        <header class="flex items-center justify-between gap-3 px-5 py-4 border-b border-gray-100">
+          <div class="min-w-0">
+            <a href={`/organizations/${c.ministerioId}`} class="text-base font-bold text-gray-900 hover:text-blue-600 transition-colors leading-snug">
+              {c.ministerioNombre}
+            </a>
+            {c.actual ? (
+              <p class="flex items-center gap-1.5 text-sm mt-1">
+                <UserRound class="h-3.5 w-3.5 text-blue-600 shrink-0" />
+                <a href={`/people/${c.actual.personId}`} class="font-semibold text-gray-800 hover:text-blue-600 transition-colors">
+                  {c.actual.nombre}
+                </a>
+                <span class="text-xs text-gray-400 font-normal">{periodoDe(c.actual)}</span>
+                {c.actual.biministro && <span class="text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">Biministro</span>}
+                {c.actual.subrogante && <span class="text-[10px] font-bold uppercase tracking-wide bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded-full">Subrogante</span>}
+                {c.actual.fechasSinRegistrar && <span class="text-[10px] font-medium text-gray-400">(fechas sin registrar)</span>}
+              </p>
+            ) : (
+              <p class="flex items-center gap-1.5 text-sm text-gray-500 mt-1">
+                <Timer class="h-3.5 w-3.5 shrink-0" />
+                <span class="italic">Sin titular registrado</span>
+              </p>
+            )}
+          </div>
+          <a href={`/organizations/${c.ministerioId}`} class="hidden sm:inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg transition-colors shrink-0">
+            <Layers class="h-3.5 w-3.5" />
+            <span>Cartera</span>
+          </a>
+        </header>
+
+        {c.historico.length > 0 && (
+          <details class="group">
+            <summary class="flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-gray-500 hover:text-gray-800 hover:bg-gray-50 cursor-pointer list-none transition-colors select-none">
+              <History class="h-3.5 w-3.5 shrink-0" />
+              <span>Histórico de titulares ({c.historico.length})</span>
+              <ChevronDown class="h-3.5 w-3.5 ml-auto transition-transform group-open:rotate-180" />
+            </summary>
+            <ul class="px-5 pb-4 space-y-2.5">
+              {c.historico.map((a) => (
+                <li class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm pl-1 border-l-2 border-gray-100">
+                  <a href={`/people/${a.personId}`} class="font-medium text-gray-700 hover:text-blue-600 transition-colors">{a.nombre}</a>
+                  <span class="text-xs text-gray-400">{a.cargo}</span>
+                  <span class="text-xs text-gray-400">· {periodoDe(a)}</span>
+                  {a.biministro && <span class="text-[10px] font-bold uppercase tracking-wide bg-amber-100 text-amber-700 px-1.5 py-0.5 rounded-full">Biministro</span>}
+                  {a.subrogante && <span class="text-[10px] font-bold uppercase tracking-wide bg-orange-100 text-orange-700 px-1.5 py-0.5 rounded-full">Subrogante</span>}
+                  {a.fechasSinRegistrar && <span class="text-[10px] font-medium text-gray-400">(fechas sin registrar)</span>}
+                </li>
+              ))}
+            </ul>
+          </details>
+        )}
+      </section>
+    ))}
+  </div>
+
+  <p class="text-xs text-gray-400 mt-8 leading-relaxed">
+    Página generada en build desde <code class="bg-gray-100 px-1 py-0.5 rounded">src/lib/cabinet.ts</code> + <code class="bg-gray-100 px-1 py-0.5 rounded">entities.yaml</code>. Un titular se considera "en ejercicio" cuando su cargo no tiene fecha de término; los cargos sin fechas registradas se listan con esa advertencia para evitar atribuciones incorrectas.
+  </p>
+</Base>

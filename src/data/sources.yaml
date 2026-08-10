@@ -2682,11 +2682,26 @@ latercera-2026-07-24-kaiser-proyecto-aborto-esposo:
 latercera-2026-07-24-misas-desarrollo-social-la-moneda:
   tipo: prensa
   medio: La Tercera
-  titulo: Desarrollo Social organiza misas semanales en La Moneda y convoca a
-    subsecretarios del gobierno
+  titulo: "Ojos de la llave: la oferta televisiva que Mara Sedini rechazó y las misas que organiza el gobierno para pedir por las familias"
   autor: La Tercera
   fecha: 2026-07-24
-  url: https://www.latercera.com/politica/noticia/desarrollo-social-organiza-misas-semanales-la-moneda/
+  url: https://www.latercera.com/politica/noticia/ojos-de-la-llave-la-oferta-televisiva-que-mara-sedini-rechazo-y-las-misas-que-organiza-el-gobierno-para-pedir-por-las-familias/
+
+emol-2026-07-27-debate-pena-squella-misas-la-moneda:
+  tipo: prensa
+  medio: Emol
+  titulo: "Misa en La Moneda: el debate entre Carlos Peña y Arturo Squella por las misas gubernamentales"
+  autor: Emol
+  fecha: 2026-07-27
+  url: https://www.emol.com/noticias/Nacional/2026/07/27/1206773/misa-la-moneda-gobierno-columna.html
+
+biobiochile-2026-05-08-contraloria-misas-la-moneda:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Misas matutinas en La Moneda: Contraloría descarta ilegalidad en uso religioso de palacio presidencial"
+  autor: BioBioChile
+  fecha: 2026-05-08
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/08/misas-matutinas-en-la-moneda-contraloria-descarta-ilegalidad-en-uso-religioso-de-palacio-presidencial.shtml
 
 activa-2026-07-19-pulso-ciudadano-aprobacion-minimo:
   tipo: estudio
@@ -7285,14 +7300,6 @@ emol-2026-07-30-mop-biobio-relaciones:
   autor: M. Silva
   fecha: 2026-07-30
   url: https://www.emol.com/noticias/Nacional/2026/07/30/1207106/mop-biobio-relaciones-sexuales-seremi.html
-
-emol-2026-07-30-arrau-cirugias-esposa:
-  tipo: prensa
-  medio: Emol
-  titulo: "Ministro Arrau confirma sumario por cirugías estéticas a esposa de general director de Carabineros en Hospital institucional"
-  autor: M. Silva
-  fecha: 2026-07-30
-  url: https://www.emol.com/noticias/Nacional/2026/07/30/1207086/arrau-sumario-cirugias-esposa-general-carabineros.html
 
 biobiochile-2026-07-30-arrau-cirugias-esposa:
   tipo: prensa

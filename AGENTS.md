@@ -279,6 +279,33 @@ En tiempo de build NO se agenda nada; todo corre en cliente sobre el texto de `.
 - **Flags**: `window.__gvEventActionsInit` (una sola vez) para listeners globales;
   `astro:page-load` para llenar voces y cancelar reproducción (`gvStopAll`) al navegar.
 
+## Pagina /gabinete (titulares ministeriales generados de `cargos`)
+
+`src/pages/gabinete.astro` muestra el gabinete por cartera (titular en ejercicio +
+historico con periodos), generado en build por `src/lib/cabinet.ts` a partir de
+`entities.yaml` — NO se mantiene a mano.
+
+- **Que recolecta**: personas cuyo `cargo` top-level o entrada de `cargos[]` empieza
+  con `Ministro/a de...`, `Biministro/a de...`. Excluye jueces (`Ministro de la
+  Corte...`) y cargos extranjeros.
+- **Resolucion de cartera**: primero la keyword del texto (diccionario en
+  `cabinet.ts`), fallback a la org de la entrada si es tipo `ministerio`/`segegob`.
+  Un biministro se separa en sus carteras (`"Biministro de X y Y"` → X + Y).
+- **Dedupe**: si el `cargo` top-level duplica un `cargos[]` (mismo texto normalizado
+  sin acentos), gana el de `cargos[]` (tiene fechas).
+- **Vigencia**: sin `hasta` = en ejercicio. Los cargos top-level sin fechas se
+  marcan `fechasSinRegistrar` para no atribuir periodos inexistentes.
+- **Carteras validas** (constante `MINISTERIO_ORG_IDS`): orgs tipo `ministerio` +
+  `segegob` + `ministerio_desarrollo_social`. Si una cartera nueva se agrega como
+  org, revisar que este en esa lista.
+- **Cuidado con el orden de keywords**: `interior` debe matchear antes que
+  `seguridad publica` (el nombre historico del Ministerio del Interior incluye
+  "y Seguridad Publica"). No reordenar sin re-verificar los historicos.
+- **Org pages**: `organizations/[id].astro` muestra la seccion "Titulares del
+  ministerio" para orgs que son cartera (mismo helper).
+- Para ajustar datos de un ministro, editar `cargo`/`cargos[]` en `entities.yaml`;
+  la pagina se regenera en el proximo build.
+
 ## Campo `cargos` (historial de cargos de personas)
 
 Personas en `entities.yaml` pueden llevar `cargos: []` (lista) con `cargo`, `organizacion`, `desde`, `hasta` por rol — formato ISO `YYYY-MM-DD`. `cargo`/`organizacion` top-level se mantienen como rol actual/portada (retrocompatibles). `src/pages/people/[id].astro` renderiza la lista y un diagrama Mermaid `timeline` si hay `desde`.
@@ -650,7 +677,7 @@ Cuando descubras algo no documentado aqui:
 
 **Total de eventos:** 675
 
-**Cobertura de fuentes:** 383 de 675 eventos con 3+ fuentes (292 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 385 de 675 eventos con 3+ fuentes (290 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
 - 2026: 536
@@ -696,7 +723,7 @@ Cuando descubras algo no documentado aqui:
 
 **Entidades registradas:**
 - Personas: 796
-- Organizaciones: 619
+- Organizaciones: 620
 - Cifras: 552
-- Fuentes: 2232
+- Fuentes: 2233
 - Temas: 74

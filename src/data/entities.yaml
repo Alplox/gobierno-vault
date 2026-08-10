@@ -288,7 +288,7 @@ people:
     organizacion: presidencia_chile
     notas: "Concejala de Las Condes (2021-2024) y fundadora del Partido Republicano. Abogada con paso por el sector público (CPEIP del Mineduc, primer gobierno de Piñera) y el privado (fusiones y adquisiciones). Asumió en reemplazo de Carolina Araya, quien estaba con prenatal."
   claudio_alvarado:
-    nombre: Claudio Alvarado
+    nombre: Claudio Alvarado Andrade
     cargo: Biministro del Interior y Segegob
     cargos:
       - cargo: Diputado por Chiloé y Palena
@@ -345,7 +345,7 @@ people:
         organizacion: udi
         desde: 2026-03-11
   fernando_barros:
-    nombre: Fernando Barros
+    nombre: Fernando Barros Tocornal
     cargo: Ministro de Defensa
     cargos:
       - cargo: Ministro de Defensa
@@ -394,8 +394,14 @@ people:
     cargo: Exministro y excandidato presidencial
     notas: "Exministro de Estado (Educación y Minería, 2006-2010), excandidato presidencial del Juntos Podemos en 2009. Tras quedar fuera de la segunda vuelta, respaldó a Eduardo Frei en el balotaje del 17 de enero de 2010; el Partido Comunista anunció que no descartaba su participación activa en la campaña de Frei."
   andres_velasco:
-    nombre: Andrés Velasco
-    cargo: Ministro de Hacienda
+    nombre: Andrés Velasco Brañes
+    cargo: Ex ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2006-03-11
+        hasta: 2010-03-11
     notas: "Economista y ministro de Hacienda del gobierno de Michelle Bachelet (2006-2010). En diciembre de 2009 acompañó al candidato presidencial Eduardo Frei en el relanzamiento de su campaña en Valparaíso y Viña del Mar, reconociendo que la tarea de Frei sería mejorar la calidad de la política chilena."
   igor_garafulic:
     nombre: Igor Garafulic
@@ -414,7 +420,7 @@ people:
     cargo: Presidente de la Comisión de Salud de la Asociación Chilena de Municipalidades
     notas: "Edil y presidente de la comisión de salud de la Asociación Chilena de Municipalidades en 2009. Descartó la eutanasia masiva como solución para reducir el número de perros abandonados en la Región Metropolitana."
   carolina_toha:
-    nombre: Carolina Tohá
+    nombre: Carolina Tohá Morales
     cargo: Exministra del Interior
     cargos:
       - cargo: Ministra del Interior y Seguridad Pública
@@ -602,7 +608,7 @@ people:
     organizacion: universidad_autonoma
     notas: "Investigador de la Universidad Autónoma y experto en criminología. El 7 de agosto de 2026, en el marco del debate por el levantamiento del secreto bancario en la ACOT, señaló a Emol que el marco legal ya permite levantarlo con autorización judicial, que perfeccionarlo 'está lejos de ser la única respuesta' y que la pretensión de que un funcionario del gobierno de turno pueda requerir la medida 'resulta altamente controversial a nivel internacional'."
   louis_de_grange:
-    nombre: Louis de Grange
+    nombre: Louis de Grange Concha
     cargo: Ministro de Transporte y Telecomunicaciones
     cargos:
       - cargo: Ministro de Transporte y Telecomunicaciones
@@ -634,14 +640,14 @@ people:
     organizacion: municipalidad_de_santiago
   mara_sedini:
     nombre: Mara Sedini Viancos
-    cargo: Ex vocera de Gobierno
+    cargo: Ex ministra Secretaría General de Gobierno
+    organizacion: segegob
     cargos:
-      - cargo: Vocera de Gobierno (Segegob)
+      - cargo: Ministra Secretaria General de Gobierno
         organizacion: segegob
         desde: 2026-03-11
         hasta: 2026-05-19
-    organizacion: segegob
-    notas: Removida a los 69 dias. Polémica "Estado en quiebra".
+    notas: "Vocera de Gobierno (Segegob) desde el 11-mar-2026; removida en el primer cambio de gabinete de Kast el 19-may-2026 (69 días), tras la polémica por sus errores (caso Apablaza) y la discusión del 'Estado en quiebra'."
   martina_nunez:
     nombre: Martina Nunez
     notas: Rescatada en Cajón del Maipo, 22 años
@@ -654,7 +660,7 @@ people:
         desde: 2026-03-11
     organizacion: ministerio_interior
   may_chomali:
-    nombre: May Chomali
+    nombre: May Chomali Garib
     cargo: Ministra de Salud
     cargos:
       - cargo: Ministra de Salud
@@ -728,6 +734,15 @@ people:
     nombre: María José Abud
     cargo: Exsubsecretaria de la Mujer y la Equidad de Género
     notas: "Exsubsecretaria de la Mujer y la Equidad de Género. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
+  maria_paz_arzola:
+    nombre: María Paz Arzola González
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2026-03-11
+    notas: "Ministra de Educación del gobierno de Kast (desde 11-mar-2026). Ingeniera comercial UC e investigadora de Libertad y Desarrollo; magíster en Economía (UC) y en Filosofía Política y Ética (UAI). Anunciada en el gabinete del 20-ene-2026 (24 Horas); crítica del FES y defensora del mérito académico y la selección escolar. Activa en prensa hasta agosto 2026."
   ricardo_ruiz_de_vinaspre:
     nombre: Ricardo Ruiz de Viñaspre
     cargo: Exdirector del Sence
@@ -815,7 +830,7 @@ people:
         desde: 2026-03-11
     organizacion: armada_chile
   ivan_poduje:
-    nombre: Ivan Poduje
+    nombre: Iván Poduje Capdeville
     cargo: Ministro de Vivienda y Urbanismo
     cargos:
       - cargo: Ministro de Vivienda y Urbanismo
@@ -874,21 +889,21 @@ people:
         desde: 2010-03-23
     organizacion: ministerio_hacienda
   trinidad_steinert:
-    nombre: Trinidad Steinert
-    cargo: Ex Ministra de Seguridad Publica
+    nombre: Trinidad Steinert Herrera
+    cargo: Ex ministra de Seguridad Pública
+    organizacion: ministerio_seguridad
     cargos:
-      - cargo: Ex Ministra de Seguridad Publica
+      - cargo: Ministra de Seguridad Pública
         organizacion: ministerio_seguridad
         desde: 2026-03-11
         hasta: 2026-05-19
-    organizacion: ministerio_seguridad
     notas: Removida a los 69 dias.
   martin_arrau:
-    nombre: Martin Arrau
+    nombre: Martín Arrau García Huidobro
     cargo: Ministro de Seguridad Publica
     cargos:
       - cargo: Ministro de Obras Públicas
-        organizacion: ministerio_seguridad
+        organizacion: ministerio_de_obras_publicas
         desde: 2026-03-11
         hasta: 2026-05-19
       - cargo: Ministro de Seguridad Pública
@@ -910,7 +925,7 @@ people:
         desde: 2026-03-11
     organizacion: ministerio_justicia
   jose_garcia_ruminot:
-    nombre: Jose Garcia Ruminot
+    nombre: José García Ruminot
     cargo: Ministro Secretario General de la Presidencia
     cargos:
       - cargo: Ministro Secretario General de la Presidencia
@@ -977,7 +992,7 @@ people:
     organizacion: ministerio_desarrollo_social
     notas: "Subsecretaria de Evaluación Social del gobierno de Piñera. Participó en la presentación del proyecto de Ingreso Familiar de Emergencia (IFE) en abril de 2020."
   fernando_arab:
-    nombre: Fernando Arab
+    nombre: Fernando Arab Verdugo
     cargo: Ministro del Trabajo y Previsión Social subrogante (2020)
     organizacion: ministerio_trabajo
     notas: "Ministro del Trabajo y Previsión Social subrogante (S) del segundo gobierno de Piñera. Firmó el decreto de promulgación de la Ley 21.248 (retiro del 10% de los fondos de pensiones, julio 2020)."
@@ -1099,10 +1114,10 @@ people:
         hasta: 2026-06-16
     notas: Removida en junio por conflictos con ministra Marin
   judith_marin:
-    nombre: Judith Marin
-    cargo: Ministra de la Mujer y Equidad de Genero
+    nombre: Judith Marín Morales
+    cargo: Ministra de la Mujer y Equidad de Género
     cargos:
-      - cargo: Ministra de la Mujer y Equidad de Genero
+      - cargo: Ministra de la Mujer y Equidad de Género
         organizacion: ministerio_mujer
         desde: 2026-03-11
     organizacion: ministerio_mujer
@@ -1179,7 +1194,7 @@ people:
     notas: Republicana, renuncio por cuestionamientos a su defensa en casos de
       trafico de drogas.
   jaime_campos:
-    nombre: Jaime Campos
+    nombre: Jaime Campos Quiroga
     cargo: Ministro de Agricultura
     cargos:
       - cargo: Ministro de Agricultura
@@ -1203,7 +1218,7 @@ people:
         hasta: 2024-10-17
     notas: "Subsecretario del Interior del gobierno de Gabriel Boric (2022-2024), considerado el 'hombre fuerte' de la seguridad. Renunció el 17 de octubre de 2024 tras una denuncia de abuso sexual presentada por una funcionaria de Gobierno. Fue detenido en noviembre de 2024."
   giorgio_jackson:
-    nombre: Giorgio Jackson
+    nombre: Giorgio Jackson Drago
     cargo: Exministro Secretario General de la Presidencia (Segpres)
     cargos:
       - cargo: Ministro Secretario General de la Presidencia
@@ -1550,14 +1565,6 @@ people:
         organizacion: renovacion_nacional
         desde: 2026-03-11
     notas: Coautor del proyecto "Escucha tu corazón" de Urruticoechea
-  luisa_villarin:
-    nombre: Luisa Villarín
-    cargo: Ministra de Desarrollo Social
-    cargos:
-      - cargo: Ministra de Desarrollo Social
-        organizacion: partido_nacional_libertario
-        desde: 2026-03-11
-    notas: Organiza misas semanales en La Moneda para funcionarios públicos
   marcos_cosme:
     nombre: Marcos Javier Cosme Barquero
     cargo: Cabo primero de Carabineros (GOPE)
@@ -2160,7 +2167,7 @@ people:
     cargo: Abogado y académico, exfiscal
     notas: "Abogado penalista y académico, exfiscal. En agosto de 2026 advirtió que el gobierno de José Antonio Kast no podrá aplicar en seguridad la llamada 'doctrina Quiroz' —uso de las Fuerzas Armadas en seguridad interior— sin antes modificar el marco legal vigente, en el contexto de la Agenda ACOT (Cooperativa, 6-ago-2026)."
   daniel_mas:
-    nombre: Daniel Mas
+    nombre: Daniel Mas Valdés
     cargo: Biministro de Economía y Minería
     cargos:
       - cargo: Biministro de Economía y Minería
@@ -2201,7 +2208,7 @@ people:
     organizacion: camara_minera
     notas: Criticó la designación de Daniel Mas como ministro de Minería por ser agrónomo.
   felipe_larrain:
-    nombre: Felipe Larraín
+    nombre: Felipe Larraín Bascuñán
     cargo: Exministro de Hacienda
     cargos:
       - cargo: Ministro de Hacienda
@@ -2231,7 +2238,7 @@ people:
     organizacion: comision_fijacion_remuneraciones
     notas: "Exsubsecretario de Hacienda del segundo gobierno de Sebastián Piñera. Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del próximo mandatario en $11.070.064."
   natalia_duco:
-    nombre: Natalia Duco
+    nombre: Natalia Duco Soler
     cargo: Ministra del Deporte
     cargos:
       - cargo: Ministra del Deporte
@@ -2239,7 +2246,7 @@ people:
         desde: 2026-03-11
     notas: Atleta olímpica, especialista en lanzamiento de peso.
   tomas_rau:
-    nombre: Tomás Rau
+    nombre: Tomás Rau Binder
     cargo: Ministro de Trabajo y Previsión Social
     cargos:
       - cargo: Ministro de Trabajo y Previsión Social
@@ -2255,7 +2262,7 @@ people:
         desde: 2026-03-11
     notas: Ingeniero comercial, CEO de Quiñenco. Independiente.
   catalina_parot:
-    nombre: Catalina Parot
+    nombre: Catalina Parot Donoso
     cargo: Ministra de Bienes Nacionales
     cargos:
       - cargo: Ministra de Bienes Nacionales
@@ -2264,7 +2271,7 @@ people:
     notas: Abogada, militante de Evópoli. Exministra de Bienes Nacionales durante el
       primer gobierno de Piñera.
   fernando_rabat:
-    nombre: Fernando Rabat
+    nombre: Fernando Rabat Celis
     cargo: Ministro de Justicia y Derechos Humanos
     cargos:
       - cargo: Ministro de Justicia y Derechos Humanos
@@ -2272,7 +2279,7 @@ people:
         desde: 2026-03-11
     notas: Abogado, independiente.
   francisca_toledo:
-    nombre: Francisca Toledo
+    nombre: Francisca Toledo Echegaray
     cargo: Ministra del Medio Ambiente
     cargos:
       - cargo: Ministra del Medio Ambiente
@@ -2280,7 +2287,7 @@ people:
         desde: 2026-03-11
     notas: Ingeniera Civil Industrial. Trabajó en los dos gobiernos de Piñera.
   ximena_lincolao:
-    nombre: Ximena Lincolao
+    nombre: Ximena Lincolao Pilquián
     cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
     cargos:
       - cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
@@ -2317,9 +2324,15 @@ people:
     cargo: Exjefa de la Unidad de Análisis y Predicción de CONAF
     notas: "Ingeniera forestal que denunció acoso laboral tras negarse a manipular una simulación computacional del megaincendio de Valparaíso 2024 con la que se buscaba exculpar a Juan Atienza."
   luis_cordero:
-    nombre: Luis Cordero
-    cargo: Ministro de Seguridad Pública
-    notas: Designado durante la crisis de incendios forestales de enero 2026.
+    nombre: Luis Cordero Vega
+    cargo: Ex ministro de Seguridad Pública
+    organizacion: ministerio_seguridad
+    cargos:
+      - cargo: Ministro de Seguridad Pública
+        organizacion: ministerio_seguridad
+        desde: 2025-04-01
+        hasta: 2026-03-11
+    notas: "Primer ministro del Ministerio de Seguridad Pública: anunciado por cadena nacional de Boric el 27-mar-2025, con la instalación del ministerio el 1-abr-2025; en ejercicio hasta el fin del gobierno el 11-mar-2026."
   sergio_grez:
     nombre: Sergio Grez
     cargo: Historiador
@@ -2438,10 +2451,15 @@ people:
         desde: 2026-03-31
         hasta: 2026-04-14
   carolina_arredondo:
-    nombre: Carolina Arredondo
-    cargo: Ministra de Cultura
-    notas: Abogado PUC, 29 años, evangélico, renunció tras 2 semanas por falta de
-      experiencia.
+    nombre: Carolina Arredondo Marzán
+    cargo: Ex ministra de las Culturas
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministra de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2023-08-16
+        hasta: 2026-03-11
+    notas: "Actriz y directora teatral, asumió como ministra de las Culturas el 16-ago-2023 en reemplazo de Jaime de Aguirre (gobierno de Boric) y se mantuvo hasta el 11-mar-2026."
   renato_munster:
     nombre: Renato Münster
     cargo: Ex Seremi de Culturas y Artes de la RM
@@ -2830,7 +2848,7 @@ people:
         desde: 2026-03-11
     notas: Criticó el proceso de instalación del gobierno de Kast, acusando que la ciudadanía paga las consecuencias de la crisis internacional.
   mario_marcel:
-    nombre: Mario Marcel
+    nombre: Mario Marcel Cullell
     cargo: Exministro de Hacienda (Gobierno de Gabriel Boric)
     cargos:
       - cargo: Ministro de Hacienda
@@ -2857,7 +2875,7 @@ people:
         organizacion: cnct
     notas: "Dirigente del gremio de camioneros. Baldemar Higueras, designado seremi de Transportes del Maule, fue considerado su 'mano derecha' y secretario ejecutivo de la CNTC."
   ximena_rincon:
-    nombre: Ximena Rincón
+    nombre: Ximena Rincón González
     cargo: Ministra de Energía
     cargos:
       - cargo: Ministra de Energía
@@ -2941,7 +2959,7 @@ people:
         desde: 2026-03-11
     notas: Su viaje al extranjero durante el período legislativo generó controversia previa sobre salidas de diputados.
   jeannette_jara:
-    nombre: Jeannette Jara
+    nombre: Jeannette Jara Román
     cargo: Exministra del Trabajo y excandidata presidencial (Unidad por Chile)
     cargos:
       - cargo: Ministra del Trabajo y Previsión Social
@@ -3282,15 +3300,6 @@ people:
         desde: 2024-12-06
     organizacion: municipalidad_vina_del_mar
     notas: "Alcaldesa de Viña del Mar. Condenó el atropello en feria Caupolicán y pidió celeridad en la investigación."
-  carlos_arrau:
-    nombre: Carlos Arrau
-    cargo: Ministro de Salud
-    organizacion: ministerio_salud
-    cargos:
-      - cargo: Ministro de Salud
-        organizacion: ministerio_salud
-        desde: 2026-03-11
-    notas: "Ordenó sumario sanitario por cirugías estéticas a esposa de general director de Carabineros."
   delcy_rodriguez:
     nombre: Delcy Rodríguez
     cargo: Presidenta encargada de Venezuela
@@ -3420,7 +3429,7 @@ people:
     organizacion: energy
     notas: "Empresario del rubro fitness. Fundador y CEO hace 30 años de los gimnasios Energy. Health coach de José Antonio Kast desde enero de 2025, tras la campaña presidencial."
   juan_carlos_munoz:
-    nombre: Juan Carlos Muñoz
+    nombre: Juan Carlos Muñoz Abogabir
     cargo: Exministro de Transportes y Telecomunicaciones de Gabriel Boric
     cargos:
       - cargo: Ministro de Transportes y Telecomunicaciones
@@ -3473,7 +3482,7 @@ people:
     cargo: Presidente de Estados Unidos
     notas: "Presidente de Estados Unidos en su segundo mandato (desde enero de 2025). Su administración buscó relanzar los lazos bilaterales con Chile tras la asunción de José Antonio Kast, con el envío de Marco Rubio al cambio de mando del 11 de marzo de 2026."
   andres_chadwick:
-    nombre: Andrés Chadwick
+    nombre: Andrés Chadwick Piñera
     cargo: Exministro del Interior de Sebastián Piñera
     cargos:
       - cargo: Ministro del Interior y Seguridad Pública
@@ -3558,7 +3567,7 @@ people:
     cargo: Exalcaldesa de Cisnes
     notas: "La 'bruja de Pinochet': nacida en Italia en 1906, llegó a Chile en 1947, fue autoridad en la Patagonia y alcaldesa de Cisnes durante la dictadura. Su supuesta influencia sobre el dictador a través de tarot y cartas astrales generó controversia (perfil histórico de BioBioChile, agosto 2026)."
   javiera_toro:
-    nombre: Javiera Toro
+    nombre: Javiera Toro Cáceres
     cargo: Ministra de Desarrollo Social y Familia
     notas: "Abogada y militante de Comunes. Ministra de Desarrollo Social y Familia del gobierno de Gabriel Boric. Defendió al Frente Amplio del 'lenguaje caricaturesco' que instaló la derecha sobre su agenda (La Tercera, marzo 2026)."
   bettina_horst:
@@ -3631,7 +3640,7 @@ people:
     cargo: Exministro de Justicia
     notas: "Exministro de Justicia del gobierno de Gabriel Boric. Criticó la idea de restituir a Punta Peuco como cárcel especial."
   maria_jesus_wulf:
-    nombre: María Jesús Wulf
+    nombre: María Jesús Wulf Le May
     cargo: Ministra de Desarrollo Social y Familia
     organizacion: ministerio_desarrollo_social
     notas: "Ministra de Desarrollo Social y Familia del gobierno de José Antonio Kast. Anunció el proyecto que estudia usar ClaveÚnica para verificación de edad en redes sociales."
@@ -4052,10 +4061,14 @@ people:
     organizacion: ministerio_economia
     notas: "Seremi de Economía de la Región de Arica y Parinacota y vicepresidenta nacional del Partido Republicano. Según la Unidad de Investigación de El Mostrador (agosto 2026), recibió el correo del director (S) del Sernac de Arica, Marcos Oviedo, solicitando autorización para contrataciones directas de militantes de 'RN o Republicanos'."
   francisco_undurraga:
-    nombre: Francisco Undurraga
+    nombre: Francisco Undurraga Gazitúa
     cargo: Ministro de las Culturas, las Artes y el Patrimonio
     organizacion: ministerio_culturas
-    notas: "Ministro de las Culturas, las Artes y el Patrimonio. Ante la interpelación de la senadora Beatriz Sánchez en la Comisión de Cultura del Senado (3 de agosto de 2026) por la suspensión del lanzamiento del libro de Gabriel Rodríguez en Talca, declaró que la decisión 'inconsulta' del seremi del Maule, Pablo Amaro, no era de conocimiento del ministerio."
+    cargos:
+      - cargo: Ministro de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2026-03-11
+    notas: "Ministro de las Culturas, las Artes y el Patrimonio (desde 11-mar-2026). Ante la interpelación de la senadora Beatriz Sánchez en la Comisión de Cultura del Senado (3 de agosto de 2026) por la suspensión del lanzamiento del libro de Gabriel Rodríguez en Talca, declaró que la decisión 'inconsulta' del seremi del Maule, Pablo Amaro, no era de conocimiento del ministerio."
   fidel_espinoza:
     nombre: Fidel Espinoza
     cargo: Senador PS
@@ -4168,8 +4181,13 @@ people:
     cargo: Exministro del Trabajo (PS)
     organizacion: partido_socialista
     notas: "Exministro del Trabajo durante el gobierno de Ricardo Lagos. Uno de los principales asesores del comando de Jeannette Jara en la campaña de segunda vuelta de 2025; participó en la preparación de la candidata previo al debate ARCHI del 3 de diciembre."
+  carlos_pena:
+    nombre: Carlos Peña González
+    cargo: Rector de la Universidad Diego Portales
+    organizacion: universidad_diego_portales
+    notas: "Abogado y filósofo, rector de la Universidad Diego Portales desde 2003. Columnista habitual en Reportajes de El Mercurio. En julio de 2026 criticó las misas organizadas por el gobierno de Kast en La Moneda, argumentando que un ministro en calidad de tal no debe invitar a celebrar un culto por infringir sus deberes públicos."
   carlos_montes:
-    nombre: Carlos Montes
+    nombre: Carlos Montes Cisternas
     cargo: Ministro de Vivienda y Urbanismo (PS)
     notas: "Ministro de Vivienda y Urbanismo del gobierno de Gabriel Boric. En el debate ANATEL del 9 de diciembre de 2025, la candidata Jeannette Jara discrepó públicamente de sus dichos sobre las filas para acceder a la vivienda en el contexto de la megatoma de San Antonio."
   jose_carlos_meza:
@@ -6102,6 +6120,10 @@ organizations:
     tipo: organismo_publico
     pais: Chile
     notas: "Agencia pública chilena que financia la investigación científica y tecnológica, responsable de administrar el Fondo Nacional de Desarrollo Científico y Tecnológico (Fondecyt) y las Becas Chile."
+  universidad_diego_portales:
+    nombre: Universidad Diego Portales
+    tipo: universidad
+    pais: Chile
   universidad_de_chile:
     nombre: Universidad de Chile
     tipo: universidad
