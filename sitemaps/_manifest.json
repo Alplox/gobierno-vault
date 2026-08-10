@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-08T15:37:33.853Z",
+  "actualizado": "2026-08-10T01:33:21.717Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -86,6 +86,62 @@
       "articulos": 250948,
       "nuevos": 250948,
       "años": 17
+    },
+    "radio_uchile": {
+      "nombre": "Radio Universidad de Chile",
+      "ultima_sync": "2026-08-10T01:03:05.175Z",
+      "articulos": 107892,
+      "nuevos": 107492,
+      "años": 18
+    },
+    "ex_ante": {
+      "nombre": "Ex-Ante",
+      "ultima_sync": "2026-08-10T00:57:56.102Z",
+      "articulos": 17520,
+      "nuevos": 17520,
+      "años": 7
+    },
+    "el_periodista": {
+      "nombre": "El Periodista",
+      "ultima_sync": "2026-08-10T01:30:56.564Z",
+      "articulos": 84776,
+      "nuevos": 84776,
+      "años": 18
+    },
+    "el_siglo": {
+      "nombre": "El Siglo",
+      "ultima_sync": "2026-08-10T01:31:18.127Z",
+      "articulos": 5415,
+      "nuevos": 0,
+      "años": 4
+    },
+    "la_nacion": {
+      "nombre": "La Nación",
+      "ultima_sync": "2026-08-10T01:31:18.326Z",
+      "articulos": 19737,
+      "nuevos": 0,
+      "años": 7
+    },
+    "meganoticias": {
+      "nombre": "Meganoticias",
+      "ultima_sync": "2026-08-10T01:31:23.319Z",
+      "articulos": 433970,
+      "nuevos": 0,
+      "años": 16
+    },
+    "publimetro": {
+      "nombre": "Publimetro",
+      "ultima_sync": "2026-08-10T01:31:23.321Z",
+      "articulos": 5,
+      "nuevos": 0,
+      "años": 1
+    },
+    "eldesconcierto": {
+      "nombre": "El Desconcierto",
+      "ultima_sync": "2026-08-10T01:33:21.716Z",
+      "articulos": 20,
+      "nuevos": 0,
+      "años": 1
     }
   }
 }

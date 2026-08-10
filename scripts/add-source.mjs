@@ -19,7 +19,9 @@
  *   --fecha YYYY-MM-DD  Filtro de fecha para --search
  *   --medio <slug>     Filtro de medio para --search (elclarin, biobiochile,
  *                   cooperativa, adnradio, factchecking, ciper, theclinic,
- *                   elmostrador, fastcheck, latercera, cnnchile, eldinamo)
+ *                   elmostrador, fastcheck, latercera, cnnchile, eldinamo,
+ *                   radio_uchile, el_siglo, la_nacion, ex_ante, el_periodista,
+ *                   meganoticias, eldesconcierto, publimetro)
  *
  * Notas:
  * - Antes de hacer fetch, consulta el catálogo de sitemaps (si existe): si la
@@ -232,6 +234,10 @@ const DEFAULT_DOMAIN_MEDIO = {
   'ex-ante.cl': 'Ex-Ante',
   'elmostrador.cl': 'El Mostrador',
   'eldinamo.cl': 'El Dínamo',
+  'elsiglo.cl': 'El Siglo',
+  'lanacion.cl': 'La Nación',
+  'elperiodista.cl': 'El Periodista',
+  'eldesconcierto.cl': 'El Desconcierto',
   'pagina7.cl': 'Página 7',
   'publimetro.cl': 'Publimetro',
   'chvnoticias.cl': 'CHV Noticias',
@@ -289,6 +295,14 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'latercera.com': 'latercera',
   'cnnchile.com': 'cnnchile',
   'eldinamo.cl': 'eldinamo',
+  'radio.uchile.cl': 'radio_uchile',
+  'elsiglo.cl': 'el_siglo',
+  'lanacion.cl': 'la_nacion',
+  'ex-ante.cl': 'ex_ante',
+  'elperiodista.cl': 'el_periodista',
+  'meganoticias.cl': 'meganoticias',
+  'eldesconcierto.cl': 'eldesconcierto',
+  'publimetro.cl': 'publimetro',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -304,6 +318,14 @@ const CATALOG_MEDIO_NAMES = {
   latercera: 'La Tercera',
   cnnchile: 'CNN Chile',
   eldinamo: 'El Dínamo',
+  radio_uchile: 'Radio Universidad de Chile',
+  el_siglo: 'El Siglo',
+  la_nacion: 'La Nación',
+  ex_ante: 'Ex-Ante',
+  el_periodista: 'El Periodista',
+  meganoticias: 'Meganoticias',
+  eldesconcierto: 'El Desconcierto',
+  publimetro: 'Publimetro',
 };
 
 function catalogExists() {

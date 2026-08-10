@@ -37,6 +37,17 @@ relaciones:
   sucesor: 20260101-1
   causa: 20251215-3
 
+# (opcional) Respaldo ASCII de una imagen del evento (evidencia visual)
+# fuente: URL de la imagen original (el enlace de donde salió)
+# Opción A (recomendada, SVGs reales pesan MBs): archivo .svg en public/img-to-ascii/
+archivo: /img-to-ascii/20260809-8-zanja.svg
+# Opción B (solo SVG pequeño artesanal <=100K chars): contenido inline
+# svg: |
+#   <svg ...>...</svg>
+# El SVG se genera en una herramienta web externa (ej. https://ezascii.com/image-to-ascii)
+# y se guarda tras CONFIRMAR VISUALMENTE que se ve correcto. Nunca guardar un SVG
+# sin esa confirmación. El sitio lo renderiza en el body con una leyenda + enlace.
+
 # (requerido) Fecha de creacion del registro
 creado: YYYY-MM-DD
 

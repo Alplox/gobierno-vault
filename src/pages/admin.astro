@@ -72,6 +72,22 @@ const data = getEditorData();
           <button id="add-relation" type="button" class="text-xs text-blue-600 hover:underline self-start">+ Agregar relacion</button>
         </div>
 
+        <div class="flex flex-col gap-2 border-t border-gray-100 pt-3 mt-1">
+          <span class="text-xs font-medium text-gray-600">Respaldo ASCII de imagen (svg_backup)</span>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-500">Fuente de la imagen original (URL)</span>
+            <input id="fm-svg-fuente" type="url" class="border rounded px-2 py-1.5 text-sm" placeholder="https://.../imagen-original.png" />
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-500">Archivo .svg en public/img-to-ascii/ (recomendado — los SVGs reales pesan MBs)</span>
+            <input id="fm-svg-archivo" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="/img-to-ascii/20260809-8-zanja.svg" />
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-xs text-gray-500">O SVG inline (solo artesanal pequeño ≤100K) — generado en la web y pegado tras CONFIRMAR visualmente que se ve correcto</span>
+            <textarea id="fm-svg-backup" rows="4" class="border rounded px-2 py-1.5 text-sm font-mono resize-y" placeholder="<svg ...>...</svg>"></textarea>
+          </label>
+        </div>
+
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1">
             <span class="text-xs font-medium text-gray-600">Creado</span>
@@ -206,6 +222,9 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
     const previewEl = document.getElementById('preview-content');
     const filenameEl = document.getElementById('output-filename');
     const togglePreview = document.getElementById('toggle-preview');
+    const svgFuenteEl = document.getElementById('fm-svg-fuente');
+    const svgArchivoEl = document.getElementById('fm-svg-archivo');
+    const svgBackupEl = document.getElementById('fm-svg-backup');
 
     // ── Tag autocomplete helper ──
     function setupTagAutocomplete(inputId, dropdownId, suggestions) {
@@ -536,6 +555,20 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
         });
       }
 
+      const svgArchivo = svgArchivoEl.value.trim();
+      const svgSvg = svgBackupEl.value.trim();
+      if (svgArchivo || svgSvg) {
+        lines.push('svg_backup:');
+        const svgFuente = svgFuenteEl.value.trim();
+        if (svgFuente) lines.push(`  fuente: ${svgFuente}`);
+        if (svgArchivo) {
+          lines.push(`  archivo: ${svgArchivo}`);
+        } else {
+          lines.push('  svg: |');
+          svgSvg.split('\n').forEach(l => lines.push(`    ${l}`));
+        }
+      }
+
       if (fm.creado.value) lines.push(`creado: ${fm.creado.value}`);
       if (fm.actualizado.value) lines.push(`actualizado: ${fm.actualizado.value}`);
 
@@ -611,6 +644,7 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
     [fm.titulo, fm.fecha, fm.tipo, fm.etiquetas, fm.colectivos, fm.sectores, fm.creado, fm.actualizado].forEach(el => {
       el.addEventListener('input', updateOutput);
     });
+    [svgFuenteEl, svgArchivoEl, svgBackupEl].forEach(el => el.addEventListener('input', updateOutput));
     fm.tema.addEventListener('change', updateOutput);
     bodyEditor.addEventListener('input', updateOutput);
 

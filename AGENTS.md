@@ -174,6 +174,26 @@ El equipo presidencial decidió interponer denuncia ante la PDI [[source/theclin
 - [[source/latercera-2026-03-19-mepco-impacto-ipc]]: La Tercera
 ```
 
+#### Campo `svg_backup` (respaldo ASCII de imagen)
+
+Cuando un evento se apoya en una **imagen** (foto de prensa, screenshot, imagen de X/Reddit) cuya evidencia conviene preservar, el frontmatter puede llevar `svg_backup` con el **SVG de arte ASCII** de esa imagen, generado por el usuario en una herramienta web externa (ej. `https://ezascii.com/image-to-ascii`) y verificado VISUALMENTE antes de guardarse. **Nunca guardar un SVG como respaldo automáticamente** (ningún script lo genera ni lo escribe solo).
+
+```yaml
+svg_backup:
+  fuente: https://x.com/.../photo/1     # URL de la imagen original
+  archivo: /img-to-ascii/20260809-8-zanja.svg   # OPCIÓN A (recomendada): .svg en public/
+  # svg: |                                # OPCIÓN B (solo SVG artesanal pequeño): inline
+  #   <svg ...>...</svg>
+```
+
+- **Opción A — archivo en `public/img-to-ascii/` (recomendada)**: los SVGs reales de herramientas como ezascii pesan MBs (resolución completa, 614+ líneas `<text>`; el de la zanja de Baradit: 1,45 MB / 5214×7368). Guardarlos como archivo en `public/img-to-ascii/<evento>-<slug>.svg` mantiene el .md del evento pequeño y el diff de git manejable; el frontmatter solo referencia la ruta (`/img-to-ascii/...`). Se renderiza con `<img src>` (sin `set:html` → sin superficie XSS). **Requisito para renderizar como `<img>`**: el SVG debe declarar dimensiones intrínsecas (`width`/`height` o `viewBox`) — ezascii las incluye; sin ellas el navegador lo muestra a 0×0 o 300×150. **Custodia**: los archivos de esta opción quedan FUERA del `.light.gvault` (el backup excluye `public/`); se cubren por custodia git + el botón "Descargar repositorio (.zip)" del footer (que sí incluye `public/`). La Opción B inline sí viaja dentro del `.gvault`.
+- **Opción B — inline `svg`**: solo para SVG pequeño artesanal (≤100.000 caracteres). Se renderiza con `set:html`, por eso el schema rechaza vectores XSS (`<script`, atributos `on*`, `javascript:`) — los bodies markdown escapan HTML por remark, así que esta es la superficie de inyección.
+- **Confirmación humana OBLIGATORIA** en ambas: el usuario genera el SVG, verifica visualmente que se vea correcto y recién entonces lo guarda (archivo o inline). Nunca automático.
+- **Render**: `src/pages/events/[year]/[id].astro` muestra el respaldo dentro del body con la etiqueta "Respaldo ASCII de la imagen" y una leyenda que enlaza a `fuente` (la imagen original). Si falta `fuente`, la leyenda indica que la imagen se referencia en las fuentes del evento.
+- **Schema/validación**: `content.config.ts` exige `archivo` (ruta que termina en `.svg`) o `svg` (prefijo `<svg`, ≤100K, sin XSS), nunca ambos vacíos. `scripts/validate.mjs` refuerza: si `archivo`, verifica que exista en `public/` y termine en `.svg`; si `svg`, las reglas anti-XSS; `fuente` debe ser URL http(s) → build falla si se viola. **Límite de confianza**: el contenido lo escribe el operador del vault, no terceros; no guardar SVGs de fuentes no confiables.
+- CSS global `.ascii-svg`/`.ascii-svg-img` (Base.astro) escala el SVG responsivo con scroll horizontal.
+- El campo es solo visual/evidencia: no participa en índices, búsqueda ni estadísticas.
+
 ### Donde viven las entidades
 
 | Entidad | Fuente | Se accede via |
@@ -272,6 +292,18 @@ cargos:
 ```
 
 Solo agregar fechas verificables (de eventos/notas). Dependencia `mermaid` en `package.json` (se bundlea solo en páginas de persona con timeline).
+
+## Cuentas Públicas presidenciales (convención)
+
+Cada Cuenta Pública presidencial ante el Congreso Pleno tiene **un evento master** para detallar y verificar los anuncios:
+
+- **ID**: `YYYY0601-1` (fecha del discurso; ej. `20240601-1`). Tipo `declaracion`. Etiqueta `cuenta_publica`.
+- **Estructura del body**: secciones por eje temático (seguridad, economía, sociedad de cuidados, DDHH, educación, infraestructura/energía, reacciones), cada anuncio con su `[[cifra/...]]` y fuentes inline.
+- **Fuentes**: mínimo el sitio oficial (gob.cl/cuentapublicaYYYY, `medio: Gobierno de Chile`) + 2-3 medios de prensa del día del discurso (catálogo de sitemaps: grep `'cuenta publica' sitemaps/<medio>/*.jsonl | grep '<año>-06'`).
+- **Anuncios granulares**: cuando un anuncio se desarrolla (proyecto ingresa al Congreso, ley se aprueba, medida se implementa o se incumple), se crean/actualizan eventos propios con `relaciones` hacia el master (`amplia`/`deriva_en`/`responde_a`), como ocurre con la CP 2026 de Kast (`20260601-5` + `20260601-2`, `20260601-3`, `20260602-4`, etc.).
+- **Verificación**: cada cifra verificable del discurso se registra como `[[cifra/...]]`; el seguimiento de implementación de los anuncios pendientes vive en TAREAS.md bajo "Cuentas Públicas — seguimiento de anuncios".
+- **Estado de la serie**: 2022 (1ª Boric) ⬜ pendiente · 2023 (2ª Boric) ✅ `20230601-1` · 2024 (3ª Boric) ✅ `20240601-1` · 2025 (4ª Boric) ✅ `20250601-1` (master: CP 2025 ampliada, anuncio de Punta Peuco conservado como sección; los `responde_a` de 20260514-1 y 20251114-1 siguen apuntando al mismo evento) · 2026 (1ª Kast) ✅ `20260601-5`.
+- Las **cuentas públicas sectoriales/ministeriales** (participativas) también generan eventos cuando anuncian (ej. Minsal `20260729-17`, Minería `20260729-19`), pero la serie master es la presidencial.
 
 ## Reglas al modificar datos YAML
 
@@ -400,12 +432,20 @@ NO guarda el cuerpo de los artículos.
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.415 | 18 |
 | `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 226.812 | 16 |
 | `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.005 | 1 |
+| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.776 | 18 |
+| `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.415 | 4 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.683 | 10 |
+| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
 | `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 250.948 | 17 |
 | `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 101 | 1 |
+| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.520 | 7 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
 | `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 5.815 | 7 |
+| `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.737 | 7 |
 | `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 8.421 | 1 |
+| `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 5 | 1 |
+| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.892 | 18 |
 | `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.756 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
@@ -434,12 +474,34 @@ Notas de plataforma (complemento manual, no se reescribe):
   mes desde 2011/2010) + `sitemap_lasts.xml` + `sitemap_news.xml` (títulos reales). Ojo CNN:
   el `<lastmod>` de los sub-sitemaps mensuales es la fecha de regeneración (uniforme y falsa);
   el script usa `dateFromSitemapPath` (path `YYYY/MM`) para fechar los artículos.
+- **Radio Universidad de Chile / El Siglo / La Nación / Ex-Ante / El Periodista**: WordPress-Yoast
+  (`articleOnly`). Ojo: El Periodista sirve los `<loc>` en `http://` (mezcla http/https en el
+  index) y su `robots.txt` declara el sitemap en `http://`; su index es lento/throttle-friendly —
+  si un sync se corta, relanzar: el caché y el modo merge retoman sin pérdida. Ex-Ante NO declara
+  sitemaps en `robots.txt` (se usa `index` directo). El Siglo usa canónico sin `www` (`elsiglo.cl`).
+- **Meganoticias** (CMS propio): `sitemap-noticias-index-content.xml` = índice mensual
+  `content-noticias/sitemap-YYYY-MM.xml` desde 2011 + `sitemap-news.xml` (títulos reales). El
+  `includeRe` descarta videos, secciones, autores, columnistas y hemeroteca (páginas de listado).
+  Ojo: los sub-sitemaps mensuales NO traen `lastmod` fiable → `dateFromSitemapPath` (path `YYYY-MM`)
+  como CNN. Las fechas quedan como aproximación a nivel de mes (día 01) y pueden desfasarse un
+  mes del slug/URL real (IDs secuenciales, la URL no lleva fecha). ~434k artículos en 16 años.
+- **Publimetro** (Arc XP): el `sitemap-index` solo lista `latest` + el día actual (sin índice
+  histórico). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con decenas de URLs, pero no
+  hay índice que los enumere: el sync captura solo lo reciente (~5-100 URLs).
+- **El Desconcierto**: sitemaps SIN historia (`sitemap.xml` ~8 recientes + `sitemap-news.xml` ~20
+  con títulos reales); todas las variantes históricas (año, post, archivos) devuelven 404.
 
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~56MB (vs ~357MB raw / 127MB v1). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
 — si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
 pasada mejora la entrada (`news` > `slug`).
+
+**Syncs paralelos**: `main()` escribe `_manifest.json` por medio (read-modify-write tras cada
+sync), así que correr medios en procesos paralelos ya no pisa el estado de los demás. Aun así,
+para varios medios conviene pasarlos como argumentos en un solo comando
+(`pnpm run sitemaps-sync -- el_siglo la_nacion ...`): evita el throttle de los sitios y deja un
+solo `manifest.actualizado`.
 
 **Corrección de fechas (CNN, `dateFromSitemapPath`):** en modo merge la fecha solo se actualiza
 si el cambio es dentro del mismo año (la URL se busca en el mapa del año de la nueva fecha). Si un
@@ -474,7 +536,9 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
   lista resultados más recientes primero y deja elegir. Filtros: `--medio <slug>` y
   `--fecha YYYY-MM-DD`.
 - Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
-  `ciper`, `theclinic`, `elmostrador`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`.
+  `ciper`, `theclinic`, `elmostrador`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
+  `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`, `meganoticias`,
+  `eldesconcierto`, `publimetro`.
   Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
@@ -497,7 +561,9 @@ for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
   mirrors de la sección "Extraccion de contenido web").
 - Si el término no aparece o el medio no está en el catálogo, recién ahí usar búsquedas online.
 - Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
-  `adnradio`, `ciper`, `factchecking`, `fastcheck`. (Los JSONL no se commitean; regenerar con
+  `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
+  `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`, `meganoticias`,
+  `eldesconcierto`, `publimetro`. (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 
 ## Respaldo / Restauracion (backup offline publico)
@@ -582,15 +648,15 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 661
+**Total de eventos:** 675
 
-**Cobertura de fuentes:** 377 de 661 eventos con 3+ fuentes (284 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 383 de 675 eventos con 3+ fuentes (292 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 524
+- 2026: 536
 - 2025: 40
-- 2024: 17
-- 2023: 12
+- 2024: 18
+- 2023: 13
 - 2022: 14
 - 2021: 8
 - 2020: 15
@@ -605,32 +671,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (257)
+- Politica (263)
+- Economia (131)
 - Justicia (130)
-- Economia (124)
-- Defensa y seguridad (88)
-- Administración pública (78)
-- Derechos humanos (63)
-- Finanzas publicas (59)
+- Defensa y seguridad (93)
+- Administración pública (81)
+- Derechos humanos (66)
+- Finanzas publicas (63)
 - Proceso legislativo (58)
 - Cambios en el gabinete (56)
 - Emergencia y catástrofes (54)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (153)
-- declaracion (90)
-- reaccion (87)
-- publicacion (70)
-- resultado (65)
-- investigacion (63)
+- accion (155)
+- declaracion (93)
+- reaccion (88)
+- publicacion (71)
+- investigacion (67)
+- resultado (67)
 - anuncio (49)
 - fallo_judicial (26)
 - votacion (14)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 775
-- Organizaciones: 603
-- Cifras: 464
-- Fuentes: 2186
+- Personas: 796
+- Organizaciones: 619
+- Cifras: 552
+- Fuentes: 2232
 - Temas: 74

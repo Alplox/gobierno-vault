@@ -126,6 +126,58 @@ const MEDIA = {
     robots: 'https://www.eldinamo.cl/robots.txt',
     // Mismo CMS que CNN Chile: index por mes desde 2010 + lasts + news.
   },
+  radio_uchile: {
+    nombre: 'Radio Universidad de Chile',
+    index: 'https://radio.uchile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml + news-sitemap*.xml
+  },
+  el_siglo: {
+    nombre: 'El Siglo',
+    index: 'https://elsiglo.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (canónico sin www)
+  },
+  la_nacion: {
+    nombre: 'La Nación',
+    index: 'https://www.lanacion.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  ex_ante: {
+    nombre: 'Ex-Ante',
+    index: 'https://www.ex-ante.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (post-sitemap1.xml; el robots.txt no declara sitemaps)
+  },
+  el_periodista: {
+    nombre: 'El Periodista',
+    index: 'https://www.elperiodista.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (mezcla http/https en los <loc>)
+  },
+  meganoticias: {
+    nombre: 'Meganoticias',
+    robots: 'https://www.meganoticias.cl/robots.txt',
+    // CMS propio: sitemap-noticias-index-content.xml (index mensual por
+    // content-noticias/sitemap-YYYY-MM.xml desde 2011) + sitemap-news.xml
+    // (títulos reales). Se descartan videos, secciones, autores, columnistas,
+    // seccion-temas y hemeroteca (páginas de listado, no artículos).
+    // OJO: los sub-sitemaps mensuales no traen lastmod fiable; la fecha real
+    // está en el path YYYY-MM del archivo (dateFromSitemapPath).
+    includeRe: /(?:content-noticias\/sitemap-\d{4}-\d{2}\.xml|sitemap-news\.xml)$/i,
+    dateFromSitemapPath: /content-noticias\/sitemap-(\d{4})-(\d{2})\.xml$/,
+  },
+  eldesconcierto: {
+    nombre: 'El Desconcierto',
+    robots: 'https://eldesconcierto.cl/robots.txt',
+    // Sitemaps SIN historia: sitemap.xml (~8 recientes) + sitemap-news.xml
+    // (~20 con títulos reales de los últimos días). No hay índices por año
+    // (todas las variantes históricas devuelven 404).
+  },
+  publimetro: {
+    nombre: 'Publimetro',
+    index: 'https://www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml',
+    // Arc XP: el índice solo lista `latest` + el día actual (sin paginación
+    // histórica). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con
+    // decenas de URLs, pero no hay índice que los enumere: el sync captura
+    // lo reciente (latest).
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -571,22 +623,27 @@ async function main() {
   }
 
   const cacheDir = noCache ? null : CACHE_DIR;
-  const manifest = readManifest();
   const results = [];
   const opts = { cacheDir, fresh, staleHours, noCache, limit, delayMs, incremental, replace };
   for (const t of targets) {
     const r = await syncMedio(t, MEDIA[t], opts);
     results.push(r);
-    manifest.medios[t] = {
+    // Escribir el manifest POR MEDIO (read-modify-write): si otro proceso
+    // sincroniza otro medio en paralelo, su entrada no se pisa (los JSONL de
+    // cada medio ya quedaron escritos por syncMedio). Sin esto, dos syncs
+    // simultáneos perdían las entradas del manifest del que terminaba primero
+    // (los JSONL quedaban, el estado se perdía).
+    const m = readManifest();
+    m.medios[t] = {
       nombre: MEDIA[t].nombre,
       ultima_sync: new Date().toISOString(),
       articulos: r.urls,
       nuevos: r.added ?? 0,
       años: r.years,
     };
+    m.actualizado = new Date().toISOString();
+    writeManifest(m);
   }
-  manifest.actualizado = new Date().toISOString();
-  writeManifest(manifest);
 
   console.log('\n=== Resumen ===');
   for (const r of results) {

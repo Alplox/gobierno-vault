@@ -4451,6 +4451,90 @@ people:
     nombre: Irene del Real
     cargo: Geóloga de la Pontificia Universidad Católica de Chile
     notas: "Geóloga de la UC que visitó la planta piloto de Aclara en San Pedro de la Paz; señaló que las tierras raras también se usan para material bélico y que no existe trazabilidad sobre su destino final."
+  ricardo_yanez:
+    nombre: Ricardo Yáñez
+    cargo: General director de Carabineros (2022-2024)
+    notas: "General director de Carabineros durante el gobierno de Boric; en la Cuenta Pública 2023 fue interpelado directamente por el Presidente ('¿Estoy en lo correcto general Yáñez?'). Posteriormente formalizado por la justicia por apremios durante el estallido social."
+  elisa_loncon:
+    nombre: Elisa Loncón
+    cargo: Expresidenta de la Convención Constitucional
+    notas: "Lingüista mapuche, presidenta de la Convención Constitucional (2021-2022); mencionada por Boric en la Cuenta Pública 2023 entre los casos de ataques de la oposición."
+  marco_antonio_avila:
+    nombre: Marco Antonio Ávila
+    cargo: Exministro de Educación (2022-2023)
+    notas: "Ministro de Educación del gobierno de Boric; mencionado por Boric en la Cuenta Pública 2023 por los dichos homofóbicos que recibió desde la oposición."
+  luis_thayer:
+    nombre: Luis Thayer
+    cargo: Exdirector del Servicio Nacional de Migraciones (2022-2024)
+    notas: "Exdirector del Sermig; cuestionó en agosto de 2026 la nueva metodología de conteo de ingresos irregulares del gobierno de Kast ('introducir una nueva cifra para mostrar eventualmente un mejor resultado es una práctica que yo encuentro que es poco transparente')."
+  francisca_alamos:
+    nombre: Francisca Álamos
+    cargo: Jefa de la Oficina de Mercado de Capitales del Ministerio de Hacienda
+    notas: "Subrayó en el anuncio del Grupo de Trabajo de Exportación de Servicios Financieros (agosto 2026) que es indispensable eliminar barreras operativas y regulatorias para expandir los servicios financieros a clientes internacionales."
+  cesar_marquez:
+    nombre: César Márquez
+    cargo: Exgerente de Presupuesto y Control de Gestión de Codelco
+    notas: "Único ejecutivo desvinculado por el abultamiento irregular de la producción 2025 de Codelco (despedido el 20-may-2026 por artículo 160); declaró ante la comisión investigadora de la Cámara sobre la 'operación rastrillo' y tiene una demanda abierta contra el Estado."
+  tamara_agnic:
+    nombre: Tamara Agnic
+    cargo: Directora de Codelco y presidenta del Comité de Auditoría, Compensaciones y Ética (CACE)
+    notas: "Dirigió la revisión del cierre de producción 2025 de Codelco tras la denuncia anónima de febrero 2026; declaró ante la comisión investigadora de la Cámara de Diputados."
+  ruben_alvarado:
+    nombre: Rubén Alvarado
+    cargo: Presidente ejecutivo de Codelco (2022-2026)
+    notas: "Defendió ante la comisión investigadora de la Cámara la 'operación rastrillo' como búsqueda de 'oportunidades operacionales legítimas para reducir inventarios', rechazando la caracterización de producción inflada."
+  braim_chiple:
+    nombre: Braim Chiple
+    cargo: Vicepresidente de Comercialización (VCO) de Codelco
+    notas: "Autor del correo del 9-dic-2025 al presidente ejecutivo Rubén Alvarado sobre la 'cuenta del carnicero respecto a la operación rastrillo 2025', citado en la investigación por bonos irregulares de BBCl Investiga."
+  patricio_melero:
+    nombre: Patricio Melero
+    cargo: Presidente de SalmonChile; exministro del Trabajo
+    notas: "Exministro del Trabajo de Piñera; preside el gremio SalmonChile, que presentó ante la USTR de EE.UU. una solicitud a nombre de las 48 empresas que representa contra el arancel del 12,5%."
+  andres_ergas:
+    nombre: Andrés Ergas
+    cargo: Embajador de Chile en Estados Unidos
+    notas: "Empresario sin experiencia diplomática previa, elegido por el gobierno de Kast por su cercanía al mundo MAGA de Florida; a cargo de la embajada en Washington durante la negociación del arancel del 12,5%. Los gremios lo describieron como poco informado sobre la estrategia negociadora."
+  eduardo_urbina:
+    nombre: Eduardo Urbina
+    cargo: Secretario general regional de RN Valparaíso
+    notas: "Impulsó elevar al Tribunal Supremo de RN los dichos de la senadora Camila Flores contra Fabiola Campillai ('señora de feria'), señalando que corresponde al máximo órgano disciplinario del partido determinar si constituyen una infracción."
+  nelson_contreras:
+    nombre: Nelson Contreras Irrazabal
+    cargo: Prefecto de la PDI en Ñuble
+    notas: "Vocero del operativo conjunto PDI-Carabineros del 8-ago-2026 en la Región de Ñuble que dejó 31 detenidos."
+  hector_ponce:
+    nombre: Héctor Ponce
+    cargo: Seremi de Seguridad Pública de Ñuble
+    notas: "Coordinó junto al prefecto de la PDI y al delegado presidencial los operativos masivos de seguridad en la Región de Ñuble de agosto 2026."
+  jorge_baradit:
+    nombre: Jorge Baradit Morales
+    cargo: Escritor y periodista
+    notas: "Criticó en redes el 9-ago-2026 la zanja fronteriza del Plan Escudo Fronterizo tras cruzar la frontera con Perú (#LaZanja): 'me dio vergüenza ajena'."
+  rodrigo_perez_stiepovic:
+    nombre: Rodrigo Pérez Stiepovic
+    cargo: Principal asesor legal del Presidente (Segundo Piso)
+    notas: "Exgerente legal de Colbún (18 años) y amigo de Kast desde la universidad; el asesor mejor pagado de La Moneda con $9,5 millones brutos mensuales (planillas abril 2026)."
+  sebastian_torrealba:
+    nombre: Sebastián Torrealba del Río
+    cargo: Asesor de Gobierno Digital e Inteligencia Artificial (Segundo Piso)
+    notas: "Ingeniero civil industrial; segundo asesor mejor pagado de La Moneda con $9,2 millones brutos mensuales (planillas abril 2026)."
+  victor_valdes:
+    nombre: Víctor Valdés
+    cargo: Jefe de gabinete del jefe de asesores del Presidente
+    notas: "Ingeniero comercial; asesor de La Moneda con $6,9 millones brutos mensuales, cuestionado por mantener su cargo remunerado como consejero regional metropolitano (Core)."
+  alvaro_bellolio:
+    nombre: Álvaro Bellolio
+    cargo: Jefe de Políticas Públicas del Segundo Piso
+    notas: "Ingeniero civil industrial y exdirector del Servicio Nacional de Migraciones; asesor de La Moneda con $6,9 millones brutos mensuales, cuestionado por su doble rol como Core remunerado."
+  francisco_riveros_cantuarias:
+    nombre: Francisco Riveros Cantuarias
+    cargo: Abogado del Segundo Piso (proyecto 'Inspección Total')
+    notas: "Asesor de La Moneda con $6,99 millones brutos mensuales; coordinó el cierre de la primera carga masiva de información de la 'Inspección Total' de auditorías al gobierno anterior."
+  alex_gonzalo_troncoso_araya:
+    nombre: Álex Gonzalo Troncoso Araya
+    cargo: Abogado de deudores del CAE
+    notas: "Abogado que obtuvo los fallos de las Cortes de Apelaciones de La Serena y Valparaíso que declararon ilegal el cobro del CAE por procedimiento tributario (agosto 2026)."
 organizations:
   criteria:
     nombre: Criteria
@@ -7370,7 +7454,237 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Diario regional de La Serena-Coquimbo (diarioeldia.cl)."
+  aquachile:
+    nombre: AquaChile
+    tipo: empresa
+    pais: Chile
+    notas: "Mayor productora de salmón de Chile; presentó ante la USTR de EE.UU. argumentos para evitar el arancel del 12,5% a las exportaciones chilenas."
+  banco_central:
+    nombre: Banco Central de Chile
+    tipo: institucion
+    pais: Chile
+    notas: "Participa en el Grupo de Trabajo de Exportación de Servicios Financieros anunciado por Hacienda en agosto 2026."
+  abif:
+    nombre: Asociación de Bancos e Instituciones Financieras (ABIF)
+    tipo: gremio
+    pais: Chile
+    notas: "Representa a la banca chilena; convocada a participar del grupo de trabajo de exportación de servicios financieros."
+  afusalud:
+    nombre: Asociación de Funcionarios de la Seremi de Salud de Los Lagos (Afusalud)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Gremio que insiste en la renuncia de la seremi de Salud de Los Lagos, Evelyn Brintrup, tras 9 denuncias por Ley Karin, 2 querellas y 6 acciones de tutela."
+  prochile:
+    nombre: ProChile
+    tipo: institucion
+    pais: Chile
+    notas: "Organismo de promoción de exportaciones del Ministerio de Relaciones Exteriores; coorganizó la recepción 'Noche del Salmón Chileno' a bordo del buque escuela Esmeralda en Nueva York."
+  subsecretaria_seguridad:
+    nombre: Subsecretaría de Seguridad Pública
+    tipo: institucion
+    pais: Chile
+    notas: "Reportó en agosto 2026 las cifras de ingresos irregulares detectados (1.144 hasta el 26-jul-2026 vs 8.471 en 2025) y expulsiones (1.286) usadas por el gobierno de Kast."
+  servicio_nacional_migraciones:
+    nombre: Servicio Nacional de Migraciones
+    tipo: institucion
+    pais: Chile
+    notas: "Organismo rector en materia migratoria; su exdirector Luis Thayer cuestionó en agosto 2026 los cambios metodológicos en las cifras de ingresos irregulares del gobierno."
+  subsecretaria_salud_publica:
+    nombre: Subsecretaría de Salud Pública
+    tipo: institucion
+    pais: Chile
+    notas: "Recibió los antecedentes de las denuncias por Ley Karin contra la seremi de Salud de Los Lagos para ser informados al nivel central del Ministerio de Salud."
+  embajada_chile_eeuu:
+    nombre: Embajada de Chile en Estados Unidos
+    tipo: institucion
+    pais: Chile
+    notas: "Encabezada por el embajador Andrés Ergas durante la negociación del arancel del 12,5%; envió carta a la USTR el 6-jul-2026 pidiendo trato diferenciado para el salmón chileno."
+  consejo_salmon:
+    nombre: Consejo del Salmón
+    tipo: gremio
+    pais: Chile
+    notas: "Coorganizó con ProChile la recepción 'Noche del Salmón Chileno' a bordo del buque escuela Esmeralda en Nueva York durante la campaña contra el arancel del 12,5%."
+  servicio_nacional_aduanas:
+    nombre: Servicio Nacional de Aduanas
+    tipo: institucion
+    pais: Chile
+    notas: "Organismo público convocado a participar del Grupo de Trabajo de Exportación de Servicios Financieros anunciado por Hacienda en agosto 2026."
+  camara_chileno_norteamericana:
+    nombre: Cámara Chileno-Norteamericana de Comercio
+    tipo: gremio
+    pais: Chile
+    notas: "Organizó el cóctel por los 250 años de la independencia de EE.UU. donde el representante de Trump en Santiago, Brandon Judd, criticó a los ministros chilenos que cuestionaron el arancel del 12,5%."
+  elhilo:
+    nombre: El Hilo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de investigación chileno (elhilo.cl); difundió el 9-ago-2026 la tabla de transparencia de honorarios del comisionado de la Macrozona Norte Alberto Soto Valenzuela."
+  presidencia:
+    nombre: Presidencia de la República de Chile
+    tipo: institucion
+    pais: Chile
+    notas: "Casa de Gobierno (La Moneda); los asesores del Segundo Piso del presidente Kast, entre ellos el comisionado de la Macrozona Norte, son contratados a honorarios con cargo a la administración central."
+  corte_apelaciones_valparaiso:
+    nombre: Corte de Apelaciones de Valparaíso
+    tipo: tribunal
+  consejo_defensa_estado:
+    nombre: Consejo de Defensa del Estado
+    tipo: institucion
+    pais: Chile
+    notas: "Organismo encargado de la defensa judicial de los intereses del Estado."
 cifras:
+  aprobacion_kast_criteria_ago9:
+    nombre: Aprobación de José Antonio Kast según Criteria (9-ago-2026)
+    unidad_default: porcentaje
+    notas: "35% aprueba y 52% desaprueba (-3 puntos vs medición anterior). El 53% que se mostraba 'esperanzado' en marzo bajó al 36%."
+  desaprobacion_kast_criteria_ago9:
+    nombre: Desaprobación de José Antonio Kast según Criteria (9-ago-2026)
+    unidad_default: porcentaje
+    notas: "52%, tres puntos menos que el sondeo anterior (55% el 2-ago)."
+  retrocesos_pais_criteria_ago9:
+    nombre: Encuestados que creen que el país ha retrocedido bajo Kast (Criteria, 9-ago-2026)
+    unidad_default: porcentaje
+    notas: "47% siente que ha habido retrocesos en diversas áreas bajo el mandato de Kast."
+  megareforma_negativa_criteria_ago9:
+    nombre: Percepción negativa de la Ley de Reconstrucción y Desarrollo Económico y Social (Criteria, 9-ago-2026)
+    unidad_default: porcentaje
+    notas: "37% cree que la megareforma será más bien negativa (33% positiva, 30% sin claridad); 48% dice que favorecerá solo a grandes empresas y personas de altos ingresos."
+  toneladas_infladas_codelco_2025:
+    nombre: Toneladas incorporadas irregularmente a la producción 2025 de Codelco
+    unidad_default: toneladas
+    notas: "27 mil toneladas en la 'operación rastrillo': 20 mil de óxido de Chuquicamata + casi 7 mil 'Polvos de Montecristo' (invendibles, con arsénico y sin permisos ambientales; pérdidas de US$7-50 millones)."
+  bonos_improcedentes_codelco:
+    nombre: Bonos improcedentes pagados por Codelco tras la sobreproducción 2025
+    unidad_default: millones_pesos
+    notas: "Más de 13 mil millones de pesos (US$14,3 millones) a 6.322 trabajadores y ejecutivos; promedio de $2 millones por funcionario. La empresa busca recuperarlos."
+  trabajadores_bonos_codelco:
+    nombre: Trabajadores y ejecutivos de Codelco que recibieron bonos improcedentes
+    unidad_default: personas
+    notas: "6.322, por un estimado de US$14,3 millones."
+  ingresos_irregulares_subsecretaria_2026:
+    nombre: Ingresos irregulares detectados hasta el 26-jul-2026 (Subsecretaría de Seguridad Pública)
+    unidad_default: personas
+    notas: "1.144, frente a 8.471 en igual período de 2025 (-86%). Colchane pasó de 8.015 a 866. Cifra del Ejecutivo, distinta de la del informe PDI (1.175) y cuestionada por exautoridades de Migraciones por cambio metodológico."
+  expulsiones_2026_subsecretaria:
+    nombre: Expulsiones judiciales y administrativas materializadas en 2026 (hasta 26-jul)
+    unidad_default: personas
+    notas: "1.286, superando las 709 del mismo período de 2025. Entre enero y junio, 7.089 extranjeros solicitaron voluntariamente salir del país (vs 1.758 en 2025)."
+  detenidos_operativo_nuble:
+    nombre: Detenidos en el operativo conjunto PDI-Carabineros de Ñuble (8-ago-2026)
+    unidad_default: personas
+    notas: "31 detenidos; 46 migrantes fiscalizados (17 en situación irregular); 4 detenidos por rotura de sellos en un local de juegos clausurado; se recuperó un vehículo robado."
+  exportacion_servicios_financieros:
+    nombre: Exportaciones anuales de servicios financieros de Chile
+    unidad_default: millones_dolares
+    notas: "Más de US$3.000 millones y entre 30 y 40 mil empleos; el gobierno de Kast busca que el sector sea el segundo exportador tras el cobre, con hasta 50 mil empleos adicionales."
+  participacion_salmon_chileno_eeuu:
+    nombre: Participación de Chile en el salmón atlántico del mercado estadounidense
+    unidad_default: porcentaje
+    notas: "47,3% según SalmonChile; el 96,7% de ese producto es importado. Argumento usado ante la USTR para evitar el arancel del 12,5%, sin éxito."
+  plan_calles_sin_violencia_decomisos:
+    nombre: Armas decomisadas por el Plan Calles Sin Violencia (a junio de 2023)
+    unidad_default: armas
+    notas: "Más de 1.700, según la Cuenta Pública 2023; junto a 1.359 detenidos (40% prófugos de la justicia), más de 3.800 infracciones y cerca de 69 mil controles preventivos."
+  plan_calles_sin_violencia_detenidos:
+    nombre: Detenidos por el Plan Calles Sin Violencia (a junio de 2023)
+    unidad_default: personas
+    notas: "1.359, de los cuales un 40% eran prófugos de la justicia (Cuenta Pública 2023)."
+  plazas_penitenciarias_2026:
+    nombre: Nuevas plazas penitenciarias comprometidas al 2026
+    unidad_default: plazas
+    notas: "4.796 (un 12% de la capacidad actual), más el Centro Penitenciario El Arenal de Atacama (1.710 plazas) y 2.930 plazas en Antofagasta, Alto Hospicio, La Serena y Rancagua al 2028 (Cuenta Pública 2023)."
+  sueldo_minimo_alza_real_2023:
+    nombre: Alza real del salario mínimo 2023-2024
+    unidad_default: "%"
+    notas: "20% real, al pasar de $350 mil a $500 mil entre mayo de 2023 y julio de 2024 (Cuenta Pública 2023)."
+  beneficiarios_alza_salario_minimo:
+    nombre: Personas beneficiadas por el alza del salario mínimo
+    unidad_default: personas
+    notas: "946 mil personas y sus familias (Cuenta Pública 2023); el subsidio a las mipymes pasaría de 131 mil a 180 mil empresas."
+  deudores_pensiones_alimentos_registro:
+    nombre: Deudores inscritos en el Registro Nacional de Deudores de Pensiones de Alimentos
+    unidad_default: deudores
+    notas: "80.074 a junio de 2023 (2.374 mujeres, 2,96%; 77.700 hombres, 97,04%), con una deuda total superior a los $90 mil millones (Cuenta Pública 2023)."
+  reduccion_inmigracion_irregular_2023:
+    nombre: Disminución de la entrada irregular de migrantes (cinco meses de 2023 vs 2022)
+    unidad_default: "%"
+    notas: "56%, según Boric en la Cuenta Pública 2023, atribuida al despliegue de las FF.AA. en la frontera norte."
+  bono_invierno_2023:
+    nombre: Bono Invierno 2023
+    unidad_default: pesos
+    notas: "$120 mil para 7 millones de personas (Cuenta Pública 2023, dentro del Plan Chile Apoya)."
+  duracion_cuenta_publica_2023:
+    nombre: Duración de la Cuenta Pública 2023
+    unidad_default: horas
+    notas: "3 horas y 36 minutos (77 páginas), la más larga desde el retorno a la democracia, superando el récord de Patricio Aylwin de 1993 (190 minutos)."
+  sueldo_minimo_2026_539mil:
+    nombre: Sueldo mínimo propuesto para enero de 2026
+    unidad_default: pesos
+    notas: "$539 mil, desde los $350 mil del inicio del gobierno; 'la mayor alza de las últimas décadas' y posicionaría a Chile como el salario mínimo más alto de Sudamérica (Cuenta Pública 2025 de Boric). Sujeto a aprobación del Congreso."
+  pgu_250mil_2025:
+    nombre: PGU aumentada a partir de septiembre de 2025
+    unidad_default: pesos
+    notas: "$250 mil mensuales, comenzando con las personas mayores de 82 años (Cuenta Pública 2025)."
+  personas_pensiones_reforma_2025:
+    nombre: Personas mayores beneficiadas por la reforma de pensiones
+    unidad_default: millones_personas
+    notas: "2,8 millones verán aumentada su pensión entre un 14% y un 35% (Cuenta Pública 2025, tras la reforma aprobada en enero de 2025)."
+  ingresos_irregulares_reduccion:
+    nombre: Disminución de ingresos irregulares al país desde 2021
+    unidad_default: "%"
+    notas: "48% menos, tras la reforma constitucional que habilitó el despliegue de las FF.AA. en la frontera norte (Cuenta Pública 2025)."
+  armas_destruidas_tres_anios:
+    nombre: Armas destruidas en tres años
+    unidad_default: armas
+    notas: "Más de 67 mil, el 30% de todas las destruidas desde 1990 (Cuenta Pública 2025)."
+  funcionarios_licencias_fraudulentas:
+    nombre: Funcionarios públicos que usaron licencias médicas para viajar al extranjero
+    unidad_default: funcionarios
+    notas: "Más de 25 mil, entre 2023 y 2024, según el Caso Licencias Médicas referido por Boric en la Cuenta Pública 2025; dio origen a la Ley 21.746."
+  plazas_penitenciarias_plan_maestro:
+    nombre: Nuevas plazas penitenciarias del Plan Maestro de Infraestructura Penitenciaria
+    unidad_default: plazas
+    notas: "Más de 15 mil en cinco años, para enfrentar el aumento de la población penal y el hacinamiento (anuncio CP 2025)."
+  medidas_programa_boric_cumplidas:
+    nombre: Medidas del programa de Boric cumplidas a cabalidad
+    unidad_default: medidas
+    notas: "12 de las 53 medidas concretas del programa de primera vuelta (22,64%), según el análisis de The Clinic del 1-jun-2025, día de la última Cuenta Pública."
+  buses_electricos_santiago:
+    nombre: Buses eléctricos en operación en Santiago
+    unidad_default: buses
+    notas: "Más de 2.500 en 2025, con meta de 4.400 (dos de cada tres buses eléctricos) al cierre del gobierno (Cuenta Pública 2025)."
+  propuestas_cuenta_publica_2024:
+    nombre: Propuestas anunciadas por Boric en la Cuenta Pública 2024
+    unidad_default: propuestas
+    notas: "Recuento de The Clinic tras dos horas y media de discurso (1-jun-2024)."
+  presupuesto_seguridad_2024:
+    nombre: Presupuesto de seguridad 2024
+    unidad_default: billones_pesos
+    notas: "4,2 billones de pesos en 2024, tras 4 billones en 2023: 'el mayor incremento de presupuesto de seguridad de los últimos ocho años' (Cuenta Pública 2024 de Boric)."
+  reduccion_homicidios_2023:
+    nombre: Reducción de homicidios 2023 vs 2022
+    unidad_default: "%"
+    notas: "6% menos, quebrando la tendencia al alza de 8 años (Cuenta Pública 2024 de Boric)."
+  salario_minimo_500mil:
+    nombre: Salario mínimo desde el 1 de julio de 2024
+    unidad_default: pesos
+    notas: "$500.000 mensuales, promesa de campaña de Boric cumplida en 2024."
+  centros_comunitarios_cuidados:
+    nombre: Centros Comunitarios de Cuidados comprometidos
+    unidad_default: centros
+    notas: "Un centenar antes del término del mandato, partiendo por Arica y Puerto Saavedra (Cuenta Pública 2024)."
+  adoptados_irregulares_estimados:
+    nombre: Personas estimadas afectadas por adopciones forzadas o irregulares antes de 1990
+    unidad_default: personas
+    notas: "Más de 20 mil, según Boric en la Cuenta Pública 2024 al anunciar una mesa interinstitucional."
+  muertos_gaza_jun2024:
+    nombre: Muertos en la Franja de Gaza citados por Boric en junio de 2024
+    unidad_default: personas
+    notas: "Más de 35 mil, cifra citada por Boric en la Cuenta Pública 2024 (cifra del Ministerio de Sanidad gazatí de ese momento; ver también muertos_gaza_2023_2026)."
+  transferencia_royalty_2024:
+    nombre: Primera transferencia del Royalty minero a municipios
+    unidad_default: millones_pesos
+    notas: "$93 mil millones a 307 municipios, 'la mayor inyección de recursos frescos a los municipios de los últimos 10 años' (Cuenta Pública 2024)."
   personas_fuera_sistema_financiero_tmc:
     nombre: Personas fuera del sistema financiero por la TMC
     unidad_default: personas
@@ -9147,3 +9461,204 @@ cifras:
     nombre: Casos en análisis de cumplimiento de Becas (2024)
     unidad_default: personas
     notas: "548 casos en análisis de cumplimiento de obligaciones (221 en el extranjero y 327 en Chile) al momento de la nómina de abril de 2024."
+  toneladas_oxido_chuquicamata_2025:
+    nombre: Toneladas de óxido incorporadas a la producción 2025 de Chuquicamata
+    unidad_default: toneladas
+    notas: "20.000 toneladas de óxido fuera de norma incorporadas a la producción 2025 de Chuquicamata según la denuncia anónima del 25-feb-2026; requerían 18-24 meses de procesamiento y dependían de la planta de Radomiro Tomic."
+  toneladas_polvos_montecristo_2025:
+    nombre: Toneladas de 'Polvos de Montecristo' en la producción 2025 de Codelco
+    unidad_default: toneladas
+    notas: "Cerca de 7.000 toneladas de 'Polvos de Montecristo' (desperdicios con cobre y arsénico, invendibles) añadidas a las cifras de producción 2025; su tratamiento por Ecometales duraría seis años (2026-2031) y generaría pérdidas de 7 a 50 millones de dólares."
+  bonos_improcedentes_codelco_usd:
+    nombre: Bonos improcedentes pagados por Codelco (dólares)
+    unidad_default: millones_de_dolares
+    notas: "Unos 14,3 millones de dólares en bonos improcedentes pagados a 6.322 trabajadores y ejecutivos de Codelco tras el abultamiento de la producción 2025."
+  bono_promedio_codelco:
+    nombre: Bono promedio improcedente pagado por Codelco
+    unidad_default: millones_de_pesos
+    notas: "Promedio de 2 millones de pesos por funcionario entre los 6.322 receptores de bonos improcedentes de Codelco; en gerentes y altos cargos los montos llegaron hasta $7 millones."
+  bono_max_gerentes_codelco:
+    nombre: Bono máximo en gerentes de Codelco
+    unidad_default: millones_de_pesos
+    notas: "Hasta 7 millones de pesos en bonos improcedentes para gerentes y altos cargos de Codelco por el abultamiento de producción 2025."
+  sancionados_codelco_2026:
+    nombre: Ejecutivos sancionados por el abultamiento de producción en Codelco
+    unidad_default: ejecutivos
+    notas: "Siete ejecutivos sancionados por el abultamiento de las cifras de producción 2025; el único desvinculado fue César Márquez, despedido el 20-may-2026."
+  ingresos_irregulares_subsecretaria_2025:
+    nombre: Ingresos irregulares detectados por la Subsecretaría de Seguridad (2025)
+    unidad_default: personas
+    notas: "8.471 ingresos irregulares detectados hasta el 26 de julio de 2025, frente a 1.144 en igual fecha de 2026, según la Subsecretaría de Seguridad Pública."
+  ingresos_colchane_2026:
+    nombre: Ingresos irregulares detectados en Colchane (2026)
+    unidad_default: personas
+    notas: "866 ingresos irregulares detectados en Colchane hasta el 26-jul-2026, frente a 8.015 en el mismo período de 2025."
+  ingresos_colchane_2025:
+    nombre: Ingresos irregulares detectados en Colchane (2025)
+    unidad_default: personas
+    notas: "8.015 ingresos irregulares detectados en Colchane hasta el 26-jul-2025, frente a 866 en igual fecha de 2026."
+  expulsiones_2025_subsecretaria:
+    nombre: Expulsiones judiciales y administrativas (2025)
+    unidad_default: personas
+    notas: "709 expulsiones judiciales y administrativas a esta fecha de 2025, frente a 1.286 en 2026, según la Subsecretaría de Seguridad Pública."
+  salidas_voluntarias_ene_jun_2026:
+    nombre: Solicitudes voluntarias de salida del país (ene-jun 2026)
+    unidad_default: personas
+    notas: "7.089 extranjeros solicitaron voluntariamente salir de Chile entre enero y junio de 2026, frente a 1.758 en igual período de 2025."
+  salidas_voluntarias_ene_jun_2025:
+    nombre: Solicitudes voluntarias de salida del país (ene-jun 2025)
+    unidad_default: personas
+    notas: "1.758 extranjeros solicitaron voluntariamente salir de Chile entre enero y junio de 2025."
+  bolivianos_ingresos_irregulares_2026:
+    nombre: Ingresos irregulares de ciudadanos bolivianos (2026)
+    unidad_default: porcentaje
+    notas: "Los ciudadanos bolivianos representan el 53% de los ingresos irregulares detectados en 2026, según la Subsecretaría de Seguridad Pública."
+  venezolanos_ingresos_irregulares_2026:
+    nombre: Ingresos irregulares de ciudadanos venezolanos (2026)
+    unidad_default: porcentaje
+    notas: "Los venezolanos alcanzan el 29% de los ingresos irregulares detectados en 2026, frente al 65% de 2025."
+  venezolanos_ingresos_irregulares_2025:
+    nombre: Ingresos irregulares de ciudadanos venezolanos (2025)
+    unidad_default: porcentaje
+    notas: "Los venezolanos concentraron el 65% de los ingresos irregulares registrados en 2025."
+  denuncias_ley_karin_brintrup:
+    nombre: Denuncias por Ley Karin contra la seremi de Salud de Los Lagos
+    unidad_default: denuncias
+    notas: "Nueve denuncias por Ley Karin contra la seremi de Salud de Los Lagos, Evelyn Brintrup, sumadas a dos querellas y seis acciones de tutela laboral de funcionarios."
+  querellas_brintrup:
+    nombre: Querellas contra la seremi de Salud de Los Lagos
+    unidad_default: querellas
+    notas: "Dos querellas interpuestas por funcionarios contra la seremi de Salud de Los Lagos, Evelyn Brintrup."
+  tutelas_brintrup:
+    nombre: Acciones de tutela laboral contra la seremi de Salud de Los Lagos
+    unidad_default: acciones
+    notas: "Seis acciones de tutela laboral interpuestas por funcionarios contra la seremi de Salud de Los Lagos, Evelyn Brintrup."
+  fiscalizados_operativo_nuble:
+    nombre: Personas fiscalizadas en el operativo de Ñuble
+    unidad_default: personas
+    notas: "46 personas fiscalizadas en materia de control migratorio durante el operativo conjunto PDI-Carabineros del 8-ago-2026 en Ñuble."
+  denunciados_migratoria_nuble:
+    nombre: Personas denunciadas por situación migratoria irregular en Ñuble
+    unidad_default: personas
+    notas: "17 de las 46 personas fiscalizadas fueron denunciadas por mantener situación migratoria irregular en el operativo de Ñuble del 8-ago-2026."
+  detenidos_rotura_sellos_nuble:
+    nombre: Detenidos por rotura de sellos en Ñuble
+    unidad_default: personas
+    notas: "Cuatro personas detenidas por el delito de rotura de sellos en un local de juegos clausurado que funcionaba ilegalmente, durante el operativo de Ñuble del 8-ago-2026."
+  esperanzados_marzo_kast:
+    nombre: Encuestados esperanzados con la llegada de Kast (marzo 2026)
+    unidad_default: porcentaje
+    notas: "El 53% se mostraba 'esperanzado' con la llegada de José Antonio Kast a La Moneda en marzo, según Criteria."
+  esperanzados_agosto_kast:
+    nombre: Encuestados esperanzados con el gobierno de Kast (agosto 2026)
+    unidad_default: porcentaje
+    notas: "El 53% 'esperanzado' con la llegada de Kast cayó al 36% en la medición Criteria del 9-ago-2026."
+  economia_peor_6m_criteria:
+    nombre: Expectativa de economía peor en seis meses (Criteria 9-ago-2026)
+    unidad_default: porcentaje
+    notas: "42% cree que la situación económica del país estará peor en seis meses y 22% que estará mejor."
+  economia_mejor_6m_criteria:
+    nombre: Expectativa de economía mejor en seis meses (Criteria 9-ago-2026)
+    unidad_default: porcentaje
+    notas: "22% cree que la situación económica estará mejor en seis meses, frente al 42% que espera un escenario peor."
+  empleo_peor_6m_criteria:
+    nombre: Expectativa de empleo peor en seis meses (Criteria 9-ago-2026)
+    unidad_default: porcentaje
+    notas: "40% espera un escenario laboral peor en seis meses y 21% uno mejor, según Criteria 9-ago-2026."
+  empleo_mejor_6m_criteria:
+    nombre: Expectativa de empleo mejor en seis meses (Criteria 9-ago-2026)
+    unidad_default: porcentaje
+    notas: "21% espera un escenario laboral mejor en seis meses, frente al 40% que espera uno peor."
+  megareforma_solo_grandes_criteria:
+    nombre: Percepción de que la Megarreforma favorece solo a grandes empresas
+    unidad_default: porcentaje
+    notas: "48% cree que la Megarreforma favorecerá solo a las grandes empresas y personas de altos ingresos; 33% cree que ayudará a crear más empleos (Criteria 9-ago-2026)."
+  megareforma_empleos_criteria:
+    nombre: Percepción de que la Megarreforma creará empleos
+    unidad_default: porcentaje
+    notas: "33% cree que la Megarreforma realmente podría ayudar a crear más empleos, según Criteria 9-ago-2026."
+  megareforma_indecisos_criteria:
+    nombre: Encuestados sin claridad sobre la Megarreforma
+    unidad_default: porcentaje
+    notas: "30% no tiene claro si la Megarreforma será positiva o negativa para el país (Criteria 9-ago-2026)."
+  empleos_servicios_financieros:
+    nombre: Empleos del sector de exportación de servicios financieros
+    unidad_default: empleos
+    notas: "El rubro de servicios financieros genera del orden de 30 mil a 40 mil empleos y más de US$3.000 millones en exportaciones, según el ministro Jorge Quiroz."
+  empleos_adicionales_servicios_financieros:
+    nombre: Empleos adicionales proyectados en servicios financieros
+    unidad_default: empleos
+    notas: "El Gobierno proyecta generar unos 50 mil empleos adicionales en la exportación de servicios financieros en los próximos años."
+  salmones_importados_eeuu:
+    nombre: Salmón atlántico importado en el mercado estadounidense
+    unidad_default: porcentaje
+    notas: "El 96,7% del salmón atlántico disponible en el mercado estadounidense es importado; Chile abastece el 47,3%, según SalmonChile ante la USTR."
+  perdidas_anuales_fruta_arancel:
+    nombre: Pérdidas anuales estimadas del sector frutícola por el arancel
+    unidad_default: millones_de_dolares
+    notas: "El sector frutícola estima pérdidas anuales cercanas a los 500 millones de dólares por la sobretasa del 12,5% de EE.UU., según el ministro de Agricultura Jaime Campos."
+  avance_zanjas_macrozona_norte:
+    nombre: Avance de las zanjas del Plan de Fortalecimiento Fronterizo (al 11-jul-2026)
+    unidad_default: porcentaje
+    notas: "50% de avance en zanjas (24.800 metros lineales de los proyectados) y 80% en camellones (25.927 metros), según el equipo del comisionado de la Macrozona Norte, reportado por La Tercera el 7-ago-2026."
+  metros_zanjas_ejecutadas_julio:
+    nombre: Metros lineales de zanjas ejecutados (11-jul-2026)
+    unidad_default: metros
+    notas: "24.800 metros lineales de zanjas ejecutados al 11 de julio de 2026, equivalentes a aproximadamente el 50% del total proyectado del Plan Fronterizo de la Macrozona Norte."
+  metros_camellones_ejecutados_julio:
+    nombre: Metros lineales de camellones ejecutados (11-jul-2026)
+    unidad_default: metros
+    notas: "25.927 metros lineales de camellones ejecutados al 11 de julio de 2026, equivalentes al 80% del total proyectado."
+  avance_camellones_macrozona_norte:
+    nombre: Avance de los camellones del Plan Fronterizo (al 11-jul-2026)
+    unidad_default: porcentaje
+    notas: "80% de avance en camellones (25.927 metros lineales), según el equipo del comisionado de la Macrozona Norte."
+  baja_inmigracion_irregular_frontera_2026:
+    nombre: Disminución de la inmigración irregular en la faja fronteriza (mar-jul 2026)
+    unidad_default: porcentaje
+    notas: "-88% de inmigración irregular en la faja fronteriza comparando 11-mar-11-jul 2025 vs 2026, según el equipo del comisionado de la Macrozona Norte."
+  alza_eventos_trafico_drogas_frontera:
+    nombre: Incremento de eventos interrumpidos de tráfico de drogas en la faja fronteriza
+    unidad_default: porcentaje
+    notas: "+250% de eventos interrumpidos de tráfico de drogas en la faja fronteriza (11-mar-11-jul 2025 vs 2026), según el comisionado de la Macrozona Norte."
+  alza_eventos_contrabando_frontera:
+    nombre: Incremento de eventos interrumpidos de contrabando en la faja fronteriza
+    unidad_default: porcentaje
+    notas: "+350% de eventos interrumpidos de contrabando en la faja fronteriza (11-mar-11-jul 2025 vs 2026), según el comisionado de la Macrozona Norte."
+  honorarios_soto_valenzuela:
+    nombre: Honorarios mensuales del comisionado de la Macrozona Norte (desde abril 2026)
+    unidad_default: millones_de_pesos
+    notas: "$7,5 millones brutos mensuales (desde abril 2026; $5 millones en marzo) a honorarios, por asesoría en seguridad, control migratorio y combate al crimen organizado, según transparencia activa y DF Más."
+  honorarios_soto_valenzuela_marzo:
+    nombre: Honorarios de marzo 2026 del comisionado de la Macrozona Norte
+    unidad_default: millones_de_pesos
+    notas: "$5 millones brutos en marzo de 2026, primer mes del contrato a honorarios del comisionado de la Macrozona Norte (11-mar al 31-dic-2026)."
+  monto_extorsion_fiscales:
+    nombre: Monto exigido en el correo extorsivo masivo a fiscales
+    unidad_default: dolares
+    notas: "US$750 en bitcoins exigidos a cada fiscal en el correo masivo enviado la medianoche del 29-jul-2026 desde una cuenta con dominio @fiscales.cl (asociadosanf-bounces), según Bío Bío Investiga (7-ago-2026)."
+  limite_fronterizo_peru:
+    nombre: Extensión del límite fronterizo Chile-Perú
+    unidad_default: kilometros
+    notas: "168 km de frontera terrestre entre Chile y Perú (DIFROL)."
+  limite_fronterizo_bolivia:
+    nombre: Extensión del límite fronterizo Chile-Bolivia
+    unidad_default: kilometros
+    notas: "942 km de frontera terrestre entre Chile y Bolivia (DIFROL)."
+  km_zanja_planificados_macrozona:
+    nombre: Kilómetros de zanja planificados en la Macrozona Norte
+    unidad_default: kilometros
+    notas: "~60 km de zanja planificados, no continuos, distribuidos en puntos estratégicos de la frontera con Perú y Bolivia (Chacalluta, Colchane), según el comisionado Alberto Soto (17-abr-2026)."
+  costo_zanja_macrozona:
+    nombre: Costo total de la zanja de la Macrozona Norte
+    unidad_default: millones_de_pesos
+    notas: "Costo tope de $4.000 millones para la construcción de la zanja, según el comisionado Alberto Soto (17-abr-2026)."
+  dimensiones_zanja_ancho_profundidad:
+    nombre: Dimensiones de la zanja fronteriza (ancho x profundidad)
+    unidad_default: metros
+    notas: "Mínimo 3 metros de ancho por 3 metros de profundidad, con foco en impedir el paso de vehículos, según MOP y el comisionado (17-abr-2026)."
+  ingresos_irregulares_colchane_mar_jun:
+    nombre: Ingresos irregulares por pasos clandestinos en Colchane (mar-jun 2026)
+    unidad_default: personas
+    notas: "De 286 en marzo a 24 en junio de 2026 (-90%), según PDI ratificado por Ejército y Carabineros."
+

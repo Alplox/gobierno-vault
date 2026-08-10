@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import YAML from 'yaml';
 
@@ -218,6 +218,26 @@ for (const [id, src] of Object.entries(sourcesData)) {
   errors++;
 }
 
+// Regla AGENTS.md (bitácora TAREAS): todo ID de evento marcado como ✅ hecho en
+// TAREAS.md (patrón `✅ \`20260807-12\``) debe referenciar un archivo de evento
+// EXISTENTE. Esto evita la colisión recurrente de IDs pre-asignados: entradas que
+// apuntaban a `20260807-11/-12/-13` antes de que esos IDs fueran ocupados por otros
+// eventos, dejando la fuente registrada sin evento real (fuentes huérfanas).
+const tareasPath = join(process.cwd(), 'TAREAS.md');
+try {
+  const tareasContent = readFileSync(tareasPath, 'utf8');
+  for (const match of tareasContent.matchAll(/✅\s*`(\d{8}-\d{1,3})`/g)) {
+    const id = match[1];
+    if (!allEventBasenames.has(id)) {
+      console.error(`✖ TAREAS.md marca como hecho el evento "${id}" pero no existe ningun archivo con ese ID (¿colisión de ID pre-asignado?)`);
+      errors++;
+    }
+  }
+} catch (e) {
+  console.error(`✖ no se pudo leer TAREAS.md para verificar IDs: ${e.message}`);
+  errors++;
+}
+
 // Mojibake: el doble-encoding UTF-8 degrada títulos, notas y nombres canónicos.
 // Firma C2/C3 + byte 0x80-0xBF: cubre tanto mayúsculas (Ñ→"Ã‘"=C2 91, Ó→C2 93,
 // É→C2 89, Ú→C2 9A) como minúsculas (é→"Ã©"=C2 A9, í→C2 AD, ó→C2 B3, ú→C2 BA,
@@ -286,6 +306,43 @@ for (const file of allFiles) {
   if (editorNote) {
     console.error(`✖ metanota de editor en body → ${eventId}: "${editorNote[0]}"`);
     errors++;
+  }
+
+  // Regla AGENTS.md (respaldo ASCII de imagen): el campo `svg_backup` declara
+  // `archivo` (ruta a un .svg en public/, render con <img> — sin XSS) o `svg`
+  // (contenido inline, render con set:html). Nunca guardar un SVG sin
+  // confirmación visual humana — la convención lo exige al generarlo en la web
+  // externa. Si declara `fuente`, debe ser una URL http(s) de la imagen original.
+  if (fm.svg_backup && typeof fm.svg_backup === 'object') {
+    const sb = fm.svg_backup;
+    if (typeof sb.archivo === 'string') {
+      if (!sb.archivo.startsWith('/') || !/\.svg$/i.test(sb.archivo)) {
+        console.error(`✖ svg_backup.archivo debe ser una ruta absoluta del sitio que termine en .svg → ${eventId}: "${sb.archivo}"`);
+        errors++;
+      } else {
+        const publicPath = join(process.cwd(), 'public', sb.archivo.replace(/^\//, ''));
+        if (!existsSync(publicPath)) {
+          console.error(`✖ svg_backup.archivo no existe en public/ → ${eventId}: "${sb.archivo}" (esperado en ${publicPath})`);
+          errors++;
+        }
+      }
+    }
+    if (typeof sb.svg === 'string' && sb.svg.trim() !== '') {
+      if (!/^\s*<svg/i.test(sb.svg)) {
+        console.error(`✖ svg_backup.svg no comienza con <svg (respaldo ASCII inválido) → ${eventId}`);
+        errors++;
+      } else if (/<script|\son\w+\s*=|javascript:/i.test(sb.svg)) {
+        console.error(`✖ svg_backup.svg contiene código ejecutable (<script/on*/javascript:) — no permitido → ${eventId}`);
+        errors++;
+      } else if (sb.svg.length > 100_000) {
+        console.error(`✖ svg_backup.svg excede 100.000 caracteres (${sb.svg.length}) → ${eventId}`);
+        errors++;
+      }
+    }
+    if (sb.fuente !== undefined && (typeof sb.fuente !== 'string' || !/^https?:\/\//.test(sb.fuente))) {
+      console.error(`✖ svg_backup.fuente no es una URL http(s) válida → ${eventId}`);
+      errors++;
+    }
   }
 
   // Validate impacto.colectivos and impacto.sectores against YAML registries

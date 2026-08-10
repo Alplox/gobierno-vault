@@ -135,6 +135,24 @@ const navLinks = [
         border-color: rgba(0,0,0,0.12) !important;
         background-color: rgba(0,0,0,0.02) !important;
       }
+      /* Respaldo ASCII de imagen (campo svg_backup del evento): el SVG generado
+         en herramientas web (ej. ezascii.com) usa <text> monospace; se escala
+         responsivo y se recorta horizontalmente (scroll) para no deformarlo. */
+      .ascii-svg {
+        display: block;
+        min-width: min(100%, 320px);
+      }
+      .ascii-svg svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        max-width: none;
+      }
+      .ascii-svg-img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     </style>
   </head>
   <body class="bg-gray-50/70 text-gray-900 min-h-screen antialiased flex flex-col">
