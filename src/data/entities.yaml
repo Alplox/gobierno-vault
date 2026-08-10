@@ -169,8 +169,13 @@ people:
     cargo: Activista y panelista de Sin Filtros
     notas: "Activista LGTB conocido como el Che de los Gays. Panelista de Sin Filtros. En agosto de 2026 abandonó el programa junto a otros tres panelistas tras la aparición como invitado de Claudio Crespo, a quien trató de 'carnicero'."
   ignacio_briones:
-    nombre: Ignacio Briones
+    nombre: Ignacio Briones Rojas
     cargo: Expresidente de Horizontal, exministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2019-10-28
+        hasta: 2021-01-26
     organizacion: horizontal
     notas: "Economista, exministro de Hacienda del segundo gobierno de Piñera y presidente del think tank Horizontal. En agosto de 2026 valoró la megarreforma pero criticó la falta de compensaciones fiscales, la permisología 'corta' y la exención de contribuciones para mayores de 65 años como 'probablemente la política más regresiva de la que tengamos registro'."
   gloria_de_la_fuente:
@@ -390,8 +395,17 @@ people:
     organizacion: partido_comunista
     notas: "Presidente del Partido Comunista de Chile (2005-2021) y diputado. En diciembre de 2009 oficializó el apoyo del PC a la candidatura de Eduardo Frei para la segunda vuelta presidencial del 17 de enero de 2010 contra Sebastián Piñera, tras suscribir el comando de Frei un documento programático de 12 puntos."
   jorge_arrate:
-    nombre: Jorge Arrate
+    nombre: Jorge Arrate Mac Niven
     cargo: Exministro y excandidato presidencial
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1998-08-01
+        hasta: 1999-06-22
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1994-03-11
+        hasta: 1998-08-01
     notas: "Exministro de Estado (Educación y Minería, 2006-2010), excandidato presidencial del Juntos Podemos en 2009. Tras quedar fuera de la segunda vuelta, respaldó a Eduardo Frei en el balotaje del 17 de enero de 2010; el Partido Comunista anunció que no descartaba su participación activa en la campaña de Frei."
   andres_velasco:
     nombre: Andrés Velasco Brañes
@@ -474,8 +488,13 @@ people:
     cargo: Académico de la Universidad de Chile y abogado en derecho tributario
     notas: "Abogado y académico de la Universidad de Chile, experto en derecho financiero tributario. El 6 de agosto de 2026 criticó en The Clinic y Cambio21 la invariabilidad tributaria de la megarreforma como inconstitucional."
   aisen_etcheverry:
-    nombre: Aisén Etcheverry
+    nombre: Aisén Etcheverry Escudero
     cargo: Exministra de Ciencia, Tecnología, Conocimiento e Innovación
+    cargos:
+      - cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: ministerio_ciencia
+        desde: 2023-03-10
+        hasta: 2025-07-22
     notas: "Exministra de Ciencia de la administración de Gabriel Boric. El 6 de agosto de 2026 envió una carta a El Mercurio alertando por los cambios al Fondecyt bajo el gobierno de Kast."
   teresa_paneque:
     nombre: Teresa Paneque
@@ -631,12 +650,16 @@ people:
     organizacion: somo_fabuloso
     notas: "Comediante chileno del canal de comedia y entretenimiento Somos Fabuloso (programa 'No Hacemos Uno'), expaciente de Teletón y medallista paralímpico. El 6 de agosto de 2026 respondió a los dichos de la senadora Camila Flores sobre Fabiola Campillai ('llegó al Congreso porque da pena') defendiendo que las personas con discapacidad no logran las cosas por lástima sino por mérito."
   mario_desbordes:
-    nombre: Mario Desbordes
+    nombre: Mario Desbordes Jiménez
     cargo: Alcalde de Santiago
     cargos:
       - cargo: Alcalde de Santiago
         organizacion: municipalidad_de_santiago
         desde: 2024-12-06
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2020-07-28
+        hasta: 2020-12-18
     organizacion: municipalidad_de_santiago
   mara_sedini:
     nombre: Mara Sedini Viancos
@@ -673,8 +696,13 @@ people:
     organizacion: ministerio_salud
     notas: Ministra de Salud del gobierno de Gabriel Boric; aludida por May Chomali en la caída de los compromisos de gestión de la red hospitalaria.
   ximena_aguilera:
-    nombre: Ximena Aguilera
+    nombre: Ximena Aguilera Sanhueza
     cargo: Ex Ministra de Salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2022-09-06
+        hasta: 2026-03-11
     organizacion: ministerio_salud
     notas: Ministra de Salud del gobierno de Gabriel Boric; aludida por May Chomali en la caída de los compromisos de gestión de la red hospitalaria.
   paula_daza:
@@ -682,18 +710,23 @@ people:
     cargo: Ex Subsecretaria de Salud Pública
     organizacion: ministerio_salud
     notas: Exsubsecretaria de Salud Pública del segundo gobierno de Piñera; atribuyó el problema de gestión hospitalaria a la escasa autonomía de los directores y a procesos poco modernizados.
-  francisco_toledo:
-    nombre: Francisca Toledo
-    cargo: Ministra del Medio Ambiente
-    organizacion: ministerio_medio_ambiente
-    notas: "Ministra del Medio Ambiente del gobierno de José Antonio Kast. A una semana de la instalación del gobierno, su cartera suspendió el proceso de sitios prioritarios del SBAP y solicitó a Contraloría el retiro de 43 decretos supremos ingresados por la administración anterior (marzo 2026)."
   jose_ignacio_vial:
     nombre: José Ignacio Vial
     cargo: Subsecretario del Medio Ambiente
     organizacion: ministerio_medio_ambiente
     notas: "Subsecretario del Medio Ambiente (RN) del gobierno de José Antonio Kast. En marzo de 2026 firmó el oficio a Contraloría solicitando el retiro de 43 decretos supremos de la cartera enviados durante el gobierno de Gabriel Boric."
   nicolas_grau:
-    nombre: Nicolas Grau Veloso
+    nombre: Nicolás Grau Veloso
+    cargo: Exministro de Hacienda (Gobierno de Gabriel Boric)
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2022-03-11
+        hasta: 2025-08-21
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2025-08-21
+        hasta: 2026-03-11
   david_bravo:
     nombre: David Bravo
     cargo: Director del Centro UC de Encuestas y Estudios Longitudinales
@@ -792,8 +825,13 @@ people:
     organizacion: ministerio_educacion
     notas: "Seremi de Educación de la Región de Los Lagos. Tras el incidente de violencia escolar del Liceo Rahue de Osorno (agosto 2026) pidió protección y tratamiento psicológico para la alumna agredida y atención de salud para el estudiante involucrado, subrayando que todo alumno tiene derecho a educación."
   gloria_hutt:
-    nombre: Gloria Hutt
+    nombre: Gloria Hutt Hesse
     cargo: Exministra de Transportes y Telecomunicaciones (2018-2020)
+    cargos:
+      - cargo: Ministra de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2018-03-11
+        hasta: 2022-03-11
     notas: "Ministra de Transportes y Telecomunicaciones del segundo gobierno de Sebastián Piñera. Durante el estallido social de octubre de 2019 descartó rebajar la tarifa del Metro y calificó de 'incomprensible' la destrucción de infraestructura en las protestas, mientras señalaba que los estudiantes pagan tarifa plana."
   sebastian_pinera:
     nombre: Sebastián Piñera Echenique
@@ -863,6 +901,15 @@ people:
         organizacion: ministerio_hacienda
         desde: 2026-07-23
     organizacion: ministerio_hacienda
+  sebastian_vallebona:
+    nombre: Sebastián Vallebona Espinosa
+    cargo: Subsecretario de Hacienda
+    cargos:
+      - cargo: Subsecretario de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2026-08-10
+    organizacion: ministerio_hacienda
+    notas: "Nombrado por Kast el 10 de agosto de 2026, tras 18 días de vacancia por la salida de Juan Pablo Rodríguez (test de drogas). Era Coordinador de Políticas Tributarias del Ministerio de Hacienda (desde marzo 2026) y participó del trabajo técnico de la megarreforma. Abogado PUC, LLM UC en derecho tributario, advanced LLM en derecho tributario internacional por la Universidad de Leiden; profesor de Derecho Tributario en la PUC y de Tributación Internacional Esencial en la UAI. Ex PwC Chile (2012-2015) y socio de Pereira Covarrubias Montes Abogados (2015-marzo 2026)."
   katherine_lopez:
     nombre: Katherine López Rivera
     cargo: Delegada Presidencial Regional de Antofagasta
@@ -946,8 +993,13 @@ people:
         desde: 2026-03-11
     notas: Reveló interés de Thiel en invertir en minería en Chile y Argentina.
   felipe_kast:
-    nombre: Felipe Kast
+    nombre: Felipe Kast Sommerhoff
     cargo: Senador (Evópoli)
+    cargos:
+      - cargo: Ministro de Planificación
+        organizacion: ministerio_desarrollo_social
+        desde: 2010-03-11
+        hasta: 2011-07-18
     organizacion: evopoli
     notas: "Hermano del Presidente José Antonio Kast. Fundador de Evópoli. Impulsor del proyecto de ley contra el nepotismo en 2018."
   daniel_mansuy:
@@ -978,12 +1030,26 @@ people:
     organizacion: amnistia_internacional
     notas: "Director ejecutivo de Amnistía Internacional Chile. En agosto de 2026 criticó la reforma del gobierno de Kast al INDH señalando que 'cercenaría gran parte de las atribuciones' del organismo y defendió la facultad de presentar querellas como 'fundamental en la labor del INDH'."
   jaime_manalich:
-    nombre: Jaime Mañalich
+    nombre: Jaime Mañalich Muxi
     cargo: Exministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2010-03-11
+        hasta: 2014-03-11
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2019-06-13
+        hasta: 2020-06-13
     notas: "Exministro de Salud del segundo gobierno de Piñera. Confirmó el primer caso de COVID-19 en Chile el 3 de marzo de 2020: 'En algún momento tenía que llegar'. Defendido por Kast por su gestión durante la pandemia."
   sebastian_sichel:
-    nombre: Sebastián Sichel
+    nombre: Sebastián Sichel Ramírez
     cargo: Exministro de Desarrollo Social (2020)
+    cargos:
+      - cargo: Ministro de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2019-06-13
+        hasta: 2020-06-04
     organizacion: ministerio_desarrollo_social
     notas: "Ministro de Desarrollo Social y Familia del segundo gobierno de Piñera (2019-2020). Presentó junto al Presidente el proyecto de Ingreso Familiar de Emergencia (IFE) en abril de 2020. Candidato presidencial en 2021."
   alejandra_candia:
@@ -1199,6 +1265,14 @@ people:
     cargos:
       - cargo: Ministro de Agricultura
         organizacion: ministerio_agricultura
+        desde: 2000-03-11
+        hasta: 2006-03-11
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2016-01-05
+        hasta: 2018-03-11
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
         desde: 2026-03-11
     organizacion: ministerio_agricultura
   pedro_araya:
@@ -1289,7 +1363,7 @@ people:
     organizacion: secom
     notas: Autor de la minuta "cierre epico"
   michelle_bachelet:
-    nombre: Michelle Bachelet
+    nombre: Michelle Bachelet Jeria
     cargo: Expresidenta de Chile y ex Alta Comisionada de Derechos Humanos de la ONU
     cargos:
       - cargo: Presidenta de la República de Chile
@@ -1304,6 +1378,14 @@ people:
         organizacion: fenats
         desde: 2018-09-01
         hasta: 2022-08-31
+      - cargo: Ministra de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2002-01-07
+        hasta: 2004-09-29
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2000-03-11
+        hasta: 2002-02-07
   emerson_berrios:
     nombre: Emerson Berríos
     cargo: Presidente Fenats Nacional
@@ -1362,8 +1444,17 @@ people:
         desde: 2026-03-11
     notas: Filtró la minuta de Secom
   sergio_bitar:
-    nombre: Sergio Bitar
+    nombre: Sergio Bitar Chacra
     cargo: Exministro y exvicepresidente de la Fundación Paz Ciudadana
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2003-03-03
+        hasta: 2005-12-14
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2008-01-11
+        hasta: 2010-03-11
     organizacion: fundacion_paz_ciudadana
     notas: "Exministro de Estado (Minería y Educación) en los gobiernos de la Concertación. Exvicepresidente de la Fundación Paz Ciudadana. En junio de 2026, consultado por VerificaUDP sobre la afirmación del presidente Kast de que Chile debe 'volver a ser el país más seguro de Latinoamérica', sostuvo que Chile siempre ha tenido de los más bajos índices de homicidios de la región y advirtió sobre la brecha entre cifras objetivas y percepción ciudadana."
   sergio_turra:
@@ -1382,8 +1473,13 @@ people:
     notas: Abogada U. de Concepción, máster LSE. Diseñó primer plan nacional contra
       trata de personas (2013-2014).
   antonio_walker:
-    nombre: Antonio Walker
+    nombre: Antonio Walker Prieto
     cargo: Presidente de la Sociedad Nacional de Agricultura (SNA)
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2018-03-11
+        hasta: 2021-01-06
     organizacion: sna
   loreto_seguel:
     nombre: Loreto Seguel
@@ -1640,8 +1736,13 @@ people:
         desde: 2026-03-11
     notas: Coautora del proyecto "Escucha su corazón"
   antonia_orellana:
-    nombre: Antonia Orellana
+    nombre: Antonia Orellana Guarello
     cargo: Exministra de Derechos Humanos
+    cargos:
+      - cargo: Ministra de la Mujer y la Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: Publicó carta "Crueldad legislativa" cuestionando el proyecto de latidos
       fetales
   italo_omegna:
@@ -2109,6 +2210,15 @@ people:
   karla_rubilar:
     nombre: Karla Rubilar Barahona
     cargo: Exintendenta de la Región Metropolitana
+    cargos:
+      - cargo: Ministra de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2020-07-28
+        hasta: 2022-03-11
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2019-10-28
+        hasta: 2020-07-28
     notas: "Intendenta de la Región Metropolitana durante el estallido social (2019-2020). El 25 de octubre de 2019 calificó en Twitter la marcha de alrededor de un millón de personas como 'un día histórico' en que 'la Región Metropolitana es la protagonista de una marcha pacífica'. Exministra de Desarrollo Social y secretaria general de Gobierno."
   enrique_monras:
     nombre: Enrique Monrás
@@ -2285,7 +2395,7 @@ people:
       - cargo: Ministra del Medio Ambiente
         organizacion: ministerio_medio_ambiente
         desde: 2026-03-11
-    notas: Ingeniera Civil Industrial. Trabajó en los dos gobiernos de Piñera.
+    notas: "Ingeniera Civil Industrial. Trabajó en los dos gobiernos de Piñera. Ministra del Medio Ambiente del gobierno de José Antonio Kast: a una semana de la instalación del gobierno, su cartera suspendió el proceso de sitios prioritarios del SBAP y solicitó a Contraloría el retiro de 43 decretos supremos ingresados por la administración anterior (marzo 2026)."
   ximena_lincolao:
     nombre: Ximena Lincolao Pilquián
     cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
@@ -2328,6 +2438,10 @@ people:
     cargo: Ex ministro de Seguridad Pública
     organizacion: ministerio_seguridad
     cargos:
+      - cargo: Ministro de Justicia y Derechos Humanos
+        organizacion: ministerio_justicia
+        desde: 2023-01-10
+        hasta: 2024-10-17
       - cargo: Ministro de Seguridad Pública
         organizacion: ministerio_seguridad
         desde: 2025-04-01
@@ -2622,17 +2736,30 @@ people:
         hasta: 2000-03-11
     notas: Expresidente (1994-2006), viajó con Kast a Perú como invitado especial. Confirmó su asistencia al cambio de mando del 11 de marzo de 2026.
   ricardo_lagos:
-    nombre: Ricardo Lagos
+    nombre: Ricardo Lagos Escobar
     cargo: Expresidente de Chile
     cargos:
       - cargo: Presidente de la República de Chile
         organizacion: presidencia_chile
         desde: 2000-03-11
         hasta: 2006-03-11
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 1994-03-11
+        hasta: 1998-08-01
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1990-03-11
+        hasta: 1992-09-28
     notas: "Expresidente de Chile (2000-2006) y militante PPD, retirado de la vida pública desde enero de 2024. Se excusó de asistir al cambio de mando de José Antonio Kast el 11 de marzo de 2026."
   ricardo_lagos_weber:
     nombre: Ricardo Lagos Weber
     cargo: Senador PPD
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2006-03-11
+        hasta: 2007-12-06
     organizacion: senado
     notas: "Senador PPD, hijo del expresidente Ricardo Lagos. Se despidió del Congreso el 11 de marzo de 2026 tras 16 años como parlamentario."
   paula_estevez:
@@ -2789,6 +2916,10 @@ people:
       - cargo: Diputada (PC)
         organizacion: partido_comunista
         desde: 2026-03-11
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: Exvocera del gobierno de Gabriel Boric. Criticó duramente las promesas de seguridad de Kast en entrevista con Animales Políticos.
   evelyn_matthei:
     nombre: Evelyn Matthei Fornet
@@ -2798,6 +2929,10 @@ people:
         organizacion: municipalidad_providencia
         desde: 2016-12-06
         hasta: 2024-12-06
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2011-01-16
+        hasta: 2013-07-22
     notas: Se cuadró con Camila Vallejo en críticas a promesa de seguridad del gobierno Kast. También criticó a la prensa por cobertura sexista.
   alvaro_elizalde:
     nombre: Álvaro Elizalde Soto
@@ -2854,7 +2989,7 @@ people:
       - cargo: Ministro de Hacienda
         organizacion: ministerio_hacienda
         desde: 2022-03-11
-        hasta: 2026-03-11
+        hasta: 2025-08-21
     notas: Cuestionó la narrativa de "descontrol" del gasto público durante la transición al gobierno de Kast.
   monica_rincon:
     nombre: Mónica Rincón
@@ -2878,6 +3013,10 @@ people:
     nombre: Ximena Rincón González
     cargo: Ministra de Energía
     cargos:
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2015-05-11
+        hasta: 2016-11-18
       - cargo: Ministra de Energía
         organizacion: ministerio_energia
         desde: 2026-03-11
@@ -3064,8 +3203,13 @@ people:
     cargo: Alcalde de Renca
     notas: "Alcalde de Renca. Firmante de la declaración de 104 alcaldes de oposición contra el mecanismo de compensación del FCM (agosto 2026). Anticipó un posible 'quiebre' al interior de la Asociación Chilena de Municipalidades (AChM) por el tema."
   camila_merino:
-    nombre: Camila Merino
+    nombre: Camila Merino Catalán
     cargo: Alcaldesa de Vitacura
+    cargos:
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2010-03-11
+        hasta: 2011-01-14
     notas: "Alcaldesa de Vitacura. Firmó la carta de los 162 alcaldes oficialistas que respaldaron la fórmula de compensación del gobierno (agosto 2026). Según Tomás Vodanovic, le habría señalado que su municipio podría adaptarse a una reducción de $10 mil millones si se aplicara gradualmente, de 10% a 10% por año."
   felipe_fleischmann:
     nombre: Felipe Fleischmann Ruiz
@@ -3235,13 +3379,17 @@ people:
         desde: 2026-05-27
     organizacion: codelco
   pablo_longueira:
-    nombre: Pablo Longueira
+    nombre: Pablo Longueira Montes
     cargo: Exsenador (UDI)
     cargos:
       - cargo: Senador (UDI)
         organizacion: udi
         desde: 2010-03-11
         hasta: 2014-03-11
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2011-07-18
+        hasta: 2013-04-29
     notas: Figura central del caso Corpesca por lobby a favor de la industria pesquera durante tramitación de la Ley de Pesca.
   bruno_villalobos:
     nombre: Bruno Villalobos
@@ -3342,8 +3490,17 @@ people:
     organizacion: partido_socialista
     notas: "Diputado del Partido Socialista. Criticó que el gobierno de Kast haya dejado una agenda de Estado por una perspectiva ideológica."
   jorge_burgos:
-    nombre: Jorge Burgos
+    nombre: Jorge Burgos Varela
     cargo: Ex Ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2015-05-11
+        hasta: 2016-06-08
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2014-03-11
+        hasta: 2015-05-11
     organizacion: ministerio_interior
     notas: Exministro del Interior del segundo gobierno de Bachelet; valoró la continuidad del plan de seguridad entre gobiernos.
   andres_couble:
@@ -3415,7 +3572,7 @@ people:
     cargos:
       - cargo: Ministro de Educación
         organizacion: ministerio_educacion
-        desde: 2022-03-11
+        desde: 2023-08-16
         hasta: 2026-03-11
     organizacion: ministerio_educacion
     notas: "Exministro de Educación del gobierno de Gabriel Boric. Reconoció que la promesa de condonación del CAE pudo influir en la morosidad."
@@ -3487,6 +3644,10 @@ people:
     cargos:
       - cargo: Ministro del Interior y Seguridad Pública
         organizacion: ministerio_interior
+        desde: 2012-11-05
+        hasta: 2014-03-11
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
         desde: 2018-03-11
         hasta: 2019-10-28
     organizacion: ministerio_interior
@@ -3527,24 +3688,57 @@ people:
     organizacion: reportea
     notas: "Periodista de investigación. Director de Reportea. Coautor del reportaje sobre los chats de Hermosilla con Chadwick."
   ignacio_walker:
-    nombre: Ignacio Walker
+    nombre: Ignacio Walker Prieto
     cargo: Excanciller
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2004-09-29
+        hasta: 2006-03-11
     notas: "Abogado y político democratacristiano. Exministro de Relaciones Exteriores (2006-2009) y exsenador. Criticó la diplomacia de EE.UU. hacia Chile."
   juan_gabriel_valdes:
-    nombre: Juan Gabriel Valdés
+    nombre: Juan Gabriel Valdés Soublette
     cargo: Excanciller
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1999-06-22
+        hasta: 2000-03-11
     notas: "Político de la Concertación. Exministro de Relaciones Exteriores (1999-2000) y embajador de Chile ante la ONU. Criticó el tono del embajador de EE.UU. Brandon Judd."
   jose_miguel_insulza:
-    nombre: José Miguel Insulza
+    nombre: José Miguel Insulza Salinas
     cargo: Excanciller y exsecretario general de la OEA
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 2000-03-11
+        hasta: 2005-05-24
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1994-09-20
+        hasta: 1999-06-22
     notas: "Político socialista. Exministro de Relaciones Exteriores (1994-1999), exministro del Interior y secretario general de la OEA (2005-2015). Sobre el primer sondeo de la ONU que dejó a Bachelet en cuarto lugar, dijo en Radio Duna que 'lo preocupante son los cinco desestímulos' y que quedaba espacio para revertir el resultado."
   jose_antonio_viera_gallo:
-    nombre: José Antonio Viera-Gallo
+    nombre: José Antonio Viera-Gallo Quesney
     cargo: Exministro y exembajador
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2007-03-26
+        hasta: 2010-03-11
     notas: "Abogado y político del PPD. Exministro secretario general de la Presidencia (1990-1994) y embajador de Chile ante la ONU. Tras el primer sondeo de la ONU señaló que la candidatura de Bachelet tenía un escollo en el gobierno de Donald Trump."
   heraldo_munoz:
-    nombre: Heraldo Muñoz
+    nombre: Heraldo Muñoz Valenzuela
     cargo: Excanciller
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2014-03-11
+        hasta: 2018-03-11
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2002-01-07
+        hasta: 2004-07-13
     notas: "Político y académico del PPD. Exministro de Relaciones Exteriores (2014-2018) y embajador de Chile ante la ONU. Tras el primer sondeo de la ONU explicó que 'no hay nada resuelto y vienen varias votaciones informales más' y que Bachelet analizaría los resultados con Brasil y México."
   alejandro_irarrazaval:
     nombre: Alejandro Irarrázaval
@@ -3569,6 +3763,11 @@ people:
   javiera_toro:
     nombre: Javiera Toro Cáceres
     cargo: Ministra de Desarrollo Social y Familia
+    cargos:
+      - cargo: Ministra de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2022-08-25
+        hasta: 2026-03-11
     notas: "Abogada y militante de Comunes. Ministra de Desarrollo Social y Familia del gobierno de Gabriel Boric. Defendió al Frente Amplio del 'lenguaje caricaturesco' que instaló la derecha sobre su agenda (La Tercera, marzo 2026)."
   bettina_horst:
     nombre: Bettina Horst
@@ -3576,12 +3775,34 @@ people:
     organizacion: libertad_y_desarrollo
     notas: "Economista de Libertad y Desarrollo. Ha cuestionado la lógica proteccionista de la administración Trump hacia Chile."
   nicolas_eyzaguirre:
-    nombre: Nicolás Eyzaguirre
+    nombre: Nicolás Eyzaguirre Guzmán
     cargo: Exministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2000-03-11
+        hasta: 2006-03-11
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2017-08-31
+        hasta: 2018-03-11
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2014-03-11
+        hasta: 2015-06-27
     notas: "Economista y político PPD. Exministro de Hacienda (2006-2010). Afirmó que 'Estados Unidos actúa como un matón' y que 'el ofensor se da por ofendido' respecto al arancel de 12,5%."
   cristian_monckeberg:
-    nombre: Cristián Monckeberg
+    nombre: Cristián Monckeberg Bruner
     cargo: Exministro y expresidente de Renovación Nacional
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2018-03-11
+        hasta: 2020-06-04
+      - cargo: Ministro de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2020-06-04
+        hasta: 2020-07-28
     notas: "Abogado y político RN. Expresidente de Renovación Nacional y exministro. Criticó que el embajador Judd mande 'a leer el tratado' a ministros chilenos."
   leonardo_prieto:
     nombre: Leonardo Prieto
@@ -3598,8 +3819,13 @@ people:
     cargo: Exdiputado
     notas: "Exdiputado. Conductor del programa Sin Filtros. Reveló que Porcel TV realiza su programa en dependencias de TVN."
   macarena_santelices:
-    nombre: Macarena Santelices
+    nombre: Macarena Santelices Cañas
     cargo: Diputada (Republicanos)
+    cargos:
+      - cargo: Ministra de la Mujer y la Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2020-05-06
+        hasta: 2020-06-09
     notas: "Diputada del Partido Republicano. Cónyuge de Leonardo Prieto. Felipe Costabal fue proveedor de campaña de la parlamentaria."
   pamela_le_roy:
     nombre: Pamela Le Roy
@@ -3636,13 +3862,22 @@ people:
     cargo: General (r) del Ejército
     notas: "Exjefe de la División Exterior de la DINA. Condenado por crímenes de lesa humanidad. Recluso en el ex penal Punta Peuco."
   jaime_gajardo:
-    nombre: Jaime Gajardo
+    nombre: Jaime Gajardo Falcón
     cargo: Exministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia y Derechos Humanos
+        organizacion: ministerio_justicia
+        desde: 2024-10-17
+        hasta: 2026-03-11
     notas: "Exministro de Justicia del gobierno de Gabriel Boric. Criticó la idea de restituir a Punta Peuco como cárcel especial."
   maria_jesus_wulf:
     nombre: María Jesús Wulf Le May
     cargo: Ministra de Desarrollo Social y Familia
     organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministra de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2026-03-11
     notas: "Ministra de Desarrollo Social y Familia del gobierno de José Antonio Kast. Anunció el proyecto que estudia usar ClaveÚnica para verificación de edad en redes sociales."
   diego_schalper:
     nombre: Diego Schalper
@@ -3716,8 +3951,13 @@ people:
     organizacion: instituto_igualdad
     notas: "Autora de la columna de opinión en El Mostrador sobre el fin del Programa Mujeres Rurales (julio 2026)."
   jose_joaquin_brunner:
-    nombre: José Joaquín Brunner
+    nombre: José Joaquín Brunner Ried
     cargo: Académico y exministro secretario general de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1994-09-20
+        hasta: 1998-08-01
     notas: "Sociólogo, académico y político chileno. Exministro secretario general de Gobierno de Eduardo Frei Ruiz-Tagle y exdirector de FLACSO. Autor de la columna 'La estrategia de Kast: lo que conocemos y lo que aún desconocemos' en El Líbero (diciembre 2025), que analiza la estrategia de ocultamiento valórico de José Antonio Kast."
   rodrigo_paz:
     nombre: Rodrigo Paz
@@ -4003,12 +4243,22 @@ people:
     cargo: Economista de la UCLA
     notas: "Economista de la Universidad de California en Los Ángeles. En el seminario de Moneda Patria Investment (julio 2026) dijo que Codelco necesita una 'cirugía' mayor, en el marco del debate sobre capitales privados en la estatal."
   felipe_morande:
-    nombre: Felipe Morandé
+    nombre: Felipe Morandé Lavín
     cargo: Presidente del Consejo Directivo del Sistema de Empresas SEP
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2010-03-11
+        hasta: 2011-01-14
     notas: "Presidente del Consejo Directivo del Sistema de Empresas Públicas (SEP). Descartó en agosto de 2026 una privatización inmediata de las empresas del sistema, aunque no descartó la entrada de privados en un plazo mayor si hay estabilidad financiera."
   marcos_barraza:
-    nombre: Marcos Barraza
+    nombre: Marcos Barraza Gómez
     cargo: Diputado Partido Comunista
+    cargos:
+      - cargo: Ministro de Desarrollo Social
+        organizacion: ministerio_desarrollo_social
+        desde: 2015-05-11
+        hasta: 2018-03-11
     organizacion: partido_comunista
     notas: "Diputado del Partido Comunista. Participó junto a Jaime Araya y Consuelo Veloso en el streaming 'Un Día Menos' donde se originó la polémica por los dichos sobre el Servel (julio 2026)."
   dario_quiroga:
@@ -4094,8 +4344,17 @@ people:
     organizacion: ministerio_mujer
     notas: "Fonoaudióloga egresada de la Universidad de Las Américas (UDLA) con posgrado en la Universidad Católica de Temuco, militante del Partido Cristiano de Chile (PCC). Asumió el 1 de agosto de 2026 como seremi de la Mujer y Equidad de Género del Bío Bío, completando el gabinete regional tras la vacancia dejada por la licencia por embarazo de Camila Contreras."
   claudio_orrego:
-    nombre: Claudio Orrego
+    nombre: Claudio Orrego Larraín
     cargo: Gobernador de la Región Metropolitana
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2000-03-11
+        hasta: 2000-12-29
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2000-03-11
+        hasta: 2000-12-29
     organizacion: gore_metropolitano
     notas: "Gobernador de la Región Metropolitana. En el marco del caso ProCultura impulsó desde el inicio las acciones administrativas y judiciales para cobrar las pólizas de garantía del programa 'Quédate' a la aseguradora ASPOR, que la Corte Suprema confirmó el 4 de agosto de 2026: 'Lo dijimos desde el primer día, Aspor debía pagar'."
   daniel_pacheco:
@@ -4109,8 +4368,13 @@ people:
     organizacion: ministerio_mujer
     notas: "Exseremi de la Mujer y Equidad de Género del Bío Bío, profesora de historia designada en marzo de 2024 bajo el gobierno de Boric y una de las últimas autoridades de esa administración que se mantuvo en el gobierno de Kast gracias al fuero maternal (renunció el 11 de marzo de 2026, confirmó su embarazo dos semanas después y el Ministerio de la Mujer la mantuvo en el cargo). Su embarazo impidió que su reemplazante, Antaris Varela, asumiera la titularidad. En agosto de 2026 dejó el cargo despidiéndose con un polémico mensaje en Instagram ('último día en esta tortura llamada ser seremi de Kast'), que luego aclaró como un descargo por la exposición y las críticas públicas, no como un ataque al presidente. La vacancia se resolvió con la designación de Michelle Vera."
   yerko_ljubetic:
-    nombre: Yerko Ljubetic
+    nombre: Yerko Ljubetic Godoy
     cargo: Director Nacional del INDH
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2005-04-22
+        hasta: 2006-03-11
     organizacion: indh
     notas: "Director Nacional del Instituto Nacional de Derechos Humanos. El 4 de agosto de 2026, en Radio 13C, discrepó de la absolución de Claudio Crespo: 'un joven perdió la vista y el autor de esas lesiones quedó sin castigo'."
   raul_leiva:
@@ -4139,8 +4403,13 @@ people:
     organizacion: renovacion_nacional
     notas: "Diputado independiente en renovación nacional. El 4 de agosto de 2026 celebró el post de Kast sobre Crespo y pidió una ley de indultos para carabineros condenados por el estallido social."
   maria_jose_zaldivar:
-    nombre: María José Zaldívar
+    nombre: María José Zaldívar Larraín
     cargo: Directora General de Fundación Teletón
+    cargos:
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2019-10-28
+        hasta: 2021-04-07
     organizacion: fundacion_teleton
     notas: "Directora General de la Fundación Teletón. El 4 de agosto de 2026 valoró el respaldo transversal del Senado al proyecto del Día Nacional de la Teletón y confió en igual acogida en la Cámara de Diputadas y Diputados."
   sebastian_urrejola:
@@ -4154,12 +4423,22 @@ people:
     organizacion: senado
     notas: "Senador y presidente de la Comisión de Adulto Mayor y Discapacidad, que aprobó por unanimidad el proyecto del Día Nacional de la Teletón. El 4 de agosto de 2026 destacó en Sala que la iniciativa busca que el día posterior a la campaña sea una instancia de encuentro familiar."
   claudia_pascual:
-    nombre: Claudia Pascual
+    nombre: Claudia Pascual Grau
     cargo: Senadora (PC)
+    cargos:
+      - cargo: Ministra de la Mujer y la Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2016-06-03
+        hasta: 2018-03-11
     notas: "Senadora. El 4 de agosto de 2026 hizo reserva de constitucionalidad de la fórmula de compensación municipal de la megarreforma aprobada por la Sala."
   francisco_huenchumilla:
-    nombre: Francisco Huenchumilla
+    nombre: Francisco Huenchumilla Jaramillo
     cargo: Senador (DC)
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2003-03-03
+        hasta: 2004-09-29
     notas: "Senador. El 4 de agosto de 2026 hizo reserva de constitucionalidad de la fórmula de compensación municipal de la megarreforma y votó en contra de ella en la Sala."
   ruth_hurtado:
     nombre: Ruth Hurtado
@@ -4167,8 +4446,17 @@ people:
     organizacion: partido_republicano
     notas: "Secretaria general del Partido Republicano durante la campaña presidencial de segunda vuelta de 2025. Integró la barra de Kast en el debate ARCHI del 3 de diciembre y, previo al debate ANATEL del 9 de diciembre, expresó su esperanza de que el foro 'no sea algo tan confrontacional'."
   alejandra_krauss:
-    nombre: Alejandra Krauss
+    nombre: Alejandra Krauss Valle
     cargo: Exministra del Trabajo (DC)
+    cargos:
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2016-11-18
+        hasta: 2018-03-11
+      - cargo: Ministra de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 2000-03-11
+        hasta: 2002-01-07
     organizacion: partido_democratacristiano
     notas: "Figura de la Democracia Cristiana y exministra del Trabajo. Integró el comando de Jeannette Jara en la campaña de segunda vuelta de 2025 y acompañó a la candidata en el debate ARCHI del 3 de diciembre de 2025."
   susana_gonzalez:
@@ -4177,8 +4465,13 @@ people:
     organizacion: partido_comunista
     notas: "Jefa de comunicaciones del comando de Jeannette Jara en la campaña de segunda vuelta de 2025. Participó junto a Ricardo Solari en la preparación de la candidata previo al debate ARCHI del 3 de diciembre."
   ricardo_solari:
-    nombre: Ricardo Solari
+    nombre: Ricardo Solari Saavedra
     cargo: Exministro del Trabajo (PS)
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2000-03-11
+        hasta: 2005-04-22
     organizacion: partido_socialista
     notas: "Exministro del Trabajo durante el gobierno de Ricardo Lagos. Uno de los principales asesores del comando de Jeannette Jara en la campaña de segunda vuelta de 2025; participó en la preparación de la candidata previo al debate ARCHI del 3 de diciembre."
   carlos_pena:
@@ -4189,6 +4482,11 @@ people:
   carlos_montes:
     nombre: Carlos Montes Cisternas
     cargo: Ministro de Vivienda y Urbanismo (PS)
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: "Ministro de Vivienda y Urbanismo del gobierno de Gabriel Boric. En el debate ANATEL del 9 de diciembre de 2025, la candidata Jeannette Jara discrepó públicamente de sus dichos sobre las filas para acceder a la vivienda en el contexto de la megatoma de San Antonio."
   jose_carlos_meza:
     nombre: José Carlos Meza
@@ -4386,8 +4684,21 @@ people:
     notas: "Subsecretaria de Seguridad Pública del gobierno de José Antonio Kast. El 8 de agosto de 2026 destacó el megaoperativo nacional ACOT de Carabineros y PDI."
 
   laurence_golborne:
-    nombre: Laurence Golborne
+    nombre: Laurence Golborne Riveros
     cargo: Ex ministro de Minería y Obras Públicas de Piñera
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2011-07-18
+        hasta: 2012-11-05
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2010-03-11
+        hasta: 2011-07-18
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2011-01-16
+        hasta: 2011-07-18
     notas: "Ex ministro de Minería (2010-2011) y de Obras Públicas (2011-2012) del primer gobierno de Sebastián Piñera. Precandidato presidencial UDI en 2013; su campaña fue financiada de forma irregular (caja Penta, 'lista de Carrasco'), lo que lo excluyó de la carrera y derivó en una querella del SII y una formalización por el caso Penta en 2016."
   roberto_carrasco:
     nombre: Roberto Carrasco
@@ -4478,8 +4789,13 @@ people:
     cargo: Expresidenta de la Convención Constitucional
     notas: "Lingüista mapuche, presidenta de la Convención Constitucional (2021-2022); mencionada por Boric en la Cuenta Pública 2023 entre los casos de ataques de la oposición."
   marco_antonio_avila:
-    nombre: Marco Antonio Ávila
+    nombre: Marco Antonio Ávila Lavanal
     cargo: Exministro de Educación (2022-2023)
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2022-03-11
+        hasta: 2023-08-16
     notas: "Ministro de Educación del gobierno de Boric; mencionado por Boric en la Cuenta Pública 2023 por los dichos homofóbicos que recibió desde la oposición."
   luis_thayer:
     nombre: Luis Thayer
@@ -4506,8 +4822,13 @@ people:
     cargo: Vicepresidente de Comercialización (VCO) de Codelco
     notas: "Autor del correo del 9-dic-2025 al presidente ejecutivo Rubén Alvarado sobre la 'cuenta del carnicero respecto a la operación rastrillo 2025', citado en la investigación por bonos irregulares de BBCl Investiga."
   patricio_melero:
-    nombre: Patricio Melero
+    nombre: Patricio Melero Abaroa
     cargo: Presidente de SalmonChile; exministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2021-04-07
+        hasta: 2022-03-11
     notas: "Exministro del Trabajo de Piñera; preside el gremio SalmonChile, que presentó ante la USTR de EE.UU. una solicitud a nombre de las 48 empresas que representa contra el arancel del 12,5%."
   andres_ergas:
     nombre: Andrés Ergas
@@ -4553,6 +4874,2653 @@ people:
     nombre: Álex Gonzalo Troncoso Araya
     cargo: Abogado de deudores del CAE
     notas: "Abogado que obtuvo los fallos de las Cortes de Apelaciones de La Serena y Valparaíso que declararon ilegal el cobro del CAE por procedimiento tributario (agosto 2026)."
+  augusto_pinochet_hiriart:
+    nombre: Augusto Pinochet Hiriart
+    cargo: Empresario, hijo de Augusto Pinochet
+  carlos_cruz:
+    nombre: Carlos Cruz Lorenzen
+    cargo: Ex ministro de Obras Públicas (2000-2002)
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2000-03-11
+        hasta: 2002-01-07
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2000-03-11
+        hasta: 2002-01-07
+  carlos_massad:
+    nombre: Carlos Massad Abud
+    cargo: Ex presidente del Banco Central de Chile
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1994-03-11
+        hasta: 1996-08-07
+  claudia_nogueira:
+    nombre: Claudia Nogueira
+    cargo: Ex diputada UDI
+  eduardo_espinoza:
+    nombre: Eduardo Espinoza
+    cargo: Involucrado en compra de terrenos del GORE Coquimbo (Papaya Gate)
+  eduardo_frei_ruiz_tagle:
+    nombre: Eduardo Frei Ruiz-Tagle
+    cargo: Presidente de Chile (1994-2000)
+  eduardo_gordon:
+    nombre: Eduardo Gordon Valcárcel
+    cargo: Ex general director de Carabineros
+  eduardo_monasterio:
+    nombre: Eduardo Monasterio
+    cargo: Ex presidente del grupo Inverlink
+  enzo_bertinelli:
+    nombre: Enzo Bertinelli
+    cargo: Ex gerente general de Inverlink Corredores de Bolsa
+  gonzalo_cornejo:
+    nombre: Gonzalo Cornejo
+    cargo: Ex alcalde de Recoleta (UDI)
+  guido_girardi:
+    nombre: Guido Girardi
+    cargo: Ex senador PPD
+  hector_pena:
+    nombre: Héctor Peña
+    cargo: Dueño de Gestión Ambiental Territorial (Gate)
+  javier_montoya:
+    nombre: Javier Montoya
+    cargo: Ex jefe de tesorería de Corfo
+  jose_caceres:
+    nombre: José Cáceres
+    cargo: Involucrado en compra de terrenos del GORE Coquimbo (Papaya Gate)
+  juan_michel_salazar:
+    nombre: Juan Michel Salazar
+    cargo: Ex director metropolitano de Chiledeportes
+  julio_dittborn:
+    nombre: Julio Dittborn
+    cargo: Diputado UDI
+  lucia_hiriart:
+    nombre: Lucía Hiriart de Pinochet
+    cargo: Esposa de Augusto Pinochet
+  lucia_pinto:
+    nombre: Lucía Pinto
+    cargo: Ex intendenta de Coquimbo (UDI)
+  luis_ajenjo:
+    nombre: Luis Ajenjo
+    cargo: Ex gerente de la Empresa de Ferrocarriles del Estado (EFE)
+  marcela_cubillos:
+    nombre: Marcela Cubillos Sigall
+    cargo: Ex ministra de Educación (2019-2021)
+    cargos:
+      - cargo: Ministra del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2018-03-11
+        hasta: 2018-08-09
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2019-08-09
+        hasta: 2021-01-06
+  marcela_cuevas:
+    nombre: Marcela Cuevas Muñoz
+    cargo: Ex mayor de Carabineros (cómplice en megafraude)
+  mario_salazar:
+    nombre: Mario Salazar
+    cargo: Empresario, primo de Juan Michel Salazar
+  pamela_andrada:
+    nombre: Pamela Andrada
+    cargo: Ex secretaria del presidente del Banco Central
+  patricio_tombolini:
+    nombre: Patricio Tombolini
+    cargo: Ex subsecretario de Transportes
+  ricardo_farias:
+    nombre: Ricardo Farías
+    cargo: Ex administrador electoral de Guido Girardi
+  ricardo_vorphal:
+    nombre: Ricardo Vorphal
+    cargo: Ex director de Chiledeportes
+  sergio_cortes:
+    nombre: Sergio Cortés
+    cargo: Ex jefe de Finanzas de Vialidad del MOP
+  victor_manuel_rebolledo:
+    nombre: Víctor Manuel Rebolledo González
+    cargo: Ex diputado PPD
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1994-03-11
+        hasta: 1994-09-20
+  juan_poblete:
+    nombre: Juan Poblete
+    cargo: Ex juez, ex presidente de la Corte de Apelaciones de Copiapó
+    notas: "Ex presidente de la Corte de Apelaciones de Copiapó. Condenado en 2026 en la Operación Topógrafo por espionaje ilegal junto al general (R) Schafik Nazal."
+  schafik_nazal:
+    nombre: Schafik Nazal
+    cargo: Ex director de Inteligencia del Ejército
+    notas: "General (R) del Ejército, ex director de Inteligencia (DINE). Condenado en 2026 por espionaje ilegal contra el periodista Mauricio Weibel (Operación Topógrafo)."
+  rafael_harvey:
+    nombre: Rafael Harvey
+    cargo: Capitán (R) del Ejército
+    notas: "Capitán (R) del Ejército espiado ilegalmente en la Operación Topógrafo por investigar hechos de corrupción militar."
+  karen_rojo:
+    nombre: Karen Rojo
+    cargo: Ex alcaldesa de Antofagasta
+    notas: "Ex alcaldesa independiente de Antofagasta (2012-2020). Declarada culpable por fraude al fisco en diciembre de 2020 en el marco del Caso Main."
+  edgardo_vergara:
+    nombre: Edgardo Vergara
+    cargo: Ex secretario ejecutivo de la Corporación Municipal de Antofagasta
+    notas: "Condenado junto a Karen Rojo por fraude al fisco en la Corporación Municipal de Antofagasta (2020)."
+  juan_ramon_godoy:
+    nombre: Juan Ramón Godoy
+    cargo: Ex alcalde de Rancagua (PS)
+    notas: "Ex alcalde de Rancagua (2016-2024). Declarado culpable de cohecho agravado y fraude al fisco en diciembre de 2025 tras una investigación iniciada por un reportaje de CIPER."
+  javier_cornejo:
+    nombre: Javier Cornejo
+    cargo: Empresario, proveedor de la Municipalidad de Rancagua
+    notas: "Amigo del exalcalde Juan Ramón Godoy. Condenado por soborno tras recibir licitaciones por trato directo de la Corporación Municipal de Rancagua."
+  nicolas_nunez:
+    nombre: Nicolás Núñez
+    cargo: Fiscal de alta complejidad de la Fiscalía Regional de O'Higgins
+    notas: "Fiscal de alta complejidad que acreditó los hechos de corrupción del exalcalde de Rancagua Juan Ramón Godoy."
+  diego_barba:
+    nombre: Diego Barba
+    cargo: Empresario, proveedor de la Municipalidad de Rancagua
+    notas: "Proveedor municipal que compró un auto para el exalcalde Juan Ramón Godoy, según la investigación fiscal."
+  nayalet_mansilla:
+    nombre: Nayalet Mansilla
+    cargo: Fiscal regional de Ñuble
+    notas: "Fiscal regional de Ñuble a cargo de la causa del Caso Luminarias."
+  mauricio_smok:
+    nombre: Mauricio Smok
+    cargo: Concejal UDI de Recoleta
+    notas: "Concejal UDI de Recoleta que solicitó a la Contraloría revisar la licitación de Itelecom con el municipio en el Caso Luminarias."
+  francisco_melo:
+    nombre: Francisco Melo
+    cargo: Alcalde de Negrete
+    notas: "Alcalde de Negrete detenido en diciembre de 2020 por la Fiscalía en el marco del Caso Luminarias."
+  carlos_reyes:
+    nombre: Carlos Reyes
+    cargo: Ex director de obras de la Municipalidad de Recoleta
+    notas: "Ex director de obras de Recoleta condenado por nueve delitos de cohecho y falsificación de instrumento público; vinculó a los ex alcaldes Gonzalo Cornejo y Sol Letelier."
+  sol_letelier:
+    nombre: Sol Letelier
+    cargo: Ex alcaldesa de Recoleta
+    notas: "Ex alcaldesa de Recoleta (2004-2012) vinculada por omisión de deberes en la red de coimas de la comuna."
+  macarena_canas:
+    nombre: Macarena Cañas
+    cargo: Fiscal de la Fiscalía Centro Norte
+    notas: "Fiscal de la Fiscalía Centro Norte a cargo de la investigación de corrupción en la Municipalidad de Recoleta."
+  enrique_herrera:
+    nombre: Enrique Herrera
+    cargo: Representante legal de sociedades ligadas a la Universidad San Sebastián
+    notas: "Ofreció una coima de casi $15 millones al ex director de obras de Recoleta Carlos Reyes para ampliar permisos de la USS (2012)."
+  nora_cuevas:
+    nombre: Nora Cuevas
+    cargo: Ex alcaldesa de San Bernardo (UDI)
+    notas: "Ex alcaldesa de San Bernardo por 12 años y ex diputada UDI. Imputada por fraude al fisco y malversación por más de $20 mil millones en subvenciones escolares."
+  cristopher_white:
+    nombre: Cristopher White
+    cargo: Alcalde de San Bernardo (PS)
+    notas: "Alcalde de San Bernardo desde 2021 que presentó querella contra su antecesora Nora Cuevas por fraude al fisco."
+  leonel_cadiz:
+    nombre: Leonel Cádiz
+    cargo: Ex concejal de San Bernardo
+    notas: "Ex concejal de San Bernardo investigado como imputado por la Fiscalía en el caso de fraude municipal de Nora Cuevas."
+  jaime_bellolio:
+    nombre: Jaime Bellolio
+    cargo: Ex diputado UDI, ex vocero de Gobierno
+    notas: "Ex diputado UDI y ex vocero de Gobierno; Nora Cuevas lo reemplazó en la Cámara cuando fue designado vocero."
+  pedro_sabat:
+    nombre: Pedro Sabat
+    cargo: Ex alcalde de Ñuñoa
+    notas: "Ex alcalde de Ñuñoa (2000-2016). Condenado en 2023 por dos delitos de negociación incompatible por contratos con un socio de su hijo."
+  pedro_sabat_fernandez:
+    nombre: Pedro Sabat Fernández
+    cargo: Hijo de Pedro Sabat
+    notas: "Hijo del ex alcalde de Ñuñoa, socio de Alain Goffard en la empresa SayGo SpA."
+  alain_goffard:
+    nombre: Alain Goffard
+    cargo: Empresario, socio de Pedro Sabat Fernández
+    notas: "Socio del hijo del ex alcalde de Ñuñoa Pedro Sabat; recibió contratos municipales por $15,7 millones."
+  virginia_reginato:
+    nombre: Virginia Reginato
+    cargo: Ex alcaldesa de Viña del Mar
+    notas: "Ex alcaldesa de Viña del Mar (2004-2021). La Contraloría le ordenó restituir más de $1.122 millones por perjuicio a la Corporación Municipal."
+  marco_munoz:
+    nombre: Marco Muñoz
+    cargo: Fiscal de la Fiscalía Regional de Los Lagos
+    notas: "Fiscal que presentó la acusación contra el exalcalde de Puerto Montt Gervoy Paredes por delitos de corrupción (2026)."
+  alban_mancilla:
+    nombre: Albán Mancilla
+    cargo: Ex jefe del DAEM de Puerto Montt
+    notas: "Ex jefe del DAEM de Puerto Montt acusado junto a Gervoy Paredes; la Fiscalía pidió más de 12 años de cárcel."
+  gerardo_espindola:
+    nombre: Gerardo Espíndola
+    cargo: Ex alcalde de Arica
+    notas: "Ex alcalde de Arica (2016-2024). Investigado por cohecho, negociación incompatible y fraude al fisco en contratos de áreas verdes tras informe de la Contraloría."
+  silvia_merlet:
+    nombre: Silvia Merlet
+    cargo: Socia de Paisajismo y Jardines del Norte SpA
+    notas: "Socia fundadora de Paisajismo y Jardines del Norte SpA, empresa que ganó la cuestionada licitación de áreas verdes de Arica."
+  jorge_fernandez_merlet:
+    nombre: Jorge Fernández Merlet
+    cargo: Socio de Norte Verde SpA
+    notas: "Hijo de Silvia Merlet y socio de Norte Verde SpA, empresa creada días antes de recibir el trato directo de áreas verdes de la Municipalidad de Arica."
+  francisco_ganga:
+    nombre: Francisco Ganga
+    cargo: Fiscal de Alta Complejidad de Arica
+    notas: "Fiscal a cargo de la indagatoria reservada por cohecho y fraude al fisco en contratos de áreas verdes de Arica."
+  christian_diaz_ramirez:
+    nombre: Christian Díaz Ramírez
+    cargo: Ex administrador municipal de Arica
+    notas: "Ex administrador municipal de Arica; el correo que envió para el trato directo de áreas verdes no acreditó el envío a cinco proveedores."
+  manuel_bulnes:
+    nombre: Manuel Bulnes
+    cargo: Ex director ejecutivo de LarrainVial
+    notas: "Ex director ejecutivo de LarrainVial formalizado en 2025 en el caso Factop."
+  felipe_porzio:
+    nombre: Felipe Porzio
+    cargo: Ex director de finanzas de LarrainVial
+    notas: "Ex director de finanzas de LarrainVial formalizado en 2025 en el caso Factop."
+  jose_correa:
+    nombre: José Correa
+    cargo: Director de LarrainVial Activos
+    notas: "Director de LarrainVial Activos formalizado en 2025 en el caso Factop."
+  jaime_oliveira:
+    nombre: Jaime Oliveira
+    cargo: Director de LarrainVial Activos
+    notas: "Director de LarrainVial Activos formalizado en 2025 en el caso Factop."
+  sebastian_cereceda:
+    nombre: Sebastián Cereceda
+    cargo: Gerente de finanzas corporativas de LarrainVial
+    notas: "Gerente de finanzas corporativas de LarrainVial formalizado en 2025 en el caso Factop."
+  andres_bulnes:
+    nombre: Andrés Bulnes
+    cargo: Gerente de distribución institucional de LarrainVial
+    notas: "Gerente de distribución institucional de LarrainVial formalizado en 2025 en el caso Factop."
+  andrea_larrain:
+    nombre: Andrea Larraín
+    cargo: Gerenta corporativa de gestión y planificación de LarrainVial
+    notas: "Gerenta corporativa de LarrainVial formalizada en 2025 en el caso Factop."
+  claudio_yanez:
+    nombre: Claudio Yáñez
+    cargo: Gerente general de LarrainVial Activos
+    notas: "Gerente general de LarrainVial Activos formalizado en 2025 en el caso Factop."
+  fernando_larrain:
+    nombre: Fernando Larraín
+    cargo: Presidente de LarrainVial SpA
+    notas: "Presidente de LarrainVial SpA; respaldó por carta a los ocho ejecutivos formalizados en el caso Factop."
+  cristian_menichetti:
+    nombre: Cristián Menichetti
+    cargo: Ex socio del Grupo Patio
+    notas: "Ex socio del Grupo Patio formalizado en 2025 en el caso Factop."
+  ariel_sauer:
+    nombre: Ariel Sauer
+    cargo: Socio de Factop
+    notas: "Hermano de Daniel Sauer y socio de Factop, formalizado en el caso Factop."
+  daniel_sauer:
+    nombre: Daniel Sauer
+    cargo: Socio de Factop
+    notas: "Hermano de Ariel Sauer y socio de Factop, formalizado en el caso Factop."
+  rodrigo_topelberg:
+    nombre: Rodrigo Topelberg
+    cargo: Socio de Factop
+    notas: "Socio de Factop formalizado en el caso Factop."
+  barbara_negron:
+    nombre: Bárbara Negrón
+    cargo: Directora del Observatorio de Políticas Culturales
+    notas: "Directora del Observatorio de Políticas Culturales. En agosto de 2026 criticó las bases de Fondos Cultura 2027 por la cláusula que excluye proyectos con contenido pornográfico o excesivamente violento, señalando que 'pone por primera vez una explícita exclusión de temas para los fondos'."
+  daniel_laguna:
+    nombre: Daniel Laguna
+    cargo: Secretario ejecutivo del Fondo de Fomento Audiovisual
+    notas: "Secretario ejecutivo del Fondo de Fomento Audiovisual. Defendió en agosto de 2026 la cláusula de las bases de Fondos Cultura 2027 que excluye contenido pornográfico o excesivamente violento, reconociendo que el antecedente fue el financiamiento del festival de cine Excéntrico, y aclaró: 'Estamos limitando la postulación a películas pornográficas, no que en una película se vea una escena sexual ni erótica'."
+  wilfredo_rosas:
+    nombre: Wilfredo Rosas
+    cargo: Consejero de Artes Escénicas
+    notas: "Consejero de Artes Escénicas. Reveló en agosto de 2026 que la directriz de excluir contenido pornográfico o excesivamente violento de los Fondos Cultura 2027 vino 'de arriba' y no pudo rebatirse en el consejo."
+  carlos_lobos:
+    nombre: Carlos Lobos
+    cargo: Subsecretario de las Culturas y las Artes
+    notas: "Subsecretario de las Culturas y las Artes. Su cartera envió por escrito en agosto de 2026 que la exclusión de contenido pornográfico o excesivamente violento de los Fondos Cultura 2027 'no tiene por objeto censurar, ni pretende eliminar este tipo de producciones, busca que no sean financiadas con recursos de los fondos de fomento cultural'."
+  ernesto_orellana:
+    nombre: Ernesto Orellana Gómez
+    cargo: Vicepresidente del Sindicato de Actores de Chile (Sidarte)
+    notas: "Vicepresidente del Sindicato de Actores y Trabajadores Teatrales de Chile (Sidarte). Publicó en El Mostrador la columna 'Libertad de creación artística bajo amenaza' (4-ago-2026) contra las bases de Fondos Cultura 2027, advirtiendo que la ley de calificación cinematográfica pasa a operar como filtro previo que limita la libertad de crear y difundir las artes (artículo 19 N°25 de la Constitución)."
+  oscar_contardo:
+    nombre: Óscar Contardo
+    cargo: Escritor y columnista
+    notas: "Escritor y columnista chileno. En agosto de 2026 criticó la cláusula de contenido de los Fondos Cultura 2027, advirtiendo que 'eso se va a prestar para censura' por lo subjetivo de su aplicación."
+  francisca_corvera:
+    nombre: Francisca Corvera
+    cargo: Artista visual, creadora de Fondos para Artistas
+    notas: "Artista visual y creadora del sitio Fondos para Artistas. En agosto de 2026 apuntó que las becas de los Fondos Cultura 2027 'por primera vez van a privilegiar áreas de estudio', restringiendo qué pueden estudiar los artistas."
+  luis_pardo:
+    nombre: Luis Pardo
+    cargo: Senador RN
+    notas: "Senador de Renovación Nacional por la Región de Valparaíso. The Clinic lo mencionó (10-ago-2026) como parte de la red de apoyo del exsubsecretario Juan Pablo Rodríguez en el oficialismo."
+  gonzalo_bofill:
+    nombre: Gonzalo Bofill Velarde
+    cargo: Empresario, dueño de Carozzi y presidente de la Fundación Piensa
+    notas: "Empresario chileno, dueño de Carozzi y presidente de la Fundación Piensa. The Clinic lo mencionó (10-ago-2026) como parte del mundo empresarial cercano al exsubsecretario Juan Pablo Rodríguez, a cuya fundación pertenecía el exfuncionario antes de ingresar al Gobierno."
+  manuel_valderrama:
+    nombre: Manuel Valderrama
+    cargo: Ministro en visita
+    notas: "Ministro en visita que sobreseyó en mayo de 2010 el caso Pinocheques al no poder determinar que los dineros de los tres cheques de 1989 hubieran terminado en cuentas de Augusto Pinochet."
+  gloria_ana_chevesich:
+    nombre: Gloria Ana Chevesich
+    cargo: Ministra de la Corte Suprema, ex jueza del caso MOP-Gate
+    notas: "Jueza que llevó por siete años la investigación del caso MOP-Gate y dictó la sentencia de primera instancia el 1 de julio de 2010, admitiendo que no pudo determinar el destino de los dineros defraudados. Posteriormente integró la Corte Suprema."
+  jorge_abbott:
+    nombre: Jorge Abbott
+    cargo: Ex Fiscal Nacional
+    notas: "Fiscal Nacional de Chile entre 2015 y 2022. Como tal designó a la fiscal Claudia Perivancich para investigar el fraude al fisco del Papaya Gate en la Intendencia de Coquimbo (2020) y antes, como fiscal regional de Valparaíso, dispuso formalizar a la diputada Claudia Nogueira (2009)."
+  claudia_perivancich:
+    nombre: Claudia Perivancich
+    cargo: Fiscal regional de Valparaíso
+    notas: "Fiscal regional de Valparaíso. Designada por el Fiscal Nacional Jorge Abbott para investigar el Papaya Gate (2020), dirigió la formalización de la exintendenta Lucía Pinto en mayo de 2025 por fraude al fisco."
+  victor_osorio:
+    nombre: Víctor Osorio Reyes
+    cargo: Ex ministro de Bienes Nacionales
+    cargos:
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2014-03-11
+        hasta: 2016-10-19
+    notas: "Ministro de Bienes Nacionales del segundo gobierno de Michelle Bachelet. En enero de 2016 valoró la petición del CDE de reabrir el caso Riggs para investigar las propiedades de CEMA Chile."
+  nicolas_bakulic:
+    nombre: Nicolás Bakulic
+    cargo: Empresario, socio de inmobiliarias del Papaya Gate
+    notas: "Empresario vinculado a las inmobiliarias que vendieron los terrenos del Papaya Gate (Guayacán, La Serena, La Herradura, Cerro Grande). En la formalización de mayo de 2025 el tribunal le autorizó ausentarse del país hasta el 30 de junio con caución de 10 millones de pesos."
+  pablo_bracchitta:
+    nombre: Pablo Bracchitta
+    cargo: Gerente general de la Inmobiliaria Guayacán
+    notas: "Gerente general de la Inmobiliaria Guayacán, una de las vendedoras de los terrenos del Papaya Gate. Fue formalizado en mayo de 2025 por fraude al fisco."
+  carlos_williamson:
+    nombre: Carlos Williamson Benapres
+    cargo: Ex rector de la Universidad San Sebastián
+    notas: "Economista, rector de la Universidad San Sebastián (desde 2018). Firmó el trato directo con el CPEIP para elaborar instrumentos de evaluación docente (julio 2019) y fue sondeado para dirigir la nueva Subsecretaría de Educación Superior, nombramiento que no se concretó."
+  marcela_rosales:
+    nombre: Marcela Rosales Belmar
+    cargo: Dirigenta del Partido Socialista, dueña de la Automotora Vespucio San Ramón
+    notas: "Antigua dirigente del PS e integrante del Comité Central del partido. Dueña de la automotora instalada en un terreno municipal concesionado de San Ramón (Parque La Bandera), según reveló CIPER en 2017."
+  nelson_avila:
+    nombre: Nelson Ávila
+    cargo: Ex senador
+    notas: "Senador que en agosto de 2009, junto a la Asociación Nacional de Funcionarios de Chiledeportes, pidió a Contraloría una auditoría por irregularidades en Chiledeportes, incluida la deuda de la ANFP con el Instituto Nacional del Deporte."
+  jorge_bermudez:
+    nombre: Jorge Bermúdez
+    cargo: Ex Contralor General de la República
+    notas: "Contralor General de la República (2017-2024). En septiembre de 2020 presentó una denuncia reservada ante la Fiscalía Nacional por el fraude al fisco del Papaya Gate, calificando de 'extrema gravedad' que el GORE de Coquimbo prescindiera del control jurídico de la Contraloría."
+  raul_figueroa:
+    nombre: Raúl Figueroa Salas
+    cargo: Ex subsecretario de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2020-02-28
+        hasta: 2022-03-11
+    notas: "Ex subsecretario de Educación del segundo gobierno de Sebastián Piñera. Firmó junto al rector de la USS, Carlos Williamson, el trato directo del CPEIP para instrumentos de evaluación docente (julio 2019)."
+
+
+  alejandro_foxley:
+    nombre: Alejandro Foxley Rioseco
+    cargo: Ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1990-03-11
+        hasta: 1994-03-11
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2006-03-11
+        hasta: 2009-03-13
+
+  eduardo_aninat:
+    nombre: Eduardo Aninat Ureta
+    cargo: Ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1994-03-11
+        hasta: 1999-12-03
+
+  manuel_marfan:
+    nombre: Manuel Marfán Lewis
+    cargo: Ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1999-12-03
+        hasta: 2000-03-11
+
+  alberto_arenas:
+    nombre: Alberto Arenas de Mesa
+    cargo: Ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2014-03-11
+        hasta: 2015-05-11
+
+  rodrigo_valdes:
+    nombre: Rodrigo Valdés Pulido
+    cargo: Ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2015-05-11
+        hasta: 2017-08-31
+
+  rodrigo_cerda:
+    nombre: Rodrigo Cerda Norambuena
+    cargo: Ministro de Hacienda
+    organizacion: ministerio_hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2021-01-26
+        hasta: 2022-03-11
+
+  enrique_krauss:
+    nombre: Enrique Krauss Rusque
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  german_correa_diaz:
+    nombre: Germán Correa Díaz
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1994-03-11
+        hasta: 1994-09-20
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1990-03-11
+        hasta: 1992-09-28
+
+  carlos_figueroa_serrano:
+    nombre: Carlos Figueroa Serrano
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1994-09-20
+        hasta: 1998-08-01
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1994-03-11
+        hasta: 1994-09-20
+
+  raul_troncoso:
+    nombre: Raúl Troncoso Castillo
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1998-08-01
+        hasta: 2000-03-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1998-01-16
+        hasta: 1998-08-01
+
+  francisco_vidal:
+    nombre: Francisco Vidal Salinas
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 2005-05-24
+        hasta: 2006-03-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2009-03-12
+        hasta: 2010-03-11
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2004-07-13
+        hasta: 2005-05-24
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2007-12-06
+        hasta: 2009-03-12
+
+  andres_zaldivar:
+    nombre: Andrés Zaldívar Larraín
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 2006-03-11
+        hasta: 2006-07-14
+
+  belisario_velasco:
+    nombre: Belisario Velasco Baraona
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 2006-07-14
+        hasta: 2008-01-03
+
+  edmundo_perez_yoma:
+    nombre: Edmundo Pérez Yoma
+    cargo: Ministro del Interior
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 2008-01-03
+        hasta: 2010-03-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1994-03-11
+        hasta: 1998-01-16
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1999-06-22
+        hasta: 2000-03-11
+
+  rodrigo_hinzpeter:
+    nombre: Rodrigo Hinzpeter Kirberg
+    cargo: Ministro del Interior y Seguridad Pública
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2010-03-11
+        hasta: 2012-11-05
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2012-11-05
+        hasta: 2014-03-11
+
+  rodrigo_penailillo:
+    nombre: Rodrigo Peñailillo Briceño
+    cargo: Ministro del Interior y Seguridad Pública
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2014-03-11
+        hasta: 2015-05-11
+
+  mario_fernandez_baeza:
+    nombre: Mario Fernández Baeza
+    cargo: Ministro del Interior y Seguridad Pública
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2016-06-08
+        hasta: 2018-03-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2000-03-11
+        hasta: 2002-01-07
+
+  gonzalo_blumel:
+    nombre: Gonzalo Blumel Mac-Iver
+    cargo: Ministro del Interior y Seguridad Pública
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2019-10-28
+        hasta: 2020-07-28
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2018-03-11
+        hasta: 2019-10-28
+
+  victor_perez_varela:
+    nombre: Víctor Pérez Varela
+    cargo: Ministro del Interior y Seguridad Pública
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2020-07-28
+        hasta: 2020-11-03
+
+  rodrigo_delgado:
+    nombre: Rodrigo Delgado Mocarquer
+    cargo: Ministro del Interior y Seguridad Pública
+    organizacion: ministerio_interior
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2020-11-04
+        hasta: 2022-03-11
+
+  enrique_silva_cimma:
+    nombre: Enrique Silva Cimma
+    cargo: Ministro de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  soledad_alvear:
+    nombre: Soledad Alvear Valenzuela
+    cargo: Ministro de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2000-03-11
+        hasta: 2004-09-29
+      - cargo: Ministra de Justicia
+        organizacion: ministerio_justicia
+        desde: 1994-03-11
+        hasta: 1999-12-16
+
+  mariano_fernandez_amunategui:
+    nombre: Mariano Fernández Amunátegui
+    cargo: Ministro de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2009-03-13
+        hasta: 2010-03-11
+
+  roberto_ampuero:
+    nombre: Roberto Ampuero Espinoza
+    cargo: Ministro de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2018-03-11
+        hasta: 2019-06-13
+
+  teodoro_ribera:
+    nombre: Teodoro Ribera Neumann
+    cargo: Ministro de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2019-06-13
+        hasta: 2020-07-28
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2011-07-18
+        hasta: 2012-12-17
+
+  andres_allamand:
+    nombre: Andrés Allamand Zavala
+    cargo: Ministro de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2020-07-28
+        hasta: 2022-02-06
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2011-01-16
+        hasta: 2012-11-05
+
+  antonia_urrejola:
+    nombre: Antonia Urrejola Noguera
+    cargo: Ministra de Relaciones Exteriores
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministra de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2022-03-11
+        hasta: 2023-03-10
+
+  patricio_rojas_saavedra:
+    nombre: Patricio Rojas Saavedra
+    cargo: Ministro de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  jose_florencio_guzman:
+    nombre: José Florencio Guzmán Correa
+    cargo: Ministro de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1998-08-01
+        hasta: 1999-06-22
+
+  jaime_ravinet:
+    nombre: Jaime Ravinet de la Fuente
+    cargo: Ministro de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2004-09-29
+        hasta: 2006-03-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2010-03-11
+        hasta: 2011-01-13
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2000-12-29
+        hasta: 2004-09-29
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2000-12-29
+        hasta: 2004-09-29
+
+  vivianne_blanlot:
+    nombre: Vivianne Blanlot Soza
+    cargo: Ministra de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministra de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2006-03-11
+        hasta: 2007-03-26
+
+  jose_goni:
+    nombre: José Goñi Carrasco
+    cargo: Ministro de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2007-03-27
+        hasta: 2009-03-12
+
+  alberto_espina:
+    nombre: Alberto Espina Otero
+    cargo: Ministro de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2018-03-11
+        hasta: 2020-07-28
+
+  maya_fernandez_allende:
+    nombre: Maya Fernández Allende
+    cargo: Ministra de Defensa Nacional
+    organizacion: ministerio_defensa
+    cargos:
+      - cargo: Ministra de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2022-03-11
+        hasta: 2025-03-10
+
+  carlos_ominami:
+    nombre: Carlos Ominami Pascual
+    cargo: Ministro de Economía, Fomento y Reconstrucción
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1990-03-11
+        hasta: 1992-09-28
+
+  jorge_marshall:
+    nombre: Jorge Marshall Rivera
+    cargo: Ministro de Economía, Fomento y Reconstrucción
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1992-09-28
+        hasta: 1993-11-09
+
+  alvaro_garcia_hurtado:
+    nombre: Álvaro García Hurtado
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1994-03-11
+        hasta: 1998-08-01
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2025-10-16
+        hasta: 2026-03-11
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2025-08-21
+        hasta: 2026-03-11
+
+  jorge_leiva:
+    nombre: Jorge Leiva Lavalle
+    cargo: Ministro de Economía, Fomento y Reconstrucción
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1998-08-01
+        hasta: 2000-03-11
+
+  jose_de_gregorio:
+    nombre: José De Gregorio Rebeco
+    cargo: Ministro de Economía, Fomento y Reconstrucción
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 2000-03-11
+        hasta: 2001-06-19
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2000-03-11
+        hasta: 2001-06-19
+
+  jorge_rodriguez_grossi:
+    nombre: Jorge Rodríguez Grossi
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 2001-06-19
+        hasta: 2006-03-11
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2017-08-31
+        hasta: 2018-03-11
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2001-06-19
+        hasta: 2002-01-07
+
+  ingrid_antonijevic:
+    nombre: Íngrid Antonijevic Hahn
+    cargo: Ministra de Economía, Fomento y Reconstrucción
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministra de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 2006-03-11
+        hasta: 2006-07-17
+
+  alejandro_ferreiro:
+    nombre: Alejandro Ferreiro Yazigi
+    cargo: Ministro de Economía, Fomento y Reconstrucción
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 2006-07-17
+        hasta: 2008-01-08
+
+  hugo_lavados:
+    nombre: Hugo Lavados Montes
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 2008-01-08
+        hasta: 2010-02-12
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2010-02-12
+        hasta: 2010-03-11
+
+  felix_de_vicente:
+    nombre: Félix de Vicente Mingo
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2013-04-29
+        hasta: 2014-03-11
+
+  luis_felipe_cespedes:
+    nombre: Luis Felipe Céspedes Cifuentes
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2014-03-11
+        hasta: 2017-08-31
+
+  jose_ramon_valente:
+    nombre: José Ramón Valente Vías
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2018-03-11
+        hasta: 2019-06-13
+
+  lucas_palacios:
+    nombre: Lucas Palacios Covarrubias
+    cargo: Ministro de Economía, Fomento y Turismo
+    organizacion: ministerio_economia
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2019-10-28
+        hasta: 2022-03-11
+
+  ernesto_schiefelbein:
+    nombre: Ernesto Schiefelbein Fuenzalida
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1994-03-11
+        hasta: 1994-09-20
+
+  sergio_molina_silva:
+    nombre: Sergio Molina Silva
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1994-09-20
+        hasta: 1996-09-28
+      - cargo: Ministro de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 1990-07-19
+        hasta: 1994-03-11
+
+  jose_pablo_arellano:
+    nombre: José Pablo Arellano Marín
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1996-09-28
+        hasta: 2000-03-11
+
+  mariana_aylwin:
+    nombre: Mariana Aylwin Oyarzún
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2000-03-11
+        hasta: 2003-03-03
+
+  marigen_hornkohl:
+    nombre: Marigen Hornkohl Venegas
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2005-12-14
+        hasta: 2006-03-11
+      - cargo: Ministra de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2008-01-10
+        hasta: 2010-03-11
+
+  martin_zilic:
+    nombre: Martín Zilic Hrepic
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2006-03-11
+        hasta: 2006-06-14
+
+  yasna_provoste:
+    nombre: Yasna Provoste Campillay
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2006-06-14
+        hasta: 2008-04-17
+      - cargo: Ministra de Planificación
+        organizacion: ministerio_desarrollo_social
+        desde: 2005-01-07
+        hasta: 2006-03-11
+
+  monica_jimenez:
+    nombre: Mónica Jiménez de la Jara
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2008-04-17
+        hasta: 2010-03-11
+
+  joaquin_lavin:
+    nombre: Joaquín Lavín Infante
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2010-03-11
+        hasta: 2011-07-18
+      - cargo: Ministro de Desarrollo Social
+        organizacion: ministerio_desarrollo_social
+        desde: 2011-10-13
+        hasta: 2013-06-06
+
+  felipe_bulnes:
+    nombre: Felipe Bulnes Serrano
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2011-07-18
+        hasta: 2011-12-29
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2010-03-11
+        hasta: 2011-07-18
+
+  harald_beyer:
+    nombre: Harald Beyer Burgos
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2011-12-29
+        hasta: 2013-04-22
+
+  carolina_schmidt:
+    nombre: Carolina Schmidt Zaldívar
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2013-04-22
+        hasta: 2014-03-11
+      - cargo: Ministra del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2018-08-09
+        hasta: 2021-11-22
+
+  adriana_delpiano:
+    nombre: Adriana Delpiano Puelma
+    cargo: Ministra de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministra de Educación
+        organizacion: ministerio_educacion
+        desde: 2015-06-27
+        hasta: 2018-03-11
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 1994-03-11
+        hasta: 1999-04-13
+      - cargo: Ministra de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2025-03-10
+        hasta: 2026-03-11
+
+  gerardo_varela:
+    nombre: Gerardo Varela Alfonso
+    cargo: Ministro de Educación
+    organizacion: ministerio_educacion
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2018-03-11
+        hasta: 2018-08-09
+
+  francisco_cumplido:
+    nombre: Francisco Cumplido Cereceda
+    cargo: Ministro de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1990-07-19
+        hasta: 1994-03-11
+
+  jose_antonio_gomez:
+    nombre: José Antonio Gómez Urrutia
+    cargo: Ministro de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1999-12-16
+        hasta: 2003-03-03
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2014-03-11
+        hasta: 2015-05-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2015-05-11
+        hasta: 2018-03-11
+
+  luis_bates:
+    nombre: Luis Bates Hidalgo
+    cargo: Ministro de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2003-03-03
+        hasta: 2006-03-11
+
+  isidro_solis:
+    nombre: Isidro Solís Palma
+    cargo: Ministro de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2006-03-11
+        hasta: 2007-03-26
+
+  carlos_maldonado:
+    nombre: Carlos Maldonado Curti
+    cargo: Ministro de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 2007-03-26
+        hasta: 2010-03-11
+
+  patricia_perez_goldberg:
+    nombre: Patricia Pérez Goldberg
+    cargo: Ministra de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministra de Justicia
+        organizacion: ministerio_justicia
+        desde: 2012-12-17
+        hasta: 2014-03-11
+
+  javiera_blanco:
+    nombre: Javiera Blanco Suárez
+    cargo: Ministra de Justicia
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministra de Justicia
+        organizacion: ministerio_justicia
+        desde: 2015-05-11
+        hasta: 2016-01-05
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2014-03-11
+        hasta: 2015-05-11
+
+  hernan_larrain:
+    nombre: Hernán Larraín Fernández
+    cargo: Ministro de Justicia y Derechos Humanos
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministro de Justicia y Derechos Humanos
+        organizacion: ministerio_justicia
+        desde: 2018-03-11
+        hasta: 2022-03-11
+
+  marcela_rios:
+    nombre: Marcela Ríos Tobar
+    cargo: Ministra de Justicia y Derechos Humanos
+    organizacion: ministerio_justicia
+    cargos:
+      - cargo: Ministra de Justicia y Derechos Humanos
+        organizacion: ministerio_justicia
+        desde: 2022-03-11
+        hasta: 2023-01-07
+
+  rene_cortazar:
+    nombre: René Cortázar Sanz
+    cargo: Ministro del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1990-03-11
+        hasta: 1994-03-11
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2007-03-27
+        hasta: 2010-03-11
+
+  german_molina:
+    nombre: Germán Molina Valdivieso
+    cargo: Ministro del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1998-08-01
+        hasta: 2000-03-11
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1992-09-28
+        hasta: 1994-03-11
+
+  osvaldo_andrade:
+    nombre: Osvaldo Andrade Lara
+    cargo: Ministro del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2006-03-11
+        hasta: 2008-12-10
+
+  claudia_serrano:
+    nombre: Claudia Serrano Madrid
+    cargo: Ministra del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministra del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2008-12-15
+        hasta: 2010-03-11
+
+  juan_carlos_jobet:
+    nombre: Juan Carlos Jobet Eluchans
+    cargo: Ministro del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2013-07-24
+        hasta: 2014-03-11
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2020-12-18
+        hasta: 2022-03-11
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2019-06-13
+        hasta: 2022-03-11
+
+  nicolas_monckeberg:
+    nombre: Nicolás Monckeberg Díaz
+    cargo: Ministro del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2018-03-11
+        hasta: 2019-10-28
+
+  giorgio_boccardo:
+    nombre: Giorgio Boccardo Bosoni
+    cargo: Ministro del Trabajo y Previsión Social
+    organizacion: ministerio_trabajo
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 2025-04-08
+        hasta: 2026-03-11
+
+  carlos_hurtado:
+    nombre: Carlos Hurtado Ruiz-Tagle
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  jaime_toha:
+    nombre: Jaime Tohá González
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 1998-08-01
+        hasta: 2000-03-11
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1993-11-09
+        hasta: 1994-03-11
+
+  javier_etcheberry:
+    nombre: Javier Etcheberry Celhay
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2002-01-07
+        hasta: 2005-01-03
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2002-01-07
+        hasta: 2005-01-03
+
+  jaime_estevez:
+    nombre: Jaime Estévez Valencia
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2005-01-03
+        hasta: 2006-03-11
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2005-01-03
+        hasta: 2006-03-11
+
+  eduardo_bitran:
+    nombre: Eduardo Bitrán Colodro
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2006-03-11
+        hasta: 2008-01-11
+
+  hernan_de_solminihac:
+    nombre: Hernán de Solminihac Tampier
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2010-03-11
+        hasta: 2011-07-18
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2011-07-18
+        hasta: 2014-03-11
+
+  loreto_silva:
+    nombre: María Loreto Silva Rojas
+    cargo: Ministra de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministra de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2012-11-05
+        hasta: 2014-03-11
+
+  alberto_undurraga:
+    nombre: Alberto Undurraga Vicuña
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2014-03-11
+        hasta: 2018-03-11
+
+  juan_andres_fontaine:
+    nombre: Juan Andrés Fontaine Talavera
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2018-03-11
+        hasta: 2019-06-13
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2010-03-11
+        hasta: 2011-07-18
+      - cargo: Ministro de Economía, Fomento y Turismo
+        organizacion: ministerio_economia
+        desde: 2019-06-13
+        hasta: 2019-10-28
+
+  alfredo_moreno:
+    nombre: Alfredo Moreno Charme
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2019-06-13
+        hasta: 2022-03-11
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2010-03-11
+        hasta: 2014-03-11
+      - cargo: Ministro de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2018-03-11
+        hasta: 2019-06-13
+
+  juan_carlos_garcia:
+    nombre: Juan Carlos García Pérez de Arce
+    cargo: Ministro de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministro de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2022-03-11
+        hasta: 2023-03-10
+
+  jessica_lopez_saffie:
+    nombre: Jessica López Saffie
+    cargo: Ministra de Obras Públicas
+    organizacion: ministerio_de_obras_publicas
+    cargos:
+      - cargo: Ministra de Obras Públicas
+        organizacion: ministerio_de_obras_publicas
+        desde: 2023-03-10
+        hasta: 2026-03-11
+
+  jorge_jimenez:
+    nombre: Jorge Jiménez de la Jara
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1990-03-11
+        hasta: 1992-08-30
+
+  julio_montt_momberg:
+    nombre: Julio Montt Momberg
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1992-08-30
+        hasta: 1994-03-11
+
+  alex_figueroa:
+    nombre: Álex Figueroa Muñoz
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1996-08-07
+        hasta: 2000-03-11
+
+  osvaldo_artaza:
+    nombre: Osvaldo Artaza Barrios
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2002-02-07
+        hasta: 2003-03-03
+
+  pedro_garcia_aspillaga:
+    nombre: Pedro García Aspillaga
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2003-03-03
+        hasta: 2006-03-11
+
+  maria_soledad_barria:
+    nombre: María Soledad Barría Iroumé
+    cargo: Ministra de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2006-03-11
+        hasta: 2008-10-28
+
+  alvaro_erazo:
+    nombre: Álvaro Erazo Latorre
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2008-10-28
+        hasta: 2010-03-11
+
+  helia_molina:
+    nombre: Helia Molina Milman
+    cargo: Ministra de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2014-03-11
+        hasta: 2015-01-23
+
+  carmen_castillo:
+    nombre: Carmen Castillo Taucher
+    cargo: Ministra de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2015-01-23
+        hasta: 2018-03-11
+
+  emilio_santelices:
+    nombre: Emilio Santelices Cuevas
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2018-03-11
+        hasta: 2019-06-13
+
+  enrique_paris:
+    nombre: Enrique Paris Mancilla
+    cargo: Ministro de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 2020-06-13
+        hasta: 2022-03-11
+
+  maria_begona_yarza:
+    nombre: María Begoña Yarza Sáez
+    cargo: Ministra de Salud
+    organizacion: ministerio_salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2022-03-11
+        hasta: 2022-09-06
+
+  juan_hamilton:
+    nombre: Juan Hamilton Depassier
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1990-03-11
+        hasta: 1992-09-28
+
+  alejandro_hales:
+    nombre: Alejandro Hales Jamarne
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1992-09-28
+        hasta: 1994-03-11
+
+  benjamin_teplizky:
+    nombre: Benjamín Teplizky Lijavetzky
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1994-03-11
+        hasta: 1997-08-13
+
+  sergio_jimenez_moraga:
+    nombre: Sergio Jiménez Moraga
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1997-08-13
+        hasta: 2000-03-11
+
+  alfonso_dulanto:
+    nombre: Alfonso Dulanto Rencoret
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2002-01-07
+        hasta: 2006-03-11
+
+  karen_poniachik:
+    nombre: Karen Poniachik Pollak
+    cargo: Ministra de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministra de Minería
+        organizacion: ministerio_mineria
+        desde: 2006-03-11
+        hasta: 2008-01-08
+
+  santiago_gonzalez_larrain:
+    nombre: Santiago González Larraín
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2008-01-08
+        hasta: 2010-03-11
+
+  aurora_williams:
+    nombre: Aurora Williams Baussa
+    cargo: Ministra de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministra de Minería
+        organizacion: ministerio_mineria
+        desde: 2014-03-11
+        hasta: 2018-03-11
+      - cargo: Ministra de Minería
+        organizacion: ministerio_mineria
+        desde: 2023-08-16
+        hasta: 2026-03-11
+
+  baldo_prokurica:
+    nombre: Baldo Prokurica Prokurica
+    cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 2018-03-11
+        hasta: 2020-12-18
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2020-12-18
+        hasta: 2022-03-11
+
+  marcela_hernando:
+    nombre: Marcela Hernando Pérez
+    cargo: Ministra de Minería
+    organizacion: ministerio_mineria
+    cargos:
+      - cargo: Ministra de Minería
+        organizacion: ministerio_mineria
+        desde: 2022-03-11
+        hasta: 2023-08-16
+
+  alberto_etchegaray:
+    nombre: Alberto Etchegaray Aubry
+    cargo: Ministro de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  edmundo_hermosilla:
+    nombre: Edmundo Hermosilla Hermosilla
+    cargo: Ministro de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1994-03-11
+        hasta: 1997-07-24
+
+  sergio_henriquez:
+    nombre: Sergio Henríquez Díaz
+    cargo: Ministro de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1997-07-24
+        hasta: 2000-03-11
+
+  sonia_tschorne:
+    nombre: Sonia Tschorne Berestesky
+    cargo: Ministra de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministra de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2004-09-29
+        hasta: 2006-03-11
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2004-09-29
+        hasta: 2006-03-11
+
+  patricia_poblete:
+    nombre: Patricia Poblete Bennett
+    cargo: Ministra de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministra de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2006-03-11
+        hasta: 2010-03-11
+
+  magdalena_matte:
+    nombre: Magdalena Matte Lecaros
+    cargo: Ministra de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministra de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2010-03-11
+        hasta: 2011-04-19
+
+  rodrigo_perez_mackenna:
+    nombre: Rodrigo Pérez Mackenna
+    cargo: Ministro de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2011-04-19
+        hasta: 2014-03-11
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2012-11-05
+        hasta: 2014-03-11
+
+  paulina_saball:
+    nombre: María Paulina Saball Astaburuaga
+    cargo: Ministra de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministra de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2014-03-11
+        hasta: 2018-03-11
+
+  felipe_ward:
+    nombre: Felipe Ward Edwards
+    cargo: Ministro de Vivienda y Urbanismo
+    organizacion: ministerio_vivienda
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 2020-06-04
+        hasta: 2022-03-11
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2018-03-11
+        hasta: 2019-10-28
+
+  juan_agustin_figueroa:
+    nombre: Juan Agustín Figueroa Yávar
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  emiliano_ortega:
+    nombre: Emiliano Ortega Riquelme
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1994-03-11
+        hasta: 1996-09-28
+
+  carlos_mladinic:
+    nombre: Carlos Mladinic Alonso
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1996-09-28
+        hasta: 1999-06-22
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1999-06-22
+        hasta: 2000-03-11
+
+  angel_sartori:
+    nombre: Ángel Sartori Arellano
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1999-06-22
+        hasta: 2000-03-11
+
+  alvaro_rojas:
+    nombre: Álvaro Rojas Marín
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2006-03-11
+        hasta: 2008-01-10
+
+  jose_antonio_galilea:
+    nombre: José Antonio Galilea Vidaurre
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2010-03-11
+        hasta: 2011-12-29
+
+  luis_mayol:
+    nombre: Luis Mayol Bouchon
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2011-12-29
+        hasta: 2014-03-11
+
+  carlos_furche:
+    nombre: Carlos Furche Guajardo
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2014-03-11
+        hasta: 2018-03-11
+
+  maria_emilia_undurraga:
+    nombre: María Emilia Undurraga Marimón
+    cargo: Ministra de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministra de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2021-01-06
+        hasta: 2022-03-11
+
+  esteban_valenzuela:
+    nombre: Esteban Valenzuela Van Treek
+    cargo: Ministro de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2022-03-11
+        hasta: 2025-08-20
+
+  ignacia_fernandez_gatica:
+    nombre: María Ignacia Fernández Gatica
+    cargo: Ministra de Agricultura
+    organizacion: ministerio_agricultura
+    cargos:
+      - cargo: Ministra de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 2025-08-21
+        hasta: 2026-03-11
+
+  narciso_irureta:
+    nombre: Narciso Irureta Aburto
+    cargo: Ministro de Transportes y Telecomunicaciones
+    organizacion: ministerio_transportes
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1994-03-11
+        hasta: 1996-09-28
+
+  claudio_hohmann:
+    nombre: Claudio Hohmann Barrientos
+    cargo: Ministro de Transportes y Telecomunicaciones
+    organizacion: ministerio_transportes
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1996-09-28
+        hasta: 2000-03-11
+
+  sergio_espejo:
+    nombre: Sergio Espejo Yaksic
+    cargo: Ministro de Transportes y Telecomunicaciones
+    organizacion: ministerio_transportes
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2006-03-11
+        hasta: 2007-03-27
+
+  pedro_pablo_errazuriz:
+    nombre: Pedro Pablo Errázuriz Domínguez
+    cargo: Ministro de Transportes y Telecomunicaciones
+    organizacion: ministerio_transportes
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2011-01-16
+        hasta: 2014-03-11
+
+  andres_gomez_lobo:
+    nombre: Andrés Gómez-Lobo Echeñique
+    cargo: Ministro de Transportes y Telecomunicaciones
+    organizacion: ministerio_transportes
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2014-03-11
+        hasta: 2017-03-14
+
+  paola_tapia:
+    nombre: Paola Tapia Salas
+    cargo: Ministra de Transportes y Telecomunicaciones
+    organizacion: ministerio_transportes
+    cargos:
+      - cargo: Ministra de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 2017-03-14
+        hasta: 2018-03-11
+
+  luis_alvarado_constenla:
+    nombre: Luis Alvarado Constenla
+    cargo: Ministro de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  jorge_heine:
+    nombre: Jorge Heine Lorenzen
+    cargo: Ministro de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 1999-04-13
+        hasta: 1999-07-29
+
+  sergio_galilea:
+    nombre: Sergio Galilea Ocón
+    cargo: Ministro de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 1999-08-13
+        hasta: 2000-03-11
+
+  romy_schmidt:
+    nombre: Romy Schmidt Crnosija
+    cargo: Ministra de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2006-03-11
+        hasta: 2010-01-06
+
+  jacqueline_weinstein:
+    nombre: Jacqueline Weinstein Levy
+    cargo: Ministra de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2010-01-06
+        hasta: 2010-03-11
+
+  nivia_palma:
+    nombre: Nivia Palma Manríquez
+    cargo: Ministra de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2016-10-19
+        hasta: 2018-03-11
+
+  julio_isamit:
+    nombre: Julio Isamit Díaz
+    cargo: Ministro de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2019-10-28
+        hasta: 2022-03-11
+
+  marcela_sandoval:
+    nombre: Marcela Sandoval Osorio
+    cargo: Ministra de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2023-08-16
+        hasta: 2025-01-06
+
+  francisco_figueroa_cerda:
+    nombre: Francisco Figueroa Cerda
+    cargo: Ministro de Bienes Nacionales
+    organizacion: ministerio_bienes_nacionales
+    cargos:
+      - cargo: Ministro de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2025-01-09
+        hasta: 2026-03-11
+
+  marcelo_tokman:
+    nombre: Marcelo Tokman Ramos
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2010-02-01
+        hasta: 2010-03-11
+
+  ricardo_raineri:
+    nombre: Ricardo Raineri Bernain
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2010-03-11
+        hasta: 2011-01-14
+
+  fernando_echeverria:
+    nombre: Fernando Echeverría Vial
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2011-07-18
+        hasta: 2011-07-21
+
+  rodrigo_alvarez_zenteno:
+    nombre: Rodrigo Álvarez Zenteno
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2011-07-22
+        hasta: 2012-03-27
+
+  jorge_bunster:
+    nombre: Jorge Bunster Betteley
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2012-04-03
+        hasta: 2014-03-11
+
+  maximo_pacheco:
+    nombre: Máximo Pacheco Matte
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2014-03-11
+        hasta: 2016-10-19
+
+  andres_rebolledo:
+    nombre: Andrés Rebolledo Smitmans
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2016-10-19
+        hasta: 2018-03-11
+
+  susana_jimenez:
+    nombre: Susana Jiménez Schuster
+    cargo: Ministra de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministra de Energía
+        organizacion: ministerio_energia
+        desde: 2018-03-11
+        hasta: 2019-06-12
+
+  claudio_huepe:
+    nombre: Claudio Huepe Minoletti
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2022-03-11
+        hasta: 2022-09-06
+
+  diego_pardow:
+    nombre: Diego Pardow Lorenzo
+    cargo: Ministro de Energía
+    organizacion: ministerio_energia
+    cargos:
+      - cargo: Ministro de Energía
+        organizacion: ministerio_energia
+        desde: 2022-09-06
+        hasta: 2025-10-16
+
+  maria_ignacia_benitez:
+    nombre: María Ignacia Benítez Pereira
+    cargo: Ministra del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    cargos:
+      - cargo: Ministra del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2010-10-01
+        hasta: 2014-03-11
+
+  pablo_badenier:
+    nombre: Pablo Badenier Martínez
+    cargo: Ministro del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    cargos:
+      - cargo: Ministro del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2014-03-11
+        hasta: 2017-03-20
+
+  marcelo_mena:
+    nombre: Marcelo Mena Carrasco
+    cargo: Ministro del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    cargos:
+      - cargo: Ministro del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2017-03-20
+        hasta: 2018-03-11
+
+  javier_naranjo:
+    nombre: Javier Naranjo Solano
+    cargo: Ministro del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    cargos:
+      - cargo: Ministro del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2021-11-22
+        hasta: 2022-03-11
+
+  maisa_rojas:
+    nombre: Maisa Rojas Corradi
+    cargo: Ministra del Medio Ambiente
+    organizacion: ministerio_medio_ambiente
+    cargos:
+      - cargo: Ministra del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2022-03-11
+        hasta: 2026-03-11
+
+  luis_maira:
+    nombre: Luis Maira Aguirre
+    cargo: Ministro de Planificación y Cooperación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministro de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 1994-03-11
+        hasta: 1996-09-28
+
+  roberto_pizarro_hofer:
+    nombre: Roberto Pizarro Hofer
+    cargo: Ministro de Planificación y Cooperación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministro de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 1996-09-28
+        hasta: 1998-05-19
+
+  german_quintana:
+    nombre: Germán Quintana Peña
+    cargo: Ministro de Planificación y Cooperación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministro de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 1998-05-19
+        hasta: 2000-03-11
+
+  cecilia_perez_diaz:
+    nombre: Cecilia Pérez Díaz
+    cargo: Ministra de Planificación y Cooperación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministra de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 2002-01-07
+        hasta: 2003-03-03
+
+  andres_palma:
+    nombre: Andrés Palma Irarrázaval
+    cargo: Ministro de Planificación y Cooperación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministro de Planificación y Cooperación
+        organizacion: ministerio_desarrollo_social
+        desde: 2003-03-03
+        hasta: 2004-09-29
+
+  clarisa_hardy:
+    nombre: Clarisa Hardy Raskovan
+    cargo: Ministra de Planificación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministra de Planificación
+        organizacion: ministerio_desarrollo_social
+        desde: 2006-03-11
+        hasta: 2008-01-08
+
+  paula_quintana:
+    nombre: Paula Quintana Meléndez
+    cargo: Ministra de Planificación
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministra de Planificación
+        organizacion: ministerio_desarrollo_social
+        desde: 2008-01-08
+        hasta: 2010-03-11
+
+  bruno_baranda:
+    nombre: Bruno Baranda Ferrán
+    cargo: Ministro de Desarrollo Social
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministro de Desarrollo Social
+        organizacion: ministerio_desarrollo_social
+        desde: 2013-06-07
+        hasta: 2014-03-11
+
+  fernanda_villegas:
+    nombre: Fernanda Villegas Acevedo
+    cargo: Ministra de Desarrollo Social
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministra de Desarrollo Social
+        organizacion: ministerio_desarrollo_social
+        desde: 2014-03-11
+        hasta: 2015-05-11
+
+  jeannette_vega:
+    nombre: Jeannette Vega Morales
+    cargo: Ministra de Desarrollo Social y Familia
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Ministra de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2022-03-11
+        hasta: 2022-08-25
+
+  gabriel_ruiz_tagle:
+    nombre: Gabriel Ruiz-Tagle Correa
+    cargo: Ministro del Deporte
+    organizacion: ministerio_del_deporte
+    cargos:
+      - cargo: Ministro del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2013-11-14
+        hasta: 2014-03-11
+
+  natalia_riffo:
+    nombre: Natalia Riffo Alonso
+    cargo: Ministra del Deporte
+    organizacion: ministerio_del_deporte
+    cargos:
+      - cargo: Ministra del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2014-03-11
+        hasta: 2016-11-18
+
+  pablo_squella:
+    nombre: Pablo Squella Serrano
+    cargo: Ministro del Deporte
+    organizacion: ministerio_del_deporte
+    cargos:
+      - cargo: Ministro del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2016-11-18
+        hasta: 2018-03-11
+
+  pauline_kantor:
+    nombre: Pauline Kantor Pupkin
+    cargo: Ministra del Deporte
+    organizacion: ministerio_del_deporte
+    cargos:
+      - cargo: Ministra del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2018-03-11
+        hasta: 2019-10-28
+
+  alexandra_benado:
+    nombre: Alexandra Benado Vergara
+    cargo: Ministra del Deporte
+    organizacion: ministerio_del_deporte
+    cargos:
+      - cargo: Ministra del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2022-03-11
+        hasta: 2023-03-10
+
+  jaime_pizarro:
+    nombre: Jaime Pizarro Herrera
+    cargo: Ministro del Deporte
+    organizacion: ministerio_del_deporte
+    cargos:
+      - cargo: Ministro del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2023-03-10
+        hasta: 2026-03-11
+
+  isabel_pla:
+    nombre: Isabel Plá Jarufe
+    cargo: Ministra de la Mujer y la Equidad de Género
+    organizacion: ministerio_mujer
+    cargos:
+      - cargo: Ministra de la Mujer y la Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2018-03-11
+        hasta: 2020-03-13
+
+  monica_zalaquett:
+    nombre: Mónica Zalaquett Said
+    cargo: Ministra de la Mujer y la Equidad de Género
+    organizacion: ministerio_mujer
+    cargos:
+      - cargo: Ministra de la Mujer y la Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2020-06-09
+        hasta: 2022-03-11
+
+  ernesto_ottone:
+    nombre: Ernesto Ottone Ramírez
+    cargo: Ministro de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministro Presidente del Consejo Nacional de la Cultura y las Artes
+        organizacion: ministerio_culturas
+        desde: 2015-05-11
+        hasta: 2018-03-01
+      - cargo: Ministro de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2018-03-01
+        hasta: 2018-03-11
+
+  alejandra_perez_lec:
+    nombre: Alejandra Pérez Lecaros
+    cargo: Ministra de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministra de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2018-03-11
+        hasta: 2018-08-09
+
+  mauricio_rojas_mullor:
+    nombre: Mauricio Rojas Mullor
+    cargo: Ministro de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministro de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2018-08-09
+        hasta: 2018-08-13
+
+  consuelo_valdes:
+    nombre: Consuelo Valdés Chadwick
+    cargo: Ministra de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministra de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2018-08-13
+        hasta: 2022-03-11
+
+  julieta_brodsky:
+    nombre: Julieta Brodsky Hernández
+    cargo: Ministra de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministra de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2022-03-11
+        hasta: 2023-03-10
+
+  jaime_de_aguirre:
+    nombre: Jaime de Aguirre Höffa
+    cargo: Ministro de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministro de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2023-03-10
+        hasta: 2023-08-16
+
+  andres_couve:
+    nombre: Andrés Couve Correa
+    cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
+    organizacion: ministerio_ciencia
+    cargos:
+      - cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: ministerio_ciencia
+        desde: 2018-12-17
+        hasta: 2022-03-11
+
+  flavio_salazar:
+    nombre: Flavio Salazar Onfray
+    cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
+    organizacion: ministerio_ciencia
+    cargos:
+      - cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: ministerio_ciencia
+        desde: 2022-03-11
+        hasta: 2022-09-06
+
+  silvia_diaz_acosta:
+    nombre: Silvia Díaz Acosta
+    cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
+    organizacion: ministerio_ciencia
+    cargos:
+      - cargo: Ministra de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: ministerio_ciencia
+        desde: 2022-09-06
+        hasta: 2023-03-10
+
+  aldo_valle:
+    nombre: Aldo Valle Acevedo
+    cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
+    organizacion: ministerio_ciencia
+    cargos:
+      - cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: ministerio_ciencia
+        desde: 2025-07-25
+        hasta: 2026-03-11
+
+  edgardo_boeninger:
+    nombre: Edgardo Boeninger Kausel
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  genaro_arriagada:
+    nombre: Genaro Arriagada Herrera
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 1994-03-11
+        hasta: 1996-09-28
+
+  juan_villarzu:
+    nombre: Juan Villarzú Rhode
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 1996-09-28
+        hasta: 1999-06-22
+
+  eduardo_dockendorff:
+    nombre: Eduardo Dockendorff Vallejos
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2004-09-29
+        hasta: 2006-03-11
+
+  paulina_veloso:
+    nombre: Paulina Veloso Valenzuela
+    cargo: Ministra Secretaria General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministra Secretaria General de la Presidencia
+        organizacion: segpres
+        desde: 2006-03-11
+        hasta: 2007-03-26
+
+  cristian_larroulet:
+    nombre: Cristián Larroulet Vignau
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2010-03-11
+        hasta: 2014-03-11
+
+  gabriel_de_la_fuente:
+    nombre: Gabriel de la Fuente Acuña
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2016-03-11
+        hasta: 2018-03-11
+
+  juan_jose_ossa:
+    nombre: Juan José Ossa Santa Cruz
+    cargo: Ministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2020-07-28
+        hasta: 2022-03-11
+
+  enrique_correa_rios:
+    nombre: Enrique Correa Ríos
+    cargo: Ministro Secretario General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1990-03-11
+        hasta: 1994-03-11
+
+  claudio_huepe_garcia:
+    nombre: Claudio Huepe García
+    cargo: Ministro Secretario General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2000-03-11
+        hasta: 2002-01-07
+
+  osvaldo_puccio:
+    nombre: Osvaldo Puccio Huidobro
+    cargo: Ministro Secretario General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2005-05-24
+        hasta: 2006-03-11
+
+  pilar_armanet:
+    nombre: Pilar Armanet Armanet
+    cargo: Ministra Secretaria General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2009-12-14
+        hasta: 2010-03-11
+
+  ena_von_baer:
+    nombre: Ena von Baer Jahn
+    cargo: Ministra Secretaria General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2010-03-11
+        hasta: 2011-07-18
+
+  cecilia_perez_jara:
+    nombre: Cecilia Pérez Jara
+    cargo: Ministra Secretaria General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2012-11-05
+        hasta: 2014-03-11
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2018-03-11
+        hasta: 2019-10-28
+      - cargo: Ministra del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2019-10-28
+        hasta: 2022-03-11
+
+  marcelo_diaz_diaz:
+    nombre: Marcelo Díaz Díaz
+    cargo: Ministro Secretario General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2015-05-11
+        hasta: 2016-11-18
 organizations:
   criteria:
     nombre: Criteria
@@ -7554,6 +10522,119 @@ organizations:
     tipo: institucion
     pais: Chile
     notas: "Organismo encargado de la defensa judicial de los intereses del Estado."
+  chiledeportes:
+    nombre: Chiledeportes
+    tipo: servicio_publico
+    pais: Chile
+  efe_chile:
+    nombre: Empresa de Ferrocarriles del Estado (EFE)
+    tipo: empresa_estatal
+    pais: Chile
+  ejercito:
+    nombre: Ejército de Chile
+    tipo: fuerza_armada
+    pais: Chile
+  gore_coquimbo:
+    nombre: Gobierno Regional de Coquimbo
+    tipo: gobierno_regional
+    pais: Chile
+  municipalidad_nunoa:
+    nombre: Municipalidad de Ñuñoa
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_recoleta:
+    nombre: Municipalidad de Recoleta
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_san_joaquin:
+    nombre: Municipalidad de San Joaquín
+    tipo: municipalidad
+    pais: Chile
+  riggs_bank:
+    nombre: Riggs Bank
+    tipo: empresa
+    pais: Chile
+  universidad_san_sebastian:
+    nombre: Universidad San Sebastián
+    tipo: universidad
+    pais: Chile
+  itelecom:
+    nombre: Itelecom
+    tipo: empresa
+    pais: Chile
+    notas: "Holding de iluminación led adjudicatario de más de 36 licitaciones municipales en todo el país; protagonista del Caso Luminarias."
+  corporacion_cultural_recoleta:
+    nombre: Corporación Cultural de Recoleta
+    tipo: organizacion_cultural
+    pais: Chile
+    notas: "Corporación municipal de Recoleta que organiza el festival Womad; recibió una donación de $50 millones de Itelecom en 2020 bajo investigación por el Caso Luminarias."
+  municipalidad_antofagasta:
+    nombre: Municipalidad de Antofagasta
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_rancagua:
+    nombre: Municipalidad de Rancagua
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_puerto_montt:
+    nombre: Municipalidad de Puerto Montt
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_arica:
+    nombre: Municipalidad de Arica
+    tipo: municipalidad
+    pais: Chile
+  larrainvial:
+    nombre: LarrainVial
+    tipo: empresa
+    pais: Chile
+    notas: "Corredora de bolsa chilena. Ocho ejecutivos formalizados en enero de 2025 por su rol en el fondo Capital Estructurado I (caso Factop)."
+  grupo_patio:
+    nombre: Grupo Patio
+    tipo: empresa
+    pais: Chile
+    notas: "Grupo inmobiliario de los hermanos Jalaff; sus ex socios fueron formalizados en el caso Factop."
+  uni:
+    nombre: Unión Nacional de Artistas
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Agrupación que reúne a alrededor de 20 asociaciones y gremios de artistas. En agosto de 2026 emitió un comunicado contra las bases de Fondos Cultura 2027 por la cláusula que excluye contenido pornográfico o excesivamente violento, sosteniendo que 'la libertad de creación y la libertad de expresión artística están en riesgo'."
+  sidarte:
+    nombre: Sindicato de Actores de Chile (Sidarte)
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Sindicato de Actores y Trabajadores Teatrales de Chile. Su vicepresidente Ernesto Orellana Gómez publicó en agosto de 2026 la columna 'Libertad de creación artística bajo amenaza' contra las nuevas bases de Fondos Cultura."
+  shoa:
+    nombre: Servicio Hidrográfico y Oceanográfico de la Armada
+    tipo: institucion_estatal
+    pais: Chile
+    notas: "Servicio de la Armada de Chile encargado de la navegación y la oceanografía, incluyendo el sistema nacional de alerta de tsunamis. El 10 de agosto de 2026 descartó que el terremoto de magnitud 7,4 en Colombia reuniera condiciones para generar un tsunami en las costas de Chile."
+  expansion:
+    nombre: Expansión
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Diario económico español. El 10 de agosto de 2026 publicó el artículo 'Chile cancela dos concesiones a Azvi y pone en alerta a Sacyr y OHLA', sobre la reacción de la industria española de infraestructuras al fin de la concesión de los corredores del Gran Concepción."
+  carozzi:
+    nombre: Carozzi
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de alimentos chilena. The Clinic la mencionó (10-ago-2026) como parte de la red empresarial del exsubsecretario Juan Pablo Rodríguez: su dueño Gonzalo Bofill preside la Fundación Piensa, a la que pertenecía el exfuncionario."
+  anfp:
+    nombre: Asociación Nacional de Fútbol Profesional (ANFP)
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Organismo rector del fútbol profesional chileno. En 2009 fue denunciada por no pagar una deuda de $220 millones al Instituto Nacional del Deporte por las clasificatorias a Sudáfrica 2010, según la denuncia del senador Nelson Ávila."
+  unidad_analisis_financiero:
+    nombre: Unidad de Análisis Financiero (UAF)
+    tipo: institucion_estatal
+    pais: Chile
+    notas: "Organismo público encargado de prevenir el lavado de activos y el financiamiento del terrorismo. En 2017 emitió alerta de movimientos sospechosos sobre el alcalde de San Ramón Miguel Ángel Aguilera e instruyó a las instituciones financieras informar de sus movimientos."
+  cema_chile:
+    nombre: Fundación CEMA Chile
+    tipo: fundacion
+    pais: Chile
+    notas: "Fundación presidida por Lucía Hiriart de Pinochet. Tras la dictadura vendió propiedades obtenidas gratis del Estado; el CDE pidió en 2016 reabrir el caso Riggs para investigar su patrimonio (CIPER contabilizó más de 243 propiedades y $6.300 millones)."
+
 cifras:
   aprobacion_kast_criteria_ago9:
     nombre: Aprobación de José Antonio Kast según Criteria (9-ago-2026)
@@ -8200,6 +11281,10 @@ cifras:
     nombre: Meses consecutivos con tasa de desocupación igual o superior al 8%
     unidad_default: meses
     notas: "40 meses consecutivos, según el informe de la Mesa de Reactivación Laboral entregado el 30 de junio de 2026."
+  meta_desempleo_kast_65:
+    nombre: Meta de desempleo del gobierno de Kast
+    unidad_default: "%"
+    notas: "6,5%, meta de tasa de desempleo que el presidente Kast proyectó 'a finales del gobierno' en entrevista con Tele13 Radio (10-ago-2026), en un contexto donde la ENE abril-junio registró 9,4%. Anunciada junto a la proyección de que el crecimiento aumentará 'de manera importante' desde 2027."
   alza_bencina_mepco:
     nombre: Alza de bencina por colapso MEPCO
     unidad_default: pesos por litro
@@ -9684,3 +12769,176 @@ cifras:
     unidad_default: personas
     notas: "De 286 en marzo a 24 en junio de 2026 (-90%), según PDI ratificado por Ejército y Carabineros."
 
+
+  chiledeportes_proyectos_irregulares_2005:
+    nombre: Proyectos Chiledeportes con irregularidades (2005)
+    notas: 70 de 77 proyectos financiados por Chiledeportes con irregularidades detectadas por Contraloría (fines de 2005), que llegaban a $417 millones; en enero de 2007 se revelaron 114 proyectos más con gastos no justificados por $104 millones.
+    unidad_default: millones_de_pesos
+  contratos_gate_mop:
+    nombre: Contratos de Gate con el MOP (2000-2002)
+    notas: Dos contratos adjudicados a la empresa Gate por el MOP que sumaban $1.440 millones, con los que se pagaron sobresueldos a unos 79 funcionarios del Estado.
+    unidad_default: millones_de_pesos
+  coima_tombolini:
+    nombre: Coima pagada a Tombolini (2002)
+    notas: El empresario Carlos Filippi denunció haber pagado $15 millones al subsecretario de Transportes Patricio Tombolini para el funcionamiento de una planta de revisión técnica en Rancagua.
+    unidad_default: millones_de_pesos
+  cuentas_riggs_pinochet:
+    nombre: Cuentas secretas de Pinochet en el Riggs Bank
+    notas: Más de un centenar de cuentas secretas bajo nombres falsos en el Riggs Bank y otras instituciones extranjeras, con poco más de 26 millones de dólares, de los cuales más de 20 millones sin justificación legal; el Caso Riggs estalló en 2004.
+    unidad_default: millones_de_dolares
+  liquidacion_riggs_sii:
+    nombre: Liquidación SII confirmada en Caso Riggs (2024)
+    notas: Corte de Apelaciones de Santiago ratificó liquidación por más de $1.550 millones decretada por el SII por declaraciones de impuestos maliciosamente falsas (años tributarios 1999-2004) por inversiones ocultas en el Riggs Bank.
+    unidad_default: millones_de_pesos
+  malversacion_gordon:
+    nombre: Fondos malversados por Eduardo Gordon
+    notas: Exgeneral director de Carabineros sustrajo $75.479.839 destinados a gastos improcedentes como obsequios, fiestas y donaciones, fuera del marco institucional, entre 2010 y 2011 (Decreto N° 854 de 2004 del Ministerio de Hacienda).
+    unidad_default: pesos
+  nogueira_asesores:
+    nombre: Pagos de la Cámara a asesores de Claudia Nogueira
+    notas: Dos asesores (Jaime Jullian y Jenny Acevedo) recibían cheques mensuales por alrededor de $800 mil y un millón de pesos, montos que depositaban en una cuenta bipersonal de la diputada y su esposo, el ex alcalde de Recoleta Gonzalo Cornejo.
+    unidad_default: pesos
+  papaya_gate_terrenos:
+    nombre: Compra irregular de terrenos GORE Coquimbo (2019)
+    notas: Adquisición de terrenos por $9.800 millones a fines de 2019 para un centro deportivo, a pesar de que Contraloría había manifestado irregularidades y existían tasaciones por menos del 50% del valor. CDE se querelló en 2021 contra la ex intendenta Lucía Pinto y otros.
+    unidad_default: millones_de_pesos
+  perjuicio_mop_gate:
+    nombre: Perjuicio fiscal Caso MOP-Gate
+    notas: El perjuicio fiscal llegó a $1.253 millones solo en la causa principal, según pericia contable citada por el Centro de Derechos Humanos de la Facultad de Derecho de la Universidad de Chile.
+    unidad_default: millones_de_pesos
+  perjuicio_inverlink:
+    nombre: Perjuicio al fisco Caso Inverlink
+    notas: El perjuicio al fisco habría superado los $3.000 millones según los peritajes realizados en 2003. Los títulos de Corfo sustraídos superaban los $29.000 millones.
+    unidad_default: millones_de_pesos
+  titulos_corfo_inverlink:
+    nombre: Títulos de Corfo sustraídos en Caso Inverlink
+    notas: El jefe de tesorería de Corfo, Javier Montoya, robó y vendió 159 documentos a plazo de la institución por medio de la administradora de fondos mutuos de Inverlink, a cambio de $150 millones. Los documentos tenían un valor que superaba los $29 mil millones.
+    unidad_default: millones_de_pesos
+  recorte_fondos_cultura_2027:
+    nombre: Recorte de los Fondos Cultura 2027
+    unidad_default: porciento
+    notas: "9,6% menos de presupuesto para los Fondos Cultura 2027 respecto de 2026, según la convocatoria publicada en agosto de 2026: 41.405 millones de pesos frente a 45.780 millones del año anterior."
+  fondos_cultura_2027:
+    nombre: Presupuesto Fondos Cultura 2027
+    unidad_default: millones_de_pesos
+    notas: "41.405 millones de pesos, el monto total de los Fondos Cultura 2027, un 9,6% menos que los 45.780 millones de 2026, según la convocatoria publicada en agosto de 2026."
+  fondos_cultura_2026:
+    nombre: Presupuesto Fondos Cultura 2026
+    unidad_default: millones_de_pesos
+    notas: "45.780 millones de pesos, el presupuesto de los Fondos Cultura 2026, base de comparación para el recorte del 9,6% aplicado a la convocatoria 2027."
+  becas_audiovisual_2026:
+    nombre: Becas audiovisuales 2026
+    unidad_default: millones_de_pesos
+    notas: "540 millones de pesos destinados a las becas del sector audiovisual en los Fondos Cultura 2026."
+  becas_audiovisual_2027:
+    nombre: Becas audiovisuales 2027
+    unidad_default: millones_de_pesos
+    notas: "192 millones de pesos destinados a las becas del sector audiovisual en los Fondos Cultura 2027, una caída del 64,4% respecto de 2026."
+  financiamiento_festival_excentrico:
+    nombre: Financiamiento del festival Excéntrico
+    unidad_default: millones_de_pesos
+    notas: "Alrededor de 60 millones de pesos recibidos por la Muestra Internacional de Cine y Placeres Críticos (festival Excéntrico) de un Fondo de Fomento Audiovisual, el antecedente citado por la Subsecretaría de las Culturas para la cláusula que excluye contenido pornográfico de los Fondos Cultura 2027."
+  magnitud_terremoto_colombia_2026:
+    nombre: Magnitud del terremoto de Colombia (10-ago-2026)
+    unidad_default: grados
+    notas: "Magnitud 7,4 del terremoto que sacudió el occidente de Colombia el 10 de agosto de 2026, con epicentro cerca de San José del Palmar (Chocó) y profundidad de unos 100 kilómetros; se sintió en Ecuador y Panamá."
+  fallecidos_terremoto_colombia_2026:
+    nombre: Fallecidos por el terremoto de Colombia (10-ago-2026)
+    unidad_default: personas
+    notas: "Al menos 20 fallecidos en los primeros balances del terremoto de magnitud 7,4 que sacudió Colombia el 10 de agosto de 2026: 18 en Pereira y 2 en Manizales."
+  fallecidos_pereira_terremoto:
+    nombre: Fallecidos en Pereira por el terremoto de Colombia (2026)
+    unidad_default: personas
+    notas: "18 fallecidos en Pereira por el terremoto de magnitud 7,4 del 10 de agosto de 2026, donde colapsaron varios edificios y el alcalde Mauricio Salazar describió la situación como 'crítica'."
+  pinocheques_monto:
+    nombre: Monto de los pinocheques (1989)
+    unidad_default: millones_de_pesos
+    notas: "971 millones de pesos sumaban los tres cheques entregados por Augusto Pinochet a su hijo Augusto Pinochet Hiriart en 1989, por servir de intermediario en la compra de Famae de la empresa Valmoval."
+  nogueira_asesores_total:
+    nombre: Gastos en asesorías de Claudia Nogueira (formalización 2010)
+    unidad_default: millones_de_pesos
+    notas: "20 millones de pesos en asesorías que la Fiscalía de Valparaíso atribuyó a la diputada Claudia Nogueira en su formalización de abril de 2010, montos depositados en la cuenta de su marido Gonzalo Cornejo."
+  nogueira_asesores_detalle:
+    nombre: Detalle de asesorías defraudadas por Claudia Nogueira
+    unidad_default: pesos
+    notas: "$28.375.103 en tres casos de asesorías que terminaron en la cuenta de Gonzalo Cornejo, más un fraude de $1.908.000 por simular que una oficina de GMA era su sede parlamentaria, según la formalización de abril de 2010."
+  terreno_cema_chillan:
+    nombre: Venta de terreno de CEMA Chile en Chillán (2014)
+    unidad_default: millones_de_pesos
+    notas: "Más de 760 millones de pesos obtuvo la Fundación CEMA Chile por la venta de un terreno en Chillán donado por el municipio en 2014, hecho que motivó la petición del CDE de reabrir el caso Riggs."
+  patrimonio_cema_chile:
+    nombre: Patrimonio inmobiliario de CEMA Chile
+    unidad_default: millones_de_pesos
+    notas: "Más de 6.300 millones de pesos y más de 243 propiedades (138 registradas por Bienes Nacionales + 105 detectadas por CIPER) componían el patrimonio de CEMA Chile según la investigación de 2016."
+  pagos_subsecretaria_educacion_uss:
+    nombre: Órdenes de compra de la Subsecretaría de Educación a la USS
+    unidad_default: millones_de_pesos
+    notas: "1.479 millones de pesos en órdenes de compra emitió la Subsecretaría de Educación a la Universidad San Sebastián mientras Marcela Cubillos fue ministra (ago-2018 a feb-2020), principalmente por el programa Directores Noveles del CPEIP ($1.089 millones)."
+  sueldo_mensual_cubillos_uss:
+    nombre: Sueldo mensual de Marcela Cubillos en la USS
+    unidad_default: millones_de_pesos
+    notas: "17 millones de pesos mensuales recibía Marcela Cubillos de la Universidad San Sebastián como docente, la polémica revelada en septiembre de 2024 que puso el foco en el financiamiento de la universidad con recursos públicos."
+  deuda_anfp_chiledeportes:
+    nombre: Deuda de la ANFP con el Instituto Nacional del Deporte
+    unidad_default: millones_de_pesos
+    notas: "220 millones de pesos adeudaba la ANFP al Instituto Nacional del Deporte por las clasificatorias a Sudáfrica 2010, según la denuncia del senador Nelson Ávila y los funcionarios de Chiledeportes (agosto de 2009)."
+  licitacion_rancagua_cornejo:
+    nombre: Licitación por trato directo de la Corporación Municipal de Rancagua a Javier Cornejo
+    unidad_default: millones_de_pesos
+    notas: "207 millones de pesos adjudicó por trato directo la Corporación Municipal de Rancagua al empresario Javier Cornejo a solo cuatro meses de asumir el alcalde Juan Ramón Godoy, según reveló CIPER en 2022."
+  monto_investigado_godoy:
+    nombre: Monto involucrado en las operaciones objetadas de Juan Ramón Godoy
+    unidad_default: millones_de_pesos
+    notas: "2.300 millones de pesos cifró el Ministerio Público como dinero involucrado en las operaciones objetadas del exalcalde de Rancagua Juan Ramón Godoy."
+  donacion_itelecom_womad:
+    nombre: Donación de Itelecom al festival Womad de Recoleta
+    unidad_default: millones_de_pesos
+    notas: "50 millones de pesos donó Itelecom Holding Chile SpA en febrero de 2020 a la Corporación Cultural de Recoleta en el marco del festival Womad, donación bajo la lupa del Caso Luminarias."
+  licitacion_luminarias_recoleta:
+    nombre: Licitación de luminarias led de Itelecom en Recoleta
+    unidad_default: pesos
+    notas: "10.259.454.000 pesos se adjudicó Itelecom en Recoleta el 16 de febrero de 2018 para mantención de alumbrado público y cambio a tecnología led, contrato de 10 años con pagos mensuales de $85.495.450."
+  multa_reyes_recoleta:
+    nombre: Multa impuesta a Carlos Reyes por corrupción en Recoleta
+    unidad_default: millones_de_pesos
+    notas: "50 millones de pesos de multa impuso el tribunal al ex director de obras de Recoleta Carlos Reyes por actos de corrupción, rechazando la rebaja de $45 millones solicitada por la defensa."
+  coima_uss_recoleta:
+    nombre: Coima ofrecida a Carlos Reyes por sociedades de la USS
+    unidad_default: millones_de_pesos
+    notas: "Casi 15 millones de pesos ofreció el representante legal Enrique Herrera, de sociedades ligadas a la Universidad San Sebastián, para ampliar permisos de la casa de estudios en Recoleta (2012)."
+  fraude_san_bernardo_cuevas:
+    nombre: Fraude investigado en la Municipalidad de San Bernardo
+    unidad_default: millones_de_pesos
+    notas: "Más de 20.000 millones de pesos bajo la lupa del Ministerio Público por posible malversación y fraude al fisco en subvenciones escolares durante la gestión de Nora Cuevas en San Bernardo."
+  fraude_sep_san_bernardo:
+    nombre: Falta de fondos SEP detectada en 2017 en San Bernardo
+    unidad_default: millones_de_pesos
+    notas: "9.000 millones de pesos faltantes por concepto de Subvención Escolar Preferencial detectó la Contraloría en 2017 en la Municipalidad de San Bernardo."
+  fraude_corporacion_san_bernardo:
+    nombre: Falta de fondos de la Corporación Municipal de San Bernardo 2018-2020
+    unidad_default: millones_de_pesos
+    notas: "10.500 millones de pesos de faltante determinó el segundo informe de la Contraloría (2022) en las finanzas de la Corporación Municipal de San Bernardo entre 2018 y 2020."
+  contratos_sabat_goffard:
+    nombre: Contratos municipales de Ñuñoa con socio del hijo de Sabat
+    unidad_default: pesos
+    notas: "15.700.000 pesos suscribió la Municipalidad de Ñuñoa en contratos con Alain Goffard, socio del hijo del alcalde Pedro Sabat, entre noviembre de 2013 y septiembre de 2015."
+  reparo_reginato_cmvm:
+    nombre: Reparo de la Contraloría a Virginia Reginato por la Corporación Municipal de Viña del Mar
+    unidad_default: pesos
+    notas: "1.122.359.123 pesos debía restituir la exalcaldesa Virginia Reginato por el perjuicio a la CMVM por pago fuera de plazo de cotizaciones previsionales y de salud (reparo valorizado a junio de 2025; original $995.789.540)."
+  perjuicio_sep_puerto_montt:
+    nombre: Perjuicio fiscal a la SEP en Puerto Montt
+    unidad_default: millones_de_pesos
+    notas: "Más de 500 millones de pesos de perjuicio fiscal por fondos de la Subvención Escolar Preferencial acreditó la Fiscalía en la acusación contra el exalcalde de Puerto Montt Gervoy Paredes."
+  enriquecimiento_paredes:
+    nombre: Incremento patrimonial injustificado de Gervoy Paredes
+    unidad_default: millones_de_pesos
+    notas: "Más de 214 millones de pesos de incremento patrimonial injustificado se investigó al exalcalde de Puerto Montt Gervoy Paredes."
+  licitacion_areas_verdes_arica:
+    nombre: Licitación de áreas verdes de la Municipalidad de Arica
+    unidad_default: millones_de_pesos
+    notas: "Casi 15.000 millones de pesos (unos $310 millones mensuales por dos años) ofrecía la Municipalidad de Arica en la licitación de áreas verdes de 2023 cuestionada por la Contraloría."
+  trato_directo_norte_verde:
+    nombre: Trato directo de áreas verdes a Norte Verde SpA
+    unidad_default: millones_de_pesos
+    notas: "456 millones de pesos firmó el exalcalde de Arica Gerardo Espíndola en trato directo con Norte Verde SpA, empresa creada días antes y cuyo socio es hijo de la dueña de la empresa que perdió la licitación."

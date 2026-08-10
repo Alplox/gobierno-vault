@@ -87,6 +87,7 @@ const WHITELIST_MEDIOS = new Set([
   'Biblioteca del Congreso Nacional (LeyChile)',
   'Biblioteca del Congreso Nacional (Ley Chile)',
   'BCN Historia de la Ley',
+  'Wikipedia',
   'Actualidad Jurídica DOE',
   'Portal de Datos Abiertos del Estado (datos.gob.cl)',
   'Delegación Presidencial Regional de La Araucanía',
