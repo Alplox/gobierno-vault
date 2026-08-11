@@ -9,6 +9,13 @@
  * (2) regenerar `sitemaps/` desde el .gvault sin re-sincronizar (ver restore),
  * (3) compartir una string compacta verificable (integridad sin secreto).
  *
+ * Formato del payload: v3 (2026-08-11) = header JSON pequeño (índice de
+ * offsets por archivo + manifest SHA-256) + blob binario con los archivos
+ * concatenados. Motivo: v2 serializaba los archivos como base64 dentro de un
+ * único JSON.stringify y con el catálogo creciendo (~500MB+ de JSONL) ese
+ * string superaba el límite de V8 (`RangeError: Invalid string length`).
+ * `--restore` sigue leyendo los .gvault v2 (base64) existentes.
+ *
  * Uso:
  *   pnpm run sitemaps-backup [--out <prefijo>]   # default sitemaps/sitemaps.gvault
  *   pnpm run sitemaps-backup --restore           # regenera sitemaps/ desde el .gvault
@@ -225,13 +232,20 @@ function assertInside(base, dest) {
 
 // Recoge los archivos de la carpeta. Con `compact`, los .jsonl se transforman
 // a formato compacto ANTES de comprimir; el resto de archivos (README, manifest)
-// se guardan tal cual. El manifest siempre referencia el JSONL ORIGINAL
-// (sha256 + bytes), de modo que el restore pueda verificar la reconstrucción
-// byte-idéntica.
+// se guardan tal cual. Retorna los archivos como BUFFERS (no base64) más un
+// índice con la posición de cada uno en el blob final, y el manifest con el
+// SHA-256 del JSONL ORIGINAL (para verificar la reconstrucción byte-idéntica).
+//
+// Motivo del diseño binario (v3): el catálogo completo pesa cientos de MB en
+// JSONL; serializarlo como base64 dentro de un único JSON.stringify superaba el
+// límite de string de V8 (~536M caracteres) con `RangeError: Invalid string
+// length`. El payload ahora es un header JSON pequeño + blob de bytes crudos.
 function collectFiles(dir, compact) {
-  const files = {};
+  const files = [];
+  const index = [];
   const manifest = [];
   const compactPaths = [];
+  let offset = 0;
   function walk(abs, rel) {
     for (const name of readdirSync(abs)) {
       if (EXCLUDE.has(name) || isChunkPart(name)) continue;
@@ -242,15 +256,18 @@ function collectFiles(dir, compact) {
       } else {
         const buf = readFileSync(p);
         const isJsonl = r.endsWith('.jsonl');
-        const stored = compact && isJsonl ? compactEncodeFile(buf) : { buf, compact: false };
-        files[r] = stored.buf.toString('base64');
-        if (stored.compact) compactPaths.push(r);
-        manifest.push({ path: r, sha256: sha256(buf), b64: true, bytes: buf.length });
+        const compacted = compact && isJsonl ? compactEncodeFile(buf) : null;
+        const stored = compacted ? compacted.buf : buf;
+        files.push(stored);
+        index.push({ path: r, off: offset, len: stored.length, compact: !!compacted });
+        if (compacted) compactPaths.push(r);
+        manifest.push({ path: r, sha256: sha256(buf), b64: false, bytes: buf.length });
+        offset += stored.length;
       }
     }
   }
   walk(dir, '');
-  return { files, manifest, compactPaths };
+  return { files, index, manifest, compactPaths };
 }
 
 // ---------------------------------------------------------------------------
@@ -439,22 +456,26 @@ function compactDecodeFile(buf) {
 }
 
 function buildPayload(srcDir = SITEMAPS_DIR, quality = 7, compact = true) {
-  const { files, manifest, compactPaths } = collectFiles(srcDir, compact);
-  const json = JSON.stringify({
+  const { files, index, manifest, compactPaths } = collectFiles(srcDir, compact);
+  // Header JSON pequeño (índice + manifest) + blob binario con todos los
+  // archivos concatenados. El header nunca crece con el contenido: solo el
+  // blob lo hace, y los Buffers de Node no tienen el límite de string de V8.
+  const header = Buffer.from(JSON.stringify({
     kind: 'sitemaps',
-    version: 2,
+    version: 3,
     compact: true,
     compactPaths,
     created: new Date().toISOString(),
-    files,
+    files: index,
     manifest,
-  });
-  const compressed = brotliCompressSync(Buffer.from(json, 'utf8'), {
+  }) + '\n', 'utf8');
+  const payload = Buffer.concat([header, ...files]);
+  const compressed = brotliCompressSync(payload, {
     params: { [Z.BROTLI_PARAM_QUALITY]: quality },
   });
   const rawBytes = manifest.reduce((acc, e) => acc + e.bytes, 0);
   const meta = {
-    version: 2,
+    version: 3,
     kind: 'sitemaps',
     created: new Date().toISOString(),
     fileCount: manifest.length,
@@ -477,16 +498,49 @@ function restoreFromGvault(path, destDir = SITEMAPS_DIR) {
     meta = r.meta;
     compressed = r.compressed;
   }
-  const payload = JSON.parse(brotliDecompressSync(compressed).toString('utf8'));
+  const payloadBuf = brotliDecompressSync(compressed);
+  // Formato v3 (binario): header JSON en la primera línea, luego el blob de
+  // bytes crudos. El separador es el primer '\n' — el header es JSON puro sin
+  // saltos de línea, así que indexOf encuentra el límite exacto.
+  const nl = payloadBuf.indexOf(0x0a);
+  let header = null;
+  let blob = null;
+  if (nl > 0) {
+    const candidate = JSON.parse(payloadBuf.subarray(0, nl).toString('utf8'));
+    if (candidate && candidate.kind === 'sitemaps' && candidate.version === 3 && Array.isArray(candidate.files)) {
+      header = candidate;
+      blob = payloadBuf.subarray(nl + 1);
+    }
+  }
+  if (header) {
+    // v3: cada archivo se ubica por offset/length dentro del blob binario.
+    const compactSet = new Set(header.compactPaths ?? []);
+    for (const entry of header.manifest) {
+      const f = header.files.find((x) => x.path === entry.path);
+      if (!f) throw new Error(`INTEGRIDAD: ${entry.path} falta en el índice del payload.`);
+      const stored = blob.subarray(f.off, f.off + f.len);
+      const buf = f.compact ? compactDecodeFile(stored) : stored;
+      if (sha256(buf) !== entry.sha256) {
+        throw new Error(`INTEGRIDAD: ${entry.path} no coincide con su checksum.`);
+      }
+      const dest = join(destDir, normalize(entry.path));
+      assertInside(destDir, dest);
+      mkdirSync(dirname(dest), { recursive: true });
+      writeFileSync(dest, buf);
+    }
+    console.log(`✔ Restaurado ${header.manifest.length} archivo(s) desde ${path}` +
+      (meta.chunks ? ` (${meta.chunks} partes unidas)` : '') +
+      (compactSet.size ? ` (${compactSet.size} reconstruidos del formato compacto)` : ''));
+    return;
+  }
+  // v2 (legacy): payload JSON con archivos base64.
+  const payload = JSON.parse(payloadBuf.toString('utf8'));
   if (payload.kind !== 'sitemaps') {
     throw new Error(`Este .gvault no es un catálogo de sitemaps (kind: ${payload.kind ?? 'desconocido'}).`);
   }
   const compactSet = new Set(payload.compactPaths ?? []);
   for (const entry of payload.manifest) {
     const stored = Buffer.from(payload.files[entry.path], 'base64');
-    // Los archivos compactos se reconstruyen a JSONL original; el checksum del
-    // manifest es del JSONL original, así que el restore verifica la
-    // reconstrucción byte-idéntica.
     const buf = compactSet.has(entry.path) ? compactDecodeFile(stored) : stored;
     if (sha256(buf) !== entry.sha256) {
       throw new Error(`INTEGRIDAD: ${entry.path} no coincide con su checksum.`);

@@ -540,7 +540,7 @@ Notas de plataforma (complemento manual, no se reescribe):
   (`/sitemap/sitemap-<DD-MM-YYYY>.xml`, ~2.400 sub-sitemaps diarios desde 2018, ~8,6k artículos).
 
 | `pnpm run sitemaps-watchlist -- --source <ruta> [--out <archivo>]` | genera `tareas_sitemap.md`: bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json`) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en sources.yaml·entities / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio. Requiere un clone local de https://github.com/Alplox/awesome-chilean-rss |
-| `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~56MB (vs ~357MB raw / 127MB v1). `--no-compact` guarda JSONL crudo |
+| `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3 (2026-08-11)**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
 — si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
@@ -700,12 +700,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 739
+**Total de eventos:** 763
 
-**Cobertura de fuentes:** 412 de 739 eventos con 3+ fuentes (327 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 420 de 763 eventos con 3+ fuentes (343 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 571
+- 2026: 595
 - 2025: 44
 - 2024: 23
 - 2023: 14
@@ -726,32 +726,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (285)
-- Justicia (172)
-- Economia (143)
-- Defensa y seguridad (102)
-- Administración pública (94)
+- Politica (289)
+- Justicia (181)
+- Economia (148)
+- Defensa y seguridad (110)
+- Administración pública (103)
 - Derechos humanos (73)
 - Finanzas publicas (66)
-- Proceso legislativo (60)
-- Corrupción (57)
+- Proceso legislativo (62)
+- Corrupción (59)
 - Cambios en el gabinete (57)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (165)
-- declaracion (96)
-- reaccion (94)
-- publicacion (78)
-- investigacion (77)
-- resultado (76)
-- anuncio (51)
-- fallo_judicial (39)
-- votacion (16)
+- accion (169)
+- declaracion (97)
+- reaccion (96)
+- resultado (81)
+- investigacion (81)
+- publicacion (80)
+- anuncio (53)
+- fallo_judicial (41)
+- votacion (18)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 1132
-- Organizaciones: 672
-- Cifras: 646
-- Fuentes: 2422
+- Personas: 1161
+- Organizaciones: 685
+- Cifras: 665
+- Fuentes: 2498
 - Temas: 74

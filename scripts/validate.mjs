@@ -50,6 +50,7 @@ const mediaOrgNames = new Set(
 // nuevos deben registrarse en entities.yaml con tipo medio_comunicacion.
 const WHITELIST_MEDIOS = new Set([
   'Senado de Chile',
+  'Partido Socialista de Chile',
   'Gobierno de Chile',
   'Gobierno de Chile (gob.cl)',
   'Gob.cl',
@@ -61,6 +62,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Hacienda',
   'Ministerio de Salud',
   'Ministerio de Salud (Minsal)',
+  'Ministerio de Educación',
   'Ministerio del Interior',
   'Subsecretaria del Interior',
   'Subsecretaría del Interior',

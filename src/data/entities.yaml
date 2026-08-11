@@ -1,4 +1,147 @@
 people:
+  carla_lavin:
+    nombre: Carla Lavín
+    cargo: Directora jurídica de Segal Deudores
+    organizacion: segal_deudores
+    notas: "Abogada; directora jurídica de Segal Deudores. Advirtió que la ampliación del cobro del CAE a billeteras virtuales debe leerse a la luz de las sentencias de Cortes de Apelaciones (entre ellas la de La Serena) que han resuelto que la deuda del CAE carece de naturaleza tributaria y que la Tesorería no está facultada para ejecutarla con prerrogativas tributarias (evento 20260615-1)."
+  claudia_sanhueza:
+    nombre: Claudia Sanhueza
+    cargo: Exministra de Desarrollo Social y Familia (2022-2025)
+    organizacion: ministerio_desarrollo_social
+    partido: Revolución Democrática
+    notas: "Exministra de Desarrollo Social y Familia del gobierno de Boric; presentó los resultados de la CASEN 2024. En agosto de 2026 publicó un hilo en X defendiendo la metodología de la medición de pobreza por ingresos frente a los cuestionamientos del presidente Kast: descontar subsidios la haría 'técnicamente incorrecta'; citó la caída de ~600 mil personas entre CASEN 2022-2024 y más de 2 millones entre 2020-2024 (evento 20260810-1)."
+  coca_nanco:
+    nombre: Emilia 'Coca' Nanco
+    cargo: Diputada
+    organizacion: camara_diputados
+    notas: "Diputada; firmante junto a Gael Yeomans de la moción que ordena la realización anual y aleatoria de controles de drogas a las FF.AA. y de Orden y Seguridad Pública, rechazada en general por la Comisión de Defensa (evento 20260810-32)."
+  constanza_hube:
+    nombre: Constanza Hube
+    cargo: Diputada
+    organizacion: camara_diputados
+    partido: Unión Demócrata Independiente
+    notas: "Diputada UDI. En agosto de 2026 replicó en X al exministro Giorgio Jackson por el cuestionamiento presidencial a la CASEN: 'seguimos esperando su autocrítica por el Gas a Precio Justo' y defendió la corrección de la medición de pobreza por la comisión transversal (evento 20260810-1). Vinculada a la polémica por la deuda de $533 millones del programa Gas a Precio Justo (evento 20260219-2)."
+  cristian_sayes_maldonado:
+    nombre: Cristian Sayes Maldonado
+    cargo: Delegado presidencial regional de Arica y Parinacota
+    organizacion: delegacion_presidencial_arica
+    notas: "Delegado presidencial regional de Arica y Parinacota, ex militante de RN. Mencionado en los audios de la seremi Romina Cifuentes (junio 2026) como obstáculo para el cuoteo republicano en el Sernac de Arica: 'el delegado acá es el que tiene el poder... lamentablemente es RN, entonces siempre va a tirar para su sector' (evento 20260811-7)."
+  david_rivas:
+    nombre: David Rivas
+    cargo: Concejal de Coronel
+    organizacion: municipalidad_coronel
+    partido: Renovación Nacional
+    notas: "Concejal de Coronel (RN). Detenido el 10 de agosto de 2026 en San Pedro de la Paz por mostrar un certificado de revisión técnica adulterado durante una fiscalización vehicular; formalizado por uso malicioso de instrumento público ante el Juzgado de Garantía de San Pedro de la Paz (evento 20260810-36)."
+  eduardo_cerna:
+    nombre: Eduardo Cerna
+    cargo: Director general de la PDI
+    organizacion: pdi
+    notas: "Director general de la Policía de Investigaciones de Chile (PDI). Participó el 10 de agosto de 2026 en la entrega de resultados de la incautación de 829 kilos de droga en Estación Central y Pudahuel (evento 20260810-34)."
+  fabiola_leiva_canete:
+    nombre: Fabiola Leiva Cañete
+    cargo: Académica de la Facultad de Arte
+    notas: "Académica de la Facultad de Arte; coautora junto a Guillermo Bécar Ayala de la columna '¿Qué país construimos cuando reducimos la inversión en Cultura?' (El Desconcierto, 10-ago-2026) sobre los recortes a los Fondos Cultura 2027 (evento 20260810-3)."
+  fran_maira:
+    nombre: Fran Maira
+    cargo: Cantante
+    notas: "Cantante chilena. Referida en el debate por el criterio de la Fiscalía tras el accidente del periodista José Antonio Neme (agosto 2026): habría pasado por control de detención tras chocar con un motorista (evento 20260808-14)."
+  francisca_garcia_huidobro:
+    nombre: Francisca García Huidobro
+    cargo: Conductora de Primer Plano
+    organizacion: chilevision
+    notas: "Conductora del programa Primer Plano de Chilevisión. La noche del accidente de José Antonio Neme (7-ago-2026) señaló que el periodista había marcado 0,0 en un test rápido de alcohol y que estaba 'muy afectado' (evento 20260808-14)."
+  francisco_jacir:
+    nombre: Francisco Jacir
+    cargo: Fiscal regional de la Fiscalía Metropolitana Centro Norte
+    organizacion: ministerio_publico
+    notas: "Fiscal regional de la Fiscalía Metropolitana Centro Norte. Detalló el 10 de agosto de 2026 la incautación de 829 kilos de droga en Estación Central y Pudahuel: tres detenidos extranjeros, 'prácticamente 828 kilos de marihuana y un poco más de un kilo de cocaína' (evento 20260810-34)."
+  guillermo_becar_ayala:
+    nombre: Guillermo Bécar Ayala
+    cargo: Académico de la Facultad de Arte
+    notas: "Académico de la Facultad de Arte; coautor junto a Fabiola Leiva Cañete de la columna '¿Qué país construimos cuando reducimos la inversión en Cultura?' (El Desconcierto, 10-ago-2026) sobre los recortes a los Fondos Cultura 2027 (evento 20260810-3)."
+  ignacio_monras:
+    nombre: Ignacio Monrás
+    cargo: Capitán de Carabineros
+    organizacion: carabineros
+    notas: "Capitán de Carabineros, hijo del subdirector general Enrique Monrás. El 21 de octubre de 2025 solicitó a la empresa proveedora (SC Ordenance) una cotización de mantención del dron Camcopter S-100 avaluada en $1.020.925, pagada el 4 de diciembre (evento 20260625-7)."
+  javier_palominos:
+    nombre: Javier Palominos
+    cargo: Jefe de laboratorio de Corthorn Health
+    organizacion: corthorn_health
+    notas: "Químico farmacéutico de 32 años titulado en la PUC; jefe de laboratorio de Corthorn Health desde marzo de 2026, sin experiencia previa en laboratorios toxicológicos (antes: coordinador de validaciones en Fresenius Kabi y jefe de local de farmacia Cruz Verde). Su perfil agrega dudas sobre la capacidad técnica del proveedor del test de drogas del exsubsecretario Juan Pablo Rodríguez (evento 20260730-18)."
+  jeffrey_goettman:
+    nombre: Jeffrey Goettman
+    cargo: Representante Comercial Adjunto de la USTR
+    organizacion: ustr
+    notas: "Número dos de la Oficina del Representante Comercial de Estados Unidos (USTR). Su visita a Chile en agosto de 2026 era la apuesta del gobierno para rebajar el arancel del 12,5% al 10% o lograr nuevas exenciones (evento 20260727-4)."
+  jorge_silva_hinojosa:
+    nombre: Jorge Silva Hinojosa
+    cargo: Coronel en retiro del Ejército
+    organizacion: ejercito_chile
+    notas: "Coronel en retiro del Ejército; cofundador (17-may-2016) de SC Ordenance SpA, representante de Schiebel en Chile que vendió los drones Camcopter S-100 a Carabineros. Diez días después de constituir la empresa fue condenado por la Corte Marcial como autor de fraude al Fisco reiterado (Cuaderno Matriz): 10 años y un día, multa de $406.942.718 (evento 20260625-7)."
+  jose_antonio_neme:
+    nombre: José Antonio Neme
+    cargo: Conductor de Mucho Gusto
+    organizacion: mega
+    notas: "Periodista y conductor del matinal Mucho Gusto de Mega. Protagonizó un accidente de tránsito la noche del 7-ago-2026 en Las Condes (Alonso de Córdova con Los Militares) al colisionar con una motocicleta; quedó apercibido y citado por la Fiscalía tras examen de alcoholemia (evento 20260808-14)."
+  juan_cristobal_videla_webb:
+    nombre: Juan Cristóbal Videla Webb
+    cargo: Gerente corporativo de Codelco
+    organizacion: codelco
+    notas: "Gerente corporativo de Codelco. Sancionado en agosto de 2026 por la alteración del reporte de producción 2025 con responsabilidad de 'alta gravedad' (carta de amonestación), en el marco del abultamiento de 27 mil toneladas (evento 20260809-4)."
+  karem_gomez:
+    nombre: Karem Gómez
+    cargo: Fiscal del Tamarugal
+    organizacion: ministerio_publico
+    notas: "Fiscal de la Fiscalía del Tamarugal. Obtuvo la primera condena contra exfuncionarios del Ejército por tráfico ilícito de migrantes en Colchane (mayo 2025); la lectura de sentencia quedó fijada para el 17 de agosto de 2026 (evento 20260811-3)."
+  lily_zuniga:
+    nombre: Lily Zúñiga
+    cargo: Columnista de Contrapoder
+    organizacion: contrapoder_chile
+    notas: "Columnista del medio de investigación Contrapoder Chile. Autora de la columna sobre los pagos de la Municipalidad de Maipú a la Fundación Jaime Guzmán sin respaldo legal mientras José Antonio Kast integraba su directorio (23-jul-2026, evento 20260723-18)."
+  lisette_cartes:
+    nombre: Lisette Cartes
+    cargo: Capitán de Carabineros
+    organizacion: carabineros
+    notas: "Capitán de Carabineros de la Quinta Comisaría de Vicuña. Tras el asesinato de Anne Alexander Gray en Diaguitas (10-ago-2026) señaló que 'la rápida reacción de nuestros funcionarios permitió concretar su detención y entregar una respuesta a la comunidad' (evento 20260810-33)."
+  maria_teresa_araya:
+    nombre: María Teresa Araya
+    cargo: General inspectora y directora nacional de Apoyo a las Operaciones de Carabineros
+    organizacion: carabineros
+    notas: "General inspectora y directora nacional de Apoyo a las Operaciones de Carabineros. Consultada por Contrapoder sobre si conocía que SC Ordenance (proveedora de los drones Camcopter S-100) fue fundada por un militar condenado, Carabineros respondió que contrata con empresas habilitadas conforme a la normativa del Sistema de Compras Públicas (evento 20260625-7)."
+  mauricio_barraza_gallardo:
+    nombre: Mauricio Barraza Gallardo
+    cargo: Exvicepresidente de Operaciones de Codelco
+    organizacion: codelco
+    notas: "Exvicepresidente de Operaciones de Codelco (ya desvinculado de la minera). Sancionado en agosto de 2026 por la alteración del reporte de producción 2025 con responsabilidad de 'alta gravedad' (evento 20260809-4)."
+  nicolas_musalem:
+    nombre: Nicolás Musalem
+    cargo: Teniente y jefe de la Tenencia San Pedro de la Paz
+    organizacion: carabineros
+    notas: "Teniente de Carabineros, jefe de la Tenencia San Pedro de la Paz. Detalló que el certificado de revisión técnica presentado por el concejal David Rivas 'presentaba inconsistencias, ya que el documento indicaba una vigencia distinta a la registrada en el sistema' (evento 20260810-36)."
+  raimundo_palamara:
+    nombre: Raimundo Palamara
+    cargo: Abogado y presidente de Fundación Fuerza Ciudadana
+    organizacion: fundacion_fuerza_ciudadana
+    notas: "Abogado y presidente de la Fundación Fuerza Ciudadana. Publicó una columna en BioBioChile (10-ago-2026) sobre la querella de la fundación contra la alcaldesa de La Cruz, Filomena Navia, por omisión de denuncia reiterada (art. 13 Ley 20.000) tras el audio filtrado sobre una plantación de marihuana (evento 20260804-19)."
+  ricardo_martinez:
+    nombre: Ricardo Martínez Menanteau
+    cargo: Excomandante en jefe del Ejército (2014-2018)
+    organizacion: ejercito_chile
+    notas: "Excomandante en jefe del Ejército (2014-2018). En entrevista con BioBioTV (11-ago-2026) afirmó que los militares 'no están preparados' para funciones de seguridad pública y reveló que en el estallido social de 2019 rechazó convertir al Ejército en una 'segunda ola de Carabineros' (evento 20260811-6)."
+  sofia_gonzalez:
+    nombre: Sofía González
+    cargo: Diputada
+    organizacion: camara_diputados
+    partido: Partido Comunista
+    notas: "Diputada del Partido Comunista. Tras la aprobación de los vetos de Kast a la megarreforma (10-ago-2026) sostuvo que 'estos tres vetos demuestran cuál es el alma de esta megarreforma, que es la defensa de los más ricos en desmedro de quienes menos tienen' (evento 20260810-10)."
+  katherine_martorell:
+    nombre: Katherine Martorell
+    cargo: Exsubsecretaria de Prevención del Delito (2018-2022)
+    organizacion: subsecretaria_prevencion_delito
+    partido: Renovación Nacional
+    notas: "Abogada militante de RN; subsecretaria de Prevención del Delito durante el segundo gobierno de Piñera. Investigada por la licitación de 300 cámaras corporales para Carabineros (caso Motorola): la Fiscalía Centro Norte decidió no perseverar y el TC cerró definitivamente la causa el 6-ago-2026 al rechazar el requerimiento de Pegasus. Sus chats con Luis Hermosilla (2018-2023) fueron revisados en una arista del caso Audios sin que se formalizaran cargos."
+
   romy_rutherford:
     nombre: Romy Rutherford
     cargo: Ministra de la Corte de Apelaciones de Santiago
@@ -7712,6 +7855,88 @@ people:
     nombre: Alejandra Cox
     notas: "Economista laboral chilena, Ph.D. en Economía de la Universidad de Chicago, ingeniera comercial UC. Expresidenta de la Asociación de AFP (hasta marzo de 2023), execonomista laboral senior del Banco Mundial (1993-1996). En agosto de 2026 planteó que a la Dirección del Trabajo 'hay que hacerle cirugía mayor' y que debe ser una institución independiente, y propuso cuatro medidas para reactivar el mercado laboral."
 organizations:
+  cencosud:
+    nombre: Cencosud S.A.
+    tipo: empresa
+    notas: "Holding de retail chileno controlado por la familia Paulmann, matriz de Cenco Malls (centros comerciales), supermercados (Jumbo, Santa Isabel) y otras unidades. Resultados 2T26: el negocio de supermercados mostró presiones de márgenes mientras Cenco Malls reportó utilidad de $81.159 millones (+27,9%)."
+  municipalidad_coronel:
+    nombre: Municipalidad de Coronel
+    tipo: municipalidad
+    notas: "Municipio de la comuna de Coronel, Región del Biobío. Su concejal David Rivas (RN) fue detenido el 10-ago-2026 por mostrar una revisión técnica adulterada en una fiscalización vehicular (evento 20260810-36)."
+
+  consorcio_andino:
+    nombre: Consorcio Andino (Buses JM)
+    tipo: empresa_transporte
+    notas: "Empresa de buses que, bajo el nombre Consorcio Andino, operará desde el 10 de agosto de 2026 el servicio de transporte del personal de la División Salvador de Codelco, reemplazando a Tándem (evento 20260810-30)."
+  direccion_general_aeronautica_civil:
+    nombre: Dirección General de Aeronáutica Civil (DGAC)
+    tipo: servicio_publico
+    notas: "Organismo del Estado encargado de la regulación aérea. En el caso de los drones Camcopter S-100 de Carabineros: los permisos de vuelo estuvieron pendientes en 2025 y la normativa RPA exige tarjeta de registro y credencial del piloto a distancia (evento 20260625-7)."
+  factos:
+    nombre: Factos
+    tipo: medio_comunicacion
+    notas: "Medio de investigación chileno (factos.cl). Documentó el cierre de unidades críticas del Hospital San Borja Arriarán por filtraciones (agosto 2026) y el ranking de hospitales del Balance Score Card del Minsal (evento 20260810-35)."
+  fundacion_fuerza_ciudadana:
+    nombre: Fundación Fuerza Ciudadana
+    tipo: organizacion_social
+    notas: "Fundación presidida por el abogado Raimundo Palamara; se querelló contra la alcaldesa de La Cruz, Filomena Navia, por omisión de denuncia reiterada (art. 13 Ley 20.000) tras el audio filtrado sobre una plantación de marihuana (evento 20260804-19)."
+  hospital_quilpue:
+    nombre: Hospital Claudio Vicuña de Quilpué
+    tipo: hospital
+    notas: "Hospital público de Quilpué. Caso de la paciente a la que se le extirpó el riñón equivocado en una cirugía de 2015 y que falleció: la Corte Suprema dejó sin efecto los $50 millones por daño moral el 10-ago-2026 (evento 20260810-38)."
+  hospital_san_borja_arriaran:
+    nombre: Hospital Clínico San Borja Arriarán
+    tipo: hospital
+    notas: "Hospital público del centro de Santiago. En agosto de 2026, la UCI adulto y la unidad de neonatología presentaban filtraciones (eventualmente aguas servidas) y la UCI pediátrica estaba cerrada desde el 20 de julio; ubicado en el lugar 61 entre 62 hospitales del Balance Score Card 2025 del Minsal (evento 20260810-35)."
+  indespa:
+    nombre: Instituto Nacional de Desarrollo Sustentable de la Pesca Artesanal y de la Acuicultura (INDESPA)
+    tipo: servicio_publico
+    notas: "Organismo dependiente del Ministerio de Economía, vinculado a la pesca artesanal y acuicultura. Mencionado en los audios de la seremi Romina Cifuentes como espacio 'más fácil' para colocar militantes republicanos ('en Indespa es más fácil, porque Indespa está acá al lado mío', evento 20260811-7)."
+  infodefensa:
+    nombre: Infodefensa
+    tipo: medio_comunicacion
+    notas: "Medio especializado en defensa y seguridad (infodefensa.com). Documentó los permisos DGAC pendientes de los drones Camcopter S-100 (abril 2025) y su uso en incendios de Malleco (enero 2026, evento 20260625-7)."
+  rio_tinto:
+    nombre: Rio Tinto
+    tipo: empresa_minera
+    notas: "Grupo minero global, activo en litio y cobre en Chile. En 2025 suscribió con Codelco una alianza para producir carbonato de litio en el Salar de Maricunga (adquisición del 49,9% de SDM); la FNE la aprobó pura y simple el 10-ago-2026 (evento 20260810-29)."
+  sc_ordenance_spa:
+    nombre: SC Ordenance SpA
+    tipo: empresa
+    notas: "Empresa representante exclusiva en Chile de Schiebel Aircraft GmbH (Austria); vendió los drones Camcopter S-100 a Carabineros por $6.973.734.425. Constituida el 17-may-2016 por Marcelo Carvallo, Francisco Javier Miranda y el coronel condenado Jorge Silva Hinojosa (evento 20260625-7)."
+  tandem:
+    nombre: Tándem (Grupo Pullman)
+    tipo: empresa_transporte
+    notas: "Filial de transporte del Grupo Pullman Bus. Demandó a Codelco por perjuicios de al menos $79.423 millones por el contrato de transporte del personal de la División Salvador (firmado mayo 2023, vigente hasta 2034); desde el 10-ago-2026 el servicio pasa a Consorcio Andino (evento 20260810-30)."
+  pauta:
+    nombre: Pauta
+    tipo: medio_comunicacion
+    notas: "Medio digital chileno de actualidad (pauta.cl)."
+  diarioestrategia:
+    nombre: Diario Estrategia
+    tipo: medio_comunicacion
+    notas: "Diario de economía y negocios (diarioestrategia.cl)."
+  cavem:
+    nombre: Cámara de Comercio Automotriz de Chile (CAVEM)
+    tipo: gremio
+    notas: "Gremio del comercio automotriz; publica el informe estadístico mensual de inscripciones y transferencias de vehículos."
+  cenco_malls:
+    nombre: Cenco Malls
+    tipo: empresa
+    notas: "Filial de centros comerciales del holding Cencosud (familia Paulmann). Resultados 2T26: utilidad de $81.159 millones (+27,9%)."
+  union_interparlamentaria:
+    nombre: Unión Interparlamentaria (UIP)
+    tipo: organismo_internacional
+    notas: "Organización fundada en 1889 que agrupa a los parlamentos del mundo y trabaja con la ONU. Su 153ª Asamblea se realizará en Arusha (Tanzania) en octubre 2026."
+  motorola_solutions:
+    nombre: Motorola Solutions
+    tipo: empresa
+    notas: "Empresa de tecnología adjudicataria de la licitación de 300 cámaras corporales para Carabineros (~$378 millones) en el origen del caso Motorola."
+  pegasus:
+    nombre: Pegasus Group Company S.A.
+    tipo: empresa
+    notas: "Empresa querellante en el caso Motorola; perdió la licitación de cámaras corporales ante Motorola Solutions e intentó reabrir la causa con un requerimiento de inaplicabilidad ante el TC (rechazado por unanimidad el 6-ago-2026)."
+
   asociacion_de_afp:
     nombre: Asociación de AFP
     tipo: gremio
@@ -10960,6 +11185,53 @@ organizations:
     pais: Chile
     notas: "Sindicato de la división Codelco Norte (Chuquicamata). El 10 de agosto de 2026 encabezó en Santiago Centro una manifestación contra la eventual privatización de Codelco con pancartas 'Codelco es de los chilenos' y 'Codelco no se vende', que culminó en La Moneda con la entrega de una carta al presidente José Antonio Kast."
 cifras:
+  votos_tc_caso_motorola:
+    nombre: Votos del pleno del TC que rechazaron el requerimiento de Pegasus (caso Motorola)
+    unidad_default: votos
+    notas: "8 votos a favor del rechazo y 0 en contra (unanimidad), el 6-ago-2026, dejando firme la decisión de no perseverar contra Katherine Martorell."
+
+  aprobacion_kast_inauguracion:
+    nombre: Aprobación de José Antonio Kast al inicio del gobierno (encuesta)
+    unidad_default: porcentaje
+    notas: "47,5% de aprobación en la primera medición tras la inauguración (marzo 2026)."
+  aprobacion_kast_100_dias:
+    nombre: Aprobación de José Antonio Kast a los 100 días de gobierno
+    unidad_default: porcentaje
+    notas: "31% de aprobación a los 100 días de mandato (junio 2026), 16,5 puntos bajo la medición inaugural."
+  arancel_eeuu_125:
+    nombre: Arancel de Estados Unidos a exportaciones chilenas (2026)
+    unidad_default: porcentaje
+    notas: "12,5%, el más alto contemplado bajo la Sección 301 por presunto 'trabajo forzoso'; el cobre quedó excluido pero el salmón, alimentos y forestal quedaron afectos."
+  contagios_covid_chile_2020:
+    nombre: Contagios acumulados de COVID-19 en Chile (mayo 2020)
+    unidad_default: personas
+    notas: "50.000 contagios acumulados y más de 630 fallecidos al 23 de mayo de 2020, con el 90% de las camas UCI de la capital ocupadas."
+  migrantes_irregulares_chile:
+    nombre: Migrantes en situación irregular en Chile
+    unidad_default: personas
+    notas: "300.000 migrantes en situación irregular estimados en Chile (2026)."
+
+  adolescentes_probado_vapeador:
+    nombre: Adolescentes de 13-15 años que han probado un vapeador (Encuesta Mundial de Tabaquismo en Jóvenes, 2026)
+    unidad_default: porcentaje
+    notas: "32,9% (uno de cada tres) reconoce haber consumido vapeador con nicotina alguna vez; supera al cigarrillo tradicional (23,3%). Muestra: 7.204 estudiantes de las 16 regiones."
+  adolescentes_consumo_actual_vapeador:
+    nombre: Adolescentes de 13-15 años con consumo actual de vapeador (último mes)
+    unidad_default: porcentaje
+    notas: "14,8% declara consumo actual de vapeadores con nicotina, frente a 9,3% de fumadores actuales de cigarrillo."
+  transferencias_autos_usados_enejul_2026:
+    nombre: Transferencias de vehículos usados livianos y medianos enero-julio 2026
+    unidad_default: unidades
+    notas: "648.372 transferencias (+4,3% vs ene-jul 2025), segundo mejor registro histórico tras 2021 (856.728). Con camiones: 674.160. Fuente: CAVEM."
+  utilidad_cenco_malls_2t26:
+    nombre: Utilidad neta de Cenco Malls en el 2T26
+    unidad_default: millones_pesos
+    notas: "$81.159 millones (+27,9% interanual); ingresos de $99.397 millones (+9,3%) y EBITDA ajustado de $89.818 millones (margen 90,4%)."
+  visitas_cenco_malls_2t26:
+    nombre: Visitas a los centros comerciales de Cenco Malls en el 2T26
+    unidad_default: millones
+    notas: "37 millones de visitantes en el trimestre (+13,8% interanual)."
+
   aprobacion_kast_criteria_ago9:
     nombre: Aprobación de José Antonio Kast según Criteria (9-ago-2026)
     unidad_default: porcentaje
@@ -12114,6 +12386,14 @@ cifras:
     nombre: Porcentaje de las utilidades de Codelco 2025 que el gobierno autorizó capitalizar
     unidad_default: por_ciento
     notas: "100% de las utilidades del ejercicio 2025 (US$2.422-2.423 millones), decisión 'histórica e inédita' del gobierno de Kast anunciada en el Día del Minero (10 agosto 2026). Desde 2022 regía un promedio de reinversión del 30% de las utilidades."
+  rio_tinto_participacion_sdm:
+    nombre: Participación de Rio Tinto en la sociedad SDM de Codelco (Salar de Maricunga)
+    unidad_default: por_ciento
+    notas: "Rio Tinto adquiriría el 49,9% de las acciones de la sociedad SDM de Codelco, que cuenta con concesiones para litio en el Salar de Maricunga; la FNE aprobó la operación el 10 de agosto de 2026."
+  demanda_tandem_codelco:
+    nombre: Perjuicio reclamado por Tándem (Grupo Pullman) a Codelco
+    unidad_default: millones_pesos
+    notas: "Al menos $79.423 millones reclama la empresa Tándem a Codelco por incumplimientos del contrato de transporte de personal de División Salvador (firmado mayo 2023, vigente hasta 2034); demanda anunciada en agosto de 2026 (The Clinic, Redimin)."
   gasto_arriendos_vehiculos_diputados_biobio:
     nombre: Gasto anual en arriendo de vehículos de los 13 diputados del Biobío
     unidad_default: pesos
@@ -12935,7 +13215,7 @@ cifras:
   sancionados_codelco_2026:
     nombre: Ejecutivos sancionados por el abultamiento de producción en Codelco
     unidad_default: ejecutivos
-    notas: "Siete ejecutivos sancionados por el abultamiento de las cifras de producción 2025; el único desvinculado fue César Márquez, despedido el 20-may-2026."
+    notas: "Ocho gerentes sancionados por el abultamiento de las cifras de producción 2025 (CNN Chile, 11-ago-2026): César Márquez despedido sin indemnización; Mauricio Barraza Gallardo y Juan Cristóbal Videla Webb con responsabilidades de alta gravedad; cinco ejecutivos de Chuquicamata y Ministro Hales amonestados por desviaciones medias."
   ingresos_irregulares_subsecretaria_2025:
     nombre: Ingresos irregulares detectados por la Subsecretaría de Seguridad (2025)
     unidad_default: personas
@@ -13004,6 +13284,14 @@ cifras:
     nombre: Encuestados esperanzados con el gobierno de Kast (agosto 2026)
     unidad_default: porcentaje
     notas: "El 53% 'esperanzado' con la llegada de Kast cayó al 36% en la medición Criteria del 9-ago-2026."
+  utilidades_enap_2025:
+    nombre: Utilidades de ENAP en 2025
+    unidad_default: millones_usd
+    notas: "ENAP cerró 2025 con utilidades récord de US$847,8 millones (+108% vs los US$408 millones de 2024), EBITDA de US$1.465 millones (récord histórico), quinto año consecutivo de ganancias (2021-2025) y deuda financiera bruta de US$3.103 millones (Emol, 28-ene-2026)."
+  economia_peor_2s2026_cadem:
+    nombre: Expectativa de economía peor en el segundo semestre 2026 (Cadem)
+    unidad_default: porcentaje
+    notas: "La encuesta Cadem de fines de julio 2026 arrojó que subió del 36% al 43% la proporción de personas que creen que la situación económica del país empeorará durante el segundo semestre de 2026; contexto citado por CNN Chile al cubrir los dichos de Kast sobre la caída de la esperanza."
   economia_peor_6m_criteria:
     nombre: Expectativa de economía peor en seis meses (Criteria 9-ago-2026)
     unidad_default: porcentaje
@@ -13314,6 +13602,14 @@ cifras:
     nombre: Votos a favor del veto al anatocismo en la Cámara
     unidad_default: votos
     notas: "75 votos a favor aprobaron en la Cámara el veto supresivo de Kast a la prohibición del anatocismo en la megarreforma (10-ago-2026), frente a 59 en contra y 12 abstenciones."
+  incautacion_829_kilos_estacion_central:
+    nombre: Drogas incautadas en Estación Central y Pudahuel
+    unidad_default: kilos
+    notas: "829 kilos de droga en total: 827,8 kilos de marihuana y 1,2 kilos de cocaína, incautados por la PDI (Modelo Territorial Cero de la BriCrim Huechuraba) en Estación Central y Pudahuel el 10 de agosto de 2026, con tres detenidos extranjeros."
+  costo_test_drogas_ffaa:
+    nombre: Costo estimado anual de los controles de drogas en las FFAA
+    unidad_default: millones_usd
+    notas: "US$40 millones al año estimó el ministro de Defensa Fernando Barros para la realización de controles anuales de drogas a toda la dotación de las Fuerzas Armadas y de Orden, según el proyecto rechazado en la Comisión de Defensa (10-ago-2026)."
   votos_contra_veto_anatocismo:
     nombre: Votos en contra del veto al anatocismo en la Cámara
     unidad_default: votos
@@ -13466,3 +13762,58 @@ cifras:
     nombre: Fallecidos por el terremoto de Colombia tras la evolución del balance del 10 de agosto
     unidad_default: personas
     notas: "El balance escaló de los 20 fallecidos iniciales a 71 durante la jornada del 10 de agosto de 2026, cuando Colombia decretó desastre nacional; el titular actualizado de BioBioChile registró 111 muertos y 87 heridos confirmados por el presidente Abelardo de la Espriella."
+  indemnizacion_dano_moral_rinon_equivocado:
+    nombre: Indemnización por daño moral de la paciente del riñón equivocado (Quilpué, anulada por la Suprema)
+    unidad_default: millones_pesos
+    notas: "$50 millones fijados en 2023 por daño moral de la paciente y confirmados por la Corte de Apelaciones de Valparaíso; la Corte Suprema (agosto 2026) los dejó sin efecto por tratarse de un perjuicio personalísimo no transmisible a los herederos."
+  indemnizacion_hijos_rinon_equivocado:
+    nombre: Indemnización por daño de repercusión para cada hijo de la paciente del riñón equivocado (Quilpué)
+    unidad_default: millones_pesos
+    notas: "$20 millones por cada uno de los cuatro hijos ($80 millones en total), mantenidos por la Corte Suprema (agosto 2026) como daño por repercusión o rebote."
+  dano_emergente_rinon_equivocado:
+    nombre: Daño emergente reconocido en el caso del riñón equivocado (Quilpué)
+    unidad_default: pesos
+    notas: "$4.048.887 mantenidos por la Corte Suprema (agosto 2026)."
+  costo_drones_carabineros_camcopter:
+    nombre: Costo de los drones UAS VTOL Schiebel Camcopter S-100 de Carabineros
+    unidad_default: pesos
+    notas: "$6.973.734.425 (cada ejemplar ~$3.500 millones), adquiridos con fondos de la Subsecretaría del Interior y presentados el 14 de diciembre de 2024 para la Macrozona Sur. Según Contrapoder (junio 2026) estarían inoperativos desde enero de 2026 por un desperfecto en una antena."
+  multa_silva_hinojosa_fraude_fisco:
+    nombre: Multa del coronel (r) Jorge Silva Hinojosa por fraude al Fisco
+    unidad_default: pesos
+    notas: "$406.942.718, impuesta por la Corte Marcial en 2016 en el 'Cuaderno Matriz' del caso fraude en el Ejército, junto a 10 años y un día de presidio mayor. El perjuicio al Fisco ascendió a $2.034.713.593 (actualizado a $3.487.682.492)."
+  gasto_seguros_drones_carabineros:
+    nombre: Gasto de Carabineros en pólizas de seguros para los drones Camcopter S-100
+    unidad_default: pesos
+    notas: "$665.768.368 en menos de dos años (Contrapoder, 7-jul-2026): seguro con FID Chile Seguros por US$425.245 (~$393.589.762) vigente mar-2025 a mar-2026, y nueva licitación adjudicada el 26-mar-2026 a Renta Nacional por US$293.746 (~$272.158.606) por 12 meses con reaseguro Lloyd's de Londres. Los drones se recepcionaron el 26-dic-2024 sin póliza."
+  personas_salieron_pobreza_casen_2022_2024:
+    nombre: Personas que salieron de la pobreza por ingresos entre CASEN 2022 y 2024
+    unidad_default: personas
+    notas: "Casi 600 mil personas (Claudia Sanhueza, X 10-ago-2026; validado con resultados oficiales CASEN 2024: tasa 20,5% → 17,3%, MIDESOF/La Tercera/Emol)."
+  personas_salieron_pobreza_casen_2020_2024:
+    nombre: Personas que salieron de la pobreza por ingresos entre CASEN 2020 y 2024
+    unidad_default: personas
+    notas: "Más de 2 millones (Claudia Sanhueza, X 10-ago-2026; validado con resultados oficiales CASEN 2024: tasa 28,3% en 2020 → 17,3% en 2024, MIDESOF/La Tercera/Emol)."
+  subsidios_primer_decil_ingreso_2024:
+    nombre: Peso de los subsidios monetarios en el ingreso monetario del primer decil
+    unidad_default: "%"
+    notas: "Pasaron de 37,5% a 69,4% entre 2017 y 2024 (Claudia Sanhueza, X 10-ago-2026; validado con análisis de La Tercera sobre la CASEN 2024: los más pobres dependen cada vez más de subsidios). Explica el rol de la PGU como pensión no contributiva en la salida de la pobreza de hogares con adultos mayores."
+  embargos_cae_2026:
+    nombre: Embargos de la Tesorería General de la República por deudas del CAE
+    unidad_default: embargos
+    notas: "1.491 embargos entre abril y junio de 2026 (514 en abril, 621 en mayo, 356 en junio), según detalle obtenido por La Tercera vía Ley de Transparencia. 48 de los embargados ganaban entre $1.500.001 y $2.000.000 y 55 entre $2.000.001 y $3.500.000, pese a que Hacienda y la TGR defendieron que la mayoría eran deudores de altos ingresos."
+
+  valor_bienes_embargados_cae:
+    nombre: Valor total de los bienes embargados por deudas del CAE
+    unidad_default: pesos
+    notas: "$6.893.133.178 en bienes embargados por la TGR por deudas del CAE entre abril y junio de 2026 (La Tercera, 10-ago-2026). Tipos: 1.134 cuentas corrientes, 221 cuentas vista/RUT, 39 bienes raíces, 30 cuentas en dólares, 24 cuentas de ahorro, 18 vehículos, 7 fondos mutuos, 3 depósitos a plazo."
+
+  alumnos_fuera_sistema_slep:
+    nombre: Alumnos que siguen fuera del sistema de los SLEP
+    unidad_default: estudiantes
+    notas: "639.156 estudiantes en 177 comunas pendientes de traspaso (36 futuros SLEP y 2.564 establecimientos) seguían bajo administración municipal en agosto de 2026 (BioBioChile, 10-ago-2026)."
+
+  slep_en_funcionamiento:
+    nombre: Servicios Locales de Educación Pública en funcionamiento
+    unidad_default: servicios
+    notas: "36 SLEP en régimen a inicios de 2026 (más del 50% de los 70 proyectados) tras la incorporación de 10 nuevos en enero; cinco regiones completaron el traspaso: Arica y Parinacota, Tarapacá, Atacama, Aysén y Magallanes (Mineduc)."

@@ -6,3 +6,5 @@
 # `_manifest.json` (estado de sync) y `README.md` (índice regenerable).
 .cache/
 *.jsonl
+sitemaps.gvault
+sitemaps.gvault.part*
