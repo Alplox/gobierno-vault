@@ -10,6 +10,7 @@
     "sitemaps-index": "node scripts/sitemaps-index.mjs",
     "sitemaps-backup": "node scripts/sitemaps-backup.mjs",
     "sitemaps-resync": "node scripts/sitemaps-resync.mjs",
+    "sitemaps-watchlist": "node scripts/sitemaps-watchlist.mjs",
     "add-source": "node scripts/add-source.mjs",
     "pdf-extract": "node scripts/pdf-extract.mjs",
     "backup": "node scripts/backup.mjs",

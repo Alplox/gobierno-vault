@@ -19154,6 +19154,20 @@ x-2026-08-09-baradit-zanja:
   autor: "@baradit"
   fecha: 2026-08-09
   url: https://x.com/baradit/status/2086569521716900024
+x-2026-08-09-ncastilo-zanja:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Natalia Castillo (exdiputada) responde tweet sobre la zanja fronteriza de @Baradit"
+  autor: "@ncastilo"
+  fecha: 2026-08-09
+  url: https://x.com/ncastilo/status/2086617094339145730
+x-2026-08-09-isidoraalcalde-zanja:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Isidora Alcalde (exconcejala) responde tweet sobre la zanja fronteriza de @Baradit"
+  autor: "@isidoraalcalde"
+  fecha: 2026-08-09
+  url: https://x.com/isidoraalcalde/status/2086628071184974193
 x-2026-08-09-elhilo-honorarios-soto:
   tipo: red_social
   medio: X (Twitter)
@@ -19981,3 +19995,528 @@ theclinic-2011-09-12-padre-von-baer-tc-semillas-transgenicas:
   fecha: 2011-09-12
   url: "https://www.theclinic.cl/2011/09/12/padre-de-ena-von-baer-recurre-al-tc-para-mantener-en-secreto-uso-de-semillas-transgenicas/"
   notas: "Seguimiento (sep-2011): Erik von Baer recurrió al TC (requerimiento ingresado el 7-sep-2011, patrocinado por Jorge Echeverría) para declarar inconstitucional el fallo del Consejo para la Transparencia que obligaba al SAG a revelar la ubicación de cultivos transgénicos desde 1992; causa iniciada en 2009 por Mayra Feddersen y en la que Monsanto también recurrió ante la Corte de Apelaciones."
+
+biobiochile-2026-08-10-fierro-huenuman-profugo-carahue:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Detienen a Rosamel Fierro Huenuman por robo armado en Carahue: estaba prófugo desde 2021"
+  autor: Radio Bío Bío
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2026/08/10/detienen-a-rosamel-fierro-huenuman-por-robo-armado-en-carahue-estaba-profugo-desde-2021.shtml"
+  notas: "Cobertura de la detención de Rosamel Antonio Fierro Huenuman en Carahue por el Grupo Especial de Prófugos de la PDI y la BIPE Temuco. El ministro de Seguridad Pública Martín Arrau confirmó la captura del prófugo con orden de aprehensión vigente desde 2021 por robo con intimidación contra dos trabajadores forestales en el predio Aguas Blancas."
+x-2026-08-10-arrau-fierro-huenuman:
+  tipo: twitter
+  medio: X (Twitter)
+  titulo: "Martín Arrau: 'Cayó Rosamel Fierro Huenuman, prófugo de la Macrozona Sur' — detenido por el Grupo Especial de Prófugos y la BIPE Temuco"
+  autor: Martín Arrau
+  fecha: 2026-08-10
+  url: https://x.com/martinarrau/status/2086896834493198457
+  notas: "Publicación en X del ministro de Seguridad Pública Martín Arrau confirmando la detención y detallando el caso (orden de aprehensión desde 2021, predio Aguas Blancas, Carahue). Fuente complementaria: el dato se valida con la cobertura de BioBioChile del mismo día."
+
+latercera-2026-08-10-camara-aprueba-tres-vetos-megarreforma:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cámara aprueba los tres vetos de Kast a la megarreforma y son despachados al Senado"
+  autor: Cristóbal Palacios y Alonso Aranda
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/camara-aprueba-los-tres-vetos-de-kast-a-la-megarreforma-y-son-despachados-al-senado/"
+  notas: "Cobertura de la votación de los tres vetos supresivos de Kast (anatocismo 75-59-12, olvido financiero 75-58-13, pago a 30 días 74-50-22) en la Cámara y su despacho al Senado, con la defensa del ministro Quiroz y el debate parlamentario."
+x-2026-08-10-brito-vetos-megarreforma:
+  tipo: twitter
+  medio: X (Twitter)
+  titulo: "Jorge Brito: 'Kast vetó el derecho al olvido financiero y el pago a 30 días para las pymes... Un capítulo negro. En 2030 tocará arreglarlo'"
+  autor: Jorge Brito
+  fecha: 2026-08-10
+  url: https://x.com/jorbritoh/status/2086872849109692548
+  notas: "Publicación en X del diputado Jorge Brito (PS) criticando los vetos y la megarreforma. Fuente complementaria de opinión: los datos de la votación se validan con La Tercera."
+
+emol-2026-08-10-codelco-reacciones-parlamentarias:
+  tipo: prensa
+  medio: Emol
+  titulo: "Parlamentarios valoran histórica capitalización de Codelco, pero advierten: 'No es un cheque en blanco'"
+  autor: José Tomás Guzmán
+  fecha: 2026-08-10
+  url: "https://www.emol.com/noticias/Economia/2026/08/10/1208109/capitalizacion-codelco-reaccion-parlamentaria.html"
+  notas: "Reacciones parlamentarias a la capitalización del 100% de utilidades de Codelco: Tapia (PPD) pide transparencia, Provoste la valora, Ossandón y Venegas advierten del impacto fiscal y la no privatización, y del oficialismo Urcullú, Jeldrez, Sulantay y Valenzuela la respaldan con condiciones."
+x-2026-08-10-santana-codelco-excedentes:
+  tipo: twitter
+  medio: X (Twitter)
+  titulo: "Juan Santana: '¿En serio este es el momento para que el Estado renuncie a esos recursos? Codelco es de todo Chile'"
+  autor: Juan Santana
+  fecha: 2026-08-10
+  url: https://x.com/Juan_SantanaC/status/2086886329875599704
+  notas: "Publicación en X del diputado Juan Santana (PS) cuestionando la capitalización de Codelco en el contexto del alza de combustibles y la reforma tributaria. Fuente complementaria de opinión: el anuncio se valida con el evento 20260810-5."
+
+t13-2026-08-10-alvarado-casen:
+  tipo: prensa
+  medio: T13
+  titulo: "Biministro Alvarado defiende palabras del Presidente Kast sobre la Casen: 'No hay cuestionamientos a los datos'"
+  autor: T13
+  fecha: 2026-08-10
+  url: "https://www.t13.cl/noticia/politica/biministro-alvarado-explica-palabras-del-presidente-kast-sobre-casen-no-hay-cue-10-8-2026"
+  notas: "Aclaración del vocero de gobierno Claudio Alvarado en su vocería del 10-ago tras los dichos de Kast sobre la CASEN: descartó cuestionamientos a los datos técnicos de la encuesta y enmarcó la reducción de la pobreza en el rol de los subsidios y la futura generación de ingresos propios."
+x-2026-08-10-jackson-casen-contradiccion:
+  tipo: twitter
+  medio: X (Twitter)
+  titulo: "Giorgio Jackson contrasta a Kast ('hubo un error en la medición') con Alvarado ('no hay cuestionamientos a los datos') sobre la CASEN"
+  autor: Giorgio Jackson
+  fecha: 2026-08-10
+  url: https://x.com/GiorgioJackson/status/2086938894356893703
+  notas: "Dos tuits del exministro Giorgio Jackson (10-ago) marcando la contradicción entre las declaraciones de Kast por la mañana y el vocero Alvarado por la tarde sobre los datos CASEN, incluyendo la contrapregunta de Iván Valenzuela. Fuente complementaria de opinión."
+
+x-2026-08-10-rettig-ecuador-homicidios:
+  tipo: twitter
+  medio: X (Twitter)
+  titulo: "Rodrigo Rettig: 'CON militares en la calle hubo más homicidios que nunca en Ecuador' — infografía de homicidios 2015-2025"
+  autor: Rodrigo Rettig
+  fecha: 2026-08-10
+  url: https://x.com/RodRettig/status/2086888194444792009
+  notas: "Hilo de Rodrigo Rettig con infografía estadística (Policía Nacional del Ecuador - Ministerio del Interior, 2025): tasa de homicidios de Ecuador pasó de 6,3 (2015) a 50,9 por 100.000 hab. (2025, máximo histórico, +708%), pese a los estados de excepción y el despliegue militar desde 2021 y el 'conflicto armado interno' de enero 2024. Fuente complementaria de opinión experta: la serie de 2025 requiere verificación con fuentes primarias ecuatorianas."
+
+cnnchile-2026-08-10-camara-aprueba-tres-vetos-megarreforma:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Cámara aprueba los tres vetos del presidente Kast al proyecto de Reconstrucción Nacional"
+  autor: CNN Chile
+  fecha: 2026-08-10
+  url: "https://www.cnnchile.com/pais/camara-aprueba-los-tres-vetos-del-presidente-kast-megarreforma/"
+  notas: "Cobertura de la votación de los tres vetos de Kast en la Cámara (anatocismo 75-59-12, olvido financiero 75-58-13, pago a 30 días 74-50-22), el despacho al Senado con votación proyectada para el miércoles 12 de agosto, la cita completa de Agustín Romero y la crítica de Iraci Hassler ('gobierno antipyme')."
+biobiochile-2026-08-10-camara-aprueba-tres-vetos-megarreforma:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Cámara de Diputados aprueba los tres vetos de Kast a la megarreforma y pasan al Senado"
+  autor: Radio Bío Bío
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/camara-de-diputados-aprueba-los-tres-vetos-de-kast-a-la-megarreforma-y-pasan-al-senado.shtml"
+  notas: "Cobertura de la aprobación de los tres vetos de Kast en la Cámara y su paso al Senado. Verificada por título y descripción (cuerpo tras JS); los datos de la votación se corroboran con latercera-2026-08-10-camara-aprueba-tres-vetos-megarreforma y cnnchile-2026-08-10-camara-aprueba-tres-vetos-megarreforma."
+
+cooperativa-2026-08-10-comision-aprueba-registro-vandalos:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Comisión de Seguridad de la Cámara aprobó el Registro de Vándalos"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-10
+  url: "https://www.cooperativa.cl/noticias/pais/politica/agenda-legislativa/comision-de-seguridad-de-la-camara-aprobo-el-registro-de-vandalos/2026-08-10/160208.html"
+  notas: "Aprobación en general del Registro de Vándalos en la Comisión de Seguridad de la Cámara (7 a favor, 5 en contra, 1 abstención), con plazo de indicaciones hasta el 21 de agosto."
+latercera-2026-08-10-comision-registro-nacional-vandalos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Comisión de Seguridad de la Cámara aprueba en general proyecto de ley que crea el Registro Nacional de Vándalos"
+  autor: Joaquín Barrientos y Nicolás Quiñones
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/comision-de-seguridad-de-la-camara-aprueba-en-general-proyecto-de-ley-que-crea-el-registro-nacional-de-vandalos/"
+  notas: "Cobertura detallada de la aprobación en general del Registro Nacional de Vándalos: 33 actos contemplados, 15 sanciones (pérdida de gratuidad y PGU), críticas de oposición por 'doble castigo', ausencia de los ministros Alvarado y Arrau, ingreso de Máximo Pavez bloqueado por Tatiana Urrutia, citas de Urrutia, Bassaletti y Jaime Araya, plazo de indicaciones el 21 de agosto a las 12:00 (aprobado 8-5)."
+cnnchile-2026-08-10-registro-vandalos-comision-aprueba-general:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Avanza en el Congreso el Registro Nacional de Vándalos: Comisión de Seguridad de la Cámara aprueba en general el proyecto"
+  autor: CNN Chile
+  fecha: 2026-08-10
+  url: "https://www.cnnchile.com/pais/avanza-en-el-congreso-el-registro-nacional-de-vandalos-comision-de-seguridad-de-la-camara-aprueba-en-general-el-proyecto/"
+  notas: "Aprobación en general del Registro Nacional de Vándalos (7-5-1, abstención de Juan Marcelo Valenzuela del PDG), críticas por la ausencia de Alvarado y Arrau, plazo de indicaciones el 21 de agosto a las 12:00 y antecedente de la crítica del CRUCH (Osvaldo Corrales) a la restricción de gratuidad y becas."
+
+fastcheck-2026-08-10-fiscalia-pago-25-millones-venganzas-valencia:
+  tipo: prensa
+  medio: Fast Check
+  titulo: "Fiscalía pagó más de $25 millones en causas que denunciaban 'venganzas' de Ángel Valencia por despidos de exfuncionarios"
+  autor: Benjamín Bravo Yusta
+  fecha: 2026-08-10
+  url: "https://www.fastcheck.cl/2026/08/10/fiscalia-pago-mas-de-25-millones-en-causas-que-denunciaban-venganzas-de-angel-valencia-por-despidos-de-exfuncionarios/"
+  notas: "Reportaje de Fast Check: en 2023 el Ministerio Público selló acuerdos judiciales por más de $25 millones con los exfuncionarios Renzo Aste y Claudia Lefever, quienes denunciaron despidos por 'venganzas' del fiscal nacional Ángel Valencia. Los acuerdos fueron aprobados por el CDE y exigían desistirse de las demandas y no volver a demandar al Estado."
+latercera-2026-08-10-dicaprio-rana-pehuenche:
+  tipo: prensa
+  medio: La Tercera
+  titulo: '"Al borde de la extinción": DiCaprio alerta riesgo de destrucción de hábitat de ranita del Pehuenche por proyecto eléctrico en cordillera del Maule'
+  autor: Roberto Martínez
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/nacional/noticia/al-borde-de-la-extincion-dicaprio-alerta-riesgo-de-destruir-habitat-de-ranita-del-pehuenche-por-proyecto-electrico-en-la-cordillera-del-maule/"
+  notas: "Cobertura de la alerta de Leonardo DiCaprio por la ranita del Pehuenche (Alsodes pehuenche) y el proyecto de interconexión Los Cóndores–Río Diamante de Enel Generación Chile en el Alto Maule: menos de 1.000 ejemplares silvestres, ingreso al SEIA en octubre 2021, rechazo unánime del Gobierno Regional del Maule en julio y comunicado de respuesta de Enel."
+eldesconcierto-2026-08-10-toledo-rana-pehuenche:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Ministra Toledo evita referirse a proyecto eléctrico cuestionado por DiCaprio por amenazar a la rana pehuenche"
+  autor: El Desconcierto
+  fecha: 2026-08-10
+  url: "https://eldesconcierto.cl/medio-ambiente/ministra-toledo-evita-referirse-proyecto-electrico-cuestionado-dicaprio-amenazar-la-rana-pehuenche-n5461189"
+  notas: "La ministra del Medio Ambiente Francisca Toledo dijo en radio ADN que no puede pronunciarse sobre el proyecto eléctrico del Alto Maule porque está en evaluación ambiental, y defendió la institucionalidad ambiental chilena."
+t13-2026-08-10-zanja-arica-parinacota:
+  tipo: prensa
+  medio: T13
+  titulo: "Exclusivo | Casi 7 kilómetros de longitud con 3 metros de largo y ancho: Así va la zanja en el norte del país"
+  autor: T13
+  fecha: 2026-08-10
+  url: "https://www.t13.cl/noticia/nacional/casi-7-kilometros-longitud-3-metros-largo-ancho-avance-zanja-arica-parinacota-10-8-2026"
+  notas: "Reportaje en terreno de T13: 50% de avance en Arica y Parinacota (zanja de casi 7 km, 3m de alto por 3m de ancho), 60% en Colchane y Antofagasta sin obras iniciadas. Declaraciones del mayor Mauricio Yáñez y del comisionado Alberto Soto (88% menos de migrantes irregulares detectados en 3,5 meses; mantenimiento mensual a cargo de la Brigada Motorizada de Rancagua)."
+elinformador-2026-08-10-baradit-zanja-reacciones:
+  tipo: prensa
+  medio: El Informador Chile
+  titulo: "Jorge Baradit comparte reveladora imagen de la zanja y saca ronchas entre seguidores de Kast"
+  autor: El Informador Chile
+  fecha: 2026-08-10
+  url: "https://www.elinformadorchile.cl/2026/08/10/jorge-baradit-comparte-reveladora-imagen-de-la-zanja-y-saca-ronchas-entre-seguidores-de-kast/"
+  notas: "Cobertura de las reacciones al post de Jorge Baradit sobre la zanja fronteriza: comentarios de la exdiputada Natalia Castillo y la exconcejala Isidora Alcalde, críticas al gasto en la obra y la réplica de cuentas afines al gobierno."
+t13-2026-08-09-dicaprio-rana-pehuenche:
+  tipo: prensa
+  medio: T13
+  titulo: "DiCaprio pide salvar a las ranas pehuenches: advierte por proyecto eléctrico en el Alto Maule"
+  autor: T13
+  fecha: 2026-08-09
+  url: "https://www.t13.cl/noticia/espectaculos/dicaprio-pide-salvar-las-ranas-pehuenches-advierte-por-proyecto-electrico-alto-9-8-2026"
+  notas: "Primera cobertura de la alerta de Leonardo DiCaprio (9-ago-2026): menos de 1.000 ranas pehuenches de pecho espinoso en libertad; los conservacionistas piden reubicar el proyecto Los Cóndores–Río Diamante, no detenerlo. La URL canónica usada es la versión no-AMP de t13.cl."
+cooperativa-2026-08-10-anef-estatuto-administrativo:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "ANEF: la reforma al estatuto administrativo debe hacerse con los trabajadores"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-10
+  url: "https://cooperativa.cl/noticias/pais/politica/agenda-legislativa/anef-la-reforma-al-estatuto-administrativo-debe-hacerse-con-los/2026-08-10/150557.html"
+  notas: "La ANEF condicionó la reforma al estatuto administrativo a la participación de los funcionarios ('no que sea una disputa ideológica'). El ministro Jorge Quiroz prevé que la comisión técnica a cargo de revisar la iniciativa tenga resultados para diciembre de 2026."
+
+biobiochile-2026-08-10-emergencia-preventiva-cinco-regiones:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno decreta Emergencia Preventiva Climática en cinco regiones ante nuevo sistema frontal"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/gobierno-decreta-emergencia-preventiva-climatica-en-cinco-regiones-ante-nuevo-sistema-frontal.shtml"
+  notas: "Anuncio desde La Moneda del decreto de Emergencia Preventiva Climática en cinco regiones del norte (de Arica y Parinacota a Coquimbo) ante un nuevo sistema frontal. Nota en desarrollo; los datos se corroboran con emol, latercera, t13, cooperativa y meganoticias del mismo día."
+
+emol-2026-08-10-emergencia-preventiva-arica-coquimbo:
+  tipo: prensa
+  medio: Emol
+  titulo: "Gobierno declara emergencia preventiva climática desde Arica hasta Coquimbo"
+  autor: Javiera Riquelme
+  fecha: 2026-08-10
+  url: "https://www.emol.com/noticias/Nacional/2026/08/10/1208119/gobierno-declara-emergencia-preventiva-climatica.html"
+  notas: "El biministro Claudio Alvarado informó desde La Moneda la firma del Decreto N° 1.269 del Ministerio del Interior que declara emergencia preventiva climática desde Arica hasta Coquimbo, vigente del 10 al 16 de agosto; incluye declaraciones de Kast sobre albergues, monitoreo de quebradas, maquinaria de obras públicas y comunicaciones."
+
+cooperativa-2026-08-10-emergencia-preventiva-lluvias:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Gobierno decreta emergencia preventiva por lluvias entre Arica y Coquimbo"
+  autor: Mariano Reyes
+  fecha: 2026-08-10
+  url: "https://www.cooperativa.cl/noticias/pais/tiempo/gobierno-decreta-emergencia-preventiva-por-lluvias-entre-arica-y-coquimbo/2026-08-10/185127.html"
+  notas: "Medida vigente desde el lunes 10 hasta el domingo 16 de agosto para disponer de los recursos necesarios en la primera fase de la emergencia; Alvarado indicó que están preparados para que la suspensión de clases, de ser necesaria, sea 'debidamente estructurada'."
+
+latercera-2026-08-10-emergencia-preventiva-arica-coquimbo:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Gobierno anuncia emergencia preventiva climática entre Arica y Coquimbo ante nuevo escenario de lluvias"
+  autor: Roberto Martínez
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/nacional/noticia/gobierno-anuncia-emergencia-preventiva-climatica-entre-arica-y-coquimbo-ante-nuevo-escenario-de-lluvias/"
+  notas: "Kast encabezó en La Moneda un Comité de Emergencia; decreto N° 1.269 del Ministerio del Interior vigente hasta el 16 de agosto. Incluye la activación de delegaciones de Arica y Parinacota, Tarapacá, Atacama y Coquimbo, la coordinación eventual con las FF.AA. (estados de excepción vigentes en Atacama y Coquimbo), monitoreo de quebradas y comunicaciones satelitales, y declaraciones de Cebrián (sistemas regionales activados desde el jueves; 'montos importantes de precipitaciones, viento, nevadas y tormentas eléctricas')."
+
+t13-2026-08-10-emergencia-preventiva-arica-coquimbo:
+  tipo: prensa
+  medio: T13
+  titulo: "Gobierno anuncia emergencia preventiva climática desde Arica a Coquimbo"
+  autor: T13
+  fecha: 2026-08-10
+  url: "https://www.t13.cl/noticia/politica/gobierno-anuncia-emergencia-preventiva-climatica-desde-arica-coquimbo-10-8-2026"
+  notas: "Anuncio con el Presidente Kast, ministros y la directora de Senapred, Alicia Cebrián. Detalle del pronóstico: precipitaciones moderadas a fuertes en Atacama desde la mañana del martes 11 hasta la noche del miércoles 12 de agosto, y en Coquimbo desde la madrugada hasta la tarde del miércoles 12. Incluye la coordinación de una eventual suspensión de clases y la reinstalación de mesas técnicas de seguimiento."
+
+meganoticias-2026-08-10-emergencia-preventiva-arica-coquimbo:
+  tipo: prensa
+  medio: Meganoticias
+  titulo: "Gobierno decreta emergencia preventiva climática de Arica a Coquimbo: Estará vigente hasta el 16 de agosto"
+  autor: Diego Alonzo
+  fecha: 2026-08-10
+  url: "https://www.meganoticias.cl/nacional/529071-gobierno-emergencia-preventiva-climatica-arica-coquimbo-norte-chile-sistema-frontal-10-08-2026.html"
+  notas: "Punto de prensa en La Moneda: Alvarado explicó la vigencia de la medida y Kast señaló que 'se han activado todas las delegaciones regionales, provinciales, en coordinación con las gobernaciones y alcaldes' de Arica y Parinacota, Tarapacá, Atacama y Coquimbo."
+
+soychile-2026-08-10-flores-kast-indultos-uniformados:
+  tipo: prensa
+  medio: SoyChile
+  titulo: "Flores (RN) pide a Kast que 'actúe lo antes posible' por indultos a uniformados por el 18-O"
+  autor: SoyChile
+  fecha: 2026-08-10
+  url: "https://www.soychile.cl/valparaiso/politica/2026/08/10/960762/flores-kast-indultos-uniformados-pide.html"
+  notas: "Cobertura del video en que la senadora Camila Flores reitera el pedido de indulto general o particulares 'lo antes posible' para uniformados condenados por el estallido social, mencionando a Patricio Maturana y el compromiso de campaña de Kast. Consigna además que el jefe de Estado ha dicho que los eventuales indultos serán 'analizados en su mérito caso a caso'."
+
+tiktok-2026-08-10-eldiarioregional-flores-indulto:
+  tipo: redes_sociales
+  medio: TikTok
+  titulo: "Video: senadora Camila Flores pide indulto general para uniformados del estallido"
+  autor: "@eldiarioregional.cl"
+  fecha: 2026-08-10
+  url: "https://www.tiktok.com/@eldiarioregional.cl/video/7672525109223083285"
+  notas: "Publicación del mismo video de la senadora Camila Flores (RN) en la cuenta de TikTok de El Diario Regional. Fuente complementaria de redes sociales; el contenido de la declaración se cruza con la cobertura de prensa (SoyChile) y las otras dos publicaciones del video."
+
+x-2026-08-10-elmostrador-flores-indulto-video:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Video: Camila Flores reitera solicitud de indulto para uniformados"
+  autor: El Mostrador (@elmostrador)
+  fecha: 2026-08-10
+  url: "https://x.com/elmostrador/status/2086914312606466074"
+  notas: "Publicación de El Mostrador en X con el mismo video de la senadora Camila Flores. Fuente complementaria de redes sociales; el contenido se cruza con la cobertura de prensa (SoyChile) y las otras dos publicaciones del video (TikTok y YouTube)."
+
+youtube-2026-08-10-flores-indulto-general-uniformados:
+  tipo: video
+  medio: YouTube
+  titulo: "Senadora Flores reitera al Gobierno solicitud para impulsar un indulto general a uniformados"
+  autor: YouTube (canal de prensa)
+  fecha: 2026-08-10
+  url: "https://www.youtube.com/watch?v=O29KUqzRWvM"
+  notas: "Publicación en YouTube del mismo video de la senadora Camila Flores (RN), identificada por el título y descripción del video ('La senadora Camila Flores (RN) reiteró su solicitud al Gobierno para que impulse un indulto a favor de uniformados condenados en el marco del estallido...'). Fuente complementaria; el contenido se cruza con la cobertura de prensa (SoyChile)."
+
+lacuarta-2026-08-10-baradit-zanja-verguenza-ajena:
+  tipo: prensa
+  medio: La Cuarta
+  titulo: "'Me dio vergüenza ajena': Jorge Baradit comparte reveladora imagen de la zanja y saca ronchas entre adherentes de Kast"
+  autor: Diego Ramírez
+  fecha: 2026-08-10
+  url: "https://www.lacuarta.com/chile/noticia/me-dio-verguenza-ajena-jorge-baradit-comparte-reveladora-imagen-de-la-zanja-y-saca-ronchas-entre-adherentes-de-kast/"
+  notas: "Cobertura de La Cuarta del post de Jorge Baradit sobre la zanja fronteriza (#LaZanja): el autor de 'Historia secreta de Chile' descendió del vehículo en el paso a Perú para conocer la obra ('Hoy crucé la frontera con Perú y nos bajamos a mirar esta ridiculez. Honestamente, me dio vergüenza ajena'). Incluye reacciones de Natalia Castillo, Isidora Alcalde, comentarios de seguidores (incluido '¿Y por qué no aprovechó... de irse y no volver?') y el tuit de la cuenta afín al gobierno @Gorderizador ('La zanja de Baradit se va a ensanchar cuando vea el reportaje'), en referencia al reportaje de T13 del 10 de agosto."
+
+theclinic-2026-08-10-kast-casen-defensa-moneda:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La defensa de La Moneda por los dichos de Kast sobre la Casen: 'Aquí no hay cuestionamientos a los datos o a las cifras'"
+  autor: Marianne Mathieu
+  fecha: 2026-08-10
+  url: "https://www.theclinic.cl/2026/08/10/la-defensa-de-la-moneda-por-los-dichos-de-kast-sobre-la-casen-aqui-no-hay-cuestionamientos-a-los-datos-o-a-las-cifras/"
+  notas: "Cobertura completa de la polémica por los dichos de Kast sobre la Casen: sus cuestionamientos en Tele13 Radio ('Fue el mismo Jorge Quiroz el que aclaró que había un error en la medición'; 'Sí, claro' al ser consultado si seguía poniendo en duda los datos), la arremetida de los exministros de Boric (Javiera Toro, Carolina Tohá, Álvaro Elizalde y Nicolás Grau: 'no hubo error en la medición'; Elizalde: 'Cuestionar los resultados de la Casen es una irresponsabilidad') y la aclaración del biministro Claudio Alvarado en la vocería ('No, aquí no hay que malinterpretar las palabras del Presidente')."
+
+cnnchile-2026-08-10-toro-responde-kast-casen:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Javiera Toro responde a Kast por críticas a la Casen: 'No hubo un error en la medición'"
+  autor: CNN Chile
+  fecha: 2026-08-10
+  url: "https://www.cnnchile.com/pais/javiera-toro-responde-kast-casen-error-medicion-pobreza/"
+  notas: "La exministra de Desarrollo Social y Familia Javiera Toro respondió en el programa Factos a los cuestionamientos de Kast: 'No hubo un error en la medición', defendió la solidez metodológica de la encuesta y señaló que los ajustes fueron comunicados con anticipación y contaron con respaldo técnico."
+
+latercera-2026-08-10-servel-archiva-orrego-coaching:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Investigación fue archivada: Servel notifica a Orrego que coaching que reprochó Contraloría no constituye gasto electoral"
+  autor: José Navarrete
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/nacional/noticia/investigacion-fue-archivada-servel-notifica-a-orrego-que-coaching-que-reprocho-contraloria-no-constituye-gasto-electoral/"
+  notas: "El Servel archivó la investigación de oficio contra el gobernador de la RM Claudio Orrego por la contratación por $31 millones de una asesoría de coaching directivo que la Contraloría vinculó a la campaña de reelección: la Subdirección de Control del Gasto y Financiamiento Electoral estimó que no constituye gasto electoral (Ley 19.884) y que no hay mérito para formular cargos (resolución del 3 de agosto). Coincide con el cierre de la causa penal por la Fiscalía Regional Metropolitana Oriente en marzo; los cores de UDI y Republicanos mantienen un requerimiento de remoción ante el Tricel, dejado en estudio el 7 de agosto."
+
+cooperativa-2026-08-10-solari-casen-parche:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Solari: Kast se está poniendo el parche antes de la herida al cuestionar la Casen"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-10
+  url: "https://cooperativa.cl/noticias/pais/politicas-sociales/pobreza/solari-kast-se-esta-poniendo-el-parche-antes-de-la-herida-al-cuestionar/2026-08-10/114458.html"
+  notas: "El exministro del Trabajo Ricardo Solari (PS, presidente del Instituto Igualdad) afirmó en El Primer Café que Kast 'se está poniendo el parche antes de la herida' al cuestionar la Casen: 'seguramente cree que si se hiciera una medición pronta, los datos no serían tan buenos (para él)'. Sostuvo que la reducción de la pobreza está 'muy asociada al shock migratorio'. Luis Ruz (Democracia y Comunidad) consideró simplista la crítica del Mandatario a la reducción de la pobreza vía subsidios."
+
+fastcheck-2026-08-10-kast-impuestos-falso:
+  tipo: prensa
+  medio: Fast Check
+  titulo: "En los últimos 30 años sí se han reducido impuestos en Chile, a diferencia de lo que afirmó el presidente Kast en Mesa Central"
+  autor: Fast Check CL
+  fecha: 2026-08-10
+  url: "https://www.fastcheck.cl/2026/08/10/en-los-ultimos-30-anos-si-se-han-reducido-impuestos-en-chile-a-diferencia-de-lo-que-afirmo-el-presidente-kast-en-mesa-central/"
+  notas: "Fast Check calificó como #Falso que 'hace más de 30 años que no se bajaba un impuesto en Chile' (Kast en Mesa Central de T13, 10-ago-2026). Documenta rebajas desde 1997: ley 19.506 (Impuesto Adicional 35% a 30%), leyes 19.578/19.589 de 1998 (IGC y tasa plana a importaciones 11% a 6%), caída del IGC del 50% al 40% (1994-2004), rebaja del tramo máximo 40% a 35% desde 2017 (revertida parcialmente en 2020), y exenciones/rebajas del Impuesto de Timbres y Estampillas (2000-2020, incluida la rebaja a 0% de abril a septiembre de 2020). Consultó a la BCN, el SII y al académico Roberto Gormaz Araya."
+
+cooperativa-2026-08-10-ppd-soto-indultos:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "PPD: El Gobierno se dispararía en los pies si en medio del debate de seguridad plantea indultos"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-10
+  url: "https://cooperativa.cl/noticias/pais/politica/ppd/ppd-el-gobierno-se-dispararia-en-los-pies-si-en-medio-del-debate-de/2026-08-10/094438.html"
+  notas: "El diputado y presidente del PPD, Raúl Soto, advirtió que el gobierno 'se dispararía en los pies' si en medio del debate de seguridad plantea los indultos a uniformados; se mostró optimista en la materia pero afirmó que las medidas serán analizadas para que el Ejecutivo no pase 'gato por liebre', y criticó una falta de liderazgo del Presidente Kast ante las presiones ideológicas del Partido Nacional Libertario."
+
+theclinic-2026-08-10-kaiser-advertencia-pnl:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La advertencia de Kaiser a La Moneda: 'No tenemos la obligación de estar de acuerdo con el Gobierno y eso se va a notar en la agenda de seguridad'"
+  autor: Eduardo Monrroy
+  fecha: 2026-08-10
+  url: "https://www.theclinic.cl/2026/08/10/la-advertencia-de-kaiser-a-la-moneda-no-tenemos-la-obligacion-de-estar-de-acuerdo-con-el-gobierno-y-eso-se-va-a-notar-en-la-agenda-de-seguridad/"
+  notas: "Johannes Kaiser (PNL) advirtió en su transmisión dominical de YouTube que los votos de su colectividad no están garantizados en la ACOT: cuestionó que la agenda no considere un indulto general a exuniformados ('¿Qué garantías le das cuando el tema de los indultos no está resuelto?'), manifestó reparos al nuevo estado de excepción y a la intercepción de comunicaciones ('Me hace ruido eso de interceptar todas las comunicaciones'). El PNL tiene una bancada de 8 diputados y una senadora; la reforma constitucional requiere 4/7 en ambas cámaras."
+
+latercera-2026-08-10-comite-policial-giannini:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Comité policial: Ingresos irregulares detectados en la frontera han disminuido un 86,7%"
+  autor: Claudio Portilla
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/nacional/noticia/comite-policial-ingresos-irregulares-detectados-en-la-frontera-han-disminuido-un-867/"
+  notas: "Balance del comité policial del 10-ago con la subsecretaria Pilar Giannini: ingresos irregulares en la frontera -86,7% (salidas voluntarias casi 4x; 3 de cada 4 adultos detectados reconducidos), eventos en la Macrozona Sur -19,1%, 513 víctimas de homicidio al 2 de agosto (-16,6%), robos violentos -12,6% (~8.000 casos menos), droga incautada +60%. Destacó la propuesta ACOT de operación de Carabineros y PDI en zona primaria fronteriza sin autorización previa, la ofensiva contra máquinas de azar ilegales y respondió a las críticas de Carolina Tohá ('la crítica es injusta')."
+
+biobiochile-2026-08-10-eeuu-ciberataques-hackers-chinos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "EEUU alertó ciberataques a empresas chilenas de telecomunicaciones ligados a hackers chinos"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/eeuu-alerto-ciberataques-a-empresas-chilenas-de-telecomunicaciones-ligados-a-hackers-chinos.shtml"
+  notas: "Estados Unidos advirtió a las autoridades chilenas sobre una serie de ciberataques contra empresas de telecomunicaciones, tras detectar actividad maliciosa. Nota en desarrollo; los detalles de la operación (grupo 'Lilac Typhoon', Entel, Movistar y Telmex, posible sabotaje informático) se corroboran con adnradio-2026-08-08-lilac-typhoon-ciberataques y 24horas-2026-08-10-eeuu-ciberataques-telco."
+
+adnradio-2026-08-08-lilac-typhoon-ciberataques:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'Lilac Typhoon': PDI investiga posibles ciberataques de grupo ligado a China contra empresas chilenas"
+  autor: ADN Radio
+  fecha: 2026-08-08
+  url: "https://www.adnradio.cl/2026/08/08/lilac-typhoon-pdi-investiga-posibles-ciberataques-de-grupo-ligado-a-china-contra-empresas-chilenas/"
+  notas: "La Fiscalía Metropolitana Centro Norte y la PDI indagan posibles ciberataques contra Entel, Movistar y Telmex (además de Brotec Construcción) ejecutados por un grupo asociado a China, en una arista del 'cable chino'. Antecedentes entregados por Estados Unidos (informe que El Mercurio dio a conocer; el entonces embajador Brandon Judd había alertado en febrero). El grupo 'Lilac Typhoon' (nombre de Microsoft) sería una red de dispositivos comprometidos usada por actores asociados al EPL chino como red de ofuscación. Actividad vinculada a Movistar desde septiembre de 2024 y a Entel hasta abril de 2025; causa investigada como posible 'sabotaje informático'."
+
+24horas-2026-08-10-eeuu-ciberataques-telco:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "EEUU alerta a Chile por ciberataques a Entel, Movistar y Telmex"
+  autor: 24 Horas
+  fecha: 2026-08-10
+  url: "https://www.24horas.cl/actualidad/nacional/pdi-investiga-posible-espionaje-a-entel-movistar-telmex-hackeo"
+  notas: "La PDI y la Fiscalía investigan una denuncia por presunto sabotaje informático tras las advertencias de Estados Unidos sobre malware en redes chilenas (Entel, Movistar y Telmex). Verificado por titular y descripción."
+
+meganoticias-2026-08-10-carabinero-narco-cjng:
+  tipo: prensa
+  medio: Meganoticias
+  titulo: "Casi 400 kilos de coca: detienen a carabinero activo ligado a red narco con nexos con el Cartel Jalisco Nueva Generación"
+  autor: Leslie Ayala (Mega Investiga)
+  fecha: 2026-08-10
+  url: "https://www.meganoticias.cl/nacional/529043-casi-400-kilos-de-coca-detienen-a-carabinero-activo-ligado-a-red-narco-con-nexos-con-el-cartel-jalisco-nueva-generacion-mega-investiga-10-08-2026.html"
+  notas: "Mega Investiga: la Fiscalía de Alta Complejidad de San Antonio y la PDI (Briant Valparaíso) indagan los nexos en Chile de una organización vinculada al Cartel Jalisco Nueva Generación. Detenidos: un carabinero en servicio activo, un ciudadano mexicano y uno colombiano; incautación de cerca de 400 kilos de cocaína. La organización habría usado el Puerto de San Antonio como plataforma para enviar droga a Europa. El punto de inflexión fue la detención de un presunto receptor en la frontera con Perú. Control de detención fijado para el mediodía del lunes 10-ago en el Juzgado de Garantía de San Antonio."
+
+latercera-2026-08-10-vial-reforma-constitucional-votos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cristián Vial asegura que reforma constitucional sobre seguridad tendrá los votos: 'A fin de año podríamos tener ya consolidado esto'"
+  autor: Daniela Silva
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/cristian-vial-asegura-que-reforma-constitucional-sobre-seguridad-tendra-los-votos-a-fin-de-ano-podriamos-tener-ya-consolidado-esto/"
+  notas: "El senador independiente con cupo republicano y exgeneral del Ejército Cristián Vial recibió 'con mucho optimismo' la reforma constitucional de seguridad en Radio ADN: explicitarla en el artículo 1 de la Constitución 'es algo que no habíamos visto' y habilitará las capacidades del Estado (FF.AA. en apoyo de las policías). Pronosticó que tendrá los votos y que 'a fin de año podríamos tener ya encaminado y consolidado esto'; no ve al socialismo democrático fuera del acuerdo (a diferencia de comunistas y frenteamplistas)."
+
+theclinic-2026-08-10-codelco-capitaliza-utilidades:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Inédita medida: Gobierno autoriza a Codelco a capitalizar el 100% de sus utilidades de 2025 por US$2.422 millones"
+  autor: Sofía Pelfort
+  fecha: 2026-08-10
+  url: "https://www.theclinic.cl/2026/08/10/inedita-medida-gobierno-autoriza-a-codelco-a-capitalizar-el-100-de-sus-utilidades-de-2025-por-us2-422-millones/"
+  notas: "Cobertura de la capitalización del 100% de las utilidades 2025 de Codelco (US$2.422 millones): el biministro Daniel Mas se conectó de forma telemática desde el Rajo Rosario (Pica, Tarapacá) y señaló que 'por primera vez en sus más de 50 años de historia, el Estado autoriza la retención del 100% de los remanentes generados en un solo ejercicio anual'; Jorge Quiroz: 'por primera vez no vamos a retirar los recursos... pensamos que es un buen negocio que esos recursos se queden en Codelco'."
+
+biobiochile-2026-08-10-casen-exministros-boric:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Elizalde, Tohá y Grau critican a Kast por poner en duda la Casen: 'Nunca un presidente hizo algo así'"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/elizalde-toha-y-grau-critican-a-kast-por-poner-en-duda-la-casen-nunca-un-presidente-hizo-algo-asi.shtml"
+  notas: "Los exministros del gobierno de Boric Elizalde, Tohá y Grau criticaron con dureza a Kast por poner en duda la Casen 2024: defendieron la validez de la medición y acusaron al Mandatario de 'sembrar dudas sin sustento' sobre la caída de la pobreza. Titular: 'Nunca un presidente hizo algo así'."
+
+biobiochile-2026-08-10-steinert-comision-investigadora:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Oposición amenaza con AC contra exministra Steinert ante demora por comisión investigadora"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/oposicion-amenaza-con-ac-contra-exministra-steinert-ante-demora-por-comision-investigadora.shtml"
+  notas: "La oposición elevó la presión para que se constituya la comisión especial investigadora que revisará la actuación de la exministra de Seguridad Trinidad Steinert, con la amenaza de una acusación constitucional ante el vencimiento del plazo del artículo 52 el 19 de agosto. Los detalles se corroboran con latercera-2026-08-10-steinert-oposicion-amenaza-ac y latercera-2026-08-11-steinert-comision-constituida."
+
+latercera-2026-08-10-steinert-oposicion-amenaza-ac:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Oposición amenaza con iniciar estudio de acusación constitucional contra Steinert si no se constituye comisión investigadora"
+  autor: Nicolás Quiñones y José Miguel Wilson
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/oposicion-amenaza-con-iniciar-estudio-de-acusacion-constitucional-contra-steinert-si-no-se-constituye-comision-investigadora/"
+  notas: "El miércoles 19 de agosto la exministra Steinert queda eximida de la responsabilidad política por el artículo 52 (plazo de 3 meses). El reproche se origina en el dictamen de Contraloría sobre el oficio a la PDI que derivó en la remoción de la prefecta (r) Consuelo Peña. Declaraciones de Jaime Araya ('sería absolutamente razonable... empezar a redactar la acusación constitucional') y Raúl Leiva. La comisión contará con 60 días para su informe; el resultado frenó los planes de La Moneda de asignar a Steinert una agregaduría en el extranjero."
+
+latercera-2026-08-11-steinert-comision-constituida:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cámara constituye comisión investigadora contra exministra Steinert tras amenaza de AC desde la oposición"
+  autor: Cristóbal Palacios
+  fecha: 2026-08-11
+  url: "https://www.latercera.com/politica/noticia/camara-constituye-comision-investigadora-contra-exministra-steinert-tras-amenaza-de-ac-desde-la-oposicion/"
+  notas: "El lunes 10-ago el presidente de la Cámara, Jorge Alessandri (UDI), propuso a los 13 integrantes de la Comisión Especial Investigadora sobre la gestión de Trinidad Steinert, aprobados mediante acuerdo sin votación: Cristián Araya, Macarena Santelices y Fernando Ugarte (Rep); Jaime Coloma (UDI); Tatiana Urrutia y Gonzalo Winter (FA); Tamara Ramírez (PDG); Mauro González (RN); Bernardo Salinas (ind.-PC); Raúl Leiva (PS); Jaime Araya (ind.-PPD); Patricio Pinilla (DC) y Álvaro Jofré (PNL). La CEI tendrá 60 días para evacuar su informe."
+primicias-2026-01-22-ecuador-homicidios-2025:
+  tipo: prensa
+  medio: Primicias Ecuador
+  titulo: "El año más violento de Ecuador: 9.216 homicidios en 2025 y este es el perfil de las víctimas"
+  autor: Mario González y Estefanía Celi
+  fecha: 2026-01-22
+  url: "https://www.primicias.ec/seguridad/ecuador-homicidios-asesinatos-violencia-crimen-organizado-2025-114304/"
+  notas: "Ecuador cerró 2025 con 9.216 homicidios intencionales, el registro más alto de su historia. Con población proyectada por el INEC de 18.103.660 habitantes, la tasa se ubicó en 50,91 por cada 100.000, superando el pico de 2023 (47,25) y el registro de 2024 (38,80); aumento del 32% vs 2024. Los Ríos fue la provincia más violenta (130,4), con Puebloviejo (360,0) a la cabeza; el perfil de la víctima es hombre mestizo de 18-29 años asesinado con arma de fuego."
+insightcrime-2026-03-11-balance-homicidios-2025:
+  tipo: publicacion
+  medio: InSight Crime
+  titulo: "Balance de Homicidios: Tasa de homicidios en América Latina"
+  autor: InSight Crime
+  fecha: 2026-03-11
+  url: "https://insightcrime.org/es/noticias/balance-insight-crime-homicidios-2025/"
+  notas: "El balance regional de 2025 sitúa a Ecuador entre las tasas en aumento: +31,2% vs 2024, máximo histórico de 50,9 por 100.000, pese a la ofensiva militarizada de Noboa. La captura de 'Fito' (Los Choneros) desató la guerra con Los Lobos en Manabí; las masacres carcelarias sumaron 459 muertos entre 2021-2023 y al menos 75 en cuatro motines de 2025."
+primicias-2025-01-10-ecuador-2024-tasa-3876:
+  tipo: prensa
+  medio: Primicias Ecuador
+  titulo: "Ecuador cerró 2024 con la segunda peor tasa de muertes violentas de su historia, pese a una importante reducción"
+  autor: Mario Alexis González
+  fecha: 2025-01-10
+  url: "https://www.primicias.ec/seguridad/ecuador-2024-tasa-muertes-violendas-segunda-peor-historia-87118/"
+  notas: "Cifras oficiales de la Policía Nacional: 6.964 muertes violentas en 2024 (tasa 38,76) frente a 8.237 en 2023 (tasa 46,18), una reducción del 16%. Tras el conflicto armado interno del 9-ene-2024 hubo 93 asesinatos en los días siguientes (-63%) y febrero 2024 fue el mes más pacífico desde abril 2022 (384 crímenes), pero el repunte comenzó en marzo y diciembre 2024 (688) fue el mes más violento del año."
+insightcrime-2025-02-26-balance-homicidios-2024:
+  tipo: publicacion
+  medio: InSight Crime
+  titulo: "Balance de InSight Crime de los homicidios en 2024"
+  autor: InSight Crime
+  fecha: 2025-02-26
+  url: "https://insightcrime.org/es/noticias/balance-insight-crime-homicidios-2024/"
+  notas: "Balance regional de homicidios 2024: al menos 121.695 personas asesinadas en América Latina y el Caribe (tasa media ~20,2). En el capítulo de Ecuador documenta la caída tras el conflicto armado interno de enero 2024 y la persistencia de la violencia vinculada al crimen organizado."
+oeco-2026-03-31-homicidios-2025:
+  tipo: publicacion
+  medio: OECO (Observatorio Ecuatoriano de Crimen Organizado)
+  titulo: "La creciente victimización de niños, niñas y adolescentes: Análisis estadístico anual de homicidios intencionales en Ecuador 2025"
+  autor: OECO / PADF
+  fecha: 2026-03-31
+  url: "https://oeco.padf.org/homicidios2025/"
+  notas: "Ecuador cerró 2025 con una tasa de 50,1 homicidios por cada 100.000 habitantes, la más alta de su historia reciente. 9 de cada 10 casos guardan relación con la violencia criminal; el 88% de los homicidios (8.108) se cometió con arma de fuego. Los Ríos (130,4), El Oro (105), Guayas (85,7) y Manabí (74,11) encabezan las tasas provinciales. GITOC ubica a Ecuador en la cuarta posición mundial en el índice global de crimen organizado."
+primicias-2025-11-11-crisis-penitenciaria-masacres:
+  tipo: prensa
+  medio: Primicias Ecuador
+  titulo: "Violencia en cárceles de Ecuador: un preso fue asesinado cada 18 horas en los últimos 48 días"
+  autor: Mario Alexis González
+  fecha: 2025-11-11
+  url: "https://www.primicias.ec/seguridad/crisis-penitenciaria-ecuador-asesinatos-masacres-daniell-noboa-109140/"
+  notas: "Desde 2021 Ecuador registra 20 masacres carcelarias con 553 víctimas. Entre el 22-sep y el 9-nov-2025 hubo tres masacres en las cárceles de Esmeraldas y Machala (65 asesinados en 48 días; 32 presos el 9-nov en Machala). El país cerró septiembre 2025 con 6.797 muertes violentas y la proyección superaba los 9.000 asesinatos y 50 por 100.000, anticipando el récord anual."
+primicias-2025-08-22-ecuador-506-dias-estado-excepcion:
+  tipo: prensa
+  medio: Primicias Ecuador
+  titulo: "En los 638 días de gestión de Daniel Noboa, Ecuador lleva 506 días bajo estado de excepción... y contando"
+  autor: Adriana Noboa
+  fecha: 2025-08-22
+  url: "https://www.primicias.ec/politica/ecuador-dias-estado-excepcion-gobierno-daniel-noboa-103397/"
+  notas: "Desde noviembre 2023 Noboa ha decretado 630 días de estado de excepción y, desde el conflicto armado interno, 14 decretos y renovaciones; la Corte Constitucional ha negado dos por falta de justificación. Entre enero y junio 2024 todo el país estuvo bajo estado de excepción (90 días por el conflicto armado y 60 por la crisis eléctrica). El primer semestre de 2025 cerró como el más violento de la historia de Ecuador."
+primicias-2026-01-01-decreto-277-estado-excepcion:
+  tipo: prensa
+  medio: Primicias Ecuador
+  titulo: "Daniel Noboa declara nuevo estado de excepción en nueve provincias y tres cantones de Ecuador"
+  autor: EFE / Redacción Primicias
+  fecha: 2026-01-01
+  url: "https://www.primicias.ec/politica/estado-excepcion-ecuador-daniel-noboa-decreto-violencia-crimen-organizado-31diciembre-112898/"
+  notas: "Mediante el Decreto Ejecutivo 277 (31-dic-2025), Noboa declaró un estado de excepción por grave conmoción interna por 60 días en Guayas, Manabí, Santa Elena, Los Ríos, El Oro, Pichincha, Esmeraldas, Santo Domingo y Sucumbíos, más los cantones La Maná, Las Naves y Echeandía. Guayas, Manabí, Los Ríos y El Oro acumulan más de 550 días bajo estado de excepción y 'lejos de mostrar una reducción sostenida de los homicidios, registran en 2025 cifras históricas'. Al 19-dic-2025 la Policía contabilizaba 8.847 homicidios."
+primicias-2024-01-09-noboa-conflicto-armado-interno:
+  tipo: prensa
+  medio: Primicias Ecuador
+  titulo: "Noboa declara conflicto armado interno y dispone la salida de militares"
+  autor: Redacción Primicias
+  fecha: 2024-01-09
+  url: "https://www.primicias.ec/noticias/politica/noboa-conflicto-armado-interno-militares/"
+  notas: "El 9-ene-2024 Noboa reformó el estado de excepción vigente y reconoció la existencia de un conflicto armado interno, minutos después de la toma armada de TC Televisión. El decreto identifica a 22 grupos (Choneros, Lobos, Tiguerones, Latin Kings, etc.) como 'organizaciones terroristas y actores no estatales beligerantes' y ordena a las Fuerzas Armadas operaciones para 'neutralizarlos'."
+dw-2024-05-10-corte-inconstitucional-estado-excepcion:
+  tipo: prensa
+  medio: Deutsche Welle
+  titulo: "Corte Ecuador declara inconstitucional estado de excepción"
+  autor: Deutsche Welle (efe, El Universo)
+  fecha: 2024-05-10
+  url: "https://www.dw.com/es/corte-de-ecuador-declara-inconstitucional-%C3%BAltimo-estado-de-excepci%C3%B3n-decretado-por-noboa/a-69051827"
+  notas: "La Corte Constitucional declaró inconstitucional (7 votos contra 2) el estado de excepción del 30-abr-2024 (El Oro, Guayas, Los Ríos, Manabí y Santa Elena) por no fundamentar la configuración de 'conflicto armado interno' ni su ámbito territorial y temporal. Contrasta con el primer decreto de 90 días de enero 2024, que la Corte no evaluó por tratarse de un hecho fáctico. Sitúa la tasa de homicidios de 2023 en unos 45 por cada 100.000."
+bancomundial-2026-08-10-homicidios-ecuador-serie:
+  tipo: publicacion
+  medio: Banco Mundial
+  titulo: "Homicidios intencionales (por cada 100.000 habitantes) - Ecuador"
+  autor: Banco Mundial (datos UNODC)
+  fecha: 2026-08-10
+  url: "https://datos.bancomundial.org/indicador/VC.IHR.PSRC.P5?locations=EC"
+  notas: "Serie de homicidios intencionales de Ecuador de la base de datos de estadísticas internacionales de homicidios de la UNODC. Respalda la tasa de ~6,3 por cada 100.000 habitantes para 2015 (5,7-6,4 según el corte poblacional del INEC) y la tendencia de la década."

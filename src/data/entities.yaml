@@ -22,7 +22,34 @@ people:
   angel_valencia:
     nombre: Ángel Valencia
     cargo: Fiscal Nacional de Chile
-    notas: "Fiscal Nacional de Chile. En julio de 2026 resolvió que la Fiscalía Centro Norte asuma la investigación por la denuncia del Servicio Electoral (Servel) contra el Partido de la Gente (PDG) por gastos no acreditados, tras el análisis de la Unidad Especializada en Anticorrupción."
+    notas: "Fiscal Nacional de Chile. En julio de 2026 resolvió que la Fiscalía Centro Norte asuma la investigación por la denuncia del Servicio Electoral (Servel) contra el Partido de la Gente (PDG) por gastos no acreditados, tras el análisis de la Unidad Especializada en Anticorrupción. Un reportaje de Fast Check (agosto 2026) reveló que el Ministerio Público pagó en 2023 más de $25 millones en acuerdos con exfuncionarios que denunciaron despidos por 'venganzas' suyas."
+  renzo_aste:
+    nombre: Renzo Aste
+    cargo: Exabogado del Ministerio Público
+    organizacion: ministerio_publico
+    notas: "Exfuncionario del Ministerio Público. Acusó en una demanda que fue desvinculado por conflictos personales con la esposa del fiscal nacional Ángel Valencia. En 2023 selló un acuerdo judicial con el organismo por más de $25 millones (reportaje Fast Check, agosto 2026)."
+  claudia_lefever:
+    nombre: Claudia Lefever
+    cargo: Exfuncionaria del Ministerio Público
+    organizacion: ministerio_publico
+    notas: "Exfuncionaria del Ministerio Público y pareja de Renzo Aste. Denunció que su despido obedeció a haber apoyado a Marta Herrera, excandidata a fiscal nacional en el cupo que finalmente obtuvo Ángel Valencia. En 2023 selló un acuerdo judicial con el organismo por más de $25 millones (reportaje Fast Check, agosto 2026)."
+  marta_herrera:
+    nombre: Marta Herrera
+    cargo: Gerente de Ética y Cumplimiento de Codelco
+    organizacion: codelco
+    notas: "Abogada, exfiscal. Fue excandidata a fiscal nacional en el cupo que finalmente obtuvo Ángel Valencia. En enero de 2026 fue designada gerente de Ética y Cumplimiento de Codelco. Su apoyo público de exfuncionarios habría motivado despidos denunciados como 'venganzas' del fiscal nacional (reportaje Fast Check, agosto 2026)."
+  leonardo_dicaprio:
+    nombre: Leonardo DiCaprio
+    cargo: Actor y activista ambiental
+    notas: "Actor estadounidense y activista ambiental. El 9 de agosto de 2026 publicó en Instagram un llamado internacional para proteger a la ranita del Pehuenche (Alsodes pehuenche) ante el proyecto de interconexión eléctrica Los Cóndores–Río Diamante de Enel Generación Chile en el Alto Maule."
+  natalia_castillo:
+    nombre: Natalia Castillo
+    cargo: Exdiputada (RD/Frente Amplio)
+    notas: "Exdiputada del Frente Amplio. Reaccionó con ironía al post de Jorge Baradit sobre la zanja fronteriza (agosto 2026)."
+  isidora_alcalde:
+    nombre: Isidora Alcalde
+    cargo: Exconcejala de Las Condes
+    notas: "Exconcejala de Las Condes. Tras el post de Jorge Baradit sobre la zanja fronteriza (agosto 2026) señaló que la imagen era 'el fiel reflejo de que todo lo que se prometió fue una absoluta mentira'."
   augusto_pinochet:
     nombre: Augusto Pinochet
     cargo: Dictador de Chile (1973-1990)
@@ -1453,6 +1480,19 @@ people:
         organizacion: partido_por_la_democracia
         desde: 2026-03-11
     notas: Filtró la minuta de Secom
+  enrique_bassaletti:
+    nombre: Enrique Bassaletti
+    cargo: Diputado (Ind. Rep.)
+    notas: "Diputado independiente cercano al Partido Republicano. El 10 de agosto de 2026, en la Comisión de Seguridad de la Cámara que aprobó el Registro Nacional de Vándalos, criticó que se impidiera el ingreso del subsecretario Máximo Pavez, argumentando que la persona con conocimiento técnico sobre la materia es el subsecretario."
+  juan_marcelo_valenzuela:
+    nombre: Juan Marcelo Valenzuela
+    cargo: Diputado (PDG)
+    notas: "Diputado del Partido de la Gente (PDG). El 10 de agosto de 2026 se abstuvo en la votación en general del Registro Nacional de Vándalos en la Comisión de Seguridad de la Cámara (única abstención)."
+  osvaldo_corrales:
+    nombre: Osvaldo Corrales
+    cargo: Vicepresidente ejecutivo del Consejo de Rectoras y Rectores (CRUCH)
+    organizacion: cruch
+    notas: "Vicepresidente ejecutivo del Consejo de Rectoras y Rectores (CRUCH). En agosto de 2026 cuestionó el proyecto de Registro Nacional de Vándalos por restringir la gratuidad y becas de educación superior: 'no hay ninguna evidencia internacional que diga que limitar el derecho a la educación favorece que se eviten actos vandálicos'."
   sergio_bitar:
     nombre: Sergio Bitar Chacra
     cargo: Exministro y exvicepresidente de la Fundación Paz Ciudadana
@@ -3439,6 +3479,30 @@ people:
         desde: 2026-06-03
     organizacion: codelco
     notas: "Nombrado presidente ejecutivo de Codelco por el directorio el 3 de junio de 2026. Tras la capitalización del 100% de las utilidades de 2025 (agosto 2026) afirmó que el respaldo del gobierno 'exige transformar los recursos en resultados concretos', con foco en seguridad y disciplina operacional."
+  juan_santana:
+    nombre: Juan Santana
+    cargo: Diputado (PS)
+    notas: "Diputado del Partido Socialista. El 10 de agosto de 2026 criticó en X la capitalización del 100% de las utilidades de Codelco, cuestionando que el Estado renuncie a esos recursos tras el alza de combustibles y la reforma que reduce la recaudación."
+  jorge_brito:
+    nombre: Jorge Brito
+    cargo: Diputado
+    notas: "Diputado. El 10 de agosto de 2026 criticó en X los vetos de Kast a la megarreforma (olvido financiero y pago a 30 días a las pymes), calificando el cierre de la reforma de 'capítulo negro'."
+  cristian_tapia:
+    nombre: Cristián Tapia
+    cargo: Diputado (Ind.-PPD), presidente de la Comisión de Minería y Energía de la Cámara
+    notas: "Diputado independiente ligado al PPD y presidente de la Comisión de Minería y Energía de la Cámara. El 10 de agosto de 2026, tras la capitalización de Codelco, cuestionó que la instancia no hubiera sido informada previamente y pidió transparencia sobre el destino de los recursos (fundición de Potrerillos, entre otros)."
+  ignacio_urcullu:
+    nombre: Ignacio Urcullú
+    cargo: Diputado (Partido Republicano)
+    notas: "Diputado del Partido Republicano. El 10 de agosto de 2026 celebró la capitalización de Codelco señalando que 'por primera vez en más de 50 años las utilidades de Codelco se quedan en Codelco'."
+  marco_antonio_sulantay:
+    nombre: Marco Antonio Sulantay
+    cargo: Diputado (UDI)
+    notas: "Diputado de la UDI. El 10 de agosto de 2026 advirtió que la capitalización de Codelco no puede entenderse 'como un premio a la gestión', sino como una señal de confianza que debe venir acompañada de mayor exigencia."
+  iraci_hassler:
+    nombre: Iraci Hassler
+    cargo: Diputada (PC)
+    notas: "Diputada del Partido Comunista. El 10 de agosto de 2026, en el debate de los vetos de Kast a la megarreforma, afirmó que el PC no apoyará una medida que esté 'quitando recursos permanentes a los beneficios sociales'."
   gonzalo_lara_skiba:
     nombre: Gonzalo Lara Skiba
     cargo: Exvicepresidente de Integración de Operaciones Andina de Codelco
@@ -7638,6 +7702,9 @@ people:
         organizacion: segegob
         desde: 2015-05-11
         hasta: 2016-11-18
+  consuelo_pena:
+    nombre: Consuelo Peña
+    notas: "Prefecta (r) de la PDI removida de la institución en 2026 tras la solicitud de información que la exministra de Seguridad Trinidad Steinert hizo a la policía sobre funcionarios del caso Clan Chen, requerimiento que la Contraloría declaró improcedente (julio 2026)."
 organizations:
   criteria:
     nombre: Criteria
@@ -9426,6 +9493,11 @@ organizations:
     nombre: Movimiento de Países No Alineados
     tipo: organismo_internacional
     notas: "Organización internacional surgida en la Guerra Fría como alternativa de autonomía frente a los bloques de Estados Unidos y la Unión Soviética. Chile integró el movimiento desde 1971 hasta su retiro en agosto de 2026, bajo el gobierno de José Antonio Kast. Su presidencia la ejerce Uganda."
+  enel_generacion_chile:
+    nombre: Enel Generación Chile
+    tipo: empresa
+    pais: Chile
+    notas: "Generadora eléctrica chilena, filial del grupo Enel. Titular del proyecto de interconexión internacional Los Cóndores (Chile)–Río Diamante (Argentina), cuestionado en agosto de 2026 por el actor Leonardo DiCaprio por el riesgo para la rana del Pehuenche (Alsodes pehuenche) en el Alto Maule."
   prensa_opal:
     nombre: Prensa Opal
     tipo: medio_comunicacion
@@ -9651,6 +9723,16 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Departamento de prensa de Mega; noticiero y portal meganoticias.cl."
+  cnnchile:
+    nombre: CNN Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal de noticias chileno (cnnchile.com). Cubrió la aprobación de los tres vetos de Kast a la megarreforma y la aprobación en general del Registro Nacional de Vándalos en la Comisión de Seguridad de la Cámara (10-ago-2026)."
+  cruch:
+    nombre: Consejo de Rectoras y Rectores (CRUCH)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organismo que agrupa a las universidades del Consejo de Rectores (estatales y tradicionales). En agosto de 2026 cuestionó el Registro Nacional de Vándalos por restringir la gratuidad y las becas a quienes ingresen al registro, pidiendo eliminar esas restricciones."
   el_siglo:
     nombre: El Siglo
     tipo: medio_comunicacion
@@ -10831,6 +10913,36 @@ organizations:
     tipo: organismo_publico
     pais: Chile
     notas: "Organismo público chileno encargado de promover la transparencia de la función pública. En 2011 acogió la solicitud de la abogada Mayra Feddersen y obligó al SAG a entregar la ubicación de los cultivos transgénicos, fallo que Erik von Baer disputó ante el Tribunal Constitucional."
+  fiscalia_alta_complejidad_san_antonio:
+    nombre: Fiscalía de Alta Complejidad de San Antonio
+    tipo: fiscalia
+    pais: Chile
+    notas: "Ministerio Público que dirige la indagatoria por la red de narcotráfico vinculada al Cartel Jalisco Nueva Generación que operaba desde el Puerto de San Antonio (agosto 2026)."
+  briant_valparaiso:
+    nombre: Brigada Antinarcóticos (Briant) de la PDI de Valparaíso
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Unidad especializada de la PDI a cargo de las diligencias del caso de la red de narcotráfico vinculada al Cartel Jalisco Nueva Generación (agosto 2026)."
+  puerto_san_antonio:
+    nombre: Puerto de San Antonio
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Principal puerto de Chile; según la investigación de la Fiscalía de Alta Complejidad de San Antonio, la red vinculada al Cartel Jalisco Nueva Generación lo habría usado como plataforma para enviar cocaína a Europa (agosto 2026)."
+  cartel_jalisco_nueva_generacion:
+    nombre: Cartel Jalisco Nueva Generación (CJNG)
+    tipo: organizacion_criminal
+    pais: México
+    notas: "Organización criminal mexicana considerada una de las principales estructuras del narcotráfico internacional; según la Fiscalía de Alta Complejidad de San Antonio, mantiene nexos con la red desarticulada en Chile en agosto de 2026."
+  juzgado_garantia_san_antonio:
+    nombre: Juzgado de Garantía de San Antonio
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Tribunal ante el que se realizó el control de detención de los imputados de la red de narcotráfico vinculada al Cartel Jalisco Nueva Generación (agosto 2026)."
+  primicias_ecuador:
+    nombre: Primicias Ecuador
+    tipo: medio_comunicacion
+    pais: Ecuador
+    notas: "Periódico digital ecuatoriano (primicias.ec). Sus balances anuales de homicidios con datos de la Policía Nacional y el INEC son la referencia para la serie de muertes violentas del país."
 cifras:
   aprobacion_kast_criteria_ago9:
     nombre: Aprobación de José Antonio Kast según Criteria (9-ago-2026)
@@ -11754,6 +11866,22 @@ cifras:
     nombre: Presupuesto vigente de Carabineros de Chile 2012
     unidad_default: miles_de_pesos_2012
     notas: "Serie histórica DIPRES de ejecución presupuestaria de Carabineros de Chile (Partida 05, Capítulo 31, Programa 01, Ministerio del Interior y Seguridad Pública) en miles de $ de 2012: 2008: 470.836.900; 2009: 513.364.103; 2010: 623.347.599; 2011: 702.234.701; 2012: 786.645.294 (presupuesto vigente). Ejecución acumulada a agosto 2012: 397.559.433."
+  monto_acuerdos_fiscalia_venganzas_valencia:
+    nombre: Monto pagado por el Ministerio Público en acuerdos por denuncias de 'venganzas' del fiscal nacional
+    unidad_default: millones_pesos
+    notas: "Más de $25 millones pagados en 2023 por el Ministerio Público a los exfuncionarios Renzo Aste y Claudia Lefever en acuerdos judiciales aprobados por el CDE, a cambio del desistimiento expreso de las demandas y de no volver a demandar al Estado por sus despidos (reportaje Fast Check, 10-ago-2026)."
+  ejemplares_rana_pehuenche:
+    nombre: Ejemplares silvestres de la rana del Pehuenche (Alsodes pehuenche)
+    unidad_default: ejemplares
+    notas: "Menos de 1.000 ejemplares en estado silvestre, según el llamado de Leonardo DiCaprio de agosto 2026. Especie catalogada como En Peligro Crítico, endémica del Valle del Pehuenche en los altos Andes de Chile y Argentina."
+  longitud_linea_transmision_condores_diamante:
+    nombre: Longitud de la línea de transmisión Los Cóndores–Río Diamante en territorio chileno
+    unidad_default: kilometros
+    notas: "Aproximadamente 26,7 km de línea de 500 kV entre la subestación Los Cóndores (220/500 kV) y la frontera con Argentina. Proyecto de interconexión internacional de interés privado de Enel Generación Chile, ingresado al SEIA en octubre de 2021 y rechazado unánimemente por el Gobierno Regional del Maule en julio de 2026."
+  avance_zanja_arica_parinacota:
+    nombre: Avance de la zanja fronteriza en Arica y Parinacota
+    unidad_default: porcentaje
+    notas: "50% de avance al 10 de agosto de 2026, con casi 7 km de zanja de 3 metros de alto por 3 de ancho (reportaje en terreno de T13)."
   presupuesto_carabineros_2008:
     nombre: Presupuesto vigente de Carabineros de Chile 2008
     unidad_default: miles_de_pesos_2012
@@ -13166,3 +13294,67 @@ cifras:
     nombre: Compra de la planta de Anasac en Paine por la filial chilena de Monsanto
     unidad_default: millones_usd
     notas: "US$19 millones pagó la filial chilena de Monsanto por la planta de Anasac en Paine, según reveló The Clinic en junio de 2011 en el contexto de la polémica por el UPOV 91."
+  votos_veto_anatocismo_camara:
+    nombre: Votos a favor del veto al anatocismo en la Cámara
+    unidad_default: votos
+    notas: "75 votos a favor aprobaron en la Cámara el veto supresivo de Kast a la prohibición del anatocismo en la megarreforma (10-ago-2026), frente a 59 en contra y 12 abstenciones."
+  votos_contra_veto_anatocismo:
+    nombre: Votos en contra del veto al anatocismo en la Cámara
+    unidad_default: votos
+    notas: "59 votos en contra recibió en la Cámara el veto de Kast a la prohibición del anatocismo (10-ago-2026)."
+  votos_veto_olvido_financiero:
+    nombre: Votos a favor del veto al olvido financiero en la Cámara
+    unidad_default: votos
+    notas: "75 votos a favor aprobaron en la Cámara el veto de Kast al derecho al olvido financiero en la megarreforma (10-ago-2026), frente a 58 en contra y 13 abstenciones."
+  votos_contra_veto_olvido_financiero:
+    nombre: Votos en contra del veto al olvido financiero en la Cámara
+    unidad_default: votos
+    notas: "58 votos en contra recibió en la Cámara el veto de Kast al derecho al olvido financiero (10-ago-2026)."
+  votos_veto_pago_30_dias:
+    nombre: Votos a favor del veto al pago a 30 días en la Cámara
+    unidad_default: votos
+    notas: "74 votos a favor aprobaron en la Cámara el veto de Kast a los ajustes del pago a 30 días a las pymes en la megarreforma (10-ago-2026), frente a 50 en contra y 22 abstenciones."
+  votos_contra_veto_pago_30_dias:
+    nombre: Votos en contra del veto al pago a 30 días en la Cámara
+    unidad_default: votos
+    notas: "50 votos en contra recibió en la Cámara el veto de Kast al pago a 30 días a las pymes (10-ago-2026)."
+  homicidios_ecuador_2015:
+    nombre: Tasa de homicidios de Ecuador en 2015
+    unidad_default: por_100000
+    notas: "6,3 homicidios por cada 100.000 habitantes registró Ecuador en 2015, antes de la escalada de violencia ligada al narcotráfico. Cifra consistente con la serie del Banco Mundial/UNODC (5,7-6,4 por 100.000 según el corte poblacional del INEC) y con la infografía de Rodrigo Rettig (10-ago-2026) basada en la Policía Nacional del Ecuador."
+  homicidios_ecuador_2023:
+    nombre: Tasa de homicidios de Ecuador en 2023
+    unidad_default: por_100000
+    notas: "Ecuador cerró 2023 con el primer récord de su historia: entre 46,2 y 47,2 homicidios por cada 100.000 habitantes (8.004-8.237 muertes violentas según la Policía Nacional), superado solo por el registro de 2025. Primicias reportó 8.237 crímenes y tasa 46,18; en su balance 2025 sitúa el pico de 2023 en 47,25."
+  homicidios_ecuador_2024:
+    nombre: Tasa de homicidios de Ecuador en 2024
+    unidad_default: por_100000
+    notas: "Ecuador cerró 2024 con 6.964 muertes violentas y una tasa de 38,76 por cada 100.000 habitantes (-16% vs 2023, la segunda peor de su historia), pese al conflicto armado interno declarado en enero de 2024. La reducción del inicio de año (febrero 2024 fue el mes más pacífico desde abril 2022) no se sostuvo y los homicidios repuntaron desde marzo."
+  homicidios_ecuador_2025:
+    nombre: Tasa de homicidios de Ecuador en 2025
+    unidad_default: por_100000
+    notas: "50,9 homicidios por cada 100.000 habitantes alcanzó Ecuador en 2025, su máximo histórico (+31,2% vs 2024 y +708% vs 2015), pese a los estados de excepción y el despliegue militar. Verificado por fuentes independientes: Primicias (9.216 homicidios; tasa 50,91 con población INEC de 18,1 millones), InSight Crime (50,9; +31,2%) y OECO (50,1). El récord coincidió con la captura de 'Fito' y la fragmentación de las bandas."
+  homicidios_totales_ecuador_2025:
+    nombre: Homicidios intencionales en Ecuador en 2025
+    unidad_default: homicidios
+    notas: "9.216 homicidios intencionales registró Ecuador en 2025, el año más violento de su historia (+32% vs los 6.964 de 2024), según el balance de la Policía Nacional publicado por Primicias (enero 2026)."
+  votos_registro_vandalos_comision:
+    nombre: Votos a favor del Registro Nacional de Vándalos en la Comisión de Seguridad
+    unidad_default: votos
+    notas: "7 votos a favor aprobaron en general el proyecto de Registro Nacional de Vándalos en la Comisión de Seguridad de la Cámara (10-ago-2026), frente a 5 en contra y 1 abstención (Juan Marcelo Valenzuela, PDG)."
+  votos_contra_registro_vandalos_comision:
+    nombre: Votos en contra del Registro Nacional de Vándalos en la Comisión de Seguridad
+    unidad_default: votos
+    notas: "5 votos en contra recibió en la Comisión de Seguridad de la Cámara la aprobación en general del Registro Nacional de Vándalos (10-ago-2026)."
+  votos_plazo_indicaciones_registro:
+    nombre: Votos a favor del plazo de indicaciones del Registro de Vándalos
+    unidad_default: votos
+    notas: "8 votos a favor y 5 en contra fijaron en la Comisión de Seguridad de la Cámara el plazo para presentar indicaciones al Registro Nacional de Vándalos: 21 de agosto de 2026 a las 12:00 horas."
+  actos_registro_vandalos:
+    nombre: Actos que llevarían a una persona al Registro Nacional de Vándalos
+    unidad_default: actos
+    notas: "33 actos contempla el proyecto de Registro Nacional de Vándalos e Incivilidades (La Tercera, 10-ago-2026), desde delitos y faltas graves hasta incivilidades como rayados sin autorización."
+  sanciones_registro_vandalos:
+    nombre: Sanciones asociadas al Registro Nacional de Vándalos
+    unidad_default: sanciones
+    notas: "15 tipos de sanciones contempla el proyecto de Registro Nacional de Vándalos, entre ellas la pérdida de la gratuidad en educación superior y de la Pensión Garantizada Universal (PGU), además de subsidios habitacionales y restricciones a documentos (La Tercera, 10-ago-2026)."

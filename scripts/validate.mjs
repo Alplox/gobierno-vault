@@ -150,6 +150,9 @@ const WHITELIST_MEDIOS = new Set([
   'Reddit (r/DataHoarder)',
   'Reddit r/iamatotalpieceofshit',
   'Towards Data Science (Medium)',
+  'InSight Crime',
+  'OECO (Observatorio Ecuatoriano de Crimen Organizado)',
+  'Banco Mundial',
 ]);
 
 let errors = 0;

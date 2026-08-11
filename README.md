@@ -2,6 +2,10 @@
 
 Gobierno Vault es una base de conocimiento estática sobre eventos relacionados a gobiernos en Chile, construida con Astro 7 y Tailwind CSS. El proyecto organiza eventos políticos y gubernamentales mediante archivos Markdown con metadatos YAML, fuentes verificables y wikilinks para personas, organizaciones, cifras y referencias.
 
+## Sitio
+
+- <https://gobierno-vault.pages.dev/>
+
 ## Notas
 
 - Sitio aún esta en desarrollo. Lo que implica constantes cambios, evolución y correcciones (o dejar abandonado).
