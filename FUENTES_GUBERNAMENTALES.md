@@ -70,3 +70,40 @@ Referencia para investigación de noticias. Priorizar estas fuentes antes de bus
 | Comisión Nacional de Energía (CNE) | https://www.cne.cl/noticias/ |
 | Instituto de Salud Pública (ISP) | https://www.ispch.cl/noticias/ |
 | Servicio Agrícola y Ganadero (SAG) | https://www.sag.gob.cl/noticias |
+
+## Poder Legislativo — Historia política y archivos
+
+| Institución | URL |
+|---|---|
+| BCN — Historia Política | https://www.bcn.cl/historiapolitica |
+| Cámara de Diputadas y Diputados (Sesiones) | https://www.camara.cl/legislacion/sesiones/ |
+| Senado (Tramitación) | https://www.senado.cl/tramitacion-de-proyectos |
+
+**BCN — Historia Política** es la base de datos de la Biblioteca del Congreso con
+**biografías oficiales de presidentes, ministros, parlamentarios, gobernadores y
+constituyentes** (1823–presente), incluyendo periodos de cargo, partidos,
+distritos y regiones. Es la fuente primaria para verificar cargos históricos del
+vault (gabinetes y gobiernos anteriores, `cargos[]` de personas en
+`entities.yaml`) y para enriquecer biografías de personas de la historia política
+chilena. Es una base de datos gubernamental, no prensa: usar sus datos como
+hecho primario y citarla en `sources.yaml` con `medio: Biblioteca del Congreso`.
+
+## Referencias de investigación (no prensa)
+
+| Herramienta | URL | Uso |
+|---|---|---|
+| GDELT Project | https://www.gdeltproject.org/ | Base de datos global de eventos de noticias (100+ idiomas, cada 15 min), con API abierta para cruzar eventos internacionales con cobertura chilena |
+| Meganoticias — Hemeroteca | https://www.meganoticias.cl/hemeroteca/ | Archivo de noticias de Meganoticias por año/trimestre/día (2026 en adelante); útil como buscador por fecha del mismo medio ya indexado en el catálogo de sitemaps |
+
+- **GDELT** (Global Database of Events, Language, and Tone): no es prensa ni
+gubernamental; procesa decenas de miles de fuentes de noticias a nivel global y
+expone eventos con actor, país, tipo (CAMEO) y tono. Útil en investigaciones para
+**validar la escala o el contexto internacional de un evento** (ej. cifras de
+homicidios de Ecuador, sismos, acuerdos internacionales) antes de fijar una
+expectativa en `TAREAS.md`. No reemplaza la fuente periodística primaria: la
+URL concreta del artículo siempre debe venir de un medio (el catálogo de
+sitemaps o la web).
+- **Hemeroteca de Meganoticias**: el catálogo ya indexa el sitemap de
+Meganoticias (histórico desde 2011); la hemeroteca es la interfaz oficial por
+fecha (año → trimestre → día) para localizar la URL exacta de una nota cuando
+el sitemap o la búsqueda web no la entregan.

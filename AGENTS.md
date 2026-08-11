@@ -230,7 +230,7 @@ svg_backup:
 11. **Personas/orgs nuevas**: agregar a `entities.yaml`.
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
 13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS.md` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
-14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (`biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`, `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
+14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
 
 ## Pagina /events: filtros y busqueda en cliente
 
@@ -456,23 +456,33 @@ NO guarda el cuerpo de los artículos.
 |---|---|---|---|---|---|
 | `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 100 | 1 |
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.888 | 4 |
+| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.137 | 10 |
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.415 | 18 |
 | `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 226.812 | 16 |
 | `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.005 | 1 |
+| `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
+| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 100 | 1 |
 | `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.776 | 18 |
 | `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.415 | 4 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 276.998 | 18 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.683 | 10 |
 | `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
 | `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 250.948 | 17 |
 | `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 101 | 1 |
+| `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
 | `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.520 | 7 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
 | `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 5.815 | 7 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.737 | 7 |
 | `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 8.421 | 1 |
+| `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
+| `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
 | `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 5 | 1 |
 | `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.892 | 18 |
+| `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.979 | 7 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 47.735 | 8 |
 | `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.756 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
@@ -517,6 +527,17 @@ Notas de plataforma (complemento manual, no se reescribe):
   hay índice que los enumere: el sync captura solo lo reciente (~5-100 URLs).
 - **El Desconcierto**: sitemaps SIN historia (`sitemap.xml` ~8 recientes + `sitemap-news.xml` ~20
   con títulos reales); todas las variantes históricas (año, post, archivos) devuelven 404.
+- **El Ciudadano / Mala Espina / El Quinto Poder / Radio UdeC / Chocale / REDIMIN**: WordPress-Yoast
+  (`articleOnly`). El Ciudadano tiene ~309 post-sitemaps (~277k artículos, 18 años): el index y los
+  subs son lentos y el sitio rate-limitea (fetch directo puede devolver 0 `<loc>`); si un sync se
+  corta, los subs cacheados en `.cache/` retoman sin pérdida (relanzar el mismo comando).
+- **Diario Financiero (df) / Diario Estrategia** (Prontus): robots declara sitemaps por separado
+  (`extra`); el DF trae ~87 URLs recientes (pags + news + port) y Diario Estrategia ~100
+  (`/sitemap/news` + `/sitemap/lastarticles`, IDs `/texto-diario/mostrar/`). Cobertura reciente,
+  sin historia profunda.
+- **Chile País Minero**: index con `<loc>` envueltos en CDATA (a veces sin protocolo) — el parser
+  los limpia (ver `extractSitemapIndexLocs`). **Mestizos Magazine**: index por fechas
+  (`/sitemap/sitemap-<DD-MM-YYYY>.xml`, ~2.400 sub-sitemaps diarios desde 2018, ~8,6k artículos).
 
 | `pnpm run sitemaps-watchlist -- --source <ruta> [--out <archivo>]` | genera `tareas_sitemap.md`: bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json`) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en sources.yaml·entities / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio. Requiere un clone local de https://github.com/Alplox/awesome-chilean-rss |
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~56MB (vs ~357MB raw / 127MB v1). `--no-compact` guarda JSONL crudo |
@@ -566,7 +587,8 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
 - Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
   `ciper`, `theclinic`, `elmostrador`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
   `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`, `meganoticias`,
-  `eldesconcierto`, `publimetro`.
+  `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`, `elquintopoder`,
+  `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`, `diarioestrategia`.
   Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
@@ -591,7 +613,9 @@ for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
 - Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
   `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
   `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`, `meganoticias`,
-  `eldesconcierto`, `publimetro`. (Los JSONL no se commitean; regenerar con
+  `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`, `elquintopoder`,
+  `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`, `diarioestrategia`.
+  (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 
 ## Respaldo / Restauracion (backup offline publico)
@@ -676,12 +700,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 734
+**Total de eventos:** 739
 
-**Cobertura de fuentes:** 412 de 734 eventos con 3+ fuentes (322 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 412 de 739 eventos con 3+ fuentes (327 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 566
+- 2026: 571
 - 2025: 44
 - 2024: 23
 - 2023: 14
@@ -702,9 +726,9 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (282)
+- Politica (285)
 - Justicia (172)
-- Economia (140)
+- Economia (143)
 - Defensa y seguridad (102)
 - Administración pública (94)
 - Derechos humanos (73)
@@ -714,20 +738,20 @@ Cuando descubras algo no documentado aqui:
 - Cambios en el gabinete (57)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (164)
-- declaracion (95)
+- accion (165)
+- declaracion (96)
 - reaccion (94)
+- publicacion (78)
 - investigacion (77)
 - resultado (76)
-- publicacion (76)
 - anuncio (51)
 - fallo_judicial (39)
 - votacion (16)
 - proyecto (14)
 
 **Entidades registradas:**
-- Personas: 1130
-- Organizaciones: 670
-- Cifras: 623
-- Fuentes: 2400
+- Personas: 1132
+- Organizaciones: 672
+- Cifras: 646
+- Fuentes: 2422
 - Temas: 74

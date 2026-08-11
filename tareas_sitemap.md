@@ -18,9 +18,9 @@
 ## Resumen
 
 - **Total de sitios de prensa listados:** 835
-- ✅ En catálogo local: **20**
-- 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **107**
-- ⬜ Pendientes de sincronizar: **708**
+- ✅ En catálogo local: **30**
+- 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **100**
+- ⬜ Pendientes de sincronizar: **705**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -38,10 +38,10 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **BancoEstado** | `bancoestado.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Cámara Chilena de la Construcción** | `cchc.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Cámara de Comercio de Santiago** | `ccs.cl` | — | watchlist | Feed RSS detectado (WordPress) pero devuelve error 500 |
-| 🟡 | **Chile País Minero** | `chilepaisminero.com` | — | database | referenciado en sources.yaml |
-| 🟡 | **Chocale** | `chocale.cl` | — | database | referenciado en sources.yaml |
-| 🟡 | **Diario Estrategia** | `diarioestrategia.cl` | — | database | referenciado en sources.yaml |
-| 🟡 | **Diario Financiero** | `df.cl` | — | database | referenciado en sources.yaml |
+| ✅ | **Chile País Minero** | `chilepaisminero.com` | — | database | sitemap en catálogo (chilepaisminero) |
+| ✅ | **Chocale** | `chocale.cl` | — | database | sitemap en catálogo (chocale) |
+| ✅ | **Diario Estrategia** | `diarioestrategia.cl` | — | database | sitemap en catálogo (diarioestrategia) |
+| ✅ | **Diario Financiero** | `df.cl` | — | database | sitemap en catálogo (df) |
 | ⬜ | **Diario Pyme** | `diariopyme.com` | — | watchlist | Sitio no accesible |
 | ⬜ | **Economía y Negocios** | `economiaynegocios.cl` | — | watchlist | Sitio no responde (error de conexión) |
 | ⬜ | **El Periódico de la Energía** | `elperiodicodelaenergia.com` | — | database | Noticias del sector energético en español |
@@ -57,7 +57,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Portal Minero** | `portalminero.com` | — | database | Portal chileno de la industria minera |
 | ⬜ | **PortalPortuario** | `portalportuario.cl` | — | database | Medio especializado en puertos, transporte marítimo y comercio exterior en español |
 | ⬜ | **pv magazine Latin America** | `pv-magazine-latam.com` | — | database | Noticias de la industria solar fotovoltaica en Latinoamérica |
-| 🟡 | **REDIMIN** | `redimin.cl` | — | database | referenciado en sources.yaml |
+| ✅ | **REDIMIN** | `redimin.cl` | — | database | sitemap en catálogo (redimin) |
 | ⬜ | **Reporte Agrícola** | `reporteagricola.cl` | — | watchlist | Sin feed RSS detectado (path /feed/ devuelve texto plano, no XML RSS) |
 | 🟡 | **Reporte Minero** | `reporteminero.cl` | — | watchlist | WordPress sin feed RSS detectable (todas las rutas /* retornan HTML homepage) |
 | ⬜ | **Revista Capital** | `capital.cl` | — | watchlist | Sitio no responde |
@@ -127,7 +127,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **La Tendencia** | `latendencia.cl` | — | database | Medio digital de noticias y tendencias de cultura, internet, deportes y vida sana |
 | 🟡 | **Londres 38** | `londres38.cl` | — | watchlist | No feed RSS detectado |
 | ⬜ | **Memoria Chilena** | `memoriachilena.gob.cl` | — | watchlist | Sin feed RSS detectado |
-| 🟡 | **Mestizos Magazine** | `mestizos.cl` | — | database | referenciado en sources.yaml |
+| ✅ | **Mestizos Magazine** | `mestizos.cl` | — | database | sitemap en catálogo (mestizos) |
 | ⬜ | **Museo de Arte Contemporáneo** | `mac.uchile.cl` | — | database | Museo de Arte Contemporáneo de la Universidad de Chile |
 | ⬜ | **Museo de la Memoria** | `museodelamemoria.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Museo Nacional de Bellas Artes** | `mnba.gob.cl` | — | watchlist | Feed RSS existe pero vacío (0 ítems en rss.xml) |
@@ -377,7 +377,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Diario La Portada** | `diariolaportada.cl` | — | watchlist | Sitio no responde, sin feed RSS detectado |
 | ⬜ | **Diario La Tribuna** | `diariolatribuna.cl` | — | watchlist | Sin feed RSS detectado (responde HTML en todas las rutas) |
 | 🟡 | **Diario USACH** | `diariousach.cl` | — | watchlist | CMS Prontus sin feed RSS |
-| 🟡 | **El Ciudadano** | `elciudadano.com` | — | database | referenciado en sources.yaml |
+| ✅ | **El Ciudadano** | `elciudadano.com` | — | database | sitemap en catálogo (elciudadano) |
 | ✅ | **El Clarín de Chile** | `elclarin.cl` | — | database | sitemap en catálogo (elclarin) |
 | ⬜ | **El Corto** | `elcorto.cl` | — | database | Resumen diario de las noticias más importantes de Chile - Autodenominado el diario para lo |
 | ⬜ | **El Definido** | `eldefinido.cl` | — | watchlist | Feed RSS sin actualizar desde 2019, sitio parece inactivo |
@@ -392,7 +392,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **El Minuto** | `elminuto.cl` | — | database | Plataforma informativa digital orientada a la cobertura de acontecimientos nacionales e in |
 | ✅ | **El Mostrador** | `elmostrador.cl` | — | database | sitemap en catálogo (elmostrador) |
 | ⬜ | **El País - Chile** | `elpais.com` | — | database | Medio de comunicación español de noticias internacionales |
-| ⬜ | **El Quinto Poder** | `elquintopoder.cl` | — | database | Plataforma de periodismo ciudadano y opinión |
+| ✅ | **El Quinto Poder** | `elquintopoder.cl` | — | database | sitemap en catálogo (elquintopoder) |
 | 🟡 | **El Radar** | `elradar.cl` | — | database | referenciado en sources.yaml |
 | 🟡 | **El Reporte Diario** | `reportediario.cl` | — | database | referenciado en sources.yaml |
 | ✅ | **El Siglo** | `elsiglo.cl` | — | database | sitemap en catálogo (el_siglo) |
@@ -428,7 +428,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Libertad Digital** | `libertaddigital.cl` | — | watchlist | Sitio no accesible |
 | ⬜ | **M360** | `m360.cl` | — | watchlist | Sitio construido con Prontus, sin feed RSS |
 | ⬜ | **Magia Digital** | `magiadigital.cl` | — | watchlist | feed stale (último item: 2026-03-27, 84 días) |
-| ⬜ | **Mala Espina** | `malaespinacheck.cl` | — | database | Medio de fact checking chileno. Verificaciones de actualidad, noticias y explicativos sobr |
+| ✅ | **Mala Espina** | `malaespinacheck.cl` | — | database | sitemap en catálogo (malaespina) |
 | ⬜ | **Mapuche Nation** | `mapuche-nation.org` | — | watchlist | Sin actividad (todos los feeds inactivos) |
 | ⬜ | **Mapuexpress** | `mapuexpress.org` | — | watchlist | Sitio no accesible (mapuexpress.org caído, mapuexpress.net ahora es sitio vietnamita) |
 | 🟡 | **Mediabanco** | `mediabanco.com` | — | database | referenciado en sources.yaml |
@@ -472,7 +472,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Radio Presidente Ibáñez** | `radiopresidenteibanez.cl` | Magallanes | database | Emisora regional de Magallanes 88.5 FM |
 | ⬜ | **Radio Pudahuel** | `pudahuel.cl` | — | database | Radio chilena de música, entretención y noticias 90.5 FM |
 | ⬜ | **Radio San Bartolomé** | `radiosanbartolome.cl` | Coquimbo | database | Emisora regional de coquimbo 96.7 FM |
-| ⬜ | **Radio UdeC** | `radioudec.cl` | Biobio | database | Radio de la Universidad de Concepción 95.1 FM |
+| ✅ | **Radio UdeC** | `radioudec.cl` | Biobio | database | sitemap en catálogo (radioudec) |
 | ⬜ | **Radio Valparaíso** | `radiovalparaiso.cl` | Valparaiso | watchlist | Sin actividad (todos los feeds inactivos) |
 | ⬜ | **Red Digital** | `reddigital.cl` | — | watchlist | Feed nativo stale (sin contenido reciente), solo feeds proxy activos |
 | ⬜ | **Renovación Nacional** | `rn.cl` | — | watchlist | Sin feed RSS detectado (sitio Wix sin soporte RSS) |

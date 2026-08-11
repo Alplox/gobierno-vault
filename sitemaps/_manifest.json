@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-10T01:33:21.717Z",
+  "actualizado": "2026-08-11T04:49:50.915Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -142,6 +142,76 @@
       "articulos": 20,
       "nuevos": 0,
       "años": 1
+    },
+    "df": {
+      "nombre": "Diario Financiero",
+      "ultima_sync": "2026-08-11T04:13:29.023Z",
+      "articulos": 87,
+      "nuevos": 87,
+      "años": 2
+    },
+    "diarioestrategia": {
+      "nombre": "Diario Estrategia",
+      "ultima_sync": "2026-08-11T04:13:30.010Z",
+      "articulos": 100,
+      "nuevos": 100,
+      "años": 1
+    },
+    "chilepaisminero": {
+      "nombre": "Chile País Minero",
+      "ultima_sync": "2026-08-11T04:30:01.862Z",
+      "articulos": 3888,
+      "nuevos": 3888,
+      "años": 4
+    },
+    "radioudec": {
+      "nombre": "Radio UdeC",
+      "ultima_sync": "2026-08-11T04:14:29.843Z",
+      "articulos": 10979,
+      "nuevos": 10979,
+      "años": 7
+    },
+    "chocale": {
+      "nombre": "Chocale",
+      "ultima_sync": "2026-08-11T04:14:36.691Z",
+      "articulos": 14137,
+      "nuevos": 14137,
+      "años": 10
+    },
+    "redimin": {
+      "nombre": "REDIMIN",
+      "ultima_sync": "2026-08-11T04:16:33.295Z",
+      "articulos": 47735,
+      "nuevos": 47735,
+      "años": 8
+    },
+    "malaespina": {
+      "nombre": "Mala Espina",
+      "ultima_sync": "2026-08-11T04:49:47.071Z",
+      "articulos": 7473,
+      "nuevos": 0,
+      "años": 7
+    },
+    "elquintopoder": {
+      "nombre": "El Quinto Poder",
+      "ultima_sync": "2026-08-11T04:49:47.240Z",
+      "articulos": 17724,
+      "nuevos": 0,
+      "años": 15
+    },
+    "mestizos": {
+      "nombre": "Mestizos Magazine",
+      "ultima_sync": "2026-08-11T04:33:37.505Z",
+      "articulos": 8638,
+      "nuevos": 8638,
+      "años": 9
+    },
+    "elciudadano": {
+      "nombre": "El Ciudadano",
+      "ultima_sync": "2026-08-11T04:49:50.914Z",
+      "articulos": 304303,
+      "nuevos": 304303,
+      "años": 22
     }
   }
 }

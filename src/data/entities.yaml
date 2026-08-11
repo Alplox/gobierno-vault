@@ -7705,7 +7705,18 @@ people:
   consuelo_pena:
     nombre: Consuelo Peña
     notas: "Prefecta (r) de la PDI removida de la institución en 2026 tras la solicitud de información que la exministra de Seguridad Trinidad Steinert hizo a la policía sobre funcionarios del caso Clan Chen, requerimiento que la Contraloría declaró improcedente (julio 2026)."
+  gabriela_mistral:
+    nombre: Gabriela Mistral
+    notas: "Poeta chilena (seudónimo de Lucila Godoy Alcayaga), primera iberoamericana en recibir el Premio Nobel de Literatura (1945). En la CP 2025, Boric anunció la conmemoración de los 80 años de su Nobel y la proyección de una escultura en su honor en el eje Alameda-Providencia."
+  alejandra_cox:
+    nombre: Alejandra Cox
+    notas: "Economista laboral chilena, Ph.D. en Economía de la Universidad de Chicago, ingeniera comercial UC. Expresidenta de la Asociación de AFP (hasta marzo de 2023), execonomista laboral senior del Banco Mundial (1993-1996). En agosto de 2026 planteó que a la Dirección del Trabajo 'hay que hacerle cirugía mayor' y que debe ser una institución independiente, y propuso cuatro medidas para reactivar el mercado laboral."
 organizations:
+  asociacion_de_afp:
+    nombre: Asociación de AFP
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio que agrupa a las administradoras de fondos de pensiones chilenas. Alejandra Cox fue su presidenta hasta marzo de 2023."
   criteria:
     nombre: Criteria
     tipo: encuestadora
@@ -10943,6 +10954,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Ecuador
     notas: "Periódico digital ecuatoriano (primicias.ec). Sus balances anuales de homicidios con datos de la Policía Nacional y el INEC son la referencia para la serie de muertes violentas del país."
+  sindicato_chuquicamata:
+    nombre: Sindicato de Trabajadores y Trabajadoras de Chuquicamata
+    tipo: sindicato
+    pais: Chile
+    notas: "Sindicato de la división Codelco Norte (Chuquicamata). El 10 de agosto de 2026 encabezó en Santiago Centro una manifestación contra la eventual privatización de Codelco con pancartas 'Codelco es de los chilenos' y 'Codelco no se vende', que culminó en La Moneda con la entrega de una carta al presidente José Antonio Kast."
 cifras:
   aprobacion_kast_criteria_ago9:
     nombre: Aprobación de José Antonio Kast según Criteria (9-ago-2026)
@@ -13358,3 +13374,95 @@ cifras:
     nombre: Sanciones asociadas al Registro Nacional de Vándalos
     unidad_default: sanciones
     notas: "15 tipos de sanciones contempla el proyecto de Registro Nacional de Vándalos, entre ellas la pérdida de la gratuidad en educación superior y de la Pensión Garantizada Universal (PGU), además de subsidios habitacionales y restricciones a documentos (La Tercera, 10-ago-2026)."
+  pago_pensiones_alimentos_papito_corazon:
+    nombre: Pagos ordenados por la ley Papito Corazón
+    unidad_default: billones_pesos
+    notas: "Casi 2,5 billones de pesos ordenados a pagar a dos años de la ley de pago efectivo de pensiones de alimentos ('ley Papito Corazón'), equivalente a lo que recaudan 52 Teletones (CP 2025 de Boric, 1-jun-2025)."
+  personas_subsidio_unico_familiar_adicionales:
+    nombre: Personas adicionales con subsidio único familiar
+    unidad_default: personas
+    notas: "471.000 personas más reciben el subsidio único familiar que en 2022; desde 2024 se asigna sin necesidad de postulación a los menores de 18 años del 40% más vulnerable (CP 2025 de Boric, 1-jun-2025)."
+  tens_asignacion_tecnica:
+    nombre: Trabajadores TENS beneficiados con la asignación técnica
+    unidad_default: trabajadores
+    notas: "Más de 57.000 trabajadores TENS (85% mujeres) beneficiados con la asignación técnica creada por el gobierno de Boric, medida que logró respaldo unánime del Congreso y se suma a las indicaciones para incorporarlos al Código Sanitario (CP 2025, 1-jun-2025)."
+  viviendas_plan_emergencia_entregadas:
+    nombre: Viviendas entregadas del Plan de Emergencia Habitacional
+    unidad_default: viviendas
+    notas: "Más de 200.000 viviendas entregadas al 1-jun-2025 del Plan de Emergencia Habitacional, de las 260.000 comprometidas para el periodo, pese a las dificultades del sector construcción postpandemia (CP 2025 de Boric)."
+  turistas_extranjeros_chile_2024:
+    nombre: Turistas extranjeros que visitaron Chile en 2024
+    unidad_default: millones_personas
+    notas: "Récord de más de 5 millones de turistas extranjeros en 2024, un 40% más que 2023; hasta abril de 2025 el país había recibido 2,5 millones de visitantes internacionales (+41% vs el mismo periodo del año anterior) (CP 2025 de Boric, 1-jun-2025)."
+  enami_utilidades_2024:
+    nombre: Utilidades de ENAMI en 2024
+    unidad_default: millones_usd
+    notas: "Utilidades de US$131 millones obtuvo ENAMI en 2024 tras las decisiones de saneamiento del gobierno de Boric; la empresa lidera un proyecto para aumentar la capacidad de fundición y refinería del país en Atacama (CP 2025, 1-jun-2025)."
+  salares_protegidos_meta:
+    nombre: Meta de salares protegidos
+    unidad_default: porciento
+    notas: "Meta de proteger más del 30% de los salares de Chile (hoy solo 8% protegido) con la red de salares protegidos y la creación del Instituto del Litio y Salares (CP 2025 de Boric, 1-jun-2025)."
+  asistentes_dia_patrimonio_2025:
+    nombre: Asistentes al Día del Patrimonio 2025
+    unidad_default: millones_personas
+    notas: "Más de 3,5 millones de personas visitaron lugares patrimoniales en el fin de semana del Día del Patrimonio 2025; Boric encargó a la ministra de Cultura organizar una segunda fecha permanente durante el mes de febrero (CP 2025, 1-jun-2025)."
+  quorum_reforma_seguridad:
+    nombre: Quórum requerido para la reforma constitucional de seguridad de la ACOT
+    unidad_default: fraccion
+    notas: "4/7 de los diputados y senadores en ejercicio: 89 votos en la Cámara de Diputados y 29 en el Senado para impulsar la reforma constitucional de seguridad firmada por Kast el 10 de agosto de 2026 en el marco de la ACOT (The Clinic)."
+  utilidad_codelco_novandino:
+    nombre: Porcentaje de la utilidad 2025 de Codelco explicado por Novandino Litio
+    unidad_default: por_ciento
+    notas: "Cerca del 84% de la utilidad consolidada 2025 de Codelco (US$2.423 millones) se explicó por el efecto contable no monetario de la adquisición de Novandino Litio, la sociedad conjunta con SQM (CNN Chile, 10 agosto 2026)."
+  desempleo_educacion_superior_amj_2026:
+    nombre: Tasa de desempleo de personas con educación superior completa (trimestre abril-junio 2026)
+    unidad_default: "%"
+    notas: "8,3% según el OCEC-UDP, +0,4 pp anual, con 10 meses consecutivos de alzas interanuales y +30.593 desocupados con educación superior en el último año (La Tercera, 10 agosto 2026)."
+  ocupados_educacion_superior_amj_2026:
+    nombre: Ocupados con educación superior completa (trimestre abril-junio 2026)
+    unidad_default: personas
+    notas: "4.004.200 ocupados, primera vez que el segmento supera los 4 millones; la fuerza laboral con educación superior completa pasó del 22% (2010) al 42,2% (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  subempleo_calificaciones_educacion_superior:
+    nombre: Porcentaje de ocupados con educación superior completa en subempleo por calificaciones
+    unidad_default: "%"
+    notas: "37,7% de los 4.004.200 ocupados con educación superior completa (1.509.267 personas) estaban sobrecalificados en el trimestre abril-junio 2026; el 79,9% de la creación anual de empleo del segmento fue en subempleo por calificaciones (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  desempleo_juvenil_2026:
+    nombre: Tasa de desempleo de jóvenes de 15 a 24 años (2026)
+    unidad_default: "%"
+    notas: "22,8% según Alejandra Cox en entrevista de agosto de 2026: el mercado laboral está 'cerrado para los jóvenes' y los empleadores evitan contratar sin experiencia (La Tercera, 9 agosto 2026)."
+  desempleo_femenino_2026:
+    nombre: Tasa de desempleo femenina (2026)
+    unidad_default: "%"
+    notas: "10,5% frente al 8,6% masculino, según Alejandra Cox (La Tercera, 9 agosto 2026); las mujeres 'entran y salen de la fuerza de trabajo'."
+  fuerza_laboral_educacion_superior_2010:
+    nombre: Proporción de la fuerza laboral con educación superior completa en 2010
+    unidad_default: "%"
+    notas: "22% de la fuerza laboral tenía educación superior completa en 2010; en 2010 el 35,2% tenía un nivel inferior a enseñanza media completa (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  fuerza_laboral_educacion_superior_2026:
+    nombre: Proporción de la fuerza laboral con educación superior completa en 2026
+    unidad_default: "%"
+    notas: "42,2% de la fuerza laboral tenía educación superior completa en el trimestre abril-junio 2026; el segmento con nivel inferior a enseñanza media cayó al 17% (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  desocupados_educacion_superior_anual:
+    nombre: Alza anual de desocupados con educación superior completa
+    unidad_default: personas
+    notas: "+30.593 desocupados con educación superior completa en el último año al trimestre abril-junio 2026; +27.839 entre quienes tienen secundaria completa y +12.727 entre quienes tienen menos que secundaria (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  desocupacion_secundaria_completa_amj_2026:
+    nombre: Tasa de desempleo de personas con secundaria completa (trimestre abril-junio 2026)
+    unidad_default: "%"
+    notas: "10,9%, +0,6 pp anual (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  desocupacion_menos_secundaria_amj_2026:
+    nombre: Tasa de desempleo de personas con menos que secundaria completa (trimestre abril-junio 2026)
+    unidad_default: "%"
+    notas: "8,7%, +0,8 pp anual (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  empleos_formales_amj_2026:
+    nombre: Empleos formales creados en el trimestre abril-junio 2026
+    unidad_default: empleos
+    notas: "66.798 empleos formales y 32.231 informales en el trimestre; 81.756 formales entre técnicos superiores completos y destrucción de 14.959 empleos universitarios (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  empleos_subempleo_educacion_superior_anual:
+    nombre: Proporción de la creación anual de empleo con educación superior en subempleo por calificaciones
+    unidad_default: "%"
+    notas: "79,9%: de los 99.028 empleos anuales creados para personas con educación superior completa, 79.128 estaban en subempleo por calificaciones (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  fallecidos_terremoto_colombia_evolucion:
+    nombre: Fallecidos por el terremoto de Colombia tras la evolución del balance del 10 de agosto
+    unidad_default: personas
+    notas: "El balance escaló de los 20 fallecidos iniciales a 71 durante la jornada del 10 de agosto de 2026, cuando Colombia decretó desastre nacional; el titular actualizado de BioBioChile registró 111 muertos y 87 heridos confirmados por el presidente Abelardo de la Espriella."

@@ -303,6 +303,16 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'meganoticias.cl': 'meganoticias',
   'eldesconcierto.cl': 'eldesconcierto',
   'publimetro.cl': 'publimetro',
+  'elciudadano.com': 'elciudadano',
+  'df.cl': 'df',
+  'malaespinacheck.cl': 'malaespina',
+  'elquintopoder.cl': 'elquintopoder',
+  'radioudec.cl': 'radioudec',
+  'chocale.cl': 'chocale',
+  'redimin.cl': 'redimin',
+  'chilepaisminero.com': 'chilepaisminero',
+  'mestizos.cl': 'mestizos',
+  'diarioestrategia.cl': 'diarioestrategia',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -326,6 +336,16 @@ const CATALOG_MEDIO_NAMES = {
   meganoticias: 'Meganoticias',
   eldesconcierto: 'El Desconcierto',
   publimetro: 'Publimetro',
+  elciudadano: 'El Ciudadano',
+  df: 'Diario Financiero',
+  malaespina: 'Mala Espina',
+  elquintopoder: 'El Quinto Poder',
+  radioudec: 'Radio UdeC',
+  chocale: 'Chocale',
+  redimin: 'REDIMIN',
+  chilepaisminero: 'Chile País Minero',
+  mestizos: 'Mestizos Magazine',
+  diarioestrategia: 'Diario Estrategia',
 };
 
 function catalogExists() {

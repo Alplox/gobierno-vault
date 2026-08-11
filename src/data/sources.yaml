@@ -20520,3 +20520,179 @@ bancomundial-2026-08-10-homicidios-ecuador-serie:
   fecha: 2026-08-10
   url: "https://datos.bancomundial.org/indicador/VC.IHR.PSRC.P5?locations=EC"
   notas: "Serie de homicidios intencionales de Ecuador de la base de datos de estadísticas internacionales de homicidios de la UNODC. Respalda la tasa de ~6,3 por cada 100.000 habitantes para 2015 (5,7-6,4 según el corte poblacional del INEC) y la tendencia de la década."
+youtube-2025-06-01-cuenta-publica-boric-2025:
+  tipo: video
+  medio: YouTube
+  titulo: "Cuenta Pública 2025 del Presidente Gabriel Boric"
+  autor: Gobierno de Chile
+  fecha: 2025-06-01
+  url: "https://www.youtube.com/watch?v=0jvdgypOnF8"
+  notas: "Transmisión oficial íntegra (3 horas) del canal Gobierno de Chile, transmitida en vivo el 1-jun-2025 desde el Salón de Honor del Congreso. Fuente primaria del discurso: permite verificar anuncios y citas textuales de la cuarta y última Cuenta Pública de Boric (fertilización asistida, TENS, isapres, Papito Corazón, vivienda, cuidados, pesca, bienestar animal, El Salvador, etc.)."
+theclinic-2025-06-01-bienestar-animal-cuenta-publica:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Bienestar animal en la Cuenta Pública: Cementerios municipales de mascotas y registro de personas condenadas por maltrato"
+  autor: The Clinic
+  fecha: 2025-06-01
+  url: "https://www.theclinic.cl/2025/06/01/bienestar-animal-en-la-cuenta-publica-cementerios-municipales-de-mascotas-y-registro-de-personas-condenadas-por-maltrato/"
+  notas: "Cubre el segmento de bienestar animal de la CP 2025 (verificada con contenido): Boric anunció la habilitación de cementerios municipales de mascotas (línea piloto de la Subdere), la creación de un registro de personas condenadas por maltrato animal y la prohibición del robo de mascotas mediante urgencias, citando la Ley Cholito como antecedente."
+biobiochile-2025-06-02-cuenta-publica-ciencia-ia-antartica-litio:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Esto fue lo que dejó la última cuenta pública de Boric en materia de ciencia"
+  autor: Editorial Bío Bío
+  fecha: 2025-06-02
+  url: "https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/ciencia/2025/06/02/ia-antartica-y-litio-esto-fue-lo-que-dejo-la-ultima-cuenta-publica-de-boric-en-materia-de-ciencia.shtml"
+  notas: "Columna de opinión de la Editorial Bío Bío (sección Opinión) que resume los anuncios de ciencia de la CP 2025: IA (Latam GPT con Brasil, dos centros de supercómputo), Antártica (Plan Estratégico Antártico 2026-2030, rompehielo construido en Asmar) y litio (Instituto del Litio y Salares). Pieza de análisis, no fuente factual independiente: los anuncios se verifican con el video oficial (youtube-2025-06-01-cuenta-publica-boric-2025) y gob.cl. Contenido verificado por título/descripción del catálogo de sitemaps (página JS)."
+theclinic-2026-08-10-reforma-constitucional-5-puntos:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Los 5 puntos de la reforma constitucional de Kast en seguridad inspirados en la rechazada propuesta de Constitución de 2023"
+  autor: Jorge Palacios
+  fecha: 2026-08-10
+  url: "https://www.theclinic.cl/2026/08/10/los-5-puntos-de-la-reforma-constitucional-de-kast-en-seguridad-inspirados-en-la-rechazada-propuesta-de-constitucion-de-2023/"
+  notas: "Verificada con contenido. Analiza la reforma constitucional firmada por Kast el 10-ago (ACOT): 1) consagrar la seguridad pública como deber del Estado, 2) nuevo estado de excepción por barrios/polígonos capturados por crimen organizado, 3) registro de organizaciones criminales con control del Senado, 4) regímenes penitenciarios diferenciados y 5) facilitar decomiso/liquidación de bienes. Rastrea cada punto a la propuesta rechazada del Consejo Constitucional 2023 (artículos 9.1, 1.1, 31, 15.4, 16.8), incluyendo referencias a Luis Silva como consejero más votado. Quórum requerido: 4/7 (89 diputados, 29 senadores)."
+biobiochile-2026-08-10-quiroz-estatuto-administrativo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Quiroz y reforma a estatuto administrativo del Estado: 'Cambió el mundo y también las circunstancias'"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/quiroz-y-reforma-a-estatuto-administrativo-del-estado-cambio-el-mundo-y-tambien-las-circunstancias.shtml"
+  notas: "Verificada con contenido (mirror). Quiroz detalló la reforma al estatuto administrativo: la comisión se formará 'durante esta semana' y trabajará 'un par de meses' antes de transparentar conclusiones; la presentación formal NO estará lista para la discusión del presupuesto 2027, sino a partir del próximo año; el foco es la rigidez del actual sistema ('mucho de lo que va a cambiar tiene que ver con la rigidez') y que 'el Estado sirva mejor a la ciudadanía'. La iniciativa se impulsa junto a la reforma del mercado de capitales que se socializará en septiembre."
+cnnchile-2026-08-10-codelco-capitaliza-utilidades:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Codelco capitalizará el 100% de sus utilidades por primera vez en más de 50 años: Ganancias alcanzan los US$ 2.423 millones"
+  autor: CNN Chile
+  fecha: 2026-08-10
+  url: "https://www.cnnchile.com/negocios/codelco-capitalizara-100-utilidades-primera-vez-en-mas-50-anos-ganancias-alcanzan-us2423-millones/"
+  notas: "Verificada con contenido. Detalle financiero: utilidad 2025 de US$2.423 millones de la cual ~84% se explica por el efecto contable no monetario de Novandino Litio; al cierre 2025 patrimonio US$13.535M, deuda financiera US$25.958M, activos US$58.535M y resultados acumulados US$1.449M; al 31-mar-2026 ingresos trimestrales US$5.034M, ganancia US$289,8M, patrimonio US$13.934M y deuda US$26.987M."
+emol-2026-08-10-quiroz-codelco-utilidades:
+  tipo: prensa
+  medio: Emol
+  titulo: "Gobierno anuncia que 'por primera vez en la historia vamos a dejar en Codelco el 100% de las utilidades'"
+  autor: Martín Garretón
+  fecha: 2026-08-10
+  url: "https://www.emol.com/noticias/Economia/2026/08/10/1208089/quiroz-codelco-utilidades.html"
+  notas: "Verificada con contenido. Cubre el anuncio en el Día del Minero en División Andina con Mas y Quiroz; incluye la cita de Quiroz 'Las cosas tienen un límite, y en los últimos años la verdad es que el dinero que ha terminado pasando Codelco al fisco, es dinero que Codelco se ha ido endeudando' y las tres metas de Mas (continuidad operacional, desarrollo seguro y sostenible de faenas, inversiones estratégicas). Monto: US$2.422 millones."
+biobiochile-2026-08-10-codelco-capitaliza-100:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'Un hito histórico': Gobierno no retirará las utilidades generadas por Codelco en 2025"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/10/gobierno-revela-que-codelco-capitalizara-el-100-de-sus-utilidades-de-2025.shtml"
+  notas: "Contenido verificado por título/descripción (página JS). Cubre el anuncio de la capitalización del 100% de las utilidades 2025 de Codelco; corroborado con df, radio-uchile, codelco, theclinic, cnnchile y emol de la misma jornada."
+adnradio-2026-08-10-marcha-chuquicamata-privatizacion:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'No se vende': trabajadores de Chuquicamata marchan en Santiago contra propuesta de privatización de Codelco"
+  autor: ADN Radio
+  fecha: 2026-08-10
+  url: "https://www.adnradio.cl/2026/08/10/no-se-vende-trabajadores-de-chuquicamata-marchan-en-santiago-contra-propuesta-de-privatizacion-de-codelco/"
+  notas: "Verificada con contenido. Marcha del 10-ago en Santiago Centro encabezada por el Sindicato de Trabajadores y Trabajadoras de Chuquicamata contra la eventual privatización de Codelco (debate abierto por Arturo Squella), con la senadora Fabiola Campillai y el excandidato Eduardo Artés; pancartas 'Codelco es de los chilenos' y 'Codelco no se vende'; culminó en La Moneda con entrega de carta al Presidente Kast."
+biobiochile-2026-08-10-ftc-capitalizacion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Trabajadores de Codelco valoran decisión de capitalizar utilidades de 2025: 'Una noticia alentadora'"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/10/trabajadores-de-codelco-valoran-decision-de-capitalizar-utilidades-de-2025-una-noticia-alentadora.shtml"
+  notas: "Verificada con contenido (mirror). Declaración pública de la FTC: valora que las ganancias 2025 se reinviertan en la empresa 'lo que se traduce en US$1.422 millones' (cifra distinta de los US$2.423 millones anunciados por Mas); 'una noticia alentadora'; insiste en diálogo y participación sindical para que Codelco 'deje de correr con mochila de plomo'; descarta crisis: 'La empresa de todas y todos los chilenos no está en crisis, necesita plazos, capitalización y continuidad estratégica'. Incluye enlace al PDF de la declaración pública FTC 10.08.26."
+biobiochile-2026-08-10-camara-minera-capitalizacion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Cámara Minera califica de 'justicia' decisión del Gobierno de retener utilidades completas de Codelco"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/10/camara-minera-califica-de-justicia-decision-del-gobierno-de-retener-utilidades-completas-de-codelco.shtml"
+  notas: "Verificada con contenido (mirror). Manuel Viera, presidente de la Cámara Minera de Chile: 'creo que se hace justicia con Codelco con esta medida'; espera que la capitalización (primera en 50 años) 'sea dirigida para inyectar recursos a los proyectos estructurales'; pide transparencia, foco en aumento de producción ('para que Codelco vuelva a ocupar el sitial que ha tenido durante décadas') y que los recursos reduzcan presión crediticia; 'Codelco debe volver a ser la joya de todos los chilenos'. Incluye el comunicado del gremio."
+x-2026-08-10-piensaprensa-marcha-codelco:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Video de PiensaPrensa de la manifestación contra la privatización de Codelco en Huérfanos 1270 (Santiago centro)"
+  autor: PiensaPrensa
+  fecha: 2026-08-10
+  url: "https://x.com/PiensaPrensa/status/2086839412680265855"
+  notas: "Fuente complementaria de la marcha del 10-ago (no dato independiente): video de la concentración de trabajadores mineros y organizaciones sociales en Huérfanos 1270 (11:37); el dato de la marcha se verifica con adnradio-2026-08-10-marcha-chuquicamata-privatizacion."
+latercera-2026-08-09-cox-direccion-del-trabajo:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Alejandra Cox: 'A la Dirección del Trabajo hay que hacerle cirugía mayor. Tiene que ser una institución independiente'"
+  autor: Mariana Marusic
+  fecha: 2026-08-09
+  url: "https://www.latercera.com/pulso/noticia/alejandra-cox-a-la-direccion-del-trabajo-hay-que-hacerle-cirugia-mayor-tiene-que-ser-una-institucion-independiente/"
+  notas: "Verificada con contenido. Entrevista a la economista laboral y expresidenta de la Asociación de AFP: propone cuatro medidas para reactivar el mercado laboral (eliminar la arbitrariedad de la Dirección del Trabajo, indemnización por pérdida de empleo o a todo evento, contrato a prueba y ordenar el contrato a plazo fijo), critica que el gobierno no ha dado al desempleo la prioridad que merece y que la DT 'amedrenta' a los empleadores desprotegiendo a los jóvenes. Datos: desempleo 9,4% en el trimestre abril-junio, máximo en cinco años y cercano al pico de pandemia (9,5%); desempleo juvenil 15-24 de 22,8%; femenino 10,5% vs masculino 8,6%."
+adnradio-2026-08-09-kast-sistema-frontal-alerta:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Presidente Kast llama a estar alerta ante nuevo sistema frontal y destaca respaldo ciudadano a Ley de Reconstrucción"
+  autor: ADN Radio
+  fecha: 2026-08-09
+  url: "https://www.adnradio.cl/2026/08/09/kast-llama-a-estar-alerta-ante-nuevo-sistema-frontal-en-el-norte-de-chile-y-destaca-respaldo-a-ley-de-reconstruccion/"
+  notas: "Verificada con contenido. Kast se refirió el domingo 9 de agosto al sistema frontal que afectaría al norte (Arica y Parinacota a Coquimbo): 'como Gobierno nos preparamos y anticipamos al pronóstico meteorológico', llamó a 'mantenerse alertas, seguir las instrucciones de la autoridad y prepararse para las potenciales lluvias y viento en la zona norte', con riesgo de crecidas de quebradas y derrumbes en sectores cordilleranos y precordilleranos. En paralelo destacó el respaldo ciudadano y parlamentario a la Ley de Reconstrucción y Desarrollo Económico y Social ('las encuestas van y vienen, son solo un punto de referencia'). Publicado antes del decreto de Emergencia Preventiva Climática del 10-ago."
+latercera-2026-08-10-arrau-responde-toha-acot:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Ministro Arrau responde a críticas de Tohá por agenda de seguridad: 'No se han informado bien de todo lo que estamos haciendo'"
+  autor: Claudio Portilla
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/nacional/noticia/ministro-arrau-responde-a-criticas-de-toha-por-agenda-de-seguridad-no-se-han-informado-bien-de-todo-lo-que-estamos-haciendo/"
+  notas: "Verificada con contenido. Tras la firma de la reforma constitucional, Arrau respondió a las críticas de la exministra Carolina Tohá sobre el énfasis legislativo: 'lo primero que presentamos es un plan operativo hace dos meses... con reducción de homicidios, reducción de robos violentos, 15, 20% dependiendo de las cifras'; descartó que sea una 'mega reforma constitucional' ('son cosas muy acotadas') y detalló el estado de excepción: herramientas transitorias con dos novedades potentes (interceptación de telecomunicaciones e incautación temprana de propiedad de organizaciones criminales) más la colaboración eventual de las FF.AA."
+latercera-2026-08-10-portazo-kast-escucha-corazon:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "'Esperaba más del Presidente': portazo de Kast a proyecto 'Escucha su corazón' genera desazón en los libertarios"
+  autor: Cristóbal Fuentes
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/esperaba-mas-del-presidente-portazo-de-kast-a-proyecto-escucha-su-corazon-genera-desazon-en-los-libertarios/"
+  notas: "Verificada con contenido. En entrevista con T13 Radio, Kast dijo que el gobierno 'no vamos a avanzar en esa materia': en campaña se comprometió a un gobierno de emergencia (economía, seguridad, social) y a no impulsar medidas que generaran tensión; en otros países escuchar el latido es voluntario, en la moción chilena es obligatorio. Reacciones: desazón en el PNL (Urruticoechea: 'no bajaremos los brazos'; Paulina Muñoz: 'yo esperaba más del Presidente'; Vanessa Kaiser: 'no se desautorice'); Squella coincidió con Kast y dijo que votaría a favor del proyecto 'con algunos cambios'. Incluye el antecedente de la ministra May Chomali ('científicamente no hay sentido que la mujer vaya a cambiar de decisión')."
+biobiochile-2026-08-10-kast-escucha-corazon:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Presidente Kast dice que Gobierno 'no avanzará' con el proyecto 'Escucha su corazón'"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/10/presidente-kast-dice-que-gobierno-no-avanzara-con-el-proyecto-escucha-su-corazon.shtml"
+  notas: "Verificada con contenido (mirror). Corrobora el portazo de Kast: 'nosotros no vamos a avanzar en esa materia'; menciona que la iniciativa ya fue adoptada en Hungría (2022, Orbán) y Castilla y León (Vox-PP); reacciones de Urruticoechea y Paulina Muñoz; antecedente de la marcha feminista del 1 de agosto y de las críticas de la ministra May Chomali."
+latercera-2026-08-10-desempleo-ilustrado-educacion-superior:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Desempleo ilustrado: desocupados con educación superior siguen al alza y casi 40% está subempleado"
+  autor: Carlos Alonso
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/pulso/noticia/desempleo-ilustrado-desocupados-con-educacion-superior-siguen-al-alza-y-casi-40-esta-subempleado/"
+  notas: "Verificada con contenido. Informe del OCEC-UDP (Juan Bravo): en el trimestre abril-junio 2026 la desocupación de personas con educación superior completa llegó a 8,3% (+0,4 pp anual, 10 meses consecutivos de alzas), con +30.593 desocupados en el año; la fuerza laboral con ese nivel pasó del 22% (2010) al 42,2% y los ocupados superaron por primera vez los 4 millones (4.004.200). Subempleo por calificaciones: 1.509.267 (37,7%); el 79,9% de la creación anual de empleo del segmento fue en subempleo. Desocupación por nivel: secundaria completa 10,9% (+0,6 pp), menos que secundaria 8,7% (+0,8 pp). General: 9,4% (+0,5 pp). Mayores tasas por campo: Humanidades y Servicios personales; menores: Derecho, Educación y Medicina Veterinaria."
+fastcheck-2026-08-10-fondo-pluralismo-informativo:
+  tipo: prensa
+  medio: Fast Check
+  titulo: "Gobierno termina con el financiamiento para el Fondo de Estudios sobre el Pluralismo en el Sistema Informativo Nacional"
+  autor: Elías Miranda
+  fecha: 2026-08-10
+  url: "https://www.fastcheck.cl/2026/08/10/gobierno-termina-con-el-financiamiento-para-el-fondo-de-estudios-sobre-el-pluralismo-en-el-sistema-informativo-nacional/"
+  notas: "Verificada con contenido (mirror). La Segegob comunicó el término del convenio con la ANID para el Fondo de Estudios sobre el Pluralismo en el Sistema Informativo Nacional, vigente desde 2009; la decisión responde a una instrucción del Ministerio de Hacienda y a la revisión de compromisos que involucran recursos financieros; la Subsecretaría informó que no realizará el concurso ni adjudicará nuevos proyectos durante este año."
+biobiochile-2026-08-10-terremoto-colombia-71-muertos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Suben a 71 los muertos por terremoto 7,4 en Colombia y decretan desastre nacional"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/internacional/america-latina/2026/08/10/suben-a-71-los-muertos-por-terremoto-74-en-colombia-decretan-desastre-nacional.shtml"
+  notas: "Contenido verificado por título/descripción (página JS): el balance de víctimas del terremoto del occidente de Colombia escaló de los 20 fallecidos iniciales a 71 y el gobierno colombiano decretó desastre nacional; el título actualizado del artículo registra 111 muertos y 87 heridos confirmados por el presidente Abelardo de la Espriella. Corrobora y actualiza la cobertura del evento 20260810-4."
+biobiochile-2026-08-10-servel-orrego-coaching:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Servel descarta que coaching de Orrego objetado por Contraloría sea 'gasto electoral'"
+  autor: BioBioChile
+  fecha: 2026-08-10
+  url: "https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/10/servel-descarta-que-coaching-de-orrego-objetado-por-contraloria-sea-gasto-electoral.shtml"
+  notas: "Verificada con contenido (mirror). Corrobora el archivo del Servel del caso Orrego: los hechos investigados 'quedan fuera del ámbito de la potestad sancionatoria conferida al Servicio Electoral' y 'los antecedentes reunidos carecen de mérito suficiente' para formular cargos; incluye la acusación de uso de recursos públicos entre enero y septiembre de 2024 (campaña a la reelección y proyección presidencial) que sustenta el requerimiento de destitución ante el Tricel; cita la reacción de Orrego ('siempre estuvimos disponibles para que se investigara')."
+latercera-2026-08-10-exministros-casen-emplazan-kast:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Qué pretende: exministros de Boric emplazan con dureza a Kast por cuestionar cifras de pobreza de última encuesta CASEN"
+  autor: La Tercera
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/que-pretende-exministros-de-boric-emplazan-con-dureza-a-kast-por-cuestionar-cifras-de-pobreza-de-ultima-encuesta-casen/"
+  notas: "Cobertura del emplazamiento de los exministros del gobierno de Boric (Tohá, Elizalde, Grau, Toro) contra Kast por cuestionar las cifras de pobreza de la CASEN 2024; el evento 20260810-1 ya cubre el hecho con biobiochile-2026-08-10-casen-exministros-boric y las declaraciones de cada exministro. Registrada como fuente complementaria del mismo episodio (titular verificado)."

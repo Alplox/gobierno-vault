@@ -178,6 +178,65 @@ const MEDIA = {
     // decenas de URLs, pero no hay índice que los enumere: el sync captura
     // lo reciente (latest).
   },
+  elciudadano: {
+    nombre: 'El Ciudadano',
+    index: 'https://www.elciudadano.com/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  df: {
+    nombre: 'Diario Financiero',
+    // Prontus: robots declara 3 sitemaps (pags histórico + news + port).
+    // La URL canónica de artículos es /texto-diario/mostrar/<id>/<slug>.
+    extra: [
+      'https://www.df.cl/noticias/site/sitemap_pags.xml',
+      'https://www.df.cl/noticias/site/sitemap_news.xml',
+      'https://www.df.cl/noticias/site/list/port/sitemap_df.xml',
+    ],
+  },
+  malaespina: {
+    nombre: 'Mala Espina',
+    index: 'https://malaespinacheck.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (fact-checking)
+  },
+  elquintopoder: {
+    nombre: 'El Quinto Poder',
+    index: 'https://www.elquintopoder.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (periodismo ciudadano/opinión)
+  },
+  radioudec: {
+    nombre: 'Radio UdeC',
+    index: 'https://www.radioudec.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (radio universitaria)
+  },
+  chocale: {
+    nombre: 'Chocale',
+    index: 'https://chocale.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  redimin: {
+    nombre: 'REDIMIN',
+    index: 'https://www.redimin.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (revista minería)
+  },
+  chilepaisminero: {
+    nombre: 'Chile País Minero',
+    index: 'https://chilepaisminero.com/sitemap.xml',
+    // Sitemap index plano (sitemap.xml + sitemap.rss en robots).
+  },
+  mestizos: {
+    nombre: 'Mestizos Magazine',
+    index: 'https://www.mestizos.cl/sitemap.xml',
+    // Index por fechas: /sitemap/sitemap-<DD-MM-YYYY>.xml (uno por día).
+  },
+  diarioestrategia: {
+    nombre: 'Diario Estrategia',
+    // Prontus: robots declara sitemap/news + sitemap/lastarticles (~100 URLs
+    // recientes cada uno, IDs /texto-diario/mostrar/).
+    extra: [
+      'https://www.diarioestrategia.cl/sitemap/news',
+      'https://www.diarioestrategia.cl/sitemap/lastarticles',
+    ],
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -312,10 +371,19 @@ function extractSitemapIndexLocs(xml) {
   // Se decodifican entidades XML (`&amp;` → `&`): Arc XP (La Tercera, ADN)
   // pagina sus sub-sitemaps con `?outputType=xml&amp;from=100`, que sin
   // decodificar devolvería 404 al fetchear.
+  // También se limpia CDATA (`<![CDATA[url]]>`): algunos sitemaps (ej.
+  // Chile País Minero) envuelven los `<loc>` del index en CDATA; sin el
+  // strip la URL queda con los marcadores y el fetch falla.
   const out = [];
   const re = /<loc>([\s\S]*?)<\/loc>/g;
   let m;
-  while ((m = re.exec(xml)) !== null) out.push(decodeEntities(m[1].trim()));
+  while ((m = re.exec(xml)) !== null) {
+    const raw = m[1].trim();
+    const cleaned = stripCdata(raw).replace(/^\s+|\s+$/g, '');
+    // Algunos sitemaps (ej. Chile País Minero) omiten el protocolo dentro
+    // del CDATA (`<![CDATA[dominio.com/post-sitemap.xml]]>`): se normaliza.
+    out.push(decodeEntities(/^https?:\/\//i.test(cleaned) ? cleaned : `https://${cleaned}`));
+  }
   return out;
 }
 
