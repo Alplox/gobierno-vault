@@ -626,6 +626,16 @@ people:
     cargo: Investigador de la Universidad Autónoma, experto en criminología
     organizacion: universidad_autonoma
     notas: "Investigador de la Universidad Autónoma y experto en criminología. El 7 de agosto de 2026, en el marco del debate por el levantamiento del secreto bancario en la ACOT, señaló a Emol que el marco legal ya permite levantarlo con autorización judicial, que perfeccionarlo 'está lejos de ser la única respuesta' y que la pretensión de que un funcionario del gobierno de turno pueda requerir la medida 'resulta altamente controversial a nivel internacional'."
+  carlos_silva:
+    nombre: Carlos Silva
+    cargo: Criminólogo de la Universidad Andrés Bello
+    organizacion: universidad_andres_bello
+    notas: "Criminólogo de la Universidad Andrés Bello. El 7 de agosto de 2026, en el marco del debate por el levantamiento del secreto bancario en la ACOT, advirtió a Emol que el levantamiento en México es parcial y que las organizaciones criminales manejan sistemas paralelos de dinero que forman un 'estado' paralelo."
+  mladen_yopo:
+    nombre: Mladen Yopo
+    cargo: Analista internacional de la Universidad Andrés Bello
+    organizacion: universidad_andres_bello
+    notas: "Analista internacional de la Universidad Andrés Bello. El 7 de agosto de 2026, en el debate por el levantamiento del secreto bancario, señaló a Emol que el alzamiento en México ha permitido vincular testaferros, rastrear dinero y bloquear cuentas, pero que 'no es la gran panacea' y se necesita un mosaico de herramientas contra el crimen transnacional."
   louis_de_grange:
     nombre: Louis de Grange Concha
     cargo: Ministro de Transporte y Telecomunicaciones
@@ -2886,7 +2896,44 @@ people:
       - cargo: Diputado (RN)
         organizacion: renovacion_nacional
         desde: 2026-03-11
-    notas: Propuso modificar Ley Lafkenche ante aportes de NPA.
+    notas: "Diputado RN reelecto por el distrito 26. En febrero de 2026 fue parte de la comitiva de diputados evangélicos que el presidente electo José Antonio Kast envió al Desayuno de Oración Nacional de Washington. Propuso modificar Ley Lafkenche ante aportes de NPA."
+  stephanie_jeldrez:
+    nombre: Stephanie Jeldrez
+    cargo: Diputada electa por el distrito 1 (Partido Republicano)
+    cargos:
+      - cargo: Diputada (Partido Republicano)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    organizacion: partido_republicano
+    notas: "Diputada electa del Partido Republicano por el distrito 1. En febrero de 2026 viajó a Washington como parte de la comitiva de diputados evangélicos enviada por el presidente electo José Antonio Kast al Desayuno de Oración Nacional: 'Es una instancia para resguardar los valores cristianos que, en este contexto mundial, han sido tan atacados'."
+  benjamin_lorca:
+    nombre: Benjamín Lorca
+    cargo: Diputado electo por el distrito 6 (Partido Republicano)
+    cargos:
+      - cargo: Diputado (Partido Republicano)
+        organizacion: partido_republicano
+        desde: 2026-03-11
+    organizacion: partido_republicano
+    notas: "Diputado electo del Partido Republicano por el distrito 6. En febrero de 2026 viajó a Washington como parte de la comitiva de diputados evangélicos enviada por el presidente electo José Antonio Kast al Desayuno de Oración Nacional: 'a través de la diplomacia religiosa podamos tender puentes, lazos y redes'."
+  maria_gatica:
+    nombre: María Gatica
+    cargo: Vicepresidenta del Partido Republicano
+    organizacion: partido_republicano
+    notas: "Vicepresidenta del Partido Republicano. En febrero de 2026 integró la comitiva enviada por el presidente electo José Antonio Kast al Desayuno de Oración Nacional de Washington, junto a diputados evangélicos y representantes del mundo empresarial."
+  javier_castro:
+    nombre: Javier Castro
+    cargo: Profesor e historiador de la Universidad San Sebastián
+    organizacion: universidad_san_sebastian
+    notas: "Profesor e historiador de la Universidad San Sebastián. En febrero de 2026 integró la comitiva enviada por el presidente electo José Antonio Kast al Desayuno de Oración Nacional de Washington."
+  cristian_jara:
+    nombre: Cristián Jara
+    cargo: Pastor asociado a Capitol Ministries
+    organizacion: capitol_ministries
+    notas: "Pastor asociado a Capitol Ministries, organización cristiana que realiza ministerios de alcance a legisladores. En febrero de 2026 integró la comitiva enviada por el presidente electo José Antonio Kast al Desayuno de Oración Nacional de Washington."
+  rebeca_rodriguez:
+    nombre: Rebeca Rodríguez
+    cargo: Diputada de El Salvador
+    notas: "Diputada de El Salvador. En febrero de 2026 sostuvo un encuentro en Washington con la diputada electa chilena Stephanie Jeldrez, en el marco del Desayuno de Oración Nacional y de la gira de José Antonio Kast por Centroamérica."
   victor_quiroz:
     nombre: Víctor Quiroz Castro
     cargo: Arquitecto, socio principal de Quiroz y Puelma Arquitectos
@@ -3296,6 +3343,11 @@ people:
         organizacion: camara_diputados
         desde: 2026-03-11
     organizacion: camara_diputados
+  vlado_mirosevic:
+    nombre: Vlado Mirosevic
+    cargo: Senador (Partido Liberal)
+    organizacion: partido_liberal
+    notas: "Senador del Partido Liberal (PL). El 10 de agosto de 2026, tras la revelación de The Clinic sobre la capilla evangélica habilitada en la exoficina de la Secom en La Moneda, escribió en X: 'En un Estado laico no transformemos La Moneda en un centro de convención religioso. Exigimos neutralidad. El problema no son los evangélicos, a quienes respeto, el problema es confundirlo con la función pública'."
   jose_luis_daza:
     nombre: José Luis Daza
     cargo: Viceministro de Política Económica de Argentina
@@ -3378,6 +3430,25 @@ people:
         organizacion: codelco
         desde: 2026-05-27
     organizacion: codelco
+  jorge_gomez:
+    nombre: Jorge Gómez
+    cargo: Presidente ejecutivo de Codelco
+    cargos:
+      - cargo: Presidente ejecutivo de Codelco
+        organizacion: codelco
+        desde: 2026-06-03
+    organizacion: codelco
+    notas: "Nombrado presidente ejecutivo de Codelco por el directorio el 3 de junio de 2026. Tras la capitalización del 100% de las utilidades de 2025 (agosto 2026) afirmó que el respaldo del gobierno 'exige transformar los recursos en resultados concretos', con foco en seguridad y disciplina operacional."
+  gonzalo_lara_skiba:
+    nombre: Gonzalo Lara Skiba
+    cargo: Exvicepresidente de Integración de Operaciones Andina de Codelco
+    cargos:
+      - cargo: Vicepresidente de Integración de Operaciones Andina
+        organizacion: codelco
+        desde: 2025-11-01
+        hasta: 2026-08-21
+    organizacion: codelco
+    notas: "Ejecutivo minero. Fue gerente general de las divisiones Gabriela Mistral y Ministro Hales de Codelco. En noviembre de 2025 asumió la Vicepresidencia de Integración de Operaciones Andina, creada para liderar la implementación del Plan Minero Conjunto del distrito Andina–Los Bronces (alianza con Anglo American). Presentó su renuncia voluntaria el 10 de agosto de 2026, efectiva el 21 de agosto."
   pablo_longueira:
     nombre: Pablo Longueira Montes
     cargo: Exsenador (UDI)
@@ -3940,6 +4011,11 @@ people:
     cargo: Coordinadora nacional de RAP-Chile
     organizacion: rap_chile
     notas: "Coordinadora nacional de la Red de Acción en Plaguicidas y sus Alternativas (RAP-Chile). Autora de la columna 'Una aclaración no protege las semillas' en Interferencia (julio 2026), que pidió retirar el proyecto de resolución del SAG sobre comercialización de semillas."
+  andres_munoz_saez:
+    nombre: Andrés Muñoz-Sáez
+    cargo: Presidente de la Sociedad Científica Chilena de Agroecología
+    organizacion: sociedad_cientifica_chilena_agroecologia
+    notas: "Académico de la Universidad de Chile y presidente de la Sociedad Científica Chilena de Agroecología. En agosto de 2026 advirtió sobre el proyecto del SAG de comercialización de semilla corriente: criticó la brecha entre el discurso oficial y el texto legal (el sistema judicial 'se rige por la norma, no por las declaraciones'), el registro con costos que distorsiona el ecosistema rural y el riesgo de pérdida de resiliencia frente al cambio climático; propuso una regulación diferenciada con una categoría de 'semilla campesina'."
   leo_ferres:
     nombre: Leo Ferres
     cargo: Investigador principal del Instituto de Data Science UDD
@@ -7493,6 +7569,47 @@ people:
         organizacion: segegob
         desde: 2010-03-11
         hasta: 2011-07-18
+    notas: "Ex ministra Secretaria General de Gobierno de Sebastián Piñera (2010-2011) y luego senadora designada (UDI). En junio de 2011 fue acusada por la senadora Ximena Rincón de conflicto de interés por el convenio UPOV 91, ya que era dueña del 15% de Semillas Baer, empresa de su padre Erik von Baer."
+  erik_von_baer:
+    nombre: Erik von Baer
+    cargo: Empresario semillero, fundador de Semillas Baer
+    organizacion: semillas_baer
+    notas: "Empresario agrónomo de origen alemán, fundador de Semillas Baer, que controla aproximadamente el 50% del mercado de semillas de Chile. Padre de Ena y Karina von Baer. En 2011 fue vinculado a la polémica por el UPOV 91 (semilla de quinua y otras variedades registradas hasta 2016) y recurrió al Tribunal Constitucional para impedir la revelación de la ubicación de cultivos transgénicos."
+  karina_von_baer:
+    nombre: Karina von Baer
+    cargo: Gerenta general de Saprosem
+    organizacion: saprosem
+    notas: "Ex alumna de Agronomía UC e hija del semillero Erik von Baer. Gerenta general de Saprosem y directora nacional de la Sociedad Nacional de Agricultura (SNA). Se ha declarado públicamente a favor de los transgénicos."
+  cristian_sauvageot:
+    nombre: Cristián Sauvageot
+    cargo: Representante de Chile sin Transgénicos
+    organizacion: chile_sin_transgenicos
+    notas: "Representante de la organización Chile sin Transgénicos. En junio de 2011 denunció que la semilla de la quinua pasó a ser propiedad de Semillas Baer, junto a otra veintena de variedades registradas hasta 2016."
+  guillermo_donoso:
+    nombre: Guillermo Donoso
+    cargo: Ex director del INIA
+    organizacion: inia
+    notas: "Ingeniero agrónomo, ex director del Instituto de Investigaciones Agropecuarias (INIA). Renunció en 2011 tras una querella por fraude al fisco; una comisión investigadora de la Cámara lo acusó de entregar información confidencial a la empresa Anasac, propiedad de la filial chilena de Monsanto."
+  jorge_pizarro:
+    nombre: Jorge Pizarro
+    cargo: Senador (DC)
+    notas: "Senador de la Democracia Cristiana. En junio de 2011 apoyó la solicitud de Ximena Rincón a la Contraloría para investigar el conflicto de interés de Ena von Baer por el convenio UPOV 91."
+  alejandro_navarro:
+    nombre: Alejandro Navarro
+    cargo: Senador (MAS)
+    notas: "Senador del Movimiento Amplio Social (MAS). En junio de 2011 apoyó la solicitud de Ximena Rincón a la Contraloría para investigar el conflicto de interés de Ena von Baer por el convenio UPOV 91."
+  doris_prehn:
+    nombre: Doris Prehn
+    cargo: Profesora auxiliar de genética
+    notas: "Profesora auxiliar de genética. En 2011 apareció vinculada a ChileBio, organización gremial de empresas de alimentos genéticamente modificados, aunque aclaró que su relación era 'estrictamente profesional'."
+  mayra_feddersen:
+    nombre: Mayra Feddersen
+    cargo: Abogada
+    notas: "Abogada. En 2009 inició la causa que derivó en el fallo del Consejo para la Transparencia que obligó al SAG a entregar la ubicación de los cultivos transgénicos, disputada ante el Tribunal Constitucional por Erik von Baer en 2011."
+  jorge_echeverria:
+    nombre: Jorge Echeverría
+    cargo: Abogado
+    notas: "Abogado. En septiembre de 2011 patrocinó el requerimiento de Erik von Baer ante el Tribunal Constitucional para declarar inconstitucional el fallo del Consejo para la Transparencia sobre la ubicación de los cultivos transgénicos."
 
   cecilia_perez_jara:
     nombre: Cecilia Pérez Jara
@@ -7551,6 +7668,11 @@ organizations:
     tipo: universidad
     pais: Chile
     notas: "Universidad chilena. Su académico Guillermo Riquelme advirtió tras la ENE abril-junio 2026 sobre la intensificación de la informalidad, especialmente entre las mujeres, y un posible deterioro mayor del mercado laboral en julio-agosto."
+  universidad_andres_bello:
+    nombre: Universidad Andrés Bello
+    tipo: universidad
+    pais: Chile
+    notas: "Universidad chilena. En el debate del secreto bancario (agosto 2026), su criminólogo Carlos Silva advirtió que el levantamiento en México es parcial porque las organizaciones criminales manejan sistemas paralelos de dinero."
   cut:
     nombre: Central Unitaria de Trabajadores (CUT)
     tipo: sindicato
@@ -8624,6 +8746,11 @@ organizations:
     tipo: partido_politico
     pais: Chile
     notas: "Partido politico chileno liberal de centroderecha. Fundado por Felipe Kast en 2012."
+  partido_liberal:
+    nombre: Partido Liberal de Chile
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político chileno liberal. Su senador Vlado Mirosevic criticó el 10 de agosto de 2026 la capilla evangélica habilitada por el gobierno en la exoficina de la Secom en La Moneda, pidiendo resguardar la neutralidad del Estado laico."
   the_clinic:
     nombre: The Clinic
     tipo: medio_comunicacion
@@ -9096,6 +9223,11 @@ organizations:
     nombre: Universidad de Chile
     tipo: universidad
     pais: Chile
+  sociedad_cientifica_chilena_agroecologia:
+    nombre: Sociedad Científica Chilena de Agroecología
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Sociedad científica de agroecología chilena. Su presidente Andrés Muñoz-Sáez criticó en agosto de 2026 el proyecto de resolución del SAG sobre semilla corriente y propuso una regulación diferenciada para los sistemas campesinos de semillas."
   ideas_republicanas:
     nombre: Ideas Republicanas
     tipo: centro_de_estudios
@@ -10424,6 +10556,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno especializado en minería (reporteminero.cl)."
+  mch:
+    nombre: Mch
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Revista especializada en minería y energía (mch.cl)."
   el_libertario:
     nombre: El Libertario
     tipo: medio_comunicacion
@@ -10634,7 +10771,66 @@ organizations:
     tipo: fundacion
     pais: Chile
     notas: "Fundación presidida por Lucía Hiriart de Pinochet. Tras la dictadura vendió propiedades obtenidas gratis del Estado; el CDE pidió en 2016 reabrir el caso Riggs para investigar su patrimonio (CIPER contabilizó más de 243 propiedades y $6.300 millones)."
-
+  capitol_ministries:
+    nombre: Capitol Ministries
+    tipo: organizacion_social
+    pais: Estados Unidos
+    notas: "Organización cristiana estadounidense dedicada a ministrar a legisladores y líderes políticos, con presencia en parlamentos de todo el mundo. Su pastor asociado Cristián Jara integró la comitiva chilena enviada al Desayuno de Oración Nacional de Washington en febrero de 2026."
+  evangelico_digital:
+    nombre: Evangélico Digital
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Medio digital evangélico de alcance iberoamericano. Cubrió la comitiva de diputados evangélicos chilenos enviada por Kast al Desayuno de Oración de Washington (febrero 2026)."
+  pulso_publico:
+    nombre: Pulso Público
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno. Cubrió la participación del diputado Mauro González en la 74.ª edición del Desayuno Nacional de Oración en Washington (febrero 2026)."
+  fox_news:
+    nombre: Fox News
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Canal y portal de noticias estadounidense. Cubrió la participación de Donald Trump en la 74.ª edición del National Prayer Breakfast (5 de febrero de 2026)."
+  semillas_baer:
+    nombre: Semillas Baer
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa semillera familiar de Erik von Baer, que controla aproximadamente el 50% del mercado de semillas de Chile. Al centro de la polémica de 2011 por el convenio UPOV 91, cuando se reveló que la ministra Ena von Baer era dueña del 15% de la firma y que la semilla de quinua y otra veintena de variedades pasaron a ser registradas por la empresa."
+  monsanto:
+    nombre: Monsanto
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Multinacional de biotecnología agrícola, dominante en el mercado mundial de semillas registradas. Vinculada en 2011 a la polémica del UPOV 91 en Chile: la filial chilena compró la planta de Anasac en Paine por US$19 millones y recurrió ante la Corte de Apelaciones en la causa de los cultivos transgénicos."
+  saprosem:
+    nombre: Saprosem
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa semillera chilena. Su gerenta general es Karina von Baer, hermana de la exministra Ena von Baer y directora nacional de la Sociedad Nacional de Agricultura."
+  anasac:
+    nombre: Anasac
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa chilena de semillas, ya propiedad de la filial chilena de Monsanto en 2011, que compró su planta en Paine por US$19 millones. El ex director del INIA Guillermo Donoso fue acusado por una comisión investigadora de la Cámara de entregar información confidencial a la empresa."
+  chilebio:
+    nombre: ChileBio
+    tipo: gremio
+    pais: Chile
+    notas: "Organización gremial chilena que agrupa a empresas de alimentos genéticamente modificados (Monsanto, Bayer, Syngenta, Pioneer, Dow AgroSciences). En 2011 la profesora Doris Prehn aclaró que su vínculo con la organización era 'estrictamente profesional'."
+  chile_sin_transgenicos:
+    nombre: Chile sin Transgénicos
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización chilena opuesta a los organismos genéticamente modificados. Su representante Cristián Sauvageot denunció en 2011 que la semilla de quinua pasó a ser propiedad de Semillas Baer tras la adhesión de Chile al UPOV 91."
+  inia:
+    nombre: Instituto de Investigaciones Agropecuarias (INIA)
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Instituto público chileno de investigación agropecuaria. En 2011 su ex director Guillermo Donoso renunció tras una querella por fraude al fisco y fue acusado por una comisión investigadora de la Cámara de entregar información confidencial a Anasac."
+  consejo_para_la_transparencia:
+    nombre: Consejo para la Transparencia
+    tipo: organismo_publico
+    pais: Chile
+    notas: "Organismo público chileno encargado de promover la transparencia de la función pública. En 2011 acogió la solicitud de la abogada Mayra Feddersen y obligó al SAG a entregar la ubicación de los cultivos transgénicos, fallo que Erik von Baer disputó ante el Tribunal Constitucional."
 cifras:
   aprobacion_kast_criteria_ago9:
     nombre: Aprobación de José Antonio Kast según Criteria (9-ago-2026)
@@ -11770,6 +11966,10 @@ cifras:
     nombre: Utilidad consolidada de Codelco en 2025
     unidad_default: millones_usd
     notas: "US$2.423 millones al cierre de 2025, con un incremento de US$2.178 millones respecto a 2024, impulsada por la utilidad excepcional de US$2.035 millones por la adquisición del 50% más una acción de Novandino Litio. Excluida esa utilidad excepcional, la utilidad fue US$388 millones (Codelco, 27 marzo 2026)."
+  capitalizacion_utilidades_codelco_2025:
+    nombre: Porcentaje de las utilidades de Codelco 2025 que el gobierno autorizó capitalizar
+    unidad_default: por_ciento
+    notas: "100% de las utilidades del ejercicio 2025 (US$2.422-2.423 millones), decisión 'histórica e inédita' del gobierno de Kast anunciada en el Día del Minero (10 agosto 2026). Desde 2022 regía un promedio de reinversión del 30% de las utilidades."
   gasto_arriendos_vehiculos_diputados_biobio:
     nombre: Gasto anual en arriendo de vehículos de los 13 diputados del Biobío
     unidad_default: pesos
@@ -12942,3 +13142,27 @@ cifras:
     nombre: Trato directo de áreas verdes a Norte Verde SpA
     unidad_default: millones_de_pesos
     notas: "456 millones de pesos firmó el exalcalde de Arica Gerardo Espíndola en trato directo con Norte Verde SpA, empresa creada días antes y cuyo socio es hijo de la dueña de la empresa que perdió la licitación."
+  edicion_desayuno_oracion_washington:
+    nombre: Edición del Desayuno de Oración Nacional de Washington 2026
+    unidad_default: edicion
+    notas: "74.ª edición del National Prayer Breakfast, celebrada el 5 de febrero de 2026 en el Washington Hilton (Fox News, Pulso Público). The Clinic y Evangélico Digital la numeraron inicialmente como la 73ª."
+  participantes_desayuno_oracion_washington:
+    nombre: Participantes del Desayuno de Oración Nacional de Washington
+    unidad_default: lideres
+    notas: "Más de 3.500 líderes políticos, religiosos y empresariales de todo el mundo reúne anualmente el Desayuno Nacional de Oración (Pulso Público, Evangélico Digital)."
+  paises_desayuno_oracion_washington:
+    nombre: Países representados en el Desayuno de Oración Nacional
+    unidad_default: paises
+    notas: "Más de 140 países envían representantes al Desayuno Nacional de Oración de Washington (The Clinic, Evangélico Digital)."
+  participacion_ena_von_baer_semillas_baer:
+    nombre: Participación de Ena von Baer en Semillas Baer
+    unidad_default: por_ciento
+    notas: "15% de la empresa Semillas Baer declaraba la ministra Segegob Ena von Baer en su patrimonio público en 2011, según The Clinic, en el centro de la acusación de conflicto de interés por el UPOV 91."
+  control_mercado_semillas_erik_von_baer:
+    nombre: Control del mercado de semillas de Erik von Baer
+    unidad_default: por_ciento
+    notas: "Aproximadamente el 50% del mercado de semillas de Chile controla Semillas Baer, empresa de Erik von Baer, padre de la ministra Ena von Baer (The Clinic, junio 2011)."
+  compra_planta_anasac_monsanto:
+    nombre: Compra de la planta de Anasac en Paine por la filial chilena de Monsanto
+    unidad_default: millones_usd
+    notas: "US$19 millones pagó la filial chilena de Monsanto por la planta de Anasac en Paine, según reveló The Clinic en junio de 2011 en el contexto de la polémica por el UPOV 91."

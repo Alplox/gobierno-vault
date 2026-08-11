@@ -19747,3 +19747,237 @@ meganoticias-2025-01-30-espindola-informe-contraloria:
   autor: Paul Follert
   fecha: 2025-01-30
   url: "https://www.meganoticias.cl/nacional/474300-cohecho-fraude-al-fisco-arica-areas-verdes-alcalde-liberal-gerardo-espindola-30-01-2025.html"
+
+df-2026-08-10-codelco-capitaliza-utilidades:
+  tipo: prensa
+  medio: Diario Financiero
+  titulo: "Gobierno autoriza a Codelco para capitalizar el 100% de las utilidades de 2025: ascendieron a casi US$ 2.500 millones"
+  autor: Diario Financiero
+  fecha: 2026-08-10
+  url: "https://www.df.cl/empresas/mineria/gobierno-autoriza-a-codelco-para-capitalizar-el-100-de-las-utilidades-de"
+  notas: "Contenido verificado por titular y descripción (cuerpo tras paywall/JS); corroborado por radio-uchile-2026-08-10-codelco-capitaliza-utilidades y codelco-2026-08-10-capitalizacion-utilidades."
+radio-uchile-2026-08-10-codelco-capitaliza-utilidades:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: '"Histórico e inédito": Gobierno anuncia que Codelco capitalizará el 100% de sus utilidades'
+  autor: Diario UCHILE
+  fecha: 2026-08-10
+  url: "https://radio.uchile.cl/2026/08/10/historico-e-inedito-gobierno-anuncia-que-codelco-capitalizara-el-100-de-sus-utilidades/"
+codelco-2026-08-10-capitalizacion-utilidades:
+  tipo: comunicado_oficial
+  medio: Codelco
+  titulo: "Codelco capitalizará por primera vez el 100% de sus utilidades anuales"
+  autor: Codelco
+  fecha: 2026-08-10
+  url: "https://www.codelco.com/prensa/2026/codelco-capitalizara-por-primera-vez-el-100-de-sus-utilidades-anuales"
+reddit-2026-08-10-codelco-capitalizacion:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Hilo de r/chile sobre la capitalización del 100% de las utilidades de Codelco: escepticismo sobre la deuda y el costo fiscal"
+  autor: Reddit r/chile
+  fecha: 2026-08-10
+  url: "https://old.reddit.com/r/chile/comments/1vku6iv/gobierno_autoriza_a_codelco_para_capitalizar_el/"
+
+codelco-2026-08-10-renuncia-lara-skiba:
+  tipo: comunicado_oficial
+  medio: Codelco
+  titulo: "Codelco informa renuncia de su vicepresidente de Integración de Operaciones Andina"
+  autor: Codelco
+  fecha: 2026-08-10
+  url: "https://www.codelco.com/prensa/2026/codelco-informa-renuncia-de-su-vicepresidente-de-integracion"
+reporteminero-2026-08-10-renuncia-lara-skiba:
+  tipo: prensa
+  medio: Reporte Minero
+  titulo: "Gonzalo Lara Skiba renuncia a vicepresidencia de Integración Andina en Codelco"
+  autor: Miguel Rifo
+  fecha: 2026-08-10
+  url: "https://www.reporteminero.cl/noticia/noticias/2026/08/gonzalo-lara-skiba-renuncia-vicepresidencia-integracion-andina-codelco"
+mch-2026-08-10-renuncia-vicepresidente-codelco:
+  tipo: prensa
+  medio: Mch
+  titulo: "Codelco informa renuncia de uno de sus vicepresidentes"
+  autor: Mch
+  fecha: 2026-08-10
+  url: "https://www.mch.cl/codelco-informa-renuncia-de-uno-de-sus-vicepresidentes/"
+presidencia-2026-08-10-firma-reforma-constitucional-acot:
+  tipo: comunicado_oficial
+  medio: Prensa Presidencia
+  titulo: 'Presidente Kast firma reforma constitucional en el marco de la ACOT y asegura: "Sin seguridad no hay libertad"'
+  autor: Dirección de Prensa, Presidencia
+  fecha: 2026-08-10
+  url: "https://prensa.presidencia.cl/comunicado.aspx?id=337349"
+  notas: "Comunicado oficial de la firma del proyecto de reforma constitucional de la ACOT (prensa.presidencia.cl, 10-ago-2026). El sitio bloquea el fetch directo; la URL apunta al artículo indexado en Google News con el titular exacto, y el contenido del proyecto se corroboró con radio-uchile-2026-08-10-kast-firma-reforma-acot."
+radio-uchile-2026-08-10-kast-firma-reforma-acot:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Presidente Kast firma reforma constitucional de la ACOT y pide celeridad en su tramitación"
+  autor: Diario UCHILE
+  fecha: 2026-08-10
+  url: "https://radio.uchile.cl/2026/08/10/presidente-kast-firma-reforma-constitucional-de-la-acot-y-pide-celeridad-en-su-tramitacion/"
+elmostrador-2026-08-10-kast-firma-reforma-constitucional:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Kast firma reforma constitucional de seguridad y pide al Congreso una tramitación rápida"
+  autor: El Mostrador
+  fecha: 2026-08-10
+  url: "https://www.elmostrador.cl/noticias/pais/2026/08/10/kast-firma-reforma-constitucional-de-seguridad-y-pide-al-congreso-una-tramitacion-rapida/"
+latercera-2026-08-10-longton-dudas-estado-excepcion-acot:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Senador Longton muestra sus dudas por nuevo estado de excepción y la reforma constitucional de la agenda de seguridad de Kast"
+  autor: La Tercera
+  fecha: 2026-08-10
+  url: "https://www.latercera.com/politica/noticia/senador-longton-muestra-sus-dudas-por-nuevo-estado-de-excepcion-y-la-reforma-constitucional-de-la-agenda-de-seguridad-de-kast/"
+reddit-2026-08-10-schonhaut-secreto-bancario:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Tuit de Constanza Schonhaut sobre el secreto bancario tras la entrevista de Kast en Mesa Central"
+  autor: u/ConySchon
+  fecha: 2026-08-10
+  url: "https://x.com/ConySchon/status/2086799046518231210"
+  notas: "Publicación en X de la diputada Constanza Schonhaut (FA) criticando que el gobierno no presente propuestas para perseguir el dinero del crimen organizado. Difundida en Reddit r/chile. Fuente complementaria de opinión: el dato de la crítica se valida con la cobertura de prensa del evento 20260810-1."
+uif-bancaditalia-rol-uif:
+  tipo: documento
+  medio: Unidad de Información Financiera de Italia (UIF - Banca d Italia)
+  titulo: "The Role of the Financial Intelligence Unit (UIF) - Banca d'Italia"
+  autor: UIF - Banca d Italia
+  fecha: 2026-08-07
+  url: "https://uif.bancaditalia.it/sistema-antiriciclaggio/uif-italia/index.html"
+  notas: "Documentación oficial de la UIF (Unità di Informazione Finanziaria) del Banco de Italia: naturaleza administrativa, creación por Decreto Legislativo 231/2007, potestad de suspender operaciones sospechosas hasta 5 días hábiles y cooperación con la DIA y la DNA. Consultada en el marco del debate chileno del secreto bancario (agosto 2026)."
+uif-bancaditalia-segnalazioni-sos:
+  tipo: documento
+  medio: Unidad de Información Financiera de Italia (UIF - Banca d Italia)
+  titulo: "The reporting of suspicious transactions - UIF Banca d'Italia"
+  autor: UIF - Banca d Italia
+  fecha: 2026-08-07
+  url: "https://uif.bancaditalia.it/adempimenti-operatori/segnalazioni-sos/index.html"
+  notas: "Documentación oficial de la UIF sobre el reporte de operaciones sospechosas (ROS/STR) en Italia: obligaciones de bancos, profesionales y auditores."
+fincen-bank-secrecy-act:
+  tipo: documento
+  medio: FinCEN (Departamento del Tesoro de EE.UU.)
+  titulo: "The Bank Secrecy Act - FinCEN.gov"
+  autor: Financial Crimes Enforcement Network (FinCEN)
+  fecha: 2026-08-07
+  url: "https://www.fincen.gov/resources/statutes-and-regulations/bank-secrecy-act"
+  notas: "Documentación oficial de FinCEN sobre el Bank Secrecy Act (1970): CTR (transacciones en efectivo > US$10.000), SAR (operaciones sospechosas > US$5.000) y facultades de citación administrativa (31 U.S.C. § 5318), reforzadas por la AMLA 2020."
+irs-bank-secrecy-act:
+  tipo: documento
+  medio: IRS (Servicio de Impuestos Internos de EE.UU.)
+  titulo: "Bank Secrecy Act - IRS"
+  autor: Internal Revenue Service (IRS)
+  fecha: 2026-08-07
+  url: "https://www.irs.gov/businesses/small-businesses-self-employed/bank-secrecy-act"
+  notas: "Descripción oficial del IRS del Bank Secrecy Act y sus obligaciones de registro y reporte para instituciones financieras."
+eff-national-security-letters-faq:
+  tipo: documento
+  medio: Electronic Frontier Foundation (EFF)
+  titulo: "National Security Letters: FAQ - EFF"
+  autor: Electronic Frontier Foundation (EFF)
+  fecha: 2026-08-07
+  url: "https://www.eff.org/issues/national-security-letters/faq"
+  notas: "Análisis de la EFF sobre las National Security Letters del FBI: acceso a registros financieros sin orden judicial previa y órdenes de silencio (gag orders), con sus críticas desde la perspectiva de derechos civiles."
+
+cooperativa-2026-08-10-capilla-evangelica-moneda:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Gobierno instaló una capilla evangélica permanente en La Moneda"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-10
+  url: "https://www.cooperativa.cl/noticias/pais/gobierno/gobierno-instalo-una-capilla-evangelica-permanente-en-la-moneda/2026-08-10/160212.html"
+theclinic-2026-08-10-mirosevic-capilla-evangelica:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Senador Vlado Mirosevic por capilla evangélica en oficinas de la Secom: 'En un Estado laico no transformemos La Moneda en un centro de convención religioso'"
+  autor: Martín Browne
+  fecha: 2026-08-10
+  url: "https://www.theclinic.cl/2026/08/10/senador-vlado-mirosevic-por-capilla-evangelica-en-oficinas-de-la-secom-en-un-estado-laico-no-transformemos-la-moneda-en-un-centro-de-convencion-religioso/"
+reddit-2026-08-10-capilla-evangelica-moneda:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Hilo de r/chile sobre la capilla evangélica en la exoficina de la Secom en La Moneda: críticas al uso de dependencias del Estado para el culto"
+  autor: Reddit r/chile
+  fecha: 2026-08-10
+  url: "https://old.reddit.com/r/chile/comments/1vkumri/gobierno_convirti%C3%B3_oficina_de_marketing_de_la/"
+  notas: "Hilo de r/chile con la reacción ciudadana a la revelación de The Clinic (10-ago-2026). Fuente complementaria de opinión, nunca única: el dato de la noticia se valida con la prensa del evento 20260810-8."
+
+theclinic-2026-02-04-comitiva-diputados-evangelicos-washington:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La comitiva de diputados evangélicos que Kast envió al Desayuno de Oración en Washington y que lideraría Donald Trump"
+  autor: Eduardo Monrroy
+  fecha: 2026-02-04
+  url: "https://www.theclinic.cl/2026/02/04/la-comitiva-de-diputados-evangelicos-que-kast-envio-al-desayuno-de-oracion-en-washington-y-que-lideraria-donald-trump/"
+  notas: "Revela el envío de la comitiva de diputados evangélicos (Stephanie Jeldrez, Benjamín Lorca y Mauro González) por el presidente electo José Antonio Kast al Desayuno de Oración Nacional de Washington. Numera la cita como la 73ª edición; Fox News y Pulso Público la identifican como la 74ª."
+evangelicodigital-2026-02-05-kast-comitiva-desayuno-oracion:
+  tipo: prensa
+  medio: Evangélico Digital
+  titulo: "Kast envía tres diputados evangélicos al Desayuno de Oración de Washington"
+  autor: Redacción ED
+  fecha: 2026-02-05
+  url: "https://www.evangelicodigital.com/latinoamerica/40148/kast-envia-tres-diputados-evangelicos-al-desayuno-de-oracion-de-washington"
+pulsupublico-2026-02-06-gonzalez-desayuno-oracion:
+  tipo: prensa
+  medio: Pulso Público
+  titulo: "Diputado Mauro González participa en el 74.º Desayuno Nacional de Oración en Washington D.C."
+  autor: Pulso Público
+  fecha: 2026-02-06
+  url: "https://pulsopublico.cl/2026/02/06/diputado-mauro-gonzalez-participa-en-el-74-o-desayuno-nacional-de-oracion-en-washington-d-c/"
+  notas: "Confirma la participación de Mauro González en la 74.ª edición del Desayuno Nacional de Oración en el Washington Hilton y cita sus declaraciones. También confirma la numeración 74.ª (vs. la 73ª de The Clinic)."
+foxnews-2026-02-05-trump-national-prayer-breakfast:
+  tipo: prensa
+  medio: Fox News
+  titulo: "President Donald Trump attends National Prayer Breakfast"
+  autor: Fox News Digital
+  fecha: 2026-02-05
+  url: "https://www.foxnews.com/politics/trump-returns-national-prayer-breakfast-faith-takes-center-stage-second-term"
+  notas: "Cobertura de la 74.ª edición del National Prayer Breakfast (5-feb-2026, Washington Hilton): Trump participó con un discurso a las 8:30, su sexta aparición en la cita; entre los líderes extranjeros invitados estaban Nayib Bukele (El Salvador) y el presidente de RD Congo."
+
+biobiochile-2026-08-08-semillas-sag-bbcl-explica:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Regulación de la semilla en Chile: qué plantea el SAG y por qué ha generado inquietud en el sector"
+  autor: BioBioChile (BBCL Explica)
+  fecha: 2026-08-08
+  url: "https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/08/08/regulacion-de-la-semilla-en-chile-que-plantea-el-sag-y-por-que-ha-generado-inquietud-en-el-sector.shtml"
+  notas: "Explica el proyecto de resolución del SAG sobre semilla corriente: cierre de la consulta el 10-ago-2026 a las 23:59, respuesta del SAG a las observaciones el 22-sep-2026, listado obligatorio de comerciantes con tarifa, umbrales de flexibilización, LVOD, crítica de la Red de Semillas Libres y del académico Andrés Muñoz-Sáez (Sociedad Científica Chilena de Agroecología), denuncias de falta de consulta indígena previa (Convenio 169) y de legalidad de los cobros."
+sag-2026-07-13-aclaracion-semilla-corriente:
+  tipo: comunicado_oficial
+  medio: SAG
+  titulo: "Aclaración SAG sobre consulta ciudadana que establece requisitos para la comercialización de semilla corriente"
+  autor: Servicio Agrícola y Ganadero (SAG)
+  fecha: 2026-07-13
+  url: "https://www.sag.gob.cl/noticias/aclaracion-sag-sobre-consulta-ciudadana-que-establece-requisitos-para-la-comercializacion-de-semilla-corriente"
+  notas: "Aclaración oficial del SAG (13-jul-2026): la propuesta regula solo la comercialización de semilla corriente, no el intercambio sin fines comerciales; incorpora inscripción de comerciantes (única exigencia nueva), umbral de 50 kilos por especie para flexibilizar requisitos, distingue LVOD (no otorga propiedad intelectual) del Registro de Variedades Protegidas, y reconoce ambigüedades de redacción que la consulta busca corregir."
+reddit-2026-08-10-semillas-sag-consulta:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Hilo de r/chile 'Urgente: consulta ciudadana del SAG sobre semillas' con llamados a participar antes del cierre del 10-ago-2026"
+  autor: Reddit r/chile
+  fecha: 2026-08-10
+  url: "https://old.reddit.com/r/chile/comments/1vk7hef/urgente_consulta_ciudadana_es_hasta_manana_el/"
+  notas: "Campaña ciudadana de Semilla Soberana difundida en r/chile con modelo de observaciones a los arts. 2, 3.1, 4 y 11 del proyecto del SAG. Fuente complementaria de opinión, nunca única: los datos del proyecto se validan con el texto del SAG y la prensa (evento 20260727-15)."
+
+theclinic-2011-06-08-polemica-semillas-von-baer:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La polémica de las semillas salpica a Ena von Baer"
+  autor: The Clinic Online
+  fecha: 2011-06-08
+  url: "https://www.theclinic.cl/2011/06/08/la-polemica-de-las-semillas-salpica-a-ena-von-baer/"
+  notas: "Reportaje de The Clinic (8-jun-2011): Ximena Rincón pidió a la Contraloría investigar el conflicto de interés de la ministra Segegob Ena von Baer por el UPOV 91 (dueña del 15% de Semillas Baer, empresa de su padre Erik von Baer, que controla ~50% del mercado); también documenta los vínculos de la UC y del ex director del INIA Guillermo Donoso con Monsanto/Anasac, y el requerimiento de 17 senadores ante el TC."
+biobiochile-2011-06-08-von-baer-bajeza-conflicto-interes:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Von Baer califica de 'bajeza' que le acusen conflicto de interés por Convenio sobre semillas"
+  autor: Radio Bío Bío
+  fecha: 2011-06-08
+  url: "https://www.biobiochile.cl/noticias/2011/06/08/von-baer-califica-de-bajeza-que-le-acusen-conflicto-de-interes-por-convenio-sobre-semillas.shtml"
+  notas: "Reacción de Ena von Baer (8-jun-2011): calificó de 'una bajeza' las acusaciones, confirmó su participación en Semillas Baer declarada ante el Estado y recordó que el UPOV 91 fue impulsado por el gobierno de Michelle Bachelet mientras era profesora universitaria."
+theclinic-2011-09-12-padre-von-baer-tc-semillas-transgenicas:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Padre de Ena Von Baer recurre al TC para mantener en secreto uso de semillas transgénicas"
+  autor: Jorge Molina Sanhueza
+  fecha: 2011-09-12
+  url: "https://www.theclinic.cl/2011/09/12/padre-de-ena-von-baer-recurre-al-tc-para-mantener-en-secreto-uso-de-semillas-transgenicas/"
+  notas: "Seguimiento (sep-2011): Erik von Baer recurrió al TC (requerimiento ingresado el 7-sep-2011, patrocinado por Jorge Echeverría) para declarar inconstitucional el fallo del Consejo para la Transparencia que obligaba al SAG a revelar la ubicación de cultivos transgénicos desde 1992; causa iniciada en 2009 por Mayra Feddersen y en la que Monsanto también recurrió ante la Corte de Apelaciones."
