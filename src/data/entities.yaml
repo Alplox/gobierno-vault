@@ -150,6 +150,10 @@ people:
     nombre: César Neira Medina
     cargo: Sargento primero del Regimiento de Inteligencia N° 1 "Soberanía" (DINE)
     notas: "Sargento primero del Ejército destinado a la Dirección de Inteligencia del Ejército (DINE). Identificado por CIPER (2021) junto a otro agente haciendo 'punto fijo' frente al despacho de la ministra Romy Rutherford en 2019. Fue reconocido por el ex sargento Juan Pablo Díaz, testigo de los procesos por corrupción militar."
+  juan_pablo_araya:
+    nombre: Juan Pablo Araya
+    cargo: Fiscal de Alta Complejidad (Metropolitana Oriente)
+    notas: "Fiscal de Alta Complejidad de la Fiscalía Metropolitana Oriente. Participó en la formalización de los casos Factop y Audios en enero de 2025."
   juan_pablo_diaz:
     nombre: Juan Pablo Díaz
     cargo: Ex sargento segundo del Ejército y testigo de causas de corrupción militar
@@ -162,6 +166,48 @@ people:
     nombre: José Toribio Merino
     cargo: Almirante, miembro de la Junta Militar
     notas: "Almirante de la Armada, miembro de la Junta Militar de Gobierno de la dictadura de Pinochet (1973-1990) y comandante en jefe de la Armada. Bajo su control operaba la Oficina de Estudios Sociológicos de la Armada (OESA), unidad que diseñó la estrategia de cierre de la dictadura tras la derrota en el plebiscito de 1988, según los 'Papeles de la Dictadura' de CIPER (2023)."
+  celestino_cordova:
+    nombre: Celestino Córdova
+    cargo: Machi mapuche
+    notas: "Machi (autoridad espiritual) mapuche de la comunidad de Traitraiko, condenado por el incendio del templo católico de San Francisco de Valdivia. En agosto de 2020 protagonizó, junto a otros comuneros en huelga de hambre, un episodio que puso en riesgo su vida: tras dar un ultimátum al gobierno, inició una huelga seca a mediados de agosto de 2020, advirtiendo que 'si muere será culpa del gobierno'."
+  juan_miguel_fuente_alba:
+    nombre: Juan Miguel Fuente-Alba
+    cargo: Excomandante en jefe del Ejército (2010-2014)
+    organizacion: ejercito_chile
+    notas: "Excomandante en jefe del Ejército (2010-2014). En 2019 la ministra en visita Romy Rutherford ordenó su detención por presunto fraude al fisco (malversación de fondos de la Ley Reservada del Cobre por ~$5.600 millones) y aumento patrimonial injustificado (~$7.000 millones); fue procesado y su defensa apeló. Protagonista del caso Milicogate."
+  jozo_santic_palomino:
+    nombre: Jozo Santic Palomino
+    cargo: General (R) del Ejército, exjefe de finanzas
+    organizacion: ejercito_chile
+    notas: "General retirado del Ejército y exjefe de finanzas de la institución. En 2019 fue procesado por la ministra en visita Romy Rutherford por fraude al fisco ($88.178.948) y falsedad militar en las aristas Tecnodata II y III (60 facturas falsas de la empresa Tecnodata entre 2011-2013); posteriormente fue condenado y perdió el grado militar. Tesorero del Ejército bajo el mando de Fuente-Alba."
+  jaqueline_van_rysselberghe:
+    nombre: Jaqueline Van Rysselberghe
+    cargo: Exsenadora y exparlamentaria UDI
+    organizacion: udi
+    notas: "Parlamentaria UDI (senadora 2014-2022, antes diputada y presidenta de la UDI). En octubre de 2019 valoró el rechazo de la Cámara a la acusación constitucional contra la ministra Marcela Cubillos, acusando a la oposición de no querer permitirle al oficialismo avanzar en su programa de Gobierno."
+  fuad_chahin:
+    nombre: Fuad Chahín
+    cargo: Expresidente de la DC
+    organizacion: partido_democratacristiano
+    notas: "Abogado y político de la Democracia Cristiana, presidente del partido (2017-2020) y diputado. En abril de 2019 defendió la decisión de la bancada DC de aprobar la idea de legislar en la reforma tributaria de Piñera, abriendo una grieta con la oposición."
+  maite_orsini:
+    nombre: Maite Orsini
+    cargo: Diputada (RD/Frente Amplio)
+    organizacion: camara_diputados
+    notas: "Diputada de Revolución Democrática (Frente Amplio). En abril de 2019 criticó la reforma tributaria de Piñera: 'quienes aprobarán la Reforma Tributaria regalarán US$640 MM a las empresas más ricas del país'."
+  paula_vial:
+    nombre: Paula Vial
+    cargo: Abogada
+    notas: "Abogada defensora de la exministra Javiera Blanco en el caso Gendarmería. Tras el sobreseimiento de 2019 señaló que 'por fin se van aclarando muchas de las imputaciones que no tienen más que un objetivo político'."
+  mario_venegas:
+    nombre: Mario Venegas
+    cargo: Exdiputado DC
+    organizacion: partido_democratacristiano
+    notas: "Exdiputado de la Democracia Cristiana. Tras el rechazo de la acusación constitucional contra Marcela Cubillos (oct-2019) lamentó que 'perdió la educación pública' y que miembros de su bancada se alinearan con el oficialismo."
+  julio_ponce_lerou:
+    nombre: Julio Ponce Lerou
+    cargo: Empresario
+    notas: "Empresario chileno, ex yerno de Augusto Pinochet y controlador de las sociedades cascadas ligadas a SQM. En noviembre de 2020 pagó la multa de $2.152 millones que la CMF le impuso por el caso Cascadas, tras una polémica rebaja del monto original."
   angel_valencia:
     nombre: Ángel Valencia
     cargo: Fiscal Nacional de Chile
@@ -437,6 +483,10 @@ people:
     cargo: Directora del Programa de Derechos Humanos
     organizacion: programa_derechos_humanos
     notas: "Directora del Programa de Derechos Humanos del Ministerio de Justicia y DDHH. En abril de 2026 fue autora de un correo interno, revelado por BioBioChile, en el que reconoce haber recibido instrucciones de 'no alegar o apelar en causas en etapa de cumplimiento' de condenados por crímenes de lesa humanidad, contradiciendo la versión oficial del ministro Fernando Rabat. El correo fue usado por las organizaciones de DDHH en la denuncia ante la CIDH (agosto 2026) como evidencia de los 'indultos pasivos'."
+  alejandra_luneke:
+    nombre: Alejandra Luneke
+    cargo: Investigadora del Núcleo Milenio de Complejidad Criminal y académica de la U. Mayor
+    notas: "Académica e investigadora en seguridad pública; investigadora del Núcleo Milenio de Complejidad Criminal y profesora de la Universidad Mayor. En junio de 2026 publicó en La Tercera la columna 'Copamiento en barrios críticos: el alcance de la estrategia': Chile ha implementado al menos trece programas de prevención/control del delito desde comienzos de los 2000 sin evidencia de impacto; la experiencia de Brasil, Colombia y México muestra que los copamientos rara vez desarticulan de forma sostenida las redes criminales y producen desplazamiento del delito; los mejores resultados combinan persecución penal inteligente con intervenciones sociales (contexto del megaoperativo ACOT, evento 20260808-5)."
   alejandra_pizarro:
     nombre: Alejandra Pizarro
     cargo: Subsecretaria de Salud Publica
@@ -726,6 +776,10 @@ people:
     aliases:
       - Kast
       - JAK
+  patricio_mejias:
+    nombre: Patricio Mejías
+    cargo: Exfuncionario del SII, imputado en el caso Audios
+    notas: "Exfuncionario del Servicio de Impuestos Internos (SII). Imputado en el caso Audios (caso Hermosilla) por cohecho; formalizado en agosto de 2024 y reformalizado en enero de 2025 junto a Luis Hermosilla y Leonarda Villalobos."
   patricio_pinilla:
     nombre: Patricio Pinilla
     cargo: Diputado (DC)
@@ -1081,6 +1135,14 @@ people:
         organizacion: ministerio_hacienda
         desde: 2026-07-23
     organizacion: ministerio_hacienda
+  sebastian_soto:
+    nombre: Sebastián Soto Velasco
+    cargo: Investigador del Centro de Estudios Públicos (CEP)
+    notas: "Abogado constitucionalista, exvicepresidente de la Comisión Experta del segundo proceso constituyente (2023). En agosto de 2026 cuestionó en Radio Duna la vía de la reforma constitucional de seguridad del gobierno de Kast: 'creer que todos los problemas se resuelven con reformas constitucionales es un error' y advirtió que la discusión sobre seguridad nacional vs. seguridad pública puede volverse 'abstracta y retórica'."
+  sebastian_lorenzini:
+    nombre: Sebastián Lorenzini
+    cargo: Presidente de la Asociación de Diplomáticos de Carrera (Adica)
+    notas: "Presidente de la Asociación de Diplomáticos de Carrera (Adica). En agosto de 2026 cuestionó la política de nombramientos de embajadores del gobierno de Kast: de los 26 nuevos nombramientos, 23 provienen del mundo político y solo tres del Servicio Exterior, y pidió establecer por ley el criterio 80/20 de funcionarios de carrera: 'es la hora de establecer este 80/20 por ley y dejar de lado los acuerdos tácitos que simplemente no se cumplen'."
   sebastian_vallebona:
     nombre: Sebastián Vallebona Espinosa
     cargo: Subsecretario de Hacienda
@@ -1414,6 +1476,10 @@ people:
         hasta: 2026-04-07
     notas: Contador publico U. de Chile, renuncio a los 5 dias por presunta
       incompatibilidad. Ex DT.
+  jorge_rathgeb:
+    nombre: Jorge Rathgeb Schifferli
+    cargo: Seremi de Energía de La Araucanía
+    notas: "Seremi de Energía de la región de La Araucanía. En agosto de 2026 reconoció una 'estrechez' en la disponibilidad de pellet tras las largas esperas y alzas de precios denunciadas por vecinos de Temuco, descartando que se trate de un desabastecimiento y atribuyendo el fenómeno al aumento de demanda en Los Lagos y Los Ríos."
   jorge_ravelo:
     nombre: Jorge Ravelo Fuentes
     cargo: Ex Seremi de Energía de Los Lagos
@@ -1732,7 +1798,15 @@ people:
   gloria_naveillan:
     nombre: Gloria Naveillán
     cargo: Diputada (Partido Nacional Libertario)
-    notas: "Diputada del PNL. Cuestionó el estado de los vehículos de PDI y Carabineros en La Araucanía ante el recorte presupuestario."
+    notas: "Diputada del PNL. Cuestionó el estado de los vehículos de PDI y Carabineros en La Araucanía ante el recorte presupuestario. La comunidad mapuche Antonio Panitrur la acusó en agosto de 2026 de haber patrocinado denuncias punitivas y un clima de confrontación contra el pueblo mapuche (comunicado por la detención de sus werken; fuente comunitaria, sin respuesta pública registrada)."
+  adan_huentecol:
+    nombre: Adán Huentecol Neculpán
+    cargo: Werken de la comunidad mapuche Antonio Panitrur
+    notas: "Werken (vocero) de la comunidad mapuche Antonio Panitrur del bajo Malleco. En agosto de 2026 fue detenido junto a Dagoberto Soto Neculpán mientras reparaban un puente al ingreso de la comunidad; la comunidad denunció golpiza por parte de más de seis personas de civil que recién se identificaron como carabineros al aparecer un furgón escolar. Carabineros indicó que tenía una orden de detención pendiente de 2019. Quedó en libertad tras el control de detención (fuente comunitaria)."
+  dagoberto_soto_neculpan:
+    nombre: Dagoberto Soto Neculpán
+    cargo: Miembro de la comunidad mapuche Antonio Panitrur
+    notas: "Peñi de la comunidad mapuche Antonio Panitrur del bajo Malleco. En agosto de 2026 fue detenido junto al werken Adán Huentecol mientras reparaban un puente; la comunidad denunció golpiza por civiles que luego se identificaron como carabineros. Carabineros indicó que fue aprehendido por maltrato de obra a carabineros. Quedó en libertad tras el control de detención (fuente comunitaria)."
   daniel_reyes:
     nombre: Daniel Reyes
     cargo: Alcalde de La Florida (Republicano)
@@ -2058,6 +2132,14 @@ people:
     nombre: Mario Vargas
     cargo: Abogado penalista
     notas: "Abogado penalista. En 2020 defendió al capitán Patricio Maturana en el sumario interno por el caso Campillai (el 24 de abril de 2020 la institución le entregó copia del sumario; prevaleció que no existían antecedentes suficientes para atribuir responsabilidad a Maturana). Junto a Eduardo Lagos y Gabriel Silber integró la sociedad de abogados que asesoró a Inmobiliaria Fundamenta y al Consorcio Bielorruso Belaz Movitec (trama bielorrusa) y está bajo la lupa por la arista Fundamenta del caso Audios (ver evento 20260805-29)."
+  eduardo_duran:
+    nombre: Eduardo Durán Salinas
+    cargo: Diputado (RN)
+    cargos:
+      - cargo: Diputado (RN)
+        organizacion: renovacion_nacional
+        desde: 2026-03-11
+    notas: "Diputado de Renovación Nacional, subjefe de la bancada. En agosto de 2026 destacó la aprobación de la Ley Naín-Retamal 2.0: 'un carabinero no deja de ser carabinero una vez que se saca el uniforme', entregando certeza jurídica y protección legal a las policías en el uso de sus facultades fuera de servicio."
   eduardo_lagos:
     nombre: Eduardo Lagos
     cargo: Abogado penalista
@@ -2078,6 +2160,16 @@ people:
     nombre: Sergio Muñoz Gajardo
     cargo: Exministro de la Corte Suprema
     notas: "Exministro de la Corte Suprema que fue inhabilitado en la causa de Inmobiliaria Fundamenta (Plaza Egaña SpA) tras conocerse que su hija, Graciel Muñoz, había firmado una promesa de compraventa en el edificio Egaña. Su salida de la sala destrabó el recurso que favorecía a la inmobiliaria (CIPER, caso Fundamenta)."
+  jean_pierre_matus:
+    nombre: Jean Pierre Matus
+    cargo: Ministro de la Corte Suprema
+    organizacion: corte_suprema
+    notas: "Ministro de la Corte Suprema desde 2021 (cupo de abogados externos, nominado por Sebastián Piñera y ratificado por el Senado 30-4-3). Salpicado por el caso Audios por sus chats con Luis Hermosilla; sobrevivió a una acusación constitucional que la Cámara de Diputados rechazó el 15 de octubre de 2024 (66-54-14)."
+  sergio_munoz_yanez:
+    nombre: Sergio Muñoz Yáñez
+    cargo: Ex Director General de la PDI
+    organizacion: pdi
+    notas: "General de la Policía de Investigaciones. Director General de la PDI hasta el 15 de marzo de 2024, cuando renunció tras el allanamiento de su casa y oficina en el marco del caso Audios por presunta filtración de información reservada a Luis Hermosilla. Formalizado por violación de secreto y condenado en procedimiento abreviado a 3 años de pena remitida en libertad vigilada (primera sentencia del caso Audios, 2025)."
   martin_pena:
     nombre: Martín Peña
     cargo: Mecánico, antiguo cliente del abogado Eduardo Lagos
@@ -2441,6 +2533,14 @@ people:
     cargo: Diputado (Partido Republicano)
     organizacion: partido_republicano
     notas: "Diputado del Partido Republicano por el distrito 11 (Las Condes, Lo Barnechea, Vitacura, La Reina y Peñalolén). En agosto de 2026 quedó en el centro de las críticas por viajar a España entre el 23 y el 31 de julio, coincidiendo con parte de la semana distrital, tras informar su salida al presidente de la Cámara de Diputados, Jorge Alessandri, por 'motivos personales' (artículo 34 del reglamento interno de la corporación)."
+  carlos_cuadrado:
+    nombre: Carlos Cuadrado Prats
+    cargo: Diputado (PPD)
+    cargos:
+      - cargo: Diputado (PPD)
+        organizacion: partido_por_la_democracia
+        desde: 2026-03-11
+    notas: "Diputado del PPD. En agosto de 2026 respaldó en la Cámara la Ley Naín-Retamal 2.0 (legítima defensa privilegiada a funcionarios de franco): 'voy a votar a favor de este proyecto y quiero hacerlo desde la izquierda, pero desde una izquierda que no tiene complejos para hablar de seguridad. La seguridad no es una bandera de la derecha'."
   carlos_bianchi:
     nombre: Carlos Bianchi
     cargo: Diputado (PPD-Ind)
@@ -2505,6 +2605,15 @@ people:
     cargo: Economista del Instituto Libertad
     organizacion: instituto_libertad
     notas: "Economista del Instituto Libertad. Tras la ENE abril-junio 2026 advirtió que el empleo asalariado privado cayó 1,6% anual mientras el trabajo por cuenta propia crece 8,6%, señalando que 'las empresas siguen postergando nuevas contrataciones' y que hay una precarización de las oportunidades laborales."
+  mijael_carvones:
+    nombre: Mijael Carvones
+    cargo: Werken de la Comunidad Autónoma de Temucuicui
+    organizacion: comunidad_temucuicui
+    notas: "Werken (vocero) de la Comunidad Autónoma de Temucuicui, comuna de Ercilla, Región de La Araucanía. En enero de 2023 quedó bajo arresto domiciliario y el tribunal rechazó la prisión preventiva solicitada por la Fiscalía (27 de enero de 2023), ordenando que cumpliera la medida fuera de Temucuicui; Carabineros denunció incumplimientos en febrero de 2023."
+  manuel_jose_ossandon:
+    nombre: Manuel José Ossandón
+    cargo: Senador de Renovación Nacional
+    notas: "Senador RN. En la votación de la acusación constitucional contra Piñera (16 de noviembre de 2021) se abstuvo en ambos capítulos, criticando la mezcla de negocios y política del mandatario."
   manuel_viera:
     nombre: Manuel Viera
     cargo: Presidente de la Cámara Minera de Chile
@@ -3032,6 +3141,10 @@ people:
         desde: 2026-03-11
     organizacion: partido_republicano
     notas: Integrante de la Comisión de Salud. Impulsa proyecto para sancionar venta de Misoprostol.
+  paz_zarate:
+    nombre: Paz Zárate
+    cargo: Internacionalista
+    notas: "Internacionalista chilena. En agosto de 2026 criticó en X el video del Departamento de Estado que reivindica la Doctrina Monroe como fundamento de la estrategia hemisférica de Trump: 'propaganda trumpista pretende justificar que todo el continente americano acepte el protectorado de un EEUU imperial. Chile proclamó su independencia en 1818' (fuente de opinión, citada por prensa)."
   paz_charpentier:
     nombre: Paz Charpentier
     cargo: Diputada (REP)
@@ -3416,6 +3529,10 @@ people:
     nombre: Javiera Reyes
     cargo: Alcaldesa de Lo Espejo
     notas: "Alcaldesa de Lo Espejo (Partido Comunista). Tras el despacho de la megarreforma (agosto 2026) criticó el mecanismo de compensación municipal: denunció que de los 80 mil millones de pesos de compensación directa, la mitad beneficiará a seis comunas de altos ingresos mientras las otras 339 municipalidades se reparten el resto. En entrevista del 6 de agosto detalló que el presupuesto de Lo Espejo multiplicado por 16 equivale al de Las Condes, que los 200 mil millones debían ir íntegros al FCM y que unos 40 mil millones irán a seis comunas de altos ingresos sin consideración de necesidad."
+  maximiliano_rios:
+    nombre: Maximiliano Ríos Galarce
+    cargo: Alcalde de Lo Prado
+    notas: "Alcalde de Lo Prado y presidente de la Comisión de Seguridad de la Asociación Chilena de Municipalidades. Tras la reunión de alcaldes con Kast del 11 de agosto de 2026 criticó que los municipios no fueron considerados durante los primeros cinco meses del gobierno en la agenda de seguridad: no fueron consultados por la selección de los 50 barrios prioritarios, pidió complementar la 'mano dura' con prevención y recursos, y se mostró abierto a evaluar caso a caso la participación de las FF.AA."
   maximiliano_luksic:
     nombre: Maximiliano Luksic
     cargo: Alcalde de Huechuraba (Ind.)
@@ -3461,6 +3578,10 @@ people:
     nombre: Gustavo Alessandri
     cargo: Alcalde de Zapallar y expresidente de la AChM
     notas: "Alcalde de Zapallar y expresidente de la Asociación Chilena de Municipalidades (AChM). En agosto 2026 buscó evitar que la disputa por la compensación del Fondo Común Municipal fracture a la AChM."
+  maurice_khamis_massu:
+    nombre: Maurice Khamis Massú
+    cargo: Presidente de la Comunidad Palestina de Chile
+    notas: "Presidente de la Comunidad Palestina de Chile. En agosto de 2026 acusó una 'reiterada injerencia' del embajador de Israel Peleg Lewi por cuestionar decisiones de instituciones chilenas (municipalidad de Viña del Mar), citando el artículo 41 de la Convención de Viena: 'Chile no puede rendirse ante una potencia extranjera; los destinos de nuestro país los definen los chilenos'."
   maurice_poirrier:
     nombre: Maurice Poirrier
     cargo: Director de la Secretaría de Gobierno Digital
@@ -3555,6 +3676,10 @@ people:
         organizacion: camara_diputados
         desde: 2026-03-11
     organizacion: camara_diputados
+  lorena_parra:
+    nombre: Lorena Parra
+    cargo: Fiscal Regional Metropolitana Oriente
+    notas: "Fiscal Regional Metropolitana Oriente. Dirigió la investigación del caso Audios (caso Hermosilla) y del caso Factop, incluidas las formalizaciones masivas de enero de 2025 en el 4° Juzgado de Garantía de Santiago."
   lorena_pizarro:
     nombre: Lorena Pizarro
     cargo: Diputada (PC)
@@ -3630,6 +3755,10 @@ people:
     nombre: Jorge Brito
     cargo: Diputado
     notas: "Diputado. El 10 de agosto de 2026 criticó en X los vetos de Kast a la megarreforma (olvido financiero y pago a 30 días a las pymes), calificando el cierre de la reforma de 'capítulo negro'."
+  cristian_palma:
+    nombre: Cristian Palma
+    cargo: Delegado presidencial de Los Lagos
+    notas: "Delegado presidencial de la región de Los Lagos. En agosto de 2026, consultado por la salida de la seremi de Salud Evelyn Brintrup, alegó desconocimiento de las razones particulares de la desvinculación."
   cristian_tapia:
     nombre: Cristián Tapia
     cargo: Diputado (Ind.-PPD), presidente de la Comisión de Minería y Energía de la Cámara
@@ -4082,6 +4211,10 @@ people:
         desde: 2020-06-04
         hasta: 2020-07-28
     notas: "Abogado y político RN. Expresidente de Renovación Nacional y exministro. Criticó que el embajador Judd mande 'a leer el tratado' a ministros chilenos."
+  leonarda_villalobos:
+    nombre: Leonarda Villalobos
+    cargo: Abogada, imputada en el caso Audios
+    notas: "Abogada imputada en el caso Audios (caso Hermosilla) por soborno, cohecho y lavado de activos tras difundirse el audio de la reunión de agosto de 2023 con Luis Hermosilla y Daniel Sauer. En prisión preventiva desde la formalización de agosto de 2024; reformalizada en enero de 2025."
   leonardo_prieto:
     nombre: Leonardo Prieto
     cargo: Socio y conductor de Porcel TV
@@ -4420,6 +4553,10 @@ people:
     cargo: Diputado Partido Republicano
     organizacion: partido_republicano
     notas: "Diputado del Partido Republicano. Valoró el avance del proyecto que faculta a militares a realizar controles de identidad en estados de excepción (junio 2026), señalando que permite un uso más eficiente del recurso humano."
+  jaime_naranjo:
+    nombre: Jaime Naranjo
+    cargo: Diputado del Partido Socialista
+    notas: "Diputado PS por la Región del Biobío. En la sesión de la acusación constitucional contra Sebastián Piñera (noviembre 2021) expuso durante cerca de 15 horas para esperar la llegada del diputado Giorgio Jackson y habilitar el quórum de votación."
   jaime_mulet:
     nombre: Jaime Mulet
     cargo: Diputado y presidente de la Comisión de Constitución de la Cámara (FRVS)
@@ -4558,6 +4695,10 @@ people:
     cargo: Diputado Partido Republicano
     organizacion: partido_republicano
     notas: "Diputado del Partido Republicano. Cuestionó especialmente a la diputada Consuelo Veloso por los dichos sobre el Servel (julio 2026), señalando que 'está cuestionando la votación más contundente de la historia de nuestra democracia'."
+  alejandra_valle:
+    nombre: Alejandra Valle
+    cargo: Concejala de Ñuñoa
+    notas: "Concejala de Ñuñoa. En agosto de 2026 pidió una mesa de trabajo tras la huelga del Liceo Augusto D'Halmar por sus malas condiciones de infraestructura: 'nadie está pidiendo las soluciones para ahora, ellos solo piden una mesa de trabajo para ir avanzando'."
   alejandra_valdebenito:
     nombre: Alejandra Valdebenito
     cargo: Diputada UDI
@@ -5015,6 +5156,10 @@ people:
         organizacion: slep_puerto_cordillera
         desde: 2026-08-05
     notas: "Directora ejecutiva del Servicio Local de Educación Pública (SLEP) Puerto Cordillera, designada por el presidente José Antonio Kast mediante el Sistema de Alta Dirección Pública y presentada el 5 de agosto de 2026. Fue multada (20% de remuneraciones) por salir de Chile con licencia médica; lo atribuye a una urgencia médica por enfermedad autoinmune."
+  pedro_lea_plaza:
+    nombre: Pedro Lea-Plaza Cáceres
+    cargo: Director Nacional del Servicio Civil
+    notas: "Director Nacional del Servicio Civil del gobierno de Kast. En agosto de 2026 fue emplazado por la Anef, junto al ministro del Trabajo Tomás Rau, a aclarar su posición frente a la comisión impulsada por Hacienda para revisar el Estatuto Administrativo, que el gremio consideró contradictoria con el acuerdo de crear una Mesa Sectorial Anef-Gobierno."
   pedro_larrain_aguirre:
     nombre: Pedro Larraín Aguirre
     cargo: Director de Educación Pública
@@ -5149,6 +5294,10 @@ people:
     nombre: Álvaro Bellolio
     cargo: Jefe de Políticas Públicas del Segundo Piso
     notas: "Ingeniero civil industrial y exdirector del Servicio Nacional de Migraciones; asesor de La Moneda con $6,9 millones brutos mensuales, cuestionado por su doble rol como Core remunerado."
+  cristobal_bellolio:
+    nombre: Cristóbal Bellolio
+    cargo: Sociólogo y académico UDP
+    notas: "Sociólogo, académico de la Universidad Diego Portales y panelista de Chilevisión (programa Animales Políticos). El 11 de marzo de 2026, ante la frase del diputado Álvaro Carter sobre un 'país más pobre, pero más feliz', sugirió que el parlamentario se había enredado con las palabras al apelar a la nostalgia por la cohesión social de hace una década (evento 20260311-5)."
   francisco_riveros_cantuarias:
     nombre: Francisco Riveros Cantuarias
     cargo: Abogado del Segundo Piso (proyecto 'Inspección Total')
@@ -5160,6 +5309,11 @@ people:
   augusto_pinochet_hiriart:
     nombre: Augusto Pinochet Hiriart
     cargo: Empresario, hijo de Augusto Pinochet
+  carlos_alberto_delano:
+    nombre: Carlos Alberto Délano
+    cargo: Empresario, fundador del Grupo Penta
+    organizacion: grupo_penta
+    notas: "Empresario chileno, fundador del Grupo Penta junto a Carlos Eugenio Lavín y condenado por evasión fiscal en el caso Penta. Su familia compró Minera Dominga a la familia Piñera en diciembre de 2010 por US$152 millones mediante sociedades en Islas Vírgenes Británicas, operación revelada por los Pandora Papers (CIPER, octubre 2021)."
   carlos_cruz:
     nombre: Carlos Cruz Lorenzen
     cargo: Ex ministro de Obras Públicas (2000-2002)
@@ -6053,6 +6207,10 @@ people:
         desde: 2006-07-17
         hasta: 2008-01-08
 
+  hugo_gutierrez:
+    nombre: Hugo Gutiérrez
+    cargo: Ex diputado del Partido Comunista, abogado
+    notas: "Abogado y ex diputado del Partido Comunista. Presentó una querella contra Sebastián Piñera por el caso Barrancones/Dominga, proceso en el que el ex presidente fue sobreseído."
   hugo_lavados:
     nombre: Hugo Lavados Montes
     cargo: Ministro de Economía, Fomento y Turismo
@@ -8476,6 +8634,17 @@ organizations:
     nombre: Servicio Médico Legal
     tipo: servicio_publico
     pais: Chile
+    notas: "Servicio público dependiente del Ministerio de Justicia y DDHH, encargado de las pericias forenses (autopsias, exámenes psicológicos, cotejo de huellas genéticas). Por la Ley 19.970 (Sistema Nacional de Registros de ADN) concentra el cotejo de huellas genéticas contra el registro nacional y la tuición técnica sobre los laboratorios que realizan peritajes biológicos (art. 199 bis del Código Procesal Penal). En agosto de 2026, la ACOT del gobierno de Kast propuso terminar con su monopolio en las pesquisas de ADN habilitando a los laboratorios de las policías (LABOCAR/LACRIM) sin acreditación separada (evento 20260806-48)."
+  labocar:
+    nombre: LABOCAR (Laboratorio de Criminalística de Carabineros)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Laboratorio de Criminalística de Carabineros de Chile. Junto a LACRIM (PDI), realiza trabajo pericial en sitio del suceso (levantamiento, fijación y cadena de custodia de evidencias biológicas) y análisis de ADN conforme a su acreditación. La ACOT del gobierno de Kast (agosto 2026) propuso habilitarlo para la toma de muestras biológicas y de huella sin acreditación separada ante el SML (evento 20260806-48)."
+  lacrim:
+    nombre: LACRIM (Laboratorio de Criminalística de la PDI)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Laboratorio de Criminalística de la Policía de Investigaciones (PDI). Junto a LABOCAR (Carabineros), realiza trabajo pericial en sitio del suceso y análisis de ADN conforme a su acreditación. La ACOT del gobierno de Kast (agosto 2026) propuso habilitarlo para la toma de muestras biológicas y de huella sin acreditación separada ante el SML (evento 20260806-48)."
   fiscalia_occidente:
     nombre: Fiscalía de Alta Complejidad Occidente
     tipo: fiscalia
@@ -8954,6 +9123,16 @@ organizations:
     tipo: think_tank
     pais: Chile
     notas: "Think tank liberal. Socio de Atlas Network. Creado por el empresario Nicolas Ibanez Scott."
+  comunidad_temucuicui:
+    nombre: Comunidad Autónoma de Temucuicui
+    tipo: comunidad
+    pais: Chile
+    notas: "Comunidad mapuche de la comuna de Ercilla (Región de La Araucanía), referente del conflicto en la macrozona sur. En el verano de 2023 protagonizó la amenaza de 'levantamiento mapuche' por la incautación de cosechas y presentó querellas contra Carabineros por procedimientos con disparos y heridos por perdigón."
+  desarrollo_pais:
+    nombre: Desarrollo País
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa pública chilena que participa con el 1% en el cable submarino Humboldt de Google (Chile-Australia/Asia-Pacífico, más de US$300 millones, aprobado en 2026), junto al 99% de Google."
   ciper_chile:
     nombre: CIPER Chile
     tipo: medio_comunicacion
@@ -8989,6 +9168,11 @@ organizations:
     tipo: holding_empresarial
     pais: Chile
     notas: "Grupo economico controlado por Carlos Alberto Delano y Carlos Eugenio Lavin. Protagonista del caso Penta de financiamiento ilegal de la politica."
+  andes_iron:
+    nombre: Andes Iron
+    tipo: empresa_minera
+    pais: Chile
+    notas: "Empresa dueña del proyecto minero Dominga (pertenencias Santa Dominga Norte y Sur, comuna de La Higuera, Región de Coquimbo). Controlada por la familia de Carlos Alberto Délano desde la compraventa de diciembre de 2010 (US$152 millones) revelada por los Pandora Papers (CIPER, octubre 2021). El proyecto es criticado por su eventual impacto en la Reserva Nacional Pingüino de Humboldt."
   sqm:
     nombre: SQM (Soquimich)
     tipo: minera
@@ -9499,6 +9683,11 @@ organizations:
     tipo: establecimiento_educacional
     pais: Chile
     notas: "Liceo emblemático de Santiago Centro. Fue tomado por sus estudiantes el 4 de agosto de 2026; la comunidad resguardó a los estudiantes del Programa de Integración Escolar (PIE) y de 7° y 8° básico a la espera de sus apoderados."
+  liceo_augusto_dhalmar:
+    nombre: Liceo Augusto D'Halmar
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo municipal de Ñuñoa, único establecimiento público dentro de los 100 mejores colegios del país. El presidente José Antonio Kast realizó allí su primera actividad pública tras asumir el mando (marzo 2026). En agosto de 2026, cinco meses después de esa visita, entró en huelga con el apoyo de casi el 90% del alumnado por malas condiciones de infraestructura: goteras, patios inundados, ratones, problemas eléctricos y baños en malas condiciones."
   inba:
     nombre: Internado Nacional Barros Arana (INBA)
     tipo: establecimiento_educacional
@@ -9835,6 +10024,16 @@ organizations:
     tipo: empresa
     pais: Chile
     notas: "Principal bolsa de valores de Chile. Jorge Quiroz forma parte de su directorio."
+  kpmg:
+    nombre: KPMG
+    tipo: empresa
+    pais: Chile
+    notas: "Auditora externa (big four). Contratada por el directorio de Codelco en 2026 para realizar una auditoría externa e independiente sobre los informes de producción 2024 y 2025. La directora de Codelco y presidenta del CACE, Tamara Agnic, fue socia de KPMG hasta septiembre de 2021, vínculo que generó cuestionamientos por posible conflicto de interés en la comisión investigadora de la Cámara."
+  futuracoop:
+    nombre: Futurocoop
+    tipo: empresa
+    pais: Chile
+    notas: "Quesería fiscalizada por la autoridad sanitaria. En agosto de 2026 se reveló que la exseremi de Salud de Los Lagos Evelyn Brintrup promocionó sus quesos en su Instagram personal ('El Mejor Queso') mientras la empresa era fiscalizada, y una semana después aplicó una dura sanción a una quesería de la competencia (prohibición de funcionamiento e incautación de productos)."
   salcobrand:
     nombre: Salcobrand S.A.
     tipo: empresa
@@ -10386,6 +10585,11 @@ organizations:
     nombre: Resumen Latinoamericano
     tipo: medio_comunicacion
     notas: "Medio digital latinoamericano (resumenlatinoamericano.org)."
+  radio_kurruf:
+    nombre: Radio Kurruf
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio comunitaria mapuche de La Araucanía (radiokurruf.org). Difunde comunicados de comunidades mapuche; medio alternativo/complementario para la cobertura de la demanda mapuche."
   el_arrebato:
     nombre: El Arrebato
     tipo: medio_comunicacion
@@ -10934,6 +11138,21 @@ organizations:
     tipo: institucion
     pais: Chile
     notas: "Organismo rector en materia migratoria; su exdirector Luis Thayer cuestionó en agosto 2026 los cambios metodológicos en las cifras de ingresos irregulares del gobierno."
+  instituto_prevision_social:
+    nombre: Instituto de Previsión Social (IPS)
+    tipo: institucion
+    pais: Chile
+    notas: "Organismo público que administra el pago de pensiones y beneficios estatales. En agosto de 2026 entregó la compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada (del 7 al 28 de agosto), junto con otros bonos del programa Chile Seguridades y Oportunidades, sin postulación."
+  chile_seguridades_oportunidades:
+    nombre: Chile Seguridades y Oportunidades
+    tipo: programa
+    pais: Chile
+    notas: "Programa de acompañamiento psicosocial y laboral del Estado (ex Chile Seguro y Oportunidades). En agosto de 2026 era el requisito de vigencia para recibir la compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada: haber tenido el Bono por Control Niño Sano en junio de 2025, cobrado por un integrante vigente del programa, y mantener la condición de vigencia en agosto de 2026."
+  comunidad_antonio_panitrur:
+    nombre: Comunidad mapuche Antonio Panitrur
+    tipo: comunidad
+    pais: Chile
+    notas: "Comunidad mapuche del bajo Malleko (Región de La Araucanía) en proceso de reivindicación territorial contra empresas forestales y latifundistas. En agosto de 2026 denunció la detención violenta de su werken Adán Huentecol Neculpán y de Dagoberto Soto Neculpán mientras reparaban un puente, afirmando que fueron golpeados por más de seis personas de civil que recién se identificaron como carabineros al aparecer un furgón escolar; ambos quedaron en libertad tras el control de detención en Collipulli (fuente comunitaria)."
   subsecretaria_salud_publica:
     nombre: Subsecretaría de Salud Pública
     tipo: institucion
@@ -11412,6 +11631,22 @@ cifras:
     nombre: Efectivos de la PDI en el operativo de Plaza de Armas
     unidad_default: efectivos
     notas: "55 efectivos de la Policía de Investigaciones (PDI) desplegados junto a 60 carabineros en el operativo de la Plaza de Armas de Santiago del 6 de agosto de 2026, con apoyo de Seguridad Municipal, según La Tercera."
+  compensacion_colusion_medicamentos_por_menor:
+    nombre: Compensación por menor por colusión de medicamentos
+    unidad_default: pesos
+    notas: "$45.030 por cada menor de seis años vinculado al programa Control Niño Sano que cumpla los requisitos (Bono Control Niño Sano de junio 2025 cobrado por un integrante vigente de Chile Seguridades y Oportunidades, con vigencia en agosto 2026). Pago del Sernac por la colusión de medicamentos de Farmacias Ahumada (dic-2007/mar-2008), vía IPS, del 7 al 28 de agosto de 2026, sin postulación."
+  receptores_compensacion_colusion_medicamentos:
+    nombre: Receptores de la compensación por colusión de medicamentos
+    unidad_default: receptores
+    notas: "Unos 6.602 receptores, correspondientes a 7.833 menores de familias vulnerables, que recibirán la compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada, según el Sernac (agosto 2026)."
+  menores_colusion_medicamentos:
+    nombre: Menores que reciben la compensación por colusión de medicamentos
+    unidad_default: menores
+    notas: "7.833 menores pertenecientes a familias vulnerables que reciben la compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada (pago vía IPS del 7 al 28 de agosto de 2026), según el Sernac."
+  compensacion_total_colusion_medicamentos_2025:
+    nombre: Compensación total del acuerdo por colusión de medicamentos
+    unidad_default: millones_de_pesos
+    notas: "$980 millones de compensación total del acuerdo conciliatorio de agosto 2025 entre el Sernac y Farmacias Ahumada (aprobado por la justicia) por la colusión de precios de 200 medicamentos entre diciembre de 2007 y marzo de 2008: un primer grupo de 17.652 personas directamente afectadas recibió en 2025 un pago de $32.620 cada una, y el segundo grupo de 'interés difuso' se destinó a poco más de $404 millones que financian el beneficio de $45.030 por menor de 2026."
   medicamentos_coludidos_farmacias:
     nombre: Medicamentos coludidos por las farmacias
     unidad_default: medicamentos
@@ -13132,6 +13367,14 @@ cifras:
     nombre: Detenidos en el megaoperativo nacional ACOT
     unidad_default: personas
     notas: "1.341 detenidos en el megaoperativo nacional de Carabineros y PDI (noche del 7 de agosto de 2026): 656 de Carabineros y 685 de la PDI."
+  detenidos_megaoperativo_marzo:
+    nombre: Detenidos en el primer megaoperativo de 2026 (marzo)
+    unidad_default: personas
+    notas: "2.905 personas detenidas con órdenes vigentes en el primer megaoperativo del gobierno de Kast (marzo de 2026), según El Ciudadano/CIPER. De ellas solo 193 (7%) estaban acusadas de delitos de alta connotación violenta; Carabineros puso 1.186 a disposición del control de detención y ni la policía ni el Ministerio de Seguridad registran cuántas terminaron en prisión preventiva."
+  detenidos_alta_connotacion_megaoperativo_marzo:
+    nombre: Detenidos de alta connotación violenta en el megaoperativo de marzo 2026
+    unidad_default: personas
+    notas: "193 de los 2.905 detenidos en el primer megaoperativo de 2026 (7%) estaban acusados de delitos de alta connotación violenta (homicidio, secuestro, violación o robos con intimidación), según El Ciudadano/CIPER."
   droga_incautada_megaoperativo_acot:
     nombre: Droga incautada en el megaoperativo nacional ACOT
     unidad_default: kilos
@@ -13148,6 +13391,26 @@ cifras:
     nombre: Efectivos desplegados en el megaoperativo nacional ACOT
     unidad_default: efectivos
     notas: "5.000 efectivos (3.500 de Carabineros y 1.500 de la PDI) desplegados en el megaoperativo nacional ACOT del 7 de agosto de 2026."
+  detenidos_fortaleza_3:
+    nombre: Detenidos en la Operación Fortaleza 3
+    unidad_default: detenidos
+    notas: "2.495 personas detenidas en la Operación Fortaleza 3 (3-5 nov 2025), tercer megaoperativo nacional conjunto de Carabineros y PDI bajo el gobierno de Boric; el 85% pasó a control de detención."
+  droga_incautada_fortaleza_3:
+    nombre: Droga incautada en la Operación Fortaleza 3
+    unidad_default: kilos
+    notas: "452 kilos de droga incautados en la Operación Fortaleza 3 (nov 2025)."
+  armas_incautadas_fortaleza_3:
+    nombre: Armas incautadas en la Operación Fortaleza 3
+    unidad_default: armas
+    notas: "81 armas de fuego incautadas en la Operación Fortaleza 3 (nov 2025), más 113 municiones."
+  efectivos_fortaleza_3:
+    nombre: Efectivos desplegados en la Operación Fortaleza 3
+    unidad_default: efectivos
+    notas: "6.281 efectivos desplegados en la Operación Fortaleza 3 (1.129 en la Región Metropolitana y ~5.152 en regiones) más 2.194 medios logísticos."
+  extranjeros_fiscalizados_fortaleza_3:
+    nombre: Extranjeros fiscalizados en la Operación Fortaleza 3
+    unidad_default: extranjeros
+    notas: "2.734 personas extranjeras fiscalizadas en la Operación Fortaleza 3 (52% venezolanos, 18% colombianos, 12% bolivianos)."
   aportes_ecomac_campana_golborne:
     nombre: Aportes de Inmobiliaria Ecomac a la campaña de Golborne
     unidad_default: millones_pesos
@@ -13754,6 +14017,26 @@ cifras:
     nombre: Empleos formales creados en el trimestre abril-junio 2026
     unidad_default: empleos
     notas: "66.798 empleos formales y 32.231 informales en el trimestre; 81.756 formales entre técnicos superiores completos y destrucción de 14.959 empleos universitarios (OCEC-UDP, La Tercera, 10 agosto 2026)."
+  trabajadores_pierden_empleo_calidad:
+    nombre: Trabajadores que pierden su empleo de calidad en doce meses
+    unidad_default: trabajadores
+    notas: "102,6 mil trabajadores que antes tenían un empleo de calidad ya no lo tienen en doce meses, según el Indicador de Calidad del Empleo de Horizontal (caída de 1,7 pp, explicada principalmente por la disminución de trabajadores con cotizaciones de seguridad social). El 67,9% de los ocupados cumple las cuatro dimensiones del indicador (La Tercera, 11 agosto 2026)."
+  caida_calidad_empleo_anual:
+    nombre: Caída anual del Indicador de Calidad del Empleo
+    unidad_default: puntos_porcentuales
+    notas: "-1,7 pp en doce meses en el Indicador de Calidad del Empleo de Horizontal; en mujeres la caída fue de -2,9 pp (65,0%) y en hombres de -0,7 pp (70,0%) (La Tercera, 11 agosto 2026)."
+  empleos_formales_destruidos_anual:
+    nombre: Empleos formales destruidos en el último año
+    unidad_default: empleos
+    notas: "32.800 empleos formales destruidos en doce meses (cuatro meses consecutivos a la baja); la totalidad de las nuevas plazas fueron informales (114 mil, +4,7% en 12 meses, mayor alza desde abril-junio 2022). 2.537.804 personas trabajan en la informalidad (La Tercera, 11 agosto 2026)."
+  personas_informalidad_2026:
+    nombre: Personas trabajando en la informalidad
+    unidad_default: personas
+    notas: "2.537.804 personas trabajando en la informalidad (La Tercera, 11 agosto 2026, sobre datos INE del trimestre abril-junio 2026)."
+  embajadores_politicos_kast:
+    nombre: Nuevos embajadores provenientes del mundo político bajo Kast
+    unidad_default: embajadores
+    notas: "23 de los 26 nuevos nombramientos de embajadores del gobierno de Kast corresponden a personas del mundo político y solo tres al Servicio Exterior; Adica pidió establecer por ley el criterio 80/20 (ADN Radio, 11 agosto 2026)."
   empleos_subempleo_educacion_superior_anual:
     nombre: Proporción de la creación anual de empleo con educación superior en subempleo por calificaciones
     unidad_default: "%"

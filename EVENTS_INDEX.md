@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (343)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (377)
 
 <details>
-<summary>Ver lista (343 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (377 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -16,11 +16,15 @@
 - [2016/01/20160118-1 - CDE pide reabrir el caso Riggs para investigar las malversaciones de la Fundación CEMA Chile](src/content/events/2016/01/20160118-1.md) — **1 fuente**
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — **1 fuente**
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — **1 fuente**
+- [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — **1 fuente**
+- [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — **1 fuente**
 - [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — **1 fuente**
+- [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — **1 fuente**
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — **1 fuente**
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — **1 fuente**
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — **1 fuente**
 - [2020/10/20201019-1 - The Guardian estrena documental sobre los manifestantes cegados en el estallido que buscan justicia: 'This is mutilation'](src/content/events/2020/10/20201019-1.md) — **1 fuente**
+- [2020/11/20201107-1 - Confusam anuncia paro nacional de 48 horas: 'la salud de las personas no es valorada por el gobierno'](src/content/events/2020/11/20201107-1.md) — **1 fuente**
 - [2020/12/20201218-1 - Caso Luminarias alcanza a Jadue: Fiscalía indaga donación de Itelecom por $50 millones a la Corporación Cultural de Recoleta](src/content/events/2020/12/20201218-1.md) — **1 fuente**
 - [2020/12/20201231-1 - Karen Rojo es declarada culpable por fraude al fisco en el caso de la Corporación Municipal de Antofagasta](src/content/events/2020/12/20201231-1.md) — **1 fuente**
 - [2021/03/20210323-1 - CIPER revela imágenes de agentes del Ejército que espiaban el despacho de la jueza Romy Rutherford: denuncia llega a la Fiscalía](src/content/events/2021/03/20210323-1.md) — **1 fuente**
@@ -37,10 +41,11 @@
 - [2024/07/20240730-1 - Boric condena expulsión de diplomáticos chilenos, pero descarta romper relaciones con Venezuela](src/content/events/2024/07/20240730-1.md) — **1 fuente**
 - [2024/08/20240804-1 - Van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'](src/content/events/2024/08/20240804-1.md) — **1 fuente**
 - [2024/09/20240927-1 - CIPER revela que la Subsecretaría de Educación pagó $1.479 millones a la USS cuando Marcela Cubillos era ministra](src/content/events/2024/09/20240927-1.md) — **1 fuente**
+- [2024/10/20241015-1 - Cámara rechaza la acusación constitucional contra el ministro de la Suprema Jean Pierre Matus por el caso Audios](src/content/events/2024/10/20241015-1.md) — **1 fuente**
 - [2024/12/20241205-1 - Fiscalía detalla cómo operaba la 'mafia del fuego' detrás del megaincendio de Valparaíso](src/content/events/2024/12/20241205-1.md) — **1 fuente**
-- [2025/01/20250113-1 - Caso Factop: formalizan a 16 imputados, entre ellos ocho ejecutivos de LarrainVial, por lavado de activos y estafa](src/content/events/2025/01/20250113-1.md) — **1 fuente**
 - [2025/01/20250130-1 - Exalcalde de Arica Gerardo Espíndola queda en la mira del Ministerio Público por cohecho y fraude al fisco tras informe de Contraloría](src/content/events/2025/01/20250130-1.md) — **1 fuente**
 - [2025/01/20250131-1 - Tensión por 'suspensión' de relaciones diplomáticas con Venezuela: parlamentarios piden ruptura](src/content/events/2025/01/20250131-1.md) — **1 fuente**
+- [2025/03/20250328-1 - Primera sentencia del caso Audios: exdirector de la PDI Sergio Muñoz acuerda tres años de libertad vigilada](src/content/events/2025/03/20250328-1.md) — **1 fuente**
 - [2025/04/20250409-1 - Estudio UDD revela impacto desigual de las alertas SAE en los incendios de Valparaíso de 2024](src/content/events/2025/04/20250409-1.md) — **1 fuente**
 - [2025/05/20250527-1 - Papaya Gate: formalizan a la exintendenta Lucía Pinto y a otros tres imputados por fraude al fisco](src/content/events/2025/05/20250527-1.md) — **1 fuente**
 - [2025/06/20250608-1 - El 'método Kast': la estrategia de campaña que lo mantiene en empate técnico con Matthei](src/content/events/2025/06/20250608-1.md) — **1 fuente**
@@ -80,6 +85,7 @@
 - [2026/06/20260602-5 - VerificaUDP califica de 'engañoso' que Chile deba 'volver a ser el país más seguro de Latinoamérica'](src/content/events/2026/06/20260602-5.md) — **1 fuente**
 - [2026/06/20260615-4 - Fiscalía y querellantes presentan recurso de nulidad contra la absolución de Claudio Crespo en el caso Gatica](src/content/events/2026/06/20260615-4.md) — **1 fuente**
 - [2026/06/20260616-1 - Descubren puente clandestino que cruza la zanja fronteriza en Colchane](src/content/events/2026/06/20260616-1.md) — **1 fuente**
+- [2026/06/20260619-1 - Aprueban la instalación del cable submarino Humboldt de Google que unirá Chile con Asia-Pacífico](src/content/events/2026/06/20260619-1.md) — **1 fuente**
 - [2026/06/20260625-4 - Kast defiende rol empresarial: "No se compare, dele las gracias al país"](src/content/events/2026/06/20260625-4.md) — **1 fuente**
 - [2026/06/20260625-6 - Corte de Apelaciones admite recursos de nulidad del caso Gatica y revisará si anula el juicio que absolvió a Crespo](src/content/events/2026/06/20260625-6.md) — **1 fuente**
 - [2026/06/20260627-1 - La semana en que se enquistaron las dos almas del Gobierno de Kast](src/content/events/2026/06/20260627-1.md) — **1 fuente**
@@ -179,6 +185,11 @@
 - [2026/08/20260810-36 - Detienen al concejal de Coronel David Rivas (RN) por mostrar una revisión técnica adulterada en una fiscalización](src/content/events/2026/08/20260810-36.md) — **1 fuente**
 - [2026/08/20260810-37 - Detienen a sujeto por microtráfico de drogas en la Plaza de Armas de Chillán](src/content/events/2026/08/20260810-37.md) — **1 fuente**
 - [2026/08/20260810-40 - Ministro Poduje anuncia demolición de bloques en Mirador del Pacífico de Talcahuano por fallas estructurales](src/content/events/2026/08/20260810-40.md) — **1 fuente**
+- [2026/08/20260811-11 - Seremi de Energía reconoce 'estrechez' de pellet en La Araucanía tras largas esperas y alzas de precios](src/content/events/2026/08/20260811-11.md) — **1 fuente**
+- [2026/08/20260811-12 - Sernac paga compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada](src/content/events/2026/08/20260811-12.md) — **1 fuente**
+- [2026/08/20260811-14 - Calidad del empleo se deteriora: 102,6 mil trabajadores pierden su empleo de calidad y el 70% son mujeres](src/content/events/2026/08/20260811-14.md) — **1 fuente**
+- [2026/08/20260811-15 - EEUU reivindica la Doctrina Monroe en un video oficial y el 'Escudo de las Américas' considera a Chile en una nueva arquitectura hemisférica](src/content/events/2026/08/20260811-15.md) — **1 fuente**
+- [2026/08/20260811-17 - Asociación de Diplomáticos cuestiona los nombramientos de embajadores: 23 de los 26 nuevos enviados son políticos](src/content/events/2026/08/20260811-17.md) — **1 fuente**
 - [2026/08/20260811-2 - Longueira defiende a Chadwick en Tolerancia Cero: 'para mí Andrés Chadwick es completamente inocente'](src/content/events/2026/08/20260811-2.md) — **1 fuente**
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — **1 fuente**
 - [2026/08/20260811-4 - Comisión de Hacienda del Senado suspende votación de Sala Cuna Universal por ausencia de Macaya, Gatica y Carter](src/content/events/2026/08/20260811-4.md) — **1 fuente**
@@ -192,11 +203,29 @@
 - [2015/10/20151008-1 - Papa Francisco respalda al obispo de Osorno Juan Barros y califica de 'tontos' y 'zurdos' a los manifestantes que protestaban por el caso Karadima](src/content/events/2015/10/20151008-1.md) — **2 fuentes**
 - [2018/04/20180426-1 - Proyecto de Evópoli contra el nepotismo genera críticas de UDI-RN, que centran fuego en Felipe Kast](src/content/events/2018/04/20180426-1.md) — **2 fuentes**
 - [2018/07/20180729-1 - Atacantes enmascarados apuñalan a tres mujeres en marcha por el aborto libre en Santiago; movimiento Social Patriota reivindica la contraprotesta](src/content/events/2018/07/20180729-1.md) — **2 fuentes**
+- [2019/02/20190214-1 - Ordenan la detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba por fraude al fisco](src/content/events/2019/02/20190214-1.md) — **2 fuentes**
+- [2019/03/20190304-1 - La ministra Rutherford procesa al exjefe de finanzas del Ejército Jozo Santic Palomino por fraude al fisco](src/content/events/2019/03/20190304-1.md) — **2 fuentes**
+- [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — **2 fuentes**
+- [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — **2 fuentes**
+- [2019/04/20190402-1 - La exministra Javiera Blanco es sobreseída en el caso Gendarmería por fraude al fisco y nombramiento ilegal](src/content/events/2019/04/20190402-1.md) — **2 fuentes**
+- [2019/04/20190409-1 - La DC anuncia su apoyo a la idea de legislar en la reforma tributaria de Piñera y abre una grieta en la oposición](src/content/events/2019/04/20190409-1.md) — **2 fuentes**
+- [2019/10/20191001-1 - Cámara rechaza la acusación constitucional contra la ministra de Educación Marcela Cubillos](src/content/events/2019/10/20191001-1.md) — **2 fuentes**
+- [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — **2 fuentes**
+- [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — **2 fuentes**
 - [2019/12/20191223-1 - Informe Anual 2019 del INDH: 'las más graves violaciones a los DD.HH. desde 1989' durante el estallido social](src/content/events/2019/12/20191223-1.md) — **2 fuentes**
+- [2020/03/20200319-1 - Partidos acuerdan postergar el plebiscito constitucional del 26 de abril al 25 de octubre por la pandemia](src/content/events/2020/03/20200319-1.md) — **2 fuentes**
 - [2020/04/20200420-1 - Piñera anuncia el envío al Congreso del proyecto de Ingreso Familiar de Emergencia (IFE) para el 60% más vulnerable](src/content/events/2020/04/20200420-1.md) — **2 fuentes**
+- [2020/05/20200503-1 - Cuarentena total de Santiago: Cerrillos, Recoleta, Quilicura y Santiago Centro entran en confinamiento](src/content/events/2020/05/20200503-1.md) — **2 fuentes**
+- [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — **2 fuentes**
+- [2020/10/20201018-2 - Primer aniversario del 18-O: 580 detenidos en todo el país y jornada de incidentes en la RM](src/content/events/2020/10/20201018-2.md) — **2 fuentes**
 - [2020/10/20201025-1 - Plebiscito de entrada: el Apruebo gana con 78,27% y la Convención Constitucional será la encargada de redactar la nueva Constitución](src/content/events/2020/10/20201025-1.md) — **2 fuentes**
+- [2020/11/20201111-1 - Julio Ponce Lerou paga la multa de $2.152 millones por el caso Cascadas tras una polémica rebaja](src/content/events/2020/11/20201111-1.md) — **2 fuentes**
+- [2020/12/20201203-1 - Cámara despacha a ley el segundo retiro del 10% de las AFP y la Contraloría toma razón de su promulgación](src/content/events/2020/12/20201203-1.md) — **2 fuentes**
+- [2020/12/20201224-1 - Chile inicia la vacunación contra el COVID-19 en tres hospitales de Santiago](src/content/events/2020/12/20201224-1.md) — **2 fuentes**
 - [2021/02/20210203-1 - Chile inicia la vacunación masiva contra el COVID-19: Ernestina Godoy, de 93 años, es la primera inoculada](src/content/events/2021/02/20210203-1.md) — **2 fuentes**
 - [2021/05/20210517-1 - Caso San Ramón: Miguel Ángel Aguilera gana la reelección pese a que será formalizado por corrupción](src/content/events/2021/05/20210517-1.md) — **2 fuentes**
+- [2021/11/20211109-1 - Cámara aprueba la admisibilidad de la acusación constitucional contra Piñera por el caso Dominga](src/content/events/2021/11/20211109-1.md) — **2 fuentes**
+- [2021/11/20211116-1 - Senado rechaza la acusación constitucional contra Piñera por el caso Dominga al no alcanzar el quórum de 2/3](src/content/events/2021/11/20211116-1.md) — **2 fuentes**
 - [2021/12/20211219-1 - Gabriel Boric gana la segunda vuelta presidencial con 55,87% y se convierte en el presidente más votado de la historia de Chile](src/content/events/2021/12/20211219-1.md) — **2 fuentes**
 - [2022/03/20220311-1 - Gabriel Boric asume la Presidencia de Chile a los 36 años, el Mandatario más joven de la historia](src/content/events/2022/03/20220311-1.md) — **2 fuentes**
 - [2022/05/20220524-1 - Boric compromete desde Justicia una agenda de reparación para víctimas de violaciones a los DD.HH. del estallido social](src/content/events/2022/05/20220524-1.md) — **2 fuentes**
@@ -212,7 +241,9 @@
 - [2023/04/20230419-1 - Crisis migratoria en el norte: gobierno mantiene expulsiones y activa Ley de Infraestructura Crítica](src/content/events/2023/04/20230419-1.md) — **2 fuentes**
 - [2023/05/20230507-1 - Elección de consejeros constitucionales: Republicanos arrasa y controlará el Consejo junto a Chile Vamos](src/content/events/2023/05/20230507-1.md) — **2 fuentes**
 - [2023/05/20230525-1 - Condenan al exalcalde de Ñuñoa Pedro Sabat por dos delitos de negociación incompatible](src/content/events/2023/05/20230525-1.md) — **2 fuentes**
+- [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — **2 fuentes**
 - [2023/11/20231114-1 - Caso Hermosilla: Ciper revela audio que destapa coimas al SII y la CMF y sacude al sistema judicial](src/content/events/2023/11/20231114-1.md) — **2 fuentes**
+- [2024/06/20240609-1 - Primarias municipales y de gobernadores 2024: baja participación marca la jornada electoral](src/content/events/2024/06/20240609-1.md) — **2 fuentes**
 - [2024/08/20240821-1 - Caso Audios: comienza la formalización de Luis Hermosilla, Leonarda Villalobos y otros por soborno y cohecho](src/content/events/2024/08/20240821-1.md) — **2 fuentes**
 - [2024/09/20240923-1 - Revelan el millonario sueldo de Marcela Cubillos como docente de la USS y la sospecha de financiamiento irregular de la política](src/content/events/2024/09/20240923-1.md) — **2 fuentes**
 - [2024/10/20241001-1 - Caso Riggs: Corte de Apelaciones confirma el fraude fiscal de Pinochet y ratifica liquidación del SII por $1.550 millones](src/content/events/2024/10/20241001-1.md) — **2 fuentes**
@@ -319,6 +350,7 @@
 - [2026/08/20260804-8 - El Mostrador revela que el Sernac de Arica contrató por 'cupo de partido' a asistente social detenida con 47 kilos de droga en Tacna](src/content/events/2026/08/20260804-8.md) — **2 fuentes**
 - [2026/08/20260804-9 - Columna de Gastón Saavedra: 'Tantos años queriendo ser Presidente de Chile para que quien mande... sea el Ministro de Hacienda'](src/content/events/2026/08/20260804-9.md) — **2 fuentes**
 - [2026/08/20260805-10 - Ministerio Público abre investigación tras denuncia de FENAUT por el video de La Cofradía con burlas a niños TEA](src/content/events/2026/08/20260805-10.md) — **2 fuentes**
+- [2026/08/20260805-32 - Venta de autos usados roza las 650 mil unidades a julio: segundo mejor registro histórico del mercado](src/content/events/2026/08/20260805-32.md) — **2 fuentes**
 - [2026/08/20260805-6 - Gobierno ingresa formalmente el veto supresivo a la megarreforma contra el olvido financiero, el anatocismo y el pago a 30 días a las pymes](src/content/events/2026/08/20260805-6.md) — **2 fuentes**
 - [2026/08/20260805-7 - 48 gremios pyme respaldan el veto presidencial al cambio en el pago a 30 días y piden discutirlo en el futuro Estatuto Pyme 2.0](src/content/events/2026/08/20260805-7.md) — **2 fuentes**
 - [2026/08/20260805-8 - Alcalde de Puente Alto acusa abandono del gobierno y carga contra Arrau y Codina: 'la agenda de seguridad está para la tele'](src/content/events/2026/08/20260805-8.md) — **2 fuentes**
@@ -343,7 +375,6 @@
 - [2026/08/20260807-4 - Banco Central: Índice de Avisos Laborales de Internet cae 10,5% interanual en julio y suma nueve meses consecutivos de retrocesos](src/content/events/2026/08/20260807-4.md) — **2 fuentes**
 - [2026/08/20260808-2 - El Mostrador: el sumario en Carabineros investiga las filtraciones de las cirugías de Janet Morales, no las operaciones, y Contraloría da 10 días a la institución y al Ministerio de Seguridad](src/content/events/2026/08/20260808-2.md) — **2 fuentes**
 - [2026/08/20260808-4 - BioBioChile reconstruye la historia de la 'bruja de Pinochet': Eugenia Pirzio-Biroli, la esotérica alcaldesa de Cisnes que vaticinaba el futuro del dictador](src/content/events/2026/08/20260808-4.md) — **2 fuentes**
-- [2026/08/20260809-4 - BBCl Investiga: la trama de la 'operación rastrillo' en Codelco terminó en 27 mil toneladas infladas y bonos improcedentes por $13 mil millones](src/content/events/2026/08/20260809-4.md) — **2 fuentes**
 - [2026/08/20260810-17 - Servel archiva investigación contra Claudio Orrego: coaching del GORE que reprochó Contraloría no constituye gasto electoral](src/content/events/2026/08/20260810-17.md) — **2 fuentes**
 - [2026/08/20260810-24 - 'Codelco no se vende': trabajadores de Chuquicamata marchan en Santiago contra la eventual privatización de la estatal](src/content/events/2026/08/20260810-24.md) — **2 fuentes**
 - [2026/08/20260810-29 - FNE aprueba la alianza entre Codelco y Rio Tinto para producir litio en el Salar de Maricunga](src/content/events/2026/08/20260810-29.md) — **2 fuentes**
@@ -351,6 +382,9 @@
 - [2026/08/20260810-35 - Senador Juan Luis Castro denuncia cierre de UCI y neonatología del Hospital San Borja Arriarán por filtraciones de aguas](src/content/events/2026/08/20260810-35.md) — **2 fuentes**
 - [2026/08/20260810-38 - Corte Suprema deja sin efecto $50 millones por daño moral en el caso de la paciente del riñón equivocado en Quilpué](src/content/events/2026/08/20260810-38.md) — **2 fuentes**
 - [2026/08/20260810-9 - PDI detiene en Carahue a Rosamel Fierro Huenuman, prófugo de la Macrozona Sur desde 2021](src/content/events/2026/08/20260810-9.md) — **2 fuentes**
+- [2026/08/20260811-10 - Cámara aprueba la 'Naín-Retamal 2.0': extiende la legítima defensa privilegiada a policías, gendarmes y militares de franco](src/content/events/2026/08/20260811-10.md) — **2 fuentes**
+- [2026/08/20260811-16 - El Liceo Augusto D'Halmar de Ñuñoa, donde Kast hizo su primera actividad oficial, entra en huelga por ratones y goteras](src/content/events/2026/08/20260811-16.md) — **2 fuentes**
+- [2026/08/20260811-18 - Google anuncia el cable submarino Alisios que conectará Chile con Panamá y República Dominicana](src/content/events/2026/08/20260811-18.md) — **2 fuentes**
 
 </details>
 
@@ -393,6 +427,7 @@
 - [2026/03/20260311-2 - Análisis estratégico identifica ocho desafíos de Kast en defensa y seguridad](src/content/events/2026/03/20260311-2.md) — 1 fuente
 - [2026/03/20260311-3 - José Antonio Kast asume la Presidencia de la República en ceremonia de cambio de mando](src/content/events/2026/03/20260311-3.md) — 4 fuentes
 - [2026/03/20260311-4 - "Trabajando para usted": Gobierno de Kast estrena nuevo logo y desata polémica por filtración interna](src/content/events/2026/03/20260311-4.md) — 6 fuentes
+- [2026/03/20260311-5 - "Un país más pobre, pero más feliz": la frase del diputado Álvaro Carter que descolocó a Daniel Matamala en el día del cambio de mando](src/content/events/2026/03/20260311-5.md) — 3 fuentes
 - [2026/03/20260315-1 - Ministro Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'](src/content/events/2026/03/20260315-1.md) — 3 fuentes
 - [2026/03/20260316-1 - Inauguracion del Escudo Fronterizo en Chacalluta y orden de construir zanja](src/content/events/2026/03/20260316-1.md) — 7 fuentes
 - [2026/03/20260317-1 - Senador Macaya comparte imagen generada con IA que muestra avances falsos de la zanja fronteriza](src/content/events/2026/03/20260317-1.md) — 5 fuentes
@@ -517,6 +552,7 @@
 - [2026/06/20260618-1 - BBC Mundo analiza el debate sobre rebaja del impuesto corporativo en Chile](src/content/events/2026/06/20260618-1.md) — 10 fuentes
 - [2026/06/20260618-2 - AP: Los 100 días de Kast — el foco en la economía desplaza la lucha contra el delito](src/content/events/2026/06/20260618-2.md) — 2 fuentes
 - [2026/06/20260618-3 - Ministro del Trabajo confirma que el Gobierno evalúa una indemnización laboral a todo evento](src/content/events/2026/06/20260618-3.md) — 4 fuentes
+- [2026/06/20260619-1 - Aprueban la instalación del cable submarino Humboldt de Google que unirá Chile con Asia-Pacífico](src/content/events/2026/06/20260619-1.md) — 1 fuente
 - [2026/06/20260622-1 - Carabineros da de baja a cabo que usó una patrulla para comprar en Máfil: video viral, sumario administrativo y derivación a la justicia](src/content/events/2026/06/20260622-1.md) — 3 fuentes
 - [2026/06/20260623-1 - Comisión de Evaluación Ambiental aprueba proyecto Alto Santorini en dunas de Concón](src/content/events/2026/06/20260623-1.md) — 2 fuentes
 - [2026/06/20260624-1 - Senado aprueba por el minimo idea de legislar megarreforma](src/content/events/2026/06/20260624-1.md) — 2 fuentes
@@ -771,7 +807,7 @@
 - [2026/08/20260804-3 - Quiroz contradice a Alvarado y dice que aún no hay nombre para la subsecretaría de Hacienda](src/content/events/2026/08/20260804-3.md) — 4 fuentes
 - [2026/08/20260804-4 - Framing editorial de El Mercurio ante el Imacec: 'desilusiona' con el 3,1% de Boric y 'rompe racha' con el 2,4% de Kast](src/content/events/2026/08/20260804-4.md) — 5 fuentes
 - [2026/08/20260804-5 - Carabineros reduce y detiene a estudiante de 15 años que amenazó con destornillador a la comunidad del Liceo Rahue de Osorno](src/content/events/2026/08/20260804-5.md) — 6 fuentes
-- [2026/08/20260804-6 - Quiroz logra acuerdo de último minuto con Walker y Gahona por la reconstrucción de Atacama y Coquimbo previo a la votación final de la megarreforma](src/content/events/2026/08/20260804-6.md) — 10 fuentes
+- [2026/08/20260804-6 - Quiroz logra acuerdo de último minuto con Walker y Gahona por la reconstrucción de Atacama y Coquimbo previo a la votación final de la megarreforma](src/content/events/2026/08/20260804-6.md) — 12 fuentes
 - [2026/08/20260804-7 - Bancada UDI activa ofensiva presupuestaria contra el INDH por contrato de $250 millones con productora de eventos](src/content/events/2026/08/20260804-7.md) — 4 fuentes
 - [2026/08/20260804-8 - El Mostrador revela que el Sernac de Arica contrató por 'cupo de partido' a asistente social detenida con 47 kilos de droga en Tacna](src/content/events/2026/08/20260804-8.md) — 2 fuentes
 - [2026/08/20260804-9 - Columna de Gastón Saavedra: 'Tantos años queriendo ser Presidente de Chile para que quien mande... sea el Ministro de Hacienda'](src/content/events/2026/08/20260804-9.md) — 2 fuentes
@@ -799,6 +835,9 @@
 - [2026/08/20260805-29 - Tribunal confirma que la casa que el exalcalde de San Ramón Aguilera compró con fondos ilícitos pasa al fisco](src/content/events/2026/08/20260805-29.md) — 1 fuente
 - [2026/08/20260805-3 - Cuarto incendio en 13 años en la planta química Panimex de Quilicura: tercera alarma, humo tóxico y suspensión de clases](src/content/events/2026/08/20260805-3.md) — 9 fuentes
 - [2026/08/20260805-30 - CIDH pide antecedentes al gobierno de Kast tras la audiencia por los retrocesos en DDHH](src/content/events/2026/08/20260805-30.md) — 6 fuentes
+- [2026/08/20260805-31 - Minsal alerta por la baja percepción del riesgo del vapeo: uno de cada tres adolescentes ya probó un vapeador](src/content/events/2026/08/20260805-31.md) — 3 fuentes
+- [2026/08/20260805-32 - Venta de autos usados roza las 650 mil unidades a julio: segundo mejor registro histórico del mercado](src/content/events/2026/08/20260805-32.md) — 2 fuentes
+- [2026/08/20260805-33 - Cenco Malls aumenta 27,9% su utilidad en el segundo trimestre impulsado por la expansión de superficie de ventas](src/content/events/2026/08/20260805-33.md) — 3 fuentes
 - [2026/08/20260805-4 - Debate en r/chile tras la celebración de Quiroz: críticas a la megareforma, memes de colusión y teorías sobre el incendio de Quilicura](src/content/events/2026/08/20260805-4.md) — 7 fuentes
 - [2026/08/20260805-5 - Gobierno ingresa con urgencia proyecto que eleva a 6.000 UF el subsidio a la tasa hipotecaria y amplía de 50.000 a 80.000 los cupos](src/content/events/2026/08/20260805-5.md) — 6 fuentes
 - [2026/08/20260805-6 - Gobierno ingresa formalmente el veto supresivo a la megarreforma contra el olvido financiero, el anatocismo y el pago a 30 días a las pymes](src/content/events/2026/08/20260805-6.md) — 2 fuentes
@@ -813,7 +852,7 @@
 - [2026/08/20260806-14 - Diputados de PNL, Republicanos e independientes presentan proyecto para suspender por cinco años la Ley Karin](src/content/events/2026/08/20260806-14.md) — 7 fuentes
 - [2026/08/20260806-15 - Gremios de trabajadores y de DDHH se declaran en alerta ante lo que califican como 'retroceso' en derechos sociales](src/content/events/2026/08/20260806-15.md) — 1 fuente
 - [2026/08/20260806-16 - PDI detiene a exinformático de la Municipalidad de Huechuraba por almacenar pornografía infantil en su computador laboral](src/content/events/2026/08/20260806-16.md) — 1 fuente
-- [2026/08/20260806-17 - 21 parlamentarios oficialistas exigen a la Cancillería esclarecer la expulsión de Israel del chileno José Nicolás Khamis](src/content/events/2026/08/20260806-17.md) — 4 fuentes
+- [2026/08/20260806-17 - 21 parlamentarios oficialistas exigen a la Cancillería esclarecer la expulsión de Israel del chileno José Nicolás Khamis](src/content/events/2026/08/20260806-17.md) — 5 fuentes
 - [2026/08/20260806-18 - Alcalde de San Bernardo refuta el optimismo del gobierno en seguridad: 'pareciera que hay dos Chile'](src/content/events/2026/08/20260806-18.md) — 2 fuentes
 - [2026/08/20260806-19 - Gustavo Gatica apunta a Boric por la Ley Naín-Retamal, critica a Kast por celebrar la absolución de Crespo y evalúa recurrir a instancias internacionales](src/content/events/2026/08/20260806-19.md) — 4 fuentes
 - [2026/08/20260806-2 - ASOF rechaza el uso despectivo de 'señora de feria': 'ser mujer de feria es un orgullo' tras el cruce en el Senado](src/content/events/2026/08/20260806-2.md) — 6 fuentes
@@ -844,14 +883,17 @@
 - [2026/08/20260806-42 - T13 revela que la Fiscalía investiga al Partido de la Gente por movimientos irregulares en sus cuentas tras la denuncia del Servel](src/content/events/2026/08/20260806-42.md) — 6 fuentes
 - [2026/08/20260806-43 - Cristián Araya viaja a España en plena semana distrital y reabre la polémica por salidas de diputados al extranjero](src/content/events/2026/08/20260806-43.md) — 2 fuentes
 - [2026/08/20260806-44 - Gobierno reabre el debate constitucional con la reforma de seguridad de la ACOT y define su ingreso por el Senado antes de que cambie el quórum](src/content/events/2026/08/20260806-44.md) — 4 fuentes
-- [2026/08/20260806-45 - Diputada Parisi (PDG) ingresa proyecto para declarar feriado nacional el 17 de septiembre y extender las Fiestas Patrias](src/content/events/2026/08/20260806-45.md) — 9 fuentes
+- [2026/08/20260806-45 - Diputada Parisi (PDG) ingresa proyecto para declarar feriado nacional el 17 de septiembre y extender las Fiestas Patrias](src/content/events/2026/08/20260806-45.md) — 10 fuentes
 - [2026/08/20260806-46 - Economistas extrañan pilares estructurales en la megarreforma: Bergoeing y Wagner marcan deudas en educación, mercado laboral y modernización del Estado](src/content/events/2026/08/20260806-46.md) — 1 fuente
 - [2026/08/20260806-47 - Poduje plantea demoler viviendas en zonas de inundación tras denuncia de 70 inmuebles con fallas estructurales en Villa Santa Fe de Bulnes: 'estándares chantas'](src/content/events/2026/08/20260806-47.md) — 1 fuente
-- [2026/08/20260806-48 - Arrau detalla la ACOT en la Escuela de Carabineros: fin del monopolio del SML en pesquisas de ADN, destrucción de bienes incautados y modificación a la Ley Antibarricadas](src/content/events/2026/08/20260806-48.md) — 3 fuentes
+- [2026/08/20260806-48 - Arrau detalla la ACOT en la Escuela de Carabineros: fin del monopolio del SML en pesquisas de ADN, destrucción de bienes incautados y modificación a la Ley Antibarricadas](src/content/events/2026/08/20260806-48.md) — 4 fuentes
 - [2026/08/20260806-49 - SII y CNC lanzan plataforma para denunciar locales 'sin fachada' que operarían en la informalidad](src/content/events/2026/08/20260806-49.md) — 1 fuente
 - [2026/08/20260806-5 - Fiscalía confirma investigación por presunta VIF que involucra al senador Fidel Espinoza; PS suspende su militancia y abre causa en el Tribunal Supremo](src/content/events/2026/08/20260806-5.md) — 5 fuentes
 - [2026/08/20260806-50 - Bío Bío Investiga revela el 'Factor Mera': el ministro de la Corte de Santiago que siempre vota a favor de los Lavín-Barriga](src/content/events/2026/08/20260806-50.md) — 2 fuentes
 - [2026/08/20260806-51 - Hacienda crea grupo de trabajo para impulsar la exportación de servicios financieros: Quiroz proyecta 50 mil empleos adicionales](src/content/events/2026/08/20260806-51.md) — 1 fuente
+- [2026/08/20260806-52 - TC cierra definitivamente el caso Motorola: por unanimidad confirma la decisión de no perseverar contra Katherine Martorell](src/content/events/2026/08/20260806-52.md) — 3 fuentes
+- [2026/08/20260806-53 - Chile y Venezuela formalizan el reinicio de sus relaciones consulares mediante intercambio de notas diplomáticas](src/content/events/2026/08/20260806-53.md) — 3 fuentes
+- [2026/08/20260806-54 - Gobierno oficializa su respaldo a la candidatura del senador Rojo Edwards para presidir la Unión Interparlamentaria](src/content/events/2026/08/20260806-54.md) — 4 fuentes
 - [2026/08/20260806-6 - Gobierno blinda a la seremi de Economía de Arica y vicepresidenta de Republicanos, Romina Cifuentes, en el caso Sernac; diez partidos exigen su renuncia](src/content/events/2026/08/20260806-6.md) — 3 fuentes
 - [2026/08/20260806-7 - Corte de Apelaciones revoca prisión preventiva de Joaquín Lavín León y decreta arresto domiciliario total](src/content/events/2026/08/20260806-7.md) — 6 fuentes
 - [2026/08/20260806-8 - Revelan la identidad del imputado del caso 'ring raja' de Vitacura: Andrés Arrieta, gerente de Restomarket, en prisión preventiva](src/content/events/2026/08/20260806-8.md) — 2 fuentes
@@ -872,6 +914,7 @@
 - [2026/08/20260807-21 - Polémica por la nueva directora del SLEP Puerto Cordillera: Julia Oróstegui fue multada por salir de Chile con licencia médica](src/content/events/2026/08/20260807-21.md) — 3 fuentes
 - [2026/08/20260807-22 - Contraloría acredita ocupación ilegal de bien fiscal por el delegado presidencial de Chañaral y ordena procedimiento disciplinario](src/content/events/2026/08/20260807-22.md) — 4 fuentes
 - [2026/08/20260807-23 - Experiencia internacional en el debate del secreto bancario: México, Italia y EE.UU. y los límites del levantamiento administrativo](src/content/events/2026/08/20260807-23.md) — 6 fuentes
+- [2026/08/20260807-24 - Tricel escucha los alegatos del requerimiento que busca destituir a Claudio Orrego y deja la causa en acuerdo](src/content/events/2026/08/20260807-24.md) — 3 fuentes
 - [2026/08/20260807-3 - Campaña del Día del Niño: Gobierno interviene los logos de los ministerios con nombres infantiles y el Ministerio del Medio Ambiente figura en Facebook como 'Ministerio de cuidar la plata' por unos minutos](src/content/events/2026/08/20260807-3.md) — 6 fuentes
 - [2026/08/20260807-4 - Banco Central: Índice de Avisos Laborales de Internet cae 10,5% interanual en julio y suma nueve meses consecutivos de retrocesos](src/content/events/2026/08/20260807-4.md) — 2 fuentes
 - [2026/08/20260807-5 - Mañalich cuestiona el sistema de test de drogas del gobierno: 'la mitad de los funcionarios va a salir falsamente positivo al menos una vez'](src/content/events/2026/08/20260807-5.md) — 3 fuentes
@@ -888,16 +931,16 @@
 - [2026/08/20260808-2 - El Mostrador: el sumario en Carabineros investiga las filtraciones de las cirugías de Janet Morales, no las operaciones, y Contraloría da 10 días a la institución y al Ministerio de Seguridad](src/content/events/2026/08/20260808-2.md) — 2 fuentes
 - [2026/08/20260808-3 - Columna de Prensa Opal advierte que el Registro de Actos Vandálicos castigaría con pérdida de beneficios sociales y discriminaría a la población pobre](src/content/events/2026/08/20260808-3.md) — 1 fuente
 - [2026/08/20260808-4 - BioBioChile reconstruye la historia de la 'bruja de Pinochet': Eugenia Pirzio-Biroli, la esotérica alcaldesa de Cisnes que vaticinaba el futuro del dictador](src/content/events/2026/08/20260808-4.md) — 2 fuentes
-- [2026/08/20260808-5 - Megaoperativo nacional ACOT: 1.341 detenidos y 862 kilos de droga incautados en el primer gran despliegue tras la agenda de seguridad](src/content/events/2026/08/20260808-5.md) — 6 fuentes
+- [2026/08/20260808-5 - Megaoperativo nacional ACOT: 1.341 detenidos y 862 kilos de droga incautados en el primer gran despliegue tras la agenda de seguridad](src/content/events/2026/08/20260808-5.md) — 11 fuentes
 - [2026/08/20260808-6 - Aclara confirma que contratistas militares figuran entre los posibles compradores de tierras raras de Penco](src/content/events/2026/08/20260808-6.md) — 3 fuentes
 - [2026/08/20260808-7 - Lautaro Carmona viaja por tercera vez a Cuba y se reúne con Miguel Díaz-Canel en vísperas del centenario de Fidel Castro](src/content/events/2026/08/20260808-7.md) — 3 fuentes
 - [2026/08/20260808-8 - Escolta del exministro Luis Cordero frustra a disparos un portonazo en Vitacura: cinco detenidos y prisión preventiva para tres adultos](src/content/events/2026/08/20260808-8.md) — 3 fuentes
 - [2026/08/20260808-9 - Aumentan a nueve las denuncias por Ley Karin contra la seremi de Salud de Los Lagos: Afusalud insiste en su renuncia](src/content/events/2026/08/20260808-9.md) — 1 fuente
-- [2026/08/20260809-1 - Quiroz anuncia comisión transversal para abordar el estatuto administrativo y anticipa la definición del nuevo subsecretario de Hacienda](src/content/events/2026/08/20260809-1.md) — 5 fuentes
+- [2026/08/20260809-1 - Quiroz anuncia comisión transversal para abordar el estatuto administrativo y anticipa la definición del nuevo subsecretario de Hacienda](src/content/events/2026/08/20260809-1.md) — 7 fuentes
 - [2026/08/20260809-10 - The Clinic reconstruye el laberinto de La Moneda tras el caso Rodríguez: tensión, dudas y la ofensiva de Squella](src/content/events/2026/08/20260809-10.md) — 1 fuente
 - [2026/08/20260809-2 - Horvitz califica de 'preocupante' el retiro de chats entre Chadwick y Hermosilla de la carpeta del caso Guerra para 'depurarlos'](src/content/events/2026/08/20260809-2.md) — 1 fuente
 - [2026/08/20260809-3 - La Tercera publica fragmentos de 'La red internacional de Johannes Kaiser', libro de Bravo y Lucero sobre el entramado del PNL con el mileísmo](src/content/events/2026/08/20260809-3.md) — 1 fuente
-- [2026/08/20260809-4 - BBCl Investiga: la trama de la 'operación rastrillo' en Codelco terminó en 27 mil toneladas infladas y bonos improcedentes por $13 mil millones](src/content/events/2026/08/20260809-4.md) — 2 fuentes
+- [2026/08/20260809-4 - BBCl Investiga: la trama de la 'operación rastrillo' en Codelco terminó en 27 mil toneladas infladas y bonos improcedentes por $13 mil millones](src/content/events/2026/08/20260809-4.md) — 3 fuentes
 - [2026/08/20260809-5 - Gustavo Gatica tras confirmarse la absolución de Crespo: 'Sigo con la sensación de que mi país me negó la justicia'](src/content/events/2026/08/20260809-5.md) — 1 fuente
 - [2026/08/20260809-6 - Criteria: desaprobación de Kast baja a 52% y 47% cree que el país ha retrocedido bajo su gobierno](src/content/events/2026/08/20260809-6.md) — 1 fuente
 - [2026/08/20260809-7 - RN Valparaíso eleva al Tribunal Supremo del partido los dichos de Camila Flores contra Campillai ('señora de feria')](src/content/events/2026/08/20260809-7.md) — 1 fuente
@@ -938,29 +981,40 @@
 - [2026/08/20260810-39 - Radiografía de los SLEP: 639.156 alumnos siguen fuera del sistema y el Gobierno cambia las reglas de la desmunicipalización](src/content/events/2026/08/20260810-39.md) — 4 fuentes
 - [2026/08/20260810-4 - Terremoto de magnitud 7,4 sacude el occidente de Colombia y Kast ofrece el apoyo de Chile](src/content/events/2026/08/20260810-4.md) — 5 fuentes
 - [2026/08/20260810-40 - Ministro Poduje anuncia demolición de bloques en Mirador del Pacífico de Talcahuano por fallas estructurales](src/content/events/2026/08/20260810-40.md) — 1 fuente
-- [2026/08/20260810-5 - Gobierno autoriza a Codelco a capitalizar el 100% de las utilidades de 2025 (US$2.423 millones)](src/content/events/2026/08/20260810-5.md) — 14 fuentes
+- [2026/08/20260810-5 - Gobierno autoriza a Codelco a capitalizar el 100% de las utilidades de 2025 (US$2.423 millones)](src/content/events/2026/08/20260810-5.md) — 16 fuentes
 - [2026/08/20260810-6 - Codelco informa renuncia de Gonzalo Lara Skiba, vicepresidente de Integración de Operaciones Andina](src/content/events/2026/08/20260810-6.md) — 3 fuentes
 - [2026/08/20260810-7 - Kast firma en La Moneda la reforma constitucional de la ACOT y la envía al Congreso: 'Sin seguridad no hay libertad'](src/content/events/2026/08/20260810-7.md) — 13 fuentes
 - [2026/08/20260810-8 - The Clinic revela que el Gobierno convirtió oficina de marketing de la Secom en capilla evangélica en La Moneda](src/content/events/2026/08/20260810-8.md) — 5 fuentes
 - [2026/08/20260810-9 - PDI detiene en Carahue a Rosamel Fierro Huenuman, prófugo de la Macrozona Sur desde 2021](src/content/events/2026/08/20260810-9.md) — 2 fuentes
-- [2026/08/20260811-1 - Minsal solicita la renuncia de la seremi de Salud de Los Lagos, Evelyn Brintrup, en medio de denuncias por Ley Karin](src/content/events/2026/08/20260811-1.md) — 4 fuentes
+- [2026/08/20260811-1 - Minsal solicita la renuncia de la seremi de Salud de Los Lagos, Evelyn Brintrup, en medio de denuncias por Ley Karin](src/content/events/2026/08/20260811-1.md) — 5 fuentes
+- [2026/08/20260811-10 - Cámara aprueba la 'Naín-Retamal 2.0': extiende la legítima defensa privilegiada a policías, gendarmes y militares de franco](src/content/events/2026/08/20260811-10.md) — 2 fuentes
+- [2026/08/20260811-11 - Seremi de Energía reconoce 'estrechez' de pellet en La Araucanía tras largas esperas y alzas de precios](src/content/events/2026/08/20260811-11.md) — 1 fuente
+- [2026/08/20260811-12 - Sernac paga compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada](src/content/events/2026/08/20260811-12.md) — 1 fuente
+- [2026/08/20260811-13 - Comunidad mapuche Antonio Panitrur denuncia golpiza de carabineros de civil contra su werken y otro comunero en el bajo Malleco](src/content/events/2026/08/20260811-13.md) — 3 fuentes
+- [2026/08/20260811-14 - Calidad del empleo se deteriora: 102,6 mil trabajadores pierden su empleo de calidad y el 70% son mujeres](src/content/events/2026/08/20260811-14.md) — 1 fuente
+- [2026/08/20260811-15 - EEUU reivindica la Doctrina Monroe en un video oficial y el 'Escudo de las Américas' considera a Chile en una nueva arquitectura hemisférica](src/content/events/2026/08/20260811-15.md) — 1 fuente
+- [2026/08/20260811-16 - El Liceo Augusto D'Halmar de Ñuñoa, donde Kast hizo su primera actividad oficial, entra en huelga por ratones y goteras](src/content/events/2026/08/20260811-16.md) — 2 fuentes
+- [2026/08/20260811-17 - Asociación de Diplomáticos cuestiona los nombramientos de embajadores: 23 de los 26 nuevos enviados son políticos](src/content/events/2026/08/20260811-17.md) — 1 fuente
+- [2026/08/20260811-18 - Google anuncia el cable submarino Alisios que conectará Chile con Panamá y República Dominicana](src/content/events/2026/08/20260811-18.md) — 2 fuentes
 - [2026/08/20260811-2 - Longueira defiende a Chadwick en Tolerancia Cero: 'para mí Andrés Chadwick es completamente inocente'](src/content/events/2026/08/20260811-2.md) — 1 fuente
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — 1 fuente
 - [2026/08/20260811-4 - Comisión de Hacienda del Senado suspende votación de Sala Cuna Universal por ausencia de Macaya, Gatica y Carter](src/content/events/2026/08/20260811-4.md) — 1 fuente
-- [2026/08/20260811-5 - Kast reúne a casi 70 alcaldes en La Moneda por la agenda de seguridad y algunos de oposición se retiran; Vodanovic desmiente la versión de Emol](src/content/events/2026/08/20260811-5.md) — 3 fuentes
+- [2026/08/20260811-5 - Kast reúne a casi 70 alcaldes en La Moneda por la agenda de seguridad y algunos de oposición se retiran; Vodanovic desmiente la versión de Emol](src/content/events/2026/08/20260811-5.md) — 5 fuentes
 - [2026/08/20260811-6 - Excomandante del Ejército Ricardo Martínez advierte que los militares no están preparados para labores de seguridad pública](src/content/events/2026/08/20260811-6.md) — 1 fuente
 - [2026/08/20260811-7 - Audios de la seremi de Economía de Arica revelan presión para favorecer a republicanos en cargos públicos del Sernac](src/content/events/2026/08/20260811-7.md) — 1 fuente
 - [2026/08/20260811-8 - Chile entra al top 15 mundial de países con mayor alza en el precio de las viviendas según índice de Knight Frank](src/content/events/2026/08/20260811-8.md) — 1 fuente
+- [2026/08/20260811-9 - División en la derecha por la reforma constitucional de la ACOT: el ingreso al Senado se posterga y Arrau negocia para acotar el texto](src/content/events/2026/08/20260811-9.md) — 4 fuentes
 
 ## 2025
 
-- [2025/01/20250113-1 - Caso Factop: formalizan a 16 imputados, entre ellos ocho ejecutivos de LarrainVial, por lavado de activos y estafa](src/content/events/2025/01/20250113-1.md) — 1 fuente
+- [2025/01/20250113-1 - Caso Factop y Audios: formalizan a 16 imputados, entre ellos ocho ejecutivos de LarrainVial, por lavado de activos y estafa](src/content/events/2025/01/20250113-1.md) — 3 fuentes
 - [2025/01/20250125-1 - Venezuela afirmó que las relaciones con Chile están rotas desde agosto](src/content/events/2025/01/20250125-1.md) — 2 fuentes
 - [2025/01/20250129-1 - Congreso despacha a ley la reforma previsional de Boric tras años de debate y dos proyectos fallidos](src/content/events/2025/01/20250129-1.md) — 3 fuentes
 - [2025/01/20250130-1 - Exalcalde de Arica Gerardo Espíndola queda en la mira del Ministerio Público por cohecho y fraude al fisco tras informe de Contraloría](src/content/events/2025/01/20250130-1.md) — 1 fuente
 - [2025/01/20250131-1 - Tensión por 'suspensión' de relaciones diplomáticas con Venezuela: parlamentarios piden ruptura](src/content/events/2025/01/20250131-1.md) — 1 fuente
 - [2025/02/20250214-1 - Caso Factop: Álvaro Jalaff en prisión preventiva y su defensa recurre de amparo ante la Corte Suprema](src/content/events/2025/02/20250214-1.md) — 3 fuentes
 - [2025/03/20250327-1 - INE entrega los primeros resultados del Censo 2024: Chile tiene 18.480.432 habitantes](src/content/events/2025/03/20250327-1.md) — 2 fuentes
+- [2025/03/20250328-1 - Primera sentencia del caso Audios: exdirector de la PDI Sergio Muñoz acuerda tres años de libertad vigilada](src/content/events/2025/03/20250328-1.md) — 1 fuente
 - [2025/04/20250409-1 - Estudio UDD revela impacto desigual de las alertas SAE en los incendios de Valparaíso de 2024](src/content/events/2025/04/20250409-1.md) — 1 fuente
 - [2025/04/20250424-1 - Kast vinculado a líder de banda criminal detenido por robo de cobre en Coquimbo (2025)](src/content/events/2025/04/20250424-1.md) — 2 fuentes
 - [2025/04/20250429-1 - CIPER publica siete videos de los enfrentamientos de Claudio Crespo con la 'primera línea' grabados por cámaras de Carabineros](src/content/events/2025/04/20250429-1.md) — 7 fuentes
@@ -978,6 +1032,7 @@
 - [2025/10/20251017-1 - Fiscalía publica Informe Estadístico del Estallido Social: 30 fallecidos, 464 víctimas de trauma ocular y 35.146 delitos](src/content/events/2025/10/20251017-1.md) — 6 fuentes
 - [2025/10/20251022-1 - Boric lanza la Política Nacional de Seguridad Pública 2025-2031 a menos de cinco meses de dejar La Moneda](src/content/events/2025/10/20251022-1.md) — 4 fuentes
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — 2 fuentes
+- [2025/11/20251105-1 - Operación Fortaleza 3: megaoperativo nacional de Carabineros y PDI deja 2.495 detenidos y 452 kilos de droga incautados bajo el gobierno de Boric](src/content/events/2025/11/20251105-1.md) — 5 fuentes
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
 - [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
@@ -1004,11 +1059,13 @@
 - [2024/01/20240119-1 - Nora Cuevas, exalcaldesa de San Bernardo, es imputada por fraude al fisco y malversación por más de $20 mil millones](src/content/events/2024/01/20240119-1.md) — 1 fuente
 - [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué deja al menos 134 fallecidos y un estado de excepción](src/content/events/2024/02/20240202-1.md) — 1 fuente
 - [2024/02/20240221-1 - Secuestro y homicidio del exmilitar venezolano Ronald Ojeda: la Fiscalía vincula el crimen al Tren de Aragua](src/content/events/2024/02/20240221-1.md) — 3 fuentes
+- [2024/03/20240315-1 - Renuncia el director general de la PDI, Sergio Muñoz, tras el allanamiento por el caso Audios](src/content/events/2024/03/20240315-1.md) — 3 fuentes
 - [2024/04/20240401-1 - Le Monde Diplomatique: 'El crimen organizado se hace evidente en Chile' — la paradoja de la baja delincuencia con temor récord](src/content/events/2024/04/20240401-1.md) — 1 fuente
 - [2024/04/20240405-1 - Ministerio de Ciencia publica la nómina pública de deudores de Becas Chile tras la auditoría de Contraloría a la ANID: 150 en incumplimiento declarado y 73 demandados](src/content/events/2024/04/20240405-1.md) — 3 fuentes
 - [2024/04/20240414-1 - Kast afirma que habría roto relaciones con Venezuela hace bastante tiempo](src/content/events/2024/04/20240414-1.md) — 3 fuentes
 - [2024/05/20240510-1 - Pacogate: condena a 28 carabineros por fraude al fisco](src/content/events/2024/05/20240510-1.md) — 3 fuentes
 - [2024/06/20240601-1 - Tercera Cuenta Pública de Boric: 61 propuestas, aborto legal, mayor presupuesto de seguridad en ocho años y sociedad de cuidados](src/content/events/2024/06/20240601-1.md) — 10 fuentes
+- [2024/06/20240609-1 - Primarias municipales y de gobernadores 2024: baja participación marca la jornada electoral](src/content/events/2024/06/20240609-1.md) — 2 fuentes
 - [2024/07/20240730-1 - Boric condena expulsión de diplomáticos chilenos, pero descarta romper relaciones con Venezuela](src/content/events/2024/07/20240730-1.md) — 1 fuente
 - [2024/08/20240804-1 - Van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'](src/content/events/2024/08/20240804-1.md) — 1 fuente
 - [2024/08/20240821-1 - Caso Audios: comienza la formalización de Luis Hermosilla, Leonarda Villalobos y otros por soborno y cohecho](src/content/events/2024/08/20240821-1.md) — 2 fuentes
@@ -1016,6 +1073,7 @@
 - [2024/09/20240927-1 - CIPER revela que la Subsecretaría de Educación pagó $1.479 millones a la USS cuando Marcela Cubillos era ministra](src/content/events/2024/09/20240927-1.md) — 1 fuente
 - [2024/10/20241001-1 - Caso Riggs: Corte de Apelaciones confirma el fraude fiscal de Pinochet y ratifica liquidación del SII por $1.550 millones](src/content/events/2024/10/20241001-1.md) — 2 fuentes
 - [2024/10/20241010-1 - Corte Suprema remueve por unanimidad a la ministra Ángela Vivanco por el caso Audios](src/content/events/2024/10/20241010-1.md) — 2 fuentes
+- [2024/10/20241015-1 - Cámara rechaza la acusación constitucional contra el ministro de la Suprema Jean Pierre Matus por el caso Audios](src/content/events/2024/10/20241015-1.md) — 1 fuente
 - [2024/10/20241017-1 - Manuel Monsalve renuncia como subsecretario del Interior tras denuncia de abuso sexual](src/content/events/2024/10/20241017-1.md) — 2 fuentes
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — 2 fuentes
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — 2 fuentes
@@ -1028,6 +1086,8 @@
 ## 2023
 
 - [2023/01/20230117-1 - Acuerdo por Chile: fuerzas políticas firman nuevo itinerario constituyente para 2023](src/content/events/2023/01/20230117-1.md) — 2 fuentes
+- [2023/01/20230127-1 - Tribunal rechaza la prisión preventiva del werken de Temucuicui Mijael Carvones](src/content/events/2023/01/20230127-1.md) — 3 fuentes
+- [2023/02/20230214-1 - Comunidad de Temucuicui amenaza con un levantamiento mapuche por la incautación de cosechas en Ercilla](src/content/events/2023/02/20230214-1.md) — 8 fuentes
 - [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md) — 2 fuentes
 - [2023/03/20230325-1 - DecideChile lanza 'Chile en 30 años': datos abiertos de seguridad muestran la caída de los delitos y el quiebre de 2021-2022 en homicidios](src/content/events/2023/03/20230325-1.md) — 1 fuente
 - [2023/04/20230411-1 - Congreso aprueba la ley de 40 horas: la jornada laboral se reducirá gradualmente a 40 horas semanales](src/content/events/2023/04/20230411-1.md) — 2 fuentes
@@ -1035,9 +1095,10 @@
 - [2023/05/20230507-1 - Elección de consejeros constitucionales: Republicanos arrasa y controlará el Consejo junto a Chile Vamos](src/content/events/2023/05/20230507-1.md) — 2 fuentes
 - [2023/05/20230525-1 - Condenan al exalcalde de Ñuñoa Pedro Sabat por dos delitos de negociación incompatible](src/content/events/2023/05/20230525-1.md) — 2 fuentes
 - [2023/06/20230601-1 - Segunda Cuenta Pública de Boric: Plan Calles Sin Violencia, sueldo mínimo a $500 mil, Ley 40 Horas y el discurso más largo desde el retorno a la democracia](src/content/events/2023/06/20230601-1.md) — 6 fuentes
-- [2023/06/20230616-1 - Caso Convenios: reportaje destapa millonarios traspasos a la Fundación Democracia Viva y gatilla indagatoria nacional](src/content/events/2023/06/20230616-1.md) — 3 fuentes
+- [2023/06/20230616-1 - Caso Convenios: reportaje destapa millonarios traspasos a la Fundación Democracia Viva y gatilla indagatoria nacional](src/content/events/2023/06/20230616-1.md) — 4 fuentes
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md) — 1 fuente
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — 1 fuente
+- [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — 2 fuentes
 - [2023/11/20231114-1 - Caso Hermosilla: Ciper revela audio que destapa coimas al SII y la CMF y sacude al sistema judicial](src/content/events/2023/11/20231114-1.md) — 2 fuentes
 - [2023/11/20231127-1 - El Mostrador analiza las cifras de la delincuencia: ingresos de causas +50%, homicidios +40% y secuestros +140% en una década](src/content/events/2023/11/20231127-1.md) — 1 fuente
 - [2023/12/20231217-1 - Plebiscito constitucional 2023: el En Contra gana con 55,76% y se cierra el segundo proceso constituyente](src/content/events/2023/12/20231217-1.md) — 3 fuentes
@@ -1067,6 +1128,9 @@
 - [2021/05/20210517-1 - Caso San Ramón: Miguel Ángel Aguilera gana la reelección pese a que será formalizado por corrupción](src/content/events/2021/05/20210517-1.md) — 2 fuentes
 - [2021/07/20210724-1 - CDE se querella contra la ex intendenta de Coquimbo Lucía Pinto por fraude al Fisco en compra de terrenos por $9.800 millones](src/content/events/2021/07/20210724-1.md) — 1 fuente
 - [2021/08/20210822-1 - Kast es proclamado candidato presidencial del Partido Republicano y promete rebajar su sueldo a la mitad](src/content/events/2021/08/20210822-1.md) — 3 fuentes
+- [2021/10/20211003-1 - Pandora Papers revelan que la familia Piñera vendió Minera Dominga a la familia Délano por US$152 millones](src/content/events/2021/10/20211003-1.md) — 4 fuentes
+- [2021/11/20211109-1 - Cámara aprueba la admisibilidad de la acusación constitucional contra Piñera por el caso Dominga](src/content/events/2021/11/20211109-1.md) — 2 fuentes
+- [2021/11/20211116-1 - Senado rechaza la acusación constitucional contra Piñera por el caso Dominga al no alcanzar el quórum de 2/3](src/content/events/2021/11/20211116-1.md) — 2 fuentes
 - [2021/11/20211130-1 - El misterioso almuerzo de José Antonio Kast en Washington D.C. con ejecutivos de UnitedHealth y PepsiCo](src/content/events/2021/11/20211130-1.md) — 5 fuentes
 - [2021/12/20211204-1 - Sindicatos de Codelco Norte declaran a Kast 'persona no grata' en Calama; Kast insiste en que no privatizará Codelco](src/content/events/2021/12/20211204-1.md) — 4 fuentes
 - [2021/12/20211204-2 - La campaña partió en el norte: estrategias de Boric y Kast para ganar los votos de Parisi](src/content/events/2021/12/20211204-2.md) — 1 fuente
@@ -1076,31 +1140,53 @@
 
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
+- [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — 1 fuente
 - [2020/03/20200318-1 - Piñera decreta Estado de Excepción Constitucional de Catástrofe por 90 días ante el avance del COVID-19](src/content/events/2020/03/20200318-1.md) — 3 fuentes
+- [2020/03/20200319-1 - Partidos acuerdan postergar el plebiscito constitucional del 26 de abril al 25 de octubre por la pandemia](src/content/events/2020/03/20200319-1.md) — 2 fuentes
+- [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — 1 fuente
 - [2020/04/20200420-1 - Piñera anuncia el envío al Congreso del proyecto de Ingreso Familiar de Emergencia (IFE) para el 60% más vulnerable](src/content/events/2020/04/20200420-1.md) — 2 fuentes
+- [2020/05/20200503-1 - Cuarentena total de Santiago: Cerrillos, Recoleta, Quilicura y Santiago Centro entran en confinamiento](src/content/events/2020/05/20200503-1.md) — 2 fuentes
 - [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — 1 fuente
+- [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — 2 fuentes
+- [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — 1 fuente
 - [2020/07/20200706-1 - Se conoce video de la GoPro de Carabineros con el diálogo "¿se la pitió, verdad?" que impide cerrar el sumario del caso Campillai](src/content/events/2020/07/20200706-1.md) — 9 fuentes
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — 1 fuente
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — 1 fuente
+- [2020/08/20200805-1 - Comuneros mapuche en huelga de hambre rechazan la invitación del gobierno y Celestino Córdova inicia huelga seca](src/content/events/2020/08/20200805-1.md) — 3 fuentes
 - [2020/08/20200828-1 - Paro de camioneros de agosto de 2020: bloqueos de rutas, desabastecimiento y rechazo a la Ley de Seguridad del Estado bajo Piñera](src/content/events/2020/08/20200828-1.md) — 4 fuentes
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
 - [2020/10/20201002-1 - Caso Pío Nono: carabinero lanza a un adolescente de 16 años desde un puente al río Mapocho y es formalizado por homicidio frustrado](src/content/events/2020/10/20201002-1.md) — 3 fuentes
+- [2020/10/20201018-2 - Primer aniversario del 18-O: 580 detenidos en todo el país y jornada de incidentes en la RM](src/content/events/2020/10/20201018-2.md) — 2 fuentes
 - [2020/10/20201019-1 - The Guardian estrena documental sobre los manifestantes cegados en el estallido que buscan justicia: 'This is mutilation'](src/content/events/2020/10/20201019-1.md) — 1 fuente
 - [2020/10/20201025-1 - Plebiscito de entrada: el Apruebo gana con 78,27% y la Convención Constitucional será la encargada de redactar la nueva Constitución](src/content/events/2020/10/20201025-1.md) — 2 fuentes
+- [2020/11/20201107-1 - Confusam anuncia paro nacional de 48 horas: 'la salud de las personas no es valorada por el gobierno'](src/content/events/2020/11/20201107-1.md) — 1 fuente
+- [2020/11/20201111-1 - Julio Ponce Lerou paga la multa de $2.152 millones por el caso Cascadas tras una polémica rebaja](src/content/events/2020/11/20201111-1.md) — 2 fuentes
 - [2020/11/20201120-1 - Ciper revela que el manual interno de Carabineros reconoce el alto riesgo para la salud del uso intensivo de gas CS](src/content/events/2020/11/20201120-1.md) — 4 fuentes
 - [2020/11/20201127-1 - Caso Corpesca: el lobby de la Ley de Pesca](src/content/events/2020/11/20201127-1.md) — 3 fuentes
+- [2020/12/20201203-1 - Cámara despacha a ley el segundo retiro del 10% de las AFP y la Contraloría toma razón de su promulgación](src/content/events/2020/12/20201203-1.md) — 2 fuentes
 - [2020/12/20201218-1 - Caso Luminarias alcanza a Jadue: Fiscalía indaga donación de Itelecom por $50 millones a la Corporación Cultural de Recoleta](src/content/events/2020/12/20201218-1.md) — 1 fuente
 - [2020/12/20201220-1 - Forensic Architecture y No+Más Lacrimógenas publican investigación que mide la toxicidad del gas lacrimógeno en Plaza de la Dignidad](src/content/events/2020/12/20201220-1.md) — 4 fuentes
+- [2020/12/20201224-1 - Chile inicia la vacunación contra el COVID-19 en tres hospitales de Santiago](src/content/events/2020/12/20201224-1.md) — 2 fuentes
 - [2020/12/20201231-1 - Karen Rojo es declarada culpable por fraude al fisco en el caso de la Corporación Municipal de Antofagasta](src/content/events/2020/12/20201231-1.md) — 1 fuente
 
 ## 2019
 
+- [2019/02/20190214-1 - Ordenan la detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba por fraude al fisco](src/content/events/2019/02/20190214-1.md) — 2 fuentes
+- [2019/03/20190304-1 - La ministra Rutherford procesa al exjefe de finanzas del Ejército Jozo Santic Palomino por fraude al fisco](src/content/events/2019/03/20190304-1.md) — 2 fuentes
+- [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — 2 fuentes
+- [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — 2 fuentes
+- [2019/04/20190402-1 - La exministra Javiera Blanco es sobreseída en el caso Gendarmería por fraude al fisco y nombramiento ilegal](src/content/events/2019/04/20190402-1.md) — 2 fuentes
+- [2019/04/20190409-1 - La DC anuncia su apoyo a la idea de legislar en la reforma tributaria de Piñera y abre una grieta en la oposición](src/content/events/2019/04/20190409-1.md) — 2 fuentes
 - [2019/04/20190424-1 - TDLC sanciona a navieras por cartel del transporte marítimo de vehículos hacia Chile](src/content/events/2019/04/20190424-1.md) — 5 fuentes
+- [2019/10/20191001-1 - Cámara rechaza la acusación constitucional contra la ministra de Educación Marcela Cubillos](src/content/events/2019/10/20191001-1.md) — 2 fuentes
 - [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 9 fuentes
 - [2019/10/20191019-1 - Tres personas mueren en incendio de supermercado durante saqueos en San Bernardo y el aeropuerto de Santiago colapsa en la primera jornada de estado de emergencia](src/content/events/2019/10/20191019-1.md) — 5 fuentes
+- [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — 2 fuentes
 - [2019/10/20191020-1 - Video viral muestra a tres carabineros de Fuerzas Especiales aspirando una sustancia blanca en plena calle; Carabineros asegura que era Mentholatum contra los gases lacrimógenos](src/content/events/2019/10/20191020-1.md) — 12 fuentes
 - [2019/10/20191020-2 - Militar dispara y mata a Romario Veloz en los estacionamientos del Mall Plaza La Serena](src/content/events/2019/10/20191020-2.md) — 4 fuentes
 - [2019/10/20191025-1 - Marcha del 25 de octubre: más de un millón de personas protagonizan la mayor manifestación de la historia de Chile](src/content/events/2019/10/20191025-1.md) — 4 fuentes
+- [2019/10/20191028-1 - Cambio de gabinete del 28 de octubre de 2019: Chadwick sale de Interior, entra Blumel y Piñera anuncia el fin del estado de emergencia](src/content/events/2019/10/20191028-1.md) — 4 fuentes
+- [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — 2 fuentes
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — 1 fuente
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 3 fuentes

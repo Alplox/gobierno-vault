@@ -462,6 +462,33 @@ pauta-2026-03-12-primeras-medidas-kast:
   fecha: 2026-03-12
   url: https://www.pauta.cl/actualidad/2026/03/12/que-son-y-en-que-consisten-los-decretos-firmados-por-el-presidente-kast-a-horas-de-asumir.html
 
+adnradio-2026-03-11-carter-pais-mas-pobre-feliz:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "\"Un país más pobre, pero más feliz\": la frase del diputado republicano que descolocó a Daniel Matamala"
+  autor: ADN Radio
+  fecha: 2026-03-11
+  url: https://www.adnradio.cl/2026/03/11/un-pais-mas-pobre-pero-mas-feliz-la-frase-del-diputado-republicano-que-descoloco-a-daniel-matamala/
+  notas: "Fuente primaria del dicho de Álvaro Carter (11-mar-2026, día del cambio de mando) en las afueras de La Moneda; incluye la reacción de Daniel Matamala y Cristóbal Bellolio en el estudio de Chilevisión y el clip difundido por @TodoPasaCL."
+
+t13-2026-03-12-carter-pais-mas-pobre-feliz:
+  tipo: prensa
+  medio: T13
+  titulo: "\"Un país más pobre, pero más feliz\": La frase del diputado Carter (Republicanos) que llamó la atención tras cambio de mando"
+  autor: T13
+  fecha: 2026-03-12
+  url: https://www.t13.cl/noticia/politica/un-pais-mas-pobre-pero-mas-feliz-frase-del-diputado-carter-republicanos-12-3-2026
+  notas: "Publicada el 12-mar (11:37) sobre el hecho del 11-mar; aporta el contexto del ataque al carabinero de Puerto Varas y la cita completa de Carter."
+
+elperiodico-2026-03-12-carter-pais-mas-pobre-feliz:
+  tipo: prensa
+  medio: El Periódico
+  titulo: "Polémica por frase de diputado republicano sobre el futuro de Chile: \"un país más pobre, pero más feliz\""
+  autor: El Periódico
+  fecha: 2026-03-12
+  url: https://elperiodico.cl/polemica-por-frase-de-diputado-republicano-sobre-el-futuro-de-chile-un-pais-mas-pobre-pero-mas-feliz/
+  notas: "Cobertura regional (La Araucanía) de la polémica; añade la lectura de Cristóbal Bellolio y el debate sobre los recortes presupuestarios."
+
 latercera-2026-03-16-inauguracion-escudo-fronterizo:
   tipo: prensa
   medio: La Tercera
@@ -17081,6 +17108,14 @@ cooperativa-2026-08-06-arrau-sml-monopolio-adn:
   fecha: 2026-08-06
   url: https://cooperativa.cl/noticias/pais/seguridad-ciudadana/acot-arrau-apunta-a-terminar-con-el-monopolio-del-sml-en-pesquisas-de/2026-08-06/095353.html
   notas: "Declaraciones del ministro de Seguridad Martín Arrau en la Escuela de Carabineros: incautación y destrucción de bienes que ingresan por pasos no habilitados (sin devolución tras multa aduanera), fin del monopolio del SML en pesquisas de ADN, fin del monopolio del Ministerio de Salud en análisis y destrucción de drogas, y modificación de la Ley Antibarricadas quitando la intención de los involucrados. También abordó el nuevo estado de excepción constitucional."
+reddit-2026-08-06-arrau-sml-monopolio-adn:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "ACOT: Arrau apunta a terminar con el monopolio del SML en pesquisas de ADN"
+  autor: r/chile
+  fecha: 2026-08-07
+  url: https://old.reddit.com/r/chile/comments/1vigsre/acot_arrau_apunta_a_terminar_con_el_monopolio_del/
+  notas: "Hilo de r/chile sobre la propuesta de la ACOT de terminar con el monopolio del SML en pesquisas de ADN (evento 20260806-48). Reacción mayoritariamente crítica: 'Así podemos falsificar y eliminar pruebas a gusto' (monkeyDantifa, 96 puntos), acusaciones de 'malicia', críticas al dar 'más poder a los pacos' (ironic-waffle, 46 puntos) y a tratar empresas del Estado como privadas. El usuario LordVelaryon aportó el matiz técnico más sustantivo: LABOCAR y LACRIM ya tienen laboratorios de genética forense para peritar muestras dubitadas y el monopolio real del SML es el CODIS (banco de datos genéticos de la Ley 19.970). También hubo referencia al debate sobre la Ley Antibarricadas. Fuente complementaria de opinión ciudadana, no dato independiente."
 
 cooperativa-2026-08-06-ejes-acot-28-proyectos:
   tipo: prensa
@@ -18349,6 +18384,78 @@ t13-2026-08-08-megaoperativo-656-detenidos-primeras-horas:
   fecha: 2026-08-08
   url: https://www.t13.cl/noticia/nacional/megaoperativo-nacional-656-detenidos-33887-controles-las-primeras-horas-8-8-2026
   notas: "Primer balance del megaoperativo (20:00-00:00 del 7 de agosto): 5.000 efectivos (3.500 Carabineros + 1.500 PDI), 656 detenidos (162 en la Región Metropolitana), 33.887 controles, 12 kilos de droga, 23 armas y 90 vehículos preliminares; 2.367 infracciones. Primera operación tras el anuncio de ACOT (5 de agosto). Comenzó en Macul. Declaraciones del prefecto Pablo Garay (PDI Migraciones)."
+elciudadano-2026-05-14-megaoperativos-para-la-foto:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Megaoperativos para la foto: Seguridad no sabe cuántos detenidos quedan presos y Steinert sigue sin plan"
+  autor: Leonardo Buitrago
+  fecha: 2026-05-14
+  url: https://www.elciudadano.com/politica/megaoperativos-para-la-foto-seguridad-no-sabe-cuantos-detenidos-quedan-presos-y-steinert-sigue-sin-plan/05/14/
+  notas: "CIPER consultó al Ministerio de Seguridad cuántos de los miles de detenidos en los cuatro megaoperativos de los dos últimos meses pasaron a prisión preventiva: la cartera respondió que no lleva ese registro, desligándose de la persecución penal. En el primer megaoperativo (marzo 2026) se detuvo a 2.905 personas con órdenes vigentes, de las cuales solo 193 (7%) estaban acusadas de delitos de alta connotación violenta; Carabineros informó que 1.186 fueron puestas a disposición del control de detención, pero ni la policía ni el ministerio saben cuántas terminaron con prisión preventiva. La ministra Steinert admitió 'he cometido errores' y prometió un plan 'en las próximas semanas'; el ministro del Interior Alvarado defendió 'acciones' sobre 'documentos anillados'. Contexto crítico del megaoperativo ACOT (evento 20260808-5)."
+latercera-2026-06-28-luneke-copamiento-alcance:
+  tipo: opinion
+  medio: La Tercera
+  titulo: "Copamiento en barrios críticos: el alcance de la estrategia"
+  autor: Alejandra Luneke
+  fecha: 2026-06-28
+  url: https://www.latercera.com/opinion/noticia/copamiento-en-barrios-criticos-el-alcance-de-la-estrategia/
+  notas: "Columna de la académica del Núcleo Milenio de Complejidad Criminal y profesora U. Mayor: desde comienzos de los 2000 Chile ha implementado al menos trece programas de prevención/control del delito combinando copamientos, sin evidencia de su impacto; la experiencia de Brasil, Colombia y México muestra que los copamientos rara vez desarticulan de forma sostenida las redes criminales y suelen producir desplazamiento del delito y reorganización de las bandas. Los mejores resultados combinan persecución penal inteligente con intervenciones sociales. Contexto técnico para evaluar el megaoperativo ACOT (evento 20260808-5)."
+reddit-2026-08-08-ronda-impacto-carabineros:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: 656 detenidos deja ronda impacto de Carabineros a nivel nacional
+  autor: r/chile
+  fecha: 2026-08-08
+  url: https://old.reddit.com/r/chile/comments/1vj001t/656_detenidos_deja_ronda_impacto_de_carabineros_a/
+  notas: "Hilo de r/chile sobre la ronda especial nacional del 7-ago (complementario del megaoperativo ACOT, evento 20260808-5). El comentario más votado (akkadito, 59 puntos) critica la estrategia como 'soberana estupidez': estrategia usada por décadas por Carabineros, detenciones de baja calidad, congestión del sistema judicial y uso político del ministerio; fue corregido por Paillan al confundir Ministerio Público con Ministerio de Seguridad. La crítica de fondo coincide con el dato de CIPER (el Ministerio de Seguridad no registra cuántos detenidos quedan presos). Solo fuente complementaria, los datos verificables provienen de prensa."
+biobiochile-2026-05-30-megaoperativo-copamiento-1200-detenidos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Más de 1.200 detenidos dejó megaoperativo de copamiento de Carabineros en todo el país"
+  autor: Bío Bío
+  fecha: 2026-05-30
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/30/mas-de-1-200-detenidos-dejo-megaoperativo-de-copamiento-de-carabineros-en-todo-el-pais.shtml
+  notas: "Megaoperativo de copamiento nacional del 30-may-2026 (previo a la ACOT): más de 1.200 detenidos y 5.500 policías desplegados, bajo la entonces ministra de Seguridad Trinidad Steinert. Contexto de frecuencia de los despliegues masivos del gobierno de Kast (ver TAREAS.md, megaoperativo de mayo sin evento propio)."
+elperiodista-2025-11-05-fortaleza-3-balance:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Operación Fortaleza 3: casi 2.500 personas detenidas y 450 kilos de droga incautada a nivel nacional"
+  autor: El Periodista
+  fecha: 2025-11-05
+  url: https://www.elperiodista.cl/2025/11/operacion-fortaleza-deja-casi-2-500-personas-detenidas-y-450-kilos-de-droga-incautada-a-nivel-nacional/
+  notas: "Balance del ministro de Seguridad Pública Luis Cordero del tercer megaoperativo conjunto nacional Operación Fortaleza (3-5 nov 2025): 6.200+ funcionarios (1.129 en RM), 2.194 medios logísticos, 2.495 detenidos (85% a control de detención), 81 armas, 452 kilos de droga; 2.734 extranjeros fiscalizados (52% venezolanos); 118+ vehículos retirados. Participación del presidente Gabriel Boric con cita destacando la 'unidad que Chile requiere'. Cordero: 'una intervención adicional y focalizada en los territorios que requieren mayor presencia policial'. Verificada por lectura completa (evento 20251105-1)."
+lanacion-2025-11-05-fortaleza-3-2495:
+  tipo: prensa
+  medio: La Nación
+  titulo: "Operación Fortaleza 3: 2.495 detenidos, 452 kilos de droga y 81 armas incautadas"
+  autor: Patricia Schüller Gamboa
+  fecha: 2025-11-05
+  url: https://www.lanacion.cl/operacion-fortaleza-3-2-495-detenidos-452-kilos-de-droga-y-81-armas-incautadas/
+  notas: "Detalle del megaoperativo nacional Operación Fortaleza 3 (lunes 3, 19:00 al miércoles 5 nov 2025, 06:00): 6.281 efectivos totales (1.129 RM + ~5.152 regiones), 2.495 detenidos (85% a control de detención), 452 kilos de droga, 81 armas, 113 municiones, 3.983 infracciones, 2.734 extranjeros fiscalizados. Foco RM: La Granja, La Pintana, San Ramón, Independencia, Recoleta, Estación Central, Vega Central, La Chimba y Toro Mazote. Unidades OS-7, OS-9, SEBV, COP y drones. Verificada por lectura completa (evento 20251105-1)."
+meganoticias-2025-11-06-fortaleza-3-2495:
+  tipo: prensa
+  medio: Meganoticias
+  titulo: "2.495 detenidos, 452 kilos de droga y 81 armas incautadas: Así fue la Operación Fortaleza III desplegada en todo Chile"
+  autor: Catalina Maldonado
+  fecha: 2025-11-06
+  url: https://www.meganoticias.cl/nacional/504575-operacion-fortaleza-3-2495-detenidos-452-kilos-de-droga-y-81-armas-incautadas-carabineros-pdi-6-11-2025.html
+  notas: "Cobertura del megaoperativo nacional Operación Fortaleza III (3-5 nov 2025): ronda masiva conjunta de Carabineros y PDI con controles de identidad y vehiculares para detectar órdenes de detención pendientes. Verificada por lectura completa (evento 20251105-1)."
+biobiochile-2025-11-05-fortaleza-3-mas-2400:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Operación Fortaleza 3: más de 2.400 detenidos y 450 kilos de droga incautada en megaoperativo nacional"
+  autor: Bío Bío
+  fecha: 2025-11-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2025/11/05/operacion-fortaleza-3-mas-de-2-400-detenidos-y-450-kilos-de-droga-incautada-en-megaoperativo-nacional.shtml
+  notas: "Cobertura del balance de la Operación Fortaleza 3 con la participación del presidente Gabriel Boric, el ministro de Seguridad Pública Luis Cordero y el general director de Carabineros Marcelo Araya (evento 20251105-1)."
+elperiodista-2025-09-10-fortaleza-3300-detenidos:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Operación Fortaleza deja más de 3.300 detenidos y 161 allanamientos a nivel nacional"
+  autor: El Periodista
+  fecha: 2025-09-10
+  url: https://www.elperiodista.cl/2025/09/operacion-fortaleza-deja-mas-de-3-300-detenidos-y-161-allanamientos-a-nivel-nacional/
+  notas: "Balance de la primera Operación Fortaleza (sept-2025), versión previa de la serie de megaoperativos nacionales bajo el gobierno de Boric: más de 3.300 detenidos y 161 allanamientos. Contexto de continuidad de las rondas masivas entre gobiernos (citada en evento 20251105-1)."
 adnradio-2026-08-07-gainza-becas-chile-cifra-morosos:
   tipo: prensa
   medio: ADN Radio
@@ -19484,6 +19591,22 @@ emol-2026-08-09-quiroz-mercado-capitales:
   autor: Redacción Emol
   fecha: 2026-08-09
   url: "https://www.emol.com/noticias/Economia/2026/08/09/1207997/jorge-quiroz-proyectos-tras-megarreforma.html"
+emol-2026-08-08-107-lir-ganancias-capital:
+  tipo: prensa
+  medio: Emol
+  titulo: "El beneficio poco comentado de la megarreforma: El impuesto 0% que favorece a pequeños inversionistas"
+  autor: José Tomás Guzmán
+  fecha: 2026-08-08
+  url: "https://www.emol.com/noticias/Economia/2026/08/08/1207911/107-lir-gobierno-megarreforma.html"
+  notas: "La megarreforma modifica el artículo 107 de la Ley de Impuesto a la Renta: desde el 1 de enero de 2027, las ganancias de capital por venta o rescate de instrumentos acogidos al régimen (acciones, ETF, fondos de inversión y determinados fondos mutuos con presencia bursátil) dejarán de pagar la tasa actual de 10% y quedarán gravadas con 0%. Hasta el cierre de 2026 rige la tasa de 10%. Los dividendos continúan sujetos a impuestos. Opiniones de Nicolás Donoso (Fintual AGF) y Catherine Ruz (Grey Capital) sobre el mayor atractivo para segmentos de menores ingresos. Es el respaldo de prensa al debate en r/chile sobre 'impuesto cero a las ganancias de acciones' (evento 20260804-6)."
+reddit-2026-08-10-quiroz-fin-del-comienzo:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: Quiroz dice que reconstrucción es solo el fin del comienzo
+  autor: r/chile
+  fecha: 2026-08-10
+  url: https://old.reddit.com/r/chile/comments/1vkjklj/quiroz_dice_que_reconstrucción_es_solo_el_fin_del/
+  notas: "Hilo de r/chile sobre la entrevista de Quiroz en Estado Nacional ('Esto es fin del comienzo… viene ahora el mercado de capitales', evento 20260809-1). Comentario más votado (CommandNotFound, 57 puntos): 'Se viene el impuesto cero a las ganancias de acciones, porque solo los que trabajan tienen que pagar impuestos, los que invierten no' — respaldado por Emol (8-ago-2026) sobre el artículo 107 LIR: tasa 0% a ganancias de capital desde 2027 (evento 20260804-6). Debate secundario sobre impuestos a ganancias no realizadas (Países Bajos como ejemplo citado por un usuario), con críticas al ministro como 'supervillano'. Fuente complementaria de opinión ciudadana, no dato independiente."
 emol-2026-08-10-sismo-colombia-74:
   tipo: prensa
   medio: Emol
@@ -21136,6 +21259,33 @@ x-2026-08-11-vodanovic-alcaldes-emol:
   url: "https://x.com/TomasVodanovic/status/2087223287738728956"
   notas: "Fuente complementaria. Vodanovic calificó de 'noticia absolutamente falsa' la versión de Emol sobre la reunión: recibieron la invitación, ajustaron agenda y asistieron; tras más de 1 hora y media se retiró por compromisos comunales previamente agendados, como varios alcaldes de todo el arco político. Dio sus excusas al Presidente, no salió molesto y no dio declaraciones. Pidió rectificación."
 
+elmostrador-2026-08-11-reforma-seguridad-divide-derecha:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Reforma de seguridad de Kast divide a senadores de derecha"
+  autor: Carlos Saldivia
+  fecha: 2026-08-11
+  url: "https://www.elmostrador.cl/noticias/pais/2026/08/11/reforma-de-seguridad-de-kast-divide-a-la-derecha/"
+  notas: "La firma de la reforma constitucional de la ACOT desató un debate transversal en el Senado que dividió a la derecha. Matías Walker (DEM) encabezó los cuestionamientos: priorizar los 70 proyectos de seguridad en trámite (infraestructura crítica, RUF) en vez de abrir una discusión constitucional, y emplazó a Arrau a poner discusión inmediata al régimen diferenciado de condena ('contacto 0'). Longton (RN) dudó de la efectividad del nuevo estado de excepción y de modificar el artículo 1. Gatica (RN) y Sanhueza (UDI) respaldaron la iniciativa. Detalla el estado de excepción de seguridad pública: intervenciones focalizadas, apoyo perimetral de FF.AA., control de desplazamientos, requisición y acceso a telecomunicaciones."
+
+latercera-2026-08-11-reforma-constitucion-seguridad-debate:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Hasta dónde reformar la Constitución en seguridad: el debate en La Moneda y la presión oficialista por 'acotar' la reforma"
+  autor: La Tercera
+  fecha: 2026-08-11
+  url: "https://www.latercera.com/politica/noticia/hasta-donde-reformar-la-constitucion-en-seguridad-el-debate-en-la-moneda-y-presion-oficialista-por-acotar-la-reforma/"
+  notas: "A pesar de la expectativa de que la reforma ingresara de inmediato, su ingreso al Congreso se concretaría el viernes 14 de agosto o, incluso, se podría extender hasta el lunes 17, por pugnas internas sobre el alcance de la iniciativa. El texto preliminar fue trabajado por el equipo de Arrau, asesores legislativos, el senador Squella y 4-5 constitucionalistas; Interior y Segpres tuvieron papel secundario. Reconoce dudas sobre la utilidad de reformar el artículo 1, sobre si el nuevo estado de excepción tendrá jefe de la defensa nacional, la crítica de Sebastián Soto (CEP) en Radio Duna ('creer que todos los problemas se resuelven con reformas constitucionales es un error'), el reparo de la UDI (Hube como interlocutora para acotar los cambios; Ramírez: reformas 'justas y necesarias'), la propuesta de Ximena Ossandón (RN) de reevaluar la forma anunciada con un régimen transitorio de cooperación de FF.AA. de 2 años, y la advertencia de Iván Moreira (UDI) de que se necesitan 29 votos en el Senado y 88 en la Cámara."
+
+x-2026-08-11-herrera-reforma-constitucional-senado:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Danilo Herrera señala que la reforma constitucional ACOT no ingresó a la cuenta de la sesión del Senado del 11 de agosto"
+  autor: Danilo Herrera
+  fecha: 2026-08-11
+  url: "https://x.com/daniloherrerad/status/2087277094136844707"
+  notas: "Fuente complementaria, punto de partida verificado con prensa. El tweet apuntó en vivo que la reforma constitucional de la agenda de seguridad no entró en la cuenta de la sesión del Senado del 11 de agosto. La Tercera del mismo día confirmó que, pese a la expectativa de ingreso inmediato tras la firma del 10 de agosto, el ingreso se postergaría al viernes 14 o incluso al lunes 17 por pugnas internas sobre el alcance del texto, con Arrau desplegado en conversaciones con parlamentarios del sector."
+
 biobiochile-2026-08-11-martinez-ffaa-seguridad-publica:
   tipo: prensa
   medio: BioBioChile
@@ -21162,6 +21312,213 @@ adnradio-2026-08-11-alvarado-feriado-17-septiembre:
   fecha: 2026-08-11
   url: "https://www.adnradio.cl/2026/08/11/gobierno-enfria-fiestas-patrias-xl-en-chile-y-pone-freno-a-feriado-del-17-de-septiembre/"
   notas: "El biministro Claudio Alvarado señaló que 'yo pienso que no' se convertirá en feriado el 17 de septiembre: el Congreso ya legisló de manera consensuada cómo abordar los feriados de septiembre y no vale la pena innovar; cualquier jornada festiva adicional tiene impacto económico y debe evaluarse."
+
+adnradio-2026-08-11-anef-descoordinacion-estatuto:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "'¿Quién gobierna, Kast o Quiroz?': Anef acusa descoordinación en el Gobierno por comisión sobre Estatuto Administrativo"
+  autor: ADN Radio
+  fecha: 2026-08-11
+  url: "https://www.adnradio.cl/2026/08/11/quien-gobierna-kast-o-quiroz-anef-acusa-descoordinacion-en-el-gobierno-por-comision-sobre-estatuto-administrativo/"
+  notas: "La Agrupación Nacional de Empleados Fiscales (Anef) endureció sus críticas tras el anuncio de Quiroz de crear una comisión técnica para revisar el Estatuto Administrativo (transversal, encabezada por un economista independiente, conclusiones antes de fin de año). Acusó una 'grave y evidente descoordinación' porque la iniciativa contradice el acuerdo del 20 de mayo con Kast de crear una Mesa Sectorial Anef-Gobierno (con MinTrab, Servicio Civil y Subdirección de Racionalización de la Función Pública), y emplazó al ministro del Trabajo Tomás Rau y al director del Servicio Civil Pedro Lea-Plaza a aclarar su posición. Cuestionó: '¿quién gobierna, el Presidente Kast o el Ministro Quiroz?' y criticó que la revisión quede en manos de expertos sin participación sindical: modernizar el Estado no debe significar reducir funcionarios, recursos o capacidades públicas."
+
+adnradio-2026-08-11-nain-retamal-20-legitima-defensa-franco:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Cámara aprueba proyecto que extiende legítima defensa privilegiada a policías, gendarmes y militares de franco"
+  autor: ADN Radio
+  fecha: 2026-08-11
+  url: "https://www.adnradio.cl/2026/08/11/camara-aprueba-proyecto-que-extiende-legitima-defensa-privilegiada-a-policias-gendarmes-y-militares-de-franco/"
+  notas: "La Sala de la Cámara aprobó el proyecto que extiende la legítima defensa privilegiada (Ley 21.560 Naín-Retamal) a funcionarios de FF.AA. y de Orden y Seguridad en calidad de franco, para repeler agresiones fuera de servicio (con armas u otro medio). Pasa al Senado (segundo trámite). Debate: 'escudo judicial' vs. riesgos de impunidad; reparos por la extensión a FF.AA. vinculada al debate de las RUF. Arrau respaldó la medida: 'un carabinero no deja de ser carabinero cuando termina su turno'."
+
+elmostrador-2026-08-11-nain-retamal-20-legitima-defensa:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Con respaldo opositor Cámara aprueba ampliar legítima defensa a policías fuera de servicio"
+  autor: El Mostrador
+  fecha: 2026-08-11
+  url: "https://www.elmostrador.cl/noticias/pais/2026/08/11/con-respaldo-opositor-camara-aprueba-ampliar-legitima-defensa-a-policias-fuera-de-servicio/"
+  notas: "Ley Naín-Retamal 2.0: idea de legislar aprobada por 114 votos contra 26 y 2 abstenciones; texto particular 106 a favor y 36 en contra. Ocho diputados del PS votaron en contra junto a FA y PC; respaldaron desde la oposición Jaime Araya (ind.-PPD, firmante de la moción), Raúl Leiva (PS) y Carlos Cuadrado (PPD: 'la seguridad no es una bandera de la derecha'). Enrique Bassaletti (ind.-bancada republicana) informó el proyecto; Ana María Gazmuri (AH) lo criticó como 'sembrar impunidad' y cuestionó que no se precise qué es estar 'en calidad de franco'; la sesión se suspendió temporalmente por falta de quórum. Arrau: 'La policía no es el enemigo' y aseguró que en los primeros 7 meses de 2026 hubo 23 procedimientos de carabineros de franco o de civil con armas de fuego (12 defendiendo a terceros). Moción presentada el 25-sep-2023 por RN (José Miguel Castro, Ximena Ossandón, Diego Schalper, entre otros)."
+
+theclinic-2026-08-09-quiroz-comision-estatuto-transversal:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Quiroz anuncia comisión transversal para reformar el estatuto administrativo: estará dirigida por un economista independiente y contará con técnicos de distintos sectores"
+  autor: Pablo Serey
+  fecha: 2026-08-09
+  url: "https://www.theclinic.cl/2026/08/09/quiroz-anuncia-comision-transversal-para-reformar-el-estatuto-administrativo-estara-dirigida-por-un-economista-independiente-y-contara-con-tecnicos-de-distintos-sectores/"
+  notas: "Tras la aprobación de la megarreforma, Quiroz anunció en Estado Nacional de TVN que convocará a una comisión transversal dirigida por un economista independiente con técnicos de distintos sectores políticos para el estatuto administrativo: 'si queremos consolidar este reordenamiento fiscal que estamos haciendo, pasa a ser extremadamente importante tener un estatuto administrativo coherente con los tiempos'. Es un tema estructural que hay que entrar. (Fuente adicional de validación del anuncio del evento 20260809-1.)"
+
+theclinic-2026-08-11-toledo-balance-agenda-seguridad:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "'Se agradece el espacio, sin embargo no cumple': El balance de Toledo tras encuentro por agenda de seguridad en La Moneda"
+  autor: Victoria Constanzo
+  fecha: 2026-08-11
+  url: "https://www.theclinic.cl/2026/08/11/se-agradece-el-espacio-sin-embargo-no-cumple-el-balance-de-toledo-tras-encuentro-por-agenda-de-seguridad-en-la-moneda/"
+  notas: "Tras la reunión de alcaldes con Kast y Arrau, el alcalde de Puente Alto Matías Toledo (que una semana antes protagonizó un tenso encuentro con el ministro) agradeció el espacio pero aseguró que no cumplió con sus expectativas: 'al haber tanta gente, muchas veces lo que es relevante se diluye'. Sobre su retiro anticipado, sostuvo que el ministro de Seguridad 'igual se retiró', provocando que la conversación se diluyera."
+
+biobiochile-2026-08-11-quiroz-feriado-17-septiembre:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'El 17 de septiembre va a ser día de trabajo': Quiroz cierra la puerta a declarar feriado"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/08/11/el-17-de-septiembre-va-a-ser-dia-de-trabajo-quiroz-cierra-la-puerta-a-declarar-feriado.shtml"
+  notas: "Quiroz cerró la puerta a declarar feriado el 17 de septiembre: 'El 17 de septiembre va a ser día de trabajo'. Confirma la postura de Hacienda frente a la moción de la diputada Parisi (PDG) de declarar feriado nacional por única vez esa fecha. (Verificada por título, fecha y descripción; el cierre de la postura ya estaba documentado en el evento 20260806-45 con las citas de Quiroz y Alvarado.)"
+
+biobiochile-2026-08-11-grau-codelco-capitalizacion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Nicolás Grau: 'Lo histórico es que el gobierno del presidente Boric decidió capitalizar Codelco'"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/11/nicolas-grau-lo-historico-es-que-el-gobierno-del-presidente-boric-decidio-capitalizar-codelco.shtml"
+  notas: "El exministro de Hacienda de Boric cuestionó el encuadre del anuncio de capitalización del 100% de utilidades 2025 de Codelco: 'Bien que Codelco se quede con 100% del excedente. Pero hablar de US$2.400 millones es confuso, porque US$2.100 millones son aumento de valor de Codelco por NovaAndino. Sacando eso, es una capitalización de US$300 millones, valioso pero no histórico'. Luego matizó: 'lo histórico es que el gobierno del Presidente Boric decidió capitalizar Codelco transformándolo en uno de los líderes mundiales en la producción de litio. Más del 85% de los US$2.400 millones que anuncian se deben a la decisión del presidente Boric'. La nota también recoge que Fontaine cifró la deuda en US$27.000 millones y precisó que de las utilidades 2025, US$400 millones son de la rentabilidad propia y US$2.000 millones el reconocimiento contable del 50% de NovaAndino."
+
+x-2026-08-11-grau-codelco-capitalizacion:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Nicolás Grau cuestiona el encuadre de la capitalización de Codelco y atribuye el hito a la decisión de Boric"
+  autor: Nicolás Grau
+  fecha: 2026-08-11
+  url: "https://x.com/nico_grau/status/2087277094136844707"
+  notas: "Fuente complementaria (citada por BioBioChile). Grau escribió: 'Bien que Codelco se quede con 100% del excedente (utilidad luego de pagos al Fisco). Pero hablar de US$2.400 millones es confuso, porque US$2.100 millones son aumento de valor de Codelco por NovaAndino. Sacando eso, es una capitalización de US$300 millones, valioso pero no histórico'. Y luego: 'lo histórico es que el gobierno del Presidente Boric decidió capitalizar Codelco transformándolo en uno de los líderes mundiales en la producción de litio. Más del 85% de los US$2.400 millones que anuncian se deben a la decisión del presidente Boric'."
+
+biobiochile-2026-08-11-pellet-araucania-estrechez:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Tras largas esperas y alzas de precios: seremi de Energía reconoce estrechez de pellet en La Araucanía"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2026/08/11/tras-largas-esperas-y-alzas-de-precios-seremi-de-energia-reconoce-estrechez-de-pellet-en-la-araucania.shtml"
+  notas: "El seremi de Energía de La Araucanía, Jorge Rathgeb, reconoció una 'estrechez' de pellet tras las molestias de vecinos por largas esperas y alzas de precios: filas que doblaban la cuadra en Ecomas de Temuco, venta limitada a 5 bolsas por persona en algunos locales. Descartó desabastecimiento ('pellet hay, en plantas se está produciendo'), atribuyó el fenómeno al aumento de demanda en Los Lagos y Los Ríos (que se abastecen desde La Araucanía, Bío Bío, Ñuble y Maule) y reconoció alzas de alrededor de $700 por bolsa de 15 kilos."
+
+cnnchile-2026-08-11-compensacion-colusion-medicamentos:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Compensación de $45 mil por colusión de medicamentos: Quiénes reciben el pago en agosto"
+  autor: CNN Chile
+  fecha: 2026-08-11
+  url: "https://www.cnnchile.com/servicios/compensacion-45-mil-colusion-medicamentos-requisitos-pago-agosto/"
+  notas: "El Sernac informó que el pago de $45.030 por menor comenzó el 7 de agosto y se extenderá hasta el 28 de agosto vía IPS: unos 6.602 receptores correspondientes a 7.833 menores vulnerables (Bono Control Niño Sano de junio 2025, cobrado por un integrante vigente de Chile Seguridades y Oportunidades, con vigencia en agosto 2026). Sin postulación. Origen: demanda colectiva por la colusión de 200 medicamentos de Farmacias Ahumada (dic-2007/mar-2008); acuerdo conciliatorio de agosto 2025 por $980 millones aprobado por la justicia: 17.652 personas recibieron $32.620 en 2025 y el grupo de 'interés difuso' ($404 millones) financia el beneficio actual; tras el pago se realizará una auditoría externa."
+
+araucaniadiario-2026-08-11-dirigentes-mapuche-golpiza:
+  tipo: prensa
+  medio: Araucanía Diario
+  titulo: "Dirigentes mapuche denuncian golpiza por parte de carabineros de civil"
+  autor: Araucanía Diario
+  fecha: 2026-08-11
+  url: "https://araucaniadiario.cl/contenido/34748/dirigentes-mapuche-denuncian-golpiza-por-parte-de-carabineros-de-civil"
+  notas: "La comunidad Antonio Panitrur rechazó la violenta detención del werken Adán Huentecol y otro comunero (Dagoberto Soto Neculpán) en el bajo Malleco, quienes tras la detención quedaron en libertad. (Nota parcialmente leída: el titular y la descripción confirman la denuncia; el detalle completo se corroboró con Resumen Latinoamericano y Radio Kurruf.)"
+
+resumenlatinoamericano-2026-08-10-panitrur-detencion:
+  tipo: prensa
+  medio: Resumen Latinoamericano
+  titulo: "Nación Mapuche. Violenta detención de dos miembros del Lof Antonio Panitrur en Bajo Malleco"
+  autor: Resumen Latinoamericano
+  fecha: 2026-08-10
+  url: "https://www.resumenlatinoamericano.org/2026/08/10/nacion-mapuche-violenta-detencion-de-dos-miembros-del-lof-antonio-panitrur-en-bajo-malleco-estas-practicas-abusivas-responden-a-medidas-de-amedrentamiento-policial-y-persecucion-politica-del-raci/"
+  notas: "Comunicado de la comunidad Mapuche Antonio Panitrur (bajo Malleko): Adán Huentecol Neculpán y Dagoberto Soto Neculpán fueron detenidos 'mediante violento procedimiento y con fuerte contingente policial' mientras reparaban los caminos interiores de la comunidad; la comunidad afirma que fueron golpeados sin mediar palabras, trasladados a la comisaría de Collipulli y pasados a control de detención. Según Carabineros, Huentecol tenía orden de detención pendiente de 2019 y Soto fue detenido por maltrato a obra de carabineros. La comunidad denuncia amedrentamiento policial y persecución política. (Medio alternativo/complementario; requiere validación con prensa tradicional.)"
+
+radiokurruf-2026-08-10-panitrur-libertad-persecucion:
+  tipo: prensa
+  medio: Radio Kurruf
+  titulo: "Miembros de la comunidad Antonio Panitrur quedan en libertad y denuncian persecución política por su lucha contra empresas forestales"
+  autor: Radio Kurruf
+  fecha: 2026-08-10
+  url: "https://radiokurruf.org/miembros-de-la-comunidad-antonio-panitrur-quedan-en-libertad-y-denuncian-persecucion-politica-por-su-lucha-contra-empresas-forestales-y-latifundistas-de-la-zona/"
+  notas: "Comunicado público mapuche (08-ago-2026): ambos peñi quedaron en libertad y regresaron a su comunidad. Los supuestos delitos son 'maltrato a la autoridad y usurpación' (desestimados por la comunidad). Fueron golpeados brutalmente por más de 6 personas de civil que no se identificaron como carabineros; la golpiza se detuvo solo cuando apareció un furgón escolar y recién entonces los civiles se identificaron como carabineros. El tribunal ordenó una segunda constatación de lesiones bajo protocolo de interculturalidad en el hospital de Collipulli. Denuncian persecución de larga data (10 años) por su lucha territorial contra empresas forestales y latifundistas, y mencionan denuncias punitivas y acusaciones de la diputada Gloria Naveillán. (Medio alternativo/complementario.)"
+
+biobiochile-2026-08-11-seremi-quesitos-brintrup:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Seremi de Salud desvinculada había promocionado quesería y sancionado a la competencia"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2026/08/11/seremi-de-salud-desvinculada-habia-promocionado-queseria-y-sancionado-a-la-competencia.shtml"
+  notas: "Como 'La Seremi de los Quesitos' se conocía a Evelyn Brintrup en los pasillos del Ministerio de Salud, ahora cesada en sus funciones. Promocionó en su Instagram personal los quesos de la empresa 'Futurocoop' ('El Mejor Queso') mientras era fiscalizada por la propia autoridad sanitaria, y una semana después aplicó una dura sanción a la quesería de la competencia (prohibición de funcionamiento e incautación de productos). Se suman 13 denuncias de gremios por maltratos y hostigamientos contra funcionarios. El delegado presidencial de Los Lagos, Cristian Palma, alegó desconocimiento; el senador UDI Iván Moreira acusó presiones políticas; el presidente de AFUSALUD, Alexis Díaz, respaldó la salida. BioBio cifra la salida como la número 33 de seremis del gobierno de Kast (40 con cargos de alto rango)."
+
+biobiochile-2026-08-11-codelco-kpmg-conflicto-interes:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Denuncian posible conflicto de interés por vínculo entre directora de Codelco con auditora externa"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/11/denuncian-posible-conflicto-de-interes-por-vinculo-entre-directora-de-codelco-con-auditora-externa.shtml"
+  notas: "En la comisión investigadora de las cifras de producción de Codelco se reveló que Tamara Agnic, directora y presidenta del CACE, fue socia de KPMG hasta septiembre de 2021, y KPMG fue contratada por el directorio para la auditoría externa e independiente de los informes de producción 2024 y 2025. Agnic no dio declaraciones. El diputado republicano Carlo Arqueros cuestionó el posible conflicto de interés; el presidente de la comisión, Cristián Tapia (PPD-Ind), propuso oficiar a Bernardo Fontaine para conocer cómo se contrató a KPMG y evaluar cambiar de empresa; Fabián Ossandón (PDG) criticó los controles internos de Codelco y pidió investigar responsabilidades administrativas por separado del Ministerio Público."
+
+latercera-2026-08-11-calidad-empleo-horizontal:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Calidad del empleo se deteriora: más de 100 mil personas pierden su trabajo formal y un 70% son mujeres en el último año"
+  autor: Carlos Alonso
+  fecha: 2026-08-11
+  url: "https://www.latercera.com/pulso/noticia/calidad-del-empleo-se-deteriora-mas-de-100-mil-personas-pierden-su-trabajo-formal-y-un-70-son-mujeres-en-el-ultimo-ano/"
+  notas: "Análisis de Horizontal sobre el mercado laboral del trimestre abril-junio 2026: el Indicador de Calidad del Empleo cayó 1,7 puntos porcentuales en doce meses, lo que equivale a 102,6 mil trabajadores que antes tenían un empleo de calidad y ya no lo tienen (caída explicada principalmente por la disminución de trabajadores con cotizaciones de seguridad social). El 67,9% de los ocupados cumple las cuatro dimensiones del indicador (cotizaciones, formalidad contractual, ausencia de subempleo y de búsqueda activa). La destrucción de empleo formal fue de 32.800 puestos (cuatro meses consecutivos a la baja) y toda la creación fue informal (114 mil, +4,7% en 12 meses, mayor alza desde abril-junio 2022), con 2.537.804 personas en la informalidad. Desempleo general 9,4% (máximo en cinco años). Brecha de género -7,5 pp; subutilización +0,8 pp por incremento de 14,5% de los parciales involuntarios (82.175 trabajadores)."
+
+cnnchile-2026-08-11-rios-municipios-agenda-seguridad:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Alcalde de Lo Prado tras reunión con Kast por agenda de seguridad: 'En estos últimos cinco meses no hemos sido considerados'"
+  autor: CNN Chile
+  fecha: 2026-08-11
+  url: "https://www.cnnchile.com/lodijeronencnn/maximiliano-rios-municipios-agenda-seguridad-kast-cinco-meses/"
+  notas: "El alcalde de Lo Prado y presidente de la Comisión de Seguridad de la Asociación Chilena de Municipalidades, Maximiliano Ríos, criticó tras la reunión con Kast en La Moneda que los municipios 'no hemos sido considerados' durante los primeros cinco meses del gobierno en la agenda contra el crimen organizado. Como ejemplo, los municipios no fueron consultados por la selección de los 50 barrios prioritarios. 'Solo vemos mano dura, estamos de acuerdo, pero se requiere mayor prevención, y la prevención la hacemos nosotros'. Advirtió diferencias presupuestarias entre municipios ('no se puede hacer más por los mismos recursos') y se mostró abierto a evaluar caso a caso la participación de las FF.AA.; ve con buenos ojos el estado de excepción con Carabineros a cargo."
+
+cooperativa-2026-08-11-ps-ppd-reforma-seguridad:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "PS y PPD atentos a posible 'gato por liebre' o 'caballo de Troya' en seguridad"
+  autor: Cooperativa
+  fecha: 2026-08-11
+  url: "https://www.cooperativa.cl/noticias/pais/seguridad-ciudadana/ps-y-ppd-atentos-a-posible-gato-por-liebre-o-caballo-de-troya-en/2026-08-11/105858.html"
+  notas: "El diputado Raúl Soto (PPD) se declaró en El Primer Café 'abierto y disponible' a trabajar en la reforma constitucional de seguridad, pero sin ser 'ingenuo ni confiar en el Gobierno': los proyectos habrá que 'mirarlos con lupa: en combatir al crimen organizado vamos a apoyar, pero si quieren mezclar peras con manzanas respecto a derechos sociales, se enreda la discusión'. La presidenta del PS, Paulina Vodanovic, criticó que, luego de 'torpedear' los procesos constitucionales de los últimos años, el Partido Republicano quiera ahora 'reiniciar' tal debate."
+
+biobiochile-2026-08-11-palestina-lewi-injerencia:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Comunidad Palestina acusa 'injerencia' y emplaza al gobierno a poner límites al embajador de Israel"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/11/comunidad-palestina-acusa-injerencia-y-emplaza-al-gobierno-a-poner-limites-al-embajador-de-israel.shtml"
+  notas: "La Comunidad Palestina de Chile, a través de su presidente Maurice Khamis Massú, exigió al gobierno hacerse cargo de la 'reiterada injerencia' del embajador de Israel Peleg Lewi, tras cuestionar públicamente a la Municipalidad de Viña del Mar por usar 'fondos de todos los vecinos' en una medida vinculada a Israel (publicación en X del 11-ago). La organización citó el artículo 41 de la Convención de Viena (no injerencia en asuntos internos), señaló que los municipios son autónomos y pidió al Minrel gestiones diplomáticas 'con la firmeza necesaria': 'Chile no puede rendirse ante una potencia extranjera; los destinos de nuestro país los definen los chilenos'."
+
+biobiochile-2026-08-11-doctrina-monroe-escudo-americas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "EEUU revive la Doctrina Monroe y apunta a crear un protectorado hemisférico que incluiría a Chile"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/11/eeuu-revive-la-doctrina-monroe-y-apunta-a-crear-un-protectorado-hemisferico-que-incluiria-a-chile.shtml"
+  notas: "Un video oficial del Departamento de Estado presenta la Doctrina Monroe (1823) como el origen de la estrategia hemisférica de Trump, en paralelo al despliegue del 'Escudo de las Américas', iniciativa que incorpora a Chile dentro de una nueva arquitectura regional de seguridad. El entonces presidente electo José Antonio Kast participó en marzo en la primera reunión de alto nivel en Miami, sin que el gobierno haya abierto el debate interno. La internacionalista Paz Zárate criticó en X: 'propaganda trumpista pretende justificar que todo el continente americano acepte el protectorado de un EEUU imperial'. El video repasa la evolución de la doctrina (1895, 1898, Corolario Roosevelt, Panamá, crisis de los misiles, Reagan) y la Operación Absolute Resolve (captura de Maduro). El martes comenzó en Ciudad de Panamá una nueva etapa de la estrategia."
+
+lahora-2026-08-11-liceo-dhalmar-huelga:
+  tipo: prensa
+  medio: La Hora
+  titulo: "Liceo regalón del Presidente Kast en Ñuñoa se fue a huelga: ratones y goteras colmaron la paciencia de estudiantes"
+  autor: La Hora
+  fecha: 2026-08-11
+  url: "https://lahora.cl/cronica/2026/08/11/liceo-regalon-del-presidente-kast-en-nunoa-se-fue-a-huelga-ratones-y-goteras-colmaron-a-estudiantes/"
+  notas: "El Liceo Augusto D'Halmar de Ñuñoa —donde Kast realizó su primera actividad pública tras asumir el mando, y único establecimiento público dentro de los 100 mejores colegios del país— está en huelga cinco meses exactos después de esa visita, tras el apoyo del 80% del alumnado (casi el 90% votó paro indefinido según el concejal Andrés Argandoña, fuente complementaria). Los estudiantes denuncian goteras, patios inundados, humedad, aulas sin calefacción, ventanas sin cortinas, ratones, problemas eléctricos y baños en malas condiciones. La concejal de Ñuñoa Alejandra Valle pidió una mesa de trabajo: 'nadie está pidiendo las soluciones para ahora, ellos solo piden una mesa de trabajo para ir avanzando'."
+
+x-2026-08-10-argandona-liceo-dhalmar:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Concejal Andrés Argandoña (Ñuñoa) reporta paro indefinido en el Liceo Augusto D'Halmar"
+  autor: Andrés Argandoña
+  fecha: 2026-08-10
+  url: "https://x.com/aargandonab/status/2086877305838751745"
+  notas: "Fuente complementaria (citada por La Hora). El concejal de Ñuñoa Andrés Argandoña señaló: 'El Liceo Augusto D'Halmar es el municipal número 1 del país. De hecho el alcalde Sichel lo usó como argumento para no traspasarlo al SLEP: ¿alguien cambiaría un modelo que está funcionando bien? Hoy casi el 90% de los estudiantes votó un paro indefinido por malas condiciones'."
+
+adnradio-2026-08-11-adica-embajadores:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Asociación de Diplomáticos cuestiona designación de embajadores del Gobierno: 23 de los 26 nuevos enviados son políticos"
+  autor: ADN Radio
+  fecha: 2026-08-11
+  url: "https://www.adnradio.cl/2026/08/11/asociacion-de-diplomaticos-cuestiona-designacion-de-embajadores-del-gobierno-23-de-los-26-nuevos-enviados-son-politicos/"
+  notas: "La Asociación de Diplomáticos de Carrera (Adica), presidida por Sebastián Lorenzini, cuestionó la política de nombramientos de embajadores del gobierno de Kast y pidió establecer por ley criterios que prioricen a funcionarios del Servicio Exterior. Tras el anuncio del martes de seis nuevos embajadores (Rusia, Suiza, Jamaica, Japón, Kenia y Nueva Zelanda), Lorenzini señaló que solo uno es un nombramiento nuevo y los otros cinco son 'enroques' (movimientos de embajadores de carrera entre países). De los 26 nuevos nombramientos realizados hasta ahora, 23 corresponden a personas del mundo político y solo tres al Servicio Exterior, alejándose del acuerdo de 80% funcionarios de carrera: 'si de una vez por todas queremos establecer criterios meritocráticos, es la hora de establecer este 80/20 por ley'."
 
 eldesconcierto-2026-08-10-drones-carabineros-columna:
   tipo: prensa
@@ -21564,4 +21921,604 @@ df-2026-08-05-cenco-malls-utilidad:
   fecha: 2026-08-05
   url: "https://www.df.cl/empresas/retail/cenco-malls-aumenta-27-9-su-utilidad-en-el-segundo-trimestre-y-alcanza-los"
   notas: "Resultados 2T26 de Cenco Malls; el negocio de supermercados de Cencosud, en contraste, mostró presiones de márgenes, lo que llevó a corredoras a preferir Cenco Malls en las carteras recomendadas de agosto."
+
+theclinic-2019-10-28-cambio-gabinete-chadwick-bumel:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Chadwick pa la casa, enroques y un par de rostros nuevos: Los cambios de Piñera en el gabinete para enfrentar la crisis social del país"
+  autor: The Clinic
+  fecha: 2019-10-28
+  url: https://www.theclinic.cl/2019/10/28/chadwick-pa-la-casa-enroques-y-un-par-de-rostros-nuevos-los-cambios-de-pinera-en-el-gabinete-para-enfrentar-la-crisis-social-del-pais/
+
+biobiochile-2019-10-28-blumel-interior:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gonzalo Blumel, la nueva carta de La Moneda en Interior para remplazar a Andrés Chadwick"
+  autor: BioBioChile
+  fecha: 2019-10-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/10/28/gonzalo-blumel-la-nueva-carta-de-la-moneda-en-interior-para-remplazar-a-andres-chadwick.shtml
+
+eldinamo-2019-10-28-rubilar-estado-emergencia:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Vocera Karla Rubilar: 'No tenemos contemplado volver al estado de emergencia'"
+  autor: El Dínamo
+  fecha: 2019-10-28
+  url: https://www.eldinamo.cl/pais/2019/10/28/vocera-karla-rubilar-no-tenemos-contemplado-volver-al-estado-de-emergencia/
+
+theclinic-2019-10-28-rubilar-estado-emergencia:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Karla Rubilar descarta volver al estado de emergencia pero advierte: 'No podemos cambiar todo de un día para otro'"
+  autor: The Clinic
+  fecha: 2019-10-28
+  url: https://www.theclinic.cl/2019/10/28/karla-rubilar-descarta-volver-al-estado-de-emergencia-pero-advierte-no-podemos-cambiar-todo-de-un-dia-para-otro/
+
+biobiochile-2019-10-30-cancela-apec-cop25:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Presidente Piñera anuncia cancelación de APEC y COP25 en Chile"
+  autor: Yasmina Romo
+  fecha: 2019-10-30
+  url: https://www.biobiochile.cl/biobiotv/programas/agenda-propia/2019/10/30/presidente-pinera-anuncia-cancelacion-de-apec-y-cop25-en-chile.shtml
+
+biobiochile-2019-10-30-ccs-suspension-apec-cop25:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Cámara de Comercio de Santiago y suspensión de APEC y COP25: 'Solo suma más daño a la imagen del país'"
+  autor: BioBioChile
+  fecha: 2019-10-30
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2019/10/30/camara-de-comercio-de-santiago-y-suspension-de-apec-y-cop25-solo-suma-mas-dano-a-la-imagen-del-pais.shtml
+
+biobiochile-2019-10-19-metro-20-estaciones-quemadas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "20 estaciones quemadas y 41 con diversos daños: el recuento de Metro por jornadas de protestas"
+  autor: BioBioChile
+  fecha: 2019-10-19
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2019/10/19/20-estaciones-quemadas-y-41-con-diversos-danos-el-recuento-de-metro-por-jornadas-de-protestas.shtml
+
+biobiochile-2019-11-04-pdi-detenidos-estaciones-metro:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Director de la PDI aseguró que en los próximos días habrá detenidos por estaciones quemadas de Metro"
+  autor: BioBioChile
+  fecha: 2019-11-04
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2019/11/04/director-de-la-pdi-aseguro-que-en-los-proximos-dias-habra-detenidos-por-estaciones-quemadas-de-metro.shtml
+
+biobiochile-2019-10-01-camara-rechaza-cubillos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Cámara rechaza acusación constitucional contra ministra Marcela Cubillos"
+  autor: BioBioChile
+  fecha: 2019-10-01
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/10/01/camara-rechaza-acusacion-constitucional-contra-ministra-marcela-cubillos.shtml
+
+biobiochile-2019-08-08-ps-reactivar-acusacion-cubillos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Partido Socialista busca reactivar acusación constitucional contra ministra Marcela Cubillos"
+  autor: BioBioChile
+  fecha: 2019-08-08
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/08/08/partido-socialista-busca-reactivar-acusacion-constitucional-contra-ministra-marcela-cubillos.shtml
+
+theclinic-2019-02-14-detenido-fuente-alba:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Acusado por presunto fraude al fisco: Ordenan detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba"
+  autor: EFE/The Clinic
+  fecha: 2019-02-14
+  url: https://www.theclinic.cl/2019/02/14/acusado-por-presunto-fraude-al-fisco-ordenan-detencion-del-excomandante-en-jefe-del-ejercito-juan-miguel-fuente-alba/
+
+biobiochile-2019-02-15-fuente-alba-prision-preventiva:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Excomandante Fuente-Alba queda en prisión preventiva por caso de corrupción en el Ejército"
+  autor: BioBioChile
+  fecha: 2019-02-15
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/02/15/excomandante-fuente-alba-queda-en-prision-preventiva-por-caso-de-corrupcion-en-el-ejercito.shtml
+
+theclinic-2019-03-07-pla-no-marcha-8m:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Ministra Plá no marchará por el 8M: 'Considero que es una intromisión'"
+  autor: The Clinic
+  fecha: 2019-03-07
+  url: https://www.theclinic.cl/2019/03/07/ministra-pla-no-marchara-por-el-8m-considero-que-es-una-intromision/
+
+biobiochile-2019-03-06-8m-huelga-feminista-cut:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "8M: organizaciones de mujeres llaman a adherir a la huelga feminista y piden respaldo de la CUT"
+  autor: BioBioChile
+  fecha: 2019-03-06
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/03/06/8m-organizaciones-de-mujeres-llaman-a-adherir-a-la-huelga-feminista-y-piden-respaldo-de-la-cut.shtml
+
+theclinic-2019-04-09-dc-reforma-tributaria-grieta:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La DC abre una profunda grieta con la Oposición y es aplaudida por La Moneda tras anunciar que aprobará idea de legislar en la Reforma Tributaria"
+  autor: The Clinic
+  fecha: 2019-04-09
+  url: https://www.theclinic.cl/2019/04/09/la-dc-abre-una-profunda-grieta-con-la-oposicion-y-es-aplaudida-por-la-moneda-tras-anunciar-que-aprobara-idea-de-legislar-en-la-reforma-tributaria/
+
+biobiochile-2019-04-01-oposicion-exige-modificar-reforma-tributaria:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Oposición exige a gobierno modificar proyecto de reforma tributaria o rechazará idea de legislar"
+  autor: BioBioChile
+  fecha: 2019-04-01
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/04/01/oposicion-exige-a-gobierno-modificar-proyecto-de-reforma-tributaria-o-rechazara-idea-de-legislar.shtml
+
+theclinic-2019-03-04-santic-palomino-procesado:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Jozo Santic Palomino: Exjefe de finanzas del Ejército es procesado por fraude al fisco"
+  autor: EFE/The Clinic
+  fecha: 2019-03-04
+  url: https://www.theclinic.cl/2019/03/04/jozo-santic-palomino-exjefe-de-finanzas-del-ejercito-es-procesado-por-fraude-al-fisco/
+
+biobiochile-2019-03-04-rutherford-procesa-santic:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Ministra Rutherford somete a proceso a general (R) Jozo Santic Rodríguez por fraude al fisco"
+  autor: BioBioChile
+  fecha: 2019-03-04
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/03/04/ministra-rutherford-somete-a-proceso-a-general-r-jozo-santic-rodriguez-por-fraude-al-fisco.shtml
+
+theclinic-2019-04-02-javiera-blanco-sobreseida:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Javiera Blanco es sobreseída por contrataciones en Gendarmería y fraude al fisco"
+  autor: The Clinic
+  fecha: 2019-04-02
+  url: https://www.theclinic.cl/2019/04/02/javiera-blanco-es-sobreseida-por-contrataciones-en-gendarmeria-y-fraude-al-fisco/
+
+biobiochile-2019-04-02-sobreseen-javiera-blanco:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sobreseen a exministra Javiera Blanco en caso de fraude en contratos de Gendarmería"
+  autor: BioBioChile
+  fecha: 2019-04-02
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/04/02/sobreseen-a-exministra-javiera-blanco-en-caso-de-fraude-en-contratos-de-gendarmeria.shtml
+
+biobiochile-2019-03-28-ministros-divididos-reforma-previsional:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Ministros están divididos ante petición de separar proyecto de reforma previsional"
+  autor: BioBioChile
+  fecha: 2019-03-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/03/28/ministros-estan-divididos-ante-peticion-de-separar-proyecto-de-reforma-previsional.shtml
+
+biobiochile-2020-03-16-fase-4-cierre-fronteras:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Chile entra en Fase 4 por pandemia del Covid-19 y Gobierno anuncia cierre de fronteras"
+  autor: BioBioChile
+  fecha: 2020-03-16
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/03/16/chile-entra-en-fase-4-155-casos-de-coronavirus-y-gobierno-anuncia-cierre-de-fronteras.shtml
+
+biobiochile-2020-03-22-toque-de-queda-nacional:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno anuncia toque de queda nacional por Covid-19: comienza este domingo a las 22:00 horas"
+  autor: BioBioChile
+  fecha: 2020-03-22
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/03/22/gobierno-anuncia-toque-de-queda-nacional-por-covid-19-comienza-este-domingo-a-las-2200-horas.shtml
+
+biobiochile-2020-03-19-acuerdo-plebiscito-25-octubre:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Acuerdan postergar para el 25 de octubre el plebiscito; municipales serán en abril de 2021"
+  autor: BioBioChile
+  fecha: 2020-03-19
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/03/19/acuerdan-postergar-para-el-25-de-octubre-el-plebiscito-municipales-seran-en-abril-de-2021.shtml
+
+elperiodista-2020-03-19-partidos-plebiscito-25-octubre:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Partidos acuerdan plebiscito para el 25 de octubre"
+  autor: El Periodista
+  fecha: 2020-03-19
+  url: https://www.elperiodista.cl/2020/03/partidos-acuerdan-plebiscito-para-el-25-de-octubre/
+
+biobiochile-2020-05-03-cuarentena-cerrillos-recoleta-quilicura:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Desde el martes entran en cuarentena Cerrillos, Recoleta, Quilicura y todo Santiago Centro"
+  autor: BioBioChile
+  fecha: 2020-05-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/05/03/desde-el-martes-entran-en-cuarentena-cerrillos-recoleta-quilicura-y-todo-santiago-centro.shtml
+
+biobiochile-2020-05-02-rm-80-casos-cuarentena:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Región Metropolitana concentra 80% de nuevos casos por Covid-19: diputados piden cuarentena total"
+  autor: BioBioChile
+  fecha: 2020-05-02
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/05/02/region-metropolitana-concentra-80-de-nuevos-casos-por-covid-19-diputados-piden-cuarentena-total.shtml
+
+biobiochile-2020-06-02-jp-morgan-desempleo-20:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "JP Morgan estima desempleo en Chile bordeando 20% aludiendo a que INE minimiza las cifras"
+  autor: BioBioChile
+  fecha: 2020-06-02
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2020/06/02/jp-morgan-estima-desempleo-chile-bordea-20-aludiendo-ine-minimiza-las-cifras.shtml
+
+biobiochile-2020-06-01-amplian-detencion-carabinero-uber:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Amplían detención a carabinero que dejó gravemente herido a bala a conductor Uber en Puerto Montt"
+  autor: BioBioChile
+  fecha: 2020-06-01
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2020/06/01/amplian-detencion-carabinero-dejo-gravemente-herido-bala-conductor-uber-puerto-montt.shtml
+
+biobiochile-2020-06-02-indh-investigacion-carabinero-uber:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "INDH confirma que sigue investigación por carabinero que disparó a conductor Uber en Puerto Montt"
+  autor: BioBioChile
+  fecha: 2020-06-02
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-los-lagos/2020/06/02/indh-confirma-sigue-investigacion-carabinero-disparo-conductor-uber-puerto-montt.shtml
+
+radio_uchile-2020-08-05-comuneros-huelga-hambre:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Comuneros mapuche en huelga de hambre rechazan invitación del gobierno e inician huelga seca"
+  autor: Radio Universidad de Chile
+  fecha: 2020-08-05
+  url: https://radio.uchile.cl/2020/08/05/comuneros-mapuche-en-huelga-de-hambre-rechazan-invitacion-del-gobierno-e-inician-huelga-seca/
+
+biobiochile-2020-08-14-cordova-huelga-seca:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Celestino Córdova confirma huelga seca e insiste en que si muere será culpa del gobierno"
+  autor: BioBioChile
+  fecha: 2020-08-14
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/08/14/celestino-cordova-confirma-huelga-seca-e-insiste-en-que-si-muere-sera-culpa-del-gobierno.shtml
+
+biobiochile-2020-08-15-cordova-inicia-huelga-seca:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Celestino Córdova inicia huelga seca tras no llegar a acuerdo con el gobierno"
+  autor: BioBioChile
+  fecha: 2020-08-15
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2020/08/15/celestino-cordova-inicia-huelga-seca-tras-no-llegar-a-acuerdo-con-el-gobierno.shtml
+
+biobiochile-2020-10-18-580-detenidos-aniversario-18-o:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "580 detenidos en todo el país dejó primer aniversario del 18 de octubre"
+  autor: BioBioChile
+  fecha: 2020-10-19
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/10/19/580-detenidos-en-todo-el-pais-dejo-primer-aniversario-del-18-de-octubre.shtml
+
+biobiochile-2020-10-18-imagenes-violento-aniversario-18-o:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Las impactantes imágenes que ha dejado el violento aniversario del 18-O"
+  autor: BioBioChile
+  fecha: 2020-10-18
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/10/18/las-impactantes-imagenes-que-ha-dejado-el-violento-aniversario-del-18-o.shtml
+
+biobiochile-2020-12-01-comision-aprueba-segundo-retiro:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Comisión de Trabajo de la Cámara aprueba en general segundo retiro del 10% del gobierno"
+  autor: BioBioChile
+  fecha: 2020-12-01
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/12/01/comision-de-trabajo-de-la-camara-aprueba-en-general-segundo-retiro-de-10-del-gobierno.shtml
+
+biobiochile-2020-12-07-contraloria-segundo-retiro:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Contraloría toma razón del decreto promulgatorio que autoriza segundo retiro de las AFP"
+  autor: BioBioChile
+  fecha: 2020-12-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/12/07/contraloria-toma-razon-del-decreto-promulgatorio-que-autoriza-segundo-retiro-afp.shtml
+
+biobiochile-2020-11-07-confusam-paro-48-horas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Confusam anuncia paro de 48 horas y acusa incumplimientos del gobierno"
+  autor: BioBioChile
+  fecha: 2020-11-07
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/11/07/confusam-anuncia-paro-de-48-horas-y-acusa-incumplimientos-del-gobierno.shtml
+
+biobiochile-2020-11-11-ponce-lerou-multa-cascadas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Tras polémica y millonaria rebaja: Julio Ponce Lerou paga $2.152 millones de multa por caso Cascadas"
+  autor: BioBioChile
+  fecha: 2020-11-11
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/11/11/tras-polemica-y-millonaria-rebaja-julio-ponce-lerou-paga-2-152-millones-de-multa-por-caso-cascadas.shtml
+
+theclinic-2020-11-11-ponce-lerou-multa-cascadas:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Julio Ponce Lerou pagó multa de $2.152 millones por el caso Cascadas luego de recibir polémica rebaja"
+  autor: The Clinic
+  fecha: 2020-11-11
+  url: https://www.theclinic.cl/2020/11/11/julio-ponce-lerou-pago-multa-de-2-152-millones-por-el-caso-cascadas-luego-de-recibir-polemica-rebaja/
+
+biobiochile-2023-09-28-boric-presupuesto-2024:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Presidente Boric presenta proyecto de presupuesto 2024 con aumento de 3,5% del gasto público"
+  autor: BioBioChile
+  fecha: 2023-09-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2023/09/28/presidente-boric-presenta-proyecto-de-presupuesto-2024-con-aumento-de-35-del-gasto-publico.shtml
+
+elperiodista-2023-09-29-boric-presupuesto-2024:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Boric anuncia presupuesto 2024 con incrementos en salud, vivienda, seguridad y cultura"
+  autor: El Periodista
+  fecha: 2023-09-29
+  url: https://www.elperiodista.cl/2023/09/boric-anuncia-presupuesto-2024-con-incrementos-en-salud-vivienda-seguridad-y-cultura/
+
+biobiochile-2023-06-30-boric-responsabilidad-politica-convenios:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Caso Convenios: presidente Boric asegura que se hará valer la responsabilidad política sea quien sea"
+  autor: BioBioChile
+  fecha: 2023-06-30
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2023/06/30/caso-convenios-presidente-boric-asegura-que-se-hara-valer-la-responsabilidad-politica-sea-quien-sea.shtml
+
+biobiochile-2024-06-09-baja-participacion-primarias:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Baja participación marca el comienzo de la jornada de elecciones primarias en el país"
+  autor: BioBioChile
+  fecha: 2024-06-09
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2024/06/09/baja-participacion-marca-el-comienzo-de-la-jornada-de-elecciones-primarias-en-el-pais.shtml
+
+biobiochile-2024-06-08-analistas-baja-participacion-primarias:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Por voto voluntario y fatiga electoral: analistas proyectan baja participación en primarias"
+  autor: BioBioChile
+  fecha: 2024-06-08
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2024/06/08/por-voto-voluntario-y-fatiga-electoral-analistas-proyectan-baja-participacion-en-primarias.shtml
+
+ciper-2021-10-03-pandora-papers-familias-pinera-delano-dominga:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Pandora Papers: Familias Piñera y Délano sellaron millonaria compraventa de Minera Dominga en Islas Vírgenes Británicas"
+  autor: Francisca Skoknic y Alberto Arellano
+  fecha: 2021-10-03
+  url: https://www.ciperchile.cl/2021/10/03/pandora-papers-familias-pinera-y-delano-sellaron-millonaria-compraventa-de-minera-dominga-en-islas-virgenes-britanicas/
+
+biobiochile-2017-02-27-intereses-familia-pinera-minera-dominga:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Los desconocidos intereses de la familia Piñera en minera Dominga"
+  autor: BioBioChile
+  fecha: 2017-02-27
+  url: https://www.biobiochile.cl/especial/noticias/reportajes/reportajes-reportajes/2017/02/27/los-desconocidos-intereses-de-la-familia-pinera-en-minera-dominga.shtml
+
+biobiochile-2021-10-03-oposicion-pide-transparencia-pandora-papers:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Oposición pide al Presidente Piñera máxima transparencia por revelaciones de Pandora Papers"
+  autor: BioBioChile
+  fecha: 2021-10-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2021/10/03/oposicion-pide-al-presidente-pinera-maxima-transparencia-por-revelaciones-de-pandora-papers.shtml
+
+biobiochile-2021-10-03-bellolio-blinda-pinera-pandora-papers:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Bellolio blinda a Piñera por Pandora Papers: 'No había ningún tipo de ilegalidad'"
+  autor: BioBioChile
+  fecha: 2021-10-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2021/10/03/bellolio-blinda-a-pinera-por-pandora-papers-no-habia-ningun-tipo-de-ilegalidad.shtml
+
+biobiochile-2021-11-09-camara-aprueba-acusacion-constitucional-pinera:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Maratónica sesión: diputados aprueban acusación constitucional contra Piñera y ahora pasa al Senado"
+  autor: BioBioChile
+  fecha: 2021-11-09
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2021/11/09/maratonica-sesion-diputados-aprueban-acusacion-constitucional-contra-pinera-y-ahora-pasa-al-senado.shtml
+
+elmostrador-2021-11-09-aprueba-acusacion-constitucional-pinera:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Se aprueba acusación constitucional contra Presidente Piñera: por 78 votos a favor Cámara decide someter a juicio político al Mandatario"
+  autor: El Mostrador
+  fecha: 2021-11-09
+  url: https://www.elmostrador.cl/destacado/2021/11/09/se-aprueba-acusacion-constitucional-contra-presidente-pinera-por-78-votos-a-favor-camara-decide-someter-a-juicio-politico-al-mandatario/
+
+biobiochile-2021-11-16-senado-rechaza-acusacion-constitucional-pinera:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Senado rechaza acusación constitucional contra Piñera al no alcanzar los 29 votos necesarios"
+  autor: BioBioChile
+  fecha: 2021-11-16
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2021/11/16/senado-rechaza-acusacion-constitucional-contra-pinera-al-no-alcanzar-los-votos-necesarios.shtml
+
+latercera-2021-11-16-senado-rechaza-acusacion-pinera:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Senado rechaza acusación a Piñera, a pesar de alineamiento opositor y abstención de Ossandón"
+  autor: La Tercera
+  fecha: 2021-11-16
+  url: https://www.latercera.com/politica/noticia/senado-rechaza-acusacion-a-pinera-a-pesar-de-alineamiento-opositor-y-abstencion-de-ossandon/LLDLMJVURJCFVCNT3ED6XP265I/
+
+cooperativa-2025-01-13-formalizan-16-acusados-factop-audios:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Formalizan a 16 acusados de los casos Factop y Audios"
+  autor: Redacción Cooperativa
+  fecha: 2025-01-13
+  url: https://www.cooperativa.cl/noticias/pais/judicial/denuncias-de-corrupcion/formalizan-a-16-acusados-de-los-casos-factop-y-audios/2025-01-13/092315.html
+
+elmostrador-2025-01-14-segundo-dia-formalizaciones-caso-audios-factop:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Segundo día de formalizaciones en caso Audios y Factop: Fiscalía busca acreditar lavado de activos"
+  autor: El Mostrador
+  fecha: 2025-01-14
+  url: https://www.elmostrador.cl/noticias/multimedia/2025/01/14/segundo-dia-de-formalizaciones-en-caso-audios-y-factop-fiscalia-busca-acreditar-lavado-de-activos/
+
+biobiochile-2024-03-15-fiscalia-allana-casa-oficina-director-pdi-caso-audios:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Fiscalía allana la casa y la oficina del director general de la PDI: será formalizado por caso audios"
+  autor: BioBioChile
+  fecha: 2024-03-15
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2024/03/15/fiscalia-allana-la-casa-y-la-oficina-del-director-general-de-la-pdi-sera-formalizado-por-caso-audios.shtml
+
+biobiochile-2024-03-15-renuncia-director-pdi-filtrar-informacion-reservada:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Renuncia director de la PDI tras ser acusado de filtrar información reservada"
+  autor: BioBioChile
+  fecha: 2024-03-15
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2024/03/15/renuncia-director-de-la-pdi-tras-ser-acusado-de-filtrar-informacion-reservada.shtml
+
+exante-2025-03-28-primera-sentencia-caso-audios-sergio-munoz:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "Primera sentencia del caso Audios: exdirector de la PDI Sergio Muñoz llega a acuerdo para cumplir pena en libertad vigilada"
+  autor: Ex-Ante
+  fecha: 2025-03-28
+  url: https://www.ex-ante.cl/nacional/primera-sentencia-del-caso-audios-exdirector-de-la-pdi-sergio-munoz-llega-a-acuerdo-para-cumplir-pena-en-libertad-vigilada/
+
+biobiochile-2026-08-11-google-anuncia-cable-submarino-chile:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Google anuncia que instalará un cable submarino en Chile y Gobierno celebra impacto de la inversión"
+  autor: BioBioChile
+  fecha: 2026-08-11
+  url: https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/11/google-anuncia-que-instalara-un-cable-submarino-en-chile-y-gobierno-celebra-impacto-de-la-inversion.shtml
+
+latercera-2026-08-11-google-cable-alisios-chile-panama:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Google anuncia un nuevo cable submarino que conectará Chile con Panamá y República Dominicana"
+  autor: David Nogales
+  fecha: 2026-08-11
+  url: https://www.latercera.com/pulso/noticia/google-anuncia-un-nuevo-cable-submarino-que-conectara-a-chile-con-panama/
+
+gobcl-2026-06-22-cable-humboldt-aprobado-instalacion:
+  tipo: documento
+  medio: Gobierno de Chile
+  titulo: "Cable Humboldt: Aprueban instalación del cable submarino de Google que unirá Chile con Asia-Pacífico"
+  autor: Gobierno de Chile
+  fecha: 2026-06-22
+  url: https://www.gob.cl/noticias/cable-humboldt-aprueban-instalacion-del-cable-submarino-de-google-que-unira-chile-con-asia-pacifico/
+
+biobiochile-2020-12-24-vacunacion-parte-vispera-navidad-tres-hospitales:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Vacunación contra COVID-19 parte esta víspera de Navidad en tres hospitales de Santiago"
+  autor: BioBioChile
+  fecha: 2020-12-24
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2020/12/24/vacunacion-contra-covid-19-parte-esta-vispera-de-navidad-en-tres-hospitales-de-santiago.shtml
+
+biobiochile-2020-12-24-comenzo-vacunacion-covid-19-chile:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Comenzó la vacunación contra el COVID-19 en Chile"
+  autor: BioBioChile
+  fecha: 2020-12-24
+  url: https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/12/24/comenzo-la-vacunacion-contra-el-covid-19-en-chile.shtml
+
+elpais-2024-10-15-camara-rechaza-acusacion-matus:
+  tipo: prensa
+  medio: El País (Chile)
+  titulo: "La Cámara de Diputados rechaza la acusación constitucional en contra del juez chileno Jean Pierre Matus"
+  autor: Ana María Sanhueza
+  fecha: 2024-10-15
+  url: https://elpais.com/chile/2024-10-15/la-camara-de-diputados-rechaza-la-acusacion-constitucional-en-contra-del-juez-chileno-jean-pierre-matus.html
+
+biobiochile-2023-01-11-carabineros-revision-arresto-domiciliario-carvones:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Carabineros ejecuta orden de revisión de arresto domiciliario de Mijael Carvones en Temucuicui"
+  autor: BioBioChile
+  fecha: 2023-01-11
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/01/11/carabineros-ejecuta-orden-de-revision-de-arresto-domiciliario-de-mijael-carvones-en-temucuicui.shtml
+
+biobiochile-2023-01-27-rechazan-prision-preventiva-carvones-arresto-fuera-temucuicui:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Rechazan prisión preventiva para Carvones: deberá cumplir arresto domiciliario fuera de Temucuicui"
+  autor: BioBioChile
+  fecha: 2023-01-27
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/01/27/rechazan-prision-preventiva-para-carvones-debera-cumplir-arresto-domiciliario-fuera-de-temucuicui.shtml
+
+cnnchile-2023-02-01-carabineros-werken-temucuicui-no-cumple-arresto-domiciliario:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Carabineros: werken de Temucuicui no cumple arresto domiciliario"
+  autor: CNN Chile
+  fecha: 2023-02-01
+  url: https://www.cnnchile.com/pais/carabineros-werken-temucuicui-no-cumple-arresto-domiciliario/
+
+biobiochile-2023-01-11-congreso-15va-prorroga-estado-excepcion-macrozona-sur:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Congreso aprobó por 15ª vez una nueva prórroga del estado de excepción en la macrozona sur"
+  autor: BioBioChile
+  fecha: 2023-01-11
+  url: https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2023/01/11/congreso-aprobo-por-15-vez-una-nueva-prorroga-del-estado-de-excepcion-en-la-macrozona-sur.shtml
+
+biobiochile-2023-02-14-temucuicui-amenaza-levantamiento-incautacion-ercilla:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Temucuicui amenaza con levantamiento si no le devuelven avena, trigo y maquinaria incautada en Ercilla"
+  autor: BioBioChile
+  fecha: 2023-02-14
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/02/14/temucuicui-amenaza-con-levantamiento-si-no-le-devuelven-avena-trigo-y-maquinaria-incautada-en-ercilla.shtml
+
+eldinamo-2023-02-15-lonko-temucuicui-levantamiento-incautacion-cosechas:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Lonko de Temucuicui amenazó con levantamiento por incautación de cosechas"
+  autor: El Dínamo
+  fecha: 2023-02-15
+  url: https://www.eldinamo.cl/pais/2023/02/15/lonko-de-temucuicui-amenzo-con-levantamiento-por-incautacion-de-cosechas/
+
+biobiochile-2023-03-20-fiscalia-investiga-ataques-llamado-levantamiento-lonko:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Fiscalía investiga relación de ataques con llamado de 'levantamiento' que hizo lonko de Temucuicui"
+  autor: BioBioChile
+  fecha: 2023-03-20
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/03/20/fiscalia-investiga-relacion-de-ataques-con-llamado-de-levantamiento-que-hizo-lonko-de-temucuicui.shtml
+
+elciudadano-2023-03-23-comunidad-temucuicui-querella-homicidio-frustrado-carabineros:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Por homicidio frustrado: comunidad de Temucuicui presentó querella criminal contra Carabineros"
+  autor: El Ciudadano
+  fecha: 2023-03-23
+  url: https://www.elciudadano.com/chile/por-homicidio-frustrado-comunidad-de-temucuicui-presento-querella-criminal-contra-carabineros/03/23/
+
+biobiochile-2023-03-25-comunidad-temucuicui-querella-carabineros-disparos-incautacion-cosecha:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Comunidad de Temucuicui se querella contra Carabineros por disparos durante incautación de cosecha"
+  autor: BioBioChile
+  fecha: 2023-03-25
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/03/25/comunidad-de-temucuicui-se-querella-contra-carabineros-por-disparos-durante-incautacion-de-cosecha.shtml
+
+biobiochile-2023-03-28-gobierno-descarta-acciones-lonco-temucuicui:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno descarta acciones legales contra lonco de Temucuicui que amenazó con levantamiento mapuche"
+  autor: BioBioChile
+  fecha: 2023-03-28
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/03/28/gobierno-descarta-acciones-legales-contra-lonco-de-temucuicui-que-amenazo-con-levantamiento-mapuche.shtml
+
+biobiochile-2023-04-24-detienen-hermano-lonco-temucuicui-amenazas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Detienen a hermano de lonco de comunidad autónoma de Temucuicui por delito de amenazas"
+  autor: BioBioChile
+  fecha: 2023-04-24
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2023/04/24/detienen-a-hermano-de-lonco-de-comunidad-autonoma-de-temucuicui-por-delito-de-amenazas.shtml
 
