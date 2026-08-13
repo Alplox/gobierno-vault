@@ -13,6 +13,7 @@ import {
   Volume2,
   VolumeX,
   Menu,
+  ChevronDown,
   Download,
 } from 'lucide-astro';
 import { ClientRouter } from 'astro:transitions';
@@ -32,17 +33,19 @@ const currentPath = Astro.url.pathname;
 // cabecera de cada .gvault). Mantenerlos IDENTICOS.
 const GV_VERIFY_CMD = `node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotliDecompressSync}=require('zlib');const t=readFileSync(process.argv[1],'utf8'),a=t.lastIndexOf('===METADATA==='),n1=t.indexOf('\\n',a),n2=t.indexOf('\\n',n1+1),m=JSON.parse(t.slice(n1+1,n2)),c=Buffer.from(t.slice(n2+1),'base64');if(createHash('sha256').update(c).digest('hex')!==m.sha256){console.error('CORRUPTO, descarta este archivo');process.exit(1)}console.log('OK, integro:',m.kind,m.fileCount,'archivos')" <nombre.gvault>`;
 
-const navLinks = [
+const navPrimary = [
   { href: '/events', label: 'Eventos', icon: Calendar },
   { href: '/people', label: 'Personas', icon: Users },
   { href: '/organizations', label: 'Organizaciones', icon: Building2 },
   { href: '/sources', label: 'Fuentes', icon: BookOpen },
   { href: '/topics', label: 'Temas', icon: Tag },
   { href: '/stats', label: 'Estadisticas', icon: BarChart3 },
+];
+const navMore = [
   { href: '/gabinete', label: 'Gabinete', icon: Landmark },
   { href: '/sueldos', label: 'Sueldos', icon: DollarSign },
-  { href: '/admin', label: 'Editor', icon: Edit3, admin: true },
 ];
+const navLinks = [...navPrimary, ...navMore];
 ---
 
 <!doctype html>
@@ -164,20 +167,34 @@ const navLinks = [
           <Shield class="h-6 w-6 text-blue-600 shrink-0" />
           <span>Gobierno Vault</span>
         </a>
-        <div class="hidden sm:flex items-center gap-1 sm:gap-2 text-sm font-medium overflow-x-auto py-1">
-          {navLinks.map((l) => (
-            <a href={l.href} data-nav-link data-nav-prefix={l.href} data-nav-admin={l.admin ? '' : undefined} data-cuelume-hover="tick" class={`flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors ${l.admin ? 'text-gray-400 hover:text-gray-700' : 'text-gray-600 hover:text-gray-900'} hover:bg-gray-100`}>
+        <div class="hidden lg:flex items-center gap-1 text-sm font-medium">
+          {navPrimary.map((l) => (
+            <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
               <l.icon class="h-4 w-4 shrink-0" />
               <span>{l.label}</span>
             </a>
           ))}
+          <details id="nav-more" class="relative group">
+            <summary data-nav-more-summary class="list-none flex items-center gap-1 px-2.5 py-1.5 rounded-lg cursor-pointer text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Más secciones">
+              <span>Más</span>
+              <ChevronDown class="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" />
+            </summary>
+            <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
+              {navMore.map((l) => (
+                <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+                  <l.icon class="h-4 w-4 shrink-0" />
+                  <span>{l.label}</span>
+                </a>
+              ))}
+            </div>
+          </details>
         </div>
         <div class="flex items-center gap-1 shrink-0">
           <button id="btn-sound" type="button" data-cuelume-press="press" class="p-2 rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
             <Volume2 id="icon-sound-on" class="h-5 w-5" />
             <VolumeX id="icon-sound-off" class="h-5 w-5 hidden" />
           </button>
-          <details id="mobile-menu" class="relative sm:hidden">
+          <details id="mobile-menu" class="relative lg:hidden">
             <summary class="list-none flex items-center p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer" aria-label="Menu de navegacion">
               <Menu class="h-5 w-5" />
             </summary>
@@ -278,6 +295,14 @@ const navLinks = [
           </div>
         </details>
       </div>
+
+      <div class="max-w-6xl mx-auto px-4 mt-4 flex justify-end">
+        <a href="/admin" data-nav-link data-nav-prefix="/admin" data-nav-admin
+           class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+           title="Editor de contenido — herramienta para administrar el vault">
+          <Edit3 class="h-3.5 w-3.5" /> Editor de contenido
+        </a>
+      </div>
     </footer>
     <script>
       import { bind, play, setEnabled } from 'cuelume';
@@ -315,6 +340,7 @@ const navLinks = [
       // (el nav persiste, así que el estado activo se recalcula en cliente).
       function updateNavActive() {
         const path = location.pathname;
+        let moreActive = false;
         document.querySelectorAll('[data-nav-link]').forEach((el) => {
           const prefix = el.getAttribute('data-nav-prefix') ?? '/';
           const isAdmin = el.hasAttribute('data-nav-admin');
@@ -326,8 +352,14 @@ const navLinks = [
             } else {
               el.classList.add('bg-blue-50', 'text-blue-700');
             }
+            if (el.closest('#nav-more')) moreActive = true;
           }
         });
+        const more = document.querySelector('[data-nav-more-summary]');
+        if (more) {
+          more.classList.toggle('bg-blue-50', moreActive);
+          more.classList.toggle('text-blue-700', moreActive);
+        }
       }
       // Registra el listener una sola vez; updateNavActive se re-ejecuta en cada
       // astro:page-load (el nav persiste entre navegaciones con View Transitions).
@@ -367,6 +399,8 @@ const navLinks = [
           }
           const menu = document.getElementById('mobile-menu') as HTMLDetailsElement | null;
           if (menu && t?.closest('#mobile-menu a[data-nav-link]')) menu.open = false;
+          const more = document.getElementById('nav-more') as HTMLDetailsElement | null;
+          if (more && t?.closest('#nav-more a[data-nav-link]')) more.open = false;
         });
       }
 

@@ -322,7 +322,7 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
                   <span class="font-semibold text-gray-900">{ref.titulo}</span>
                 )}
                 {ref.url && (
-                  <span class="inline-flex items-center gap-1 ml-2">
+                  <span class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
                     <a href={`https://web.archive.org/web/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-blue-500 transition-colors" target="_blank" rel="noopener" title="Wayback Machine">Archive</a>
                     <a href={`https://archive.ph/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-orange-500 transition-colors" target="_blank" rel="noopener" title="archive.ph">archive.ph</a>
                     <a href={`https://ghostarchive.org/search?term=${encodeURIComponent(ref.url)}`} class="text-[10px] font-medium text-gray-400 hover:text-purple-500 transition-colors" target="_blank" rel="noopener" title="Ghostarchive">Ghost</a>

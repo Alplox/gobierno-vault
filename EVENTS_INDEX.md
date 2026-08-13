@@ -114,7 +114,6 @@
 - [2026/08/20260801-11 - La 'batalla cultural' privatizadora: análisis de La Tercera sobre el impulso de Quiroz para abrir empresas públicas al capital privado](src/content/events/2026/08/20260801-11.md) — **1 fuente**
 - [2026/08/20260801-9 - Diputados RN piden al Gobierno poner urgencia a proyecto que permite apoyo de las Fuerzas Armadas a las policías](src/content/events/2026/08/20260801-9.md) — **1 fuente**
 - [2026/08/20260802-11 - Rabat adelanta la agenda de seguridad del Gobierno: agencia de bienes incautados, apoyo de FF.AA. a policías e indicaciones a la Ley RPA](src/content/events/2026/08/20260802-11.md) — **1 fuente**
-- [2026/08/20260802-4 - Gobierno de Kast pierde un seremi cada cuatro días: ya suma 32 salidas y 39 autoridades en total](src/content/events/2026/08/20260802-4.md) — **1 fuente**
 - [2026/08/20260802-5 - Matthei: 'Si TVN no transparenta contrato con Porcel TV, debe investigar Fiscalía'](src/content/events/2026/08/20260802-5.md) — **1 fuente**
 - [2026/08/20260802-7 - PPD busca ampliar proyecto del PDG sobre reembolso del IVA: suma alimentos, lentes y fórmulas lácteas](src/content/events/2026/08/20260802-7.md) — **1 fuente**
 - [2026/08/20260802-8 - El reservado proyecto de los bancos para lanzar el 'Pix chileno': pagos inmediatos interoperables con alias y QR](src/content/events/2026/08/20260802-8.md) — **1 fuente**
@@ -341,6 +340,7 @@
 - [2026/08/20260801-5 - Ministro Arrau supervisa allanamiento en cárcel de Chillán: 40 armas blancas y ocho celulares incautados](src/content/events/2026/08/20260801-5.md) — **2 fuentes**
 - [2026/08/20260801-7 - Concejal de Lago Verde muere tras incendiarse el hotel donde se hospedaba con su delegación en Villa Amengual](src/content/events/2026/08/20260801-7.md) — **2 fuentes**
 - [2026/08/20260802-13 - FENADAJ respalda la denuncia ante la CIDH por los recortes presupuestarios y advierte riesgos para el acceso a la justicia](src/content/events/2026/08/20260802-13.md) — **2 fuentes**
+- [2026/08/20260802-4 - Gobierno de Kast pierde un seremi cada cuatro días: ya suma 32 salidas y 39 autoridades en total](src/content/events/2026/08/20260802-4.md) — **2 fuentes**
 - [2026/08/20260802-6 - Gobierno estudia vender participación del Estado en empresas sanitarias para recaudar recursos; Mas: 'ningún problema en achicar el Estado' si es más eficiente](src/content/events/2026/08/20260802-6.md) — **2 fuentes**
 - [2026/08/20260803-13 - Contraloría detecta que 36 funcionarios de Carabineros tenían dos contratos para realizar las mismas funciones](src/content/events/2026/08/20260803-13.md) — **2 fuentes**
 - [2026/08/20260803-3 - Minsal pide la renuncia a los directores de los Servicios de Salud Metropolitano Sur y Magallanes](src/content/events/2026/08/20260803-3.md) — **2 fuentes**
@@ -445,6 +445,7 @@
 - [2026/03/20260326-1 - Nombramiento de Alexander Nanjarí como seremi de Educación del Biobío revocado por polémicos tuits](src/content/events/2026/03/20260326-1.md) — 3 fuentes
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
+- [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
 - [2026/03/20260331-1 - Seremi de Obras Públicas de Tarapacá Mauricio Montealegre renuncia antes de asumir](src/content/events/2026/03/20260331-1.md) — 1 fuente
 - [2026/03/20260331-2 - Gobierno retira de Contraloría el nuevo reglamento de la Ley Cholito y genera preocupación en agrupaciones animalistas](src/content/events/2026/03/20260331-2.md) — 4 fuentes
@@ -762,7 +763,7 @@
 - [2026/08/20260802-13 - FENADAJ respalda la denuncia ante la CIDH por los recortes presupuestarios y advierte riesgos para el acceso a la justicia](src/content/events/2026/08/20260802-13.md) — 2 fuentes
 - [2026/08/20260802-2 - Pulso Ciudadano: aprobación de Kast cae a 25,6% y desaprobación llega a 58,9%, récord de su gobierno](src/content/events/2026/08/20260802-2.md) — 3 fuentes
 - [2026/08/20260802-3 - Seremi de las Culturas del Maule es acusado de censurar presentación de libro sobre Colonia Dignidad y Auschwitz](src/content/events/2026/08/20260802-3.md) — 3 fuentes
-- [2026/08/20260802-4 - Gobierno de Kast pierde un seremi cada cuatro días: ya suma 32 salidas y 39 autoridades en total](src/content/events/2026/08/20260802-4.md) — 1 fuente
+- [2026/08/20260802-4 - Gobierno de Kast pierde un seremi cada cuatro días: ya suma 32 salidas y 39 autoridades en total](src/content/events/2026/08/20260802-4.md) — 2 fuentes
 - [2026/08/20260802-5 - Matthei: 'Si TVN no transparenta contrato con Porcel TV, debe investigar Fiscalía'](src/content/events/2026/08/20260802-5.md) — 1 fuente
 - [2026/08/20260802-6 - Gobierno estudia vender participación del Estado en empresas sanitarias para recaudar recursos; Mas: 'ningún problema en achicar el Estado' si es más eficiente](src/content/events/2026/08/20260802-6.md) — 2 fuentes
 - [2026/08/20260802-7 - PPD busca ampliar proyecto del PDG sobre reembolso del IVA: suma alimentos, lentes y fórmulas lácteas](src/content/events/2026/08/20260802-7.md) — 1 fuente
@@ -852,7 +853,7 @@
 - [2026/08/20260806-14 - Diputados de PNL, Republicanos e independientes presentan proyecto para suspender por cinco años la Ley Karin](src/content/events/2026/08/20260806-14.md) — 7 fuentes
 - [2026/08/20260806-15 - Gremios de trabajadores y de DDHH se declaran en alerta ante lo que califican como 'retroceso' en derechos sociales](src/content/events/2026/08/20260806-15.md) — 1 fuente
 - [2026/08/20260806-16 - PDI detiene a exinformático de la Municipalidad de Huechuraba por almacenar pornografía infantil en su computador laboral](src/content/events/2026/08/20260806-16.md) — 1 fuente
-- [2026/08/20260806-17 - 21 parlamentarios oficialistas exigen a la Cancillería esclarecer la expulsión de Israel del chileno José Nicolás Khamis](src/content/events/2026/08/20260806-17.md) — 5 fuentes
+- [2026/08/20260806-17 - 21 parlamentarios oficialistas exigen a la Cancillería esclarecer la expulsión de Israel del chileno José Nicolás Khamis](src/content/events/2026/08/20260806-17.md) — 9 fuentes
 - [2026/08/20260806-18 - Alcalde de San Bernardo refuta el optimismo del gobierno en seguridad: 'pareciera que hay dos Chile'](src/content/events/2026/08/20260806-18.md) — 2 fuentes
 - [2026/08/20260806-19 - Gustavo Gatica apunta a Boric por la Ley Naín-Retamal, critica a Kast por celebrar la absolución de Crespo y evalúa recurrir a instancias internacionales](src/content/events/2026/08/20260806-19.md) — 4 fuentes
 - [2026/08/20260806-2 - ASOF rechaza el uso despectivo de 'señora de feria': 'ser mujer de feria es un orgullo' tras el cruce en el Senado](src/content/events/2026/08/20260806-2.md) — 6 fuentes
@@ -996,6 +997,7 @@
 - [2026/08/20260811-16 - El Liceo Augusto D'Halmar de Ñuñoa, donde Kast hizo su primera actividad oficial, entra en huelga por ratones y goteras](src/content/events/2026/08/20260811-16.md) — 2 fuentes
 - [2026/08/20260811-17 - Asociación de Diplomáticos cuestiona los nombramientos de embajadores: 23 de los 26 nuevos enviados son políticos](src/content/events/2026/08/20260811-17.md) — 1 fuente
 - [2026/08/20260811-18 - Google anuncia el cable submarino Alisios que conectará Chile con Panamá y República Dominicana](src/content/events/2026/08/20260811-18.md) — 2 fuentes
+- [2026/08/20260811-19 - Gobierno impugna ante el TC la reconexión gratuita de servicios básicos en zonas de catástrofe: Cariola acusa a Quiroz de incumplir palabra](src/content/events/2026/08/20260811-19.md) — 4 fuentes
 - [2026/08/20260811-2 - Longueira defiende a Chadwick en Tolerancia Cero: 'para mí Andrés Chadwick es completamente inocente'](src/content/events/2026/08/20260811-2.md) — 1 fuente
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — 1 fuente
 - [2026/08/20260811-4 - Comisión de Hacienda del Senado suspende votación de Sala Cuna Universal por ausencia de Macaya, Gatica y Carter](src/content/events/2026/08/20260811-4.md) — 1 fuente
@@ -1004,6 +1006,11 @@
 - [2026/08/20260811-7 - Audios de la seremi de Economía de Arica revelan presión para favorecer a republicanos en cargos públicos del Sernac](src/content/events/2026/08/20260811-7.md) — 1 fuente
 - [2026/08/20260811-8 - Chile entra al top 15 mundial de países con mayor alza en el precio de las viviendas según índice de Knight Frank](src/content/events/2026/08/20260811-8.md) — 1 fuente
 - [2026/08/20260811-9 - División en la derecha por la reforma constitucional de la ACOT: el ingreso al Senado se posterga y Arrau negocia para acotar el texto](src/content/events/2026/08/20260811-9.md) — 4 fuentes
+- [2026/08/20260812-1 - Quiroz minimiza el conflicto con Alvarado por el requerimiento al TC: 'No es mi responsabilidad informar a cada persona'](src/content/events/2026/08/20260812-1.md) — 6 fuentes
+- [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 4 fuentes
+- [2026/08/20260812-3 - Kast promulga la Ley Escuelas Protegidas: revisión de mochilas en colegios y mayores facultades docentes, con el lema 'el que nada hace, nada teme'](src/content/events/2026/08/20260812-3.md) — 23 fuentes
+- [2026/08/20260812-4 - Diputados del Partido Cristiano presentan proyectos de resolución para instaurar el Día Nacional de la Oración y el Día Nacional de la Biblia](src/content/events/2026/08/20260812-4.md) — 5 fuentes
+- [2026/08/20260812-5 - Matthei critica la reforma constitucional de la ACOT: 'ha fracasado en todos los países, salvo El Salvador, pero eso no es democracia'](src/content/events/2026/08/20260812-5.md) — 3 fuentes
 
 ## 2025
 

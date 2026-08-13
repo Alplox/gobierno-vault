@@ -59,7 +59,7 @@ const sheetLabelClass = (level?: string) =>
 
     <button
       id="timeline-fab"
-      class="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white shadow-lg transition-transform hover:scale-105 lg:hidden"
+      class="fixed bottom-[calc(1.25rem_+_env(safe-area-inset-bottom))] right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-gray-900 text-white shadow-lg transition-transform hover:scale-105 lg:hidden"
       aria-label="Abrir índice temporal"
       aria-expanded="false"
     >
@@ -68,7 +68,7 @@ const sheetLabelClass = (level?: string) =>
 
     <div id="timeline-sheet" class="pointer-events-none fixed inset-x-0 bottom-0 z-50 lg:hidden" aria-hidden="true">
       <div id="timeline-sheet-backdrop" class="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-200" />
-      <div class="relative mx-auto max-h-[70vh] w-full max-w-xl translate-y-full overflow-y-auto overscroll-contain rounded-t-2xl bg-white p-4 pb-6 shadow-2xl transition-transform duration-300">
+      <div class="relative mx-auto max-h-[70vh] w-full max-w-xl translate-y-full overflow-y-auto overscroll-contain rounded-t-2xl bg-white p-4 pb-[calc(1.5rem_+_env(safe-area-inset-bottom))] shadow-2xl transition-transform duration-300">
         <div class="mb-2 flex items-center justify-between">
           <h3 class="text-sm font-bold text-gray-900">Índice temporal</h3>
           <button id="timeline-sheet-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-gray-500 hover:bg-gray-100" aria-label="Cerrar">
