@@ -74,7 +74,7 @@ src/
     remarkWikiLinks.mjs  remark plugin activo — convierte [[...]] a HTML
   components/          EventCard, FilterBar, Timeline, SourceRef, RelationBadge
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global + tooltip JS)
-  pages/               rutas: /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin
+  pages/               rutas: /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin, /llm.txt (y alias /llms.txt), /events/[year]/[id].md, /data/*.yaml
 sitemaps/              catálogo local de prensa (JSONL por medio/año, NO commiteado)
   .cache/              XML crudo descargado (regenerable, gitignored)
   _manifest.json       estado de sync (commiteado)
@@ -280,6 +280,17 @@ En tiempo de build NO se agenda nada; todo corre en cliente sobre el texto de `.
   se quisiera usar el wasm local, hay que revertir ese plugin y re-verificar el deploy.
 - **Flags**: `window.__gvEventActionsInit` (una sola vez) para listeners globales;
   `astro:page-load` para llenar voces y cancelar reproducción (`gvStopAll`) al navegar.
+
+## Formato LLM (llm.txt + markdown/YAML crudo)
+
+El sitio es amigable para agentes/LLMs — convencion llmstxt.org adaptada:
+
+- **`/llm.txt`** (y alias `/llms.txt`): indice en texto plano generado en build por `src/lib/llmIndex.ts` (endpoint `src/pages/llm.txt.ts`). Incluye guia de navegacion, el formato de los wikilinks y el **indice completo de eventos** (fecha | titulo | link .md | link pagina), uno por linea.
+- **`/events/AAAA/ID.md`** (`src/pages/events/[year]/[id].md.ts`): sirve el **markdown fuente** del evento (frontmatter + body con wikilinks sin resolver) con `Content-Type: text/markdown`. Cada pagina de detalle tiene el boton "Ver en Markdown" que enlaza a esta ruta.
+- **`/data/{entities,sources,topics,colectivos,sectores}.yaml`** (`src/pages/data/[name].yaml.ts`): sirve los registros YAML crudos de `src/data/` como `text/yaml` — lista blanca de 5 archivos, 404 para otros.
+- El footer de `Base.astro` enlaza a `/llm.txt`.
+
+Los endpoints usan `getStaticPaths`/`GET` estaticos (SSG): no hay runtime. Al agregar un archivo YAML nuevo en `src/data/`, sumarlo a `ALLOWED` en `src/pages/data/[name].yaml.ts` y a la guia de `llmIndex.ts`.
 
 ## Pagina /gabinete (titulares ministeriales generados de `cargos`)
 
