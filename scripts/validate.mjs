@@ -54,6 +54,7 @@ const WHITELIST_MEDIOS = new Set([
   'Cámara de Diputadas y Diputados',
   'Partido Socialista de Chile',
   'Gobierno de Chile',
+  'Puig Abogados',
   'Gobierno de Chile (gob.cl)',
   'Gob.cl',
   'Gobierno de Santiago (GORE Metropolitano)',

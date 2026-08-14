@@ -1014,6 +1014,7 @@
 - [2026/08/20260811-2 - Longueira defiende a Chadwick en Tolerancia Cero: 'para mí Andrés Chadwick es completamente inocente'](src/content/events/2026/08/20260811-2.md) — 1 fuente
 - [2026/08/20260811-20 - Gobierno propone la regla de los '21 pies' (6,4 metros) como criterio obligatorio para evaluar el uso de la fuerza policial en la Comisión Mixta del proyecto RUF](src/content/events/2026/08/20260811-20.md) — 2 fuentes
 - [2026/08/20260811-21 - Escándalo en la Municipalidad de Curicó: personal de informática filtró material íntimo de funcionarias y directivos extraído de celulares institucionales](src/content/events/2026/08/20260811-21.md) — 2 fuentes
+- [2026/08/20260811-22 - Matías Toledo respalda el despliegue de Fuerzas Armadas en barrios afectados por el crimen organizado: 'Estoy de acuerdo con todo tipo de intervención, siempre y cuando se respete el marco legal'](src/content/events/2026/08/20260811-22.md) — 6 fuentes
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — 2 fuentes
 - [2026/08/20260811-4 - Comisión de Hacienda del Senado suspende votación de Sala Cuna Universal por ausencia de Macaya, Gatica y Carter](src/content/events/2026/08/20260811-4.md) — 1 fuente
 - [2026/08/20260811-5 - Kast reúne a casi 70 alcaldes en La Moneda por la agenda de seguridad y algunos de oposición se retiran; Vodanovic desmiente la versión de Emol](src/content/events/2026/08/20260811-5.md) — 5 fuentes
@@ -1037,7 +1038,7 @@
 - [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
 - [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 23 fuentes
 - [2026/08/20260813-10 - Duras críticas al canal de TV del Senado por publicitar una entrevista a la senadora Camila Flores, investigada por fraude al fisco en el caso cuota Flores](src/content/events/2026/08/20260813-10.md) — 1 fuente
-- [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 10 fuentes
+- [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 12 fuentes
 - [2026/08/20260813-3 - Verificación: el historial de ausencias de Kast como diputado (41% de inasistencias, 2002-2018) confirma parcialmente la crítica del hilo de la Ley de Incendios](src/content/events/2026/08/20260813-3.md) — 5 fuentes
 - [2026/08/20260813-4 - Tribunal Constitucional acoge parcialmente los requerimientos contra la megarreforma: inconstitucionales normas tributarias y ambientales](src/content/events/2026/08/20260813-4.md) — 6 fuentes
 - [2026/08/20260813-5 - Comisario de la PDI balea a un gendarme de franco tras una discusión con una mujer en Playa Ancha, Valparaíso](src/content/events/2026/08/20260813-5.md) — 3 fuentes
@@ -1045,6 +1046,10 @@
 - [2026/08/20260813-7 - La Casa Blanca acusa a Chile de ser parte de una red de transbordo que ayuda a China a evadir aranceles](src/content/events/2026/08/20260813-7.md) — 2 fuentes
 - [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — 1 fuente
 - [2026/08/20260813-9 - Juzgado de Garantía de Valparaíso rechaza dos solicitudes de la defensa de Camila Flores en el caso cuota Flores y admite querella de Ymay Ortiz Pulgar](src/content/events/2026/08/20260813-9.md) — 2 fuentes
+- [2026/08/20260814-1 - Megarreforma (Ley de Reconstrucción Nacional y Desarrollo Económico y Social): registro textual de todo lo que propone](src/content/events/2026/08/20260814-1.md) — 21 fuentes
+- [2026/08/20260814-2 - Kast nombra a Francisco Riveros Cantuarias como ministro del Deporte y enmarca la salida de Duco como 'un error que cualquiera puede cometer'](src/content/events/2026/08/20260814-2.md) — 9 fuentes
+- [2026/08/20260814-3 - PDI detiene a mujer de 23 años acusada de amenazar de muerte al Presidente Kast en Instagram durante su visita a Talca](src/content/events/2026/08/20260814-3.md) — 5 fuentes
+- [2026/08/20260814-4 - Arrau responde a Chomalí por la restricción de prestaciones a condenados del borrador de la ACOT: 'Desconoce el proyecto'](src/content/events/2026/08/20260814-4.md) — 5 fuentes
 
 ## 2025
 

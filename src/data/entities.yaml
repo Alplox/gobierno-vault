@@ -952,6 +952,20 @@ people:
         organizacion: ministerio_interior
         desde: 2026-03-11
     organizacion: ministerio_interior
+  luciano_cruz_coke:
+    nombre: Luciano Cruz-Coke
+    cargo: Senador y presidente de Evópoli
+    organizacion: evopoli
+    notas: "Senador y presidente de Evópoli. En agosto de 2026 tomó distancia del borrador de reforma constitucional de seguridad del gobierno, prefiriendo esperar las indicaciones finales antes de respaldar una reforma a la Constitución ('Como país ya aprendimos que no todo se resuelve con reformas constitucionales de carácter más bien abstracto')."
+  jorge_barrera:
+    nombre: Jorge Barrera
+    cargo: Abogado constitucionalista
+    notas: "Abogado constitucionalista, exsecretario general del Partido Republicano y uno de los asesores de la colectividad durante el Consejo Constitucional de 2023. Consultor del gobierno en la revisión del borrador de la reforma constitucional de seguridad de la ACOT (agosto 2026)."
+  odette_gutierrez:
+    nombre: Odette Gutiérrez
+    cargo: Subinspectora de la Brigada del Cibercrimen Metropolitana de la PDI
+    organizacion: pdi
+    notas: "Subinspectora de la Brigada del Cibercrimen Metropolitana de la PDI. Informó a la prensa sobre la detención de una mujer de 23 años acusada de amenazar al Presidente Kast en redes sociales durante su visita a Talca (14-ago-2026)."
   may_chomali:
     nombre: May Chomali Garib
     cargo: Ministra de Salud
@@ -5391,8 +5405,16 @@ people:
     notas: "Sociólogo, académico de la Universidad Diego Portales y panelista de Chilevisión (programa Animales Políticos). El 11 de marzo de 2026, ante la frase del diputado Álvaro Carter sobre un 'país más pobre, pero más feliz', sugirió que el parlamentario se había enredado con las palabras al apelar a la nostalgia por la cohesión social de hace una década (evento 20260311-5)."
   francisco_riveros_cantuarias:
     nombre: Francisco Riveros Cantuarias
-    cargo: Abogado del Segundo Piso (proyecto 'Inspección Total')
-    notas: "Asesor de La Moneda con $6,99 millones brutos mensuales; coordinó el cierre de la primera carga masiva de información de la 'Inspección Total' de auditorías al gobierno anterior."
+    cargo: Ministro del Deporte
+    cargos:
+      - cargo: Ministro del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2026-08-14
+      - cargo: Asesor de la Presidencia (Segundo Piso, proyecto 'Inspección Total')
+        organizacion: presidencia
+        desde: 2026-03-11
+        hasta: 2026-08-13
+    notas: "Abogado de la PUC. Gerente general y director de Palestino (2007-2009 y directorio desde 2007) y gerente jurídico y de Asuntos Corporativos de la Corporación Santiago 2023 durante el segundo gobierno de Piñera. Antes de ser ministro fue asesor de la Presidencia en el equipo de Alejandro Irarrázaval con $6,99 millones brutos mensuales; coordinó el cierre de la primera carga masiva de información de la 'Inspección Total' de auditorías al gobierno anterior (evento 20260809-9). Kast lo nombró ministro del Deporte el 14-ago-2026 (Decreto 131) tras la renuncia de Natalia Duco (evento 20260814-2)."
   alex_gonzalo_troncoso_araya:
     nombre: Álex Gonzalo Troncoso Araya
     cargo: Abogado de deudores del CAE
@@ -10377,6 +10399,16 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Diario gratuito chileno (Grupo Metro Internacional) y portal publimetro.cl."
+  puentealtoaldia:
+    nombre: Puente Alto Al Día
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal local de la provincia Cordillera (puentealtoaldia.com), edición impresa y digital. Cubre la comuna de Puente Alto."
+  portalpuentealto:
+    nombre: Portal Puente Alto
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal local de Puente Alto (portalpuentealto.cl). Cubre noticias de la comuna."
   el_pais:
     nombre: El País (Chile)
     tipo: medio_comunicacion
@@ -14522,3 +14554,112 @@ cifras:
     nombre: Delitos por porte de armas en establecimientos educacionales (promedio 2025)
     unidad_default: delitos
     notas: "Promedio de 893 delitos por porte de armas en establecimientos educacionales durante 2025, según datos de Carabineros citados por el Ejecutivo en la promulgación de la Ley Escuelas Protegidas (12-ago-2026)."
+
+  tasa_primera_categoria_2027:
+    nombre: Tasa de Impuesto de Primera Categoría en 2027 (megarreforma)
+    unidad_default: "%"
+    notas: "25,5% durante el año comercial 2027, primer escalón de la rebaja gradual desde el 27% dispuesta por la Ley de Reconstrucción Nacional (Boletín 18.216-05), según el texto despachado el 4-ago-2026 (Mala Espina)."
+  tasa_primera_categoria_2028:
+    nombre: Tasa de Impuesto de Primera Categoría en 2028 (megarreforma)
+    unidad_default: "%"
+    notas: "24% durante el año comercial 2028, segundo escalón de la rebaja gradual del Impuesto de Primera Categoría de la Ley de Reconstrucción Nacional."
+  tasa_primera_categoria_2029:
+    nombre: Tasa de Impuesto de Primera Categoría desde 2029 (megarreforma)
+    unidad_default: "%"
+    notas: "23% desde el año comercial 2029, la tasa final de la rebaja gradual (desde 27%) de la Ley de Reconstrucción Nacional, la primera disminución del impuesto corporativo en cuatro décadas."
+  carga_tributaria_efectiva_maxima_integracion:
+    nombre: Carga tributaria efectiva máxima con integración total del sistema
+    unidad_default: "%"
+    notas: "35%: la carga efectiva máxima alineada con la reintegración total del sistema tributario de la megarreforma, frente al 44,45% vigente en el régimen semiintegrado donde el dueño solo usa el 65% del impuesto pagado por la empresa como crédito."
+  tasa_ganancia_capital_bursatil_megarreforma:
+    nombre: Tasa de impuesto a la ganancia de capital bursátil tras la megarreforma
+    unidad_default: "%"
+    notas: "0% desde el 1 de enero de 2027 para las ganancias de capital por venta o rescate de instrumentos con presencia bursátil (artículo 107 de la Ley de Impuesto a la Renta modificado por la megarreforma), frente a la tasa de 10% vigente hasta el cierre de 2026; los dividendos siguen gravados."
+  sobretasa_invariabilidad_megarreforma:
+    nombre: Sobretasa adicional por acogerse a la invariabilidad tributaria de la megarreforma
+    unidad_default: "%"
+    notas: "1,5% de tasa corporativa adicional para las empresas que se acojan al régimen de invariabilidad tributaria de la megarreforma (plazos de 10, 15 o 20 años según el monto invertido, para inversionistas nacionales y extranjeros)."
+  impuesto_regularizacion_capitales_exterior:
+    nombre: Impuesto único de regularización de capitales en el exterior (megarreforma)
+    unidad_default: "%"
+    notas: "10%: impuesto único del mecanismo voluntario de la megarreforma para declarar bienes o rentas mantenidos en el extranjero."
+  impuesto_regularizacion_capitales_repatriados:
+    nombre: Impuesto único de regularización con repatriación e inversión en Chile (megarreforma)
+    unidad_default: "%"
+    notas: "7%: tasa reducida del mecanismo voluntario de regularización de capitales de la megarreforma cuando los recursos repatriados se inviertan efectivamente en Chile."
+  impuesto_saldos_registros_tributarios:
+    nombre: Impuesto único a saldos acumulados en registros tributarios (megarreforma)
+    unidad_default: "%"
+    notas: "10%: impuesto único para determinados saldos acumulados en registros tributarios (FUR, STUT y retiros en exceso del FUT histórico) contemplado en las disposiciones transitorias de la megarreforma, junto a convenios de pago y condonaciones de multas e intereses para deudas vencidas con la Tesorería."
+  rebaja_impuesto_donaciones:
+    nombre: Rebaja transitoria del impuesto a las donaciones (megarreforma)
+    unidad_default: "%"
+    notas: "50%: rebaja transitoria del impuesto a las donaciones contemplada en la megarreforma, que además elimina, bajo determinadas condiciones, el trámite de insinuación judicial."
+  impuesto_dfl2_tercera_vivienda:
+    nombre: Impuesto único a rentas de arriendo de la tercera vivienda (megarreforma)
+    unidad_default: "%"
+    notas: "5%: impuesto único a las rentas de arrendamiento de propiedades desde la tercera vivienda (régimen DFL 2), siempre que los inmuebles no superen los 90 m²; también disponible para personas jurídicas y empresarios individuales con permanencia mínima de cinco años tributarios."
+  superficie_max_dfl2_tercera_vivienda:
+    nombre: Superficie máxima para el régimen DFL 2 de la tercera vivienda
+    unidad_default: metros_cuadrados
+    notas: "90 m²: tope de superficie para que las rentas de arriendo de la tercera vivienda tributen con el impuesto único de 5% del régimen DFL 2 reformado por la megarreforma."
+  meses_exencion_iva_viviendas_nuevas:
+    nombre: Duración de la exención de IVA a la primera venta de viviendas nuevas
+    unidad_default: meses
+    notas: "12 meses de exención transitoria del IVA para la primera venta de viviendas nuevas, según el texto de la megarreforma aprobado por el Congreso; el Ejecutivo la defendió señalando que existen más de 100 mil unidades nuevas sin comprador."
+  unidades_viviendas_nuevas_sin_vender:
+    nombre: Unidades de vivienda nueva sin comprador
+    unidad_default: unidades
+    notas: "Más de 100 mil unidades de vivienda nueva sin comprador en el contexto de la crisis del sector construcción, argumento del Ejecutivo para la exención temporal de IVA de la megarreforma."
+  viviendas_exentas_contribuciones_megarreforma:
+    nombre: Viviendas exentas de contribuciones por la megarreforma
+    unidad_default: viviendas
+    notas: "192 mil viviendas adicionales quedarán exentas de contribuciones con la exención para mayores de 65 años de la megarreforma: la proporción de propiedades exentas a nivel nacional pasa de 77% a 80% (Ministerio de Hacienda, agosto 2026)."
+  viviendas_reconstruccion_incendios:
+    nombre: Viviendas a reconstruir con financiamiento estatal por incendios
+    unidad_default: viviendas
+    notas: "4.429 viviendas afectadas por los incendios en Ñuble y Biobío que la megarreforma compromete reconstruir con financiamiento estatal (La Cuarta, 22-jul-2026); 24 Horas describió el mismo programa como financiamiento para más de 4.000 hogares de damnificados de Valparaíso, Ñuble y Biobío."
+  techo_fondo_emergencia_incendios:
+    nombre: Techo del Fondo de Emergencia Transitorio por Incendios
+    unidad_default: billones_pesos
+    notas: "1,2 billones de pesos: techo ampliado del Fondo de Emergencia Transitorio por Incendios por la megarreforma (La Cuarta, 22-jul-2026)."
+  compensacion_total_municipal_megarreforma:
+    nombre: Compensación anual total a municipios por la megarreforma
+    unidad_default: millones_pesos
+    notas: "190 mil millones de pesos anuales: la compensación total a los municipios por la exención de contribuciones a adultos mayores, compuesta por 110 mil millones al Fondo Común Municipal y 80 mil millones en transferencias directas (Mala Espina, 5-ago-2026)."
+  reduccion_permisos_municipales_requisito:
+    nombre: Reducción de tiempos de tramitación de permisos exigida a los municipios
+    unidad_default: "%"
+    notas: "30%: reducción mínima del tiempo promedio de tramitación de permisos (respecto del promedio 2023-2025) que los municipios deben acreditar para recibir las transferencias directas de la compensación de la megarreforma, junto con estar al día en la información mensual a la Dipres."
+  congelamiento_gratuidad_meses:
+    nombre: Congelamiento del ingreso de nuevas instituciones a la gratuidad
+    unidad_default: años
+    notas: "2 años: plazo durante el cual la megarreforma congela el ingreso de nuevas instituciones al sistema de gratuidad universitaria."
+  tope_franquicia_sence_nuevo:
+    nombre: Tope descontable de la franquicia tributaria del Sence tras la megarreforma
+    unidad_default: "%"
+    notas: "0,7% de la planilla anual de remuneraciones: el nuevo tope que las empresas podrán descontar del impuesto a la renta por capacitación (franquicia Sence), reducido desde 1% tras la reformulación del Congreso, que descartó la eliminación propuesta por el Ejecutivo."
+  leyes_modificadas_megarreforma_comparador:
+    nombre: Leyes que interviene la megarreforma (comparador Puig Abogados)
+    unidad_default: leyes
+    notas: "25 leyes que interviene la Ley de Reconstrucción Nacional y Desarrollo Económico y Social, según el comparador artículo por artículo de megareforma.cl (Puig Abogados)."
+  modificaciones_megarreforma_comparador:
+    nombre: Modificaciones normativas de la megarreforma (comparador Puig Abogados)
+    unidad_default: modificaciones
+    notas: "111 modificaciones de la Ley de Reconstrucción Nacional y Desarrollo Económico y Social, según el comparador de megareforma.cl (Puig Abogados), que muestra lado a lado la norma vigente y el texto reformado."
+  leyes_modificadas_megarreforma_prensa:
+    nombre: Leyes que modifica la megarreforma según prensa internacional
+    unidad_default: leyes
+    notas: "36 leyes que modifica la megarreforma según la cobertura de Ámbito (5-ago-2026), citada por el evento 20260804-6; difiere del conteo del comparador Puig Abogados (25 leyes), ver tabla comparativa en el evento 20260814-1."
+  decretos_modificados_megarreforma_prensa:
+    nombre: Decretos que modifica la megarreforma según prensa internacional
+    unidad_default: decretos
+    notas: "15 decretos que modifica la megarreforma según la cobertura de Ámbito (5-ago-2026), citada por el evento 20260804-6; el comparador Puig Abogados contabiliza solo leyes (25), ver tabla comparativa en el evento 20260814-1."
+  inhabilitacion_prestaciones_condenados:
+    nombre: Años de inhabilitación de prestaciones estatales a condenados por crimen organizado (borrador reforma ACOT)
+    unidad_default: años
+    notas: "El borrador de la reforma constitucional de seguridad (ACOT, revelado por La Tercera el 12-ago-2026) inhabilita a condenados por crimen organizado, terrorismo y narcotráfico para acceder a prestaciones financiadas con recursos estatales durante el cumplimiento de la condena y 15 años posteriores; quien ya recibiera prestaciones 'las perderá de pleno derecho'."
+  cambios_reforma_seguridad_borrador:
+    nombre: Cambios a la Carta Fundamental en el borrador de reforma de seguridad
+    unidad_default: cambios
+    notas: "El borrador de la reforma constitucional de seguridad revelado por La Tercera (12-ago-2026) incluye 11 cambios a la Constitución, entre ellos el resguardo de la seguridad pública como deber del Estado, el registro de organizaciones criminales, el nuevo estado de excepción de seguridad pública y la inhabilitación de condenados (artículo 9)."
