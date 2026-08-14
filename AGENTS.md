@@ -221,7 +221,7 @@ svg_backup:
 4. **`etiquetas`**: strings libres, sin vinculo a taxonomy.
 5. **`impacto.colectivos`**: usar IDs de `colectivos.yaml`. Si falta uno, agregarlo.
 6. **`impacto.sectores`**: usar IDs de `sectores.yaml`. Si falta uno, agregarlo.
-7. **`relaciones`**: apuntar al ID del archivo (sin extension), ej: `20260720-1`.
+7. **`relaciones`**: apuntar al ID del archivo (sin extension), ej: `20260720-1`. **No declarar la misma conexion en ambas direcciones** (ej. A `deriva_en` B Y B `responde_a` A): el timeline y la seccion Conexiones muestran la relacion una sola vez, y el codigo deduplica en runtime conservando el outgoing (`src/lib/relations.ts` `getEventConnections`) — si se declara dos veces, la etiqueta temporal (Siguiente/Anterior) se calcula por fecha real del evento relacionado, no por la direccion de la relacion.
 8. **Wikilinks en body**: siempre que se mencione una persona, org, fuente o cifra, usar wikilink.
 9. **Fuentes**: agregar a `sources.yaml` si es nueva. Formato ID: `medio-YYYY-MM-DD-slug`. **Siempre inline** en el párrafo que usa la info, nunca en `## Referencias` separada.
 10. **URLs de fuentes**: NUNCA usar URLs raíz/domino (`https://lasegunda.com/`). Siempre usar la URL completa del artículo específico. Si el original está paywall y no se puede obtener la URL exacta, usar una fuente secundaria que cite la original (ej: El Ciudadano citando a La Segunda) y agregar campo `notas` al YAML indicando la fuente primaria. Los datos deben ser verificables y rastreables a una fuente concreta.

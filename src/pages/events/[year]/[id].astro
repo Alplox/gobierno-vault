@@ -296,7 +296,7 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
       </div>
     </section>
 
-    <EventTimelineConnector connections={connections} />
+    <EventTimelineConnector connections={connections} eventFecha={event.data.fecha} />
 
     <EventConnections connections={connections} topicsMap={topicsMap} />
 

@@ -198,7 +198,13 @@ export function getEventConnections(
 ): EventConnections {
   const eventId = eventBasename(event.id);
   const outgoing = getOutgoingEdges(event, eventsByBasename);
-  const incoming = getIncomingEdges(eventId, eventsByBasename, incomingIndex);
+  const rawIncoming = getIncomingEdges(eventId, eventsByBasename, incomingIndex);
+  // Dedupe: si la misma conexión está declarada en ambas direcciones (p. ej.
+  // A `deriva_en` B y B `responde_a` A), el evento aparece en las dos listas y
+  // el timeline lo muestra duplicado. Se conserva el outgoing (la relación que
+  // este evento declara) y se descarta el incoming redundante.
+  const outgoingIds = new Set(outgoing.map((e) => e.eventId));
+  const incoming = rawIncoming.filter((e) => !outgoingIds.has(e.eventId));
   const explicitIds = new Set([
     ...outgoing.map((e) => e.eventId),
     ...incoming.map((e) => e.eventId),
