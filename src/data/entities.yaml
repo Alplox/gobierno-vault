@@ -812,6 +812,14 @@ people:
     nombre: José Antonio Rivas
     cargo: Diputado (PS)
     notas: "Diputado del Partido Socialista. En agosto de 2026 instó a agilizar la conformación de la comisión mixta de la Ley de Incendios tras su frustración por falta de quórum, pidiendo medidas preventivas antes de la próxima temporada de incendios (evento 20260812-9)."
+  johnny_olate:
+    nombre: Johnny Olate
+    cargo: Estudiante de Derecho de la Pontificia Universidad Católica (2019)
+    notas: "Estudiante de Derecho de la UC (2019). Inventó la denuncia de abuso sexual contra José Ignacio Palma, entonces candidato a la presidencia de la FEUC por el Movimiento Gremial, publicada anónimamente en Facebook durante las elecciones estudiantiles; confesó en mayo de 2019 ante la Secretaría General de la UC y la PDI. El Desconcierto lo situó como seguidor de Acción Republicana, el movimiento de José Antonio Kast (participó del lanzamiento de la plataforma el 18-abr-2018), aunque desde AR negaron que estuviera en sus registros formales; fue expulsado del grupo 'Estudiantes UC' por publicaciones violentas contra 'zurdos' y feministas (evento 20190520-1). El Dínamo lo describió como 'estudiante de derecho UDI'."
+  jose_ignacio_palma:
+    nombre: José Ignacio Palma
+    cargo: Ex candidato a la presidencia de la FEUC (Movimiento Gremial, 2018)
+    notas: "Estudiante de Ciencia Política de la UC y dirigente del Movimiento Gremial. Candidato a la presidencia de la FEUC en las elecciones de 2018, fue víctima de una denuncia falsa de abuso sexual difundida anónimamente en Facebook dos días antes de los comicios; sostuvo desde el inicio su inocencia y en mayo de 2019 recibió la confesión del autor, Johnny Olate, a quien había solicitado la renuncia al movimiento al asumir su presidencia; alistó una querella por injurias y calumnias (evento 20190520-1)."
   patricio_mejias:
     nombre: Patricio Mejías
     cargo: Exfuncionario del SII, imputado en el caso Audios
@@ -952,6 +960,34 @@ people:
         organizacion: ministerio_interior
         desde: 2026-03-11
     organizacion: ministerio_interior
+  trinidad_zegers_dominguez:
+    nombre: Trinidad Zegers Domínguez
+    cargo: Asesora del Ministerio de Justicia y coordinadora de la Reforma Procesal Civil
+    cargos:
+      - cargo: Asesora del Ministerio de Justicia (coordinadora de la Reforma Procesal Civil)
+        organizacion: ministerio_justicia
+        desde: 2026-04
+    organizacion: ministerio_justicia
+    notas: "Abogada de la Pontificia Universidad Católica de Chile (ingresó 2019; juró el 10-abr-2026). Vicepresidenta interna del centro de alumnos de Derecho UC en 2021; procuradora en DLA Piper Chile (2023, Mercados Regulados y Energía); práctica profesional en la Oficina de DDHH de la Corporación de Asistencia Judicial Metropolitana; litigios y resolución de controversias en SLBZ+ Abogados (Schenke Brancoli) desde sep-2025. Ingresó en abril de 2026 al gabinete del Ministerio de Justicia como asesora por encargo del ministro Fernando Rabat, y en agosto de 2026 quedó a cargo de coordinar e impulsar la Reforma Procesal Civil (reemplazar el Código de Procedimiento Civil de 1903), lo que La Segunda describió como una suerte de 'gerenta' de la reforma y generó críticas por su escasa experiencia (ver evento 20260814-5)."
+  pilar_hazbun:
+    nombre: Pilar Hazbún
+    cargo: Jefa de la División Jurídica del Ministerio de Justicia
+    organizacion: ministerio_justicia
+    notas: "Jefa de División del Ministerio de Justicia y Derechos Humanos. Según fuentes de la cartera (13-ago-2026), junto al ministro Fernando Rabat es la cabeza técnica de la Reforma Procesal Civil —'el ministro es la cabeza de la reforma como civilista y lo secunda su jefa de División'—, mientras la asesora Trinidad Zegers coordina asuntos operativos (foros, reuniones) en el marco de la reactivación de la reforma (evento 20260814-5)."
+  juan_antonio_urzua:
+    nombre: Juan Antonio Urzúa
+    cargo: Secretario general del Partido Nacional Libertario
+    organizacion: partido_nacional_libertario
+    notas: "Secretario general del Partido Nacional Libertario. El 14-ago-2026, tras la renuncia de la ministra Natalia Duco, pidió eliminar el Ministerio del Deporte: 'es una excelente oportunidad, ya que renunció la señora ministra del Deporte, para que cerremos el Ministerio del Deporte', argumentando que los recursos deben redirigirse a la lucha contra el narcotráfico y la delincuencia (evento 20260814-2)."
+  carolina_vega:
+    nombre: Carolina Vega
+    cargo: Abogada querellante (Estudio Caucoto)
+    organizacion: estudio_caucoto
+    notas: "Abogada querellante del Estudio Caucoto en causas de derechos humanos de la dictadura. Valoró la confirmación de la condena de 15 años a Miguel Krassnoff por la desaparición de Dignaldo Araneda Pizzini (13-ago-2026): 'la familia ha esperado décadas por un mínimo de justicia y esta sentencia constituye un hito significativo' (evento 20260813-12)."
+  dignaldo_araneda:
+    nombre: Dignaldo Araneda Pizzini
+    cargo: Estudiante de la Universidad de Chile (MIR), detenido desaparecido
+    notas: "Estudiante de la Universidad de Chile y militante del MIR, detenido el 10-ago-1974 en La Reina por agentes de la DINA. Fue visto en el centro de detención clandestino Londres 38 y luego en el cuartel 4 Álamos, último lugar donde se le vio con vida; permanece desaparecido. Su desaparición originó la condena de 15 años a Miguel Krassnoff confirmada por la Corte de Apelaciones de Santiago en agosto de 2026 (evento 20260813-12)."
   luciano_cruz_coke:
     nombre: Luciano Cruz-Coke
     cargo: Senador y presidente de Evópoli
@@ -1219,6 +1255,11 @@ people:
     nombre: Eduardo Mundt
     cargo: Jefe de Gabinete de la Subsecretaría de Hacienda
     organizacion: ministerio_hacienda
+  veronica_undurraga:
+    nombre: Verónica Undurraga Valdés
+    cargo: Profesora de Derecho UC y expresidenta de la Comisión Experta
+    organizacion: universidad_catolica
+    notas: "Abogada y doctora en Derecho, profesora de derecho constitucional y de derechos humanos en la Pontificia Universidad Católica de Chile; expresidenta de la Comisión Experta del proceso constituyente 2023 (Comisión Experta que redactó el anteproyecto de la propuesta rechazada en diciembre de 2023). El 14-ago-2026 publicó un hilo en X criticando el borrador de la reforma constitucional de seguridad de la ACOT: señaló que el mensaje del proyecto explicita que busca impedir que el Tribunal Constitucional declare inconstitucionales las medidas contra el narcotráfico y el crimen organizado, y que la inhabilitación de prestaciones por 15 años (salud, educación, trabajo y seguridad social —arts. 19 N°9, 10, 16 y 18) se blinda contra el control del art. 19 N°26 (esencia de los derechos) y del art. 19 N°2 (igualdad ante la ley), lo que calificó de 'texto profundamente preocupante' y rasgo de populismo constitucional (ver evento 20260814-4). Su tesis del blindaje al TC se confirmó parcialmente con el texto real publicado por Ex-Ante: el mensaje del proyecto declara que la modificación del art. 1° entrega 'un título habilitante que el Tribunal Constitucional no puede ignorar al examinar la legislación de seguridad', aunque las cláusulas exactas sobre los arts. 19 N°2 y N°26 que ella cita no figuran en las citas publicadas."
   trinidad_undurraga:
     nombre: Trinidad Undurraga Viveros
     cargo: Secretaria Ejecutiva del Fondo Nacional de Reconstrucción
@@ -1365,7 +1406,7 @@ people:
       - cargo: Diputado (Frente Amplio)
         organizacion: frente_amplio
         desde: 2026-03-11
-    notas: Impulsó oficios de transparencia sobre la reunión Kast-Thiel.
+    notas: "Impulsó oficios de transparencia sobre la reunión Kast-Thiel. Miembro de la Comisión Especial Investigadora de la exministra Steinert (10-ago-2026). El 14-ago-2026 criticó en X la rotación del gabinete de Kast: 'Este Gobierno es un despelote', contabilizando 42 salidas (3 ministras, 6 subsecretarios y 33 seremis) y mencionando a Steinert ('una ministra que utilizó su cargo para solicitar información sobre un caso personal') y la descoordinación entre ministerios (evento 20260813-2)."
   juan_orlando_hernandez:
     nombre: Juan Orlando Hernández
     cargo: Expresidente de Honduras
@@ -3196,7 +3237,7 @@ people:
   roberto_merken:
     nombre: Roberto Merken
     cargo: Comentarista de opinión en X
-    notas: "Cuenta de opinión 'Ciudadano Roberto Kiltro' (@RobertoMerken). En agosto de 2026 difundió una comparación viral del tratamiento del Imacec entre los gobiernos de Boric (junio 2025, +3,1%) y Kast (junio 2026, +2,4%), con más de 54 mil visualizaciones."
+    notas: "Cuenta de opinión 'Ciudadano Roberto Kiltro' (@RobertoMerken). En agosto de 2026 difundió una comparación viral del tratamiento del Imacec entre los gobiernos de Boric (junio 2025, +3,1%) y Kast (junio 2026, +2,4%), con más de 54 mil visualizaciones. El 14 de agosto de 2026 contrastó la defensa de Diego Schalper ('el Presidente Kast tiene un estándar altísimo') con la designación de Trinidad Zegers para la Reforma Procesal Civil: 'El estándar: encargar una de las reformas procesales más importantes del país a una abogada que juró hace apenas 4 meses' (evento 20260813-11)."
   arnaldo_zuniga:
     nombre: Arnaldo Zúñiga
     cargo: Meteorólogo de la DMC
@@ -4390,7 +4431,7 @@ people:
     nombre: Diego Schalper
     cargo: Diputado (Renovación Nacional)
     organizacion: renovacion_nacional
-    notas: "Diputado RN. Jefe de bancada. Impulsor del proyecto que prohíbe el acceso de menores de 16 años a redes sociales y plataformas digitales. El 6 de agosto de 2026 calificó la Agenda ACOT de Kast como 'respuesta clara y contundente'."
+    notas: "Diputado RN. Jefe de bancada. Impulsor del proyecto que prohíbe el acceso de menores de 16 años a redes sociales y plataformas digitales. El 6 de agosto de 2026 calificó la Agenda ACOT de Kast como 'respuesta clara y contundente'. El 14 de agosto de 2026 defendió en Radio Duna la rotación del gabinete tras la salida de Duco: 'el Presidente Kast tiene un estándar altísimo y por lo tanto no vacila ni un milímetro', comparando con el gobierno de Boric ('¿qué tenía que pasar... para que saliera un ministro?'); su conteo de salidas (3 ministros, 2 subsecretarios, 34 seremis) difiere de los documentados en el evento 20260813-2. En el mismo diálogo defendió la reforma constitucional de seguridad y la participación de las FF.AA. (evento 20260814-4)."
   maria_jose_gatica:
     nombre: María José Gatica
     cargo: Senadora (Renovación Nacional)
@@ -4920,7 +4961,7 @@ people:
     nombre: Tatiana Urrutia
     cargo: Diputada (Frente Amplio)
     organizacion: frente_amplio
-    notas: "Diputada del Frente Amplio. El 4 de agosto de 2026 emplazó al Presidente Kast a frenar los indultos para carabineros condenados que promueven diputados de su partido, tras su opinión sobre el fallo de Crespo."
+    notas: "Diputada del Frente Amplio. El 4 de agosto de 2026 emplazó al Presidente Kast a frenar los indultos para carabineros condenados que promueven diputados de su partido, tras su opinión sobre el fallo de Crespo. El 14 de agosto de 2026 criticó en X la frase de Kast sobre la salida de Duco ('normas... casi inentendibles'): '¿Qué es lo inentendible? ... Si Duco no fue responsable, haga un sumario y sancione a quienes sí lo fueron' (evento 20260814-2). Integrante de la comisión investigadora del Plan de Seguridad (evento 20260810-12)."
   benjamin_moreno:
     nombre: Benjamín Moreno
     cargo: Jefe de bancada de diputados republicanos
@@ -6214,6 +6255,30 @@ people:
         organizacion: ministerio_defensa
         desde: 2018-03-11
         hasta: 2020-07-28
+
+  monica_gonzalez:
+    nombre: Mónica González Mujica
+    cargo: Periodista, presidenta de la Fundación CIPER
+    organizacion: ciper_chile
+    notas: "Premio Nacional de Periodismo 2019 y presidenta de la Fundación CIPER. El 11-ago-2026 reveló ante la Comisión Especial de la Cámara de Diputados que investiga el estallido social que el presidente Piñera recibió informes de inteligencia sin sustento sobre supuestos 600 agentes cubanos y venezolanos infiltrados desde Bolivia en octubre de 2019, que pidió respaldo documental sin recibirlo jamás (evento 20260811-23)."
+
+  guillermo_paiva:
+    nombre: Guillermo Paiva
+    cargo: Exdirector de Inteligencia del Ejército
+    organizacion: ejercito
+    notas: "General del Ejército, director de Inteligencia de la institución en 2019. Según una de las versiones que maneja Mónica González (11-ago-2026), habría informado en una reunión matinal del 20-oct-2019 que la inteligencia venezolana y cubana había gestado una ofensiva insurreccional en Chile, con 600 agentes del SEBIN infiltrados (evento 20260811-23)."
+
+  jeanine_anez:
+    nombre: Jeanine Áñez Chávez
+    cargo: Expresidenta interina de Bolivia
+    organizacion: presidencia_bolivia
+    notas: "Presidenta interina de Bolivia desde el 12-nov-2019 (dos días después de la renuncia de Evo Morales), en el contexto del golpe de Estado que —según la versión que maneja Mónica González (11-ago-2026)— la inteligencia militar boliviana estaba organizando cuando entregó a la ANI los datos sobre supuestos agentes cubanos y venezolanos en Chile. Condenada en 2022 a diez años de cárcel por 'incumplimiento de deberes' y 'resoluciones contrarias a la Constitución'; sentencia anulada en 2025 (evento 20260811-23)."
+
+  luis_masferrer:
+    nombre: Luis Masferrer
+    cargo: Exdirector de la Agencia Nacional de Inteligencia (ANI)
+    organizacion: agencia_nacional_inteligencia
+    notas: "Abogado (RN), director de la ANI durante el segundo gobierno de Sebastián Piñera. Según la segunda versión que maneja Mónica González (11-ago-2026), la ANI habría manejado los detalles sobre supuestos agentes cubanos y venezolanos entregados por la inteligencia militar boliviana; Espina le habría pedido que pasara el documento al Presidente sin que lo hiciera (evento 20260811-23)."
 
   maya_fernandez_allende:
     nombre: Maya Fernández Allende
@@ -8794,6 +8859,11 @@ organizations:
     tipo: establecimiento_educacional
     pais: Chile
     notas: "Liceo de enseñanza media de Osorno (Región de Los Lagos). El 3 de agosto de 2026 un estudiante de primero medio agredió a una compañera y amenazó con un destornillador a la comunidad escolar, siendo reducido y detenido por Carabineros. El establecimiento activó el protocolo Aula Segura, suspendió la jornada de la tarde y convocó a apoderados para el 11 de agosto."
+  liceo_san_jose:
+    nombre: Liceo Salesiano San José de Punta Arenas
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo salesiano de Punta Arenas (Región de Magallanes). En agosto de 2026 la Dirección Regional de la Junaeb redujo las raciones de almuerzo del PAE de los días martes (día de legumbres) de 330 a 160, atribuyéndolo a la 'baja aceptabilidad' de las legumbres; el liceo confirmó la reducción y pidió su reversión (evento 20260812-15)."
   ministerio_publico:
     nombre: Ministerio Público de Chile
     tipo: organismo_publico
@@ -10399,6 +10469,26 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Diario gratuito chileno (Grupo Metro Internacional) y portal publimetro.cl."
+  estudio_caucoto:
+    nombre: Estudio Caucoto
+    tipo: empresa
+    pais: Chile
+    notas: "Estudio jurídico chileno especializado en derechos humanos; representó a la familia de Dignaldo Araneda Pizzini en la causa por su desaparición (abogada querellante Carolina Vega)."
+  dlapiper:
+    nombre: DLA Piper Chile
+    tipo: empresa
+    pais: Chile
+    notas: "Estudio jurídico internacional con oficina en Chile; la abogada Trinidad Zegers Domínguez se desempeñó como procuradora en 2023 (áreas de Mercados Regulados y Energía y Recursos Naturales)."
+  slbz_abogados:
+    nombre: SLBZ+ Abogados (Schenke Brancoli)
+    tipo: empresa
+    pais: Chile
+    notas: "Estudio jurídico chileno; la abogada Trinidad Zegers Domínguez trabajó desde septiembre de 2025 en su área de litigios y resolución de controversias antes de incorporarse al Ministerio de Justicia."
+  corporacion_asistencia_judicial:
+    nombre: Corporación de Asistencia Judicial Metropolitana
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Institución que presta asistencia jurídica gratuita; la abogada Trinidad Zegers Domínguez realizó allí su práctica profesional en la Oficina de Derechos Humanos."
   puentealtoaldia:
     nombre: Puente Alto Al Día
     tipo: medio_comunicacion
@@ -10961,6 +11051,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Canal de televisión chileno de la Patagonia (itvpatagonia.com)."
+  zona_zero:
+    nombre: Zona Zero
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (zonazero.cl). Cubrió la reducción de raciones del PAE en el Liceo San José de Punta Arenas por la Junaeb (agosto 2026, evento 20260812-15)."
   informe_chile:
     nombre: Informe Chile
     tipo: medio_comunicacion
@@ -14663,3 +14758,71 @@ cifras:
     nombre: Cambios a la Carta Fundamental en el borrador de reforma de seguridad
     unidad_default: cambios
     notas: "El borrador de la reforma constitucional de seguridad revelado por La Tercera (12-ago-2026) incluye 11 cambios a la Constitución, entre ellos el resguardo de la seguridad pública como deber del Estado, el registro de organizaciones criminales, el nuevo estado de excepción de seguridad pública y la inhabilitación de condenados (artículo 9)."
+  condenados_prestamo_solidario_morosidad:
+    nombre: Contribuyentes morosos del Préstamo Solidario que recibirán cobro
+    unidad_default: personas
+    notas: "1.073.590 personas que accedieron al Préstamo Solidario (2020-2021) no declararon impuestos en al menos un periodo entre 2022 y 2026, requisito para el reintegro; el SII comenzará a cobrarles desde septiembre de 2026 (evento 20260814-5)."
+  deuda_prestamo_solidario:
+    nombre: Deuda acumulada por cuotas impagas del Préstamo Solidario
+    unidad_default: pesos
+    notas: "Deuda que supera los $553 mil millones por cuotas impagas del Préstamo Solidario (beneficio de la pandemia), según el SII (evento 20260814-5)."
+  solicitantes_prestamo_solidario:
+    nombre: RUT que solicitaron el Préstamo Solidario en 2020-2021
+    unidad_default: personas
+    notas: "1.857.380 RUT únicos solicitaron el Préstamo Solidario en 2020 y/o 2021 por un monto total superior a los $2 billones nominales (evento 20260814-5)."
+  condonacion_prestamo_solidario:
+    nombre: Contribuyentes con saldo condonado del Préstamo Solidario
+    unidad_default: personas
+    notas: "427.938 contribuyentes que cumplieron cada año con el pago de cuotas del Préstamo Solidario quedaron con saldo pendiente cercano a los $184 mil millones, el que fue condonado según la ley (evento 20260814-5)."
+  condena_krassnoff_araneda:
+    nombre: Años de presidio confirmados a Krassnoff por la desaparición de Araneda Pizzini
+    unidad_default: años
+    notas: "La Tercera Sala de la Corte de Apelaciones de Santiago confirmó los 15 años de presidio a Miguel Krassnoff como autor del secuestro calificado de Dignaldo Araneda Pizzini (1974), superando con esta sentencia más de mil años de cárcel acumulados (evento 20260813-12)."
+  penas_acumuladas_krassnoff:
+    nombre: Penas acumuladas contra Miguel Krassnoff
+    unidad_default: años
+    notas: "Las penas contra Miguel Krassnoff superan los mil años de presidio por su participación en más de 80 causas por delitos de lesa humanidad de la dictadura (evento 20260813-12)."
+  bono_clase_media_2020:
+    nombre: Monto del Bono Clase Media (aporte fiscal 2020)
+    unidad_default: pesos
+    notas: "Ley 21.252 (ago-2020): aporte fiscal único de $500.000 no reembolsable para personas con renta promedio mensual 2019 entre $400.000 y $1.500.000, y $400.000 para rentas entre $1.500.000 y $1.600.000 (evento 20200801-1)."
+  tope_prestamo_solidario_mensual_2020:
+    nombre: Tope mensual del Préstamo Solidario 2020
+    unidad_default: pesos
+    notas: "Ley 21.252: préstamo solidario de hasta $650.000 mensuales, a tasa 0, para cubrir hasta el 70% de la caída de ingresos formales de la clase media durante la pandemia (evento 20200801-1)."
+  requisito_renta_prestamo_solidario_2020:
+    nombre: Renta promedio mínima para acceder al Préstamo Solidario 2020
+    unidad_default: pesos
+    notas: "Ley 21.252: promedio mensual de rentas percibidas en 2019 igual o mayor a $400.000, con una caída de al menos 30% del ingreso mensual (evento 20200801-1)."
+  caida_ingresos_requisito_prestamo_solidario:
+    nombre: Caída de ingresos mínima para acceder al Préstamo Solidario
+    unidad_default: porcentaje
+    notas: "Ley 21.252: disminución de al menos 30% del ingreso mensual respecto del promedio 2019 para acceder al Bono Clase Media y al Préstamo Solidario (evento 20200801-1)."
+  raciones_pae_liceo_san_jose_recortadas:
+    nombre: Raciones de almuerzo recortadas por la Junaeb en el Liceo San José (martes)
+    unidad_default: raciones
+    notas: "170 raciones de almuerzo menos los días martes en el Liceo Salesiano San José de Punta Arenas (agosto 2026): la nueva asignación de la Junaeb suma 160 raciones (100 básica + 60 media) frente a un consumo promedio de 330 (180 básica + 150 media) según los registros del establecimiento; 80 menos en básica y 90 en media (evento 20260812-15)."
+  raciones_pae_liceo_san_jose_consumo_martes:
+    nombre: Consumo promedio de almuerzos del PAE los martes en el Liceo San José
+    unidad_default: raciones
+    notas: "330 raciones de almuerzo promedio los días martes en el Liceo Salesiano San José de Punta Arenas (180 en Educación Básica y 150 en Educación Media), según los registros del establecimiento frente a los datos de la Junaeb (evento 20260812-15)."
+  raciones_pae_liceo_san_jose_nueva_asignacion:
+    nombre: Nueva asignación de raciones del PAE para los martes en el Liceo San José
+    unidad_default: raciones
+    notas: "160 raciones de almuerzo asignadas por la Junaeb para los días martes en el Liceo Salesiano San José de Punta Arenas (100 para Educación Básica y 60 para Educación Media) tras el recorte de agosto de 2026 (evento 20260812-15)."
+  muertes_covid_registro_civil_25mayo2020:
+    nombre: Decesos con Covid en certificado de defunción inscritos en el Registro Civil (1-mar a 25-may-2020)
+    unidad_default: personas
+    notas: "869 decesos inscritos por el Registro Civil entre el 1 de marzo y el 25 de mayo de 2020 en los que los médicos consignaron Covid-19 en el certificado de defunción, 63 más que los 806 informados oficialmente por el Minsal a esa fecha (+8%) (evento 20200527-1)."
+  muertes_covid_minsal_25mayo2020:
+    nombre: Fallecidos por Covid-19 informados oficialmente por el Minsal (25 de mayo de 2020)
+    unidad_default: personas
+    notas: "806 fallecidos por Covid-19 en el reporte oficial del Minsal al 25 de mayo de 2020, frente a los 869 decesos inscritos por el Registro Civil con el virus como causa en el certificado de defunción (evento 20200527-1)."
+  muertes_covid_sospechosas_registro_civil_2020:
+    nombre: Decesos inscritos con sospecha de Covid en el Registro Civil (mar-may 2020)
+    unidad_default: personas
+    notas: "316 decesos inscritos entre el 1 de marzo y el 25 de mayo de 2020 con anotaciones de 'sospecha' u 'observación' de Covid-19 o examen PCR pendiente en el certificado de defunción, según datos del Registro Civil a los que accedió CIPER (evento 20200527-1)."
+  diferencia_muertes_rm_registro_civil_minsal_2020:
+    nombre: Diferencia de decesos Covid entre Registro Civil y Minsal en la Región Metropolitana (mayo 2020)
+    unidad_default: personas
+    notas: "108 personas de diferencia entre las 675 inscripciones de defunción con Covid del Registro Civil y los 567 fallecidos informados por el Minsal en la Región Metropolitana al 25 de mayo de 2020 (+19%) (evento 20200527-1)."

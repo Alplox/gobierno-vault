@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (387)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (390)
 
 <details>
-<summary>Ver lista (387 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (390 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -19,6 +19,7 @@
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — **1 fuente**
 - [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — **1 fuente**
 - [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — **1 fuente**
+- [2020/05/20200527-1 - CIPER revela que el Registro Civil inscribió 63 muertes por Covid-19 más que las informadas por el Minsal y otras 316 como sospechosas](src/content/events/2020/05/20200527-1.md) — **1 fuente**
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — **1 fuente**
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — **1 fuente**
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — **1 fuente**
@@ -197,6 +198,7 @@
 - [2026/08/20260813-10 - Duras críticas al canal de TV del Senado por publicitar una entrevista a la senadora Camila Flores, investigada por fraude al fisco en el caso cuota Flores](src/content/events/2026/08/20260813-10.md) — **1 fuente**
 - [2026/08/20260813-6 - ANFACH se declara en alerta: la ACOT permitiría facultades autónomas de Carabineros y la PDI en zonas primarias de puertos y fronteras](src/content/events/2026/08/20260813-6.md) — **1 fuente**
 - [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — **1 fuente**
+- [2026/08/20260814-5 - SII anuncia cobro del Préstamo Solidario a 1.073.590 personas que no declararon impuestos entre 2022 y 2026: deuda supera los $553 mil millones](src/content/events/2026/08/20260814-5.md) — **1 fuente**
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — **2 fuentes**
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — **2 fuentes**
 - [2010/01/20100114-1 - Concejal de Concepción Álvaro Ortiz condenado por violencia intrafamiliar; además enfrentaba proceso por ebriedad y daños](src/content/events/2010/01/20100114-1.md) — **2 fuentes**
@@ -389,6 +391,7 @@
 - [2026/08/20260811-18 - Google anuncia el cable submarino Alisios que conectará Chile con Panamá y República Dominicana](src/content/events/2026/08/20260811-18.md) — **2 fuentes**
 - [2026/08/20260811-20 - Gobierno propone la regla de los '21 pies' (6,4 metros) como criterio obligatorio para evaluar el uso de la fuerza policial en la Comisión Mixta del proyecto RUF](src/content/events/2026/08/20260811-20.md) — **2 fuentes**
 - [2026/08/20260811-21 - Escándalo en la Municipalidad de Curicó: personal de informática filtró material íntimo de funcionarias y directivos extraído de celulares institucionales](src/content/events/2026/08/20260811-21.md) — **2 fuentes**
+- [2026/08/20260811-23 - Mónica González revela en la comisión del estallido que Piñera recibió informes de inteligencia sin sustento sobre supuestos 600 agentes cubanos y venezolanos que jamás fueron documentados](src/content/events/2026/08/20260811-23.md) — **2 fuentes**
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — **2 fuentes**
 - [2026/08/20260812-12 - Diputada Fries denuncia: madre haitiana con residencia definitiva y sus hijas chilenas (6 y 9 años) quedan bajo custodia del ICE tras negárseles el ingreso a Chile](src/content/events/2026/08/20260812-12.md) — **2 fuentes**
 - [2026/08/20260812-13 - Hudson Rock revela la mayor brecha de cadena de suministro de IA de 2026: el hackeo de LiteLLM impacta a miles de empresas y deja posibles afectados en Chile](src/content/events/2026/08/20260812-13.md) — **2 fuentes**
@@ -965,7 +968,7 @@
 - [2026/08/20260810-12 - Comisión de Seguridad de la Cámara aprueba en general el Registro Nacional de Vándalos e Incivilidades](src/content/events/2026/08/20260810-12.md) — 3 fuentes
 - [2026/08/20260810-13 - Fast Check revela que la Fiscalía pagó más de $25 millones para cerrar demandas de exfuncionarios que denunciaron 'venganzas' del fiscal nacional Ángel Valencia](src/content/events/2026/08/20260810-13.md) — 1 fuente
 - [2026/08/20260810-14 - DiCaprio alerta que el proyecto de interconexión Los Cóndores–Río Diamante amenaza la rana pehuenche y la ministra Toledo evita pronunciarse por estar en evaluación ambiental](src/content/events/2026/08/20260810-14.md) — 3 fuentes
-- [2026/08/20260810-15 - Gobierno decreta Emergencia Preventiva Climática en cinco regiones del norte por nuevo sistema frontal](src/content/events/2026/08/20260810-15.md) — 8 fuentes
+- [2026/08/20260810-15 - Gobierno decreta Emergencia Preventiva Climática en cinco regiones del norte por nuevo sistema frontal](src/content/events/2026/08/20260810-15.md) — 9 fuentes
 - [2026/08/20260810-16 - Camila Flores reitera en video el pedido de indulto general para uniformados y emplaza a Kast a 'actuar lo antes posible'](src/content/events/2026/08/20260810-16.md) — 4 fuentes
 - [2026/08/20260810-17 - Servel archiva investigación contra Claudio Orrego: coaching del GORE que reprochó Contraloría no constituye gasto electoral](src/content/events/2026/08/20260810-17.md) — 2 fuentes
 - [2026/08/20260810-18 - Fast Check califica como #Falso que 'hace más de 30 años que no se baja un impuesto' en Chile, dichos de Kast en Mesa Central](src/content/events/2026/08/20260810-18.md) — 1 fuente
@@ -1015,6 +1018,7 @@
 - [2026/08/20260811-20 - Gobierno propone la regla de los '21 pies' (6,4 metros) como criterio obligatorio para evaluar el uso de la fuerza policial en la Comisión Mixta del proyecto RUF](src/content/events/2026/08/20260811-20.md) — 2 fuentes
 - [2026/08/20260811-21 - Escándalo en la Municipalidad de Curicó: personal de informática filtró material íntimo de funcionarias y directivos extraído de celulares institucionales](src/content/events/2026/08/20260811-21.md) — 2 fuentes
 - [2026/08/20260811-22 - Matías Toledo respalda el despliegue de Fuerzas Armadas en barrios afectados por el crimen organizado: 'Estoy de acuerdo con todo tipo de intervención, siempre y cuando se respete el marco legal'](src/content/events/2026/08/20260811-22.md) — 6 fuentes
+- [2026/08/20260811-23 - Mónica González revela en la comisión del estallido que Piñera recibió informes de inteligencia sin sustento sobre supuestos 600 agentes cubanos y venezolanos que jamás fueron documentados](src/content/events/2026/08/20260811-23.md) — 2 fuentes
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — 2 fuentes
 - [2026/08/20260811-4 - Comisión de Hacienda del Senado suspende votación de Sala Cuna Universal por ausencia de Macaya, Gatica y Carter](src/content/events/2026/08/20260811-4.md) — 1 fuente
 - [2026/08/20260811-5 - Kast reúne a casi 70 alcaldes en La Moneda por la agenda de seguridad y algunos de oposición se retiran; Vodanovic desmiente la versión de Emol](src/content/events/2026/08/20260811-5.md) — 5 fuentes
@@ -1028,6 +1032,7 @@
 - [2026/08/20260812-12 - Diputada Fries denuncia: madre haitiana con residencia definitiva y sus hijas chilenas (6 y 9 años) quedan bajo custodia del ICE tras negárseles el ingreso a Chile](src/content/events/2026/08/20260812-12.md) — 2 fuentes
 - [2026/08/20260812-13 - Hudson Rock revela la mayor brecha de cadena de suministro de IA de 2026: el hackeo de LiteLLM impacta a miles de empresas y deja posibles afectados en Chile](src/content/events/2026/08/20260812-13.md) — 2 fuentes
 - [2026/08/20260812-14 - Estudio Mundial de Juventud 2026: los jóvenes chilenos de 18 a 24 años están entre los más pesimistas del mundo —menos esperanza que sus padres, menor acceso a vivienda y mayor disposición a emigrar—](src/content/events/2026/08/20260812-14.md) — 2 fuentes
+- [2026/08/20260812-15 - Junaeb reduce las raciones de almuerzo del Liceo San José de Punta Arenas los martes (día de legumbres) por 'baja aceptabilidad': de 330 a 160 raciones](src/content/events/2026/08/20260812-15.md) — 6 fuentes
 - [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 5 fuentes
 - [2026/08/20260812-3 - Kast promulga la Ley Escuelas Protegidas: revisión de mochilas en colegios y mayores facultades docentes, con el lema 'el que nada hace, nada teme'](src/content/events/2026/08/20260812-3.md) — 25 fuentes
 - [2026/08/20260812-4 - Diputados del Partido Cristiano presentan proyectos de resolución para instaurar el Día Nacional de la Oración y el Día Nacional de la Biblia](src/content/events/2026/08/20260812-4.md) — 5 fuentes
@@ -1036,9 +1041,11 @@
 - [2026/08/20260812-7 - Junaeb anuncia la digitalización gradual de la TNE: licitación en 2026 y fin progresivo del plástico](src/content/events/2026/08/20260812-7.md) — 5 fuentes
 - [2026/08/20260812-8 - Cadem edición 680: cae a 40% la percepción de que la delincuencia ha aumentado, con cambio metodológico en la pregunta y un 2025 sin mediciones](src/content/events/2026/08/20260812-8.md) — 6 fuentes
 - [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
-- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 23 fuentes
+- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 25 fuentes
 - [2026/08/20260813-10 - Duras críticas al canal de TV del Senado por publicitar una entrevista a la senadora Camila Flores, investigada por fraude al fisco en el caso cuota Flores](src/content/events/2026/08/20260813-10.md) — 1 fuente
-- [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 12 fuentes
+- [2026/08/20260813-11 - Rabat encarga la Reforma Procesal Civil a Trinidad Zegers, abogada que juró hace 4 meses: críticas por falta de experiencia y defensa de la cartera](src/content/events/2026/08/20260813-11.md) — 9 fuentes
+- [2026/08/20260813-12 - Corte de Apelaciones confirma 15 años de cárcel a Miguel Krassnoff por la desaparición del estudiante Dignaldo Araneda Pizzini (1974): sus penas superan los mil años](src/content/events/2026/08/20260813-12.md) — 3 fuentes
+- [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 16 fuentes
 - [2026/08/20260813-3 - Verificación: el historial de ausencias de Kast como diputado (41% de inasistencias, 2002-2018) confirma parcialmente la crítica del hilo de la Ley de Incendios](src/content/events/2026/08/20260813-3.md) — 5 fuentes
 - [2026/08/20260813-4 - Tribunal Constitucional acoge parcialmente los requerimientos contra la megarreforma: inconstitucionales normas tributarias y ambientales](src/content/events/2026/08/20260813-4.md) — 6 fuentes
 - [2026/08/20260813-5 - Comisario de la PDI balea a un gendarme de franco tras una discusión con una mujer en Playa Ancha, Valparaíso](src/content/events/2026/08/20260813-5.md) — 3 fuentes
@@ -1047,9 +1054,10 @@
 - [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — 1 fuente
 - [2026/08/20260813-9 - Juzgado de Garantía de Valparaíso rechaza dos solicitudes de la defensa de Camila Flores en el caso cuota Flores y admite querella de Ymay Ortiz Pulgar](src/content/events/2026/08/20260813-9.md) — 2 fuentes
 - [2026/08/20260814-1 - Megarreforma (Ley de Reconstrucción Nacional y Desarrollo Económico y Social): registro textual de todo lo que propone](src/content/events/2026/08/20260814-1.md) — 21 fuentes
-- [2026/08/20260814-2 - Kast nombra a Francisco Riveros Cantuarias como ministro del Deporte y enmarca la salida de Duco como 'un error que cualquiera puede cometer'](src/content/events/2026/08/20260814-2.md) — 9 fuentes
+- [2026/08/20260814-2 - Kast nombra a Francisco Riveros Cantuarias como ministro del Deporte y enmarca la salida de Duco como 'un error que cualquiera puede cometer'](src/content/events/2026/08/20260814-2.md) — 13 fuentes
 - [2026/08/20260814-3 - PDI detiene a mujer de 23 años acusada de amenazar de muerte al Presidente Kast en Instagram durante su visita a Talca](src/content/events/2026/08/20260814-3.md) — 5 fuentes
-- [2026/08/20260814-4 - Arrau responde a Chomalí por la restricción de prestaciones a condenados del borrador de la ACOT: 'Desconoce el proyecto'](src/content/events/2026/08/20260814-4.md) — 5 fuentes
+- [2026/08/20260814-4 - Arrau responde a Chomalí por la restricción de prestaciones a condenados del borrador de la ACOT: 'Desconoce el proyecto'](src/content/events/2026/08/20260814-4.md) — 10 fuentes
+- [2026/08/20260814-5 - SII anuncia cobro del Préstamo Solidario a 1.073.590 personas que no declararon impuestos entre 2022 y 2026: deuda supera los $553 mil millones](src/content/events/2026/08/20260814-5.md) — 1 fuente
 
 ## 2025
 
@@ -1195,11 +1203,13 @@
 - [2020/04/20200420-1 - Piñera anuncia el envío al Congreso del proyecto de Ingreso Familiar de Emergencia (IFE) para el 60% más vulnerable](src/content/events/2020/04/20200420-1.md) — 2 fuentes
 - [2020/05/20200503-1 - Cuarentena total de Santiago: Cerrillos, Recoleta, Quilicura y Santiago Centro entran en confinamiento](src/content/events/2020/05/20200503-1.md) — 2 fuentes
 - [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — 1 fuente
+- [2020/05/20200527-1 - CIPER revela que el Registro Civil inscribió 63 muertes por Covid-19 más que las informadas por el Minsal y otras 316 como sospechosas](src/content/events/2020/05/20200527-1.md) — 1 fuente
 - [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — 2 fuentes
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — 1 fuente
 - [2020/07/20200706-1 - Se conoce video de la GoPro de Carabineros con el diálogo "¿se la pitió, verdad?" que impide cerrar el sumario del caso Campillai](src/content/events/2020/07/20200706-1.md) — 9 fuentes
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — 1 fuente
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — 1 fuente
+- [2020/08/20200801-1 - Se publica la Ley 21.252 del Préstamo Solidario y el Bono Clase Media: origen legislativo de la serie de ayudas de la pandemia de covid-19](src/content/events/2020/08/20200801-1.md) — 6 fuentes
 - [2020/08/20200805-1 - Comuneros mapuche en huelga de hambre rechazan la invitación del gobierno y Celestino Córdova inicia huelga seca](src/content/events/2020/08/20200805-1.md) — 3 fuentes
 - [2020/08/20200828-1 - Paro de camioneros de agosto de 2020: bloqueos de rutas, desabastecimiento y rechazo a la Ley de Seguridad del Estado bajo Piñera](src/content/events/2020/08/20200828-1.md) — 4 fuentes
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
@@ -1226,6 +1236,7 @@
 - [2019/04/20190402-1 - La exministra Javiera Blanco es sobreseída en el caso Gendarmería por fraude al fisco y nombramiento ilegal](src/content/events/2019/04/20190402-1.md) — 2 fuentes
 - [2019/04/20190409-1 - La DC anuncia su apoyo a la idea de legislar en la reforma tributaria de Piñera y abre una grieta en la oposición](src/content/events/2019/04/20190409-1.md) — 2 fuentes
 - [2019/04/20190424-1 - TDLC sanciona a navieras por cartel del transporte marítimo de vehículos hacia Chile](src/content/events/2019/04/20190424-1.md) — 5 fuentes
+- [2019/05/20190520-1 - Johnny Olate, el estudiante de la UC que inventó la denuncia de abuso sexual contra el gremialista José Ignacio Palma, era seguidor del movimiento de José Antonio Kast](src/content/events/2019/05/20190520-1.md) — 5 fuentes
 - [2019/10/20191001-1 - Cámara rechaza la acusación constitucional contra la ministra de Educación Marcela Cubillos](src/content/events/2019/10/20191001-1.md) — 2 fuentes
 - [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 9 fuentes
 - [2019/10/20191019-1 - Tres personas mueren en incendio de supermercado durante saqueos en San Bernardo y el aeropuerto de Santiago colapsa en la primera jornada de estado de emergencia](src/content/events/2019/10/20191019-1.md) — 5 fuentes
