@@ -27,6 +27,21 @@
  *                 sitemap ya no liste). Por defecto es modo MERGE: nunca se
  *                 borra una URL existente y los títulos solo se mejoran
  *                 (news > slug), nunca se degradan.
+ *   --since <YYYY-MM-DD>
+ *                 Solo sincroniza contenido reciente, sin recargar el
+ *                 catálogo completo (ideal cuando los sitemaps ya se
+ *                 obtuvieron y solo se quiere el año en curso). Filtra en
+ *                 3 niveles: (1) sub-sitemaps históricos por la fecha que
+ *                 lleva su URL (BioBio static-sitemap-YYYY-MM, CNN YYYY/MM,
+ *                 Meganoticias sitemap-YYYY-MM, Mestizos sitemap-DD-MM-YYYY,
+ *                 Publimetro YYYY-MM-DD, FastCheck posts-YYYY); (2) para los
+ *                 sitemaps sin fecha en la URL (Yoast post-sitemapN, Arc XP
+ *                 ?from=N) se mira el rango de fechas del XML ya cacheado y
+ *                 si es puramente histórico se omite sin re-descargar;
+ *                 (3) las entradas anteriores a la fecha nunca se tocan
+ *                 (modo merge: no se borran ni se re-agregan).
+ *   --days <n>    Equivalente a --since con la fecha de hace n días (default 7).
+ *                 NO compatible con --replace (borraría la historia).
  *
  * Notas:
  * - Node fetch descomprime gzip automáticamente (varios medios sirven los
@@ -265,6 +280,79 @@ function isoDate(value) {
   return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
 }
 
+// ---------------------------------------------------------------------------
+// Filtro de ventana temporal (--since / --days): decidir si un sub-sitemap
+// cubre contenido reciente SIN descargarlo, y no tocar entradas antiguas.
+// ---------------------------------------------------------------------------
+
+// Fecha de cobertura detectable en la URL de un sub-sitemap, si la lleva:
+//   YYYY-MM-DD  → Publimetro (/sitemap/2026-08-09/)
+//   DD-MM-YYYY  → Mestizos (sitemap-30-11-2024.xml)
+//   YYYY-MM     → BioBio (static-sitemap-2026-08.xml), CNN (_files/sitemaps/
+//                 2026/08.xml), Meganoticias (sitemap-2026-08.xml), El Dínamo
+//   YYYY suelto → FastCheck (posts-2026.xml)
+// Solo se mira el PATH (sin query string): la paginación de Arc XP
+// (?from=N) no debe confundirse con un año.
+function sitemapUrlDate(u) {
+  let path;
+  try {
+    path = new URL(u).pathname;
+  } catch {
+    return null;
+  }
+  let m = path.match(/(20\d{2})[-/](\d{2})[-/](\d{2})/);
+  if (m) return { y: +m[1], mo: +m[2], d: +m[3] };
+  m = path.match(/(?:^|[^\d])(\d{2})[-/](\d{2})[-/](20\d{2})/);
+  if (m) return { y: +m[3], mo: +m[2], d: +m[1] };
+  m = path.match(/(20\d{2})[-/](\d{2})(?=\D|$)/);
+  if (m) return { y: +m[1], mo: +m[2] };
+  m = path.match(/(?:^|[^\d])(20\d{2})(?:[^\d]|$)/);
+  if (m) return { y: +m[1] };
+  return null;
+}
+
+// ¿El sub-sitemap (por su URL) cae dentro de la ventana desde `since`?
+//   true  → reciente, descargar
+//   false → histórico, omitir
+//   null  → sin fecha detectable en la URL (se decide por caché/contenido)
+function sitemapUrlInWindow(u, since) {
+  const sd = sitemapUrlDate(u);
+  if (!sd) return null;
+  if (sd.y > since.y) return true;
+  if (sd.y < since.y) return false;
+  if (sd.mo !== undefined) {
+    if (sd.mo > since.mo) return true;
+    if (sd.mo < since.mo) return false;
+  }
+  if (sd.d !== undefined && sd.d < since.d) return false;
+  return true;
+}
+
+// Fecha máxima de los primeros bloques <url> de un XML cacheado (sin
+// re-descargar). Los sitemaps se ordenan nuevo→viejo, así que si el máximo
+// de los primeros bloques ya es anterior a `since`, el archivo completo es
+// histórico y no vale la pena re-descargarlo (caso Yoast post-sitemapN,
+// Arc XP ?from=N y paginados Prontus, que no llevan fecha en la URL).
+function peekCachedMaxDate(cachePath, blocks = 50) {
+  try {
+    const xml = readFileSync(cachePath, 'utf8');
+    const blockRe = /<url>([\s\S]*?)<\/url>/g;
+    let n = 0;
+    let m;
+    let max = null;
+    while (n < blocks && (m = blockRe.exec(xml)) !== null) {
+      const lastmod = m[1].match(/<lastmod>([\s\S]*?)<\/lastmod>/i)?.[1]?.trim() || null;
+      const newsDate = m[1].match(/<(?:news|n):publication_date>([\s\S]*?)<\/(?:news|n):publication_date>/i)?.[1] || null;
+      const f = isoDate(newsDate) ?? isoDate(lastmod);
+      if (f && (!max || f > max)) max = f;
+      n++;
+    }
+    return max;
+  } catch {
+    return null;
+  }
+}
+
 function stripCdata(str) {
   return String(str).replace(/<!\[CDATA\[|\]\]>/g, '').trim();
 }
@@ -487,7 +575,15 @@ async function expandIndex(url, { cacheDir, fresh, staleHours, noCache }) {
 }
 
 async function syncMedio(medio, conf, opts) {
-  const { cacheDir, fresh, staleHours, noCache, limit, delayMs, incremental, replace } = opts;
+  const { cacheDir, fresh, staleHours, noCache, limit, delayMs, incremental, replace, since } = opts;
+  // since viene como 'YYYY-MM-DD' (string ISO); se parte en componentes para
+  // comparar contra las fechas detectadas en las URLs de los sub-sitemaps.
+  const sinceObj = since ? { y: +since.slice(0, 4), mo: +since.slice(5, 7), d: +since.slice(8, 10) } : null;
+  // Contadores del filtro de ventana (--since/--days). Se declaran arriba
+  // porque la expansión de sub-sitemaps ya los usa (TDZ si fueran más abajo).
+  let urlFiltered = 0;      // sub-sitemaps omitidos por fecha en su URL
+  let cacheFiltered = 0;    // sub-sitemaps omitidos por rango del XML cacheado
+  let entriesFiltered = 0;  // entradas fuera de la ventana (no se tocan)
   logInfo(`=== Sincronizando ${conf.nombre} (${medio}) ===`);
 
   const discovered = await discoverSitemapUrls(medio, conf, opts);
@@ -515,6 +611,10 @@ async function syncMedio(medio, conf, opts) {
 
   // Expandir índices (cada uno puede apuntar a sub-sitemaps)
   const flat = [];
+  // --since: sub-sitemap con fecha en la URL anterior a la ventana → se omite
+  // sin descargar (ej. static-sitemap-2010-01.xml de BioBio con --days 30).
+  // Los que no llevan fecha (Yoast post-sitemapN, Arc XP ?from=N) pasan y se
+  // deciden más abajo por el rango del XML cacheado o por el contenido.
   for (const u of discovered) {
     const res = await expandIndex(u, opts);
     if (res.ok && res.isIndex) {
@@ -523,11 +623,19 @@ async function syncMedio(medio, conf, opts) {
           logInfo(`descartado (no es articulo): ${sub.replace('https://', '')}`);
           continue;
         }
+        if (since && sitemapUrlInWindow(sub, sinceObj) === false) {
+          urlFiltered++;
+          continue;
+        }
         flat.push(sub);
       }
     } else if (res.ok) {
       if (!isArticleSitemap(u)) {
         logInfo(`descartado (no es articulo): ${u.replace('https://', '')}`);
+        continue;
+      }
+      if (since && sitemapUrlInWindow(u, sinceObj) === false) {
+        urlFiltered++;
         continue;
       }
       flat.push(u);
@@ -552,6 +660,21 @@ async function syncMedio(medio, conf, opts) {
   // Descargar y parsear cada sub-sitemap
   for (const [i, u] of uniqueFlat.entries()) {
     const key = slugify(u.replace(/^https?:\/\//, '').replace(/[^a-z0-9]+/gi, '-').slice(0, 80));
+    // --since: si la URL no lleva fecha (caso Yoast post-sitemapN, Arc XP
+    // ?from=N, Prontus), mirar el rango de fechas del XML ya cacheado: si es
+    // puramente histórico se omite sin re-descargar (los sitemaps se ordenan
+    // nuevo→viejo, así que el máximo de los primeros bloques basta).
+    if (since && cacheDir && !noCache && sitemapUrlDate(u) === null) {
+      const cachedPath = join(cacheDir, `${key}.xml`);
+      if (existsSync(cachedPath)) {
+        const maxDate = peekCachedMaxDate(cachedPath);
+        if (maxDate && maxDate < since) {
+          cacheFiltered++;
+          logInfo(`[${i + 1}/${uniqueFlat.length}] omitido (caché sin URLs recientes): ${u.replace('https://', '')}`);
+          continue;
+        }
+      }
+    }
     const res = await fetchText(u, { cacheKey: key, cacheDir, fresh, staleHours, noCache });
     if (!res.ok) {
       logWarn(`[${i + 1}/${uniqueFlat.length}] no descargable: ${u} (${res.status ?? res.error})`);
@@ -567,6 +690,10 @@ async function syncMedio(medio, conf, opts) {
     if (/<sitemapindex[\s>]/i.test(res.text)) {
       // Doble nivel (index dentro de index): expandir recursivamente
       for (const sub of extractSitemapIndexLocs(res.text)) {
+        if (since && sitemapUrlInWindow(sub, sinceObj) === false) {
+          urlFiltered++;
+          continue;
+        }
         if (!uniqueFlat.includes(sub)) uniqueFlat.push(sub);
       }
       continue;
@@ -580,6 +707,13 @@ async function syncMedio(medio, conf, opts) {
       if (!seenBefore) seen.add(e.loc);
       const fecha = isoDate(e.newsDate) ?? pathDate ?? isoDate(e.lastmod);
       if (!fecha) continue;
+      // --since: las entradas anteriores a la ventana no se tocan (ni se
+      // agregan ni se mejoran sus títulos). En modo merge lo existente se
+      // conserva intacto; solo se actualiza lo reciente.
+      if (since && fecha < since) {
+        entriesFiltered++;
+        continue;
+      }
       const tSlug = e.newsTitle ? null : titleFromSlug(e.loc);
       const entry = {
         u: e.loc,
@@ -643,6 +777,9 @@ async function syncMedio(medio, conf, opts) {
 
   const total = Object.values(years).reduce((acc, m) => acc + m.size, 0);
   logOk(`${conf.nombre}: ${total} artículos totales (+${added} nuevos, ${upgraded} títulos mejorados, ${kept} sin cambios; ${fromCache} desde caché)`);
+  if (since) {
+    logOk(`   └ ventana --since ${since}: ${urlFiltered} sub-sitemap(s) históricos filtrados por URL, ${cacheFiltered} omitidos por caché, ${entriesFiltered} entradas fuera de ventana no tocadas`);
+  }
   return { medio, nombre: conf.nombre, urls: total, added, upgraded, kept, fromCache, years: Object.keys(years).length };
 }
 
@@ -654,7 +791,7 @@ async function main() {
   const flags = new Set(args.filter((a) => a.startsWith('--')));
   // Los argumentos posicionales excluyen los valores de flags con parámetro
   // (--limit N, --stale N) para que no se confundan con slugs de medios.
-  const flagWithValue = new Set(['--limit', '--stale', '--delay']);
+  const flagWithValue = new Set(['--limit', '--stale', '--delay', '--since', '--days']);
   const posArgs = args.filter((a, i) => {
     if (a.startsWith('--')) return false;
     return !flagWithValue.has(args[i - 1]);
@@ -678,6 +815,30 @@ async function main() {
   const incremental = flags.has('--incremental');
   const replace = flags.has('--replace');
 
+  // --since <YYYY-MM-DD> / --days <n>: ventana temporal para sincronizar solo
+  // lo reciente (ver comentario de cabecera). --replace + ventana borraría la
+  // historia completa de los años fuera de la ventana, así que se rechaza.
+  let since = null;
+  if (flags.has('--since')) {
+    const raw = args[args.indexOf('--since') + 1] ?? '';
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) {
+      logErr('--since requiere una fecha YYYY-MM-DD (ej. --since 2026-08-01)');
+      process.exit(1);
+    }
+    since = raw;
+  } else if (flags.has('--days')) {
+    const n = parseInt(args[args.indexOf('--days') + 1] ?? '7', 10);
+    const days = Number.isNaN(n) || n < 1 ? 7 : n;
+    const d = new Date();
+    d.setUTCDate(d.getUTCDate() - days);
+    since = d.toISOString().slice(0, 10);
+    logInfo(`Ventana temporal: últimos ${days} día(s) (desde ${since})`);
+  }
+  if (since && replace) {
+    logErr('--since/--days no es compatible con --replace (borraría la historia). Usa el modo merge por defecto o --incremental.');
+    process.exit(1);
+  }
+
   const targets = flags.has('--all') ? Object.keys(MEDIA) : posArgs;
   if (targets.length === 0) {
     logErr('Indica un medio (slug) o usa --all. Ver `--list` para los medios.');
@@ -692,7 +853,7 @@ async function main() {
 
   const cacheDir = noCache ? null : CACHE_DIR;
   const results = [];
-  const opts = { cacheDir, fresh, staleHours, noCache, limit, delayMs, incremental, replace };
+  const opts = { cacheDir, fresh, staleHours, noCache, limit, delayMs, incremental, replace, since };
   for (const t of targets) {
     const r = await syncMedio(t, MEDIA[t], opts);
     results.push(r);
@@ -733,4 +894,4 @@ if (isMain) {
   });
 }
 
-export { MEDIA };
+export { MEDIA, isoDate, sitemapUrlDate, sitemapUrlInWindow, peekCachedMaxDate };

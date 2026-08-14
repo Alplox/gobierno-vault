@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 11/8/2026, 0:44:28
+- **Última sincronización:** 13/8/2026, 23:11:26
 - **Medios registrados:** 30
-- **Artículos indexados:** 2.941.991
+- **Artículos indexados:** 2.974.090
 
 ## Por medio
 
@@ -13,222 +13,222 @@
 |---|---|
 | Radio Bío Bío | 1.170.827 |
 | Meganoticias | 433.970 |
-| El Ciudadano | 276.998 |
-| El Dínamo | 250.948 |
-| CNN Chile | 226.812 |
-| The Clinic | 191.756 |
-| Radio Universidad de Chile | 107.892 |
+| El Ciudadano | 304.427 |
+| El Dínamo | 251.135 |
+| CNN Chile | 227.126 |
+| The Clinic | 191.938 |
+| Radio Universidad de Chile | 107.977 |
 | El Periodista | 84.776 |
-| REDIMIN | 47.735 |
-| El Clarín | 20.683 |
-| La Nación | 19.737 |
+| REDIMIN | 47.897 |
+| El Clarín | 20.721 |
+| La Nación | 19.866 |
+| Ex-Ante | 17.741 |
 | El Quinto Poder | 17.724 |
-| Ex-Ante | 17.520 |
-| Chocale | 14.137 |
+| Chocale | 14.158 |
 | Radio UdeC | 10.979 |
+| La Tercera | 10.399 |
 | Mestizos Magazine | 8638 |
-| La Tercera | 8421 |
-| CIPER Chile | 8415 |
+| CIPER Chile | 8446 |
 | Mala Espina | 7473 |
-| Fast Check CL | 5815 |
-| El Siglo | 5415 |
-| Chile País Minero | 3888 |
-| Cooperativa | 1005 |
-| El Mostrador | 101 |
-| ADN Radio | 100 |
+| Fast Check CL | 6137 |
+| El Siglo | 5429 |
+| Chile País Minero | 3908 |
+| Cooperativa | 1712 |
+| El Mostrador | 201 |
+| ADN Radio | 200 |
 | Diario Estrategia | 100 |
 | Diario Financiero | 87 |
+| Publimetro | 64 |
 | El Desconcierto | 20 |
 | Factchecking.cl | 14 |
-| Publimetro | 5 |
 
 ## Década 2020
 
-### 2026 — 131.819 artículos
+### 2026 — 147.624 artículos
 
-#### Agosto 2026 (6064)
+#### Agosto 2026 (9814)
 
 - [adnradio — Mi momento mas humilde la colombiana que busca cambiar las reglas del despecho y que quiere reencantar a los chilenos](https://www.adnradio.cl/2026/08/06/mi-momento-mas-humilde-la-colombiana-que-busca-cambiar-las-reglas-del-despecho-y-que-quiere-reencantar-a-los-chilenos/)
 - [adnradio — Universidad catolica vs cobresal donde cuando y como ver el partido en vivo en directo online y en tv](https://www.adnradio.cl/2026/08/06/universidad-catolica-vs-cobresal-donde-cuando-y-como-ver-el-partido-en-vivo-en-directo-online-y-en-tv/)
 - [adnradio — Activan codigo azul por bajas temperaturas en seis regiones de chile revisa donde y hasta cuando estara vigente](https://www.adnradio.cl/2026/08/07/activan-codigo-azul-por-bajas-temperaturas-en-seis-regiones-de-chile-revisa-donde-y-hasta-cuando-estara-vigente/)
 - [adnradio — Ahorro en chile cuanto pierdo si guardo durante un ano sin invertirlo](https://www.adnradio.cl/2026/08/07/ahorro-en-chile-cuanto-pierdo-si-guardo-1000000-durante-un-ano-sin-invertirlo/)
 - [adnradio — Al presidente de universidad catolica le consultan por el fichaje de vozinha en colo colo y asi responde probablemente](https://www.adnradio.cl/2026/08/07/al-presidente-de-universidad-catolica-le-consultan-por-el-fichaje-de-vozinha-en-colo-colo-y-asi-responde-probablemente/)
-- _… y 6059 más (ver JSONL)_
+- _… y 9809 más (ver JSONL)_
 
-#### Julio 2026 (22.740)
+#### Julio 2026 (25.548)
 
 - [biobiochile — Causa y efecto alerta economica y el critico diagnostico tras la caida del imacec](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2026/07/01/causa-y-efecto-alerta-economica-y-el-critico-diagnostico-tras-la-caida-del-imacec.shtml)
 - [biobiochile — Hipofisis y la importancia de dormir bien](https://www.biobiochile.cl/biobiotv/programas/conecta-vida/2026/07/01/hipofisis-y-la-importancia-de-dormir-bien.shtml)
 - [biobiochile — Efemerides 01 de julio de murio el presidente de argentina juan domingo peron](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/07/01/efemerides-01-de-julio-de-1974-murio-el-presidente-de-argentina-juan-domingo-peron.shtml)
 - [biobiochile — Estamos pagando un valor mayor del servicio que se recibe mulet por impuesto encubierto en peajes](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2026/07/01/estamos-pagando-un-valor-mayor-del-servicio-que-se-recibe-mulet-por-impuesto-encubierto-en-peajes.shtml)
 - [biobiochile — Imacec de mayo experta advierte recesion tecnica](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2026/07/01/imacec-de-mayo-experta-advierte-recesion-tecnica.shtml)
-- _… y 22.735 más (ver JSONL)_
+- _… y 25.543 más (ver JSONL)_
 
-#### Junio 2026 (20.567)
+#### Junio 2026 (22.874)
 
 - [biobiochile — Que incivilidades podrian dejar a alguien en el registro de vandalos propuesto por kast](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2026/06/01/que-incivilidades-podrian-dejar-a-alguien-en-el-registro-de-vandalos-propuesto-por-kast.shtml)
 - [biobiochile — Efemerides 01 de junio de murio la cantante espanola rocio jurado](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/06/01/efemerides-01-de-junio-de-2006-murio-la-cantante-espanola-rocio-jurado.shtml)
 - [biobiochile — Buenos bonitos y baratos los smartphones que quieren destronar a los grandes](https://www.biobiochile.cl/biobiotv/programas/igadget/2026/06/01/buenos-bonitos-y-baratos-los-smartphones-que-quieren-destronar-a-los-grandes.shtml)
 - [biobiochile — Ahora viene la prueba politica los desafios que esperan al gobierno tras la cuenta publica](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2026/06/01/ahora-viene-la-prueba-politica-los-desafios-que-esperan-al-gobierno-tras-la-cuenta-publica.shtml)
 - [biobiochile — Balladares rn destaca cambio de foco de la moneda en expulsiones 90 por via administrativa](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2026/06/01/balladares-rn-destaca-cambio-de-foco-de-la-moneda-en-expulsiones-90-por-via-administrativa.shtml)
-- _… y 20.562 más (ver JSONL)_
+- _… y 22.869 más (ver JSONL)_
 
-#### Mayo 2026 (16.937)
+#### Mayo 2026 (18.684)
 
 - [biobiochile — Efemerides 01 de mayo de comenzo en chicago una huelga general de trabajadores](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/05/01/efemerides-01-de-mayo-de-1886-comenzo-en-chicago-una-huelga-general-de-trabajadores.shtml)
 - [biobiochile — Como se fiscalizara proyecto busca restringir el uso de redes sociales en menores de edad](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2026/05/01/como-se-fiscalizara-proyecto-busca-restringir-el-uso-de-redes-sociales-en-menores-de-edad.shtml)
 - [biobiochile — Mantas de huaso patricio leiva sello de raza](https://www.biobiochile.cl/biobiotv/programas/sello-de-raza/2026/05/01/mantas-de-huaso-patricio-leiva-sello-de-raza.shtml)
 - [biobiochile — Poduje y las esquirlas de un ministro explosivo la polemica con quiroz abre nuevo flanco en la moneda](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/05/01/poduje-y-las-esquirlas-de-un-ministro-explosivo-la-polemica-con-quiroz-abre-nuevo-flanco-en-la-moneda.shtml)
 - [biobiochile — Aparecio el campeon norris se queda con la pole de la sprint del gp de miami y colapinto sorprende](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2026/05/01/aparecio-el-campeon-norris-se-queda-con-la-pole-de-la-sprint-del-gp-de-miami-y-colapinto-sorprende.shtml)
-- _… y 16.932 más (ver JSONL)_
+- _… y 18.679 más (ver JSONL)_
 
-#### Abril 2026 (16.299)
+#### Abril 2026 (18.080)
 
 - [biobiochile — Error de sedini abre nuevo flanco en el gobierno voceria suma nueva imprecision por apablaza](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2026/04/01/error-de-sedini-abre-nuevo-flanco-en-el-gobierno-voceria-suma-nueva-imprecision-por-apablaza.shtml)
 - [biobiochile — Efemerides 01 de abril de fue asesinado el senador jaime guzman](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/04/01/efemerides-01-de-abril-de-1991-fue-asesinado-el-senador-jaime-guzman.shtml)
 - [biobiochile — Hugo herrera el gobierno tiene que apurar cambios importantes en el diseno politico](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2026/04/01/hugo-herrera-el-gobierno-tiene-que-apurar-cambios-importantes-en-el-diseno-politico.shtml)
 - [biobiochile — Luis eduardo escobar gobierno ocupa polemica por caja fiscal como excusa para impulsar recortes](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2026/04/01/luis-eduardo-escobar-gobierno-ocupa-polemica-por-caja-fiscal-como-excusa-para-impulsar-recortes.shtml)
 - [biobiochile — Cambio de hora en chile con paula caceres](https://www.biobiochile.cl/biobiotv/programas/psicologia-abierta/2026/04/01/cambio-de-hora-en-chile-con-paula-caceres.shtml)
-- _… y 16.294 más (ver JSONL)_
+- _… y 18.075 más (ver JSONL)_
 
-#### Marzo 2026 (18.391)
+#### Marzo 2026 (19.672)
 
 - [biobiochile — Klaus fuchs espionaje nuclear 1 marzo](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/03/01/klaus-fuchs-espionaje-nuclear-1-marzo-1950.shtml)
 - [biobiochile — Motorfem nuevos hibridos y el regreso de baic](https://www.biobiochile.cl/biobiotv/programas/motorfem/2026/03/01/motorfem-nuevos-hibridos-y-el-regreso-de-baic.shtml)
 - [biobiochile — Retropop primera temporada capitulo recuento](https://www.biobiochile.cl/biobiotv/programas/retropop/2026/03/01/retropop-primera-temporada-capitulo-recuento.shtml)
 - [biobiochile — Siguiendo huellas chanaral de aceituno junto a la mar](https://www.biobiochile.cl/biobiotv/programas/siguiendo-huellas/2026/03/01/siguiendo-huellas-chanaral-de-aceituno-junto-a-la-mar.shtml)
 - [biobiochile — La brutal caida de david alonso en gp de tailandia de moto2 que lo dejo insconciente hoy pase miedo](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2026/03/01/la-brutal-caida-de-david-alonso-en-gp-de-tailandia-de-moto2-que-lo-dejo-insconciente-hoy-pase-miedo.shtml)
-- _… y 18.386 más (ver JSONL)_
+- _… y 19.667 más (ver JSONL)_
 
-#### Febrero 2026 (14.913)
+#### Febrero 2026 (15.916)
 
 - [biobiochile — Efemerides 1 de febrero de nacio el famoso jugador de futbol stanley matthews](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/02/01/efemerides-1-de-febrero-de-1915-nacio-el-famoso-jugador-de-futbol-stanley-matthews.shtml)
 - [biobiochile — Motorfem lanzamientos que marcan el futuro de la movilidad](https://www.biobiochile.cl/biobiotv/programas/motorfem/2026/02/01/motorfem-lanzamientos-que-marcan-el-futuro-de-la-movilidad.shtml)
 - [biobiochile — De intelectual de derecha a ser acusado por vif el lio familiar que enreda al abogado henry boys](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/02/01/de-intelectual-de-derecha-a-ser-acusado-por-vif-el-lio-familiar-que-enreda-al-abogado-henry-boys.shtml)
 - [biobiochile — Impactante testimonio sobre la salud de michael schumacher no sabe que es siete veces campeon](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2026/02/01/impactante-testimonio-sobre-la-salud-de-michael-schumacher-no-sabe-que-es-siete-veces-campeon.shtml)
 - [biobiochile — Verstappen valora pruebas del nuevo red bull y confia seguir mejorando empezamos con muy buen pie](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2026/02/01/verstappen-valora-pruebas-del-nuevo-red-bull-y-confia-seguir-mejorando-empezamos-con-muy-buen-pie.shtml)
-- _… y 14.908 más (ver JSONL)_
+- _… y 15.911 más (ver JSONL)_
 
-#### Enero 2026 (15.908)
+#### Enero 2026 (17.036)
 
 - [biobiochile — Efemerides 01 de enero inicio su recorrido en copiapo uno de los primeros ferrocarriles](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/01/01/efemerides-01-de-enero-1852-inicio-su-recorrido-en-copiapo-uno-de-los-primeros-ferrocarriles.shtml)
 - [biobiochile — Desierto guerrilleros y 50 prisioneros el secuestro en rally dakar en voz de un sobreviviente](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2026/01/01/desierto-guerrilleros-y-50-prisioneros-el-secuestro-en-rally-dakar-1999-en-voz-de-un-sobreviviente.shtml)
 - [biobiochile — Con chilenos protagonistas revisa el ranking de los estadios con mas aforo a nivel mundial](https://www.biobiochile.cl/noticias/deportes/futbol-internacional/notas-futbol-internacional/2026/01/01/con-chilenos-protagonistas-revisa-el-ranking-de-los-estadios-con-mas-aforo-a-nivel-mundial.shtml)
 - [biobiochile — En brasil aseguran que atletico mineiro quiere a lucas assadi sampaoli hizo contacto directo](https://www.biobiochile.cl/noticias/deportes/futbol-internacional/notas-futbol-internacional/2026/01/01/en-brasil-aseguran-que-atletico-mineiro-quiere-a-lucas-assadi-sampaoli-hizo-contacto-directo.shtml)
 - [biobiochile — Ipswich supera a oxford y sube al segundo lugar en championship marcelino nunez fue titular otra vez](https://www.biobiochile.cl/noticias/deportes/futbol-internacional/notas-futbol-internacional/2026/01/01/ipswich-supera-a-oxford-y-sube-al-segundo-lugar-en-championship-marcelino-nunez-fue-titular-otra-vez.shtml)
-- _… y 15.903 más (ver JSONL)_
+- _… y 17.031 más (ver JSONL)_
 
-### 2025 — 211.483 artículos
+### 2025 — 226.651 artículos
 
-#### Diciembre 2025 (16.845)
+#### Diciembre 2025 (18.123)
 
 - [biobiochile — Reforma previsional cuales seran sus beneficios y como impactara en los actuales y futuros jubilados](https://www.biobiochile.cl/biobiotv/especiales/2025/12/01/reforma-previsional-cuales-seran-sus-beneficios-y-como-impactara-en-los-actuales-y-futuros-jubilados.shtml)
 - [biobiochile — Llegamos al capitulo 200 los videojuegos que llegan en diciembre y un smartphone nacido para brillar](https://www.biobiochile.cl/biobiotv/programas/aqui-casuales-the-show/2025/12/01/llegamos-al-capitulo-200-los-videojuegos-que-llegan-en-diciembre-y-un-smartphone-nacido-para-brillar.shtml)
 - [biobiochile — Frontera norte coimas rutas migratorias y la crisis que nadie quiere asumir](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2025/12/01/frontera-norte-coimas-rutas-migratorias-y-la-crisis-que-nadie-quiere-asumir.shtml)
 - [biobiochile — Efemerides 01 de diciembre de rosa parks dio inicio a la lucha de los negros en estados unidos](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/12/01/efemerides-01-de-diciembre-de-1955-rosa-parks-dio-inicio-a-la-lucha-de-los-negros-en-estados-unidos.shtml)
 - [biobiochile — Ximena ossa en bhp apoyamos teatro a mil porque es el unico en el mundo](https://www.biobiochile.cl/biobiotv/programas/espectaculos/entrevistas/2025/12/01/ximena-ossa-en-bhp-apoyamos-teatro-a-mil-porque-es-el-unico-en-el-mundo.shtml)
-- _… y 16.840 más (ver JSONL)_
+- _… y 18.118 más (ver JSONL)_
 
-#### Noviembre 2025 (17.077)
+#### Noviembre 2025 (18.329)
 
 - [biobiochile — Aqui estamos la actitud ante todo](https://www.biobiochile.cl/biobiotv/programas//2025/11/01/aqui-estamos-la-actitud-ante-todo.shtml)
 - [biobiochile — Dario paya jaime guzman era una persona extraordinaria](https://www.biobiochile.cl/biobiotv/programas/chile-historia-30/2025/11/01/dario-paya-jaime-guzman-era-una-persona-extraordinaria.shtml)
 - [biobiochile — Maria gracia omegna y nicolas saavedra cuentan la verdad](https://www.biobiochile.cl/biobiotv/programas/del-fin-del-mundo/2025/11/01/maria-gracia-omegna-y-nicolas-saavedra-cuentan-la-verdad.shtml)
 - [biobiochile — Efemerides 01 de noviembre de se produjo la batalla naval de coronel](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/11/01/efemerides-01-de-noviembre-de-1914-se-produjo-la-batalla-naval-de-coronel.shtml)
 - [biobiochile — Capitulo especial en honor a carolina del real](https://www.biobiochile.cl/biobiotv/programas/penso-positivo/2025/11/01/capitulo-especial-en-honor-a-carolina-del-real.shtml)
-- _… y 17.072 más (ver JSONL)_
+- _… y 18.324 más (ver JSONL)_
 
-#### Octubre 2025 (17.974)
+#### Octubre 2025 (19.295)
 
 - [biobiochile — Causa y efecto la cadena nacional por el presupuesto marcada por las alusiones a kast](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2025/10/01/causa-y-efecto-la-cadena-nacional-por-el-presupuesto-marcada-por-las-alusiones-a-kast.shtml)
 - [biobiochile — Efemerides 01 de octubre se inicio el desastre de rancagua](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/10/01/efemerides-01-de-octubre-1814-se-inicio-el-desastre-de-rancagua.shtml)
 - [biobiochile — Elizalde descarta que negativa a presupuesto abierto para proximo gobierno sea asumir derrota de jara](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/10/01/elizalde-descarta-que-negativa-a-presupuesto-abierto-para-proximo-gobierno-sea-asumir-derrota-de-jara.shtml)
 - [biobiochile — Superintendencia de casinos explica golpe de suprema a prestadoras de internet y casas de apuestas](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/10/01/superintendencia-de-casinos-explica-golpe-de-suprema-a-prestadoras-de-internet-y-casas-de-apuestas.shtml)
 - [biobiochile — Fraude al fisco acusan a alcalde de san joaquin de usar abogados municipales para defensa familiar](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/articulos/2025/10/01/fraude-al-fisco-acusan-a-alcalde-de-san-joaquin-de-usar-abogados-municipales-para-defensa-familiar.shtml)
-- _… y 17.969 más (ver JSONL)_
+- _… y 19.290 más (ver JSONL)_
 
-#### Septiembre 2025 (16.540)
+#### Septiembre 2025 (17.233)
 
 - [biobiochile — Gears reloaded en accion primeras impresiones de skate y todo sobre drag x drive](https://www.biobiochile.cl/biobiotv/programas/aqui-casuales-the-show/2025/09/01/gears-reloaded-en-accion-primeras-impresiones-de-skate-y-todo-sobre-drag-x-drive.shtml)
 - [biobiochile — Causa y efecto baby bandito y como la carcel o muerte gana espacio en nuestra sociedad](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2025/09/01/causa-y-efecto-baby-bandito-y-como-la-carcel-o-muerte-gana-espacio-en-nuestra-sociedad.shtml)
 - [biobiochile — Efemerides 01 de septiembre de inicia la sublevacion de la escuadra de chile](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/09/01/efemerides-01-de-septiembre-de-1931-inicia-la-sublevacion-de-la-escuadra-de-chile.shtml)
 - [biobiochile — Dichos de carmona sombra de quiroz y mas los comandos roban protagonismo a aspirantes a la moneda](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/09/01/dichos-de-carmona-sombra-de-quiroz-y-mas-los-comandos-roban-protagonismo-a-aspirantes-a-la-moneda.shtml)
 - [biobiochile — Francisca imboden y su salida de mega me daban los mismos personajes no estaba tan feliz](https://www.biobiochile.cl/biobiotv/programas/mas-de-ti-podcast/2025/09/01/francisca-imboden-y-su-salida-de-mega-me-daban-los-mismos-personajes-no-estaba-tan-feliz.shtml)
-- _… y 16.535 más (ver JSONL)_
+- _… y 17.228 más (ver JSONL)_
 
-#### Agosto 2025 (27.800)
+#### Agosto 2025 (28.560)
 
 - [biobiochile — De frente con tomas mosciatti mario carrera](https://www.biobiochile.cl/biobiotv/programas//2025/08/01/de-frente-con-tomas-mosciatti-mario-carrera.shtml)
 - [biobiochile — Pipiripup pipiripao recorremos el teatro las tablas con roberto nicolini](https://www.biobiochile.cl/biobiotv/programas//2025/08/01/pipiripup-pipiripao-recorremos-el-teatro-las-tablas-con-roberto-nicolini.shtml)
 - [biobiochile — Roroplast la fabrica donde los recuerdos toman forma](https://www.biobiochile.cl/biobiotv/programas//2025/08/01/roroplast-la-fabrica-donde-los-recuerdos-toman-forma.shtml)
 - [biobiochile — Causa y efecto maximo pacheco defiende estandares tras derrumbe en el teniente fue suficiente](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2025/08/01/causa-y-efecto-maximo-pacheco-defiende-estandares-tras-derrumbe-en-el-teniente-fue-suficiente.shtml)
 - [biobiochile — Efemerides 01 de agosto de nace el cientifico sovietico ilia ivanovich ivanov](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/08/01/efemerides-01-de-agosto-de-1870-nace-el-cientifico-sovietico-ilia-ivanovich-ivanov.shtml)
-- _… y 27.795 más (ver JSONL)_
+- _… y 28.555 más (ver JSONL)_
 
-#### Julio 2025 (15.650)
+#### Julio 2025 (16.451)
 
 - [biobiochile — Causa y efecto gendarmeria a los funcionarios hay que cuidarlos mucho y exigirles mucho](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2025/07/01/causa-y-efecto-gendarmeria-a-los-funcionarios-hay-que-cuidarlos-mucho-y-exigirles-mucho.shtml)
 - [biobiochile — Efemerides 01 de julio de muere el actor marlon brando](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/07/01/efemerides-01-de-julio-de-2004-muere-el-actor-marlon-brando.shtml)
 - [biobiochile — Adios al pase diario unico mop anuncia que el tag sera gratuito con nuevas concesiones](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/07/01/adios-al-pase-diario-unico-mop-anuncia-que-el-tag-sera-gratuito-con-nuevas-concesiones.shtml)
 - [biobiochile — Como no son capaces de observar esto exsuseso denuncia mafias detras de licencias falsas](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/07/01/como-no-son-capaces-de-observar-esto-exsuseso-denuncia-mafias-detras-de-licencias-falsas.shtml)
 - [biobiochile — Pese a que la vasectomia en chile aumento en un 887 experto pide no relajar la proteccion personal](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/07/01/pese-a-que-la-vasectomia-en-chile-aumento-en-un-887-experto-pide-no-relajar-la-proteccion-personal.shtml)
-- _… y 15.645 más (ver JSONL)_
+- _… y 16.446 más (ver JSONL)_
 
-#### Junio 2025 (15.270)
+#### Junio 2025 (16.629)
 
 - [biobiochile — Asado con alto voltaje jorge peineta garces revela intento de abuso y el veto de maradona](https://www.biobiochile.cl/biobiotv/programas/chiche-cuadra-y-su-parrilla/2025/06/01/asado-con-alto-voltaje-jorge-peineta-garces-revela-intento-de-abuso-y-el-veto-de-maradona.shtml)
 - [biobiochile — Efemerides el 01 de junio de muere el cantante espanol manolo otero](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/06/01/efemerides-el-01-de-junio-de-2011-muere-el-cantante-espanol-manolo-otero.shtml)
 - [biobiochile — Motorfem un vistazo al mundo emprendedor](https://www.biobiochile.cl/biobiotv/programas/motorfem/2025/06/01/motorfem-un-vistazo-al-mundo-emprendedor.shtml)
 - [biobiochile — Caotico final en espana verstappen pierde tres puntos de superlicencia y queda a uno de suspension](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2025/06/01/caotico-final-en-espana-verstappen-pierde-tres-puntos-de-superlicencia-y-queda-a-uno-de-suspension.shtml)
 - [biobiochile — La desastrosa estrategia de neumaticos de red bull que hundio a verstappen por que mierda estos](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2025/06/01/la-desastrosa-estrategia-de-neumaticos-de-red-bull-que-hundio-a-verstappen-por-que-mierda-estos.shtml)
-- _… y 15.265 más (ver JSONL)_
+- _… y 16.624 más (ver JSONL)_
 
-#### Mayo 2025 (14.992)
+#### Mayo 2025 (16.617)
 
 - [biobiochile — Efemerides el 01 de mayo de fue la inauguracion del edificio empire state](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/05/01/efemerides-el-01-de-mayo-de-1931-fue-la-inauguracion-del-edificio-empire-state.shtml)
 - [biobiochile — El renacer juvenil de la udi la apuesta del gremialismo para enfrentar las parlamentarias](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/articulos/2025/05/01/el-renacer-juvenil-de-la-udi-la-apuesta-del-gremialismo-para-enfrentar-las-parlamentarias.shtml)
 - [biobiochile — Fernando alonso preve complejo paso de aston martin por miami no ha sido amigable con nosotros](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2025/05/01/fernando-alonso-preve-complejo-paso-de-aston-martin-por-miami-no-ha-sido-amigable-con-nosotros.shtml)
 - [biobiochile — Hasta con fecha de presentacion aseguran que checo perez ya firmo en equipo para volver a f1 en](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2025/05/01/hasta-con-fecha-de-presentacion-aseguran-que-checo-perez-ya-firmo-en-equipo-para-volver-a-f1-en-2026.shtml)
 - [biobiochile — No quiero ser solo de futbol el primer rallymobil de polaco goldberg y su impulso como rostro motor](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2025/05/01/no-quiero-ser-solo-de-futbol-el-primer-rallymobil-de-polaco-goldberg-y-su-impulso-como-rostro-motor.shtml)
-- _… y 14.987 más (ver JSONL)_
+- _… y 16.612 más (ver JSONL)_
 
-#### Abril 2025 (27.605)
+#### Abril 2025 (29.325)
 
 - [biobiochile — Causa y efecto tvn no se sostiene y sus perdidas millonarias abren el debate sobre su financiamiento](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2025/04/01/causa-y-efecto-tvn-no-se-sostiene-y-sus-perdidas-millonarias-abren-el-debate-sobre-su-financiamiento.shtml)
 - [biobiochile — Efemerides el 01 de abril de se realizo el motin de figueroa](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/04/01/efemerides-el-01-de-abril-de-1811-se-realizo-el-motin-de-figueroa.shtml)
 - [biobiochile — Auditora acusa que colegio de quilicura esta sin clases por falta de profesores no habrian respuestas](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/04/01/auditora-acusa-que-colegio-de-quilicura-esta-sin-clases-por-falta-de-profesores-no-habrian-respuestas.shtml)
 - [biobiochile — Dirigente asegura que barco que habria colisionado a lancha de pescadores desaparecidos no se detuvo](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/04/01/dirigente-asegura-que-barco-que-habria-colisionado-a-lancha-de-pescadores-desaparecidos-no-se-detuvo.shtml)
 - [biobiochile — Exdirector del sernac explica que hacer ante spam en whatsapp ya que nueva ley no regula mensajes](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2025/04/01/exdirector-del-sernac-explica-que-hacer-ante-spam-en-whatsapp-ya-que-nueva-ley-no-regula-mensajes.shtml)
-- _… y 27.600 más (ver JSONL)_
+- _… y 29.320 más (ver JSONL)_
 
-#### Marzo 2025 (14.055)
+#### Marzo 2025 (15.814)
 
 - [biobiochile — Nos quedamos a oscuras](https://www.biobiochile.cl/biobiotv/opinion/comentarios/2025/03/01/nos-quedamos-a-oscuras.shtml)
 - [biobiochile — Efemerides el 01 de marzo de muere el cantante italiano lucio dalla](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/03/01/efemerides-el-01-de-marzo-de-2012-muere-el-cantante-italiano-lucio-dalla.shtml)
 - [biobiochile — Programa entrega equipamiento profesional a cooperativas para potenciar a recicladores de todo chile](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2025/03/01/programa-entrega-equipamiento-profesional-a-cooperativas-para-potenciar-a-recicladores-de-todo-chile.shtml)
 - [biobiochile — Si no fuese por mis vecinos mi mujer habria muerto ayer electrodependientes y falta de ayuda](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2025/03/01/si-no-fuese-por-mis-vecinos-mi-mujer-habria-muerto-ayer-electrodependientes-y-falta-de-ayuda.shtml)
 - [biobiochile — Recurso judicial frenaria demanda de massa contra la fia brasileno reclama ser campeon de f1 en](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2025/03/01/recurso-judicial-frenaria-demanda-de-massa-contra-la-fia-brasileno-reclama-ser-campeon-de-f1-en-2008.shtml)
-- _… y 14.050 más (ver JSONL)_
+- _… y 15.809 más (ver JSONL)_
 
-#### Febrero 2025 (13.286)
+#### Febrero 2025 (14.840)
 
 - [biobiochile — Comentario de tomas mosciatti boric gana la derecha se debilita y jackson no sabe sumar](https://www.biobiochile.cl/biobiotv/opinion/comentarios/2025/02/01/comentario-de-tomas-mosciatti-boric-gana-la-derecha-se-debilita-y-jackson-no-sabe-sumar.shtml)
 - [biobiochile — Efemerides el 01 de febrero de asesinaron al prisionero norvietnamita frente camaras de nbc](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/02/01/efemerides-el-01-de-febrero-de-1968-asesinaron-al-prisionero-norvietnamita-frente-camaras-de-nbc.shtml)
 - [biobiochile — Motorfem conocimos la ram en costa rica y cocinamos junto a toyota](https://www.biobiochile.cl/biobiotv/programas/motorfem/2025/02/01/motorfem-conocimos-la-ram-1500-en-costa-rica-y-cocinamos-junto-a-toyota.shtml)
 - [biobiochile — Inaceptable fa macul critica contratacion de funcionario ligado a escandalo del vino golpista](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2025/02/01/inaceptable-fa-macul-critica-contratacion-de-funcionario-ligado-a-escandalo-del-vino-golpista.shtml)
 - [biobiochile — Biblioteca en espana rendira homenaje al escritor chileno roberto bolano y le dara su nombre](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2025/02/01/biblioteca-en-espana-rendira-homenaje-al-escritor-chileno-roberto-bolano-y-le-dara-su-nombre.shtml)
-- _… y 13.281 más (ver JSONL)_
+- _… y 14.835 más (ver JSONL)_
 
-#### Enero 2025 (14.389)
+#### Enero 2025 (15.435)
 
 - [biobiochile — Detras de las mascaras lo comunitario es esencial dice yani nunez directora del teatro debate](https://www.biobiochile.cl/biobiotv/cultura/entrevistas/2025/01/01/detras-de-las-mascaras-lo-comunitario-es-esencial-dice-yani-nunez-directora-del-teatro-debate.shtml)
 - [biobiochile — Efemerides el 01 de enero de se inicio la tercera fundacion de villarrica](https://www.biobiochile.cl/biobiotv/programas/efemerides/2025/01/01/efemerides-el-01-de-enero-de-1883-se-inicio-la-tercera-fundacion-de-villarrica.shtml)
 - [biobiochile — Tintin y popeye entre las obras que pierden sus derechos de autor en estados unidos](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2025/01/01/tintin-y-popeye-entre-las-obras-que-pierden-sus-derechos-de-autor-en-estados-unidos.shtml)
 - [biobiochile — El ano en que regreso luis jara podria haberme estacionado en la comodidad de la tv pero no](https://www.biobiochile.cl/noticias/artes-y-cultura/musica/2025/01/01/el-ano-en-que-regreso-luis-jara-podria-haberme-estacionado-en-la-comodidad-de-la-tv-pero-no.shtml)
 - [biobiochile — Muere leo dan cantante y compositor argentino](https://www.biobiochile.cl/noticias/artes-y-cultura/musica/2025/01/01/muere-leo-dan-cantante-y-compositor-argentino.shtml)
-- _… y 14.384 más (ver JSONL)_
+- _… y 15.430 más (ver JSONL)_
 
-### 2024 — 203.044 artículos
+### 2024 — 203.053 artículos
 
 #### Diciembre 2024 (15.639)
 
@@ -257,14 +257,14 @@
 - [biobiochile — Para celebrar el dia de la musica chilena scd se prepara para otorgar 18 shows gratuitos en sus salas](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/10/01/para-celebrar-el-dia-de-la-musica-chilena-scd-se-prepara-para-otorgar-18-shows-gratuitos-en-sus-salas.shtml)
 - _… y 16.526 más (ver JSONL)_
 
-#### Septiembre 2024 (14.470)
+#### Septiembre 2024 (14.471)
 
 - [biobiochile — Sancion historica en la formula 1 fia suspende a kevin magnussen y lo deja fuera de gp de azerbaiyan](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2024/09/01/sancion-historica-en-la-formula-1-fia-suspende-a-kevin-magnussen-y-lo-deja-fuera-de-gp-de-azerbaiyan.shtml)
 - [biobiochile — Soy argentino solo colapinto freno a periodista que lo llamo italiano en su debut en formula 1](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2024/09/01/soy-argentino-solo-colapinto-freno-a-periodista-que-lo-llamo-italiano-en-su-debut-en-formula-1.shtml)
 - [biobiochile — Chileno vicente almonacid compitio en paralimpicos paris con diagnostico de cancer](https://www.biobiochile.cl/especial/juegos-paralimpicos/noticias/2024/09/01/chileno-vicente-almonacid-compitio-en-paralimpicos-paris-2024-con-diagnostico-de-cancer.shtml)
 - [biobiochile — Escandalo en juegos paralimpicos quitan bronce a remero italiano tras hallazgo de celular en prueba](https://www.biobiochile.cl/especial/juegos-paralimpicos/noticias/2024/09/01/escandalo-en-juegos-paralimpicos-quitan-bronce-a-remero-italiano-tras-hallazgo-de-celular-en-prueba.shtml)
 - [biobiochile — Paralimpicos paris que chilenos compiten este 2 de septiembre](https://www.biobiochile.cl/especial/juegos-paralimpicos/noticias/2024/09/01/paralimpicos-paris-2024-que-chilenos-compiten-este-2-de-septiembre.shtml)
-- _… y 14.465 más (ver JSONL)_
+- _… y 14.466 más (ver JSONL)_
 
 #### Agosto 2024 (16.991)
 
@@ -275,32 +275,32 @@
 - [biobiochile — Telescopio mas grande del mundo toma forma en chile tendra casi 40 metros de diametro](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/08/01/telescopio-mas-grande-del-mundo-toma-forma-en-chile-tendra-casi-40-metros-de-diametro.shtml)
 - _… y 16.986 más (ver JSONL)_
 
-#### Julio 2024 (16.331)
+#### Julio 2024 (16.334)
 
 - [biobiochile — Comentario literario con matias cerda cabo de hornos y otros cuentos](https://www.biobiochile.cl/biobiotv/opinion/columnas/2024/07/01/comentario-literario-con-matias-cerda-cabo-de-hornos-y-otros-cuentos.shtml)
 - [biobiochile — Los mejores videojuegos que se lanzan este mes de julio](https://www.biobiochile.cl/biobiotv/programas/aqui-casuales-the-show/2024/07/01/los-mejores-videojuegos-que-se-lanzan-este-mes-de-julio.shtml)
 - [biobiochile — Esta influyendo en el animo analista aborda impacto politico del alza en cuentas de la luz](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/07/01/esta-influyendo-en-el-animo-analista-aborda-impacto-politico-del-alza-en-cuentas-de-la-luz.shtml)
 - [biobiochile — No nos sorprende revelan que 82 de comunas de gran santiago poseen plan regulador desactualizado](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/07/01/no-nos-sorprende-revelan-que-82-de-comunas-de-gran-santiago-poseen-plan-regulador-desactualizado.shtml)
 - [biobiochile — Siempre me gusto star wars artista chileno usa sonidos del espacio para hacer su musica](https://www.biobiochile.cl/biobiotv/programas/expreso-pm/2024/07/01/siempre-me-gusto-star-wars-artista-chileno-usa-sonidos-del-espacio-para-hacer-su-musica.shtml)
-- _… y 16.326 más (ver JSONL)_
+- _… y 16.329 más (ver JSONL)_
 
-#### Junio 2024 (15.581)
+#### Junio 2024 (15.582)
 
 - [biobiochile — Decalogo de un gobierno feminista](https://www.biobiochile.cl/biobiotv/opinion/columnas/2024/06/01/decalogo-de-un-gobierno-feminista.shtml)
 - [biobiochile — Diego messen y las empresas la economia y el poco incentivo a invertir en chile provoca que cierren](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2024/06/01/diego-messen-y-las-empresas-la-economia-y-el-poco-incentivo-a-invertir-en-chile-provoca-que-cierren.shtml)
 - [biobiochile — Jose goni y su nuevo libro sobre gabriela mistral conocerla es una necesidad historica](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2024/06/01/jose-goni-y-su-nuevo-libro-sobre-gabriela-mistral-conocerla-es-una-necesidad-historica.shtml)
 - [biobiochile — Inauguran espacio de educacion ambiental en escuela unicornio de florida](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2024/06/01/inauguran-espacio-de-educacion-ambiental-en-escuela-unicornio-de-florida.shtml)
 - [biobiochile — El veneno de butantan las evidencias fisicas que reabren dudas en investigadora de muerte de neruda](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2024/06/01/el-veneno-de-butantan-las-evidencias-fisicas-que-reabren-dudas-en-investigadora-de-muerte-de-neruda.shtml)
-- _… y 15.576 más (ver JSONL)_
+- _… y 15.577 más (ver JSONL)_
 
-#### Mayo 2024 (16.170)
+#### Mayo 2024 (16.172)
 
 - [biobiochile — Pablo urquizar y triple homicidio de carabineros si hubiera ocurrido en santiago seria otro chile](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2024/05/01/pablo-urquizar-y-triple-homicidio-de-carabineros-si-hubiera-ocurrido-en-santiago-seria-otro-chile.shtml)
 - [biobiochile — Alcalde vs diputado disputa 9 mil millones vallenar](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/articulos/2024/05/01/alcalde-vs-diputado-disputa-9-mil-millones-vallenar.shtml)
 - [biobiochile — Embajador de francia boric y macron son jovenes y eso ayuda en la buena onda entre dos gobiernos](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2024/05/01/embajador-de-francia-boric-y-macron-son-jovenes-y-eso-ayuda-en-la-buena-onda-entre-dos-gobiernos.shtml)
 - [biobiochile — Adios al genio de red bull adrian newey oficializa su renuncia a la escuderia tras 19 anos](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2024/05/01/adios-al-genio-de-red-bull-adrian-newey-oficializa-su-renuncia-a-la-escuderia-tras-19-anos.shtml)
 - [biobiochile — Besos xuxa a ayrton senna que sigue impactando a brasil](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2024/05/01/besos-xuxa-a-ayrton-senna-que-sigue-impactando-a-brasil.shtml)
-- _… y 16.165 más (ver JSONL)_
+- _… y 16.167 más (ver JSONL)_
 
 #### Abril 2024 (17.051)
 
@@ -311,23 +311,23 @@
 - [biobiochile — Dra carolina herrera por vuelta de la mascarilla puede haber mas de una infeccion en un paciente](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/04/01/dra-carolina-herrera-por-vuelta-de-la-mascarilla-puede-haber-mas-de-una-infeccion-en-un-paciente.shtml)
 - _… y 17.046 más (ver JSONL)_
 
-#### Marzo 2024 (19.305)
+#### Marzo 2024 (19.306)
 
 - [biobiochile — Comentario literario con matias cerda dorayaki de durian sukegawa](https://www.biobiochile.cl/biobiotv/opinion/columnas/2024/03/01/comentario-literario-con-matias-cerda-dorayaki-de-durian-sukegawa.shtml)
 - [biobiochile — Presidente la formalizacion del general director no es suficiente](https://www.biobiochile.cl/biobiotv/opinion/columnas/2024/03/01/presidente-la-formalizacion-del-general-director-no-es-suficiente.shtml)
 - [biobiochile — Denuncian robo de muebles avaluados en 70 millones teniamos guardias no sabemos que paso](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/03/01/denuncian-robo-de-muebles-avaluados-en-70-millones-teniamos-guardias-no-sabemos-que-paso.shtml)
 - [biobiochile — Experto explica escenario tras inesperada alza en actividad economica sigue siendo preocupante](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/03/01/experto-explica-escenario-tras-inesperada-alza-en-actividad-economica-sigue-siendo-preocupante.shtml)
 - [biobiochile — Siguen con los banos insalubres detallan condiciones de algunos recintos educacionales en atacama](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/03/01/siguen-con-los-banos-insalubres-detallan-condiciones-de-algunos-recintos-educacionales-en-atacama.shtml)
-- _… y 19.300 más (ver JSONL)_
+- _… y 19.301 más (ver JSONL)_
 
-#### Febrero 2024 (19.133)
+#### Febrero 2024 (19.134)
 
 - [biobiochile — Cambio de siglo del xix al xx](https://www.biobiochile.cl/biobiotv/opinion/columnas/2024/02/01/cambio-de-siglo-del-xix-al-xx.shtml)
 - [biobiochile — Comentario literario con matias cerda el ruido del tiempo](https://www.biobiochile.cl/biobiotv/opinion/columnas/2024/02/01/comentario-literario-con-matias-cerda-el-ruido-del-tiempo.shtml)
 - [biobiochile — Efemerides el 1 de febrero de ocurre el accidente del transbordador espacial columbia](https://www.biobiochile.cl/biobiotv/programas/efemerides/2024/02/01/efemerides-el-1-de-febrero-de-2003-ocurre-el-accidente-del-transbordador-espacial-columbia.shtml)
 - [biobiochile — Luis jara el festival de vina del mar tiene la obligacion de colocar un 30 de artistas chilenos](https://www.biobiochile.cl/biobiotv/programas/espectaculos/entrevistas/2024/02/01/luis-jara-el-festival-de-vina-del-mar-tiene-la-obligacion-de-colocar-un-30-de-artistas-chilenos.shtml)
 - [biobiochile — Comulga con lo que estamos viviendo economista por caida de 1 del imacec](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2024/02/01/comulga-con-lo-que-estamos-viviendo-economista-por-caida-de-1-del-imacec.shtml)
-- _… y 19.128 más (ver JSONL)_
+- _… y 19.129 más (ver JSONL)_
 
 #### Enero 2024 (19.987)
 
@@ -338,7 +338,7 @@
 - [biobiochile — El tiempo en chetumal cancun y el estado de quintana roo hoy 1 de enero de](https://www.biobiochile.cl/informacion/el-tiempo-internacional/2024/01/01/el-tiempo-en-chetumal-cancun-y-el-estado-de-quintana-roo-hoy-1-de-enero-de-2024.shtml)
 - _… y 19.982 más (ver JSONL)_
 
-### 2023 — 207.214 artículos
+### 2023 — 207.228 artículos
 
 #### Diciembre 2023 (18.437)
 
@@ -349,23 +349,23 @@
 - [biobiochile — Alcalde de la reina por estado de emergencia comunal los vecinos organizados pueden hacer la pega](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2023/12/01/alcalde-de-la-reina-por-estado-de-emergencia-comunal-los-vecinos-organizados-pueden-hacer-la-pega.shtml)
 - _… y 18.432 más (ver JSONL)_
 
-#### Noviembre 2023 (19.037)
+#### Noviembre 2023 (19.038)
 
 - [biobiochile — Pataletas un manual para entender las emociones de nuestros ninos](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2023/11/01/pataletas-un-manual-para-entender-las-emociones-de-nuestros-ninos.shtml)
 - [biobiochile — Anjuff golpea la mesa tras escandalo de la roja femenina en juegos panamericanos es inaceptable](https://www.biobiochile.cl/especial/panamericanos-santiago-2023/noticias/2023/11/01/anjuff-golpea-la-mesa-tras-escandalo-de-la-roja-femenina-en-juegos-panamericanos-es-inaceptable.shtml)
 - [biobiochile — Capitan argentino de balonmano confia en el batacazo de chile pueden sorprender a brasil](https://www.biobiochile.cl/especial/panamericanos-santiago-2023/noticias/2023/11/01/capitan-argentino-de-balonmano-confia-en-el-batacazo-de-chile-pueden-sorprender-a-brasil.shtml)
 - [biobiochile — Chile desaprovecho buena ventaja y acabo perdiendo con puerto rico en basquetbol de santiago](https://www.biobiochile.cl/especial/panamericanos-santiago-2023/noticias/2023/11/01/chile-desaprovecho-buena-ventaja-y-acabo-perdiendo-con-puerto-rico-en-basquetbol-de-santiago-2023.shtml)
 - [biobiochile — Comite panamericano da portazo a la roja por tiane endler](https://www.biobiochile.cl/especial/panamericanos-santiago-2023/noticias/2023/11/01/comite-panamericano-da-portazo-a-la-roja-por-tiane-endler.shtml)
-- _… y 19.032 más (ver JSONL)_
+- _… y 19.033 más (ver JSONL)_
 
-#### Octubre 2023 (18.804)
+#### Octubre 2023 (18.809)
 
 - [biobiochile — Madeleine burns no todos los migrantes puede ser acogidos por peru y chile](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2023/10/01/madeleine-burns-no-todos-los-migrantes-puede-ser-acogidos-por-peru-y-chile.shtml)
 - [biobiochile — Arranco toda la suspension revelan motivo del desperfecto que saco de competencia a kajetanowicz](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/10/01/arranco-toda-la-suspension-revelan-motivo-del-desperfecto-que-saco-de-competencia-a-kajetanowicz.shtml)
 - [biobiochile — Celebran en chile solberg y edmonson dominaron en el bio bio y ganaron la wrc2](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/10/01/celebran-en-chile-solberg-y-edmonson-dominaron-en-el-bio-bio-y-ganaron-la-wrc2.shtml)
 - [biobiochile — Danamos el frontal el insolito incidente de munster con vehiculo de calle en el wrc en chile](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/10/01/danamos-el-frontal-el-insolito-incidente-de-munster-con-vehiculo-de-calle-en-el-wrc-en-chile.shtml)
 - [biobiochile — En tres ruedas asi llego el binomio polaco kajetanowicz szcepaniak a la meta de la ss14 en el wrc](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/10/01/en-tres-ruedas-asi-llego-el-binomio-polaco-kajetanowicz-szcepaniak-a-la-meta-de-la-ss14-en-el-wrc.shtml)
-- _… y 18.799 más (ver JSONL)_
+- _… y 18.804 más (ver JSONL)_
 
 #### Septiembre 2023 (16.421)
 
@@ -376,32 +376,32 @@
 - [biobiochile — A pocos dias de la conmemoracion por los 50 anos las diferencias entre el gobierno y la oposicion](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2023/09/01/a-pocos-dias-de-la-conmemoracion-por-los-50-anos-las-diferencias-entre-el-gobierno-y-la-oposicion.shtml)
 - _… y 16.416 más (ver JSONL)_
 
-#### Agosto 2023 (17.667)
+#### Agosto 2023 (17.668)
 
 - [biobiochile — Vane miller y amaya forch develan entranables entretelones de la serie cecilia la incomparable](https://www.biobiochile.cl/biobiotv/cultura/entrevistas/2023/08/01/vane-miller-y-amaya-forch-develan-entranables-entretelones-de-la-serie-cecilia-la-incomparable.shtml)
 - [biobiochile — Crece la preocupacion de gustavo quinteros ante la posible salida de damian pizarro a belgica](https://www.biobiochile.cl/biobiotv/deporte/2023/08/01/crece-la-preocupacion-de-gustavo-quinteros-ante-la-posible-salida-de-damian-pizarro-a-belgica.shtml)
 - [biobiochile — Vive idi de corfo encuentro debate los desafios del programa de desarrollo productivo sostenible](https://www.biobiochile.cl/biobiotv/especiales/2023/08/01/vive-idi-de-corfo-encuentro-debate-los-desafios-del-programa-de-desarrollo-productivo-sostenible.shtml)
 - [biobiochile — Efemerides el 1 de agosto del 10 a c nacio el emperador romano tibero claudio](https://www.biobiochile.cl/biobiotv/programas/efemerides/2023/08/01/efemerides-el-1-de-agosto-del-10-a-c-nacio-el-emperador-romano-tibero-claudio.shtml)
 - [biobiochile — Alex chow activista el mundo esta en un proceso de desapego de los sistemas democraticos](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2023/08/01/alex-chow-activista-el-mundo-esta-en-un-proceso-de-desapego-de-los-sistemas-democraticos.shtml)
-- _… y 17.662 más (ver JSONL)_
+- _… y 17.663 más (ver JSONL)_
 
-#### Julio 2023 (16.860)
+#### Julio 2023 (16.862)
 
 - [biobiochile — La politica como un mecanismo para robar](https://www.biobiochile.cl/biobiotv/opinion/comentarios/2023/07/01/la-politica-como-un-mecanismo-para-robar.shtml)
 - [biobiochile — Renato garin compara caso caval y democracia viva esto tiene ribetes mas ordinarios es muy picante](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2023/07/01/renato-garin-compara-caso-caval-y-democracia-viva-esto-tiene-ribetes-mas-ordinarios-es-muy-picante.shtml)
 - [biobiochile — Formula 1 charles leclerc sancionado qualy sprint gp austria](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/07/01/formula-1-charles-leclerc-sancionado-qualy-sprint-gp-austria.shtml)
 - [biobiochile — Incidente max verstappen checo perez red bull gp austria](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/07/01/incidente-max-verstappen-checo-perez-red-bull-gp-austria.shtml)
 - [biobiochile — Max verstappen gp de austria formula 1 carrera sprint](https://www.biobiochile.cl/especial/bio-bio-tuercas/noticias/2023/07/01/max-verstappen-gp-de-austria-formula-1-carrera-sprint.shtml)
-- _… y 16.855 más (ver JSONL)_
+- _… y 16.857 más (ver JSONL)_
 
-#### Junio 2023 (16.370)
+#### Junio 2023 (16.373)
 
 - [biobiochile — Efemerides el 1 de junio de el hacker nevil maskelyne interrumpe una trasmision de telegrafo](https://www.biobiochile.cl/biobiotv/programas/efemerides/2023/06/01/efemerides-el-1-de-junio-de-1903-el-hacker-nevil-maskelyne-interrumpe-una-trasmision-de-telegrafo.shtml)
 - [biobiochile — Gloria simonetti por pedro messone fue importante en los inicios de la cancion chilena](https://www.biobiochile.cl/biobiotv/programas/espectaculos/comentarios/2023/06/01/gloria-simonetti-por-pedro-messone-fue-importante-en-los-inicios-de-la-cancion-chilena.shtml)
 - [biobiochile — Plumas y nominacion a mejor videoclip en los pulsar asumimos que era un riesgo cambiar de proyecto](https://www.biobiochile.cl/biobiotv/programas/premios-pulsar/2023/06/01/plumas-y-nominacion-a-mejor-videoclip-en-los-pulsar-asumimos-que-era-un-riesgo-cambiar-de-proyecto.shtml)
 - [biobiochile — Causa y efecto la extensa cuenta publica y sus alcances](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2023/06/01/causa-y-efecto-la-extensa-cuenta-publica-y-sus-alcances.shtml)
 - [biobiochile — Radiograma matinal carabineros ofrecian proteccion a cambio de altas sumas de dinero](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2023/06/01/radiograma-matinal-carabineros-ofrecian-proteccion-a-cambio-de-altas-sumas-de-dinero.shtml)
-- _… y 16.365 más (ver JSONL)_
+- _… y 16.368 más (ver JSONL)_
 
 #### Mayo 2023 (17.757)
 
@@ -412,23 +412,23 @@
 - [biobiochile — De la prolijidad de deep purple al magistral show de kiss asi estuvo el masters of rock en santiago](https://www.biobiochile.cl/noticias/artes-y-cultura/musica/2023/05/01/de-la-prolijidad-de-deep-purple-al-magistral-show-de-kiss-asi-estuvo-el-masters-of-rock-en-santiago.shtml)
 - _… y 17.752 más (ver JSONL)_
 
-#### Abril 2023 (16.717)
+#### Abril 2023 (16.718)
 
 - [biobiochile — Quien ganara las elecciones](https://www.biobiochile.cl/biobiotv/opinion/comentarios/2023/04/01/quien-ganara-las-elecciones.shtml)
 - [biobiochile — Johanna kotkajarvi embajadora de finlandia pensaba que chile era mas latino](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2023/04/01/johanna-kotkajarvi-embajadora-de-finlandia-pensaba-que-chile-era-mas-latino.shtml)
 - [biobiochile — Me ha dicho cosas la arremetida para anular licitacion de casinos en medio de trama por colusion](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/reportajes/2023/04/01/me-ha-dicho-cosas-la-arremetida-para-anular-licitacion-de-casinos-en-medio-de-trama-por-colusion.shtml)
 - [biobiochile — Leche con sorpresa pdi desbarata banda dedicada a enviar cocaina de chile a bruselas](https://www.biobiochile.cl/especial/el-narco-en-chile/noticias/2023/04/01/leche-con-sorpresa-pdi-desbarata-banda-dedicada-a-enviar-cocaina-de-chile-a-bruselas.shtml)
 - [biobiochile — Loa ultima semana de marzo termina con 108 kilos de droga incautados y 15 detenidos](https://www.biobiochile.cl/especial/el-narco-en-chile/noticias/2023/04/01/loa-ultima-semana-de-marzo-termina-con-108-kilos-de-droga-incautados-y-15-detenidos.shtml)
-- _… y 16.712 más (ver JSONL)_
+- _… y 16.713 más (ver JSONL)_
 
-#### Marzo 2023 (17.084)
+#### Marzo 2023 (17.085)
 
 - [biobiochile — Comentario literario con matias cerda vaso de leche de manuel rojas](https://www.biobiochile.cl/biobiotv/opinion/columnas/2023/03/01/comentario-literario-con-matias-cerda-vaso-de-leche-de-manuel-rojas.shtml)
 - [biobiochile — El favorito de las viejas jorge marchant habla de su exitosa novelita](https://www.biobiochile.cl/biobiotv/programas/del-fin-del-mundo/2023/03/01/el-favorito-de-las-viejas-jorge-marchant-habla-de-su-exitosa-novelita.shtml)
 - [biobiochile — Efemerides el 1 de marzo de el presidente de bolivia hilarion daza decreta la guerra a chile](https://www.biobiochile.cl/biobiotv/programas/efemerides/2023/03/01/efemerides-el-1-de-marzo-de-1879-el-presidente-de-bolivia-hilarion-daza-decreta-la-guerra-a-chile.shtml)
 - [biobiochile — Frank mendez arbitro profesional de rugby tenemos un grupo consolidado de referis capacitandose](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2023/03/01/frank-mendez-arbitro-profesional-de-rugby-tenemos-un-grupo-consolidado-de-referis-capacitandose.shtml)
 - [biobiochile — Asaltan a hinchas de curico unido en paraguay la sacamos barata](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2023/03/01/asaltan-a-hinchas-de-curico-unido-en-paraguay-la-sacamos-barata.shtml)
-- _… y 17.079 más (ver JSONL)_
+- _… y 17.080 más (ver JSONL)_
 
 #### Febrero 2023 (15.247)
 
@@ -448,7 +448,7 @@
 - [biobiochile — Comiste mucho en ano nuevo esto recomienda la ciencia para aliviar la panza despues de las fiestas](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/ciencia/2023/01/01/comiste-mucho-en-ano-nuevo-esto-recomienda-la-ciencia-para-aliviar-la-panza-despues-de-las-fiestas.shtml)
 - _… y 16.808 más (ver JSONL)_
 
-### 2022 — 195.669 artículos
+### 2022 — 195.695 artículos
 
 #### Diciembre 2022 (16.108)
 
@@ -459,14 +459,14 @@
 - [biobiochile — Estudio sobre composicion de salchichas y vienesas es una infraccion a la ley del consumidor](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/12/01/estudio-sobre-composicion-de-salchichas-y-vienesas-es-una-infraccion-a-la-ley-del-consumidor.shtml)
 - _… y 16.103 más (ver JSONL)_
 
-#### Noviembre 2022 (16.240)
+#### Noviembre 2022 (16.241)
 
 - [biobiochile — Francisco leturia por fiscal nacional los estandares del proceso anterior no se pueden repetir](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2022/11/01/francisco-leturia-por-fiscal-nacional-los-estandares-del-proceso-anterior-no-se-pueden-repetir.shtml)
 - [biobiochile — Con take kubo como lider japon confirma su lista para el mundial de qatar](https://www.biobiochile.cl/especial/qatar-2022/noticias/2022/11/01/con-take-kubo-como-lider-japon-confirma-su-lista-para-el-mundial-de-qatar-2022.shtml)
 - [biobiochile — Muere a los 28 anos el rapero takeoff de migos investigan fatal tiroteo](https://www.biobiochile.cl/noticias/artes-y-cultura/musica/2022/11/01/muere-a-los-28-anos-el-rapero-takeoff-de-migos-investigan-fatal-tiroteo.shtml)
 - [biobiochile — Quiebre total en brooklyn nets durant e irving quedan sin entrenador tras despido de steve nash](https://www.biobiochile.cl/noticias/deportes/basquetbol/2022/11/01/quiebre-total-en-brooklyn-nets-durant-e-irving-quedan-sin-entrenador-tras-despido-de-steve-nash.shtml)
 - [biobiochile — El gran salto del tanque revelan que ivan morales es el principal objetivo de un club europeo](https://www.biobiochile.cl/noticias/deportes/futbol-internacional/chilenos-en-el-exterior/2022/11/01/el-gran-salto-del-tanque-revelan-que-ivan-morales-es-el-principal-objetivo-de-un-club-europeo.shtml)
-- _… y 16.235 más (ver JSONL)_
+- _… y 16.236 más (ver JSONL)_
 
 #### Octubre 2022 (16.226)
 
@@ -486,14 +486,14 @@
 - [biobiochile — Sin barcaza para el plebiscito el temor de los habitantes de la isla santa maria](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/09/01/sin-barcaza-para-el-plebiscito-el-temor-de-los-habitantes-de-la-isla-santa-maria.shtml)
 - _… y 17.049 más (ver JSONL)_
 
-#### Agosto 2022 (17.572)
+#### Agosto 2022 (17.575)
 
 - [biobiochile — Efemerides el 1 de agosto de joseph priestley descubrio el oxigeno](https://www.biobiochile.cl/biobiotv/programas//2022/08/01/efemerides-el-1-de-agosto-de-1774-joseph-priestley-descubrio-el-oxigeno.shtml)
 - [biobiochile — Revive el dharma tour de sebastian yatra la emocion del doble sold out de su visita a chile](https://www.biobiochile.cl/biobiotv/programas/espectaculos/2022/08/01/revive-el-dharma-tour-de-sebastian-yatra-la-emocion-del-doble-sold-out-de-su-visita-a-chile.shtml)
 - [biobiochile — Analisis politico el pais se empieza a polarizar en terminos afectivos la idea de ellos nosotros](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/08/01/analisis-politico-el-pais-se-empieza-a-polarizar-en-terminos-afectivos-la-idea-de-ellos-nosotros.shtml)
 - [biobiochile — Gob de arica y seguridad por tren de aragua que mas tenemos que esperar que maten comerciantes](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/08/01/gob-de-arica-y-seguridad-por-tren-de-aragua-que-mas-tenemos-que-esperar-que-maten-comerciantes.shtml)
 - [biobiochile — Un 78 de los chilenos prefiere entretenerse en casa que salir experto explica los pro y los contra](https://www.biobiochile.cl/biobiotv/programas/expreso-pm/2022/08/01/un-78-de-los-chilenos-prefiere-entretenerse-en-casa-que-salir-experto-explica-los-pro-y-los-contra.shtml)
-- _… y 17.567 más (ver JSONL)_
+- _… y 17.570 más (ver JSONL)_
 
 #### Julio 2022 (16.740)
 
@@ -504,61 +504,61 @@
 - [biobiochile — Cada gobierno tiene sus propios muertos](https://www.biobiochile.cl/biobiotv/opinion/comentarios/2022/07/01/cada-gobierno-tiene-sus-propios-muertos.shtml)
 - _… y 16.735 más (ver JSONL)_
 
-#### Junio 2022 (16.290)
+#### Junio 2022 (16.295)
 
 - [biobiochile — Detras de las mascaras humor ironia y satira corre por obra politica uruguaya](https://www.biobiochile.cl/biobiotv/cultura/entrevistas/2022/06/01/detras-de-las-mascaras-humor-ironia-y-satira-corre-por-obra-politica-uruguaya.shtml)
 - [biobiochile — Variaciones de fernando perez cuentos para aliviar la pandemia](https://www.biobiochile.cl/biobiotv/programas/del-fin-del-mundo/2022/06/01/variaciones-de-fernando-perez-cuentos-para-aliviar-la-pandemia.shtml)
 - [biobiochile — Analista elogia cuenta publica del presidente boric es un gran orador](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2022/06/01/analista-elogia-cuenta-publica-del-presidente-boric-es-un-gran-orador.shtml)
 - [biobiochile — Corte suprema ordena libertad para nicolas lopez](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2022/06/01/corte-suprema-ordena-libertad-para-nicolas-lopez.shtml)
 - [biobiochile — Fallo unanime a favor de jhonny depp amber heard debera pagar 15 millones de dolares](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2022/06/01/fallo-unanime-a-favor-de-jhonny-depp-amber-heard-debera-pagar-15-millones-de-dolares.shtml)
-- _… y 16.285 más (ver JSONL)_
+- _… y 16.290 más (ver JSONL)_
 
-#### Mayo 2022 (16.715)
+#### Mayo 2022 (16.716)
 
 - [biobiochile — Mas de 33 mil postulantes rendiran prueba de transicion de invierno 607 son mujeres](https://www.biobiochile.cl/especial/admision-2022/noticias/2022/05/01/mas-de-33-mil-postulantes-rendiran-prueba-de-transicion-de-invierno-607-son-mujeres.shtml)
 - [biobiochile — Corte suprema ratifica prohibicion a inmobiliarias para operar en campo dunar de tunquen](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2022/05/01/corte-suprema-ratifica-prohibicion-a-inmobiliarias-para-operar-en-campo-dunar-de-tunquen.shtml)
 - [biobiochile — La agonia del rio loa y los intentos de codelco para sacarle mas agua todavia](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2022/05/01/la-agonia-del-rio-loa-y-los-intentos-de-codelco-para-sacarle-mas-agua-todavia.shtml)
 - [biobiochile — Operativo en los angeles incauta 500 dosis de pasta base municiones y armas de fuego](https://www.biobiochile.cl/especial/el-narco-en-chile/noticias/2022/05/01/operativo-en-los-angeles-incauta-500-dosis-de-pasta-base-municiones-y-armas-de-fuego.shtml)
 - [biobiochile — Fidel espinoza ps no votara rechazo pero insistio en criticas a intolerancia de radicalizados](https://www.biobiochile.cl/especial/una-constitucion-para-chile/noticias/2022/05/01/fidel-espinoza-ps-no-votara-rechazo-pero-insistio-en-criticas-a-intolerancia-de-radicalizados.shtml)
-- _… y 16.710 más (ver JSONL)_
+- _… y 16.711 más (ver JSONL)_
 
-#### Abril 2022 (15.545)
+#### Abril 2022 (15.546)
 
 - [biobiochile — Gore metropolitano y udd presentan resultados de programa para pymes que promueven economia circular](https://www.biobiochile.cl/biobiotv/especiales/2022/04/01/gore-metropolitano-y-udd-presentan-resultados-de-programa-para-pymes-que-promueven-economia-circular.shtml)
 - [biobiochile — Efemerides el 1 de abril de adrienne bolland piloto sobre la cordillera de los andes](https://www.biobiochile.cl/biobiotv/programas//2022/04/01/efemerides-el-1-de-abril-de-1921-adrienne-bolland-piloto-sobre-la-cordillera-de-los-andes.shtml)
 - [biobiochile — Keno trotamundos el caso brereton la indignacion de su dt en blackburn](https://www.biobiochile.cl/biobiotv/programas//2022/04/01/keno-trotamundos-el-caso-brereton-la-indignacion-de-su-dt-en-blackburn.shtml)
 - [biobiochile — Lola indigo y su disco la nina hay gente que no se atreve a sonar y menos tan joven](https://www.biobiochile.cl/biobiotv/programas/espectaculos/2022/04/01/lola-indigo-y-su-disco-la-nina-hay-gente-que-no-se-atreve-a-sonar-y-menos-tan-joven.shtml)
 - [biobiochile — Auditor de la radio denuncia robo de espejos de auto en calle coquimbo con vicuna mackenna](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/04/01/auditor-de-la-radio-denuncia-robo-de-espejos-de-auto-en-calle-coquimbo-con-vicuna-mackenna.shtml)
-- _… y 15.540 más (ver JSONL)_
+- _… y 15.541 más (ver JSONL)_
 
-#### Marzo 2022 (16.877)
+#### Marzo 2022 (16.878)
 
 - [biobiochile — Efemerides el 1 de marzo de nace la periodista y escritora pepita turina](https://www.biobiochile.cl/biobiotv/programas//2022/03/01/efemerides-el-1-de-marzo-de-1907-nace-la-periodista-y-escritora-pepita-turina.shtml)
 - [biobiochile — Vi informe sobre cambio climatico algunos cambios se consideran irreversibles](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/03/01/vi-informe-sobre-cambio-climatico-algunos-cambios-se-consideran-irreversibles.shtml)
 - [biobiochile — Yohana agurto creadora de miel gibson el negocio sigue absolutamente vigente](https://www.biobiochile.cl/biobiotv/programas/expreso-pm/2022/03/01/yohana-agurto-creadora-de-miel-gibson-el-negocio-sigue-absolutamente-vigente.shtml)
 - [biobiochile — Mario waissbluth la declaracion de los amarillos cayo como una bomba en el sistema politico](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2022/03/01/mario-waissbluth-la-declaracion-de-los-amarillos-cayo-como-una-bomba-en-el-sistema-politico.shtml)
 - [biobiochile — Abogado del comandante en jefe del ejercito el nunca cambio un pasaje ni se quedo con un peso](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2022/03/01/abogado-del-comandante-en-jefe-del-ejercito-el-nunca-cambio-un-pasaje-ni-se-quedo-con-un-peso.shtml)
-- _… y 16.872 más (ver JSONL)_
+- _… y 16.873 más (ver JSONL)_
 
-#### Febrero 2022 (14.588)
+#### Febrero 2022 (14.600)
 
 - [biobiochile — Efemerides ruhollah jomeini regresa a iran en](https://www.biobiochile.cl/biobiotv/programas//2022/02/01/efemerides-ruhollah-jomeini-regresa-a-iran-en-1979.shtml)
 - [biobiochile — Alcalde el tabo lamentable que la autoridad sanitaria no tomara medidas para evitar la situacion](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/02/01/alcalde-el-tabo-lamentable-que-la-autoridad-sanitaria-no-tomara-medidas-para-evitar-la-situacion.shtml)
 - [biobiochile — C cirugia oncologica estan aumentando tiempos de espera para alguien con cancer es preocupante](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/02/01/c-cirugia-oncologica-estan-aumentando-tiempos-de-espera-para-alguien-con-cancer-es-preocupante.shtml)
 - [biobiochile — Hoy se celebra el ano nuevo chino el tigre que se hace en estas fechas](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2022/02/01/hoy-se-celebra-el-ano-nuevo-chino-el-tigre-que-se-hace-en-estas-fechas.shtml)
 - [biobiochile — Carlos borja exseleccionado boliviano enfrentar a chile tiene otro gusto otro sabor](https://www.biobiochile.cl/biobiotv/programas/expreso-pm/2022/02/01/carlos-borja-exseleccionado-boliviano-enfrentar-a-chile-tiene-otro-gusto-otro-sabor.shtml)
-- _… y 14.583 más (ver JSONL)_
+- _… y 14.595 más (ver JSONL)_
 
-#### Enero 2022 (15.714)
+#### Enero 2022 (15.716)
 
 - [biobiochile — Cierran areas protegidas de valparaiso este 1 de enero para evitar incendios forestales](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2022/01/01/cierran-areas-protegidas-de-valparaiso-este-1-de-enero-para-evitar-incendios-forestales.shtml)
 - [biobiochile — Cubillos critica a siches antes de conversar con terroristas debiera escuchar a las victimas](https://www.biobiochile.cl/especial/bbcl-investiga/noticias/entrevistas/2022/01/01/cubillos-critica-a-siches-antes-de-conversar-con-terroristas-debiera-escuchar-a-las-victimas.shtml)
 - [biobiochile — Elisa loncon cita a su ultima sesion como presidenta de la convencion para elegir a reemplazantes](https://www.biobiochile.cl/especial/una-constitucion-para-chile/noticias/2022/01/01/elisa-loncon-cita-a-su-ultima-sesion-como-presidenta-de-la-convencion-para-elegir-a-reemplazantes.shtml)
 - [biobiochile — Marcela cubillos entrega respaldo a barbara sepulveda para presidir convencion pese a diferencias](https://www.biobiochile.cl/especial/una-constitucion-para-chile/noticias/2022/01/01/marcela-cubillos-entrega-respaldo-a-barbara-sepulveda-para-presidir-convencion-pese-a-diferencias.shtml)
 - [biobiochile — Gratis una veintena de expertos y artistas se reuniran en encuentro de cultura digital](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2022/01/01/gratis-una-veintena-de-expertos-y-artistas-se-reuniran-en-encuentro-de-cultura-digital.shtml)
-- _… y 15.709 más (ver JSONL)_
+- _… y 15.711 más (ver JSONL)_
 
-### 2021 — 197.302 artículos
+### 2021 — 197.320 artículos
 
 #### Diciembre 2021 (16.251)
 
@@ -569,32 +569,32 @@
 - [biobiochile — Inedita declaracion de escasez hidrica en la region de los rios pese a lluvias](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/12/01/inedita-declaracion-de-escasez-hidrica-en-la-region-de-los-rios-pese-a-lluvias.shtml)
 - _… y 16.246 más (ver JSONL)_
 
-#### Noviembre 2021 (16.662)
+#### Noviembre 2021 (16.663)
 
 - [biobiochile — En sus manos estan nuestras vidas la intervencion de estudiante chilena en cop26](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2021/11/01/en-sus-manos-estan-nuestras-vidas-la-intervencion-de-estudiante-chilena-en-cop26.shtml)
 - [biobiochile — Ricardo lagos masoneria y biblia en mapudungun la lista de libros donados a los constituyentes](https://www.biobiochile.cl/especial/una-constitucion-para-chile/noticias/2021/11/01/ricardo-lagos-masoneria-y-biblia-en-mapudungun-la-lista-de-libros-donados-a-los-constituyentes.shtml)
 - [biobiochile — Tras caso rojas vade piden al congreso retomar proyecto que regula la renuncia de constituyentes](https://www.biobiochile.cl/especial/una-constitucion-para-chile/noticias/2021/11/01/tras-caso-rojas-vade-piden-al-congreso-retomar-proyecto-que-regula-la-renuncia-de-constituyentes.shtml)
 - [biobiochile — Sigrid alegria begona basauri y compania estrenaran presencialmente malas madres en teatro mori](https://www.biobiochile.cl/noticias/artes-y-cultura/teatro/2021/11/01/sigrid-alegria-begona-basauri-y-compania-estrenaran-presencialmente-malas-madres-en-teatro-mori.shtml)
 - [biobiochile — Carteros el juego de mesa que le cambio la vida a un tomecino en plena pandemia](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/videojuegos/2021/11/01/carteros-el-juego-de-mesa-que-le-cambio-la-vida-a-un-tomecino-en-plena-pandemia.shtml)
-- _… y 16.657 más (ver JSONL)_
+- _… y 16.658 más (ver JSONL)_
 
-#### Octubre 2021 (15.527)
+#### Octubre 2021 (15.528)
 
 - [biobiochile — Gaston fernandez y patrimonio hay un desequilibrio penal con los delitos de cuello y corbata](https://www.biobiochile.cl/biobiotv/cultura/entrevistas/2021/10/01/gaston-fernandez-y-patrimonio-hay-un-desequilibrio-penal-con-los-delitos-de-cuello-y-corbata.shtml)
 - [biobiochile — Sichel afp y falsedades](https://www.biobiochile.cl/biobiotv/opinion/comentarios/2021/10/01/sichel-afp-y-falsedades.shtml)
 - [biobiochile — El gran apagon de internet no le quito la vida util a los aparatos pero si los desconecto de la web](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2021/10/01/el-gran-apagon-de-internet-no-le-quito-la-vida-util-a-los-aparatos-pero-si-los-desconecto-de-la-web.shtml)
 - [biobiochile — Cesar sepulveda estrena su tercer single veo la musica como algo profesionalmente posible](https://www.biobiochile.cl/biobiotv/programas/espectaculos/2021/10/01/cesar-sepulveda-estrena-su-tercer-single-veo-la-musica-como-algo-profesionalmente-posible.shtml)
 - [biobiochile — Francisca valenzuela y su castillo de cristal es una cancion distopica revestida con musica pop](https://www.biobiochile.cl/biobiotv/programas/espectaculos/2021/10/01/francisca-valenzuela-y-su-castillo-de-cristal-es-una-cancion-distopica-revestida-con-musica-pop.shtml)
-- _… y 15.522 más (ver JSONL)_
+- _… y 15.523 más (ver JSONL)_
 
-#### Septiembre 2021 (16.518)
+#### Septiembre 2021 (16.519)
 
 - [biobiochile — Testimonio de funcionaria sera clave en investigacion contra ex alcalde de vitacura raul torrealba](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2021/09/01/testimonio-de-funcionaria-sera-clave-en-investigacion-contra-ex-alcalde-de-vitacura-raul-torrealba.shtml)
 - [biobiochile — Pablo simonetti reune a sus talleristas en primeros fuegos](https://www.biobiochile.cl/biobiotv/programas/del-fin-del-mundo/2021/09/01/pablo-simonetti-reune-a-sus-talleristas-en-primeros-fuegos.shtml)
 - [biobiochile — La casa de papel 5 los flashbacks tendran una repercusion en el final que la gente no se espera](https://www.biobiochile.cl/biobiotv/programas/espectaculos/2021/09/01/la-casa-de-papel-5-los-flashbacks-tendran-una-repercusion-en-el-final-que-la-gente-no-se-espera.shtml)
 - [biobiochile — Jorge berrios las tasas van a subir en los proximos meses el acceso a creditos se encarecera](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/09/01/jorge-berrios-las-tasas-van-a-subir-en-los-proximos-meses-el-acceso-a-creditos-se-encarecera.shtml)
 - [biobiochile — Juan eduardo vargas la ley dice que se entrega el beneficio por la duracion nominal de la carrera](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/09/01/juan-eduardo-vargas-la-ley-dice-que-se-entrega-el-beneficio-por-la-duracion-nominal-de-la-carrera.shtml)
-- _… y 16.513 más (ver JSONL)_
+- _… y 16.514 más (ver JSONL)_
 
 #### Agosto 2021 (17.292)
 
@@ -605,151 +605,151 @@
 - [biobiochile — El sucesor de usain bolt el italiano jacobs se alzo como el nuevo monarca de los 100 metros planos](https://www.biobiochile.cl/especial/jjoo-tokyo-2020/noticias/2021/08/01/el-sucesor-de-usain-bolt-el-italiano-jacobs-se-alzo-como-el-nuevo-monarca-de-los-100-metros-planos.shtml)
 - _… y 17.287 más (ver JSONL)_
 
-#### Julio 2021 (17.222)
+#### Julio 2021 (17.223)
 
 - [biobiochile — Incautan fenitilina en vallenar la denominada droga de la guerra llego a nuestro pais](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/07/01/incautan-fenitilina-en-vallenar-la-denominada-droga-de-la-guerra-llego-a-nuestro-pais.shtml)
 - [biobiochile — Ministro de ciencias no tenemos evidencia hoy de que estamos perdiendo proteccion con la vacuna](https://www.biobiochile.cl/biobiotv/programas/expreso-pm/2021/07/01/ministro-de-ciencias-no-tenemos-evidencia-hoy-de-que-estamos-perdiendo-proteccion-con-la-vacuna.shtml)
 - [biobiochile — Covid 19 los pacientes que requieren ser hospitalizados hoy se contagiaron hace dos semanas](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2021/07/01/covid-19-los-pacientes-que-requieren-ser-hospitalizados-hoy-se-contagiaron-hace-dos-semanas.shtml)
 - [biobiochile — La actividad economica se expandio un 181 durante el mes de mayo](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2021/07/01/la-actividad-economica-se-expandio-un-181-durante-el-mes-de-mayo.shtml)
 - [biobiochile — Las polemicas en torno a la conformacion y funcionamiento de la convencion constitucional](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2021/07/01/las-polemicas-en-torno-a-la-conformacion-y-funcionamiento-de-la-convencion-constitucional.shtml)
-- _… y 17.217 más (ver JSONL)_
+- _… y 17.218 más (ver JSONL)_
 
-#### Junio 2021 (16.508)
+#### Junio 2021 (16.513)
 
 - [biobiochile — Sebastian moreno el legado de sergio larrain una clase magistral de fotografia](https://www.biobiochile.cl/biobiotv/cultura/entrevistas/2021/06/01/sebastian-moreno-el-legado-de-sergio-larrain-una-clase-magistral-de-fotografia.shtml)
 - [biobiochile — Sostenibilidad en los oceanos pesca ilegal y seguridad alimentaria](https://www.biobiochile.cl/biobiotv/especiales/2021/06/01/sostenibilidad-en-los-oceanos-pesca-ilegal-y-seguridad-alimentaria.shtml)
 - [biobiochile — Economistas el pib de chile se expandiria un 6 y 7 durante este ano](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2021/06/01/economistas-el-pib-de-chile-se-expandiria-un-6-y-7-durante-este-ano.shtml)
 - [biobiochile — Leonel garcia estrena su octavo album 45rpm](https://www.biobiochile.cl/biobiotv/programas/espectaculos/2021/06/01/leonel-garcia-estrena-su-octavo-album-45rpm.shtml)
 - [biobiochile — Arturo vidal con covid 19 se salto los protocolos sanitarios](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/06/01/arturo-vidal-con-covid-19-se-salto-los-protocolos-sanitarios.shtml)
-- _… y 16.503 más (ver JSONL)_
+- _… y 16.508 más (ver JSONL)_
 
-#### Mayo 2021 (17.593)
+#### Mayo 2021 (17.594)
 
 - [biobiochile — Cde se querella por desvio de aguas glaciares hacia empresa en reserva nacional mocho choshuenco](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2021/05/01/cde-se-querella-por-desvio-de-aguas-glaciares-hacia-empresa-en-reserva-nacional-mocho-choshuenco.shtml)
 - [biobiochile — Cumbre del clima que hay detras de los compromisos de los lideres mundiales para reducir emisiones](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2021/05/01/cumbre-del-clima-que-hay-detras-de-los-compromisos-de-los-lideres-mundiales-para-reducir-emisiones.shtml)
 - [biobiochile — Diputados reconocen dudas ante proyeccion optimista sobre caida de contagios de cara a elecciones](https://www.biobiochile.cl/especial/una-constitucion-para-chile/noticias/2021/05/01/diputados-reconocen-dudas-ante-proyeccion-optimista-sobre-caida-de-contagios-de-cara-a-elecciones.shtml)
 - [biobiochile — El padre gran actuacion de anthony hopkins para mostrar los estragos causados por la demencia senil](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2021/05/01/el-padre-gran-actuacion-de-anthony-hopkins-para-mostrar-los-estragos-causados-por-la-demencia-senil.shtml)
 - [biobiochile — La cancion de aquiles una mirada desde los afectos al mundo clasico griego](https://www.biobiochile.cl/noticias/artes-y-cultura/libros/2021/05/01/la-cancion-de-aquiles-una-mirada-desde-los-afectos-al-mundo-clasico-griego.shtml)
-- _… y 17.588 más (ver JSONL)_
+- _… y 17.589 más (ver JSONL)_
 
-#### Abril 2021 (16.938)
+#### Abril 2021 (16.939)
 
 - [biobiochile — A la espera de nuevas medidas para afrontar la pandemia](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2021/04/01/a-la-espera-de-nuevas-medidas-para-afrontar-la-pandemia.shtml)
 - [biobiochile — Congreso aprobo suspender pago de intereses por creditos de candidatos](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/04/01/congreso-aprobo-suspender-pago-de-intereses-por-creditos-de-candidatos.shtml)
 - [biobiochile — Nuevas medidas cierre de fronteras adelanto del toque de queda y restricciones en el comercio](https://www.biobiochile.cl/biobiotv/programas/expreso-pm/2021/04/01/nuevas-medidas-cierre-de-fronteras-adelanto-del-toque-de-queda-y-restricciones-en-el-comercio.shtml)
 - [biobiochile — La calle canta que le parece las nuevas restricciones en cuarentena](https://www.biobiochile.cl/biobiotv/programas/la-calle-canta/2021/04/01/la-calle-canta-que-le-parece-las-nuevas-restricciones-en-cuarentena.shtml)
 - [biobiochile — Rati un relato sobre la inteligencia y los secretos en epoca de transicion](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2021/04/01/rati-un-relato-sobre-la-inteligencia-y-los-secretos-en-epoca-de-transicion.shtml)
-- _… y 16.933 más (ver JSONL)_
+- _… y 16.934 más (ver JSONL)_
 
-#### Marzo 2021 (18.204)
+#### Marzo 2021 (18.206)
 
 - [biobiochile — Segunda ola de covid 19 y el regreso a clases presenciales](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2021/03/01/segunda-ola-de-covid-19-y-el-regreso-a-clases-presenciales.shtml)
 - [biobiochile — Super lunes la primera prueba del transporte publico en pandemia](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/03/01/super-lunes-la-primera-prueba-del-transporte-publico-en-pandemia.shtml)
 - [biobiochile — Tras el aumento de casos de coronavirus en el pais es posible volver a un nuevo confinamiento](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/03/01/tras-el-aumento-de-casos-de-coronavirus-en-el-pais-es-posible-volver-a-un-nuevo-confinamiento.shtml)
 - [biobiochile — La calle canta cree que es necesario un tercer retiro de las afp](https://www.biobiochile.cl/biobiotv/programas/la-calle-canta/2021/03/01/la-calle-canta-cree-que-es-necesario-un-tercer-retiro-de-las-afp.shtml)
 - [biobiochile — Toma fuerza un tercer retiro de los fondos de pensiones](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2021/03/01/toma-fuerza-un-tercer-retiro-de-los-fondos-de-pensiones.shtml)
-- _… y 18.199 más (ver JSONL)_
+- _… y 18.201 más (ver JSONL)_
 
-#### Febrero 2021 (13.751)
+#### Febrero 2021 (13.753)
 
 - [biobiochile — El proceso de vacunacion masiva contra el coronavirus en chile](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2021/02/01/el-proceso-de-vacunacion-masiva-contra-el-coronavirus-en-chile.shtml)
 - [biobiochile — Ignacio briones necesitamos una reforma profunda al estado](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/02/01/ignacio-briones-necesitamos-una-reforma-profunda-al-estado.shtml)
 - [biobiochile — Santiago a mil se extendera hasta el 7 de febrero](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2021/02/01/santiago-a-mil-se-extendera-hasta-el-7-de-febrero.shtml)
 - [biobiochile — Radiograma 3 779 nuevos casos de coronavirus en el pais](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2021/02/01/radiograma-3-779-nuevos-casos-de-coronavirus-en-el-pais.shtml)
 - [biobiochile — Comunas de llanquihue entregan planes de mitigacion tras decreto de zonas saturadas de contaminacion](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2021/02/01/comunas-de-llanquihue-entregan-planes-de-mitigacion-tras-decreto-de-zonas-saturadas-de-contaminacion.shtml)
-- _… y 13.746 más (ver JSONL)_
+- _… y 13.748 más (ver JSONL)_
 
-#### Enero 2021 (14.836)
+#### Enero 2021 (14.839)
 
 - [biobiochile — 10 videos que te explicaran lo que pasa en los ecosistemas de latinoamerica](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2021/01/01/10-videos-que-te-explicaran-lo-que-pasa-en-los-ecosistemas-de-latinoamerica.shtml)
 - [biobiochile — El deficit nos gano revisa cuanta lluvia falto en tu ciudad en](https://www.biobiochile.cl/especial/aqui-tierra/noticias/2021/01/01/el-deficit-nos-gano-revisa-cuanta-lluvia-falto-en-tu-ciudad-en-2020.shtml)
 - [biobiochile — Itinerancia perrofubo tres obras se presentaran gratis a ninas y ninos en norte y centro del pais](https://www.biobiochile.cl/noticias/artes-y-cultura/teatro/2021/01/01/itinerancia-perrofubo-tres-obras-se-presentaran-gratis-a-ninas-y-ninos-en-norte-y-centro-del-pais.shtml)
 - [biobiochile — Japon creara satelites de madera que se queman por completo al volver a la tierra sin dejar basura](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/astronomia/2021/01/01/japon-creara-satelites-de-madera-que-se-queman-por-completo-al-volver-a-la-tierra-sin-dejar-basura.shtml)
 - [biobiochile — Los smartphones mas comprados por los chilenos segun claro](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/moviles-y-apps/2021/01/01/los-smartphones-mas-comprados-por-los-chilenos-segun-claro.shtml)
-- _… y 14.831 más (ver JSONL)_
+- _… y 14.834 más (ver JSONL)_
 
-### 2020 — 182.965 artículos
+### 2020 — 183.024 artículos
 
-#### Diciembre 2020 (14.001)
+#### Diciembre 2020 (14.002)
 
 - [biobiochile — El presente y el futuro del trabajo en chile](https://www.biobiochile.cl/biobiotv/programas/evolucion-laboral/2020/12/01/el-presente-y-el-futuro-del-trabajo-en-chile.shtml)
 - [biobiochile — Bono covid navidad no se solicita ni se postula quien lo recibe](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/12/01/bono-covid-navidad-no-se-solicita-ni-se-postula-quien-lo-recibe.shtml)
 - [biobiochile — Cirugias plasticas como saber donde operarse](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/12/01/cirugias-plasticas-como-saber-donde-operarse.shtml)
 - [biobiochile — Santiago a mil se realizara desde el 3 al 24 de enero](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/12/01/santiago-a-mil-2021-se-realizara-desde-el-3-al-24-de-enero.shtml)
 - [biobiochile — Claudio orrego y orden publico no hay espacio en la vida democratica para este tipo de violencia](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2020/12/01/claudio-orrego-y-orden-publico-no-hay-espacio-en-la-vida-democratica-para-este-tipo-de-violencia.shtml)
-- _… y 13.996 más (ver JSONL)_
+- _… y 13.997 más (ver JSONL)_
 
-#### Noviembre 2020 (20.529)
+#### Noviembre 2020 (20.531)
 
 - [biobiochile — Volver a cuarentena una catastrofe para el mundo de la cultura en alemania](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2020/11/01/volver-a-cuarentena-una-catastrofe-para-el-mundo-de-la-cultura-en-alemania.shtml)
 - [biobiochile — El hombre que quiere ser un alienigena y ya lleva 21 de transformacion the black alien project](https://www.biobiochile.cl/noticias/biobiochile/seleccion-del-editor/2020/11/01/el-hombre-que-quiere-ser-un-alienigena-y-ya-lleva-21-de-transformacion-the-black-alien-project.shtml)
 - [biobiochile — En el espacio tambien se celebra nasa publica fotografias de astronautas disfrazados para halloween](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/astronomia/2020/11/01/en-el-espacio-tambien-se-celebra-nasa-publica-fotografias-de-astronautas-disfrazados-para-halloween.shtml)
 - [biobiochile — Campeonato nacional femenino la u impuso su favoritismo y goleo a la serena en el cda](https://www.biobiochile.cl/noticias/deportes/futbol/futbol-nacional/2020/11/01/campeonato-nacional-femenino-la-u-impuso-su-favoritismo-y-goleo-a-la-serena-en-el-cda.shtml)
 - [biobiochile — Campeonato nacional femenino puerto montt wanderers igualaron y antofagasta goleo a cobresal](https://www.biobiochile.cl/noticias/deportes/futbol/futbol-nacional/2020/11/01/campeonato-nacional-femenino-puerto-montt-wanderers-igualaron-y-antofagasta-goleo-a-cobresal.shtml)
-- _… y 20.524 más (ver JSONL)_
+- _… y 20.526 más (ver JSONL)_
 
-#### Octubre 2020 (15.452)
+#### Octubre 2020 (15.456)
 
 - [biobiochile — Fracaso en la oposicion el blindaje contra la competencia](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/10/01/fracaso-en-la-oposicion-el-blindaje-contra-la-competencia.shtml)
 - [biobiochile — Vuelta a clases no hay consenso sobre que hacer por la polarizacion politica del pais](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/10/01/vuelta-a-clases-no-hay-consenso-sobre-que-hacer-por-la-polarizacion-politica-del-pais.shtml)
 - [biobiochile — La autoridad emboscada](https://www.biobiochile.cl/biobiotv/opinion/los-columnistas/2020/10/01/la-autoridad-emboscada.shtml)
 - [biobiochile — Catalina perez el frente amplio como toda la oposicion es responsable de este fracaso](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/10/01/catalina-perez-el-frente-amplio-como-toda-la-oposicion-es-responsable-de-este-fracaso.shtml)
 - [biobiochile — Los lentos signos de reactivacion de la economia](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/10/01/los-lentos-signos-de-reactivacion-de-la-economia.shtml)
-- _… y 15.447 más (ver JSONL)_
+- _… y 15.451 más (ver JSONL)_
 
-#### Septiembre 2020 (15.119)
+#### Septiembre 2020 (15.130)
 
 - [biobiochile — El cambio de tono en los dirigentes de los camioneros y el posible acuerdo](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/09/01/el-cambio-de-tono-en-los-dirigentes-de-los-camioneros-y-el-posible-acuerdo.shtml)
 - [biobiochile — Paro camionero el desconcierto en el gobierno](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/09/01/paro-camionero-el-desconcierto-en-el-gobierno.shtml)
 - [biobiochile — El costo de las cargas detenidas en puerto de san antonio por paro camionero](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/09/01/el-costo-de-las-cargas-detenidas-en-puerto-de-san-antonio-por-paro-camionero.shtml)
 - [biobiochile — Los nuevos protocolos manana abriran terrazas de bares y restaurantes en comunas en fase 3](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2020/09/01/los-nuevos-protocolos-manana-abriran-terrazas-de-bares-y-restaurantes-en-comunas-en-fase-3.shtml)
 - [biobiochile — Ximena rincon uno no puede satanizar nunca al estado o al mercado](https://www.biobiochile.cl/biobiotv/programas/la-entrevista-de-tomas-mosciatti/2020/09/01/ximena-rincon-uno-no-puede-satanizar-nunca-al-estado-o-al-mercado.shtml)
-- _… y 15.114 más (ver JSONL)_
+- _… y 15.125 más (ver JSONL)_
 
-#### Agosto 2020 (15.457)
+#### Agosto 2020 (15.464)
 
 - [biobiochile — 55 organizaciones culturales se retiran mesas trabajo ministerio las culturas](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2020/08/01/55-organizaciones-culturales-se-retiran-mesas-trabajo-ministerio-las-culturas.shtml)
 - [biobiochile — Imuc estrenara obras internacionales creadas confinamiento encuentro compositores](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2020/08/01/imuc-estrenara-obras-internacionales-creadas-confinamiento-encuentro-compositores.shtml)
 - [biobiochile — Vivo sigue aqui festival movidos x chile los jaivas pablo chill e mas 20 shows](https://www.biobiochile.cl/noticias/artes-y-cultura/musica/2020/08/01/vivo-sigue-aqui-festival-movidos-x-chile-los-jaivas-pablo-chill-e-mas-20-shows.shtml)
 - [biobiochile — Astronautas eeuu se preparan volver la estacion espacial internacional](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/astronomia/2020/08/01/astronautas-eeuu-se-preparan-volver-la-estacion-espacial-internacional.shtml)
 - [biobiochile — Prestigiosa revista nature publica trabajo chilenos desarrollaron test covid 19 mas barato](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/ciencia/2020/08/01/prestigiosa-revista-nature-publica-trabajo-chilenos-desarrollaron-test-covid-19-mas-barato.shtml)
-- _… y 15.452 más (ver JSONL)_
+- _… y 15.459 más (ver JSONL)_
 
-#### Julio 2020 (15.368)
+#### Julio 2020 (15.379)
 
 - [biobiochile — Expreso bio bio te informa 1 julio](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/estuvieron-en-la-radio/expreso-bio-bio/2020/07/01/expreso-bio-bio-te-informa-1-julio.shtml)
 - [biobiochile — Ximena ossandon lo unico seguro tenemos esta altura sabemos poco del coronavirus](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/estuvieron-en-la-radio/expreso-bio-bio/2020/07/01/ximena-ossandon-lo-unico-seguro-tenemos-esta-altura-sabemos-poco-del-coronavirus.shtml)
 - [biobiochile — La discusion retiro fondos pensiones llego al parlamento](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/estuvieron-en-la-radio/podria-ser-peor/2020/07/01/la-discusion-retiro-fondos-pensiones-llego-al-parlamento.shtml)
 - [biobiochile — Covid 19 la primera causa muerte pais lo va del ano](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/07/01/covid-19-la-primera-causa-muerte-pais-lo-va-del-ano.shtml)
 - [biobiochile — Marcelo simonetti se sumerge novela dibujos hiroshima](https://www.biobiochile.cl/biobiotv/programas/del-fin-del-mundo/2020/07/01/marcelo-simonetti-se-sumerge-novela-dibujos-hiroshima.shtml)
-- _… y 15.363 más (ver JSONL)_
+- _… y 15.374 más (ver JSONL)_
 
-#### Junio 2020 (14.808)
+#### Junio 2020 (14.810)
 
 - [biobiochile — Klaus von srotch spacex concepto desarrollar tecnologia llegar marte](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/estuvieron-en-la-radio/expreso-bio-bio/2020/06/01/klaus-von-srotch-spacex-concepto-desarrollar-tecnologia-llegar-marte.shtml)
 - [biobiochile — Nicolas eyzaguirre posible las cifras mayo junio sean peores](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/estuvieron-en-la-radio/expreso-bio-bio/2020/06/01/nicolas-eyzaguirre-posible-las-cifras-mayo-junio-sean-peores.shtml)
 - [biobiochile — Las condes puente alto buscan marco mas flexible la entrega alimentos](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/estuvieron-en-la-radio/podria-ser-peor/2020/06/01/las-condes-puente-alto-buscan-marco-mas-flexible-la-entrega-alimentos.shtml)
 - [biobiochile — Absoluto desplome la actividad economica](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/06/01/absoluto-desplome-la-actividad-economica.shtml)
 - [biobiochile — Largo camino la lucha los derechos civiles estados unidos](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2020/06/01/largo-camino-la-lucha-los-derechos-civiles-estados-unidos.shtml)
-- _… y 14.803 más (ver JSONL)_
+- _… y 14.805 más (ver JSONL)_
 
-#### Mayo 2020 (14.964)
+#### Mayo 2020 (14.972)
 
 - [biobiochile — La situacion de los empresarios nocturnos en plena emergencia por el covid 19](https://www.biobiochile.cl/biobiotv/programas/entrevistas-biobiotv/2020/05/01/la-situacion-de-los-empresarios-nocturnos-en-plena-emergencia-por-el-covid-19.shtml)
 - [biobiochile — Chile protagoniza cuenta anual de corte interamericana de ddhh caso de juez urrutia en fase crucial](https://www.biobiochile.cl/especial/reportajes/2020/05/01/chile-protagoniza-cuenta-anual-de-corte-interamericana-de-ddhh-caso-de-juez-urrutia-en-fase-crucial.shtml)
 - [biobiochile — La marsellesa la internacional y la mala reputacion cancion revolucionaria y de protesta francesa](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2020/05/01/la-marsellesa-la-internacional-y-la-mala-reputacion-cancion-revolucionaria-y-de-protesta-francesa.shtml)
 - [biobiochile — Leviatan un arturo prat de ciencia ficcion se enfrenta a pinochet y merino en un comic](https://www.biobiochile.cl/noticias/artes-y-cultura/actualidad-cultural/2020/05/01/leviatan-un-arturo-prat-de-ciencia-ficcion-se-enfrenta-a-pinochet-y-merino-en-un-comic.shtml)
 - [biobiochile — Spacex y la nasa mantienen preparativos para lanzar astronautas a fines de mayo pese a la pandemia](https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/astronomia/2020/05/01/spacex-y-la-nasa-mantienen-preparativos-para-lanzar-astronautas-a-fines-de-mayo-pese-a-la-pandemia.shtml)
-- _… y 14.959 más (ver JSONL)_
+- _… y 14.967 más (ver JSONL)_
 
-#### Abril 2020 (15.201)
+#### Abril 2020 (15.214)
 
 - [biobiochile — Banco central recorta la tasa de interes la economia chilena esta muy afectada](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/04/01/banco-central-recorta-la-tasa-de-interes-la-economia-chilena-esta-muy-afectada.shtml)
 - [biobiochile — Permisos de circulacion el parlamento no fue capaz de hacer bien la ley](https://www.biobiochile.cl/biobiotv/lo-viste-en-la-radio/podcast-radiograma/2020/04/01/permisos-de-circulacion-el-parlamento-no-fue-capaz-de-hacer-bien-la-ley.shtml)
 - [biobiochile — Duoc uc anuncia numerosas medidas para incluyendo apoyo a financiamiento y recalendarizacion](https://www.biobiochile.cl/especial/educacion/noticias/2020/04/01/duoc-uc-anuncia-numerosas-medidas-para-2020-incluyendo-apoyo-a-financiamiento-y-recalendarizacion.shtml)
 - [biobiochile — Los profesores que implementan educacion socioemocional alcanzan climas mas optimos de aprendizaje](https://www.biobiochile.cl/especial/educacion/noticias/2020/04/01/los-profesores-que-implementan-educacion-socioemocional-alcanzan-climas-mas-optimos-de-aprendizaje.shtml)
 - [biobiochile — U bolivariana toma control de u de aconcagua preparan fusion para admision](https://www.biobiochile.cl/especial/educacion/noticias/2020/04/01/u-bolivariana-toma-control-de-u-de-aconcagua-preparan-fusion-para-admision-2022.shtml)
-- _… y 15.196 más (ver JSONL)_
+- _… y 15.209 más (ver JSONL)_
 
 #### Marzo 2020 (15.270)
 
@@ -1992,7 +1992,7 @@
 - [elciudadano](https://www.elciudadano.com/economia/mirame-las-bolsas%e2%80%a6/01/02/)
 - _… y 264 más (ver JSONL)_
 
-### 2008 — 1392 artículos
+### 2008 — 1444 artículos
 
 #### Diciembre 2008 (239)
 
@@ -2093,14 +2093,307 @@
 - [elciudadano](https://www.elciudadano.com/actualidad/la-rebelion-de-los-pinguinos-seleccionado-en-clermont-ferrand-francia/02/04/)
 - _… y 25 más (ver JSONL)_
 
-#### Enero 2008 (12)
+#### Enero 2008 (64)
 
-- [elciudadano](https://www.elciudadano.com/medio-ambiente/masiva-caravana-dijo-no-a-termoelectrica-en-la-costa-del-maule/01/24/)
-- [elciudadano](https://www.elciudadano.com/medio-ambiente/salmonicultura-y-pesca-artesanal-iv-adios-que-te-vaya-bien%e2%80%a6/01/24/)
-- [elciudadano](https://www.elciudadano.com/pueblos/comunicado-de-patricia-troncoso-desde-el-hospital-de-chillan/01/24/)
-- [elciudadano](https://www.elciudadano.com/columnas/terapia-de-choque-para-la-nacion/01/24/)
-- [elciudadano](https://www.elciudadano.com/medio-ambiente/chile-intoxicacion-con-plaguicidas-en-maizal-transgenico/01/25/)
-- _… y 7 más (ver JSONL)_
+- [elciudadano](https://www.elciudadano.com/columnas/un-ano-historico/12/31/)
+- [elciudadano](https://www.elciudadano.com/pueblos/campana-de-solidaridad-con-joven-mapuche/12/31/)
+- [elciudadano](https://www.elciudadano.com/reportaje-investigacion/2008-6008-2761-5769-%c2%bf-el-ano-nuevo/12/31/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/patagonia-electrocutada-patrimonio-enajenado/01/02/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/presencia-de-armas-en-mehuin-mantienen-tension-en-la-costa/01/02/)
+- _… y 59 más (ver JSONL)_
+
+### 2007 — 603 artículos
+
+#### Diciembre 2007 (61)
+
+- [elciudadano](https://www.elciudadano.com/organizacion-social/valparaiso-pasa-a-la-ofensiva/12/01/)
+- [elciudadano](https://www.elciudadano.com/columnas/la-desinformacion-es-vital-para-el-sustento-del-modelo/12/06/)
+- [elciudadano](https://www.elciudadano.com/editorial/superavit-pacto-social-y-preguntas-a-la-presidenta/12/06/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/taller-permacultura-en-valdivia/12/06/)
+- [elciudadano](https://www.elciudadano.com/medios/historicas-apsi-y-plan-b-reabren-debate-sobre-la-prensa-independiente/12/06/)
+- _… y 56 más (ver JSONL)_
+
+#### Noviembre 2007 (54)
+
+- [elciudadano](https://www.elciudadano.com/pueblos/cumbre-de-los-pueblos-indigenas/11/02/)
+- [elciudadano](https://www.elciudadano.com/entrevistas/humberto-maturana-guien-sus-conocimientos-y-habilidades-hacia-el-mundo-que-quieren-vivir/11/02/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/1er-encuentro-de-accion-ciudadana-y-gestion-de-residuos-solidos/11/04/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/6-centrales-hidroelectricas-amenazan-la-cuenca-del-rio-bueno/11/04/)
+- [elciudadano](https://www.elciudadano.com/medios/mesa-medios-de-comunicacion-articulacion-de-la-prensa-de-los-pueblos-de-chile/11/05/)
+- _… y 49 más (ver JSONL)_
+
+#### Octubre 2007 (71)
+
+- [elciudadano](https://www.elciudadano.com/actualidad/seminario-sobre-hidorelectricas-aclara-pelicula-a-vecinos-de-panguipulli/10/01/)
+- [elciudadano](https://www.elciudadano.com/columnas/%c2%bfestamos-ganandole-al-sida/10/01/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/nuevos-martires-del-carbon-otro-asesinato-mas-de-la-concertacion/10/01/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/continuan-matanzas-ilegales-de-perros-esta-vez-en-puente-alto-y-concepcion/10/02/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/la-otra-orilla-boletin-ambiental-y-de-la-pesca-artesanal/10/02/)
+- _… y 66 más (ver JSONL)_
+
+#### Septiembre 2007 (53)
+
+- [elciudadano](https://www.elciudadano.com/economia/las-medidas-de-la-reserva-federal-no-paran-la-caida-panorama-negro-sobre-la-economia-mundial/09/01/)
+- [elciudadano](https://www.elciudadano.com/justicia/corte-procesa-a-ex-carabinero-involucrado-en-doce-homicidios-en-tocopilla/09/01/)
+- [elciudadano](https://www.elciudadano.com/justicia/tiempo-de-una-reforma-policial/09/01/)
+- [elciudadano](https://www.elciudadano.com/medios/bomba-de-ruido-estalla-en-canal-13/09/01/)
+- [elciudadano](https://www.elciudadano.com/medios/colegio-de-periodistas-preocupado-por-amenazas-a-la-prensa/09/01/)
+- _… y 48 más (ver JSONL)_
+
+#### Agosto 2007 (55)
+
+- [elciudadano](https://www.elciudadano.com/actualidad/restaurar-los-dialogos/08/01/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/campana-de-firmas-para-construccion-de-museo-monte-verde-esta-en-su-recta-final/08/01/)
+- [elciudadano](https://www.elciudadano.com/politica/segun-la-memoria-2006-de-codelco-mas-de-50-millones-recibio-dirigente-de-la-ftc-raimundo-espinoza/08/01/)
+- [elciudadano](https://www.elciudadano.com/politica/un-mechon-de-humo-cuelga-sobre-la-frente-del-viento/08/01/)
+- [elciudadano](https://www.elciudadano.com/pueblos/empresa-forestal-volterra-en-quidico-viola-los-derechos-de-las-comunidades-mapuche/08/01/)
+- _… y 50 más (ver JSONL)_
+
+#### Julio 2007 (61)
+
+- [elciudadano](https://www.elciudadano.com/educacion/los-estudiantes-en-la-lucha-por-una-mejor-educacion-comunicamos-a-nuestras-familias/07/01/)
+- [elciudadano](https://www.elciudadano.com/justicia/identificado-carabinero-que-agredio-a-artista/07/01/)
+- [elciudadano](https://www.elciudadano.com/politica/a-34-anos-de-un-intento-de-golpe-con-mas-de-30-asesinatos-cronica-del-tanquetazo-que-mato-a-leonardo-henrichsen/07/01/)
+- [elciudadano](https://www.elciudadano.com/columnas/la-economia-social-y-solidaria-responde-a-la-crisis/07/02/)
+- [elciudadano](https://www.elciudadano.com/entrevistas/luis-mariano-rendon-el-ecologista-que-encaro-a-lagos-la-politica-de-lagos-fue-la-de-rebajar-condiciones-ambientales-para-hacer-viables-grandes-proyectos-de-inversion/07/02/)
+- _… y 56 más (ver JSONL)_
+
+#### Junio 2007 (75)
+
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/centrales-hidroelectricas-de-aisen/06/01/)
+- [elciudadano](https://www.elciudadano.com/columnas/insurreccion-contra-la-dictadura-de-los-medios-de-comunicacion/06/02/)
+- [elciudadano](https://www.elciudadano.com/educacion/inminente-desalojo-en-liceo-barros-borgono/06/02/)
+- [elciudadano](https://www.elciudadano.com/entrevistas/exclusiva-de-lagos-en-nueva-york-no-estoy-aqui-por-ser-un-especialista-en-medio-ambiente/06/02/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/musicos-apoyan-marcha-por-la-vida/06/02/)
+- _… y 70 más (ver JSONL)_
+
+#### Mayo 2007 (37)
+
+- [elciudadano](https://www.elciudadano.com/organizacion-social/dia-del-trabajo/05/01/)
+- [elciudadano](https://www.elciudadano.com/economia/evo-propone-moneda-unica-para-sudamerica/05/01/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/ongs-y-pescadores-artesanales-exigen-a-22-gobiernos-proteger-fondos-marinos-del-pacifico-sur/05/01/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/anacleto-angelini-y-bernardo-matte-sentenciados-por-valdivianos/05/01/)
+- [elciudadano](https://www.elciudadano.com/reportaje-investigacion/2-de-mayo-dia-mundial-de-lucha-contra-barrick-gold/05/01/)
+- _… y 32 más (ver JSONL)_
+
+#### Abril 2007 (35)
+
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/al-gore-viene-a-chile-a-foro-financiado-por-barrick-gold/04/02/)
+- [elciudadano](https://www.elciudadano.com/columnas/la-politica-indigena-de-bachelet-continuidad-peligrosa/04/05/)
+- [elciudadano](https://www.elciudadano.com/politica/lagos-y-zamorano-llamados-a-declarar-por-publicidad-enganosa/04/05/)
+- [elciudadano](https://www.elciudadano.com/politica/queremos-un-defensor-del-pueblo-no-paran-las-manifestaciones-ciudadanas-en-chile/04/04/)
+- [elciudadano](https://www.elciudadano.com/reportaje-investigacion/recolectores-de-america-latina-y-el-caribe-se-reunen-en-chile/04/05/)
+- _… y 30 más (ver JSONL)_
+
+#### Marzo 2007 (48)
+
+- [elciudadano](https://www.elciudadano.com/educacion/es-muy-positivo-practicar-nudismo-desde-nino/03/05/)
+- [elciudadano](https://www.elciudadano.com/columnas/del-otro-lado-3/03/12/)
+- [elciudadano](https://www.elciudadano.com/columnas/internet-y-democracia-%c2%bfpara-que/03/12/)
+- [elciudadano](https://www.elciudadano.com/columnas/transantiago-dolores-de-parto/03/12/)
+- [elciudadano](https://www.elciudadano.com/editorial/david-y-su-reingenieria/03/12/)
+- _… y 43 más (ver JSONL)_
+
+#### Febrero 2007 (31)
+
+- [elciudadano](https://www.elciudadano.com/columnas/desinformacion-y-postergacion-ciudadana-nunca-mas/02/04/)
+- [elciudadano](https://www.elciudadano.com/editorial/no-nos-detendremos/02/04/)
+- [elciudadano](https://www.elciudadano.com/editorial/nuevo-paradigma-politico/02/04/)
+- [elciudadano](https://www.elciudadano.com/politica/diputado-jaramillo-y-la-crisis-ppd/02/05/)
+- [elciudadano](https://www.elciudadano.com/pueblos/el-gran-enemigo-es-el-estado-de-chile/02/06/)
+- _… y 26 más (ver JSONL)_
+
+#### Enero 2007 (22)
+
+- [elciudadano](https://www.elciudadano.com/actualidad/otorgaran-creditos-a-pequena-mineria/01/03/)
+- [elciudadano](https://www.elciudadano.com/deportes/el-heidi-se-despide-del-futbol-en-valdivia/01/03/)
+- [elciudadano](https://www.elciudadano.com/deportes/osorno-tiene-cancha-sintetica-de-alta-tecnologia/01/03/)
+- [elciudadano](https://www.elciudadano.com/regiones/cobraran-peaje-por-transitar-en-rutas-de-la-region/01/03/)
+- [elciudadano](https://www.elciudadano.com/regiones/crearan-comision-para-velar-por-patrimonio-urbano/01/03/)
+- _… y 17 más (ver JSONL)_
+
+### 2006 — 280 artículos
+
+#### Diciembre 2006 (17)
+
+- [elciudadano](https://www.elciudadano.com/organizacion-social/fallo-historico-por-acoso-laboral/12/01/)
+- [elciudadano](https://www.elciudadano.com/actualidad/wallmapuwen-lanza-su-programa-politico/12/04/)
+- [elciudadano](https://www.elciudadano.com/educacion/condon-es-vedette-de-camapana-contra-el-sida/12/04/)
+- [elciudadano](https://www.elciudadano.com/educacion/matones-en-los-colegios/12/04/)
+- [elciudadano](https://www.elciudadano.com/regiones/construiran-parque-urbano/12/04/)
+- _… y 12 más (ver JSONL)_
+
+#### Noviembre 2006 (27)
+
+- [elciudadano](https://www.elciudadano.com/politica/el-libro-prohibido-por-la-armada/11/02/)
+- [elciudadano](https://www.elciudadano.com/politica/noam-chomsky-es-anarquista-%c2%a1uy-detenganlo/11/06/)
+- [elciudadano](https://www.elciudadano.com/actualidad/dos-temas-valdivianos-parte-x-y-final/11/07/)
+- [elciudadano](https://www.elciudadano.com/ciencia-tecnologia/hackers-en-chile-la-lucha-por-la-sociedad-del-conocimiento/11/08/)
+- [elciudadano](https://www.elciudadano.com/educacion/desobediencia-civil-simplemente-decir-%c2%a1no/11/09/)
+- _… y 22 más (ver JSONL)_
+
+#### Octubre 2006 (33)
+
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/el-agua-un-bien-cada-vez-mas-contaminado/10/02/)
+- [elciudadano](https://www.elciudadano.com/columnas/celco-y-su-pestilencia/10/05/)
+- [elciudadano](https://www.elciudadano.com/columnas/el-desempleo-en-chile/10/05/)
+- [elciudadano](https://www.elciudadano.com/economia/biocombustibles-la-apuesta-energetica-de-chile/10/05/)
+- [elciudadano](https://www.elciudadano.com/economia/desempleo-juvenil-manteniendo-las-esperanzas/10/05/)
+- _… y 28 más (ver JSONL)_
+
+#### Septiembre 2006 (35)
+
+- [elciudadano](https://www.elciudadano.com/entrevistas/dos-temas-valdivianos-parte-ix/09/03/)
+- [elciudadano](https://www.elciudadano.com/columnas/cartas-de-un-mortal-ud-y-el-mundo/09/04/)
+- [elciudadano](https://www.elciudadano.com/columnas/exijo-una-explicacion/09/04/)
+- [elciudadano](https://www.elciudadano.com/columnas/los-malos-vecinos/09/04/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/mehuin-se-defiende-como-gato-de-espalda/09/04/)
+- _… y 30 más (ver JSONL)_
+
+#### Agosto 2006 (21)
+
+- [elciudadano](https://www.elciudadano.com/entrevistas/dos-temas-valdivianos-parte-viii/08/07/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/ducto-de-celco-amenazaria-sitio-sagrado-mapuche/08/07/)
+- [elciudadano](https://www.elciudadano.com/columnas/antes-que-consumidores-ciudadanos/08/12/)
+- [elciudadano](https://www.elciudadano.com/columnas/cartas-de-un-mortal-ejercicio-contra-polillas/08/12/)
+- [elciudadano](https://www.elciudadano.com/columnas/iansa-una-dulce-amargura/08/12/)
+- _… y 16 más (ver JSONL)_
+
+#### Julio 2006 (35)
+
+- [elciudadano](https://www.elciudadano.com/entrevistas/parte-vi-caso-celco-opiniones-del-publico/07/01/)
+- [elciudadano](https://www.elciudadano.com/columnas/cartas-de-un-mortal-2/07/02/)
+- [elciudadano](https://www.elciudadano.com/columnas/la-reforma-educacional/07/02/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/bosques-y-comunidades-del-sur-de-chile/07/02/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/rio-bueno-empenado-en-cierre-de-vertedero/07/02/)
+- _… y 30 más (ver JSONL)_
+
+#### Junio 2006 (19)
+
+- [elciudadano](https://www.elciudadano.com/economia/puerto-de-corral-demanda-ayuda-de-valdivia/06/02/)
+- [elciudadano](https://www.elciudadano.com/educacion/principales-victimas-de-este-sistema-son-los-jovenes/06/07/)
+- [elciudadano](https://www.elciudadano.com/entrevistas/parte-v-caso-celco-%e2%80%93-entrevista-a-la-empresa/06/13/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/oferta-millonaria-de-celco-a-fipasur-divide-a-pescadores-artesanales/06/13/)
+- [elciudadano](https://www.elciudadano.com/ciencia-tecnologia/gmail-revoluciona-correo-electronico/06/17/)
+- _… y 14 más (ver JSONL)_
+
+#### Mayo 2006 (31)
+
+- [elciudadano](https://www.elciudadano.com/arte-cultura/las-aristas-de-un-artista-y-propulsor-de-la-identidad-local/04/30/)
+- [elciudadano](https://www.elciudadano.com/educacion/comunidad-de-antilhue-cumplira-cinco-anos-sin-escuela/04/30/)
+- [elciudadano](https://www.elciudadano.com/educacion/no-le-tengo-una-pizca-de-miedo-al-mansilla/04/30/)
+- [elciudadano](https://www.elciudadano.com/justicia/criminal-nazi-habria-vivido-en-la-provincia-de-valdivia/04/30/)
+- [elciudadano](https://www.elciudadano.com/justicia/criminal-nazi-habria-vivido-en-la-provincia-ii-parte/04/30/)
+- _… y 26 más (ver JSONL)_
+
+#### Abril 2006 (14)
+
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/%e2%80%9ccelco-es-el-verdadero-monstruo-al-que-hay-que-combatir%e2%80%9d/04/20/)
+- [elciudadano](https://www.elciudadano.com/editorial/editorial-25/04/21/)
+- [elciudadano](https://www.elciudadano.com/politica/andres-allamand-%c2%bfpresidenciable-2010/04/21/)
+- [elciudadano](https://www.elciudadano.com/politica/iniciativa-electronica-firmas-para-poner-urgencia-a-iniciativa-ciudadana-y-fin-al-binominal/04/21/)
+- [elciudadano](https://www.elciudadano.com/economia/trigo-trepa-fuerte/04/23/)
+- _… y 9 más (ver JSONL)_
+
+#### Marzo 2006 (31)
+
+- [elciudadano](https://www.elciudadano.com/reportaje-investigacion/una-larga-tarea-iniciativa-ciudadana/03/04/)
+- [elciudadano](https://www.elciudadano.com/educacion/santiago-bueras-perdio-su-ultima-batalla/03/05/)
+- [elciudadano](https://www.elciudadano.com/economia/fracaso-intento-de-recuperar-el-lino/03/05/)
+- [elciudadano](https://www.elciudadano.com/editorial/editorial-23-la-onda-expansiva/03/05/)
+- [elciudadano](https://www.elciudadano.com/justicia/que-hay-detras-del-misterio/03/05/)
+- _… y 26 más (ver JSONL)_
+
+#### Febrero 2006 (9)
+
+- [elciudadano](https://www.elciudadano.com/economia/un-error-que-costara-caro/02/10/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/sembrando-participacion-ciudadana/02/10/)
+- [elciudadano](https://www.elciudadano.com/politica/a-rio-bueno-fiscalia/02/10/)
+- [elciudadano](https://www.elciudadano.com/entrevistas/%e2%80%9clos-vamos-a-defender%e2%80%9d/02/10/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/hijas-no-reconocidas-del-sistema/02/11/)
+- _… y 4 más (ver JSONL)_
+
+#### Enero 2006 (8)
+
+- [elciudadano](https://www.elciudadano.com/actualidad/papa-bendijo-a-capuchinos/01/14/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/educacion-por-simbolicos-500/01/20/)
+- [elciudadano](https://www.elciudadano.com/politica/%c2%bffin-del-binominal-burocracia-legislativa/01/20/)
+- [elciudadano](https://www.elciudadano.com/politica/%e2%80%9cla-concertacion-no-puede-culpar-a-los-comunistas-si-sale-la-derecha%e2%80%9d/01/20/)
+- [elciudadano](https://www.elciudadano.com/politica/fallece-ex-alcalde-sergio-duhalde/01/20/)
+- _… y 3 más (ver JSONL)_
+
+### 2005 — 65 artículos
+
+#### Diciembre 2005 (9)
+
+- [elciudadano](https://www.elciudadano.com/politica/toma-de-tierras-de-pinera/12/03/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/negocio-de-mierda/12/06/)
+- [elciudadano](https://www.elciudadano.com/actualidad/nanas-con-sueldos-enanos/12/09/)
+- [elciudadano](https://www.elciudadano.com/educacion/educacion-especial-en-rio-bueno/12/15/)
+- [elciudadano](https://www.elciudadano.com/entrevistas/otras-alas-para-chile/12/15/)
+- _… y 4 más (ver JSONL)_
+
+#### Octubre 2005 (7)
+
+- [elciudadano](https://www.elciudadano.com/actualidad/valdivia-se-agradece-informacion/10/05/)
+- [elciudadano](https://www.elciudadano.com/politica/procesan-a-funcionarios-municipales/10/08/)
+- [elciudadano](https://www.elciudadano.com/politica/chile-la-alegria-aun-no-viene/10/10/)
+- [elciudadano](https://www.elciudadano.com/actualidad/las-pantallas-se-llenaron-de-magia/10/21/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/hidroelectrica-en-treguaco/10/21/)
+- _… y 2 más (ver JSONL)_
+
+#### Septiembre 2005 (11)
+
+- [elciudadano](https://www.elciudadano.com/organizacion-social/ciudadano-exige-respuesta-del-municipio/09/01/)
+- [elciudadano](https://www.elciudadano.com/politica/democidica-nacion/09/01/)
+- [elciudadano](https://www.elciudadano.com/politica/educadores-locales-tambien-fueron-evaluados/09/01/)
+- [elciudadano](https://www.elciudadano.com/economia/hogares-pobres-viven-con-77-mil-mensuales/09/09/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/la-union-aspira-ser-capital-regional/09/09/)
+- _… y 6 más (ver JSONL)_
+
+#### Agosto 2005 (9)
+
+- [elciudadano](https://www.elciudadano.com/actualidad/poblador-exige-a-essal-que-cumpla-su-contrato/07/31/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/mujer-mordida-por-perro-reclama-por-mala-atencion/08/11/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/real-apoyo/08/11/)
+- [elciudadano](https://www.elciudadano.com/politica/periodismo-otras-profesiones-y-el-sagrado-derecho-a-comer/08/11/)
+- [elciudadano](https://www.elciudadano.com/politica/sociedad-civil-y-democracia/08/15/)
+- _… y 4 más (ver JSONL)_
+
+#### Julio 2005 (6)
+
+- [elciudadano](https://www.elciudadano.com/politica/aclaracion-sobre-el-rol-periodistico-2/06/30/)
+- [elciudadano](https://www.elciudadano.com/politica/licitacion-areas-verdes-de-la-union-caso-al-desnudo/07/02/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/nueva-agrupacion-mapuche-en-la-union/07/16/)
+- [elciudadano](https://www.elciudadano.com/actualidad/consultorio-vs-hospital/07/23/)
+- [elciudadano](https://www.elciudadano.com/politica/sobre-la-intencion/07/24/)
+- _… y 1 más (ver JSONL)_
+
+#### Junio 2005 (5)
+
+- [elciudadano](https://www.elciudadano.com/politica/enrique-jaramillo-%e2%80%9cchile-vive-con-una-soga-al-cuello%e2%80%9d/06/08/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/comercio-en-las-callesvendedores-ambulantes-en-pie-de-guerra/06/09/)
+- [elciudadano](https://www.elciudadano.com/actualidad/mal-momento-toco-por-primera-vez-en-chile-y-lo-hizo-en-la-union/06/17/)
+- [elciudadano](https://www.elciudadano.com/pueblos/huilcaman-en-la-union/06/17/)
+- [elciudadano](https://www.elciudadano.com/justicia/%c2%bf%e2%80%9dmini-watergate%e2%80%9d-en-rio-bueno-nixon-reclama-inocencia/06/23/)
+
+#### Mayo 2005 (7)
+
+- [elciudadano](https://www.elciudadano.com/entrevistas/tommy-rey-rey-de-reyes/04/30/)
+- [elciudadano](https://www.elciudadano.com/medio-ambiente/el-caso-essal-cuentas-no-tan-claras-en-aguas-turbulentas/05/09/)
+- [elciudadano](https://www.elciudadano.com/justicia/obispo-ducasse-visto-la-comuna/05/12/)
+- [elciudadano](https://www.elciudadano.com/politica/confesion/05/15/)
+- [elciudadano](https://www.elciudadano.com/educacion/protestando-se-pasa-el-frio/05/19/)
+- _… y 2 más (ver JSONL)_
+
+#### Abril 2005 (11)
+
+- [elciudadano](https://www.elciudadano.com/justicia/comandante-en-jefe-del-ejercito-visita-la-union/04/03/)
+- [elciudadano](https://www.elciudadano.com/justicia/delincuencia/04/03/)
+- [elciudadano](https://www.elciudadano.com/organizacion-social/mujeres-emprendedoras/04/09/)
+- [elciudadano](https://www.elciudadano.com/deportes/piel-ardiente-y-mala-cara-un-dia-para-no-olvidar/04/25/)
+- [elciudadano](https://www.elciudadano.com/economia/progreso-para-el-rio-bueno-rural-el-fruto-del-trabajo-en-equipo/04/25/)
+- _… y 6 más (ver JSONL)_
 
 ## Fuente de datos
 

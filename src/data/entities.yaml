@@ -719,7 +719,11 @@ people:
   teresa_paneque:
     nombre: Teresa Paneque
     cargo: Astrónoma y divulgadora científica
-    notas: "Astrónoma y divulgadora científica chilena. En agosto de 2026 cuestionó los cambios a las bases del Fondecyt que priorizan áreas y exigen residencia definitiva a investigadores extranjeros."
+    notas: "Astrónoma y divulgadora científica chilena. En agosto de 2026 cuestionó los cambios a las bases del Fondecyt que priorizan áreas y exigen residencia definitiva a investigadores extranjeros (eventos 20260806-39 y 20260812-6), acusando a la ministra Ximena Lincolao de tomar 'decisiones ideológicas' y afirmando que 'el nacionalismo en ciencias no queda bien'. En 2025 fue una de las principales detractoras del proyecto INNA de hidrógeno verde en Taltal (evento 20251210-3)."
+  jose_maza:
+    nombre: José Maza
+    cargo: Astrónomo, Premio Nacional de Ciencias Exactas
+    notas: "Astrónomo chileno, Premio Nacional de Ciencias Exactas (1999) y académico de la Universidad de Chile. En diciembre de 2025 se sumó a las críticas de Teresa Paneque al proyecto INNA de hidrógeno verde en Taltal, sugiriendo ubicar el proyecto más al sur para evitar afectaciones a la observación astronómica (evento 20251210-3)."
   gustavo_sanhueza:
     nombre: Gustavo Sanhueza
     cargo: Senador (UDI)
@@ -2651,12 +2655,13 @@ people:
     notas: "Exsubsecretario de Hacienda del segundo gobierno de Sebastián Piñera. Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 decidió que el Presidente de la República reciba la renta más alta del Estado, fijando el sueldo bruto del próximo mandatario en $11.070.064."
   natalia_duco:
     nombre: Natalia Duco Soler
-    cargo: Ministra del Deporte
+    cargo: Exministra del Deporte (marzo-agosto 2026)
     cargos:
       - cargo: Ministra del Deporte
         organizacion: ministerio_del_deporte
         desde: 2026-03-11
-    notas: Atleta olímpica, especialista en lanzamiento de peso.
+        hasta: 2026-08-13
+    notas: "Atleta olímpica, especialista en lanzamiento de peso. Primera ministra del Deporte del gobierno de Kast (asumió el 11-mar-2026). Su gestión estuvo marcada por controversias: tensión con funcionarios del IND (20260801-4), choques con la prensa (20260805-14), la polémica por el Estadio Nacional/BTS (20260705-2), apoyo al rodeo como deporte nacional, y el caso del auto fiscal (Contraloría investigó el uso del vehículo el 23-abr-2026 para una celebración con asado y karaoke que la respuesta oficial calificó de 'reunión de trabajo'). Kast aceptó su renuncia y la del subsecretario Andrés Otero el 13-ago-2026, tras poco más de cinco meses en el cargo (evento 20260813-2)."
   tomas_rau:
     nombre: Tomás Rau Binder
     cargo: Ministro de Trabajo y Previsión Social
@@ -4621,6 +4626,15 @@ people:
     cargo: Presidente de la Federación de Trabajadores del Cobre
     organizacion: federacion_trabajadores_cobre
     notas: "Presidente de la Federación de Trabajadores del Cobre. La investigación de Contrapoder Chile (mayo 2026) señaló que habría impulsado activamente la nominación de Daniel Díaz Olguín al cupo laboral del directorio de Codelco."
+  fernando_pena:
+    nombre: Fernando Peña Rivera
+    cargo: Director Nacional de la Junaeb
+    organizacion: junaeb
+    notas: "Director Nacional de la Junta Nacional de Auxilio Escolar y Becas (Junaeb). En la Cuenta Pública Participativa 2026 (12-ago-2026) anunció la digitalización gradual de la Tarjeta Nacional Estudiantil (TNE), con licitación durante 2026 y una marcha blanca en la que convivirán el formato físico y digital ('se va a acabar el plástico gradualmente'), motivada por evitar los conflictos entre choferes y estudiantes (evento 20260812-7)."
+  juan_carlos_diaz:
+    nombre: Juan Carlos Díaz
+    cargo: Alcalde de Talca
+    notas: "Alcalde de Talca. En el marco de la Operación Cancerbero (13-ago-2026) señaló que el municipio conocía el plan para trasladar población penal a la cárcel La Laguna, pero que no fue informado de que se trataba de reos de alta peligrosidad ('nunca se nos manifestó la alta peligrosidad'), que la Delegación Presidencial le avisó el lunes anterior de la actividad del Presidente en el recinto y que el municipio exigiría garantías de seguridad y el cumplimiento de las medidas de mitigación para los vecinos de Panguilemo."
   juan_carlos_olguin:
     nombre: Juan Carlos Olguín
     cargo: Expresidente de la Federación de Trabajadores del Cobre
@@ -4657,8 +4671,8 @@ people:
     notas: "Jefe subrogante del Departamento de Alto Rendimiento del IND. El Mindep defendió su asignación por su trayectoria en gestión deportiva, en el contexto del conflicto entre la ministra Natalia Duco y los funcionarios del IND (agosto 2026)."
   andres_otero:
     nombre: Andrés Otero
-    cargo: Subsecretario del Deporte
-    notas: "Subsecretario del Deporte. Junto a la ministra Natalia Duco fue señalado por la Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID) como responsable de no responder a las solicitudes de reunión de los trabajadores del IND (julio-agosto 2026)."
+    cargo: Exsubsecretario del Deporte
+    notas: "Subsecretario del Deporte del gobierno de Kast. Junto a la ministra Natalia Duco fue señalado por la Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID) como responsable de no responder a las solicitudes de reunión de los trabajadores del IND (julio-agosto 2026). Renunció junto a la ministra el 13-ago-2026, tras el caso del auto fiscal (evento 20260813-2)."
   sebastian_edwards:
     nombre: Sebastián Edwards
     cargo: Economista de la UCLA
@@ -8084,6 +8098,34 @@ people:
     partido: Frente Amplio
     notas: "Concejal de Ñuñoa del Frente Amplio, crítico del alcalde Sebastián Sichel. El 10 de junio de 2026 fue condenado por injurias contra el alcalde (publicación en X del 28-oct-2025 sobre fondos concursables municipales), con firma periódica por un año, multa de 11 UTM y suspensión de cargos públicos por 85 días (BioBioChile 10-jun-2026; la condena quedó registrada como evento pendiente en TAREAS.md). En agosto de 2026 denunció las condiciones del Liceo Augusto D'Halmar (paro estudiantil, evento 20260811-16) y el 12-ago contrastó en X la revisión de mochilas de la Ley Escuelas Protegidas con el rechazo del gobierno al levantamiento del secreto bancario (fuente complementaria, evento 20260812-3)."
 
+  andrea_balladares:
+    nombre: Andrea Balladares
+    cargo: Senadora y presidenta de Renovación Nacional (RN)
+    partido: Renovación Nacional
+    notas: "Senadora y presidenta de Renovación Nacional (RN). En julio de 2026 se manifestó partidaria de reformar profundamente el INDH —'No soy partidaria de cerrarlo, sino de reformarlo profundamente'—, distanciándose de la UDI y el Partido Nacional Libertario, que pedían su eliminación (evento 20260722-6)."
+
+  pablo_mira:
+    nombre: Pablo Mira
+    cargo: Subsecretario de Derechos Humanos
+    partido: Renovación Nacional
+    notas: "Subsecretario de Derechos Humanos del gobierno de Kast, militante de Renovación Nacional. En julio de 2026 anunció que el Ejecutivo trabajaba en un anteproyecto de reforma 'integral' del INDH para presentarlo en el Congreso 'en los próximos meses' (evento 20260722-6)."
+
+  cristian_pertuze:
+    nombre: Cristián Pertuzé
+    cargo: Consejero del INDH, cientista político
+    notas: "Cientista político y consejero del Instituto Nacional de Derechos Humanos (INDH). En julio de 2026, en el debate por la reforma del organismo, planteó que toda reforma debe partir por resguardar la autonomía del INDH —'es un ente fiscalizador de la gestión del propio Estado'— y que la institución debería parecerse a la Contraloría o al Consejo para la Transparencia (evento 20260722-6)."
+
+  constanza_valdes:
+    nombre: Constanza Valdés
+    cargo: Abogada y consejera del INDH
+    notas: "Abogada y consejera del Instituto Nacional de Derechos Humanos (INDH). En julio de 2026, en el debate por la reforma del organismo, advirtió que la permanente negociación presupuestaria 'merma la autonomía' del INDH, aclaró que 'el instituto no es un Ministerio Público' y rechazó las discusiones sobre un supuesto 'nido de comunistas' en la institución (evento 20260722-6)."
+
+  loreto_carvajal:
+    nombre: Loreto Carvajal
+    cargo: Senadora (PPD)
+    partido: PPD
+    notas: "Senadora del PPD. En julio de 2026, ante la reforma del INDH impulsada por el gobierno de Kast, llamó a no confundir 'una modernización seria' con un intento de 'desmantelamiento' del organismo por parte de la administración (evento 20260722-6)."
+
 organizations:
   cencosud:
     nombre: Cencosud S.A.
@@ -9011,6 +9053,11 @@ organizations:
     tipo: empresa
     pais: Estados Unidos
     notas: "Empresa tecnológica estadounidense. En agosto de 2026 ingresó una nueva consulta de pertinencia al SEA por el Data Center Cerrillos (US$200 millones), que en su versión anterior fue revocado por el Tribunal Ambiental por su consumo de agua para enfriamiento; la nueva versión no usará agua."
+  aes_chile:
+    nombre: AES Chile (AES Andes)
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Filial chilena de AES Corporation (AES Andes). A fines de 2024 anunció la tramitación del proyecto INNA (Proyecto Integrado de Infraestructura Energética para la Generación de Hidrógeno y Amoníaco Verde), megainversión de US$10 mil millones en Taltal (Antofagasta) que generó rechazo de la comunidad astronómica por la contaminación lumínica que proyectaría sobre los observatorios de Paranal y Cerro Armazones (evento 20251210-3)."
   grenergy:
     nombre: Grenergy
     tipo: empresa
@@ -10225,6 +10272,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Edición chilena del diario español El País. Publica noticias de Chile desde su corresponsalía; no confundir con el país."
+  as_chile:
+    nombre: AS Chile
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Edición chilena del diario deportivo español Diario AS (Grupo Prisa), portal chile.as.com. Cubre deporte, incluyendo la gestión del Ministerio del Deporte."
   meganoticias:
     nombre: Meganoticias
     tipo: medio_comunicacion
@@ -11175,6 +11227,21 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Diario regional de La Serena-Coquimbo (diarioeldia.cl)."
+  encancha:
+    nombre: En Cancha
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (encancha.cl), sección En Lahora. Cubrió la digitalización de la TNE anunciada por Junaeb en agosto de 2026 (evento 20260812-7)."
+  redaccion:
+    nombre: Redacción.cl
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (redaccion.cl). Cubrió la crítica del rector de la UDP Carlos Peña a la 'condescendencia' de los medios con el gobierno de Kast (evento 20260810-41)."
+  el_puclitico:
+    nombre: El PUClítico
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (elpuclitico.cl). Cubrió la digitalización de la TNE anunciada por el director de Junaeb Fernando Peña en agosto de 2026 (evento 20260812-7)."
   aquachile:
     nombre: AquaChile
     tipo: empresa
@@ -11519,6 +11586,34 @@ organizations:
     notas: "Organización de la comunidad palestina en Chile. Su presidente, Manuel Hasbún, convocó en agosto de 2026 junto al municipio de Viña del Mar la exposición 'Anatomía de un genocidio' del fotoperiodista Belal Khaled, cuestionada por el embajador de Israel Peleg Lewi (evento 20260806-17)."
 
 cifras:
+  reos_trasladados_cancerbero:
+    nombre: Reos trasladados en la Operación Cancerbero (13-ago-2026)
+    unidad_default: reos
+    notas: "687 personas trasladadas el jueves 13-ago-2026 a la cárcel La Laguna de Talca según Presidencia; la primera etapa del operativo contempló cerca de 300 internos (37 de bandas de crimen organizado + 154 de alto compromiso delictual desde CDP Santiago Sur + 104 desde CCP Cauquenes) según el comunicado del Ministerio de Justicia (295) y gob.cl; ADN Radio consignó 191 en la jornada y CHV Noticias reportó ~400 llegados durante el día de un total de 687 programados."
+  reos_crimen_organizado_cancerbero:
+    nombre: Integrantes de bandas criminales trasladados en Cancerbero
+    unidad_default: reos
+    notas: "37 integrantes de organizaciones criminales trasladados a módulos de máxima seguridad en la Operación Cancerbero, incluidos 9 líderes y 28 miembros de bandas."
+  plazas_carcel_la_laguna:
+    nombre: Capacidad de la cárcel La Laguna de Talca
+    unidad_default: plazas
+    notas: "Capacidad máxima oficial del Complejo Penitenciario de Talca (La Laguna): 2.320 plazas una vez finalizada su habilitación, según gob.cl (16-ene-2025), MOP Concesiones (63.570 m²) y el Ministerio de Justicia. El comunicado gob.cl de la Operación Cancerbero (13-ago-2026) proyectó 2.097 plazas (1.679 nuevas + población actual), cifra que no coincide con la capacidad máxima y que el fact-check de Verifica UDP (8-may-2026) no contempla; los 2.600 de CHV Noticias no están corroborados por fuentes oficiales; los 3.000-3.500 citados por Kast en campaña (debate ANATEL dic-2025) fueron calificados FALSO por Verifica UDP. El tuit de Agustín Romero (2.320) coincide con la capacidad total del recinto."
+  camaras_carcel_la_laguna:
+    nombre: Cámaras de vigilancia de la cárcel La Laguna
+    unidad_default: cámaras
+    notas: "Más de 1.500 cámaras de vigilancia de alto estándar del Complejo Penitenciario de Talca (La Laguna), cifra corroborada por gob.cl en la inauguración (16-ene-2025: 'más de 1.500 cámaras') y por el ministro de Justicia Fernando Rabat en la Operación Cancerbero (13-ago-2026: '1.500 cámaras de vigilancia'). Los ~100 cámaras mencionados por CHV Noticias en el punto de prensa no están corroborados por fuentes oficiales."
+  celdas_disciplina_la_laguna:
+    nombre: Celdas para medidas disciplinarias de la cárcel La Laguna
+    unidad_default: celdas
+    notas: "48 celdas destinadas a medidas disciplinarias en el Complejo Penitenciario de Talca (La Laguna), según el punto de prensa oficial del 13-ago-2026 consignado por CHV Noticias."
+  estudiantes_con_tne:
+    nombre: Estudiantes beneficiarios de la TNE
+    unidad_default: estudiantes
+    notas: "Cerca de 2.000.000 de estudiantes acceden a tarifas rebajadas en el transporte público con la Tarjeta Nacional Estudiantil (TNE), según En Cancha (13-ago-2026) al cubrir el anuncio de digitalización de Junaeb."
+  celdas_alta_seguridad_la_laguna:
+    nombre: Celdas de alta seguridad de la cárcel La Laguna
+    unidad_default: celdas
+    notas: "104 celdas de alta seguridad en el Complejo Penitenciario de Talca (La Laguna), nueve de ellas ocupadas por los primeros líderes del crimen organizado trasladados en la Operación Cancerbero, según CHV Noticias (13-ago-2026)."
   votos_veto_anatocismo_senado:
     nombre: Votos a favor del veto al anatocismo en el Senado (12-ago-2026)
     unidad_default: votos

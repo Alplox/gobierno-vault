@@ -75,6 +75,7 @@ Referencia para investigación de noticias. Priorizar estas fuentes antes de bus
 
 | Institución | URL |
 |---|---|
+| Normas legales (BCN — LeyChile) | https://www.bcn.cl/leychile |
 | BCN — Historia Política | https://www.bcn.cl/historiapolitica |
 | Cámara de Diputadas y Diputados (Sesiones) | https://www.camara.cl/legislacion/sesiones/ |
 | Senado (Tramitación) | https://www.senado.cl/tramitacion-de-proyectos |
@@ -87,6 +88,22 @@ vault (gabinetes y gobiernos anteriores, `cargos[]` de personas en
 `entities.yaml`) y para enriquecer biografías de personas de la historia política
 chilena. Es una base de datos gubernamental, no prensa: usar sus datos como
 hecho primario y citarla en `sources.yaml` con `medio: Biblioteca del Congreso`.
+
+## Remuneraciones del Presidente y transparencia
+
+Referencia para investigar sueldos/remuneraciones de autoridades (ej. el sueldo
+del Presidente), su reajuste legal y su actualización por IPC.
+
+| Institución | URL |
+|---|---|
+| Presidencia — Gobierno Transparente (portal) | https://transparenciaactiva.presidencia.cl/ |
+| Presidencia — Gobierno Transparente 2014 (Dotación de Planta) | https://transparenciaactiva.presidencia.cl/2014/per_planta.html |
+| Presidencia — Gobierno Transparente 2018 (Dotación de Planta) | https://transparenciaactiva.presidencia.cl/2018/per_planta.html |
+| Presidencia — Gobierno Transparente 2018 (Remuneraciones) | https://transparenciaactiva.presidencia.cl/2018/per_remuneraciones.html |
+| Senado — Informe de Transparencia | https://tramitacion.senado.cl/appsenado/index.php?ac=informeTransparencia&anno=2023&mesid=0&mo=transparencia&tipo=10 |
+| Comisión para la Fijación de Remuneraciones — Registro Público | https://comision38bis.gob.cl/registro-publico |
+| INE — Calculadora IPC (actualización de valores) | https://calculadoraipc.ine.gob.cl/ |
+| INE — Manual de uso de la Calculadora IPC (PDF) | https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/metodologias/base-anual-2018-100/metodolog%C3%ADa.pdf |
 
 ## Referencias de investigación (no prensa)
 

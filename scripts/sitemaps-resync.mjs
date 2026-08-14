@@ -19,6 +19,8 @@
  * Uso:
  *   pnpm run sitemaps-resync                 # resync de los medios del catálogo
  *   pnpm run sitemaps-resync -- --stale 12   # caché más corto (news frescas)
+ *   pnpm run sitemaps-resync -- --days 7     # solo contenido reciente (sin
+ *                                            # recargar el catálogo completo)
  */
 
 import { readFileSync } from 'node:fs';
@@ -34,6 +36,14 @@ const NODE = process.execPath;
 const args = process.argv.slice(2);
 const staleArg = args.indexOf('--stale');
 const stale = staleArg >= 0 && args[staleArg + 1] ? args[staleArg + 1] : '24';
+// Flags opcionales de ventana temporal, pasados tal cual a sync-sitemaps.mjs
+// (--since <YYYY-MM-DD> o --days <n>): resync solo de contenido reciente.
+const sinceArg = args.indexOf('--since');
+const daysArg = args.indexOf('--days');
+const syncExtra = [
+  ...(sinceArg >= 0 ? ['--since', args[sinceArg + 1]] : []),
+  ...(daysArg >= 0 ? ['--days', args[daysArg + 1]] : []),
+];
 
 function run(script, scriptArgs = []) {
   console.log(`\n▶ node scripts/${script} ${scriptArgs.join(' ')}`);
@@ -62,7 +72,7 @@ if (medios.length === 0) {
 }
 
 console.log(`Resync incremental de: ${medios.join(', ')}`);
-run('sync-sitemaps.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale]);
+run('sync-sitemaps.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale, ...syncExtra]);
 run('sitemaps-index.mjs');
 run('sitemaps-backup.mjs');
 console.log('\n✅ Resync completo (catálogo, README y backup actualizados).');

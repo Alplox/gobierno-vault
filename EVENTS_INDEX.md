@@ -605,6 +605,7 @@
 - [2026/07/20260722-3 - Arranca debate por contratos por hora: Gobierno lo defiende como flexibilidad laboral](src/content/events/2026/07/20260722-3.md) — 3 fuentes
 - [2026/07/20260722-4 - Gobernadores acusan a ministro Poduje de crear conflictos artificiales](src/content/events/2026/07/20260722-4.md) — 3 fuentes
 - [2026/07/20260722-5 - Gobierno amplía Estado de Catástrofe a Tierra Amarilla](src/content/events/2026/07/20260722-5.md) — 3 fuentes
+- [2026/07/20260722-6 - Republicanos, UDI y libertarios presionan para cerrar el INDH, mientras RN apuesta por reformarlo](src/content/events/2026/07/20260722-6.md) — 4 fuentes
 - [2026/07/20260723-1 - Balance sistema frontal: 13 fallecidos, 61.557 aislados y 3.532 damnificados](src/content/events/2026/07/20260723-1.md) — 1 fuente
 - [2026/07/20260723-10 - Renuncia subsecretario de Hacienda Juan Pablo Rodriguez tras positivo en test de drogas](src/content/events/2026/07/20260723-10.md) — 12 fuentes
 - [2026/07/20260723-11 - Kast acepta renuncia del subsecretario de Hacienda Juan Pablo Rodríguez tras test de drogas positivo](src/content/events/2026/07/20260723-11.md) — 2 fuentes
@@ -900,7 +901,7 @@
 - [2026/08/20260806-8 - Revelan la identidad del imputado del caso 'ring raja' de Vitacura: Andrés Arrieta, gerente de Restomarket, en prisión preventiva](src/content/events/2026/08/20260806-8.md) — 2 fuentes
 - [2026/08/20260806-9 - Silencio de Kast sobre indultos a exuniformados abre tensión en el oficialismo; Carter pide indultar a los 'injustamente condenados' y Rendón responde con videos del estallido](src/content/events/2026/08/20260806-9.md) — 6 fuentes
 - [2026/08/20260807-1 - Denuncian a Kast ante Contraloría por la cifra de '218 mil robos violentos' de su cadena nacional: Rendón acusa falta a la probidad y el Ministerio de Seguridad admite 'error de referencia'](src/content/events/2026/08/20260807-1.md) — 5 fuentes
-- [2026/08/20260807-10 - La contradicción en privacidad de la ACOT: el gobierno defiende el secreto bancario pero contempla la interceptación de telecomunicaciones en el nuevo estado de excepción](src/content/events/2026/08/20260807-10.md) — 13 fuentes
+- [2026/08/20260807-10 - La contradicción en privacidad de la ACOT: el gobierno defiende el secreto bancario pero contempla la interceptación de telecomunicaciones en el nuevo estado de excepción](src/content/events/2026/08/20260807-10.md) — 14 fuentes
 - [2026/08/20260807-11 - Gobierno reporta 50% de avance en zanjas del Plan Fronterizo de la Macrozona Norte y 80% en camellones (al 11 de julio)](src/content/events/2026/08/20260807-11.md) — 10 fuentes
 - [2026/08/20260807-12 - Bío Bío Investiga: cientos de fiscales recibieron correo extorsivo pidiendo US$750 en bitcoins desde una cuenta con dominio @fiscales.cl](src/content/events/2026/08/20260807-12.md) — 1 fuente
 - [2026/08/20260807-13 - Corte de Apelaciones de La Serena declara ilegal el doble cobro del CAE ejecutado por la TGR (precedente para frenar embargos administrativos)](src/content/events/2026/08/20260807-13.md) — 4 fuentes
@@ -947,7 +948,7 @@
 - [2026/08/20260809-7 - RN Valparaíso eleva al Tribunal Supremo del partido los dichos de Camila Flores contra Campillai ('señora de feria')](src/content/events/2026/08/20260809-7.md) — 1 fuente
 - [2026/08/20260809-8 - Jorge Baradit difunde fotografía de la zanja fronteriza tras cruzar a Perú: 'me dio vergüenza ajena' (#LaZanja)](src/content/events/2026/08/20260809-8.md) — 6 fuentes
 - [2026/08/20260809-9 - El Hilo revela honorarios de $7,5 millones mensuales del comisionado Soto Valenzuela mientras el Plan Fronterizo reporta 50% de avance en zanjas](src/content/events/2026/08/20260809-9.md) — 3 fuentes
-- [2026/08/20260810-1 - Kast fija la meta de 6,5% de desempleo 'a finales del gobierno' y proyecta un crecimiento 'importante' desde 2027](src/content/events/2026/08/20260810-1.md) — 23 fuentes
+- [2026/08/20260810-1 - Kast fija la meta de 6,5% de desempleo 'a finales del gobierno' y proyecta un crecimiento 'importante' desde 2027](src/content/events/2026/08/20260810-1.md) — 25 fuentes
 - [2026/08/20260810-10 - Cámara aprueba los tres vetos de Kast a la megarreforma y los despacha al Senado](src/content/events/2026/08/20260810-10.md) — 6 fuentes
 - [2026/08/20260810-11 - Rodrigo Rettig critica la fórmula 'militares a la calle' con datos de Ecuador: récord histórico de homicidios en 2025 pese a los estados de excepción](src/content/events/2026/08/20260810-11.md) — 12 fuentes
 - [2026/08/20260810-12 - Comisión de Seguridad de la Cámara aprueba en general el Registro Nacional de Vándalos e Incivilidades](src/content/events/2026/08/20260810-12.md) — 3 fuentes
@@ -982,6 +983,7 @@
 - [2026/08/20260810-39 - Radiografía de los SLEP: 639.156 alumnos siguen fuera del sistema y el Gobierno cambia las reglas de la desmunicipalización](src/content/events/2026/08/20260810-39.md) — 4 fuentes
 - [2026/08/20260810-4 - Terremoto de magnitud 7,4 sacude el occidente de Colombia y Kast ofrece el apoyo de Chile](src/content/events/2026/08/20260810-4.md) — 5 fuentes
 - [2026/08/20260810-40 - Ministro Poduje anuncia demolición de bloques en Mirador del Pacífico de Talcahuano por fallas estructurales](src/content/events/2026/08/20260810-40.md) — 1 fuente
+- [2026/08/20260810-41 - Carlos Peña critica la 'condescendencia' de los medios con el gobierno de Kast y la 'mala comprensión' de las humanidades en las bases del Fondecyt](src/content/events/2026/08/20260810-41.md) — 4 fuentes
 - [2026/08/20260810-5 - Gobierno autoriza a Codelco a capitalizar el 100% de las utilidades de 2025 (US$2.423 millones)](src/content/events/2026/08/20260810-5.md) — 16 fuentes
 - [2026/08/20260810-6 - Codelco informa renuncia de Gonzalo Lara Skiba, vicepresidente de Integración de Operaciones Andina](src/content/events/2026/08/20260810-6.md) — 3 fuentes
 - [2026/08/20260810-7 - Kast firma en La Moneda la reforma constitucional de la ACOT y la envía al Congreso: 'Sin seguridad no hay libertad'](src/content/events/2026/08/20260810-7.md) — 13 fuentes
@@ -1006,11 +1008,15 @@
 - [2026/08/20260811-7 - Audios de la seremi de Economía de Arica revelan presión para favorecer a republicanos en cargos públicos del Sernac](src/content/events/2026/08/20260811-7.md) — 1 fuente
 - [2026/08/20260811-8 - Chile entra al top 15 mundial de países con mayor alza en el precio de las viviendas según índice de Knight Frank](src/content/events/2026/08/20260811-8.md) — 1 fuente
 - [2026/08/20260811-9 - División en la derecha por la reforma constitucional de la ACOT: el ingreso al Senado se posterga y Arrau negocia para acotar el texto](src/content/events/2026/08/20260811-9.md) — 4 fuentes
-- [2026/08/20260812-1 - Quiroz minimiza el conflicto con Alvarado por el requerimiento al TC: 'No es mi responsabilidad informar a cada persona'](src/content/events/2026/08/20260812-1.md) — 6 fuentes
+- [2026/08/20260812-1 - Quiroz minimiza el conflicto con Alvarado por el requerimiento al TC: 'No es mi responsabilidad informar a cada persona'](src/content/events/2026/08/20260812-1.md) — 9 fuentes
 - [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 4 fuentes
-- [2026/08/20260812-3 - Kast promulga la Ley Escuelas Protegidas: revisión de mochilas en colegios y mayores facultades docentes, con el lema 'el que nada hace, nada teme'](src/content/events/2026/08/20260812-3.md) — 23 fuentes
+- [2026/08/20260812-3 - Kast promulga la Ley Escuelas Protegidas: revisión de mochilas en colegios y mayores facultades docentes, con el lema 'el que nada hace, nada teme'](src/content/events/2026/08/20260812-3.md) — 24 fuentes
 - [2026/08/20260812-4 - Diputados del Partido Cristiano presentan proyectos de resolución para instaurar el Día Nacional de la Oración y el Día Nacional de la Biblia](src/content/events/2026/08/20260812-4.md) — 5 fuentes
 - [2026/08/20260812-5 - Matthei critica la reforma constitucional de la ACOT: 'ha fracasado en todos los países, salvo El Salvador, pero eso no es democracia'](src/content/events/2026/08/20260812-5.md) — 3 fuentes
+- [2026/08/20260812-6 - Tere Paneque acusa a la ministra Lincolao de 'decisiones ideológicas' en la ciencia: 'El nacionalismo en ciencias no queda bien'](src/content/events/2026/08/20260812-6.md) — 6 fuentes
+- [2026/08/20260812-7 - Junaeb anuncia la digitalización gradual de la TNE: licitación en 2026 y fin progresivo del plástico](src/content/events/2026/08/20260812-7.md) — 5 fuentes
+- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 19 fuentes
+- [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 8 fuentes
 
 ## 2025
 
@@ -1040,6 +1046,7 @@
 - [2025/10/20251022-1 - Boric lanza la Política Nacional de Seguridad Pública 2025-2031 a menos de cinco meses de dejar La Moneda](src/content/events/2025/10/20251022-1.md) — 4 fuentes
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — 2 fuentes
 - [2025/11/20251105-1 - Operación Fortaleza 3: megaoperativo nacional de Carabineros y PDI deja 2.495 detenidos y 452 kilos de droga incautados bajo el gobierno de Boric](src/content/events/2025/11/20251105-1.md) — 5 fuentes
+- [2025/11/20251109-1 - Vocero de Kast dice que el comando 'no va a entrar' en el debate de DD.HH. e indultos, en plena polémica por Kaiser y Punta Peuco](src/content/events/2025/11/20251109-1.md) — 3 fuentes
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
 - [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
@@ -1049,9 +1056,10 @@
 - [2025/12/20251203-1 - Atlas Network: la desinformacion como arma neoliberal](src/content/events/2025/12/20251203-1.md) — 4 fuentes
 - [2025/12/20251203-2 - Columna de El Líbero analiza la estrategia de Kast y su pinza con Kaiser de cara a la elección](src/content/events/2025/12/20251203-2.md) — 2 fuentes
 - [2025/12/20251203-3 - Jara y Kast protagonizan el debate ARCHI, el más cruzado de la campaña, con inédito protagonismo de sus barras](src/content/events/2025/12/20251203-3.md) — 1 fuente
-- [2025/12/20251209-1 - Jara y Kast protagonizan el debate ANATEL, el último cara a cara antes de la segunda vuelta](src/content/events/2025/12/20251209-1.md) — 3 fuentes
+- [2025/12/20251209-1 - Jara y Kast protagonizan el debate ANATEL, el último cara a cara antes de la segunda vuelta](src/content/events/2025/12/20251209-1.md) — 4 fuentes
 - [2025/12/20251210-1 - Kast arremete contra Boric en campaña: 'El miedo no es inventado' y pregunta si sacaría a su guagua a las 2 de la mañana a Plaza Brasil](src/content/events/2025/12/20251210-1.md) — 2 fuentes
 - [2025/12/20251210-2 - El enredo por las 40 horas: Kast asegura que no tocará derechos adquiridos tras la polémica por su propuesta para pymes](src/content/events/2025/12/20251210-2.md) — 9 fuentes
+- [2025/12/20251210-3 - Megaproyecto INNA: la polémica por el hidrógeno verde en Taltal y las posiciones de Jara y Kast frente a los cielos astronómicos](src/content/events/2025/12/20251210-3.md) — 5 fuentes
 - [2025/12/20251214-1 - José Antonio Kast gana la segunda vuelta presidencial con 58,16% de los votos](src/content/events/2025/12/20251214-1.md) — 4 fuentes
 - [2025/12/20251215-1 - Cadem informa que su sondeo privado durante la veda proyectó correctamente el resultado del balotaje (58% para Kast)](src/content/events/2025/12/20251215-1.md) — 1 fuente
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — 2 fuentes

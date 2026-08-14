@@ -155,6 +155,7 @@ const WHITELIST_MEDIOS = new Set([
   'InSight Crime',
   'OECO (Observatorio Ecuatoriano de Crimen Organizado)',
   'Banco Mundial',
+  'Vergara 240 (Escuela de Periodismo UDP)',
 ]);
 
 let errors = 0;

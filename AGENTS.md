@@ -231,6 +231,7 @@ svg_backup:
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
 13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS.md` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
 14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
+15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS.md` solo lo que quede genuinamente pendiente.
 
 ## Pagina /events: filtros y busqueda en cliente
 
@@ -441,8 +442,8 @@ NO guarda el cuerpo de los artículos.
 
 | Comando | Función |
 |---|---|
-| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica |
-| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`) |
+| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since`/`--days` sincroniza SOLO lo reciente (filtra sub-sitemaps históricos por la fecha de su URL —BioBio/CNN/Meganoticias/Mestizos/Publimetro/FastCheck—, omite por el rango del XML cacheado los que no llevan fecha —Yoast/Arc XP— y no toca entradas antiguas); incompatible con `--replace` |
+| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). Acepta `--since YYYY-MM-DD` / `--days N` para resync solo de contenido reciente (pasa el flag a `sitemaps-sync`) |
 | `pnpm run sitemaps-index` | genera `sitemaps/README.md` (década → año → mes, conteos + muestras) Y la sección "Medios registrados" de AGENTS.md (marcador `
 
 <!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->
@@ -454,36 +455,36 @@ NO guarda el cuerpo de los artículos.
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 |---|---|---|---|---|---|
-| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 100 | 1 |
+| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 200 | 1 |
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
-| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.888 | 4 |
-| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.137 | 10 |
-| `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.415 | 18 |
-| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 226.812 | 16 |
-| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.005 | 1 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.908 | 4 |
+| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.158 | 10 |
+| `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
+| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.126 | 16 |
+| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.712 | 1 |
 | `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
 | `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 100 | 1 |
 | `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.776 | 18 |
-| `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.415 | 4 |
-| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 276.998 | 18 |
-| `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.683 | 10 |
+| `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.429 | 4 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.427 | 22 |
+| `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.721 | 10 |
 | `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
-| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 250.948 | 17 |
-| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 101 | 1 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.135 | 17 |
+| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 201 | 1 |
 | `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
-| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.520 | 7 |
+| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.741 | 7 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
-| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 5.815 | 7 |
-| `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.737 | 7 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 8.421 | 1 |
+| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.137 | 7 |
+| `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 10.399 | 1 |
 | `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
-| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 5 | 1 |
-| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.892 | 18 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 64 | 1 |
+| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.977 | 18 |
 | `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.979 | 7 |
-| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 47.735 | 8 |
-| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.756 | 19 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 47.897 | 8 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.938 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
 
@@ -700,13 +701,13 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 822
+**Total de eventos:** 830
 
-**Cobertura de fuentes:** 445 de 822 eventos con 3+ fuentes (377 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 453 de 830 eventos con 3+ fuentes (377 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 621
-- 2025: 46
+- 2026: 627
+- 2025: 48
 - 2024: 26
 - 2023: 17
 - 2022: 14
@@ -726,32 +727,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (311)
-- Justicia (199)
+- Politica (317)
+- Justicia (200)
 - Economia (164)
-- Defensa y seguridad (125)
-- Administración pública (106)
-- Derechos humanos (76)
-- Proceso legislativo (75)
+- Defensa y seguridad (126)
+- Administración pública (107)
+- Derechos humanos (78)
+- Proceso legislativo (76)
+- Corrupción (69)
 - Finanzas publicas (69)
-- Corrupción (68)
-- Cambios en el gabinete (58)
+- Cambios en el gabinete (59)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (181)
-- reaccion (100)
-- declaracion (99)
+- accion (183)
+- declaracion (102)
+- reaccion (102)
 - resultado (94)
 - investigacion (85)
 - publicacion (82)
-- anuncio (61)
+- anuncio (62)
 - fallo_judicial (43)
 - votacion (23)
 - proyecto (17)
 
 **Entidades registradas:**
-- Personas: 1208
-- Organizaciones: 712
-- Cifras: 704
-- Fuentes: 2691
+- Personas: 1216
+- Organizaciones: 717
+- Cifras: 711
+- Fuentes: 2749
 - Temas: 74
