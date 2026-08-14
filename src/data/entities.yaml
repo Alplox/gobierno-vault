@@ -208,6 +208,10 @@ people:
     nombre: Julio Ponce Lerou
     cargo: Empresario
     notas: "Empresario chileno, ex yerno de Augusto Pinochet y controlador de las sociedades cascadas ligadas a SQM. En noviembre de 2020 pagó la multa de $2.152 millones que la CMF le impuso por el caso Cascadas, tras una polémica rebaja del monto original."
+  jose_uribe:
+    nombre: José Uribe
+    cargo: Fiscal de San Antonio
+    notas: "Fiscal de la Fiscalía SAC de San Antonio que dirigió el operativo contra la red de narcotráfico transnacional con carabinero formalizado (agosto 2026). Señaló que el carabinero 'manejaba seguridad respecto a la organización y labores logísticas de arriendo de inmuebles, entre otras labores' y que la organización 'prestaba labores de transporte e internación de droga a distintos cárteles del mundo, tanto europeos, americanos como de Oceanía'."
   angel_valencia:
     nombre: Ángel Valencia
     cargo: Fiscal Nacional de Chile
@@ -328,7 +332,27 @@ people:
     nombre: Luis Mariano Rendón Escobar
     cargo: Activista, abogado y presidente de la Fundación Memoria Histórica
     organizacion: fundacion_memoria_historica
-    notas: "Activista y abogado, presidente de la Fundación Memoria Histórica. En febrero de 2026 denunció ante la Contraloría el uso del escudo nacional en la banda presidencial de José Antonio Kast. En agosto de 2026 respondió al llamado del senador Rodolfo Carter a indultar a los 'injustamente condenados' por hacer su trabajo durante el estallido social con un video que compila imágenes de carabineros golpeando a manifestantes pacíficos, y el 7 de agosto denunció ante la Contraloría al presidente Kast por la cifra de '218 mil robos violentos' entregada en su cadena nacional del 5 de agosto, que el CEAD contrasta con 69.777 casos reales en 2025."
+    notas: "Activista y abogado, presidente de la Fundación Memoria Histórica. En febrero de 2026 denunció ante la Contraloría el uso del escudo nacional en la banda presidencial de José Antonio Kast. En agosto de 2026 respondió al llamado del senador Rodolfo Carter a indultar a los 'injustamente condenados' por hacer su trabajo durante el estallido social con un video que compila imágenes de carabineros golpeando a manifestantes pacíficos, y el 7 de agosto denunció ante la Contraloría al presidente Kast por la cifra de '218 mil robos violentos' entregada en su cadena nacional del 5 de agosto, que el CEAD contrasta con 69.777 casos reales en 2025. El 13 de agosto de 2026 informó que el Juzgado de Garantía de Valparaíso rechazó dos solicitudes de la defensa de la senadora Camila Flores en el caso cuota Flores (excluirlo como querellante y limitar el acceso a los dispositivos incautados)."
+  samuel_donoso:
+    nombre: Samuel Donoso
+    cargo: Abogado defensor de Camila Flores
+    notas: "Abogado que representa a la senadora Camila Flores (RN) en el caso cuota Flores. El 13 de agosto de 2026 el Juzgado de Garantía de Valparaíso rechazó dos solicitudes presentadas por su defensa: excluir al abogado querellante Luis Mariano Rendón y limitar el acceso de la Fiscalía a los dispositivos electrónicos incautados. El querellante Rendón lo vinculó públicamente al 'team Hermosilla', afirmación que Donoso desmintió señalando que 'nunca he trabajado con él'."
+  ymay_ortiz_pulgar:
+    nombre: Ymay Ortiz Pulgar
+    cargo: Querellante en el caso cuota Flores
+    notas: "Querellante en el caso cuota Flores contra la senadora Camila Flores (RN). Su querella por fraude al fisco y malversación de caudales públicos fue declarada admisible por el Juzgado de Garantía de Valparaíso el 13 de agosto de 2026, pudiendo seguir interviniendo en la causa junto a Luis Mariano Rendón."
+  andres_cruz:
+    nombre: Andrés Cruz
+    cargo: Académico UdeC y exfiscal
+    notas: "Académico de la Universidad de Concepción y exfiscal. El 13 de agosto de 2026, a propósito del caso cuota Flores, señaló que los delitos asociados a la senadora Camila Flores pueden ir desde un posible cohecho o tráfico de influencias."
+  claudio_uribe:
+    nombre: Claudio Uribe
+    cargo: Exfiscal y expresidente de la Asociación Nacional de Fiscales
+    notas: "Expresidente de la Asociación Nacional de Fiscales. El 13 de agosto de 2026, sobre el caso cuota Flores, apuntó que pese a tratarse de una investigación por delito económico, si la Fiscalía pone el pie en el acelerador podría solicitarse de forma diligente el desafuero de la parlamentaria Camila Flores."
+  emilio_schneider:
+    nombre: Emilio Schneider
+    cargo: Comunicador y conductor de televisión
+    notas: "Comunicador y conductor de televisión chileno. El 13 de agosto de 2026 criticó en X la transmisión en vivo de la Operación Cancerbero, calificándola de 'show' del gobierno para recuperar credibilidad en seguridad: 'Este es el gobierno de la performance antes que las políticas públicas. Lucran con el miedo a la inseguridad'."
   matias_toledo:
     nombre: Matías Toledo
     cargo: Alcalde de Puente Alto (Ind.)
@@ -569,6 +593,10 @@ people:
       - cargo: Senador (UDI)
         organizacion: udi
         desde: 2026-03-11
+  pete_hegseth:
+    nombre: Pete Hegseth
+    cargo: Secretario de Guerra de Estados Unidos
+    notas: "Secretario de Guerra de Estados Unidos en la administración de Donald Trump. En agosto de 2026 llamó a las naciones de Latinoamérica a incrementar el gasto militar, colaborar contra el crimen organizado y abandonar la Corte Penal Internacional como parte del programa 'Escudo de las Américas'; el ministro de Defensa chileno Fernando Barros expresó reparos y aclaró que Chile aún no se ha suscrito (evento 20260813-8)."
   fernando_barros:
     nombre: Fernando Barros Tocornal
     cargo: Ministro de Defensa
@@ -1381,6 +1409,14 @@ people:
     nombre: Ruben Perez
     cargo: Director Nacional de Gendarmeria
     organizacion: gendarmeria_chile
+  sergio_lavandero:
+    nombre: Sergio Lavandero
+    cargo: Presidente del Instituto de Chile y de la Academia Chilena de Ciencias
+    notas: "Bioquímico y académico, presidente del Instituto de Chile y de la Academia Chilena de Ciencias. Planteó reparos a los cambios del Fondecyt de Postdoctorado 2027, aludiendo a que la agencia que entrega los recursos 'carece de un consejo científico y tecnológico que aporte una visión estratégica de largo plazo', e invitó a la ministra Ximena Lincolao a conversar directamente con las academias (agosto 2026, evento 20260806-39)."
+  alejandra_mizala:
+    nombre: Alejandra Mizala
+    cargo: Rectora de la Universidad de Chile
+    notas: "Rectora de la Universidad de Chile. En agosto de 2026 cuestionó los cambios al Fondecyt de Postdoctorado 2027 en una columna en El País, planteando que sería un error reducir la investigación estratégica a ciencia aplicada y desarrollo tecnológico (evento 20260806-39)."
   rafael_araos:
     nombre: Rafael Araos
     cargo: Ex Subsecretario de Ciencia, Tecnologia, Conocimiento e Innovacion
@@ -2694,6 +2730,10 @@ people:
     nombre: Leslie Sánchez
     cargo: Abogada
     notas: "Abogada. Una de las abogadas requirentes que celebró el fallo del Tribunal Constitucional del 13-ago-2026 contra normas de la megarreforma (evento 20260813-4)."
+  tom_morello:
+    nombre: Tom Morello
+    cargo: Guitarrista de Rage Against the Machine
+    notas: "Guitarrista de Rage Against the Machine, se ha definido públicamente como socialista. Su banda fue parte de la banda sonora del despliegue comunicacional de la Operación Cancerbero (13-ago-2026), cuando el Gobierno chileno usó 'Bulls on Parade' en sus registros audiovisuales — una canción crítica al gasto militar y al capitalismo (evento 20260813-1)."
   tomas_rau:
     nombre: Tomás Rau Binder
     cargo: Ministro de Trabajo y Previsión Social
@@ -3035,7 +3075,7 @@ people:
       - cargo: Diputada (FA)
         organizacion: frente_amplio
         desde: 2026-03-11
-    notas: Diputada frenteamplista, criticó sueldos de asesores presidenciales.
+    notas: "Diputada frenteamplista, criticó sueldos de asesores presidenciales. El 13-ago-2026 resumió en X la renuncia de la ministra Natalia Duco con el conteo de salidas del gabinete de Kast: 'En 5 meses tenemos 3 ministras, 6 subsecretarios y 33 seremis que han renunciado o los han sacado del gobierno. La improvisación total' — cifras consistentes con los registros de prensa (38 autoridades al 11-ago según BioBioChile; 40 tras Duco/Otero), con la discrepancia de seremis (31 vs 33) documentada en el evento 20260813-2."
   dorothy_perez:
     nombre: Dorothy Pérez
     cargo: Contralora General de la República
@@ -3431,7 +3471,7 @@ people:
       - cargo: Diputado (FA)
         organizacion: frente_amplio
         desde: 2026-03-11
-    notas: "Junto a Gonzalo Winter (FA) cuestionó la estrategia del documento filtrado 'Desafío 90', acusando que buscaba saltarse la deliberación democrática (29 mayo 2026)."
+    notas: "Diputado del Frente Amplio. Junto a Gonzalo Winter cuestionó la estrategia del documento filtrado 'Desafío 90', acusando que buscaba saltarse la deliberación democrática (29 mayo 2026). El 13-ago-2026 celebró en X el fallo del TC contra la megarreforma resumiendo la norma ambiental caída: 'El Gobierno de Kast quería que si una empresa obtenía un permiso ambiental y después la justicia determinaba que era ilegal, todos los chilenos termináramos pagando los gastos de su inversión' (caracterización verificada por la prensa, evento 20260813-4)."
   sebastian_terraza:
     nombre: Sebastián Terraza
     cargo: Exvicepresidente del Partido Nacional Libertario en Los Ríos
@@ -3722,6 +3762,10 @@ people:
     cargo: Diputada (PC)
     organizacion: partido_comunista
     notas: "Diputada del Partido Comunista y presidenta de la Agrupación de Familiares de Detenidos Desaparecidos (AFDD). En agosto de 2026 ofició a la Contraloría para que investigue las cirugías estéticas de Janet Morales, esposa del general director de Carabineros Marcelo Araya, cubiertas por Dipreca; la CGR dio plazo de 10 días a Carabineros y al Ministerio de Seguridad y solicitó una investigación especial de auditoría."
+  estephania_brutus_renois:
+    nombre: Estephania Brutus Renois
+    cargo: Ciudadana haitiana residente en Chile
+    notas: "Ciudadana haitiana con residencia definitiva vigente en Chile. El 9-ago-2026 se le negó el ingreso a Chile en el Aeropuerto Arturo Merino Benítez junto a sus dos hijas chilenas de 6 y 9 años; la familia fue reembarcada a Estados Unidos y quedó bajo custodia del ICE con riesgo de deportación a Haití, en el caso denunciado por la diputada Lorena Fries (evento 20260812-12)."
   lorena_fries:
     nombre: Lorena Fries
     cargo: Diputada Frente Amplio
@@ -5796,6 +5840,11 @@ people:
         desde: 2015-05-11
         hasta: 2017-08-31
 
+  rodrigo_sauerbaum:
+    nombre: Rodrigo Sauerbaum
+    cargo: Director del Servicio Nacional de Migraciones
+    organizacion: sermig
+    notas: "Director del Servicio Nacional de Migraciones (SERMIG). Destinatario del oficio de la diputada Lorena Fries (FA) exigiendo aclarar la negativa de ingreso a Chile de una madre haitiana con residencia definitiva y sus dos hijas chilenas, reembarcadas a EE.UU. y puestas bajo custodia del ICE (agosto 2026, evento 20260812-12)."
   rodrigo_cerda:
     nombre: Rodrigo Cerda Norambuena
     cargo: Ministro de Hacienda
@@ -8289,6 +8338,10 @@ organizations:
     nombre: Cadem
     tipo: encuestadora
     notas: Encuestadora chilena, sondeo Plaza Publica semanal de opinion politica.
+  activa_research:
+    nombre: Activa Research
+    tipo: encuestadora
+    notas: "Encuestadora chilena, socia de WIN (Worldwide Independent Network of Market Research). En agosto de 2026 publicó el Estudio Mundial de Juventud 2026 (45 mil entrevistas en 45 países, diciembre 2025-enero 2026; en Chile 1.017 casos), que mostró a los jóvenes chilenos de 18-24 años entre los más pesimistas del mundo: 44% cree tener más oportunidades que sus padres, 35% confía en comprar vivienda propia, 57% de esperanza en el futuro del país y 68% dispuesto a emigrar."
   descifra:
     nombre: Descifra
     tipo: encuestadora
@@ -8524,6 +8577,16 @@ organizations:
     nombre: Servicio Nacional de Migraciones
     tipo: servicio_publico
     pais: Chile
+  anfach:
+    nombre: Asociación Nacional de Funcionarios de Aduanas de Chile (ANFACH)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio de funcionarios del Servicio Nacional de Aduanas. En agosto de 2026 se declaró en estado de alerta (7-ago a 7-sep) ante la posibilidad de que la Agenda Contra el Crimen Organizado y el Terrorismo (ACOT) entregue facultades autónomas a Carabineros y la PDI en zonas primarias (puertos, aeropuertos, fronteras), hoy de control exclusivo de Aduanas según el DFL/30 de 2004 del Ministerio de Hacienda (evento 20260813-6)."
+  ice:
+    nombre: Servicio de Inmigración y Control de Aduanas de Estados Unidos (ICE)
+    tipo: servicio_publico
+    pais: Estados Unidos
+    notas: "Agencia federal de inmigración y control aduanero de Estados Unidos. En agosto de 2026 mantuvo bajo custodia a una madre haitiana con residencia definitiva en Chile y a sus dos hijas chilenas, tras ser reembarcadas desde Chile con destino a EE.UU. y enfrentar riesgo de deportación a Haití (evento 20260812-12)."
   ministerio_agricultura:
     nombre: Ministerio de Agricultura
     tipo: ministerio
@@ -9080,6 +9143,16 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio de comunicación digital chileno fundado en 2005. En noviembre de 2023 el Departamento de Estado de EE.UU. lo mencionó en su informe 'Esfuerzos del Kremlin para propagar desinformación encubiertamente en América Latina', lo que el medio desmintió categóricamente. En abril de 2026 circuló una noticia falsa atribuida a Cooperativa que lo vinculaba a una red de desinformación internacional; el alcalde de Santiago Mario Desbordes la compartió en X y luego la eliminó."
+  hudson_rock:
+    nombre: Hudson Rock
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Empresa de inteligencia de ciberamenazas especializada en infostealers. En agosto de 2026 publicó el análisis de la brecha de cadena de suministro de IA más grande del año: el compromiso de LiteLLM (versiones 1.82.7 y 1.82.8) por parte del grupo TeamPCP, con un archivo de 153 GB con 433.909 archivos y 118.829 dumps de runners CI atribuidos a 2.488 dominios corporativos."
+  achs:
+    nombre: ACHS (Asociación Chilena de Seguridad)
+    tipo: empresa
+    pais: Chile
+    notas: "Mutual de seguridad laboral chilena. En agosto de 2026 fue señalada por el usuario @chum1ng0 como posible afectada en Chile por la brecha de LiteLLM (junto a gob.cl de la Presidencia), según el buscador público de Hudson Rock."
   google:
     nombre: Google
     tipo: empresa
@@ -10706,7 +10779,12 @@ organizations:
     nombre: VLN Radio
     tipo: medio_comunicacion
     pais: Chile
-    notas: "Radio chilena de Valparaíso (vlnradio.cl)."
+    notas: "Radio chilena de Valparaíso (vlnradio.cl). En agosto de 2026 reveló el escándalo de la Municipalidad de Curicó por la filtración de material íntimo extraído de celulares institucionales por personal de informática."
+  municipalidad_curico:
+    nombre: Municipalidad de Curicó
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de la Región del Maule. En agosto de 2026 enfrentó un escándalo por la filtración de material íntimo de funcionarias/os extraído de celulares institucionales por personal del área de informática; separó temporalmente a los involucrados, inició sumario administrativo y dio cuenta al Ministerio Público."
   canal_9:
     nombre: Canal 9
     tipo: medio_comunicacion
@@ -11584,6 +11662,11 @@ organizations:
     tipo: institucion_publica
     pais: Chile
     notas: "Tribunal ante el que se realizó el control de detención de los imputados de la red de narcotráfico vinculada al Cartel Jalisco Nueva Generación (agosto 2026)."
+  juzgado_garantia_valparaiso:
+    nombre: Juzgado de Garantía de Valparaíso
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Tribunal que lleva la investigación del caso cuota Flores contra la senadora Camila Flores. El 13 de agosto de 2026 rechazó dos solicitudes de la defensa (excluir al querellante Luis Mariano Rendón y limitar el acceso de la Fiscalía a los dispositivos incautados) y declaró admisible la querella de Ymay Ortiz Pulgar por fraude al fisco y malversación."
   primicias_ecuador:
     nombre: Primicias Ecuador
     tipo: medio_comunicacion
@@ -11650,6 +11733,10 @@ cifras:
     nombre: Inversion de la carcel de mujeres de Arica
     unidad_default: pesos
     notas: "27.110 millones de pesos, para 384 internas en 10.084 m2. Inaugurada el 5 de junio de 2020 por el ministro Hernán Larraín (primer gobierno de Piñera inició el proyecto; segundo gobierno de Bachelet lo continuó). Primera cárcel de mujeres construida en el país y primera con 100% de tecnovigilancia. Fuente: Minjusticia (minjusticia-2020-06-05-carcel-mujeres-arica). Contrapunto a la afirmación de que Chile 'no construía una cárcel desde hace tres décadas'. Evento 20260813-1."
+  apoyo_paro_liceo_dhalmar:
+    nombre: Apoyo al paro de lapices del Liceo Augusto D'Halmar
+    unidad_default: por_ciento
+    notas: "89,1% de los votos (672) aprobó el paro de lápices del Liceo Augusto D'Halmar de Ñuñoa el viernes 8-ago-2026; en una segunda consulta la movilización indefinida obtuvo 613 votos. Fuente: Emol (emol-2026-08-13-dhalmar-suspension-amenazas). Evento 20260812-11."
   plazas_carcel_la_laguna:
     nombre: Capacidad de la cárcel La Laguna de Talca
     unidad_default: plazas
@@ -13196,6 +13283,14 @@ cifras:
     nombre: Umbral de inversión para acceder a la invariabilidad tributaria de la megarreforma
     unidad_default: dolares
     notas: "US$50 millones: el umbral que fijó la megarreforma (Ley de Reconstrucción Nacional) para que los proyectos de inversión accedieran al régimen de invariabilidad tributaria. El Tribunal Constitucional lo declaró constitucional en el fallo del 13-ago-2026 (evento 20260813-4), pero acotó el beneficio a proyectos de inversión reales y específicos y anuló el numeral que lo regulaba."
+  transbordo_eeuu_impacto_anual_bajo:
+    nombre: Estimación baja del impacto anual del transbordo de mercancías en EE.UU.
+    unidad_default: dolares
+    notas: "US$40.000 millones anuales en importaciones afectadas por el reetiquetado/reempaquetado de mercancías chinas, según el informe 'La Gran Estafa del Transbordo' de la Oficina de Política Comercial y Manufacturera de la Casa Blanca (13-ago-2026, evento 20260813-7)."
+  transbordo_eeuu_impacto_anual_alto:
+    nombre: Estimación alta del impacto anual del transbordo de mercancías en EE.UU.
+    unidad_default: dolares
+    notas: "US$75.000 millones anuales en importaciones afectadas por el transbordo de mercancías chinas, según el informe 'La Gran Estafa del Transbordo' de la Casa Blanca (13-ago-2026, evento 20260813-7)."
   inversion_data_center_alto_jahuel:
     nombre: Inversión del Data Center Alto Jahuel
     unidad_default: millones_usd

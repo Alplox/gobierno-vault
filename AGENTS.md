@@ -702,12 +702,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 836
+**Total de eventos:** 848
 
-**Cobertura de fuentes:** 459 de 836 eventos con 3+ fuentes (377 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 461 de 848 eventos con 3+ fuentes (387 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 633
+- 2026: 645
 - 2025: 48
 - 2024: 26
 - 2023: 17
@@ -728,32 +728,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (320)
-- Justicia (201)
-- Economia (166)
-- Defensa y seguridad (126)
-- Administración pública (107)
-- Proceso legislativo (79)
-- Derechos humanos (78)
+- Politica (324)
+- Justicia (207)
+- Economia (170)
+- Defensa y seguridad (131)
+- Administración pública (109)
+- Proceso legislativo (81)
+- Derechos humanos (79)
+- Corrupción (70)
 - Finanzas publicas (70)
-- Corrupción (69)
 - Cambios en el gabinete (59)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (183)
+- accion (186)
+- reaccion (105)
 - declaracion (103)
-- reaccion (102)
 - resultado (94)
-- investigacion (86)
-- publicacion (83)
-- anuncio (62)
-- fallo_judicial (44)
+- investigacion (88)
+- publicacion (85)
+- anuncio (63)
+- fallo_judicial (45)
 - votacion (24)
 - proyecto (18)
 
 **Entidades registradas:**
-- Personas: 1224
-- Organizaciones: 721
-- Cifras: 715
-- Fuentes: 2779
+- Personas: 1236
+- Organizaciones: 728
+- Cifras: 718
+- Fuentes: 2818
 - Temas: 74
