@@ -390,6 +390,7 @@
 
 ## 2026
 
+- [2026/01/20260101-1 - Mensaje de fin de año de Kast: '2025 fue el año en que millones dijeron basta al desorden, a la improvisación y al abandono'](src/content/events/2026/01/20260101-1.md) — 4 fuentes
 - [2026/01/20260105-1 - Tricel proclama a José Antonio Kast como Presidente Electo de Chile](src/content/events/2026/01/20260105-1.md) — 4 fuentes
 - [2026/01/20260106-1 - Contraloría ordena a la exalcaldesa de Viña del Mar Virginia Reginato restituir más de $1.122 millones por perjuicio financiero](src/content/events/2026/01/20260106-1.md) — 1 fuente
 - [2026/01/20260107-1 - Kast viaja a Perú en su primera gira internacional como Presidente Electo](src/content/events/2026/01/20260107-1.md) — 4 fuentes
@@ -1009,14 +1010,19 @@
 - [2026/08/20260811-8 - Chile entra al top 15 mundial de países con mayor alza en el precio de las viviendas según índice de Knight Frank](src/content/events/2026/08/20260811-8.md) — 1 fuente
 - [2026/08/20260811-9 - División en la derecha por la reforma constitucional de la ACOT: el ingreso al Senado se posterga y Arrau negocia para acotar el texto](src/content/events/2026/08/20260811-9.md) — 4 fuentes
 - [2026/08/20260812-1 - Quiroz minimiza el conflicto con Alvarado por el requerimiento al TC: 'No es mi responsabilidad informar a cada persona'](src/content/events/2026/08/20260812-1.md) — 9 fuentes
-- [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 4 fuentes
+- [2026/08/20260812-10 - Diputados oficialistas presentan moción 'Poner orden en Codelco': elimina los cupos de trabajadores del directorio y eleva a cinco los nombramientos directos del Presidente](src/content/events/2026/08/20260812-10.md) — 5 fuentes
+- [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 5 fuentes
 - [2026/08/20260812-3 - Kast promulga la Ley Escuelas Protegidas: revisión de mochilas en colegios y mayores facultades docentes, con el lema 'el que nada hace, nada teme'](src/content/events/2026/08/20260812-3.md) — 24 fuentes
 - [2026/08/20260812-4 - Diputados del Partido Cristiano presentan proyectos de resolución para instaurar el Día Nacional de la Oración y el Día Nacional de la Biblia](src/content/events/2026/08/20260812-4.md) — 5 fuentes
 - [2026/08/20260812-5 - Matthei critica la reforma constitucional de la ACOT: 'ha fracasado en todos los países, salvo El Salvador, pero eso no es democracia'](src/content/events/2026/08/20260812-5.md) — 3 fuentes
 - [2026/08/20260812-6 - Tere Paneque acusa a la ministra Lincolao de 'decisiones ideológicas' en la ciencia: 'El nacionalismo en ciencias no queda bien'](src/content/events/2026/08/20260812-6.md) — 6 fuentes
 - [2026/08/20260812-7 - Junaeb anuncia la digitalización gradual de la TNE: licitación en 2026 y fin progresivo del plástico](src/content/events/2026/08/20260812-7.md) — 5 fuentes
-- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 19 fuentes
+- [2026/08/20260812-8 - Cadem edición 680: cae a 40% la percepción de que la delincuencia ha aumentado, con cambio metodológico en la pregunta y un 2025 sin mediciones](src/content/events/2026/08/20260812-8.md) — 6 fuentes
+- [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
+- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 20 fuentes
 - [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 8 fuentes
+- [2026/08/20260813-3 - Verificación: el historial de ausencias de Kast como diputado (41% de inasistencias, 2002-2018) confirma parcialmente la crítica del hilo de la Ley de Incendios](src/content/events/2026/08/20260813-3.md) — 5 fuentes
+- [2026/08/20260813-4 - Tribunal Constitucional acoge parcialmente los requerimientos contra la megarreforma: inconstitucionales normas tributarias y ambientales](src/content/events/2026/08/20260813-4.md) — 5 fuentes
 
 ## 2025
 

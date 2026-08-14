@@ -23149,7 +23149,16 @@ x-2026-08-13-romero-cancerbero-la-laguna:
   autor: Agustín Romero
   fecha: 2026-08-13
   url: "https://x.com/agustinromerole/status/2087915352206332258"
-  notas: "Fuente complementaria (punto de partida, no fuente de datos). El diputado republicano Agustín Romero publicó el 13-ago-2026 un tuit con el hashtag #OperaciónCancerbero y una infografía de tres datos: 'Chile no construía una cárcel así desde hace tres décadas', 'es el inicio de un SISTEMA NACIONAL DE MÁXIMA SEGURIDAD' y 'el sistema penitenciario suma 2.320 nuevos cupos para enfrentar el hacinamiento'. Los comentarios del hilo cuestionaron la atribución del logro: varios señalaron que el Complejo Penitenciario de Talca fue inaugurado por el gobierno de Boric y que comenzó a construirse el 19-ago-2017 bajo el segundo gobierno de Bachelet (comentario de Antonio Villablanca, con capacidad de 2.320 reclusos y el enlace de gob.cl de la inauguración), junto a reclamos por la atribución ('no se atribuyan logros que no son de ustedes'). La cifra oficial de capacidad proyectada del recinto (2.097 plazas) figura en la nota de gob.cl (fuente propia gobcl-2026-08-13-operacion-cancerbero-la-laguna). Los hechos están cubiertos por prensa en el evento 20260813-1."
+  notas: "Fuente complementaria (punto de partida, no fuente de datos). El diputado republicano Agustín Romero publicó el 13-ago-2026 un tuit con el hashtag #OperaciónCancerbero y una infografía de tres datos: 'Chile no construía una cárcel así desde hace tres décadas', 'es el inicio de un SISTEMA NACIONAL DE MÁXIMA SEGURIDAD' y 'el sistema penitenciario suma 2.320 nuevos cupos para enfrentar el hacinamiento'. Los comentarios del hilo cuestionaron la atribución del logro: varios señalaron que el Complejo Penitenciario de Talca fue inaugurado por el gobierno de Boric y que comenzó a construirse el 19-ago-2017 bajo el segundo gobierno de Bachelet (comentario de Antonio Villablanca, con capacidad de 2.320 reclusos y el enlace de gob.cl de la inauguración), junto a reclamos por la atribución ('no se atribuyan logros que no son de ustedes'). El tuit recibió **notas comunitarias** (fact-check de X) que verifican dos contrapuntos con fuentes oficiales: (1) la cárcel se inauguró en enero de 2025, desarrollándose entre las presidencias de Piñera y Boric (gob.cl); y (2) en 2020 se inauguró una cárcel de mujeres en Arica, por lo que es falso que Chile llevaba 30 años sin construir un recinto penitenciario (Minjusticia, 5-jun-2020) — verificación documentada en el evento 20260813-1. La cifra oficial de capacidad proyectada del recinto (2.097 plazas) figura en la nota de gob.cl (fuente propia gobcl-2026-08-13-operacion-cancerbero-la-laguna). Los hechos están cubiertos por prensa en el evento 20260813-1."
+
+minjusticia-2020-06-05-carcel-mujeres-arica:
+  tipo: prensa
+  medio: Ministerio de Justicia
+  titulo: "Ministerio de Justicia y Gendarmería inauguran nueva cárcel de mujeres de Arica, la primera sin vigilancia perimetral humana"
+  autor: Ministerio de Justicia y DDHH
+  fecha: 2020-06-05
+  url: https://www.minjusticia.gob.cl/ministerio-de-justicia-y-gendarmeria-inauguran-nueva-carcel-de-mujeres-de-arica-que-es-la-primera-sin-vigilancia-perimetral-humana/
+  notas: "Verificada por lectura directa. Fuente primaria oficial: el 5 de junio de 2020 el ministro Hernán Larraín, el subsecretario Sebastián Valenzuela y el director nacional de Gendarmería, Christian Alveal, inauguraron el Centro Penitenciario Femenino de Arica, la primera cárcel de mujeres construida en el país y la primera con 100% de tecnovigilancia (sin vigilancia perimetral humana). Inversión total de 27.110 millones de pesos; superficie de 10.084 m2 para 384 internas; el proyecto se inició bajo el primer gobierno de Piñera y continuó durante el segundo de Bachelet. Usada como contrapunto al tuit de Agustín Romero que afirmaba que Chile 'no construía una cárcel así desde hace tres décadas' (evento 20260813-1)."
 youtube-2025-12-09-kast-debate-anatel-carcel-sin-presos:
   tipo: video
   medio: YouTube
@@ -23473,3 +23482,260 @@ elmostrador-2026-08-12-alvarado-requerimiento-tc:
   url: https://www.elmostrador.cl/noticias/pais/2026/08/12/alvarado-admite-que-no-sabia-del-requerimiento-al-tc-a-alguien-se-le-paso-tomar-el-telefono/
   notas: "Verificada por lectura directa. El biministro del Interior y Segegob, Claudio Alvarado, reconoció que desconocía que el Ejecutivo había presentado el requerimiento al TC contra la norma que obliga a reconectar gratuitamente los servicios básicos en zonas de catástrofe; atribuyó la falla a una descoordinación interna: 'A alguien se le pasó tomar el teléfono'. Recordó que la información surgió tras la sesión especial de la Cámara sobre las ayudas por los sistemas frontales, que 'es una información con la cual yo no contaba en ese minuto', y que el proyecto de Reconstrucción ha estado bajo la conducción técnica y legislativa de Hacienda. Versión de El Mostrador del episodio documentado en el evento 20260812-1."
 
+instagram-cadem-2026-08-12-percepcion-delincuencia:
+  tipo: red_social
+  medio: Instagram
+  titulo: "Cadem Plaza Pública edición 680: 'La percepción de que la delincuencia ha aumentado en los seis últimos meses cae a 40%, 7 puntos menos que en el mes de mayo'"
+  autor: Cadem (@cadem_chile)
+  fecha: 2026-08-12
+  url: https://www.instagram.com/p/Db8wTIwFqk9/
+  notas: "Fuente PRIMARIA del dato (cuenta oficial de la encuestadora). Post de la edición 680 de Plaza Pública (2ª semana de agosto 2026): la percepción de que la delincuencia ha aumentado en los últimos 6 meses cae a 40% (7 pts menos que en mayo); complementa la cifra con el 45% que cree que se mantiene igual y el 13% que estima que ha disminuido, y con la aprobación de Kast en 39%. Se complementa con la cobertura de prensa (Puranoticia, BioBioChile) y con el detalle metodológico del cambio de pregunta (antes del 2023 se preguntaba por el último año; en 2026 por los últimos 2/6 meses). Fuente del evento 20260812-8."
+
+biobiochile-2026-08-12-cadem-temor-victima-73:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Temor a ser víctima de un delito sube a 73% y crimen organizado lidera preocupación según Cadem"
+  autor: BioBioChile
+  fecha: 2026-08-12
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/12/temor-a-ser-victima-de-un-delito-sube-a-73-y-crimen-organizado-lidera-preocupacion-segun-cadem.shtml
+  notas: "Cobertura de la edición 680 de Plaza Pública Cadem (12-ago-2026). El cuerpo no se pudo extraer completo por bloqueo del medio; los datos clave (40% percepción de aumento de la delincuencia en los últimos 6 meses, 45% que cree que se mantiene igual, temor a ser víctima de un delito en 73% y crimen organizado como principal preocupación) están cruzados con el post oficial de Cadem (instagram-cadem-2026-08-12-percepcion-delincuencia) y la cobertura de Puranoticia (puranoticia-2026-08-12-cadem-delincuencia-40). Fuente del evento 20260812-8."
+
+puranoticia-2026-08-12-cadem-delincuencia-40:
+  tipo: prensa
+  medio: Puranoticia
+  titulo: "Encuesta Cadem: 61% cree que el Estado está siendo sobrepasado por la delincuencia y 72% apunta al crimen organizado"
+  autor: Puranoticia
+  fecha: 2026-08-12
+  url: https://puranoticia.pnt.cl/nacional/encuesta-cadem-61-cree-que-el-estado-esta-siendo-sobrepasado-por-la
+  notas: "Verificada por lectura directa (vía paywallskip). Cobertura completa de la edición 680 de Plaza Pública Cadem (2ª semana de agosto): percepción de que la delincuencia ha aumentado en los últimos 6 meses cae a 40% (-7 pts vs mayo), 45% cree que se mantiene igual y 13% (+7 pts) que ha disminuido; 61% considera que el Estado está siendo sobrepasado por la delincuencia (-6 pts); 72% apunta al crimen organizado como principal problema (-6 pts); temor a ser víctima baja a 73%; la percepción de que la delincuencia se ha vuelto más violenta desciende a 54% (-5 pts); 53% responsabiliza al Gobierno de resolver el problema, 29% a tribunales y jueces, 10% a PDI y Carabineros, 4% a fiscales; aprobación de Kast 39% y desaprobación 57%. Fuente del evento 20260812-8."
+
+emol-2026-05-03-cadem-delincuencia-47:
+  tipo: prensa
+  medio: Emol
+  titulo: "Cadem: 67% cree que el Estado está siendo sobrepasado por la delincuencia y aprobación de Kast baja a 39%"
+  autor: Javiera Riquelme, Emol
+  fecha: 2026-05-03
+  url: https://www.emol.com/noticias/Nacional/2026/05/03/1198959/cadem-percepcion-delincuencia-aprobacion-kast.html
+  notas: "Verificada por lectura directa. Cobertura de la edición de inicios de mayo 2026 (primera con el nuevo formato de pregunta por los últimos 2 meses): la percepción de que la delincuencia ha aumentado en los dos últimos meses cayó a 47% (-25 pts vs agosto 2025), la baja más importante desde 2014; 45% (+25 pts) cree que está igual y 6% (-3 pts) que ha disminuido; la idea de que la delincuencia está más violenta cae a 59% (-30 pts); el temor a ser víctima se mantiene alto en 70%. Complementa la serie documentada en el evento 20260812-8 (el post oficial de Cadem de agosto-2026 confirma la continuación de la caída a 40%)."
+
+canal9-2026-05-07-cadem-ano-sin-datos:
+  tipo: prensa
+  medio: Canal 9
+  titulo: "¿Qué pasó con la última Cadem? El año sin datos sobre percepción de la delincuencia, hoy a la baja"
+  autor: Canal 9
+  fecha: 2026-05-07
+  url: https://www.canal9.cl/episodios/2026/05/07/que-paso-con-la-ultima-cadem-el-ano-sin-datos-sobre-percepcion-de-la-delincuencia-hoy-a-la-baja
+  notas: "Análisis televisivo (canal9.cl) sobre la caída de la percepción de delincuencia de la Cadem de mayo 2026: la comparación salta más de un año (de agosto 2024 al inicio del gobierno de Kast), dejando fuera todo 2025; los datos oficiales muestran que delitos como los homicidios ya venían disminuyendo desde años anteriores; en el vacío queda la duda de cuánto es real y cuánto percepción. Fuente del evento 20260812-8 (documenta el gap de medición de 2025 señalado también por el hilo de r/chile)."
+
+reddit-2026-08-12-cadem-percepcion-delincuencia:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Hilo de r/chile sobre la evolución de la percepción de la delincuencia (infografía Plaza Pública Cadem, edición 680)"
+  autor: Reddit r/chile
+  fecha: 2026-08-13
+  url: https://old.reddit.com/r/chile/comments/1vmxyb9/evolucion_de_la_percepcion_de_la_delincuencia_en/
+theclinic-2026-01-01-kast-mensaje-fin-2025:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "El mensaje de José Antonio Kast para despedir el 2025: 'Fue el año en que millones dijeron basta al desorden, a la improvisación y al abandono'"
+  autor: Ignacia Munita, The Clinic
+  fecha: 2026-01-01
+  url: https://www.theclinic.cl/2026/01/01/el-mensaje-de-jose-antonio-kast-para-despedir-el-2025-fue-el-ano-en-que-millones-dijeron-basta-al-desorden-a-la-improvisacion-y-al-abandono/
+  notas: "Verificada por lectura directa. El presidente electo José Antonio Kast envió el 31-dic-2025/1-ene-2026 un mensaje por X para despedir 2025 y recibir 2026, tras su triunfo en la segunda vuelta de diciembre: 'El 2025 no fue un año más... fue el año en que millones dijeron basta al desorden, a la improvisación y al abandono. Fue el año en que Chile eligió el cambio y la esperanza'; 'En 2026 comienza una nueva etapa... Tiempos de orden, de reconstrucción y de trabajo incansable. Nada será fácil, pero todo será posible si lo hacemos juntos'. Evento 20260101-1."
+
+tarapacaonline-2026-01-01-kast-mensaje-fin-2025:
+  tipo: prensa
+  medio: Tarapacá Online
+  titulo: "El mensaje de Kast para despedir el 2025: 'Fue el año en que millones dijeron basta al desorden'"
+  autor: Tarapacá Online (vía Emol)
+  fecha: 2026-01-01
+  url: https://tarapacaonline.cl/2026/01/01/el-mensaje-de-kast-para-despedir-el-2025-fue-el-ano-en-que-millones-dijeron-basta-al-desorden/
+  notas: "Verificada por lectura directa. Mismo mensaje de fin de año de José Antonio Kast (vía X, 31-dic-2025/1-ene-2026), republicado por el medio regional (el artículo atribuye la fuente a Emol.com). Texto idéntico al de The Clinic: '2025 fue el año en que millones dijeron basta al desorden, a la improvisación y al abandono... Vienen tiempos exigentes. Tiempos de orden, de reconstrucción y de trabajo incansable'. Evento 20260101-1."
+
+radiosago-2026-01-01-kast-mensaje-fin-2025:
+  tipo: prensa
+  medio: Radio Sago
+  titulo: "El mensaje de Kast para despedir el 2025: 'Fue el año en que millones dijeron basta al desorden'"
+  autor: Radio Sago
+  fecha: 2026-01-01
+  url: https://www.radiosago.cl/el-mensaje-de-kast-para-despedir-el-2025-fue-el-ano-en-que-millones-dijeron-basta-al-desorden/
+  notas: "Verificada por lectura directa. Mismo mensaje de fin de año de José Antonio Kast (vía X) republicado por la radio de Osorno, texto idéntico a The Clinic y Tarapacá Online. Evento 20260101-1."
+
+nostalgica-2026-01-01-kast-mensaje-fin-2025:
+  tipo: prensa
+  medio: Nostálgica
+  titulo: "El mensaje de Kast para despedir el 2025: 'Fue el año en que millones dijeron basta al desorden'"
+  autor: Nostálgica
+  fecha: 2026-01-01
+  url: https://www.nostalgica.cl/el-mensaje-de-kast-para-despedir-el-2025-fue-el-ano-en-que-millones-dijeron-basta-al-desorden/
+  notas: "Mismo mensaje de fin de año de José Antonio Kast (vía X) republicado por la radio (nostalgica.cl), texto idéntico al de The Clinic, Tarapacá Online y Radio Sago. Evento 20260101-1."
+
+biobiochile-2026-08-12-senado-aprueba-vetos-megarreforma:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Senado aprueba vetos del Gobierno a la megarreforma y pone fin a su tramitación en el Congreso"
+  autor: BioBioChile
+  fecha: 2026-08-12
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/12/senado-aprueba-vetos-del-gobierno-a-la-megarreforma-y-pone-fin-a-su-tramitacion-en-el-congreso.shtml
+  notas: "Cobertura de la votación del Senado (12-ago-2026) que aprobó los tres vetos supresivos de Kast a la megarreforma, cerrando la tramitación en el Congreso. Cruzada con la fuente oficial del Senado y La Tercera ya registradas en el evento 20260812-2 (la votación quedó documentada con los conteos en ese evento)."
+
+biobiochile-2026-08-12-codelco-poner-orden:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'Poner orden en Codelco': proyecto busca sacar a trabajadores del directorio y dar cupos al Presidente"
+  autor: BioBioChile
+  fecha: 2026-08-12
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/12/poner-orden-en-codelco-proyecto-busca-sacar-a-trabajadores-del-directorio-y-dar-cupos-al-presidente.shtml
+  notas: "Cobertura de la moción presentada el 12-ago-2026 por diputados oficialistas (encabezada por Daniel Valenzuela, Ind-RN): modifica el gobierno corporativo de Codelco eliminando los dos cupos de representantes de trabajadores del directorio y elevando de tres a cinco los nombramientos directos del Presidente. El cuerpo completo no se pudo extraer (bloqueo del medio); los detalles están verificados por radio.uchile.cl (radiouchile-2026-08-13-codelco-directorio-trabajadores) y canal9.cl. Evento 20260812-10."
+
+radiouchile-2026-08-13-codelco-directorio-trabajadores:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Diputados oficialistas buscan eliminar representantes de trabajadores del directorio de Codelco"
+  autor: Diario Uchile, Radio Universidad de Chile
+  fecha: 2026-08-13
+  url: https://radio.uchile.cl/2026/08/13/diputados-oficialistas-buscan-eliminar-representantes-de-trabajadores-del-directorio-de-codelco/
+  notas: "Verificada por lectura directa. Detalle de la moción 'Poner orden en Codelco' (12-ago-2026): el diputado Daniel Valenzuela (Ind-RN) junto a un grupo de diputados oficialistas presentó el proyecto que elimina la participación de representantes de los trabajadores en el directorio de Codelco; mantiene los nueve integrantes y eleva de tres a cinco los directores de designación presidencial directa, conservando los cuatro de la Alta Dirección Pública. No modifica el Código del Trabajo ni la negociación colectiva. Valenzuela: 'Lo que busca este proyecto de ley es que hoy día esos cinco cupos los nombre directamente el Presidente de la República' y 'no es casualidad que el gobierno tenga que capitalizar 2.400 millones de dólares... el objetivo es poner orden en Codelco'. Firmantes: Daniel Valenzuela, Marco Antonio Sulantay (UDI), Paulina Muñoz (PNL), Tomás Kast (EVO), Javier Olivares (PDG), Patricio Briones (PDG), Pier Karlezi (PNL), Erich Grohs (PNL), Ignacio Urcullú (REP) y Álvaro Jofré (PNL). Evento 20260812-10."
+
+canal9-2026-08-12-codelco-directorio-trabajadores:
+  tipo: prensa
+  medio: Canal 9
+  titulo: "Proyecto propone excluir a trabajadores del directorio de Codelco y otorgar cupos designados por el Presidente"
+  autor: Canal 9
+  fecha: 2026-08-12
+  url: https://www.canal9.cl/episodios/2026/08/12/poner-orden-en-codelco-proyecto-busca-sacar-a-trabajadores-del-directorio-y-dar-cupos-al-presidente
+  notas: "Cobertura de la moción (12-ago-2026): 'La moción mantiene el número total de asientos, pero elimina los dos cupos laborales y eleva de tres a cinco los nombramientos directos del [Presidente]'. El cuerpo completo no se pudo extraer; los detalles están verificados por radiouchile-2026-08-13-codelco-directorio-trabajadores. Evento 20260812-10."
+
+adnradio-2026-08-13-tc-megarreforma-golpe-parcial:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Golpe parcial del TC a la megarreforma: declara inconstitucionales normas tributarias y ambientales"
+  autor: ADN Radio
+  fecha: 2026-08-13
+  url: https://www.adnradio.cl/2026/08/13/golpe-parcial-del-tc-a-la-megarreforma-declara-inconstitucionales-normas-tributarias-y-ambientales/
+  notas: "Verificada por lectura directa. Detalle del fallo del TC (13-ago-2026, ~22:00): acogió parcialmente los requerimientos de parlamentarios contra la megarreforma. Tributario: eliminó del art. 29 la frase 'o por la ejecución de proyectos conexos' y anuló íntegramente el numeral que regulaba el régimen de invariabilidad; eliminó la expresión 'entre otros' y la facultad de Hacienda de extender el plazo del beneficio en 'circunstancias calificadas' (acotó la discrecionalidad del Ejecutivo). Ambiental: inconstitucionales íntegramente los arts. 12 y 13 (mecanismo especial de indemnización ante anulación de una RCA) y eliminó del art. 20 de la Ley 19.300 la frase 'que no hayan sido evaluados y'. Rechazó el cuestionamiento al umbral de US$50 millones (constitucional). Microrelocalizaciones de concesiones acuícolas: parte inconstitucional. El resto de la iniciativa se mantuvo vigente. Alegatos: por el Gobierno y el Senado expusieron Arturo Fermandois y Catalina Salem; por los requirentes Jorge Correa Sutil, Diego Pardo y Melissa Mallega. Evento 20260813-4."
+
+latercera-2026-08-14-tc-megarreforma-invariabilidad-rca:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Oposición triunfa parcialmente: TC acota la invariabilidad tributaria e impugna toda la compensación por RCA"
+  autor: Juan Manuel Ojeda, La Tercera
+  fecha: 2026-08-14
+  url: https://www.latercera.com/nacional/noticia/oposicion-triunfa-parcialmente-en-el-tc-acota-invariabilidad-tributaria-e-impugna-toda-la-compensacion-por-rca/?outputType=base-amp-type
+  notas: "Verificada por lectura directa. Análisis del fallo del TC (13-ago-2026): los ministros acogieron por mayoría parcialmente el requerimiento contra la invariabilidad tributaria (acotada a proyectos de inversión real y específicos); rechazaron el argumento central del abogado Jorge Correa (invariabilidad contraria al régimen democrático); en materias ambientales la oposición ganó casi la totalidad (inconstitucional íntegra la norma de indemnización ante anulación judicial firme de una RCA); triunfo en la impugnación de las relocalizaciones de concesiones acuícolas (derrota para la industria salmonera). La presidenta del TC, María Pía Silva, usó el voto dirimente de forma acotada. Reacciones de los abogados requirentes Jaime Gajardo ('el TC acogió la mayor parte de los requerimientos... en los preceptos ambientales, prácticamente todos fueron declarados inconstitucionales') y Leslie Sánchez. Evento 20260813-4."
+
+emol-2026-08-13-tc-jornadas-alegatos:
+  tipo: prensa
+  medio: Emol
+  titulo: "Tras dos extensas jornadas de audiencias y alegatos: TC entra en etapa de deliberación por los requerimientos a la megarreforma"
+  autor: Emol
+  fecha: 2026-08-13
+  url: https://www.emol.com/noticias/Nacional/2026/08/13/1208443/tc-jornadas-alegatos-requerimientos.html
+  notas: "Cobertura de las dos extensas jornadas de audiencias y alegatos (12-13-ago-2026) previas al fallo del TC sobre los requerimientos de inconstitucionalidad contra la megarreforma, incluyendo la compensación económica que realizaría el Estado ante una RCA anulada. El fallo se conoció pasadas las 22:00 del 13-ago (evento 20260813-4)."
+
+x-2026-08-13-tribconst-megarreforma:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Tribunal Constitucional: 'acogió parcialmente los requerimientos de inconstitucionalidad presentados por grupos de parlamentarios'"
+  autor: Tribunal Constitucional de Chile (@tribconst_chile)
+  fecha: 2026-08-13
+  url: https://x.com/tribconst_chile/status/2088083527476683204
+  notas: "Fuente PRIMARIA (cuenta oficial del Tribunal Constitucional): comunicado del 13-ago-2026 22:01 hrs anunciando que el TC acogió parcialmente los requerimientos de inconstitucionalidad presentados por grupos de parlamentarios contra la megarreforma (80,2 mil visualizaciones). Complementa la cobertura de prensa (ADN Radio, La Tercera, Emol) del evento 20260813-4."
+
+biobiochile-2026-08-13-tc-megarreforma-rca:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "TC acoge parcialmente requerimientos de oposición y declara inconstitucional compensación por RCA"
+  autor: BioBioChile
+  fecha: 2026-08-13
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/13/tc-acoge-parcialmente-requerimientos-de-oposicion-y-declara-inconstitucional-compensacion-por-rca.shtml
+  notas: "Cobertura del fallo del TC (13-ago-2026): acogió parcialmente los requerimientos de la oposición contra la megarreforma y declaró inconstitucional la compensación por RCA. Los detalles completos están cruzados con ADN Radio y La Tercera (evento 20260813-4); el cuerpo del artículo no se pudo extraer por bloqueo del medio."
+
+biobiochile-2026-08-12-ley-incendios-comision-mixta-quorum:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Se ausentaron 3 diputados oficialistas: se frustra comisión mixta que debía destrabar Ley de Incendios"
+  autor: Lindy Sandoval, BioBioChile
+  fecha: 2026-08-12
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/12/faltaron-3-diputados-del-bio-bio-se-frustra-comision-mixta-que-debia-destrabar-ley-de-incendios.shtml
+  notas: "Verificada por lectura directa (resumen oficial del medio + mirrors). La comisión mixta que debía zanjar las diferencias sobre la Ley de Incendios no se constituyó por falta de quórum: de los cinco parlamentarios designados por la Cámara solo asistieron dos. La ausencia de los representantes de La Araucanía y el Bío Bío —regiones fuertemente afectadas por incendios— generó preocupación, y el diputado PS José Antonio Rivas instó a agilizar la conformación de la comisión para contar con medidas preventivas antes de la próxima temporada de incendios. Fuente del evento 20260812-9."
+
+instagram-2026-08-13-rivas-ley-incendios:
+  tipo: red_social
+  medio: Instagram
+  titulo: "Reel del diputado José Antonio Rivas: 'La Ley de Incendios no puede seguir esperando. La Comisión Mixta no pudo constituirse por falta de quórum'"
+  autor: José Antonio Rivas (diputado PS)
+  fecha: 2026-08-13
+  url: https://www.instagram.com/reel/Db_ajSlpWM9/
+  notas: "Fuente complementaria (cuenta de un miembro del Congreso): reel del diputado PS José Antonio Rivas llamando a destrabar la comisión mixta de la Ley de Incendios tras su frustración por falta de quórum, señalando que 'entre los ausentes había dos [representantes]' de regiones afectadas. Los hechos están cubiertos por la prensa (biobiochile-2026-08-12-ley-incendios-comision-mixta-quorum); el reel aporta el registro audiovisual del llamado del parlamentario. Fuente del evento 20260812-9."
+
+diarioconcepcion-2026-04-15-ley-incendios-mixta:
+  tipo: prensa
+  medio: Diario Concepción
+  titulo: "Ley de Incendios: aún no se conforma Comisión Mixta para avance del proyecto"
+  autor: Diario Concepción
+  fecha: 2026-04-15
+  url: https://www.diarioconcepcion.cl/politica/2026/04/15/ley-de-incendios-aun-no-se-conforma-comision-mixta-para-avance-del-proyecto.html
+  notas: "Contexto de la tramitación (15-abr-2026): la comisión mixta de la Ley de Incendios aún no se conformaba pese a que la Sala de la Cámara Baja había respaldado la mayoría de los cambios del Senado, con tres puntos clave sin el apoyo necesario. Documenta el estancamiento previo al quiebre de quórum de agosto (evento 20260812-9). El cuerpo completo no se pudo extraer (página con JS); el dato del estancamiento está en el resumen oficial del medio."
+
+reddit-2026-08-13-ley-incendios-comision-mixta:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Hilo de r/chile sobre la frustración de la comisión mixta de la Ley de Incendios por ausencias de diputados"
+  autor: Reddit r/chile
+  fecha: 2026-08-13
+  url: https://old.reddit.com/r/chile/comments/1vnhjab/se_ausentaron_3_diputados_oficialistas_se_frustra/
+  notas: "Fuente complementaria de opinión comunitaria (no sustenta datos por sí sola). Hilo (13-ago-2026) sobre la frustración de la comisión mixta de la Ley de Incendios por la ausencia de tres diputados oficialistas del Bío Bío. Comentarios representativos: la indignación por las ausencias impunes ('¿Por qué estas cagás pueden faltar cuando quieren?' 105 pts, 'Usan corbata' 69 pts, 'Porque tienen la facultad de legislar sus propios sueldos... y faltar al congreso solo representa una pérdida mínima de su sueldo. Y si tienen el ejemplo de Kast, que siendo uno de los que más faltó al congreso y no hizo nada por años termina siendo presidente de Chile', Foxus67 36 pts), las propuestas de fiscalización ('valdría la pena publicar diariamente a los honorables que falten', Hanjaemoon2 7 pts; 'sistema de 3 strikes', Rupuerco 6 pts), y las alusiones a la temporada de incendios. El comentario de Foxus67 sobre Kast motivó la verificación documentada en el evento 20260813-3."
+
+revistadefrente-2025-10-15-kast-ausencias-41:
+  tipo: prensa
+  medio: Revista de Frente
+  titulo: "'Parásitos estatales': las ausencias de Kast como diputado equivalen a un trabajador público que faltó más de seis años seguidos"
+  autor: Nicolás Romero Reeves, Revista de Frente
+  fecha: 2025-10-15
+  url: https://www.revistadefrente.cl/parasitos-estatales-las-ausencias-de-kast-como-diputado-equivalen-a-un-trabajador-publico-que-falto-mas-de-seis-anos-seguidos-por-nicolas-romero-reeves/
+  notas: "Verificada por lectura directa (vía mirror). Columna en respuesta a la columna 'Parásitos' del asesor presidencial Cristián Valenzuela en La Tercera. Datos oficiales de la Cámara de Diputados: entre 2002 y 2018 Kast asistió a 896 de 1.521 sesiones y se ausentó de 625 (41% de ausencias; solo 59% de asistencia a comisiones legislativas), sin sanción ni pérdida de dieta. Los años más críticos fueron 2015-2016, por viajes y permisos personales en plena ruptura con la UDI; en ese período la Comisión de Educación no logró sesionar por falta de quórum por sus reiteradas ausencias. Fuente del evento 20260813-3."
+
+interferencia-2025-06-22-kast-permiso-caduco-paris:
+  tipo: prensa
+  medio: Interferencia
+  titulo: "La vez en que Kast faltó un mes al Congreso, se fue de vacaciones y arriesgó ser destituido"
+  autor: Maximiliano Alarcón G., Interferencia
+  fecha: 2025-06-22
+  url: https://interferencia.cl/articulos/la-vez-en-que-kast-falto-un-mes-al-congreso-se-fue-de-vacaciones-y-arriesgo-ser-destituido
+  notas: "Verificada por lectura directa. En julio de 2015 el entonces diputado Kast obtuvo un permiso constitucional para ausentarse más de 30 días del país (solicitud para Alemania, desde el 9 de julio), pero fue visto en el Louvre (París) en pleno período legislativo; el fiscalizador Jorge Condeza detectó que el permiso estaba caduco (asistió a sesión el mismo día de inicio de la autorización) y denunció en Contraloría, Fiscalía y Diario Concepción. La Cámara solo le descontó $526.200 de una dieta de ~$9 millones. Fuente del evento 20260813-3."
+
+fastcheck-2025-08-18-kast-asistencia-2017-falso:
+  tipo: prensa
+  medio: Fast Check
+  titulo: "'José Antonio Kast tuvo un 18% de asistencia el año 2017 cuando era diputado': #Falso"
+  autor: Fast Check
+  fecha: 2025-08-18
+  url: https://www.fastcheck.cl/2025/08/18/jose-antonio-kast-tuvo-un-18-de-asistencia-el-ano-2017-cuando-era-diputado-falso/
+  notas: "Verificada por lectura directa. Fact-check de la afirmación de la diputada Karol Cariola: Fast Check la calificó #Falso, precisando que Kast tuvo 54,8% de asistencia a la sala en 2017 (no 18%). Matiza la narrativa de ausentismo total: la asistencia de Kast era baja y creciente a ausencias en los peores años, pero no de 18%. Fuente del evento 20260813-3."
+
+elciudadano-2025-10-14-kast-146-inasistencias:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Estiman en más de $35 millones el monto asociado a las ausencias de Kast como diputado: Acumuló 146 días de inasistencia según registros oficiales"
+  autor: El Ciudadano
+  fecha: 2025-10-14
+  url: https://www.elciudadano.com/chile/estiman-en-mas-de-35-millones-el-monto-asociado-a-las-ausencias-de-kast-como-diputado-acumulo-146-dias-de-inasistencia-segun-registros-oficiales/10/14/
+  notas: "Verificada por lectura directa. Según los registros públicos de la Cámara, entre 2006 y 2018 Kast sumó 146 inasistencias a sesiones de Sala; con un sueldo diario estimado de $244.966 y un sueldo mensual bruto de $7.348.983, el monto asociado se calcula en $35.765.036 (equivalente a 72 sueldos mínimos). Nota: la ventana 2006-2018 difiere de la 2002-2018 de Revista de Frente (625 ausencias), porque mide solo inasistencias a Sala sin justificar vs el total de sesiones del periodo completo. Fuente del evento 20260813-3."
+
+radioagricultura-2026-08-12-codelco-directorio-trabajadores:
+  tipo: prensa
+  medio: Radio Agricultura
+  titulo: "Diputados impulsan proyecto para eliminar representantes de trabajadores del directorio de Codelco"
+  autor: Radio Agricultura
+  fecha: 2026-08-12
+  url: https://www.radioagricultura.cl/noticias/politica/diputados-impulsan-proyecto-para-eliminar-representantes-de-trabajadores-del-directorio-de-codelco_20260812/
+  notas: "Verificada por lectura directa. Cobertura de la moción 'Poner orden en Codelco' (12-ago-2026): mantiene los nueve integrantes del directorio, elimina los dos cupos laborales y eleva de tres a cinco los nombramientos presidenciales directos. Reproduce las declaraciones de los impulsores (Valenzuela, Sulantay, Paulina Muñoz) y la aclaración de que la iniciativa no busca cuestionar a los trabajadores ni afectar sus derechos laborales. No registra reacciones de sindicatos ni de la oposición. Evento 20260812-10."
+tierrabella-2026-08-13-codelco-directorio-trabajadores:
+  tipo: prensa
+  medio: Revista Tierra Bella
+  titulo: "Directorio Codelco trabajadores proyecto de ley: diputados buscan eliminar dos cupos"
+  autor: Revista Tierra Bella
+  fecha: 2026-08-13
+  url: https://revistatierrabella.cl/revistatierrabella-cl-directorio-codelco-trabajadores-proyecto-de-ley/
+  notas: "Verificada por lectura directa. Cobertura de la moción (13-ago-2026) que detalla la composición actual del directorio (3 presidenciales, 2 laborales —quina de la FTC y de la Asociación Nacional de Supervisores/FESUC—, 4 de ADP) y las declaraciones de los impulsores. Documenta explícitamente que 'se espera la reacción de las federaciones sindicales' y que la tramitación 'previsiblemente se abrirá con un debate con las federaciones sindicales de Codelco' — es decir, al 13-ago no había reacción sindical pública registrada. Evento 20260812-10."

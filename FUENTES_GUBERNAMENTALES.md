@@ -78,7 +78,20 @@ Referencia para investigación de noticias. Priorizar estas fuentes antes de bus
 | Normas legales (BCN — LeyChile) | https://www.bcn.cl/leychile |
 | BCN — Historia Política | https://www.bcn.cl/historiapolitica |
 | Cámara de Diputadas y Diputados (Sesiones) | https://www.camara.cl/legislacion/sesiones/ |
+| Cámara de Diputadas y Diputados (Votaciones) | https://www.camara.cl/legislacion/sala_sesiones/votaciones.aspx |
+| Cámara de Diputadas y Diputados (Votaciones por proyecto) | https://www.camara.cl/legislacion/ProyectosDeLey/votaciones.aspx?prmBOLETIN=18216-05&prmID=18872 |
 | Senado (Tramitación) | https://www.senado.cl/tramitacion-de-proyectos |
+| Senado (Votaciones en Sala) | https://www.senado.cl/actividad-legislativa/sala/votaciones |
+
+**Votaciones de la Cámara** (camara.cl/legislacion): el listado general de
+votaciones por sesión (`sala_sesiones/votaciones.aspx`) permite ver el detalle
+nominal de cada votación (a favor/en contra/abstención, por parlamentario); el
+listado por proyecto (`ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`)
+permite rastrear todas las votaciones de un boletín específico a lo largo de su
+tramitación. Para eventos del vault con `tipo: votacion`, citar la URL de la
+votación concreta como fuente oficial (`medio: Cámara de Diputados`) además de
+la cobertura de prensa, y registrar los conteos como `[[cifra/...]]` (ej. el
+caso de los vetos de la megarreforma, evento 20260810-10).
 
 **BCN — Historia Política** es la base de datos de la Biblioteca del Congreso con
 **biografías oficiales de presidentes, ministros, parlamentarios, gobernadores y
@@ -111,6 +124,7 @@ del Presidente), su reajuste legal y su actualización por IPC.
 |---|---|---|
 | GDELT Project | https://www.gdeltproject.org/ | Base de datos global de eventos de noticias (100+ idiomas, cada 15 min), con API abierta para cruzar eventos internacionales con cobertura chilena |
 | Meganoticias — Hemeroteca | https://www.meganoticias.cl/hemeroteca/ | Archivo de noticias de Meganoticias por año/trimestre/día (2026 en adelante); útil como buscador por fecha del mismo medio ya indexado en el catálogo de sitemaps |
+| ley-chile (repo + MCP) | https://github.com/pisanvs/ley-chile | Repo comunitario con base de datos de leyes chilenas (LeyChile/BCN) y un servidor MCP remoto (`https://leyes.pisanvs.cl/api/mcp`, solo lectura, sin auth) con 8 tools (search_laws, get_law, get_article, search_articles, diff_versions, get_modifications, list_versions, get_raw_link); útil para consultas programáticas de normativa (texto vigente, historia de la ley), NO es fuente oficial — citar siempre BCN/LeyChile como fuente primaria. Probado 14-ago-2026: la identificación por (tipo, número) y `search_laws` dependen de su índice de búsqueda (Meilisearch), que puede estar caído; el acceso directo por `idNorma` (número) sí funciona. Si falla, usar leychile.cl por web |
 
 - **GDELT** (Global Database of Events, Language, and Tone): no es prensa ni
 gubernamental; procesa decenas de miles de fuentes de noticias a nivel global y

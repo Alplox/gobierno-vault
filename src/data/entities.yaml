@@ -780,6 +780,10 @@ people:
     aliases:
       - Kast
       - JAK
+  jose_antonio_rivas:
+    nombre: José Antonio Rivas
+    cargo: Diputado (PS)
+    notas: "Diputado del Partido Socialista. En agosto de 2026 instó a agilizar la conformación de la comisión mixta de la Ley de Incendios tras su frustración por falta de quórum, pidiendo medidas preventivas antes de la próxima temporada de incendios (evento 20260812-9)."
   patricio_mejias:
     nombre: Patricio Mejías
     cargo: Exfuncionario del SII, imputado en el caso Audios
@@ -2662,6 +2666,34 @@ people:
         desde: 2026-03-11
         hasta: 2026-08-13
     notas: "Atleta olímpica, especialista en lanzamiento de peso. Primera ministra del Deporte del gobierno de Kast (asumió el 11-mar-2026). Su gestión estuvo marcada por controversias: tensión con funcionarios del IND (20260801-4), choques con la prensa (20260805-14), la polémica por el Estadio Nacional/BTS (20260705-2), apoyo al rodeo como deporte nacional, y el caso del auto fiscal (Contraloría investigó el uso del vehículo el 23-abr-2026 para una celebración con asado y karaoke que la respuesta oficial calificó de 'reunión de trabajo'). Kast aceptó su renuncia y la del subsecretario Andrés Otero el 13-ago-2026, tras poco más de cinco meses en el cargo (evento 20260813-2)."
+  tomas_kast:
+    nombre: Tomás Kast
+    cargo: Diputado (EVO)
+    notas: "Diputado oficialista (EVO). Firmante de la moción 'Poner orden en Codelco' (12-ago-2026) que elimina los cupos de representantes de trabajadores del directorio de Codelco y eleva a cinco los nombramientos directos del Presidente (evento 20260812-10)."
+  erich_grohs:
+    nombre: Erich Grohs
+    cargo: Diputado (PNL)
+    notas: "Diputado oficialista (PNL). Firmante de la moción 'Poner orden en Codelco' (12-ago-2026) que elimina los cupos de representantes de trabajadores del directorio de Codelco (evento 20260812-10)."
+  catalina_salem:
+    nombre: Catalina Salem
+    cargo: Abogada
+    notas: "Abogada. Junto a Arturo Fermandois expuso los alegatos en representación del Gobierno y del Senado ante el Tribunal Constitucional en los requerimientos contra la megarreforma (audiencias del 12-13-ago-2026, evento 20260813-4)."
+  diego_pardo:
+    nombre: Diego Pardo
+    cargo: Abogado
+    notas: "Abogado. Expuso los alegatos en representación de los parlamentarios requirentes ante el Tribunal Constitucional en los requerimientos contra la megarreforma (audiencias del 12-13-ago-2026, evento 20260813-4)."
+  melissa_mallega:
+    nombre: Melissa Mallega
+    cargo: Abogada
+    notas: "Abogada. Expuso los alegatos en representación de los parlamentarios requirentes ante el Tribunal Constitucional en los requerimientos contra la megarreforma (audiencias del 12-13-ago-2026, evento 20260813-4)."
+  maria_pia_silva:
+    nombre: María Pía Silva
+    cargo: Presidenta del Tribunal Constitucional
+    notas: "Presidenta del Tribunal Constitucional de Chile. En el fallo del 13-ago-2026 sobre los requerimientos contra la megarreforma usó el voto dirimente de forma acotada para desempatar (evento 20260813-4)."
+  leslie_sanchez:
+    nombre: Leslie Sánchez
+    cargo: Abogada
+    notas: "Abogada. Una de las abogadas requirentes que celebró el fallo del Tribunal Constitucional del 13-ago-2026 contra normas de la megarreforma (evento 20260813-4)."
   tomas_rau:
     nombre: Tomás Rau Binder
     cargo: Ministro de Trabajo y Previsión Social
@@ -10227,6 +10259,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Canal de televisión chileno (Canal 13) y portal de noticias. Emite T13 Central y T13 Tarde; su sitio es t13.cl."
+  tarapaca_online:
+    nombre: Tarapacá Online
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Tarapacá (tarapacaonline.cl)."
   adn_radio:
     nombre: ADN Radio
     tipo: medio_comunicacion
@@ -10357,6 +10394,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio chilena, 92.1 FM. Portal radioagricultura.cl."
+  revista_tierra_bella:
+    nombre: Revista Tierra Bella
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital independiente con cobertura de territorio, medio ambiente, ciencia y comunidades (revistatierrabella.cl). Cubrió la moción 'Poner orden en Codelco' (12-13-ago-2026) señalando que se esperaba la reacción de las federaciones sindicales (evento 20260812-10)."
   fast_check:
     nombre: Fast Check
     tipo: medio_comunicacion
@@ -10625,6 +10667,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio chilena (radionuevomundo.cl)."
+  radio_sago:
+    nombre: Radio Sago
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de la Región de Los Lagos (radiosago.cl), parte del sistema Radios SAGO de Osorno."
   nuevo_poder:
     nombre: Nuevo Poder
     tipo: medio_comunicacion
@@ -10670,6 +10717,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Revista chilena de seguridad (revistaseguridad.cl)."
+  revista_de_frente:
+    nombre: Revista de Frente
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (revistadefrente.cl). Publicó la columna 'Parásitos estatales' (oct-2025) con los datos oficiales de la Cámara de Diputados sobre las ausencias legislativas de José Antonio Kast (625 inasistencias de 1.521 sesiones, 2002-2018), en respuesta a la columna 'Parásitos' de Cristián Valenzuela en La Tercera."
   la_prensa_austral:
     nombre: La Prensa Austral
     tipo: medio_comunicacion
@@ -11594,6 +11646,10 @@ cifras:
     nombre: Integrantes de bandas criminales trasladados en Cancerbero
     unidad_default: reos
     notas: "37 integrantes de organizaciones criminales trasladados a módulos de máxima seguridad en la Operación Cancerbero, incluidos 9 líderes y 28 miembros de bandas."
+  inversion_carcel_mujeres_arica:
+    nombre: Inversion de la carcel de mujeres de Arica
+    unidad_default: pesos
+    notas: "27.110 millones de pesos, para 384 internas en 10.084 m2. Inaugurada el 5 de junio de 2020 por el ministro Hernán Larraín (primer gobierno de Piñera inició el proyecto; segundo gobierno de Bachelet lo continuó). Primera cárcel de mujeres construida en el país y primera con 100% de tecnovigilancia. Fuente: Minjusticia (minjusticia-2020-06-05-carcel-mujeres-arica). Contrapunto a la afirmación de que Chile 'no construía una cárcel desde hace tres décadas'. Evento 20260813-1."
   plazas_carcel_la_laguna:
     nombre: Capacidad de la cárcel La Laguna de Talca
     unidad_default: plazas
@@ -12170,6 +12226,14 @@ cifras:
     nombre: Cobertura de la oferta de viviendas con el nuevo tope de subsidio
     unidad_default: porciento
     notas: "88,1% de la oferta disponible quedaría cubierta con el tope de 6.000 UF, según Hacienda."
+  inasistencia_kast_diputado:
+    nombre: Ausencias de Jose Antonio Kast como diputado (2002-2018)
+    unidad_default: porciento
+    notas: "41% de ausencias (625 de 1.521 sesiones) y solo 59% de asistencia a comisiones legislativas, según datos oficiales de la Cámara de Diputados (Revista de Frente, oct-2025). El Ciudadano (oct-2025) calculó 146 inasistencias a Sala entre 2006-2018 ($35.765.036 estimados). Fast Check (ago-2025) precisó que en 2017 su asistencia fue de 54,8% (no 18%). Evento 20260813-3."
+  percepcion_delincuencia_aumento_cadem_ago:
+    nombre: Percepcion de que la delincuencia ha aumentado (Cadem, edicion 680)
+    unidad_default: porciento
+    notas: "40% en agosto de 2026 (pregunta por los últimos 6 meses), 7 puntos menos que en mayo (47%). La serie no es directamente comparable con periodos anteriores: antes de marzo de 2023 Cadem preguntaba por el último año; desde marzo de 2023 por los últimos 3 meses; desde mayo de 2026 por los últimos 2/6 meses. Evento 20260812-8."
   desacuerdo_megarreforma_cadem:
     nombre: Desacuerdo con la megarreforma (Cadem)
     unidad_default: porciento
@@ -13128,6 +13192,10 @@ cifras:
     nombre: Umbral de almacenamiento de combustible sin evaluación ambiental
     unidad_default: litros
     notas: "1 millón de litros (1.000 toneladas) desde el cambio reglamentario de la administración Boric vigente desde enero 2026, doce veces más que los 80 mil litros anteriores. Permite que los data centers acopien diésel para respaldo sin ingresar al SEIA."
+  umbral_invariabilidad_megarreforma:
+    nombre: Umbral de inversión para acceder a la invariabilidad tributaria de la megarreforma
+    unidad_default: dolares
+    notas: "US$50 millones: el umbral que fijó la megarreforma (Ley de Reconstrucción Nacional) para que los proyectos de inversión accedieran al régimen de invariabilidad tributaria. El Tribunal Constitucional lo declaró constitucional en el fallo del 13-ago-2026 (evento 20260813-4), pero acotó el beneficio a proyectos de inversión reales y específicos y anuló el numeral que lo regulaba."
   inversion_data_center_alto_jahuel:
     nombre: Inversión del Data Center Alto Jahuel
     unidad_default: millones_usd

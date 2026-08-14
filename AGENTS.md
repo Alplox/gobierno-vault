@@ -232,6 +232,7 @@ svg_backup:
 13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS.md` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
 14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
 15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS.md` solo lo que quede genuinamente pendiente.
+16. **Votaciones (`tipo: votacion`): conteos con fuente oficial**: además de la cobertura de prensa, verificar el resultado y el conteo (a favor / en contra / abstenciones) en la página oficial de votaciones del Senado (`senado.cl/actividad-legislativa/sala/votaciones`) o de la Cámara (`camara.cl/legislacion/sala_sesiones/votaciones.aspx`, y por proyecto con `ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar la URL de la votación concreta en `sources.yaml` (`medio: Senado de Chile` / `medio: Cámara de Diputados`) y registrar cada conteo como `[[cifra/...]]` (ej. los vetos de la megarreforma en `20260810-10`). Si la votación fue nominal y el detalle por parlamentario es relevante para el evento, mencionarlo con la URL oficial. Ver FUENTES_GUBERNAMENTALES.md → Poder Legislativo.
 
 ## Pagina /events: filtros y busqueda en cliente
 
@@ -701,12 +702,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 830
+**Total de eventos:** 836
 
-**Cobertura de fuentes:** 453 de 830 eventos con 3+ fuentes (377 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 459 de 836 eventos con 3+ fuentes (377 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 627
+- 2026: 633
 - 2025: 48
 - 2024: 26
 - 2023: 17
@@ -727,32 +728,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (317)
-- Justicia (200)
-- Economia (164)
+- Politica (320)
+- Justicia (201)
+- Economia (166)
 - Defensa y seguridad (126)
 - Administración pública (107)
+- Proceso legislativo (79)
 - Derechos humanos (78)
-- Proceso legislativo (76)
+- Finanzas publicas (70)
 - Corrupción (69)
-- Finanzas publicas (69)
 - Cambios en el gabinete (59)
 
 **Tipos de eventos más frecuentes (Top 10):**
 - accion (183)
-- declaracion (102)
+- declaracion (103)
 - reaccion (102)
 - resultado (94)
-- investigacion (85)
-- publicacion (82)
+- investigacion (86)
+- publicacion (83)
 - anuncio (62)
-- fallo_judicial (43)
-- votacion (23)
-- proyecto (17)
+- fallo_judicial (44)
+- votacion (24)
+- proyecto (18)
 
 **Entidades registradas:**
-- Personas: 1216
-- Organizaciones: 717
-- Cifras: 711
-- Fuentes: 2749
+- Personas: 1224
+- Organizaciones: 721
+- Cifras: 715
+- Fuentes: 2779
 - Temas: 74
