@@ -519,7 +519,7 @@ Describe el error o la corrección sugerida.`)}`;
     document.querySelector('[data-tts-icon="playing"]')?.classList.toggle('hidden', !playing);
     document.querySelector('[data-tts-icon="idle"]')?.classList.toggle('hidden', playing);
   }
-  function gvUtt(msg: HTMLElement) {
+  function gvUtt(msg: HTMLElement | null) {
     const label = document.querySelector('[data-tts-label]');
     if (label) label.textContent = 'Escuchar';
     gvSetTtsPlaying(false);

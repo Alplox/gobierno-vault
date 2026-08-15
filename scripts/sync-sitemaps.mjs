@@ -252,6 +252,21 @@ const MEDIA = {
       'https://www.diarioestrategia.cl/sitemap/lastarticles',
     ],
   },
+  quepasaaraucania: {
+    nombre: 'Qué Pasa Araucanía',
+    index: 'https://quepasaaraucania.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (regional La Araucanía)
+  },
+  lafontana: {
+    nombre: 'La Fontana',
+    index: 'https://lafontana.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (regional Ñuble)
+  },
+  quirihue_noticias: {
+    nombre: 'Quirihue Noticias',
+    index: 'https://quirihuenoticias.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (local Quirihue)
+  },
 };
 
 // ---------------------------------------------------------------------------

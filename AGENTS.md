@@ -488,11 +488,14 @@ NO guarda el cuerpo de los artículos.
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
 | `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.137 | 7 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
+| `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
 | `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 10.399 | 1 |
 | `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
 | `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 64 | 1 |
+| `quepasaaraucania` | Qué Pasa Araucanía | `quepasaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.270 | 3 |
+| `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
 | `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.977 | 18 |
 | `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.979 | 7 |
 | `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 47.897 | 8 |
@@ -713,12 +716,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 861
+**Total de eventos:** 869
 
-**Cobertura de fuentes:** 471 de 861 eventos con 3+ fuentes (390 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 476 de 869 eventos con 3+ fuentes (393 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 655
+- 2026: 663
 - 2025: 48
 - 2024: 26
 - 2023: 17
@@ -739,23 +742,23 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (333)
-- Justicia (212)
-- Economia (173)
-- Defensa y seguridad (135)
-- Administración pública (112)
+- Politica (338)
+- Justicia (216)
+- Economia (174)
+- Defensa y seguridad (137)
+- Administración pública (114)
 - Proceso legislativo (84)
-- Derechos humanos (81)
+- Derechos humanos (82)
 - Finanzas publicas (74)
 - Corrupción (70)
 - Cambios en el gabinete (60)
 
 **Tipos de eventos más frecuentes (Top 10):**
 - accion (189)
-- reaccion (106)
+- reaccion (108)
 - declaracion (105)
-- resultado (94)
-- investigacion (90)
+- resultado (97)
+- investigacion (92)
 - publicacion (85)
 - anuncio (65)
 - fallo_judicial (46)
@@ -763,8 +766,8 @@ Cuando descubras algo no documentado aqui:
 - proyecto (18)
 
 **Entidades registradas:**
-- Personas: 1259
-- Organizaciones: 736
-- Cifras: 762
-- Fuentes: 2897
+- Personas: 1270
+- Organizaciones: 747
+- Cifras: 767
+- Fuentes: 2923
 - Temas: 74

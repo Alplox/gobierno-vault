@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-14T19:17:33.273Z",
+  "actualizado": "2026-08-15T04:28:43.001Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -212,6 +212,27 @@
       "articulos": 304427,
       "nuevos": 0,
       "años": 22
+    },
+    "quepasaaraucania": {
+      "nombre": "Qué Pasa Araucanía",
+      "ultima_sync": "2026-08-15T04:28:05.458Z",
+      "articulos": 1270,
+      "nuevos": 1270,
+      "años": 3
+    },
+    "lafontana": {
+      "nombre": "La Fontana",
+      "ultima_sync": "2026-08-15T04:28:22.424Z",
+      "articulos": 6482,
+      "nuevos": 6482,
+      "años": 7
+    },
+    "quirihue_noticias": {
+      "nombre": "Quirihue Noticias",
+      "ultima_sync": "2026-08-15T04:28:43.001Z",
+      "articulos": 5721,
+      "nuevos": 5721,
+      "años": 6
     }
   }
 }

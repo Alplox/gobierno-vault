@@ -1304,6 +1304,21 @@ people:
     organizacion: carabineros
     notas: Asesinado en operativo contra "El Rana". Asesinato del cabo Eugenio Naín
       en 2020.
+  marco_moreno:
+    nombre: Marco Moreno
+    cargo: Decano de la Facultad de Economía, Gobierno y Comunicaciones de la Universidad Central de Chile
+    organizacion: universidad_central
+    notas: "Analista político y decano de la Facultad de Economía, Gobierno y Comunicaciones de la Universidad Central de Chile. En agosto de 2026 advirtió en BioBioChile una 'falla en la arquitectura' del gobierno de Kast, con decisiones tomadas en silos y sin coordinación, y calificó la Operación Cancerbero como una comunicación 'performática' del Estado (evento 20260814-6)."
+  maria_de_los_angeles_caceres:
+    nombre: María de los Ángeles Cáceres
+    cargo: Fiscal subrogante de Quirihue
+    organizacion: ministerio_publico
+    notas: "Fiscal subrogante de Quirihue (Región de Ñuble). En agosto de 2026 investigó la muerte de una adulta mayor de 78 años atacada por perros pastores alemanes en el antejardín de la vivienda de sus familiares (evento 20260813-14)."
+  alfredo_castillo:
+    nombre: Alfredo Castillo
+    cargo: Mayor y comisario de la Quinta Comisaría de Quirihue
+    organizacion: carabineros
+    notas: "Mayor de Carabineros, comisario de la Quinta Comisaría de Quirihue. En agosto de 2026 informó a la prensa que una adulta mayor de 78 años habría ingresado sin autorización a un predio de un familiar donde fue atacada por tres perros (evento 20260813-14)."
   luis_silva:
     nombre: Luis Silva
     cargo: Subsecretario de Justicia
@@ -8447,6 +8462,51 @@ people:
         hasta: 2022-03-11
     notas: "Abogada y académica independiente. Subsecretaria de Relaciones Exteriores; asumió como canciller subrogante el 6 de febrero de 2022 tras la renuncia de Andrés Allamand, hasta el fin del segundo gobierno de Piñera."
 
+  felipe_donoso:
+    nombre: Felipe Donoso
+    cargo: Diputado UDI
+    organizacion: udi
+    notas: "Diputado UDI por el distrito 18 (Talca, Maule). En 2026 fue electo alcalde de Talca para el periodo 2026-2030 (asumió en junio de 2026). En marzo de 2026 presentó junto a la diputada Flor Weisse una denuncia ante la Contraloría por presuntas irregularidades en las bitácoras de uso de vehículos fiscales de ministros de Estado, que derivó en el informe sobre el auto fiscal de Camila Vallejo (evento 20260305-1)."
+
+  victor_newen_espinoza:
+    nombre: Víctor Newen Espinoza
+    cargo: Estudiante formalizado por amenazas contra el Presidente
+    notas: "Estudiante de 19 años formalizado por la Fiscalía Metropolitana Centro Norte por amenazas contra la autoridad tras escribir en un chat de WhatsApp vinculado a la Confech ('Zonal RM') la frase 'tienen que hacerle un Charlie Kirk nomás', en referencia al asesinato del activista conservador estadounidense. La prensa difiere en su segundo apellido: Publimetro/Meganoticias lo registran como 'Espinoza Morales' y Emol como 'Espinoza González'. Quedó con arraigo nacional y prohibición de acercarse al Presidente y a La Moneda (evento 20260617-2)."
+
+  cristian_moreno_benavente:
+    nombre: Cristián Moreno Benavente
+    cargo: Empresario, fundador del Grupo Educacional Cpech
+    notas: "Empresario, expresidente de la Federación del Rodeo Chileno y fundador del Grupo Educacional Cpech; padre del diputado republicano por Curicó Benjamín Moreno. Figura como representante de la sociedad Inversiones El Peumo, una de las controladoras del holding educativo que agrupa al preuniversitario Cpech. El preuniversitario que contrató como secretario al excapitán Patricio Maturana (evento 20260810-42)."
+
+  miguel_angel_yanez:
+    nombre: Miguel Ángel Yáñez
+    cargo: Abogado de derechos humanos
+    notas: "Abogado de derechos humanos. En agosto de 2026 criticó como un privilegio el beneficio de salida diaria otorgado a Patricio Maturana para trabajar en el preuniversitario Cpech de Curicó, planteando que Gendarmería debe transparentar los criterios de concesión de beneficios intrapenitenciarios (evento 20260810-42)."
+
+  carmen_gloria_wittwer:
+    nombre: Carmen Gloria Wittwer
+    cargo: Fiscal regional de Los Lagos
+    organizacion: fiscalia_regional_los_lagos
+    notas: "Fiscal Regional de Los Lagos. Encabeza la investigación de la trama bielorrusa (caso Belaz Movitec) y el caso Fundamenta, donde Ángela Vivanco figura como imputada por cohecho, soborno y lavado de activos (evento 20260806-55)."
+
+  patricia_alvarado:
+    nombre: Patricia Alvarado
+    cargo: Abogada de la Defensoría Penal Pública
+    organizacion: defensoria_penal_publica
+    notas: "Abogada de la Defensoría Penal Pública. Defendió a la exministra de la Corte Suprema Ángela Vivanco en su declaración del 5 y 6 de agosto de 2026 ante la Fiscalía Regional de Los Lagos por la trama bielorrusa (evento 20260806-55)."
+
+  harold_pizarro:
+    nombre: Harold Pizarro Iturrieta
+    cargo: Dueño de la casa de cambios Inversiones Suiza
+    organizacion: inversiones_suiza
+    notas: "Dueño de la casa de cambios Inversiones Suiza Limitada. La Fiscalía lo sindica como pieza clave del mecanismo de blanqueo de la trama bielorrusa: convertía cheques nominativos girados por los abogados de Belaz Movitec en efectivo que habría terminado en manos de Gonzalo Migueles, pareja de Ángela Vivanco (evento 20260806-55)."
+
+  maria_cristina_gajardo:
+    nombre: María Cristina Gajardo
+    cargo: Ministra de la Corte Suprema
+    organizacion: corte_suprema
+    notas: "Ministra de la Corte Suprema de Chile. Redactora del voto disidente del fallo Rol 1421-2023 de la Tercera Sala que favoreció al Consorcio Belaz Movitec frente a Codelco, al estimar que con una cláusula arbitral no procedía conocer la causa en sede de protección (evento 20260806-55)."
+
 organizations:
   cencosud:
     nombre: Cencosud S.A.
@@ -10767,6 +10827,26 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno de noticias (sabes.cl)."
+  quepasaaraucania:
+    nombre: Qué Pasa Araucanía
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital regional de La Araucanía (quepasaaraucania.cl), autodefinido sin tendencia política ni ideológica. En agosto de 2026 publicó la denuncia ciudadana de una vecina de Temuco por la muerte de un pudú atacado por perros en el sector camino a Monteverde (evento 20260813-13)."
+  lafontana:
+    nombre: La Fontana
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital de la Región de Ñuble (lafontana.cl), con cobertura de Chillán, San Carlos, Bulnes y Quirihue. En agosto de 2026 cubrió la muerte de una adulta mayor atacada por tres pastores alemanes en Quirihue (evento 20260813-14)."
+  quirihue_noticias:
+    nombre: Quirihue Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital de Quirihue (quirihuenoticias.cl). En agosto de 2026 informó sobre la muerte de una adulta mayor de 78 años atacada por tres perros en la comuna (evento 20260813-14)."
+  universidad_central:
+    nombre: Universidad Central de Chile
+    tipo: institucion
+    pais: Chile
+    notas: "Universidad privada chilena. Su Facultad de Economía, Gobierno y Comunicaciones tiene como decano al analista político Marco Moreno, quien en agosto de 2026 diagnosticó una 'falla en la arquitectura' del gobierno de Kast (evento 20260814-6)."
   cambion21:
     nombre: Cambio21
     tipo: medio_comunicacion
@@ -12000,7 +12080,65 @@ organizations:
     pais: Chile
     notas: "Organización de la comunidad palestina en Chile. Su presidente, Manuel Hasbún, convocó en agosto de 2026 junto al municipio de Viña del Mar la exposición 'Anatomía de un genocidio' del fotoperiodista Belal Khaled, cuestionada por el embajador de Israel Peleg Lewi (evento 20260806-17)."
 
+  confech:
+    nombre: Confederación de Estudiantes de Chile (Confech)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Confederación de Estudiantes de Chile (Confech). En junio de 2026 un chat de WhatsApp vinculado a la organización ('Zonal RM') fue el origen de la formalización de un estudiante por amenazas contra el presidente José Antonio Kast (evento 20260617-2)."
+
+  cpech:
+    nombre: Preuniversitario Cpech
+    tipo: empresa
+    pais: Chile
+    notas: "Preuniversitario chileno, parte del Grupo Educacional Cpech, fundado por Cristián Moreno Benavente (expresidente de la Federación del Rodeo Chileno y padre del diputado republicano por Curicó Benjamín Moreno). En agosto de 2026 contrató como secretario de su sede Curicó al excapitán Patricio Maturana, condenado por cegar a la senadora Fabiola Campillai (evento 20260810-42)."
+
+  anfusepna:
+    nombre: Anfusepna
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Asociación de trabajadores/as del Servicio Nacional de Protección Especializada a la Niñez y Adolescencia (Anfusepna). En agosto de 2026 exigió participación en la comisión transversal de reforma al Estatuto Administrativo anunciada por el ministro de Hacienda Jorge Quiroz (evento 20260812-16)."
+
+  servicio_proteccion_ninez:
+    nombre: Servicio Nacional de Protección Especializada a la Niñez y Adolescencia
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público creado por la Ley 21.302 (2021) para la protección especializada de niños, niñas y adolescentes, sucesor de Mejor Niñez. Sus funcionarios agrupados en Anfusepna exigieron en agosto de 2026 voz en la reforma al Estatuto Administrativo (evento 20260812-16)."
+
+  juzgado_garantia_san_bernardo:
+    nombre: Juzgado de Garantía de San Bernardo
+    tipo: poder_judicial
+    pais: Chile
+    notas: "Tribunal de garantía de San Bernardo. En 2026 otorgó a Patricio Maturana los beneficios intrapenitenciarios de salida dominical (febrero) y de salida diaria para trabajar en el preuniversitario Cpech de Curicó (agosto) (evento 20260810-42)."
+
+  inversiones_suiza:
+    nombre: Inversiones Suiza Limitada
+    tipo: empresa
+    pais: Chile
+    notas: "Casa de cambios de Harold Pizarro Iturrieta. La Fiscalía Regional de Los Lagos la sindica como pieza del mecanismo de blanqueo de la trama bielorrusa, que convertía cheques nominativos de los abogados de Belaz Movitec en efectivo que habría terminado en manos de Gonzalo Migueles (evento 20260806-55)."
+
+  belaz_movitec:
+    nombre: Consorcio Belaz Movitec (CBM)
+    tipo: empresa
+    pais: Chile
+    notas: "Consorcio chileno-bielorruso (Belaz Movitec, CBM) en litigio histórico con Codelco por la explotación minera. La Fiscalía indaga si la exministra de la Corte Suprema Ángela Vivanco usó su posición en la Tercera Sala para acelerar fallos favorables al consorcio a cambio de pagos a su entonces pareja Gonzalo Migueles (trama bielorrusa, evento 20260806-55)."
+
 cifras:
+  dias_prision_preventiva_vivanco:
+    nombre: Días de prisión preventiva de Ángela Vivanco
+    unidad_default: días
+    notas: "133 días de prisión preventiva cumplidos por la exministra de la Corte Suprema Ángela Vivanco en el Centro Penitenciario Femenino (CPF) de Santiago, entre su detención y el 12 de junio de 2026, cuando salió del penal quedando en arresto domiciliario total (evento 20260806-55)."
+  declaracion_vivanco_horas:
+    nombre: Horas de declaración de Ángela Vivanco ante la Fiscalía (5-6-ago-2026)
+    unidad_default: horas
+    notas: "Casi nueve horas de interrogatorio de la exministra de la Corte Suprema Ángela Vivanco, repartidas en dos jornadas (5 y 6 de agosto de 2026) en el cuartel OS-7 de Santiago, como imputada por cohecho, soborno y lavado de activos en la trama bielorrusa. Primera vez que el Ministerio Público escuchaba su versión tras pasar más de tres meses en prisión preventiva (evento 20260806-55)."
+  salida_diaria_maturana_horas:
+    nombre: Horas diarias de salida al medio libre de Patricio Maturana
+    unidad_default: horas
+    notas: "15 horas diarias de salida controlada al medio libre (07:00 a 22:00) otorgada por el Juzgado de Garantía de San Bernardo a Patricio Maturana a partir del 10 de agosto de 2026 para trabajar como secretario en el preuniversitario Cpech de Curicó (evento 20260810-42)."
+  jornada_laboral_maturana_semanal:
+    nombre: Jornada laboral semanal de Patricio Maturana en Cpech Curicó
+    unidad_default: horas semanales
+    notas: "42 horas semanales de jornada presencial del cargo de secretario en la sede Curicó del preuniversitario Cpech (lunes y viernes 09:00-19:00; martes a jueves 09:00-18:00, con una hora de colación) según la carta de selección difundida por Contrapoder (evento 20260810-42)."
   reos_trasladados_cancerbero:
     nombre: Reos trasladados en la Operación Cancerbero (13-ago-2026)
     unidad_default: reos
@@ -13843,6 +13981,10 @@ cifras:
     nombre: Causas por violencia institucional en el estallido (Fiscalía 2025)
     unidad_default: causas
     notas: "11.506 causas por violencia institucional cometida por agentes del Estado registradas entre el 18 de octubre de 2019 y el 31 de marzo de 2020 según el Informe de la Fiscalía (octubre 2025). De las más de 12 mil denuncias por violencia institucional, solo 219 terminaron con sentencia condenatoria."
+  edad_victima_ataque_perros_quirihue:
+    nombre: Edad de la víctima de ataque de perros en Quirihue (agosto 2026)
+    unidad_default: años
+    notas: "78 años tenía la adulta mayor que falleció en Quirihue (Región de Ñuble) el 13 de agosto de 2026 tras ser atacada por al menos tres perros pastores alemanes en el antejardín de la vivienda de sus familiares (evento 20260813-14)."
   edad_primer_caso_covid_chile:
     nombre: Edad del primer caso de COVID-19 en Chile
     unidad_default: años

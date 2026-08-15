@@ -340,8 +340,12 @@ export function getCabinetByGobierno(): GobiernoTimeline[] {
         continue;
       }
       // Solape: desde <= fin del gobierno (o cualquiera si es el actual) y hasta >= inicio.
+      // OJO: un nombramiento que empieza EXACTAMENTE en la fecha de término del gobierno
+      // (p. ej. 2018-03-11, último día de Bachelet 2) pertenece al gobierno siguiente
+      // (Piñera 2), no al que termina: con `>` se incluía en ambos y el clamp lo dejaba
+      // en 0 días (desdeGob === hastaGob === finGob).
       if (a.desde < gobierno.desde) continue;
-      if (finGob && a.desde > finGob) continue;
+      if (finGob && a.desde >= finGob) continue;
       if (a.hasta && a.hasta < gobierno.desde) continue;
       const list = porCartera.get(a.ministerioId) ?? [];
       list.push(a);

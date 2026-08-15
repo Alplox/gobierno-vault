@@ -313,6 +313,9 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'chilepaisminero.com': 'chilepaisminero',
   'mestizos.cl': 'mestizos',
   'diarioestrategia.cl': 'diarioestrategia',
+  'quepasaaraucania.cl': 'quepasaaraucania',
+  'lafontana.cl': 'lafontana',
+  'quirihuenoticias.cl': 'quirihue_noticias',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -346,6 +349,9 @@ const CATALOG_MEDIO_NAMES = {
   chilepaisminero: 'Chile País Minero',
   mestizos: 'Mestizos Magazine',
   diarioestrategia: 'Diario Estrategia',
+  quepasaaraucania: 'Qué Pasa Araucanía',
+  lafontana: 'La Fontana',
+  quirihue_noticias: 'Quirihue Noticias',
 };
 
 function catalogExists() {

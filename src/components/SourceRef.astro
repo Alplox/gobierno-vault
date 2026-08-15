@@ -1,7 +1,13 @@
 ---
-const { id = '', index, href = `/sources/${id}`, title = `Referencia ${index}` } = Astro.props;
+// Referencia inline con tooltip, mismo markup que los [[source/...]] de los
+// eventos (remarkWikiLinks.mjs): <a class="source-ref"> + .source-ref-num +
+// .source-ref-tip. Así el sistema global de Base.astro (CSS + click handler)
+// da tooltip al hover y scroll+hightlight al hacer clic (#ref-N).
+// tip: texto del tooltip (p. ej. "medio\ntítulo"); si no se pasa, solo title.
+const { id = '', index, href = `/sources/${id}`, title = `Referencia ${index}`, tip } = Astro.props;
 ---
 
-<sup class="text-blue-600 font-mono text-xs">
-  <a href={href} title={title}>[{index}]</a>
-</sup>
+<a href={href} class="source-ref" title={title}>
+  <sup class="source-ref-num">[{index}]</sup>
+  {tip && <span class="source-ref-tip">{tip}</span>}
+</a>
