@@ -25,7 +25,8 @@ import {
   Volume2,
   VolumeX,
   Copy,
-  MessageCircle,
+  Bot,
+  Bug,
 } from 'lucide-astro';
 import { TIPO_LABELS, TIPO_STYLES } from '../../../lib/eventTypes';
 
@@ -93,10 +94,23 @@ const exportMd = [
   `**Fuente (Gobierno Vault):** ${eventUrl}`,
   refLines ? `**Referencias:**\n${refLines}` : '',
 ].join('\n');
-const chatPrompt = `Analiza y contextualiza este evento y propón fuentes o datos adicionales que lo confirmen o contradigan.\n\nTítulo: ${titulo}\n## Fuentes conocidas:\n${refLines}`;
-// Best-effort: chatgpt.com/?q= prefill el mensaje, pero las URLs se cortan; se usa un prompt corto.
+// Prompt para IAs: título en su propio párrafo (línea en blanco antes y después),
+// fuentes como lista debajo - evita que el título quede pegado a las fuentes.
+const chatPrompt = `Analiza y contextualiza este evento y propón fuentes o datos adicionales que lo confirmen o contradigan.
+
+Título: ${titulo}
+
+## Fuentes conocidas:
+${refLines || '(sin fuentes registradas)'}`;
+// Best-effort: el prefill vía URL corta los mensajes largos, así que se envía un
+// prompt corto; el botón "Copiar prompt" deja el prompt completo para pegar.
 const chatPrefill = chatPrompt.slice(0, 1500);
 const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
+const claudeUrl = `https://claude.ai/new?q=${encodeURIComponent(chatPrefill)}`;
+// Reportar error: abre un issue de GitHub pre-rellenado con el evento y su URL.
+const reportUrl = `https://github.com/Alplox/gobierno-vault/issues/new?title=${encodeURIComponent(`[Evento] ${titulo}`)}&body=${encodeURIComponent(`Evento: ${eventUrl}
+
+Describe el error o la corrección sugerida.`)}`;
 ---
 
 <Base title={titulo}>
@@ -177,9 +191,30 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
           <Copy class="h-4 w-4 shrink-0" />
           <span data-copy-label>Copiar como Markdown</span>
         </button>
-        <a id="btn-chatgpt" href={chatGptUrl} target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-700 bg-emerald-50 hover:bg-emerald-100 px-3 py-1.5 rounded-lg transition-colors snap-round">
-          <MessageCircle class="h-4 w-4 shrink-0" />
-          <span data-copy-label>Preguntar a ChatGPT</span>
+        <!-- Button group: preguntar a una IA + copiar prompt completo -->
+        <div class="inline-flex flex-wrap items-center rounded-lg border border-emerald-200/80 bg-emerald-50/60 overflow-hidden" role="group" aria-label="Preguntar a una IA sobre este evento">
+          <span class="inline-flex items-center gap-1.5 pl-3 pr-2 py-1.5 text-xs font-semibold text-emerald-700">
+            <Bot class="h-4 w-4 shrink-0" />
+            <span>Preguntar a</span>
+          </span>
+          <a id="btn-ai-chatgpt" href={chatGptUrl} target="_blank" rel="noopener" data-ai-copy
+             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors border-l border-emerald-200/70"
+             title="Abrir ChatGPT con el evento como prompt">ChatGPT</a>
+          <a id="btn-ai-claude" href={claudeUrl} target="_blank" rel="noopener" data-ai-copy
+             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors border-l border-emerald-200/70"
+             title="Abrir Claude con el evento como prompt">Claude</a>
+          <button id="btn-copy-prompt" type="button" data-copy-prompt
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 hover:bg-emerald-100 transition-colors border-l border-emerald-200/70"
+                  title="Copiar el prompt completo para pegarlo en cualquier IA">
+            <Copy class="h-3.5 w-3.5 shrink-0" />
+            <span data-copy-label>Copiar prompt</span>
+          </button>
+        </div>
+        <a href={reportUrl} target="_blank" rel="noopener"
+           class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 bg-amber-50 hover:bg-amber-100 px-3 py-1.5 rounded-lg transition-colors"
+           title="Abrir un issue de GitHub para reportar un error o sugerir una corrección en este evento">
+          <Bug class="h-4 w-4 shrink-0" />
+          <span>Reportar error</span>
         </a>
       </div>
     </section>
@@ -686,14 +721,16 @@ const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
       });
       return;
     }
-    if (target.closest('#btn-chatgpt')) {
-      const btn = target.closest('#btn-chatgpt');
+    // Copiar prompt completo: botón dedicado y los tres enlaces de IA (que además
+    // abren el chat con el prefill corto; el prompt completo queda en el portapapeles).
+    if (target.closest('[data-copy-prompt]') || target.closest('[data-ai-copy]')) {
+      const btn = target.closest('[data-copy-prompt]');
       if (navigator.clipboard) {
         navigator.clipboard.writeText(promptEl?.getAttribute('data-prompt') ?? '').then(() => {
           play('success');
           const label = btn?.querySelector('[data-copy-label]');
-          if (label) label.textContent = 'Prompt copiado';
-          setTimeout(() => { if (label) label.textContent = 'Preguntar a ChatGPT'; }, 2500);
+          if (label) label.textContent = '¡Prompt copiado!';
+          setTimeout(() => { if (label) label.textContent = 'Copiar prompt'; }, 2500);
         }).catch(() => {});
       }
     }

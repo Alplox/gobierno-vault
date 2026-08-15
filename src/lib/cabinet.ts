@@ -31,6 +31,7 @@ const ORG_ALIASES: Record<string, string> = {
   ministerio_obras_publicas: 'ministerio_de_obras_publicas',
   ministerio_del_interior: 'ministerio_interior',
   minsal: 'ministerio_salud',
+  segpres: 'ministerio_segpres',
 };
 
 // Org ids consideradas carteras ministeriales (tipo ministerio + segegob + desarrollo social).
@@ -62,6 +63,29 @@ const MINISTERIO_ORG_IDS = new Set([
   'segegob',
 ]);
 
+// Periodos presidenciales de Chile (desde 1990) para la vista "por gobierno".
+// `hasta` null = gobierno en ejercicio (Kast).
+export type Gobierno = {
+  id: string;
+  presidente: string;
+  partido: string;
+  desde: string; // ISO YYYY-MM-DD
+  hasta?: string;
+  actual?: boolean;
+};
+
+export const GOBIERNOS: Gobierno[] = [
+  { id: 'aylwin', presidente: 'Patricio Aylwin', partido: 'DC', desde: '1990-03-11', hasta: '1994-03-11' },
+  { id: 'frei', presidente: 'Eduardo Frei Ruiz-Tagle', partido: 'DC', desde: '1994-03-11', hasta: '2000-03-11' },
+  { id: 'lagos', presidente: 'Ricardo Lagos', partido: 'PPD', desde: '2000-03-11', hasta: '2006-03-11' },
+  { id: 'bachelet1', presidente: 'Michelle Bachelet (1.º)', partido: 'PS', desde: '2006-03-11', hasta: '2010-03-11' },
+  { id: 'pinera1', presidente: 'Sebastián Piñera (1.º)', partido: 'RN', desde: '2010-03-11', hasta: '2014-03-11' },
+  { id: 'bachelet2', presidente: 'Michelle Bachelet (2.º)', partido: 'PS', desde: '2014-03-11', hasta: '2018-03-11' },
+  { id: 'pinera2', presidente: 'Sebastián Piñera (2.º)', partido: 'RN', desde: '2018-03-11', hasta: '2022-03-11' },
+  { id: 'boric', presidente: 'Gabriel Boric', partido: 'FA', desde: '2022-03-11', hasta: '2026-03-11' },
+  { id: 'kast', presidente: 'José Antonio Kast', partido: 'Republicano', desde: '2026-03-11', actual: true },
+];
+
 // Helpers de fechas compartidos con las páginas (gabinete, org pages, people).
 const MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
@@ -86,8 +110,8 @@ const KEYWORD_MINISTERIO: [RegExp, string][] = [
   [/medio ambiente/i, 'ministerio_medio_ambiente'],
   [/desarrollo social/i, 'ministerio_desarrollo_social'],
   [/obras p[úu]blicas/i, 'ministerio_de_obras_publicas'],
-  [/secretario general de la presidencia|segpres/i, 'ministerio_segpres'],
-  [/secretar[íi]a general de gobierno|segegob/i, 'segegob'],
+  [/secretari[oa] general de la presidencia|segpres/i, 'ministerio_segpres'],
+  [/secretari[oa] general de gobierno|segegob/i, 'segegob'],
   [/interior/i, 'ministerio_interior'],
   [/seguridad p[úu]blica/i, 'ministerio_seguridad'],
   [/hacienda/i, 'ministerio_hacienda'],
@@ -256,4 +280,97 @@ export function getCabinetByMinistry(): CabinetByMinistry[] {
   }
 
   return result.sort((a, b) => a.ministerioNombre.localeCompare(b.ministerioNombre, 'es'));
+}
+
+/**
+ * Nombramientos de un gobierno, recortados al rango del periodo presidencial.
+ * `desde`/`hasta` se limitan al periodo del gobierno; `salidaPrevia` indica si
+ * el titular salió ANTES de terminar el periodo (renuncia/cambio de gabinete).
+ */
+export type GobiernoAppointment = CabinetAppointment & {
+  desdeGob?: string;
+  hastaGob?: string;
+  salidaPrevia: boolean;
+  esUltimoDeCartera: boolean; // último titular de la cartera en ese gobierno
+};
+
+export type GobiernoCartera = {
+  ministerioId: string;
+  ministerioNombre: string;
+  titulares: GobiernoAppointment[];
+};
+
+export type GobiernoTimeline = {
+  gobierno: Gobierno;
+  carteras: GobiernoCartera[];
+  totalNombramientos: number;
+  salidasPrevias: number;
+};
+
+function isoComparable(iso?: string): string {
+  return iso ?? '9999-12-31';
+}
+
+function clampIso(iso: string, min: string, max?: string): string {
+  let v = iso < min ? min : iso;
+  if (max && v > max) v = max;
+  return v;
+}
+
+/**
+ * Construye la línea de tiempo del gabinete por gobierno: para cada periodo
+ * presidencial, los titulares de cada cartera con su ventana de tiempo recortada
+ * al periodo, marcando salidas prematuras (renuncias/cambios dentro del gobierno).
+ */
+export function getCabinetByGobierno(): GobiernoTimeline[] {
+  const appointments = getMinisterialAppointments();
+
+  return GOBIERNOS.map((gobierno) => {
+    const finGob = gobierno.hasta; // undefined para Kast (en ejercicio)
+    const porCartera = new Map<string, CabinetAppointment[]>();
+
+    for (const a of appointments) {
+      // Cargo sin fechas → se muestra en el gobierno actual (Kast) como "sin fechas".
+      if (!a.desde) {
+        if (gobierno.actual) {
+          const list = porCartera.get(a.ministerioId) ?? [];
+          list.push(a);
+          porCartera.set(a.ministerioId, list);
+        }
+        continue;
+      }
+      // Solape: desde <= fin del gobierno (o cualquiera si es el actual) y hasta >= inicio.
+      if (a.desde < gobierno.desde) continue;
+      if (finGob && a.desde > finGob) continue;
+      if (a.hasta && a.hasta < gobierno.desde) continue;
+      const list = porCartera.get(a.ministerioId) ?? [];
+      list.push(a);
+      porCartera.set(a.ministerioId, list);
+    }
+
+    const carteras: GobiernoCartera[] = [];
+    let totalNombramientos = 0;
+    let salidasPrevias = 0;
+
+    for (const [ministerioId, list] of porCartera) {
+      const sorted = [...list].sort((a, b) => isoComparable(a.desde).localeCompare(isoComparable(b.desde)));
+      const titulares: GobiernoAppointment[] = sorted.map((a, i) => {
+        const desdeGob = a.desde ? clampIso(a.desde, gobierno.desde, finGob) : undefined;
+        const hastaGob = a.hasta ? clampIso(a.hasta, gobierno.desde, finGob) : undefined;
+        // Salida previa: tiene fecha de término anterior al fin del periodo (o
+        // cualquier término si el gobierno terminó y hay fecha).
+        const salidaPrevia =
+          !!a.hasta && (!finGob ? true : a.hasta < finGob);
+        const esUltimoDeCartera = i === sorted.length - 1;
+        totalNombramientos++;
+        if (salidaPrevia) salidasPrevias++;
+        return { ...a, desdeGob, hastaGob, salidaPrevia, esUltimoDeCartera };
+      });
+      const nombre = list[0]?.ministerioNombre ?? ministerioId;
+      carteras.push({ ministerioId, ministerioNombre: nombre, titulares });
+    }
+
+    carteras.sort((a, b) => a.ministerioNombre.localeCompare(b.ministerioNombre, 'es'));
+    return { gobierno, carteras, totalNombramientos, salidasPrevias };
+  });
 }

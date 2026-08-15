@@ -646,14 +646,18 @@ people:
     nombre: Jorge Arrate Mac Niven
     cargo: Exministro y excandidato presidencial
     cargos:
-      - cargo: Ministro Secretario General de Gobierno
-        organizacion: segegob
-        desde: 1998-08-01
-        hasta: 1999-06-22
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1992-09-28
+        hasta: 1994-03-11
       - cargo: Ministro del Trabajo y Previsión Social
         organizacion: ministerio_trabajo
         desde: 1994-03-11
         hasta: 1998-08-01
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1998-08-01
+        hasta: 1999-06-22
     notas: "Exministro de Estado (Educación y Minería, 2006-2010), excandidato presidencial del Juntos Podemos en 2009. Tras quedar fuera de la segunda vuelta, respaldó a Eduardo Frei en el balotaje del 17 de enero de 2010; el Partido Comunista anunció que no descartaba su participación activa en la campaña de Frei."
   andres_velasco:
     nombre: Andrés Velasco Brañes
@@ -685,12 +689,16 @@ people:
     nombre: Carolina Tohá Morales
     cargo: Exministra del Interior
     cargos:
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2009-03-12
+        hasta: 2009-12-14
       - cargo: Ministra del Interior y Seguridad Pública
         organizacion: ministerio_interior
         desde: 2022-09-06
-        hasta: 2026-03-11
+        hasta: 2025-03-04
     organizacion: ministerio_interior
-    notas: "Exalcaldesa de Santiago (PPD). Asumió el Ministerio del Interior y Seguridad Pública el 6 de septiembre de 2022, tras la salida de Izkia Siches, y permaneció en el cargo hasta el fin del gobierno de Boric."
+    notas: "Exalcaldesa de Santiago (PPD). Asumió el Ministerio del Interior y Seguridad Pública el 6 de septiembre de 2022, tras la salida de Izkia Siches. Renunció el 4 de marzo de 2025 para asumir su candidatura presidencial; en su reemplazo asumió Álvaro Elizalde."
   ronald_ojeda:
     nombre: Ronald Ojeda Moreno
     cargo: Exmilitar venezolano y disidente político
@@ -1643,8 +1651,12 @@ people:
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: segpres
         desde: 2022-03-11
-        hasta: 2023-08-08
-    notas: "Ministro de la Segpres del gobierno de Gabriel Boric (marzo 2022-agosto 2023). Exdiputado de Revolución Democrática y del Frente Amplio, una de las figuras más cercanas al presidente. En marzo de 2022 acompañó a la ministra Izkia Siches en el Congreso durante la votación de la prórroga del estado de excepción en la Macrozona norte. Renunció en agosto de 2023 en el marco de la crisis por el caso Convenios."
+        hasta: 2022-09-06
+      - cargo: Ministro de Desarrollo Social y Familia
+        organizacion: ministerio_desarrollo_social
+        desde: 2022-09-06
+        hasta: 2023-08-11
+    notas: "Ministro de la Segpres del gobierno de Gabriel Boric (marzo-septiembre 2022) y luego ministro de Desarrollo Social (septiembre 2022-agosto 2023). Exdiputado de Revolución Democrática y del Frente Amplio, una de las figuras más cercanas al presidente. En marzo de 2022 acompañó a la ministra Izkia Siches en el Congreso durante la votación de la prórroga del estado de excepción en la Macrozona norte. Renunció en agosto de 2023 en el marco de la crisis por el caso Convenios."
   beatriz_sanchez:
     nombre: Beatriz Sanchez
     cargo: Senadora (FA)
@@ -2811,9 +2823,13 @@ people:
     cargos:
       - cargo: Ministra de Bienes Nacionales
         organizacion: ministerio_bienes_nacionales
+        desde: 2010-03-11
+        hasta: 2012-11-05
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
         desde: 2026-03-11
     notas: Abogada, militante de Evópoli. Exministra de Bienes Nacionales durante el
-      primer gobierno de Piñera.
+      primer gobierno de Piñera (2010-2012); repite en el cargo en el gobierno de Kast.
   fernando_rabat:
     nombre: Fernando Rabat Celis
     cargo: Ministro de Justicia y Derechos Humanos
@@ -3413,11 +3429,19 @@ people:
     nombre: Álvaro Elizalde Soto
     cargo: Ministro del Interior y Seguridad Pública
     cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2014-03-11
+        hasta: 2015-05-11
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2023-04-19
+        hasta: 2025-03-04
       - cargo: Ministro del Interior y Seguridad Pública
         organizacion: ministerio_interior
-        desde: 2022-03-11
+        desde: 2025-03-04
         hasta: 2026-03-11
-    notas: Vocero de gobierno. Criticó propuesta de Republicanos de privatizar Codelco.
+    notas: Político PS. Exvocero de gobierno (Segegob, 2014-2015), ministro Segpres (2023-2025) y ministro del Interior del gobierno de Boric desde marzo de 2025. Criticó propuesta de Republicanos de privatizar Codelco.
   camila_flores:
     nombre: Camila Flores
     cargo: Senadora (RN)
@@ -3488,6 +3512,10 @@ people:
     nombre: Ximena Rincón González
     cargo: Ministra de Energía
     cargos:
+      - cargo: Ministra Secretaria General de la Presidencia
+        organizacion: segpres
+        desde: 2014-03-11
+        hasta: 2015-05-11
       - cargo: Ministra del Trabajo y Previsión Social
         organizacion: ministerio_trabajo
         desde: 2015-05-11
@@ -4186,6 +4214,10 @@ people:
     nombre: Andrés Chadwick Piñera
     cargo: Exministro del Interior de Sebastián Piñera
     cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2011-07-18
+        hasta: 2012-11-05
       - cargo: Ministro del Interior y Seguridad Pública
         organizacion: ministerio_interior
         desde: 2012-11-05
@@ -4253,6 +4285,10 @@ people:
     nombre: José Miguel Insulza Salinas
     cargo: Excanciller y exsecretario general de la OEA
     cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 1999-06-22
+        hasta: 2000-03-11
       - cargo: Ministro del Interior
         organizacion: ministerio_interior
         desde: 2000-03-11
@@ -4308,11 +4344,15 @@ people:
     nombre: Javiera Toro Cáceres
     cargo: Ministra de Desarrollo Social y Familia
     cargos:
+      - cargo: Ministra de Bienes Nacionales
+        organizacion: ministerio_bienes_nacionales
+        desde: 2022-03-11
+        hasta: 2023-08-16
       - cargo: Ministra de Desarrollo Social y Familia
         organizacion: ministerio_desarrollo_social
-        desde: 2022-08-25
+        desde: 2023-08-16
         hasta: 2026-03-11
-    notas: "Abogada y militante de Comunes. Ministra de Desarrollo Social y Familia del gobierno de Gabriel Boric. Defendió al Frente Amplio del 'lenguaje caricaturesco' que instaló la derecha sobre su agenda (La Tercera, marzo 2026)."
+    notas: "Abogada y militante de Comunes. Ministra de Bienes Nacionales de Boric entre marzo de 2022 y agosto de 2023, y luego ministra de Desarrollo Social y Familia desde el 16 de agosto de 2023, en reemplazo de Giorgio Jackson tras su renuncia por el caso Convenios. Defendió al Frente Amplio del 'lenguaje caricaturesco' que instaló la derecha sobre su agenda (La Tercera, marzo 2026)."
   bettina_horst:
     nombre: Bettina Horst
     cargo: Economista de Libertad y Desarrollo
@@ -4334,6 +4374,10 @@ people:
         organizacion: ministerio_educacion
         desde: 2014-03-11
         hasta: 2015-06-27
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2015-06-27
+        hasta: 2017-08-31
     notas: "Economista y político PPD. Exministro de Hacienda (2006-2010). Afirmó que 'Estados Unidos actúa como un matón' y que 'el ofensor se da por ofendido' respecto al arancel de 12,5%."
   cristian_monckeberg:
     nombre: Cristián Monckeberg Bruner
@@ -4347,6 +4391,10 @@ people:
         organizacion: ministerio_desarrollo_social
         desde: 2020-06-04
         hasta: 2020-07-28
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2020-07-28
+        hasta: 2021-01-06
     notas: "Abogado y político RN. Expresidente de Renovación Nacional y exministro. Criticó que el embajador Judd mande 'a leer el tratado' a ministros chilenos."
   leonarda_villalobos:
     nombre: Leonarda Villalobos
@@ -5008,7 +5056,7 @@ people:
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: segpres
         desde: 2003-03-03
-        hasta: 2004-09-29
+        hasta: 2004-06-03
     notas: "Senador. El 4 de agosto de 2026 hizo reserva de constitucionalidad de la fórmula de compensación municipal de la megarreforma y votó en contra de ella en la Sala."
   ruth_hurtado:
     nombre: Ruth Hurtado
@@ -5538,7 +5586,7 @@ people:
     cargo: Ex gerente de la Empresa de Ferrocarriles del Estado (EFE)
   marcela_cubillos:
     nombre: Marcela Cubillos Sigall
-    cargo: Ex ministra de Educación (2019-2021)
+    cargo: Ex ministra de Educación (2018-2020)
     cargos:
       - cargo: Ministra del Medio Ambiente
         organizacion: ministerio_medio_ambiente
@@ -5546,8 +5594,8 @@ people:
         hasta: 2018-08-09
       - cargo: Ministra de Educación
         organizacion: ministerio_educacion
-        desde: 2019-08-09
-        hasta: 2021-01-06
+        desde: 2018-08-09
+        hasta: 2020-02-28
   marcela_cuevas:
     nombre: Marcela Cuevas Muñoz
     cargo: Ex mayor de Carabineros (cómplice en megafraude)
@@ -5656,6 +5704,11 @@ people:
   jaime_bellolio:
     nombre: Jaime Bellolio
     cargo: Ex diputado UDI, ex vocero de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 2020-07-28
+        hasta: 2022-03-11
     notas: "Ex diputado UDI y ex vocero de Gobierno; Nora Cuevas lo reemplazó en la Cámara cuando fue designado vocero."
   pedro_sabat:
     nombre: Pedro Sabat
@@ -6059,6 +6112,10 @@ people:
     cargo: Ministro del Interior y Seguridad Pública
     organizacion: ministerio_interior
     cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2002-01-07
+        hasta: 2003-03-03
       - cargo: Ministro del Interior y Seguridad Pública
         organizacion: ministerio_interior
         desde: 2016-06-08
@@ -6319,6 +6376,10 @@ people:
         organizacion: ministerio_economia
         desde: 1994-03-11
         hasta: 1998-08-01
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2000-03-11
+        hasta: 2002-01-07
       - cargo: Ministro de Energía
         organizacion: ministerio_energia
         desde: 2025-10-16
@@ -6469,7 +6530,7 @@ people:
         hasta: 1996-09-28
       - cargo: Ministro de Planificación y Cooperación
         organizacion: ministerio_desarrollo_social
-        desde: 1990-07-19
+        desde: 1990-03-11
         hasta: 1994-03-11
 
   jose_pablo_arellano:
@@ -6514,7 +6575,7 @@ people:
       - cargo: Ministro de Educación
         organizacion: ministerio_educacion
         desde: 2006-03-11
-        hasta: 2006-06-14
+        hasta: 2006-07-14
 
   yasna_provoste:
     nombre: Yasna Provoste Campillay
@@ -6523,11 +6584,11 @@ people:
     cargos:
       - cargo: Ministra de Educación
         organizacion: ministerio_educacion
-        desde: 2006-06-14
-        hasta: 2008-04-17
+        desde: 2006-07-14
+        hasta: 2008-04-16
       - cargo: Ministra de Planificación
         organizacion: ministerio_desarrollo_social
-        desde: 2005-01-07
+        desde: 2004-10-01
         hasta: 2006-03-11
 
   monica_jimenez:
@@ -6551,7 +6612,7 @@ people:
         hasta: 2011-07-18
       - cargo: Ministro de Desarrollo Social
         organizacion: ministerio_desarrollo_social
-        desde: 2011-10-13
+        desde: 2011-07-18
         hasta: 2013-06-06
 
   felipe_bulnes:
@@ -6627,7 +6688,7 @@ people:
     cargos:
       - cargo: Ministro de Justicia
         organizacion: ministerio_justicia
-        desde: 1990-07-19
+        desde: 1990-03-11
         hasta: 1994-03-11
 
   jose_antonio_gomez:
@@ -7289,6 +7350,10 @@ people:
         organizacion: ministerio_bienes_nacionales
         desde: 2018-03-11
         hasta: 2019-10-28
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2019-10-28
+        hasta: 2020-06-04
 
   juan_agustin_figueroa:
     nombre: Juan Agustín Figueroa Yávar
@@ -8016,7 +8081,7 @@ people:
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: segpres
         desde: 1996-09-28
-        hasta: 1999-06-22
+        hasta: 1998-08-01
 
   eduardo_dockendorff:
     nombre: Eduardo Dockendorff Vallejos
@@ -8025,7 +8090,7 @@ people:
     cargos:
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: segpres
-        desde: 2004-09-29
+        desde: 2004-06-03
         hasta: 2006-03-11
 
   paulina_veloso:
@@ -8055,7 +8120,7 @@ people:
     cargos:
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: segpres
-        desde: 2016-03-11
+        desde: 2017-08-31
         hasta: 2018-03-11
 
   juan_jose_ossa:
@@ -8065,7 +8130,7 @@ people:
     cargos:
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: segpres
-        desde: 2020-07-28
+        desde: 2021-01-06
         hasta: 2022-03-11
 
   enrique_correa_rios:
@@ -8293,6 +8358,94 @@ people:
     cargo: Senadora (PPD)
     partido: PPD
     notas: "Senadora del PPD. En julio de 2026, ante la reforma del INDH impulsada por el gobierno de Kast, llamó a no confundir 'una modernización seria' con un intento de 'desmantelamiento' del organismo por parte de la administración (evento 20260722-6)."
+
+  john_biehl:
+    nombre: John Biehl del Río
+    cargo: Exministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 1998-08-01
+        hasta: 1999-06-22
+    notas: "Diplomático y político PDC. Ministro Secretario General de la Presidencia del gobierno de Eduardo Frei Ruiz-Tagle (1998-1999)."
+
+  claudia_barattini:
+    nombre: Claudia Barattini Contreras
+    cargo: Exministra de las Culturas, las Artes y el Patrimonio
+    organizacion: ministerio_culturas
+    cargos:
+      - cargo: Ministra de las Culturas, las Artes y el Patrimonio
+        organizacion: ministerio_culturas
+        desde: 2014-03-11
+        hasta: 2015-05-11
+    notas: "Socióloga y política del Partido Comunista. Primera ministra de las Culturas, las Artes y el Patrimonio de Chile (2014-2015), durante el segundo gobierno de Michelle Bachelet."
+
+  jorge_insunza:
+    nombre: Jorge Insunza Gregorio de Las Heras
+    cargo: Exministro Secretario General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministro Secretario General de la Presidencia
+        organizacion: segpres
+        desde: 2015-05-11
+        hasta: 2015-06-07
+    notas: "Abogado y político PPD. Ministro Secretario General de la Presidencia del segundo gobierno de Michelle Bachelet por poco menos de un mes (mayo-junio 2015), tras el caso de las sociedades de asesorías que lo obligó a renunciar."
+
+  paula_narvaez:
+    nombre: Paula Narváez Ojeda
+    cargo: Exministra Secretaria General de Gobierno
+    organizacion: segegob
+    cargos:
+      - cargo: Ministra Secretaria General de Gobierno
+        organizacion: segegob
+        desde: 2016-11-18
+        hasta: 2018-03-11
+    notas: "Periodista y política socialista. Ministra Secretaria General de Gobierno del segundo gobierno de Michelle Bachelet (2016-2018) y vocera oficial del Ejecutivo. Precandidata presidencial en la interna del PS."
+
+  ana_lya_uriarte:
+    nombre: Ana Lya Uriarte Rodríguez
+    cargo: Exministra Secretaria General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministra Secretaria General de la Presidencia
+        organizacion: segpres
+        desde: 2022-09-06
+        hasta: 2023-04-19
+    notas: "Abogada y política socialista. Ministra Secretaria General de la Presidencia del gobierno de Gabriel Boric entre septiembre de 2022 y abril de 2023, cuando renunció tras semanas de ausencia por complicaciones de salud; en su reemplazo asumió Álvaro Elizalde."
+
+  macarena_lobos:
+    nombre: Macarena Lobos Palacios
+    cargo: Ministra Secretaria General de la Presidencia
+    organizacion: segpres
+    cargos:
+      - cargo: Ministra Secretaria General de la Presidencia
+        organizacion: segpres
+        desde: 2025-03-04
+        hasta: 2026-03-11
+    notas: "Abogada, militante del Partido Socialista. Subsecretaria general de la Presidencia del gobierno de Boric; asumió como ministra Segpres subrogante el 4 de marzo de 2025, tras el paso de Álvaro Elizalde a Interior, y fue ratificada como titular el 10 de marzo de 2025, cargo que mantuvo hasta el fin del gobierno."
+
+  carolina_cuevas_merino:
+    nombre: Carolina Cuevas Merino
+    cargo: Exministra de la Mujer y la Equidad de Género (subrogante)
+    organizacion: ministerio_mujer
+    cargos:
+      - cargo: Ministra de la Mujer y la Equidad de Género (subrogante)
+        organizacion: ministerio_mujer
+        desde: 2020-03-13
+        hasta: 2020-05-06
+    notas: "Abogada y política RN. Subsecretaria de la Mujer y la Equidad de Género; asumió como ministra subrogante el 13 de marzo de 2020 tras la renuncia de Isabel Plá, hasta el nombramiento de Macarena Santelices."
+
+  carolina_valdivia:
+    nombre: Carolina Valdivia Torres
+    cargo: Exministra de Relaciones Exteriores (subrogante)
+    organizacion: ministerio_relaciones_exteriores
+    cargos:
+      - cargo: Ministra de Relaciones Exteriores (subrogante)
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2022-02-06
+        hasta: 2022-03-11
+    notas: "Abogada y académica independiente. Subsecretaria de Relaciones Exteriores; asumió como canciller subrogante el 6 de febrero de 2022 tras la renuncia de Andrés Allamand, hasta el fin del segundo gobierno de Piñera."
 
 organizations:
   cencosud:

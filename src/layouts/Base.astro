@@ -16,6 +16,8 @@ import {
   ChevronDown,
   Download,
   FileText,
+  Github,
+  ExternalLink,
 } from 'lucide-astro';
 import { ClientRouter } from 'astro:transitions';
 
@@ -34,19 +36,30 @@ const currentPath = Astro.url.pathname;
 // cabecera de cada .gvault). Mantenerlos IDENTICOS.
 const GV_VERIFY_CMD = `node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotliDecompressSync}=require('zlib');const t=readFileSync(process.argv[1],'utf8'),a=t.lastIndexOf('===METADATA==='),n1=t.indexOf('\\n',a),n2=t.indexOf('\\n',n1+1),m=JSON.parse(t.slice(n1+1,n2)),c=Buffer.from(t.slice(n2+1),'base64');if(createHash('sha256').update(c).digest('hex')!==m.sha256){console.error('CORRUPTO, descarta este archivo');process.exit(1)}console.log('OK, integro:',m.kind,m.fileCount,'archivos')" <nombre.gvault>`;
 
+// Navbar principal (links directos): solo secciones principales.
 const navPrimary = [
   { href: '/events', label: 'Eventos', icon: Calendar },
+  { href: '/topics', label: 'Temas', icon: Tag },
+  { href: '/gabinete', label: 'Gabinete', icon: Landmark },
+];
+// Secciones secundarias en el menú desplegable "Más".
+// El botón "Más" es dinámico: con 1 sola sección se fusiona al navbar como
+// link directo (no dropdown); con 2+ se muestra el desplegable.
+const navMore = [
+  { href: '/sueldos', label: 'Sueldos', icon: DollarSign },
+];
+// Links de sección que viven en el footer (no en el navbar ni el menú móvil).
+const navFooter = [
   { href: '/people', label: 'Personas', icon: Users },
   { href: '/organizations', label: 'Organizaciones', icon: Building2 },
   { href: '/sources', label: 'Fuentes', icon: BookOpen },
-  { href: '/topics', label: 'Temas', icon: Tag },
   { href: '/stats', label: 'Estadisticas', icon: BarChart3 },
 ];
-const navMore = [
-  { href: '/gabinete', label: 'Gabinete', icon: Landmark },
-  { href: '/sueldos', label: 'Sueldos', icon: DollarSign },
-];
+// Menú móvil y navbar desktop comparten la misma lista: primarias + secundarias
+// (los links del footer NO se repiten en el menú hamburguesa).
 const navLinks = [...navPrimary, ...navMore];
+const navMoreDropdown = navMore.length > 1;
+const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
 ---
 
 <!doctype html>
@@ -169,26 +182,28 @@ const navLinks = [...navPrimary, ...navMore];
           <span>Gobierno Vault</span>
         </a>
         <div class="hidden lg:flex items-center gap-1 text-sm font-medium">
-          {navPrimary.map((l) => (
+          {(navMoreDropdown ? navPrimary : navLinks).map((l) => (
             <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
               <l.icon class="h-4 w-4 shrink-0" />
               <span>{l.label}</span>
             </a>
           ))}
-          <details id="nav-more" class="relative group">
-            <summary data-nav-more-summary class="list-none flex items-center gap-1 px-2.5 py-1.5 rounded-lg cursor-pointer text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Más secciones">
-              <span>Más</span>
-              <ChevronDown class="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" />
-            </summary>
-            <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
-              {navMore.map((l) => (
-                <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
-                  <l.icon class="h-4 w-4 shrink-0" />
-                  <span>{l.label}</span>
-                </a>
-              ))}
-            </div>
-          </details>
+          {navMoreDropdown && (
+            <details id="nav-more" class="relative group">
+              <summary data-nav-more-summary class="list-none flex items-center gap-1 px-2.5 py-1.5 rounded-lg cursor-pointer text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Más secciones">
+                <span>Más</span>
+                <ChevronDown class="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" />
+              </summary>
+              <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
+                {navMore.map((l) => (
+                  <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+                    <l.icon class="h-4 w-4 shrink-0" />
+                    <span>{l.label}</span>
+                  </a>
+                ))}
+              </div>
+            </details>
+          )}
         </div>
         <div class="flex items-center gap-1 shrink-0">
           <button id="btn-sound" type="button" data-cuelume-press="press" class="p-2 rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
@@ -297,17 +312,33 @@ const navLinks = [...navPrimary, ...navMore];
         </details>
       </div>
 
-      <div class="max-w-6xl mx-auto px-4 mt-4 flex flex-wrap items-center justify-end gap-x-4 gap-y-1.5">
-        <a href="/llm.txt"
-           class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
-           title="Índice legible por agentes/LLM: guía de navegación + lista completa de eventos y datos en formatos crudos (markdown/YAML)">
-          <FileText class="h-3.5 w-3.5" /> llm.txt
-        </a>
-        <a href="/admin" data-nav-link data-nav-prefix="/admin" data-nav-admin
-           class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
-           title="Editor de contenido — herramienta para administrar el vault">
-          <Edit3 class="h-3.5 w-3.5" /> Editor de contenido
-        </a>
+      <div class="max-w-6xl mx-auto px-4 mt-6 pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+        <nav class="flex flex-wrap items-center gap-x-4 gap-y-1.5" aria-label="Secciones">
+          {navFooter.map((l) => (
+            <a href={l.href}
+               class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-blue-600 transition-colors">
+              <l.icon class="h-3.5 w-3.5" />
+              {l.label}
+            </a>
+          ))}
+        </nav>
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5">
+          <a href={GITHUB_URL} target="_blank" rel="noopener"
+             class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+             title="Repositorio público del proyecto en GitHub — código, datos y respaldo">
+            <Github class="h-3.5 w-3.5" /> Repositorio GitHub <ExternalLink class="h-3 w-3 opacity-60" />
+          </a>
+          <a href="/llm.txt"
+             class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+             title="Índice legible por agentes/LLM: guía de navegación + lista completa de eventos y datos en formatos crudos (markdown/YAML)">
+            <FileText class="h-3.5 w-3.5" /> llm.txt
+          </a>
+          <a href="/admin" data-nav-link data-nav-prefix="/admin" data-nav-admin
+             class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+             title="Editor de contenido — herramienta para administrar el vault">
+            <Edit3 class="h-3.5 w-3.5" /> Editor de contenido
+          </a>
+        </div>
       </div>
     </footer>
     <script>

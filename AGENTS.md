@@ -763,7 +763,7 @@ Cuando descubras algo no documentado aqui:
 - proyecto (18)
 
 **Entidades registradas:**
-- Personas: 1251
+- Personas: 1259
 - Organizaciones: 736
 - Cifras: 762
 - Fuentes: 2897
