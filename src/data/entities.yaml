@@ -581,7 +581,7 @@ people:
         organizacion: presidencia_chile
         desde: 2026-03-11
     organizacion: presidencia_chile
-    notas: Rasputin de Kast. Contrato 80,9M por 9 meses.
+    notas: "Rasputin de Kast. Contrato 80,9M por 9 meses (evento 20260418-1). El País (4-ene-2026) lo perfiló como 'el ajedrecista político detrás del relato de Kast': abogado PUC (2005), exasesor parlamentario de Kast en la UDI, jefe de gabinete de Rodrigo Álvarez, magíster en Cornell, columnista que calificó de 'parásitos' a funcionarios del Estado; suena fuerte como jefe del Segundo Piso."
   enrique_basaletti:
     nombre: Enrique Basaletti
     cargo: Diputado (Republicanos)
@@ -968,6 +968,18 @@ people:
         organizacion: ministerio_interior
         desde: 2026-03-11
     organizacion: ministerio_interior
+  sofia_shea:
+    nombre: Sofía Shea
+    cargo: Jefa del Departamento de Comunicación Digital de la Secom (Segegob)
+    notas: "Periodista (24), egresada hace un año de la Facultad de Comunicaciones de la PUC; hija de Nicolás Shea (fundador de Start-Up Chile). Realizó su práctica en La 975, la agencia de Felipe Costabal. Ingresó a la Segegob el 11-mar-2026 en grado 14 ($1.395.665) y el 13-abr-2026 ascendió a jefa del Departamento de Comunicación Digital (grado 11; $2.115.357 en mayo, $3.538.024 en junio con bono no detallado, $2.144.971 en julio), según el Portal de Transparencia (El Dínamo, 15-ago-2026, evento 20260815-1)."
+  nicolas_shea:
+    nombre: Nicolás Shea
+    cargo: Empresario; fundador de Start-Up Chile
+    notas: "Padre de Sofía Shea (jefa de Comunicación Digital de la Secom). En 2011 armó Start-Up Chile en Corfo y convocó a Felipe Costabal como director creativo del programa (evento 20260815-1)."
+  juan_ignacio_latorre:
+    nombre: Juan Ignacio Latorre
+    cargo: Senador y presidente de Revolución Democrática
+    notas: "Senador (2018-2026) y presidente de Revolución Democrática. En marzo de 2023 defendió a Giorgio Jackson en la polémica por la contratación de Vicente Gutiérrez en el MOP, señalando que fue una decisión autónoma del exministro Juan Carlos García (evento 20230330-1)."
   trinidad_zegers_dominguez:
     nombre: Trinidad Zegers Domínguez
     cargo: Asesora del Ministerio de Justicia y coordinadora de la Reforma Procesal Civil
@@ -1010,6 +1022,10 @@ people:
     cargo: Subinspectora de la Brigada del Cibercrimen Metropolitana de la PDI
     organizacion: pdi
     notas: "Subinspectora de la Brigada del Cibercrimen Metropolitana de la PDI. Informó a la prensa sobre la detención de una mujer de 23 años acusada de amenazar al Presidente Kast en redes sociales durante su visita a Talca (14-ago-2026)."
+  hector_de_la_fuente:
+    nombre: Héctor de la Fuente
+    cargo: Fiscal jefe de Talca
+    notas: "Fiscal jefe de Talca. Tras la formalización de la mujer de 23 años acusada de amenazar de muerte al presidente José Antonio Kast en Instagram (14-15-ago-2026), explicó que el contenido iba más allá de la crítica política al mencionarse 'la posibilidad de la utilización de un arma de fuego y quitarle la vida a más de una persona', y que el delito de atentado contra la autoridad protege que quien ejerce autoridad pública desarrolle sus labores sin interferencia."
   may_chomali:
     nombre: May Chomali Garib
     cargo: Ministra de Salud
@@ -1348,6 +1364,14 @@ people:
         organizacion: partido_nacional_libertario
         desde: 2026-03-11
     notas: Reveló interés de Thiel en invertir en minería en Chile y Argentina.
+  max_kaiser:
+    nombre: Max Kaiser
+    cargo: Abogado y empresario
+    notas: "Hermano menor del líder del Partido Nacional Libertario, Johannes Kaiser. Ejerce como 'Asociado Chile' de la empresa Glocal Terra (del senador argentino Joaquín Benegas Lynch), dedicada a la venta de terrenos rurales a extranjeros en América Latina, según la información pública del sitio de la empresa corroborada por Contrapoder Chile (agosto 2026). Sin declaraciones públicas al cierre del escándalo (evento 20260807-26)."
+  joaquin_benegas_lynch:
+    nombre: Joaquín Benegas Lynch
+    cargo: Senador argentino (La Libertad Avanza)
+    notas: "Senador argentino de La Libertad Avanza, cercano al presidente Javier Milei. Fundó en 2020 junto a su esposa Eloisa Perea Muñoz la empresa Glocal Terra SRL, dedicada al asesoramiento de inversores extranjeros y la compraventa de tierras rurales en Argentina, Uruguay, Paraguay, Perú y Chile. En agosto de 2026 fue denunciado por la senadora Juliana Di Tullio por 'severo conflicto de intereses' por votar la ley de venta de tierras a extranjeros siendo socio gerente de la firma (evento 20260807-26)."
   felipe_kast:
     nombre: Felipe Kast Sommerhoff
     cargo: Senador (Evópoli)
@@ -1367,6 +1391,46 @@ people:
     cargo: Comandante en jefe del Ejército
     organizacion: ejercito_chile
     notas: "Comandante en jefe del Ejército de Chile. Solicitó el 31 de marzo de 2026 que el Gobierno autorice el retiro por enfermedad incurable (estrés postraumático) del capitán José Faúndez Sepúlveda, condenado a 15 años por el homicidio de Romario Veloz en La Serena (estallido social 2019). Junto a su antecesor Javier Iturriaga fue querellado por desacato por la familia Veloz por no ejecutar la baja por inhabilidad sobreviniente."
+  pedro_lavin:
+    nombre: Pedro Lavín Villalobos
+    cargo: Excabo del Ejército condenado por apremios ilegítimos
+    notas: "Exfuncionario del Ejército condenado a 7 años de presidio por el TOP de Colina (28-dic-2022) como autor de apremios ilegítimos con resultado de lesiones graves gravísimas, por disparar su fusil M4 contra el estudiante Carlos Astudillo el 20-oct-2019 en la Plaza de Armas de Colina (secuelas funcionales permanentes en el fémur). Condena ratificada por la Corte Suprema en septiembre de 2023 (primer militar condenado por disparar contra un civil en el estallido). Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  carlos_robledo:
+    nombre: Carlos Robledo Olguín
+    cargo: Exsoldado conscripto del Ejército condenado por violencia innecesaria
+    notas: "Exsoldado conscripto del Ejército condenado a 10 años de presidio por el TOP de La Serena (12-sep-2023) como autor de violencia innecesaria con resultado de muerte, por el disparo de fusil Galil con munición de guerra que mató a Romario Veloz el 20-oct-2019 en el Mall Plaza La Serena (tenía 18 años). Su caso fue citado por el presidente Kast en 2026 para descartar el despliegue militar en zonas urbanas, y la Cámara de Diputados pidió su indulto en 2025. Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  nicolas_neira:
+    nombre: Nicolás Neira Durán
+    cargo: Exsubteniente de Carabineros condenado por tortura
+    notas: "Exoficial de Carabineros condenado a 5 años de presidio efectivo por el 4° TOP de Santiago (agosto 2024) como autor del delito de tortura contra Renzo Fuentealba (31-ene-2020, Metro Universidad de Chile): patada en el rostro con fractura nasal, asfixia reiterada y golpes contra un portón. Primera condena por tortura a Carabineros en el estallido. Condena ratificada por la Corte de Apelaciones de Santiago (nov 2025). Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  gustavo_ferrada:
+    nombre: Gustavo Ferrada Vásquez
+    cargo: Excabo segundo de Carabineros condenado por tortura
+    notas: "Exfuncionario de Carabineros condenado a 4 años y un día de presidio efectivo por el 4° TOP de Santiago (agosto 2024) como autor del delito de tortura contra Renzo Fuentealba (31-ene-2020, Metro Universidad de Chile), junto a Nicolás Neira. Primera condena por tortura a Carabineros en el estallido. Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  pablo_carvajal:
+    nombre: Pablo Carvajal Díaz
+    cargo: Excapitán de Carabineros condenado por apremios ilegítimos
+    notas: "Excapitán de Carabineros (Fuerzas Especiales) condenado a 7 años de presidio efectivo como autor de apremios ilegítimos contra el manifestante Brandon González (disparo del 28-oct-2019 en la Alameda que le hizo perder la visión de un ojo). Condena dictada por el 4° TOP de Santiago y confirmada por la Corte de Apelaciones de Santiago el 17-jun-2026 (rechazando la Ley Naín-Retamal); se entregó el 25-jun-2026 en el Centro de Justicia vistiendo su uniforme. Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  belisario_morales:
+    nombre: Belisario Morales Martínez
+    cargo: Excabo primero de Carabineros condenado por disparo injustificado
+    notas: "Exfuncionario de Carabineros condenado a 8 años y 2 días de presidio efectivo por el 6° TOP de Santiago (2-ene-2025) como autor de disparo injustificado en la vía pública y lesiones graves gravísimas contra Renzo Inostroza: disparó con escopeta antidisturbios desde el balcón del segundo piso de la municipalidad de La Cisterna el 20-oct-2019, dejando al joven ciego del ojo izquierdo. Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  carlos_astudillo:
+    nombre: Carlos Astudillo
+    cargo: Manifestante herido por disparo del Ejército en el estallido
+    notas: "Estudiante herido el 20-oct-2019 en la Plaza de Armas de Colina por el disparo del fusil M4 del cabo del Ejército Pedro Lavín: el proyectil impactó en su fémur, causándole shock hemorrágico y secuelas funcionales permanentes que lo dejaron dependiente de muletas. Su caso derivó en la condena de Lavín (TOP Colina, dic-2022)."
+  renzo_fuentealba:
+    nombre: Renzo Fuentealba
+    cargo: Víctima de tortura policial en el estallido
+    notas: "Víctima de la tortura de los carabineros Nicolás Neira y Gustavo Ferrada el 31-ene-2020 en el Metro Universidad de Chile: patada en el rostro con fractura nasal con desplazamiento del tabique, asfixia reiterada y golpes contra un portón en calle Mac Iver. Su caso derivó en la primera condena por tortura a Carabineros en el estallido (4° TOP Santiago, ago-2024)."
+  renzo_inostroza:
+    nombre: Renzo Inostroza Canales
+    cargo: Víctima de disparo policial en el estallido
+    notas: "Joven de 20 años que perdió la visión de su ojo izquierdo por el disparo de escopeta antidisturbios del carabinero Belisario Morales desde el balcón de la municipalidad de La Cisterna el 20-oct-2019 (agujero macular traumático). Su caso derivó en la condena de Morales a 8 años y 2 días (6° TOP Santiago, ene-2025)."
+  brandon_gonzalez:
+    nombre: Brandon González Benavides
+    cargo: Manifestante herido por disparo de Carabineros en el estallido
+    notas: "Manifestante de 26 años que perdió la visión de un ojo por el disparo del excapitán de Carabineros Pablo Carvajal el 28-oct-2019 en la Alameda. Su caso derivó en la condena de Carvajal a 7 años (4° TOP Santiago, confirmada por la Corte de Apelaciones en jun-2026)."
   jose_faundez:
     nombre: José Santiago Faúndez Sepúlveda
     cargo: Capitán del Ejército condenado
@@ -1380,6 +1444,22 @@ people:
     nombre: Adriana Rojas Pérez
     cargo: Abogada de la familia de Romario Veloz
     notas: "Abogada querellante de la familia de Romario Veloz. En junio de 2026 presentó una querella por desacato contra el comandante en jefe del Ejército, Pedro Varela, y su antecesor Javier Iturriaga, por no ejecutar la baja por inhabilidad sobreviniente del capitán José Faúndez y mantener en trámite un retiro médico con pensión."
+  mario_acuña:
+    nombre: Mario Acuña
+    cargo: Víctima de violencia policial en el estallido social
+    notas: "Víctima de la golpiza de carabineros del 23 de octubre de 2019 en Buin durante el estallido social: Henry Cuéllar y Víctor Lastra lo golpearon brutalmente en el suelo, dejándolo postrado con traumatismo encefálico grave, inhabilidad laboral total e incapacidad para el autocuidado. Su caso derivó en la condena de ambos a 12 años y 183 días (TOP San Bernardo, 2023), ratificada por la Corte de Apelaciones de San Miguel (2023)."
+  henry_cuellar:
+    nombre: Henry Cuéllar Vega
+    cargo: Excabo segundo de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de Carabineros condenado a 12 años y 183 días de presidio por apremios ilegítimos con resultado de lesiones graves gravísimas contra Mario Acuña (golpiza del 23-oct-2019 en Buin), pena confirmada por la Corte de Apelaciones de San Miguel (2023). Fue incluido en la campaña 'Presos por servir' (presosxservir.cl) por los indultos a exuniformados (2026)."
+  victor_lastra:
+    nombre: Víctor Lastra Marguirott
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de Carabineros condenado a 12 años y 183 días de presidio por apremios ilegítimos con resultado de lesiones graves gravísimas contra Mario Acuña (golpiza del 23-oct-2019 en Buin), pena confirmada por la Corte de Apelaciones de San Miguel (2023)."
+  juan_rosales:
+    nombre: Juan Rosales Apablaza
+    cargo: Excapitán de Carabineros condenado por disparos en Buin
+    notas: "Excapitán de Carabineros condenado a 3 años y 1 día de presidio menor en su grado máximo por los disparos realizados con escopeta antidisturbios la noche del 23-oct-2019 en Buin, antes de la golpiza a Mario Acuña; pena sustituida por libertad vigilada intensiva (TOP San Bernardo, 2023)."
   rodrigo_bustos:
     nombre: Rodrigo Bustos
     cargo: Director ejecutivo de Amnistía Internacional Chile
@@ -1733,7 +1813,7 @@ people:
         organizacion: secom
         desde: 2026-03-11
     organizacion: secom
-    notas: Autor de la minuta "cierre epico"
+    notas: "Autor de la minuta 'cierre epico' (evento 20260324-1). Director de la agencia La 975 desde 2018; en 2011 fue director creativo de Start-Up Chile convocado por Nicolás Shea. Sofía Shea, jefa de Comunicación Digital de la Secom, hizo su práctica en La 975 y es hija de Nicolás Shea; la agencia facturó $149.180.001 en la campaña de Kast (El Dínamo, 15-ago-2026, evento 20260815-1)."
   michelle_bachelet:
     nombre: Michelle Bachelet Jeria
     cargo: Expresidenta de Chile y ex Alta Comisionada de Derechos Humanos de la ONU
@@ -3260,7 +3340,16 @@ people:
     nombre: Danilo Herrera
     cargo: Periodista, editor de Monitoreo Legislativo
     notas: Editor del sitio recorteshacienda.cl, que publica los decretos de recorte
-      presupuestario notificados a Contraloría, y del registro Renuncias Kast.
+      presupuestario notificados a Contraloría, y del registro Renuncias Kast. El 14 de
+      agosto de 2026 difundió en X la primicia de la petición de renuncia del delegado
+      presidencial provincial de Chañaral, Sebastián Urrejola, tras acreditar la
+      Contraloría de Atacama la ocupación ilegal de un inmueble fiscal en Portofino
+      (evento 20260814-7).
+  fernando_flores_fredes:
+    nombre: Fernando Flores Fredes
+    cargo: Seremi de las Culturas, las Artes y el Patrimonio de Atacama
+    organizacion: seremi_culturas_atacama
+    notas: "Seremi de las Culturas, las Artes y el Patrimonio de la Región de Atacama. Según el documento difundido el 14-ago-2026 sobre la petición de renuncia del delegado presidencial provincial de Chañaral, Sebastián Urrejola, asumiría como subrogante de la Delegación mientras se designa al nuevo delegado (evento 20260814-7)."
   ale_valle:
     nombre: Ale Valle
     cargo: Periodista de La Voz de los que Sobran
@@ -3268,7 +3357,7 @@ people:
   roberto_merken:
     nombre: Roberto Merken
     cargo: Comentarista de opinión en X
-    notas: "Cuenta de opinión 'Ciudadano Roberto Kiltro' (@RobertoMerken). En agosto de 2026 difundió una comparación viral del tratamiento del Imacec entre los gobiernos de Boric (junio 2025, +3,1%) y Kast (junio 2026, +2,4%), con más de 54 mil visualizaciones. El 14 de agosto de 2026 contrastó la defensa de Diego Schalper ('el Presidente Kast tiene un estándar altísimo') con la designación de Trinidad Zegers para la Reforma Procesal Civil: 'El estándar: encargar una de las reformas procesales más importantes del país a una abogada que juró hace apenas 4 meses' (evento 20260813-11)."
+    notas: "Cuenta de opinión 'Ciudadano Roberto Kiltro' (@RobertoMerken). En agosto de 2026 difundió una comparación viral del tratamiento del Imacec entre los gobiernos de Boric (junio 2025, +3,1%) y Kast (junio 2026, +2,4%), con más de 54 mil visualizaciones. El 8 de agosto de 2026 publicó hilos sobre la precarización del empleo (81.778 ocupados con -90.318 asalariados privados y +158.534 cuenta propia, datos de Clapes UC; evento 20260811-14) y sobre el capitán José Faúndez, cuestionando la campaña 'Presos por servir' ('No está preso por servir. Está preso por hechos que la justicia juzgó y condenó'; evento 20260807-7); el 10 de agosto criticó el manejo de la niñez de Kast repasando la historia del Sename (evento 20260807-3). El 14 de agosto de 2026 contrastó la defensa de Diego Schalper ('el Presidente Kast tiene un estándar altísimo') con la designación de Trinidad Zegers para la Reforma Procesal Civil: 'El estándar: encargar una de las reformas procesales más importantes del país a una abogada que juró hace apenas 4 meses' (evento 20260813-11). Ese mismo día criticó en X el anuncio del ministro Tomás Rau de la indemnización a todo evento: 'Nuevo derecho mermado... te paguen con suerte la mitad y pase a una cuenta individual' (evento 20260814-8)."
   arnaldo_zuniga:
     nombre: Arnaldo Zúñiga
     cargo: Meteorólogo de la DMC
@@ -3457,6 +3546,14 @@ people:
         desde: 2025-03-04
         hasta: 2026-03-11
     notas: Político PS. Exvocero de gobierno (Segegob, 2014-2015), ministro Segpres (2023-2025) y ministro del Interior del gobierno de Boric desde marzo de 2025. Criticó propuesta de Republicanos de privatizar Codelco.
+  camila_gutierrez:
+    nombre: Camila Gutiérrez
+    cargo: Escritora y pareja de Giorgio Jackson
+    notas: "Autora del libro 'Joven y Alocada' y pareja del exministro Giorgio Jackson. Su hermano Vicente Gutiérrez fue contratado como asesor en el MOP en 2023, lo que generó la polémica del 'cuñado de Jackson' (evento 20230330-1)."
+  vicente_gutierrez:
+    nombre: Vicente Gutiérrez Berner
+    cargo: Periodista y militante de Revolución Democrática
+    notas: "Periodista, hermano de Camila Gutiérrez (pareja de Giorgio Jackson). Trabajó como asesor de la diputada Maite Orsini y de la exdiputada Natalia Castillo, en Súbela Radio y La Red. Contratado desde enero de 2023 como asesor a honorarios en la Dirección General de Obras Públicas del MOP ($2.183.908) para el Plan Buen Vivir; renunció el 30-mar-2023 ante la ola de críticas que desató la polémica (evento 20230330-1)."
   camila_flores:
     nombre: Camila Flores
     cargo: Senadora (RN)
@@ -3704,6 +3801,10 @@ people:
     nombre: Javiera Reyes
     cargo: Alcaldesa de Lo Espejo
     notas: "Alcaldesa de Lo Espejo (Partido Comunista). Tras el despacho de la megarreforma (agosto 2026) criticó el mecanismo de compensación municipal: denunció que de los 80 mil millones de pesos de compensación directa, la mitad beneficiará a seis comunas de altos ingresos mientras las otras 339 municipalidades se reparten el resto. En entrevista del 6 de agosto detalló que el presupuesto de Lo Espejo multiplicado por 16 equivale al de Las Condes, que los 200 mil millones debían ir íntegros al FCM y que unos 40 mil millones irán a seis comunas de altos ingresos sin consideración de necesidad."
+  javiera_rodriguez:
+    nombre: Javiera Rodríguez
+    cargo: Diputada (Partido Republicano), exoficial de Carabineros
+    notas: "Diputada del Partido Republicano, conocida como la 'Capitana' Rodríguez por su pasado en Carabineros. El 6 de agosto de 2026 lanzó la campaña 'Presos por servir' (presosxservir.cl) para reunir firmas por indultos a exuniformados condenados por el estallido social, esperando indultos 'antes de Navidad' (evento 20260806-56)."
   maximiliano_rios:
     nombre: Maximiliano Ríos Galarce
     cargo: Alcalde de Lo Prado
@@ -3898,6 +3999,10 @@ people:
     cargo: Exalcalde de Recoleta (PC)
     organizacion: partido_comunista
     notas: Expresó críticas desde Venezuela al programa y el primer mes del gobierno de Boric.
+  carolina_mabel:
+    nombre: Carolina Mabel
+    cargo: Usuaria de Instagram y denunciante
+    notas: "Usuaria de Instagram identificada como @carolina.mabel. El 11-ago-2026 publicó el video que se viralizó denunciando que un funcionario de la PDI los intimidó con su arma de servicio a ella y a su familia en la Ruta 68, tras detenerlos por circular con luces altas (supuesto desperfecto de iluminación) y cursarles una infracción de tránsito; dejó constancia en Carabineros y anunció la formalización de antecedentes ante la PDI (evento 20260812-17)."
   diego_ibanez:
     nombre: Diego Ibáñez
     cargo: Senador Frente Amplio
@@ -4066,6 +4171,10 @@ people:
     nombre: Ana Carolina Cruz
     cargo: Influencer brasileña, creadora de contenido de viajes y turismo
     notas: "Denunció insultos xenófobos y racistas de un instructor en un centro de esquí chileno (Valle Nevado)."
+  francisca_montenegro:
+    nombre: Francisca Montenegro
+    cargo: Abogada laboral (RMR Laboral)
+    notas: "Abogada laboral y socia de RMR Laboral. El 7-ago-2026 planteó a Cooperativa que la Ley Karin requiere modificaciones más allá del reglamento: mayores fondos para un 'área especializada' en la Dirección del Trabajo y la posibilidad de declarar la no admisibilidad o inadmisibilidad de denuncias que no constituyan violencia en el empleo en los términos de la ley, sin que ello signifique que las empresas puedan rechazar cualquier denuncia (evento 20260806-14)."
   francisca_corthorn:
     nombre: Francisca Corthorn Bravo
     cargo: Gerenta general de Corthorn Health
@@ -4225,6 +4334,10 @@ people:
     nombre: Donald Trump
     cargo: Presidente de Estados Unidos
     notas: "Presidente de Estados Unidos en su segundo mandato (desde enero de 2025). Su administración buscó relanzar los lazos bilaterales con Chile tras la asunción de José Antonio Kast, con el envío de Marco Rubio al cambio de mando del 11 de marzo de 2026."
+  xi_jinping:
+    nombre: Xi Jinping
+    cargo: Presidente de China
+    notas: "Secretario general del Partido Comunista y presidente de la República Popular China. En julio de 2026 lanzó la Organización Mundial de Cooperación en Inteligencia Artificial (WAICO), marco rival de la iniciativa estadounidense Pax Silica (Reuters, 14-ago-2026, evento 20260814-9)."
   andres_chadwick:
     nombre: Andrés Chadwick Piñera
     cargo: Exministro del Interior de Sebastián Piñera
@@ -5049,7 +5162,7 @@ people:
     nombre: Sebastián Urrejola Aranda
     cargo: Delegado Presidencial Provincial de Chañaral
     organizacion: delegacion_presidencial_chanaral
-    notas: "Delegado presidencial provincial de Chañaral designado por el gobierno de José Antonio Kast. En agosto de 2026 la Contraloría Regional de Atacama acreditó su ocupación ilegal de un bien fiscal de ~1.000 m² en el sector Portofino de Chañaral, con una ocupación de ~16 años, vulnerando la probidad administrativa; ordenó procedimiento disciplinario en la Subsecretaría del Interior, la restitución del terreno y un cobro retroactivo por el uso del bien."
+    notas: "Delegado presidencial provincial de Chañaral designado por el gobierno de José Antonio Kast en marzo de 2026. En agosto de 2026 la Contraloría Regional de Atacama acreditó su ocupación ilegal de un bien fiscal de ~1.000 m² en el sector Portofino de Chañaral, con una ocupación de ~16 años, vulnerando la probidad administrativa; ordenó procedimiento disciplinario en la Subsecretaría del Interior, la restitución del terreno y un cobro retroactivo por el uso del bien (evento 20260807-22). La tarde del 14 de agosto de 2026 el Gobierno le pidió la renuncia, confirmada por el Ministerio del Interior y la Delegación Presidencial Regional de Atacama; el Diario de Atacama consignó además un proceso disciplinario por la contratación de una prima de su pareja en la Delegación sin proceso de selección (evento 20260814-7)."
   sebastian_keitel:
     nombre: Sebastián Keitel
     cargo: Senador, presidente de la Comisión de Adulto Mayor y Discapacidad
@@ -5467,6 +5580,10 @@ people:
         desde: 2021-04-07
         hasta: 2022-03-11
     notas: "Exministro del Trabajo de Piñera; preside el gremio SalmonChile, que presentó ante la USTR de EE.UU. una solicitud a nombre de las 48 empresas que representa contra el arancel del 12,5%."
+  matias_aranguez:
+    nombre: Matías Aránguiz
+    cargo: Profesor de Derecho UC y director del Programa de Derecho, Ciencia y Tecnología UC
+    notas: "Académico consultado por BioBioChile sobre la incorporación de Chile a Pax Silica (junio 2026): valoró la alineación con las cadenas de suministro de IA lideradas por EE.UU. y advirtió sobre el costo de dar la espalda a China, principal socio comercial (evento 20260625-8)."
   andres_ergas:
     nombre: Andrés Ergas
     cargo: Embajador de Chile en Estados Unidos
@@ -8329,6 +8446,10 @@ people:
     notas: "Abogado, académico y senador chileno (1989-1991), asesinado en 1991. Ideólogo central de la Constitución de 1980 y del 'enclave' de los llamados cercos constitucionales ('si los adversarios llegaran a gobernar, se vean obligados a seguir una acción no tan distinta a la que uno mismo desearía'). En el debate público de agosto de 2026, usuarios de r/chile lo citaron en el hilo '¿Qué realmente reconstruye la ley de reconstrucción?' para argumentar que la Constitución 'democratizó' las prácticas de la dictadura (fuente complementaria de opinión)."
 
 
+  bruno_salas_zarzar:
+    nombre: Bruno Salas Zarzar
+    cargo: Curador de la exposición 'Anatomía de un genocidio'
+    notas: "Curador de la exposición 'Anatomía de un genocidio' del fotoperiodista palestino Belal Khaled, inaugurada el 13-ago-2026 en el Teatro Municipal de Viña del Mar, organizada por la Municipalidad y el Centro de Información Palestina (evento 20260806-17)."
   belal_khaled:
     nombre: Belal Khaled
     cargo: Fotoperiodista palestino
@@ -9276,6 +9397,11 @@ organizations:
     nombre: Partido Republicano de Chile
     tipo: partido_politico
     pais: Chile
+  revolucion_democratica:
+    nombre: Revolución Democrática
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político integrante del Frente Amplio. Su senador y presidente Juan Ignacio Latorre defendió a Giorgio Jackson en la polémica por la contratación de Vicente Gutiérrez en el MOP (2023, evento 20230330-1)."
   partido_igualdad:
     nombre: Partido Igualdad
     tipo: partido_politico
@@ -9448,6 +9574,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio de comunicación digital chileno fundado en 2005. En noviembre de 2023 el Departamento de Estado de EE.UU. lo mencionó en su informe 'Esfuerzos del Kremlin para propagar desinformación encubiertamente en América Latina', lo que el medio desmintió categóricamente. En abril de 2026 circuló una noticia falsa atribuida a Cooperativa que lo vinculaba a una red de desinformación internacional; el alcalde de Santiago Mario Desbordes la compartió en X y luego la eliminó."
+  lavozdemaipu:
+    nombre: La Voz de Maipú
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de comunicación local de la comuna de Maipú (lavozdemaipu.cl). Cubrió la polémica de 2023 por la contratación del 'cuñado' de Giorgio Jackson en el MOP (evento 20230330-1)."
   hudson_rock:
     nombre: Hudson Rock
     tipo: empresa
@@ -9553,6 +9684,11 @@ organizations:
     tipo: seremi
     pais: Chile
     notas: Secretaría Regional Ministerial del Trabajo y Previsión Social de Ñuble. El 4 de agosto de 2026 su titular, Edmundo Novoa Puga, participó en la entrega de kits de emergencia en Chillán a familias afectadas por el sistema frontal.
+  seremi_culturas_atacama:
+    nombre: Seremi de las Culturas, las Artes y el Patrimonio de Atacama
+    tipo: seremi
+    pais: Chile
+    notas: Secretaría Regional Ministerial de las Culturas, las Artes y el Patrimonio de Atacama, dependiente del Ministerio de las Culturas. Su titular, Fernando Flores Fredes, asumiría como subrogante de la Delegación Presidencial Provincial de Chañaral tras la petición de renuncia del delegado Sebastián Urrejola (evento 20260814-7).
   seremi_economia_atacama:
     nombre: Seremi de Economía de Atacama
     tipo: seremi
@@ -9905,6 +10041,16 @@ organizations:
     nombre: Organización de las Naciones Unidas (ONU)
     tipo: organismo_internacional
     notas: "Organismo internacional. Su Comisión de Límites de la Plataforma Continental (CLPC) evalúa los límites marítimos de los estados."
+  pax_silica:
+    nombre: Pax Silica
+    tipo: organismo_internacional
+    pais: Estados Unidos
+    notas: "Iniciativa insignia del Departamento de Estado de EE.UU. (lanzada diciembre 2025) sobre IA y seguridad de cadenas de suministro: minerales críticos, semiconductores, cómputo e infraestructura tecnológica. Chile se incorporó en la II Cumbre del 25-jun-2026 (evento 20260625-8); tras la cumbre sumó 24 signatarios. En agosto de 2026 EE.UU. preparó una carta a los signatarios para que elijan bando frente al marco chino WAICO (evento 20260814-9)."
+  waico:
+    nombre: Organización Mundial de Cooperación en Inteligencia Artificial (WAICO)
+    tipo: organismo_internacional
+    pais: China
+    notas: "Marco de cooperación en IA lanzado por el presidente chino Xi Jinping en julio de 2026 como rival de la iniciativa estadounidense Pax Silica, promoviendo la tecnología china de pesos abiertos. Kazajistán es el único país conocido en ambas iniciativas (Reuters, 14-ago-2026, evento 20260814-9)."
   energy:
     nombre: Gimnasios Energy
     tipo: empresa
@@ -10460,6 +10606,23 @@ organizations:
     nombre: BioBioChile
     tipo: medio_comunicacion
     pais: Chile
+  diario_el_dia:
+    nombre: Diario El Día
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: Medio regional de la Región de Coquimbo (La Serena)
+  sala_de_prensa_tv:
+    nombre: Sala de Prensa TV
+    tipo: medio_comunicacion
+    pais: Chile
+  doble_espacio:
+    nombre: Doble Espacio (Revista de Periodismo de la Universidad de Chile)
+    tipo: medio_comunicacion
+    pais: Chile
+  bionoticias:
+    nombre: BioNoticias
+    tipo: medio_comunicacion
+    pais: Chile
   anatel:
     nombre: Asociación Nacional de Televisión (ANATEL)
     tipo: asociacion_gremial
@@ -10597,7 +10760,32 @@ organizations:
     nombre: Confederación Nacional de Ferias Libres de Chile (ASOF)
     tipo: gremio
     pais: Chile
-    notas: "Gremio nacional de ferias libres presidido por Paola Morales. El 6 de agosto de 2026 rechazó el uso despectivo de la expresión 'señora de feria' tras el cruce entre las senadoras Camila Flores y Fabiola Campillai, reivindicando que 'ser mujer de feria es un orgullo' y que las feriantes 'alimentan a Chile' y sostienen parte de la economía familiar."
+    notas: "Gremio nacional de ferias libres presidido por Paola Morales. El 6 de agosto de 2026 rechazó el uso despectivo de la expresión 'señora de feria' tras el cruce entre las senadoras Camila Flores y Fabiola Campillai, reivindicando que 'ser mujer de feria es un orgullo' y que las feriantes 'alimentan a Chile' y sostienen parte de la economía familiar. El 7-ago-2026 firmó la declaración de más de 40 organizaciones MIPYME que rechazaron el veto del Gobierno al pago a 30 días (evento 20260807-25)."
+  conupia:
+    nombre: Confederación Nacional de la Micro, Pequeñas Empresas, Artesanado y Cooperativas de Chile (CONUPIA)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio que agrupa a micro, pequeñas empresas, artesanado y cooperativas de Chile. El 7-ago-2026 firmó la declaración de más de 40 organizaciones MIPYME que rechazaron el veto del Gobierno al pago a 30 días y llamaron al Senado a no ratificarlo (evento 20260807-25)."
+  fenabus:
+    nombre: Federación Nacional del Transporte Rural, Interurbano, Internacional, Privado, Turismo e Industrial (FENABUS)
+    tipo: gremio
+    pais: Chile
+    notas: "Federación nacional de transporte de pasajeros. El 7-ago-2026 firmó la declaración de más de 40 organizaciones MIPYME que rechazaron el veto del Gobierno al pago a 30 días (evento 20260807-25)."
+  unapyme:
+    nombre: Unión Nacional de Pequeñas y Medianas Empresas (UNAPYME)
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio nacional de pequeñas y medianas empresas. El 7-ago-2026 firmó la declaración de más de 40 organizaciones MIPYME que rechazaron el veto del Gobierno al pago a 30 días (evento 20260807-25)."
+  conadecus:
+    nombre: Corporación Nacional de Consumidores y Usuarios de Chile (CONADECUS)
+    tipo: gremio
+    pais: Chile
+    notas: "Organización de consumidores y usuarios, con departamento de Defensa Legal de MIPYMES. El 7-ago-2026 firmó la declaración de más de 40 organizaciones MIPYME que rechazaron el veto del Gobierno al pago a 30 días (evento 20260807-25). En 2025 alcanzó acuerdos conciliatorios con farmacias por la colusión de medicamentos (evento 20260811-12)."
+  camara_comercio_valparaiso:
+    nombre: Cámara de Comercio y Turismo de Valparaíso
+    tipo: gremio
+    pais: Chile
+    notas: "Cámara de comercio y turismo de la región de Valparaíso. El 7-ago-2026 firmó la declaración de más de 40 organizaciones MIPYME que rechazaron el veto del Gobierno al pago a 30 días (evento 20260807-25)."
 
 
   inmobiliaria_ecomac:
@@ -10792,6 +10980,16 @@ organizations:
     tipo: medio_comunicacion
     pais: Argentina
     notas: "Medio digital argentino de alcance latinoamericano. Fundado en 2002. Portal infobae.com."
+  perfil:
+    nombre: Perfil
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino (perfil.com). Su investigación sobre Glocal Terra reveló que el senador Joaquín Benegas Lynch fundó la empresa en 2020 junto a su esposa para la compraventa de tierras rurales a extranjeros (evento 20260807-26)."
+  glocal_terra:
+    nombre: Glocal Terra
+    tipo: empresa
+    pais: Argentina
+    notas: "Empresa de asesoramiento de inversores y compraventa de tierras rurales fundada en 2020 por el senador argentino Joaquín Benegas Lynch junto a su esposa Eloisa Perea Muñoz (Glocal Terra SRL, Buenos Aires). Opera en Argentina, Uruguay, Paraguay, Perú y Chile; declara ~400.000 hectáreas gestionadas en América Latina y su representante en Chile es el abogado Max Kaiser ('Asociado Chile'), hermano de Johannes Kaiser. Centro del escándalo argentino de agosto 2026 por el conflicto de intereses de Benegas Lynch al votar la ley de venta de tierras a extranjeros (evento 20260807-26)."
   radio_pauta:
     nombre: Radio Pauta
     tipo: medio_comunicacion
@@ -10867,6 +11065,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Reino Unido
     notas: "Periódico británico fundado en 1821. Portal theguardian.com."
+  the_975:
+    nombre: La 975 (The 975 SpA)
+    tipo: empresa
+    pais: Chile
+    notas: "Agencia de publicidad dirigida por Felipe Costabal desde 2018. Facturó $149.180.001 por estrategia creativa en la campaña presidencial de José Antonio Kast (Servel); allí realizó su práctica Sofía Shea, jefa de Comunicación Digital de la Secom (El Dínamo, 15-ago-2026, evento 20260815-1)."
   efe:
     nombre: EFE
     tipo: medio_comunicacion
@@ -10877,6 +11080,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Reino Unido
     notas: "Agencia de noticias internacional. Portal reuters.com."
+  bnamericas:
+    nombre: BNamericas
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Plataforma de inteligencia de negocios para América Latina (bnamericas.com), con foco en minería, energía, infraestructura y telecomunicaciones."
   dw:
     nombre: Deutsche Welle
     tipo: medio_comunicacion
@@ -10887,6 +11095,31 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno (epicentrochile.com)."
+  kapital_fm:
+    nombre: Kapital FM
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (kapitalfm.cl). El 12-ago-2026 cubrió la denuncia de una familia contra un funcionario de la PDI que les cursó una infracción en la Ruta 68 y les mostró su arma (evento 20260812-17)."
+  rtv_vision:
+    nombre: RTV Visión Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de noticias chileno. El 12-ago-2026 cubrió la denuncia viral de una familia contra un funcionario de la PDI en la Ruta 68 por cursar una infracción y mostrar su arma de servicio (evento 20260812-17)."
+  rtv_nuble:
+    nombre: RTV Ñuble
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Canal/medio de noticias de la Región de Ñuble. El 13-ago-2026 informó que la PDI abrió un procedimiento administrativo tras la viralización del video del detective que encaró a una familia con su arma en la Ruta 68 (evento 20260812-17)."
+  portalnet:
+    nombre: Portalnet
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal chileno de entretenimiento y noticias. El 12-ago-2026 publicó el reel que viralizó la denuncia de la familia contra el funcionario de la PDI en la Ruta 68 (evento 20260812-17)."
+  prensa_latina:
+    nombre: Prensa Latina
+    tipo: medio_comunicacion
+    pais: Cuba
+    notas: "Agencia de noticias cubana (prensa-latina.cu). El 13-ago-2026 cubrió la inauguración de la exposición 'Anatomía de un genocidio' de Belal Khaled en el Teatro Municipal de Viña del Mar (evento 20260806-17)."
   reddit:
     nombre: Reddit r/chile
     tipo: red_social
@@ -15121,3 +15354,83 @@ cifras:
     nombre: Diferencia de decesos Covid entre Registro Civil y Minsal en la Región Metropolitana (mayo 2020)
     unidad_default: personas
     notas: "108 personas de diferencia entre las 675 inscripciones de defunción con Covid del Registro Civil y los 567 fallecidos informados por el Minsal en la Región Metropolitana al 25 de mayo de 2020 (+19%) (evento 20200527-1)."
+  salidas_autoridades_gobierno_5_meses:
+    nombre: Autoridades con movimientos o no concretadas en los primeros cinco meses del gobierno de Kast
+    unidad_default: cargos
+    notas: "43 cargos según Emol al 15-ago-2026 (desglose 3 ministras + 6 subsecretarios + 33 seremis = 42, lo que sugiere que el total incluye al delegado de Chañaral). Discrepancia de método frente a El País (42 al 14-ago) y BioBioChile/renunciaskast.cl (40 al 13-ago), documentada sin conciliar (eventos 20260813-2, 20260814-2 y 20260814-7)."
+  antiguedad_ocupacion_urrejola:
+    nombre: Años de ocupación ilegal del bien fiscal en Portofino por Sebastián Urrejola
+    unidad_default: años
+    notas: "~16 años de ocupación ilegal de un inmueble fiscal en el sector Portofino de Chañaral por el delegado presidencial provincial Sebastián Urrejola, según la denuncia y la fiscalización de la Contraloría Regional de Atacama (eventos 20260807-22 y 20260814-7)."
+  superficie_ocupacion_urrejola:
+    nombre: Superficie de la ocupación ilegal en Portofino
+    unidad_default: metros_cuadrados
+    notas: "Construcción de material ligero cercada sobre ~1.000 m² en el inmueble fiscal de Portofino ocupado por el delegado de Chañaral Sebastián Urrejola (eventos 20260807-22 y 20260814-7)."
+  indemnizacion_todo_evento_medio_mes:
+    nombre: Parámetro de la indemnización a todo evento (medio mes por año)
+    unidad_default: mes_por_ano
+    notas: "'Algo así como medio mes por año, pero a todo evento, para el 100% de los contratos indefinidos', según el ministro del Trabajo Tomás Rau en CNN Prime (14-15-ago-2026); aplicaría solo a contratos nuevos (evento 20260814-8)."
+  cotizacion_indemnizacion_todo_evento:
+    nombre: Cotización de cargo del empleador para la indemnización a todo evento
+    unidad_default: porcentaje
+    notas: "En torno al 1,8% de cargo del empleador, que iría a una cuenta individual (posiblemente el Seguro de Cesantía) acumulando rentabilidad, según Tomás Rau (CNN Prime, 14-15-ago-2026). Coincide con el diseño de la Mesa de Reactivación Laboral (eventos 20260630-3 y 20260814-8)."
+  despidos_causal_necesidades_empresa:
+    nombre: Proporción de términos de contrato bajo la causal de necesidades de la empresa
+    unidad_default: porcentaje
+    notas: "Cerca del 20% del total de los casos de término de contrato corresponde a la causal de despido por necesidades de la empresa, la única que hoy paga indemnización por años de servicio, según el ministro Tomás Rau (CNN Prime, 14-15-ago-2026, evento 20260814-8)."
+  meta_desempleo_fin_gobierno:
+    nombre: Meta de desempleo del Gobierno para el fin del período de Kast
+    unidad_default: porcentaje
+    notas: "Desempleo cercano al 6,5% como meta para el fin del gobierno de Kast, según el ministro del Trabajo Tomás Rau (CNN Prime, 14-15-ago-2026), condicionada a la megarreforma, la Sala Cuna Universal y la agenda de adaptabilidad laboral (evento 20260814-8)."
+  trabajadores_cuenta_propia_nuevos_amj:
+    nombre: Trabajadores por cuenta propia adicionales en el trimestre abril-junio 2026
+    unidad_default: trabajadores
+    notas: "158.534 trabajadores por cuenta propia adicionales (+8,6% anual), el mayor aumento de la categoría, mientras los asalariados privados cayeron en 90.318 y los públicos en 9.835 y el empleo total creció en 81.778 ocupados (minuta de CLAPES UC sobre la ENE abril-junio 2026; evento 20260811-14)."
+  gremios_mipyme_rechazan_veto_pago_30_dias:
+    nombre: Organizaciones MIPYME que rechazaron el veto al pago a 30 días
+    unidad_default: organizaciones
+    notas: "Más de 40 gremios y organizaciones MIPYME (CONUPIA, FENABUS, ASOF, UNAPYME, Cámara de Comercio y Turismo de Valparaíso, CONADECUS, entre otros) firmaron la declaración del 7-ago-2026 de 'categórico rechazo' al veto del Gobierno que elimina el pago a 30 días de la megarreforma (BioBioChile; evento 20260807-25). Contrasta con los 48 gremios que respaldaron el veto (evento 20260805-7)."
+  mipymes_porcentaje_empresas:
+    nombre: Participación de las MIPYMES en el total de empresas del país
+    unidad_default: porciento
+    notas: "Las MIPYMES representan aproximadamente el 99% de las empresas de Chile, según la declaración pública de gremios MIPYME del 7-ago-2026 en rechazo al veto del pago a 30 días (BioNoticias; evento 20260807-25)."
+  remuneracion_bruta_shea_marzo:
+    nombre: Remuneración bruta de Sofía Shea al ingresar a la Segegob (marzo 2026)
+    unidad_default: pesos
+    notas: "$1.395.665 brutos en el cargo de 'apoyo a la coordinación y gestión de la Dirección Secom', grado 14 del escalafón (Portal de Transparencia; El Dínamo, 15-ago-2026, evento 20260815-1)."
+  remuneracion_bruta_shea_mayo:
+    nombre: Remuneración bruta de Sofía Shea en mayo 2026
+    unidad_default: pesos
+    notas: "$2.115.357 brutos como jefa del Departamento de Comunicación Digital (grado 11), tras el ascenso del 13-abr-2026 (Portal de Transparencia; El Dínamo, 15-ago-2026, evento 20260815-1)."
+  remuneracion_bruta_shea_junio:
+    nombre: Remuneración bruta de Sofía Shea en junio 2026
+    unidad_default: pesos
+    notas: "$3.538.024 brutos en junio 2026, explicada por un bono de incentivo de $1.393.053 cuya naturaleza el Portal de Transparencia no detalla (El Dínamo, 15-ago-2026, evento 20260815-1)."
+  bono_incentivo_shea_junio:
+    nombre: Bono de incentivo de Sofía Shea en junio 2026
+    unidad_default: pesos
+    notas: "$1.393.053 de bono de incentivo incluido en la remuneración de junio 2026 de Sofía Shea, cuya naturaleza el Portal de Transparencia no detalla (El Dínamo, 15-ago-2026, evento 20260815-1)."
+  remuneracion_bruta_shea_julio:
+    nombre: Remuneración bruta de Sofía Shea en julio 2026
+    unidad_default: pesos
+    notas: "$2.144.971 brutos en julio 2026, vuelta al nivel sin el bono de junio (Portal de Transparencia; El Dínamo, 15-ago-2026, evento 20260815-1)."
+  facturacion_the_975_campana_kast:
+    nombre: Facturación de The 975 SpA en la campaña presidencial de Kast
+    unidad_default: pesos
+    notas: "$149.180.001 facturados por The 975 SpA (agencia La 975, de Felipe Costabal) por estrategia creativa en la campaña presidencial de José Antonio Kast, según el desglose de gastos electorales del Servel (El Dínamo, 15-ago-2026, evento 20260815-1)."
+  remuneracion_bruta_gutierrez_mop:
+    nombre: Remuneración bruta de Vicente Gutiérrez como asesor del MOP (2023)
+    unidad_default: pesos
+    notas: "$2.183.908 brutos como asesor directo a honorarios de la Dirección General de Obras Públicas para el Plan de Infraestructura Buen Vivir, desde enero de 2023 (registros de Transparencia; CNN Chile y La Voz de Maipú, 30-mar-2023, evento 20230330-1)."
+  paises_pax_silica:
+    nombre: Países signatarios de Pax Silica tras la II Cumbre 2026
+    unidad_default: paises
+    notas: "24 países signatarios de Pax Silica tras la II Cumbre de junio 2026: los 10 nuevos (Argentina, Chile, Costa Rica, El Salvador, Unión Europea, Alemania, Grecia, Kazajistán, Países Bajos y Panamá) se sumaron a los 14 originales (fact sheet del Departamento de Estado, 26-jun-2026; evento 20260625-8)."
+  produccion_tierras_raras_china:
+    nombre: Participación de China en la producción mundial de tierras raras
+    unidad_default: porciento
+    notas: "China controla más del 70% de la producción mundial de tierras raras y casi el 90% del procesamiento, según BioBioChile (26-jun-2026) en el contexto de la incorporación de Chile a Pax Silica (evento 20260625-8)."
+  procesamiento_tierras_raras_china:
+    nombre: Participación de China en el procesamiento mundial de tierras raras
+    unidad_default: porciento
+    notas: "China controla casi el 90% del procesamiento mundial de tierras raras, según BioBioChile (26-jun-2026) en el contexto de la incorporación de Chile a Pax Silica (evento 20260625-8)."

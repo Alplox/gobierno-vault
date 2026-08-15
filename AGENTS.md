@@ -133,7 +133,7 @@ Los medios de prensa se registran como **organizaciones** (`entities.yaml` > `or
 
 - **Nombre canonico**: el campo `nombre` del YAML es lo que renderiza el wikilink. Usar el nombre comercial del medio (ej. `nombre: BioBioChile`, `nombre: El País (Chile)`), no variantes del campo `medio:` de `sources.yaml`.
 - **`sources.yaml`**: el campo `medio:` debe usar el MISMO nombre canonico que la org (ej. `medio: El País (Chile)`, no "El País" ni "El País Chile"). Si el medio tiene edicion chilena y homonimo extranjero, incluir "(Chile)".
-- **Redes sociales** (Reddit r/chile, X/Twitter, YouTube): `tipo: red_social` en organizations; solo complementarias, nunca fuente unica (ver TAREAS.md).
+- **Redes sociales** (Reddit r/chile, X/Twitter, YouTube): `tipo: red_social` en organizations; solo complementarias, nunca fuente unica (ver TAREAS.md). Para documentar reacciones ciudadanas con variedad de voces y los metodos de busqueda probados por plataforma, ver la sección [Fuentes de redes sociales: metodologia para "reacciones comunitarias"](#fuentes-de-redes-sociales-metodologia-para-reacciones-comunitarias).
 - **ID de org**: snake_case del nombre (ej. `el_pais`, `24_horas`, `radio_universidad_chile`, `adn_radio`). Revisar `entities.yaml` antes de crear uno nuevo (hay ~54 medios registrados).
 - **Herramienta**: `pnpm run add-source -- <URL>` mapea dominio → medio; si el medio no esta registrado como org, agregarlo a `entities.yaml`.
 - **IDs de evento desnudos en prosa** (ej. `ver evento 20260618-3`) se auto-enlazan
@@ -233,6 +233,54 @@ svg_backup:
 14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
 15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS.md` solo lo que quede genuinamente pendiente.
 16. **Votaciones (`tipo: votacion`): conteos con fuente oficial**: además de la cobertura de prensa, verificar el resultado y el conteo (a favor / en contra / abstenciones) en la página oficial de votaciones del Senado (`senado.cl/actividad-legislativa/sala/votaciones`) o de la Cámara (`camara.cl/legislacion/sala_sesiones/votaciones.aspx`, y por proyecto con `ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar la URL de la votación concreta en `sources.yaml` (`medio: Senado de Chile` / `medio: Cámara de Diputados`) y registrar cada conteo como `[[cifra/...]]` (ej. los vetos de la megarreforma en `20260810-10`). Si la votación fue nominal y el detalle por parlamentario es relevante para el evento, mencionarlo con la URL oficial. Ver FUENTES_GUBERNAMENTALES.md → Poder Legislativo.
+
+## Fuentes de redes sociales: metodologia para "reacciones comunitarias"
+
+**Un solo tweet/post de un usuario NO es una "reaccion comunitaria".** Las redes sociales (X, Reddit, Facebook, Instagram, TikTok, YouTube) son **siempre complementarias o punto de partida**, nunca fuente unica de un dato (regla general del vault). Cuando un evento documenta reacciones ciudadanas, el segmento debe reflejar el debate real: **opiniones variadas, de usuarios distintos y de plataformas distintas, con puntos de vista de distinto signo** (criticos y defensores). Si solo existe la opinion de un usuario, NO titular el segmento "Reacciones comunitarias": se registra como opinion de ese usuario (ej. "El hilo de Roberto Merken"), con sus datos verificados contra fuentes oficiales/prensa y marcando como interpretacion no verificada lo que no se pueda confirmar.
+
+### Reglas para documentar reacciones de redes sociales
+
+1. **Reunir 2+ plataformas cuando existan** (X + Reddit r/chile + Facebook + Instagram): cada plataforma se registra como fuente propia en `sources.yaml` (`tipo: red_social`/`redes`, `medio: Reddit r/chile` / `Facebook` / etc.).
+2. **Citar comentarios con su usuario y puntaje/reacciones** cuando esten disponibles (ej. "'Gobierno de KidZania' (Motamatulg, 188 puntos)"), para que el lector vea la representatividad relativa de cada opinion. Extraer los comentarios mas votados y tambien voces de la vereda opuesta (los de bajo puntaje negativo tambien documentan el disenso).
+3. **Verificar los datos que plantean los usuarios** contra fuentes oficiales o prensa (BCN, SUSESO, tribunales, medios) y marcar explicitamente lo que no fue verificado (ej. "acusacion de IA no verificada por prensa, se registra como complementaria").
+4. **No mezclar la opinion del autor del hilo con la reaccion comunitaria**: el post original del usuario es el punto de partida; los comentarios de OTRAS personas son la reaccion. Citar ambos por separado.
+5. Si una afirmacion viral requiere validacion y no se resuelve, registrarla en `TAREAS.md` (⬜ pendiente) en lugar del body.
+6. **Toda fuente de redes sociales debe declarar su ROL en el evento**: nunca se agrega "porque si". Al citar un post/hilo/comentario complementario, el body y la nota de `sources.yaml` deben explicar que aporta. Roles validos: (a) **permite verificar/validar un dato** que el post plantea (verificado contra BCN/SUSESO/tribunales/prensa — ej. los datos historicos del hilo de niñez); (b) **plantea un punto que la prensa no cubre** (ej. la cita del articulo 1° de la Constitucion en el debate del plan de seguridad, que los noticieros no mencionaron); (c) **documenta la reaccion ciudadana / opinion publica** con voces variadas de plataformas distintas; (d) **muestra la viralizacion de un tema** y su framing; (e) **aporta un desglose/analisis que la cobertura de prensa no detallaba** (ej. el desglose de cuenta propia de CLAPES UC difundido por Merken). Si un post no cumple ninguno de estos roles —o repite exactamente lo que ya cubre la prensa sin anadir nada—, NO agregarlo. Formato sugerido en el body: "Se registra como complementaria porque <rol>: <que aporta, verificado contra X>" o "El rol del hilo en este evento es <rol>, verificado contra <fuente>."
+
+### Metodos de busqueda probados (2026-08)
+
+**Reddit r/chile** (los mas confiables):
+- **Busqueda por HTML**: `https://old.reddit.com/r/chile/search?q=<terminos>&restrict_sr=on&sort=new&t=month` funciona con `read_url` (la API JSON `search.json` devuelve 403; r.jina.ai sobre reddit tambien 403). El HTML del search lista titulo + puntos + comentarios + enlace del hilo.
+- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "https://old.reddit.com/r/chile/comments/<id>/<slug>/" -o <archivo>.html` responde 200; luego parsear con Python:
+  ```python
+  import re, html
+  blocks = re.split(r'<div class="entry', data)
+  user = re.search(r'/user/([^"/]+)', b)
+  score = re.search(r'score unvoted" title="([^"]+)"', b)
+  body = re.search(r'<div class="md">(.*?)</div>', b, re.S)
+  ```
+  Guardar el HTML en un archivo DENTRO del repo (ej. `tmp_<slug>.html`) y borrarlo al terminar: en Git Bash de Windows `/tmp` no es visible para Python (FileNotFoundError). Prefijar la impresion con `PYTHONIOENCODING=utf-8` para evitar errores de encoding cp1252 en consola Windows.
+- Ordenar comentarios por puntaje (desc) y tomar los top ~20 + los negativos para capturar el disenso.
+
+**Facebook** (posts de paginas de medios):
+- `r.jina.ai/https://www.facebook.com/<pagina>/posts/<slug>/` devuelve el texto del post + los comentarios "Most relevant" con su conteo de reacciones (probado con El Dínamo y Kapital FM, 2026-08). `read_url` directa tambien funciona para algunos posts.
+
+**X/Twitter**: el clipping del usuario trae el hilo y sus comentarios; para ampliar voces buscar cobertura de prensa del tema y usar el catalogo de sitemaps (`grep -ih '<termino>' sitemaps/<medio>/*.jsonl`). Los status IDs entregados por el usuario se validan con la URL de prensa que los confirma.
+
+**Instagram**: `read_url` sobre reels/posts devuelve descripcion y a veces comentarios; para reacciones amplias preferir prensa o Reddit.
+
+### Estado de validacion por red social
+
+| Red social | Busqueda | Extraccion de comentarios | Notas |
+|---|---|---|---|
+| Reddit r/chile | ✅ HTML search (read_url) | ✅ HTML + regex (curl) | API JSON y r.jina.ai bloqueados (403) |
+| Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
+| X/Twitter | 🟡 solo via clipping del usuario o prensa | 🟡 comentarios del hilo en el clipping | Sin busqueda publica automatizada probada |
+| Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
+| TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado) |
+| YouTube | 🟡 titulo/descripcion si | ⬜ comentarios no | Comentarios requieren sesion: read_url y r.jina.ai piden "Sign in to confirm you're not a bot" (probado 2026-08) |
+
+Para TikTok/YouTube la extraccion de comentarios NO esta resuelta: usar prensa o Reddit para reacciones y registrar el video solo como fuente complementaria de la declaracion (titulo + descripcion). Si algun dia se resuelve la extraccion de comentarios, actualizar esta tabla y la seccion "Medios de prensa en prosa" (orgs `tipo: red_social`).
 
 ## Pagina /events: filtros y busqueda en cliente
 
@@ -716,19 +764,19 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 869
+**Total de eventos:** 886
 
-**Cobertura de fuentes:** 476 de 869 eventos con 3+ fuentes (393 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 491 de 886 eventos con 3+ fuentes (395 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 663
-- 2025: 48
-- 2024: 26
-- 2023: 17
-- 2022: 14
+- 2026: 674
+- 2025: 49
+- 2024: 27
+- 2023: 19
+- 2022: 15
 - 2021: 13
 - 2020: 32
-- 2019: 24
+- 2019: 25
 - 2018: 3
 - 2017: 1
 - 2016: 2
@@ -742,32 +790,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (338)
-- Justicia (216)
-- Economia (174)
-- Defensa y seguridad (137)
-- Administración pública (114)
-- Proceso legislativo (84)
-- Derechos humanos (82)
+- Politica (344)
+- Justicia (225)
+- Economia (179)
+- Defensa y seguridad (144)
+- Administración pública (117)
+- Derechos humanos (89)
+- Proceso legislativo (85)
 - Finanzas publicas (74)
-- Corrupción (70)
-- Cambios en el gabinete (60)
+- Corrupción (71)
+- Relaciones internacionales (62)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (189)
-- reaccion (108)
-- declaracion (105)
+- accion (193)
+- reaccion (111)
+- declaracion (106)
 - resultado (97)
-- investigacion (92)
-- publicacion (85)
+- investigacion (94)
+- publicacion (86)
 - anuncio (65)
-- fallo_judicial (46)
+- fallo_judicial (51)
 - votacion (24)
 - proyecto (18)
 
 **Entidades registradas:**
-- Personas: 1270
-- Organizaciones: 747
-- Cifras: 767
-- Fuentes: 2923
+- Personas: 1299
+- Organizaciones: 770
+- Cifras: 787
+- Fuentes: 3006
 - Temas: 74
