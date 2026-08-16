@@ -243,7 +243,7 @@ svg_backup:
 5. **`impacto.colectivos`**: usar IDs de `colectivos.yaml`. Si falta uno, agregarlo.
 6. **`impacto.sectores`**: usar IDs de `sectores.yaml`. Si falta uno, agregarlo.
 7. **`relaciones`**: apuntar al ID del archivo (sin extension), ej: `20260720-1`. **No declarar la misma conexion en ambas direcciones** (ej. A `deriva_en` B Y B `responde_a` A): el timeline y la seccion Conexiones muestran la relacion una sola vez, y el codigo deduplica en runtime conservando el outgoing (`src/lib/relations.ts` `getEventConnections`) — si se declara dos veces, la etiqueta temporal (Siguiente/Anterior) se calcula por fecha real del evento relacionado, no por la direccion de la relacion.
-8. **Wikilinks en body**: siempre que se mencione una persona, org, fuente o cifra, usar wikilink.
+8. **Wikilinks en body**: siempre que se mencione una persona, org, fuente o cifra, usar wikilink. **Enforcement mecánico (desde 16-ago-2026):** `scripts/validate.mjs` falla si (a) el **nombre completo** de una persona registrada en `entities.yaml` aparece en prosa sin ningún `[[person/id]]`, o (b) una persona **ya enlazada** en el evento se menciona después por su apellido distintivo en prosa (ej. "Kast" tras el primer enlace). La detección (compartida con el fixer, `scripts/proseNames.mjs`) omite apellidos ambiguos (dos personas con el mismo apellido enlazadas, ej. padre/hijo Cisternas), apellidos precedidos por un nombre de pila ("Fernando Matthei" ≠ Evelyn), prefijos de organización ("Fundación Kast") y apellidos de 3 letras que son palabras comunes ("del", "san", "mas"). El wikilink renderiza el nombre canónico completo del YAML. Limpieza del backlog existente: `node scripts/fix-prose-wikilinks.mjs` (itera hasta punto fijo — enlazar el nombre completo habilita la detección del apellido en la pasada siguiente; `--dry-run` para revisar antes).
 9. **Fuentes**: agregar a `sources.yaml` si es nueva. Formato ID: `medio-YYYY-MM-DD-slug`. **Siempre inline** en el párrafo que usa la info, nunca en `## Referencias` separada.
 10. **URLs de fuentes**: NUNCA usar URLs raíz/domino (`https://lasegunda.com/`). Siempre usar la URL completa del artículo específico. Si el original está paywall y no se puede obtener la URL exacta, usar una fuente secundaria que cite la original (ej: El Ciudadano citando a La Segunda) y agregar campo `notas` al YAML indicando la fuente primaria. Los datos deben ser verificables y rastreables a una fuente concreta.
     - Para leer contenido detrás de paywall o bloqueado, usar los mirrors de la sección [Extraccion de contenido web](#extraccion-de-contenido-web): `paywallskip.com`, `r.jina.ai`, `defuddle.md`, `markdown.new`, `archive.ph`. La URL guardada en `sources.yaml` es SIEMPRE la del artículo original, nunca la del mirror.
@@ -436,7 +436,13 @@ Si falla, revisar frontmatter (YAML parse error) o wikilinks rotos.
 replica la resolucion de `remarkWikiLinks.mjs` y falla ANTES del build si hay
 wikilinks rotos en el body de eventos: `[[source/...]]` contra `sources.yaml`,
 `[[person/...]]` / `[[org/...]]` contra `entities.yaml` y `[[event/...]]` contra
-los IDs de eventos existentes. Paridad con el plugin: `[[cifra/...]]` NO se
+los IDs de eventos existentes. Tambien valida las **menciones en prosa** de
+personas (regla 8: nombre completo sin enlazar o apellido de persona enlazada —
+ver `scripts/proseNames.mjs`, el mismo modulo que usa el fixer). **CRLF:** con
+`core.autocrlf=true` el checkout de Windows entrega `\r\n`; las regex de
+frontmatter de validate/fixer son tolerantes (`\r?\n`), si no se saltarían en
+silencio ~2/3 de los eventos (bug real corregido 16-ago-2026: 639 de 949
+archivos nunca se validaban). Paridad con el plugin: `[[cifra/...]]` NO se
 valida (el plugin tampoco) y los IDs de evento desnudos (`\b20\d{6}-\d{1,3}\b`)
 solo se enlazan si existen, sin ser error. Se excluyen bloques de codigo fenced
 (```) e `inlineCode` (\`) del chequeo, igual que el plugin (que solo recorre
@@ -806,58 +812,51 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 948
+**Total de eventos:** 319
 
-**Cobertura de fuentes:** 535 de 948 eventos con 3+ fuentes (413 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 150 de 319 eventos con 3+ fuentes (169 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 710
-- 2025: 52
-- 2024: 31
-- 2023: 25
-- 2022: 19
-- 2021: 17
-- 2020: 35
-- 2019: 25
-- 2018: 3
+- 2026: 228
+- 2025: 12
+- 2024: 10
+- 2023: 14
+- 2022: 9
+- 2021: 6
+- 2020: 22
+- 2019: 13
 - 2017: 1
-- 2016: 2
-- 2015: 5
-- 2014: 5
-- 2013: 2
-- 2012: 1
-- 2011: 1
-- 2010: 7
-- 2009: 6
-- 1973: 1
+- 2015: 2
+- 2010: 1
+- 2009: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (358)
-- Justicia (261)
-- Economia (183)
-- Defensa y seguridad (172)
-- Administración pública (126)
-- Derechos humanos (111)
-- Proceso legislativo (89)
-- Corrupción (78)
-- Finanzas publicas (77)
-- Relaciones internacionales (65)
+- Politica (85)
+- Economia (75)
+- Justicia (72)
+- Defensa y seguridad (55)
+- Emergencia y catástrofes (37)
+- Derechos humanos (35)
+- Proceso legislativo (35)
+- Administración pública (31)
+- Finanzas publicas (29)
+- Gobierno y gestion presidencial (27)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (197)
-- reaccion (118)
-- investigacion (114)
-- declaracion (111)
-- resultado (100)
-- publicacion (90)
-- anuncio (67)
-- fallo_judicial (65)
-- votacion (24)
-- proyecto (19)
+- accion (63)
+- resultado (51)
+- publicacion (42)
+- investigacion (35)
+- anuncio (31)
+- reaccion (24)
+- declaracion (20)
+- fallo_judicial (16)
+- votacion (13)
+- decreto (9)
 
 **Entidades registradas:**
-- Personas: 1412
-- Organizaciones: 826
-- Cifras: 860
-- Fuentes: 3199
+- Personas: 1423
+- Organizaciones: 837
+- Cifras: 878
+- Fuentes: 3231
 - Temas: 74

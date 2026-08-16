@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import YAML from 'yaml';
+import { buildPeopleIndex, findReplaceableMentions } from './proseNames.mjs';
 
 const root = join(process.cwd(), 'src');
 const dataDir = join(root, 'data');
@@ -32,6 +33,9 @@ const entitiesData = readYaml('entities.yaml');
 const orgsData = entitiesData.organizations ?? {};
 const peopleData = entitiesData.people ?? {};
 const cifrasData = entitiesData.cifras ?? {};
+// Índice de personas para la regla de wikilinks en prosa (AGENTS.md n.º 8).
+// Misma lógica que scripts/fix-prose-wikilinks.mjs (backlog).
+const peopleProseIndex = buildPeopleIndex(peopleData);
 const MEDIA_ORG_TYPES = new Set([
   'medio_comunicacion',
   'red_social',
@@ -312,7 +316,10 @@ for (const file of allFiles) {
   const content = readFileSync(file, 'utf8');
   const eventId = eventIdFromPath(file);
 
-  const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+  // CRLF-tolerante: con core.autocrlf=true el checkout de Windows entrega
+  // archivos con \r\n; si la regex exigiera \n a secas, se saltarían en silencio
+  // ~2/3 de los eventos (bug real: 639 de 949 archivos nunca se validaban).
+  const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!fmMatch) continue;
 
   const fm = YAML.parse(fmMatch[1]);
@@ -369,6 +376,23 @@ for (const file of allFiles) {
       console.error(`✖ wikilink roto [[event/${id}]] → ${eventId} (no existe evento con ese ID)`);
       errors++;
     }
+  }
+
+  // Regla AGENTS.md n.º 8: toda mención de una persona en el body debe llevar
+  // [[person/id]] — no solo la primera. Replica la misma lógica que el fixer
+  // (scripts/proseNames.mjs); si queda alguna mención reemplazable es un error
+  // (correr node scripts/fix-prose-wikilinks.mjs para limpiar el backlog).
+  const { mentions: proseMentions } = findReplaceableMentions(body, peopleProseIndex);
+  if (proseMentions.length > 0) {
+    const examples = proseMentions
+      .slice(0, 5)
+      .map((m) => `"${m.phrase}" → [[person/${m.personId}]]`)
+      .join('; ');
+    const extra = proseMentions.length > 5 ? ` y ${proseMentions.length - 5} más` : '';
+    console.error(
+      `✖ ${proseMentions.length} mención(es) de persona en prosa sin wikilink → ${eventId}: ${examples}${extra} (fix: node scripts/fix-prose-wikilinks.mjs)`
+    );
+    errors++;
   }
 
   // Referencias a la bitácora TAREAS (la carpeta siempre en mayúsculas) o al viejo

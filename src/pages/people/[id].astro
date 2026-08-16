@@ -37,6 +37,11 @@ const orgNames = new Map(getOrganizationsRegistry().map((o) => [o.id, o.data.nom
 const cargos = person.data.cargos ?? [];
 const datedCargos = cargos.filter((c) => c.desde);
 
+// Cargo principal de la portada: el de cargos[] con desde más reciente (si hay fechas),
+// fallback al cargo top-level. El estado "Ex"/en ejercicio y el periodo se derivan de las fechas.
+const latestCargo = [...datedCargos].sort((a, b) => (b.desde ?? '').localeCompare(a.desde ?? ''))[0];
+const cargoPortada = latestCargo ? { ...latestCargo, ex: Boolean(latestCargo.hasta) } : { cargo: person.data.cargo, ex: false };
+
 // Lazy de eventos relacionados: el SSR pinta los primeros; el resto viaja como JSON.
 const PERSON_EVENTS_LIMIT = 12;
 const ssrEvents = relatedEvents.slice(0, PERSON_EVENTS_LIMIT);
@@ -100,16 +105,28 @@ const mermaidTimeline = datedCargos.length
       </div>
       <div class="min-w-0 flex-1">
         <h1 transition:name={`person-title-${person.id}`} class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{person.data.nombre}</h1>
-        {(person.data.cargo ?? cargos.at(-1)?.cargo) && (
+        {cargoPortada.cargo && (
           <p class="flex items-center gap-1.5 text-sm text-gray-700 font-medium mt-1">
             <Briefcase class="h-4 w-4 text-gray-400 shrink-0" />
-            <span>{person.data.cargo ?? cargos.at(-1)?.cargo}</span>
+            <span>{cargoPortada.ex ? 'Ex ' : ''}{cargoPortada.cargo}</span>
+            {cargoPortada.desde && (
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-gray-500 bg-gray-100 rounded-full px-2 py-0.5">
+                {cargoPortada.hasta
+                  ? `${fechaEs(cargoPortada.desde)} → ${fechaEs(cargoPortada.hasta)}`
+                  : `desde ${fechaEs(cargoPortada.desde)}`}
+              </span>
+            )}
+            {cargoPortada.desde && !cargoPortada.hasta && (
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-green-700 bg-green-50 rounded-full px-2 py-0.5">
+                en ejercicio
+              </span>
+            )}
           </p>
         )}
-        {(person.data.organizacion ?? cargos.at(-1)?.organizacion) && (
+        {(person.data.organizacion ?? cargos.at(-1)?.organizacion ?? cargoPortada.organizacion) && (
           <p class="flex items-center gap-1.5 text-xs text-gray-500 mt-1">
             <Building2 class="h-3.5 w-3.5 text-gray-400 shrink-0" />
-            <span>{orgNombre(person.data.organizacion ?? cargos.at(-1)?.organizacion)}</span>
+            <span>{orgNombre(person.data.organizacion ?? cargos.at(-1)?.organizacion ?? cargoPortada.organizacion)}</span>
           </p>
         )}
       </div>

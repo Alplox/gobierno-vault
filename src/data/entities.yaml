@@ -6,10 +6,19 @@ people:
     notas: "Abogada; directora jurídica de Segal Deudores. Advirtió que la ampliación del cobro del CAE a billeteras virtuales debe leerse a la luz de las sentencias de Cortes de Apelaciones (entre ellas la de La Serena) que han resuelto que la deuda del CAE carece de naturaleza tributaria y que la Tesorería no está facultada para ejecutarla con prerrogativas tributarias (evento 20260615-1)."
   claudia_sanhueza:
     nombre: Claudia Sanhueza
-    cargo: Exministra de Desarrollo Social y Familia (2022-2025)
-    organizacion: ministerio_desarrollo_social
+    cargo: Exsubsecretaria de Hacienda y de Relaciones Económicas Internacionales
+    cargos:
+      - cargo: Subsecretaria de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2022-03-11
+        hasta: 2023-03-10
+      - cargo: Subsecretaria de Relaciones Económicas Internacionales
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2023-03-10
+        hasta: 2026-03-11
+    organizacion: ministerio_relaciones_exteriores
     partido: Revolución Democrática
-    notas: "Exministra de Desarrollo Social y Familia del gobierno de Boric; presentó los resultados de la CASEN 2024. En agosto de 2026 publicó un hilo en X defendiendo la metodología de la medición de pobreza por ingresos frente a los cuestionamientos del presidente Kast: descontar subsidios la haría 'técnicamente incorrecta'; citó la caída de ~600 mil personas entre CASEN 2022-2024 y más de 2 millones entre 2020-2024 (evento 20260810-1)."
+    notas: "Economista, subsecretaria de Hacienda (2022-2023) y de Relaciones Económicas Internacionales (2023-2026) del gobierno de Boric. En agosto de 2026 publicó un hilo en X defendiendo la metodología de la medición de pobreza por ingresos frente a los cuestionamientos del presidente Kast: descontar subsidios la haría 'técnicamente incorrecta'; citó la caída de ~600 mil personas entre CASEN 2022-2024 y más de 2 millones entre 2020-2024 (evento 20260810-1)."
   coca_nanco:
     nombre: Emilia 'Coca' Nanco
     cargo: Diputada
@@ -24,6 +33,10 @@ people:
   cristian_sayes_maldonado:
     nombre: Cristian Sayes Maldonado
     cargo: Delegado presidencial regional de Arica y Parinacota
+    cargos:
+      - cargo: Delegado presidencial regional de Arica y Parinacota
+        organizacion: delegacion_presidencial_arica
+        desde: 2026-03-11
     organizacion: delegacion_presidencial_arica
     notas: "Delegado presidencial regional de Arica y Parinacota, ex militante de RN. Mencionado en los audios de la seremi Romina Cifuentes (junio 2026) como obstáculo para el cuoteo republicano en el Sernac de Arica: 'el delegado acá es el que tiene el poder... lamentablemente es RN, entonces siempre va a tirar para su sector' (evento 20260811-7)."
   david_rivas:
@@ -120,13 +133,18 @@ people:
     organizacion: carabineros
     notas: "Teniente de Carabineros, jefe de la Tenencia San Pedro de la Paz. Detalló que el certificado de revisión técnica presentado por el concejal David Rivas 'presentaba inconsistencias, ya que el documento indicaba una vigencia distinta a la registrada en el sistema' (evento 20260810-36)."
   raimundo_palamara:
-    nombre: Raimundo Palamara
+    nombre: Raimundo Palamara Stewart
     cargo: Abogado y presidente de Fundación Fuerza Ciudadana
     organizacion: fundacion_fuerza_ciudadana
     notas: "Abogado y presidente de la Fundación Fuerza Ciudadana. Publicó una columna en BioBioChile (10-ago-2026) sobre la querella de la fundación contra la alcaldesa de La Cruz, Filomena Navia, por omisión de denuncia reiterada (art. 13 Ley 20.000) tras el audio filtrado sobre una plantación de marihuana (evento 20260804-19)."
   ricardo_martinez:
     nombre: Ricardo Martínez Menanteau
-    cargo: Excomandante en jefe del Ejército (2014-2018)
+    cargo: Excomandante en jefe del Ejército
+    cargos:
+      - cargo: Comandante en jefe del Ejército
+        organizacion: ejercito_chile
+        desde: 2014-03-11
+        hasta: 2018-03-11
     organizacion: ejercito_chile
     notas: "Excomandante en jefe del Ejército (2014-2018). En entrevista con BioBioTV (11-ago-2026) afirmó que los militares 'no están preparados' para funciones de seguridad pública y reveló que en el estallido social de 2019 rechazó convertir al Ejército en una 'segunda ola de Carabineros' (evento 20260811-6)."
   sofia_gonzalez:
@@ -137,7 +155,12 @@ people:
     notas: "Diputada del Partido Comunista. Tras la aprobación de los vetos de Kast a la megarreforma (10-ago-2026) sostuvo que 'estos tres vetos demuestran cuál es el alma de esta megarreforma, que es la defensa de los más ricos en desmedro de quienes menos tienen' (evento 20260810-10)."
   katherine_martorell:
     nombre: Katherine Martorell
-    cargo: Exsubsecretaria de Prevención del Delito (2018-2022)
+    cargo: Exsubsecretaria de Prevención del Delito
+    cargos:
+      - cargo: Subsecretaria de Prevención del Delito
+        organizacion: subsecretaria_prevencion_delito
+        desde: 2018-03-11
+        hasta: 2022-03-11
     organizacion: subsecretaria_prevencion_delito
     partido: Renovación Nacional
     notas: "Abogada militante de RN; subsecretaria de Prevención del Delito durante el segundo gobierno de Piñera. Investigada por la licitación de 300 cámaras corporales para Carabineros (caso Motorola): la Fiscalía Centro Norte decidió no perseverar y el TC cerró definitivamente la causa el 6-ago-2026 al rechazar el requerimiento de Pegasus. Sus chats con Luis Hermosilla (2018-2023) fueron revisados en una arista del caso Audios sin que se formalizaran cargos."
@@ -172,7 +195,12 @@ people:
     notas: "Machi (autoridad espiritual) mapuche de la comunidad de Traitraiko, condenado por el incendio del templo católico de San Francisco de Valdivia. En agosto de 2020 protagonizó, junto a otros comuneros en huelga de hambre, un episodio que puso en riesgo su vida: tras dar un ultimátum al gobierno, inició una huelga seca a mediados de agosto de 2020, advirtiendo que 'si muere será culpa del gobierno'."
   juan_miguel_fuente_alba:
     nombre: Juan Miguel Fuente-Alba
-    cargo: Excomandante en jefe del Ejército (2010-2014)
+    cargo: Excomandante en jefe del Ejército
+    cargos:
+      - cargo: Comandante en jefe del Ejército
+        organizacion: ejercito_chile
+        desde: 2010-03-11
+        hasta: 2014-03-11
     organizacion: ejercito_chile
     notas: "Excomandante en jefe del Ejército (2010-2014). En 2019 la ministra en visita Romy Rutherford ordenó su detención por presunto fraude al fisco (malversación de fondos de la Ley Reservada del Cobre por ~$5.600 millones) y aumento patrimonial injustificado (~$7.000 millones); fue procesado y su defensa apeló. Protagonista del caso Milicogate."
   jozo_santic_palomino:
@@ -245,11 +273,19 @@ people:
     notas: "Exconcejala de Las Condes. Tras el post de Jorge Baradit sobre la zanja fronteriza (agosto 2026) señaló que la imagen era 'el fiel reflejo de que todo lo que se prometió fue una absoluta mentira'."
   augusto_pinochet:
     nombre: Augusto Pinochet
-    cargo: Dictador de Chile (1973-1990)
+    cargo: Dictador de Chile
+    cargos:
+      - cargo: Dictador de Chile (jefe de Estado de facto)
+        desde: 1973-09-11
+        hasta: 1990-03-11
     notas: "General del Ejército, líder de la dictadura militar chilena (1973-1990) tras el golpe de Estado del 11 de septiembre de 1973. Derrotado en el plebiscito de 1988. Los 'Papeles de la Dictadura' de CIPER documentan la estrategia de su régimen para condicionar la transición a la democracia."
   patricio_aylwin:
     nombre: Patricio Aylwin
-    cargo: Presidente de Chile (1990-1994)
+    cargo: Presidente de Chile
+    cargos:
+      - cargo: Presidente de la República
+        desde: 1990-03-11
+        hasta: 1994-03-11
     notas: "Presidente de Chile entre 1990 y 1994, primer mandatario tras la dictadura. Líder de la Concertación. La estrategia de cierre de la dictadura diseñada por la Armada buscó evitar que la oposición fuese liderada por alguien más radical que Aylwin."
   maria_angelica_de_miguel:
     nombre: María Angélica de Miguel
@@ -297,6 +333,18 @@ people:
   joaquin_lavin_infante:
     nombre: Joaquín Lavín Infante
     cargo: Exministro y exalcalde de Las Condes
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 2010-03-11
+        hasta: 2011-07-18
+      - cargo: Ministro de Desarrollo Social
+        organizacion: ministerio_desarrollo_social
+        desde: 2011-10-13
+        hasta: 2013-06-13
+      - cargo: Alcalde de Las Condes
+        desde: 2016-12-06
+        hasta: 2021-06-28
     notas: "Exministro de Educación y de Desarrollo Social, exalcalde de Las Condes y padre del exparlamentario Joaquín Lavín León. El 11 de mayo de 2026 concurrió al Anexo Penitenciario Capitán Yáber para enrolarse en Gendarmería y visitar a su hijo tras la prisión preventiva, declarando que cree '100 por 100 en la inocencia de Cathy y de Joaquín' y pidió no prejuzgar. Su campaña presidencial en las primarias de Chile Vamos de 2021 aparece vinculada a pagos irregulares a asesores detectados en la investigación."
   daniela_riquelme:
     nombre: Daniela Riquelme
@@ -311,7 +359,7 @@ people:
     cargo: Abogado defensor
     notas: "Abogado defensor del exparlamentario Joaquín Lavín León en la causa por fraude al Fisco e infracciones electorales. Tras la revocación de la prisión preventiva (agosto 2026) sostuvo que 'ninguna razón de fondo' justificaba mantener a su cliente privado de libertad."
   andres_arrieta:
-    nombre: Andrés Arrieta
+    nombre: Andrés Arrieta Arriagada
     cargo: Gerente general de Restomarket
     organizacion: restomarket
     notas: "Empresario y exreservista del Ejército, gerente general de Restomarket. Detenido y formalizado por sustracción de menores, lesiones menos graves, amenazas y porte ilegal de arma de fuego tras retener y amenazar de muerte a niños que jugaban 'ring raja' en Vitacura (10 de julio de 2026). La empresa lo suspendió de todas sus funciones mientras dura la investigación."
@@ -432,6 +480,9 @@ people:
   sofia_rengifo:
     nombre: Sofía Rengifo
     cargo: Subsecretaria del Deporte
+    cargos:
+      - cargo: Subsecretaria del Deporte
+        desde: 2026-03-11
     notas: "Subsecretaria del Deporte del gobierno de Kast (nombrada junto al ministro Francisco Riveros Cantuarias en agosto de 2026). La presidenta de la Comisión de Deporte, Marisela Santibáñez, le pidió retomar la agenda legislativa del Mindep sin partir de cero (evento 20260815-7)."
   maria_jose_labrador:
     nombre: María José Labrador
@@ -507,10 +558,19 @@ people:
   gloria_de_la_fuente:
     nombre: Gloria de la Fuente
     cargo: Exsubsecretaria de Relaciones Exteriores
+    cargos:
+      - cargo: Subsecretaria de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: "Exsubsecretaria de Relaciones Exteriores (gobierno de Boric). Tras el anuncio del retiro de Chile del Movimiento de Países No Alineados (agosto 2026) cuestionó la decisión: 'Es difícil saber qué está buscando el Gobierno' y advirtió que dilapidar la autonomía estratégica es un riesgo para el prestigio internacional de Chile."
   salvador_allende:
     nombre: Salvador Allende
-    cargo: Expresidente de Chile (1970-1973)
+    cargo: Expresidente de Chile
+    cargos:
+      - cargo: Presidente de la República
+        desde: 1970-11-03
+        hasta: 1973-09-11
     notas: "Presidente de Chile entre 1970 y 1973. Durante su gobierno (1971) Chile se incorporó al Movimiento de Países No Alineados."
   florencia_pinto:
     nombre: Florencia Pinto
@@ -519,15 +579,28 @@ people:
   felipe_harboe:
     nombre: Felipe Harboe
     cargo: Exsubsecretario de Prevención del Delito y exsenador (PPD)
+    cargos:
+      - cargo: Subsecretario de Prevención del Delito
+        organizacion: ministerio_interior
+        desde: 2014-03-11
+        hasta: 2018-03-11
     organizacion: partido_por_la_democracia
     notas: "Exsubsecretario de Prevención del Delito (2006-2010) y exsenador (2010-2022) del PPD. En dic-2014 criticó el indulto general de 2012 de Piñera: 'lejos de cerrar la puerta giratoria se hizo todo lo contrario, soltando a más de cuatro mil condenados', proponiendo que la facultad de indulto quede en la Corte Suprema y no en el Presidente. En agosto de 2026 criticó el copamiento policial del gobierno de Kast: 'no se logra disuadir al crimen organizado con copamiento policial', descartó la utilidad de un nuevo estado de excepción (despliegue militar en el sur renovado ~60 veces) y pidió un sistema robusto de protección de testigos."
   antonio_frey:
     nombre: Antonio Frey
-    cargo: Subsecretario de Prevención del Delito (2014-2018)
+    cargo: Exsubsecretario de Prevención del Delito
+    cargos:
+      - cargo: Subsecretario de Prevención del Delito
+        desde: 2014-03-11
+        hasta: 2018-03-11
     notas: "Subsecretario de Prevención del Delito durante el segundo gobierno de Bachelet. En dic-2014 reveló que 900 de los 4.029 reos indultados en 2012 (gobierno de Piñera) reincidieron cometiendo 1.222 delitos ('uno de cada cuatro'), acusando a Piñera de 'abrir las puertas de las cárceles de par en par' y 'ponerle motor a la puerta giratoria'. Anunció fuerza de tareas, agenda corta antidelincuencia y el Banco Unificado de Datos."
   cristobal_lira:
     nombre: Cristóbal Lira
-    cargo: Exsubsecretario de Prevención del Delito (2010-2014)
+    cargo: Exsubsecretario de Prevención del Delito
+    cargos:
+      - cargo: Subsecretario de Prevención del Delito
+        desde: 2010-03-11
+        hasta: 2014-03-11
     notas: "Subsecretario de Prevención del Delito durante el primer gobierno de Piñera. En dic-2014 calificó el estudio de reincidencia de los indultados de 2012 como 'un montaje comunicacional del gobierno de Bachelet, que carece de rigor y honestidad'."
   felipe_parada:
     nombre: Felipe Parada
@@ -789,6 +862,9 @@ people:
   roberto_belmar:
     nombre: Roberto Belmar
     cargo: Seremi de Salud de la Región Metropolitana
+    cargos:
+      - cargo: Seremi de Salud de la Región Metropolitana
+        desde: 2026-03-11
     notas: "Seremi de Salud de la Región Metropolitana en 2009. En el marco de la campaña de tenencia responsable de mascotas señaló que el problema no pasa por mayores acciones punitivas."
   gonzalo_navarrete:
     nombre: Gonzalo Navarrete
@@ -819,6 +895,10 @@ people:
   victor_pino:
     nombre: Víctor Pino
     cargo: Delegado presidencial de Coquimbo
+    cargos:
+      - cargo: Delegado presidencial de Coquimbo
+        organizacion: ministerio_interior
+        desde: 2026-03-11
     organizacion: ministerio_interior
     notas: "Diputado de Demócratas. Asumió como delegado presidencial regional de Coquimbo en el gobierno de José Antonio Kast, cargo en el que participó de la tramitación de la megareforma. El organigrama del gobierno de El País (11-mar-2026) lo confirma entre los 16 delegados regionales."
   german_codina:
@@ -1085,6 +1165,9 @@ people:
   sofia_shea:
     nombre: Sofía Shea
     cargo: Jefa del Departamento de Comunicación Digital de la Secom (Segegob)
+    cargos:
+      - cargo: Jefa del Departamento de Comunicación Digital de la Secom (Segegob)
+        desde: 2026-03-11
     notas: "Periodista (24), egresada hace un año de la Facultad de Comunicaciones de la PUC; hija de Nicolás Shea (fundador de Start-Up Chile). Realizó su práctica en La 975, la agencia de Felipe Costabal. Ingresó a la Segegob el 11-mar-2026 en grado 14 ($1.395.665) y el 13-abr-2026 ascendió a jefa del Departamento de Comunicación Digital (grado 11; $2.115.357 en mayo, $3.538.024 en junio con bono no detallado, $2.144.971 en julio), según el Portal de Transparencia (El Dínamo, 15-ago-2026, evento 20260815-1)."
   nicolas_shea:
     nombre: Nicolás Shea
@@ -1106,6 +1189,10 @@ people:
   pilar_hazbun:
     nombre: Pilar Hazbún
     cargo: Jefa de la División Jurídica del Ministerio de Justicia
+    cargos:
+      - cargo: Jefa de la División Jurídica del Ministerio de Justicia
+        organizacion: ministerio_justicia
+        desde: 2026-03-11
     organizacion: ministerio_justicia
     notas: "Jefa de División del Ministerio de Justicia y Derechos Humanos. Según fuentes de la cartera (13-ago-2026), junto al ministro Fernando Rabat es la cabeza técnica de la Reforma Procesal Civil —'el ministro es la cabeza de la reforma como civilista y lo secunda su jefa de División'—, mientras la asesora Trinidad Zegers coordina asuntos operativos (foros, reuniones) en el marco de la reactivación de la reforma (evento 20260814-5)."
   juan_antonio_urzua:
@@ -1156,6 +1243,11 @@ people:
   begona_yarza:
     nombre: Begoña Yarza
     cargo: Ex Ministra de Salud
+    cargos:
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2022-03-11
+        hasta: 2022-09-06
     organizacion: ministerio_salud
     notas: Ministra de Salud del gobierno de Gabriel Boric; aludida por May Chomali en la caída de los compromisos de gestión de la red hospitalaria.
   ximena_aguilera:
@@ -1171,11 +1263,20 @@ people:
   paula_daza:
     nombre: Paula Daza
     cargo: Ex Subsecretaria de Salud Pública
+    cargos:
+      - cargo: Subsecretaria de Salud Pública
+        organizacion: ministerio_salud
+        desde: 2018-03-11
+        hasta: 2021-11-28
     organizacion: ministerio_salud
     notas: Exsubsecretaria de Salud Pública del segundo gobierno de Piñera; atribuyó el problema de gestión hospitalaria a la escasa autonomía de los directores y a procesos poco modernizados.
   jose_ignacio_vial:
     nombre: José Ignacio Vial
     cargo: Subsecretario del Medio Ambiente
+    cargos:
+      - cargo: Subsecretario del Medio Ambiente
+        organizacion: ministerio_medio_ambiente
+        desde: 2026-03-11
     organizacion: ministerio_medio_ambiente
     notas: "Subsecretario del Medio Ambiente (RN) del gobierno de José Antonio Kast. En marzo de 2026 firmó el oficio a Contraloría solicitando el retiro de 43 decretos supremos de la cartera enviados durante el gobierno de Gabriel Boric."
   nicolas_grau:
@@ -1201,7 +1302,12 @@ people:
     notas: "Presidente electo de Colombia que asumió el poder en agosto de 2026. El 7 de agosto de 2026 se reunió con el presidente chileno José Antonio Kast en la Fundación FES de Cali, horas antes de su asunción."
   alejandro_micco:
     nombre: Alejandro Micco
-    cargo: Exsubsecretario de Hacienda (2014-2017)
+    cargo: Exsubsecretario de Hacienda
+    cargos:
+      - cargo: Subsecretario de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2014-03-11
+        hasta: 2017-08-31
     organizacion: ministerio_hacienda
     notas: "Economista, exsubsecretario de Hacienda durante el primer gobierno de Bachelet. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
   benjamin_villena_roldan:
@@ -1229,6 +1335,11 @@ people:
   maria_jose_abud:
     nombre: María José Abud
     cargo: Exsubsecretaria de la Mujer y la Equidad de Género
+    cargos:
+      - cargo: Subsecretaria de la Mujer y la Equidad de Género
+        organizacion: ministerio_mujer
+        desde: 2018-03-11
+        hasta: 2022-03-11
     notas: "Exsubsecretaria de la Mujer y la Equidad de Género. Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
   maria_paz_arzola:
     nombre: María Paz Arzola González
@@ -1242,6 +1353,11 @@ people:
   ricardo_ruiz_de_vinaspre:
     nombre: Ricardo Ruiz de Viñaspre
     cargo: Exdirector del Sence
+    cargos:
+      - cargo: Director del Sence
+        organizacion: sence
+        desde: 2018-03-11
+        hasta: 2022-03-11
     notas: "Exdirector del Servicio Nacional de Capacitación y Empleo (Sence). Integrante de la Mesa de Reactivación Laboral convocada por el ministro Tomás Rau, que entregó 22 propuestas el 30 de junio de 2026."
   sebastian_videla:
     nombre: Sebastián Videla
@@ -1285,6 +1401,10 @@ people:
   dalmiro_yanez:
     nombre: Dalmiro Yáñez
     cargo: Seremi de Educación de Los Lagos
+    cargos:
+      - cargo: Seremi de Educación de Los Lagos
+        organizacion: ministerio_educacion
+        desde: 2026-03-11
     organizacion: ministerio_educacion
     notas: "Seremi de Educación de la Región de Los Lagos. Tras el incidente de violencia escolar del Liceo Rahue de Osorno (agosto 2026) pidió protección y tratamiento psicológico para la alumna agredida y atención de salud para el estudiante involucrado, subrayando que todo alumno tiene derecho a educación."
   gloria_hutt:
@@ -1384,19 +1504,33 @@ people:
   katherine_lopez:
     nombre: Katherine López Rivera
     cargo: Delegada Presidencial Regional de Antofagasta
+    cargos:
+      - cargo: Delegada Presidencial Regional de Antofagasta
+        organizacion: delegacion_presidencial_antofagasta
+        desde: 2026-03-11
     organizacion: delegacion_presidencial_antofagasta
     notas: Delegada presidencial regional de Antofagasta. Preside la Mesa Regional Pro Empleo (julio 2026), con cupo de 1.500 nuevos empleos en el marco de la meta nacional de 50.000 plazas.
   paola_solari:
     nombre: Paola Solari Montenegro
     cargo: Seremi del Trabajo y Previsión Social de Antofagasta
+    cargos:
+      - cargo: Seremi del Trabajo y Previsión Social de Antofagasta
+        desde: 2026-03-11
     notas: Seremi del Trabajo y Previsión Social de la Región de Antofagasta. Integrante de la Mesa Regional Pro Empleo; alertó por el crecimiento de la informalidad laboral regional.
   pablo_pomareda:
     nombre: Pablo Pomareda
     cargo: Seremi de Economía de Antofagasta
+    cargos:
+      - cargo: Seremi de Economía de Antofagasta
+        desde: 2026-03-11
     notas: Seremi de Economía, Fomento y Turismo de la Región de Antofagasta. Participó en la presentación de cifras de empleo regional de agosto de 2026.
   eduardo_mundt:
     nombre: Eduardo Mundt
     cargo: Jefe de Gabinete de la Subsecretaría de Hacienda
+    cargos:
+      - cargo: Jefe de Gabinete de la Subsecretaría de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 2026-03-11
     organizacion: ministerio_hacienda
   veronica_undurraga:
     nombre: Verónica Undurraga Valdés
@@ -1635,7 +1769,7 @@ people:
     organizacion: ejercito_chile
     notas: "Capitán del Ejército condenado el 12 de septiembre de 2023 por el Tribunal de Juicio Oral en lo Penal de La Serena a 15 años de presidio como autor de violencia innecesaria con resultado de muerte (homicidio del manifestante ecuatoriano Romario Veloz) y lesiones graves a otras dos personas en las manifestaciones del 20 de octubre de 2019. Cumple condena en el Centro Penitenciario Colina I. El Ejército tramita desde 2024 un retiro por estrés postraumático con pensión de $2,7 millones, rechazado por la Subsecretaría de FF.AA. por inhabilidad sobreviniente."
   romario_veloz:
-    nombre: Romario Veloz
+    nombre: Romario Veloz Cortez
     cargo: Manifestante asesinado en el estallido social
     notas: "Joven ecuatoriano de 26 años asesinado el 20 de octubre de 2019 en La Serena durante el estallido social: recibió un disparo de munición de guerra en el cuello cuando una unidad del Ejército al mando del capitán José Faúndez Sepúlveda abrió fuego contra manifestantes en los estacionamientos del Mall Plaza La Serena. Su caso derivó en la condena de Faúndez (2023) y en una querella por desacato de su familia contra el alto mando del Ejército (2026)."
   mery_cortez:
@@ -1720,7 +1854,12 @@ people:
     notas: "Ministro de Desarrollo Social y Familia del segundo gobierno de Piñera (2019-2020). Presentó junto al Presidente el proyecto de Ingreso Familiar de Emergencia (IFE) en abril de 2020. Candidato presidencial en 2021."
   alejandra_candia:
     nombre: Alejandra Candia
-    cargo: Exsubsecretaria de Evaluación Social (2020)
+    cargo: Exsubsecretaria de Evaluación Social
+    cargos:
+      - cargo: Subsecretaria de Evaluación Social
+        organizacion: ministerio_desarrollo_social
+        desde: 2018-03-11
+        hasta: 2022-03-11
     organizacion: ministerio_desarrollo_social
     notas: "Subsecretaria de Evaluación Social del gobierno de Piñera. Participó en la presentación del proyecto de Ingreso Familiar de Emergencia (IFE) en abril de 2020."
   fernando_arab:
@@ -1775,6 +1914,10 @@ people:
   frank_sauerbaum:
     nombre: Frank Sauerbaum
     cargo: Director del Servicio Nacional de Migraciones
+    cargos:
+      - cargo: Director Nacional del Servicio Nacional de Migraciones
+        organizacion: sermig
+        desde: 2026-03-11
     organizacion: sermig
   cristian_vial:
     nombre: Cristian Vial
@@ -1801,6 +1944,10 @@ people:
   ruben_perez:
     nombre: Ruben Perez
     cargo: Director Nacional de Gendarmeria
+    cargos:
+      - cargo: Director Nacional de Gendarmeria
+        organizacion: gendarmeria_chile
+        desde: 2026-03-11
     organizacion: gendarmeria_chile
   sergio_lavandero:
     nombre: Sergio Lavandero
@@ -1890,6 +2037,9 @@ people:
   manuel_millones:
     nombre: Manuel Millones
     cargo: Delegado presidencial regional de Valparaíso
+    cargos:
+      - cargo: Delegado presidencial regional de Valparaíso
+        desde: 2026-03-11
     notas: Medico cirujano, renuncio tras 3 dias por cuestionamientos a su idoneidad
       y acusaciones de venta de productos falsificados. Anuncio acciones
       legales.
@@ -1916,6 +2066,9 @@ people:
   jorge_rathgeb:
     nombre: Jorge Rathgeb Schifferli
     cargo: Seremi de Energía de La Araucanía
+    cargos:
+      - cargo: Seremi de Energía de La Araucanía
+        desde: 2026-03-11
     notas: "Seremi de Energía de la región de La Araucanía. En agosto de 2026 reconoció una 'estrechez' en la disponibilidad de pellet tras las largas esperas y alzas de precios denunciadas por vecinos de Temuco, descartando que se trate de un desabastecimiento y atribuyendo el fenómeno al aumento de demanda en Los Lagos y Los Ríos."
   jorge_ravelo:
     nombre: Jorge Ravelo Fuentes
@@ -2092,7 +2245,14 @@ people:
     notas: "Socióloga chilena, experta en seguridad pública. Tras la revelación del manual interno de Carabineros (Ciper, noviembre 2020) señaló que 'Carabineros ha logrado establecer normas ajustadas a derecho y eso es reconocido, pero el punto es que nadie revisa el accionar'."
   felipe_guevara:
     nombre: Felipe Guevara
-    cargo: Intendente de la Región Metropolitana (2019)
+    cargo: Exintendente de la Región Metropolitana
+    cargos:
+      - cargo: Intendente de la Región Metropolitana
+        desde: 2019-10-30
+        hasta: 2021-07-14
+      - cargo: Delegado presidencial de la Región Metropolitana
+        desde: 2021-07-14
+        hasta: 2021-10-01
     notas: "Intendente de la Región Metropolitana durante el estallido social. El 20 de diciembre de 2019 anunció 'tolerancia cero' frente a las manifestaciones no autorizadas y ordenó el despliegue de Fuerzas Especiales para el copamiento de Plaza Baquedano, con más de mil carabineros."
   gabriela_flores:
     nombre: Gabriela Flores Salgado
@@ -2217,6 +2377,9 @@ people:
   raul_garcia:
     nombre: Raúl García
     cargo: Director del Servicio Electoral (Servel)
+    cargos:
+      - cargo: Director del Servicio Electoral (Servel)
+        desde: 2026-03-11
   miguel_azar:
     nombre: Miguel Azar
     cargo: Exadministrador general de fondos del PDG
@@ -2341,6 +2504,18 @@ people:
     cargo: Presidenta de la Agrupación de Familiares de Ejecutados Políticos
     organizacion: agrupacion_familiares_ejecutados_politicos
     notas: "Presidenta de la Agrupación de Familiares de Ejecutados Políticos (AFEP). En agosto de 2026 alertó ante la ANEF y la CIDH por el eventual desmantelamiento del Plan Nacional de Búsqueda y los recortes presupuestarios del gobierno de Kast."
+  juan_carlos_urzua:
+    nombre: Juan Carlos Urzúa
+    cargo: Presidente del Partido Liberal
+    organizacion: partido_liberal
+    notas: "Presidente del Partido Liberal de Chile. En agosto de 2026 participó en la mesa nacional de presidentes de partidos de oposición y valoró la coordinación para proponer al gobierno (evento 20260808-15)."
+
+  patricio_munoz_ppd:
+    nombre: Patricio Muñoz
+    cargo: Presidente metropolitano del PPD
+    organizacion: partido_por_la_democracia
+    notas: "Presidente metropolitano del Partido por la Democracia (PPD). En agosto de 2026 valoró la mesa nacional de presidentes de partidos de oposición como un paso para enfrentar a un gobierno 'de extrema derecha' y criticó la megarreforma como 'regresiva' (evento 20260808-15)."
+
   jose_perez:
     nombre: José Pérez
     cargo: Presidente de la ANEF
@@ -2609,6 +2784,11 @@ people:
   sergio_munoz_yanez:
     nombre: Sergio Muñoz Yáñez
     cargo: Ex Director General de la PDI
+    cargos:
+      - cargo: Director General de la PDI
+        organizacion: pdi
+        desde: 2021-06-10
+        hasta: 2024-03-15
     organizacion: pdi
     notas: "General de la Policía de Investigaciones. Director General de la PDI hasta el 15 de marzo de 2024, cuando renunció tras el allanamiento de su casa y oficina en el marco del caso Audios por presunta filtración de información reservada a Luis Hermosilla. Formalizado por violación de secreto y condenado en procedimiento abreviado a 3 años de pena remitida en libertad vigilada (primera sentencia del caso Audios, 2025)."
   martin_pena:
@@ -2809,6 +2989,9 @@ people:
   juan_manuel_castro:
     nombre: Juan Manuel Castro Rebolledo
     cargo: Director nacional del Sence
+    cargos:
+      - cargo: Director nacional del Sence
+        desde: 2026-03-11
     notas: "Director nacional del Servicio Nacional de Capacitación y Empleo (Sence) en 2009. Firmó el comunicado del 21 de diciembre de 2009 en que la dirección nacional reconoció que la directora regional de Los Lagos, Gloria González, cometió un error al portar una chapita de Eduardo Frei en una actividad pública, y anunció su amonestación verbal, invocando las instrucciones de la presidenta Michelle Bachelet que prohíben la actividad política de los funcionarios públicos en horario laboral. Emitió además un documento escrito advirtiendo a todos los directores regionales del Sence."
   carlos_mulet:
     nombre: Carlos Mulet
@@ -2893,6 +3076,11 @@ people:
   littre_quiroga:
     nombre: Littré Quiroga
     cargo: Exdirector General de Prisiones
+    cargos:
+      - cargo: Director General del Servicio de Prisiones
+        organizacion: gendarmeria_chile
+        desde: 1970-11-03
+        hasta: 1973-09-11
     notas: Asesinado en septiembre de 1973 junto a Víctor Jara en el Estadio Chile
   juan_barros:
     nombre: Juan Barros Madrid
@@ -2931,11 +3119,21 @@ people:
   victor_perez:
     nombre: Víctor Pérez Varela
     cargo: Exministro del Interior y Seguridad Pública
+    cargos:
+      - cargo: Ministro del Interior y Seguridad Pública
+        organizacion: ministerio_interior
+        desde: 2020-07-28
+        hasta: 2020-11-03
     organizacion: ministerio_del_interior
     notas: "Ministro del Interior y Seguridad Pública del segundo gobierno de Sebastián Piñera entre 2020 y 2021. En octubre de 2020, tras el caso Pío Nono (menor lanzado desde un puente por un carabinero), sectores de la oposición pidieron su renuncia junto a la del director general de Carabineros, Mario Rozas."
   mario_rozas:
     nombre: Mario Rozas Córdova
     cargo: Exdirector general de Carabineros
+    cargos:
+      - cargo: General Director de Carabineros
+        organizacion: carabineros
+        desde: 2018-12-22
+        hasta: 2020-11-19
     organizacion: carabineros
     notas: "Director general de Carabineros entre 2018 y 2020, durante el estallido social. Tras el caso Pío Nono (2 de octubre de 2020), la oposición pidió su renuncia y la del ministro del Interior, Víctor Pérez, por las violaciones a los derechos humanos de la represión policial."
   karla_rubilar:
@@ -3040,6 +3238,9 @@ people:
   julio_anativia:
     nombre: Julio Anativia
     cargo: Delegado presidencial regional del Bío Bío
+    cargos:
+      - cargo: Delegado presidencial regional del Bío Bío
+        desde: 2026-03-11
     notas: "Delegado presidencial regional del Bío Bío. Ante el desempleo regional de 10,4% (julio 2026) evitó la autocrítica y aseguró que es parte de una realidad compleja con la que se recibió el país."
   mikel_capetillo:
     nombre: Mikel Capetillo
@@ -3592,6 +3793,10 @@ people:
   fernando_flores_fredes:
     nombre: Fernando Flores Fredes
     cargo: Seremi de las Culturas, las Artes y el Patrimonio de Atacama
+    cargos:
+      - cargo: Seremi de las Culturas, las Artes y el Patrimonio de Atacama
+        organizacion: seremi_culturas_atacama
+        desde: 2026-03-11
     organizacion: seremi_culturas_atacama
     notas: "Seremi de las Culturas, las Artes y el Patrimonio de la Región de Atacama. Según el documento difundido el 14-ago-2026 sobre la petición de renuncia del delegado presidencial provincial de Chañaral, Sebastián Urrejola, asumiría como subrogante de la Delegación mientras se designa al nuevo delegado (evento 20260814-7)."
   ale_valle:
@@ -4014,7 +4219,12 @@ people:
   maria_pilar_giannini:
     nombre: María del Pilar Giannini
     cargo: Subsecretaria de Seguridad Pública
+    cargos:
+      - cargo: Subsecretaria de Seguridad Pública
+        organizacion: ministerio_seguridad
+        desde: 2026-03-11
     organizacion: ministerio_seguridad
+    notas: "Subsecretaria de Seguridad Pública del gobierno de José Antonio Kast. El 8 de agosto de 2026 destacó el megaoperativo nacional ACOT de Carabineros y PDI."
   christopher_white:
     nombre: Christopher White
     cargo: Alcalde de San Bernardo
@@ -4115,6 +4325,10 @@ people:
   maurice_poirrier:
     nombre: Maurice Poirrier
     cargo: Director de la Secretaría de Gobierno Digital
+    cargos:
+      - cargo: Director de la Secretaría de Gobierno Digital
+        organizacion: secretaria_gobierno_digital
+        desde: 2026-03-11
     organizacion: secretaria_gobierno_digital
   annais_molina:
     nombre: Annais Molina
@@ -4132,7 +4346,7 @@ people:
         desde: 2024-12-06
     organizacion: municipalidad_chillan_viejo
   karla_kepec:
-    nombre: Karla Kepec
+    nombre: Karla Kepec Álvarez
     cargo: Exseremi de Salud de Arica y Parinacota
     organizacion: seremi_salud_arica
     cargos:
@@ -4150,10 +4364,16 @@ people:
   edgardo_diaz_navarrete:
     nombre: Edgardo Díaz Navarrete
     cargo: Director del Servicio de Salud Metropolitano Sur
+    cargos:
+      - cargo: Director del Servicio de Salud Metropolitano Sur
+        desde: 2026-03-11
     notas: "Director del Servicio de Salud Metropolitano Sur. La Subsecretaría de Redes Asistenciales le solicitó la renuncia el 3 de agosto de 2026 'atendiendo a razones de pérdida de confianza'."
   veronica_yannez_gonzalez:
     nombre: Verónica Yáñez González
     cargo: Directora del Servicio de Salud de Magallanes
+    cargos:
+      - cargo: Directora del Servicio de Salud de Magallanes
+        desde: 2026-03-11
     notas: "Directora del Servicio de Salud de Magallanes. La Subsecretaría de Redes Asistenciales le solicitó la renuncia el 3 de agosto de 2026 por 'razones de pérdida de confianza'."
   haroldo_faundez_romero:
     nombre: Haroldo Faúndez Romero
@@ -4297,6 +4517,9 @@ people:
   cristian_palma:
     nombre: Cristian Palma
     cargo: Delegado presidencial de Los Lagos
+    cargos:
+      - cargo: Delegado presidencial de Los Lagos
+        desde: 2026-03-11
     notas: "Delegado presidencial de la región de Los Lagos. En agosto de 2026, consultado por la salida de la seremi de Salud Evelyn Brintrup, alegó desconocimiento de las razones particulares de la desvinculación."
   cristian_tapia:
     nombre: Cristián Tapia
@@ -4705,6 +4928,9 @@ people:
   alejandro_irarrazaval:
     nombre: Alejandro Irarrázaval
     cargo: Jefe del grupo de asesores del Presidente
+    cargos:
+      - cargo: Jefe del grupo de asesores del Presidente
+        desde: 2026-03-11
     notas: "Abogado y analista político de derecha. El hombre más influyente del equipo de gobierno de José Antonio Kast y jefe de sus asesores en el Segundo Piso de La Moneda. Participó junto a Kast y al ministro Jorge Quiroz en la definición final del paquete económico (abril 2026)."
   irina_karamanos:
     nombre: Irina Karamanos
@@ -4818,6 +5044,9 @@ people:
   jose_francisco_lagos:
     nombre: José Francisco Lagos
     cargo: Subsecretario General de Gobierno (Segegob)
+    cargos:
+      - cargo: Subsecretario General de Gobierno (Segegob)
+        desde: 2026-03-11
     notas: "Subsecretario General de Gobierno. Dio a conocer en el Congreso el proyecto de ley que crearía un fondo patrimonial de US$30 millones para TVN."
   jose_luis_murillo:
     nombre: José Luis Murillo
@@ -5164,6 +5393,10 @@ people:
   nicolas_valenzuela:
     nombre: Nicolás Valenzuela
     cargo: Jefe de diseño de la Secretaría de Comunicaciones (Secom)
+    cargos:
+      - cargo: Jefe de diseño de la Secretaría de Comunicaciones (Secom)
+        organizacion: secom
+        desde: 2026-03-11
     organizacion: secom
     notas: "Jefe de diseño de la Secom del gobierno de José Antonio Kast. En un chat de WhatsApp filtrado admitió que la gráfica presentada el 11 de marzo de 2026 era 'horrible' y no un logo nuevo, sino 'una acción rápida para instaurar rápido el slogan', aclarando que el logo original (de 2020) se mantiene con nuevo slogan."
   hernan_nunez:
@@ -5181,6 +5414,9 @@ people:
   luz_maria_vicuna:
     nombre: Luz María Vicuña
     cargo: Delegada presidencial regional de Aysén
+    cargos:
+      - cargo: Delegada presidencial regional de Aysén
+        desde: 2026-03-11
     notas: "Delegada presidencial regional de Aysén. Confirmó que la Fiscalía instruyó diligencias a la SIP y al Labocar de Coyhaique tras el incendio en Villa Amengual que cobró la vida del concejal Claudio Soto (agosto 2026)."
   daniel_diaz:
     nombre: Daniel Díaz Olguín
@@ -5195,6 +5431,10 @@ people:
   fernando_pena:
     nombre: Fernando Peña Rivera
     cargo: Director Nacional de la Junaeb
+    cargos:
+      - cargo: Director Nacional de la Junaeb
+        organizacion: junaeb
+        desde: 2026-03-11
     organizacion: junaeb
     notas: "Director Nacional de la Junta Nacional de Auxilio Escolar y Becas (Junaeb). En la Cuenta Pública Participativa 2026 (12-ago-2026) anunció la digitalización gradual de la Tarjeta Nacional Estudiantil (TNE), con licitación durante 2026 y una marcha blanca en la que convivirán el formato físico y digital ('se va a acabar el plástico gradualmente'), motivada por evitar los conflictos entre choferes y estudiantes (evento 20260812-7)."
   juan_carlos_diaz:
@@ -5209,6 +5449,9 @@ people:
   osvaldo_urrutia:
     nombre: Osvaldo Urrutia
     cargo: Subsecretario de Pesca y Acuicultura
+    cargos:
+      - cargo: Subsecretario de Pesca y Acuicultura
+        desde: 2026-03-11
     notas: "Subsecretario de Pesca y Acuicultura (SUBPESCA). A inicios de agosto de 2026 manifestó que el gobierno está abierto a evaluar el levantamiento de la veda y una eventual caza selectiva de lobos marinos ante los conflictos con la pesca artesanal del sur, lo que generó rechazo ambientalista. El 3 de agosto respondió a la petición de los pescadores ante la Comisión de Pesca señalando que cualquier cambio requerirá respaldo técnico y científico."
   dionisio_ulloa:
     nombre: Dionisio Ulloa
@@ -5230,6 +5473,9 @@ people:
   lorena_castillo:
     nombre: Lorena Castillo
     cargo: Directora nacional subrogante del IND
+    cargos:
+      - cargo: Directora nacional subrogante del IND
+        desde: 2026-03-11
     notas: "Directora nacional subrogante del Instituto Nacional de Deportes. La ministra del Deporte Natalia Duco habría solicitado su destitución, según reportó ADN Radio (agosto 2026), en el marco de las tensiones por el concierto de BTS en el Estadio Nacional."
   jorge_silva:
     nombre: Jorge Silva
@@ -5238,6 +5484,11 @@ people:
   andres_otero:
     nombre: Andrés Otero
     cargo: Exsubsecretario del Deporte
+    cargos:
+      - cargo: Subsecretario del Deporte
+        organizacion: ministerio_del_deporte
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: "Subsecretario del Deporte del gobierno de Kast. Junto a la ministra Natalia Duco fue señalado por la Asociación Nacional de Funcionarios de Chiledeportes (ANFUCHID) como responsable de no responder a las solicitudes de reunión de los trabajadores del IND (julio-agosto 2026). Renunció junto a la ministra el 13-ago-2026, tras el caso del auto fiscal (evento 20260813-2)."
   sebastian_edwards:
     nombre: Sebastián Edwards
@@ -5313,6 +5564,10 @@ people:
   romina_cifuentes:
     nombre: Romina Cifuentes González
     cargo: Seremi de Economía de Arica y Parinacota
+    cargos:
+      - cargo: Seremi de Economía de Arica y Parinacota
+        organizacion: ministerio_economia
+        desde: 2026-03-11
     organizacion: ministerio_economia
     notas: "Seremi de Economía de la Región de Arica y Parinacota y vicepresidenta nacional del Partido Republicano. Según la Unidad de Investigación de El Mostrador (agosto 2026), recibió el correo del director (S) del Sernac de Arica, Marcos Oviedo, solicitando autorización para contrataciones directas de militantes de 'RN o Republicanos'."
   francisco_undurraga:
@@ -5346,6 +5601,10 @@ people:
   michelle_vera:
     nombre: Michelle Vera Machuca
     cargo: Seremi de la Mujer y Equidad de Género del Bío Bío
+    cargos:
+      - cargo: Seremi de la Mujer y Equidad de Género del Bío Bío
+        organizacion: ministerio_mujer
+        desde: 2026-03-11
     organizacion: ministerio_mujer
     notas: "Fonoaudióloga egresada de la Universidad de Las Américas (UDLA) con posgrado en la Universidad Católica de Temuco, militante del Partido Cristiano de Chile (PCC). Asumió el 1 de agosto de 2026 como seremi de la Mujer y Equidad de Género del Bío Bío, completando el gabinete regional tras la vacancia dejada por la licencia por embarazo de Camila Contreras."
   claudio_orrego:
@@ -5365,11 +5624,20 @@ people:
   daniel_pacheco:
     nombre: Daniel Pacheco
     cargo: Seremi de Gobierno del Bío Bío
+    cargos:
+      - cargo: Seremi de Gobierno del Bío Bío
+        organizacion: segegob
+        desde: 2026-03-11
     organizacion: segegob
     notas: "Seremi de Gobierno de la Región del Bío Bío. En agosto de 2026 confirmó la designación de Michelle Vera como seremi de la Mujer y Equidad de Género, señalando que con ella el gabinete regional quedó completo."
   camila_contreras:
     nombre: Camila Contreras
     cargo: Exseremi de la Mujer del Bío Bío
+    cargos:
+      - cargo: Seremi de la Mujer del Bío Bío
+        organizacion: ministerio_mujer
+        desde: 2022-03-11
+        hasta: 2026-03-11
     organizacion: ministerio_mujer
     notas: "Exseremi de la Mujer y Equidad de Género del Bío Bío, profesora de historia designada en marzo de 2024 bajo el gobierno de Boric y una de las últimas autoridades de esa administración que se mantuvo en el gobierno de Kast gracias al fuero maternal (renunció el 11 de marzo de 2026, confirmó su embarazo dos semanas después y el Ministerio de la Mujer la mantuvo en el cargo). Su embarazo impidió que su reemplazante, Antaris Varela, asumiera la titularidad. En agosto de 2026 dejó el cargo despidiéndose con un polémico mensaje en Instagram ('último día en esta tortura llamada ser seremi de Kast'), que luego aclaró como un descargo por la exposición y las críticas públicas, no como un ataque al presidente. La vacancia se resolvió con la designación de Michelle Vera."
   yerko_ljubetic:
@@ -5420,6 +5688,11 @@ people:
   sebastian_urrejola:
     nombre: Sebastián Urrejola Aranda
     cargo: Delegado Presidencial Provincial de Chañaral
+    cargos:
+      - cargo: Delegado Presidencial Provincial de Chañaral
+        organizacion: delegacion_presidencial_chanaral
+        desde: 2026-03-11
+        hasta: 2026-08-14
     organizacion: delegacion_presidencial_chanaral
     notas: "Delegado presidencial provincial de Chañaral designado por el gobierno de José Antonio Kast en marzo de 2026. En agosto de 2026 la Contraloría Regional de Atacama acreditó su ocupación ilegal de un bien fiscal de ~1.000 m² en el sector Portofino de Chañaral, con una ocupación de ~16 años, vulnerando la probidad administrativa; ordenó procedimiento disciplinario en la Subsecretaría del Interior, la restitución del terreno y un cobro retroactivo por el uso del bien (evento 20260807-22). La tarde del 14 de agosto de 2026 el Gobierno le pidió la renuncia, confirmada por el Ministerio del Interior y la Delegación Presidencial Regional de Atacama; el Diario de Atacama consignó además un proceso disciplinario por la contratación de una prima de su pareja en la Delegación sin proceso de selección (evento 20260814-7)."
   sebastian_keitel:
@@ -5639,6 +5912,11 @@ people:
   benjamin_salas_kantor:
     nombre: Benjamín Salas Kantor
     cargo: Exasesor internacional de la Presidencia
+    cargos:
+      - cargo: Asesor internacional de la Presidencia
+        organizacion: presidencia_chile
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: "Exasesor internacional de la Presidencia. Autor de la columna de Nuevo Poder (6 de agosto de 2026) 'Exigencia de rigor a la CIDH', que critica la decisión de la Comisión Interamericana de convocar la audiencia sobre el supuesto 'desmantelamiento' de la institucionalidad de DDHH en Chile, planteando que la CIDH debería actuar con mayor prudencia y rigor."
 
   gervoy_paredes:
@@ -5694,12 +5972,12 @@ people:
   carolina_gainza:
     nombre: Carolina Gainza Cortés
     cargo: Exsubsecretaria de Ciencia, Tecnología, Conocimiento e Innovación
+    cargos:
+      - cargo: Subsecretaria de Ciencia, Tecnología, Conocimiento e Innovación
+        organizacion: ministerio_ciencia
+        desde: 2022-03-11
+        hasta: 2026-03-11
     notas: "Exsubsecretaria de Ciencia del gobierno de Gabriel Boric (2022-2024). Académica y directora ejecutiva del proyecto Massi-Conocimientos 2030 de la UDP. El 7 de agosto de 2026 cuestionó en ADN Radio la cifra de morosos de Becas Chile presentada por la ministra Ximena Lincolao."
-  pilar_giannini:
-    nombre: Pilar Giannini
-    cargo: Subsecretaria de Seguridad Pública
-    notas: "Subsecretaria de Seguridad Pública del gobierno de José Antonio Kast. El 8 de agosto de 2026 destacó el megaoperativo nacional ACOT de Carabineros y PDI."
-
   laurence_golborne:
     nombre: Laurence Golborne Riveros
     cargo: Ex ministro de Minería y Obras Públicas de Piñera
@@ -5752,6 +6030,9 @@ people:
   pedro_lea_plaza:
     nombre: Pedro Lea-Plaza Cáceres
     cargo: Director Nacional del Servicio Civil
+    cargos:
+      - cargo: Director Nacional del Servicio Civil
+        desde: 2026-03-11
     notas: "Director Nacional del Servicio Civil del gobierno de Kast. En agosto de 2026 fue emplazado por la Anef, junto al ministro del Trabajo Tomás Rau, a aclarar su posición frente a la comisión impulsada por Hacienda para revisar el Estatuto Administrativo, que el gremio consideró contradictoria con el acuerdo de crear una Mesa Sectorial Anef-Gobierno."
   pedro_larrain_aguirre:
     nombre: Pedro Larraín Aguirre
@@ -5803,7 +6084,11 @@ people:
     notas: "Geóloga de la UC que visitó la planta piloto de Aclara en San Pedro de la Paz; señaló que las tierras raras también se usan para material bélico y que no existe trazabilidad sobre su destino final."
   ricardo_yanez:
     nombre: Ricardo Yáñez
-    cargo: General director de Carabineros (2022-2024)
+    cargo: Ex general director de Carabineros
+    cargos:
+      - cargo: General director de Carabineros
+        desde: 2020-11-19
+        hasta: 2024-09-27
     notas: "General director de Carabineros durante el gobierno de Boric; en la Cuenta Pública 2023 fue interpelado directamente por el Presidente ('¿Estoy en lo correcto general Yáñez?'). Posteriormente formalizado por la justicia por apremios durante el estallido social."
   elisa_loncon:
     nombre: Elisa Loncón
@@ -5820,11 +6105,18 @@ people:
     notas: "Ministro de Educación del gobierno de Boric; mencionado por Boric en la Cuenta Pública 2023 por los dichos homofóbicos que recibió desde la oposición."
   luis_thayer:
     nombre: Luis Thayer
-    cargo: Exdirector del Servicio Nacional de Migraciones (2022-2024)
+    cargo: Exdirector del Servicio Nacional de Migraciones
+    cargos:
+      - cargo: Director Nacional del Servicio Nacional de Migraciones
+        desde: 2022-03-31
+        hasta: 2026-03-11
     notas: "Exdirector del Sermig; cuestionó en agosto de 2026 la nueva metodología de conteo de ingresos irregulares del gobierno de Kast ('introducir una nueva cifra para mostrar eventualmente un mejor resultado es una práctica que yo encuentro que es poco transparente')."
   francisca_alamos:
     nombre: Francisca Álamos
     cargo: Jefa de la Oficina de Mercado de Capitales del Ministerio de Hacienda
+    cargos:
+      - cargo: Jefa de la Oficina de Mercado de Capitales del Ministerio de Hacienda
+        desde: 2026-03-11
     notas: "Subrayó en el anuncio del Grupo de Trabajo de Exportación de Servicios Financieros (agosto 2026) que es indispensable eliminar barreras operativas y regulatorias para expandir los servicios financieros a clientes internacionales."
   cesar_marquez:
     nombre: César Márquez
@@ -5858,6 +6150,9 @@ people:
   andres_ergas:
     nombre: Andrés Ergas
     cargo: Embajador de Chile en Estados Unidos
+    cargos:
+      - cargo: Embajador de Chile en Estados Unidos
+        desde: 2026-03-11
     notas: "Empresario sin experiencia diplomática previa, elegido por el gobierno de Kast por su cercanía al mundo MAGA de Florida; a cargo de la embajada en Washington durante la negociación del arancel del 12,5%. Los gremios lo describieron como poco informado sobre la estrategia negociadora."
   eduardo_urbina:
     nombre: Eduardo Urbina
@@ -5870,6 +6165,9 @@ people:
   hector_ponce:
     nombre: Héctor Ponce
     cargo: Seremi de Seguridad Pública de Ñuble
+    cargos:
+      - cargo: Seremi de Seguridad Pública de Ñuble
+        desde: 2026-03-11
     notas: "Coordinó junto al prefecto de la PDI y al delegado presidencial los operativos masivos de seguridad en la Región de Ñuble de agosto 2026."
   jorge_baradit:
     nombre: Jorge Baradit Morales
@@ -5886,10 +6184,16 @@ people:
   victor_valdes:
     nombre: Víctor Valdés
     cargo: Jefe de gabinete del jefe de asesores del Presidente
+    cargos:
+      - cargo: Jefe de gabinete del jefe de asesores del Presidente
+        desde: 2026-03-11
     notas: "Ingeniero comercial; asesor de La Moneda con $6,9 millones brutos mensuales, cuestionado por mantener su cargo remunerado como consejero regional metropolitano (Core)."
   alvaro_bellolio:
     nombre: Álvaro Bellolio
     cargo: Jefe de Políticas Públicas del Segundo Piso
+    cargos:
+      - cargo: Jefe de Políticas Públicas del Segundo Piso
+        desde: 2026-03-11
     notas: "Ingeniero civil industrial y exdirector del Servicio Nacional de Migraciones; asesor de La Moneda con $6,9 millones brutos mensuales, cuestionado por su doble rol como Core remunerado."
   cristobal_bellolio:
     nombre: Cristóbal Bellolio
@@ -5947,7 +6251,11 @@ people:
     cargo: Involucrado en compra de terrenos del GORE Coquimbo (Papaya Gate)
   eduardo_frei_ruiz_tagle:
     nombre: Eduardo Frei Ruiz-Tagle
-    cargo: Presidente de Chile (1994-2000)
+    cargo: Expresidente de Chile
+    cargos:
+      - cargo: Presidente de la República
+        desde: 1994-03-11
+        hasta: 2000-03-11
   eduardo_gordon:
     nombre: Eduardo Gordon Valcárcel
     cargo: Ex general director de Carabineros
@@ -5984,6 +6292,11 @@ people:
   lucia_pinto:
     nombre: Lucía Pinto
     cargo: Ex intendenta de Coquimbo (UDI)
+    cargos:
+      - cargo: Intendenta de la Región de Coquimbo
+        organizacion: gore_coquimbo
+        desde: 2018-03-11
+        hasta: 2020-09-26
   luis_ajenjo:
     nombre: Luis Ajenjo
     cargo: Ex gerente de la Empresa de Ferrocarriles del Estado (EFE)
@@ -6011,12 +6324,22 @@ people:
   patricio_tombolini:
     nombre: Patricio Tombolini
     cargo: Ex subsecretario de Transportes
+    cargos:
+      - cargo: Subsecretario de Transportes
+        organizacion: ministerio_transportes
+        desde: 2000-03-11
+        hasta: 2002-06-28
   ricardo_farias:
     nombre: Ricardo Farías
     cargo: Ex administrador electoral de Guido Girardi
   ricardo_vorphal:
     nombre: Ricardo Vorphal
     cargo: Ex director de Chiledeportes
+    cargos:
+      - cargo: Director de Chiledeportes
+        organizacion: chiledeportes
+        desde: 2010-03-11
+        hasta: 2014-03-11
   sergio_cortes:
     nombre: Sergio Cortés
     cargo: Ex jefe de Finanzas de Vialidad del MOP
@@ -6224,6 +6547,9 @@ people:
   carlos_lobos:
     nombre: Carlos Lobos
     cargo: Subsecretario de las Culturas y las Artes
+    cargos:
+      - cargo: Subsecretario de las Culturas y las Artes
+        desde: 2026-03-11
     notas: "Subsecretario de las Culturas y las Artes. Su cartera envió por escrito en agosto de 2026 que la exclusión de contenido pornográfico o excesivamente violento de los Fondos Cultura 2027 'no tiene por objeto censurar, ni pretende eliminar este tipo de producciones, busca que no sean financiadas con recursos de los fondos de fomento cultural'."
   ernesto_orellana:
     nombre: Ernesto Orellana Gómez
@@ -6359,11 +6685,6 @@ people:
         desde: 2015-05-11
         hasta: 2017-08-31
 
-  rodrigo_sauerbaum:
-    nombre: Rodrigo Sauerbaum
-    cargo: Director del Servicio Nacional de Migraciones
-    organizacion: sermig
-    notas: "Director del Servicio Nacional de Migraciones (SERMIG). Destinatario del oficio de la diputada Lorena Fries (FA) exigiendo aclarar la negativa de ingreso a Chile de una madre haitiana con residencia definitiva y sus dos hijas chilenas, reembarcadas a EE.UU. y puestas bajo custodia del ICE (agosto 2026, evento 20260812-12)."
   rodrigo_cerda:
     nombre: Rodrigo Cerda Norambuena
     cargo: Ministro de Hacienda
@@ -6737,6 +7058,11 @@ people:
   luis_masferrer:
     nombre: Luis Masferrer
     cargo: Exdirector de la Agencia Nacional de Inteligencia (ANI)
+    cargos:
+      - cargo: Director de la Agencia Nacional de Inteligencia (ANI)
+        organizacion: agencia_nacional_inteligencia
+        desde: 2018-04-17
+        hasta: 2019-11-15
     organizacion: agencia_nacional_inteligencia
     notas: "Abogado (RN), director de la ANI durante el segundo gobierno de Sebastián Piñera. Según la segunda versión que maneja Mónica González (11-ago-2026), la ANI habría manejado los detalles sobre supuestos agentes cubanos y venezolanos entregados por la inteligencia militar boliviana; Espina le habría pedido que pasara el documento al Presidente sin que lo hiciera (evento 20260811-23)."
 
@@ -8611,7 +8937,7 @@ people:
     cargo: Senador (DC)
     notas: "Senador de la Democracia Cristiana. En junio de 2011 apoyó la solicitud de Ximena Rincón a la Contraloría para investigar el conflicto de interés de Ena von Baer por el convenio UPOV 91."
   alejandro_navarro:
-    nombre: Alejandro Navarro
+    nombre: Alejandro Navarro Brain
     cargo: Senador (MAS)
     notas: "Senador del Movimiento Amplio Social (MAS). En junio de 2011 apoyó la solicitud de Ximena Rincón a la Contraloría para investigar el conflicto de interés de Ena von Baer por el convenio UPOV 91."
   doris_prehn:
@@ -8747,6 +9073,9 @@ people:
   pablo_mira:
     nombre: Pablo Mira
     cargo: Subsecretario de Derechos Humanos
+    cargos:
+      - cargo: Subsecretario de Derechos Humanos
+        desde: 2026-03-11
     partido: Renovación Nacional
     notas: "Subsecretario de Derechos Humanos del gobierno de Kast, militante de Renovación Nacional. En julio de 2026 anunció que el Ejecutivo trabajaba en un anteproyecto de reforma 'integral' del INDH para presentarlo en el Congreso 'en los próximos meses' (evento 20260722-6)."
 
@@ -8854,6 +9183,36 @@ people:
         hasta: 2022-03-11
     notas: "Abogada y académica independiente. Subsecretaria de Relaciones Exteriores; asumió como canciller subrogante el 6 de febrero de 2022 tras la renuncia de Andrés Allamand, hasta el fin del segundo gobierno de Piñera."
 
+  pia_adriasola:
+    nombre: Pía Adriasola
+    cargo: Primera dama de la República
+    organizacion: presidencia_chile
+    notas: "Primera dama de Chile durante el gobierno de José Antonio Kast (desde marzo de 2026), casada con el Mandatario. Comparte el segundo piso de 'La Moneda chica' con el equipo de confianza del Presidente, incluido el asesor David Barchiesi (Ex-Ante, enero 2026)."
+
+  juan_carlos_reinao:
+    nombre: Juan Carlos Reinao
+    cargo: Exalcalde de Renaico
+    organizacion: municipalidad_renaico
+    notas: "Exalcalde de Renaico (región de La Araucanía). El 7-ago-2026 el Tribunal Oral en lo Penal de Cañete lo condenó a 15 años de cárcel efectiva por estupro reiterado, aborto y abuso sexual, cometidos mientras ejercía el cargo municipal. La sentencia contempla 12 años por estupro reiterado, 300 días por aborto y 818 días por abuso sexual contra cinco víctimas."
+
+  natalia_gonzalez:
+    nombre: Natalia González
+    cargo: Abogada UDI
+    organizacion: udi
+    notas: "Abogada UDI. Fuentes de La Moneda señalaron en agosto de 2026 que el cargo de subsecretario de Hacienda fue ofrecido a abogados cercanos a la UDI, entre ellos Natalia González, quien habría declinado (La Tercera Pulso, 10-ago-2026)."
+
+  david_barchiesi:
+    nombre: David Antonio Barchiesi Chávez
+    cargo: Asesor de comunicación estratégica de la Presidencia
+    organizacion: presidencia_chile
+    notas: "Abogado UC (juró en 2017), nacido en Viña del Mar en 1990. Fundador del Partido Republicano junto a José Antonio Kast, primer secretario general de la tienda (2019-2022), director ejecutivo del think tank Acción Republicana, exconsejero constitucional (2023, primera mayoría en Valparaíso con 20,68%) y jefe operativo de la campaña presidencial de Kast 2025. En mayo de 2026 fue contratado a honorarios por la Presidencia como asesor de 'comunicación estratégica, desarrollo de contenidos gubernamentales, revisión de discursos presidenciales y coordinación con otros organismos públicos', por $6.500.000 brutos mensuales (Transparencia Activa, revelado por Contrapoder Chile el 21-jul-2026). Hermano de la diputada Chiara Barchiesi. En 2018 hizo polémica por afirmar que 'los negros no se suicidaban cuando eran esclavos' para rechazar la Ley de Identidad de Género."
+
+  gonzalo_arenas:
+    nombre: Gonzalo Arenas
+    cargo: Abogado UDI
+    organizacion: udi
+    notas: "Abogado UDI. Fuentes de La Moneda señalaron en agosto de 2026 que el cargo de subsecretario de Hacienda fue ofrecido a abogados cercanos a la UDI, entre ellos Gonzalo Arenas, quien habría declinado (La Tercera Pulso, 10-ago-2026)."
+
   felipe_donoso:
     nombre: Felipe Donoso
     cargo: Diputado UDI
@@ -8944,7 +9303,12 @@ people:
     notas: "Alcalde de Pozo Almonte (Región de Tarapacá). El 14 de agosto de 2026 fue formalizado por delitos tributarios: aumento malicioso del crédito fiscal de IVA y simulación o adulteración de operaciones (art. 97 N°4 del Código Tributario) mediante 45 facturas falsas emitidas por cinco proveedores entre 2016 y 2021, mientras fungía como administrador de hecho de EMYC. Perjuicio fiscal de $1.316.591.501. Quedó con arraigo nacional y firma mensual (evento 20260814-15)."
   julio_salas:
     nombre: Julio Salas
-    cargo: Subsecretario de Pesca (2022-2023)
+    cargo: Exsubsecretario de Pesca y Acuicultura
+    cargos:
+      - cargo: Subsecretario de Pesca y Acuicultura
+        organizacion: subsecretaria_pesca
+        desde: 2022-03-11
+        hasta: 2026-03-11
     organizacion: subsecretaria_pesca
     notas: "Subsecretario de Pesca y Acuicultura durante el gobierno de Gabriel Boric. El reportaje de CIPER del 7 de mayo de 2024 detectó que sostuvo 54 reuniones con la industria pesquera entre enero de 2022 y diciembre de 2023 que no fueron registradas en la plataforma de la Ley de Lobby (evento 20240508-1)."
   benjamin_miranda:
@@ -9092,6 +9456,9 @@ people:
   pilar_cuevas:
     nombre: Pilar Cuevas
     cargo: Delegada Presidencial Provincial de Quillota
+    cargos:
+      - cargo: Delegada Presidencial Provincial de Quillota
+        desde: 2026-03-11
     notas: "Delegada Presidencial Provincial de Quillota del gobierno de José Antonio Kast. En agosto de 2026 fue denunciada por maltrato laboral por al menos tres funcionarios de su propio equipo, con dos denuncias presentadas bajo la Ley Karin (evento 20260813-17)."
   claudia_catalan:
     nombre: Claudia Catalán
@@ -9101,12 +9468,50 @@ people:
     nombre: Esteban Tumba
     cargo: Presidente de Fenaminsa
     notas: "Presidente de la Federación de Asociaciones de Funcionarios del Ministerio del Interior y del Ministerio de Seguridad Pública (Fenaminsa). En agosto de 2026 alertó sobre las denuncias por Ley Karin contra la delegada de Quillota Pilar Cuevas y exigió al Ministerio del Interior evaluar los antecedentes (evento 20260813-17)."
+  jorge_sharp:
+    nombre: Jorge Sharp
+    cargo: Exalcalde de Valparaíso
+    cargos:
+      - cargo: Alcalde de Valparaíso
+        organizacion: municipalidad_valparaiso
+        desde: 2016-12-06
+        hasta: 2024-12-06
+    notas: "Exalcalde de Valparaíso (2016-2024). La auditoría forense encargada por su sucesora Camila Nieto concluyó en agosto de 2026 que la municipalidad no arrastraba un déficit estructural atribuible a su gestión al término de su administración, contradiciendo el argumento del déficit de $18 mil millones (evento 20260811-24)."
+  camila_nieto:
+    nombre: Camila Nieto
+    cargo: Alcaldesa de Valparaíso
+    cargos:
+      - cargo: Alcaldesa de Valparaíso
+        organizacion: municipalidad_valparaiso
+        desde: 2024-12-06
+    notas: "Alcaldesa de Valparaíso desde diciembre de 2024. Encargó la auditoría externa forense (CS Consulting Cabrera & Santelices) que en agosto de 2026 descartó un déficit estructural atribuible a la gestión de su antecesor Jorge Sharp (evento 20260811-24)."
+  jorge_castro:
+    nombre: Jorge Castro
+    cargo: Exalcalde de Valparaíso
+    notas: "Exalcalde de Valparaíso, antecesor de Jorge Sharp. Según Sharp y la auditoría forense de 2026, el déficit de $18 mil millones que se atribuía a la administración Sharp correspondería en realidad a deuda heredada de la administración Castro (evento 20260811-24)."
+  marco_kremerman:
+    nombre: Marco Kremerman
+    cargo: Investigador de Fundación Sol
+    notas: "Economista e investigador de Fundación Sol. Coautor junto a Francisca Barriga del estudio 'Pensiones sin Seguridad Social: ¿Cómo se calcula el monto de las pensiones en Chile?' (agosto 2026), que mostró que $100 millones ahorrados en la AFP no alcanzan para una pensión autofinanciada equivalente al sueldo mínimo y calificó el sistema de cuentas individuales como 'utopía' y 'sistema de reparto encubierto' (evento 20260810-43)."
+  francisca_barriga:
+    nombre: Francisca Barriga
+    cargo: Investigadora de Fundación Sol
+    notas: "Investigadora de Fundación Sol. Coautora junto a Marco Kremerman del estudio 'Pensiones sin Seguridad Social: ¿Cómo se calcula el monto de las pensiones en Chile?' (agosto 2026, evento 20260810-43)."
+  miguel_galuccio:
+    nombre: Miguel Galuccio
+    cargo: Presidente de Vista Energy
+    notas: "Fundador y presidente ejecutivo de Vista Energy, la petrolera argentina que controla operaciones en Vaca Muerta. En agosto de 2026 el fondo Thiel Macro LLC, de Peter Thiel, compró cerca del 1% de la compañía (evento 20260816-14)."
 
 organizations:
   cencosud:
     nombre: Cencosud S.A.
     tipo: empresa
     notas: "Holding de retail chileno controlado por la familia Paulmann, matriz de Cenco Malls (centros comerciales), supermercados (Jumbo, Santa Isabel) y otras unidades. Resultados 2T26: el negocio de supermercados mostró presiones de márgenes mientras Cenco Malls reportó utilidad de $81.159 millones (+27,9%)."
+  municipalidad_renaico:
+    nombre: Municipalidad de Renaico
+    tipo: municipalidad
+    notas: "Municipio de la comuna de Renaico, Región de La Araucanía. Su exalcalde Juan Carlos Reinao fue condenado el 7-ago-2026 a 15 años de cárcel por delitos sexuales (estupro reiterado, aborto y abuso sexual) cometidos mientras ejercía el cargo (evento 20260807-27)."
+
   municipalidad_coronel:
     nombre: Municipalidad de Coronel
     tipo: municipalidad
@@ -13112,6 +13517,56 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio especializado en minería (mundomineria.cl). Cubrió el seminario CLAPES UC donde el biministro Daniel Mas presentó las medidas mineras del gobierno (agosto 2026, evento 20260813-16)."
+  municipalidad_valparaiso:
+    nombre: Municipalidad de Valparaíso
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de Valparaíso, gobernada por la alcaldesa Camila Nieto desde diciembre de 2024 (anteriormente por Jorge Sharp, 2016-2024). En agosto de 2026 la auditoría forense encargada por Nieto descartó un déficit estructural atribuible a la gestión de Sharp (evento 20260811-24)."
+  fundacion_sol:
+    nombre: Fundación Sol
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Centro de estudios e investigación laboral y previsional chileno. En agosto de 2026 publicó el estudio 'Pensiones sin Seguridad Social: ¿Cómo se calcula el monto de las pensiones en Chile?', de Marco Kremerman y Francisca Barriga, que mostró los límites del sistema de capitalización individual (evento 20260810-43)."
+  thiel_macro:
+    nombre: Thiel Macro LLC
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Fondo de inversión (hedge fund) propiedad del magnate Peter Thiel. En agosto de 2026 informó a la SEC de Estados Unidos la compra de cerca del 1% del capital de Vista Energy (NYSE: VIST) por unos US$76 millones, equivalente a aproximadamente 1,2 millones de acciones (evento 20260816-14)."
+  palantir:
+    nombre: Palantir Technologies
+    tipo: empresa
+    pais: Estados Unidos
+    notas: "Empresa de software e inteligencia artificial enfocada en defensa e inteligencia (NYSE: PLTR), cofundada por Peter Thiel. Provee IA de combate a organizaciones como el ICE de Estados Unidos o el Ejército de Israel. Su dueño, Peter Thiel, compró en agosto de 2026 cerca del 1% de Vista Energy en Vaca Muerta (evento 20260816-14)."
+  vista_energy:
+    nombre: Vista Energy
+    tipo: empresa
+    pais: Argentina
+    notas: "Petrolera argentina (NYSE: VIST) fundada por Miguel Galuccio, con operaciones en el yacimiento Vaca Muerta (Neuquén). Desde 2025 abastece de gas a la chilena ENAP. En agosto de 2026 el fondo Thiel Macro LLC compró cerca del 1% de la compañía por unos US$76 millones (evento 20260816-14)."
+  asociacion_afp:
+    nombre: Asociación de AFP
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Gremio que reúne a las administradoras de fondos de pensiones chilenas. Frente al estudio de Fundación Sol de agosto 2026 atribuye las deficiencias del sistema a factores del mercado laboral y propone aumentar la cotización y la edad de jubilación (evento 20260810-43)."
+  escuela_jose_bengoa:
+    nombre: Escuela Popular Campesina José Bengoa Cabello
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Espacio de educación popular campesina que en agosto de 2026 difundió una reflexión crítica sobre la consulta pública del SAG relativa a la comercialización de semilla corriente, advirtiendo sobre soberanía alimentaria, UPOV 91 y tratados comerciales (evento 20260727-15)."
+  cs_consulting:
+    nombre: CS Consulting Cabrera & Santelices
+    tipo: empresa
+    pais: Chile
+    notas: "Consultora que realizó la auditoría externa forense de las cuentas de la Municipalidad de Valparaíso (2021-2024), encargada por la alcaldesa Camila Nieto y financiada con $100 millones aprobados por el Concejo Municipal (agosto 2026, evento 20260811-24)."
+  diario_de_cuyo:
+    nombre: Diario de Cuyo
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Diario argentino de San Juan (diariodecuyo.com.ar). Cubrió la inversión de US$76 millones de Peter Thiel en Vista Energy, Vaca Muerta (agosto 2026, evento 20260816-14)."
+  periodico_de_la_costa:
+    nombre: Periódico de la Costa
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio local de Valparaíso (periodicodelacosta.cl). Cubrió la auditoría forense que descartó déficit estructural atribuible a la gestión de Jorge Sharp en la Municipalidad de Valparaíso (agosto 2026, evento 20260811-24)."
 
 cifras:
   multa_marcha_orgullo_utm:
@@ -16484,3 +16939,75 @@ cifras:
     nombre: Denuncias por Ley Karin contra la delegada de Quillota
     unidad_default: denuncias
     notas: "Al menos tres denuncias de funcionarios por malos tratos contra la delegada presidencial de Quillota Pilar Cuevas (dos presentadas y una en preparación bajo la Ley Karin, agosto 2026; evento 20260813-17)."
+  deficit_valparaiso_18_mil:
+    nombre: Déficit atribuido a la administración Sharp en Valparaíso
+    unidad_default: millones_de_pesos
+    notas: "Los $18 mil millones de déficit que se atribuían a la gestión del exalcalde Jorge Sharp en la Municipalidad de Valparaíso. La auditoría forense encargada por Camila Nieto (agosto 2026) descartó un déficit estructural atribuible a su gestión y señaló que la deuda proviene de la administración Castro (evento 20260811-24)."
+  endeudamiento_valparaiso_2021:
+    nombre: Endeudamiento municipal de Valparaíso en 2021
+    unidad_default: porcentaje
+    notas: "El endeudamiento de la Municipalidad de Valparaíso pasó de 20% en 2021 a 15% en 2024, según la auditoría forense de 2026; el patrimonio representó cerca del 85% de los activos (evento 20260811-24)."
+  costo_auditoria_valparaiso:
+    nombre: Costo de la auditoría forense de Valparaíso
+    unidad_default: millones_de_pesos
+    notas: "Los $100 millones aprobados por el Concejo Municipal de Valparaíso para financiar la auditoría externa forense de CS Consulting Cabrera & Santelices (2026, evento 20260811-24)."
+  participacion_thiel_vista:
+    nombre: Participación de Peter Thiel en Vista Energy
+    unidad_default: porcentaje
+    notas: "Cerca del 1% del capital de Vista Energy adquirido por el fondo Thiel Macro LLC de Peter Thiel (agosto 2026), equivalente a unos 1,2 millones de acciones (evento 20260816-14)."
+  inversion_thiel_vista_usd:
+    nombre: Inversión de Peter Thiel en Vista Energy
+    unidad_default: dolares
+    notas: "Unos US$76 millones pagados por Thiel Macro LLC por cerca del 1% de Vista Energy, informado a la SEC de Estados Unidos (agosto 2026, evento 20260816-14)."
+  inversion_vista_argentina_usd:
+    nombre: Inversión acumulada de Vista Energy en Argentina
+    unidad_default: dolares
+    notas: "Más de US$6.500 millones invertidos por Vista Energy en Argentina (agosto 2026, evento 20260816-14)."
+  jubilados_2025:
+    nombre: Personas que jubilaron en 2025
+    unidad_default: personas
+    notas: "Más de 150 mil personas se jubilaron en Chile en 2025; la mitad obtuvo una pensión autofinanciada (solo ahorro, sin aportes del Estado) por debajo de los $86 mil mensuales, según Fundación Sol (evento 20260810-43)."
+  pension_autofinanciada_mitad_86mil:
+    nombre: Pensión autofinanciada de la mitad de los jubilados de 2025
+    unidad_default: pesos
+    notas: "La mitad de las 150 mil personas que jubilaron en 2025 obtuvo una pensión autofinanciada (solo con su propio ahorro, sin aportes del Estado) por debajo de los $86 mil mensuales, según el estudio de Fundación Sol (evento 20260810-43)."
+  pension_100_millones_hombre:
+    nombre: Pensión de un hombre con $100 millones ahorrados
+    unidad_default: pesos
+    notas: "Un hombre de 65 años con cónyuge de 62 y $100 millones ahorrados obtiene una pensión de $465.851 mensuales en retiro programado (o $439.047 en renta vitalicia), según Fundación Sol (agosto 2026, evento 20260810-43)."
+  pension_100_millones_mujer:
+    nombre: Pensión de una mujer con $100 millones ahorrados
+    unidad_default: pesos
+    notas: "Una mujer de 60 años con cónyuge de 63 y $100 millones ahorrados obtiene una pensión de $412.387 mensuales en retiro programado (o $385.541 en renta vitalicia), según Fundación Sol (agosto 2026, evento 20260810-43)."
+  ahorro_menos_50_millones_hombres:
+    nombre: Hombres próximos a jubilar con menos de $50 millones
+    unidad_default: porcentaje
+    notas: "El 73,1% de los hombres entre 60 y 64 años posee menos de $50 millones en su cuenta de AFP, según estadísticas de la Superintendencia de Pensiones citadas por Fundación Sol (evento 20260810-43)."
+  ahorro_menos_50_millones_mujeres:
+    nombre: Mujeres próximas a jubilar con menos de $50 millones
+    unidad_default: porcentaje
+    notas: "El 85,5% de las mujeres entre 55 y 59 años posee menos de $50 millones en su cuenta de AFP, según estadísticas de la Superintendencia de Pensiones citadas por Fundación Sol (evento 20260810-43)."
+  mediana_pension_35_40_anios:
+    nombre: Mediana de pensión con 35-40 años de cotización
+    unidad_default: pesos
+    notas: "Las personas que cotizaron entre 35 y 40 años (una vida laboral completa) logran una mediana de pensión de $290 mil, equivalente al 55% del sueldo mínimo de $529 mil vigente en diciembre de 2025, según Fundación Sol (evento 20260810-43)."
+  tasa_reemplazo_29:
+    nombre: Tasa de reemplazo de quienes cotizaron casi 40 años
+    unidad_default: porcentaje
+    notas: "Las personas que jubilaron en 2025 cotizando casi 40 años obtuvieron una tasa de reemplazo de solo el 29% sobre su salario promedio, según Fundación Sol (evento 20260810-43)."
+  rentabilidad_afp_decada_actual:
+    nombre: Rentabilidad real de los fondos de AFP en la década actual
+    unidad_default: porcentaje
+    notas: "La rentabilidad real anual de los fondos de AFP pasó de 12% en los 80 a 5,7% en los 2000, 4,8% en los 2010 y apenas 0,2% acumulado en los seis años de la década actual, según Fundación Sol (evento 20260810-43)."
+  estado_financia_pensiones:
+    nombre: Aporte del Estado al financiamiento de pensiones
+    unidad_default: pesos_por_cien
+    notas: "De cada 100 pesos gastados en beneficios previsionales en Chile, 86,87 los coloca el Estado y unos 13 las AFP y compañías de seguros, según Fundación Sol; a las AFP les ingresan anualmente US$13.000 millones por cotizaciones y comisiones (evento 20260810-43)."
+  gasto_pgu_pib_2050:
+    nombre: Gasto público en PGU proyectado para 2050
+    unidad_default: porcentaje_pib
+    notas: "El gasto público en pensiones (PGU) pasaría de cerca del 2% del PIB actual a 7-7,2% del PIB en 2050 solo para mantener el poder adquisitivo actual, según proyecciones de Fundación Sol (evento 20260810-43)."
+  longitud_linea_condores:
+    nombre: Longitud de la línea de transmisión Los Cóndores-Río Diamante
+    unidad_default: kilometros
+    notas: "Aproximadamente 26,7 kilómetros de línea de transmisión de 500 kV en territorio chileno, desde la subestación Los Cóndores hasta la frontera con Argentina, con más de 70 torres (proyecto de Enel Generación Chile, evento 20260810-14)."
