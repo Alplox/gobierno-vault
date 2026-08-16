@@ -23,8 +23,11 @@ Cuando se detecte un evento pendiente que no se implementará en el momento, reg
 `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO.md` si es seguimiento de algo ya cubierto) con fecha,
 tipo sugerido y estado (`⬜ pendiente`). **Al completarse, la fila se ELIMINA del archivo de
 pendientes** — no queda en la lista con un `✅` —, porque lo hecho queda documentado en
-EVENTS_INDEX.md (inventario auto-generado) y en git log; si hace falta dejar rastro del desenlace,
-registrarlo en `TAREAS/SEGUIMIENTO.md` (seguimiento activo), no en PENDIENTES.
+EVENTS_INDEX.md (inventario auto-generado) y en git log. Lo mismo aplica a `TAREAS/SEGUIMIENTO.md`:
+cuando un seguimiento concluye (se verifica, se crea el evento, se cierra el desenlace), la
+entrada se elimina del archivo — nunca queda con un `✅` de completado ocupando espacio. Si una
+entrada de seguimiento contiene pendientes aún activos, reescribirla conservando solo esos
+pendientes (`⬜`/`🟡`) y descartando el registro de lo ya hecho.
 **Toda entrada pendiente debe incluir su origen: `Origen: <url>`** — la URL que entregó el
 usuario o la fuente que reveló la brecha (si el origen es una red social, además la URL de
 prensa que la valida). Así retomar la tarea no exige re-buscar por el titular.
@@ -32,8 +35,9 @@ prensa que la valida). Así retomar la tarea no exige re-buscar por el titular.
 Reglas para retomar una tarea: (1) crear el evento siguiendo `TEMPLATE.md`; (2) mínimo 5 fuentes
 por evento de medios distintos, nunca redes sociales como fuente única; (3) eventos 2019-2021
 (era Piñera) necesitan entidades nuevas en `entities.yaml`; (4) tras cada tanda: `pnpm run generate-index` 
-+ verificar 0 fuentes huérfanas; (5) eliminar la fila de `TAREAS/PENDIENTES/` (la tarea queda
-documentada por el ID del evento creado y el índice). Usuario encarga de validar con `pnpm run build`.
++ verificar 0 fuentes huérfanas; (5) eliminar la fila de `TAREAS/PENDIENTES/` o de
+`TAREAS/SEGUIMIENTO.md` (la tarea queda documentada por el ID del evento creado y el índice).
+Usuario encarga de validar con `pnpm run build`.
 
 ## Transiciones de página (View Transitions)
 
@@ -246,7 +250,7 @@ svg_backup:
     - Segun corresponda intentar obtener mayor contexto para reducir sesgos usando fuentes listadas en `FUENTES_GUBERNAMENTALES.md`.
 11. **Personas/orgs nuevas**: agregar a `entities.yaml`.
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
-13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS/` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
+13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS` (en cualquier variante: `TAREAS.md`, `TAREAS/SEGUIMIENTO.md`, `TAREAS/PENDIENTES/...`, `en TAREAS`, `registrado en TAREAS`), `para seguimiento`, `pendiente de validación cruzada`, `pendiente de reacciones`, `pendiente el desenlace` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS/` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
 14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
 15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS/` solo lo que quede genuinamente pendiente.
 16. **Votaciones (`tipo: votacion`): conteos con fuente oficial**: además de la cobertura de prensa, verificar el resultado y el conteo (a favor / en contra / abstenciones) en la página oficial de votaciones del Senado (`senado.cl/actividad-legislativa/sala/votaciones`) o de la Cámara (`camara.cl/legislacion/sala_sesiones/votaciones.aspx`, y por proyecto con `ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar la URL de la votación concreta en `sources.yaml` (`medio: Senado de Chile` / `medio: Cámara de Diputados`) y registrar cada conteo como `[[cifra/...]]` (ej. los vetos de la megarreforma en `20260810-10`). Si la votación fue nominal y el detalle por parlamentario es relevante para el evento, mencionarlo con la URL oficial. Ver FUENTES_GUBERNAMENTALES.md → Poder Legislativo.
@@ -802,14 +806,14 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 936
+**Total de eventos:** 948
 
-**Cobertura de fuentes:** 526 de 936 eventos con 3+ fuentes (410 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 535 de 948 eventos con 3+ fuentes (413 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 703
-- 2025: 49
-- 2024: 29
+- 2026: 710
+- 2025: 52
+- 2024: 31
 - 2023: 25
 - 2022: 19
 - 2021: 17
@@ -828,32 +832,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (356)
-- Justicia (253)
-- Economia (182)
-- Defensa y seguridad (170)
-- Administración pública (125)
-- Derechos humanos (110)
+- Politica (358)
+- Justicia (261)
+- Economia (183)
+- Defensa y seguridad (172)
+- Administración pública (126)
+- Derechos humanos (111)
 - Proceso legislativo (89)
+- Corrupción (78)
 - Finanzas publicas (77)
-- Corrupción (74)
-- Relaciones internacionales (64)
+- Relaciones internacionales (65)
 
 **Tipos de eventos más frecuentes (Top 10):**
 - accion (197)
-- reaccion (117)
+- reaccion (118)
+- investigacion (114)
 - declaracion (111)
-- investigacion (108)
-- resultado (99)
+- resultado (100)
 - publicacion (90)
-- anuncio (66)
-- fallo_judicial (63)
+- anuncio (67)
+- fallo_judicial (65)
 - votacion (24)
 - proyecto (19)
 
 **Entidades registradas:**
-- Personas: 1375
-- Organizaciones: 803
-- Cifras: 840
-- Fuentes: 3158
+- Personas: 1412
+- Organizaciones: 826
+- Cifras: 860
+- Fuentes: 3199
 - Temas: 74

@@ -8736,7 +8736,7 @@ people:
     cargo: Concejal de Ñuñoa (Frente Amplio)
     organizacion: municipalidad_nunoa
     partido: Frente Amplio
-    notas: "Concejal de Ñuñoa del Frente Amplio, crítico del alcalde Sebastián Sichel. El 10 de junio de 2026 fue condenado por injurias contra el alcalde (publicación en X del 28-oct-2025 sobre fondos concursables municipales), con firma periódica por un año, multa de 11 UTM y suspensión de cargos públicos por 85 días (BioBioChile 10-jun-2026; la condena quedó registrada como evento pendiente en TAREAS.md). En agosto de 2026 denunció las condiciones del Liceo Augusto D'Halmar (paro estudiantil, evento 20260811-16) y el 12-ago contrastó en X la revisión de mochilas de la Ley Escuelas Protegidas con el rechazo del gobierno al levantamiento del secreto bancario (fuente complementaria, evento 20260812-3)."
+    notas: "Concejal de Ñuñoa del Frente Amplio, crítico del alcalde Sebastián Sichel. El 10 de junio de 2026 fue condenado por injurias contra el alcalde (publicación en X del 28-oct-2025 sobre fondos concursables municipales), con firma periódica por un año, multa de 11 UTM y suspensión de cargos públicos por 85 días (BioBioChile 10-jun-2026). En agosto de 2026 denunció las condiciones del Liceo Augusto D'Halmar (paro estudiantil, evento 20260811-16) y el 12-ago contrastó en X la revisión de mochilas de la Ley Escuelas Protegidas con el rechazo del gobierno al levantamiento del secreto bancario (fuente complementaria, evento 20260812-3)."
 
   andrea_balladares:
     nombre: Andrea Balladares
@@ -8959,6 +8959,148 @@ people:
   pablo_zalaquett:
     nombre: Pablo Zalaquett
     notas: "Exalcalde UDI de La Florida (2000-2012), procesado por financiamiento ilegal de campañas políticas (caso Penta). Su casa fue escenario en 2023-2024 de las 'comidas de Zalaquett': reuniones de ministros y parlamentarios con empresarios que generaron polémica por no estar registradas en la Ley de Lobby (evento 20240508-1)."
+
+  gonzalo_cisternas:
+    nombre: Gonzalo Cisternas
+    notas: "Abogado penalista, hijo del exministro de la Corte Suprema Lamberto Cisternas. Representó a Global Beauty SpA ante la Tercera Sala de la Suprema en el recurso que dejó sin efecto un embargo por $2.870 millones; la georreferenciación del teléfono de Gonzalo Migueles (pareja de Ángela Vivanco) lo ubicó en cuatro ocasiones en la dirección de su oficina mientras se tramitaba el recurso (2023-2024). El CDE pidió que declare en la causa bielorrusa (evento 20260815-8)."
+  lamberto_cisternas:
+    nombre: Lamberto Cisternas
+    notas: "Exministro de la Corte Suprema de Chile, padre del abogado Gonzalo Cisternas. Ángela Vivanco declaró que conoce a la familia por esa relación (evento 20260815-8)."
+  rene_saffirio:
+    nombre: René Saffirio
+    cargo: Gobernador de La Araucanía
+    notas: "Gobernador de La Araucanía. En agosto de 2026 manifestó su rechazo a la resolución del SAG sobre comercialización de semillas, respaldó a organizaciones campesinas y mapuches, anunció acciones judiciales por inconstitucionalidad y un Plan de Acción Regional de tres líneas (evento 20260727-15)."
+  luz_huenchulaf:
+    nombre: Luz Huenchulaf
+    notas: "Presidenta de la Mesa de Mujeres Rurales de La Araucanía. Defendió la libre circulación de las semillas ancestrales en el encuentro con el gobernador Saffirio por la resolución del SAG (agosto 2026, evento 20260727-15)."
+  rodrigo_candia:
+    nombre: Rodrigo Candia
+    notas: "Dirigente de CLOC-Vía Campesina Chile. Calificó como 'nefasta' la propuesta del SAG sobre semillas y defendió que las semillas son patrimonio de los pueblos (agosto 2026, evento 20260727-15)."
+  pablo_rubio:
+    nombre: Pablo Rubio
+    notas: "Representante de los Faros Agroecológicos. Rechazó la regulación del SAG sobre semillas y solicitó considerar el Convenio 169 de la OIT (agosto 2026, evento 20260727-15)."
+  zunny_lepin:
+    nombre: Zunny Lepín
+    notas: "Curadora de semillas, denominada 'tesoro vivo', de La Araucanía. Llamó a proteger las prácticas tradicionales asociadas a las semillas ante la resolución del SAG (agosto 2026, evento 20260727-15)."
+  eduardo_macaya:
+    nombre: Eduardo Macaya Zentilli
+    cargo: Empresario agrónomo
+    notas: "Empresario agrónomo de la sexta región, padre del senador Javier Macaya y expresidente de la UDI. En julio de 2024 fue condenado por el TOP de San Fernando a seis años de presidio efectivo por cuatro delitos consumados de abuso sexual contra menores de 14 años; se encuentra recluido en el Complejo Penitenciario de Rancagua. En enero de 2025 la Fiscalía Regional de O'Higgins confirmó una nueva denuncia de índole sexual en su contra. En julio de 2026 Contrapoder reveló que seguía siendo considerado alguacil del Círculo de Amigos de Carabineros de San Fernando pese a su condena (evento 20260710-2)."
+  pablo_capetillo:
+    nombre: Pablo Capetillo Contreras
+    cargo: Coronel retirado de Carabineros
+    notas: "Ex Prefecto de Carabineros de la Región de Aysén y ex jefe de Fuerzas Especiales. En noviembre de 2019, durante el estallido social, ordenó excluir de los antecedentes remitidos al Ministerio Público un video que exculpaba al estudiante Martín Sanhueza, detenido en Coyhaique; fue condenado en febrero de 2025 por el TOP de Coyhaique a 700 días de presidio por obstrucción a la investigación (art. 269 bis CP), pena sustituida por remisión condicional, confirmada por la Corte Suprema en marzo de 2026 (evento 20250211-1)."
+  juan_fuentes_fuentealba:
+    nombre: Juan Fuentes Fuentealba
+    cargo: Capitán retirado de Carabineros
+    notas: "Ex capitán de Carabineros y ex jefe de Fuerzas Especiales de la institución. Junto al coronel retirado Pablo Capetillo, ocultó en 2019 un video que exculpaba al estudiante Martín Sanhueza en Coyhaique y declaró en falso; condenado en febrero de 2025 por el TOP de Coyhaique a 300 días de presidio por obstrucción a la investigación (art. 269 bis CP), pena sustituida por remisión condicional, confirmada por la Corte Suprema en marzo de 2026 (evento 20250211-1)."
+  luis_gonzalez_aracena:
+    nombre: Luis González Aracena
+    cargo: Fiscal jefe SACFI Fiscalía Regional de Aysén
+    notas: "Fiscal jefe de la Unidad de Análisis Criminal y Focos Investigativos (SACFI) de la Fiscalía Regional de Aysén. Dirigió la investigación que llevó a la condena de Pablo Capetillo y Juan Fuentes por obstrucción a la investigación en el caso del video ocultado en Coyhaique (2025), calificando el caso como corrupción pública (evento 20250211-1)."
+  martin_sanhueza:
+    nombre: Martín Sanhueza Mascareño
+    notas: "Estudiante universitario detenido en noviembre de 2019 en Coyhaique, acusado de maltrato de obra a Carabineros con resultado de lesiones graves. Un video que demostraba su inocencia fue ocultado por oficiales de Carabineros, lo que permitió su formalización y prisión preventiva; el Juzgado de Garantía anuló la preventiva el 11 de noviembre de 2019 y los oficiales fueron condenados en 2025 (evento 20250211-1)."
+  marcelo_villena:
+    nombre: Marcelo Villena
+    cargo: Abogado de Inmunomédica
+    notas: "Abogado del centro médico Inmunomédica de Concepción. En agosto de 2026 presentó querella contra una trabajadora por presuntos delitos de emisión y uso de licencias médicas falsas, argumentando que la relación laboral era 'inventada' y pidiendo diligencias ante la PDI, la isapre Cruz Blanca y el Compin (evento 20260812-19)."
+  humberto_melo:
+    nombre: Humberto Melo
+    cargo: Médico
+    notas: "Médico identificado por el abogado Marcelo Villena como uno de los profesionales que habría extendido las licencias médicas de la trabajadora de Inmunomédica investigada por licencias falsas (agosto 2026, evento 20260812-19)."
+  patricio_schwartz:
+    nombre: Patricio Schwartz
+    cargo: Médico
+    notas: "Médico identificado por el abogado Marcelo Villena como uno de los profesionales que habría extendido las licencias médicas de la trabajadora de Inmunomédica investigada por licencias falsas (agosto 2026, evento 20260812-19)."
+  michael_vigil:
+    nombre: Michael Vigil
+    cargo: Exjefe de operaciones de la DEA
+    notas: "Ex agente encubierto y ex jefe de operaciones de la DEA (Administración para el Control de Drogas de Estados Unidos). Infiltró carteles en México, Colombia, Brasil y Centroamérica. En entrevista con BioBioChile (agosto 2026) sostuvo que capturar a los capos no detiene el narcotráfico porque las organizaciones se fragmentan, que más del 90% de las drogas que ingresan a EE.UU. las cruzan ciudadanos estadounidenses y cuestionó la política migratoria de Trump (evento 20260815-9)."
+  tomas_mosciatti:
+    nombre: Tomás Mosciatti
+    cargo: Periodista
+    notas: "Periodista de Radio Bío Bío. Realizó la entrevista internacional al exjefe de operaciones de la DEA Michael Vigil sobre el narcotráfico en América Latina (agosto 2026, evento 20260815-9)."
+  pablo_chill_e:
+    nombre: Pablo Chill-E
+    cargo: Cantante urbano
+    notas: "Cantante urbano chileno ('Shishiboss'). En agosto de 2026 arremetió contra el Partido Nacional Libertario y Johannes Kaiser por la idea de eliminar el Ministerio del Deporte tras la salida de Natalia Duco, defendiendo a los deportistas ('el fascismo sin dudas se disfraza de libertad') (evento 20260815-7)."
+  marisol_lopez_machuca:
+    nombre: Marisol López Machuca
+    cargo: Ministra de Corte de Apelaciones
+    notas: "Magistrada que presidió el Tribunal de Juicio Oral en lo Penal de San Fernando que condenó a Eduardo Macaya Zentilli en julio de 2024; fue presidenta y redactora de la sentencia (evento 20240719-1)."
+  jose_antonio_ruiz_stanke:
+    nombre: José Antonio Ruiz Stanke
+    cargo: Juez de Tribunal Oral en lo Penal
+    notas: "Juez integrante del TOP de San Fernando que condenó a Eduardo Macaya Zentilli en julio de 2024; redactor de la sentencia junto a la magistrada Marisol López Machuca (evento 20240719-1)."
+  javiera_oro:
+    nombre: Javiera Oro
+    cargo: Fiscal
+    notas: "Fiscal del Ministerio Público en el juicio oral contra Eduardo Macaya Zentilli por abuso sexual de menores (2024); sus alegatos sobre los videos del caso quedaron recogidos en la sentencia del TOP de San Fernando (evento 20240719-1)."
+  carlos_fuentes_fiscal:
+    nombre: Carlos Fuentes
+    cargo: Fiscal Regional de O'Higgins
+    notas: "Fiscal de la Fiscalía Regional de O'Higgins que intervino en el juicio contra Eduardo Macaya Zentilli (2024), logrando la prisión preventiva y la orden de detención tras la condena (evento 20240719-1)."
+  hernan_fernandez_abogado:
+    nombre: Hernán Fernández
+    cargo: Abogado querellante
+    notas: "Abogado querellante en el caso Macaya Zentilli (2024); tras la condena señaló que no quedaban conformes porque habían pedido 17 años de cárcel (evento 20240719-1)."
+  sergio_salas_abogado:
+    nombre: Sergio Salas
+    cargo: Abogado defensor
+    notas: "Abogado defensor de Eduardo Macaya Zentilli en el juicio por abuso sexual (2024); sostuvo que los videos del caso solo mostraban 'actitudes cariñosas' del acusado, argumento que el TOP de San Fernando desestimó (evento 20240719-1)."
+  maria_francisca_barra:
+    nombre: María Francisca Barra
+    cargo: Abogada de la Defensoría de la Niñez
+    notas: "Abogada de la Defensoría de la Niñez que intervino como parte en el juicio contra Eduardo Macaya Zentilli (2024); su alegato sobre los relatos de víctimas de violencia sexual quedó citado en la sentencia (evento 20240719-1)."
+  emilia_schneider:
+    nombre: Emilia Schneider
+    cargo: Diputada
+    notas: "Diputada del Frente Amplio. En octubre de 2024 criticó al senador Javier Macaya por 'usar su tribuna política para defender a una persona condenada por abuso sexual de menores', en el marco del caso de su padre Eduardo Macaya Zentilli (evento 20240719-1)."
+  mauricio_ojeda:
+    nombre: Mauricio Ojeda Rebolledo
+    cargo: Diputado (IND-REP)
+    notas: "Diputado independiente de la bancada del Partido Republicano por La Araucanía. Imputado en la arista Manicure del Caso Convenios por fraude al fisco reiterado (convenios del GORE con las fundaciones Folab y Educc por más de $730 millones); la Fiscalía pidió su desafuero en abril de 2024 y quedó en prisión preventiva en enero de 2025 (eventos 20240417-1, 20250120-1)."
+  luciano_rivas:
+    nombre: Luciano Rivas Stepke
+    cargo: Exgobernador de La Araucanía
+    notas: "Exgobernador de La Araucanía (2021-2024), independiente que postuló en lista de Chile Vamos. Imputado en la arista Fundación Local del Caso Convenios: visó convenios por más de $9.000 millones a una fundación presidida por su compadre Héctor Troncoso; en su declaración ante la Fiscalía (30-abr-2025) dijo 'no percatarse' de los montos (BBCL Investiga, evento 20250710-1)."
+  juan_pablo_leonelli:
+    nombre: Juan Pablo Leonelli Lepín
+    cargo: Exjefe de gabinete del GORE La Araucanía
+    notas: "Exjefe de gabinete del exgobernador Luciano Rivas. Imputado por fraude al fisco en la arista Manicure del Caso Convenios; pasó de arresto domiciliario total a firma quincenal tras el sobreseimiento de seis imputados en enero de 2025 (evento 20250120-1)."
+  rinett_ortiz:
+    nombre: Rinett Ortiz Rivera
+    cargo: Representante legal de fundaciones Folab y Educc
+    notas: "Representante legal de las fundaciones Folab y Educc, receptoras de los $730 millones del GORE La Araucanía en la arista Manicure del Caso Convenios. Imputada por fraude al fisco reiterado, lavado de activos y soborno; cumplió prisión preventiva (eventos 20240417-1, 20250120-1)."
+  hector_troncoso:
+    nombre: Héctor Troncoso Triviño
+    cargo: Empresario
+    notas: "Presidente de Fundación Local y compadre del exgobernador Luciano Rivas (padrino de bautizo de su hija). La Fiscalía sostiene que a través de Fundación Local se gestionó un fraude con funcionarios fantasmas y sobreprecios; fue formalizado y quedó en prisión preventiva en julio de 2025 (evento 20250710-1)."
+  victor_albornoz:
+    nombre: Víctor Albornoz Rubilar
+    cargo: Tesorero de Fundación Local
+    notas: "Tesorero de Fundación Local, hermano de Andrés Albornoz (asesor del exgobernador Rivas). Imputado en la arista Fundación Local del Caso Convenios; obtuvo arresto domiciliario total (evento 20250710-1)."
+  susan_alarcon:
+    nombre: Susan Alarcón Rubilar
+    cargo: Exjefa de División de Fomento e Industria del GORE La Araucanía
+    notas: "Exjefa de la División de Fomento e Industria del Gobierno Regional de La Araucanía. Imputada por fraude al fisco reiterado y cohecho en la arista Manicure del Caso Convenios; prófuga y sobreseída temporalmente por rebeldía (evento 20250120-1)."
+  carlos_cornejo:
+    nombre: Carlos Cornejo
+    cargo: Fiscal de Alta Complejidad de La Araucanía
+    notas: "Fiscal de Alta Complejidad de la Fiscalía Regional de La Araucanía. Dirigió la investigación del Caso Convenios en la región (aristas Manicure y Fundación Local); tomó la declaración al exgobernador Luciano Rivas en abril de 2025 (eventos 20240417-1, 20250710-1)."
+  pilar_cuevas:
+    nombre: Pilar Cuevas
+    cargo: Delegada Presidencial Provincial de Quillota
+    notas: "Delegada Presidencial Provincial de Quillota del gobierno de José Antonio Kast. En agosto de 2026 fue denunciada por maltrato laboral por al menos tres funcionarios de su propio equipo, con dos denuncias presentadas bajo la Ley Karin (evento 20260813-17)."
+  claudia_catalan:
+    nombre: Claudia Catalán
+    cargo: Presidenta de la Asociación de Funcionarios de la DPP de Quillota
+    notas: "Presidenta de la Asociación de Funcionarios de la Delegación Presidencial Provincial de Quillota. En agosto de 2026 denunció conductas reiteradas de acoso laboral y descalificaciones por parte de la delegada Pilar Cuevas (evento 20260813-17)."
+  esteban_tumba:
+    nombre: Esteban Tumba
+    cargo: Presidente de Fenaminsa
+    notas: "Presidente de la Federación de Asociaciones de Funcionarios del Ministerio del Interior y del Ministerio de Seguridad Pública (Fenaminsa). En agosto de 2026 alertó sobre las denuncias por Ley Karin contra la delegada de Quillota Pilar Cuevas y exigió al Ministerio del Interior evaluar los antecedentes (evento 20260813-17)."
 
 organizations:
   cencosud:
@@ -10460,7 +10602,27 @@ organizations:
     nombre: Servicio Agrícola y Ganadero (SAG)
     tipo: servicio_publico
     pais: Chile
-    notas: "Servicio dependiente del Ministerio de Agricultura. En 2026 impulsó un proyecto de resolución sobre comercialización de semilla corriente, con consulta pública no vinculante, que generó rechazo de organizaciones campesinas."
+    notas: "Servicio dependiente del Ministerio de Agricultura. En 2026 impulsó un proyecto de resolución sobre comercialización de semilla corriente, con consulta pública no vinculante, que generó rechazo de organizaciones campesinas. El 13 de julio de 2026 publicó una aclaración pública reconociendo que el texto puede ser ambiguo (evento 20260727-15)."
+  anci:
+    nombre: Agencia Nacional de Ciberseguridad (ANCI)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Agencia Nacional de Ciberseguridad de Chile, dependiente del Ministerio del Interior. El 12 de agosto de 2026 tomó conocimiento del hackeo a LiteLLM y activó un protocolo preventivo, notificando a una veintena de instituciones chilenas potencialmente afectadas (entre ellas gob.cl) sin que se confirmaran incidentes de impacto significativo (evento 20260812-13)."
+  laserenaradio:
+    nombre: La Serena Radio
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio digital de la Región de Coquimbo (laserenaradio.cl)."
+  alertanoticiastemuco:
+    nombre: Alerta Noticias Temuco
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital de La Araucanía (alertanoticiastemuco.cl)."
+  global_beauty:
+    nombre: Global Beauty SpA
+    tipo: empresa
+    pais: Chile
+    notas: "Sociedad vinculada a los empresarios Felipe Israel y Jaime Sinay (ISSI SpA), a la que el árbitro amplió un embargo por $2.870 millones en la causa con Greykiwi; representada por el abogado Gonzalo Cisternas ante la Corte Suprema (evento 20260815-8)."
   confederacion_ranquil:
     nombre: Confederación Nacional Ranquil
     tipo: organizacion_social
@@ -11202,6 +11364,31 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio chilena (Grupo Prisa). Portal adnradio.cl."
+  radiosantamaria:
+    nombre: Radio Santa María
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio regional de Aysén (radiosantamaria.cl). Cubrió el caso de los ex carabineros Capetillo y Fuentes en Coyhaique (evento 20250211-1)."
+  lacuarta:
+    nombre: La Cuarta
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario chileno de espectáculos y actualidad del grupo Copesa (lacuarta.com)."
+  pagina7:
+    nombre: Página 7
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal de noticias chileno (pagina7.cl)."
+  circulo_amigos_carabineros:
+    nombre: Círculo de Amigos de Carabineros de Chile
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización de derecho privado, sin fines de lucro, que colabora con el personal de Carabineros de Chile. En julio de 2026 Contrapoder reveló que Eduardo Macaya Zentilli, condenado por abuso sexual, seguía siendo considerado alguacil de la corporación de San Fernando pese a su condena (evento 20260710-2)."
+  inmunomedica:
+    nombre: Inmunomédica
+    tipo: empresa
+    pais: Chile
+    notas: "Centro médico y laboratorio de Concepción. En agosto de 2026 presentó querella contra una trabajadora que acumula 100 licencias médicas en 8 años, acusándola de presunta falsificación de licencias y una relación laboral 'inventada' (evento 20260812-19)."
   exante:
     nombre: Ex-Ante
     tipo: medio_comunicacion
@@ -12857,6 +13044,74 @@ organizations:
     tipo: empresa
     pais: Chile
     notas: "Consorcio chileno-bielorruso (Belaz Movitec, CBM) en litigio histórico con Codelco por la explotación minera. La Fiscalía indaga si la exministra de la Corte Suprema Ángela Vivanco usó su posición en la Tercera Sala para acelerar fallos favorables al consorcio a cambio de pagos a su entonces pareja Gonzalo Migueles (trama bielorrusa, evento 20260806-55)."
+  top_san_fernando:
+    nombre: Tribunal de Juicio Oral en lo Penal de San Fernando
+    tipo: tribunal
+    notas: "Tribunal de Juicio Oral en lo Penal de San Fernando, dependiente de la jurisdicción de la Corte de Apelaciones de Rancagua. El 19-jul-2024 condenó a Eduardo Macaya Zentilli a 6 años de presidio efectivo por cuatro delitos consumados de abuso sexual de menores de 14 años, cometidos en la comuna de Placilla (evento 20240719-1)."
+  fiscalia_oregiones:
+    nombre: Fiscalía Regional de O'Higgins
+    tipo: ministerio_publico
+    notas: "Fiscalía Regional de O'Higgins, con sede en Rancagua. Su Fiscalía de Alta Complejidad acusó a Eduardo Macaya Zentilli por abuso sexual de menores, solicitando 12 años de cárcel; obtuvo la condena a 6 años y la prisión preventiva del acusado (evento 20240719-1)."
+  gore_araucania:
+    nombre: Gobierno Regional de La Araucanía
+    tipo: gobierno_regional
+    pais: Chile
+    notas: "Gobierno Regional de La Araucanía. Bajo el mandato del gobernador Luciano Rivas (2021-2024) transfirió más de $730 millones a las fundaciones Folab y Educc (arista Manicure) y aprobó convenios por $9.000 millones a Fundación Local, en el marco del Caso Convenios investigado por la Fiscalía de Alta Complejidad (eventos 20240417-1, 20250120-1, 20250710-1)."
+  fiscalia_araucania:
+    nombre: Fiscalía Regional de La Araucanía
+    tipo: ministerio_publico
+    pais: Chile
+    notas: "Fiscalía Regional de La Araucanía. Su Fiscalía de Alta Complejidad, a cargo del fiscal Carlos Cornejo, dirigió las investigaciones del Caso Convenios en la región (aristas Manicure y Fundación Local): pidió el desafuero del diputado Mauricio Ojeda (2024) y obtuvo la prisión preventiva de imputados (eventos 20240417-1, 20250120-1, 20250710-1)."
+  folab:
+    nombre: Fundación Folab
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Fundación sin fines de lucro receptora de fondos del GORE La Araucanía en la arista Manicure del Caso Convenios; sus representantes eran los hermanos Ortiz. Recibió préstamos gestionados por el diputado Mauricio Ojeda (evento 20240417-1)."
+  educc:
+    nombre: Fundación Educc
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Fundación sin fines de lucro receptora de fondos del GORE La Araucanía en la arista Manicure del Caso Convenios, junto a Folab; financiaba cursos de estética que, según la investigación, no se realizaron (eventos 20240417-1, 20250120-1)."
+  fundacion_local:
+    nombre: Fundación Local
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Fundación sin fines de lucro con sede en Reñaca, presidida por Héctor Troncoso (compadre del exgobernador Rivas) y con Víctor Albornoz como tesorero. Recibió la aprobación de convenios por cerca de $9.000 millones del GORE La Araucanía para proyectos de reciclaje; se alcanzaron a transferir $2.113 millones antes del escándalo (arista Fundación Local del Caso Convenios, evento 20250710-1)."
+  juzgado_garantia_temuco:
+    nombre: Juzgado de Garantía de Temuco
+    tipo: tribunal
+    pais: Chile
+    notas: "Juzgado de Garantía de Temuco. Tramitó las causas del Caso Convenios de La Araucanía: decretó el sobreseimiento definitivo de seis imputados de la arista Manicure (20-ene-2025) y la prisión preventiva de la imputada Rinett Ortiz (evento 20250120-1)."
+  corte_apelaciones_temuco:
+    nombre: Corte de Apelaciones de Temuco
+    tipo: tribunal
+    pais: Chile
+    notas: "Corte de Apelaciones de Temuco. En mayo de 2025 revocó el sobreseimiento definitivo de cuatro exfuncionarios del GORE La Araucanía en la arista Manicure, acogiendo recursos del CDE (evento 20250120-1)."
+  fenaminsa:
+    nombre: Fenaminsa
+    tipo: organizacion_sindical
+    pais: Chile
+    notas: "Federación de Asociaciones de Funcionarios del Ministerio del Interior y del Ministerio de Seguridad Pública (Fenaminsa). En agosto de 2026 alertó sobre las denuncias por Ley Karin contra la delegada de Quillota Pilar Cuevas (evento 20260813-17)."
+  nuevopoder:
+    nombre: Nuevo Poder
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (nuevopoder.cl). Cubrió las denuncias por malos tratos contra la delegada de Quillota Pilar Cuevas (agosto 2026, evento 20260813-17)."
+  lachispasur:
+    nombre: La Chispa Sur
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (lachispasur.cl). Publicó el reportaje 'La Red de Pitutos' sobre el entramado de influencias del GORE La Araucanía en el Caso Convenios, incluida la arista Fundación Local (evento 20250710-1)."
+  minmineria:
+    nombre: Ministerio de Minería de Chile
+    tipo: ministerio
+    pais: Chile
+    notas: "Ministerio de Minería de Chile, a cargo del biministro de Economía y Minería Daniel Mas. En agosto de 2026 presentó en un seminario CLAPES UC medidas de modernización regulatoria, exploración minera y la meta de producción de 6 millones de toneladas de cobre (evento 20260813-16)."
+  mundomineria:
+    nombre: Mundo Minería
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio especializado en minería (mundomineria.cl). Cubrió el seminario CLAPES UC donde el biministro Daniel Mas presentó las medidas mineras del gobierno (agosto 2026, evento 20260813-16)."
 
 cifras:
   multa_marcha_orgullo_utm:
@@ -13019,6 +13274,22 @@ cifras:
     nombre: Reuniones de la Subsecretaría de Pesca no registradas en lobby
     unidad_default: reuniones
     notas: "54 reuniones del subsecretario de Pesca Julio Salas con la industria pesquera entre enero de 2022 y diciembre de 2023 que no fueron registradas en Infolobby ni en la plataforma de la Ley de Lobby, según CIPER (7-may-2024, evento 20240508-1)."
+  embargo_global_beauty:
+    nombre: Embargo ampliado a Global Beauty SpA
+    unidad_default: pesos
+    notas: "Deuda de $2.870 millones que motivó la ampliación del embargo a los bienes de Global Beauty SpA (4 de julio de 2023), que el abogado Gonzalo Cisternas intentó dejar sin efecto ante la Corte Suprema; la Tercera Sala acogió el recurso el 5 de enero de 2024 (evento 20260815-8)."
+  sentencia_greykiwi_issi:
+    nombre: Sentencia del arbitraje Greykiwi-ISSI
+    unidad_default: pesos
+    notas: "Sentencia arbitral del 16 de agosto de 2021 que condenó a ISSI SpA a pagar $1.577 millones a Greykiwi (más reajustes e intereses) y otros 15.000 UF (unos $447 millones en la época) por incumplimientos contractuales (evento 20260815-8)."
+  asesoria_cisternas_migueles:
+    nombre: Pago de Cisternas a Migueles por asesoría
+    unidad_default: pesos
+    notas: "$7 millones que el abogado Gonzalo Cisternas transfirió a Gonzalo Migueles (pareja de Ángela Vivanco) en 2021, que Cisternas atribuyó a asesorías de plataforma y firmas electrónicas para notarías; el CDE pidió interrogarlo al respecto (evento 20260815-8)."
+  puestos_avance_causa_vivanco:
+    nombre: Puestos que avanzó la causa Global Beauty en la tabla de la Suprema
+    unidad_default: puestos
+    notas: "120 puestos avanzó el recurso de Global Beauty en la tabla que ordena las vistas de causas de la Tercera Sala de la Corte Suprema, según testimonios ante la Comisión de Ética; Vivanco habría intervenido para que el fallo saliera el mismo día (evento 20260815-8)."
   multa_hijo_araya_utm:
     nombre: Multa al hijo de la general Araya
     unidad_default: utm
@@ -16149,3 +16420,67 @@ cifras:
     nombre: Participación de China en el procesamiento mundial de tierras raras
     unidad_default: porciento
     notas: "China controla casi el 90% del procesamiento mundial de tierras raras, según BioBioChile (26-jun-2026) en el contexto de la incorporación de Chile a Pax Silica (evento 20260625-8)."
+  dias_presidio_capetillo:
+    nombre: Días de presidio de Pablo Capetillo por obstrucción a la investigación
+    unidad_default: dias
+    notas: "700 días de presidio menor en su grado medio para el ex Prefecto de Carabineros de Aysén, Pablo Capetillo Contreras, por obstrucción a la investigación (art. 269 bis CP) al ocultar un video que exculpaba a Martín Sanhueza (TOP de Coyhaique, 11-feb-2025; confirmado por la Corte Suprema el 12-mar-2026; evento 20250211-1)."
+  dias_presidio_fuentes:
+    nombre: Días de presidio de Juan Fuentes por obstrucción a la investigación
+    unidad_default: dias
+    notas: "300 días de presidio menor en su grado mínimo para el ex capitán y ex jefe de Fuerzas Especiales de Carabineros, Juan Fuentes Fuentealba, por obstrucción a la investigación (art. 269 bis CP) al ocultar un video que exculpaba a Martín Sanhueza (TOP de Coyhaique, 11-feb-2025; confirmado por la Corte Suprema el 12-mar-2026; evento 20250211-1)."
+  licencias_medicas_inmunomedica:
+    nombre: Licencias médicas acumuladas por la trabajadora de Inmunomédica
+    unidad_default: licencias
+    notas: "100 licencias médicas acumuladas desde 2018 por una trabajadora (matrona) de Inmunomédica de Concepción, que la mantienen con calidad de enferma y en reposo durante 3.028 días (8 años); el centro médico presentó querella por presuntas licencias falsas (BioBioChile, 12-ago-2026; evento 20260812-19)."
+  dias_licencia_inmunomedica:
+    nombre: Días con licencia médica de la trabajadora de Inmunomédica
+    unidad_default: dias
+    notas: "3.028 días con licencias médicas (8 años) acumulados por la trabajadora de Inmunomédica de Concepción desde 2018; estaría tramitando una pensión de invalidez (BioBioChile, 12-ago-2026; evento 20260812-19)."
+  anios_presidio_macaya:
+    nombre: Años de presidio de Eduardo Macaya Zentilli
+    unidad_default: anios
+    notas: "Seis años de presidio efectivo para Eduardo Macaya Zentilli, condenado el 19-jul-2024 por el TOP de San Fernando como autor de cuatro delitos consumados de abuso sexual de menores de 14 años (dos contra una víctima de 8-9 años y dos contra otra víctima en 2023); condena confirmada por la Corte Suprema el 18-oct-2024; recluido en el Complejo Penitenciario de Rancagua (eventos 20240719-1 y 20260710-2)."
+  delitos_abuso_macaya:
+    nombre: Delitos consumados de abuso sexual imputados a Eduardo Macaya Zentilli
+    unidad_default: delitos
+    notas: "Cuatro delitos consumados de abuso sexual de menores de 14 años por los que el TOP de San Fernando condenó a Eduardo Macaya Zentilli el 19-jul-2024 (evento 20240719-1)."
+  fianza_arresto_macaya:
+    nombre: Fianza para arresto domiciliario de Eduardo Macaya Zentilli
+    unidad_default: pesos
+    notas: "150 millones de pesos de caución económica fijados por la Segunda Sala de la Corte de Apelaciones de Rancagua en julio de 2023 para revocar la prisión preventiva de Eduardo Macaya Zentilli y sustituirla por arresto domiciliario total (evento 20240719-1)."
+  videos_abuso_macaya:
+    nombre: Videos exhibidos en el juicio contra Eduardo Macaya Zentilli
+    unidad_default: videos
+    notas: "Nueve videos grabados que registraban parte de los hechos de abuso sexual imputados a Eduardo Macaya Zentilli (hecho N°4), exhibidos durante el juicio oral y citados por el tribunal en la sentencia condenatoria de julio de 2024 (CIPER; evento 20240719-1)."
+  paginas_sentencia_macaya:
+    nombre: Páginas de la sentencia del caso Macaya Zentilli
+    unidad_default: paginas
+    notas: "Sentencia de 149 páginas del TOP de San Fernando que condenó a Eduardo Macaya Zentilli por abuso sexual de menores en julio de 2024, revisada por CIPER (evento 20240719-1)."
+  millones_manicure:
+    nombre: Fondos traspasados en la arista Manicure del Caso Convenios
+    unidad_default: pesos
+    notas: "Más de 730 millones de pesos traspasados desde el GORE La Araucanía a las fundaciones Folab y Educc en la arista Manicure del Caso Convenios, para cursos de estética que según la investigación no se realizaron (eventos 20240417-1, 20250120-1)."
+  millones_fundacion_local:
+    nombre: Convenios aprobados a Fundación Local
+    unidad_default: pesos
+    notas: "Cerca de 9.000 millones de pesos en convenios aprobados por el GORE La Araucanía a Fundación Local para proyectos de reciclaje; se alcanzaron a transferir 2.113 millones antes de que estallara el escándalo (evento 20250710-1)."
+  millones_prestamos_ojeda_folab:
+    nombre: Préstamos de Mauricio Ojeda a Fundación Folab
+    unidad_default: pesos
+    notas: "85 millones de pesos en préstamos con intereses que el diputado Mauricio Ojeda proporcionó y gestionó para Fundación Folab durante 2022, para darle solvencia y que continuara postulando a fondos públicos (PJUD, evento 20240417-1)."
+  meta_cobre_6_millones:
+    nombre: Meta de producción de cobre de 6 millones de toneladas
+    unidad_default: toneladas
+    notas: "Meta del gobierno de Chile de alcanzar 6 millones de toneladas anuales de producción de cobre, anunciada por el biministro Daniel Mas en el seminario CLAPES UC 'La carrera por los seis millones de toneladas' (agosto 2026; evento 20260813-16)."
+  permisos_proyecto_minero:
+    nombre: Permisos promedio para un proyecto minero en Chile
+    unidad_default: permisos
+    notas: "147 permisos en promedio requiere la tramitación de un proyecto minero en Chile, según el biministro Daniel Mas en el seminario CLAPES UC de agosto de 2026; la tramitación puede superar los 10 años (evento 20260813-16)."
+  reduccion_tiempos_ley_marco:
+    nombre: Reducción de tiempos de tramitación con la Ley Marco de Autorizaciones Sectoriales
+    unidad_default: porcentaje
+    notas: "Entre 30% y 70% de reducción de los tiempos de tramitación de proyectos que busca la implementación de la Ley Marco de Autorizaciones Sectoriales, según el gobierno (agosto 2026, evento 20260813-16)."
+  denuncias_ley_karin_quillota:
+    nombre: Denuncias por Ley Karin contra la delegada de Quillota
+    unidad_default: denuncias
+    notas: "Al menos tres denuncias de funcionarios por malos tratos contra la delegada presidencial de Quillota Pilar Cuevas (dos presentadas y una en preparación bajo la Ley Karin, agosto 2026; evento 20260813-17)."

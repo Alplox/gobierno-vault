@@ -76,6 +76,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio del Trabajo y Previsión Social',
   'Ministerio de Justicia',
   'Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)',
+  'Ministerio de Minería de Chile',
   'Ministerio de Seguridad Pública',
   'Ministerio Secretaría General de Gobierno',
   'Contraloría General de la República',
@@ -370,11 +371,16 @@ for (const file of allFiles) {
     }
   }
 
+  // Referencias a la bitácora TAREAS (la carpeta siempre en mayúsculas) o al viejo
+  // TAREAS.md: case-sensitive para no confundir con la palabra común "tareas".
+  const tareasRef = body.match(/\bTAREAS(?:\/|\.md|\b)/);
+  // Frases de metanota de editor en minúsculas (case-insensitive).
   const editorNote = body.match(
-    /tareas\.md|nota de verificación|nota del editor|nota editorial|pendiente evento|queda pendiente de verificación|registrad[oa] para seguimiento|agenda de pendientes/i
+    /nota de verificación|nota del editor|nota editorial|pendiente evento|queda pendiente de verificación|registrad[oa] para seguimiento|agenda de pendientes|pendiente de validación cruzada|pendiente de reacciones|pendiente el desenlace/i
   );
-  if (editorNote) {
-    console.error(`✖ metanota de editor en body → ${eventId}: "${editorNote[0]}"`);
+  const note = tareasRef ? tareasRef[0] : (editorNote ? editorNote[0] : null);
+  if (note) {
+    console.error(`✖ metanota de editor en body → ${eventId}: "${note}"`);
     errors++;
   }
 
