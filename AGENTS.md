@@ -11,12 +11,29 @@ Astro 7 + Tailwind, output `static` (SSG). Lenguaje: espanol.
 
 Archivo `EVENTS_INDEX.md` permite contexto rápido para agentes y usuarios.
 
-Archivo `TAREAS.md` es la bitácora de eventos detectados como faltantes (recency bias):
-cuando se detecte un evento pendiente que no se implementará en el momento, registrarlo ahí
-con fecha, tipo sugerido y estado (`⬜ pendiente`). Al crearlo, marcar `✅ hecho` con el ID.
+La bitácora de eventos detectados como faltantes (anti recency bias) vive en la carpeta `TAREAS/`
+(desde 15-ago-2026; antes era el monolito `TAREAS.md` de 995 líneas/433KB). No hay `TAREAS.md`
+raíz ni archivo de completadas: lo hecho queda en EVENTS_INDEX.md (inventario auto-generado) y en
+git log. Estructura:
+- `TAREAS/PENDIENTES/YYYY.md` — tareas `⬜ pendiente`/`🟡 parcial` accionables por año (2016, 2019-2026)
+- `TAREAS/PENDIENTES/TRANSVERSALES.md` — pendientes sin año único (estallido, corrupción, histórico)
+- `TAREAS/SEGUIMIENTO.md` — seguimiento activo (Cuentas Públicas, desenlaces judiciales, verificaciones, tandas de fuentes)
+
+Cuando se detecte un evento pendiente que no se implementará en el momento, registrarlo en
+`TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO.md` si es seguimiento de algo ya cubierto) con fecha,
+tipo sugerido y estado (`⬜ pendiente`). **Al completarse, la fila se ELIMINA del archivo de
+pendientes** — no queda en la lista con un `✅` —, porque lo hecho queda documentado en
+EVENTS_INDEX.md (inventario auto-generado) y en git log; si hace falta dejar rastro del desenlace,
+registrarlo en `TAREAS/SEGUIMIENTO.md` (seguimiento activo), no en PENDIENTES.
 **Toda entrada pendiente debe incluir su origen: `Origen: <url>`** — la URL que entregó el
 usuario o la fuente que reveló la brecha (si el origen es una red social, además la URL de
 prensa que la valida). Así retomar la tarea no exige re-buscar por el titular.
+
+Reglas para retomar una tarea: (1) crear el evento siguiendo `TEMPLATE.md`; (2) mínimo 5 fuentes
+por evento de medios distintos, nunca redes sociales como fuente única; (3) eventos 2019-2021
+(era Piñera) necesitan entidades nuevas en `entities.yaml`; (4) tras cada tanda: `pnpm run generate-index` 
++ verificar 0 fuentes huérfanas; (5) eliminar la fila de `TAREAS/PENDIENTES/` (la tarea queda
+documentada por el ID del evento creado y el índice). Usuario encarga de validar con `pnpm run build`.
 
 ## Transiciones de página (View Transitions)
 
@@ -133,7 +150,7 @@ Los medios de prensa se registran como **organizaciones** (`entities.yaml` > `or
 
 - **Nombre canonico**: el campo `nombre` del YAML es lo que renderiza el wikilink. Usar el nombre comercial del medio (ej. `nombre: BioBioChile`, `nombre: El País (Chile)`), no variantes del campo `medio:` de `sources.yaml`.
 - **`sources.yaml`**: el campo `medio:` debe usar el MISMO nombre canonico que la org (ej. `medio: El País (Chile)`, no "El País" ni "El País Chile"). Si el medio tiene edicion chilena y homonimo extranjero, incluir "(Chile)".
-- **Redes sociales** (Reddit r/chile, X/Twitter, YouTube): `tipo: red_social` en organizations; solo complementarias, nunca fuente unica (ver TAREAS.md). Para documentar reacciones ciudadanas con variedad de voces y los metodos de busqueda probados por plataforma, ver la sección [Fuentes de redes sociales: metodologia para "reacciones comunitarias"](#fuentes-de-redes-sociales-metodologia-para-reacciones-comunitarias).
+- **Redes sociales** (Reddit r/chile, X/Twitter, YouTube): `tipo: red_social` en organizations; solo complementarias, nunca fuente unica (ver TAREAS/). Para documentar reacciones ciudadanas con variedad de voces y los metodos de busqueda probados por plataforma, ver la sección [Fuentes de redes sociales: metodologia para "reacciones comunitarias"](#fuentes-de-redes-sociales-metodologia-para-reacciones-comunitarias).
 - **ID de org**: snake_case del nombre (ej. `el_pais`, `24_horas`, `radio_universidad_chile`, `adn_radio`). Revisar `entities.yaml` antes de crear uno nuevo (hay ~54 medios registrados).
 - **Herramienta**: `pnpm run add-source -- <URL>` mapea dominio → medio; si el medio no esta registrado como org, agregarlo a `entities.yaml`.
 - **IDs de evento desnudos en prosa** (ej. `ver evento 20260618-3`) se auto-enlazan
@@ -229,9 +246,9 @@ svg_backup:
     - Segun corresponda intentar obtener mayor contexto para reducir sesgos usando fuentes listadas en `FUENTES_GUBERNAMENTALES.md`.
 11. **Personas/orgs nuevas**: agregar a `entities.yaml`.
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
-13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS.md` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
+13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS.md`, `para seguimiento`, `registrado en TAREAS` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS/` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
 14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
-15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS.md` solo lo que quede genuinamente pendiente.
+15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS/` solo lo que quede genuinamente pendiente.
 16. **Votaciones (`tipo: votacion`): conteos con fuente oficial**: además de la cobertura de prensa, verificar el resultado y el conteo (a favor / en contra / abstenciones) en la página oficial de votaciones del Senado (`senado.cl/actividad-legislativa/sala/votaciones`) o de la Cámara (`camara.cl/legislacion/sala_sesiones/votaciones.aspx`, y por proyecto con `ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar la URL de la votación concreta en `sources.yaml` (`medio: Senado de Chile` / `medio: Cámara de Diputados`) y registrar cada conteo como `[[cifra/...]]` (ej. los vetos de la megarreforma en `20260810-10`). Si la votación fue nominal y el detalle por parlamentario es relevante para el evento, mencionarlo con la URL oficial. Ver FUENTES_GUBERNAMENTALES.md → Poder Legislativo.
 
 ## Fuentes de redes sociales: metodologia para "reacciones comunitarias"
@@ -244,7 +261,7 @@ svg_backup:
 2. **Citar comentarios con su usuario y puntaje/reacciones** cuando esten disponibles (ej. "'Gobierno de KidZania' (Motamatulg, 188 puntos)"), para que el lector vea la representatividad relativa de cada opinion. Extraer los comentarios mas votados y tambien voces de la vereda opuesta (los de bajo puntaje negativo tambien documentan el disenso).
 3. **Verificar los datos que plantean los usuarios** contra fuentes oficiales o prensa (BCN, SUSESO, tribunales, medios) y marcar explicitamente lo que no fue verificado (ej. "acusacion de IA no verificada por prensa, se registra como complementaria").
 4. **No mezclar la opinion del autor del hilo con la reaccion comunitaria**: el post original del usuario es el punto de partida; los comentarios de OTRAS personas son la reaccion. Citar ambos por separado.
-5. Si una afirmacion viral requiere validacion y no se resuelve, registrarla en `TAREAS.md` (⬜ pendiente) en lugar del body.
+5. Si una afirmacion viral requiere validacion y no se resuelve, registrarla en `TAREAS/` (⬜ pendiente) en lugar del body.
 6. **Toda fuente de redes sociales debe declarar su ROL en el evento**: nunca se agrega "porque si". Al citar un post/hilo/comentario complementario, el body y la nota de `sources.yaml` deben explicar que aporta. Roles validos: (a) **permite verificar/validar un dato** que el post plantea (verificado contra BCN/SUSESO/tribunales/prensa — ej. los datos historicos del hilo de niñez); (b) **plantea un punto que la prensa no cubre** (ej. la cita del articulo 1° de la Constitucion en el debate del plan de seguridad, que los noticieros no mencionaron); (c) **documenta la reaccion ciudadana / opinion publica** con voces variadas de plataformas distintas; (d) **muestra la viralizacion de un tema** y su framing; (e) **aporta un desglose/analisis que la cobertura de prensa no detallaba** (ej. el desglose de cuenta propia de CLAPES UC difundido por Merken). Si un post no cumple ninguno de estos roles —o repite exactamente lo que ya cubre la prensa sin anadir nada—, NO agregarlo. Formato sugerido en el body: "Se registra como complementaria porque <rol>: <que aporta, verificado contra X>" o "El rol del hilo en este evento es <rol>, verificado contra <fuente>."
 
 ### Metodos de busqueda probados (2026-08)
@@ -389,7 +406,7 @@ Cada Cuenta Pública presidencial ante el Congreso Pleno tiene **un evento maste
 - **Estructura del body**: secciones por eje temático (seguridad, economía, sociedad de cuidados, DDHH, educación, infraestructura/energía, reacciones), cada anuncio con su `[[cifra/...]]` y fuentes inline.
 - **Fuentes**: mínimo el sitio oficial (gob.cl/cuentapublicaYYYY, `medio: Gobierno de Chile`) + 2-3 medios de prensa del día del discurso (catálogo de sitemaps: grep `'cuenta publica' sitemaps/<medio>/*.jsonl | grep '<año>-06'`).
 - **Anuncios granulares**: cuando un anuncio se desarrolla (proyecto ingresa al Congreso, ley se aprueba, medida se implementa o se incumple), se crean/actualizan eventos propios con `relaciones` hacia el master (`amplia`/`deriva_en`/`responde_a`), como ocurre con la CP 2026 de Kast (`20260601-5` + `20260601-2`, `20260601-3`, `20260602-4`, etc.).
-- **Verificación**: cada cifra verificable del discurso se registra como `[[cifra/...]]`; el seguimiento de implementación de los anuncios pendientes vive en TAREAS.md bajo "Cuentas Públicas — seguimiento de anuncios".
+- **Verificación**: cada cifra verificable del discurso se registra como `[[cifra/...]]`; el seguimiento de implementación de los anuncios pendientes vive en TAREAS/SEGUIMIENTO.md bajo "Cuentas Públicas — seguimiento de anuncios".
 - **Estado de la serie**: 2022 (1ª Boric) ⬜ pendiente · 2023 (2ª Boric) ✅ `20230601-1` · 2024 (3ª Boric) ✅ `20240601-1` · 2025 (4ª Boric) ✅ `20250601-1` (master: CP 2025 ampliada, anuncio de Punta Peuco conservado como sección; los `responde_a` de 20260514-1 y 20251114-1 siguen apuntando al mismo evento) · 2026 (1ª Kast) ✅ `20260601-5`.
 - Las **cuentas públicas sectoriales/ministeriales** (participativas) también generan eventos cuando anuncian (ej. Minsal `20260729-17`, Minería `20260729-19`), pero la serie master es la presidencial.
 
@@ -410,6 +427,27 @@ pnpm run dev      # preview local
 
 El build usa `set NODE_OPTIONS=--experimental-global-customevent` (Windows).
 Si falla, revisar frontmatter (YAML parse error) o wikilinks rotos.
+
+**Validacion de wikilinks en `validate` (desde 16-ago-2026):** `scripts/validate.mjs`
+replica la resolucion de `remarkWikiLinks.mjs` y falla ANTES del build si hay
+wikilinks rotos en el body de eventos: `[[source/...]]` contra `sources.yaml`,
+`[[person/...]]` / `[[org/...]]` contra `entities.yaml` y `[[event/...]]` contra
+los IDs de eventos existentes. Paridad con el plugin: `[[cifra/...]]` NO se
+valida (el plugin tampoco) y los IDs de evento desnudos (`\b20\d{6}-\d{1,3}\b`)
+solo se enlazan si existen, sin ser error. Se excluyen bloques de codigo fenced
+(```) e `inlineCode` (\`) del chequeo, igual que el plugin (que solo recorre
+nodos `text` del arbol markdown). **Importante:** el glob-loader de Astro 7 NO
+aborta el build ante un wikilink roto — loguea `Error rendering` y guarda la
+entrada con `rendered: undefined`, dejando la pagina del evento SIN contenido en
+`dist` (falla silenciosa que no rompe el build pero si el sitio). Por eso el
+chequeo temprano de `validate` es la red de seguridad real.
+
+**Build en paralelo (`build.concurrency`):** `astro.config.mjs` define
+`build: { concurrency: Math.min(availableParallelism(), 4) }` porque el default
+de Astro 7 es 1 (generacion secuencial de paginas) y el vault ya supera las
+6.800 paginas (eventos + personas + orgs + temas + fuentes). El limite de 4
+balancea velocidad y RAM en CI/Cloudflare Pages (no saturar runners pequenos);
+ajustar si el runner lo permite.
 
 **Gestor de paquetes: pnpm** (migrado desde npm). Lockfile: `pnpm-lock.yaml`.
 Instalacion: `pnpm install`. No usar npm ni regenerar `package-lock.json`.
@@ -764,17 +802,17 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 907
+**Total de eventos:** 936
 
-**Cobertura de fuentes:** 509 de 907 eventos con 3+ fuentes (398 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 526 de 936 eventos con 3+ fuentes (410 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 677
+- 2026: 703
 - 2025: 49
-- 2024: 28
+- 2024: 29
 - 2023: 25
 - 2022: 19
-- 2021: 15
+- 2021: 17
 - 2020: 35
 - 2019: 25
 - 2018: 3
@@ -790,32 +828,32 @@ Cuando descubras algo no documentado aqui:
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (347)
-- Justicia (242)
-- Economia (179)
-- Defensa y seguridad (160)
-- Administración pública (118)
-- Derechos humanos (106)
-- Proceso legislativo (85)
-- Finanzas publicas (75)
-- Corrupción (71)
-- Relaciones internacionales (62)
+- Politica (356)
+- Justicia (253)
+- Economia (182)
+- Defensa y seguridad (170)
+- Administración pública (125)
+- Derechos humanos (110)
+- Proceso legislativo (89)
+- Finanzas publicas (77)
+- Corrupción (74)
+- Relaciones internacionales (64)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (196)
-- reaccion (112)
-- declaracion (107)
-- resultado (98)
-- investigacion (97)
-- publicacion (87)
-- anuncio (65)
-- fallo_judicial (62)
+- accion (197)
+- reaccion (117)
+- declaracion (111)
+- investigacion (108)
+- resultado (99)
+- publicacion (90)
+- anuncio (66)
+- fallo_judicial (63)
 - votacion (24)
-- proyecto (18)
+- proyecto (19)
 
 **Entidades registradas:**
-- Personas: 1335
-- Organizaciones: 782
-- Cifras: 787
-- Fuentes: 3075
+- Personas: 1375
+- Organizaciones: 803
+- Cifras: 840
+- Fuentes: 3158
 - Temas: 74

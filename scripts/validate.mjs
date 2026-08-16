@@ -30,6 +30,8 @@ const validSectores = new Set(Array.isArray(sectoresData) ? sectoresData : Objec
 // mojibake de doble-encoding UTF-8) vuelvan a degradar la convención.
 const entitiesData = readYaml('entities.yaml');
 const orgsData = entitiesData.organizations ?? {};
+const peopleData = entitiesData.people ?? {};
+const cifrasData = entitiesData.cifras ?? {};
 const MEDIA_ORG_TYPES = new Set([
   'medio_comunicacion',
   'red_social',
@@ -154,6 +156,7 @@ const WHITELIST_MEDIOS = new Set([
   'Scribd (documento filtrado)',
   'Facebook',
   'Instagram',
+  'Movilh',
   'TikTok',
   'Telegram',
   'Google Drive (compilación ciudadana)',
@@ -245,22 +248,36 @@ for (const [id, src] of Object.entries(sourcesData)) {
 }
 
 // Regla AGENTS.md (bitácora TAREAS): todo ID de evento marcado como ✅ hecho en
-// TAREAS.md (patrón `✅ \`20260807-12\``) debe referenciar un archivo de evento
-// EXISTENTE. Esto evita la colisión recurrente de IDs pre-asignados: entradas que
-// apuntaban a `20260807-11/-12/-13` antes de que esos IDs fueran ocupados por otros
-// eventos, dejando la fuente registrada sin evento real (fuentes huérfanas).
-const tareasPath = join(process.cwd(), 'TAREAS.md');
+// la bitácora (patrón `✅ \`20260807-12\``, repartida en TAREAS/PENDIENTES/*.md +
+// TAREAS/SEGUIMIENTO.md) debe referenciar un archivo de evento EXISTENTE. Esto evita la colisión recurrente
+// de IDs pre-asignados: entradas que apuntaban a `20260807-11/-12/-13` antes de que
+// esos IDs fueran ocupados por otros eventos, dejando la fuente registrada sin evento
+// real (fuentes huérfanas).
+function readTareasMarkdown() {
+  const chunks = [];
+  const root = process.cwd();
+  const scan = (dir) => {
+    for (const e of readdirSync(dir, { withFileTypes: true })) {
+      const p = join(dir, e.name);
+      if (e.isDirectory()) scan(p);
+      else if (e.isFile() && e.name.endsWith('.md')) chunks.push(readFileSync(p, 'utf8'));
+    }
+  };
+  const dir = join(root, 'TAREAS');
+  if (existsSync(dir)) scan(dir);
+  return chunks.join('\n');
+}
 try {
-  const tareasContent = readFileSync(tareasPath, 'utf8');
+  const tareasContent = readTareasMarkdown();
   for (const match of tareasContent.matchAll(/✅\s*`(\d{8}-\d{1,3})`/g)) {
     const id = match[1];
     if (!allEventBasenames.has(id)) {
-      console.error(`✖ TAREAS.md marca como hecho el evento "${id}" pero no existe ningun archivo con ese ID (¿colisión de ID pre-asignado?)`);
+      console.error(`✖ TAREAS/ marca como hecho el evento "${id}" pero no existe ningun archivo con ese ID (¿colisión de ID pre-asignado?)`);
       errors++;
     }
   }
 } catch (e) {
-  console.error(`✖ no se pudo leer TAREAS.md para verificar IDs: ${e.message}`);
+  console.error(`✖ no se pudo leer TAREAS/ para verificar IDs: ${e.message}`);
   errors++;
 }
 
@@ -323,9 +340,36 @@ for (const file of allFiles) {
     }
   }
 
-  // Regla AGENTS.md 13: el body de un evento no debe contener notas de editor
-  // ni metainstrucciones de gestión (para eso existe TAREAS.md).
+  // Wikilinks del body: replica la resolucion de remarkWikiLinks.mjs (que corre
+  // en build) para detectar wikilinks rotos ANTES del build. Paridad con el
+  // plugin: source/person/org/event se validan contra sus registries; cifra NO
+  // se valida (el plugin no la valida en build); los IDs de evento desnudos
+  // (\b20\d{6}-\d{1,3}\b) solo se enlazan si existen y no son error si no.
+  // El plugin solo procesa nodos `text` del arbol markdown, asi que se excluyen
+  // bloques de codigo fenced (```) e inlineCode (\`...\`) para evitar falsos
+  // positivos en ejemplos/documentacion dentro del body.
   const body = content.replace(/^---[\s\S]*?---/, '');
+  const noCode = body
+    .replace(/```[\s\S]*?```/g, '')
+    .replace(/`[^`\n]*`/g, '');
+  const WIKILINK_RE = /\[\[(source|person|org|cifra|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
+  for (const m of noCode.matchAll(WIKILINK_RE)) {
+    const [, type, id] = m;
+    if (type === 'source' && !validSourceIds.has(id)) {
+      console.error(`✖ wikilink roto [[source/${id}]] → ${eventId} (fuente no registrada en sources.yaml)`);
+      errors++;
+    } else if (type === 'person' && !peopleData[id]) {
+      console.error(`✖ wikilink roto [[person/${id}]] → ${eventId} (persona no registrada en entities.yaml)`);
+      errors++;
+    } else if (type === 'org' && !orgsData[id]) {
+      console.error(`✖ wikilink roto [[org/${id}]] → ${eventId} (org no registrada en entities.yaml)`);
+      errors++;
+    } else if (type === 'event' && !allEventBasenames.has(id)) {
+      console.error(`✖ wikilink roto [[event/${id}]] → ${eventId} (no existe evento con ese ID)`);
+      errors++;
+    }
+  }
+
   const editorNote = body.match(
     /tareas\.md|nota de verificación|nota del editor|nota editorial|pendiente evento|queda pendiente de verificación|registrad[oa] para seguimiento|agenda de pendientes/i
   );

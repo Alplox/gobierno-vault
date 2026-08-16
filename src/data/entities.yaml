@@ -404,6 +404,92 @@ people:
     cargo: Presidente regional de la CChC de Concepción
     organizacion: cchc
     notas: "Presidente regional de la Cámara Chilena de la Construcción de Concepción. Tras el congelamiento de los corredores de transporte del Gran Concepción (agosto 2026) calificó la medida como 'un nuevo golpe al empleo y al desarrollo' de la región."
+  gustavo_becerra:
+    nombre: Gustavo Becerra
+    cargo: Actor y comediante
+    notas: "Actor y comediante chileno, expresidente del Sindicato de Actores (Sidarte). En el capítulo de agosto de 2026 de La Divina Comida (Chilevisión) relató que durante el estallido social de 2019 recibió amenazas —'no fue como de muerte, pero muy parecido'— tras participar en actividades de apoyo a las manifestaciones: un hombre le mencionó datos de su familia ('conozco a su papá, vive acá, vive su mamá, conozco a sus hijos') para advertirle que dejara de participar (evento 20260816-12)."
+  marisela_santibanez:
+    nombre: Marisela Santibáñez
+    cargo: Diputada, presidenta de la Comisión de Deporte de la Cámara
+    notas: "Diputada y presidenta de la Comisión de Deporte de la Cámara. Tras la salida de la ministra Natalia Duco y el nombramiento de Francisco Riveros Cantuarias (agosto 2026) defendió la autonomía del Ministerio del Deporte frente a la propuesta del Partido Libertario de fusionar la cartera, exigió retomar la agenda sin partir de cero y adelantó un homenaje al técnico Mirko Jozic en el Congreso (evento 20260815-7)."
+  mirko_jozic:
+    nombre: Mirko Jozic
+    cargo: Exentrenador de fútbol
+    notas: "Técnico croata radicado en Chile, exentrenador de la selección chilena y de Colo Colo. La presidenta de la Comisión de Deporte de la Cámara, Marisela Santibáñez, adelantó en agosto de 2026 que será homenajeado en el Congreso, tal como ocurrió con Manuel Pellegrini (evento 20260815-7)."
+  thae_loiza_galaz:
+    nombre: Thae Loiza Galaz
+    cargo: Exconcejala de Graneros
+    notas: "Exconcejala de la comuna de Graneros (región de O'Higgins). Desaparecida desde el 5 de agosto de 2026, cuando salió de un inmueble en Ñuñoa con destino a su trabajo en una hamburguesería de La Florida; su familia denunció la presunta desgracia el 8 de agosto y la Brigada de Homicidios de la PDI despliega diligencias en O'Higgins y la RM (evento 20260816-11)."
+  juan_reyes:
+    nombre: Juan Reyes
+    cargo: Subprefecto de la Brigada de Homicidios de la PDI de Rancagua
+    organizacion: pdi
+    notas: "Subprefecto y jefe de la Brigada de Homicidios de Rancagua de la PDI. A cargo de las diligencias por la desaparición de la exconcejala de Graneros Thae Loiza Galaz (agosto 2026): análisis de cámaras y empadronamiento de testigos del círculo cercano (evento 20260816-11)."
+  maria_rosa_galaz:
+    nombre: María Rosa Galaz
+    cargo: Madre de Thae Loiza Galaz
+    notas: "Madre de la exconcejala de Graneros Thae Loiza Galaz, desaparecida en agosto de 2026. Entregó a la prensa detalles de las cámaras que muestran a su hija saliendo del edificio en Ñuñoa y del robo del celular que esta había sufrido semanas antes (evento 20260816-11)."
+  sofia_rengifo:
+    nombre: Sofía Rengifo
+    cargo: Subsecretaria del Deporte
+    notas: "Subsecretaria del Deporte del gobierno de Kast (nombrada junto al ministro Francisco Riveros Cantuarias en agosto de 2026). La presidenta de la Comisión de Deporte, Marisela Santibáñez, le pidió retomar la agenda legislativa del Mindep sin partir de cero (evento 20260815-7)."
+  maria_jose_labrador:
+    nombre: María José Labrador
+    cargo: Directora del Centro de Estudios de Comunicación Aplicada (CECA) de la UDD
+    notas: "Académica, directora del CECA de la Universidad del Desarrollo. Junto a otros juristas firmó una publicación argumentando que el término administrativo del convenio del Fondo de Pluralismo vulnera la obligación legal permanente del artículo 4° de la Ley de Prensa (agosto 2026, evento 20260814-11)."
+  claudia_mellado:
+    nombre: Claudia Mellado
+    cargo: Profesora titular de la Escuela de Periodismo de la PUCV
+    notas: "Profesora titular de la Escuela de Periodismo de la Pontificia Universidad Católica de Valparaíso. Respaldó la posición de INCOM Chile ante el fin del Fondo de Estudios sobre el Pluralismo: una instrucción administrativa de ajuste fiscal no puede dejar sin aplicación una obligación legal permanente (agosto 2026, evento 20260814-11)."
+  maria_jose_hoffmann:
+    nombre: María José Hoffmann
+    cargo: Dirigenta de la UDI
+    organizacion: udi
+    notas: "Dirigenta de la UDI. En agosto de 2026 fue criticada por Pablo Longueira —calificadas como 'inadecuadas' por el presidente del partido Guillermo Ramírez— en el contexto de la disputa interna por la secretaría general del partido y la candidatura de Jorge Alessandri a la presidencia de la UDI (evento 20260816-5)."
+  jorge_martinez_cortes:
+    nombre: Jorge Martínez Cortés
+    cargo: Exfuncionario de Carabineros
+    organizacion: carabineros
+    notas: "Exfuncionario de Carabineros dado de baja tras una detención ocurrida el domingo 12 de julio de 2026 en las cercanías de un camping en Illapel. Denunció en redes sociales 'graves irregularidades' del procedimiento realizado por sus colegas (golpes, sujeción en el cuello, cámaras corporales apagadas y pérdida de un reloj Casio y $127.000) y publicó videos del operativo (evento 20260816-4)."
+  cristian_mardones_ruiz:
+    nombre: Cristian Mardones Ruiz
+    cargo: Exfuncionario de Carabineros (Cuarta Comisaría de Curanilahue)
+    organizacion: carabineros
+    notas: "Excarabinero de la Cuarta Comisaría de Curanilahue formalizado junto a Michael Leal Martínez por omisión de denuncia ante el hallazgo de drogas durante una fiscalización en la ruta P-418 (14-jun-2025). Quedó con arresto domiciliario y arraigo nacional (evento 20260816-8)."
+  michael_leal_martinez:
+    nombre: Michael Leal Martínez
+    cargo: Exfuncionario de Carabineros (Cuarta Comisaría de Curanilahue)
+    organizacion: carabineros
+    notas: "Excarabinero de la Cuarta Comisaría de Curanilahue formalizado por omisión de denuncia (14-jun-2025, ruta P-418). La Fiscalía pidió prisión preventiva por sus presuntos vínculos con la Banda del Moto de Curanilahue (ya había sido formalizado por esa causa y quedado con arresto domiciliario); la Corte de Apelaciones de Concepción debe resolver (evento 20260816-8)."
+  johnny_cares:
+    nombre: Johnny Cares
+    cargo: Fiscal jefe de Arauco
+    organizacion: ministerio_publico
+    notas: "Fiscal jefe de Arauco. Formalizó a los excarabineros de Curanilahue Cristian Mardones Ruiz y Michael Leal Martínez por omisión de denuncia ante el hallazgo de drogas (Ley 20.000, art. 175 del Código Procesal Penal) y solicitó la prisión preventiva de Leal (evento 20260816-8)."
+  kenneth_rogoff:
+    nombre: Kenneth Rogoff
+    cargo: Académico de la Universidad de Harvard, execonomista jefe del FMI
+    organizacion: universidad_de_harvard
+    notas: "Economista estadounidense, profesor de la Universidad de Harvard y execonomista jefe del FMI. Autor de 'Our Dollar, Your Problem' (2025). En agosto de 2026 entrevistado por La Tercera Pulso: valoró la baja del impuesto corporativo de la megarreforma (27% a 23%), criticó el informe de la Casa Blanca que acusó a Chile de 'Caballo de Troya' de China y pronosticó que los aranceles de Trump no desaparecerán (evento 20260816-7)."
+  eduardo_marin:
+    nombre: Eduardo Marín
+    cargo: CEO de Trabajando.com
+    organizacion: trabajando_com
+    notas: "CEO de Trabajando.com. En el Summit Ecosistema del Trabajo 2026 (agosto) advirtió de una 'reducción estructural de las oportunidades laborales' en Chile: los avisos laborales cayeron más de 20% entre 2019 y 2025 y las vacantes por aviso más de 40% (evento 20260814-12)."
+  maria_izquierdo:
+    nombre: María Izquierdo
+    cargo: Abogada
+    notas: "Abogada. En agosto de 2026 interpuso ante el Juzgado de Cobranza Laboral y Previsional de Santiago un escrito solicitando un nuevo apercibimiento contra el alcalde de Santiago Mario Desbordes por el incumplimiento reiterado de una resolución judicial que ordenaba pagar $3.496.959 en el juicio laboral 'Vega/Ilustre Municipalidad de Santiago' (evento 20260814-13)."
+  cristian_crisosto:
+    nombre: Cristián Crisosto
+    cargo: Fiscal regional de Magallanes y de la Antártica Chilena
+    organizacion: ministerio_publico
+    notas: "Fiscal regional de Magallanes. Ante la Comisión de Seguridad Pública del Senado en Punta Arenas (14-ago-2026) reveló 46 investigaciones vigentes por explotación sexual infantil, 214 delitos entre 2023 y julio de 2026 con 77 víctimas únicas, y una tasa regional que duplica la media nacional (evento 20260814-14)."
+  viviana_bazan:
+    nombre: Viviana Bazán
+    cargo: Coordinadora regional de la Defensoría de la Niñez en Magallanes
+    organizacion: defensoría_de_la_ninez
+    notas: "Coordinadora regional de la Defensoría de la Niñez en Magallanes. En la sesión territorial de la Comisión de Seguridad Pública del Senado en Punta Arenas (14-ago-2026) valoró la coordinación interinstitucional para la detección temprana y reparación de víctimas de explotación sexual infantil (evento 20260814-14)."
   victor_hugo_robles:
     nombre: Víctor Hugo Robles
     cargo: Activista y panelista de Sin Filtros
@@ -486,6 +572,16 @@ people:
     nombre: José Miguel Castro
     cargo: Representante de Chile ante la OEA
     notas: "Exdiputado de Renovación Nacional y representante de Chile ante la OEA. Encabezó los descargos del gobierno de Kast en la audiencia de la CIDH del 5 de agosto de 2026, calificando de 'absolutamente incompatibles con la realidad fáctica' las denuncias de desmantelamiento de la institucionalidad de DDHH."
+  jose_montalva:
+    nombre: José Montalva
+    cargo: Diputado (PPD)
+    organizacion: partido_por_la_democracia
+    notas: "Diputado del PPD. El 15 de agosto de 2026 criticó que 'poner personas sin la preparación necesaria en cargos de tanta responsabilidad degrada las instituciones y los estándares de probidad que el Estado exige' y advirtió que 'si la excelencia se mide reemplazando gente cada cuatro días, algo en el filtro de entrada está fallando' (evento 20260815-2)."
+  fares_jadue:
+    nombre: Fares Jadue
+    cargo: Alcalde de Recoleta (PC)
+    organizacion: municipalidad_de_recoleta
+    notas: "Alcalde de Recoleta (PC). En agosto de 2026 advirtió que el recorte del Decreto 333 a la atención primaria —incluido el fin del programa de Atención Médica Expedita, que redujo los horarios del Cesfam administrado por la Fundación Cristo Vive— saturará el SAR Zapadores (evento 20260816-1)."
   felipe_kipreos:
     nombre: Felipe Kipreos
     cargo: Abogado de la cancillería
@@ -502,6 +598,11 @@ people:
     nombre: César Manríquez Bravo
     cargo: Exagente de la DINA condenado por crímenes de lesa humanidad
     notas: "Exagente de la DINA condenado por crímenes de lesa humanidad. Según la denuncia de las organizaciones ante la CIDH (agosto 2026), la justicia determinó su excarcelación y entrega a su esposa en 2026, en un caso en que el Programa de DDHH no intervino."
+  cesar_valenzuela:
+    nombre: César Valenzuela
+    cargo: Diputado (PS)
+    organizacion: partido_socialista
+    notas: "Diputado del Partido Socialista. El 15 de agosto de 2026, ante las 43 salidas de autoridades del gobierno de Kast, señaló que 'es importante que el Gobierno ordene, de que revise sus nominaciones' y entregue autoridades que den continuidad a los servicios públicos (evento 20260815-2)."
   walter_klug_rivera:
     nombre: Walter Klug Rivera
     cargo: Exoficial del SIM condenado por crímenes de lesa humanidad
@@ -955,6 +1056,11 @@ people:
         desde: 2020-07-28
         hasta: 2020-12-18
     organizacion: municipalidad_de_santiago
+  mario_olavarria:
+    nombre: Mario Olavarría
+    cargo: Diputado (UDI)
+    organizacion: udi
+    notas: "Diputado de la UDI. El 15 de agosto de 2026, en el marco de las críticas por las 43 salidas de autoridades del gobierno de Kast en cinco meses, reconoció que 'han existido errores de diseño que han tenido costos' y planteó evaluar 'cómo está funcionando la administración en sus distintas áreas' (evento 20260815-2)."
   mara_sedini:
     nombre: Mara Sedini Viancos
     cargo: Ex ministra Secretaría General de Gobierno
@@ -1016,6 +1122,11 @@ people:
     nombre: Dignaldo Araneda Pizzini
     cargo: Estudiante de la Universidad de Chile (MIR), detenido desaparecido
     notas: "Estudiante de la Universidad de Chile y militante del MIR, detenido el 10-ago-1974 en La Reina por agentes de la DINA. Fue visto en el centro de detención clandestino Londres 38 y luego en el cuartel 4 Álamos, último lugar donde se le vio con vida; permanece desaparecido. Su desaparición originó la condena de 15 años a Miguel Krassnoff confirmada por la Corte de Apelaciones de Santiago en agosto de 2026 (evento 20260813-12)."
+  laureano_checa:
+    nombre: Laureano Checa
+    cargo: Presidente de INCOM Chile
+    organizacion: incom_chile
+    notas: "Presidente de INCOM Chile, la asociación chilena de investigadores en comunicación. Cuestionó el fin del Fondo de Estudios sobre el Pluralismo financiado por la Segegob vía ANID (convenio vigente desde 2009) y la cancelación de la convocatoria 2026, advirtiendo que se corta 'toda una línea de reflexión sin una justificación clara' (evento 20260814-11)."
   luciano_cruz_coke:
     nombre: Luciano Cruz-Coke
     cargo: Senador y presidente de Evópoli
@@ -1483,6 +1594,9 @@ people:
     nombre: Javiera Navarrete Hurtubia
     cargo: Exsubteniente de Carabineros condenada por apremios ilegítimos
     notas: "Exsubteniente de Carabineros condenada a 3 años de presidio (remisión condicional) por el Juzgado de Garantía de La Serena (24-may-2023, procedimiento abreviado) por tres delitos de apremios ilegítimos: obligar a detenidos a cantar el himno nacional bajo amenazas y agredir a una mujer con golpes y gas químico forzándola a desnudarse."
+  sebastian_gonzalez:
+    nombre: Sebastián González Faúndez
+    notas: "Carabinero de la 43° Comisaría de Peñalolén condenado el 31 de julio de 2023 (rol 45-2023, 7° Tribunal Oral en lo Penal de Santiago) a 800 días de presidio con remisión condicional por un delito de apremios ilegítimos contra detenidos del estallido social (aplicó una sustancia irritante en ojos, nariz y rostro de Johans Garabito Acevedo la noche del 20-21 de octubre de 2019). Evento 20230731-1."
   juan_pablo_leiva:
     nombre: Juan Pablo Leiva Puga
     cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
@@ -1618,6 +1732,11 @@ people:
     nombre: José Piñera
     notas: Exministro, creador del sistema de AFP y del Código Minero. Reunión
       reservada con Thiel en Santiago.
+  gonzalo_velasquez:
+    nombre: Gonzalo Velásquez
+    cargo: Activista del Movilh
+    organizacion: movilh
+    notas: "Activista del Movimiento de Integración y Liberación Homosexual (Movilh) y organizador responsable de gestionar los permisos de la Marcha del Orgullo de Santiago 2025. Fue multado con 5 UTM (unos $358.000) por 'ruidos molestos' ante el Juzgado de Policía Local de Santiago y el proceso derivó en una orden de reclusión en su contra, con rondas de Carabineros en su domicilio (evento 20260813-15)."
   gonzalo_winter:
     nombre: Gonzalo Winter
     cargo: Diputado (Frente Amplio)
@@ -2465,7 +2584,7 @@ people:
   eduardo_lagos:
     nombre: Eduardo Lagos
     cargo: Abogado penalista
-    notas: "Abogado penalista, asesor legal de Inmobiliaria Fundamenta junto a Mario Vargas y Gabriel Silber. Imputado en la 'trama bielorrusa' (causa Consorcio Belaz Movitec con Codelco) por soborno, cohecho y lavado de activos. En la arista Fundamenta del caso Audios, la Fiscalía Regional de Los Lagos detectó que ordenó un depósito de $13 millones a Gonzalo Migueles, pareja de la entonces ministra de la Corte Suprema Ángela Vivanco, cuatro días después del fallo favorable de la Tercera Sala (CIPER, 15-jul-2026)."
+    notas: "Abogado penalista. En 2021 defendió al exalcalde de San Ramón Miguel Ángel Aguilera (recurso para revocar la prisión preventiva ante la Corte de Apelaciones de San Miguel, 2-ago-2021). Luego, asesor legal de Inmobiliaria Fundamenta junto a Mario Vargas y Gabriel Silber; imputado en la 'trama bielorrusa' (causa Consorcio Belaz Movitec con Codelco) por soborno, cohecho y lavado de activos. En la arista Fundamenta del caso Audios, la Fiscalía Regional de Los Lagos detectó que ordenó un depósito de $13 millones a Gonzalo Migueles, pareja de la entonces ministra de la Corte Suprema Ángela Vivanco, cuatro días después del fallo favorable de la Tercera Sala (CIPER, 15-jul-2026)."
   gabriel_silber:
     nombre: Gabriel Silber
     cargo: Abogado
@@ -2584,6 +2703,11 @@ people:
     nombre: Álvaro Jalaff
     cargo: Empresario, socio fundador de Grupo Patio y Factop
     notas: Condenado a 5 años de presidio por cohecho e infracciones tributarias en caso Audios-Factop. Cumple en libertad vigilada.
+  pamela_jiles:
+    nombre: Pamela Jiles
+    cargo: Diputada (PDG)
+    organizacion: pdg
+    notas: "Diputada del Partido de la Gente (PDG). El 15 de agosto de 2026, junto a Paula Olmos, acusó un 'sesgo de género' en el gobierno de José Antonio Kast tras la salida de Natalia Duco: las tres ministras que han dejado el gabinete (Steinert, Sedini y Duco) fueron reemplazadas por hombres, y sostuvo que 'pareciera que en este Gobierno quienes pagan sus faltas son las ministras', citando como contraste que un ministro que no comunicó oportunamente un requerimiento al Tribunal Constitucional permanece en su cargo (evento 20260815-2)."
   paula_olmos:
     nombre: Paula Olmos
     cargo: Diputada (PDG)
@@ -2846,6 +2970,10 @@ people:
     nombre: Paola Plaza
     cargo: Ministra en visita de la Corte de Apelaciones de Santiago
     notas: Ordenó el ingreso a prisión de Nelson Haase Mazzei
+  camila_fuentevilla:
+    nombre: Camila Fuentevilla
+    cargo: Presidenta de la Confederación Democrática de Profesionales Universitarios de la Salud
+    notas: "Presidenta de la Confederación Democrática de Profesionales Universitarios de la Salud. Tras el Decreto 333 advirtió que la reducción de las horas extraordinarias terminará abultando las listas de espera y sobrecargando a los funcionarios de la red pública (evento 20260816-1)."
   camila_davagnino:
     nombre: Camila Davagnino
     cargo: Concejala de Santiago
@@ -3470,6 +3598,11 @@ people:
     nombre: Ale Valle
     cargo: Periodista de La Voz de los que Sobran
     notas: "Periodista del programa La Voz de los que Sobran. En agosto de 2026 exhibió y criticó el gráfico 'Crecimiento económico' de TVN sobre el IMACEC de junio (+2,4%), señalando que la escala distorsionada genera la ilusión de un salto descomunal: 'Es como si la economía hubiese subido un 20%. Un gráfico al estilo Piñera'."
+  rolando_jimenez:
+    nombre: Rolando Jiménez
+    cargo: Fundador del Movilh
+    organizacion: movilh
+    notas: "Fundador del Movimiento de Integración y Liberación Homosexual (Movilh). El 13 de agosto de 2026 denunció como 'el más grave y horroroso atentado contra la libertad de expresión' del Orgullo en Chile la multa por ruidos molestos y la orden de reclusión contra el activista Gonzalo Velásquez, anunciando recursos de queja y de protección y la eventual apelación a organismos internacionales (evento 20260813-15)."
   roberto_merken:
     nombre: Roberto Merken
     cargo: Comentarista de opinión en X
@@ -3921,6 +4054,11 @@ people:
     nombre: Javiera Rodríguez
     cargo: Diputada (Partido Republicano), exoficial de Carabineros
     notas: "Diputada del Partido Republicano, conocida como la 'Capitana' Rodríguez por su pasado en Carabineros. El 6 de agosto de 2026 lanzó la campaña 'Presos por servir' (presosxservir.cl) para reunir firmas por indultos a exuniformados condenados por el estallido social, esperando indultos 'antes de Navidad' (evento 20260806-56)."
+  maximiliano_ramirez:
+    nombre: Maximiliano Ramírez
+    cargo: Exjefe de sección de la SMA
+    organizacion: superintendencia_medio_ambiente
+    notas: "Abogado, exjefe de la Sección de Atención a Público y Regulados de la Superintendencia del Medio Ambiente (SMA). Destituido tras un sumario administrativo (concluido el 3 de junio de 2026) por almacenar más de 3.000 archivos creados con inteligencia artificial sexualizando a compañeras de trabajo y otras mujeres de su círculo; los antecedentes fueron derivados al Ministerio Público (evento 20260815-4)."
   maximiliano_rios:
     nombre: Maximiliano Ríos Galarce
     cargo: Alcalde de Lo Prado
@@ -4734,6 +4872,11 @@ people:
     cargo: Presidenta del Frente Amplio
     organizacion: frente_amplio
     notas: "Presidenta del Frente Amplio y carta de la continuidad en la elección interna de la colectividad. El 6 de agosto de 2026 criticó con dureza el plan de seguridad de Kast, afirmando que 'acusaron el golpe' y que apelan a 'normas represivas que no resuelven el problema en las poblaciones'."
+  joel_olmos:
+    nombre: Joel Olmos
+    cargo: Alcalde de La Cisterna
+    organizacion: municipalidad_de_la_cisterna
+    notas: "Alcalde independiente de La Cisterna. Reportó que el recorte del Decreto 333 a la atención primaria ($405 millones efectivos en 2026) proyecta unas 18.000 atenciones menos, y que entre abril y mayo su comuna debió rechazar más de 4.300 atenciones médicas y 1.600 odontológicas (evento 20260816-1)."
   joel_velasco:
     nombre: Joel Velasco
     cargo: Vicepresidente de UnitedHealth Group
@@ -5427,6 +5570,18 @@ people:
     nombre: Miguel Ángel Aguilera
     cargo: Exalcalde de San Ramón
     notas: "Exalcalde de San Ramón (2012-2021) y exmilitante socialista. CIPER reveló en 2018 que compró una propiedad en La Reina por cerca de $350 millones con fondos ilícitos. En 2025 fue condenado por lavado de activos (4 años de reclusión bajo libertad vigilada y multa de 200 UTM) y aumento patrimonial injustificado (multa de $246.918.500). En agosto de 2026 el Sexto Tribunal Oral en lo Penal de Santiago confirmó que la casa pasa al fisco. En 2021 demandó a CIPER por $1.700 millones por daño moral; abandonó el proceso."
+  mariela_hernandez:
+    nombre: Mariela Hernández Beiza
+    cargo: Jueza del 15° Juzgado de Garantía de Santiago
+    notas: "Jueza que el 26-jul-2021 decretó y luego confirmó (24-sep-2021, causa rol 3.143-2018) la prisión preventiva del exalcalde de San Ramón Miguel Ángel Aguilera, argumentando peligro para la seguridad de la sociedad y que los delitos de corrupción 'ponen en juego el Estado de Derecho y la democracia'."
+  victor_nunez:
+    nombre: Víctor Núñez
+    cargo: Fiscal de la Fiscalía Metropolitana Sur
+    notas: "Fiscal que imputó al exalcalde de San Ramón Miguel Ángel Aguilera (2021) por enriquecimiento ilícito (ene-2013 a sep-2017), cohecho (2014-2016) y lavado de activos (feb-2013 a mayo-2017), con un incremento patrimonial injustificado de $263.818.500 en dos cuentas personales."
+  andres_tagle:
+    nombre: Andrés Tagle
+    cargo: Presidente del Consejo Directivo del Servel
+    notas: "Presidente del Consejo Directivo del Servicio Electoral (Servel) durante las elecciones de 2021. Destacó que la primera vuelta del 21-nov-2021 se desarrolló 'con normalidad, en paz, sin incidentes mayores' y que las aglomeraciones respondieron a la alta participación."
   jorge_chino_pinto:
     nombre: Jorge "Chino" Pinto
     cargo: Narcotraficante
@@ -8782,6 +8937,29 @@ people:
     cargo: Abogado querellante
     notas: "Abogado chileno, representante de la familia de Cristián Valdebenito en la querella contra el ex director general de Carabineros Mario Rozas por la muerte del manifestante alcanzado por una bomba lacrimógena en marzo de 2020 (2022)."
 
+  richard_godoy:
+    nombre: Richard Godoy Aguirre
+    cargo: Alcalde de Pozo Almonte
+    organizacion: municipalidad_pozo_almonte
+    notas: "Alcalde de Pozo Almonte (Región de Tarapacá). El 14 de agosto de 2026 fue formalizado por delitos tributarios: aumento malicioso del crédito fiscal de IVA y simulación o adulteración de operaciones (art. 97 N°4 del Código Tributario) mediante 45 facturas falsas emitidas por cinco proveedores entre 2016 y 2021, mientras fungía como administrador de hecho de EMYC. Perjuicio fiscal de $1.316.591.501. Quedó con arraigo nacional y firma mensual (evento 20260814-15)."
+  julio_salas:
+    nombre: Julio Salas
+    cargo: Subsecretario de Pesca (2022-2023)
+    organizacion: subsecretaria_pesca
+    notas: "Subsecretario de Pesca y Acuicultura durante el gobierno de Gabriel Boric. El reportaje de CIPER del 7 de mayo de 2024 detectó que sostuvo 54 reuniones con la industria pesquera entre enero de 2022 y diciembre de 2023 que no fueron registradas en la plataforma de la Ley de Lobby (evento 20240508-1)."
+  benjamin_miranda:
+    nombre: Benjamín Miranda
+    notas: "Periodista de CIPER Chile. Autor del reportaje del 7 de mayo de 2024 que reveló las 133 reuniones de ministros y subsecretarios con empresarios no registradas en la Ley de Lobby (evento 20240508-1)."
+  maria_jaraquemada:
+    nombre: María Jaraquemada
+    notas: "Abogada y consejera del Consejo para la Transparencia (CPLT). Citada por CIPER en el reportaje de mayo de 2024 sobre las reuniones no registradas en la Ley de Lobby, llamando a modernizar la normativa y reducir sus 'líneas grises' (evento 20240508-1)."
+  marcelo_drago:
+    nombre: Marcelo Drago
+    notas: "Abogado y expresidente del Consejo para la Transparencia (CPLT). Citado por CIPER en el reportaje de mayo de 2024 sobre las reuniones no registradas en la Ley de Lobby, señalando que las excepciones de la ley deben usarse 'con prudencia y buena fe' (evento 20240508-1)."
+  pablo_zalaquett:
+    nombre: Pablo Zalaquett
+    notas: "Exalcalde UDI de La Florida (2000-2012), procesado por financiamiento ilegal de campañas políticas (caso Penta). Su casa fue escenario en 2023-2024 de las 'comidas de Zalaquett': reuniones de ministros y parlamentarios con empresarios que generaron polémica por no estar registradas en la Ley de Lobby (evento 20240508-1)."
+
 organizations:
   cencosud:
     nombre: Cencosud S.A.
@@ -8791,6 +8969,11 @@ organizations:
     nombre: Municipalidad de Coronel
     tipo: municipalidad
     notas: "Municipio de la comuna de Coronel, Región del Biobío. Su concejal David Rivas (RN) fue detenido el 10-ago-2026 por mostrar una revisión técnica adulterada en una fiscalización vehicular (evento 20260810-36)."
+  fenpruss:
+    nombre: FENPRUSS
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Federación Nacional de Profesionales Universitarios de los Servicios de Salud (FENPRUSS), gremio de profesionales de la salud pública chilena. Convocó a una manifestación frente al ex Congreso el 10 de agosto de 2026 mientras sesionaba la Comisión de Salud del Senado, en el marco del malestar por el decreto 333 y el recorte sanitario (evento 20260816-1)."
 
   consorcio_andino:
     nombre: Consorcio Andino (Buses JM)
@@ -8921,11 +9104,36 @@ organizations:
     nombre: Descifra
     tipo: encuestadora
     notas: "Encuestadora chilena, sondeo Termometro Politico (Alianza Copesa-Artool). Su medicion de julio-agosto 2026 registro 63% de rechazo a la gestion del ministro de Hacienda Jorge Quiroz y 50% de escepticismo sobre los resultados de la megarreforma."
+  partido_libertario:
+    nombre: Partido Libertario
+    tipo: partido_politico
+    pais: Chile
+    notas: "Partido político chileno (Partido Nacional Libertario). En agosto de 2026 propuso fusionar el Ministerio del Deporte con otras carteras, idea que la presidenta de la Comisión de Deporte de la Cámara, Marisela Santibáñez, rechazó defendiendo la autonomía del Mindep (evento 20260815-7)."
   contrapoder_chile:
     nombre: Contrapoder Chile
     tipo: medio_comunicacion
     pais: Chile
-    notas: "Medio digital chileno de investigacion y actualidad. Publico el reportaje sobre los ministros del gabinete de Kast beneficiados por la exencion de contribuciones (abril 2026) y la investigacion sobre la designacion de Daniel Diaz en el directorio de Codelco (mayo 2026)."
+    notas: "Medio digital chileno de investigacion y actualidad. Publico el reportaje sobre los ministros del gabinete de Kast beneficiados por la exencion de contribuciones (abril 2026) y la investigacion sobre la designacion de Daniel Diaz en el directorio de Codelco (mayo 2026). En agosto de 2026 publico la denuncia de la abogada Maria Izquierdo contra el alcalde de Santiago Mario Desbordes por el incumplimiento reiterado de un dictamen judicial."
+  elpinguino:
+    nombre: El Pingüino
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario regional de Punta Arenas (Patagonica Publicaciones). En agosto de 2026 cubrio la sesion territorial de la Comision de Seguridad Publica del Senado en Punta Arenas, donde la Fiscalia Regional revelo 46 investigaciones vigentes por explotacion sexual infantil en Magallanes."
+  ovejeronoticias:
+    nombre: Ovejero Noticias
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital de Punta Arenas, region de Magallanes. En agosto de 2026 cubrio los 214 delitos de explotacion sexual infantil (2023-jul 2026) expuestos por el fiscal regional Cristian Crisosto ante la Comision de Seguridad Publica del Senado."
+  trabajando_com:
+    nombre: Trabajando.com
+    tipo: empresa
+    pais: Chile
+    notas: "Plataforma chilena de empleo. Su CEO Eduardo Marin advirtio en el Summit Ecosistema del Trabajo 2026 (agosto) de una 'reduccion estructural de las oportunidades laborales': las postulaciones superan los 5 millones mientras caen las vacantes."
+  universidad_de_harvard:
+    nombre: Universidad de Harvard
+    tipo: universidad
+    pais: Estados Unidos
+    notas: "Universidad estadounidense. El economista Kenneth Rogoff, execonomista jefe del FMI, es profesor de su Departamento de Economia."
   cchc:
     nombre: Camara Chilena de la Construccion
     tipo: gremio
@@ -11209,6 +11417,26 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno (g5noticias.cl)."
+  municipalidad_pozo_almonte:
+    nombre: Municipalidad de Pozo Almonte
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de Pozo Almonte, comuna de la Provincia del Tamarugal (Región de Tarapacá). Su alcalde Richard Godoy Aguirre fue formalizado en agosto de 2026 por delitos tributarios (evento 20260814-15)."
+  edicioncero:
+    nombre: Edición Cero
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital de la Región de Tarapacá (edicioncero.cl)."
+  emyc:
+    nombre: EMYC (Empresa de Mantención a la Minería y Comercialización Ltda.)
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de la que el alcalde de Pozo Almonte Richard Godoy era administrador de hecho; según la Fiscalía, usó 45 facturas falsas de cinco proveedores para aumentar maliciosamente el crédito fiscal de IVA entre 2016 y 2021 (evento 20260814-15)."
+  subsecretaria_pesca:
+    nombre: Subsecretaría de Pesca y Acuicultura
+    tipo: subsecretaria
+    pais: Chile
+    notas: "Subsecretaría dependiente del Ministerio de Economía. En 2024, CIPER detectó que el subsecretario Julio Salas sostuvo 54 reuniones con la industria pesquera sin registrarlas en la Ley de Lobby (evento 20240508-1)."
   soychile:
     nombre: SoyChile
     tipo: medio_comunicacion
@@ -11532,6 +11760,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno (nuevopoder.cl)."
+  el_san_carlino:
+    nombre: El San Carlino
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno de la Región de Ñuble (elsancarlino.cl)."
   diario_constitucional:
     nombre: Diario Constitucional
     tipo: medio_comunicacion
@@ -11990,6 +12223,21 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio chilena (radiocontacto.cl)."
+  radio_la_union:
+    nombre: Radio La Unión
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (radiolaunion.cl), cobertura regional de Los Ríos. Cubrió la polémica del menú del Complejo Penitenciario La Laguna de Talca (14-ago-2026)."
+  radio_fm_mas:
+    nombre: Radio FM+
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (radiofmmas.cl), 92.3 FM Talca. Cubrió la polémica del menú del Complejo Penitenciario La Laguna (14-ago-2026) con el contraste frente al BAES y la Operación Cancerbero."
+  diario_el_centro:
+    nombre: Diario El Centro
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio regional del Maule (diarioelcentro.cl). Publicó el detalle del menú de las bases de licitación del Nuevo Establecimiento Penitenciario de Talca (14-ago-2026)."
   chicureo_hoy:
     nombre: Chicureo Hoy
     tipo: medio_comunicacion
@@ -12562,6 +12810,48 @@ organizations:
     pais: Chile
     notas: "Casa de cambios de Harold Pizarro Iturrieta. La Fiscalía Regional de Los Lagos la sindica como pieza del mecanismo de blanqueo de la trama bielorrusa, que convertía cheques nominativos de los abogados de Belaz Movitec en efectivo que habría terminado en manos de Gonzalo Migueles (evento 20260806-55)."
 
+  movilh:
+    nombre: Movimiento de Integración y Liberación Homosexual (Movilh)
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización de defensa de los derechos LGBTIQ+ fundada en 1991. En agosto de 2026 denunció como 'inédito atentado contra el Orgullo' la multa de 5 UTM y la orden de reclusión contra el activista Gonzalo Velásquez tras la Marcha del Orgullo de Santiago 2025 (evento 20260813-15)."
+
+  incom_chile:
+    nombre: INCOM Chile
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Asociación chilena de investigadores en comunicación. Su presidente, Laureano Checa, cuestionó el fin del Fondo de Estudios sobre el Pluralismo financiado por la Segegob vía ANID (2026) por la falta de claridad sobre el futuro de los estudios (evento 20260814-11)."
+
+  superintendencia_medio_ambiente:
+    nombre: Superintendencia del Medio Ambiente (SMA)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo público encargado de fiscalizar el cumplimiento de la normativa ambiental. En 2026 destituyó a un abogado de la entidad tras un sumario por almacenar más de 3.000 archivos creados con IA sexualizando a compañeras de trabajo (evento 20260815-4)."
+
+  consejo_monumentos_nacionales:
+    nombre: Consejo de Monumentos Nacionales (CMN)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo del Ministerio de las Culturas que autoriza y supervisa la intervención de sitios con hallazgos arqueológicos. El ministro de Vivienda, Iván Poduje, cuestionó su gestión por los sobrecostos en viviendas sociales (más de $13.000 millones en rescates 2021-2026) y amenazó con recurrir a la Contraloría (evento 20260815-3)."
+
+  hospital_sotero_del_rio:
+    nombre: Hospital Sótero del Río
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Hospital público de Puente Alto, el más grande de Chile. El Decreto 333 le aplicó un ajuste de $3.182 millones (1,1% de su presupuesto operacional) y en 2026 enfrentó episodios de desabastecimiento de alimentos que obligaron al personal a comprar insumos con aportes propios (evento 20260816-1)."
+
+  ladiscusion:
+    nombre: La Discusión
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario regional de Chillán (Ñuble), portal ladiscusion.cl. Medio de prensa complementario; cubrió el decrecimiento natural de Portezuelo y las comunas con más muertes que nacimientos (evento 20260816-3)."
+
+  veredictum:
+    nombre: Veredictum
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal chileno de noticias político-judiciales (veredictum.cl). Medio de prensa complementario; su cobertura suele resumir y enlazar artículos de La Tercera y Emol."
+
   belaz_movitec:
     nombre: Consorcio Belaz Movitec (CBM)
     tipo: empresa
@@ -12569,6 +12859,98 @@ organizations:
     notas: "Consorcio chileno-bielorruso (Belaz Movitec, CBM) en litigio histórico con Codelco por la explotación minera. La Fiscalía indaga si la exministra de la Corte Suprema Ángela Vivanco usó su posición en la Tercera Sala para acelerar fallos favorables al consorcio a cambio de pagos a su entonces pareja Gonzalo Migueles (trama bielorrusa, evento 20260806-55)."
 
 cifras:
+  multa_marcha_orgullo_utm:
+    nombre: Multa por ruidos molestos a la Marcha del Orgullo 2025
+    unidad_default: UTM
+    notas: "5 UTM (unos $358.000) impuestas por el Juzgado de Policía Local de Santiago contra el activista del Movilh Gonzalo Velásquez por supuestos ruidos molestos durante la Marcha del Orgullo de junio de 2025 frente a La Moneda (evento 20260813-15)."
+  multa_marcha_orgullo_pesos:
+    nombre: Multa en pesos por ruidos molestos a la Marcha del Orgullo 2025
+    unidad_default: pesos
+    notas: "Unos 358.000 pesos pagados por el Movilh para evitar el arresto del activista Gonzalo Velásquez, multado con 5 UTM por ruidos molestos frente a La Moneda (evento 20260813-15)."
+  archivos_ia_sexuales_sma:
+    nombre: Archivos con contenido sexual generado con IA almacenados por un abogado de la SMA
+    unidad_default: archivos
+    notas: "Más de 3.000 archivos creados con inteligencia artificial sexualizando a compañeras de trabajo y otras mujeres del círculo del abogado Maximiliano Ramírez, detectados por su expareja en 2025 y acreditados por un sumario de la SMA que concluyó con su destitución el 3 de junio de 2026 (evento 20260815-4)."
+  companeras_afectadas_sma:
+    nombre: Compañeras de trabajo afectadas por el abogado de la SMA
+    unidad_default: personas
+    notas: "Más de diez trabajadoras de la Superintendencia del Medio Ambiente fueron contactadas por la expareja del abogado Maximiliano Ramírez tras descubrir los archivos con contenido sexual generado con IA (evento 20260815-4)."
+  costo_rescates_arqueologicos_minvu:
+    nombre: Costo de rescates arqueológicos y paleontológicos en viviendas sociales (2021-2026)
+    unidad_default: millones de pesos
+    notas: "Cerca de $13.160 millones (322.153,01 UF) gastados por el Minvu entre 2021 y 2026 en costos ligados a hallazgos arqueológicos y paleontológicos en 12 proyectos de viviendas sociales; el ministro Poduje amenazó con recurrir a la Contraloría para recuperarlos (evento 20260815-3)."
+  proyectos_afectados_hallazgos_arqueologicos:
+    nombre: Proyectos de viviendas sociales afectados por hallazgos arqueológicos (2021-2026)
+    unidad_default: proyectos
+    notas: "12 proyectos inmobiliarios de viviendas sociales afectados por hallazgos arqueológicos entre 2021 y 2026, con 3.486 familias involucradas (evento 20260815-3)."
+  familias_afectadas_hallazgos_arqueologicos:
+    nombre: Familias afectadas por hallazgos arqueológicos en viviendas sociales
+    unidad_default: familias
+    notas: "3.486 familias afectadas por hallazgos arqueológicos en 12 proyectos de viviendas sociales del Minvu entre 2021 y 2026 (evento 20260815-3)."
+  atraso_promedio_hallazgos_arqueologicos:
+    nombre: Atraso promedio de proyectos por hallazgos arqueológicos
+    unidad_default: meses
+    notas: "15 meses de atraso promedio de los proyectos de vivienda social por hallazgos arqueológicos; el peor caso fue Rincón del Paraíso en Lago Ranco, con 84 meses de extensión del contrato (evento 20260815-3)."
+  recorte_decreto_333_minsal:
+    nombre: Recorte al presupuesto del Ministerio de Salud por el Decreto 333
+    unidad_default: millones de pesos
+    notas: "Recorte de 2,5% —más de $413.000 millones— al Ministerio de Salud instruido por el Decreto 333 de Hacienda (ingresó a Contraloría el 24 de abril de 2026), con impacto en hospitales y atención primaria (evento 20260816-1)."
+  ajuste_sotero_del_rio:
+    nombre: Ajuste presupuestario del Hospital Sótero del Río por el Decreto 333
+    unidad_default: millones de pesos
+    notas: "$3.182 millones (1,1% de su presupuesto operacional) aplicados al Hospital Sótero del Río por el Decreto 333, que ya arrastraba una deuda con proveedores superior a los $21.385 millones (evento 20260816-1)."
+  tasa_fecundidad_chile_2025:
+    nombre: Tasa global de fecundidad de Chile en 2025
+    unidad_default: hijos por mujer
+    notas: "0,99 hijos por mujer en 2025, la primera vez que Chile registra menos de un hijo por mujer; en 1993 la tasa era de 2,44 (evento 20260816-3)."
+  tasa_fecundidad_chile_1993:
+    nombre: Tasa global de fecundidad de Chile en 1993
+    unidad_default: hijos por mujer
+    notas: "2,44 hijos por mujer en 1993, frente a 0,99 en 2025: Chile lleva más de un cuarto de siglo sin alcanzar el reemplazo generacional (evento 20260816-3)."
+  tcn_cochamo:
+    nombre: Tasa de crecimiento natural de Cochamó
+    unidad_default: por mil habitantes
+    notas: "-8,6 por mil habitantes: Cochamó (Los Lagos) lidera las comunas donde ya mueren más personas de las que nacen (evento 20260816-3)."
+  tcn_portezuelo:
+    nombre: Tasa de crecimiento natural de Portezuelo
+    unidad_default: por mil habitantes
+    notas: "-7,0 por mil habitantes: Portezuelo (Ñuble) es la segunda comuna con mayor decrecimiento natural del país (evento 20260816-3)."
+  tcn_rio_hurtado:
+    nombre: Tasa de crecimiento natural de Río Hurtado
+    unidad_default: por mil habitantes
+    notas: "-5,9 por mil habitantes: Río Hurtado (Coquimbo) es la tercera comuna con mayor decrecimiento natural del país (evento 20260816-3)."
+  gabinete_kast_inicial_personas:
+    nombre: Integrantes del gabinete inicial de Kast (marzo 2026)
+    unidad_default: personas
+    notas: "24 personas integraron el primer gabinete de José Antonio Kast (11 mujeres y 13 hombres; 45,8% mujeres), asumido en marzo de 2026 (evento 20260815-2)."
+  gabinete_kast_inicial_mujeres:
+    nombre: Ministras del gabinete inicial de Kast (marzo 2026)
+    unidad_default: personas
+    notas: "11 mujeres integraron el primer gabinete de José Antonio Kast (24 personas), un 45,8% del total (evento 20260815-2)."
+  gabinete_kast_inicial_hombres:
+    nombre: Ministros del gabinete inicial de Kast (marzo 2026)
+    unidad_default: personas
+    notas: "13 hombres integraron el primer gabinete de José Antonio Kast (24 personas), un 54,2% del total (evento 20260815-2)."
+  gabinete_kast_actual_personas:
+    nombre: Integrantes del gabinete de Kast tras la salida de Duco (agosto 2026)
+    unidad_default: personas
+    notas: "22 personas integran el gabinete de José Antonio Kast tras el reemplazo de Natalia Duco por Francisco Riveros en el Ministerio del Deporte (agosto 2026) (evento 20260815-2)."
+  gabinete_kast_actual_mujeres:
+    nombre: Ministras del gabinete de Kast tras la salida de Duco (agosto 2026)
+    unidad_default: personas
+    notas: "8 mujeres integran el gabinete de José Antonio Kast (22 personas) tras la salida de Natalia Duco, un 36,4% del total (evento 20260815-2)."
+  gabinete_kast_actual_hombres:
+    nombre: Ministros del gabinete de Kast tras la salida de Duco (agosto 2026)
+    unidad_default: personas
+    notas: "14 hombres integran el gabinete de José Antonio Kast (22 personas) tras la salida de Natalia Duco, un 63,6% del total (evento 20260815-2)."
+  porcentaje_mujeres_gabinete_kast:
+    nombre: Porcentaje de mujeres en el gabinete de Kast tras la salida de Duco
+    unidad_default: "%"
+    notas: "36,4% de mujeres en el gabinete de José Antonio Kast tras el reemplazo de Natalia Duco por Francisco Riveros (agosto 2026), frente al 45,8% del gabinete inicial (evento 20260815-2)."
+  porcentaje_hombres_gabinete_kast:
+    nombre: Porcentaje de hombres en el gabinete de Kast tras la salida de Duco
+    unidad_default: "%"
+    notas: "63,6% de hombres en el gabinete de José Antonio Kast tras el reemplazo de Natalia Duco por Francisco Riveros (agosto 2026) (evento 20260815-2)."
   dias_prision_preventiva_vivanco:
     nombre: Días de prisión preventiva de Ángela Vivanco
     unidad_default: días
@@ -12585,6 +12967,14 @@ cifras:
     nombre: Jornada laboral semanal de Patricio Maturana en Cpech Curicó
     unidad_default: horas semanales
     notas: "42 horas semanales de jornada presencial del cargo de secretario en la sede Curicó del preuniversitario Cpech (lunes y viernes 09:00-19:00; martes a jueves 09:00-18:00, con una hora de colación) según la carta de selección difundida por Contrapoder (evento 20260810-42)."
+  monto_baes_2026:
+    nombre: Monto mensual del BAES 2026
+    unidad_default: pesos_mensuales
+    notas: "Beca de Alimentación para la Educación Superior (BAES) 2026: $48.000 mensuales para gastos de alimentación de estudiantes de educación superior, según Junaeb. Usado como contraste en la polémica del menú del penal La Laguna de Talca (14-ago-2026)."
+  capacidad_carcel_la_laguna:
+    nombre: Capacidad máxima del Complejo Penitenciario La Laguna
+    unidad_default: plazas
+    notas: "2.320 plazas en 14 módulos de reclusión. Inaugurado a comienzos de 2025, infraestructura de máxima seguridad con hospital penal, escuela centralizada y locutorios sin contacto físico. Fuente: Radio La Unión (14-ago-2026), citando las bases de la licitación MOP."
   reos_trasladados_cancerbero:
     nombre: Reos trasladados en la Operación Cancerbero (13-ago-2026)
     unidad_default: reos
@@ -12613,6 +13003,26 @@ cifras:
     nombre: Celdas para medidas disciplinarias de la cárcel La Laguna
     unidad_default: celdas
     notas: "48 celdas destinadas a medidas disciplinarias en el Complejo Penitenciario de Talca (La Laguna), según el punto de prensa oficial del 13-ago-2026 consignado por CHV Noticias."
+  perjuicio_pozo_almonte:
+    nombre: Perjuicio fiscal en caso del alcalde de Pozo Almonte
+    unidad_default: pesos
+    notas: "Perjuicio fiscal de $1.316.591.501 por concepto de impuesto a la renta y servicios no pagados al SII, actualizado a agosto de 2021, en la formalización del alcalde de Pozo Almonte Richard Godoy por delitos tributarios (14-ago-2026). Fuentes: ADN Radio y Edición Cero (evento 20260814-15)."
+  facturas_falsas_pozo_almonte:
+    nombre: Facturas falsas en caso Pozo Almonte
+    unidad_default: facturas
+    notas: "45 facturas falsas emitidas por cinco supuestos proveedores para generar aumento malicioso del crédito fiscal de IVA, según la formalización del alcalde de Pozo Almonte Richard Godoy (evento 20260814-15)."
+  reuniones_no_registradas_lobby_2024:
+    nombre: Reuniones de autoridades con empresarios no registradas en la Ley de Lobby
+    unidad_default: reuniones
+    notas: "133 reuniones entre ministros y subsecretarios (11 autoridades de 8 ministerios y la Subsecretaría de Pesca) con empresarios y dirigentes gremiales que no fueron anotadas en el registro de lobby, según el reportaje de CIPER del 7 de mayo de 2024 (evento 20240508-1)."
+  reuniones_subpesca_sin_lobby:
+    nombre: Reuniones de la Subsecretaría de Pesca no registradas en lobby
+    unidad_default: reuniones
+    notas: "54 reuniones del subsecretario de Pesca Julio Salas con la industria pesquera entre enero de 2022 y diciembre de 2023 que no fueron registradas en Infolobby ni en la plataforma de la Ley de Lobby, según CIPER (7-may-2024, evento 20240508-1)."
+  multa_hijo_araya_utm:
+    nombre: Multa al hijo de la general Araya
+    unidad_default: utm
+    notas: "Condena al pago de 12 UTM (equivalente a $1.432.980) al hijo de la general de Carabineros María Teresa Araya por falta del artículo 50 de la Ley 20.000 (porte y consumo de marihuana), según fuentes cercanas a la causa citadas por Contrapoder Chile (agosto 2026, evento 20260728-18)."
   estudiantes_con_tne:
     nombre: Estudiantes beneficiarios de la TNE
     unidad_default: estudiantes
@@ -13366,6 +13776,70 @@ cifras:
     nombre: Tasa de desocupación femenina trimestre febrero-abril 2026
     unidad_default: "%"
     notas: "10,5% según el informe de la Mesa de Reactivación Laboral entregado el 30 de junio de 2026."
+  caida_avisos_laborales_2019_2025:
+    nombre: Caída de avisos laborales publicados en internet entre 2019 y 2025
+    unidad_default: "%"
+    notas: "Más de 20% cayeron los avisos laborales publicados en internet entre 2019 y 2025; las vacantes ofrecidas por cada aviso cayeron más de 40% en el mismo periodo (Summit Ecosistema del Trabajo 2026, Trabajando.com — evento 20260814-12)."
+  vacantes_por_aviso_2019:
+    nombre: Vacantes por aviso laboral en 2019
+    unidad_default: vacantes_por_aviso
+    notas: "4,6 vacantes por cada aviso publicado en 2019, frente a 2,7 en 2025 (Summit Ecosistema del Trabajo 2026 — evento 20260814-12)."
+  vacantes_por_aviso_2025:
+    nombre: Vacantes por aviso laboral en 2025
+    unidad_default: vacantes_por_aviso
+    notas: "2,7 vacantes por cada aviso publicado en 2025, frente a 4,6 en 2019 (Summit Ecosistema del Trabajo 2026 — evento 20260814-12)."
+  probabilidad_acceso_oportunidad_2019_2022:
+    nombre: Probabilidad estimada de acceder a una oportunidad laboral (2019-2022)
+    unidad_default: "%"
+    notas: "Cerca de 17% entre 2019 y 2022, frente a 7,5% entre 2023 y 2026 según el estudio del Summit Ecosistema del Trabajo 2026 (evento 20260814-12)."
+  probabilidad_acceso_oportunidad_2023_2026:
+    nombre: Probabilidad estimada de acceder a una oportunidad laboral (2023-2026)
+    unidad_default: "%"
+    notas: "Solo 7,5% entre 2023 y 2026, frente a cerca de 17% entre 2019 y 2022 (Summit Ecosistema del Trabajo 2026 — evento 20260814-12)."
+  informalidad_laboral_nacional_2026:
+    nombre: Tasa de informalidad laboral nacional
+    unidad_default: "%"
+    notas: "27% de informalidad laboral, junto a una desocupación de 9,4%, según las cifras citadas en el diagnóstico del Summit Ecosistema del Trabajo 2026 (evento 20260814-12)."
+  postulaciones_trabajando_com:
+    nombre: Postulaciones en Trabajando.com
+    unidad_default: postulaciones
+    notas: "Sobre 5 millones de postulaciones se han mantenido en Trabajando.com, evidenciando alta demanda de empleo frente a menos vacantes (Summit Ecosistema del Trabajo 2026 — evento 20260814-12)."
+  ofertas_laborales_ia_1s2026:
+    nombre: Ofertas laborales que exigen conocimientos de IA (1S 2026)
+    unidad_default: "%"
+    notas: "7,2% de las ofertas publicadas en Trabajando.com durante el primer semestre de 2026 exigía conocimientos o herramientas de IA, tres veces más que el 2,4% del año anterior (evento 20260814-12)."
+  investigaciones_esnna_magallanes:
+    nombre: Investigaciones vigentes por explotación sexual infantil en Magallanes
+    unidad_default: investigaciones
+    notas: "46 investigaciones vigentes por explotación sexual infantil mantiene el Ministerio Público en la región de Magallanes (agosto 2026), asociadas a 64 delitos según Ovejero Noticias (evento 20260814-14)."
+  delitos_esnna_magallanes_2023_2026:
+    nombre: Delitos de explotación sexual infantil en Magallanes (2023-jul 2026)
+    unidad_default: delitos
+    notas: "214 delitos de explotación sexual infantil registrados entre 2023 y julio de 2026 en Magallanes, afectando a 77 víctimas únicas; 207 en Punta Arenas, 6 en Puerto Natales y 1 en Porvenir (fiscal regional Cristian Crisosto, 14-ago-2026 — evento 20260814-14)."
+  victimas_esnna_magallanes:
+    nombre: Víctimas únicas de explotación sexual infantil en Magallanes
+    unidad_default: victimas
+    notas: "77 víctimas únicas de explotación sexual infantil en Magallanes entre 2023 y julio de 2026; el 90% mujeres y más del 70% de entre 15 y 17 años (evento 20260814-14)."
+  tasa_esnna_magallanes_2025:
+    nombre: Tasa de delitos de explotación sexual infantil en Magallanes (2025)
+    unidad_default: casos_por_100_mil
+    notas: "20,62 casos por cada 100 mil habitantes en 2025, casi el doble del promedio nacional de 11,6 (fiscal regional Cristian Crisosto — evento 20260814-14)."
+  tasa_esnna_nacional_2025:
+    nombre: Tasa nacional de delitos de explotación sexual infantil (2025)
+    unidad_default: casos_por_100_mil
+    notas: "11,6 casos por cada 100 mil habitantes a nivel nacional, frente a 20,62 de Magallanes (evento 20260814-14)."
+  deuda_desbordes_municipalidad:
+    nombre: Monto adeudado en el juicio laboral Vega/Municipalidad de Santiago
+    unidad_default: pesos
+    notas: "$3.496.959 correspondientes al saldo del crédito, costas procesales y personales que el Juzgado de Cobranza Laboral y Previsional de Santiago ordenó pagar a la Municipalidad de Santiago (resolución del 18-may-2026); el alcalde Mario Desbordes no habría cumplido pese a los apercibimientos (evento 20260814-13)."
+  votos_necesarios_reforma_seguridad_senado:
+    nombre: Votos necesarios para aprobar la reforma constitucional de seguridad en el Senado
+    unidad_default: votos
+    notas: "29 votos de 4/7 necesarios en el Senado para aprobar la reforma constitucional de seguridad del gobierno de Kast; la falta de claridad sobre la cadena de mando del nuevo estado de excepción genera reparos en Chile Vamos y en las FF.AA. (evento 20260816-9)."
+  dias_desaparecida_loiza:
+    nombre: Días desaparecida de Thae Loiza Galaz
+    unidad_default: dias
+    notas: "Más de 10-11 días desaparecida la exconcejala de Graneros Thae Loiza Galaz desde el 5 de agosto de 2026, cuando salió de un inmueble en Ñuñoa (evento 20260816-11)."
   desocupados_chile_2026:
     nombre: Personas desempleadas en Chile (mediados de 2026)
     unidad_default: personas
@@ -14211,6 +14685,34 @@ cifras:
     nombre: Votos de José Antonio Kast en la primera vuelta presidencial 2025
     unidad_default: votos
     notas: "3.104.458 votos (23,93%) en la primera vuelta del 16 de noviembre de 2025, el segundo lugar que lo llevó a la segunda vuelta."
+  votos_validos_primera_vuelta_2021:
+    nombre: Votos válidamente emitidos en la primera vuelta presidencial 2021
+    unidad_default: votos_validos
+    notas: "7.114.318 votos válidos en la primera vuelta del 21-nov-2021, según el Centro de Datos del Servel (citado por la BCN)."
+  pct_kast_primera_vuelta_2021:
+    nombre: Porcentaje de José Antonio Kast en la primera vuelta 2021
+    unidad_default: "%"
+    notas: "27,91% de los votos válidos en la primera vuelta del 21-nov-2021 (Servel vía BCN). Primer lugar; clasificó al balotaje con Boric."
+  pct_boric_primera_vuelta_2021:
+    nombre: Porcentaje de Gabriel Boric en la primera vuelta 2021
+    unidad_default: "%"
+    notas: "25,82% de los votos válidos en la primera vuelta del 21-nov-2021 (Servel vía BCN). Segundo lugar; clasificó al balotaje con Kast."
+  votos_parisi_primera_vuelta_2021:
+    nombre: Votos de Franco Parisi en la primera vuelta 2021
+    unidad_default: votos
+    notas: "900.064 sufragios (12,81%) en la primera vuelta del 21-nov-2021 (Servel vía BCN). Tercer lugar, la mayor sorpresa de la jornada."
+  pct_parisi_primera_vuelta_2021:
+    nombre: Porcentaje de Franco Parisi en la primera vuelta 2021
+    unidad_default: "%"
+    notas: "12,81% de los votos válidos en la primera vuelta del 21-nov-2021 (Servel vía BCN)."
+  participacion_primera_vuelta_2021:
+    nombre: Votantes en la primera vuelta presidencial 2021
+    unidad_default: personas
+    notas: "7.115.590 personas (47,34% del padrón) según el Servel; superó los 6.700.748 de 2017 y los 6.446.846 de mayo-2021."
+  pct_participacion_primera_vuelta_2021:
+    nombre: Participación porcentual en la primera vuelta 2021
+    unidad_default: "%"
+    notas: "47,34% del padrón habilitado en la primera vuelta del 21-nov-2021 (Servel)."
   participacion_primera_vuelta_2025:
     nombre: Participación en la primera vuelta presidencial 2025
     unidad_default: "%"

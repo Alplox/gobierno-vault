@@ -1,12 +1,21 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
 import { unified } from '@astrojs/markdown-remark';
+import { availableParallelism } from 'node:os';
 import remarkWikiLinks from './src/lib/remarkWikiLinks.mjs';
 
 export default defineConfig({
   // Necesario para Astro.url/canonical del origen al copiar eventos
   site: 'https://gobierno-vault.pages.dev',
   output: 'static',
+  // El default de Astro 7 es build.concurrency=1 (generacion secuencial de
+  // paginas). El vault crece (6.800+ paginas: eventos, personas, orgs, temas) y
+  // el build tarda minutos; se paraleliza con p-limit interno. 4 workers es un
+  // buen punto medio entre velocidad y uso de RAM en CI/Cloudflare Pages (no
+  // conviene saturar con availableParallelism() completo en runners pequenos).
+  build: {
+    concurrency: Math.min(availableParallelism(), 4),
+  },
   // Precarga las páginas al hover (compatible con ClientRouter de View Transitions)
   prefetch: {
     prefetchAll: true,

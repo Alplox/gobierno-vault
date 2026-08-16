@@ -82,9 +82,11 @@ const ROOT_FILES = [
   'AGENTS.md',
   'README.md',
   'EVENTS_INDEX.md',
-  'TAREAS.md',
+  'TAREAS',
   'FUENTES_GUBERNAMENTALES.md',
   'TEMPLATE.md',
+  '.telegram-scrape/scrape.py',
+  '.telegram-scrape/extract.py',
 ];
 
 function collectFiles(shallow) {
