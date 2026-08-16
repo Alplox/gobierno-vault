@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (395)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (398)
 
 <details>
-<summary>Ver lista (395 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (398 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -16,9 +16,9 @@
 - [2016/01/20160118-1 - CDE pide reabrir el caso Riggs para investigar las malversaciones de la Fundación CEMA Chile](src/content/events/2016/01/20160118-1.md) — **1 fuente**
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — **1 fuente**
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — **1 fuente**
+- [2020/03/20200308-1 - 8M 2020: la marcha feminista más multitudinaria de la historia de Chile reúne a más de un millón de personas en Santiago](src/content/events/2020/03/20200308-1.md) — **1 fuente**
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — **1 fuente**
 - [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — **1 fuente**
-- [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — **1 fuente**
 - [2020/05/20200527-1 - CIPER revela que el Registro Civil inscribió 63 muertes por Covid-19 más que las informadas por el Minsal y otras 316 como sospechosas](src/content/events/2020/05/20200527-1.md) — **1 fuente**
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — **1 fuente**
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — **1 fuente**
@@ -217,9 +217,11 @@
 - [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — **2 fuentes**
 - [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — **2 fuentes**
 - [2019/12/20191223-1 - Informe Anual 2019 del INDH: 'las más graves violaciones a los DD.HH. desde 1989' durante el estallido social](src/content/events/2019/12/20191223-1.md) — **2 fuentes**
+- [2020/03/20200306-1 - Muere Cristián Valdebenito, alcanzado por una bomba lacrimógena de Carabineros en Plaza Dignidad: primera víctima fatal del año en las protestas](src/content/events/2020/03/20200306-1.md) — **2 fuentes**
 - [2020/03/20200319-1 - Partidos acuerdan postergar el plebiscito constitucional del 26 de abril al 25 de octubre por la pandemia](src/content/events/2020/03/20200319-1.md) — **2 fuentes**
 - [2020/04/20200420-1 - Piñera anuncia el envío al Congreso del proyecto de Ingreso Familiar de Emergencia (IFE) para el 60% más vulnerable](src/content/events/2020/04/20200420-1.md) — **2 fuentes**
 - [2020/05/20200503-1 - Cuarentena total de Santiago: Cerrillos, Recoleta, Quilicura y Santiago Centro entran en confinamiento](src/content/events/2020/05/20200503-1.md) — **2 fuentes**
+- [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — **2 fuentes**
 - [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — **2 fuentes**
 - [2020/10/20201018-2 - Primer aniversario del 18-O: 580 detenidos en todo el país y jornada de incidentes en la RM](src/content/events/2020/10/20201018-2.md) — **2 fuentes**
 - [2020/10/20201025-1 - Plebiscito de entrada: el Apruebo gana con 78,27% y la Convención Constitucional será la encargada de redactar la nueva Constitución](src/content/events/2020/10/20201025-1.md) — **2 fuentes**
@@ -241,6 +243,7 @@
 - [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — **2 fuentes**
 - [2023/01/20230117-1 - Acuerdo por Chile: fuerzas políticas firman nuevo itinerario constituyente para 2023](src/content/events/2023/01/20230117-1.md) — **2 fuentes**
 - [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md) — **2 fuentes**
+- [2023/03/20230324-1 - Condenan a 2 años a tres carabineros de la 51° Comisaría de Pedro Aguirre Cerda por malos tratos a un detenido del estallido](src/content/events/2023/03/20230324-1.md) — **2 fuentes**
 - [2023/04/20230411-1 - Congreso aprueba la ley de 40 horas: la jornada laboral se reducirá gradualmente a 40 horas semanales](src/content/events/2023/04/20230411-1.md) — **2 fuentes**
 - [2023/04/20230419-1 - Crisis migratoria en el norte: gobierno mantiene expulsiones y activa Ley de Infraestructura Crítica](src/content/events/2023/04/20230419-1.md) — **2 fuentes**
 - [2023/05/20230507-1 - Elección de consejeros constitucionales: Republicanos arrasa y controlará el Consejo junto a Chile Vamos](src/content/events/2023/05/20230507-1.md) — **2 fuentes**
@@ -423,6 +426,7 @@
 - [2026/01/20260121-1 - Cámara Minera critica designación de agrónomo al frente de Minería](src/content/events/2026/01/20260121-1.md) — 3 fuentes
 - [2026/01/20260124-1 - Kast realiza cuarta gira internacional por Centroamérica](src/content/events/2026/01/20260124-1.md) — 7 fuentes
 - [2026/01/20260126-1 - Gobierno de Boric enfrenta crisis de gobernabilidad por incendios](src/content/events/2026/01/20260126-1.md) — 1 fuente
+- [2026/01/20260126-2 - Corte Suprema ratifica condena al capitán de Carabineros Tomás Rodríguez por disparar al rostro de la actriz María Paz Grandjean](src/content/events/2026/01/20260126-2.md) — 6 fuentes
 - [2026/02/20260204-1 - Kast envía comitiva de diputados evangélicos al Desayuno de Oración de Washington que encabeza Trump](src/content/events/2026/02/20260204-1.md) — 4 fuentes
 - [2026/02/20260206-1 - Health coach de Kast revela que conversaron instalar un gimnasio en La Moneda](src/content/events/2026/02/20260206-1.md) — 2 fuentes
 - [2026/02/20260207-1 - Kast presenta la nómina de subsecretarios y delegados presidenciales: predominio de perfiles técnicos genera tensión en Chile Vamos](src/content/events/2026/02/20260207-1.md) — 3 fuentes
@@ -436,6 +440,7 @@
 - [2026/02/20260220-1 - EE.UU. revoca visas a tres funcionarios de Boric por el cable submarino China-Chile Express; Chile responde con nota de protesta](src/content/events/2026/02/20260220-1.md) — 4 fuentes
 - [2026/02/20260222-1 - Kast presidente-electo analiza rebajar la gratuidad en educación superior](src/content/events/2026/02/20260222-1.md) — 3 fuentes
 - [2026/02/20260224-1 - El Mercurio revela que Muñoz firmó y anuló en 48 horas la concesión del cable submarino China-Chile Express](src/content/events/2026/02/20260224-1.md) — 4 fuentes
+- [2026/02/20260224-2 - Corte de San Miguel ratifica condena de 11 años al exsuboficial de Carabineros Luis Castillo por cegar a una niña de 14 años en La Cisterna](src/content/events/2026/02/20260224-2.md) — 6 fuentes
 - [2026/02/20260225-1 - Michelle Bachelet y Ricardo Lagos se excusan de asistir al cambio de mando; Eduardo Frei decidió estar presente](src/content/events/2026/02/20260225-1.md) — 1 fuente
 - [2026/02/20260226-1 - Transición se tensa: Kast emplaza a Boric a reunión ampliada por cable submarino chino](src/content/events/2026/02/20260226-1.md) — 3 fuentes
 - [2026/03/20260303-1 - Quiebre en la transición: Kast suspende el traspaso de mando tras tensa reunión con Boric por el cable submarino chino](src/content/events/2026/03/20260303-1.md) — 4 fuentes
@@ -448,6 +453,7 @@
 - [2026/03/20260311-3 - José Antonio Kast asume la Presidencia de la República en ceremonia de cambio de mando](src/content/events/2026/03/20260311-3.md) — 4 fuentes
 - [2026/03/20260311-4 - "Trabajando para usted": Gobierno de Kast estrena nuevo logo y desata polémica por filtración interna](src/content/events/2026/03/20260311-4.md) — 6 fuentes
 - [2026/03/20260311-5 - "Un país más pobre, pero más feliz": la frase del diputado Álvaro Carter que descolocó a Daniel Matamala en el día del cambio de mando](src/content/events/2026/03/20260311-5.md) — 3 fuentes
+- [2026/03/20260313-1 - Trascendido: capitán Faúndez, condenado por la muerte de Romario Veloz, sería el primer indultado del gobierno de Kast](src/content/events/2026/03/20260313-1.md) — 3 fuentes
 - [2026/03/20260315-1 - Ministro Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'](src/content/events/2026/03/20260315-1.md) — 3 fuentes
 - [2026/03/20260316-1 - Inauguracion del Escudo Fronterizo en Chacalluta y orden de construir zanja](src/content/events/2026/03/20260316-1.md) — 7 fuentes
 - [2026/03/20260317-1 - Senador Macaya comparte imagen generada con IA que muestra avances falsos de la zanja fronteriza](src/content/events/2026/03/20260317-1.md) — 5 fuentes
@@ -1137,6 +1143,7 @@
 
 ## 2024
 
+- [2024/01/20240116-1 - Condenan a 5 años al mayor de Carabineros Manuel Martínez por dejar sin visión a un manifestante en Temuco](src/content/events/2024/01/20240116-1.md) — 4 fuentes
 - [2024/01/20240119-1 - Nora Cuevas, exalcaldesa de San Bernardo, es imputada por fraude al fisco y malversación por más de $20 mil millones](src/content/events/2024/01/20240119-1.md) — 1 fuente
 - [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué deja al menos 134 fallecidos y un estado de excepción](src/content/events/2024/02/20240202-1.md) — 1 fuente
 - [2024/02/20240221-1 - Secuestro y homicidio del exmilitar venezolano Ronald Ojeda: la Fiscalía vincula el crimen al Tren de Aragua](src/content/events/2024/02/20240221-1.md) — 3 fuentes
@@ -1170,18 +1177,24 @@
 - [2023/01/20230117-1 - Acuerdo por Chile: fuerzas políticas firman nuevo itinerario constituyente para 2023](src/content/events/2023/01/20230117-1.md) — 2 fuentes
 - [2023/01/20230127-1 - Tribunal rechaza la prisión preventiva del werken de Temucuicui Mijael Carvones](src/content/events/2023/01/20230127-1.md) — 3 fuentes
 - [2023/02/20230214-1 - Comunidad de Temucuicui amenaza con un levantamiento mapuche por la incautación de cosechas en Ercilla](src/content/events/2023/02/20230214-1.md) — 8 fuentes
+- [2023/03/20230307-1 - Condenan a 4 años a la cabo de Carabineros Nadia Muñoz por vejaciones y agresiones contra manifestantes en Quilpué](src/content/events/2023/03/20230307-1.md) — 3 fuentes
 - [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md) — 2 fuentes
+- [2023/03/20230324-1 - Condenan a 2 años a tres carabineros de la 51° Comisaría de Pedro Aguirre Cerda por malos tratos a un detenido del estallido](src/content/events/2023/03/20230324-1.md) — 2 fuentes
 - [2023/03/20230325-1 - DecideChile lanza 'Chile en 30 años': datos abiertos de seguridad muestran la caída de los delitos y el quiebre de 2021-2022 en homicidios](src/content/events/2023/03/20230325-1.md) — 1 fuente
 - [2023/03/20230330-1 - Kast exige investigar la contratación del 'cuñado' de Giorgio Jackson en el MOP; Vicente Gutiérrez renuncia ante la ola de críticas](src/content/events/2023/03/20230330-1.md) — 5 fuentes
 - [2023/04/20230411-1 - Congreso aprueba la ley de 40 horas: la jornada laboral se reducirá gradualmente a 40 horas semanales](src/content/events/2023/04/20230411-1.md) — 2 fuentes
 - [2023/04/20230419-1 - Crisis migratoria en el norte: gobierno mantiene expulsiones y activa Ley de Infraestructura Crítica](src/content/events/2023/04/20230419-1.md) — 2 fuentes
 - [2023/05/20230507-1 - Elección de consejeros constitucionales: Republicanos arrasa y controlará el Consejo junto a Chile Vamos](src/content/events/2023/05/20230507-1.md) — 2 fuentes
+- [2023/05/20230524-1 - Condenan a 3 años a la subteniente de Carabineros Javiera Navarrete por obligar a detenidos a cantar el himno nacional](src/content/events/2023/05/20230524-1.md) — 3 fuentes
 - [2023/05/20230525-1 - Condenan al exalcalde de Ñuñoa Pedro Sabat por dos delitos de negociación incompatible](src/content/events/2023/05/20230525-1.md) — 2 fuentes
 - [2023/06/20230601-1 - Segunda Cuenta Pública de Boric: Plan Calles Sin Violencia, sueldo mínimo a $500 mil, Ley 40 Horas y el discurso más largo desde el retorno a la democracia](src/content/events/2023/06/20230601-1.md) — 6 fuentes
 - [2023/06/20230616-1 - Caso Convenios: reportaje destapa millonarios traspasos a la Fundación Democracia Viva y gatilla indagatoria nacional](src/content/events/2023/06/20230616-1.md) — 4 fuentes
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md) — 1 fuente
+- [2023/07/20230731-1 - Condenan a carabineros de la 43° Comisaría de Peñalolén por apremios reiterados contra detenidos del estallido](src/content/events/2023/07/20230731-1.md) — 3 fuentes
+- [2023/09/20230904-1 - Condenan a 6 años y 2 días a dos carabineros de La Serena por golpear a un niño de 13 años y falsificar el parte](src/content/events/2023/09/20230904-1.md) — 3 fuentes
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — 1 fuente
-- [2023/09/20230912-1 - TOP de La Serena condena al conscripto Carlos Robledo a 10 años por la muerte de Romario Veloz](src/content/events/2023/09/20230912-1.md) — 4 fuentes
+- [2023/09/20230912-1 - TOP de La Serena condena al conscripto Carlos Robledo a 10 años por la muerte de Romario Veloz](src/content/events/2023/09/20230912-1.md) — 5 fuentes
+- [2023/09/20230922-1 - Condenan a 5 años al capitán de Carabineros Ricardo Luengo por tres agresiones distintas durante el estallido en Coquimbo](src/content/events/2023/09/20230922-1.md) — 3 fuentes
 - [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — 2 fuentes
 - [2023/11/20231114-1 - Caso Hermosilla: Ciper revela audio que destapa coimas al SII y la CMF y sacude al sistema judicial](src/content/events/2023/11/20231114-1.md) — 2 fuentes
 - [2023/11/20231127-1 - El Mostrador analiza las cifras de la delincuencia: ingresos de causas +50%, homicidios +40% y secuestros +140% en una década](src/content/events/2023/11/20231127-1.md) — 1 fuente
@@ -1202,12 +1215,17 @@
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — 2 fuentes
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — 2 fuentes
 - [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md) — 3 fuentes
+- [2022/11/20221125-1 - Corte Suprema condena a más de 7 años al capitán de Carabineros Hugo Navarro por homicidio frustrado de Benjamín Huerta en Ovalle](src/content/events/2022/11/20221125-1.md) — 4 fuentes
 - [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — 2 fuentes
-- [2022/12/20221228-1 - TOP de Colina condena a 7 años al cabo del Ejército Pedro Lavín por disparar contra un manifestante en 2019](src/content/events/2022/12/20221228-1.md) — 4 fuentes
+- [2022/12/20221222-1 - Megaincendio forestal en Viña del Mar: 2 fallecidos, 130 viviendas destruidas y estado de excepción por catástrofe en la víspera de Navidad](src/content/events/2022/12/20221222-1.md) — 3 fuentes
+- [2022/12/20221223-1 - Mónica Pérez pregunta '¿cómo va a celebrar la Navidad?' a un damnificado del incendio de Viña del Mar y el CNTV acumula más de 3.000 denuncias](src/content/events/2022/12/20221223-1.md) — 5 fuentes
+- [2022/12/20221223-2 - Carabineros reprime a pobladores de Panguecillo en el bloqueo de 12 días contra Minera Los Pelambres: perdigones al cuerpo y lacrimógenas en pastizales](src/content/events/2022/12/20221223-2.md) — 4 fuentes
+- [2022/12/20221228-1 - TOP de Colina condena a 7 años al cabo del Ejército Pedro Lavín por disparar contra un manifestante en 2019](src/content/events/2022/12/20221228-1.md) — 5 fuentes
 
 ## 2021
 
 - [2021/02/20210203-1 - Chile inicia la vacunación masiva contra el COVID-19: Ernestina Godoy, de 93 años, es la primera inoculada](src/content/events/2021/02/20210203-1.md) — 2 fuentes
+- [2021/02/20210212-1 - Consejo para la Transparencia ordena a Carabineros entregar registros de cámaras corporales de detenciones del estallido (rol C 8051-20)](src/content/events/2021/02/20210212-1.md) — 5 fuentes
 - [2021/03/20210323-1 - CIPER revela imágenes de agentes del Ejército que espiaban el despacho de la jueza Romy Rutherford: denuncia llega a la Fiscalía](src/content/events/2021/03/20210323-1.md) — 1 fuente
 - [2021/05/20210515-1 - Elección de la Convención Constitucional: independientes y oposición dominan la asamblea que escribirá la nueva Constitución](src/content/events/2021/05/20210515-1.md) — 3 fuentes
 - [2021/05/20210517-1 - Caso San Ramón: Miguel Ángel Aguilera gana la reelección pese a que será formalizado por corrupción](src/content/events/2021/05/20210517-1.md) — 2 fuentes
@@ -1215,6 +1233,7 @@
 - [2021/08/20210822-1 - Kast es proclamado candidato presidencial del Partido Republicano y promete rebajar su sueldo a la mitad](src/content/events/2021/08/20210822-1.md) — 3 fuentes
 - [2021/10/20211003-1 - Pandora Papers revelan que la familia Piñera vendió Minera Dominga a la familia Délano por US$152 millones](src/content/events/2021/10/20211003-1.md) — 4 fuentes
 - [2021/11/20211109-1 - Cámara aprueba la admisibilidad de la acusación constitucional contra Piñera por el caso Dominga](src/content/events/2021/11/20211109-1.md) — 2 fuentes
+- [2021/11/20211114-1 - La Pública revela videos de cámaras corporales que registrarían el disparo a quemarropa contra Daniel Giraldo y que Carabineros se niega a entregar](src/content/events/2021/11/20211114-1.md) — 3 fuentes
 - [2021/11/20211116-1 - Senado rechaza la acusación constitucional contra Piñera por el caso Dominga al no alcanzar el quórum de 2/3](src/content/events/2021/11/20211116-1.md) — 2 fuentes
 - [2021/11/20211130-1 - El misterioso almuerzo de José Antonio Kast en Washington D.C. con ejecutivos de UnitedHealth y PepsiCo](src/content/events/2021/11/20211130-1.md) — 5 fuentes
 - [2021/12/20211204-1 - Sindicatos de Codelco Norte declaran a Kast 'persona no grata' en Calama; Kast insiste en que no privatizará Codelco](src/content/events/2021/12/20211204-1.md) — 4 fuentes
@@ -1225,13 +1244,15 @@
 
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
+- [2020/03/20200306-1 - Muere Cristián Valdebenito, alcanzado por una bomba lacrimógena de Carabineros en Plaza Dignidad: primera víctima fatal del año en las protestas](src/content/events/2020/03/20200306-1.md) — 2 fuentes
+- [2020/03/20200308-1 - 8M 2020: la marcha feminista más multitudinaria de la historia de Chile reúne a más de un millón de personas en Santiago](src/content/events/2020/03/20200308-1.md) — 1 fuente
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — 1 fuente
 - [2020/03/20200318-1 - Piñera decreta Estado de Excepción Constitucional de Catástrofe por 90 días ante el avance del COVID-19](src/content/events/2020/03/20200318-1.md) — 3 fuentes
 - [2020/03/20200319-1 - Partidos acuerdan postergar el plebiscito constitucional del 26 de abril al 25 de octubre por la pandemia](src/content/events/2020/03/20200319-1.md) — 2 fuentes
 - [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — 1 fuente
 - [2020/04/20200420-1 - Piñera anuncia el envío al Congreso del proyecto de Ingreso Familiar de Emergencia (IFE) para el 60% más vulnerable](src/content/events/2020/04/20200420-1.md) — 2 fuentes
 - [2020/05/20200503-1 - Cuarentena total de Santiago: Cerrillos, Recoleta, Quilicura y Santiago Centro entran en confinamiento](src/content/events/2020/05/20200503-1.md) — 2 fuentes
-- [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — 1 fuente
+- [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — 2 fuentes
 - [2020/05/20200527-1 - CIPER revela que el Registro Civil inscribió 63 muertes por Covid-19 más que las informadas por el Minsal y otras 316 como sospechosas](src/content/events/2020/05/20200527-1.md) — 1 fuente
 - [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — 2 fuentes
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — 1 fuente
@@ -1242,6 +1263,7 @@
 - [2020/08/20200805-1 - Comuneros mapuche en huelga de hambre rechazan la invitación del gobierno y Celestino Córdova inicia huelga seca](src/content/events/2020/08/20200805-1.md) — 3 fuentes
 - [2020/08/20200828-1 - Paro de camioneros de agosto de 2020: bloqueos de rutas, desabastecimiento y rechazo a la Ley de Seguridad del Estado bajo Piñera](src/content/events/2020/08/20200828-1.md) — 4 fuentes
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
+- [2020/09/20200928-1 - La Pública accede por Ley de Transparencia a 200 minutos de cámaras corporales del GOPE de Carabineros del estallido: primera entrega de registros policiales](src/content/events/2020/09/20200928-1.md) — 3 fuentes
 - [2020/10/20201002-1 - Caso Pío Nono: carabinero lanza a un adolescente de 16 años desde un puente al río Mapocho y es formalizado por homicidio frustrado](src/content/events/2020/10/20201002-1.md) — 3 fuentes
 - [2020/10/20201018-2 - Primer aniversario del 18-O: 580 detenidos en todo el país y jornada de incidentes en la RM](src/content/events/2020/10/20201018-2.md) — 2 fuentes
 - [2020/10/20201019-1 - The Guardian estrena documental sobre los manifestantes cegados en el estallido que buscan justicia: 'This is mutilation'](src/content/events/2020/10/20201019-1.md) — 1 fuente
@@ -1271,8 +1293,8 @@
 - [2019/10/20191019-1 - Tres personas mueren en incendio de supermercado durante saqueos en San Bernardo y el aeropuerto de Santiago colapsa en la primera jornada de estado de emergencia](src/content/events/2019/10/20191019-1.md) — 5 fuentes
 - [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — 2 fuentes
 - [2019/10/20191020-1 - Video viral muestra a tres carabineros de Fuerzas Especiales aspirando una sustancia blanca en plena calle; Carabineros asegura que era Mentholatum contra los gases lacrimógenos](src/content/events/2019/10/20191020-1.md) — 12 fuentes
-- [2019/10/20191020-2 - Militar dispara y mata a Romario Veloz en los estacionamientos del Mall Plaza La Serena](src/content/events/2019/10/20191020-2.md) — 4 fuentes
-- [2019/10/20191023-1 - Carabineros golpean brutalmente a Mario Acuña en Buin durante el estallido social; condena de 12 años y 183 días ratificada en 2023](src/content/events/2019/10/20191023-1.md) — 6 fuentes
+- [2019/10/20191020-2 - Militar dispara y mata a Romario Veloz en los estacionamientos del Mall Plaza La Serena](src/content/events/2019/10/20191020-2.md) — 5 fuentes
+- [2019/10/20191023-1 - Carabineros golpean brutalmente a Mario Acuña en Buin durante el estallido social; condena de 12 años y 183 días ratificada en 2023](src/content/events/2019/10/20191023-1.md) — 11 fuentes
 - [2019/10/20191025-1 - Marcha del 25 de octubre: más de un millón de personas protagonizan la mayor manifestación de la historia de Chile](src/content/events/2019/10/20191025-1.md) — 4 fuentes
 - [2019/10/20191028-1 - Cambio de gabinete del 28 de octubre de 2019: Chadwick sale de Interior, entra Blumel y Piñera anuncia el fin del estado de emergencia](src/content/events/2019/10/20191028-1.md) — 4 fuentes
 - [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — 2 fuentes
@@ -1312,6 +1334,8 @@
 - [2014/08/20140812-1 - Caso MOP-Gate: la Corte confirma condenas por sobresueldos con contratos del Ministerio de Obras Públicas](src/content/events/2014/08/20140812-1.md) — 3 fuentes
 - [2014/09/20140925-1 - TDLC condena a Agrosuper, Ariztía y Don Pollo por la colusión de los pollos y ordena disolver la APA](src/content/events/2014/09/20140925-1.md) — 5 fuentes
 - [2014/10/20141023-1 - Caso EFE: Corte ratifica condena contra Luis Ajenjo por fraude al fisco en la Empresa de Ferrocarriles del Estado](src/content/events/2014/10/20141023-1.md) — 8 fuentes
+- [2014/12/20141207-1 - Subsecretaría de Prevención del Delito revela que 1 de cada 4 reos indultados en 2012 (gobierno de Piñera) volvió a delinquir](src/content/events/2014/12/20141207-1.md) — 3 fuentes
+- [2014/12/20141212-1 - Gobierno de Bachelet acusa a Piñera de liberar a más de 9 mil reos con delitos graves: 'le puso motor a la puerta giratoria'](src/content/events/2014/12/20141212-1.md) — 3 fuentes
 
 ## 2013
 

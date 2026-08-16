@@ -434,7 +434,15 @@ people:
     nombre: Felipe Harboe
     cargo: Exsubsecretario de Prevención del Delito y exsenador (PPD)
     organizacion: partido_por_la_democracia
-    notas: "Exsubsecretario de Prevención del Delito (2006-2010) y exsenador (2010-2022) del PPD. En agosto de 2026 criticó el copamiento policial del gobierno de Kast: 'no se logra disuadir al crimen organizado con copamiento policial', descartó la utilidad de un nuevo estado de excepción (despliegue militar en el sur renovado ~60 veces) y pidió un sistema robusto de protección de testigos."
+    notas: "Exsubsecretario de Prevención del Delito (2006-2010) y exsenador (2010-2022) del PPD. En dic-2014 criticó el indulto general de 2012 de Piñera: 'lejos de cerrar la puerta giratoria se hizo todo lo contrario, soltando a más de cuatro mil condenados', proponiendo que la facultad de indulto quede en la Corte Suprema y no en el Presidente. En agosto de 2026 criticó el copamiento policial del gobierno de Kast: 'no se logra disuadir al crimen organizado con copamiento policial', descartó la utilidad de un nuevo estado de excepción (despliegue militar en el sur renovado ~60 veces) y pidió un sistema robusto de protección de testigos."
+  antonio_frey:
+    nombre: Antonio Frey
+    cargo: Subsecretario de Prevención del Delito (2014-2018)
+    notas: "Subsecretario de Prevención del Delito durante el segundo gobierno de Bachelet. En dic-2014 reveló que 900 de los 4.029 reos indultados en 2012 (gobierno de Piñera) reincidieron cometiendo 1.222 delitos ('uno de cada cuatro'), acusando a Piñera de 'abrir las puertas de las cárceles de par en par' y 'ponerle motor a la puerta giratoria'. Anunció fuerza de tareas, agenda corta antidelincuencia y el Banco Unificado de Datos."
+  cristobal_lira:
+    nombre: Cristóbal Lira
+    cargo: Exsubsecretario de Prevención del Delito (2010-2014)
+    notas: "Subsecretario de Prevención del Delito durante el primer gobierno de Piñera. En dic-2014 calificó el estudio de reincidencia de los indultados de 2012 como 'un montaje comunicacional del gobierno de Bachelet, que carece de rigor y honestidad'."
   felipe_parada:
     nombre: Felipe Parada
     cargo: Panelista de Sin Filtros
@@ -1399,6 +1407,10 @@ people:
     nombre: Carlos Robledo Olguín
     cargo: Exsoldado conscripto del Ejército condenado por violencia innecesaria
     notas: "Exsoldado conscripto del Ejército condenado a 10 años de presidio por el TOP de La Serena (12-sep-2023) como autor de violencia innecesaria con resultado de muerte, por el disparo de fusil Galil con munición de guerra que mató a Romario Veloz el 20-oct-2019 en el Mall Plaza La Serena (tenía 18 años). Su caso fue citado por el presidente Kast en 2026 para descartar el despliegue militar en zonas urbanas, y la Cámara de Diputados pidió su indulto en 2025. Incluido en la campaña 'Presos por servir' (presosxservir.cl, 2026)."
+  daniel_giraldo:
+    nombre: Daniel Giraldo
+    cargo: Manifestante herido por disparo a quemarropa de Carabineros (2019)
+    notas: "Manifestante de 29 años que el 12-nov-2019 recibió un disparo a quemarropa de un carabinero en las inmediaciones de plaza Baquedano (paro nacional), quedando con 12 perdigones incrustados en la zona lumbar y un hueco de 2 cm en la espalda. Identificó como su agresor al teniente Claudio Crespo (caso Gatica). Carabineros se negó por más de un año a entregar los videos de cámaras corporales del tramo horario de la agresión (investigación de La Pública, nov-2021). Despedido de su trabajo al conocerse que fue herido en las manifestaciones; diagnosticado con estrés postraumático."
   nicolas_neira:
     nombre: Nicolás Neira Durán
     cargo: Exsubteniente de Carabineros condenado por tortura
@@ -1431,6 +1443,78 @@ people:
     nombre: Brandon González Benavides
     cargo: Manifestante herido por disparo de Carabineros en el estallido
     notas: "Manifestante de 26 años que perdió la visión de un ojo por el disparo del excapitán de Carabineros Pablo Carvajal el 28-oct-2019 en la Alameda. Su caso derivó en la condena de Carvajal a 7 años (4° TOP Santiago, confirmada por la Corte de Apelaciones en jun-2026)."
+  luis_castillo:
+    nombre: Luis Castillo Fernández
+    cargo: Exsuboficial mayor de Carabineros condenado por apremios ilegítimos
+    notas: "Exsuboficial mayor de Carabineros condenado a 11 años de presidio como autor de apremios ilegítimos con resultado de lesiones graves gravísimas por golpear con su luma a una niña de 14 años (Aalondra Carvajal) el 21-nov-2019 en La Cisterna, dejándola ciega del ojo derecho. Condena del 6° TOP de Santiago ratificada por la Corte de Apelaciones de San Miguel (24-feb-2026); ingresó al penal Colina 1 en marzo de 2026. Entre los condenados que el gobierno de Kast estudiaba indultar."
+  hugo_navarro:
+    nombre: Hugo Navarro Corvalán
+    cargo: Excapitán de Carabineros condenado por homicidio frustrado
+    notas: "Excapitán de Carabineros condenado por la Corte Suprema (25-nov-2022) a más de 7 años de cárcel (6 años, 61 días y 541 días) como autor de homicidio frustrado, detención ilegal y falsificación de instrumento público contra Benjamín Huerta, a quien disparó a quemarropa en la zona pélvica el 19-oct-2019 en Ovalle. Entre los condenados que el gobierno de Kast estudiaba indultar."
+  tomas_rodriguez:
+    nombre: Tomás Rodríguez Soriano
+    cargo: Excapitán de Carabineros condenado por apremios ilegítimos
+    notas: "Excapitán de Carabineros condenado a 3 años de presidio (remisión condicional) como autor de apremios ilegítimos por dos disparos de escopeta antidisturbios al rostro de la actriz María Paz Grandjean el 18-oct-2019 en la Alameda. Condena ratificada por la Corte Suprema el 26-ene-2026."
+  manuel_martinez:
+    nombre: Manuel Martínez López
+    cargo: Exmayor de Carabineros condenado por apremios ilegítimos
+    notas: "Exmayor de Carabineros y comisario de la Primera Comisaría de Fuerzas Especiales de Temuco, condenado a 5 años de presidio (libertad vigilada intensiva) como autor de apremios ilegítimos por disparar al tercio superior del cuerpo de un manifestante el 19-oct-2019 en Temuco, dejándolo sin visión de un ojo (TOP de Angol, 16-ene-2024). Primer caso de estallido ocular resuelto en La Araucanía."
+  nadia_munoz:
+    nombre: Nadia Muñoz Cornejo
+    cargo: Excabo segundo de Carabineros condenada por apremios ilegítimos
+    notas: "Excabo segundo de Carabineros condenada a 4 años de presidio (libertad vigilada intensiva) por el TOP de Viña del Mar (7-mar-2023) como autora de apremios ilegítimos contra dos manifestantes detenidas en Quilpué el 21-nov-2019: golpes en el abdomen (pese a la hernia de una víctima), insultos, gas pimienta, obligarlas a desnudarse y golpes de puño."
+  javier_marchant:
+    nombre: Javier Marchant Ferrada
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de la 51° Comisaría de Pedro Aguirre Cerda condenado a 2 años de presidio (remisión condicional) por el 6° TOP de Santiago (24-mar-2023) por golpear a un detenido del estallido el 21-oct-2019, junto a Marcos Valenzuela y Marcos Vásquez."
+  marcos_valenzuela:
+    nombre: Marcos Valenzuela Yévenes
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de la 51° Comisaría de Pedro Aguirre Cerda condenado a 2 años de presidio (remisión condicional) por el 6° TOP de Santiago (24-mar-2023) por golpear a un detenido del estallido el 21-oct-2019 y no intervenir ante malos tratos en calabozos, junto a Javier Marchant y Marcos Vásquez."
+  marcos_vasquez:
+    nombre: Marcos Vásquez Ayala
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de la 51° Comisaría de Pedro Aguirre Cerda condenado a 2 años de presidio (remisión condicional) por el 6° TOP de Santiago (24-mar-2023) por golpear a un detenido del estallido el 21-oct-2019, junto a Javier Marchant y Marcos Valenzuela."
+  ricardo_luengo:
+    nombre: Ricardo Luengo Aracena
+    cargo: Excapitán de Carabineros condenado por apremios ilegítimos
+    notas: "Excapitán de Carabineros condenado a 5 años de presidio (libertad vigilada intensiva) por el Juzgado de Garantía de Coquimbo (22-sep-2023) por tres hechos del estallido: disparo por la espalda a un manifestante inmovilizado, agresión a un periodista con una escopeta en la cabeza y detención ilegal de una manifestante con agresiones y parte falso."
+  javiera_navarrete:
+    nombre: Javiera Navarrete Hurtubia
+    cargo: Exsubteniente de Carabineros condenada por apremios ilegítimos
+    notas: "Exsubteniente de Carabineros condenada a 3 años de presidio (remisión condicional) por el Juzgado de Garantía de La Serena (24-may-2023, procedimiento abreviado) por tres delitos de apremios ilegítimos: obligar a detenidos a cantar el himno nacional bajo amenazas y agredir a una mujer con golpes y gas químico forzándola a desnudarse."
+  juan_pablo_leiva:
+    nombre: Juan Pablo Leiva Puga
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de la 43° Comisaría de Peñalolén condenado por el 7° TOP de Santiago (31-jul-2023) por apremios ilegítimos reiterados contra detenidos del estallido (20-21-oct-2019): golpes a esposados, azotes contra paredes y frotar sustancias lacrimógenas en el rostro de los detenidos. Penas ajustadas tras nulidad parcial (dos de 61 días y dos de 541 días)."
+  carlos_fuenzalida:
+    nombre: Carlos Fuenzalida Gajardo
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de la 43° Comisaría de Peñalolén condenado por el 7° TOP de Santiago (31-jul-2023) por apremios ilegítimos reiterados contra detenidos del estallido (20-21-oct-2019), junto a Juan Pablo Leiva y Sebastián González."
+  sebastian_gonzalez_faundez:
+    nombre: Sebastián González Faúndez
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de la 43° Comisaría de Peñalolén condenado por el 7° TOP de Santiago (31-jul-2023) por apremios ilegítimos reiterados contra detenidos del estallido (20-21-oct-2019), junto a Juan Pablo Leiva y Carlos Fuenzalida."
+  franco_garcia:
+    nombre: Franco García Castillo
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de Carabineros condenado por el TOP de La Serena (4-sep-2023) a dos penas de 3 años y 1 día (6 años y 2 días) por golpear con lumas a un niño de 13 años el 22-nov-2019 en La Serena y falsificar el parte policial, junto a Juan Avaria."
+  juan_avaria:
+    nombre: Juan Avaria Olguín
+    cargo: Exfuncionario de Carabineros condenado por apremios ilegítimos
+    notas: "Exfuncionario de Carabineros condenado por el TOP de La Serena (4-sep-2023) a dos penas de 3 años y 1 día (6 años y 2 días) por golpear con lumas a un niño de 13 años el 22-nov-2019 en La Serena y falsificar el parte policial, junto a Franco García."
+  aalondra_carvajal:
+    nombre: Aalondra Carvajal
+    cargo: Víctima de violencia policial en el estallido
+    notas: "Niña de 14 años que participaba pacíficamente de una manifestación en La Cisterna el 21-nov-2019 cuando el carabinero Luis Castillo la golpeó con su luma en el ojo derecho, dejándola con ceguera permanente e irreversible en ese ojo. Su caso derivó en la condena de Castillo a 11 años."
+  benjamin_huerta:
+    nombre: Benjamín Huerta Escobar
+    cargo: Víctima de violencia policial en el estallido
+    notas: "Joven de Ovalle baleado a quemarropa en la zona pélvica por el capitán de Carabineros Hugo Navarro el 19-oct-2019 (homicidio frustrado), caso que derivó en la condena del oficial (2022). Recibió una pensión de gracia del 18-O que perdió al ser detenido en junio de 2026 por tráfico de fentanilo."
+  maria_paz_grandjean:
+    nombre: María Paz Grandjean
+    cargo: Actriz víctima de violencia policial en el estallido
+    notas: "Actriz chilena herida en el rostro por dos disparos de escopeta antidisturbios del capitán de Carabineros Tomás Rodríguez el 18-oct-2019 en la Alameda (trauma maxilofacial y secuelas de estrés postraumático crónico). Su caso derivó en la condena del oficial, ratificada por la Corte Suprema en enero de 2026."
   jose_faundez:
     nombre: José Santiago Faúndez Sepúlveda
     cargo: Capitán del Ejército condenado
@@ -1440,14 +1524,30 @@ people:
     nombre: Romario Veloz
     cargo: Manifestante asesinado en el estallido social
     notas: "Joven ecuatoriano de 26 años asesinado el 20 de octubre de 2019 en La Serena durante el estallido social: recibió un disparo de munición de guerra en el cuello cuando una unidad del Ejército al mando del capitán José Faúndez Sepúlveda abrió fuego contra manifestantes en los estacionamientos del Mall Plaza La Serena. Su caso derivó en la condena de Faúndez (2023) y en una querella por desacato de su familia contra el alto mando del Ejército (2026)."
+  mery_cortez:
+    nombre: Mery Cortez
+    cargo: Madre de Romario Veloz
+    notas: "Madre del manifestante Romario Veloz, asesinado por militares en La Serena (20-oct-2019). Presidió la Organización de Colectividades Extranjeras, lideró las gestiones para formalizar al capitán José Faúndez y conserva el video que Romario le envió minutos antes de morir, que solo ha mostrado al fiscal."
+  julio_cortes_morales:
+    nombre: Julio Cortés Morales
+    cargo: Abogado del INDH, querellante contra el alto mando de Carabineros
+    notas: "Abogado del Instituto Nacional de Derechos Humanos que patrocinó la querella criminal contra el alto mando de Carabineros por apremios ilegítimos (15-nov-2022), que incluye el caso de Daniel Giraldo. Autor de la columna de CIPER (31-jul-2026) advirtiendo que los indultos cubrirían a uniformados condenados o investigados por violencia institucional del estallido."
+  mariela_santana:
+    nombre: Mariela Santana
+    cargo: Abogada de la familia de Mario Acuña
+    notas: "Abogada querellante de la familia de Mario Acuña, víctima de la golpiza de carabineros del 23-oct-2019 en Buin. En mayo de 2026 declaró que 'es intolerable que se plantee un beneficio para quienes actuaron con tal nivel de saña contra un ciudadano que ya estaba reducido', frente a los posibles indultos de Kast a los condenados Henry Cuéllar y Víctor Lastra (evento 20191023-1)."
   adriana_rojas:
     nombre: Adriana Rojas Pérez
     cargo: Abogada de la familia de Romario Veloz
-    notas: "Abogada querellante de la familia de Romario Veloz. En junio de 2026 presentó una querella por desacato contra el comandante en jefe del Ejército, Pedro Varela, y su antecesor Javier Iturriaga, por no ejecutar la baja por inhabilidad sobreviniente del capitán José Faúndez y mantener en trámite un retiro médico con pensión."
+    notas: "Abogada querellante de la familia de Romario Veloz. En junio de 2026 presentó una querella por desacato contra el comandante en jefe del Ejército, Pedro Varela, y su antecesor Javier Iturriaga, por no ejecutar la baja por inhabilidad sobreviniente del capitán José Faúndez y mantener en trámite un retiro médico con pensión. En marzo de 2026 advirtió que la familia recurriría a la Corte Interamericana de Derechos Humanos si Kast indulte a Faúndez."
+  monica_perez:
+    nombre: Mónica Pérez
+    cargo: Periodista de Canal 13 y Radio Duna
+    notas: "Periodista y conductora de Canal 13/Tele13 (edición central) y del programa Hablemos en Off de Radio Duna. En dic-2022 protagonizó una polémica por preguntarle a un damnificado del incendio de Viña del Mar '¿cómo va a celebrar la Navidad mañana?', que derivó en más de 3.000 denuncias ante el CNTV y que ella defendió en Podemos Hablar (2023). El 13-mar-2026 reveló que el capitán José Faúndez, condenado por la muerte de Romario Veloz, sería el primer indultado del presidente Kast."
   mario_acuña:
-    nombre: Mario Acuña
+    nombre: Mario Acuña Martínez
     cargo: Víctima de violencia policial en el estallido social
-    notas: "Víctima de la golpiza de carabineros del 23 de octubre de 2019 en Buin durante el estallido social: Henry Cuéllar y Víctor Lastra lo golpearon brutalmente en el suelo, dejándolo postrado con traumatismo encefálico grave, inhabilidad laboral total e incapacidad para el autocuidado. Su caso derivó en la condena de ambos a 12 años y 183 días (TOP San Bernardo, 2023), ratificada por la Corte de Apelaciones de San Miguel (2023)."
+    notas: "Temporero de 43 años, víctima de la golpiza de carabineros del 23 de octubre de 2019 en Buin durante el estallido social: Henry Cuéllar y Víctor Lastra lo golpearon brutalmente en el suelo, dejándolo en estado vegetal con traumatismo encefálico grave, inhabilidad laboral total e incapacidad para el autocuidado. Su caso derivó en la condena de ambos a 12 años y 183 días (TOP San Bernardo, 2023), ratificada por la Corte de Apelaciones de San Miguel (2023). Sobrevive con sonda de alimentación y se comunica mediante el parpadeo; su familia lanzó un 'apoyatón' en 2024 y fue internado por neumonía en 2025. Su abogada Mariela Santana rechazó en 2026 los posibles indultos de Kast a los condenados."
   henry_cuellar:
     nombre: Henry Cuéllar Vega
     cargo: Excabo segundo de Carabineros condenado por apremios ilegítimos
@@ -1464,7 +1564,23 @@ people:
     nombre: Rodrigo Bustos
     cargo: Director ejecutivo de Amnistía Internacional Chile
     organizacion: amnistia_internacional
-    notas: "Director ejecutivo de Amnistía Internacional Chile. En agosto de 2026 criticó la reforma del gobierno de Kast al INDH señalando que 'cercenaría gran parte de las atribuciones' del organismo y defendió la facultad de presentar querellas como 'fundamental en la labor del INDH'."
+    notas: "Director ejecutivo de Amnistía Internacional Chile (antes director jurídico del INDH). En 2020, como director jurídico del INDH, valoró el acceso de La Pública a los videos de cámaras corporales de Carabineros del estallido. En agosto de 2026 criticó la reforma del gobierno de Kast al INDH señalando que 'cercenaría gran parte de las atribuciones' del organismo y defendió la facultad de presentar querellas como 'fundamental en la labor del INDH'."
+  catalina_gaete:
+    nombre: Catalina Gaete
+    cargo: Directora y cofundadora de La Pública
+    notas: "Periodista de la U. de Chile y magíster de la U. de Ámsterdam, directora y cofundadora de La Pública. Lideró la solicitud de acceso a la información de las cámaras corporales de Carabineros del estallido (rol C8436-19) que por primera vez hizo públicos los registros policiales; imparte talleres de uso ciudadano de la Ley de Transparencia con Londres 38."
+  paulette_desormeaux:
+    nombre: Paulette Desormeaux
+    cargo: Fundadora de La Pública
+    notas: "Fundadora de La Pública. En 2020 explicó que los videos de cámaras corporales obtenidos por Ley de Transparencia mostraban a Carabineros preocupándose de no disparar a los techos, y que el material sería analizado con expertos en protocolos policiales."
+  felipe_munizaga:
+    nombre: Felipe Munizaga
+    cargo: Sociólogo y director del documental 'Ni culpables ni inocentes'
+    notas: "Sociólogo, director del documental 'Ni culpables ni inocentes' sobre prisión política en la revuelta. Junto al equipo del documental solicitó nuevos videos de cámaras corporales de Carabineros, que Carabineros negó y la Corte de Apelaciones ordenó entregar (2021), con el apoyo de La Pública."
+  imay_ortiz:
+    nombre: Imay Ortíz
+    cargo: Directora de la Unidad de DD.HH. de la Fiscalía Nacional
+    notas: "Directora de la Unidad de Derechos Humanos del Ministerio Público. En 2020 valoró los videos de cámaras corporales de Carabineros ('todo sirve, porque es necesario reconstruir') en el contexto de las ~2.500 causas judiciales del estallido donde el INDH es parte querellante."
   jaime_manalich:
     nombre: Jaime Mañalich Muxi
     cargo: Exministro de Salud
@@ -8628,6 +8744,44 @@ people:
     organizacion: corte_suprema
     notas: "Ministra de la Corte Suprema de Chile. Redactora del voto disidente del fallo Rol 1421-2023 de la Tercera Sala que favoreció al Consorcio Belaz Movitec frente a Codelco, al estimar que con una cláusula arbitral no procedía conocer la causa en sede de protección (evento 20260806-55)."
 
+  javiera_manzi:
+    nombre: Javiera Manzi
+    cargo: Vocera de la Coordinadora Feminista 8M
+    organizacion: coordinadora_feminista_8m
+    notas: "Vocera de la Coordinadora Feminista 8M durante la marcha del 8 de marzo de 2020 (8M 2020). Tras la jornada denunció la represión policial contra las manifestantes —gas lacrimógeno y pimienta— y anunció la continuidad de las movilizaciones para el 9 de marzo con la Huelga General Feminista."
+
+  milena_baez:
+    nombre: Milena Báez Lara
+    cargo: Concejala de Salamanca
+    organizacion: municipalidad_salamanca
+    notas: "Concejala de la comuna de Salamanca (Región de Coquimbo). Durante el bloqueo de Panguecillo contra Minera Los Pelambres (dic-2022) relevó que la localidad llevaba 12 días con toma en el punto Ladera de Llimpo y otro en el ingreso a Panguecillo, y criticó que la empresa pretenda ampliar sus operaciones con el proyecto PAO pese a los conflictos por el recurso hídrico."
+
+  jorge_barraza:
+    nombre: Jorge Barraza
+    cargo: Concejal de Salamanca
+    organizacion: municipalidad_salamanca
+    notas: "Concejal de Salamanca (Región de Coquimbo). Durante el bloqueo de Panguecillo contra Minera Los Pelambres (dic-2022) recordó que tras la rotura del concentraducto de cobre en Llimpo (ago-2022) la localidad llegó a un acuerdo que la minera luego desconoció tras reemplazar al personal que lo suscribió, y advirtió que si no había soluciones no se abandonarían las rutas."
+
+  mabel_barraza:
+    nombre: Mabel Barraza Cortés
+    cargo: Presidenta de la Junta de Vecinos de Panguecillo
+    notas: "Presidenta de la Junta de Vecinos de Panguecillo (Salamanca). Firmó el acuerdo con Minera Los Pelambres que puso término a los bloqueos de ruta del sector (30-dic-2022)."
+
+  cristian_valdebenito:
+    nombre: Cristián Valdebenito
+    cargo: Obrero de 48 años, víctima del estallido social
+    notas: "Obrero de 48 años. El 6 de marzo de 2020 recibió por la espalda el impacto de una bomba lacrimógena disparada por Carabineros en Plaza Dignidad durante las protestas del primer viernes de marzo; falleció la madrugada del 7 de marzo en la ex Posta Central por traumatismo craneal (laceración de la arteria comunicante anterior). Su familia se querelló contra el ex director de Carabineros Mario Rozas (2022)."
+
+  rafael_cavada:
+    nombre: Rafael Cavada
+    cargo: Periodista de televisión
+    notas: "Periodista chileno de televisión. El 7 de marzo de 2020 fue golpeado en la cabeza con un bate por manifestantes mientras cubría una protesta contra el proyecto de nueva Constitución en un barrio capitalino, quedando con la camiseta ensangrentada; relató la agresión en un video difundido por Radio Bío Bío."
+
+  ciro_colombara:
+    nombre: Ciro Colombara
+    cargo: Abogado querellante
+    notas: "Abogado chileno, representante de la familia de Cristián Valdebenito en la querella contra el ex director general de Carabineros Mario Rozas por la muerte del manifestante alcanzado por una bomba lacrimógena en marzo de 2020 (2022)."
+
 organizations:
   cencosud:
     nombre: Cencosud S.A.
@@ -9260,6 +9414,11 @@ organizations:
     nombre: Carabineros de Chile
     tipo: policia
     pais: Chile
+  cplt:
+    nombre: Consejo para la Transparencia (CPLT)
+    tipo: organismo_autonomo
+    pais: Chile
+    notas: "Organismo autónomo encargado de garantizar el derecho de acceso a la información pública (Ley 20.285). Ordenó a Carabineros entregar los registros de cámaras corporales del estallido social (roles C8436-19 y C 8051-20, 2020-2021), tras batallas legales de La Pública."
   servicio_impuestos_internos:
     nombre: Servicio de Impuestos Internos (SII)
     tipo: servicio_publico
@@ -10914,12 +11073,42 @@ organizations:
     nombre: Meganoticias
     tipo: medio_comunicacion
     pais: Chile
-    notas: "Departamento de prensa de Mega; noticiero y portal meganoticias.cl."
+    notas: "Departamento de prensa de Mega; noticiero y portal meganoticias.cl. Emitió el registro del carabinero Tomás Rodríguez apuntando y disparando a la actriz María Paz Grandjean (abr-2021)."
+  la_publica:
+    nombre: La Pública
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de investigación chileno (lapublica.cl). Obtuvo por Ley de Transparencia los videos de cámaras corporales de Carabineros del estallido social (amparos C8436-19 y C 8051-20 ante el CPLT, 2020-2021; caso Giraldo, nov-2021)."
+  resumen:
+    nombre: Resumen
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (resumen.cl), proyecto de Resumen Ltda. con base en Concepción. Cubrió la batalla legal de Carabineros para no entregar los videos de cámaras corporales del estallido."
+  red_digital:
+    nombre: Red Digital
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (reddigital.cl) de análisis político y social. Cubrió la polémica de los indultos de Piñera y la reincidencia de los indultados de 2012."
+  chv:
+    nombre: CHV Noticias
+    tipo: canal_television
+    pais: Chile
+    notas: "Departamento de prensa de Chilevisión (chvnoticias.cl). Reveló el video del procedimiento que terminó con la detención de Luis Castillo (dic-2023)."
+  vergara_240:
+    nombre: Vergara 240 (UDP)
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Plataforma periodística de la Escuela de Periodismo UDP (vergara240.udp.cl)."
   cnnchile:
     nombre: CNN Chile
     tipo: medio_comunicacion
     pais: Chile
     notas: "Canal de noticias chileno (cnnchile.com). Cubrió la aprobación de los tres vetos de Kast a la megarreforma y la aprobación en general del Registro Nacional de Vándalos en la Comisión de Seguridad de la Cámara (10-ago-2026)."
+  cntv:
+    nombre: Consejo Nacional de Televisión (CNTV)
+    tipo: organismo_autonomo
+    pais: Chile
+    notas: "Organismo público que regula el funcionamiento de la televisión chilena y resuelve las denuncias de la audiencia. Recibió más de 3.000 reclamos por el despacho de Mónica Pérez a un damnificado del incendio de Viña del Mar (dic-2022); le presentó cargos a la periodista y luego los retiró."
   cruch:
     nombre: Consejo de Rectoras y Rectores (CRUCH)
     tipo: organizacion_social
@@ -10940,6 +11129,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio pública chilena (U. de Chile), 102.5 FM. Portal radio.uchile.cl."
+  radio_duna:
+    nombre: Radio Duna
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (89.7 FM), duna.cl. En su programa Hablemos en Off la periodista Mónica Pérez reveló el 13-mar-2026 que el capitán José Faúndez sería el primer indultado de Kast."
   diario_usach:
     nombre: Diario USACH
     tipo: medio_comunicacion
@@ -11901,6 +12095,25 @@ organizations:
     tipo: empresa
     pais: Chile
     notas: "Grupo siderúrgico y minero chileno (Compañía de Acero del Pacífico); socio de Aclara Resources en el proyecto de tierras raras de Penco."
+  los_pelambres:
+    nombre: Minera Los Pelambres
+    tipo: empresa_minera
+    pais: Chile
+    notas: "Minera de cobre del Grupo Luksic en el Valle del Choapa (Salamanca, Región de Coquimbo). Históricos conflictos socioambientales con las comunidades de Caimanes, Llimpo y Panguecillo por el uso y contaminación de las aguas; nueva rotura de su concentraducto de cobre en Llimpo (ago-2022) agravó el conflicto que llevó al bloqueo de rutas de dic-2022."
+  municipalidad_salamanca:
+    nombre: Municipalidad de Salamanca
+    tipo: municipalidad
+    pais: Chile
+  olca:
+    nombre: OLCA
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Observatorio Latinoamericano de Conflictos Ambientales (olca.cl): plataforma que documenta conflictos socioambientales y denuncias de represión en América Latina, con boletines en español."
+  el_diario_de_salamanca:
+    nombre: El Diario de Salamanca
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio de prensa local de Salamanca (salamancachile.cl)."
   municipalidad_penco:
     nombre: Municipalidad de Penco
     tipo: municipalidad
