@@ -4,7 +4,7 @@ import EventConnections from '../../../components/EventConnections.astro';
 import EventTimelineConnector from '../../../components/EventTimelineConnector.astro';
 import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
-import { getEventConnections, buildEventsByBasename, buildIncomingIndex } from '../../../lib/relations';
+import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
 import { resolveReferences } from '../../../lib/registry';
 import { readFileSync } from 'node:fs';
 import { join } from 'node:path';
@@ -76,7 +76,8 @@ const cifraConceptos = [...new Set(entities.cifras.map((c) => c.concepto))].map(
 
 const refs = resolveReferences(entities.fuentesAll);
 const allEvents = await getAllEvents();
-const connections = getEventConnections(event, allEvents, buildEventsByBasename(allEvents), buildIncomingIndex(allEvents));
+const connectionIndex = buildConnectionIndex(allEvents);
+const connections = connectionIndex.get(filename) ?? { outgoing: [], incoming: [], inferred: [] };
 
 // Export markdown (SSG): base = el archivo .md fuente, más sección de referencias con URLs.
 const rawMd = readFileSync(join(process.cwd(), 'src', 'content', 'events', `${event.id}.md`), 'utf8');

@@ -1,8 +1,9 @@
 ---
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
-import { getAllEvents, getEventEntities } from '../../lib/queries';
+import { getAllEvents } from '../../lib/queries';
 import { getSourcesRegistry } from '../../lib/registry';
+import { getSourceToEventsMap } from '../../lib/extractEntities';
 import { ArrowLeft, BookOpen, ExternalLink, Calendar, FileText, User } from 'lucide-astro';
 
 export async function getStaticPaths() {
@@ -15,10 +16,12 @@ export async function getStaticPaths() {
 
 const { id, source } = Astro.props;
 const events = await getAllEvents();
-const relatedEvents = events.filter((event) => {
-  const entities = getEventEntities(event.id);
-  return entities.fuentes.includes(id);
-});
+const eventsMap = new Map(events.map((e) => [e.id.split('/').pop() ?? e.id, e]));
+const sourceToEvents = getSourceToEventsMap();
+const relatedEventIds = sourceToEvents.get(id) ?? [];
+const relatedEvents = relatedEventIds
+  .map((eventId) => eventsMap.get(eventId))
+  .filter((e): e is NonNullable<typeof e> => e != null);
 
 const tipoLabels: Record<string, string> = {
   oficial: 'Oficial', prensa: 'Prensa', agencia: 'Agencia',

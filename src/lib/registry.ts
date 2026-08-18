@@ -71,16 +71,21 @@ function toEntries(record: Record<string, EntityData> = {}): RegistryEntry[] {
     .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
 }
 
+let _peopleEntriesCache: RegistryEntry[] | null = null;
+let _orgEntriesCache: RegistryEntry[] | null = null;
+
 function entities(): EntitiesFile {
   return readYaml<EntitiesFile>('entities.yaml');
 }
 
 export function getPeopleRegistry(): RegistryEntry[] {
-  return toEntries(entities().people);
+  if (!_peopleEntriesCache) _peopleEntriesCache = toEntries(entities().people);
+  return _peopleEntriesCache;
 }
 
 export function getOrganizationsRegistry(): RegistryEntry[] {
-  return toEntries(entities().organizations);
+  if (!_orgEntriesCache) _orgEntriesCache = toEntries(entities().organizations);
+  return _orgEntriesCache;
 }
 
 export function getPersonRegistryById(id: string): RegistryEntry | undefined {
@@ -91,11 +96,16 @@ export function getOrganizationRegistryById(id: string): RegistryEntry | undefin
   return getOrganizationsRegistry().find((org) => org.id === id);
 }
 
+let _topicsEntriesCache: TopicRegistryEntry[] | null = null;
+
 export function getTopicsRegistry(): TopicRegistryEntry[] {
-  const topics = readYaml<Record<string, TopicData>>('topics.yaml');
-  return Object.entries(topics)
-    .map(([id, data]) => ({ id, data }))
-    .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+  if (!_topicsEntriesCache) {
+    const topics = readYaml<Record<string, TopicData>>('topics.yaml');
+    _topicsEntriesCache = Object.entries(topics)
+      .map(([id, data]) => ({ id, data }))
+      .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
+  }
+  return _topicsEntriesCache;
 }
 
 export function getTopicRegistryById(id: string): TopicRegistryEntry | undefined {
@@ -104,17 +114,21 @@ export function getTopicRegistryById(id: string): TopicRegistryEntry | undefined
   return data ? { id, data } : undefined;
 }
 
-export function getSourcesRegistry(): Record<string, SourceData> {
-  const sources = readYaml<Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date }>>(
-    'sources.yaml'
-  );
+let _sourcesCache: Record<string, SourceData> | null = null;
 
-  return Object.fromEntries(
-    Object.entries(sources).map(([id, source]) => [
-      id,
-      { ...source, fecha: new Date(source.fecha) },
-    ])
-  );
+export function getSourcesRegistry(): Record<string, SourceData> {
+  if (!_sourcesCache) {
+    const sources = readYaml<Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date }>>(
+      'sources.yaml'
+    );
+    _sourcesCache = Object.fromEntries(
+      Object.entries(sources).map(([id, source]) => [
+        id,
+        { ...source, fecha: new Date(source.fecha) },
+      ])
+    );
+  }
+  return _sourcesCache;
 }
 
 export function resolveReferences(references: SourceReference[] = []): SourceData[] {

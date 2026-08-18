@@ -14,12 +14,11 @@ export default defineConfig({
   site: 'https://gobierno-vault.pages.dev',
   output: 'static',
   // El default de Astro 7 es build.concurrency=1 (generacion secuencial de
-  // paginas). El vault crece (6.800+ paginas: eventos, personas, orgs, temas) y
-  // el build tarda minutos; se paraleliza con p-limit interno. 4 workers es un
-  // buen punto medio entre velocidad y uso de RAM en CI/Cloudflare Pages (no
-  // conviene saturar con availableParallelism() completo en runners pequenos).
+  // paginas). El vault crece (8.900+ paginas) y el build tarda minutos; se
+  // paraleliza con p-limit interno. 2 workers balancea velocidad vs RAM en
+  // Cloudflare Pages (runners pequenos); subir a 4 si el runner lo permite.
   build: {
-    concurrency: Math.min(availableParallelism(), 4),
+    concurrency: Math.min(availableParallelism(), 2),
   },
   // Precarga las páginas al hover (compatible con ClientRouter de View Transitions)
   prefetch: {

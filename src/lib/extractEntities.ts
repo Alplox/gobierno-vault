@@ -208,3 +208,21 @@ export function getQuotesMap(): Map<string, QuoteEntry[]> {
 export function getQuotesForPerson(personId: string): QuoteEntry[] {
   return getQuotesMap().get(personId) ?? [];
 }
+
+let _sourceToEventsCache: Map<string, string[]> | null = null;
+
+export function getSourceToEventsMap(): Map<string, string[]> {
+  if (_sourceToEventsCache) return _sourceToEventsCache;
+  _sourceToEventsCache = new Map();
+  for (const [eventId, entities] of getEntityMap()) {
+    for (const sourceId of entities.fuentes) {
+      const events = _sourceToEventsCache.get(sourceId);
+      if (events) {
+        events.push(eventId);
+      } else {
+        _sourceToEventsCache.set(sourceId, [eventId]);
+      }
+    }
+  }
+  return _sourceToEventsCache;
+}

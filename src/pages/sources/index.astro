@@ -1,11 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllEvents, getEventEntities } from '../../lib/queries';
 import { getSourcesRegistry } from '../../lib/registry';
+import { getSourceToEventsMap } from '../../lib/extractEntities';
 import { BookOpen, Calendar, FileText } from 'lucide-astro';
 
-const events = await getAllEvents();
 const sources = getSourcesRegistry();
+const sourceToEvents = getSourceToEventsMap();
 
 interface FlatRef {
   id: string;
@@ -17,30 +17,15 @@ interface FlatRef {
   eventCount: number;
 }
 
-const refMap = new Map<string, FlatRef>();
-for (const [id, source] of Object.entries(sources)) {
-  refMap.set(id, {
-    id,
-    titulo: source.titulo,
-    medio: source.medio,
-    tipo: source.tipo,
-    fecha: source.fecha,
-    url: source.url,
-    eventCount: 0,
-  });
-}
-
-for (const e of events) {
-  const entities = getEventEntities(e.id);
-  for (const sourceId of entities.fuentes) {
-    const existing = refMap.get(sourceId);
-    if (existing) {
-      existing.eventCount++;
-    }
-  }
-}
-
-const allRefs = [...refMap.values()].sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
+const allRefs: FlatRef[] = Object.entries(sources).map(([id, source]) => ({
+  id,
+  titulo: source.titulo,
+  medio: source.medio,
+  tipo: source.tipo,
+  fecha: source.fecha,
+  url: source.url,
+  eventCount: (sourceToEvents.get(id) ?? []).length,
+})).sort((a, b) => b.fecha.getTime() - a.fecha.getTime());
 
 // La primera tanda se renderiza en SSR (pintado inmediato + SEO); el resto viaja
 // como JSON compacto y se pinta bajo demanda en el cliente con "Cargar más fuentes".

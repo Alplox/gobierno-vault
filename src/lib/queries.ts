@@ -22,11 +22,15 @@ function basename(entryId: string): string {
   return entryId.split('/').pop() ?? entryId;
 }
 
+let _allEventsCache: Awaited<ReturnType<typeof getCollection>> | null = null;
+
 export async function getAllEvents() {
+  if (_allEventsCache) return _allEventsCache;
   const events = await getCollection('events');
-  return events.sort(
+  _allEventsCache = events.sort(
     (a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime()
   );
+  return _allEventsCache;
 }
 
 export async function getEventsByYear(year: string) {
@@ -35,7 +39,7 @@ export async function getEventsByYear(year: string) {
 }
 
 export async function getEventByFilename(filename: string) {
-  const events = await getCollection('events');
+  const events = await getAllEvents();
   return events.find((e) => basename(e.id) === filename);
 }
 
@@ -64,7 +68,7 @@ export async function getTopicById(id: string) {
 }
 
 export async function getUniqueTopics(): Promise<string[]> {
-  const events = await getCollection('events');
+  const events = await getAllEvents();
   const ids = new Set<string>();
   for (const e of events) {
     for (const t of e.data.tema) ids.add(t);
