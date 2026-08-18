@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (169)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (175)
 
 <details>
-<summary>Ver lista (169 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (175 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — **1 fuente**
@@ -54,6 +54,7 @@
 - [2026/07/20260727-7 - Seremi de Vivienda del Maule Patricio Ponce renuncia tras menos de cinco meses](src/content/events/2026/07/20260727-7.md) — **1 fuente**
 - [2026/07/20260729-4 - Contraloría suspende a directora jurídica de la Municipalidad de Valparaíso](src/content/events/2026/07/20260729-4.md) — **1 fuente**
 - [2026/07/20260731-1 - Oposición acusa que el gobierno sigue girando ideológicamente e improvisando a 5 meses de asumir](src/content/events/2026/07/20260731-1.md) — **1 fuente**
+- [2026/07/20260731-18 - Boletín de la DIPRES de junio 2026: el gasto de capital cae 14% acumulado en el primer semestre, pero el gasto total sube 1%](src/content/events/2026/07/20260731-18.md) — **1 fuente**
 - [2026/08/20260801-10 - Coyhaique instala aldea de emergencia para 200 personas ante la ola de frío y nevadas](src/content/events/2026/08/20260801-10.md) — **1 fuente**
 - [2026/08/20260802-7 - PPD busca ampliar proyecto del PDG sobre reembolso del IVA: suma alimentos, lentes y fórmulas lácteas](src/content/events/2026/08/20260802-7.md) — **1 fuente**
 - [2026/08/20260802-8 - El reservado proyecto de los bancos para lanzar el 'Pix chileno': pagos inmediatos interoperables con alias y QR](src/content/events/2026/08/20260802-8.md) — **1 fuente**
@@ -84,7 +85,9 @@
 - [2026/08/20260813-13 - Muerte de un pudú atacado por perros en Temuco reabre críticas por falta de fiscalización del SAG en zonas rurales](src/content/events/2026/08/20260813-13.md) — **1 fuente**
 - [2026/08/20260813-6 - ANFACH se declara en alerta: la ACOT permitiría facultades autónomas de Carabineros y la PDI en zonas primarias de puertos y fronteras](src/content/events/2026/08/20260813-6.md) — **1 fuente**
 - [2026/08/20260814-5 - SII anuncia cobro del Préstamo Solidario a 1.073.590 personas que no declararon impuestos entre 2022 y 2026: deuda supera los $553 mil millones](src/content/events/2026/08/20260814-5.md) — **1 fuente**
+- [2026/08/20260815-10 - Matt Sanders (Triple P) visita Chile y defiende la prevención frente a los enfoques punitivos contra la violencia juvenil](src/content/events/2026/08/20260815-10.md) — **1 fuente**
 - [2026/08/20260816-13 - PS y PC critican la 'descoordinación' del gobierno de Kast: Venegas afirma que 'si no tuviera mayoría parlamentaria, estaría en el suelo' y Serrano acusa improvisación](src/content/events/2026/08/20260816-13.md) — **1 fuente**
+- [2026/08/20260816-18 - Rodolfo Carter: 'Quiroz es la persona más influyente del gabinete', admite descoordinaciones y critica a Matthei](src/content/events/2026/08/20260816-18.md) — **1 fuente**
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — **2 fuentes**
 - [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — **2 fuentes**
 - [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — **2 fuentes**
@@ -122,6 +125,7 @@
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — **2 fuentes**
 - [2025/01/20250125-1 - Venezuela afirmó que las relaciones con Chile están rotas desde agosto](src/content/events/2025/01/20250125-1.md) — **2 fuentes**
 - [2025/03/20250327-1 - INE entrega los primeros resultados del Censo 2024: Chile tiene 18.480.432 habitantes](src/content/events/2025/03/20250327-1.md) — **2 fuentes**
+- [2026/01/20260121-5 - Mala Espina perfila a Catalina Parot, la abogada que vuelve a Bienes Nacionales en el gabinete de Kast: exministra de Piñera, presidenta del CNTV y ex candidata](src/content/events/2026/01/20260121-5.md) — **2 fuentes**
 - [2026/04/20260416-3 - Contrapoder revela que al menos seis ministros del gabinete de Kast se beneficiarían de la exención de contribuciones para mayores de 65 años](src/content/events/2026/04/20260416-3.md) — **2 fuentes**
 - [2026/04/20260429-1 - Contraloría concluye que frase 'Estado quebrado' no cumplió estándares de moderación](src/content/events/2026/04/20260429-1.md) — **2 fuentes**
 - [2026/06/20260601-2 - Kast anuncia Registro Nacional de Vandales e Incivilidades en Cuenta Publica](src/content/events/2026/06/20260601-2.md) — **2 fuentes**
@@ -177,16 +181,41 @@
 - [2026/08/20260812-19 - Inmunomédica de Concepción querella a trabajadora que acumula 100 licencias médicas en 8 años: 'la relación laboral es inventada'](src/content/events/2026/08/20260812-19.md) — **2 fuentes**
 - [2026/08/20260814-9 - EE.UU. prepara carta a sus socios (incluido Chile) para que elijan bando en la carrera de IA con China](src/content/events/2026/08/20260814-9.md) — **2 fuentes**
 - [2026/08/20260816-11 - PDI busca a Thae Loiza Galaz, exconcejala de Graneros desaparecida hace 11 días: salió de un inmueble en Ñuñoa el 5 de agosto y se perdió su rastro](src/content/events/2026/08/20260816-11.md) — **2 fuentes**
+- [2026/08/20260817-4 - Comienza en Angol el juicio oral contra el exjefe de gabinete del alcalde de Collipulli, Daniel Valencia Cifuentes, acusado de violar a una guardia municipal: la Fiscalía pide 11 años](src/content/events/2026/08/20260817-4.md) — **2 fuentes**
+- [2026/08/20260817-6 - Alcalde Concha (FA) pide al Gobierno incluir las barras bravas en el plan de seguridad: 'muchas son verdaderas bandas criminales'](src/content/events/2026/08/20260817-6.md) — **2 fuentes**
 
 </details>
 
 ## 2026
 
 - [2026/01/20260101-1 - Mensaje de fin de año de Kast: '2025 fue el año en que millones dijeron basta al desorden, a la improvisación y al abandono'](src/content/events/2026/01/20260101-1.md) — 4 fuentes
+- [2026/01/20260104-1 - Emol recoge el debate de Louis de Grange, el futuro ministro de Transportes de Kast: las ciclovías 'vacías' que propone eliminar](src/content/events/2026/01/20260104-1.md) — 9 fuentes
+- [2026/01/20260106-2 - Emol confirma que Jorge Quiroz será el ministro de Hacienda de Kast: el economista cuestionado por su rol en las colusiones](src/content/events/2026/01/20260106-2.md) — 7 fuentes
 - [2026/01/20260109-1 - Gobierno inicia histórico pago de beneficios del Seguro Social a más de 1,3 millones de pensionados](src/content/events/2026/01/20260109-1.md) — 4 fuentes
+- [2026/01/20260112-2 - The Clinic perfila a May Chomali, la carta favorita de Kast para Salud: la médica del círculo de Mañalich, hermana del arzobispo y pilar en la condena del oncólogo Manuel Álvarez](src/content/events/2026/01/20260112-2.md) — 5 fuentes
+- [2026/01/20260116-1 - El perfil de Francisco Undurraga, el ofrecido por Kast para el Ministerio de las Culturas sin trayectoria en el área: las 9 leyes de su paso por el Congreso](src/content/events/2026/01/20260116-1.md) — 7 fuentes
+- [2026/01/20260120-10 - Mala Espina perfila a José García Ruminot, el histórico senador RN que será ministro Segpres de Kast: el operador legislativo con 36 años en el Congreso](src/content/events/2026/01/20260120-10.md) — 3 fuentes
+- [2026/01/20260120-11 - Mala Espina perfila a Martín Arrau, el ingeniero republicano que será ministro de Obras Públicas de Kast: exintendente de Ñuble y jefe de campaña del presidente electo](src/content/events/2026/01/20260120-11.md) — 3 fuentes
+- [2026/01/20260120-12 - Mala Espina perfila a Ximena Rincón, la senadora Demócratas que será ministra de Energía de Kast: el fichaje de la ex Concertación que marca el giro político](src/content/events/2026/01/20260120-12.md) — 3 fuentes
+- [2026/01/20260120-13 - Mala Espina perfila a Natalia Duco, la lanzadora de bala que será ministra del Deporte de Kast: la primera olímpica en la cartera, con el sello del dopaje de 2018](src/content/events/2026/01/20260120-13.md) — 4 fuentes
+- [2026/01/20260120-3 - La veintena de cargos que Francisco Pérez Mackenna dejará en el grupo Luksic para asumir en Cancillería: el perfil del 'canciller de Luksic' y sus nexos con Kast](src/content/events/2026/01/20260120-3.md) — 3 fuentes
+- [2026/01/20260120-4 - Emol perfila a Iván Poduje, el más que seguro ministro de Vivienda de Kast: el urbanista polémico de Atisba, Sin Filtro y las polémicas de los trolls, el Servel y el CDE](src/content/events/2026/01/20260120-4.md) — 8 fuentes
+- [2026/01/20260120-5 - Emol perfila a Jaime Campos, el radical elegido por Kast para Agricultura: el ex ministro que le dijo no a Bachelet por Punta Peuco y sus polémicas de Justicia](src/content/events/2026/01/20260120-5.md) — 7 fuentes
+- [2026/01/20260120-6 - The Clinic perfila a María Jesús Wulf, la futura ministra de Desarrollo Social de Kast: la socióloga del Movimiento Gremial y primera compañera de ruta del republicano](src/content/events/2026/01/20260120-6.md) — 3 fuentes
+- [2026/01/20260120-7 - The Clinic perfila a María Paz Arzola, la futura ministra de Educación de Kast: la investigadora de Libertad y Desarrollo que impulsa volver a la selección escolar](src/content/events/2026/01/20260120-7.md) — 3 fuentes
+- [2026/01/20260120-8 - Mala Espina perfila a Trinidad Steinert, la exfiscal de Tarapacá que será ministra de Seguridad de Kast: la 'Patricia Bullrich' chilena](src/content/events/2026/01/20260120-8.md) — 4 fuentes
+- [2026/01/20260120-9 - Mala Espina perfila a Fernando Barros, el abogado tributarista que será ministro de Defensa de Kast: el defensor de Pinochet en Londres y abogado de Piñera por 30 años](src/content/events/2026/01/20260120-9.md) — 3 fuentes
+- [2026/01/20260121-2 - La Tercera perfila 'el lado A' de Daniel Mas, el único biministro de Kast: la empresa familiar Ecomac, la agenda anti-permisología y las facturas falsas de la 'lista de Carrasco'](src/content/events/2026/01/20260121-2.md) — 5 fuentes
+- [2026/01/20260121-3 - Mala Espina perfila a Fernando Rabat, el académico de la UDD que será ministro de Justicia de Kast: el exabogado de Pinochet en el caso Riggs y la Operación Colombo](src/content/events/2026/01/20260121-3.md) — 4 fuentes
+- [2026/01/20260121-4 - Mala Espina perfila a Tomás Rau, el economista de la UC que será ministro del Trabajo de Kast: el discípulo de David Card y crítico de las políticas laborales de Boric](src/content/events/2026/01/20260121-4.md) — 3 fuentes
+- [2026/01/20260121-5 - Mala Espina perfila a Catalina Parot, la abogada que vuelve a Bienes Nacionales en el gabinete de Kast: exministra de Piñera, presidenta del CNTV y ex candidata](src/content/events/2026/01/20260121-5.md) — 2 fuentes
+- [2026/01/20260121-6 - Mala Espina perfila a Judith Marín, la profesora evangélica de 30 años que será ministra de la Mujer de Kast: la integrante más joven del gabinete y su perfil conservador](src/content/events/2026/01/20260121-6.md) — 3 fuentes
+- [2026/01/20260122-1 - Mala Espina perfila a Francisca Toledo, la ingeniera de LyD que será ministra de Medio Ambiente de Kast: la crítica del royalty minero que llegó al equipo de La Moneda chica](src/content/events/2026/01/20260122-1.md) — 3 fuentes
+- [2026/01/20260122-2 - Mala Espina perfila a Ximena Lincolao, la primera ministra con ascendencia mapuche directa desde el retorno a la democracia: la emprendedora tecnológica que será ministra de Ciencia de Kast](src/content/events/2026/01/20260122-2.md) — 4 fuentes
 - [2026/02/20260213-1 - IFP revela déficit estructural de 3,55% del PIB en 2025, tercer incumplimiento consecutivo de meta fiscal](src/content/events/2026/02/20260213-1.md) — 4 fuentes
 - [2026/02/20260222-1 - Kast presidente-electo analiza rebajar la gratuidad en educación superior](src/content/events/2026/02/20260222-1.md) — 3 fuentes
 - [2026/03/20260311-2 - Análisis estratégico identifica ocho desafíos de Kast en defensa y seguridad](src/content/events/2026/03/20260311-2.md) — 1 fuente
+- [2026/03/20260321-1 - The Clinic perfila a Mara Sedini, la vocera de gobierno: la hockeysta, actriz que soñó con Broadway y opinóloga política que pasó de Sin Filtros a La Moneda](src/content/events/2026/03/20260321-1.md) — 7 fuentes
 - [2026/03/20260322-1 - Gobierno anuncia cambios al MEPCO tras alertas sobre impacto en IPC e inflación](src/content/events/2026/03/20260322-1.md) — 4 fuentes
 - [2026/03/20260324-1 - Filtracion de minuta 'cierre epico' de Secom por crisis de combustibles](src/content/events/2026/03/20260324-1.md) — 12 fuentes
 - [2026/03/20260324-3 - Revelan que ONG noruega Norwegian People's Aid financia a comunidades lafkenche para frenar salmoneras](src/content/events/2026/03/20260324-3.md) — 3 fuentes
@@ -197,7 +226,7 @@
 - [2026/04/20260416-1 - Gendarmería se incorpora a las Fuerzas de Orden y Seguridad Pública](src/content/events/2026/04/20260416-1.md) — 3 fuentes
 - [2026/04/20260416-2 - Gobierno anuncia que no renovará el subsidio eléctrico y luego rectifica: 2 millones de hogares expuestos antes del tarifazo](src/content/events/2026/04/20260416-2.md) — 5 fuentes
 - [2026/04/20260416-3 - Contrapoder revela que al menos seis ministros del gabinete de Kast se beneficiarían de la exención de contribuciones para mayores de 65 años](src/content/events/2026/04/20260416-3.md) — 2 fuentes
-- [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 6 fuentes
+- [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 7 fuentes
 - [2026/04/20260427-1 - Entra en vigencia la segunda etapa de la Ley de 40 horas (42 horas): comercio y expertos alertan por costos y empleo](src/content/events/2026/04/20260427-1.md) — 1 fuente
 - [2026/04/20260427-2 - CEPAL recorta proyección de crecimiento de Chile 2026 a 2% por tensión global e inflación](src/content/events/2026/04/20260427-2.md) — 1 fuente
 - [2026/04/20260429-1 - Contraloría concluye que frase 'Estado quebrado' no cumplió estándares de moderación](src/content/events/2026/04/20260429-1.md) — 2 fuentes
@@ -224,8 +253,10 @@
 - [2026/06/20260615-1 - Tesoreria inicia embargos de cuentas bancarias a deudores morosos del CAE](src/content/events/2026/06/20260615-1.md) — 7 fuentes
 - [2026/06/20260615-4 - Fiscalía y querellantes presentan recurso de nulidad contra la absolución de Claudio Crespo en el caso Gatica](src/content/events/2026/06/20260615-4.md) — 1 fuente
 - [2026/06/20260616-1 - Descubren puente clandestino que cruza la zanja fronteriza en Colchane](src/content/events/2026/06/20260616-1.md) — 1 fuente
+- [2026/06/20260617-4 - Comisión de Seguridad de la Cámara aprueba en general el proyecto que aumenta sanciones por insultos a Carabineros y la PDI (Boletín 17.662-07)](src/content/events/2026/06/20260617-4.md) — 5 fuentes
 - [2026/06/20260618-3 - Ministro del Trabajo confirma que el Gobierno evalúa una indemnización laboral a todo evento](src/content/events/2026/06/20260618-3.md) — 4 fuentes
 - [2026/06/20260619-1 - Aprueban la instalación del cable submarino Humboldt de Google que unirá Chile con Asia-Pacífico](src/content/events/2026/06/20260619-1.md) — 1 fuente
+- [2026/06/20260620-1 - Suboficial mayor Nelty Álvarez interpone tutela laboral contra general de Carabineros de Magallanes y denuncia desprotección de la ministra de la Mujer](src/content/events/2026/06/20260620-1.md) — 5 fuentes
 - [2026/06/20260622-1 - Carabineros da de baja a cabo que usó una patrulla para comprar en Máfil: video viral, sumario administrativo y derivación a la justicia](src/content/events/2026/06/20260622-1.md) — 3 fuentes
 - [2026/06/20260623-1 - Comisión de Evaluación Ambiental aprueba proyecto Alto Santorini en dunas de Concón](src/content/events/2026/06/20260623-1.md) — 2 fuentes
 - [2026/06/20260624-1 - Senado aprueba por el minimo idea de legislar megarreforma](src/content/events/2026/06/20260624-1.md) — 2 fuentes
@@ -235,6 +266,7 @@
 - [2026/07/20260703-1 - Primera etapa de la zanja fronteriza en etapa final; ingresos irregulares bajaron 90%](src/content/events/2026/07/20260703-1.md) — 2 fuentes
 - [2026/07/20260705-1 - Corrupción y redes de ultraderecha: El flanco Orbán abierto en Chile](src/content/events/2026/07/20260705-1.md) — 2 fuentes
 - [2026/07/20260710-2 - Contrapoder revela que Eduardo Macaya Zentilli sigue siendo alguacil del Círculo de Amigos de Carabineros pese a estar condenado por abuso sexual](src/content/events/2026/07/20260710-2.md) — 3 fuentes
+- [2026/07/20260710-3 - Kast lanza el plan 'Modo Empleo': $50 mil millones en subsidios a la contratación y 25.000 cupos Sence con meta de 50.000 puestos hacia octubre](src/content/events/2026/07/20260710-3.md) — 6 fuentes
 - [2026/07/20260713-1 - Senapred declara Alerta Temprana Preventiva en RM y Gobierno decreta emergencia preventiva en 10 regiones por sistema frontal](src/content/events/2026/07/20260713-1.md) — 6 fuentes
 - [2026/07/20260715-1 - DMC emite Alarma Meteorológica AA3/2026 y alarma se amplía a O'Higgins; evacuaciones preventivas en curso](src/content/events/2026/07/20260715-1.md) — 3 fuentes
 - [2026/07/20260716-1 - Senado aprueba megarreforma de Kast en madrugada maratónica](src/content/events/2026/07/20260716-1.md) — 7 fuentes
@@ -298,10 +330,12 @@
 - [2026/07/20260730-11 - Corte de Apelaciones decreta prisión preventiva en recinto militar para cabo de la Armada por atropello múltiple en feria Caupolicán](src/content/events/2026/07/20260730-11.md) — 2 fuentes
 - [2026/07/20260730-12 - MOP inicia investigación administrativa tras viralización de video de pareja en dependencias de la seremi del Bío Bío](src/content/events/2026/07/20260730-12.md) — 3 fuentes
 - [2026/07/20260730-13 - Ministro Arrau confirma sumario en Carabineros por cirugías estéticas a esposa de general director cubiertas con Dipreca](src/content/events/2026/07/20260730-13.md) — 3 fuentes
+- [2026/07/20260730-27 - Caso Sartor: comienza la formalización de 11 imputados con perjuicio de casi US$191 millones y prisión preventiva pedida para Michael Clark y los hermanos Larraín](src/content/events/2026/07/20260730-27.md) — 5 fuentes
 - [2026/07/20260731-1 - Oposición acusa que el gobierno sigue girando ideológicamente e improvisando a 5 meses de asumir](src/content/events/2026/07/20260731-1.md) — 1 fuente
 - [2026/07/20260731-10 - Marcha feminista llega a La Moneda en rechazo al proyecto 'Escucha su corazón'](src/content/events/2026/07/20260731-10.md) — 3 fuentes
 - [2026/07/20260731-13 - Investigan ataque a tiros contra el edificio de la Municipalidad de Coquimbo](src/content/events/2026/07/20260731-13.md) — 2 fuentes
 - [2026/07/20260731-16 - Alcalde de Cerro Navia denuncia que homicidios de 2026 ya igualan la cifra de todo 2025](src/content/events/2026/07/20260731-16.md) — 2 fuentes
+- [2026/07/20260731-18 - Boletín de la DIPRES de junio 2026: el gasto de capital cae 14% acumulado en el primer semestre, pero el gasto total sube 1%](src/content/events/2026/07/20260731-18.md) — 1 fuente
 - [2026/07/20260731-2 - INE: tasa de desocupación alcanza 9,4% en el trimestre abril-junio, su máximo nivel en casi cinco años](src/content/events/2026/07/20260731-2.md) — 12 fuentes
 - [2026/07/20260731-6 - Desborde de humedales y río en Traiguén: Senapred ordena evacuar sector Las Obras con 50 familias afectadas](src/content/events/2026/07/20260731-6.md) — 2 fuentes
 - [2026/07/20260731-8 - Contrapoder revela recorte de $71.702 millones a los Serviu de las regiones más afectadas por el temporal mientras el Gobierno pide donaciones](src/content/events/2026/07/20260731-8.md) — 2 fuentes
@@ -338,6 +372,7 @@
 - [2026/08/20260805-31 - Minsal alerta por la baja percepción del riesgo del vapeo: uno de cada tres adolescentes ya probó un vapeador](src/content/events/2026/08/20260805-31.md) — 3 fuentes
 - [2026/08/20260805-32 - Venta de autos usados roza las 650 mil unidades a julio: segundo mejor registro histórico del mercado](src/content/events/2026/08/20260805-32.md) — 2 fuentes
 - [2026/08/20260805-33 - Cenco Malls aumenta 27,9% su utilidad en el segundo trimestre impulsado por la expansión de superficie de ventas](src/content/events/2026/08/20260805-33.md) — 3 fuentes
+- [2026/08/20260805-34 - Corte de Apelaciones de Valparaíso ordena al IPS pronunciarse sobre 68 pensionados reparatorios (leyes Valech y Rettig) bloqueados para postular a la PGU](src/content/events/2026/08/20260805-34.md) — 3 fuentes
 - [2026/08/20260805-6 - Gobierno ingresa formalmente el veto supresivo a la megarreforma contra el olvido financiero, el anatocismo y el pago a 30 días a las pymes](src/content/events/2026/08/20260805-6.md) — 2 fuentes
 - [2026/08/20260805-7 - 48 gremios pyme respaldan el veto presidencial al cambio en el pago a 30 días y piden discutirlo en el futuro Estatuto Pyme 2.0](src/content/events/2026/08/20260805-7.md) — 3 fuentes
 - [2026/08/20260806-1 - Marcha de Confusam frente a La Moneda por recortes a la salud termina con incidentes y detenidos](src/content/events/2026/08/20260806-1.md) — 7 fuentes
@@ -379,6 +414,8 @@
 - [2026/08/20260810-43 - Estudio de Fundación Sol: $100 millones ahorrados en la AFP no alcanzan para una pensión equivalente al sueldo mínimo y la mitad de quienes jubilaron en 2025 autofinancia menos de $86 mil](src/content/events/2026/08/20260810-43.md) — 2 fuentes
 - [2026/08/20260810-44 - EE.UU. levanta la sanción a Juan Carlos Muñoz y le devuelve la visa tras la polémica por el cable chino](src/content/events/2026/08/20260810-44.md) — 3 fuentes
 - [2026/08/20260810-45 - Naveillán a Campillai: 'no fue electa para estar permanentemente victimizándose' y '¿cómo la ha pasado Maturana?'](src/content/events/2026/08/20260810-45.md) — 2 fuentes
+- [2026/08/20260810-46 - Chile enviará nuevos agregados militares a Israel para restablecer la relación en defensa](src/content/events/2026/08/20260810-46.md) — 7 fuentes
+- [2026/08/20260810-47 - Corte Suprema anula la primera revocación de la CMF a Sartor AGF por vulnerar el debido proceso, pero deja a firme el procedimiento sancionatorio posterior](src/content/events/2026/08/20260810-47.md) — 4 fuentes
 - [2026/08/20260810-9 - PDI detiene en Carahue a Rosamel Fierro Huenuman, prófugo de la Macrozona Sur desde 2021](src/content/events/2026/08/20260810-9.md) — 2 fuentes
 - [2026/08/20260811-12 - Sernac paga compensación de $45.030 por menor por la colusión de medicamentos de Farmacias Ahumada](src/content/events/2026/08/20260811-12.md) — 1 fuente
 - [2026/08/20260811-14 - Calidad del empleo se deteriora: 102,6 mil trabajadores pierden su empleo de calidad y el 70% son mujeres](src/content/events/2026/08/20260811-14.md) — 3 fuentes
@@ -394,22 +431,38 @@
 - [2026/08/20260812-14 - Estudio Mundial de Juventud 2026: los jóvenes chilenos de 18 a 24 años están entre los más pesimistas del mundo —menos esperanza que sus padres, menor acceso a vivienda y mayor disposición a emigrar—](src/content/events/2026/08/20260812-14.md) — 2 fuentes
 - [2026/08/20260812-19 - Inmunomédica de Concepción querella a trabajadora que acumula 100 licencias médicas en 8 años: 'la relación laboral es inventada'](src/content/events/2026/08/20260812-19.md) — 2 fuentes
 - [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 5 fuentes
+- [2026/08/20260812-20 - Boric hace autocrítica en la presentación del libro 'La Resaca' de Tironi: 'No fuimos creíbles' en seguridad y los retiros fueron 'un gran error'](src/content/events/2026/08/20260812-20.md) — 3 fuentes
 - [2026/08/20260812-8 - Cadem edición 680: cae a 40% la percepción de que la delincuencia ha aumentado, con cambio metodológico en la pregunta y un 2025 sin mediciones](src/content/events/2026/08/20260812-8.md) — 6 fuentes
 - [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
 - [2026/08/20260813-13 - Muerte de un pudú atacado por perros en Temuco reabre críticas por falta de fiscalización del SAG en zonas rurales](src/content/events/2026/08/20260813-13.md) — 1 fuente
 - [2026/08/20260813-14 - Adulta mayor de 78 años muere tras ser atacada por tres perros pastores alemanes en Quirihue (Ñuble)](src/content/events/2026/08/20260813-14.md) — 5 fuentes
 - [2026/08/20260813-16 - Daniel Mas presenta en seminario CLAPES UC las medidas mineras del gobierno: meta de 6 millones de toneladas de cobre, mesa de exploración y reactivación del tratado con Argentina](src/content/events/2026/08/20260813-16.md) — 3 fuentes
+- [2026/08/20260813-18 - Corte Suprema anula el Decreto N° 24 del Minsal: cae la advertencia 'evita su consumo' en publicidad de alimentos con sellos](src/content/events/2026/08/20260813-18.md) — 3 fuentes
 - [2026/08/20260813-5 - Comisario de la PDI balea a un gendarme de franco tras una discusión con una mujer en Playa Ancha, Valparaíso](src/content/events/2026/08/20260813-5.md) — 3 fuentes
 - [2026/08/20260813-6 - ANFACH se declara en alerta: la ACOT permitiría facultades autónomas de Carabineros y la PDI en zonas primarias de puertos y fronteras](src/content/events/2026/08/20260813-6.md) — 1 fuente
 - [2026/08/20260814-10 - Polémica por el menú del penal La Laguna de Talca: cazuela, guatitas y postres para reos de alta peligrosidad en contraste con la alimentación escolar y el BAES](src/content/events/2026/08/20260814-10.md) — 3 fuentes
+- [2026/08/20260814-16 - Gremios explican el freno a la contratación: mayores costos laborales, bajas ventas y débil inversión; la informalidad sube a 27%](src/content/events/2026/08/20260814-16.md) — 9 fuentes
 - [2026/08/20260814-5 - SII anuncia cobro del Préstamo Solidario a 1.073.590 personas que no declararon impuestos entre 2022 y 2026: deuda supera los $553 mil millones](src/content/events/2026/08/20260814-5.md) — 1 fuente
 - [2026/08/20260814-9 - EE.UU. prepara carta a sus socios (incluido Chile) para que elijan bando en la carrera de IA con China](src/content/events/2026/08/20260814-9.md) — 2 fuentes
+- [2026/08/20260815-10 - Matt Sanders (Triple P) visita Chile y defiende la prevención frente a los enfoques punitivos contra la violencia juvenil](src/content/events/2026/08/20260815-10.md) — 1 fuente
+- [2026/08/20260815-11 - Segundo traslado del poblamiento de La Laguna: Gendarmería ingresa 250 internos del Maule al complejo penitenciario de Talca](src/content/events/2026/08/20260815-11.md) — 8 fuentes
 - [2026/08/20260815-5 - Informe de la BCN sobre el Registro de Vándalos: la propuesta del gobierno sería inédita a nivel mundial al usar las prestaciones sociales como castigo penal](src/content/events/2026/08/20260815-5.md) — 4 fuentes
 - [2026/08/20260816-11 - PDI busca a Thae Loiza Galaz, exconcejala de Graneros desaparecida hace 11 días: salió de un inmueble en Ñuñoa el 5 de agosto y se perdió su rastro](src/content/events/2026/08/20260816-11.md) — 2 fuentes
 - [2026/08/20260816-13 - PS y PC critican la 'descoordinación' del gobierno de Kast: Venegas afirma que 'si no tuviera mayoría parlamentaria, estaría en el suelo' y Serrano acusa improvisación](src/content/events/2026/08/20260816-13.md) — 1 fuente
 - [2026/08/20260816-14 - Peter Thiel entra a la propiedad de Vista Energy y desembarca en Vaca Muerta: el fondo Thiel Macro compra el 1% del yacimiento que abastece a ENAP](src/content/events/2026/08/20260816-14.md) — 3 fuentes
+- [2026/08/20260816-15 - Criteria: desaprobación de Kast sube a 55% y 73% prioriza la seguridad sobre la libertad, con la gestión en seguridad evaluada peor de lo esperado](src/content/events/2026/08/20260816-15.md) — 3 fuentes
+- [2026/08/20260816-16 - Cadem edición 681: aprobación de Kast sube a 41% y 93% respalda el Plan Cancerbero, aunque 38% no ve un cambio significativo en seguridad](src/content/events/2026/08/20260816-16.md) — 10 fuentes
+- [2026/08/20260816-17 - Contraloría destapa nepotismo en la Municipalidad de El Tabo: Informe Final N° 596 detecta 56 funcionarios con vínculos familiares, 24 ligados al alcalde](src/content/events/2026/08/20260816-17.md) — 3 fuentes
+- [2026/08/20260816-18 - Rodolfo Carter: 'Quiroz es la persona más influyente del gabinete', admite descoordinaciones y critica a Matthei](src/content/events/2026/08/20260816-18.md) — 1 fuente
 - [2026/08/20260816-3 - Crisis de natalidad: Cochamó, Portezuelo y Río Hurtado son las comunas donde ya mueren más personas de las que nacen; la fecundidad cae a 0,99 hijos por mujer](src/content/events/2026/08/20260816-3.md) — 3 fuentes
 - [2026/08/20260816-4 - Excarabinero dado de baja tras detención en Illapel denuncia 'graves irregularidades' del procedimiento y publica videos de su reducción](src/content/events/2026/08/20260816-4.md) — 3 fuentes
+- [2026/08/20260817-1 - La comunidad documenta el caso de Agustín Quera Marcet: el jefe de gabinete del biministro Mas es un abogado recién titulado sin experiencia previa, tercer caso de la 'generación sin currículum'](src/content/events/2026/08/20260817-1.md) — 6 fuentes
+- [2026/08/20260817-2 - Gobierno apura con urgencia de 'discusión inmediata' el proyecto que aumenta penas y permite detenciones por insultos a Carabineros y la PDI](src/content/events/2026/08/20260817-2.md) — 8 fuentes
+- [2026/08/20260817-3 - BioBioChile revela el rol de Michael Clark en el préstamo de 65.000 UF a Avram Fritch: la querella de Toesca por 'vaciamiento patrimonial' del exmilitar israelí](src/content/events/2026/08/20260817-3.md) — 3 fuentes
+- [2026/08/20260817-4 - Comienza en Angol el juicio oral contra el exjefe de gabinete del alcalde de Collipulli, Daniel Valencia Cifuentes, acusado de violar a una guardia municipal: la Fiscalía pide 11 años](src/content/events/2026/08/20260817-4.md) — 2 fuentes
+- [2026/08/20260817-5 - En plena tensión arancelaria con EE.UU., China anuncia que recibirá al canciller chileno Pérez Mackenna entre el 18 y el 22 de agosto: una gira que incluye Vietnam y Japón](src/content/events/2026/08/20260817-5.md) — 4 fuentes
+- [2026/08/20260817-6 - Alcalde Concha (FA) pide al Gobierno incluir las barras bravas en el plan de seguridad: 'muchas son verdaderas bandas criminales'](src/content/events/2026/08/20260817-6.md) — 2 fuentes
+- [2026/08/20260817-7 - Kast pone en marcha la Comisión Asesora para la Modernización del Empleo Público: 12 expertos con 120 días para proponer una reforma](src/content/events/2026/08/20260817-7.md) — 4 fuentes
 
 ## 2025
 
@@ -419,11 +472,14 @@
 - [2025/03/20250327-1 - INE entrega los primeros resultados del Censo 2024: Chile tiene 18.480.432 habitantes](src/content/events/2025/03/20250327-1.md) — 2 fuentes
 - [2025/04/20250409-1 - Estudio UDD revela impacto desigual de las alertas SAE en los incendios de Valparaíso de 2024](src/content/events/2025/04/20250409-1.md) — 1 fuente
 - [2025/06/20250629-1 - Primarias presidenciales 2025: Jeannette Jara gana la primaria de Unidad por Chile](src/content/events/2025/06/20250629-1.md) — 3 fuentes
+- [2025/07/20250728-1 - Robo de $6.150 millones al Banco Itaú de Valparaíso: forado desde local colindante y oxicorte para vaciar la bóveda](src/content/events/2025/07/20250728-1.md) — 11 fuentes
 - [2025/09/20250911-1 - Fact Check de La Tercera desmiente a ME-O: la tasa de homicidios no se duplicó en tres gobiernos](src/content/events/2025/09/20250911-1.md) — 1 fuente
 - [2025/10/20251017-1 - Fiscalía publica Informe Estadístico del Estallido Social: 30 fallecidos, 464 víctimas de trauma ocular y 35.146 delitos](src/content/events/2025/10/20251017-1.md) — 6 fuentes
+- [2025/10/20251020-1 - Tribunal de Juicio Oral de Angol absuelve al alcalde de Collipulli Manuel Macaya del delito de desacato: 'No he cometido ningún delito'](src/content/events/2025/10/20251020-1.md) — 6 fuentes
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
 - [2025/12/20251203-1 - Atlas Network: la desinformacion como arma neoliberal](src/content/events/2025/12/20251203-1.md) — 4 fuentes
+- [2025/12/20251210-4 - La Tercera perfila a Claudio Alvarado como el favorito para la Segpres de un eventual gobierno de Kast: la trayectoria del 'Coronel UDI' que terminó en Interior](src/content/events/2025/12/20251210-4.md) — 5 fuentes
 - [2025/12/20251224-2 - Comisión para la Fijación de Remuneraciones eleva el sueldo del Presidente a $11,07 millones y Kast evita comprometer una rebaja: 'es una norma legal'](src/content/events/2025/12/20251224-2.md) — 3 fuentes
 
 ## 2024

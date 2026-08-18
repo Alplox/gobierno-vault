@@ -490,6 +490,24 @@ Cuando `webfetch` no logre leer una URL (bloqueo, JS rendering, paywall), intent
 Formato: `https://r.jina.ai/https://ejemplo.com/articulo`
 Formato paywallskip: `https://www.paywallskip.com/article?url=https://ejemplo.com/articulo`
 
+**Escalera completa para leer una URL (orden recomendado):**
+
+1. `fetch` directo de Node (el que usan `add-source`, `pdf-extract`, `doc-extract` y `sync-sitemaps`)
+2. Mirrors de la lista anterior (`r.jina.ai`, `defuddle.md`, `markdown.new`, `paywallskip.com`, `archive.ph`)
+3. `pnpm run fetch-impersonate -- <URL>` — helper con **curl_cffi** (Python), el binding del motor
+   **curl-impersonate** (`https://github.com/lwthiker/curl-impersonate`) compatible con Windows vía
+   wheels. Modifica el handshake TLS + HTTP/2 para ser indistinguible de Chrome/Firefox/Edge/Safari;
+   sirve para sitios que bloquean por fingerprinting (Cloudflare challenge, rate-limit por TLS) —
+   los casos documentados de The Clinic, El Ciudadano y araucaniadiario. Flags: `--binary` (body
+   como Buffer, útil para PDFs) y `--headers` (diagnóstico de bloqueo). Requisito:
+   `python -m pip install --user curl_cffi`. `pdf-extract.mjs` y `doc-extract.mjs` lo usan
+   automáticamente como fallback cuando el fetch directo falla.
+4. **Crawlee** (`crawlee`, devDependency): el `fetchText` de `sync-sitemaps.mjs` relega a
+   `HttpCrawler` (retries + backoff + detección de páginas de bloqueo) cuando el fetch directo
+   devuelve error de red o 403/429 — útil para medios que rate-limitean (El Ciudadano, El
+   Periodista). Para sitios con JS pesado o Cloudflare avanzado el siguiente escalón es el
+   `fetch-impersonate` (curl_cffi), no Playwright (no instalado a propósito).
+
 ## Procesamiento de PDFs (lectura de documentos)
 
 `pnpm run pdf-extract -- <URL-del-PDF>` descarga el PDF y lo convierte a **Markdown estructurado**
@@ -502,7 +520,25 @@ de lectura multicolumna) para leer documentos primarios durante investigaciones/
   (o `--out <ruta>` para guardarlo). `--json` imprime clasificacion + markdown. Acepta tambien
   un `.md` ya extraido como argumento posicional para re-imprimir sin red. Avisa si el PDF es
   escaneado (pdfType distinto de TextBased/Mixed: requiere OCR) y tiene timeout de descarga +
-  chequeo del magic `%PDF`.
+  chequeo del magic `%PDF`. Si la descarga falla (bloqueo TLS), relega automáticamente a
+  `fetch-impersonate.mjs` (curl_cffi).
+
+## Procesamiento de documentos de Office (Word/Excel/PowerPoint)
+
+`pnpm run doc-extract -- <URL-del-documento>` descarga un documento **.docx/.xlsx/.pptx** (u otros
+formatos: pdf, html, csv, json, xml, txt, md) y lo convierte a **Markdown estructurado** con
+**MarkItDown** de Microsoft (`https://github.com/microsoft/markitdown`, instalado vía
+`python -m pip install --user "markitdown[docx,xlsx,pptx,pdf]"`). Complementa a `pdf-extract`:
+muchas fuentes primarias de gobierno (informes, minutas, tablas de presupuesto, presentaciones)
+llegan en formatos de Office que no se pueden leer con la prensa ni los mirrors.
+
+- **Uso:** `pnpm run doc-extract -- https://sitio.cl/doc.docx` imprime el markdown a stdout
+  (o `--out <ruta>` para guardarlo). `--json` imprime metadatos + markdown. Acepta también un
+  archivo local como argumento posicional. Avisa si la extracción sale casi vacía (posible
+  escaneo/formato no soportado). Si la descarga falla (bloqueo TLS), relega automáticamente a
+  `fetch-impersonate.mjs` (curl_cffi).
+- **Requisito:** Python 3 + MarkItDown (ver arriba). El script invoca `python -m markitdown`
+  (más robusto que depender del `.exe` en PATH, que en Windows a veces falla por permisos).
 
 ## Generador de fuentes (script)
 
@@ -565,37 +601,39 @@ NO guarda el cuerpo de los artículos.
 |---|---|---|---|---|---|
 | `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 200 | 1 |
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
-| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.908 | 4 |
-| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.158 | 10 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.921 | 4 |
+| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.169 | 10 |
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
 | `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.126 | 16 |
 | `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.712 | 1 |
 | `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
-| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 100 | 1 |
-| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.776 | 18 |
+| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 200 | 1 |
+| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.873 | 18 |
 | `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.429 | 4 |
-| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.427 | 22 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.494 | 22 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.721 | 10 |
 | `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
-| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.135 | 17 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.234 | 17 |
 | `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 201 | 1 |
 | `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
+| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.081 | 27 |
 | `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.741 | 7 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
-| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.137 | 7 |
+| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.142 | 7 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
 | `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 10.399 | 1 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 10.956 | 1 |
 | `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
-| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 64 | 1 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 90 | 1 |
 | `quepasaaraucania` | Qué Pasa Araucanía | `quepasaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.270 | 3 |
 | `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
-| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.977 | 18 |
+| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.023 | 18 |
+| `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 298.864 | 12 |
 | `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.979 | 7 |
-| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 47.897 | 8 |
-| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 191.938 | 19 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.042 | 8 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.003 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
 
@@ -637,6 +675,14 @@ Notas de plataforma (complemento manual, no se reescribe):
 - **Publimetro** (Arc XP): el `sitemap-index` solo lista `latest` + el día actual (sin índice
   histórico). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con decenas de URLs, pero no
   hay índice que los enumere: el sync captura solo lo reciente (~5-100 URLs).
+- **Emol** (CMS propio): index por año desde 1992 (`sitemap{N}_{year}.xml`, ~8.000 URLs por
+  sub-sitemap; ~1,1M artículos). El `robots.txt` declara además `sitemapIndexFotos.xml` y
+  `sitemapIndexVideos.xml` (tv.emol.com) — el `includeRe` `sitemap\d+_\d{4}\.xml$` los descarta.
+  **Ojo protocolo**: el index y los `<loc>` de los artículos vienen en `http://` pero el sitio
+  solo responde por `https://` (curl/node fetch fallan con http) — el flag `forceHttps: true`
+  normaliza ambos (sub-sitemaps y URLs guardadas). **Sin `<lastmod>` ni `news:date`**: la fecha
+  real está en el path del artículo (`/noticias/<seccion>/YYYY/MM/DD/<id>/<slug>.html`), extraída
+  con `locDateRe` (grupos YYYY/MM/DD) — día real, no aproximación de mes.
 - **El Desconcierto**: sitemaps SIN historia (`sitemap.xml` ~8 recientes + `sitemap-news.xml` ~20
   con títulos reales); todas las variantes históricas (año, post, archivos) devuelven 404.
 - **El Ciudadano / Mala Espina / El Quinto Poder / Radio UdeC / Chocale / REDIMIN**: WordPress-Yoast
@@ -697,10 +743,11 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
   lista resultados más recientes primero y deja elegir. Filtros: `--medio <slug>` y
   `--fecha YYYY-MM-DD`.
 - Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
-  `ciper`, `theclinic`, `elmostrador`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
-  `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`, `meganoticias`,
-  `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`, `elquintopoder`,
-  `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`, `diarioestrategia`.
+  `ciper`, `theclinic`, `elmostrador`, `emol`, `fastcheck`, `latercera`, `cnnchile`,
+  `eldinamo`, `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`,
+  `el_periodista`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
+  `malaespina`, `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`,
+  `mestizos`, `diarioestrategia`.
   Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
@@ -724,9 +771,10 @@ for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
 - Si el término no aparece o el medio no está en el catálogo, recién ahí usar búsquedas online.
 - Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
   `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
-  `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`, `meganoticias`,
-  `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`, `elquintopoder`,
-  `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`, `diarioestrategia`.
+  `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`,
+  `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
+  `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
+  `diarioestrategia`, `emol`.
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 
@@ -802,6 +850,9 @@ Cuando descubras algo no documentado aqui:
 | Nueva fuente | `sources.yaml`, este archivo |
 | Nuevo tema | `topics.yaml`, este archivo |
 | Procesamiento de PDFs | `scripts/pdf-extract.mjs`, sección "Procesamiento de PDFs" de este archivo |
+| Documentos de Office | `scripts/doc-extract.mjs`, sección "Procesamiento de documentos de Office" de este archivo |
+| Fetch anti-bot / impersonación | `scripts/fetch-impersonate.mjs`, sección "Extraccion de contenido web" de este archivo |
+| Catálogo de sitemaps (fallback Crawlee) | `scripts/sync-sitemaps.mjs` (`fetchWithCrawlee`), sección "Catálogo de sitemaps" de este archivo |
 | Wikilink roto | `remarkWikiLinks.mjs` (resolve fallback) |
 | Scripts de sitemaps | `scripts/sync-sitemaps.mjs`, `scripts/sitemaps-index.mjs`, `scripts/sitemaps-backup.mjs`, sección "Catálogo de sitemaps" de este archivo |
 
@@ -812,13 +863,13 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 319
+**Total de eventos:** 369
 
-**Cobertura de fuentes:** 150 de 319 eventos con 3+ fuentes (169 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 194 de 369 eventos con 3+ fuentes (175 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 228
-- 2025: 12
+- 2026: 275
+- 2025: 15
 - 2024: 10
 - 2023: 14
 - 2022: 9
@@ -831,32 +882,32 @@ Cuando descubras algo no documentado aqui:
 - 2009: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (85)
-- Economia (75)
-- Justicia (72)
-- Defensa y seguridad (55)
+- Politica (119)
+- Economia (92)
+- Justicia (88)
+- Defensa y seguridad (67)
+- Administración pública (51)
+- Derechos humanos (41)
+- Proceso legislativo (39)
+- Gobierno y gestion presidencial (37)
 - Emergencia y catástrofes (37)
-- Derechos humanos (35)
-- Proceso legislativo (35)
-- Administración pública (31)
-- Finanzas publicas (29)
-- Gobierno y gestion presidencial (27)
+- Finanzas publicas (31)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (63)
-- resultado (51)
-- publicacion (42)
-- investigacion (35)
-- anuncio (31)
+- accion (69)
+- publicacion (69)
+- resultado (53)
+- investigacion (38)
+- anuncio (34)
 - reaccion (24)
-- declaracion (20)
-- fallo_judicial (16)
-- votacion (13)
+- declaracion (22)
+- fallo_judicial (20)
+- votacion (14)
 - decreto (9)
 
 **Entidades registradas:**
-- Personas: 1423
-- Organizaciones: 837
-- Cifras: 878
-- Fuentes: 3231
+- Personas: 1503
+- Organizaciones: 890
+- Cifras: 979
+- Fuentes: 3439
 - Temas: 74

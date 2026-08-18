@@ -141,6 +141,28 @@ const MEDIA = {
     robots: 'https://www.eldinamo.cl/robots.txt',
     // Mismo CMS que CNN Chile: index por mes desde 2010 + lasts + news.
   },
+  radioagricultura: {
+    nombre: 'Radio Agricultura',
+    robots: 'https://www.radioagricultura.cl/robots.txt',
+    // Mismo CMS que CNN Chile: index por mes desde 2015 + lasts + news.
+    // Los sub-sitemaps mensuales regeneran el <lastmod> a la fecha del crawl
+    // (uniforme y falso); la fecha real está en el path YYYY/MM del sub-sitemap.
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  emol: {
+    nombre: 'Emol',
+    robots: 'https://www.emol.com/robots.txt',
+    // Sitemaps por año desde 1992 (sitemap{N}_{year}.xml), ~8.000 URLs por
+    // sub-sitemap. El robots declara además sitemapIndexFotos.xml y
+    // sitemapIndexVideos.xml (tv.emol.com) — se descartan con includeRe.
+    includeRe: /sitemap\d+_\d{4}\.xml$/i,
+    // El index y los <loc> de los artículos vienen en http:// pero el sitio
+    // solo responde por https:// (curl/node fetch fallan con http).
+    forceHttps: true,
+    // Sin <lastmod> ni news:date: la fecha real está en el path del artículo
+    // (/noticias/<seccion>/YYYY/MM/DD/<id>/<slug>.html).
+    locDateRe: /\/(\d{4})\/(\d{2})\/(\d{2})\//,
+  },
   radio_uchile: {
     nombre: 'Radio Universidad de Chile',
     index: 'https://radio.uchile.cl/sitemap_index.xml',
@@ -416,6 +438,7 @@ async function fetchText(url, { cacheKey, cacheDir, staleHours = 24, fresh = fal
 
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), 45000);
+  let direct = null;
   try {
     const res = await fetch(url, {
       signal: controller.signal,
@@ -426,36 +449,95 @@ async function fetchText(url, { cacheKey, cacheDir, staleHours = 24, fresh = fal
         'accept-language': 'es-CL,es;q=0.9,en;q=0.8',
       },
     });
-    if (!res.ok) return { ok: false, text: '', status: res.status };
-    const text = await res.text();
+    if (!res.ok) direct = { ok: false, text: '', status: res.status };
+    else direct = { ok: true, text: await res.text(), fromCache: false, status: res.status };
+  } catch (err) {
+    direct = { ok: false, text: '', status: 0, error: err.message };
+  } finally {
+    clearTimeout(timer);
+  }
+
+  // Fallback con Crawlee (retries + backoff) para errores de red o bloqueos
+  // (403/429). Lazy import: solo se carga si el fetch directo falla. Usa
+  // HttpCrawler (sin navegador); para sitios con JS pesado o Cloudflare
+  // avanzado, curl_cffi via fetch-impersonate.mjs es el siguiente escalon.
+  if (!direct.ok) {
+    const crawlee = await fetchWithCrawlee(url);
+    if (crawlee.ok) {
+      direct = crawlee;
+    }
+  }
+
+  if (direct.ok) {
+    const text = direct.text;
     if (cacheKey && cacheDir && !noCache) {
       mkdirSync(cacheDir, { recursive: true });
       writeFileSync(join(cacheDir, `${cacheKey}.xml`), text, 'utf8');
     }
-    return { ok: true, text, fromCache: false, status: res.status };
+    return { ok: true, text, fromCache: false, status: direct.status };
+  }
+  return direct;
+}
+
+async function fetchWithCrawlee(url, attempts = 3) {
+  try {
+    const { HttpCrawler, Configuration, MemoryStorage } = await import('crawlee');
+    // Storage en memoria: evita que Crawlee cree el directorio ./storage en el repo.
+    const config = new Configuration({ storageClient: new MemoryStorage() });
+    let result = { ok: false, text: '', status: 0, error: 'crawlee sin resultado' };
+    const crawler = new HttpCrawler(
+      {
+        maxRequestsPerCrawl: 1,
+        retryOnBlocked: true,
+        maxRequestRetries: attempts - 1,
+        requestHandler: async (ctx) => {
+          const body = ctx.body;
+          const status =
+            ctx.statusCode ?? ctx.response?.statusCode ?? ctx.response?.status ?? 200;
+          const text = typeof body === 'string' ? body : Buffer.from(body ?? []).toString('utf8');
+          // Filtra respuestas de bloqueo tipo Cloudflare (cuerpo HTML de error).
+          const isErrHtml = /just a moment|attention required|cf-error|access denied/i.test(
+            text.slice(0, 400)
+          );
+          if (text.length > 50 && !isErrHtml) {
+            result = { ok: true, text, fromCache: false, status };
+          } else {
+            result = { ok: false, text: '', status, error: 'cuerpo vacio o pagina de bloqueo' };
+          }
+        },
+      },
+      config
+    );
+    await crawler.run([{ url, headers: { 'user-agent': COMMON_UA } }]);
+    return result;
   } catch (err) {
-    return { ok: false, text: '', status: 0, error: err.message };
-  } finally {
-    clearTimeout(timer);
+    return { ok: false, text: '', status: 0, error: `crawlee: ${err.message}` };
   }
 }
 
 // ---------------------------------------------------------------------------
 // Parseo de XML con regex (sin dependencias, patrón del proyecto)
 // ---------------------------------------------------------------------------
-function extractPairs(xml, { pathDate = null } = {}) {
-  // Devuelve [{loc, lastmod, newsTitle, newsDate}] por bloque <url>...</url>
+function extractPairs(xml, { pathDate = null, locDateRe = null, forceHttps = false } = {}) {
+  // Devuelve [{loc, lastmod, newsTitle, newsDate, locDate}] por bloque <url>...</url>
   // pathDate: fecha derivada del nombre del sub-sitemap (YYYY-MM-01) para
   // medios cuyo <lastmod> es la fecha de regeneración y no la del artículo
-  // (ver cnnchile/dateFromSitemapPath). Prevalencia: newsDate (real, con
-  // día) > pathDate (mes del sitemap) > lastmod (puede ser falso/uniforme).
+  // (ver cnnchile/dateFromSitemapPath).
+  // locDateRe: regex que extrae la fecha real del path del ARTÍCULO (grupos
+  // YYYY/MM/DD) para medios sin <lastmod> ni news:date (ej. Emol:
+  // /noticias/<seccion>/YYYY/MM/DD/<id>/<slug>.html).
+  // forceHttps: normaliza los <loc> http:// → https:// (el site solo responde
+  // por https aunque el sitemap liste http; ej. Emol).
+  // Prevalencia: newsDate (real, con día) > locDate (del path del artículo) >
+  // pathDate (mes del sitemap) > lastmod (puede ser falso/uniforme).
   const out = [];
   const blockRe = /<url>([\s\S]*?)<\/url>/g;
   let m;
   while ((m = blockRe.exec(xml)) !== null) {
     const block = m[1];
-    const loc = block.match(/<loc>([\s\S]*?)<\/loc>/i)?.[1]?.trim();
+    let loc = block.match(/<loc>([\s\S]*?)<\/loc>/i)?.[1]?.trim();
     if (!loc) continue;
+    if (forceHttps && /^http:\/\//i.test(loc)) loc = `https://${loc.slice(7)}`;
     const lastmod = block.match(/<lastmod>([\s\S]*?)<\/lastmod>/i)?.[1]?.trim() || null;
     // El prefijo del namespace news varía por medio: `<news:title>` (estándar,
     // FastCheck/Cooperativa) o `<n:title>` (El Mostrador). Se restringe a esos
@@ -464,7 +546,12 @@ function extractPairs(xml, { pathDate = null } = {}) {
     // títulos de imágenes como `s:"news"` (dato de calidad incorrecto).
     const newsTitle = block.match(/<(?:news|n):title>([\s\S]*?)<\/(?:news|n):title>/i)?.[1] || null;
     const newsDate = block.match(/<(?:news|n):publication_date>([\s\S]*?)<\/(?:news|n):publication_date>/i)?.[1] || null;
-    out.push({ loc, lastmod, newsTitle: newsTitle ? cleanText(newsTitle) : null, newsDate });
+    let locDate = null;
+    if (locDateRe) {
+      const lm = loc.match(locDateRe);
+      if (lm) locDate = `${lm[1]}-${lm[2]}-${lm[3]}`;
+    }
+    out.push({ loc, lastmod, newsTitle: newsTitle ? cleanText(newsTitle) : null, newsDate, locDate });
   }
   return out;
 }
@@ -630,10 +717,14 @@ async function syncMedio(medio, conf, opts) {
   // sin descargar (ej. static-sitemap-2010-01.xml de BioBio con --days 30).
   // Los que no llevan fecha (Yoast post-sitemapN, Arc XP ?from=N) pasan y se
   // deciden más abajo por el rango del XML cacheado o por el contenido.
+  // Emol lista los sub-sitemaps en http:// pero solo responde https://
+  // (curl/node fetch fallan con http): se normalizan antes del fetch.
+  const fixProto = (u) => conf.forceHttps && /^http:\/\//i.test(u) ? `https://${u.slice(7)}` : u;
   for (const u of discovered) {
     const res = await expandIndex(u, opts);
     if (res.ok && res.isIndex) {
-      for (const sub of res.urls) {
+      for (let sub of res.urls) {
+        sub = fixProto(sub);
         if (!isArticleSitemap(sub)) {
           logInfo(`descartado (no es articulo): ${sub.replace('https://', '')}`);
           continue;
@@ -704,7 +795,7 @@ async function syncMedio(medio, conf, opts) {
     }
     if (/<sitemapindex[\s>]/i.test(res.text)) {
       // Doble nivel (index dentro de index): expandir recursivamente
-      for (const sub of extractSitemapIndexLocs(res.text)) {
+      for (const sub of extractSitemapIndexLocs(res.text).map(fixProto)) {
         if (since && sitemapUrlInWindow(sub, sinceObj) === false) {
           urlFiltered++;
           continue;
@@ -716,11 +807,11 @@ async function syncMedio(medio, conf, opts) {
     // Fecha de fallback desde el path del sub-sitemap (ej. CNN: YYYY/MM).
     const mm = conf.dateFromSitemapPath?.exec(u);
     const pathDate = mm ? `${mm[1]}-${mm[2]}-01` : null;
-    const batch = extractPairs(res.text, { pathDate });
+    const batch = extractPairs(res.text, { pathDate, locDateRe: conf.locDateRe, forceHttps: conf.forceHttps });
     for (const e of batch) {
       const seenBefore = seen.has(e.loc);
       if (!seenBefore) seen.add(e.loc);
-      const fecha = isoDate(e.newsDate) ?? pathDate ?? isoDate(e.lastmod);
+      const fecha = isoDate(e.newsDate) ?? e.locDate ?? pathDate ?? isoDate(e.lastmod);
       if (!fecha) continue;
       // --since: las entradas anteriores a la ventana no se tocan (ni se
       // agregan ni se mejoran sus títulos). En modo merge lo existente se

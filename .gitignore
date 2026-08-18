@@ -6,3 +6,6 @@ dist/
 .wrangler
 
 *.log
+
+# Crawlee (fallback de fetch en sync-sitemaps) crea storage/ en runtime
+storage/

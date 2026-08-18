@@ -13,6 +13,8 @@
     "sitemaps-watchlist": "node scripts/sitemaps-watchlist.mjs",
     "add-source": "node scripts/add-source.mjs",
     "pdf-extract": "node scripts/pdf-extract.mjs",
+    "doc-extract": "node scripts/doc-extract.mjs",
+    "fetch-impersonate": "node scripts/fetch-impersonate.mjs",
     "backup": "node scripts/backup.mjs",
     "restore": "node scripts/restore.mjs",
     "verify": "node scripts/verify.mjs",
@@ -38,6 +40,7 @@
     "yaml": "^2.9.0"
   },
   "devDependencies": {
-    "@firecrawl/pdf-inspector": "^1.12.0"
+    "@firecrawl/pdf-inspector": "^1.12.0",
+    "crawlee": "^3.18.1"
   }
 }

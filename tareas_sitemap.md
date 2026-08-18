@@ -397,7 +397,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🟡 | **El Reporte Diario** | `reportediario.cl` | — | database | referenciado en sources.yaml |
 | ✅ | **El Siglo** | `elsiglo.cl` | — | database | sitemap en catálogo (el_siglo) |
 | ⬜ | **El Telescopio** | `eltelescopio.cl` | — | watchlist | Sitio no disponible (transport error) |
-| 🟡 | **Emol** | `emol.com` | — | database | referenciado en sources.yaml |
+| ✅ | **Emol** | `emol.com` | — | database | sitemap en catálogo (emol) |
 | ⬜ | **En la Ciudad** | `enlaciudad.cl` | — | database | Blog de noticias locales en Blogger, con secciones de economía, tecnología, deportes y act |
 | ⬜ | **Entérate Hoy** | `enteratehoy.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Esperanza FM** | `esperanzafm.cl` | Araucania | database | Emisora regional parte de la región del Bio Bio y Los Lagos 101.3 FM |
@@ -455,7 +455,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🟡 | **Puranoticia** | `puranoticia.pnt.cl` | — | database | referenciado en sources.yaml |
 | 🟡 | **Puranoticia** | `puranoticia.cl` | — | watchlist | Sin feed RSS detectado (responde HTML en lugar de feed) |
 | ⬜ | **Qué Pasa** | `quepasa.cl` | — | watchlist | Sitio no responde |
-| 🟡 | **Radio Agricultura** | `radioagricultura.cl` | — | watchlist | Feed nativo stale (sin contenido reciente), solo feeds proxy activos |
+| ✅ | **Radio Agricultura** | `radioagricultura.cl` | — | watchlist | sitemap en catálogo (radioagricultura) |
 | ⬜ | **Radio Araucanía** | `radioaraucania.cl` | — | watchlist | Feed nativo stale (sin contenido reciente), solo feeds proxy activos |
 | ⬜ | **Radio Buena Nueva** | `radiobuenanueva.cl` | Maule | database | Emisora regional de Linares 97.9 FM Linares, 106.3 FM Chanco, 102.7 FM Longaví, 89.5 FM Co |
 | ⬜ | **Radio Concierto** | `concierto.cl` | — | database | Emisora FM con programación musical y noticias |

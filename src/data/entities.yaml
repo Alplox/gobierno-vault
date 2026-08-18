@@ -1,4 +1,43 @@
 people:
+  daniela_quevedo:
+    nombre: Daniela Quevedo
+    cargo: Fiscal de Turno Regional de Instrucción y Flagrancia de Valparaíso
+    notas: "Fiscal a cargo del punto de prensa que confirmó el robo de $6.150 millones a la sucursal del Banco Itaú de Valparaíso (28-jul-2025): detalló el ingreso por un local colindante con elementos contundentes y el uso de oxicorte para abrir la bóveda (evento 20250728-1)."
+  alejandra_cuevas:
+    nombre: Alejandra Cuevas
+    cargo: Subprefecta de la PDI, jefa de la Brianco Valparaíso
+    notas: "Subprefecta de la Policía de Investigaciones que informó sobre el robo a la sucursal del Banco Itaú de Valparaíso (28-jul-2025): señaló que se investiga el número de participantes y que se revisan cámaras de seguridad del interior, exterior e inmediaciones (evento 20250728-1)."
+  yanino_riquelme:
+    nombre: Yanino Riquelme
+    cargo: Delegado presidencial de Valparaíso
+    notas: "Delegado presidencial regional de Valparaíso al momento del robo al Banco Itaú (28-jul-2025): confirmó la activación de alarma alrededor de las 5 de la mañana, el primer patrullaje sin hallazgos y el hallazgo de las perforaciones y el oxicorte al llegar el personal del banco; descartó fallas de Carabineros (evento 20250728-1)."
+  elizardo_tapia:
+    nombre: Elizardo Tapia
+    cargo: Fiscal jefe de Valparaíso
+    notas: "Fiscal jefe de Valparaíso que lidera la investigación del robo de $6.150 millones al Banco Itaú (28-jul-2025), según la Radio de la Universidad de Valparaíso (6-abr-2026); las diligencias seguían en curso ocho meses después del hecho (evento 20250728-1)."
+  marcelo_vasseur:
+    nombre: Marcelo Vasseur
+    cargo: Abogado de pensionados reparatorios (leyes Valech y Rettig)
+    notas: "Abogado que representa a pensionados reparatorios por violaciones de derechos humanos (leyes Valech y Rettig) en la disputa por el acceso a la PGU. Logró que el TC declarara inaplicable el artículo 36 de la Ley 20.255 (11-nov-2025, 7 votos contra 2) para 41 pensionados, y que la Corte de Apelaciones de Valparaíso acogiera un recurso de protección (5-ago-2026) ordenando al IPS pronunciarse sobre 68 pensionados bloqueados para postular a la PGU (eventos 20260805-34 y antecedentes)."
+  alfonso_munoz:
+    nombre: Alfonso Muñoz
+    cargo: Alcalde de El Tabo
+    organizacion: municipalidad_el_tabo
+    notas: "Alcalde de la Municipalidad de El Tabo (región de Valparaíso). La Contraloría (Informe Final N° 596, 2026) detectó que 24 de 56 funcionarios con vínculos familiares en el municipio tienen relación directa con él; se defendió en redes sociales asegurando que el informe no lo acusa de ningún delito (evento 20260816-17)."
+  claudia_aracena:
+    nombre: Claudia Aracena
+    cargo: Concejala de El Tabo
+    organizacion: municipalidad_el_tabo
+    notas: "Concejala de El Tabo que solicitó en abril de 2025 la fiscalización de Contraloría por presuntos vínculos familiares en el municipio, tras un reportaje; tras el Informe Final N° 596 confirmó que los ediles estudian solicitar la destitución del alcalde Alfonso Muñoz ante el Tribunal Electoral por notable abandono de deberes (evento 20260816-17)."
+  karina_soto:
+    nombre: Karina Soto
+    cargo: Concejala de El Tabo
+    organizacion: municipalidad_el_tabo
+    notas: "Concejala de El Tabo; difundió a través de su cuenta de Facebook los hechos observados por la Contraloría en el Informe Final N° 596 sobre contrataciones, conflictos de interés y vínculos familiares en el municipio (evento 20260816-17)."
+  jorge_welch:
+    nombre: Jorge Welch
+    cargo: Presidente de Alimentos y Bebidas de Chile (AB Chile)
+    notas: "Presidente del gremio Alimentos y Bebidas de Chile (AB Chile). Tras el fallo de la Corte Suprema que anuló el Decreto N° 24 del Minsal (mensaje 'evita su consumo'), señaló que la sentencia ratificó lo que la industria sostuvo desde 2024: el propósito de la Ley 20.606 es fomentar hábitos saludables y la elección informada (evento 20260813-18)."
   carla_lavin:
     nombre: Carla Lavín
     cargo: Directora jurídica de Segal Deudores
@@ -176,7 +215,7 @@ people:
   juan_pablo_araya:
     nombre: Juan Pablo Araya
     cargo: Fiscal de Alta Complejidad (Metropolitana Oriente)
-    notas: "Fiscal de Alta Complejidad de la Fiscalía Metropolitana Oriente. Participó en la formalización de los casos Factop y Audios en enero de 2025."
+    notas: "Fiscal de Alta Complejidad de la Fiscalía Metropolitana Oriente. Participó en la formalización de los casos Factop y Audios en enero de 2025. A cargo de la investigación del caso Sartor: valoró la formalización del 30-jul-2026 —'ya hay imputados que quedaron con medidas cautelares decretadas, y son todas privativas de libertad, lo cual nos habla de que esta formalización contempla delitos complejos y graves'— (evento 20260730-27)."
   juan_pablo_diaz:
     nombre: Juan Pablo Díaz
     cargo: Ex sargento segundo del Ejército y testigo de causas de corrupción militar
@@ -401,6 +440,10 @@ people:
     nombre: Emilio Schneider
     cargo: Comunicador y conductor de televisión
     notas: "Comunicador y conductor de televisión chileno. El 13 de agosto de 2026 criticó en X la transmisión en vivo de la Operación Cancerbero, calificándola de 'show' del gobierno para recuperar credibilidad en seguridad: 'Este es el gobierno de la performance antes que las políticas públicas. Lucran con el miedo a la inseguridad'."
+  matias_acevedo:
+    nombre: Matías Acevedo Ferrer
+    cargo: Exdirector de Presupuestos
+    notas: "Economista especializado en reformas al empleo público. Exdirector de Presupuestos de la Dirección de Presupuestos (Dipres). Integrante de la Comisión Asesora Ministerial para la Modernización del Empleo Público convocada por el gobierno de José Antonio Kast en agosto de 2026."
   matias_toledo:
     nombre: Matías Toledo
     cargo: Alcalde de Puente Alto (Ind.)
@@ -733,15 +776,19 @@ people:
       - cargo: Subsecretario General de la Presidencia
         organizacion: ministerio_segpres
         desde: 2018-03-11
-        hasta: 2019-03-11
+        hasta: 2019-11-04
+      - cargo: Subsecretario de Desarrollo Regional y Administrativo (SUBDERE)
+        organizacion: subdere
+        desde: 2019-11-04
+        hasta: 2020-06-04
       - cargo: Ministro Secretario General de la Presidencia
         organizacion: ministerio_segpres
         desde: 2020-06-04
         hasta: 2020-07-28
-      - cargo: Senador por Los Ríos
+      - cargo: Senador por Ñuble (16ª Circunscripción)
         organizacion: senado
-        desde: 2020-07-28
-        hasta: 2026-03-11
+        desde: 2020-08-04
+        hasta: 2022-03-11
       - cargo: Ministro del Interior
         organizacion: ministerio_interior
         desde: 2026-03-11
@@ -750,11 +797,19 @@ people:
         organizacion: ministerio_interior
         desde: 2026-05-19
     organizacion: ministerio_interior
-    notas: "Militante UDI desde 2001. Ingeniero Comercial de la Escuela de Negocios de Valparaíso. Alcalde designado de Quemchi (1985-1986) bajo Pinochet. Diputado por Chiloé y Palena 1994-2010. Fue subsecretario de la Segpres en ambos gobiernos de Piñera y ministro de la Segpres solo 54 días (jun-jul 2020), hasta asumir el cupo senatorial de Víctor Pérez. Rol histórico de negociador con la oposición; lideró el acuerdo constitucional de 2019. Autor de 9 proyectos que se convirtieron en ley (BCN). Historial de cargos según perfil de la serie r/chile 'Quién es quién en el gabinete' (complementario): fechas aproximadas, validar con BCN/prensa."
+    notas: "Militante UDI desde 2001. Ingeniero Comercial de la Escuela de Negocios de Valparaíso (actual UAI). Alcalde designado de Quemchi (1985-1986) bajo Pinochet. Diputado por Chiloé y Palena 1994-2010. Subsecretario de la Segpres en ambos gobiernos de Piñera, subsecretario de la SUBDERE (2019-2020) y ministro de la Segpres solo 54 días (jun-jul 2020), hasta asumir el cupo senatorial de Víctor Pérez (Ñuble, 2020-2022). Rol histórico de negociador con la oposición; lideró el acuerdo constitucional de 2019. Autor de 9 proyectos que se convirtieron en ley (BCN: 19.710, 19.752, 20.046, 20.090, 20.109, 20.400, 20.476, 21.032, 21.334). Cargos y leyes verificados con BCN y perfil de la serie r/chile 'Quién es quién en el gabinete' (complementario)."
   isabel_valenzuela_ahumada:
     nombre: Isabel Valenzuela Ahumada
     cargo: Alcaldesa de Colina
     notas: Colaboradora de opinión en BioBioChile; defendió el rol del servicio público durante el sistema frontal.
+  valeria_carcamo:
+    nombre: Valeria Cárcamo
+    cargo: Excandidata a diputada (RD)
+    notas: "Figura de Revolución Democrática. En 2023 protagonizó un tenso cruce en vivo con Mara Sedini en Sin Filtros al acusar a la derecha de ser respaldo de abusadores y pedófilos (mencionando a Karadima, Spiniak y Colonia Dignidad); Sedini respondió con su recordado '¡Yo soy agnóstica! ¡Oye, ignorante de mierda!'."
+  galvarino_apablaza:
+    nombre: Galvarino Apablaza
+    cargo: Exdirigente del FPMR
+    notas: "Exdirigente del Frente Patriótico Manuel Rodríguez, asilado en Argentina. En abril de 2026 la vocera Mara Sedini afirmó erróneamente que estaba condenado cuando aún no enfrenta la justicia chilena; al día siguiente se desdijo y acusó aprovechamiento político (BioBioChile, 1-2 abr 2026)."
   cristian_valenzuela:
     nombre: Cristián Valenzuela Bustos
     cargo: Coordinador de asesores del gabinete presidencial
@@ -779,6 +834,11 @@ people:
     nombre: Pete Hegseth
     cargo: Secretario de Guerra de Estados Unidos
     notas: "Secretario de Guerra de Estados Unidos en la administración de Donald Trump. En agosto de 2026 llamó a las naciones de Latinoamérica a incrementar el gasto militar, colaborar contra el crimen organizado y abandonar la Corte Penal Internacional como parte del programa 'Escudo de las Américas'; el ministro de Defensa chileno Fernando Barros expresó reparos y aclaró que Chile aún no se ha suscrito (evento 20260813-8)."
+  fernando_claro:
+    nombre: Fernando Claro Valdés
+    cargo: Director ejecutivo de la Fundación para el Progreso
+    organizacion: fundacion_para_el_progreso
+    notas: "Director ejecutivo de la Fundación para el Progreso (FPP). Integrante de la Comisión Asesora Ministerial para la Modernización del Empleo Público convocada por el gobierno de José Antonio Kast en agosto de 2026."
   fernando_barros:
     nombre: Fernando Barros Tocornal
     cargo: Ministro de Defensa
@@ -967,6 +1027,10 @@ people:
         desde: 2008-01
         hasta: 2009-12
     notas: "Senador DC desde 2026. En diciembre de 2009 renunció a la Intendencia de Los Ríos tras ser captado con un folleto de campaña de Eduardo Frei en un acto oficial, en plena segunda vuelta presidencial. Su renuncia fue citada por el Sence como antecedente en la amonestación a la directora regional de Los Lagos por usar una chapita de Frei."
+  manuel_macaya:
+    nombre: Manuel Macaya Ramírez
+    cargo: Alcalde de Collipulli
+    notas: "Ingeniero y político RN, alcalde de Collipulli (Región de La Araucanía) desde 2012, reelecto en 2016, 2021 y 2024. El 18 de marzo de 2024 fue formalizado por el delito de desacato (RIT O-1118-2023 del Juzgado de Garantía de Collipulli) por no haber acompañado una prueba documental ordenada en un juicio laboral por vulneración de garantías que le dedujo la directora del departamento de salud municipal. El 20 de octubre de 2025 fue absuelto por el Tribunal de Juicio Oral en Lo Penal de Angol ('No he cometido ningún delito'). En 2012 había recibido un acuerdo reparatorio tras ser formalizado por apropiación indebida (RIT 0-598-2010)."
   javier_macaya:
     nombre: Javier Macaya
     cargo: Senador (UDI)
@@ -1458,6 +1522,7 @@ people:
         organizacion: ministerio_vivienda
         desde: 2026-03-11
     organizacion: ministerio_vivienda
+    notas: "Arquitecto PUCV con máster en desarrollo urbanístico en la PUC. Director y socio fundador de Atisba; ex director de Espacio Público; columnista de La Tercera y ex panelista de Sin Filtro; autor de 'Siete Kabezas' (2020); Premio de la Ciudad Benjamín Vicuña Mackenna 2018. Candidato a alcalde de Viña del Mar (2024, perdió con Ripamonti, 41%). Participó en el equipo de la precandidatura de Lagos (2016) y de Matthei (2021), y fue asesor de Cristián Monckeberg en el Minvu de Piñera; coordinador del equipo de reconstrucción tras el 24F. Polémicas: seminario de reconstrucción en Viña (30-ene-2026), contactos con cuentas troll (CIPER), $291M facturados por Sin Filtro al Servel, restitución de $12M exigida por el CDE, cruce con Macaya y defensa a Dominga. Perfil de prensa: Emol 20-ene-2026."
   constanza_castillo:
     nombre: Constanza Castillo
     cargo: Subsecretaria General de la Presidencia
@@ -1557,7 +1622,7 @@ people:
     notas: Removida a los 69 dias.
   martin_arrau:
     nombre: Martín Arrau García Huidobro
-    cargo: Ministro de Seguridad Publica
+    cargo: Ministro de Obras Públicas
     cargos:
       - cargo: Ministro de Obras Públicas
         organizacion: ministerio_de_obras_publicas
@@ -1829,6 +1894,22 @@ people:
     nombre: Imay Ortíz
     cargo: Directora de la Unidad de DD.HH. de la Fiscalía Nacional
     notas: "Directora de la Unidad de Derechos Humanos del Ministerio Público. En 2020 valoró los videos de cámaras corporales de Carabineros ('todo sirve, porque es necesario reconstruir') en el contexto de las ~2.500 causas judiciales del estallido donde el INDH es parte querellante."
+  fernando_chomali:
+    nombre: Fernando Chomali Garib
+    cargo: Arzobispo de Santiago
+    notas: "Sacerdote chileno, arzobispo de Santiago y cardenal. Hermano de la ministra de Salud May Chomali y de Jaime Chomali, diplomático; hijo del odontólogo Juan Chomali, dentista de cabecera de Alessandri y Frei Montalva."
+  jaime_chomali:
+    nombre: Jaime Chomali
+    cargo: Diplomático
+    notas: "Diplomático chileno, hermano de la ministra de Salud May Chomali, del arzobispo de Santiago Fernando Chomali y del odontólogo Juan Chomali."
+  juan_chomali:
+    nombre: Juan Chomali
+    cargo: Odontólogo
+    notas: "Odontólogo chileno, dentista de cabecera de Jorge Alessandri y Eduardo Frei Montalva. Padre de la ministra de Salud May Chomali, del arzobispo de Santiago Fernando Chomali y del diplomático Jaime Chomali."
+  alejandro_gil:
+    nombre: Alejandro Gil
+    cargo: Controlador de Clínica Las Condes
+    notas: "Empresario chileno. Tras tomar el control de Clínica Las Condes, dispuso el reingreso del oncólogo Manuel Álvarez, condenado por abuso sexual, lo que motivó la salida definitiva de la directora médica May Chomali en 2020."
   jaime_manalich:
     nombre: Jaime Mañalich Muxi
     cargo: Exministro de Salud
@@ -2127,6 +2208,10 @@ people:
         desde: 2022-03-11
         hasta: 2024-10-17
     notas: "Subsecretario del Interior del gobierno de Gabriel Boric (2022-2024), considerado el 'hombre fuerte' de la seguridad. Renunció el 17 de octubre de 2024 tras una denuncia de abuso sexual presentada por una funcionaria de Gobierno. Fue detenido en noviembre de 2024."
+  miguel_crispi:
+    nombre: Miguel Crispi
+    cargo: Exministro Secretario General de la Presidencia
+    notas: "Político chileno, militante de Revolución Democrática. En 2013 integró el movimiento NAU en la UC, que derrotó a María Jesús Wulf (carta del Movimiento Gremial) en la elección de Consejero Superior de la universidad. Fue ministro de la Segpres durante el gobierno de Gabriel Boric."
   giorgio_jackson:
     nombre: Giorgio Jackson Drago
     cargo: Exministro Secretario General de la Presidencia (Segpres)
@@ -2147,6 +2232,15 @@ people:
       - cargo: Senadora (FA)
         organizacion: frente_amplio
         desde: 2026-03-11
+  miguel_concha:
+    nombre: Miguel Concha
+    cargo: Alcalde de Peñalolén (FA)
+    organizacion: municipalidad_penalolen
+    cargos:
+      - cargo: Alcalde de Peñalolén
+        organizacion: municipalidad_penalolen
+        desde: 2024-12-06
+    notas: "Abogado y político de Revolución Democrática / Frente Amplio, alcalde de Peñalolén desde diciembre de 2024. En agosto de 2026 pidió al gobierno de José Antonio Kast incluir a las facciones violentas de las barras bravas en el plan de seguridad, tras una reunión de alcaldes en La Moneda y en la previa del Superclásico."
   miguel_calisto:
     nombre: Miguel Angel Calisto
     cargo: Senador (independiente)
@@ -2185,8 +2279,8 @@ people:
     notas: "Fiscal regional de Aysén. El 26 de junio de 2026 presentó la acusación contra el senador Miguel Ángel Calisto pidiendo 12 años de cárcel por fraude al Fisco de $105 millones vinculado a una asesoría fantasma de Carla Graf."
   cesar_ramos:
     nombre: César Ramos
-    cargo: Abogado defensor de Miguel Ángel Calisto
-    notas: "Abogado del senador Miguel Ángel Calisto en la causa por fraude al Fisco. Se mostró conforme con la suspensión temporal del proceso penal decretada por el TC en julio de 2026."
+    cargo: Abogado
+    notas: "Abogado del senador Miguel Ángel Calisto en la causa por fraude al Fisco (se mostró conforme con la suspensión temporal del proceso penal decretada por el TC en julio de 2026). En el caso Sartor representa a varios aportantes de Sartor AGF: señaló tras el fallo de la Suprema del 10-ago-2026 que la decisión del máximo tribunal 'tiene únicamente el efecto que explícitamente la misma resolución señala' y que no afecta la formalización penal (eventos 20260730-27 y 20260810-47)."
   patricio_rojas:
     nombre: Patricio Rojas
     cargo: Economista, Rojas y Asociados
@@ -2776,6 +2870,10 @@ people:
     nombre: Sergio Muñoz Gajardo
     cargo: Exministro de la Corte Suprema
     notas: "Exministro de la Corte Suprema que fue inhabilitado en la causa de Inmobiliaria Fundamenta (Plaza Egaña SpA) tras conocerse que su hija, Graciel Muñoz, había firmado una promesa de compraventa en el edificio Egaña. Su salida de la sala destrabó el recurso que favorecía a la inmobiliaria (CIPER, caso Fundamenta)."
+  omar_astudillo:
+    nombre: Omar Astudillo
+    cargo: Ministro de la Corte Suprema
+    notas: "Ministro de la Tercera Sala de la Corte Suprema; redactor de la sentencia de mayoría que anuló el Decreto N° 24 del Minsal (advertencia 'evita su consumo' en publicidad de alimentos con sellos), con votos en contra de Jean Pierre Matus y Carlos Urquieta y prevención de Álvaro Vidal (evento 20260813-18)."
   jean_pierre_matus:
     nombre: Jean Pierre Matus
     cargo: Ministro de la Corte Suprema
@@ -2803,6 +2901,10 @@ people:
     nombre: Pablo Medina
     cargo: Gerente de Inmobiliaria Fundamenta
     notas: "Ejecutivo de Inmobiliaria Fundamenta. Declaró ante la Fiscalía que el pago de 16 mil UF a los abogados Lagos, Vargas y Silber solo se haría si el fallo favorable en la Corte Suprema salía antes del 1 de marzo de 2023 (y desde el 2 de marzo bajaba a 8 mil UF)."
+  heidi_berner:
+    nombre: Heidi Berner Herrera
+    cargo: Exsubsecretaria de Hacienda
+    notas: "Economista y exsubsecretaria de Hacienda durante el gobierno de Gabriel Boric, donde fue coordinadora de Modernización del Estado. Integrante de la Comisión Asesora Ministerial para la Modernización del Empleo Público convocada por el gobierno de José Antonio Kast en agosto de 2026."
   hector_barros:
     nombre: Héctor Barros
     cargo: Fiscal Regional Metropolitano Sur
@@ -3356,7 +3458,7 @@ people:
       - cargo: Ministro de Relaciones Exteriores
         organizacion: ministerio_relaciones_exteriores
         desde: 2026-03-11
-    notas: Ingeniero comercial, CEO de Quiñenco. Independiente.
+    notas: "Ingeniero comercial PUC (premio al mejor egresado) con MBA en la Universidad de Chicago. Gerente general de Quiñenco (grupo Luksic) desde 1998 hasta 2026; antes gerente general de CCU (1991-1998). Dejó una veintena de cargos en el grupo (CSAV, Banco de Chile, LQ Inversiones, Enex, Nexans, Hapag-Lloyd, SM SAAM, Tech Pack, etc.) para asumir en Cancillería (La Tercera 20-ene-2026). Ex presidente de la Asociación de AFP (1990-91); su primer jefe en Citicorp fue Sebastián Piñera. Nexos con Kast: amistad universitaria con su hermano Christian Kast y pertenencia común al grupo católico Schoenstatt (Ex-Ante 21-ene-2026). Independiente; militó en su juventud en RN por invitación de Jaime Guzmán. Hermano del exministro de Vivienda Rodrigo Pérez Mackenna."
   catalina_parot:
     nombre: Catalina Parot Donoso
     cargo: Ministra de Bienes Nacionales
@@ -4081,6 +4183,9 @@ people:
       - cargo: Ministra Secretaria General de la Presidencia
         organizacion: segpres
         desde: 2014-03-11
+      - cargo: Ministra de Energía
+        organizacion: ministerio_energia
+        desde: 2026-03-11
         hasta: 2015-05-11
       - cargo: Ministra del Trabajo y Previsión Social
         organizacion: ministerio_trabajo
@@ -4192,6 +4297,16 @@ people:
     nombre: Arturo Squella
     cargo: Presidente del Partido Republicano
     organizacion: partido_republicano
+  agustin_quera_marcet:
+    nombre: Agustín Quera Marcet
+    cargo: Jefe de gabinete del biministro de Economía y Minería
+    cargos:
+      - cargo: Jefe de gabinete del biministro de Economía y Minería
+        organizacion: ministerio_economia
+        desde: 2026-03-11
+      - cargo: Jefe de gabinete de Arturo Squella
+        organizacion: partido_republicano
+    notas: "Abogado de la Universidad Católica, militante del Partido Republicano. Juró como abogado ante la Corte Suprema el 24 de diciembre de 2025, menos de tres meses antes de asumir como jefe de gabinete del biministro Daniel Mas (marzo de 2026). Puntaje nacional de la PSU de Historia y examen de grado con distinción máxima en la UC. Según su LinkedIn, su única experiencia previa fueron pasantías (estudio Carey, Instituto Res Publica) y ayudantías de cátedra; fue jefe de campaña de su primo Diego Riveaux para la Convención Constitucional de 2021, cuando tenía 21 años (CIPER, evento 20260817-1)."
   hector_barria:
     nombre: Héctor Barría
     cargo: Diputado (DC)
@@ -4486,6 +4601,11 @@ people:
         desde: 2026-03-11
     organizacion: senado
     notas: "Senador Frente Amplio. Vicepresidente del Grupo de Amistad Chile-Palestina del Senado: el 12-ago-2026 firmó junto a Sergio Gahona (UDI) la declaración de 'profunda preocupación' por la conducta del embajador de Israel Peleg Lewi y pidió al Minrel 'medidas diplomáticas correspondientes' (evento 20260806-17)."
+  diego_riveaux:
+    nombre: Diego Riveaux Marcet
+    cargo: Director de Sustentabilidad e Innovación de la Municipalidad de Vitacura
+    organizacion: municipalidad_vitacura
+    notas: "Abogado, militante UDI. Candidato a convencional constituyente por el distrito 10 en 2021 (no electo), donde rindió ante el Servel cuatro boletas de familiares por $6,2 millones —entre ellas la de su primo Agustín Quera Marcet (21 años, $2,5 millones como jefe de campaña, primera boleta emitida por él ante el SII)—, según CIPER (evento 20260817-1). Ex seremi de Medio Ambiente metropolitano y director de Sustentabilidad e Innovación en la Municipalidad de Vitacura."
   fernando_solabarrieta:
     nombre: Fernando Solabarrieta
     cargo: Periodista y conductor de TV
@@ -4815,6 +4935,14 @@ people:
     nombre: Xi Jinping
     cargo: Presidente de China
     notas: "Secretario general del Partido Comunista y presidente de la República Popular China. En julio de 2026 lanzó la Organización Mundial de Cooperación en Inteligencia Artificial (WAICO), marco rival de la iniciativa estadounidense Pax Silica (Reuters, 14-ago-2026, evento 20260814-9)."
+  wang_yi:
+    nombre: Wang Yi
+    cargo: Ministro de Relaciones Exteriores de China
+    notas: "Miembro del Buró Político del Comité Central del Partido Comunista de China y ministro de Relaciones Exteriores. Invitó al canciller chileno Francisco Pérez Mackenna a una visita oficial a China del 18 al 22 de agosto de 2026."
+  lin_jian:
+    nombre: Lin Jian
+    cargo: Portavoz de la Cancillería china
+    notas: "Portavoz del Ministerio de Relaciones Exteriores de China. En la rueda de prensa del 17 de agosto de 2026 anunció la visita oficial del canciller chileno Francisco Pérez Mackenna a China (18-22 de agosto), señalando que 'China espera intercambiar puntos de vista con Chile sobre las relaciones bilaterales'."
   andres_chadwick:
     nombre: Andrés Chadwick Piñera
     cargo: Exministro del Interior de Sebastián Piñera
@@ -5453,10 +5581,15 @@ people:
       - cargo: Subsecretario de Pesca y Acuicultura
         desde: 2026-03-11
     notas: "Subsecretario de Pesca y Acuicultura (SUBPESCA). A inicios de agosto de 2026 manifestó que el gobierno está abierto a evaluar el levantamiento de la veda y una eventual caza selectiva de lobos marinos ante los conflictos con la pesca artesanal del sur, lo que generó rechazo ambientalista. El 3 de agosto respondió a la petición de los pescadores ante la Comisión de Pesca señalando que cualquier cambio requerirá respaldo técnico y científico."
+  daniel_valencia_cifuentes:
+    nombre: Daniel Valencia Cifuentes
+    cargo: Ex jefe de gabinete de la Municipalidad de Collipulli
+    organizacion: municipalidad_collipulli
+    notas: "Ex jefe de gabinete del alcalde de Collipulli Manuel Macaya. Acusado por el Ministerio Público como autor de los delitos de violación y abuso sexual en contra de una guardia de seguridad del municipio. El juicio oral ante el Tribunal Oral en lo Penal de Angol comenzó el 17 de agosto de 2026 tras ser suspendido el 3 de agosto por problemas de salud de una jueza; la Fiscalía solicita 11 años de presidio."
   dionisio_ulloa:
-    nombre: Dionisio Ulloa
+    nombre: Dionisio Ulloa Berrocal
     cargo: Abogado defensor
-    notas: "Abogado defensor del excarabinero de la Subcomisaría de Paillaco absuelto en agosto de 2026 en el segundo juicio por violación. Tras la absolución por deficiencia probatoria, anunció que presentará recursos administrativos para buscar el reintegro del exfuncionario a Carabineros."
+    notas: "Abogado defensor del excarabinero de la Subcomisaría de Paillaco absuelto en agosto de 2026 en el segundo juicio por violación (reintegro pendiente) y del exjefe de gabinete de Collipulli Daniel Valencia Cifuentes, acusado de violación y abuso sexual contra una guardia municipal (juicio oral desde el 17 de agosto de 2026 en el TOP de Angol, 6 jornadas)."
   jorge_bustos:
     nombre: Jorge Bustos
     cargo: Presidente del Consejo Regional para la Pesca Artesanal (Corepa)
@@ -5650,6 +5783,10 @@ people:
         hasta: 2006-03-11
     organizacion: indh
     notas: "Director Nacional del Instituto Nacional de Derechos Humanos. El 4 de agosto de 2026, en Radio 13C, discrepó de la absolución de Claudio Crespo: 'un joven perdió la vista y el autor de esas lesiones quedó sin castigo'."
+  ramiro_mendoza:
+    nombre: Ramiro Mendoza Zúñiga
+    cargo: Excontralor general de la República
+    notas: "Abogado y excontralor general de la República (2007-2017). Integrante de la Comisión Asesora Ministerial para la Modernización del Empleo Público convocada por el gobierno de José Antonio Kast en agosto de 2026."
   raul_leiva:
     nombre: Raúl Leiva
     cargo: Diputado (PS)
@@ -5815,6 +5952,10 @@ people:
     nombre: Patricio Arrau
     cargo: Economista
     notas: "Economista chileno, cofundador de la consultora Gerens junto a Jorge Quiroz."
+  rodrigo_vergara:
+    nombre: Rodrigo Vergara
+    cargo: Expresidente del Banco Central
+    notas: "Economista chileno, expresidente del Banco Central (2016-2022). Sonó como candidato a ministro de Hacienda del gobierno de Kast junto a Jorge Quiroz, Rosanna Costa, Sergio Urzúa y José Luis Daza (Emol, 6-ene-2026)."
   paola_morales:
     nombre: Paola Morales
     cargo: Presidenta de ASOF (Confederación Nacional de Ferias Libres de Chile)
@@ -5999,6 +6140,10 @@ people:
     nombre: Roberto Carrasco
     cargo: Empresario e ingeniero comercial
     notas: "Dueño de las empresas Asesorías VSA y Siglo Outsourcing. Amigo personal de Laurence Golborne, declaró ante la Fiscalía de Alta Complejidad el 4 de noviembre de 2015 haber emitido facturas ideológicamente falsas para recaudar fondos para la campaña presidencial de Golborne ('lista de Carrasco'). Fue formalizado en febrero de 2016."
+  daniel_mas_rocha:
+    nombre: Daniel Mas Rocha
+    cargo: Constructor civil, fundador de la Constructora Carel (luego Ecomac)
+    notas: "Constructor civil y padre del biministro Daniel Mas Valdés. Fundó en 1981 la Empresa Constructora Mas y Compañía (Ecomac), ex Constructora Carel (su primera obra fue el edificio Gildemeister de Coquimbo), ampliando el giro al inmobiliario. A través de la sociedad Aledan adquirió un paquete cercano al 15% en NorteSur, controladora del Banco del Desarrollo, y creó Concreces, primera empresa en colocar un leasing habitacional en Chile. En 2000 cedió a su hijo la presidencia ejecutiva. Perteneció al Movimiento Apostólico de Schoenstatt (perfil de la serie r/chile, validado con La Tercera 'El lado A de Daniel Mas')."
   alonso_guzman:
     nombre: Alonso Guzmán
     cargo: Director financiero de Aclara Technologies
@@ -7478,6 +7623,23 @@ people:
         desde: 2012-12-17
         hasta: 2014-03-11
 
+  leonardo_cubillos:
+    nombre: Leonardo Cubillos
+    cargo: Presidente del Partido Radical (PR)
+    organizacion: partido_radical
+    notas: "Presidente del Partido Radical al momento del nombramiento de Jaime Campos como ministro de Agricultura (ene-2026). Criticó el nombramiento por no consultar al partido y lo calificó como 'una agresión a la institucionalidad' del PR; Campos respondió que no tenía que consultarle a nadie y que el partido estaba 'en extinción' (The Clinic, Emol, 20-21-ene-2026)."
+  francisco_zuniga:
+    nombre: Francisco Zúñiga
+    cargo: Abogado asesor de Morpho
+    notas: "Abogado con quien Jaime Campos tenía una sociedad cuando fue nombrado ministro de Justicia (2016). Zúñiga era asesor de Morpho, empresa tecnológica a la que se culpaba del error en el Registro Civil que dejó a medio millón de chilenos con el domicilio electoral cambiado; el Ministerio de Justicia debía investigar ese fallo (CIPER, 21-oct-2016)."
+  luis_toledo:
+    nombre: Luis Toledo
+    cargo: Ex fiscal del caso Caval, notario de San Fernando
+    notas: "Ex fiscal del caso Caval nombrado notario de San Fernando por el entonces ministro de Justicia Jaime Campos (2016-2017). Su nombramiento fue considerado especialmente cuestionable por sus nexos con el ministro (BioBioChile, 16-ago-2017)."
+  angel_campos:
+    nombre: Ángel Campos Quiroga
+    cargo: Hermano del ministro Jaime Campos
+    notas: "Hermano del ministro de Justicia Jaime Campos. Fue acusado por crímenes de lesa humanidad cometidos en dictadura (Radio Universidad de Chile, 25-dic-2016; Poder Judicial)."
   javiera_blanco:
     nombre: Javiera Blanco Suárez
     cargo: Ministra de Justicia
@@ -8989,6 +9151,22 @@ people:
   alejandra_cox:
     nombre: Alejandra Cox
     notas: "Economista laboral chilena, Ph.D. en Economía de la Universidad de Chicago, ingeniera comercial UC. Expresidenta de la Asociación de AFP (hasta marzo de 2023), execonomista laboral senior del Banco Mundial (1993-1996). En agosto de 2026 planteó que a la Dirección del Trabajo 'hay que hacerle cirugía mayor' y que debe ser una institución independiente, y propuso cuatro medidas para reactivar el mercado laboral."
+  juan_cristobal_guarello:
+    nombre: Juan Cristóbal Guarello
+    cargo: Periodista deportivo
+    notas: "Periodista deportivo chileno. Criticó el nombramiento de Natalia Duco como ministra del Deporte por su sanción por dopaje de 2018 ('la señal es muy mala')."
+  gert_weil:
+    nombre: Gert Weil
+    cargo: Ex atleta olímpico
+    notas: "Ex lanzador de bala chileno, medallista panamericano. Criticó el nombramiento de Natalia Duco como ministra del Deporte por su sanción por dopaje de 2018."
+  erick_nunez:
+    nombre: Eric Aedo (Eric Núñez)
+    cargo: Diputado del Partido Comunista
+    notas: "Diputado chileno del Partido Comunista. Sostuvo que Fernando Rabat está 'inhabilitado moralmente' para ser ministro de Justicia por haber defendido a Pinochet."
+  rolf_luders:
+    nombre: Rolf Lüders
+    cargo: Ex ministro de Hacienda y Economía
+    notas: "Economista chileno, ex ministro de Hacienda y Economía de la dictadura de Pinochet. Impulsó el libro 'El Puente: uniendo visiones para retomar la ruta del crecimiento en Chile' (2025), que reunió a 17 economistas, entre ellos Tomás Rau."
   karol_cariola:
     nombre: Karol Cariola Oliva
     cargo: Senadora (Partido Comunista)
@@ -9502,7 +9680,217 @@ people:
     cargo: Presidente de Vista Energy
     notas: "Fundador y presidente ejecutivo de Vista Energy, la petrolera argentina que controla operaciones en Vaca Muerta. En agosto de 2026 el fondo Thiel Macro LLC, de Peter Thiel, compró cerca del 1% de la compañía (evento 20260816-14)."
 
+  gabriel_zaliasnik:
+    nombre: Gabriel Zaliasnik
+    cargo: Embajador de Chile en Israel
+    cargos:
+      - cargo: Embajador de Chile en Israel
+        organizacion: embajada_chile_israel
+        desde: 2026-08-03
+    notas: "Abogado y expresidente de la Comunidad Judía de Chile. Designado por Kast como embajador en Israel en junio de 2026, tras más de dos años sin representación diplomática; presentó sus cartas credenciales ante el presidente Isaac Herzog el 3 de agosto de 2026. Su nombramiento estuvo marcado por una investigación penal abierta en junio por sus chats con Luis Hermosilla (evento 20260810-46)."
+  isaac_herzog:
+    nombre: Isaac Herzog
+    cargo: Presidente del Estado de Israel
+    notas: "Presidente del Estado de Israel. Recibió las cartas credenciales del embajador chileno Gabriel Zaliasnik el 3 de agosto de 2026, calificando el retorno del representante chileno como 'un hito' en las relaciones bilaterales (evento 20260810-46)."
+  matt_sanders:
+    nombre: Matt Sanders
+    cargo: Fundador del programa Triple P (Parentalidad Positiva)
+    notas: "Profesor de psicología clínica de la Universidad de Queensland (Australia) y fundador de Triple P, programa de parentalidad positiva usado en 25 países. Visitó Chile en agosto de 2026 para el II Seminario Internacional Crianza y Salud Familiar (UC + Triple P Latinoamérica) y criticó los enfoques punitivos para la violencia juvenil (evento 20260815-10)."
+  nelty_alvarez:
+    nombre: Nelty Álvarez
+    cargo: Ex suboficial mayor de Carabineros
+    notas: "Ex suboficial mayor de Carabineros de Chile, escolta de la expresidenta Michelle Bachelet y de la expresidenta de la Cámara de Diputados Adriana Muñoz. En junio de 2026 interpuso una tutela laboral contra el general Marco Antonio Alvarado, jefe de Zona de Magallanes, por acoso laboral y retiro forzado, denunciando además la falta de respuesta de la ministra de la Mujer y del propio presidente Kast (evento 20260620-1)."
+  marco_antonio_alvarado:
+    nombre: Marco Antonio Alvarado
+    cargo: General de Carabineros, jefe de Zona de Magallanes
+    notas: "General de Carabineros y jefe de la Zona de Magallanes y Antártica Chilena. Enfrentó una tutela laboral interpuesta por la suboficial mayor Nelty Álvarez por acoso laboral, maltrato y retiro forzado (junio 2026, evento 20260620-1)."
+  fernando_leal:
+    nombre: Fernando Leal
+    cargo: Abogado
+    notas: "Abogado de la ex suboficial mayor Nelty Álvarez en la tutela laboral contra el general Marco Antonio Alvarado (Punta Arenas, 2026, evento 20260620-1)."
+  jaime_coloma:
+    nombre: Jaime Coloma
+    cargo: Diputado (UDI)
+    organizacion: udi
+    notas: "Diputado de la UDI. En agosto de 2026 defendió en la Comisión de Seguridad Ciudadana de la Cámara el proyecto (Boletín 17.662-07) que aumenta las sanciones por insultos u ofensas contra Carabineros y la PDI: 'buscamos subir las penas a quienes atacan a nuestros carabineros, también a quienes los ofenden o buscan denostar' (evento 20260817-2)."
+  carla_morales:
+    nombre: Carla Morales
+    cargo: Exdiputada (RN)
+    notas: "Exdiputada de Renovación Nacional, firmante de la moción del Boletín 17.662-07 que aumenta las sanciones por atentados, insultos u ofensas contra Carabineros y la PDI (evento 20260817-2)."
+  miguel_mellado:
+    nombre: Miguel Mellado
+    cargo: Exdiputado (RN)
+    notas: "Exdiputado de Renovación Nacional, firmante de la moción del Boletín 17.662-07 que aumenta las sanciones por atentados, insultos u ofensas contra Carabineros y la PDI (evento 20260817-2)."
+  hugo_rey:
+    nombre: Hugo Rey
+    cargo: Exdiputado (RN)
+    notas: "Exdiputado de Renovación Nacional, firmante de la moción del Boletín 17.662-07 que aumenta las sanciones por atentados, insultos u ofensas contra Carabineros y la PDI (evento 20260817-2)."
+  veronica_encina:
+    nombre: Verónica Encina
+    cargo: Defensora Nacional de la Defensoría Penal Pública
+    organizacion: defensoria_penal_publica
+    notas: "Defensora Nacional de la Defensoría Penal Pública. En junio de 2026 expuso ante la Comisión de Seguridad Ciudadana de la Cámara sus reparos al proyecto (Boletín 17.662-07) que aumenta sanciones por insultos a Carabineros y la PDI, cuestionando la redacción, la interpretación de las sanciones y su proporcionalidad (evento 20260817-2)."
+  bernardita_silva:
+    nombre: Bernardita Silva
+    cargo: Gerenta de Estudios de la Cámara Nacional de Comercio (CNC)
+    organizacion: cnc
+    notas: "Gerenta de Estudios de la Cámara Nacional de Comercio, Servicios y Turismo (CNC). En agosto de 2026 explicó que la menor demanda y el nivel de ventas son el principal factor que frena las contrataciones del comercio, seguido de la incertidumbre económica y los altos costos laborales: 'eleva el costo y el riesgo de incorporar nuevos trabajadores formales' (evento 20260814-16)."
+  rodrigo_mujica:
+    nombre: Rodrigo Mujica
+    cargo: Director de Políticas Públicas de la Sofofa
+    organizacion: sofofa
+    notas: "Director de Políticas Públicas de la Sociedad de Fomento Fabril (Sofofa). En agosto de 2026 recordó el estudio de 2025 (Juan Bravo) que estima que la agenda laboral podría inhibir entre 387 mil y 712 mil empleos asalariados formales hacia 2033, y que Chile requeriría un crecimiento adicional de 0,64% a 1,15% anual para neutralizarlo (evento 20260814-16)."
+  juan_pablo_swett:
+    nombre: Juan Pablo Swett
+    cargo: Presidente de la Multigremial Nacional
+    organizacion: multigremial
+    notas: "Presidente de la Multigremial Nacional. En agosto de 2026 advirtió que las MiPYME postergan contrataciones, no reemplazan a quienes se van y reorganizan funciones con equipos más pequeños; señaló que el empleo informal creció 4,6% anual y la informalidad llegó a 27%, con un Índice de Costos Laborales de 7,9% anual en mayo (evento 20260814-16)."
+  george_lever:
+    nombre: George Lever
+    cargo: Gerente de Estudios de la Cámara de Comercio de Santiago (CCS)
+    organizacion: camara_comercio_santiago
+    notas: "Gerente de Estudios de la Cámara de Comercio de Santiago (CCS). En agosto de 2026 planteó que el aumento de los costos laborales coincide con una reducción relativa del costo del capital y las nuevas tecnologías, acelerando la automatización: la productividad de las tecnologías aumenta drásticamente mientras la del trabajo se mantiene constante o cae, y los costos del trabajo 'han subido extraordinariamente' (evento 20260814-16)."
+  alejandro_santana:
+    nombre: Alejandro Santana
+    cargo: Gobernador de Los Ríos, presidente de la Asociación de Gobernadores y Gobernadoras Regionales (Agorechi)
+    organizacion: agorechi
+    cargos:
+      - cargo: Gobernador Regional de Los Ríos
+        organizacion: gobierno_regional_los_rios
+        desde: 2021
+      - cargo: Presidente de la Asociación de Gobernadores y Gobernadoras Regionales (Agorechi)
+        organizacion: agorechi
+        desde: 2026
+    notas: "Gobernador Regional de Los Ríos y presidente de la Agorechi. En julio de 2026, durante el lanzamiento del plan 'Modo Empleo' de Kast, anunció que los gobiernos regionales entregarían al Ejecutivo un detalle de proyectos con potencial de empleabilidad inmediata y un catastro de iniciativas frenadas por trámites (evento 20260814-16)."
+  michael_clark:
+    nombre: Michael Clark Varela
+    cargo: Ex presidente de Azul Azul y ex director de Sartor AGF
+    notas: "Ingeniero comercial, ex presidente del directorio de Azul Azul (concesionaria del fútbol de Universidad de Chile) y ex asesor externo de Sartor AGF, titular de la firma de asesoría financiera Redwood Capital. En el caso Sartor está formalizado por delitos económicos junto a Pedro Pablo Larraín y otros 9 imputados (formalización desde el 30-jul-2026, perjuicio estimado de US$193-200 millones). Declaró ante la Fiscalía de Alta Complejidad Oriente el 25-jun-2026 que asesoró el préstamo de 65.000 UF a Inmobiliaria Carmel de Avram Fritch Vaturi y que Redwood Capital cobró comisión por los recursos levantados (eventos 20260817-3 y 20260722-2)."
+  avram_fritch_vaturi:
+    nombre: Avram Fritch Vaturi
+    cargo: Empresario y ex capitán del Ejército de Israel
+    notas: "Empresario nacido en Tel Aviv, ex capitán del Ejército de Israel (participó en la guerra del Líbano), ingeniero civil electrónico, radicado en Chile desde 1991. Controlaba Inmobiliaria Carmel Limitada y el holding Grupo Rebrisa (incluida Global Systems Chile, contratista del SAE de Senapred por más de $3.000 millones entre 2020 y 2026). Toesca AGF lo querelló por alzamiento de bienes y contrato simulado por el impago de un préstamo de 65.000 UF de Sartor (2019), tras un presunto vaciamiento patrimonial de Inmobiliaria Los Barbechos; salió de Chile a Israel el 2-abr-2025 sin notificación de la demanda (evento 20260817-3)."
+  pedro_pablo_larrain_sartor:
+    nombre: Pedro Pablo Larraín
+    cargo: Ex controlador de Grupo Sartor
+    organizacion: grupo_sartor
+    notas: "Empresario, ex controlador de Grupo Sartor (Sartor AGF). En el caso Sartor está formalizado junto a Michael Clark y otros 9 imputados desde el 30-jul-2026 por la trama de préstamos a empresas relacionadas, con perjuicio estimado por la Fiscalía de US$193 millones. Toesca solicitó su declaración como testigo en la querella contra Avram Fritch Vaturi (evento 20260817-3)."
+  marcos_contreras_enos:
+    nombre: Marcos Contreras Enos
+    cargo: Abogado querellante (estudio Contreras Enos)
+    notas: "Socio del estudio penalista Contreras Enos, patrocina junto a Josefina Escobar (Ovalle Consejeros Legales) la querella de Toesca AGF contra Avram Fritch Vaturi por vaciamiento patrimonial en el caso Sartor. Calificó los hechos como 'un caso de manual de vaciamiento patrimonial' (agosto 2026, evento 20260817-3)."
+  jose_rojas_silva:
+    nombre: José Rojas Silva
+    cargo: Abogado defensor de Avram Fritch Vaturi
+    notas: "Abogado defensor de Avram Fritch Vaturi en la querella de Toesca AGF por el préstamo de 65.000 UF de Sartor (caso Sartor). Sostuvo que la prenda nunca fue inscrita por Sartor y que la transferencia de acciones de Inmobiliaria Los Barbechos se destinó a pagar deudas, negando el vaciamiento patrimonial (agosto 2026, evento 20260817-3)."
+  carlos_larrain_mery:
+    nombre: Carlos Larraín Mery
+    cargo: Ex director de Sartor AGF
+    organizacion: sartor_agf
+    notas: "Ex director de Sartor AGF, hermano del ex controlador Pedro Pablo Larraín. En el caso Sartor fue formalizado el 30-jul-2026 por administración desleal, entrega de información falsa, negociación incompatible y estafa, junto a su hermano y otros 9 imputados; la Fiscalía pidió prisión preventiva para ambos (evento 20260730-27)."
+  alfredo_harz:
+    nombre: Alfredo Harz Castro
+    cargo: Ex gerente de inversiones de Sartor AGF
+    organizacion: sartor_agf
+    notas: "Ex gerente de inversiones de Sartor AGF. En el caso Sartor fue formalizado el 30-jul-2026 por administración desleal, entrega de información falsa, negociación incompatible y estafa; suscribió un acuerdo de cooperación con la Fiscalía y quedó con arresto domiciliario total. Sus declaraciones sobre el control de Azul Azul respaldaron las denuncias del exdirector Juan Pablo Pavez (eventos 20260722-2 y 20260730-27)."
+  oscar_ebel:
+    nombre: Óscar Ebel Sepúlveda
+    cargo: Ex ejecutivo de Sartor AGF
+    organizacion: sartor_agf
+    notas: "Ex ejecutivo de Sartor AGF, formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa y negociación incompatible. Suscribió un acuerdo de cooperación con la Fiscalía y el tribunal accedió a su arresto domiciliario total (evento 20260730-27)."
+  juan_carlos_jorquera:
+    nombre: Juan Carlos Jorquera Salhus
+    cargo: Ex ejecutivo de Sartor AGF
+    organizacion: sartor_agf
+    notas: "Ex ejecutivo de Sartor AGF, formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa y negociación incompatible. Su defensa se opuso al arresto domiciliario solicitado buscando una medida de menor intensidad (evento 20260730-27)."
+  mauro_valdes:
+    nombre: Mauro Valdés Raczynski
+    cargo: Ex director de Sartor AGF
+    organizacion: sartor_agf
+    notas: "Ex director de Sartor AGF, formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa y negociación incompatible. Quedó con arresto domiciliario parcial y firma mensual (evento 20260730-27)."
+  miguel_leon:
+    nombre: Miguel León Núñez
+    cargo: Ex ejecutivo de Sartor AGF
+    organizacion: sartor_agf
+    notas: "Ex ejecutivo de Sartor AGF, formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa y negociación incompatible. Quedó con arresto domiciliario parcial y firma mensual (evento 20260730-27)."
+  rodrigo_bustamante:
+    nombre: Rodrigo Bustamante García
+    cargo: Ex socio de Sartor
+    organizacion: sartor_agf
+    notas: "Ex socio de Sartor, formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa, negociación incompatible y estafa; la Fiscalía pidió prisión preventiva para él (evento 20260730-27)."
+  sergio_yañez:
+    nombre: Sergio Yáñez Astete
+    cargo: Ex gerente general de Emprender Capital
+    notas: "Ex gerente general de Emprender Capital (factoring vinculado a Sartor), formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa y estafa; la Fiscalía pidió prisión preventiva para él (evento 20260730-27)."
+  hugo_baranda:
+    nombre: Hugo Baranda
+    cargo: Ex ejecutivo de Emprender Capital
+    notas: "Ex ejecutivo del factoring Emprender Capital, vinculado a Sartor. Formalizado el 30-jul-2026 en el caso Sartor por administración desleal, entrega de información falsa y estafa; quedó con arresto domiciliario total (evento 20260730-27)."
+  paulina_moya:
+    nombre: Paulina Moya
+    cargo: Jueza del Cuarto Juzgado de Garantía de Santiago
+    notas: "Jueza del Cuarto Juzgado de Garantía de Santiago que dirigió la masiva formalización del caso Sartor (desde el 30-jul-2026), con la prisión preventiva solicitada para cinco de los 11 imputados y el resto con arresto domiciliario (evento 20260730-27)."
+  juan_francisco_undurraga_mackenna:
+    nombre: Juan Francisco Undurraga Mackenna
+    cargo: Abogado y activista por los DDHH
+    notas: "Abogado, padre del ministro de las Culturas Francisco Undurraga Gazitúa. Fue activista por los derechos humanos durante la dictadura. Miembro de la familia Undurraga, vinculada a la Viña Undurraga fundada por Francisco Undurraga Vicuña (evento 20260817-4)."
+  maria_teresa_gazitua:
+    nombre: María Teresa Gazitúa Costabal
+    cargo: Artista visual
+    notas: "Artista visual chilena, madre del ministro de las Culturas Francisco Undurraga Gazitúa. Miembro de la familia Gazitúa; el escultor Francisco Gazitúa (Premio Nacional de Arte 2021) es hermano o pariente de la familia (evento 20260817-4)."
+  pedro_undurraga_fernandez:
+    nombre: Pedro Undurraga Fernández
+    cargo: Ex presidente del Partido Conservador Social Cristiano
+    notas: "Abuelo paterno del ministro de las Culturas Francisco Undurraga Gazitúa. Candidato a regidor por Santiago y expresidente del Partido Conservador Social Cristiano (PCSC) (evento 20260817-4)."
+  paulina_dressel:
+    nombre: Paulina Dressel Roa
+    cargo: Empresaria
+    notas: "Esposa del ministro de las Culturas Francisco Undurraga Gazitúa, con quien tiene tres hijos (evento 20260817-4)."
+  cristobal_osorio:
+    nombre: Cristóbal Osorio
+    cargo: Abogado de Sartor AGF
+    notas: "Socio de Osorio Vargas & Abogados, abogado de Sartor AGF en el reclamo que terminó con el fallo de la Corte Suprema del 10-ago-2026 que declaró ilegal la primera revocación de la CMF (diciembre 2024): 'este fallo unánime de la Corte Suprema confirma que la CMF actuó de forma injusta e ilegal, apartándose de los estándares mínimos del debido proceso' (evento 20260810-47)."
+  manuel_alvarez:
+    nombre: Manuel Álvarez
+    cargo: Oncólogo condenado por abuso sexual
+    notas: "Oncólogo de Clínica Las Condes condenado a siete años de cárcel por abuso sexual contra pacientes en etapa terminal. La futura ministra de Salud May Chomali, entonces directora médica de la clínica, fue pilar en la investigación interna (2017): tras ser desvinculado, Álvarez presentó una querella contra Chomali por falso testimonio, de la que fue sobreseída por el Séptimo Juzgado de Garantía de Santiago."
+  susana_borzutzky:
+    nombre: Susana Borzutzky
+    cargo: Abogada querellante en el caso Sartor
+    notas: "Abogada querellante en la causa penal del caso Sartor. Tras el fallo de la Suprema del 10-ago-2026 que declaró ilegal la primera revocación de la CMF, precisó que el máximo tribunal cuestionó el procedimiento utilizado, pero no se pronunció sobre las irregularidades investigadas ni sobre las eventuales responsabilidades penales (evento 20260810-47)."
+  jaime_winter:
+    nombre: Jaime Winter
+    cargo: Abogado defensor de Pedro Pablo Larraín
+    notas: "Abogado defensor de Pedro Pablo Larraín en el caso Sartor. Tras el fallo de la Suprema del 10-ago-2026 que declaró ilegal la primera revocación de la CMF, sostuvo que 'la intervención de la CMF fue la peor decisión que se pudo haber tomado' y que los alcances del fallo 'debieran ser inmensos' y 'los fundamentos mismos de la imputación del Ministerio Público están debilitados' (evento 20260810-47)."
+  andres_balart:
+    nombre: Andrés Balart
+    cargo: Abogado querellante (aportantes de ECapital)
+    notas: "Socio de Borzutzky y Compañía, abogado querellante en representación de un grupo de aportantes particulares de ECapital (factoring del Grupo Sartor). Tras el fallo de la Suprema del 10-ago-2026: 'este fallo no limpia ni exculpa a Sartor' (evento 20260810-47)."
+  christian_kast:
+    nombre: Christian Kast Rist
+    cargo: Hermano del presidente José Antonio Kast
+    notas: "Hermano del presidente José Antonio Kast. Estudió en la Universidad Católica junto a Francisco Pérez Mackenna, con quien mantiene amistad desde la época universitaria; ese vínculo fue uno de los nexos del futuro canciller con Kast (perfil Ex-Ante del 21-ene-2026)."
+  juan_bilbao:
+    nombre: Juan Bilbao
+    cargo: Empresario, ex ejecutivo de Bankers Trust
+    notas: "Empresario que llevó a Francisco Pérez Mackenna a Bankers Trust a fines de la década de 1980, para hacerse cargo de la gerencia de administración y finanzas de AFP Provida. Uno de los contactos forjados por Pérez Mackenna en su paso por colegios y universidad (perfil de la serie r/chile y prensa)."
+
 organizations:
+  quinenco:
+    nombre: Quiñenco S.A.
+    tipo: empresa_privada
+    pais: Chile
+    notas: "Holding principal del Grupo Luksic. Francisco Pérez Mackenna fue su gerente general desde 1998 hasta marzo de 2026, cuando dejó el cargo para asumir como ministro de Relaciones Exteriores (La Tercera 20-ene-2026)."
+  ccu:
+    nombre: Compañía Cervecerías Unidas (CCU)
+    tipo: empresa_privada
+    pais: Chile
+    notas: "Cervecera del grupo Luksic (comparte la matriz Inversiones y Rentas con Heineken). Francisco Pérez Mackenna fue su gerente general entre 1991 y 1998 y presidente del directorio desde 2023 hasta su salida para asumir en Cancillería."
+  banco_de_chile:
+    nombre: Banco de Chile
+    tipo: empresa_privada
+    pais: Chile
+    notas: "Banco controlado por LQ Inversiones Financieras (Quiñenco/Citi). Francisco Pérez Mackenna fue director desde 2011 y vicepresidente del directorio desde 2023, en reemplazo de Andrónico Luksic, hasta su salida para asumir en Cancillería."
   cencosud:
     nombre: Cencosud S.A.
     tipo: empresa
@@ -9550,6 +9938,11 @@ organizations:
     nombre: Instituto Nacional de Desarrollo Sustentable de la Pesca Artesanal y de la Acuicultura (INDESPA)
     tipo: servicio_publico
     notas: "Organismo dependiente del Ministerio de Economía, vinculado a la pesca artesanal y acuicultura. Mencionado en los audios de la seremi Romina Cifuentes como espacio 'más fácil' para colocar militantes republicanos ('en Indespa es más fácil, porque Indespa está acá al lado mío', evento 20260811-7)."
+  jns:
+    nombre: JNS.org
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Jewish News Syndicate, agencia de noticias judía en inglés y español (jns.org). Cubrió la ceremonia de credenciales del embajador chileno Gabriel Zaliasnik ante Isaac Herzog el 3 de agosto de 2026 (evento 20260810-46)."
   infodefensa:
     nombre: Infodefensa
     tipo: medio_comunicacion
@@ -9851,6 +10244,31 @@ organizations:
     nombre: Ministerio de Salud
     tipo: ministerio
     pais: Chile
+  clinica_las_condes:
+    nombre: Clínica Las Condes
+    tipo: empresa
+    pais: Chile
+    notas: "Clínica privada chilena. May Chomali se desempeñó como subdirectora médica (2000-2006), directora de Servicios Médicos (2006-2017) y directora médica (2017-2020), cuando el director médico era el exministro Jaime Mañalich. En 2020 salió tras el reingreso del oncólogo Manuel Álvarez, condenado por abuso sexual, dispuesto por el controlador Alejandro Gil."
+  cens:
+    nombre: CENS (Centro Nacional en Sistemas de Información en Salud)
+    tipo: organizacion
+    pais: Chile
+    notas: "Corporación especializada en sistemas de información en salud, interoperabilidad clínica y estándares tecnológicos, fundada por universidades y apoyada por el Estado. May Chomali fue su directora ejecutiva desde 2021 hasta asumir como ministra de Salud; como representante legal firmó contratos por trato directo con el Minsal, entre ellos el proyecto 'Tiempo de Espera Interoperable' por más de $200 millones (BioBioChile, 16-ene-2026)."
+  instituto_nacional_del_torax:
+    nombre: Instituto Nacional del Tórax
+    tipo: organizacion
+    pais: Chile
+    notas: "Centro de salud chileno especializado en enfermedades respiratorias. May Chomali fue su directora durante su carrera en el sistema público."
+  servicio_salud_metropolitano_oriente:
+    nombre: Servicio de Salud Metropolitano Oriente
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público de salud de la Región Metropolitana. May Chomali ingresó en 1991 y se desempeñó como epidemióloga, jefa del departamento de programas de personas y subdirectora médica."
+  colegio_medico:
+    nombre: Colegio Médico de Chile
+    tipo: organizacion
+    pais: Chile
+    notas: "Gremio de los médicos chilenos. May Chomali fue vicepresidenta de su Comisión de Verdad y Memoria (2023), que esclareció los crímenes de la dictadura contra estudiantes de medicina y médicos."
   seremi_salud_magallanes:
     nombre: Secretaría Regional Ministerial de Salud de Magallanes
     tipo: seremi
@@ -9979,6 +10397,16 @@ organizations:
     nombre: Banco del Estado de Chile
     tipo: empresa_estatal
     pais: Chile
+  banco_itau:
+    nombre: Banco Itaú
+    tipo: empresa
+    pais: Chile
+    notas: "Banco privado con sucursal en calle Cochrane (esquina Prat), centro de Valparaíso, cuyo local fue blanco del robo de $6.150 millones desde su bóveda el 28-jul-2025 (forado por local colindante + oxicorte, evento 20250728-1)."
+  brianco:
+    nombre: Brigada Investigadora de Robos (Brianco) de la PDI
+    tipo: policia
+    pais: Chile
+    notas: "Brigada de la PDI especializada en robos; su jefa regional en Valparaíso, la subprefecta Alejandra Cuevas, participó en la investigación del robo al Banco Itaú (28-jul-2025, evento 20250728-1)."
   coordinadora_deudores_cae:
     nombre: Coordinadora Nacional de Deudores del CAE
     tipo: organizacion_social
@@ -10060,6 +10488,10 @@ organizations:
     notas: "Municipalidad de la comuna de San Bernardo. Su alcalde, Christopher White, ha criticado la situación de seguridad en la comuna denunciando cifras negras, crimen organizado y falta de carabineros y herramientas (agosto de 2026)."
   municipalidad_maipu:
     nombre: Municipalidad de Maipú
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_vitacura:
+    nombre: Municipalidad de Vitacura
     tipo: municipalidad
     pais: Chile
   consejo_salon:
@@ -10207,6 +10639,19 @@ organizations:
     nombre: Municipalidad de Bulnes
     tipo: municipalidad
     pais: Chile
+  barros_errazuriz:
+    nombre: Barros & Errázuriz
+    tipo: empresa
+    notas: "Estudio jurídico chileno fundado en 1988 por Fernando Barros y José Tomás Errázuriz, especializado en derecho tributario, financiero y corporativo. Uno de los bufetes más influyentes del país."
+  universidad_de_la_serena:
+    nombre: Universidad de La Serena
+    tipo: universidad
+    notas: "Universidad pública chilena de la Región de Coquimbo. La ministra de Ciencia Ximena Lincolao estudió Pedagogía en Lenguaje y Filosofía en esta casa de estudios."
+  universidad_gabriela_mistral:
+    nombre: Universidad Gabriela Mistral
+    tipo: organizacion
+    pais: Chile
+    notas: "Universidad privada chilena. Mara Sedini estudió periodismo en modalidad Advance en esta casa de estudios (2022) y lideró en 2015 un taller extraprogramático de expresión oral en ella."
   universidad_adolfo_ibanez:
     nombre: Universidad Adolfo Ibáñez
     tipo: universidad
@@ -10236,6 +10681,16 @@ organizations:
     pais: Chile
     notas: Club de fútbol de la Región de Biobío. Vinculado a denuncias de
       sobreprecios en traspasos a Azul Azul.
+  colo_colo:
+    nombre: Club Social y Deportivo Colo Colo
+    tipo: club_futbol
+    pais: Chile
+    notas: "Club de fútbol de Santiago, el más ganador del fútbol chileno. Su barra, la Garra Blanca, concentra facciones violentas con presencia territorial en comunas como Peñalolén; el alcalde Miguel Concha pidió en agosto de 2026 que el plan de seguridad del gobierno las aborde."
+  estadio_nacional:
+    nombre: Estadio Nacional Julio Martínez Prádanos
+    tipo: infraestructura_deportiva
+    pais: Chile
+    notas: "Estadio de Ñuñoa, Santiago, sede habitual de los Superclásicos entre Colo Colo y Universidad de Chile. También escenario del concierto de BTS que tensionó al Ministerio del Deporte en 2026 (evento 20260705-2)."
   achm:
     nombre: Asociación Chilena de Municipalidades
     tipo: asociacion_gremial
@@ -10448,6 +10903,11 @@ organizations:
     tipo: municipio
     pais: Chile
     notas: Municipio que modificó el Plan Regulador para impedir nuevas edificaciones en dunas de Concón.
+  municipalidad_el_tabo:
+    nombre: Municipalidad de El Tabo
+    tipo: municipio
+    pais: Chile
+    notas: Municipio de la provincia de San Antonio (región de Valparaíso). La Contraloría (Informe Final N° 596, 2026) detectó 56 funcionarios con vínculos familiares con autoridades del municipio (24 con el alcalde Alfonso Muñoz), contrataciones irregulares y traspasos a honorarios sin justificación; otorgó 60 días para anular los decretos cuestionados (evento 20260816-17).
   codelco:
     nombre: Corporación Nacional del Cobre de Chile
     tipo: empresa_estatal
@@ -11092,6 +11552,16 @@ organizations:
     tipo: organizacion_social
     pais: Bolivia
     notas: "Central sindical boliviana. Promovió junto a sindicatos campesinos y sectores afines a Evo Morales las protestas y bloqueos de carreteras contra el gobierno de Rodrigo Paz en 2026."
+  instituto_estudios_sociedad:
+    nombre: Instituto de Estudios de la Sociedad (IES)
+    tipo: organizacion
+    pais: Chile
+    notas: "Think tank chileno de orientación conservadora. María Jesús Wulf inició su carrera profesional en 2012 como ayudante de investigación del IES mientras estudiaba sociología."
+  colegio_mariano_de_schoenstatt:
+    nombre: Colegio Mariano de Schoenstatt
+    tipo: organizacion
+    pais: Chile
+    notas: "Colegio privado de Providencia perteneciente al movimiento Schoenstatt, el mismo al que pertenece José Antonio Kast. María Paz Arzola cursó allí su educación básica y media, egresando en 2004."
   universidad_catolica:
     nombre: Red UC Christus / Universidad Católica de Chile
     tipo: institucion
@@ -11383,6 +11853,15 @@ organizations:
   honduras:
     nombre: Honduras
     tipo: pais
+  triple_p:
+    nombre: Triple P (Parentalidad Positiva)
+    tipo: programa
+    notas: "Programa de parentalidad positiva creado por Matt Sanders en la Universidad de Queensland (Australia), usado en 25 países incluido Chile. En agosto de 2026 su fundador participó en el II Seminario Internacional Crianza y Salud Familiar organizado por la Facultad de Medicina UC y Triple P Latinoamérica (evento 20260815-10)."
+  universidad_de_queensland:
+    nombre: Universidad de Queensland
+    tipo: institucion
+    pais: Australia
+    notas: "Universidad australiana donde Matt Sanders dirige el Centro de Apoyo Familiar y Parental, base del programa Triple P (evento 20260815-10)."
   israel:
     nombre: Estado de Israel
     tipo: pais
@@ -11435,6 +11914,10 @@ organizations:
 
   municipalidad_coquimbo:
     nombre: Municipalidad de Coquimbo
+    tipo: municipalidad
+    pais: Chile
+  municipalidad_penalolen:
+    nombre: Municipalidad de Peñalolén
     tipo: municipalidad
     pais: Chile
   municipalidad_puente_alto:
@@ -11572,6 +12055,16 @@ organizations:
     tipo: encuestadora
     pais: Chile
     notas: "Encuestadora de la Universidad del Desarrollo. En la primera semana tras la primera vuelta de 2025 (17-23 de noviembre) publicó dos mediciones del balotaje entre Jeannette Jara y José Antonio Kast: una que dio 61% a 39% entre quienes manifestaron preferencia decidida, y una segunda que midió la transferencia de votos de Parisi, Matthei y Kaiser hacia ambos candidatos."
+  morpho:
+    nombre: Morpho
+    tipo: empresa
+    pais: Francia
+    notas: "Empresa tecnológica (filial de Safran, luego Idemia) proveedora de sistemas del Registro Civil. En 2016 se le culpaba de un error que dejó a medio millón de chilenos con el domicilio electoral cambiado; el Ministerio de Justicia debía investigar el fallo. El abogado Francisco Zúñiga, socio de Jaime Campos, era asesor de Morpho (CIPER, 21-oct-2016)."
+  universidad_de_concepcion:
+    nombre: Universidad de Concepción
+    tipo: universidad
+    pais: Chile
+    notas: "Universidad donde Jaime Campos estudió Derecho (juró como abogado el 29 de septiembre de 1975), fue director del Departamento de Derecho Penal y miembro del Consejo Universitario."
   partido_radical:
     nombre: Partido Radical
     tipo: partido_politico
@@ -11665,6 +12158,21 @@ organizations:
     tipo: empresa
     pais: Chile
     notas: "Cadena chilena de farmacias. Condenada junto a Cruz Verde y Farmacias Ahumada por colusión en el precio de medicamentos (TDLC, 2012). Jorge Quiroz elaboró informes y declaró como perito de Salcobrand ante el TDLC negando la existencia de colusión."
+  data_uc:
+    nombre: DATA UC
+    tipo: organizacion
+    pais: Chile
+    notas: "Centro de Datos y Asesoría Estadística dependiente del Departamento de Matemáticas de la Pontificia Universidad Católica de Chile. Jorge Quiroz integró su Consejo Asesor entre 2013 y 2017."
+  duke_university:
+    nombre: Universidad Duke
+    tipo: organizacion
+    pais: Estados Unidos
+    notas: "Universidad estadounidense en Durham, Carolina del Norte. Jorge Quiroz obtuvo allí su doctorado en economía (1991) con especialización en organización industrial y economía aplicada; también estudiaron en Duke Ricardo Lagos y Walter Molano."
+  universidad_tecnica_federico_santa_maria:
+    nombre: Universidad Técnica Federico Santa María
+    tipo: organizacion
+    pais: Chile
+    notas: "Universidad técnica de Valparaíso. Jorge Quiroz cursó la enseñanza media en la Escuela Experimental de la UTFSM, colegio que ya no existe."
   don_pollo:
     nombre: Don Pollo S.A.
     tipo: empresa
@@ -11994,6 +12502,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio chilena, 92.1 FM. Portal radioagricultura.cl."
+  maray:
+    nombre: Radio Maray
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena de Copiapó (maray.cl)."
   revista_tierra_bella:
     nombre: Revista Tierra Bella
     tipo: medio_comunicacion
@@ -12138,10 +12651,18 @@ organizations:
     nombre: Reddit r/chile
     tipo: red_social
     notas: "Plataforma social; el subreddit r/chile es un punto de partida de discusión pública chilena. Solo fuente complementaria, nunca única."
+  reddit_republicadechile:
+    nombre: Reddit r/RepublicadeChile
+    tipo: red_social
+    notas: "Plataforma social; el subreddit r/RepublicadeChile (autodenominado 'el espacio virtual más libre para chilenos') agrupa una comunidad más pequeña y de sesgo mayoritariamente favorable al oficialismo de derecha, complementaria de r/chile en la documentación del debate ciudadano. Solo fuente complementaria, nunca única."
   youtube:
     nombre: YouTube
     tipo: red_social
     notas: "Plataforma de video. Solo fuente complementaria; se usa para videos de canales de prensa o difusiones oficiales."
+  facebook:
+    nombre: Facebook
+    tipo: red_social
+    notas: "Plataforma social. Solo fuente complementaria, nunca única; se usa para reacciones a posts de páginas de medios o difusiones oficiales (comentarios 'Most relevant' con su conteo de reacciones)."
   cnn_espanol:
     nombre: CNN en Español
     tipo: medio_comunicacion
@@ -12437,6 +12958,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno de Antofagasta (timeline.cl)."
+  municipalidad_collipulli:
+    nombre: Municipalidad de Collipulli
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de la comuna de Collipulli, Región de La Araucanía. Su alcalde, Manuel Macaya Ramírez (RN), fue formalizado por desacato en marzo de 2024 y absuelto por el Tribunal de Juicio Oral en Lo Penal de Angol en octubre de 2025."
   araucania_diario:
     nombre: Araucanía Diario
     tipo: medio_comunicacion
@@ -12845,6 +13371,11 @@ organizations:
     tipo: medio_comunicacion
     pais: España
     notas: "Portal español de noticias de defensa y seguridad (defensa.com)."
+  military_aerospace:
+    nombre: Military Aerospace
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Medio especializado en tecnología aeroespacial y defensa (militaryaerospace.com). Documentó la compra de los UAV Hermes 900 de Elbit Systems por las Fuerzas Armadas de Chile (junio 2011, evento 20260810-46)."
   diario_red:
     nombre: Diario Red
     tipo: medio_comunicacion
@@ -13073,6 +13604,11 @@ organizations:
     tipo: institucion
     pais: Chile
     notas: "Recibió los antecedentes de las denuncias por Ley Karin contra la seremi de Salud de Los Lagos para ser informados al nivel central del Ministerio de Salud."
+  embajada_chile_israel:
+    nombre: Embajada de Chile en Israel
+    tipo: institucion
+    pais: Chile
+    notas: "Misión diplomática chilena en Tel Aviv. Sin embajador desde mayo de 2024 (Boric retiró a los agregados militares en mayo de 2025 por la guerra en Gaza); el embajador Gabriel Zaliasnik presentó sus credenciales el 3 de agosto de 2026 y el Gobierno anunció el envío de nuevos agregados militares (evento 20260810-46)."
   embajada_chile_eeuu:
     nombre: Embajada de Chile en Estados Unidos
     tipo: institucion
@@ -13303,6 +13839,11 @@ organizations:
     tipo: organizacion_criminal
     pais: México
     notas: "Organización criminal mexicana considerada una de las principales estructuras del narcotráfico internacional; según la Fiscalía de Alta Complejidad de San Antonio, mantiene nexos con la red desarticulada en Chile en agosto de 2026."
+  juzgado_trabajo_punta_arenas:
+    nombre: Juzgado de Letras del Trabajo de Punta Arenas
+    tipo: tribunal
+    pais: Chile
+    notas: "Tribunal laboral que acogió a tramitación la tutela laboral de la ex suboficial mayor Nelty Álvarez contra el general de Carabineros Marco Antonio Alvarado, fijando la primera audiencia para el 4 de agosto de 2026 (evento 20260620-1)."
   juzgado_garantia_san_antonio:
     nombre: Juzgado de Garantía de San Antonio
     tipo: institucion_publica
@@ -13567,8 +14108,290 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio local de Valparaíso (periodicodelacosta.cl). Cubrió la auditoría forense que descartó déficit estructural atribuible a la gestión de Jorge Sharp en la Municipalidad de Valparaíso (agosto 2026, evento 20260811-24)."
+  noticiaslosrios:
+    nombre: Noticias Los Ríos
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital regional de Los Ríos (noticiaslosrios.cl). Cubrió la retoma de la discusión en particular del proyecto (Boletín 17.662-07) que aumenta sanciones por insultos a Carabineros y la PDI (agosto 2026, evento 20260817-2)."
+  cronicasdelchilefome:
+    nombre: Crónicas del Chile Fome
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (cronicasdelchilefome.com) con cobertura de la agenda de seguridad del gobierno de Kast. Cubrió la urgencia de discusión inmediata al proyecto que aumenta penas y permite detenciones por insultos a policías y la acusación de la oposición de medida 'para la galería' (agosto 2026, evento 20260817-2)."
+  multigremial:
+    nombre: Multigremial Nacional
+    tipo: gremio
+    pais: Chile
+    notas: "Gremio que agrupa a pequeñas y medianas empresas de diversos sectores. Su presidente Juan Pablo Swett advirtió en agosto de 2026 que el poco empleo que se crea se está desplazando hacia la informalidad, con MiPYME que postergan contrataciones, no reemplazan bajas y reorganizan funciones (evento 20260814-16)."
+  agorechi:
+    nombre: Asociación de Gobernadores y Gobernadoras Regionales de Chile (Agorechi)
+    tipo: asociacion
+    pais: Chile
+    notas: "Asociación que agrupa a los gobernadores regionales de Chile. Su presidente Alejandro Santana participó en el lanzamiento del plan 'Modo Empleo' (julio 2026) comprometiendo un catastro de proyectos con empleabilidad inmediata y de iniciativas frenadas por trámites (evento 20260814-16)."
+  gobierno_regional_los_rios:
+    nombre: Gobierno Regional de Los Ríos
+    tipo: gobierno_regional
+    pais: Chile
+    notas: "Gobierno Regional de Los Ríos. Su gobernador Alejandro Santana preside la Agorechi y participó en la mesa de empleo del plan 'Modo Empleo' (2026)."
+  sercotec:
+    nombre: Servicio de Cooperación Técnica (Sercotec)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Servicio público del Ministerio de Economía que apoya a las micro y pequeñas empresas. Aportó $5 mil millones al plan 'Modo Empleo' del gobierno de Kast (julio 2026) para programas orientados a pymes (evento 20260814-16)."
+  inacap:
+    nombre: INACAP
+    tipo: institucion_educativa
+    pais: Chile
+    notas: "Institución de educación superior técnica profesional. Junto a la CPC lanzó la 'Cruzada X el Empleo' (agosto 2026) con la meta de concretar 20 mil nuevos puestos de trabajo en Chile (evento 20260814-16)."
+  poderyliderazgo:
+    nombre: Poder y Liderazgo
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (poderyliderazgo.cl) con cobertura política y económica. Detalló el plan 'Modo Empleo' del gobierno de Kast (julio 2026) con sus 25.000 subsidios laborales y el compromiso de la Cuenta Pública de recuperar 300.000 empleos (evento 20260814-16)."
+  sartor_agf:
+    nombre: Sartor AGF
+    tipo: empresa
+    pais: Chile
+    notas: "Administradora general de fondos de inversión intervenida por la CMF en 2025 (multa histórica de 367.500 UF) tras la trama de préstamos a empresas relacionadas del caso Sartor. Sus fondos (Sartor Proyección, entre otros) están en liquidación bajo Toesca AGF. Otorgó en 2019 un préstamo de 65.000 UF a Inmobiliaria Carmel Limitada de Avram Fritch Vaturi, impago y objeto de querella por vaciamiento patrimonial (evento 20260817-3)."
+  toesca_agf:
+    nombre: Toesca AGF
+    tipo: empresa
+    pais: Chile
+    notas: "Administradora general de fondos designada por la CMF como liquidadora de los fondos de inversión rescatables que administraba Sartor AGF. Ha presentado querellas en el caso Sartor, incluida la primera querella penal contra un ex cliente: contra Avram Fritch Vaturi por alzamiento de bienes y contrato simulado tras el préstamo impago de 65.000 UF (jul-ago 2026, evento 20260817-3)."
+  redwood_capital:
+    nombre: Redwood Capital
+    tipo: empresa
+    pais: Chile
+    notas: "Firma de asesoría financiera de Michael Clark Varela. Según su declaración ante la Fiscalía, asesoró a Avram Fritch Vaturi para obtener el préstamo de 65.000 UF de Sartor AGF (2019) y cobró una comisión por los recursos levantados (evento 20260817-3)."
+  atisba:
+    nombre: Atisba
+    tipo: empresa
+    pais: Chile
+    notas: "Oficina de urbanismo fundada por Iván Poduje (más de 25 años de existencia), de la que es director y socio fundador; ha liderado estudios urbanos estratégicos en Chile, Perú y Colombia. Participó en obras como la Línea 6 del Metro, el Parque Fluvial Río Mapocho en Vitacura, la remodelación del paseo costero de Avenida La Marina y la extensión de la Línea 3."
+  espacio_publico:
+    nombre: Espacio Público
+    tipo: centro_estudios
+    pais: Chile
+    notas: "Centro de estudios independiente del cual Iván Poduje fue director, antes de alcanzar mayor relevancia pública como panelista de Sin Filtro."
+  pucv:
+    nombre: Pontificia Universidad Católica de Valparaíso
+    tipo: universidad
+    pais: Chile
+    notas: "Universidad donde Iván Poduje estudió arquitectura desde 1985."
+  inmobiliaria_carmel:
+    nombre: Inmobiliaria Carmel Limitada
+    tipo: empresa
+    pais: Chile
+    notas: "Inmobiliaria de Avram Fritch Vaturi, controladora de Inmobiliaria Los Barbechos SpA y del holding Grupo Rebrisa. Recibió en 2019 un préstamo de 65.000 UF del Fondo de Inversión Sartor Proyección para el proyecto Los Barbechos (Av. Las Condes 7.350); la querella de Toesca la describe como un 'cascarón' vaciado de activos para eludir la prenda (evento 20260817-3)."
+  grupo_rebrisa:
+    nombre: Grupo Rebrisa
+    tipo: empresa
+    pais: Chile
+    notas: "Holding controlado por Inmobiliaria Carmel de Avram Fritch Vaturi. Incluye a Global Systems Chile SpA (98% de propiedad en manos de Rebrisa), que facturó al Estado de Chile más de $3.000 millones entre 2020 y 2026 por contratos de operación y mantención del Sistema de Alerta de Emergencia (SAE) de Senapred (evento 20260817-3)."
+  global_systems_chile:
+    nombre: Global Systems Chile SpA
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de soluciones tecnológicas del Grupo Rebrisa (98% de propiedad de Rebrisa S.A.), controlado por Avram Fritch Vaturi. Ha facturado al Estado de Chile más de $3.000 millones entre 2020 y 2026 por siete contratos con Senapred de operación y mantención del Sistema de Alerta de Emergencia (SAE), varios por trato directo (evento 20260817-3)."
+  azul_azul:
+    nombre: Azul Azul S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Concesionaria que gestiona la rama de fútbol de la Universidad de Chile, controlada por representantes de Sartor y ligada al caso Sartor. Su ex presidente Michael Clark está formalizado por delitos económicos; exdirectores denunciaron sobreprecios y control de la concesionaria (eventos 20260722-2 y 20260817-3)."
 
 cifras:
+  pase_cultural_undurraga:
+    nombre: Presupuesto del Pase Cultural bajo el gobierno de Kast
+    unidad_default: pesos
+    notas: "$50.000 pesos por beneficiario era el presupuesto del Pase Cultural según anunció el ministro de las Culturas Francisco Undurraga en entrevista con CNN (31-mar-2026), con $900 millones consumidos entre enero y febrero de 2026; antes de asumir había anunciado su suspensión por uso fraudulento (evento 20260817-4)."
+  multa_cmf_sartor_agf:
+    nombre: Multa histórica de la CMF a Sartor AGF por infracciones a la Ley Única de Fondos
+    unidad_default: UF
+    notas: "Sanciones de la CMF que totalizaron 367.500 UF contra exdirectores y el exgerente general de Sartor AGF, aplicadas en noviembre de 2025 tras el procedimiento sancionatorio formal iniciado el 15-abr-2025 por administración manifiestamente negligente e información falsa al mercado. La Corte Suprema confirmó (10-ago-2026) que ese segundo procedimiento quedaba vigente pese a anular la primera revocación de diciembre de 2024 (eventos 20260730-27 y 20260810-47)."
+  prestamo_sartor_fritch:
+    nombre: Préstamo de Sartor AGF a Inmobiliaria Carmel de Avram Fritch (2019)
+    unidad_default: UF
+    notas: "Financiamiento de 65.000 UF otorgado el 2-jul-2019 por el Fondo de Inversión Sartor Proyección a Inmobiliaria Carmel Limitada, representada por Avram Fritch Vaturi, para el proyecto inmobiliario Los Barbechos (Av. Las Condes 7.350). Vencimiento original el 16-jun-2022. Gestionado por Michael Clark a través de Redwood Capital (evento 20260817-3)."
+  pagare_carmel_fritch:
+    nombre: Pagaré suscrito por Inmobiliaria Carmel tras capitalización de intereses
+    unidad_default: UF
+    notas: "Nuevo pagaré por 67.600 UF suscrito por Inmobiliaria Carmel en enero de 2023 (tras capitalizar 2.600 UF de intereses impagos) con vencimiento el 31-ene-2025, firmado por Avram Fritch como aval, fiador y codeudor solidario. La defensa indica que la deuda llegó a 73.969 UF (evento 20260817-3)."
+  deuda_mora_sartor_fritch:
+    nombre: Deuda en mora de Inmobiliaria Carmel con Sartor Proyección
+    unidad_default: millones_de_pesos
+    notas: "Crédito impago del Fondo de Inversión Sartor Proyección que supera los $3.000 millones (67.500 UF solo por concepto de capital), imposible de cobrar tras el presunto vaciamiento patrimonial de Inmobiliaria Carmel y la salida de Avram Fritch a Israel (evento 20260817-3)."
+  contratos_global_systems_senapred:
+    nombre: Facturación de Global Systems Chile al Estado por el SAE
+    unidad_default: millones_de_pesos
+    notas: "Más de $3.000 millones facturados por Global Systems Chile SpA (Grupo Rebrisa, de Avram Fritch) al Estado de Chile entre 2020 y 2026 por siete contratos con Senapred de operación y mantención del Sistema de Alerta de Emergencia (SAE): $345M (2020), $345M (2021), $881M (2022, 24 meses), $57M (2024, firewall), $1.321M (ago-2024, 36 meses, licitación pública), $28M (2025) y $27M (2026) (evento 20260817-3)."
+  perjuicio_caso_sartor_fiscalia:
+    nombre: Perjuicio estimado por la Fiscalía en el caso Sartor
+    unidad_default: millones_de_dolares
+    notas: "Cerca de US$191 millones (US$78.562.257 más $104.640.516.271, al dólar de la fecha) de perjuicio a los fondos y aportantes de Sartor AGF por la trama de préstamos a empresas relacionadas, según la minuta de 87 páginas presentada por la Fiscalía en la formalización del 30-jul-2026; el DF cifró el total en US$193 millones y los querellantes apuntan a un fraude de más de US$200 millones y a una 'organización criminal' (evento 20260730-27)."
+  perjuicio_caso_sartor_pesos:
+    nombre: Perjuicio en pesos del caso Sartor (formalización)
+    unidad_default: millones_de_pesos
+    notas: "El componente en pesos del perjuicio del caso Sartor asciende a $104.640.516.271 (unos $104.640 millones), sumado a US$78.562.257 en dólares según la minuta de la Fiscalía del 30-jul-2026; el abogado de Toesca Sergio Rodríguez habló de $180 mil millones de perjuicio a los fondos en liquidación (evento 20260730-27)."
+  prestamo_emprender_capital_sartor:
+    nombre: Deuda acumulada de Emprender Capital y sociedades ligadas con los fondos de Sartor
+    unidad_default: millones_de_pesos
+    notas: "Más de $50.000 millones adeudaban a diciembre de 2024 las entidades ligadas al factoring Emprender Capital (de Sergio Yáñez) a los fondos de Sartor, tras el rescate de la empresa con inyecciones y prórrogas continuadas y el control tomado vía la sociedad Danke SF SpA de los hermanos Larraín (evento 20260730-27)."
+  redwood_bono_nexus:
+    nombre: Fondos recibidos por Redwood Capital para el bono Nexus
+    unidad_default: millones_de_pesos
+    notas: "$875 millones recibió la sociedad Redwood Capital de Michael Clark, usados para comprar un bono devaluado (bono Nexus) y revenderlo a mayor precio a otro fondo administrado por Sartor, según la minuta de la Fiscalía del 30-jul-2026 (evento 20260730-27)."
+  fondo_miami_one_river_point:
+    nombre: Fondos utilizados en el proyecto inmobiliario de Miami (One River Point)
+    unidad_default: millones_de_dolares
+    notas: "Más de US$33 millones del Fondo Táctico Internacional de Sartor se utilizaron para financiar el proyecto One River Point (hoy Faena Residences) en Miami, quedando Pedro Pablo Larraín con el control exclusivo a través de sociedades intermedias (CEPSA y Downtown Investments LLC) y el fondo público respaldado solo con pagarés sin garantías (evento 20260730-27)."
+  acciones_azul_azul_fip_tactical_sport:
+    nombre: Participación de Azul Azul adquirida por el FIP Tactical Sport
+    unidad_default: porcentaje
+    notas: "El Fondo de Inversión Privado Tactical Sport adquirió el 63,07% de las acciones de Azul Azul S.A. en abril de 2021 mediante una OPA, con dinero que —según la Fiscalía— provenía de los fondos públicos Sartor Táctico, Leasing y Proyección triangulado vía Inversiones Cerro El Plomo (evento 20260730-27)."
+  imputados_caso_sartor:
+    nombre: Imputados en la formalización del caso Sartor
+    unidad_default: personas
+    notas: "Once imputados formalizados desde el 30-jul-2026 por el caso Sartor: Pedro Pablo Larraín Mery, Michael Clark Varela, Carlos Larraín Mery, Alfredo Harz Castro, Óscar Ebel Sepúlveda, Juan Carlos Jorquera Salhus, Mauro Valdés Raczynski, Miguel León Núñez, Rodrigo Bustamante García, Sergio Yáñez Astete y Hugo Baranda (evento 20260730-27)."
+  minuta_fiscalia_caso_sartor:
+    nombre: Extensión de la minuta de la Fiscalía en la formalización del caso Sartor
+    unidad_default: paginas
+    notas: "Minuta de 87 páginas distribuida por el Ministerio Público en la audiencia de formalización del 30-jul-2026 con el detalle de las acusaciones contra los 11 imputados del caso Sartor (evento 20260730-27)."
+  empresas_mantienen_dotacion_cnc:
+    nombre: Empresas del comercio que esperan mantener su dotación (Índice de Confianza CNC)
+    unidad_default: porcentaje
+    notas: "70,1% de las empresas espera mantener su actual dotación y solo 17,6% aumentarla, según el último Índice de Confianza de la CNC (agosto 2026). En el primer semestre, 21,3% de las firmas redujo su personal estable frente a 10,4% que lo incrementó; solo 7,3% de las microempresas aumentó su dotación versus 14,6% de las grandes (evento 20260814-16)."
+  empleos_inhibidos_agenda_laboral_sofofa:
+    nombre: Empleos formales que la agenda laboral podría inhibir hacia 2033 (estudio Sofofa/Juan Bravo)
+    unidad_default: empleos
+    notas: "Entre 387 mil y 712 mil empleos asalariados formales del sector privado podrían dejar de crearse hacia 2033 por el impacto acumulado de la reducción de la jornada laboral, el aumento del salario mínimo y la reforma de pensiones; para neutralizarlo, Chile requeriría un crecimiento adicional de entre 0,64% y 1,15% anual. Estudio de Juan Bravo encargado por la Sofofa (nov-2025), citado por el director de Políticas Públicas del gremio Rodrigo Mujica en agosto de 2026 (evento 20260814-16)."
+  empleo_informal_crecimiento_anual:
+    nombre: Crecimiento anual del empleo informal (trimestre marzo-mayo 2026)
+    unidad_default: porcentaje
+    notas: "+4,6% anual el empleo informal, con la informalidad en 27% de la ocupación total; los trabajadores por cuenta propia crecieron 5,3% y los asalariados informales 7,1%, mientras la ocupación total creció apenas 0,8% anual en marzo-mayo (cifras citadas por la Multigremial, agosto 2026; la ocupación informal nacional de 27,0% del trimestre abril-junio 2026 la confirma el INE — evento 20260814-16)."
+  indice_costos_laborales_mayo_2026:
+    nombre: Índice de Costos Laborales de mayo 2026 (anual)
+    unidad_default: porcentaje
+    notas: "7,9% anual en mayo de 2026, según la Multigremial (agosto 2026). El INE reportó 8,4% interanual para junio de 2026 (evento 20260806-22); ambos datos muestran el encarecimiento del factor trabajo que los gremios citan como barrera para contratar (evento 20260814-16)."
+  fondos_modo_empleo:
+    nombre: Fondo del plan 'Modo Empleo' (primer paquete)
+    unidad_default: millones_de_pesos
+    notas: "$50 mil millones en el primer paquete del plan 'Modo Empleo' lanzado por Kast el 10-jul-2026: 20.000 subsidios Sence adicionales (5.000 previos = 25.000 cupos totales, postulación desde el 15-jul), $20 mil millones de la Subdere en fondos de emergencia y $5 mil millones de Sercotec para pymes, con la meta de 50.000 nuevos puestos hacia octubre (evento 20260814-16)."
+  meta_empleos_modo_empleo:
+    nombre: Meta de nuevos puestos del plan 'Modo Empleo' hacia octubre
+    unidad_default: empleos
+    notas: "50.000 nuevos puestos de trabajo hacia octubre de 2026, meta del plan 'Modo Empleo' del gobierno de Kast (anunciado el 10-jul-2026), con subsidios Sence, fondos Subdere y Sercotec (evento 20260814-16)."
+  plazas_cruzada_empleo_cpc:
+    nombre: Meta de plazas de la 'Cruzada X el Empleo' de la CPC
+    unidad_default: empleos
+    notas: "20.000 nuevos puestos de trabajo que la CPC se comprometió a concretar junto a INACAP y Empresas X Chile en la 'Cruzada X el Empleo' (agosto 2026), anunciada en el marco del primer balance del plan 'Modo Empleo' del gobierno (evento 20260814-16)."
+  subsidio_contratacion_mujeres_modo_empleo:
+    nombre: Subsidio reforzado a la contratación de mujeres (plan Modo Empleo)
+    unidad_default: porcentaje_del_ingreso_minimo
+    notas: "60% del ingreso mínimo por contratación de mujeres (equivalente a $330 mil), frente al 50% para hombres, disponible desde el 15-jul-2026 vía subsidioalempleo.cl en el marco del plan 'Modo Empleo' (evento 20260710-3)."
+  votos_comision_insultos_policias_afavor:
+    nombre: Votos a favor de la aprobación en general del proyecto de sanciones por insultos a policías (Comisión de Seguridad de la Cámara)
+    unidad_default: votos
+    notas: "7 votos a favor y 2 en contra en la aprobación en general (17/18-jun-2026) del Boletín 17.662-07, proyecto de la agenda 'Naín-Retamal 2.0' que aumenta sanciones por insultos u ofensas contra Carabineros y la PDI (evento 20260817-2)."
+  votos_comision_insultos_policias_encontra:
+    nombre: Votos en contra de la aprobación en general del proyecto de sanciones por insultos a policías (Comisión de Seguridad de la Cámara)
+    unidad_default: votos
+    notas: "2 votos en contra en la aprobación en general (17/18-jun-2026) del Boletín 17.662-07 en la Comisión de Seguridad Ciudadana de la Cámara (evento 20260817-2)."
+  multa_ofensa_grave_policial:
+    nombre: Multa por ofensa grave a funcionario policial (proyecto Boletín 17.662-07)
+    unidad_default: utm
+    notas: "Multa de una a cuatro UTM (1 a 4 UTM) para quien insulte u ofenda gravemente a un funcionario de Carabineros (vía Código de Justicia Militar) o de la PDI (vía ley orgánica) durante el ejercicio de sus funciones, con pena de prisión en su grado máximo, según la moción del Boletín 17.662-07 (evento 20260817-2)."
+  multa_atentado_policial_agravado:
+    nombre: Multa por atentado agravado contra Carabineros o PDI (proyecto Boletín 17.662-07)
+    unidad_default: utm
+    notas: "Multa de 11 a 20 UTM y presidio menor en su grado medio para atentados contra Carabineros o PDI cuando concurren agravantes (agresión a mano armada, poner manos sobre la autoridad, coacción o actuar en grupo), según la moción del Boletín 17.662-07 (evento 20260817-2)."
+  multa_atentado_policial_simple:
+    nombre: Multa por atentado simple contra Carabineros o PDI (proyecto Boletín 17.662-07)
+    unidad_default: utm
+    notas: "Multa de 6 a 10 UTM y presidio menor en su grado mínimo para atentados contra Carabineros o PDI sin agravantes, según la moción del Boletín 17.662-07 (evento 20260817-2)."
+  botin_robo_itau_valparaiso:
+    nombre: Botín del robo al Banco Itaú de Valparaíso
+    unidad_default: millones_de_pesos
+    notas: "$6.150 millones sustraídos desde una de las dos bóvedas de la sucursal del Banco Itaú de Valparaíso (28-jul-2025), mediante forado desde local colindante y oxicorte. El robo más cuantioso contra la industria bancaria en Chile, superior al 'robo del siglo' de Baby Bandito (2014, $6.000M) (evento 20250728-1)."
+  caida_gasto_capital_sem1_2026:
+    nombre: Caída del gasto de capital del Gobierno Central (acumulado 1S 2026)
+    unidad_default: porcentaje
+    notas: "-14,0% real acumulado al primer semestre de 2026 (junio: -12,7% real anual), según el boletín de ejecución presupuestaria de la DIPRES (31-jul-2026). Se explica por la Ley de Presupuestos 2026 (que ya contemplaba -6,1% real), la mayor base de comparación de 2025 (concesiones y proyectos MOP) y los procesos de priorización de la nueva administración (evento 20260731-18)."
+  variacion_gasto_total_sem1_2026:
+    nombre: Variación real del gasto presupuestario total (acumulado 1S 2026)
+    unidad_default: porcentaje
+    notas: "+1,0% real acumulado al primer semestre de 2026, con 48,7% de ejecución sobre la Ley aprobada; el gasto no presentó variación real en junio (0,0%) y el gasto corriente creció 2,0% en el mes (DIPRES, boletín 31-jul-2026, evento 20260731-18)."
+  deficit_fiscal_sem1_2026:
+    nombre: Déficit fiscal acumulado al primer semestre de 2026
+    unidad_default: porcentaje_del_pib
+    notas: "-0,7% del PIB (-$2.509.353 millones) acumulado a junio 2026, mejor que -1,2% del PIB en 2025 y -1,3% en 2024; el déficit en 12 meses móviles fue -2,3% del PIB (DIPRES, boletín 31-jul-2026, evento 20260731-18)."
+  deuda_bruta_pib_jun2026:
+    nombre: Deuda bruta del Gobierno Central (% del PIB, junio 2026)
+    unidad_default: porcentaje_del_pib
+    notas: "43,1% del PIB (US$164.717,7 millones) al 30-jun-2026; la posición financiera neta fue -38,1% del PIB y los activos consolidados del Tesoro Público US$18.911,7 millones (DIPRES, boletín 31-jul-2026, evento 20260731-18)."
+  costo_neto_megarreforma_peak_pib:
+    nombre: Costo neto de medidas tributarias de la megarreforma (peak, año 4)
+    unidad_default: porcentaje_del_pib
+    notas: "0,71% del PIB al cuarto año de vigencia (2030 si el proyecto parte en 2027), según el informe financiero del Ejecutivo (22-abr-2026). Equivale a ~US$3.215 millones (evento 20260422-1)."
+  costo_neto_megarreforma_peak_usd:
+    nombre: Costo neto de medidas tributarias de la megarreforma (peak, en dólares)
+    unidad_default: millones_de_dolares
+    notas: "~US$3.215 millones al año 4, equivalente al 0,71% del PIB según el informe financiero del proyecto de megarreforma (22-abr-2026); la cobertura de prensa internacional (teleSUR/FRANCE24) cita la misma cifra (~US$3.200M) (evento 20260422-1)."
+  costo_rebaja_idpc_27_23_anio4:
+    nombre: Costo fiscal de la rebaja del impuesto corporativo 27% a 23% (año 4)
+    unidad_default: millones_de_dolares
+    notas: "~US$1.650 millones al cuarto año (0,16% del PIB el año 1, ~US$660 millones). El informe financiero estima 0,15% del PIB de menor recaudación por cada punto de reducción de la tasa, compensado parcialmente por 0,05% del PIB de menor uso de créditos tributarios (22-abr-2026, evento 20260422-1)."
+  credito_tributario_empleo_costo:
+    nombre: Costo fiscal del crédito tributario al empleo (año 4)
+    unidad_default: millones_de_dolares
+    notas: "~US$1.500 millones (0,35% del PIB al año 4): crédito contra el Impuesto de Primera Categoría de hasta 15% de un ingreso mínimo por trabajador (informe financiero 22-abr-2026, evento 20260422-1)."
+  pensionados_reparatorios_pgu_68:
+    nombre: Pensionados reparatorios (Valech/Rettig) que recurrieron por la PGU
+    unidad_default: personas
+    notas: "68 pensionados reparatorios representados por el abogado Marcelo Vasseur, bloqueados para postular a la PGU por la pensión especial que reciben; la Corte de Apelaciones de Valparaíso ordenó al IPS pronunciarse sobre ellos (5-ago-2026, evento 20260805-34)."
+  pensionados_reparatorios_tc_41:
+    nombre: Pensionados reparatorios del requerimiento ante el TC
+    unidad_default: personas
+    notas: "41 pensionados Valech/Rettig cuyo requerimiento de inaplicabilidad del artículo 36 de la Ley 20.255 fue acogido por el TC el 11-nov-2025 por 7 votos contra 2 (evento 20260805-34)."
+  pension_reparatoria_recurrentes:
+    nombre: Pensión reparatoria mensual de los recurrentes de Vasseur
+    unidad_default: pesos
+    notas: "Pensiones reparatorias cercanas a $260.000-$270.000 mensuales percibidas por representados de Marcelo Vasseur que no lograron acumular fondos previsionales suficientes (evento 20260805-34)."
+  funcionarios_viculos_el_tabo:
+    nombre: Funcionarios municipales de El Tabo con vínculos familiares
+    unidad_default: funcionarios
+    notas: "56 funcionarios de la Municipalidad de El Tabo con vínculos de parentesco con autoridades y directivos del municipio, detectados por la Contraloría (Informe Final N° 596, 2026; la fiscalización previa de dic-2025 ya había identificado a 56, 24 con el alcalde) (evento 20260816-17)."
+  funcionarios_vinculados_alcalde_el_tabo:
+    nombre: Funcionarios de El Tabo con vínculo directo con el alcalde
+    unidad_default: funcionarios
+    notas: "24 de los 56 funcionarios con vínculos en la Municipalidad de El Tabo mantienen relación directa familiar o de amistad con el alcalde Alfonso Muñoz (Informe Final N° 596 de la Contraloría, 2026) (evento 20260816-17)."
+  funcionarios_ingresaron_tras_autoridades:
+    nombre: Funcionarios de El Tabo que ingresaron tras asumir las autoridades vinculadas
+    unidad_default: funcionarios
+    notas: "41 de los 56 funcionarios con vínculos en la Municipalidad de El Tabo ingresaron a trabajar con posterioridad a que las autoridades cuestionadas asumieran sus cargos públicos (Informe Final N° 596, evento 20260816-17)."
+  funcionarios_vinculados_daf:
+    nombre: Funcionarios de El Tabo vinculados al jefe de Finanzas (DAF)
+    unidad_default: funcionarios
+    notas: "16 funcionarios municipales de El Tabo vinculados al jefe de Finanzas (DAF), quien integró la comisión evaluadora que seleccionó a su propio pariente (Informe Final N° 596, evento 20260816-17)."
+  funcionarios_vinculados_juridica:
+    nombre: Funcionarios de El Tabo vinculados al área jurídica
+    unidad_default: funcionarios
+    notas: "9 funcionarios municipales de El Tabo vinculados con el área jurídica del municipio (Informe Final N° 596, evento 20260816-17)."
+  funcionarios_vinculados_control:
+    nombre: Funcionarios de El Tabo vinculados a la dirección de Control
+    unidad_default: funcionarios
+    notas: "7 funcionarios municipales de El Tabo vinculados con la dirección de Control (Informe Final N° 596, evento 20260816-17)."
+  puntos_reddit_alegra_autocritica:
+    nombre: Puntos del comentario de r/chile que celebra la autocrítica de Boric
+    unidad_default: puntos
+    notas: "133 puntos del comentario de whiteredandblack en el hilo de r/chile sobre la autocrítica de Boric ('Me alegra igual. Si no cambiaban la idea de que la gente poco menos que era weona por pedir soluciones populistas...') (evento 20260812-20)."
+  puntos_reddit_fa_seguridad:
+    nombre: Puntos del comentario de r/chile sobre el FA y la seguridad
+    unidad_default: puntos
+    notas: "130 puntos del comentario de AnyConfusion5161 ('El problema es que el FA nunca se tomó la seguridad en serio...') en el hilo de r/chile sobre la autocrítica de Boric (evento 20260812-20)."
+  puntos_reddit_critica_vitalicio:
+    nombre: Puntos del comentario de r/chile que critica el vitalicio de Boric
+    unidad_default: puntos
+    notas: "-41 puntos del comentario de Sebastian_Gravina ('Ahora se le ocurre reflexionar al merluzo, que siga durmiendo mejor y que le quiten el vitalicio...') en el hilo de r/chile sobre la autocrítica de Boric (evento 20260812-20)."
   multa_marcha_orgullo_utm:
     nombre: Multa por ruidos molestos a la Marcha del Orgullo 2025
     unidad_default: UTM
@@ -16859,6 +17682,14 @@ cifras:
     nombre: Facturación de The 975 SpA en la campaña presidencial de Kast
     unidad_default: pesos
     notas: "$149.180.001 facturados por The 975 SpA (agencia La 975, de Felipe Costabal) por estrategia creativa en la campaña presidencial de José Antonio Kast, según el desglose de gastos electorales del Servel (El Dínamo, 15-ago-2026, evento 20260815-1)."
+  remuneracion_bruta_quera_julio:
+    nombre: Remuneración bruta de Agustín Quera Marcet en julio 2026
+    unidad_default: pesos
+    notas: "$3.314.867 brutos como jefe de gabinete del biministro de Economía y Minería Daniel Mas en julio de 2026, verificado directamente en el Portal de Transparencia (MINECON, dotación a contrata julio 2026; evento 20260817-1). El hilo de r/chile (17-ago-2026) lo estimaba en ~$3.300.000."
+  boleta_quera_campana_riveaux:
+    nombre: Boleta de Agustín Quera Marcet por jefatura de campaña de Diego Riveaux (2021)
+    unidad_default: pesos
+    notas: "$2.500.000 por labores de jefe de campaña de su primo Diego Riveaux (candidato a la Convención Constitucional por el distrito 10, 2021), emitida por Quera Marcet con 21 años; fue la primera boleta registrada por él ante el SII (CIPER, 3-sep-2021, evento 20260817-1)."
   remuneracion_bruta_gutierrez_mop:
     nombre: Remuneración bruta de Vicente Gutiérrez como asesor del MOP (2023)
     unidad_default: pesos
@@ -17011,3 +17842,226 @@ cifras:
     nombre: Longitud de la línea de transmisión Los Cóndores-Río Diamante
     unidad_default: kilometros
     notas: "Aproximadamente 26,7 kilómetros de línea de transmisión de 500 kV en territorio chileno, desde la subestación Los Cóndores hasta la frontera con Argentina, con más de 70 torres (proyecto de Enel Generación Chile, evento 20260810-14)."
+
+  aprobacion_kast_criteria_ago16:
+    nombre: Aprobación de José Antonio Kast según Criteria (16-ago-2026)
+    unidad_default: porcentaje
+    notas: "35% aprueba y 55% desaprueba (+3 puntos vs medición del 9-ago). La aprobación completa tres semanas estable en torno al 34-35%; los 'no sé' cayeron de 13% a 10%. Campo: 13 de agosto, 802 casos, panel online."
+  desaprobacion_kast_criteria_ago16:
+    nombre: Desaprobación de José Antonio Kast según Criteria (16-ago-2026)
+    unidad_default: porcentaje
+    notas: "55%, tres puntos más que la semana anterior (52% el 9-ago)."
+  seguridad_prioridad_criteria_ago16:
+    nombre: Seguridad como primera prioridad ciudadana (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "28% de las menciones como primera prioridad, seguida de salud pública (16%), empleos y sueldos (15%) y reactivar la economía (12%)."
+  seguridad_sobre_libertad_criteria_ago16:
+    nombre: Encuestados que priorizan la seguridad sobre la libertad (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "73% elige la seguridad aunque implique ceder libertades, cinco puntos más que en 2022 (68%). Por sector: 86% derecha, 68% centro, 51% izquierda (49% libertad)."
+  gestion_seguridad_peor_criteria_ago16:
+    nombre: Evaluación peor de lo esperado de la gestión en seguridad (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "54% considera que la gestión del gobierno en seguridad fue peor o mucho peor de lo esperado, frente a 19% que la evalúa mejor y 27% ni mejor ni peor."
+  gestion_migracion_peor_criteria_ago16:
+    nombre: Evaluación peor de lo esperado de la gestión migratoria (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "47% considera que el desempeño en orden y control migratorio fue peor o mucho peor de lo esperado, frente a 25% mejor y 28% similar."
+  responsabilidad_herencia_seguridad_criteria_ago16:
+    nombre: Encuestados que atribuyen la situación de seguridad a problemas heredados (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "35% atribuye la situación a problemas heredados de la administración anterior, 32% a una combinación de factores y 27% al gobierno actual. Por sector: 62% de la derecha apunta a la herencia y 50% de la izquierda al gobierno."
+  nuevas_leyes_seguridad_criteria_ago16:
+    nombre: Encuestados que prefieren nuevas leyes sobre implementar las vigentes (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "61% cree que el gobierno debería concentrarse en la aprobación de nuevas leyes contra la delincuencia, frente a 30% que privilegia implementar las vigentes."
+  acuerdo_penas_reclutar_menores_criteria:
+    nombre: Acuerdo con aumentar penas por reclutar menores para delinquir (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "94% de acuerdo o muy de acuerdo; 61% cree probable que se concrete."
+  acuerdo_pertenencia_org_criminal_criteria:
+    nombre: Acuerdo con que pertenecer a una organización criminal sea delito agravado (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "94% de acuerdo o muy de acuerdo; 64% cree probable que se concrete."
+  acuerdo_despliegue_50_barrios_criteria:
+    nombre: Acuerdo con despliegue policial permanente en 50 barrios críticos (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "90% de acuerdo o muy de acuerdo, pero solo 55% cree probable que se concrete (brecha de 35 puntos, la mayor de la medición)."
+  acuerdo_regimen_penitenciario_narcos_criteria:
+    nombre: Acuerdo con régimen penitenciario especial para narcotraficantes (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "84% de acuerdo o muy de acuerdo; 53% cree probable que se concrete."
+  acuerdo_fronteras_zanjas_criteria:
+    nombre: Acuerdo con reforzar fronteras con zanjas, drones y monitoreo (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "82% de acuerdo o muy de acuerdo; 64% cree probable que se concrete."
+  acuerdo_proteccion_legal_policias_criteria:
+    nombre: Acuerdo con protección legal a policías y militares en legítima defensa (Criteria, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "75% de acuerdo o muy de acuerdo; 69% cree probable que se concrete, la medida con mayor probabilidad percibida."
+  aprobacion_kast_cadem_681:
+    nombre: Aprobación de José Antonio Kast según Cadem edición 681 (16-ago-2026)
+    unidad_default: porcentaje
+    notas: "41% (+2 puntos vs edición 680 del 12-ago), con 53% de desaprobación. La edición 681 de Plaza Pública se publicó el 16 de agosto de 2026."
+  desaprobacion_kast_cadem_681:
+    nombre: Desaprobación de José Antonio Kast según Cadem edición 681 (16-ago-2026)
+    unidad_default: porcentaje
+    notas: "53%, frente al 41% de aprobación (edición 681, publicada el 16 de agosto de 2026)."
+  acuerdo_plan_cancerbero_cadem_681:
+    nombre: Acuerdo con el Plan Cancerbero (Cadem edición 681, 16-ago-2026)
+    unidad_default: porcentaje
+    notas: "93% de acuerdo con el traslado de internos de alta peligrosidad a La Laguna (Operación Cancerbero); 70% de los consultados conocía el operativo."
+  cambio_real_cancerbero_cadem_681:
+    nombre: Percepción de cambio real penitenciario tras el Plan Cancerbero (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "62% cree que representa un cambio real en la gestión penitenciaria con efectos positivos en seguridad; sube a 84% entre mayores de 55 años y 95% entre quienes se identifican con la derecha."
+  acuerdo_salida_duco_cadem_681:
+    nombre: Acuerdo con la salida de Natalia Duco del gabinete (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "90% de acuerdo con la salida de la exministra del Deporte Natalia Duco (16-ago-2026)."
+  rechazo_autos_fiscales_personal_cadem_681:
+    nombre: Rechazo al uso personal de vehículos fiscales (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "83% considera que los vehículos fiscales no deben usarse para asuntos personales como ir al banco o al médico; 91% rechaza usarlos en actividades sociales o celebraciones familiares y 92% para traslados a vacaciones."
+  cambio_claro_delincuencia_cadem_681:
+    nombre: Percepción de cambio claro en la gestión de la delincuencia (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "27% cree que existe un cambio claro frente a administraciones anteriores, 33% que hay cambios pero insuficientes y 38% que no existe un cambio significativo."
+  aprobacion_vodanovic_cadem_681:
+    nombre: Evaluación de Tomás Vodanovic (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "60% (-5 puntos), uno de los personajes mejor evaluados de la edición 681 de Plaza Pública (16-ago-2026)."
+  aprobacion_sichel_cadem_681:
+    nombre: Evaluación de Sebastián Sichel (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "60% (+1 punto), uno de los personajes mejor evaluados de la edición 681 de Plaza Pública (16-ago-2026)."
+  aprobacion_desbordes_cadem_681:
+    nombre: Evaluación de Mario Desbordes (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "51% (-2 puntos) en la edición 681 de Plaza Pública (16-ago-2026)."
+  aprobacion_ripamonti_cadem_681:
+    nombre: Evaluación de Macarena Ripamonti (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "51% (-4 puntos) en la edición 681 de Plaza Pública (16-ago-2026)."
+  aprobacion_bellolio_cadem_681:
+    nombre: Evaluación de Jaime Bellolio (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "50% (+2 puntos) en la edición 681 de Plaza Pública (16-ago-2026)."
+  valoracion_carmona_cadem_681:
+    nombre: Valoración positiva de Lautaro Carmona (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "14% (-3 puntos), el personaje político con menor valoración positiva de la edición 681 de Plaza Pública (16-ago-2026); su conocimiento supera el 40% requerido para entrar al ranking."
+  valoracion_martinez_cadem_681:
+    nombre: Valoración positiva de Constanza Martínez (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "21% (-6 puntos) en la edición 681 de Plaza Pública (16-ago-2026), entre los tres peor evaluados."
+  valoracion_cicardini_cadem_681:
+    nombre: Valoración positiva de Daniella Cicardini (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "23% (-9 puntos) en la edición 681 de Plaza Pública (16-ago-2026), entre los tres peor evaluados."
+  valoracion_jiles_cadem_681:
+    nombre: Valoración positiva de Pamela Jiles (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "25% en la edición 681 de Plaza Pública (16-ago-2026)."
+  valoracion_paulina_vodanovic_cadem_681:
+    nombre: Valoración positiva de Paulina Vodanovic (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "27% en la edición 681 de Plaza Pública (16-ago-2026). No confundir con Tomás Vodanovic (60%)."
+  valoracion_campillai_cadem_681:
+    nombre: Valoración positiva de Fabiola Campillai (Cadem edición 681)
+    unidad_default: porcentaje
+    notas: "28% en la edición 681 de Plaza Pública (16-ago-2026)."
+  reos_segundo_traslado_cancerbero:
+    nombre: Reos trasladados en el segundo operativo del poblamiento de La Laguna
+    unidad_default: reos
+    notas: "250 personas privadas de libertad ingresadas al Complejo Penitenciario La Laguna de Talca el 15-ago-2026, provenientes de Curicó, Talca y Parral (segundo traslado del poblamiento iniciado el 13-ago con la Operación Cancerbero)."
+
+  muestra_criteria_ago16:
+    nombre: Muestra de la Agenda Criteria del 16 de agosto de 2026
+    unidad_default: casos
+    notas: "802 casos, campo del 13 de agosto de 2026, panel online (Criteria)."
+
+  muestra_cadem_681:
+    nombre: Muestra de la Cadem edición 681 (16-ago-2026)
+    unidad_default: casos
+    notas: "1.004 casos online con cobertura de 167 comunas, campo del 14 de agosto de 2026; tasa de finalización 89,9% sobre 1.117 personas que abrieron la encuesta."
+
+  indemnizacion_tutela_alvarez:
+    nombre: Indemnización exigida en la tutela laboral de Nelty Álvarez
+    unidad_default: millones_de_pesos
+    notas: "$145 millones de indemnización exigidos por la ex suboficial mayor Nelty Álvarez en su demanda de tutela laboral contra el general de Carabineros Marco Antonio Alvarado (Punta Arenas, 17-jun-2026, evento 20260620-1)."
+
+  ninos_ayudados_triple_p:
+    nombre: Niños ayudados por el programa Triple P
+    unidad_default: millones
+    notas: "Unos 6 millones de niños y sus familias ayudados por Triple P (Parentalidad Positiva) de Matt Sanders, usado en 25 países y traducido a 21 idiomas (evento 20260815-10)."
+
+  paises_triple_p:
+    nombre: Países donde opera Triple P
+    unidad_default: paises
+    notas: "25 países utilizan el programa Triple P de Matt Sanders, incluido Chile (evento 20260815-10)."
+
+  trabajadores_ecomac:
+    nombre: Trabajadores de Ecomac en su mayor expansión
+    unidad_default: trabajadores
+    notas: "Cerca de 1.500 trabajadores en los años de mayor expansión de Ecomac, la empresa constructora e inmobiliaria del grupo familiar de Daniel Mas (perfil Ex-Ante del 21-ene-2026)."
+
+  permisos_chile:
+    nombre: Permisos vigentes revisados por la CPC
+    unidad_default: permisos
+    notas: "382 permisos vigentes en Chile que la propuesta anti-permisología de la CPC (presentada por Susana Jiménez) revisa uno a uno, distinguiendo entre mantener, transformar o eliminar — norte de la agenda de Daniel Mas como biministro (perfil Ex-Ante del 21-ene-2026)."
+
+  crecimiento_requerido_mas:
+    nombre: Crecimiento anual que Chile necesita (según Daniel Mas)
+    unidad_default: por_ciento
+    notas: "Entre 4% y 5% de crecimiento anual, según el exvicepresidente de la CPC Daniel Mas, para fomentar inversión y diversificar mercados (perfil Ex-Ante del 21-ene-2026)."
+
+  facturacion_sin_filtro_servel:
+    nombre: Facturación de la sociedad del dueño de Sin Filtro por campañas (Servel)
+    unidad_default: millones_pesos
+    notas: "$291 millones facturados por la sociedad del dueño de Sin Filtro por servicios para las campañas de sus panelistas Claudio Orrego e Iván Poduje (CIPER, 8-ene-2025); ambos candidatos solicitaron un reembolso de $176 millones al Estado."
+
+  restitucion_cde_poduje:
+    nombre: Restitución exigida por el CDE a Iván Poduje
+    unidad_default: millones_pesos
+    notas: "Más de $12 millones que el Consejo de Defensa del Estado exigía restituir a Iván Poduje por presuntos pagos indebidos recibidos como integrante del Consejo de Concesiones del MOP durante 2020 (La Tercera, 15-ene-2026)."
+
+  votos_poduje_alcalde_vina:
+    nombre: Votos de Iván Poduje en la elección de alcalde de Viña del Mar 2024
+    unidad_default: votos
+    notas: "90.817 votos y el 41% de los sufragios de Iván Poduje en la elección de alcalde de Viña del Mar (2024), donde perdió con la reelecta Macarena Ripamonti (perfil Emol, 20-ene-2026)."
+
+  reembolso_servel_poduje_orrego:
+    nombre: Reembolso solicitado al Estado por Orrego y Poduje (Servel)
+    unidad_default: millones_pesos
+    notas: "$176 millones de reembolso solicitados al Estado por Claudio Orrego e Iván Poduje por los servicios de campaña facturados por la sociedad del dueño de Sin Filtro (CIPER, 8-ene-2025)."
+
+  multa_quiroz_ebriedad:
+    nombre: Multa de Jorge Quiroz por conducción en estado de ebriedad (2014)
+    unidad_default: utm
+    notas: "Multa de 2 UTM que pagó Jorge Quiroz por su condena por conducir en estado de ebriedad (2014-2015). La Fiscalía había solicitado 540 días de presidio, suspensión de licencia por dos años e inhabilidad para ejercer cargos públicos durante la condena; seis meses después del incidente terminó pagando la multa y su licencia permaneció suspendida por más de dos años (T13 y The Clinic, 21-nov-2025)."
+
+  litio_quiroz_consulta:
+    nombre: Cálculo de Quiroz y Asociados sobre el litio de Codelco-SQM
+    unidad_default: millones_usd
+    notas: "US$5.200 millones que la consultora de Jorge Quiroz calculó que el Estado dejó de percibir por no haber licitado el Salar de Atacama en el acuerdo Codelco-SQM. La cifra fue calificada de 'cálculo de servilleta' por el presidente de Codelco, Máximo Pacheco (Emol, 6-ene-2026)."
+
+  uso_bicicleta_trabajo_censo2024:
+    nombre: Uso de la bicicleta para ir al trabajo (Censo 2024)
+    unidad_default: porcentaje
+    notas: "3,8% de la población chilena prefiere la bicicleta para desplazarse a su lugar de trabajo según el Censo 2024 (42,1% transporte público, 35,3% auto, 10,2% caminar). En el Gran Santiago el uso llega al 3%. Dato citado por Louis de Grange para cuestionar las ciclovías (Emol, 4-ene-2026)."
+
+  estaciones_metro_danadas_estallido:
+    nombre: Estaciones del Metro dañadas durante el estallido social
+    unidad_default: estaciones
+    notas: "118 estaciones del Metro de Santiago con daños durante el estallido social de 2019, de las cuales 25 fueron incendiadas y 7 completamente destruidas. El Metro no tenía seguros para estaciones ni trenes, agravando las pérdidas bajo la presidencia del directorio de Louis de Grange (CIPER, 24-oct-2019; hilo r/chile, 23-feb-2026)."
+
+  caida_flujo_metro_pandemia:
+    nombre: Caída del flujo de pasajeros del Metro por la pandemia
+    unidad_default: porcentaje
+    notas: "80% de caída del flujo de pasajeros del Metro de Santiago durante la pandemia de COVID-19, generando un déficit financiero histórico bajo la presidencia del directorio de Louis de Grange (2020-2021)."
+
+  estaciones_incendiadas_estallido:
+    nombre: Estaciones del Metro incendiadas durante el estallido social
+    unidad_default: estaciones
+    notas: "25 estaciones del Metro de Santiago incendiadas durante el estallido social de 2019, de las cuales 7 fueron completamente destruidas (CIPER, 24-oct-2019; hilo r/chile, 23-feb-2026)."

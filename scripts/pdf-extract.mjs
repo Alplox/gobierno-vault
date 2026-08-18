@@ -46,13 +46,20 @@ function parseArgs(argv) {
 }
 
 async function fetchPdf(url) {
-  const res = await fetch(url, { signal: AbortSignal.timeout(60_000) });
-  if (!res.ok) throw new Error(`HTTP ${res.status} al descargar ${url}`);
-  const buf = Buffer.from(await res.arrayBuffer());
-  if (buf.length < 4 || buf.subarray(0, 4).toString('latin1') !== '%PDF') {
-    throw new Error(`La respuesta de ${url} no parece un PDF (magic %PDF ausente)`);
+  // Primero fetch directo de Node; si falla (bloqueo por fingerprinting TLS,
+  // 403 de Cloudflare, etc.), relega a fetch-impersonate.mjs (curl_cffi, el
+  // motor de curl-impersonate compatible con Windows).
+  try {
+    const res = await fetch(url, {
+      signal: AbortSignal.timeout(60_000),
+      headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
+    });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return Buffer.from(await res.arrayBuffer());
+  } catch (e) {
+    const { fetchImpersonate } = await import('./fetch-impersonate.mjs');
+    return await fetchImpersonate(url, { binary: true });
   }
-  return buf;
 }
 
 async function main() {
