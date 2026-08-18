@@ -39,7 +39,7 @@ const datedCargos = cargos.filter((c) => c.desde);
 
 // Cargo principal de la portada: el de cargos[] con desde más reciente (si hay fechas),
 // fallback al cargo top-level. El estado "Ex"/en ejercicio y el periodo se derivan de las fechas.
-const latestCargo = [...datedCargos].sort((a, b) => (b.desde ?? '').localeCompare(a.desde ?? ''))[0];
+const latestCargo = [...datedCargos].sort((a, b) => String(b.desde ?? '').localeCompare(String(a.desde ?? '')))[0];
 const cargoPortada = latestCargo ? { ...latestCargo, ex: Boolean(latestCargo.hasta) } : { cargo: person.data.cargo, ex: false };
 
 // Lazy de eventos relacionados: el SSR pinta los primeros; el resto viaja como JSON.
@@ -67,9 +67,9 @@ const lazyEventData = lazyEvents.map((event) => {
 });
 
 const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
-function fechaEs(iso?: string): string | null {
+function fechaEs(iso?: string | number): string | null {
   if (!iso) return null;
-  const [y, m, d] = iso.split('-').map(Number);
+  const [y, m, d] = String(iso).split('-').map(Number);
   if (!y || !m) return null;
   return d ? `${d} de ${meses[m - 1]} de ${y}` : `${meses[m - 1]} de ${y}`;
 }

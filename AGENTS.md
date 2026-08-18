@@ -331,7 +331,7 @@ En tiempo de build NO se agenda nada; todo corre en cliente sobre el texto de `.
 
 - **Voces**: primero las de `speechSynthesis` (es-CL/es-ES primero), y como `optgroup`
   independiente las voces neurales Piper (`@realtimex/piper-tts-web`). Piper es un
-  peer de `onnxruntime-web` (postinstall de `protobufjs` autorizado en `allowBuilds`).
+  peer de `onnxruntime-web` (postinstall de `protobufjs` autorizado en `onlyBuiltDependencies`).
 - **Piper = CDN lazy**: `tts.voices()` (fetch a HF), `tts.predict()` baja el modelo
   (~60-75MB, una sola vez → OPFS) y sintetiza en el navegador. `voiceId` usada viene
   del value del `<option>` con prefijo `piper:`. El WASM/onnx salen de jsdelivr en runtime.
@@ -429,7 +429,7 @@ pnpm run build    # debe completar sin errores
 pnpm run dev      # preview local
 ```
 
-El build usa `set NODE_OPTIONS=--experimental-global-customevent` (Windows).
+El flag `--experimental-global-customevent` se setea en `astro.config.mjs` (cross-platform, no depende de shell).
 Si falla, revisar frontmatter (YAML parse error) o wikilinks rotos.
 
 **Validacion de wikilinks en `validate` (desde 16-ago-2026):** `scripts/validate.mjs`
@@ -466,14 +466,12 @@ Instalacion: `pnpm install`. No usar npm ni regenerar `package-lock.json`.
 `strict-peer-dependencies=false`; así pnpm resuelve la combinación de
 `@astrojs/tailwind@6` (peer `astro@^3||^4||^5`) con Astro 7 sin fallar. Ya no se
 necesita `legacy-peer-deps=true`. El archivo `pnpm-workspace.yaml` declara
-`allowBuilds: { esbuild: true }` para que pnpm 10+ ejecute el postinstall de
-build de esbuild (necesario para el binario nativo; sin esto el build de Astro
-falla con `ERR_PNPM_IGNORED_BUILDS`). Debe incluir `packages: []` (si falta, pnpm 10
+`pnpm.onlyBuiltDependencies` (con `esbuild` y `protobufjs`) para que pnpm 10+
+ejecute los postinstall de build de esbuild (binario nativo; sin esto el build
+falla con `ERR_PNPM_IGNORED_BUILDS`) y protobufjs (transitiva de `onnxruntime-web`,
+peer de `@realtimex/piper-tts-web`). Debe incluir `packages: []` (si falta, pnpm 10
 del CI falla con `packages field missing or empty` al correr `pnpm install --frozen-lockfile`).
 No eliminar ninguno de los dos archivos.
-`protobufjs` (transitiva de `onnxruntime-web`, peer de `@realtimex/piper-tts-web`) tambien
-esta en `allowBuilds` de `pnpm-workspace.yaml` porque tiene postinstall (sin autorizacion el
-`pnpm install` del CI falla con `ERR_PNPM_IGNORED_BUILDS` y el build aborta).
 
 **Despliegue (Cloudflare Pages):** el sitio se despliega con `pnpm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `pnpm run preview` (`wrangler pages dev dist`).
 

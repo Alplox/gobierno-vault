@@ -2,6 +2,12 @@
 # esbuild necesita su postinstall para instalar el binario nativo (Astro lo usa);
 # sin esta autorización el build falla con ERR_PNPM_IGNORED_BUILDS.
 packages: []
+# pnpm 11: allowBuilds (mapa key-value) — formato nativo de pnpm 11+
 allowBuilds:
   esbuild: true
   protobufjs: true
+# pnpm 10: onlyBuiltDependencies (array) — formato de pnpm 10 (Cloudflare Pages)
+# Ambos conviven: pnpm 10 ignora allowBuilds, pnpm 11 ignora onlyBuiltDependencies.
+onlyBuiltDependencies:
+  - esbuild
+  - protobufjs

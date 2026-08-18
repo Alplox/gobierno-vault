@@ -4,6 +4,11 @@ import { unified } from '@astrojs/markdown-remark';
 import { availableParallelism } from 'node:os';
 import remarkWikiLinks from './src/lib/remarkWikiLinks.mjs';
 
+// ponytail: cross-platform — setear NODE_OPTIONS aquí evita depender de `set` (Windows)
+// o `export` (Linux) en el script de build. El flag necesita estar antes del arranque
+// de Astro; al estar en este módulo se ejecuta antes de cualquierthing de Astro.
+process.env.NODE_OPTIONS = (process.env.NODE_OPTIONS || '') + ' --experimental-global-customevent';
+
 export default defineConfig({
   // Necesario para Astro.url/canonical del origen al copiar eventos
   site: 'https://gobierno-vault.pages.dev',
