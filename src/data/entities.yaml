@@ -1,4 +1,8 @@
 people:
+  ricardo_ffrench_davis:
+    nombre: Ricardo Ffrench-Davis
+    cargo: Profesor emérito de Economía, Universidad de Chile
+    notas: "Economista, Premio Nacional de Humanidades 2005. Doctorado y Magíster en Economía de la Universidad de Chile. Director de Estudios del Banco Central (1990-1992). Asesor regional principal de la CEPAL (1992-2004). Presidente del Comité de Políticas para el Desarrollo de la ONU (2007-2010). Crítico de la megarreforma tributaria de Kast: advierte que repite la receta de la dictadura de bajar impuestos y gasto fiscal."
   daniela_quevedo:
     nombre: Daniela Quevedo
     cargo: Fiscal de Turno Regional de Instrucción y Flagrancia de Valparaíso
@@ -2311,15 +2315,14 @@ people:
       - cargo: Alta Comisionada de Derechos Humanos de la ONU
         organizacion: fenats
         desde: 2018-09-01
-        hasta: 2022-08-31
-      - cargo: Ministra de Defensa Nacional
-        organizacion: ministerio_defensa
-        desde: 2002-01-07
-        hasta: 2004-09-29
-      - cargo: Ministra de Salud
-        organizacion: ministerio_salud
-        desde: 2000-03-11
-        hasta: 2002-02-07
+  adriana_munoz:
+    nombre: Adriana Muñoz D'Alvora
+    cargo: Expresidenta de la Cámara de Diputados
+    cargos:
+      - cargo: Presidenta de la Cámara de Diputados
+        organizacion: camara_diputados
+        desde: 2014-03-11
+        hasta: 2015-03-11
   emerson_berrios:
     nombre: Emerson Berríos
     cargo: Presidente Fenats Nacional
@@ -2961,7 +2964,19 @@ people:
   tamara_ramirez:
     nombre: Tamara Ramírez
     cargo: Subjefa de bancada (PDG)
-    notas: Exigió explicaciones públicas y responsabilidades por el video.
+    cargos:
+      - cargo: Diputada (PDG)
+        organizacion: pdg
+        desde: 2026-03-11
+    notas: "Exigió explicaciones públicas y responsabilidades por el video. En agosto 2026, cuestionó las designaciones de recién egresados en cargos de responsabilidad del gobierno de Kast."
+  lilian_betancurt_pdg:
+    nombre: Lilian Betancurt
+    cargo: Diputada (PDG)
+    cargos:
+      - cargo: Diputada (PDG)
+        organizacion: pdg
+        desde: 2026-03-11
+    notas: "En agosto 2026, ofició por las contrataciones de Sofía Shea (SECOM), Trinidad Zegers (Justicia) y Francisca Álamos (Hacienda), pidiendo conocer procesos de selección, requisitos y remuneraciones."
   anuar_quesille:
     nombre: Anuar Quesille
     cargo: Defensor de la Niñez
@@ -3017,6 +3032,14 @@ people:
       - cargo: Delegada Presidencial de Magallanes
         organizacion: delegacion_presidencial_magallanes
         desde: 2026-03-11
+  camila_alvarez:
+    nombre: Camila Álvarez
+    cargo: Seremi del Trabajo y Previsión Social del Bío Bío
+    cargos:
+      - cargo: Seremi del Trabajo y Previsión Social del Bío Bío
+        organizacion: seremi_trabajo_bio_bio
+        desde: 2026-03-11
+    notas: "Denunciada ante Contraloría por uso personal de auto fiscal, mal uso de redes sociales y contratación de jefe de gabinete sin contrato formal (agosto 2026)."
   francisco_san_martin:
     nombre: Francisco San Martín Álvarez
     cargo: Empresario minero, exprecandidato a alcalde (Republicano, Coquimbo)
@@ -3480,6 +3503,14 @@ people:
         organizacion: ministerio_justicia
         desde: 2026-03-11
     notas: Abogado, independiente.
+  fernando_martinez_indh:
+    nombre: Fernando Martínez
+    cargo: Director Regional del INDH Valparaíso
+    notas: "Director regional del Instituto Nacional de Derechos Humanos en Valparaíso."
+  rodolfo_precht:
+    nombre: Rodolfo Precht
+    cargo: Abogado
+    notas: "Abogado defensor del excadete de la Escuela Naval en caso de torturas (agosto 2026)."
   francisca_toledo:
     nombre: Francisca Toledo Echegaray
     cargo: Ministra del Medio Ambiente
@@ -4001,6 +4032,14 @@ people:
         organizacion: renovacion_nacional
         desde: 2026-03-11
     notas: "Diputado RN reelecto por el distrito 26. En febrero de 2026 fue parte de la comitiva de diputados evangélicos que el presidente electo José Antonio Kast envió al Desayuno de Oración Nacional de Washington. Propuso modificar Ley Lafkenche ante aportes de NPA."
+  juan_carlos_beltran:
+    nombre: Juan Carlos Beltrán
+    cargo: Diputado (RN)
+    cargos:
+      - cargo: Diputado (RN)
+        organizacion: renovacion_nacional
+        desde: 2026-03-11
+    notas: "Presidente de la Comisión de Vivienda, Desarrollo Urbano y Bienes Nacionales de la Cámara. En agosto 2026 respaldó el aumento presupuestario del Minvu y priorizó vivienda sobre el INDH."
   stephanie_jeldrez:
     nombre: Stephanie Jeldrez
     cargo: Diputada electa por el distrito 1 (Partido Republicano)
@@ -9875,6 +9914,14 @@ people:
     cargo: Empresario, ex ejecutivo de Bankers Trust
     notas: "Empresario que llevó a Francisco Pérez Mackenna a Bankers Trust a fines de la década de 1980, para hacerse cargo de la gerencia de administración y finanzas de AFP Provida. Uno de los contactos forjados por Pérez Mackenna en su paso por colegios y universidad (perfil de la serie r/chile y prensa)."
 
+  anamaria_arriagada:
+    nombre: Anamaría Arriagada
+    cargo: Presidenta del Colegio Médico de Chile
+    notas: "Proclamada presidenta del Colegio Médico en 2023. Cuestionó el oficio de Minsal que instruye a hospitales a aumentar rendimientos de consultas por hora, advirtiendo que contempla tiempos incompatibles con una consulta de calidad."
+  wilson_palma:
+    nombre: Wilson Palma Jelves
+    cargo: Alcalde de Coihueco (formalizado)
+    notas: "Formalizado el 18 de agosto de 2026 por ocho delitos de carácter sexual contra una funcionaria municipal. Hechos investigados entre febrero y junio de 2025. Juzgado de Garantía de Chillán decretó prohibición de acercamiento."
 organizations:
   quinenco:
     nombre: Quiñenco S.A.
@@ -10032,6 +10079,11 @@ organizations:
     tipo: sindicato
     pais: Chile
     notas: "Principal central sindical de Chile. Su dirigente provincial del Bío Bío, Mikel Capetillo, exigió soluciones concretas ante el desempleo regional de 10,4% (julio 2026)."
+  otj:
+    nombre: Organización de Trabajadoras y Trabajadores Judiciales (OTJ)
+    tipo: sindicato
+    pais: Chile
+    notas: "Organización gremial de funcionarios del Poder Judicial. En agosto 2026, cuestionó la designación de Trinidad Zegers como coordinadora de la Reforma Procesal Civil por falta de experiencia."
   cadem:
     nombre: Cadem
     tipo: encuestadora
@@ -10064,6 +10116,21 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital de Punta Arenas, region de Magallanes. En agosto de 2026 cubrio los 214 delitos de explotacion sexual infantil (2023-jul 2026) expuestos por el fiscal regional Cristian Crisosto ante la Comision de Seguridad Publica del Senado."
+  political_network_for_values:
+    nombre: Political Network for Values
+    tipo: organizacion_politica
+    pais: Internacional
+    notas: "Corporacion conservadora internacional presidida por Jose Antonio Kast entre 2022 y 2024. Pertenece a la Conferencia de Accion Política Conservadora (CPAC). En julio 2024 realizo un Bootcamp para jovenes en Chile con participacion de Leonardo Prieto, Felipe Costabal y Patricio Dussaillant. Investigada por Hungria por corrupcion y uso de recursos publicos de Viktor Orban."
+  cuide_chile:
+    nombre: Cuide Chile
+    tipo: fundacion
+    pais: Chile
+    notas: "Fundacion liderada por Maria Pia Adriasola (esposa de Johannes Kaiser). No ha presentado memorias, donantes ni justificacion de gastos al SII. Informo no recibir donaciones."
+  dipres:
+    nombre: Dirección de Presupuestos
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Organismo dependiente de Hacienda encargado de la elaboracion del presupuesto nacional. Director: Jose Pablo Gómez. En agosto 2026 confirmo revision de beneficiarios de PGU antes del Presupuesto 2027."
   trabajando_com:
     nombre: Trabajando.com
     tipo: empresa
@@ -10348,11 +10415,6 @@ organizations:
     tipo: ministerio
     pais: Chile
     notas: Cancillería.
-  dipres:
-    nombre: Direccion de Presupuestos
-    tipo: servicio_publico
-    pais: Chile
-    organizacion: ministerio_hacienda
   dipreca:
     nombre: Dirección de Previsión de Carabineros (Dipreca)
     tipo: servicio_publico
@@ -10467,6 +10529,11 @@ organizations:
     nombre: Contraloría General de la República
     tipo: organismo_estado
     pais: Chile
+  capj:
+    nombre: Corporación Administrativa del Poder Judicial
+    tipo: organismo_estado
+    pais: Chile
+    notas: "Órgano que administra el Poder Judicial chileno, dependiente de la Corte Suprema. Presupuesto ~$700 mil millones anuales, 1.200 funcionarios. No está sujeta al control de la Contraloría General. Investigación de El Mostrador (ago-2026) reveló que el contralor interno recibe grado V en vez del VII fijado por la Ley 18.969, con diferencia de $2,3 millones mensuales por más de 30 años."
   escudo_fronterizo:
     nombre: Escudo Fronterizo
     tipo: plan_gobierno
@@ -10666,6 +10733,16 @@ organizations:
     tipo: organizacion_social
     pais: Chile
     notas: "Fundación dedicada al estudio y prevención de la delincuencia. El exministro Sergio Bitar fue su vicepresidente. En junio de 2026, sus análisis fueron citados por VerificaUDP para contextualizar la afirmación del presidente Kast sobre la seguridad en América Latina."
+  fundacion_amparo_justicia:
+    nombre: Fundación Amparo y Justicia
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización dedicada a prestar apoyo jurídico a víctimas de agresiones sexuales con homicidio. Representó a la abuela del niño asesinado en el caso Junji (2022)."
+  junji:
+    nombre: Junta Nacional de Jardines Infantiles (Junji)
+    tipo: organismo_estatal
+    pais: Chile
+    notas: "Organismo del Estado encargado de la administración de jardines infantiles públicos. En julio de 2026, CIPER reveló que mantuvo como directora a una educadora sancionada por destruir evidencia en caso de niño asesinado."
   parque_forestral:
     nombre: Parque Forestal
     tipo: espacio_publico
@@ -10898,6 +10975,21 @@ organizations:
     tipo: servicio_publico
     pais: Chile
     notas: Organismo público que evalúa el impacto ambiental de proyectos. Aprobó el EIA de Alto Santorini.
+  radiogalactika:
+    nombre: Radio Galáctica
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital regional de San Antonio (radiogalactika.cl). Publicó reportaje de investigación sobre el caso de nepotismo en la Municipalidad de El Tabo basado en el Informe Final N° 596 de la Contraloría (agosto 2026)."
+  girovisual:
+    nombre: Giro Visual
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno (girovisual.cl). Cubrió las irregularidades detectadas por la Contraloría en la gestión municipal de El Tabo (agosto 2026)."
+  laregionhoy:
+    nombre: La Región Hoy
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Diario electrónico de la V Región (laregionhoy.cl). Cubrió las irregularidades detectadas por la Contraloría en la contratación de familiares en la Municipalidad de El Tabo (agosto 2026)."
   municipalidad_vina_del_mar:
     nombre: Municipalidad de Viña del Mar
     tipo: municipio
@@ -11232,6 +11324,17 @@ organizations:
     tipo: institucion_armada
     pais: Chile
     notas: "Rama naval de las Fuerzas Armadas de Chile. Involucrada en caso Pacogate por uso irregular de fondos reservados."
+  escuela_naval:
+    nombre: Escuela Naval "Arturo Prat"
+    tipo: institucion_educativa
+    organizacion_padre: armada_chile
+    pais: Chile
+    notas: "Institución de formación de oficiales de la Armada de Chile, ubicada en Valparaíso. Denuncia por torturas a excadete (agosto 2026)."
+  municipalidad_tocopilla:
+    nombre: Municipalidad de Tocopilla
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de la comuna de Tocopilla, región de Antofagasta."
   union_democrata_independiente:
     nombre: Unión Demócrata Independiente (UDI)
     tipo: partido_politico
@@ -14199,6 +14302,14 @@ organizations:
     pais: Chile
     notas: "Concesionaria que gestiona la rama de fútbol de la Universidad de Chile, controlada por representantes de Sartor y ligada al caso Sartor. Su ex presidente Michael Clark está formalizado por delitos económicos; exdirectores denunciaron sobreprecios y control de la concesionaria (eventos 20260722-2 y 20260817-3)."
 
+  subsecretaria_redes_asistenciales:
+    nombre: Subsecretaría de Redes Asistenciales
+    tipo: organismo_gobierno
+    notas: "Organismo del Minsal que envió el oficio N°18207/2026 (30-jul-2026) instruyendo a hospitales a aumentar rendimientos de consultas médicas. Su titular es Julio Montt."
+  municipalidad_coihueco:
+    nombre: Municipalidad de Coihueco
+    tipo: municipalidad
+    notas: "Comuna de la provincia de Diguillín, Ñuble. Su alcalde Wilson Palma Jelves fue formalizado por delitos sexuales en agosto de 2026."
 cifras:
   pase_cultural_undurraga:
     nombre: Presupuesto del Pase Cultural bajo el gobierno de Kast

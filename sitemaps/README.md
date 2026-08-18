@@ -3,18 +3,18 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 17/8/2026, 19:04:20
+- **Última sincronización:** 18/8/2026, 13:53:24
 - **Medios registrados:** 35
-- **Artículos indexados:** 4.398.739
+- **Artículos indexados:** 4.399.545
 
 ## Por medio
 
 | Medio | Artículos |
 |---|---|
 | Radio Bío Bío | 1.170.827 |
-| Emol | 1.111.081 |
+| Emol | 1.111.252 |
 | Meganoticias | 433.970 |
-| El Ciudadano | 304.494 |
+| El Ciudadano | 304.684 |
 | Radio Agricultura | 298.864 |
 | El Dínamo | 251.234 |
 | CNN Chile | 227.126 |
@@ -24,11 +24,11 @@
 | REDIMIN | 48.042 |
 | El Clarín | 20.721 |
 | La Nación | 19.866 |
-| Ex-Ante | 17.741 |
+| Ex-Ante | 18.130 |
 | El Quinto Poder | 17.724 |
-| Chocale | 14.169 |
+| Chocale | 14.223 |
 | Radio UdeC | 10.979 |
-| La Tercera | 10.956 |
+| La Tercera | 10.958 |
 | Mestizos Magazine | 8638 |
 | CIPER Chile | 8446 |
 | Mala Espina | 7473 |
@@ -49,16 +49,16 @@
 
 ## Década 2020
 
-### 2026 — 189.691 artículos
+### 2026 — 190.497 artículos
 
-#### Agosto 2026 (13.797)
+#### Agosto 2026 (14.603)
 
 - [adnradio — Mi momento mas humilde la colombiana que busca cambiar las reglas del despecho y que quiere reencantar a los chilenos](https://www.adnradio.cl/2026/08/06/mi-momento-mas-humilde-la-colombiana-que-busca-cambiar-las-reglas-del-despecho-y-que-quiere-reencantar-a-los-chilenos/)
 - [adnradio — Universidad catolica vs cobresal donde cuando y como ver el partido en vivo en directo online y en tv](https://www.adnradio.cl/2026/08/06/universidad-catolica-vs-cobresal-donde-cuando-y-como-ver-el-partido-en-vivo-en-directo-online-y-en-tv/)
 - [adnradio — Activan codigo azul por bajas temperaturas en seis regiones de chile revisa donde y hasta cuando estara vigente](https://www.adnradio.cl/2026/08/07/activan-codigo-azul-por-bajas-temperaturas-en-seis-regiones-de-chile-revisa-donde-y-hasta-cuando-estara-vigente/)
 - [adnradio — Ahorro en chile cuanto pierdo si guardo durante un ano sin invertirlo](https://www.adnradio.cl/2026/08/07/ahorro-en-chile-cuanto-pierdo-si-guardo-1000000-durante-un-ano-sin-invertirlo/)
 - [adnradio — Al presidente de universidad catolica le consultan por el fichaje de vozinha en colo colo y asi responde probablemente](https://www.adnradio.cl/2026/08/07/al-presidente-de-universidad-catolica-le-consultan-por-el-fichaje-de-vozinha-en-colo-colo-y-asi-responde-probablemente/)
-- _… y 13.792 más (ver JSONL)_
+- _… y 14.598 más (ver JSONL)_
 
 #### Julio 2026 (31.084)
 

@@ -2,7 +2,7 @@
 
 > Este archivo se auto-actualiza. Si descubres un patron, convencion o cambio
 > que no este documentado aqui, agregarlo. Un agente que no actualiza
-> AGENTS.js deja de ser util para el proximo agente.
+> AGENTS.md deja de ser util para el proximo agente.
 
 ## Que es esto
 
@@ -255,53 +255,8 @@ svg_backup:
 15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS/` solo lo que quede genuinamente pendiente.
 16. **Votaciones (`tipo: votacion`): conteos con fuente oficial**: además de la cobertura de prensa, verificar el resultado y el conteo (a favor / en contra / abstenciones) en la página oficial de votaciones del Senado (`senado.cl/actividad-legislativa/sala/votaciones`) o de la Cámara (`camara.cl/legislacion/sala_sesiones/votaciones.aspx`, y por proyecto con `ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar la URL de la votación concreta en `sources.yaml` (`medio: Senado de Chile` / `medio: Cámara de Diputados`) y registrar cada conteo como `[[cifra/...]]` (ej. los vetos de la megarreforma en `20260810-10`). Si la votación fue nominal y el detalle por parlamentario es relevante para el evento, mencionarlo con la URL oficial. Ver FUENTES_GUBERNAMENTALES.md → Poder Legislativo.
 
-## Fuentes de redes sociales: metodologia para "reacciones comunitarias"
 
-**Un solo tweet/post de un usuario NO es una "reaccion comunitaria".** Las redes sociales (X, Reddit, Facebook, Instagram, TikTok, YouTube) son **siempre complementarias o punto de partida**, nunca fuente unica de un dato (regla general del vault). Cuando un evento documenta reacciones ciudadanas, el segmento debe reflejar el debate real: **opiniones variadas, de usuarios distintos y de plataformas distintas, con puntos de vista de distinto signo** (criticos y defensores). Si solo existe la opinion de un usuario, NO titular el segmento "Reacciones comunitarias": se registra como opinion de ese usuario (ej. "El hilo de Roberto Merken"), con sus datos verificados contra fuentes oficiales/prensa y marcando como interpretacion no verificada lo que no se pueda confirmar.
-
-### Reglas para documentar reacciones de redes sociales
-
-1. **Reunir 2+ plataformas cuando existan** (X + Reddit r/chile + Facebook + Instagram): cada plataforma se registra como fuente propia en `sources.yaml` (`tipo: red_social`/`redes`, `medio: Reddit r/chile` / `Facebook` / etc.).
-2. **Citar comentarios con su usuario y puntaje/reacciones** cuando esten disponibles (ej. "'Gobierno de KidZania' (Motamatulg, 188 puntos)"), para que el lector vea la representatividad relativa de cada opinion. Extraer los comentarios mas votados y tambien voces de la vereda opuesta (los de bajo puntaje negativo tambien documentan el disenso).
-3. **Verificar los datos que plantean los usuarios** contra fuentes oficiales o prensa (BCN, SUSESO, tribunales, medios) y marcar explicitamente lo que no fue verificado (ej. "acusacion de IA no verificada por prensa, se registra como complementaria").
-4. **No mezclar la opinion del autor del hilo con la reaccion comunitaria**: el post original del usuario es el punto de partida; los comentarios de OTRAS personas son la reaccion. Citar ambos por separado.
-5. Si una afirmacion viral requiere validacion y no se resuelve, registrarla en `TAREAS/` (⬜ pendiente) en lugar del body.
-6. **Toda fuente de redes sociales debe declarar su ROL en el evento**: nunca se agrega "porque si". Al citar un post/hilo/comentario complementario, el body y la nota de `sources.yaml` deben explicar que aporta. Roles validos: (a) **permite verificar/validar un dato** que el post plantea (verificado contra BCN/SUSESO/tribunales/prensa — ej. los datos historicos del hilo de niñez); (b) **plantea un punto que la prensa no cubre** (ej. la cita del articulo 1° de la Constitucion en el debate del plan de seguridad, que los noticieros no mencionaron); (c) **documenta la reaccion ciudadana / opinion publica** con voces variadas de plataformas distintas; (d) **muestra la viralizacion de un tema** y su framing; (e) **aporta un desglose/analisis que la cobertura de prensa no detallaba** (ej. el desglose de cuenta propia de CLAPES UC difundido por Merken). Si un post no cumple ninguno de estos roles —o repite exactamente lo que ya cubre la prensa sin anadir nada—, NO agregarlo. Formato sugerido en el body: "Se registra como complementaria porque <rol>: <que aporta, verificado contra X>" o "El rol del hilo en este evento es <rol>, verificado contra <fuente>."
-
-### Metodos de busqueda probados (2026-08)
-
-**Reddit r/chile** (los mas confiables):
-- **Busqueda por HTML**: `https://old.reddit.com/r/chile/search?q=<terminos>&restrict_sr=on&sort=new&t=month` funciona con `read_url` (la API JSON `search.json` devuelve 403; r.jina.ai sobre reddit tambien 403). El HTML del search lista titulo + puntos + comentarios + enlace del hilo.
-- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "https://old.reddit.com/r/chile/comments/<id>/<slug>/" -o <archivo>.html` responde 200; luego parsear con Python:
-  ```python
-  import re, html
-  blocks = re.split(r'<div class="entry', data)
-  user = re.search(r'/user/([^"/]+)', b)
-  score = re.search(r'score unvoted" title="([^"]+)"', b)
-  body = re.search(r'<div class="md">(.*?)</div>', b, re.S)
-  ```
-  Guardar el HTML en un archivo DENTRO del repo (ej. `tmp_<slug>.html`) y borrarlo al terminar: en Git Bash de Windows `/tmp` no es visible para Python (FileNotFoundError). Prefijar la impresion con `PYTHONIOENCODING=utf-8` para evitar errores de encoding cp1252 en consola Windows.
-- Ordenar comentarios por puntaje (desc) y tomar los top ~20 + los negativos para capturar el disenso.
-
-**Facebook** (posts de paginas de medios):
-- `r.jina.ai/https://www.facebook.com/<pagina>/posts/<slug>/` devuelve el texto del post + los comentarios "Most relevant" con su conteo de reacciones (probado con El Dínamo y Kapital FM, 2026-08). `read_url` directa tambien funciona para algunos posts.
-
-**X/Twitter**: el clipping del usuario trae el hilo y sus comentarios; para ampliar voces buscar cobertura de prensa del tema y usar el catalogo de sitemaps (`grep -ih '<termino>' sitemaps/<medio>/*.jsonl`). Los status IDs entregados por el usuario se validan con la URL de prensa que los confirma.
-
-**Instagram**: `read_url` sobre reels/posts devuelve descripcion y a veces comentarios; para reacciones amplias preferir prensa o Reddit.
-
-### Estado de validacion por red social
-
-| Red social | Busqueda | Extraccion de comentarios | Notas |
-|---|---|---|---|
-| Reddit r/chile | ✅ HTML search (read_url) | ✅ HTML + regex (curl) | API JSON y r.jina.ai bloqueados (403) |
-| Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
-| X/Twitter | 🟡 solo via clipping del usuario o prensa | 🟡 comentarios del hilo en el clipping | Sin busqueda publica automatizada probada |
-| Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
-| TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado) |
-| YouTube | 🟡 titulo/descripcion si | ⬜ comentarios no | Comentarios requieren sesion: read_url y r.jina.ai piden "Sign in to confirm you're not a bot" (probado 2026-08) |
-
-Para TikTok/YouTube la extraccion de comentarios NO esta resuelta: usar prensa o Reddit para reacciones y registrar el video solo como fuente complementaria de la declaracion (titulo + descripcion). Si algun dia se resuelve la extraccion de comentarios, actualizar esta tabla y la seccion "Medios de prensa en prosa" (orgs `tipo: red_social`).
+> **Metodología de redes sociales:** ver [.agents/skills/social-media.md](.agents/skills/social-media.md)
 
 ## Pagina /events: filtros y busqueda en cliente
 
@@ -475,360 +430,13 @@ No eliminar ninguno de los dos archivos.
 
 **Despliegue (Cloudflare Pages):** el sitio se despliega con `pnpm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `pnpm run preview` (`wrangler pages dev dist`).
 
-## Extraccion de contenido web
 
-Cuando `webfetch` no logre leer una URL (bloqueo, JS rendering, paywall), intentar con estos servicios que devuelven markdown limpio:
+> **Herramientas de extracción y procesamiento:** ver [.agents/skills/tools.md](.agents/skills/tools.md)
 
-1. `https://r.jina.ai/` + URL completa
-2. `https://defuddle.md/` + URL completa
-3. `https://markdown.new/` + URL completa
-4. `https://www.paywallskip.com/article?url=` + URL completa (bypass de paywall)
-5. `https://archive.ph/` + URL completa (snapshot/caché, puede dar rate-limit 429)
+> **Catálogo de sitemaps:** ver [.agents/skills/sitemaps.md](.agents/skills/sitemaps.md)
 
-Formato: `https://r.jina.ai/https://ejemplo.com/articulo`
-Formato paywallskip: `https://www.paywallskip.com/article?url=https://ejemplo.com/articulo`
+> **Respaldo / Restauración:** ver [.agents/skills/backup.md](.agents/skills/backup.md)
 
-**Escalera completa para leer una URL (orden recomendado):**
-
-1. `fetch` directo de Node (el que usan `add-source`, `pdf-extract`, `doc-extract` y `sync-sitemaps`)
-2. Mirrors de la lista anterior (`r.jina.ai`, `defuddle.md`, `markdown.new`, `paywallskip.com`, `archive.ph`)
-3. `pnpm run fetch-impersonate -- <URL>` — helper con **curl_cffi** (Python), el binding del motor
-   **curl-impersonate** (`https://github.com/lwthiker/curl-impersonate`) compatible con Windows vía
-   wheels. Modifica el handshake TLS + HTTP/2 para ser indistinguible de Chrome/Firefox/Edge/Safari;
-   sirve para sitios que bloquean por fingerprinting (Cloudflare challenge, rate-limit por TLS) —
-   los casos documentados de The Clinic, El Ciudadano y araucaniadiario. Flags: `--binary` (body
-   como Buffer, útil para PDFs) y `--headers` (diagnóstico de bloqueo). Requisito:
-   `python -m pip install --user curl_cffi`. `pdf-extract.mjs` y `doc-extract.mjs` lo usan
-   automáticamente como fallback cuando el fetch directo falla.
-4. **Crawlee** (`crawlee`, devDependency): el `fetchText` de `sync-sitemaps.mjs` relega a
-   `HttpCrawler` (retries + backoff + detección de páginas de bloqueo) cuando el fetch directo
-   devuelve error de red o 403/429 — útil para medios que rate-limitean (El Ciudadano, El
-   Periodista). Para sitios con JS pesado o Cloudflare avanzado el siguiente escalón es el
-   `fetch-impersonate` (curl_cffi), no Playwright (no instalado a propósito).
-
-## Procesamiento de PDFs (lectura de documentos)
-
-`pnpm run pdf-extract -- <URL-del-PDF>` descarga el PDF y lo convierte a **Markdown estructurado**
-con la libreria `@firecrawl/pdf-inspector` (devDependency, nucleo Rust nativo via NAPI, sin OCR,
-sin modelos ML, offline; conserva titulos H1-H4, listas, tablas, negritas, subrayados y el orden
-de lectura multicolumna) para leer documentos primarios durante investigaciones/correcciones
-(planes filtrados, informes oficiales, fallos).
-
-- **Uso:** `pnpm run pdf-extract -- https://sitio.cl/doc.pdf` imprime el markdown a stdout
-  (o `--out <ruta>` para guardarlo). `--json` imprime clasificacion + markdown. Acepta tambien
-  un `.md` ya extraido como argumento posicional para re-imprimir sin red. Avisa si el PDF es
-  escaneado (pdfType distinto de TextBased/Mixed: requiere OCR) y tiene timeout de descarga +
-  chequeo del magic `%PDF`. Si la descarga falla (bloqueo TLS), relega automáticamente a
-  `fetch-impersonate.mjs` (curl_cffi).
-
-## Procesamiento de documentos de Office (Word/Excel/PowerPoint)
-
-`pnpm run doc-extract -- <URL-del-documento>` descarga un documento **.docx/.xlsx/.pptx** (u otros
-formatos: pdf, html, csv, json, xml, txt, md) y lo convierte a **Markdown estructurado** con
-**MarkItDown** de Microsoft (`https://github.com/microsoft/markitdown`, instalado vía
-`python -m pip install --user "markitdown[docx,xlsx,pptx,pdf]"`). Complementa a `pdf-extract`:
-muchas fuentes primarias de gobierno (informes, minutas, tablas de presupuesto, presentaciones)
-llegan en formatos de Office que no se pueden leer con la prensa ni los mirrors.
-
-- **Uso:** `pnpm run doc-extract -- https://sitio.cl/doc.docx` imprime el markdown a stdout
-  (o `--out <ruta>` para guardarlo). `--json` imprime metadatos + markdown. Acepta también un
-  archivo local como argumento posicional. Avisa si la extracción sale casi vacía (posible
-  escaneo/formato no soportado). Si la descarga falla (bloqueo TLS), relega automáticamente a
-  `fetch-impersonate.mjs` (curl_cffi).
-- **Requisito:** Python 3 + MarkItDown (ver arriba). El script invoca `python -m markitdown`
-  (más robusto que depender del `.exe` en PATH, que en Windows a veces falla por permisos).
-
-## Generador de fuentes (script)
-
-`pnpm run add-source -- <URL>` (o `pnpm run add-source` sin URL para modo interactivo) extrae
-automaticamente `titulo`, `autor` y `fecha` de la URL y genera el bloque YAML listo para pegar
-en `sources.yaml`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[source/id]]`.
-
-- Fetch del HTML directo; si falla o no hay titulo, relega a `r.jina.ai`.
-- El mapeo dominio → medio se precarga desde `sources.yaml` + un diccionario base en el script.
-- Consulta el catálogo de sitemaps antes del fetch (ver "Catálogo de sitemaps → Integración
-  con add-source.mjs").
-- Flags: `--append` (agrega el bloque directo al final de `sources.yaml`), `--mirror` (fuerza
-  espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
-  el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra).
-- Siempre imprime la URL del articulo original (nunca el mirror), y avisa si el ID ya existe.
-
-## Catálogo de sitemaps (índice local de prensa)
-
-Carpeta `sitemaps/` en la raíz: catálogo de artículos de prensa (URL + fecha + título si existe)
-extraído de los sitemaps públicos de cada medio. Evita fetch/búsquedas web redundantes: el valor
-está en la URL+fecha (post-sitemaps) y URL+fecha+título real (news-sitemaps, últimos 2-3 días).
-NO guarda el cuerpo de los artículos.
-
-### Regla clave: NO se commitea el catálogo
-
-- `sitemaps/*.jsonl`, `sitemaps/.cache/`, `sitemaps/sitemaps.gvault` y sus partes
-  `sitemaps.gvault.partN` están en `.gitignore` (decisión 2026-08-07): BioBio pesa ~307MB y el
-  catálogo es regenerable.
-- Lo que SÍ se commitea: los scripts (`scripts/sync-sitemaps.mjs`, `sitemaps-index.mjs`,
-  `sitemaps-backup.mjs`), `package.json`, `sitemaps/_manifest.json` (estado de sync) y
-  `sitemaps/README.md` (índice regenerable).
-- Si se clona el repo, hay que correr `pnpm run sitemaps-sync -- <medio>` para regenerar local.
-- **Excepción opcional (snapshot público)**: el catálogo completo comprimido pesa ~56MB
-  (357MB crudos → compacto lossless + Brotli binario). Con `--chunk-size <MB>` se parte en
-  trozos de ~28MB (`sitemaps.gvault.part1/2`), cada uno bajo el límite blando de 50MB de
-  GitHub. Quien descargue todas las partes puede regenerar el catálogo con `sitemaps-backup --restore`
-  (une las partes automáticamente) o `--join` (arma el .gvault único).
-
-### Formato JSONL
-
-`{ "u": url, "d": fecha ISO, "t": título (si existe), "s": "news"|"slug" }`
-- `s:"news"` = título real del news-sitemap. `s:"slug"` = título aproximado derivado de la URL.
-
-### Scripts
-
-| Comando | Función |
-|---|---|
-| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since`/`--days` sincroniza SOLO lo reciente (filtra sub-sitemaps históricos por la fecha de su URL —BioBio/CNN/Meganoticias/Mestizos/Publimetro/FastCheck—, omite por el rango del XML cacheado los que no llevan fecha —Yoast/Arc XP— y no toca entradas antiguas); incompatible con `--replace` |
-| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). Acepta `--since YYYY-MM-DD` / `--days N` para resync solo de contenido reciente (pasa el flag a `sitemaps-sync`) |
-| `pnpm run sitemaps-index` | genera `sitemaps/README.md` (década → año → mes, conteos + muestras) Y la sección "Medios registrados" de AGENTS.md (marcador `
-
-<!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->
-
-### Medios registrados (generado automáticamente)
-
-> Esta sección se genera con `pnpm run sitemaps-index` a partir del registro `MEDIA`
-> de `scripts/sync-sitemaps.mjs` y de `sitemaps/_manifest.json`. NO editar a mano.
-
-| Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
-|---|---|---|---|---|---|
-| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 200 | 1 |
-| `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
-| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.921 | 4 |
-| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.169 | 10 |
-| `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
-| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.126 | 16 |
-| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 1.712 | 1 |
-| `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
-| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 200 | 1 |
-| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.873 | 18 |
-| `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.429 | 4 |
-| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.494 | 22 |
-| `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.721 | 10 |
-| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
-| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.234 | 17 |
-| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 201 | 1 |
-| `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
-| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.081 | 27 |
-| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.741 | 7 |
-| `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
-| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.142 | 7 |
-| `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
-| `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 10.956 | 1 |
-| `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
-| `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
-| `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
-| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 90 | 1 |
-| `quepasaaraucania` | Qué Pasa Araucanía | `quepasaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.270 | 3 |
-| `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
-| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.023 | 18 |
-| `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 298.864 | 12 |
-| `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.979 | 7 |
-| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.042 | 8 |
-| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.003 | 19 |
-
-Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
-
-<!-- /AUTO-GENERATED-SITEMAPS-MEDIOS -->
-
-**Al agregar un medio nuevo** (a `MEDIA` en `sync-sitemaps.mjs`): además de `sitemaps-index`
-(que regenera la tabla y el README), hay que agregar el dominio y el nombre a
-`CATALOG_MEDIO_BY_DOMAIN`/`CATALOG_MEDIO_NAMES` de `scripts/add-source.mjs` para que el lookup
-del generador de fuentes lo reconozca.
-
-Notas de plataforma (complemento manual, no se reescribe):
-- WordPress-Yoast (`articleOnly`: solo `post-sitemap*.xml` y `news-sitemap*.xml`): **El Clarín**,
-  **Factchecking**, **CIPER**, **The Clinic**. Ojo: The Clinic está detrás de Cloudflare
-  challenge — curl/webfetch recibe 403 "Just a moment", pero Node fetch (el del script) sí lo
-  resuelve (200).
-- **El Mostrador**: `sitemap.xml` (~101 URLs) + `sitemap_news.xml` (títulos reales con prefijo
-  `n:` — el parser acepta `news:` o `n:`).
-- **Fast Check CL**: sitemap custom con `includeRe` `/(?:posts-\d{4}|news)\.xml$/i` →
-  `posts-YYYY.xml` + `news.xml` (títulos reales); descarta `pages/categories/authors.xml`.
-- **ADN Radio**: Arc XP (~100 URLs recientes, sin títulos). **La Tercera**: Arc XP paginado
-  (`sitemap-index` → ~100 sub-sitemaps `?from=N`, ~10.000 artículos recientes; `news-sitemap-index`
-  trae títulos reales; los `<loc>` del index llegan con `&amp;` que el parser decodifica).
-  **BioBio**: sitemap mensual + news-sitemap. **Cooperativa**: sitemap de páginas + news.
-- **CNN Chile / El Dínamo** (mismo CMS): `_files/sitemaps/sitemap_index.xml` (sub-sitemaps por
-  mes desde 2011/2010) + `sitemap_lasts.xml` + `sitemap_news.xml` (títulos reales). Ojo CNN:
-  el `<lastmod>` de los sub-sitemaps mensuales es la fecha de regeneración (uniforme y falsa);
-  el script usa `dateFromSitemapPath` (path `YYYY/MM`) para fechar los artículos.
-- **Radio Universidad de Chile / El Siglo / La Nación / Ex-Ante / El Periodista**: WordPress-Yoast
-  (`articleOnly`). Ojo: El Periodista sirve los `<loc>` en `http://` (mezcla http/https en el
-  index) y su `robots.txt` declara el sitemap en `http://`; su index es lento/throttle-friendly —
-  si un sync se corta, relanzar: el caché y el modo merge retoman sin pérdida. Ex-Ante NO declara
-  sitemaps en `robots.txt` (se usa `index` directo). El Siglo usa canónico sin `www` (`elsiglo.cl`).
-- **Meganoticias** (CMS propio): `sitemap-noticias-index-content.xml` = índice mensual
-  `content-noticias/sitemap-YYYY-MM.xml` desde 2011 + `sitemap-news.xml` (títulos reales). El
-  `includeRe` descarta videos, secciones, autores, columnistas y hemeroteca (páginas de listado).
-  Ojo: los sub-sitemaps mensuales NO traen `lastmod` fiable → `dateFromSitemapPath` (path `YYYY-MM`)
-  como CNN. Las fechas quedan como aproximación a nivel de mes (día 01) y pueden desfasarse un
-  mes del slug/URL real (IDs secuenciales, la URL no lleva fecha). ~434k artículos en 16 años.
-- **Publimetro** (Arc XP): el `sitemap-index` solo lista `latest` + el día actual (sin índice
-  histórico). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con decenas de URLs, pero no
-  hay índice que los enumere: el sync captura solo lo reciente (~5-100 URLs).
-- **Emol** (CMS propio): index por año desde 1992 (`sitemap{N}_{year}.xml`, ~8.000 URLs por
-  sub-sitemap; ~1,1M artículos). El `robots.txt` declara además `sitemapIndexFotos.xml` y
-  `sitemapIndexVideos.xml` (tv.emol.com) — el `includeRe` `sitemap\d+_\d{4}\.xml$` los descarta.
-  **Ojo protocolo**: el index y los `<loc>` de los artículos vienen en `http://` pero el sitio
-  solo responde por `https://` (curl/node fetch fallan con http) — el flag `forceHttps: true`
-  normaliza ambos (sub-sitemaps y URLs guardadas). **Sin `<lastmod>` ni `news:date`**: la fecha
-  real está en el path del artículo (`/noticias/<seccion>/YYYY/MM/DD/<id>/<slug>.html`), extraída
-  con `locDateRe` (grupos YYYY/MM/DD) — día real, no aproximación de mes.
-- **El Desconcierto**: sitemaps SIN historia (`sitemap.xml` ~8 recientes + `sitemap-news.xml` ~20
-  con títulos reales); todas las variantes históricas (año, post, archivos) devuelven 404.
-- **El Ciudadano / Mala Espina / El Quinto Poder / Radio UdeC / Chocale / REDIMIN**: WordPress-Yoast
-  (`articleOnly`). El Ciudadano tiene ~309 post-sitemaps (~277k artículos, 18 años): el index y los
-  subs son lentos y el sitio rate-limitea (fetch directo puede devolver 0 `<loc>`); si un sync se
-  corta, los subs cacheados en `.cache/` retoman sin pérdida (relanzar el mismo comando).
-- **Diario Financiero (df) / Diario Estrategia** (Prontus): robots declara sitemaps por separado
-  (`extra`); el DF trae ~87 URLs recientes (pags + news + port) y Diario Estrategia ~100
-  (`/sitemap/news` + `/sitemap/lastarticles`, IDs `/texto-diario/mostrar/`). Cobertura reciente,
-  sin historia profunda.
-- **Chile País Minero**: index con `<loc>` envueltos en CDATA (a veces sin protocolo) — el parser
-  los limpia (ver `extractSitemapIndexLocs`). **Mestizos Magazine**: index por fechas
-  (`/sitemap/sitemap-<DD-MM-YYYY>.xml`, ~2.400 sub-sitemaps diarios desde 2018, ~8,6k artículos).
-
-| `pnpm run sitemaps-watchlist -- --source <ruta> [--out <archivo>]` | genera `tareas_sitemap.md`: bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json`) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en sources.yaml·entities / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio. Requiere un clone local de https://github.com/Alplox/awesome-chilean-rss |
-| `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3 (2026-08-11)**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
-
-Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
-— si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
-pasada mejora la entrada (`news` > `slug`).
-
-**Syncs paralelos**: `main()` escribe `_manifest.json` por medio (read-modify-write tras cada
-sync), así que correr medios en procesos paralelos ya no pisa el estado de los demás. Aun así,
-para varios medios conviene pasarlos como argumentos en un solo comando
-(`pnpm run sitemaps-sync -- el_siglo la_nacion ...`): evita el throttle de los sitios y deja un
-solo `manifest.actualizado`.
-
-**Corrección de fechas (CNN, `dateFromSitemapPath`):** en modo merge la fecha solo se actualiza
-si el cambio es dentro del mismo año (la URL se busca en el mapa del año de la nueva fecha). Si un
-medio quedó con fechas falsas por un `<lastmod>` uniforme (caso CNN con el crawl de 2026-04-08),
-reconstruir con `pnpm run sitemaps-sync -- cnnchile --replace` (el sitemap lista todo el historial,
-así que es seguro); después los resync incrementales no vuelven a degradar fechas.
-
-**Privacidad e integridad del .gvault:**
-- La cabecera INFORMACION usa **rutas portables** (relativas al repo o solo el
-  nombre del archivo), nunca rutas absolutas locales: un .gvault anterior
-  incrustaba `C:\Users\<usuario>\...\sitemaps.gvault`, filtrando el nombre de
-  usuario y la ruta de disco de quien generó el backup. `displayPath()` en
-  `sitemaps-backup.mjs` centraliza esta regla (también en los mensajes de
-  consola).
-- `.gitattributes` marca `*.gvault` y `*.gvault.part*` como **binarios** (`binary`):
-  con `* text=auto` + `core.autocrlf=true` (Windows) git convertía LF→CRLF en el
-  payload Brotli, rompiendo el SHA-256 y haciendo el snapshot no restaurable.
-  Si los `.partN` se publican (excepción snapshot), deben regenerarse tras
-  cualquier cambio y verificarse con `--restore` a un directorio temporal.
-
-### Integración con add-source.mjs (IMPLEMENTADA)
-
-`add-source.mjs` consulta el catálogo ANTES de hacer fetch web:
-
-- **Lookup por URL**: si la URL pasada está indexada en el catálogo, pre-carga fecha y (si hay)
-  título sin tocar la red. Con `s:"news"` (título real) salta el fetch por completo; con
-  `s:"slug"` (título aproximado) intenta el fetch para obtener el título real y usa el catálogo
-  como fallback. Normaliza la URL (quita `www.`, params de tracking `utm_*`/`fbclid`, hash).
-- **`--catalog-only`**: nunca hace fetch; usa solo datos del catálogo (útil cuando el medio
-  bloquea o para construir la fuente sin red).
-- **`--search <texto>`**: busca en el catálogo (título/URL/fecha, normalizado sin acentos),
-  lista resultados más recientes primero y deja elegir. Filtros: `--medio <slug>` y
-  `--fecha YYYY-MM-DD`.
-- Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
-  `ciper`, `theclinic`, `elmostrador`, `emol`, `fastcheck`, `latercera`, `cnnchile`,
-  `eldinamo`, `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`,
-  `el_periodista`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
-  `malaespina`, `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`,
-  `mestizos`, `diarioestrategia`.
-  Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
-- El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
-  `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
-
-### Uso del catálogo por agentes (antes de búsquedas online)
-
-Regla general (también en "Reglas al crear/modificar eventos", punto 14): al investigar un tema,
-los agentes deben consultar el catálogo local ANTES de hacer búsquedas web, al menos para los
-medios guardados:
-
-```bash
-# buscar artículos por término en un medio (URL + fecha + título si es news)
-grep -ih 'secreto bancario' sitemaps/theclinic/*.jsonl
-# buscar en todos los medios guardados a la vez
-for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
-```
-
-- El catálogo entrega solo URL + fecha (+ título real en los news-sitemaps de los últimos días);
-  NO contiene el cuerpo del artículo. Después del match hay que leer la URL (`read_url` o los
-  mirrors de la sección "Extraccion de contenido web").
-- Si el término no aparece o el medio no está en el catálogo, recién ahí usar búsquedas online.
-- Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
-  `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
-  `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`,
-  `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
-  `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
-  `diarioestrategia`, `emol`.
-  (Los JSONL no se commitean; regenerar con
-  `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
-
-## Respaldo / Restauracion (backup offline publico)
-
-El repo puede morir por el contenido sensible (politica/corrupcion), por eso se genera un
-respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son archivos
-`.gvault`: Brotli (integrado en Node, mejor ratio que gzip para texto) + checksums
-SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requiere
-dependencias nuevas.
-
-Scripts (ver `scripts/gvault-util.mjs` para el formato compartido):
-- `pnpm run backup` — genera UN archivo `.light.gvault` (solo contenido actual: `src/**` +
-  docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`, `public/`) DIRECTO en
-  `public/backup/` (ubicacion canonica, SE COMMITEA) junto con `manifest.json` (`archivo`,
-  `url`, `tamano`, `sha256` del archivo completo).
-- `pnpm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).
-- `pnpm run restore -- <archivo.gvault> [--dest <ruta>]` — extrae los archivos.
-- Flags de backup: `--shallow` (solo `src/content`+`src/data`), `--out <prefijo>`.
-
-Convenciones:
-- `public/backup/` se COMMITEA al repo (no esta en `.gitignore`): el respaldo queda descargable
-  por cualquiera desde GitHub con un solo clic Y el footer del sitio lo sirve en `/backup/` sin
-  CPU extra en build. Al generar respaldo nuevo, commitea `public/backup/`. NO hay `.gvault` en
-  la raiz: la unica copia vive en `public/backup/` (evita duplicacion; `public` está en
-  `EXCLUDE_DIRS` de `backup.mjs` para que el respaldo no se incluya a sí mismo).
-- Ademas, se recomienda que quien descargue una copia la guarde FUERA del repo (USB, Drive, otras
-  personas), para que sobreviva aunque el repo/plataforma desaparezca.
-- No incluyen password/cifrado a proposito (custodia publica); la integridad la dan los hashes
-  SHA-256, no el secreto. Al ser contenido sin cifrar, es tan sensible como el propio repo:
-  protegelo igual (mismo contenido que el vault).
-- **Respaldo en el footer del sitio:** el footer de todas las páginas lee `manifest.json` por
-  fetch y ofrece: botón **"Descargar respaldo (.gvault)"** (descarga con el nombre versionado
-  real), botón **"Descargar repositorio (.zip)"** (ZIP estilo GitHub de `Alplox/gobierno-vault`,
-  `archive/refs/heads/main.zip`) y un panel desplegable (`<details id="gvault-copy">`) con
-  `<textarea>` que carga el contenido del archivo (lazy, al abrir) para **copiarlo directamente**; muestra el nombre,
-  tamaño y SHA-256 esperados del respaldo actual y la guía de verificación correcta (one-liner
-  de Node incluido en el propio archivo, o `sha256sum`/`Get-FileHash` contra el SHA mostrado).
-  Ojo: el `toggle` de `<details>` NO burbujea — el listener se registra en **fase de captura**
-  (`addEventListener('toggle', fn, true)`), si no el textarea nunca se llenaba. Si no existe
-  backup, el footer muestra un aviso y deshabilita la descarga.
-- **Corrección de integridad (BOM):** `scripts/backup.mjs` usa `TextDecoder` con `ignoreBOM: true`
-  en `encodeFile`; sin esto los archivos con BOM UTF-8 (ej. `src/scripts/eventListClient.js`)
-  perdían 3 bytes en el round-trip y `verify` reportaba hash incorrecto.
-- **Instrucciones para no técnicos embebidas en cada `.gvault`**: la cabecera INFORMACION explica
-  paso a paso cómo comprobar la integridad (instalar Node → abrir terminal → pegar el one-liner
-  `VERIFY_ONELINER`) y cómo recuperar los archivos sin el proyecto con un solo comando
-  (`RESTORE_ONELINER`, extrae todo a una carpeta). Ambos viven como consts en `scripts/backup.mjs`
-  y se interpolan en `buildInfo`. Usan
-  `lastIndexOf('===METADATA===')` a propósito: la cabecera contiene ese texto DENTRO del propio
-  one-liner de verificación, así que `indexOf` (primera aparición) apuntaría al lugar equivocado.
-  Cada regeneración debería validarse con una restauración de prueba (extraer a una carpeta
-  temporal y comparar con los originales; los one-liners se prueban también contra un archivo
-  corrupto: debe salir `CORRUPTO` con exit 1).
-
-## Auto-evolucion
 
 Cuando descubras algo no documentado aqui:
 1. Agregalo a la seccion correspondiente.
@@ -861,12 +469,12 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 369
+**Total de eventos:** 397
 
-**Cobertura de fuentes:** 194 de 369 eventos con 3+ fuentes (175 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 204 de 397 eventos con 3+ fuentes (193 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 275
+- 2026: 303
 - 2025: 15
 - 2024: 10
 - 2023: 14
@@ -880,32 +488,32 @@ Cuando descubras algo no documentado aqui:
 - 2009: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (119)
-- Economia (92)
-- Justicia (88)
-- Defensa y seguridad (67)
-- Administración pública (51)
-- Derechos humanos (41)
-- Proceso legislativo (39)
+- Politica (126)
+- Justicia (98)
+- Economia (95)
+- Defensa y seguridad (70)
+- Administración pública (61)
+- Derechos humanos (46)
+- Proceso legislativo (41)
+- Emergencia y catástrofes (39)
 - Gobierno y gestion presidencial (37)
-- Emergencia y catástrofes (37)
-- Finanzas publicas (31)
+- Finanzas publicas (35)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (69)
-- publicacion (69)
-- resultado (53)
-- investigacion (38)
-- anuncio (34)
-- reaccion (24)
-- declaracion (22)
-- fallo_judicial (20)
+- accion (75)
+- publicacion (71)
+- resultado (57)
+- investigacion (44)
+- anuncio (35)
+- reaccion (25)
+- declaracion (23)
+- fallo_judicial (22)
 - votacion (14)
 - decreto (9)
 
 **Entidades registradas:**
-- Personas: 1503
-- Organizaciones: 890
+- Personas: 1512
+- Organizaciones: 903
 - Cifras: 979
-- Fuentes: 3439
+- Fuentes: 3521
 - Temas: 74

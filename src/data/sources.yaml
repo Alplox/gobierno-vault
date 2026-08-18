@@ -9542,15 +9542,6 @@ elmostrador-2026-07-08-confusam-gran-represion:
   url: https://www.elmostrador.cl/noticias/pais/2026/07/08/confusam-denuncia-gran-represion-tras-incidentes-frente-a-la-moneda-al-menos-ocho-detenidos/
   notas: "Protesta de Confusam del 8 de julio de 2026 frente a La Moneda, en el marco de las actividades por los 200 años de la Presidencia. Terminó con enfrentamientos con Carabineros, uso del carro lanzaaguas y al menos ocho detenidos. El gremio denunció 'gran represión' y advirtió que más de 40 programas de atención primaria están en peligro de ser eliminados desde 2027."
 
-biobiochile-2026-07-08-confusam-ocho-detenidos:
-  tipo: prensa
-  medio: BioBioChile
-  titulo: "Con ocho detenidos terminan incidentes tras protesta de la Confusam afuera de La Moneda"
-  autor: BioBioChile
-  fecha: 2026-07-08
-  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/07/08/reportan-incidentes-y-personas-detenidas-por-manifestaciones-de-confusam-afuera-de-la-moneda.shtml
-  notas: "Cobertura de la protesta de Confusam del 8 de julio de 2026. La presidenta del gremio, Gabriela Flores, explicó que la movilización responde al decreto per cápita pendiente hace seis meses (más de $21.800 millones) y a los recortes a la atención primaria. Fuerzas Especiales de Carabineros usó carros lanza agua y lanza gases; denunció agresión 'brutal' a dirigentes y ocho detenidos."
-
 radio-uchile-2026-07-08-confusam-carta-kast:
   tipo: prensa
   medio: Radio Universidad de Chile
@@ -18138,15 +18129,6 @@ biobiochile-2026-08-07-la-cruz-navia-descargo:
   fecha: 2026-08-07
   url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2026/08/07/se-siente-como-vivir-abuso-sexual-infantil-el-descargo-de-alcaldesa-de-la-cruz-por-audio-filtrado.shtml
   notas: "La alcaldesa de La Cruz, Filomena Navia (PS), comparó la filtración del audio con 'vivir un abuso sexual infantil', defendió el contexto de enero (campaña solidaria con Penco, agua potable a la 28 de Marzo), apuntó a la funcionaria que habría ordenado la grabación ('Jessica'), anunció acciones legales, pidió disculpas por su lenguaje y descartó renunciar al PS, aunque dudó de repostularse."
-
-contrapoder-2026-05-27-flores-jefe-gabinete-aumento-salarial:
-  tipo: prensa
-  medio: Contrapoder Chile
-  titulo: "Actual jefe de gabinete de la senadora Camila Flores recibió un aumento salarial de más de $3 millones en menos de un mes"
-  autor: Contrapoder Chile
-  fecha: 2026-05-27
-  url: https://contrapoderchile.cl/actual-jefe-de-gabinete-de-la-senadora-camila-flores-recibio-un-aumento-salarial-de-mas-de-3-millones-en-menos-de-un-mes/
-  notas: "Contrapoder corroboró con los registros de personal de apoyo que Mauricio González Tobar, jefe de gabinete de la senadora Camila Flores, pasó de $450.000 (Cámara de Diputados, marzo) a $3.600.000 mensuales (Senado, abril): un aumento de $3.150.000. Contexto: filtración de la demanda de divorcio culposo de Percy Marín, prohibición del Juzgado de Familia de Viña del Mar y pesquisa de la Corte de Apelaciones de Valparaíso. Pendiente: validación cruzada con otros medios."
 
 cooperativa-2026-08-07-estado-excepcion-interceptacion:
   tipo: prensa
@@ -27675,6 +27657,56 @@ meganoticias-2026-08-16-el-tabo-concejala-denuncia:
   fecha: 2026-08-16
   url: https://www.meganoticias.cl/nacional/529486-debio-haberse-inhabilitado-concejala-denuncia-a-alcalde-de-el-tabo-y-a-otros-altos-funcionarios-tras-informe-de-contraloria-16-08-2026.html
 
+contraloria-2026-08-17-el-tabo-informe-596:
+  tipo: comunicado
+  medio: Contraloría General de la República
+  titulo: "El Tabo: Contraloría detecta que alcalde intervino en contrataciones de familiares y cercanos en el municipio"
+  autor: Contraloría General de la República
+  fecha: 2026-08-17
+  url: https://www.contraloria.cl/portalweb/web/cgr/-/alcalde-intervino-en-contrataciones-de-familiares-y-cercanos
+  notas: "Comunicado oficial de la Contraloría sobre el Informe Final de Investigación Especial N° 596/2025. Incluye detalles sobre el Secretario Municipal subrogante (relación sentimental con funcionaria), plazos y sumarios administrativos."
+
+cnnchile-2026-08-17-contraloria-el-tabo-nepotismo:
+  tipo: noticia
+  medio: CNN Chile
+  titulo: "Contraloría revela que el alcalde de El Tabo intervino en la contratación de familiares y cercanos en el municipio"
+  autor: CNN Chile
+  fecha: 2026-08-17
+  url: https://www.cnnchile.com/pais/contraloria-revela-que-el-alcalde-de-el-tabo-intervino-en-la-contratacion-de-familiares-y-cercanos-en-el-municipio/
+
+eldinamo-2026-08-17-contraloria-el-tabo-24-funcionarios:
+  tipo: noticia
+  medio: El Dínamo
+  titulo: "Contraloría detecta contratación de 24 funcionarios vinculados a alcalde de El Tabo: entre ellas su cónyuge y dos hermanas"
+  autor: Felipe Ramos
+  fecha: 2026-08-17
+  url: https://www.eldinamo.cl/pais/2026/08/17/contraloria-detecta-contratacion-de-24-funcionarios-vinculados-a-alcalde-de-el-tabo-entre-ellas-su-conyuge-y-dos-hermanas/
+
+laregionhoy-2026-08-18-contraloria-el-tabo-familiares:
+  tipo: noticia
+  medio: La Región Hoy
+  titulo: "Contraloría detecta que alcalde de El Tabo intervino en contratación en el municipio de 24 familiares o amistades"
+  autor: Redacción
+  fecha: 2026-08-18
+  url: https://laregionhoy.cl/2026/08/18/contraloria-detecta-que-alcalde-de-el-tabo-intervino-en-contratacion-en-el-municipio-de-24-familiares-o-amistades/
+
+radiogalactika-2026-08-17-contraloria-el-tabo-56-funcionarios:
+  tipo: reportaje
+  medio: Radio Galáctica
+  titulo: "56 funcionarios y cuatro apellidos: lo que encontró la Contraloría al fiscalizar las contrataciones en El Tabo"
+  autor: Radio Galáctica
+  fecha: 2026-08-17
+  url: https://www.radiogalactika.cl/56-funcionarios-y-cuatro-apellidos-lo-que-encontro-la-contraloria-al-fiscalizar-las-contrataciones-en-el-tabo/
+  notas: "Reportaje de investigación basado en la lectura íntegra del Informe Final N° 596. Detalla los cuatro casos de conflicto de interés documentados (exdirector de Seguridad, Director Jurídico, alcalde, Director DAF), el traspaso irregular de 13 personas de honorarios a Código del Trabajo sin previo contrato a honorarios, las 11 observaciones complejas, y los sumarios administrativos (decretos alcaldicios N° 4.547 y N° 5.091). Nombre completo del alcalde: Alfonso Muñoz Aravena; cónyuge: Myriam Rodríguez (DAEM desde 2008)."
+
+girovisual-2026-08-17-contraloria-el-tabo-irregularidades:
+  tipo: noticia
+  medio: Giro Visual
+  titulo: "Contraloría detecta irregularidades por contratación de familiares y cercanos en gestión municipal de El Tabo"
+  autor: Giro Visual
+  fecha: 2026-08-17
+  url: https://girovisual.cl/wp2/contraloria-detecta-irregularidades-por-contratacion-de-familiares-y-cercanos-en-gestion-municipal/
+
 publimetro-2026-08-12-boric-autocritica:
   tipo: noticia
   medio: Publimetro
@@ -29137,3 +29169,654 @@ x-2026-08-17-kast-comision-empleo-publico:
   fecha: 2026-08-17
   url: https://x.com/thecliniccl/status/2089405141988298894
   notas: "Punto de partida complementario: el anuncio de la comisión se verificó y amplió con cobertura de prensa (The Clinic, Radio Universidad de Chile, El Periodista)."
+
+elmostrador-2026-08-17-reforma-seguridad-120-dias:
+  tipo: noticia
+  medio: El Mostrador
+  titulo: "Reforma en seguridad propone estado de excepción de 120 días e interceptación de comunicaciones"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/17/reforma-en-seguridad-propone-estado-de-excepcion-de-120-dias-e-interceptacion-de-comunicaciones/
+
+latercera-2026-08-17-reforma-seguridad-120-dias-detalle:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "120 días corridos ampliables e interceptación de comunicaciones: los detalles del nuevo estado de excepción de la reforma de Seguridad de Kast"
+  autor: Luis Cerda
+  fecha: 2026-08-17
+  url: https://www.latercera.com/politica/noticia/hasta-120-dias-corridos-e-interceptacion-de-comunicaciones-los-detalles-del-nuevo-estado-de-excepcion-de-la-reforma-de-seguridad-de-kast/
+
+cooperativa-2026-08-17-reforma-seguridad-derechos:
+  tipo: noticia
+  medio: Cooperativa
+  titulo: "Gobierno ingresó reforma constitucional que limita derechos y crea nuevo estado de excepción"
+  autor: Cooperativa
+  fecha: 2026-08-17
+  url: https://m.cooperativa.cl/noticias/pais/seguridad-ciudadana/planes-antidelincuencia/gobierno-ingreso-reforma-constitucional-que-limita-derechos-y/2026-08-17/193641.html
+
+theclinic-2026-08-17-reforma-seguridad-excepcion-crimen:
+  tipo: noticia
+  medio: The Clinic
+  titulo: "Gobierno ingresó reforma constitucional de seguridad: crea Estado de Excepción por Crimen Organizado e inhabilitación perpetua a delincuentes"
+  autor: Carolina Mardones L.
+  fecha: 2026-08-17
+  url: https://www.theclinic.cl/2026/08/17/gobierno-ingreso-reforma-constitucional-de-seguridad-crea-estado-de-excepcion-por-crimen-organizado-e-inhabilitacion-perpetua-a-delincuentes/
+
+cnnchile-2026-08-17-reforma-seguridad-8-medidas:
+  tipo: noticia
+  medio: CNN Chile
+  titulo: "Nuevo estado de excepción y más: Revisa en detalle las 8 medidas de la reforma de seguridad ingresada por el gobierno al Senado"
+  autor: CNN Chile
+  fecha: 2026-08-17
+  url: https://www.cnnchile.com/pais/reforma-seguridad-revisa-detalle-8-medidas-reforma-de-seguridad-ingresada-por-el-gobierno-al-senado/
+
+t13-2026-08-17-reforma-seguridad-quorum:
+  tipo: noticia
+  medio: T13
+  titulo: "Gobierno ingresa reforma constitucional de seguridad"
+  autor: T13
+  fecha: 2026-08-17
+  url: https://www.t13.cl/noticia/politica/gobierno-ingresa-reforma-constitucional-seguridad-ley-quorum-calificado-17-8-2026
+
+latercera-2026-08-17-antibarricadas-2-0:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Gobierno ingresa proyecto 'Antibarricadas 2.0' y Arrau defiende la iniciativa: 'Cortar el tránsito no es una forma legítima de protesta'"
+  autor: La Tercera
+  fecha: 2026-08-17
+  url: https://www.latercera.com/nacional/noticia/gobierno-ingresa-proyecto-antibarricadas-20-y-arrau-defiende-la-iniciativa-cortar-el-transito-no-es-una-forma-legitima-de-protesta/
+
+eldinamo-2026-08-17-antibarricadas-2-0:
+  tipo: noticia
+  medio: El Dínamo
+  titulo: "Gobierno presenta Ley Antibarricadas 2.0: 'Cortar el tránsito no es una forma legítima de protesta'"
+  autor: El Dínamo
+  fecha: 2026-08-17
+  url: https://www.eldinamo.cl/politica/2026/08/17/gobierno-presenta-ley-antibarricadas-2-0-cortar-el-transito-no-es-una-forma-legitima-de-protesta/
+
+pauta-2026-08-18-antibarricadas-2-0:
+  tipo: noticia
+  medio: Pauta
+  titulo: "Ley Antibarricadas 2.0: en qué consiste y qué cambios propone el Gobierno para sancionar cortes de tránsito y del Metro"
+  autor: Pauta
+  fecha: 2026-08-18
+  url: https://www.pauta.cl/actualidad/2026/08/18/en-que-consiste-la-ley-antibarricadas-2-0-los-cambios-que-propone-el-gobierno-para-sancionar-cortes-de-transito-y-del-metro.html
+
+gobierno-2026-08-17-comite-policial-balance:
+  tipo: comunicado
+  medio: Gobierno de Chile
+  titulo: "Seguridad: bajan cifras de homicidios, secuestros e ingresos irregulares"
+  autor: Gobierno de Chile
+  fecha: 2026-08-17
+  url: https://www.gob.cl/noticias/seguridad-bajan-cifras-de-homicidios-secuestros-e-ingresos-irregulares/
+  notas: "Comunicado oficial del gobierno sobre el balance del Comité Policial del 17 de agosto de 2026. Incluye cifras de homicidios (-17,4%), secuestros (-41,1%), incautaciones de drogas (+63,9%) e ingresos irregulares (-86,9%). Detalla operativos destacados (Operación Halcón Negro, San Antonio, La Legua) y avances penitenciarios (cárcel La Laguna)."
+
+emol-2026-08-17-comite-policial-balance:
+  tipo: noticia
+  medio: Emol
+  titulo: "Comité policial: Seguridad reporta nuevas caídas en homicidios (-17,4%) y en secuestros (41,4%)"
+  autor: M. Silva, Emol
+  fecha: 2026-08-17
+  url: https://www.emol.com/noticias/Nacional/2026/08/17/1208717/balance-cifras-seguridad-gobierno-agosto.html
+
+adnradio-2026-08-17-comite-policial-balance:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Homicidios, secuestros e ingresos irregulares disminuyen en Chile: Gobierno entrega nuevas cifras de seguridad"
+  autor: ADN Radio
+  fecha: 2026-08-17
+  url: https://www.adnradio.cl/2026/08/17/homicidios-secuestros-e-ingresos-irregulares-disminuyen-en-chile-gobierno-entrega-nuevas-cifras-de-seguridad/
+
+pauta-2026-08-17-comite-policial-balance:
+  tipo: noticia
+  medio: Pauta
+  titulo: "Ministro Arrau destaca caída de homicidios, secuestros e ingresos irregulares"
+  autor: Nicolás Melelli Viveros
+  fecha: 2026-08-17
+  url: https://www.pauta.cl/actualidad/2026/08/17/homicidios-bajan-174-y-secuestros-caen-411-gobierno-destaca-mejora-en-cifras-de-seguridad.html
+
+bcentral-2026-08-18-cuentas-nacionales-q2:
+  tipo: documento
+  medio: Banco Central de Chile
+  titulo: "Cuentas Nacionales Trimestrales - 2º trim 2026"
+  autor: Banco Central de Chile
+  fecha: 2026-08-18
+  url: https://www.bcentral.cl/areas/estadisticas/cuentas-nacionales-trimestrales
+  notas: "Fuente oficial del Banco Central. PIB Q2 2026: -0,2% interanual; Q1 revisado de -0,5% a -0,3%. Minería -6,4%, exportaciones -2,1%, inversión sin variación. Consumo hogares +1,2%."
+
+emol-2026-08-18-pib-q2-recesion:
+  tipo: noticia
+  medio: Emol
+  titulo: "PIB da negativa sorpresa: Economía cae 0,2% en el segundo trimestre y no habría esquivado la recesión técnica"
+  autor: Martín Garretón
+  fecha: 2026-08-18
+  url: https://www.emol.com/noticias/Economia/2026/08/18/1208798/cuentas-nacionales-banco-central.html
+
+cooperativa-2026-08-18-pib-q2-recesion:
+  tipo: noticia
+  medio: Cooperativa
+  titulo: "PIB cayó 0,2% en el segundo trimestre y Chile llegó a un escenario de recesión técnica"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-18
+  url: https://www.cooperativa.cl/noticias/economia/crecimiento/pib-cayo-0-2-en-el-segundo-trimestre-y-chile-llego-a-un-escenario-de/2026-08-18/095551.html
+
+theclinic-2026-08-18-pib-q2-recesion:
+  tipo: noticia
+  medio: The Clinic
+  titulo: "PIB del segundo trimestre cae 0,2% y se confirma recesión técnica en el primer semestre de este año"
+  autor: Miriam Leiva
+  fecha: 2026-08-18
+  url: https://www.theclinic.cl/2026/08/18/pib-del-segundo-trimestre-cae-02-y-se-confirma-recesion-tecnica-en-el-primer-semestre-de-este-ano/
+
+df-2026-08-18-pib-q2-recesion:
+  tipo: noticia
+  medio: Diario Financiero
+  titulo: "El PIB del segundo trimestre sorprende con una caída de 0,2% anual y registra un primer semestre del año en rojo"
+  autor: Diario Financiero
+  fecha: 2026-08-18
+  url: https://www.df.cl/economia-y-politica/macro/el-pib-del-segundo-trimestre-sorprende-con-una-caida-de-0-2-anual-y
+
+biobiochile-2026-08-17-thae-loiza-hallada:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Exconcejala de Graneros desaparecida fue hallada en situación de calle en el centro de Santiago"
+  autor: BioBioChile
+  fecha: 2026-08-17
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/17/exconcejala-de-graneros-desaparecida-fue-hallada-en-situacion-de-calle-en-el-centro-de-santiago.shtml
+
+adnradio-2026-08-17-thae-loiza-hallada:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "PDI confirmó hallazgo en buenas condiciones de exconcejala de Graneros desaparecida"
+  autor: ADN Radio
+  fecha: 2026-08-17
+  url: https://www.adnradio.cl/2026/08/17/pdi-confirmo-hallazgo-en-buenas-condiciones-de-exconcejala-de-graneros-desaparecida/
+
+theclinic-2026-08-17-thae-loiza-hallada:
+  tipo: noticia
+  medio: The Clinic
+  titulo: "Estaba en situación de calle en el centro de Santiago: encuentran con vida a exconcejala de Graneros desaparecida hace más de diez días"
+  autor: The Clinic
+  fecha: 2026-08-17
+  url: https://www.theclinic.cl/2026/08/17/estaba-en-situacion-de-calle-en-el-centro-de-santiago-encuentran-con-vida-a-exconcejala-de-graneros-desaparecida-hace-mas-de-diez-dias/
+
+cooperativa-2026-08-17-thae-loiza-hallada:
+  tipo: noticia
+  medio: Cooperativa
+  titulo: "Exconcejala de Graneros desaparecida hace 12 días fue encontrada por la PDI en situación de calle"
+  autor: Cooperativa
+  fecha: 2026-08-17
+  url: https://www.cooperativa.cl/noticias/site/artic/20260817/pags-amp/20260817174616.html
+
+adnradio-2026-08-18-aluvion-puerto-viejo:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Aluvión afecta a Puerto Viejo: más de 10 viviendas afectadas por intensas lluvias"
+  autor: ADN Radio
+  fecha: 2026-08-18
+  url: https://www.adnradio.cl/2026/08/18/aluvion-afecta-a-puerto-viejo-mas-de-10-viviendas-afectadas-por-intensas-lluvias/
+
+biobiochile-2026-08-17-pdg-cartolas-quemadas:
+  tipo: investigacion
+  medio: BioBioChile
+  titulo: "La pista de las cartolas quemadas que llevó a Fiscalía a indagar desvío de fondos en el PDG"
+  autor: Megam Ossandón
+  fecha: 2026-08-17
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/17/la-pista-de-las-cartolas-quemadas-que-llevo-a-fiscalia-a-indagar-desvio-de-fondos-en-el-pdg.shtml
+  notas: "Investigación sobre testimonios de una supuesta quema de cartolas bancarias del PDG que fueron parte de los antecedentes que llevaron a la Fiscalía a abrir una arista por fraude de subvenciones y lavado de activos, investigación que derivó en diligencias patrimoniales contra Franco Parisi y otros 10 militantes."
+
+elmostrador-2026-08-17-sobresueldos-contralores-poder-judicial:
+  tipo: investigacion
+  medio: El Mostrador
+  titulo: "¿Sobresueldos por más de 30 años? el cuestionado caso de los contralores del Poder Judicial"
+  autor: Claudio Pizarro Sanguesa
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/unidad-de-investigacion/2026/08/17/sobresueldos-por-mas-de-30-anos-el-cuestionado-caso-de-los-contralores-del-poder-judicial/
+  notas: "Investigación sobre el contralor interno de la CAPJ Humberto Canessa Puelle, que figura en grado V pese a que la Ley 18.969 establece grado VII. La diferencia supera $2,3 millones mensuales y se habría extendido por más de 30 años, beneficiando a 5 contralores. La CAPJ invoca un acuerdo del Consejo Superior de 1990, pero expertos advierten que un acto administrativo no puede modificar un grado fijado por ley."
+
+cnnchile-2026-08-17-indh-querella-escuela-naval:
+  tipo: noticia
+  medio: CNN Chile
+  titulo: "INDH se querella por torturas tras denuncia de agresiones y asfixia a estudiante de la Escuela Naval"
+  autor: Camilo García Godoy
+  fecha: 2026-08-17
+  url: https://www.cnnchile.com/pais/indh-se-querella-por-torturas-tras-denuncia-de-agresiones-y-asfixia-a-estudiante-de-la-escuela-naval/
+
+cnnchile-2026-08-18-aluvion-tocopilla:
+  tipo: noticia
+  medio: CNN Chile
+  titulo: "Impactantes videos del aluvión en Tocopilla: Autoridades solicitaron evacuar la zona y Senapred activó alerta SAE"
+  autor: CNN Chile
+  fecha: 2026-08-18
+  url: https://www.cnnchile.com/pais/impactantes-videos-del-aluvion-en-tocopilla-autoridades-solicitaron-evacuar-la-zona/
+
+adnradio-2026-08-18-aluvion-tocopilla:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Tocopilla enfrenta una compleja jornada por las lluvias: evacuación de sectores y activación de quebradas"
+  autor: ADN Radio
+  fecha: 2026-08-18
+  url: https://www.adnradio.cl/2026/08/18/aluvion-afecta-a-puerto-viejo-mas-de-10-viviendas-afectadas-por-intensas-lluvias/
+
+latercera-2026-08-17-junaeb-raciones-nacional:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Colegios alertan que Junaeb redujo sus raciones de alimentos y organismo lo atribuye a mecanismo habitual de ajuste"
+  autor: Roberto Gálvez
+  fecha: 2026-08-17
+  url: https://www.latercera.com/nacional/noticia/colegios-alertan-que-junaeb-redujo-sus-raciones-de-alimentos-y-organismo-lo-atribuye-a-mecanismo-habitual-de-ajuste/
+  notas: "Escalada a nivel nacional: el Liceo Salesiano San José de Punta Arenas, el Colegio Santa Beatriz de Pudahuel y otros establecimientos reportaron reducción de raciones. Junaeb confirma baja del 2,4% a nivel nacional (73.000 raciones diarias menos) entre abril y agosto, solo tres regiones sin bajas."
+
+radiointeramericana-2026-08-18-junaeb-oposicion-raciones:
+  tipo: noticia
+  medio: Radio Interamericana
+  titulo: "Oposición exige que Junaeb explique supuesta reducción de raciones alimenticias en colegios"
+  autor: Radio Interamericana
+  fecha: 2026-08-18
+  url: https://radiointeramericana.cl/oposicion-exige-que-junaeb-explique-supuesta-reduccion-de-raciones-alimenticias-en-colegios/
+
+g5noticias-2026-08-17-indh-escuela-naval:
+  tipo: noticia
+  medio: G5 Noticias
+  titulo: "INDH se querella tras denuncia de torturas contra excadete de la Escuela Naval en 2025"
+  autor: G5 Noticias
+  fecha: 2026-08-17
+  url: https://g5noticias.cl/2026/08/17/indh-se-querella-tras-denuncia-de-torturas-contra-excadete-de-la-escuela-naval-el-ano-2025/
+
+periodicodelacosta-2026-08-17-indh-escuela-naval:
+  tipo: noticia
+  medio: Periódico de la Costa
+  titulo: "Excadete de la Escuela Naval denuncia agresiones y asfixia"
+  autor: Periódico de la Costa
+  fecha: 2026-08-17
+  url: https://periodicodelacosta.cl/2026/08/17/indh-escuela-naval/
+
+eldinamo-2026-08-17-escuela-naval-querella:
+  tipo: noticia
+  medio: El Dínamo
+  titulo: "Asfixia, amenazas y lesiones: la querella que complica a la Escuela Naval por presuntas torturas"
+  autor: El Dínamo
+  fecha: 2026-08-17
+  url: https://www.eldinamo.cl/pais/2026/08/17/la-querella-que-complica-a-la-escuela-naval-por-presuntas-torturas/
+
+biobiochile-2026-08-17-escuela-naval-querella:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "INDH se querella por presuntas torturas a excadete de Escuela Naval en Valparaíso"
+  autor: BioBioChile
+  fecha: 2026-08-17
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2026/08/17/indh-se-querella-por-presuntas-torturas-a-excadete-de-escuela-naval-en-2025-en-valparaiso.shtml
+
+elmostrador-2026-08-17-contratacion-alamos-hacienda:
+  tipo: investigacion
+  medio: El Mostrador
+  titulo: "Otra contratación sin experiencia: Hacienda pone a ingeniera como nexo con industria de bancos"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/17/otra-contratacion-sin-experiencia-hacienda-pone-a-ingeniera-como-nexo-con-industria-de-bancos/
+
+g5noticias-2026-08-18-pdg-amiguismo-contratos:
+  tipo: noticia
+  medio: G5 Noticias
+  titulo: "Diputadas PDG acusan «amiguismo» en el Gobierno y exigen transparentar polémicos contratos de recién egresados"
+  autor: G5 Noticias
+  fecha: 2026-08-18
+  url: https://g5noticias.cl/2026/08/18/diputadas-pdg-acusan-amiguismo-en-el-gobierno-y-exigen-transparentar-polemicos-contratos-de-recien-egresados/
+
+biobiochile-2026-08-17-seremi-alvarez-auto-fiscal:
+  tipo: denuncia
+  medio: BioBioChile
+  titulo: "Café y médico: denuncian a seremi del Trabajo del Bío Bío por presunto uso personal de auto fiscal"
+  autor: BioBioChile
+  fecha: 2026-08-17
+  url: https://www.biobiochile.cl/noticias/nacional/region-del-bio-bio/2026/08/17/cafe-y-medico-denuncian-a-seremi-del-trabajo-del-bio-bio-por-presunto-uso-personal-de-auto-fiscal.shtml
+
+elmostrador-2026-08-17-seremi-alvarez-auto-fiscal:
+  tipo: noticia
+  medio: El Mostrador
+  titulo: "Igual que Duco: denuncian a seremi del Trabajo del Biobío por uso personal de auto fiscal"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/17/igual-que-duco-denuncian-a-seremi-del-trabajo-del-biobio-por-uso-personal-de-auto-fiscal/
+
+ciper-2026-07-08-junji-directora-destruyo-registro:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Junji nombró como directora de jardín infantil a educadora que destruyó registro de lesiones de infante asesinado por su padrastro"
+  autor: Diego Ortiz
+  fecha: 2026-07-08
+  url: https://www.ciperchile.cl/2026/07/08/junji-nombro-como-directora-de-jardin-infantil-a-educadora-que-destruyo-registro-de-lesiones-de-infante-asesinado-por-su-padrastro/
+  notas: "Investigación de CIPER: directora subrogante de un jardín infantil destruyó el cuaderno de registro de lesiones de un niño de 2 años un día antes de que fuera asesinado por su padrastro en 2022. Fue sumariada y suspendida 3 meses, pero no desvinculada. En 2025 ya era directora de otro jardín en la Región Metropolitana. La abuela del menor, represented por Fundación Amparo y Justicia, logró suspensión condicional del procedimiento con firma mensual y disculpas públicas."
+
+biobiochile-2026-07-09-junji-directora-destruyo-registro:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Junji mantiene a directora sancionada por destruir registro de lesiones de niño asesinado en 2022"
+  autor: BioBioChile
+  fecha: 2026-07-09
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/07/09/junji-mantiene-a-directora-sancionada-por-destruir-registro-de-lesiones-de-nino-asesinado-en-2022.shtml
+
+publimetro-2026-07-09-junji-directora-destruyo-registro:
+  tipo: noticia
+  medio: Publimetro
+  titulo: "Reportaje revela que Junji mantiene como directora a educadora que destruyó registros de lesiones de niño asesinado en 2022"
+  autor: Publimetro
+  fecha: 2026-07-09
+  url: https://www.publimetro.cl/noticias/2026/07/09/reportaje-revela-que-junji-mantiene-como-directora-a-educadora-que-destruyo-registros-de-lesiones-de-nino-asesinado-en-2022/
+
+latercera-2026-08-17-comision-empleo-publico-expertos:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Los expertos nominados por el gobierno para impulsar cambios al empleo público"
+  autor: Carlos Alonso
+  fecha: 2026-08-17
+  url: https://www.latercera.com/pulso/noticia/los-integrantes-de-la-comision-asesora-para-el-empleo-publico-nominada-por-el-gobierno/
+
+elciudadano-2026-08-17-otj-zegers-reforma:
+  tipo: noticia
+  medio: El Ciudadano
+  titulo: "'Una reforma de esta magnitud exige experiencia': trabajadores judiciales cuestionan rol de Trinidad Zegers"
+  autor: Leonardo Buitrago
+  fecha: 2026-08-17
+  url: https://www.elciudadano.com/justicia/una-reforma-de-esta-magnitud-exige-experiencia-trabajadores-judiciales-cuestionan-rol-de-trinidad-zegers/08/17/
+
+biobiochile-2026-08-16-otj-zegers-reforma:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Trabajadores judiciales cuestionan rol de abogada con meses de experiencia en reforma procesal civil"
+  autor: BioBioChile
+  fecha: 2026-08-16
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/16/trabajadores-judiciales-cuestionan-rol-de-abogada-con-meses-de-experiencia-en-reforma-procesal-civil.shtml
+
+elmostrador-2026-08-17-steinert-comision-ausencia:
+  tipo: noticia
+  medio: El Mostrador
+  titulo: "Steinert se resta de comisión y oposición avanza en acusación constitucional"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/17/steinert-se-resta-de-comision-y-oposicion-avanza-en-acusacion-constitucional/
+
+adnradio-2026-08-17-steinert-comision-ausencia:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Exministra Trinidad Steinert no asiste a comisión investigadora y se suspende la sesión en el Congreso"
+  autor: ADN Radio
+  fecha: 2026-08-17
+  url: https://www.adnradio.cl/2026/08/17/exministra-trinidad-steinert-no-asiste-a-comision-investigadora-y-se-suspende-la-sesion-en-el-congreso/
+
+biobiochile-2026-08-17-steinert-comision-ausencia:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Steinert se excusa de asistir a comisión por 'temas personales' y toma fuerza idea de AC en su contra"
+  autor: BioBioChile
+  fecha: 2026-08-17
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/17/steinert-se-excusa-de-asistir-a-comision-por-temas-personales-y-toma-fuerza-idea-de-ac-en-su-contra.shtml
+
+adnradio-2026-08-17-poduje-400-mil-viviendas:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Ministro Poduje advierte que meta de 400 mil viviendas deberá 'evaluarse': 'Dependerá de los recursos que tengamos'"
+  autor: ADN Radio
+  fecha: 2026-08-17
+  url: https://www.adnradio.cl/2026/08/17/ministro-poduje-advierte-que-meta-de-400-mil-viviendas-debera-evaluarse-dependera-de-los-recursos-que-tengamos/
+
+latercera-2026-08-17-poduje-quiroz-presupuesto:
+  tipo: analisis
+  medio: La Tercera
+  titulo: "Presupuesto 2027: el nuevo gallito que se avecina entre los ministros Poduje y Quiroz"
+  autor: Luciano Jiménez
+  fecha: 2026-08-17
+  url: https://www.latercera.com/nacional/noticia/el-gallito-que-se-avecina-entre-poduje-y-quiroz-por-alza-presupuestaria/
+  notas: "Análisis de la tensión entre Poduje (Vivienda) y Quiroz (Hacienda) por el presupuesto 2027. Poduje pide +23,9% (de $6.660.574 millones a ~$8.254.000 millones). La Tercera documenta las diferencias previas: recorte del 3%, cambios OGUC, y los dichos de Poduje sobre que Quiroz 'es devoto de la virgen del puño'. Diputada Urrutia (FA) advierte que el gobierno apenas construye 2.000 viviendas/mes vs. las 8.000 necesarias."
+
+biobiochile-2026-08-17-chile-cooperacion-fiscal-onu:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Aseguran que Chile buscaría restarse de negociación sobre cooperación fiscal entre países de la ONU"
+  autor: Agencia Uno
+  fecha: 2026-08-17
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/17/aseguran-que-chile-buscaria-restarse-de-negociacion-sobre-cooperacion-fiscal-entre-paises-de-la-onu.shtml
+
+theclinic-2026-08-17-chile-cooperacion-fiscal-onu:
+  tipo: investigacion
+  medio: The Clinic
+  titulo: "Chile evalúa retirarse de la negociación fiscal de Naciones Unidas"
+  autor: Rodrigo Córdova
+  fecha: 2026-08-17
+  url: https://www.theclinic.cl/2026/08/17/tras-salida-de-los-no-alineados-chile-evaluaria-restarse-de-negociacion-de-cooperacion-fiscal-entre-paises-de-la-onu/
+  notas: "Fuentes diplomáticas confirman que la administración Kast no está conforme con el borrador de la Convención sobre Cooperación Fiscal Internacional. La Cancillería indicó que el documento 'presenta incertidumbres considerables respecto a su alcance y funcionamiento que podrían limitar la soberanía en materia tributaria'. Se suma a la salida del Movimiento de Países No Alineados."
+
+ciper-2026-08-18-quiroz-hermano-permisologia-sernageomin:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Plan de Quiroz contra la 'permisología' permitió aprobar millonario negocio de su hermano a pesar de informe negativo del Sernageomin"
+  autor: CIPER Chile
+  fecha: 2026-08-18
+  url: https://www.ciperchile.cl/2026/08/18/plan-de-quiroz-contra-la-permisologia-permitio-aprobar-millonario-negocio-de-su-hermano-a-pesar-de-informe-negativo-del-sernageomin/
+  notas: "Investigación CIPER: el plan de Quiroz contra la 'permisología' benefició al proyecto Alto Santorini de su hermano Víctor Quiroz (US$43,6M, Concón). El Sernageomin objecionó por riesgo de remoción en masa pero el SEA lo ignoró. Víctor Quiroz es socio del estudio de arquitectura, lobista y dueño del 12% del proyecto. El Comité de Proyectos del SEIA no tiene actas públicas."
+
+biobiochile-2026-08-18-quiroz-hermano-permisologia:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Plan de Quiroz contra 'permisología' benefició millonario proyecto inmobiliario de su hermano"
+  autor: BioBioChile
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2026/08/18/plan-de-quiroz-contra-permisologia-beneficio-millonario-proyecto-inmobiliario-de-su-hermano.shtml
+
+elmostrador-2026-07-27-quiroz-hermano-alto-santorini:
+  tipo: noticia
+  medio: El Mostrador
+  titulo: "Proyecto diseñado por hermano del ministro Quiroz insiste en levantarse en campo dunar"
+  autor: El Mostrador
+  fecha: 2026-07-27
+  url: https://www.elmostrador.cl/noticias/pais/2026/07/27/proyecto-disenado-por-hermano-del-ministro-quiroz-insiste-en-levantarse-en-campo-dunar/
+
+adnradio-2026-07-27-quiroz-hermano-alto-santorini:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Proyecto diseñado por hermano de ministro Quiroz vuelve al debate por construcción en dunas de Concón"
+  autor: ADN Radio
+  fecha: 2026-07-27
+  url: https://www.adnradio.cl/2026/07/27/proyecto-disenado-por-hermano-de-ministro-quiroz-vuelve-al-debate-por-construccion-en-dunas-de-concon/
+
+biobiochile-2026-05-27-punta-peuco-traslado-comunes:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Trasladan a reos comunes desde el ex penal Punta Peuco a otras cárceles del país"
+  autor: BioBioChile
+  fecha: 2026-05-27
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/27/trasladan-a-reos-comunes-desde-el-ex-penal-punta-peuco-a-otras-carceles-del-pais.shtml
+
+contrapoder-2026-08-17-carabineros-168-acoso:
+  tipo: investigacion
+  medio: Contrapoder Chile
+  titulo: "Solo un sancionado: Registro de Carabineros revela que 168 funcionarios han sido denunciados por abuso y acoso sexual en solo un año"
+  autor: Contrapoder Chile
+  fecha: 2026-08-17
+  url: https://contrapoderchile.cl/solo-un-sancionado-registro-de-carabineros-revela-que-168-funcionarios-han-sido-denunciados-por-abuso-y-acoso-sexual-en-solo-un-ano/
+  notas: "Investigación basada en listado oficial remitido por Carabineros a Contrapoder Chile. 168 funcionarios denunciados por abuso/acoso sexual (ene 2025-jun 2026): 88 por abuso, 73 por acoso. 89 víctimas internas, 66 civiles. Solo 1 investigación terminó con sanción. 157 sin sanción. Gazmuri oficiará a Carabineros y Ministerio de Seguridad."
+
+eldesconcierto-2026-08-17-carabineros-168-acoso:
+  tipo: noticia
+  medio: El Desconcierto
+  titulo: "Carabineros y denuncias por abuso y acoso sexual: 168 funcionaros acusados en un año y sólo un sancionado"
+  autor: El Desconcierto
+  fecha: 2026-08-17
+  url: https://eldesconcierto.cl/actualidad/carabineros-y-denuncias-abuso-y-acoso-sexual-168-funcionaros-acusados-un-ano-y-solo-un-sancionado-n5461420
+
+contrapoder-2026-07-03-general-alvarado-nelty-alvarez:
+  tipo: denuncia
+  medio: Contrapoder Chile
+  titulo: "Denuncian a general de Carabineros de Magallanes por acoso y maltrato a exescolta de la Presidenta Michelle Bachelet"
+  autor: Contrapoder Chile
+  fecha: 2026-07-03
+  url: https://contrapoderchile.cl/denuncian-a-general-de-carabineros-de-magallanes-por-acoso-y-maltrato-a-exescolta-de-la-presidenta-michelle-bachelet/
+  notas: "Tutela laboral contra general Marco Antonio Alvarado (jefe de Zona Magallanes). Víctima: suboficial mayor Nelty Álvarez, 35 años de carrera, exescolta de Bachelet. Inició por gaseo en práctica de tiro que le afectó la visión. Juzgado acogió tutela, audiencia 4 agosto."
+
+ciper-chile-2026-08-14-porceltv-nuevo-negocio-tvn:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Más allá de PorcelTV: el nuevo negocio de TVN"
+  autor: Claudia Lagos Lira
+  fecha: 2026-08-14
+  url: https://www.ciperchile.cl/2026/08/14/mas-alla-de-porceltv-el-nuevo-negocio-de-tvn/
+  notas: "Columna de análisis sobre la transformación de la industria televisiva chilena. TVN cuenta con 57 mil m² de infraestructura, 238 concesiones y 40+ plantas transmisoras. Los canales ya no son los principales productores de contenidos; son pantallas de distribución. Canal 13 tiene 30 mil m² sin área dramática desde 2018. Los 'Otros ingresos' de Canal 13 equivalen a un tercio de la publicidad; en TVN la proporción es mayor. Pregunta clave: si en las dependencias de TVN se producen contenidos de streaming 'estridentes, agresivos, que coquetean con la desinformación'."
+
+latercera-2026-08-18-cable-chino-nyt-presiones-visas:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cable chino: nueva versión vuelve a enredar postura de administración de Boric"
+  autor: David Tralma
+  fecha: 2026-08-18
+  url: https://www.latercera.com/politica/noticia/cable-chino-nueva-version-vuelve-a-enredar-postura-de-administracion-de-boric/
+  notas: "New York Times reveló que la Casa Blanca amenazó con suspender visas a tres funcionarios del gobierno de Boric si el proyecto con China Mobile seguía adelante. El artículo apunta a que la cancelación se debió a esta presión y no por 'seguridad nacional' como comunicó Transportes. Exministro Muñoz insiste en que la razón fue el informe de ciberseguridad de la Embajada de EE.UU. Exsubsecretario Araya dice que no hay contradicción: el decreto quedó en suspenso tras la advertencia. La Moneda usa el antecedente para justificar la suspensión de la transición."
+
+elciudadano-2026-08-17-ffrench-davis-receta-dictadura:
+  tipo: entrevista
+  medio: El Ciudadano
+  titulo: "'Están cometiendo el mismo error del gobierno militar': Ffrench-Davis advierte que Kast repite la receta de la dictadura de bajar impuestos y gasto fiscal"
+  autor: Leonardo Buitrago
+  fecha: 2026-08-17
+  url: https://www.elciudadano.com/economia/estan-cometiendo-el-mismo-error-del-gobierno-militar-ffrench-davis-advierte-que-kast-repite-la-receta-de-la-dictadura-de-bajar-impuestos-y-gasto-fiscal/08/17/
+  notas: "Entrevista a Ricardo Ffrench-Davis (Premio Nacional de Humanidades 2005, profesor emérito U. de Chile). Critica la reducción del impuesto corporativo sin compensaciones de la megarreforma: 'consolidar la escasez de recursos públicos'. Recuerda que la dictadura promedió solo 2,9% de crecimiento con las dos crisis más graves desde los 30. El primer gobierno de la Concertación logró 7,1% con regulación de cuenta de capitales, aumento de impuestos y gasto social. Propone llevar I+D del 0,39% al 2,5% del PIB. Califica a Marcel como quien 'salvó' al gobierno de Boric."
+
+biobiochile-2026-08-18-comision-estallido-social-cierra-informe:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sin identificar instigadores: comisión del 18-O aprueba informe libertario apuntando a Piñera e INDH"
+  autor: Megam Ossandón
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/no-logro-identificar-a-instigadores-libertarios-cierra-comision-estallido-social-apuntando-a-pinera-y-al-indh.shtml
+  notas: "La comisión investigadora del estallido social cerró su trabajo sin identificar instigadores ni rastros de financiamiento. Informe del PNL aprobado 8-4: apunta a Piñera y al INDH. Propuesta para quitarle atribuciones al INDH."
+
+adnradio-2026-08-18-pgu-revision-beneficiarios:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Gobierno pone la lupa sobre la PGU antes del Presupuesto 2027: revisarán lista de beneficiarios"
+  autor: ADN Radio
+  fecha: 2026-08-18
+  url: https://www.adnradio.cl/2026/08/18/gobierno-pone-la-lupa-sobre-la-pgu-antes-del-presupuesto-2027-revisaran-lista-de-beneficiarios/
+  notas: "Gobierno revisará lista de 2,2 millones de beneficiarios de PGU antes del Presupuesto 2027. Gasto actual: US$5.800 millones. Cada punto porcentual de ahorro equivale a US$60 millones. Director de Presupuestos José Pablo Gómez confirmó cruces de información sobre ingresos. No es eliminación sino revisión caso a caso."
+
+contrapoder-2026-08-18-porcel-tv-cpac-red-hungara:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "El nexo entre el dueño de Porcel TV, el presidente del directorio de TVN y el director de la Secom con red húngara investigada por corrupción"
+  autor: Contrapoder Chile
+  fecha: 2026-08-18
+  url: https://contrapoderchile.cl/el-nexo-entre-el-dueno-de-porcel-tv-el-presidente-del-directorio-de-tvn-y-el-director-de-la-secom-con-red-hungara-investigada-por-corrupcion/
+  notas: "Leonardo Prieto (PorcelTV), Felipe Costabal (Secom) y Patricio Dussaillant (TVN) participaron activamente en Political Network for Values (PNFV), corporación que pertenece a CPAC, red global investigada por Hungría por corrupción y uso de recursos públicos de Orbán. En julio 2024, durante la presidencia de Kast en PNFV, se realizó un 'Bootcamp para jóvenes' en Chile donde Prieto y Costabal dictaron talleres sobre 'comunicaciones narrativas' y Dussaillant capacitó en comunicación política. Participaron también Beatriz Hevia, María Jesús Wulf, Luis Silva, Arturo Squella y María Pía Adriasola (fundadora de Cuide Chile)."
+
+biobiochile-2026-07-08-confusam-ocho-detenidos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Con ocho detenidos terminan incidentes tras protesta de la Confusam afuera de La Moneda"
+  autor: BioBioChile
+  fecha: 2026-07-08
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/07/08/reportan-incidentes-y-personas-detenidas-por-manifestaciones-de-confusam-afuera-de-la-moneda.shtml
+  notas: "Cobertura de la protesta de Confusam del 8 de julio de 2026. La presidenta del gremio, Gabriela Flores, explicó que la movilización responde al decreto per cápita pendiente hace seis meses (más de $21.800 millones) y a los recortes a la atención primaria. Fuerzas Especiales de Carabineros usó carros lanza agua y lanza gases; denunció agresión 'brutal' a dirigentes y ocho detenidos."
+
+contrapoder-2026-05-27-flores-jefe-gabinete-aumento-salarial:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "Actual jefe de gabinete de la senadora Camila Flores recibió un aumento salarial de más de $3 millones en menos de un mes"
+  autor: Contrapoder Chile
+  fecha: 2026-05-27
+  url: https://contrapoderchile.cl/actual-jefe-de-gabinete-de-la-senadora-camila-flores-recibio-un-aumento-salarial-de-mas-de-3-millones-en-menos-de-un-mes/
+  notas: "Contrapoder corroboró con los registros de personal de apoyo que Mauricio González Tobar, jefe de gabinete de la senadora Camila Flores, pasó de $450.000 (Cámara de Diputados, marzo) a $3.600.000 mensuales (Senado, abril): un aumento de $3.150.000. Contexto: filtración de la demanda de divorcio culposo de Percy Marín, prohibición del Juzgado de Familia de Viña del Mar y pesquisa de la Corte de Apelaciones de Valparaíso."
+
+theclinic-2026-08-18-quiroz-nueva-alza-combustibles:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Quiroz anuncia nueva alza en el precio de los combustibles: 'Vamos a ir subiendo un poco más paulatino'"
+  autor: Victoria Constanzo
+  fecha: 2026-08-18
+  url: https://www.theclinic.cl/2026/08/18/quiroz-anuncia-nueva-alza-en-el-precio-de-los-combustibles-vamos-a-ir-subiendo-un-poco-mas-paulatino/
+  notas: "Quiroz confirma alza del 20 de agosto: ~30 pesos en bencina y ~90 pesos en diésel. Se debe a precios internacionales subidos por la guerra. Dice que será 'más paulatino' porque 'las finanzas están más ordenadas'."
+
+latercera-2026-03-24-historicas-alzas-bencina-diesel:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Gobierno anuncia históricas alzas de bencinas y de diésel por conflicto en Irán, y activa medidas paliativas"
+  autor: Julio Nahuelhual
+  fecha: 2026-03-24
+  url: https://www.latercera.com/pulso/noticia/gobierno-anuncia-historicas-alzas-de-bencina-y-diesel-por-guerra-en-iran-y-activa-plan-de-medidas-paliativas/
+  notas: "Artículo de referencia sobre el 'bencinazo' de marzo 2026. Bencinas subieron $370 (32%) y diésel $580 (62%) desde el 26 de marzo. MEPCO costaba US$140 millones/semana. Medidas paliativas: congelar tarifas Transantiago, subsidio $100k/mes a taxistas, parafina a $1.000, crédito electromovilidad BancoEstado, suspender exención tributaria a empresas no transportistas."
+
+biobiochile-2026-08-18-quiroz-niega-hermano:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Quiroz niega haber beneficiado proyecto inmobiliario de su hermano: 'Es absolutamente falso'"
+  autor: BioBioChile
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/quiroz-niega-haber-beneficiado-proyecto-inmobiliario-de-su-hermano-es-absolutamente-falso.shtml
+  notas: "Negación de Quiroz tras la investigación de CIPER. Dice que es 'absolutamente falso' haber beneficiado a su hermano."
+
+biobiochile-2026-08-18-cronologia-alto-santorini:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "La cronología del controvertido permiso que benefició a proyecto inmobiliario de hermano de Quiroz"
+  autor: Bárbara Haas
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/08/18/la-cronologia-del-controvertido-permiso-que-beneficio-a-proyecto-inmobiliario-de-hermano-de-quiroz.shtml
+  notas: "Explicativo cronológico del caso Alto Santorini. Detalla la secuencia: constitución Lote 21 SpA (junio 2015), socavón Kandinsky que suspende proyecto (2023), Sernageomin advierte remociones en masa (2024), vencimiento de plazo de observaciones (31 marzo 2026), Sernageomin reitera reparos (28 abril), lobby de Víctor Quiroz con Manuel Millones (8 junio), SEA aprueba favorablemente desestimando Sernageomin (8 julio). Incluye新新新: diputado Jaime Bassa (FA) oficia a organismos, diputado Daniel Manouchehri (PS) anuncia recurso a Contraloría."
+
+biobiochile-2026-08-18-alto-santorini-oposicion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Alto Santorini: oposición activa ofensiva contra Quiroz por proyecto ligado a su hermano"
+  autor: BioBioChile
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/alto-santorini-oposicion-activa-ofensiva-contra-quiroz-por-proyecto-ligado-a-su-hermano.shtml
+  notas: "La oposición politiza el caso Alto Santorini tras la investigación de CIPER."
+
+adnradio-2026-08-18-fast-track-quiroz-hermano:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "El 'fast track' de Hacienda: Plan del ministro Quiroz contra la permisología destrabó millonario negocio de su hermano"
+  autor: ADN Radio
+  fecha: 2026-08-18
+  url: https://www.adnradio.cl/2026/08/18/el-fast-track-de-hacienda-plan-del-ministro-quiroz-contra-la-permisologia-destrabo-millonario-negocio-de-su-hermano/
+  notas: "Resumen detallado del caso: plan de Quiroz contra permisología benefició a Alto Santorini (US$43,6M) de su hermano. Comité sin actas públicas. Sernageomin ignorado. Víctor Quiroz: socio, lobista (10 audiencias) y propietario (12%). Reunión con Manuel Millones un mes antes de aprobación. Chile Transparente advierte sobre tráfico de influencias."
+
+
+
+biobiochile-2026-08-18-hackeo-migraciones:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Hackeo afectó al Servicio Nacional de Migraciones: correo masivo contenía imagen de Augusto Pinochet"
+  autor: "Lindy Sandoval"
+  fecha: 2026-08-18
+  url: "https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/hackeo-afecto-al-servicio-nacional-de-migraciones-correo-masivo-contenia-imagen-de-augusto-pinochet.shtml"
+
+theclinic-2026-08-18-hackeo-migraciones:
+  tipo: web
+  medio: The Clinic
+  titulo: "El insólito hackeo que sufrió el Servicio Nacional de Migraciones: imagen con discurso de Pinochet bloqueó trámites durante cuatro horas"
+  autor: "Marianne Mathieu"
+  fecha: 2026-08-18
+  url: "https://www.theclinic.cl/2026/08/18/el-insolito-hackeo-que-sufrio-el-servicio-nacional-de-migraciones-imagen-con-discurso-de-pinochet-bloqueo-tramites-durante-cuatro-horas/"
+
+theclinic-2026-08-18-mas-pacientes-hora-minsal:
+  tipo: web
+  medio: The Clinic
+  titulo: "Minsal instruye a hospitales atender más pacientes por hora y enciende las alertas del Colegio Médico"
+  autor: "Marianne Mathieu, Max Chávez"
+  fecha: 2026-08-18
+  url: "https://www.theclinic.cl/2026/08/18/mas-pacientes-por-hora-la-formula-del-minsal-para-reducir-las-listas-de-espera-que-encendio-las-alertas-del-colegio-medico-contempla-tiempos-incompatibles-con-una-consulta-de-calidad/"
+
+adnradio-2026-08-18-alcalde-coihueco-formalizado:
+  tipo: web
+  medio: ADN Radio
+  titulo: "Alcalde de Coihueco es formalizado por ocho delitos de carácter sexual contra funcionaria municipal"
+  autor: ""
+  fecha: 2026-08-18
+  url: "https://www.adnradio.cl/2026/08/18/alcalde-de-coihueco-es-formalizado-por-ocho-delitos-de-caracter-sexual-contra-funcionaria-municipal/"
+
+24horas-2026-08-18-alcalde-coihueco-formalizado:
+  tipo: web
+  medio: 24 Horas
+  titulo: "Alcalde de Coihueco es formalizado por delitos sexuales: queda con prohibición de acercarse a la víctima"
+  autor: ""
+  fecha: 2026-08-18
+  url: "https://www.24horas.cl/regiones/zona-centro/nuble/alcalde-de-coihueco-es-formalizado-por-delitos-sexuales"
