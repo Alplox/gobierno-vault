@@ -1,13 +1,13 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-18T17:53:24.655Z",
+  "actualizado": "2026-08-18T23:18:13.091Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
-      "ultima_sync": "2026-08-18T17:51:57.707Z",
-      "articulos": 1712,
-      "nuevos": 0,
+      "ultima_sync": "2026-08-18T23:18:10.672Z",
+      "articulos": 2288,
+      "nuevos": 576,
       "años": 1
     },
     "elclarin": {
@@ -26,9 +26,9 @@
     },
     "adnradio": {
       "nombre": "ADN Radio",
-      "ultima_sync": "2026-08-18T17:52:00.271Z",
-      "articulos": 200,
-      "nuevos": 0,
+      "ultima_sync": "2026-08-18T23:18:13.090Z",
+      "articulos": 300,
+      "nuevos": 100,
       "años": 1
     },
     "factchecking": {
@@ -68,9 +68,9 @@
     },
     "latercera": {
       "nombre": "La Tercera",
-      "ultima_sync": "2026-08-18T17:52:05.789Z",
-      "articulos": 10958,
-      "nuevos": 2,
+      "ultima_sync": "2026-08-18T23:17:45.955Z",
+      "articulos": 11486,
+      "nuevos": 528,
       "años": 1
     },
     "cnnchile": {

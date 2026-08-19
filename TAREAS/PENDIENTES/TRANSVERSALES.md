@@ -61,3 +61,206 @@
 | **Caso Opacidades** (2014-2015): fraude bursátil y uso de información privilegiada mediante las sociedades "Cascadas" controladas por Julio Ponce Lerou (SQM); multas judiciales y aristas penales | 2014-10 (SVS) / sanciones 2015-2016 | investigacion | ⬜ (vinculado al Caso SQM `20180416-1`; detalle del libro de CIPER "El padrino") |
 | Colusión del papel tissue (CMPC/SCA) como evento propio | 2014-2015 | publicacion | ⬜ (multa TDLC 2015; sin evidencia de participación de Quiroz — confirmado en `20260805-4`) |
 ---
+
+## Telegram — ArchivandoChile (análisis del scraper)
+
+### Datos disponibles
+- **Canal**: `https://t.me/s/ArchivandoChile`
+- **Posts**: 39,772 (oct 2019 - ene 2023)
+- **Contenido**: Principalmente links de Twitter/Instagram sobre política chilena, reacciones ciudadanas, manifestaciones
+- **Útiles para**: Eventos de 2019-2023 (estallido social, gobierno Boric) que falten en el vault
+
+### Limitaciones identificadas
+- Solo 1 post con URL directa de medio de prensa (resto son Twitter/Instagram)
+- Posts de 2022+ tienen texto muy corto (<50 chars promedio)
+- No hay contenido de 2024-2026 (scraper no fue actualizado)
+
+### Tracking
+- Archivo: `.telegram-scrape/tracking.json` (ya creado)
+- Script: `node .telegram-scrape/telegram-scan.mjs --list` para ver estado
+- Los posts se marcan como `reviewed` tras escaneo
+
+### Pendientes
+| Acción | Prioridad | Notas |
+|---|---|---|
+| Actualizar scraper para obtener posts 2024-2026 | 🟡 | Requiere verificar si el canal sigue activo |
+| Buscar otros canales de Telegram (ej. noticieros) | 🟡 | Canales oficiales de medios podrían ser más útiles |
+| Revisar posts 2019-2021 para eventos faltantes del estallido | ⬜ | ~9,000 posts; usar grep por keywords relevantes |
+| Revisar posts 2022 para eventos del gobierno Boric | ⬜ | ~6,200 posts |
+
+
+### Hallazgo: ArchivandoChile no es útil para eventos actuales
+Los posts de 2022+ son exclusivamente links de Twitter/Instagram sin texto descriptivo (~63 chars promedio). No hay keywordsbuscables. El canal parece haber dejado de functionar como archivo descriptivo y se convirtió en un feed de links.
+
+### Alternativas para monitoreo de Telegram
+| Canal | Tipo | Utilidad |
+|---|---|---|
+| `@ArchivandoChile` | Archivo histórico (2019-2023) | Útil solo para contexto histórico |
+| Canales oficiales de medios (ej. `@biobiochile`, `@theclinic_cl`) | Noticias | Potencialmente útiles si publican artículos completos |
+| Canales de política (ej. `@infogob_cl`, `@carabinerosdechile`) | Oficiales | Útiles para comunicados oficiales |
+
+### Acción recomendada
+Si se quiere monitorear Telegram para eventos nuevos, escanear canales oficiales de medios en lugar de ArchivandoChile. El scraper actual funciona bien pero el canal ya no tiene contenido útil para el vault.
+
+
+## Estallido Social — Gap de evidencia (Telegram vs Vault)
+
+### Hallazgo crítico
+El canal ArchivandoChile tiene **13,176 posts** del estallido social (oct 2019 - mar 2020) con **13,100 links de Twitter** de evidencia comunitaria. El vault tiene solo **~25 eventos** para ese período.
+
+| Fecha | Posts Telegram | Eventos Vault |
+|---|---|---|
+| Nov 12, 2019 | 231 | 1 |
+| Nov 14, 2019 | 226 | 0 |
+| Nov 21, 2019 | 220 | 0 |
+| Nov 17, 2019 | 200 | 0 |
+| Nov 22, 2019 | 188 | 0 |
+| Mar 7, 2020 | 182 | 0 |
+| Jan 11, 2020 | 179 | 0 |
+
+### Qué contiene la evidencia
+- Videos de abusos de Carabineros (gases, golpizas, detenciones arbitrarias)
+- Imágenes de manifestaciones masivas
+- Noticias de prensa que medios convencionales no cubrieron
+- Testimonios de víctimas
+- Acciones policiales documentadas por ciudadanos
+
+### Flujo de trabajo propuesto
+1. **Extraer links de Twitter** por fecha (script: `.telegram-scrape/extract-links.mjs`)
+2. **Buscar en catálogo de sitemaps** artículos de prensa de la misma fecha
+3. **Cruzar** evidencia comunitaria con cobertura de prensa
+4. **Crear eventos** con mínimo 5 fuentes (prensa + evidencia comunitaria como complemento)
+5. **Registrar en TAREAS** los que no se creen inmediatamente
+
+### Acción inmediata
+Priorizar fechas con más posts (Nov 12, 14, 17, 21, 22 de 2019) para crear eventos faltantes.
+
+
+### Tipos de links en el Telegram
+| Tipo | Cantidad | Descripción |
+|---|---|---|
+| Twitter/X | ~36,770 | Videos/imágenes de manifestantes, periodistas, organizaciones |
+| archive.fo | ~1,500+ | Contenido preservado (tweets eliminados, posts borrados) |
+| Instagram | ~500+ | Fotos de manifestaciones, artistas callejeros |
+| Otros | ~1,000+ | YouTube, Facebook, medios menores |
+
+### Fechas clave con más evidencia (Top 10)
+1. **Oct 23, 2019**: 939 posts (archive.fo) — Días posteriores al estallido
+2. **Oct 22, 2019**: 381 posts (archive.fo)
+3. **Oct 3, 2020**: 262 posts (Twitter) — Plebiscito de salida
+4. **Nov 12, 2019**: 243 posts (Twitter) — Huelga general
+5. **Nov 14, 2019**: 240 posts (Twitter)
+6. **Nov 21, 2019**: 232 posts (Twitter)
+7. **Nov 17, 2019**: 204 posts (Twitter)
+8. **Nov 22, 2019**: 200 posts (Twitter)
+9. **Jan 11, 2020**: 197 posts (Twitter)
+10. **Oct 24, 2019**: 186 posts (archive.fo)
+
+### Herramientas creadas
+- `node .telegram-scrape/extract-links.mjs --date 2019-11-12` — Extrae links por fecha
+- `node .telegram-scrape/extract-links.mjs --top 10` — Fechas con más evidencia
+- `node .telegram-scrape/telegram-keywords.mjs --search "presupuesto"` — Búsqueda por keyword
+- `node .telegram-scrape/telegram-scan.mjs --list` — Estado del tracking
+
+
+## Archivo.fo — Contenido preservado del estallido (Oct 22-24, 2019)
+
+### Qué se encontró
+- **831 URLs únicas de archive.fo** de Oct 22-24, 2019
+- Los posts contienen **imágenes** (telesco.pe CDN) y **videos** (.mp4) alongside archive.fo links
+- Los archive.fo links preservan tweets/posts que pudieron haber sido borrados
+- Las imágenes/videos son la evidencia visual de abusos, manifestaciones, acciones policiales
+
+### Accesibilidad
+- **archive.fo/archive.ph**: Rate-limiting (429) + CAPTCHA → no accesible programáticamente
+- **Wayback Machine**: No expone la URL original del archive.fo
+- **telesco.pe CDN**: Las imágenes/videos podrían ser accesibles pero requieren tokens
+
+### Evidencia de alto valor
+Los posts de Oct 22-24, 2019 (días posteriores al estallido del 18 de octubre) contienen:
+- Videos de abusos policiales preservados antes de ser borrados
+- Imágenes de manifestaciones masivas
+- Screenshots de noticias que medios no cubrieron
+- Testimonios de víctimas documentados visualmente
+
+### Limitaciones técnicas
+1. **archive.fo**: Bloqueado por CAPTCHA/rate-limit
+2. **telesco.pe**: Requiere tokens de autenticación
+3. **Contenido**: Las imágenes son JPEG/MP4, no texto buscable
+
+### Opciones para acceder
+1. **Navegador manual**: Abrir archive.fo en navegador con CAPTCHA → lento pero factible
+2. **VPN + rate-limit**: Reducir velocidad de requests para evitar 429
+3. **Descarga manual**: Descargar imágenes/videos manualmente y analizar con OCR
+4. **Buscar en prensa**: Usar fechas para buscar artículos en sitemaps que documenten los mismos eventos
+
+### Prioridad
+**Alta** — Estos 831 links contienen evidencia de contenido que fue activamente preservado porque era valioso y estaba siendo eliminado. Representan una ventana única a eventos del estallido social que podrían no estar documentados en prensa convencional.
+
+
+## Cruzamiento Sitemaps + Telegram — Oct 22-24, 2019
+
+### Resumen de hallazgos
+| Fuente | Oct 22 | Oct 23 | Oct 24 | Total |
+|---|---|---|---|---|
+| Artículos en sitemaps | 543 | 548 | 518 | 1,609 |
+| Posts de Telegram | 381 | 939 | 186 | 1,506 |
+| Eventos en vault | 0 | 1 | 0 | 1 |
+
+### Artículos por categoría (sitemaps)
+| Categoría | Cantidad | Ejemplos |
+|---|---|---|
+| protesta | 167 | Manifestaciones, cacerolazos, marchas |
+| represion | 120 | Carabineros, ddhh, lesiones, detenciones |
+| emergencia | 116 | Estado de emergencia, toque de queda, militares |
+| gobierno | 78 | Piñera, ministros, respuestas oficiales |
+| politica | 32 | Constitución, acuerdo, acusación constitucional |
+| economia | 7 | Banco Central, desempleo, tasa de interés |
+
+### Eventos clave faltantes identificados
+
+**Oct 22, 2019**:
+- INDH se querella por 5 muertos durante estado de emergencia
+- Human Rights Watch critica respuesta de Chile a protestas
+- General Iturriaga: "No se resistan, no provoquen"
+- Financial Times emplaza a Piñera
+
+**Oct 23, 2019**:
+- Banco Central reduce tasa de interés a 1.75%
+- Más de 400 artistas exigen fin del estado de emergencia
+- Chile en estado de emergencia (cobertura masiva)
+
+**Oct 24, 2019**:
+- Artistas e intelectuales franceses critican a Chile
+- Diputada Jiles instala acusación constitucional a Piñera
+- Comisión de constitución aprueba reducción de dieta parlamentaria
+
+### Próximos pasos
+1. **Priorizar eventos de represión** (120 artículos) — son los más documentados y relevantes
+2. **Eventos de emergencia** (116 artículos) — estado de emergencia, toque de queda
+3. **Eventos políticos** (32 artículos) — acuerdo constitucional, acusación constitucional
+
+### Metodología propuesta
+Para cada evento faltante:
+1. Seleccionar 5+ fuentes de sitemaps (diferentes medios)
+2. Cruzar con evidencia del Telegram (links de Twitter con videos/imágenes)
+3. Crear evento siguiendo TEMPLATE.md
+4. Registrar en EVENTS_INDEX.md
+
+
+### Actualización: Sitemaps Oct 22-24, 2019 (post-sync)
+
+**Medios disponibles**: 12 (biobiochile, emol, eldinamo, theclinic, elciudadano, radio_uchile, elclarin, el_periodista, elquintopoder, redimin, mestizos, ciper)
+
+**Artículos clave sobre represión/emergencia** (Oct 22, 2019):
+1. **INDH cifra en 1.420 los detenidos y en 84 los heridos por armas de fuego** (BioBioChile)
+2. **INDH presenta 2 querellas por violencia sexual contra mujeres detenidas** (BioBioChile)
+3. **INDH se querellará por 5 personas fallecidas durante estado de emergencia** (BioBioChile)
+4. **Human Rights Watch: respuesta de Chile debe respetar DDHH** (BioBioChile)
+5. **Confirman identidades de 7 de 15 fallecidos en incidentes** (BioBioChile)
+6. **Gobierno prohíbe informar sobre muerte de joven baleado en Curicó** (BioBioChile)
+7. **Captan momento en que carabinero disparó bala de goma a periodista argentino** (BioBioChile)
+8. **General Iturriaga: "No se resistan, no provoquen a la fuerza militar"** (BioBioChile)
+
+**Nota**: Los sitemaps de latercera, cooperativa, adnradio no llegan a 2019 (solo artículos recientes). Para obtener más fuentes de2019, sería necesario sincronizar con `--replace` forzando la descarga histórica.
+

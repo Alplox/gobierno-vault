@@ -1,4 +1,8 @@
 people:
+  fernando_cerimedo:
+    nombre: Fernando Cerimedo
+    cargo: Asesor político (Argentina)
+    notas: "Argentino, asesor del presidente Javier Milei y referente de desinformación en Chile durante el proceso constitucional. Detenido en Bolivia en agosto de 2026 por ataque con sicarios contra su expareja."
   ricardo_ffrench_davis:
     nombre: Ricardo Ffrench-Davis
     cargo: Profesor emérito de Economía, Universidad de Chile
@@ -9922,7 +9926,19 @@ people:
     nombre: Wilson Palma Jelves
     cargo: Alcalde de Coihueco (formalizado)
     notas: "Formalizado el 18 de agosto de 2026 por ocho delitos de carácter sexual contra una funcionaria municipal. Hechos investigados entre febrero y junio de 2025. Juzgado de Garantía de Chillán decretó prohibición de acercamiento."
+  rodrigo_ubilla:
+    nombre: Rodrigo Ubilla
+    cargo: Subsecretario del Interior
+    notas: "Subsecretario del Interior durante el estallido social. Sostuvo encontrón con periodistas por cifras de fallecidos el 22 de octubre de 2019."
 organizations:
+  cut_chile:
+    nombre: Central Unitaria de Trabajadores
+    tipo: sindicato
+    notas: "Central sindical chilena, convocante de la huelga general del 12 de noviembre de 2019."
+  red_de_emergencia_ong:
+    nombre: Red de Emergencia ONG
+    tipo: red_social
+    notas: "Organización no gubernamental de emergencia, difunde alertas y imágenes de desastres naturales en Chile."
   quinenco:
     nombre: Quiñenco S.A.
     tipo: empresa_privada
@@ -14310,6 +14326,10 @@ organizations:
     nombre: Municipalidad de Coihueco
     tipo: municipalidad
     notas: "Comuna de la provincia de Diguillín, Ñuble. Su alcalde Wilson Palma Jelves fue formalizado por delitos sexuales en agosto de 2026."
+  human_rights_watch:
+    nombre: Human Rights Watch
+    tipo: organismo_ddhh
+    notas: "Organización internacional de derechos humanos. En octubre de 2019 emitió comunicado exigiendo al gobierno chileno que respete los DDHH durante el estallido social."
 cifras:
   pase_cultural_undurraga:
     nombre: Presupuesto del Pase Cultural bajo el gobierno de Kast
