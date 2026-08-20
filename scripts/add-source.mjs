@@ -318,6 +318,7 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'quepasaaraucania.cl': 'quepasaaraucania',
   'lafontana.cl': 'lafontana',
   'quirihuenoticias.cl': 'quirihue_noticias',
+  'gob.cl': 'gob',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -356,6 +357,7 @@ const CATALOG_MEDIO_NAMES = {
   quepasaaraucania: 'Qué Pasa Araucanía',
   lafontana: 'La Fontana',
   quirihue_noticias: 'Quirihue Noticias',
+  gob: 'Gobierno de Chile',
 };
 
 function catalogExists() {

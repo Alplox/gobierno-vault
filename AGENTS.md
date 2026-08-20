@@ -462,6 +462,55 @@ Cuando descubras algo no documentado aqui:
 | Wikilink roto | `remarkWikiLinks.mjs` (resolve fallback) |
 | Scripts de sitemaps | `scripts/sync-sitemaps.mjs`, `scripts/sitemaps-index.mjs`, `scripts/sitemaps-backup.mjs`, sección "Catálogo de sitemaps" de este archivo |
 
+<!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->
+
+### Medios registrados (generado automáticamente)
+
+> Esta sección se genera con `pnpm run sitemaps-index` a partir del registro `MEDIA`
+> de `scripts/sync-sitemaps.mjs` y de `sitemaps/_manifest.json`. NO editar a mano.
+
+| Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
+|---|---|---|---|---|---|
+| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 300 | 1 |
+| `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.927 | 4 |
+| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.232 | 10 |
+| `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
+| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.126 | 16 |
+| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 2.288 | 1 |
+| `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
+| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 200 | 1 |
+| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.967 | 18 |
+| `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.429 | 4 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.749 | 22 |
+| `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.721 | 10 |
+| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.301 | 17 |
+| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 201 | 1 |
+| `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
+| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.368 | 27 |
+| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.148 | 7 |
+| `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
+| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.142 | 7 |
+| `gob` | Gobierno de Chile | `www.gob.cl/sitemap-articles.xml` | — | 4 | 1 |
+| `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
+| `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 11.486 | 1 |
+| `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
+| `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
+| `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 133 | 1 |
+| `quepasaaraucania` | Qué Pasa Araucanía | `quepasaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.270 | 3 |
+| `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
+| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.061 | 18 |
+| `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 298.864 | 12 |
+| `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.987 | 7 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.132 | 8 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.072 | 19 |
+
+Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
+
+<!-- /AUTO-GENERATED-SITEMAPS-MEDIOS -->
 
 <!-- AUTO-GENERATED-STATS -->
 
@@ -469,51 +518,51 @@ Cuando descubras algo no documentado aqui:
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 397
+**Total de eventos:** 419
 
-**Cobertura de fuentes:** 204 de 397 eventos con 3+ fuentes (193 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 218 de 419 eventos con 3+ fuentes (201 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 303
+- 2026: 316
 - 2025: 15
 - 2024: 10
 - 2023: 14
 - 2022: 9
 - 2021: 6
 - 2020: 22
-- 2019: 13
+- 2019: 22
 - 2017: 1
 - 2015: 2
 - 2010: 1
 - 2009: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (126)
-- Justicia (98)
-- Economia (95)
-- Defensa y seguridad (70)
-- Administración pública (61)
-- Derechos humanos (46)
-- Proceso legislativo (41)
+- Politica (140)
+- Justicia (105)
+- Economia (100)
+- Defensa y seguridad (71)
+- Administración pública (65)
+- Derechos humanos (53)
+- Proceso legislativo (43)
 - Emergencia y catástrofes (39)
 - Gobierno y gestion presidencial (37)
-- Finanzas publicas (35)
+- Finanzas publicas (36)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (75)
-- publicacion (71)
-- resultado (57)
-- investigacion (44)
+- accion (80)
+- publicacion (74)
+- resultado (61)
+- investigacion (49)
 - anuncio (35)
-- reaccion (25)
-- declaracion (23)
-- fallo_judicial (22)
-- votacion (14)
+- reaccion (26)
+- declaracion (26)
+- fallo_judicial (24)
+- votacion (15)
 - decreto (9)
 
 **Entidades registradas:**
-- Personas: 1512
-- Organizaciones: 903
-- Cifras: 979
-- Fuentes: 3521
+- Personas: 1534
+- Organizaciones: 908
+- Cifras: 984
+- Fuentes: 3653
 - Temas: 74

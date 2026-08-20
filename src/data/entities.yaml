@@ -5,7 +5,15 @@ people:
   fernando_cerimedo:
     nombre: Fernando Cerimedo
     cargo: Asesor político (Argentina)
-    notas: "Argentino, asesor del presidente Javier Milei y referente de desinformación en Chile durante el proceso constitucional. Detenido en Bolivia en agosto de 2026 por ataque con sicarios contra su expareja."
+    notas: "Argentino, fundador de La Derecha Diario, asesor del presidente Javier Milei y referente de desinformación en Chile durante los plebiscitos constitucionales (encuesta Numen y campaña 'Facilitadores Constitucionales'). Detenido en Bolivia en agosto de 2026 por ataque con sicarios contra su expareja, la abogada Nadia Beller. Investigado en Brasil por coordinar desinformación electoral a favor de Bolsonaro."
+  nadia_beller:
+    nombre: Nadia Beller
+    cargo: Abogada y activista (Bolivia)
+    notas: "Abogada y activista boliviana, expareja de Fernando Cerimedo. Sufrió un ataque con sicarios en Santa Cruz de la Bolivia el 18 de agosto de 2026, recibiendo más de 4 impactos de bala. Desde el hospital denunció que el ataque estaría relacionado con información que posee sobre presuntos negociados del gobierno de Rodrigo Paz, y que Cerimedo tendría influencia sobre un grupo policial de élite. Solicitó protección de la CIDH. Estaría embarazada de 4 meses de Cerimedo al momento del ataque."
+  enrique_garcia_arancibia:
+    nombre: Enrique García Arancibia
+    cargo: Abogado
+    notas: "Abogado conservador chileno, socio local de Fernando Cerimedo en Chile a través de la empresa Numen SpA. Apareció como el rostro legal de Numen durante el plebiscito de salida de 2022, participando en el proyecto 'Facilitadores Constitucionales' que difundió información falsa sobre la propuesta constitucional."
   ricardo_ffrench_davis:
     nombre: Ricardo Ffrench-Davis
     cargo: Profesor emérito de Economía, Universidad de Chile
@@ -294,6 +302,10 @@ people:
     nombre: Ángel Valencia
     cargo: Fiscal Nacional de Chile
     notas: "Fiscal Nacional de Chile. En julio de 2026 resolvió que la Fiscalía Centro Norte asuma la investigación por la denuncia del Servicio Electoral (Servel) contra el Partido de la Gente (PDG) por gastos no acreditados, tras el análisis de la Unidad Especializada en Anticorrupción. Un reportaje de Fast Check (agosto 2026) reveló que el Ministerio Público pagó en 2023 más de $25 millones en acuerdos con exfuncionarios que denunciaron despidos por 'venganzas' suyas."
+  paola_castiglione:
+    nombre: Paola Castiglione
+    cargo: Fiscal de la Unidad Regional Anticorrupción de Valparaíso
+    notas: "Fiscal apartada del caso Camila Flores (fraude al fisco) el 17-ago-2026 tras denuncia de filtraciones de la indagatoria por parte de la defensa de la senadora. La Fiscalía atribuyó la salida a 'distribución interna de cargas'."
   renzo_aste:
     nombre: Renzo Aste
     cargo: Exabogado del Ministerio Público
@@ -1261,6 +1273,11 @@ people:
         desde: 2026-04
     organizacion: ministerio_justicia
     notas: "Abogada de la Pontificia Universidad Católica de Chile (ingresó 2019; juró el 10-abr-2026). Vicepresidenta interna del centro de alumnos de Derecho UC en 2021; procuradora en DLA Piper Chile (2023, Mercados Regulados y Energía); práctica profesional en la Oficina de DDHH de la Corporación de Asistencia Judicial Metropolitana; litigios y resolución de controversias en SLBZ+ Abogados (Schenke Brancoli) desde sep-2025. Ingresó en abril de 2026 al gabinete del Ministerio de Justicia como asesora por encargo del ministro Fernando Rabat, y en agosto de 2026 quedó a cargo de coordinar e impulsar la Reforma Procesal Civil (reemplazar el Código de Procedimiento Civil de 1903), lo que La Segunda describió como una suerte de 'gerenta' de la reforma y generó críticas por su escasa experiencia (ver evento 20260814-5)."
+  camila_perez:
+    nombre: Camila Pérez
+    cargo: Asesora del Servicio Nacional de Migraciones
+    organizacion: sermig
+    notas: "Abogada de la Universidad San Sebastián, titulada en marzo de 2026. Militante de RN, exvicepresidenta de la Juventud RN. Ingresó a Migraciones en abril de 2026 como 'experta' (contrata grado 8), un mes después de jurar. Remuneración bruta $2,77M, bonificaciones la llevaron a $4,3M en junio. Práctica previa en el propio Migraciones. Candidata a concejala por Romeral en 2024. Cuarto caso documentado de la 'generación sin currículum' del gobierno de Kast."
   pilar_hazbun:
     nombre: Pilar Hazbún
     cargo: Jefa de la División Jurídica del Ministerio de Justicia
@@ -1683,8 +1700,11 @@ people:
   peter_thiel:
     nombre: Peter Thiel
     cargo: Empresario tecnológico
-    notas: Cofundador de PayPal y Palantir Technologies. Inversionista en IA, datos
-      y vigilancia. Reunión reservada con Kast en La Moneda (mayo 2026).
+    notas: "Cofundador de PayPal y Palantir Technologies. Inversionista en IA, datos
+      y vigilancia. Reunión reservada con Kast en La Moneda (mayo 2026). El exministro
+      José Piñera aclaró en una carta a El Mostrador (17-ago-2026) que su reunión con
+      Thiel fue para conversar sobre el sistema de capitalización chileno y que no
+      tiene relación con sus actividades empresariales (evento 20260817-23)."
   johannes_kaiser:
     nombre: Johannes Kaiser
     cargo: Diputado (PNL)
@@ -1961,8 +1981,11 @@ people:
     notas: "Ministro del Trabajo y Previsión Social subrogante (S) del segundo gobierno de Piñera. Firmó el decreto de promulgación de la Ley 21.248 (retiro del 10% de los fondos de pensiones, julio 2020)."
   jose_pinera:
     nombre: José Piñera
-    notas: Exministro, creador del sistema de AFP y del Código Minero. Reunión
-      reservada con Thiel en Santiago.
+    notas: "Exministro del Trabajo de Augusto Pinochet, creador del sistema de AFP y
+      del Código Minero. Reunión reservada con Thiel en Santiago. El 17-ago-2026
+      aclaró en una carta a El Mostrador que la reunión fue pedida por Thiel para
+      conocer el sistema de capitalización chileno y que no tiene relación con sus
+      actividades empresariales (evento 20260817-23)."
   gonzalo_velasquez:
     nombre: Gonzalo Velásquez
     cargo: Activista del Movilh
@@ -3831,6 +3854,10 @@ people:
     nombre: Dorothy Pérez
     cargo: Contralora General de la República
     notas: Requerimiento a Secom por publicaciones Estado quebrado.
+  carolina_paulsen:
+    nombre: Carolina Paulsen
+    cargo: Directora Nacional de la ASEMUCH
+    notas: Presidenta de la Federación de Asociaciones de Funcionarios Municipales de la Región del Maule.
   antonio_orellana:
     nombre: Antonio Orellana
     cargo: Diputado (PDG)
@@ -5387,6 +5414,34 @@ people:
     cargo: Gerente de Intelligence y economista conductual de CORPA
     organizacion: corpa
     notas: "Gerente de Intelligence y economista conductual de la consultora CORPA. Comentó el estudio de victimización del bimestre mayo-junio 2026 de la Región Metropolitana."
+  sergio_lehmann:
+    nombre: Sergio Lehmann
+    cargo: Economista jefe del BCI
+    notas: "Economista jefe del Banco de Crédito e Inversiones (BCI). Proyectó crecimiento del PIB 2026 en 1,2%."
+  felipe_alarcon:
+    nombre: Felipe Alarcón
+    cargo: Economista de Euroamerica
+    notas: "Economista de la corredora de bolsa Euroamerica. Proyectó crecimiento del PIB 2026 entre 1,1% y 1,2%."
+  andres_perez:
+    nombre: Andrés Pérez
+    cargo: Economista jefe de Itaú Chile
+    notas: "Economista jefe del banco Itaú en Chile. Proyectó crecimiento del PIB 2026 en 1,3% con sesgo a la baja."
+  rodrigo_montero:
+    nombre: Rodrigo Montero
+    cargo: Decano Facultad de Administración y Negocios, U. Autónoma
+    notas: "Decano de la Facultad de Administración y Negocios de la Universidad Autónoma. Proyectó crecimiento del PIB 2026 en 1,0%."
+  alex_fernandez_gemines:
+    nombre: Alejandro Fernández
+    cargo: Economista de Gemines
+    notas: "Economista de la consultora Gemines. Bajó su proyección de PIB 2026 de 1,2% a 0,9%. Apodo 'Alex' para distinguirlo de homónimos."
+  jorge_selaive:
+    nombre: Jorge Selaive
+    cargo: Economista jefe de Scotiabank
+    notas: "Economista jefe del Banco Scotiabank en Chile. Calificó las cuentas nacionales como 'del terror' y señaló que es 'muy difícil crecer 1%' en 2026."
+  hermann_gonzalez:
+    nombre: Hermann González
+    cargo: Coordinador macroeconómico de Clapes-UC, socio de Valtin Consulting
+    notas: "Coordinador macroeconómico del Centro de Estudios Públicos de la UC y socio de Valtin Consulting. Proyectó recuperación del crecimiento en la segunda parte del año."
   marcelo_pena:
     nombre: Marcelo Peña
     cargo: Académico de la Universidad Central
@@ -9933,11 +9988,44 @@ people:
     nombre: Rodrigo Ubilla
     cargo: Subsecretario del Interior
     notas: "Subsecretario del Interior durante el estallido social. Sostuvo encontrón con periodistas por cifras de fallecidos el 22 de octubre de 2019."
+  valentina_apablaza:
+    nombre: Valentina Apablaza
+    cargo: Investigadora del Observatorio del Contexto Económico (OCEC-UDP)
+    organizacion: ocec_udp
+    notas: "Economista e investigadora del OCEC de la Universidad Diego Portales. Ha emitido análisis sobre el PIB, la recesión técnica y el mercado laboral chileno durante 2026."
+  ljubica_kurtovic:
+    nombre: Ljubica Kurtovic
+    cargo: Alcaldesa de Tocopilla
+    notas: "Alcaldesa independiente de Tocopilla. Coordinó evacuaciones durante el aluvión del 17-ago-2026; quedó atrapada en el sector. Señaló que solo la mitad de las obras de mitigación post-aluvión 2015 se habían implementado."
+  ricardo_diaz:
+    nombre: Ricardo Díaz
+    cargo: Gobernador de la Región de Antofagasta
+    notas: "Gobernador regional. Informó que el 60% de las casas de Tocopilla estaban afectadas tras el aluvión del 17-ago-2026 y que 1.086 personas estaban albergadas en la región."
+  martin_krauss:
+    nombre: Martín Krauss Valdés
+    cargo: Empresario
+    notas: "Empresario de familiaRotter & Krauss (ópticas). Pareja de Mara Sedini (exministra). Aparece como accionista minoritario de DN Medcorp SpA (Dispensario Nacional), vinculada a la Operación Imperio Ámsterdam."
+  camilo_huerta:
+    nombre: Camilo Huerta
+    cargo: Músico
+    notas: "Músico chileno detenido y formalizado en agosto de 2026 por presunto tráfico de drogas en el marco de la Operación Imperio Ámsterdam (Fiscalía Aysén, OS7 Carabineros). Vinculado a dispensarios de cannabis."
+  orlando_vargas:
+    nombre: Orlando Vargas Pizarro
+    cargo: Alcalde de Arica
+    notas: "Alcalde de Arica (RN). Su hermano Ricardo Vargas fue detenido en Perú por tráfico ilícito de migrantes en agosto de 2026. En 1993 ambos fueron detenidos por tráfico de drogas en Iquique; solo Ricardo fue condenado."
+  ricardo_vargas:
+    nombre: Ricardo Vargas Pizarro
+    cargo: Comerciante
+    notas: "Hermano del alcalde de Arica, Orlando Vargas. Detenido en el Complejo Fronterizo Santa Rosa (Perú) el 18 de agosto de 2026 por tráfico ilícito de migrantes agravado. Transportaba 2 venezolanos y 1 niño peruano. En 1993 fue condenado por tráfico de estupefacientes."
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
     tipo: sindicato
     notas: "Central sindical chilena, convocante de la huelga general del 12 de noviembre de 2019."
+  capredena:
+    nombre: Capredena
+    tipo: organismo_estado
+    notas: "Caja de Previsión de la Defensa Nacional. Entidad estatal que administra pensiones y beneficios previsionales de las Fuerzas Armadas y de Orden. Ha sido cuestionada por pagar pensiones millonarias a condenados por violaciones a los derechos humanos en ex Punta Peuco."
   red_de_emergencia_ong:
     nombre: Red de Emergencia ONG
     tipo: red_social
@@ -10037,6 +10125,10 @@ organizations:
     nombre: Cámara de Comercio Automotriz de Chile (CAVEM)
     tipo: gremio
     notas: "Gremio del comercio automotriz; publica el informe estadístico mensual de inscripciones y transferencias de vehículos."
+  federacion_medios:
+    nombre: Federación de Medios de Comunicación Social
+    tipo: gremio
+    notas: "Organización que agrupa medios de prensa chilenos. Celebró cambio de mando el 18-ago-2026 en El Mercurio (Vitacura), con presencia de Kast y conmemoración de 25 años de la Ley de Prensa. Actual presidente: José Tomás Santa María (ANP y director del DF)."
   cenco_malls:
     nombre: Cenco Malls
     tipo: empresa
@@ -17960,6 +18052,14 @@ cifras:
     nombre: Tasa de reemplazo de quienes cotizaron casi 40 años
     unidad_default: porcentaje
     notas: "Las personas que jubilaron en 2025 cotizando casi 40 años obtuvieron una tasa de reemplazo de solo el 29% sobre su salario promedio, según Fundación Sol (evento 20260810-43)."
+  paises_sistema_capitalizacion:
+    nombre: Países que han adoptado el sistema de capitalización individual
+    unidad_default: paises
+    notas: "Cifra citada por el exministro José Piñera en su carta a El Mostrador (17-ago-2026): el sistema de capitalización chileno se ha exportado a 52 países. Es una afirmación del autor, no un conteo verificado por el medio (evento 20260817-23)."
+  ingresos_proyectados_dn_medcorp:
+    nombre: Meta de ingresos anuales proyectada por la cúpula de DN Medcorp SpA
+    unidad_default: millones_de_dolares
+    notas: "Según una escucha de la investigación de la Operación Imperio Ámsterdam, Andrés Astorga Rodríguez (controlador del 51% de DN Medcorp SpA, sociedad matriz del Dispensario Nacional) proyecta llegar a US$20 millones anuales en dos años. La sociedad registró ingresos por $8.089 millones (~US$9 millones). Es la meta declarada por un imputado, no un conteo verificado (evento 20260819-1)."
   rentabilidad_afp_decada_actual:
     nombre: Rentabilidad real de los fondos de AFP en la década actual
     unidad_default: porcentaje
@@ -18199,3 +18299,15 @@ cifras:
     nombre: Estaciones del Metro incendiadas durante el estallido social
     unidad_default: estaciones
     notas: "25 estaciones del Metro de Santiago incendiadas durante el estallido social de 2019, de las cuales 7 fueron completamente destruidas (CIPER, 24-oct-2019; hilo r/chile, 23-feb-2026)."
+  municipalidad_de_cañete:
+    nombre: Municipalidad de Cañete
+    tipo: municipalidad
+    notas: "Municipalidad que realizó la consulta sobre honorarios y Día del Funcionario Municipal."
+  asemuch:
+    nombre: Confederación Nacional de Funcionarios Municipales de Chile (ASEMUCH)
+    tipo: gremio
+    notas: "Confederación que agrupa a funcionarios municipales de Chile. Directora nacional: Carolina Paulsen."
+  amuch:
+    nombre: Asociación de Municipalidades de Chile (AMUCH)
+    tipo: gremio
+    notas: "Asociación que agrupa a municipalidades de Chile. Director ejecutivo: Andrés Chacón."

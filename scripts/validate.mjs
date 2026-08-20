@@ -74,6 +74,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Salud',
   'Ministerio de Salud (Minsal)',
   'Ministerio de Educación',
+  'Fast Check CL',
   'Ministerio del Interior',
   'Subsecretaria del Interior',
   'Subsecretaría del Interior',

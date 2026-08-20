@@ -30382,3 +30382,541 @@ eldinamo-2019-11-12-congreso-suspende:
   autor: ""
   fecha: 2019-11-12
   url: "https://www.eldinamo.cl/pais/2019/11/12/congreso-suspende-todas-sus-actividades-en-medio-de-paro-nacional/"
+
+emol-2026-08-18-quiroz-niega-recesion:
+  tipo: noticia
+  medio: Emol
+  titulo: "Ministro Quiroz dice que caída del PIB es 'un dato del pasado' y niega recesión técnica"
+  autor: Tomás Molina
+  fecha: 2026-08-18
+  url: https://www.emol.com/noticias/Economia/2026/08/18/1208873/quiroz-recesion-tecnica.html
+  notas: "Quiroz niega recesión técnica argumentando que la variación desestacionalizada fue 0% (no negativa); citó a Apablaza y Vergara. También confirmó alza de ~$30 bencina y ~$90 diésel para el 20 de agosto."
+
+latercera-2026-08-18-quiroz-niega-recesion-diesel:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Quiroz y la coyuntura económica: dice que no hay recesión técnica y adelanta alza en torno a $90 en precio del diésel"
+  autor: David Nogales
+  fecha: 2026-08-18
+  url: https://www.latercera.com/pulso/noticia/quiroz-no-recesion-tecnica-y-precio-diesel-subira-90-pesos/
+  notas: "Quiroz 'Es un dato del pasado' sobre PIB; niega recesión técnica; adelanta alza combustibles. Cita a Daniel Mas sobre desafíos estructurales y operacionales."
+
+latercera-2026-08-18-vergara-recesion:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Vergara dice que 'estuvimos' en recesión, 'pero que ya salimos', y alerta que es 'muy difícil' lograr meta de empleo del gobierno"
+  autor: Emiliano Carrizo
+  fecha: 2026-08-18
+  url: https://www.latercera.com/pulso/noticia/vergara-dice-que-estuvimos-en-recesion-pero-que-ya-salimos-y-alerta-que-es-muy-dificil-lograr-meta-de-empleo-del-gobierno/
+  notas: "Vergara (expresidente BC, CEP) confirma recesión técnica pero la desdramatiza; Imacec 2,4% es 'modesto'; la meta de desempleo 6,5% es 'muy difícil'; expectativas cayeron tras bencinazo de marzo."
+
+emol-2026-08-18-mas-reacciona-pib:
+  tipo: noticia
+  medio: Emol
+  titulo: "Biministro Mas afirma que el Gobierno 'acelerará el paso' para impulsar el crecimiento tras caída del PIB"
+  autor: Martín Garretón
+  fecha: 2026-08-18
+  url: https://www.emol.com/noticias/Economia/2026/08/18/1208815/mas-reacciona-al-pib.html
+  notas: "Daniel Mas atribuye retroceso a desafíos estructurales y operacionales en minería y pesca; sectores no mineros crecieron; gobierno acelerará inversión."
+
+theclinic-2026-08-18-kast-iliberal-defensa:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "'¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?': La defensa de Kast ante la etiqueta de liderar un gobierno 'iliberal'"
+  autor: Jorge Palacios
+  fecha: 2026-08-18
+  url: https://www.theclinic.cl/2026/08/18/alguien-podria-decir-que-he-abusado-de-alguna-facultad-para-socavar-la-democracia-la-defensa-de-kast-ante-la-etiqueta-de-liderar-un-gobierno-iliberal/
+  notas: "Kast en Federación de Medios: niega ser iliberal, defiende respeto a resultados electorales y libertad de prensa; 'se van generando especies de mitos'."
+
+emol-2026-08-18-kast-iliberal-columnas:
+  tipo: noticia
+  medio: Emol
+  titulo: "Kast aborda columnas que tildan su gobierno de 'iliberal': 'Se van generando especies de mitos y eso va quedando'"
+  autor: Daniela Toro
+  fecha: 2026-08-18
+  url: https://www.emol.com/noticias/Nacional/2026/08/18/1208804/kast-responde-columnas-libertad-prensa.html
+  notas: "Kast en ceremonia Federación de Medios (El Mercurio, Vitacura): '¿Alguna vez he abusado de alguna facultad para socavar el régimen democrático? No.' Defiende libertad de prensa y critica el registro de medios."
+
+latercera-2026-08-18-kast-federacion-medios:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Con presencia de Kast: Federación de Medios de Comunicación Social realiza cambio de mando y conmemora 25 años de Ley de Prensa"
+  autor: Redacción La Tercera
+  fecha: 2026-08-18
+  url: https://www.latercera.com/nacional/noticia/con-presencia-de-kast-federacion-de-medios-de-comunicacion-social-realiza-cambio-de-mando-y-conmemora-25-anos-de-ley-de-prensa/
+  notas: "Ceremonia de cambio de mando de la Federación de Medios en El Mercurio (Vitacura); Kast y ministros presentes; José Tomás Santa María asume como presidente."
+
+latercera-2026-08-18-kast-prensa-trolls:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Kast releva el papel de la prensa y advierte sobre el daño de los 'trolls' en redes sociales"
+  autor: Helen Mora
+  fecha: 2026-08-18
+  url: https://www.latercera.com/nacional/noticia/kast-releva-el-papel-de-la-prensa-y-advierte-sobre-el-dano-de-los-trolls-en-redes-sociales/
+  notas: "Kast: 'compromiso irrestricto con la libertad de expresión'; condena amedrentamiento digital; critica trolls de 'uno y otro lado'; niega censura a medios."
+
+theclinic-2026-08-19-tocopilla-cifras-emergencia:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Las cifras que deja la emergencia que volvió a golpear al norte del país: 580 damnificados, 1.166 albergados y más de mil viviendas dañadas"
+  autor: Marianne Mathieu
+  fecha: 2026-08-19
+  url: https://www.theclinic.cl/2026/08/19/las-cifras-que-deja-la-emergencia-que-volvio-a-golpear-al-norte-del-pais-580-damnificados-1-166-albergados-y-mas-de-mil-viviendas-danadas/
+  notas: "Balance Senapred 19-ago: 580 damnificados, 1.166 albergados, 22 aislados, 3 lesionados, 1 fallecido. 182 viviendas daño mayor, 892 daño menor. 4.714 clientes sin luz. Hospital Tocopilla con capacidad reducida (unidad de diálisis inundada)."
+
+emol-2026-08-19-tocopilla-alcaldesa-inversion:
+  tipo: noticia
+  medio: Emol
+  titulo: "Alcaldesa de Tocopilla apunta a obras pendientes tras emergencia: 'Falta que se implemente e invierta la mitad'"
+  autor: Sofía Campos
+  fecha: 2026-08-19
+  url: https://www.emol.com/noticias/Nacional/2026/08/19/1208939/alcaldesa-tocopilla-inversion-emergencias-comuna.html
+  notas: "Alcaldesa Kurtovic: 60% de Tocopilla afectada; solo la mitad de obras de mitigación post-aluvión 2015 implementadas; piscinas aluvionales contuvieron el daño; critica centralismo en inversión histórica."
+
+emol-2026-08-19-alexis-sanchez-kast-tocopilla:
+  tipo: noticia
+  medio: Emol
+  titulo: "'Confío en ud Presidente, si necesita ayuda estoy disponible': El mensaje de Alexis Sánchez a Kast por emergencia en Tocopilla"
+  autor: Leonardo Vallejos
+  fecha: 2026-08-19
+  url: https://www.emol.com/noticias/Nacional/2026/08/19/1208930/mensaje-alexis-sanchez-kast-tocopilla.html
+  notas: "Alexis Sánchez (oriundo de Tocopilla) ofreció ayuda a Kast vía Instagram; Kast viajó a Antofagasta; gobernador Díaz: 60% casas afectadas, 1.086 personas albergadas en región."
+
+emol-2026-08-17-caso-flores-apartan-fiscal:
+  tipo: noticia
+  medio: Emol
+  titulo: "Fiscalía aparta a persecutora que indagaba a senadora Flores (RN) en medio de denuncias por filtraciones"
+  autor: Sofía Campos
+  fecha: 2026-08-17
+  url: https://www.emol.com/noticias/Nacional/2026/08/17/1208721/caso-flores-apartan-fiscal-filtraciones.html
+  notas: "Fiscal Paola Castiglione apartada de caso Flores (fraude al fisco) tras denuncia de filtraciones de la indagatoria por parte de la defensa. Fiscalía dice que es 'distribución interna de cargas'. Abogado Donoso: tiene 'registros fotográficos y audiovisuales' de filtraciones."
+
+emol-2026-08-11-militares-condenados-trafico-colchane:
+  tipo: noticia
+  medio: Emol
+  titulo: "Primera condena en la historia contra militares por tráfico de migrantes: Ayudaron a una mujer a cruzar por Colchane"
+  autor: M. Silva
+  fecha: 2026-08-11
+  url: https://www.emol.com/noticias/Nacional/2026/08/11/1208159/militares-condenados-trafico-migrantes-colchane.html
+  notas: "Primera condena de militares por tráfico de migrantes en Chile. Dos exfuncionarios del Ejército (O.E.L.P. y D.N.M.M.) condenados por coordinar vía WhatsApp el ingreso irregular de una venezolana por paso no habilitado de Colchane (mayo 2025). Fiscal Karem Gómez; querellantes CDE e INDH. Pena a dictaminar 17-ago."
+
+latercera-2026-08-11-militares-condenados-trafico-colchane:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Condenan a dos exmilitares por tráfico de migrantes en la frontera de Colchane"
+  autor: José Navarrete
+  fecha: 2026-08-11
+  url: https://www.latercera.com/nacional/noticia/condenan-a-dos-exmilitares-por-trafico-de-migrantes-en-la-frontera-de-colchane/
+  notas: "Sargento segundo D.N.M.M. coordinó vía telefónica con la víctima R.C.P.V. (venezolana) el ingreso ilegal desde Bolivia en la noche del 14-may-2025. Análisis de teléfonos confirmó coordinación. Tribunal Oral de Iquique condenó por tráfico ilícito de migrantes."
+
+theclinic-2026-08-18-camara-prohibe-carreras-perros:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Cámara aprueba proyecto que prohíbe las carreras de perros y rechaza propuesta que buscaba regularlas"
+  autor: Pablo Serey
+  fecha: 2026-08-18
+  url: https://www.theclinic.cl/2026/08/18/camara-aprueba-proyecto-que-prohibe-las-carreras-de-perros-y-rechaza-propuesta-que-buscaba-regularlas/
+  notas: "80 a favor, 41 en contra, 7 abstenciones. Proyecto de regulación rechazado: 50 a favor, 68 en contra, 10 abstenciones. Volverá a Comisión de Medioambiente. Prohibición de cualquier raza. Penas: presidio menor grado medio, multas 20-40 UTM, inhabilidad perpetua tenencia."
+
+eldinamo-2026-08-19-prohibicion-galgos-sanciones:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Prohibición a las carreras de galgos: las duras sanciones que recibirán quienes infrinjan la ley"
+  autor: Redacción El Dínamo
+  fecha: 2026-08-19
+  url: https://www.eldinamo.cl/pais/2026/08/19/prohibicion-a-las-carreras-de-galgos-las-duras-sanciones-que-recibiran-quienes-infrinjan-la-ley/
+  notas: "Detalla sanciones: presidio menor grado medio, multas 20-40 UTM, inhabilidad perpetua. Multas 5-20 UTM para quienes promuevan o difundan. Abarca cualquier raza para evitar vacíos legales."
+
+adnradio-2026-08-18-galgos-trampa-votacion:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Carreras de galgos: diputado acusa supuesta 'trampa' que podría complicar la votación del proyecto"
+  autor: Redacción ADN Radio
+  fecha: 2026-08-18
+  url: https://www.adnradio.cl/2026/08/18/carreras-de-galgos-diputado-acusa-supuesta-trampa-que-podria-complicar-la-votacion-del-proyecto/
+  notas: "Diputado Bernales acusó que algunos parlamentarios votarían a favor de ambas iniciativas (prohibición y regulación), lo que podría anularlas. Postura: a favor prohibición, en contra regulación."
+
+ciper-2026-08-18-quiroz-alto-santorini-hermano:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Plan de Quiroz contra la 'permisología' permitió aprobar millonario negocio de su hermano a pesar de informe negativo del Sernageomin"
+  autor: Macarena Segovia, Josefina Rochna, Francisco González Valdebenito
+  fecha: 2026-08-18
+  url: https://www.ciperchile.cl/2026/08/18/plan-de-quiroz-contra-la-permisologia-permitio-aprobar-millonario-negocio-de-su-hermano-a-pesar-de-informe-negativo-del-sernageomin/
+  notas: "Alto Santorini (US$43.6M, dunas de Concón): hermano Víctor Quiroz es socio, arquitecto y lobista. Familia posee 12%. SEA aprobó pese a reparo Sernageomin (remoción en masa). Comité de Proyectos SEIA sin actas públicas. Chile Transparente advierte riesgo de tráfico de influencias."
+
+ciper-2026-08-19-quiroz-errazuriz-consultor:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Plan para destrabar inversiones del ministro Quiroz también benefició a empresa de la que él fue consultor"
+  autor: Macarena Segovia, Josefina Rochna, Francisco González Valdebenito
+  fecha: 2026-08-19
+  url: https://www.ciperchile.cl/2026/08/19/plan-para-destrabar-inversiones-del-ministro-quiroz-tambien-beneficio-a-empresa-de-la-que-el-fue-consultor/
+  notas: "Grupo Errázuriz (Salar de Atacama, US$142M): rechazado en 4 gobiernos, aprobado pese a informe negativo Sernageomin. Errázuriz contrató consultora de Quiroz (Quiroz & Asociados) en 2025. Tomás Bunster (coordinador Hacienda) coautor del informe. 2 comunidades atacameñas presentaron reclamaciones."
+
+fastcheck-2026-08-19-quiroz-omitio-patrimonio:
+  tipo: investigacion
+  medio: Fast Check CL
+  titulo: "Ministro Quiroz omitió en su primera declaración de patrimonio una sociedad que comparte con un exmilitante del PPD"
+  autor: Elias Miranda
+  fecha: 2026-08-19
+  url: https://www.fastcheck.cl/2026/08/19/ministro-quiroz-omitio-en-su-primera-declaracion-de-patrimonio-que-era-dueno-de-una-empresa-que-comparte-con-un-exmilitante-del-ppd/
+  notas: "Quiroz rectificó DIP el 10-jul para incorporar Desarrollo e Infraestructura QR SpA (constituida 2014 con abogado José Antonio Ramírez, exPPD). Sociedad sin giro ni actividades. Contraloría detectó la omisión."
+
+coperativa-2026-08-19-alto-santorini-oficialismo-oposicion:
+  tipo: declaracion
+  medio: Cooperativa
+  titulo: "Caso Alto Santorini: Oficialismo defiende a Quiroz y oposición exige transparencia"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-19
+  url: https://cooperativa.cl/noticias/pais/gobierno/gabinete/caso-alto-santorini-oficialismo-defiende-a-quiroz-y-oposicion-exige/2026-08-19/114338.html
+  notas: "Couble (FA): pide transparentar actas del Comité. Cretton (Republicano): acusa a CIPER de 'noticia tendenciosa'. Krauss: Quiroz debió extremar cuidados. Diputado Bassa oficiará al SEA; Manouchehri oficiará a Contraloría."
+
+desconcierto-2026-08-18-santana-denuncia-quiroz:
+  tipo: accion
+  medio: El Desconcierto
+  titulo: "Diputado Santana (PS) denunciará a ministro Quiroz ante la Fiscalía por eventual tráfico de influencias"
+  autor: Nicole Donoso
+  fecha: 2026-08-18
+  url: https://eldesconcierto.cl/actualidad/diputado-santana-ps-denunciara-ministro-quiroz-la-fiscalia-eventual-trafico-influencias-n5461464
+  notas: "Diputado Juan Santana (PS) presentará antecedentes ante Fiscalía por eventual tráfico de influencias tras revelación de CIPER sobre conflicto de interés de Quiroz."
+
+adnradio-2026-08-19-sedini-pareja-dispensario-huerta:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Pareja de exministra Mara Sedini sería accionista del dispensario ligado a detención de Camilo Huerta"
+  autor: Mario Vergara
+  fecha: 2026-08-19
+  url: https://www.adnradio.cl/2026/08/19/pareja-de-exministra-mara-sedini-seria-accionista-del-dispensario-ligado-a-detencion-de-camilo-huerta/
+  notas: "Martín Krauss Valdés (pareja de Mara Sedini) aparece como accionista minoritario (20% repartido entre varios) de DN Medcorp SpA, sociedad matriz del Dispensario Nacional. Operación Imperio Ámsterdam (Fiscalía Aysén, OS7) investiga tráfico de cannabis desde 2024. Socios mayoritarios: Astorga (51%), Athens (29%)."
+
+fmdos-2026-04-martin-krauss-perfil:
+  tipo: articulo
+  medio: FM Dos
+  titulo: "Quién es Martín Krauss, empresario chileno y pareja de Mara Sedini"
+  autor: Redacción FM Dos
+  fecha: 2026-04-01
+  url: https://www.fmdos.cl/noticias/quien-es-martin-krauss-empresario-chileno-y-pareja-de-mara-sedini/
+  notas: "Martín Krauss Valdés: empresario de familia óptica Rotter & Krauss. Pareja de Mara Sedini desde al menos 2020 (familia de acogida). Perfil publicado originalmente cuando Sedini asumió como vocera."
+
+theclinic-2026-08-19-dispensario-nacional-silencio:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Dispensario Nacional de cannabis rompe el silencio tras masivo allanamiento y acusa a Fiscalía de cometer una 'brutalidad sin precedentes'"
+  autor: Redacción The Clinic
+  fecha: 2026-08-19
+  url: https://www.theclinic.cl/2026/08/19/dispensario-nacional-de-cannabis-rompe-el-silencio-tras-masivo-allanamiento-y-acusa-a-fiscalia-de-cometer-una-brutalidad-sin-precedentes/
+  notas: "DN rompe silencio: 70 trabajadores detenidos, 30 liberados sin cargo tras 4 días. 26.000 usuarios de cannabis medicinal sin acceso. Acusan a Fiscalía de filtrar organigrama a prensa. 2 campos de cultivo arrasados. Leyes 20.000 y 20.500 como respaldo."
+
+dinamo-2026-08-17-huerta-pruebas-drogas:
+  tipo: noticia
+  medio: El Dínamo
+  titulo: "Una red de dispensarios, escuchas y seguimientos: las pruebas que involucran a Camilo Huerta en investigación por drogas"
+  autor: Redacción El Dínamo
+  fecha: 2026-08-17
+  url: https://www.eldinamo.cl/pais/2026/08/17/las-pruebas-que-involucran-a-camilo-huerta-en-investigacion-por-drogas/
+  notas: "Expediente de 173 tomos. Red de 21 locales entre Antofagasta y Aysén. Interceptaciones telefónicas: Huerta dirige distribución de cannabis (2-jul-2025). Discusión sobre propiedad del dispensario. Seguimientos OS7 en RM. Huerta no directivo pero funciones relevantes."
+
+latercera-2026-08-18-huerta-seguimiento-detencion:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Carabineros pisando los talones: el sigiloso seguimiento a Camilo Huerta previo a su detención por tráfico de drogas"
+  autor: Juan Pablo Andrews, María Catalina Batarce
+  fecha: 2026-08-18
+  url: https://www.latercera.com/nacional/noticia/carabineros-pisando-los-talones-el-sigiloso-seguimiento-a-camilo-huerta-previo-a-su-detencion-por-trafico-de-drogas/
+  notas: "Seguimiento julio 2026: Huerta monitoreado minuto a minuto, viajó a EE.UU. a reunirse con Paula Pavic. Fiscalía cuestiona ganancia de $51M en 6 meses por dispensario en Chicureo. Formalización 19-ago."
+
+emol-2026-08-19-operacion-amsterdam-imputados:
+  tipo: noticia
+  medio: Emol
+  titulo: "Operación Ámsterdam: Quiénes son los principales acusados y los roles que cumplieron en la red de tráfico de cannabis"
+  autor: M. Silva, L. Cruzat (El Mercurio)
+  fecha: 2026-08-19
+  url: https://www.emol.com/noticias/Nacional/2026/08/19/1208876/operacion-amsterdam-imputados-roles-fiscalia.html
+  notas: "38 imputados formalizados. DN Medcorp: Astorga (principal accionista), Mario Astorga (gerente general, padre), Gino Athens (finanzas). M.A. Botanics: Landerer, Silva, Buzeta (gerente general). Huerta: franquicia en Colina. Ingresos DN Medcorp: $8.089 millones (~US$9M). 56 dispensarios en Chile."
+
+adnradio-2026-08-19-kast-emergencia-norte-recursos:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "Presidente Kast por emergencia en el norte: 'Los recursos son escasos' y pide focalizar ayuda"
+  autor: Ruth Cárcamo
+  fecha: 2026-08-19T13:02:03-04:00
+  url: https://www.adnradio.cl/2026/08/19/presidente-kast-por-emergencia-en-el-norte-los-recursos-son-escasos-y-pide-focalizar-ayuda/
+  notas: "Kast dice 'Los recursos son escasos' y pide focalizar ayuda. Visita Antofagasta. Evalúa visita focalizada a Tarapacá. 'De estas tragedias podemos aprender hacia adelante'. Plan maestro para construcción, campamentos, aguas lluvias."
+
+theclinic-2026-08-18-alcaldesa-tocopilla-horas-criticas:
+  tipo: noticia
+  medio: The Clinic
+  titulo: "Alcaldesa de Tocopilla y las horas críticas que vive la comuna: 'El panorama es muy desolador y lamento no estar exagerando'"
+  autor: The Clinic
+  fecha: 2026-08-18T21:33:35+00:00
+  url: https://www.theclinic.cl/2026/08/18/alcaldesa-de-tocopilla-y-las-horas-criticas-que-vive-la-comuna-el-panorama-es-muy-desolador-y-lamento-no-estar-exagerando/
+  notas: "Alcaldesa Kurtovic: 3 desaparecidos, 1 fallecido. Reproche por obras de mitigación incompletas post-2015. Subsecretario Pavez: 'no hay reporte oficial de desaparecidos'. Kast decretó catástrofe."
+
+latercera-2026-08-18-tocopilla-alerta-roja-evacuacion:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Alerta roja en Antofagasta: evacúan seis sectores de Tocopilla por activación de quebradas"
+  autor: Javiera Arriaza
+  fecha: 2026-08-18T17:33:23.329Z
+  url: https://www.latercera.com/nacional/noticia/alerta-roja-en-antofagasta-evacuan-seis-sectores-de-tocopilla-por-activacion-de-quebradas/
+  notas: "Alerta roja para Antofagasta, Taltal, Mejillones y Tocopilla. 6 sectores evacuados. Alcaldesa: 'Estamos en medio de un momento dramático'. SAE activado desde el lunes."
+
+latercera-2026-08-18-tocopilla-540-internos-evacuados:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Baja segregada en el norte deja un fallecido, más de 2 mil evacuados y obliga a trasladar a 540 internos desde Tocopilla"
+  autor: La Tercera
+  fecha: 2026-08-18T01:36:03.095Z
+  url: https://www.latercera.com/nacional/noticia/baja-segregada-en-el-norte-deja-un-fallecido-mas-de-2-mil-evacuados-y-obliga-a-trasladar-a-540-internos-desde-tocopilla/
+  notas: "540 internos trasladados desde Tocopilla a Antofagasta. Más de 2.000 personas evacuadas. 1 fallecido (accidente tránsito, caída de rocas Ruta 1 km 28). 244 albergados. ~18.000 clientes sin electricidad. Biministro Claudio Alvarado."
+
+cnnchile-2026-08-18-quiroz-niega-recesion-combustibles:
+  tipo: noticia
+  medio: CNN Chile
+  titulo: "Quiroz niega recesión técnica tras dos trimestres del PIB en rojo y adelanta alzas de hasta $90 en combustibles"
+  autor: Miguel Buksdorf
+  fecha: 2026-08-18T17:29:13-04:00
+  url: https://www.cnnchile.com/negocios/quiroz-niega-recesion-tecnica-tras-dos-trimestres-pib-en-rojo-adelanta-alzas-hasta-90-combustibles/
+  notas: "Quiroz: 'Es un dato del pasado'. PIB cayó 0,2% interanual. Minería cobre retrocedió 10,5% (restó 1,2 ppt al PIB). Construcción cayó 3,2% (restó 0,2 ppt). Imacec junio +2,4% corta racha de 5 meses. Combustibles: +$30 bencinas, +$90 diésel, vigentes desde jueves 20 agosto."
+
+latercera-2026-08-18-contraloria-dia-funcionario-municipal:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Contraloria apaga la musica: dictamen zanja que honorarios no pueden ser parte del Dia del Funcionario Municipal"
+  autor: Luciano Jimenez
+  fecha: 2026-08-18T20:00:00Z
+  url: https://www.latercera.com/nacional/noticia/contraloria-apaga-la-musica-dictamen-zanja-que-honorarios-no-pueden-ser-parte-del-dia-del-funcionario-municipal/
+  notas: "Contralora Dorothy Perez dictaminó 29-jul que trabajadores a honorarios no son funcionarios municipales y no pueden participar del Dia del Funcionario Municipal (28 oct). Consulta de Municipalidad de Canete. ASEMUCH propone crear 'Dia del Funcionario Municipal y Prestador de Servicios'. AMUCH dice que es discriminacion."
+
+cooperativa-2026-08-19-tocopilla-kast-alcaldesa-desaparecidos:
+  tipo: noticia
+  medio: Cooperativa
+  titulo: "Lluvias en el norte: Presidente Kast esta en la Region de Antofagasta para monitorear emergencia"
+  autor: Redaccion Cooperativa
+  fecha: 2026-08-19T11:32:00-04:00
+  url: https://www.cooperativa.cl/noticias/pais/region-de-antofagasta/alcaldesa-de-tocopilla-hubo-mucho-miedo-respecto-a-desaparecidos-pero/2026-08-18/130459.html
+  notas: "13 alertas SAE en la jornada. Alcaldesa: 'Hubo mucho miedo respecto a desaparecidos'. Kast en Tocopilla: 'Los recursos siempre son limitados, uno tiene que priorizar'. 521 albergados, 64 damnificados. Delegada Katherine López: remociones de barro a 90 km/h, 7 toneladas."
+
+biobiochile-2026-08-18-antibarricadas-explica:
+  tipo: analisis
+  medio: BioBioChile
+  titulo: "Cortar calles sin violencia podria ser delito: que propone nueva modificacion a la Ley Antibarricadas"
+  autor: BioBioChile
+  fecha: 2026-08-18T10:33:05-04:00
+  url: https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/08/18/cortar-calles-sin-violencia-podria-ser-delito-que-propone-nueva-modificacion-a-la-ley-antibarricadas.shtml
+  notas: "Nota explicativa sobre la modificacion a la Ley Antibarricadas. Actualmente requiere violencia o intimidacion; propuesta elimina ese requisito. 61 a 540 dias de presidio."
+
+elmostrador-2026-08-18-reforma-seguridad-dina-cni:
+  tipo: analisis
+  medio: El Mostrador
+  titulo: "Exagentes de la DINA y la CNI podrian quedar bajo alcance de reforma de seguridad de Kast"
+  autor: El Mostrador
+  fecha: 2026-08-18T19:08:42-04:00
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/18/exagentes-de-la-dina-y-la-cni-podrian-quedar-bajo-alcance-de-reforma-de-seguridad-de-kast/
+  notas: "Fallos Corte Suprema condenaron exagentes DINA/CNI por asociacion ilicita (crimen organizado). Presidente Comision Constitucion Senado Pedro Araya: 'redaccion deficiente'. Arrau: sin efecto retroactivo, pero si organizacion en listado, aplica. Republicanos: limitar beneficios adicionales, no derechos basicos."
+
+elmostrador-2026-08-17-pinera-carta-thiel:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "José Piñera aclara su relación con Peter Thiel"
+  autor: José Piñera
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/noticias/opinion/cartas/2026/08/17/jose-pinera-aclara-su-relacion-con-peter-thiel/
+  notas: "Carta al director del exministro José Piñera (El Mostrador, 17-ago-2026), en respuesta a la nota sobre la inversión de Thiel en Vaca Muerta. Aclara: la reunión fue pedida por Thiel para conocer el sistema de capitalización chileno, su exportación a 52 países y el futuro de la crisis del sistema de reparto en EE.UU. y Europa. Aclara que no tiene relación con las actividades empresariales de Thiel. Evento 20260817-23. Verificada por lectura directa."
+
+elmostrador-2026-08-17-pinera-thiel-carta-nota:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Ha llegado carta: José Piñera explica su relación con el magnate Peter Thiel"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-17
+  url: https://www.elmostrador.cl/noticias/sin-editar/2026/08/17/ha-llegado-carta-jose-pinera-explica-su-relacion-con-el-magnate-peter-thiel/
+  notas: "Nota de El Mostrador (17-ago-2026) que resume y contextualiza la carta de José Piñera: responde al artículo del domingo 16-ago sobre la compra de acciones de Vaca Muerta (Vista Energy) por Thiel; recuerda el paso reservado del magnate por Santiago en abril (foto en el hotel Mandarín Oriental posteada por Piñera y luego eliminada), sus reuniones con Johannes Kaiser y con el presidente José Antonio Kast (confirmada tras el oficio del diputado Gonzalo Winter) y su inversión en minería en Chile y Argentina. Evento 20260817-23. Verificada por lectura directa."
+
+biobiochile-2026-08-18-arrau-defiende-antibarricadas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: 'Arrau defiende Ley Antibarricadas 2.0: "Usted puede manifestarse en la vereda o en la plaza"'
+  autor: Samuel Fuentes
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/arrau-defiende-ley-antibarricadas-2-0-usted-puede-manifestarse-en-la-vereda-o-en-la-plaza.shtml
+  notas: "El ministro de Seguridad Pública, Martín Arrau, defendió el proyecto Antibarricadas 2.0 (ingresado el 17-ago-2026), que modifica la Ley 21.208: señaló que se mantienen las sanciones (pena desde 60 días de presidio) y que solo se amplía el tipo penal al corte total o parcial, sin necesidad de acreditar violencia o intimidación; afirmó que no existe un corte de tránsito pacífico y que las manifestaciones siguen permitidas si no impiden el tránsito: \"usted puede manifestarse en la vereda o en la plaza\". Evento 20260817-9. Verificada por lectura directa."
+
+biobiochile-2026-08-18-tc-admite-requerimiento-reconexion:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "TC admite requerimiento del Gobierno por norma que obliga a reconectar gratis servicios en emergencias"
+  autor: Lindy Sandoval
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/tc-admite-requerimiento-del-gobierno-por-norma-que-obliga-a-reconectar-gratis-servicios-en-emergencias.shtml
+  notas: "El TC admitió a trámite y declaró admisible el requerimiento Rol 17.892-26 presentado por el Presidente y cuatro ministros contra el artículo 31 de la megarreforma (medida R3), que obliga a las distribuidoras a reconectar gratis agua, gas y electricidad en zonas afectadas por incendios en Valparaíso, Ñuble y el Bío Bío, incluso tras corte por no pago. El Ejecutivo alega infracción al art. 69 de la Constitución (fuera de la idea matriz). Senado y Cámara tendrán 5 días para observaciones. Evento 20260818-19. Verificada por lectura directa."
+
+theclinic-2026-08-18-tc-admisible-requerimiento-reconexion:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "TC declara admisible requerimiento del Gobierno contra norma de la megarreforma que obliga a reconectar gratis los servicios básicos en emergencias"
+  autor: Pablo Serey
+  fecha: 2026-08-18
+  url: https://www.theclinic.cl/2026/08/18/tc-declara-admisible-requerimiento-del-gobierno-contra-norma-de-la-megarreforma-que-obliga-a-reconectar-gratis-los-servicios-basicos-en-emergencias/
+  notas: "The Clinic (18-ago-2026, Pablo Serey): el TC declaró admisible el requerimiento del Gobierno contra el artículo 31 de la megarreforma (reconexión gratuita de agua, electricidad y gas en zonas de catástrofe, incluso por no pago), presentado por el Presidente Kast junto a los ministros Quiroz (Hacienda), García Ruminot (Segpres), De Grange (MOP) y Rincón (Energía); argumentan infracción al art. 69 de la Constitución. Quiroz: \"no estamos cerrados a una norma especial para el tipo de catástrofe\". Plazo de 5 días para observaciones de ambas cámaras. Disposición impulsada por la diputada Sofía González (PC). Evento 20260818-19. Verificado por lectura directa."
+biobiochile-2026-08-19-operacion-imperio-amsterdam-modus:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Así operaba red que traficaba marihuana bajo fachada medicinal y que aspiraba a ganar US$20 millones"
+  autor: David Vergara
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/19/asi-operaba-red-que-trabajaba-marihuana-bajo-fachada-medicinal-y-que-aspiraba-a-ganar-us20-millones.shtml
+  notas: "BioBioChile (19-ago-2026, David Vergara): modus operandi de la red de tráfico de marihuana investigada por la Fiscalía de Aysén y el OS7 de Carabineros en la Operación Imperio Ámsterdam. Se indaga asociación ilícita, tráfico ilícito, desvío de cultivo, cultivo de cannabis y lavado de activos. La red está encabezada por la sociedad matriz DN Medcorp SpA, cuya cúspide es Andrés Astorga Rodríguez (51%); en una escucha proyecta llegar a US$20 millones anuales en dos años. Organización estructurada en tres niveles (directivo, producción/abastecimiento, comercialización/distribución). El Ministerio Público formalizó a 44 imputados. Evento 20260819-1. Verificada por lectura directa."
+biobiochile-2026-08-19-cerimedo-rol-rechazo:
+  tipo: web
+  medio: BioBioChile
+  titulo: "El activo rol durante los plebiscitos en Chile que mantuvo el exasesor de Milei detenido en Bolivia"
+  autor: ""
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/internacional/america-latina/2026/08/19/argentino-acusado-de-planear-sicariato-de-expareja-lidero-campana-digital-por-el-rechazo-en-chile-fernando-cerimedo.shtml
+  notas: "BioBioChile (19-ago-2026): perfil de Fernando Cerimedo y su rol activo durante los plebiscitos constitucionales en Chile. Cubre su historial como operador de ultraderecha regional: fundador de La Derecha Diario, empresa Numen (marketing digital), campañas de desinformación en Brasil (Bolsonaro), Argentina (Milei) y Chile (Rechazo). Documenta encuesta errónea de Numen para el plebiscito de 2020 y campañas de trolls. Corrobora vínculo con Kast y role en el proceso constitucional chileno. Verificada por lectura directa."
+elciudadano-2026-08-19-cerimedo-beller-testimonio:
+  tipo: web
+  medio: El Ciudadano
+  titulo: "Abogada Nadia Beller rompe el silencio tras ataque de sicarios en Bolivia: 'Fui testigo, por mi relación con Fernando Cerimedo, de los negociados que hace el gobierno de Rodrigo Paz y su esposa'"
+  autor: ""
+  fecha: 2026-08-19
+  url: https://www.elciudadano.com/latinoamerica/abogada-nadia-beller-rompe-el-silencio-tras-ataque-de-sicarios-en-bolivia-fui-testigo-por-mi-relacion-con-fernando-cerimedo-de-los-negociados-que-hace-el-gobierno-de-rodrigo-paz-y-su-esposa/08/18/
+  notas: "El Ciudadano (18-ago-2026): testimonio exclusivo de Nadia Beller desde el hospital tras recibir 4 impactos de bala. Denuncia que Cerimedo opera como verdadero gobernante en Bolivia ('Aquí no gobierna Rodrigo Paz, gobierna Fernando Cerimedo'), que tendría información sobre negociados de combustible, diésel y oro, y que un grupo policial de élite le responde directamente. Acusa al ministro Tuco Oviedo de intervenir para encubrir un episodio previo de violencia. Solicita protección de la CIDH. Afirma estar embarazada de 4 meses. Relata que los sicarios intentaron apoderarse de su celular con pruebas de corrupción. Verificada por lectura directa."
+elciudadano-2025-09-16-cerimedo-itinerario:
+  tipo: web
+  medio: El Ciudadano
+  titulo: "Del bolsonarismo y La Derecha Diario a Chile: el itinerario de Cerimedo antes de ser testigo clave del Coimagate ANDIS que sacude a Milei"
+  autor: "Leonardo Buitrago"
+  fecha: 2025-09-16
+  url: https://www.elciudadano.com/latinoamerica/del-bolsonarismo-y-la-derecha-diario-a-chile-el-itinerario-de-cerimedo-antes-de-ser-testigo-clave-del-coimagate-andis-que-sacude-a-milei/09/16/
+  notas: "El Ciudadano (16-sep-2025, Leonardo Buitrago): perfil exhaustivo de Fernando Cerimedo como operador político trasnacional. Documenta: (1) Empresa Numen con oficinas en Latinoamérica y EE.UU.; (2) Rol en campaña de Bolsonaro 2022, investigado por Policía Federal brasileña por coordinar desinformación electoral; (3) Confesión a La Nación de controlar 'granjas' con miles de trolls y bots; (4) Encuesta errónea de Numen para plebiscito chileno 2020 (42,3% Apruebo vs 78% real); (5) Proyecto 'Facilitadores Constitucionales' con información falsa sobre la propuesta constitucional; (6) Rol de socio local Enrique José García Arancibia en Chile; (7) Declaración como testigo en el Coimagate ANDIS argentino. Verificada por lectura directa."
+latercera-2026-08-18-lincolao-fondecyt-entrevista:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Ministra Lincolao y la controversia por cambios a los Fondecyt: 'En un postdoctorado el país debe ser más estratégico'"
+  autor: "Francisco Corvalán"
+  fecha: 2026-08-18
+  url: https://www.latercera.com/nacional/noticia/ximena-lincolao-tras-la-polemica-de-fondecyt-de-postdoctorado-en-un-programa-que-inserta-a-un-doctor-en-una-linea-de-trabajo-el-pais-debe-ser-mas-estrategico/
+  notas: "La Tercera (18-ago-2026, Francisco Corvalán): entrevista extensiva a la ministra Lincolao sobre la controversia del Fondecyt Postdoctorado 2027. Mea culpa: reconoce 'mala explicación desde nuestra parte'. aclara que el cambio afecta solo el 1,7% del financiamiento total del fondo, el programa más pequeño de los tres Fondecyt. Defiende que es un programa de inserción laboral, no de investigación básica. Cruch no entregó contrapropuesta. Exigencia de residencia definitiva para extranjeros: 'Chile tiene más de mil doctores desempleados, está graduando 1.300 al año y tiene 260 cupos'. Dice que en otros países se prioriza igual. Confirma respaldo de Kast. Dice que el 70% es 'hasta eso', no techo obligatorio. Admite queMercado Libre dio trabajos a países vecinos por falta de ingenieros en Chile. Evento 20260818-20. Verificada por lectura directa."
+cooperativa-2026-08-18-feriado-17-septiembre-admisibles:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Admisibles: Cámara Baja tramitará proyectos para que el 17 de septiembre sea feriado"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-18
+  url: https://cooperativa.cl/noticias/pais/festivos/fiestas-patrias/admisibles-camara-baja-tramitara-proyectos-para-que-el-17-de-septiembre/2026-08-18/112230.html
+  notas: "Cooperativa (18-ago-2026): la Cámara Baja declaró admisibles tres proyectos para que el 17 de septiembre sea feriado, pese a que el gobierno los calificó como inconstitucionales. Una de las iniciativas busca feriado permanente, otra temporal para 2026. Tramitación sin urgencia gubernamental. Verificada por lectura directa."
+latercera-2026-08-18-feriado-17-septiembre-admisibles:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Pese a resistencia de La Moneda, feriado para el 17 de septiembre logra avanzar gracias a desorden oficialista"
+  autor: José Miguel Wilsonr
+  fecha: 2026-08-18
+  url: https://www.latercera.com/politica/noticia/pese-a-resistencia-de-la-moneda-feriado-para-el-17-de-septiembre-logra-avanzar-gracias-a-desorden-oficialista/
+  notas: "La Tercera (18-ago-2026, José Miguel Wilson): la Cámara de Diputados revirtió la decisión del presidente Alessandri (UDI) que declaraba inadmisibles las tres mociones. Votación con ausencia de legisladores de gobierno y desmarque de diputados de RN y UDI. Mociones: Parisi (PDG) 64-43-3, Olivares/Briones (PDG) 62-44-3, bancada del PC 57-50-2. Contra el tiempo: solo 2 semanas legislativas, trabajo territorial la próxima semana, comisión de Gobierno podría discutir entre el 31-ago y 6-sep. Alvarado: 'ya está normado'. Quiroz: 'feriado anunciado tardíamente no tiene efectos positivos en turismo pero sí efectos adversos en trabajo'. Kast podría vetar. Verificada por lectura directa."
+theclinic-2026-08-18-feriado-17-septiembre-portazo:
+  tipo: web
+  medio: The Clinic
+  titulo: "Pese a su avance en el Congreso, Gobierno da nuevo portazo al feriado del 17 de septiembre"
+  autor: ""
+  fecha: 2026-08-18
+  url: https://www.theclinic.cl/2026/08/18/pese-a-su-avance-en-el-congreso-gobierno-da-nuevo-portazo-al-feriado-del-17-de-septiembre/
+  notas: "The Clinic (18-ago-2026): el gobierno reitera su rechazo al feriado del 17 de septiembre pese a la admisibilidad en la Cámara. Verificada por lectura directa."
+eldinamo-2026-08-18-feriado-17-septiembre-admisibles:
+  tipo: web
+  medio: El Dínamo
+  titulo: "Los tres proyectos que buscan declarar feriado el 17 de septiembre y que fueron declarados admisibles en la Cámara"
+  autor: ""
+  fecha: 2026-08-18
+  url: https://www.eldinamo.cl/pais/2026/08/18/los-tres-proyectos-que-buscan-declarar-feriado-el-17-de-septiembre-y-que-fueron-declarados-admisibles-en-la-camara/
+  notas: "El Dínamo (18-ago-2026): detalla los tres proyectos declarados admisibles. Verificada por lectura directa."
+eldinamo-2026-08-18-feriado-17-septiembre-moneda:
+  tipo: web
+  medio: El Dínamo
+  titulo: "La Moneda llama a Congreso a rechazar feriado del 17 de septiembre: 'ya está normado'"
+  autor: ""
+  fecha: 2026-08-18
+  url: https://www.eldinamo.cl/pais/2026/08/18/la-moneda-llama-a-congreso-a-rechazar-feriado-del-17-de-septiembre-ya-esta-normado/
+  notas: "El Dínamo (18-ago-2026): Alvarado reafirma rechazo del gobierno a declarar feriado el 17 de septiembre tras admisibilidad de proyectos en la Cámara. Verificada por lectura directa."
+contrapoder-2026-03-04-capredena-pensiones-krassnoff:
+  tipo: web
+  medio: Contrapoder Chile
+  titulo: "Registro revela que Capredena pagó en los últimos meses más de $100 millones por las pensiones de Krassnoff, Iturriaga y Corbalán"
+  autor: ""
+  fecha: 2026-03-04
+  url: https://contrapoderchile.cl/registro-revela-que-capredena-pago-en-los-ultimos-meses-mas-de-100-millones-por-las-pensiones-de-krassnoff-iturriaga-y-corbalan/
+  notas: "Contrapoder Chile (mar-2026): investigación vía Transparencia a Capredena sobre pensiones de retiro de cuatro condenados por DDHH en ex Punta Peuco. Krassnoff: $47,5M/año ($3,6-3,7M/mes). Iturriaga: $40,9M/año ($3,1-3,2M/mes). Herrera: $19,5M/año ($1,5M/mes). Corbalán: $13,7M/año ($1M/mes). Total: $121,6M. Aumentos en dic-2025. Contexto: Corte Suprema ordenó retirar electrodomésticos del penal; huelga de hambre de 7 reos. Verificada por lectura directa."
+elciudadano-2026-03-04-capredena-pensiones-ddhh:
+  tipo: web
+  medio: El Ciudadano
+  titulo: "Pensiones bajas para la mayoría, $3,7 millones para Krassnoff: así paga el Estado a condenados por DD.HH."
+  autor: ""
+  fecha: 2026-03-04
+  url: https://www.elciudadano.com/justicia/pensiones-violadores-ddhh-capredena-krassnoff/03/04/
+  notas: "El Ciudadano (4-mar-2026): cobertura de la investigación de Contrapoder sobre pensiones de Capredena a condenados por DDHH. Detalla montos individuales y contextualiza con el debate previsional civil. Menciona que Krassnoff e Iturriaga juntos acumularon más de $88 millones en un año. Verificada por lectura directa."
+latercera-2026-08-19-pib-economia-reacciones:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Economía chilena se frena en el segundo trimestre y expectativas para el año se acercan a 1%"
+  autor: "Carlos Alonso"
+  fecha: 2026-08-19
+  url: https://www.latercera.com/pulso/noticia/economia-chilena-se-frena-en-el-segundo-trimestre-y-expectativas-para-el-ano-se-acercan-a-1/
+  notas: "La Tercera (19-ago-2026, Carlos Alonso): reacciones de analistas tras cifras del BC. Proyecciones: OCEC-UDP 1,3%, BCI 1,2%, CPC 1,2-1,3%, Euroamerica 1,1-1,2%, Corpa 1,2%, Itaú 1,3%, U. Autónoma 1,0%, Gemines 0,9%, Scotiabank 'muy difícil crecer 1%'. Inversión cayó 2,4% (mayor caída desde pandemia). Construcción 4 trimestres de caídas. CChC optimista con infraestructura y ley de reconstrucción. Actualiza evento 20260818-1. Verificada por lectura directa."
+biobiochile-2026-08-19-frei-permisologia-proyectos:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Frei se lanza contra la permisología: 'Inventan la ranita, inventan todo' para frenar proyectos"
+  autor: ""
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/19/frei-se-lanza-contra-la-permisologia-inventan-la-ranita-inventan-todo-para-frenar-proyectos.shtml
+  notas: "BioBioChile (19-ago-2026): el expresidente Eduardo Frei, embajador en Misión Especial de Kast, defiende la agenda económica del gobierno y ataca la 'permisología'. Acusa que se presentan observaciones 'en serie' (1.000-20.000) para detener proyectos. Dice que Chile lleva 'más de 10 años paralizados'. Valora la gestión de Quiroz como ministro de Hacienda. Se enmarca en la controversia por el plan de Quiroz contra la permisología (eventos 20260818-4 y 20260818-17). Verificada por lectura directa vía defuddle."
+theclinic-2026-08-19-perez-migraciones-experta:
+  tipo: web
+  medio: The Clinic
+  titulo: "Recién titulada y contratada como 'experta' en el Plan Retorno de Kast: la abogada de 26 años que llegó a Migraciones y recibió $4,3 millones en junio"
+  autor: Jorge Palacios
+  fecha: 2026-08-19
+  url: https://www.theclinic.cl/2026/08/19/camila-perez-la-abogada-rn-sin-experiencia-y-titulada-en-marzo-que-trabaja-en-el-plan-retorno-de-migraciones-una-de-las-promesas-de-la-cuenta-publica-de-kast/
+  notas: "The Clinic (19-ago-2026, Jorge Palacios): Camila Pérez, abogada USS de 26 años, exvicepresidenta Juventud RN, titulada en marzo 2026, ingresó a Migraciones en abril como 'experta' (contrata grado 8). Remuneración bruta $2,77M, bonificaciones la llevaron a $4,3M en junio. Práctica previa en el propio Migraciones. En oficialismo se vinculó su trabajo al Plan Retorno, pero Migraciones descartó que trabaje en él (asesora del jefe de gabinete Fredy Vásquez RN). Candidata a concejala por Romeral en 2024. Verificada por lectura directa."
+biobiochile-2026-08-19-perez-migraciones-experta:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $2,7 millones"
+  autor: ""
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/19/abogada-rn-recien-titulada-fue-contratada-como-experta-en-migraciones-con-sueldo-de-27-millones.shtml
+  notas: "BioBioChile (19-ago-2026): cobertura independiente del caso de Camila Pérez. Detalla trayectoria política: vicepresidenta Juventud RN, candidata a secretaria general (mar-2026), candidata a concejala Romeral 2024. Premilitante desde los 15 años. Migraciones argumenta contratación por 'experiencia previa' (práctica en el servicio). Verificada por lectura directa vía npx defuddle."
+cnnchile-2026-08-19-condena-militares-colchane-trafico:
+  tipo: web
+  medio: CNN Chile
+  titulo: "Condenan a militares por tráfico de migrantes en Colchane: Gestionaron paso clandestino de una venezolana a través de WhatsApp"
+  autor: ""
+  fecha: 2026-08-19
+  url: https://www.cnnchile.com/pais/condenan-a-militares-por-trafico-de-migrantes-en-colchane-gestionaron-paso-clandestino-de-una-venezolana-a-traves-de-whatsapp/
+  notas: "CNN Chile (19-ago-2026): sentencia del Tribunal de Juicio Oral en lo Penal de Iquique. 818 días de remisión condicional, 8 años de inhabilitación absoluta para cargos públicos, suspensión de oficios y multa de 5 UTM a cada sentenciado (O.E.L.P. y D.N.M.M.). Reconoció atenuante de irreprochable conducta anterior. Hechos de mayo 2025 en Colchane. Actualiza evento 20260811-3. Verificada por lectura directa."
+elmostrador-2026-08-19-vargas-trafico-migrantes-peru:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Detienen a hermano de alcalde Orlando Vargas por tráfico de migrantes en frontera peruana"
+  autor: Ximena Astudillo Arancibia
+  fecha: 2026-08-19
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/19/detienen-a-hermano-del-alcalde-por-trafico-de-migrantes-en-control-fronterizo-peruano/
+  notas: "El Mostrador (19-ago-2026, Ximena Astudillo): Ricardo Vargas Pizarro (70), hermano del alcalde de Arica Orlando Vargas, detenido en Complejo Fronterizo Santa Rosa (Perú) por tráfico ilícito de migrantes agravado. Operativo 'Impacto 2026' de PNP. Transportaba 2 venezolanos y 1 niño peruano; pagaron $31.000 a un guardia para evadir control. También detenido vigilante Herbert Mamani Pacci. Fiscalía de Tacna investiga. Ricardo Vargas condenado previamente por tráfico de drogas en 1993. Orlando Vargas emitió comunicado acatando eventual veredicto. Verificada por lectura directa."
+biobiochile-2026-08-19-nx-uno-errazuriz-quiroz:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Excliente de Quiroz: el proyecto de Grupo Errázuriz priorizado y aprobado tras seguidilla de rechazos"
+  autor: Edición BBCL
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/19/excliente-de-quiroz-el-proyecto-de-grupo-errazuriz-priorizado-y-aprobado-tras-seguida-de-rechazos.shtml
+  notas: "BioBioChile (19-ago-2026, Edición BBCL): proyecto NX Uno de Peine (US$142 millones, potasio, Grupo Errázuriz) aprobado tras 17 años y 3 rechazos ambientales (2012, 2017, 2025). Comité de Ministros revirtió el último rechazo en may-2026, pese a reparos de Sernageomin sobre infiltraciones de sales. SEA sostuvo que Sernageomin se 'extralimitó'. Quiroz & Asociados asesoró al Grupo Errázuriz en 2025 (estudio Codelco-SQM); Tomás Bunster (autor del estudio) asumió como coordinador de Regulación Económica de Hacienda. Comunidad Atacameña de Peine acudió al Primer Tribunal Ambiental para anular la aprobación. EIA de 2009, línea de base no actualizada. Verificada por lectura directa vía npx defuddle."
+adnradio-2026-08-19-combustibles-suben-mas-proyectado:
+  tipo: web
+  medio: ADN Radio
+  titulo: "Combustibles subirán más de lo proyectado: este será el precio del diésel y las bencinas desde este jueves 20 de agosto"
+  autor: ""
+  fecha: 2026-08-19
+  url: https://www.adnradio.cl/2026/08/19/combustibles-suben-mas-de-lo-proyectado-este-sera-el-precio-del-diesel-y-las-bencinas-desde-este-jueves-20-de-agosto/
+  notas: "ADN Radio (19-ago-2026): ENAP confirmó subidas reales superiores a proyecciones. Bencina 93/97: +$34,8 (vs ~$30 proyectado). Diésel: +$97 (vs ~$90 proyectado). GLP vehicular: -$16,8. ENAP reiteró que no fija precios finales (determinados por distribuidoras). Actualiza evento 20260818-10. Verificada por lectura directa."

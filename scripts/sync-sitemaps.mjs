@@ -289,6 +289,13 @@ const MEDIA = {
     index: 'https://quirihuenoticias.cl/sitemap_index.xml',
     articleOnly: true, // Yoast (local Quirihue)
   },
+  gob: {
+    nombre: 'Gobierno de Chile',
+    index: 'https://www.gob.cl/sitemap-articles.xml',
+    // Sitemap news del gobierno central (prensa presidencial, anuncios
+    // de ministerios). Solo artículos recientes (~últimos 2-3 meses);
+    // no hay archivo histórico. Titles reales del news-sitemap.
+  },
 };
 
 // ---------------------------------------------------------------------------

@@ -3,32 +3,32 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 18/8/2026, 13:53:24
-- **Medios registrados:** 35
-- **Artículos indexados:** 4.399.545
+- **Última sincronización:** 19/8/2026, 15:01:46
+- **Medios registrados:** 36
+- **Artículos indexados:** 4.401.376
 
 ## Por medio
 
 | Medio | Artículos |
 |---|---|
 | Radio Bío Bío | 1.170.827 |
-| Emol | 1.111.252 |
+| Emol | 1.111.368 |
 | Meganoticias | 433.970 |
-| El Ciudadano | 304.684 |
+| El Ciudadano | 304.749 |
 | Radio Agricultura | 298.864 |
-| El Dínamo | 251.234 |
+| El Dínamo | 251.301 |
 | CNN Chile | 227.126 |
-| The Clinic | 192.003 |
-| Radio Universidad de Chile | 108.023 |
-| El Periodista | 84.873 |
-| REDIMIN | 48.042 |
+| The Clinic | 192.072 |
+| Radio Universidad de Chile | 108.061 |
+| El Periodista | 84.967 |
+| REDIMIN | 48.132 |
 | El Clarín | 20.721 |
 | La Nación | 19.866 |
-| Ex-Ante | 18.130 |
+| Ex-Ante | 18.148 |
 | El Quinto Poder | 17.724 |
-| Chocale | 14.223 |
-| Radio UdeC | 10.979 |
-| La Tercera | 10.958 |
+| Chocale | 14.232 |
+| La Tercera | 11.486 |
+| Radio UdeC | 10.987 |
 | Mestizos Magazine | 8638 |
 | CIPER Chile | 8446 |
 | Mala Espina | 7473 |
@@ -36,47 +36,48 @@
 | Fast Check CL | 6142 |
 | Quirihue Noticias | 5721 |
 | El Siglo | 5429 |
-| Chile País Minero | 3921 |
-| Cooperativa | 1712 |
+| Chile País Minero | 3927 |
+| Cooperativa | 2288 |
 | Qué Pasa Araucanía | 1270 |
+| ADN Radio | 300 |
 | El Mostrador | 201 |
-| ADN Radio | 200 |
 | Diario Estrategia | 200 |
-| Publimetro | 90 |
+| Publimetro | 133 |
 | Diario Financiero | 87 |
 | El Desconcierto | 20 |
 | Factchecking.cl | 14 |
+| Gobierno de Chile | 4 |
 
 ## Década 2020
 
-### 2026 — 190.497 artículos
+### 2026 — 192.328 artículos
 
-#### Agosto 2026 (14.603)
+#### Agosto 2026 (16.109)
 
 - [adnradio — Mi momento mas humilde la colombiana que busca cambiar las reglas del despecho y que quiere reencantar a los chilenos](https://www.adnradio.cl/2026/08/06/mi-momento-mas-humilde-la-colombiana-que-busca-cambiar-las-reglas-del-despecho-y-que-quiere-reencantar-a-los-chilenos/)
 - [adnradio — Universidad catolica vs cobresal donde cuando y como ver el partido en vivo en directo online y en tv](https://www.adnradio.cl/2026/08/06/universidad-catolica-vs-cobresal-donde-cuando-y-como-ver-el-partido-en-vivo-en-directo-online-y-en-tv/)
 - [adnradio — Activan codigo azul por bajas temperaturas en seis regiones de chile revisa donde y hasta cuando estara vigente](https://www.adnradio.cl/2026/08/07/activan-codigo-azul-por-bajas-temperaturas-en-seis-regiones-de-chile-revisa-donde-y-hasta-cuando-estara-vigente/)
 - [adnradio — Ahorro en chile cuanto pierdo si guardo durante un ano sin invertirlo](https://www.adnradio.cl/2026/08/07/ahorro-en-chile-cuanto-pierdo-si-guardo-1000000-durante-un-ano-sin-invertirlo/)
 - [adnradio — Al presidente de universidad catolica le consultan por el fichaje de vozinha en colo colo y asi responde probablemente](https://www.adnradio.cl/2026/08/07/al-presidente-de-universidad-catolica-le-consultan-por-el-fichaje-de-vozinha-en-colo-colo-y-asi-responde-probablemente/)
-- _… y 14.598 más (ver JSONL)_
+- _… y 16.104 más (ver JSONL)_
 
-#### Julio 2026 (31.084)
+#### Julio 2026 (31.316)
 
 - [biobiochile — Causa y efecto alerta economica y el critico diagnostico tras la caida del imacec](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2026/07/01/causa-y-efecto-alerta-economica-y-el-critico-diagnostico-tras-la-caida-del-imacec.shtml)
 - [biobiochile — Hipofisis y la importancia de dormir bien](https://www.biobiochile.cl/biobiotv/programas/conecta-vida/2026/07/01/hipofisis-y-la-importancia-de-dormir-bien.shtml)
 - [biobiochile — Efemerides 01 de julio de murio el presidente de argentina juan domingo peron](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/07/01/efemerides-01-de-julio-de-1974-murio-el-presidente-de-argentina-juan-domingo-peron.shtml)
 - [biobiochile — Estamos pagando un valor mayor del servicio que se recibe mulet por impuesto encubierto en peajes](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2026/07/01/estamos-pagando-un-valor-mayor-del-servicio-que-se-recibe-mulet-por-impuesto-encubierto-en-peajes.shtml)
 - [biobiochile — Imacec de mayo experta advierte recesion tecnica](https://www.biobiochile.cl/biobiotv/programas/expreso-bio-bio/2026/07/01/imacec-de-mayo-experta-advierte-recesion-tecnica.shtml)
-- _… y 31.079 más (ver JSONL)_
+- _… y 31.311 más (ver JSONL)_
 
-#### Junio 2026 (28.320)
+#### Junio 2026 (28.413)
 
 - [biobiochile — Que incivilidades podrian dejar a alguien en el registro de vandalos propuesto por kast](https://www.biobiochile.cl/biobiotv/programas/causa-y-efecto/2026/06/01/que-incivilidades-podrian-dejar-a-alguien-en-el-registro-de-vandalos-propuesto-por-kast.shtml)
 - [biobiochile — Efemerides 01 de junio de murio la cantante espanola rocio jurado](https://www.biobiochile.cl/biobiotv/programas/efemerides/2026/06/01/efemerides-01-de-junio-de-2006-murio-la-cantante-espanola-rocio-jurado.shtml)
 - [biobiochile — Buenos bonitos y baratos los smartphones que quieren destronar a los grandes](https://www.biobiochile.cl/biobiotv/programas/igadget/2026/06/01/buenos-bonitos-y-baratos-los-smartphones-que-quieren-destronar-a-los-grandes.shtml)
 - [biobiochile — Ahora viene la prueba politica los desafios que esperan al gobierno tras la cuenta publica](https://www.biobiochile.cl/biobiotv/programas/podria-ser-peor/2026/06/01/ahora-viene-la-prueba-politica-los-desafios-que-esperan-al-gobierno-tras-la-cuenta-publica.shtml)
 - [biobiochile — Balladares rn destaca cambio de foco de la moneda en expulsiones 90 por via administrativa](https://www.biobiochile.cl/biobiotv/programas/radiograma-biobiotv/2026/06/01/balladares-rn-destaca-cambio-de-foco-de-la-moneda-en-expulsiones-90-por-via-administrativa.shtml)
-- _… y 28.315 más (ver JSONL)_
+- _… y 28.408 más (ver JSONL)_
 
 #### Mayo 2026 (23.975)
 
