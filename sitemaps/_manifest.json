@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-19T19:01:46.014Z",
+  "actualizado": "2026-08-20T01:24:43.169Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -254,6 +254,20 @@
       "articulos": 4,
       "nuevos": 0,
       "años": 1
+    },
+    "abif": {
+      "nombre": "ABIF",
+      "ultima_sync": "2026-08-20T01:20:12.487Z",
+      "articulos": 312,
+      "nuevos": 312,
+      "años": 3
+    },
+    "amchamchile": {
+      "nombre": "AmCham Chile",
+      "ultima_sync": "2026-08-20T01:24:43.168Z",
+      "articulos": 10640,
+      "nuevos": 10640,
+      "años": 12
     }
   }
 }

@@ -319,6 +319,8 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'lafontana.cl': 'lafontana',
   'quirihuenoticias.cl': 'quirihue_noticias',
   'gob.cl': 'gob',
+  'abif.cl': 'abif',
+  'amchamchile.cl': 'amchamchile',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -358,6 +360,8 @@ const CATALOG_MEDIO_NAMES = {
   lafontana: 'La Fontana',
   quirihue_noticias: 'Quirihue Noticias',
   gob: 'Gobierno de Chile',
+  abif: 'ABIF',
+  amchamchile: 'AmCham Chile',
 };
 
 function catalogExists() {

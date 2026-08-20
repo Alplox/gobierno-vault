@@ -1,13 +1,11 @@
 #!/usr/bin/env node
 /**
- * sitemaps-index.mjs — Genera `sitemaps/README.md`, un índice legible del
- * catálogo de artículos agrupado por década → año → mes, con conteos y una
- * muestra de enlaces por mes. El dato fuente son los JSONL de
- * `sitemaps/<medio>/<año>.jsonl` (generados con `pnpm run sitemaps-sync`).
+ * sitemaps-index.mjs — Genera `sitemaps/README.md`, un índice de estadísticas
+ * del catálogo de artículos (totales y conteo por medio). El dato fuente son
+ * los JSONL de `sitemaps/<medio>/<año>.jsonl` (generados con `pnpm run sitemaps-sync`).
  *
  * Uso:
- *   pnpm run sitemaps-index [--limit <n>]
- *     --limit n   Máximo de enlaces de muestra por mes (default 5)
+ *   pnpm run sitemaps-index
  */
 
 import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from 'node:fs';
@@ -20,15 +18,6 @@ const ROOT = join(__dirname, '..');
 const SITEMAPS_DIR = join(ROOT, 'sitemaps');
 const MANIFEST_PATH = join(SITEMAPS_DIR, '_manifest.json');
 const OUT = join(SITEMAPS_DIR, 'README.md');
-
-const args = process.argv.slice(2);
-const limitArg = args.indexOf('--limit');
-const SAMPLE = limitArg >= 0 ? parseInt(args[limitArg + 1], 10) || 5 : 5;
-
-const MESES = [
-  'Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio',
-  'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre',
-];
 
 function readManifest() {
   try {
@@ -62,10 +51,6 @@ function loadCatalog() {
   return items;
 }
 
-function monthName(month01) {
-  return MESES[(month01 ?? 1) - 1] ?? `Mes ${month01}`;
-}
-
 function buildMarkdown(items, manifest) {
   const l = [];
   l.push('# Catálogo de Sitemaps');
@@ -95,55 +80,6 @@ function buildMarkdown(items, manifest) {
     }
     l.push('');
   }
-
-  // Agrupación: década → año → mes
-  const decadas = {};
-  for (const it of items) {
-    const decada = `${it.d.slice(0, 3)}0`;
-    const año = it.d.slice(0, 4);
-    const mes = it.d.slice(5, 7);
-    (decadas[decada] ??= {});
-    (decadas[decada][año] ??= {});
-    (decadas[decada][año][mes] ??= []);
-    decadas[decada][año][mes].push(it);
-  }
-
-  const decadeKeys = Object.keys(decadas).sort((a, b) => b.localeCompare(a));
-  if (!decadeKeys.length) {
-    l.push('_Aún no hay sitemaps sincronizados. Ejecuta `pnpm run sitemaps-sync -- <medio>` o `--all`._');
-    l.push('');
-  }
-  for (const decada of decadeKeys) {
-    l.push(`## Década ${decada}`);
-    l.push('');
-    const años = Object.keys(decadas[decada]).sort((a, b) => b.localeCompare(a));
-    for (const año of años) {
-      const meses = Object.keys(decadas[decada][año]).sort((a, b) => b.localeCompare(a));
-      const totalAño = meses.reduce((acc, m) => acc + decadas[decada][año][m].length, 0);
-      l.push(`### ${año} — ${totalAño.toLocaleString('es-ES')} artículos`);
-      l.push('');
-      for (const mes of meses) {
-        const itemsMes = decadas[decada][año][mes];
-        l.push(`#### ${monthName(mes)} ${año} (${itemsMes.length.toLocaleString('es-ES')})`);
-        l.push('');
-        const sample = itemsMes.slice(0, SAMPLE);
-        for (const it of sample) {
-          const titulo = it.t ? ` — ${it.t}` : '';
-          l.push(`- [${it.medio}${titulo}](${it.u})`);
-        }
-        if (itemsMes.length > SAMPLE) {
-          l.push(`- _… y ${(itemsMes.length - SAMPLE).toLocaleString('es-ES')} más (ver JSONL)_`);
-        }
-        l.push('');
-      }
-    }
-  }
-
-  l.push('## Fuente de datos');
-  l.push('');
-  l.push('Los enlaces se extraen de los sitemaps públicos de cada medio (según su robots.txt).');
-  l.push('El cuerpo de cada artículo NO se guarda aquí: solo URL, fecha y (cuando el sitemap lo provee) título.');
-  l.push('');
 
   return l.join('\n');
 }

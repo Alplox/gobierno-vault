@@ -30,6 +30,13 @@ const CATEGORIAS_PRENSA = new Set([
   'education', 'health', 'culture',
 ]);
 
+// Dominios verificados SIN sitemap (revisado a mano el 2026-08-19): no se
+// reintentan en cada regeneración. Key: dominio, value: nota.
+const SIN_SITEMAP = {
+  'efe.cl': 'verificado sin sitemap (solo RSS /feed/)',
+  'fiscaliadechile.cl': 'verificado sin sitemap (Drupal 10 sin xmlsitemap)',
+};
+
 const NOMBRES_CATEGORIA = {
   news: 'Noticias nacionales',
   'news-international': 'Noticias internacionales',
@@ -170,6 +177,9 @@ function main() {
     if (catalogoNombres.has(n) || slugCat) {
       estado = 'catalogo';
       detalle = `sitemap en catálogo${slugCat ? ` (${slugCat})` : ''}`;
+    } else if (SIN_SITEMAP[s.d]) {
+      estado = 'sin_sitemap';
+      detalle = SIN_SITEMAP[s.d];
     } else if (mediosSources.has(n) || orgsPrensa.has(n)) {
       // 2) ¿Ya referenciado en sources.yaml o como org de prensa?
       estado = 'en_uso';
@@ -185,13 +195,14 @@ function main() {
 
   filas.sort((a, b) => a.categoria.localeCompare(b.categoria) || a.nombre.localeCompare(b.nombre));
 
-  const conteo = { catalogo: 0, en_uso: 0, pendiente: 0 };
+  const conteo = { catalogo: 0, en_uso: 0, sin_sitemap: 0, pendiente: 0 };
   for (const f of filas) conteo[f.estado]++;
 
-  const EMOJI = { catalogo: '✅', en_uso: '🟡', pendiente: '⬜' };
+  const EMOJI = { catalogo: '✅', en_uso: '🟡', sin_sitemap: '🔒', pendiente: '⬜' };
   const ESTADO_TXT = {
     catalogo: 'Sitemap ya sincronizado',
     en_uso: 'Ya usado en el vault (sin sitemap)',
+    sin_sitemap: 'Verificado sin sitemap',
     pendiente: 'Pendiente de sincronizar',
   };
 
@@ -217,6 +228,7 @@ function main() {
 - **Total de sitios de prensa listados:** ${filas.length}
 - ✅ En catálogo local: **${conteo.catalogo}**
 - 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **${conteo.en_uso}**
+- 🔒 Verificados sin sitemap: **${conteo.sin_sitemap}**
 - ⬜ Pendientes de sincronizar: **${conteo.pendiente}**
 
 Categorías consideradas (prensa y afines): ${Object.values(NOMBRES_CATEGORIA).join(', ')}.
@@ -240,7 +252,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
     md += `| ${EMOJI[f.estado]} | **${limpiar(f.nombre)}** | \`${f.d}\` | ${region} | ${fuente} | ${notas} |\n`;
   }
 
-  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sync-sitemaps.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Agregar dominio y nombre a \`CATALOG_MEDIO_BY_DOMAIN\`/\`CATALOG_MEDIO_NAMES\` de \`scripts/add-source.mjs\`.\n6. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n7. Actualizar este archivo: \`pnpm run sitemaps-watchlist -- --source <ruta-al-repo>\`.\n`;
+  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sync-sitemaps.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Agregar dominio y nombre a \`CATALOG_MEDIO_BY_DOMAIN\`/\`CATALOG_MEDIO_NAMES\` de \`scripts/add-source.mjs\`.\n6. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n7. Actualizar este archivo: \`pnpm run sitemaps-watchlist -- --source <ruta-al-repo>\`.\n`;
 
   writeFileSync(out, md, 'utf8');
   console.log(`✔ ${filas.length} sitios de prensa → ${out}`);

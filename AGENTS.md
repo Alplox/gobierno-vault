@@ -428,7 +428,10 @@ peer de `@realtimex/piper-tts-web`). Debe incluir `packages: []` (si falta, pnpm
 del CI falla con `packages field missing or empty` al correr `pnpm install --frozen-lockfile`).
 No eliminar ninguno de los dos archivos.
 
-**Despliegue (Cloudflare Pages):** el sitio se despliega con `pnpm run deploy`, que ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main` y genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`. El proyecto se crea una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Preview local: `pnpm run preview` (`wrangler pages dev dist`).
+**Despliegue (Cloudflare Pages, build local):** el sitio se despliega con `pnpm run deploy`, que corre el build local (`node scripts/validate.mjs && astro build` — ~1m40s en dev, 7.800+ páginas) y luego sube `dist/` con `wrangler pages deploy dist --project-name gobierno-vault --branch main` (solo upload, ~20s). Genera la URL `https://gobierno-vault.pages.dev` (subdominio `.pages.dev`, no `.workers.dev`). `wrangler.jsonc` usa `pages_build_output_dir: ./dist`.
+- **El build automático de Pages está DESACTIVADO** (`production_deployments_enabled: false`, preview `none` en la API del proyecto): los pushes a GitHub NO gatillan deploy. El build de Cloudflare excedía el límite de 20 min (el vault no cabe en su runner). Publicar cambios requiere correr `pnpm run deploy` localmente después del push.
+- El proyecto se creó una sola vez con `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o token `CLOUDFLARE_API_TOKEN`). Para re-habilitar deploys automáticos: PATCH a `/accounts/<acc>/pages/projects/gobierno-vault` con `source.config.production_deployments_enabled: true`.
+- Preview local: `pnpm run preview` (`wrangler pages dev dist`).
 
 
 > **Herramientas de extracción y procesamiento:** ver [.agents/skills/tools.md](.agents/skills/tools.md)
@@ -471,7 +474,9 @@ Cuando descubras algo no documentado aqui:
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 |---|---|---|---|---|---|
+| `abif` | ABIF | `www.abif.cl/robots.txt` | includeRe | 312 | 3 |
 | `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 300 | 1 |
+| `amchamchile` | AmCham Chile | `amchamchile.cl/sitemap_index.xml` | includeRe | 10.640 | 12 |
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
 | `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.927 | 4 |
 | `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.232 | 10 |

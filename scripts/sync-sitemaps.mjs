@@ -296,6 +296,24 @@ const MEDIA = {
     // de ministerios). Solo artículos recientes (~últimos 2-3 meses);
     // no hay archivo histórico. Titles reales del news-sitemap.
   },
+  abif: {
+    nombre: 'ABIF',
+    robots: 'https://www.abif.cl/robots.txt',
+    // Wix: robots declara sitemap.xml (índice) → blog-posts-sitemap.xml
+    // (notas de prensa) + dynamic-abif-informa...-sitemap.xml (newsletters
+    // "ABIF Informa" con cifras). Se descartan categories, pages, estatutos
+    // y documentos-legales (páginas estáticas/documentos, no artículos).
+    includeRe: /blog-posts-sitemap\.xml$|dynamic-abif-informa.*-sitemap\.xml$/i,
+  },
+  amchamchile: {
+    nombre: 'AmCham Chile',
+    index: 'https://amchamchile.cl/sitemap_index.xml',
+    // WordPress: index con sitemaps por CPT. Solo noticias (news-sitemap*.xml,
+    // sin news:title, título derivado del slug) + opiniones y estudios.
+    // Se descartan page/benefits/campaigns/committees/events/members/offers/
+    // partners/sponsors/publications y los *_tax-sitemap (taxonomías).
+    includeRe: /(?:news-sitemap\d*|opinions-sitemap|studies-sitemap)\.xml$/i,
+  },
 };
 
 // ---------------------------------------------------------------------------
