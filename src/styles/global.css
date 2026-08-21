@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+/* Todos los temas built-in de daisyUI disponibles para el selector del navbar.
+   light es el default (mantiene el look actual); dark entra por prefers-color-scheme
+   solo si no hay elección guardada. */
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake, bumblebee, emerald, corporate, synthwave, retro, cyberpunk, valentine, halloween, garden, forest, aqua, lofi, pastel, fantasy, wireframe, black, luxury, dracula, cmyk, autumn, business, acid, lemonade, night, coffee, winter, dim, nord, sunset, caramellatte, abyss, silk;
+  logs: false;
+}
+
+/* Superficie de página desde los tokens del tema activo: hace que el selector
+   de temas tenga efecto visible inmediato (light ≈ blanco, sin cambio visual
+   respecto al diseño previo). El resto del chrome sigue con sus utilidades
+   grises hasta migrarse a tokens semánticos. */
+@layer base {
+  body {
+    background-color: var(--color-base-100);
+    color: var(--color-base-content);
+  }
+}
+
+/* Selector de temas: .menu de daisyUI 5 usa flex-flow:column wrap +
+   width:fit-content, asi que cuando max-h corta la lista envuelve en
+   columnas nuevas hacia el lado (scroll horizontal). Se anula el wrap
+   siempre; las reglas viven aqui porque daisyUI se inyecta en @layer y
+   esto (unlayered) tiene prioridad sobre cualquier utilidad. */
+#theme-picker .menu {
+  flex-flow: column nowrap;
+}
+@media (min-width: 33rem) {
+  #theme-picker .menu {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    width: min(30rem, 100vw - 1rem);
+  }
+  #theme-picker .menu-title {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Chips categoricos (tipo de evento y tipo de relacion): un hue por categoria
+   via --chip-hue, mezclado con tokens del tema activo usando color-mix. El
+   texto tinta el hue hacia base-content (oscurece en temas claros, aclara en
+   oscuros) y el fondo/anillo quedan translucidos → legible en los 35 temas
+   daisyUI sin variantes por tema. Unlayered para pisar utilidades viejas. */
+.rel-chip {
+  background-color: color-mix(in oklab, var(--chip-hue, var(--color-base-content)) 12%, transparent);
+  color: color-mix(in oklab, var(--chip-hue, var(--color-base-content)) 70%, var(--color-base-content));
+  --tw-ring-color: color-mix(in oklab, var(--chip-hue, var(--color-base-content)) 35%, transparent);
+}

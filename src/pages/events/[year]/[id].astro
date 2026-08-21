@@ -117,64 +117,64 @@ Describe el error o la corrección sugerida.`)}`;
 
 <Base title={titulo}>
   <article class="max-w-3xl mx-auto">
-    <header class="mb-8 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+    <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm">
       <div class="flex items-center gap-2 mb-4">
-        <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg transition-colors">
+        <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
           <ArrowLeft class="h-3.5 w-3.5" />
           <span>Volver a Eventos</span>
         </a>
       </div>
-      <h1 transition:name={`event-title-${filename}`} class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4 leading-tight text-balance">{titulo}</h1>
-      <div class="flex flex-wrap items-center gap-3 text-xs text-gray-600">
-        <span class={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md font-semibold ring-1 ring-inset ${TIPO_STYLES[tipo] || 'bg-gray-100 text-gray-700 ring-gray-200'}`}>
+      <h1 transition:name={`event-title-${filename}`} class="text-2xl sm:text-3xl font-bold text-base-content mb-4 leading-tight text-balance">{titulo}</h1>
+      <div class="flex flex-wrap items-center gap-3 text-xs text-base-content/70">
+        <span class={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md font-semibold ring-1 ring-inset ${TIPO_STYLES[tipo] || 'bg-base-200 text-base-content/80 ring-base-300'}`}>
           <FileText class="h-3.5 w-3.5 shrink-0" />
           {TIPO_LABELS[tipo] || tipo}
         </span>
-        <time class="inline-flex items-center gap-1.5 text-gray-500 font-medium bg-gray-50 px-2.5 py-1 rounded-md border border-gray-200/60">
-          <Calendar class="h-3.5 w-3.5 text-gray-400 shrink-0" />
+        <time class="inline-flex items-center gap-1.5 text-base-content/60 font-medium bg-base-200 px-2.5 py-1 rounded-md border border-base-300/60">
+          <Calendar class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
           {fechaStr}
         </time>
       </div>
     </header>
 
     <div class="mb-5 flex flex-wrap items-center gap-2.5 not-prose">
-      <button id="btn-tts" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors min-w-[9rem] justify-center">
+      <button id="btn-tts" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-colors min-w-[9rem] justify-center">
         <Volume2 data-tts-icon="idle" class="h-4 w-4" />
         <VolumeX data-tts-icon="playing" class="h-4 w-4 hidden" />
         <span data-tts-label>Escuchar</span>
       </button>
-      <label class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500">
+      <label class="inline-flex items-center gap-1.5 text-xs font-medium text-base-content/60">
         Voz
-        <select id="tts-voice" class="text-xs border border-gray-200/70 rounded-lg bg-white px-2 py-1.5 text-gray-700 focus:outline-none focus:ring-1 focus:ring-blue-500 max-w-[16rem]"></select>
+        <select id="tts-voice" class="text-xs border border-base-300/70 rounded-lg bg-base-100 px-2 py-1.5 text-base-content/80 focus:outline-none focus:ring-1 focus:ring-primary max-w-[16rem]"></select>
       </label>
-      <span id="tts-msg" class="text-[11px] text-gray-400 font-medium" role="status"></span>
+      <span id="tts-msg" class="text-[11px] text-base-content/40 font-medium" role="status"></span>
     </div>
 
-    <section class="prose prose-gray max-w-none mb-10 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-sm leading-relaxed text-gray-800">
+    <section class="prose prose-gray max-w-none mb-10 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm leading-relaxed text-base-content">
       <Content />
 
       {(svg_backup?.archivo || svg_backup?.svg) && (
-        <figure class="not-prose my-8 rounded-xl border border-gray-200/80 bg-gray-50/60 p-4 sm:p-6">
+        <figure class="not-prose my-8 rounded-xl border border-base-300 bg-base-200/60 p-4 sm:p-6">
           <div class="mb-3 flex items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-amber-700 bg-amber-50 border border-amber-200/70 px-2.5 py-1 rounded-md">
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-warning bg-warning/15 border border-warning/40 px-2.5 py-1 rounded-md">
               <FileText class="h-3.5 w-3.5 shrink-0" />
               Respaldo ASCII de la imagen
             </span>
           </div>
-          <div class="overflow-x-auto rounded-lg bg-white border border-gray-200/60 p-3 sm:p-4">
+          <div class="overflow-x-auto rounded-lg bg-base-100 border border-base-300/60 p-3 sm:p-4">
             {svg_backup.archivo ? (
               <img src={svg_backup.archivo} alt={`Respaldo ASCII de la imagen del evento${svg_backup.fuente ? ` (fuente: ${svg_backup.fuente})` : ''}`} class="ascii-svg-img mx-auto max-w-full h-auto" loading="lazy" />
             ) : (
               <div class="ascii-svg mx-auto" set:html={svg_backup.svg} />
             )}
           </div>
-          <figcaption class="mt-3 text-xs text-gray-500 leading-relaxed">
+          <figcaption class="mt-3 text-xs text-base-content/60 leading-relaxed">
             Representación en arte ASCII de la imagen del evento, generada con una herramienta web externa
             {svg_backup.fuente ? (
               <> y guardada como respaldo verificable visualmente. Fuente de la imagen:{' '}
-                <a href={svg_backup.fuente} target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-medium text-blue-600 hover:text-blue-800 hover:underline">
+                <a href={svg_backup.fuente} target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-medium text-primary hover:text-primary hover:underline">
                   <span class="break-all">{svg_backup.fuente}</span>
-                  <ExternalLink class="h-3 w-3 shrink-0 text-blue-500" />
+                  <ExternalLink class="h-3 w-3 shrink-0 text-primary" />
                 </a>
               </>
             ) : (
@@ -184,36 +184,36 @@ Describe el error o la corrección sugerida.`)}`;
         </figure>
       )}
 
-      <div class="mt-10 pt-5 border-t border-gray-200/70 flex flex-wrap items-center gap-2.5 not-prose">
-        <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex items-center gap-1.5 text-xs font-semibold text-gray-700 bg-gray-100 hover:bg-gray-200 px-3 py-1.5 rounded-lg transition-colors">
+      <div class="mt-10 pt-5 border-t border-base-300/70 flex flex-wrap items-center gap-2.5 not-prose">
+        <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-colors">
           <FileText class="h-4 w-4 shrink-0" />
           <span>Ver en Markdown</span>
         </a>
-        <button id="btn-copy-md" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-700 bg-blue-50 hover:bg-blue-100 px-3 py-1.5 rounded-lg transition-colors">
+        <button id="btn-copy-md" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary bg-primary/10 hover:bg-primary/15 px-3 py-1.5 rounded-lg transition-colors">
           <Copy class="h-4 w-4 shrink-0" />
           <span data-copy-label>Copiar como Markdown</span>
         </button>
         <!-- Button group: preguntar a una IA + copiar prompt completo -->
-        <div class="inline-flex flex-wrap items-center rounded-lg border border-emerald-200/80 bg-emerald-50/60 overflow-hidden" role="group" aria-label="Preguntar a una IA sobre este evento">
+        <div class="inline-flex flex-wrap items-center rounded-lg border border-success/30 bg-success/10 overflow-hidden" role="group" aria-label="Preguntar a una IA sobre este evento">
           <span class="inline-flex items-center gap-1.5 pl-3 pr-2 py-1.5 text-xs font-semibold text-emerald-700">
             <Bot class="h-4 w-4 shrink-0" />
             <span>Preguntar a</span>
           </span>
           <a id="btn-ai-chatgpt" href={chatGptUrl} target="_blank" rel="noopener" data-ai-copy
-             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors border-l border-emerald-200/70"
+             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-success hover:bg-success/15 transition-colors border-l border-success/30"
              title="Abrir ChatGPT con el evento como prompt">ChatGPT</a>
           <a id="btn-ai-claude" href={claudeUrl} target="_blank" rel="noopener" data-ai-copy
-             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-emerald-800 hover:bg-emerald-100 transition-colors border-l border-emerald-200/70"
+             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-success hover:bg-success/15 transition-colors border-l border-success/30"
              title="Abrir Claude con el evento como prompt">Claude</a>
           <button id="btn-copy-prompt" type="button" data-copy-prompt
-                  class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-emerald-700 hover:bg-emerald-100 transition-colors border-l border-emerald-200/70"
+                  class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-success hover:bg-success/15 transition-colors border-l border-success/30"
                   title="Copiar el prompt completo para pegarlo en cualquier IA">
             <Copy class="h-3.5 w-3.5 shrink-0" />
             <span data-copy-label>Copiar prompt</span>
           </button>
         </div>
         <a href={reportUrl} target="_blank" rel="noopener"
-           class="inline-flex items-center gap-1.5 text-xs font-semibold text-amber-700 bg-amber-50 hover:bg-amber-100 px-3 py-1.5 rounded-lg transition-colors"
+           class="inline-flex items-center gap-1.5 text-xs font-semibold text-warning bg-warning/15 hover:bg-warning/20 px-3 py-1.5 rounded-lg transition-colors"
            title="Abrir un issue de GitHub para reportar un error o sugerir una corrección en este evento">
           <Bug class="h-4 w-4 shrink-0" />
           <span>Reportar error</span>
@@ -224,44 +224,44 @@ Describe el error o la corrección sugerida.`)}`;
     <div id="event-export-data" class="hidden" data-md={exportMd} data-prompt={chatPrompt} aria-hidden="true"></div>
 
     {impacto && (impacto.colectivos?.length > 0 || impacto.sectores?.length > 0) && (
-      <section class="mb-8 bg-amber-50/50 border border-amber-200/70 rounded-2xl p-6">
+      <section class="mb-8 bg-warning/10 border border-warning/40 rounded-2xl p-6">
         <div class="flex items-center gap-2 mb-3">
-          <Activity class="h-5 w-5 text-amber-700 shrink-0" />
-          <h2 class="text-base font-bold text-amber-950">Impacto y Alcance</h2>
+          <Activity class="h-5 w-5 text-warning shrink-0" />
+          <h2 class="text-base font-bold text-base-content">Impacto y Alcance</h2>
         </div>
         <div class="space-y-3 text-sm">
           {impacto.colectivos?.length > 0 && (
             <div>
-              <span class="font-semibold text-amber-900">Colectivos afectados: </span>
-              <span class="text-amber-800">{impacto.colectivos.join(', ')}</span>
+              <span class="font-semibold text-base-content">Colectivos afectados: </span>
+              <span class="text-base-content/70">{impacto.colectivos.join(', ')}</span>
             </div>
           )}
           {impacto.sectores?.length > 0 && (
             <div>
-              <span class="font-semibold text-amber-900">Sectores involucrados: </span>
-              <span class="text-amber-800">{impacto.sectores.join(', ')}</span>
+              <span class="font-semibold text-base-content">Sectores involucrados: </span>
+              <span class="text-base-content/70">{impacto.sectores.join(', ')}</span>
             </div>
           )}
         </div>
       </section>
     )}
 
-    <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+    <section class="mb-10 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
       <div class="flex items-center gap-2 mb-4">
-        <Tag class="h-5 w-5 text-blue-600 shrink-0" />
-        <h2 class="text-base font-bold text-gray-900">Entidades y Etiquetas</h2>
+        <Tag class="h-5 w-5 text-primary shrink-0" />
+        <h2 class="text-base font-bold text-base-content">Entidades y Etiquetas</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
         <div>
-          <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-            <Layers class="h-3.5 w-3.5 text-gray-400" />
+          <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
+            <Layers class="h-3.5 w-3.5 text-base-content/40" />
             Temas
           </h3>
           <div class="flex gap-1.5 flex-wrap">
             {temaNombres.map((t) => (
-              <a href={`/topics/${t.id}`} transition:name={`topic-title-${t.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
-                <Tag class="h-3 w-3 text-gray-400" />
+              <a href={`/topics/${t.id}`} transition:name={`topic-title-${t.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
+                <Tag class="h-3 w-3 text-base-content/40" />
                 {t.nombre}
               </a>
             ))}
@@ -270,14 +270,14 @@ Describe el error o la corrección sugerida.`)}`;
 
         {personaNombres.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-              <User class="h-3.5 w-3.5 text-gray-400" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
+              <User class="h-3.5 w-3.5 text-base-content/40" />
               Personas
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {personaNombres.map((p) => (
-                <a href={`/people/${p.id}`} transition:name={`person-title-${p.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
-                  <User class="h-3 w-3 text-gray-400" />
+                <a href={`/people/${p.id}`} transition:name={`person-title-${p.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
+                  <User class="h-3 w-3 text-base-content/40" />
                   {p.nombre}
                 </a>
               ))}
@@ -287,14 +287,14 @@ Describe el error o la corrección sugerida.`)}`;
 
         {orgNombres.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-              <Building2 class="h-3.5 w-3.5 text-gray-400" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
+              <Building2 class="h-3.5 w-3.5 text-base-content/40" />
               Organizaciones
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {orgNombres.map((o) => (
-                <a href={`/organizations/${o.id}`} transition:name={`org-title-${o.id}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-2.5 py-1 rounded-lg transition-colors">
-                  <Building2 class="h-3 w-3 text-gray-400" />
+                <a href={`/organizations/${o.id}`} transition:name={`org-title-${o.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
+                  <Building2 class="h-3 w-3 text-base-content/40" />
                   {o.nombre}
                 </a>
               ))}
@@ -304,14 +304,14 @@ Describe el error o la corrección sugerida.`)}`;
 
         {cifraConceptos.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-              <TrendingUp class="h-3.5 w-3.5 text-blue-500" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
+              <TrendingUp class="h-3.5 w-3.5 text-primary" />
               Cifras Destacadas
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {cifraConceptos.map((c) => (
-                <a href={`/stats/${c.concepto}`} class="inline-flex items-center gap-1 text-xs bg-blue-50 hover:bg-blue-100 text-blue-700 font-medium px-2.5 py-1 rounded-lg transition-colors border border-blue-200/60">
-                  <TrendingUp class="h-3 w-3 text-blue-500" />
+                <a href={`/stats/${c.concepto}`} class="inline-flex items-center gap-1 text-xs bg-primary/10 hover:bg-primary/15 text-primary font-medium px-2.5 py-1 rounded-lg transition-colors border border-primary/30/60">
+                  <TrendingUp class="h-3 w-3 text-primary" />
                   {c.nombre}
                 </a>
               ))}
@@ -321,13 +321,13 @@ Describe el error o la corrección sugerida.`)}`;
 
         {etiquetas.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-500 mb-2">
-              <Hash class="h-3.5 w-3.5 text-gray-400" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
+              <Hash class="h-3.5 w-3.5 text-base-content/40" />
               Etiquetas libres
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {etiquetas.map((e) => (
-                <span class="inline-flex items-center text-xs bg-gray-100/70 text-gray-600 px-2 py-0.5 rounded-md font-mono">
+                <span class="inline-flex items-center text-xs bg-base-200/70 text-base-content/70 px-2 py-0.5 rounded-md font-mono">
                   #{e}
                 </span>
               ))}
@@ -344,40 +344,40 @@ Describe el error o la corrección sugerida.`)}`;
     </EventConnections>
 
     {refs.length > 0 && (
-      <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+      <section class="mb-10 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
         <div class="flex items-center gap-2 mb-4">
-          <BookOpen class="h-5 w-5 text-blue-600 shrink-0" />
-          <h2 class="text-base font-bold text-gray-900">Referencias y Fuentes ({refs.length})</h2>
+          <BookOpen class="h-5 w-5 text-primary shrink-0" />
+          <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({refs.length})</h2>
         </div>
         <ol class="space-y-3 text-sm">
           {refs.map((ref, i) => (
-            <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-gray-700 scroll-mt-20 p-2.5 rounded-lg hover:bg-gray-50 transition-colors border border-transparent hover:border-gray-200/60">
-              <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-blue-100 text-blue-700 font-mono text-xs shrink-0 font-semibold mt-0.5">
+            <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-base-content/80 scroll-mt-20 p-2.5 rounded-lg hover:bg-base-200 transition-colors border border-transparent hover:border-base-300/60">
+              <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-primary font-mono text-xs shrink-0 font-semibold mt-0.5">
                 {i + 1}
               </span>
               <div class="min-w-0 flex-1">
                 {ref.url ? (
-                  <a href={ref.url} class="inline-flex items-center gap-1 font-semibold text-blue-600 hover:text-blue-800 hover:underline" target="_blank" rel="noopener">
+                  <a href={ref.url} class="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary hover:underline" target="_blank" rel="noopener">
                     <span>{ref.titulo}</span>
-                    <ExternalLink class="h-3.5 w-3.5 shrink-0 text-blue-500" />
+                    <ExternalLink class="h-3.5 w-3.5 shrink-0 text-primary" />
                   </a>
                 ) : (
-                  <span class="font-semibold text-gray-900">{ref.titulo}</span>
+                  <span class="font-semibold text-base-content">{ref.titulo}</span>
                 )}
                 {ref.url && (
                   <span class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
-                    <a href={`https://web.archive.org/web/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-blue-500 transition-colors" target="_blank" rel="noopener" title="Wayback Machine">Archive</a>
-                    <a href={`https://archive.ph/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-orange-500 transition-colors" target="_blank" rel="noopener" title="archive.ph">archive.ph</a>
-                    <a href={`https://ghostarchive.org/search?term=${encodeURIComponent(ref.url)}`} class="text-[10px] font-medium text-gray-400 hover:text-purple-500 transition-colors" target="_blank" rel="noopener" title="Ghostarchive">Ghost</a>
-                    <a href={`https://timetravel.mementoweb.org/memento/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-teal-500 transition-colors" target="_blank" rel="noopener" title="Memento Time Travel">Memento</a>
-                    <a href={`https://r.jina.ai/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-green-500 transition-colors" target="_blank" rel="noopener" title="Versión Texto Limpio">Reader</a>
-                    <a href={`https://www.paywallskip.com/article?url=${encodeURIComponent(ref.url)}`} class="text-[10px] font-medium text-gray-400 hover:text-amber-500 transition-colors" target="_blank" rel="noopener" title="Paywall Skip">Paywall</a>
-                    <a href={`https://defuddle.md/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-indigo-500 transition-colors" target="_blank" rel="noopener" title="Defuddle">Defuddle</a>
-                    <a href={`https://markdown.new/${ref.url}`} class="text-[10px] font-medium text-gray-400 hover:text-pink-500 transition-colors" target="_blank" rel="noopener" title="Markdown">MD</a>
+                    <a href={`https://web.archive.org/web/${ref.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-primary transition-colors" target="_blank" rel="noopener" title="Wayback Machine">Archive</a>
+                    <a href={`https://archive.ph/${ref.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-orange-500 transition-colors" target="_blank" rel="noopener" title="archive.ph">archive.ph</a>
+                    <a href={`https://ghostarchive.org/search?term=${encodeURIComponent(ref.url)}`} class="text-[10px] font-medium text-base-content/40 hover:text-purple-500 transition-colors" target="_blank" rel="noopener" title="Ghostarchive">Ghost</a>
+                    <a href={`https://timetravel.mementoweb.org/memento/${ref.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-teal-500 transition-colors" target="_blank" rel="noopener" title="Memento Time Travel">Memento</a>
+                    <a href={`https://r.jina.ai/${ref.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-green-500 transition-colors" target="_blank" rel="noopener" title="Versión Texto Limpio">Reader</a>
+                    <a href={`https://www.paywallskip.com/article?url=${encodeURIComponent(ref.url)}`} class="text-[10px] font-medium text-base-content/40 hover:text-warning transition-colors" target="_blank" rel="noopener" title="Paywall Skip">Paywall</a>
+                    <a href={`https://defuddle.md/${ref.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-indigo-500 transition-colors" target="_blank" rel="noopener" title="Defuddle">Defuddle</a>
+                    <a href={`https://markdown.new/${ref.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-pink-500 transition-colors" target="_blank" rel="noopener" title="Markdown">MD</a>
                   </span>
                 )}
-                <p class="text-xs text-gray-500 mt-0.5">
-                  Medio: <span class="font-medium text-gray-700">{ref.medio}</span> {ref.autor ? `· Autor: ${ref.autor}` : ''}
+                <p class="text-xs text-base-content/60 mt-0.5">
+                  Medio: <span class="font-medium text-base-content/80">{ref.medio}</span> {ref.autor ? `· Autor: ${ref.autor}` : ''}
                 </p>
               </div>
             </li>
@@ -386,8 +386,8 @@ Describe el error o la corrección sugerida.`)}`;
       </section>
     )}
 
-    <footer class="flex items-center gap-2 text-xs text-gray-400 border-t border-gray-200/60 pt-4">
-      <Clock class="h-3.5 w-3.5 text-gray-400" />
+    <footer class="flex items-center gap-2 text-xs text-base-content/40 border-t border-base-300/60 pt-4">
+      <Clock class="h-3.5 w-3.5 text-base-content/40" />
       <span>Creado: {creado.toLocaleDateString('es-ES')} · Actualizado: {actualizado.toLocaleDateString('es-ES')}</span>
     </footer>
   </article>

@@ -179,7 +179,7 @@ function init() {
     const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
     label.setAttribute('y', R + (isMini ? 12 : 14));
     label.setAttribute('text-anchor', 'middle');
-    label.setAttribute('fill', '#44403c');
+    label.setAttribute('fill', 'var(--color-base-content)');
     label.setAttribute('font-size', String(FONT_SIZE));
     label.setAttribute('font-weight', '500');
     label.style.pointerEvents = 'none';
@@ -190,7 +190,8 @@ function init() {
       const dateText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       dateText.setAttribute('y', R + 26);
       dateText.setAttribute('text-anchor', 'middle');
-      dateText.setAttribute('fill', '#a8a29e');
+      dateText.setAttribute('fill', 'var(--color-base-content)');
+      dateText.setAttribute('fill-opacity', '0.55');
       dateText.setAttribute('font-size', '9');
       dateText.style.pointerEvents = 'none';
       dateText.textContent = n.fecha;
@@ -412,7 +413,7 @@ function init() {
   if (tip) {
     nodes.forEach(n => {
       n._el.addEventListener('mouseenter', e => {
-        tip.innerHTML = `<div style="font-weight:600;color:#111827">${n.label}</div><div style="margin-top:2px;color:#6b7280;font-size:11px">${n.tipoLabel} · ${n.fecha}${n.connections > 0 ? ` · ${n.connections} vinculo(s)` : ''}</div>`;
+        tip.innerHTML = `<div class="font-semibold text-base-content">${n.label}</div><div class="mt-0.5 text-[11px] text-base-content/60">${n.tipoLabel} · ${n.fecha}${n.connections > 0 ? ` · ${n.connections} vinculo(s)` : ''}</div>`;
         tip.classList.remove('hidden');
         tip.style.left = e.clientX + 12 + 'px';
         tip.style.top = e.clientY - 10 + 'px';
@@ -460,12 +461,12 @@ function init() {
       .sort((a, b) => b.neighbor.connections - a.neighbor.connections);
     linksBox.innerHTML = rels.length
       ? rels.map((r) => `
-        <a href="${r.neighbor.url}" class="flex items-center gap-2 rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-1.5 text-xs hover:bg-blue-50 hover:border-blue-200 transition-colors">
+        <a href="${r.neighbor.url}" class="flex items-center gap-2 rounded-lg border border-base-300 bg-base-200 px-2.5 py-1.5 text-xs hover:bg-primary/10 hover:border-primary/40 transition-colors">
           <span class="h-2 w-2 shrink-0 rounded-full" style="background:${r.neighbor.color}"></span>
           <span class="shrink-0 font-semibold" style="color:${EDGE_COLORS[r.label] || '#78716c'}">${r.outgoing ? '→' : '←'} ${r.label}</span>
-          <span class="truncate text-gray-700">${r.neighbor.label}</span>
+          <span class="truncate text-base-content/80">${r.neighbor.label}</span>
         </a>`).join('')
-      : '<p class="text-xs text-gray-400">Sin conexiones explicitas.</p>';
+      : '<p class="text-xs text-base-content/40">Sin conexiones explicitas.</p>';
     dlg.querySelector('#graph-modal-open').setAttribute('href', n.url);
     dlg.showModal();
   }

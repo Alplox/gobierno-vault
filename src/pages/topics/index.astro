@@ -9,23 +9,23 @@ const topics = await getAllTopics();
 <Base title="Temas">
   <div class="mb-8">
     <div class="flex items-center gap-2 mb-1">
-      <Tag class="h-6 w-6 text-blue-600 shrink-0" />
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Temas y Taxonomía</h1>
+      <Tag class="h-6 w-6 text-primary shrink-0" />
+      <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Temas y Taxonomía</h1>
     </div>
-    <p class="text-gray-500 text-sm">Categorización de eventos (emergencia, economía, reformas, relaciones internacionales, etc.).</p>
+    <p class="text-base-content/60 text-sm">Categorización de eventos (emergencia, economía, reformas, relaciones internacionales, etc.).</p>
   </div>
 
   <div class="grid gap-4 sm:grid-cols-2">
     {topics.map((topic) => (
-      <a href={`/topics/${topic.id}`} class="group block border border-gray-200/80 shadow-sm rounded-xl p-5 hover:border-blue-300 hover:shadow-md transition-all duration-200 bg-white">
+      <a href={`/topics/${topic.id}`} class="group block border border-base-300 shadow-sm rounded-xl p-5 hover:border-primary/50 hover:shadow-md transition-all duration-200 bg-base-100">
         <div class="flex items-start justify-between gap-3">
           <div class="min-w-0 flex-1">
-            <h3 transition:name={`topic-title-${topic.id}`} class="font-bold text-gray-900 text-base group-hover:text-blue-600 transition-colors leading-snug">{topic.data.nombre}</h3>
+            <h3 transition:name={`topic-title-${topic.id}`} class="font-bold text-base-content text-base group-hover:text-primary transition-colors leading-snug">{topic.data.nombre}</h3>
             {topic.data.descripcion && (
-              <p class="text-xs text-gray-500 mt-1 line-clamp-2 leading-relaxed">{topic.data.descripcion}</p>
+              <p class="text-xs text-base-content/60 mt-1 line-clamp-2 leading-relaxed">{topic.data.descripcion}</p>
             )}
           </div>
-          <ChevronRight class="h-5 w-5 text-gray-300 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
+          <ChevronRight class="h-5 w-5 text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 mt-1" />
         </div>
       </a>
     ))}

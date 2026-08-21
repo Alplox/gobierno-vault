@@ -20,26 +20,26 @@ const lazyData = lazyOrgs.map((o) => ({
 <Base title="Organizaciones">
   <div class="mb-8">
     <div class="flex items-center gap-2 mb-1">
-      <Building2 class="h-6 w-6 text-blue-600 shrink-0" />
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Organizaciones</h1>
+      <Building2 class="h-6 w-6 text-primary shrink-0" />
+      <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Organizaciones</h1>
     </div>
-    <p class="text-gray-500 text-sm">Ministerios, instituciones públicas, entidades y organismos referenciados.</p>
+    <p class="text-base-content/60 text-sm">Ministerios, instituciones públicas, entidades y organismos referenciados.</p>
   </div>
 
   <div id="orgs-index-root" class="grid gap-4 sm:grid-cols-2">
     {ssrOrgs.map((org) => (
-      <a href={`/organizations/${org.id}`} class="group block border border-gray-200/80 shadow-sm rounded-xl p-5 hover:border-blue-300 hover:shadow-md active:scale-[0.99] transition-all duration-200 bg-white">
+      <a href={`/organizations/${org.id}`} class="group block border border-base-300 shadow-sm rounded-xl p-5 hover:border-primary/50 hover:shadow-md active:scale-[0.99] transition-all duration-200 bg-base-100">
         <div class="flex items-start justify-between gap-3">
           <div class="min-w-0 flex-1">
-            <h3 transition:name={`org-title-${org.id}`} class="font-bold text-gray-900 text-base group-hover:text-blue-600 transition-colors leading-snug">{org.data.nombre}</h3>
+            <h3 transition:name={`org-title-${org.id}`} class="font-bold text-base-content text-base group-hover:text-primary transition-colors leading-snug">{org.data.nombre}</h3>
             {org.data.tipo && (
-              <p class="flex items-center gap-1.5 text-xs text-gray-600 font-medium mt-1">
-                <Layers class="h-3.5 w-3.5 text-gray-400 shrink-0" />
+              <p class="flex items-center gap-1.5 text-xs text-base-content/70 font-medium mt-1">
+                <Layers class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
                 <span>{org.data.tipo}</span>
               </p>
             )}
           </div>
-          <span class="text-gray-300 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all shrink-0 mt-1">›</span>
+          <span class="text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 mt-1">›</span>
         </div>
       </a>
     ))}
@@ -49,7 +49,7 @@ const lazyData = lazyOrgs.map((o) => ({
     <div class="mt-6 flex justify-center">
       <button
         id="load-more-orgs"
-        class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-gray-200 bg-white px-5 py-2.5 text-sm font-semibold text-gray-700 shadow-sm hover:bg-gray-50"
+        class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-base-300 bg-base-100 px-5 py-2.5 text-sm font-semibold text-base-content/80 shadow-sm hover:bg-base-200"
       >
         <span class="org-more-label">Cargar más organizaciones ({lazyOrgs.length} restantes)</span>
       </button>

@@ -163,10 +163,10 @@ const eventData = allEvents.filter((event) => !ssrIds.has(eventBasename(event.id
 <Base title="Eventos">
   <div class="mb-8">
     <div class="flex items-center gap-2 mb-1">
-      <Calendar class="h-6 w-6 text-blue-600 shrink-0" />
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">Catálogo de Eventos</h1>
+      <Calendar class="h-6 w-6 text-primary shrink-0" />
+      <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Catálogo de Eventos</h1>
     </div>
-    <p class="text-gray-500 text-sm">Explora acontecimientos, decretos y declaraciones registrados cronológicamente, agrupados por año y mes.</p>
+    <p class="text-base-content/60 text-sm">Explora acontecimientos, decretos y declaraciones registrados cronológicamente, agrupados por año y mes.</p>
   </div>
 
   <FilterBar topics={topics} people={people} orgs={orgs} tipos={tipos} etiquetas={etiquetas} />
@@ -178,10 +178,10 @@ const eventData = allEvents.filter((event) => !ssrIds.has(eventBasename(event.id
       {years.map((yearGroup) => (
         <section id={`year-${yearGroup.year}`} class="scroll-mt-32">
           <details class="group/year" open={yearGroup.year === currentYear} data-persist={`events-year-${yearGroup.year}`}>
-            <summary class="flex cursor-pointer list-none items-center gap-2 border-b-2 border-gray-200 py-2 [&::-webkit-details-marker]:hidden">
-              <ChevronDown class="h-4 w-4 shrink-0 text-gray-400 transition-transform duration-200 group-open/year:rotate-180" />
-              <span class="text-lg font-bold tracking-tight text-gray-900">{yearGroup.year}</span>
-              <span class="text-xs text-gray-400">
+            <summary class="flex cursor-pointer list-none items-center gap-2 border-b-2 border-base-300 py-2 [&::-webkit-details-marker]:hidden">
+              <ChevronDown class="h-4 w-4 shrink-0 text-base-content/40 transition-transform duration-200 group-open/year:rotate-180" />
+              <span class="text-lg font-bold tracking-tight text-base-content">{yearGroup.year}</span>
+              <span class="text-xs text-base-content/40">
                 {yearGroup.months.reduce((a, m) => a + m.events.length, 0)} {yearGroup.months.reduce((a, m) => a + m.events.length, 0) === 1 ? 'evento' : 'eventos'}
               </span>
             </summary>
@@ -189,10 +189,10 @@ const eventData = allEvents.filter((event) => !ssrIds.has(eventBasename(event.id
             <div class="pt-4">
               {yearGroup.months.map((monthGroup) => (
                 <section id={`month-${monthGroup.key}`} class="scroll-mt-32 mb-8">
-                  <h2 class="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-gray-500">
-                    <span class="h-1.5 w-1.5 rounded-full bg-gray-400" />
+                  <h2 class="mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-base-content/60">
+                    <span class="h-1.5 w-1.5 rounded-full bg-neutral/60" />
                     {monthNames[monthGroup.month - 1]} {monthGroup.year}
-                    <span class="ml-auto text-[11px] font-normal normal-case text-gray-400">
+                    <span class="ml-auto text-[11px] font-normal normal-case text-base-content/40">
                       {monthGroup.events.length} {monthGroup.events.length === 1 ? 'evento' : 'eventos'}
                     </span>
                   </h2>
@@ -210,7 +210,7 @@ const eventData = allEvents.filter((event) => !ssrIds.has(eventBasename(event.id
       ))}
     </div>
 
-    <p id="no-results" class="hidden text-sm text-gray-500 bg-white p-12 rounded-2xl border border-dashed border-gray-300 text-center">
+    <p id="no-results" class="hidden text-sm text-base-content/60 bg-base-100 p-12 rounded-2xl border border-dashed border-base-300 text-center">
       No se encontraron eventos con los filtros seleccionados.
     </p>
 

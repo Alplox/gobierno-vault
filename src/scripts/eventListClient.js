@@ -15,22 +15,22 @@ const TIPO_LABELS = {
   investigacion: 'Investigacion', reaccion: 'Reaccion', resultado: 'Resultado',
 };
 const TIPO_STYLES = {
-  declaracion: 'bg-sky-50 text-sky-700 ring-sky-200/60', accion: 'bg-emerald-50 text-emerald-700 ring-emerald-200/60',
-  anuncio: 'bg-amber-50 text-amber-700 ring-amber-200/60', decreto: 'bg-purple-50 text-purple-700 ring-purple-200/60',
-  proyecto: 'bg-indigo-50 text-indigo-700 ring-indigo-200/60', ley: 'bg-blue-50 text-blue-700 ring-blue-200/60',
-  votacion: 'bg-violet-50 text-violet-700 ring-violet-200/60', fallo_judicial: 'bg-rose-50 text-rose-700 ring-rose-200/60',
-  entrevista: 'bg-teal-50 text-teal-700 ring-teal-200/60', publicacion: 'bg-cyan-50 text-cyan-700 ring-cyan-200/60',
-  documento: 'bg-stone-100 text-stone-700 ring-stone-200/60', investigacion: 'bg-orange-50 text-orange-700 ring-orange-200/60',
-  reaccion: 'bg-pink-50 text-pink-700 ring-pink-200/60', resultado: 'bg-emerald-50 text-emerald-800 ring-emerald-300/60',
+  declaracion: 'rel-chip [--chip-hue:#0ea5e9]', accion: 'rel-chip [--chip-hue:#10b981]',
+  anuncio: 'rel-chip [--chip-hue:#f59e0b]', decreto: 'rel-chip [--chip-hue:#a855f7]',
+  proyecto: 'rel-chip [--chip-hue:#6366f1]', ley: 'rel-chip [--chip-hue:#3b82f6]',
+  votacion: 'rel-chip [--chip-hue:#8b5cf6]', fallo_judicial: 'rel-chip [--chip-hue:#f43f5e]',
+  entrevista: 'rel-chip [--chip-hue:#14b8a6]', publicacion: 'rel-chip [--chip-hue:#06b6d4]',
+  documento: 'bg-base-200 text-base-content/70 ring-base-300', investigacion: 'rel-chip [--chip-hue:#f97316]',
+  reaccion: 'rel-chip [--chip-hue:#ec4899]', resultado: 'rel-chip [--chip-hue:#10b981]',
 };
 const RELATION_CHIPS = {
-  contradice: 'bg-red-50 text-red-800 ring-red-200/80', confirma: 'bg-emerald-50 text-emerald-800 ring-emerald-200/80',
-  cumple: 'bg-emerald-50 text-emerald-800 ring-emerald-200/80', incumple: 'bg-red-50 text-red-800 ring-red-200/80',
-  amplia: 'bg-sky-50 text-sky-800 ring-sky-200/80', corrige: 'bg-amber-50 text-amber-900 ring-amber-200/80',
-  rectifica: 'bg-amber-50 text-amber-900 ring-amber-200/80', responde_a: 'bg-violet-50 text-violet-800 ring-violet-200/80',
-  deriva_en: 'bg-indigo-50 text-indigo-800 ring-indigo-200/80', provoca: 'bg-orange-50 text-orange-800 ring-orange-200/80',
-  cita: 'bg-gray-100 text-gray-700 ring-gray-200/80', reemplaza: 'bg-cyan-50 text-cyan-800 ring-cyan-200/80',
-  actualiza: 'bg-blue-50 text-blue-800 ring-blue-200/80', mismo_contexto: 'bg-gray-100 text-gray-600 ring-gray-200/80',
+  contradice: 'rel-chip [--chip-hue:#ef4444]', confirma: 'rel-chip [--chip-hue:#10b981]',
+  cumple: 'rel-chip [--chip-hue:#10b981]', incumple: 'rel-chip [--chip-hue:#ef4444]',
+  amplia: 'rel-chip [--chip-hue:#0ea5e9]', corrige: 'rel-chip [--chip-hue:#f59e0b]',
+  rectifica: 'rel-chip [--chip-hue:#f59e0b]', responde_a: 'rel-chip [--chip-hue:#8b5cf6]',
+  deriva_en: 'rel-chip [--chip-hue:#6366f1]', provoca: 'rel-chip [--chip-hue:#f97316]',
+  cita: 'bg-base-200 text-base-content/80 ring-base-300/80', reemplaza: 'rel-chip [--chip-hue:#06b6d4]',
+  actualiza: 'rel-chip [--chip-hue:#3b82f6]', mismo_contexto: 'bg-base-200 text-base-content/70 ring-base-300',
 };
 const RELATION_LABELS = {
   contradice: 'Contradice', confirma: 'Confirma', cumple: 'Cumple', incumple: 'Incumple',
@@ -43,7 +43,7 @@ function esc(s) {
   return String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 }
 function chip(tipo) {
-  return RELATION_CHIPS[tipo] || 'bg-gray-100 text-gray-700 ring-gray-200/80';
+  return RELATION_CHIPS[tipo] || 'bg-base-200 text-base-content/80 ring-base-300/80';
 }
 // Normaliza minúsculas + sin acentos para la búsqueda.
 function norm(s) {
@@ -86,22 +86,22 @@ function cardHTML(e) {
     )
     .join('');
   const temas = (temaNames || [])
-    .map((t) => `<span class="inline-flex items-center gap-1 text-xs bg-gray-100/80 text-gray-600 px-2 py-0.5 rounded-md font-medium"><span>${esc(t)}</span></span>`)
+    .map((t) => `<span class="inline-flex items-center gap-1 text-xs bg-base-200/80 text-base-content/70 px-2 py-0.5 rounded-md font-medium"><span>${esc(t)}</span></span>`)
     .join('');
   const vinculo = e.links
-    ? `<span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 ring-1 ring-inset ring-blue-200/70"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
+    ? `<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary ring-1 ring-inset ring-primary/30"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
     : '';
 
-  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-etiquetas="${esc((e.etiquetas || []).join(','))}" data-search="${esc(e.search || '')}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden">
+  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-etiquetas="${esc((e.etiquetas || []).join(','))}" data-search="${esc(e.search || '')}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-primary/40 active:scale-[0.99] transition-all duration-200 bg-base-100 border border-base-300 overflow-hidden">
   <div class="flex flex-wrap items-center gap-2 mb-2 text-xs">
-    <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-gray-100 text-gray-700 ring-gray-200'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
-    <span class="inline-flex items-center gap-1 text-gray-500 font-medium"><span>${esc(e.fechaStr)}</span></span>
+    <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-base-200 text-base-content/80 ring-base-300'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
+    <span class="inline-flex items-center gap-1 text-base-content/60 font-medium"><span>${esc(e.fechaStr)}</span></span>
     ${vinculo}
   </div>
-  <h3 style="view-transition-name:event-title-${e.id}" class="font-semibold text-gray-900 text-balance text-base leading-snug mb-2 group-hover:text-blue-600">${esc(e.titulo)}</h3>
-  ${personaNames.length ? `<div class="flex items-center gap-1.5 text-xs text-gray-600 mb-2.5 min-w-0"><span class="truncate">${esc(personaNames.join(', '))}</span></div>` : ''}
+  <h3 style="view-transition-name:event-title-${e.id}" class="font-semibold text-base-content text-balance text-base leading-snug mb-2 group-hover:text-primary">${esc(e.titulo)}</h3>
+  ${personaNames.length ? `<div class="flex items-center gap-1.5 text-xs text-base-content/70 mb-2.5 min-w-0"><span class="truncate">${esc(personaNames.join(', '))}</span></div>` : ''}
   ${temas ? `<div class="flex gap-1.5 flex-wrap mb-3">${temas}</div>` : ''}
-  ${previews ? `<div class="pt-2 border-t border-gray-100 flex flex-wrap gap-1.5">${previews}</div>` : ''}
+  ${previews ? `<div class="pt-2 border-t border-base-300 flex flex-wrap gap-1.5">${previews}</div>` : ''}
 </a>`;
 }
 
@@ -249,7 +249,7 @@ export function applyFilters() {
 }
 
 // Estado visual de los chips de tipo según los filtros activos.
-const CHIP_OFF = ['bg-white', 'text-gray-500', 'ring-gray-200', 'hover:bg-gray-100'];
+const CHIP_OFF = ['bg-base-100', 'text-base-content/60', 'ring-base-300', 'hover:bg-base-200'];
 function syncTipoChips(f) {
   document.querySelectorAll('[data-tipo-chip]').forEach((btn) => {
     const on = f.tipos.includes(btn.dataset.tipoChip || '');

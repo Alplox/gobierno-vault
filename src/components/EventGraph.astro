@@ -156,16 +156,16 @@ const graphLinks = graphEdges.map((e) => ({
 ---
 
 <div class:list={[
-  'relative overflow-hidden rounded-xl border border-gray-200 bg-white',
+  'relative overflow-hidden rounded-xl border border-base-300 bg-base-100',
   size === 'mini' ? 'mb-6' : '',
 ]}>
   {size === 'full' && (
-    <div class="border-b border-gray-100 px-5 py-3 flex items-center justify-between gap-3 flex-wrap">
+    <div class="border-b border-base-300 px-5 py-3 flex items-center justify-between gap-3 flex-wrap">
       <div>
-        <h2 class="text-sm font-semibold text-gray-800">Grafo de relaciones</h2>
-        <p class="text-xs text-gray-500">Nodos = eventos, flechas = relaciones explicitas. Arrastra nodos, scroll para zoom, shift+drag para mover vista. Toca un nodo para leerlo sin perder la vista.</p>
+        <h2 class="text-sm font-semibold text-base-content">Grafo de relaciones</h2>
+        <p class="text-xs text-base-content/60">Nodos = eventos, flechas = relaciones explicitas. Arrastra nodos, scroll para zoom, shift+drag para mover vista. Toca un nodo para leerlo sin perder la vista.</p>
       </div>
-      <label class="flex shrink-0 cursor-pointer items-center gap-1.5 text-xs font-medium text-gray-600">
+      <label class="flex shrink-0 cursor-pointer items-center gap-1.5 text-xs font-medium text-base-content/70">
         <input type="checkbox" id="graph-include-isolated" class="h-3.5 w-3.5 accent-blue-600" />
         Incluir sin conexiones ({isolatedCount})
       </label>
@@ -230,12 +230,12 @@ const graphLinks = graphEdges.map((e) => ({
           const fechaStr = new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' });
           return (
             <g class="graph-node" data-id={id} data-url={`/events/${year}/${id}`}>
-              <circle cx={pos.x} cy={pos.y} r={r} fill={color} stroke="white" stroke-width="2" style="cursor: pointer;" />
+              <circle cx={pos.x} cy={pos.y} r={r} fill={color} stroke="var(--color-base-100)" stroke-width="2" style="cursor: pointer;" />
               <text
                 x={pos.x}
                 y={pos.y + r + (size === 'mini' ? 12 : 14)}
                 text-anchor="middle"
-                fill="#44403c"
+                fill="var(--color-base-content)"
                 font-size={size === 'mini' ? '9' : '11'}
                 font-weight="500"
                 style="pointer-events: none;"
@@ -252,12 +252,12 @@ const graphLinks = graphEdges.map((e) => ({
   </div>
   {size === 'full' && (
     <div class="pointer-events-none absolute bottom-4 right-4 flex flex-col gap-1">
-      <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-50 text-sm font-bold" title="Zoom in">+</button>
-      <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-50 text-sm font-bold" title="Zoom out">−</button>
-      <button id="zoom-reset" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-white text-gray-600 shadow-sm hover:bg-gray-50 text-xs" title="Reset view">⟲</button>
+      <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom in">+</button>
+      <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom out">−</button>
+      <button id="zoom-reset" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-xs" title="Reset view">⟲</button>
     </div>
   )}
-  <div id="graph-tooltip" class="pointer-events-none fixed z-50 hidden max-w-xs rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-gray-700 shadow-lg" />
+  <div id="graph-tooltip" class="pointer-events-none fixed z-50 hidden max-w-xs rounded-lg border border-base-300 bg-base-100 px-3 py-2 text-xs text-base-content/80 shadow-lg" />
 </div>
 
 {size === 'full' && (
@@ -265,13 +265,13 @@ const graphLinks = graphEdges.map((e) => ({
   <div class="p-5">
     <div class="flex items-center justify-between gap-2 mb-2">
       <span id="graph-modal-badge" class="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset"></span>
-      <button type="button" id="graph-modal-close" aria-label="Cerrar" class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-700 transition-colors text-sm font-bold">✕</button>
+      <button type="button" id="graph-modal-close" aria-label="Cerrar" class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-base-content/40 hover:bg-base-200 hover:text-base-content/80 transition-colors text-sm font-bold">✕</button>
     </div>
-    <h3 id="graph-modal-title" class="font-semibold text-gray-900 leading-snug mb-1 text-balance"></h3>
-    <p id="graph-modal-meta" class="text-xs text-gray-500 mb-3"></p>
-    <p id="graph-modal-links-title" class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-500">Conexiones</p>
+    <h3 id="graph-modal-title" class="font-semibold text-base-content leading-snug mb-1 text-balance"></h3>
+    <p id="graph-modal-meta" class="text-xs text-base-content/60 mb-3"></p>
+    <p id="graph-modal-links-title" class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/60">Conexiones</p>
     <div id="graph-modal-links" class="space-y-1.5 max-h-52 overflow-y-auto mb-4 pr-1"></div>
-    <a id="graph-modal-open" href="#" class="block text-center text-sm font-medium bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 active:scale-[0.99] transition-all">Leer evento completo →</a>
+    <a id="graph-modal-open" href="#" class="block text-center text-sm font-medium bg-primary text-primary-content px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all">Leer evento completo →</a>
   </div>
 </dialog>
 )}

@@ -35,12 +35,12 @@ function inferredReason(edge: InferredEdge): string {
 }
 ---
 
-<section class="mb-10 border-t border-gray-200/80 pt-8">
+<section class="mb-10 border-t border-base-300 pt-8">
   <div class="flex items-center gap-2 mb-1">
-    <GitFork class="h-5 w-5 text-blue-600 shrink-0" />
-    <h2 class="text-lg font-bold tracking-tight text-gray-900 text-balance">Conexiones</h2>
+    <GitFork class="h-5 w-5 text-primary shrink-0" />
+    <h2 class="text-lg font-bold tracking-tight text-base-content text-balance">Conexiones</h2>
   </div>
-  <p class="mb-6 text-sm leading-relaxed text-gray-600">
+  <p class="mb-6 text-sm leading-relaxed text-base-content/70">
     Sigue el hilo entre acontecimientos relacionados de forma explicita o por contexto compartido.
   </p>
 
@@ -50,8 +50,8 @@ function inferredReason(edge: InferredEdge): string {
     <div class="grid gap-6 md:grid-cols-2">
       {outgoing.length > 0 && (
         <div>
-          <h3 class="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-600">
-            <ArrowUpRight class="h-4 w-4 text-blue-600" />
+          <h3 class="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/70">
+            <ArrowUpRight class="h-4 w-4 text-primary" />
             Desde este evento
           </h3>
           <div class="space-y-2.5">
@@ -64,7 +64,7 @@ function inferredReason(edge: InferredEdge): string {
 
       {incoming.length > 0 && (
         <div>
-          <h3 class="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-600">
+          <h3 class="mb-3 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/70">
             <ArrowDownRight class="h-4 w-4 text-emerald-600" />
             Vinculado desde
           </h3>
@@ -79,12 +79,12 @@ function inferredReason(edge: InferredEdge): string {
   )}
 
   {hasInferred && (
-    <div class:list={[hasExplicit ? 'mt-8 border-t border-gray-100 pt-6' : '']}>
-      <h3 class="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-gray-600">
-        <Layers class="h-4 w-4 text-amber-600" />
+    <div class:list={[hasExplicit ? 'mt-8 border-t border-base-300 pt-6' : '']}>
+      <h3 class="mb-1 flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/70">
+        <Layers class="h-4 w-4 text-warning" />
         Mismo contexto
       </h3>
-      <p class="mb-3 text-xs text-gray-500">
+      <p class="mb-3 text-xs text-base-content/60">
         Eventos con temas o etiquetas en comun.
       </p>
       <div class="space-y-2.5">

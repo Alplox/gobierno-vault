@@ -23,7 +23,7 @@ const fechaStr = edge.fecha.toLocaleDateString('es-CL', {
 <a
   href={`/events/${edge.year}/${edge.eventId}`}
   class:list={[
-    'group block rounded-xl border border-gray-200/80 bg-white transition-all duration-150 hover:border-blue-300 hover:shadow-sm hover:bg-blue-50/20',
+    'group block rounded-xl border border-base-300 bg-base-100 transition-all duration-150 hover:border-primary/50 hover:shadow-sm hover:bg-primary/10/20',
     compact ? 'px-3 py-2' : 'px-4 py-3',
   ]}
 >
@@ -49,19 +49,19 @@ const fechaStr = edge.fecha.toLocaleDateString('es-CL', {
       <p
         transition:name={transitionName}
         class:list={[
-          'font-semibold leading-snug text-gray-900 text-balance group-hover:text-blue-600',
+          'font-semibold leading-snug text-base-content text-balance group-hover:text-primary',
           compact ? 'text-xs' : 'text-sm',
         ]}
       >
         {edge.titulo}
       </p>
-      {subtitle && <p class="mt-0.5 text-[11px] text-gray-500 font-medium">{subtitle}</p>}
-      <time class="mt-1 flex items-center gap-1 text-[11px] tabular-nums text-gray-400">
-        <Calendar class="h-3 w-3 text-gray-400 shrink-0" />
+      {subtitle && <p class="mt-0.5 text-[11px] text-base-content/60 font-medium">{subtitle}</p>}
+      <time class="mt-1 flex items-center gap-1 text-[11px] tabular-nums text-base-content/40">
+        <Calendar class="h-3 w-3 text-base-content/40 shrink-0" />
         <span>{fechaStr}</span>
       </time>
     </div>
-    <ArrowRight class="h-4 w-4 shrink-0 text-gray-300 transition-all duration-150 group-hover:translate-x-0.5 group-hover:text-blue-600 self-center" />
+    <ArrowRight class="h-4 w-4 shrink-0 text-base-content/30 transition-all duration-150 group-hover:translate-x-0.5 group-hover:text-primary self-center" />
   </div>
 </a>
 

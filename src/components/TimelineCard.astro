@@ -19,15 +19,15 @@ const fechaTexto = edge.fecha.toLocaleDateString('es-CL', {
 ---
 
 <div class="relative pb-6 last:pb-0">
-  <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-gray-300 ring-2 ring-white" />
-  <a href={`/events/${edge.year}/${edge.eventId}`} class="group block rounded-lg border border-gray-200/80 bg-white px-4 py-3 transition-colors hover:border-gray-300 hover:bg-gray-50/80">
+  <div class="absolute -left-[31px] top-1 h-3 w-3 rounded-full bg-base-300 ring-2 ring-white" />
+  <a href={`/events/${edge.year}/${edge.eventId}`} class="group block rounded-lg border border-base-300 bg-base-100 px-4 py-3 transition-colors hover:border-base-300 hover:bg-base-200/80">
     <div class="flex items-center gap-2 mb-1">
-      <span class="text-[10px] font-medium uppercase tracking-wide text-gray-400">{label}</span>
+      <span class="text-[10px] font-medium uppercase tracking-wide text-base-content/40">{label}</span>
       <span class={`inline-flex rounded-md px-1.5 py-0.5 text-[10px] font-medium ring-1 ring-inset ${chipClass}`}>
         {relationLabel}
       </span>
     </div>
-    <p class="text-sm font-medium leading-snug text-gray-900 text-balance group-hover:text-blue-800">{edge.titulo}</p>
-    <time class="mt-1 block text-[11px] tabular-nums text-gray-500">{fechaTexto}</time>
+    <p class="text-sm font-medium leading-snug text-base-content text-balance group-hover:text-primary">{edge.titulo}</p>
+    <time class="mt-1 block text-[11px] tabular-nums text-base-content/60">{fechaTexto}</time>
   </a>
 </div>

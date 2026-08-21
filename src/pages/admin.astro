@@ -8,31 +8,31 @@ const data = getEditorData();
 
 <Base title="Editor de Eventos">
   <div class="flex flex-col gap-6">
-    <header class="flex items-center justify-between bg-white p-5 rounded-2xl border border-gray-200/80 shadow-sm">
+    <header class="flex items-center justify-between bg-base-100 p-5 rounded-2xl border border-base-300 shadow-sm">
       <div class="flex items-center gap-2">
-        <Edit3 class="h-6 w-6 text-blue-600 shrink-0" />
-        <h1 class="text-xl font-bold text-gray-900">Editor de Eventos</h1>
+        <Edit3 class="h-6 w-6 text-primary shrink-0" />
+        <h1 class="text-xl font-bold text-base-content">Editor de Eventos</h1>
       </div>
-      <span class="text-xs font-medium text-gray-500 bg-gray-100 px-3 py-1 rounded-full">Markdown interactivo</span>
+      <span class="text-xs font-medium text-base-content/60 bg-base-200 px-3 py-1 rounded-full">Markdown interactivo</span>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
       {/* ── Frontmatter ── */}
-      <section class="bg-white rounded-lg border p-4 flex flex-col gap-3">
-        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Frontmatter</h2>
+      <section class="bg-base-100 rounded-lg border p-4 flex flex-col gap-3">
+        <h2 class="font-semibold text-sm text-base-content/80 uppercase tracking-wide">Frontmatter</h2>
 
         <label class="flex flex-col gap-1">
-          <span class="text-xs font-medium text-gray-600">Titulo *</span>
+          <span class="text-xs font-medium text-base-content/70">Titulo *</span>
           <input id="fm-titulo" type="text" required class="border rounded px-2 py-1.5 text-sm" placeholder="Titulo del evento" />
         </label>
 
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-gray-600">Fecha *</span>
+            <span class="text-xs font-medium text-base-content/70">Fecha *</span>
             <input id="fm-fecha" type="datetime-local" required class="border rounded px-2 py-1.5 text-sm" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-gray-600">Tipo *</span>
+            <span class="text-xs font-medium text-base-content/70">Tipo *</span>
             <select id="fm-tipo" required class="border rounded px-2 py-1.5 text-sm">
               <option value="">Seleccionar...</option>
               {data.eventTipos.map(t => <option value={t}>{t}</option>)}
@@ -41,78 +41,78 @@ const data = getEditorData();
         </div>
 
         <label class="flex flex-col gap-1">
-          <span class="text-xs font-medium text-gray-600">Temas</span>
+          <span class="text-xs font-medium text-base-content/70">Temas</span>
           <select id="fm-tema" multiple class="border rounded px-2 py-1.5 text-sm h-24">
             {data.topics.map(t => <option value={t.id}>{t.nombre}</option>)}
           </select>
         </label>
 
         <label class="flex flex-col gap-1 relative">
-          <span class="text-xs font-medium text-gray-600">Etiquetas</span>
+          <span class="text-xs font-medium text-base-content/70">Etiquetas</span>
           <input id="fm-etiquetas" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separadas por coma" autocomplete="off" />
-          <div id="ac-etiquetas" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-white border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
+          <div id="ac-etiquetas" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-base-100 border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
         </label>
 
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1 relative">
-            <span class="text-xs font-medium text-gray-600">Colectivos</span>
+            <span class="text-xs font-medium text-base-content/70">Colectivos</span>
             <input id="fm-colectivos" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separados por coma" autocomplete="off" />
-            <div id="ac-colectivos" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-white border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
+            <div id="ac-colectivos" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-base-100 border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
           </label>
           <label class="flex flex-col gap-1 relative">
-            <span class="text-xs font-medium text-gray-600">Sectores</span>
+            <span class="text-xs font-medium text-base-content/70">Sectores</span>
             <input id="fm-sectores" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separados por coma" autocomplete="off" />
-            <div id="ac-sectores" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-white border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
+            <div id="ac-sectores" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-base-100 border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
           </label>
         </div>
 
         <div id="fm-relaciones-container" class="flex flex-col gap-2">
-          <span class="text-xs font-medium text-gray-600">Relaciones</span>
+          <span class="text-xs font-medium text-base-content/70">Relaciones</span>
           <div id="fm-relaciones-list" class="flex flex-col gap-2"></div>
-          <button id="add-relation" type="button" class="text-xs text-blue-600 hover:underline self-start">+ Agregar relacion</button>
+          <button id="add-relation" type="button" class="text-xs text-primary hover:underline self-start">+ Agregar relacion</button>
         </div>
 
-        <div class="flex flex-col gap-2 border-t border-gray-100 pt-3 mt-1">
-          <span class="text-xs font-medium text-gray-600">Respaldo ASCII de imagen (svg_backup)</span>
+        <div class="flex flex-col gap-2 border-t border-base-300 pt-3 mt-1">
+          <span class="text-xs font-medium text-base-content/70">Respaldo ASCII de imagen (svg_backup)</span>
           <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-500">Fuente de la imagen original (URL)</span>
+            <span class="text-xs text-base-content/60">Fuente de la imagen original (URL)</span>
             <input id="fm-svg-fuente" type="url" class="border rounded px-2 py-1.5 text-sm" placeholder="https://.../imagen-original.png" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-500">Archivo .svg en public/img-to-ascii/ (recomendado — los SVGs reales pesan MBs)</span>
+            <span class="text-xs text-base-content/60">Archivo .svg en public/img-to-ascii/ (recomendado — los SVGs reales pesan MBs)</span>
             <input id="fm-svg-archivo" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="/img-to-ascii/20260809-8-zanja.svg" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs text-gray-500">O SVG inline (solo artesanal pequeño ≤100K) — generado en la web y pegado tras CONFIRMAR visualmente que se ve correcto</span>
+            <span class="text-xs text-base-content/60">O SVG inline (solo artesanal pequeño ≤100K) — generado en la web y pegado tras CONFIRMAR visualmente que se ve correcto</span>
             <textarea id="fm-svg-backup" rows="4" class="border rounded px-2 py-1.5 text-sm font-mono resize-y" placeholder="<svg ...>...</svg>"></textarea>
           </label>
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-gray-600">Creado</span>
+            <span class="text-xs font-medium text-base-content/70">Creado</span>
             <input id="fm-creado" type="date" class="border rounded px-2 py-1.5 text-sm" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-gray-600">Actualizado</span>
+            <span class="text-xs font-medium text-base-content/70">Actualizado</span>
             <input id="fm-actualizado" type="date" class="border rounded px-2 py-1.5 text-sm" />
           </label>
         </div>
       </section>
 
       {/* ── Body Editor ── */}
-      <section class="bg-white rounded-lg border p-4 flex flex-col gap-3 relative">
-        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Cuerpo del Evento</h2>
+      <section class="bg-base-100 rounded-lg border p-4 flex flex-col gap-3 relative">
+        <h2 class="font-semibold text-sm text-base-content/80 uppercase tracking-wide">Cuerpo del Evento</h2>
 
         <div class="flex gap-1 flex-wrap">
-          <button data-action="bold" class="px-2 py-1 text-xs border rounded hover:bg-gray-100 font-bold" title="Negrita">B</button>
-          <button data-action="italic" class="px-2 py-1 text-xs border rounded hover:bg-gray-100 italic" title="Cursiva">I</button>
-          <button data-action="h2" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Heading 2">H2</button>
-          <button data-action="h3" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Heading 3">H3</button>
-          <button data-action="quote" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Cita">❝</button>
-          <button data-action="list" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Lista">&bull;</button>
-          <button data-action="link" class="px-2 py-1 text-xs border rounded hover:bg-gray-100" title="Enlace">🔗</button>
-          <button data-action="wiki" class="px-2 py-1 text-xs border rounded hover:bg-gray-100 font-mono" title="Wikilink">[[</button>
+          <button data-action="bold" class="px-2 py-1 text-xs border rounded hover:bg-base-200 font-bold" title="Negrita">B</button>
+          <button data-action="italic" class="px-2 py-1 text-xs border rounded hover:bg-base-200 italic" title="Cursiva">I</button>
+          <button data-action="h2" class="px-2 py-1 text-xs border rounded hover:bg-base-200" title="Heading 2">H2</button>
+          <button data-action="h3" class="px-2 py-1 text-xs border rounded hover:bg-base-200" title="Heading 3">H3</button>
+          <button data-action="quote" class="px-2 py-1 text-xs border rounded hover:bg-base-200" title="Cita">❝</button>
+          <button data-action="list" class="px-2 py-1 text-xs border rounded hover:bg-base-200" title="Lista">&bull;</button>
+          <button data-action="link" class="px-2 py-1 text-xs border rounded hover:bg-base-200" title="Enlace">🔗</button>
+          <button data-action="wiki" class="px-2 py-1 text-xs border rounded hover:bg-base-200 font-mono" title="Wikilink">[[</button>
         </div>
 
         <div class="relative flex-1">
@@ -131,54 +131,54 @@ El [[person/jose_antonio_kast]] declaro Estado de Catastrofe en [[org/gobierno_r
 Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/15568/viviendas]]."></textarea>
 
           {/* Autocomplete dropdown */}
-          <div id="ac-dropdown" class="hidden absolute z-50 bg-white border rounded-lg shadow-lg max-h-56 overflow-y-auto w-80 text-sm"></div>
+          <div id="ac-dropdown" class="hidden absolute z-50 bg-base-100 border rounded-lg shadow-lg max-h-56 overflow-y-auto w-80 text-sm"></div>
         </div>
 
         {/* Cifra builder */}
-        <div id="cifra-builder" class="hidden bg-blue-50 border border-blue-200 rounded p-3 flex flex-col gap-2">
-          <span class="text-xs font-medium text-blue-700">Insertar Cifra</span>
+        <div id="cifra-builder" class="hidden bg-primary/10 border border-primary/30 rounded p-3 flex flex-col gap-2">
+          <span class="text-xs font-medium text-primary">Insertar Cifra</span>
           <div class="flex gap-2 items-end">
             <label class="flex flex-col gap-1 flex-1">
-              <span class="text-xs text-blue-600">Concepto</span>
+              <span class="text-xs text-primary">Concepto</span>
               <select id="cifra-concept" class="border rounded px-2 py-1 text-sm">
                 {data.cifras.map(c => <option value={c.id}>{c.nombre}</option>)}
               </select>
             </label>
             <label class="flex flex-col gap-1 w-24">
-              <span class="text-xs text-blue-600">Valor</span>
+              <span class="text-xs text-primary">Valor</span>
               <input id="cifra-value" type="text" class="border rounded px-2 py-1 text-sm" placeholder="5" />
             </label>
             <label class="flex flex-col gap-1 w-24">
-              <span class="text-xs text-blue-600">Unidad</span>
+              <span class="text-xs text-primary">Unidad</span>
               <input id="cifra-unit" type="text" class="border rounded px-2 py-1 text-sm" placeholder="personas" />
             </label>
-            <button id="cifra-insert" type="button" class="px-3 py-1 bg-blue-600 text-white text-sm rounded hover:bg-blue-700">Insertar</button>
-            <button id="cifra-cancel" type="button" class="px-3 py-1 text-sm text-gray-500 hover:text-gray-700">X</button>
+            <button id="cifra-insert" type="button" class="px-3 py-1 bg-primary text-primary-content text-sm rounded hover:bg-primary/90">Insertar</button>
+            <button id="cifra-cancel" type="button" class="px-3 py-1 text-sm text-base-content/60 hover:text-base-content/80">X</button>
           </div>
         </div>
       </section>
     </div>
 
     {/* ── Preview ── */}
-    <section class="bg-white rounded-lg border p-4">
+    <section class="bg-base-100 rounded-lg border p-4">
       <div class="flex items-center justify-between mb-3">
-        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Vista Previa</h2>
-        <button id="toggle-preview" type="button" class="text-xs text-gray-400 hover:text-gray-600">ocultar</button>
+        <h2 class="font-semibold text-sm text-base-content/80 uppercase tracking-wide">Vista Previa</h2>
+        <button id="toggle-preview" type="button" class="text-xs text-base-content/40 hover:text-base-content/70">ocultar</button>
       </div>
-      <div id="preview-content" class="prose prose-sm max-w-none text-gray-700"></div>
+      <div id="preview-content" class="prose prose-sm max-w-none text-base-content/80"></div>
     </section>
 
     {/* ── Output ── */}
-    <section class="bg-white rounded-lg border p-4">
+    <section class="bg-base-100 rounded-lg border p-4">
       <div class="flex items-center justify-between mb-3">
-        <h2 class="font-semibold text-sm text-gray-700 uppercase tracking-wide">Markdown Generado</h2>
+        <h2 class="font-semibold text-sm text-base-content/80 uppercase tracking-wide">Markdown Generado</h2>
         <div class="flex gap-2">
-          <button id="btn-copy" type="button" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm rounded transition-colors">Copiar</button>
-          <button id="btn-download" type="button" class="px-3 py-1 bg-gray-100 hover:bg-gray-200 text-sm rounded transition-colors">Descargar .md</button>
+          <button id="btn-copy" type="button" class="px-3 py-1 bg-base-200 hover:bg-base-300 text-sm rounded transition-colors">Copiar</button>
+          <button id="btn-download" type="button" class="px-3 py-1 bg-base-200 hover:bg-base-300 text-sm rounded transition-colors">Descargar .md</button>
         </div>
       </div>
-      <textarea id="output" readonly class="border rounded px-3 py-2 text-sm w-full h-48 font-mono bg-gray-50 resize-y"></textarea>
-      <p id="output-filename" class="text-xs text-gray-400 mt-2"></p>
+      <textarea id="output" readonly class="border rounded px-3 py-2 text-sm w-full h-48 font-mono bg-base-200 resize-y"></textarea>
+      <p id="output-filename" class="text-xs text-base-content/40 mt-2"></p>
     </section>
   </div>
 
@@ -242,7 +242,7 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
         if (matches.length === 0) { dropdown.classList.add('hidden'); return; }
 
         dropdown.innerHTML = matches.slice(0, 8).map(m =>
-          `<div class="px-3 py-1.5 cursor-pointer hover:bg-blue-50">${m}</div>`
+          `<div class="px-3 py-1.5 cursor-pointer hover:bg-primary/10">${m}</div>`
         ).join('');
         dropdown.classList.remove('hidden');
       });
@@ -368,12 +368,12 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
 
       acDropdown.innerHTML = items.map((item, i) => {
         const icons = { person: '👤', org: '🏢', source: '📰', cifra: '📊' };
-        const bg = i === selectedIdx ? 'bg-blue-50' : '';
-        return `<div class="px-3 py-2 cursor-pointer hover:bg-blue-50 ${bg} flex items-start gap-2" data-idx="${i}">
+        const bg = i === selectedIdx ? 'bg-primary/10' : '';
+        return `<div class="px-3 py-2 cursor-pointer hover:bg-primary/10 ${bg} flex items-start gap-2" data-idx="${i}">
           <span class="text-base">${icons[item.type] || '•'}</span>
           <div class="flex flex-col">
-            <span class="font-medium text-gray-800">${item.label}</span>
-            <span class="text-xs text-gray-400">${item.type}/${item.id}${item.desc ? ' — ' + item.desc : ''}</span>
+            <span class="font-medium text-base-content">${item.label}</span>
+            <span class="text-xs text-base-content/40">${item.type}/${item.id}${item.desc ? ' — ' + item.desc : ''}</span>
           </div>
         </div>`;
       }).join('');
@@ -610,7 +610,7 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
         .replace(/^## (.+)$/gm, '<h2 class="text-lg font-bold mt-4 mb-2">$1</h2>')
         .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.+?)\*/g, '<em>$1</em>')
-        .replace(/^> (.+)$/gm, '<blockquote class="border-l-4 border-gray-300 pl-3 italic text-gray-600 my-2">$1</blockquote>')
+        .replace(/^> (.+)$/gm, '<blockquote class="border-l-4 border-base-300 pl-3 italic text-base-content/70 my-2">$1</blockquote>')
         .replace(/^- (.+)$/gm, '<li class="ml-4">$1</li>')
         .replace(/\[\[person\/([^\]]+)\]\]/g, (_, id) => {
           const p = people.find(x => x.id === id);
@@ -624,7 +624,7 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
           if (!sourceMap.has(id)) {
             sourceMap.set(id, ++sourceCounter);
           }
-          return `<sup class="text-blue-600 font-mono text-[0.7rem]">[${sourceMap.get(id)}]</sup>`;
+          return `<sup class="text-primary font-mono text-[0.7rem]">[${sourceMap.get(id)}]</sup>`;
         })
         .replace(/\[\[cifra\/([^\]]+)\/([^\]]+)\/([^\]]+)\]\]/g, (_, concept, val, unit) => {
           return `<span class="cifra-badge">${val}</span>`;

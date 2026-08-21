@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import tailwind from '@astrojs/tailwind';
+import tailwindcss from '@tailwindcss/vite';
 import { unified } from '@astrojs/markdown-remark';
 import { availableParallelism } from 'node:os';
 import remarkWikiLinks from './src/lib/remarkWikiLinks.mjs';
@@ -25,14 +25,19 @@ export default defineConfig({
     prefetchAll: true,
     defaultStrategy: 'hover',
   },
-  integrations: [tailwind()],
-  // onnxruntime-web (motor de Piper TTS) se sirve desde CDN en runtime: el fork
-  // @realtimex/piper-tts-web usa wasmPaths/fallbackStrategy 'cdn' apuntando a
-  // jsdelivr. Vite igualmente emite su .wasm local (~25,6 MiB) por el patrón
-  // new URL("ort-wasm-*.wasm", import.meta.url); es peso muerto y supera el
-  // límite de 25 MiB por archivo de Cloudflare Pages. Se elimina del output.
+  integrations: [],
+  // Tailwind v4 vía plugin Vite (el CSS vive en src/styles/global.css con
+  // @import "tailwindcss" + @plugin daisyui/typography). El build es local
+  // (pnpm run deploy), así que no aplica la vieja restricción de CI que
+  // forzaba @astrojs/tailwind@6 (Tailwind v3) para resolver peers.
   vite: {
     plugins: [
+      tailwindcss(),
+      // onnxruntime-web (motor de Piper TTS) se sirve desde CDN en runtime: el
+      // fork @realtimex/piper-tts-web usa wasmPaths/fallbackStrategy 'cdn'
+      // apuntando a jsdelivr. Vite igualmente emite su .wasm local (~25,6 MiB)
+      // por el patrón new URL("ort-wasm-*.wasm", import.meta.url); es peso
+      // muerto y supera el límite de 25 MiB por archivo de Cloudflare Pages.
       {
         name: 'drop-ort-wasm-assets',
         enforce: 'post',

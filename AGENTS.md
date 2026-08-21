@@ -457,13 +457,51 @@ de Astro 7 es 1 (generacion secuencial de paginas) y el vault ya supera las
 balancea velocidad y RAM en CI/Cloudflare Pages (no saturar runners pequenos);
 ajustar si el runner lo permite.
 
+**Tailwind v4 + daisyUI 5 (migrado desde @astrojs/tailwind@6 / Tailwind v3, 21-ago-2026):**
+el CSS vive en `src/styles/global.css` (`@import "tailwindcss"` + `@plugin
+"@tailwindcss/typography"` + `@plugin "daisyui"`, temas `light --default,
+dark --prefersdark`). El plugin Vite es `@tailwindcss/vite` (en
+`astro.config.mjs > vite.plugins`, junto al drop-ort-wasm-assets). NO existe
+`tailwind.config.mjs` (deprecado en v4; la detección de contenido es
+automática). La adopción de clases daisyUI (btn, card, collapse...) es
+incremental: el diseño actual no usa clases daisyUI y los temas solo inyectan
+variables CSS. **Selector de temas:** el navbar tiene un dropdown con los 35
+temas built-in (habilitados todos en `global.css`); la elección persiste en
+`localStorage 'gv-theme'` y se aplica como `data-theme` en `<html>` por un
+script inline anti-FOUC que se re-aplica en `astro:after-swap` (View
+Transitions reemplaza `<html>` completo). El body usa `bg-base-100`/
+`text-base-content` desde tokens del tema; el resto del chrome sigue con
+utilidades grises hasta migrarse. Los swatches del dropdown usan
+`data-theme={id}` en el span para previsualizar el primary de cada tema.
+**Migración semántica (21-ago-2026):** todo el chrome (Base.astro, componentes,
+páginas y scripts cliente) fue mapeado de grises/azules hardcodeados a tokens
+semánticos (`bg-white`→`bg-base-100`, `text-gray-*`→`text-base-content/N`,
+`border-gray-*`→`border-base-300`, `hover:bg-gray-100`→`hover:bg-base-200`,
+azul de marca→`primary`, ámbar admin→`warning`). Al crear/editar componentes
+usar SIEMPRE tokens semánticos, nunca `gray-*`/`blue-*`. **Paletas categóricas
+adaptativas (21-ago-2026):** los chips de tipo de evento (`TIPO_STYLES` en
+`lib/eventTypes.ts` + duplicados en `eventListClient.js`/`timelineClient.js`) y
+de tipo de relación (`RELATION_CHIP_CLASS` en `lib/relations.ts`) usan la clase
+`.rel-chip` + `[--chip-hue:#hex]`: un hue por categoría, mezclado con tokens del
+tema activo via `color-mix` en `global.css` (regla unlayered `.rel-chip`) —
+legible en los 35 temas daisyUI sin variantes por tema. Los hex de
+`TIPO_COLORS`/`EDGE_COLORS` (SVG del grafo) siguen siendo color plano: son
+codificación de datos, no chrome. El dropdown de temas replica el patrón
+del sitio oficial daisyUI: grilla de 4 puntos (base-content/primary/secondary/
+accent) por tema vía `data-theme` scoping, una columna, `max-h-[calc(100vh-8.6rem)]`
+con scroll. Notas de migración v3→v4 que pueden morder: border default pasa
+a currentColor, `shadow-sm`→`shadow-xs`/`rounded-sm`→`rounded-xs` renombrados,
+`ring` default 1px. Si un estilo se ve distinto tras tocar utilidades, revisar
+esos cambios primero.
+
 **Gestor de paquetes: pnpm** (migrado desde npm). Lockfile: `pnpm-lock.yaml`.
 Instalacion: `pnpm install`. No usar npm ni regenerar `package-lock.json`.
 
-**CI (Netlify/Vercel):** el archivo `.npmrc` configura `auto-install-peers=true` y
-`strict-peer-dependencies=false`; así pnpm resuelve la combinación de
-`@astrojs/tailwind@6` (peer `astro@^3||^4||^5`) con Astro 7 sin fallar. Ya no se
-necesita `legacy-peer-deps=true`. El archivo `pnpm-workspace.yaml` declara
+**CI:** el archivo `.npmrc` configura `auto-install-peers=true` y
+`strict-peer-dependencies=false`. Históricamente existía para resolver
+`@astrojs/tailwind@6` con Astro 7; tras la migración a Tailwind v4 ya no hay
+conflicto de peers, pero el archivo se conserva por si se re-habilitan builds
+remotos. El archivo `pnpm-workspace.yaml` declara
 `pnpm.onlyBuiltDependencies` (con `esbuild` y `protobufjs`) para que pnpm 10+
 ejecute los postinstall de build de esbuild (binario nativo; sin esto el build
 falla con `ERR_PNPM_IGNORED_BUILDS`) y protobufjs (transitiva de `onnxruntime-web`,

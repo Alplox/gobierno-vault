@@ -20,23 +20,23 @@ export const RELATION_LABELS: Record<string, string> = {
 };
 
 export const RELATION_CHIP_CLASS: Record<string, string> = {
-  contradice: 'bg-red-50 text-red-800 ring-red-200/80',
-  confirma: 'bg-emerald-50 text-emerald-800 ring-emerald-200/80',
-  cumple: 'bg-emerald-50 text-emerald-800 ring-emerald-200/80',
-  incumple: 'bg-red-50 text-red-800 ring-red-200/80',
-  amplia: 'bg-sky-50 text-sky-800 ring-sky-200/80',
-  corrige: 'bg-amber-50 text-amber-900 ring-amber-200/80',
-  rectifica: 'bg-amber-50 text-amber-900 ring-amber-200/80',
-  responde_a: 'bg-violet-50 text-violet-800 ring-violet-200/80',
-  deriva_en: 'bg-indigo-50 text-indigo-800 ring-indigo-200/80',
-  provoca: 'bg-orange-50 text-orange-800 ring-orange-200/80',
-  cita: 'bg-gray-100 text-gray-700 ring-gray-200/80',
-  reemplaza: 'bg-cyan-50 text-cyan-800 ring-cyan-200/80',
-  actualiza: 'bg-blue-50 text-blue-800 ring-blue-200/80',
-  mismo_contexto: 'bg-gray-100 text-gray-600 ring-gray-200/80',
+  contradice: 'rel-chip [--chip-hue:#ef4444]',
+  confirma: 'rel-chip [--chip-hue:#10b981]',
+  cumple: 'rel-chip [--chip-hue:#10b981]',
+  incumple: 'rel-chip [--chip-hue:#ef4444]',
+  amplia: 'rel-chip [--chip-hue:#0ea5e9]',
+  corrige: 'rel-chip [--chip-hue:#f59e0b]',
+  rectifica: 'rel-chip [--chip-hue:#f59e0b]',
+  responde_a: 'rel-chip [--chip-hue:#8b5cf6]',
+  deriva_en: 'rel-chip [--chip-hue:#6366f1]',
+  provoca: 'rel-chip [--chip-hue:#f97316]',
+  cita: 'bg-base-200 text-base-content/70 ring-base-300',
+  reemplaza: 'rel-chip [--chip-hue:#06b6d4]',
+  actualiza: 'rel-chip [--chip-hue:#3b82f6]',
+  mismo_contexto: 'bg-base-200 text-base-content/70 ring-base-300',
 };
 
-export const DEFAULT_RELATION_CHIP = 'bg-gray-100 text-gray-700 ring-gray-200/80';
+export const DEFAULT_RELATION_CHIP = 'bg-base-200 text-base-content/70 ring-base-300';
 
 export type RelationEdge = {
   tipo: string;

@@ -7,15 +7,15 @@ function esc(s) {
 
 function orgCard(o) {
   const tipo = o.tipo
-    ? `<p class="flex items-center gap-1.5 text-xs text-gray-600 font-medium mt-1"><span>${esc(o.tipo)}</span></p>`
+    ? `<p class="flex items-center gap-1.5 text-xs text-base-content/70 font-medium mt-1"><span>${esc(o.tipo)}</span></p>`
     : '';
-  return `<a href="/organizations/${o.id}" class="group block border border-gray-200/80 shadow-sm rounded-xl p-5 hover:border-blue-300 hover:shadow-md active:scale-[0.99] transition-all duration-200 bg-white">
+  return `<a href="/organizations/${o.id}" class="group block border border-base-300 shadow-sm rounded-xl p-5 hover:border-primary/50 hover:shadow-md active:scale-[0.99] transition-all duration-200 bg-base-100">
   <div class="flex items-start justify-between gap-3">
     <div class="min-w-0 flex-1">
-      <h3 transition:name="org-title-${o.id}" class="font-bold text-gray-900 text-base group-hover:text-blue-600 transition-colors leading-snug">${esc(o.nombre)}</h3>
+      <h3 transition:name="org-title-${o.id}" class="font-bold text-base-content text-base group-hover:text-primary transition-colors leading-snug">${esc(o.nombre)}</h3>
       ${tipo}
     </div>
-    <span class="text-gray-300 group-hover:text-blue-600 group-hover:translate-x-0.5 transition-all shrink-0 mt-1">›</span>
+    <span class="text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 mt-1">›</span>
   </div>
 </a>`;
 }

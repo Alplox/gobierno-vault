@@ -53,41 +53,41 @@ const lazyData = lazyEvents.map((event) => {
 
 <Base title={topic.data.nombre}>
   <div class="mb-6">
-    <a href="/topics" class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg transition-colors">
+    <a href="/topics" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
       <ArrowLeft class="h-3.5 w-3.5" />
       <span>Volver a Temas</span>
     </a>
   </div>
 
-  <header class="mb-8 bg-white p-6 sm:p-8 rounded-2xl border border-gray-200/80 shadow-sm">
+  <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm">
     <div class="flex items-start gap-4">
-      <div class="h-12 w-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-lg shrink-0">
+      <div class="h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-lg shrink-0">
         <Tag class="h-6 w-6" />
       </div>
       <div class="min-w-0 flex-1">
-        <span class="text-[11px] font-mono font-medium text-gray-400 block mb-1">{topic.id}</span>
-        <h1 transition:name={`topic-title-${topic.id}`} class="text-2xl sm:text-3xl font-bold text-gray-900 leading-tight">{topic.data.nombre}</h1>
+        <span class="text-[11px] font-mono font-medium text-base-content/40 block mb-1">{topic.id}</span>
+        <h1 transition:name={`topic-title-${topic.id}`} class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">{topic.data.nombre}</h1>
         {topic.data.descripcion && (
-          <p class="text-sm text-gray-600 mt-2 leading-relaxed">{topic.data.descripcion}</p>
+          <p class="text-sm text-base-content/70 mt-2 leading-relaxed">{topic.data.descripcion}</p>
         )}
       </div>
     </div>
   </header>
 
   {topic.data.bio && (
-    <div class="prose prose-gray max-w-none mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm leading-relaxed" set:html={topic.data.bio} />
+    <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm leading-relaxed" set:html={topic.data.bio} />
   )}
 
   {topic.data.relacionados && topic.data.relacionados.length > 0 && (
-    <section class="mb-8 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">
+    <section class="mb-8 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
       <div class="flex items-center gap-2 mb-3">
-        <Layers class="h-4 w-4 text-blue-600" />
-        <h2 class="text-sm font-bold text-gray-900">Temas Relacionados</h2>
+        <Layers class="h-4 w-4 text-primary" />
+        <h2 class="text-sm font-bold text-base-content">Temas Relacionados</h2>
       </div>
       <div class="flex gap-2 flex-wrap">
         {topic.data.relacionados.map((r) => (
-          <a href={`/topics/${r}`} class="inline-flex items-center gap-1 text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium px-3 py-1 rounded-lg transition-colors">
-            <Tag class="h-3 w-3 text-gray-400" />
+          <a href={`/topics/${r}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-3 py-1 rounded-lg transition-colors">
+            <Tag class="h-3 w-3 text-base-content/40" />
             {r}
           </a>
         ))}
@@ -97,15 +97,15 @@ const lazyData = lazyEvents.map((event) => {
 
   <section class="mt-8">
     <div class="flex items-center justify-between mb-4">
-      <h2 class="text-lg font-bold text-gray-900 flex items-center gap-2">
-        <Calendar class="h-5 w-5 text-blue-600" />
+      <h2 class="text-lg font-bold text-base-content flex items-center gap-2">
+        <Calendar class="h-5 w-5 text-primary" />
         <span>Eventos en este tema ({relatedEvents.length})</span>
       </h2>
     </div>
     <div id="topic-events-root" class="grid gap-4">
       {ssrEvents.map((event) => <EventCard event={event} />)}
       {relatedEvents.length === 0 && (
-        <p class="text-sm text-gray-500 bg-white p-8 rounded-xl border border-dashed border-gray-300 text-center">
+        <p class="text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center">
           No hay eventos registrados para este tema.
         </p>
       )}

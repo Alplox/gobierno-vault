@@ -1,4 +1,5 @@
 ---
+import '../styles/global.css';
 import {
   Shield,
   Calendar,
@@ -18,8 +19,51 @@ import {
   FileText,
   Github,
   ExternalLink,
+  Palette,
 } from 'lucide-astro';
 import { ClientRouter } from 'astro:transitions';
+
+// Temas daisyUI disponibles en el selector del navbar (mismos que global.css).
+// El elegido se guarda en localStorage 'gv-theme' y se aplica como
+// data-theme en <html> (script inline anti-FOUC + re-aplicación tras cada
+// astro:after-swap, porque View Transitions reemplaza el documento completo).
+const THEMES: [string, string][] = [
+  ['light', 'Claro'],
+  ['dark', 'Oscuro'],
+  ['cupcake', 'Cupcake'],
+  ['bumblebee', 'Bumblebee'],
+  ['emerald', 'Emerald'],
+  ['corporate', 'Corporate'],
+  ['synthwave', 'Synthwave'],
+  ['retro', 'Retro'],
+  ['cyberpunk', 'Cyberpunk'],
+  ['valentine', 'Valentine'],
+  ['halloween', 'Halloween'],
+  ['garden', 'Garden'],
+  ['forest', 'Forest'],
+  ['aqua', 'Aqua'],
+  ['lofi', 'Lo-fi'],
+  ['pastel', 'Pastel'],
+  ['fantasy', 'Fantasy'],
+  ['wireframe', 'Wireframe'],
+  ['black', 'Black'],
+  ['luxury', 'Luxury'],
+  ['dracula', 'Dracula'],
+  ['cmyk', 'CMYK'],
+  ['autumn', 'Autumn'],
+  ['business', 'Business'],
+  ['acid', 'Acid'],
+  ['lemonade', 'Lemonade'],
+  ['night', 'Night'],
+  ['coffee', 'Coffee'],
+  ['winter', 'Winter'],
+  ['dim', 'Dim'],
+  ['nord', 'Nord'],
+  ['sunset', 'Sunset'],
+  ['caramellatte', 'Caramel Latte'],
+  ['abyss', 'Abyss'],
+  ['silk', 'Silk'],
+];
 
 interface Props {
   title: string;
@@ -69,19 +113,38 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
     <title>{title} | Gobierno Vault</title>
+    <script is:inline>
+      // Tema daisyUI: aplicar el guardado ANTES del primer paint (anti-FOUC) y
+      // re-aplicarlo tras cada astro:after-swap (View Transitions reemplaza
+      // <html> completo, perdiendo el data-theme).
+      (function () {
+        var apply = function () {
+          var t = null;
+          try { t = localStorage.getItem('gv-theme'); } catch (e) {}
+          if (t) document.documentElement.setAttribute('data-theme', t);
+          else document.documentElement.removeAttribute('data-theme');
+        };
+        apply();
+        document.addEventListener('astro:after-swap', apply);
+      })();
+    </script>
     <ClientRouter />
     <style is:global>
-      .source-ref { position: relative; cursor: help; }
-      .source-ref-num { color: #2563eb; font-family: ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; text-decoration: none; }
-      .source-ref-num:hover { text-decoration: underline; }
+      /* Colores via tokens del tema activo (var(--color-*)): con 35 temas
+         daisyUI ningún hex fijo sirve. Layout/sombras quedan como están. */
+      /* text-decoration en el ANCHOR: la decoración se propaga desde el <a>,
+         no del <sup> interno (que pisa el underline de .prose con otro color) */
+      .source-ref { position: relative; cursor: help; text-decoration: none; }
+      .source-ref:hover { text-decoration: underline; text-decoration-color: var(--color-primary); }
+      .source-ref-num { color: var(--color-primary); font-family: ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; }
       .source-ref-tip {
         display: none;
         position: absolute;
         bottom: calc(100% + 8px);
         left: 50%;
         transform: translateX(-50%);
-        background: #1f2937;
-        color: #f9fafb;
+        background: var(--color-neutral);
+        color: var(--color-neutral-content);
         padding: 8px 10px;
         border-radius: 6px;
         font-size: 0.75rem;
@@ -101,7 +164,7 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         left: 50%;
         transform: translateX(-50%);
         border: 6px solid transparent;
-        border-top-color: #1f2937;
+        border-top-color: var(--color-neutral);
       }
       .source-ref:hover > .source-ref-tip,
       .source-ref.open > .source-ref-tip { display: block; }
@@ -110,8 +173,8 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         display: inline-flex;
         align-items: center;
         gap: 2px;
-        background: #dbeafe;
-        color: #1d4ed8;
+        background: color-mix(in oklab, var(--color-primary) 12%, transparent);
+        color: var(--color-primary);
         padding: 1px 6px;
         border-radius: 4px;
         font-size: 0.8rem;
@@ -121,27 +184,27 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         white-space: nowrap;
       }
       .entity-ref {
-        background: #f3f4f6;
-        color: #374151;
+        background: var(--color-base-200);
+        color: var(--color-base-content);
         padding: 1px 5px;
         border-radius: 4px;
         font-weight: 500;
       }
       .event-ref {
         display: inline;
-        color: #1d4ed8;
-        background: #eff6ff;
+        color: var(--color-primary);
+        background: color-mix(in oklab, var(--color-primary) 8%, transparent);
         padding: 1px 6px;
         border-radius: 4px;
         font-weight: 500;
         text-decoration: none;
-        border: 1px solid #dbeafe;
+        border: 1px solid color-mix(in oklab, var(--color-primary) 20%, transparent);
         box-decoration-break: clone;
         -webkit-box-decoration-break: clone;
       }
       .event-ref:hover {
-        background: #dbeafe;
-        border-color: #bfdbfe;
+        background: color-mix(in oklab, var(--color-primary) 15%, transparent);
+        border-color: color-mix(in oklab, var(--color-primary) 30%, transparent);
         text-decoration: underline;
       }
       @keyframes ref-pulse {
@@ -151,8 +214,8 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       }
       .ref-highlight {
         animation: ref-pulse 1.2s ease-out;
-        border-color: rgba(0,0,0,0.12) !important;
-        background-color: rgba(0,0,0,0.02) !important;
+        border-color: color-mix(in oklab, var(--color-base-content) 15%, transparent) !important;
+        background-color: color-mix(in oklab, var(--color-base-content) 4%, transparent) !important;
       }
       /* Respaldo ASCII de imagen (campo svg_backup del evento): el SVG generado
          en herramientas web (ej. ezascii.com) usa <text> monospace; se escala
@@ -174,29 +237,29 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       }
     </style>
   </head>
-  <body class="bg-gray-50/70 text-gray-900 min-h-screen antialiased flex flex-col">
-    <nav transition:persist class="bg-white/90 backdrop-blur-md border-b border-gray-200/80 sticky top-0 z-20 shadow-sm">
+  <body class="bg-base-200/70 text-base-content min-h-screen antialiased flex flex-col">
+    <nav transition:persist class="bg-base-100/90 backdrop-blur-md border-b border-base-300 sticky top-0 z-20 shadow-sm">
       <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
-        <a href="/" class="flex items-center gap-2 font-bold text-lg text-gray-900 transition-colors hover:text-blue-600 shrink-0">
-          <Shield class="h-6 w-6 text-blue-600 shrink-0" />
+        <a href="/" class="flex items-center gap-2 font-bold text-lg text-base-content transition-colors hover:text-primary shrink-0">
+          <Shield class="h-6 w-6 text-primary shrink-0" />
           <span>Gobierno Vault</span>
         </a>
         <div class="hidden lg:flex items-center gap-1 text-sm font-medium">
           {(navMoreDropdown ? navPrimary : navLinks).map((l) => (
-            <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+            <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg transition-colors text-base-content/70 hover:text-base-content hover:bg-base-200">
               <l.icon class="h-4 w-4 shrink-0" />
               <span>{l.label}</span>
             </a>
           ))}
           {navMoreDropdown && (
             <details id="nav-more" class="relative group">
-              <summary data-nav-more-summary class="list-none flex items-center gap-1 px-2.5 py-1.5 rounded-lg cursor-pointer text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors" aria-label="Más secciones">
+              <summary data-nav-more-summary class="list-none flex items-center gap-1 px-2.5 py-1.5 rounded-lg cursor-pointer text-base-content/70 hover:text-base-content hover:bg-base-200 transition-colors" aria-label="Más secciones">
                 <span>Más</span>
                 <ChevronDown class="h-4 w-4 shrink-0 transition-transform group-open:rotate-180" />
               </summary>
-              <div class="absolute right-0 top-full mt-2 w-48 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
+              <div class="absolute right-0 top-full mt-2 w-48 bg-base-100 rounded-xl border border-base-300 shadow-lg p-1.5 flex flex-col text-sm font-medium">
                 {navMore.map((l) => (
-                  <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+                  <a href={l.href} data-nav-link data-nav-prefix={l.href} data-cuelume-hover="tick" class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-base-content/70 hover:text-base-content hover:bg-base-200">
                     <l.icon class="h-4 w-4 shrink-0" />
                     <span>{l.label}</span>
                   </a>
@@ -206,17 +269,42 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
           )}
         </div>
         <div class="flex items-center gap-1 shrink-0">
-          <button id="btn-sound" type="button" data-cuelume-press="press" class="p-2 rounded-lg text-gray-500 hover:text-gray-900 hover:bg-gray-100 transition-colors" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
+          <details id="theme-picker" class="dropdown dropdown-end">
+            <summary class="list-none flex items-center p-2 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 cursor-pointer transition-colors" aria-label="Cambiar tema" title="Cambiar tema">
+              <Palette class="h-5 w-5" />
+            </summary>
+            <ul class="dropdown-content menu bg-base-200 text-base-content rounded-box border border-base-300 shadow-2xl z-30 mt-2 w-56 p-1.5 max-h-[calc(100vh-8.6rem)] overflow-y-auto text-sm font-medium">
+              <li class="menu-title text-xs">Tema</li>
+              {THEMES.map(([id, label]) => (
+                <li>
+                  <button type="button" data-set-theme={id} class="gap-3 px-2 rounded-lg">
+                    {/* data-theme en el div scopea las vars del tema: la grilla
+                        de 4 puntos previsualiza base-content/primary/secondary/
+                        accent de SU tema, como el sitio oficial de daisyUI */}
+                    <div data-theme={id} class="bg-base-100 grid shrink-0 grid-cols-2 gap-0.5 rounded-md p-1 shadow-sm">
+                      <div class="bg-base-content size-1 rounded-full"></div>
+                      <div class="bg-primary size-1 rounded-full"></div>
+                      <div class="bg-secondary size-1 rounded-full"></div>
+                      <div class="bg-accent size-1 rounded-full"></div>
+                    </div>
+                    <span class="w-32 truncate">{label}</span>
+                    <svg data-theme-check={id} class="h-3 w-3 shrink-0 opacity-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.285 2l-11.285 11.567-5.286-5.011-3.714 3.716 9 8.728 15-15.285z"/></svg>
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </details>
+          <button id="btn-sound" type="button" data-cuelume-press="press" class="p-2 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 transition-colors" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
             <Volume2 id="icon-sound-on" class="h-5 w-5" />
             <VolumeX id="icon-sound-off" class="h-5 w-5 hidden" />
           </button>
           <details id="mobile-menu" class="relative lg:hidden">
-            <summary class="list-none flex items-center p-2 rounded-lg text-gray-600 hover:text-gray-900 hover:bg-gray-100 cursor-pointer" aria-label="Menu de navegacion">
+            <summary class="list-none flex items-center p-2 rounded-lg text-base-content/70 hover:text-base-content hover:bg-base-200 cursor-pointer" aria-label="Menu de navegacion">
               <Menu class="h-5 w-5" />
             </summary>
-            <div class="absolute right-0 top-full mt-2 w-60 bg-white rounded-xl border border-gray-200/80 shadow-lg p-1.5 flex flex-col text-sm font-medium">
+            <div class="absolute right-0 top-full mt-2 w-60 bg-base-100 rounded-xl border border-base-300 shadow-lg p-1.5 flex flex-col text-sm font-medium">
               {navLinks.map((l) => (
-                <a href={l.href} data-nav-link data-nav-prefix={l.href} class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-gray-600 hover:text-gray-900 hover:bg-gray-100">
+                <a href={l.href} data-nav-link data-nav-prefix={l.href} class="flex items-center gap-2 px-2.5 py-2 rounded-lg transition-colors text-base-content/70 hover:text-base-content hover:bg-base-200">
                   <l.icon class="h-4 w-4 shrink-0" />
                   <span>{l.label}</span>
                 </a>
@@ -229,43 +317,43 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
     <main class="max-w-6xl mx-auto px-4 py-8 flex-1 w-full">
       <slot />
     </main>
-    <footer class="bg-white border-t border-gray-200/80 py-8 text-sm text-gray-500 mt-auto">
+    <footer class="bg-base-100 border-t border-base-300 py-8 text-sm text-base-content/60 mt-auto">
       <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div class="flex items-center gap-2 font-semibold text-gray-800">
-          <Shield class="h-4 w-4 text-blue-600" />
+        <div class="flex items-center gap-2 font-semibold text-base-content">
+          <Shield class="h-4 w-4 text-primary" />
           <span>Gobierno Vault</span>
-          <span class="text-xs font-normal text-gray-400 hidden sm:inline">— Base de conocimiento verificable</span>
+          <span class="text-xs font-normal text-base-content/40 hidden sm:inline">— Base de conocimiento verificable</span>
         </div>
-        <div class="text-xs text-gray-400 text-center sm:text-right">
+        <div class="text-xs text-base-content/40 text-center sm:text-right">
           Acontecimientos, decretos y publicaciones documentados con referencias.
         </div>
       </div>
 
       <div class="max-w-6xl mx-auto px-4 mt-6">
-        <details id="gvault-copy" class="group border border-gray-200/80 rounded-xl bg-gray-50/60 overflow-hidden">
-          <summary class="flex items-center justify-between gap-3 cursor-pointer list-none px-4 py-3 select-none hover:bg-gray-100/70 transition-colors">
-            <span class="flex items-center gap-2 font-semibold text-gray-700">
-              <Download class="h-4 w-4 text-blue-600 shrink-0" />
+        <details id="gvault-copy" class="group border border-base-300 rounded-xl bg-base-200/60 overflow-hidden">
+          <summary class="flex items-center justify-between gap-3 cursor-pointer list-none px-4 py-3 select-none hover:bg-base-200/70 transition-colors">
+            <span class="flex items-center gap-2 font-semibold text-base-content/80">
+              <Download class="h-4 w-4 text-primary shrink-0" />
               Respaldo del vault — descargar o copiar
             </span>
-            <span class="text-xs text-gray-400 shrink-0 group-open:hidden">Mostrar contenido para copiar ▾</span>
-            <span class="text-xs text-gray-400 shrink-0 hidden group-open:inline">Ocultar ▴</span>
+            <span class="text-xs text-base-content/40 shrink-0 group-open:hidden">Mostrar contenido para copiar ▾</span>
+            <span class="text-xs text-base-content/40 shrink-0 hidden group-open:inline">Ocultar ▴</span>
           </summary>
           <div class="px-4 pb-4 pt-1">
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 mb-3">
               <div class="flex flex-col gap-2 shrink-0">
                 <a id="gvault-download-link" href="" download=""
-                   class="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
+                   class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-content transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                    title="Respaldo light del vault (contenido actual del proyecto)">
                   <Download class="h-4 w-4" /> Descargar respaldo (.gvault)
                 </a>
                 <a href="https://github.com/Alplox/gobierno-vault/archive/refs/heads/main.zip"
-                   class="inline-flex items-center justify-center gap-2 rounded-lg border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-700 transition-colors hover:bg-gray-50 hover:border-gray-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50"
+                   class="inline-flex items-center justify-center gap-2 rounded-lg border border-base-300 bg-base-100 px-4 py-2 text-sm font-semibold text-base-content/80 transition-colors hover:bg-base-200 hover:border-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                    title="Descarga el repositorio completo (todo el proyecto) en ZIP, como ofrece GitHub">
-                  <Download class="h-4 w-4 text-gray-500" /> Descargar repositorio (.zip)
+                  <Download class="h-4 w-4 text-base-content/60" /> Descargar repositorio (.zip)
                 </a>
               </div>
-              <div class="text-xs text-gray-500 leading-relaxed space-y-1 min-w-0">
+              <div class="text-xs text-base-content/60 leading-relaxed space-y-1 min-w-0">
                 <p>
                   El respaldo contiene el estado actual del proyecto (eventos, datos y config)
                   comprimido con Brotli e íntegro (SHA-256). El archivo incluye sus propias
@@ -275,15 +363,15 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
                 </p>
                 <ul class="list-disc pl-4 space-y-0.5">
                   <li>
-                    Archivo: <code id="gvault-filename" class="font-mono text-gray-700">cargando…</code>
-                    <span class="text-gray-400">(</span><span id="gvault-size">…</span><span class="text-gray-400">)</span>
+                    Archivo: <code id="gvault-filename" class="font-mono text-base-content/80">cargando…</code>
+                    <span class="text-base-content/40">(</span><span id="gvault-size">…</span><span class="text-base-content/40">)</span>
                   </li>
                   <li>
-                    SHA-256 del archivo: <code id="gvault-sha" class="font-mono text-gray-700 break-all">…</code>
+                    SHA-256 del archivo: <code id="gvault-sha" class="font-mono text-base-content/80 break-all">…</code>
                   </li>
                   <li>
                     Verifica la integridad con solo Node (sin el proyecto):
-                    <code class="font-mono text-gray-600 break-all block mt-1">{GV_VERIFY_CMD}</code>
+                    <code class="font-mono text-base-content/70 break-all block mt-1">{GV_VERIFY_CMD}</code>
                     — imprime <span class="text-green-700 font-semibold">OK</span> si es íntegro; o compara el
                     SHA-256 de arriba con <code class="font-mono">sha256sum</code> / <code class="font-mono">Get-FileHash</code>.
                     Si la ruta o el nombre tienen espacios, escríbelos entre comillas.
@@ -292,31 +380,31 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
               </div>
             </div>
             <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
-              <span class="text-xs font-medium text-gray-500">Contenido del respaldo (texto) — copia todo y guárdalo como archivo:</span>
+              <span class="text-xs font-medium text-base-content/60">Contenido del respaldo (texto) — copia todo y guárdalo como archivo:</span>
               <div class="flex items-center gap-2">
                 <button id="gvault-select-btn" type="button"
-                        class="rounded-md bg-gray-200 px-3 py-1.5 text-xs font-semibold text-gray-700 transition-colors hover:bg-gray-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
+                        class="rounded-md bg-base-300 px-3 py-1.5 text-xs font-semibold text-base-content/80 transition-colors hover:bg-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
                   Seleccionar todo
                 </button>
                 <button id="gvault-copy-btn" type="button"
-                        class="rounded-md bg-gray-800 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-gray-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/50">
+                        class="rounded-md bg-neutral px-3 py-1.5 text-xs font-semibold text-neutral-content transition-colors hover:bg-neutral/80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
                   Copiar todo
                 </button>
-                <span id="gvault-copy-status" class="text-xs text-gray-400" aria-live="polite"></span>
+                <span id="gvault-copy-status" class="text-xs text-base-content/40" aria-live="polite"></span>
               </div>
             </div>
             <textarea id="gvault-textarea" readonly rows="8" spellcheck="false"
-              class="w-full rounded-lg border border-gray-300 bg-gray-900 text-gray-100 font-mono text-[11px] leading-relaxed p-3 resize-y focus:outline-none focus:ring-2 focus:ring-blue-500/50"
+              class="w-full rounded-lg border border-base-300 bg-neutral text-neutral-content font-mono text-[11px] leading-relaxed p-3 resize-y focus:outline-none focus:ring-2 focus:ring-primary/40"
               placeholder="El contenido se carga al abrir este panel…"></textarea>
           </div>
         </details>
       </div>
 
-      <div class="max-w-6xl mx-auto px-4 mt-6 pt-4 border-t border-gray-100 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
+      <div class="max-w-6xl mx-auto px-4 mt-6 pt-4 border-t border-base-300 flex flex-wrap items-center justify-between gap-x-6 gap-y-3">
         <nav class="flex flex-wrap items-center gap-x-4 gap-y-1.5" aria-label="Secciones">
           {navFooter.map((l) => (
             <a href={l.href}
-               class="inline-flex items-center gap-1.5 text-xs font-medium text-gray-500 hover:text-blue-600 transition-colors">
+               class="inline-flex items-center gap-1.5 text-xs font-medium text-base-content/60 hover:text-primary transition-colors">
               <l.icon class="h-3.5 w-3.5" />
               {l.label}
             </a>
@@ -324,17 +412,17 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         </nav>
         <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5">
           <a href={GITHUB_URL} target="_blank" rel="noopener"
-             class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+             class="inline-flex items-center gap-1.5 text-xs text-base-content/40 hover:text-base-content/80 transition-colors"
              title="Repositorio público del proyecto en GitHub — código, datos y respaldo">
             <Github class="h-3.5 w-3.5" /> Repositorio GitHub <ExternalLink class="h-3 w-3 opacity-60" />
           </a>
           <a href="/llm.txt"
-             class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+             class="inline-flex items-center gap-1.5 text-xs text-base-content/40 hover:text-base-content/80 transition-colors"
              title="Índice legible por agentes/LLM: guía de navegación + lista completa de eventos y datos en formatos crudos (markdown/YAML)">
             <FileText class="h-3.5 w-3.5" /> llm.txt
           </a>
           <a href="/admin" data-nav-link data-nav-prefix="/admin" data-nav-admin
-             class="inline-flex items-center gap-1.5 text-xs text-gray-400 hover:text-gray-700 transition-colors"
+             class="inline-flex items-center gap-1.5 text-xs text-base-content/40 hover:text-base-content/80 transition-colors"
              title="Editor de contenido — herramienta para administrar el vault">
             <Edit3 class="h-3.5 w-3.5" /> Editor de contenido
           </a>
@@ -382,20 +470,20 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
           const prefix = el.getAttribute('data-nav-prefix') ?? '/';
           const isAdmin = el.hasAttribute('data-nav-admin');
           const active = path === prefix || (prefix !== '/' && path.startsWith(prefix));
-          el.classList.remove('bg-blue-50', 'text-blue-700', 'bg-amber-50', 'text-amber-700');
+          el.classList.remove('bg-primary/10', 'text-primary', 'bg-warning/15', 'text-warning');
           if (active) {
             if (isAdmin) {
-              el.classList.add('bg-amber-50', 'text-amber-700');
+              el.classList.add('bg-warning/15', 'text-warning');
             } else {
-              el.classList.add('bg-blue-50', 'text-blue-700');
+              el.classList.add('bg-primary/10', 'text-primary');
             }
             if (el.closest('#nav-more')) moreActive = true;
           }
         });
         const more = document.querySelector('[data-nav-more-summary]');
         if (more) {
-          more.classList.toggle('bg-blue-50', moreActive);
-          more.classList.toggle('text-blue-700', moreActive);
+          more.classList.toggle('bg-primary/10', moreActive);
+          more.classList.toggle('text-primary', moreActive);
         }
       }
       // Registra el listener una sola vez; updateNavActive se re-ejecuta en cada
@@ -424,10 +512,35 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       // Llega la señal de "arrival" al navegar con View Transitions (tras la
       // primera interacción del usuario; antes el navegador bloquea el audio).
       document.addEventListener('astro:page-load', () => play('arrival'));
+
+      // Selector de tema: marcar el activo en cada carga (el dropdown se
+      // re-renderiza con las View Transitions).
+      function gvMarkTheme() {
+        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        document.querySelectorAll('[data-theme-check]').forEach((el) => {
+          el.classList.toggle('opacity-0', el.getAttribute('data-theme-check') !== current);
+        });
+      }
+      gvMarkTheme();
+      document.addEventListener('astro:page-load', gvMarkTheme);
+
       if (!(window as any).__gvSoundInit) {
         (window as any).__gvSoundInit = true;
         document.addEventListener('click', (e) => {
           const t = e.target as HTMLElement | null;
+          // Cambio de tema daisyUI: persistir + aplicar en <html> + cerrar.
+          const themeBtn = t?.closest('[data-set-theme]') as HTMLElement | null;
+          if (themeBtn) {
+            const id = themeBtn.getAttribute('data-set-theme');
+            if (id) {
+              localStorage.setItem('gv-theme', id);
+              document.documentElement.setAttribute('data-theme', id);
+              gvMarkTheme();
+            }
+            const picker = document.getElementById('theme-picker') as HTMLDetailsElement | null;
+            if (picker) picker.open = false;
+            return;
+          }
           if (t?.closest('#btn-sound')) {
             soundOn = !soundOn;
             localStorage.setItem(SOUND_KEY, soundOn ? '1' : '0');

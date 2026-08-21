@@ -27,8 +27,8 @@ const relacionados = edges.filter((e) => e.fecha.getTime() === eventTime);
 ---
 
 <section class="mb-8">
-  <h2 class="mb-4 text-lg font-semibold tracking-tight text-gray-900 text-balance">Linea de tiempo</h2>
-  <div class="relative ml-4 border-l-2 border-gray-200 pl-6 space-y-0">
+  <h2 class="mb-4 text-lg font-semibold tracking-tight text-base-content text-balance">Linea de tiempo</h2>
+  <div class="relative ml-4 border-l-2 border-base-300 pl-6 space-y-0">
     {siguientes.map((edge) => (
       <TimelineCard edge={edge} label="Siguiente" />
     ))}
@@ -37,11 +37,11 @@ const relacionados = edges.filter((e) => e.fecha.getTime() === eventTime);
     ))}
 
     <div class="relative pb-6 last:pb-0">
-      <div class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-blue-600 ring-4 ring-white" />
-      <div class="rounded-lg border-2 border-blue-200 bg-blue-50/50 px-4 py-3">
-        <span class="text-[10px] font-medium uppercase tracking-wide text-blue-500">Este evento</span>
+      <div class="absolute -left-[31px] top-1 h-4 w-4 rounded-full bg-primary ring-4 ring-white" />
+      <div class="rounded-lg border-2 border-primary/30 bg-primary/10/50 px-4 py-3">
+        <span class="text-[10px] font-medium uppercase tracking-wide text-primary">Este evento</span>
         <div class="mt-1 flex items-center gap-2">
-          <svg class="h-4 w-4 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <svg class="h-4 w-4 text-primary/70" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6" />
           </svg>
         </div>
