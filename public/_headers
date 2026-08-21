@@ -1,0 +1,10 @@
+# Cabeceras de aislamiento cross-origin (site-wide).
+# COOP+COEP habilitan SharedArrayBuffer -> onnxruntime-web sintetiza TTS con
+# multiples hilos (~2-4x mas rapido que single-thread).
+# Site-wide y no scoped a /events/* porque con ClientRouter la isolation la fija
+# el documento inicial: entrar por / y navegar SPA llegaria sin isolation.
+# credentialless (no require-corp): no rompe recursos externos sin CORP;
+# Safari lo ignora y queda single-thread sin romperse.
+/*
+  Cross-Origin-Opener-Policy: same-origin
+  Cross-Origin-Embedder-Policy: credentialless

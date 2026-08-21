@@ -328,7 +328,36 @@ En tiempo de build NO se agenda nada; todo corre en cliente sobre el texto de `.
   local ya no existiría en `dist` y el TTS rompería con un 404 silencioso. Si algún día
   se quisiera usar el wasm local, hay que revertir ese plugin y re-verificar el deploy.
 - **Flags**: `window.__gvEventActionsInit` (una sola vez) para listeners globales;
-  `astro:page-load` para llenar voces y cancelar reproducción (`gvStopAll`) al navegar.
+  `astro:page-load` para llenar voces y PAUSAR la reproducción (`gvStopAll`) al navegar.
+- **Síntesis cancelable (21-ago-2026)**: mientras sintetiza, el botón muestra
+  "Cancelar" (`gvSynthCancel`, cooperativa — se revisa entre trozos de ~900 chars,
+  latencia máx = 1 trozo). El mensaje muestra "N/M (clic para cancelar)".
+- **Un solo motor a la vez (21-ago-2026)**: cambiar la voz en el select o apretar
+  Escuchar con voz de navegador corta el audio Piper previo (`gvStopAll` pausa el
+  `<audio>` + `speechSynthesis.cancel()`); nunca deben solaparse los dos motores.
+- **Resaltado sincronizado (21-ago-2026)**: la síntesis trocea por BLOQUES del DOM
+  (`gvBlockParts`: p/li/h*/blockquote/pre externos, sin `.not-prose` ni tooltips);
+  bloques >900 chars se subdividen por oración (`gvSplitLong`) conservando el `el`
+  de origen. `ontimeupdate → gvSyncHighlight()` mueve `.gv-tts-active` (CSS en
+  Base.astro) al bloque activo + scrollIntoView si sale del viewport. "Siguiente"
+  salta exactamente a un límite de trozo. Al reanudar/volver a la página se
+  re-zipean los els por índice (`gvMarkResumable`/rama resume del toggle) — el
+  mapeo es determinista respecto al DOM. No hay highlight por palabra: la librería
+  no expone alineación fonémica.
+- **Cache de audio sintetizado (21-ago-2026)**: el WAV generado vive a nivel de módulo
+  (`gvPiperAudio`/`gvCacheKey`, LRU de 1 entrada, clave `voiceId|texto`). Detener = `pause()`
+  (label "Reanudar"); volver a la página del evento retoma desde el mismo segundo sin
+  resintetizar (el módulo persiste entre navegaciones View Transitions; se pierde con
+  recarga completa). Al sintetizar otro texto/voz se revoca el blob anterior. El label
+  "Reanudar" al volver lo setea `gvMarkResumable()` en `astro:page-load`.
+- **Multithreading de síntesis (21-ago-2026)**: `public/_headers` manda site-wide
+  `COOP: same-origin` + `COEP: credentialless` → habilita `SharedArrayBuffer` →
+  onnxruntime-web usa múltiples hilos (~2-4× más rápido que single-thread). Site-wide y
+  no scoped a `/events/*` porque con ClientRouter la isolation la fija el DOCUMENTO
+  inicial (entrar por `/` y navegar SPA llegaría sin isolation). `credentialless` no
+  rompe recursos externos sin CORP (audit: no hay iframes/scripts/fuentes/imágenes
+  externas); Safari lo ignora y queda single-thread sin romperse. Si algún día se
+  agrega un embed externo, probarlo con estas cabeceras activas.
 
 ## Formato LLM (llm.txt + markdown/YAML crudo)
 

@@ -25,6 +25,8 @@ import {
   FileText,
   Volume2,
   VolumeX,
+  RotateCcw,
+  SkipForward,
   Copy,
   Bot,
   Bug,
@@ -142,6 +144,13 @@ Describe el error o la corrección sugerida.`)}`;
         <Volume2 data-tts-icon="idle" class="h-4 w-4" />
         <VolumeX data-tts-icon="playing" class="h-4 w-4 hidden" />
         <span data-tts-label>Escuchar</span>
+      </button>
+      {/* Controles de salto Piper: ocultos hasta que haya audio sintetizado */}
+      <button id="btn-tts-restart" type="button" class="hidden items-center p-2 text-base-content/70 bg-base-200 hover:bg-base-300 rounded-lg transition-colors" title="Reiniciar desde el inicio" aria-label="Reiniciar desde el inicio">
+        <RotateCcw class="h-4 w-4" />
+      </button>
+      <button id="btn-tts-next" type="button" class="hidden items-center p-2 text-base-content/70 bg-base-200 hover:bg-base-300 rounded-lg transition-colors" title="Siguiente parrafo" aria-label="Siguiente parrafo">
+        <SkipForward class="h-4 w-4" />
       </button>
       <label class="inline-flex items-center gap-1.5 text-xs font-medium text-base-content/60">
         Voz
@@ -400,13 +409,52 @@ Describe el error o la corrección sugerida.`)}`;
   const PIPER_PREFIX = 'piper:';
   let gvPiperAudio: HTMLAudioElement | null = null;
   let gvPiperUrl: string | null = null;
+  // Clave (voz|texto) del blob actualmente cacheado. El audio vive a nivel de
+  // módulo (window persiste entre navegaciones View Transitions): Detener pausa
+  // en vez de destruir, y volver a la página retoma desde el mismo segundo sin
+  // resintetizar. Eviction LRU de 1 entrada al sintetizar otro texto/voz.
+  let gvCacheKey: string | null = null;
+  // Segundo de inicio de cada trozo sintetizado dentro del WAV cacheado, y el
+  // elemento DOM que le corresponde (mismo índice) para resaltar lo leído.
+  let gvBounds: number[] = [];
+  let gvChunkEls: (Element | null)[] = [];
+  let gvActiveIdx = -1;
+  function gvShowTtsControls(show: boolean) {
+    for (const id of ['btn-tts-restart', 'btn-tts-next']) {
+      const el = document.getElementById(id);
+      if (!el) continue;
+      el.classList.toggle('hidden', !show);
+      el.classList.toggle('inline-flex', show);
+    }
+  }
+  function gvClearHighlight() {
+    document.querySelector('.gv-tts-active')?.classList.remove('gv-tts-active');
+    gvActiveIdx = -1;
+  }
+  // Sincroniza el resaltado con la posición de reproducción: busca el trozo
+  // activo por gvBounds y mueve la clase .gv-tts-active a su bloque.
+  function gvSyncHighlight() {
+    if (!gvPiperAudio || gvBounds.length === 0 || gvBounds.length !== gvChunkEls.length) return;
+    const t = gvPiperAudio.currentTime ?? 0;
+    let idx = 0;
+    for (let i = gvBounds.length - 1; i >= 0; i--) {
+      if (t >= gvBounds[i] - 0.05) { idx = i; break; }
+    }
+    if (idx === gvActiveIdx) return;
+    document.querySelector('.gv-tts-active')?.classList.remove('gv-tts-active');
+    gvActiveIdx = idx;
+    const el = gvChunkEls[idx];
+    if (!el?.isConnected) return;
+    el.classList.add('gv-tts-active');
+    const r = el.getBoundingClientRect();
+    if (r.bottom < 90 || r.top > window.innerHeight - 90) {
+      el.scrollIntoView({ block: 'center', behavior: 'smooth' });
+    }
+  }
   function gvStopAll() {
     window.speechSynthesis?.cancel();
-    if (gvPiperAudio && !gvPiperAudio.paused) {
-      gvPiperAudio.pause();
-      gvPiperAudio.src = '';
-    }
-    if (gvPiperUrl) { URL.revokeObjectURL(gvPiperUrl); gvPiperUrl = null; }
+    // Pausa (NO revoca el blob): el WAV queda cacheado para reanudar al instante.
+    if (gvPiperAudio && !gvPiperAudio.paused) gvPiperAudio.pause();
   }
   if (!(window as any).__gvEventActionsInit) {
     (window as any).__gvEventActionsInit = true;
@@ -565,38 +613,96 @@ Describe el error o la corrección sugerida.`)}`;
       gvPreloading.delete(voiceId);
     }
   }
-  function gvReadText(prose: Element | null): string {
-    if (!prose) return '';
-    const clone = prose.cloneNode(true) as Element;
-    clone.querySelectorAll('.source-ref-tip, .not-prose').forEach((el) => el.remove());
-    return (clone.textContent ?? '').replace(/\s+/g, ' ').trim();
+  // Bloques legibles del artículo: cada uno se sintetiza/resalta como unidad.
+  // El texto de cada bloque se normaliza igual que el body leído antes.
+  function gvBlockParts(prose: Element | null): { el: Element; text: string }[] {
+    if (!prose) return [];
+    const sel = 'p, h1, h2, h3, h4, h5, h6, li, blockquote, pre';
+    const all = Array.from(prose.querySelectorAll(sel));
+    // Bloque más externo solamente (blockquote > p cuenta como blockquote).
+    const blocks = all.filter((el) => !all.some((o) => o !== el && o.contains(el)));
+    const parts: { el: Element; text: string }[] = [];
+    for (const el of blocks) {
+      if (el.closest('.not-prose')) continue;
+      const clone = el.cloneNode(true) as Element;
+      clone.querySelectorAll('.source-ref-tip').forEach((t) => t.remove());
+      const text = (clone.textContent ?? '').replace(/\s+/g, ' ').trim();
+      if (text) parts.push({ el, text });
+    }
+    return parts;
+  }
+  // Texto completo del artículo (lo que se habla; también clave del cache).
+  function gvProseText(prose: Element | null): string {
+    return gvBuildChunks(gvBlockParts(prose)).map((c) => c.text).join(' ');
   }
   async function gvPiperToggle(voiceId: string, prose: Element | null, msg: HTMLElement | null) {
     const label = document.querySelector('[data-tts-label]');
-    if (gvPiperBusy) return;
-    if (gvPiperAudio && !gvPiperAudio.paused) { gvStopAll(); gvUtt(msg); return; }
-    const text = gvReadText(prose);
-    if (!text) return;
+    // Sintetizando → segundo clic CANCELA (revisado entre trozos; latencia ~1 trozo).
+    if (gvPiperBusy) {
+      gvSynthCancel = true;
+      return;
+    }
+    const chunks = gvBuildChunks(gvBlockParts(prose));
+    if (chunks.length === 0) return;
+    const text = chunks.map((c) => c.text).join(' ');
+    const key = `${voiceId}|${text}`;
+    // Reproduciendo este texto → pausar (reanuda desde el mismo punto).
+    if (gvPiperAudio && gvCacheKey === key && !gvPiperAudio.paused) {
+      gvPiperAudio.pause();
+      if (label) label.textContent = 'Reanudar';
+      gvSetTtsPlaying(false);
+      if (msg) msg.textContent = '';
+      return;
+    }
+    // Cacheado y pausado/terminado → reproducir/reanudar sin resintetizar.
+    // Re-zipea los elementos DOM (mismo índice ⇒ mismo bloque; DOM determinista).
+    if (gvPiperAudio && gvCacheKey === key && gvBounds.length === chunks.length) {
+      gvChunkEls = chunks.map((c) => c.el);
+      gvPiperAudio.ontimeupdate = () => gvSyncHighlight();
+      gvPiperAudio.onended = () => { gvStopAll(); gvUtt(msg); };
+      try { await gvPiperAudio.play(); } catch { /* política de autoplay */ }
+      gvSyncHighlight();
+      gvShowTtsControls(true);
+      if (label) label.textContent = 'Detener';
+      gvSetTtsPlaying(true);
+      if (msg) msg.textContent = 'Leyendo con voz neural…';
+      return;
+    }
+    if (gvPiperAudio && !gvPiperAudio.paused) gvStopAll();
+    gvClearHighlight();
     gvPiperBusy = true;
-    if (label) label.textContent = 'Descargando…';
+    gvSynthCancel = false;
+    if (label) label.textContent = 'Cancelar';
     if (msg) msg.textContent = 'Descargando modelo de voz (primera vez)…';
     try {
       // El phonemizer wasm falla con textos muy largos (codes espeak); se trocea y se unen los PCM.
-      const wav = await gvPiperSpeak(text, voiceId, (t) => {
+      const { wav, bounds } = await gvPiperSpeak(chunks.map((c) => c.text), voiceId, (t) => {
         if (msg) msg.textContent = t;
       });
       if (!gvPiperAudio) gvPiperAudio = new Audio();
+      if (gvPiperUrl) URL.revokeObjectURL(gvPiperUrl); // eviction LRU (1 entrada)
       gvPiperUrl = URL.createObjectURL(wav);
+      gvCacheKey = key;
+      gvBounds = bounds;
+      gvChunkEls = chunks.map((c) => c.el);
+      gvActiveIdx = -1;
       gvPiperAudio.src = gvPiperUrl;
+      gvPiperAudio.ontimeupdate = () => gvSyncHighlight();
       gvPiperAudio.onended = () => { gvStopAll(); gvUtt(msg); };
       await gvPiperAudio.play();
+      gvShowTtsControls(true);
       if (label) label.textContent = 'Detener';
       gvSetTtsPlaying(true);
       if (msg) msg.textContent = 'Leyendo con voz neural…';
     } catch (err) {
-      console.error('Piper TTS falló', err);
-      gvUtt(msg);
-      if (msg) msg.textContent = 'Voz neural no disponible en tu red. Prueba una voz del navegador.';
+      if (gvSynthCancel || (err as DOMException)?.name === 'AbortError') {
+        gvUtt(msg);
+        if (msg) msg.textContent = 'Síntesis cancelada';
+      } else {
+        console.error('Piper TTS falló', err);
+        gvUtt(msg);
+        if (msg) msg.textContent = 'Voz neural no disponible en tu red. Prueba una voz del navegador.';
+      }
     } finally {
       gvPiperBusy = false;
     }
@@ -604,38 +710,53 @@ Describe el error o la corrección sugerida.`)}`;
   // Sintetiza por trozos de PCHUNK chars (el phononizer wasm aborta con inputs muy largos)
   // y concatena los PCM mono 16-bit en un solo WAV (misma tasa, misma voz por llamada).
   const PCHUNK = 900;
-  function gvChunkText(text: string, max: number): string[] {
-    if (text.length <= max) return [text];
+  // Cancelación cooperativa: gvPiperToggle lo activa con un segundo clic y el
+  // loop revisa entre trozos (no se puede abortar mid-chunk sin tocar el worker).
+  let gvSynthCancel = false;
+  // Divide un bloque > max por oraciones (el phonemizer wasm aborta con inputs largos).
+  function gvSplitLong(text: string, max: number): string[] {
+    const sentences = text.split(/(?<=[.!?…])\s+/);
     const out: string[] = [];
     let cur = '';
-    for (const para of text.split('\n')) {
-      if (cur.length + para.length + 1 > max && cur) {
-        out.push(cur.trim());
-        cur = '';
+    for (const s of sentences) {
+      if (!cur) {
+        if (s.length > max) {
+          // Oración gigante: cortar por palabras.
+          let rest = s;
+          while (rest.length > max) {
+            let cut = rest.lastIndexOf(' ', max);
+            if (cut === -1) cut = max;
+            out.push(rest.slice(0, cut).trim());
+            rest = rest.slice(cut).trim();
+          }
+          cur = rest;
+        } else cur = s;
+        continue;
       }
-      if (para.length > max) {
-        // párrafo gigante: cortar a la mitad aprox por palabra
-        let rest = para;
-        while (rest.length > max) {
-          let cut = rest.lastIndexOf(' ', max);
-          if (cut === -1) cut = max;
-          out.push(rest.slice(0, cut).trim());
-          rest = rest.slice(cut).trim();
-        }
-        cur = (cur + ' ' + rest).trim();
-      } else {
-        cur = (cur + ' ' + para).trim();
-      }
+      if (cur.length + 1 + s.length > max) { out.push(cur); cur = s; }
+      else cur += ' ' + s;
     }
-    if (cur) out.push(cur.trim());
+    if (cur) out.push(cur);
     return out;
   }
-  async function gvPiperSpeak(text: string, voiceId: string, onMsg: (m: string) => void): Promise<Blob> {
+  // Trozos sintetizables desde los bloques: bloques cortos van enteros; los
+  // largos se subdividen por oración conservando el el de origen (highlight).
+  function gvBuildChunks(parts: { el: Element; text: string }[]): { el: Element; text: string }[] {
+    const chunks: { el: Element; text: string }[] = [];
+    for (const p of parts) {
+      if (p.text.length <= PCHUNK) chunks.push(p);
+      else for (const t of gvSplitLong(p.text, PCHUNK)) chunks.push({ el: p.el, text: t });
+    }
+    return chunks;
+  }
+  async function gvPiperSpeak(chunks: string[], voiceId: string, onMsg: (m: string) => void): Promise<{ wav: Blob; bounds: number[] }> {
     const parts: Int16Array[] = [];
+    const bounds: number[] = [];
     let sampleRate = 22050;
-    const chunks = gvChunkText(text, PCHUNK);
+    let totalSamples = 0;
     for (let i = 0; i < chunks.length; i++) {
-      if (chunks.length > 1) onMsg(`Sintetizando… ${i + 1}/${chunks.length}`);
+      if (gvSynthCancel) throw new DOMException('Síntesis cancelada', 'AbortError');
+      if (chunks.length > 1) onMsg(`Sintetizando… ${i + 1}/${chunks.length} (clic para cancelar)`);
       const wav = await tts.predict({ text: chunks[i], voiceId }, (p) => {
         if (p.total > 0) onMsg(`Descargando voz… ${Math.round((p.loaded / p.total) * 100)}%`);
       });
@@ -643,14 +764,19 @@ Describe el error o la corrección sugerida.`)}`;
       if (buf.byteLength < 44) throw new Error('WAV inválido');
       const dv = new DataView(buf.buffer, buf.byteOffset, buf.byteLength);
       if (i === 0) sampleRate = dv.getUint32(24, true);
-      parts.push(new Int16Array(buf.buffer, buf.byteOffset + 44, (buf.byteLength - 44) / 2));
+      const part = new Int16Array(buf.buffer, buf.byteOffset + 44, (buf.byteLength - 44) / 2);
+      bounds.push(totalSamples / sampleRate);
+      parts.push(part);
+      totalSamples += part.length;
     }
-    if (parts.length === 0) throw new Error('Sin audio');
-    const totalSamples = parts.reduce((n, p) => n + p.length, 0);
+    if (parts.length === 0 || gvSynthCancel) {
+      if (gvSynthCancel) throw new DOMException('Síntesis cancelada', 'AbortError');
+      throw new Error('Sin audio');
+    }
     const pcm = new Int16Array(totalSamples);
     let off = 0;
     for (const p of parts) { pcm.set(p, off); off += p.length; }
-    return gvWav(pcm, sampleRate);
+    return { wav: gvWav(pcm, sampleRate), bounds };
   }
   function gvWav(pcm: Int16Array, sampleRate: number): Blob {
     const header = 44;
@@ -689,12 +815,16 @@ Describe el error o la corrección sugerida.`)}`;
         return;
       }
       if (!window.speechSynthesis) return;
+      // Corta el audio Piper previo (sonando o pausado): solo una voz a la vez,
+      // y su resaltado ya no corresponde a este motor.
+      gvStopAll();
+      gvClearHighlight();
       if (speechSynthesis.speaking || speechSynthesis.paused) {
         speechSynthesis.cancel();
         gvUtt(msg);
         return;
       }
-      const text = gvReadText(prose);
+      const text = gvProseText(prose);
       if (!text) return;
       const utter = new SpeechSynthesisUtterance(text);
       const voice = (sel && gvVoices().find((v) => v.name === sel.value)) || gvSpanishVoice(gvVoices());
@@ -706,6 +836,35 @@ Describe el error o la corrección sugerida.`)}`;
       if (label) label.textContent = 'Detener';
       gvSetTtsPlaying(true);
       if (msg) msg.textContent = 'Lectura en voz alta en progreso…';
+      return;
+    }
+    if (target.closest('#btn-tts-restart')) {
+      e.preventDefault();
+      const selNow = document.getElementById('tts-voice') as HTMLSelectElement | null;
+      if (!selNow?.value.startsWith(PIPER_PREFIX)) return; // no resucitar Piper si el usuario cambió de voz
+      if (!gvPiperAudio || !gvCacheKey) return;
+      gvPiperAudio.currentTime = 0;
+      void gvPiperAudio.play().catch(() => { /* política de autoplay */ });
+      gvSyncHighlight();
+      const label = document.querySelector('[data-tts-label]');
+      if (label) label.textContent = 'Detener';
+      gvSetTtsPlaying(true);
+      return;
+    }
+    if (target.closest('#btn-tts-next')) {
+      e.preventDefault();
+      const selNow = document.getElementById('tts-voice') as HTMLSelectElement | null;
+      if (!selNow?.value.startsWith(PIPER_PREFIX)) return; // no resucitar Piper si el usuario cambió de voz
+      if (!gvPiperAudio || !gvCacheKey || gvBounds.length === 0) return;
+      const t = gvPiperAudio.currentTime ?? 0;
+      // Salta al inicio del siguiente trozo (~parrafo); tras el último, vuelve al inicio.
+      const next = gvBounds.find((b) => b > t + 0.15);
+      gvPiperAudio.currentTime = next ?? 0;
+      void gvPiperAudio.play().catch(() => { /* política de autoplay */ });
+      gvSyncHighlight();
+      const label = document.querySelector('[data-tts-label]');
+      if (label) label.textContent = 'Detener';
+      gvSetTtsPlaying(true);
       return;
     }
     if (target.closest('#tts-voice')) {
@@ -744,11 +903,35 @@ Describe el error o la corrección sugerida.`)}`;
     window.speechSynthesis.addEventListener?.('voiceschanged', () => { gvFillVoices(); gvFilled = true; });
   }
   document.addEventListener('astro:page-load', gvEnsureVoices);
-  document.addEventListener('astro:page-load', () => { gvFillPiperVoices(); });
+  // Si el texto de esta página ya está sintetizado (cache) y pausado, el botón
+  // debe mostrar "Reanudar" en vez de "Escuchar"; re-zipea los bloques para que
+  // el resaltado/salto funcionen sin resintetizar.
+  function gvMarkResumable() {
+    if (!gvPiperAudio || !gvCacheKey) return;
+    const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
+    if (!sel?.value.startsWith(PIPER_PREFIX)) return;
+    const prose = document.querySelector('.prose');
+    const chunks = gvBuildChunks(gvBlockParts(prose));
+    const key = `${sel.value.slice(PIPER_PREFIX.length)}|${chunks.map((c) => c.text).join(' ')}`;
+    if (key !== gvCacheKey || gvBounds.length !== chunks.length) return;
+    gvChunkEls = chunks.map((c) => c.el);
+    const label = document.querySelector('[data-tts-label]');
+    if (label) label.textContent = 'Reanudar';
+    gvShowTtsControls(true);
+  }
+  document.addEventListener('astro:page-load', () => { gvFillPiperVoices(); gvMarkResumable(); });
   document.addEventListener('change', (e) => {
     const target = e.target as HTMLSelectElement | null;
-    if (target?.id === 'tts-voice' && target.value.startsWith(PIPER_PREFIX)) {
-      gvPreloadPiper(target.value.slice(PIPER_PREFIX.length));
+    if (target?.id === 'tts-voice') {
+      // Cambiar de voz corta toda reproducción previa (Piper y navegador):
+      // nunca deben sonar dos motores a la vez; y se limpia el resaltado
+      // del motor anterior (el nuevo no lo sincroniza).
+      gvStopAll();
+      gvClearHighlight();
+      // Los controles de salto solo aplican al audio Piper cacheado.
+      gvShowTtsControls(target.value.startsWith(PIPER_PREFIX) && !!gvCacheKey);
+      gvUtt(document.getElementById('tts-msg'));
+      if (target.value.startsWith(PIPER_PREFIX)) gvPreloadPiper(target.value.slice(PIPER_PREFIX.length));
     }
   });
 </script>

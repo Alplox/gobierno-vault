@@ -137,6 +137,15 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       .source-ref { position: relative; cursor: help; text-decoration: none; }
       .source-ref:hover { text-decoration: underline; text-decoration-color: var(--color-primary); }
       .source-ref-num { color: var(--color-primary); font-family: ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; }
+      /* Bloque que el TTS Piper está leyendo (sincronizado via timeupdate).
+         box-shadow con spread simula padding sin mover el layout. */
+      .gv-tts-active {
+        background-color: color-mix(in oklab, var(--color-primary) 14%, transparent);
+        box-shadow: 0 0 0 6px color-mix(in oklab, var(--color-primary) 14%, transparent);
+        border-radius: 8px;
+        scroll-margin-top: 5rem;
+        transition: box-shadow .3s, background-color .3s;
+      }
       .source-ref-tip {
         display: none;
         position: absolute;
