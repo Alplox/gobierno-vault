@@ -217,6 +217,32 @@ for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
   `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`,
   `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
   `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
-  `diarioestrategia`, `emol`.
+  `diarioestrategia`, `emol`, `senado`.
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
+
+### Sitios institucionales SIN sitemap utilizable (verificado 21-ago-2026)
+
+No se pueden agregar al catálogo (no exponen XML sitemap); usar fetch directo/defuddle bajo demanda:
+
+- **bomberos.cl** — Joomla sin sitemap XML (robots.txt sin línea Sitemap; `/sitemap.xml`,
+  `/sitemap_index.xml` y variantes OSMap/JMap/XMap → 404). Su `/mapa-del-sitio` es HTML y solo
+  lista estructura institucional (~440 links), no el archivo de artículos (que vive en
+  `/contenidos/<slug>`). Las notas oficiales de Bomberos se buscan y leen directamente.
+- **memoriachilena.gob.cl / bibliotecanacionaldigital.gob.cl** — sin sitemap; prensa chilena
+  digitalizada desde 1811 (El Mercurio, El Sur, La Nación, etc.). Clave para pre-2000.
+- **diariooficial.interior.gob.cl** — sin sitemap; PDFs desde 1875, buscador propio.
+- **camara.cl** — `sitemap.xml` responde 403 (WAF) incluso con User-Agent de navegador.
+- **puntofinal.cl / lediplomatique.cl / indh.cl / interferencia.cl** — inaccesibles o bloqueados
+  desde esta red al momento de la verificación.
+
+### Cobertura histórica del catálogo (para ir a años previos)
+
+- **emol** es el medio más profundo: ~1999/2000 en adelante (27 años).
+- **elciudadano** llega a ~2004; biobiochile/radio_uchile/el_periodista a ~2008.
+- **senado**: URLs desde ~2013, pero el `<lastmod>` es de la migración del sitio (masa en 2024);
+  para eventos previos buscar por slug (suele llevar la fecha), no por fecha.
+- Para **pre-2009/pre-2000** no hay prensa con sitemap: usar Memoria Chilena/BND (hemeroteca
+  digitalizada), Diario Oficial (desde 1875), BCN Historia Política Legislativa (biografías de
+  parlamentarios y ministros desde 1810, bcn.cl/historiapolitica) y LeyChile (normas desde 1739),
+  todos fetch-on-demand, citando como fuente institucional con su whitelist correspondiente.

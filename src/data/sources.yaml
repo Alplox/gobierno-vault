@@ -31588,3 +31588,318 @@ latercera-2026-08-20-director-junaeb-diligencias-cohecho:
   fecha: 2026-08-20
   url: https://www.latercera.com/nacional/noticia/director-de-junaeb-destaca-diligencias-de-la-fiscalia-aca-hay-elementos-suficientes-para-probar-eventuales-delitos-de-corrupcion/
   notas: "La Tercera (20-ago-2026): Director Fernando Peña valora las diligencias y confirma que la denuncia fue hecha por la propia Junaeb. Señala que la investigación abarca desde 2019."
+
+subtel-2026-08-20-registro-prepago-vigencia:
+  tipo: documento
+  medio: Subsecretaría de Telecomunicaciones
+  titulo: "Fin a los teléfonos anónimos: entra en vigencia el registro obligatorio de números prepago"
+  autor: Subsecretaría de Telecomunicaciones (Subtel)
+  fecha: 2026-08-20
+  url: https://www.subtel.gob.cl/fin-a-los-numeros-anonimos-entra-en-vigencia-el-registro-obligatorio-de-telefonos-prepago/
+  notas: "Comunicado oficial de Subtel (20-ago-2026): desde el jueves 20 de agosto todos los números prepago deberán estar asociados a una identidad. Registro presencial o digital integrado al sistema implementado por las empresas durante 2025; autenticación biométrica; sin registro en 10 días corridos la línea no recibe nuevas recargas. Cita textual de la subsecretaria Romina Garrido. Fuente primaria del evento 20260820-10."
+
+biobiochile-2026-08-19-prepago-datos-guardar:
+  tipo: web
+  medio: BioBioChile
+  titulo: "A partir de este jueves: los datos personales que las compañías telefónicas deberán guardar por ley"
+  autor: "BioBioChile"
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/servicios/explicado/2026/08/19/a-partir-de-este-jueves-los-datos-personales-que-las-companias-telefonicas-deberan-guardar-por-ley.shtml
+  notas: "BioBioChile 'Explicado' (19-ago-2026): detalla la Base de Datos de Usuarios (BDU) que prepago y postpago deben mantener 5 años (nombre completo, cédula o pasaporte, domicilio, correo, IMEI, IMSI, MSISDN; número de contacto para dispositivos sin llamadas/SMS). Plazos de solicitud de registro: 24 horas para tríadas IMEI-IMSI-MSISDN sin actividad desde el 20-ago-2025; 2 horas si las recargas mensuales superan 1 UF ($40.859 al 20-ago); 2 horas ante cualquier recarga en número sin identidad asociada. 5 o más líneas activas exigen registro presencial. Sin registro en 10 días corridos no hay nuevas recargas. Plataforma para revisar números registrados bajo la propia identidad. Verificado por lectura directa."
+
+biobiochile-2026-08-20-prepago-fin-anonimos:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Gobierno anuncia fin de teléfonos anónimos: Compañías registrarán todos los prepago a una identidad"
+  autor: "BioBioChile"
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/20/gobierno-anuncia-fin-de-telefonos-anonimos-companias-registraran-todos-los-prepago-a-una-identidad.shtml
+  notas: "BioBioChile (20-ago-2026): anuncio de Subtel de la entrada en vigencia del registro obligatorio de prepago. 4.425.012 usuarios prepago al primer trimestre de 2026 (~19% de los números móviles). Mecanismos de verificación: huella dactilar, reconocimiento facial, preguntas de seguridad, doble factor y firma electrónica avanzada. Citas de la subsecretaria Romina Garrido y de Alfie Ulloa (Chile Telcos). Verificado por lectura directa."
+
+latercera-2026-08-20-registro-prepago-vigencia:
+  tipo: web
+  medio: La Tercera
+  titulo: "Agenda de seguridad: entra en vigencia registro obligatorio de números de prepago y se acaban los teléfonos anónimos"
+  autor: José Navarrete
+  fecha: 2026-08-20
+  url: https://www.latercera.com/nacional/noticia/agenda-de-seguridad-entra-en-vigencia-registro-obligatorio-de-numeros-de-prepago-y-se-acaban-los-telefonos-anonimos/
+  notas: "La Tercera (20-ago-2026): replica el comunicado de Subtel sobre la vigencia del registro obligatorio de prepago en el marco de la agenda de seguridad. Empresas deberán proteger la información y no usarla para fines distintos del registro y las obligaciones legales."
+
+cnnchile-2026-08-20-prepago-identidad:
+  tipo: web
+  medio: CNN Chile
+  titulo: "Teléfonos anónimos llegan a su fin: Subtel informa que todos los números prepago deberán estar asociados a una identidad"
+  autor: "CNN Chile"
+  fecha: 2026-08-20
+  url: https://www.cnnchile.com/pais/numeros-anonimos-llegan-a-su-fin-subtel-informa-que-todos-los-prepago-deberan-estar-asociados-a-una-identidad/
+  notas: "CNN Chile (20-ago-2026): cobertura de la entrada en vigor del registro obligatorio de prepago; detalla el procedimiento digital y presencial, los trámites 2025 ya cubiertos por el sistema de registro (portabilidad, cambio de equipo, reposición de SIM) y el bloqueo de recargas tras 10 días corridos sin validación."
+
+adnradio-2026-08-19-prepago-nueva-regla:
+  tipo: web
+  medio: ADN Radio
+  titulo: "Nueva regla para teléfonos móviles entra en vigor en Chile: qué cambia desde este jueves"
+  autor: "ADN Radio"
+  fecha: 2026-08-19
+  url: https://www.adnradio.cl/2026/08/19/nueva-regla-para-telefonos-moviles-entra-en-vigor-en-chile-que-cambia-desde-este-jueves/
+  notas: "ADN Radio (19-ago-2026): explica que la Ley N° 21.729 obliga a asociar líneas prepago a una identidad desde el 20-ago-2026, pero no todos los usuarios actuales deben tramitar de inmediato: la compañía pedirá el registro ante recargas que superen 1 UF mensual, recargas en números sin identidad o tríadas sin actividad en red desde el 20-ago-2025. Datos técnicos del operador (IMEI, SIM, número); información almacenada 5 años. Tras 10 días corridos sin registro la línea puede seguir usando saldo pero no recibe recargas."
+
+radioagricultura-2026-08-20-registro-prepago:
+  tipo: web
+  medio: Radio Agricultura
+  titulo: "Fin a los teléfonos anónimos: entra en vigencia el registro obligatorio de números prepago"
+  autor: "Radio Agricultura"
+  fecha: 2026-08-20
+  url: https://www.radioagricultura.cl/noticias/nacional/fin-a-los-telefonos-anonimos-entra-en-vigencia-el-registro-obligatorio-de-numeros-prepago_20260820/
+  notas: "Radio Agricultura (20-ago-2026): reproduce el comunicado oficial de Subtel sobre la vigencia del registro obligatorio de prepago, con la cita de la subsecretaria Romina Garrido y el detalle del procedimiento digital/presencial y el plazo de 10 días corridos."
+
+chocale-2026-08-09-registro-prepago:
+  tipo: web
+  medio: Chocale
+  titulo: "Registro obligatorio para celulares prepago: quiénes deben hacerlo y qué ocurre si no cumplen el plazo"
+  autor: "Chócale"
+  fecha: 2026-08-09
+  url: https://chocale.cl/2026/08/registro-obligatorio-para-celulares-prepago-quienes-deben-hacerlo-y-que-ocurre-si-no-cumplen-el-plazo/
+  notas: "Chócale (9-ago-2026): anticipa la entrada en vigencia del registro obligatorio de celulares prepago, quiénes deben hacerlo y las consecuencias de no cumplir el plazo. Contexto previo a la vigencia del 20-ago-2026."
+
+diario_oficial-2026-01-13-resolucion-prepago:
+  tipo: documento
+  medio: Diario Oficial de la República de Chile
+  titulo: "Resolución N° 12 exenta: modifica la resolución N° 1.383 exenta de 2025 de Subtel (norma técnica del artículo 26 quáter de la Ley General de Telecomunicaciones)"
+  autor: Ministerio de Transportes y Telecomunicaciones — Subsecretaría de Telecomunicaciones
+  fecha: 2026-01-13
+  url: https://www.diariooficial.interior.gob.cl/publicaciones/2026/01/13/44347/01/2752688.pdf
+  notas: "Diario Oficial (13-ene-2026, resolución de 6-ene-2026 firmada por el subsecretario Claudio Araya): ajusta los plazos de requerimiento de identificación (24 horas para tríadas sin actividad desde el 20-ago-2025; 2 horas para recargas que superen 1 UF al mes y para cualquier recarga en MSISDN sin identidad), exige registro presencial para un quinto o más MSISDN prepago bajo una misma identidad en una concesionaria, y fija la entrada en vigor de las disposiciones el 20 de agosto de 2026. Fuente normativa primaria de la fecha de vigencia."
+
+bcn-2025-02-05-ley-21-729:
+  tipo: documento
+  medio: Biblioteca del Congreso Nacional (Ley Chile)
+  titulo: "Ley N° 21.729 — Modifica la Ley N° 18.168, General de Telecomunicaciones, en materia de registro e individualización de suscriptores o usuarios de telefonía y transmisión de datos"
+  autor: Biblioteca del Congreso Nacional de Chile
+  fecha: 2025-02-05
+  url: https://www.bcn.cl/leychile/navegar?idNorma=1211063
+  notas: "Texto de la Ley 21.729 (promulgada el 5-feb-2025 bajo el gobierno de Boric): introduce el artículo 26 quáter a la Ley General de Telecomunicaciones, que obliga a las concesionarias a mantener un registro actualizado por 5 años con nombre completo, domicilio, cédula o pasaporte, IMEI, MSISDN e IMSI de los usuarios, y manda a Subtel dictar la norma técnica en 6 meses. Base legal del registro prepago vigente desde el 20-ago-2026."
+
+biobiochile-2026-08-20-lincolao-profesores-vendedores:
+  tipo: declaracion
+  medio: BioBioChile
+  titulo: "El futuro que la ministra Lincolao proyecta para profesores y humanistas: vender IA y atender clientes"
+  autor: Megam Ossandón
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/20/el-futuro-que-la-ministra-ximena-lincolao-proyecta-para-profesores-y-humanistas-vender-ia-y-atender-clientes.shtml
+  notas: "BioBioChile (20-ago-2026, 21:08): recoge las declaraciones de la ministra de Ciencia Ximena Lincolao en el podcast 'Cómo te lo explico' —'los profesores también tienen mucha oportunidad de convertirse en vendedores o servicio al cliente'— y su argumento sobre el área de lenguaje/system prompts y fine tuning como espacio para humanistas. Verificado por lectura directa."
+
+biobiochile-2026-08-20-lincolao-customer-success-manager:
+  tipo: declaracion
+  medio: BioBioChile
+  titulo: "Lincolao explica futuro de profesores como vendedores: 'Me refería al rol de Customer Success Manager'"
+  autor: Samuel Fuentes
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/20/lincolao-explica-futuro-de-profesores-como-vendedores-me-referia-al-rol-de-customer-success-manager.shtml
+  notas: "BioBioChile (20-ago-2026, 22:46): aclaración de la ministra tras la polémica —se refería al rol de Customer Success Manager en IA—; 'mi objetivo era destacar el valor de esas competencias, no aminorarlas'; lamentó que 'la simplificación de un término pudo sentirse desatinada u ofensiva'; 'yo misma soy profesora'. Declaración enviada al medio. Verificado por lectura directa."
+
+chilevision-2026-08-20-lincolao-profesores-vendedores:
+  tipo: web
+  medio: Chilevisión
+  titulo: "Profesores pueden convertirse en vendedores: la frase con que la ministra Lincolao abordó el avance de la IA"
+  autor: "Chilevisión"
+  fecha: 2026-08-20
+  url: https://www.chilevision.cl/noticias/nacional/profesores-pueden-convertirse-en-vendedores-la-frase-con-que-la-ministra-lincolao-abordo-el-avance-de-la-ia/
+  notas: "Chilevisión (20-ago-2026): contextualiza la frase en la defensa de los cambios al Fondecyt de Postdoctorado 2027 (10 áreas estratégicas, hasta 70% de adjudicaciones) hecha en el podcast 'Cómo te lo explico', y reproduce el extracto con enlace al episodio de YouTube (minuto ~1:25:40). Verificado por lectura directa."
+
+chilevision-2026-08-20-colegio-profesores-falta-respeto:
+  tipo: reaccion
+  medio: Chilevisión
+  titulo: "'Es una falta de respeto': Colegio de Profesores RM respondió a dichos de Lincolao sobre docencia y la IA"
+  autor: Cristóbal Galleguillos
+  fecha: 2026-08-20
+  url: https://www.chilevision.cl/noticias/nacional/es-una-falta-de-respeto-colegio-de-profesores-rm-respondio-a-dichos-de-lincolao-sobre-docencia-y-la-ia/
+  notas: "Chilevisión (20-ago-2026, 20:10): comunicado del Colegio de Profesores Regional Metropolitano (publicado en Instagram) contra los dichos de la ministra: 'reducir la labor docente a la de vendedores o servicio al cliente no solo es un error conceptual: es una falta de respeto'; 'la docencia no se transa ni se vende. Se ejerce con vocación, formación profesional y compromiso social'; 'exigimos el respeto que la profesión docente merece'. Verificado por lectura directa."
+
+elmostrador-2026-08-20-lincolao-aclara-vendedores:
+  tipo: declaracion
+  medio: El Mostrador
+  titulo: "Lincolao aclara dichos sobre profesores 'vendedores': asegura que aludía a cargos en empresas de IA"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-20
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/20/lincolao-aclara-dichos-sobre-profesores-vendedores-asegura-que-aludia-a-cargos-en-empresas-de-ia/
+  notas: "El Mostrador (20-ago-2026, 23:27): tercera cobertura de la aclaración; confirma que la ministra aludía al cargo de Customer Success Manager destinado a entrenar, acompañar y capacitar usuarios de nuevas tecnologías, y que buscaba destacar las habilidades pedagógicas de los docentes."
+
+como-te-lo-explico-2026-08-20-podcast-lincolao:
+  tipo: entrevista
+  medio: Cómo te lo explico
+  titulo: "Cómo te lo explico — episodio con la ministra de Ciencia Ximena Lincolao (Fondecyt de Postdoctorado 2027, IA y futuro del trabajo)"
+  autor: Mónica Rincón, Paula Catena
+  fecha: 2026-08-20
+  url: https://www.youtube.com/watch?v=C9wGan47mIw
+  notas: "Episodio del podcast 'Cómo te lo explico' (Mónica Rincón y Paula Catena) con la ministra Ximena Lincolao; fuente primaria de las declaraciones sobre profesores y humanistas frente a la IA (extracto citado por Chilevisión en el minuto ~1:25:40). En el mismo episodio defendió los cambios al Fondecyt de Postdoctorado 2027."
+
+bomberos-2019-11-19-valparaiso-incendios:
+  tipo: documento
+  medio: Cuerpo de Bomberos de Chile
+  titulo: "Valparaíso: Fuego arrasa con cerca de 3.000 hectáreas y moviliza más de 310 Bomberos y 37 vehículos de emergencias"
+  autor: Cuerpo de Bomberos de Chile
+  fecha: 2019-11-19
+  url: https://www.bomberos.cl/contenidos/valparaiso-fuego-arrasa-con-cerca-de-3-000-hectareas-y-moviliza-mas-de-310-bomberos-y-37-vehiculos-de-emergencias
+  notas: "Reporte oficial de Bomberos de Chile (19-nov-2019) sobre la jornada crítica del lunes 18: múltiples focos en el sector alto de Valparaíso y cerro Rodelillo (9 casas consumidas, evacuación ONEMI paraderos 12-17); condominio Bosque Real en Curauma amenazado; Fundo Las Tablas (Quintay) sin control con Ruta 68 cerrada; apoyo aéreo de CONAF (helicópteros Chinook y aviones dromader). ~3.000 hectáreas, +310 bomberos y 37 vehículos. Verificado por lectura directa."
+
+biobiochile-2019-11-17-walker-incendios-valparaiso:
+  tipo: declaracion
+  medio: BioBioChile
+  titulo: "Ministro Walker confirma que van 2.500 hectáreas afectadas por incendios forestales en Valparaíso"
+  autor: "BioBioChile"
+  fecha: 2019-11-17
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2019/11/17/ministro-walker-confirma-que-van-2-500-hectareas-afectadas-por-incendios-forestales-en-valparaiso.shtml
+  notas: "BioBioChile (17-nov-2019): el ministro de Agricultura Antonio Walker reportó 2.500 ha afectadas, dos incendios grandes (Llampaiquillo 1.500 ha, Melosilla 800 ha), 4 focos activos, 4.700 clientes sin agua potable, 17 helicópteros, 7 aviones y más de 800 personas en terreno; sin víctimas ni viviendas afectadas a esa fecha. Atribuyó la temporada adelantada a la 'sequía más grande de la historia'. Verificado por lectura directa."
+
+biobiochile-2019-11-18-rodelillo-evacuacion:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Piden a vecinos de Rodelillo evacuar por incendio forestal que amenaza viviendas y ya consumió 1 casa"
+  autor: "BioBioChile"
+  fecha: 2019-11-18
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2019/11/18/piden-a-vecinos-de-rodelillo-evacuar-por-incendio-forestal-que-amenaza-viviendas-ya-consumio-1-casa.shtml
+  notas: "BioBioChile (18-nov-2019): evacuación SAE de los paraderos 12 a 17 de Rodelillo ordenada por la ONEMI, extendida a la población Cincel del cerro Placeres. El gobernador Gonzalo Le Dantec confirmó 9 viviendas consumidas y 31 personas afectadas. Verificado por lectura directa."
+
+emol-2019-11-18-alerta-roja-cinco-incendios:
+  tipo: prensa
+  medio: Emol
+  titulo: "Onemi: Cinco incendios se mantienen activos en Valparaíso y región continúa con alerta roja"
+  autor: Fernanda Villalobos Díaz
+  fecha: 2019-11-18
+  url: https://www.emol.com/noticias/Nacional/2019/11/18/967525/alerta-roja-valparaiso-incendios.html
+  notas: "Emol (18-nov-2019): cinco incendios activos según reporte ONEMI/CONAF con alerta roja regional; bomberos de 14 comunas en las labores; incendio 'Cuesta Llampaiquillo' con ~1.900 ha en Casablanca y Valparaíso; incendio 'Mesana' con 6 damnificados y 3 viviendas destruidas; Esval normalizó el suministro de agua en sectores de Curauma. Verificado por lectura directa."
+
+radio_uchile-2019-11-19-intendencia-delitos-terroristas:
+  tipo: web
+  medio: Radio Universidad de Chile
+  titulo: "Incendios forestales en Valparaíso: intendencia evalúa querellarse por delitos terroristas"
+  autor: "Radio Universidad de Chile"
+  fecha: 2019-11-19
+  url: https://radio.uchile.cl/2019/11/19/incendios-forestales-en-valparaiso-intendencia-evalua-querellarse-por-delitos-terroristas/
+  notas: "Radio Universidad de Chile (19-nov-2019): ocho focos aún activos según CONAF; el intendente Jorge Martínez elevó a 4.700 las hectáreas afectadas y anunció hasta 10 querellas bajo la figura de 'delito terrorista'; el ministro Walker precisó que se encontraron bidones con bencina y parafina y que se dispuso un fiscal exclusivo; alcalde Jorge Sharp llamó a seguir las instrucciones de emergencia. A nivel nacional: 44 incendios registrados, 12 activos. Verificado por lectura directa."
+
+theclinic-2019-11-19-bidon-acelerante:
+  tipo: web
+  medio: The Clinic
+  titulo: "Encuentran bidón con acelerante en zona de incendios forestales en Valparaíso"
+  autor: "The Clinic"
+  fecha: 2019-11-19
+  url: https://www.theclinic.cl/2019/11/19/encuentran-bidon-con-acelerante-en-zona-de-incendios-forestales-en-valparaiso/
+  notas: "The Clinic (19-nov-2019): hallazgo de un bidón con acelerante en la zona de los incendios forestales de Valparaíso, antecedente que respalda la hipótesis de intencionalidad sostenida por la Intendencia, la Municipalidad y el Gobierno."
+
+wikipedia-2024-incendios-forestales-chile:
+  tipo: documento
+  medio: Wikipedia
+  titulo: "Incendios forestales en Chile de 2024"
+  autor: Comunidad de Wikipedia en español
+  fecha: 2026-08-21
+  url: https://es.wikipedia.org/wiki/Incendios_forestales_en_Chile_de_2024
+  notas: "Artículo enciclopédico (consultado 21-ago-2026) que consolida la serie de incendios de enero-febrero 2024 en seis regiones, con el megaincendio de Valparaíso como el más grave: 138 fallecidos oficiales, 43.000+ hectáreas destruidas, ~14.000 viviendas destruidas y ~40.000 desplazados, 90% del Jardín Botánico Nacional consumido, estado de excepción del 2-feb al 4-jun-2024, toque de queda y duelo nacional. Detalla además la investigación penal (detenciones de bomberos y brigadistas desde may-2024, acusación fiscal contra nueve personas en jul-2025, juicio previsto para mar-2026). Fuente complementaria/contextual — los datos puntuales están referenciados a prensa en el propio artículo."
+
+latercera-2025-05-22-fiscalia-138-fallecidos-megaincendio:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Megaincendio en Valparaíso: Fiscalía confirma 138 fallecidos y tribunal extiende plazo de investigación"
+  autor: Javiera Arriaza
+  fecha: 2025-05-22
+  url: https://www.latercera.com/nacional/noticia/megaincendio-en-valparaiso-fiscalia-confirma-138-fallecidos-y-tribunal-extiende-plazo-de-investigacion/
+  notas: "La Tercera (22-may-2025): el Juzgado de Garantía de Valparaíso confirmó en la audiencia de reformalización la cifra de 138 fallecidos presentada por la Fiscalía; el fiscal Osvaldo Ossandón detalló las dos nuevas víctimas (una muerte declarada judicialmente y una joven hospitalizada por quemaduras) y recordó la formalización de los primeros implicados el 20-may-2024. Plazo de investigación extendido en 30 días por nuevos querellantes."
+
+cooperativa-2025-05-22-conteo-138-fallecidos:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Megaincendio de 2024: Conteo de Fiscalía sumó dos nuevos fallecidos"
+  autor: "Cooperativa.cl"
+  fecha: 2025-05-22
+  url: https://www.cooperativa.cl/noticias/pais/desastres-naturales/incendios-forestales/megaincendio-de-2024-conteo-de-fiscalia-sumo-dos-nuevos-fallecidos/2025-05-22/110531.html
+  notas: "Cooperativa (22-may-2025): la cifra actualizada de decesos llegó a 138; los siete imputados por la catástrofe fueron reformalizados ese jueves. Corrobora la cifra oficial consolidada del megaincendio."
+
+biobiochile-2019-11-15-alerta-roja-ruta-68:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Declaran alerta roja para Valparaíso por incendio forestal en costado de Ruta 68"
+  autor: "BioBioChile"
+  fecha: 2019-11-15
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2019/11/15/declaran-alerta-roja-para-valparaiso-por-incendio-forestal-en-costado-de-ruta-68.shtml
+  notas: "BioBioChile (15-nov-2019): primer registro de la emergencia — la ONEMI declaró alerta roja para Valparaíso y Casablanca por un incendio en el km 86 de la Ruta 68, al interior de la Reserva Nacional Lago Peñuelas; 400 ha consumidas de forma preliminar y fuego descontrolado según el encargado de Emergencias municipal Ezio Passadore (temperatura sobre 26°C y viento fuerte). Focos adicionales: Las Tablas Cinco, Quinta Compton (15 ha) y Cuesta Llampaiquillo (30 ha); Tunquen controlado. Verificado por lectura directa."
+
+biobiochile-2019-11-14-quillota-alerta-roja:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Onemi declara alerta roja en Quillota por incendio forestal"
+  autor: "BioBioChile"
+  fecha: 2019-11-14
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2019/11/14/onemi-declara-alerta-roja-en-quillota-por-incendio-forestal.shtml
+  notas: "BioBioChile (14-nov-2019): antecedente inmediato de la serie de incendios de la región — la ONEMI declaró alerta roja comunal en Quillota por un incendio forestal, un día antes del foco principal de la Ruta 68."
+
+emol-2019-11-27-rebrote-quintay:
+  tipo: prensa
+  medio: Emol
+  titulo: "Incendio forestal en Antenas de Quintay mantiene a bomberos en alerta tras rebrote de focos"
+  autor: "Emol"
+  fecha: 2019-11-27
+  url: https://www.emol.com/noticias/Nacional/2019/11/27/968646/Incendio-forestal-Antenas-de-Quintay.html
+  notas: "Emol (27-nov-2019): casi dos semanas después del inicio, se registraron rebrotes en el sector Antenas de Quintay y en el Fundo Las Tablas, con nueva información de la ONEMI al día siguiente (28-nov), lo que muestra la persistencia de los focos más allá de la jornada crítica del 18-nov."
+
+biobiochile-2024-01-20-lonquimay-alerta-roja:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Alerta roja por 2 incendios forestales en Lonquimay, uno está a 35 km del Parque Nacional Conguillío"
+  autor: "BioBioChile"
+  fecha: 2024-01-20
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2024/01/20/alerta-roja-por-2-incendios-forestales-en-lonquimay-uno-esta-a-35-km-del-parque-nacional-conguillio.shtml
+  notas: "BioBioChile (20-ene-2024): primera alerta roja del verano 2024 — dos incendios forestales en Lonquimay, La Araucanía, uno a 35 km del Parque Nacional Conguillío. Antecedente del verano extremo que culminaría en el megaincendio de Valparaíso del 2-feb."
+
+biobiochile-2024-02-02-boric-estado-excepcion-cogrid:
+  tipo: declaracion
+  medio: BioBioChile
+  titulo: "Boric decretará estado de excepción y adelantaría COGRID nacional por incendios en Valparaíso"
+  autor: "BioBioChile"
+  fecha: 2024-02-02
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2024/02/02/boric-decretaria-estado-de-excepcion-y-adelantaria-cogrid-nacional-por-incendios-en-valparaiso.shtml
+  notas: "BioBioChile (2-feb-2024): anuncio presidencial del estado de excepción por catástrofe y del COGRID nacional adelantado ante la emergencia en Valparaíso. Ese mismo día la delegada presidencial reportaba 10 muertos presuntos, se ordenó evacuar más de 15 localidades, EFE suspendió los trenes de pasajeros y CONAF contabilizaba 7.800 hectáreas arrasadas."
+
+biobiochile-2024-02-03-19-victimas-7000-hectareas:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Más de 7 mil hectáreas afectadas por incendios en Viña del Mar y Quilpué y 19 víctimas fatales"
+  autor: "BioBioChile"
+  fecha: 2024-02-03
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2024/02/03/mas-de-7-mil-hectareas-afectadas-por-incendios-en-vina-del-mar-y-quilpue-y-19-victimas-fatales.shtml
+  notas: "BioBioChile (3-feb-2024): primer balance matinal del desastre — más de 7.000 hectáreas afectadas en Viña del Mar y Quilpué y 19 víctimas fatales confirmadas. Ese día el Gobierno dispuso toque de queda en Viña del Mar, Quilpué, Villa Alemana y Limache, y la Municipalidad de Valparaíso interpuso querella criminal por el delito de incendio."
+
+latercera-2026-07-23-exjefes-conaf-cuasidelito:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cuasidelito de homicidio: exjefes Conaf serán formalizados el lunes por fallida evacuación en megaincendio de Valparaíso"
+  autor: "La Tercera"
+  fecha: 2026-07-23
+  url: https://www.latercera.com/nacional/noticia/cuasidelito-de-homicidio-exjefes-conaf-seran-formalizados-el-lunes-por-fallida-evacuacion-en-megaincendio-de-valparaiso/
+  notas: "La Tercera (23-jul-2026): anticipa la formalización por cuasidelito de homicidio de los exjefes de CONAF responsables de la evacuación durante el megaincendio de 2024. El fiscal Claudio Rebeco (URAC Valparaíso) había anunciado el 23-jul los antecedentes reunidos con la PDI: los funcionarios contaban con información suficiente sobre la dirección de avance del fuego y no activaron oportunamente el sistema de alerta de evacuación. En paralelo continuaba la audiencia de preparación del juicio oral contra los autores materiales (Claudio Gamboa y Maximiliano Véliz, entre otros)."
+
+biobiochile-2026-07-23-formalizan-investigacion-conaf:
+  tipo: declaracion
+  medio: BioBioChile
+  titulo: "Valparaíso: formalizan investigación contra funcionarios de Conaf por megaincendio de 2024"
+  autor: "BioBioChile"
+  fecha: 2026-07-23
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2026/07/23/valparaiso-formalizan-investigacion-contra-funcionarios-de-conaf-por-megaincendio-de-2024.shtml
+  notas: "BioBioChile (23-jul-2026): el fiscal Claudio Rebeco (URAC) detalló que 'tenemos la convicción de que el día 02 de febrero del año 2024, los funcionarios de Conaf... a pesar de que contaban con información suficiente acerca de la dirección de avance del fuego, no activaron de manera oportuna el sistema de alerta de evacuación'. Se abrió una segunda arista investigativa por la responsabilidad institucional, además de la causa contra los autores materiales. Verificado por lectura directa."
+
+emol-2026-07-27-conaf-formalizacion:
+  tipo: prensa
+  medio: Emol
+  titulo: "Funcionarios de Conaf del megaincendio de Viña del Mar son formalizados"
+  autor: "Emol"
+  fecha: 2026-07-27
+  url: https://www.emol.com/noticias/Nacional/2026/07/27/1206815/funcionarios-conaf-megaincendio-vina-formalizacion.html
+  notas: "Emol (27-jul-2026): cobertura de la formalización de los dos exfuncionarios de CONAF por su rol en la fallida evacuación del megaincendio de 2024. Corrobora la audiencia del Juzgado de Garantía de Valparaíso."
+
+latercera-2026-07-27-fiscalia-57-minutos-megaincendio:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Fiscalía de Valparaíso detalla cadena de decisiones que hicieron perder 57 minutos para evacuación en megaincendio"
+  autor: Javiera Arriaza
+  fecha: 2026-07-27
+  url: https://www.latercera.com/nacional/noticia/fiscalia-de-valparaiso-detalla-cadena-de-decisiones-que-hicieron-perder-57-minutos-para-evacuacion-en-megaincendio/
+  notas: "La Tercera (27-jul-2026): crónica de la formalización de Juan Atienza (exjefe del Deprif de CONAF Valparaíso) y Luis Correa Jiménez (excomandante de Incidentes del PMU) por cuasidelito de homicidio respecto de las 138 víctimas. Cronología fiscal: 17:35 el vigilador Fernando Concha Montesinos reporta por radio el foco de Fundos Siete Hermanas; 17:40 la información útil estaba disponible; 18:08 el fuego cruza el estero Marga Marga (Quilpué); 18:37 llega al Jardín Botánico donde mueren Patricia Esmeralda Araya Sánchez, su madre y dos nietos; 18:41 SENAPRED emite el SAE por iniciativa propia. Medida: reclusión domiciliaria total, arraigo y 180 días de investigación. Verificado por lectura directa."

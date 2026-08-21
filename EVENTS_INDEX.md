@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (208)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (207)
 
 <details>
-<summary>Ver lista (208 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (207 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — **1 fuente**
@@ -24,7 +24,6 @@
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md) — **1 fuente**
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — **1 fuente**
 - [2023/11/20231127-1 - El Mostrador analiza las cifras de la delincuencia: ingresos de causas +50%, homicidios +40% y secuestros +140% en una década](src/content/events/2023/11/20231127-1.md) — **1 fuente**
-- [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué deja al menos 134 fallecidos y un estado de excepción](src/content/events/2024/02/20240202-1.md) — **1 fuente**
 - [2024/04/20240401-1 - Le Monde Diplomatique: 'El crimen organizado se hace evidente en Chile' — la paradoja de la baja delincuencia con temor récord](src/content/events/2024/04/20240401-1.md) — **1 fuente**
 - [2024/08/20240804-1 - Van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'](src/content/events/2024/08/20240804-1.md) — **1 fuente**
 - [2024/12/20241205-1 - Fiscalía detalla cómo operaba la 'mafia del fuego' detrás del megaincendio de Valparaíso](src/content/events/2024/12/20241205-1.md) — **1 fuente**
@@ -342,6 +341,7 @@
 - [2026/07/20260726-2 - Encuesta Criteria: desaprobación de Kast sube a 54% y proyecto 'Escucha tu corazón' tiene rechazo transversal](src/content/events/2026/07/20260726-2.md) — 3 fuentes
 - [2026/07/20260727-12 - Gobierno anuncia récord de creación de empresas en primer semestre de 2026, pero críticos cuestionan calidad del indicador](src/content/events/2026/07/20260727-12.md) — 6 fuentes
 - [2026/07/20260727-13 - Hotuiti Teao viaja a Europa en plena semana distrital y reaviva polémica por salidas de diputados al extranjero](src/content/events/2026/07/20260727-13.md) — 1 fuente
+- [2026/07/20260727-17 - Fiscalía formaliza a exjefes de CONAF por cuasidelito de homicidio en megaincendio de Valparaíso: cadena de decisiones hizo perder 57 minutos de evacuación para las 138 víctimas](src/content/events/2026/07/20260727-17.md) — 4 fuentes
 - [2026/07/20260727-5 - Tres tornados golpean Ñuble y sistema frontal afecta a 107 personas](src/content/events/2026/07/20260727-5.md) — 4 fuentes
 - [2026/07/20260727-6 - Minvu utiliza IA para procesar 957 observaciones de consulta pública sobre OGUC](src/content/events/2026/07/20260727-6.md) — 3 fuentes
 - [2026/07/20260727-7 - Seremi de Vivienda del Maule Patricio Ponce renuncia tras menos de cinco meses](src/content/events/2026/07/20260727-7.md) — 1 fuente
@@ -542,6 +542,8 @@
 - [2026/08/20260819-6 - Centro de Estudiantes del Liceo Rayen Mapu denuncia que Carabineros obligó a dos alumnos a desvestirse frente a sus compañeros tras sospecha de robo de celular](src/content/events/2026/08/20260819-6.md) — 5 fuentes
 - [2026/08/20260819-7 - Kast cierra gira por el norte en mesa técnica en Iquique sin compromisos de inversión; gobernador Carvajal critica el resultado y pide zona de catástrofe](src/content/events/2026/08/20260819-7.md) — 5 fuentes
 - [2026/08/20260820-1 - Defensoría de la Niñez presenta denuncia ante la Fiscalía por procedimiento policial contra estudiantes del Liceo Rayen Mapu de Quellón](src/content/events/2026/08/20260820-1.md) — 2 fuentes
+- [2026/08/20260820-10 - Entra en vigencia el registro obligatorio de números prepago: fin de los teléfonos anónimos en Chile](src/content/events/2026/08/20260820-10.md) — 10 fuentes
+- [2026/08/20260820-11 - Ministra Lincolao plantea que profesores pueden reconvertirse en 'vendedores o servicio al cliente' de la IA; Colegio de Profesores RM responde que es 'una falta de respeto'](src/content/events/2026/08/20260820-11.md) — 6 fuentes
 - [2026/08/20260820-2 - Ministro Quiroz niega intervención de Hacienda en proyecto ligado a su hermano: 'Es totalmente falso'](src/content/events/2026/08/20260820-2.md) — 1 fuente
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 9 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
@@ -571,7 +573,7 @@
 
 ## 2024
 
-- [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué deja al menos 134 fallecidos y un estado de excepción](src/content/events/2024/02/20240202-1.md) — 1 fuente
+- [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué: el siniestro más letal de la historia de Chile, con 138 fallecidos oficiales y estado de excepción](src/content/events/2024/02/20240202-1.md) — 8 fuentes
 - [2024/02/20240221-1 - Secuestro y homicidio del exmilitar venezolano Ronald Ojeda: la Fiscalía vincula el crimen al Tren de Aragua](src/content/events/2024/02/20240221-1.md) — 3 fuentes
 - [2024/04/20240401-1 - Le Monde Diplomatique: 'El crimen organizado se hace evidente en Chile' — la paradoja de la baja delincuencia con temor récord](src/content/events/2024/04/20240401-1.md) — 1 fuente
 - [2024/05/20240508-1 - CIPER revela 133 reuniones de ministros y subsecretarios con empresarios no registradas en la Ley de Lobby; Vallejo reconoce el caso](src/content/events/2024/05/20240508-1.md) — 4 fuentes
@@ -668,6 +670,7 @@
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 3 fuentes
 - [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 8 fuentes
+- [2019/11/20191119-2 - Incendios forestales arrasan cerca de 3.000 hectáreas en Valparaíso: alerta roja regional, evacuaciones en Rodelillo y querellas por delito terrorista](src/content/events/2019/11/20191119-2.md) — 9 fuentes
 - [2019/11/20191121-1 - Informe de Amnistía Internacional, perdigones con plomo y acuerdo por pensiones marcan el 21 de noviembre](src/content/events/2019/11/20191121-1.md) — 7 fuentes
 - [2019/11/20191126-1 - Human Rights Watch publica informe sobre Chile y acuerdo constitucional sigue sin concretarse](src/content/events/2019/11/20191126-1.md) — 7 fuentes
 - [2019/12/20191220-1 - Jornada del 20 de diciembre de 2019 en Plaza de la Dignidad: copamiento policial y uso masivo de gas lacrimógeno](src/content/events/2019/12/20191220-1.md) — 5 fuentes

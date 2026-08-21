@@ -314,6 +314,19 @@ const MEDIA = {
     // partners/sponsors/publications y los *_tax-sitemap (taxonomías).
     includeRe: /(?:news-sitemap\d*|opinions-sitemap|studies-sitemap)\.xml$/i,
   },
+  senado: {
+    nombre: 'Senado de Chile',
+    index: 'https://www.senado.cl/sitemap.xml',
+    // Sitemap institucional (no WordPress): un índice con 2 "páginas"
+    // (?page=1/2, ~26 mil URLs en total) que mezclan noticias, galerías,
+    // secciones y la home. urlRe deja solo las noticias de comunicaciones;
+    // cubre desde ~2013 (sesiones y notas legislativas históricas).
+    // OJO: el <lastmod> es de la migración del sitio — casi todo queda en
+    // 2024 aunque el slug lleve la fecha real (ej. "sesion-...-06-de-
+    // noviembre-de-2013"). Para eventos previos a 2024 buscar por slug, no
+    // por fecha.
+    urlRe: /\/comunicaciones\/noticias\/.+$/i,
+  },
 };
 
 // ---------------------------------------------------------------------------
@@ -834,6 +847,10 @@ async function syncMedio(medio, conf, opts) {
     const pathDate = mm ? `${mm[1]}-${mm[2]}-01` : null;
     const batch = extractPairs(res.text, { pathDate, locDateRe: conf.locDateRe, forceHttps: conf.forceHttps });
     for (const e of batch) {
+      // Filtro por URL individual (urlRe por medio): sitios cuyo sitemap mezcla
+      // artículos con secciones/páginas estáticas (ej. Senado: solo
+      // /comunicaciones/noticias/).
+      if (conf.urlRe && !conf.urlRe.test(e.loc)) continue;
       const seenBefore = seen.has(e.loc);
       if (!seenBefore) seen.add(e.loc);
       const fecha = isoDate(e.newsDate) ?? e.locDate ?? pathDate ?? isoDate(e.lastmod);

@@ -367,6 +367,17 @@ historico con periodos), generado en build por `src/lib/cabinet.ts` a partir de
   ministerio" para orgs que son cartera (mismo helper).
 - Para ajustar datos de un ministro, editar `cargo`/`cargos[]` en `entities.yaml`;
   la pagina se regenera en el proximo build.
+- **Verificacion de fechas/cargos de los gabinetes (1938-2026)**: matriz por gobierno,
+  fechas clave, fuentes oficiales usadas (Minsal, BCN, gob.cl, Diario Oficial, archivo
+  Lagos UDP) y pendientes vive en `TAREAS/GABINETES-VERIFICACION.md` — al crear/modificar
+  un `cargos[]` ministerial, actualizar esa matriz (estado ✅/🟡) y registrar la fuente
+  que respalda la fecha. Convencion: `desde` = juramento/asuncion, `hasta` = cesacion.
+  Auditoria automatica: `pnpm run verify-gabinete` compara los `cargos[]` contra los
+  anexos de gabinetes de Wikipedia (cache en `sitemaps/.cache/gabinete-wiki/`).
+  Los paneles `aguirre_cerda`..`allende` y `pinochet` usan carteras historicas mapeadas
+  en `cabinet.ts` (`KEYWORD_MINISTERIO`: Guerra/Marina/Aviacion→Defensa, Salud
+  Publica/Salubridad→Salud, Fomento→Economia). Subsecretarios NO se trackean en
+  `cargos[]` (solo eventos).
 
 ## Campo `cargos` (historial de cargos de personas)
 
@@ -543,6 +554,7 @@ Cuando descubras algo no documentado aqui:
 | `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 298.864 | 12 |
 | `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.987 | 7 |
 | `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.132 | 8 |
+| `senado` | Senado de Chile | `www.senado.cl/sitemap.xml` | — | 17.355 | 3 |
 | `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.072 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
@@ -555,51 +567,51 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 437
+**Total de eventos:** 441
 
-**Cobertura de fuentes:** 229 de 437 eventos con 3+ fuentes (208 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 234 de 441 eventos con 3+ fuentes (207 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 329
+- 2026: 332
 - 2025: 15
 - 2024: 12
 - 2023: 14
 - 2022: 9
 - 2021: 6
 - 2020: 23
-- 2019: 22
+- 2019: 23
 - 2017: 2
 - 2015: 3
 - 2010: 1
 - 2009: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (145)
-- Justicia (116)
+- Politica (146)
+- Justicia (117)
 - Economia (106)
 - Defensa y seguridad (78)
-- Administración pública (68)
+- Administración pública (69)
 - Derechos humanos (55)
 - Proceso legislativo (45)
-- Emergencia y catástrofes (40)
+- Emergencia y catástrofes (42)
 - Gobierno y gestion presidencial (38)
 - Finanzas publicas (36)
 
 **Tipos de eventos más frecuentes (Top 10):**
 - accion (84)
 - publicacion (74)
-- resultado (62)
+- resultado (63)
 - investigacion (53)
 - anuncio (35)
+- fallo_judicial (29)
 - reaccion (29)
-- fallo_judicial (28)
-- declaracion (26)
+- declaracion (27)
 - votacion (16)
 - decreto (9)
 
 **Entidades registradas:**
-- Personas: 1549
-- Organizaciones: 929
-- Cifras: 988
-- Fuentes: 3727
+- Personas: 1954
+- Organizaciones: 934
+- Cifras: 989
+- Fuentes: 3762
 - Temas: 74

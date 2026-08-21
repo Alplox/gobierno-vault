@@ -62,6 +62,20 @@ people:
     cargo: Directora jurídica de Segal Deudores
     organizacion: segal_deudores
     notas: "Abogada; directora jurídica de Segal Deudores. Advirtió que la ampliación del cobro del CAE a billeteras virtuales debe leerse a la luz de las sentencias de Cortes de Apelaciones (entre ellas la de La Serena) que han resuelto que la deuda del CAE carece de naturaleza tributaria y que la Tesorería no está facultada para ejecutarla con prerrogativas tributarias (evento 20260615-1)."
+  romina_garrido:
+    nombre: Romina Garrido
+    cargo: Subsecretaria de Telecomunicaciones
+    organizacion: subtel
+    notas: "Subsecretaria de Telecomunicaciones del gobierno de Kast. Encabezó el anuncio de la entrada en vigencia (20-ago-2026) del registro obligatorio de números prepago: explicó que históricamente una línea prepago podía usarse maliciosamente sin identidad asociada, lo que facilitaba estafas telefónicas, y llamó a los usuarios a registrarse de forma proactiva por vía digital o presencial (evento 20260820-10)."
+  jorge_martinez:
+    nombre: Jorge Martínez
+    cargo: Exintendente de la Región de Valparaíso
+    notas: "Intendente de la Región de Valparaíso durante el gobierno de Sebastián Piñera (designado en 2018). Durante los incendios forestales de noviembre de 2019 elevó a 4.700 las hectáreas afectadas y anunció hasta 10 querellas bajo la figura de 'delito terrorista' ante la hipótesis de intencionalidad (evento 20191119-2)."
+  alfie_ulloa:
+    nombre: Alfie Ulloa
+    cargo: Presidente ejecutivo de Chile Telcos
+    organizacion: chile_telcos
+    notas: "Presidente ejecutivo de Chile Telcos, gremio que agrupa a ClaroVTR, Entel, Movistar, Mundo y Wom. Valoró el registro obligatorio de líneas prepago como herramienta para dar mayor trazabilidad y afirmó que la industria trabaja para que el trámite sea simple, rápido y seguro (evento 20260820-10)."
   claudia_sanhueza:
     nombre: Claudia Sanhueza
     cargo: Exsubsecretaria de Hacienda y de Relaciones Económicas Internacionales
@@ -406,8 +420,8 @@ people:
         hasta: 2011-07-18
       - cargo: Ministro de Desarrollo Social
         organizacion: ministerio_desarrollo_social
-        desde: 2011-10-13
-        hasta: 2013-06-13
+        desde: 2011-07-18
+        hasta: 2013-06-09
       - cargo: Alcalde de Las Condes
         desde: 2016-12-06
         hasta: 2021-06-28
@@ -894,7 +908,7 @@ people:
       - cargo: Ministra del Interior y Seguridad Pública
         organizacion: ministerio_interior
         desde: 2022-03-11
-        hasta: 2022-09-07
+        hasta: 2022-09-06
     organizacion: ministerio_interior
   sabas_chahuan:
     nombre: Sabas Chahuán
@@ -1337,7 +1351,7 @@ people:
         desde: 2026-03-11
     organizacion: ministerio_salud
   begona_yarza:
-    nombre: Begoña Yarza
+    nombre: María Begoña Yarza Sáez
     cargo: Ex Ministra de Salud
     cargos:
       - cargo: Ministra de Salud
@@ -2224,7 +2238,7 @@ people:
         hasta: 2006-03-11
       - cargo: Ministro de Justicia
         organizacion: ministerio_justicia
-        desde: 2016-01-05
+        desde: 2016-10-19
         hasta: 2018-03-11
       - cargo: Ministro de Agricultura
         organizacion: ministerio_agricultura
@@ -2349,6 +2363,14 @@ people:
       - cargo: Alta Comisionada de Derechos Humanos de la ONU
         organizacion: fenats
         desde: 2018-09-01
+      - cargo: Ministra de Salud
+        organizacion: ministerio_salud
+        desde: 2000-03-11
+        hasta: 2002-01-07
+      - cargo: Ministra de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 2002-01-07
+        hasta: 2004-09-29
   adriana_munoz:
     nombre: Adriana Muñoz D'Alvora
     cargo: Expresidenta de la Cámara de Diputados
@@ -3436,7 +3458,7 @@ people:
       - cargo: Ministro de Hacienda
         organizacion: ministerio_hacienda
         desde: 2018-03-11
-        hasta: 2022-03-11
+        hasta: 2019-10-28
     organizacion: ministerio_hacienda
     notas: "Exministro de Hacienda del segundo gobierno de Sebastián Piñera (2018-2022). Miembro de la Comisión para la Fijación de Remuneraciones que en diciembre de 2025 fijó el sueldo del Presidente de la República en $11.070.064 brutos."
   enrique_marshall:
@@ -3597,7 +3619,7 @@ people:
     cargos:
       - cargo: Ministro de Justicia y Derechos Humanos
         organizacion: ministerio_justicia
-        desde: 2023-01-10
+        desde: 2023-01-11
         hasta: 2024-10-17
       - cargo: Ministro de Seguridad Pública
         organizacion: ministerio_seguridad
@@ -4202,7 +4224,7 @@ people:
       - cargo: Ministra del Trabajo y Previsión Social
         organizacion: ministerio_trabajo
         desde: 2011-01-16
-        hasta: 2013-07-22
+        hasta: 2013-07-23
     notas: "Se cuadró con Camila Vallejo en críticas a promesa de seguridad del gobierno Kast y criticó a la prensa por cobertura sexista (20260728-3). El 12-ago-2026, en el lanzamiento del estudio '¿Dónde está el centro?' en la UC, criticó la reforma constitucional de la ACOT que permite militares en poblaciones: 'ha fracasado en todos los países donde se ha introducido, salvo naturalmente, El Salvador, pero eso ya no es democracia', y el concepto 'derechita cobarde' (evento 20260812-5)."
   alvaro_elizalde:
     nombre: Álvaro Elizalde Soto
@@ -4394,7 +4416,7 @@ people:
       - cargo: Ministra del Trabajo y Previsión Social
         organizacion: ministerio_trabajo
         desde: 2022-03-11
-        hasta: 2026-03-11
+        hasta: 2025-04-07
     notas: Candidata oficialista en la segunda vuelta presidencial 2025. Obtuvo 41,84% de los votos. Ganó las primarias de Unidad por Chile el 29 de junio de 2025 con 60,16%.
   angela_vivanco:
     nombre: Ángela Vivanco
@@ -5167,7 +5189,7 @@ people:
       - cargo: Ministro Secretario General de Gobierno
         organizacion: segegob
         desde: 2002-01-07
-        hasta: 2004-07-13
+        hasta: 2003-03-03
     notas: "Político y académico del PPD. Exministro de Relaciones Exteriores (2014-2018) y embajador de Chile ante la ONU. Tras el primer sondeo de la ONU explicó que 'no hay nada resuelto y vienen varias votaciones informales más' y que Bachelet analizaría los resultados con Brasil y México."
   alejandro_irarrazaval:
     nombre: Alejandro Irarrázaval
@@ -7051,7 +7073,7 @@ people:
         hasta: 2010-03-11
       - cargo: Ministro Secretario General de Gobierno
         organizacion: segegob
-        desde: 2004-07-13
+        desde: 2003-03-03
         hasta: 2005-05-24
       - cargo: Ministro Secretario General de Gobierno
         organizacion: segegob
@@ -7085,7 +7107,7 @@ people:
     cargos:
       - cargo: Ministro del Interior
         organizacion: ministerio_interior
-        desde: 2008-01-03
+        desde: 2008-01-08
         hasta: 2010-03-11
       - cargo: Ministro de Defensa Nacional
         organizacion: ministerio_defensa
@@ -7383,7 +7405,7 @@ people:
       - cargo: Ministro de Economía, Fomento y Reconstrucción
         organizacion: ministerio_economia
         desde: 1992-09-28
-        hasta: 1993-11-09
+        hasta: 1993-12-16
 
   alvaro_garcia_hurtado:
     nombre: Álvaro García Hurtado
@@ -7494,7 +7516,7 @@ people:
     cargos:
       - cargo: Ministro de Economía, Fomento y Turismo
         organizacion: ministerio_economia
-        desde: 2013-04-29
+        desde: 2013-05-07
         hasta: 2014-03-11
 
   luis_felipe_cespedes:
@@ -7582,7 +7604,7 @@ people:
         hasta: 2006-03-11
       - cargo: Ministra de Agricultura
         organizacion: ministerio_agricultura
-        desde: 2008-01-10
+        desde: 2008-01-08
         hasta: 2010-03-11
 
   martin_zilic:
@@ -7619,20 +7641,6 @@ people:
         desde: 2008-04-17
         hasta: 2010-03-11
 
-  joaquin_lavin:
-    nombre: Joaquín Lavín Infante
-    cargo: Ministro de Educación
-    organizacion: ministerio_educacion
-    cargos:
-      - cargo: Ministro de Educación
-        organizacion: ministerio_educacion
-        desde: 2010-03-11
-        hasta: 2011-07-18
-      - cargo: Ministro de Desarrollo Social
-        organizacion: ministerio_desarrollo_social
-        desde: 2011-07-18
-        hasta: 2013-06-06
-
   felipe_bulnes:
     nombre: Felipe Bulnes Serrano
     cargo: Ministro de Educación
@@ -7655,7 +7663,7 @@ people:
       - cargo: Ministro de Educación
         organizacion: ministerio_educacion
         desde: 2011-12-29
-        hasta: 2013-04-22
+        hasta: 2013-04-16
 
   carolina_schmidt:
     nombre: Carolina Schmidt Zaldívar
@@ -7792,7 +7800,7 @@ people:
       - cargo: Ministra de Justicia
         organizacion: ministerio_justicia
         desde: 2015-05-11
-        hasta: 2016-01-05
+        hasta: 2016-10-19
       - cargo: Ministra del Trabajo y Previsión Social
         organizacion: ministerio_trabajo
         desde: 2014-03-11
@@ -7925,7 +7933,7 @@ people:
         hasta: 2000-03-11
       - cargo: Ministro de Economía, Fomento y Reconstrucción
         organizacion: ministerio_economia
-        desde: 1993-11-09
+        desde: 1993-12-16
         hasta: 1994-03-11
 
   javier_etcheberry:
@@ -8064,7 +8072,7 @@ people:
       - cargo: Ministro de Salud
         organizacion: ministerio_salud
         desde: 1990-03-11
-        hasta: 1992-08-30
+        hasta: 1992-10-30
 
   julio_montt_momberg:
     nombre: Julio Montt Momberg
@@ -8073,7 +8081,7 @@ people:
     cargos:
       - cargo: Ministro de Salud
         organizacion: ministerio_salud
-        desde: 1992-08-30
+        desde: 1992-11-02
         hasta: 1994-03-11
 
   alex_figueroa:
@@ -8093,7 +8101,7 @@ people:
     cargos:
       - cargo: Ministro de Salud
         organizacion: ministerio_salud
-        desde: 2002-02-07
+        desde: 2002-01-07
         hasta: 2003-03-03
 
   pedro_garcia_aspillaga:
@@ -8123,7 +8131,7 @@ people:
     cargos:
       - cargo: Ministro de Salud
         organizacion: ministerio_salud
-        desde: 2008-10-28
+        desde: 2008-11-06
         hasta: 2010-03-11
 
   helia_molina:
@@ -8134,7 +8142,7 @@ people:
       - cargo: Ministra de Salud
         organizacion: ministerio_salud
         desde: 2014-03-11
-        hasta: 2015-01-23
+        hasta: 2014-12-30
 
   carmen_castillo:
     nombre: Carmen Castillo Taucher
@@ -8166,16 +8174,6 @@ people:
         desde: 2020-06-13
         hasta: 2022-03-11
 
-  maria_begona_yarza:
-    nombre: María Begoña Yarza Sáez
-    cargo: Ministra de Salud
-    organizacion: ministerio_salud
-    cargos:
-      - cargo: Ministra de Salud
-        organizacion: ministerio_salud
-        desde: 2022-03-11
-        hasta: 2022-09-06
-
   juan_hamilton:
     nombre: Juan Hamilton Depassier
     cargo: Ministro de Minería
@@ -8204,7 +8202,7 @@ people:
       - cargo: Ministro de Minería
         organizacion: ministerio_mineria
         desde: 1994-03-11
-        hasta: 1997-08-13
+        hasta: 1997-08-03
 
   sergio_jimenez_moraga:
     nombre: Sergio Jiménez Moraga
@@ -8442,7 +8440,7 @@ people:
       - cargo: Ministro de Agricultura
         organizacion: ministerio_agricultura
         desde: 2006-03-11
-        hasta: 2008-01-10
+        hasta: 2008-01-08
 
   jose_antonio_galilea:
     nombre: José Antonio Galilea Vidaurre
@@ -8732,7 +8730,7 @@ people:
       - cargo: Ministra de Energía
         organizacion: ministerio_energia
         desde: 2018-03-11
-        hasta: 2019-06-12
+        hasta: 2019-06-13
 
   claudio_huepe:
     nombre: Claudio Huepe Minoletti
@@ -8881,7 +8879,7 @@ people:
     cargos:
       - cargo: Ministro de Desarrollo Social
         organizacion: ministerio_desarrollo_social
-        desde: 2013-06-07
+        desde: 2013-06-09
         hasta: 2014-03-11
 
   fernanda_villegas:
@@ -9085,7 +9083,7 @@ people:
     cargos:
       - cargo: Ministro de Ciencia, Tecnología, Conocimiento e Innovación
         organizacion: ministerio_ciencia
-        desde: 2025-07-25
+        desde: 2025-07-22
         hasta: 2026-03-11
 
   edgardo_boeninger:
@@ -9205,7 +9203,7 @@ people:
     cargos:
       - cargo: Ministra Secretaria General de Gobierno
         organizacion: segegob
-        desde: 2009-12-14
+        desde: 2009-12-18
         hasta: 2010-03-11
 
   ena_von_baer:
@@ -9479,7 +9477,7 @@ people:
     cargos:
       - cargo: Ministra Secretaria General de la Presidencia
         organizacion: segpres
-        desde: 2025-03-04
+        desde: 2025-03-10
         hasta: 2026-03-11
     notas: "Abogada, militante del Partido Socialista. Subsecretaria general de la Presidencia del gobierno de Boric; asumió como ministra Segpres subrogante el 4 de marzo de 2025, tras el paso de Álvaro Elizalde a Interior, y fue ratificada como titular el 10 de marzo de 2025, cargo que mantuvo hasta el fin del gobierno."
 
@@ -10081,6 +10079,3677 @@ people:
     cargo: Jefe de Gabinete de la Subsecretaría de Educación Superior
     organizacion: subsecretaria_educacion_superior
     notas: "Abogado de 27 años, recién titular hace 8 meses al momento de su designación (ago-2026). Primera experiencia en el sector público. Sueldo bruto julio $4,8M; mayo/junio $10M cada uno por cancelación retroactiva. Investigación de FastCheck (20-ago-2026) cuestiona designación en el marco de la 'generación sin currículum'."
+  agustin_toro_davila:
+    nombre: Agustín Toro Dávila
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1974-07-11
+        hasta: 1975-04-30
+  alberto_spoerer_covarrubias:
+    nombre: Alberto Spoerer Covarrubias
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  alejandro_medina_lois:
+    nombre: Alejandro Medina Lois
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1979-12-14
+        hasta: 1980-12-29
+  alfonso_marquez_de_la_plata:
+    nombre: Alfonso Márquez de la Plata
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1977-04-20
+        hasta: 1980-12-29
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1983-08-10
+        hasta: 1984-11-06
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1984-11-06
+        hasta: 1988-10-21
+  alfredo_prieto_bafalluy:
+    nombre: Alfredo Prieto Bafalluy
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1979-12-14
+        hasta: 1982-08-30
+  alvaro_arriagada_norambuena:
+    nombre: Álvaro Arriagada Norambuena
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1982-08-30
+        hasta: 1983-02-14
+  alvaro_donoso_barros:
+    nombre: Álvaro Donoso Barros
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1980-12-29
+        hasta: 1990-03-11
+  andres_passicot_callier:
+    nombre: Andrés Passicot Callier
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1983-08-10
+        hasta: 1984-04-02
+  armando_alvarez_marin:
+    nombre: Armando Álvarez Marín
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1988-10-21
+        hasta: 1990-03-11
+  arturo_troncoso_daroch:
+    nombre: Arturo Troncoso Daroch
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1974-07-11
+        hasta: 1975-04-14
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1975-05-16
+        hasta: 1976-12-03
+  arturo_vivero_avila:
+    nombre: Arturo Vivero Ávila
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  arturo_yovane_zuniga:
+    nombre: Arturo Yovane Zúñiga
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  bruno_siebert_held:
+    nombre: Bruno Siebert Held
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1982-04-22
+        hasta: 1989-06-05
+  carlos_caceres_contreras:
+    nombre: Carlos Cáceres Contreras
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1983-02-14
+        hasta: 1984-04-22
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1988-10-21
+        hasta: 1990-03-11
+  carlos_forestier_haensgen:
+    nombre: Carlos Forestier Haensgen
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1980-12-29
+        hasta: 1981-12-04
+  carlos_granifo_harms:
+    nombre: Carlos Granifo Harms
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1975-04-14
+        hasta: 1977-03-11
+  carlos_jimenez_vargas:
+    nombre: Carlos Jiménez Vargas
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1978-07-27
+        hasta: 1979-12-14
+  carlos_quinones_lopez:
+    nombre: Carlos Quiñones López
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1978-12-26
+        hasta: 1980-12-29
+  carlos_silva_echiburu:
+    nombre: Carlos Silva Echiburu
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1988-10-21
+        hasta: 1990-03-11
+  caupolican_boisset_mujica:
+    nombre: Caupolicán Boisset Mujica
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1979-12-14
+        hasta: 1983-08-10
+  cesar_raul_benavides_escobar:
+    nombre: César Raúl Benavides Escobar
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1974-07-11
+        hasta: 1978-04-14
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1978-04-14
+        hasta: 1980-12-29
+  cristian_labbe_galilea:
+    nombre: Cristián Labbé Galilea
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1989-08-17
+        hasta: 1990-03-11
+  diego_barba_valdes:
+    nombre: Diego Barba Valdés
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  enrique_escobar_rodriguez:
+    nombre: Enrique Escobar Rodríguez
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1983-08-10
+        hasta: 1987-07-08
+  enrique_garin_cea:
+    nombre: Enrique Garín Cea
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1974-07-08
+        hasta: 1976-03-08
+  enrique_montero_marx:
+    nombre: Enrique Montero Marx
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1982-04-22
+        hasta: 1983-08-10
+  enrique_seguel_morel:
+    nombre: Enrique Seguel Morel
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1989-04-05
+        hasta: 1989-12-06
+  fernando_leniz_cerda:
+    nombre: Fernando Léniz Cerda
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1973-10-11
+        hasta: 1975-04-14
+  fernando_matthei_aubel:
+    nombre: Fernando Matthei Aubel
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1976-03-08
+        hasta: 1978-07-27
+  francisco_herrera_latoja:
+    nombre: Francisco Herrera Latoja
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1974-07-11
+        hasta: 1976-03-08
+  francisco_javier_cuadra:
+    nombre: Francisco Javier Cuadra
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1984-11-06
+        hasta: 1987-07-08
+  francisco_jorge_prado_aranguiz:
+    nombre: Francisco Jorge Prado Aránguiz
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1982-04-22
+        hasta: 1988-10-21
+  francisco_ramirez_migliasi:
+    nombre: Francisco Ramírez Migliasi
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1987-04-23
+        hasta: 1990-03-11
+  gonzalo_prieto_gandara:
+    nombre: Gonzalo Prieto Gándara
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  gonzalo_vial_correa:
+    nombre: Gonzalo Vial Correa
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1978-12-26
+        hasta: 1979-12-14
+  guillermo_arthur_errazuriz:
+    nombre: Guillermo Arthur Errázuriz
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1988-10-21
+        hasta: 1989-08-17
+  gustavo_montero_saavedra:
+    nombre: Gustavo Montero Saavedra
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1988-10-21
+        hasta: 1990-03-11
+  herman_brady_roche:
+    nombre: Hermán Brady Roche
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1975-03-07
+        hasta: 1978-04-14
+  hernan_abad_cid:
+    nombre: Hernán Abad Cid
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1989-06-05
+        hasta: 1990-03-11
+  hernan_bejares_gonzalez:
+    nombre: Hernán Béjares González
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1974-07-11
+        hasta: 1977-11-15
+  hernan_buchi_buc:
+    nombre: Hernán Büchi Buc
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1983-08-10
+        hasta: 1984-05-08
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1985-02-12
+        hasta: 1989-04-05
+  hernan_cubillos_sallato:
+    nombre: Hernán Cubillos Sallato
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1978-04-14
+        hasta: 1980-03-29
+  hernan_felipe_errazuriz:
+    nombre: Hernán Felipe Errázuriz
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1981-12-04
+        hasta: 1982-08-30
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1982-08-30
+        hasta: 1983-02-14
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1988-11-21
+        hasta: 1990-03-11
+  hernan_rivera_calderon:
+    nombre: Hernán Rivera Calderón
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1980-12-29
+        hasta: 1983-08-10
+  horacio_aranguiz_donoso:
+    nombre: Horacio Aránguiz Donoso
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1983-10-18
+        hasta: 1985-07-29
+  hugo_castro_jimenez:
+    nombre: Hugo Castro Jimenéz
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1973-09-27
+        hasta: 1975-05-16
+  hugo_galvez_gajardo:
+    nombre: Hugo Gálvez Gajardo
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1983-08-10
+        hasta: 1984-11-06
+  hugo_leon_puelma:
+    nombre: Hugo León Puelma
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1975-04-14
+        hasta: 1979-04-17
+  hugo_musante_romero:
+    nombre: Hugo Musante Romero
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1974-07-11
+        hasta: 1975-07-14
+  hugo_rosende_subiabre:
+    nombre: Hugo Rosende Subiabre
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1983-12-19
+        hasta: 1990-03-11
+  ismael_huerta_diaz:
+    nombre: Ismael Huerta Díaz
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  jaime_de_la_sotta_benavente:
+    nombre: Jaime de la Sotta Benavente
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1988-10-21
+        hasta: 1989-06-05
+  jaime_del_valle_alliende:
+    nombre: Jaime del Valle Alliende
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1983-02-14
+        hasta: 1983-12-19
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1983-12-19
+        hasta: 1987-07-08
+  jaime_estrada_leigh:
+    nombre: Jaime Estrada Leigh
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1978-12-26
+        hasta: 1982-04-22
+  jorge_ballerino_sandford:
+    nombre: Jorge Ballerino Sandford
+    cargo: Ex jefe de Estado Mayor Presidencial
+    cargos:
+      - cargo: Jefe de Estado Mayor Presidencial
+        desde: 1988-11-15
+        hasta: 1990-03-11
+  jorge_cauas_lama:
+    nombre: Jorge Cauas Lama
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1974-07-11
+        hasta: 1976-12-31
+  jorge_lopez_bain:
+    nombre: Jorge López Bain
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1990-03-11
+        hasta: 1990-03-11
+  jorge_massa_armijo:
+    nombre: Jorge Massa Armijo
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1987-07-08
+        hasta: 1988-10-21
+  jorge_veloso_bastias:
+    nombre: Jorge Veloso Bastías
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1987-07-08
+        hasta: 1988-10-21
+  jose_luis_federici:
+    nombre: José Luis Federici
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1978-04-20
+        hasta: 1979-12-14
+  jose_luis_federici_rojas:
+    nombre: José Luis Federici Rojas
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1979-12-14
+        hasta: 1980-12-29
+  jose_luis_toro_hevia:
+    nombre: José Luis Toro Hevia
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1980-12-29
+        hasta: 1982-04-22
+  jose_navarro_tobar:
+    nombre: José Navarro Tobar
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1973-09-12
+        hasta: 1973-09-27
+  jose_pinera_echenique:
+    nombre: José Piñera Echenique
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1978-12-26
+        hasta: 1980-12-29
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1980-12-29
+        hasta: 1981-12-04
+  juan_antonio_guzman_molinari:
+    nombre: Juan Antonio Guzmán Molinari
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1987-07-08
+        hasta: 1989-06-05
+  juan_carlos_delano_ortuzar:
+    nombre: Juan Carlos Délano Ortúzar
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1985-07-29
+        hasta: 1987-07-08
+  juan_giaconi_gandolfo:
+    nombre: Juan Giaconi Gandolfo
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1986-08-13
+        hasta: 1990-03-11
+  juan_ignacio_dominguez:
+    nombre: Juan Ignacio Domínguez
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1989-06-05
+        hasta: 1990-03-11
+  julio_bravo_valdes:
+    nombre: Julio Bravo Valdés
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1980-12-29
+        hasta: 1982-08-30
+  julio_fernandez_atienza:
+    nombre: Julio Fernández Atienza
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1979-01-27
+        hasta: 1979-12-14
+  lautaro_recabarren_hidalgo:
+    nombre: Lautaro Recabarren Hidalgo
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1976-07-12
+        hasta: 1979-12-14
+  luis_danus_covian:
+    nombre: Luis Danús Covián
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1982-04-22
+        hasta: 1982-08-30
+  luis_edmundo_ruiz_undurraga:
+    nombre: Luis Edmundo Ruiz Undurraga
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1977-03-11
+        hasta: 1978-12-26
+  luis_escobar_cerda:
+    nombre: Luis Escobar Cerda
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1984-04-22
+        hasta: 1985-02-12
+  luis_figueroa_del_rio:
+    nombre: Luis Figueroa del Río
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1984-05-08
+        hasta: 1990-03-11
+  luis_larrain_arroyo:
+    nombre: Luis Larraín Arroyo
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1989-08-17
+        hasta: 1990-03-11
+  luis_niemann_nunez:
+    nombre: Luis Niemann Núñez
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1976-12-03
+        hasta: 1978-12-26
+  luis_valenzuela_blanquier:
+    nombre: Luis Valenzuela Blanquier
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1975-04-30
+        hasta: 1978-12-26
+  manuel_concha_martinez:
+    nombre: Manuel Concha Martínez
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1987-07-08
+        hasta: 1989-04-16
+  manuel_martin_saez:
+    nombre: Manuel Martin Sáez
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1983-02-14
+        hasta: 1983-08-10
+  maria_teresa_infante_barros:
+    nombre: María Teresa Infante Barros
+    cargo: Ex ministra del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1989-08-17
+        hasta: 1990-03-11
+  mario_mac_kay_jaraquemada:
+    nombre: Mario Mac-Kay Jaraquemada
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1974-07-11
+        hasta: 1976-07-12
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1976-07-12
+        hasta: 1977-04-20
+  martin_costabal_llona:
+    nombre: Martín Costabal Llona
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1989-12-06
+        hasta: 1990-03-11
+  maximo_silva_bafalluy:
+    nombre: Máximo Silva Bafalluy
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1982-04-22
+        hasta: 1982-08-30
+  miguel_angel_poduje_sapiain:
+    nombre: Miguel Ángel Poduje Sapiaín
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1984-04-02
+        hasta: 1988-10-21
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1988-10-21
+        hasta: 1989-04-05
+  miguel_kast_rist:
+    nombre: Miguel Kast Rist
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1978-12-26
+        hasta: 1980-12-29
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1980-12-29
+        hasta: 1982-04-22
+  miguel_schweitzer_speisky:
+    nombre: Miguel Schweitzer Speisky
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1975-07-14
+        hasta: 1977-04-20
+  miguel_schweitzer_walters:
+    nombre: Miguel Schweitzer Walters
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1983-02-14
+        hasta: 1983-12-19
+  modesto_collados_nunez:
+    nombre: Modesto Collados Núñez
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1983-08-10
+        hasta: 1984-04-02
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1984-04-02
+        hasta: 1985-07-29
+  monica_madariaga_gutierrez:
+    nombre: Mónica Madariaga Gutiérrez
+    cargo: Ex ministra de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1977-04-20
+        hasta: 1983-02-14
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1983-02-14
+        hasta: 1983-10-18
+  nicanor_diaz_estrada:
+    nombre: Nicanor Díaz Estrada
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1973-09-12
+        hasta: 1976-03-08
+  orlando_poblete_iturrate:
+    nombre: Orlando Poblete Iturrate
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1987-07-08
+        hasta: 1988-10-21
+  oscar_bonilla_bradanovic:
+    nombre: Óscar Bonilla Bradanovic
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1973-09-12
+        hasta: 1974-07-11
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1974-07-11
+        hasta: 1975-03-07
+  oscar_vargas_guzman:
+    nombre: Óscar Vargas Guzmán
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1989-04-05
+        hasta: 1989-08-17
+  pablo_baraona_urzua:
+    nombre: Pablo Baraona Urzúa
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1976-12-27
+        hasta: 1978-12-26
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1988-10-21
+        hasta: 1990-03-11
+  patricio_carvajal_prado:
+    nombre: Patricio Carvajal Prado
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1973-09-12
+        hasta: 1974-07-11
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1974-07-11
+        hasta: 1978-04-14
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1982-12-15
+        hasta: 1990-03-11
+  patricio_mardones_villarroel:
+    nombre: Patricio Mardones Villarroel
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1982-08-30
+        hasta: 1983-08-10
+  patricio_torres_rojas:
+    nombre: Patricio Torres Rojas
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1979-04-17
+        hasta: 1982-04-22
+  pedro_ewing_hodar:
+    nombre: Pedro Ewing Hodar
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  pedro_larrondo_jara:
+    nombre: Pedro Larrondo Jara
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1989-04-16
+        hasta: 1990-03-11
+  ramon_suarez_gonzalez:
+    nombre: Ramón Suárez González
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1983-02-14
+        hasta: 1983-08-10
+  raul_saez_saez:
+    nombre: Raúl Sáez Sáez
+    cargo: Ex ministro de Coordinación Económica y Desarrollo
+    cargos:
+      - cargo: Ministro de Coordinación Económica y Desarrollo
+        desde: 1974-07-08
+        hasta: 1976-03-16
+  raul_vargas_miquel:
+    nombre: Raúl Vargas Miquel
+    cargo: Ex ministro de Transportes y Telecomunicaciones
+    cargos:
+      - cargo: Ministro de Transportes y Telecomunicaciones
+        organizacion: ministerio_transportes
+        desde: 1976-03-08
+        hasta: 1978-04-20
+  rene_escauriaza_alvarado:
+    nombre: René Escauriaza Alvarado
+    cargo: Ex jefe de Estado Mayor Presidencial
+    cargos:
+      - cargo: Jefe de Estado Mayor Presidencial
+        desde: 1979-10-16
+        hasta: 1990-03-11
+  rene_peri_fagerstrom:
+    nombre: René Peri Fagerstrom
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1979-12-14
+        hasta: 1987-07-08
+  rene_rojas_galdames:
+    nombre: René Rojas Galdames
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1980-03-29
+        hasta: 1983-02-14
+  rene_salame_martin:
+    nombre: René Salamé Martín
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1989-06-05
+        hasta: 1990-03-11
+  rene_vidal_basauri:
+    nombre: René Vidal Basauri
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1977-11-15
+        hasta: 1979-01-27
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1980-10-20
+        hasta: 1980-12-29
+  ricardo_garcia_rodriguez:
+    nombre: Ricardo García Rodríguez
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1985-02-12
+        hasta: 1987-07-08
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1987-07-08
+        hasta: 1988-11-21
+  roberto_guillard_marinot:
+    nombre: Roberto Guillard Marinot
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1982-04-22
+        hasta: 1983-08-10
+  roberto_kelly_vasquez:
+    nombre: Roberto Kelly Vásquez
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1973-09-12
+        hasta: 1978-12-26
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1978-12-26
+        hasta: 1979-12-14
+  rolando_ramos_munoz:
+    nombre: Rolando Ramos Muñoz
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1980-12-29
+        hasta: 1982-04-22
+  rolf_luders_schwarzenberg:
+    nombre: Rolf Lüders Schwarzenberg
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1982-08-30
+        hasta: 1983-02-14
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1982-08-30
+        hasta: 1983-02-14
+  samuel_lira_ovalle:
+    nombre: Samuel Lira Ovalle
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1982-08-30
+        hasta: 1988-10-21
+  santiago_sinclair_oyaneder:
+    nombre: Santiago Sinclair Oyaneder
+    cargo: Ex jefe de Estado Mayor Presidencial
+    cargos:
+      - cargo: Jefe de Estado Mayor Presidencial
+        desde: 1979-10-17
+        hasta: 1985-12-06
+  sergio_badiola_broberg:
+    nombre: Sergio Badiola Broberg
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1979-12-14
+        hasta: 1980-10-20
+  sergio_crespo_montero:
+    nombre: Sergio Crespo Montero
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  sergio_de_castro:
+    nombre: Sergio de Castro
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1975-04-14
+        hasta: 1976-12-27
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1976-12-31
+        hasta: 1982-04-22
+  sergio_de_la_cuadra:
+    nombre: Sergio de la Cuadra
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1982-04-22
+        hasta: 1982-08-30
+  sergio_fernandez_fernandez:
+    nombre: Sergio Fernández Fernández
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1976-03-08
+        hasta: 1978-01-01
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1978-04-14
+        hasta: 1982-04-22
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1987-07-08
+        hasta: 1988-10-21
+  sergio_figueroa_gutierrez:
+    nombre: Sergio Figueroa Gutiérrez
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1973-09-12
+        hasta: 1975-04-14
+  sergio_gaete_rojas:
+    nombre: Sergio Gaete Rojas
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1985-07-29
+        hasta: 1987-07-08
+  sergio_melnick_israel:
+    nombre: Sergio Melnick Israel
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1987-04-23
+        hasta: 1989-08-17
+  sergio_onofre_jarpa:
+    nombre: Sergio Onofre Jarpa
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1983-08-10
+        hasta: 1985-02-12
+  sergio_perez_hormazabal:
+    nombre: Sergio Pérez Hormazábal
+    cargo: Ex ministro Director de la Oficina de Planificación Nacional
+    cargos:
+      - cargo: Ministro Director de la Oficina de Planificación Nacional
+        desde: 1983-08-10
+        hasta: 1990-03-11
+  sergio_valenzuela_ramirez:
+    nombre: Sergio Valenzuela Ramírez
+    cargo: Ex jefe de Estado Mayor Presidencial
+    cargos:
+      - cargo: Jefe de Estado Mayor Presidencial
+        desde: 1985-12-06
+        hasta: 1988-11-15
+  tito_lorenzo_gotuzzo_borlando:
+    nombre: Tito Lorenzo Gotuzzo Borlando
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1973-09-12
+        hasta: 1974-07-11
+  tucapel_vallejos_reginato:
+    nombre: Tucapel Vallejos Reginato
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1974-07-11
+        hasta: 1976-07-12
+  vasco_costa_ramirez:
+    nombre: Vasco Costa Ramírez
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1978-01-01
+        hasta: 1978-12-26
+  washington_carrasco_fernandez:
+    nombre: Washington Carrasco Fernández
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1981-12-04
+        hasta: 1982-12-15
+  winston_chinchon_bunting:
+    nombre: Winston Chinchón Bunting
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1983-08-10
+        hasta: 1986-08-13
+  abdon_parra_urzua:
+    nombre: Abdón Parra Urzúa
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1952-11-03
+        hasta: 1954-06-05
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1952-11-03
+        hasta: 1953-06-25
+  abel_valdes:
+    nombre: Abel Valdés
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1958-03-19
+        hasta: 1958-06-19
+  abraham_ortega_aguayo:
+    nombre: Abraham Ortega Aguayo
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1938-12-24
+        hasta: 1940-02-08
+  adrian_barrientos_villalobos:
+    nombre: Adrián Barrientos Villalobos
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-10-04
+        hasta: 1956-08-27
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1957-04-23
+        hasta: 1957-10-28
+  adriana_olguin:
+    nombre: Adriana Olguín
+    cargo: Ex ministra de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  alberto_araya:
+    nombre: Alberto Araya
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1956-07-04
+        hasta: 1956-08-27
+  alberto_cabero_diaz:
+    nombre: Alberto Cabero Díaz
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1938-12-24
+        hasta: 1939-04-13
+  alberto_sepulveda_contreras:
+    nombre: Alberto Sepúlveda Contreras
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1957-10-28
+        hasta: 1958-11-03
+  alejandro_garreton_silva:
+    nombre: Alejandro Garretón Silva
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1963-09-26
+        hasta: 1964-11-03
+  alejandro_hales_x:
+    nombre: Alejandro Hales
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1953-04-01
+        hasta: 1954-06-05
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1953-04-01
+        hasta: 1953-06-25
+  alejandro_rios_valdivia:
+    nombre: Alejandro Ríos Valdivia
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1946-11-03
+        hasta: 1947-08-02
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1970-11-03
+        hasta: 1972-01-07
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1972-01-22
+        hasta: 1972-02-10
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1972-01-28
+        hasta: 1972-06-17
+  alejandro_serani:
+    nombre: Alejandro Serani
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1950-08-08
+        hasta: 1952-07-29
+  alfonso_david_lebon:
+    nombre: Alfonso David Lebón
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1972-07-10
+        hasta: 1972-11-02
+  alfonso_quintana:
+    nombre: Alfonso Quintana
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1948-07-07
+        hasta: 1948-08-25
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1951-03-29
+        hasta: 1952-07-29
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1952-04-03
+        hasta: 1952-07-29
+  alfonso_quintana_burgos:
+    nombre: Alfonso Quintana Burgos
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1940-10-24
+        hasta: 1941-06-10
+  alfredo_duhalde_vasquez:
+    nombre: Alfredo Duhalde Vásquez
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1939-12-26
+        hasta: 1940-10-24
+  americo_zorrilla_rojas:
+    nombre: Américo Zorrilla Rojas
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1970-11-03
+        hasta: 1972-06-17
+  andres_donoso_larrain:
+    nombre: Andrés Donoso Larraín
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1968-10-09
+        hasta: 1970-11-03
+  anibal_leon_bustos:
+    nombre: Aníbal León Bustos
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1955-12-09
+        hasta: 1956-05-24
+  anibal_palma_fourcade:
+    nombre: Aníbal Palma Fourcade
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1972-06-17
+        hasta: 1972-11-02
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1973-03-27
+        hasta: 1973-08-09
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1973-08-09
+        hasta: 1973-08-28
+  antonio_lanchares:
+    nombre: Antonio Lanchares
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1954-04-20
+        hasta: 1954-06-05
+  antonio_poupin_gray:
+    nombre: Antonio Poupin Gray
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1938-12-24
+        hasta: 1940-03-12
+  armando_mallet:
+    nombre: Armando Mallet
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1948-07-22
+        hasta: 1950-02-07
+  armando_uribe:
+    nombre: Armando Uribe
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-01-04
+        hasta: 1955-01-06
+  arturo_bianchi_gundian:
+    nombre: Arturo Bianchi Gundián
+    cargo: Ex ministro de Fomento
+    cargos:
+      - cargo: Ministro de Fomento
+        organizacion: ministerio_economia
+        desde: 1938-12-24
+        hasta: 1939-09-28
+  arturo_jiron_vargas:
+    nombre: Arturo Jirón Vargas
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1972-11-03
+        hasta: 1973-08-28
+  arturo_maschke:
+    nombre: Arturo Maschke
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1950-02-07
+        hasta: 1950-02-27
+  arturo_olavarria:
+    nombre: Arturo Olavarría
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1952-11-03
+        hasta: 1953-04-01
+  arturo_olavarria_bravo:
+    nombre: Arturo Olavarría Bravo
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1938-12-24
+        hasta: 1940-02-08
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1940-12-23
+        hasta: 1941-09-16
+  arturo_riveros_alcaide:
+    nombre: Arturo Riveros Alcaide
+    cargo: Ex ministro de Comercio y Abastecimiento
+    cargos:
+      - cargo: Ministro de Comercio y Abastecimiento
+        desde: 1941-10-06
+        hasta: 1941-11-25
+  arturo_zuniga:
+    nombre: Arturo Zúñiga
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1955-01-06
+        hasta: 1955-05-30
+  benjamin_cid_quiroz:
+    nombre: Benjamín Cid Quiroz
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1961-08-26
+        hasta: 1963-09-14
+  benjamin_videla_vergara:
+    nombre: Benjamín Videla Vergara
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-02-21
+        hasta: 1955-05-30
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1955-05-23
+        hasta: 1955-12-30
+  bernardo_leighton:
+    nombre: Bernardo Leighton
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1950-02-27
+        hasta: 1952-02-04
+  bernardo_leighton_guzman:
+    nombre: Bernardo Leighton Guzmán
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1964-11-03
+        hasta: 1968-02-15
+  camilo_cobo:
+    nombre: Camilo Cobo
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  carlos_alberto_martinez_martinez:
+    nombre: Carlos Alberto Martínez Martínez
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1938-12-24
+        hasta: 1939-09-28
+  carlos_briones_olivos:
+    nombre: Carlos Briones Olivos
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1973-07-05
+        hasta: 1973-08-09
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1973-08-23
+        hasta: 1973-09-11
+  carlos_cortes_diaz:
+    nombre: Carlos Cortés Díaz
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1970-11-03
+        hasta: 1971-09-17
+  carlos_martinez_sotomayor:
+    nombre: Carlos Martínez Sotomayor
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1961-08-26
+        hasta: 1963-09-14
+  carlos_matus_romo:
+    nombre: Carlos Matus Romo
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1972-06-17
+        hasta: 1972-11-02
+  carlos_prats_gonzalez:
+    nombre: Carlos Prats González
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1972-11-02
+        hasta: 1973-03-27
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1973-08-09
+        hasta: 1973-08-23
+  carlos_torres_hevia:
+    nombre: Carlos Torres Hevia
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  carlos_valdovinos_valdovinos:
+    nombre: Carlos Valdovinos Valdovinos
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1941-06-10
+        hasta: 1941-11-25
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1941-09-16
+        hasta: 1941-10-06
+  carlos_vassallo_rojas:
+    nombre: Carlos Vassallo Rojas
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1954-03-01
+        hasta: 1954-06-05
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1954-04-14
+        hasta: 1954-04-20
+  carlos_vial_espantoso:
+    nombre: Carlos Vial Espantoso
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1950-02-27
+        hasta: 1950-10-19
+  carlos_vial_infante:
+    nombre: Carlos Vial Infante
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1958-11-03
+        hasta: 1961-04-25
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1963-09-26
+        hasta: 1964-11-03
+  cesar_ruiz_danyau:
+    nombre: César Ruiz Danyau
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1973-08-09
+        hasta: 1973-08-18
+  ciro_alvarez:
+    nombre: Ciro Álvarez
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1950-02-07
+        hasta: 1950-02-27
+  claudio_sepulveda_donoso:
+    nombre: Claudio Sepúlveda Donoso
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1972-11-02
+        hasta: 1973-03-27
+  clodomiro_almeyda:
+    nombre: Clodomiro Almeyda
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1952-11-03
+        hasta: 1953-03-10
+  clodomiro_almeyda_medina:
+    nombre: Clodomiro Almeyda Medina
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1970-11-03
+        hasta: 1973-05-22
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1973-07-05
+        hasta: 1973-08-09
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1973-08-09
+        hasta: 1973-09-11
+  cristobal_saenz_cerda:
+    nombre: Cristóbal Sáenz Cerda
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1940-02-08
+        hasta: 1940-07-30
+  daniel_arellano_macleod:
+    nombre: Daniel Arellano Macleod
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1973-01-31
+        hasta: 1973-03-27
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1973-08-28
+        hasta: 1973-09-11
+  diego_barros_ortiz:
+    nombre: Diego Barros Ortíz
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1957-10-28
+        hasta: 1958-11-03
+  diego_lira_vergara:
+    nombre: Diego Lira Vergara
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1954-03-01
+        hasta: 1954-06-05
+  domingo_godoy_perez:
+    nombre: Domingo Godoy Pérez
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1941-06-10
+        hasta: 1941-10-06
+  domingo_santa_maria_santa_cruz:
+    nombre: Domingo Santa María Santa Cruz
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1964-11-03
+        hasta: 1968-02-15
+  edgardo_enriquez_frodden:
+    nombre: Edgardo Enríquez Frödden
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1973-07-05
+        hasta: 1973-09-11
+  edmundo_perez_zujovic:
+    nombre: Edmundo Pérez Zujovic
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1965-12-16
+        hasta: 1967-09-07
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1968-02-15
+        hasta: 1969-07-10
+  eduardo_figueroa_geisse:
+    nombre: Eduardo Figueroa Geisse
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1960-09-15
+        hasta: 1961-10-18
+  eduardo_gomien_diaz:
+    nombre: Eduardo Gomien Díaz
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1958-11-03
+        hasta: 1960-09-15
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1958-11-03
+        hasta: 1959-10-29
+  eduardo_leon_villarreal:
+    nombre: Eduardo León Villarreal
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1968-02-15
+        hasta: 1970-11-03
+  eduardo_moore_montero:
+    nombre: Eduardo Moore Montero
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1960-09-15
+        hasta: 1961-10-05
+  eduardo_simian_gallet:
+    nombre: Eduardo Simian Gallet
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1964-11-03
+        hasta: 1966-10-21
+  eduardo_yanez:
+    nombre: Eduardo Yáñez
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1955-01-06
+        hasta: 1955-12-02
+  eduardo_yrarrazaval:
+    nombre: Eduardo Yrarrázaval
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1951-06-19
+        hasta: 1952-07-29
+  eliodoro_dominguez:
+    nombre: Eliodoro Domínguez
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1952-02-04
+        hasta: 1952-07-29
+  elzo_pertuiset:
+    nombre: Elzo Pertuiset
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1958-06-19
+        hasta: 1958-11-03
+  enrique_bahamonde_ruiz:
+    nombre: Enrique Bahamonde Ruíz
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1960-09-15
+        hasta: 1961-08-26
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1961-07-18
+        hasta: 1961-08-26
+  enrique_barbosa_baeza:
+    nombre: Enrique Barbosa Baeza
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1956-01-04
+        hasta: 1956-05-24
+  enrique_casas_garcia:
+    nombre: Enrique Casas García
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1955-01-06
+        hasta: 1955-05-31
+  enrique_franco_hidalgo:
+    nombre: Enrique Franco Hidalgo
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1953-10-14
+        hasta: 1954-06-05
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1955-02-19
+        hasta: 1955-02-25
+  enrique_mendez:
+    nombre: Enrique Méndez
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1957-07-09
+        hasta: 1957-11-30
+  enrique_molina_garmendia:
+    nombre: Enrique Molina Garmendia
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1947-08-02
+        hasta: 1948-07-07
+  enrique_monti:
+    nombre: Enrique Monti
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1953-03-11
+        hasta: 1953-04-02
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1953-06-25
+        hasta: 1953-10-14
+  enrique_ortuzar_escobar:
+    nombre: Enrique Ortúzar Escobar
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1958-11-03
+        hasta: 1959-01-19
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1960-09-05
+        hasta: 1964-11-03
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1963-09-14
+        hasta: 1963-12-17
+  enrique_serrano_de_viale_rigo:
+    nombre: Enrique Serrano de Viale Rigo
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1960-09-15
+        hasta: 1961-10-26
+  ernesto_merino:
+    nombre: Ernesto Merino
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1947-04-16
+        hasta: 1947-04-17
+  ernesto_pinto_lagarrigue:
+    nombre: Ernesto Pinto Lagarrigue
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1960-09-15
+        hasta: 1964-11-03
+  ernesto_torrealba_morales:
+    nombre: Ernesto Torrealba Morales
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1973-07-05
+        hasta: 1973-07-13
+  eugenio_celedon_silva:
+    nombre: Eugenio Celedón Silva
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1969-11-12
+        hasta: 1970-11-03
+  eugenio_puga:
+    nombre: Eugenio Puga
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1948-07-07
+        hasta: 1950-02-10
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1950-02-07
+        hasta: 1950-02-27
+  eugenio_suarez:
+    nombre: Eugenio Suárez
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1953-06-05
+        hasta: 1954-03-01
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1954-06-05
+        hasta: 1954-11-14
+  federico_pena_cereceda:
+    nombre: Federico Peña Cereceda
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1963-09-26
+        hasta: 1963-12-17
+  fernando_claro_x:
+    nombre: Fernando Claro
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1946-11-03
+        hasta: 1947-04-16
+  fernando_flores_labra:
+    nombre: Fernando Flores Labra
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1972-11-02
+        hasta: 1972-12-29
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1972-12-29
+        hasta: 1973-08-09
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1973-08-09
+        hasta: 1973-09-11
+  fernando_garcia_oldini:
+    nombre: Fernando García Oldini
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1950-02-07
+        hasta: 1950-02-27
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  fernando_moller:
+    nombre: Fernando Moller
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1950-02-27
+        hasta: 1952-04-03
+  fidel_estay:
+    nombre: Fidel Estay
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1947-08-14
+        hasta: 1950-02-07
+  francisco_acevedo:
+    nombre: Francisco Acevedo
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1952-11-03
+        hasta: 1953-04-01
+  francisco_borquez:
+    nombre: Francisco Bórquez
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1956-08-27
+        hasta: 1957-04-23
+  francisco_cereceda_cisternas:
+    nombre: Francisco Cereceda Cisternas
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1958-11-03
+        hasta: 1960-09-15
+  francisco_melfi:
+    nombre: Francisco Melfi
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1952-02-04
+        hasta: 1952-03-11
+  francisco_o_ryan_orrego:
+    nombre: Francisco O'Ryan Orrego
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-05-30
+        hasta: 1955-10-04
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1955-12-30
+        hasta: 1957-04-23
+  francisco_rojas_villegas:
+    nombre: Francisco Rojas Villegas
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1963-09-26
+        hasta: 1964-11-03
+  francisco_steeger:
+    nombre: Francisco Steeger
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1950-02-07
+        hasta: 1950-02-27
+  gabriel_valdes_subercaseaux:
+    nombre: Gabriel Valdés Subercaseaux
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1964-11-03
+        hasta: 1970-11-03
+  gerardo_espinoza_carrillo:
+    nombre: Gerardo Espinoza Carrillo
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1973-03-27
+        hasta: 1973-07-05
+  german_pico_canas:
+    nombre: Germán Picó Cañas
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1947-01-10
+        hasta: 1947-08-02
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1951-06-15
+        hasta: 1952-07-29
+  german_riesco:
+    nombre: Germán Riesco
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1948-07-07
+        hasta: 1950-02-10
+  german_vergara:
+    nombre: Germán Vergara
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1947-08-02
+        hasta: 1948-07-07
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1950-02-10
+        hasta: 1950-02-27
+  german_vergara_donoso:
+    nombre: Germán Vergara Donoso
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1958-11-03
+        hasta: 1961-08-26
+  guillermo_barrios:
+    nombre: Guillermo Barrios
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1947-08-02
+        hasta: 1952-11-03
+  guillermo_correa:
+    nombre: Guillermo Correa
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1946-11-03
+        hasta: 1947-04-16
+  guillermo_del_pedregal:
+    nombre: Guillermo del Pedregal
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1953-12-07
+        hasta: 1954-01-15
+  guillermo_del_pedregal_herrera:
+    nombre: Guillermo del Pedregal Herrera
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1941-06-10
+        hasta: 1941-11-25
+  guillermo_labarca_hubertson:
+    nombre: Guillermo Labarca Hubertson
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1939-04-13
+        hasta: 1939-12-26
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1939-12-26
+        hasta: 1940-02-08
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1940-07-30
+        hasta: 1940-12-23
+  guillermo_varas:
+    nombre: Guillermo Varas
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1948-07-07
+        hasta: 1950-02-07
+  gustavo_lagos_matus:
+    nombre: Gustavo Lagos Matus
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1969-06-27
+        hasta: 1970-11-03
+  hernan_del_canto:
+    nombre: Hernán del Canto
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1972-02-10
+        hasta: 1972-08-08
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1972-08-08
+        hasta: 1973-03-27
+  horacio_arce_fernandez:
+    nombre: Horacio Arce Fernández
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1957-10-11
+        hasta: 1957-10-28
+  horacio_walker:
+    nombre: Horacio Walker
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1950-02-27
+        hasta: 1951-06-19
+  hugo_grove:
+    nombre: Hugo Grove
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1952-03-11
+        hasta: 1952-07-29
+  hugo_sievers:
+    nombre: Hugo Sievers
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1955-05-31
+        hasta: 1955-08-16
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1955-05-31
+        hasta: 1955-08-12
+  hugo_trivelli_franzolini:
+    nombre: Hugo Trivelli Franzolini
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1964-11-03
+        hasta: 1965-12-16
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1964-11-03
+        hasta: 1970-11-03
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1967-05-23
+        hasta: 1968-05-21
+  humberto_aguirre_doolan:
+    nombre: Humberto Aguirre Doolan
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1947-04-16
+        hasta: 1947-08-02
+  humberto_alvarez_suarez:
+    nombre: Humberto Álvarez Suárez
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1940-02-08
+        hasta: 1940-07-30
+  humberto_correa:
+    nombre: Humberto Correa
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1947-04-16
+        hasta: 1947-08-02
+  humberto_magliocchetti_barahona:
+    nombre: Humberto Magliocchetti Barahona
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1973-08-18
+        hasta: 1973-09-11
+  humberto_martones_morales:
+    nombre: Humberto Martones Morales
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1970-11-03
+        hasta: 1973-03-27
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1973-03-27
+        hasta: 1973-08-09
+  humberto_parada:
+    nombre: Humberto Parada
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1950-06-26
+        hasta: 1952-07-29
+  ignacio_cousino:
+    nombre: Ignacio Cousiño
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1954-06-05
+        hasta: 1955-01-06
+  ignacio_lorca:
+    nombre: Ignacio Lorca
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  immanuel_holger:
+    nombre: Immanuel Holger
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1947-08-02
+        hasta: 1948-07-07
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1948-08-25
+        hasta: 1950-02-27
+  jacques_chonchol:
+    nombre: Jacques Chonchol
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1970-11-03
+        hasta: 1972-11-02
+  jaime_castillo_velasco:
+    nombre: Jaime Castillo Velasco
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1965-12-16
+        hasta: 1967-05-16
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1968-08-14
+        hasta: 1969-06-27
+  jaime_suarez_bastidas:
+    nombre: Jaime Suárez Bastidas
+    cargo: Ex ministro Secretario General de Gobierno
+    cargos:
+      - cargo: Ministro Secretario General de Gobierno
+        organizacion: segegob
+        desde: 1970-11-04
+        hasta: 1972-08-08
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1972-08-08
+        hasta: 1972-11-02
+  jeronimo_mendez_arancibia:
+    nombre: Jerónimo Méndez Arancibia
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1941-10-10
+        hasta: 1941-11-25
+  joaquin_fernandez_fernandez:
+    nombre: Joaquín Fernández Fernández
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1961-04-25
+        hasta: 1961-07-18
+  joaquin_prieto_concha:
+    nombre: Joaquín Prieto Concha
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1962-03-30
+        hasta: 1963-09-26
+  jorge_aravena:
+    nombre: Jorge Aravena
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-01-06
+        hasta: 1955-05-30
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1956-07-04
+        hasta: 1957-04-23
+  jorge_godoy_godoy:
+    nombre: Jorge Godoy Godoy
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1973-07-05
+        hasta: 1973-09-11
+  jorge_mardones:
+    nombre: Jorge Mardones
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1950-02-27
+        hasta: 1952-07-29
+  jorge_munoz_de_closets:
+    nombre: Jorge Muñoz de Closets
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1953-06-25
+        hasta: 1954-01-07
+  jorge_prat_echaurren:
+    nombre: Jorge Prat Echaurren
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1954-06-05
+        hasta: 1955-01-06
+  jorge_saelzer_balde:
+    nombre: Jorge Saelzer Balde
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1958-11-03
+        hasta: 1960-09-15
+  jorge_tapia_valdes:
+    nombre: Jorge Tapia Valdés
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1972-04-06
+        hasta: 1972-11-02
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1972-11-02
+        hasta: 1973-07-05
+  jorge_torreblanca:
+    nombre: Jorge Torreblanca
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1957-07-18
+        hasta: 1958-09-15
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1958-10-13
+        hasta: 1958-11-03
+  jose_cademartori_invernizzi:
+    nombre: José Cademartori Invernizzi
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1973-07-05
+        hasta: 1973-09-11
+  jose_maria_sepulveda:
+    nombre: José María Sepúlveda
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1973-08-09
+        hasta: 1973-09-11
+  jose_oyarce_jara:
+    nombre: José Oyarce Jara
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1970-11-03
+        hasta: 1972-06-17
+  jose_santos_salas:
+    nombre: José Santos Salas
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1947-08-02
+        hasta: 1948-07-07
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1948-01-22
+        hasta: 1948-04-02
+  jose_serrano_palma:
+    nombre: José Serrano Palma
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1956-01-02
+        hasta: 1956-01-04
+  jose_suarez_fanjul:
+    nombre: José Suárez Fanjul
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1955-08-16
+        hasta: 1955-12-09
+  jose_toha_gonzalez:
+    nombre: José Tohá González
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1970-11-03
+        hasta: 1972-01-22
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1972-01-07
+        hasta: 1973-07-05
+  juan_antonio_iribarren_cabezas:
+    nombre: Juan Antonio Iribarren Cabezas
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1940-02-08
+        hasta: 1941-06-10
+  juan_atala:
+    nombre: Juan Atala
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  juan_bautista_rossetti:
+    nombre: Juan Bautista Rossetti
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1949-05-25
+        hasta: 1950-02-07
+  juan_bautista_rossetti_colombino:
+    nombre: Juan Bautista Rossetti Colombino
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1941-10-10
+        hasta: 1941-11-25
+  juan_carlos_concha_gutierrez:
+    nombre: Juan Carlos Concha Gutiérrez
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1971-08-14
+        hasta: 1972-11-03
+  juan_de_dios_carmona:
+    nombre: Juan de Dios Carmona
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1964-11-03
+        hasta: 1968-05-02
+  juan_de_dios_carmona_peralta:
+    nombre: Juan de Dios Carmona Peralta
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1968-05-02
+        hasta: 1968-09-30
+  juan_eduardo_barrios:
+    nombre: Juan Eduardo Barrios
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1953-10-14
+        hasta: 1954-06-05
+  juan_gomez_millas:
+    nombre: Juan Gómez Millas
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1953-04-01
+        hasta: 1953-08-14
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1964-11-03
+        hasta: 1968-02-17
+  juan_pradenas_munoz:
+    nombre: Juan Pradenas Muñoz
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1940-03-12
+        hasta: 1941-11-25
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1947-01-14
+        hasta: 1948-01-22
+  julio_benitez_castillo:
+    nombre: Julio Benítez Castillo
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1971-09-17
+        hasta: 1972-01-28
+  julio_chana_cariola:
+    nombre: Julio Chaná Cariola
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1961-10-26
+        hasta: 1962-03-30
+  julio_pereira_larrain:
+    nombre: Julio Pereira Larraín
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1961-08-26
+        hasta: 1963-09-26
+  julio_philippi_izquierdo:
+    nombre: Julio Philippi Izquierdo
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1958-11-03
+        hasta: 1960-09-05
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1958-11-03
+        hasta: 1960-09-15
+      - cargo: Ministro de Economía y Comercio
+        organizacion: ministerio_economia
+        desde: 1960-09-15
+        hasta: 1961-08-26
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1961-08-26
+        hasta: 1963-05-20
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1963-07-10
+        hasta: 1963-09-26
+      - cargo: Ministro de Economía y Comercio
+        organizacion: ministerio_economia
+        desde: 1963-09-26
+        hasta: 1963-12-17
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1963-12-17
+        hasta: 1964-11-03
+  juvenal_hernandez:
+    nombre: Juvenal Hernández
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1947-04-17
+        hasta: 1947-08-02
+  juvenal_hernandez_jaque:
+    nombre: Juvenal Hernández Jaque
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1940-10-24
+        hasta: 1941-06-10
+  kaare_olsen:
+    nombre: Kaare Olsen
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1955-04-06
+        hasta: 1955-06-02
+  kaare_olsen_nielsen:
+    nombre: Kaare Olsen Nielsen
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1955-05-30
+        hasta: 1956-01-01
+  leandro_moreno:
+    nombre: Leandro Moreno
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1953-03-10
+        hasta: 1953-06-25
+  leonardo_guzman_cortes:
+    nombre: Leonardo Guzmán Cortés
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1941-10-06
+        hasta: 1941-10-10
+  lisandro_cruz_ponce:
+    nombre: Lisandro Cruz Ponce
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1970-11-03
+        hasta: 1972-01-28
+  luis_alamos_barros:
+    nombre: Luis Álamos Barros
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1941-03-26
+        hasta: 1941-10-10
+  luis_alberto_cuevas:
+    nombre: Luis Alberto Cuevas
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1946-11-03
+        hasta: 1947-08-02
+  luis_bossay:
+    nombre: Luis Bossay
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1946-11-03
+        hasta: 1947-01-14
+  luis_cruz_ocampo:
+    nombre: Luis Cruz Ocampo
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  luis_felipe_letelier:
+    nombre: Luis Felipe Letelier
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1948-07-07
+        hasta: 1949-05-25
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1949-02-09
+        hasta: 1950-02-07
+  luis_figueroa_mazuela:
+    nombre: Luis Figueroa Mazuela
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1972-11-02
+        hasta: 1973-07-05
+  luis_mackenna_shiell:
+    nombre: Luis Mackenna Shiell
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1961-10-18
+        hasta: 1964-11-03
+  luis_matte_valdes_ps:
+    nombre: Luis Matte Valdés
+    cargo: Ex ministro de Vivienda y Urbanismo
+    cargos:
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1972-06-17
+        hasta: 1973-08-09
+  luis_palacios_rossini:
+    nombre: Luis Palacios Rossini
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1963-09-26
+        hasta: 1964-11-03
+  luis_vidal_vargas:
+    nombre: Luis Vidal Vargas
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1956-08-27
+        hasta: 1958-11-03
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1957-10-28
+        hasta: 1958-11-03
+  manuel_aguirre_geisse:
+    nombre: Manuel Aguirre Geisse
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1950-02-07
+        hasta: 1950-02-27
+  manuel_bianchi_gundian:
+    nombre: Manuel Bianchi Gundián
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1940-11-07
+        hasta: 1941-03-26
+  manuel_casanueva_ramirez:
+    nombre: Manuel Casanueva Ramírez
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1960-09-15
+        hasta: 1961-08-26
+  manuel_pereira_irarrazaval:
+    nombre: Manuel Pereira Irarrázaval
+    cargo: Ex ministro de Economía y Comercio
+    cargos:
+      - cargo: Ministro de Economía y Comercio
+        organizacion: ministerio_economia
+        desde: 1963-12-17
+        hasta: 1964-11-03
+  manuel_quintana:
+    nombre: Manuel Quintana
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1957-04-23
+        hasta: 1957-10-28
+  manuel_rodriguez_valenzuela:
+    nombre: Manuel Rodríguez Valenzuela
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1950-02-07
+        hasta: 1950-02-27
+  manuel_sanhueza:
+    nombre: Manuel Sanhueza
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1972-01-28
+        hasta: 1972-04-06
+  manuel_sanhueza_flores:
+    nombre: Manuel Sanhueza Flores
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1947-04-16
+        hasta: 1947-08-02
+  marcial_mora_miranda:
+    nombre: Marcial Mora Miranda
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1940-07-30
+        hasta: 1940-11-07
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1940-11-07
+        hasta: 1941-06-10
+  maria_teresa_del_canto:
+    nombre: María Teresa del Canto
+    cargo: Ex ministra de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1952-11-03
+        hasta: 1953-04-01
+  mariano_fontecilla:
+    nombre: Mariano Fontecilla
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1955-05-30
+        hasta: 1955-08-12
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1955-08-12
+        hasta: 1956-05-25
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1956-05-25
+        hasta: null
+  mario_astorga:
+    nombre: Mario Astorga Fernández
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1957-04-23
+        hasta: 1958-03-19
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1970-11-03
+        hasta: 1972-01-28
+  mario_astorga_cartes:
+    nombre: Mario Astorga Cartes
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1957-07-09
+        hasta: 1957-07-09
+  mario_lagos_hernandez:
+    nombre: Mario Lagos Hernández
+    cargo: Ex ministro de Salud Pública
+    cargos:
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1973-08-28
+        hasta: 1973-09-11
+  mario_montero:
+    nombre: Mario Montero
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1954-11-14
+        hasta: 1954-11-20
+  mario_montero_schmidt:
+    nombre: Mario Montero Schmidt
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1954-06-05
+        hasta: 1955-01-06
+  mauricio_jungk_stahl:
+    nombre: Mauricio Jungk Stahl
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1972-01-28
+        hasta: 1972-04-06
+  maximo_pacheco_gomez:
+    nombre: Máximo Pacheco Gómez
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1968-03-04
+        hasta: 1970-11-03
+  miguel_etchebarne_riol:
+    nombre: Miguel Etchebarne Riol
+    cargo: Ex ministro de Salubridad, Previsión y Asistencia Social
+    cargos:
+      - cargo: Ministro de Salubridad, Previsión y Asistencia Social
+        organizacion: ministerio_salud
+        desde: 1938-12-24
+        hasta: 1939-09-28
+  mireya_baltra_moreno:
+    nombre: Mireya Baltra Moreno
+    cargo: Ex ministra del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1972-06-17
+        hasta: 1972-11-02
+  orlando_cantuarias_zepeda:
+    nombre: Orlando Cantuarias Zepeda
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1970-11-03
+        hasta: 1972-01-28
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1972-01-28
+        hasta: 1972-06-17
+  orlando_latorre:
+    nombre: Orlando Latorre
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1952-11-03
+        hasta: 1953-03-11
+  orlando_letelier_del_solar:
+    nombre: Orlando Letelier del Solar
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1973-05-22
+        hasta: 1973-08-09
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1973-08-09
+        hasta: 1973-08-23
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1973-08-23
+        hasta: 1973-09-11
+  orlando_millas_correa:
+    nombre: Orlando Millas Correa
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1972-06-17
+        hasta: 1972-12-29
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1972-12-29
+        hasta: 1973-07-05
+  orlando_sandoval_vargas:
+    nombre: Orlando Sandoval Vargas
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1961-08-26
+        hasta: 1963-08-01
+  oscar_acevedo_vega:
+    nombre: Óscar Acevedo Vega
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1958-07-24
+        hasta: 1958-11-03
+  oscar_aguero_corvalan:
+    nombre: Oscar Aguero Corvalán
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1952-07-29
+        hasta: 1952-11-03
+  oscar_fenner:
+    nombre: Oscar Fenner
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1953-08-14
+        hasta: 1953-10-14
+  oscar_fenner_marin:
+    nombre: Oscar Fenner Marín
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1953-04-01
+        hasta: 1953-12-07
+  oscar_herrera:
+    nombre: Oscar Herrera
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1953-10-14
+        hasta: 1954-03-01
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1954-06-05
+        hasta: 1955-03-24
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1955-06-02
+        hasta: 1955-08-17
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-08-03
+        hasta: 1955-08-10
+  oscar_jimenez_pinochet:
+    nombre: Oscar Jiménez Pinochet
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1957-04-23
+        hasta: 1957-07-09
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1970-11-03
+        hasta: 1971-08-14
+  oscar_schnake_vergara:
+    nombre: Oscar Schnake Vergara
+    cargo: Ex ministro de Fomento
+    cargos:
+      - cargo: Ministro de Fomento
+        organizacion: ministerio_economia
+        desde: 1939-09-28
+        hasta: 1941-11-25
+  osvaldo_koch:
+    nombre: Osvaldo Koch
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1954-03-02
+        hasta: 1955-01-06
+  osvaldo_koch_krefft:
+    nombre: Osvaldo Koch Krefft
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1955-01-06
+        hasta: 1955-05-30
+  osvaldo_sainte_marie:
+    nombre: Osvaldo Sainte Marie
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1955-12-02
+        hasta: 1955-12-12
+  osvaldo_sainte_marie_sorucco:
+    nombre: Osvaldo Sainte Marie Sorucco
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1956-05-24
+        hasta: 1957-10-11
+  pablo_perez_zanartu:
+    nombre: Pablo Pérez Zañartu
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1958-11-03
+        hasta: 1960-09-15
+  pascual_barraza_barraza:
+    nombre: Pascual Barraza Barraza
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1970-11-03
+        hasta: 1972-11-02
+  patricio_barros_alemparte:
+    nombre: Patricio Barros Alemparte
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1961-10-05
+        hasta: 1963-09-26
+  paulino_varas_alfonso:
+    nombre: Paulino Varas Alfonso
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1963-05-20
+        hasta: 1963-07-10
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1964-05-06
+        hasta: 1964-11-03
+  pedro_castelblanco:
+    nombre: Pedro Castelblanco
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1947-04-16
+        hasta: 1947-08-02
+  pedro_enrique_alfonso:
+    nombre: Pedro Enrique Alfonso
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1938-12-24
+        hasta: 1939-12-26
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1939-12-26
+        hasta: 1940-11-07
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1950-02-27
+        hasta: 1951-03-29
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1963-08-01
+        hasta: 1963-09-26
+  pedro_felipe_ramirez:
+    nombre: Pedro Felipe Ramírez
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1973-07-05
+        hasta: 1973-08-28
+      - cargo: Ministro de Vivienda y Urbanismo
+        organizacion: ministerio_vivienda
+        desde: 1973-08-28
+        hasta: 1973-09-11
+  pedro_foncea:
+    nombre: Pedro Foncea
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1954-03-01
+        hasta: 1954-04-14
+  pedro_hidalgo_ramirez:
+    nombre: Pedro Hidalgo Ramírez
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1973-01-27
+        hasta: 1973-07-05
+  pedro_jesus_rodriguez:
+    nombre: Pedro Jesús Rodríguez
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1964-11-03
+        hasta: 1968-02-15
+  pedro_palacios_cameron:
+    nombre: Pedro Palacios Cameron
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1972-04-06
+        hasta: 1972-06-17
+  pedro_vuskovic_bravo:
+    nombre: Pedro Vuskovic Bravo
+    cargo: Ex ministro de Economía, Fomento y Reconstrucción
+    cargos:
+      - cargo: Ministro de Economía, Fomento y Reconstrucción
+        organizacion: ministerio_economia
+        desde: 1970-11-03
+        hasta: 1972-06-17
+  raimundo_del_rio_castillo:
+    nombre: Raimundo del Río Castillo
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1941-06-10
+        hasta: 1941-10-06
+  ramon_plaza_monreal:
+    nombre: Ramón Plaza Monreal
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1950-02-27
+        hasta: 1950-06-21
+  ramon_santander:
+    nombre: Ramón Santander
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1958-09-16
+        hasta: 1958-10-13
+  ramon_valdivieso_delaunay:
+    nombre: Ramón Valdivieso Delaunay
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1964-11-03
+        hasta: 1970-11-03
+  raul_araya:
+    nombre: Raúl Araya
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-01-06
+        hasta: 1955-02-21
+  raul_araya_stiglich:
+    nombre: Raúl Araya Stiglich
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1955-05-13
+        hasta: 1955-05-23
+  raul_barrios_ortiz:
+    nombre: Raúl Barrios Ortiz
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-05-30
+        hasta: 1955-08-03
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1955-08-10
+        hasta: 1956-07-04
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1956-05-24
+        hasta: 1958-11-03
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1957-07-09
+        hasta: 1957-07-18
+  raul_irarrazaval:
+    nombre: Raúl Irarrázaval
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1950-10-19
+        hasta: 1951-06-15
+  raul_juliet:
+    nombre: Raúl Juliet
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1946-11-03
+        hasta: 1947-08-02
+  raul_montero_cornejo:
+    nombre: Raúl Montero Cornejo
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1973-08-09
+        hasta: 1973-08-28
+  raul_puga_monsalve:
+    nombre: Raúl Puga Monsalve
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1938-12-24
+        hasta: 1941-06-10
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1941-06-10
+        hasta: 1941-11-25
+  raul_rodriguez_lazo:
+    nombre: Raúl Rodríguez Lazo
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1957-11-30
+        hasta: 1958-07-24
+  rene_vidal:
+    nombre: René Vidal
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1955-12-12
+        hasta: 1956-05-24
+  rene_vidal_merino:
+    nombre: René Vidal Merino
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1956-04-18
+        hasta: 1956-08-27
+  ricardo_bascunan:
+    nombre: Ricardo Bascuñán
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1947-08-02
+        hasta: 1947-08-14
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1947-08-02
+        hasta: 1948-07-07
+  ricardo_hepp:
+    nombre: Ricardo Hepp
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1954-11-20
+        hasta: 1955-01-06
+  roberto_aldunate_leon:
+    nombre: Roberto Aldunate León
+    cargo: Ex ministro de Relaciones Exteriores
+    cargos:
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1954-06-05
+        hasta: 1955-01-06
+  roberto_cuellar_bernal:
+    nombre: Roberto Cuéllar Bernal
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1973-03-27
+        hasta: 1973-08-09
+  roberto_infante:
+    nombre: Roberto Infante
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1955-01-06
+        hasta: 1955-05-31
+  roberto_munoz:
+    nombre: Roberto Muñoz
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1956-08-27
+        hasta: 1957-07-09
+  roberto_vergara_herrera:
+    nombre: Roberto Vergara Herrera
+    cargo: Ex ministro de Economía y Comercio
+    cargos:
+      - cargo: Ministro de Economía y Comercio
+        organizacion: ministerio_economia
+        desde: 1958-11-03
+        hasta: 1960-09-15
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1958-11-03
+        hasta: 1960-09-15
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1958-11-03
+        hasta: 1960-09-15
+  roberto_wachholtz:
+    nombre: Roberto Wachholtz
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1946-11-03
+        hasta: 1947-01-10
+  roberto_wachholtz_araya:
+    nombre: Roberto Wachholtz Araya
+    cargo: Ex ministro de Hacienda
+    cargos:
+      - cargo: Ministro de Hacienda
+        organizacion: ministerio_hacienda
+        desde: 1938-12-24
+        hasta: 1939-12-26
+  rolando_calderon_aranguiz:
+    nombre: Rolando Calderón Aranguíz
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1972-11-02
+        hasta: 1973-01-27
+  rolando_gonzalez_acevedo:
+    nombre: Rolando González Acevedo
+    cargo: Ex ministro de Minería
+    cargos:
+      - cargo: Ministro de Minería
+        organizacion: ministerio_mineria
+        desde: 1973-08-28
+        hasta: 1973-09-11
+  rolando_merino_reyes:
+    nombre: Rolando Merino Reyes
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1939-09-28
+        hasta: 1941-11-25
+  rudecindo_ortega_mason:
+    nombre: Rudecindo Ortega Mason
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1938-12-24
+        hasta: 1940-02-08
+  ruperto_puga:
+    nombre: Ruperto Puga
+    cargo: Ex ministro del Trabajo
+    cargos:
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1948-04-02
+        hasta: 1949-02-09
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1950-02-27
+        hasta: 1950-06-26
+      - cargo: Ministro del Trabajo
+        organizacion: ministerio_trabajo
+        desde: 1950-06-21
+        hasta: 1950-08-08
+  ruy_barbosa_popolizio:
+    nombre: Ruy Barbosa Popolizio
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1963-09-26
+        hasta: 1964-11-03
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1963-12-17
+        hasta: 1964-05-06
+  salvador_allende_gossens:
+    nombre: Salvador Allende Gossens
+    cargo: Ex ministro de Salubridad, Previsión y Asistencia Social
+    cargos:
+      - cargo: Ministro de Salubridad, Previsión y Asistencia Social
+        organizacion: ministerio_salud
+        desde: 1939-09-28
+        hasta: 1941-11-25
+  santiago_wilson:
+    nombre: Santiago Wilson
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1953-04-14
+        hasta: 1954-03-01
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1954-01-07
+        hasta: 1954-03-01
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1955-08-12
+        hasta: 1956-05-25
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1956-05-24
+        hasta: 1956-07-04
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1956-05-25
+        hasta: 1957-04-23
+  sergio_altamirano:
+    nombre: Sergio Altamirano
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1954-06-05
+        hasta: 1955-01-04
+  sergio_insunza:
+    nombre: Sergio Insunza
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1972-11-02
+        hasta: 1973-09-11
+  sergio_ossa_petrot:
+    nombre: Sergio Ossa Petrot
+    cargo: Ex ministro de Obras Públicas y Transportes
+    cargos:
+      - cargo: Ministro de Obras Públicas y Transportes
+        organizacion: ministerio_de_obras_publicas
+        desde: 1967-09-07
+        hasta: 1969-11-12
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1969-10-22
+        hasta: 1970-11-03
+  sotero_del_rio:
+    nombre: Sótero del Río Gutiérrez
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1952-07-29
+        hasta: 1952-07-29
+      - cargo: Ministro de Salud Pública
+        organizacion: ministerio_salud
+        desde: 1959-10-29
+        hasta: 1961-08-26
+  sotero_del_rio_gundian:
+    nombre: Sótero del Río Gundián
+    cargo: Ex ministro del Interior
+    cargos:
+      - cargo: Ministro del Interior
+        organizacion: ministerio_interior
+        desde: 1959-01-19
+        hasta: 1964-11-03
+  tobias_barros:
+    nombre: Tobías Barros
+    cargo: Ex ministro de Salud
+    cargos:
+      - cargo: Ministro de Salud
+        organizacion: ministerio_salud
+        desde: 1953-06-25
+        hasta: 1953-10-14
+      - cargo: Ministro de Relaciones Exteriores
+        organizacion: ministerio_relaciones_exteriores
+        desde: 1954-01-15
+        hasta: 1954-06-05
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1955-03-24
+        hasta: 1955-04-06
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1955-08-17
+        hasta: 1956-04-18
+  tobias_barros_ortiz:
+    nombre: Tobías Barros Ortíz
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1954-06-05
+        hasta: 1955-01-19
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1955-02-25
+        hasta: 1955-05-13
+  tomas_mora_pineda:
+    nombre: Tomás Mora Pineda
+    cargo: Ex ministro de Justicia
+    cargos:
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1941-10-06
+        hasta: 1941-11-25
+  tulio_marambio_marchant:
+    nombre: Tulio Marambio Marchant
+    cargo: Ex ministro de Defensa Nacional
+    cargos:
+      - cargo: Ministro de Defensa Nacional
+        organizacion: ministerio_defensa
+        desde: 1968-05-02
+        hasta: 1969-10-22
+  ulises_vergara:
+    nombre: Ulises Vergara
+    cargo: Ex ministro de Educación
+    cargos:
+      - cargo: Ministro de Educación
+        organizacion: ministerio_educacion
+        desde: 1948-07-07
+        hasta: 1948-07-22
+  ulises_vergara_osses:
+    nombre: Ulises Vergara Osses
+    cargo: Ex ministro de Educación Pública
+    cargos:
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1941-10-06
+        hasta: 1941-11-25
+  venancio_conuepan:
+    nombre: Venancio Coñuepán
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1952-11-03
+        hasta: 1953-04-01
+  victor_contreras_tapia:
+    nombre: Víctor Contreras Tapia
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1946-11-03
+        hasta: 1947-04-16
+  victor_gonzalez_maertens:
+    nombre: Víctor González Maertens
+    cargo: Ex ministro de Tierras y Colonización
+    cargos:
+      - cargo: Ministro de Tierras y Colonización
+        desde: 1968-05-21
+        hasta: 1970-11-03
+  victor_moller_bordeu:
+    nombre: Víctor Moller Bordeu
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1940-02-08
+        hasta: 1940-10-24
+  victor_opazo:
+    nombre: Víctor Opazo
+    cargo: Ex ministro de Agricultura
+    cargos:
+      - cargo: Ministro de Agricultura
+        organizacion: ministerio_agricultura
+        desde: 1948-07-07
+        hasta: 1950-02-07
+  william_thayer_arteaga:
+    nombre: William Thayer Arteaga
+    cargo: Ex ministro del Trabajo y Previsión Social
+    cargos:
+      - cargo: Ministro del Trabajo y Previsión Social
+        organizacion: ministerio_trabajo
+        desde: 1964-11-03
+        hasta: 1968-02-15
+      - cargo: Ministro de Justicia
+        organizacion: ministerio_justicia
+        desde: 1968-02-15
+        hasta: 1968-08-14
+      - cargo: Ministro de Educación Pública
+        organizacion: ministerio_educacion
+        desde: 1968-02-17
+        hasta: 1968-03-04
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
@@ -12347,6 +16016,31 @@ organizations:
     tipo: asociacion_gremial
     pais: Chile
     notas: "Asociación Nacional de Televisión de Chile. Organizó el debate presidencial de la segunda vuelta de 2025 (9 de diciembre), transmitido en cadena por los canales de televisión abierta desde el Estudio 2 de TVN."
+  chile_telcos:
+    nombre: Chile Telcos
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Gremio que agrupa a las compañías móviles ClaroVTR, Entel, Movistar, Mundo y Wom. Su presidente ejecutivo, Alfie Ulloa, valoró el registro obligatorio de líneas prepago (vigente desde el 20-ago-2026) como herramienta de trazabilidad para aumentar la seguridad de los usuarios (evento 20260820-10)."
+  colegio_de_profesores_rm:
+    nombre: Colegio de Profesores de Chile Regional Metropolitano
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Filial metropolitana del Colegio de Profesores de Chile. El 20-ago-2026 publicó un comunicado rechazando las declaraciones de la ministra de Ciencia Ximena Lincolao, quien planteó que los profesores tienen 'mucha oportunidad de convertirse en vendedores o servicio al cliente' en la industria de la IA: 'reducir la labor docente no solo es un error conceptual, es una falta de respeto'; 'la docencia no se transa ni se vende' (evento 20260820-11)."
+  onemi:
+    nombre: Oficina Nacional de Emergencia del Ministerio del Interior (ONEMI)
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Organismo coordinador de emergencias de Chile hasta 2021, cuando fue reemplazado por el SENAPRED (Ley 21.364). Dirigió la respuesta a los incendios forestales de Valparaíso de noviembre de 2019 (evento 20191119-2) y a múltiples catástrofes nacionales."
+  cuerpo_bomberos_chile:
+    nombre: Cuerpo de Bomberos de Chile
+    tipo: servicio_publico
+    pais: Chile
+    notas: "Institución voluntaria nacional de bomberos, fundada en 1851. Durante los incendios forestales de Valparaíso de noviembre de 2019 movilizó más de 310 voluntarios y 37 vehículos en la jornada crítica del 18-nov (evento 20191119-2)."
+  como_te_lo_explico:
+    nombre: Cómo te lo explico
+    tipo: programa_streaming
+    pais: Chile
+    notas: "Podcast conducido por las periodistas Mónica Rincón y Paula Catena. La ministra de Ciencia Ximena Lincolao participó del episodio del 20-ago-2026, donde defendió los cambios al Fondecyt de Postdoctorado 2027 y planteó que los profesores podrían reconvertirse en 'vendedores o servicio al cliente' de empresas de IA (evento 20260820-11)."
   archi:
     nombre: Asociación de Radiodifusores de Chile (ARCHI)
     tipo: asociacion_gremial
@@ -14581,6 +18275,10 @@ organizations:
     tipo: empresa
     notas: "Filial chilena de Svenska Cellulosa Aktiebolaget (SCA), empresa sueca de productos de higiene. Condenada por el TDLC por colusión del papel higiénico junto a CMPC. La Corte Suprema rechazó en 2024 las demandas de SERNAC y CONADECUS contra SCA por prescripción."
 cifras:
+  usuarios_prepago_chile:
+    nombre: Usuarios de telefonía móvil prepago en Chile
+    unidad_default: lineas
+    notas: "Al primer trimestre de 2026 se reportaron 4.425.012 usuarios de prepago, casi el 19% de todos los números móviles del país (Subtel, evento 20260820-10)."
   fndr_emergencia_tarapaca:
     nombre: Recursos del FNDR dispuestos por el Gobierno Regional de Tarapacá y el CORE para la emergencia de agosto de 2026
     unidad_default: millones_pesos
@@ -16598,7 +20296,7 @@ cifras:
   fallecidos_megaincendio_vina_2024:
     nombre: Fallecidos por el megaincendio de Viña del Mar (febrero 2024)
     unidad_default: personas
-    notas: "Al menos 134 fallecidos confirmados por el SML al 23 de febrero de 2024; la cifra final se elevó a 136 según informes posteriores de la Fiscalía."
+    notas: "Cifra oficial consolidada: 138 fallecidos confirmados por la Fiscalía en la audiencia de reformalización del 22-may-2025. Evolución: 134 según el SML al 23-feb-2024, luego 136 y 137 en informes intermedios; las dos últimas víctimas fueron Rosa Alfaro Saldaño (muerte declarada judicialmente) y Francisca Astorga (fallecida por quemaduras). Sobrevivientes sostienen que la cifra real sería mayor."
   votos_40_horas_2023:
     nombre: Votos a favor de la ley de 40 horas
     unidad_default: votos

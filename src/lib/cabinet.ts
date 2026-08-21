@@ -75,6 +75,14 @@ export type Gobierno = {
 };
 
 export const GOBIERNOS: Gobierno[] = [
+  { id: 'aguirre_cerda', presidente: 'Pedro Aguirre Cerda', partido: 'PR', desde: '1938-12-24', hasta: '1941-11-25' },
+  { id: 'rios', presidente: 'Juan Antonio Ríos', partido: 'PR', desde: '1941-11-25', hasta: '1946-06-27' },
+  { id: 'gonzalez_videla', presidente: 'Gabriel González Videla', partido: 'PR', desde: '1946-11-03', hasta: '1952-11-03' },
+  { id: 'ibanez2', presidente: 'Carlos Ibáñez del Campo (2.º)', partido: 'Agrario Laborista', desde: '1952-11-03', hasta: '1958-11-03' },
+  { id: 'alessandri_jorge', presidente: 'Jorge Alessandri', partido: 'Independiente', desde: '1958-11-03', hasta: '1964-11-03' },
+  { id: 'frei_mtva', presidente: 'Eduardo Frei Montalva', partido: 'DC', desde: '1964-11-03', hasta: '1970-11-03' },
+  { id: 'allende', presidente: 'Salvador Allende', partido: 'PS (UP)', desde: '1970-11-03', hasta: '1973-09-11' },
+  { id: 'pinochet', presidente: 'Augusto Pinochet', partido: 'Junta Militar', desde: '1973-09-11', hasta: '1990-03-11' },
   { id: 'aylwin', presidente: 'Patricio Aylwin', partido: 'DC', desde: '1990-03-11', hasta: '1994-03-11' },
   { id: 'frei', presidente: 'Eduardo Frei Ruiz-Tagle', partido: 'DC', desde: '1994-03-11', hasta: '2000-03-11' },
   { id: 'lagos', presidente: 'Ricardo Lagos', partido: 'PPD', desde: '2000-03-11', hasta: '2006-03-11' },
@@ -115,6 +123,12 @@ const KEYWORD_MINISTERIO: [RegExp, string][] = [
   [/interior/i, 'ministerio_interior'],
   [/seguridad p[úu]blica/i, 'ministerio_seguridad'],
   [/hacienda/i, 'ministerio_hacienda'],
+  // Carteras históricas (pre-1990): Guerra/Marina/Aviación precedieron a Defensa Nacional;
+  // Salud Pública fue el nombre del ministerio de salud hasta 1979; Fomento precedió a
+  // Economía (hasta 1953).
+  [/guerra|marina|aviaci[óo]n/i, 'ministerio_defensa'],
+  [/salud p[úu]blica|salubridad/i, 'ministerio_salud'],
+  [/fomento/i, 'ministerio_economia'],
   [/defensa/i, 'ministerio_defensa'],
   [/salud/i, 'ministerio_salud'],
   [/vivienda/i, 'ministerio_vivienda'],
