@@ -1,0 +1,142 @@
+---
+import { TIPO_LABELS, TIPO_COLORS } from '../lib/eventTypes';
+import { RELATION_LABELS, type EventConnections } from '../lib/relations';
+
+interface Props {
+  event: any;
+  connections: EventConnections;
+}
+
+const { event, connections } = Astro.props;
+const { outgoing, incoming } = connections;
+
+// Solo conexiones explicitas; el listado textual (EventConnections) ya cubre inferred.
+if (outgoing.length === 0 && incoming.length === 0) return null;
+
+const EDGE_COLORS: Record<string, string> = {
+  contradice: '#ef4444', confirma: '#10b981', cumple: '#10b981',
+  incumple: '#ef4444', amplia: '#0ea5e9', corrige: '#f59e0b',
+  rectifica: '#f59e0b', responde_a: '#8b5cf6', deriva_en: '#6366f1',
+  provoca: '#f97316', cita: '#78716c', reemplaza: '#06b6d4',
+  actualiza: '#3b82f6', mismo_contexto: '#a8a29e',
+};
+
+const W = 760;
+const ROW = 52;
+const PAD_Y = 46;
+
+interface Neighbor {
+  id: string;
+  titulo: string;
+  tipo: string;
+  tipoLabel: string;
+  year: number;
+  relation: string;
+  relationLabel: string;
+}
+
+function trunc(s: string, n: number) {
+  return s.length > n ? s.slice(0, n) + '…' : s;
+}
+
+const rightCol: Neighbor[] = outgoing.map((edge) => ({
+  id: edge.eventId,
+  titulo: edge.titulo,
+  tipo: edge.tipo,
+  tipoLabel: '',
+  year: edge.year,
+  relation: edge.tipo,
+  relationLabel: RELATION_LABELS[edge.tipo] ?? edge.tipo,
+}));
+const leftCol: Neighbor[] = incoming.map((edge) => ({
+  id: edge.eventId,
+  titulo: edge.titulo,
+  tipo: edge.tipo,
+  tipoLabel: '',
+  year: edge.year,
+  relation: edge.tipo,
+  relationLabel: RELATION_LABELS[edge.tipo] ?? edge.tipo,
+}));
+
+const rows = Math.max(rightCol.length, leftCol.length, 1);
+const H = Math.max(rows * ROW + PAD_Y * 2, 170);
+const cx = W / 2;
+const cy = H / 2;
+const colRightX = W - 190;
+const colLeftX = 190;
+
+function rowY(i: number, total: number) {
+  return cy - ((total - 1) * ROW) / 2 + i * ROW;
+}
+
+const centerColor = TIPO_COLORS[event.data.tipo] ?? '#6b7280';
+const centerTipo = TIPO_LABELS[event.data.tipo] || event.data.tipo;
+const fechaStr = new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' });
+
+const markers = [...new Set([...rightCol.map((n) => n.relation), ...leftCol.map((n) => n.relation)])];
+---
+
+<div class="mb-8 overflow-x-auto rounded-xl border border-gray-200 bg-white">
+  <svg viewBox={`0 0 ${W} ${H}`} class="w-full min-w-[560px]" font-family="system-ui, -apple-system, sans-serif" role="img" aria-label="Grafo de conexiones del evento">
+    <defs>
+      {markers.map((tipo) => (
+        <marker id={`ego-arrow-${tipo}`} viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
+          <path d="M0,0 L10,3 L0,6" fill={EDGE_COLORS[tipo] ?? '#78716c'} />
+        </marker>
+      ))}
+    </defs>
+
+    {/* Aristas */}
+    {rightCol.map((n, i) => {
+      const y = rowY(i, rightCol.length);
+      const color = EDGE_COLORS[n.relation] ?? '#78716c';
+      return (
+        <g>
+          <line x1={cx + 14} y1={cy} x2={colRightX - 16} y2={y} stroke={color} stroke-width="1.5" stroke-opacity="0.55" marker-end={`url(#ego-arrow-${n.relation})`} />
+          <text x={(cx + colRightX) / 2} y={(cy + y) / 2 - 4} text-anchor="middle" fill={color} font-size="9" font-weight="600">{n.relationLabel}</text>
+        </g>
+      );
+    })}
+    {leftCol.map((n, i) => {
+      const y = rowY(i, leftCol.length);
+      const color = EDGE_COLORS[n.relation] ?? '#78716c';
+      return (
+        <g>
+          <line x1={cx - 14} y1={cy} x2={colLeftX + 16} y2={y} stroke={color} stroke-width="1.5" stroke-opacity="0.55" marker-end={`url(#ego-arrow-${n.relation})`} />
+          <text x={(cx + colLeftX) / 2} y={(cy + y) / 2 - 4} text-anchor="middle" fill={color} font-size="9" font-weight="600">{n.relationLabel}</text>
+        </g>
+      );
+    })}
+
+    {/* Nodo central */}
+    <g>
+      <circle cx={cx} cy={cy} r="12" fill={centerColor} stroke="white" stroke-width="2.5" />
+      <text x={cx} y={cy + 30} text-anchor="middle" fill="#111827" font-size="11" font-weight="700">{trunc(event.data.titulo, 46)}</text>
+      <text x={cx} y={cy + 45} text-anchor="middle" fill="#a8a29e" font-size="9">{centerTipo} · {fechaStr}</text>
+    </g>
+
+    {/* Vecinos: desde este evento (derecha) */}
+    {rightCol.map((n, i) => {
+      const y = rowY(i, rightCol.length);
+      const color = TIPO_COLORS[n.tipo] ?? '#6b7280';
+      return (
+        <a href={`/events/${n.year}/${n.id}`} class="graph-ego-link">
+          <circle cx={colRightX} cy={y} r="9" fill={color} stroke="white" stroke-width="2" style="cursor: pointer;" />
+          <text x={colRightX + 15} y={y + 4} fill="#44403c" font-size="10" font-weight="500" style="cursor: pointer;">{trunc(n.titulo, 34)}</text>
+        </a>
+      );
+    })}
+
+    {/* Vecinos: vinculado desde (izquierda) */}
+    {leftCol.map((n, i) => {
+      const y = rowY(i, leftCol.length);
+      const color = TIPO_COLORS[n.tipo] ?? '#6b7280';
+      return (
+        <a href={`/events/${n.year}/${n.id}`} class="graph-ego-link">
+          <circle cx={colLeftX} cy={y} r="9" fill={color} stroke="white" stroke-width="2" style="cursor: pointer;" />
+          <text x={colLeftX - 15} y={y + 4} text-anchor="end" fill="#44403c" font-size="10" font-weight="500" style="cursor: pointer;">{trunc(n.titulo, 34)}</text>
+        </a>
+      );
+    })}
+  </svg>
+</div>

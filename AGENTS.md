@@ -75,6 +75,26 @@ El sitio usa `ClientRouter` de `astro:transitions` (habilitado en `src/layouts/B
   `expandAncestors` lo llama para forzar la carga del mes objetivo al hacer clic, en lugar de
   depender solo del IntersectionObserver.
 
+## Grafo de relaciones (/graph, mini en /events, ego-grafo en detalle)
+
+- **Arquitectura**: `EventGraph.astro` renderiza un SVG estatico de fallback + JSON en
+  `<script id="graph-data">`; `force-graph.js` lo reemplaza por un SVG interactivo
+  (d3-force) con pan/pinch/drag. `init()` es idempotente: `cleanup()` remueve el SVG
+  interactivo previo y los window listeners (`cleanupFns`).
+- **Full mode solo conectados por default**: el JSON lleva `connected` por nodo; el
+  checkbox `#graph-include-isolated` re-ejecuta `init()` (guard `__gvWired`) para
+  incluir los aislados. El fallback estatico de SSR tambien filtra.
+- **Tap en nodo abre `<dialog id="graph-modal">`** (no navega): vecinos y relaciones se
+  calculan en cliente desde `links` del JSON. En movil es bottom-sheet (clases
+  `max-sm:` sobre el dialog). Cierre: X, Escape o click en backdrop. Si no hay modal
+  (mini), el tap navega directo como antes. El umbral `dragMoved` distingue tap de drag.
+- **Ego-grafo**: `EgoGraph.astro` (SVG estatico en build, cero JS) vive en el slot
+  `graph` de `EventConnections.astro`; solo se emite con conexiones explicitas. Los
+  anchors de vecinos NO llevan view-transition-name (los de RelationLink ya reservan
+  esos IDs; duplicarlos rompe las transiciones).
+- **Perf**: la simulacion usa `alphaMin(0.01)` (~200 ticks) y re-encuadra (`fitView`)
+  en el evento `end`; no queda tickando indefinidamente.
+
 ## Arquitectura
 
 ```

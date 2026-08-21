@@ -133,8 +133,10 @@ const KEYWORD_MINISTERIO: [RegExp, string][] = [
 ];
 
 const MINISTERIAL_RE = /^(ministr[oa]|biministr[oa]?)\b/i;
-// Excluir jueces ("Ministro de la Corte...") y cargos extranjeros.
-const EXCLUDE_RE = /corte|argentina|desregulaci[óo]n/i;
+// Excluir jueces ("Ministro de la Corte..."), cargos extranjeros ("... de China/Argentina")
+// y roles históricos fechados en el texto ("subrogante (2020)"): un cargo top-level sin
+// fechas se atribuye al gobierno en ejercicio, así que estos quedarían mal asignados a Kast.
+const EXCLUDE_RE = /corte|desregulaci[óo]n|\(\d{4}\)|de (china|estados unidos|argentina|brasil|per[uú]|bolivia|ecuador|colombia|venezuela|paraguay|uruguay|m[eé]xico|espa[ñn]a|francia|israel|rusia|russia|jap[oó]n|corea del norte|corea del sur|corea|india|reino unido)\b/i;
 const SUBROGANTE_RE = /subrogante/i;
 
 function inferMinisterio(cargo: string): string | null {

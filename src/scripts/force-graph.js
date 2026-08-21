@@ -28,6 +28,12 @@ function addWindowListener(type, handler) {
 }
 
 function init() {
+  // Debounce del doble init (llamada directa + astro:page-load en la misma carga):
+  // si el SVG interactivo acaba de crearse, este init es redundante y solo
+  // re-barajaria los nodos. Los re-inits legitimos (checkbox, navegacion VT)
+  // ocurren mucho despues de 300ms.
+  const prevSvg = document.getElementById('graph-container')?.querySelector('svg[data-gv-graph]');
+  if (prevSvg && performance.now() - Number(prevSvg.dataset.builtAt || 0) < 300) return;
   cleanup();
   const dataEl = document.getElementById('graph-data');
   const container = document.getElementById('graph-container');
@@ -35,10 +41,21 @@ function init() {
 
   let data;
   try { data = JSON.parse(dataEl.textContent); } catch { return; }
-  const { nodes: nodesData, links: linksData, size = 'full' } = data;
+  let { nodes: nodesData, links: linksData, size = 'full' } = data;
   if (!nodesData?.length) return;
 
   const isMini = size === 'mini';
+
+  // Toggle "Incluir sin conexiones" (solo full): por defecto se muestran solo los
+  // eventos con conexiones explicitas — los aislados son ruido visual y encarecen
+  // la simulacion en movil. El cambio del checkbox re-ejecuta init().
+  const includeIsolated = document.getElementById('graph-include-isolated')?.checked ?? true;
+  if (!isMini && !includeIsolated) {
+    nodesData = nodesData.filter((n) => n.connected !== false);
+    const ids = new Set(nodesData.map((n) => n.id));
+    linksData = linksData.filter((l) => ids.has(l.source) && ids.has(l.target));
+  }
+  if (!nodesData.length) return;
   const W = parseInt(container.dataset.width) || (isMini ? 800 : 1200);
   const H = parseInt(container.dataset.height) || (isMini ? 280 : 600);
   const R = isMini ? 6 : 8;
@@ -52,6 +69,7 @@ function init() {
   // Create interactive SVG
   const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
   svg.setAttribute('data-gv-graph', '1');
+  svg.dataset.builtAt = String(Math.round(performance.now()));
   svg.setAttribute('width', '100%');
   svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
   svg.style.cursor = 'grab';
@@ -190,6 +208,17 @@ function init() {
     .force('charge', forceManyBody().strength(isMini ? -200 : -350))
     .force('center', forceCenter(W / 2, H / 2))
     .force('collide', forceCollide(R + (isMini ? 8 : 12)))
+    // Deja de tickar antes: alphaMin mas alto = menos ticks = menos bateria/CPU
+    // en movil. El encuadre automatico ocurre una sola vez, en el primer 'end'
+    // (ver didFitOnce); los asentamientos posteriores (tras tap/drag) respetan
+    // la vista del usuario.
+    .alphaMin(0.01)
+    .on('end', () => {
+      if (!didFitOnce && !userMovedView) {
+        didFitOnce = true;
+        fitView();
+      }
+    })
     .on('tick', () => {
       const edgeStep = isMini ? 1 : 2;
       links.forEach((l, i) => {
@@ -228,6 +257,11 @@ function init() {
   let dragNode = null, dragMoved = false, dragSX = 0, dragSY = 0;
   const pointers = new Map();
   let pinchDist = 0;
+  // El re-encuadre automatico (fitView) corre solo en el PRIMER asentamiento y
+  // solo si el usuario no ha movido la vista: sin esto, cada tap/drag reinicia la
+  // simulacion y el 'end' deshacia el pan/zoom del usuario ~2s despues.
+  let didFitOnce = false;
+  let userMovedView = false;
 
   function applyTransform() {
     g.setAttribute('transform', `translate(${tx},${ty}) scale(${scale})`);
@@ -280,6 +314,7 @@ function init() {
       const [a, b] = [...pointers.values()];
       const dist = Math.hypot(a.x - b.x, a.y - b.y);
       if (pinchDist > 0 && dist > 0) {
+        userMovedView = true;
         const cx = (a.x + b.x) / 2;
         const cy = (a.y + b.y) / 2;
         const ns = Math.min(Math.max(scale * (dist / pinchDist), 0.1), 5);
@@ -301,6 +336,7 @@ function init() {
     }
 
     if (isPanning) {
+      if (e.clientX !== panSX + tx || e.clientY !== panSY + ty) userMovedView = true;
       tx = e.clientX - panSX;
       ty = e.clientY - panSY;
       applyTransform();
@@ -312,14 +348,9 @@ function init() {
     if (pointers.size < 2) pinchDist = 0;
     if (dragNode) {
       if (!dragMoved) {
-        // Click en un anchor temporal: el ClientRouter de Astro intercepta el
-        // evento y navega con View Transitions (no recarga la página completa).
-        const a = document.createElement('a');
-        a.href = dragNode.url;
-        a.style.display = 'none';
-        document.body.appendChild(a);
-        a.click();
-        a.remove();
+        // Tap/click sin arrastre: abre el modal del evento (mantiene la posicion
+        // del grafo). Si no hay modal (mini), navega directo como antes.
+        openGraphModal(dragNode);
       }
       dragNode.fx = null;
       dragNode.fy = null;
@@ -338,6 +369,7 @@ function init() {
   // Wheel (desktop)
   svg.addEventListener('wheel', e => {
     e.preventDefault();
+    userMovedView = true;
     const r = svgRect();
     const cx = e.clientX - r.left, cy = e.clientY - r.top;
     const ns = Math.min(Math.max(scale * (1 + (e.deltaY < 0 ? 0.1 : -0.1)), 0.1), 5);
@@ -393,6 +425,58 @@ function init() {
     });
   }
 
+  // Modal del evento (full mode): se llena con los datos del nodo y sus vecinos
+  // (calculados desde `links`, que ya traen tipo/etiqueta de relacion). El grafo
+  // queda intacto detras: cerrar permite seguir explorando donde estaba.
+  const dlg = document.getElementById('graph-modal');
+  function openGraphModal(n) {
+    if (!dlg) {
+      // Fallback (mini): navegar directo con View Transitions.
+      const a = document.createElement('a');
+      a.href = n.url;
+      a.style.display = 'none';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      return;
+    }
+    const badge = dlg.querySelector('#graph-modal-badge');
+    badge.textContent = n.tipoLabel;
+    badge.style.backgroundColor = n.color + '1a';
+    badge.style.color = n.color;
+    badge.style.borderColor = n.color + '55';
+    badge.style.setProperty('--tw-ring-color', 'transparent');
+    dlg.querySelector('#graph-modal-title').textContent = n.label;
+    dlg.querySelector('#graph-modal-meta').textContent =
+      `${n.tipoLabel} · ${n.fecha}${n.connections > 0 ? ` · ${n.connections} vinculo(s)` : ''}`;
+    const linksBox = dlg.querySelector('#graph-modal-links');
+    const nodeIdOf = (ref) => (typeof ref === 'string' ? ref : ref.id);
+    const rels = links
+      .filter((l) => nodeIdOf(l.source) === n.id || nodeIdOf(l.target) === n.id)
+      .map((l) => {
+        const outgoing = nodeIdOf(l.source) === n.id;
+        return { neighbor: outgoing ? l.target : l.source, label: l.label, outgoing };
+      })
+      .sort((a, b) => b.neighbor.connections - a.neighbor.connections);
+    linksBox.innerHTML = rels.length
+      ? rels.map((r) => `
+        <a href="${r.neighbor.url}" class="flex items-center gap-2 rounded-lg border border-gray-100 bg-gray-50 px-2.5 py-1.5 text-xs hover:bg-blue-50 hover:border-blue-200 transition-colors">
+          <span class="h-2 w-2 shrink-0 rounded-full" style="background:${r.neighbor.color}"></span>
+          <span class="shrink-0 font-semibold" style="color:${EDGE_COLORS[r.label] || '#78716c'}">${r.outgoing ? '→' : '←'} ${r.label}</span>
+          <span class="truncate text-gray-700">${r.neighbor.label}</span>
+        </a>`).join('')
+      : '<p class="text-xs text-gray-400">Sin conexiones explicitas.</p>';
+    dlg.querySelector('#graph-modal-open').setAttribute('href', n.url);
+    dlg.showModal();
+  }
+
+  if (dlg && !dlg.__gvWired) {
+    dlg.__gvWired = true;
+    dlg.querySelector('#graph-modal-close')?.addEventListener('click', () => dlg.close());
+    // Click en el backdrop (el contenido es el unico hijo): cierra.
+    dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
+  }
+
   // Zoom buttons (full mode only — they don't exist in mini). Los listeners se
   // registran con cleanup para no duplicarse si init corre mas de una vez.
   const zoomIn = document.getElementById('zoom-in');
@@ -429,6 +513,14 @@ function init() {
     const onZoomReset = () => fitView();
     zoomReset.addEventListener('click', onZoomReset);
     cleanupFns.push(() => zoomReset.removeEventListener('click', onZoomReset));
+  }
+
+  // Toggle de aislados: re-ejecuta init() (idempotente via cleanup) con el nuevo
+  // filtro. El guard evita duplicar el listener en el doble init de la carga inicial.
+  const includeCb = document.getElementById('graph-include-isolated');
+  if (includeCb && !includeCb.__gvWired) {
+    includeCb.__gvWired = true;
+    includeCb.addEventListener('change', () => init());
   }
 }
 

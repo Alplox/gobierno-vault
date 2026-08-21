@@ -44,6 +44,8 @@ function inferredReason(edge: InferredEdge): string {
     Sigue el hilo entre acontecimientos relacionados de forma explicita o por contexto compartido.
   </p>
 
+  {hasExplicit && <slot name="graph" />}
+
   {hasExplicit && (
     <div class="grid gap-6 md:grid-cols-2">
       {outgoing.length > 0 && (

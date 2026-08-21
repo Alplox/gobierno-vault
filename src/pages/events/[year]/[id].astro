@@ -2,6 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import EventConnections from '../../../components/EventConnections.astro';
 import EventTimelineConnector from '../../../components/EventTimelineConnector.astro';
+import EgoGraph from '../../../components/EgoGraph.astro';
 import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
@@ -338,7 +339,9 @@ Describe el error o la corrección sugerida.`)}`;
 
     <EventTimelineConnector connections={connections} eventFecha={event.data.fecha} />
 
-    <EventConnections connections={connections} topicsMap={topicsMap} />
+    <EventConnections connections={connections} topicsMap={topicsMap}>
+      <EgoGraph event={event} connections={connections} slot="graph" />
+    </EventConnections>
 
     {refs.length > 0 && (
       <section class="mb-10 bg-white p-6 rounded-2xl border border-gray-200/80 shadow-sm">

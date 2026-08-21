@@ -42,6 +42,21 @@ if (size === 'mini' && events.length > 0) {
   graphEvents = events.filter((e) => allRelevantIds.has(eventBasename(e.id)));
 }
 
+// Full mode: eventos con conexiones explicitas (para el render inicial y el flag
+// `connected` del JSON). Los aislados (~430) ensucian el grafo y encarecen la
+// simulacion en movil; el checkbox del header los re-incluye en cliente.
+const connectedSet = new Set<string>();
+for (const e of events) {
+  const conn = connectionIndex.get(eventBasename(e.id));
+  if (conn && (conn.outgoing.length > 0 || conn.incoming.length > 0)) {
+    connectedSet.add(eventBasename(e.id));
+  }
+}
+if (size === 'full') {
+  graphEvents = events;
+}
+const isolatedCount = events.length - connectedSet.size;
+
 if (graphEvents.length === 0) {
   return null;
 }
@@ -126,6 +141,7 @@ const graphNodes = graphEvents.map((event, i) => ({
   tipoLabel: TIPO_LABELS[event.data.tipo] || event.data.tipo,
   fecha: new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' }),
   connections: (() => { const c = connectionIndex.get(eventBasename(event.id)); return c ? countExplicitConnections(c) : 0; })(),
+  connected: connectedSet.has(eventBasename(event.id)),
   x: positions[i].x,
   y: positions[i].y,
   url: `/events/${eventYearFromDate(event.data.fecha)}/${eventBasename(event.id)}`,
@@ -144,9 +160,15 @@ const graphLinks = graphEdges.map((e) => ({
   size === 'mini' ? 'mb-6' : '',
 ]}>
   {size === 'full' && (
-    <div class="border-b border-gray-100 px-5 py-3">
-      <h2 class="text-sm font-semibold text-gray-800">Grafo de relaciones</h2>
-      <p class="text-xs text-gray-500">Nodos = eventos, flechas = relaciones explicitas. Arrastra nodos, scroll para zoom, shift+drag para mover vista.</p>
+    <div class="border-b border-gray-100 px-5 py-3 flex items-center justify-between gap-3 flex-wrap">
+      <div>
+        <h2 class="text-sm font-semibold text-gray-800">Grafo de relaciones</h2>
+        <p class="text-xs text-gray-500">Nodos = eventos, flechas = relaciones explicitas. Arrastra nodos, scroll para zoom, shift+drag para mover vista. Toca un nodo para leerlo sin perder la vista.</p>
+      </div>
+      <label class="flex shrink-0 cursor-pointer items-center gap-1.5 text-xs font-medium text-gray-600">
+        <input type="checkbox" id="graph-include-isolated" class="h-3.5 w-3.5 accent-blue-600" />
+        Incluir sin conexiones ({isolatedCount})
+      </label>
     </div>
   )}
   <div id="graph-container" data-width={width} data-height={height} class:list={[
@@ -194,6 +216,9 @@ const graphLinks = graphEdges.map((e) => ({
           const pos = positions[i];
           if (!pos) return null;
           const id = eventBasename(event.id);
+          // Full mode: el fallback estatico muestra solo conectados (igual que el
+          // default del cliente); los aislados entran via checkbox.
+          if (size === 'full' && !connectedSet.has(id)) return null;
           const year = eventYearFromDate(event.data.fecha);
           const color = TIPO_COLORS[event.data.tipo] ?? '#6b7280';
           const conn = connectionIndex.get(id);
@@ -234,5 +259,21 @@ const graphLinks = graphEdges.map((e) => ({
   )}
   <div id="graph-tooltip" class="pointer-events-none fixed z-50 hidden max-w-xs rounded-lg border border-gray-200 bg-white px-3 py-2 text-xs text-gray-700 shadow-lg" />
 </div>
+
+{size === 'full' && (
+<dialog id="graph-modal" class="w-[92vw] max-w-lg rounded-2xl p-0 backdrop:bg-black/40 max-sm:mx-0 max-sm:mb-0 max-sm:mt-auto max-sm:w-full max-sm:max-w-none max-sm:rounded-b-none">
+  <div class="p-5">
+    <div class="flex items-center justify-between gap-2 mb-2">
+      <span id="graph-modal-badge" class="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset"></span>
+      <button type="button" id="graph-modal-close" aria-label="Cerrar" class="flex h-7 w-7 shrink-0 items-center justify-center rounded-lg text-gray-400 hover:bg-gray-100 hover:text-gray-700 transition-colors text-sm font-bold">✕</button>
+    </div>
+    <h3 id="graph-modal-title" class="font-semibold text-gray-900 leading-snug mb-1 text-balance"></h3>
+    <p id="graph-modal-meta" class="text-xs text-gray-500 mb-3"></p>
+    <p id="graph-modal-links-title" class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-gray-500">Conexiones</p>
+    <div id="graph-modal-links" class="space-y-1.5 max-h-52 overflow-y-auto mb-4 pr-1"></div>
+    <a id="graph-modal-open" href="#" class="block text-center text-sm font-medium bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 active:scale-[0.99] transition-all">Leer evento completo →</a>
+  </div>
+</dialog>
+)}
 
   <script type="application/json" id="graph-data" set:html={JSON.stringify({ nodes: graphNodes, links: graphLinks, size })} />
