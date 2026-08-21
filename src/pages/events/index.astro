@@ -6,7 +6,7 @@ import FilterBar from '../../components/FilterBar.astro';
 import TimelineNav from '../../components/TimelineNav.astro';
 import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, getTopicsMap, getPeopleMap, getOrgsMap, getEventEntities } from '../../lib/queries';
 import { buildConnectionIndex, eventBasename, eventYearFromDate, countExplicitConnections } from '../../lib/relations';
-import { TIPO_LABELS } from '../../lib/eventTypes';
+import { TIPO_LABELS, TIPO_STYLES } from '../../lib/eventTypes';
 import { Calendar, ChevronDown } from 'lucide-astro';
 
 const allEvents = await getAllEvents();
@@ -24,6 +24,24 @@ const [topicsMap, peopleMap, orgsMap] = await Promise.all([
 const topics = topicIds.map((id) => ({ id, label: topicsMap.get(id) ?? id }));
 const people = personIds.map((id) => ({ id, label: peopleMap.get(id) ?? id }));
 const orgs = orgIds.map((id) => ({ id, label: orgsMap.get(id) ?? id }));
+
+// Tipos de evento para los chips del FilterBar (orden estable por TIPO_LABELS).
+const tipos = Object.entries(TIPO_LABELS).map(([id, label]) => ({ id, label, style: TIPO_STYLES[id] || '' }));
+
+// Sugerencias de etiqueta (datalist): las más usadas primero. Hay ~4 mil etiquetas
+// únicas; un listado completo sería inusable, así que se recortan a las usadas >=3
+// veces con tope de 300.
+const etiquetaCounts = new Map<string, number>();
+for (const event of allEvents) {
+  for (const tag of event.data.etiquetas ?? []) {
+    etiquetaCounts.set(tag, (etiquetaCounts.get(tag) || 0) + 1);
+  }
+}
+const etiquetas = [...etiquetaCounts.entries()]
+  .filter(([, n]) => n >= 3)
+  .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+  .slice(0, 300)
+  .map(([tag]) => tag);
 
 // Nota: el sitio es SSG (estático), por lo que Astro.url.searchParams no existe en
 // runtime. Los filtros y la búsqueda se aplican en el cliente sobre el dataset
@@ -151,7 +169,7 @@ const eventData = allEvents.filter((event) => !ssrIds.has(eventBasename(event.id
     <p class="text-gray-500 text-sm">Explora acontecimientos, decretos y declaraciones registrados cronológicamente, agrupados por año y mes.</p>
   </div>
 
-  <FilterBar topics={topics} people={people} orgs={orgs} />
+  <FilterBar topics={topics} people={people} orgs={orgs} tipos={tipos} etiquetas={etiquetas} />
 
   <EventGraph events={allEvents} connectionIndex={connectionIndex} size="mini" />
 

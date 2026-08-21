@@ -92,7 +92,7 @@ function cardHTML(e) {
     ? `<span class="inline-flex items-center gap-1 rounded-full bg-blue-50 px-2 py-0.5 text-[11px] font-medium text-blue-700 ring-1 ring-inset ring-blue-200/70"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
     : '';
 
-  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-search="${esc(e.search || '')}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden">
+  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-etiquetas="${esc((e.etiquetas || []).join(','))}" data-search="${esc(e.search || '')}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden">
   <div class="flex flex-wrap items-center gap-2 mb-2 text-xs">
     <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-gray-100 text-gray-700 ring-gray-200'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
     <span class="inline-flex items-center gap-1 text-gray-500 font-medium"><span>${esc(e.fechaStr)}</span></span>
@@ -116,6 +116,15 @@ function fillMonth(key) {
   if (!events?.length) return false;
   grid.insertAdjacentHTML('beforeend', events.map(cardHTML).join(''));
   byMonth.delete(key);
+  // Si hay filtros activos, las tarjetas recién insertadas deben respetarlos:
+  // el observer puede llenar meses DESPUÉS de un applyFilters (carrera clásica
+  // en la que quedaban tarjetas visibles que no matcheaban).
+  const f = currentFilters();
+  if (f.tema || f.persona || f.org || f.q || f.tipos.length || f.etiqueta) {
+    [...grid.children].slice(-events.length).forEach((card) => {
+      if (!matchesFilter(card, f)) card.style.display = 'none';
+    });
+  }
   return true;
 }
 
@@ -127,14 +136,7 @@ export function forceFillMonth(key) {
 // Nota: el dataset JSON ya excluye los eventos renderizados en SSR (ver index.astro),
 // así que byMonth solo contiene tarjetas no emitidas; no hace falta un guard anti-duplicado.
 function forceFillAll() {
-  for (const key of [...byMonth.keys()]) {
-    const sec = document.getElementById(`month-${key}`);
-    if (!sec) continue;
-    const grid = sec.querySelector(':scope > .event-grid');
-    if (!grid) continue;
-    grid.insertAdjacentHTML('beforeend', (byMonth.get(key) || []).map(cardHTML).join(''));
-    byMonth.delete(key);
-  }
+  for (const key of [...byMonth.keys()]) fillMonth(key);
 }
 
 function currentFilters() {
@@ -144,6 +146,8 @@ function currentFilters() {
     persona: (p.get('persona') || '').trim(),
     org: (p.get('org') || '').trim(),
     q: norm(p.get('q') || '').trim(),
+    tipos: p.getAll('tipo').map((t) => t.trim()).filter(Boolean),
+    etiqueta: norm(p.get('etiqueta') || '').trim(),
   };
 }
 
@@ -160,13 +164,20 @@ function matchesFilter(card, f) {
     const ids = (card.dataset.orgs || '').split(',').filter(Boolean);
     if (!ids.includes(f.org)) return false;
   }
+  // Tipos seleccionados (chips multi-toggle): la tarjeta debe ser de uno de ellos.
+  if (f.tipos.length && !f.tipos.includes(card.dataset.tipo || '')) return false;
+  // Etiqueta: coincidencia exacta de token (no substring), normalizada.
+  if (f.etiqueta) {
+    const tags = (card.dataset.etiquetas || '').split(',').filter(Boolean).map(norm);
+    if (!tags.includes(f.etiqueta)) return false;
+  }
   if (f.q && !(card.dataset.search || '').includes(f.q)) return false;
   return true;
 }
 
 export function applyFilters() {
   const f = currentFilters();
-  const active = Boolean(f.tema || f.persona || f.org || f.q);
+  const active = Boolean(f.tema || f.persona || f.org || f.q || f.tipos.length || f.etiqueta);
 
   // Sincroniza los controles del FilterBar con la URL.
   const setSelect = (name, val) => {
@@ -178,6 +189,9 @@ export function applyFilters() {
   setSelect('org', f.org);
   const qInput = document.querySelector('input[data-search-input]');
   if (qInput && document.activeElement !== qInput) qInput.value = f.q;
+  syncTipoChips(f);
+  const etInput = document.querySelector('input[data-etiqueta-input]');
+  if (etInput && document.activeElement !== etInput) etInput.value = f.etiqueta;
 
   // Botón limpiar + grafo mini (se oculta con filtros activos para no confundir).
   const clearBtn = document.getElementById('clear-filters');
@@ -234,6 +248,18 @@ export function applyFilters() {
   if (root) root.classList.toggle('hidden', visible === 0);
 }
 
+// Estado visual de los chips de tipo según los filtros activos.
+const CHIP_OFF = ['bg-white', 'text-gray-500', 'ring-gray-200', 'hover:bg-gray-100'];
+function syncTipoChips(f) {
+  document.querySelectorAll('[data-tipo-chip]').forEach((btn) => {
+    const on = f.tipos.includes(btn.dataset.tipoChip || '');
+    btn.setAttribute('aria-pressed', String(on));
+    const styleOn = (btn.dataset.styleOn || '').split(' ').filter(Boolean);
+    btn.classList.remove(...CHIP_OFF, ...styleOn);
+    btn.classList.add(...(on ? styleOn : CHIP_OFF));
+  });
+}
+
 function wireFilterForm() {
   const form = document.querySelector('#filter-form');
   if (!form) return;
@@ -246,8 +272,26 @@ function wireFilterForm() {
     for (const [k, v] of fd) {
       if (String(v).trim()) p.set(k, String(v).trim());
     }
+    // Los chips de tipo no viajan en FormData: preservar los de la URL actual.
+    for (const t of new URLSearchParams(window.location.search).getAll('tipo')) {
+      p.append('tipo', t);
+    }
     const qs = p.toString();
     history.pushState({}, '', qs ? `${location.pathname}?${qs}` : location.pathname);
+    applyFilters();
+  });
+  // Chips multi-toggle: clic alterna el tipo en la URL preservando los demás filtros.
+  form.addEventListener('click', (e) => {
+    const btn = e.target.closest('[data-tipo-chip]');
+    if (!btn) return;
+    const id = btn.dataset.tipoChip || '';
+    const p = new URLSearchParams(window.location.search);
+    const cur = p.getAll('tipo');
+    p.delete('tipo');
+    for (const t of cur.includes(id) ? cur.filter((t2) => t2 !== id) : [...cur, id]) {
+      p.append('tipo', t);
+    }
+    history.pushState({}, '', [...p.keys()].length ? `${location.pathname}?${p}` : location.pathname);
     applyFilters();
   });
   const clearBtn = document.getElementById('clear-filters');

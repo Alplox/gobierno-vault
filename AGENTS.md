@@ -261,7 +261,9 @@ svg_backup:
 ## Pagina /events: filtros y busqueda en cliente
 
 El sitio es SSG, por lo que `Astro.url.searchParams` NO existe en runtime: la página
-`/events` se genera sin query string. Los filtros (`?tema`, `?persona`, `?org`, `?q`)
+`/events` se genera sin query string. Los filtros (`?tema`, `?persona`, `?org`, `?q`,
+`?tipo` (repetible, chips multi-toggle), `?etiqueta` (token exacto, input con datalist
+de sugerencias top-300 calculado en build))
 y la busqueda se aplican en el cliente sobre un dataset JSON completo que viaja en
 `<script id="event-index-data">` (ver `eventListClient.js`).
 
@@ -271,7 +273,10 @@ y la busqueda se aplican en el cliente sobre un dataset JSON completo que viaja 
   (`ssrIds`): si viajaran tambien, `fillMonth` los re-insertaría (duplicados).
 - **Filtros**: `applyFilters()` lee la URL, fuerza el llenado de todos los meses
   (`forceFillAll`), oculta las tarjetas que no matchean `data-tipo`/`data-tema`/
-  `data-personas`/`data-orgs`/`data-search` y oculta meses/años vacíos.
+  `data-personas`/`data-orgs`/`data-etiquetas`/`data-search` y oculta meses/años vacíos.
+  **Importante**: `fillMonth` re-aplica los filtros activos a las tarjetas recién
+  insertadas — sin eso, el observer puede llenar meses DESPUÉS de un `applyFilters`
+  y dejar visibles tarjetas que no matchean (bug de carrera corregido 20-ago-2026).
 - **Busqueda**: `data-search` es texto normalizado (minúsculas + sin acentos, NFD)
   de titulo, etiquetas, personas, orgs, temas, tipo, ID y fecha. La normalizacion
   debe ser IDENTICA entre `EventCard.astro` (SSR) y `eventListClient.js` (cliente).

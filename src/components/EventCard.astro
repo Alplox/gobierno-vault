@@ -43,6 +43,7 @@ function normalizeSearch(s: string) {
   data-tema={tema.join(',')}
   data-personas={entities.personas.join(',')}
   data-orgs={entities.organizaciones.join(',')}
+  data-etiquetas={etiquetas.join(',')}
   data-search={normalizeSearch([titulo, ...etiquetas, ...personaNombres, ...temaNombres.map((t) => t.nombre), TIPO_LABELS[tipo] || tipo, id, fechaStr, year].join(' '))}
   class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-blue-200/80 active:scale-[0.99] transition-all duration-200 bg-white border border-gray-100 overflow-hidden"
 >
