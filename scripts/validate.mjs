@@ -8,7 +8,13 @@ const dataDir = join(root, 'data');
 const eventsDir = join(root, 'content', 'events');
 
 function readYaml(filename) {
-  return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+  try {
+    return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+  } catch (e) {
+    console.error(`✖ YAML inválido en src/data/${filename}: ${e.message.split('\n')[0]}`);
+    console.error(`  Causa típica: edición concurrente, caracteres reservados sin citar (ej. "autor: @usuario") o líneas basura de un grabado con encoding incorrecto (PowerShell Set-Content/Out-File).`);
+    process.exit(1);
+  }
 }
 
 const sourcesData = readYaml('sources.yaml');
@@ -87,6 +93,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Seguridad Pública',
   'Ministerio Secretaría General de Gobierno',
   'Contraloría General de la República',
+  'Defensoría de la Niñez',
   'Instituto de Previsión Social (IPS)',
   'Poder Judicial de Chile',
   'Tribunal de la Libre Competencia',
@@ -292,16 +299,25 @@ try {
 }
 
 // Mojibake: el doble-encoding UTF-8 degrada títulos, notas y nombres canónicos.
-// Firma C2/C3 + byte 0x80-0xBF: cubre tanto mayúsculas (Ñ→"Ã‘"=C2 91, Ó→C2 93,
-// É→C2 89, Ú→C2 9A) como minúsculas (é→"Ã©"=C2 A9, í→C2 AD, ó→C2 B3, ú→C2 BA,
-// ñ→"Ã±"=C2 B1). Un "Ã"/"Â" literal seguido de un carácter Latin-1 suplementario
-// es prácticamente siempre mojibake (sin falsos positivos reales).
-const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]/g;
+// Mojibake: doble-encoding UTF-8 y round-trips ANSI degradan títulos, notas y nombres.
+// Firma C2/C3 + byte 0x80-0xBF: doble-encoding clásico (Ã©, Ã±...).
+// Además: controles C1 (0080-009F) = UTF-8 leído como CP1252 (ej. em-dash "â€”"),
+// U+FFFD (reemplazo), cirílico y Latin Ext-A/B (basura de round-trips ANSI;
+// el vault es español — ningún nombre legítimo usa esos rangos).
+const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]|[\u0080-\u009f\uFFFD\u0400-\u04ff\u0100-\u024f]/g;
+const mojibakeScan = new RegExp(MOJIBAKE_RE.source, 'g');
 for (const f of ['sources.yaml', 'entities.yaml', 'topics.yaml', 'colectivos.yaml', 'sectores.yaml']) {
   const raw = readFileSync(join(dataDir, f), 'utf8');
-  const matches = raw.match(MOJIBAKE_RE);
+  const matches = raw.match(mojibakeScan);
   if (matches) {
-    console.error(`✖ mojibake (doble-encoding UTF-8) en ${f}: ${matches.length} ocurrencia(s) — corregir acentos/ñ dañados`);
+    const lines = raw.split(/\r?\n/);
+    const sample = [];
+    for (let li = 0; li < lines.length && sample.length < 3; li++) {
+      mojibakeScan.lastIndex = 0;
+      if (mojibakeScan.test(lines[li])) sample.push(`    línea ${li + 1}: ${lines[li].trim().slice(0, 90)}`);
+    }
+    console.error(`✖ mojibake/carácter inválido en src/data/${f}: ${matches.length} ocurrencia(s) — corregir acentos/ñ/em-dashes dañados`);
+    for (const s of sample) console.error(s);
     errors++;
   }
 }

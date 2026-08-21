@@ -3,14 +3,15 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (201)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (208)
 
 <details>
-<summary>Ver lista (201 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (208 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — **1 fuente**
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — **1 fuente**
+- [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — **1 fuente**
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — **1 fuente**
 - [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — **1 fuente**
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — **1 fuente**
@@ -102,6 +103,8 @@
 - [2026/08/20260818-9 - Gobierno pone la lupa sobre la PGU antes del Presupuesto 2027: revisarán lista de 2,2 millones de beneficiarios](src/content/events/2026/08/20260818-9.md) — **1 fuente**
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — **1 fuente**
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — **1 fuente**
+- [2026/08/20260820-2 - Ministro Quiroz niega intervención de Hacienda en proyecto ligado a su hermano: 'Es totalmente falso'](src/content/events/2026/08/20260820-2.md) — **1 fuente**
+- [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — **1 fuente**
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — **2 fuentes**
 - [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — **2 fuentes**
 - [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — **2 fuentes**
@@ -136,8 +139,10 @@
 - [2023/05/20230525-1 - Condenan al exalcalde de Ñuñoa Pedro Sabat por dos delitos de negociación incompatible](src/content/events/2023/05/20230525-1.md) — **2 fuentes**
 - [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — **2 fuentes**
 - [2024/06/20240609-1 - Primarias municipales y de gobernadores 2024: baja participación marca la jornada electoral](src/content/events/2024/06/20240609-1.md) — **2 fuentes**
+- [2024/07/20240725-1 - Corte Suprema rechaza demandas contra SCA por colusión del papel tissue por prescripción, pero SERNAC y CONADECUS presentan nuevas demandas](src/content/events/2024/07/20240725-1.md) — **2 fuentes**
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — **2 fuentes**
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — **2 fuentes**
+- [2024/12/20241203-1 - Corte Suprema condena a CMPC y SCA a pagar US$5 millones a papelera por daños de la colusión del tissue](src/content/events/2024/12/20241203-1.md) — **2 fuentes**
 - [2025/01/20250125-1 - Venezuela afirmó que las relaciones con Chile están rotas desde agosto](src/content/events/2025/01/20250125-1.md) — **2 fuentes**
 - [2025/03/20250327-1 - INE entrega los primeros resultados del Censo 2024: Chile tiene 18.480.432 habitantes](src/content/events/2025/03/20250327-1.md) — **2 fuentes**
 - [2026/01/20260121-5 - Mala Espina perfila a Catalina Parot, la abogada que vuelve a Bienes Nacionales en el gabinete de Kast: exministra de Piñera, presidenta del CNTV y ex candidata](src/content/events/2026/01/20260121-5.md) — **2 fuentes**
@@ -200,7 +205,6 @@
 - [2026/08/20260817-16 - OTJ cuestiona designación de Zegers en Reforma Procesal Civil: 'Una reforma de esta magnitud exige experiencia'](src/content/events/2026/08/20260817-16.md) — **2 fuentes**
 - [2026/08/20260817-18 - Poduje advierte que la meta de 400 mil viviendas debe 'evaluarse': pide +23,9% de presupuesto y se enfrenta con Quiroz](src/content/events/2026/08/20260817-18.md) — **2 fuentes**
 - [2026/08/20260817-19 - Chile evalúa restarse de la negociación de la Convención sobre Cooperación Fiscal Internacional en la ONU](src/content/events/2026/08/20260817-19.md) — **2 fuentes**
-- [2026/08/20260817-20 - Registro oficial de Carabineros revela que 168 funcionarios fueron denunciados por abuso y acoso sexual desde enero 2025: solo uno fue sancionado](src/content/events/2026/08/20260817-20.md) — **2 fuentes**
 - [2026/08/20260817-23 - José Piñera aclara en una carta a El Mostrador que no tiene relación empresarial con Peter Thiel: la reunión en Santiago fue para conversar sobre el sistema de capitalización chileno](src/content/events/2026/08/20260817-23.md) — **2 fuentes**
 - [2026/08/20260817-4 - Comienza en Angol el juicio oral contra el exjefe de gabinete del alcalde de Collipulli, Daniel Valencia Cifuentes, acusado de violar a una guardia municipal: la Fiscalía pide 11 años](src/content/events/2026/08/20260817-4.md) — **2 fuentes**
 - [2026/08/20260817-6 - Alcalde Concha (FA) pide al Gobierno incluir las barras bravas en el plan de seguridad: 'muchas son verdaderas bandas criminales'](src/content/events/2026/08/20260817-6.md) — **2 fuentes**
@@ -208,7 +212,10 @@
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — **2 fuentes**
 - [2026/08/20260818-19 - TC declara admisible el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la norma que obliga a reconectar gratis servicios básicos en zonas de catástrofe](src/content/events/2026/08/20260818-19.md) — **2 fuentes**
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — **2 fuentes**
-- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errazuriz) fue priorizado y aprobado tras 17 anos y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — **2 fuentes**
+- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errazuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — **2 fuentes**
+- [2026/08/20260820-1 - Defensoría de la Niñez presenta denuncia ante la Fiscalía por procedimiento policial contra estudiantes del Liceo Rayen Mapu de Quellón](src/content/events/2026/08/20260820-1.md) — **2 fuentes**
+- [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — **2 fuentes**
+- [2026/08/20260820-6 - Detienen a 3 carabineros de la 13ª Comisaría de La Granja por vínculos con el narcotráfico: cohecho, armas prohibidas y microtráfico](src/content/events/2026/08/20260820-6.md) — **2 fuentes**
 
 </details>
 
@@ -277,6 +284,7 @@
 - [2026/06/20260608-3 - Consejo Fiscal Autónomo alerta que la megarreforma mantiene riesgos para las finanzas del Estado](src/content/events/2026/06/20260608-3.md) — 2 fuentes
 - [2026/06/20260609-1 - Senado despacha a comisión mixta la reforma política impulsada por Elizalde](src/content/events/2026/06/20260609-1.md) — 3 fuentes
 - [2026/06/20260611-1 - Gobierno estudia usar ClaveÚnica como verificación de edad para restringir redes sociales a menores](src/content/events/2026/06/20260611-1.md) — 4 fuentes
+- [2026/06/20260611-2 - Detienen y desvinculan a 6 carabineros de Talca por asociación criminal: robaban a civiles disfrazados de allanamientos, plantaban drogas y encarcelaron inocentes](src/content/events/2026/06/20260611-2.md) — 7 fuentes
 - [2026/06/20260613-1 - Chile envía 6 toneladas de ayuda humanitaria a Bolivia en medio de la crisis por bloqueos](src/content/events/2026/06/20260613-1.md) — 3 fuentes
 - [2026/06/20260615-1 - Tesoreria inicia embargos de cuentas bancarias a deudores morosos del CAE](src/content/events/2026/06/20260615-1.md) — 7 fuentes
 - [2026/06/20260615-4 - Fiscalía y querellantes presentan recurso de nulidad contra la absolución de Claudio Crespo en el caso Gatica](src/content/events/2026/06/20260615-4.md) — 1 fuente
@@ -453,6 +461,7 @@
 - [2026/08/20260811-21 - Escándalo en la Municipalidad de Curicó: personal de informática filtró material íntimo de funcionarias y directivos extraído de celulares institucionales](src/content/events/2026/08/20260811-21.md) — 2 fuentes
 - [2026/08/20260811-24 - Auditoría forense descarta que el déficit de $18 mil millones de la Municipalidad de Valparaíso sea atribuible a la gestión de Jorge Sharp](src/content/events/2026/08/20260811-24.md) — 3 fuentes
 - [2026/08/20260811-25 - Boric critica al gobierno de Kast y a la derecha por los 50 años del golpe: 'Sospecho que este gobierno no firmaría' el acuerdo por la democracia](src/content/events/2026/08/20260811-25.md) — 2 fuentes
+- [2026/08/20260811-26 - Comisión de Agricultura aprueba en general proyecto que autoriza caza de perros asilvestrados: 10 votos a favor y 2 en contra](src/content/events/2026/08/20260811-26.md) — 5 fuentes
 - [2026/08/20260811-3 - Primera condena contra exmilitares por tráfico ilícito de migrantes en la frontera de Colchane](src/content/events/2026/08/20260811-3.md) — 5 fuentes
 - [2026/08/20260811-8 - Chile entra al top 15 mundial de países con mayor alza en el precio de las viviendas según índice de Knight Frank](src/content/events/2026/08/20260811-8.md) — 1 fuente
 - [2026/08/20260812-11 - Suspenden clases en el Liceo Augusto D'Halmar tras amenazas de muerte a un estudiante que se opuso al paro de lápices](src/content/events/2026/08/20260812-11.md) — 3 fuentes
@@ -486,7 +495,7 @@
 - [2026/08/20260816-4 - Excarabinero dado de baja tras detención en Illapel denuncia 'graves irregularidades' del procedimiento y publica videos de su reducción](src/content/events/2026/08/20260816-4.md) — 3 fuentes
 - [2026/08/20260817-1 - La comunidad documenta el caso de Agustín Quera Marcet: el jefe de gabinete del biministro Mas es un abogado recién titulado sin experiencia previa, tercer caso de la 'generación sin currículum'](src/content/events/2026/08/20260817-1.md) — 6 fuentes
 - [2026/08/20260817-11 - Investigación revela que contralores del Poder Judicial habrían recibido sobresueldos por más de 30 años: diferencia de $2,3 millones mensuales vs. lo que establece la ley](src/content/events/2026/08/20260817-11.md) — 1 fuente
-- [2026/08/20260817-12 - Encuentran con vida a Thae Loiza Galaz, exconcejala de Graneros desaparecida: fue hallada en situación de calle en el centro de Santiago tras 12 días](src/content/events/2026/08/20260817-12.md) — 6 fuentes
+- [2026/08/20260817-12 - Encuentran con vida a Thae Loiza Galaz, exconcejala de Graneros desaparecida: fue hallada en situación de calle en el centro de Santiago tras 12 días, con historial de condena por certificados médicos falsos y violencia familiar](src/content/events/2026/08/20260817-12.md) — 7 fuentes
 - [2026/08/20260817-13 - INDH se querella por torturas contra excadete de la Escuela Naval: asfixia, agresiones físicas y amenazas en 2025](src/content/events/2026/08/20260817-13.md) — 5 fuentes
 - [2026/08/20260817-14 - Tercera designación cuestionada por falta de experiencia: Hacienda pone a ingeniera como nexo con banca; diputadas PDG acusan «amiguismo»](src/content/events/2026/08/20260817-14.md) — 2 fuentes
 - [2026/08/20260817-15 - Denuncian a seremi del Trabajo del Bío Bío por usar auto fiscal para ir por café y al médico: igual que Duco](src/content/events/2026/08/20260817-15.md) — 2 fuentes
@@ -495,7 +504,7 @@
 - [2026/08/20260817-18 - Poduje advierte que la meta de 400 mil viviendas debe 'evaluarse': pide +23,9% de presupuesto y se enfrenta con Quiroz](src/content/events/2026/08/20260817-18.md) — 2 fuentes
 - [2026/08/20260817-19 - Chile evalúa restarse de la negociación de la Convención sobre Cooperación Fiscal Internacional en la ONU](src/content/events/2026/08/20260817-19.md) — 2 fuentes
 - [2026/08/20260817-2 - Gobierno apura con urgencia de 'discusión inmediata' el proyecto que aumenta penas y permite detenciones por insultos a Carabineros y la PDI](src/content/events/2026/08/20260817-2.md) — 8 fuentes
-- [2026/08/20260817-20 - Registro oficial de Carabineros revela que 168 funcionarios fueron denunciados por abuso y acoso sexual desde enero 2025: solo uno fue sancionado](src/content/events/2026/08/20260817-20.md) — 2 fuentes
+- [2026/08/20260817-20 - Registro oficial de Carabineros revela que 168 funcionarios fueron denunciados por abuso y acoso sexual desde enero 2025: solo uno fue sancionado](src/content/events/2026/08/20260817-20.md) — 3 fuentes
 - [2026/08/20260817-21 - Denuncian a general de Carabineros de Magallanes por acoso y maltrato a suboficial que fue escolta de la expresidenta Bachelet](src/content/events/2026/08/20260817-21.md) — 1 fuente
 - [2026/08/20260817-23 - José Piñera aclara en una carta a El Mostrador que no tiene relación empresarial con Peter Thiel: la reunión en Santiago fue para conversar sobre el sistema de capitalización chileno](src/content/events/2026/08/20260817-23.md) — 2 fuentes
 - [2026/08/20260817-3 - BioBioChile revela el rol de Michael Clark en el préstamo de 65.000 UF a Avram Fritch: la querella de Toesca por 'vaciamiento patrimonial' del exmilitar israelí](src/content/events/2026/08/20260817-3.md) — 3 fuentes
@@ -513,7 +522,7 @@
 - [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 5 fuentes
 - [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 4 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
-- [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 5 fuentes
+- [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
 - [2026/08/20260818-18 - Contraloría dictamina que funcionarios a honorarios no pueden participar del Día del Funcionario Municipal](src/content/events/2026/08/20260818-18.md) — 1 fuente
 - [2026/08/20260818-19 - TC declara admisible el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la norma que obliga a reconectar gratis servicios básicos en zonas de catástrofe](src/content/events/2026/08/20260818-19.md) — 2 fuentes
 - [2026/08/20260818-2 - Aluvión afecta a Puerto Viejo (Caldera): más de 10 viviendas dañadas tras lluvia torrencial de 30 minutos; se activa SAE](src/content/events/2026/08/20260818-2.md) — 1 fuente
@@ -529,7 +538,18 @@
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
-- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errazuriz) fue priorizado y aprobado tras 17 anos y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — 2 fuentes
+- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errazuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — 2 fuentes
+- [2026/08/20260819-6 - Centro de Estudiantes del Liceo Rayen Mapu denuncia que Carabineros obligó a dos alumnos a desvestirse frente a sus compañeros tras sospecha de robo de celular](src/content/events/2026/08/20260819-6.md) — 5 fuentes
+- [2026/08/20260819-7 - Kast cierra gira por el norte en mesa técnica en Iquique sin compromisos de inversión; gobernador Carvajal critica el resultado y pide zona de catástrofe](src/content/events/2026/08/20260819-7.md) — 5 fuentes
+- [2026/08/20260820-1 - Defensoría de la Niñez presenta denuncia ante la Fiscalía por procedimiento policial contra estudiantes del Liceo Rayen Mapu de Quellón](src/content/events/2026/08/20260820-1.md) — 2 fuentes
+- [2026/08/20260820-2 - Ministro Quiroz niega intervención de Hacienda en proyecto ligado a su hermano: 'Es totalmente falso'](src/content/events/2026/08/20260820-2.md) — 1 fuente
+- [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 9 fuentes
+- [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
+- [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — 1 fuente
+- [2026/08/20260820-6 - Detienen a 3 carabineros de la 13ª Comisaría de La Granja por vínculos con el narcotráfico: cohecho, armas prohibidas y microtráfico](src/content/events/2026/08/20260820-6.md) — 2 fuentes
+- [2026/08/20260820-7 - Fiscalía allana Junaeb, oficinas de senadores Gahona y Calisto, y domicilios de empresarios en caso SOSER: cohecho, fraude al fisco y lavado de activos en licitaciones de alimentación escolar](src/content/events/2026/08/20260820-7.md) — 4 fuentes
+- [2026/08/20260820-8 - Camila Vallejo califica de 'gato por liebre' la reforma constitucional de seguridad: 'Pasaron de la gran estafa al gato por liebre'](src/content/events/2026/08/20260820-8.md) — 5 fuentes
+- [2026/08/20260820-9 - OS9 detiene en San Pedro de la Paz a hombre de 30 años por amenazas contra Kast y Quiroz en video satírico; queda libre con medidas cautelares](src/content/events/2026/08/20260820-9.md) — 9 fuentes
 
 ## 2025
 
@@ -557,9 +577,11 @@
 - [2024/05/20240508-1 - CIPER revela 133 reuniones de ministros y subsecretarios con empresarios no registradas en la Ley de Lobby; Vallejo reconoce el caso](src/content/events/2024/05/20240508-1.md) — 4 fuentes
 - [2024/05/20240510-1 - Pacogate: condena a 28 carabineros por fraude al fisco](src/content/events/2024/05/20240510-1.md) — 3 fuentes
 - [2024/06/20240609-1 - Primarias municipales y de gobernadores 2024: baja participación marca la jornada electoral](src/content/events/2024/06/20240609-1.md) — 2 fuentes
+- [2024/07/20240725-1 - Corte Suprema rechaza demandas contra SCA por colusión del papel tissue por prescripción, pero SERNAC y CONADECUS presentan nuevas demandas](src/content/events/2024/07/20240725-1.md) — 2 fuentes
 - [2024/08/20240804-1 - Van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'](src/content/events/2024/08/20240804-1.md) — 1 fuente
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — 2 fuentes
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — 2 fuentes
+- [2024/12/20241203-1 - Corte Suprema condena a CMPC y SCA a pagar US$5 millones a papelera por daños de la colusión del tissue](src/content/events/2024/12/20241203-1.md) — 2 fuentes
 - [2024/12/20241205-1 - Fiscalía detalla cómo operaba la 'mafia del fuego' detrás del megaincendio de Valparaíso](src/content/events/2024/12/20241205-1.md) — 1 fuente
 
 ## 2023
@@ -602,6 +624,7 @@
 
 ## 2020
 
+- [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — 1 fuente
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — 1 fuente
@@ -653,11 +676,13 @@
 ## 2017
 
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — 1 fuente
+- [2017/12/20171229-1 - TDLC confirma colusión del papel higiénico: multa a SCA por más de $11 mil millones y exoneración de CMPC por autodenuncia](src/content/events/2017/12/20171229-1.md) — 3 fuentes
 
 ## 2015
 
 - [2015/03/20150303-1 - Caso Penta: la maquina de evasion tributaria de los duenos del grupo Penta](src/content/events/2015/03/20150303-1.md) — 3 fuentes
 - [2015/07/20150714-1 - Caso Caval: el polemico estudio vial que inclino la balanza](src/content/events/2015/07/20150714-1.md) — 3 fuentes
+- [2015/10/20151028-1 - FNE presenta requerimiento ante TDLC por colusión de precios en papel higiénico, pañuelos y servilletas entre CMPC Tissue y SCA ("Confortgate")](src/content/events/2015/10/20151028-1.md) — 8 fuentes
 
 ## 2010
 

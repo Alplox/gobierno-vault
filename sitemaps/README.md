@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 19/8/2026, 21:24:43
+- **Última sincronización:** 20/8/2026, 14:05:28
 - **Medios registrados:** 38
-- **Artículos indexados:** 4.412.328
+- **Artículos indexados:** 4.412.654
 
 ## Por medio
 
@@ -27,7 +27,7 @@
 | Ex-Ante | 18.148 |
 | El Quinto Poder | 17.724 |
 | Chocale | 14.232 |
-| La Tercera | 11.486 |
+| La Tercera | 11.812 |
 | Radio UdeC | 10.987 |
 | AmCham Chile | 10.640 |
 | Mestizos Magazine | 8638 |

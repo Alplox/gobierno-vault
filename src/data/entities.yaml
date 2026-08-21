@@ -298,6 +298,10 @@ people:
     nombre: José Uribe
     cargo: Fiscal de San Antonio
     notas: "Fiscal de la Fiscalía SAC de San Antonio que dirigió el operativo contra la red de narcotráfico transnacional con carabinero formalizado (agosto 2026). Señaló que el carabinero 'manejaba seguridad respecto a la organización y labores logísticas de arriendo de inmuebles, entre otras labores' y que la organización 'prestaba labores de transporte e internación de droga a distintos cárteles del mundo, tanto europeos, americanos como de Oceanía'."
+  constanza_encina:
+    nombre: Constanza Encina Calquin
+    cargo: Fiscal de Alta Complejidad Metropolitana Oriente
+    notas: "Fiscal a cargo de la investigación del caso SOSER/Junaeb. En agosto 2026 lideró los allanamientos simultáneos en Congreso, Junaeb y domicilios de empresarios por presuntos delitos de cohecho, fraude al fisco, lavado de activos y tráfico de influencias en licitaciones de alimentación escolar. Señaló que el rol de los parlamentarios puede enmarcarse en 'varios delitos de cohecho'."
   angel_valencia:
     nombre: Ángel Valencia
     cargo: Fiscal Nacional de Chile
@@ -4128,7 +4132,49 @@ people:
     nombre: Juan José Lyon
     cargo: Director Ejecutivo de Fundación América Transparente
     organizacion: fundacion_america_transparente
-    notas: Criticó omisión del ministro Quiroz en declaración de intereses.
+    notas: Criticó omisión del ministro Quiroz en declaración de intereses. En el caso Alto Santorini sostuvo que padres o hermanos son causales directas de inhabilitación.
+  michel_figueroa:
+    nombre: Michel Figueroa
+    cargo: Director de Chile Transparente
+    organizacion: chile_transparente
+    notas: Sostuvo que en el caso Alto Santorini la relación entre hermanos hacía necesario que el ministro Quiroz se abstuviera de participar.
+  francisco_leturia:
+    nombre: Francisco Leturia
+    cargo: Expresidente del Consejo para la Transparencia (CPLT)
+    notas: Planteó que debe distinguirse entre una política pública general y una decisión diseñada para beneficiar a una persona determinada; lo relevante es si el proyecto recibió trato distinto.
+  felipe_cortes_os9:
+    nombre: Felipe Cortés
+    cargo: Teniente del OS9 de Carabineros
+    notas: "Informó la detención en San Pedro de la Paz (19-ago-2026) de un hombre investigado por amenazas contra el presidente Kast y otras autoridades vía redes sociales."
+  marcelo_borbaran:
+    nombre: Marcelo Borbarán
+    cargo: Fiscal de la Fiscalía Metropolitana Centro Norte
+    notas: "Expuso en la formalización (20-ago-2026) del imputado por amenazas contra Kast y Quiroz: dos delitos de amenazas acreditados vía registros audiovisuales y análisis de cuentas en redes sociales."
+  daniel_lilayu:
+    nombre: Daniel Lilayu
+    cargo: Diputado (UDI)
+    notas: "Impulsor de la fusión de proyectos sobre perros asilvestrados aprobada en general por la Comisión de Agricultura de la Cámara el 11-ago-2026 (10 votos a favor, 2 en contra); defendió el control letal como 'legítima defensa' en predios rurales."
+  emilia_nuyado:
+    nombre: Emilia Nuyado
+    cargo: Diputada (PS)
+    notas: "Votó en contra en la Comisión de Agricultura de la Cámara de la fusión de proyectos que autoriza el control letal de perros asilvestrados (11-ago-2026)."
+  jose_miguel_carvajal:
+    nombre: José Miguel Carvajal
+    cargo: Gobernador Regional de Tarapacá
+    partido: Partido Demócrata Cristiano
+    notas: "Tras la mesa técnica encabezada por el presidente Kast en Iquique durante la emergencia por lluvias (19-ago-2026), criticó que no hubiera compromisos de inversión ni definición de la herramienta de recuperación, y calificó como insuficientes los $1.510 millones del FNDR dispuestos por el GORE y el CORE (evento 20260819-7)."
+  renzo_trisotti:
+    nombre: Renzo Trisotti
+    cargo: Senador de la República
+    partido: Partido Republicano
+    cargos:
+      - cargo: Senador por la 2ª Circunscripción (Tarapacá)
+        desde: 2026-03-11
+    notas: "Abogado. Diputado por el distrito 2 de Tarapacá por tres períodos (2014-2026); renunció a la UDI en 2023 y se incorporó al Partido Republicano en 2025. Electo senador por Tarapacá 2026-2034."
+  mauricio_soria:
+    nombre: Mauricio Soria
+    cargo: Alcalde de Iquique
+    notas: "Durante la emergencia por el sistema frontal de agosto de 2026 reportó 102 viviendas con daño mayor y 869 con daño menor en la comuna, además del cierre de la ruta costera y la evacuación de una sección del hospital (evento 20260819-7)."
   camila_vallejo:
     nombre: Camila Vallejo Dowling
     cargo: Exvocera de Gobierno, diputada (PC)
@@ -10017,11 +10063,36 @@ people:
     nombre: Ricardo Vargas Pizarro
     cargo: Comerciante
     notas: "Hermano del alcalde de Arica, Orlando Vargas. Detenido en el Complejo Fronterizo Santa Rosa (Perú) el 18 de agosto de 2026 por tráfico ilícito de migrantes agravado. Transportaba 2 venezolanos y 1 niño peruano. En 1993 fue condenado por tráfico de estupefacientes."
+  kendra_lemus:
+    nombre: Kendra Lemus
+    cargo: Presidenta del Centro de Estudiantes del Liceo Rayen Mapu
+    notas: "Presidenta del Centro de Estudiantes del Liceo Rayen Mapu de Quellón. Confirmó a Radio Bío-Bío que el celular nunca fue encontrado tras el procedimiento policial (agosto 2026)."
+  jorge_mancilla:
+    nombre: Jorge Mancilla
+    cargo: Presidente del Colegio de Profesores de Quellón
+    notas: "Presidente del Colegio de Profesores de Quellón y docente del Liceo Rayen Mapu. Manifestó esperanza de que se esclarezcan los hechos y se busque justicia para los alumnos afectados (agosto 2026)."
+  enrique_gutierrez_aquea:
+    nombre: Enrique Gutiérrez Aquea
+    cargo: Prefecto de Carabineros Chiloé-Palena
+    notas: "Teniente coronel, prefecto de la Prefectura de Carabineros Chiloé-Palena. Confirmó que la institución tomó conocimiento del descontento y dispuso investigación administrativa interna por el procedimiento en el Liceo Rayen Mapu (agosto 2026)."
+  carlos_mancilla:
+    nombre: Carlos Mancilla
+    cargo: Fundador de Incoludido
+    notas: "Fundador y Gerente de Felicidad de Social Growing, la empresa detrás de Incoludido. Creador de la marca de papel higiénico Incoludido para combatir la colusión (2018). Posteriormente denunciado por estafa a más de 600 inversionistas a través de la plataforma de inversiones de Incoludido."
+  jose_tomas_lira_larrain:
+    nombre: José Tomás Lira Larraín
+    cargo: Jefe de Gabinete de la Subsecretaría de Educación Superior
+    organizacion: subsecretaria_educacion_superior
+    notas: "Abogado de 27 años, recién titular hace 8 meses al momento de su designación (ago-2026). Primera experiencia en el sector público. Sueldo bruto julio $4,8M; mayo/junio $10M cada uno por cancelación retroactiva. Investigación de FastCheck (20-ago-2026) cuestiona designación en el marco de la 'generación sin currículum'."
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
     tipo: sindicato
     notas: "Central sindical chilena, convocante de la huelga general del 12 de noviembre de 2019."
+  subsecretaria_educacion_superior:
+    nombre: Subsecretaría de Educación Superior
+    tipo: subsecretaria
+    notas: "Subsecretaría dependiente del Ministerio de Educación, encargada de la regulación y supervisión de las instituciones de educación superior en Chile. Titular: Francisco Zambrano (ago-2026)."
   capredena:
     nombre: Capredena
     tipo: organismo_estado
@@ -10261,7 +10332,7 @@ organizations:
     nombre: Panimex
     tipo: empresa_quimica
     pais: Chile
-    notas: "Empresa quimica de Quilicura dedicada a resinas, plastificantes y materias primas para plasticos y pinturas. Acumula cuatro incendios de gran magnitud en 13 anos (2013, 2014, 2017 y 2026)."
+    notas: "Empresa quimica de Quilicura dedicada a resinas, plastificantes y materias primas para plasticos y pinturas. Acumula cuatro incendios de gran magnitud en 13 años (2013, 2014, 2017 y 2026)."
   agrosuper:
     nombre: Agrosuper
     tipo: empresa_agroindustrial
@@ -10779,6 +10850,16 @@ organizations:
     nombre: Carabineros de Chile
     tipo: policia
     pais: Chile
+  departamento_asuntos_internos_carabineros:
+    nombre: Departamento de Asuntos Internos de Carabineros
+    tipo: unidad_policial
+    pais: Chile
+    notas: "Unidad interna de Carabineros encargada de investigar delitos y faltas cometidos por uniformados. Responsable de las detenciones de la 13ª Comisaría de La Granja por vínculos con el narcotráfico (agosto 2026)."
+  13_comisaria_la_granja:
+    nombre: 13ª Comisaría de La Granja
+    tipo: comisaria
+    pais: Chile
+    notas: "Comisaría ubicada en la comuna de La Granja, Región Metropolitana. En agosto 2026, tres de sus funcionarios fueron detenidos por Asuntos Internos por vínculos con el narcotráfico (cohecho, armas prohibidas, microtráfico)."
   cplt:
     nombre: Consejo para la Transparencia (CPLT)
     tipo: organismo_autonomo
@@ -11081,6 +11162,16 @@ organizations:
     tipo: ong
     pais: Chile
     notas: Organización dedicada a la transparencia y probidad pública. Su director Juan José Lyon criticó al ministro Quiroz.
+  chile_transparente:
+    nombre: Chile Transparente
+    tipo: ong
+    pais: Chile
+    notas: Capítulo chileno de Transparencia Internacional. Advirtió riesgo de tráfico de influencias por falta de actas del Comité de Proyectos del SEIA (caso Alto Santorini).
+  uchiletv:
+    nombre: UChileTV
+    tipo: canal_television
+    pais: Chile
+    notas: "Canal de televisión de la Universidad de Chile. Emite el programa Descabelladas (miércoles), donde la exministra Camila Vallejo criticó la reforma constitucional de seguridad del gobierno Kast (19-ago-2026)."
   sea:
     nombre: Servicio de Evaluación Ambiental
     tipo: servicio_publico
@@ -14043,6 +14134,21 @@ organizations:
     tipo: institucion_publica
     pais: Chile
     notas: "Unidad especializada de la PDI a cargo de las diligencias del caso de la red de narcotráfico vinculada al Cartel Jalisco Nueva Generación (agosto 2026)."
+  soser:
+    nombre: SOSER S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa prestadora de servicios de alimentación escolar a la Junaeb. Investigada por la Fiscalía de Alta Complejidad Metropolitana Oriente por presuntos delitos de fraude al fisco, cohecho, lavado de activos y tráfico de influencias en licitaciones del Programa de Alimentación Escolar (PAE), principalmente en la Región de O'Higgins. Raciones infladas, certificados falsos, registros adulterados y sobornos a funcionarios (agosto 2026)."
+  fiscalia_alta_complejidad_metropolitana_oriente:
+    nombre: Fiscalía de Alta Complejidad Metropolitana Oriente
+    tipo: fiscalia
+    pais: Chile
+    notas: "Fiscalía que instruye el caso SOSER/Junaeb. La fiscal Constanza Encina Calquin lidera la investigación por cohecho, fraude al fisco, lavado de activos y tráfico de influencias en licitaciones de alimentación escolar (agosto 2026)."
+  brigada_anticorrupcion_pdi:
+    nombre: Brigada Anticorrupción de la PDI
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Unidad de la PDI que ejecutó los allanamientos simultáneos en el marco del caso SOSER/Junaeb: más de 80 funcionarios desplegados en RM y Valparaíso (agosto 2026)."
   puerto_san_antonio:
     nombre: Puerto de San Antonio
     tipo: institucion_publica
@@ -14425,7 +14531,75 @@ organizations:
     nombre: Human Rights Watch
     tipo: organismo_ddhh
     notas: "Organización internacional de derechos humanos. En octubre de 2019 emitió comunicado exigiendo al gobierno chileno que respete los DDHH durante el estallido social."
+  slep_chiloe:
+    nombre: SLEP Chiloé
+    tipo: servicio_local_educacion
+    notas: "Servicio Local de Educación Pública de Chiloé. Inició recopilación de antecedentes tras el procedimiento policial en el Liceo Rayen Mapu de Quellón (agosto 2026). La Unidad de Apoyo Técnico-Pedagógica (UATP) acudió al establecimiento para verificar la correcta aplicación del protocolo de actuación."
+  liceo_rayen_mapu:
+    nombre: Liceo Rayen Mapu
+    tipo: establecimiento_educacional
+    notas: "Liceo ubicado en Quellón, Región de Los Lagos. En agosto 2026, el Centro de Estudiantes denunció un procedimiento policial inadecuado contra estudiantes de Segundo Medio tras la sustracción de un celular."
+  defensoria_ninez:
+    nombre: Defensoría de la Niñez
+    tipo: organismo_estado
+    notas: "Organismo estatal encargado de la protección de los derechos de la niñez y adolescencia en Chile. Fue interpelada por la diputada Emilia Schneider en relación con el procedimiento policial en el Liceo Rayen Mapu de Quellón (agosto 2026)."
+  centro_estudiantes_rayen_mapu:
+    nombre: Centro de Estudiantes del Liceo Rayen Mapu
+    tipo: organizacion_estudiantil
+    notas: "Centro de Estudiantes del Liceo Rayen Mapu de Quellón. En agosto 2026 denunció públicamente un procedimiento policial inadecuado contra estudiantes de Segundo Medio."
+  sexta_comisaria_quellon:
+    nombre: Sexta Comisaría de Quellón
+    tipo: unidad_carabineros
+    notas: "Unidad de Carabineros en Quellón, Región de Los Lagos. Su jefe, Gonzalo Morales, declaró que no existe denuncia formal contra el actuar policial en el caso del Liceo Rayen Mapu (agosto 2026)."
+  ley_21430:
+    nombre: Ley N° 21.430
+    tipo: legislacion
+    notas: "Ley sobre Garantías y Protección Integral de los Derechos de la Niñez y Adolescencia. Establece protección frente a injerencias arbitrarias en la vida privada de niños, niñas y adolescentes."
+  indh_los_lagos:
+    nombre: INDH Los Lagos
+    tipo: delegacion_regional
+    notas: "Delegación regional del Instituto Nacional de Derechos Humanos en Los Lagos. Evalúa querellarse contra Carabineros por el procedimiento en el Liceo Rayen Mapu de Quellón (agosto 2026)."
+  diario_el_ranco:
+    nombre: Diario El Ranco
+    tipo: medio_comunicacion
+    notas: "Diario regional de la Región de Los Ríos. Cubrió la denuncia del procedimiento policial en el Liceo Rayen Mapu de Quellón (agosto 2026)."
+  mirada_sur_tv:
+    nombre: Mirada Sur TV
+    tipo: medio_comunicacion
+    notas: "Medio digital regional de la Región de Los Lagos. Cubrió la denuncia del procedimiento policial en el Liceo Rayen Mapu de Quellón y la evaluación del INDH Los Lagos de querellarse (agosto 2026)."
+  incoludido:
+    nombre: Incoludido
+    tipo: empresa
+    notas: "Empresa chilena creada en 2016 por Carlos Mancilla a través de Social Growing. Originalmente una iniciativa de comercio justo para combatir la colusión del papel higiénico, lanzó su propia marca del producto en 2018. Posteriormente se transformó en plataforma de inversiones no regulada que estafó a más de 600 personas con retornos prometidos superiores al 16%. Denunciada por la CMF en enero 2023 por invasión del giro bancario. Caso revelado por 24 Horas Reportajes en agosto 2026."
+  social_growing:
+    nombre: Social Growing
+    tipo: empresa
+    notas: "Empresa de Carlos Mancilla dedicada a crear empresas con impacto social. Creadora de Incoludido y de la marca de papel higiénico homónima. También conocida como 'Gerente de Felicidad'."
+  cmpc:
+    nombre: CMPC
+    tipo: empresa
+    notas: "Empresa chilena de celulosa y papel (antes Compañía Manufacturing de Papel). Condenada por el TDLC por su participación en la colusión del papel higiénico junto a SCA Chile."
+  sca_chile:
+    nombre: SCA Chile
+    tipo: empresa
+    notas: "Filial chilena de Svenska Cellulosa Aktiebolaget (SCA), empresa sueca de productos de higiene. Condenada por el TDLC por colusión del papel higiénico junto a CMPC. La Corte Suprema rechazó en 2024 las demandas de SERNAC y CONADECUS contra SCA por prescripción."
 cifras:
+  fndr_emergencia_tarapaca:
+    nombre: Recursos del FNDR dispuestos por el Gobierno Regional de Tarapacá y el CORE para la emergencia de agosto de 2026
+    unidad_default: millones_pesos
+    notas: "El GORE Tarapacá y el CORE dispusieron el 2% del FNDR ($1.510 millones) para enfrentar la emergencia por lluvias; el gobernador José Miguel Carvajal calificó la cifra como insuficiente frente a los daños y pidió al gobierno central recursos complementarios (evento 20260819-7)."
+  votos_caza_perros_comision:
+    nombre: Votos a favor de la aprobación en general de la fusión de proyectos sobre perros asilvestrados en la Comisión de Agricultura
+    unidad_default: votos
+    notas: "La Comisión de Agricultura de la Cámara aprobó en general la fusión de tres proyectos (boletines 16.962-01, 18.269-01 y 18.400-01) con 10 votos a favor y 2 en contra (Sofía González PC y Emilia Nuyado PS) el 11-ago-2026; autoriza control letal de perros asilvestrados modificando la Ley de Caza (evento 20260811-26)."
+  duracion_maxima_estado_excepcion_seguridad:
+    nombre: Duración máxima del nuevo estado de excepción de seguridad pública
+    unidad_default: dias
+    notas: "La reforma constitucional de seguridad ingresada al Senado el 17-ago-2026 permite invocar el quinto estado de excepción hasta por 240 días corridos (120 iniciales prorrogables por otros 120) sin necesidad de acuerdo del Congreso (eventos 20260817-8 y 20260820-8)."
+  proyectos_aprobados_comite_seia:
+    nombre: Proyectos de inversión aprobados desde marzo de 2026 bajo el sistema de seguimiento de Hacienda
+    unidad_default: proyectos
+    notas: "Hacienda aseguró que desde marzo de 2026 se aprobaron 138 proyectos por unos US$21 mil millones, y que Alto Santorini siguió la misma institucionalidad que cualquier otra iniciativa; el sistema solo controla plazos, no define aprobaciones (evento 20260818-17)."
   pase_cultural_undurraga:
     nombre: Presupuesto del Pase Cultural bajo el gobierno de Kast
     unidad_default: pesos
@@ -18310,4 +18484,3 @@ cifras:
   amuch:
     nombre: Asociación de Municipalidades de Chile (AMUCH)
     tipo: gremio
-    notas: "Asociación que agrupa a municipalidades de Chile. Director ejecutivo: Andrés Chacón."

@@ -373,9 +373,16 @@ Cada Cuenta Pública presidencial ante el Congreso Pleno tiene **un evento maste
 
 - `entities.yaml`: agregar persona/org/cifra nueva en su seccion correspondiente.
 - `sources.yaml`: formato `id-slug: { tipo, medio, titulo, autor, fecha, url }`.
-- **Campo `medio:` de `sources.yaml`**: debe ser EXACTAMENTE el `nombre` de una org de prensa de `entities.yaml` (tipo `medio_comunicacion` | `red_social` | `canal_television` | `programa_tv` | `programa_streaming`). Si el emisor NO es prensa (institucion del Estado, encuestadora, plataforma social/documento, publicacion academica), usar el nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate.mjs`. `pnpm run validate` (corre antes del build) falla con el ID de la fuente si el `medio:` no cumple la regla, y detecta mojibake de doble-encoding UTF-8 en los 5 YAML de datos.
+- **Campo `medio:` de `sources.yaml`**: debe ser EXACTAMENTE el `nombre` de una org de prensa de `entities.yaml` (tipo `medio_comunicacion` | `red_social` | `canal_television` | `programa_tv` | `programa_streaming`). Si el emisor NO es prensa (institucion del Estado, encuestadora, plataforma social/documento, publicacion academica), usar el nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate.mjs`. `pnpm run validate` (corre antes del build) falla con el ID de la fuente si el `medio:` no cumple la regla. Ver seccion "Encoding y edicion concurrente" para el detector de mojibake.
 - `topics.yaml`: formato `id: { nombre, descripcion, relacionados: [] }`.
 - `colectivos.yaml` / `sectores.yaml`: agregar string al array plano.
+
+### Encoding y edicion concurrente (incidente 20-ago-2026)
+
+- **NUNCA usar PowerShell `Set-Content`/`Out-File`/`Add-Content` ni redireccion `>` sobre archivos del repo**: reescriben el archivo completo con encoding ANSI/CRLF de Windows y corrompen UTF-8 (un solo rename con `Set-Content` genero un diff de 31 mil lineas). Para transformaciones masivas usar scripts Node con `readFileSync`/`writeFileSync` explicitos en `utf8`, o las herramientas Edit/Write del agente.
+- **Valores YAML que empiezan con caracteres reservados** (`@`, `*`, `&`, `%`) deben ir entre comillas: `autor: "@hernan_sr"`. Sin comillas rompe el parseo (`@` es reservado).
+- **validate parsea los 5 YAML de datos al inicio** con mensaje limpio (archivo + linea) y su detector de mojibake cubre: doble-encoding clasico (C2/C3), controles C1 (UTF-8 leido como CP1252, ej. em-dash `â€”`), U+FFFD, cirilico y Latin Ext-A/B. Reporta hasta 3 lineas de ejemplo. Si agregas un nombre extrano legitimo que dispare falso positivo, ajustar `MOJIBAKE_RE`.
+- **Edicion concurrente**: antes de operaciones masivas verificar `git status`; si otro agente/sesion esta activo, coordinar (esta sesion convivio con otra editando los mismos YAML). Protocolo de recuperacion probado: (1) copiar el archivo dañado a temp FUERA del repo; (2) `git checkout -- <archivo>` para volver a HEAD; (3) re-aplicar las entradas propias extrayendolas del backup con un script Node (split por IDs top-level) y concatenando en utf8; (4) `node scripts/validate.mjs` tras cada paso. Nunca "arreglar a mano" alrededor de un parse roto sin validar.
 
 ## Build y verificacion
 
@@ -500,7 +507,7 @@ Cuando descubras algo no documentado aqui:
 | `gob` | Gobierno de Chile | `www.gob.cl/sitemap-articles.xml` | — | 4 | 1 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
 | `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 11.486 | 1 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 11.812 | 1 |
 | `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
@@ -523,51 +530,51 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 419
+**Total de eventos:** 437
 
-**Cobertura de fuentes:** 218 de 419 eventos con 3+ fuentes (201 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 229 de 437 eventos con 3+ fuentes (208 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 316
+- 2026: 329
 - 2025: 15
-- 2024: 10
+- 2024: 12
 - 2023: 14
 - 2022: 9
 - 2021: 6
-- 2020: 22
+- 2020: 23
 - 2019: 22
-- 2017: 1
-- 2015: 2
+- 2017: 2
+- 2015: 3
 - 2010: 1
 - 2009: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (140)
-- Justicia (105)
-- Economia (100)
-- Defensa y seguridad (71)
-- Administración pública (65)
-- Derechos humanos (53)
-- Proceso legislativo (43)
-- Emergencia y catástrofes (39)
-- Gobierno y gestion presidencial (37)
+- Politica (145)
+- Justicia (116)
+- Economia (106)
+- Defensa y seguridad (78)
+- Administración pública (68)
+- Derechos humanos (55)
+- Proceso legislativo (45)
+- Emergencia y catástrofes (40)
+- Gobierno y gestion presidencial (38)
 - Finanzas publicas (36)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (80)
+- accion (84)
 - publicacion (74)
-- resultado (61)
-- investigacion (49)
+- resultado (62)
+- investigacion (53)
 - anuncio (35)
-- reaccion (26)
+- reaccion (29)
+- fallo_judicial (28)
 - declaracion (26)
-- fallo_judicial (24)
-- votacion (15)
+- votacion (16)
 - decreto (9)
 
 **Entidades registradas:**
-- Personas: 1534
-- Organizaciones: 908
-- Cifras: 984
-- Fuentes: 3653
+- Personas: 1549
+- Organizaciones: 929
+- Cifras: 988
+- Fuentes: 3727
 - Temas: 74
