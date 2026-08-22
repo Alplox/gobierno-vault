@@ -34,6 +34,9 @@
 | Manifestación masiva "Nunca más sin nosotras" por el 8M en el contexto del estallido | 2020-03-08 | accion | ⬜ |
 | Golpiza a Patricio Bao (76) tras la marcha del 8M (video de oro Radio Villa Francia) | 2020-03-09 | accion | ⬜ (fuente: estallidosocial.com) |
 | Protesta estudiantil del 3-jun-2026 contra recortes de Kast — seguimiento: verificar el desenlace de la querella por la estudiante herida y las tomas de liceos de agosto de 2026 | 2026-08 | seguimiento | ⬜ |
+| Arista Elisa Correa: El Ciudadano publicó que la evidencia apunta a que Carabineros realizó una quema al interior de esa estación del Metro (línea de investigación paralela a La Granja, evento `20220502-1`); corroborar con prensa/judicial antes de crear evento | 2022-03 (aprox.) | investigacion | ⬜ (Origen: https://www.elciudadano.com/especiales/chiledesperto/evidencia-apunta-a-que-carabineros-realizo-quema-al-interior-de-estacion-elisa-correa-del-metro/03/03) |
+| Libro "¿Quién quemó el metro? Las revelaciones de una investigación periodística y forense" de Josefa Barraza: registrar como evento `publicacion` propio (fuente ya registrada: `adnradio-2024-10-18-quien-quemo-el-metro-cinco-anos`; obtener fecha exacta de publicación y portada de prensa del lanzamiento) | ~2023 | publicacion | ⬜ |
+| Estado actual (2025-2026) de las causas abiertas por incendios de estaciones del Metro en el 18-O: último balance público es el de los 5 años (evento `20241018-1`: solo 3 condenas firmes por incendio); verificar si hubo nuevas condenas, cierres o reaperturas desde entonces | 2026 | resultado | ⬜ (buscar en catálogo sitemaps: 'incendio estacion metro', 'condenados metro', 'quema metro') |
 ### Repositorios / compilaciones de registro ciudadano (para un evento/investigación de catálogo)
 | Repositorio | Tipo | Estado |
 |---|---|---|

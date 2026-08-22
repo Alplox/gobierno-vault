@@ -321,6 +321,12 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'gob.cl': 'gob',
   'abif.cl': 'abif',
   'amchamchile.cl': 'amchamchile',
+  'chilevision.cl': 'chilevision',
+  'lacuarta.com': 'lacuarta',
+  'nuevopoder.cl': 'nuevopoder',
+  'lahora.cl': 'la_hora',
+  'elperiodico.cl': 'elperiodico',
+  'diarioconcepcion.cl': 'diarioconcepcion',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -362,6 +368,12 @@ const CATALOG_MEDIO_NAMES = {
   gob: 'Gobierno de Chile',
   abif: 'ABIF',
   amchamchile: 'AmCham Chile',
+  chilevision: 'Chilevisión',
+  lacuarta: 'La Cuarta',
+  nuevopoder: 'Nuevo Poder',
+  la_hora: 'La Hora',
+  elperiodico: 'El Periódico',
+  diarioconcepcion: 'Diario Concepción',
 };
 
 function catalogExists() {

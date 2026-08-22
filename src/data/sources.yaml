@@ -1,3 +1,48 @@
+biobiochile-2026-08-19-lastarria-molotov-overoles:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Overoles blancos lanzan bombas molotov en exterior de Liceo Lastarria: clases fueron suspendidas"
+  autor: David Vergara
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/19/nuevos-incidentes-en-exterior-del-liceo-lastarria-corte-de-calle-y-lanzamiento-de-bombas-molotov.shtml
+  notas: "Corte de avenida Providencia por 'overoles blancos', lanzamiento de artefactos incendiarios en enfrentamiento con Carabineros, despliegue de COP con carro lanzaaguas, sin heridos ni detenidos e incautación de materiales; clases suspendidas con retoma normal al día siguiente (evento 20260819-8)."
+
+adnradio-2026-08-19-lastarria-barricadas:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Desmanes en Providencia: encienden barricadas en las afueras del Liceo José Victorino Lastarria"
+  autor: Cristóbal Álvarez
+  fecha: 2026-08-19
+  url: https://www.adnradio.cl/2026/08/19/desmanes-en-providencia-encienden-barricadas-en-las-afueras-del-liceo-jose-victorino-lastarria/
+  notas: "Barricadas encendidas por un grupo aparentemente de escolares en la intersección de avenida Providencia con Miguel Claro; intervención de Carabineros y corte de calzada, sin detenidos ni lesionados al cierre de la nota (evento 20260819-8)."
+
+elmostrador-2026-08-19-lastarria-20-molotov:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Incidentes en el Lastarria: lanzan hasta 20 bombas molotov contra Carabineros en Providencia"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-19
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/19/incidentes-en-el-lastarria-lanzan-hasta-20-bombas-molotov-contra-carabineros-en-providencia/
+  notas: "Balance del mayor Ignacio Ramírez (comisario subrogante, 19ª Comisaría de Providencia): cerca de 60 jóvenes con salida anticipada, entre 15 y 20 artefactos incendiarios, incautación de overoles, líquido acelerante y botellas dentro y fuera del liceo, clases suspendidas de forma anticipada, sin panfletos con demandas específicas (evento 20260819-8)."
+
+chicureohoy-2026-08-19-lastarria-suspension-clases:
+  tipo: prensa
+  medio: Chicureo Hoy
+  titulo: "Incidentes en el Liceo Lastarria: overoles blancos lanzan molotov y obligan a suspender clases"
+  autor: Chicureo Hoy
+  fecha: 2026-08-19
+  url: https://www.chicureohoy.cl/actualidad/incidentes-en-el-liceo-lastarria-overoles-blancos-lanzan-molotov-y-obligan-a-suspender-clases/
+  notas: "Detalle del corte de tránsito entre Miguel Claro y Manuel Montt, desvíos por Eliodoro Yáñez y Miguel Claro, reapertura de avenida Providencia a las 10:38, suspensión de las jornadas tarde y vespertina, y denuncia de la directora del liceo por barricadas (evento 20260819-8)."
+
+lanacion-2026-08-19-lastarria-barricadas:
+  tipo: prensa
+  medio: La Nación
+  titulo: "Encapuchados encendieron barricadas afuera del Liceo Lastarria de Providencia"
+  autor: Patricia Schüller Gamboa
+  fecha: 2026-08-19
+  url: https://www.lanacion.cl/encapuchados-encendieron-barricadas-afuera-del-liceo-lastarria-de-providencia/
+  notas: "Reporte basado en Emol: barricadas encendidas por encapuchados presuntamente estudiantes cerca de las 10:00, sofocadas por personal policial; reapertura de avenida Providencia al oriente desde Miguel Claro a las 10:38 (evento 20260819-8)."
+
 infogate-2026-08-13-leiva-cancerbero-bukele:
   tipo: prensa
   medio: Infogate
@@ -27784,14 +27829,14 @@ canal9-2026-06-04-kast-embajadores-israel:
   url: https://www.canal9.cl/episodios/2026/06/04/kast-designa-a-los-nuevos-embajadores-de-chile-en-ecuador-paises-bajos-el-vaticano-e-israel
   notas: "Cobertura de la designación del 4 de junio de 2026: Chile no contaba con representante en Israel desde hacía dos años."
 
-contrapoderchile-2026-06-20-suboficial-acoso-general-alvarado:
+contrapoderchile-2026-06-22-suboficial-ministra-mujer-sin-respuesta:
   tipo: noticia
   medio: Contrapoder Chile
   titulo: "Suboficial de Carabineros denunció acoso de un general ante la ministra de la Mujer, pero no hizo nada"
   autor: Contrapoder Chile
-  fecha: 2026-06-20
+  fecha: 2026-06-22
   url: https://contrapoderchile.cl/suboficial-de-carabineros-denuncio-acoso-de-un-general-ante-la-ministra-de-la-mujer-pero-no-hizo-nada/
-  notas: "Investigación que revela la tutela laboral interpuesta el 17 de junio de 2026 ante el Juzgado de Letras del Trabajo de Punta Arenas contra el general de Carabineros y jefe de Zona de Magallanes, Marco Antonio Alvarado, por acoso laboral, maltrato y retiro forzado de la suboficial mayor Nelty Álvarez, ex escolta de Bachelet. Documenta además la carta enviada el 10 de abril a la ministra de la Mujer Judith Marín sin respuesta, la respuesta del ministerio ('solo ven casos de parejas') y el encuentro fortuito de Álvarez con el presidente Kast en calle Morandé, cuyo asesor tomó nota sin que nadie la llamara; días después fue dada de baja. Declaraciones del abogado Fernando Leal."
+  notas: "Contrapoder Chile (22-jun-2026, seguimiento del revelado del 20-jun): Segunda parte de la investigación sobre la suboficial mayor Nelty Álvarez. Documenta la carta enviada el 10-abr-2026 a la ministra de la Mujer Judith Marín solicitando su intervención, un control exhaustivo a Carabineros, que exigiera al general director Araya Zapata iniciar un sumario y una audiencia para entregar un dosier; la reunión en el ministerio con la jefa de gabinete Alejandra Correa y la asesora Tatiana de León ('no estaba sola', le dieron sus teléfonos); la respuesta posterior del funcionario Diego Álvarez ('no era posible ayudarme, porque solo veían casos de parejas, es decir, maltrato en contexto de violencia intrafamiliar, no de instituciones'); la derivación prometida a derechos humanos de Carabineros que nunca ocurrió; el encuentro fortuito con el presidente Kast en Morandé (su asesor 'de apellido Valenzuela' tomó nota y nadie la contactó); la baja días después; y el argumento del abogado Fernando Leal sobre el incumplimiento del deber de denuncia del Ministerio de la Mujer. Al cierre del reportaje, el Ministerio seguía sin responder."
 
 laprensaaustral-2026-06-23-suboficial-tutela-general-alvarado:
   tipo: noticia
@@ -29644,14 +29689,14 @@ eldesconcierto-2026-08-17-carabineros-168-acoso:
   fecha: 2026-08-17
   url: https://eldesconcierto.cl/actualidad/carabineros-y-denuncias-abuso-y-acoso-sexual-168-funcionaros-acusados-un-ano-y-solo-un-sancionado-n5461420
 
-contrapoder-2026-07-03-general-alvarado-nelty-alvarez:
+contrapoderchile-2026-06-20-denuncian-general-alvarado-tutela:
   tipo: denuncia
   medio: Contrapoder Chile
   titulo: "Denuncian a general de Carabineros de Magallanes por acoso y maltrato a exescolta de la Presidenta Michelle Bachelet"
   autor: Contrapoder Chile
-  fecha: 2026-07-03
+  fecha: 2026-06-20
   url: https://contrapoderchile.cl/denuncian-a-general-de-carabineros-de-magallanes-por-acoso-y-maltrato-a-exescolta-de-la-presidenta-michelle-bachelet/
-  notas: "Tutela laboral contra general Marco Antonio Alvarado (jefe de Zona Magallanes). Víctima: suboficial mayor Nelty Álvarez, 35 años de carrera, exescolta de Bachelet. Inició por gaseo en práctica de tiro que le afectó la visión. Juzgado acogió tutela, audiencia 4 agosto."
+  notas: "Contrapoder Chile (20-jun-2026; nota corregida el 22-jun según dateModified): Revelación de la tutela laboral interpuesta el 17-jun-2026 ante el Juzgado de Letras del Trabajo de Punta Arenas contra el general Marco Antonio Alvarado (jefe de Zona Magallanes y Antártica Chilena) por acoso laboral, maltrato y despido injustificado de la suboficial mayor Nelty Álvarez (35+ años de carrera, exescolta de Bachelet y de Adriana Muñoz). Detalla: gaseo lesional en práctica de tiro del 6-mar-2025 (teniente Carlos Campos Pérez), audiencia con gritos del general, licencias médicas con indicación psiquiátrica durante 2025, propuesta de baja temporal por 'enfermedad común' (feb-2026), retiro dictado por la Comisión Médica a los 34 años y 10 meses (límite de 35 años que cumplía el 16-may-2026) con coacción al retiro voluntario, y declaración del abogado Fernando Leal sobre conducta 'misógina y discriminatoria'. El Juzgado acogió la tutela y fijó primera audiencia para el 4-ago-2026."
 
 ciper-chile-2026-08-14-porceltv-nuevo-negocio-tvn:
   tipo: investigacion
@@ -31903,3 +31948,1101 @@ latercera-2026-07-27-fiscalia-57-minutos-megaincendio:
   fecha: 2026-07-27
   url: https://www.latercera.com/nacional/noticia/fiscalia-de-valparaiso-detalla-cadena-de-decisiones-que-hicieron-perder-57-minutos-para-evacuacion-en-megaincendio/
   notas: "La Tercera (27-jul-2026): crónica de la formalización de Juan Atienza (exjefe del Deprif de CONAF Valparaíso) y Luis Correa Jiménez (excomandante de Incidentes del PMU) por cuasidelito de homicidio respecto de las 138 víctimas. Cronología fiscal: 17:35 el vigilador Fernando Concha Montesinos reporta por radio el foco de Fundos Siete Hermanas; 17:40 la información útil estaba disponible; 18:08 el fuego cruza el estero Marga Marga (Quilpué); 18:37 llega al Jardín Botánico donde mueren Patricia Esmeralda Araya Sánchez, su madre y dos nietos; 18:41 SENAPRED emite el SAE por iniciativa propia. Medida: reclusión domiciliaria total, arraigo y 180 días de investigación. Verificado por lectura directa."
+
+24horas-2019-11-07-os9-detiene-sospechoso-granja:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "OS9 de Carabineros detiene a sospechoso de quemar el Metro La Granja"
+  autor: "24 Horas"
+  fecha: 2019-11-07
+  url: https://www.24horas.cl/nacional/os9-de-carabineros-detiene-a-sospechoso-de-quemar-el-metro-la-granja-3712302
+  notas: "24 Horas / Teletrece (7-nov-2019): OS-9 de Carabineros detiene en la comuna de La Granja, junto a la Fiscalía, a un hombre de 33 años vinculado al incendio de la estación La Granja de la Línea 4A; segunda detención por los ataques a estaciones. Primer antecedente judicial del caso que terminaría en dos juicios orales."
+
+radio-uchile-2021-01-19-corte-anula-absolucion-pedrero:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Corte anula absolución a acusados de quemar Metro Pedrero y ordena nuevo proceso"
+  autor: Radio Universidad de Chile
+  fecha: 2021-01-19
+  url: https://radio.uchile.cl/2021/01/19/corte-anula-absolucion-a-acusados-de-quemar-metro-pedrero-y-ordena-nuevo-proceso/
+  notas: "Radio U. de Chile (19-jan-2021): la Corte de Apelaciones de Santiago anuló la absolución de los dos acusados por el incendio de la estación Pedrero y ordenó un nuevo juicio oral. El caso Pedrero terminaría siendo el único con condena firme por incendio de una estación."
+
+biobiochile-2021-05-12-culpable-pedrero-segundo-juicio:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Declaran culpable a uno de los acusados por incendio en Metro Pedrero durante segundo juicio oral"
+  autor: BioBioChile
+  fecha: 2021-05-12
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2021/05/12/declaran-culpable-a-uno-de-los-acusados-por-incendio-en-metro-pedrero-durante-segundo-juicio-oral.shtml
+  notas: "BioBioChile (12-may-2021): veredicto del segundo juicio oral por el incendio de la estación Pedrero —culpable solo uno de los dos acusados (B.E.S.M.), su tío Daniel Morales absuelto—. La sentencia se conoció el 20-may-2021 (theclinic-2021-05-20-sentencia-pedrero)."
+
+biobiochile-2021-03-05-inicio-juicio-la-granja:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Inicio juicio contra acusados de incendiar estación La Granja del Metro; arriesgan 15 años de cárcel"
+  autor: BioBioChile
+  fecha: 2021-03-05
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2021/03/05/inicio-juicio-contra-acusados-de-incendiar-estacion-la-granja-del-metro-arriesgan-15-anos-de-carcel.shtml
+  notas: "BioBioChile (5-mar-2021): inicio del primer juicio oral contra Omar Jerez Meza y Jeremy Ramírez Bravo por el incendio de la estación La Granja (Línea 4A) durante el 18-O; la Fiscalía pedía 15 años de presidio."
+
+biobiochile-2021-04-06-sentencia-la-granja:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Dos años de cárcel para autores de incendio y daños a estación de Metro La Granja durante 18-O"
+  autor: BioBioChile
+  fecha: 2021-04-06
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2021/04/06/dos-anos-de-carcel-para-autores-de-incendio-y-danos-a-estacion-de-metro-la-granja-durante-18-o.shtml
+  notas: "BioBioChile (6-abr-2021): sentencia del primer juicio por La Granja tras veredicto culpable del 27-mar-2021. Emol precisa las penas: Ramírez 540 días por daños consumados y Jerez 800 días por incendio en grado de tentativa; ambos absueltos del incendio consumado."
+
+emol-2021-06-09-ordenan-nuevo-juicio-quema-metro:
+  tipo: prensa
+  medio: Emol
+  titulo: "Corte de Apelaciones de San Miguel ordena nuevo juicio por quema de Metro La Granja durante el 18-O"
+  autor: Aton
+  fecha: 2021-06-09
+  url: https://www.emol.com/noticias/Nacional/2021/06/09/1023428/ordenan-nuevo-juicio-quema-metro.html
+  notas: "Emol (9-jun-2021): la Corte de Apelaciones de San Miguel acogió por unanimidad (rol 1.128-2021, ministros María Teresa Letelier, María Teresa Díaz y Marcelo Ovalle Bazán) el recurso de nulidad del Ministerio Público y los querellantes (Interior y Metro): errónea calificación jurídica de los delitos (art. 476 n°2 vs art. 475 n°1 CP) influyó en lo dispositivo del fallo. Detalla además la primera sentencia (Ramírez 540 días por daños, Jerez 800 días por tentativa de incendio). Verificado por lectura directa."
+
+emol-2021-10-16-absuelven-acusados-incendio-la-granja:
+  tipo: prensa
+  medio: Emol
+  titulo: "Justicia absuelve a acusados de incendio en estación La Granja del Metro durante el 18-O"
+  autor: Aton
+  fecha: 2021-10-16
+  url: https://www.emol.com/noticias/Nacional/2021/10/16/1035587/Absuelven-acusados-incendio-la-granja.html
+  notas: "Emol (16-oct-2021, publicado 17-oct 01:00): el Sexto Tribunal de Juicio Oral en lo Penal de Santiago absolvió este sábado a Omar Enrique Jerez Meza y Jeremy Álex Ramírez Bravo del incendio calificado y daños agravados en fallo unánime —la Fiscalía no logró probar 'la calificación jurídica de los hechos y la participación culpable'—, aunque los tuvo por responsables del delito de daño y condenó solo a Ramírez a pena remitida de 540 días más suspensión de cargo u oficio. Reconstruye los hechos: ~23:30 del 18-oct-2019, dos focos en la oficina del supervisor y la boletería/recarga BIP. Verificado por lectura directa."
+
+latercera-2021-10-17-quien-quemo-el-metro:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "¿Quién quemó el Metro? La gran interrogante sobre los hechos de violencia que paralizaron Santiago"
+  autor: La Tercera
+  fecha: 2021-10-17
+  url: https://www.latercera.com/earlyaccess/noticia/quien-quemo-el-metro-la-gran-interrogante-sobre-los-hechos-de-violencia-que-paralizaron-santiago/MULQOG4C3BBKNIC6BWFWAU7YMQ/
+  notas: "La Tercera (17-oct-2021, a dos años del estallido; leído vía mirror r.jina.ai por earlyaccess): balance investigativo. Catastro oficial de Metro: 7 estaciones completamente incendiadas, 18 parcialmente quemadas, 93 con múltiples daños y 18 sin destrozos; daños avaluados en ~$615 millones. Minuta del Interior a la Cámara (23-oct-2019) sobre los incendios simultáneos; tesis de 'grupos organizados' de la vocera Cecilia Pérez (21-oct) desechada después por la Fiscalía (fiscal Oriente Manuel Guerra, feb-2020: coincidencia horaria por cierre anticipado). Única condena entonces: B.E.S.M. por Pedrero (tío Daniel Morales absuelto); 27 causas abiertas; factores: cámaras de baja calidad, equipos policiales sin dedicación exclusiva y pandemia; PDI revisó 20 mil horas de imágenes. Fiscales regionales citados: Guerra (Oriente), Héctor Barros (Sur), Xavier Armendáriz (Centro Norte), José Luis Pérez Calaf (Occidente); fiscal nacional Jorge Abbott."
+
+theclinic-2021-05-20-sentencia-pedrero:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "La sentencia que recibió el acusado del incendio del Metro Pedrero durante estallido social"
+  autor: The Clinic
+  fecha: 2021-05-20
+  url: https://www.theclinic.cl/2021/05/20/la-sentencia-que-recibio-el-acusado-del-incendio-del-metro-pedrero-durante-estallido-social/
+  notas: "The Clinic (20-may-2021): sentencia del segundo juicio oral por Pedrero —2 años de internación en régimen cerrado y 3 años semicerrado— para el único acusado declarado culpable del incendio (12-may), menor identificado como B.E.S.M.; su tío Daniel Morales resultó absuelto. Complementa biobiochile-2021-05-12 (veredicto)."
+
+emol-2021-11-25-suprema-rechaza-nulidad-pedrero:
+  tipo: prensa
+  medio: Emol
+  titulo: "Incendio Pedrero: Suprema rechaza nulidad y confirma condena"
+  autor: Emol
+  fecha: 2021-11-25
+  url: https://www.emol.com/noticias/Nacional/2021/11/25/1039507/incendio-pedrero-suprema-rechaza-nulidad.html
+  notas: "Emol (25-nov-2021): la Corte Suprema rechazó el recurso de nulidad contra la condena por el incendio de la estación Pedrero, dejándola ejecutoriada —la única condena firme por incendio de una estación del Metro durante el estallido social. Cobertura complementaria: theclinic-2021-11-25-suprema-condena-pedrero."
+
+theclinic-2021-11-25-suprema-condena-pedrero:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Corte Suprema confirma condena a adolescente por incendio de estación Metro Pedrero"
+  autor: The Clinic
+  fecha: 2021-11-25
+  url: https://www.theclinic.cl/2021/11/25/corte-suprema-condena-adolescente-incendio-estacion-metro-pedrero/
+  notas: "The Clinic (25-nov-2021): cobertura de la confirmación por la Corte Suprema de la condena al adolescente B.E.S.M. por el incendio de la estación Pedrero (regímenes Sename), primera condena firme por quema de una estación del Metro en el estallido."
+
+elperiodista-2022-05-rendon-querella-carabineros-metro:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Rendón interpone querella contra Carabineros por quema del Metro en el 18-O"
+  autor: El Periodista
+  fecha: 2022-05-01
+  url: https://www.elperiodista.cl/2022/05/rendon-interpone-querella-contra-carabineros-por-quema-del-metro-en-el-18-o/
+  notas: "El Periodista (may-2022): Luis Mariano Rendón interpone querella contra funcionarios de Carabineros por el incendio de la boletería de la estación La Granja la madrugada del 19 de octubre de 2019, motivada por el reportaje de La Red '¿Quién quemó el Metro?' (Mentiras Verdaderas) que mostró imágenes de policías ingresando a la boletería mientras se reavivaba el fuego."
+
+publimetro-2022-05-01-querella-funcionarios-policiales-metro:
+  tipo: prensa
+  medio: Publimetro
+  titulo: "Quema del Metro de Santiago: presentan querella contra funcionarios policiales"
+  autor: Publimetro
+  fecha: 2022-05-01
+  url: https://www.publimetro.cl/noticias/2022/05/01/quema-del-metro-de-santiago-presentan-querella-contra-funcionarios-policiales/
+  notas: "Publimetro (1-may-2022): da a conocer el ingreso de la querella de Rendón contra los funcionarios policiales que resulten responsables del delito de incendio en el caso de la quema del Metro de Santiago."
+
+elciudadano-2022-05-03-admiten-querella-carabineros-quema-metro:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Admiten querella contra Carabineros por quema del Metro La Granja"
+  autor: El Ciudadano
+  fecha: 2022-05-03
+  url: https://www.elciudadano.com/portada/admiten-querella-contra-carabineros-por-quema-del-metro/05/03/
+  notas: "El Ciudadano (3-may-2022): por resolución de la jueza Angélica Palacios, el 12° Juzgado de Garantía de Santiago admitió a trámite la querella de Luis Mariano Rendón contra los funcionarios de Carabineros y demás responsables del delito de incendio en la estación La Granja."
+
+lared-2022-05-03-rendon-entrevista-querella:
+  tipo: prensa
+  medio: La Red
+  titulo: "Abogado interpone querella contra Carabineros por quema del metro tras reportaje de La Red"
+  autor: La Red (Hola Chile)
+  fecha: 2022-05-03
+  url: https://www.lared.cl/2022/programas/hola-chile/abogado-interpone-querella-contra-carabineros-por-quema-del-metro-tras-reportaje-de-la-red
+  notas: "La Red, Hola Chile (3-may-2022): entrevista a Luis Mariano Rendón sobre su querella, motivada por el reportaje de Mentiras Verdaderas '¿Quién quemó el Metro?' emitido el jueves 28-abr-2022. Rendón cuestiona que los videos estuvieran en el expediente sin ser considerados por Fiscalía ni tribunal, y relata que Carmen Hertz anunció el 2-may la solicitud de una comisión investigadora sobre Interior, Carabineros y Metro, incluido el sistema de televigilancia VENUS. Fuente primaria es el propio canal emisor del reportaje; los hechos judiciales están corroborados por El Periodista, Publimetro y El Ciudadano."
+
+camara-2023-01-18-informe-comision-incendios-metro:
+  tipo: documento
+  medio: Cámara de Diputados
+  titulo: "Informe de la Comisión Especial Investigadora encargada de fiscalizar los actos del gobierno, especialmente los del Ministerio del Interior, Carabineros y Metro, respecto de los incendios de estaciones del Metro en octubre de 2019"
+  autor: Cámara de Diputadas y Diputados de Chile
+  fecha: 2023-01-18
+  url: https://www.camara.cl/verDoc.aspx?prmID=71458&prmTipo=INFORME_COMISION
+  notas: "Informe oficial de la Comisión Especial Investigadora de la Cámara (mandato de 90 días vencido el 21-oct-2022; creado a partir de la solicitud de la diputada Carmen Hertz y otras diputaciones tras el reportaje de La Red). Recoge solicitudes de antecedentes al canal La Red (archivos del reportaje '¿Quién quemó el Metro?'), declaraciones en sesión secreta de Carabineros (60ª Comisaría Metro y 13ª Comisaría La Granja), del abogado querellante y de Jeremy Ramírez y Omar Jerez ('chivos expiatorios', según Barraza citada). Documenta el peritaje de Bomberos sobre La Granja (presentado el 25-may-2020 por el comandante Alberto Pulgar, peritaje audiovisual sin pericias presenciales) y el antecedente aportado por las defensas de que el jefe del Centro Integrado de Control (CIC) de Metro en octubre de 2019 era Miguel Bassaletti Riess, hermano del general Enrique Bassaletti. Concluye reiterando la condena a los hechos como delitos y la persistencia de interrogantes sobre la administración de la información del sistema VENUS."
+
+adnradio-2024-10-18-quien-quemo-el-metro-cinco-anos:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "¿Quién quemó el Metro? En qué quedaron las investigaciones y las teorías que existen a cinco años del estallido social"
+  autor: Nelson Quiroz
+  fecha: 2024-10-18
+  url: https://www.adnradio.cl/2024/10/18/quien-quemo-el-metro-en-que-quedaron-las-investigaciones-y-las-teorias-que-existen-a-cinco-anos-del-estallido-social/
+  notas: "ADN Radio (18-oct-2024): balance a cinco años. 118 de las 136 estaciones atacadas, 7 incendiadas por completo, 18 sin daños; más de 90 querellas de Metro, 101 imputados, 53 condenados y solo 3 condenas por incendio (citando a El Líbero). Fallas del sistema de cámaras VENUS según la periodista Josefa Barraza (autora del libro '¿Quién quemó el metro?'); casos cerrados sin revisar cámaras; condena de B.E.S.M. por Pedrero fechada imprecisamente en enero de 2021 (el segundo juicio fue en mayo y la Suprema la confirmó en noviembre de 2021); teoría de coordinación: incendios a dos minutos de diferencia entre estaciones separadas por más de 20 km; testimonios de Louis de Grange (exdirector) y Felipe Bravo (gerente general)."
+
+emol-2024-10-14-metro-quema-de-estaciones:
+  tipo: prensa
+  medio: Emol
+  titulo: "Metro dice que investigaciones por quema de estaciones en el 18-O han arrojado que fueron hechos 'sin mayores conexiones'"
+  autor: Martín Garretón
+  fecha: 2024-10-14
+  url: https://www.emol.com/noticias/Nacional/2024/10/14/1145456/metro-quema-de-estaciones.html
+  notas: "Emol (14-oct-2024): entrevista al gerente general de Metro Felipe Bravo en Tele13 Radio. Más de 90 querellas, 101 imputados y 53 condenados por distintos delitos (daño, hurto, receptación, incendio, Ley de Seguridad del Estado); 'las distintas sentencias arrojan situaciones particulares sin mayores conexiones'. Catastro: 7 estaciones completamente incendiadas, 18 parcialmente quemadas, 93 con múltiples daños y 18 sin destrozos. Relata limpieza espontánea de vecinos en San Pablo y la reconstrucción. Verificado por lectura directa."
+
+cnnchile-2024-10-14-gerente-metro-sin-conexiones:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Gerente de Metro por quema de estaciones en el 18-O: 'Son situaciones más bien particulares y sin mayores conexiones'"
+  autor: Daniela Pérez
+  fecha: 2024-10-14
+  url: https://www.cnnchile.com/pais/gerente-metro-quema-estaciones-18-o-situaciones-particulares-sin-mayores-conexiones/
+  notas: "CNN Chile (14-oct-2024, 15:07): recoge las mismas declaraciones de Felipe Bravo en Tele13 Radio que Emol: +90 querellas, 101 imputados, 53 condenados y catastro 7/18/93/18 estaciones. Verificado por lectura directa."
+
+ellibero-2024-10-tres-condenados-incendios-metro:
+  tipo: prensa
+  medio: El Líbero
+  titulo: "A cinco años del estallido solo tres personas han sido condenadas por incendios del Metro"
+  autor: El Líbero
+  fecha: 2024-10-18
+  url: https://ellibero.cl/actualidad/a-cinco-anos-del-estallido-solo-tres-personas-han-sido-condenadas-por-incendios-del-metro/
+  notas: "El Líbero (oct-2024): levantamiento citado por ADN Radio que precisa que, pese a las 53 condenas totales por los ataques al Metro, solo tres corresponden al delito de incendio. No leído directamente; cifra contrastada con el resto del balance de ADN/Emol."
+eldesconcierto-2026-08-18-pib-q2-recesion:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Economía chilena entra en recesión técnica: PIB cayó 0,2% en el segundo trimestre y suma dos caídas seguidas"
+  autor: Cristian Neira
+  fecha: 2026-08-18
+  url: https://eldesconcierto.cl/actualidad/economia-chilena-entra-recesion-tecnica-pib-cayo-02-el-segundo-trimestre-y-suma-dos-caidas-seguidas-n5461439
+  notas: "Verificada por lectura completa. Detalla FBCF estancada en 0,0% (construcción -2,4%, maquinaria y equipos +3,7%), minería total -6,4% (cuarto trimestre consecutivo de caída) y revisión al alza del Q1 desde -0,5%. Cita a La Tercera a partir del informe del Banco Central."
+
+biobiochile-2026-08-18-acelerar-paso:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno dice que va a 'acelerar el paso' ante la economía que cierra en rojo el primer semestre"
+  autor: BioBioChile
+  fecha: 2026-08-18
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/08/18/gobierno-dice-que-va-a-acelerar-el-paso-ante-la-economia-que-cierra-en-rojo-al-primer-semestre.shtml
+  notas: "Verificada por lectura completa (vía r.jina.ai). Misma línea de Emol sobre la reacción del biministro Daniel Mas tras el PIB Q2."
+
+emol-2026-08-18-punta-septiembre:
+  tipo: prensa
+  medio: Emol
+  titulo: "No se cobrará en septiembre: Gobierno acota el cargo eléctrico que pagan las empresas por hora punta"
+  autor: José Tomás Guzmán
+  fecha: 2026-08-18
+  url: https://www.emol.com/noticias/Economia/2026/08/18/1208835/gobierno-elimina-horario-punta-septiembre.html
+  notas: "Verificada por lectura completa (13:20). Fuente original que Cooperativa replica ('Según consignó Emol'). Detalla solicitudes de gremios de pesca, alimentación, metalurgia y química, la Comisión de Minería y Energía de la Cámara y los diputados Joanna Pérez y Matías Walker; antecedentes del Ministerio de Economía."
+
+adnradio-2026-08-18-punta-septiembre:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Gobierno excluye septiembre del cobro eléctrico por horas punta para las empresas"
+  autor: Martín Neut
+  fecha: 2026-08-18
+  url: https://www.adnradio.cl/2026/08/18/gobierno-excluye-septiembre-del-cobro-electrico-por-horas-punta-para-las-empresas/
+  notas: "Verificada por lectura completa (19:31). Confirma el mecanismo (abril-septiembre, 18:00-22:00) y la cita oficial de Energía sobre impulsar actividad productiva e inversión."
+
+cooperativa-2026-08-18-punta-septiembre:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Alivio eléctrico para empresas: Gobierno no aplicará cobro de horas punta este septiembre"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-18
+  url: https://www.cooperativa.cl/noticias/pais/energia/alivio-electrico-para-empresas-gobierno-no-aplicara-cobro-de-horas/2026-08-18/152736.html
+  notas: "Verificada por lectura completa (18:31). Identifica a la ministra de Energía Ximena Rincón como titular de la cartera y atribuye la información a Emol."
+
+eldinamo-2020-07-31-horas-punta:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Ministerio de Energía elimina recargo por límite de invierno y medición de horas punta"
+  autor: El Dínamo
+  fecha: 2020-07-31
+  url: https://www.eldinamo.cl/pais/2020/07/31/ministerio-de-energia-elimina-recargo-por-limite-de-invierno-y-medicion-de-horas-punta/
+  notas: "Antecedente histórico: en plena pandemia el gobierno de Sebastián Piñera ya había eliminado la medición de horas punta para agosto-septiembre de 2020. No leído directamente; título y fecha verificados contra el catálogo de sitemaps. Contexto complementario."
+
+eldesconcierto-2026-06-22-cfa-desmiente-quiroz:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "CFA desmiente a ministro Jorge Quiroz y niega errores de cálculo fiscal en último IFP del gobierno anterior"
+  autor: Nicole Donoso
+  fecha: 2026-06-22
+  url: https://eldesconcierto.cl/actualidad/cfa-desmiente-ministro-jorge-quiroz-y-niega-errores-calculo-fiscal-ultimo-ifp-del-gobierno-anterior-n5459827
+  notas: "Verificada por lectura completa (17:03). Recoge la conclusión del informe semestral del CFA (página 89): sin inconsistencia aritmética en el IFP4T25, pero con supuestos de ajuste financiero no transparentes. Incluye reacciones de Constanza Schönhaut (FA) y Juan Santana (PS)."
+
+emol-2026-06-22-cfa-grau-zapata:
+  tipo: prensa
+  medio: Emol
+  titulo: "AC contra Grau: CFA no ve 'inconsistencias' en las proyecciones de deuda del gobierno anterior y Zapata destaca informe"
+  autor: José Tomás Guzmán
+  fecha: 2026-06-22
+  url: https://www.emol.com/noticias/Economia/2026/06/22/1203575/cfa-grau-ac-abogado-zapata.html
+  notas: "Verificada por lectura completa (17:16). Patricio Zapata (defensa de Grau) leyó en la comisión revisora de la AC la página 89 del informe semestral del CFA publicado ese día; contrasta con lo presentado por Quiroz el 25-may en el IFP."
+
+emol-2026-06-22-cfa-informe-semestral:
+  tipo: prensa
+  medio: Emol
+  titulo: "Consejo Fiscal advierte: La deuda pública superaría el nivel prudencial de 45% entre 2027 y 2030"
+  autor: Tomás Molina
+  fecha: 2026-06-22
+  url: https://www.emol.com/noticias/Economia/2026/06/22/1203556/consejo-fiscal-deuda-publica-45.html
+  notas: "Verificada por lectura completa (14:34). Cobre el mismo informe semestral del CFA del 22-jun: déficit estructural 2026 de 3,7% del PIB (2,8% con nueva metodología) sobre la meta de 2,6%; deuda bruta superaría el 45% del PIB entre 2027-2030 (Dipres: 45,4% en 2028 y 46,5% en 2030; CFA: máximo de 48% en 2033)."
+
+emol-2026-05-25-ifp-nota-roja:
+  tipo: prensa
+  medio: Emol
+  titulo: "'Nota roja' a la administración anterior: Las cinco claves del primer IFP del Gobierno de Kast"
+  autor: Martín Garretón
+  fecha: 2026-05-25
+  url: https://www.emol.com/noticias/Economia/2026/05/25/1200957/ifp-hacienda-quiroz.html
+  notas: "Verificada por lectura completa (20:31). Corrección del déficit efectivo desde 1,8% (IFP4T25) a 2,4% con medidas (2,9% sin ajustes); deuda no considerada por más de US$10 mil millones 2026-2030; crecimiento 2026 a 2,1%; inflación +1pp a 3,7%. Economistas consultados hablan de 'sinceramiento' con convergencia lejana."
+
+elperiodista-2026-05-25-ifp-quiroz:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Informe de Finanzas Públicas: Hacienda eleva déficit a 2,9% y detecta omisión de deuda por más de US$10 mil millones"
+  autor: El Periodista
+  fecha: 2026-05-25
+  url: https://www.elperiodista.cl/2026/05/informe-de-finanzas-publicas-quiroz-corrige-deficit-fiscal-y-acusa-inconsistencias-en-calculos/
+  notas: "Verificada por lectura completa. Precisa las cifras clave: déficit móvil de 1,8% a 2,9% (2,4% pasivo con medidas); $13 billones de mayor déficit proyectado entre IFP3T25 e IFP4T25 vs solo $3 billones de más deuda → '$9 billones sin explicación'; omisión de compromisos por $9.559.289 millones; deuda >45% del PIB en 2028 y 46,5% en 2030; investigación administrativa interna instruida por Quiroz."
+
+radio-uchile-2026-05-26-acusaciones-cruzadas:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Acusaciones cruzadas por deuda fiscal marcan debut del primer Informe de Finanzas Públicas de Quiroz"
+  autor: Camilo Vega Martinez
+  fecha: 2026-05-26
+  url: https://radio.uchile.cl/2026/05/26/acusaciones-cruzadas-por-deuda-fiscal-marcan-debut-del-primer-informe-de-finanzas-publicas-de-quiroz/
+  notas: "Verificada por lectura completa. Respuesta de Nicolás Grau ('la proyección es consistente y no tiene errores de cálculo'); críticas de Gael Yeomans ('voladero de luces') y Gastón Saavedra; análisis de Pablo Barberis y Eugenio Rivera; anuncio de Agustín Romero (Republicano) de estudiar una AC contra Grau."
+
+biobiochile-2026-05-25-ifp-quiroz-deuda:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Revelan nuevo informe de finanzas públicas: prevé déficit de 2,4% y advierte error en cálculo de deuda"
+  autor: BioBioChile
+  fecha: 2026-05-25
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/05/25/revelan-nuevo-informe-de-finanzas-publicas-preve-deficit-de-24-y-advierte-error-en-calculo-de-deuda.shtml
+  notas: "No leída directamente; título y fecha verificados contra el catálogo de sitemaps. Sus datos de portada (déficit 2,4%, error en cálculo de deuda) son consistentes con las fuentes leídas del mismo día (Emol, El Periodista, Diario UChile). Usada como corroboración independiente."
+
+radio-uchile-2026-06-08-ac-grau-presentacion:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Republicanos y libertarios presentaron AC contra exministro Grau: RN mantiene en suspenso su posición"
+  autor: Fernanda Araneda
+  fecha: 2026-06-08
+  url: https://radio.uchile.cl/2026/06/08/republicanos-y-libertarios-presentaron-ac-contra-exministro-grau-rn-mantiene-en-suspenso-su-posicion/
+  notas: "Verificada por lectura completa. Detalla los cuatro capítulos del libelo, firmantes (PNL, Republicanoos, RN, PDG e independientes), plegue posterior de la UDI, citas de Benjamín Moreno y Cristóbal Urruticoechea, críticas de Nelson Venegas y la respuesta del subsecretario Máximo Pavez."
+
+lanacion-2026-06-08-exministros-ac-grau:
+  tipo: prensa
+  medio: La Nación
+  titulo: "Exministros Marcel, Eyzaguirre, Marfán y Velasco afirman que AC contra Grau 'dañaría a Chile'"
+  autor: Patricia Schüller Gamboa
+  fecha: 2026-06-08
+  url: https://www.lanacion.cl/exministros-marcel-eyzaguirre-marfan-y-velasco-afirman-que-ac-contra-grau-danaria-a-chile/
+  notas: "Verificada por lectura completa. Carta 'Una acusación que daña a Chile' en El Mercurio: primera vez desde el retorno a la democracia que se acusaría a un exministro de Hacienda por diferencias de proyecciones fiscales entre administraciones."
+
+lanacion-2026-06-08-cruz-coke-ac-grau:
+  tipo: prensa
+  medio: La Nación
+  titulo: "Cruz-Coke criticó apresuramiento e improvisación en anuncio de AC contra Grau"
+  autor: Patricia Schüller Gamboa
+  fecha: 2026-06-08
+  url: https://www.lanacion.cl/cruz-coke-critico-apresuramiento-e-improvisacion-en-anuncio-de-ac-contra-grau/
+  notas: "Verificada por lectura completa. El presidente de Evópoli en Radio Cooperativa: los republicanos se adelantaron 15 minutos a los libertarios con 'una acusación que ni siquiera tenía texto'; nadie de Chile Vamos supo del anuncio; la AC es herramienta de 'última ratio'."
+
+elmostrador-2026-08-21-militares-no-quieren-salir:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Los militares no quieren salir a la calle: explican por qué"
+  autor: Paulina de Allende-Salazar
+  fecha: 2026-08-21
+  url: https://www.elmostrador.cl/noticias/multimedia/punto-por-punto/2026/08/21/los-militares-no-quieren-salir-a-la-calle-explican-por-que/
+  notas: "Verificada por lectura completa. Punto por Punto (video + texto): oficiales en servicio activo y en retiro cuestionan que soldados asuman tareas contra el crimen organizado bajo el nuevo estado de excepción; advierten riesgos por uso de fuerza letal, corrupción, pérdida de confianza pública y funciones para las que no fueron entrenados. Los oficiales hablaron en condición de anonimato."
+
+reddit-2026-08-21-militares-no-quieren-salir-hilo:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Hilo 'Los militares no quieren salir a la calle: explican por qué'"
+  autor: u/Mr-Hollyfeld (compilación)
+  fecha: 2026-08-21
+  url: https://old.reddit.com/r/chile/comments/1vue9bo/los_militares_no_quieren_salir_a_la_calle/
+  notas: "Solo complementaria: la discusión comunitaria replica los mismos argumentos de los oficiales citados por El Mostrador (FF.AA. formadas para la guerra, armamento inadecuado para control de personas, precedente de la negativa institucional tras la convocatoria al COSENA de Piñera en 2019, propuesta de usarlas en emergencias tipo UME española). Nunca fuente única."
+
+biobiochile-2026-08-21-kast-humedal-impulsa:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Presidente Kast: '¿Vamos a tener un humedal de 1.500 hectáreas que nadie usa?'"
+  autor: Samuel Fuentes
+  fecha: 2026-08-21
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/21/presidente-kast-vamos-a-tener-un-humedal-de-1-500-hectareas-que-nadie-usa.shtml
+  notas: "Verificada por lectura completa. En el encuentro Impulsa 2026 de la CPC Bío Bío (Concepción), Kast planteó 'cerrar' la discusión sobre Rocuant-Andalién ('un humedal de 1.500 hectáreas que nadie usa' vs uno de 500 'que podamos conocer'), emplazó sobre quién se oponía a Pie de Monte ('no debió haber esperado 13 años') y criticó los análisis de inversiones de gobiernos anteriores."
+
+biobiochile-2026-08-21-humedales-expertos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "¿Son 'hectáreas que nadie usa'? Expertos explican cómo los humedales pueden salvarnos de inundaciones"
+  autor: Sara Jerez
+  fecha: 2026-08-21
+  url: https://www.biobiochile.cl/noticias/ciencia-y-tecnologia/medio-ambiente-cyt/2026/08/21/no-son-hectareas-que-nadie-usa-como-los-humedales-pueden-salvar-a-las-comunidades-de-inundaciones.shtml
+  notas: "Verificada por lectura completa. Pieza explicativa publicada el mismo día que las dichos de Kast: recoge a especialistas UACh (Ignacio Rodríguez, CEHUM; Antonio Zumelzu, CISFECh), datos del MMA sobre Rocuant-Andalién y de la EPA estadounidense sobre humedales como contención natural de inundaciones."
+
+mma-2026-04-21-declaratoria-rocuant-andalien:
+  tipo: institucional
+  medio: Ministerio del Medio Ambiente
+  titulo: "El tercero más grande de Chile: Diario Oficial publica declaración de Humedal Urbano Rocuant – Andalién de Talcahuano"
+  autor: Ministerio del Medio Ambiente
+  fecha: 2026-04-21
+  url: https://mma.gob.cl/el-tercero-mas-grande-de-chile-diario-oficial-publica-declaracion-de-rocuant-andalien-de-talcahuano-como-humedal-urbano/
+  notas: "Verificada por lectura completa (vía r.jina.ai). Fecha aproximada: la nota dice 'este martes' y las reclamaciones se presentaron el 27-abr; verificar contra el Diario Oficial. Datos clave: 1.377,2 hectáreas entre Talcahuano, Concepción y Penco; tercer ecosistema con mayor superficie protegida bajo la Ley 21.202; ~120 especies de aves (pilpilén común Casi Amenazado, cisnes, migratorias del Pacífico); sistema Rocuant-Andalién-Paicaví-Tucapel Bajo-Vasco de Gama Chimalfe; funciones de regulación (inundaciones, marejadas, línea de costa), soporte, provisión y cultura. Ministra Maisa Rojas y SEREMI Pablo Pinto."
+
+uach-2026-07-16-humedales-temporales-valdivia:
+  tipo: institucional
+  medio: Universidad Austral de Chile
+  titulo: "Región de Los Ríos: especialistas UACh advierten sobre rol de humedales para contener efectos de temporales"
+  autor: Prensa DIRCOM UACh
+  fecha: 2026-07-16
+  url: https://diario.uach.cl/region-de-los-rios-especialistas-uach-advierten-sobre-rol-de-humedales-para-contener-efectos-de-temporales/
+  notas: "Verificada por lectura completa. Temporal con récord de 197,61 mm caídos en un solo día en Valdivia: los humedales urbanos (16% de la superficie comunal; 77 urbanos + 10 periurbanos) actuaron como 'un gigantesco escudo natural' mientras comunas vecinas se inundaban. Citas de Ignacio Rodríguez (CEHUM) y Susana Valle (CISFECh); Zumelzu propone integrarlos como 'infraestructura verde y azul' en la planificación urbana."
+
+emol-2026-04-28-poduje-ley-humedales:
+  tipo: prensa
+  medio: Emol
+  titulo: "Ley de Humedales: Qué establece la norma que generó el choque entre Poduje y De Urresti"
+  autor: Gabriela Valdés
+  fecha: 2026-04-28
+  url: https://www.emol.com/noticias/Nacional/2026/04/28/1198456/zoom-ley-humedales.html
+  notas: "Verificada por lectura completa. Antecedente de abril: el ministro de Vivienda Iván Poduje calificó de 'locura' y 'muy mala ley' la normativa de humedales urbanos emplazando a Alfonso De Urresti; el senador rechazó el ataque y recordó que los propios ministros votaron la ley (aprobada transversalmente: 134-2 en la Cámara, 29-0 en el Senado). Explica el funcionamiento de la ley."
+
+meganoticias-2026-06-16-pie-de-monte-sacyr:
+  tipo: prensa
+  medio: Meganoticias
+  titulo: "Biobío: ruta Pie de Monte adjudicación Sacyr Coronel San Pedro de la Paz"
+  autor: Meganoticias
+  fecha: 2026-06-16
+  url: https://www.meganoticias.cl/nacional/524726-biobio-ruta-pie-de-monte-adjudicacion-sacyr-coronel-san-pedro-de-la-paz-biobio-16-06-2026.html
+  notas: "No leída directamente; título y fecha verificados contra el catálogo de sitemaps. Contexto complementario: la adjudicación de la Ruta Pie de Monte (San Pedro de la Paz-Coronel) a Sacyr en junio de 2026, obra que Kast citó como ejemplo de permisoría lenta ('no debió haber esperado 13 años')."
+
+reddit-2026-08-21-humedal-hilo-rchile:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Hilo 'Presidente Kast: ¿Vamos a tener un humedal de 1.500 hectáreas que nadie usa?'"
+  autor: u/akkadito (compilación)
+  fecha: 2026-08-21
+  url: https://old.reddit.com/r/chile/comments/1vupjhj/presidente_kast_vamos_a_tener_un_humedal_de_1500/
+  notas: "Solo complementaria. Reacción comunitaria mayoritariamente crítica: 'como si un ecosistema se pudiera recortar a gusto', dudas sobre si es ignorancia o estrategia deliberada de minimizar lo ambiental, y el antecedente del programa 2021 que proponía que flora y fauna 'paguen su derecho a existir' (con enlace al artículo de BioBioChile del 22-oct-2021). Nunca fuente única."
+
+reddit-2026-08-21-humedal-hilo-rrepublicadechile:
+  tipo: red_social
+  medio: Reddit r/RepublicadeChile
+  titulo: "Hilo 'Presidente Kast: ¿Vamos a tener un humedal de 1.500 hectáreas que nadie usa?'"
+  autor: u/Expensive-Cry913 (compilación)
+  fecha: 2026-08-21
+  url: https://old.reddit.com/r/RepublicadeChile/comments/1vup8rw/presidente_kast_vamos_a_tener_un_humedal_de_1500/
+  notas: "Solo complementaria. Reacciones con ironías ('¿para qué queremos glaciares si nadie puede esquiar?', 'para qué vamos a tener pudú si nadie come pudú') y análisis de que la minimización ambiental es deliberada; también se recupera la propuesta de 2021 de cobrar a la flora y fauna por su derecho a existir. Nunca fuente única."
+
+biobiochile-2021-10-22-kast-flora-fauna-pagar:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "'Deberán pagar su derecho a existir': polémica propuesta de Kast sobre flora y fauna en su programa"
+  autor: BioBioChile
+  fecha: 2021-10-22
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2021/10/22/deberan-pagar-su-derecho-a-existir-polemica-propuesta-de-kast-sobre-flora-y-fauna-en-su-programa.shtml
+  notas: "No leída directamente; URL recuperada desde la discusión comunitaria de Reddit (21-ago-2026). Antecedente histórico de campaña 2021: el programa de Kast planteaba que flora y fauna 'deberán pagar su derecho a existir', citado como precedente del discurso sobre humedales. Verificar contenido antes de usar como fuente principal."
+
+ciper-2026-08-21-millones-lobby-victor-quiroz:
+  tipo: investigacion
+  medio: CIPER Chile
+  titulo: "Aprobación de Alto Santorini: registro de lobby del delegado presidencial Millones consigna una reunión con Víctor Quiroz"
+  autor: Macarena Segovia, Josefina Rochna y Francisco González Valdebenito
+  fecha: 2026-08-21
+  url: https://www.ciperchile.cl/2026/08/21/aprobacion-de-alto-santorini-registro-de-lobby-del-delegado-presidencial-millones-consigna-una-reunion-con-victor-quiroz/
+  notas: "Verificada por lectura completa. La plataforma de la Ley de Lobby consigna reunión del delegado presidencial de Valparaíso Manuel Millones con Víctor Quiroz (hermano del ministro, en representación de Inmobiliaria Lote 21 SpA, socio del proyecto) el 8-jun-2026 a las 11:00, para presentar Alto Santorini y su adenda al SEIA; un mes después el proyecto fue aprobado vía plan contra la permisología. Millones negó públicamente (Radio Valentín Letelier) haberse reunido, contradiciendo el registro oficial; la Delegación no respondió a las tres solicitudes de CIPER de acreditar lo contrario. Decreto 71 Segpres art. 11 da 10 días hábiles para corregir."
+
+biobiochile-2026-08-16-carmona-gabinete-renuncia:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Carmona pide renuncia de todo el gabinete tras salida de Duco: 'Es un hecho grave'"
+  autor: BioBioChile
+  fecha: 2026-08-16
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/16/carmona-pide-renuncia-de-todo-el-gabinete-tras-salida-de-duco-es-un-hecho-grave.shtml
+  notas: "Verificada por lectura completa (vía r.jina.ai). El presidente del PC, Lautaro Carmona, en radio Nuevo Mundo: 'es un hecho grave, nosotros deberíamos pedir que renuncie todo el gabinete y que vayan dando la prueba'; ironizó sobre el uso de vehículos fiscales ('se van a quedar sin auto y, ¿cómo se van a ir a la fiesta?'); responsabilizó a Kast por 'descentralizar' autoridad sin control."
+
+latercera-2026-08-16-carmona-gabinete-renuncia:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Carmona critica conducción del gobierno de Kast y plantea que 'deberíamos pedir que renuncie todo el gabinete'"
+  autor: Sofía Álvarez
+  fecha: 2026-08-16
+  url: https://www.latercera.com/politica/noticia/carmona-critica-conduccion-del-gobierno-de-kast-y-plantea-que-deberiamos-pedir-que-renuncie-todo-el-gabinete/
+  notas: "Verificada por lectura completa. Mismo día y tesis que BioBioChile, entrevista en radio Nuevo Mundo tras volver de Cuba por el centenario de Fidel Castro: 'aquí se arreglan las cosas entre baile y baile, entre copete y copete'; 'nosotros hemos sido un poco benevolentes'; cadena de delegación Kast→ministra→subsecretario que 'quedó en vacío'."
+
+biobiochile-2026-08-20-comision-investigadora-quiroz:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Oposición impulsa comisión investigadora por eventuales conflictos de interés de ministro Quiroz"
+  autor: Alberto González
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/20/oposicion-impulsa-comision-investigadora-por-eventuales-conflictos-de-interes-de-ministro-quiroz.shtml
+  notas: "Verificada por lectura completa (vía markdown.new). Bancadas de oposición anuncian Comisión Especial Investigadora sobre conflictos de interés de Quiroz en Alto Santorini y la planta de potasio del Grupo Errázuriz; buscará determinar irregularidades en el Comité de Proyectos del SEIA (sin actas ni registros públicos), los criterios de priorización, la eventual incidencia del ministro en resoluciones y el cumplimiento de normas de probidad, abstención y declaración de intereses."
+
+adnradio-2026-08-20-fondo-reconstruccion-norte:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Hacienda anuncia que fondo para la reconstrucción del norte usará 'recursos provenientes de venta de activos fiscales'"
+  autor: Mario Vergara
+  fecha: 2026-08-20
+  url: https://www.adnradio.cl/2026/08/20/hacienda-anuncia-que-fondo-para-la-reconstruccion-del-norte-usara-recursos-provenientes-de-venta-de-activos-fiscales/
+  notas: "Verificada por lectura completa (13:26). Mesa técnico-política de reconstrucción Coquimbo-Atacama encabezada por Quiroz: diagnóstico de daños en 4 semanas con apoyo del BID; aporte de CAF para preinversión ($100.000 según consigna la fuente, sin moneda especificada); fondo especial dispuesto por Dipres en la Ley de Presupuesto financiado con venta de activos fiscales (nómina requerida a ministerios 60 días atrás); prioridad emergencia y luego recomponer el Fondo de Estabilidad conforme a observaciones del FMI y el CFA; posible extensión a Tocopilla."
+
+latercera-2026-08-20-fondo-venta-activos:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Gobierno financiará reconstrucción de zonas afectadas por temporales con venta de activos fiscales"
+  autor: La Tercera / Pulso
+  fecha: 2026-08-20
+  url: https://www.latercera.com/pulso/noticia/gobierno-financiara-reconstruccion-de-zonas-afectadas-por-temporales-con-venta-de-activos-fiscales/
+  notas: "No leída directamente; título y fecha verificados contra el catálogo de sitemaps. Corrobora con La Tercera/Pulso el mismo anuncio cubierto por ADN Radio (fondo de reconstrucción financiado con venta de activos fiscales)."
+
+cnnchile-2026-08-21-junaeb-allanamiento-congreso:
+  tipo: web
+  medio: CNN Chile
+  titulo: "Allanamiento en el Congreso: Fiscalía indaga trama de coimas en Junaeb que apuntaría contra senadores Calisto (Ind) y Gahona (UDI) y exdiputado Gutiérrez (PC)"
+  autor: CNN Chile
+  fecha: 2026-08-21
+  url: https://www.cnnchile.com/pais/junaeb-coimas-allanamiento-en-el-congreso-fiscalia-lidera-diligencias-por-trama-que-apuntaria-contra-senadores-calisto-ind-y-gahona-udi-y-exdiputado-gutierrez-pc/
+  notas: "CNN Chile (21-ago-2026): Seguimiento del allanamiento del 20 de agosto. Confirma que la Fiscalía de Alta Complejidad Oriente y la PDI realizaron allanamientos e incautaciones en el Congreso Nacional, sede central de Junaeb e inmuebles en distintas regiones, por presuntos delitos de fraude al Fisco, lavado de activos y cohecho vinculados al PAE. Autorizado por el Cuarto Juzgado de Garantía de Santiago a solicitud de la fiscal Constanza Encina. Menciona a los senadores Sergio Gahona (UDI) y Miguel Ángel Calisto (IND), al exdiputado Hugo Gutiérrez, y a la empresa SOSER S.A."
+
+biobiochile-2026-08-20-allanamientos-masivos-junaeb:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Más de 80 PDI, varias ciudades y con senadores en la mira: los masivos allanamientos por caso Junaeb"
+  autor: "Samuel Fuentes"
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/20/mas-de-80-pdi-varias-ciudades-y-con-senadores-en-la-mira-los-masivos-allanamientos-por-caso-junaeb.shtml
+  notas: "BioBioChile (20-ago-2026, 13:58): Detalle operativo del despliegue. El prefecto David Castro, jefe de la Brigada Investigadora de Delitos Económicos de la PDI, reportó más de 80 funcionarios desplegados en comunas de la RM y en las ciudades de Iquique, Copiapó, La Serena y Coyhaique; incautación de computadores, teléfonos y documentos; sin detenciones hasta el momento; confirmó la incautación de teléfonos de personas involucradas (senadores Gahona y Calisto). Fiscal Constanza Encina calificó la jornada como 'exitosa' ('logramos obtener todos los medios que necesitábamos'); investigación en carácter reservado; los delitos habrían ocurrido principalmente en O'Higgins aunque estima que también en otras regiones; decisión sobre eventuales formalizaciones o desafueros pendiente tras revisar lo recopilado."
+
+biobiochile-2026-08-20-director-junaeb-layseca-rubio:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Director de Junaeb apunta a exdirectora y exjefe jurídico tras allanamientos: \"Son hechos graves\""
+  autor: "Samuel Fuentes"
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/20/director-de-junaeb-apunta-a-exdirectora-y-exjefe-juridico-tras-allanamientos-son-hechos-graves.shtml
+  notas: "BioBioChile (20-ago-2026, 12:40): Director Fernando Peña nombra como involucrados al exjefe jurídico Alejandro Layseca ('parte importante de esta trama') y a la exdirectora Camila Rubio ('también está señalada dentro de las pesquisas'). La denuncia propia de Junaeb apuntaba a una situación en O'Higgins con SOSER por eventual fraude al fisco, prevaricación, negociación incompatible y conflicto de intereses; las personas señaladas en la denuncia fueron requisadas de sus dispositivos ese día. Peña revela demandas por calumnias en su contra de la empresa y de Rubio, y ofrece entregar nuevos antecedentes al Ministerio Público."
+
+latercera-2026-08-20-gutierrez-niega-vinculos-junaeb:
+  tipo: web
+  medio: La Tercera
+  titulo: "Exdiputado Hugo Gutiérrez (PC) niega vínculos con presuntas irregularidades en Junaeb"
+  autor: "Daniela Silva"
+  fecha: 2026-08-20
+  url: https://www.latercera.com/nacional/noticia/exdiputado-hugo-gutierrez-pc-niega-vinculos-con-presuntas-irregularidades-en-junaeb/
+  notas: "La Tercera (20-ago-2026): Reacción del exdiputado Hugo Gutiérrez (PC), alcanzado por las diligencias. Dice desconocer qué se le imputa ('no tengo conocimiento ni conciencia de qué es lo que me están achacando'), se declara disponible a cooperar. Niega vínculos: nunca conoció al abogado Darío Calderón ni estuvo cerca de Calisto; conversó un par de veces con Gahona. Reconoce reuniones por ley de Lobby con alguien de SOSER S.A. cuando fiscalizaba a Junaeb como parlamentario, y descarta 'totalmente' haber intervenido para favorecer a alguna proveedora o haber sido favorecido. Señala que no fue allanado."
+
+eldinamo-2026-08-21-calisto-entrega-telefono-junaeb:
+  tipo: web
+  medio: El Dínamo
+  titulo: "\"No tengo nada que ocultar\": senador Calisto confirmó que entregó su teléfono por el caso Junaeb"
+  autor: "Juan Pablo Ernst"
+  fecha: 2026-08-21
+  url: https://www.eldinamo.cl/pais/2026/08/21/no-tengo-nada-que-ocultar-senador-calisto-confirmo-que-entrego-su-telefono-por-el-caso-junaeb/
+  notas: "El Dínamo (21-ago-2026): Comunicado del senador Miguel Ángel Calisto (IND, cupo FRVS): entregó 'de manera voluntaria e inmediata' su teléfono celular y el acceso a sus cuentas corrientes a la PDI; niega participación en los hechos y confía en que las indagatorias demuestren su inocencia. Alega años de fiscalización pública a la Junaeb ('no tenemos nada que esconder')."
+
+cnnchile-2026-08-21-barros-a3c:
+  tipo: web
+  medio: CNN Chile
+  titulo: "Embajador de EE. UU. revela que el ministro Barros firmó la Declaración de las Américas el 12 de marzo"
+  autor: Constanza Zambrano
+  fecha: 2026-08-21
+  url: https://www.cnnchile.com/pais/embajador-de-ee-uu-revela-que-el-ministro-barros-firmo-la-declaracion-de-las-americas-el-12-de-marzo/
+  notas: "CNN Chile (21-ago-2026): Embajador Brandon Judd reveló que Barros firmó la declaración A3C el 12 de marzo, un día después de asumir. Incluye detalles de los 4 puntos de la declaración y contexto sobre la conferencia en Doral y la cumbre del Escudo de las Américas."
+
+biobiochile-2026-08-21-minmujer-auditoria-irregularidades:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Auditoría detecta irregularidades en oficinas del MinMujer: proyecto costó $1.731 millones más"
+  autor: BioBioChile
+  fecha: 2026-08-21
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/21/auditoria-detecta-irregularidades-en-oficinas-del-minmujer-proyecto-costo-1-731-millones-mas.shtml
+  notas: "BioBioChile (21-ago-2026): Noticia en desarrollo. Auditoría interna del Plan Inspección Total detectó irregularidades en la construcción y habilitación de las nuevas oficinas del Ministerio de la Mujer (Agustinas 1269). Proyecto iniciado en 2023, costo original $1.100 millones, costo final superior a $2.800 millones (146% de sobrecosto). Plazo se extendió de 18 meses a 3,5 años. $120 millones por multa por término anticipado de arriendo y $494 millones adicionales para reparaciones."
+
+latercera-2026-08-21-minmujer-auditoria-sobrecosto:
+  tipo: web
+  medio: La Tercera
+  titulo: "Sobrecosto de 146%: auditoría detecta irregularidades en construcción de nuevas oficinas del Ministerio de la Mujer"
+  autor: Daniela Silva
+  fecha: 2026-08-21
+  url: https://www.latercera.com/nacional/noticia/costo-supera-en-146-lo-presupuestado-auditoria-detecta-irregularidades-en-construccion-de-nuevas-oficinas-del-ministerio-de-la-mujer/
+  notas: "La Tercera (21-ago-2026): Detalla los 8 ámbitos de observación de la auditoría. Contratista Alberto Felipe Olave concentró 88% del gasto; su esposa es dueña de ALSA SpA (participó en 4/5 licitaciones, inadmisible en todas). ELECSAN SpA presentó ofertas apenas superiores a Olave, sugiriendo competencia simulada. En Etapa 3, Massardo y Principios Patrimonio Chile (con experiencia comprobable en obras patrimoniales) presentó oferta menor pero perdió por menor puntaje. Arquitecto Mario Neira Quiroga, contratado como 'contrata', sindicado como responsable de adjudicar. Subsecretaria Marcia Raphael: antecedentes remitidos al Fiscal Regional, Contraloría y CDE. Sumario administrativo instruido. Traslado se hizo pese a no acreditarse condiciones mínimas de habitabilidad y seguridad; 6 teletrabajos de excepción entre dic-2025 y jul-2026."
+
+latercera-2026-08-21-orellana-desmiente-minmujer:
+  tipo: web
+  medio: La Tercera
+  titulo: "'Se basa en un documento preliminar': Orellana desmiente cifras de auditoría que detectó irregularidades en Ministerio de la Mujer"
+  autor: Daniela Silva
+  fecha: 2026-08-21
+  url: https://www.latercera.com/nacional/noticia/se-basa-en-un-documento-preliminar-orellana-desmiente-cifras-de-auditoria-que-detecto-irregularidades-en-ministerio-de-la-mujer/
+  notas: "La Tercera (21-ago-2026): Exministra Antonia Orellana desmiente las cifras de la auditoría. Afirma que el documento base fue una proyección preliminar enviada a Dipres en 2023 que luego fue modificada. Dice que las 5 licitaciones sumaban a marzo de 2026 $2.452.471.883 (5% sobre formulación, no 146%). Incluye informe de avance de obras del 12-mar-2026 de la División Administración y Finanzas de la Subsecretaría."
+
+emol-2026-08-21-minmujer-auditoria:
+  tipo: web
+  medio: Emol
+  titulo: "Auditoría detecta irregularidades en construcción de oficinas del Ministerio de la Mujer iniciadas en gobierno anterior"
+  autor: Daniela Toro
+  fecha: 2026-08-21
+  url: https://www.emol.com/noticias/Nacional/2026/08/21/1209159/auditoria-gobierno-ministerio-mujer-costos.html
+  notas: "Emol (21-ago-2026): Corrobora los datos de La Tercera y BioBio. Detalla que el inmueble anteriormente albergó al diario La Nación. Confirma el patrón de competencia simulada (ALSA + ELECSAN). El ahorro fiscal que justificaba el traslado no se materializó."
+
+eldinamo-2026-08-21-orellana-minmujer-auditoria:
+  tipo: web
+  medio: El Dínamo
+  titulo: "Antonia Orellana y auditoría por gastos en oficina del Ministerio de la Mujer: 'Se está publicando un dato erróneo'"
+  autor: El Dínamo
+  fecha: 2026-08-21
+  url: https://www.eldinamo.cl/politica/2026/08/21/antonia-orellana-y-auditoria-por-gastos-en-oficina-del-ministerio-de-la-mujer-se-esta-publicando-un-dato-erroneo/
+  notas: "El Dínamo (21-ago-2026): Cobertura de la respuesta de Orellana. La exministra insistió en que las obras siempre se proyectaron en más de $2.200 millones y que el monto se fue ajustando durante la ejecución según presupuestos aprobados por el Congreso."
+
+theclinic-2026-05-25-auditoria-9200-millones:
+  tipo: investigacion
+  medio: The Clinic
+  titulo: "Auditoría al Estado: Inspección detecta riesgo fiscal por más de US$9.200 millones en período de Boric y abre investigaciones en cuatro organismos"
+  autor: Eduardo Monrroy
+  fecha: 2026-05-25
+  url: https://www.theclinic.cl/2026/05/25/auditoria-al-estado-inspeccion-detecta-riesgo-fiscal-por-mas-de-us9-200-millones-en-periodo-de-boric-y-abre-investigaciones-en-cuatro-organismos/
+  notas: "The Clinic (25-may-2026): Informe del CAIGG tras revisión de más de 913 mil registros de más de 500 servicios públicos (2022-2026). Riesgo fiscal por US$9.200 millones. Postergación de pagos 2025 a 2026 por US$3.200 millones (1% del PIB, récord en traspasos presidenciales). Compras por trato directo/compra ágil por US$3.170 millones sin mecanismos competitivos (ahorro potencial US$760 millones). US$150 millones en licencias médicas sin recuperar. Investigaciones instruidas a Junaeb, MinMujer/Sernameg/Prodemu, Mintransportes y ANID."
+
+emol-2026-05-25-auditoria-9200-millones:
+  tipo: web
+  medio: Emol
+  titulo: "Auditoría: Ejecutivo detecta riesgo fiscal por más de US$9.200 millones e instruye investigaciones en cuatro organismos"
+  autor: María Cristina Romero
+  fecha: 2026-05-25
+  url: https://www.emol.com/noticias/Nacional/2026/05/25/1200931/hallazgos-auditoria-al-estado.html
+  notas: "Emol (25-may-2026): Corrobora los datos de The Clinic. Detalla: US$1.000 millones a proveedores de salud, US$650 millones a Junaeb en alimentación escolar, US$400 millones en gratuidad universitaria y US$268 millones a 9.986 pymes. Mayores concentraciones de tratos directos: Cenabast (US$700M), Registro Civil (US$350M), Servicio de Salud Sur (US$56M), Junaeb (US$50M). Subsecretaria Castillo: postergación al más alto nivel en traspasos presidenciales."
+
+biobiochile-2026-05-25-auditoria-9200-millones:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Gobierno revela baches de la era Boric tras auditoría total: Riesgo fiscal superaría US$9.200 millones"
+  autor: BioBioChile
+  fecha: 2026-05-25
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/05/25/tras-revision-total-gobierno-revela-baches-de-la-era-boric-riesgo-fiscal-superaria-us9-200-millones.shtml
+  notas: "BioBioChile (25-may-2026): Corrobora el informe del CAIGG sobre hallazgos de la Inspección Total al Estado."
+
+biobiochile-2026-05-26-oficio-9200-millones:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Ofician a Hacienda y Dipres por antecedentes técnicos de supuesto riesgo fiscal de US$9.200 millones"
+  autor: BioBioChile
+  fecha: 2026-05-26
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/05/26/ofician-a-hacienda-y-dipres-por-antecedentes-tecnicos-de-supuesto-riesgo-fiscal-de-us9-200-millones.shtml
+  notas: "BioBioChile (26-may-2026): Diputados Jaime Bassa y Erika Ñanco despacharon oficio a Hacienda y Dipres solicitando antecedentes técnicos del supuesto riesgo fiscal de US$9.200 millones. Respuesta de oposición al informe del CAIGG."
+
+latercera-2026-08-19-retraso-fusion-ministerios:
+  tipo: web
+  medio: La Tercera
+  titulo: "El retraso del gobierno en el proyecto de fusión de los ministerios y la comisión asesora para la nueva arquitectura institucional"
+  autor: Rocío Latorre y Paula Catena
+  fecha: 2026-08-19
+  url: https://www.latercera.com/politica/noticia/el-diseno-pendiente-para-la-fusion-de-los-ministerios-y-la-comision-asesora-para-la-nueva-arquitectura-institucional/
+  notas: "La Tercera (19-ago-2026): A casi 80 días del anuncio de Kast en la Cuenta Pública, la fusión Interior-Segegob sigue pendiente. La comisión de expertos no está constituida. En La Moneda se evaluó incluir Segpres en la fusión (supraministro), pero la sobrecarga de Alvarado alimenta dudas. UDI critica que Alvarado opera como 'triministro'. Se sondea a Bettina Horst, Natalia González y Gonzalo Blumel para integrar la comisión. También se rumora salida de García Ruminot de Segpres y llegada de Galilea."
+
+biobiochile-2026-08-21-fusion-ministerios-comision:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Fusión de ministerios: comisión anunciada por Kast en Cuenta Pública sigue sin constituirse"
+  autor: BioBioChile
+  fecha: 2026-08-21
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/21/fusion-de-ministerios-comision-anunciada-por-kast-en-cuenta-publica-sigue-sin-constituirse.shtml
+  notas: "BioBioChile (21-ago-2026): A casi tres meses de la Cuenta Pública, la comisión de expertos para evaluar fusiones ministeriales sigue sin constituirse. El proyecto de ley para fusionar Interior y Segegob no ha sido ingresado."
+
+latercera-2026-08-21-ppd-firmes-chile:
+  tipo: web
+  medio: La Tercera
+  titulo: "Militantes del PPD anuncian su renuncia al partido y la creación del movimiento político Firmes por Chile"
+  autor: Joaquín Barrientos
+  fecha: 2026-08-21
+  url: https://www.latercera.com/politica/noticia/militantes-del-ppd-anuncian-su-renuncia-al-partido-y-la-creacion-del-movimiento-politico-firmes-por-chile/
+  notas: "La Tercera (21-ago-2026): Vicepresidentes Cristóbal Barra y Bárbara Sepúlveda, más el presidente de Juventud PPD Lukas Soto, anunciaron su renuncia frente al Servel y la creación del movimiento 'Firmes por Chile'. Alegan 'ausencia total de democracia y legalidad interna' y critican la estrategia parlamentaria del PPD frente a la agenda de Kast. Barra cuestiona que el Tribunal Supremo se 'saltó la democracia interna' en la definición de vicepresidencias y que senadores PPD apoyaron la invariabilidad tributaria y la compensación a municipios de la megarreforma. Estiman ~300 renuncias."
+
+latercera-2026-08-21-ppd-respuesta-vergara:
+  tipo: web
+  medio: La Tercera
+  titulo: "Secretario general del PPD desdramatiza renuncia de militantes: 'Era algo esperable tras su derrota en las internas'"
+  autor: Joaquín Barrientos y Jorge Arellano
+  fecha: 2026-08-21
+  url: https://www.latercera.com/politica/noticia/secretario-general-del-ppd-desdramatiza-renuncia-de-militantes-era-algo-esperable-tras-su-derrota-en-las-internas/
+  notas: "La Tercera (21-ago-2026): Secretario general Sebastián Vergara desdramatiza: 'PPD firme y en movimiento, 26 mil militantes'. Califica la salida como 'esperable tras su derrota en las internas'. Anuncia reemplazos: Patricia Campos y Fernando Bórquez asumen vicepresidencias."
+
+emol-2026-08-21-ppd-firmes-chile:
+  tipo: web
+  medio: Emol
+  titulo: "Grupo de militantes renuncian al PPD y acusan 'ausencia total' de democracia interna"
+  autor: Gabriela Valdés
+  fecha: 2026-08-21
+  url: https://www.emol.com/noticias/Nacional/2026/08/21/1209167/militantes-renuncian-al-ppd.html
+  notas: "Emol (21-ago-2026): Corrobora la renuncia de Barra, Sepúlveda y Soto. Detalla las críticas a senadores PPD por apoyar invariabilidad tributaria y compensación municipal de la megarreforma, con mención directa al senador Pedro Araya. Los renunciantes insisten en que no abandonan la política y buscarán construir nueva alternativa."
+
+latercera-2026-08-21-barros-a3c-declaracion:
+  tipo: web
+  medio: La Tercera
+  titulo: "Embajador de EE.UU. revela documento de la declaración de las Américas contra los carteles firmado el 12 de marzo por el ministro Barros"
+  autor: Juan Manuel Ojeda y José Carvajal Vega
+  fecha: 2026-08-21
+  url: https://www.latercera.com/nacional/noticia/embajador-de-eeuu-revela-que-el-ministro-barros-firmo-el-12-de-marzo-la-declaracion-de-las-americas-contra-los-carteles/
+  notas: "La Tercera (21-ago-2026): Detalla que Barros viajó a Doral (Florida) el 4-5 de marzo a la 'Conferencia Inaugural contra los Carteles en las Américas' en el cuartel del Comando Sur, encabezada por Hegseth, con 17 países latinoamericanos. Barros no firmó el acuerdo original (no estaba investido), pero firmó la declaración el 12 de marzo, un día después de asumir. Defensa lo califica como 'declaración de intenciones'. Moreira (UDI): 'No hay ningún acuerdo tomado'. Montero (PS, exsubsecretario): Defensa no tiene atribuciones. Barros viajó a Panamá para cumbre A3C (Panamax)."
+
+theclinic-2026-08-21-barros-a3c-declaracion:
+  tipo: investigacion
+  medio: The Clinic
+  titulo: "Judd expone documento firmado por Barros contra el 'narcoterrorismo' y reabre debate sobre los compromisos de Chile con EE.UU."
+  autor: Eduardo Monrroy
+  fecha: 2026-08-21
+  url: https://www.theclinic.cl/2026/08/21/judd-expone-documento-firmado-por-barros-contra-el-narcoterrorismo-y-reabre-debate-sobre-los-compromisos-de-chile-con-ee-uu/
+  notas: "The Clinic (21-ago-2026): Publicación de Judd no es casual, en momentos de tensión por alcances de la declaración. Para EE.UU. implica que Chile integra alianza de seguridad regional. Hegseth pide participar en operaciones militares conjuntas, elevar presupuestos y salirse de CPI - no está en planes de Chile. Defensa evalúa integración parcial (inteligencia/información) pero no fuerza operativa. Barros: 'No somos el patio trasero de ningún país'. Fuentes diplomáticas: la acción de Judd busca presionar."
+
+emol-2026-08-19-cerimedo-defensa-show-politico:
+  tipo: web
+  medio: Emol
+  titulo: "Defensa de exasesor de Milei detenido por sicariato en Bolivia acusa 'show político'"
+  autor: EFE
+  fecha: 2026-08-19
+  url: https://www.emol.com/noticias/Internacional/2026/08/19/1208999/cerimedo-bolivia-defensa-show-politico.html
+  notas: "Emol/EFE (19-ago-2026): La abogada defensora Margarita Arce calificó el caso como 'show político' para desestabilizar al gobierno de Rodrigo Paz. Dijo que Beller 'ha sido masista siempre'. El vocero presidencial Gálvez negó que Cerimedo fuera asesor formal: 'fue un colaborador cercano durante la campaña'."
+
+emol-2026-08-21-cerimedo-acusacion-fiscales:
+  tipo: web
+  medio: Emol
+  titulo: "Exasesor de Milei es acusado de 'dirigir remotamente la emboscada' para matar a su pareja en Bolivia"
+  autor: La Nación/GDA
+  fecha: 2026-08-21
+  url: https://www.emol.com/noticias/Internacional/2026/08/21/1209184/acusacion-cerimedo-ataque-expareja-bolivia.html
+  notas: "Emol/La Nación (21-ago-2026): Acusación de 24 páginas de los fiscales Herlan Rodríguez Cuevas y Yolanda Aguilera Lijerón (publicada por El Deber de Bolivia). Señalan que Cerimedo 'dirigió remotamente la emboscada': presionó a Beller para ir al Swissotel bajo falsa promesa de escoltas, la monitoreó por teléfono, los 'guardias armados' que prometió no intervinieron. Motivo: conflicto por el embarazo (4 semanas) que Cerimedo no deseaba. Piden prisión preventiva sin límite o detención máxima de 180 días. Cerimedo comparecería el 21-ago ante juez."
+
+biobiochile-2026-08-21-cerimedo-granja-bots:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Hallan en Bolivia una 'mini granja de bots' ligadas al argentino Fernando Cerimedo, exasesor de Milei"
+  autor: BioBioChile
+  fecha: 2026-08-21
+  url: https://www.biobiochile.cl/noticias/internacional/america-latina/2026/08/21/hallan-en-bolivia-una-mini-granja-de-bots-ligadas-al-argentino-fernando-cerimedo-exasesor-de-milei.shtml
+  notas: "BioBioChile (21-ago-2026): La Fiscalía de Bolivia confirmó el hallazgo de una 'mini granja de bots' durante el allanamiento en el marco de la investigación por el atentado a Nadia Beller. Hallazgo vinculado a las operaciones de desinformación de Cerimedo. Fuente original: Clarín."
+
+clarin-2026-08-21-cerimedo-granja-bots:
+  tipo: web
+  medio: Clarín
+  titulo: "Detuvieron a dos sospechosos por el ataque a la pareja de Cerimedo y descubrieron una minigranja de bots en allanamientos al exasesor de Milei"
+  autor: Redacción Clarín
+  fecha: 2026-08-21
+  url: https://www.clarin.com/politica/detuvieron-sospechosos-ataque-pareja-cerimedo-descubrieron-minigranja-bots-allanamientos-exasesor-milei_0_lJVRzWQWty.html
+  notas: "Clarín (21-ago-2026): Detalla el hallazgo de la 'mini granja de bots' en un departamento de un condominio en la zona de Aranjuez (La Paz). Fiscal Carlos Torrez: más de 500.000 bolivianos (~US$40.000) + dólares y euros. Secuestraron documentos, valijas y elementos. Dos detenidos (hombre y mujer) con cascos usados por los sicarios; uno manejaba la moto. Allanamientos simultáneos en La Florida y Los Pinos (La Paz): teléfono, dinero, vehículo oficial, muebles con compartimentos secretos. Investigación también por enriquecimiento ilícito y legitimación de ganancias ilícitas. Cerimedo declaró como testigo: dijo conocer a Beller en octubre de 2025 y que ella se quedaba en su departamento de La Paz."
+
+cooperativa-2026-08-21-kast-respaldo-arrau:
+  tipo: web
+  medio: Cooperativa
+  titulo: "Kast entrega firme respaldo a Arrau: 'Vean lo que ha logrado el ministro en bajar índices de inseguridad'"
+  autor: Redacción Cooperativa
+  fecha: 2026-08-21
+  url: https://cooperativa.cl/noticias/pais/presidente-kast/kast-entrega-firme-respaldo-a-arrau-vean-lo-que-ha-logrado-el-ministro/2026-08-21/113304.html
+  notas: "Cooperativa (21-ago-2026): Kast en foro Impulsa 2026 (CPC Biobío, Hualpén) defendió a Arrau: 'Vean lo que ha logrado el ministro en bajar índices de inseguridad'. Cita las mismas cifras del Comité Policial del 17-ago: bajaron homicidios, secuestros, subió decomiso de drogas, control fronterizo. Rechaza plebiscitar reforma de seguridad y responde a críticas sobre falta de trabajo prelegislativo."
+
+latercera-2026-08-21-kast-blinda-arrau:
+  tipo: web
+  medio: La Tercera
+  titulo: "Kast blinda a Arrau y responde a críticas que apuntan a falta de trabajo prelegislativo en reforma de seguridad"
+  autor: Helen Mora
+  fecha: 2026-08-21
+  url: https://www.latercera.com/politica/noticia/kast-blinda-a-arrau-y-responde-a-criticas-que-apuntan-a-falta-de-trabajo-prelegislativo-en-reforma-de-seguridad/
+  notas: "La Tercera (21-ago-2026): Detalla el discurso de Kast en Impulsa 2026. Kast dijo que 'no le tiene temor al debate legislativo' y que 'el ministro irá las veces que pueda'. Reiteró que un feriado del 17 de septiembre no se justifica. Defendió a Arrau de las críticas sobre asistencia a comisiones: 'es mejor que a veces vaya a un subsecretario y que el ministro siga la pega'."
+
+biobiochile-2026-08-20-kast-defiende-reforma-libertades:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Kast defiende reforma ante críticas por limitar libertades: 'El crimen organizado las ha restringido'"
+  autor: Redacción BioBioChile
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/20/kast-defiende-reforma-ante-criticas-por-limitar-libertades-el-crimen-organizado-las-ha-restringido.shtml
+  notas: "BioBioChile (20-ago-2026): Kast en visita a Ñuble (primera tronadura del embalse Zapallar) defendió la reforma de seguridad ante críticas de Boric y Vallejo: 'La libertad en Chile ha sido restringida por el crimen organizado'. Atribuyó las restricciones a 'malas políticas públicas, falta de decisión de autoridades por largo tiempo'."
+
+elmostrador-2026-08-20-kast-descarta-plebiscito-seguridad:
+  tipo: web
+  medio: El Mostrador
+  titulo: "Presidente Kast descarta plebiscito si el Congreso rechaza su reforma constitucional de seguridad"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-20
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/20/presidente-kast-descarta-plebiscito-si-el-congreso-rechaza-su-reforma-constitucional-de-seguridad/
+  notas: "El Mostrador (20-ago-2026): Kast descartó convocar a plebiscito si su reforma constitucional de seguridad es rechazada por el Congreso. Sostuvo que 'la resolución democrática se realiza en el Parlamento'. Reconoció reparos legítimos y señaló que el Ejecutivo está dispuesto a escuchar distintas posiciones."
+
+latercera-2026-08-20-kast-descarta-plebiscito-seguridad:
+  tipo: web
+  medio: La Tercera
+  titulo: "Kast descarta plebiscito para la reforma de seguridad: 'No es algo que vayamos a impulsar como gobierno'"
+  autor: Jorge Arellano
+  fecha: 2026-08-20
+  url: https://www.latercera.com/politica/noticia/presidente-kast-descarta-plebiscito-para-la-reforma-de-seguridad-no-es-algo-que-vayamos-a-impulsar-como-gobierno/
+  notas: "La Tercera (20-ago-2026): Detalla la declaración de Kast en Ñuble. Descartó plebiscito: 'Dentro de nuestro programa no consideramos la alternativa de realizar plebiscitos'. Respondió a Boric y Vallejo: 'No me hago cargo de los comentarios que puedan hacer autoridades que no siempre estuvieron cuidando la seguridad'. Sobre la reforma: 'El Congreso decide si aprueba o no aprueba'."
+
+latercera-2026-08-20-kaiser-totalitarismo-reforma-seguridad:
+  tipo: web
+  medio: La Tercera
+  titulo: "Vanessa Kaiser cuestiona restricciones a libertades en reforma de seguridad de Kast: 'Estaríamos viviendo en un totalitarismo'"
+  autor: Rodrigo Gómez S.
+  fecha: 2026-08-20
+  url: https://www.latercera.com/politica/noticia/vanessa-kaiser-cuestiona-restricciones-a-libertades-en-reforma-de-seguridad-de-kast-estariamos-viviendo-en-un-totalitarismo/
+  notas: "La Tercera (20-ago-2026): Kaiser (PNL) escaló sus críticas: 'Imagínese se nos normalizara un estado de excepción como el que se está proponiendo... estaríamos viviendo en un totalitarismo'. Cuestionó que el estado de excepción pueda declararse ante 'amenaza fundada al orden público' y criticó a la ANI. Reconoció que no hay votos para la reforma. Condicionó respaldo a un 'indulto general'."
+
+latercera-2026-08-20-alessandri-plebiscito-pasar-maquina:
+  tipo: web
+  medio: La Tercera
+  titulo: "Alessandri se muestra en contra de llamar a plebiscito si se rechaza la reforma de seguridad de Kast: 'Sería pasar máquina'"
+  autor: Alonso Aranda
+  fecha: 2026-08-20
+  url: https://www.latercera.com/politica/noticia/alessandri-se-muestra-en-contra-de-llamar-a-plebiscito-si-se-rechaza-la-reforma-de-seguridad-de-kast-seria-pasar-maquina/
+  notas: "La Tercera (20-ago-2026): Alessandri (UDI), presidente de la Cámara, se opuso a plebiscito: 'Sería pasar máquina'. Propuso mejorar la reforma en Comisión de Constitución del Senado. Criticó la duración de 120 días del estado de excepción: 'Me parece demasiado amplia para que quede en la Constitución'. Advirtió que si no se alcanzan los 4/7 en el Senado, la reforma quedaría archivada por un año."
+
+
+lavozdelosquesobran-2022-05-06-abstenciones-tortura:
+  tipo: noticia
+  medio: La Voz de los que Sobran
+  titulo: "Convencionales de derecha se abstuvieron masivamente en norma que prohíbe la tortura: también tres del PS"
+  autor: "La Voz de los que Sobran"
+  fecha: 2022-05-06
+  url: https://lavozdelosquesobran.cl/portada/convencionales-de-derecha-se-abstuvieron-masivamente-en-norma-que-prohibe-la-tortura-tambien-tres-del-ps/06052022
+  notas: "La Voz de los que Sobran (6-may-2022): Detalle de la votación del artículo 87 (Prohibición de la tortura, aislamiento e incomunicación) del borrador constitucional, aprobado el miércoles 4-may-2022 con 108 votos a favor, 2 en contra (Martín Arrau García-Huidobro, UDI, y Helmuth Martínez, ex Lista del Pueblo) y 38 abstenciones. Lista nominal de abstenciones: UDI (Jorge Arancibia, Claudia Castro, Eduardo Cretton, Marcelo Cubillos, Constanza Hube, Margarita Letelier, Felipe Mena, Katerine Montealegre, Alfredo Moreno, Ricardo Neumann, Pollyana Rivera, Pablo Toloza, María Cecilia Ubilla, Arturo Zúñiga), RN (Roberto Vega, Paulina Veloso, Raúl Celis, Ruggero Cozzi, Ruth Hurtado, Álvaro Jofré, Harry Jurgensen, Patricia Labra, Luis Mayol, Manuel José Ossandón, Luciano Silva, Angélica Tepper), Evópoli (Rocío Cantuarias, Bernardo de la Maza, Hernán Larraín, Geoconda Navarrete, Bárbara Rebolledo), Teresa Marinovic (Republicanos) y centro-izquierda: PS Maximiliano Hurtado, Ricardo Montero y Claudio Gómez; Paola Grandón (FRVS), Isabela Mamani (ER pueblo aymara) y Luis Barceló (PPD)."
+
+elclarin-2022-05-09-tortura-abstenciones:
+  tipo: noticia
+  medio: El Clarín de Chile
+  titulo: "CC aprueba prohibición de la tortura; dos convencionales votan en contra y la derecha más tres PS se abtienen"
+  autor: "El Clarín de Chile"
+  fecha: 2022-05-09
+  url: https://www.elclarin.cl/2022/05/09/cc-aprueba-prohibicion-de-la-tortura-dos-convencionales-votan-en-contra-y-la-derecha-mas-tres-ps-se-abstienen/
+  notas: "El Clarín de Chile (9-may-2022): Corrobora los números de la votación del artículo 87 (108 a favor, 2 en contra, 38 abstenciones) e identifica a los votantes en contra: Martín Arrau (UDI) y Helmuth Martínez (ex Lista del Pueblo). Añade que el independiente de derecha Bernardo Fontaine se desmarcó de su sector y votó a favor. Señala como abstenciones destacadas las de Bernardo de la Maza, Paola Grandón (FRVS) y los PS Maximiliano Hurtado, Ricardo Montero y Claudio Gómez. Tono editorial en la valoración ('indiferencia ante esta grave violación'), pero los datos duros coinciden con La Voz de los que Sobran."
+
+bcn-ficha-helmuth-martinez-llancapan:
+  tipo: documento
+  medio: Biblioteca del Congreso Nacional
+  titulo: "Ficha biográfica Helmuth Martínez Llancapán — Fichas Biográficas de las y los Convencionales Constituyentes"
+  autor: BCN
+  fecha: 2022-07-04
+  url: https://www.bcn.cl/historiapolitica/convencionales_constituyentes/ficha/Helmuth_Mart%C3%ADnez_Llancap%C3%A1n
+  notas: "BCN Historia Política (ficha sin fecha explícita; fechada al término del cargo convencional, 4-jul-2022): Abogado nacido en Cipolletti, Argentina (15-oct-1986), independiente; convencional por el distrito 23, Región de La Araucanía. Ejerció como asesor jurídico en la Municipalidad de Saavedra y suplencias en Notaría de Carahue. Fuente oficial para su identificación e independencia política."
+
+biobiochile-2026-08-20-cepal-rebaja-proyeccion-chile:
+  tipo: web
+  medio: BioBioChile
+  titulo: "Cepal rebaja la proyección de crecimiento de Chile hasta un 1,6%"
+  autor: "Franco López"
+  fecha: 2026-08-20
+  url: https://www.biobiochile.cl/noticias/economia/actualidad-economica/2026/08/20/cepal-rebaja-la-proyeccion-de-crecimiento-de-chile-hasta-un-16.shtml
+  notas: "BioBioChile/EFE (20-ago-2026, 18:15): CEPAL rebajó a 1,6% la proyección de crecimiento de Chile para 2026 (Estudio Económico de América Latina y el Caribe 2026); región 2,2% (-0,1 pp) y recuperación parcial en 2027. Ranking regional: Venezuela (6,5%), Nicaragua (4,5%), Panamá (4,4%), Paraguay (4,3%), Guatemala y RD (4,0%) lideran; Cuba (-10,3%) y Haití (-1,9%) decrecen. Declaraciones del secretario ejecutivo José Manuel Salazar-Xirinachs. OJO: su recapitulación de abril contiene un error — dice que en abril la CEPAL rebajó Chile 'del 2,3% al 2,2%', pero esas son las cifras REGIONALES; para Chile la revisión de abril fue 2,2%→2,0% (confirmado por Emol y por la propia cobertura de BioBio del 27-abr-2026). También atribuye a Chile el 2,5% de 2027 sin aclarar que es la cifra regional; el cuadro oficial da a Chile 2,2% en 2027."
+
+cnnchile-2026-08-20-cepal-proyeccion-chile:
+  tipo: web
+  medio: CNN Chile
+  titulo: "CEPAL proyecta un crecimiento debajo del 2% en 2026 para Chile y recuperación parcial en 2027"
+  autor: CNN Chile
+  fecha: 2026-08-20
+  url: https://www.cnnchile.com/negocios/cepal-proyecta-crecimiento-debajo-2-2026-chile-y-recuperacion-parcial-2027/
+  notas: "CNN Chile (20-ago-2026): Corrobora que la CEPAL proyecta para Chile un crecimiento bajo el 2% en 2026 y recuperación parcial en 2027. Región: 2,2% en 2026 tras 2,4% en 2025, con recuperación esperada a 2,5% en 2027."
+
+cepal-estudio-economico-2026:
+  tipo: documento
+  medio: Comisión Económica para América Latina y el Caribe (CEPAL)
+  titulo: "Estudio Económico de América Latina y el Caribe 2026: Crecimiento y productividad en un contexto de alta informalidad"
+  autor: "NU. CEPAL"
+  fecha: 2026-08-20
+  url: https://repositorio.cepal.org/server/api/core/bitstreams/0b10ebba-77b7-49e1-b77c-eb8d98d20416/content
+  notas: "Informe oficial (78ª edición), presentado por el secretario ejecutivo José Manuel Salazar-Xirinachs en conferencia de prensa el 20-ago-2026, 11:00 hrs de Chile. Cuadro I.6 (tasas de crecimiento del PIB): Chile 2025: 2,5 | 2026: 1,6 | 2027: 2,2. América Latina y el Caribe: 2025: 2,4 | 2026: 2,2 | 2027: 2,5. Fuente primaria que concilia la serie de revisiones chilenas: dic-2025 2,2% → abr-2026 2,0% → ago-2026 1,6%. Tema central del informe: informalidad, productividad y formalización productiva."
+
+latercera-2026-08-20-cepal-reduce-16-chile:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Cepal reduce a 1,6% proyección de crecimiento para Chile este año"
+  autor: "Pulso"
+  fecha: 2026-08-20
+  url: https://www.latercera.com/pulso/noticia/cepal-reduce-a-16-proyeccion-de-crecimiento-para-chile-este-ano/
+  notas: "No leída directamente; título y fecha verificados contra el catálogo de sitemaps (news-sitemap La Tercera/Pulso). Corrobora el dato central del evento: reducción a 1,6% de la proyección de crecimiento de Chile 2026."
+
+biobiochile-2026-02-26-israel-retorna-fidae:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: "Israel retorna a la Fidae 2026 tras veto del presidente Boric y comunidad palestina acusa retroceso"
+  autor: "BioBioChile"
+  fecha: 2026-02-26
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/02/26/israel-retorna-a-la-fidae-2026-tras-veto-de-presidente-boric-y-comunidad-palestina-acusa-retroceso.shtml
+  notas: "BioBioChile (26-feb-2026): Anuncio del retorno de empresas israelies a FIDAE 2026 (7-12 de abril) tras la exclusion decretada por el gobierno de Boric para la edicion 2024. La Comunidad Palestina en Chile advirtio un 'grave retroceso' en la politica exterior chilena."
+
+elciudadano-2026-04-04-gobierno-autoriza-iai-fidae:
+  tipo: noticia
+  medio: El Ciudadano
+  titulo: "Gobierno autoriza participación de empresa estatal bélica israelí en FIDAE 2026 y desata cuestionamientos por giro en política exterior"
+  autor: "El Ciudadano"
+  fecha: 2026-04-04
+  url: https://www.elciudadano.com/actualidad/gobierno-autoriza-participacion-de-empresa-estatal-belica-israeli-en-fidae-2026-y-desata-cuestionamientos-por-giro-en-politica-exterior/04/04/
+  notas: "El Ciudadano (4-abr-2026): El gobierno de Kast autorizó la participación de Israel Aerospace Industries (IAI), empresa estatal bélica israelí, en FIDAE 2026, lo que desató cuestionamientos por el giro en política exterior respecto de la línea adoptada desde 2024."
+
+elclarin-2026-04-05-iai-fidae-comunidad-palestina:
+  tipo: noticia
+  medio: El Clarín de Chile
+  titulo: "Participación de Israel Aerospace Industries en FIDAE 2026 desata críticas y presión política hacia el gobierno de Kast de la comunidad palestina"
+  autor: "El Clarín de Chile"
+  fecha: 2026-04-05
+  url: https://www.elclarin.cl/2026/04/05/participacion-de-israel-aerospace-industries-en-fidae-2026-desata-criticas-y-presion-politica-hacia-el-gobierno-de-kast-de-la-comunidad-palestina/
+  notas: "El Clarín de Chile (5-abr-2026): La Comunidad Palestina de Chile expresó su 'más profunda indignación, rechazo y condena' a la autorización de IAI en FIDAE 2026 (7-12 abril), calificándola de 'ofensa moral grave, dolorosa e inaceptable' y advirtiendo riesgos jurídicos internacionales (CIJ, CPI, jurisdicción universal). Su presidente, Maurice Khamis: 'Esto es una provocación a cientos de miles de chilenos de origen palestino que verán en Chile las armas con las que han asesinado a sus familias'. Recuerda los precedentes: exclusión de Rusia en FIDAE 2022 (Piñera) y de empresas israelíes en 2024 (Boric); pide revertir la decisión. Menciona informe técnico de la organización sobre quiebre de política de Estado y divergencia con España, Francia y Países Bajos."
+
+defensacom-2026-06-08-kast-reactiva-cooperacion:
+  tipo: noticia
+  medio: defensa.com
+  titulo: "Chile e Israel reactivan con Kast la cooperación en defensa; IAI y ELTA se presentan en FIDAE"
+  autor: "defensa.com"
+  fecha: 2026-06-08
+  url: https://www.defensa.com/chile/chile-israel-reactivan-cooperacion-defensa-iai-elta-presentan
+  notas: "defensa.com (8-jun-2026): Análisis de la reactivación de la relación en defensa bajo el gobierno de Kast. Precisa que la presencia de empresas israelíes en FIDAE 2026 fue 'sin delegación oficial de alto nivel', como 'retorno pragmático a la normalidad'. Recorre la línea de tiempo: retiro de agregados (mayo 2025), decisión de no realizar nuevas adquisiciones, reunión Barros-Lewi (31-mar-2026) y nombramiento de Zaliasnik (junio 2026). Expertos citados estiman inviable reemplazar rápidamente los sistemas israelíes integrados durante décadas."
+
+infodefensa-2025-09-25-delpiano-no-compras-israel:
+  tipo: noticia
+  medio: Infodefensa
+  titulo: "Delpiano afirma que Chile no comprará más armas a Israel y destaca avances en diversificación de proveedores"
+  autor: "Nicolás García"
+  fecha: 2025-09-25
+  url: https://www.infodefensa.com/texto-diario/mostrar/5444938/delpiano-afirma-chile-no-comprara-armas-israel-destaca-avances-diversificacion-proveedores
+  notas: "Infodefensa (25-sep-2025): La ministra de Defensa del gobierno de Boric, Adriana Delpiano, declaró en Radio Cooperativa que las nuevas compras de armamento a Israel 'no se van a hacer ni se está haciendo' ('no tiene que ver con la calidad del armamento, tiene que ver con otra situación'), en el marco del plan de diversificación de proveedores instruido por Boric en junio de 2025 (Cuenta Pública: apoyo al embargo de armas, proyecto de ley contra productos de asentamientos, plan de diversificación). Contratos vigentes se mantienen ('lo que tenemos amarrado por convenio hay que mantenerlo'); radares israelíes aún operativos. Corroborada por El Periodista y La Prensa Austral del mismo día."
+
+elciudadano-2026-07-22-colmed-normas-retiradas:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Por su impacto en la salud de la población: Colegio Médico exige al Gobierno reponer normas ambientales que fueron retiradas de Contraloría"
+  autor: "El Ciudadano"
+  fecha: 2026-07-22
+  url: https://www.elciudadano.com/chile/por-su-impacto-en-la-salud-de-la-poblacion-colegio-medico-exige-al-gobierno-reponer-normas-ambientales-que-fueron-retiradas-de-contraloria/07/21/
+  notas: "Oficio del Colmed (firmado por Anamaría Arriagada y Yuri Carvajal) pidiendo a Toledo reingresar DS N°8/2025 y DS N°3/2026; cifras AGIES US$91M y US$8.873M; retraso de 11 años."
+
+codexverde-2026-07-23-colmed-normas-ambientales:
+  tipo: prensa
+  medio: Codex Verde
+  titulo: "Colegio Médico alerta al Gobierno y exige reponer normas ambientales clave por su impacto en la salud de la población"
+  autor: Ivannia Cordero
+  fecha: 2026-07-23
+  url: https://codexverde.cl/colegio-medico-alerta-al-gobierno-y-exige-reponer-normas-ambientales-clave-por-su-impacto-en-la-salud-de-la-poblacion/
+  notas: "Detalle del oficio Colmed: norma termoeléctricas inició revisión en septiembre 2020 e ingresó a Contraloría en octubre 2025; límites MP2,5 anual 20→15 µg/m³ y diario 50→38 µg/m³; oficios también a Senado y Cámara."
+
+eldesconcierto-2026-08-03-colmed-normas-aire:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Colegio Médico pide a Toledo reingresar normas retiradas contra contaminación del aire por riesgo a salud"
+  autor: María del Mar Parra
+  fecha: 2026-08-03
+  url: https://eldesconcierto.cl/medio-ambiente/colegio-medico-pide-toledo-reingresar-normas-retiradas-contra-contaminacion-del-aire-riesgo-salud-n5460975
+  notas: "Cita a Pamela Schellman (secretaria técnica Depto. Medio Ambiente Colmed); contraste con Alerta Sanitaria Oncológica del propio gobierno."
+
+radio_uchile-2026-08-09-dos-decretos-pendientes:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Más allá del pingüino de Humboldt: los dos decretos ambientales que aún no reingresan a Contraloría y que preocupan a ONGs y al Colmed"
+  autor: Fernanda Araneda
+  fecha: 2026-08-09
+  url: https://radio.uchile.cl/2026/08/09/mas-alla-del-pinguino-de-humboldt-los-dos-decretos-ambientales-que-aun-no-reingresan-a-contraloria-y-que-preocupan-a-ongs-y-al-colmed/
+  notas: "Respuestas de Toledo por escrito a Radio UChile ('revisión seria y responsable', 'materias complejas'); declaraciones de Sara Larraín (Chile Sustentable) y Yuri Carvajal (Colmed)."
+
+elmostrador-2026-08-18-aire-esperando:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "El aire que sigue esperando"
+  autor: Héctor Cossio López
+  fecha: 2026-08-18
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/18/el-aire-que-sigue-esperando/
+  notas: "Columna de análisis a 5 meses del retiro: solo 8 decretos reingresados y 35 pendientes; datos OMS (guía 5 y 15 µg/m³); +1% mortalidad no accidental por cada 10 µg/m³ diarios; inicio de revisión de la norma MP10."
+
+elciudadano-2026-08-19-carta-abierta-normas-aire:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "\"Podrían evitar 1500 muertes al año\": Organizaciones de salud y medioambiente llaman a firmar carta para exigir reingreso de normas de calidad del aire retiradas por Kast desde Contraloría"
+  autor: "El Ciudadano"
+  fecha: 2026-08-19
+  url: https://www.elciudadano.com/chile/podrian-evitar-1500-muertes-al-ano-organizaciones-de-salud-y-medioambiente-llaman-a-firmar-carta-para-exigir-reingreso-de-normas-de-calidad-del-aire-retiradas-por-kast-desde-contraloria/08/19/
+  notas: "Carta abierta ciudadana impulsada por Colmed + organizaciones civiles; AGIES MP2,5: 14.660 muertes prematuras evitables 2026-2035 (~1.466/año), >8.400 hospitalizaciones y 426.841 urgencias por asma; 126 comunas sobre la norma propuesta; retiro fechado el 12 de marzo de 2026."
+
+adnradio-2026-08-20-toledo-decretos:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "\"Fue la mejor decisión\": Ministra Toledo defiende el retiro de 43 decretos ambientales desde Contraloría"
+  autor: Mario Vergara
+  fecha: 2026-08-20
+  url: https://www.adnradio.cl/2026/08/20/fue-la-mejor-decision-ministra-toledo-defiende-el-retiro-de-43-decretos-ambientales-desde-contraloria/
+  notas: "Entrevista en programa Tu Nuevo ADN; Toledo sin fecha para reingresar normas MP2,5 y termoeléctricas ('prioridades de corto plazo')."
+
+cnnchile-2026-08-20-toledo-defiende-decretos:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Ministra Toledo defiende retiro de 43 decretos ambientales del Gobierno de Boric: \"Fue la mejor decisión que pudimos haber tomado\""
+  autor: CNN Chile
+  fecha: 2026-08-20
+  url: https://www.cnnchile.com/pais/ministra-toledo-defiende-retiro-de-43-decretos-ambientales-del-gobierno-de-boric-fue-la-mejor-decision-que-pudimos-haber-tomado/
+  notas: "Recoge entrevista de Radio ADN; precisa estado: 8 decretos reingresados y 35 pendientes; menciona parques nacionales Juan Fernández y monumento nacional pingüino de Humboldt entre los retirados."
+
+contrapoder-2026-06-18-ecomac-minvu-conflicto-interes:
+  tipo: investigacion
+  medio: Contrapoder Chile
+  titulo: "Inmobiliaria ligada al biministro Daniel Mas mantiene millonarios proyectos con el Minvu de Coquimbo"
+  autor: Contrapoder Chile
+  fecha: 2026-06-18
+  url: https://contrapoderchile.cl/inmobiliaria-ligada-al-biministro-daniel-mas-mantiene-millonarios-proyectos-con-el-minvu-de-coquimbo/
+  notas: "Contrapoder Chile (publicado ~18-jun-2026; la página indica 'Hace 2 meses' desde agosto 2026). Solicitud de Transparencia reveló que Ecomac (firma con 50% de Daniel Mas, biministro de Economía y Minería) mantiene dos proyectos habitacionales vigentes con el MINVU de Coquimbo: Condominio Los Arrayanes (430.020 UF) y Condominio Portal de Peñuelas (287.525 UF), seleccionados el 9-nov-2022 bajo el Programa de Integración Social y Territorial (DS19). Monto total: $24.891.973.295. La SMA sancionó a Ecomac por exceder norma de ruidos (89 UTA, ~$74 millones), ratificada por el Primer Tribunal Ambiental en abril 2026 mientras Mas ya ejercía como biministro. Diputada Nathalie Castillo (PC) cuestionó conflicto de interés. Respuesta de Mas: declaró estar 'completamente desligado de los negocios desde marzo pasado' y que las sociedades operan con administración independiente."
+
+elciudadano-2026-06-20-ecomac-minvu-daniel-mas:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Empresa vinculada al biministro Daniel Mas mantiene proyectos habitacionales vigentes por casi $25 mil millones con el Estado"
+  autor: Camila Silva Cortés
+  fecha: 2026-06-20
+  url: https://www.elciudadano.com/chile/empresa-daniel-mas-proyectos-minvu/06/20/
+  notas: "El Ciudadano (20-jun-2026). Corrobora reportaje de Contrapoder: Ecomac mantiene dos proyectos habitacionales vigentes con MINVU Coquimbo (Los Arrayanes y Portal de Peñuelas) bajo DS19, por ~$24.900 millones. Cita de Nathalie Castillo y respuesta de Daniel Mas. Detalla montos por proyecto y unidades a la venta desde 2.600 UF."
+
+theclinic-2026-04-07-kast-inaugura-fidae:
+  tipo: noticia
+  medio: The Clinic
+  titulo: "Presidente Kast inaugura FIDAE 2026 y destaca posicionamiento aeroespacial del pais: 'Chile no llego a esto por casualidad'"
+  autor: "The Clinic"
+  fecha: 2026-04-07
+  url: https://www.theclinic.cl/2026/04/07/presidente-kast-inaugura-fidae-y-destaca-posicionamiento-aeroespacial-del-pais-chile-no-llego-a-esto-por-casualidad/
+  notas: "No leida directamente; titulo y fecha verificados contra el catalogo de sitemaps. Contexto de la inauguracion oficial de FIDAE 2026 por el presidente Kast el 7 de abril."
+
+emol-2026-08-18-comision-18o-aprueba-informe:
+  tipo: noticia
+  medio: Emol
+  titulo: "Comisión del 18-O aprueba informe que cuestiona preparación ante la violencia y falta de un sistema de inteligencia robusto"
+  autor: "Gabriela Valdés"
+  fecha: 2026-08-18
+  url: https://www.emol.com/noticias/Nacional/2026/08/18/1208812/comision-18o-aprueba-informe-inteligencia.html
+  notas: "Leída completa. La comisión especial investigadora (presidente Hans Marowski, PNL) aprobó su informe final con 8 votos a favor (Bassaletti, Marowski, Olivares, Javiera Rodríguez, Bobadilla, Cristóbal Martínez, Orrego, Riquelme) y 4 en contra (Jorge Díaz, Lorena Pizarro, Manouchehri, Veloso). Conclusiones: falta de capacidad preventiva y de sistema de inteligencia robusto y coordinado; respuesta estatal insuficiente. De 32 invitados asistieron 17; de 65 oficios, solo 10 respondidos. Antecedentes: 77 de 136 estaciones del Metro dañadas (20 incendiadas), ataques a infraestructura eléctrica 2019-2023."
+
+exante-2026-08-19-informe-18o-pinera:
+  tipo: noticia
+  medio: Ex-Ante
+  titulo: "Informe del 18-O aprobado con votos de la derecha apunta a Piñera y omite a quienes estimularon la violencia"
+  autor: "Ex-Ante"
+  fecha: 2026-08-19
+  url: https://www.ex-ante.cl/nacional/informe-18-o-apunta-pinera-responsables
+  notas: "Leída completa. La comisión terminó sin identificar a responsables del vandalismo (11 sesiones con 17 invitados). Conclusión principal: la respuesta y capacidad estatal para el manejo de seguridad no tuvo lugar. Respaldado por Republicano, PNL, UDI y RN; molestia entre ex ministros de Piñera. Crítica del medio: omite roles que legitimaron la violencia (Pamela Jiles encapuchada el 12-dic-2019 durante la votación de la acusación constitucional; encapuchados presentados como héroes en el ex Congreso el 24-ene-2020; indultos de Boric en 2022)."
+
+theclinic-2026-08-19-furia-rn-orrego-informe-18o:
+  tipo: noticia
+  medio: The Clinic
+  titulo: "Piden llevarlo al tribunal supremo: La furia en los chats de RN contra Francisco Orrego tras aprobar informe de comisión por el 18-O que critica al gobierno de Piñera"
+  autor: "The Clinic"
+  fecha: 2026-08-19
+  url: https://www.theclinic.cl/2026/08/19/piden-llevarlo-al-tribunal-supremo-la-furia-en-los-chats-de-rn-contra-francisco-orrego-tras-aprobar-informe-de-comision-por-el-18-o-que-critica-al-gobierno-de-pinera/
+  notas: "Título y fecha verificados contra el catálogo de sitemaps (news-sitemap). Contenido complementario confirmado vía Emol 20-ago-2026: Orrego fue consultado por The Clinic y defendió cada una de las conclusiones, cuestionando que RN rechazara el informe sin leerlo."
+
+emol-2026-08-20-informe-18o-criticas-derecha:
+  tipo: noticia
+  medio: Emol
+  titulo: "La pugna en la derecha tras informe del 18-O: Chile Vamos cuestiona conclusiones tras apuntar a gestión de Piñera"
+  autor: "Gabriela Valdés"
+  fecha: 2026-08-20
+  url: https://www.emol.com/noticias/Nacional/2026/08/20/1209029/informe-18-octubre-criticas-derecha.html
+  notas: "Leída completa. El informe atribuye a la administración de Piñera 'excesivos incumplimientos' en resguardar el orden público. RN lo calificó de 'apreciación injusta'; UDI criticó que no identificó instigadores ni financiamiento y adelantó que será rechazado en Sala; Evópoli también lo rechazó. Bobadilla anunció que rectificará su voto en la Sala; Orrego defendió su voto ('el partido no leyó el documento'). Marowski: 'Tuvimos 11 sesiones, invitamos a 32 personas y solo 17 decidieron concurrir'; entre los inasistentes: Andrés Chadwick, Sergio Micco (INDH), Gustavo Jordán y Luis Masferrer (ANI), Juan Francisco Galli."
+
+diariousach-2026-08-20-gonzalez-injerencia-eeuu:
+  tipo: entrevista
+  medio: Diario USACH
+  titulo: "Mónica González revela posible injerencia de EE.UU. en informes inteligencia del Estallido Social"
+  autor: "Hugo García"
+  fecha: 2026-08-20
+  url: https://www.diariousach.cl/programas-radio-usach/linea-uno/monica-gonzalez-revela-posible-injerencia-de-ee-uu-en-informes
+  notas: "Versión escrita de la entrevista de Mónica González en Línea Uno (Radio Usach); video en YouTube: https://www.youtube.com/watch?v=whdy7yVS7Yw. Leída completa. Amplía su exposición ante la comisión del estallido: alineamiento entre la información falsa recibida por Piñera y el discurso de funcionarios de EE.UU. (Kozak 25-oct-2019, llamada de Trump anunciada el 31-oct-2019, Abrams 27-nov-2019, Pompeo 2-dic-2019). Piñera citado: '¿Usted cree que yo hubiera hablado de guerra si no hubiera tenido esa información?'."
+
+emol-2019-10-25-cuentas-falsas-rusia-kozak:
+  tipo: noticia
+  medio: Emol
+  titulo: 'EE.UU. asegura que identificó en redes sociales "cuentas falsas que emanan de Rusia"'
+  autor: Emol
+  fecha: 2019-10-25
+  url: https://www.emol.com/noticias/Internacional/2019/10/25/965434/Rusia-EEUU-Crisis-Social-Kozak.html
+  notas: "Fuente de época. Michael Kozak, encargado de Latinoamérica del Departamento de Estado, dijo que había personas que 'fingen ser chilenas' tratando de socavar instituciones; aclaró que eso no sería la causa de los disturbios. Había afirmado ante un comité del Congreso de EE.UU. que detectaron 'actores extranjeros' en las protestas."
+
+biobiochile-2019-10-31-trump-pinera-esfuerzo-extranjero:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: 'Trump llamó a Piñera y le aseguró que hay un "esfuerzo extranjero" que busca desestabilizar Chile'
+  autor: "Verónica Reyes / AFP"
+  fecha: 2019-10-31
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2019/10/31/trump-llamo-a-pinera-y-le-aseguro-que-hay-un-esfuerzo-extranjero-que-busca-desestabilizar-chile.shtml
+  notas: "Fuente de época (AFP). El portavoz de la Casa Blanca Judd Deere informó que Trump llamó a Piñera (llamada del miércoles 30) para expresarle apoyo tras cancelar APEC y COP25, y que 'denunció los esfuerzos extranjeros para minar las instituciones chilenas, la democracia y la sociedad'. Contexto: Almagro (OEA) denunciaba un patrón de desestabilización desde Venezuela y Cuba."
+
+infobae-2019-11-27-abrams-cuba-venezuela-sudamerica:
+  tipo: noticia
+  medio: Infobae
+  titulo: "Elliott Abrams: 'Cuba y Venezuela hicieron mucho para exacerbar los problemas en Sudamérica y los estamos siguiendo de cerca'"
+  autor: Infobae
+  fecha: 2019-11-27
+  url: https://www.infobae.com/america/venezuela/2019/11/27/elliott-abrams-cuba-y-venezuela-hicieron-mucho-para-exacerbar-los-problemas-en-sudamerica-y-los-estamos-siguiendo-de-cerca/
+  notas: "Fuente de época. El enviado especial de EE.UU. para Venezuela acusó a Cuba y Venezuela de usar redes sociales y otros medios para fomentar disturbios en Sudamérica; funcionarios estadounidenses acusaron a Venezuela de incidir en las manifestaciones de Ecuador y Chile. Corroborado por AFP/El Nacional y Diario Las Américas del mismo día."
+
+biobiochile-2019-12-02-pompeo-gobiernos-legitimos-protestas:
+  tipo: noticia
+  medio: BioBioChile
+  titulo: 'EEUU ayudará a "gobiernos legítimos" de América Latina para que protestas no terminen en disturbios'
+  autor: BioBioChile
+  fecha: 2019-12-02
+  url: https://www.biobiochile.cl/noticias/internacional/america-latina/2019/12/02/eeuu-ayudara-a-gobiernos-legitimo-de-america-latina-para-que-protestas-no-terminen-en-disturbios.shtml
+  notas: "Fuente de época. Mike Pompeo acusó a Cuba y Venezuela de sacar provecho de las manifestaciones sociales en América Latina; corrobora la secuencia documentada por Mónica González. Cobertura adicional: Emol (02-dic-2019) y Mercopress (03-dic-2019)."
+
+elmostrador-2020-10-21-plan-zeta-dine-600-agentes:
+  tipo: noticia
+  medio: El Mostrador
+  titulo: "Los gruesos errores del «Plan Zeta» de Piñera, que fueron advertidos por otro informe de inteligencia durante el estallido"
+  autor: "Héctor Cossio López"
+  fecha: 2020-10-21
+  url: https://www.elmostrador.cl/destacado/2020/10/21/los-gruesos-errores-del-plan-zeta-de-pinera-que-fueron-advertidos-por-otro-informe-de-inteligencia-durante-el-estallido/
+  notas: "Fuente de época que corrobora la versión del origen militar (DINE): el informe Nº2 de la DINE, fechado el 20 de octubre de 2019 y presentado por el general Guillermo Paiva y Alberto Espina a Piñera horas antes del discurso de 'guerra', atribuía operaciones insurreccionales a un 'batallón de 600 agentes clandestinos' de la inteligencia venezolana y cubana; identificaba como organizadora a la tuitera venezolana Judith Belandria y situaba la coordinación en el Foro de Sao Paulo de julio de 2019."
+
+chilevision-2026-08-20-comision-investigadora-quiroz:
+  tipo: noticia
+  medio: Chilevisión
+  titulo: "Oposición anuncia comisión investigadora ante eventuales conflictos de interés del ministro Quiroz"
+  autor: "Fernanda Valdenegro"
+  fecha: 2026-08-20
+  url: https://www.chilevision.cl/noticias/nacional/oposicion-anuncia-comision-investigadora-ante-eventuales-conflictos-de-interes-del-ministro-quiroz/
+  notas: "Leída completa. La iniciativa fue promovida por diputados de los comités del FA, PS, PC, PPD, DC y Partido Liberal. Cita del diputado Jaime Bassa (FA): los antecedentes generan dudas sobre transparencia y plantea posibilidad de conflictos de interés o incluso tráfico de influencias; no existen actas ni documentos públicos de los acuerdos. Parlamentarios cuestionan que Alto Santorini (Concón, del hermano del ministro) y la planta de sales de potasio en el Salar de Atacama (Grupo Errázuriz) habrían avanzado pese a informes negativos de Sernageomin."
+
+adnradio-2026-08-20-engel-secreto-bancario:
+  tipo: entrevista
+  medio: ADN Radio
+  titulo: "\"Cuesta entender por qué el Gobierno no ha querido hacer nada con el secreto bancario\", dice el economista Eduardo Engel"
+  autor: "Mario Vergara"
+  fecha: 2026-08-20
+  url: https://www.adnradio.cl/2026/08/20/cuesta-entender-por-que-el-gobierno-no-ha-querido-hacer-nada-con-el-secreto-bancario-dice-el-economista-eduardo-engel/
+  notas: "Leída completa. Entrevista en 'De esto se habla' (coproducción Radio ADN y El País, conducida por Rocío Montes y Mauricio Bustamante). Engel: expectativas de crecimiento de la megarreforma excesivamente optimistas (promesa de pasar de 2,5% a 4%; impacto real ~0,5 puntos); déficit estructural de al menos 2 puntos del PIB pendiente; concesiones al PDG regresivas (IVA pañales/medicamentos: por cada peso que ahorran las familias pobres el fisco pierde tres); estado de excepción de 240 días sin Congreso = democracia iliberal ('si llegara a aprobarse, sí es una medida de un gobierno de ultraderecha'); secreto bancario ya opera con autorización judicial; registro de beneficiarios finales 'la medida más importante para combatir el crimen organizado'; Chile en 'primera división' de transparencia junto a Uruguay."
+
+adnradio-2026-08-21-arrau-interceptacion-telefono:
+  tipo: noticia
+  medio: ADN Radio
+  titulo: "\"Interceptar un teléfono no es tema\": ministro Arrau defiende facultades tras críticas reforma de seguridad"
+  autor: "Cristóbal Álvarez"
+  fecha: 2026-08-21
+  url: https://www.adnradio.cl/2026/08/21/interceptar-un-telefono-no-es-tema-ministro-arrau-defiende-facultades-tras-criticas-reforma-de-seguridad/
+  notas: "Leída completa. El ministro de Seguridad Pública defendió en el encuentro empresarial Impulsa (CPC Biobío, Concepción) la reforma constitucional que crea el nuevo estado de excepción: facultades para restringir libertad personal, locomoción, reunión y asociación, e interceptar comunicaciones, registrar documentos y requisar bienes en situaciones 'muy específicas y puntuales'. Sobre interceptación telefónica: 'hoy día interceptar un teléfono la verdad es que no es tema, la gente cambia el teléfono cada diez minutos'. Meta en Macrozona Sur: libre circulación a cualquier hora en Arauco y La Araucanía."

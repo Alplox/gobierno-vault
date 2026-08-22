@@ -469,7 +469,10 @@ ver `scripts/proseNames.mjs`, el mismo modulo que usa el fixer). **CRLF:** con
 `core.autocrlf=true` el checkout de Windows entrega `\r\n`; las regex de
 frontmatter de validate/fixer son tolerantes (`\r?\n`), si no se saltarían en
 silencio ~2/3 de los eventos (bug real corregido 16-ago-2026: 639 de 949
-archivos nunca se validaban). Paridad con el plugin: `[[cifra/...]]` NO se
+archivos nunca se validaban). Lo mismo aplica a `scripts/generate-index.mjs`
+(corregido 21-ago-2026): su regex de frontmatter es tolerante a CRLF; con el
+bug, el índice y las estadísticas solo contaban los archivos con LF (reportaba
+441 eventos cuando el vault real supera los 1.000). Paridad con el plugin: `[[cifra/...]]` NO se
 valida (el plugin tampoco) y los IDs de evento desnudos (`\b20\d{6}-\d{1,3}\b`)
 solo se enlazan si existen, sin ser error. Se excluyen bloques de codigo fenced
 (```) e `inlineCode` (\`) del chequeo, igual que el plugin (que solo recorre
@@ -480,11 +483,12 @@ entrada con `rendered: undefined`, dejando la pagina del evento SIN contenido en
 chequeo temprano de `validate` es la red de seguridad real.
 
 **Build en paralelo (`build.concurrency`):** `astro.config.mjs` define
-`build: { concurrency: Math.min(availableParallelism(), 4) }` porque el default
+`build: { concurrency: availableParallelism() }` porque el default
 de Astro 7 es 1 (generacion secuencial de paginas) y el vault ya supera las
-6.800 paginas (eventos + personas + orgs + temas + fuentes). El limite de 4
-balancea velocidad y RAM en CI/Cloudflare Pages (no saturar runners pequenos);
-ajustar si el runner lo permite.
+8.600 paginas (eventos + personas + orgs + temas + fuentes). El build corre
+LOCAL (`pnpm run deploy`; Cloudflare Pages solo recibe `dist/` via wrangler),
+asi que se usan todos los cores de la maquina; si aparece presion de RAM,
+volver a un cap tipo `Math.min(availableParallelism(), N)`.
 
 **Tailwind v4 + daisyUI 5 (migrado desde @astrojs/tailwind@6 / Tailwind v3, 21-ago-2026):**
 el CSS vive en `src/styles/global.css` (`@import "tailwindcss"` + `@plugin
@@ -588,41 +592,47 @@ Cuando descubras algo no documentado aqui:
 | `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 300 | 1 |
 | `amchamchile` | AmCham Chile | `amchamchile.cl/sitemap_index.xml` | includeRe | 10.640 | 12 |
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
-| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.927 | 4 |
-| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.232 | 10 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.939 | 4 |
+| `chilevision` | Chilevisión | `www.chilevision.cl/robots.txt` | — | 281.444 | 15 |
+| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.246 | 10 |
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
 | `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.126 | 16 |
 | `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 2.288 | 1 |
 | `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
+| `diarioconcepcion` | Diario Concepción | `www.diarioconcepcion.cl/sitemap.xml, www.diarioconcepcion.cl/sitemap_news.xml` | — | 501 | 1 |
 | `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 200 | 1 |
-| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 84.967 | 18 |
+| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 85.073 | 18 |
 | `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.429 | 4 |
-| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.749 | 22 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.867 | 22 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.721 | 10 |
 | `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
-| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.301 | 17 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.394 | 17 |
 | `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 201 | 1 |
+| `elperiodico` | El Periódico | `elperiodico.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.101 | 2 |
 | `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
-| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.368 | 27 |
+| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.616 | 27 |
 | `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.148 | 7 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
 | `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.142 | 7 |
 | `gob` | Gobierno de Chile | `www.gob.cl/sitemap-articles.xml` | — | 4 | 1 |
+| `la_hora` | La Hora | `lahora.cl/sitemap.xml` | includeRe | 44.265 | 3 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
+| `lacuarta` | La Cuarta | `www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 9.762 | 1 |
 | `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 11.812 | 1 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 12.037 | 1 |
 | `malaespina` | Mala Espina | `malaespinacheck.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.473 | 7 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
-| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 133 | 1 |
+| `nuevopoder` | Nuevo Poder | `www.nuevopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 56.205 | 5 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 183 | 1 |
 | `quepasaaraucania` | Qué Pasa Araucanía | `quepasaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.270 | 3 |
 | `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
-| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.061 | 18 |
+| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.109 | 18 |
 | `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 298.864 | 12 |
-| `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.987 | 7 |
-| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.132 | 8 |
+| `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.993 | 7 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.214 | 8 |
 | `senado` | Senado de Chile | `www.senado.cl/sitemap.xml` | — | 17.355 | 3 |
-| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.072 | 19 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.176 | 19 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
 
@@ -634,51 +644,58 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 441
+**Total de eventos:** 1113
 
-**Cobertura de fuentes:** 234 de 441 eventos con 3+ fuentes (207 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 654 de 1113 eventos con 3+ fuentes (459 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 332
-- 2025: 15
-- 2024: 12
-- 2023: 14
-- 2022: 9
-- 2021: 6
-- 2020: 23
-- 2019: 23
+- 2026: 851
+- 2025: 55
+- 2024: 34
+- 2023: 26
+- 2022: 21
+- 2021: 19
+- 2020: 36
+- 2019: 35
+- 2018: 3
 - 2017: 2
-- 2015: 3
-- 2010: 1
-- 2009: 1
+- 2016: 2
+- 2015: 6
+- 2014: 5
+- 2013: 2
+- 2012: 1
+- 2011: 1
+- 2010: 7
+- 2009: 6
+- 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (146)
-- Justicia (117)
-- Economia (106)
-- Defensa y seguridad (78)
-- Administración pública (69)
-- Derechos humanos (55)
-- Proceso legislativo (45)
-- Emergencia y catástrofes (42)
-- Gobierno y gestion presidencial (38)
-- Finanzas publicas (36)
+- Politica (440)
+- Justicia (317)
+- Economia (225)
+- Defensa y seguridad (210)
+- Administración pública (170)
+- Derechos humanos (138)
+- Proceso legislativo (101)
+- Finanzas publicas (91)
+- Corrupción (89)
+- Relaciones internacionales (73)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (84)
-- publicacion (74)
-- resultado (63)
-- investigacion (53)
-- anuncio (35)
-- fallo_judicial (29)
-- reaccion (29)
-- declaracion (27)
-- votacion (16)
-- decreto (9)
+- accion (226)
+- investigacion (140)
+- declaracion (127)
+- publicacion (126)
+- reaccion (125)
+- resultado (114)
+- fallo_judicial (81)
+- anuncio (74)
+- votacion (29)
+- entrevista (21)
 
 **Entidades registradas:**
-- Personas: 1954
-- Organizaciones: 934
-- Cifras: 989
-- Fuentes: 3762
-- Temas: 74
+- Personas: 1979
+- Organizaciones: 951
+- Cifras: 991
+- Fuentes: 3889
+- Temas: 75

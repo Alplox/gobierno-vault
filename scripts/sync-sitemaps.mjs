@@ -327,6 +327,46 @@ const MEDIA = {
     // por fecha.
     urlRe: /\/comunicaciones\/noticias\/.+$/i,
   },
+  chilevision: {
+    nombre: 'Chilevisión',
+    robots: 'https://www.chilevision.cl/robots.txt',
+    // CMS propio (mismo que CNN Chile): sitemap_index.xml (sub-sitemaps por
+    // mes) + sitemap_lasts.xml + sitemap_news.xml (títulos reales).
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  lacuarta: {
+    nombre: 'La Cuarta',
+    index: 'https://www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml',
+    // Arc XP: sitemap-index paginado + news-sitemap con títulos reales.
+  },
+  nuevopoder: {
+    nombre: 'Nuevo Poder',
+    index: 'https://www.nuevopoder.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+
+  la_hora: {
+    nombre: 'La Hora',
+    index: 'https://lahora.cl/sitemap.xml',
+    // Custom: index diario sitemap-DD-MM-YYYY.xml + latest.xml. No es Yoast.
+    // articleOnly descarta page/category; los archivos diarios (sitemap-DD-MM-YYYY.xml)
+    // matchean el includeRe.
+    includeRe: /(?:sitemap-\d{2}-\d{2}-\d{4}\.xml|latest\.xml)$/i,
+  },
+
+  elperiodico: {
+    nombre: 'El Periódico',
+    index: 'https://elperiodico.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  diarioconcepcion: {
+    nombre: 'Diario Concepción',
+    index: 'https://www.diarioconcepcion.cl/sitemap.xml',
+    // Sitemap + sitemap_news (títulos reales).
+    extra: [
+      'https://www.diarioconcepcion.cl/sitemap_news.xml',
+    ],
+  },
 };
 
 // ---------------------------------------------------------------------------

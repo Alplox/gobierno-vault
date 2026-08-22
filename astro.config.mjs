@@ -14,22 +14,20 @@ export default defineConfig({
   site: 'https://gobierno-vault.pages.dev',
   output: 'static',
   // El default de Astro 7 es build.concurrency=1 (generacion secuencial de
-  // paginas). El vault crece (8.900+ paginas) y el build tarda minutos; se
-  // paraleliza con p-limit interno. 2 workers balancea velocidad vs RAM en
-  // Cloudflare Pages (runners pequenos); subir a 4 si el runner lo permite.
+  // paginas). El vault crece (8.900+ paginas) y el build tarda minutos.
+  // El build corre LOCAL (pnpm run deploy), no en runners chicos de CI:
+  // usar todos los cores disponibles. Si aparece presion de RAM, poner un
+  // cap tipo Math.min(availableParallelism(), N).
   build: {
-    concurrency: Math.min(availableParallelism(), 2),
+    concurrency: availableParallelism(),
   },
   // Precarga las páginas al hover (compatible con ClientRouter de View Transitions)
   prefetch: {
     prefetchAll: true,
     defaultStrategy: 'hover',
   },
-  integrations: [],
   // Tailwind v4 vía plugin Vite (el CSS vive en src/styles/global.css con
-  // @import "tailwindcss" + @plugin daisyui/typography). El build es local
-  // (pnpm run deploy), así que no aplica la vieja restricción de CI que
-  // forzaba @astrojs/tailwind@6 (Tailwind v3) para resolver peers.
+  // @import "tailwindcss" + @plugin daisyui/typography).
   vite: {
     plugins: [
       tailwindcss(),

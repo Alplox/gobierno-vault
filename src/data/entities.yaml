@@ -1,4 +1,9 @@
 people:
+  ignacio_ramirez:
+    nombre: Ignacio Ramírez
+    cargo: Mayor de Carabineros
+    organizacion: carabineros
+    notas: "Mayor y comisario subrogante de la 19ª Comisaría de Providencia. Portavoz policial del procedimiento frente al Liceo José Victorino Lastarria del 19-ago-2026."
   camilo_catrillanca:
     nombre: Camilo Catrillanca
     notas: "Comunero mapuche muerto por Carabineros el 14 de noviembre de 2018 en la comunidad de Temucuicui, durante un operativo de la Caminera. Su muerte se convirtió en símbolo de las demandas de derechos humanos durante el estallido social de 2019."
@@ -729,6 +734,11 @@ people:
     nombre: José Miguel Castro
     cargo: Representante de Chile ante la OEA
     notas: "Exdiputado de Renovación Nacional y representante de Chile ante la OEA. Encabezó los descargos del gobierno de Kast en la audiencia de la CIDH del 5 de agosto de 2026, calificando de 'absolutamente incompatibles con la realidad fáctica' las denuncias de desmantelamiento de la institucionalidad de DDHH."
+  jose_manuel_salazar_xirinachs:
+    nombre: José Manuel Salazar-Xirinachs
+    cargo: Secretario Ejecutivo de la CEPAL
+    organizacion: cepal
+    notas: "Secretario Ejecutivo de la Comisión Económica para América Latina y el Caribe (CEPAL). Presentó el Estudio Económico de América Latina y el Caribe 2026 (20-ago-2026), que rebajó a 1,6% la proyección de crecimiento de Chile; planteó que para superar 'la trampa de baja capacidad para crecer' hay que elevar inversión y productividad y avanzar hacia una formalización productiva (evento 20260820-15)."
   jose_montalva:
     nombre: José Montalva
     cargo: Diputado (PPD)
@@ -901,6 +911,15 @@ people:
     nombre: Helmut Frenz
     cargo: Obispo de la Iglesia Evangélica Luterana en Chile (1969-1975)
     notas: "Obispo luterano, figura clave en la creación del Comité Nacional de Ayuda a los Refugiados (CONAR, 24 septiembre 1973) y cofundador en octubre de 1973 del Comité de Cooperación para la Paz en Chile (Copachi) junto al obispo católico Fernando Ariztía. Expulsado de Chile en 1975 por su defensa de los perseguidos políticos. Recibió en 1979 la medalla Fridtjof Nansen del ACNUR."
+  helmuth_martinez:
+    nombre: Helmuth Martínez Llancapán
+    cargo: Exconvencional constituyente (independiente)
+    cargos:
+      - cargo: Convencional constituyente por el distrito 23 (Araucanía)
+        organizacion: convencion_constitucional
+        desde: 2021-07-04
+        hasta: 2022-07-04
+    notas: "Abogado independiente, electo convencional en cupo de la Lista del Pueblo por el distrito 23 (Araucanía). Uno de solo dos votos en contra —junto al UDI Martín Arrau García Huidobro— del artículo 87 del borrador constitucional que prohíbe la tortura, el aislamiento y la incomunicación (4-may-2022)."
   izkia_siches:
     nombre: Izkia Siches Pastén
     cargo: Exministra del Interior
@@ -1678,6 +1697,10 @@ people:
         organizacion: ministerio_seguridad
         desde: 2026-05-19
     organizacion: ministerio_seguridad
+  eduardo_engel:
+    nombre: Eduardo Engel
+    cargo: Economista, académico Universidad de Chile
+    notas: "Economista chileno, profesor de la Universidad de Chile. Expresidente de la Comisión Anticorrupción conocida como 'Comisión Engel' (2009-2010). Crítico del gobierno de José Antonio Kast en materia de transparencia: cuestionó la inacción sobre el secreto bancario y el estancamiento del registro de beneficiarios finales, calificó el nuevo estado de excepción constitucional de la ACOT como propio de una 'democracia iliberal' y advirtió expectativas excesivamente optimistas de crecimiento para la megarreforma (evento 20260820-17)."
   marco_cosne:
     nombre: Marco Cosme
     cargo: Suboficial Mayor (fallecido)
@@ -2446,7 +2469,15 @@ people:
   enrique_bassaletti:
     nombre: Enrique Bassaletti
     cargo: Diputado (Ind. Rep.)
-    notas: "Diputado independiente cercano al Partido Republicano. El 10 de agosto de 2026, en la Comisión de Seguridad de la Cámara que aprobó el Registro Nacional de Vándalos, criticó que se impidiera el ingreso del subsecretario Máximo Pavez, argumentando que la persona con conocimiento técnico sobre la materia es el subsecretario."
+    cargos:
+      - cargo: General, jefe de la Zona Metropolitana Oriente de Carabineros
+        organizacion: carabineros
+        desde: 2018-03-01
+        hasta: 2021-10-01
+      - cargo: Diputado (Ind., cercano al Partido Republicano)
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    notas: "Ex general de Carabineros, jefe de la Zona Metropolitana Oriente durante el estallido social (sumariado por el manejo del 18-O y pasado a retiro en octubre de 2021); su hermano Miguel Bassaletti era jefe del Centro Integrado de Control (televigilancia) de Metro en octubre de 2019. Diputado independiente cercano al Partido Republicano. El 10 de agosto de 2026, en la Comisión de Seguridad de la Cámara que aprobó el Registro Nacional de Vándalos, criticó que se impidiera el ingreso del subsecretario Máximo Pavez, argumentando que la persona con conocimiento técnico sobre la materia es el subsecretario."
   juan_marcelo_valenzuela:
     nombre: Juan Marcelo Valenzuela
     cargo: Diputado (PDG)
@@ -3405,7 +3436,7 @@ people:
       - cargo: Biministro de Economía y Minería
         organizacion: ministerio_economia
         desde: 2026-03-11
-    notas: Ingeniero Agrónomo de la PUC, único biministro del gabinete Kast. Ex vicepresidente de la CPC y ex presidente de la CChC de La Serena. Dirige la empresa familiar Ecomac (ex Constructora Carel). Agenda anti-permisología. En 2016 CIPER vinculó a la Inmobiliaria Ecomac, bajo su control, con pagos de $25 millones en facturas falsas que habrían financiado la campaña de Laurence Golborne.
+    notas: "Ingeniero Agrónomo de la PUC, único biministro del gabinete Kast. Ex vicepresidente de la CPC y ex presidente de la CChC de La Serena. Dirige la empresa familiar Ecomac (ex Constructora Carel). Agenda anti-permisología. En 2016 CIPER vinculó a la Inmobiliaria Ecomac, bajo su control, con pagos de $25 millones en facturas falsas que habrían financiado la campaña de Laurence Golborne. En junio 2026, Contrapoder reveló que Ecomac mantiene dos proyectos habitacionales vigentes con el MINVU de Coquimbo por ~$24.900 millones (DS19) mientras él ejerce como biministro, planteando un eventual conflicto de interés; la SMA también ratificó una multa de 89 UTA por ruidos contra Ecomac en abril 2026."
   carlos_smith:
     nombre: Carlos Smith
     cargo: Docente investigador del CIES-UDD
@@ -5069,6 +5100,18 @@ people:
     nombre: Donald Trump
     cargo: Presidente de Estados Unidos
     notas: "Presidente de Estados Unidos en su segundo mandato (desde enero de 2025). Su administración buscó relanzar los lazos bilaterales con Chile tras la asunción de José Antonio Kast, con el envío de Marco Rubio al cambio de mando del 11 de marzo de 2026."
+  michael_kozak:
+    nombre: Michael Kozak
+    cargo: Diplomático estadounidense
+    notas: "Encargado interino de la diplomacia de EE.UU. para América Latina en el Departamento de Estado durante el estallido social (2019). El 25 de octubre de 2019 declaró ante un comité del Congreso de EE.UU. que hubo 'actores extranjeros' en las manifestaciones de Chile y precisó que identificaron 'cuentas falsas que emanan de Rusia' que fingían ser chilenas para socavar instituciones; aclaró que eso no fue la causa de los disturbios (evento 20260811-23)."
+  mike_pompeo:
+    nombre: Mike Pompeo
+    cargo: Secretario de Estado de Estados Unidos (2018-2021)
+    notas: "Secretario de Estado en la primera administración de Donald Trump. El 2 de diciembre de 2019 acusó a Cuba y Venezuela de intentar aprovechar las protestas democráticas en América Latina (citando Chile, Colombia y Bolivia) y prometió apoyo estadounidense a gobiernos legítimos para evitar que las manifestaciones derivaran en revueltas violentas (evento 20260811-23)."
+  elliott_abrams:
+    nombre: Elliott Abrams
+    cargo: Enviado especial de Estados Unidos para Venezuela (2019-2021)
+    notas: "Representante especial de EE.UU. para los asuntos de Venezuela durante la administración Trump. El 27 de noviembre de 2019 acusó a los regímenes de Cuba y Venezuela de usar redes sociales y otros medios para exacerbar los conflictos en Sudamérica, incluyendo las manifestaciones en Chile y Ecuador (evento 20260811-23)."
   xi_jinping:
     nombre: Xi Jinping
     cargo: Presidente de China
@@ -5730,7 +5773,15 @@ people:
         organizacion: junaeb
         desde: 2026-03-11
     organizacion: junaeb
-    notas: "Director Nacional de la Junta Nacional de Auxilio Escolar y Becas (Junaeb). En la Cuenta Pública Participativa 2026 (12-ago-2026) anunció la digitalización gradual de la Tarjeta Nacional Estudiantil (TNE), con licitación durante 2026 y una marcha blanca en la que convivirán el formato físico y digital ('se va a acabar el plástico gradualmente'), motivada por evitar los conflictos entre choferes y estudiantes (evento 20260812-7)."
+    notas: "Director Nacional de la Junta Nacional de Auxilio Escolar y Becas (Junaeb). En la Cuenta Pública Participativa 2026 (12-ago-2026) anunció la digitalización gradual de la Tarjeta Nacional Estudiantil (TNE), con licitación durante 2026 y una marcha blanca en la que convivirán el formato físico y digital ('se va a acabar el plástico gradualmente'), motivada por evitar los conflictos entre choferes y estudiantes (evento 20260812-7). Autor de la denuncia del caso SOSER en O'Higgins (plan Auditoría Total) que originó los allanamientos del 20-ago-2026; señaló al exjefe jurídico Alejandro Layseca y a la exdirectora Camila Rubio como involucrados (evento 20260820-7). Ha sido demandado por calumnias tanto por la empresa SOSER como por Camila Rubio."
+  alejandro_layseca:
+    nombre: Alejandro Layseca
+    cargo: Exjefe jurídico de la Junaeb
+    notas: "Exjefe del área jurídica de la Junaeb. Señalado por el director nacional Fernando Peña (20-ago-2026) como 'parte importante de esta trama' de corrupción en las licitaciones del PAE investigada por la Fiscalía tras los allanamientos del caso SOSER (evento 20260820-7)."
+  camila_rubio:
+    nombre: Camila Rubio
+    cargo: Exdirectora Nacional de la Junaeb
+    notas: "Exdirectora nacional de la Junaeb (gestión anterior a Fernando Peña). Su domicilio fue alcanzado por las diligencias del 20-ago-2026 en el marco del caso SOSER y el director Peña la señaló entre los involucrados (evento 20260820-7). Previamente lo había denunciado por calumnias."
   juan_carlos_diaz:
     nombre: Juan Carlos Díaz
     cargo: Alcalde de Talca
@@ -10021,6 +10072,14 @@ people:
     nombre: Anamaría Arriagada
     cargo: Presidenta del Colegio Médico de Chile
     notas: "Proclamada presidenta del Colegio Médico en 2023. Cuestionó el oficio de Minsal que instruye a hospitales a aumentar rendimientos de consultas por hora, advirtiendo que contempla tiempos incompatibles con una consulta de calidad."
+  yuri_carvajal:
+    nombre: Yuri Carvajal
+    cargo: Presidente del Departamento Nacional de Medio Ambiente del Colegio Médico de Chile
+    notas: "Co-firmó (con Anamaría Arriagada) el oficio del Colmed del 21 de julio de 2026 pidiendo a la ministra Francisca Toledo reingresar los decretos DS N°8/2025 (termoeléctricas) y DS N°3/2026 (MP2,5) retirados de Contraloría."
+  pamela_schellman:
+    nombre: Pamela Schellman
+    cargo: Secretaria técnica del Departamento Nacional de Medio Ambiente del Colegio Médico de Chile
+    notas: "Advirtió en agosto de 2026 que retrasar las normas MP2,5 y termoeléctricas mantiene a la población expuesta a contaminantes que aumentan el riesgo de enfermedades respiratorias, cardiovasculares y cánceres."
   wilson_palma:
     nombre: Wilson Palma Jelves
     cargo: Alcalde de Coihueco (formalizado)
@@ -13750,6 +13809,70 @@ people:
         organizacion: ministerio_educacion
         desde: 1968-02-17
         hasta: 1968-03-04
+  josefa_barraza:
+    nombre: Josefa Barraza
+    cargo: Periodista investigativa
+    notas: "Autora del libro '¿Quién quemó el metro? Las revelaciones de una investigación periodística y forense' sobre los incendios de estaciones del Metro durante el estallido social. Documentó las fallas del sistema de televigilancia VENUS y que varias causas se cerraron sin revisar las cámaras. Declaró en la Comisión Especial Investigadora de la Cámara sobre los incendios del Metro (2022), donde afirmó que Miguel Bassaletti —hermano del general (r) Enrique Bassaletti— estaba a cargo del centro del sistema de televigilancia del Metro y que ya había renunciado."
+  miguel_bassaletti:
+    nombre: Miguel Bassaletti Riess
+    cargo: Exjefe del Centro Integrado de Control (CIC) de Metro de Santiago
+    organizacion: metro_santiago
+    notas: "Hermano del general (r) y diputado Enrique Bassaletti. En octubre de 2019 se desempeñaba como Jefe del Centro Integrado de Control (CIC) de Metro de Santiago, unidad que administra el sistema de televigilancia de la red (VENUS), según consta en el informe de la Comisión Especial Investigadora de la Cámara sobre los incendios del Metro (2023); antes figuraba como jefe de Operaciones Servicios Línea 1. La periodista Josefa Barraza declaró ante la comisión que renunció a la empresa tras el estallido. El antecedente fue aportado por las defensas para cuestionar el manejo de los registros audiovisuales de los incendios; no existen formalizaciones ni condenas que lo vinculen a irregularidades."
+  omar_jerez_meza:
+    nombre: Omar Jerez Meza
+    cargo: Absuelto del incendio en la estación La Granja del Metro (18-O)
+    notas: "Sindicado por el Ministerio Público como autor de incendio calificado y daños en la estación La Granja del Metro. Primer juicio: veredicto culpable (27-mar-2021) y sentencia de 800 días de presidio por incendio en grado de tentativa (6-abr-2021); la Corte de Apelaciones de San Miguel anuló el fallo por errónea calificación jurídica y ordenó repetir el juicio (9-jun-2021). En el segundo juicio fue absuelto de forma unánime del incendio y daños (16-oct-2021) al no probarse su participación culpable, aunque el tribunal lo tuvo por responsable de hechos de daños."
+  jeremy_ramirez_bravo:
+    nombre: Jeremy Ramírez Bravo
+    cargo: Absuelto del incendio y condenado por daños en la estación La Granja del Metro (18-O)
+    notas: "Sindicado junto a Omar Jerez Meza por el ataque a la estación La Granja del Metro. Primer juicio: sentenciado a 540 días por daños consumados y absuelto del incendio; fallo anulado por la Corte de Apelaciones de San Miguel (9-jun-2021). En el segundo juicio (16-oct-2021) fue absuelto del incendio pero condenado como autor de daños a pena remitida de 540 días más suspensión de cargo u oficio público mientras dure la condena."
+  mario_neira_quiroga:
+    nombre: Mario Neira Quiroga
+    cargo: Arquitecto contratado como 'contrata' en el Ministerio de la Mujer
+    organizacion: ministerio_mujer
+    notas: "Arquitecto sindicado por la auditoría del Plan Inspección Total como responsable de adjudicar las licitaciones de la remodelación de las nuevas oficinas del Ministerio de la Mujer (Agustinas 1269). Fue contratado como 'contrata' en la cartera."
+  alberto_felipe_olave_hernandez:
+    nombre: Alberto Felipe Olave Hernández
+    cargo: Contratista de la remodelación del Ministerio de la Mujer
+    notas: "Contratista que concentró el 88% del gasto asociado al proyecto de remodelación de las nuevas oficinas del Ministerio de la Mujer. Su esposa es dueña de ALSA SpA, empresa que participó en 4 de 5 licitaciones sin resultar adjudicada."
+  cristobal_barra:
+    nombre: Cristóbal Barra
+    cargo: Primer vicepresidente nacional del PPD (renunciado agosto 2026)
+    organizacion: partido_por_la_democracia
+    notas: "Primer vicepresidente nacional del PPD que renunció el 21 de agosto de 2026 junto a Bárbara Sepúlveda y Lukas Soto, anunciando la creación del movimiento 'Firmes por Chile'. Criticó la 'ausencia total de democracia y legalidad interna' del partido y la estrategia parlamentaria frente a la agenda de Kast."
+  barbara_sepulveda:
+    nombre: Bárbara Sepúlveda
+    cargo: Vicepresidenta nacional del PPD (renunciada agosto 2026)
+    organizacion: partido_por_la_democracia
+    notas: "Vicepresidenta nacional del PPD que renunció el 21 de agosto de 2026 junto a Cristóbal Barra y Lukas Soto, anunciando la creación del movimiento 'Firmes por Chile'."
+  lukas_soto:
+    nombre: Lukas Soto
+    cargo: Presidente de la Juventud PPD (renunciado agosto 2026)
+    organizacion: partido_por_la_democracia
+    notas: "Presidente de la Juventud PPD que renunció el 21 de agosto de 2026 junto a los vicepresidentes nacionales, anunciando la creación del movimiento 'Firmes por Chile'."
+  sebastian_vergara:
+    nombre: Sebastián Vergara
+    cargo: Secretario general del PPD
+    organizacion: partido_por_la_democracia
+    notas: "Secretario general del PPD. Desdramatizó la renuncia de Barra, Sepúlveda y Soto (21-ago-2026), calificándola como 'esperable tras su derrota en las internas'. Exsubsecretario de Bienes Nacionales en el gobierno de Boric. Anunció los reemplazos de las vicepresidencias vacantes."
+  patricia_campos:
+    nombre: Patricia Campos
+    cargo: Vicepresidenta nacional del PPD (asumió agosto 2026)
+    organizacion: partido_por_la_democracia
+    notas: "Asumió como vicepresidenta nacional del PPD tras la renuncia de Cristóbal Barra (21-ago-2026)."
+  fernando_borquez:
+    nombre: Fernando Bórquez Uribe
+    cargo: Vicepresidente nacional del PPD (asumió agosto 2026)
+    organizacion: partido_por_la_democracia
+    notas: "Asumió como vicepresidente nacional del PPD tras la renuncia de Bárbara Sepúlveda (21-ago-2026)."
+  rodrigo_galilea:
+    nombre: Rodrigo Galilea
+    cargo: Exsenador y extimonel de RN, exdelegado presidencial regional
+    notas: "Exsenador y extimonel de RN. Su nombre fue sondeado para reemplazar a José García Ruminot en la jefatura de Segpres en el contexto de la reestructuración ministerial (ago-2026). Kast y Galilea son consuegros, lo que dificulta la alternativa."
+  ricardo_montero:
+    nombre: Ricardo Montero
+    cargo: Exsubsecretario de Defensa (gobierno de Boric)
+    notas: "Exsubsecretario de Defensa del gobierno de Boric (PS). Criticó la firma de Barros de la declaración A3C: señaló que Defensa no tiene atribuciones constitucionales para firmar acuerdos de narcoterrorismo o adherirse a coaliciones regionales, y preguntó si existe informe favorable de Cancillería."
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
@@ -14065,6 +14188,11 @@ organizations:
     tipo: ong
     pais: Chile
     notas: "ONG ambientalista chilena. En agosto de 2026 solicitó al Tribunal Constitucional abrir una instancia de participación ciudadana en el proceso de la megarreforma, permitiendo que la sociedad civil exponga los efectos de las normas impugnadas sobre sus derechos."
+  chile_sustentable:
+    nombre: Fundación Chile Sustentable
+    tipo: ong
+    pais: Chile
+    notas: "ONG ambientalista chilena dirigida por Sara Larraín. Su directora participó en el conversatorio del Colegio Médico (11-jun-2026) sobre los decretos ambientales retirados de Contraloría y en la carta abierta por el reingreso de las normas MP2,5 y termoeléctricas."
   fiscalia_aysen:
     nombre: Fiscalía Regional de Aysén
     tipo: organismo_estado
@@ -14474,6 +14602,11 @@ organizations:
     tipo: organismo_publico
     pais: Chile
     notas: "Autoridad administrativa de la Región Metropolitana durante el gobierno de Michelle Bachelet (hasta marzo de 2010), a cargo del intendente Igor Garafulic. En noviembre de 2009 coordinó con la Asociación Chilena de Municipalidades una campaña de tenencia responsable de mascotas."
+  israel_aerospace_industries:
+    nombre: Israel Aerospace Industries (IAI)
+    tipo: empresa_defensa
+    pais: Israel
+    notas: "Empresa estatal aeroespacial y de defensa de Israel. Autorizada por el gobierno de Kast para participar en FIDAE 2026 (abril), lo que generó el rechazo de la Comunidad Palestina de Chile por su vínculo con sistemas empleados en Gaza (evento 20260404-1); su filial ELTA Systems también estuvo presente en la feria."
   corte_suprema:
     nombre: Corte Suprema de Chile
     tipo: tribunal
@@ -15567,7 +15700,7 @@ organizations:
     nombre: Comisión Económica para América Latina y el Caribe (CEPAL)
     tipo: organismo_internacional
     pais: Chile
-    notas: "Organismo regional de Naciones Unidas. En abril de 2026 recortó la proyección de crecimiento de Chile para 2026 de 2,2% a 2% por el escenario internacional complejo."
+    notas: "Organismo regional de Naciones Unidas. En abril de 2026 recortó la proyección de crecimiento de Chile para 2026 de 2,2% a 2%, y en agosto del mismo año, con el Estudio Económico 2026, a 1,6% (evento 20260820-15)."
   sec_estados_unidos:
     nombre: Comisión de Bolsa y Valores de Estados Unidos (SEC)
     tipo: institucion
@@ -15723,6 +15856,11 @@ organizations:
     tipo: organizacion_social
     pais: Chile
     notas: "Coordinadora que agrupa a centros de estudiantes de Santiago. El 4 de agosto de 2026 convocó la marcha de secundarios en la Alameda contra el gobierno de José Antonio Kast para 'visibilizar el descontento de los estudiantes'."
+  liceo_lastarria:
+    nombre: Liceo José Victorino Lastarria
+    tipo: establecimiento_educacional
+    pais: Chile
+    notas: "Liceo emblemático de Providencia, Santiago. Escenario recurrente de incidentes con encapuchados y artefactos incendiarios en sus inmediaciones (ago-2025, mar/abr-2026, ago-2026)."
   liceo_instituto_nacional:
     nombre: Instituto Nacional José Miguel Carrera
     tipo: establecimiento_educacional
@@ -16328,6 +16466,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno de izquierda fundado en 2010. Portal eldesconcierto.cl."
+  codex_verde:
+    nombre: Codex Verde
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno especializado en temas ambientales. Portal codexverde.cl."
   publimetro:
     nombre: Publimetro
     tipo: medio_comunicacion
@@ -18274,7 +18417,89 @@ organizations:
     nombre: SCA Chile
     tipo: empresa
     notas: "Filial chilena de Svenska Cellulosa Aktiebolaget (SCA), empresa sueca de productos de higiene. Condenada por el TDLC por colusión del papel higiénico junto a CMPC. La Corte Suprema rechazó en 2024 las demandas de SERNAC y CONADECUS contra SCA por prescripción."
+  la_red:
+    nombre: La Red
+    tipo: canal_television
+    pais: Chile
+    notas: "Canal de televisión chileno. Su programa Mentiras Verdaderas emitió en abril de 2022 el reportaje '¿Quién quemó el Metro?', con registros del expediente que muestran a carabineros dentro de la boletería de la estación La Granja en la madrugada del 19 de octubre de 2019; el reportaje motivó la querella de Luis Mariano Rendón contra Carabineros y la comisión investigadora de la Cámara sobre los incendios del Metro."
+  elciudadano:
+    nombre: El Ciudadano
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital chileno fundado en 2005 (elciudadano.com), con línea editorial de izquierda."
+  alsa_spa:
+    nombre: ALSA SpA
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa de propiedad de la esposa del contratista Alberto Felipe Olave Hernández. Participó en 4 de las 5 licitaciones de la remodelación de las nuevas oficinas del Ministerio de la Mujer, siendo declarada inadmisible en todas por no presentar todos los antecedentes requeridos. Su participación habría permitido mantener el número mínimo de oferentes para evitar que los procesos fueran declarados desiertos, sin constituir una competencia real (agosto 2026)."
+  elecsan_spa:
+    nombre: ELECSAN SpA
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa que presentó ofertas económicas superiores a las de Olave en las distintas etapas de las licitaciones de la remodelación del Ministerio de la Mujer, aunque por diferencias acotadas. Junto con ALSA SpA, habría permitido la competencia simulada en los procesos licitatorios (agosto 2026)."
+  massardo_principios_patrimonio:
+    nombre: Massardo y Principios Patrimonio Chile Limitada
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa que participó solo en la Etapa 3 de las licitaciones de la remodelación del Ministerio de la Mujer. Presentó una oferta económica menor a la de Olave y tenía experiencia comprobable en construcción de obras patrimoniales en Chile, pero recibió un puntaje inferior en la evaluación y perdió la licitación."
+  ministerio_publico_centro_norte:
+    nombre: Fiscalía Regional Metropolitana Centro Norte
+    tipo: institucion_publica
+    pais: Chile
+    notas: "Organismo al que la Subsecretaría de la Mujer remitió los antecedentes de la auditoría del Plan Inspección Total sobre irregularidades en la construcción de las nuevas oficinas del Ministerio de la Mujer (agosto 2026)."
+  subsecretaria_mujer_equidad_genero:
+    nombre: Subsecretaría de la Mujer y la Equidad de Género
+    tipo: subsecretaria
+    pais: Chile
+    notas: "Organismo dependiente del Ministerio de la Mujer. La subsecretaria Marcia Raphael remitió los antecedentes de la auditoría del Plan Inspección Total al Ministerio Público, Contraloría y CDE, e instruyó un sumario administrativo (agosto 2026)."
+  caigg:
+    nombre: Consejo de Auditoría Interna General de Gobierno (CAIGG)
+    tipo: comite
+    pais: Chile
+    notas: "Consejo técnico creado bajo el Plan Inspección Total del gobierno de Kast para realizar auditoría interna del Estado. Liderado por la subsecretaria de Segpres Constanza Castillo. Realizó revisión de más de 913 mil registros de más de 500 servicios públicos entre 2022 y 2026. En su tercer informe (25-may-2026) detectó alertas de riesgo fiscal por US$9.200 millones e instruyó investigaciones en Junaeb, MinMujer, Mintransportes y ANID."
+  clarin:
+    nombre: Clarín
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Medio de prensa argentino, uno de los más grandes del país (clarín.com). Fuente primaria del caso Cerimedo en Bolivia."
+  firmes_por_chile:
+    nombre: Firmes por Chile
+    tipo: movimiento_politico
+    pais: Chile
+    notas: "Movimiento político anunciado el 21 de agosto de 2026 por exdirigentes del PPD (Cristóbal Barra, Bárbara Sepúlveda y Lukas Soto). Nace de la renuncia de '~300 militantes' del PPD que critican la falta de democracia interna y la estrategia parlamentaria del partido frente a la agenda de Kast. Los fundadores insisten en que sus 'convicciones de izquierda, progresista y democrática permanecen intactas'."
+  municipalidad_de_cañete:
+    nombre: Municipalidad de Cañete
+    tipo: municipalidad
+    notas: "Municipalidad que realizó la consulta sobre honorarios y Día del Funcionario Municipal."
+  asemuch:
+    nombre: Confederación Nacional de Funcionarios Municipales de Chile (ASEMUCH)
+    tipo: gremio
+    notas: "Confederación que agrupa a funcionarios municipales de Chile. Directora nacional: Carolina Paulsen."
+  amuch:
+    nombre: Asociación de Municipalidades de Chile (AMUCH)
+    tipo: gremio
+
 cifras:
+  metro_querellas_18o:
+    nombre: Querellas presentadas por Metro de Santiago por los ataques durante el estallido social
+    unidad_default: querellas
+    notas: "Más de 90 querellas interpuestas por Metro, según su gerente general Felipe Bravo (2024)."
+  metro_imputados_18o:
+    nombre: Personas imputadas por los ataques al Metro durante el estallido social
+    unidad_default: personas
+    notas: "101 imputados a propósito de las querellas de Metro, según su gerente general Felipe Bravo (2024); 53 condenados por distintos delitos (daño, hurto, receptación, incendio y Ley de Seguridad del Estado)."
+  condenas_incendio_metro_18o:
+    nombre: Condenas firmes por incendio de estaciones del Metro durante el estallido social
+    unidad_default: condenas
+    notas: "Solo tres condenas por incendio a cinco años del 18-O (2024), según El Líbero citado por ADN Radio; la primera y más emblemática fue la del menor B.E.S.M. por la estación Pedrero, confirmada por la Corte Suprema en noviembre de 2021."
+  jovenes_incidentes_lastarria_20260819:
+    nombre: Jóvenes que participaron en los incidentes frente al Liceo Lastarria del 19-ago-2026
+    unidad_default: jovenes
+    notas: "Estimación del mayor Ignacio Ramírez (19ª Comisaría de Providencia): cerca de 60 jóvenes salieron del establecimiento y cortaron avenida Providencia (evento 20260819-8)."
+  molotov_lastarria_20260819:
+    nombre: Artefactos incendiarios lanzados contra Carabineros en el incidente del Liceo Lastarria del 19-ago-2026
+    unidad_default: artefactos
+    notas: "El mayor Ignacio Ramírez estimó el lanzamiento de entre 15 y 20 artefactos incendiarios durante los enfrentamientos (evento 20260819-8)."
   usuarios_prepago_chile:
     nombre: Usuarios de telefonía móvil prepago en Chile
     unidad_default: lineas
@@ -22168,14 +22393,3 @@ cifras:
     nombre: Estaciones del Metro incendiadas durante el estallido social
     unidad_default: estaciones
     notas: "25 estaciones del Metro de Santiago incendiadas durante el estallido social de 2019, de las cuales 7 fueron completamente destruidas (CIPER, 24-oct-2019; hilo r/chile, 23-feb-2026)."
-  municipalidad_de_cañete:
-    nombre: Municipalidad de Cañete
-    tipo: municipalidad
-    notas: "Municipalidad que realizó la consulta sobre honorarios y Día del Funcionario Municipal."
-  asemuch:
-    nombre: Confederación Nacional de Funcionarios Municipales de Chile (ASEMUCH)
-    tipo: gremio
-    notas: "Confederación que agrupa a funcionarios municipales de Chile. Directora nacional: Carolina Paulsen."
-  amuch:
-    nombre: Asociación de Municipalidades de Chile (AMUCH)
-    tipo: gremio

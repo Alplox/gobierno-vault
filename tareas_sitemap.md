@@ -18,10 +18,10 @@
 ## Resumen
 
 - **Total de sitios de prensa listados:** 885
-- ✅ En catálogo local: **37**
-- 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **153**
+- ✅ En catálogo local: **38**
+- 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **158**
 - 🔒 Verificados sin sitemap: **2**
-- ⬜ Pendientes de sincronizar: **693**
+- ⬜ Pendientes de sincronizar: **687**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -209,7 +209,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Aguas Andinas** | `aguasandinas.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Chile Sustentable** | `chilesustentable.net` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **CODEFF** | `codeff.cl` | — | database | Comité Nacional Pro Defensa de la Fauna y Flora (CODEFF), organización ambientalista chile |
-| ⬜ | **Codex Verde** | `codexverde.cl` | — | database | Medio de noticias sobre medio ambiente y sostenibilidad |
+| 🟡 | **Codex Verde** | `codexverde.cl` | — | database | referenciado en sources.yaml |
 | ⬜ | **Conservación Patagónica** | `conservacionpatagonica.org` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **CR2 - Centro de Ciencia del Clima y la Resiliencia** | `cr2.cl` | — | database | Centro de Ciencia del Clima y la Resiliencia - Comunidad científica chilena |
 | ⬜ | **Diario Sustentable** | `dsustentable.cl` | — | watchlist | Sin feed RSS detectado |
@@ -252,7 +252,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Consejo para la Transparencia** | `consejotransparencia.cl` | — | database | Sitio oficial del Consejo para la Transparencia de Chile, con noticias, dictámenes y resol |
 | ⬜ | **Contraloría General** | `contraloria.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **CORFO** | `corfo.cl` | — | watchlist | Sin feed RSS detectado |
-| ⬜ | **Defensoría de la Niñez** | `defensorianinez.cl` | — | database | Defensoría de los Derechos de la Niñez Chile |
+| 🟡 | **Defensoría de la Niñez** | `defensorianinez.cl` | — | database | referenciado en sources.yaml |
 | ⬜ | **Delegación Presidencial Regional La Araucanía** | `dprlaaraucania.dpr.gob.cl` | Araucania | watchlist | No se detectó feed RSS en el sitio |
 | 🟡 | **Diario Constitucional** | `diarioconstitucional.cl` | — | watchlist | Feed no verificable (protección Cloudflare) |
 | ⬜ | **Diario Oficial** | `diariooficial.interior.gob.cl` | — | watchlist | Feed nativo stale (sin contenido reciente), solo feeds proxy activos |
@@ -288,7 +288,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🟡 | **Ministerio de Vivienda y Urbanismo** | `minvu.gob.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Ministerio del Deporte** | `mindep.cl` | — | watchlist | Sitio no responde |
 | 🟡 | **Ministerio del Interior** | `interior.gob.cl` | — | watchlist | Sitio no responde |
-| ⬜ | **Ministerio del Medio Ambiente** | `mma.gob.cl` | — | database | Sitio oficial del Ministerio del Medio Ambiente de Chile |
+| 🟡 | **Ministerio del Medio Ambiente** | `mma.gob.cl` | — | database | referenciado en sources.yaml |
 | 🟡 | **Ministerio del Trabajo y Previsión Social** | `mintrab.gob.cl` | — | database | referenciado en sources.yaml |
 | 🟡 | **Ministerio Secretaría General de Gobierno** | `msgg.gob.cl` | — | watchlist | Sitio no responde |
 | ⬜ | **Ministerio Secretaría General de la Presidencia** | `minsegpres.gob.cl` | — | watchlist | Feed no accesible (HTTP 403) |
@@ -303,7 +303,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Radio Cámara** | `radiocamara.cl` | — | database | Radio de la Cámara de Diputadas y Diputados de Chile |
 | ⬜ | **SEA Chile** | `sea.gob.cl` | — | watchlist | feed stale (último item: 2025-12-09, 237 días) |
 | ⬜ | **SENADIS** | `senadis.gob.cl` | — | watchlist | No se detectó feed RSS — sitio web sin soporte RSS |
-| ⬜ | **Senado** | `senado.cl` | — | watchlist | Sin feed RSS detectado |
+| ✅ | **Senado** | `senado.cl` | — | watchlist | Sin feed RSS detectado |
 | 🟡 | **SENAPRED** | `senapred.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **SENCE** | `sence.gob.cl` | — | database | Servicio Nacional de Capacitación y Empleo |
 | ⬜ | **SENDA** | `senda.gob.cl` | — | watchlist | Feed RSS existe pero vacío (0 ítems en feed) |
@@ -708,7 +708,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Diario El Nortino** | `diarioelnortino.cl` | Tarapaca | database | Diario regional de Alto Hospicio, Tarapacá |
 | ⬜ | **Diario El Porteño** | `elporteno.cl` | Valparaiso | database | Medio de comunicación de la Región de Valparaíso |
 | ⬜ | **Diario El Pulso** | `diarioelpulso.cl` | Ohiggins | database | Diario regional de Rancagua, O'Higgins |
-| ⬜ | **Diario El Ranco** | `diarioelranco.cl` | — | database | Diario regional de La Unión, Los Ríos |
+| 🟡 | **Diario El Ranco** | `diarioelranco.cl` | — | database | referenciado en sources.yaml |
 | ⬜ | **Diario Futrono** | `diariofutrono.cl` | — | watchlist | Sin feed RSS detectado |
 | 🟡 | **Diario La Prensa** | `new.diariolaprensa.cl` | — | watchlist | Feed nativo no encontrado, solo feeds proxy activos |
 | 🟡 | **Diario La Prensa** | `diariolaprensa.cl` | Biobio | watchlist | Sin feed RSS detectado |
@@ -866,7 +866,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Maule EE** | `maulee.cl` | Maule | watchlist | Sitio no responde, sin feed RSS detectado |
 | ⬜ | **Maule Hoy** | `maulehoy.cl` | Maule | database | Diario regional de Talca, Maule |
 | ⬜ | **Mi San Felipe** | `misanfelipe.cl` | — | watchlist | Feed nativo stale (sin contenido reciente), solo feeds proxy activos |
-| ⬜ | **Mirada Sur TV** | `miradasurtv.cl` | Los Lagos | database | Medio de comunicación de la Región de Los Lagos |
+| 🟡 | **Mirada Sur TV** | `miradasurtv.cl` | Los Lagos | database | referenciado en sources.yaml |
 | ⬜ | **Montealegre** | `montealegre.cl` | Valparaiso | watchlist | Solo feeds proxy activos (feeds nativos inactivos) |
 | ⬜ | **Municipalidad de Cobquecura** | `cobquecura.cl` | Nuble | database | Medio de comunicación de la Región de Ñuble |
 | ⬜ | **Nacimentano** | `nacimentano.cl` | Biobio | database | Medio de comunicación de la Región de Biobío |
