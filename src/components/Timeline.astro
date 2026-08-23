@@ -311,7 +311,7 @@ const navSections = decades.map((d) => ({
                               </div>
                             </summary>
 
-                          <div class="space-y-3 bg-base-100 pt-2">
+                          <div class="space-y-3 pt-2">
                             {monthGroup.key === currentMonthKey && monthGroup.days
                               .filter((dg) => dg.events.every((e) => ssrCurrentIds.has(eventBasename(e.id))))
                               .map((dayGroup) => (

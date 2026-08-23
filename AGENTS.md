@@ -62,6 +62,13 @@ El sitio usa `ClientRouter` de `astro:transitions` (habilitado en `src/layouts/B
 
 ## Lazy load + navegacion por rail temporal (TimelineNav)
 
+- **Rail y FAB comparten una sola condición JS** (`updateRailVisibility` en `TimelineNav.astro`):
+  el rail es visible solo si `matchMedia('(min-width: 64rem)')` Y margen derecho de `main` ≥ 64px;
+  el FAB cubre exactamente el complemento (toggle de `lg:hidden`). Antes cada uno miraba una
+  condición distinta (CSS `lg:` vs margen JS) y quedaban anchos lg+ estrechos sin ninguno de los
+  dos. El bottom-sheet NO lleva `lg:hidden`: debe poder abrirse desde el FAB también en ese rango
+  desktop (queda inerte por `pointer-events-none` + `translate-y-full`).
+
 `TimelineNav.astro` (partes de load bajo demanda de home y `/events`) necesita conocer pistas:
 
 - **Expandiendo un `<details>` colapsado NO recalcula el layout de inmediato.** Un `scrollIntoView`

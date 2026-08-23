@@ -178,6 +178,11 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       .source-ref:hover > .source-ref-tip,
       .source-ref.open > .source-ref-tip { display: block; }
       .prose { overflow: visible !important; }
+      /* El modal del grafo reusa .prose pero su body DEBE scrollear (max-h-55vh):
+         sin este override, el overflow visible global derrama el texto sobre la
+         sección Conexiones y el botón "Leer evento completo". Los tooltips de
+         fuente quedan recortados dentro del scroll: aceptable vs el solape. */
+      #graph-modal-content.prose { overflow-y: auto !important; }
       .cifra-badge {
         display: inline-flex;
         align-items: center;
@@ -523,9 +528,12 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       document.addEventListener('astro:page-load', () => play('arrival'));
 
       // Selector de tema: marcar el activo en cada carga (el dropdown se
-      // re-renderiza con las View Transitions).
+      // re-renderiza con las View Transitions). Sin tema guardado, daisyUI
+      // aplica 'dark' bajo prefers-color-scheme: dark (tema --prefersdark);
+      // el fallback debe reflejar eso, no asumir light.
       function gvMarkTheme() {
-        const current = document.documentElement.getAttribute('data-theme') || 'light';
+        const current = document.documentElement.getAttribute('data-theme')
+          || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
         document.querySelectorAll('[data-theme-check]').forEach((el) => {
           el.classList.toggle('opacity-0', el.getAttribute('data-theme-check') !== current);
         });
@@ -560,6 +568,13 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
           if (menu && t?.closest('#mobile-menu a[data-nav-link]')) menu.open = false;
           const more = document.getElementById('nav-more') as HTMLDetailsElement | null;
           if (more && t?.closest('#nav-more a[data-nav-link]')) more.open = false;
+          // Dropdowns del navbar excluyentes: click fuera de uno abierto lo
+          // cierra (abrir otro es "click fuera" para los demás). El toggle del
+          // clickeado ocurre nativo después de este handler.
+          ['theme-picker', 'mobile-menu', 'nav-more'].forEach((id) => {
+            const dd = document.getElementById(id) as HTMLDetailsElement | null;
+            if (dd && !t?.closest(`#${id}`)) dd.open = false;
+          });
         });
       }
 

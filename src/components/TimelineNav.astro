@@ -66,7 +66,7 @@ const sheetLabelClass = (level?: string) =>
       <Layers class="h-5 w-5" />
     </button>
 
-    <div id="timeline-sheet" class="pointer-events-none fixed inset-0 z-50 flex flex-col justify-end lg:hidden" aria-hidden="true">
+    <div id="timeline-sheet" class="pointer-events-none fixed inset-0 z-50 flex flex-col justify-end" aria-hidden="true">
       <div id="timeline-sheet-backdrop" class="absolute inset-0 bg-black/30 opacity-0 transition-opacity duration-200" />
       <div class="relative mx-auto max-h-[70vh] w-full max-w-xl translate-y-full overflow-y-auto overscroll-contain rounded-t-2xl bg-base-100 p-4 pb-[calc(1.5rem_+_env(safe-area-inset-bottom))] shadow-2xl transition-transform duration-300">
         <div class="mb-2 flex items-center justify-between">
@@ -143,12 +143,21 @@ const sheetLabelClass = (level?: string) =>
       return window.innerWidth - mainRight >= 64;
     };
 
+    const isLg = () => window.matchMedia('(min-width: 64rem)').matches;
+
     const updateRailVisibility = () => {
       if (!rail) return;
-      rail.classList.toggle('opacity-0', !railIsVisible());
-      rail.classList.toggle('pointer-events-none', !railIsVisible());
+      // Fuente única de verdad: el rail solo es visible si el CSS lo muestra
+      // (>= lg) Y hay margen derecho suficiente. El FAB cubre exactamente el
+      // complemento, cerrando el hueco donde antes ninguno aparecía.
+      const visible = isLg() && railIsVisible();
+      rail.classList.toggle('opacity-0', !visible);
+      rail.classList.toggle('pointer-events-none', !visible);
       rail.classList.toggle('transition-opacity', true);
       rail.classList.toggle('duration-300', true);
+      // Con el rail visible, lg:hidden oculta el FAB en desktop; sin rail,
+      // se remueve para que el FAB aparezca también en el rango lg+ estrecho.
+      if (fab) fab.classList.toggle('lg:hidden', visible);
     };
 
     updateRailVisibility();

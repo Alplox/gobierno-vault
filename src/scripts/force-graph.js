@@ -435,9 +435,11 @@ function init() {
   }
 
   // Encuadre inicial tras el primer asentamiento de la simulación y al cambiar
-  // el tamaño del contenedor (rotación de pantalla en móvil).
+  // el tamaño del contenedor (rotación de pantalla en móvil) — SOLO si el
+  // usuario no movió la vista: el scroll de página dispara resize (barra URL
+  // móvil, scrollbar desktop) y resetear el pan/zoom aquí lo deshacía.
   setTimeout(fitView, 400);
-  addWindowListener('resize', () => setTimeout(fitView, 150));
+  addWindowListener('resize', () => { if (!userMovedView) setTimeout(fitView, 150); });
 
   // Tooltip
   const tip = document.getElementById('graph-tooltip');
