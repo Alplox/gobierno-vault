@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (459)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (458)
 
 <details>
-<summary>Ver lista (459 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (458 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -461,7 +461,6 @@
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — **2 fuentes**
 - [2026/08/20260818-19 - TC declara admisible el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la norma que obliga a reconectar gratis servicios básicos en zonas de catástrofe](src/content/events/2026/08/20260818-19.md) — **2 fuentes**
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — **2 fuentes**
-- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errazuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — **2 fuentes**
 - [2026/08/20260820-1 - Defensoría de la Niñez presenta denuncia ante la Fiscalía por procedimiento policial contra estudiantes del Liceo Rayen Mapu de Quellón](src/content/events/2026/08/20260820-1.md) — **2 fuentes**
 - [2026/08/20260820-13 - Hacienda constituye la mesa de reconstrucción de Coquimbo y Atacama y anuncia fondo financiado con venta de activos fiscales](src/content/events/2026/08/20260820-13.md) — **2 fuentes**
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — **2 fuentes**
@@ -610,6 +609,7 @@
 - [2026/05/20260505-1 - CFA presenta dura crítica a la megarreforma y detecta nueve riesgos directos para las arcas fiscales](src/content/events/2026/05/20260505-1.md) — 1 fuente
 - [2026/05/20260506-1 - Renuncia seremi de Bienes Nacionales de Antofagasta](src/content/events/2026/05/20260506-1.md) — 2 fuentes
 - [2026/05/20260506-2 - Kast responde al informe del CFA y asegura que mantendrá la urgencia de la megarreforma](src/content/events/2026/05/20260506-2.md) — 3 fuentes
+- [2026/05/20260507-1 - Comité de Ministros revierte el tercer rechazo ambiental y aprueba la planta de potasio NX Uno de Peine en el Salar de Atacama](src/content/events/2026/05/20260507-1.md) — 10 fuentes
 - [2026/05/20260508-1 - Dictan prisión preventiva a Joaquín Lavín León: la formalización por fraude al Fisco, tráfico de influencias y falsificación que lo llevó a Capitán Yáber](src/content/events/2026/05/20260508-1.md) — 4 fuentes
 - [2026/05/20260508-2 - Fiscalía presenta acusación contra el exalcalde de Puerto Montt Gervoy Paredes y pide pena de 14 años de cárcel por corrupción](src/content/events/2026/05/20260508-2.md) — 2 fuentes
 - [2026/05/20260511-1 - Renuncia subsecretario de Ciencia Rafael Araos por diferencias con ministra Lincolao](src/content/events/2026/05/20260511-1.md) — 2 fuentes
@@ -872,6 +872,7 @@
 - [2026/07/20260731-16 - Alcalde de Cerro Navia denuncia que homicidios de 2026 ya igualan la cifra de todo 2025](src/content/events/2026/07/20260731-16.md) — 2 fuentes
 - [2026/07/20260731-17 - Araya y Veloso cuestionan la credibilidad del Servel en streaming y Araya alega que el video fue 'editado'](src/content/events/2026/07/20260731-17.md) — 4 fuentes
 - [2026/07/20260731-18 - Boletín de la DIPRES de junio 2026: el gasto de capital cae 14% acumulado en el primer semestre, pero el gasto total sube 1%](src/content/events/2026/07/20260731-18.md) — 1 fuente
+- [2026/07/20260731-19 - Comunidades atacameñas de Toconao y Peine reclaman ante el Primer Tribunal Ambiental para anular la aprobación del proyecto NX Uno de Peine](src/content/events/2026/07/20260731-19.md) — 4 fuentes
 - [2026/07/20260731-2 - INE: tasa de desocupación alcanza 9,4% en el trimestre abril-junio, su máximo nivel en casi cinco años](src/content/events/2026/07/20260731-2.md) — 12 fuentes
 - [2026/07/20260731-3 - Manouchehri impulsa comisión investigadora por narcotest y afirma que Rodríguez negoció la megarreforma 'bajo el efecto de las drogas'](src/content/events/2026/07/20260731-3.md) — 4 fuentes
 - [2026/07/20260731-4 - Panelistas de El Primer Café critican el tono del embajador Judd: 'El ofensor se da por ofendido'](src/content/events/2026/07/20260731-4.md) — 3 fuentes
@@ -1262,6 +1263,7 @@
 - [2026/08/20260817-22 - Fiscalía aparta a persecutora que investigaba a senadora Camila Flores (RN) por fraude al fisco, en medio de denuncias por filtraciones](src/content/events/2026/08/20260817-22.md) — 1 fuente
 - [2026/08/20260817-23 - José Piñera aclara en una carta a El Mostrador que no tiene relación empresarial con Peter Thiel: la reunión en Santiago fue para conversar sobre el sistema de capitalización chileno](src/content/events/2026/08/20260817-23.md) — 2 fuentes
 - [2026/08/20260817-24 - 24 Horas Reportajes revela que Incoludido, empresa que nació para combatir la colusión del papel higiénico, estafó a más de 600 inversionistas con retornos prometidos superiores al 16%](src/content/events/2026/08/20260817-24.md) — 5 fuentes
+- [2026/08/20260817-25 - COEVA del Maule rechaza 9-2 la interconexión Los Cóndores-Río Diamante de Enel; Rincón y Frei cuestionan el rol de la rana pehuenche y la Red Chilena de Herpetología responde](src/content/events/2026/08/20260817-25.md) — 6 fuentes
 - [2026/08/20260817-3 - BioBioChile revela el rol de Michael Clark en el préstamo de 65.000 UF a Avram Fritch: la querella de Toesca por 'vaciamiento patrimonial' del exmilitar israelí](src/content/events/2026/08/20260817-3.md) — 3 fuentes
 - [2026/08/20260817-4 - Comienza en Angol el juicio oral contra el exjefe de gabinete del alcalde de Collipulli, Daniel Valencia Cifuentes, acusado de violar a una guardia municipal: la Fiscalía pide 11 años](src/content/events/2026/08/20260817-4.md) — 2 fuentes
 - [2026/08/20260817-5 - En plena tensión arancelaria con EE.UU., China anuncia que recibirá al canciller chileno Pérez Mackenna entre el 18 y el 22 de agosto: una gira que incluye Vietnam y Japón](src/content/events/2026/08/20260817-5.md) — 4 fuentes
@@ -1295,7 +1297,7 @@
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
-- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errazuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — 2 fuentes
+- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errázuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — 4 fuentes
 - [2026/08/20260819-6 - Centro de Estudiantes del Liceo Rayen Mapu denuncia que Carabineros obligó a dos alumnos a desvestirse frente a sus compañeros tras sospecha de robo de celular](src/content/events/2026/08/20260819-6.md) — 5 fuentes
 - [2026/08/20260819-7 - Kast cierra gira por el norte en mesa técnica en Iquique sin compromisos de inversión; gobernador Carvajal critica el resultado y pide zona de catástrofe](src/content/events/2026/08/20260819-7.md) — 5 fuentes
 - [2026/08/20260819-8 - Incidentes frente al Liceo Lastarria: 'overoles blancos' cortan avenida Providencia y lanzan bombas molotov contra Carabineros](src/content/events/2026/08/20260819-8.md) — 5 fuentes
@@ -1308,6 +1310,7 @@
 - [2026/08/20260820-15 - CEPAL rebaja a 1,6% el crecimiento proyectado de Chile para 2026 en su Estudio Económico anual](src/content/events/2026/08/20260820-15.md) — 5 fuentes
 - [2026/08/20260820-16 - Ministra Toledo defiende en Radio ADN el retiro de 43 decretos ambientales: "fue la mejor decisión que pudimos haber tomado"](src/content/events/2026/08/20260820-16.md) — 5 fuentes
 - [2026/08/20260820-17 - Eduardo Engel: 'Cuesta entender por qué el Gobierno no ha querido hacer nada con el secreto bancario' y advierte que el nuevo estado de excepción es propio de una 'democracia iliberal'](src/content/events/2026/08/20260820-17.md) — 1 fuente
+- [2026/08/20260820-18 - Alcalde de Rinconada Juan Galdames incumple dos veces su arresto domiciliario nocturno mientras enfrenta causa por fraude al fisco con daño de $1.300 millones](src/content/events/2026/08/20260820-18.md) — 5 fuentes
 - [2026/08/20260820-2 - Ministro Quiroz niega intervención de Hacienda en proyecto ligado a su hermano: 'Es totalmente falso'](src/content/events/2026/08/20260820-2.md) — 1 fuente
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 9 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes

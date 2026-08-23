@@ -107,6 +107,7 @@ const WHITELIST_MEDIOS = new Set([
   'Unidad de Información Financiera de Italia (UIF - Banca d Italia)',
   'SAG',
   'Servicio Electoral (Servel)',
+  'Servicio de Evaluación Ambiental',
   'Dirección de Presupuestos (DIPRES)',
   'Ministerio del Medio Ambiente',
   'Ministerio del Medio Ambiente (MMA)',

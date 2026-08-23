@@ -889,12 +889,12 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 1113
+**Total de eventos:** 1117
 
-**Cobertura de fuentes:** 654 de 1113 eventos con 3+ fuentes (459 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 659 de 1117 eventos con 3+ fuentes (458 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 851
+- 2026: 855
 - 2025: 55
 - 2024: 34
 - 2023: 26
@@ -915,32 +915,32 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (440)
-- Justicia (317)
+- Politica (441)
+- Justicia (319)
 - Economia (225)
 - Defensa y seguridad (210)
-- Administración pública (170)
+- Administración pública (172)
 - Derechos humanos (138)
 - Proceso legislativo (101)
 - Finanzas publicas (91)
-- Corrupción (89)
+- Corrupción (90)
 - Relaciones internacionales (73)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (226)
-- investigacion (140)
+- accion (228)
+- investigacion (141)
 - declaracion (127)
 - publicacion (126)
 - reaccion (125)
-- resultado (114)
+- resultado (115)
 - fallo_judicial (81)
 - anuncio (74)
 - votacion (29)
 - entrevista (21)
 
 **Entidades registradas:**
-- Personas: 1979
-- Organizaciones: 994
-- Cifras: 991
-- Fuentes: 3889
+- Personas: 1984
+- Organizaciones: 1004
+- Cifras: 997
+- Fuentes: 3908
 - Temas: 75

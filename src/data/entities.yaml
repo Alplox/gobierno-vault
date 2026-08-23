@@ -4172,6 +4172,14 @@ people:
     nombre: Víctor Quiroz Castro
     cargo: Arquitecto, socio principal de Quiroz y Puelma Arquitectos
     notas: Hermano del ministro de Hacienda Jorge Quiroz.
+  sergio_cubillos:
+    nombre: Sergio Cubillos
+    cargo: Presidente de la Comunidad Atacameña de Peine
+    notas: "Dirigente lickanantay del sector sur del Salar de Atacama. Encabeza la reclamación de su comunidad ante el Primer Tribunal Ambiental contra la aprobación del proyecto de sales de potasio NX Uno de Peine (Grupo Errázuriz), aprobado por el Comité de Ministros el 7-may-2026."
+  arturo_farias:
+    nombre: Arturo Farías
+    cargo: Director Ejecutivo del Servicio de Evaluación Ambiental
+    notas: "Encabezó el SEA durante la tramitación final del proyecto NX Uno de Peine; el SEA sostuvo ante el Comité de Ministros que Sernageomin se había 'extralimitado' en sus observaciones al proyecto."
   macarena_ripamonti:
     nombre: Macarena Ripamonti
     cargo: Alcaldesa de Viña del Mar
@@ -4348,6 +4356,18 @@ people:
       - cargo: Presidente de la Confederación Nacional del Transporte de Carga
         organizacion: cnct
     notas: "Dirigente del gremio de camioneros. Baldemar Higueras, designado seremi de Transportes del Maule, fue considerado su 'mano derecha' y secretario ejecutivo de la CNTC."
+  juan_galdames:
+    nombre: Juan Galdames Carmona
+    cargo: Alcalde de Rinconada
+    notas: "Alcalde independiente (ex UDI) de Rinconada, Región de Valparaíso. Formalizado a fines de mayo de 2026 por fraude al fisco y negociación incompatible tras fiscalización de Contraloría que detectó sobreprecios de hasta 3.000% en compras municipales; desde el 30 de mayo de 2026 cumple arresto domiciliario nocturno y arraigo nacional, con dos incumplimientos reportados por Carabineros en agosto de 2026."
+  jesus_cornejo:
+    nombre: Jesús Cornejo
+    cargo: Presidente de la Asociación Red Chilena de Herpetología
+    notas: "Médico veterinario, presidente de la RECH. En agosto de 2026 respondió a las críticas de la ministra de Energía Ximena Rincón y de Eduardo Frei Ruiz-Tagle tras el rechazo del proyecto Los Cóndores-Río Diamante: 'Las ranas no frenan proyectos'."
+  juan_eduardo_prieto:
+    nombre: Juan Eduardo Prieto
+    cargo: Delegado Presidencial Regional del Maule
+    notas: "Delegado presidencial regional del Maule y presidente de la COEVA. Tras el rechazo 9-2 del proyecto Los Cóndores-Río Diamante (17-ago-2026) precisó que la línea no forma parte de los Planes de Expansión del Sistema Eléctrico Nacional y que el rechazo no se sustentó exclusivamente en la rana pehuenche."
   ximena_rincon:
     nombre: Ximena Rincón González
     cargo: Ministra de Energía
@@ -14936,6 +14956,36 @@ organizations:
     tipo: empresa
     pais: Chile
     notas: Inmobiliaria impulsora del proyecto Alto Santorini en dunas de Concón. Inversión de US$35 millones.
+  grupo_errazuriz:
+    nombre: Grupo Errázuriz
+    tipo: empresa
+    pais: Chile
+    notas: "Conglomerado agroindustrial y minero ligado a la familia Errázuriz. Dueño de la Sociedad Legal Minera NX Uno de Peine, titular del proyecto 'Planta de Producción de Sales de Potasio' en el Salar de Atacama, aprobado por el Comité de Ministros el 7-may-2026 tras 17 años de tramitación y tres rechazos ambientales. En 2025 contrató a Quiroz & Asociados —la consultora del ministro Jorge Quiroz— para un estudio sobre la alianza Codelco-SQM."
+  comunidad_atacamena_peine:
+    nombre: Comunidad Atacameña de Peine
+    tipo: comunidad
+    pais: Chile
+    notas: "Comunidad indígena lickanantay del sector sur del Salar de Atacama (comuna de San Pedro de Atacama), presidida por Sergio Cubillos. Reclamante contra la aprobación ambiental del proyecto NX Uno de Peine ante el Primer Tribunal Ambiental; denuncia que la línea de base usada data de 2009 y que el Comité de Ministros sustituyó el criterio técnico de Sernageomin."
+  comunidad_atacamena_toconao:
+    nombre: Comunidad Indígena Atacameña de Toconao
+    tipo: comunidad
+    pais: Chile
+    notas: "Comunidad lickanantay de Toconao, San Pedro de Atacama. Reclamante contra la aprobación ambiental de NX Uno de Peine (su acción, acogida a trámite el 31-jul-2026, se acumuló con la de Peine bajo el Rol R-178-2026); cuestiona la ausencia de modelación del sistema lagunar Soncor y los umbrales ya activados del Plan de Alerta Temprana."
+  fundacion_terram:
+    nombre: Fundación Terram
+    tipo: ong
+    pais: Chile
+    notas: "Organización de sociedad civil chilena fundada en 1997, enfocada en desarrollo sustentable, justicia ambiental y resguardo de la naturaleza (terram.cl). Su sitio reproduce notas de prensa de otros medios."
+  actualidad_juridica:
+    nombre: Actualidad Jurídica
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Portal de noticias legales del grupo DOE (actualidadjuridica.doe.cl)."
+  ruta2050:
+    nombre: Ruta2050
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital especializado en minería, energía y litio del norte de Chile (ruta2050.cl), editado por El Vector SpA."
   vimac:
     nombre: Inmobiliaria Vimac
     tipo: empresa
@@ -16681,6 +16731,26 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Red de diarios regionales chilenos del grupo El Mercurio. Portal soychile.cl."
+  diario_vtv:
+    nombre: Diario VTV
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Medio digital regional de la provincia de Los Andes y la Región de Valparaíso (diariovtv.cl)."
+  nueva_mineria:
+    nombre: Nueva Minería
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Revista Nueva Minería & Energía (nuevamineria.com), publicación especializada chilena en minería y energía."
+  municipalidad_rinconada:
+    nombre: Municipalidad de Rinconada
+    tipo: municipalidad
+    pais: Chile
+    notas: "Municipalidad de la comuna de Rinconada, provincia de Los Andes, Región de Valparaíso. Su alcalde Juan Galdames fue formalizado en mayo de 2026 por fraude al fisco y negociación incompatible tras detectar Contraloría sobreprecios de hasta 3.000% en compras municipales."
+  red_chilena_herpetologia:
+    nombre: Asociación Red Chilena de Herpetología
+    tipo: asociacion_gremial
+    pais: Chile
+    notas: "Asociación (RECH) que reúne a profesionales dedicados al estudio de los anfibios en Chile. En agosto de 2026 defendió que la presencia de la rana pehuenche era conocida durante toda la evaluación ambiental del proyecto Los Cóndores-Río Diamante."
   sabes_cl:
     nombre: Sabes.cl
     tipo: medio_comunicacion
@@ -18651,6 +18721,18 @@ organizations:
     notas: "Gremio empresarial del sector construcción en Chile."
 
 cifras:
+  votos_en_contra_coeva_condores:
+    nombre: Votos en contra del proyecto Los Cóndores-Río Diamante en la COEVA del Maule
+    unidad_default: votos
+    notas: "Rechazo por 9 votos contra 2 del 17-ago-2026."
+  sobreprecio_maximo_compras_rinconada:
+    nombre: Sobreprecio máximo detectado por Contraloría en compras de la Municipalidad de Rinconada
+    unidad_default: por_ciento
+    notas: "Hasta 3.000% en compras y compras de terrenos municipales bajo la administración de Juan Galdames."
+  dano_fiscal_rinconada:
+    nombre: Daño fiscal determinado por Contraloría en el caso Rinconada
+    unidad_default: millones_de_pesos
+    notas: "Cerca de $1.300 millones en el caso del alcalde Juan Galdames, que derivó en juicio de cuentas y formalización."
   metro_querellas_18o:
     nombre: Querellas presentadas por Metro de Santiago por los ataques durante el estallido social
     unidad_default: querellas
@@ -18691,6 +18773,18 @@ cifras:
     nombre: Proyectos de inversión aprobados desde marzo de 2026 bajo el sistema de seguimiento de Hacienda
     unidad_default: proyectos
     notas: "Hacienda aseguró que desde marzo de 2026 se aprobaron 138 proyectos por unos US$21 mil millones, y que Alto Santorini siguió la misma institucionalidad que cualquier otra iniciativa; el sistema solo controla plazos, no define aprobaciones (evento 20260818-17)."
+  inversion_nx_uno_peine:
+    nombre: Inversión declarada del proyecto NX Uno de Peine
+    unidad_default: usd_millones
+    notas: "Las fuentes discrepan: US$142 millones (CIPER y BioBioChile), US$143 millones (figura de la empresa vía El Mercurio de Calama/Terram y Actualidad Jurídica), más de US$200 millones 'actualizados' (La Tercera Pulso y Ruta2050) y US$43,2 millones (El Desconcierto y Reporte Minero, presumiblemente la cifra original del EIA de 2009). Tabla comparativa en el evento 20260507-1."
+  produccion_anual_cloruro_potasio_nx_uno:
+    nombre: Producción anual proyectada de cloruro de potasio del proyecto NX Uno de Peine
+    unidad_default: toneladas
+    notas: "Consenso entre fuentes: 200.000 toneladas anuales de cloruro de potasio a partir de salmuera del Salar de Atacama."
+  extraccion_salmuera_nx_uno:
+    nombre: Extracción promedio anual de salmuera proyectada por NX Uno de Peine
+    unidad_default: litros_por_segundo
+    notas: "Ruta2050: extracción promedio anual de 255 l/s durante 20 años, desde pertenencias al noroeste del núcleo del Salar de Atacama."
   pase_cultural_undurraga:
     nombre: Presupuesto del Pase Cultural bajo el gobierno de Kast
     unidad_default: pesos
