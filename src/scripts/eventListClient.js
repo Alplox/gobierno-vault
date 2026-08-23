@@ -201,11 +201,17 @@ export function applyFilters() {
 
   const empty = document.getElementById('no-results');
   const root = document.getElementById('event-index-root');
-  const cards = document.querySelectorAll('#event-index-root .event-grid > a[href^="/events/"]');
+
+  // Consulta FRESCA en cada uso: las tarjetas lazy solo existen en el DOM tras
+  // forceFillAll(); capturar la lista antes dejaba el conteo en las 12 de SSR y
+  // mostraba "No se encontraron..." aunque hubieran matches en meses recién
+  // llenados (bug al filtrar desde /topics o con cualquier filtro en carga).
+  const getCards = () =>
+    document.querySelectorAll('#event-index-root .event-grid > a[href^="/events/"]');
 
   if (!active) {
     // Sin filtros: restaura todo lo que un filtrado previo pudo ocultar.
-    cards.forEach((card) => (card.style.display = ''));
+    getCards().forEach((card) => (card.style.display = ''));
     document.querySelectorAll('#event-index-root .event-grid').forEach((grid) => {
       const monthSec = grid.closest('section[id^="month-"]');
       if (monthSec) monthSec.style.display = '';
@@ -227,7 +233,7 @@ export function applyFilters() {
   window.__gvSkipPersist = prevSkip;
 
   let visible = 0;
-  cards.forEach((card) => {
+  getCards().forEach((card) => {
     const ok = matchesFilter(card, f);
     card.style.display = ok ? '' : 'none';
     if (ok) visible++;
@@ -325,6 +331,12 @@ export function initEventList() {
 
   const script = document.getElementById('event-index-data');
   if (!script) return;
+  // Doble init en la MISMA carga (llamada directa + astro:page-load, que tambien
+  // se dispara al cargar): sin este guard el JSON se repuebla y forceFillAll/
+  // observer insertan tarjetas duplicadas. En navegacion VT el nodo es nuevo
+  // (DOM fresco) y el init corre normal.
+  if (script.__gvLoaded) return;
+  script.__gvLoaded = true;
   let payload = { maps: {}, events: [] };
   try {
     payload = JSON.parse(script.textContent || '{}');

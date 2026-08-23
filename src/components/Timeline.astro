@@ -276,7 +276,7 @@ const navSections = decades.map((d) => ({
 
             <div class="mt-4 space-y-10">
               {decade.years.map((yearGroup) => (
-                <section id={`year-${yearGroup.year}`} class="scroll-mt-32" data-crumb-level="year" data-crumb-label={`Año ${yearGroup.year}`}>
+                <section id={`year-${yearGroup.year}`} class="scroll-mt-32" data-crumb-level="year" data-crumb-label={`${yearGroup.year}`}>
                   <details class="group/year" open={yearGroup.year === currentYear} data-persist={`year-${yearGroup.year}`}>
                     <summary class="relative flex cursor-pointer list-none items-center gap-2 border-b border-base-300 py-2 pl-12 [&::-webkit-details-marker]:hidden">
                       <span class="pointer-events-none absolute left-[15px] top-0 h-full w-8 border-b-2 border-l-2 border-base-300 rounded-bl-[10px]" aria-hidden="true" />
@@ -292,7 +292,7 @@ const navSections = decades.map((d) => ({
 
                     <div class="space-y-10 pt-4">
                       {yearGroup.months.map((monthGroup) => (
-                        <section id={`month-${monthGroup.key}`} class="scroll-mt-32" data-crumb-level="month" data-crumb-label={`${monthNames[monthGroup.month - 1]} ${monthGroup.year}`}>
+                        <section id={`month-${monthGroup.key}`} class="scroll-mt-32" data-crumb-level="month" data-crumb-label={`${monthNames[monthGroup.month - 1]}`}>
                           <details class="group/month" open data-persist={`month-${monthGroup.key}`}>
                             <summary class="relative flex cursor-pointer list-none items-center gap-3 pb-2 pl-[72px] [&::-webkit-details-marker]:hidden">
                               <span class="pointer-events-none absolute left-[15px] top-0 h-full w-14 border-b-2 border-l-2 border-base-300 rounded-bl-[10px]" aria-hidden="true" />
@@ -315,7 +315,7 @@ const navSections = decades.map((d) => ({
                             {monthGroup.key === currentMonthKey && monthGroup.days
                               .filter((dg) => dg.events.every((e) => ssrCurrentIds.has(eventBasename(e.id))))
                               .map((dayGroup) => (
-                              <details id={`day-${dayGroup.key}`} class="group/day scroll-mt-32" open data-persist={`day-${dayGroup.key}`} data-crumb-level="day" data-crumb-label={`${dayGroup.day} ${monthNames[dayGroup.month - 1]}`}>
+                              <details id={`day-${dayGroup.key}`} class="group/day scroll-mt-32" open data-persist={`day-${dayGroup.key}`} data-crumb-level="day" data-crumb-label={`${dayGroup.day}`}>
                                 <summary class="relative flex cursor-pointer list-none items-center gap-2.5 py-2 pl-24 [&::-webkit-details-marker]:hidden">
                                   <span class="pointer-events-none absolute left-[15px] top-0 h-full w-20 border-b-2 border-l-2 border-base-300 rounded-bl-[10px]" aria-hidden="true" />
                                   <ChevronRight class="h-3.5 w-3.5 shrink-0 text-base-content/40 transition-transform duration-200 group-open/day:hidden" />
@@ -533,13 +533,29 @@ const navSections = decades.map((d) => ({
     };
     refreshTargets();
 
+    // Chrome moderno oculta el contenido de <details> con content-visibility
+    // (no display:none): getBoundingClientRect sigue devolviendo rects stale
+    // no-cero, asi que el filtro por tamano 0x0 no detecta lo colapsado y el
+    // crumb mostraba fechas fantasma. La comprobacion determinista es caminar
+    // los ancestros details.
+    const hiddenByDetails = (el: HTMLElement): boolean => {
+      let node: HTMLElement | null = el;
+      while (node?.parentElement) {
+        const det = node.parentElement.closest('details');
+        if (!det) break;
+        if (!(det as HTMLDetailsElement).open) return true;
+        node = det as HTMLElement;
+      }
+      return false;
+    };
+
     const updateCrumb = () => {
       refreshTargets();
       const line = crumb.getBoundingClientRect().bottom + 4;
       let currentEl: HTMLElement | null = null;
       for (const t of targets) {
+        if (hiddenByDetails(t.el)) continue;
         const rect = t.el.getBoundingClientRect();
-        if (rect.width === 0 && rect.height === 0) continue;
         if (rect.top <= line) currentEl = t.el;
         else break;
       }
@@ -586,7 +602,19 @@ const navSections = decades.map((d) => ({
         e.preventDefault();
         const targetId = a.dataset.crumbTarget;
         const target = targetId ? document.getElementById(targetId) : null;
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (!target) return;
+        // Si el target quedo bajo un details colapsado (estado stale entre
+        // updates del crumb), abrir ancestros antes de saltar; el documento
+        // crece al abrir y el IO llena meses, por eso el doble ajuste.
+        let node: HTMLElement | null = target;
+        while (node?.parentElement) {
+          const det = node.parentElement.closest('details') as HTMLDetailsElement | null;
+          if (!det) break;
+          if (!det.open) det.open = true;
+          node = det as HTMLElement;
+        }
+        requestAnimationFrame(() => target.scrollIntoView({ behavior: 'instant', block: 'start' }));
+        setTimeout(() => target.scrollIntoView({ behavior: 'instant', block: 'start' }), 400);
       };
       a.addEventListener('click', onClick);
       cleanupFns.push(() => a.removeEventListener('click', onClick));

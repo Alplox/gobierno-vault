@@ -1,9 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
-import { getAllTopics, getTopicById, getAllEvents, getPeopleMap, getTopicsMap, getEventEntities } from '../../lib/queries';
+import EventGraph from '../../components/EventGraph.astro';
+import { getAllTopics, getTopicById, getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getAllCifras, getCifrasRegistry } from '../../lib/queries';
 import { buildConnectionIndex, eventBasename, eventYearFromDate, countExplicitConnections } from '../../lib/relations';
-import { ArrowLeft, Tag, Layers, Calendar } from 'lucide-astro';
+import { TIPO_LABELS, TIPO_STYLES } from '../../lib/eventTypes';
+import { ArrowLeft, Tag, Layers, Calendar, BarChart3, Users, Building2, Hash } from 'lucide-astro';
 
 export async function getStaticPaths() {
   const topics = await getAllTopics();
@@ -49,6 +51,53 @@ const lazyData = lazyEvents.map((event) => {
     })),
   };
 });
+
+// ---- Panel de visualización (computado en build, cero JS) ----
+const eventsByYear = new Map<number, number>();
+const eventsByTipo = new Map<string, number>();
+for (const e of relatedEvents) {
+  const y = eventYearFromDate(e.data.fecha);
+  eventsByYear.set(y, (eventsByYear.get(y) ?? 0) + 1);
+  const t = e.data.tipo;
+  eventsByTipo.set(t, (eventsByTipo.get(t) ?? 0) + 1);
+}
+const yearBars = [...eventsByYear.entries()].sort((a, b) => a[0] - b[0]);
+const maxYearCount = Math.max(...yearBars.map(([, c]) => c));
+const tipoChips = [...eventsByTipo.entries()].sort((a, b) => b[1] - a[1]);
+
+const orgsMap = await getOrgsMap();
+const personCounts = new Map<string, number>();
+const orgCounts = new Map<string, number>();
+for (const e of relatedEvents) {
+  const ents = getEventEntities(e.id);
+  for (const p of ents.personas) personCounts.set(p, (personCounts.get(p) ?? 0) + 1);
+  for (const o of ents.organizaciones) orgCounts.set(o, (orgCounts.get(o) ?? 0) + 1);
+}
+const topPersonas = [...personCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 15);
+const topOrgs = [...orgCounts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 10);
+const maxPersonCount = topPersonas[0]?.[1] ?? 0;
+const maxOrgCount = topOrgs[0]?.[1] ?? 0;
+const cloudSize = (count: number, max: number) => 12 + Math.round(Math.sqrt(max ? count / max : 0) * 14);
+
+type TopicCifra = ReturnType<typeof getAllCifras>[number];
+const topicEventIds = new Set(relatedEvents.map((e) => e.id));
+const cifraAgg = new Map<string, { count: number; latest: TopicCifra }>();
+for (const c of getAllCifras()) {
+  if (!topicEventIds.has(c.eventId)) continue;
+  const agg = cifraAgg.get(c.concepto) ?? { count: 0, latest: c };
+  agg.count++;
+  if (c.fecha >= agg.latest.fecha) agg.latest = c;
+  cifraAgg.set(c.concepto, agg);
+}
+const topCifras = [...cifraAgg.entries()].sort((a, b) => b[1].count - a[1].count).slice(0, 6);
+const cifrasRegistry = getCifrasRegistry();
+
+// El grafo solo se muestra si el tema tiene al menos un evento conectado.
+let connectedTopicCount = 0;
+for (const e of relatedEvents) {
+  const conn = connectionIndex.get(eventBasename(e.id));
+  if (conn && (conn.outgoing.length > 0 || conn.incoming.length > 0)) connectedTopicCount++;
+}
 ---
 
 <Base title={topic.data.nombre}>
@@ -95,6 +144,125 @@ const lazyData = lazyEvents.map((event) => {
     </section>
   )}
 
+  {connectedTopicCount > 0 && (
+    <section class="mt-8">
+      <EventGraph events={relatedEvents} connectionIndex={connectionIndex} size="full" />
+    </section>
+  )}
+
+  {relatedEvents.length > 0 && (
+    <section class="mt-8 space-y-4">
+      <div class="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+        <h2 class="text-sm font-bold text-base-content flex items-center gap-2 mb-5">
+          <BarChart3 class="h-4 w-4 text-primary" />
+          Panorama del tema
+        </h2>
+        <div class="grid gap-6 lg:grid-cols-2">
+          <div>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-base-content/50 mb-2">Eventos por año</p>
+            <div class="flex items-end gap-1 h-20">
+              {yearBars.map(([year, count]) => (
+                <a
+                  href={`/events?tema=${topic.id}`}
+                  title={`${year}: ${count} evento(s)`}
+                  class="flex-1 min-w-[6px] rounded-t-sm bg-primary/60 hover:bg-primary transition-colors"
+                  style={`height:${Math.max(4, Math.round((count / maxYearCount) * 76))}px`}
+                />
+              ))}
+            </div>
+            <div class="flex gap-1 mt-1.5">
+              {yearBars.map(([year]) => (
+                <span class="flex-1 min-w-[6px] text-center text-[9px] font-mono text-base-content/40">{String(year).slice(2)}</span>
+              ))}
+            </div>
+          </div>
+          <div>
+            <p class="text-[11px] font-bold uppercase tracking-wider text-base-content/50 mb-2">Por tipo de evento</p>
+            <div class="flex flex-wrap gap-1.5">
+              {tipoChips.map(([tipo, count]) => (
+                <a
+                  href={`/events?tema=${topic.id}&tipo=${tipo}`}
+                  class:list={['inline-flex items-baseline gap-1.5 text-xs font-medium px-2.5 py-1 rounded-lg', TIPO_STYLES[tipo] ?? 'bg-base-200 text-base-content/70']}
+                >
+                  <span>{TIPO_LABELS[tipo] ?? tipo}</span>
+                  <span class="opacity-60 font-mono">{count}</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {(topPersonas.length > 0 || topOrgs.length > 0) && (
+        <div class="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+          <div class="grid gap-6 sm:grid-cols-2">
+            {topPersonas.length > 0 && (
+              <div>
+                <p class="text-[11px] font-bold uppercase tracking-wider text-base-content/50 mb-3 flex items-center gap-1.5">
+                  <Users class="h-3.5 w-3.5 text-primary" />
+                  Personas más mencionadas
+                </p>
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1.5 leading-relaxed">
+                  {topPersonas.map(([id, count]) => (
+                    <a
+                      href={`/people/${id}`}
+                      title={`${count} evento(s)`}
+                      class="text-base-content hover:text-primary hover:underline underline-offset-2 transition-colors"
+                      style={`font-size:${cloudSize(count, maxPersonCount)}px`}
+                    >
+                      {peopleMap.get(id) ?? id}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+            {topOrgs.length > 0 && (
+              <div>
+                <p class="text-[11px] font-bold uppercase tracking-wider text-base-content/50 mb-3 flex items-center gap-1.5">
+                  <Building2 class="h-3.5 w-3.5 text-primary" />
+                  Organizaciones más mencionadas
+                </p>
+                <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1.5 leading-relaxed">
+                  {topOrgs.map(([id, count]) => (
+                    <a
+                      href={`/organizations/${id}`}
+                      title={`${count} evento(s)`}
+                      class="text-base-content hover:text-primary hover:underline underline-offset-2 transition-colors"
+                      style={`font-size:${cloudSize(count, maxOrgCount)}px`}
+                    >
+                      {orgsMap.get(id) ?? id}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+
+      {topCifras.length > 0 && (
+        <div class="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+          <p class="text-[11px] font-bold uppercase tracking-wider text-base-content/50 mb-3 flex items-center gap-1.5">
+            <Hash class="h-3.5 w-3.5 text-primary" />
+            Cifras destacadas
+          </p>
+          <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {topCifras.map(([concepto, { count, latest }]) => (
+              <a href={`/stats/${concepto}`} class="block p-4 rounded-xl border border-base-300 bg-base-200/40 hover:border-primary/50 transition-colors">
+                <div class="text-lg font-extrabold font-mono text-primary leading-tight">
+                  {latest.raw}
+                  {latest.unidad && <span class="text-xs font-semibold text-base-content/60 ml-1">{latest.unidad}</span>}
+                </div>
+                <div class="text-xs text-base-content/70 mt-1 truncate">{cifrasRegistry[concepto]?.nombre ?? concepto}</div>
+                <div class="text-[11px] text-base-content/40 mt-0.5">{count} registro(s)</div>
+              </a>
+            ))}
+          </div>
+        </div>
+      )}
+    </section>
+  )}
+
   <section class="mt-8">
     <div class="flex items-center justify-between mb-4">
       <h2 class="text-lg font-bold text-base-content flex items-center gap-2">
@@ -120,3 +288,6 @@ const lazyData = lazyEvents.map((event) => {
   initTopicList();
 </script>
 
+<script>
+  import '../../scripts/force-graph.js';
+</script>

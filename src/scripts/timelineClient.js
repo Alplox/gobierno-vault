@@ -64,7 +64,7 @@ function eventRow(e) {
 function dayGroup(e, day) {
   const rows = day.events.map(eventRow).join('');
   const dayKey = `${e.year}-${String(e.month).padStart(2, '0')}-${String(day.day).padStart(2, '0')}`;
-  return `<details id="day-${dayKey}" class="group/day scroll-mt-32" open data-crumb-level="day" data-crumb-label="${day.day} ${MESES[Number(e.month) - 1]}">
+  return `<details id="day-${dayKey}" class="group/day scroll-mt-32" open data-crumb-level="day" data-crumb-label="${day.day}">
   <summary class="relative flex cursor-pointer list-none items-center gap-2.5 py-2 pl-24 [&::-webkit-details-marker]:hidden">
     <span class="pointer-events-none absolute left-[15px] top-0 h-full w-20 border-b-2 border-l-2 border-base-300 rounded-bl-[10px]" aria-hidden="true"></span>
     <span class="text-sm font-semibold tabular-nums text-base-content">${day.day} ${MESES[Number(e.month) - 1]}</span>

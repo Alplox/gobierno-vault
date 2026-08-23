@@ -17,6 +17,13 @@
     background-color: var(--color-base-100);
     color: var(--color-base-content);
   }
+  /* El preflight de Tailwind v4 resetea margin en TODOS los elementos, incluido
+     <dialog>: sin el margin:auto del UA el modal queda pegado a la esquina
+     superior izquierda. Dentro de @layer base para que las utilidades
+     max-sm:* del bottom-sheet (mx-0 mb-0 mt-auto) lo sigan pisando. */
+  dialog[open] {
+    margin: auto;
+  }
 }
 
 /* Selector de temas: .menu de daisyUI 5 usa flex-flow:column wrap +

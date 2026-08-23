@@ -250,17 +250,14 @@ const graphLinks = graphEdges.map((e) => ({
     </svg>
     )}
   </div>
-  {size === 'full' && (
-    <div class="pointer-events-none absolute bottom-4 right-4 flex flex-col gap-1">
-      <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom in">+</button>
-      <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom out">−</button>
-      <button id="zoom-reset" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-xs" title="Reset view">⟲</button>
-    </div>
-  )}
+  <div class="pointer-events-none absolute bottom-4 right-4 flex flex-col gap-1">
+    <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom in">+</button>
+    <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom out">−</button>
+    <button id="zoom-reset" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-xs" title="Reset view">⟲</button>
+  </div>
   <div id="graph-tooltip" class="pointer-events-none fixed z-50 hidden max-w-xs rounded-lg border border-base-300 bg-base-100 px-3 py-2 text-xs text-base-content/80 shadow-lg" />
 </div>
 
-{size === 'full' && (
 <dialog id="graph-modal" class="w-[92vw] max-w-lg rounded-2xl p-0 backdrop:bg-black/40 max-sm:mx-0 max-sm:mb-0 max-sm:mt-auto max-sm:w-full max-sm:max-w-none max-sm:rounded-b-none">
   <div class="p-5">
     <div class="flex items-center justify-between gap-2 mb-2">
@@ -269,11 +266,11 @@ const graphLinks = graphEdges.map((e) => ({
     </div>
     <h3 id="graph-modal-title" class="font-semibold text-base-content leading-snug mb-1 text-balance"></h3>
     <p id="graph-modal-meta" class="text-xs text-base-content/60 mb-3"></p>
+    <div id="graph-modal-content" class="prose prose-sm max-w-none max-h-[55vh] overflow-y-auto border-y border-base-300 py-3 my-3"></div>
     <p id="graph-modal-links-title" class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/60">Conexiones</p>
     <div id="graph-modal-links" class="space-y-1.5 max-h-52 overflow-y-auto mb-4 pr-1"></div>
     <a id="graph-modal-open" href="#" class="block text-center text-sm font-medium bg-primary text-primary-content px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all">Leer evento completo →</a>
   </div>
 </dialog>
-)}
 
   <script type="application/json" id="graph-data" set:html={JSON.stringify({ nodes: graphNodes, links: graphLinks, size })} />

@@ -255,7 +255,7 @@ function init() {
 
   let scale = 1, tx = 0, ty = 0;
   let isPanning = false, panSX = 0, panSY = 0;
-  let dragNode = null, dragMoved = false, dragSX = 0, dragSY = 0;
+  let dragNode = null, dragPointerId = null, dragMoved = false, dragSX = 0, dragSY = 0;
   const pointers = new Map();
   let pinchDist = 0;
   // El re-encuadre automatico (fitView) corre solo en el PRIMER asentamiento y
@@ -272,6 +272,16 @@ function init() {
     return svg.getBoundingClientRect();
   }
 
+  // Convierte coordenadas de pantalla (clientX/Y) a unidades del viewBox del SVG.
+  // En móvil el contenedor escala el viewBox (1200 unidades) a ~360px físicos:
+  // sin esta conversión el pan/drag/pinch van ~3x más rápido que el dedo.
+  function toLocal(clientX, clientY) {
+    const m = svg.getScreenCTM();
+    if (!m) return { x: clientX, y: clientY };
+    const pt = new DOMPoint(clientX, clientY).matrixTransform(m.inverse());
+    return { x: pt.x, y: pt.y };
+  }
+
   // Nodos: arrastrar con un puntero. Si el gesto no se movió, se navega al evento.
   // El listener va en el grupo (n._el) para dar un área de toque mayor en móvil.
   nodes.forEach(n => {
@@ -279,6 +289,7 @@ function init() {
       if (pointers.size >= 2) return;
       pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
       dragNode = n;
+      dragPointerId = e.pointerId;
       dragMoved = false;
       dragSX = e.clientX;
       dragSY = e.clientY;
@@ -294,9 +305,10 @@ function init() {
   svg.addEventListener('pointerdown', e => {
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (pointers.size === 1) {
+      const p = toLocal(e.clientX, e.clientY);
       isPanning = true;
-      panSX = e.clientX - tx;
-      panSY = e.clientY - ty;
+      panSX = p.x - tx;
+      panSY = p.y - ty;
       svg.style.cursor = 'grabbing';
     } else if (pointers.size === 2) {
       const [a, b] = [...pointers.values()];
@@ -310,14 +322,17 @@ function init() {
     pointers.set(e.pointerId, { x: e.clientX, y: e.clientY });
     if (!prev) return;
 
-    // Pinch: dos punteros activos → zoom centrado en el punto medio.
+    // Pinch: dos punteros activos → zoom centrado en el punto medio
+    // (convertido a unidades del viewBox para que el zoom quede bajo los dedos).
     if (pointers.size >= 2) {
       const [a, b] = [...pointers.values()];
+      const la = toLocal(a.x, a.y);
+      const lb = toLocal(b.x, b.y);
       const dist = Math.hypot(a.x - b.x, a.y - b.y);
       if (pinchDist > 0 && dist > 0) {
         userMovedView = true;
-        const cx = (a.x + b.x) / 2;
-        const cy = (a.y + b.y) / 2;
+        const cx = (la.x + lb.x) / 2;
+        const cy = (la.y + lb.y) / 2;
         const ns = Math.min(Math.max(scale * (dist / pinchDist), 0.1), 5);
         tx = cx - (cx - tx) * (ns / scale);
         ty = cy - (cy - ty) * (ns / scale);
@@ -328,18 +343,21 @@ function init() {
       return;
     }
 
+    const p = toLocal(e.clientX, e.clientY);
+
     if (dragNode) {
       if (Math.abs(e.clientX - dragSX) > 3 || Math.abs(e.clientY - dragSY) > 3) dragMoved = true;
-      const r = svgRect();
-      dragNode.fx = (e.clientX - r.left - tx) / scale;
-      dragNode.fy = (e.clientY - r.top - ty) / scale;
+      dragNode.fx = (p.x - tx) / scale;
+      dragNode.fy = (p.y - ty) / scale;
       return;
     }
 
     if (isPanning) {
-      if (e.clientX !== panSX + tx || e.clientY !== panSY + ty) userMovedView = true;
-      tx = e.clientX - panSX;
-      ty = e.clientY - panSY;
+      const ntx = p.x - panSX;
+      const nty = p.y - panSY;
+      if (ntx !== tx || nty !== ty) userMovedView = true;
+      tx = ntx;
+      ty = nty;
       applyTransform();
     }
   });
@@ -347,18 +365,32 @@ function init() {
   function endPointer(e) {
     pointers.delete(e.pointerId);
     if (pointers.size < 2) pinchDist = 0;
-    if (dragNode) {
-      if (!dragMoved) {
-        // Tap/click sin arrastre: abre el modal del evento (mantiene la posicion
-        // del grafo). Si no hay modal (mini), navega directo como antes.
-        openGraphModal(dragNode);
+    // Solo el dedo que inició el arrastre libera el nodo: si levantan el OTRO
+    // dedo de un pinch, el nodo sigue fijo donde lo dejaron.
+    if (e.pointerId === dragPointerId) {
+      if (dragNode) {
+        if (!dragMoved) {
+          // Tap/click sin arrastre: abre el modal del evento (mantiene la posicion
+          // del grafo). Si no hay modal (mini), navega directo como antes.
+          openGraphModal(dragNode);
+        }
+        dragNode.fx = null;
+        dragNode.fy = null;
+        simulation.alphaTarget(0);
+        dragNode = null;
       }
-      dragNode.fx = null;
-      dragNode.fy = null;
-      simulation.alphaTarget(0);
-      dragNode = null;
+      dragPointerId = null;
     }
-    if (pointers.size === 0 && isPanning) {
+    if (pointers.size === 1 && !dragNode) {
+      // Transición pinch→pan: re-anclar al dedo restante con el transform ACTUAL.
+      // Sin esto la vista saltaba porque quedaba el ancla de antes del pinch.
+      const [rp] = [...pointers.values()];
+      const p = toLocal(rp.x, rp.y);
+      isPanning = true;
+      panSX = p.x - tx;
+      panSY = p.y - ty;
+    }
+    if (pointers.size === 0) {
       isPanning = false;
       svg.style.cursor = 'grab';
     }
@@ -371,11 +403,10 @@ function init() {
   svg.addEventListener('wheel', e => {
     e.preventDefault();
     userMovedView = true;
-    const r = svgRect();
-    const cx = e.clientX - r.left, cy = e.clientY - r.top;
+    const c = toLocal(e.clientX, e.clientY);
     const ns = Math.min(Math.max(scale * (1 + (e.deltaY < 0 ? 0.1 : -0.1)), 0.1), 5);
-    tx = cx - (cx - tx) * (ns / scale);
-    ty = cy - (cy - ty) * (ns / scale);
+    tx = c.x - (c.x - tx) * (ns / scale);
+    ty = c.y - (c.y - ty) * (ns / scale);
     scale = ns;
     applyTransform();
   }, { passive: false });
@@ -450,6 +481,42 @@ function init() {
     dlg.querySelector('#graph-modal-title').textContent = n.label;
     dlg.querySelector('#graph-modal-meta').textContent =
       `${n.tipoLabel} · ${n.fecha}${n.connections > 0 ? ` · ${n.connections} vinculo(s)` : ''}`;
+
+    // Contenido del evento: fetch de la pagina estatica y extraccion del bloque
+    // .prose (cero dependencias). Asi el usuario lee sin salir del grafo; las
+    // relaciones quedan como seccion secundaria y el CTA lleva a la pagina completa.
+    const box = dlg.querySelector('#graph-modal-content');
+    if (box) {
+      const token = Symbol();
+      box.__gvLoad = token;
+      box.innerHTML = '<p class="text-xs text-base-content/50">Cargando evento…</p>';
+      fetch(n.url)
+        .then((r) => r.text())
+        .then((html) => {
+          if (box.__gvLoad !== token) return;
+          const doc = new DOMParser().parseFromString(html, 'text/html');
+          const prose = doc.querySelector('.prose') || doc.querySelector('article') || doc.body;
+          box.innerHTML = prose.innerHTML;
+          // La barra de acciones del detalle (Ver en Markdown, Copiar, ...) vive
+          // dentro de .prose marcada como .not-prose: no corresponde al preview.
+          box.querySelectorAll('.not-prose').forEach((el) => el.remove());
+          // Los style="view-transition-name:..." del documento fuente chocarian con
+          // los de la pagina actual (nombres duplicados rompen la transicion).
+          box.querySelectorAll('[style]').forEach((el) => {
+            if ((el.getAttribute('style') || '').includes('view-transition-name')) {
+              el.removeAttribute('style');
+            }
+          });
+          // Links internos del preview en pestana nueva: navegar aqui perderia
+          // el estado del grafo (la queja original del modal).
+          box.querySelectorAll('a[href^="/"]').forEach((a) => a.setAttribute('target', '_blank'));
+          box.scrollTop = 0;
+        })
+        .catch(() => {
+          if (box.__gvLoad === token) box.innerHTML = '';
+        });
+    }
+
     const linksBox = dlg.querySelector('#graph-modal-links');
     const nodeIdOf = (ref) => (typeof ref === 'string' ? ref : ref.id);
     const rels = links
@@ -461,7 +528,7 @@ function init() {
       .sort((a, b) => b.neighbor.connections - a.neighbor.connections);
     linksBox.innerHTML = rels.length
       ? rels.map((r) => `
-        <a href="${r.neighbor.url}" class="flex items-center gap-2 rounded-lg border border-base-300 bg-base-200 px-2.5 py-1.5 text-xs hover:bg-primary/10 hover:border-primary/40 transition-colors">
+        <a href="${r.neighbor.url}" target="_blank" class="flex items-center gap-2 rounded-lg border border-base-300 bg-base-200 px-2.5 py-1.5 text-xs hover:bg-primary/10 hover:border-primary/40 transition-colors">
           <span class="h-2 w-2 shrink-0 rounded-full" style="background:${r.neighbor.color}"></span>
           <span class="shrink-0 font-semibold" style="color:${EDGE_COLORS[r.label] || '#78716c'}">${r.outgoing ? '→' : '←'} ${r.label}</span>
           <span class="truncate text-base-content/80">${r.neighbor.label}</span>
@@ -486,10 +553,10 @@ function init() {
   if (zoomIn) {
     const onZoomIn = () => {
       const r = svg.getBoundingClientRect();
-      const cx = r.width / 2, cy = r.height / 2;
+      const c = toLocal(r.left + r.width / 2, r.top + r.height / 2);
       const ns = Math.min(scale * 1.2, 5);
-      tx = cx - (cx - tx) * (ns / scale);
-      ty = cy - (cy - ty) * (ns / scale);
+      tx = c.x - (c.x - tx) * (ns / scale);
+      ty = c.y - (c.y - ty) * (ns / scale);
       scale = ns;
       applyTransform();
     };
@@ -499,10 +566,10 @@ function init() {
   if (zoomOut) {
     const onZoomOut = () => {
       const r = svg.getBoundingClientRect();
-      const cx = r.width / 2, cy = r.height / 2;
+      const c = toLocal(r.left + r.width / 2, r.top + r.height / 2);
       const ns = Math.max(scale / 1.2, 0.1);
-      tx = cx - (cx - tx) * (ns / scale);
-      ty = cy - (cy - ty) * (ns / scale);
+      tx = c.x - (c.x - tx) * (ns / scale);
+      ty = c.y - (c.y - ty) * (ns / scale);
       scale = ns;
       applyTransform();
     };

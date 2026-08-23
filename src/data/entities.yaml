@@ -13836,7 +13836,7 @@ people:
     cargo: Contratista de la remodelación del Ministerio de la Mujer
     notas: "Contratista que concentró el 88% del gasto asociado al proyecto de remodelación de las nuevas oficinas del Ministerio de la Mujer. Su esposa es dueña de ALSA SpA, empresa que participó en 4 de 5 licitaciones sin resultar adjudicada."
   cristobal_barra:
-    nombre: Cristóbal Barra
+    nombre: Cristóbal Barra
     cargo: Primer vicepresidente nacional del PPD (renunciado agosto 2026)
     organizacion: partido_por_la_democracia
     notas: "Primer vicepresidente nacional del PPD que renunció el 21 de agosto de 2026 junto a Bárbara Sepúlveda y Lukas Soto, anunciando la creación del movimiento 'Firmes por Chile'. Criticó la 'ausencia total de democracia y legalidad interna' del partido y la estrategia parlamentaria frente a la agenda de Kast."
@@ -14112,11 +14112,6 @@ organizations:
     tipo: universidad
     pais: Estados Unidos
     notas: "Universidad estadounidense. El economista Kenneth Rogoff, execonomista jefe del FMI, es profesor de su Departamento de Economia."
-  cchc:
-    nombre: Camara Chilena de la Construccion
-    tipo: gremio
-    pais: Chile
-    notas: "Gremio del sector construccion. Su presidente Alfredo Echavarria celebro la ampliacion del subsidio a la tasa hipotecaria a 6.000 UF (agosto 2026). Publica el Informe Nacional Inmobiliario con datos de oferta de viviendas."
   panimex:
     nombre: Panimex
     tipo: empresa_quimica
@@ -18478,6 +18473,182 @@ organizations:
   amuch:
     nombre: Asociación de Municipalidades de Chile (AMUCH)
     tipo: gremio
+  diariocurico:
+    nombre: Diario Curicó
+    tipo: medio_comunicacion
+    notas: "Medio regional de Curicó, Región del Maule. WordPress5.x."
+  diarioelcautin:
+    nombre: Diario El Cautín
+    tipo: medio_comunicacion
+    notas: "Medio regional de Temuco, Región de La Araucanía. WordPress5.x."
+  diarioelpulso:
+    nombre: Diario El Pulso
+    tipo: medio_comunicacion
+    notas: "Medio digital de Chile. WordPress5.x."
+  elandacollino:
+    nombre: El Andacollino
+    tipo: medio_comunicacion
+    notas: "Medio regional de Andacolló, Región de Coquimbo. WordPress5.x."
+  elcomunicador:
+    nombre: El Comunicador
+    tipo: medio_comunicacion
+    notas: "Medio digital de Chile. WordPress5.x."
+  elcoquimbano:
+    nombre: El Coquimbano
+    tipo: medio_comunicacion
+    notas: "Medio regional de La Serena/Coquimbo. WordPress5.x."
+  elgong:
+    nombre: El Gong Araucanía
+    tipo: medio_comunicacion
+    notas: "Medio digital de La Araucanía."
+  elmagallanico:
+    nombre: El Magallánico
+    tipo: medio_comunicacion
+    notas: "Medio regional de Magallanes. WordPress."
+  elnoticierodelhuasco:
+    nombre: El Noticiero del Huasco
+    tipo: medio_comunicacion
+    notas: "Medio regional del Huasco, Región de Atacama. WordPress5.x."
+  aconcaguadigital:
+    nombre: Aconcagua Digital
+    tipo: medio_comunicacion
+    notas: "Medio regional de Aconcagua. WordPress5.x."
+  diariopuertovaras:
+    nombre: Diario Puerto Varas
+    tipo: medio_comunicacion
+    notas: "Medio regional de Puerto Varas, Región de Los Lagos. Yoast."
+  diariolongino:
+    nombre: Diario El Longino
+    tipo: medio_comunicacion
+    notas: "Medio regional de Longaví, Región de Ñuble. Yoast."
+  diarioloslagos:
+    nombre: Diario Los Lagos
+    tipo: medio_comunicacion
+    notas: "Medio regional de Osorno, Región de Los Lagos."
+  diariotalca:
+    nombre: Diario Talca
+    tipo: medio_comunicacion
+    notas: "Medio regional de Talca, Región del Maule. Yoast."
+  coquimbonoticias:
+    nombre: Coquimbo Noticias
+    tipo: medio_comunicacion
+    notas: "Medio regional de Coquimbo. Google Sitemap Generator."
+  diarioangamos:
+    nombre: Diario Angamos
+    tipo: medio_comunicacion
+    notas: "Medio digital. Jetpack WordPress."
+  saladeprensa:
+    nombre: Sala de Prensa
+    tipo: medio_comunicacion
+    notas: "Medio digital de prensa chilena. Yoast."
+  valparaisonoticias:
+    nombre: Valparaíso Noticias
+    tipo: medio_comunicacion
+    notas: "Medio digital de la Región de Valparaíso."
+  reporteagricola:
+    nombre: Reporte Agrícola
+    tipo: medio_comunicacion
+    notas: "Medio especializado del sector agropecuario chileno."
+  ecoceanos_medio:
+    nombre: ECOceanos
+    tipo: medio_comunicacion
+    notas: "Organización y medio de prensa dedicado a la defensa del océano y biodiversidad marina. Yoast."
+  redsalud:
+    nombre: RedSalud
+    tipo: medio_comunicacion
+    notas: "Portal de noticias del sector salud chileno."
+  arauco:
+    nombre: Arauco
+    tipo: medio_comunicacion
+    notas: "Portal corporativo y noticias del sector forestal (arauco.com). Yoast."
+  consejotransparencia:
+    nombre: Consejo para la Transparencia
+    tipo: organismo_estado
+    notas: "Organismo autónomo encargado de garantizar la transparencia y acceso a la información pública. Yoast."
+  economia:
+    nombre: Ministerio de Economía, Fomento y Turismo
+    tipo: ministerio
+    notas: "Ministerio responsable de la política económica, fomento productivo y turismo. Yoast."
+  minrel:
+    nombre: Ministerio de Relaciones Exteriores
+    tipo: ministerio
+    notas: "Ministerio encargado de la política exterior y las relaciones diplomáticas de Chile."
+  mma:
+    nombre: Ministerio del Medio Ambiente
+    tipo: ministerio
+    notas: "Ministerio encargado de la política ambiental y gestión de recursos naturales. WordPress5.x."
+  mtt:
+    nombre: Ministerio de Transportes y Telecomunicaciones
+    tipo: ministerio
+    notas: "Ministerio responsable de la infraestructura de transporte y telecomunicaciones. Yoast."
+  anip:
+    nombre: ANIP
+    tipo: organismo_estado
+    notas: "Asociación Nacional de Immobiliaria y Propiedad."
+  resonanciadiario:
+    nombre: Resonancia Diario
+    tipo: medio_comunicacion
+    notas: "Medio digital de Antofagasta. Yoast."
+  funcionariopublico:
+    nombre: Funcionario Público
+    tipo: medio_comunicacion
+    notas: "Portal de noticias sobre empleo público y gestión de recursos humanos en el sector público. WordPress5.x."
+  quintero:
+    nombre: Quintero
+    tipo: medio_comunicacion
+    notas: "Medio digital de Quintero y la zona de Valparaíso. Yoast."
+  tuki:
+    nombre: Tuki
+    tipo: medio_comunicacion
+    notas: "Medio digital de Chile."
+  uruguay:
+    nombre: Uruguay
+    tipo: medio_comunicacion
+    notas: "Medio digital. Yoast."
+  portalminero:
+    nombre: Portal Minero
+    tipo: medio_comunicacion
+    notas: "Portal especializado en la industria minera chilena."
+  portalfruticola:
+    nombre: Portal Frutícola
+    tipo: medio_comunicacion
+    notas: "Portal especializado en el sector frutícola chileno. Yoast."
+  portalportuario:
+    nombre: PortalPortuario
+    tipo: medio_comunicacion
+    notas: "Medio especializado en puertos, transporte marítimo y comercio exterior. Yoast."
+  somoschile:
+    nombre: Somos Chile
+    tipo: medio_comunicacion
+    notas: "Portal de noticias chileno."
+  aitnews:
+    nombre: AIT News
+    tipo: medio_comunicacion
+    notas: "Portal de noticias. Yoast."
+  angolnoticias:
+    nombre: Angol Noticias
+    tipo: medio_comunicacion
+    notas: "Medio regional de Angol, Región de la Araucanía. Yoast."
+  uai:
+    nombre: Universidad Adolfo Ibáñez
+    tipo: universidad
+    notas: "Universidad privada chilena con sedes en Viña del Mar y Santiago."
+  usm:
+    nombre: Universidad Técnica Federico Santa María
+    tipo: universidad
+    notas: "Universidad técnica estatal con sede en Valparaíso."
+  ulagos:
+    nombre: Universidad de los Lagos
+    tipo: universidad
+    notas: "Universidad privada de la Región de Los Lagos. WordPress5.x."
+  umayor:
+    nombre: Universidad Mayor
+    tipo: universidad
+    notas: "Universidad privada chilena con sede en Santiago."
+  cchc:
+    nombre: Cámara Chilena de la Construcción
+    tipo: gremio
+    notas: "Gremio empresarial del sector construcción en Chile."
 
 cifras:
   metro_querellas_18o:
