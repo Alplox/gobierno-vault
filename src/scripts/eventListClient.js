@@ -317,10 +317,17 @@ if (!window.__gvEventPopstate) {
 }
 
 export function initEventList() {
-  // Los scripts de página se re-ejecutan en cada navegación (View Transitions).
-  // En vez de un guard persistente, se desconecta el observer previo y se
-  // reconstruye con el DOM nuevo; byMonth es module-level y persiste entre
-  // navegaciones SPA, por eso se limpia antes de re-poblar.
+  const script = document.getElementById('event-index-data');
+  // Guard de nodo ANTES de cualquier efecto secundario. En la misma carga corren
+  // la llamada directa del módulo Y astro:page-load (que también se dispara al
+  // cargar): el segundo intento debe salir SIN tocar estado. Antes desconectaba
+  // el observer y hacía byMonth.clear() antes de este check, dejando los meses
+  // lazy sin llenar jamás (solo quedaban las 12 tarjetas SSR).
+  // En navegación VT el nodo <script> llega nuevo con el DOM (sin __gvLoaded),
+  // así que el init procede normal.
+  if (!script || script.__gvLoaded) return;
+  script.__gvLoaded = true;
+  // El observer anterior apunta a nodos del DOM previo (VT): desconectarlo.
   if (window.__gvEventListObserver) {
     window.__gvEventListObserver.disconnect();
     window.__gvEventListObserver = null;
@@ -329,14 +336,6 @@ export function initEventList() {
 
   window.__gvFillMonth = forceFillMonth;
 
-  const script = document.getElementById('event-index-data');
-  if (!script) return;
-  // Doble init en la MISMA carga (llamada directa + astro:page-load, que tambien
-  // se dispara al cargar): sin este guard el JSON se repuebla y forceFillAll/
-  // observer insertan tarjetas duplicadas. En navegacion VT el nodo es nuevo
-  // (DOM fresco) y el init corre normal.
-  if (script.__gvLoaded) return;
-  script.__gvLoaded = true;
   let payload = { maps: {}, events: [] };
   try {
     payload = JSON.parse(script.textContent || '{}');

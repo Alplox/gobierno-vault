@@ -58,7 +58,14 @@ El sitio usa `ClientRouter` de `astro:transitions` (habilitado en `src/layouts/B
   init que monta un IntersectionObserver/puntos contra el DOM del mes actual (ej.
   `initTimeline`/`initEventList`) debe registrarse en `astro:page-load` y desconectar el observer
   previo (nunca cortocircuitar el init entero con `window.__gvXxxInit`), si no el observer queda
-  apuntando a nodos viejos y los meses quedan atascados en "… cargando".
+  apuntando a nodos viejos y los meses quedan atascados en "… cargando". **Y al revés:** el guard
+  de idempotencia por nodo (`script.__gvLoaded`) va PRIMERO, antes de desconectar/limpiar estado:
+  `astro:page-load` también se dispara en la carga inicial, así que la llamada directa del módulo +
+  el listener producen DOS inits; si el segundo limpia estado antes del check, deja los meses lazy
+  sin llenar jamás — solo quedan las tarjetas SSR (bug real corregido 24-ago-2026 en
+  `eventListClient.js`: /events mostraba headers de mes sin tarjetas al scrollear). Los meses dentro
+  de `<details>` cerrado no disparan el observer hasta abrir el año; al abrirse el IO notifica y
+  llena (verificado).
 
 ## Lazy load + navegacion por rail temporal (TimelineNav)
 
