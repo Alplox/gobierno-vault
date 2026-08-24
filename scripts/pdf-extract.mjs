@@ -11,7 +11,16 @@
  *   pnpm run pdf-extract -- https://sitio.cl/documento.pdf              # markdown a stdout
  *   pnpm run pdf-extract -- https://sitio.cl/documento.pdf --out /tmp/doc.md
  *   pnpm run pdf-extract -- https://sitio.cl/documento.pdf --json       # clasificacion + markdown
+ *   pnpm run pdf-extract -- /ruta/documento.pdf                         # PDF LOCAL (tambien cifrado)
  *   pnpm run pdf-extract -- /ruta/doc-ya-extraido.md                    # re-imprimir sin red
+ *
+ * Notas:
+ *   - PDFs locales: si el argumento es una ruta existente cuyo contenido empieza
+ *     con %PDF se procesa igual que uno descargado (soporta encriptacion de solo
+ *     permisos, tipica de documentos oficiales como los del Banco Central).
+ *   - Bloqueo bot: si la descarga directa devuelve HTTP 200 pero el cuerpo no es
+ *     un PDF (challenge HTML, ej. bcentral.cl), se reintenta automaticamente con
+ *     fetch-impersonate.mjs antes de fallar.
  *
  * Flags:
  *   --out <ruta>   Guarda el markdown extraido en un archivo
@@ -30,6 +39,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { processPdf } from '@firecrawl/pdf-inspector';
+import { fetchImpersonate } from './fetch-impersonate.mjs';
 
 function parseArgs(argv) {
   const o = { url: null, file: null, out: null, keep: false, silent: false, json: false };
@@ -45,21 +55,57 @@ function parseArgs(argv) {
   return o;
 }
 
+function isPdf(buf) {
+  return Buffer.isBuffer(buf) && buf.subarray(0, 1024).includes('%PDF');
+}
+
 async function fetchPdf(url) {
   // Primero fetch directo de Node; si falla (bloqueo por fingerprinting TLS,
   // 403 de Cloudflare, etc.), relega a fetch-impersonate.mjs (curl_cffi, el
   // motor de curl-impersonate compatible con Windows).
+  let buf = null;
   try {
     const res = await fetch(url, {
       signal: AbortSignal.timeout(60_000),
       headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36' },
     });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    return Buffer.from(await res.arrayBuffer());
-  } catch (e) {
-    const { fetchImpersonate } = await import('./fetch-impersonate.mjs');
+    buf = Buffer.from(await res.arrayBuffer());
+  } catch {
     return await fetchImpersonate(url, { binary: true });
   }
+  // Algunos sitios responden 200 con un challenge HTML en vez del PDF
+  // (ej. bcentral.cl): en ese caso reintentar con impersonacion.
+  if (!isPdf(buf)) {
+    buf = await fetchImpersonate(url, { binary: true });
+  }
+  if (!isPdf(buf)) {
+    throw new Error('La respuesta no es un PDF (posible bloqueo bot, login o 404).');
+  }
+  return buf;
+}
+
+function processBuffer(buf) {
+  const result = processPdf(buf);
+  const markdown = result.markdown;
+  console.error(
+    `[pdf-extract] ${result.pdfType} | confianza ${result.confidence} | ` +
+    `${result.pageCount ?? '?'} paginas | ${markdown?.length ?? 0} chars markdown`
+  );
+  if (
+    markdown == null ||
+    (result.pdfType !== 'TextBased' && result.pdfType !== 'Mixed')
+  ) {
+    console.error(
+      '[pdf-extract] ADVERTENCIA: PDF escaneado o sin capa de texto confiable — el markdown puede estar vacio o incompleto; requiere OCR.'
+    );
+  }
+  if (markdown && markdown.trim().length < 500) {
+    console.error(
+      `[pdf-extract] ADVERTENCIA: extraccion casi vacia (${markdown.trim().length} chars) — posible PDF escaneado/imagen sin capa de texto.`
+    );
+  }
+  return { classification: result, markdown };
 }
 
 async function main() {
@@ -72,38 +118,25 @@ async function main() {
     const pdfPath = join(tmpdir(), `gvault-pdf-${Date.now()}.pdf`);
     writeFileSync(pdfPath, buf);
     try {
-      const result = processPdf(buf);
-      classification = result;
-      markdown = result.markdown;
+      ({ classification, markdown } = processBuffer(buf));
     } finally {
       if (!opts.keep) rmSync(pdfPath, { force: true });
     }
-    console.error(
-      `[pdf-extract] ${classification.pdfType} | confianza ${classification.confidence} | ` +
-      `${classification.pageCount ?? '?'} paginas | ${markdown?.length ?? 0} chars markdown`
-    );
-    if (
-      markdown == null ||
-      (classification.pdfType !== 'TextBased' && classification.pdfType !== 'Mixed')
-    ) {
-      console.error(
-        '[pdf-extract] ADVERTENCIA: PDF escaneado o sin capa de texto confiable — el markdown puede estar vacio o incompleto; requiere OCR.'
-      );
-    }
   } else if (opts.file && existsSync(opts.file)) {
-    markdown = readFileSync(opts.file, 'utf8');
+    const head = readFileSync(opts.file).subarray(0, 1024);
+    if (head.includes('%PDF')) {
+      // PDF local (incluye cifrados de solo permisos): mismo pipeline que URL.
+      ({ classification, markdown } = processBuffer(readFileSync(opts.file)));
+    } else {
+      // Archivo .md ya extraido: solo re-imprimir.
+      markdown = readFileSync(opts.file, 'utf8');
+    }
   } else {
-    console.error('Uso: pdf-extract <URL-del-PDF> | <archivo.md> [flags]  (ver --help en el encabezado del script)');
+    console.error('Uso: pdf-extract <URL-del-PDF> | <archivo.pdf> | <archivo.md> [flags]  (ver --help en el encabezado del script)');
     process.exit(1);
   }
 
   if (opts.out) writeFileSync(opts.out, markdown ?? '', 'utf8');
-
-  if (markdown && markdown.trim().length < 500) {
-    console.error(
-      `[pdf-extract] ADVERTENCIA: extraccion casi vacia (${markdown.trim().length} chars) — posible PDF escaneado/imagen sin capa de texto.`
-    );
-  }
 
   if (opts.json) {
     process.stdout.write(

@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (458)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (461)
 
 <details>
-<summary>Ver lista (458 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (461 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -52,6 +52,7 @@
 - [2025/04/20250409-1 - Estudio UDD revela impacto desigual de las alertas SAE en los incendios de Valparaíso de 2024](src/content/events/2025/04/20250409-1.md) — **1 fuente**
 - [2025/05/20250527-1 - Papaya Gate: formalizan a la exintendenta Lucía Pinto y a otros tres imputados por fraude al fisco](src/content/events/2025/05/20250527-1.md) — **1 fuente**
 - [2025/06/20250608-1 - El 'método Kast': la estrategia de campaña que lo mantiene en empate técnico con Matthei](src/content/events/2025/06/20250608-1.md) — **1 fuente**
+- [2025/08/20250817-1 - Kast minimiza al Congreso durante campaña ('no es tan relevante como ustedes se imaginan') y promete gobernar sin nuevas leyes: críticas de autoritarismo incluso dentro de Chile Vamos](src/content/events/2025/08/20250817-1.md) — **1 fuente**
 - [2025/09/20250911-1 - Fact Check de La Tercera desmiente a ME-O: la tasa de homicidios no se duplicó en tres gobiernos](src/content/events/2025/09/20250911-1.md) — **1 fuente**
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — **1 fuente**
 - [2025/12/20251203-3 - Jara y Kast protagonizan el debate ARCHI, el más cruzado de la campaña, con inédito protagonismo de sus barras](src/content/events/2025/12/20251203-3.md) — **1 fuente**
@@ -228,6 +229,7 @@
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — **1 fuente**
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — **1 fuente**
 - [2026/08/20260820-17 - Eduardo Engel: 'Cuesta entender por qué el Gobierno no ha querido hacer nada con el secreto bancario' y advierte que el nuevo estado de excepción es propio de una 'democracia iliberal'](src/content/events/2026/08/20260820-17.md) — **1 fuente**
+- [2026/08/20260820-19 - Jeannette Jara desde Montevideo: 'nos quedamos cortos en los temores' ante Kast y acusa una agenda 'radical e ideologizada' alineada con las ultraderechas internacionales](src/content/events/2026/08/20260820-19.md) — **1 fuente**
 - [2026/08/20260820-2 - Ministro Quiroz niega intervención de Hacienda en proyecto ligado a su hermano: 'Es totalmente falso'](src/content/events/2026/08/20260820-2.md) — **1 fuente**
 - [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — **1 fuente**
 - [2026/08/20260821-3 - Registro de Lobby contradice a delegado Millones: consigna su reunión con Víctor Quiroz para presentar Alto Santorini un mes antes de su aprobación](src/content/events/2026/08/20260821-3.md) — **1 fuente**
@@ -235,6 +237,7 @@
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — **2 fuentes**
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — **2 fuentes**
 - [2010/01/20100114-1 - Concejal de Concepción Álvaro Ortiz condenado por violencia intrafamiliar; además enfrentaba proceso por ebriedad y daños](src/content/events/2010/01/20100114-1.md) — **2 fuentes**
+- [2012/11/20121109-1 - Corte Suprema confirma las condenas de la arista Banco Central del caso Inverlink](src/content/events/2012/11/20121109-1.md) — **2 fuentes**
 - [2013/07/20130716-1 - Caso coimas: Rebolledo baja su candidatura a alcalde tras la condena que marcó el escándalo de Tombolini](src/content/events/2013/07/20130716-1.md) — **2 fuentes**
 - [2015/10/20151008-1 - Papa Francisco respalda al obispo de Osorno Juan Barros y califica de 'tontos' y 'zurdos' a los manifestantes que protestaban por el caso Karadima](src/content/events/2015/10/20151008-1.md) — **2 fuentes**
 - [2018/04/20180426-1 - Proyecto de Evópoli contra el nepotismo genera críticas de UDI-RN, que centran fuego en Felipe Kast](src/content/events/2018/04/20180426-1.md) — **2 fuentes**
@@ -307,6 +310,7 @@
 - [2025/12/20251210-1 - Kast arremete contra Boric en campaña: 'El miedo no es inventado' y pregunta si sacaría a su guagua a las 2 de la mañana a Plaza Brasil](src/content/events/2025/12/20251210-1.md) — **2 fuentes**
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — **2 fuentes**
 - [2025/12/20251219-2 - Columna de opinión advierte que enfoque de seguridad de Kast profundizará fallas estructurales](src/content/events/2025/12/20251219-2.md) — **2 fuentes**
+- [2025/12/20251221-1 - Kast presidente electo en entrevista a T13: baja la expectativa de las expulsiones, pide a funcionarios del acuerdo de sector público 'pensarlo bien' y anuncia viaje a Ecuador](src/content/events/2025/12/20251221-1.md) — **2 fuentes**
 - [2025/12/20251223-1 - Tribunal declara culpable al exalcalde de Rancagua Juan Ramón Godoy por cohecho y fraude al fisco](src/content/events/2025/12/20251223-1.md) — **2 fuentes**
 - [2026/01/20260121-5 - Mala Espina perfila a Catalina Parot, la abogada que vuelve a Bienes Nacionales en el gabinete de Kast: exministra de Piñera, presidenta del CNTV y ex candidata](src/content/events/2026/01/20260121-5.md) — **2 fuentes**
 - [2026/02/20260206-1 - Health coach de Kast revela que conversaron instalar un gimnasio en La Moneda](src/content/events/2026/02/20260206-1.md) — **2 fuentes**
@@ -439,7 +443,6 @@
 - [2026/08/20260812-16 - Anfusepna exige participación de los funcionarios en la comisión del Estatuto Administrativo anunciada por Quiroz](src/content/events/2026/08/20260812-16.md) — **2 fuentes**
 - [2026/08/20260812-19 - Inmunomédica de Concepción querella a trabajadora que acumula 100 licencias médicas en 8 años: 'la relación laboral es inventada'](src/content/events/2026/08/20260812-19.md) — **2 fuentes**
 - [2026/08/20260813-7 - La Casa Blanca acusa a Chile de ser parte de una red de transbordo que ayuda a China a evadir aranceles](src/content/events/2026/08/20260813-7.md) — **2 fuentes**
-- [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — **2 fuentes**
 - [2026/08/20260813-9 - Juzgado de Garantía de Valparaíso rechaza dos solicitudes de la defensa de Camila Flores en el caso cuota Flores y admite querella de Ymay Ortiz Pulgar](src/content/events/2026/08/20260813-9.md) — **2 fuentes**
 - [2026/08/20260814-9 - EE.UU. prepara carta a sus socios (incluido Chile) para que elijan bando en la carrera de IA con China](src/content/events/2026/08/20260814-9.md) — **2 fuentes**
 - [2026/08/20260815-7 - Santibáñez defiende la autonomía del Mindep tras la salida de Duco: rechaza la idea del Partido Libertario de fusionar la cartera y adelanta homenaje a Mirko Jozic](src/content/events/2026/08/20260815-7.md) — **2 fuentes**
@@ -1199,7 +1202,7 @@
 - [2026/08/20260813-5 - Comisario de la PDI balea a un gendarme de franco tras una discusión con una mujer en Playa Ancha, Valparaíso](src/content/events/2026/08/20260813-5.md) — 3 fuentes
 - [2026/08/20260813-6 - ANFACH se declara en alerta: la ACOT permitiría facultades autónomas de Carabineros y la PDI en zonas primarias de puertos y fronteras](src/content/events/2026/08/20260813-6.md) — 1 fuente
 - [2026/08/20260813-7 - La Casa Blanca acusa a Chile de ser parte de una red de transbordo que ayuda a China a evadir aranceles](src/content/events/2026/08/20260813-7.md) — 2 fuentes
-- [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — 2 fuentes
+- [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — 3 fuentes
 - [2026/08/20260813-9 - Juzgado de Garantía de Valparaíso rechaza dos solicitudes de la defensa de Camila Flores en el caso cuota Flores y admite querella de Ymay Ortiz Pulgar](src/content/events/2026/08/20260813-9.md) — 2 fuentes
 - [2026/08/20260814-1 - Megarreforma (Ley de Reconstrucción Nacional y Desarrollo Económico y Social): registro textual de todo lo que propone](src/content/events/2026/08/20260814-1.md) — 21 fuentes
 - [2026/08/20260814-10 - Polémica por el menú del penal La Laguna de Talca: cazuela, guatitas y postres para reos de alta peligrosidad en contraste con la alimentación escolar y el BAES](src/content/events/2026/08/20260814-10.md) — 3 fuentes
@@ -1276,8 +1279,8 @@
 - [2026/08/20260818-11 - Hackeo al Servicio Nacional de Migraciones envía correo masivo con imagen de Pinochet y bloquea trámites durante cuatro horas](src/content/events/2026/08/20260818-11.md) — 2 fuentes
 - [2026/08/20260818-12 - Minsal instruye a hospitales atender más pacientes por hora y Colegio Médico advierte que contempla tiempos incompatibles con una consulta de calidad](src/content/events/2026/08/20260818-12.md) — 1 fuente
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — 2 fuentes
-- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 9 fuentes
-- [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 4 fuentes
+- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 20 fuentes
+- [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 5 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
 - [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
 - [2026/08/20260818-18 - Contraloría dictamina que funcionarios a honorarios no pueden participar del Día del Funcionario Municipal](src/content/events/2026/08/20260818-18.md) — 1 fuente
@@ -1311,6 +1314,7 @@
 - [2026/08/20260820-16 - Ministra Toledo defiende en Radio ADN el retiro de 43 decretos ambientales: "fue la mejor decisión que pudimos haber tomado"](src/content/events/2026/08/20260820-16.md) — 5 fuentes
 - [2026/08/20260820-17 - Eduardo Engel: 'Cuesta entender por qué el Gobierno no ha querido hacer nada con el secreto bancario' y advierte que el nuevo estado de excepción es propio de una 'democracia iliberal'](src/content/events/2026/08/20260820-17.md) — 1 fuente
 - [2026/08/20260820-18 - Alcalde de Rinconada Juan Galdames incumple dos veces su arresto domiciliario nocturno mientras enfrenta causa por fraude al fisco con daño de $1.300 millones](src/content/events/2026/08/20260820-18.md) — 5 fuentes
+- [2026/08/20260820-19 - Jeannette Jara desde Montevideo: 'nos quedamos cortos en los temores' ante Kast y acusa una agenda 'radical e ideologizada' alineada con las ultraderechas internacionales](src/content/events/2026/08/20260820-19.md) — 1 fuente
 - [2026/08/20260820-2 - Ministro Quiroz niega intervención de Hacienda en proyecto ligado a su hermano: 'Es totalmente falso'](src/content/events/2026/08/20260820-2.md) — 1 fuente
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 9 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
@@ -1326,6 +1330,9 @@
 - [2026/08/20260821-5 - Vicepresidentes del PPD renuncian y anuncian la creación del movimiento 'Firmes por Chile', acusando falta de democracia interna y complicidad con la agenda de Kast](src/content/events/2026/08/20260821-5.md) — 3 fuentes
 - [2026/08/20260821-6 - Embajador de EE.UU. revela que Barros firmó la Declaración de la Americas Counter Cartel Coalition (A3C) el 12 de marzo, reabre debate sobre compromisos de Chile con Washington](src/content/events/2026/08/20260821-6.md) — 3 fuentes
 - [2026/08/20260821-7 - Arrau defiende las facultades del nuevo estado de excepción: 'Interceptar un teléfono no es tema' y promete intervención dura en situaciones puntuales](src/content/events/2026/08/20260821-7.md) — 1 fuente
+- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: jefe de asesores Irarrázaval y Dülger integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 10 fuentes
+- [2026/08/20260823-1 - Alvarado defiende en Mesa Central la reforma de seguridad, niega que habilite detenciones sin orden judicial y minimiza el paralelo con Orbán](src/content/events/2026/08/20260823-1.md) — 6 fuentes
+- [2026/08/20260823-2 - Ministro de Defensa Barros pide que Chile salga del Convenio 169 de la OIT y 'deshacerse' de la Ley Lafkenche: La Moneda cierra la puerta y el Congreso exige orden](src/content/events/2026/08/20260823-2.md) — 8 fuentes
 
 ## 2025
 
@@ -1352,10 +1359,14 @@
 - [2025/07/20250710-1 - Exgobernador Rivas declara ante la Fiscalía que 'no se percató' de los $9 mil millones visados a Fundación Local, presidida por su compadre](src/content/events/2025/07/20250710-1.md) — 3 fuentes
 - [2025/07/20250718-1 - Mario Marcel advierte que eliminar el tope de 11 años en las indemnizaciones por años de servicio podría generar más despidos](src/content/events/2025/07/20250718-1.md) — 4 fuentes
 - [2025/07/20250728-1 - Robo de $6.150 millones al Banco Itaú de Valparaíso: forado desde local colindante y oxicorte para vaciar la bóveda](src/content/events/2025/07/20250728-1.md) — 11 fuentes
+- [2025/07/20250728-2 - Evelyn Matthei anuncia querella contra el Partido Republicano por campañas de bots y fake news: 'Yo no mando a bots a decir las cosas'](src/content/events/2025/07/20250728-2.md) — 8 fuentes
 - [2025/08/20250813-1 - Kast no asiste a comisión investigadora por robo de cables de cobre](src/content/events/2025/08/20250813-1.md) — 17 fuentes
+- [2025/08/20250817-1 - Kast minimiza al Congreso durante campaña ('no es tan relevante como ustedes se imaginan') y promete gobernar sin nuevas leyes: críticas de autoritarismo incluso dentro de Chile Vamos](src/content/events/2025/08/20250817-1.md) — 1 fuente
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md) — 10 fuentes
+- [2025/09/20250904-1 - Renuncia Patricio Góngora al directorio de Canal 13 tras reportaje de Chilevisión que lo vinculó a la cuenta troll 'Patito Verde'](src/content/events/2025/09/20250904-1.md) — 9 fuentes
 - [2025/09/20250911-1 - Fact Check de La Tercera desmiente a ME-O: la tasa de homicidios no se duplicó en tres gobiernos](src/content/events/2025/09/20250911-1.md) — 1 fuente
 - [2025/09/20250923-1 - Boric presenta la candidatura de Bachelet a la Secretaría General de la ONU](src/content/events/2025/09/20250923-1.md) — 2 fuentes
+- [2025/10/20251003-1 - CIPER revela chat donde la cuenta troll 'Neuroc' admite contacto frecuente con el community manager de Kast](src/content/events/2025/10/20251003-1.md) — 8 fuentes
 - [2025/10/20251017-1 - Fiscalía publica Informe Estadístico del Estallido Social: 30 fallecidos, 464 víctimas de trauma ocular y 35.146 delitos](src/content/events/2025/10/20251017-1.md) — 6 fuentes
 - [2025/10/20251020-1 - Tribunal de Juicio Oral de Angol absuelve al alcalde de Collipulli Manuel Macaya del delito de desacato: 'No he cometido ningún delito'](src/content/events/2025/10/20251020-1.md) — 6 fuentes
 - [2025/10/20251022-1 - Boric lanza la Política Nacional de Seguridad Pública 2025-2031 a menos de cinco meses de dejar La Moneda](src/content/events/2025/10/20251022-1.md) — 4 fuentes
@@ -1379,8 +1390,10 @@
 - [2025/12/20251214-1 - José Antonio Kast gana la segunda vuelta presidencial con 58,16% de los votos](src/content/events/2025/12/20251214-1.md) — 4 fuentes
 - [2025/12/20251215-1 - Cadem informa que su sondeo privado durante la veda proyectó correctamente el resultado del balotaje (58% para Kast)](src/content/events/2025/12/20251215-1.md) — 1 fuente
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — 2 fuentes
+- [2025/12/20251217-1 - Gobierno de Boric y Mesa del Sector Público firman el reajuste salarial 2026 (3,4%): el acuerdo que la derecha entrante tildó de 'amarre'](src/content/events/2025/12/20251217-1.md) — 11 fuentes
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md) — 6 fuentes
 - [2025/12/20251219-2 - Columna de opinión advierte que enfoque de seguridad de Kast profundizará fallas estructurales](src/content/events/2025/12/20251219-2.md) — 2 fuentes
+- [2025/12/20251221-1 - Kast presidente electo en entrevista a T13: baja la expectativa de las expulsiones, pide a funcionarios del acuerdo de sector público 'pensarlo bien' y anuncia viaje a Ecuador](src/content/events/2025/12/20251221-1.md) — 2 fuentes
 - [2025/12/20251223-1 - Tribunal declara culpable al exalcalde de Rancagua Juan Ramón Godoy por cohecho y fraude al fisco](src/content/events/2025/12/20251223-1.md) — 2 fuentes
 - [2025/12/20251224-1 - Equipo de Kast confirma criterio anti-nepotismo: sin ministros con familiares en el Congreso, con posibles excepciones](src/content/events/2025/12/20251224-1.md) — 5 fuentes
 - [2025/12/20251224-2 - Comisión para la Fijación de Remuneraciones eleva el sueldo del Presidente a $11,07 millones y Kast evita comprometer una rebaja: 'es una norma legal'](src/content/events/2025/12/20251224-2.md) — 3 fuentes
@@ -1461,12 +1474,14 @@
 - [2022/05/20220524-1 - Boric compromete desde Justicia una agenda de reparación para víctimas de violaciones a los DD.HH. del estallido social](src/content/events/2022/05/20220524-1.md) — 2 fuentes
 - [2022/07/20220704-1 - Boric realiza una cadena nacional tras recibir la propuesta de nueva Constitución y convoca al plebiscito del 4 de septiembre](src/content/events/2022/07/20220704-1.md) — 2 fuentes
 - [2022/07/20220705-1 - Ricardo Lagos llama a continuar el debate constituyente tras el plebiscito y Boric responde: 'habrá que depender del veto histórico de la derecha'](src/content/events/2022/07/20220705-1.md) — 3 fuentes
+- [2022/07/20220726-1 - Reparten trípticos falsos con la gráfica oficial de la Convención en La Florida y Puente Alto: tras el sitio 'Facilitadores Constitucionales' está Numen, la empresa de Cerimedo](src/content/events/2022/07/20220726-1.md) — 9 fuentes
 - [2022/08/20220803-1 - Boric presenta el Plan PACTO de reparación integral para víctimas de trauma ocular del 18-O](src/content/events/2022/08/20220803-1.md) — 2 fuentes
 - [2022/09/20220901-1 - Tribunal Oral de San Bernardo declara culpable a Patricio Maturana, excapitán de Carabineros que dejó ciega a Fabiola Campillai](src/content/events/2022/09/20220901-1.md) — 1 fuente
 - [2022/09/20220904-1 - Plebiscito de salida: la opción Rechazo gana con 61,86% y la propuesta de nueva Constitución es derrotada](src/content/events/2022/09/20220904-1.md) — 2 fuentes
 - [2022/09/20220905-1 - Ricardo Lagos propone imitar a Alessandri Palma con un comité de expertos para redactar nueva Constitución y se ofrece a integrarlo: 'yo quiero a Chile'](src/content/events/2022/09/20220905-1.md) — 4 fuentes
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — 2 fuentes
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — 2 fuentes
+- [2022/09/20220910-1 - '#BoricInternado': la fake news de La Derecha Diario sobre un presunto colapso nervioso de Boric tras el triunfo del Rechazo](src/content/events/2022/09/20220910-1.md) — 6 fuentes
 - [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md) — 3 fuentes
 - [2022/11/20221125-1 - Corte Suprema condena a más de 7 años al capitán de Carabineros Hugo Navarro por homicidio frustrado de Benjamín Huerta en Ovalle](src/content/events/2022/11/20221125-1.md) — 4 fuentes
 - [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — 2 fuentes
@@ -1615,10 +1630,12 @@
 ## 2012
 
 - [2012/01/20120130-1 - TDLC condena a Cruz Verde y Salcobrand por colusión en el precio de 206 medicamentos y la Corte Suprema ratifica las multas de 20.000 UTA](src/content/events/2012/01/20120130-1.md) — 6 fuentes
+- [2012/11/20121109-1 - Corte Suprema confirma las condenas de la arista Banco Central del caso Inverlink](src/content/events/2012/11/20121109-1.md) — 2 fuentes
 
 ## 2011
 
 - [2011/06/20110608-1 - The Clinic revela el conflicto de interés de Ena von Baer por el convenio UPOV 91 y las semillas registradas por su familia](src/content/events/2011/06/20110608-1.md) — 3 fuentes
+- [2011/11/20111123-1 - Corte de Apelaciones de Santiago condena a once personas en la arista Banco Central del caso Inverlink](src/content/events/2011/11/20111123-1.md) — 4 fuentes
 
 ## 2010
 
@@ -1628,7 +1645,7 @@
 - [2010/04/20100407-1 - Formalizan a la diputada Claudia Nogueira por cuatro delitos de fraude al fisco en el caso de los asesores parlamentarios](src/content/events/2010/04/20100407-1.md) — 1 fuente
 - [2010/05/20100507-1 - Sobreseen el caso Pinocheques al no poder determinar que los dineros llegaron a cuentas de Pinochet](src/content/events/2010/05/20100507-1.md) — 1 fuente
 - [2010/07/20100701-1 - Caso MOP-Gate: jueza Chevesich dicta sentencia y admite que no pudo determinar el destino de los dineros defraudados](src/content/events/2010/07/20100701-1.md) — 3 fuentes
-- [2010/11/20101118-1 - Caso Inverlink: sentencia contra cinco ejecutivos por el fraude tributario de la filtración de información confidencial](src/content/events/2010/11/20101118-1.md) — 3 fuentes
+- [2010/11/20101118-1 - Caso Inverlink: la Corte Suprema condena a cinco ejecutivos del holding por fraude tributario](src/content/events/2010/11/20101118-1.md) — 4 fuentes
 
 ## 2009
 
@@ -1638,6 +1655,10 @@
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — 2 fuentes
 - [2009/12/20091220-1 - Frei invita al Partido Comunista a unirse a su campaña y el PC oficializa su apoyo para la segunda vuelta presidencial de 2009-2010](src/content/events/2009/12/20091220-1.md) — 3 fuentes
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — 2 fuentes
+
+## 2003
+
+- [2003/02/20030203-1 - Estalla el caso Inverlink: el Banco Central denuncia la filtración de información reservada desde el computador de su presidencia](src/content/events/2003/02/20030203-1.md) — 5 fuentes
 
 ## 1973
 

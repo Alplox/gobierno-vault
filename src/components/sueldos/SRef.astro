@@ -1,0 +1,19 @@
+---
+// Referencia inline para /sueldos: envuelve SourceRef resolviendo el tooltip
+// desde el array de fuentes de src/data/sueldos.yaml. Uso: <SRef n={5} />
+// donde n es el número 1-based en la lista `fuentes` del YAML. Así insertar o
+// reordenar fuentes NO obliga a re-escribir los props a mano.
+import SourceRef from '../SourceRef.astro';
+import { getSueldos } from '../../lib/sueldos';
+
+const { n } = Astro.props;
+const fuente = getSueldos().fuentes[n - 1];
+if (!fuente) throw new Error(`SRef: no existe la fuente ${n} en sueldos.yaml`);
+---
+
+<SourceRef
+  id={`ref-${n}`}
+  index={n}
+  href={`#ref-${n}`}
+  tip={`${fuente.medio}\n${fuente.titulo}`}
+/>

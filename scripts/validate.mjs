@@ -126,6 +126,11 @@ const WHITELIST_MEDIOS = new Set([
   'Cuerpo de Bomberos de Chile',
   'BCN Historia de la Ley',
   'Wikipedia',
+  'Comisión para la Fijación de Remuneraciones',
+  'Servicio de Impuestos Internos (SII)',
+  'ChileAtiende',
+  'Observatorio Social (MDS)',
+  'El Universo',
   'Actualidad Jurídica DOE',
   'Portal de Datos Abiertos del Estado (datos.gob.cl)',
   'Portal de Transparencia',
@@ -242,6 +247,22 @@ for (const file of allFiles) {
     referencedSources.add(match[1]);
   }
 }
+// Fuentes referenciadas desde src/data/sueldos.yaml (página /sueldos): cuentan
+// como citadas. Estructura: orden_refs[] + fuentes de sección + vigencias[].fuente.
+try {
+  const sueldos = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'sueldos.yaml'), 'utf8'));
+  const pushRef = (id) => { if (id) referencedSources.add(id); };
+  for (const id of sueldos.orden_refs ?? []) pushRef(id);
+  pushRef(sueldos.segundo_piso?.fuente);
+  pushRef(sueldos.topes_dipres?.fuente);
+  pushRef(sueldos.ipc?.registro_presidente_mayo_2026?.fuente);
+  for (const p of sueldos.presidentes ?? []) {
+    for (const v of p.vigencias ?? []) pushRef(v.fuente);
+  }
+} catch {
+  // sueldos.yaml ausente o ilegible: no aporta referencias (los errores propios
+  // de esa página se detectan en el build de Astro).
+}
 for (const id of validSourceIds) {
   if (!referencedSources.has(id)) {
     console.error(`✖ fuente huerfana en sources.yaml: "${id}" (no citada en ningun evento)`);
@@ -306,7 +327,6 @@ try {
   errors++;
 }
 
-// Mojibake: el doble-encoding UTF-8 degrada títulos, notas y nombres canónicos.
 // Mojibake: doble-encoding UTF-8 y round-trips ANSI degradan títulos, notas y nombres.
 // Firma C2/C3 + byte 0x80-0xBF: doble-encoding clásico (Ã©, Ã±...).
 // Además: controles C1 (0080-009F) = UTF-8 leído como CP1252 (ej. em-dash "â€”"),
@@ -326,6 +346,45 @@ for (const f of ['sources.yaml', 'entities.yaml', 'topics.yaml', 'colectivos.yam
     }
     console.error(`✖ mojibake/carácter inválido en src/data/${f}: ${matches.length} ocurrencia(s) — corregir acentos/ñ/em-dashes dañados`);
     for (const s of sample) console.error(s);
+    errors++;
+  }
+}
+
+// Prevención (incidente 23-ago-2026): los archivos de la bitácora TAREAS/ no se
+// parsean como YAML ni participan en el build de Astro, así que un grabado con
+// encoding incorrecto (PowerShell 5.1: Get-Content asume ANSI en archivos sin
+// BOM + Set-Content -Encoding UTF8 re-escribe con doble codificación y BOM)
+// llegaba a commit sin que ningún chequeo lo detectara. Se aplica el mismo
+// MOJIBAKE_RE de los YAML y además se rechaza el BOM UTF-8.
+function walkTareasFiles(dir) {
+  const files = [];
+  if (!existsSync(dir)) return files;
+  for (const e of readdirSync(dir, { withFileTypes: true })) {
+    const p = join(dir, e.name);
+    if (e.isDirectory()) files.push(...walkTareasFiles(p));
+    else if (e.isFile() && e.name.endsWith('.md')) files.push(p);
+  }
+  return files;
+}
+for (const f of walkTareasFiles(join(process.cwd(), 'TAREAS'))) {
+  const raw = readFileSync(f, 'utf8');
+  const rel = relative(process.cwd(), f).replace(/\\/g, '/');
+  const problems = [];
+  if (raw.charCodeAt(0) === 0xfeff) {
+    problems.push('BOM UTF-8 al inicio (guardado por una herramienta que antepone BOM — re-guardar como utf8 sin BOM)');
+  }
+  const matches = raw.match(mojibakeScan);
+  if (matches) {
+    problems.push(`${matches.length} ocurrencia(s) de doble-codificación/carácter inválido — corregir acentos/ñ/em-dashes/emojis dañados`);
+    const lines = raw.split(/\r?\n/);
+    for (let li = 0; li < lines.length && problems.length < 4; li++) {
+      mojibakeScan.lastIndex = 0;
+      if (mojibakeScan.test(lines[li])) problems.push(`    línea ${li + 1}: ${lines[li].trim().slice(0, 90)}`);
+    }
+  }
+  if (problems.length > 0) {
+    console.error(`✖ encoding inválido en ${rel}: ${problems[0]}`);
+    for (const s of problems.slice(1)) console.error(s);
     errors++;
   }
 }

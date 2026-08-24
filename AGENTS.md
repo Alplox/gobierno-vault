@@ -119,6 +119,7 @@ src/
     topics.yaml      taxonomy de temas
     colectivos.yaml  grupos afectados
     sectores.yaml    sectores economicos/sociales
+    sueldos.yaml     datos de la pagina /sueldos (montos, series, referencias)
   lib/
     registry.ts        lee YAML, retorna typed registries
     queries.ts         wrap de Astro getCollection + registries
@@ -284,7 +285,7 @@ svg_backup:
 11. **Personas/orgs nuevas**: agregar a `entities.yaml`.
 12. **Cifras nuevas**: agregar tipo a `entities.yaml` > `cifras`.
 13. **NO usar notas de editor ni metainstrucciones en el body de eventos**: está prohibido dejar marcadores de gestión como `Nota de verificación`, `pendiente evento propio`, `ver TAREAS` (en cualquier variante: `TAREAS.md`, `TAREAS/SEGUIMIENTO.md`, `TAREAS/PENDIENTES/...`, `en TAREAS`, `registrado en TAREAS`), `para seguimiento`, `pendiente de validación cruzada`, `pendiente de reacciones`, `pendiente el desenlace` o `queda pendiente de verificación`. El body solo contiene hechos verificables y análisis; los cross-references entre eventos tipo `(ver evento X)` SÍ son válidos (los IDs se auto-enlazan). Si algo requiere validación, profundización o más fuentes, registrarlo en `TAREAS/` (estado `⬜ pendiente`/`🟡 parcial`) y no en el body del evento. **Enforcement mecánico**: `scripts/validate.mjs` (que corre antes del build) detecta estos patrones en el body y hace fallar el build. Se exceptúan los eventos-tracker diseñados como tales (ej. `20250822-1`, que da seguimiento a propuestas de campaña).
-14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `grep -ih '<términos>' sitemaps/<slug>/*.jsonl` — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
+14. **Consultar el catálogo de sitemaps ANTES de buscar en la web**: para los medios guardados localmente (ver lista completa en "Catálogo de sitemaps → Uso del catálogo por agentes"; ej. `biobiochile`, `elmostrador`, `theclinic`, `latercera`, `cnnchile`, `elciudadano`, `malaespina`, `elquintopoder`, `df`), buscar primero con `rg -i --no-heading -uu '<términos>' sitemaps/<slug>/` (o sobre todo el catálogo con `rg -i -uu -g '*.jsonl' '<términos>' sitemaps`; `-uu` es obligatorio porque los JSONL están gitignoreados) — entrega URL + fecha (+ título real si es news-sitemap) sin tocar la red, y evita búsquedas online redundantes (ver sección "Catálogo de sitemaps → Uso del catálogo por agentes"). El catálogo NO trae el cuerpo del artículo: tras el match, leer la URL con `read_url` o los mirrors.
 15. **Cifras en disputa: párrafo + tabla comparativa**: cuando las fuentes no coinciden en una cifra (conteos, plazas, montos — ej. los trasladados de la Operación Cancerbero en `20260813-1`), además del párrafo que describe la desincronización, agregar una **tabla markdown comparativa** en la misma sección que liste por fila: la cifra (con `[[cifra/...]]` si está registrada), la fuente/emisor (con `[[source/...]]` inline) y una columna de contexto/explicación (qué mide cada cifra, por qué difiere). Esto permite comparar de un vistazo y evitar que el dato quede solo en prosa. Si tras investigar se concilia (una cifra es la oficial y las demás son errores, proyecciones intermedias o malinterpretaciones), decirlo explícitamente en el párrafo y marcarlo en la tabla (ej. columna "Concilia" o una nota al pie). Registrar en `TAREAS/` solo lo que quede genuinamente pendiente.
 16. **Votaciones (`tipo: votacion`): conteos con fuente oficial**: además de la cobertura de prensa, verificar el resultado y el conteo (a favor / en contra / abstenciones) en la página oficial de votaciones del Senado (`senado.cl/actividad-legislativa/sala/votaciones`) o de la Cámara (`camara.cl/legislacion/sala_sesiones/votaciones.aspx`, y por proyecto con `ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar la URL de la votación concreta en `sources.yaml` (`medio: Senado de Chile` / `medio: Cámara de Diputados`) y registrar cada conteo como `[[cifra/...]]` (ej. los vetos de la megarreforma en `20260810-10`). Si la votación fue nominal y el detalle por parlamentario es relevante para el evento, mencionarlo con la URL oficial. Ver FUENTES_GUBERNAMENTALES.md → Poder Legislativo.
 
@@ -454,12 +455,26 @@ Cada Cuenta Pública presidencial ante el Congreso Pleno tiene **un evento maste
 - **Campo `medio:` de `sources.yaml`**: debe ser EXACTAMENTE el `nombre` de una org de prensa de `entities.yaml` (tipo `medio_comunicacion` | `red_social` | `canal_television` | `programa_tv` | `programa_streaming`). Si el emisor NO es prensa (institucion del Estado, encuestadora, plataforma social/documento, publicacion academica), usar el nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate.mjs`. `pnpm run validate` (corre antes del build) falla con el ID de la fuente si el `medio:` no cumple la regla. Ver seccion "Encoding y edicion concurrente" para el detector de mojibake.
 - `topics.yaml`: formato `id: { nombre, descripcion, relacionados: [] }`.
 - `colectivos.yaml` / `sectores.yaml`: agregar string al array plano.
+- `sueldos.yaml`: datos de la página `/sueldos`. SIN cifras ni entidades hardcodeadas:
+  - Personas por ID de entities.yaml (`presidente_id`, `persona_id`, `firmante_id`) — el nombre
+    lo resuelve `src/lib/sueldos.ts` vía `getPeopleRegistry()` y el build FALLA si el ID no existe.
+  - Referencias por ID de sources.yaml (`orden_refs` fija la numeración [N] visible; los
+    `<SRef n={N} />` resuelven medio/título/url contra `getSourcesRegistry()`). Las fuentes de
+    esta página SON entradas normales de sources.yaml (con su `medio:` validado) — no hay un
+    array local. Insertar/eliminar una fuente = tocar solo `orden_refs`.
+  - Cada monto presidencial lleva `vigencias[]` (monto + fuente + descripción de cuándo rigió)
+    para seguimiento anti-stale; los derivados (ratios, ajustes IPC, promedios) se calculan en
+    `src/lib/sueldos.ts` y la prosa interpola esos valores.
+  - `serie_registro_publico.puntos[]` es la serie mensual bruta del Presidente (desde 2025-01,
+    leída del registro el 23-ago-2026) que alimenta la línea de tiempo SVG estática de /sueldos;
+    al llegar un periodo nuevo se agrega un punto con la misma fuente.
+  - El YAML se sirve en `/data/sueldos.yaml` (ALLOWED de `src/pages/data/[name].yaml.ts`).
 
 ### Encoding y edicion concurrente (incidente 20-ago-2026)
 
 - **NUNCA usar PowerShell `Set-Content`/`Out-File`/`Add-Content` ni redireccion `>` sobre archivos del repo**: reescriben el archivo completo con encoding ANSI/CRLF de Windows y corrompen UTF-8 (un solo rename con `Set-Content` genero un diff de 31 mil lineas). Para transformaciones masivas usar scripts Node con `readFileSync`/`writeFileSync` explicitos en `utf8`, o las herramientas Edit/Write del agente.
 - **Valores YAML que empiezan con caracteres reservados** (`@`, `*`, `&`, `%`) deben ir entre comillas: `autor: "@hernan_sr"`. Sin comillas rompe el parseo (`@` es reservado).
-- **validate parsea los 5 YAML de datos al inicio** con mensaje limpio (archivo + linea) y su detector de mojibake cubre: doble-encoding clasico (C2/C3), controles C1 (UTF-8 leido como CP1252, ej. em-dash `â€”`), U+FFFD, cirilico y Latin Ext-A/B. Reporta hasta 3 lineas de ejemplo. Si agregas un nombre extrano legitimo que dispare falso positivo, ajustar `MOJIBAKE_RE`.
+- **validate parsea los 5 YAML de datos al inicio** con mensaje limpio (archivo + linea) y su detector de mojibake cubre: doble-encoding clasico (C2/C3), controles C1 (UTF-8 leido como CP1252, ej. em-dash `â€”`), U+FFFD, cirilico y Latin Ext-A/B. Reporta hasta 3 lineas de ejemplo. Si agregas un nombre extrano legitimo que dispare falso positivo, ajustar `MOJIBAKE_RE`. **Desde el 24-ago-2026 tambien escanea todos los `.md` de `TAREAS/`** (bitacora no-YAML, invisible al build) y rechaza BOM UTF-8 inicial — firma del incidente del 23-ago-2026 (PowerShell 5.1: `Get-Content` asume ANSI en archivos sin BOM + `Set-Content -Encoding UTF8` re-escribe con doble codificacion y BOM).
 - **Edicion concurrente**: antes de operaciones masivas verificar `git status`; si otro agente/sesion esta activo, coordinar (esta sesion convivio con otra editando los mismos YAML). Protocolo de recuperacion probado: (1) copiar el archivo dañado a temp FUERA del repo; (2) `git checkout -- <archivo>` para volver a HEAD; (3) re-aplicar las entradas propias extrayendolas del backup con un script Node (split por IDs top-level) y concatenando en utf8; (4) `node scripts/validate.mjs` tras cada paso. Nunca "arreglar a mano" alrededor de un parse roto sin validar.
 
 ## Build y verificacion
@@ -590,6 +605,7 @@ Cuando descubras algo no documentado aqui:
 | Fetch anti-bot / impersonación | `scripts/fetch-impersonate.mjs`, sección "Extraccion de contenido web" de este archivo |
 | Catálogo de sitemaps (fallback Crawlee) | `scripts/sync-sitemaps.mjs` (`fetchWithCrawlee`), sección "Catálogo de sitemaps" de este archivo |
 | Wikilink roto | `remarkWikiLinks.mjs` (resolve fallback) |
+| Cambio en `/sueldos` (montos, series o fuentes) | `src/data/sueldos.yaml`, `src/lib/sueldos.ts`, este archivo |
 | Scripts de sitemaps | `scripts/sync-sitemaps.mjs`, `scripts/sitemaps-index.mjs`, `scripts/sitemaps-backup.mjs`, sección "Catálogo de sitemaps" de este archivo |
 
 <!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->
@@ -601,11 +617,11 @@ Cuando descubras algo no documentado aqui:
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 |---|---|---|---|---|---|
-| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 186.959 | 2 |
+| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 187.019 | 2 |
 | `abif` | ABIF | `www.abif.cl/robots.txt` | includeRe | 312 | 3 |
 | `acera` | ACERA | `acera.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.647 | 8 |
 | `aconcaguadigital` | Aconcagua Digital | `aconcaguadigital.cl/wp-sitemap.xml` | includeRe | 732 | 4 |
-| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 300 | 1 |
+| `adnradio` | ADN Radio | `www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml` | — | 400 | 1 |
 | `agenciadenoticias` | Agencia de Noticias | `agenciadenoticias.org/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `aitnews` | AIT News | `aitnews.com/sitemap_index.xml` | articleOnly (Yoast) | 79.249 | 17 |
 | `alertanoticias` | Alerta Noticias | `alertanoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.434 | 7 |
@@ -627,28 +643,28 @@ Cuando descubras algo no documentado aqui:
 | `biobiochile` | Radio Bío Bío | `www.biobiochile.cl/robots.txt` | — | 1.170.827 | 18 |
 | `canal9` | Canal 9 | `www.canal9.cl/sitemap, www.canal9.cl/sitemap-news` | — | 23.834 | 2 |
 | `cclm` | Centro Cultural La Moneda | `cclm.cl/sitemap_index.xml` | articleOnly (Yoast) | 140 | 7 |
-| `centralnoticia` | Central Noticia | `www.centralnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 23.585 | 2 |
+| `centralnoticia` | Central Noticia | `www.centralnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.310 | 2 |
 | `centralweb` | Central Web | `centralweb.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.000 | 5 |
 | `chanarcillo` | Diario Chañarcillo | `chanarcillo.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `chicureohoy` | Chicureo Hoy | `www.chicureohoy.cl/sitemap.xml` | articleOnly (Yoast) | 7.447 | 2 |
+| `chicureohoy` | Chicureo Hoy | `www.chicureohoy.cl/sitemap.xml` | articleOnly (Yoast) | 7.449 | 2 |
 | `chileestuyo` | Chile es Tuyo | `chileestuyo.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.244 | 12 |
-| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.939 | 4 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 3.943 | 4 |
 | `chilevision` | Chilevisión | `www.chilevision.cl/robots.txt` | — | 281.444 | 15 |
-| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.246 | 10 |
+| `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.253 | 10 |
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
 | `clave9` | Clave 9 | `clave9.cl/sitemap_index.xml` | articleOnly (Yoast) | 13.101 | 10 |
-| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.126 | 16 |
+| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 227.284 | 16 |
 | `colegiocordillera` | Colegio Cordillera | `colegiocordillera.cl/sitemap_index.xml` | articleOnly (Yoast) | 123 | 4 |
 | `comunidadmujer` | ComunidadMujer | `comunidadmujer.cl/sitemap_index.xml` | articleOnly (Yoast) | 546 | 5 |
 | `consejotransparencia` | Consejo para la Transparencia | `www.consejotransparencia.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.009 | 19 |
 | `contapapaya` | Contapapaya | `contapapaya.cl/sitemap_index.xml` | articleOnly (Yoast) | 203 | 1 |
 | `contrapoderchile` | Contrapoder Chile | `contrapoderchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 512 | 2 |
-| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 2.288 | 1 |
+| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 2.535 | 1 |
 | `coquimbonoticias` | Coquimbo Noticias | `www.coquimbonoticias.cl/sitemap.xml` | includeRe | 6.613 | 9 |
 | `cruzroja` | Cruz Roja Chile | `cruzroja.cl/sitemap_index.xml` | articleOnly (Yoast) | 994 | 6 |
 | `defensorianinez` | Defensoría de la Niñez | `www.defensorianinez.cl/sitemap_index.xml` | articleOnly (Yoast) | 894 | 8 |
 | `desenfoque` | Desenfoque | `desenfoque.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.560 | 5 |
-| `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 87 | 2 |
+| `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 467 | 2 |
 | `diarioangamos` | Diario Angamos | `diarioangamos.com/sitemap.xml` | includeRe | 18.004 | 6 |
 | `diarioavisale` | Diario Avísale | `diarioavisale.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `diariocauquenes` | Diario Cauquenes | `diariocauquenes.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.821 | 6 |
@@ -657,12 +673,12 @@ Cuando descubras algo no documentado aqui:
 | `diariodeosorno` | Diario de Osorno | `www.diariodeosorno.cl/sitemap.xml` | includeRe | 6.547 | 2 |
 | `diariodevaldivia` | Diario de Valdivia | `www.diariodevaldivia.cl/sitemap.xml` | includeRe | 9.499 | 2 |
 | `diarioelcautin` | Diario El Cautín | `diarioelcautin.cl/wp-sitemap.xml` | includeRe | 605 | 1 |
-| `diarioelcentro` | Diario El Centro | `www.diarioelcentro.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.535 | 2 |
+| `diarioelcentro` | Diario El Centro | `www.diarioelcentro.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.543 | 2 |
 | `diarioeldia` | Diario El Día | `www.diarioeldia.cl/sitemap.xml` | — | 2.645 | 15 |
 | `diarioelgong` | Diario El Gong | `diarioelgong.cl/sitemap_index.xml` | articleOnly (Yoast) | 246 | 6 |
 | `diarioelpulso` | Diario El Pulso | `www.diarioelpulso.cl/wp-sitemap.xml` | includeRe | 18.089 | 8 |
 | `diarioelranco` | Diario El Ranco | `www.diarioelranco.cl/sitemap.xml` | articleOnly (Yoast) | 42.218 | 18 |
-| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 200 | 1 |
+| `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 300 | 1 |
 | `diariolaunion` | La Unión | `diariolaunion.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `diariolongino` | Diario El Longino | `diariolongino.cl/sitemap_index.xml` | articleOnly (Yoast) | 15.243 | 6 |
 | `diarioloslagos` | Diario Los Lagos | `diarioloslagos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.279 | 2 |
@@ -673,22 +689,22 @@ Cuando descubras algo no documentado aqui:
 | `ecoceanos` | ECOceanos | `www.ecoceanos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.157 | 12 |
 | `economia` | Ministerio de Economía | `www.economia.gob.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.655 | 15 |
 | `edicioncero` | Edición Cero | `edicioncero.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 85.073 | 18 |
+| `el_periodista` | El Periodista | `www.elperiodista.cl/sitemap_index.xml` | articleOnly (Yoast) | 85.126 | 18 |
 | `el_siglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.429 | 4 |
 | `elandacollino` | El Andacollino | `www.elandacollino.cl/wp-sitemap.xml` | includeRe | 1.873 | 7 |
 | `elarrebato` | El Arrebato | `elarrebato.cl/sitemap_index.xml` | articleOnly (Yoast) | 268 | 2 |
-| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.867 | 22 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 304.898 | 22 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.721 | 10 |
 | `elcomunicador` | El Comunicador | `elcomunicador.cl/wp-sitemap.xml` | includeRe | 482 | 2 |
 | `elcontraste` | El Contraste | `elcontraste.cl/sitemap_index.xml` | articleOnly (Yoast) | 28.976 | 8 |
 | `elcoquimbano` | El Coquimbano | `www.elcoquimbano.cl/wp-sitemap.xml` | includeRe | 4.877 | 7 |
 | `eldefinido` | El Definido | `eldefinido.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 20 | 1 |
+| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 86 | 1 |
 | `eldiariodelaaraucania` | El Diario de La Araucanía | `eldiariodelaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.790 | 3 |
-| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.394 | 17 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 251.439 | 17 |
 | `electromineria` | Electrominería | `electromineria.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.877 | 5 |
 | `elgong` | El Gong Araucanía | `elgong.cl/sitemap.xml` | — | 1 | 1 |
-| `elinformadorchile` | El Informador Chile | `www.elinformadorchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 628 | 1 |
+| `elinformadorchile` | El Informador Chile | `www.elinformadorchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 642 | 1 |
 | `elinsular` | El Insular | `elinsular.cl/sitemap_index.xml` | articleOnly (Yoast) | 13.727 | 7 |
 | `ellibero` | El Líbero | `www.ellibero.cl/sitemap_index.xml` | articleOnly (Yoast) | 72.942 | 12 |
 | `ellibertario` | El Libertario | `www.ellibertario.cl/sitemap.xml` | — | 26 | 1 |
@@ -697,9 +713,9 @@ Cuando descubras algo no documentado aqui:
 | `elmauleinforma` | El Maule Informa | `elmauleinforma.cl/sitemap_index.xml` | articleOnly (Yoast) | 23.293 | 7 |
 | `elminuto` | El Minuto | `elminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `elmorrodearica` | El Morro de Arica | `elmorrodearica.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.545 | 7 |
-| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 201 | 1 |
+| `elmostrador` | El Mostrador | `www.elmostrador.cl/robots.txt` | — | 297 | 1 |
 | `elnoticierodelhuasco` | El Noticiero del Huasco | `elnoticierodelhuasco.cl/wp-sitemap.xml` | includeRe | 26.006 | 17 |
-| `elperiodico` | El Periódico | `elperiodico.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.101 | 2 |
+| `elperiodico` | El Periódico | `elperiodico.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.106 | 2 |
 | `elperiscopio` | El Periscopio | `www.elperiscopio.cl/sitemap_index.xml` | articleOnly (Yoast) | 11.910 | 3 |
 | `elpinguino` | El Pingüino | `elpinguino.com/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `elporteno` | El Porteño | `elporteno.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
@@ -711,7 +727,7 @@ Cuando descubras algo no documentado aqui:
 | `elreporterodeiquique` | El Reportero de Iquique | `elreporterodeiquique.com/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `elserenense` | El Serenense | `elserenense.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `elvicuense` | El Vicuñense | `xn--elvicuense-y9a.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.616 | 27 |
+| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.111.723 | 27 |
 | `enfoquedigital` | Enfoque Digital | `enfoquedigital.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `enfoquedigitalohiggins` | Enfoque Digital O'Higgins | `vi.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `enlalinea` | En La Línea | `enlalinea.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
@@ -726,7 +742,7 @@ Cuando descubras algo no documentado aqui:
 | `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.142 | 7 |
 | `fmcentro` | Radio FM Centro | `fmcentro.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `funcionariopublico` | Funcionario Público | `funcionariopublico.cl/wp-sitemap.xml` | includeRe | 1 | 1 |
-| `gob` | Gobierno de Chile | `www.gob.cl/sitemap-articles.xml` | — | 4 | 1 |
+| `gob` | Gobierno de Chile | `www.gob.cl/sitemap-articles.xml` | — | 9 | 1 |
 | `gobiernoudd` | Gobierno UDD | `gobierno.udd.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.854 | 6 |
 | `grange` | The Grange School | `grange.cl/sitemap_index.xml` | articleOnly (Yoast) | 880 | 5 |
 | `guiaturismo` | Guía Turismo Chile | `guiaturismo.cl/sitemap_index.xml` | articleOnly (Yoast) | 38 | 2 |
@@ -734,14 +750,14 @@ Cuando descubras algo no documentado aqui:
 | `horadenoticias` | Hora de Noticias | `horadenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `iconstruccion` | Instituto de la Construcción | `iconstruccion.cl/sitemap_index.xml` | articleOnly (Yoast) | 354 | 6 |
 | `infodefensa` | Infodefensa | `www.infodefensa.com/sitemap/lastarticles` | — | 100 | 1 |
-| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 10.433 | 1 |
+| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 10.445 | 1 |
 | `informaalminuto` | Informa Al Minuto | `informaalminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `infotarapaca` | Info Tarapacá | `infotarapaca.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `iquiquetv` | Iquique TV | `iquiquetv.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `junji` | JUNJI | `junji.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.723 | 11 |
-| `la_hora` | La Hora | `lahora.cl/sitemap.xml` | includeRe | 44.265 | 3 |
+| `la_hora` | La Hora | `lahora.cl/sitemap.xml` | includeRe | 44.283 | 3 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.866 | 7 |
-| `lacuarta` | La Cuarta | `www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 9.762 | 1 |
+| `lacuarta` | La Cuarta | `www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 9.787 | 1 |
 | `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.482 | 7 |
 | `laizquierdadiario` | La Izquierda Diario | `www.laizquierdadiario.cl/sitemap.xml` | — | 578 | 2 |
 | `lakalle` | La Kalle | `lakalle.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
@@ -755,7 +771,7 @@ Cuando descubras algo no documentado aqui:
 | `laserenaonline` | La Serena Online | `laserenaonline.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `lasnoticiasdemalleco` | Las Noticias de Malleco | `lasnoticiasdemalleco.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `latendencia` | La Tendencia | `latendencia.cl/sitemap_index.xml` | articleOnly (Yoast) | 818 | 3 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 12.037 | 1 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 12.287 | 1 |
 | `lavozdelosquesobran` | La Voz de los que Sobran | `www.lavozdelosquesobran.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.113 | 7 |
 | `legadochile` | Fundación Legado Chile | `legadochile.cl/sitemap_index.xml` | articleOnly (Yoast) | 217 | 6 |
 | `liceodeaplicacion` | Liceo de Aplicación | `liceodeaplicacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 97 | 3 |
@@ -768,7 +784,7 @@ Cuando descubras algo no documentado aqui:
 | `margamargatv` | Margamarga TV | `margamargatv.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `masnoticia` | Más Noticia | `masnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `maulehoy` | Maule Hoy | `maulehoy.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 433.970 | 16 |
+| `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 434.110 | 16 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
 | `minrel` | Ministerio de Relaciones Exteriores | `minrel.gob.cl/minrel/site/sitemap_pags.xml` | — | 4.977 | 2 |
 | `miradasurtv` | Mirada Sur TV | `miradasurtv.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
@@ -789,7 +805,7 @@ Cuando descubras algo no documentado aqui:
 | `nubleactual` | Ñuble Actual | `www.nubleactual.cl/wp-sitemap.xml` | includeRe | 13.257 | 4 |
 | `nubledigital` | Ñuble Digital | `nubledigital.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `nubleonline` | Ñuble Online | `nubleonline.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.730 | 2 |
-| `nuevopoder` | Nuevo Poder | `www.nuevopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 56.205 | 5 |
+| `nuevopoder` | Nuevo Poder | `www.nuevopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 56.258 | 5 |
 | `observador` | El Observador | `observador.cl/sitemap_index.xml` | articleOnly (Yoast) | 38.528 | 10 |
 | `observatoriomedicina` | Observatorio Medicina UC | `observatorio.medicina.uc.cl/sitemap_index.xml` | articleOnly (Yoast) | 530 | 9 |
 | `oceana` | Oceana Chile | `oceana.org/sitemap_index.xml` | articleOnly (Yoast) | 908 | 17 |
@@ -807,7 +823,7 @@ Cuando descubras algo no documentado aqui:
 | `portalportuario` | PortalPortuario | `portalportuario.cl/sitemap_index.xml` | articleOnly (Yoast) | 105.229 | 12 |
 | `portalredsalud` | Portal RedSalud | `portalredsalud.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.051 | 11 |
 | `prensaciudadana` | Prensa Ciudadana | `prensaciudadana.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 183 | 1 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 193 | 1 |
 | `publimicro` | Publimicro | `publimicro.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.293 | 2 |
 | `pucv` | Pontificia Universidad Católica de Valparaíso | `www.pucv.cl/pucv/site/sitemap_pags.xml` | — | 14.607 | 5 |
 | `pulsopublico` | Pulso Público | `www.pulsopublico.cl/sitemap_index.xml` | articleOnly (Yoast) | 745 | 2 |
@@ -815,8 +831,8 @@ Cuando descubras algo no documentado aqui:
 | `quepasaaraucania` | Qué Pasa Araucanía | `quepasaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.270 | 3 |
 | `quintero` | Quintero | `quintero.cl/sitemap_index.xml` | articleOnly (Yoast) | 30 | 1 |
 | `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
-| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.109 | 18 |
-| `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 298.864 | 12 |
+| `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.135 | 18 |
+| `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 299.064 | 12 |
 | `radiochilena` | Radio Chilena | `radiochilena.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `radiointeramericana` | Radio Interamericana | `radiointeramericana.cl/wp-sitemap.xml` | includeRe | 847 | 1 |
 | `radiolasenal` | Radio La Señal | `radiolasenal.cl/sitemap_index.xml` | articleOnly (Yoast) | 974 | 2 |
@@ -824,13 +840,13 @@ Cuando descubras algo no documentado aqui:
 | `radiomaria` | Radio María Chile | `radiomaria.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `radiomodelo` | Radio Modelo | `radiomodelo.cl/sitemap_index.xml` | articleOnly (Yoast) | 966 | 1 |
 | `radionuevomundo` | Radio Nuevo Mundo | `radionuevomundo.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.329 | 9 |
-| `radiopaulina` | Radio Paulina | `radiopaulina.cl/sitemap.xml` | includeRe | 9.543 | 2 |
+| `radiopaulina` | Radio Paulina | `radiopaulina.cl/sitemap.xml` | includeRe | 9.555 | 2 |
 | `radiopuertanorte` | Radio Puerta Norte | `radiopuertanorte.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `radioriquelme` | Radio Riquelme | `radioriquelme.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `radiosantamaria` | Radio Santa María | `www.radiosantamaria.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.884 | 9 |
 | `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.993 | 7 |
 | `radioventisqueros` | Radio Ventisqueros | `radioventisqueros.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.214 | 8 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 48.249 | 8 |
 | `redsalud` | RedSalud | `www.redsalud.cl/sitemap.xml` | — | 388 | 1 |
 | `regionalista` | Regionalista | `regionalista.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `reportea` | Reportea | `reportea.cl/sitemap_index.xml` | articleOnly (Yoast) | 117 | 2 |
@@ -838,7 +854,7 @@ Cuando descubras algo no documentado aqui:
 | `resonanciadiario` | Resonancia Diario | `www.resonanciadiario.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.144 | 3 |
 | `rewildingchile` | Fundación Rewilding Chile | `rewildingchile.org/sitemap_index.xml` | articleOnly (Yoast) | 306 | 6 |
 | `rioenlinea` | Río en Línea | `rioenlinea.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `sabes` | Sabes.cl | `sabes.cl/sitemap.xml` | includeRe | 17.957 | 2 |
+| `sabes` | Sabes.cl | `sabes.cl/sitemap.xml` | includeRe | 17.969 | 2 |
 | `saintgeorge` | Saint George's College | `saintgeorge.cl/sitemap_index.xml` | articleOnly (Yoast) | 1 | 1 |
 | `saladeprensa` | Sala de Prensa | `www.saladeprensa.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.488 | 4 |
 | `sancarlosonline` | San Carlos On Line | `sancarlosonline.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
@@ -856,7 +872,7 @@ Cuando descubras algo no documentado aqui:
 | `tabancura` | Colegio Tabancura | `tabancura.cl/sitemap_index.xml` | articleOnly (Yoast) | 160 | 4 |
 | `tarapacaonline` | Tarapacá Online | `tarapacaonline.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `temucodiario` | Temuco Diario | `temucodiario.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.176 | 19 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 192.206 | 19 |
 | `tiempo21` | Tiempo 21 | `tiempo21.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `tierramarillano` | Tierramarillano | `tierramarillano.cl/wp-sitemap.xml` | includeRe | 52.215 | 10 |
 | `tomealdia` | Tomé al Día | `tomealdia.com/sitemap_index.xml` | articleOnly (Yoast) | — | — |
@@ -874,7 +890,7 @@ Cuando descubras algo no documentado aqui:
 | `vilasradio` | Vilas Radio | `vilasradio.cl/wp-sitemap.xml` | includeRe | 15.178 | 2 |
 | `villarricaldia` | Villarrica al Día | `villarricaldia.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `vivimoslanoticia` | Vivimos la Noticia | `vivimoslanoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
-| `vlnradio` | VLN Radio | `www.vlnradio.cl/sitemap.xml` | includeRe | 11.054 | 2 |
+| `vlnradio` | VLN Radio | `www.vlnradio.cl/sitemap.xml` | includeRe | 11.084 | 2 |
 | `vozdeamerica` | Voz de América | `vozdeamerica.com/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `xox` | XOX.cl | `xox.cl/sitemap_index.xml` | articleOnly (Yoast) | — | — |
 | `zonazero` | Zona Zero | `www.zonazero.cl/sitemap.xml` | — | 1.005 | 1 |
@@ -889,16 +905,16 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 1117
+**Total de eventos:** 1132
 
-**Cobertura de fuentes:** 659 de 1117 eventos con 3+ fuentes (458 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 671 de 1132 eventos con 3+ fuentes (461 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 855
-- 2025: 55
+- 2026: 859
+- 2025: 61
 - 2024: 34
 - 2023: 26
-- 2022: 21
+- 2022: 23
 - 2021: 19
 - 2020: 36
 - 2019: 35
@@ -908,39 +924,40 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 - 2015: 6
 - 2014: 5
 - 2013: 2
-- 2012: 1
-- 2011: 1
+- 2012: 2
+- 2011: 2
 - 2010: 7
 - 2009: 6
+- 2003: 1
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (441)
-- Justicia (319)
-- Economia (225)
+- Politica (452)
+- Justicia (323)
+- Economia (229)
 - Defensa y seguridad (210)
-- Administración pública (172)
-- Derechos humanos (138)
+- Administración pública (175)
+- Derechos humanos (140)
 - Proceso legislativo (101)
+- Corrupción (93)
 - Finanzas publicas (91)
-- Corrupción (90)
-- Relaciones internacionales (73)
+- Relaciones internacionales (74)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (228)
-- investigacion (141)
-- declaracion (127)
+- accion (232)
+- investigacion (144)
+- declaracion (131)
 - publicacion (126)
-- reaccion (125)
+- reaccion (126)
 - resultado (115)
-- fallo_judicial (81)
+- fallo_judicial (83)
 - anuncio (74)
 - votacion (29)
-- entrevista (21)
+- entrevista (22)
 
 **Entidades registradas:**
-- Personas: 1984
-- Organizaciones: 1004
-- Cifras: 997
-- Fuentes: 3908
+- Personas: 2011
+- Organizaciones: 1009
+- Cifras: 1006
+- Fuentes: 4042
 - Temas: 75

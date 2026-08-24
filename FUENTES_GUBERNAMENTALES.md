@@ -118,6 +118,34 @@ del Presidente), su reajuste legal y su actualización por IPC.
 | INE — Calculadora IPC (actualización de valores) | https://calculadoraipc.ine.gob.cl/ |
 | INE — Manual de uso de la Calculadora IPC (PDF) | https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/metodologias/base-anual-2018-100/metodolog%C3%ADa.pdf |
 
+## Verificación de montos de autoridades (régimen 38 bis)
+
+Fuentes para contrastar los montos del [Registro Público de la CFR](https://comision38bis.gob.cl/registro-publico)
+(mayoría detectadas al validar el exceso sistemático de jun-2026 sobre el Anexo 1 del Oficio N°26/2025;
+seguimiento en `TAREAS/SEGUIMIENTO.md`). Cadena de referencia verificada 23-ago-2026:
+Resolución N°5/2024 (Informe Técnico) → adecuación IPC **+7,8%** uniforme (Oficio N°26/2025, Anexo 1)
+→ registro mensual (parlamentarios y SEREMIs cuadran al peso; Presidente/ministros/subsecretarios/gobernadores
+reportan ~$220–285 mil extra, sin documento público que lo desglose).
+
+| Fuente | URL | Uso para verificar montos |
+|---|---|---|
+| CFR — Archivo filtrado / histórico de remuneraciones | https://comision38bis.gob.cl/registro-publico (botones de descarga al final) | Serie mensual completa en bulk: comparar contra Anexo 1 ×1,078 y detectar desviaciones por cargo cada mes |
+| CFR — Actas de sesiones | https://comision38bis.gob.cl/actas-de-sesiones | Criterio discutido internamente: qué incluye la "renta bruta única y total", cálculo de la adecuación IPC, instrucciones a las instituciones |
+| CPLT — Jurisprudencia (amparos sobre acceso a información) | https://jurisprudencia.cplt.cl/ (verificado 23-ago-2026) | Resoluciones de amparo sobre remuneraciones denegadas/retenidas — reemplaza a los dictámenes CGR: www.contralor.cl quedó reducido a un stub sin contenido (":: Contralor ::", 0 links) al 23-ago-2026 |
+| Plataforma SAI (Ley 20.285) | https://www.consejotransparencia.cl/solicitud-informacionpublica/ (verificado 23-ago-2026) | Pedir directamente a Presidencia/CFR/DIPRES el desglose del monto reportado (la vía decisiva); respuestas públicas y buscables. OJO: el dominio histórico consultatransparencia.cl MURIÓ (DNS sin resolver al 23-ago-2026) |
+| Portales de transparencia estatal | https://tp.cplt.cl/ · https://www.infotransparencia.cl/ (ambos verificados 23-ago-2026) | Agregadores oficiales de transparencia activa por organismo |
+| Ministerios/servicios — portales de transparencia activa (art. 7 Ley 20.285) | dominio `transparencia` de cada servicio (ej. Presidencia arriba; SII, SAG, Junaeb, SEA, Dirección del Trabajo, superintendencias) | Planillas de remuneraciones propias → validan independientemente a ministros, subsecretarios, jefes de servicio y directores ($12–14M) sin depender del autorreporte del registro |
+| GOREs — portales de transparencia regional | sitio de cada gobierno regional | Remuneración del gobernador(a) → explica dispersiones GORE (asignación de zona extrema) |
+| Cámara de Diputados — Transparencia activa | https://www.camara.cl/transparencia/transparencia_activa.aspx | Dietas + asignaciones por parlamentario (los únicos que hoy cuadran exacto con el Anexo 1). WAF Cloudflare: curl/navegador automatizado reciben 403; ruta verificada en el menú del sitio (23-ago-2026) |
+| Empresas estatales — memorias anuales | BancoEstado (bancoestado.cl), TVN (tvn.cl/corporativo), CNTV (cntv.cl), Banco Central (bcentral.cl) | Únicos claramente sobre el Presidente ($16–17M): honorarios de consejo/directorio aparecen en memorias e informes financieros |
+| Prensa/fact-checking locales | catálogo `sitemaps/` (`grep -ih '11\.308\|9\.371\|17\.370' sitemaps/<medio>/*.jsonl`; Mala Espina Check, Fast Check CL, Factchecking.cl ya indexados) | Cobertura mensual de cada publicación del registro y verificación de afirmaciones públicas sobre sueldos |
+
+Prioridad sugerida para el pendiente del exceso: (1) SAI vía consejotransparencia.cl pidiendo el desglose,
+(2) jurisprudencia CPLT, (3) actas CFR — las tres son gratis y las dos últimas inmediatas.
+Las declaraciones de patrimonio e intereses de autoridades NO tienen portal público verificado
+al 23-ago-2026 (declaraciondeactivos.cl y declaraciones.contralor.cl caídos); si reaparece un
+canal oficial, restaurar esa fila.
+
 ## Referencias de investigación (no prensa)
 
 | Herramienta | URL | Uso |

@@ -27,6 +27,12 @@ import { readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
+// MEDIA ya se exporta de sync-sitemaps.mjs (con guard isMain: importarlo no
+// dispara un sync). Sirve para filtrar los slugs del manifest que ya no
+// existen en el registro (entradas huérfanas de intentos descartados) antes
+// de pasárselos como argumentos — sync-sitemaps.mjs valida todos los targets
+// upfront y hace exit(1) al primer slug desconocido, abortando TODO el resync.
+import { MEDIA } from './sync-sitemaps.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '..');
@@ -65,9 +71,23 @@ try {
   console.error('❌ No existe sitemaps/_manifest.json. Primero: pnpm run sitemaps-sync -- <medio>');
   process.exit(1);
 }
-const medios = Object.keys(manifest.medios ?? {});
-if (medios.length === 0) {
+const enManifest = Object.keys(manifest.medios ?? {});
+if (enManifest.length === 0) {
   console.error('❌ El catálogo está vacío. Primero: pnpm run sitemaps-sync -- <medio>');
+  process.exit(1);
+}
+// El manifest puede tener entradas huérfanas: slugs sincronizados una vez con
+// un registro MEDIA distinto (ej. medios de la watchlist que resultaron sin
+// sitemap y quedaron con articulos: 0). Si se pasaran tal cual, sync-sitemaps.mjs
+// abortaría completo con "Medio desconocido". Se omiten con aviso.
+const medios = enManifest.filter((k) => !!MEDIA[k]);
+const huerfanos = enManifest.filter((k) => !MEDIA[k]);
+if (huerfanos.length > 0) {
+  console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de sync-sitemaps.mjs; se omiten:`);
+  console.warn(`   ${huerfanos.join(', ')}`);
+}
+if (medios.length === 0) {
+  console.error('❌ Ningún medio del manifest está registrado en sync-sitemaps.mjs.');
   process.exit(1);
 }
 

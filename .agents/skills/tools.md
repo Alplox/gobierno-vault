@@ -10,7 +10,7 @@ usuario que provea el contenido.** Cada método tiene fortalezas distintas:
 | `defuddle.md` | Limpieza agresiva de boilerplate | **BioBioChile** (mejor que r.jina) |
 | `markdown.new` | Conversión a markdown puro | Documentos simples |
 | `paywallskip.com` | Bypass de paywall | The Clinic (paywall suave) |
-| `archive.ph` | Snapshot缓é/cache | Artículos eliminados |
+| `archive.ph` | Snapshot archivado en caché | Artículos eliminados |
 | `fetch-impersonate` | TLS fingerprinting real | Cloudflare challenge, rate-limit |
 | `html-raw` | HTML crudo + extracción de article/JSON-LD | Fallback cuando mirrors fallan |
 | `add-source` | Solo metadata (título/autor/fecha) | Fallback último recurso |
@@ -37,7 +37,7 @@ Si TODOS fallan, imprime un resumen de por qué falló cada uno y sugiere pedir 
 usuario como último recurso, explicando QUÉ falló y POR QUÉ (ej: "BioBioChile usa JS pesado;
 r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador real").
 
-**Escalera manual (cuando el script no es合适):**
+**Escalera manual (cuando el script no es adecuado):**
 
 1. `read_url` (fetch estándar)
 2. `r.jina.ai` + URL
@@ -54,6 +54,54 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 - El Ciudadano: rate-limit; `fetch-impersonate` o `archive.ph`
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
 - Archive.ph: puede dar rate-limit 429; intentar con `fetch-impersonate` como fallback
+
+## Defuddle CLI local (alternativa al espejo web)
+
+`defuddle parse <URL> --md` ejecuta el mismo limpiador de boilerplate que el espejo
+`defuddle.md`, pero **en local** (paquete npm global `defuddle`; verificar con
+`defuddle --version`). Ventajas sobre el espejo: sin rate-limit ni dependencia de un
+tercero disponible, salida directa a stdout para piping, y menos tokens que leer HTML crudo.
+
+```bash
+# Markdown limpio a stdout — primera opción para artículos estándar
+defuddle parse https://sitio.cl/articulo --md
+
+# Guardar a archivo / extraer solo una propiedad de metadatos
+defuddle parse https://sitio.cl/articulo --md -o articulo.md
+defuddle parse https://sitio.cl/articulo -p title   # también: author, description, domain, published
+
+# Formatos: --md markdown · --json HTML+markdown · sin flag = HTML
+```
+
+- **Cuándo usarlo vs los espejos**: primera opción para páginas estándar antes de recurrir a
+  mirrors. Los espejos (`defuddle.md`, `r.jina.ai`) quedan para sitios con JS pesado o
+  bloqueos donde el fetch local no llega (BioBio sigue mejor con su espejo documentado).
+- **Instalación** (si falta): `npm install -g defuddle`.
+- Verificado 24-ago-2026 (v0.19.2) extrayendo limpio un artículo de El Ciudadano.
+
+## Búsqueda local con ripgrep (`rg`) — catálogo y repo
+
+[ripgrep](https://github.com/BurntSushi/ripgrep) es la herramienta estándar de búsqueda de
+texto en este repo: órdenes de magnitud más rápido que `Select-String`/`Get-ChildItem` y con
+respeto a `.gitignore` configurable. Verificar con `rg --version`; instalar en Windows con
+`winget install BurntSushi.ripgrep.MSVC`.
+
+```bash
+# Catálogo completo de sitemaps (ver advertencias -uu/-g en sitemaps.md)
+rg -i --no-heading -uu -g '*.jsonl' 'término' sitemaps
+
+# Un medio/año específico
+rg -i --no-heading -uu 'quiroz' sitemaps/elmostrador/2026.jsonl
+
+# En el resto del repo (eventos, fuentes, TAREAS): sin -uu, respeta .gitignore
+rg -i 'palabra' src/content/events/
+```
+
+Flags usados habitualmente: `-i` (insensible a mayúsculas), `-uu` (incluye gitignoreados +
+ocultos — obligatorio en `sitemaps/` porque los JSONL no se commitean), `-g '*.jsonl'`
+(filtra por glob y evita escanear `sitemaps/.cache/`), `--no-heading` (salida compacta),
+`-l` (solo lista de archivos), `-c` (solo conteo). Benchmarks medidos en la sección
+"Catálogo de sitemaps → Uso del catálogo por agentes" (~320× más rápido que Select-String).
 
 ## Procesamiento de PDFs (lectura de documentos)
 

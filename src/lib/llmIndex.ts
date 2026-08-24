@@ -52,6 +52,7 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push(`- Temas (taxonomía): \`${SITE}/data/topics.yaml\``);
   lines.push(`- Colectivos afectados: \`${SITE}/data/colectivos.yaml\``);
   lines.push(`- Sectores: \`${SITE}/data/sectores.yaml\``);
+  lines.push(`- Datos de la página /sueldos (montos, series y referencias): \`${SITE}/data/sueldos.yaml\``);
   lines.push('');
   lines.push('## Cómo leer un evento');
   lines.push('');

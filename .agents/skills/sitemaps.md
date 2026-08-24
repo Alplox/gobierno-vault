@@ -30,7 +30,7 @@ NO guarda el cuerpo de los artículos.
 | Comando | Función |
 |---|---|
 | `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since`/`--days` sincroniza SOLO lo reciente (filtra sub-sitemaps históricos por la fecha de su URL —BioBio/CNN/Meganoticias/Mestizos/Publimetro/FastCheck—, omite por el rango del XML cacheado los que no llevan fecha —Yoast/Arc XP— y no toca entradas antiguas); incompatible con `--replace` |
-| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). Acepta `--since YYYY-MM-DD` / `--days N` para resync solo de contenido reciente (pasa el flag a `sitemaps-sync`) |
+| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). Acepta `--since YYYY-MM-DD` / `--days N` para resync solo de contenido reciente (pasa el flag a `sitemaps-sync`). **Filtra huérfanos** (2026-08-23): importa `MEDIA` desde `sync-sitemaps.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
 | `pnpm run sitemaps-index` | genera `sitemaps/README.md` (década → año → mes, conteos + muestras) Y la sección "Medios registrados" de AGENTS.md (marcador `
 
 <!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->
@@ -203,10 +203,23 @@ medios guardados:
 
 ```bash
 # buscar artículos por término en un medio (URL + fecha + título si es news)
-grep -ih 'secreto bancario' sitemaps/theclinic/*.jsonl
+rg -i --no-heading -uu 'secreto bancario' sitemaps/theclinic/
 # buscar en todos los medios guardados a la vez
-for m in sitemaps/*/; do grep -ih 'término' "$m"*.jsonl 2>/dev/null; done
+rg -i --no-heading -uu -g '*.jsonl' 'cerimedo' sitemaps
 ```
+
+**Dos flags críticos con ripgrep** (https://github.com/BurntSushi/ripgrep; verificar con
+`rg --version`):
+
+- **`-uu` obligatorio**: los JSONL están gitignoreados y rg respeta `.gitignore` por defecto —
+  sin `-uu` devuelve **0 resultados en silencio**.
+- **`-g '*.jsonl'` al buscar en todo `sitemaps/`**: excluye `sitemaps/.cache/` (XML crudo
+  descargado, varios GB) — sin el glob la búsqueda puede tardar minutos.
+
+Benchmarks reales (24-ago-2026, catálogo completo, término 'cerimedo'): `rg` ≈ **114 ms**
+(36 matches) vs `Get-ChildItem | Select-String` ≈ **37 s** (~320× más lento). Fallback en
+entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalación Windows:
+`winget install BurntSushi.ripgrep.MSVC` (o scoop/choco/cargo install ripgrep).
 
 - El catálogo entrega solo URL + fecha (+ título real en los news-sitemaps de los últimos días);
   NO contiene el cuerpo del artículo. Después del match hay que leer la URL (`read_url` o los

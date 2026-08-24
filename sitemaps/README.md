@@ -3,36 +3,36 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 23/8/2026, 1:11:40
-- **Medios registrados:** 280
-- **Artículos indexados:** 6.521.120
+- **Última sincronización:** 23/8/2026, 19:49:55
+- **Medios registrados:** 201
+- **Artículos indexados:** 6.522.250
 
 ## Por medio
 
 | Medio | Artículos |
 |---|---|
 | Radio Bío Bío | 1.170.827 |
-| Emol | 1.111.616 |
+| Emol | 1.111.723 |
 | Meganoticias | 434.110 |
-| El Ciudadano | 304.867 |
+| El Ciudadano | 304.898 |
 | Radio Agricultura | 299.064 |
 | Chilevisión | 281.444 |
-| El Dínamo | 251.394 |
+| El Dínamo | 251.439 |
 | CNN Chile | 227.284 |
-| The Clinic | 192.176 |
-| 24 Horas | 186.959 |
-| Radio Universidad de Chile | 108.109 |
+| The Clinic | 192.206 |
+| 24 Horas | 187.019 |
+| Radio Universidad de Chile | 108.135 |
 | PortalPortuario | 105.229 |
-| El Periodista | 85.073 |
+| El Periodista | 85.126 |
 | AIT News | 79.249 |
 | El Líbero | 72.942 |
 | El Rancagüino | 70.106 |
 | La Prensa Austral | 67.439 |
-| Nuevo Poder | 56.205 |
+| Nuevo Poder | 56.258 |
 | Tierramarillano | 52.215 |
 | Está Pasando | 51.334 |
-| REDIMIN | 48.214 |
-| La Hora | 44.265 |
+| REDIMIN | 48.249 |
+| La Hora | 44.283 |
 | Diario El Ranco | 42.218 |
 | Mi Radio LS | 40.063 |
 | El Observador | 38.528 |
@@ -48,11 +48,11 @@
 | Diario Talca | 20.421 |
 | La Nación | 19.866 |
 | El Magallánico | 18.666 |
-| Central Noticia | 18.285 |
+| Central Noticia | 18.310 |
 | Ex-Ante | 18.148 |
 | Diario El Pulso | 18.089 |
 | Diario Angamos | 18.004 |
-| Sabes.cl | 17.957 |
+| Sabes.cl | 17.969 |
 | El Quinto Poder | 17.724 |
 | Somos Chile | 17.544 |
 | Senado de Chile | 17.355 |
@@ -62,26 +62,26 @@
 | Vilas Radio | 15.178 |
 | Pontificia Universidad Católica de Valparaíso | 14.607 |
 | Radio Nuevo Mundo | 14.329 |
-| Chocale | 14.246 |
+| Chocale | 14.253 |
 | El Insular | 13.727 |
 | Ñuble Actual | 13.257 |
 | Clave 9 | 13.101 |
+| La Tercera | 12.287 |
 | La Voz de los que Sobran | 12.113 |
 | Portal RedSalud | 12.051 |
-| La Tercera | 12.037 |
 | Música y Noticias | 11.933 |
 | El Periscopio | 11.910 |
-| VLN Radio | 11.054 |
+| VLN Radio | 11.084 |
 | Radio UdeC | 10.993 |
 | Novena Digital | 10.673 |
 | AmCham Chile | 10.640 |
-| Infogate | 10.433 |
+| Infogate | 10.445 |
 | Publimicro | 10.293 |
 | Central Web | 10.000 |
-| La Cuarta | 9762 |
+| La Cuarta | 9787 |
 | Antofagasta Noticias | 9658 |
 | Diario Curicó | 9564 |
-| Radio Paulina | 9543 |
+| Radio Paulina | 9555 |
 | Diario de Valdivia | 9499 |
 | Ministerio del Medio Ambiente | 9225 |
 | Mestizos Magazine | 8638 |
@@ -91,7 +91,7 @@
 | Diario Puerto Varas | 7623 |
 | Arica es Noticia | 7479 |
 | Mala Espina | 7473 |
-| Chicureo Hoy | 7447 |
+| Chicureo Hoy | 7449 |
 | Atacama en Línea | 7371 |
 | Base Nacional | 7223 |
 | Anda | 7022 |
@@ -103,7 +103,7 @@
 | Página 19 | 6610 |
 | Desenfoque | 6560 |
 | Diario de Osorno | 6547 |
-| Diario El Centro | 6535 |
+| Diario El Centro | 6543 |
 | La Fontana | 6482 |
 | Fast Check CL | 6142 |
 | Alerta Noticias Temuco | 6133 |
@@ -121,7 +121,7 @@
 | JUNJI | 4723 |
 | El Morro de Arica | 4545 |
 | La Máquina Medio | 4032 |
-| Chile País Minero | 3939 |
+| Chile País Minero | 3943 |
 | Ministerio de Economía | 3655 |
 | Sala de Prensa | 3488 |
 | Antofacity | 3337 |
@@ -146,7 +146,7 @@
 | Chile es Tuyo | 1244 |
 | ECOceanos | 1157 |
 | Resonancia Diario | 1144 |
-| El Periódico | 1101 |
+| El Periódico | 1106 |
 | Zona Zero | 1005 |
 | Corporación La Morada | 999 |
 | Cruz Roja Chile | 994 |
@@ -164,7 +164,7 @@
 | Pulso Público | 745 |
 | Aconcagua Digital | 732 |
 | Vergara 240 | 662 |
-| El Informador Chile | 628 |
+| El Informador Chile | 642 |
 | Diario El Cautín | 605 |
 | La Izquierda Diario | 578 |
 | ComunidadMujer | 546 |
@@ -173,6 +173,7 @@
 | Diario Concepción | 501 |
 | Municipalidad de Alto Biobío | 483 |
 | El Comunicador | 482 |
+| Diario Financiero | 467 |
 | El Radar | 445 |
 | Municipalidad de Traiguén | 424 |
 | ADN Radio | 400 |
@@ -188,10 +189,9 @@
 | El Arrebato | 268 |
 | Diario El Gong | 246 |
 | Fundación Legado Chile | 217 |
-| Diario Financiero | 211 |
 | Contapapaya | 203 |
+| Publimetro | 193 |
 | Arauco | 190 |
-| Publimetro | 183 |
 | Colegio Tabancura | 160 |
 | Centro Cultural La Moneda | 140 |
 | Colegio Cordillera | 123 |

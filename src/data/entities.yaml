@@ -14,11 +14,58 @@ people:
   nadia_beller:
     nombre: Nadia Beller
     cargo: Abogada y activista (Bolivia)
-    notas: "Abogada y activista boliviana, expareja de Fernando Cerimedo. Sufrió un ataque con sicarios en Santa Cruz de la Bolivia el 18 de agosto de 2026, recibiendo más de 4 impactos de bala. Desde el hospital denunció que el ataque estaría relacionado con información que posee sobre presuntos negociados del gobierno de Rodrigo Paz, y que Cerimedo tendría influencia sobre un grupo policial de élite. Solicitó protección de la CIDH. Estaría embarazada de 4 meses de Cerimedo al momento del ataque."
+    notas: "Abogada y activista boliviana, expareja de Fernando Cerimedo. Sufrió un ataque con sicarios en Santa Cruz de la Sierra en la noche del lunes 17 de agosto de 2026 (~20:30), recibiendo más de 4 impactos de bala (El Mostrador consigna tres tiros). Fue hallada por la policía boliviana al indagar el atentado. Desde el hospital denunció que el ataque estaría relacionado con información que posee sobre presuntos negociados del gobierno de Rodrigo Paz, y que Cerimedo tendría influencia sobre un grupo policial de élite. Solicitó protección de la CIDH. Estaría embarazada de 4 meses de Cerimedo al momento del ataque."
   enrique_garcia_arancibia:
     nombre: Enrique García Arancibia
     cargo: Abogado
     notas: "Abogado conservador chileno, socio local de Fernando Cerimedo en Chile a través de la empresa Numen SpA. Apareció como el rostro legal de Numen durante el plebiscito de salida de 2022, participando en el proyecto 'Facilitadores Constitucionales' que difundió información falsa sobre la propuesta constitucional."
+  ricardo_inaiman:
+    nombre: Ricardo Inaimán Barrios
+    notas: "Ricardo Matías Inaimán Barrios (38 años), identificado por un reportaje de Chilevisión (4-sep-2025) como el administrador de la cuenta troll @JackedIn ('Neuroc') de X, uno de los principales difusores de fake news contra Evelyn Matthei (falso alzhéimer), Jeannette Jara y Johannes Kaiser. Condenado por lesiones contra su madre (registros judiciales 2011-2012). Querellado por una abogada por amenazas e injurias graves con publicidad; investigado por la Fiscalía de Valparaíso y la Fiscalía Oriente. En un chat de noviembre de 2024 reconoció hablar 'a menudo' con el community manager de Kast (CIPER, 3-oct-2025). Su cuenta desapareció de X el 18 de agosto de 2026 junto a 'Dress', días después de anunciar su retiro."
+  patricio_gongora:
+    nombre: Patricio Góngora
+    cargo: Periodista; exdirector de Canal 13
+    organizacion: canal_13
+    notas: "Periodista titulado en la Universidad Andrés Bello. Exencargado de comunicaciones del Minvu (2011, primer gobierno de Piñera) y exgerente de comunicaciones de la Asociación de AFP. Director de Canal 13 desde septiembre de 2023; renunció al directorio el 4 de septiembre de 2025 tras el reportaje de CHV Noticias que lo vinculó a la cuenta anónima 'Patito Verde', dedicada a difundir desinformación contra el oficialismo y candidatas presidenciales. Niega ser el administrador ('Esa cuenta no es mía'), pero CIPER documentó evidencia digital que lo vincula: el reflejo de su rostro en la foto del retrato de Piñera posteada por la cuenta en marzo de 2018, una dirección entregada a Enel coincidente con una propiedad inscrita a su nombre en el Conservador de Bienes Raíces, y una foto de perfil de 2016 idéntica a su antiguo Facebook."
+  ignacio_dulger:
+    nombre: Ignacio Dülger
+    cargo: Abogado; consejero regional RM; director ejecutivo de Acción Republicana
+    cargos:
+      - cargo: Asesor del Segundo Piso de La Moneda
+        organizacion: presidencia_chile
+        desde: 2026-03-11
+        hasta: 2026-08-11
+      - cargo: Director ejecutivo de Acción Republicana (movimiento fundado por José Antonio Kast, antecesor del Partido Republicano)
+        desde: 2026-09-01
+    notas: "Abogado (Universidad de los Andes) y consejero regional metropolitano. Colaborador cercano de José Antonio Kast en todas sus campañas; candidato republicano al Consejo Constitucional en 2023. Integró el Segundo Piso de La Moneda bajo Alejandro Irarrázaval hasta su renuncia el 11 de agosto de 2026 para asumir desde el 1 de septiembre como director ejecutivo de Acción Republicana. Según El Mostrador (21-ago-2026), integró 'Casa Común', el comando empresarial del Rechazo que contrató servicios de Numen/Cerimedo; su entorno lo confirmó pero descartó relación estrecha con Cerimedo. Negó además ser el administrador de la cuenta 'Make Chile Fome Again', tal como lo afirmó 'Neuroc' antes de abandonar X."
+  agustin_romo:
+    nombre: Agustín Romo
+    cargo: Diputado nacional (Argentina, LLA)
+    notas: "Diputado argentino de La Libertad Avanza y exdirector de comunicación digital de la campaña presidencial de Javier Milei. En el programa 'Intratables' confirmó públicamente que Fernando Cerimedo trabajó con ellos y también en las campañas de José Antonio Kast y Jair Bolsonaro; no precisó en qué campaña de Kast ni con qué funciones."
+  gonzalo_de_la_carrera:
+    nombre: Gonzalo de la Carrera
+    cargo: Empresario y exdiputado (REP)
+    notas: "Empresario y exdiputado chileno (Partido Republicano); encabezado de 'Casa Común', comando empresarial del Rechazo con sede en Vitacura durante el plebiscito de entrada de 2020. Consultado por El Mostrador (21-ago-2026), dijo que Cerimedo llegó recomendado por uno de los empresarios de la organización, que 'nos vendió una encuesta que estaba más perdida que el teniente Bello' y que no sabía que estaba metido en bots; aseguró además que Alejandro Irarrázaval no tuvo un rol muy importante en ese espacio."
+  jair_bolsonaro:
+    nombre: Jair Bolsonaro
+    cargo: Expresidente de Brasil (2019-2022)
+    notas: "Ultrderechista brasileño. Su equipo de estrategia digital en la campaña de 2018 fue encabezado por Fernando Cerimedo. Tras perder con Lula da Silva en 2022, fue condenado por intento de golpe de Estado para impedir la transferencia del mando; Cerimedo impulsó entonces teorías sin sustento sobre un supuesto fraude en las urnas electrónicas, sin ser acusado aunque bajo la lupa de la Policía Federal."
+  eduardo_bolsonaro:
+    nombre: Eduardo Bolsonaro
+    cargo: Exdiputado federal (Brasil)
+    notas: "Hijo de Jair Bolsonaro. En julio de 2026 participó junto a Fernando Cerimedo en una transmisión digital donde volvieron a plantear dudas infundadas sobre la fiabilidad de las urnas electrónicas brasileñas, de cara a las elecciones de octubre de 2026. Apareció con Cerimedo en un evento en Mar-a-Lago (Florida) en febrero de 2026."
+  claudia_sheinbaum:
+    nombre: Claudia Sheinbaum
+    cargo: Presidenta de México
+    notas: "Señaló a Fernando Cerimedo como parte de las 'redes de la derecha internacional que busca influir en todos los países' y lo acusó —junto al español Javier Negre— de difundir mentiras y ofensas en redes desde La Derecha Diario; planteó discutir públicamente cómo funcionan estas redes de amplificación y desinformación."
+  javier_negre:
+    nombre: Javier Negre
+    cargo: Empresario y director de medios digitales (España)
+    notas: "Director de medios derechistas españoles que adquirió parte de La Derecha Diario. Tras la detención de Cerimedo en Bolivia tomó distancia: sostuvo que el caso es un asunto personal del argentino y que ya no forma parte de La Derecha Diario."
+  edmand_lara:
+    nombre: Edmand Lara
+    cargo: Vicepresidente de Bolivia
+    notas: "Afirmó que Fernando Cerimedo 'tuvo poder y decidió en el gobierno' de Rodrigo Paz, con quien está enfrentado, y exigió que se explique cómo llegó el argentino a Bolivia."
   ricardo_ffrench_davis:
     nombre: Ricardo Ffrench-Davis
     cargo: Profesor emérito de Economía, Universidad de Chile
@@ -5254,6 +5301,66 @@ people:
         desde: 2002-01-07
         hasta: 2003-03-03
     notas: "Político y académico del PPD. Exministro de Relaciones Exteriores (2014-2018) y embajador de Chile ante la ONU. Tras el primer sondeo de la ONU explicó que 'no hay nada resuelto y vienen varias votaciones informales más' y que Bachelet analizaría los resultados con Brasil y México."
+  maria_paz_fadel:
+    nombre: María Paz Fadel
+    cargo: Jefa de comunicaciones de la Presidencia
+    organizacion: presidencia
+    cargos:
+      - cargo: Jefa de comunicaciones de la Presidencia (portavoz)
+        desde: 2026-03-11
+    notas: "Asesora del segundo piso de José Antonio Kast; consignada en el Registro Público 38 bis (junio 2026) como coordinadora de asesores con $6.500.000."
+  eitan_bloch:
+    nombre: Eitán Bloch
+    cargo: Asesor internacional del Presidente
+    organizacion: presidencia
+    cargos:
+      - cargo: Asesor internacional del Presidente
+        desde: 2026-03-11
+    notas: "Asesor senior del segundo piso de Kast para asuntos internacionales; consignado en el Registro Público 38 bis (junio 2026) con $6.500.000."
+  julio_feres:
+    nombre: Julio Feres
+    cargo: Director administrativo de la Presidencia
+    organizacion: presidencia
+    cargos:
+      - cargo: Director administrativo de la Presidencia
+        desde: 2026-03-11
+    notas: "Consignado en el Registro Público 38 bis (junio 2026) con $7.870.221 brutos; la página /sueldos del vault lo registra en $7.866.893 (abril 2026, The Clinic)."
+  carlos_duran:
+    nombre: Carlos Durán
+    cargo: Jefe de gabinete presidencial (gobierno Boric)
+    organizacion: presidencia
+    cargos:
+      - cargo: Jefe de gabinete presidencial
+        desde: 2022-03-11
+        hasta: 2026-03-10
+    notas: "Jefe de gabinete de Gabriel Boric; su sueldo ($6.096.017, abril-mayo 2025 según The Clinic) es la contraparte de Catalina Ugarte en la comparación del Segundo Piso."
+  nicole_vergara:
+    nombre: Nicole Vergara
+    cargo: Jefa de comunicaciones de la Presidencia (gobierno Boric)
+    organizacion: presidencia
+    cargos:
+      - cargo: Jefa de comunicaciones de la Presidencia
+        desde: 2022-03-11
+        hasta: 2026-03-10
+    notas: "Portavoz del gobierno de Boric; su sueldo ($5.403.752) es la contraparte de María Paz Fadel en la comparación del Segundo Piso."
+  carlos_figueroa:
+    nombre: Carlos Figueroa
+    cargo: Asesor internacional de la Presidencia (gobierno Boric)
+    organizacion: presidencia
+    cargos:
+      - cargo: Asesor internacional de la Presidencia
+        desde: 2022-03-11
+        hasta: 2026-03-10
+    notas: "Asesor internacional de Boric; su sueldo ($4.520.921) es la contraparte de Eitán Bloch en la comparación del Segundo Piso."
+  antonia_illanes:
+    nombre: Antonia Illanes
+    cargo: Administradora de La Moneda (gobierno Boric)
+    organizacion: presidencia
+    cargos:
+      - cargo: Administradora de La Moneda
+        desde: 2022-03-11
+        hasta: 2026-03-10
+    notas: "Administradora de La Moneda bajo Boric; su sueldo ($7.724.792) es la contraparte de Julio Feres en la comparación del Segundo Piso."
   alejandro_irarrazaval:
     nombre: Alejandro Irarrázaval
     cargo: Jefe del grupo de asesores del Presidente
@@ -6703,6 +6810,21 @@ people:
   pamela_andrada:
     nombre: Pamela Andrada
     cargo: Ex secretaria del presidente del Banco Central
+  ignacio_wulf:
+    nombre: Ignacio Wulf
+    cargo: Ex presidente del directorio del grupo Inverlink
+  pablo_schaffhauser:
+    nombre: Pablo Schaffhauser
+    cargo: Ex gerente de administración del grupo Inverlink
+  patricio_reyes_rojas:
+    nombre: Patricio Reyes Rojas
+    cargo: Ex contador del grupo Inverlink
+  cristian_schultz_rosales:
+    nombre: Cristián Schultz Rosales
+    cargo: Condenado por destrucción de datos informáticos en caso Inverlink-Banco Central
+  jose_torres_del_pino:
+    nombre: José Torres del Pino
+    cargo: Condenado por destrucción de datos informáticos en caso Inverlink-Banco Central
   patricio_tombolini:
     nombre: Patricio Tombolini
     cargo: Ex subsecretario de Transportes
@@ -13893,6 +14015,26 @@ people:
     nombre: Ricardo Montero
     cargo: Exsubsecretario de Defensa (gobierno de Boric)
     notas: "Exsubsecretario de Defensa del gobierno de Boric (PS). Criticó la firma de Barros de la declaración A3C: señaló que Defensa no tiene atribuciones constitucionales para firmar acuerdos de narcoterrorismo o adherirse a coaliciones regionales, y preguntó si existe informe favorable de Cancillería."
+  giovanna_grandon:
+    nombre: Giovanna Grandón
+    cargo: Exconvencional constituyente (Distrito 12)
+    notas: "Educadora diferencial conocida como la 'Tía Pikachú' por su rol en las marchas de 2019-2020; exconvencional constituyente por el Distrito 12. El 26-jul-2022 denunció en X el reparto puerta a puerta en Puente Alto de trípticos con información falsa sobre la propuesta constitucional imitando el logo y colores de la Convención ('Difundir información falsa es querer BOICOTEAR Chile')."
+  cristina_dorador:
+    nombre: Cristina Dorador
+    cargo: Exconvencional constituyente (Distrito 3)
+    notas: "Científica y exconvencional constituyente por el Distrito 3. El 26-jul-2022 alertó sobre el sitio 'Facilitadores Constitucionales' que replicaba el diseño oficial de la Convención con contenido falso ('esto es gravísimo'); firmó la carta de exconvencionales a NIC Chile pidiendo retirar el contenido."
+  fernando_atria:
+    nombre: Fernando Atria
+    cargo: Exconvencional constituyente (Distrito 10)
+    notas: "Abogado y académico; exconvencional constituyente por el Distrito 10 (FA). Primer firmante de la carta con que un grupo de exconvencionales pidió a NIC Chile (jul-2022) revisar facilitadoresconstitucionales.cl por usar gráfica, tipografía, colores, logo y nombre de la Convención Constitucional."
+  patricia_politzer:
+    nombre: Patricia Politzer
+    cargo: Exconvencional constituyente (Distrito 10)
+    notas: "Periodista y escritora; exconvencional constituyente por el Distrito 10 (INN). Firmó la carta de exconvencionales a NIC Chile contra el sitio 'Facilitadores Constitucionales' (jul-2022)."
+  bessy_gallardo_prado:
+    nombre: Bessy Gallardo Prado
+    cargo: Exconvencional constituyente
+    notas: "Abogada y exconvencional constituyente. Firmó junto a Atria, Dorador, Bassa, Politzer y Barraza la carta a NIC Chile solicitando retirar el contenido del sitio 'Facilitadores Constitucionales' (jul-2022)."
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
@@ -18719,8 +18861,44 @@ organizations:
     nombre: Cámara Chilena de la Construcción
     tipo: gremio
     notas: "Gremio empresarial del sector construcción en Chile."
+  numen:
+    nombre: Numen
+    tipo: empresa
+    notas: "Empresa de marketing político y publicidad fundada en Argentina por el consultor Fernando Cerimedo, con presencia regional. En Chile operó como Numen SpA, constituida el 8-sep-2020 por el abogado Enrique García Arancibia (dos días después de publicar en El Mercurio la encuesta fallida sobre el plebiscito de entrada). Estuvo detrás del proyecto 'Facilitadores Constitucionales' durante el plebiscito de salida de 2022; el dominio facilitadoresconstitucionales.com fue registrado en EE.UU. con el correo fernando@numenpublicidad.com según el OSINT @soy_nobita, y Cerimedo reconoció ante CLIP haber creado el grupo."
+  facilitadores_constitucionales:
+    nombre: Facilitadores Constitucionales
+    tipo: organizacion_social
+    notas: "Organización inscrita ante el Servel como organización de la sociedad civil para hacer propaganda por el Rechazo en el plebiscito de salida de 2022 (resolución O-455). Repartió trípticos puerta a puerta en La Florida y Puente Alto y mantuvo el sitio facilitadoresconstitucionales.cl, ambos imitando logo, colores y tipografía oficiales de la Convención Constitucional con información falsa ('el fin de la casa propia', disolución de Carabineros, peor salud, aborto sin límite, educación única gratuita). Sus autores se presentaron anónimamente en un video como vecinos de Puente Alto; Fernando Cerimedo reconoció ante CLIP (2023) haberlo creado vía su empresa Numen."
+  plataforma_contexto:
+    nombre: Plataforma Contexto
+    tipo: medio_comunicacion
+    notas: "Medio digital chileno con área de fact-checking 'Contexto Factual'. Su verificación del sitio 'Facilitadores Constitucionales' (jul-2022) fue citada por El Desconcierto, T13 y The Clinic."
+  contracorriente:
+    nombre: Contracorriente
+    tipo: medio_comunicacion
+    notas: "Medio digital hondureño de periodismo de investigación; integró la alianza transnacional 'Mercenarios Digitales' coordinada por CLIP, que documentó en jul-2023 la autoría de Cerimedo tras 'Facilitadores Constitucionales' y su sociedad Numen SpA con Enrique García Arancibia."
+  inverlink:
+    nombre: Inverlink
+    tipo: empresa
+    notas: "Holding financiero chileno encabezado por Eduardo Monasterio (propietario) e Ignacio Wulf (presidente del directorio), con Inverlink Corredores de Bolsa (gerencia general de Enzo Bertinelli), administradora de fondos mutuos, la isapre Vida Plena y la Clínica Las Lilas, entre otras sociedades. Estalló a comienzos de 2003 por la filtración de información reservada del Banco Central y la venta irregular de títulos de Corfo; sus principales empresas terminaron en quiebra entre 2003 y 2004."
 
 cifras:
+  ataque_troll_matthei_cuentas:
+    nombre: Cuentas activas en el ataque coordinado contra Evelyn Matthei (junio 2025)
+    unidad_default: cuentas
+    notas: "70 cuentas digitales del entorno de José Antonio Kast identificadas por el análisis de +Política/El Mostrador (13-jul-2025); el bombardeo se concentró entre el 21 y el 25 de junio de 2025."
+  ataque_troll_matthei_mensajes:
+    nombre: Mensajes publicados por las cuentas del ataque troll contra Matthei entre el 21 y el 25 de junio de 2025
+    unidad_default: mensajes
+    notas: "993 mensajes (~214 diarios en promedio); 143 (14,4%) fueron ataques directos contra Matthei (El Mostrador, 13-jul-2025)."
+  neuroc_seguidores:
+    nombre: Seguidores de la cuenta troll @JackedIn ('Neuroc') en X
+    unidad_default: seguidores
+    notas: "Más de 15 mil seguidores y más de 53 mil publicaciones desde su creación en noviembre de 2021 (CIPER, 3-oct-2025)."
+  dinero_incautado_cerimedo:
+    nombre: Efectivo incautado a Fernando Cerimedo en los allanamientos de La Paz (20-ago-2026)
+    unidad_default: bolivianos
+    notas: "Más de 500 mil bolivianos hallados junto a la 'mini granja de bots', más billetes de dólares y euros, en un departamento del condominio Aranjuez. El equivalente en dólares difiere según la fuente por el tipo de cambio usado: ~US$40.000 (Clarín), ~US$44.000 (A24, citando al fiscal departamental) y US$50.000 valorizando el conjunto total (Página/12 vía El Ciudadano). Se investiga como presunto enriquecimiento ilícito y legitimación de ganancias."
   votos_en_contra_coeva_condores:
     nombre: Votos en contra del proyecto Los Cóndores-Río Diamante en la COEVA del Maule
     unidad_default: votos
@@ -21623,6 +21801,26 @@ cifras:
     nombre: Títulos de Corfo sustraídos en Caso Inverlink
     notas: El jefe de tesorería de Corfo, Javier Montoya, robó y vendió 159 documentos a plazo de la institución por medio de la administradora de fondos mutuos de Inverlink, a cambio de $150 millones. Los documentos tenían un valor que superaba los $29 mil millones.
     unidad_default: millones_de_pesos
+  perjuicio_fiscal_inverlink:
+    nombre: Perjuicio fiscal establecido por la Corte Suprema en la arista tributaria del caso Inverlink
+    notas: "$3.266.595.171 según el último peritaje (2003) citado en el fallo de la Segunda Sala de la Corte Suprema del 17-nov-2010, por declaraciones tributarias maliciosamente incompletas o falsas desde el año tributario 1997."
+    unidad_default: pesos
+  pena_presidio_ejecutivos_inverlink:
+    nombre: Pena de presidio impuesta a cada ejecutivo condenado en la arista tributaria del caso Inverlink
+    notas: "541 días con remisión condicional para Monasterio, Bertinelli Vargas, Wulf, Schaffhauser y Reyes (Corte Suprema, 17-nov-2010), más multa equivalente al total del impuesto eludido."
+    unidad_default: dias
+  cohecho_pamela_andrada:
+    nombre: Suma reportada que Pamela Andrada recibió por filtrar información reservada del Banco Central
+    notas: "$42 millones según la reconstrucción de BioBioChile (24-ene-2015). En la sentencia de la arista Banco Central la devolución ordenada fue de ~$26 millones; ambas cifras provienen de fuentes distintas y no concilian exactamente."
+    unidad_default: pesos
+  devolucion_cohecho_andrada:
+    nombre: Devolución ordenada a Pamela Andrada por el cohecho en la arista Banco Central
+    notas: "Aproximadamente $26.000.000, según las sentencias de la Corte de Apelaciones de Santiago (23-nov-2011) y de la Corte Suprema (9-nov-2012)."
+    unidad_default: pesos
+  multa_arista_banco_central_inverlink:
+    nombre: Multa en beneficio fiscal impuesta a Bertinelli, Schaffhauser y Monasterio en la arista Banco Central
+    notas: "$11.400.000 a cada uno, más inhabilitación de 3 años y un día (Corte de Apelaciones de Santiago, 23-nov-2011; confirmado por la Corte Suprema el 9-nov-2012)."
+    unidad_default: pesos
   recorte_fondos_cultura_2027:
     nombre: Recorte de los Fondos Cultura 2027
     unidad_default: porciento

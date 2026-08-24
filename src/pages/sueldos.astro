@@ -1,371 +1,66 @@
 ---
 import Base from '../layouts/Base.astro';
-import SourceRef from '../components/SourceRef.astro';
+import SRef from '../components/sueldos/SRef.astro';
 import { DollarSign, Scale, TrendingUp, BookOpen, ExternalLink } from 'lucide-astro';
+import { getSueldos } from '../lib/sueldos';
 
-const cargos = [
-  {
-    cargo: 'Jefe de asesores (Segundo Piso)',
-    kast: { nombre: 'Alejandro Irarrázaval', sueldo: 6_990_000 },
-    boric: { nombre: 'Aisén Etcheverry', sueldo: 6_050_221 },
-  },
-  {
-    cargo: 'Jefa de gabinete presidencial',
-    kast: { nombre: 'Catalina Ugarte', sueldo: 6_990_000 },
-    boric: { nombre: 'Carlos Durán', sueldo: 6_096_017 },
-  },
-  {
-    cargo: 'Jefa de comunicaciones',
-    kast: { nombre: 'María Paz Fadel', sueldo: 6_500_000 },
-    boric: { nombre: 'Nicole Vergara', sueldo: 5_403_752 },
-  },
-  {
-    cargo: 'Asesor internacional',
-    kast: { nombre: 'Eitán Bloch', sueldo: 6_500_000 },
-    boric: { nombre: 'Carlos Figueroa', sueldo: 4_520_921 },
-  },
-  {
-    cargo: 'Administrador de La Moneda',
-    kast: { nombre: 'Julio Feres', sueldo: 7_866_893 },
-    boric: { nombre: 'Antonia Illanes', sueldo: 7_724_792 },
-  },
-];
+// Todos los datos viven en src/data/sueldos.yaml; los valores derivados (ratios,
+// ajustes IPC, promedios) se calculan en src/lib/sueldos.ts. Este template no
+// contiene cifras escritas a mano: las que aparecen en la prosa vienen de `d`.
+const d = getSueldos();
+const { fuentes } = d;
+const {
+  ratios,
+  sueldosAjustados,
+  maxAjustado,
+  promedioPrevios,
+  pctInferiorKast,
+  registroMayoAjustado,
+  ratioKastVecesRedondeado,
+  ratioBoricVecesRedondeado,
+  ratio2010sTexto,
+  ratioBacheletITexto,
+  millonesRangoPrevios,
+  kastAjustadoMillones,
+  boricAjustadoMillones,
+  freiAjustadoMillones,
+  lagosAjustadoMillones,
+} = d.derivados;
 
-const topes = [
-  { rango: 'Asesores del Presidente', topeKast: 9_963_058, topeBoric: 5_490_352 },
-  { rango: 'Asesores comité político', topeKast: 8_199_480, topeBoric: null },
-  { rango: 'Asesores resto ministerios', topeKast: 7_415_182, topeBoric: null },
-  { rango: 'Honorarios gabinetes (tope)', topeKast: 5_490_352, topeBoric: null },
-];
+const cargos = d.segundo_piso.cargos;
+const topes = d.topes_dipres.filas;
+const {
+  presidentes,
+  sueldo_minimo,
+  indicadores,
+  formatCLP,
+  pctDiff,
+} = d;
 
-// Sueldo bruto mensual del Presidente por gobierno (fuentes verificadas; serie histórica, más reciente primero)
-const presidentes = [
-  {
-    presidente: 'José Antonio Kast',
-    periodo: '2026–2030',
-    sueldo: 11_070_064,
-    detalle: 'Fijado por la Comisión para la Fijación de Remuneraciones (Resolución N°5 de 2024, Ley 21.233), vigente desde el 11/03/2026. El Registro Público de la Comisión (mayo 2026) consigna $11.304.748 brutos. Emol lo reporta en $11,3 millones. En marzo de 2026 Kast anunció su intención de rebajarlo de forma estructural. El monto contradice su promesa de campaña de 2021 de rebajarse el sueldo a la mitad ("gobernar con el ejemplo"); al ser consultado en diciembre de 2025 respondió que el monto "es una norma legal" que "decidió el Congreso".',
-    refs: [5, 8, 9, 10, 11, 12, 13, 14, 15, 28],
-  },
-  {
-    presidente: 'Gabriel Boric',
-    periodo: '2022–2026',
-    sueldo: 7_033_974,
-    detalle: 'Renta bruta en noviembre de 2025 según la Comisión para la Fijación de Remuneraciones ($5.765.081 líquidos; promedio mensualizado del trimestre: $7.787.000). En septiembre de 2024 la renta bruta era $5.742.240. Entre noviembre y diciembre de 2025 el bono PMG (cumplimiento de metas, 99,44%) elevó su sueldo bruto a unos $10 millones.',
-    refs: [7, 10, 27],
-  },
-  {
-    presidente: 'Sebastián Piñera II',
-    periodo: '2018–2022',
-    sueldo: 9_681_545,
-    detalle: 'Grado más alto de la escala de remuneraciones de las entidades públicas (El Dínamo, junio 2018). En junio de 2020 el Consejo de Alta Dirección Pública (Ley 21.233) aplicó una rebaja transitoria del 10% a la dieta presidencial.',
-    refs: [25, 26, 33],
-  },
-  {
-    presidente: 'Michelle Bachelet II',
-    periodo: '2014–2018',
-    sueldo: 9_322_303,
-    detalle: 'Remuneración bruta mensualizada según la dotación de planta de Presidencia (Gobierno Transparente 2014). En enero de 2015 T13 reportó que era de los sueldos presidenciales más altos de América Latina ($9.322.303 brutos).',
-    refs: [23, 24],
-  },
-  {
-    presidente: 'Sebastián Piñera I',
-    periodo: '2010–2014',
-    sueldo: 8_947_053,
-    detalle: 'Remuneración bruta mensualizada según la dotación de planta de Presidencia (Gobierno Transparente 2014), vigente hasta el término del primer mandato de Piñera en marzo de 2014.',
-    refs: [23],
-  },
-  {
-    presidente: 'Michelle Bachelet I',
-    periodo: '2006–2010',
-    sueldo: 7_673_910,
-    detalle: 'Renta bruta mensual reportada por la Presidencia de la República en enero de 2010, al cierre del primer mandato de Bachelet (The Clinic, citando la página de remuneraciones de Presidencia).',
-    refs: [22],
-  },
-  {
-    presidente: 'Ricardo Lagos',
-    periodo: '2000–2006',
-    sueldo: 5_229_000,
-    detalle: 'Renta bruta mensual informada por la Contraloría en julio de 2004 (reportada por El Universo). La Ley 19.863 (2003) cambió el régimen remuneratorio: antes de la ley el Presidente percibía el grado más alto de la Escala Única de Sueldos (el propio Lagos declaró en enero de 2001 que su salario era "equivalente a unos 2.440 dólares mensuales", ≈ $1.401.000 brutos); tras la ley pasó a $3.854.715 líquidos (2003) y $5.229.000 brutos (2004).',
-    refs: [46, 47, 37],
-  },
-  {
-    presidente: 'Eduardo Frei Ruiz-Tagle',
-    periodo: '1994–2000',
-    sueldo: 1_362_000,
-    detalle: 'Estimación del régimen pre-Ley 19.863 (grado más alto de la Escala Única de Sueldos), anclada en la declaración del presidente Lagos de enero de 2001 (~2.440 USD ≈ $1.401.024 brutos) y deflactada por IPC a marzo de 2000 (cierre del mandato). No existe un monto oficial publicado para el período 1994-2000; la prensa de la época no lo transparentaba.',
-    refs: [47, 48, 49],
-  },
-];
+// '2026-05-01' -> '01/05/2026' (formato de la tabla histórica).
+const fmtFecha = (iso: string) => iso.split('-').reverse().join('/');
+const fmtDecimal = (n: number) => n.toFixed(1).replace('.', ',');
 
-// Sueldo mínimo (ingreso mínimo mensual, 18 a 65 años) — Anexo Wikipedia + leyes BCN + Senado + prensa (más reciente primero)
-const sueldoMinimo = [
-  { desde: '01/05/2026', monto: 553_553, gobierno: 'Kast', ley: 'Ley 21.830' },
-  { desde: '01/01/2026', monto: 539_000, gobierno: 'Boric', ley: 'Ley 21.751' },
-  { desde: '01/05/2025', monto: 529_000, gobierno: 'Boric', ley: 'Ley 21.751' },
-  { desde: '01/01/2025', monto: 510_636, gobierno: 'Boric', ley: 'Ley 21.578 (reajuste IPC)' },
-  { desde: '01/07/2024', monto: 500_000, gobierno: 'Boric', ley: 'Ley 21.578' },
-  { desde: '01/09/2023', monto: 460_000, gobierno: 'Boric', ley: 'Ley 21.578' },
-  { desde: '01/05/2023', monto: 440_000, gobierno: 'Boric', ley: 'Ley 21.578' },
-  { desde: '01/01/2023', monto: 410_000, gobierno: 'Boric', ley: 'Ley 21.456 Art.8' },
-  { desde: '01/08/2022', monto: 400_000, gobierno: 'Boric', ley: 'Ley 21.456' },
-  { desde: '01/05/2022', monto: 380_000, gobierno: 'Boric', ley: 'Ley 21.456' },
-  { desde: '01/01/2022', monto: 350_000, gobierno: 'Boric', ley: 'Ley 21.360' },
-  { desde: '01/05/2021', monto: 337_000, gobierno: 'Piñera II', ley: 'Ley 21.360' },
-  { desde: '01/09/2020', monto: 326_500, gobierno: 'Piñera II', ley: 'Ley 21.283' },
-  { desde: '01/03/2020', monto: 320_500, gobierno: 'Piñera II', ley: 'Ley 21.112' },
-  { desde: '01/03/2019', monto: 301_000, gobierno: 'Piñera II', ley: 'Ley 21.112' },
-  { desde: '01/09/2018', monto: 288_000, gobierno: 'Piñera II', ley: 'Ley 21.112' },
-  { desde: '01/01/2018', monto: 276_000, gobierno: 'Bachelet II', ley: 'Ley 20.935' },
-  { desde: '01/07/2017', monto: 270_000, gobierno: 'Bachelet II', ley: 'Ley 20.935' },
-  { desde: '01/01/2017', monto: 264_000, gobierno: 'Bachelet II', ley: 'Ley 20.935' },
-  { desde: '01/07/2016', monto: 257_500, gobierno: 'Bachelet II', ley: 'Ley 20.935' },
-  { desde: '01/01/2016', monto: 250_000, gobierno: 'Bachelet II', ley: 'Ley 20.763' },
-  { desde: '01/07/2015', monto: 241_000, gobierno: 'Bachelet II', ley: 'Ley 20.763' },
-  { desde: '01/07/2014', monto: 225_000, gobierno: 'Bachelet II', ley: 'Ley 20.763' },
-  { desde: '01/08/2013', monto: 210_000, gobierno: 'Piñera I', ley: 'Ley 20.689' },
-  { desde: '01/08/2012', monto: 193_000, gobierno: 'Piñera I', ley: 'Ley 20.614' },
-  { desde: '01/07/2011', monto: 182_000, gobierno: 'Piñera I', ley: 'Ley 20.524' },
-  { desde: '01/07/2010', monto: 172_000, gobierno: 'Piñera I', ley: 'Ley 20.449' },
-  { desde: '01/07/2009', monto: 165_000, gobierno: 'Bachelet I', ley: 'Ley 20.359' },
-  { desde: '01/07/2008', monto: 159_000, gobierno: 'Bachelet I', ley: 'Ley 20.279' },
-  { desde: '01/07/2007', monto: 144_000, gobierno: 'Bachelet I', ley: 'Ley 20.204' },
-  { desde: '01/07/2006', monto: 135_000, gobierno: 'Bachelet I', ley: 'Ley 20.039' },
-  { desde: '01/07/2005', monto: 127_500, gobierno: 'Lagos', ley: 'Ley 20.039' },
-  { desde: '01/07/2004', monto: 120_000, gobierno: 'Lagos', ley: 'Ley 19.956' },
-  { desde: '01/07/2003', monto: 115_648, gobierno: 'Lagos', ley: 'Ley 19.883' },
-  { desde: '01/06/2002', monto: 111_200, gobierno: 'Lagos', ley: 'Ley 19.811' },
-  { desde: '01/06/2001', monto: 105_500, gobierno: 'Lagos', ley: 'Ley 19.729' },
-  { desde: '01/06/2000', monto: 100_000, gobierno: 'Lagos', ley: 'Ley 19.564' },
-  { desde: '01/06/1999', monto: 90_500, gobierno: 'Frei', ley: 'Ley 19.564' },
-  { desde: '01/06/1998', monto: 80_500, gobierno: 'Frei', ley: 'Ley 19.564' },
-  { desde: '01/06/1997', monto: 71_400, gobierno: 'Frei', ley: 'Ley 19.502' },
-  { desde: '01/06/1996', monto: 65_500, gobierno: 'Frei', ley: 'Ley 19.457' },
-  { desde: '01/06/1995', monto: 58_900, gobierno: 'Frei', ley: 'Ley 19.392' },
-  { desde: '01/06/1994', monto: 52_150, gobierno: 'Frei', ley: 'Ley 19.307' },
-];
-
-// Cálculos propios sobre datos verificados (sueldo presidente ÷ sueldo mínimo vigente de la época; más reciente primero)
-const ratios = [
-  { gobierno: 'Kast', veces: 11_070_064 / 553_553, divisor: '$553.553 (mínimo desde mayo 2026)' },
-  { gobierno: 'Boric', veces: 7_033_974 / 529_000, divisor: '$529.000 (mínimo desde mayo 2025)' },
-  { gobierno: 'Piñera II', veces: 9_681_545 / 288_000, divisor: '$288.000 (mínimo desde septiembre 2018)' },
-  { gobierno: 'Bachelet II', veces: 9_322_303 / 225_000, divisor: '$225.000 (mínimo desde julio 2014)' },
-  { gobierno: 'Piñera I', veces: 8_947_053 / 225_000, divisor: '$225.000 (mínimo desde julio 2014)' },
-  { gobierno: 'Bachelet I', veces: 7_673_910 / 165_000, divisor: '$165.000 (mínimo desde julio 2009)' },
-  { gobierno: 'Lagos', veces: 5_229_000 / 120_000, divisor: '$120.000 (mínimo desde julio 2004)' },
-  { gobierno: 'Frei', veces: 1_362_000 / 90_500, divisor: '$90.500 (mínimo desde junio 1999)' },
-];
-
-// Indicadores económicos de seguimiento por gobierno (serie verificada por lectura directa: SII para UTM/UF, Banco Central/INE para IPC; más reciente primero).
-// UTM y UF corresponden a enero del primer año del mandato (mandatos inician en marzo).
-// ipcAcumulado = producto de las variaciones anuales dic-dic (INE/BCCh) de los años calendario completos del mandato (cálculo propio).
-const indicadores = [
-  {
-    gobierno: 'Kast',
-    periodo: '2026–2030',
-    utm: 69_751,
-    uf: 39_731.79,
-    ipcAnual: 3.5,
-    ipcAcumulado: null,
-    nota: 'En curso. IPC anual 3,5% a julio de 2026 (mandato desde marzo 2026).',
-  },
-  {
-    gobierno: 'Boric',
-    periodo: '2022–2026',
-    utm: 54_442,
-    uf: 30_996.73,
-    ipcAnual: 12.8,
-    ipcAcumulado: 26.8,
-    nota: 'Inicio: IPC 12,8% (2022, máximo desde 1991). Cierre: 3,5% (2025).',
-  },
-  {
-    gobierno: 'Piñera II',
-    periodo: '2018–2022',
-    utm: 47_019,
-    uf: 26_799.01,
-    ipcAnual: 2.6,
-    ipcAcumulado: 16.7,
-    nota: 'Inicio: IPC 2,6% (2018). Cierre: 7,2% (2021). El 12,8% de 2022 se materializó bajo el gobierno siguiente.',
-  },
-  {
-    gobierno: 'Bachelet II',
-    periodo: '2014–2018',
-    utm: 40_935,
-    uf: 23_312.57,
-    ipcAnual: 4.6,
-    ipcAcumulado: 14.7,
-    nota: 'Inicio: IPC 4,6% (2014). Cierre: 2,3% (2017).',
-  },
-  {
-    gobierno: 'Piñera I',
-    periodo: '2010–2014',
-    utm: 36_679,
-    uf: 20_939.49,
-    ipcAnual: 3.0,
-    ipcAcumulado: 12.4,
-    nota: 'Inicio: IPC 3,0% (2010). Cierre: 3,0% (2013); 2012 cerró en 1,5%.',
-  },
-  {
-    gobierno: 'Bachelet I',
-    periodo: '2006–2010',
-    utm: 31_508,
-    uf: 17_973.65,
-    ipcAnual: 2.6,
-    ipcAcumulado: 16.8,
-    nota: 'Inicio: IPC 2,6% (2006). 2008 alcanzó 7,1% y el cierre (2009) registró deflación de -1,4%.',
-  },
-  {
-    gobierno: 'Lagos',
-    periodo: '2000–2006',
-    utm: 26_441,
-    uf: 15_067.93,
-    ipcAnual: 4.5,
-    ipcAcumulado: 18.4,
-    nota: 'Inicio: IPC 4,5% (2000). Cierre: 3,7% (2005). La Ley 19.863 (2003) elevó la dieta presidencial al 150% del grado máximo de la EUS.',
-  },
-  {
-    gobierno: 'Frei',
-    periodo: '1994–2000',
-    utm: 18_638,
-    uf: 10_623.53,
-    ipcAnual: 8.9,
-    ipcAcumulado: 42.7,
-    nota: 'Inicio: IPC 8,9% (1994). Cierre: 2,3% (1999). La alta inflación de mediados de los 90 elevó el acumulado del período.',
-  },
-];
-
-// Sueldo presidencial ajustado por inflación a pesos de julio 2026 (último dato disponible).
-// ipc = índice IPC general, serie empalmada base diciembre 2023 = 100 (BCCh BDE), del mes al que corresponde cada sueldo.
-// ajustado = sueldo × (IPC jul-2026 / IPC del mes). Cálculo propio sobre la serie oficial.
-const IPC_JUL_2026 = 112.45;
-// Índice IPC mensual de cada sueldo, alineado a la serie oficial BCCh (base dic-2023 = 100):
-// mar-2026 = 110,75 · nov-2025 = 109,47 · jun-2018 = 74,98 · ene-2015 = 67,49 · mar-2014 = 65,41 · ene-2010 = 57,61
-const sueldosAjustados = [
-  {
-    gobierno: 'Kast',
-    periodo: '2026–2030',
-    sueldo: 11_070_064,
-    ipc: 110.75,
-    fecha: 'marzo 2026 (dieta fijada; el Registro Público de mayo 2026 consigna $11.304.748)',
-  },
-  {
-    gobierno: 'Boric',
-    periodo: '2022–2026',
-    sueldo: 7_033_974,
-    ipc: 109.47,
-    fecha: 'noviembre 2025 (Comisión para la Fijación de Remuneraciones)',
-  },
-  {
-    gobierno: 'Piñera II',
-    periodo: '2018–2022',
-    sueldo: 9_681_545,
-    ipc: 74.98,
-    fecha: 'junio 2018 (El Dínamo)',
-  },
-  {
-    gobierno: 'Bachelet II',
-    periodo: '2014–2018',
-    sueldo: 9_322_303,
-    ipc: 67.49,
-    fecha: 'enero 2015 (T13); igual a la dotación de planta 2014',
-  },
-  {
-    gobierno: 'Piñera I',
-    periodo: '2010–2014',
-    sueldo: 8_947_053,
-    ipc: 65.41,
-    fecha: 'marzo 2014 (dotación de planta de Presidencia 2014)',
-  },
-  {
-    gobierno: 'Bachelet I',
-    periodo: '2006–2010',
-    sueldo: 7_673_910,
-    ipc: 57.61,
-    fecha: 'enero 2010 (The Clinic, citando la página de Presidencia)',
-  },
-  {
-    gobierno: 'Lagos',
-    periodo: '2000–2006',
-    sueldo: 5_229_000,
-    ipc: 47.05,
-    fecha: 'julio 2004 (Contraloría, vía El Universo)',
-  },
-  {
-    gobierno: 'Frei',
-    periodo: '1994–2000',
-    sueldo: 1_362_000,
-    ipc: 42.26,
-    fecha: 'marzo 2000 (estimación del régimen pre-Ley 19.863)',
-  },
-].map((s) => ({ ...s, ajustado: Math.round((s.sueldo * IPC_JUL_2026) / s.ipc) }));
-
-// Valores derivados en runtime para la sección (evitan divergencias entre texto y barras)
-const maxAjustado = Math.max(...sueldosAjustados.map((x) => x.ajustado));
-const promedioPrevios = Math.round(
-  sueldosAjustados.slice(2, 6).reduce((acc, s) => acc + s.ajustado, 0) / 4
-); // Piñera II, Bachelet II, Piñera I y Bachelet I (los cuatro gobiernos previos a Boric)
-const pctInferiorKast = Math.round((1 - sueldosAjustados[0].ajustado / promedioPrevios) * 100);
-
-const formatCLP = (n: number) => '$' + n.toLocaleString('es-CL');
-const pct = (a: number, b: number) => ((a - b) / b * 100).toFixed(1);
-
-// Orden de referencia: los números [N] inline del texto corresponden a la posición
-// (1-based) de cada fuente en este array. Al insertar/eliminar una fuente, re-numerar
-// los <SourceRef index=...> para que sigan apuntando a la referencia correcta.
-const fuentes = [
-  { grupo: 'Sueldo mínimo', titulo: 'Anexo: Salario mínimo en Chile (tabla histórica 1958–2027 con leyes)', medio: 'Wikipedia', url: 'https://es.wikipedia.org/wiki/Anexo:Salario_m%C3%ADnimo_en_Chile' },
-  { grupo: 'Sueldo mínimo', titulo: 'A ley reajuste al ingreso mínimo mensual — IMM $553.553 desde mayo 2026', medio: 'Senado de Chile', url: 'https://www.senado.cl/comunicaciones/noticias/ley-reajuste-al-ingreso-minimo-mensual' },
-  { grupo: 'Sueldo mínimo', titulo: 'Chile: el gobierno subió al doble su propuesta de reajuste al salario mínimo ($539.000 → $553.553; CUT pedía $637.700)', medio: 'Infobae', url: 'https://www.infobae.com/america/america-latina/2026/05/13/chile-el-gobierno-subio-al-doble-su-propuesta-de-reajuste-al-salario-minimo/' },
-  { grupo: 'Sueldo mínimo', titulo: 'CUT rechaza propuesta del Gobierno por reajuste del sueldo mínimo (desde enero 2026 el IMM es $539.000)', medio: 'Diario y Radio Universidad de Chile', url: 'https://radio.uchile.cl/2026/04/29/cut-rechaza-propuesta-del-gobierno-por-reajuste-del-sueldo-minimo/' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Presidente, ministros y parlamentarios: entra en vigencia el nuevo sistema de sueldos para altas autoridades (~$11 millones brutos)', medio: 'Emol', url: 'https://www.emol.com/noticias/Economia/2026/03/11/1194011/sueldos-estado-chile.html' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Un máximo de casi $10 millones mensuales: aclaran cómo se fija el tope de sueldo de los asesores del Presidente (sueldo bruto presidencial $11,07 millones)', medio: 'La Cuarta', url: 'https://www.lacuarta.com/chile/noticia/un-maximo-de-casi-10-millones-mensuales-aclaran-como-se-fija-el-tope-de-sueldo-de-los-asesores-del-presidente/' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Presidente Boric recibió bono por cumplimiento de metas que incrementó en $3 millones su sueldo (de $7 a $10 millones)', medio: 'Emol', url: 'https://www.emol.com/noticias/Nacional/2026/02/19/1191970/presidente-boric-sueldo-bono-metas.html' },
-  { grupo: 'Sueldo del Presidente', titulo: '¿Puede el Presidente bajarse el sueldo? Kast anunció rebaja estructural; su sueldo supera los $11 millones brutos', medio: 'The Clinic', url: 'https://www.theclinic.cl/2026/03/31/puede-el-presidente-bajarse-el-sueldo-la-formula-que-evalua-la-moneda-tras-anuncio-de-kast-y-la-imposibilidad-de-ajustar-sus-remuneraciones/' },
-  { grupo: 'Sueldo del Presidente', titulo: 'La voltereta de Kast sobre su renta presidencial: de la promesa de rebajar su sueldo a afirmar que el monto "es una norma legal" ($11.070.064 desde marzo 2026)', medio: 'Diario Usach', url: 'https://www.diariousach.cl/la-voltereta-de-kast-sobre-su-renta-presidencial-de-la-promesa-de-rebajar' },
-  { grupo: 'Sueldo del Presidente', titulo: 'A cuánto aumentará el sueldo del próximo Presidente tras la decisión de la Comisión para la Fijación de Remuneraciones ($11.070.064 vs $7.033.974 de Boric)', medio: 'T13', url: 'https://www.t13.cl/noticia/politica/cuanto-aumentara-sueldo-del-proximo-presidente-tras-decision-comision-24-12-2025' },
-  { grupo: 'Sueldo del Presidente', titulo: '"No hemos debatido el monto del sueldo": Kast evita comprometer una rebaja en su remuneración como Presidente', medio: 'La Tercera', url: 'https://www.latercera.com/nacional/noticia/no-hemos-debatido-el-monto-del-sueldo-kast-evita-comprometer-una-rebaja-en-su-remuneracion-como-presidente/' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Kast lanza su campaña presidencial: "Si salgo electo me voy a rebajar el sueldo a la mitad" (cerro Ñielol, 22/08/2021)', medio: 'T13', url: 'https://www.t13.cl/noticia/elecciones-2021/politica/kast-lanza-su-campana-presidencial-si-salgo-electo-me-voy-rebajar-sueldo-mitad' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Kast compromete bajar el sueldo presidencial, reducir 12 ministerios y un gobierno de austeridad (comunicado oficial del partido, 23/08/2021)', medio: 'Partido Republicano de Chile', url: 'https://partidorepublicanodechile.cl/campana/2021/08/kast-compromete-bajar-el-sueldo-presidencial-reducir-12-ministerios-y-un-gobierno-de-austeridad-para-enfrentar-grave-crisis-economica/' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Superintendencias: 46 funcionarios ganaron en junio lo mismo o más que el Presidente (renta bruta de Kast en $11,3 millones)', medio: 'Emol', url: 'https://www.emol.com/noticias/Nacional/2026/08/03/1207403/superintendencias-funcionarios-remuneraciones-superiores-presidente.html' },
-  { grupo: 'Sueldo del Presidente', titulo: 'Revelan que 46 funcionarios de superintendencias ganaron en junio lo mismo o más que el Presidente Kast (renta bruta bordea $11,3 millones)', medio: 'Meganoticias', url: 'https://www.meganoticias.cl/amp/nacional/528485-altos-sueldos-funcionarios-publicos-superintendencias-presidente-kast-03-08-2026.html' },
-  { grupo: 'Segundo Piso (asesores)', titulo: 'Segundo Piso de Kast vs. el de Boric: asesores del Presidente reciben en promedio sueldos superiores en un 19% a sus predecesores', medio: 'The Clinic', url: 'https://www.theclinic.cl/2026/05/19/segundo-piso-de-kast-vs-el-de-boric-asesores-del-presidente-reciben-en-promedio-sueldos-superiores-en-un-19-a-sus-predecesores/' },
-  { grupo: 'Segundo Piso (asesores)', titulo: 'Oficio Circular N°15 de la Dipres con los topes para asesores de confianza', medio: 'Dipres (vía The Clinic/La Cuarta)', url: 'https://www.theclinic.cl/2026/03/20/gobierno-de-kast-elevo-el-techo-para-pago-de-asesores-de-confianza-de-55-millones-en-la-administracion-de-boric-a-99-millones/' },
-  { grupo: 'Costo de vida', titulo: 'Índice de Precios al Consumidor (IPC) de diciembre presentó una variación mensual de -0,2% (inflación acumulada 2025: 3,5%)', medio: 'INE', url: 'https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/01/08/%C3%ADndice-de-precios-al-consumidor-(ipc)-de-diciembre-present%C3%B3-una-variaci%C3%B3n-mensual-de--0-2' },
-  { grupo: 'Costo de vida', titulo: 'Aumento de la Pensión Garantizada Universal (PGU) — topes $250.275 y $231.732 desde febrero 2026', medio: 'ChileAtiende / IPS', url: 'https://www.chileatiende.gob.cl/fichas/130457-aumento-de-la-pension-garantizada-universal-pgu' },
-  { grupo: 'Costo de vida', titulo: 'Canasta básica de alimentos y líneas de pobreza (indicador oficial; valores por consulta)', medio: 'Observatorio Social, Ministerio de Desarrollo Social', url: 'https://observatorio.ministeriodesarrollosocial.gob.cl/' },
-  { grupo: 'Costo de vida', titulo: 'Informe de Canasta Familiar (Fiscalía Nacional Económica; valores trimestrales)', medio: 'FNE', url: 'https://www.fne.gob.cl/' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'El sueldo del Presidente de Chile — renta bruta de $7.673.910 (enero 2010, citando la página de remuneraciones de Presidencia)', medio: 'The Clinic', url: 'https://www.theclinic.cl/2010/01/27/el-sueldo-del-presidente-de-chile/' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Dotación de Planta de Presidencia de la República 2014 (Gobierno Transparente): Piñera I $8.947.053 y Bachelet II $9.322.303 brutos mensuales', medio: 'Presidencia de la República (Gobierno Transparente)', url: 'https://transparenciaactiva.presidencia.cl/2014/per_planta.html' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Peña Nieto y Bachelet son los Presidentes con mejores sueldos en América Latina ($9.322.303 brutos, según Transparencia)', medio: 'T13', url: 'https://www.t13.cl/noticia/actualidad/politica/internacional/pena-nieto-y-bachelet-son-los-dos-presidentes-que-reciben-mejores-sueldos-en-a.-latina' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Debate por rebaja de sueldos: la remuneración bruta mensualizada del Presidente de la República asciende a $9.681.545 (grado más alto de la escala, junio 2018)', medio: 'El Dínamo', url: 'https://www.eldinamo.cl/pais/2018/06/19/debate-por-rebaja-de-sueldos-los-directivos-publicos-que-mas-ganan-en-chile/' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Chile rebaja salarios del presidente, legisladores y cargos del Estado (CADP, junio 2020): rebaja transitoria del 10% a la dieta presidencial (Ley 21.233)', medio: 'ABC Color', url: 'https://www.abc.com.py/internacionales/2020/06/30/chile-rebaja-salarios-del-presidente-legisladores-y-cargos-del-estado/' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'El actual sueldo del Presidente de Chile y el aumento que recibirá el próximo que ocupe el cargo (Boric $5.742.240 brutos en septiembre 2024; proyección de $10.269.076 para el siguiente período)', medio: 'BioBioChile', url: 'https://www.biobiochile.cl/noticias/economia/actualidad-economica/2024/09/16/el-actual-sueldo-del-presidente-de-chile-y-el-aumento-que-recibira-el-proximo-que-ocupe-el-cargo.shtml' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Registro Público de los cargos sujetos al artículo 38 bis de la Constitución (Ley 21.603) — mayo 2026: Presidente de la República $11.304.748 brutos', medio: 'Comisión para la Fijación de Remuneraciones', url: 'https://comision38bis.gob.cl/registro-publico' },
-  { grupo: 'Marco legal', titulo: 'Ley 19.863 (2003): regula las remuneraciones de autoridades; fija la del Presidente en 150% del grado más alto de la escala única de sueldos', medio: 'Biblioteca del Congreso Nacional (Ley Chile)', url: 'https://www.bcn.cl/leychile/navegar?idNorma=208160' },
-  { grupo: 'Marco legal', titulo: 'Ley 21.233 (2020): reforma constitucional que crea el artículo 38 bis y ordena la rebaja transitoria de remuneraciones por el CADP', medio: 'Biblioteca del Congreso Nacional (Ley Chile)', url: 'https://nuevo.leychile.cl/navegar?idNorma=1145781&idParte=10124025&idVersion=2020-05-28' },
-  { grupo: 'Marco legal', titulo: 'Resolución N°5 de 2024 de la Comisión para la Fijación de Remuneraciones (nuevo sistema de remuneraciones vigente desde marzo 2026)', medio: 'Biblioteca del Congreso Nacional (Ley Chile)', url: 'https://www.bcn.cl/leychile/Navegar?idNorma=1206604' },
-  { grupo: 'Marco legal', titulo: 'Calculadora de reajuste por IPC del Instituto Nacional de Estadísticas (permite comparar montos históricos en pesos de hoy)', medio: 'INE', url: 'https://calculadoraipc.ine.gob.cl/' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Escala de remuneraciones de Presidencia de la República 2018 (Gobierno Transparente): la Autoridad de Gobierno aparece con $10.154.157 brutos en la captura de archivo de 2021, reflejando reajustes acumulados desde la cifra de $9.681.545 de junio de 2018', medio: 'Presidencia de la República (Gobierno Transparente)', url: 'https://transparenciaactiva.presidencia.cl/2018/per_remuneraciones.html' },
-  { grupo: 'Marco legal', titulo: 'Ley 19.007 (1990): otorga reajuste de remuneraciones al sector público, aguinaldo de Navidad y otras normas pecuniarias', medio: 'Biblioteca del Congreso Nacional (Ley Chile)', url: 'https://www.bcn.cl/leychile/navegar?idNorma=30375' },
-  { grupo: 'Marco legal', titulo: 'Ley 19.553 (1998): concede asignación de modernización y otros beneficios que indica', medio: 'Biblioteca del Congreso Nacional (Ley Chile)', url: 'https://www.bcn.cl/leychile/navegar?idNorma=93381' },
-  { grupo: 'Marco legal', titulo: 'Ley 19.672 (2000): reforma constitucional que modifica el artículo 30 de la Constitución, estableciendo el estatuto de los ex Presidentes de la República', medio: 'Biblioteca del Congreso Nacional (Ley Chile)', url: 'https://www.bcn.cl/leychile/navegar?idNorma=167168' },
-  { grupo: 'Marco legal', titulo: 'Historia de la Ley 19.863 (2003): sobre remuneraciones de autoridades de gobierno y cargos críticos de la administración pública, y normas sobre gastos reservados', medio: 'Biblioteca del Congreso Nacional (Historia de la Ley)', url: 'https://www.bcn.cl/obtienearchivo?id=recursoslegales%2F10221.3%2F43873%2F1%2FHL19863.pdf' },
-  { grupo: 'Marco legal', titulo: 'Informe de Transparencia del Senado de la República 2023 (remuneraciones y transparencia activa)', medio: 'Senado de Chile', url: 'https://tramitacion.senado.cl/appsenado/index.php?ac=informeTransparencia&anno=2023&mesid=0&mo=transparencia&tipo=10' },
-  { grupo: 'Indicadores económicos', titulo: 'Valores de la Unidad Tributaria Mensual (UTM) por año — serie histórica oficial (2006: $31.508; 2010: $36.679; 2014: $40.935; 2018: $47.019; 2022: $54.442; 2026: $69.751, enero de cada año)', medio: 'Servicio de Impuestos Internos (SII)', url: 'https://www.sii.cl/valores_y_fechas/utm/utm2026.html' },
-  { grupo: 'Indicadores económicos', titulo: 'Valores diarios de la Unidad de Fomento (UF) por año — serie histórica oficial (1-ene: 2006 $17.973,65; 2010 $20.939,49; 2014 $23.312,57; 2018 $26.799,01; 2022 $30.996,73; 2026 $39.731,79)', medio: 'Servicio de Impuestos Internos (SII)', url: 'https://www.sii.cl/valores_y_fechas/uf/uf2026.htm' },
-  { grupo: 'Indicadores económicos', titulo: 'Base de Datos Estadísticos (BDE): variación anual del IPC (dic-dic, INE empalmado) 2010–2026 — 3,0% (2010); 4,4% (2011); 1,5% (2012); 3,0% (2013); 4,6% (2014); 4,4% (2015); 2,7% (2016); 2,3% (2017); 2,6% (2018); 3,0% (2019); 3,0% (2020); 7,2% (2021); 12,8% (2022); 3,9% (2023); 4,5% (2024); 3,5% (2025); 3,5% (jul-2026)', medio: 'Banco Central de Chile', url: 'https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_PRECIOS/MN_CAP_PRECIOS/IPC_VAR_ANUAL_HIST_NEW/637776000242408435' },
-  { grupo: 'Indicadores económicos', titulo: 'IPC llegó a -1,4% en 2009 (deflación anual; contexto de la crisis financiera global)', medio: 'Cooperativa', url: 'https://m.cooperativa.cl/noticias/pais/consumidores/inflacion/ipc-llego-a-1-4-por-ciento-en-2009/2010-01-07/080609.html' },
-  { grupo: 'Indicadores económicos', titulo: 'INE: IPC de diciembre llegó a 0,6% y 2013 cerró con inflación anual de 3,0%', medio: 'El Dínamo', url: 'https://www.eldinamo.cl/negocios/2014/01/08/ine-el-ipc-de-diciembre-llego-a-un-06-de-la-mano-del-transporte/' },
-  { grupo: 'Indicadores económicos', titulo: 'Inflación en Chile: IPC de diciembre de 2024 cerró en 4,5% (serie empalmada INE)', medio: 'La Tercera', url: 'https://www.latercera.com/pulso/noticia/inflacion-en-chile-ipc-de-diciembre-del-2024/A6IRYQL7OFHAZKOBWCANFZ5HVQ/' },
-  { grupo: 'Indicadores económicos', titulo: 'BDE — IPC serie empalmada (base diciembre 2023 = 100): índice mensual jul-2026 = 112,45; nov-2025 = 109,47; jun-2018 = 74,98; ene-2015 = 67,49; mar-2014 = 65,41; ene-2010 = 57,61', medio: 'Banco Central de Chile', url: 'https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_PRECIOS/MN_CAP_PRECIOS/IPC_EMP_2023/638415285164039007' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'El sueldo del presidente Lagos: $5.229.000 brutos mensuales informados por la Contraloría en julio de 2004', medio: 'El Universo', url: 'https://www.eluniverso.com/2004/07/18/0001/14/459558AADE8F4C929FC2B4D6ECAF8076.html/' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Lagos: "mi actual salario como gobernante, equivalente a unos 2.440 dólares mensuales" (enero 2001, régimen pre-Ley 19.863)', medio: 'Emol / Reuters', url: 'https://www.emol.com/noticias/nacional/2001/01/03/42315/lagos-habla-adamor-salario-y-retos-en-internet.html' },
-  { grupo: 'Serie histórica (Presidente)', titulo: 'Remuneraciones de las principales autoridades y funcionarios del país (2018): el Presidente de la República recibe 35 ingresos mínimos mensuales (grado más alto de la EUS)', medio: 'Biblioteca del Congreso Nacional', url: 'https://obtienearchivo.bcn.cl/obtienearchivo?id=repositorio/10221/25576/2/Remuneraciones_de_las_mas_altas_autoridades_del_pais_REV_FINAL_Dip_def-1.pdf' },
-  { grupo: 'Indicadores económicos', titulo: 'Serie histórica empalmada del IPC general (índices) 1928–2009 — base de cálculo de las variaciones dic-dic 1994–2006 (8,9% 1994; 8,2% 1995; 6,6% 1996; 6,0% 1997; 4,7% 1998; 2,3% 1999; 4,5% 2000; 2,6% 2001; 2,8% 2002; 1,1% 2003; 2,4% 2004; 3,7% 2005; 2,6% 2006)', medio: 'Instituto Nacional de Estadísticas (INE)', url: 'https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/cuadros-estadisticos/series-empalmadas-y-antecedentes-historicos/series-historicas-empalmadas-1928-al-2009/serie-hist%C3%B3rica-empalmada-ipc-general-(%C3%ADndices)-1928---2009.xls' },
-  { grupo: 'Indicadores económicos', titulo: 'Valores de la Unidad Tributaria Mensual (UTM) por año — enero 1994: $18.638; enero 2000: $26.441 (serie histórica oficial)', medio: 'Servicio de Impuestos Internos (SII)', url: 'https://www.sii.cl/pagina/valores/utm/utm1994.htm' },
-  { grupo: 'Indicadores económicos', titulo: 'Valores diarios de la Unidad de Fomento (UF) — 1-ene-1994: $10.623,53; 1-ene-2000: $15.067,93 (serie histórica oficial)', medio: 'Servicio de Impuestos Internos (SII)', url: 'https://www.sii.cl/pagina/valores/uf/uf1994.htm' },
-];
+// --- Línea de tiempo mensual (Registro Público): geometría del SVG estático ---
+const serie = d.serie_registro_publico.puntos;
+const CH = { W: 760, H: 310, mL: 64, mR: 18, mT: 24, mB: 42 };
+const yMinChart = 6_500_000; // eje truncado (rotulado en la nota)
+const yMaxChart = 11_600_000;
+const chX = (i: number) => CH.mL + (i * (CH.W - CH.mL - CH.mR)) / (serie.length - 1);
+const chY = (v: number) => CH.mT + (CH.H - CH.mT - CH.mB) * (1 - (v - yMinChart) / (yMaxChart - yMinChart));
+const seriePath = serie
+  .map((p, i) => `${i === 0 ? 'M' : 'L'}${chX(i).toFixed(1)},${chY(p.monto).toFixed(1)}`)
+  .join(' ');
+const iTrans = serie.findIndex((p) => p.gobierno === 'Kast');
+const xTrans = iTrans > 0 ? (chX(iTrans - 1) + chX(iTrans)) / 2 : CH.mL;
+const MESES_AB = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
+const labelPeriodo = (p: string) => {
+  const [yy, mm] = p.split('-').map(Number);
+  return `${MESES_AB[mm - 1]} ${String(yy).slice(2)}`;
+};
+const chartGrid = [7_000_000, 8_000_000, 9_000_000, 10_000_000, 11_000_000];
+const chartTicks = [0, 3, 6, 9, 12, serie.length - 1];
+const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto ?? 1) * 100 - 100).toFixed(0);
 ---
 
 <Base title="Sueldos y brecha salarial">
@@ -390,7 +85,7 @@ const fuentes = [
       <p class="text-sm text-base-content/60 mb-3">
         El 11 de marzo de 2026 entró en vigencia el nuevo sistema de remuneraciones para altas autoridades, fijado por la
         Comisión para la Fijación de Remuneraciones (Ley 21.233), que ordena la escala salarial del sector público.
-        Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales <SourceRef id="emol-sistema-sueldos" index={5} href="#ref-5" tip={`${fuentes[4].medio}\n${fuentes[4].titulo}`} /><SourceRef id="usach-voltereta" index={9} href="#ref-9" tip={`${fuentes[8].medio}\n${fuentes[8].titulo}`} /><SourceRef id="t13-aumento-sueldo" index={10} href="#ref-10" tip={`${fuentes[9].medio}\n${fuentes[9].titulo}`} />.
+        Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales <SRef n={5} /><SRef n={9} /><SRef n={10} />.
       </p>
       <div class="grid gap-4 md:grid-cols-2">
         {presidentes.map((p) => (
@@ -400,11 +95,16 @@ const fuentes = [
               <span class="text-xs text-base-content/60 whitespace-nowrap">{p.periodo}</span>
             </div>
             <div class="text-lg font-bold tabular-nums text-base-content mt-1">{formatCLP(p.sueldo)}</div>
+            {p.vigencias.length > 1 && (
+              <p class="text-[11px] text-base-content/50 tabular-nums mt-0.5">
+                Montos del mandato: {p.vigencias.map((v) => formatCLP(v.monto)).join(' → ')}
+              </p>
+            )}
             <p class="text-xs text-base-content/70 leading-relaxed mt-2">{p.detalle}</p>
             <p class="text-[11px] text-base-content/40 mt-2">
               Fuentes:{' '}
               {p.refs.map((n) => (
-                <SourceRef id={`ref-${n}`} index={n} href={`#ref-${n}`} tip={`${fuentes[n - 1]?.medio ?? ''}\n${fuentes[n - 1]?.titulo ?? ''}`} />
+                <SRef n={n} />
               ))}
             </p>
           </div>
@@ -435,7 +135,7 @@ const fuentes = [
             <div>
               <div class="flex justify-between text-sm mb-1">
                 <span class="font-medium text-base-content">Gobierno de {r.gobierno}</span>
-                <span class="tabular-nums text-base-content/70">{r.veces.toFixed(1).replace('.', ',')} veces el sueldo mínimo</span>
+                <span class="tabular-nums text-base-content/70">{fmtDecimal(r.veces)} veces el sueldo mínimo</span>
               </div>
               <div class="h-5 bg-base-200 rounded-full overflow-hidden" aria-hidden="true">
                 <div
@@ -449,12 +149,12 @@ const fuentes = [
         })}
       </div>
       <div class="mt-4 p-3 rounded-lg bg-base-200 border border-base-300 text-sm text-base-content/70">
-        La dieta de Kast equivale a <span class="font-semibold">20 veces</span> el sueldo mínimo de mayo de 2026
-        (según el monto de $11.070.064 fijado por la comisión autónoma <SourceRef id="emol-sistema-sueldos" index={5} href="#ref-5" tip={`${fuentes[4].medio}\n${fuentes[4].titulo}`} /><SourceRef id="t13-aumento-sueldo" index={10} href="#ref-10" tip={`${fuentes[9].medio}\n${fuentes[9].titulo}`} />). La base bruta de Boric (~$7 millones) equivalía a
-        <span class="font-semibold"> unas 13 veces</span> el mínimo vigente en 2025 <SourceRef id="emol-boric-bono-metas" index={7} href="#ref-7" tip={`${fuentes[6].medio}\n${fuentes[6].titulo}`} />.
-        Históricamente el ratio fue mayor: en la década de 2010 la dieta presidencial equivalía a entre 33 y 41
-        sueldos mínimos (Piñera II 33,6; Piñera I 39,8; Bachelet II 41,4 <SourceRef id="transparencia-2014-planta" index={23} href="#ref-23" tip={`${fuentes[22].medio}\n${fuentes[22].titulo}`} />), en parte porque el sueldo mínimo partía de valores más bajos.
-        En 2006–2010 el ratio llegó a 46,5 (Bachelet I <SourceRef id="theclinic-sueldo-presidente" index={22} href="#ref-22" tip={`${fuentes[21].medio}\n${fuentes[21].titulo}`} />), cuando el mínimo vigente era de $165.000 (desde julio de 2009).
+        La dieta de Kast equivale a <span class="font-semibold">{ratioKastVecesRedondeado} veces</span> el sueldo mínimo vigente
+        (según el monto de $11.070.064 fijado por la comisión autónoma <SRef n={5} /><SRef n={10} />). La base bruta de Boric (~$7 millones) equivalía a
+        <span class="font-semibold"> unas {ratioBoricVecesRedondeado} veces</span> el mínimo vigente en 2025 <SRef n={7} />.
+        Históricamente el ratio fue mayor: en la década de 2010 la dieta presidencial equivalía a entre {ratio2010sTexto.min} y {ratio2010sTexto.max}
+        sueldos mínimos ({ratio2010sTexto.detalle} <SRef n={23} />), en parte porque el sueldo mínimo partía de valores más bajos.
+        En 2006–2010 el ratio llegó a {ratioBacheletITexto} (Bachelet I <SRef n={22} />), cuando el mínimo vigente era de $165.000 (desde julio de 2009).
       </div>
     </section>
 
@@ -465,11 +165,11 @@ const fuentes = [
       </div>
       <p class="text-sm text-base-content/60 mb-4">
         UTM y UF de enero del primer año de cada mandato (para Frei y Lagos: serie histórica del SII, valores
-        de enero de cada año <SourceRef id="sii-utm-hist" index={50} href="#ref-50" tip={`${fuentes[49].medio}\n${fuentes[49].titulo}`} /><SourceRef id="sii-uf-hist" index={51} href="#ref-51" tip={`${fuentes[50].medio}\n${fuentes[50].titulo}`} />), junto a la variación anual del IPC
+        de enero de cada año <SRef n={50} /><SRef n={51} />), junto a la variación anual del IPC
         (diciembre a diciembre, INE) del año de inicio y la inflación acumulada del período (cálculo propio sobre la
-        serie empalmada del Banco Central <SourceRef id="bde-ipc" index={41} href="#ref-41" tip={`${fuentes[40].medio}\n${fuentes[40].titulo}`} /> y la serie 1928–2009 del INE
-        <SourceRef id="ine-ipc-hist" index={49} href="#ref-49" tip={`${fuentes[48].medio}\n${fuentes[48].titulo}`} />). La única deflación del período (IPC -1,4% en 2009)
-        fue corroborada por Cooperativa <SourceRef id="cooperativa-ipc-2009" index={42} href="#ref-42" tip={`${fuentes[41].medio}\n${fuentes[41].titulo}`} />.
+        serie empalmada del Banco Central <SRef n={41} /> y la serie 1928–2009 del INE
+        <SRef n={49} />). La única deflación del período (IPC -1,4% en 2009)
+        fue corroborada por Cooperativa <SRef n={42} />.
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -491,9 +191,9 @@ const fuentes = [
                 </td>
                 <td class="py-2 px-3 text-right tabular-nums">{formatCLP(i.utm)}</td>
                 <td class="py-2 px-3 text-right tabular-nums">${i.uf.toLocaleString('es-CL')}</td>
-                <td class="py-2 px-3 text-right tabular-nums">{i.ipcAnual.toFixed(1).replace('.', ',')}%</td>
+                <td class="py-2 px-3 text-right tabular-nums">{fmtDecimal(i.ipc_anual)}%</td>
                 <td class="py-2 px-3 text-right tabular-nums font-medium">
-                  {i.ipcAcumulado ? `${i.ipcAcumulado.toFixed(1).replace('.', ',')}%` : '—'}
+                  {i.ipc_acumulado ? `${fmtDecimal(i.ipc_acumulado)}%` : '—'}
                 </td>
               </tr>
             ))}
@@ -503,18 +203,18 @@ const fuentes = [
       <div class="mt-5 space-y-3">
         <p class="text-xs font-medium text-base-content/60 uppercase tracking-wide">Inflación acumulada del mandato (%)</p>
         {(() => {
-          const maxAcum = Math.max(...indicadores.map((x) => x.ipcAcumulado ?? 0));
+          const maxAcum = Math.max(...indicadores.map((x) => x.ipc_acumulado ?? 0));
           return indicadores.map((i) => {
-          const width = i.ipcAcumulado ? Math.max(3, Math.round((i.ipcAcumulado / maxAcum) * 100)) : 3;
+          const width = i.ipc_acumulado ? Math.max(3, Math.round((i.ipc_acumulado / maxAcum) * 100)) : 3;
           return (
             <div>
               <div class="flex justify-between text-sm mb-1">
                 <span class="font-medium text-base-content">Gobierno de {i.gobierno}</span>
-                <span class="tabular-nums text-base-content/70">{i.ipcAcumulado ? `${i.ipcAcumulado.toFixed(1).replace('.', ',')}%` : 'en curso'}</span>
+                <span class="tabular-nums text-base-content/70">{i.ipc_acumulado ? `${fmtDecimal(i.ipc_acumulado)}%` : 'en curso'}</span>
               </div>
               <div class="h-4 bg-base-200 rounded-full overflow-hidden" aria-hidden="true">
                 <div
-                  class={`h-full rounded-full ${i.ipcAcumulado && i.ipcAcumulado >= 25 ? 'bg-warning/150' : 'bg-primary/100'}`}
+                  class={`h-full rounded-full ${i.ipc_acumulado && i.ipc_acumulado >= 25 ? 'bg-warning/150' : 'bg-primary/100'}`}
                   style={`width: ${width}%`}
                 ></div>
               </div>
@@ -527,7 +227,7 @@ const fuentes = [
       <p class="text-xs text-base-content/40 mt-3">
         La UTM y la UF reajustan mensualmente según la inflación (IPC del mes anterior), por lo que la serie refleja el
         poder adquisitivo de cada período: en pesos de hoy, los sueldos históricos equivalen a montos muy superiores.
-        Para convertirlos puede usarse la calculadora de reajuste por IPC del INE <SourceRef id="ine-calculadora-ipc" index={32} href="#ref-32" tip={`${fuentes[31].medio}\n${fuentes[31].titulo}`} />.
+        Para convertirlos puede usarse la calculadora de reajuste por IPC del INE <SRef n={32} />.
       </p>
     </section>
 
@@ -538,14 +238,14 @@ const fuentes = [
       </div>
       <p class="text-sm text-base-content/60 mb-4">
         Cada dieta bruta convertida a pesos de <strong>julio de 2026</strong> (último dato disponible del índice IPC,
-        serie empalmada base diciembre 2023 = 100 <SourceRef id="bde-ipc-empalmado" index={45} href="#ref-45" tip={`${fuentes[44].medio}\n${fuentes[44].titulo}`} />), usando el índice del mes al que
+        serie empalmada base diciembre 2023 = 100 <SRef n={45} />), usando el índice del mes al que
         corresponde cada sueldo. Cálculo propio: <em>sueldo × (IPC jul-2026 ÷ IPC del mes)</em>. La serie muestra el
         quiebre de la Ley 19.863 (2003) — que elevó la dieta presidencial del grado máximo de la EUS (Frei ~$1,36M;
-        Lagos ~2.440 USD en 2001 <SourceRef id="emol-lagos-salario" index={47} href="#ref-47" tip={`${fuentes[46].medio}\n${fuentes[46].titulo}`} />) al 150% de ese grado (Lagos
-        $5.229.000 brutos en 2004 <SourceRef id="universo-lagos-sueldo" index={46} href="#ref-46" tip={`${fuentes[45].medio}\n${fuentes[45].titulo}`} />) —, y luego la rebaja transitoria de 2020 (Ley 21.233) y
-        la re-fijación de 2026 (Resolución N°5 de 2024): en pesos de hoy, Frei ganaba ~$3,6 millones; Lagos ~$12,5
-        millones; los presidentes de 2006–2022, entre $14,5 y $15,5 millones brutos; Boric, la mitad (~$7,2 millones) y
-        Kast, ~$11,2 millones.
+        Lagos ~2.440 USD en 2001 <SRef n={47} />) al 150% de ese grado (Lagos
+        $5.229.000 brutos en 2004 <SRef n={46} />) —, y luego la rebaja transitoria de 2020 (Ley 21.233) y
+        la re-fijación de 2026 (Resolución N°5 de 2024): en pesos de hoy, Frei ganaba ~${freiAjustadoMillones} millones; Lagos ~${lagosAjustadoMillones}
+        millones; los presidentes de 2006–2022, entre ${millonesRangoPrevios.min} y ${millonesRangoPrevios.max} millones brutos; Boric, la mitad (~${boricAjustadoMillones} millones) y
+        Kast, ~${kastAjustadoMillones} millones.
       </p>
       <div class="space-y-4">
         {sueldosAjustados.map((s) => {
@@ -586,12 +286,81 @@ const fuentes = [
       <p class="text-xs text-base-content/40 mt-3">
         Escala relativa al máximo real ({formatCLP(maxAjustado)} en pesos de julio 2026). Para Kast se usa la dieta
         fijada de $11.070.064 (marzo 2026); con el monto del Registro Público de mayo 2026 ($11.304.748) el equivalente
-        sería $11.312.797. Los valores nominales provienen de las fuentes de la sección anterior; el IPC mensual de la
-        serie empalmada del Banco Central <SourceRef id="bde-ipc-empalmado" index={45} href="#ref-45" tip={`${fuentes[44].medio}\n${fuentes[44].titulo}`} />. La estimación de Frei se ancla en la
-        declaración de Lagos de enero de 2001 <SourceRef id="emol-lagos-salario-nota" index={47} href="#ref-47" tip={`${fuentes[46].medio}\n${fuentes[46].titulo}`} /> deflactada por IPC a marzo de 2000 (no
+        sería {formatCLP(registroMayoAjustado)}. Los valores nominales provienen de las fuentes de la sección anterior; el IPC mensual de la
+        serie empalmada del Banco Central <SRef n={45} />. La estimación de Frei se ancla en la
+        declaración de Lagos de enero de 2001 <SRef n={47} /> deflactada por IPC a marzo de 2000 (no
         existe registro oficial publicado para 1994-2000). Resultado: la dieta real de Kast sigue siendo
         <span class="font-medium">{pctInferiorKast}% inferior</span> al promedio real de los cuatro presidentes previos a Boric
         (2006–2022: {formatCLP(promedioPrevios)}).
+      </p>
+    </section>
+
+    <section class="mb-10 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+      <div class="flex items-center gap-2 mb-3">
+        <TrendingUp class="h-5 w-5 text-primary shrink-0" />
+        <h2 class="text-lg font-semibold text-base-content">Bruta mensual del Presidente, mes a mes (Registro Público 38 bis)</h2>
+      </div>
+      <p class="text-sm text-base-content/60 mb-4">
+        Serie mensual de la remuneración bruta efectivamente reportada al Registro Público
+        (fuente única: CFR, leída el 23/08/2026; cubre desde enero de 2025). Los picos de Boric son los meses con pago del
+        bono por cumplimiento de metas ($10.046.124); marzo de 2026 es el mes proporcional de Kast (asunción el 11/03);
+        desde abril rige la dieta nueva. El salto febrero→abril 2026 es de +{saltoFebAbr}%.
+      </p>
+      <figure class="overflow-x-auto">
+        <svg viewBox={`0 0 ${CH.W} ${CH.H}`} class="w-full min-w-[640px]" role="img" aria-labelledby="chart-tl-title chart-tl-desc">
+          <title id="chart-tl-title">Remuneración bruta mensual del Presidente de la República, enero 2025 – junio 2026</title>
+          <desc id="chart-tl-desc">Boric percibió $7.033.974 brutos mensuales, con pagos de $10.046.124 en meses de bono por metas (marzo, junio, septiembre y diciembre). Desde abril de 2026, Kast percibe $11.304.748 (junio: $11.308.034). Marzo 2026 fue proporcional por la asunción del 11 de marzo.</desc>
+          {/* zona de gobierno Kast */}
+          <rect x={xTrans} y={CH.mT} width={CH.W - CH.mR - xTrans} height={CH.H - CH.mT - CH.mB} class="fill-primary/5" />
+          {/* grilla + labels Y */}
+          {chartGrid.map((v) => (
+            <g>
+              <line x1={CH.mL} x2={CH.W - CH.mR} y1={chY(v)} y2={chY(v)} class="stroke-base-300/60" stroke-dasharray="2 4" />
+              <text x={CH.mL - 8} y={chY(v) + 3} text-anchor="end" class="fill-base-content/50" font-size="10">${v / 1_000_000}M</text>
+            </g>
+          ))}
+          {/* línea de transición de gobierno */}
+          <line x1={xTrans} x2={xTrans} y1={CH.mT - 4} y2={CH.H - CH.mB} class="stroke-warning/70" stroke-dasharray="4 3" />
+          <text x={xTrans + 5} y={CH.mT + 8} class="fill-warning text-[10px] font-medium">11-mar-2026</text>
+          {/* serie */}
+          <path d={seriePath} fill="none" class="stroke-base-content/35" stroke-width="2" />
+          {serie.map((p, i) => {
+            const esKast = p.gobierno === 'Kast';
+            const bono = Boolean(p.nota && p.nota.startsWith('Bono'));
+            return (
+              <g>
+                {bono && <circle cx={chX(i)} cy={chY(p.monto)} r={7.5} fill="none" class="stroke-warning/70" stroke-width="1.5" />}
+                <circle cx={chX(i)} cy={chY(p.monto)} r={4} class={esKast ? 'fill-primary' : 'fill-neutral/70'}>
+                  <title>{`${labelPeriodo(p.periodo)} · ${p.gobierno} · ${formatCLP(p.monto)}${p.nota ? ` (${p.nota})` : ''}`}</title>
+                </circle>
+              </g>
+            );
+          })}
+          {/* etiquetas de valor en puntos clave */}
+          <text x={chX(0)} y={chY(serie[0].monto) - 12} text-anchor="start" class="fill-base-content/70" font-size="9">$7.033.974</text>
+          <text x={chX(iTrans - 1)} y={chY(serie[iTrans - 1].monto) - 12} text-anchor="middle" class="fill-base-content/70" font-size="9">$10.046.124</text>
+          <text x={chX(iTrans)} y={chY(serie[iTrans].monto) + 16} text-anchor="middle" class="fill-base-content/70" font-size="9">$7.536.499 (prop.)</text>
+          <text x={chX(iTrans + 1)} y={chY(serie[iTrans + 1].monto) - 11} text-anchor="middle" class="fill-base-content/80 font-semibold" font-size="9">$11.304.748</text>
+          <text x={chX(serie.length - 1)} y={chY(serie[serie.length - 1].monto) - 12} text-anchor="end" class="fill-base-content/80 font-semibold" font-size="9">{formatCLP(serie[serie.length - 1].monto)}</text>
+          {/* eje X */}
+          <line x1={CH.mL} x2={CH.W - CH.mR} y1={CH.H - CH.mB} y2={CH.H - CH.mB} class="stroke-base-300" />
+          {chartTicks.map((i) => (
+            <text x={chX(i)} y={CH.H - CH.mB + 14} text-anchor="middle" class="fill-base-content/50" font-size="9">{labelPeriodo(serie[i].periodo)}</text>
+          ))}
+        </svg>
+        <figcaption class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-[11px] text-base-content/50">
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full bg-neutral/70"></span> Gobierno Boric</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full bg-primary"></span> Gobierno Kast</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full border-2 border-warning/70"></span> Mes con bono por metas ($10.046.124)</span>
+          <span>Eje vertical truncado en $6,5M para visibilizar las variaciones.</span>
+        </figcaption>
+      </figure>
+      <p class="text-xs text-base-content/40 mt-3">
+        Bajo Boric la base fue $7.033.974 (constante durante todo el período registrado), con bono trimestral por
+        cumplimiento de metas que llevó la bruta a $10.046.124 en marzo, junio, septiembre y diciembre. La dieta nueva de
+        Kast ($11.070.064 fijados + adecuaciones reportadas) supera en +{saltoFebAbr}% la bruta sin bono de febrero de 2026 y
+        en ~13% incluso a los meses con bono. Junio 2026 subió $3.286 sobre mayo sin explicación pública aún
+        (seguimiento en TAREAS/SEGUIMIENTO.md). Fuente: <SRef n={28} />.
       </p>
     </section>
 
@@ -602,7 +371,7 @@ const fuentes = [
       </div>
       <p class="text-sm text-base-content/60 mb-3">
         Monto bruto mensual para trabajadores entre 18 y 65 años, según las leyes de reajuste. Tabla resumida
-        (serie completa 1958–2027 en la fuente de Wikipedia <SourceRef id="wikipedia-salario-minimo" index={1} href="#ref-1" tip={`${fuentes[0].medio}\n${fuentes[0].titulo}`} />).
+        (serie completa 1958–2027 en la fuente de Wikipedia <SRef n={1} />).
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -615,9 +384,9 @@ const fuentes = [
             </tr>
           </thead>
           <tbody>
-            {sueldoMinimo.map((s) => (
+            {sueldo_minimo.map((s) => (
               <tr class={`border-b border-base-300 ${s.gobierno === 'Kast' ? 'bg-primary/10/60' : ''}`}>
-                <td class="py-2 px-3 tabular-nums text-base-content/80 whitespace-nowrap">{s.desde}</td>
+                <td class="py-2 px-3 tabular-nums text-base-content/80 whitespace-nowrap">{fmtFecha(s.desde)}</td>
                 <td class="py-2 px-3 text-right tabular-nums font-medium whitespace-nowrap">{formatCLP(s.monto)}</td>
                 <td class="py-2 px-3 text-base-content">{s.gobierno}</td>
                 <td class="py-2 px-3 text-base-content/60 text-xs">{s.ley}</td>
@@ -627,8 +396,8 @@ const fuentes = [
         </table>
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        El reajuste de mayo de 2026 ($553.553) fue despachado por el Senado el 16 de junio de 2026 (Ley 21.830 <SourceRef id="senado-reajuste-imas" index={2} href="#ref-2" tip={`${fuentes[1].medio}\n${fuentes[1].titulo}`} />) tras una
-        negociación sin acuerdo con la CUT, que pedía cerca de $637.000 <SourceRef id="infobae-reajuste" index={3} href="#ref-3" tip={`${fuentes[2].medio}\n${fuentes[2].titulo}`} /><SourceRef id="radio-uchile-cut" index={4} href="#ref-4" tip={`${fuentes[3].medio}\n${fuentes[3].titulo}`} />. Desde enero de 2027 el IMM se reajustará por IPC.
+        El reajuste de mayo de 2026 ($553.553) fue despachado por el Senado el 16 de junio de 2026 (Ley 21.830 <SRef n={2} />) tras una
+        negociación sin acuerdo con la CUT, que pedía cerca de $637.000 <SRef n={3} /><SRef n={4} />. Desde enero de 2027 el IMM se reajustará por IPC.
       </p>
     </section>
 
@@ -640,8 +409,8 @@ const fuentes = [
       <div class="prose prose-sm max-w-none text-base-content/80 space-y-3">
         <p>
           En Chile se usan dos referencias de canasta: la <strong>Canasta Básica de Alimentos</strong> (INE / Ministerio de
-          Desarrollo Social <SourceRef id="observatorio-social-canasta" index={20} href="#ref-20" tip={`${fuentes[19].medio}\n${fuentes[19].titulo}`} />), base de las líneas de pobreza, y la <strong>Canasta Familiar</strong> que publica
-          trimestralmente la Fiscalía Nacional Económica (FNE <SourceRef id="fne-canasta" index={21} href="#ref-21" tip={`${fuentes[20].medio}\n${fuentes[20].titulo}`} />) para una familia de cuatro personas, junto al
+          Desarrollo Social <SRef n={20} />), base de las líneas de pobreza, y la <strong>Canasta Familiar</strong> que publica
+          trimestralmente la Fiscalía Nacional Económica (FNE <SRef n={21} />) para una familia de cuatro personas, junto al
           "sueldo ideal" que permitiría cubrirla.
         </p>
         <p>
@@ -652,10 +421,10 @@ const fuentes = [
         </p>
         <p>
           La CUT rechazó la propuesta del gobierno —que ofrecía un alza cercana a $23.000 por IPC— y planteó un sueldo mínimo
-          de <span class="font-medium">alrededor de $637.000</span> <SourceRef id="infobae-reajuste" index={3} href="#ref-3" tip={`${fuentes[2].medio}\n${fuentes[2].titulo}`} /><SourceRef id="radio-uchile-cut" index={4} href="#ref-4" tip={`${fuentes[3].medio}\n${fuentes[3].titulo}`} />, argumentando que "hoy día las cosas son más caras en el mes de
+          de <span class="font-medium">alrededor de $637.000</span> <SRef n={3} /><SRef n={4} />, argumentando que "hoy día las cosas son más caras en el mes de
           abril que en el mes de enero" y que el sueldo mínimo tiene "menos poder adquisitivo por el alza del petróleo".
-          Referencias de contexto: la inflación acumulada de 2025 fue de 3,5% (INE <SourceRef id="ine-ipc" index={18} href="#ref-18" tip={`${fuentes[17].medio}\n${fuentes[17].titulo}`} />) y la PGU máxima pasó a $250.275 desde
-          febrero de 2026 (ChileAtiende <SourceRef id="chileatiende-pgu" index={19} href="#ref-19" tip={`${fuentes[18].medio}\n${fuentes[18].titulo}`} />), es decir, cerca del 45% de un sueldo mínimo.
+          Referencias de contexto: la inflación acumulada de 2025 fue de 3,5% (INE <SRef n={18} />) y la PGU máxima pasó a $250.275 desde
+          febrero de 2026 (ChileAtiende <SRef n={19} />), es decir, cerca del 45% de un sueldo mínimo.
         </p>
         <div class="p-3 rounded-lg bg-warning/15 border border-warning/40 text-base-content text-sm">
           <strong>Nota de verificación:</strong> los montos puntuales en pesos de la canasta básica (INE) y de la canasta
@@ -670,7 +439,7 @@ const fuentes = [
       <h2 class="text-lg font-semibold text-base-content mb-3">Topes salariales fijados por Dipres</h2>
       <p class="text-sm text-base-content/60 mb-3">
         Límites de remuneración para asesores de confianza definidos por el Oficio Circular N°15 de la Dipres, firmado por
-        el ministro de Hacienda <span class="font-medium">Jorge Quiroz</span> <SourceRef id="theclinic-oficio-15" index={17} href="#ref-17" tip={`${fuentes[16].medio}\n${fuentes[16].titulo}`} />.
+        el ministro de Hacienda <span class="font-medium">{d.topes_dipres.firmante}</span> <SRef n={17} />.
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -686,12 +455,12 @@ const fuentes = [
             {topes.map((t) => (
               <tr class="border-b border-base-300">
                 <td class="sticky left-0 bg-base-100 py-2 px-3 text-base-content">{t.rango}</td>
-                <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(t.topeKast)}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(t.tope_kast)}</td>
                 <td class="py-2 px-3 text-right tabular-nums text-base-content/60">
-                  {t.topeBoric ? formatCLP(t.topeBoric) : '—'}
+                  {t.tope_boric ? formatCLP(t.tope_boric) : '—'}
                 </td>
                 <td class="py-2 px-3 text-right tabular-nums text-red-600 font-medium">
-                  {t.topeBoric ? `+${pct(t.topeKast, t.topeBoric)}%` : '—'}
+                  {t.tope_boric ? `+${pctDiff(t.tope_kast, t.tope_boric)}%` : '—'}
                 </td>
               </tr>
             ))}
@@ -701,10 +470,9 @@ const fuentes = [
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
-      <h2 class="text-lg font-semibold text-base-content mb-3">Comparación cargo a cargo (abril 2026)</h2>
+      <h2 class="text-lg font-semibold text-base-content mb-3">Comparación cargo a cargo ({d.segundo_piso.periodo_label})</h2>
       <p class="text-sm text-base-content/60 mb-3">
-        Primer mes completo con sueldo íntegro. Kast asumió el 11 de marzo; marzo fue proporcional. Comparación basada en
-        el reportaje de The Clinic sobre el Segundo Piso de Kast vs. el de Boric <SourceRef id="theclinic-segundo-piso" index={16} href="#ref-16" tip={`${fuentes[15].medio}\n${fuentes[15].titulo}`} />.
+        {d.segundo_piso.nota} <SRef n={16} />
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -727,7 +495,7 @@ const fuentes = [
                 <td class="py-2 px-3 text-base-content/60">{c.boric.nombre}</td>
                 <td class="py-2 px-3 text-right tabular-nums text-base-content/60">{formatCLP(c.boric.sueldo)}</td>
                 <td class="py-2 px-3 text-right tabular-nums text-red-600 font-medium">
-                  +{pct(c.kast.sueldo, c.boric.sueldo)}%
+                  +{pctDiff(c.kast.sueldo, c.boric.sueldo)}%
                 </td>
               </tr>
             ))}
@@ -740,7 +508,7 @@ const fuentes = [
               </td>
               <td class="py-2 px-3" colspan={2}></td>
               <td class="py-2 px-3 text-right tabular-nums text-red-600">
-                +{pct(
+                +{pctDiff(
                   cargos.reduce((s, c) => s + c.kast.sueldo, 0) / cargos.length,
                   cargos.reduce((s, c) => s + c.boric.sueldo, 0) / cargos.length
                 )}%
@@ -757,39 +525,39 @@ const fuentes = [
         <p>
           El 17 de marzo de 2026, la Dipres emitió el Oficio Circular N°15 que fijó los nuevos topes salariales
           para asesores estratégicos del Presidente y ministros. La medida fue firmada por el ministro de Hacienda
-          <span class="font-medium">Jorge Quiroz</span> <SourceRef id="theclinic-oficio-15" index={17} href="#ref-17" tip={`${fuentes[16].medio}\n${fuentes[16].titulo}`} />.
+          <span class="font-medium">{d.topes_dipres.firmante}</span> <SRef n={17} />.
         </p>
         <p>
           Durante el gobierno de Boric, los asesores percibían entre 25% y 90% de la remuneración del subsecretario
-          correspondiente, con un tope real de alrededor de $5,5 millones <SourceRef id="theclinic-segundo-piso" index={16} href="#ref-16" tip={`${fuentes[15].medio}\n${fuentes[15].titulo}`} />. El nuevo esquema de Kast eleva ese tope a
-          casi $10 millones <SourceRef id="theclinic-oficio-15" index={17} href="#ref-17" tip={`${fuentes[16].medio}\n${fuentes[16].titulo}`} /><SourceRef id="lacuarta-topes" index={6} href="#ref-6" tip={`${fuentes[5].medio}\n${fuentes[5].titulo}`} />, con un mínimo del 70% de la remuneración de la autoridad asesorada.
+          correspondiente, con un tope real de alrededor de $5,5 millones <SRef n={16} />. El nuevo esquema de Kast eleva ese tope a
+          casi $10 millones <SRef n={17} /><SRef n={6} />, con un mínimo del 70% de la remuneración de la autoridad asesorada.
         </p>
         <p>
           La medida se produce en un contexto de "emergencia" declarada por el propio gobierno, que ha anunciado
           recortes presupuestarios en diversas áreas, incluyendo un recorte de $706 millones al presupuesto de la
           Presidencia de la República. En marzo de 2026, el propio Kast anunció su intención de rebajar su sueldo de
-          forma estructural <SourceRef id="theclinic-bajarse-sueldo" index={8} href="#ref-8" tip={`${fuentes[7].medio}\n${fuentes[7].titulo}`} />, aunque técnicamente la dieta es fijada por la comisión autónoma y no puede ajustarse por
+          forma estructural <SRef n={8} />, aunque técnicamente la dieta es fijada por la comisión autónoma y no puede ajustarse por
           decreto.
         </p>
         <p>
           <strong>Marco legal de la serie histórica:</strong> hasta 2003 las remuneraciones de las autoridades se regían por
           la Escala Única de Sueldos (DL 249/1974), actualizada cada año por las leyes de reajuste del sector público como la
-          Ley 19.007 de 1990 <SourceRef id="ley-19007" index={34} href="#ref-34" tip={`${fuentes[33].medio}\n${fuentes[33].titulo}`} /> y la Ley 19.553 de 1998, que añadió la asignación de modernización
-          <SourceRef id="ley-19553" index={35} href="#ref-35" tip={`${fuentes[34].medio}\n${fuentes[34].titulo}`} />. La Ley 19.863 (2003) fijó la renta del Presidente en el 150% del grado más
-          alto de la escala <SourceRef id="ley-19863" index={29} href="#ref-29" tip={`${fuentes[28].medio}\n${fuentes[28].titulo}`} />; su historia fidedigna documenta la discusión del proyecto
-          <SourceRef id="historia-ley-19863" index={37} href="#ref-37" tip={`${fuentes[36].medio}\n${fuentes[36].titulo}`} />. La reforma constitucional de 2020 (Ley 21.233) creó el artículo 38 bis, ordenó una rebaja
+          Ley 19.007 de 1990 <SRef n={34} /> y la Ley 19.553 de 1998, que añadió la asignación de modernización
+          <SRef n={35} />. La Ley 19.863 (2003) fijó la renta del Presidente en el 150% del grado más
+          alto de la escala <SRef n={29} />; su historia fidedigna documenta la discusión del proyecto
+          <SRef n={37} />. La reforma constitucional de 2020 (Ley 21.233) creó el artículo 38 bis, ordenó una rebaja
           transitoria de remuneraciones ejecutada por el Consejo de Alta Dirección Pública —10% para el Presidente, 25% para
-          parlamentarios y ministros— <SourceRef id="abc-rebaja-cadp" index={26} href="#ref-26" tip={`${fuentes[25].medio}\n${fuentes[25].titulo}`} /><SourceRef id="ley-21233" index={30} href="#ref-30" tip={`${fuentes[29].medio}\n${fuentes[29].titulo}`} /> y dispuso que una comisión autónoma fijara las dietas. La Comisión para la
+          parlamentarios y ministros— <SRef n={26} /><SRef n={30} /> y dispuso que una comisión autónoma fijara las dietas. La Comisión para la
           Fijación de Remuneraciones definió el nuevo sistema en la Resolución N°5 de 2024, vigente desde marzo de 2026
-          <SourceRef id="resolucion-5-2024" index={31} href="#ref-31" tip={`${fuentes[30].medio}\n${fuentes[30].titulo}`} />. El régimen de los ex Presidentes está regulado por la reforma constitucional de la Ley 19.672
-          <SourceRef id="ley-19672" index={36} href="#ref-36" tip={`${fuentes[35].medio}\n${fuentes[35].titulo}`} />, y las remuneraciones parlamentarias del período pueden consultarse en el Informe de Transparencia del Senado
-          <SourceRef id="senado-transparencia-2023" index={38} href="#ref-38" tip={`${fuentes[37].medio}\n${fuentes[37].titulo}`} />. Para comparar montos históricos en pesos de hoy puede usarse la calculadora de reajuste por IPC del INE
-          <SourceRef id="ine-calculadora-ipc" index={32} href="#ref-32" tip={`${fuentes[31].medio}\n${fuentes[31].titulo}`} />.
+          <SRef n={31} />. El régimen de los ex Presidentes está regulado por la reforma constitucional de la Ley 19.672
+          <SRef n={36} />, y las remuneraciones parlamentarias del período pueden consultarse en el Informe de Transparencia del Senado
+          <SRef n={38} />. Para comparar montos históricos en pesos de hoy puede usarse la calculadora de reajuste por IPC del INE
+          <SRef n={32} />.
         </p>
         <p class="text-base-content/60 text-xs">
           Evento registrado: <a href="/events/2026/20260320-2" class="text-primary hover:underline">20260320-2</a>
           · Evento MEPCO (impacto en precios): <a href="/events/2026/20260326-1" class="text-primary hover:underline">20260326-1</a>
-          · 46 funcionarios de superintendencias con sueldo igual o mayor al del Presidente <SourceRef id="emol-46-funcionarios" index={14} href="#ref-14" tip={`${fuentes[13].medio}\n${fuentes[13].titulo}`} /><SourceRef id="meganoticias-46-funcionarios" index={15} href="#ref-15" tip={`${fuentes[14].medio}\n${fuentes[14].titulo}`} />: <a href="/events/2026/20260803-18" class="text-primary hover:underline">20260803-18</a>
+          · 46 funcionarios de superintendencias con sueldo igual o mayor al del Presidente <SRef n={14} /><SRef n={15} />: <a href="/events/2026/20260803-18" class="text-primary hover:underline">20260803-18</a>
         </p>
       </div>
     </section>
@@ -826,7 +594,7 @@ const fuentes = [
                 <a href={`https://markdown.new/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-pink-500 transition-colors" target="_blank" rel="noopener" title="Markdown">MD</a>
               </span>
               <p class="text-xs text-base-content/60 mt-0.5">
-                Medio: <span class="font-medium text-base-content/80">{f.medio}</span> · Grupo: {f.grupo}
+                Medio: <span class="font-medium text-base-content/80">{f.medio}</span> · ID: <code class="text-base-content/50">{f.id}</code>
               </p>
             </div>
           </li>
