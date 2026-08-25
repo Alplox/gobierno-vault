@@ -529,17 +529,24 @@
 - [2026/02/20260224-2 - Corte de San Miguel ratifica condena de 11 años al exsuboficial de Carabineros Luis Castillo por cegar a una niña de 14 años en La Cisterna](src/content/events/2026/02/20260224-2.md) — 6 fuentes
 - [2026/02/20260225-1 - Michelle Bachelet y Ricardo Lagos se excusan de asistir al cambio de mando; Eduardo Frei decidió estar presente](src/content/events/2026/02/20260225-1.md) — 1 fuente
 - [2026/02/20260226-1 - Transición se tensa: Kast emplaza a Boric a reunión ampliada por cable submarino chino](src/content/events/2026/02/20260226-1.md) — 3 fuentes
-- [2026/03/20260303-1 - Quiebre en la transición: Kast suspende el traspaso de mando tras tensa reunión con Boric por el cable submarino chino](src/content/events/2026/03/20260303-1.md) — 4 fuentes
+- [2026/03/20260303-1 - Quiebre en la transición: Kast suspende el traspaso de mando tras tensa reunión con Boric por el cable submarino chino](src/content/events/2026/03/20260303-1.md) — 5 fuentes
 - [2026/03/20260304-1 - Transparencia revela que Capredena pagó más de $121 millones en pensiones a Krassnoff, Iturriaga, Corbalán y Herrera en un año](src/content/events/2026/03/20260304-1.md) — 2 fuentes
 - [2026/03/20260305-1 - Contraloría detecta que Camila Vallejo usó el auto fiscal con fines político-partidistas; Segegob asegura que envió antecedentes para subsanar](src/content/events/2026/03/20260305-1.md) — 4 fuentes
 - [2026/03/20260307-1 - Kast participa en la cumbre Escudo de las Américas de Trump en Miami con acuerdo de coalición militar](src/content/events/2026/03/20260307-1.md) — 6 fuentes
 - [2026/03/20260308-1 - La Tercera publica análisis sobre cómo cambió el lenguaje del gobierno de Boric en cuatro años](src/content/events/2026/03/20260308-1.md) — 2 fuentes
 - [2026/03/20260310-1 - Contrapoder revela que la gestión de Mario Desbordes en la Municipalidad de Santiago contrató a Fullclean, empresa de la familia de Claudio Crespo, por casi $3 mil millones](src/content/events/2026/03/20260310-1.md) — 2 fuentes
+- [2026/03/20260310-2 - Lula cancela su asistencia al cambio de mando tras revelarse la invitación a Flavio Bolsonaro; oposición chilena lo llama 'error diplomático'](src/content/events/2026/03/20260310-2.md) — 11 fuentes
 - [2026/03/20260311-1 - Gobierno de emergencia: Kast firma 6 decretos en su primera noche](src/content/events/2026/03/20260311-1.md) — 6 fuentes
 - [2026/03/20260311-2 - Análisis estratégico identifica ocho desafíos de Kast en defensa y seguridad](src/content/events/2026/03/20260311-2.md) — 1 fuente
 - [2026/03/20260311-3 - José Antonio Kast asume la Presidencia de la República en ceremonia de cambio de mando](src/content/events/2026/03/20260311-3.md) — 4 fuentes
 - [2026/03/20260311-4 - "Trabajando para usted": Gobierno de Kast estrena nuevo logo y desata polémica por filtración interna](src/content/events/2026/03/20260311-4.md) — 6 fuentes
 - [2026/03/20260311-5 - "Un país más pobre, pero más feliz": la frase del diputado Álvaro Carter que descolocó a Daniel Matamala en el día del cambio de mando](src/content/events/2026/03/20260311-5.md) — 3 fuentes
+- [2026/03/20260311-6 - Primera noche del gobierno: turba hiere a un carabinero en la Alameda y atacan el auto del subsecretario Patricio Torres en Plaza Italia](src/content/events/2026/03/20260311-6.md) — 9 fuentes
+- [2026/03/20260311-7 - Boric entrega a Kast una carta privada en pleno cambio de mando; ambos mantienen su contenido en reserva](src/content/events/2026/03/20260311-7.md) — 10 fuentes
+- [2026/03/20260312-1 - Kast anuncia que utilizará la facultad de indulto para uniformados condenados por el estallido social](src/content/events/2026/03/20260312-1.md) — 7 fuentes
+- [2026/03/20260312-2 - Hallan a Rodrigo Rojas Vade maniatado, golpeado y rociado con acelerante en la Ruta 78, con mensajes políticos rayados en los brazos](src/content/events/2026/03/20260312-2.md) — 18 fuentes
+- [2026/03/20260312-3 - María Corina Machado pide a Chile ayudar a los venezolanos a 'volver a su país'; Kast responde que 'se entra por la puerta, no por la ventana'](src/content/events/2026/03/20260312-3.md) — 7 fuentes
+- [2026/03/20260312-4 - Ministra Arzola advierte un déficit en subvenciones escolares de ~$250 mil millones según la administración saliente: 'el presupuesto de educación ya se recortó'](src/content/events/2026/03/20260312-4.md) — 6 fuentes
 - [2026/03/20260313-1 - Trascendido: capitán Faúndez, condenado por la muerte de Romario Veloz, sería el primer indultado del gobierno de Kast](src/content/events/2026/03/20260313-1.md) — 3 fuentes
 - [2026/03/20260315-1 - Ministro Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'](src/content/events/2026/03/20260315-1.md) — 3 fuentes
 - [2026/03/20260316-1 - Inauguracion del Escudo Fronterizo en Chacalluta y orden de construir zanja](src/content/events/2026/03/20260316-1.md) — 7 fuentes
@@ -602,6 +609,7 @@
 - [2026/04/20260426-1 - Gobierno diseña el Plan Entornos Digitales Seguros para prohibir redes sociales a menores de 16 años](src/content/events/2026/04/20260426-1.md) — 2 fuentes
 - [2026/04/20260427-1 - Entra en vigencia la segunda etapa de la Ley de 40 horas (42 horas): comercio y expertos alertan por costos y empleo](src/content/events/2026/04/20260427-1.md) — 1 fuente
 - [2026/04/20260427-2 - CEPAL recorta proyección de crecimiento de Chile 2026 a 2% por tensión global e inflación](src/content/events/2026/04/20260427-2.md) — 1 fuente
+- [2026/04/20260427-3 - Orbán Files: Hungría investigará por corrupción el financiamiento público de la red conservadora internacional que incluyó a la PNfV presidida por Kast](src/content/events/2026/04/20260427-3.md) — 7 fuentes
 - [2026/04/20260429-1 - Contraloría concluye que frase 'Estado quebrado' no cumplió estándares de moderación](src/content/events/2026/04/20260429-1.md) — 2 fuentes
 - [2026/04/20260430-1 - 37 audios filtrados revelan trama de injerencia internacional desde Honduras](src/content/events/2026/04/20260430-1.md) — 3 fuentes
 - [2026/04/20260430-2 - BBCL Investiga revela el auge y caída del Clan Chen, que lavó $160 mil millones en Chile](src/content/events/2026/04/20260430-2.md) — 1 fuente
@@ -710,6 +718,7 @@
 - [2026/07/20260710-3 - Kast lanza el plan 'Modo Empleo': $50 mil millones en subsidios a la contratación y 25.000 cupos Sence con meta de 50.000 puestos hacia octubre](src/content/events/2026/07/20260710-3.md) — 6 fuentes
 - [2026/07/20260713-1 - Senapred declara Alerta Temprana Preventiva en RM y Gobierno decreta emergencia preventiva en 10 regiones por sistema frontal](src/content/events/2026/07/20260713-1.md) — 6 fuentes
 - [2026/07/20260714-1 - Proyecto 'Escucha su corazón' condiciona aborto a escuchar latidos fetales y genera debate por acusaciones de tortura](src/content/events/2026/07/20260714-1.md) — 9 fuentes
+- [2026/07/20260714-2 - Fiscalía alista el cierre del caso Rojas Vade: 'no hubo responsables', concluye autolesiones y falso secuestro bajo consumo de drogas](src/content/events/2026/07/20260714-2.md) — 8 fuentes
 - [2026/07/20260715-1 - DMC emite Alarma Meteorológica AA3/2026 y alarma se amplía a O'Higgins; evacuaciones preventivas en curso](src/content/events/2026/07/20260715-1.md) — 3 fuentes
 - [2026/07/20260715-2 - Caso Fundamenta: la Fiscalía detecta que el abogado Eduardo Lagos ordenó un pago de $13 millones a la pareja de la exministra Ángela Vivanco](src/content/events/2026/07/20260715-2.md) — 4 fuentes
 - [2026/07/20260716-1 - Senado aprueba megarreforma de Kast en madrugada maratónica](src/content/events/2026/07/20260716-1.md) — 7 fuentes
@@ -1279,7 +1288,7 @@
 - [2026/08/20260818-11 - Hackeo al Servicio Nacional de Migraciones envía correo masivo con imagen de Pinochet y bloquea trámites durante cuatro horas](src/content/events/2026/08/20260818-11.md) — 2 fuentes
 - [2026/08/20260818-12 - Minsal instruye a hospitales atender más pacientes por hora y Colegio Médico advierte que contempla tiempos incompatibles con una consulta de calidad](src/content/events/2026/08/20260818-12.md) — 1 fuente
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — 2 fuentes
-- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 20 fuentes
+- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 24 fuentes
 - [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 5 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
 - [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
@@ -1330,9 +1339,12 @@
 - [2026/08/20260821-5 - Vicepresidentes del PPD renuncian y anuncian la creación del movimiento 'Firmes por Chile', acusando falta de democracia interna y complicidad con la agenda de Kast](src/content/events/2026/08/20260821-5.md) — 3 fuentes
 - [2026/08/20260821-6 - Embajador de EE.UU. revela que Barros firmó la Declaración de la Americas Counter Cartel Coalition (A3C) el 12 de marzo, reabre debate sobre compromisos de Chile con Washington](src/content/events/2026/08/20260821-6.md) — 3 fuentes
 - [2026/08/20260821-7 - Arrau defiende las facultades del nuevo estado de excepción: 'Interceptar un teléfono no es tema' y promete intervención dura en situaciones puntuales](src/content/events/2026/08/20260821-7.md) — 1 fuente
-- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: jefe de asesores Irarrázaval y Dülger integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 10 fuentes
+- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: jefe de asesores Irarrázaval y Dülger integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 11 fuentes
 - [2026/08/20260823-1 - Alvarado defiende en Mesa Central la reforma de seguridad, niega que habilite detenciones sin orden judicial y minimiza el paralelo con Orbán](src/content/events/2026/08/20260823-1.md) — 6 fuentes
-- [2026/08/20260823-2 - Ministro de Defensa Barros pide que Chile salga del Convenio 169 de la OIT y 'deshacerse' de la Ley Lafkenche: La Moneda cierra la puerta y el Congreso exige orden](src/content/events/2026/08/20260823-2.md) — 8 fuentes
+- [2026/08/20260823-2 - Ministro de Defensa Barros pide que Chile salga del Convenio 169 de la OIT y 'deshacerse' de la Ley Lafkenche: La Moneda cierra la puerta y el Congreso exige orden](src/content/events/2026/08/20260823-2.md) — 9 fuentes
+- [2026/08/20260823-3 - Cadem edición 683: aprobación de Kast sube a 40% pero 51% pide retirar la reforma de seguridad para buscar acuerdos, 61% exige autorización del Congreso y 55% renovación mensual del estado de excepción](src/content/events/2026/08/20260823-3.md) — 6 fuentes
+- [2026/08/20260824-1 - Kast en Radio Infinita: su reforma de seguridad 'no es iliberal' y 'se puede cambiar', defiende las 43 salidas del gabinete y relativiza el cruce por el Convenio 169](src/content/events/2026/08/20260824-1.md) — 9 fuentes
+- [2026/08/20260824-2 - Petro acusa en X que la elección de Kast fue manipulada 'mediante la mentira' y que cinco países fueron 'manipuladas por technofascismo', citando el caso Cerimedo: sin antecedentes y sin reacción oficial chilena documentada](src/content/events/2026/08/20260824-2.md) — 7 fuentes
 
 ## 2025
 
