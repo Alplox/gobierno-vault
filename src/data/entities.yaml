@@ -46,6 +46,14 @@ people:
     nombre: Gonzalo de la Carrera
     cargo: Empresario y exdiputado (REP)
     notas: "Empresario y exdiputado chileno (Partido Republicano); encabezado de 'Casa Común', comando empresarial del Rechazo con sede en Vitacura durante el plebiscito de entrada de 2020. Consultado por El Mostrador (21-ago-2026), dijo que Cerimedo llegó recomendado por uno de los empresarios de la organización, que 'nos vendió una encuesta que estaba más perdida que el teniente Bello' y que no sabía que estaba metido en bots; aseguró además que Alejandro Irarrázaval no tuvo un rol muy importante en ese espacio."
+  gerardo_jofre:
+    nombre: Gerardo Jofré
+    cargo: Expresidente del directorio de Codelco
+    notas: "Empresario chileno, expresidente del directorio de Codelco; cofundador junto a Gonzalo de la Carrera del comando 'Casa Común por el Rechazo' (dic-2019). Reconoció a Diario Financiero (sep-2020) haber encargado la encuesta a Numen ('Una de ellas es la que mandamos a hacer nosotros (...) a la firma argentina Numen'); sus versiones sobre cuántas mediciones encargó fueron contradictorias (a T13 dijo que la segunda la hizo Numen 'por su cuenta'; a La Tercera post-plebiscito sostuvo que pidió dos). Dijo haber elegido a Numen por su metodología vía StatKnows en la segunda vuelta presidencial; tras el 25-oct-2020 admitió el error: 'de que nos equivocamos, nos equivocamos claramente'."
+  juan_pardo:
+    nombre: Juan Pardo
+    cargo: Sociólogo y director de Feedback
+    notas: "Sociólogo chileno, socio y director de la encuestadora Feedback. Autor de la columna 'Teleserie' en El País Chile (23-ago-2026), que sistematizó el caso Cerimedo en Chile: la encuesta de Numen publicada por El Mercurio (6-sep-2020) encargada por Casa Común, la alerta de AIM Chile del 8-sep-2020, la responsabilidad de los medios que portaron el sondeo y la falta de regulación estatal (el Servel archivó las 202 denuncias por desinformación del plebiscito de salida de 2022)."
   jair_bolsonaro:
     nombre: Jair Bolsonaro
     cargo: Expresidente de Brasil (2019-2022)
@@ -2115,6 +2123,10 @@ people:
         organizacion: frente_amplio
         desde: 2026-03-11
     notas: "Impulsó oficios de transparencia sobre la reunión Kast-Thiel. Miembro de la Comisión Especial Investigadora de la exministra Steinert (10-ago-2026). El 14-ago-2026 criticó en X la rotación del gabinete de Kast: 'Este Gobierno es un despelote', contabilizando 42 salidas (3 ministras, 6 subsecretarios y 33 seremis) y mencionando a Steinert ('una ministra que utilizó su cargo para solicitar información sobre un caso personal') y la descoordinación entre ministerios (evento 20260813-2)."
+  johnny_lagos:
+    nombre: Johnny Lagos
+    cargo: ""
+    notas: "Chileno de 30 años (iniciales J.L.L.C. según BioBioChile), residente en San Pedro de la Paz; se autodefine como 'trabajador de las artes y la cultura, comunicador político y activista medioambiental'. Detenido el 19-ago-2026 por el OS9 de Carabineros y formalizado por amenazas no condicionales contra el presidente José Antonio Kast y el ministro de Hacienda Jorge Quiroz, difundidas en un video que él sostiene era 'sátira de humor político'; quedó en libertad con medidas cautelares de baja intensidad (evento 20260820-9). Sus antecedentes son materia en disputa: BioBioChile y Canal 9 consignaron reiteradas detenciones previas por hurto, desórdenes públicos y robo; ADN Radio reportó, citando antecedentes de Carabineros, que no registra antecedentes penales; y el propio Lagos exhibió públicamente su certificado de antecedentes para desmentir atribuciones de condenas ('están dañando mi imagen pública'). Denunció además la intervención e incautación de su iPhone con monitoreo en tiempo real de sus conversaciones ('Perdí toda mi privacidad') y haber sido desvinculado de un curso de peluquería en un CFT tras la mediaticidad del caso."
   juan_orlando_hernandez:
     nombre: Juan Orlando Hernández
     cargo: Expresidente de Honduras
@@ -2541,6 +2553,10 @@ people:
         organizacion: partido_por_la_democracia
         desde: 2026-03-11
     notas: Filtró la minuta de Secom
+  francisco_salamanca:
+    nombre: Francisco Salamanca
+    cargo: Dirigente ambiental de Tocopilla
+    notas: "Representante de la organización 'Tocopilla Digna' y de la Fundación Pájaro Niño. Tras el aluvión del 18-ago-2026 advirtió que los depósitos de cenizas de las antiguas termoeléctricas, dejados 'a escasos metros del mar', volvieron a exponerse con las lluvias, generando una situación de contaminación cuyos impactos en la biodiversidad y en las personas 'todavía desconocemos'; exigió a las autoridades hacerse cargo de los pasivos ambientales dispersos por la comuna."
   enrique_bassaletti:
     nombre: Enrique Bassaletti
     cargo: Diputado (Ind. Rep.)
@@ -4689,6 +4705,15 @@ people:
     nombre: Álvaro Pipino
     cargo: Gerente general de Inversiones Santa Cecilia
     notas: "Gerente general de Inversiones Santa Cecilia, matriz de negocios de José Yuraszceck. Figura como representante legal del proyecto Data Center Alto Jahuel (DC Terranova SPA) junto a Felipe Fleischmann (julio 2026)."
+  lucio_cuenca:
+    nombre: Lucio Cuenca
+    cargo: Director del Observatorio Latinoamericano de Conflictos Ambientales (OLCA)
+    notas: "Director del OLCA. Expuso por Chile ante la CIDH en la audiencia temática sobre data centers del 3 de agosto de 2026, junto a Acción Cívica: acusó una 'alfombra roja' regulatoria, vinculó la expansión de centros de datos con el extractivismo minero (Penco/tierras raras) y mencionó como antecedente de conflicto de interés el caso Aisén Etcheverry-AWS (Contraloría, 2023)."
+  karinna_fernandez:
+    nombre: Karinna Fernández
+    cargo: Abogada de Acción Cívica
+    notas: "Abogada de Acción Cívica. Intervino en la audiencia de la CIDH sobre data centers (3 de agosto de 2026) y firmó —por su organización— la carta ingresada el 20 de agosto de 2026 que pide a la CIDH exigir explicaciones al Estado de Chile por el Decreto Supremo 17/2025 del MMA."
+
   catalina_san_martin:
     nombre: Catalina San Martín
     cargo: Alcaldesa de Las Condes
@@ -14063,6 +14088,39 @@ people:
     nombre: Bessy Gallardo Prado
     cargo: Exconvencional constituyente
     notas: "Abogada y exconvencional constituyente. Firmó junto a Atria, Dorador, Bassa, Politzer y Barraza la carta a NIC Chile solicitando retirar el contenido del sitio 'Facilitadores Constitucionales' (jul-2022)."
+  joaquin_palma:
+    nombre: Joaquín Palma
+    cargo: Abogado
+    notas: "Abogado constitucionalista que representó al Presidente de la República en la audiencia del requerimiento Rol N°17.892-26 ante el Tribunal Constitucional por el artículo 31 de la megarreforma (agosto de 2026); fue el único alegato escuchado por el Pleno antes del rechazo del requerimiento (evento 20260825-1)."
+  pablo_milad:
+    nombre: Pablo Milad
+    cargo: Presidente de la Asociación Nacional de Fútbol Profesional (ANFP)
+    notas: "Dirigente deportivo, presidente de la ANFP. Ex intendente de la región del Maule designado por Sebastián Piñera, cuyo director de Comunicaciones fue David Muñoz, luego contratado por la ANFP como encargado de comunicaciones de la Selección Chilena masculina (Contrapoder Chile, agosto 2025; evento 20250806-1)."
+  gustavo_valverde:
+    nombre: Gustavo Javier Valverde
+    cargo: Jefe del Estado Mayor General de la Fuerza Aérea Argentina
+    notas: "Brigadier general argentino, jefe del Estado Mayor General de la Fuerza Aérea (egresado de la Escuela de Aviación Militar en 1989, piloto de combate). Sus declaraciones en La Fábrica del Podcast (23-ago-2026) atribuyendo Magallanes, el sur y el Drake a la soberanía argentina provocaron una crisis diplomática con Chile y un comunicado desmarcador de la Cancillería argentina apelando a los tratados de 1881 y 1984 (evento 20260825-2)."
+  pablo_quirno:
+    nombre: Pablo Quirno
+    cargo: Canciller de Argentina
+    notas: "Ministro de Relaciones Exteriores, Comercio Internacional y Culto de Argentina bajo Javier Milei. A su cargo se emitió el comunicado del 25-ago-2026 que ratificó los tratados de 1881 y 1984 sobre el Estrecho de Magallanes para descomprimir la crisis generada por los dichos del brigadier Gustavo Valverde (evento 20260825-2)."
+  adrian_ravier:
+    nombre: Adrián Ravier
+    cargo: Portavoz presidencial de Argentina
+    notas: "Economista y portavoz del gobierno de Javier Milei. En conferencia de prensa (25-ago-2026) reconoció que Fernando Cerimedo ingresó a la Casa Rosada en la primera mitad de 2024 —tras la afirmación presidencial de que no tenía vínculo con él desde 2023—, aunque precisó que esos ingresos 'no han sido con el presidente', y pidió dejar trabajar a la justicia boliviana en el caso Beller (evento 20260818-14)."
+  catherine_munoz_gutierrez:
+    nombre: Catherine Muñoz Gutiérrez
+    cargo: Asesora legislativa del Ministerio de Ciencias
+    notas: "Abogada especializada en protección de datos, ciberseguridad y gobernanza de IA; asesora legislativa del MinCiencia desde mediados de 2026 y simultáneamente CEO de la consultora Idónea (5 años en el cargo). The Clinic documentó la doble función en medio de la tramitación de la Ley de IA, generando cuestionamientos de conflicto de interés que el ministerio niega (evento 20260821-9)."
+  henry_azurmendi:
+    nombre: Henry Azurmendi
+    cargo: Gerente general de Sercotec
+    notas: "Gerente general de la Corporación de Fomento de la Producción (CORFO)-Sercotec bajo el gobierno de Kast. Presentó junto al biministro Daniel Mas el Capital Semilla Modo Empleo (24-ago-2026), primer instrumento de Sercotec apuntado directamente a personas desempleadas ('llevamos 40 meses con cifras de desempleo que ya no se aguantan') (evento 20260710-3)."
+  carlos_cortes_simon:
+    nombre: Carlos Cortés Simon
+    cargo: Presidente ejecutivo de la Asociación de Empresas de Gas Natural
+    organizacion: asociacion_gas_natural
+    notas: "Presidente ejecutivo del gremio de las distribuidoras de gas por redes. Tras el fallo del TC que mantuvo el artículo 31 de la megarreforma advirtió que el plazo de 48 horas para reconexión es 'imposible de cumplir resguardando la seguridad de todas las personas' (evento 20260825-1)."
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
@@ -15186,6 +15244,11 @@ organizations:
     tipo: canal_television
     pais: Chile
     notas: "Canal de televisión de la Universidad de Chile. Emite el programa Descabelladas (miércoles), donde la exministra Camila Vallejo criticó la reforma constitucional de seguridad del gobierno Kast (19-ago-2026)."
+  salvemos_alto_maule:
+    nombre: Salvemos Alto Maule
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización ciudadana que se opone al proyecto de interconexión Los Cóndores–Río Diamante en la cordillera de San Clemente (Alto Maule) por su impacto sobre la ranita del Pehuenche y el valor paisajístico; organizó marchas (jul-2026) y difunde cifras del proceso ambiental, como las ~18 mil observaciones ciudadanas recibidas. Sus datos se registran siempre atribuidos a la organización."
   sea:
     nombre: Servicio de Evaluación Ambiental
     tipo: servicio_publico
@@ -15281,6 +15344,11 @@ organizations:
     tipo: empresa
     pais: Estados Unidos
     notas: "Filial chilena de AES Corporation (AES Andes). A fines de 2024 anunció la tramitación del proyecto INNA (Proyecto Integrado de Infraestructura Energética para la Generación de Hidrógeno y Amoníaco Verde), megainversión de US$10 mil millones en Taltal (Antofagasta) que generó rechazo de la comunidad astronómica por la contaminación lumínica que proyectaría sobre los observatorios de Paranal y Cerro Armazones (evento 20251210-3)."
+  engie_chile:
+    nombre: Engie Chile
+    tipo: empresa
+    pais: Francia
+    notas: "Multinacional energética de origen francés. Operó termoeléctricas a carbón en Tocopilla; en octubre de 2022 cerró su última unidad a carbón en esa comuna. Sus antiguos botaderos y depósitos de cenizas en la costa de Tocopilla están en el centro de las denuncias de escurrimiento al mar tras el aluvión del 18-ago-2026 (oficios del diputado Jaime Araya al MMA y la SMA)."
   grenergy:
     nombre: Grenergy
     tipo: empresa
@@ -16621,6 +16689,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno de la Región de Tarapacá (tarapacaonline.cl)."
+  accion_civica:
+    nombre: Acción Cívica
+    tipo: organizacion
+    pais: Chile
+    notas: "Organización de la sociedad civil chilena. Junto al OLCA impulsó la exposición de Chile ante la CIDH por los impactos de los data centers (audiencia del 3-ago-2026) y la carta del 20-ago-2026 (artículo 41 CADH) que pide explicaciones por el Decreto Supremo 17/2025 del MMA."
   adn_radio:
     nombre: ADN Radio
     tipo: medio_comunicacion
@@ -16871,6 +16944,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital independiente con cobertura de territorio, medio ambiente, ciencia y comunidades (revistatierrabella.cl). Cubrió la moción 'Poner orden en Codelco' (12-13-ago-2026) señalando que se esperaba la reacción de las federaciones sindicales (evento 20260812-10)."
+  chequeo_ambiental:
+    nombre: Chequeo Ambiental
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Proyecto especializado de verificación de afirmaciones sobre medio ambiente y territorio (Instagram @chequeoambiental). Verificó como FALSO el dicho de la ministra de Energía Ximena Rincón sobre la ranita del Pehuenche en el proyecto Los Cóndores–Río Diamante (25-ago-2026, evento 20260817-25)."
   fast_check:
     nombre: Fast Check
     tipo: medio_comunicacion
@@ -17026,6 +17104,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Cuba
     notas: "Agencia de noticias cubana (prensa-latina.cu). El 13-ago-2026 cubrió la inauguración de la exposición 'Anatomía de un genocidio' de Belal Khaled en el Teatro Municipal de Viña del Mar (evento 20260806-17)."
+  telesur:
+    nombre: teleSUR
+    tipo: medio_comunicacion
+    pais: Venezuela
+    notas: "Multinacional latinoamericana de televisión impulsada por gobiernos del ALBA (sede operativa en Venezuela; Qatar participa en su capital). Línea editorial alineada con gobiernos de izquierda de la región: usar para hechos verificables y despachos que acreditan agencias (p.ej. fotos de EFE), no para su marco interpretativo."
   reddit:
     nombre: Reddit r/chile
     tipo: red_social
@@ -18907,6 +18990,14 @@ organizations:
     nombre: Facilitadores Constitucionales
     tipo: organizacion_social
     notas: "Organización inscrita ante el Servel como organización de la sociedad civil para hacer propaganda por el Rechazo en el plebiscito de salida de 2022 (resolución O-455). Repartió trípticos puerta a puerta en La Florida y Puente Alto y mantuvo el sitio facilitadoresconstitucionales.cl, ambos imitando logo, colores y tipografía oficiales de la Convención Constitucional con información falsa ('el fin de la casa propia', disolución de Carabineros, peor salud, aborto sin límite, educación única gratuita). Sus autores se presentaron anónimamente en un video como vecinos de Puente Alto; Fernando Cerimedo reconoció ante CLIP (2023) haberlo creado vía su empresa Numen."
+  casa_comun:
+    nombre: Casa Común
+    tipo: organizacion
+    notas: "'Casa Común por el Rechazo': comando ciudadano-empresarial creado en diciembre de 2019 con sede en Vitacura para promover el Rechazo en el plebiscito de entrada de 2020; lo encabezaron Gonzalo de la Carrera y Gerardo Jofré y su directiva incluyó a Juan Pablo Correa, Juan Cox, Alejandro Irarrázaval y José Pedro Undurraga (La Tercera, dic-2019). Se presentó como organización sin vínculos partidarios. Durante 2020 encargó a Numen mediciones del escenario electoral —incluida la encuesta difundida por El Mercurio en septiembre— y desarrolló con esa firma la estrategia digital de la campaña. Dos de sus integrantes llegaron después al Segundo Piso de Kast: Irarrázaval (jefe de asesores) e Ignacio Dülger (El Mostrador, ago-2026)."
+  aim_chile:
+    nombre: AIM Chile
+    tipo: gremio
+    notas: "Asociación de Investigadores de Mercado y Opinión Pública de Chile, gremio con más de 35 años de vigencia que agrupa a 20 de las principales empresas del sector; adhiere a los estándares WAPOR-ESOMAR. El 8-sep-2020 difundió la '#CartaAIM' alertando por sondeos electorales de 'fuentes no habituales' con bajos estándares de transparencia durante la propaganda del plebiscito de entrada, sin nombrar empresas ni medios por un tecnicismo reglamentario; su presidente entonces era Andrés Varas."
   plataforma_contexto:
     nombre: Plataforma Contexto
     tipo: medio_comunicacion
@@ -18919,6 +19010,30 @@ organizations:
     nombre: Inverlink
     tipo: empresa
     notas: "Holding financiero chileno encabezado por Eduardo Monasterio (propietario) e Ignacio Wulf (presidente del directorio), con Inverlink Corredores de Bolsa (gerencia general de Enzo Bertinelli), administradora de fondos mutuos, la isapre Vida Plena y la Clínica Las Lilas, entre otras sociedades. Estalló a comienzos de 2003 por la filtración de información reservada del Banco Central y la venta irregular de títulos de Corfo; sus principales empresas terminaron en quiebra entre 2003 y 2004."
+  asociacion_gas_natural:
+    nombre: Asociación de Empresas de Gas Natural (AGN)
+    tipo: gremio
+    notas: "Gremio que agrupa a las distribuidoras de gas por redes de Chile. Tras el fallo del TC del 25-ago-2026 que mantuvo el artículo 31 de la megarreforma (reconexión gratuita de servicios básicos), advirtió 'severas falencias técnicas' en la norma y que el plazo perentorio de 48 horas es imposible de cumplir resguardando la seguridad; citó un informe técnico independiente de Gamma Ingenieros y el antecedente de las más de 46.500 reposiciones de gas tras el terremoto de 2010 (evento 20260825-1)."
+  gamma_ingenieros:
+    nombre: Gamma Ingenieros
+    tipo: empresa
+    notas: "Firma de ingeniería chilena participante en la elaboración de las normas de seguridad del sector gas. Elaboró para la Asociación de Empresas de Gas Natural el informe técnico independiente que concluyó que el plazo de 48 horas del artículo 31 de la megarreforma no es técnicamente practicable como exigencia perentoria e indiferenciada (evento 20260825-1)."
+  la_gaceta:
+    nombre: La Gaceta
+    tipo: medio_comunicacion
+    notas: "Diario argentino fundado en 1912, de circulación en Tucumán y el noroeste argentino. Cubrió el comunicado de Cancillería argentina sobre el Estrecho de Magallanes del 25-ago-2026, atribuyéndolo al canciller Pablo Quirno (evento 20260825-2)."
+  colegio_profesores_chile:
+    nombre: Colegio de Profesoras y Profesores de Chile
+    tipo: gremio
+    notas: "Gremio nacional de la docencia escolar, presidido por Mario Aguilar; agrupa a los Colegios Regionales, entre ellos el Colegio de Profesores RM. Recibió la carta de disculpas de la ministra Lincolao tras sus dichos sobre profesores e IA (agosto 2026; evento 20260820-11)."
+  diario_la_region:
+    nombre: Diario La Región
+    tipo: medio_comunicacion
+    notas: "Medio digital regional chileno (diariolaregion.cl) con cobertura de Coquimbo y La Serena. Registró con identificación por iniciales la absolución de tres carabineros en el juicio por los hechos contra Camila Caimapo durante el estallido social (18-ago-2026; evento 20260818-23)."
+  idonea:
+    nombre: Idónea Consultores
+    tipo: empresa
+    notas: "Consultora chilena especializada en protección de datos personales, ciberseguridad, inteligencia artificial y regulación tecnológica; su CEO es Catherine Muñoz Gutiérrez, asesora legislativa del Ministerio de Ciencias, lo que motivó cuestionamientos de doble función durante la tramitación de la Ley de IA (The Clinic, agosto 2026; evento 20260821-9)."
 
 cifras:
   deficit_subvenciones_escolares_cataldo:
@@ -19801,6 +19916,30 @@ cifras:
     nombre: Víctimas de lesiones oculares durante el estallido social
     unidad_default: personas
     notas: "464 chilenos fueron víctimas de lesiones oculares durante las protestas del estallido social de 2019, según la Fiscalía de Chile, citados por The Guardian en febrero de 2026 en la cobertura de la absolución de Claudio Crespo."
+  condenas_uniformados_18o:
+    nombre: Condenas contra uniformados por hechos del estallido social
+    unidad_default: condenas
+    notas: "102 condenas contra efectivos procesados o condenados desde el 18-O, según la senadora Vanessa Kaiser en el punto de prensa con Ignacio Urrutia del 19-ago-2026 (La Tercera). Convive con el dato de The Guardian de 219 condenas por violaciones a DDHH (universo distinto: todas las causas del estallido, no solo uniformados)."
+  menciones_ranita_eia_icsara:
+    nombre: Menciones de la ranita del Pehuenche en el EIA e ICSARA del proyecto Los Cóndores–Río Diamante
+    unidad_default: menciones
+    notas: "14 menciones del anfibio Alsodes pehuenche en el Estudio de Impacto Ambiental publicado en 2021 y en el Informe de Aclaraciones (ICSARA) de 2022, según la verificación de Chequeo Ambiental (25-ago-2026), que calificó como FALSO el dicho de la ministra Ximena Rincón de que la especie 'nunca estuvo' en los estudios ni discusiones del proyecto."
+  efectivos_procesados_18o:
+    nombre: Efectivos procesados por hechos del estallido social
+    unidad_default: efectivos
+    notas: "Más de 700 efectivos aún enfrentan procesos judiciales desde el 18-O según Vanessa Kaiser (punto de prensa 19-ago-2026, La Tercera); Johannes Kaiser habló de 'más de 700 carabineros procesados' en CNN Chile (20-ago) y de 'más de 770 carabineros procesados' en Cooperativa (21-ago). Rango 700-770 según la fuente; cifra no contrastada con una fuente oficial."
+  duracion_maxima_ee_acot:
+    nombre: Duración máxima sin Congreso del estado de excepción propuesto en la ACOT
+    unidad_default: dias
+    notas: "120 días prorrogables por otro período igual por decisión exclusiva del Presidente, sin autorización previa del Congreso (=240 días, ~8 meses), según La Tercera ('podría mantenerse vigente hasta por 240 días sin autorización parlamentaria') y El Dínamo (20-ago); The Clinic lo describe como 'ocho meses solo por iniciativa del Presidente'. Es la base factual de la advertencia de Johannes Kaiser sobre un estado de excepción 'de hasta ocho meses sin control parlamentario'."
+  votos_requeridos_reforma_seguridad_senado:
+    nombre: Votos requeridos en el Senado para la reforma constitucional de seguridad
+    unidad_default: senadores
+    notas: "29 senadores (cuatro séptimos de la Cámara Alta) se exigen tanto para aprobar la idea de legislar como para cada uno de los ocho puntos del articulado de la reforma constitucional de seguridad, según La Tercera y The Clinic (20-ago-2026)."
+  piso_oficialismo_senado_reforma_seguridad:
+    nombre: Piso de votos oficialistas en el Senado para la reforma de seguridad
+    unidad_default: senadores
+    notas: "26 apoyos es el piso histórico del oficialismo en la Cámara Alta tras la megarreforma económica, según The Clinic (20-ago-2026); 'ni siquiera hoy aparecen como seguros' ante los descuelgues de Vanessa Kaiser (PNL) y la indecisión de independientes."
   limite_exposicion_gas_cs_2020:
     nombre: Límite de exposición al gas CS según el manual de Carabineros
     unidad_default: mg_m3
@@ -21011,6 +21150,19 @@ cifras:
     nombre: Umbral de almacenamiento de combustible sin evaluación ambiental
     unidad_default: litros
     notas: "1 millón de litros (1.000 toneladas) desde el cambio reglamentario de la administración Boric vigente desde enero 2026, doce veces más que los 80 mil litros anteriores. Permite que los data centers acopien diésel para respaldo sin ingresar al SEIA."
+  data_centers_operativos_chile_2025:
+    nombre: Data centers operativos en Chile hacia 2025
+    unidad_default: centros
+    notas: "37 centros de datos operativos hacia 2025 según lo expuesto por OLCA ante la CIDH (audiencia del 3 de agosto de 2026): Chile como segundo polo de infraestructura digital de América Latina después de Brasil."
+  extraccion_agua_google_cerrillos:
+    nombre: Extracción de agua del diseño original del data center de Google en Cerrillos
+    unidad_default: litros_por_segundo
+    notas: "169 litros por segundo del Acuífero Santiago Central contemplaba el diseño original con enfriamiento por agua (RCA de febrero de 2020). El Segundo Tribunal Ambiental anuló parcialmente la RCA en 2024 y Google anunció en septiembre de ese año que no perseveraría con ese diseño."
+  inversion_data_center_cerrillos_google:
+    nombre: Inversión de la nueva versión del data center de Google en Cerrillos
+    unidad_default: millones_usd
+    notas: "US$200 millones según la consulta de pertinencia ingresada en junio de 2026 por Dataluna Ltda (filial de Google) tras el DS 17/2025, citada por El Desconcierto y por la carta de organizaciones a la CIDH (BioBioChile/Canal 9)."
+
   umbral_invariabilidad_megarreforma:
     nombre: Umbral de inversión para acceder a la invariabilidad tributaria de la megarreforma
     unidad_default: dolares
@@ -21375,6 +21527,22 @@ cifras:
     nombre: Votación por la opción Rechazo en el plebiscito de 2020
     unidad_default: porciento
     notas: "21,73% de las preferencias para la opción Rechazo en el plebiscito de entrada del 25 de octubre de 2020."
+  encuesta_numen_apruebo:
+    nombre: Intención de voto Apruebo en la encuesta de Numen (2020)
+    unidad_default: porciento
+    notas: "41,9% para el Apruebo en la encuesta de Numen difundida por Casa Común por el Rechazo (T13 y La Tercera consignan 41,9%; BioBioChile lo redondeó a 42% y El Ciudadano citó 42,3%). El resultado real del 25-oct-2020 fue 78,27%."
+  encuesta_numen_rechazo:
+    nombre: Intención de voto Rechazo en la encuesta de Numen (2020)
+    unidad_default: porciento
+    notas: "34,4% para el Rechazo según la misma medición de Numen; el resultado real fue 21,73%."
+  encuesta_numen_proyeccion_rechazo:
+    nombre: Proyección de triunfo del Rechazo con participación proyectada (Numen, 2020)
+    unidad_default: porciento
+    notas: "53,8%: escenario con el que Numen proyectó un triunfo del Rechazo aplicando sus supuestos de participación (~23% de los votantes del Rechazo vs ~50% del Apruebo dispuestos a ir a votar). De la Carrera lo tuiteó como '53% votaría rechazo' el 5-sep-2020."
+  respuestas_encuesta_numen:
+    nombre: Respuestas declaradas por la encuesta de Numen (2020)
+    unidad_default: respuestas
+    notas: "Más de 18 mil respuestas obtenidas mediante avisos pagados en redes sociales y Google; ese volumen operaba como argumento de autoridad (columna de Juan Pardo en El País). T13 consignó además 561 cuestionarios descartados por incongruencias o tiempos de respuesta bajo el promedio esperado (1,2 segundos)."
   convencion_constitucional_plebiscito_2020:
     nombre: Votación por la Convención Constitucional en el plebiscito de 2020
     unidad_default: porciento
@@ -22403,6 +22571,10 @@ cifras:
     nombre: Leyes que modifica la megarreforma según prensa internacional
     unidad_default: leyes
     notas: "36 leyes que modifica la megarreforma según la cobertura de Ámbito (5-ago-2026), citada por el evento 20260804-6; difiere del conteo del comparador Puig Abogados (25 leyes), ver tabla comparativa en el evento 20260814-1."
+  decretos_proteccion_retirados:
+    nombre: Decretos de protección ambiental retirados por el gobierno de Kast (marzo 2026)
+    unidad_default: decretos
+    notas: "43 D.S. ambientales retirados en marzo-2026 para revisión (evento 20260318-1); a agosto-2026, 8 habían sido reingresados y 35 permanecían pendientes en Contraloría (evento 20260820-16). La Marcha Nacional del 22-ago-2026 exigió su reintegro total."
   decretos_modificados_megarreforma_prensa:
     nombre: Decretos que modifica la megarreforma según prensa internacional
     unidad_default: decretos
@@ -22938,3 +23110,139 @@ cifras:
     nombre: Estaciones del Metro incendiadas durante el estallido social
     unidad_default: estaciones
     notas: "25 estaciones del Metro de Santiago incendiadas durante el estallido social de 2019, de las cuales 7 fueron completamente destruidas (CIPER, 24-oct-2019; hilo r/chile, 23-feb-2026)."
+  votos_tc_rechazo_articulo31:
+    nombre: Votos por el rechazo del requerimiento contra el artículo 31 de la megarreforma
+    unidad_default: votos
+    notas: "9 votos del Pleno del Tribunal Constitucional rechazaron el 25-ago-2026 el requerimiento Rol N°17.892-26-CPT del Presidente Kast y cuatro ministros contra la reconexión gratuita de servicios básicos en zonas de catástrofe (evento 20260825-1)."
+  votos_disidencia_tc_articulo31:
+    nombre: Votos disidentes en el rechazo del requerimiento contra el artículo 31
+    unidad_default: votos
+    notas: "1 voto en contra del rechazo (voto disidente) en la sentencia del TC del 25-ago-2026 sobre el artículo 31 de la megarreforma; la identidad del ministro disidente se conocerá con los fundamentos completos de la sentencia (evento 20260825-1)."
+  votos_camara_articulo31_afirmativo:
+    nombre: Votos a favor del artículo 31 en la Cámara de Diputados
+    unidad_default: votos
+    notas: "80 votos a favor aprobaron en la Cámara la norma de reconexión gratuita de servicios básicos de la megarreforma, frente a 69 en contrario (escrito de la oposición ante el TC citado por BioBioChile, 25-ago-2026)."
+  votos_camara_articulo31_encontra:
+    nombre: Votos en contra del artículo 31 en la Cámara de Diputados
+    unidad_default: votos
+    notas: "69 votos en contrario recibió en la Cámara la norma de reconexión gratuita de servicios básicos de la megarreforma (escrito de la oposición ante el TC citado por BioBioChile, 25-ago-2026)."
+  votos_senado_contra_eliminar_articulo31:
+    nombre: Votos contra la indicación ejecutiva que buscaba eliminar el artículo 31 en el Senado
+    unidad_default: votos
+    notas: "25 votos rechazaron en el Senado la indicación del Ejecutivo que buscaba eliminar la reconexión gratuita de servicios básicos, frente a 24 a favor (escrito de la oposición ante el TC citado por BioBioChile, 25-ago-2026)."
+  votos_senado_por_eliminar_articulo31:
+    nombre: Votos a favor de la indicación ejecutiva que buscaba eliminar el artículo 31 en el Senado
+    unidad_default: votos
+    notas: "24 votos apoyaron en el Senado la indicación del Ejecutivo que buscaba eliminar la reconexión gratuita de servicios básicos; fue rechazada por un voto de diferencia (BioBioChile, 25-ago-2026)."
+  reposiciones_gas_terremoto_2010:
+    nombre: Reposiciones de gas tras el terremoto de 2010 (RM y Valparaíso)
+    unidad_default: reposiciones
+    notas: "Más de 46.500 reposiciones de gas por redes solo en las regiones Metropolitana y de Valparaíso tras el terremoto del 27-F, con plazos de entre tres semanas y cuatro meses según la zona y más de 70 equipos trabajando en turnos diurnos y nocturnos sin registrar incidentes (antecedente citado por AGN, evento 20260825-1)."
+  votos_resolucion245_afirmativo:
+    nombre: Votos a favor de la Resolución N°245 contra las fake news (Cámara, 22-nov-2022)
+    unidad_default: votos
+    notas: "66 votos a favor aprobaron en la Cámara de Diputadas y Diputados la resolución que 'rechaza categóricamente la utilización de noticias falsas o Fake News en política' (Sesión 100ª, Legislatura 370; página oficial de votaciones de la Cámara)."
+  votos_resolucion245_encontra:
+    nombre: Votos en contra de la Resolución N°245 contra las fake news (Cámara, 22-nov-2022)
+    unidad_default: votos
+    notas: "37 votos en contra, en su mayoría de las bancadas del Partido Republicano y Chile Vamos, a la resolución que rechaza categóricamente la utilización de noticias falsas en política (página oficial de votaciones de la Cámara; Contrapoder Chile)."
+  votos_resolucion245_abstencion:
+    nombre: Abstenciones en la votación de la Resolución N°245 contra las fake news (Cámara, 22-nov-2022)
+    unidad_default: votos
+    notas: "17 abstenciones en la votación nominal de la Resolución N°245 de la Cámara de Diputadas y Diputados (página oficial de votaciones de la Cámara)."
+  exponentes_foro_madrid_santiago:
+    nombre: Exponentes confirmados del V Encuentro Regional de Foro Madrid en Santiago
+    unidad_default: exponentes
+    notas: "35 exponentes confirmados al 25-ago-2026 para el encuentro del 3-sep-2026 en San Carlos de Apoquindo, entre ellos Fernando Claro (FPP), Julio Isamit (Res Pública), Cristián Araya (PR), y las figuras internacionales Tomás Zambrano (Honduras), Norma Yarrow (Perú), Diana Jácome (Ecuador) y Barbara Kolm (FPÖ, Austria); The Clinic señala que varios provienen de fuerzas consideradas de ultraderecha (evento 20260721-2)."
+  inversion_alto_santorini:
+    nombre: Inversión declarada del proyecto inmobiliario Alto Santorini
+    unidad_default: millones_usd
+    notas: "US$43,6 millones (cerca de $40 mil millones): proyecto priorizado por el sistema de seguimiento de Hacienda y vinculado a Víctor Quiroz, hermano del ministro de Hacienda Jorge Quiroz (CIPER; evento 20260818-17)."
+  votos_creacion_cei_quiroz:
+    nombre: Firmas y votos necesarios para crear la CEI sobre el ministro Quiroz en la Cámara
+    unidad_default: votos
+    notas: "62 firmas de diputados para presentar la solicitud de Comisión Especial Investigadora y nuevamente 62 votos en Sala para su creación (mayoría simple de los miembros en ejercicio); la oposición conversó el respaldo de DC, Partido Liberal, PPD, PS, PC y Frente Amplio (BioBioChile, 24-ago-2026; evento 20260820-12)."
+  inversion_ds27_2026:
+    nombre: Inversión total de los llamados 2026 del programa de Mejoramiento de Viviendas y Barrios (DS27)
+    unidad_default: uf
+    notas: "10.765.825 UF comprometidos por el Minvu (~US$400 millones según el ministro Iván Poduje) para financiar cerca de 68 mil subsidios, anunciados el 24-ago-2026 como parte de la estrategia de reactivación del empleo (evento 20260824-4)."
+  viviendas_beneficiadas_ds27_2026:
+    nombre: Viviendas que beneficiarán los llamados 2026 del DS27
+    unidad_default: viviendas
+    notas: "68.456 viviendas a nivel nacional según la proyección del Minvu para los llamados 2026 del Programa de Mejoramiento de Viviendas y Barrios (evento 20260824-4)."
+  empleos_ds27_2026:
+    nombre: Empleos proyectados por los llamados 2026 del DS27
+    unidad_default: empleos
+    notas: "19.431 empleos asociados a la ejecución de los proyectos del DS27, eje de la presentación pública del programa como herramienta de reactivación laboral (evento 20260824-4)."
+  equipamientos_ds27_2026:
+    nombre: Proyectos de equipamiento comunitario financiados por el DS27 2026
+    unidad_default: proyectos
+    notas: "169 proyectos de equipamiento comunitario (canchas, plazas, bibliotecas, skateparks y otros espacios de encuentro), con 465.211 UF destinadas (evento 20260824-4)."
+  viviendas_recambio_asbesto_ds27:
+    nombre: Viviendas con recambio de techumbres de asbesto vía DS27
+    unidad_default: viviendas
+    notas: "Aproximadamente 3.770 viviendas intervenibles con los 700 mil UF destinados a la línea de recambio de techumbres de asbesto del DS27 (evento 20260824-4)."
+  departamentos_condominios_ds27:
+    nombre: Departamentos de condominios sociales beneficiados por el DS27
+    unidad_default: departamentos
+    notas: "Hasta 11.074 departamentos beneficiados con 2.403.000 UF para mejoramiento de condominios sociales, priorizando redes sanitarias, instalaciones eléctricas y de gas, techumbres, fachadas, escaleras y estructuras (evento 20260824-4)."
+  cupos_centros_culto_ds27:
+    nombre: Cupos nacionales para Centros Comunitarios de Culto del DS27
+    unidad_default: cupos
+    notas: "22 cupos a nivel nacional con 143.800 UF: primera vez que el Programa de Mejoramiento de Viviendas y Barrios incorpora una línea específica de construcción de centros comunitarios de culto, postulables por iglesias mediante organizaciones sociales (evento 20260824-4)."
+  votos_aconsejo_bachelet_onu_2sondeo:
+    nombre: Votos 'aconsejo' para Bachelet en el segundo sondeo del Consejo de Seguridad (21-ago-2026)
+    unidad_default: votos
+    notas: "Solo 2 apoyos según resultados filtrados por EFE; quedó séptima entre ocho aspirantes tras ser cuarta en el primer sondeo de julio (6 aconsejo, 5 desaconsejo, 4 sin opinión). La recomendación final exige al menos 9 votos del Consejo sin veto de los P5 (evento 20260730-25)."
+  votos_desaconsejo_bachelet_onu_2sondeo:
+    nombre: Votos 'desaconsejo' para Bachelet en el segundo sondeo del Consejo de Seguridad (21-ago-2026)
+    unidad_default: votos
+    notas: "Seis votos en contra, rechazo similar al de Rafael Grossi (7 favorables, 6 en contra) en el segundo straw poll; alza respecto de los 5 desaconsejos del primer sondeo de julio. No se puede establecer públicamente si algún voto provino de una potencia con derecho a veto (CNN Chile/EFE; evento 20260730-25)."
+  aporte_krauss_charpentier:
+    nombre: Aporte de Martín Krauss a la campaña de Paz Charpentier (noviembre 2025)
+    unidad_default: pesos
+    notas: "$800.000 aportados por Martín Krauss —esposo de la ex vocera Mara Sedini e investigado en la Operación Imperio Ámsterdam— el 10-nov-2025 a la campaña de la diputada Paz Charpentier (PR, distrito 20), su único aporte registrado ante el Servel en ese proceso electoral (El Ciudadano, 22-ago-2026; evento 20260819-1)."
+  boletas_asesora_legislativa_mincciencia:
+    nombre: Boletas líquidas de junio-julio 2026 de la asesora legislativa del MinCiencia Catherine Muñoz Gutiérrez
+    unidad_default: pesos
+    notas: "$4.412.650 líquidos totales emitidos en julio como asesora legislativa del Ministerio de Ciencias (junio-julio), con tareas que incluyen asesorar y coordinar la tramitación del proyecto de Ley de IA y representar al Ministerio ante Congreso y Segpres; simultáneamente es CEO de la consultora Idónea (The Clinic, 21-ago-2026; evento 20260821-9)."
+  proyeccion_crecimiento_chile_2026_ocde:
+    nombre: Proyección de crecimiento de Chile para 2026 según la OCDE
+    unidad_default: "%"
+    notas: "1,7%: la OCDE proyectó (informe difundido el 24-ago-2026) una desaceleración desde el 2,6% de 2025 hacia 1,7% en 2026, con recuperación a 2,5% en 2027, por costos energéticos, endurecimiento financiero internacional y consolidación fiscal (evento 20260824-7)."
+  ajuste_fiscal_paquete_usd:
+    nombre: Paquete de medidas de ajuste fiscal del gobierno de Kast
+    unidad_default: millones_usd
+    notas: "Casi US$3.800 millones (~1% del PIB): paquete de ajuste fiscal adoptado por el gobierno, referenciado por la OCDE como base de una política fiscal restrictiva orientada a reducir el déficit del gobierno central del 2,8% del PIB en 2025 al 2,1% en 2027 (evento 20260824-7)."
+  subsidio_capital_semilla_modo_empleo:
+    nombre: Subsidio del Capital Semilla Modo Empleo (Sercotec)
+    unidad_default: millones_pesos
+    notas: "$3 millones no reembolsables por beneficiario para implementar un plan de trabajo y levantar una empresa formal (inversiones, activos, infraestructura, capacitación, marketing y formalización), en el fondo concursable para personas desempleadas anunciado el 24-ago-2026 (evento 20260710-3)."
+  presupuesto_capital_semilla_modo_empleo:
+    nombre: Presupuesto por etapa del Capital Semilla Modo Empleo
+    unidad_default: millones_pesos
+    notas: "$2.500 millones por etapa; Azurmendi detalló que el programa contempla dos etapas, totalizando $5.000 millones una vez lanzada la segunda versión del fondo (Radio Universidad de Chile, 25-ago-2026; evento 20260710-3)."
+  beneficiarios_capital_semilla_modo_empleo:
+    nombre: Emprendedores que beneficiará el Capital Semilla Modo Empleo
+    unidad_default: emprendedores
+    notas: "583 emprendedores proyectados; postulaciones del 25-ago al 8-sep-2026 vía sercotec.cl, focalizadas en jóvenes (18-29), mujeres (30-54) y adultos sobre 55 años sin inicio de actividades ante el SII ni cotizaciones previsionales en los últimos seis meses (evento 20260710-3)."
+  municiones_incautadas_instituto_nacional:
+    nombre: Municiones incautadas al alumno detenido por la amenaza de tiroteo del Instituto Nacional
+    unidad_default: municiones
+    notas: "25 municiones (10 cartuchos calibre .40, 10 de 9 mm y 5 de calibre 12) incautadas en el allanamiento del 20-ago-2026 en La Pintana del sospechoso de la amenaza de tiroteo contra el Instituto Nacional (evento 20260820-12)."
+  ampollas_morfina_instituto_nacional:
+    nombre: Ampollas de morfina incautadas al alumno detenido por la amenaza del Instituto Nacional
+    unidad_default: ampollas
+    notas: "28 ampollas de morfina (más 7 de metoclopramida) decomisadas en el allanamiento del 20-ago-2026 en La Pintana (evento 20260820-12)."
+  detenidos_operativos_drogas_los_rios:
+    nombre: Detenidos en los operativos antidrogas de la PDI en Los Ríos (21-ago-2026)
+    unidad_default: detenidos
+    notas: "12 personas —chilenas y extranjeras— detenidas en operativos conjuntos de la PDI y el Ministerio Público; nueve pasaron a control de detención y el resto durante la jornada (evento 20260821-10)."
+  drogas_incautada_los_rios:
+    nombre: Drogas incautadas en los operativos de la PDI en Los Ríos (21-ago-2026)
+    unidad_default: kilos
+    notas: "Más de 150 kilos de droga (marihuana, ketamina, clorhidrato de cocaína y éxtasis), valorados en más de $1.000 millones, destinados a las provincias de Valdivia y del Ranco; el Gobierno regional precisó 153 kilos fuera de circulación con foco en microtraficantes (evento 20260821-10)."
+  condenados_caso_alto_hospicio:
+    nombre: Excarabineros condenados por apremios en la Tercera Comisaría de Alto Hospicio
+    unidad_default: condenados
+    notas: "Seis exuniformados condenados en total: el comisario y la jefa de la SIP en procedimiento abreviado previo (enero 2026) y, el 23-ago-2026, cuatro subordinados declarados culpables como coautores de apremios ilegítimos por el TOP de Iquique; lectura de penas fijada para el 3-sep-2026 (evento 20260823-4)."

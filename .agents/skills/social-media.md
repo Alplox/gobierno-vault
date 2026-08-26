@@ -45,3 +45,33 @@
 | YouTube | 🟡 titulo/descripcion si | ⬜ comentarios no | Comentarios requieren sesion: read_url y r.jina.ai piden "Sign in to confirm you're not a bot" (probado 2026-08) |
 
 Para TikTok/YouTube la extraccion de comentarios NO esta resuelta: usar prensa o Reddit para reacciones y registrar el video solo como fuente complementaria de la declaracion (titulo + descripcion). Si algun dia se resuelve la extraccion de comentarios, actualizar esta tabla y la seccion "Medios de prensa en prosa" (orgs `tipo: red_social`).
+
+### Verificacion de imagenes y audios virales (calibracion 2026)
+
+Cuando un evento documenta una imagen, screenshot o audio viral que circula en redes, verificar
+la autenticidad del material ANTES de registrarlo como hecho (la verificacion del dato va contra
+fuentes oficiales/prensa; esto es sobre el material mismo):
+
+- **Busqueda inversa de imagen**, en este orden: Yandex Images (el mejor para rostros) → TinEye →
+  Google Lens. Objetivo: aparicion MAS ANTIGUA y contexto de primera publicacion.
+- **Credenciales de contenido (C2PA) — chequeo NICHO, ecosistema mayormente estadounidense/europeo**: util solo si se consigue el ARCHIVO ORIGINAL sin recomprimir.
+  `contentcredentials.org/verify` lee el manifiesto localmente en el navegador (dispositivo, historial de edicion, herramienta de IA;
+  verificado 2026-08: corre lector C2PA real en cliente y reporta "sin manifiesto" correctamente).
+  En la practica chilena casi siempre dira "sin credenciales": ningun medio local firma contenido (El Mostrador y La Razón solo
+  ADHIRIERON a la iniciativa CAI en 2023, sin implementacion tecnica; la lista de publicantes verificados del IPTC es BBC/AFP/
+  France Televisions/etc., cero Latinoamerica), el Estado tampoco firma, y lo viral llega como screenshot o recompresion que ELIMINA
+  el manifiesto (X descarta el bloque XMP en ~95% de transcodificaciones de video; Meta/Google Photos preservan ~40% sin exponerlo).
+  Caso de uso real: demostrar origen sintetico de un fake generado con DALL-E/Sora/Gemini/Adobe (firman por defecto) si aparece el
+  archivo original. Calibraciones: ausencia de credenciales NO significa fake; los screenshots ELIMINAN el manifiesto; un manifiesto
+  valido prueba quien FIRMO, no quien presencio.
+- **Detectores automaticos**: nunca uno solo — usar al menos 2 y tratar el desacuerdo como
+  indicio para escalar. Con tier gratis (estado mayo 2026): Reality Defender (50 escaneos/mes),
+  AI or Not (triage rapido), DeepFake-o-Meter (academico, gratis). TrueMedia.org cerro en
+  enero 2025.
+- **El ojo humano ya NO alcanza**: pelos extra/asimetrias ya no delatan modelos de difusion de
+  punta; quedan detalles finos (bordes de cabello/dientes, fisica de sombras, reflejos en ojos,
+  desync labio-fonema). Usarlo solo para triage, nunca como veredicto.
+- **Clones de voz**: cruzaron el umbral de indistinguibilidad para oyente casual (Fortune, dic
+  2025). ASUMIR que la verificacion solo-por-voz FALLA: un audio atribuido a una autoridad exige
+  confirmacion por otro canal (video oficial, transcripcion en sitio oficial, cobertura de prensa
+  multiple) antes de registrarse como declaracion.
