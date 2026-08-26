@@ -417,6 +417,10 @@ historico con periodos), generado en build por `src/lib/cabinet.ts` a partir de
   ministerio" para orgs que son cartera (mismo helper).
 - Para ajustar datos de un ministro, editar `cargo`/`cargos[]` en `entities.yaml`;
   la pagina se regenera en el proximo build.
+- **"Hoy" para el gobierno en ejercicio**: fecha del build en SSR (fallback
+  sin-JS) + `gvRefreshHoy()` re-ancla corte/barras/duraciones/stats a la fecha
+  real del cliente si el deploy quedo stale. Detalles en comentarios de
+  `gabinete.astro`.
 - **Verificacion de fechas/cargos de los gabinetes (1938-2026)**: matriz por gobierno,
   fechas clave, fuentes oficiales usadas (Minsal, BCN, gob.cl, Diario Oficial, archivo
   Lagos UDP) y pendientes vive en `TAREAS/GABINETES-VERIFICACION.md` — al crear/modificar
@@ -560,7 +564,12 @@ accent) por tema vía `data-theme` scoping, una columna, `max-h-[calc(100vh-8.6r
 con scroll. Notas de migración v3→v4 que pueden morder: border default pasa
 a currentColor, `shadow-sm`→`shadow-xs`/`rounded-sm`→`rounded-xs` renombrados,
 `ring` default 1px. Si un estilo se ve distinto tras tocar utilidades, revisar
-esos cambios primero.
+esos cambios primero. **Colores que no pintan (fallan en silencio, sin error de
+build):** en daisyUI 5 las `--color-*` son colores completos — usarlas directo,
+nunca `oklch(var(--color-x) / a)`; Tailwind solo acepta UN modificador de
+opacidad (`bg-primary/10/30` no existe); en selectores de `<style>` escapar el
+`/` (`.bg-primary\/70`) o la regla es CSS inválido. Verificar con computed style
+en navegador (ojo: `transition-colors` interpola si se mide al instante).
 
 **Gestor de paquetes: pnpm** (migrado desde npm). Lockfile: `pnpm-lock.yaml`.
 Instalacion: `pnpm install`. No usar npm ni regenerar `package-lock.json`.
@@ -912,13 +921,13 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 
 > Esta sección se genera automáticamente con `pnpm run generate-index`
 
-**Total de eventos:** 1165
+**Total de eventos:** 1169
 
-**Cobertura de fuentes:** 698 de 1165 eventos con 3+ fuentes (467 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 702 de 1169 eventos con 3+ fuentes (467 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 889
-- 2025: 62
+- 2026: 892
+- 2025: 63
 - 2024: 34
 - 2023: 26
 - 2022: 24
@@ -939,32 +948,32 @@ Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.jso
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (471)
+- Politica (473)
 - Justicia (334)
 - Economia (233)
-- Defensa y seguridad (225)
-- Administración pública (177)
-- Derechos humanos (146)
-- Proceso legislativo (103)
+- Defensa y seguridad (228)
+- Administración pública (178)
+- Derechos humanos (147)
+- Proceso legislativo (104)
 - Corrupción (94)
 - Finanzas publicas (93)
-- Relaciones internacionales (79)
+- Relaciones internacionales (81)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (241)
+- accion (242)
 - investigacion (148)
-- declaracion (139)
+- declaracion (141)
 - reaccion (129)
 - publicacion (128)
 - resultado (117)
 - fallo_judicial (85)
-- anuncio (75)
+- anuncio (76)
 - votacion (30)
 - entrevista (22)
 
 **Entidades registradas:**
-- Personas: 2032
+- Personas: 2034
 - Organizaciones: 1024
-- Cifras: 1065
-- Fuentes: 4262
+- Cifras: 1067
+- Fuentes: 4286
 - Temas: 75

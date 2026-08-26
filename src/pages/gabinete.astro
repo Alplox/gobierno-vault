@@ -22,9 +22,17 @@ const biministros = new Set(
 ).size;
 const historicos = cabinet.reduce((s, c) => s + c.historico.length, 0);
 
-// Fecha "hoy" para el gobierno en ejercicio (Kast): la fecha más reciente con datos.
-const todasLasFechas = cabinet.flatMap((c) => c.todos.map((a) => a.desde)).filter(Boolean) as string[];
-const fechaMaxDatos = todasLasFechas.sort().at(-1) ?? '2026-08-14';
+// Fecha "hoy" para el gobierno en ejercicio (Kast): la fecha del BUILD. Los
+// titulares "en ejercicio" llevan en el cargo hasta hoy, que es lo correcto
+// para duraciones y barras. NO usar el max `desde` de los nombramientos como
+// corte: con ese criterio el ministro nombrado más reciente siempre mostraba
+// "0 días" (su propia fecha de nombramiento ERA el corte) y todos los vigentes
+// quedaban congelados en la fecha del último nombramiento (bug real: Riveros
+// Cantuarias, nombrado 14-ago-2026, aparecía con "0 días en ejercicio").
+// Es solo el fallback sin-JS: gvRefreshHoy() re-ancla el corte a la fecha real
+// del cliente si el deploy quedó stale (barras de vigentes, línea "hoy",
+// duraciones móviles, stats y la fecha de corte del header).
+const fechaMaxDatos = new Date().toISOString().slice(0, 10);
 
 type Segmento = { leftPct: number; widthPct: number; a: GobiernoAppointment };
 
@@ -271,7 +279,18 @@ function statsGobierno(
         ? fechaEs(g.gobierno.hasta)
         : `en ejercicio · mandato previsto hasta ${fechaEs(new Date(tFin).toISOString().slice(0, 10))}`;
       return (
-        <section data-gv-gob-panel={g.gobierno.id} class={g.gobierno.id === 'kast' ? '' : 'hidden'}>
+        <section
+          data-gv-gob-panel={g.gobierno.id}
+          class={g.gobierno.id === 'kast' ? '' : 'hidden'}
+          {...(g.gobierno.actual
+            ? {
+                'data-gv-actual': '1',
+                'data-gv-t0': String(t0),
+                'data-gv-tfin': String(tFin),
+                'data-gv-tdatos': String(tDatos),
+              }
+            : {})}
+        >
           <div class="bg-base-100 rounded-2xl border border-base-300 shadow-sm overflow-hidden mb-6">
             <header class="px-5 py-4 border-b border-base-300 flex flex-wrap items-center justify-between gap-3">
               <div>
@@ -279,12 +298,12 @@ function statsGobierno(
                 <p class="text-xs text-base-content/60 mt-0.5">
                   <CalendarRange class="h-3.5 w-3.5 inline -mt-0.5 mr-1" />
                   {fechaEs(g.gobierno.desde)} → {textoFin}
-                  {g.gobierno.actual ? ` · datos hasta ${fechaEs(fechaMaxDatos)}` : ''}
+                  {g.gobierno.actual && <span data-gv-corte> · corte al {fechaEs(fechaMaxDatos)}</span>}
                 </p>
               </div>
               <div class="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs">
                 <span class="inline-flex items-center gap-1 text-base-content/70"><UserRound class="h-3.5 w-3.5 text-primary" /> {g.totalNombramientos} nombramientos</span>
-                <span class="inline-flex items-center gap-1 text-red-600"><XCircle class="h-3.5 w-3.5" /> {g.salidasPrevias} salidas antes del término</span>
+                <span class="inline-flex items-center gap-1 text-error"><XCircle class="h-3.5 w-3.5" /> {g.salidasPrevias} salidas antes del término</span>
               </div>
             </header>
             <div class="px-5 py-2.5 flex flex-wrap gap-x-4 gap-y-1 text-[11px] text-base-content/60 border-b border-base-300 items-center">
@@ -293,11 +312,11 @@ function statsGobierno(
               {stats.promedio !== null && stats.masLongevo && stats.masBreve && (
                 <span class="inline-flex items-center gap-1.5 text-base-content/70 ml-auto">
                   <Timer class="h-3.5 w-3.5 shrink-0" />
-                  <span>Duración media: {stats.promedio} días</span>
+                  <span>Duración media: <span data-gv-stat-prom>{stats.promedio}</span> días</span>
                   <span class="text-base-content/30">·</span>
-                  <span>Más longevo: <span class="font-semibold text-base-content/80">{stats.masLongevo.a.nombre}</span> ({stats.masLongevo.dias} días)</span>
+                  <span>Más longevo: <span class="font-semibold text-base-content/80" data-gv-stat-longevo>{stats.masLongevo.a.nombre}</span> (<span data-gv-stat-longevo-dias>{stats.masLongevo.dias}</span> días)</span>
                   <span class="text-base-content/30">·</span>
-                  <span>Más breve: <span class="font-semibold text-base-content/80">{stats.masBreve.a.nombre}</span> ({stats.masBreve.dias} días)</span>
+                  <span>Más breve: <span class="font-semibold text-base-content/80" data-gv-stat-breve>{stats.masBreve.a.nombre}</span> (<span data-gv-stat-breve-dias>{stats.masBreve.dias}</span> días)</span>
                 </span>
               )}
             </div>
@@ -316,13 +335,14 @@ function statsGobierno(
                         class={`absolute top-0 -translate-x-1/2 flex flex-col items-center pointer-events-none ${major ? 'font-semibold' : ''}`}
                         style={`left:${left.toFixed(2)}%;`}
                       >
-                        <span class={`w-px ${major ? 'h-3 bg-base-2000' : 'h-2 bg-base-300'}`}></span>
+                        <span class={`w-px ${major ? 'h-3 bg-base-content/50' : 'h-2 bg-base-300'}`}></span>
                         <span class={`text-[9px] whitespace-nowrap mt-0.5 ${major ? 'text-base-content/70' : 'text-base-content/40 hidden sm:block'}`}>{label}</span>
                       </span>
                     ))}
                     {g.gobierno.actual && (
                       <span
                         class="absolute top-0 -translate-x-1/2 flex flex-col items-center pointer-events-none"
+                        data-gv-hoy
                         style={`left:${(((new Date(fechaMaxDatos).getTime() - t0) / (tFin - t0)) * 100).toFixed(2)}%;`}
                       >
                         <span class="w-[2px] h-3 bg-primary/100 rounded-full"></span>
@@ -344,7 +364,8 @@ function statsGobierno(
                       ))}
                       {g.gobierno.actual && (
                         <span
-                          class="absolute top-0 bottom-0 w-[2px] bg-primary/70/40 rounded-full"
+                          class="absolute top-0 bottom-0 w-[2px] bg-primary/40 rounded-full"
+                          data-gv-hoy
                           style={`left:${(((new Date(fechaMaxDatos).getTime() - t0) / (tFin - t0)) * 100).toFixed(2)}%;`}
                         ></span>
                       )}
@@ -371,6 +392,10 @@ function statsGobierno(
                                   href={`/people/${a.personId}`}
                                   data-gv-seg={i}
                                   data-gv-cartera={car.ministerioId}
+                                  data-gv-desde={a.desdeGob}
+                                  data-gv-nombre={a.nombre}
+                                  data-gv-dias={diasCargo(a, tDatos)}
+                                  data-gv-vigente={!a.hastaGob ? '1' : undefined}
                                   class={`gv-seg absolute top-0 h-full block ${segmentoClase(a)} transition-colors ${a.biministro ? 'ring-2 ring-inset ring-warning/50' : ''} ${a.subrogante ? 'ring-2 ring-inset ring-orange-300' : ''}`}
                                   style={`left:${leftPct.toFixed(2)}%;width:${widthPct.toFixed(2)}%;`}
                                   title={`${a.nombre} · ${duracionCorta(a)}${etiquetaDias(a, tDatos)}${a.salidaPrevia ? ' · SALIÓ ANTES DEL TÉRMINO' : ''}${a.biministro ? ' · Biministro' : ''}${a.subrogante ? ' · Subrogante' : ''}${a.fechasSinRegistrar ? ' · fechas sin registrar' : ''}`}
@@ -379,17 +404,23 @@ function statsGobierno(
                             </div>
                           </div>
                           {/* Nombres bajo la barra, alineados con cada segmento
-                              (hover resalta el segmento correspondiente en la barra) */}
+                              (hover resalta el segmento correspondiente en la barra).
+                              El alto fijo h-4 es el fallback SSR de 1 fila; el script
+                              gvPackNames lo reemplaza empaquetando los nombres en las
+                              filas que hagan falta (segmentos muy cortos → nombre completo
+                              desbordado a su derecha, sin recortar). */}
                           <div class={`hidden sm:grid ${columnas} gap-3`}>
                             <span></span>
-                            <div class="relative h-4 text-[10px] leading-4">
+                            <div class="gv-names relative h-4 text-[10px] leading-4">
                               {segmentos.map(({ leftPct, widthPct, a }, i) => {
-                                const color = a.salidaPrevia ? 'text-red-600' : 'text-base-content/60';
+                                const color = a.salidaPrevia ? 'text-error' : 'text-base-content/60';
                                 return (
                                   <a
                                     href={`/people/${a.personId}`}
                                     data-gv-name={i}
                                     data-gv-cartera={car.ministerioId}
+                                    data-gv-desde={a.desdeGob}
+                                    data-gv-vigente={!a.hastaGob ? '1' : undefined}
                                     class={`gv-name absolute top-0 truncate pr-0.5 ${color} hover:underline`}
                                     style={`left:${leftPct.toFixed(2)}%;width:${widthPct.toFixed(2)}%;`}
                                     title={`${a.nombre} · ${duracionCorta(a)}${etiquetaDias(a, tDatos)}`}
@@ -414,8 +445,8 @@ function statsGobierno(
                                   ></span>
                                 </span>
                                 <span class="min-w-0 text-[11px] leading-snug">
-                                  <a href={`/people/${a.personId}`} data-gv-name={i} data-gv-cartera={car.ministerioId} class={`gv-name font-semibold ${a.salidaPrevia ? 'text-red-700' : 'text-base-content'} hover:underline`}>{a.nombre}</a>
-                                  <span class="text-base-content/40"> · {duracionCorta(a)}{etiquetaDias(a, tDatos)}{a.salidaPrevia ? ' · salió antes del término' : ''}{a.biministro ? ' · biministro' : ''}{a.subrogante ? ' · subrogante' : ''}</span>
+                                  <a href={`/people/${a.personId}`} data-gv-name={i} data-gv-cartera={car.ministerioId} class={`gv-name font-semibold ${a.salidaPrevia ? 'text-error' : 'text-base-content'} hover:underline`}>{a.nombre}</a>
+                                  <span class="text-base-content/40"> · {duracionCorta(a)}{!a.hastaGob ? <span data-gv-dias-span data-gv-desde={a.desdeGob} data-gv-vigente="1">{etiquetaDias(a, tDatos)}</span> : etiquetaDias(a, tDatos)}{a.salidaPrevia ? ' · salió antes del término' : ''}{a.biministro ? ' · biministro' : ''}{a.subrogante ? ' · subrogante' : ''}</span>
                                 </span>
                               </li>
                             ))}
@@ -433,10 +464,10 @@ function statsGobierno(
                 car.titulares
                   .filter((a) => a.salidaPrevia)
                   .map((a) => (
-                    <p class="flex items-start gap-1.5 text-xs text-red-700/80 pl-1">
+                    <p class="flex items-start gap-1.5 text-xs text-error/80 pl-1">
                       <UserX class="h-3.5 w-3.5 shrink-0 mt-0.5" />
                       <span>
-                        <a href={`/people/${a.personId}`} class="font-semibold text-red-700 hover:underline">{a.nombre}</a>
+                        <a href={`/people/${a.personId}`} class="font-semibold text-error hover:underline">{a.nombre}</a>
                         <span class="text-base-content/60"> — {car.ministerioNombre.toLowerCase()} · {a.cargo.toLowerCase()} · salió {fechaEs(a.hasta) ?? 'sin fecha'} {a.biministro ? '· biministro' : ''}{a.subrogante ? '· subrogante' : ''}</span>
                       </span>
                     </p>
@@ -450,7 +481,7 @@ function statsGobierno(
   </div>
 
   <p class="text-xs text-base-content/40 mt-8 leading-relaxed">
-    Página generada en build desde <code class="bg-base-200 px-1 py-0.5 rounded">src/lib/cabinet.ts</code> + <code class="bg-base-200 px-1 py-0.5 rounded">entities.yaml</code>. Un titular se considera "en ejercicio" cuando su cargo no tiene fecha de término; los cargos sin fechas registradas se listan con esa advertencia para evitar atribuciones incorrectas. La vista "Por gobierno" agrupa los nombramientos por periodo presidencial: todas las barras comparten la misma escala temporal de 0–100% del mandato completo (4 años), el eje de tiempo muestra los años con los meses entre ellos y se superpone a las barras como carta Gantt para demarcar los límites de cada periodo; cada segmento es un titular con su nombre debajo de la barra (hover resalta el segmento correspondiente, clic → ficha de la persona y días en el cargo), y se marca en rojo a quienes salieron antes de terminar el periodo (renuncias, cambios de gabinete o remociones). En móvil el cuadro Gantt se reordena a una lista escalonada por cartera: barra de ancho completo y, bajo ella, cada titular con punto de color, nombre, fechas y días en el cargo, para que nada se superponga en pantallas angostas.
+    Página generada en build desde <code class="bg-base-200 px-1 py-0.5 rounded">src/lib/cabinet.ts</code> + <code class="bg-base-200 px-1 py-0.5 rounded">entities.yaml</code>. Un titular se considera "en ejercicio" cuando su cargo no tiene fecha de término; los cargos sin fechas registradas se listan con esa advertencia para evitar atribuciones incorrectas. La vista "Por gobierno" agrupa los nombramientos por periodo presidencial: todas las barras comparten la misma escala temporal de 0–100% del mandato completo (4 años), el eje de tiempo muestra los años con los meses entre ellos y se superpone a las barras como carta Gantt para demarcar los límites de cada periodo; cada segmento es un titular con su nombre debajo de la barra (hover resalta el segmento correspondiente, clic → ficha de la persona y días en el cargo), y se marca en rojo a quienes salieron antes de terminar el periodo (renuncias, cambios de gabinete o remociones). En escritorio cada nombre ocupa su ancho natural: si varios ministros se sucedieron en poco tiempo y sus segmentos son muy angostos, los nombres se empaquetan en las filas que hagan falta (con una línea que los conecta a su barra) en vez de truncarse; solo se recorta con elipsis si no cabe antes del borde derecho del gráfico. En móvil el cuadro Gantt se reordena a una lista escalonada por cartera: barra de ancho completo y, bajo ella, cada titular con punto de color, nombre, fechas y días en el cargo, para que nada se superponga en pantallas angostas.
   </p>
 </Base>
 
@@ -470,6 +501,7 @@ function statsGobierno(
       btn.setAttribute('aria-selected', String(active));
       btn.className = `gv-view-btn rounded-lg px-4 py-2 text-sm font-semibold transition-colors cursor-pointer ${active ? 'bg-base-100 shadow-sm text-base-content' : 'text-base-content/60 hover:text-base-content'}`;
     });
+    gvPackNames();
   }
 
   function gvApplyGob(id: string) {
@@ -481,6 +513,119 @@ function statsGobierno(
       btn.setAttribute('aria-selected', String(active));
       btn.className = `gv-gob-btn rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors cursor-pointer ${active ? 'border-primary/60 bg-primary/10 text-primary' : 'border-base-300 bg-base-100 text-base-content/70 hover:border-primary/50 hover:text-primary'}`;
     });
+    gvPackNames();
+  }
+
+  // ---- Empaquetado de nombres bajo las barras Gantt (vista escritorio) ----
+  // Cada nombre se posiciona al inicio % de su segmento, pero ocupa su ANCHO
+  // NATURAL (nowrap): los segmentos muy cortos (ministros reemplazados en
+  // cuestión de días) ya no truncan el nombre. Cuando dos nombres se cruzan,
+  // el segundo baja a la fila siguiente (greedy por filas) y una línea
+  // vertical lo conecta con su barra. Se recalcula al cambiar de gobierno,
+  // de vista, al navegar (View Transitions) y al redimensionar.
+  function gvPackNames() {
+    if (window.matchMedia('(max-width: 639px)').matches) return; // móvil usa lista escalonada
+    document.querySelectorAll<HTMLElement>('.gv-names').forEach((row) => {
+      const names = Array.from(row.querySelectorAll<HTMLElement>('.gv-name'));
+      const cw = row.clientWidth;
+      if (!names.length || cw === 0) return; // panel oculto: medir no tiene sentido
+      const rowEnds: number[] = [];
+      names.forEach((el) => {
+        // Reset a estado medible: ancho auto + nowrap natural (truncate aporta el nowrap).
+        el.style.top = '0px';
+        el.style.width = 'auto';
+        el.style.overflow = 'visible';
+        el.style.textOverflow = 'clip';
+        el.classList.remove('gv-trunc');
+        const startPct = parseFloat(el.style.left ?? '0') || 0;
+        const startPx = (startPct / 100) * cw;
+        // Primera fila cuyo último nombre termina antes de que empiece este.
+        let r = rowEnds.findIndex((end) => end <= startPx + 1);
+        if (r === -1) {
+          r = rowEnds.length;
+          rowEnds.push(0);
+        }
+        // No desbordar el contenedor: clamp al espacio restante.
+        rowEnds[r] = startPx + Math.min(el.offsetWidth, cw - startPx);
+        const natural = el.offsetWidth;
+        el.style.setProperty('--gv-row', String(r));
+        el.style.top = `${r * 16}px`; // leading-4 = 16px por fila
+        el.classList.toggle('gv-row-deep', r > 0);
+        if (natural > cw - startPx) {
+          el.style.width = `${cw - startPx}px`;
+          el.style.overflow = 'hidden';
+          el.style.textOverflow = 'ellipsis';
+          el.classList.add('gv-trunc');
+        } else {
+          el.style.width = 'auto';
+        }
+      });
+      row.style.height = `${Math.max(1, rowEnds.length) * 16}px`;
+    });
+  }
+
+  // ---- Refresco de "hoy" en el gobierno en ejercicio (fecha real del cliente) ----
+  // El SSR corta las duraciones/barras en la fecha del build (fallback sin-JS);
+  // si el deploy queda stale, esto re-ancla el corte a la fecha actual SOLO con
+  // datos ya presentes en el DOM (desde/vigente por segmento): no inventa
+  // ministros nuevos — esos requieren rebuild. No-JS ve el snapshot con su
+  // "corte al <fecha build>" explícito.
+  const GV_MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+
+  function gvRefreshHoy() {
+    const panel = document.querySelector<HTMLElement>('[data-gv-actual]');
+    if (!panel) return;
+    const t0 = Number(panel.dataset.gvT0);
+    const t1 = Number(panel.dataset.gvTfin);
+    const tBuild = Number(panel.dataset.gvTdatos);
+    const hoyIso = new Date().toISOString().slice(0, 10);
+    const hoy = new Date(hoyIso).getTime();
+    if (!t0 || !t1 || !hoy || hoy <= tBuild) return; // build al día o reloj del cliente atrás
+    const pct = ((hoy - t0) / (t1 - t0)) * 100;
+    panel.querySelectorAll<HTMLElement>('[data-gv-hoy]').forEach((el) => {
+      el.style.left = `${pct.toFixed(2)}%`;
+    });
+    const items: { nombre: string; dias: number }[] = [];
+    // OJO: los data-* viajan como strings ISO ("2026-03-11"); Number() da NaN —
+    // parsear con Date.parse.
+    const diasDe = (el: HTMLElement) => {
+      const ms = Date.parse(el.dataset.gvDesde ?? '');
+      return Number.isNaN(ms) ? null : Math.max(0, Math.round((hoy - ms) / 86400000));
+    };
+    panel.querySelectorAll<HTMLElement>('[data-gv-vigente]').forEach((el) => {
+      const dias = diasDe(el);
+      if (dias == null) return;
+      if (el.classList.contains('gv-seg') || el.classList.contains('gv-name')) {
+        const leftPct = parseFloat(el.style.left ?? '0') || 0;
+        el.style.width = `${Math.max(1.5, pct - leftPct).toFixed(2)}%`;
+      }
+      if (el.hasAttribute('data-gv-dias-span')) {
+        el.textContent = ` · ${dias} ${dias === 1 ? 'día' : 'días'} en ejercicio`;
+      }
+    });
+    // Stats (media, más longevo, más breve): los fijos aportan su duración
+    // congelada (data-gv-dias); los vigentes se recalculan con hoy.
+    panel.querySelectorAll<HTMLElement>('.gv-seg').forEach((seg) => {
+      const dias = seg.hasAttribute('data-gv-vigente') ? diasDe(seg) : Number(seg.dataset.gvDias);
+      if (dias != null && !Number.isNaN(dias)) items.push({ nombre: seg.dataset.gvNombre ?? '', dias });
+    });
+    if (items.length) {
+      const prom = Math.round(items.reduce((s, x) => s + x.dias, 0) / items.length);
+      const max = items.reduce((m, x) => (x.dias > m.dias ? x : m));
+      const min = items.reduce((m, x) => (x.dias < m.dias ? x : m));
+      const set = (sel: string, v: string) => {
+        const el = panel.querySelector<HTMLElement>(sel);
+        if (el) el.textContent = v;
+      };
+      set('[data-gv-stat-prom]', String(prom));
+      set('[data-gv-stat-longevo]', max.nombre);
+      set('[data-gv-stat-longevo-dias]', String(max.dias));
+      set('[data-gv-stat-breve]', min.nombre);
+      set('[data-gv-stat-breve-dias]', String(min.dias));
+    }
+    const [y, m, d] = hoyIso.split('-').map(Number);
+    const corte = panel.querySelector<HTMLElement>('[data-gv-corte]');
+    if (corte && y && m && d) corte.textContent = ` · corte al ${d} de ${GV_MESES[m - 1]} de ${y}`;
   }
 
   function gvInitGabinete() {
@@ -510,6 +655,13 @@ function statsGobierno(
         gvApplyGob(id);
         return;
       }
+    });
+
+    // Re-empaquetar nombres al cambiar el ancho del viewport (debounce 120ms).
+    let gvPackTimer: ReturnType<typeof setTimeout> | undefined;
+    window.addEventListener('resize', () => {
+      clearTimeout(gvPackTimer);
+      gvPackTimer = setTimeout(gvPackNames, 120);
     });
 
     // Hover cruzado nombre ↔ segmento: al pasar el mouse sobre un nombre bajo la
@@ -555,36 +707,63 @@ function statsGobierno(
   document.addEventListener('astro:page-load', () => {
     (window as any).__gvGobiernosIds = Array.from(document.querySelectorAll('[data-gv-gob-panel]')).map((el) => el.getAttribute('data-gv-gob-panel'));
     gvInitGabinete();
+    // Refresca "hoy" ANTES del empaquetado de nombres (los anchos cambian).
+    gvRefreshHoy();
+    // Tras el init del toggle, los paneles visibles ya tienen ancho medible.
+    requestAnimationFrame(gvPackNames);
   });
   (window as any).__gvGobiernosIds = Array.from(document.querySelectorAll('[data-gv-gob-panel]')).map((el) => el.getAttribute('data-gv-gob-panel'));
   gvInitGabinete();
+  gvRefreshHoy();
+  requestAnimationFrame(gvPackNames);
 </script>
 
 <style>
-  /* Separación visual entre segmentos consecutivos: línea blanca a la izquierda
-     de todo segmento que no sea el primero, para que dos o más titulares seguidos
-     (p. ej. dos salidas anticipadas rojas) no se fundan en una sola barra. */
+  /* Separación visual entre segmentos consecutivos: línea del color de fondo
+     (base-100 del tema) a la izquierda de todo segmento que no sea el primero,
+     para que dos o más titulares seguidos (p. ej. dos salidas anticipadas rojas)
+     no se fundan en una sola barra. */
   .gv-seg:not(:first-child) {
-    border-left: 2px solid rgba(255, 255, 255, 0.95);
+    border-left: 2px solid var(--color-base-100);
   }
 
   /* Conexión visual nombre ↔ barra: el efecto de hover ocurre en el SEGMENTO de
-     la barra (se oscurece con su color de hover natural, rojo o azul más intenso,
-     igual que si el cursor estuviera sobre la barra), no en el nombre. Además se
-     atenúan los demás segmentos de la misma barra para que se vea cuál corresponde. */
+     la barra (pasa a su color pleno del tema, rojo o azul más intenso, igual que
+     si el cursor estuviera sobre la barra), no en el nombre. Además se atenúan
+     los demás segmentos de la misma barra para que se vea cuál corresponde.
+     OJO: en daisyUI 5 --color-error/--color-primary son colores COMPLETOS
+     (oklch(...)), no canales → usarlos directo, sin oklch(var(...) / a). El
+     selector de clase necesita el / escapado (bg-primary\/70); sin escape la
+     regla es CSS inválido y no aplica (bug real: el highlight nunca se veía). */
   .gv-seg-hl {
     z-index: 5;
   }
   .gv-seg-hl.bg-error\/70 {
-    background-color: oklch(var(--color-error) / 1); /* error = hover natural del segmento */
-    box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.95);
+    background-color: var(--color-error);
+    box-shadow: 0 0 0 1.5px var(--color-base-100);
   }
-  .gv-seg-hl.bg-primary/70 {
-    background-color: #3b82f6; /* blue-500 = hover natural del segmento */
-    box-shadow: 0 0 0 1.5px rgba(255, 255, 255, 0.95);
+  .gv-seg-hl.bg-primary\/70 {
+    background-color: var(--color-primary);
+    box-shadow: 0 0 0 1.5px var(--color-base-100);
   }
   /* El resto de la barra se atenúa mientras un segmento está resaltado. */
   .gv-bar:has(> .gv-seg-hl) > .gv-seg:not(.gv-seg-hl) {
     opacity: 0.3;
+  }
+
+  /* Nombres empaquetados en filas (script gvPackNames): los que bajan a una fila
+     posterior llevan una línea vertical que los conecta con su segmento en la
+     barra (--gv-row = fila, 1rem por fila = leading-4). */
+  .gv-name {
+    --gv-row: 0;
+  }
+  .gv-name.gv-row-deep::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    width: 1px;
+    height: calc(var(--gv-row) * 1rem + 2px);
+    background: color-mix(in oklab, currentColor 40%, transparent);
   }
 </style>

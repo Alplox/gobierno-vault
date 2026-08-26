@@ -36118,3 +36118,204 @@ reddit-2026-08-24-sea-data-center-alto-jahuel:
   fecha: 2026-08-24
   url: https://www.reddit.com/r/chile/comments/1vxdw0e/sea_autoriza_primer_data_center_sin_evaluaci%C3%B3n/
   notas: "Hilo de Reddit r/chile (punto de partida: repostea la nota de El Desconcierto). Rol complementario: documenta la viralización y el framing irónico del caso (comentario más votado, BeWolk, 353 puntos) y la existencia de voces defensoras del proyecto (BraveInformation4787, 50 puntos, califica el titular de sensacionalista) frente a críticos; los comentarios pro-datacenter recibieron downvotes masivos (-10 a -56). Los datos aportados por usuarios (consumos comparados, propiedad de terrenos) NO fueron verificados. Fuente COMPLEMENTARIA: el hecho noticioso está cubierto por LaBot, El Desconcierto y Fundación Terram."
+minrel-2026-08-22-comunicado-cierre-embajada-iran:
+  tipo: documento
+  medio: Ministerio de Relaciones Exteriores
+  titulo: "Comunicado de prensa: término de las funciones y actividades de la Embajada de Chile en la República Islámica de Irán"
+  autor: Ministerio de Relaciones Exteriores
+  fecha: 2026-08-22
+  url: https://www.minrel.gob.cl/sala-de-prensa/comunicado-de-prensa-22-08-26
+  notas: "Comunicado oficial de Cancillería (sábado 22-ago-2026): cierre efectivo desde el 31-ago-2026; reordenamiento operativo y consideraciones preventivas por factores de seguridad en Medio Oriente; trámites consulares reasignados al Consulado en Ankara (Türkiye); 'el cierre de la embajada no implica el cese de las relaciones diplomáticas'. BioBioChile replicó el PDF del comunicado embebido en su nota. Verificado por lectura directa."
+biobiochile-2026-08-22-cierre-embajada-iran:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno de Kast decreta cierre de embajada en Irán: \"No implica cese de las relaciones diplomáticas\""
+  autor: Agencia UNO
+  fecha: 2026-08-22
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/22/gobierno-de-kast-decreta-cierre-de-embajada-en-iran-no-implica-cese-de-las-relaciones-diplomaticas.shtml
+  notas: "Nota de la Agencia UNO replicada por BioBioChile, con el PDF del comunicado del Minrel embebido. Fuente entregada por el usuario; verificada contra el comunicado oficial (minrel-2026-08-22-comunicado-cierre-embajada-iran)."
+emol-2026-08-22-cierre-embajada-iran:
+  tipo: prensa
+  medio: Emol
+  titulo: "Buscando \"optimizar recursos\": Gobierno anuncia el cierre de la Embajada de Chile en Irán"
+  autor: María Luisa Cisternas
+  fecha: 2026-08-22
+  url: https://www.emol.com/noticias/Nacional/2026/08/22/1209278/gobierno-pone-fin-mision-iran.html
+  notas: "Emol consignó una minuta del Gobierno con argumentos adicionales al comunicado: decisión 'debidamente informada' (nota diplomática entregada por la Cancillería al encargado de negocios de Irán), actuaciones consulares reducidas por la mínima comunidad chilena residente, panorama económico iraní deteriorado que no justifica mantener la operación por eficiencia administrativa, riesgo a la integridad de funcionarios y sus familias, y antecedente de medidas similares de otras delegaciones como México o Uruguay. Verificado por lectura directa."
+latercera-2026-08-22-retira-embajada-iran:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Gobierno retira embajada de Chile en Irán por “factores de seguridad” y “reordenamiento operativo”"
+  autor: Javiera Ortiz
+  fecha: 2026-08-22
+  url: https://www.latercera.com/nacional/noticia/gobierno-retira-embajada-de-chile-en-iran-por-factores-de-seguridad-y-reordenamiento-operativo/
+  notas: "La Tercera detalla la minuta de Cancillería: reducidas actuaciones consulares por la baja cantidad de chilenos residentes, panorama económico iraní deteriorado, situación de 'seguridad extrema' que pone en riesgo a funcionarios y familias, y el contexto de término de relaciones entre Irán y otras delegaciones diplomáticas que adoptaron medidas similares. Verificado por lectura directa."
+theclinic-2026-08-22-cierra-embajada-iran:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Chile cierra su embajada en Irán: Cancillería apunta a un “reordenamiento operativo” y a consideraciones preventivas por la situación en Medio Oriente"
+  autor: Pablo Serey
+  fecha: 2026-08-22
+  url: https://www.theclinic.cl/2026/08/22/chile-cierra-su-embajada-en-iran-cancilleria-apunta-a-un-reordenamiento-operativo-y-consideraciones-preventivas-por-la-situacion-en-medio-oriente/
+  notas: "Replica íntegra el comunicado oficial y enlaza a la fuente primaria del Minrel. Cobertura adicional para reducir sesgo."
+eldinamo-2026-08-22-argumentos-cierre-embajada-iran:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "A partir del 31 de agosto: los argumentos del Gobierno para cerrar la Embajada de Chile en Irán"
+  autor: Rodrigo León
+  fecha: 2026-08-22
+  url: https://www.eldinamo.cl/politica/2026/08/22/a-partir-del-31-de-agosto-los-argumentos-del-gobierno-para-cerrar-la-embajada-de-chile-en-iran/
+  notas: "Sintetiza el comunicado y la minuta reportada por Emol (nota diplomática al encargado de negocios de Irán, comunidad chilena mínima, conflicto con Estados Unidos como trasfondo de seguridad). Enlaza además los precedentes del cierre temporal ordenado por La Moneda de Boric tras el ataque de Israel (jun-2025) y la preocupación de La Moneda por la escalada militar en Medio Oriente (28-feb-2026)."
+radiouchile-2026-08-22-cierra-embajada-iran:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Chile cierra su embajada en Irán por razones de reordenamiento y seguridad"
+  autor: Diario UChile
+  fecha: 2026-08-22
+  url: https://radio.uchile.cl/2026/08/22/chile-cierra-su-embajada-en-iran-por-razones-de-reordenamiento-y-seguridad/
+  notas: "Cobertura adicional que replica el comunicado oficial: cierre efectivo desde el 31-ago, trámites consulares trasladados a Ankara y mantención de las relaciones diplomáticas."
+gobcl-2025-10-10-fiestas-patrias-teheran:
+  tipo: institucional
+  medio: Gobierno de Chile
+  titulo: "Embajada de Chile en Irán celebra las Fiestas Patrias"
+  autor: Chile en el Exterior (Ministerio de Relaciones Exteriores)
+  fecha: 2025-10-10
+  url: https://www.chile.gob.cl/iran/noticias/embajada-de-chile-en-iran-celebra-las-fiestas-patrias
+  notas: "Registro oficial del sitio Chile en el Exterior: celebración del 28-sep-2025 en Teherán con ~120 invitados (cuerpo diplomático residente), recibidos por el encargado de negocios a.i. Sergio Toro Mendoza y el jefe de Cancillería Jorge Riquelme. Evidencia de que la embajada había retomado su operación normal tras el cierre temporal de junio de 2025 (ataque de Israel) hasta el anuncio del cierre definitivo de agosto de 2026."
+eldinamo-2025-06-17-cierre-temporal-teheran:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Tras ataque de Israel: La Moneda ordena cierre temporal de la embajada en Irán"
+  autor: Juan Pablo Ernst
+  fecha: 2025-06-17
+  url: https://www.eldinamo.cl/mundo/2025/06/17/tras-ataque-de-israel-la-moneda-ordena-cierre-temporal-de-la-embajada-en-iran/
+  notas: "El gobierno de Boric determinó cerrar temporalmente la embajada en Teherán y evacuar al personal diplomático tras el ataque israelí; solo permaneció el encargado de negocios Sergio Toro Mendoza ('hace tiempo nuestro país no cuenta con embajador en Irán'). Cita a La Tercera para la evacuación por tierra de un funcionario profesional con su familia. Contexto regional: Argentina, Brasil, Bolivia, México, Uruguay también replegaron; Cuba y Nicaragua lo harían el fin de semana. Verificado por lectura directa."
+emol-2025-06-18-mision-diplomatica-chile-iran:
+  tipo: prensa
+  medio: Emol
+  titulo: "Sin embajador y ubicada en exclusivo barrio de Teherán: La misión diplomática chilena retirada de Irán"
+  autor: Sofía Campos
+  fecha: 2025-06-18
+  url: https://www.emol.com/noticias/Nacional/2025/06/18/1169687/embajada-chile-iran-cierre-temporal.html
+  notas: "Detalle de la misión: comunicado del Minrel ('nuestra misión se cerró temporalmente ante las actuales condiciones de seguridad'), cierre al quinto día de ataques israelíes; embajada en calle Hormoz (Khazar Shomali/Shariati) y residencia oficial en barrio Elahieh. Permanecieron el encargado de negocios Sergio Toro Mendoza (en el cargo desde ago-2022) y cuatro funcionarios locales; jefe de Cancillería Jorge Riquelme. Servicios que prestaba: visas, pasaportes, notarial, legalizaciones y emergencias. Chile se sumó a Argentina, México, Brasil, Bolivia, Uruguay y Rusia; Cuba y Nicaragua evacuarían antes del fin de semana. Verificado por lectura directa."
+cnnchile-2025-06-17-cierre-embajada-iran:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Chile ordena el cierre de su embajada en Irán en medio de tensiones bélicas con Israel"
+  autor: CNN Chile
+  fecha: 2025-06-17
+  url: https://www.cnnchile.com/mundo/chile-ordena-cierre-embajada-iran-tensiones-belica-israel/
+  notas: "Medida preventiva ante el deterioro de las condiciones de seguridad; encargado de negocios permanece en Teherán por ausencia prolongada de embajador; un funcionario fue evacuado por tierra junto a su familia (cita Teletrece). Contexto de repliegue diplomático latinoamericano (Infobae). Verificado por lectura directa."
+radiopaulina-2025-06-18-cierre-temporal-iran:
+  tipo: prensa
+  medio: Radio Paulina
+  titulo: "Gobierno confirma cierre temporal de su embajada en Irán por escalada en conflicto con Israel"
+  autor: Álex Choque Challapa
+  fecha: 2025-06-18
+  url: https://radiopaulina.cl/2025/06/18/gobierno-confirma-cierre-temporal-de-su-embajada-en-iran-por-escalada-en-conflicto-con-israel/
+  notas: "Confirma la evacuación del personal dejando solo al encargado de negocios y replica las citas oficiales ('el encargado de negocios de Chile en Irán sigue en Teherán'; 'hace tiempo nuestro país no cuenta con embajador en Irán'). Cobertura adicional anti-sesgo."
+elmaipo-2025-06-18-retiro-personal-embajada-iran:
+  tipo: prensa
+  medio: El Maipo
+  titulo: "Gobierno retira temporalmente el personal de la embajada chilena en Irán"
+  autor: El Maipo/PL
+  fecha: 2025-06-18
+  url: https://elmaipo.cl/gobierno-retira-temporalmente-el-personal-de-la-embajada-chilena-en-iran/
+  notas: "Versión basada en Prensa Latina: funcionario de Cancillería salió por tierra hacia otro país junto a su familia; quedó solo el encargado de negocios ante la falta histórica de embajador. Contexto del ataque israelí del viernes 13-jun-2025 sin declaración de guerra (~250 muertos y más de mil heridos en Irán; 24 muertos en Israel según balance preliminar citado)."
+24horas-2026-08-19-kaiser-cambio-regimen-totalitario:
+  tipo: entrevista
+  medio: 24 Horas
+  titulo: "Senadora Kaiser y limitación de libertades propuesto en reforma: 'Es un cambio de régimen, de uno democrático a otro totalitario'"
+  autor: 24 Horas
+  fecha: 2026-08-19
+  url: https://www.24horas.cl/programas/noticias-24/senadora-kaiser-y-limitacion-de-libertades-propuesto-en-reforma-regimen
+  notas: "Entrevista de Vanessa Kaiser (PNL) en Noticias 24 (Canal 24 Horas), difundida el miércoles 19-ago-2026. Fuente primaria de las declaraciones sobre la reforma constitucional de seguridad; replicada por La Tercera el mismo día. Verificada vía catálogo de sitemaps + fetch directo del titular."
+
+latercera-2026-08-19-kaiser-cambio-regimen-totalitario:
+  tipo: noticia
+  medio: La Tercera
+  titulo: "Vanessa Kaiser cuestiona restricciones a libertades en reforma de seguridad de Kast: 'Estaríamos viviendo en un totalitarismo'"
+  autor: Rodrigo Gómez S.
+  fecha: 2026-08-19
+  url: https://www.latercera.com/politica/noticia/vanessa-kaiser-cuestiona-restricciones-a-libertades-en-reforma-de-seguridad-de-kast-estariamos-viviendo-en-un-totalitarismo/
+  notas: "Replica de La Tercera de la entrevista de Kaiser en 24 Horas; añade contexto sobre la extensión semanal de la vigencia del estado de emergencia en La Araucanía y la admisión de que el gobierno no cuenta hoy con los votos."
+
+reddit-rchile-2026-08-20-kaiser-totalitarismo-comunidad:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Vanessa Kaiser cuestiona restricciones a libertades en reforma de seguridad de Kast (hilo)"
+  autor: u/polo89090
+  fecha: 2026-08-20
+  url: https://old.reddit.com/r/chile/comments/1vt6560/vanessa_kaiser_cuestiona_restricciones_a/
+  notas: "Registro complementario de reacción ciudadana a la entrevista; los hechos están cubiertos por 24 Horas y La Tercera. El comentario top documenta la lectura de táctica negociadora por los indultos."
+eldinamo-2026-08-20-ejecutivo-estudia-plebiscito-reforma-seguridad:
+  tipo: noticia
+  medio: El Dínamo
+  titulo: "Ejecutivo estudia opción de llamar a plebiscito si el Congreso rechaza la reforma de seguridad"
+  autor: Juan Pablo Ernst
+  fecha: 2026-08-20
+  url: https://www.eldinamo.cl/politica/2026/08/20/ejecutivo-estudia-opcion-de-llamar-a-plebiscito-si-el-congreso-rechaza-la-reforma-de-seguridad/
+  notas: "Reporte matinal del 20-ago: La Moneda estaría planteando la posibilidad de plebiscitar la reforma ante el eventual rechazo (26 apoyos vs 29 requeridos); costo estimado ~12 mil millones de pesos; arista política de 'sacar al pizarrón' a la oposición; Iván Moreira (UDI) en contra; reunión con constitucionalistas anunciada para el lunes siguiente."
+
+emol-2026-08-20-plebiscito-debate-oficialismo:
+  tipo: entrevista
+  medio: Emol
+  titulo: "Convocar plebiscito debate oficialismo seguridad"
+  autor: El Mercurio
+  fecha: 2026-08-20
+  url: https://www.emol.com/noticias/Nacional/2026/08/20/1209034/convocar-plebiscito-debate-oficialismo-seguridad.html
+  notas: "Versión digital de la entrevista de El Mercurio (20-ago) en que Arturo Squella, presidente de Republicanos, abre la opción plebiscitaria: '(el plebiscito) es una opción que no se puede descartar. El sentido más profundo de la reforma es ajustar las normas a la exigencia de la ciudadanía'. Fuente original citada por El Dínamo, CNN Chile y The Clinic."
+
+emol-2026-08-20-plebiscito-expertos-constitucionales:
+  tipo: analisis
+  medio: Emol
+  titulo: "Convocar plebiscito seguridad expertos constitucionales"
+  autor: Emol
+  fecha: 2026-08-20
+  url: https://www.emol.com/noticias/Nacional/2026/08/20/1209036/convocar-plebiscito-seguridad-expertos-constitucionales.html
+  notas: "Nota complementaria de Emol del 20-ago sobre las dudas constitucionalistas frente a la vía plebiscitaria. URL registrada según catálogo de sitemaps; verificar redirección al usarla."
+
+cnnchile-2026-08-20-ruminot-alvarado-descartan-plebiscito:
+  tipo: declaracion
+  medio: CNN Chile
+  titulo: "Ministros Ruminot y Alvarado descartan llamar a plebiscito por reforma de seguridad: Timonel republicano aseguró que es una opción que 'no se puede descartar'"
+  autor: Carlos Reyes Piérola
+  fecha: 2026-08-20
+  url: https://www.cnnchile.com/pais/ministros-ruminot-y-alvarado-descartan-llamar-a-plebiscito-por-reforma-de-seguridad-timonel-republicano-aseguro-que-es-una-opcion-que-no-se-puede-descartar/
+  notas: "Desmentidos ministeriales de la tarde del 20-ago: García Ruminot (Segpres): 'no hay norma constitucional que permita llamar a plebiscito en esta etapa'; Alvarado (Interior-Segegob): 'El gobierno no ha pensado ni está pensando en un plebiscito' + 'no es una información que haya salido del Ejecutivo'."
+
+theclinic-2026-08-20-auge-caida-idea-plebiscito:
+  tipo: analisis
+  medio: The Clinic
+  titulo: "El auge y caída de la idea de llamar a plebiscito en caso de rechazo a la reforma de seguridad de Kast"
+  autor: Eduardo Monrroy
+  fecha: 2026-08-20
+  url: https://www.theclinic.cl/2026/08/20/el-auge-y-caida-de-la-idea-de-llamar-a-plebiscito-en-caso-de-rechazo-a-la-reforma-de-seguridad-de-kast/
+  notas: "Síntesis del ciclo completo del día: apertura de Squella, desmentido de Alvarado, desconocimiento de Arrau, Schalper ('no hablemos tonteras'), 'polémica ficticia' según Republicanos, y aclaración de expertos (Undurraga, Sánchez, Soto): el art. 128 CPR procede solo ante veto presidencial total e insistencia de 2/3, no ante rechazo del Congreso al proyecto del Ejecutivo."
+
+latercera-2026-08-20-plebiscito-enreda-oficialismo:
+  tipo: nota
+  medio: La Tercera
+  titulo: "Idea de un plebiscito por reforma de seguridad enreda más al oficialismo y La Moneda sale a quitarle piso"
+  autor: ""
+  fecha: 2026-08-20
+  url: https://www.latercera.com/politica/noticia/idea-de-un-plebisicto-por-reforma-de-seguridad-enreda-mas-al-oficialismo-y-la-moneda-sale-a-quitarle-piso/
+  notas: "Cobertura de La Tercera del 20-ago sobre el desorden interno que generó la idea plebiscitaria y la salida del gobierno a desmarcarse. Verificada vía catálogo de sitemaps."
+
+reddit-rchile-2026-08-20-plebiscito-seguridad-comunidad:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Ejecutivo estudia opción de llamar a plebiscito si el Congreso rechaza la reforma de seguridad (hilo)"
+  autor: u/JoseAntonioBoric
+  fecha: 2026-08-20
+  url: https://old.reddit.com/r/chile/comments/1vtlsw8/ejecutivo_estudia_opci%C3%B3n_de_llamar_a_plebiscito/
+  notas: "Registro complementario de reacción ciudadana; los hechos están cubiertos por prensa. El comentario top (182 puntos) anticipó la objeción técnica que validaron los constitucionalistas: el Presidente no puede convocar plebiscito unilateralmente bajo la Constitución de 1980."
+
+reddit-republicadechile-2026-08-20-plebiscito-seguridad-comunidad:
+  tipo: redes
+  medio: Reddit r/RepublicadeChile
+  titulo: "Ejecutivo estudia opción de llamar a plebiscito si el Congreso rechaza la reforma de seguridad (hilo)"
+  autor: u/ItsOverGuaton
+  fecha: 2026-08-20
+  url: https://old.reddit.com/r/RepublicadeChile/comments/1vtrias/ejecutivo_estudia_opci%C3%B3n_de_llamar_a_plebiscito/
+  notas: "Registro complementario de reacción ciudadana en el segundo subreddit; crítica transversal a la idea plebiscitaria desde veredas opuestas (lectura de manipulación de la pregunta y comparación con el plebiscito de 1978)."

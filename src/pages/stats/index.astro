@@ -61,7 +61,7 @@ const conceptos = [...byConcepto.entries()].sort((a, b) => b[1].entries.length -
               {conceptos.map(([concepto, data]) => {
                 const total = data.entries.reduce((sum, e) => sum + e.valor, 0);
                 return (
-                  <tr class="hover:bg-primary/10/30 transition-colors">
+                  <tr class="hover:bg-primary/10 transition-colors">
                     <td class="sticky left-0 bg-base-100 py-3 px-4">
                       <a href={`/stats/${concepto}`} class="inline-flex items-center gap-1.5 text-primary hover:text-primary font-semibold group">
                         <span>{data.nombre}</span>

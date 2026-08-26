@@ -1314,6 +1314,7 @@
 - [2026/08/20260818-8 - Comisión investigadora del estallido social cierra sin identificar instigadores y aprueba informe del PNL apuntando a Piñera e INDH](src/content/events/2026/08/20260818-8.md) — 1 fuente
 - [2026/08/20260818-9 - Gobierno pone la lupa sobre la PGU antes del Presupuesto 2027: revisarán lista de 2,2 millones de beneficiarios](src/content/events/2026/08/20260818-9.md) — 1 fuente
 - [2026/08/20260819-1 - Revelan que pareja de exministra Mara Sedini es accionista del dispensario de cannabis ligado a la Operación Imperio Ámsterdam](src/content/events/2026/08/20260819-1.md) — 9 fuentes
+- [2026/08/20260819-10 - Vanessa Kaiser advierte que la reforma de seguridad podría instaurar un "totalitarismo": "Cambiamos del régimen democrático a uno totalitario"](src/content/events/2026/08/20260819-10.md) — 3 fuentes
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
@@ -1321,13 +1322,13 @@
 - [2026/08/20260819-6 - Centro de Estudiantes del Liceo Rayen Mapu denuncia que Carabineros obligó a dos alumnos a desvestirse frente a sus compañeros tras sospecha de robo de celular](src/content/events/2026/08/20260819-6.md) — 5 fuentes
 - [2026/08/20260819-7 - Kast cierra gira por el norte en mesa técnica en Iquique sin compromisos de inversión; gobernador Carvajal critica el resultado y pide zona de catástrofe](src/content/events/2026/08/20260819-7.md) — 5 fuentes
 - [2026/08/20260819-8 - Incidentes frente al Liceo Lastarria: 'overoles blancos' cortan avenida Providencia y lanzan bombas molotov contra Carabineros](src/content/events/2026/08/20260819-8.md) — 5 fuentes
-- [2026/08/20260819-9 - Urrutia y Vanessa Kaiser condicionan la reforma de seguridad al indulto general; Johannes Kaiser niega extorsión pero mantiene la exigencia](src/content/events/2026/08/20260819-9.md) — 5 fuentes
+- [2026/08/20260819-9 - Urrutia y Vanessa Kaiser condicionan la reforma de seguridad al indulto general; Johannes Kaiser niega extorsión pero mantiene la exigencia](src/content/events/2026/08/20260819-9.md) — 6 fuentes
 - [2026/08/20260820-1 - Defensoría de la Niñez presenta denuncia ante la Fiscalía por procedimiento policial contra estudiantes del Liceo Rayen Mapu de Quellón](src/content/events/2026/08/20260820-1.md) — 3 fuentes
 - [2026/08/20260820-10 - Entra en vigencia el registro obligatorio de números prepago: fin de los teléfonos anónimos en Chile](src/content/events/2026/08/20260820-10.md) — 10 fuentes
 - [2026/08/20260820-11 - Ministra Lincolao plantea que profesores pueden reconvertirse en 'vendedores o servicio al cliente' de la IA; Colegio de Profesores RM responde que es 'una falta de respeto'](src/content/events/2026/08/20260820-11.md) — 9 fuentes
 - [2026/08/20260820-12 - Oposición impulsa comisión investigadora por eventuales conflictos de interés del ministro Quiroz en el plan contra la 'permisología'](src/content/events/2026/08/20260820-12.md) — 5 fuentes
 - [2026/08/20260820-13 - Hacienda constituye la mesa de reconstrucción de Coquimbo y Atacama y anuncia fondo financiado con venta de activos fiscales](src/content/events/2026/08/20260820-13.md) — 2 fuentes
-- [2026/08/20260820-14 - Kast descarta plebiscito y defiende reforma de seguridad: 'La libertad en Chile ha sido restringida por el crimen organizado'](src/content/events/2026/08/20260820-14.md) — 6 fuentes
+- [2026/08/20260820-14 - Kast descarta plebiscito y defiende reforma de seguridad: 'La libertad en Chile ha sido restringida por el crimen organizado'](src/content/events/2026/08/20260820-14.md) — 7 fuentes
 - [2026/08/20260820-15 - CEPAL rebaja a 1,6% el crecimiento proyectado de Chile para 2026 en su Estudio Económico anual](src/content/events/2026/08/20260820-15.md) — 5 fuentes
 - [2026/08/20260820-16 - Ministra Toledo defiende en Radio ADN el retiro de 43 decretos ambientales: "fue la mejor decisión que pudimos haber tomado"](src/content/events/2026/08/20260820-16.md) — 5 fuentes
 - [2026/08/20260820-17 - Eduardo Engel: 'Cuesta entender por qué el Gobierno no ha querido hacer nada con el secreto bancario' y advierte que el nuevo estado de excepción es propio de una 'democracia iliberal'](src/content/events/2026/08/20260820-17.md) — 1 fuente
@@ -1337,6 +1338,7 @@
 - [2026/08/20260820-20 - Detienen a alumno de cuarto medio del Instituto Nacional como autor de la amenaza de tiroteo que suspendió clases en junio: 25 municiones, morfina y material anarquista incautados en La Pintana](src/content/events/2026/08/20260820-20.md) — 2 fuentes
 - [2026/08/20260820-21 - Squella y Longton anuncian indicaciones conjuntas al estado de excepción de seguridad: acuerdo del Congreso desde el inicio, revisión cada 30 días y dejar fuera las comunicaciones](src/content/events/2026/08/20260820-21.md) — 5 fuentes
 - [2026/08/20260820-22 - Organizaciones piden a la CIDH exigir explicaciones a Chile por el decreto que habilita data centers sin evaluación ambiental](src/content/events/2026/08/20260820-22.md) — 4 fuentes
+- [2026/08/20260820-23 - El auge y caída de la idea de plebiscitar la reforma de seguridad: Squella la abre, se reporta que La Moneda la estudia y el gobierno la desmiente horas después](src/content/events/2026/08/20260820-23.md) — 8 fuentes
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 13 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
 - [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — 1 fuente
@@ -1357,6 +1359,7 @@
 - [2026/08/20260821-9 - La doble función de la asesora legislativa de Lincolao: CEO de consultora de IA y ciberseguridad mientras coordina la tramitación de la Ley de IA](src/content/events/2026/08/20260821-9.md) — 1 fuente
 - [2026/08/20260822-1 - Marcha Nacional contra los Retrocesos Ambientales y por los Animales: movilizaciones en Santiago y regiones contra las políticas ambientales de Kast](src/content/events/2026/08/20260822-1.md) — 7 fuentes
 - [2026/08/20260822-2 - Interno gravemente herido con elemento cortopunzante en La Laguna de Talca: primer incidente grave en el penal de los traslados de Cancerbero](src/content/events/2026/08/20260822-2.md) — 1 fuente
+- [2026/08/20260822-3 - Cancillería anuncia el cierre de la embajada de Chile en Irán desde el 31 de agosto: 'no implica el cese de las relaciones diplomáticas'](src/content/events/2026/08/20260822-3.md) — 8 fuentes
 - [2026/08/20260823-1 - Alvarado defiende en Mesa Central la reforma de seguridad, niega que habilite detenciones sin orden judicial y minimiza el paralelo con Orbán](src/content/events/2026/08/20260823-1.md) — 6 fuentes
 - [2026/08/20260823-2 - Ministro de Defensa Barros pide que Chile salga del Convenio 169 de la OIT y 'deshacerse' de la Ley Lafkenche: La Moneda cierra la puerta y el Congreso exige orden](src/content/events/2026/08/20260823-2.md) — 10 fuentes
 - [2026/08/20260823-3 - Cadem edición 683: aprobación de Kast sube a 40% pero 51% pide retirar la reforma de seguridad para buscar acuerdos, 61% exige autorización del Congreso y 55% renovación mensual del estado de excepción](src/content/events/2026/08/20260823-3.md) — 8 fuentes
@@ -1390,6 +1393,7 @@
 - [2025/05/20250527-1 - Papaya Gate: formalizan a la exintendenta Lucía Pinto y a otros tres imputados por fraude al fisco](src/content/events/2025/05/20250527-1.md) — 1 fuente
 - [2025/06/20250601-1 - Cuarta y última Cuenta Pública de Boric: reforma de pensiones, sueldo mínimo de $539 mil, aborto con plazos y Punta Peuco como penal común](src/content/events/2025/06/20250601-1.md) — 12 fuentes
 - [2025/06/20250608-1 - El 'método Kast': la estrategia de campaña que lo mantiene en empate técnico con Matthei](src/content/events/2025/06/20250608-1.md) — 1 fuente
+- [2025/06/20250617-1 - Gobierno de Boric ordena cierre temporal de la embajada en Teherán y evacua personal diplomático tras el ataque de Israel a Irán](src/content/events/2025/06/20250617-1.md) — 7 fuentes
 - [2025/06/20250629-1 - Primarias presidenciales 2025: Jeannette Jara gana la primaria de Unidad por Chile](src/content/events/2025/06/20250629-1.md) — 3 fuentes
 - [2025/07/20250708-1 - Se promulga la Ley 21.755: rebaja del impuesto de primera categoría de las pymes al 12,5%](src/content/events/2025/07/20250708-1.md) — 3 fuentes
 - [2025/07/20250710-1 - Exgobernador Rivas declara ante la Fiscalía que 'no se percató' de los $9 mil millones visados a Fundación Local, presidida por su compadre](src/content/events/2025/07/20250710-1.md) — 3 fuentes

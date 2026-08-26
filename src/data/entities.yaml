@@ -14121,6 +14121,14 @@ people:
     cargo: Presidente ejecutivo de la Asociación de Empresas de Gas Natural
     organizacion: asociacion_gas_natural
     notas: "Presidente ejecutivo del gremio de las distribuidoras de gas por redes. Tras el fallo del TC que mantuvo el artículo 31 de la megarreforma advirtió que el plazo de 48 horas para reconexión es 'imposible de cumplir resguardando la seguridad de todas las personas' (evento 20260825-1)."
+  sergio_toro_mendoza:
+    nombre: Sergio Toro Mendoza
+    cargo: Encargado de negocios a.i. de Chile en Irán (desde agosto 2022)
+    notas: "Abogado (Universidad de Valparaíso) y diplomático de carrera desde 1994 (Academia Diplomática Andrés Bello). Magíster en Derecho del European University Institute (1999) y Master en Administración Pública de Harvard Kennedy School (2015). Destinado en China (1999-2003), EE.UU. (2006-2009), la Misión ante Naciones Unidas (2011-2015) y la Misión ante la OMC/OMPI/UNCTAD/CCI en Ginebra (2018-2021). Encargado de Negocios a.i. en Teherán desde agosto de 2022; permaneció al frente de la legación durante el cierre temporal ordenado tras el ataque israelí a Irán (jun-2025, evento 20250617-1) y recibió la nota diplomática del cierre definitivo bajo el gobierno de Kast (ago-2026, evento 20260822-3)."
+  jorge_riquelme_iran:
+    nombre: Jorge Riquelme
+    cargo: Jefe de Cancillería de la embajada de Chile en Irán (2025)
+    notas: "Analista político; magíster en Estudios Internacionales (Universidad de Chile) y en Ciencias Militares (Academia de Guerra); doctor en Relaciones Internacionales (Universidad Nacional de La Plata). En el Minrel se desempeñó como analista de la División de Política Multilateral y jefe del Departamento de Defensa, Asuntos Estratégicos y Operaciones de Paz. Recibió junto a Toro Mendoza a los invitados a la celebración de Fiestas Patrias en Teherán (28-sep-2025)."
 organizations:
   cut_chile:
     nombre: Central Unitaria de Trabajadores
@@ -19036,6 +19044,10 @@ organizations:
     notas: "Consultora chilena especializada en protección de datos personales, ciberseguridad, inteligencia artificial y regulación tecnológica; su CEO es Catherine Muñoz Gutiérrez, asesora legislativa del Ministerio de Ciencias, lo que motivó cuestionamientos de doble función durante la tramitación de la Ley de IA (The Clinic, agosto 2026; evento 20260821-9)."
 
 cifras:
+  invitados_fiestas_patrias_teheran:
+    nombre: Asistentes a la celebración de Fiestas Patrias de la embajada de Chile en Teherán (28-sep-2025)
+    unidad_default: personas
+    notas: "Unas 120 personas, principalmente miembros del cuerpo diplomático residente en Irán, recibidas por el encargado de negocios a.i. Sergio Toro Mendoza y el jefe de Cancillería Jorge Riquelme (registro oficial 'Chile en el Exterior' del Minrel)."
   deficit_subvenciones_escolares_cataldo:
     nombre: Déficit estimado de subvenciones escolares según la administración saliente (Cataldo), denunciado por la ministra Arzola (marzo 2026)
     unidad_default: mil_millones_de_pesos
@@ -19940,6 +19952,10 @@ cifras:
     nombre: Piso de votos oficialistas en el Senado para la reforma de seguridad
     unidad_default: senadores
     notas: "26 apoyos es el piso histórico del oficialismo en la Cámara Alta tras la megarreforma económica, según The Clinic (20-ago-2026); 'ni siquiera hoy aparecen como seguros' ante los descuelgues de Vanessa Kaiser (PNL) y la indecisión de independientes."
+  costo_plebiscito_reforma_seguridad:
+    nombre: Costo fiscal estimado de un plebiscito sobre la reforma de seguridad
+    unidad_default: millones_de_pesos
+    notas: "~12.000 millones de pesos sería el costo para el Estado de un plebiscito sobre la reforma constitucional de seguridad, según el análisis interno del Ejecutivo recogido por El Dínamo (20-ago-2026), 'en momentos en que los recursos son escasos para el fisco'."
   limite_exposicion_gas_cs_2020:
     nombre: Límite de exposición al gas CS según el manual de Carabineros
     unidad_default: mg_m3
