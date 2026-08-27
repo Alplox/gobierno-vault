@@ -62,7 +62,9 @@ function init() {
   const MAX_LABEL = isMini ? 28 : 42;
   const FONT_SIZE = isMini ? 9 : 11;
 
-  // Hide static SVG fallback
+  // Hide skeleton / static SVG fallback (skeleton reemplaza al SVG solapado, se oculta al crear el SVG interactivo)
+  const skeleton = container.querySelector('[data-graph-skeleton]');
+  if (skeleton) skeleton.style.display = 'none';
   const staticSvg = container.querySelector('svg');
   if (staticSvg) staticSvg.style.display = 'none';
 
@@ -422,23 +424,24 @@ function init() {
     }
     if (!isFinite(minX) || !isFinite(maxX) || !isFinite(minY) || !isFinite(maxY)) return;
     const pad = 48;
-    const r = svgRect();
-    const vw = r.width || W;
-    const vh = r.height || H;
+    // Usar dimensiones del viewBox (W/H), no CSS px de getBoundingClientRect:
+    // el transform translate/scale vive en coordenadas del viewBox y el viewBox
+    // ya escala al contenedor via SVG. Usar vw/vh CSS mezclaba unidades y dejaba
+    // nodos fuera o con zoom excesivo en mini (W=800 vs vw~360 en movil).
     const bw = (maxX - minX) || 1;
     const bh = (maxY - minY) || 1;
-    const ns = Math.min(Math.max(Math.min((vw - pad * 2) / bw, (vh - pad * 2) / bh), 0.1), 1);
-    tx = (vw - (minX + maxX) * ns) / 2;
-    ty = (vh - (minY + maxY) * ns) / 2;
+    // Permitir scale muy pequeño para grafos densos (mini con 800+ nodos llega a bw>120k).
+    // El clamp anterior 0.1 impedía encuadrar: a 0.1 aún quedaban nodos a 60k fuera de W=800.
+    const raw = Math.min((W - pad * 2) / bw, (H - pad * 2) / bh);
+    const ns = Math.min(Math.max(raw, 0.005), isMini ? 1 : 1.5);
+    tx = (W - (minX + maxX) * ns) / 2;
+    ty = (H - (minY + maxY) * ns) / 2;
     scale = ns;
     applyTransform();
   }
 
-  // Encuadre inicial tras el primer asentamiento de la simulación y al cambiar
-  // el tamaño del contenedor (rotación de pantalla en móvil) — SOLO si el
-  // usuario no movió la vista: el scroll de página dispara resize (barra URL
-  // móvil, scrollbar desktop) y resetear el pan/zoom aquí lo deshacía.
-  setTimeout(fitView, 400);
+  // Encuadre inicial: solo al asentarse la simulación (evita fit intermedio que queda desactualizado cuando la simulación sigue dispersando).
+  // El skeleton cubre el flash inicial. El resize sí re-encuadra si el usuario no movió la vista.
   addWindowListener('resize', () => { if (!userMovedView) setTimeout(fitView, 150); });
 
   // Tooltip
@@ -579,8 +582,14 @@ function init() {
     cleanupFns.push(() => zoomOut.removeEventListener('click', onZoomOut));
   }
   if (zoomReset) {
-    // El reset re-encuadra todos los nodos (mejor que volver a 1,0,0 en móvil).
-    const onZoomReset = () => fitView();
+    // El reset congela la simulación y re-encuadra: sin esto la simulación sigue dispersando nodos tras el fit y el usuario necesita alejar para verlos (reporte actual).
+    const onZoomReset = () => {
+      userMovedView = false;
+      didFitOnce = true;
+      simulation.stop();
+      fitView();
+      setTimeout(fitView, 50);
+    };
     zoomReset.addEventListener('click', onZoomReset);
     cleanupFns.push(() => zoomReset.removeEventListener('click', onZoomReset));
   }

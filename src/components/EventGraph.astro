@@ -18,7 +18,7 @@ const edgeColorMap: Record<string, string> = {
   actualiza: '#3b82f6', mismo_contexto: '#a8a29e',
 };
 
-// Filter for mini mode: last 3 months + their direct connections
+// Filter for mini mode: last 3 months + their direct connections (capado para no desbordar el viewport mini 800x280)
 let graphEvents = events;
 if (size === 'mini' && events.length > 0) {
   const now = new Date();
@@ -29,7 +29,7 @@ if (size === 'mini' && events.length > 0) {
       recentIds.add(eventBasename(e.id));
     }
   }
-  // Also include events that connect to/from recent ones
+  // También incluir eventos que conectan con los recientes, pero limitar para que el mini no intente renderizar 800+ nodos (visto 833 -> bw 120k -> scale 0.005 ilegible y fuera de vista)
   const connectedIds = new Set<string>();
   for (const id of recentIds) {
     const conn = connectionIndex.get(id);
@@ -39,7 +39,29 @@ if (size === 'mini' && events.length > 0) {
     }
   }
   const allRelevantIds = new Set([...recentIds, ...connectedIds]);
-  graphEvents = events.filter((e) => allRelevantIds.has(eventBasename(e.id)));
+  let filtered = events.filter((e) => allRelevantIds.has(eventBasename(e.id)));
+  // Si aún son demasiados, quedarse con los más conectados + más recientes (cap 140 para que fitView no necesite scale <0.02)
+  const MINI_CAP = 140;
+  if (filtered.length > MINI_CAP) {
+    filtered.sort((a, b) => {
+      const ca = connectionIndex.get(eventBasename(a.id));
+      const cb = connectionIndex.get(eventBasename(b.id));
+      const na = ca ? ca.outgoing.length + ca.incoming.length : 0;
+      const nb = cb ? cb.outgoing.length + cb.incoming.length : 0;
+      if (nb !== na) return nb - na;
+      return new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime();
+    });
+    filtered = filtered.slice(0, MINI_CAP);
+    // Asegurar que todos los recientes con conexiones queden, si el slice los sacó, reinsertar al menos los recientes más conectados
+    const kept = new Set(filtered.map(e => eventBasename(e.id)));
+    for (const id of recentIds) {
+      if (!kept.has(id) && filtered.length < MINI_CAP) {
+        const ev = events.find(e => eventBasename(e.id) === id);
+        if (ev) filtered.push(ev);
+      }
+    }
+  }
+  graphEvents = filtered;
 }
 
 // Full mode: eventos con conexiones explicitas (para el render inicial y el flag
@@ -175,85 +197,18 @@ const graphLinks = graphEdges.map((e) => ({
     size === 'mini' ? 'mb-6' : '',
     size === 'full' ? 'h-[420px] overflow-x-auto sm:h-[560px]' : '',
   ]}>
-    {size === 'mini' && (
-    <svg
-      id={`graph-svg-${size}`}
-      viewBox={`0 0 ${width} ${height}`}
-      class:list={[size === 'mini' ? 'w-full' : 'min-w-[1200px]']}
-      font-family="system-ui, -apple-system, sans-serif"
-    >
-      <defs>
-        {markers.map((tipo) => (
-          <marker id={`arrow-${tipo}-${size}`} viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
-            <path d="M0,0 L10,3 L0,6" fill={edgeColorMap[tipo] ?? '#78716c'} />
-          </marker>
-        ))}
-      </defs>
-      <g id={`graph-content-${size}`}>
-        {/* Edges */}
-        {graphEdges.map((edge) => {
-          const from = positions[edge.from];
-          const to = positions[edge.to];
-          if (!from || !to) return null;
-          const color = edgeColorMap[edge.tipo] ?? '#78716c';
-          const dx = to.x - from.x;
-          const dy = to.y - from.y;
-          const dist = Math.sqrt(dx * dx + dy * dy) || 1;
-          const r = size === 'mini' ? 6 : 8;
-          const sx = from.x + (dx / dist) * r;
-          const sy = from.y + (dy / dist) * r;
-          const ex = to.x - (dx / dist) * (r + 8);
-          const ey = to.y - (dy / dist) * (r + 8);
-          return (
-            <g class="graph-edge" data-source={graphNodes[edge.from]?.id ?? ''} data-target={graphNodes[edge.to]?.id ?? ''}>
-              <line x1={sx} y1={sy} x2={ex} y2={ey} stroke={color} stroke-width="1.5" stroke-opacity="0.5" marker-end={`url(#arrow-${edge.tipo}-${size})`} />
-            </g>
-          );
-        })}
-
-        {/* Nodes */}
-        {graphEvents.map((event, i) => {
-          const pos = positions[i];
-          if (!pos) return null;
-          const id = eventBasename(event.id);
-          // Full mode: el fallback estatico muestra solo conectados (igual que el
-          // default del cliente); los aislados entran via checkbox.
-          if (size === 'full' && !connectedSet.has(id)) return null;
-          const year = eventYearFromDate(event.data.fecha);
-          const color = TIPO_COLORS[event.data.tipo] ?? '#6b7280';
-          const conn = connectionIndex.get(id);
-          const count = conn ? countExplicitConnections(conn) : 0;
-          const r = size === 'mini' ? 6 : 8;
-          const title = event.data.titulo;
-          const maxChars = size === 'mini' ? 28 : 42;
-          const label = title.length > maxChars ? title.slice(0, maxChars) + '...' : title;
-          const fechaStr = new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' });
-          return (
-            <g class="graph-node" data-id={id} data-url={`/events/${year}/${id}`}>
-              <circle cx={pos.x} cy={pos.y} r={r} fill={color} stroke="var(--color-base-100)" stroke-width="2" style="cursor: pointer;" />
-              <text
-                x={pos.x}
-                y={pos.y + r + (size === 'mini' ? 12 : 14)}
-                text-anchor="middle"
-                fill="var(--color-base-content)"
-                font-size={size === 'mini' ? '9' : '11'}
-                font-weight="500"
-                style="pointer-events: none;"
-              >
-                {label}
-              </text>
-              <title>{`${title}\n${TIPO_LABELS[event.data.tipo] || event.data.tipo} · ${fechaStr}${count > 0 ? `\n${count} vinculo(s)` : ''}`}</title>
-            </g>
-          );
-        })}
-      </g>
-    </svg>
-    )}
+    <!-- Skeleton: se muestra hasta que force-graph.js crea el SVG interactivo y lo oculta. Reemplaza el SVG estático solapado previo. -->
+    <div data-graph-skeleton class="flex w-full animate-pulse items-center justify-center bg-base-200" style={size === 'mini' ? 'height:280px' : 'height:100%'}>
+      <div class="flex flex-col items-center gap-2 py-8 text-base-content/40">
+        <div class="h-8 w-8 animate-spin rounded-full border-2 border-base-300 border-t-primary"></div>
+        <span class="text-xs">Cargando grafo…</span>
+      </div>
+    </div>
   </div>
-  <div class="pointer-events-none absolute bottom-4 right-4 flex flex-col gap-1">
-    <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom in">+</button>
-    <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Zoom out">−</button>
-    <button id="zoom-reset" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-xs" title="Reset view">⟲</button>
+  <div class="pointer-events-none absolute bottom-4 right-4 z-10 flex flex-col gap-1">
+    <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Acercar">+</button>
+    <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Alejar">−</button>
+    <button id="zoom-reset" class="pointer-events-auto flex h-8 min-w-8 items-center justify-center gap-1 rounded-lg border border-base-300 bg-base-100 px-2 text-base-content/70 shadow-sm hover:bg-base-200 text-xs font-medium" title="Centrar vista — ver todos los nodos">⟲ <span class="hidden sm:inline">Centrar</span></button>
   </div>
   <div id="graph-tooltip" class="pointer-events-none fixed z-50 hidden max-w-xs rounded-lg border border-base-300 bg-base-100 px-3 py-2 text-xs text-base-content/80 shadow-lg" />
 </div>

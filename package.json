@@ -46,6 +46,8 @@
     "@tailwindcss/vite": "^4.3.3",
     "crawlee": "^3.18.1",
     "daisyui": "^5.7.19",
+    "puppeteer": "^25.9.0",
+    "puppeteer-core": "^25.9.0",
     "tailwindcss": "^4.3.3"
   }
 }

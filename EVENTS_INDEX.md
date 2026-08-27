@@ -501,7 +501,7 @@
 - [2026/01/20260120-13 - Mala Espina perfila a Natalia Duco, la lanzadora de bala que será ministra del Deporte de Kast: la primera olímpica en la cartera, con el sello del dopaje de 2018](src/content/events/2026/01/20260120-13.md) — 4 fuentes
 - [2026/01/20260120-2 - Polémica por ex abogados de Pinochet en gabinete de Kast](src/content/events/2026/01/20260120-2.md) — 5 fuentes
 - [2026/01/20260120-3 - La veintena de cargos que Francisco Pérez Mackenna dejará en el grupo Luksic para asumir en Cancillería: el perfil del 'canciller de Luksic' y sus nexos con Kast](src/content/events/2026/01/20260120-3.md) — 3 fuentes
-- [2026/01/20260120-4 - Emol perfila a Iván Poduje, el más que seguro ministro de Vivienda de Kast: el urbanista polémico de Atisba, Sin Filtro y las polémicas de los trolls, el Servel y el CDE](src/content/events/2026/01/20260120-4.md) — 8 fuentes
+- [2026/01/20260120-4 - Emol perfila a Iván Poduje, el más que seguro ministro de Vivienda de Kast: el urbanista polémico de Atisba, Sin Filtro y las polémicas de los trolls, el Servel y el CDE](src/content/events/2026/01/20260120-4.md) — 13 fuentes
 - [2026/01/20260120-5 - Emol perfila a Jaime Campos, el radical elegido por Kast para Agricultura: el ex ministro que le dijo no a Bachelet por Punta Peuco y sus polémicas de Justicia](src/content/events/2026/01/20260120-5.md) — 7 fuentes
 - [2026/01/20260120-6 - The Clinic perfila a María Jesús Wulf, la futura ministra de Desarrollo Social de Kast: la socióloga del Movimiento Gremial y primera compañera de ruta del republicano](src/content/events/2026/01/20260120-6.md) — 3 fuentes
 - [2026/01/20260120-7 - The Clinic perfila a María Paz Arzola, la futura ministra de Educación de Kast: la investigadora de Libertad y Desarrollo que impulsa volver a la selección escolar](src/content/events/2026/01/20260120-7.md) — 3 fuentes
@@ -1204,7 +1204,7 @@
 - [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
 - [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 29 fuentes
 - [2026/08/20260813-10 - Duras críticas al canal de TV del Senado por publicitar una entrevista a la senadora Camila Flores, investigada por fraude al fisco en el caso cuota Flores](src/content/events/2026/08/20260813-10.md) — 1 fuente
-- [2026/08/20260813-11 - Rabat encarga la Reforma Procesal Civil a Trinidad Zegers, abogada que juró hace 4 meses: críticas por falta de experiencia y defensa de la cartera](src/content/events/2026/08/20260813-11.md) — 9 fuentes
+- [2026/08/20260813-11 - Rabat encarga la Reforma Procesal Civil a Trinidad Zegers, abogada que juró hace 4 meses: críticas por falta de experiencia y defensa de la cartera](src/content/events/2026/08/20260813-11.md) — 11 fuentes
 - [2026/08/20260813-12 - Corte de Apelaciones confirma 15 años de cárcel a Miguel Krassnoff por la desaparición del estudiante Dignaldo Araneda Pizzini (1974): sus penas superan los mil años](src/content/events/2026/08/20260813-12.md) — 3 fuentes
 - [2026/08/20260813-13 - Muerte de un pudú atacado por perros en Temuco reabre críticas por falta de fiscalización del SAG en zonas rurales](src/content/events/2026/08/20260813-13.md) — 1 fuente
 - [2026/08/20260813-14 - Adulta mayor de 78 años muere tras ser atacada por tres perros pastores alemanes en Quirihue (Ñuble)](src/content/events/2026/08/20260813-14.md) — 5 fuentes
@@ -1370,8 +1370,11 @@
 - [2026/08/20260824-5 - Gobierno rebate el 'iliberalismo': Alvarado dice estar 'muy lejos' de lo señalado por Cruz-Coke y Arrau desafía a los 'opinólogos' a ir a las poblaciones](src/content/events/2026/08/20260824-5.md) — 3 fuentes
 - [2026/08/20260824-6 - PDI detiene a funcionario del Tercer Tribunal Oral de Santiago acusado de filtrar diligencias a banda narcotraficante: allanamientos en el Centro de Justicia](src/content/events/2026/08/20260824-6.md) — 3 fuentes
 - [2026/08/20260824-7 - OCDE proyecta desaceleración de Chile a 1,7% para 2026 y reporta estancamiento del PIB en el segundo trimestre](src/content/events/2026/08/20260824-7.md) — 3 fuentes
-- [2026/08/20260825-1 - TC rechaza por 9-1 el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la reconexión gratuita de servicios básicos queda firme](src/content/events/2026/08/20260825-1.md) — 7 fuentes
+- [2026/08/20260824-8 - Contrapoder revela que Carabineros evalúa renovar contrato de cámaras Hytera-Vigatec por $9.626 millones pese a investigación de Fiscalía y fallos de Contraloría y Tribunal de Contratación Pública](src/content/events/2026/08/20260824-8.md) — 6 fuentes
+- [2026/08/20260824-9 - El trasfondo de la red trunking P25 de Carabineros: $62 mil millones a Motorola sin licitación, Contraloría frena cuarta renovación y emerge interés de la estatal china CNPMIEC](src/content/events/2026/08/20260824-9.md) — 5 fuentes
+- [2026/08/20260825-1 - TC rechaza por 9-1 el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la reconexión gratuita de servicios básicos queda firme](src/content/events/2026/08/20260825-1.md) — 13 fuentes
 - [2026/08/20260825-2 - Jefe del Estado Mayor de la Fuerza Aérea argentina atribuye Magallanes a la soberanía de su país; Chile anuncia nota de protesta y Argentina reafirma los tratados de 1881 y 1984](src/content/events/2026/08/20260825-2.md) — 10 fuentes
+- [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 
 ## 2025
 
@@ -1414,6 +1417,7 @@
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — 2 fuentes
 - [2025/11/20251105-1 - Operación Fortaleza 3: megaoperativo nacional de Carabineros y PDI deja 2.495 detenidos y 452 kilos de droga incautados bajo el gobierno de Boric](src/content/events/2025/11/20251105-1.md) — 5 fuentes
 - [2025/11/20251109-1 - Vocero de Kast dice que el comando 'no va a entrar' en el debate de DD.HH. e indultos, en plena polémica por Kaiser y Punta Peuco](src/content/events/2025/11/20251109-1.md) — 3 fuentes
+- [2025/11/20251113-1 - CIPER revela DMs de Iván Poduje —del comando de Kast— con cuentas troll que atacaron a Matthei y Jara: 'Tenemos un café pendiente'](src/content/events/2025/11/20251113-1.md) — 6 fuentes
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
 - [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
@@ -1524,6 +1528,7 @@
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — 2 fuentes
 - [2022/09/20220910-1 - '#BoricInternado': la fake news de La Derecha Diario sobre un presunto colapso nervioso de Boric tras el triunfo del Rechazo](src/content/events/2022/09/20220910-1.md) — 6 fuentes
 - [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md) — 3 fuentes
+- [2022/11/20221112-1 - PDI detiene a hombre de 21 años que amenazó al Presidente Boric vía escribenos.presidencia.cl para evitar promulgación de Ley Papito Corazón](src/content/events/2022/11/20221112-1.md) — 6 fuentes
 - [2022/11/20221122-1 - Cámara aprueba resolución que rechaza categóricamente el uso de fake news en política: 37 diputados votan en contra, en su mayoría de Republicanos y Chile Vamos](src/content/events/2022/11/20221122-1.md) — 2 fuentes
 - [2022/11/20221125-1 - Corte Suprema condena a más de 7 años al capitán de Carabineros Hugo Navarro por homicidio frustrado de Benjamín Huerta en Ovalle](src/content/events/2022/11/20221125-1.md) — 4 fuentes
 - [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — 2 fuentes
@@ -1631,6 +1636,7 @@
 - [2019/12/20191212-1 - Cámara rechaza la acusación constitucional contra Piñera por las violaciones a los DD.HH. del estallido al acoger la 'cuestión previa' (79-73)](src/content/events/2019/12/20191212-1.md) — 3 fuentes
 - [2019/12/20191220-1 - Jornada del 20 de diciembre de 2019 en Plaza de la Dignidad: copamiento policial y uso masivo de gas lacrimógeno](src/content/events/2019/12/20191220-1.md) — 5 fuentes
 - [2019/12/20191223-1 - Informe Anual 2019 del INDH: 'las más graves violaciones a los DD.HH. desde 1989' durante el estallido social](src/content/events/2019/12/20191223-1.md) — 2 fuentes
+- [2019/12/20191229-1 - Schalper afirma en Estado Nacional haber recopilado '44 videos falsos' sobre Carabineros y protagoniza lapsus 'candado chino'](src/content/events/2019/12/20191229-1.md) — 6 fuentes
 
 ## 2018
 

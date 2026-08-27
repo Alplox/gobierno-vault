@@ -6,6 +6,7 @@ packages: []
 allowBuilds:
   esbuild: true
   protobufjs: true
+  puppeteer: false
 # pnpm 10: onlyBuiltDependencies (array) — formato de pnpm 10 (Cloudflare Pages)
 # Ambos conviven: pnpm 10 ignora allowBuilds, pnpm 11 ignora onlyBuiltDependencies.
 onlyBuiltDependencies:

@@ -3705,6 +3705,15 @@ people:
         organizacion: ministerio_ciencia
         desde: 2026-03-11
     notas: Independiente.
+  ximena_naranjo:
+    nombre: Ximena Naranjo Pinto
+    cargo: Diputada independiente en cupo UDI (Distrito 2, Tarapacá)
+    organizacion: camara_diputados
+    notas: "Independiente electa en cupo UDI por el Distrito 2 (Tarapacá) para el periodo 2026-2030 (Chile Grande y Unido). Exconcejala de Iquique (2021-2024). El 26-ago-2026 cuestionó el retorno del Clan Chen desde La Laguna a Alto Hospicio ordenado por el Juzgado de Garantía de Iquique como revés a la Operación Cancerbero."
+  doris_espinoza:
+    nombre: Doris Espinoza Torres
+    cargo: Abogada penalista y docente UNIACC
+    notas: "Abogada penalista, magíster en Derecho Penal (U. de Talca), fundadora de Estudio Jurídico Doris Espinoza Abogados y docente de Derecho Penal en UNIACC. El 26-ago-2026 advirtió que la orden de retorno del Clan Chen genera un problema de competencias entre el juez de garantía y Gendarmería (DL 2.859)."
   cristobal_martinez:
     nombre: Cristóbal Martínez
     cargo: Diputado UDI
@@ -14256,7 +14265,18 @@ organizations:
   motorola_solutions:
     nombre: Motorola Solutions
     tipo: empresa
-    notas: "Empresa de tecnología adjudicataria de la licitación de 300 cámaras corporales para Carabineros (~$378 millones) en el origen del caso Motorola."
+    pais: Estados Unidos
+    notas: "Multinacional de radiocomunicaciones (filial chilena Interexport). Proveedor histórico del sistema trunking P25 de Carabineros. El contrato directo de 2022 por $62.099 millones fue su mayor contrato global del trimestre Q4 2022 según su reporte de ganancias."
+  interexport:
+    nombre: Interexport Telecomunicaciones y Servicios S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Filial chilena de Motorola Solutions. Contraparte de los contratos de radiocomunicación trunking P25 de Carabineros (2011-2022) y del trato directo de 2022 por $62.099 millones."
+  cpmiec:
+    nombre: China National Precision Machinery Import & Export Corporation (CPMIEC/CNPMIEC)
+    tipo: empresa_estatal
+    pais: China
+    notas: "Estatal china de defensa (CNPMIEC según Contrapoder). Autorizada para exportación de sistemas de misiles y defensa aérea. Incluida en la lista SDN de la OFAC del Tesoro de EEUU con sanciones secundarias. Según Contrapoder, interesada en la futura red de radiocomunicaciones de Carabineros históricamente dominada por Motorola."
   pegasus:
     nombre: Pegasus Group Company S.A.
     tipo: empresa
@@ -14900,6 +14920,26 @@ organizations:
     nombre: Carabineros de Chile
     tipo: policia
     pais: Chile
+  vigatec:
+    nombre: Vigatec S.A.
+    tipo: empresa
+    pais: Chile
+    notas: "Distribuidora chilena de la empresa china Hytera. Adjudicataria en julio de 2023 del contrato N°123/2023 de Carabineros por $9.626 millones para el arriendo de 1.969 cámaras corporales por 36 meses. Su oferta fue cuestionada por el Tribunal de Contratación Pública y la Contraloría."
+  hytera:
+    nombre: Hytera Communications
+    tipo: empresa
+    pais: China
+    notas: "Fabricante chino de equipos de radiocomunicación y cámaras corporales (modelo VM750D). Proveedor tecnológico de Vigatec para el contrato de cámaras corporales de Carabineros iniciado en 2023."
+  tecnologias_sociales:
+    nombre: Tecnologías Sociales Limitada
+    tipo: empresa
+    pais: Chile
+    notas: "Empresa chilena oferente (marca Axon) en la licitación de cámaras corporales de Carabineros de 2022-2023. Demandó ante el Tribunal de Contratación Pública contra la adjudicación a Vigatec, alegando arbitrariedad y oferta más cara para el Estado."
+  tribunal_contratacion_publica:
+    nombre: Tribunal de Contratación Pública
+    tipo: tribunal
+    pais: Chile
+    notas: "Tribunal especializado que resuelve impugnaciones contra procedimientos de contratación administrativa. En 2025 declaró ilegal y arbitraria la Resolución N°39 de Carabineros que adjudicó el contrato de cámaras corporales a Vigatec."
   departamento_asuntos_internos_carabineros:
     nombre: Departamento de Asuntos Internos de Carabineros
     tipo: unidad_policial
@@ -16692,6 +16732,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Canal de televisión chileno (Canal 13) y portal de noticias. Emite T13 Central y T13 Tarde; su sitio es t13.cl."
+  rdn:
+    nombre: RDN
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Red de Diarios (rdn.cl). Medio digital chileno que cubrió el revés de la Operación Cancerbero por el retorno del Clan Chen a Alto Hospicio (26-ago-2026)."
   tarapaca_online:
     nombre: Tarapacá Online
     tipo: medio_comunicacion
@@ -19042,6 +19087,11 @@ organizations:
     nombre: Idónea Consultores
     tipo: empresa
     notas: "Consultora chilena especializada en protección de datos personales, ciberseguridad, inteligencia artificial y regulación tecnológica; su CEO es Catherine Muñoz Gutiérrez, asesora legislativa del Ministerio de Ciencias, lo que motivó cuestionamientos de doble función durante la tramitación de la Ley de IA (The Clinic, agosto 2026; evento 20260821-9)."
+  concierto:
+    nombre: Concierto
+    tipo: medio_comunicacion
+    pais: Chile
+    notas: "Radio chilena (concierto.cl), del grupo Prisa Media. Cubrió el episodio de Estado Nacional de 2019 sobre los 44 videos falsos y el lapsus 'candado chino' de Diego Schalper."
 
 cifras:
   invitados_fiestas_patrias_teheran:
@@ -20578,6 +20628,24 @@ cifras:
   camaras_corporales_carabineros:
     nombre: Cámaras corporales para Carabineros 2027-2031
     unidad_default: unidades
+  contrato_camaras_vigatec_hytera:
+    nombre: Contrato cámaras corporales Vigatec-Hytera (36 meses, 1.969 unidades)
+    unidad_default: pesos
+  oferta_vigatec_camaras:
+    nombre: Oferta adjudicada Vigatec por cámaras corporales
+    unidad_default: pesos
+  oferta_tecnologias_sociales_camaras:
+    nombre: Oferta Tecnologías Sociales (Axon) por cámaras corporales
+    unidad_default: pesos
+  presupuesto_camaras_carabineros:
+    nombre: Presupuesto estimado Carabineros para arriendo cámaras corporales 2022-2023
+    unidad_default: pesos
+  contrato_trunking_motorola_2022:
+    nombre: Contrato trato directo trunking Motorola-Interexport 2022 (24 meses)
+    unidad_default: pesos
+  costo_anual_trunking_motorola:
+    nombre: Costo anual sistema trunking Motorola antes de 2022
+    unidad_default: pesos
   venezolanos_residentes_chile:
     nombre: Venezolanos residentes en Chile
     unidad_default: personas
