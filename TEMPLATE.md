@@ -1,100 +1,104 @@
 # Plantilla de Evento
 
-Ruta: `src/content/events/YYYY/MM/YYYYMMDD-N.md`
+Ruta: `src/content/events/YYYY/MM/YYYYMMDD-N.md` (`N` secuencial del día). Ver `.agents/skills/content-model/SKILL.md` (modelo completo) y `.agents/skills/event-rules/SKILL.md` (16 reglas) para detalle.
 
 ## Frontmatter
 
 ```yaml
 ---
-# (requerido) Titulo del evento
-titulo: Descripcion breve y objetiva del evento
+# (requerido) Título breve y objetivo
+titulo: Descripción breve y objetiva del evento
 
-# (requerido) Fecha y hora de ocurrencia (ISO 8601)
+# (requerido) Fecha y hora de ocurrencia — ISO 8601 UTC
 fecha: YYYY-MM-DDTHH:MM:SSZ
 
-# (requerido) Tipo de evento
+# (requerido) Tipo — 14 valores:
+# declaracion | accion | anuncio | decreto | proyecto | ley |
+# votacion | fallo_judicial | entrevista | publicacion |
+# documento | investigacion | reaccion | resultado
 tipo: decreto
-# opciones: declaracion | accion | anuncio | decreto | proyecto | ley |
-#           votacion | fallo_judicial | entrevista | publicacion |
-#           documento | investigacion | reaccion | resultado
 
-# (requerido) Temas asociados (separados por coma)
+# (requerido) Temas — IDs de topics.yaml, separados por coma
 tema: emergencia, defensa_seguridad
 
-# (opcional) Etiquetas libres (separadas por coma)
+# (opcional) Etiquetas libres — strings, sin taxonomy
 etiquetas: sistema_frontal, estado_de_catastrofe
 
-# (opcional) Impacto del evento
+# (opcional) Impacto
 impacto:
-  # Grupos de personas afectados
-  colectivos: residentes, familias, pacientes
-  # Actividades economicas/sectores afectados
-  sectores: agua_potable, energia_electrica, transporte_publico
+  colectivos: residentes, familias, pacientes   # IDs de colectivos.yaml
+  sectores: agua_potable, energia_electrica     # IDs de sectores.yaml
 
-# (opcional) Relaciones con otros eventos
-# formato: tipo_relacion: id_evento
+# (opcional) Relaciones — tipo_relacion: id_sin_extension (no duplicar bidireccional)
 relaciones:
   sucesor: 20260101-1
   causa: 20251215-3
+  # ver tipos: contradice | confirma | cumple | incumple | amplia | corrige | rectifica
+  #           | responde_a | deriva_en | provoca | cita | reemplaza | actualiza
 
-# (opcional) Respaldo ASCII de una imagen del evento (evidencia visual)
-# fuente: URL de la imagen original (el enlace de donde salió)
-# Opción A (recomendada, SVGs reales pesan MBs): archivo .svg en public/img-to-ascii/
-archivo: /img-to-ascii/20260809-8-zanja.svg
-# Opción B (solo SVG pequeño artesanal <=100K chars): contenido inline
-# svg: |
-#   <svg ...>...</svg>
-# El SVG se genera en una herramienta web externa (ej. https://ezascii.com/image-to-ascii)
-# y se guarda tras CONFIRMAR VISUALMENTE que se ve correcto. Nunca guardar un SVG
-# sin esa confirmación. El sitio lo renderiza en el body con una leyenda + enlace.
+# (opcional) Respaldo ASCII de imagen — evidencia visual preservada
+# El SVG se genera en herramienta externa (ej. https://ezascii.com/image-to-ascii)
+# y se guarda SOLO tras confirmar visualmente que se ve correcto. Nunca automático.
+svg_backup:
+  fuente: https://x.com/usuario/status/123/photo/1   # URL imagen original
+  archivo: /img-to-ascii/YYYYMMDD-N-slug.svg          # Opción A recomendada: .svg en public/img-to-ascii/ (SVGs reales pesan MBs)
+  # svg: |                                             # Opción B solo artesanal <=100K chars, inline
+  #   <svg ...>...</svg>
 
-# (requerido) Fecha de creacion del registro
+# (requerido) Fechas de registro — YYYY-MM-DD
 creado: YYYY-MM-DD
-
-# (requerido) Fecha de ultima actualizacion
 actualizado: YYYY-MM-DD
 ---
 ```
 
-## Cuerpo del documento
+## Cuerpo — markdown con wikilinks inline
 
-Usar markdown estandar con wikilinks para entidades:
+Fuentes **siempre inline** al final de la afirmación, nunca en `## Referencias` separada. Ver `.agents/skills/content-model/SKILL.md`.
 
 ```markdown
-## Que paso
+## Qué pasó
 
-El [[person/jose_antonio_kast]] anuncio desde [[org/presidencia_chile]]...
+El [[person/jose_antonio_kast]] anunció desde [[org/presidencia_chile]] la medida X [[source/latercera-2026-07-20-medida]].
 
 ## Cifras del balance
 
 - [[cifra/fallecidos/5/personas]] fallecidos [[source/latercera-2026-07-20-balance]]
 - [[cifra/damnificados/2205/personas]] damnificados [[source/biobio-2026-07-20-balance]]
 
-## Que dijo
+Si cifras en disputa: párrafo que explica la desincronización + tabla comparativa (cifra | fuente | contexto). Ver `content-model.md`.
 
-> Cita textual - [[person/jose_antonio_kast]] en X [[source/x-2026-07-20-post]]
+## Qué dijo
 
-## Acciones registradas
+> Texto de la cita aquí - [[person/jose_antonio_kast]] [[source/x-2026-07-20-post]]
 
-- Accion realizada. [[source/cnn-2026-07-20-accion]]
+Separador ` - ` (espacio-guion-espacio) antes de `[[person/...]]`; `[[source/...]]` después. Sin `"` ni `—`.
+
+## Votación (si tipo: votacion)
+
+Verificar conteos en Senado/Cámara oficial y citar URL como fuente (`medio: Senado de Chile` / `Cámara de Diputados`), cada conteo como `[[cifra/...]]`. Ver `content-model.md`.
+
+Relaciones en prosa: `ver evento 20260618-3` auto-enlaza si existe; o `[[event/20260720-1]]` explícito.
+
+No dejar notas de editor en el body (`ver TAREAS`, `pendiente verificación` etc. → van a `TAREAS/` con `Origen:`). `validate.mjs` hace fallar el build. Cross-refs de eventos sí válidos.
 ```
 
 ## Sintaxis de wikilinks
 
-| Sintaxis | Uso | Render en body |
-|---|---|---|
-| `[[person/id]]` | Referenciar persona | `<span class="entity-ref">Nombre</span>` (sin link) |
-| `[[org/id]]` | Referenciar organizacion | `<span class="entity-ref">Nombre</span>` (sin link) |
-| `[[source/id]]` | Referenciar fuente | `[N]` con tooltip y ancla a Referencias |
-| `[[cifra/concepto/valor/unidad]]` | Dato numerico | `<span class="cifra-badge">valor</span>` |
+| Sintaxis | Uso | Render |
+| --- | --- | --- |
+| `[[person/id]]` | Persona | `<span class="entity-ref">Nombre</span>` |
+| `[[org/id]]` | Organización / medio | `<span class="entity-ref">Nombre</span>` |
+| `[[source/id]]` | Fuente | `[N]` con tooltip → `#ref-N` |
+| `[[cifra/concepto/valor/unidad]]` | Dato numérico | `<span class="cifra-badge">valor</span>` |
+| `[[event/20260720-1]]` | Evento | `<a class="event-ref">Título</a>` |
 
-- Las fuentes se numeran secuencialmente por primera aparicion.
-- La misma fuente reutiliza su numero en todas sus repeticiones.
-- Las personas, organizaciones y cifras generan tags automaticos en la seccion final.
+- Fuentes se numeran por primera aparición; repeticiones reutilizan número.
+- IDs desnudos `\b20\d{6}-\d{1,3}\b` (ej. `20260618-3`) auto-enlazan si el evento existe (`remarkWikiLinks.mjs`).
+- Medios en prosa siempre como `[[org/id]]` (`tipo: medio_comunicacion` en `entities.yaml`). Ver `content-model.md`.
 
-## Notas
+## Notas y checklist (ver `.agents/skills/event-rules/SKILL.md`)
 
-- `tema` debe usar IDs existentes en `src/data/topics.yaml` o `src/content/topics/`.
-- `etiquetas` son strings libres (sin vinculo a taxonomy).
-- Las relaciones apuntan al ID del archivo (sin extension), ej: `20260720-1`.
-- Las fechas de `creado` y `actualizado` usan formato `YYYY-MM-DD`.
+- `tema` / `impacto.colectivos` / `impacto.sectores` usan IDs de `topics.yaml` / `colectivos.yaml` / `sectores.yaml`; si falta, agregarlo.
+- Nueva persona/org/cifra → `entities.yaml`; nueva fuente → `sources.yaml` (ID `medio-YYYY-MM-DD-slug`, URL completa nunca raíz, guarda URL original nunca mirror). Consultar catálogo sitemaps ANTES de buscar en web: `rg -i -uu -g '*.jsonl' '<términos>' sitemaps`.
+- `validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[person/...]]` (fix: `node scripts/fix-prose-wikilinks.mjs --dry-run`).
+- Al crear por TAREAS: mínimo **5 fuentes** de medios distintos, nunca red social sola; tras la tanda `pnpm run generate-index` + eliminar fila de `TAREAS/`; `pnpm run validate` / `pnpm run build` debe pasar. Fechas `creado`/`actualizado` en `YYYY-MM-DD`.

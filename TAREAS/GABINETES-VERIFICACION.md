@@ -19,14 +19,14 @@
      gobierno de Sebastián Piñera`, `...del segundo gobierno de Michelle Bachelet`,
      `...del segundo gobierno de Sebastián Piñera`, `...del gobierno de Gabriel Boric`,
      y `Ministro de Estado de Chile` para el gabinete vigente). Descargar wikitexto con
-     `curl "https://es.wikipedia.org/w/index.php?title=<PAGINA>&action=raw"` y parsear
+     `curl "<https://es.wikipedia.org/w/index.php?title=<PAGIN>A>&action=raw"` y parsear
      tablas `! Ministerio !! Nombre`.
    - **Fuentes oficiales por cartera** (preferentes para fechas):
-     - Salud: https://www.minsal.cl/historial-de-ministros-de-salud/ (tabla completa 1990–hoy)
-     - Hacienda: https://biblio.hacienda.cl/200-anos-del-ministerio-de-hacienda-de-la-republica-de-chile/ministros-de-hacienda-desde-1814-2014
-     - BCN reseñas: https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/<Nombre_Persona>
-     - Comunicados: https://www.gob.cl/noticias/ y prensa.presidencia.cl
-     - Archivo audiovisual Lagos/Bachelet: https://arle.udp.cl (fechas de juramento)
+     - Salud: <https://www.minsal.cl/historial-de-ministros-de-salud/> (tabla completa 1990–hoy)
+     - Hacienda: <https://biblio.hacienda.cl/200-anos-del-ministerio-de-hacienda-de-la-republica-de-chile/ministros-de-hacienda-desde-1814-2014>
+     - BCN reseñas: <https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/<Nombre_Person>a>
+     - Comunicados: <https://www.gob.cl/noticias/> y prensa.presidencia.cl
+     - Archivo audiovisual Lagos/Bachelet: <https://arle.udp.cl> (fechas de juramento)
 3. Tras cualquier cambio en `cargos[]`: `pnpm run build` y revisar el panel del gobierno
    en `dist/gabinete/index.html` (`<section data-gv-gob-panel="<id>">`).
 4. Al registrar un cambio nuevo de gabinete: crear evento primero, cerrar con `hasta` el
@@ -61,13 +61,13 @@ Pinochet: **273 personas nuevas** + cargos agregados a 19 fichas existentes. Pan
 alessandri_jorge (41), frei_mtva (24), allende (70).
 
 | Gobierno | Anexo fuente | Filas importadas | Notas |
-|---|---|---|---|
-| Aguirre Cerda (1938-41) | [Anexo](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Pedro_Aguirre_Cerda) | 43 | Incluye carteras extintas: Fomento, Comercio y Abastecimiento, Salubridad |
-| González Videla (1946-52) | [Anexo](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Gabriel_Gonz%C3%A1lez_Videla) | 73 | 9 filas sin fecha exacta omitidas |
-| Ibáñez 2.º (1952-58) | [Anexo](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo) | 106 | El anexo no trae fechas del Interior 1952-57 (22 filas omitidas); 🟡 completar |
-| Jorge Alessandri (1958-64) | [Anexo](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Jorge_Alessandri) | 49 | |
-| Frei Montalva (1964-70) | [Anexo](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Eduardo_Frei_Montalva) | 28 | 8 filas sin fecha omitidas; incluye creación de Vivienda (1965) |
-| Allende (1970-73) | [Anexo](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Salvador_Allende) | 73 | |
+| --- | --- | --- | --- |
+| Aguirre Cerda (1938-41) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Pedro_Aguirre_Cerda>) | 43 | Incluye carteras extintas: Fomento, Comercio y Abastecimiento, Salubridad |
+| González Videla (1946-52) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Gabriel_Gonz%C3%A1lez_Videla>) | 73 | 9 filas sin fecha exacta omitidas |
+| Ibáñez 2.º (1952-58) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo>) | 106 | El anexo no trae fechas del Interior 1952-57 (22 filas omitidas); 🟡 completar |
+| Jorge Alessandri (1958-64) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Jorge_Alessandri>) | 49 | |
+| Frei Montalva (1964-70) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Eduardo_Frei_Montalva>) | 28 | 8 filas sin fecha omitidas; incluye creación de Vivienda (1965) |
+| Allende (1970-73) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Salvador_Allende>) | 73 | |
 
 - **Verificación oficial**: 🟡 pendiente muestreo BCN (mismo método que Pinochet).
 - **Homónimos resueltos**: los importados "Mario Astorga" y "Sótero del Río" se
@@ -79,11 +79,11 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 
 ### Pinochet (1973-1990) — importado 20-ago-2026
 
-- **Obtención** (única fuente masiva por ahora): [Anexo:Gabinetes ministeriales de la dictadura militar chilena](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena) — 157 filas parseadas → **131 personas nuevas** en `entities.yaml`.
+- **Obtención** (única fuente masiva por ahora): [Anexo:Gabinetes ministeriales de la dictadura militar chilena](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena>) — 157 filas parseadas → **131 personas nuevas** en `entities.yaml`.
 - **Verificación oficial (muestreo 20-ago-2026)**: 3 ministros / 6 cargos contra BCN y fuentes biográficas:
-  - [BCN Sergio Fernández Fernández](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Sergio_Fern%C3%A1ndez_Fern%C3%A1ndez): Trabajo 8-mar-1976→1-ene-1978 ✅ e Interior 14-abr-1978→22-abr-1982 ✅ exactos; su 2.º Interior figura como designado 7-jul-1987 (texto BCN) pero asumido 11-jul-1987 (tabla BCN) — el import usa 8-jul-1987, fecha uniforme del remix en el anexo para los 14 ministros de ese cambio; se deja así y queda anotado.
-  - Mónica Madariaga ([Wikipedia](https://es.wikipedia.org/wiki/M%C3%B3nica_Madariaga), [revista RLD UAI](https://lals.uai.cl/index.php/rld/article/view/139/231)): Justicia 20-abr-1977→14-feb-1983 ✅ y Educación Pública 14-feb-1983→18-oct-1983 ✅ exactos.
-  - [BCN Sergio Onofre Jarpa](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Sergio_Onofre_Jarpa_Reyes): Interior 10-ago-1983→12-feb-1985 ✅ exacto.
+  - [BCN Sergio Fernández Fernández](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Sergio_Fern%C3%A1ndez_Fern%C3%A1ndez>): Trabajo 8-mar-1976→1-ene-1978 ✅ e Interior 14-abr-1978→22-abr-1982 ✅ exactos; su 2.º Interior figura como designado 7-jul-1987 (texto BCN) pero asumido 11-jul-1987 (tabla BCN) — el import usa 8-jul-1987, fecha uniforme del remix en el anexo para los 14 ministros de ese cambio; se deja así y queda anotado.
+  - Mónica Madariaga ([Wikipedia](<https://es.wikipedia.org/wiki/M%C3%B3nica_Madariaga>), [revista RLD UAI](<https://lals.uai.cl/index.php/rld/article/view/139/231>)): Justicia 20-abr-1977→14-feb-1983 ✅ y Educación Pública 14-feb-1983→18-oct-1983 ✅ exactos.
+  - [BCN Sergio Onofre Jarpa](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Sergio_Onofre_Jarpa_Reyes>): Interior 10-ago-1983→12-feb-1985 ✅ exacto.
   - Resultado del muestreo: **5/6 cargos exactos**, 1 ambigüedad de fuente documentada.
 - Panel `/gabinete`: 136 nombramientos visibles (114 personas, carteras mapeables a ministerios actuales).
 - **Cierres**: los 7 titulares sin fecha de término se cerraron en `1990-03-11` (fin del gobierno).
@@ -93,55 +93,55 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 
 ### Aylwin (1990-1994) — 24 nombramientos, 24 exactos ✅
 
-- **Cruce masivo**: [Anexo:Gabinetes ministeriales de los gobiernos de la Concertación](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_los_gobiernos_de_la_Concertaci%C3%B3n) (sección Aylwin).
-- **Oficial**: [Minsal — Historial de Ministros de Salud](https://www.minsal.cl/historial-de-ministros-de-salud/) (Jiménez hasta 30-oct-1992; Montt desde 2-nov-1992); [BCN reseña Julio Montt](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Julio_Felipe_Montt_Momberg) (Decreto 1341); [BCN reseña Jaime Tohá](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Jaime_Manuel_Toh%C3%A1_Gonz%C3%A1lez) (Economía desde 16-dic-1993).
-- **Prensa**: [FastCheck 3-ago-2026 sobre cambios de Aylwin](https://www.fastcheck.cl/2026/08/03/patricio-aylwin-si-realizo-cambios-de-gabinete-contrario-a-lo-afirmado-por-rodolfo-carter/).
+- **Cruce masivo**: [Anexo:Gabinetes ministeriales de los gobiernos de la Concertación](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_los_gobiernos_de_la_Concertaci%C3%B3n>) (sección Aylwin).
+- **Oficial**: [Minsal — Historial de Ministros de Salud](<https://www.minsal.cl/historial-de-ministros-de-salud/>) (Jiménez hasta 30-oct-1992; Montt desde 2-nov-1992); [BCN reseña Julio Montt](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Julio_Felipe_Montt_Momberg>) (Decreto 1341); [BCN reseña Jaime Tohá](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Jaime_Manuel_Toh%C3%A1_Gonz%C3%A1lez>) (Economía desde 16-dic-1993).
+- **Prensa**: [FastCheck 3-ago-2026 sobre cambios de Aylwin](<https://www.fastcheck.cl/2026/08/03/patricio-aylwin-si-realizo-cambios-de-gabinete-contrario-a-lo-afirmado-por-rodolfo-carter/>).
 
 ### Frei Ruiz-Tagle (1994-2000) — 48 nombramientos, 48 exactos ✅
 
 - **Cruce masivo**: anexo Concertación (sección Frei).
-- **Oficial/prensa para discrepancias**: muerte de Teplizky el 3-ago-1997 ([Wikipedia Teplizky](https://es.wikipedia.org/wiki/Benjam%C3%ADn_Teplizky), [Wikipedia Sergio Jiménez Moraga](https://es.wikipedia.org/wiki/Sergio_Jim%C3%A9nez_Moraga) — asumió 13-ago-1997) y [Boletín Minero Sonami sep-1997](https://www.bibliotecanacionaldigital.gob.cl/colecciones/BND/00/RE/RE0000545_0127.pdf) (entrevista al entrante).
+- **Oficial/prensa para discrepancias**: muerte de Teplizky el 3-ago-1997 ([Wikipedia Teplizky](<https://es.wikipedia.org/wiki/Benjam%C3%ADn_Teplizky>), [Wikipedia Sergio Jiménez Moraga](<https://es.wikipedia.org/wiki/Sergio_Jim%C3%A9nez_Moraga>) — asumió 13-ago-1997) y [Boletín Minero Sonami sep-1997](<https://www.bibliotecanacionaldigital.gob.cl/colecciones/BND/00/RE/RE0000545_0127.pdf>) (entrevista al entrante).
 
 ### Lagos (2000-2006) — 45 nombramientos, 45 exactos ✅
 
 - **Cruce masivo**: anexo Concertación (sección Lagos).
-- **Oficial**: [Minsal historial](https://www.minsal.cl/historial-de-ministros-de-salud/) (Artaza desde 7-ene-2002; García desde 3-mar-2003); [Archivo Presidente Lagos UDP — cambio de gabinete feb/mar-2003](https://arle.udp.cl/index.php/se-concreta-el-cambio-de-gabinete-4) y [juramento 3-mar-2003](https://arle.udp.cl/index.php/ceremonia-de-juramento-de-los-nuevos-ministros-de-estado-video) (Vidal reemplazó a Muñoz en Segegob ese día); [cambio ene-2002](https://arle.udp.cl/index.php/cambio-de-gabinete-4).
-- **Prensa**: [El País 2-mar-2003](https://elpais.com/diario/2003/03/02/internacional/1046559618_850215.html).
+- **Oficial**: [Minsal historial](<https://www.minsal.cl/historial-de-ministros-de-salud/>) (Artaza desde 7-ene-2002; García desde 3-mar-2003); [Archivo Presidente Lagos UDP — cambio de gabinete feb/mar-2003](<https://arle.udp.cl/index.php/se-concreta-el-cambio-de-gabinete-4>) y [juramento 3-mar-2003](<https://arle.udp.cl/index.php/ceremonia-de-juramento-de-los-nuevos-ministros-de-estado-video>) (Vidal reemplazó a Muñoz en Segegob ese día); [cambio ene-2002](<https://arle.udp.cl/index.php/cambio-de-gabinete-4>).
+- **Prensa**: [El País 2-mar-2003](<https://elpais.com/diario/2003/03/02/internacional/1046559618_850215.html>).
 
 ### Bachelet 1 (2006-2010) — 42 nombramientos, 42 exactos ✅
 
 - **Cruce masivo**: anexo Concertación (sección Bachelet 1).
-- **Oficial**: [Minsal historial](https://www.minsal.cl/historial-de-ministros-de-salud/) (Barría hasta 28-oct-2008; Erazo desde 6-nov-2008).
+- **Oficial**: [Minsal historial](<https://www.minsal.cl/historial-de-ministros-de-salud/>) (Barría hasta 28-oct-2008; Erazo desde 6-nov-2008).
 - **Nota**: ficha de Michelle Bachelet completada con Salud 2000-2002 y Defensa 2002-2004 (anexo Concertación + Minsal).
 
 ### Piñera 1 (2010-2014) — 49 nombramientos, 49 exactos ✅
 
-- **Cruce masivo**: [Anexo:Gabinetes ministeriales del primer gobierno de Sebastián Piñera](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_primer_gobierno_de_Sebasti%C3%A1n_Pi%C3%B1era).
-- **Oficial**: [Senado.cl 16-abr-2013 — destitución de Beyer](https://www.senado.cl/comunicaciones/noticias/aprueban-un-capitulo-de-la-acusacion-constitucional-y-ministro-beyer-es).
-- **Prensa**: [La Razón 23-jul-2013](https://hemeroteca.larazon.bo/mundo/2013/07/23/impelida-por-pinera-la-derecha-chilena-se-obliga-a-elegir-un-candidato-unico/) (Matthei cesada 23-jul); [Epicentro 24-jul-2013](https://www.epicentrochile.com/2013/07/24/juan-carlos-jobet-asume-como-el-nuevo-ministro-del-trabajo/) (Jobet juró 24-jul); [Diario Financiero 7-may-2013](https://www.df.cl/economia-y-politica/gobierno/pinera-oficializa-a-felix-de-vicente-como-nuevo-ministro-de-economia) y [CNN Chile](https://www.cnnchile.com/economia/felix-de-vicente-es-el-nuevo-ministro-de-economia_20130507/) (De Vicente 7-may); [Cooperativa 6-jun-2013](https://www.cooperativa.cl/noticias/pais/gobierno/gabinete/joaquin-lavin-y-luciano-cruz-coke-renunciaron-al-gobierno/2013-06-06/172752.html), [Emol 7-jun-2013](https://www.emol.com/noticias/nacional/2013/06/07/602623/gobierno-y-despedida-de-ministros-lavin-y-cruz-coke.html) y [Radio Uchile 10-jun-2013](https://radio.uchile.cl/2013/06/10/bruno-baranda-y-roberto-ampuero-juran-como-ministros-de-desarrollo-social-y-cultura/) (Lavín/Baranda: juramento domingo 9-jun).
+- **Cruce masivo**: [Anexo:Gabinetes ministeriales del primer gobierno de Sebastián Piñera](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_primer_gobierno_de_Sebasti%C3%A1n_Pi%C3%B1era>).
+- **Oficial**: [Senado.cl 16-abr-2013 — destitución de Beyer](<https://www.senado.cl/comunicaciones/noticias/aprueban-un-capitulo-de-la-acusacion-constitucional-y-ministro-beyer-es>).
+- **Prensa**: [La Razón 23-jul-2013](<https://hemeroteca.larazon.bo/mundo/2013/07/23/impelida-por-pinera-la-derecha-chilena-se-obliga-a-elegir-un-candidato-unico/>) (Matthei cesada 23-jul); [Epicentro 24-jul-2013](<https://www.epicentrochile.com/2013/07/24/juan-carlos-jobet-asume-como-el-nuevo-ministro-del-trabajo/>) (Jobet juró 24-jul); [Diario Financiero 7-may-2013](<https://www.df.cl/economia-y-politica/gobierno/pinera-oficializa-a-felix-de-vicente-como-nuevo-ministro-de-economia>) y [CNN Chile](<https://www.cnnchile.com/economia/felix-de-vicente-es-el-nuevo-ministro-de-economia_20130507/>) (De Vicente 7-may); [Cooperativa 6-jun-2013](<https://www.cooperativa.cl/noticias/pais/gobierno/gabinete/joaquin-lavin-y-luciano-cruz-coke-renunciaron-al-gobierno/2013-06-06/172752.html>), [Emol 7-jun-2013](<https://www.emol.com/noticias/nacional/2013/06/07/602623/gobierno-y-despedida-de-ministros-lavin-y-cruz-coke.html>) y [Radio Uchile 10-jun-2013](<https://radio.uchile.cl/2013/06/10/bruno-baranda-y-roberto-ampuero-juran-como-ministros-de-desarrollo-social-y-cultura/>) (Lavín/Baranda: juramento domingo 9-jun).
 
 ### Bachelet 2 (2014-2018) — 48 nombramientos, 48 exactos ✅
 
-- **Cruce masivo**: [Anexo:Gabinetes ministeriales del segundo gobierno de Michelle Bachelet](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Michelle_Bachelet).
-- **Oficial**: [BCN reseña Jaime Campos](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Jaime_Campos_Quiroga) (Justicia 19-oct-2016 → 11-mar-2018); [Minsal historial](https://www.minsal.cl/historial-de-ministros-de-salud/) (Molina hasta 30-dic-2014; Castillo desde 23-ene-2015).
-- **Prensa**: [La Tercera 19-oct-2016](https://www.latercera.com/noticia/radical-ex-companero-gabinete-bachelet-perfil-del-nuevo-ministro-justicia-jaime-campos/) y [T13 19-oct-2016](https://www.t13.cl/noticia/politica/cambio-gabinete-javiera-blanco-justicia-maximo-pacheco) (Blanco sale / Campos asume el mismo día — vault tenía ene-2016, error corregido).
+- **Cruce masivo**: [Anexo:Gabinetes ministeriales del segundo gobierno de Michelle Bachelet](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Michelle_Bachelet>).
+- **Oficial**: [BCN reseña Jaime Campos](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Jaime_Campos_Quiroga>) (Justicia 19-oct-2016 → 11-mar-2018); [Minsal historial](<https://www.minsal.cl/historial-de-ministros-de-salud/>) (Molina hasta 30-dic-2014; Castillo desde 23-ene-2015).
+- **Prensa**: [La Tercera 19-oct-2016](<https://www.latercera.com/noticia/radical-ex-companero-gabinete-bachelet-perfil-del-nuevo-ministro-justicia-jaime-campos/>) y [T13 19-oct-2016](<https://www.t13.cl/noticia/politica/cambio-gabinete-javiera-blanco-justicia-maximo-pacheco>) (Blanco sale / Campos asume el mismo día — vault tenía ene-2016, error corregido).
 
 ### Piñera 2 (2018-2022) — 66 nombramientos, 66 exactos ✅
 
-- **Cruce masivo**: [Anexo:Gabinetes ministeriales del segundo gobierno de Sebastián Piñera](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Sebasti%C3%A1n_Pi%C3%B1era).
-- **Oficial**: [gob.cl 18-dic-2020 — nombra a Prokurica (Defensa) y Jobet (Minería)](https://www.gob.cl/noticias/presidente-pinera-nombra-nuevos-ministros-de-defensa-y-mineria/). OJO: el anexo wiki dice 17-dic para este cambio; gob.cl y toda la prensa del día ([Cooperativa](https://www.cooperativa.cl/noticias/pais/gobierno/gabinete/enroque-en-el-gabinete-sale-desbordes-prokurica-a-defensa-y-jobet/2020-12-18/121232.html), [T13](https://www.t13.cl/noticia/politica/cambio-gabinete-jobet-biministro-prokurica-reemplazara-desbordes-defensa-18-12-20), [La Tercera](https://www.latercera.com/pulso/noticia/juan-carlos-jobet-se-convertira-en-biministro-de-mineria-y-energia/I72S2VL4PBENNDJGOWJKK7QF4M/)) lo fechan el viernes 18 — prevalece la fuente oficial.
+- **Cruce masivo**: [Anexo:Gabinetes ministeriales del segundo gobierno de Sebastián Piñera](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Sebasti%C3%A1n_Pi%C3%B1era>).
+- **Oficial**: [gob.cl 18-dic-2020 — nombra a Prokurica (Defensa) y Jobet (Minería)](<https://www.gob.cl/noticias/presidente-pinera-nombra-nuevos-ministros-de-defensa-y-mineria/>). OJO: el anexo wiki dice 17-dic para este cambio; gob.cl y toda la prensa del día ([Cooperativa](<https://www.cooperativa.cl/noticias/pais/gobierno/gabinete/enroque-en-el-gabinete-sale-desbordes-prokurica-a-defensa-y-jobet/2020-12-18/121232.html>), [T13](<https://www.t13.cl/noticia/politica/cambio-gabinete-jobet-biministro-prokurica-reemplazara-desbordes-defensa-18-12-20>), [La Tercera](<https://www.latercera.com/pulso/noticia/juan-carlos-jobet-se-convertira-en-biministro-de-mineria-y-energia/I72S2VL4PBENNDJGOWJKK7QF4M/>)) lo fechan el viernes 18 — prevalece la fuente oficial.
 
 ### Boric (2022-2026) — 55 nombramientos, 55 exactos ✅
 
-- **Cruce masivo**: [Anexo:Gabinetes ministeriales del gobierno de Gabriel Boric](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Gabriel_Boric).
-- **Oficial**: [Minsal historial](https://www.minsal.cl/historial-de-ministros-de-salud/) (Yarza hasta 6-sep-2022 → fija la salida de Siches; Aguilera desde esa fecha); [Diario Oficial decreto N°20, 9-ene-2025](https://www.diariooficial.interior.gob.cl/publicaciones/2025/04/09/44121/01/2630370.pdf) (Sandoval cesa 6-ene; Figueroa asume 9-ene); [Diario Oficial decreto N°91, 10-mar-2025](https://www.diariooficial.interior.gob.cl/publicaciones/2025/05/06/44141/01/2641523.pdf) (Lobos titular Segpres a contar del 10-mar — vault decía 4-mar, su subrogancia; corregido); [economia.gob.cl 22-ago-2025](https://www.economia.gob.cl/2025/08/22/alvaro-garcia-asume-como-ministro-de-economia-fomento-y-turismo.htm) (García Hurtado Economía 21-ago) y [16-oct-2025](https://www.economia.gob.cl/2025/10/16/alvaro-garcia-asume-como-biministro-en-las-carteras-de-economia-y-de-energia.htm) (biministro Energía 16-oct).
-- **Prensa**: [Pauta 11-ene-2023](https://www.pauta.cl/actualidad/2023/01/11/asume-nuevo-ministro-justicia-entra-en-polemica-por-indultos-decretos.html) y [La Nación](https://www.lanacion.cl/luis-cordero-asumio-como-nuevo-ministro-de-justicia/) (Cordero asumió 11-ene-2023); [T13/Latercera/ADN/RadioUchile 22-jul-2025](https://www.t13.cl/noticia/politica/aisen-etcheverry-pasa-al-gabinete-presidencial-aldo-valle-nuevo-ministro-ciencia-22-7-2025) (Valle Ciencia); [La Tercera/Emol 20-dic-2024](https://www.emol.com/noticias/Nacional/2024/12/20/1151947/ministra-ciencia-aisen-etcheverry-voceria.html) (Vallejo NO dejó Segegob: prenatal con subrogancia de Etcheverry — el anexo wiki sugiere término en dic-2024, es engañoso).
+- **Cruce masivo**: [Anexo:Gabinetes ministeriales del gobierno de Gabriel Boric](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Gabriel_Boric>).
+- **Oficial**: [Minsal historial](<https://www.minsal.cl/historial-de-ministros-de-salud/>) (Yarza hasta 6-sep-2022 → fija la salida de Siches; Aguilera desde esa fecha); [Diario Oficial decreto N°20, 9-ene-2025](<https://www.diariooficial.interior.gob.cl/publicaciones/2025/04/09/44121/01/2630370.pdf>) (Sandoval cesa 6-ene; Figueroa asume 9-ene); [Diario Oficial decreto N°91, 10-mar-2025](<https://www.diariooficial.interior.gob.cl/publicaciones/2025/05/06/44141/01/2641523.pdf>) (Lobos titular Segpres a contar del 10-mar — vault decía 4-mar, su subrogancia; corregido); [economia.gob.cl 22-ago-2025](<https://www.economia.gob.cl/2025/08/22/alvaro-garcia-asume-como-ministro-de-economia-fomento-y-turismo.htm>) (García Hurtado Economía 21-ago) y [16-oct-2025](<https://www.economia.gob.cl/2025/10/16/alvaro-garcia-asume-como-biministro-en-las-carteras-de-economia-y-de-energia.htm>) (biministro Energía 16-oct).
+- **Prensa**: [Pauta 11-ene-2023](<https://www.pauta.cl/actualidad/2023/01/11/asume-nuevo-ministro-justicia-entra-en-polemica-por-indultos-decretos.html>) y [La Nación](<https://www.lanacion.cl/luis-cordero-asumio-como-nuevo-ministro-de-justicia/>) (Cordero asumió 11-ene-2023); [T13/Latercera/ADN/RadioUchile 22-jul-2025](<https://www.t13.cl/noticia/politica/aisen-etcheverry-pasa-al-gabinete-presidencial-aldo-valle-nuevo-ministro-ciencia-22-7-2025>) (Valle Ciencia); [La Tercera/Emol 20-dic-2024](<https://www.emol.com/noticias/Nacional/2024/12/20/1151947/ministra-ciencia-aisen-etcheverry-voceria.html>) (Vallejo NO dejó Segegob: prenatal con subrogancia de Etcheverry — el anexo wiki sugiere término en dic-2024, es engañoso).
 
 ### Kast (2026-) — 28 nombramientos, 28 verificados ✅
 
 - **Obtención**: eventos propios del vault (`20260120-1` anuncio, `20260519-1/-2` remix, `20260813-2` Duco, `20260814-2` Riveros) con sus fuentes en `sources.yaml`.
-- **Cruce externo**: [Anexo:Gabinetes ministeriales del gobierno de José Antonio Kast](https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Jos%C3%A9_Antonio_Kast) — 23/28 exactos; 5 diffs explicadas (biministros Alvarado/de Grange no desglosados en el anexo; Duco 14-ago en wiki vs comunicado oficial de Presidencia del 13-ago que sigue el vault).
-- **Oficial/prensa**: [El País organigrama 11-mar-2026](https://elpais.com/chile/2026-03-11/quienes-son-los-ministros-subsecretarios-y-delegados-presidenciales-de-jose-antonio-kast.html) — lista nominal completa de los 24 ministros; [La Tercera 11-mar-2026](https://www.latercera.com/politica/noticia/jose-antonio-kast-asume-como-presidente-de-chile-y-pone-en-marcha-el-gobierno-de-emergencia/) y [Radio Uchile 11-mar-2026](https://radio.uchile.cl/2026/03/11/jose-antonio-kast-asume-la-presidencia-y-marca-inicio-del-gobierno-de-emergencia/) confirman la ceremonia de juramento de los ministros ese mismo día tras el cambio de mando; [CIPER 20-ene-2026](https://www.ciperchile.cl/2026/01/20/radar-20-01-2026/) (lista nominal del anuncio); [prensa.presidencia.cl comunicado 13-ago-2026](https://prensa.presidencia.cl/comunicado.aspx?id=338091) (salida Duco); [Emol 14-ago-2026](https://www.emol.com/noticias/Nacional/2026/08/14/1208526/cambio-gabinete-riveros-ministro-deportes.html) y [CNN Chile](https://www.cnnchile.com/pais/francisco-riveros-prioridades-ministro-deporte-natalia-duco-ceremonia/) (Riveros juró el 14-ago al mediodía).
+- **Cruce externo**: [Anexo:Gabinetes ministeriales del gobierno de José Antonio Kast](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Jos%C3%A9_Antonio_Kast>) — 23/28 exactos; 5 diffs explicadas (biministros Alvarado/de Grange no desglosados en el anexo; Duco 14-ago en wiki vs comunicado oficial de Presidencia del 13-ago que sigue el vault).
+- **Oficial/prensa**: [El País organigrama 11-mar-2026](<https://elpais.com/chile/2026-03-11/quienes-son-los-ministros-subsecretarios-y-delegados-presidenciales-de-jose-antonio-kast.html>) — lista nominal completa de los 24 ministros; [La Tercera 11-mar-2026](<https://www.latercera.com/politica/noticia/jose-antonio-kast-asume-como-presidente-de-chile-y-pone-en-marcha-el-gobierno-de-emergencia/>) y [Radio Uchile 11-mar-2026](<https://radio.uchile.cl/2026/03/11/jose-antonio-kast-asume-la-presidencia-y-marca-inicio-del-gobierno-de-emergencia/>) confirman la ceremonia de juramento de los ministros ese mismo día tras el cambio de mando; [CIPER 20-ene-2026](<https://www.ciperchile.cl/2026/01/20/radar-20-01-2026/>) (lista nominal del anuncio); [prensa.presidencia.cl comunicado 13-ago-2026](<https://prensa.presidencia.cl/comunicado.aspx?id=338091>) (salida Duco); [Emol 14-ago-2026](<https://www.emol.com/noticias/Nacional/2026/08/14/1208526/cambio-gabinete-riveros-ministro-deportes.html>) y [CNN Chile](<https://www.cnnchile.com/pais/francisco-riveros-prioridades-ministro-deporte-natalia-duco-ceremonia/>) (Riveros juró el 14-ago al mediodía).
 
 ## Verificación automática
 
@@ -156,7 +156,7 @@ y documentados arriba. Es una herramienta de auditoría: reporta, no falla el bu
 ## Correcciones aplicadas el 20-ago-2026
 
 | Persona | Campo antes | Campo ahora | Fuente que respalda |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | `felipe_larrain` | Hacienda hasta 2022-03-11 | **2019-10-28** | Anexo Piñera 2; coherente con Briones/Cerda ya registrados |
 | `jeannette_jara` | Trabajo hasta 2026-03-11 | **2025-04-07** | Anexo Boric; coherente con Boccardo desde 8-abr-2025 |
 | `javiera_blanco` | Justicia hasta 2016-01-05 | **2016-10-19** | BCN reseña Campos + carta de renuncia 19-oct-2016 |
@@ -195,13 +195,13 @@ completo "María Begoña Yarza Sáez") y `joaquin_lavin` (fusionado en
   verificados (5/6 cargos exactos); los 6 gobiernos 1938-1973 importados aún sin cruce
   individual contra BCN/Diario Oficial. La ambigüedad del remix del 8-jul-1987
   (designación 7-jul vs asunción 11-jul en BCN) aplica a 14 entradas del import.
-  Origen: https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena
+  Origen: <https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena>
 - 🟡 **Ibáñez 2.º: fechas del Interior 1952-57** — el anexo no las trae; completar desde
   BCN/Diario Oficial (22 filas omitidas).
-  Origen: https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo
+  Origen: <https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo>
 - ⬜ **Ríos (1942-46)**: su anexo usa formato compacto (solo años, varios ministros por
   celda) — requiere parser propio o carga manual.
-  Origen: https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Juan_Antonio_R%C3%ADos
+  Origen: <https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Juan_Antonio_R%C3%ADos>
 - ⬜ **Gobiernos anteriores a 1938**: sin datos en el vault. Anexos wiki disponibles por
   gobierno — mismo método de importación aplica.
 
@@ -234,7 +234,7 @@ completo "María Begoña Yarza Sáez") y `joaquin_lavin` (fusionado en
 ### Gabinete inicial (asunción 2026-03-11)
 
 | # | Persona (id) | Cargo registrado | Desde | Hasta | Estado |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | 1 | Claudio Alvarado (`claudio_alvarado`) | Ministro del Interior | 2026-03-11 | 2026-05-19 | ✅ `20260120-1` + `20260519-1` |
 | 2 | José García Ruminot (`jose_garcia_ruminot`) | Ministro Secretario General de la Presidencia | 2026-03-11 | — | ✅ `20260120-1` |
 | 3 | Mara Sedini (`mara_sedini`) | Ministra Secretaria General de Gobierno | 2026-03-11 | 2026-05-19 | ✅ `20260120-1` + `20260519-2` |
@@ -263,7 +263,7 @@ completo "María Begoña Yarza Sáez") y `joaquin_lavin` (fusionado en
 ### Cambios posteriores
 
 | Persona (id) | Cargo registrado | Desde | Hasta | Estado |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Claudio Alvarado | Biministro del Interior y Segegob | 2026-05-19 | — | ✅ `20260519-1` |
 | Louis de Grange | Biministro de Obras Públicas y Transportes | 2026-05-19 | — | ✅ `20260519-1` |
 | Martín Arrau | Ministro de Seguridad Pública | 2026-05-19 | — | ✅ `20260519-1` |

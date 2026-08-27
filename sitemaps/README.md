@@ -10,7 +10,7 @@
 ## Por medio
 
 | Medio | Artículos |
-|---|---|
+| --- | --- |
 | Radio Bío Bío | 1.170.827 |
 | Emol | 1.111.904 |
 | Meganoticias | 434.110 |

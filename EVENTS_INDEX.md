@@ -955,7 +955,7 @@
 - [2026/08/20260804-17 - Senado aprueba por unanimidad el proyecto que crea el Día Nacional de la Teletón y el Día del Encuentro Familiar](src/content/events/2026/08/20260804-17.md) — 4 fuentes
 - [2026/08/20260804-18 - Cámara aprueba solicitar a Kast el indulto del excapitán de Carabineros Patricio Maturana, condenado por cegar a Fabiola Campillai](src/content/events/2026/08/20260804-18.md) — 4 fuentes
 - [2026/08/20260804-19 - Contraloría oficia a la Municipalidad de La Cruz por audio filtrado de la alcaldesa sobre supuesto hallazgo de plantación de marihuana](src/content/events/2026/08/20260804-19.md) — 3 fuentes
-- [2026/08/20260804-2 - Hacienda congela la adjudicación de corredores de transporte público del Gran Concepción al Grupo Azvi](src/content/events/2026/08/20260804-2.md) — 8 fuentes
+- [2026/08/20260804-2 - Hacienda congela la adjudicación de corredores de transporte público del Gran Concepción al Grupo Azvi](src/content/events/2026/08/20260804-2.md) — 9 fuentes
 - [2026/08/20260804-20 - Comer cuesta un 40% más que en 2021: encuesta refleja la presión de la inflación en los hogares](src/content/events/2026/08/20260804-20.md) — 1 fuente
 - [2026/08/20260804-21 - Éxodo de panelistas en Sin Filtros por invitado sorpresa Claudio Crespo: la dirección decide terminar el programa en vivo](src/content/events/2026/08/20260804-21.md) — 1 fuente
 - [2026/08/20260804-22 - Críticas al gráfico de TVN sobre el IMACEC de junio: la periodista Ale Valle denuncia una escala desproporcionada que 'hace parecer que la economía subió un 20%'](src/content/events/2026/08/20260804-22.md) — 1 fuente
@@ -1315,6 +1315,7 @@
 - [2026/08/20260818-9 - Gobierno pone la lupa sobre la PGU antes del Presupuesto 2027: revisarán lista de 2,2 millones de beneficiarios](src/content/events/2026/08/20260818-9.md) — 1 fuente
 - [2026/08/20260819-1 - Revelan que pareja de exministra Mara Sedini es accionista del dispensario de cannabis ligado a la Operación Imperio Ámsterdam](src/content/events/2026/08/20260819-1.md) — 9 fuentes
 - [2026/08/20260819-10 - Vanessa Kaiser advierte que la reforma de seguridad podría instaurar un "totalitarismo": "Cambiamos del régimen democrático a uno totalitario"](src/content/events/2026/08/20260819-10.md) — 3 fuentes
+- [2026/08/20260819-11 - CGE ficha a Simón Boric como gerente de comunicaciones tras 12 años en la U. de Chile y enfrenta ola de críticas en redes](src/content/events/2026/08/20260819-11.md) — 7 fuentes
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
@@ -1355,7 +1356,7 @@
 - [2026/08/20260821-5 - Vicepresidentes del PPD renuncian y anuncian la creación del movimiento 'Firmes por Chile', acusando falta de democracia interna y complicidad con la agenda de Kast](src/content/events/2026/08/20260821-5.md) — 3 fuentes
 - [2026/08/20260821-6 - Embajador de EE.UU. revela que Barros firmó la Declaración de la Americas Counter Cartel Coalition (A3C) el 12 de marzo, reabre debate sobre compromisos de Chile con Washington](src/content/events/2026/08/20260821-6.md) — 6 fuentes
 - [2026/08/20260821-7 - Arrau defiende las facultades del nuevo estado de excepción: 'Interceptar un teléfono no es tema' y promete intervención dura en situaciones puntuales](src/content/events/2026/08/20260821-7.md) — 1 fuente
-- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: jefe de asesores Irarrázaval y Dülger integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 13 fuentes
+- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: Irarrázaval, Dülger y Costabal (Secom) integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 17 fuentes
 - [2026/08/20260821-9 - La doble función de la asesora legislativa de Lincolao: CEO de consultora de IA y ciberseguridad mientras coordina la tramitación de la Ley de IA](src/content/events/2026/08/20260821-9.md) — 1 fuente
 - [2026/08/20260822-1 - Marcha Nacional contra los Retrocesos Ambientales y por los Animales: movilizaciones en Santiago y regiones contra las políticas ambientales de Kast](src/content/events/2026/08/20260822-1.md) — 7 fuentes
 - [2026/08/20260822-2 - Interno gravemente herido con elemento cortopunzante en La Laguna de Talca: primer incidente grave en el penal de los traslados de Cancerbero](src/content/events/2026/08/20260822-2.md) — 1 fuente
@@ -1374,7 +1375,10 @@
 - [2026/08/20260824-9 - El trasfondo de la red trunking P25 de Carabineros: $62 mil millones a Motorola sin licitación, Contraloría frena cuarta renovación y emerge interés de la estatal china CNPMIEC](src/content/events/2026/08/20260824-9.md) — 5 fuentes
 - [2026/08/20260825-1 - TC rechaza por 9-1 el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la reconexión gratuita de servicios básicos queda firme](src/content/events/2026/08/20260825-1.md) — 13 fuentes
 - [2026/08/20260825-2 - Jefe del Estado Mayor de la Fuerza Aérea argentina atribuye Magallanes a la soberanía de su país; Chile anuncia nota de protesta y Argentina reafirma los tratados de 1881 y 1984](src/content/events/2026/08/20260825-2.md) — 10 fuentes
+- [2026/08/20260825-3 - Kast presenta Comisión Nueva Arquitectura del Estado presidida por Bettina Horst: 12 expertos tendrán 120 días para proponer reordenamiento de ministerios](src/content/events/2026/08/20260825-3.md) — 6 fuentes
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
+- [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
+- [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
 
 ## 2025
 

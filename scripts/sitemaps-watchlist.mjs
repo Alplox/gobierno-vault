@@ -1,4 +1,4 @@
-// Genera `tareas_sitemap.md`: bitácora de sitios de prensa chilenos pendientes de
+// Genera `TAREAS/tareas_sitemap.md`: bitácora de sitios de prensa chilenos pendientes de
 // sincronizar su sitemap al catálogo local (sitemaps/<medio>/), para ampliar la
 // variedad de puntos de vista al verificar eventos de gobiernos pasados.
 //
@@ -83,7 +83,7 @@ function dominio(url = '') {
 }
 
 function main() {
-  const { source, out = join(ROOT, 'tareas_sitemap.md') } = parseArgs(process.argv.slice(2));
+  const { source, out = join(ROOT, 'TAREAS', 'tareas_sitemap.md') } = parseArgs(process.argv.slice(2));
 
   const db = loadJson(join(source, 'feeds-database.json'));
   const wl = loadJson(join(source, 'watchlist.json'));
@@ -243,7 +243,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
     if (f.categoria !== catActual) {
       catActual = f.categoria;
       md += `### ${NOMBRES_CATEGORIA[catActual] || catActual} (${f.categoria})\n\n`;
-      md += `| Estado | Sitio | Web | Región | Fuente | Notas |\n|---|---|---|---|---|---|\n`;
+      md += `| Estado | Sitio | Web | Región | Fuente | Notas |\n| --- | --- | --- | --- | --- | --- |\n`;
     }
     const region = f.region ? f.region.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : '—';
     const fuente = f.fuente === 'db' ? 'database' : 'watchlist';

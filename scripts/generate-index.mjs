@@ -172,9 +172,11 @@ const totalCifras = Object.keys(entitiesData.cifras || {}).length;
 const totalSources = Object.keys(sourcesData).length;
 const totalTopics = Object.keys(topicsData).length;
 
-// Generate stats section for AGENTS.md
-let statsSection = '## Estadísticas del vault\n\n';
-statsSection += '> Esta sección se genera automáticamente con `pnpm run generate-index`\n\n';
+// Estadísticas para editores: ya no se inyectan en AGENTS.md (desde 2026-08-26) para evitar diffs ruidosos.
+// Se generan como sitemaps/ESTADISTICAS.md (útil para editores) además de EVENTS_INDEX.md.
+// AGENTS.md solo apunta a ambos archivos.
+let statsSection = '# Estadísticas del vault\n\n';
+statsSection += '> Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.\n\n';
 statsSection += `**Total de eventos:** ${stats.totalEvents}\n\n`;
 statsSection += `**Cobertura de fuentes:** ${events.length - lowCount} de ${events.length} eventos con 3+ fuentes (${lowCount} requieren más fuentes para reducir sesgo)\n\n`;
 statsSection += '**Eventos por año:**\n';
@@ -183,11 +185,7 @@ for (const year of sortedYearsStats) {
   statsSection += `- ${year}: ${stats.eventsByYear[year]}\n`;
 }
 statsSection += '\n';
-
-// Top 10 temas
-const sortedTemas = Object.entries(stats.temasCount)
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 10);
+const sortedTemas = Object.entries(stats.temasCount).sort((a, b) => b[1] - a[1]).slice(0, 10);
 if (sortedTemas.length > 0) {
   statsSection += '**Temas más frecuentes (Top 10):**\n';
   for (const [tema, count] of sortedTemas) {
@@ -196,11 +194,7 @@ if (sortedTemas.length > 0) {
   }
   statsSection += '\n';
 }
-
-// Top 10 tipos
-const sortedTipos = Object.entries(stats.tiposCount)
-  .sort((a, b) => b[1] - a[1])
-  .slice(0, 10);
+const sortedTipos = Object.entries(stats.tiposCount).sort((a, b) => b[1] - a[1]).slice(0, 10);
 if (sortedTipos.length > 0) {
   statsSection += '**Tipos de eventos más frecuentes (Top 10):**\n';
   for (const [tipo, count] of sortedTipos) {
@@ -208,7 +202,6 @@ if (sortedTipos.length > 0) {
   }
   statsSection += '\n';
 }
-
 statsSection += '**Entidades registradas:**\n';
 statsSection += `- Personas: ${totalPeople}\n`;
 statsSection += `- Organizaciones: ${totalOrgs}\n`;
@@ -216,21 +209,7 @@ statsSection += `- Cifras: ${totalCifras}\n`;
 statsSection += `- Fuentes: ${totalSources}\n`;
 statsSection += `- Temas: ${totalTopics}\n`;
 
-// Update AGENTS.md
-const agentsPath = join(root, 'AGENTS.md');
-let agentsContent = readFileSync(agentsPath, 'utf8');
-
-const marker = '<!-- AUTO-GENERATED-STATS -->';
-const markerIndex = agentsContent.indexOf(marker);
-
-if (markerIndex !== -1) {
-  // Replace everything after the marker
-  const beforeMarker = agentsContent.substring(0, markerIndex + marker.length);
-  agentsContent = beforeMarker + '\n\n' + statsSection;
-} else {
-  // Append to end
-  agentsContent += '\n\n' + marker + '\n\n' + statsSection;
-}
-
-writeFileSync(agentsPath, agentsContent, 'utf8');
-console.log('✔ AGENTS.md actualizado con estadísticas');
+const estadisticasPath = join(root, 'sitemaps', 'ESTADISTICAS.md');
+writeFileSync(estadisticasPath, statsSection, 'utf8');
+console.log(`✔ sitemaps/ESTADISTICAS.md generado: ${stats.totalEvents} eventos, ${events.length - lowCount}/${events.length} con 3+ fuentes`);
+console.log(`  Personas: ${totalPeople} · Orgs: ${totalOrgs} · Cifras: ${totalCifras} · Fuentes: ${totalSources} · Temas: ${totalTopics}`);

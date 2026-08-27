@@ -1,0 +1,58 @@
+# Seguimiento TRANSVERSAL
+
+> Cada fila de la tabla es una tarea con ID estable `S/A/V-TRANS-NNN`. El detalle operativo completo está en **## Detalle** (restaurado desde el monolito original; la columna Título es resumen corto).
+> Para retomar: `rg "S-TRANS-042" TAREAS/SEGUIMIENTO_INDEX.md` y leer la sección Detalle de este archivo.
+
+| ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
+| --- | --- | --- | --- | --- | --- | --- |
+| S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-003 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso VIF Fidel Espinoza — seguimiento: registrar el desenlace de la investigación de la Fiscalía (formalización o sob... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-004 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Manual de Carabineros / gas CS: quedó pendiente de verificar si el manual fue usado como referencia en las querellas ... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-005 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso Khamis/Israel — seguimiento: verificar la respuesta oficial de la Cancillería chilena a la exigencia de los 21 p... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-006 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Alcalde White / San Bernardo — seguimiento: cruzar la denuncia del alcalde ('cifras negras, crimen organizado desatad... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-007 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Interferencia DINA — seguimiento: la columna es opinión sin verificación; verificar si la ANI bajo el gobierno de Kas... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-008 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso Lavín León — seguimiento: registrar el desenlace de la investigación (formalización, juicio o sobreseimiento) y ... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-009 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso espionaje a la jueza Rutherford — seguimiento: verificar el desenlace de la investigación del fiscal Jaime Retam... | — | Origen: <https://example.com/pendiente-revisar> |
+| A-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Creación de Carabineros de Chile (1927) — evento histórico potencial: el Archivo Nacional documenta el DFL N°2.484 de... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-010 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Ley Karin — seguimiento legislativo: registrar la tramitación del proyecto de suspensión por cinco años (Comisión de ... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-011 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso Huechuraba — seguimiento judicial: registrar la eventual formalización definitiva/audiencia de juicio del exinfo... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-012 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso Aguilera — seguimiento: verificar el destino de los otros bienes del exalcalde de San Ramón (además de la casa d... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-013 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Riot dogs / Negro Matapacos — patrimonio cultural del estallido: considerar un evento o sección que documente a los p... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-014 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Brecha salarial de género — ampliación potencial: el boletín INE del 6-ago (brecha -4,9% en remuneración por hora, -5... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-015 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Debate del royalty minero (bnamericas, 5-ago): la cercanía de la promulgación de la megarreforma reabrió el debate so... | — | Origen: <https://example.com/pendiente-revisar> |
+| A-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Juan Luis Ossa asume como nuevo director ejecutivo del CEP (6/7-ago): pendiente de verificar cobertura (El Mostrador ... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-016 | ⬜ | 2026-08-27 | Metro Santa Isabel (incendio Línea 5) — seguimient | Respuesta de Metro a la denuncia de extintores: la columna de Contrapoder acusa cajas de emergencia vacías en cinco e... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-017 | ⬜ | 2026-08-27 | Metro Santa Isabel (incendio Línea 5) — seguimient | Conducta imprudente de pasajero en Línea 5 (5-ago): Cooperativa reportó servicio parcial por "conducta imprudente de ... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-TRANS-018 | ⬜ | 2026-08-27 | ACOT — detalles de la Escuela de Carabineros (segu | Ingreso efectivo de los proyectos: cuáles de los 9-15 proyectos nuevos ingresan al Congreso en las próximas semanas y... | — | Origen: <https://example.com/pendiente-revisar> |
+
+## Detalle
+
+### Sugerencias pendientes (para no perderlas)
+
+- **S-TRANS-001** ⬜ - **Indulto de Maturana — seguimiento:** la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la Cámara y la eventual decisión de Kast sobre el indulto particular. Verificar en semanas siguientes.
+- **S-TRANS-002** ⬜ - **Comisión de Ética del Senado:** el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registrar el desenlace.
+- **S-TRANS-003** ⬜ - **Caso VIF Fidel Espinoza — seguimiento:** registrar el desenlace de la investigación de la Fiscalía (formalización o sobreseimiento), la resolución del Tribunal Supremo del PS y el posible impacto en su bancada; Espinoza es vecino de Manuel Monsalve en el mismo edificio (dato de contexto de La Hora).
+- **S-TRANS-004** ⬜ - **Manual de Carabineros / gas CS:** quedó pendiente de verificar si el manual fue usado como referencia en las querellas por el uso de gas lacrimógeno durante el estallido (además de la investigación de Forensic Architecture).
+- **S-TRANS-005** ⬜ - **Caso Khamis/Israel — seguimiento:** verificar la respuesta oficial de la Cancillería chilena a la exigencia de los 21 parlamentarios (¿solicitó antecedentes a Israel? ¿aplicó reciprocidad?) y si hay más casos documentados de chilenos de ascendencia árabe/palestina con restricciones de ingreso a Israel.
+- **S-TRANS-006** ⬜ - **Alcalde White / San Bernardo — seguimiento:** cruzar la denuncia del alcalde ('cifras negras, crimen organizado desatado') con los datos de la ENUSC y las cifras de homicidios de San Bernardo; verificar si San Bernardo quedó en los 50 barrios críticos del plan ACOT.
+- **S-TRANS-007** ⬜ - **Interferencia DINA — seguimiento:** la columna es opinión sin verificación; verificar si la ANI bajo el gobierno de Kast mantiene su perfil técnico o si hay cambios en su dirección; también si hay denuncias documentadas de listas negras o 'servicio de inteligencia anexo'.
+- **S-TRANS-008** ⬜ - **Caso Lavín León — seguimiento:** registrar el desenlace de la investigación (formalización, juicio o sobreseimiento) y si el municipio de Maipú mantiene su querella.
+- **S-TRANS-009** ⬜ - **Caso espionaje a la jueza Rutherford — seguimiento:** verificar el desenlace de la investigación del fiscal Jaime Retamal (¿se formalizó al sargento César Neira o a otros agentes de la DINE?) y si la Operación Topógrafo tuvo otras aristas documentadas por CIPER.
+- **A-TRANS-001** ⬜ - **Creación de Carabineros de Chile (1927) — evento histórico potencial:** el Archivo Nacional documenta el DFL N°2.484 del 27-abr-1927 que fusionó los servicios policiales y carabineros (Ibáñez del Campo), con antecedentes desde 1541 (alguacil mayor de Pedro de Valdivia), el Cuerpo de Vigilantes de Portales y el Regimiento de Gendarmes (1902). Fuente `archivonacional-carabineros-historia` registrada; evaluar evento propio de cobertura histórica.
+- **S-TRANS-010** ⬜ - **Ley Karin — seguimiento legislativo:** registrar la tramitación del proyecto de suspensión por cinco años (Comisión de Trabajo), las modificaciones reglamentarias del Ministerio del Trabajo al Consejo Superior Laboral y la reacción del Frente Amplio/CUT. Contraste de cifras: los impulsores citan 66 mil denuncias como 'colapso'; la CUT las lee como demanda contenida de protección (66,7% de denuncias aprobadas presentadas por mujeres).
+- **S-TRANS-011** ⬜ - **Caso Huechuraba — seguimiento judicial:** registrar la eventual formalización definitiva/audiencia de juicio del exinformático detenido por pornografía infantil (113 imágenes), el resultado de la revisión forense de los 7 discos duros, celulares y notebook incautados, y si se detectan más víctimas o distribución de material.
+- **S-TRANS-012** ⬜ - **Caso Aguilera — seguimiento:** verificar el destino de los otros bienes del exalcalde de San Ramón (además de la casa de La Reina), el estado del proceso penal y si la Contraloría u otros organismos persiguen más activos; contexto: vínculo con Jorge 'Chino' Pinto y los abogados Lagos/Vargas (causa bielorrusa).
+- **S-TRANS-013** ⬜ - **Riot dogs / Negro Matapacos — patrimonio cultural del estallido:** considerar un evento o sección que documente a los perros callejeros símbolo de las protestas (Negro Matapacos en Chile, referencia en Wikipedia 'Riot dog', arte callejero tipo Keanu Reeves con Matapacos). Fuente complementaria cultural del 18-O.
+- **S-TRANS-014** ⬜ - **Brecha salarial de género — ampliación potencial:** el boletín INE del 6-ago (brecha -4,9% en remuneración por hora, -5,5% en costo laboral) podría complementar el evento de brecha salarial existente o dar pie a un análisis con la serie histórica del INE.
+- **S-TRANS-015** ⬜ - **Debate del royalty minero (bnamericas, 5-ago):** la cercanía de la promulgación de la megarreforma reabrió el debate sobre el royalty minero en Chile; verificar si hay mociones o declaraciones oficiales al respecto y su estado legislativo.
+- **A-TRANS-002** ⬜ - **Juan Luis Ossa asume como nuevo director ejecutivo del CEP (6/7-ago):** pendiente de verificar cobertura (El Mostrador lo anunció); evaluar evento propio.
+
+### Metro Santa Isabel (incendio Línea 5) — seguimient
+
+- **S-TRANS-016** ⬜ - **Respuesta de Metro a la denuncia de extintores:** la columna de Contrapoder acusa cajas de emergencia vacías en cinco estaciones de la Línea 5 (Ñuble, Camino Agrícola, Pedrero, Mirador, Bellavista de La Florida). Registrar la respuesta de Metro (auditoría extraordinaria, inventario de extintores por estación, medidas) cuando exista cobertura verificable.
+- **S-TRANS-017** ⬜ - **Conducta imprudente de pasajero en Línea 5 (5-ago):** Cooperativa reportó servicio parcial por "conducta imprudente de pasajero"; confirmar si amerita evento propio.
+
+### ACOT — detalles de la Escuela de Carabineros (segu
+
+- **S-TRANS-018** ⬜ - **Ingreso efectivo de los proyectos:** cuáles de los 9-15 proyectos nuevos ingresan al Congreso en las próximas semanas y sus urgencias; la diferencia de conteos entre medios (28 de Cooperativa vs. 'más de 30' de Emol) se documentó en el evento.

@@ -1,4 +1,11 @@
+---
+name: social-media
+description: Reacciones comunitarias y verificación de imágenes/audios virales en Reddit, X, Facebook, Instagram, TikTok y YouTube. Usa esta skill SIEMPRE al documentar reacciones ciudadanas, extraer comentarios o verificar imagen/audio viral, incluso si solo dice 'agregar reacciones'.
+---
+
 ## Fuentes de redes sociales: metodologia para "reacciones comunitarias"
+
+> **Handoff:** si descubres un nuevo método de búsqueda, cambias la extracción de comentarios, o calibras verificación de imágenes/audios virales, actualiza este skill en la misma sesión.
 
 **Un solo tweet/post de un usuario NO es una "reaccion comunitaria".** Las redes sociales (X, Reddit, Facebook, Instagram, TikTok, YouTube) son **siempre complementarias o punto de partida**, nunca fuente unica de un dato (regla general del vault). Cuando un evento documenta reacciones ciudadanas, el segmento debe reflejar el debate real: **opiniones variadas, de usuarios distintos y de plataformas distintas, con puntos de vista de distinto signo** (criticos y defensores). Si solo existe la opinion de un usuario, NO titular el segmento "Reacciones comunitarias": se registra como opinion de ese usuario (ej. "El hilo de Usuario Jose"), con sus datos verificados contra fuentes oficiales/prensa y marcando como interpretacion no verificada lo que no se pueda confirmar.
 
@@ -14,8 +21,8 @@
 ### Metodos de busqueda probados (2026-08)
 
 **Reddit r/chile** (los mas confiables):
-- **Busqueda por HTML**: `https://old.reddit.com/r/chile/search?q=<terminos>&restrict_sr=on&sort=new&t=month` funciona con `read_url` (la API JSON `search.json` devuelve 403; r.jina.ai sobre reddit tambien 403). El HTML del search lista titulo + puntos + comentarios + enlace del hilo.
-- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "https://old.reddit.com/r/chile/comments/<id>/<slug>/" -o <archivo>.html` responde 200; luego parsear con Python:
+- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` funciona con `read_url` (la API JSON `search.json` devuelve 403; r.jina.ai sobre reddit tambien 403). El HTML del search lista titulo + puntos + comentarios + enlace del hilo.
+- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` responde 200; luego parsear con Python:
   ```python
   import re, html
   blocks = re.split(r'<div class="entry', data)
@@ -27,7 +34,7 @@
 - Ordenar comentarios por puntaje (desc) y tomar los top ~20 + los negativos para capturar el disenso.
 
 **Facebook** (posts de paginas de medios):
-- `r.jina.ai/https://www.facebook.com/<pagina>/posts/<slug>/` devuelve el texto del post + los comentarios "Most relevant" con su conteo de reacciones (probado con El Dínamo y Kapital FM, 2026-08). `read_url` directa tambien funciona para algunos posts.
+- `r.jina.ai/<https://www.facebook.com/<pagin>a>/posts/<slug>/` devuelve el texto del post + los comentarios "Most relevant" con su conteo de reacciones (probado con El Dínamo y Kapital FM, 2026-08). `read_url` directa tambien funciona para algunos posts.
 
 **X/Twitter**: el clipping del usuario trae el hilo y sus comentarios; para ampliar voces buscar cobertura de prensa del tema y usar el catalogo de sitemaps (`grep -ih '<termino>' sitemaps/<medio>/*.jsonl`). Los status IDs entregados por el usuario se validan con la URL de prensa que los confirma.
 
@@ -36,7 +43,7 @@
 ### Estado de validacion por red social
 
 | Red social | Busqueda | Extraccion de comentarios | Notas |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | Reddit r/chile | ✅ HTML search (read_url) | ✅ HTML + regex (curl) | API JSON y r.jina.ai bloqueados (403) |
 | Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
 | X/Twitter | 🟡 solo via clipping del usuario o prensa | 🟡 comentarios del hilo en el clipping | Sin busqueda publica automatizada probada |

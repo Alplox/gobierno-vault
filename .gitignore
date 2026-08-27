@@ -9,3 +9,6 @@ dist/
 
 # Crawlee (fallback de fetch en sync-sitemaps) crea storage/ en runtime
 storage/
+
+# Agents
+skills-workspace/

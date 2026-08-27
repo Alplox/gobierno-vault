@@ -83,8 +83,8 @@ const ROOT_FILES = [
   'README.md',
   'EVENTS_INDEX.md',
   'TAREAS',
-  'FUENTES_GUBERNAMENTALES.md',
   'TEMPLATE.md',
+  '.agents',
   '.telegram-scrape/scrape.py',
   '.telegram-scrape/extract.py',
 ];

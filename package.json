@@ -6,6 +6,7 @@
     "dev": "astro dev",
     "validate": "node scripts/validate.mjs",
     "generate-index": "node scripts/generate-index.mjs",
+    "generate-seguimiento-index": "node scripts/generate-seguimiento-index.mjs",
     "sitemaps-sync": "node scripts/sync-sitemaps.mjs",
     "sitemaps-index": "node scripts/sitemaps-index.mjs",
     "sitemaps-backup": "node scripts/sitemaps-backup.mjs",

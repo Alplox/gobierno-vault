@@ -21059,9 +21059,10 @@ biobiochile-2026-08-10-reaccion-espana-freno-obras:
   tipo: prensa
   medio: BioBioChile
   titulo: "Kast encendió alarmas y Chile opta por asustar a inversores: reacción en España por freno a obras"
-  autor: Redacción BioBioChile
+  autor: Franco López
   fecha: 2026-08-10
   url: "https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/10/kast-encendio-alarmas-y-chile-opta-por-asustar-a-inversores-reaccion-en-espana-por-freno-a-obras.shtml"
+  notas: "Crónica de BioBioChile (10-ago-2026, 09:51, Trust Project) que reporta la reacción en España a la cancelación de las concesiones de corredores del Gran Concepción a Azvi: cita el artículo de Expansión 'el Gobierno del conservador José Antonio Kast ha encendido las alarmas', fuentes financieras sobre 'inseguridad jurídica', el sistema concesional 'más maduro y estable', el informe de Azvi con retraso a 2035 y sobrecostes, y la carta de Quiroz al MOP ('no es posible absorber' compromisos plurianuales). Verificada por lectura directa."
 expansion-2026-08-10-kast-alarmas-concesiones:
   tipo: prensa
   medio: Expansión
@@ -21069,6 +21070,15 @@ expansion-2026-08-10-kast-alarmas-concesiones:
   autor: C. Morón
   fecha: 2026-08-10
   url: "https://www.expansion.com/empresas/inmobiliario/2026/08/10/6a78b89fe5fdeaf4208b4587.html"
+  notas: "Artículo del diario financiero español Expansión (10-ago-2026) citado por BioBioChile: 'Chile cancela dos concesiones a Azvi y pone en alerta a Sacyr y OHLA', con el titular 'Kast encendió alarmas' y la tesis de 'Chile opta por asustar a inversores' e 'inseguridad jurídica'. Paywall; URL verificada (status 200) y contenido corroborado vía BioBioChile."
+biobiochile-2026-08-07-corredores-concesion-obra-publica:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "De concesión a obra pública: el nuevo escenario de los corredores de transporte para Gran Concepción"
+  autor: Bárbara Haas
+  fecha: 2026-08-07
+  url: "https://www.biobiochile.cl/noticias/bbcl-explica/bbcl-explica-notas/2026/08/07/de-concesion-a-obra-publica-el-nuevo-escenario-de-los-corredores-de-transporte-para-gran-concepcion.shtml"
+  notas: "BBCL Explica (Bárbara Haas, editora BBCL Contigo/Explica, 07-ago-2026 10:17): detalla el giro de concesión (US$400M, aportes fiscales plurianuales, 25 años de mantención) a obra pública directa vía Dirección de Vialidad del MOP; presupuesto regional MOP >US$3.000M; comparativa Puente Chacao; extensión 23,5 km (Ruta 160: 14,2 km + 29 paraderos + 3 pasos desnivelados; Ruta 150: 9,3 km); estándares sin cambios; ingeniería 2027-2028, operación fines 2031; DF: faenas concesión en 12 meses vs obra pública en 4 años; empleo 4.000 directos, peak 7.000; cita a Louis de Grange sobre responsabilidad fiscal y ahorro 10-40%; proceso con consorcio Electro-Cointer descartado por decreto no firmado. Verificada por lectura directa."
 theclinic-2026-08-10-capilla-evangelica-la-moneda:
   tipo: prensa
   medio: The Clinic
@@ -36671,3 +36681,239 @@ emol-2026-08-26-clan-chen-historial:
   url: https://www.emol.com/noticias/Nacional/2026/08/26/1209614/clan-chen-banda-estafa-internacional.html
   notas: "Perfil del Clan Chen: organización de origen chino en Tarapacá, liderada por Longdi Chen con hijos Wu y Wen Ziliang y primo Yongjie, dedicada a 'pig butchering' a víctimas EEUU (jubilados, cripto) con alerta FBI, blanqueo vía 16+48 sociedades de papel en Zofri, >USD 200M defraudados, 39 detenidos y 50M incautados; calificado por exfiscal Trinidad Steinert como 'una de las estafas más grandes'. Contexto del retorno ordenado desde La Laguna a Alto Hospicio (evento 20260826-1)."
 
+biobiochile-2026-08-26-contraloria-radar-796-mil-millones:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Contraloría detecta $796 mil millones en saldos sin movimientos en organismos públicos y municipios"
+  autor: Constanza Carrillo Silva
+  fecha: 2026-08-26
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/26/contraloria-detecta-796-mil-millones-en-saldos-sin-movimientos-en-organismos-publicos-y-municipios.shtml
+  notas: "Nota base del RADAR N°3: $796.440 millones sin movimiento a marzo de 2026 (inactivos 2020-2024), $641.954 millones sector público y $154.486 millones municipal, vía SICOGEN y herramienta RADAR; >90% cuentas por cobrar con riesgo de incobrabilidad/prescripción; CGR comunicará a entidades y usará hallazgos para fiscalización futura (evento 20260826-2)."
+
+contraloria-2026-08-26-radar-n3-saldos-sin-movimiento:
+  tipo: documento
+  medio: Contraloría General de la República
+  titulo: "RADAR N°3: CGR detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios"
+  autor: Contraloría General de la República
+  fecha: 2026-08-26
+  url: https://www.contraloria.cl/portalweb/web/cgr/-/radar-n3
+  notas: "Fuente oficial primaria del RADAR N°3: $796.440 millones sin movimiento (2020-2024, SICOGEN, a marzo 2026), $641.954 millones sector público y $154.486 millones municipal; >90% cuentas por cobrar; alerta de riesgo por pérdida, fondos inmovilizados e información desactualizada; comunicación directa a entidades y base para fiscalización futura. Ver también ficha del documento https://www.contraloria.cl/buscadorpdf/consolidados/42/html (evento 20260826-2)."
+
+meganoticias-2026-08-26-contraloria-796-mil-millones:
+  tipo: prensa
+  medio: Meganoticias
+  titulo: "Casi $800 mil millones sin movimiento: Contraloría alerta riesgo de pérdida de recursos en organismos públicos"
+  autor: Leslie Ayala
+  fecha: 2026-08-26
+  url: https://www.meganoticias.cl/nacional/530264-contraloria-detecta-casi-800-mil-millones-saldos-sin-movimiento-hace-anos-fiscalizacion-26-08-2026.html
+  notas: "Meganoticias detalla el RADAR N°3: $796.440 millones sin movimiento 2020-2024 a marzo 2026, $641.954 millones sector público y $154.486 municipal; >90% cuentas por cobrar no disponibles, riesgo de incobrabilidad/prescripción y fondos inmovilizados; CGR notificará y usará como antecedente de fiscalización (evento 20260826-2)."
+
+adnradio-2026-08-26-contraloria-796-mil-millones:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Contraloría detecta casi $800 mil millones en saldos contables sin movimiento en organismos públicos y municipios"
+  autor: Juan Carlos Castillo
+  fecha: 2026-08-26
+  url: https://www.adnradio.cl/2026/08/26/contraloria-detecta-casi-800-mil-millones-en-saldos-contables-sin-movimiento-en-organismos-publicos-y-municipios
+  notas: "ADN Radio replica el RADAR N°3: $796.440 millones sin movimiento (2020-2024, a marzo 2026), $641.954 millones sector público y $154.486 municipal vía SICOGEN; >90% cuentas por cobrar; CGR advierte incobrabilidad/prescripción y comunicará a entidades (evento 20260826-2)."
+
+elmostrador-2026-08-26-contraloria-796-mil-millones:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Contraloría detecta casi $800 mil millones sin movimiento en cuentas públicas desde 2020"
+  autor: El Mostrador
+  fecha: 2026-08-26
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/26/contraloria-detecta-casi-800-mil-millones-sin-movimiento-en-cuentas-publicas-desde-2020/
+  notas: "El Mostrador cubre el RADAR N°3: $796.440 millones sin movimiento a marzo 2026 (inactivos 2020-2024), $641.954 millones sector público y $154.486 municipal; >90% cuentas por cobrar con riesgo de incobrabilidad/prescripción (evento 20260826-2)."
+
+latercera-2026-08-26-contraloria-796-mil-millones:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Contraloría detecta $796 mil millones en cuentas inactivas de organismos públicos y municipios"
+  autor: La Tercera
+  fecha: 2026-08-26
+  url: https://www.latercera.com/nacional/noticia/contraloria-detecta-796-mil-millones-en-cuentas-inactivas-de-organismos-publicos-y-municipios/
+  notas: "La Tercera replica el RADAR N°3: $796.440 millones sin movimiento 2020-2024 a marzo 2026, $641.954 millones sector público y $154.486 municipal; >90% cuentas por cobrar, riesgo de incobrabilidad/prescripción y alerta de fondos inmovilizados (evento 20260826-2)."
+
+cooperativa-2026-08-26-contraloria-796-mil-millones:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Casi 800 mil millones de pesos: el pozo de fondos públicos sin movimiento que detectó Contraloría"
+  autor: Cooperativa
+  fecha: 2026-08-26
+  url: https://www.cooperativa.cl/noticias/pais/organismos-del-estado/contraloria/casi-800-mil-millones-de-pesos-el-pozo-de-fondos-publicos-sin/2026-08-26/154221.html
+  notas: "Cooperativa cubre el RADAR N°3: $796.440 millones sin movimiento (2020-2024, a marzo 2026), 641.954 millones organismos públicos y 154.486 municipal; vía plataforma RADAR (SICOGEN); >90% cuentas por cobrar (evento 20260826-2)."
+
+presidencia-2026-08-25-comision-arquitectura-estado:
+  tipo: prensa
+  medio: Prensa Presidencia
+  titulo: "Presidente Kast presenta Comisión Nueva Arquitectura del Estado: tendrá 120 días para proponer nueva estructura ministerial"
+  autor: Prensa Presidencia
+  fecha: 2026-08-25
+  url: https://prensa.presidencia.cl/comunicado.aspx?id=338835
+  notas: "Fuente primaria oficial de Presidencia. Confirma constitución de la Comisión Nueva Arquitectura del Estado presidida por Bettina Horst el 25-ago-2026 en La Moneda, mandato de 120 días, integración de 12 expertos (Bettina Horst, Nicolás Monckeberg, Gonzalo Blumel, Zarko Luksic, Beatriz Hevia, Juan Antonio Urzúa, Natalia González, Natalia Piergentili, Ernesto Silva, Osvaldo Andrade, Andrés Zaldívar, Adriana Delpiano), objetivos de revisar número de carteras, eliminar superposiciones y reasignar recursos. Cita textual del anuncio de Cuenta Pública del 1 de junio y detalles de cifras 18→25 ministerios y comparación OCDE. Evento 20260825-3."
+
+adnradio-2026-08-25-kast-comision-ministerios-120-dias:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Presidente Kast presenta comisión para reducir ministerios y rediseñar el Estado: tendrá 120 días para entregar propuestas"
+  autor: Juan Carlos Castillo
+  fecha: 2026-08-25
+  url: https://www.adnradio.cl/2026/08/25/presidente-kast-presenta-comision-para-reducir-ministerios-y-redisenar-el-estado-tendra-120-dias-para-entregar-propuestas/
+  notas: "Cobertura de ADN Radio con detalle del mandato de 120 días, composición de 12 integrantes, presidencia de Bettina Horst y citas de Kast sobre proyecto de ley al Congreso y carácter ad honorem. Corrobora video ADN Chile del 25-ago-2026 (YouTube) usado como fuente complementaria. Evento 20260825-3."
+
+radio-uchile-2026-08-25-comision-arquitectura-estado:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "\"Nuestra intención no es desmantelar el Estado\": Gobierno presenta comisión para reorganizar el aparato público"
+  autor: Diario UChile
+  fecha: 2026-08-25
+  url: https://radio.uchile.cl/2026/08/25/nuestra-intencion-no-es-desmantelar-el-estado-gobierno-presenta-comision-para-reorganizar-el-aparato-publico/
+  notas: "Nota de Radio Universidad de Chile con transcripción ampliada de Horst ('no es vinculante para la decisión presidencial', foco en servicio a la ciudadanía y articulación SEREMI/servicios públicos) y de Kast (18→25 ministerios, por sobre promedio OCDE, necesidad de evaluar eficiencia, proyecto de ley en el Parlamento, trabajo 'con los funcionarios, no en contra'). Confirma listado de integrantes y plazo de 120 días. Evento 20260825-3."
+
+eldinamo-2026-08-25-comision-reduccion-ministerios:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Quiénes están detrás de la comisión que impulsará la reducción de ministerios"
+  autor: Francisco Rosales
+  fecha: 2026-08-25
+  url: https://www.eldinamo.cl/politica/2026/08/25/quienes-estan-detras-de-la-comision-que-impulsara-la-reduccion-de-ministerios/
+  notas: "Perfil de los 12 integrantes con breves reseñas (Horst/LyD, Monckeberg, Blumel, Luksic, Hevia, Urzúa, González/CPLT, Piergentili/PPD, Silva/UDD, Andrade, Zaldívar, Delpiano). Cita el mandato de la Cuenta Pública del 1 de junio y la cifra 18→25 ministerios. Fuente clave para biografías de integrantes faltantes en entities.yaml (Hevia, Luksic, Piergentili, Silva). Evento 20260825-3."
+
+df-2026-08-25-comision-arquitectura-estado:
+  tipo: prensa
+  medio: Diario Financiero
+  titulo: "Kast presenta comisión para reformar la arquitectura del Estado y analizar fusionar ministerios: grupo lo integran Zaldívar, Andrade, Horst y Blumel"
+  autor: Rodolfo Carrasco
+  fecha: 2026-08-25
+  url: https://www.df.cl/economia-y-politica/politica/kast-presenta-comision-para-reformar-la-arquitectura-del-estado-y-analizar
+  notas: "DF confirma presentación del 25-ago-2026, presidencia de Bettina Horst, integrantes de distintas trayectorias y frase clave de Horst sobre coordinación de políticas públicas más allá del número mágico de ministerios. Cita de Kast 'Un Estado ordenado no es un Estado más grande ni un Estado más pequeño'. Corrobora plazo de 120 días. Evento 20260825-3."
+
+radioagricultura-2026-08-26-comision-arquitectura-estado:
+  tipo: prensa
+  medio: Radio Agricultura
+  titulo: "Presidente Kast presenta a los integrantes de la Comisión Nueva Arquitectura del Estado"
+  autor: Thiara Julio
+  fecha: 2026-08-26
+  url: https://www.radioagricultura.cl/noticias/nacional/presidente-kast-presenta-a-los-integrantes-de-la-comision-nueva-arquitectura-del-estado_20260826/
+  notas: "Réplica de Agricultura (26-ago) que reproduce comunicado de Presidencia con listado íntegro de 12 integrantes y antecedente de la Cuenta Pública del 1 de junio. Útil para cruce con otras 5 fuentes y verificación de nombres sin variaciones. Evento 20260825-3."
+elmostrador-2026-08-25-cerimedo-costabal-secom:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "La huella de Cerimedo en La Moneda: Director de la Secom también trabajó con el Rey de los trolls"
+  autor: Claudio Pizarro Sanguesa
+  fecha: 2026-08-25
+  url: https://www.elmostrador.cl/unidad-de-investigacion/2026/08/25/la-huella-de-cerimedo-en-la-moneda-director-de-la-secom-tambien-trabajo-con-el-rey-de-los-trolls/
+  notas: "Investigación Unidad de Investigación de El Mostrador (25-ago-2026): revela que Felipe 'Yeti' Costabal, director de la Secom, es el tercer vínculo La Moneda-Cerimedo junto a Alejandro Irarrázaval e Ignacio Dülger. Los tres coincidieron en Casa Común (comando empresarial del Rechazo 2020, Vitacura, liderado por Gonzalo de la Carrera, con Gerardo Jofré, Juan Pablo Correa, Juan Cox). Costabal entró como creativo publicitario (llevado según una fuente probablemente por él mismo, tesis 'lo más probable es que lo haya llevado Costabal'); la org. contrató a Numen para al menos tres encuestas; una proyectó triunfo Rechazo y erró por 36 puntos (Apruebo 78,28%). Jofré confirmó que 'El Yeti' trabajó allí y que Cerimedo tenía 'trayectoria' y 'formaba parte de un círculo que pasaba por el comando', pero niega que Costabal haya sido llevado por él. Detalla carrera de Costabal: U. de Los Andes, agencia LA975 (2018), campaña 'Yo quiero ser Presidente' (2013) con 1.500 inscritos incluido Parisi, asesor de Luis Silva ('profe Silva', 2021), reclutado por Cristián Valenzuela para Kast 2021 (eslogan 'Atrévete', jingle 'Vota 2, vota Kast', planes con nombres hollywoodenses como 'Plan Cancerbero'), minuta de 12 páginas con concepto 'quiebra' rechazado por Hacienda (marzo 2026), protocolo de control centralista, rechazos del Tricel a factura $160M de Santelices emitida por Costabal (CIPER), sociedad Costabal y Prieto SpA con Leonardo Prieto (Porcel TV/TVN). Costabal no respondió consultas. Verificada por lectura directa."
+eldesconcierto-2026-08-25-cerimedo-costabal:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Fernando Cerimedo y sus nexos con La Moneda: Jefe de la Secom de Kast trabajó con él para el Rechazo"
+  autor: El Desconcierto
+  fecha: 2026-08-25
+  url: https://eldesconcierto.cl/actualidad/fernando-cerimedo-y-sus-nexos-la-moneda-jefe-la-secom-kast-trabajo-el-el-rechazo-n5461643
+  notas: "Síntesis de El Desconcierto (25-ago-2026 08:18) que replica la investigación de El Mostrador: Costabal coincidió con Cerimedo en Casa Común durante el Rechazo 2020; fuente reserva 'lo más probable' que Costabal haya llevado al argentino; Jofré confirma trabajo de Costabal pero niega haberlo llevado; tres encuestas Numen, encuesta cuestionada con error 36 puntos; recorrido de Costabal (UAndes, LA975, 'Yo quiero ser Presidente' 2013) y controversias posteriores (minuta 'quiebra', protocolo); oficios de Araya/Manouchehri/Santana al Servel y La Moneda; Costabal no respondió. Verificada por lectura directa."
+elciudadano-2026-08-25-cerimedo-costabal:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Fernando Cerimedo: Links to La Moneda Grow as 'King of Trolls' Ties with Secom Chief Felipe Costabal Surface"
+  autor: El Ciudadano
+  fecha: 2026-08-25
+  url: https://www.elciudadano.com/en/fernando-cerimedo-links-to-la-moneda-grow-as-king-of-trolls-ties-with-secom-chief-felipe-costabal-surface/08/25/
+  notas: "Versión en inglés de El Ciudadano (25-ago-2026) que traduce la investigación de El Mostrador: tercer vínculo Costabal-Cerimedo en Casa Común, Vitacura, tras Irarrázaval y Dülger; cita la encuesta Numen 42,3% Apruebo vs 78% real y el descargo 'error en análisis con voto obligatorio 100%'; fuente interna señala a Costabal como eslabón del desembarco de Cerimedo; rol de creativo de Costabal y convergencia de miembros del actual gobierno; confirmación de Jofré. Corrobora con traducción íntegra; no aporta datos nuevos independientes. Verificada por lectura directa."
+lapoliticaonline-2026-08-26-costabal-cerimedo:
+  tipo: prensa
+  medio: La Política Online
+  titulo: "Revelan que el jefe de Comunicación de Kast en Chile trabajaba para Cerimedo"
+  autor: Augusto Taglioni
+  fecha: 2026-08-26
+  url: https://www.lapoliticaonline.com/internacionales/revelan-que-el-jefe-de-comunicacion-de-kast-en-chile-trabajaba-para-cerimedo/
+  notas: "Rebote argentino (LPO, 26-ago-2026) de la investigación de El Mostrador: presenta a Costabal como tercer funcionario de Kast del equipo de Cerimedo tras Irarrázaval y Dülger (jefatura de Asesores); reitera Casa Común (empresarios Rechazo 2020, Gonzalo de la Carrera) con Costabal como creativo, su vínculo con Codelco, su ascenso a publicista principal de Kast 2021 ('Atrévete'), su rol en 'país quebrado' y alza de combustibles; añade que diputados PPD y PS (Daniel Manouchehri, Juan Santana) presentaron ante Servel para investigar Numen-La Moneda y menciona Cadem 57% imagen negativa de Kast. No es fuente primaria chilena; su valor es la proyección internacional del caso y el resumen fiel de El Mostrador. Verificada por lectura directa; la URL solicitada por el usuario es esta."
+biobiochile-2026-08-26-matthei-cerimedo-bots:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Matthei apunta a Kast por caso Cerimedo y debate por bots: 'No le creí nada y sigo no creyéndole nada'"
+  autor: Gustavo Donat Sandoval
+  fecha: 2026-08-26
+  url: https://www.biobiochile.cl/noticias/entrevistas-bbcl/entrevista-nacional/2026/08/26/matthei-apunta-a-kast-por-caso-cerimedo-y-debate-por-bots-no-le-crei-nada-y-sigo-no-creyendole-nada.shtml
+  notas: "Entrevista central (BioBioTV/Radio Bío Bío, El Tema del Día con Néstor Aburto, 26-ago-2026, 17:22). Matthei relata conversación cara a cara con Kast durante la campaña 2025 donde él negó vínculo con bots/trolls: 'Me lo dijo varias veces en mi cara, mirándome a los ojos, que no tenía nada que ver con esas campañas' y 'No le creí nada y sigo no creyéndole nada'. Detalla ataque sistemático desde enero 2025 (autora intelectual reforma previsional, de izquierda, comunista, videos cortados/pegados, falso Alzheimer cerca de primaria), periodicidad 2-3 semanas con mismas cuentas, y decisión de denunciar pese a consejos de no hacerlo. Vincula con detención de Cerimedo en Bolivia (intento de femicidio contra Nadia Beller, mini granja de bots hallada) y señala foto de Cerimedo con equipo de Kast publicada y desactivación de cuentas 'Dress' y 'Neuroc' ~48h después del arresto ('¿por qué se bajaron? ¿por temor a ser vinculados o por perder caja de resonancia?'). Advierte sobre sofisticación (redes + caras visibles/plataformas) y amenaza a democracia/empresas/periodistas. Verificada por lectura directa."
+elmostrador-2026-08-26-matthei-revive-bots-kast:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Matthei revive acusación por bots y dice que nunca creyó en el desmentido de Kast"
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-26
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/26/matthei-revive-acusacion-por-bots-y-dice-que-nunca-creyo-en-el-desmentido-de-kast/
+  notas: "Réplica de El Mostrador (26-ago-2026) de la entrevista BioBioTV: reproduce literal 'No le creí nada y sigo no creyéndole nada' y la secuencia desde enero 2025 (reforma previsional, izquierda/comunista, Alzheimer). Confirma contexto de detención de Cerimedo (autor intelectual presunto del ataque a Beller, hallazgo mini granja de bots por Fiscalía boliviana) y que Matthei apuntó a foto con equipo de Kast y a desactivación de dos cuentas digitales tras el arresto ('Casi 48 horas después desactivaron las dos cuentas principales'). No aporta verificación independiente del vínculo Cerimedo-Kast; lo registra como acusación declarativa. Verificada por lectura directa."
+theclinic-2026-08-26-matthei-cerimedo-kast:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "'No le creí nada y sigo no creyéndole nada': Matthei arremete contra Kast a propósito del caso Cerimedo y recuerda los ataques de trolls en su contra"
+  autor: Pablo Serey
+  fecha: 2026-08-26
+  url: https://www.theclinic.cl/2026/08/26/no-le-crei-nada-y-sigo-no-creyendole-nada-matthei-arremete-contra-kast-a-proposito-del-caso-cerimedo-y-recuerda-los-ataques-de-trolls-en-su-contra/
+  notas: "Cobertura de The Clinic (26-ago-2026) de la entrevista BioBio: reproduce que Matthei denunció campaña de bots/trolls del entorno republicano en 2025, que Kast lo negó cara a cara y que ella no le creyó; detalla ataques desde enero (videos manipulados, falso Alzheimer), la foto de Cerimedo con gente del equipo de Kast y la desactivación de 'Dress' y 'Neuroc' ~48h después de la detención ('Es muy raro que se hayan bajado justo cuando toman a Cerimedo preso'). Enmarca a Cerimedo como 'rey de los trolls' detenido por tentativa de femicidio con hallazgo de equipos de bots. Verificada por lectura directa."
+t13-2026-08-26-matthei-bots-kast:
+  tipo: prensa
+  medio: T13
+  titulo: "Matthei recuerda conversación con Kast por 'bots' y 'trolls' en su contra: 'No le creí nada y sigo no creyéndole nada'"
+  autor: Javier Thomson N.
+  fecha: 2026-08-26
+  url: https://www.t13.cl/noticia/politica/matthei-recuerda-conversacion-kast-por-bots-trolls-su-contra-26-8-2026
+  notas: "T13 (26-ago-2026, 19:58) replica íntegra la entrevista BioBio: cita 'Me lo dijo varias veces en mi cara, mirándome a los ojos' y 'No le creí nada y sigo no creyéndole nada'; reconstruye cronología de ataques (enero 2025 reforma previsional/zarpazo ahorros, de izquierda, videos cortados/pegados, comunista, Alzheimer cerca de primaria cada 2-3 semanas con mismas cuentas) y cita 'Fue una campaña muy, muy terrible' con comparación a ataque a Simón Boric por trabajar en eléctrica. Recuerda contexto de detención de Cerimedo (autor intelectual ataque a expareja, mini granja de bots) y foto con equipo de Kast; plantea interrogantes de Matthei sobre desactivación de cuentas. Verificada por lectura directa."
+lacuarta-2026-08-27-matthei-kast-cerimedo:
+  tipo: prensa
+  medio: La Cuarta
+  titulo: "'No le creí y sigo no creyéndole nada': Matthei no perdona a Kast y lo apunta en medio de polémica por 'Rey de los Bots'"
+  autor: Erasmo Tauran
+  fecha: 2026-08-27
+  url: https://www.lacuarta.com/chile/noticia/no-le-crei-y-sigo-no-creyendole-nada-matthei-no-perdona-a-kast-y-lo-apunta-en-medio-de-polemica-por-rey-de-los-bots/
+  notas: "La Cuarta (27-ago-2026) reproduce entrevista BioBio: 'No le creí nada y sigo no creyéndole nada' sobre desmentido de Kast cara a cara; contextualiza a Cerimedo como 'Rey de los Bots' acusado de mandar a asesinar a su expareja y artífice de red de bots en Latinoamérica; detalla campaña en contra de Matthei con falso Alzheimer atribuida a entorno republicano y foto de Cerimedo con equipo de Kast; recoge interrogante sobre desactivación de dos cuentas troll 'de los republicanos' justo tras detención ('¿Temen que de alguna manera los vinculen?') y advertencia sobre 'conglomerado donde se van creando realidades mentirosas' como amenaza a democracia. Verificada por lectura directa."
+youtube-2026-08-26-biobio-matthei-kast-cerimedo:
+  tipo: video
+  medio: YouTube
+  titulo: "'No le creí nada y sigo no creyéndole nada': Matthei apunta a Kast por debate de granjas de bots"
+  autor: Bio Bio
+  fecha: 2026-08-26
+  url: https://www.youtube.com/watch?v=JtWdN04ClPA
+  notas: "Video original entregado por el usuario (Bio Bio, 26-ago-2026). Contiene la entrevista completa a Evelyn Matthei en El Tema del Día con Néstor Aburto (transcripción aportada): relato de ataques sistemáticos desde enero 2025, falso Alzheimer, videos manipulados, mención a Fernando Cerimedo (mini granja de bots hallada en allanamientos en Bolivia tras imputación por ataque armado a Nadia Beller), foto con equipo de Kast, desactivación de cuentas 'DresTrump' y 'Neuroc' ~48h después del arresto, mención a Gonzalo Feito/Porcel TV/TVN y a campaña contra Simón Boric. Fuente primaria audiovisual; se usa como respaldo complementario de las notas de prensa que ya cubren el contenido (BioBioChile, El Mostrador, The Clinic, T13, La Cuarta)."
+exante-2026-08-19-simon-boric-cge:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "[Confidencial] Empresa de capitales chinos CGE ficha a Simón Boric, hermano del ex Presidente"
+  autor: JP. Sallaberry
+  fecha: 2026-08-19
+  url: https://www.ex-ante.cl/politica/aterrizaje-simon-boric-cge/
+  notas: "Ex-Ante (19-ago-2026, 12:11) revela el fichaje: Simón Boric, periodista U. de Chile (12 años: jefe de prensa/coordinador comunicaciones con Vivaldi y jefe de gabinete de Rosa Devés hasta 19-jun-2026), asumió el 22 de junio como gerente de comunicaciones e integración cultural de CGE S.A. (distribuidora controlada desde 2021 por State Grid Corporation of China, SGCC). Directorio: presidente Yan Dai, Futao Huang, Shan Jingfu, Zhang Ran y Nicolás Eyzaguirre. Cargo: equipo de 6 personas, vínculos regionales y con escuelas de ingeniería eléctrica (U. de Concepción, UC), visitas a terreno Pelluhue/Chanco (Maule) tras temporales y compromiso de reposición de generador de Pelluhue en ~2 meses (comunicado municipalidad María Luz Reyes). Ingreso por concurso según excompañeros; no había publicado cargo en LinkedIn. Currículum: GWU (2011), Georgetown (2013), World Youth Development Forum China 2025, Puente al Futuro 2019, mandarín. Verificada por lectura directa."
+biobiochile-2026-08-19-simon-boric-cge:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Tras 12 años en la Universidad de Chile, CGE ficha a Simón Boric como gerente de comunicaciones"
+  autor: Lindy Sandoval
+  fecha: 2026-08-19
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/19/tras-12-anos-en-la-universidad-de-chile-cge-ficha-a-simon-boric-como-gerente-de-comunicaciones.shtml
+  notas: "BioBioChile (19-ago-2026, 13:42) replica Ex-Ante: Simón Boric (hermano menor de Gabriel Boric) asume en CGE el 22 de junio tras 12 años en U. de Chile (hasta 19-jun-2026); detalla directorio (Yan Dai, Futao Huang, Shan Jingfu, Zhang Ran, Nicolás Eyzaguirre) y funciones (6 personas, relación regional, atracción de talentos en ingeniería eléctrica). Reporta visita a Pelluhue/Chanco con alcaldesa María Luz Reyes y reposición de generador en 2 meses; manejo comunicacional de historias de la empresa y contingencias (compensaciones/multa por cortes). Cita que entró por concurso. Añade sidebar sobre denuncia de Irarrázaval en Contraloría por viaje de Simón Boric financiado por Huawei (16-abr-2026). Verificada por lectura directa."
+eldinamo-2026-08-19-simon-boric-cge:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "El cargo que asumió el hermano del expresidente Boric en la empresa de capitales chinos CGE"
+  autor: Juan Pablo Ernst
+  fecha: 2026-08-19
+  url: https://www.eldinamo.cl/politica/2026/08/19/el-cargo-que-asumio-el-hermano-del-expresidente-boric-en-la-empresa-de-capitales-chinos-cge/
+  notas: "El Dínamo (19-ago-2026) recoge Ex-Ante: Simón Boric cumplió casi dos meses en CGE (desde 22-jun-2026) tras 12 años en U. de Chile; distribuidora controlada por SGCC desde hace 5 años; directorio con Nicolás Eyzaguirre entre otros. Detalla cargo (gerente comunicaciones e integración cultural, equipo de 6, vínculos con colegios/escuelas ingeniería eléctrica, manejo de emergencias) y visita a Maule (Pelluhue, María Luz Reyes). Confirma ingreso por concurso según Ex-Ante. Verificada por lectura directa."
+cooperativa-2026-08-20-simon-boric-cge:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "CGE confirma incorporación de Simón Boric y destaca apoyo en terreno"
+  autor: Cooperativa
+  fecha: 2026-08-20
+  url: https://www.cooperativa.cl/noticias/corporativo/especiales/cge-presenta/cge-confirma-incorporacion-de-simon-boric-y-destaca-apoyo-en-terreno/2026-08-20/134038.html
+  notas: "Cooperativa (20-ago-2026, 12:03, contenido presentado por CGE): CGE aclaró vínculo laboral de Simón Boric Font tras información de medio de comunicación; precisa incorporación el 22 de junio tras 12 años en U. de Chile (especialización en GWU y Georgetown), funciones de apoyo en terreno en contingencias climáticas y relacionamiento comunitario. Destaca que desde su incorporación ha apoyado trabajo en terreno. Es la confirmación oficial de la empresa. Verificada por lectura directa."
+biobiochile-2026-04-16-irarrazaval-denuncia-simon-boric-huawei:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: '"Vacaciones pagadas": Irarrázaval denuncia en Contraloría viaje de Simón Boric financiado por Huawei'
+  autor: BioBioChile
+  fecha: 2026-04-16
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/04/16/vacaciones-pagadas-irarrazaval-denuncia-en-contraloria-viaje-de-simon-boric-financiado-por-huawei.shtml
+  notas: "Antecedente citado en BioBioChile 19-ago-2026 como sidebar: denuncia de Alejandro Irarrázaval (hoy jefe de asesores de La Moneda) en Contraloría por viaje de Simón Boric financiado por Huawei. Contexto del perfil de Simón Boric y del rol previo de Irarrázaval. No verificado como fuente primaria independiente en esta tanda; se registra como antecedente complementario."

@@ -1,10 +1,31 @@
+---
+name: tools
+description: Extracción de contenido web, mirrors anti-paywall, fetch-impersonate, PDF/Office/OCR, video transcript y ripgrep. Usa esta skill SIEMPRE cuando una URL no se pueda leer, necesites bypass de paywall, extraer PDF/docx, OCR, transcribir video o buscar en catálogo con rg, incluso si solo dice 'no puedo leer X'.
+---
+
 ## Extraccion de contenido web
+
+> **Handoff:** si agregas un nuevo método de extracción, mirror, platform quirk o cambias `fetch-content`/`fetch-impersonate`/`pdf-extract`, actualiza este skill en la misma sesión.
+
+## Índice
+
+- [Extraccion de contenido web](#extraccion-de-contenido-web) — fallbacks, `fetch-content`, escalera manual, poison pills
+- [Contenido web NO confiable](#contenido-web-no-confiable-higiene-anti-inyección) — anti-inyección
+- [APIs observadas](#apis-observadas-cuando-la-escalera-completa-falla-por-js) — DevTools XHR
+- [Archivado y recuperación](#archivado-y-recuperación-de-fuentes) — Wayback, Save Page Now
+- [Defuddle CLI local](#defuddle-cli-local-alternativa-al-espejo-web)
+- [Búsqueda con ripgrep](#búsqueda-local-con-ripgrep-rg--catálogo-y-repo)
+- [PDFs](#procesamiento-de-pdfs-lectura-de-documentos) — `pdf-extract`
+- [Office](#procesamiento-de-documentos-de-office-word-excel-powerpoint) — `doc-extract`
+- [OCR](#ocr-de-imágenes-y-screenshots) — `ocr-extract`
+- [Video transcript](#transcripción-de-videos) — `video-transcript`
+- [Generador de fuentes](#generador-de-fuentes-script) — `add-source`
 
 **IMPORTANTE: Cuando una URL no se pueda leer, agotar TODOS los fallbacks antes de pedir al
 usuario que provea el contenido.** Cada método tiene fortalezas distintas:
 
 | Método | Fortaleza | Casos documentados |
-|---|---|---|
+| --- | --- | --- |
 | `read_url` | Extracción HTML estándar | Sitios estáticos, blogs |
 | `r.jina.ai` | JS rendering ligero | La Tercera, Emol |
 | `defuddle.md` | Limpieza agresiva de boilerplate | **BioBioChile** (mejor que r.jina) |
@@ -20,13 +41,13 @@ usuario que provea el contenido.** Cada método tiene fortalezas distintas:
 
 ```bash
 # Cadena completa de fallbacks (r.jina → defuddle → markdown.new → paywallskip → archive → impersonate → add-source)
-pnpm run fetch-content -- https://sitio.cl/articulo
+pnpm run fetch-content -- <https://sitio.cl/articulo>
 
 # Con verbose para ver cada intento
-pnpm run fetch-content -- https://sitio.cl/articulo --verbose
+pnpm run fetch-content -- <https://sitio.cl/articulo> --verbose
 
 # Solo un método específico
-pnpm run fetch-content -- https://sitio.cl/articulo --method defuddle.md
+pnpm run fetch-content -- <https://sitio.cl/articulo> --method defuddle.md
 ```
 
 El script intenta cada método en orden y retorna el primer resultado con ≥500 caracteres.
@@ -45,7 +66,7 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 4. `markdown.new` + URL
 5. `paywallskip.com/article?url=` + URL
 6. `archive.ph` + URL
-7. `https://web.archive.org/web/<URL>` — snapshot histórico en Wayback (historial más profundo que archive.ph)
+7. `<https://web.archive.org/web/<UR>L>` — snapshot histórico en Wayback (historial más profundo que archive.ph)
 8. `pnpm run fetch-impersonate -- <URL>` — curl_cffi (Python) con impersonación TLS
 9. `pnpm run add-source -- <URL>` — solo metadata
 
@@ -62,7 +83,7 @@ verificar largo plausible (≥500 chars) y ausencia de estos patrones — si apa
 fallo y seguir con el siguiente método:
 
 | Tipo | Patrones en el texto extraído |
-|---|---|
+| --- | --- |
 | Paywall | "subscribe to continue", "subscription required", "you've reached your limit", "create an account to continue reading" |
 | Captcha/bot | "verify you are human", "prove you're not a robot", "confirm you're not a bot" (YouTube, ya documentado en social-media.md) |
 | Cloudflare | "checking your browser", "Just a moment", "DDoS protection" |
@@ -108,7 +129,7 @@ falla), extraer el endpoint JSON directo en vez de pelear con el HTML renderizad
 5. Agregar timeout, límite de tamaño y validar el schema de la respuesta (los campos retornados
    son dato no confiable, ver sección anterior).
 
-Referencia: [Leon Yin, "Finding Undocumented APIs"](https://inspectelement.org/apis.html).
+Referencia: [Leon Yin, "Finding Undocumented APIs"](<https://inspectelement.org/apis.html>).
 Casos de uso en el vault: portales gubernamentales con buscadores JS, medios con paginación
 infinita; descubrimientos ya probados ad-hoc en social-media.md (Reddit vía HTML search,
 Facebook vía r.jina.ai).
@@ -121,19 +142,19 @@ del evento muere con él. Herramientas para preservar y recuperar:
 **Recuperar contenido muerto o bloqueado:**
 
 | Servicio | Uso | Notas |
-|---|---|---|
+| --- | --- | --- |
 | Wayback Machine | Lectura de snapshots históricos | Historial más profundo; API pública sin auth |
 | Archive.today (`archive.ph`) | Lectura de páginas bloqueadas/paywall | ⚠️ Estado 2026: FBI citó a su registrador (oct 2025) y Wikipedia dejó de aceptarla como fuente de cita (feb 2026). Útil como espejo de lectura, NO como almacén de evidencia de largo plazo |
 | Memento Time Travel | Agrega múltiples archivos en una consulta | `timetravel.mementoweb.org/api/json/0/<URL>` |
 
-- Chequeo rápido de disponibilidad en Wayback: `https://archive.org/wayback/available?url=<URL>` (JSON).
-- Snapshot directo: `https://web.archive.org/web/<URL>` (último) o con timestamp `.../web/YYYYMMDDhhmmss/<URL>`.
-- Historial completo de snapshots: CDX API (`https://web.archive.org/cdx/search/cdx?url=<URL>&output=json`).
+- Chequeo rápido de disponibilidad en Wayback: `<https://archive.org/wayback/available?url=<UR>L>` (JSON).
+- Snapshot directo: `<https://web.archive.org/web/<UR>L>` (último) o con timestamp `.../web/YYYYMMDDhhmmss/<URL>`.
+- Historial completo de snapshots: CDX API (`<https://web.archive.org/cdx/search/cdx?url=<UR>L>&output=json`).
 - Google Cache (`cache:`) y Bing Cache fueron RETIRADOS (2024): no usarlos como fallback.
 
 **Preservación de fuentes frágiles:** al agregar a `sources.yaml` una fuente susceptible de
 desaparecer (breaking news, post de red social sujeto a borrado, nota de medio chico),
-snapshot a Wayback con Save Page Now: fetch a `https://web.archive.org/save/<URL>`
+snapshot a Wayback con Save Page Now: fetch a `<https://web.archive.org/save/<UR>L>`
 (~15 req/min anónimo; la URL canónica del snapshot queda en la URL final tras redirects).
 Anotar esa URL en el campo `notas` de la fuente — sin cambio de schema. La URL citada sigue
 siendo SIEMPRE la original.
@@ -147,11 +168,11 @@ tercero disponible, salida directa a stdout para piping, y menos tokens que leer
 
 ```bash
 # Markdown limpio a stdout — primera opción para artículos estándar
-defuddle parse https://sitio.cl/articulo --md
+defuddle parse <https://sitio.cl/articulo> --md
 
 # Guardar a archivo / extraer solo una propiedad de metadatos
-defuddle parse https://sitio.cl/articulo --md -o articulo.md
-defuddle parse https://sitio.cl/articulo -p title   # también: author, description, domain, published
+defuddle parse <https://sitio.cl/articulo> --md -o articulo.md
+defuddle parse <https://sitio.cl/articulo> -p title   # también: author, description, domain, published
 
 # Formatos: --md markdown · --json HTML+markdown · sin flag = HTML
 ```
@@ -164,7 +185,7 @@ defuddle parse https://sitio.cl/articulo -p title   # también: author, descript
 
 ## Búsqueda local con ripgrep (`rg`) — catálogo y repo
 
-[ripgrep](https://github.com/BurntSushi/ripgrep) es la herramienta estándar de búsqueda de
+[ripgrep](<https://github.com/BurntSushi/ripgrep>) es la herramienta estándar de búsqueda de
 texto en este repo: órdenes de magnitud más rápido que `Select-String`/`Get-ChildItem` y con
 respeto a `.gitignore` configurable. Verificar con `rg --version`; instalar en Windows con
 `winget install BurntSushi.ripgrep.MSVC`.
@@ -194,7 +215,7 @@ sin modelos ML, offline; conserva titulos H1-H4, listas, tablas, negritas, subra
 de lectura multicolumna) para leer documentos primarios durante investigaciones/correcciones
 (planes filtrados, informes oficiales, fallos).
 
-- **Uso:** `pnpm run pdf-extract -- https://sitio.cl/doc.pdf` imprime el markdown a stdout
+- **Uso:** `pnpm run pdf-extract -- <https://sitio.cl/doc.pdf>` imprime el markdown a stdout
   (o `--out <ruta>` para guardarlo). `--json` imprime clasificacion + markdown. Acepta tambien
   un `.md` ya extraido como argumento posicional para re-imprimir sin red. Avisa si el PDF es
   escaneado (pdfType distinto de TextBased/Mixed: requiere OCR) y tiene timeout de descarga +
@@ -205,12 +226,12 @@ de lectura multicolumna) para leer documentos primarios durante investigaciones/
 
 `pnpm run doc-extract -- <URL-del-documento>` descarga un documento **.docx/.xlsx/.pptx** (u otros
 formatos: pdf, html, csv, json, xml, txt, md) y lo convierte a **Markdown estructurado** con
-**MarkItDown** de Microsoft (`https://github.com/microsoft/markitdown`, instalado vía
+**MarkItDown** de Microsoft (`<https://github.com/microsoft/markitdown>`, instalado vía
 `python -m pip install --user "markitdown[docx,xlsx,pptx,pdf]"`). Complementa a `pdf-extract`:
 muchas fuentes primarias de gobierno (informes, minutas, tablas de presupuesto, presentaciones)
 llegan en formatos de Office que no se pueden leer con la prensa ni los mirrors.
 
-- **Uso:** `pnpm run doc-extract -- https://sitio.cl/doc.docx` imprime el markdown a stdout
+- **Uso:** `pnpm run doc-extract -- <https://sitio.cl/doc.docx>` imprime el markdown a stdout
   (o `--out <ruta>` para guardarlo). `--json` imprime metadatos + markdown. Acepta también un
   archivo local como argumento posicional. Avisa si la extracción sale casi vacía (posible
   escaneo/formato no soportado). Si la descarga falla (bloqueo TLS), relega automáticamente a
@@ -230,7 +251,7 @@ puede obtener por otros medios.
 - **Requisito:** Python 3 + pytesseract + Tesseract OCR instalado:
   ```bash
   pip install --user pytesseract Pillow
-  # Windows: descargar de https://github.com/UB-Mannheim/tesseract/wiki
+  # Windows: descargar de <https://github.com/UB-Mannheim/tesseract/wiki>
   # Linux: sudo apt install tesseract-ocr tesseract-ocr-spa
   # macOS: brew install tesseract tesseract-lang
   ```- **Uso típico:** Cuando un artículo contiene información en imagen (tabla, gráfico, screenshot
@@ -242,7 +263,7 @@ puede obtener por otros medios.
 subtítulos (manuales o auto-generados) vía yt-dlp; para TikTok/Instagram/Twitter/Facebook
 descarga el audio y lo transcribe con Whisper.
 
-- **Uso:** `pnpm run video-transcript -- https://youtube.com/watch?v=XXXXX` imprime la transcripción
+- **Uso:** `pnpm run video-transcript -- <https://youtube.com/watch?v=XXXXX>` imprime la transcripción
   (o `--out <ruta>` para guardarlo). `--lang es` para idioma (default: español).
 - **Listar subtítulos:** `pnpm run video-transcript -- <URL> --list`
 - **Solo auto-subtítulos:** `pnpm run video-transcript -- <URL> --auto`
@@ -251,7 +272,7 @@ descarga el audio y lo transcribe con Whisper.
 **Soporte por plataforma:**
 
 | Plataforma | Estado | Método |
-|---|---|---|
+| --- | --- | --- |
 | YouTube | ✅ | Subtítulos manuales/auto-generados (yt-dlp) |
 | TikTok | ✅ | Download audio + Whisper transcription |
 | Instagram | ✅ | Download audio + Whisper transcription |
@@ -261,7 +282,7 @@ descarga el audio y lo transcribe con Whisper.
 **Cadena de backends de Whisper** (el script prueba en orden hasta encontrar uno disponible):
 
 1. **whisper.cpp** (`whisper-cli`) — binario C++, CPU-friendly, sin dependencias Python
-   - Instalar: `https://github.com/ggerganov/whisper.cpp`
+   - Instalar: `<https://github.com/ggerganov/whisper.cpp>`
    - Modelo: `models/ggml-large-v3.bin` (descargar con `./models/download-ggml-model.sh large-v3`)
 2. **openai-whisper** (Python) — implementación oficial, más pesado pero fácil
    - `pip install --user openai-whisper`
@@ -272,7 +293,7 @@ descarga el audio y lo transcribe con Whisper.
 Si ninguno está disponible, el script descarga el audio y muestra instrucciones de instalación.
 
 **Alternativa CLI independiente:** `transcript` (wrapper para YouTube + TikTok + Instagram)
-- GitHub: `https://github.com/anthropics/transcript` (o buscar `pip install transcript`)
+- GitHub: `<https://github.com/anthropics/transcript>` (o buscar `pip install transcript`)
 - Detecta plataforma automáticamente, para TikTok/Instagram usa yt-dlp + Whisper internamente.
 - Útil si se prefiere un solo comando sin configurar backends.
 

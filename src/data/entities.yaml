@@ -986,6 +986,11 @@ people:
         desde: 2022-03-11
         hasta: 2026-03-11
     organizacion: presidencia_chile
+  simon_boric:
+    nombre: Simón Boric Font
+    cargo: Gerente de comunicaciones e integración cultural de CGE
+    organizacion: cge
+    notas: "Periodista (U. de Chile), hermano menor del expresidente Gabriel Boric. Tras 12 años en la Universidad de Chile (jefe de prensa/coordinador comunicaciones con Ennio Vivaldi y jefe de gabinete de Rosa Devés hasta 19-jun-2026), asumió el 22 de junio de 2026 como gerente de comunicaciones e integración cultural de la Compañía General de Electricidad S.A. (CGE), distribuidora controlada desde 2021 por State Grid Corporation of China (SGCC). A cargo de equipo de 6 personas, vínculos regionales y con escuelas de ingeniería eléctrica, manejo de contingencias y difusión de historias corporativas. Tras los temporales de agosto 2026 visitó Pelluhue/Chanco (Maule) con la alcaldesa María Luz Reyes para coordinar reposición de generador. Según Ex-Ante/BioBioChile ingresó por concurso; CGE confirmó incorporación el 20-ago-2026. Antecedente: Alejandro Irarrázaval lo denunció en Contraloría en abril 2026 por viaje financiado por Huawei. El 26-ago-2026 Evelyn Matthei denunció que fue atacado sin piedad en redes por trabajar en una eléctrica y lo vinculó al mismo ecosistema de bots/trolls que la afectó."
   helmuth_frenz:
     nombre: Helmut Frenz
     cargo: Obispo de la Iglesia Evangélica Luterana en Chile (1969-1975)
@@ -2457,7 +2462,7 @@ people:
         organizacion: secom
         desde: 2026-03-11
     organizacion: secom
-    notas: "Autor de la minuta 'cierre epico' (evento 20260324-1). Director de la agencia La 975 desde 2018; en 2011 fue director creativo de Start-Up Chile convocado por Nicolás Shea. Sofía Shea, jefa de Comunicación Digital de la Secom, hizo su práctica en La 975 y es hija de Nicolás Shea; la agencia facturó $149.180.001 en la campaña de Kast (El Dínamo, 15-ago-2026, evento 20260815-1)."
+    notas: "Autor de la minuta 'cierre epico' (evento 20260324-1). Director de la agencia La 975 desde 2018; en 2011 fue director creativo de Start-Up Chile convocado por Nicolás Shea. Sofía Shea, jefa de Comunicación Digital de la Secom, hizo su práctica en La 975 y es hija de Nicolás Shea; la agencia facturó $149.180.001 en la campaña de Kast (El Dínamo, 15-ago-2026, evento 20260815-1). El 25-ago-2026 El Mostrador reveló que también integró Casa Común y coincidió allí con Fernando Cerimedo (encuestas Numen), tercer vínculo La Moneda-Cerimedo junto a Irarrázaval y Dülger (evento 20260821-8)."
   michelle_bachelet:
     nombre: Michelle Bachelet Jeria
     cargo: Expresidenta de Chile y ex Alta Comisionada de Derechos Humanos de la ONU
@@ -7951,6 +7956,28 @@ people:
         organizacion: ministerio_defensa
         desde: 2025-03-10
         hasta: 2026-03-11
+
+  beatriz_hevia:
+    nombre: Beatriz Hevia Willer
+    cargo: Expresidenta del Consejo Constitucional
+    notas: "Abogada (Pontificia Universidad Católica de Chile), expresidenta del Consejo Constitucional (2023, Partido Republicano). Integrante de la Comisión Nueva Arquitectura del Estado presentada el 25-ago-2026 por el Presidente José Antonio Kast y presidida por Bettina Horst (evento 20260825-3)."
+
+  ernesto_silva:
+    nombre: Ernesto Silva Méndez
+    cargo: Prorrector de la Universidad del Desarrollo
+    organizacion: universidad_del_desarrollo
+    notas: "Abogado, prorrector de la Universidad del Desarrollo, director ejecutivo de FARO UDD, exdiputado y expresidente de la UDI (2014). Integrante de la Comisión Nueva Arquitectura del Estado presentada el 25-ago-2026 por el Presidente José Antonio Kast y presidida por Bettina Horst (evento 20260825-3)."
+
+  natalia_piergentili:
+    nombre: Natalia Piergentili Domenech
+    cargo: Expresidenta del PPD
+    organizacion: partido_por_la_democracia
+    notas: "Asistente social y política PPD, expresidenta del Partido por la Democracia (2021-2023) y directora de Asuntos Públicos de Feedback Comunicaciones. Integrante de la Comisión Nueva Arquitectura del Estado presentada el 25-ago-2026 por el Presidente José Antonio Kast y presidida por Bettina Horst (evento 20260825-3)."
+
+  zarko_luksic:
+    nombre: Zarko Luksic Sandoval
+    cargo: Exsubsecretario del Trabajo
+    notas: "Abogado laboralista (Universidad de Chile), exsubsecretario del Trabajo (2006-2008, gobierno de Bachelet) y exdiputado (1994-2006, DC). Integrante de la Comisión Nueva Arquitectura del Estado presentada el 25-ago-2026 por el Presidente José Antonio Kast y presidida por Bettina Horst (evento 20260825-3)."
 
   gerardo_varela:
     nombre: Gerardo Varela Alfonso
@@ -14138,7 +14165,15 @@ people:
     nombre: Jorge Riquelme
     cargo: Jefe de Cancillería de la embajada de Chile en Irán (2025)
     notas: "Analista político; magíster en Estudios Internacionales (Universidad de Chile) y en Ciencias Militares (Academia de Guerra); doctor en Relaciones Internacionales (Universidad Nacional de La Plata). En el Minrel se desempeñó como analista de la División de Política Multilateral y jefe del Departamento de Defensa, Asuntos Estratégicos y Operaciones de Paz. Recibió junto a Toro Mendoza a los invitados a la celebración de Fiestas Patrias en Teherán (28-sep-2025)."
+  maria_gonzalez:
+    nombre: María González
+    cargo: SEREMI de Salud de Valparaíso
 organizations:
+  cge:
+    nombre: CGE
+    tipo: empresa
+    pais: Chile
+    notas: "Compañía General de Electricidad S.A., distribuidora eléctrica controlada desde 2021 por State Grid Corporation of China (SGCC). Directorio incluye a Yan Dai (presidente), Futao Huang, Shan Jingfu, Zhang Ran y Nicolás Eyzaguirre. El 22 de junio de 2026 fichó a Simón Boric como gerente de comunicaciones e integración cultural."
   cut_chile:
     nombre: Central Unitaria de Trabajadores
     tipo: sindicato
@@ -18808,6 +18843,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno fundado en 2005 (elciudadano.com), con línea editorial de izquierda."
+  la_politica_online:
+    nombre: La Política Online
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Medio digital argentino (lapoliticaonline.com) con ediciones Argentina/México/Paraguay. Edita LPO Internacionales. Rebote del 26-ago-2026 de la investigación de El Mostrador sobre Felipe Costabal y Fernando Cerimedo en La Moneda."
   alsa_spa:
     nombre: ALSA SpA
     tipo: empresa
@@ -23330,3 +23370,15 @@ cifras:
     nombre: Excarabineros condenados por apremios en la Tercera Comisaría de Alto Hospicio
     unidad_default: condenados
     notas: "Seis exuniformados condenados en total: el comisario y la jefa de la SIP en procedimiento abreviado previo (enero 2026) y, el 23-ago-2026, cuatro subordinados declarados culpables como coautores de apremios ilegítimos por el TOP de Iquique; lectura de penas fijada para el 3-sep-2026 (evento 20260823-4)."
+  saldos_contables_sin_movimiento_total:
+    nombre: Saldos contables sin movimiento detectados por Contraloría (RADAR N°3)
+    unidad_default: millones_pesos
+    notas: "$796.440 millones en saldos sin movimiento a marzo de 2026 (inactivos 2020-2024) detectados vía SICOGEN y herramienta RADAR; $641.954 millones sector público y $154.486 millones municipal; más del 90% cuentas por cobrar (evento 20260826-2)."
+  saldos_sector_publico_sin_movimiento:
+    nombre: Saldos sin movimiento del sector público (RADAR N°3)
+    unidad_default: millones_pesos
+    notas: "$641.954 millones correspondientes a organismos del sector público dentro del hallazgo RADAR N°3 (evento 20260826-2)."
+  saldos_municipal_sin_movimiento:
+    nombre: Saldos sin movimiento del sector municipal (RADAR N°3)
+    unidad_default: millones_pesos
+    notas: "$154.486 millones correspondientes al sector municipal dentro del hallazgo RADAR N°3 (evento 20260826-2)."

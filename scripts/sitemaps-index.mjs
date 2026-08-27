@@ -73,7 +73,7 @@ function buildMarkdown(items, manifest) {
     l.push('## Por medio');
     l.push('');
     l.push('| Medio | Artículos |');
-    l.push('|---|---|');
+    l.push('| --- | --- |');
     for (const [medio, n] of Object.entries(porMedio).sort((a, b) => b[1] - a[1])) {
       const nombre = manifest.medios?.[medio]?.nombre ?? medio;
       l.push(`| ${nombre} | ${n.toLocaleString('es-ES')} |`);
@@ -84,27 +84,19 @@ function buildMarkdown(items, manifest) {
   return l.join('\n');
 }
 
-// ---------------------------------------------------------------------------
-// Sección "Medios registrados" en AGENTS.md (AUTO-GENERATED)
-// ---------------------------------------------------------------------------
-// Reemplaza el bloque delimitado por los marcadores con la tabla generada desde
-// el registro MEDIA (scripts/sync-sitemaps.mjs) + _manifest.json, para que el
-// listado de sitios sincronizados nunca quede desincronizado con el script.
-const AGENTS_PATH = join(ROOT, 'AGENTS.md');
-const MEDIOS_MARKER_START = '<!-- AUTO-GENERATED-SITEMAPS-MEDIOS -->';
-const MEDIOS_MARKER_END = '<!-- /AUTO-GENERATED-SITEMAPS-MEDIOS -->';
+// AGENTS.md ya no contiene la tabla de medios (desde modularizacion 2026-08-26) para evitar diffs ruidosos.
+// Para editores, la tabla completa se genera aqui como sitemaps/MEDIOS.md (antes vivia en AGENTS.md).
+const MEDIOS_OUT = join(SITEMAPS_DIR, 'MEDIOS.md');
 
-function buildMediosSection(manifest, eol = '\n') {
+function buildMediosMd(manifest) {
   const l = [];
-  l.push(MEDIOS_MARKER_START);
+  l.push('# Medios registrados');
   l.push('');
-  l.push('### Medios registrados (generado automáticamente)');
-  l.push('');
-  l.push('> Esta sección se genera con `pnpm run sitemaps-index` a partir del registro `MEDIA`');
-  l.push('> de `scripts/sync-sitemaps.mjs` y de `sitemaps/_manifest.json`. NO editar a mano.');
+  l.push('> Generado por `pnpm run sitemaps-index` desde `scripts/sync-sitemaps.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.');
+  l.push('> Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.');
   l.push('');
   l.push('| Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |');
-  l.push('|---|---|---|---|---|---|');
+  l.push('| --- | --- | --- | --- | --- | --- |');
   const slugs = Object.keys(MEDIA).sort((a, b) => a.localeCompare(b));
   for (const slug of slugs) {
     const conf = MEDIA[slug];
@@ -115,11 +107,7 @@ function buildMediosSection(manifest, eol = '\n') {
       ...(conf.extra ?? []),
     ];
     const sitemaps = urls.map((u) => u.replace(/^https?:\/\//, '')).join(', ');
-    const filtro = conf.includeRe
-      ? 'includeRe'
-      : conf.articleOnly
-        ? 'articleOnly (Yoast)'
-        : '—';
+    const filtro = conf.includeRe ? 'includeRe' : conf.articleOnly ? 'articleOnly (Yoast)' : '—';
     const articulos = estado?.articulos != null ? String(estado.articulos).replace(/\B(?=(\d{3})+(?!\d))/g, '.') : '—';
     const años = estado?.años != null ? estado.años : '—';
     l.push(`| \`${slug}\` | ${conf.nombre} | \`${sitemaps}\` | ${filtro} | ${articulos} | ${años} |`);
@@ -127,53 +115,7 @@ function buildMediosSection(manifest, eol = '\n') {
   l.push('');
   l.push('Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.');
   l.push('');
-  l.push(MEDIOS_MARKER_END);
-  return l.join(eol);
-}
-
-// El bloque debe usar el mismo EOL que el AGENTS.md existente (CRLF en
-// Windows) para no dejar el archivo con finales de línea mezclados.
-function detectEol(content) {
-  const crlf = (content.match(/\r\n/g) || []).length;
-  const lf = (content.match(/(?<!\r)\n/g) || []).length;
-  return crlf >= lf && crlf > 0 ? '\r\n' : '\n';
-}
-
-function updateAgentsMedios(manifest) {
-  if (!existsSync(AGENTS_PATH)) return;
-  const content = readFileSync(AGENTS_PATH, 'utf8');
-  const startIdx = content.indexOf(MEDIOS_MARKER_START);
-  const endIdx = content.indexOf(MEDIOS_MARKER_END);
-  const eol = detectEol(content);
-  const block = buildMediosSection(manifest, eol);
-  // Edge case: marcadores incompletos (uno sin el otro) = AGENTS.md tocado a
-  // mano. Mejor avisar que sobrescribir o duplicar en silencio.
-  if ((startIdx === -1) !== (endIdx === -1)) {
-    console.warn('⚠ AGENTS.md tiene marcadores AUTO-GENERATED-SITEMAPS-MEDIOS incompletos (falta ' +
-      (startIdx === -1 ? 'inicio' : 'fin') + '). Corrige a mano antes de regenerar.');
-    return;
-  }
-  const joiner = `${eol}${eol}`;
-  if (startIdx === -1) {
-    // Insertar antes de la sección de estadísticas auto-generadas (si existe)
-    const statsMarker = '<!-- AUTO-GENERATED-STATS -->';
-    const insertAt = content.indexOf(statsMarker);
-    if (insertAt === -1) {
-      writeFileSync(AGENTS_PATH, `${content.trim()}${joiner}${block}${eol}`, 'utf8');
-    } else {
-      writeFileSync(
-        AGENTS_PATH,
-        `${content.slice(0, insertAt).trim()}${joiner}${block}${joiner}${content.slice(insertAt).trim()}${eol}`,
-        'utf8'
-      );
-    }
-  } else if (endIdx !== -1) {
-    writeFileSync(
-      AGENTS_PATH,
-      content.slice(0, startIdx).trimEnd() + joiner + block + joiner + content.slice(endIdx + MEDIOS_MARKER_END.length).trimStart(),
-      'utf8'
-    );
-  }
+  return l.join('\n');
 }
 
 const items = loadCatalog();
@@ -181,5 +123,6 @@ const manifest = readManifest();
 const md = buildMarkdown(items, manifest);
 writeFileSync(OUT, md, 'utf8');
 console.log(`✔ sitemaps/README.md generado: ${items.length.toLocaleString('es-ES')} artículos`);
-updateAgentsMedios(manifest);
-console.log('✔ AGENTS.md actualizado con la sección de medios del catálogo');
+const mediosMd = buildMediosMd(manifest);
+writeFileSync(MEDIOS_OUT, mediosMd, 'utf8');
+console.log(`✔ sitemaps/MEDIOS.md generado: ${Object.keys(MEDIA).length} slugs`);

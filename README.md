@@ -1,6 +1,6 @@
 # Gobierno Vault
 
-Gobierno Vault es una base de conocimiento estática sobre eventos relacionados a gobiernos en Chile, construida con Astro 7 y Tailwind CSS. El proyecto organiza eventos políticos y gubernamentales mediante archivos Markdown con metadatos YAML, fuentes verificables y wikilinks para personas, organizaciones, cifras y referencias.
+Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tailwind, salida `static` (SSG). Eventos en Markdown con frontmatter YAML, fuentes verificables y wikilinks para personas, organizaciones, cifras y referencias.
 
 ## Sitio
 
@@ -9,123 +9,130 @@ Gobierno Vault es una base de conocimiento estática sobre eventos relacionados 
 ## Notas
 
 - Sitio aún esta en desarrollo. Lo que implica constantes cambios, evolución y correcciones (o dejar abandonado).
-- Sitio esta de momento con una carga fuerte en cuanto a lo que tacharia de 'recency bias'. Idea es con el tiempo nivelar esto con resto de años/meses/dias para que no sea asi.
-- Se hace uso de LLM's para asistencia en investigacion tanto como redaccion de eventos, pero proyecto esta pensado para ser facilmente editable sin ayuda de estas herramientas (formato Markdown/YAML).
-- De momento no existen plantillas/reglas para contribuir a proyecto, favor referirse a archivo `AGENTS.md` para mayor entendimiento de estructuras esperadas en caso de querer aportar.
-- ¿Encontraste una falla? ¿Evento no usa lenguaje objetivo/neutro? ¿Falta contexto? Crea un pull request con aquel corrección o un issue con todos los detalles.
+- Sitio esta de momento con una carga fuerte en cuanto a lo que tacharia de *recency bias*. Idea es con el tiempo nivelar esto con `TAREAS/` y `EVENTS_INDEX.md` para que no sea asi.
+- Se usa LLM para investigación/redacción, pero el formato Markdown/YAML es editable a mano.
+- Para contribuir, ver `AGENTS.md` (guía para agentes/humanos) y `TEMPLATE.md`. Reporta fallas o sesgo vía issue/PR.
 - <https://xkcd.com/927/>
 - Sitio web es eso, un sitio web. No una fuente de la verdad. Se RECOMIENDA siempre usar multiples fuentes respecto a eventos catalogados como noticias para asi obtener multiples puntos de vista/información.
 
 ## Características
 
-- Sitio estático con salida `static` (SSG) usando Astro.
-- Contenido estructurado en `src/content/events/YYYY/MM/YYYYMMDD-N.md`.
-- Datos maestros en YAML en `src/data/` para personas, organizaciones, cifras, temas, fuentes, colectivos y sectores.
-- Procesamiento de wikilinks para referencias internas y anexos de fuentes.
-- Página de administrador simple y secciones para eventos, personas, organizaciones, fuentes y temas.
+- SSG Astro con `ClientRouter`, prefetch y transiciones.
+- Contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` con validación de frontmatter y wikilinks.
+- Datos maestros YAML en `src/data/` (personas, orgs, cifras, temas, fuentes, colectivos, sectores, sueldos).
+- Wikilinks `[[person/id]]` `[[org/id]]` `[[source/id]]` `[[cifra/...]]` `[[event/...]]` con plugin `remarkWikiLinks`.
+- Timeline lazy, rail temporal, grafo de relaciones y TTS (Piper) en cliente.
+- Catálogo local de prensa en `sitemaps/` (JSONL por medio/año, no commiteado) para búsquedas sin tocar la red.
 
 ## Estructura principal
 
-- `src/content/events/` - eventos organizados por año/mes.
-- `src/data/` - registros YAML de entidades, fuentes, temas, colectivos y sectores.
-- `src/lib/` - lógica de consulta, plugins de remark y extracción de entidades.
-- `src/components/` - componentes UI reutilizables.
-- `src/pages/` - rutas del sitio.
-- `scripts/` - utilidades de validación, generación de índice y administración de fuentes.
+- `src/content/events/` — eventos por año/mes.
+- `src/data/` — `entities.yaml`, `sources.yaml`, `topics.yaml`, `colectivos.yaml`, `sectores.yaml`, `sueldos.yaml`.
+- `src/lib/` — `registry.ts`, `queries.ts`, `extractEntities.ts`, `remarkWikiLinks.mjs`, `cabinet.ts`, etc.
+- `src/components/` / `src/pages/` / `src/layouts/` — UI y rutas (`/`, `/events`, `/people`, `/gabinete`, `/sueldos`, `/llm.txt`).
+- `.agents/skills/*/SKILL.md` — guías modulares por dominio (contenido, reglas, frontend, datos, build, gabinete, sitemaps, fuentes gubernamentales, redes, backup, tools).
+- `sitemaps/` — `*.jsonl` (gitignored), `.cache/` (XML), `_manifest.json`, `README.md`, `MEDIOS.md`, `ESTADISTICAS.md`.
+- `scripts/` — `validate.mjs`, `generate-index.mjs`, `sitemaps-index.mjs`, `sync-sitemaps.mjs`, `add-source.mjs`, `backup.mjs`, `validate-fuentes.mjs`, etc.
+- `TAREAS/` — pendientes `PENDIENTES/YYYY.md` + `SEGUIMIENTO.md` (anti recency bias).
 
 ## Comandos útiles
 
-El proyecto usa **pnpm** como gestor de paquetes (no npm).
+Usa **pnpm** (no npm). `pnpm install` primero.
 
-- `pnpm install` - instala dependencias.
-- `pnpm run dev` - ejecuta el servidor de desarrollo.
-- `pnpm run build` - valida y construye el sitio estático.
-- `pnpm run preview` - previsualiza el sitio construido (servidor local).
-- `pnpm run deploy` - despliega a Cloudflare Pages (`https://gobierno-vault.pages.dev`).
-- `pnpm run validate` - valida contenido y estructura.
-- `pnpm run generate-index` - regenera índices y estadísticas del repositorio.
-- `pnpm run add-source -- <URL>` - extrae metadatos de una fuente y sugiere un bloque para `sources.yaml`. Consulta el catálogo de sitemaps antes del fetch (flags: `--catalog-only` sin red, `--search <texto>` para buscar en el catálogo con `--medio`/`--fecha`).
-- `pnpm run sitemaps-sync -- <medio>` - sincroniza el catálogo local de artículos de prensa desde los sitemaps públicos (ver `sitemaps/README.md`).
-- `pnpm run sitemaps-resync` - resync manual diario (merge incremental, nunca borra datos) + regenera índice y backup.
-- `pnpm run sitemaps-index` - regenera `sitemaps/README.md` (índice del catálogo por década/año/mes).
-- `pnpm run sitemaps-backup` - empaqueta el catálogo en `sitemaps/sitemaps.gvault` (compresión **compacta lossless + binaria**: ~357MB de JSONL → ~56MB; `--restore` reconstruye el JSONL byte-idéntico). Con `--chunk-size 45` lo parte en trozos de ~28MB (`sitemaps.gvault.part1/2`), cada uno bajo el límite de GitHub; `--restore` une las partes automáticamente y `--join` arma el `.gvault` único. El catálogo no se commitea, pero las partes pueden commitecarse para que cualquiera las descargue y regenere sin re-sincronizar.
-- `pnpm run backup` - genera el respaldo público `.gvault` (solo light) en `public/backup/` (commiteado).
-- `pnpm run verify -- <archivo.gvault>` - verifica la integridad de un respaldo.
-- `pnpm run restore -- <archivo.gvault> --dest <ruta>` - restaura un respaldo a disco.
+- `pnpm run dev` — servidor de desarrollo.
+- `pnpm run build` — `validate` + build estático (~1m40s).
+- `pnpm run preview` — `wrangler pages dev dist`.
+- `pnpm run deploy` — build local + `wrangler pages deploy dist --project-name gobierno-vault`.
+- `pnpm run validate` — valida wikilinks, `medio`, mojibake/BOM y prose (falla antes del build).
+- `pnpm run generate-index` — regenera `EVENTS_INDEX.md` + `sitemaps/ESTADISTICAS.md`.
+- `pnpm run add-source -- <URL>` — genera bloque YAML para `sources.yaml` (flags: `--append`, `--catalog-only`, `--search <texto>` con `--medio`/`--fecha`).
+- `pnpm run sitemaps-sync -- <medio>` — sincroniza catálogo desde sitemaps públicos.
+- `pnpm run sitemaps-resync` — merge incremental diario + regenera índice y backup.
+- `pnpm run sitemaps-index` — regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md` (tablas para editores).
+- `pnpm run sitemaps-backup` — empaqueta `sitemaps/sitemaps.gvault` (compacto lossless + Brotli, ~357MB → ~56MB; `--chunk-size 45` parte en `part1/2`).
+- `pnpm run backup` — respaldo `.light.gvault` en `public/backup/` (commiteado).
+- `pnpm run verify -- <archivo.gvault>` / `pnpm run restore -- <archivo.gvault> --dest <ruta>` — verifica/restaura.
+- `node scripts/validate-fuentes.mjs` — valida URLs de `.agents/skills/fuentes-gubernamentales/SKILL.md`.
+- `pnpm run fetch-content -- <URL>` — cadena de mirrors (`r.jina` → `defuddle` → `paywallskip` → `archive` → `fetch-impersonate`).
 
 ## Ayudar con los respaldos (sin ser técnico)
 
-Este proyecto registra temas de política y casos de corrupción, por lo que
-el repositorio podría desaparecer de GitHub en algún momento. Para que el
-proyecto **sobreviva aunque eso ocurra**, se genera un respaldo público en un
-archivo `.gvault` que vive en la carpeta `public/backup/` del repositorio (y
-que el sitio sirve en `/backup/`). Cualquiera puede descargarlo y guardarlo.
-**Tu ayuda es simplemente guardar una copia.**
+El repo registra política/corrupción y podría desaparecer. El respaldo público `.gvault` en `public/backup/` (servido en `/backup/`) permite que sobreviva. **Ayuda guardando una copia.**
 
-### ¿Qué son esos archivos `.gvault`?
+### ¿Qué son los `.gvault`?
 
-Son *fotografías completas* del proyecto comprimidas en un solo archivo:
+Fotografías comprimidas (Brotli + SHA-256) del proyecto: `gob-vault-backup-...light.gvault` (contenido actual). Sin contraseña, públicos.
 
-- `gob-vault-backup-...light.gvault` → el contenido actual (markdown + datos + config).
+### Cómo ayudar (3 pasos)
 
-No tienen contraseña. Son públicos, igual que el resto del repositorio. **Ojo:**
-al igual que el repositorio, su contenido es sensible (política/corrupción), así
-que guárdalos con el mismo cuidado que le darías al propio repo.
+1. **Descarga** desde `public/backup/` o footer del sitio (botón “Descargar respaldo”).
+2. **Guarda** fuera de GitHub: USB, Drive, correo a ti mismo u otra persona.
+3. (Opcional) **Verifica** con Node.js:
 
-### Cómo puedes ayudar (3 pasos, sin saber de código)
+```javascript
+node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotliDecompressSync}=require('zlib');const t=readFileSync(process.argv[1],'utf8'),a=t.lastIndexOf('===METADATA==='),n1=t.indexOf('\n',a),n2=t.indexOf('\n',n1+1),m=JSON.parse(t.slice(n1+1,n2)),c=Buffer.from(t.slice(n2+1),'base64');if(createHash('sha256').update(c).digest('hex')!==m.sha256){console.error('CORRUPTO');process.exit(1)}console.log('OK, integro:',m.kind,m.fileCount,'archivos')" nombre.gvault
+```
 
-1. **Descarga** el archivo `.gvault` desde la sección de archivos del repositorio
-   (`public/backup/`) o desde el footer del sitio web (botón "Descargar respaldo").
-2. **Guárdalos en un lugar seguro** que no se borre solo: un USB, tu Google Drive,
-   un correo a ti mismo, o pásaselos a otra persona. Lo importante es que exista
-   una copia **fuera** de GitHub.
-3. (Opcional) **Comprueba que estén sanos** con solo Node.js instalado:
-
-   ```javascript
-   node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotliDecompressSync}=require('zlib');const t=readFileSync(process.argv[1],'utf8'),a=t.lastIndexOf('===METADATA==='),n1=t.indexOf('\n',a),n2=t.indexOf('\n',n1+1),m=JSON.parse(t.slice(n1+1,n2)),c=Buffer.from(t.slice(n2+1),'base64');if(createHash('sha256').update(c).digest('hex')!==m.sha256){console.error('CORRUPTO, descarta este archivo');process.exit(1)}console.log('OK, integro:',m.kind,m.fileCount,'archivos')" nombre-del-archivo.gvault
-   ```
-
-   Si imprime `OK, integro: ...` el respaldo está bien. Si imprime `CORRUPTO`,
-   descártalo y descarga una copia nueva.
-
-Cada archivo `.gvault` además **trae estas instrucciones dentro**, al inicio, en
-texto plano: así, aunque se suba a un sitio tipo pastebin y se pierda el nombre,
-cualquiera sabrá cómo se llama, cómo verificar su integridad y cómo restaurarlo.
+`OK, integro` = bien; `CORRUPTO` = descarta y re-descarga. El `.gvault` trae estas instrucciones dentro.
 
 ## Convenciones de contenido
 
-- Cada evento debe tener frontmatter YAML con campos como `titulo`, `fecha`, `tipo`, `tema`, `creado` y `actualizado`.
-- El campo `tema` usa IDs desde `src/data/topics.yaml`.
-- Las fuentes se referencian inline con `[[source/id]]` dentro del texto.
-- Las menciones de personas, organizaciones y cifras usan wikilinks: `[[person/id]]`, `[[org/id]]`, `[[cifra/concepto/valor/unidad]]`.
-- Evita secciones de referencias al final; las fuentes se citan directamente en el cuerpo del texto.
+- Frontmatter con `titulo`, `fecha` (ISO 8601 UTC), `tipo` (14 valores), `tema` (IDs de `topics.yaml`), `creado`/`actualizado` (YYYY-MM-DD); opcionales `etiquetas`, `impacto`, `relaciones`, `svg_backup`.
+- `tema`/`impacto` usan IDs de `topics.yaml`/`colectivos.yaml`/`sectores.yaml`.
+- Fuentes inline `[[source/id]]` al final de la afirmación, nunca en `## Referencias`.
+- Personas/orgs/cifras/eventos con wikilinks; IDs desnudos `20260618-3` auto-enlazan.
+- Prioriza fuente gubernamental directa (ver `.agents/skills/fuentes-gubernamentales/SKILL.md`) antes que prensa.
+
+Ver `TEMPLATE.md` y `.agents/skills/content-model/SKILL.md` + `event-rules/SKILL.md` para detalle.
 
 ## Datos y entidades
 
-- `src/data/entities.yaml` contiene personas, organizaciones y cifras.
-- `src/data/sources.yaml` contiene las fuentes periodísticas y URLs originales.
-- `src/data/topics.yaml` define los temas disponibles.
-- `src/data/colectivos.yaml` y `src/data/sectores.yaml` listan los grupos y sectores.
+- `entities.yaml` — personas, organizaciones, cifras.
+- `sources.yaml` — fuentes (`medio-YYYY-MM-DD-slug`, URL completa, `medio` exacto).
+- `topics.yaml` — taxonomía de temas.
+- `colectivos.yaml` / `sectores.yaml` — arrays planos.
+- `sueldos.yaml` — montos y series de `/sueldos` sin hardcodear (resueltas vía `getPeopleRegistry`/`getSourcesRegistry`).
+
+## Skills para agentes
+
+`AGENTS.md` es el router liviano (≤300 líneas). El detalle vive en `.agents/skills/*/SKILL.md` y se carga bajo demanda:
+
+- `content-model` — frontmatter/wikilinks/`svg_backup`/cifras en disputa/votaciones
+- `event-rules` — 16 reglas, enforcement prose, ciclo `TAREAS`
+- `frontend` — View Transitions, TimelineNav, grafo, filtros, TTS, Tailwind
+- `data-yaml` — YAML, encoding, `WHITELIST_MEDIOS`
+- `build-deploy` — build, validate, pnpm, wrangler
+- `gabinete` — `cargos[]`, `cabinet.ts`, Cuentas Públicas `YYYY0601-1`
+- `sitemaps` — catálogo, `rg -uu`, `MEDIA`, `sync/index/backup`
+- `fuentes-gubernamentales` — Presidencia/ministerios/BCN/Cámara/Senado (anti-sesgo)
+- `social-media` — Reddit/X/FB/IG/TikTok/YT + verificación imagen viral
+- `backup` — `.gvault` público
+- `tools` — mirrors, `fetch-content`/`fetch-impersonate`, PDF/Office/OCR, video, `rg`
+
+Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (ver `AGENTS.md`).
 
 ## Contribuir
 
-1. Revisa `AGENTS.md` para entender las convenciones del repositorio.
-2. Agrega nuevos eventos en `src/content/events/YYYY/MM/YYYYMMDD-N.md`.
-3. Añade nuevas entidades o fuentes en los archivos YAML correspondientes.
-4. Ejecuta `pnpm run validate` y `pnpm run build` antes de enviar cambios.
+1. Revisa `AGENTS.md` y `TEMPLATE.md`.
+2. Crea `src/content/events/YYYY/MM/YYYYMMDD-N.md` (N secuencial).
+3. Agrega entidades/fuentes/temas en `src/data/*.yaml` si faltan.
+4. Consulta `sitemaps/MEDIOS.md` y `rg -uu` antes de buscar en web; prioriza fuente oficial.
+5. Ejecuta `pnpm run validate` y `pnpm run build` antes de PR.
 
 ## Recursos adicionales
 
-- `TEMPLATE.md` contiene la plantilla de evento para nuevos registros.
-- `AGENTS.md` describe el flujo interno y las reglas del proyecto.
-- `EVENTS_INDEX.md` ofrece un índice de eventos generado automáticamente.
+- `TEMPLATE.md` — plantilla de evento.
+- `AGENTS.md` — flujo interno y reglas.
+- `EVENTS_INDEX.md` — índice auto-generado (y `sitemaps/ESTADISTICAS.md` para editores).
+- `.agents/skills/` — guías modulares.
+- `sitemaps/README.md` / `MEDIOS.md` — catálogo para editores.
 
 ## Requisitos
 
 - Node.js compatible con Astro 7.
-- **pnpm** como gestor de paquetes (instalar con `npm i -g pnpm` o `corepack enable`).
-- Dependencias del proyecto declaradas en `package.json`.
+- **pnpm** (`npm i -g pnpm` o `corepack enable`).
+- `pnpm-workspace.yaml` requiere `onlyBuiltDependencies: [esbuild, protobufjs]` para `onnxruntime-web`.
 
 ---
 
-Proyecto diseñado para capturar y navegar eventos de gobierno en Chile con datos estructurados y trazabilidad de fuentes.
+Proyecto para capturar y navegar eventos de gobierno en Chile con datos estructurados y trazabilidad de fuentes.

@@ -1,4 +1,11 @@
+---
+name: backup
+description: Respaldo offline público .gvault con Brotli y SHA-256, verificación y restauración. Usa esta skill SIEMPRE al generar, verificar o restaurar backups, tocar scripts/backup.mjs, public/backup/ o el footer de backup, incluso si solo dice 'hacer backup'.
+---
+
 ## Respaldo / Restauracion (backup offline publico)
+
+> **Handoff:** si cambias `scripts/gvault-util.mjs`, `backup.mjs`, el formato `.gvault` o el footer de backup, actualiza este skill en la misma sesión.
 
 El repo puede morir por el contenido sensible (politica/corrupcion), por eso se genera un
 respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son archivos

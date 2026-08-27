@@ -5,7 +5,7 @@
 > constituyen evidencia judicial por sí mismas ni deben ser fuente única de un dato).
 ### Eventos faltantes del estallido (para crear evento propio)
 | Evento | Fecha | Tipo | Estado |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | CIPER publica los 7 videos de la cámara corporal de Claudio Crespo y Fuerzas Especiales: «Te vamos a sacar los ojos», estrangulamiento, arranque de mechón a detenido y envío a grupo "LA TIJERA" | 2025-04-29 | investigacion | ⬜ (fuentes: CIPER `ciperchile-2026-08-03-crespo-gatica-fallo` y CIPER 2025-04-28; vídeos mostrados en el juicio del Cuarto TO Penal; contrastar con absolución 2026 `20260803-8`) |
 | Video viral "Chilean police abusing power in a protest in Chile" (r/PublicFreakout, 23-oct-2019, 29 s, v.redd.it) — registro ciudadano de abuso policial del día 6 del estallido; comentarios eliminados y título genérico: identificar el incidente específico y corroborar con prensa antes de crear evento | 2019-10-23 | accion | ⬜ (Reddit es solo punto de partida; buscar el hecho documentado de ese día — p. ej. golpizas o detenciones violentas en Plaza Baquedano/Barrio Lastarria) |
 | Amnistía Internacional publica "Ojos sobre Chile" (16 meses de investigación): agentes de Carabineros violaron DDHH de manifestantes al menos el primer mes y medio de 2019 | 2020-10-14 | publicacion | ⬜ |
@@ -34,12 +34,12 @@
 | Manifestación masiva "Nunca más sin nosotras" por el 8M en el contexto del estallido | 2020-03-08 | accion | ⬜ |
 | Golpiza a Patricio Bao (76) tras la marcha del 8M (video de oro Radio Villa Francia) | 2020-03-09 | accion | ⬜ (fuente: estallidosocial.com) |
 | Protesta estudiantil del 3-jun-2026 contra recortes de Kast — seguimiento: verificar el desenlace de la querella por la estudiante herida y las tomas de liceos de agosto de 2026 | 2026-08 | seguimiento | ⬜ |
-| Arista Elisa Correa: El Ciudadano publicó que la evidencia apunta a que Carabineros realizó una quema al interior de esa estación del Metro (línea de investigación paralela a La Granja, evento `20220502-1`); corroborar con prensa/judicial antes de crear evento | 2022-03 (aprox.) | investigacion | ⬜ (Origen: https://www.elciudadano.com/especiales/chiledesperto/evidencia-apunta-a-que-carabineros-realizo-quema-al-interior-de-estacion-elisa-correa-del-metro/03/03) |
+| Arista Elisa Correa: El Ciudadano publicó que la evidencia apunta a que Carabineros realizó una quema al interior de esa estación del Metro (línea de investigación paralela a La Granja, evento `20220502-1`); corroborar con prensa/judicial antes de crear evento | 2022-03 (aprox.) | investigacion | ⬜ (Origen: <https://www.elciudadano.com/especiales/chiledesperto/evidencia-apunta-a-que-carabineros-realizo-quema-al-interior-de-estacion-elisa-correa-del-metro/03/03>) |
 | Libro "¿Quién quemó el metro? Las revelaciones de una investigación periodística y forense" de Josefa Barraza: registrar como evento `publicacion` propio (fuente ya registrada: `adnradio-2024-10-18-quien-quemo-el-metro-cinco-anos`; obtener fecha exacta de publicación y portada de prensa del lanzamiento) | ~2023 | publicacion | ⬜ |
 | Estado actual (2025-2026) de las causas abiertas por incendios de estaciones del Metro en el 18-O: último balance público es el de los 5 años (evento `20241018-1`: solo 3 condenas firmes por incendio); verificar si hubo nuevas condenas, cierres o reaperturas desde entonces | 2026 | resultado | ⬜ (buscar en catálogo sitemaps: 'incendio estacion metro', 'condenados metro', 'quema metro') |
 ### Repositorios / compilaciones de registro ciudadano (para un evento/investigación de catálogo)
 | Repositorio | Tipo | Estado |
-|---|---|---|
+| --- | --- | --- |
 | Estallido Social en Chile (estallidosocial.com) — archivo diario y sección "Víctimas del Estallido", con casos de golpizas y fallecidos (fuente secundaria de izquierda) | sitio/archivo | ⬜ |
 | Colección "Estallido Social en Chile" en Archive.org (archive.org/details/estallido-social-en-chile y archivos de videos de Plaza de la Dignidad 8-nov-2019) | archivo | ⬜ |
 | Testigo En Línea (Datos Protegidos, datosprotegidos.org): plataforma de recopilación y sistematización de testimonios/contenidos sobre abusos policiales | plataforma | ⬜ |
@@ -53,14 +53,14 @@
 > nuevas en `entities.yaml` (personas de época y orgs).
 ### Grandes casos históricos (era Concertación)
 | Evento | Fecha | Tipo | Estado |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **MOP-Gate** (2002-2016): sobresueldos pagados con contratos inflados por la empresa GATE en el MOP; condenas por fraude al Fisco a Carlos Cruz (exministro, 3 años), Sergio Cortés (jefe de Finanzas, 5 años) y otros, confirmadas por la Corte Suprema el 29-jun-2016; derivó en la ley de sector público y la Alta Dirección Pública | 2002-02 / sentencia 2016-06-29 | investigacion/fallo | ⬜ (fuente: Wikipedia MOP-Gate, BioBio 12-ago-2014, La Tercera/EyN 29-jun-2016) |
 | **Milicogate** (2015-2026): fraude y desviación de fondos de la Ley Reservada del Cobre por el Ejército, destapado por The Clinic (Mauricio Weibel) en 2015; procesados el ex C.J. del Ejército Juan Miguel Fuente-Alba y su esposa (Fiscalía pidió 15 y 10 años, 6-ago-2021); más de $6.100M defraudados; excabo Juan Carlos Cruz condenado a 12 años tras gastar $2.368M en el casino Monticello | 2015 (destape) / condenas 2018-2026 | investigacion | ⬜ (fuente: Wikipedia/Milicogate, T13 6-ago-2021, El Mostrador 27-may-2026) |
 | **Pacogate del Ejército / arista Fuente-Alba** la arista del incremento patrimonial injustificado (bienes no justificados con sueldos, casas en Chicureo/Colina) | 2019-02-04 | investigacion | ⬜ (puede fundirse con Milicogate) |
 | **Caso Coimas** (2002-2003): antecedente directo del MOP-Gate; sobornos en la Dirección de Vialidad/Concesiones por adjudicaciones de carreteras | 2002-05 | investigacion | ⬜ |
 ### Casos de mercados financieros / colusiones (no de financiamiento político)
 | Evento | Fecha | Tipo | Estado |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | **Caso Opacidades** (2014-2015): fraude bursátil y uso de información privilegiada mediante las sociedades "Cascadas" controladas por Julio Ponce Lerou (SQM); multas judiciales y aristas penales | 2014-10 (SVS) / sanciones 2015-2016 | investigacion | ⬜ (vinculado al Caso SQM `20180416-1`; detalle del libro de CIPER "El padrino") |
 | Colusión del papel tissue (CMPC/SCA) como evento propio | 2014-2015 | publicacion | ⬜ (multa TDLC 2015; sin evidencia de participación de Quiroz — confirmado en `20260805-4`) |
 ---
@@ -68,7 +68,7 @@
 ## Telegram — ArchivandoChile (análisis del scraper)
 
 ### Datos disponibles
-- **Canal**: `https://t.me/s/ArchivandoChile`
+- **Canal**: `<https://t.me/s/ArchivandoChile>`
 - **Posts**: 39,772 (oct 2019 - ene 2023)
 - **Contenido**: Principalmente links de Twitter/Instagram sobre política chilena, reacciones ciudadanas, manifestaciones
 - **Útiles para**: Eventos de 2019-2023 (estallido social, gobierno Boric) que falten en el vault
@@ -85,7 +85,7 @@
 
 ### Pendientes
 | Acción | Prioridad | Notas |
-|---|---|---|
+| --- | --- | --- |
 | Actualizar scraper para obtener posts 2024-2026 | 🟡 | Requiere verificar si el canal sigue activo |
 | Buscar otros canales de Telegram (ej. noticieros) | 🟡 | Canales oficiales de medios podrían ser más útiles |
 | Revisar posts 2019-2021 para eventos faltantes del estallido | ⬜ | ~9,000 posts; usar grep por keywords relevantes |
@@ -97,7 +97,7 @@ Los posts de 2022+ son exclusivamente links de Twitter/Instagram sin texto descr
 
 ### Alternativas para monitoreo de Telegram
 | Canal | Tipo | Utilidad |
-|---|---|---|
+| --- | --- | --- |
 | `@ArchivandoChile` | Archivo histórico (2019-2023) | Útil solo para contexto histórico |
 | Canales oficiales de medios (ej. `@biobiochile`, `@theclinic_cl`) | Noticias | Potencialmente útiles si publican artículos completos |
 | Canales de política (ej. `@infogob_cl`, `@carabinerosdechile`) | Oficiales | Útiles para comunicados oficiales |
@@ -112,7 +112,7 @@ Si se quiere monitorear Telegram para eventos nuevos, escanear canales oficiales
 El canal ArchivandoChile tiene **13,176 posts** del estallido social (oct 2019 - mar 2020) con **13,100 links de Twitter** de evidencia comunitaria. El vault tiene solo **~25 eventos** para ese período.
 
 | Fecha | Posts Telegram | Eventos Vault |
-|---|---|---|
+| --- | --- | --- |
 | Nov 12, 2019 | 231 | 1 |
 | Nov 14, 2019 | 226 | 0 |
 | Nov 21, 2019 | 220 | 0 |
@@ -141,7 +141,7 @@ Priorizar fechas con más posts (Nov 12, 14, 17, 21, 22 de 2019) para crear even
 
 ### Tipos de links en el Telegram
 | Tipo | Cantidad | Descripción |
-|---|---|---|
+| --- | --- | --- |
 | Twitter/X | ~36,770 | Videos/imágenes de manifestantes, periodistas, organizaciones |
 | archive.fo | ~1,500+ | Contenido preservado (tweets eliminados, posts borrados) |
 | Instagram | ~500+ | Fotos de manifestaciones, artistas callejeros |
@@ -205,14 +205,14 @@ Los posts de Oct 22-24, 2019 (días posteriores al estallido del 18 de octubre) 
 
 ### Resumen de hallazgos
 | Fuente | Oct 22 | Oct 23 | Oct 24 | Total |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 | Artículos en sitemaps | 543 | 548 | 518 | 1,609 |
 | Posts de Telegram | 381 | 939 | 186 | 1,506 |
 | Eventos en vault | 0 | 1 | 0 | 1 |
 
 ### Artículos por categoría (sitemaps)
 | Categoría | Cantidad | Ejemplos |
-|---|---|---|
+| --- | --- | --- |
 | protesta | 167 | Manifestaciones, cacerolazos, marchas |
 | represion | 120 | Carabineros, ddhh, lesiones, detenciones |
 | emergencia | 116 | Estado de emergencia, toque de queda, militares |

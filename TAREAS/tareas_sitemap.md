@@ -4,7 +4,7 @@
 > local (`sitemaps/<medio>/`) y así poder revisar eventos de gobiernos pasados
 > con mayor variedad de puntos de vista al verificar datos.
 >
-> **Fuente de sitios:** [awesome-chilean-rss](https://github.com/Alplox/awesome-chilean-rss)
+> **Fuente de sitios:** [awesome-chilean-rss](<https://github.com/Alplox/awesome-chilean-rss>)
 > — `feeds-database.json` (sitios con feeds verificados) y `watchlist.json`
 > (candidatos, muchos sin feed RSS o con solo proxies de Google/Bing News).
 > Este archivo se genera con `pnpm run sitemaps-watchlist -- --source <ruta-al-repo>`.
@@ -31,7 +31,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Negocios / economía (business)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **(Empresa) Apex Pymes** | `apexpymes.cl` | — | watchlist | Solo feeds proxy activos (feeds nativos inactivos) |
 | ⬜ | **(Empresa) Contapapaya** | `contapapaya.cl` | — | database | Plataforma de contabilidad online para pymes chilenas, con artículos sobre contabilidad y |
 | ⬜ | **(Empresa) Logros Servicios Financieros** | `empresaslogros.cl` | — | database | Servicios financieros y contables, con artículos sobre finanzas y asesoría tributaria |
@@ -76,7 +76,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Comunidad / sociedad civil (community)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **Aldeas Infantiles SOS Chile** | `aldeasinfantiles.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Anda** | `anda.cl` | — | database | Plataforma chilena de ofertas y compras grupales |
 | ⬜ | **ANEF** | `anef.cl` | — | database | Asociación Nacional de Empleados Fiscales |
@@ -122,7 +122,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Cultura (culture)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **50 años del Golpe de Estado** | `50.cultura.gob.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Balmaceda Arte Joven** | `balmacedartejoven.cl` | — | database | Fundación de formación artística juvenil con sedes en varias regiones |
 | ⬜ | **Biblioteca Nacional de Chile** | `bibliotecanacional.gob.cl` | — | watchlist | Sin feed RSS detectado |
@@ -150,7 +150,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Educación (education)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **Actualidad UDLA** | `actualidad.udla.cl` | — | database | Portal de actualidad e información de la Universidad de Las Américas |
 | ⬜ | **ANID** | `anid.cl` | — | database | Agencia Nacional de Investigación y Desarrollo |
 | ⬜ | **Ayuda Mineduc** | `ayudamineduc.cl` | — | watchlist | Feed RSS existe pero sin contenido reciente (último item 2021) |
@@ -203,7 +203,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Medio ambiente (environment)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **Acción Climática** | `accionclimatica.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **ACERA** | `acera.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Aguas Andinas** | `aguasandinas.cl` | — | watchlist | Sin feed RSS detectado |
@@ -238,7 +238,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Gobierno / instituciones (government)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **ANCI** | `anci.gob.cl` | — | watchlist | Sitio gubernamental sin feed RSS detectado |
 | ⬜ | **ANEPE** | `anepe.cl` | — | watchlist | Sitio WordPress sin feed detectable (HTTP 500 en /feed/) |
 | 🟡 | **Banco Central de Chile** | `bcentral.cl` | — | watchlist | Sin feed RSS detectado |
@@ -325,7 +325,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Salud (health)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **ANAMED** | `anamed.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **CENABAST** | `cenabast.cl` | — | database | Central de Abastecimiento del Sistema Nacional de Servicios de Salud, organismo público de |
 | ⬜ | **CIPS - Centro de Políticas Públicas e Innovación en Salud** | `gobierno.udd.cl` | — | database | Centro de Políticas Públicas e Innovación en Salud de la Universidad del Desarrollo |
@@ -360,7 +360,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Noticias nacionales (news)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **123.cl** | `noticias.123.cl` | — | watchlist | Sitio no responde (timeout) |
 | 🟡 | **24 Horas** | `24horas.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **aDiarioCR** | `adiariocr.com` | — | database | Periódico digital con noticias de Chile y el mundo |
@@ -529,7 +529,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Noticias internacionales (news-international)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **ANSA Latina** | `ansalatina.com` | — | watchlist | No se detectó feed RSS en el sitio (agencia de noticias italiana, no chilena) |
 | ⬜ | **BBC Mundo** | `bbc.com` | — | database | Cobertura de noticias globales y análisis desde una perspectiva internacional |
 | ⬜ | **Cadena Política** | `cadenapolitica.com` | — | database | Portal mexicano de noticias políticas, salud y actualidad |
@@ -547,7 +547,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Partidos políticos (political-parties)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **Demócratas Chile** | `democratas.cl` | — | database | Partido político chileno - Noticias, comunicados y actividades de Demócratas Chile |
 | ⬜ | **Evópoli** | `evopoli.cl` | — | watchlist | Sin actividad (todos los feeds inactivos) |
 | ⬜ | **Federación Regionalista Verde Social** | `frevs.cl` | — | database | Partido político chileno - Noticias, comunicados y actividades de la Federación Regionalis |
@@ -564,7 +564,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Radio (radio)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ⬜ | **Duna** | `duna.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **FM Joven** | `fmjoven.com` | — | watchlist | Sitio no accesible |
 | ⬜ | **FM Plus** | `fmplus.cl` | — | watchlist | No se detectó feed RSS en el sitio (Next.js, sin soporte RSS) |
@@ -634,7 +634,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 ### Regional (regional)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
-|---|---|---|---|---|---|
+| --- | --- | --- | --- | --- | --- |
 | ✅ | **Aconcagua Digital** | `aconcaguadigital.cl` | Valparaiso | database | Diario regional de San Felipe, Valparaíso |
 | ✅ | **Alerta Noticias** | `alertanoticias.cl` | Valparaiso | database | Medio de comunicación de la Región de Valparaíso |
 | 🟡 | **Alerta Noticias Temuco** | `alertanoticiastemuco.cl` | Araucania | database | referenciado en sources.yaml |
