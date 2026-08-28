@@ -1657,12 +1657,16 @@
 
 - [2016/01/20160118-1 - CDE pide reabrir el caso Riggs para investigar las malversaciones de la Fundación CEMA Chile](src/content/events/2016/01/20160118-1.md) — 1 fuente
 - [2016/02/20160211-1 - CIPER revela la 'lista de Carrasco': Inmobiliaria Ecomac y otras diez empresas financiaron por fuera de la vía legal la campaña de Golborne](src/content/events/2016/02/20160211-1.md) — 3 fuentes
+- [2016/03/20160307-1 - Corte Suprema confirma que el municipio de Viña del Mar debe restituir $1.840 millones a Corfo por el caso Inverlink](src/content/events/2016/03/20160307-1.md) — 4 fuentes
 
 ## 2015
 
 - [2015/03/20150303-1 - Caso Penta: la maquina de evasion tributaria de los duenos del grupo Penta](src/content/events/2015/03/20150303-1.md) — 3 fuentes
 - [2015/06/20150615-1 - Jorge Quiroz, futuro ministro de Hacienda de Kast, es condenado por conducción en estado de ebriedad en Zapallar](src/content/events/2015/06/20150615-1.md) — 4 fuentes
+- [2015/07/20150703-1 - Tribunal acoge demanda de Corfo y ordena a 15 entidades pagar $33.151 millones en el caso Inverlink](src/content/events/2015/07/20150703-1.md) — 5 fuentes
 - [2015/07/20150714-1 - Caso Caval: el polemico estudio vial que inclino la balanza](src/content/events/2015/07/20150714-1.md) — 3 fuentes
+- [2015/07/20150727-1 - Ministro en visita Carlos Gajardo dicta sentencia contra 13 imputados por la arista principal Corfo-Inverlink](src/content/events/2015/07/20150727-1.md) — 6 fuentes
+- [2015/08/20150812-1 - Corte Suprema ratifica las condenas contra 7 ex ejecutivos por la arista Corfo del caso Inverlink](src/content/events/2015/08/20150812-1.md) — 5 fuentes
 - [2015/10/20151008-1 - Papa Francisco respalda al obispo de Osorno Juan Barros y califica de 'tontos' y 'zurdos' a los manifestantes que protestaban por el caso Karadima](src/content/events/2015/10/20151008-1.md) — 2 fuentes
 - [2015/10/20151028-1 - FNE presenta requerimiento ante TDLC por colusión de precios en papel higiénico, pañuelos y servilletas entre CMPC Tissue y SCA ("Confortgate")](src/content/events/2015/10/20151028-1.md) — 8 fuentes
 - [2015/12/20151223-1 - TDLC condena a Asfaltos Chilenos, Dynal, Enex y Química Latinoamericana por colusión en la provisión de asfalto](src/content/events/2015/12/20151223-1.md) — 6 fuentes
@@ -1672,6 +1676,7 @@
 - [2014/08/20140812-1 - Caso MOP-Gate: la Corte confirma condenas por sobresueldos con contratos del Ministerio de Obras Públicas](src/content/events/2014/08/20140812-1.md) — 3 fuentes
 - [2014/09/20140925-1 - TDLC condena a Agrosuper, Ariztía y Don Pollo por la colusión de los pollos y ordena disolver la APA](src/content/events/2014/09/20140925-1.md) — 5 fuentes
 - [2014/10/20141023-1 - Caso EFE: Corte ratifica condena contra Luis Ajenjo por fraude al fisco en la Empresa de Ferrocarriles del Estado](src/content/events/2014/10/20141023-1.md) — 8 fuentes
+- [2014/12/20141203-1 - Corte de Apelaciones de Santiago revoca absoluciones y condena a ocho ex ejecutivos de Inverlink a restituir $26.462 millones a Corfo](src/content/events/2014/12/20141203-1.md) — 5 fuentes
 - [2014/12/20141207-1 - Subsecretaría de Prevención del Delito revela que 1 de cada 4 reos indultados en 2012 (gobierno de Piñera) volvió a delinquir](src/content/events/2014/12/20141207-1.md) — 3 fuentes
 - [2014/12/20141212-1 - Gobierno de Bachelet acusa a Piñera de liberar a más de 9 mil reos con delitos graves: 'le puso motor a la puerta giratoria'](src/content/events/2014/12/20141212-1.md) — 3 fuentes
 
@@ -1682,13 +1687,16 @@
 
 ## 2012
 
+- [2012/01/20120104-1 - Ministro en visita Patricio Villarroel dicta acusación contra 22 personas en la arista principal Corfo-Inverlink](src/content/events/2012/01/20120104-1.md) — 6 fuentes
 - [2012/01/20120130-1 - TDLC condena a Cruz Verde y Salcobrand por colusión en el precio de 206 medicamentos y la Corte Suprema ratifica las multas de 20.000 UTA](src/content/events/2012/01/20120130-1.md) — 6 fuentes
 - [2012/11/20121109-1 - Corte Suprema confirma las condenas de la arista Banco Central del caso Inverlink](src/content/events/2012/11/20121109-1.md) — 2 fuentes
+- [2012/12/20121217-1 - Corte Suprema confirma la condena por contrato simulado en la arista Corfo del caso Inverlink](src/content/events/2012/12/20121217-1.md) — 4 fuentes
 
 ## 2011
 
 - [2011/06/20110608-1 - The Clinic revela el conflicto de interés de Ena von Baer por el convenio UPOV 91 y las semillas registradas por su familia](src/content/events/2011/06/20110608-1.md) — 3 fuentes
 - [2011/11/20111123-1 - Corte de Apelaciones de Santiago condena a once personas en la arista Banco Central del caso Inverlink](src/content/events/2011/11/20111123-1.md) — 4 fuentes
+- [2011/12/20111229-1 - Corte de Apelaciones de Santiago condena a Eduardo Monasterio y dos familiares por contrato simulado en caso Corfo-Inverlink](src/content/events/2011/12/20111229-1.md) — 5 fuentes
 
 ## 2010
 

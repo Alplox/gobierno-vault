@@ -14168,6 +14168,77 @@ people:
   maria_gonzalez:
     nombre: María González
     cargo: SEREMI de Salud de Valparaíso
+  eliana_neumann:
+    nombre: Eliana Neumann Hitschfeld
+    cargo: Cónyuge de Eduardo Monasterio, condenada por contrato simulado en caso Corfo-Inverlink
+    notas: "Condenada a 200 días de presidio con remisión condicional por la Tercera Sala de la Corte de Apelaciones de Santiago (29-dic-2011, eventos 20111229-1) y por la Corte Suprema (17-dic-2012, evento 20121217-1); deberá pagar junto a los demás condenados 5.000 UF a Corfo. Cofirmtó con Monasterio la venta simulada de la casa de Las Brisas de Santo Domingo para burlar un embargo."
+  maria_sabugo:
+    nombre: María del Pilar Sabugo Canseco
+    cargo: Cuñada de Eliana Neumann, condenada por contrato simulado en caso Corfo-Inverlink
+    notas: "Compradora formal del inmueble de Monasterio-Neumann en Las Brisas de Santo Domingo (8-oct-2003, $52.000.000 pagado con cheque presentado a cobro recién el 25-nov). Condenada a 200 días de presidio con remisión condicional por la Corte de Apelaciones de Santiago (29-dic-2011, evento 20111229-1) y por la Corte Suprema (17-dic-2012, evento 20121217-1); deberá pagar junto a los demás condenados 5.000 UF a Corfo."
+  carlos_gajardo:
+    nombre: Carlos Gajardo Galdames
+    cargo: Ministro en visita de la Corte de Apelaciones de Santiago
+    notas: "Dictó la sentencia de primera instancia contra 13 imputados en la arista principal Corfo-Inverlink (27-jul-2015)."
+  patricio_villarroel_valdivia:
+    nombre: Patricio Villarroel Valdivia
+    cargo: Ex ministro en visita de la Corte de Apelaciones de Santiago
+    notas: "Llevó la arista principal Corfo-Inverlink durante una década; dictó la acusación contra 22 personas (4-ene-2012) y la sentencia de primera instancia de la arista Ley de Valores (2013), revocada en alzada (dic-2014)."
+  orlando_collarte:
+    nombre: Orlando Collarte López
+    cargo: Condenado por malversación de caudales públicos y estafa en caso Corfo-Inverlink
+  eduardo_tapia_donoso:
+    nombre: Eduardo Tapia Donoso
+    cargo: Condenado por malversación de caudales públicos y estafa en caso Corfo-Inverlink
+  luis_hernandez_palma:
+    nombre: Luis Hernández Palma
+    cargo: Condenado por malversación de caudales públicos en caso Corfo-Inverlink
+  marcial_izarnotegui:
+    nombre: Marcial Izarnótegui Valenzuela
+    cargo: Condenado a 3 años de suspensión por malversación de caudales públicos en caso Corfo-Inverlink
+  nelson_perez_baladron:
+    nombre: Nelson Pérez Baladrón
+    cargo: Condenado a 3 años de suspensión por malversación de caudales públicos en caso Corfo-Inverlink
+  francisco_edwards_braun:
+    nombre: Francisco Edwards Braun
+    cargo: Condenado por estafa en caso Corfo-Inverlink
+  carlos_rubilar_munoz:
+    nombre: Carlos Rubilar Muñoz
+    cargo: Condenado por estafa en caso Corfo-Inverlink
+  fernando_romero_donoso:
+    nombre: Fernando Romero Donoso
+    cargo: Condenado por infracción a la Ley General de Bancos en caso Corfo-Inverlink
+  richard_suazo_diaz:
+    nombre: Richard Suazo Díaz
+    cargo: Absuelto de infracción a la Ley de Valores en caso Corfo-Inverlink
+  jose_munoz_leyton:
+    nombre: José Muñoz Leyton
+    cargo: Absuelto de infracción a la Ley de Valores y estafa en caso Corfo-Inverlink
+  guillermo_brito_aguilera:
+    nombre: Guillermo Brito Aguilera
+    cargo: Absuelto de infracción a la Ley de Valores y estafa en caso Corfo-Inverlink
+  carlos_berrios_mancilla:
+    nombre: Carlos Berríos Mancilla
+    cargo: Absuelto de estafa en caso Corfo-Inverlink (absuelto también en la arista Banco Central, 2012)
+  ana_martin_vera:
+    nombre: Ana Martín Vera
+    cargo: Absuelta de estafa en caso Corfo-Inverlink
+  lawrence_fletcher_vera:
+    nombre: Lawrence Fletcher Vera
+    cargo: Condenado a 541 días de presidio por infracción a la Ley de Mercado de Valores (arista Corfo-Inverlink, ratificado por la Corte Suprema 2015)
+  juan_pablo_prieto_viviani:
+    nombre: Juan Pablo Prieto Viviani
+    cargo: Ex operador de la mesa de dinero de BBVA Corredora de Bolsa; condenado a 541 días de presidio por infracción a la Ley de Mercado de Valores (arista Corfo-Inverlink)
+  gino_tirapegui_palomino:
+    nombre: Gino Tirapegui Palomino
+    cargo: Condenado a 541 días de presidio por infracción a la Ley de Mercado de Valores (arista Corfo-Inverlink)
+  frank_leighton_castellon:
+    nombre: Frank Leighton Castellón
+    cargo: Ex gerente general de BBVA Corredora de Bolsa; condenado a 541 días de presidio por infracción a la Ley de Mercado de Valores (arista Corfo-Inverlink)
+  nibaldo_mosciatti:
+    nombre: Nibaldo Mosciatti
+    cargo: Periodista de Radio Bío Bío
+    notas: "Comentarista de economía en CNN Chile; al día siguiente de la acusación de 2012 relacionó Inverlink con el caso La Polar."
 organizations:
   cge:
     nombre: CGE
@@ -19132,6 +19203,11 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Radio chilena (concierto.cl), del grupo Prisa Media. Cubrió el episodio de Estado Nacional de 2019 sobre los 44 videos falsos y el lapsus 'candado chino' de Diego Schalper."
+  bbva_corredora_de_bolsa:
+    nombre: BBVA Corredora de Bolsa Limitada
+    tipo: empresa
+    pais: España
+    notas: "Corredora filial de BBVA. Condenada como tercero civilmente responsable por los hechos de sus dependientes Juan Pablo Prieto Viviani y Frank Leighton Castellón en la demanda civil de Corfo del caso Inverlink ($26.462.295.646, confirmado por la Corte Suprema en 2015)."
 
 cifras:
   invitados_fiestas_patrias_teheran:
@@ -23382,3 +23458,63 @@ cifras:
     nombre: Saldos sin movimiento del sector municipal (RADAR N°3)
     unidad_default: millones_pesos
     notas: "$154.486 millones correspondientes al sector municipal dentro del hallazgo RADAR N°3 (evento 20260826-2)."
+  indemnizacion_contrato_simulado_corfo:
+    nombre: Indemnización solidaria a Corfo por contrato simulado caso Inverlink
+    notas: "5.000 UF (más de $111 millones de la época) que Monasterio, Neumann y Sabugo deben pagar solidariamente a Corfo como indemnización de perjuicios; ordenado por la CA de Santiago el 29-dic-2011 y confirmado por la Corte Suprema el 17-dic-2012 (eventos 20111229-1 y 20121217-1)."
+    unidad_default: uf
+  perjuicio_arista_principal_corfo_inverlink:
+    nombre: Perjuicio estimado en la arista principal Corfo-Inverlink
+    notas: "Cerca de $100.000 millones perdidos por el fisco según estimación del ministro en visita Patricio Villarroel al cerrar el sumario (29-dic-2011); The Clinic/Ene-2012 repite la cifra. No confundir con los $3.266 millones del peritaje de la arista tributaria (cifra perjuicio_fiscal_inverlink)."
+    unidad_default: pesos
+  recuperacion_perjuicio_corfo_inverlink:
+    nombre: Monto recuperado del perjuicio de la arista principal Corfo-Inverlink
+    notas: "US$10 millones recuperados al cierre del sumario (29-dic-2011), equivalente a poco más de $5.000 millones de la época, según Villarroel."
+    unidad_default: dolares
+  robo_instrumentos_financieros_corfo:
+    nombre: Robo de instrumentos financieros desde Corfo en caso Inverlink
+    notas: "$85.000 millones en instrumentos financieros sustraídos desde Corfo orquestados desde Inverlink con la colaboración del jefe de la mesa de dinero de la estatal, según El Dínamo citando a Diario Financiero (12-dic-2011)."
+    unidad_default: pesos
+  venta_inmueble_las_brisas_santo_domingo:
+    nombre: Venta simulada del inmueble de Las Brisas de Santo Domingo
+    notas: "$52.000.000 pagados con cheque del Banco Santander presentado a cobro recién el 25-nov-2003; operación del 8-oct-2003 calificada como contrato simulado en perjuicio de Corfo por las cortes (eventos 20111229-1 y 20121217-1)."
+    unidad_default: pesos
+  compra_inmueble_monasterio_neumann:
+    nombre: Compra original del inmueble de Monasterio-Neumann en Santo Domingo
+    notas: "$166.512.500 pagados el 18-nov-2002 a la sociedad C.R. Inmobiliaria S.A. por el inmueble de calle Las Garzas N° 277, conjunto Las Brisas de Santo Domingo, vendido un año después en versión simulada."
+    unidad_default: pesos
+  perjuicio_fisco_arista_corfo:
+    nombre: Perjuicio del Fisco establecido en la acusación de la arista principal Corfo-Inverlink (2012)
+    notas: "Más de $100 mil millones perdidos por el Fisco según el cálculo del ministro Patricio Villarroel al dictar la acusación del 4-ene-2012."
+    unidad_default: millones_de_pesos
+  recuperacion_fisco_arista_corfo:
+    nombre: Monto recuperado por el Fisco a la fecha de la acusación Corfo-Inverlink (2012)
+    notas: "Solo US$10 millones recuperados al 4-ene-2012, según BioBioChile y El Dínamo."
+    unidad_default: millones_de_dolares
+  restitucion_corfo_arista_principal:
+    nombre: Restitución a Corfo ordenada en la sentencia de primera instancia de la arista principal (2015)
+    notas: "$61.372.931.929 que deben pagar Javier Montoya (Moya), Enzo Bertinelli, Eduardo Tapia, Orlando Collarte y Luis Hernández, según fallo del ministro Carlos Gajardo del 27-jul-2015."
+    unidad_default: pesos
+  indemnizacion_34_victimas_inverlink:
+    nombre: Indemnización a 34 víctimas del caso Inverlink (2015)
+    notas: "$8.545.004.822 que deben pagar ocho condenados, según la sentencia del 27-jul-2015."
+    unidad_default: pesos
+  dano_emergente_corfo_ley_valores:
+    nombre: Daño emergente a Corfo en la arista Ley de Valores del caso Inverlink
+    notas: "$26.462.295.646 reajustables más intereses y costas, fijados por la Corte de Apelaciones de Santiago (dic-2014) y confirmados por la Corte Suprema (12-ago-2015), con BBVA Corredora de Bolsa como tercero civilmente responsable."
+    unidad_default: pesos
+  indemnizacion_15_entidades_inverlink:
+    nombre: Indemnización a Corfo ordenada a 15 entidades por el caso Inverlink
+    notas: "$33.151.103.037 que deben pagar 15 compañías y sociedades de inversión según el Décimo Cuarto Juzgado Civil de Santiago (3-jul-2015), por el retiro irregular de instrumentos financieros de Corfo."
+    unidad_default: pesos
+  indemnizacion_15_entidades_inverlink_usd:
+    nombre: Equivalente en dólares de la indemnización a Corfo por el caso Inverlink
+    notas: "Aproximadamente US$52 millones, equivalente reportado por la prensa para la indemnización de $33.151.103.037 ordenada en julio de 2015 a 15 entidades."
+    unidad_default: millones_de_dolares
+  restitucion_vina_del_mar_corfo:
+    nombre: Restitución ordenada al municipio de Viña del Mar en el caso Inverlink
+    notas: "$1.840.784.895 que la Municipalidad de Viña del Mar debe restituir a Corfo por fondos rescatados desde el holding Inverlink, confirmado por la Corte Suprema (7-mar-2016)."
+    unidad_default: pesos
+  restitucion_inversiones_molin_corfo:
+    nombre: Restitución ordenada a la inmobiliaria Molin en el caso Inverlink
+    notas: "$669.134.885 que Inversiones e Inmobiliaria Molin Limitada debe restituir a Corfo por fondos rescatados desde el holding Inverlink, confirmado por la Corte Suprema (7-mar-2016)."
+    unidad_default: pesos
