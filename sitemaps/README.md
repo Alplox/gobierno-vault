@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 28/8/2026, 17:42:02
-- **Medios registrados:** 241
-- **Artículos indexados:** 7.447.465
+- **Última sincronización:** 28/8/2026, 19:09:02
+- **Medios registrados:** 267
+- **Artículos indexados:** 7.796.653
 
 ## Por medio
 
@@ -19,13 +19,14 @@
 | Radio Agricultura | 299.064 |
 | Chilevisión | 281.444 |
 | El Dínamo | 251.506 |
+| France 24 | 235.073 |
 | CNN Chile | 227.284 |
 | The Clinic | 192.281 |
 | 24 Horas | 187.195 |
 | Radio Universidad de Chile | 108.165 |
+| Mediabanco | 107.003 |
 | PortalPortuario | 105.322 |
 | El Periodista | 85.126 |
-| France 24 | 79.994 |
 | AIT News | 79.258 |
 | El Líbero | 72.942 |
 | El Rancagüino | 70.171 |
@@ -49,6 +50,7 @@
 | El Contraste | 28.978 |
 | Radio Imagina | 28.703 |
 | Diario Antofagasta | 27.249 |
+| UDLA | 26.827 |
 | El Noticiero del Huasco | 26.018 |
 | Diario Regional Aysén | 25.105 |
 | Canal 9 | 23.834 |
@@ -56,6 +58,7 @@
 | Diario de Puerto Montt | 22.063 |
 | El Maipo | 20.845 |
 | El Clarín | 20.721 |
+| UCSC | 20.616 |
 | Diario Talca | 20.421 |
 | La Nación | 19.866 |
 | Frontera Norte | 19.517 |
@@ -91,6 +94,7 @@
 | VLN Radio | 11.176 |
 | Radio UdeC | 10.999 |
 | Novena Digital | 10.673 |
+| Diario Chile | 10.649 |
 | AmCham Chile | 10.640 |
 | Infogate | 10.477 |
 | Publimicro | 10.293 |
@@ -127,8 +131,10 @@
 | Diario El Centro | 6559 |
 | Diario de Osorno | 6547 |
 | La Fontana | 6482 |
+| USM | 6163 |
 | Fast Check CL | 6142 |
 | Alerta Noticias Temuco | 6133 |
+| UTE USACH Noticias | 5894 |
 | UTE USACH Noticias | 5849 |
 | La Opinión de Chiloé | 5848 |
 | SERNATUR | 5784 |
@@ -136,6 +142,7 @@
 | Valparaíso Noticias | 5690 |
 | Atacama Noticias | 5445 |
 | El Siglo | 5429 |
+| CR2 | 5308 |
 | Reporte Agrícola | 5303 |
 | Entérate Hoy | 5239 |
 | CEP Chile | 5033 |
@@ -145,6 +152,7 @@
 | JUNJI | 4723 |
 | El Morro de Arica | 4552 |
 | Gobierno Regional de Tarapacá | 4398 |
+| Chile Travel | 4361 |
 | La Máquina Medio | 4038 |
 | Insular FM | 4000 |
 | Chile País Minero | 3943 |
@@ -155,6 +163,7 @@
 | Antofacity | 3337 |
 | Colegio Médico de Chile | 3134 |
 | Antofagasta al Día | 3114 |
+| Cóndor | 2785 |
 | Ñuble Online | 2730 |
 | Diario El Día | 2718 |
 | Colegio San Ignacio | 2663 |
@@ -163,6 +172,7 @@
 | ANEF | 2522 |
 | Factos | 2437 |
 | Panorama Noticioso | 2410 |
+| Fundación Iguales | 2109 |
 | Prime Digital | 2102 |
 | Aurora Noticias | 2019 |
 | Consejo para la Transparencia | 2010 |
@@ -184,6 +194,7 @@
 | La Tribuna de Colchagua | 1003 |
 | Cruz Roja Chile | 994 |
 | Radio Modelo | 989 |
+| CENABAST | 947 |
 | Magia Digital | 946 |
 | Oceana Chile | 908 |
 | Defensoría de la Niñez | 894 |
@@ -205,13 +216,16 @@
 | Contrapoder Chile | 512 |
 | The Guardian | 508 |
 | Diario Concepción | 501 |
+| Hogar de Cristo | 500 |
 | Municipalidad de Alto Biobío | 483 |
 | El Comunicador | 482 |
+| Generadoras de Chile | 482 |
 | El Radar | 445 |
 | Municipalidad de Traiguén | 424 |
 | ADN Radio | 400 |
 | SOCHED | 397 |
 | RedSalud | 388 |
+| Contingencia Chile | 379 |
 | SENAPRED | 359 |
 | Colegio Alemán de Santiago | 354 |
 | Instituto de la Construcción | 354 |
@@ -236,15 +250,16 @@
 | Diario USACH | 73 |
 | Los Abogados Laborales | 72 |
 | ANIP | 70 |
+| WWF Chile | 66 |
 | Guía Turismo Chile | 38 |
 | Explora | 35 |
 | Quintero | 30 |
 | El Libertario | 26 |
+| RN | 25 |
 | Factchecking.cl | 14 |
 | Gobierno de Chile | 9 |
 | Uruguay | 8 |
 | Herejía | 7 |
-| Universidad Técnica Federico Santa María | 5 |
 | El Gong Araucanía | 1 |
 | Funcionario Público | 1 |
 | Saint George's College | 1 |

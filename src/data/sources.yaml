@@ -9233,9 +9233,10 @@ latercera-2026-07-30-cifras-seguridad-vallejo:
   tipo: prensa
   medio: La Tercera
   titulo: "Las cifras del gobierno para sustentar su relato de seguridad y combatir la embestida de la exministra Vallejo"
-  autor: La Tercera
+  autor: Juan Manuel Ojeda
   fecha: 2026-07-30
   url: https://www.latercera.com/nacional/noticia/las-cifras-del-gobierno-para-sustentar-su-relato-de-seguridad-y-combatir-la-embestida-de-la-exministra-vallejo/
+  notas: "La Tercera (30-jul-2026) reporta balance oficial al 19-jul-2026 vía fuentes de gobierno: homicidios 472 (-17,6% vs 2025, -33,8% vs 2022), robos violentos -12%, droga +61%, violencia Macrozona Sur 190→157 (-17%), ingresos irregulares 1.168 (-86% vs 2025 y -95% vs 2022). Compara con crítica de Camila Vallejo ('gran estafa') y replica de Pilar Giannini. Dato 1.168 con doble caída vs 2025/2022 permite anclar serie histórica. (evento 20260730-28). Verificada por lectura directa."
 
 adnradio-2026-07-31-rodriguez-doble-positivo:
   tipo: prensa
@@ -37801,3 +37802,210 @@ msn-2026-08-28-viaje-parlamentarios-israel:
   fecha: 2026-08-28
   url: https://www.msn.com/es-cl/noticias/other/una-relaci%C3%B3n-renovada-el-herm%C3%A9tico-viaje-de-un-grupo-de-parlamentarios-chilenos-a-israel/ar-AA2b84yH
   notas: "Agregador MSN replica íntegra la nota de BioBioChile del 28-ago-2026 (autor Megam Ossandón) con idéntico texto sobre delegación de 11, fechas 21-30 agosto, financiamiento vía Comunidad Israelita y grupo de amistad. No es reporte independiente, pero constituye cuarto canal de distribución y cuarto medio distinto que visibiliza el hermetismo (evento 20260828-1)."
+
+biobiochile-2026-08-26-arica-623-matiz:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Registro de ingresos irregulares aumentan 62% en Arica y Migraciones pone matiz a la cifra"
+  autor: Constanza Carrillo Silva
+  fecha: 2026-08-26
+  url: https://www.biobiochile.cl/noticias/nacional/region-de-arica-y-parinacota/2026/08/26/ingresos-irregulares-aumentan-62-en-arica-y-migraciones-pone-matiz-a-la-cifra.shtml
+  notas: "Fuente primaria ampliada (26-ago-2026 13:31). Cifras Sermig vía Delegación Presidencial Arica: 917 (ene-jul 2025) a 1.488 (ene-jul 2026), +62,3% (+571). Venez., Col. y Ecu. concentran 88,6% de registros 2026 y 97,4% del aumento neto. Sermig explica que no equivale a nuevos cruces: son detecciones de ingresos anteriores en fiscalizaciones en ciudad/valle/rutas (fecha/lugar registro ≠ cruce). Matiz metodológico central. Diputado Jaime Araya (IND-PPD) pide citar a ministro Martín Arrau por 'fracaso del Plan Escudo Fronterizo'. (evento 20260826-4)."
+
+adnradio-2026-08-26-arica-623:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Autodenuncias por ingresos irregulares en Arica aumentan un 62,3% en 2026"
+  autor: Mario Vergara
+  fecha: 2026-08-26
+  url: https://www.adnradio.cl/2026/08/26/deteccion-de-ingresos-irregulares-en-arica-aumenta-un-623-en-2026/
+  notas: "ADN Radio (26-ago-2026 15:18). Cifras Sermig/Delegación: +62,3% denuncias y autodenuncias; detecciones en frontera -86,9% según PDI (2026 vs 2025). 88,6% Venezuela/Colombia/Ecuador (97,4% del aumento). Subsecretario Máximo Pavez: mayor fiscalización explica alza. Diputado Jaime Araya pide citar a Cristian Araya para que ministre Arrau explique 'fracaso del Plan Escudo Fronterizo'. Aclara que indicador no mide cruces de últimos 12 meses. (evento 20260826-4). Verificada por lectura directa."
+
+elciudadano-2026-08-26-araya-escudo-fronterizo-arica:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "\"Es evidente el fracaso del Plan Escudo Fronterizo\": Diputado Araya pide al Gobierno \"dar explicaciones\" por aumento de ingresos irregulares en Arica"
+  autor: El Ciudadano
+  fecha: 2026-08-26
+  url: https://www.elciudadano.com/regiones/es-evidente-el-fracaso-del-plan-escudo-fronterizo-diputado-araya-pide-al-gobierno-dar-explicaciones-por-aumento-de-ingresos-irregulares-en-arica/08/26/
+  notas: "El Ciudadano (26-ago-2026 20:20). Replica cifras Sermig (+62% Arica, 62,3% en detalle) y solicitud de Jaime Araya (IND-PPD) a Cristian Araya para citar a Martín Arrau a Comisión de Seguridad. Incluye citas completas: 'Es evidente el fracaso del Plan Escudo Fronterizo' y 'No puede ser que nombres rimbombantes como Escudo Fronterizo y Plan Cancerbero estén haciendo el ridículo'. Contexto de promesas de control fronterizo del gobierno Kast. (evento 20260826-4). Verificada por lectura directa."
+
+chicureohoy-2026-08-26-arica-623:
+  tipo: prensa
+  medio: Chicureo Hoy
+  titulo: "Ingresos irregulares detectados en Arica aumentan 62,3% durante 2026"
+  autor: Chicureo Hoy
+  fecha: 2026-08-26
+  url: https://www.chicureohoy.cl/actualidad/ingresos-irregulares-detectados-en-arica-aumentan-623-durante-2026/
+  notas: "Chicureo Hoy (26-ago-2026). Reproduce Sermig: 917 a 1.488 (+62,3%), 88,6% Ven/Col/Ecu, 97,4% del aumento neto. Explicación directa de Migraciones: mayor control fronterizo, más fiscalizaciones en ciudad y coordinación interagencial; 'la cifra no muestra un aumento de ingresos por paso no habilitado', 'fecha y lugar del registro no equivalen al cruce'. Incluye postura de Pavez y crítica de Araya. Fuente que cruza con BioBio/ADN y aporta énfasis en matiz. (evento 20260826-4)."
+
+radioagricultura-2026-08-26-caida-889-frontera:
+  tipo: prensa
+  medio: Radio Agricultura
+  titulo: "Gobierno reporta caída de 88,9% en ingresos irregulares detectados directamente en frontera"
+  autor: Constanza Fuentes
+  fecha: 2026-08-26
+  url: https://www.radioagricultura.cl/noticias/nacional/gobierno-reporta-caida-de-889-en-ingresos-irregulares-detectados-directamente-en-frontera_20260826/
+  notas: "Radio Agricultura (26-ago-2026). Contrapunto oficial: Gobierno vía delegado Cristian Sayes aclara que 62,3% son registros de personas detectadas/denunciadas (no nuevos cruces). Fiscalización +27,53% nacional y +4,88% en Arica y Parinacota. Entre 11 mar y 11 ago 2026, ingresos detectados directamente en frontera -88,9% vs 2025. 'Mayor control, mayor fiscalización y una frontera mucho más ordenada'. Permite contrastar sesgo: aumento administrativo vs caída real en frontera. (evento 20260826-4)."
+
+regionxv-2026-08-26-caida-889:
+  tipo: prensa
+  medio: Región XV
+  titulo: "Fortalecen el control de fronteras y logra una caída de 88,9% en ingresos irregulares detectados"
+  autor: Región XV
+  fecha: 2026-08-26
+  url: https://regionxv.cl/wordpress/2026/08/26/fortalecen-el-control-de-fronteras-y-logra-una-caida-de-889-en-ingresos-irregulares-detectados/
+  notas: "Medio regional de Arica (26-ago-2026). Detalle de delegado Cristian Sayes: 917 a 1.488 (+571, +62,3%) son detecciones administrativas posteriores, no nuevos ingresos; capacidad de fiscalización +27,53% nacional/+4,88% Arica. Ingresos irregulares detectados directamente en frontera -88,9% (11 mar–11 ago 2026 vs 2025). Cita: 'Detectar una infracción no significa que el ingreso haya ocurrido durante el mismo período'. Fuente gubernamental regional complementaria a Agricultura. (evento 20260826-4)."
+
+vilasradio-2026-08-27-freno-desinformacion-889:
+  tipo: prensa
+  medio: Vilas Radio
+  titulo: "FRENO A LA DESINFORMACIÓN: AUTORIDADES ACLARAN QUE INGRESOS IRREGULARES CAYERON UN 88,9% EN LA FRONTERA DE ARICA Y PARINACOTA"
+  autor: Vilas Radio
+  fecha: 2026-08-27
+  url: https://vilasradio.cl/freno-a-la-desinformacion-autoridades-aclaran-que-ingresos-irregulares-cayeron-un-889-en-la-frontera-de-arica-y-parinacota/
+  notas: "Vilas Radio (27-ago-2026). Vocería de delegado Cristian Sayes y seremi Pollyana Rivera y delegado provincial Sebastián Huerta: freno a 'interpretación equivocada y deliberada' del 62,3%; aumento corresponde a fiscalizaciones en Arica/Cuya/Cerro Chuño a extranjeros ya residentes. Cita clave: 'En lo que se refiere a frontera, por pasos irregulares, hay una disminución de un 88,9%, y eso es el éxito del Plan Escudo Fronterizo'. 'Una cosa es debatir y otra cosa es mentir'. Risgo de sesgo oficialista explicitado. (evento 20260826-4)."
+
+eldesconcierto-2026-08-26-acusan-fracaso-escudo-fronterizo:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Acusan \"fracaso\" de Escudo Fronterizo: Migraciones reporta alza de 62,3% en registro de ingresos irregulares"
+  autor: Nicole Donoso
+  fecha: 2026-08-26
+  url: https://eldesconcierto.cl/actualidad/acusan-fracaso-escudo-fronterizo-migraciones-reporta-alza-623-registro-ingresos-irregulares-n5461723
+  notas: "El Desconcierto (26-ago-2026 16:45). Fuente que origina el clipping del usuario. Replica cifras SERMIG/Delegación Arica: 917→1.488 (+62,3%, +571), 88,6% Venezuela/Colombia/Ecuador y 97,4% del aumento. Incluye matiz de Migraciones ('fecha y lugar del registro no equivalen al cruce', mayor fiscalización en valles/carretera) y solicitud de Jaime Araya (IND) a Cristian Araya para citar a Martín Arrau por 'evidente fracaso del Plan Escudo Fronterizo' y crítica a Escudo+ Cancerbero. Verifica convergencia con BioBio/ADN/Chicureo. (evento 20260826-4). Verificada por lectura directa."
+
+eldesconcierto-2026-08-27-fa-oficia-migraciones:
+  tipo: prensa
+  medio: El Desconcierto
+  titulo: "Bancada del Frente Amplio oficia a Migraciones tras fracaso de 'Escudo Fronterizo': \"Requiere explicación\""
+  autor: Cristian Neira
+  fecha: 2026-08-27
+  url: https://eldesconcierto.cl/actualidad/bancada-del-frente-amplio-oficia-migraciones-fracaso-escudo-fronterizo-requiere-explicacion-n5461754
+  notas: "El Desconcierto (27-ago-2026 12:53). Bancada FA oficia a SERMIG para confirmar/rectificar 1.488 registros ene-jul 2026, conocer metodología, registros 2025-2026, si son detenciones efectivas o estimaciones y reportes usados por Delegación Arica. Diputado Gonzalo Winter: 'Este gobierno ganó prometiendo controlar la frontera; por lo tanto, esta cifra requiere explicación'. Replica contexto 917→1.488 (+62,3%) y matiz SERMIG (no equivale a nuevos cruces 2026). Conecta con solicitud de Jaime Araya a Arrau (evento 20260826-4). (evento 20260827-1). Verificada por lectura directa."
+
+reddit-rchile-2026-08-26-acusan-fracaso-escudo:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Acusan \"fracaso\" de Escudo Fronterizo: Migraciones reporta alza de 62,3% en registro de ingresos irregulares"
+  autor: r/chile
+  fecha: 2026-08-26
+  url: https://old.reddit.com/r/chile/comments/1vzflvu/acusan_fracaso_de_escudo_fronterizo_migraciones/
+  notas: "Hilo de r/chile (26-ago-2026) que viraliza la nota de El Desconcierto sobre Arica 917→1.488 (+62,3%). Reacciones comunitarias complementarias (rol c): críticas al plan ('era hacer solo una zanja qla en medio del desierto' 159 pts, 'Se gastaron mas en marketing que en la zanja' 66 pts, 'Solido Kast como diarrea'), confusión por cifras contradictorias ('Pero si hace una semana decían que se habían reducido un 80%...' con link a BioBio 86% PDI) y defensas que replican el matiz oficial ('las cifras aumentaron debido a que también aumentaron y mejoraron las fiscalizaciones, en la misma noticia se explica' -8 pts; 'Nisiquiera leen la noticio. Dice claramente que el alza es producto del aumento de fiscalizaciones' 3 pts). Muestran polarización y el mismo debate metodológico de la prensa (detección interior vs cruce en frontera). Verificado contra BioBio/ADN/SERMIG. (evento 20260827-1)."
+
+reddit-republicadechile-2026-08-26-acusan-fracaso-escudo:
+  tipo: redes
+  medio: Reddit r/RepublicadeChile
+  titulo: "Acusan \"fracaso\" de Escudo Fronterizo: Migraciones reporta alza de 62,3% en registro de ingresos irregulares"
+  autor: r/RepublicadeChile
+  fecha: 2026-08-26
+  url: https://old.reddit.com/r/RepublicadeChile/comments/1vzfu3j/acusan_fracaso_de_escudo_fronterizo_migraciones/
+  notas: "Hilo de r/RepublicadeChile (26-ago-2026) espejo del anterior. Reacciones comunitarias complementarias (rol c) con mayor presencia de defensas del oficialismo: 'Es decir que la zanja no sirvió? Quien lo hubiese imaginado' 67 pts, 'Pero si hace una semana decían que se habían reducido un 80%…' 36 pts con link a informe PDI, y réplicas que citan el matiz ('No lo es, la explicación más lógica sigue siendo que si mejora la fiscalización aumentan los casos detectados' 1 pt; 'las fiscalizaciones a las que se hace referencia son en carreteras y valles... son personas que ya ingresaron irregularmente' 0 pts). Junto a r/chile cubre voces críticas y oficialistas con puntajes. Verificado contra BioBio/ADN/SERMIG. (evento 20260827-1)."
+
+sermig-2026-03-09-reporte-5-estadisticas:
+  tipo: documento
+  medio: Servicio Nacional de Migraciones
+  titulo: "Reporte 5: Estadísticas generales registro administrativo (SERMIG, 2016-2025)"
+  autor: SERMIG Departamento de Estudios
+  fecha: 2026-03-09
+  url: https://serviciomigraciones.cl/wp-content/uploads/2026/03/Reporte-5-Estadisticas-SERMIG.pdf
+  notas: "Fuente primaria oficial SERMIG (9-mar-2026). Tabla denuncias por paso no habilitado: 2021 máximo histórico 56.586; 2023: 44.235 (-22% vs 2021); 2024: 29.269 (-33,8% vs 2023 y -48,3% vs 2021). Confirma tendencia descendente 2022-2024 por controles fronterizos, coordinación y ajustes normativos. Base para serie histórica 2021-2026. (evento 20260309-1)."
+
+serviciomigraciones-2026-03-09-disminucion-ingresos:
+  tipo: prensa
+  medio: Servicio Nacional de Migraciones
+  titulo: "Informe SERMIG: reporte destaca disminución de ingresos irregulares y avances en transparencia"
+  autor: SERMIG
+  fecha: 2026-03-09
+  url: https://serviciomigraciones.cl/sermig-destaca-disminucion-ingresos-irregulares-avances-transparencia/
+  notas: "Nota institucional SERMIG (9-mar-2026) que resume Reporte 5. Destaca 29.269 denuncias en 2024 (-33,8% vs 2023, -48,3% vs 2021 máximo histórico), efecto de mayores controles, coordinación interinstitucional y ajustes normativos desde 2022. Cita director Luis Eduardo Thayer sobre transparencia y decretos de expulsión 2022-2025. (evento 20260309-1)."
+
+elcarrerino-2026-06-08-reporte-sermig-29269:
+  tipo: prensa
+  medio: El Carrerino
+  titulo: "Kast anuncia proyecto para ampliar retención de migrantes irregulares a 60 días"
+  autor: El Carrerino
+  fecha: 2026-06-08
+  url: https://elcarrerino.cl/2026/06/08/kast-retencion-migrantes-irregulares-60-dias/
+  notas: "Replica dato SERMIG Reporte 5 (marzo 2026): 29.269 denuncias en 2024 (-33,8% vs 2023). Contexto de anuncio de Kast para ampliar retención de 48h a 60 días. Fuente secundaria regional que valida cifra histórica 2024. (evento 20260309-1)."
+
+biobiochile-2026-07-30-cifras-seguridad-respuesta-vallejo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno responde a Vallejo con cifras de seguridad: homicidios a la baja y control fronterizo"
+  autor: BioBioChile
+  fecha: 2026-07-30
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/07/30/gobierno-responde-a-vallejo-con-cifras-de-seguridad-homicidios-a-la-baja-y-control-fronterizo.shtml
+  notas: "BioBioChile (30-jul-2026) replica balance del Ejecutivo al 19-jul: homicidios -17,6%, ingresos irregulares 1.168 (-86% vs 2025, -95% vs 2022) y respuesta de Giannini a Vallejo. Fuente complementaria que valida tendencia descendente fronteriza previa a cómputos de agosto. No es duplicado de La Tercera, medio distinto con mismo perímetro. (evento 20260730-28) — URL representativa del balance; validación por referencia cruzada."
+
+sermig-2023-05-29-reporte-1:
+  tipo: documento
+  medio: Servicio Nacional de Migraciones
+  titulo: "Reporte 1: Estadísticas generales registro administrativo (SERMIG, 2021-2022)"
+  autor: SERMIG Departamento de Estudios
+  fecha: 2023-05-29
+  url: https://serviciomigraciones.cl/wp-content/uploads/2023/05/230529-Reporte-1-Estadisticas-SERMIG.pdf
+  notas: "Primer reporte de la serie (29-may-2023). Ventana 2021-2022, foco Ley 21.325, 386.024 pendientes a dic-2022, 571 días RD. Inaugura formato unísono. (evento 20230529-1)."
+
+sermig-2024-05-08-reporte-2:
+  tipo: documento
+  medio: Servicio Nacional de Migraciones
+  titulo: "Reporte 2: Estadísticas generales registro administrativo (SERMIG, ene 2014-jun 2023)"
+  autor: SERMIG Departamento de Estudios
+  fecha: 2024-05-08
+  url: https://serviciomigraciones.cl/wp-content/uploads/2024/05/240508-Reporte-2-Estadisticas-Generales.pdf
+  notas: "Segundo reporte de la serie (publicado 8-may-2024). Ventana ene 2014-jun 2023, decenal. Base para observar peak 2018 (463.095 RT) y caída hacia 2021. Antecede a Reporte 5 (2016-2025). (evento 20240508-2)."
+
+sermig-2024-08-06-reporte-3:
+  tipo: documento
+  medio: Servicio Nacional de Migraciones
+  titulo: "Reporte 3: Estadísticas generales registro administrativo (SERMIG, ene 2014-dic 2023)"
+  autor: SERMIG Departamento de Estudios
+  fecha: 2024-08-06
+  url: https://serviciomigraciones.cl/wp-content/uploads/2024/08/240806-Reporte-3-Estadisticas-Generales.pdf
+  notas: "Tercer reporte (6-ago-2024). Ventana ene 2014-dic 2023. Cierra año 2023, contextualiza regularización extraordinaria 2021 (210.639 solicitudes, 99,7% resueltas a feb-2024). (evento 20240806-3)."
+
+sermig-2025-07-01-reporte-4:
+  tipo: documento
+  medio: Servicio Nacional de Migraciones
+  titulo: "Reporte 4: Estadísticas generales registro administrativo (SERMIG, ene 2015-dic 2024)"
+  autor: SERMIG Departamento de Estudios
+  fecha: 2025-07-01
+  url: https://serviciomigraciones.cl/wp-content/uploads/2025/07/Reporte-4-Estadisticas-SERMIG-010725.pdf
+  notas: "Cuarto reporte (1-jul-2025). Ventana ene 2015-dic 2024. Precede a Reporte 5 donde se fija 29.269 denuncias 2024 (-48,3% vs 2021). (evento 20250701-2)."
+
+serviciomigraciones-2024-05-analisis-sermig:
+  tipo: prensa
+  medio: Servicio Nacional de Migraciones
+  titulo: "Estudios y Análisis SERMIG: reportes estadísticos generales"
+  autor: SERMIG
+  fecha: 2026-08-07
+  url: https://serviciomigraciones.cl/estudios-migratorios/analisis-sermig/
+  notas: "Página índice SERMIG que lista Reportes 1-5 (2021-2022 a 2016-2025) con portadas y enlaces PDF. Valida serie completa y continuidad. Usada como fuente secundaria para trazabilidad 2014-2025. (eventos 20240508-2, 20240806-3, 20250701-2, 20260309-1)."
+
+cnnchile-2026-07-03-subsecretario-visita-colchane:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Subsecretario de Obras Públicas visita Colchane y asegura que se ha registrado disminución de los ingresos irregulares"
+  autor: CNN Chile
+  fecha: 2026-07-03
+  url: https://www.cnnchile.com/pais/subsecretario-visita-colchane-y-afirma-disminucion-de-los-ingresos-irregulares/
+  notas: "CNN Chile (3-jul-2026) cubre visita de subsecretario Nicolás Balmaceda a Colchane: PDI 286 (marzo) → 24 (junio) = -90% en sector, baja 86% macrozona norte ene-may vs 2025, zanja 9,7 km en etapa final para fines de julio. Corroborado por Ejército y Carabineros. Fuente tercera que valida 90% y 86% con cita MOP. (evento 20260703-1). Verificada por lectura directa."
+
+elperiodista-2026-07-03-avance-zanja-colchane:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Gobierno destaca avance de zanja en Colchane y asegura fuerte caída en ingresos irregulares"
+  autor: El Periodista
+  fecha: 2026-07-03
+  url: https://www.elperiodista.cl/2026/07/gobierno-destaca-avance-de-zanja-en-colchane-y-asegura-fuerte-caida-en-ingresos-irregulares/
+  notas: "El Periodista (3-jul-2026) reporta inspección de Balmaceda a zanja 9,7 km (etapa final fines julio), PDI 286→24 (-90% sector), baja 86% macrozona norte ene-may vs 2025, avance 50% complejo fronterizo ($11.242M) y comisaría $7.500M. Fuente cuarta con mismo perímetro que Epicentro y MOP. (evento 20260703-1). Verificada por lectura directa."
+
+mop-2026-07-03-zanja-etapa-final:
+  tipo: documento
+  medio: Ministerio de Obras Públicas
+  titulo: "Zanja fronteriza de Colchane alcanza su etapa final: MOP proyecta concluir las obras a fines de julio"
+  autor: MOP
+  fecha: 2026-07-03
+  url: https://www.mop.gob.cl/zanja-fronteriza-de-colchane-alcanza-su-etapa-final-mop-proyecta-concluir-las-obras-a-fines-de-julio
+  notas: "Fuente oficial MOP (3-jul-2026). Detalle de visita Balmaceda con general Luis Ovando y delegada Karen Heine: zanja 9,7 km Dirección de Vialidad en etapa final (fines julio), PDI 286→24 (-90%) ratificado por Ejército/Carabineros, baja 86% norte ene-may vs 2025, avance complejo 50% ($11.242M) y comisaría $7.500M. Base para validar 20260703-1 como documento primario. Verificada por lectura directa."

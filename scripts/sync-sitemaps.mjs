@@ -1835,6 +1835,98 @@ const MEDIA = {
     index: 'https://colegiocordillera.cl/sitemap_index.xml',
     articleOnly: true, // Yoast: post-sitemap*.xml
   },
+  // ---- Batch 6: nacionales, regionales, salud, educación, medio ambiente (28-ago-2026) ----
+  // WordPress 5.5+: wp-sitemap.xml (includeRe en vez de articleOnly porque WP5.5
+  // usa wp-sitemap-posts-post-*.xml, no post-sitemap*.xml)
+  condor: {
+    nombre: 'Cóndor',
+    index: 'https://condor.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  diariochile: {
+    nombre: 'Diario Chile',
+    index: 'https://diariochile.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  cenabast: {
+    nombre: 'CENABAST',
+    index: 'https://cenabast.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  cr2: {
+    nombre: 'CR2',
+    index: 'https://cr2.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  mediabanco: {
+    nombre: 'Mediabanco',
+    index: 'https://mediabanco.com/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  contingenciachile: {
+    nombre: 'Contingencia Chile',
+    index: 'https://contingenciachile.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  // Otros sitemaps funcionales
+  chiletravel: {
+    nombre: 'Chile Travel',
+    index: 'https://chile.travel/sitemap_index.xml',
+  },
+  udla: {
+    nombre: 'UDLA',
+    index: 'https://udla.cl/sitemap_index.xml',
+  },
+  uteusach: {
+    nombre: 'UTE USACH Noticias',
+    index: 'https://corporacionuteusach-noticias.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  magiadigital: {
+    nombre: 'Magia Digital',
+    index: 'https://magiadigital.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  // ---- Batch 7: partidos, comunidades, medio ambiente, educación (28-ago-2026) ----
+  // ---- Batch 7: partidos, comunidades, medio ambiente, educación (28-ago-2026) ----
+  rn: {
+    nombre: 'RN',
+    index: 'https://www.rn.cl/sitemap.xml',
+    // No es Yoast estándar: blog-posts, event-pages, dynamic-*
+    includeRe: /(?:blog-posts|event-pages|dynamic-[^/]+)\.xml$/,
+    // blog-posts tiene 1 URL; se incluye por completitud.
+  },
+  iguales: {
+    nombre: 'Fundación Iguales',
+    index: 'https://iguales.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  hogardecristo: {
+    nombre: 'Hogar de Cristo',
+    index: 'https://hogardecristo.cl/sitemap.xml',
+  },
+  wwf: {
+    nombre: 'WWF Chile',
+    index: 'https://www.wwf.cl/sitemap.xml',
+  },
+  generadoras: {
+    nombre: 'Generadoras de Chile',
+    index: 'https://generadoras.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  usm: {
+    nombre: 'USM',
+    index: 'https://usm.cl/sitemap_index.xml',
+  },
+  ucsc: {
+    nombre: 'UCSC',
+    index: 'https://ucsc.cl/sitemap_index.xml',
+  },
+  // PDC: robots.txt sin sitemap, sitemap_index.xml retorna 404 — descartado.
+  // Conglomerado Estrella/Mercurio (estrellaantofagasta.cl retorna 450; sitemap_index es
+  // conglomerado de ~19 diarios, no de un solo sitio — no sincronizable individualmente)
+  // Ladera Sur (post-sitemap.xml vacío), G5 Noticias (sitemap descartado por script),
+  // Diario Sur (1 URL útil), CLAPES UC (urlset sin artículos) — descartados.
 };
 
 // ---------------------------------------------------------------------------

@@ -208,6 +208,11 @@ const WHITELIST_MEDIOS = new Set([
   'Conadecus',
   'Economía y Negocios',
   'El Rancagüino',
+  'Región XV',
+  'Vilas Radio',
+  'Servicio Nacional de Migraciones',
+  'El Carrerino',
+  'Ministerio de Obras Públicas',
 ]);
 
 let errors = 0;
@@ -493,7 +498,7 @@ for (const file of allFiles) {
   const tareasRef = body.match(/\bTAREAS(?:\/|\.md|\b)/);
   // Frases de metanota de editor en minúsculas (case-insensitive).
   const editorNote = body.match(
-    /nota de verificación|nota del editor|nota editorial|pendiente evento|queda pendiente de verificación|registrad[oa] para seguimiento|agenda de pendientes|pendiente de validación cruzada|pendiente de reacciones|pendiente el desenlace/i
+    /nota de verificación|nota del editor|nota editorial|pendiente evento|queda pendiente de verificación|registrad[oa] para seguimiento|agenda de pendientes|pendiente de validación cruzada|pendiente de reacciones|pendiente el desenlace|matiz sobre sesgo|no se agregan como fuentes|complementarios por definición|reduce el riesgo de reinterpretación|medio con línea editorial/i
   );
   const note = tareasRef ? tareasRef[0] : (editorNote ? editorNote[0] : null);
   if (note) {

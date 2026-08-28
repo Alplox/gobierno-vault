@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-28T21:43:28.727Z",
+  "actualizado": "2026-08-28T23:09:02.142Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -1075,11 +1075,11 @@
       "años": 9
     },
     "usm": {
-      "nombre": "Universidad Técnica Federico Santa María",
-      "ultima_sync": "2026-08-25T20:40:50.846Z",
-      "articulos": 5,
-      "nuevos": 0,
-      "años": 2
+      "nombre": "USM",
+      "ultima_sync": "2026-08-28T23:06:38.876Z",
+      "articulos": 6163,
+      "nuevos": 6158,
+      "años": 6
     },
     "ulagos": {
       "nombre": "Universidad de los Lagos",
@@ -1391,7 +1391,7 @@
     },
     "magiadigital": {
       "nombre": "Magia Digital",
-      "ultima_sync": "2026-08-25T20:42:16.668Z",
+      "ultima_sync": "2026-08-28T22:52:14.821Z",
       "articulos": 946,
       "nuevos": 0,
       "años": 5
@@ -1689,6 +1689,188 @@
       "articulos": 0,
       "nuevos": 0,
       "años": 0
+    },
+    "laderasur": {
+      "nombre": "Ladera Sur",
+      "ultima_sync": "2026-08-28T22:45:28.833Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "chiletravel": {
+      "nombre": "Chile Travel",
+      "ultima_sync": "2026-08-28T22:45:47.799Z",
+      "articulos": 4361,
+      "nuevos": 4361,
+      "años": 3
+    },
+    "condor": {
+      "nombre": "Cóndor",
+      "ultima_sync": "2026-08-28T23:00:44.665Z",
+      "articulos": 2785,
+      "nuevos": 0,
+      "años": 9
+    },
+    "diariochile": {
+      "nombre": "Diario Chile",
+      "ultima_sync": "2026-08-28T23:00:48.636Z",
+      "articulos": 10649,
+      "nuevos": 0,
+      "años": 15
+    },
+    "estrellaantofagasta": {
+      "nombre": "La Estrella de Antofagasta",
+      "ultima_sync": "2026-08-28T22:46:03.224Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "estrellaloa": {
+      "nombre": "La Estrella del Loa",
+      "ultima_sync": "2026-08-28T22:46:16.119Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "g5noticias": {
+      "nombre": "G5 Noticias",
+      "ultima_sync": "2026-08-28T22:46:17.652Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "mercurioantofagasta": {
+      "nombre": "Mercurio de Antofagasta",
+      "ultima_sync": "2026-08-28T22:46:22.295Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "mercuriocalama": {
+      "nombre": "Mercurio de Calama",
+      "ultima_sync": "2026-08-28T22:46:26.905Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "contingenciachile": {
+      "nombre": "Contingencia Chile",
+      "ultima_sync": "2026-08-28T23:01:47.129Z",
+      "articulos": 379,
+      "nuevos": 379,
+      "años": 3
+    },
+    "laestrellachiloe": {
+      "nombre": "La Estrella de Chiloé",
+      "ultima_sync": "2026-08-28T22:46:54.447Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "ellanquihue": {
+      "nombre": "El Lanquihue",
+      "ultima_sync": "2026-08-28T22:47:00.215Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "cenabast": {
+      "nombre": "CENABAST",
+      "ultima_sync": "2026-08-28T23:00:44.683Z",
+      "articulos": 947,
+      "nuevos": 0,
+      "años": 15
+    },
+    "udla": {
+      "nombre": "UDLA",
+      "ultima_sync": "2026-08-28T22:51:21.468Z",
+      "articulos": 26827,
+      "nuevos": 26827,
+      "años": 16
+    },
+    "clapesuc": {
+      "nombre": "CLAPES UC",
+      "ultima_sync": "2026-08-28T22:51:22.303Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "uteusach": {
+      "nombre": "UTE USACH Noticias",
+      "ultima_sync": "2026-08-28T22:51:54.762Z",
+      "articulos": 5894,
+      "nuevos": 5894,
+      "años": 7
+    },
+    "mediabanco": {
+      "nombre": "Mediabanco",
+      "ultima_sync": "2026-08-28T23:01:44.922Z",
+      "articulos": 107003,
+      "nuevos": 107003,
+      "años": 13
+    },
+    "cr2": {
+      "nombre": "CR2",
+      "ultima_sync": "2026-08-28T23:00:48.688Z",
+      "articulos": 5308,
+      "nuevos": 0,
+      "años": 14
+    },
+    "diariosur": {
+      "nombre": "Diario Sur",
+      "ultima_sync": "2026-08-28T22:52:10.071Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "pdc": {
+      "nombre": "PDC",
+      "ultima_sync": "2026-08-28T23:05:49.603Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "rn": {
+      "nombre": "RN",
+      "ultima_sync": "2026-08-28T23:09:02.141Z",
+      "articulos": 25,
+      "nuevos": 25,
+      "años": 2
+    },
+    "iguales": {
+      "nombre": "Fundación Iguales",
+      "ultima_sync": "2026-08-28T23:08:28.860Z",
+      "articulos": 2109,
+      "nuevos": 2109,
+      "años": 16
+    },
+    "hogardecristo": {
+      "nombre": "Hogar de Cristo",
+      "ultima_sync": "2026-08-28T23:05:56.934Z",
+      "articulos": 500,
+      "nuevos": 500,
+      "años": 2
+    },
+    "wwf": {
+      "nombre": "WWF Chile",
+      "ultima_sync": "2026-08-28T23:08:29.063Z",
+      "articulos": 66,
+      "nuevos": 66,
+      "años": 1
+    },
+    "generadoras": {
+      "nombre": "Generadoras de Chile",
+      "ultima_sync": "2026-08-28T23:08:31.705Z",
+      "articulos": 482,
+      "nuevos": 482,
+      "años": 23
+    },
+    "ucsc": {
+      "nombre": "UCSC",
+      "ultima_sync": "2026-08-28T23:07:20.883Z",
+      "articulos": 20616,
+      "nuevos": 20616,
+      "años": 18
     }
   }
 }
