@@ -1617,6 +1617,224 @@ const MEDIA = {
     index: 'https://panoramanoticioso.cl/sitemap_index.xml',
     articleOnly: true,
   },
+  // ---- Nuevos sitios batch 3 (28-ago-2026, tareas_sitemap watchlist) ----
+  sernatur: {
+    nombre: 'SERNATUR',
+    index: 'https://sernatur.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  herejia: {
+    nombre: 'Herejía',
+    index: 'https://herejia.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  radioimagina: {
+    nombre: 'Radio Imagina',
+    index: 'https://radioimagina.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  piensachile: {
+    nombre: 'Piensa Chile',
+    index: 'https://piensachile.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (60 sub-sitemaps)
+  },
+  ecosistemas: {
+    nombre: 'Ecosistemas',
+    index: 'https://ecosistemas.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  colegiomedico: {
+    nombre: 'Colegio Médico de Chile',
+    // All in One SEO: un solo wp-sitemap.xml flat (urlset con 3135 URLs)
+    extra: [
+      'https://colegiomedico.cl/wp-sitemap.xml',
+    ],
+  },
+  nostalgica: {
+    nombre: 'Nostálgica',
+    index: 'https://nostalgica.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  primedigital: {
+    nombre: 'Prime Digital',
+    index: 'https://primedigital.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  // ---- Nuevos sitios batch 4 (28-ago-2026, regional/gobierno/político/radio) ----
+  elinformador: {
+    nombre: 'El Informador Los Andes',
+    index: 'https://elinformador.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  elovallino: {
+    nombre: 'El Ovallino',
+    index: 'https://elovallino.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariolinares: {
+    nombre: 'Diario Linares',
+    index: 'https://diariolinares.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diarioantofagasta: {
+    nombre: 'Diario Antofagasta',
+    index: 'https://diarioantofagasta.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (185 sub-sitemaps)
+  },
+  diarioregionalaysen: {
+    nombre: 'Diario Regional Aysén',
+    index: 'https://diarioregionalaysen.cl/sitemap.xml',
+  },
+  latribunadecolchagua: {
+    nombre: 'La Tribuna de Colchagua',
+    index: 'https://latribunadecolchagua.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariolagoranco: {
+    nombre: 'Diario Lago Ranco',
+    index: 'https://diariolagoranco.cl/sitemap.xml',
+  },
+  fronteranorte: {
+    nombre: 'Frontera Norte',
+    index: 'https://fronteranorte.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  redinformativa: {
+    nombre: 'Red Informativa',
+    index: 'https://redinformativa.cl/sitemap.xml',
+  },
+  labatalla: {
+    nombre: 'La Batalla de Maipú',
+    index: 'https://labatalla.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariodepuertomontt: {
+    nombre: 'Diario de Puerto Montt',
+    index: 'https://diariodepuertomontt.cl/sitemap.xml',
+  },
+  elcalbucano: {
+    nombre: 'El Calbucano',
+    index: 'https://elcalbucano.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  goretarapaca: {
+    nombre: 'Gobierno Regional de Tarapacá',
+    index: 'https://goretarapaca.gov.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (267 sub-sitemaps)
+  },
+  frenteampliochile: {
+    nombre: 'Frente Amplio',
+    index: 'https://frenteampliochile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  frevs: {
+    nombre: 'Federación Regionalista Verde Social',
+    index: 'https://frevs.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  gobiernosantiago: {
+    nombre: 'Gobierno Regional Metropolitano',
+    index: 'https://gobiernosantiago.cl/sitemap.xml',
+  },
+  rln: {
+    nombre: 'Radio Las Nieves',
+    index: 'https://rln.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  insularfm: {
+    nombre: 'Insular FM',
+    index: 'https://insularfm.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariosurnoticias: {
+    nombre: 'Diario Sur Noticias',
+    index: 'https://diariosurnoticias.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  clgmedios: {
+    nombre: 'CLG Medios',
+    index: 'https://clgmedios.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  itvpatagonia: {
+    nombre: 'ITV Patagonia',
+    index: 'https://itvpatagonia.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  // ---- Batch 5: internacionales + educación (28-ago-2026) ----
+  reuters: {
+    nombre: 'Reuters',
+    robots: 'https://www.reuters.com/robots.txt',
+    // Arc XP: sitemap-index + news-sitemap-index. Robots declara 3 sitemaps.
+  },
+  rfi: {
+    nombre: 'RFI Español',
+    index: 'https://www.rfi.fr/sitemaps/es/index.xml',
+    // Custom: contents_YYYYMM.xml (artículos por mes). articleOnly descarta
+    // tags/shows/pagebuilders; includeRe whitelist puro contenido.
+    includeRe: /contents_\d{6}\.xml$/,
+  },
+  france24: {
+    nombre: 'France 24',
+    index: 'https://www.france24.com/sitemaps/es/index.xml',
+    includeRe: /contents_\d{6}\.xml$/,
+  },
+  holanews: {
+    nombre: 'HolaNews',
+    index: 'https://holanews.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  theguardian: {
+    nombre: 'The Guardian',
+    extra: [
+      'https://www.theguardian.com/sitemaps/news.xml',
+    ],
+    // Custom: news sitemap con títulos reales.
+  },
+  cepchile: {
+    nombre: 'CEP Chile',
+    index: 'https://cepchile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  udec: {
+    nombre: 'Universidad de Concepción',
+    index: 'https://noticias.udec.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  unab: {
+    nombre: 'Universidad Andrés Bello',
+    index: 'https://unab.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  uautonoma: {
+    nombre: 'Universidad Autónoma de Chile',
+    index: 'https://uautonoma.cl/sitemap_index.xml',
+    // Custom CPT: noticias-sitemap*.xml
+    includeRe: /noticias-sitemap\d*\.xml$/i,
+  },
+  ucn: {
+    nombre: 'Universidad Católica del Norte',
+    index: 'https://ucn.cl/sitemap_index.xml',
+    // Custom CPT: noticias-sitemap*.xml (no usa post-sitemap)
+    includeRe: /noticias-sitemap\d*\.xml$/i,
+  },
+  explora: {
+    nombre: 'Explora',
+    index: 'https://explora.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  fima: {
+    nombre: 'FIMA',
+    // Flat urlset (sitemap_index.xml returns urlset, not sitemapindex)
+    extra: [
+      'https://fima.cl/sitemap_index.xml',
+    ],
+  },
+  colegiocordillera: {
+    nombre: 'Colegio Cordillera',
+    index: 'https://colegiocordillera.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
 };
 
 // ---------------------------------------------------------------------------

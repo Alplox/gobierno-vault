@@ -205,6 +205,9 @@ const WHITELIST_MEDIOS = new Set([
   'Banco Mundial',
   'Vergara 240 (Escuela de Periodismo UDP)',
   'Hudson Rock',
+  'Conadecus',
+  'Economía y Negocios',
+  'El Rancagüino',
 ]);
 
 let errors = 0;

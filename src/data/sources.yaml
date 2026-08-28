@@ -15582,6 +15582,15 @@ cnnchile-2019-12-12-acusacion-pinera-no-prospera:
   fecha: 2019-12-12
   url: https://www.cnnchile.com/pais/acusacion-constitucional-contra-pinera-no-prospera_20191212
 
+camara-2019-12-12-cuestion-previa-pinera:
+  tipo: documento
+  medio: Cámara de Diputados
+  titulo: "Sala desestimó admisibilidad de acusación constitucional en contra del Presidente Piñera (79-73)"
+  autor: Cámara de Diputadas y Diputados
+  fecha: 2019-12-12
+  url: https://www.camara.cl/prensa/sala_de_prensa_detalle.aspx?prmid=138911
+  notas: "Fuente oficial: cuestión previa acogida 79-73, acusación tenida por no interpuesta, intervenciones Gastón Saavedra (PS), Gastón Von Mühlenbrock (UDI), Boris Barrera (PC), Sofía Cid (RN) y Daniel Verdessi (DC), defensa Juan Domingo Acosta."
+
 elmostrador-2019-12-23-informe-indh:
   tipo: prensa
   medio: El Mostrador
@@ -30804,6 +30813,24 @@ eldinamo-2019-11-12-bassaletti-armas:
   fecha: 2019-11-12
   url: "https://www.eldinamo.cl/pais/2019/11/12/general-bassaletti-de-carabineros-asegura-que-sin-escopetas-antimotines-tendriamos-que-usar-armas-de-fuego/"
 
+biobiochile-2019-11-12-bassaletti-armas-fuego:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "General Enrique Bassaletti: Sin escopetas antimotines, tendríamos que usar armas de fuego"
+  autor: ""
+  fecha: 2019-11-12
+  url: https://www.biobiochile.cl/noticias/opinion/entrevistas/2019/11/12/general-enrique-bassaletti-sin-escopetas-antimotines-tendriamos-que-usar-armas-de-fuego.shtml
+  notas: "Entrevista Radiograma 12-nov: Bassaletti defiende escopetas antidisturbios, confirma cuestionamientos por uso excesivo y sitúa dilema operativo ante hecho grave."
+
+theclinic-2019-11-12-bassaletti-armas-fuego:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "General de Carabineros Enrique Bassaletti rechaza eliminar uso de armas antimotines: \"En un hecho grave tendríamos que usar armas de fuego\""
+  autor: ""
+  fecha: 2019-11-12
+  url: https://www.theclinic.cl/2019/11/12/general-de-carabineros-enrique-bassaletti-rechaza-eliminar-uso-de-armas-antimotines-en-un-hecho-grave-tendriamos-que-usar-armas-de-fuego/
+  notas: "The Clinic recoge misma declaración en entrevista 12-nov, con matiz de rechazo a eliminar antidisturbios y contexto de 174 traumas oculares."
+
 biobiochile-2019-11-12-gobierno-niego-represion:
   tipo: articulo
   medio: BioBioChile
@@ -30876,6 +30903,144 @@ theclinic-2019-11-14-catrillanca-juicio:
   fecha: 2019-11-14
   url: "https://www.theclinic.cl/2019/11/14/indh-querellante-a-un-ano-de-la-muerte-de-camilo-catrillanca-se-inicia-juicio-oral-contra-carabineros/"
 
+emol-2019-11-14-padre-catrillanca-llamado:
+  tipo: articulo
+  medio: Emol
+  titulo: "Padre de Camilo Catrillanca hace llamado a \"manifestarse con tranquilidad\" a un año de muerte de su hijo"
+  autor: "María Jesús Herranz"
+  fecha: 2019-11-14
+  url: "https://www.emol.com/noticias/Nacional/2019/11/14/967199/Padre-Camilo-Catrillanca-manifestaciones-tranquilidad.html"
+
+emol-2019-11-14-cronologia-catrillanca:
+  tipo: articulo
+  medio: Emol
+  titulo: "A un año de la muerte de Camilo Catrillanca: La cronología del caso a la espera del juicio"
+  autor: "Equipo Multimedia Emol"
+  fecha: 2019-11-14
+  url: "https://www.emol.com/noticias/Nacional/2019/11/14/967128/Cronologia-Caso-Catrillanca-Carabineros-Mapuche.html"
+
+radio_uchile-2019-11-14-indh-lo-hermida:
+  tipo: articulo
+  medio: Radio Universidad de Chile
+  titulo: "INDH anuncia acciones legales por vulneraciones a DD.HH. de vecinos de Lo Hermida"
+  autor: "Diario UChile"
+  fecha: 2019-11-14
+  url: "https://radio.uchile.cl/2019/11/14/indh-anuncia-acciones-legales-por-vulneraciones-a-dd-hh-de-vecinos-de-lo-hermida/"
+
+radio_uchile-2019-11-14-corte-concepcion-balines:
+  tipo: articulo
+  medio: Radio Universidad de Chile
+  titulo: "Tribunal ordena a Carabineros no disparar balines y limitar uso de lacrimógenas"
+  autor: "Diario UChile"
+  fecha: 2019-11-14
+  url: "https://radio.uchile.cl/2019/11/14/tribunal-ordena-a-carabineros-no-disparar-balines-y-limitar-uso-de-lacrimogenas/"
+
+theclinic-2019-11-14-convocatorias-catrillanca:
+  tipo: articulo
+  medio: The Clinic
+  titulo: "AFICHE: Más de 40 convocatorias pacíficas y velatones se realizarán hoy en memoria de Camilo Catrillanca"
+  autor: "The Clinic"
+  fecha: 2019-11-14
+  url: "https://www.theclinic.cl/2019/11/14/afiche-mas-de-40-convocatorias-pacificas-y-velatones-se-realizaran-hoy-en-memoria-de-camilo-catrillanca/"
+
+radio_uchile-2019-11-14-recolectores-paro-rm:
+  tipo: articulo
+  medio: Radio Universidad de Chile
+  titulo: "Recolectores de basura continúan en paro indefinido luego de fracasar diálogo con el Gobierno"
+  autor: "Diario UChile"
+  fecha: 2019-11-14
+  url: "https://radio.uchile.cl/2019/11/14/recolectores-de-basura-continuan-en-paro-indefinido-luego-de-fracasar-dialogo-con-el-gobierno/"
+
+radio_uchile-2019-11-14-huenchumilla-acuerdo:
+  tipo: articulo
+  medio: Radio Universidad de Chile
+  titulo: "Senador Huenchumilla (DC) y acuerdo constitucional: \"Esta crisis tenemos que resolverla los políticos\""
+  autor: "Tomás González F."
+  fecha: 2019-11-14
+  url: "https://radio.uchile.cl/2019/11/14/senador-huenchumilla-dc-y-acuerdo-constitucional-esta-crisis-tenemos-que-resolverla-los-politicos/"
+
+theclinic-2019-11-14-oposicion-cocina:
+  tipo: articulo
+  medio: The Clinic
+  titulo: "Algunos diputados de oposición rechazaron negociación entre partidos para la nueva Constitución: \"No creemos en la cocina que se hace entre cuatro paredes\""
+  autor: "The Clinic"
+  fecha: 2019-11-14
+  url: "https://www.theclinic.cl/2019/11/14/algunos-diputados-de-oposicion-rechazaron-negociacion-entre-partidos-para-la-nueva-constitucion-no-creemos-en-la-cocina-que-se-hace-entre-cuatro-paredes/"
+
+europapress-2019-11-14-catrillanca-aniversario-protestas:
+  tipo: articulo
+  medio: Europa Press
+  titulo: "El primer aniversario de la muerte del joven mapuche Camilo Catrillanca marca una nueva jornada de protestas en Chile"
+  autor: "Europa Press (Reuters/EP)"
+  fecha: 2019-11-14
+  url: "https://www.europapress.es/internacional/noticia-primer-aniversario-muerte-joven-mapuche-camilo-catrillanca-marca-nueva-jornada-protestas-chile-20191114215954.html"
+
+bbc-2019-11-15-chile-referendum-constitution:
+  tipo: articulo
+  medio: BBC
+  titulo: "Chile protests: Government bows to demands for referendum"
+  autor: "BBC News"
+  fecha: 2019-11-15
+  url: "https://www.bbc.co.uk/news/world-latin-america-50430477"
+
+guardian-2019-11-15-chile-constitution-dictatorship-died:
+  tipo: articulo
+  medio: The Guardian
+  titulo: "'The constitution of the dictatorship has died': Chile agrees deal on reform vote"
+  autor: "John Bartlett"
+  fecha: 2019-11-15
+  url: "https://www.theguardian.com/world/2019/nov/15/chile-referendum-new-constitution-protests"
+
+france24-2019-11-15-chile-vote-constitution:
+  tipo: articulo
+  medio: France 24
+  titulo: "Chile to vote on new constitution in response to protests"
+  autor: "NEWS WIRES (AFP)"
+  fecha: 2019-11-15
+  url: "https://www.france24.com/en/20191115-chile-will-vote-on-new-constitution-in-response-to-protests"
+
+emol-2019-11-11-cadem-nueva-constitucion-52:
+  tipo: articulo
+  medio: Emol
+  titulo: "Encuesta Cadem: Un 52% prefiere una nueva Constitución y un 42% hacer cambios con la actual Carta Magna como base"
+  autor: "Felipe Vargas"
+  fecha: 2019-11-11
+  url: "https://www.emol.com/noticias/Nacional/2019/11/11/966799/NuevaConstitucion-Cadem-Gobierno.html"
+
+epicentro-2019-11-18-cadem-60-ciudadanos-electos:
+  tipo: articulo
+  medio: Epicentro Chile
+  titulo: "Cadem: La mayoría de los chilenos prefiere cambiar la Constitución sólo por ciudadanos electos"
+  autor: "José Riquelme"
+  fecha: 2019-11-18
+  url: "https://www.epicentrochile.com/2019/11/18/cadem-la-mayoria-de-los-chilenos-prefiere-cambiar-la-constitucion-solo-por-ciudadanos-electos/"
+
+ciper-2019-12-12-carta-nash-acusacion-pinera:
+  tipo: columna
+  medio: CIPER Chile
+  titulo: "Carta abierta a los diputados: “Hoy deben decidir si aprueban o no una acusación constitucional contra un Presidente en ejercicio”"
+  autor: "Claudio Nash Rojas"
+  fecha: 2019-12-12
+  url: "https://www.ciperchile.cl/2019/12/12/carta-abierta-a-los-diputados-hoy-deben-decidir-si-aprueban-o-no-una-acusacion-constitucional-contra-un-presidente-en-ejercicio/"
+
+youtube-2019-11-12-gatica-sigan-luchando:
+  tipo: video
+  medio: YouTube
+  titulo: "Enrique Gatica, entrega un mensaje de parte de Gustavo: \"Sigan luchando por favor\""
+  autor: "Universidad Academia de Humanismo Cristiano"
+  fecha: 2019-11-12
+  url: "https://www.youtube.com/watch?v=GBdAD7_DCac"
+  notas: "Video del 12-nov-2019 donde Enrique Gatica transmite el mensaje de [[person/gustavo_gatica]] tras perder la visión: \"Sigan luchando por favor, no pierdan la lucha... no podemos permitir que nuestros sacrificios, toda la sangre que se ha derramado [...] quede en nada\" (transcripción verificada). Complementa la declaración ante Fiscalía del 19-nov. Rol: viralización y testimonio familiar directo, voz de víctima que la prensa citó parcialmente."
+
+reddit-rchile-2019-11-13-gatica-sigan-luchando:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Enrique Gatica, entrega un mensaje de parte de Gustavo: \"Sigan luchando por favor\""
+  autor: "ozzraven"
+  fecha: 2019-11-13
+  url: "https://old.reddit.com/r/chile/comments/dw1t75/enrique_gatica_entrega_un_mensaje_de_parte_de/"
+  notas: "Hilo r/chile del 13-nov-2019 (1 punto, 1 comentario) que comparte el video de Enrique Gatica. Reacción comunitaria contemporánea: Paltamachine (1 punto) \"Da rabia que Gustavo no podrá ver el Chile que ayudó a construir.. suponiendo que llegue el día que Chile mejore.\" Rol: documenta reacción ciudadana inmediata al caso Gatica en el estallido, complementa YouTube y prensa BioBio 19-nov. Método HTML del skill bloqueado 2026-08-28, fetch manual entregado por usuario."
+
 biobiochile-2019-11-19-acusacion-constitucional-pinera:
   tipo: articulo
   medio: BioBioChile
@@ -30940,6 +31105,33 @@ biobiochile-2019-11-19-acta-cosena:
   fecha: 2019-11-19
   url: "https://www.biobiochile.cl/noticias/nacional/chile/2019/11/19/revelan-acta-de-cosena-carabineros-sobrepasados-y-se-confirma-diferencia-de-contralor-con-pinera.shtml"
 
+emol-2019-11-19-presentan-acusacion:
+  tipo: prensa
+  medio: Emol
+  titulo: "Presentan acusación contra el Presidente: Revisa los diputados que firmaron la iniciativa"
+  autor: "Verónica Marín"
+  fecha: 2019-11-19
+  url: https://www.emol.com/noticias/Nacional/2019/11/19/967699/Presentan-acusacion-contra-Presidente.html
+  notas: "Emol detalla 11 firmantes (Hertz, Núñez, Nuyado, Naranjo, Marzán, Hirsch, Yeomans, Mix, Brito, Mirosevic, Velásquez) y argumentos de graves y sistemáticas violaciones DDHH."
+
+cooperativa-2019-11-19-diputados-firmaron-acusacion:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Los diputados que firmaron la acusación constitucional contra el Presidente Piñera"
+  autor: "Redacción Cooperativa"
+  fecha: 2019-11-19
+  url: https://www.cooperativa.cl/noticias/pais/sebastian-pinera/los-diputados-que-firmaron-la-acusacion-constitucional-contra-el/2019-11-19/134813.html
+  notas: "Cooperativa lista 11 firmantes y quórum: 78 votos Cámara y 29 Senado, oposición 83/23, citas Hertz y Marzán sobre gobernabilidad."
+
+radio_uchile-2019-11-19-perdigon-composicion:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Facultad de Ciencias Físicas y Matemáticas reitera: \"El perdigón es 20% caucho, 80% sílice, sulfato de bario y plomo\""
+  autor: ""
+  fecha: 2019-11-19
+  url: https://radio.uchile.cl/2019/11/19/facultad-de-ciencias-fisicas-y-matematicas-reitera-el-perdigon-es-20-caucho-80-silice-sulfato-de-bario-y-plomo/
+  notas: "U. de Chile detalla perdigón 8mm 0,734g dureza 96,5 Shore A, análisis FTIR/DSC/SEM, solicitado por Trauma Ocular Hospital Salvador."
+
 radio_uchile-2019-11-21-amnistia-internacional:
   tipo: articulo
   medio: Radio Universidad de Chile
@@ -30996,6 +31188,42 @@ theclinic-2019-11-21-informe-proveedor:
   fecha: 2019-11-21
   url: "https://www.theclinic.cl/2019/11/21/no-disparar-contra-la-cabeza-revelan-informe-de-proveedor-de-proyectiles-antidisturbios-de-carabineros/"
 
+emol-2019-11-21-fiscalia-fraude-perdigones:
+  tipo: prensa
+  medio: Emol
+  titulo: "Fiscalía investiga eventual fraude al fisco ante cuestionada composición de perdigones que usa Carabineros"
+  autor: "Fernanda Villalobos D."
+  fecha: 2019-11-21
+  url: https://www.emol.com/noticias/Nacional/2019/11/21/967913/fiscalia-fraude-perdigones-carabineros.html
+  notas: "Fiscalía investiga fraude al fisco por perdigones de Carabineros: fiscal Ximena Chong pide antecedentes de adquisición y nuevo peritaje; fiscal nacional Jorge Abbott afirma que si no corresponden a especificaciones del proveedor hay fraude al fisco."
+
+cnnchile-2019-11-22-blumel-amnistia-imputaciones:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Blumel por informe de Amnistía Internacional y DD.HH. en Chile: \"Tiene imputaciones que son absolutamente equívocas\""
+  autor: "Paula Aguilera"
+  fecha: 2019-11-22
+  url: https://www.cnnchile.com/pais/blumel-amnistia-internacional-imputaciones-equivocas/
+  notas: "Ministro Gonzalo Blumel cuestiona informe Amnistía Internacional por \"imputaciones absolutamente equívocas\" de actuación concertada para dañar manifestantes; subsecretaria Lorena Recabarren lo tildó de \"irresponsable\"; el informe señaló intención de dañar para desincentivar protesta."
+
+cnnchile-2019-11-22-amnistia-carta-pinera:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Amnistía Internacional desmiente al gobierno y publica carta en que solicitó reunión con Piñera por DD.HH."
+  autor: "Paula Aguilera"
+  fecha: 2019-11-22
+  url: https://www.cnnchile.com/pais/amnistia-internacional-carta-reunion-pinera-dd-hh/
+  notas: "Amnistía desmiente a Blumel/Recabarren publicando carta del 13-nov recibida el 14-nov en La Moneda solicitando reunión con Piñera para el 20-nov; directora Erika Guevara acusa que Piñera ni siquiera respondió."
+
+elciudadano-2019-11-21-perdida-vision-temuco:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Afectados con pérdida de la visión por disparos de Carabineros en Temuco piden claridad en Programa de Reparación Ocular"
+  autor: "Nelytza Lara"
+  fecha: 2019-11-21
+  url: https://www.elciudadano.com/chile/afectados-con-perdida-de-la-vision-por-disparos-de-carabineros-en-temuco-piden-claridad-en-programa-de-reparacion-ocular/11/21/
+  notas: "Nueve personas con pérdida de visión en La Araucanía (cinco con estallido ocular) piden claridad sobre Programa de Reparación Ocular de Mañalich; carta al Servicio de Salud Araucanía Sur, abogada Carolina Contreras denuncia falta de respuesta."
+
 biobiochile-2019-11-26-hrw-informe-ddhh:
   tipo: articulo
   medio: BioBioChile
@@ -31051,6 +31279,87 @@ biobiochile-2019-11-25-comision-revisora:
   autor: ""
   fecha: 2019-11-25
   url: "https://www.biobiochile.cl/noticias/nacional/chile/2019/11/25/este-lunes-comienza-a-sesionar-comision-revisora-de-acusacion-constitucional-contra-pinera.shtml"
+
+emol-2019-11-26-hrw-graves-violaciones:
+  tipo: prensa
+  medio: Emol
+  titulo: "Informe HRW acusa \"graves violaciones\" a los derechos humanos y urge reformar profundamente Carabineros"
+  autor: "Tomás Molina J."
+  fecha: 2019-11-26
+  url: https://www.emol.com/noticias/Nacional/2019/11/26/968437/Informe-HRW-reforma-carabineros-abusos.html
+  notas: "Cobertura de Emol del informe HRW del 26-nov-2019: 70 entrevistas en Santiago y Valparaíso, evidencia de uso excesivo de la fuerza y abusos en detención, 11.564 heridos atendidos (más de 1.100 moderados/graves), 220 lesiones oculares, 16 pérdidas de visión, falencias estructurales y turnos extenuantes de Carabineros."
+
+emol-2019-11-26-vivanco-sistematicas:
+  tipo: prensa
+  medio: Emol
+  titulo: "Vivanco y violaciones \"sistemáticas\" a los DD.HH.: \"Responsablemente no podemos hacer ese tipo de inferencias\""
+  autor: "Consuelo Ferrer"
+  fecha: 2019-11-26
+  url: https://www.emol.com/noticias/Nacional/2019/11/26/968453/Vivanco-violaciones-DDHH-sistematicas-inferir.html
+  notas: "Emol recoge precisión de José Miguel Vivanco de que no puede calificarse como \"sistemático\" sin evidencia de orden de la máxima autoridad, explicación del estándar de derecho penal internacional y críticas a que el general Rozas no conozca la composición de los perdigones."
+
+cnnchile-2019-11-26-hrw-graves-violaciones:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Informe de HRW detectó graves violaciones a DD.HH. en Chile: Recomienda una urgente reforma en Carabineros"
+  autor: "Turner"
+  fecha: 2019-11-26
+  url: https://www.cnnchile.com/pais/informe-hrw-graves-violaciones-ddhh-chile-urgente-reforma-carabineros/
+  notas: "CNN Chile detalla informe HRW del 26-nov-2019: 70 entrevistas en Santiago y Valparaíso, uso excesivo de la fuerza, maltratos y abuso sexual, 10 recomendaciones incluida suspensión de perdigones, cámaras en comisarías y revisión de control de identidad."
+
+cnnchile-2019-11-26-gobierno-valora-hrw:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Gobierno valora informe de HRW: \"Ha desestimado la existencia de una política enfocada en dañar manifestantes\""
+  autor: "Paula Aguilera"
+  fecha: 2019-11-26
+  url: https://www.cnnchile.com/pais/gobierno-valora-informe-hrw-desestima-politica-danar-manifestantes/
+  notas: "Subsecretaria Lorena Recabarren valora informe HRW, destaca que desestima política sistemática contra manifestantes, informa 105 sumarios en Carabineros y más de 2.000 investigaciones penales, y restricciones al uso de escopetas antidisturbios."
+
+elciudadano-2019-11-26-navarro-querella-lesa-humanidad:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Tras informe HRW: Senador Navarro anuncia querella contra Piñera por delitos de lesa humanidad"
+  autor: "Absalón Opazo"
+  fecha: 2019-11-26
+  url: https://www.elciudadano.com/chile/tras-informe-hrw-senador-navarro-anuncia-querella-contra-pinera-por-delitos-de-lesa-humanidad/11/26/
+  notas: "Senador Alejandro Navarro anuncia querella contra Piñera por lesa humanidad tras HRW, cita inhabilitación para presidir COP25 y cuestiona al general Rozas y al ministro Blumel por no actuar pese a 45 y luego 100 lesiones oculares."
+
+elciudadano-2019-11-26-hertz-responsabilidad-politica:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Diputada Carmen Hertz por informe de HRW: \"La responsabilidad política es de la más alta autoridad civil\""
+  autor: "Absalón Opazo"
+  fecha: 2019-11-26
+  url: https://www.elciudadano.com/chile/diputada-carmen-hertz-por-informe-de-hrw-la-responsabilidad-politica-es-de-la-mas-alta-autoridad-civil/11/26/
+  notas: "Carmen Hertz sostiene que las violaciones sucesivas y simultáneas por agentes del Estado configuran crímenes contra la humanidad y que la responsabilidad política recae en la más alta autoridad civil, vinculándolo a la acusación constitucional contra Piñera; critica la semántica de \"sistemático\" como refugio del Gobierno."
+
+reuters-2019-11-26-hrw-denuncia-abusos:
+  tipo: prensa
+  medio: Reuters
+  titulo: "Human Rights Watch denuncia abusos en las protestas en Chile"
+  autor: "Fabián Andrés Cambero y Natalia A. Ramos Miranda"
+  fecha: 2019-11-26
+  url: https://www.reuters.com/article/world/human-rights-watch-denuncia-abusos-en-las-protestas-en-chile-idUSKBN1Y10G6/
+  notas: "Reuters 26-nov-2019 sobre HRW: Carabineros cometió graves violaciones, 10 recomendaciones, Vivanco no infiere sistematicidad, proyecto Piñera FF.AA. infraestructura crítica, 2.670 investigaciones penales, 20 muertos, miles heridos."
+
+bbc-2019-12-13-onu-elevado-numero-violaciones:
+  tipo: prensa
+  medio: BBC News Mundo
+  titulo: "Protestas en Chile: informe de la ONU reitera que se han producido un \"elevado número\" de violaciones graves a los derechos humanos"
+  autor: "Redacción BBC News Mundo"
+  fecha: 2019-12-13
+  url: https://www.bbc.com/mundo/noticias-america-latina-50781221
+  notas: "ONU 35 páginas (30 oct-22 nov) liderada por Bachelet: elevado número de violaciones graves por Carabineros y Ejército, uso no letal contra pacíficos, detenciones arbitrarias, tortura y violencia sexual, lesiones oculares alarmantes."
+
+guardian-2019-10-30-pinera-cancela-apec:
+  tipo: prensa
+  medio: The Guardian
+  titulo: "Chilean president cancels Apec and climate summits amid wave of unrest"
+  autor: "Tom Phillips, Jonathan Watts y Jonathan Franklin"
+  fecha: 2019-10-30
+  url: https://www.theguardian.com/world/2019/oct/30/chile-protests-president-sebastian-pinera-protest-unrest
+  notas: "Guardian 30-oct-2019: Piñera cancela APEC y COP25, 3.535 detenidos desde 17 oct, 1.132 hospitalizados (38 bala), 1 millón en Santiago 25-oct, análisis modelo Pinochet e inestabilidad regional."
 
 biobiochile-2019-11-12-exito-huelga-general:
   tipo: articulo
@@ -31115,6 +31424,42 @@ theclinic-2019-11-12-anuncios-pinera:
   autor: ""
   fecha: 2019-11-12
   url: "https://www.theclinic.cl/2019/11/12/anuncios-de-pinera-en-jornada-de-paro-nacional-se-condonaran-multas-e-intereses-del-cae/"
+
+emol-2019-11-12-paro-marcha-alameda:
+  tipo: prensa
+  medio: Emol
+  titulo: "Llamado a paro nacional: Multitudinaria marcha se desplaza por la Alameda y pasa frente a La Moneda"
+  autor: "Felipe Vargas"
+  fecha: 2019-11-12
+  url: https://www.emol.com/noticias/Nacional/2019/11/12/966958/Paro-CrisisSocial-Manifestaciones.html
+  notas: "Emol 12-nov marcha Alameda frente a La Moneda, cierre puerta O'Higgins, 80 mil Interior en Santiago, 100 mil Concepción, barricadas rutas 78 y 68, suspensión Congreso, Merval sin servicio."
+
+france24-2019-11-12-huelga-general-protesta:
+  tipo: prensa
+  medio: France 24
+  titulo: "Una huelga general mantiene la protesta encendida en Chile"
+  autor: "Federico Cué Barberena"
+  fecha: 2019-11-12
+  url: https://www.france24.com/es/20191112-huelga-general-protestas-chile-constitucion
+  notas: "France 24: Mesa de Unidad Social 70 orgs rechaza Congreso Constituyente de Piñera y pide Asamblea Constituyente, barricadas Santiago-Valparaíso, 80 mil Alameda, 197 daños oculares y caso Gustavo Gatica 8-nov, peso 800 por dólar."
+
+infobae-2019-11-12-huelga-80-mil-santiago:
+  tipo: prensa
+  medio: Infobae
+  titulo: "Huelga general en Chile: más de 80 mil personas marcharon en Santiago y hubo nuevos enfrentamientos con la policía"
+  autor: "Infobae"
+  fecha: 2019-11-12
+  url: https://www.infobae.com/america/america-latina/2019/11/12/huelga-general-en-chile-mas-de-100-organizaciones-apoyan-la-medida-en-la-cuarta-semana-de-protestas/
+  notas: "Infobae 12-nov: 80 mil Santiago Alameda, barricadas accesos, peso 783,82 mínimo histórico -3,1%, Mesa Social 100 orgs, ultimatum CUT Bárbara Figueroa por Asamblea Constituyente, incendios Concepción gobernación y saqueos Valparaíso."
+
+cooperativa-2019-11-05-enap-paro-nacional:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Trabajadores de ENAP se suman al llamado a paro nacional"
+  autor: "Redacción Cooperativa"
+  fecha: 2019-11-05
+  url: https://www.cooperativa.cl/noticias/pais/manifestaciones/trabajadores-de-enap-se-suman-al-llamado-a-paro-nacional/2019-11-05/172500.html
+  notas: "Cooperativa 5-nov: Fenatrapech Nolberto Díaz anuncia adhesión a paro 12-nov con servicios mínimos sin riesgo abastecimiento Santiago, antecedente gremial de la huelga."
 
 theclinic-2019-11-12-oposicion-acuerdo:
   tipo: articulo
@@ -37258,3 +37603,201 @@ biobiochile-2016-07-19-caso-inverlink-concejal-varas-confia-en-disminucion-de-de
   fecha: 2016-07-19
   url: http://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2016/07/19/caso-inverlink-concejal-varas-confia-en-disminucion-de-deuda-de-municipio-de-vina-del-mar.shtml
   notas: "Seguimiento regional de la restitución de $1.840 millones ordenada al municipio de Viña del Mar por el caso Inverlink; expectativas locales de disminución de la deuda con Corfo. Evento 20160307-1."
+
+df-2015-06-23-caso-farmacias-absuelve-10-ejecutivos:
+  tipo: prensa
+  medio: Diario Financiero
+  titulo: "Caso farmacias: tribunal absuelve a los 10 ejecutivos acusados de colusión de precios de medicamentos"
+  autor: Romina Jara Oliva
+  fecha: 2015-06-23
+  url: https://www.df.cl/empresas/actualidad/caso-farmacias-tribunal-absuelve-a-los-10-ejecutivos-acusados-de
+  notas: "Cuarto Tribunal Oral absuelve en fallo dividido (Collin y Assef vs Flores) a los 10 ejecutivos de Salcobrand, Cruz Verde, FASA y Medipharm acusados de alterar fraudulentamente precios entre dic-2007 y abr-2008; da por acreditados los hechos pero estima conducta atípica bajo art. 285 y sin efecto en equilibrio de largo plazo; detalla los 10 nombres, la suspensión condicional de 2013 ($255M) revocada, multa TDLC 20.000 UTA y cita a Adam Smith. Evento 20150623-1."
+
+elciudadano-2015-06-23-tribunal-absuelve-farmacias:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Caso Farmacias: Tribunal absuelve a los ejecutivos acusados de alterar el precio de medicamentos"
+  autor: Marta Ubeda
+  fecha: 2015-06-23
+  url: https://www.elciudadano.com/justicia/tribunal-absuelve-a-los-acusados-por-caso-farmacias/06/23/
+  notas: "Cuarto Tribunal Oral absuelve a los 10 ejecutivos de Cruz Verde, Salcobrand y Ahumada; fiscalía acusó alza coordinada de medicamentos entre dic-2007 y abr-2008 con 90% del mercado; jueza María Inés Colín lee veredicto: coordinación acreditada pero no fraudulenta; cita 'guerra de precios' de la defensa. Evento 20150623-1."
+
+eldinamo-2015-06-23-fallo-dividido-farmacias:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "En fallo dividido justicia absuelve a 10 ejecutivos de cadenas de farmacias por alteración fraudulenta de precios"
+  autor: Redacción
+  fecha: 2015-06-23
+  url: https://www.eldinamo.cl/pais/2015/06/23/en-fallo-dividido-justicia-absuelve-a-10-ejecutivos-de-cadenas-de-farmacias-por-alteracion-fraudulenta-de-precios/
+  notas: "65 jornadas de juicio, fiscal Jaime Retamal acusa concertación para 46 medicamentos (dic-2007-abr-2008) vía sistema 1-2-3; voto mayoría Collin: correos insuficientes; voto disidente Flores acredita adulteración; recuerda suspensión condicional 2013 ($255M a Cruz Roja/Coaniquem) revocada el 30-ago-2013 y sentencia para 28-jul. Evento 20150623-1."
+
+theclinic-2015-06-23-caso-farmacias-absuelve-ejecutivos:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Caso Farmacias: Tribunal absuelve a los 10 ejecutivos acusados por la colusión de precios"
+  autor: The Clinic Online
+  fecha: 2015-06-23
+  url: https://www.theclinic.cl/2015/06/23/caso-farmacias-tribunal-absuelve-a-los-10-ejecutivos-involucrados-en-la-colusion-de-precios/
+  notas: "Cuarto TOP absuelve a 10 ejecutivos vinculados a Fasa, Salcobrand y Cruz Verde por colusión de ~220 medicamentos (2007-2008); voto contra de Flores cita Adam Smith; Hernán Calderón (Conadecus) tilda de inexplicable tras TDLC 2012 (US$20M a Cruz Verde y Salcobrand); FASA en delación 2009 (US$1M); beneficios de la colusión por cadena. Evento 20150623-1."
+
+radio-uchile-2015-06-23-tribunal-absuelve-farmacias:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Tribunal absuelve a los diez ejecutivos imputados por el Caso Farmacias"
+  autor: Paula Campos
+  fecha: 2015-06-23
+  url: https://radio.uchile.cl/2015/06/23/tribunal-absuelve-a-los-diez-ejecutivos-imputados-por-el-caso-farmacias/
+  notas: "Cuarto TOP absuelve en fallo dividido a 10 ejecutivos de Fasa, Cruz Verde y Salcobrand por alza concertada de 48 medicamentos diarios; fiscal Retamal aportó análisis de 40 millones de transacciones y mails del sistema 1-2-3; magistrada Collins: coordinación no fraudulenta; historia del caso desde requerimiento FNE 2008 y multa TDLC 2012. Evento 20150623-1."
+
+emol-2015-06-23-sofofa-libre-competencia-farmacias:
+  tipo: prensa
+  medio: Emol
+  titulo: "Hermann von Mühlenbrock y caso Farmacias: Siempre vamos a defender la libre competencia"
+  autor: Alfonso González
+  fecha: 2015-06-23
+  url: https://www.emol.com/noticias/Economia/2015/06/23/722841/Hermann-von-Mhlenbrock-y-caso-Farmacias-Siempre-vamos-a-defender-la-libre-competencia.html
+  notas: "Presidente Sofofa reacciona a absolución de 10 ejecutivos: defiende economía social de mercado y sanción con máximo rigor a quien atente contra libre competencia, evitando pronunciarse sobre detalle del fallo. Evento 20150623-1."
+
+emol-2015-11-17-fiscalia-intentara-anular-fallo-farmacias:
+  tipo: prensa
+  medio: Emol
+  titulo: "Caso Farmacias: fiscalía intentará anular fallo que absolvió a los ejecutivos acusados de colusión"
+  autor: Andrea González Schmessane
+  fecha: 2015-11-17
+  url: https://www.emol.com/noticias/Nacional/2015/11/17/759564/Caso-Farmacias-fiscalia-intentara-anular-fallo-que-absolvio-a-los-ejecutivos-acusados-por-colusion.html
+  notas: "Fiscalía Centro Norte presenta recurso de nulidad a verse el 17-nov-2015 para dejar sin efecto absolución dividida del Cuarto TOP y optar a nuevo juicio; explica que si se acoge se anula y se ordena segundo juicio. Evento 20150623-1."
+
+emol-2015-12-29-corte-confirma-farmacias-absolucion:
+  tipo: prensa
+  medio: Emol
+  titulo: "Caso Farmacias: Corte confirma fallo que absolvió a ejecutivos acusados de colusión"
+  autor: Andrea González Schmessane
+  fecha: 2015-12-29
+  url: https://www.emol.com/noticias/Nacional/2015/12/29/765957/Caso-Farmacias-Corte-confirma-fallo-que-absolvio-a-ejecutivos-acusados-de-colusion.html
+  notas: "Cuarta Sala de Corte de Apelaciones de Santiago rechaza recursos de nulidad de Fiscalía y querellantes y confirma absolución de 10 ejecutivos de Salcobrand, Ahumada y Cruz Verde por alterar fraudulentamente precios (2007-2010); fiscal argumentó 4 vicios (errónea interpretación de medio fraudulento y precio natural). Evento 20150623-1."
+
+radio-uchile-2015-12-29-corte-rechaza-nulidad-farmacias:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Corte rechaza nulidad y absuelve a ejecutivos en caso farmacias"
+  autor: Fernando Seymour
+  fecha: 2015-12-29
+  url: https://radio.uchile.cl/2015/12/29/corte-de-apelaciones-absuelve-a-ejecutivos-en-caso-de-colusion-de-farmacias/
+  notas: "Cuarta Sala (Jaime Balmaceda, Tomás Gray, Hernán López) rechaza nulidad unánime y absuelve definitivamente a 10 ejecutivos por art. 285; fiscalía había pedido anular por errónea aplicación de la norma; recoge declaraciones de Retamal y defensas (Luis Ortiz, Juan Domingo Acosta). Evento 20150623-1."
+
+elciudadano-2015-12-29-corte-confirma-farmacias-fallo:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Corte de Santiago confirma fallo que absuelve a ejecutivos autores de la colusión de las farmacias"
+  autor: Paul Walder
+  fecha: 2015-12-29
+  url: https://www.elciudadano.com/economia/corte-de-santiago-confirma-fallo-que-absuelve-a-ejecutivos-autores-de-la-colusion-de-las-farmacias/12/29/
+  notas: "Fallo unánime Cuarta Sala detalla motivos 20° y 37°: acusación atípica bajo art. 285, defecto en elaboración al no acreditar precio natural al inicio y término del alza; invoca Ley 19.911 (TDLC 2003) y su mensaje de despenalización para argumentar ilogicidad de sancionar vía Código Penal precepto de 1873. Evento 20150623-1."
+
+conadecus-2015-12-30-corte-confirma-absoluciones-tipo-penal:
+  tipo: prensa
+  medio: Conadecus
+  titulo: "Caso Farmacias: Corte confirma absoluciones y desestima tipo penal invocado por la fiscalía"
+  autor: Conadecus
+  fecha: 2015-12-30
+  url: https://www.conadecus.cl/caso-farmacias-corte-confirma-absoluciones-y-desestima-tipo-penal-invocado-por-la-fiscalia/
+  notas: "Conadecus resume fallo Cuarta Sala (Balmaceda, Gray, Rojas) que confirma absoluciones del 23-jun al desestimar art. 285 (adulterar fraudulentamente precio natural); defensor Cristián Muga cuestionó que fiscalía equiparara precio natural al previo al alza; Corte cita Ley 19.911 y eliminación de sanción penal; fiscal Retamal reconoce obstáculo del tipo penal; no hay recurso. Fuente EyN. Evento 20150623-1."
+
+radioagricultura-2019-10-27-pinera-levanta-estado-emergencia:
+  tipo: prensa
+  medio: Radio Agricultura
+  titulo: "Presidente Piñera levanta el Estado de Emergencia en todo Chile"
+  autor: Prensa Radio Agricultura
+  fecha: 2019-10-27
+  url: https://www.radioagricultura.cl/noticias/nacional/presidente-pinera-levanta-estado-de-emergencia-en-todo-chile_20191027/
+  notas: "Presidencia firma decretos el 27-oct-2019 para levantar el Estado de Emergencia a contar de las 00:00 del 28-oct en todas las regiones donde se había decretado (desde el 19-oct); comunicado citado y tuit de Prensa Presidencia. Verifica fin del estado de emergencia 3 semanas antes de la fecha 18/19-nov atribuida por Mónica González a la decisión clave de Piñera. Evento 20260811-23 (verificación)."
+
+elrancaguino-2019-10-27-acaba-estado-emergencia:
+  tipo: prensa
+  medio: El Rancagüino
+  titulo: "A las 00 horas se acaba el estado de emergencia"
+  autor: Redacción El Rancagüino
+  fecha: 2019-10-27
+  url: https://www.elrancaguino.cl/2019/10/27/a-las-00-horas-se-acaba-el-estado-de-emergencia/
+  notas: "Comunicado de Presidencia del 27-oct-2019: levantamiento de los estados de emergencia vigentes 8 días, a partir de las 24:00 del domingo 27-oct (00:00 lunes 28), con retorno del orden público a Carabineros y fin del rol de FF.AA. Segunda fuente de época que desmiente cronología 18/19-nov para la decisión de no sacar militares. Evento 20260811-23 (verificación)."
+
+biobiochile-2026-08-28-viaje-parlamentarios-israel:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "\"Una relación renovada\": el hermético viaje de un grupo de parlamentarios chilenos a Israel"
+  autor: Megam Ossandón
+  fecha: 2026-08-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/28/una-relacion-renovada-el-hermetico-viaje-de-un-grupo-de-diputados-chilenos-a-israel.shtml
+  notas: "Reveló el viaje hermético de 11 parlamentarios chilenos a Israel entre el 21 y el 30 de agosto de 2026 en semana distrital, con autorización de la Cámara 'sin costo para la corporación' y obligación de registrar en plataforma de lobby. Lista nominal: Hans Marowski y Pier Karlezi (PNL), Marco Antonio Sulantay y Daniel Lilayu (UDI), Roberto Arroyo, Eileen Urqueta y Zandra Parisi (PDG), Stephan Schubert y José Carlos Meza (Republicanos), Enrique Lee (senador independiente) y Fernando Zamorano (PPD); participó el embajador Gabriel Zaliasnik. Cita tres versiones de financiamiento: vía Israel, Comunidad Judía/Israelita de Chile y grupo de amistad chileno-israelí. Recoge molestia interna por 'lavar la imagen por el genocidio' y califica el viaje como 'una vergüenza'. Único medio que dio detalle completo de invitación y contexto (evento 20260828-1)."
+
+elperiodista-2026-08-28-hermetico-viaje-israel:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Hermético viaje a Israel: 11 parlamentarios chilenos están en el país desde el 21 de agosto y recién hoy se conoció la visita"
+  autor: El Periodista
+  fecha: 2026-08-28
+  url: https://www.elperiodista.cl/2026/08/hermetico-viaje-a-israel-11-parlamentarios-chilenos-estan-en-el-pais-desde-el-21-de-agosto-y-recien-hoy-se-conocio-la-visita/
+  notas: "Segunda cobertura independiente que confirma fechas 21-30 agosto, lista de 11 parlamentarios y 'sin costo para la corporación', y aporta verificación propia: revisó RRSS indexadas de los 11 legisladores y no halló publicaciones transparentando el viaje (búsquedas Israel, Jerusalén, Tel Aviv, Gaza, AJC; limitación de historias de 24h). Describe contexto de ofensiva en Gaza y califica la falta de transparencia como 'inconveniente' y describe silencio de PNL/PDG. Valida de forma cruzada el hallazgo de BioBioChile (evento 20260828-1)."
+
+x-gidonsaar-2026-08-24-delegacion-chile-ajc:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Gideon Sa'ar recibe a delegación chilena liderada por AJC y celebra 'relación renovada'"
+  autor: Gideon Sa'ar
+  fecha: 2026-08-24
+  url: https://x.com/gidonsaar/status/2091879033378062374
+  notas: "Fuente primaria gubernamental israelí: el canciller Gideon Sa'ar publicó el 24-ago-2026 fotografía con la delegación chilena junto al embajador Gabriel Zaliasnik, etiquetando a Arroyo, Karlezi, Lee, Meza, Schubert, Sulantay, Lilayu, Zamorano y otros, y escribió 'Happy to welcome a delegation of representatives from Chile led by @AJC, as a sign of the renewed relationship between our countries... I thanked them for their visit, and look forward to future partnerships'. Atribuyó liderazgo a AJC y habló de 'futuras asociaciones' (evento 20260828-1)."
+
+reddit-chile-2026-08-28-viaje-israel:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "\"Una relación renovada\": el hermético viaje de un grupo de parlamentarios chilenos a Israel"
+  autor: discometric
+  fecha: 2026-08-28
+  url: https://old.reddit.com/r/chile/comments/1w11zyo/una_relaci%C3%B3n_renovada_el_herm%C3%A9tico_viaje_de_un/
+  notas: "Hilo de r/chile que replica íntegra la nota de BioBioChile. Reacción comunitaria complementaria (no fuente primaria): 'que asco' (97 pts), 'vomitivo', 'Fascistas de mierda' (41 pts), cuestionamientos a transversalidad ('solo parlamentarios de derecha', 'Hay 1 ppd: TRANSVERSAL'), 'una vergüenza... deberían renunciar... no puede avalar a gobiernos asesinos', y debate sobre estrategia de 'lavar la imagen por el genocidio'. Solo como termómetro social, no como validación factual (evento 20260828-1)."
+
+reddit-republicadechile-2026-08-28-viaje-israel:
+  tipo: redes
+  medio: Reddit r/RepublicadeChile
+  titulo: "\"Una relación renovada\": el hermético viaje de un grupo de parlamentarios chilenos a Israel"
+  autor: sodiv38254
+  fecha: 2026-08-28
+  url: https://old.reddit.com/r/RepublicadeChile/comments/1w12n94/una_relaci%C3%B3n_renovada_el_herm%C3%A9tico_viaje_de_un/
+  notas: "Segundo hilo en r/RepublicadeChile con la misma nota. Reacción comunitaria complementaria: 'Los weones careraja, centrados en aclarar que es sin costo sin aclarar quien paga', 'Que vergüenza... se pegan viajes a uno de los estados más nefastos', 'traidores de la patria', 'Patagonia' satirizado. Confirma percepción de opacidad transversal. Solo complementario (evento 20260828-1)."
+
+latercera-2018-12-03-viajes-parlamentarios-67porciento:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Viajes de parlamentarios: Comunidades judía y palestina financian el 67% de las invitaciones"
+  autor: La Tercera
+  fecha: 2018-12-03
+  url: https://www.latercera.com/la-tercera-pm/noticia/viajes-parlamentarios-comunidades-judia-palestina-financia-70-las-invitaciones/428258/
+  notas: "Análisis de registros de Lobby: de $141,8 millones en viajes, la Comunidad Judía financió $56,5 millones (40%, 26 viajes) y la Comunidad Palestina $38,5 millones (27%); total 67%. Cita a Shai Agosin (presidente CJCh) sobre invitaciones vía Project Interchange/AJC y objetivo de mostrar 'oportunidades' y 'la realidad de Israel'. Contexto histórico que valida el mecanismo de financiamiento señalado para el viaje de agosto de 2026 (evento 20260828-1)."
+
+ajn-2016-03-31-parlamentarios-chilenos-ajc:
+  tipo: prensa
+  medio: Agencia AJN
+  titulo: "Parlamentarios y periodistas chilenos viajaron a Israel 'para conocer el país que poco se conoce en gran parte del mundo'"
+  autor: Agencia AJN
+  fecha: 2016-03-31
+  url: https://agenciaajn.com/noticia/parlamentarios-periodistas-chilenos-viajaron-israel-conocer-pais-poco-se-conoce-gran-parte-del-mundo-2856
+  notas: "Director ejecutivo CJCh Marcelo Isaacson describe el 15º viaje organizado con Project Interchange/AJC: delegación de 7 diputados y 3 periodistas chilenos para conocer 'el Israel que poco se conoce', innovación, patentes y convivencia. Objetivo: que se formen opinión propia y se unan al Comité Parlamentario Chile-Israel para impulsar TLC e intercambios. Precedente directo del modelo AJC + Comunidad Judía usado en 2026 (evento 20260828-1)."
+
+vinnews-2026-08-24-chile-delegation-renewed-ties:
+  tipo: prensa
+  medio: VIN News
+  titulo: "Israeli Foreign Minister Welcomes Chilean Delegation As Sign Of Renewed Ties"
+  autor: Reuven Rosenfeld
+  fecha: 2026-08-24
+  url: https://vinnews.com/2026/08/24/israeli-foreign-minister-welcomes-chilean-delegation-as-sign-of-renewed-ties/
+  notas: "Medio judío estadounidense (Vos Iz Neias) replica el post de Gideon Sa'ar del 24-ago-2026 con las dos fotografías oficiales y la cita 'Happy to welcome a delegation of representatives from Chile led by @AJC...'. Añade contexto propio: el encuentro ocurre 'amid efforts by both countries to rebuild diplomatic and economic ties following the election of Chilean President José Antonio Kast. Relations had cooled under the previous Chilean administration' y que Sa'ar ha destacado cooperación en tecnología, innovación y recursos naturales. Tercera prensa distinta que valida de forma cruzada el viaje (evento 20260828-1)."
+
+msn-2026-08-28-viaje-parlamentarios-israel:
+  tipo: prensa
+  medio: MSN Noticias
+  titulo: "Una relación renovada: el hermético viaje de un grupo de parlamentarios chilenos a Israel"
+  autor: BioBioChile vía MSN
+  fecha: 2026-08-28
+  url: https://www.msn.com/es-cl/noticias/other/una-relaci%C3%B3n-renovada-el-herm%C3%A9tico-viaje-de-un-grupo-de-parlamentarios-chilenos-a-israel/ar-AA2b84yH
+  notas: "Agregador MSN replica íntegra la nota de BioBioChile del 28-ago-2026 (autor Megam Ossandón) con idéntico texto sobre delegación de 11, fechas 21-30 agosto, financiamiento vía Comunidad Israelita y grupo de amistad. No es reporte independiente, pero constituye cuarto canal de distribución y cuarto medio distinto que visibiliza el hermetismo (evento 20260828-1)."

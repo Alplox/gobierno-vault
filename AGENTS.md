@@ -117,6 +117,7 @@ Carga solo el que necesite tu tarea — el core ya cubre el 80% de contenido.
 | Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento con IDs `S/A/V-YYYY-NNN` por año + catálogo | `.agents/skills/seguimiento/SKILL.md` |
 | Redes sociales / reacciones comunitarias / verificacion imagen-viral | `.agents/skills/social-media/SKILL.md` |
+| Web research con Firecrawl (search/scrape/crawl/agent, 1000 créditos) — alternativa a fetch-impersonate | `firecrawl` CLI (`firecrawl search/scrape --help`, `firecrawl --status`) + MCP `https://mcp.firecrawl.dev/v2/mcp-oauth` — ver `.agents/skills/tools/SKILL.md` para fallback |
 | Respaldo offline `.gvault` | `.agents/skills/backup/SKILL.md` |
 
 ## Cuando descubras algo no documentado

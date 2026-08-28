@@ -10,5 +10,8 @@ dist/
 # Crawlee (fallback de fetch en sync-sitemaps) crea storage/ en runtime
 storage/
 
+# Firecrawl cache (search/scrape)
+.firecrawl/
+
 # Agents
 skills-workspace/

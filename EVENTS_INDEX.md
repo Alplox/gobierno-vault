@@ -1171,7 +1171,7 @@
 - [2026/08/20260811-20 - Gobierno propone la regla de los '21 pies' (6,4 metros) como criterio obligatorio para evaluar el uso de la fuerza policial en la Comisión Mixta del proyecto RUF](src/content/events/2026/08/20260811-20.md) — 2 fuentes
 - [2026/08/20260811-21 - Escándalo en la Municipalidad de Curicó: personal de informática filtró material íntimo de funcionarias y directivos extraído de celulares institucionales](src/content/events/2026/08/20260811-21.md) — 2 fuentes
 - [2026/08/20260811-22 - Matías Toledo respalda el despliegue de Fuerzas Armadas en barrios afectados por el crimen organizado: 'Estoy de acuerdo con todo tipo de intervención, siempre y cuando se respete el marco legal'](src/content/events/2026/08/20260811-22.md) — 6 fuentes
-- [2026/08/20260811-23 - Mónica González revela en la comisión del estallido que Piñera recibió informes de inteligencia sin sustento sobre supuestos 600 agentes cubanos y venezolanos que jamás fueron documentados](src/content/events/2026/08/20260811-23.md) — 8 fuentes
+- [2026/08/20260811-23 - Mónica González revela en la comisión del estallido que Piñera recibió informes de inteligencia sin sustento sobre supuestos 600 agentes cubanos y venezolanos que jamás fueron documentados](src/content/events/2026/08/20260811-23.md) — 12 fuentes
 - [2026/08/20260811-24 - Auditoría forense descarta que el déficit de $18 mil millones de la Municipalidad de Valparaíso sea atribuible a la gestión de Jorge Sharp](src/content/events/2026/08/20260811-24.md) — 3 fuentes
 - [2026/08/20260811-25 - Boric critica al gobierno de Kast y a la derecha por los 50 años del golpe: 'Sospecho que este gobierno no firmaría' el acuerdo por la democracia](src/content/events/2026/08/20260811-25.md) — 2 fuentes
 - [2026/08/20260811-26 - Comisión de Agricultura aprueba en general proyecto que autoriza caza de perros asilvestrados: 10 votos a favor y 2 en contra](src/content/events/2026/08/20260811-26.md) — 5 fuentes
@@ -1379,6 +1379,7 @@
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
 - [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
+- [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
 
 ## 2025
 
@@ -1628,16 +1629,16 @@
 - [2019/10/20191028-1 - Cambio de gabinete del 28 de octubre de 2019: Chadwick sale de Interior, entra Blumel y Piñera anuncia el fin del estado de emergencia](src/content/events/2019/10/20191028-1.md) — 4 fuentes
 - [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — 2 fuentes
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — 1 fuente
-- [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 14 fuentes
-- [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 8 fuentes
+- [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 22 fuentes
+- [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 20 fuentes
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 3 fuentes
 - [2019/11/20191118-1 - Bioquímicos y científicos desmienten a Carabineros: el Mentholatum no alivia e incluso puede potenciar el efecto de los gases lacrimógenos](src/content/events/2019/11/20191118-1.md) — 4 fuentes
-- [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 8 fuentes
+- [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 14 fuentes
 - [2019/11/20191119-2 - Incendios forestales arrasan cerca de 3.000 hectáreas en Valparaíso: alerta roja regional, evacuaciones en Rodelillo y querellas por delito terrorista](src/content/events/2019/11/20191119-2.md) — 9 fuentes
-- [2019/11/20191121-1 - Informe de Amnistía Internacional, perdigones con plomo y acuerdo por pensiones marcan el 21 de noviembre](src/content/events/2019/11/20191121-1.md) — 7 fuentes
-- [2019/11/20191126-1 - Human Rights Watch publica informe sobre Chile y acuerdo constitucional sigue sin concretarse](src/content/events/2019/11/20191126-1.md) — 7 fuentes
-- [2019/12/20191212-1 - Cámara rechaza la acusación constitucional contra Piñera por las violaciones a los DD.HH. del estallido al acoger la 'cuestión previa' (79-73)](src/content/events/2019/12/20191212-1.md) — 3 fuentes
+- [2019/11/20191121-1 - Informe de Amnistía Internacional, perdigones con plomo y acuerdo por pensiones marcan el 21 de noviembre](src/content/events/2019/11/20191121-1.md) — 14 fuentes
+- [2019/11/20191126-1 - Human Rights Watch publica informe sobre Chile y acuerdo constitucional sigue sin concretarse](src/content/events/2019/11/20191126-1.md) — 18 fuentes
+- [2019/12/20191212-1 - Cámara rechaza la acusación constitucional contra Piñera por las violaciones a los DD.HH. del estallido al acoger la 'cuestión previa' (79-73)](src/content/events/2019/12/20191212-1.md) — 4 fuentes
 - [2019/12/20191220-1 - Jornada del 20 de diciembre de 2019 en Plaza de la Dignidad: copamiento policial y uso masivo de gas lacrimógeno](src/content/events/2019/12/20191220-1.md) — 5 fuentes
 - [2019/12/20191223-1 - Informe Anual 2019 del INDH: 'las más graves violaciones a los DD.HH. desde 1989' durante el estallido social](src/content/events/2019/12/20191223-1.md) — 2 fuentes
 - [2019/12/20191229-1 - Schalper afirma en Estado Nacional haber recopilado '44 videos falsos' sobre Carabineros y protagoniza lapsus 'candado chino'](src/content/events/2019/12/20191229-1.md) — 6 fuentes
@@ -1657,12 +1658,13 @@
 
 - [2016/01/20160118-1 - CDE pide reabrir el caso Riggs para investigar las malversaciones de la Fundación CEMA Chile](src/content/events/2016/01/20160118-1.md) — 1 fuente
 - [2016/02/20160211-1 - CIPER revela la 'lista de Carrasco': Inmobiliaria Ecomac y otras diez empresas financiaron por fuera de la vía legal la campaña de Golborne](src/content/events/2016/02/20160211-1.md) — 3 fuentes
-- [2016/03/20160307-1 - Corte Suprema confirma que el municipio de Viña del Mar debe restituir $1.840 millones a Corfo por el caso Inverlink](src/content/events/2016/03/20160307-1.md) — 4 fuentes
+- [2016/03/20160307-1 - Corte Suprema confirma que el municipio de Viña del Mar debe restituir $1.840 millones a Corfo por el caso Inverlink](src/content/events/2016/03/20160307-1.md) — 5 fuentes
 
 ## 2015
 
 - [2015/03/20150303-1 - Caso Penta: la maquina de evasion tributaria de los duenos del grupo Penta](src/content/events/2015/03/20150303-1.md) — 3 fuentes
 - [2015/06/20150615-1 - Jorge Quiroz, futuro ministro de Hacienda de Kast, es condenado por conducción en estado de ebriedad en Zapallar](src/content/events/2015/06/20150615-1.md) — 4 fuentes
+- [2015/06/20150623-1 - Cuarto Tribunal Oral absuelve a los 10 ejecutivos del caso Farmacias por alteración fraudulenta de precios y la Corte de Apelaciones confirma las absoluciones](src/content/events/2015/06/20150623-1.md) — 11 fuentes
 - [2015/07/20150703-1 - Tribunal acoge demanda de Corfo y ordena a 15 entidades pagar $33.151 millones en el caso Inverlink](src/content/events/2015/07/20150703-1.md) — 5 fuentes
 - [2015/07/20150714-1 - Caso Caval: el polemico estudio vial que inclino la balanza](src/content/events/2015/07/20150714-1.md) — 3 fuentes
 - [2015/07/20150727-1 - Ministro en visita Carlos Gajardo dicta sentencia contra 13 imputados por la arista principal Corfo-Inverlink](src/content/events/2015/07/20150727-1.md) — 6 fuentes

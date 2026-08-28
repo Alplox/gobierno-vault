@@ -9613,7 +9613,38 @@ people:
     nombre: Esteban Velásquez Núñez
     cargo: Senador
     organizacion: senado
-    notas: "Senador (independiente, ex Regionalista Verde Social). Hizo uso de la palabra en el debate del Senado del 12-ago-2026 por los vetos a la megarreforma (evento 20260812-2)."
+    partido: Partido Regionalista Verde Social
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+      - cargo: Senador
+        organizacion: senado
+        desde: 2022-03-11
+    notas: "Diputado FRVS Distrito 2 (2018-2022), firmante de la acusación constitucional contra Piñera del 19-nov-2019 (evento 20191119-1); Senador por Antofagasta desde 2022. Hizo uso de la palabra en el debate del Senado del 12-ago-2026 por los vetos a la megarreforma (evento 20260812-2). Fuente: BCN."
+  carolina_marzan:
+    nombre: Carolina Marzán Pinto
+    cargo: Diputada
+    organizacion: camara_diputados
+    partido: Partido por la Democracia
+    cargos:
+      - cargo: Diputada
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2026-03-11
+    notas: "Diputada PPD Distrito 6 (2018-2026, reelecta 2021). Firmante a título personal de la acusación constitucional contra Piñera del 19-nov-2019 (evento 20191119-1), sin respaldo de bancada, junto a Hertz y otros 9 diputados. Fuente: BCN."
+  claudia_mix:
+    nombre: Claudia Mix Jiménez
+    cargo: Diputada
+    organizacion: camara_diputados
+    partido: Comunes
+    cargos:
+      - cargo: Diputada
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputada Comunes Distrito 8 (2018-2022). Firmante de la acusación constitucional contra Piñera del 19-nov-2019 (evento 20191119-1) por vulneración de DDHH durante el estallido; parte del Frente Amplio en esa fecha. Fuente: BCN."
   alejandra_sepulveda:
     nombre: Alejandra Sepúlveda Orbenes
     cargo: Senadora
@@ -9629,6 +9660,70 @@ people:
     nombre: Arturo Fermandois Vöhringer
     cargo: Abogado constitucionalista
     notas: "Abogado y profesor de derecho constitucional. El 11-ago-2026 presentó en representación de La Moneda los descargos del Gobierno contra los tres requerimientos de la oposición ante el TC por la megarreforma (evento 20260811-19)."
+  manuel_antonio_matta:
+    nombre: Manuel Antonio Matta Aragay
+    cargo: Diputado
+    organizacion: camara_diputados
+    partido: Partido Demócrata Cristiano
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputado DC Distrito 18 (2018-2022). Votó a favor de la cuestión previa en la acusación constitucional contra Piñera del 12-dic-2019 (79-73), junto a Walker, Sabag y Calisto, permitiendo que el libelo se tuviera por no interpuesto (evento 20191212-1). Fuente: BCN biografías y Cámara camara.cl/prensa prmid=138911."
+  jorge_sabag:
+    nombre: Jorge Sabag Villalobos
+    cargo: Diputado
+    organizacion: camara_diputados
+    partido: Partido Demócrata Cristiano
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputado DC Distrito 19 (2018-2022). Votó a favor de la cuestión previa en la acusación contra Piñera del 12-dic-2019 (79-73) (evento 20191212-1). Fuente: BCN."
+  carlos_abel_jarpa:
+    nombre: Carlos Abel Jarpa Wevar
+    cargo: Diputado
+    organizacion: camara_diputados
+    partido: Partido Radical
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputado PR Distrito 19 (2018-2022). Votó a favor de la cuestión previa en la acusación contra Piñera del 12-dic-2019 (79-73) (evento 20191212-1). Fuente: BCN."
+  fernando_meza:
+    nombre: Fernando Meza Moncada
+    cargo: Diputado
+    organizacion: camara_diputados
+    partido: Partido Radical
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputado PR Distrito 23 (2018-2022). Votó a favor de la cuestión previa en la acusación contra Piñera del 12-dic-2019 (79-73) (evento 20191212-1). Fuente: BCN."
+  rene_alinco:
+    nombre: René Alinco Bustos
+    cargo: Diputado
+    organizacion: camara_diputados
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputado IND Distrito 27 (2018-2022). Votó a favor de la cuestión previa en la acusación contra Piñera del 12-dic-2019 (79-73) (evento 20191212-1). Fuente: BCN."
+  pepe_auth:
+    nombre: Pepe Auth Stewart
+    cargo: Diputado
+    organizacion: camara_diputados
+    cargos:
+      - cargo: Diputado
+        organizacion: camara_diputados
+        desde: 2018-03-11
+        hasta: 2022-03-11
+    notas: "Diputado IND ex PPD Distrito 8 (2018-2022). Votó a favor de la cuestión previa en la acusación contra Piñera del 12-dic-2019 (79-73), su abstención previa en comisión fue decisiva (evento 20191212-1). Fuente: BCN."
 
 
 
@@ -14239,6 +14334,41 @@ people:
     nombre: Nibaldo Mosciatti
     cargo: Periodista de Radio Bío Bío
     notas: "Comentarista de economía en CNN Chile; al día siguiente de la acusación de 2012 relacionó Inverlink con el caso La Polar."
+  eileen_urqueta:
+    nombre: Eileen Urqueta Rojas
+    cargo: Diputada (PDG)
+    cargos:
+      - cargo: Diputada (PDG)
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+    notas: "Diputada del Partido de la Gente por el 5º Distrito (Coquimbo). Integró la delegación de 11 parlamentarios que viajó a Israel entre el 21 y el 30 de agosto de 2026, visita revelada por BioBioChile y celebrada por el canciller israelí Gideon Sa'ar como 'relación renovada' (evento 20260828-1)."
+  enrique_lee:
+    nombre: Enrique Lee Flores
+    cargo: Senador (Independiente)
+    cargos:
+      - cargo: Senador (Independiente)
+        organizacion: senado
+        desde: 2026-03-11
+    organizacion: senado
+    notas: "Médico cirujano y senador independiente por Arica y Parinacota. Integró la delegación parlamentaria chilena que viajó a Israel entre el 21 y el 30 de agosto de 2026 en visita articulada por el American Jewish Committee y con presencia del embajador Gabriel Zaliasnik (evento 20260828-1)."
+  fernando_zamorano:
+    nombre: Fernando Zamorano Peralta
+    cargo: Diputado (PPD)
+    cargos:
+      - cargo: Diputado (PPD)
+        organizacion: camara_diputados
+        desde: 2026-03-11
+    organizacion: camara_diputados
+    notas: "Médico y diputado del PPD por el Distrito 15. Integró la delegación de parlamentarios chilenos que viajó a Israel en agosto de 2026, la única presencia del PPD en esa comitiva transversal (evento 20260828-1)."
+  gideon_saar:
+    nombre: Gideon Sa'ar
+    cargo: Ministro de Asuntos Exteriores de Israel
+    cargos:
+      - cargo: Ministro de Asuntos Exteriores de Israel
+        organizacion: ministerio_relaciones_exteriores_israel
+        desde: 2024-11-05
+    notas: "Político israelí, ministro de Exteriores desde noviembre de 2024 en el gobierno de Benjamin Netanyahu. El 24 de agosto de 2026 difundió en X la fotografía con la delegación de 11 parlamentarios chilenos y calificó la visita como señal de la 'relación renovada entre nuestros países' (evento 20260828-1)."
 organizations:
   cge:
     nombre: CGE
@@ -14621,6 +14751,16 @@ organizations:
     tipo: organizacion_social
     pais: Chile
     notas: "Comunidad de origen palestino en Chile, una de las más numerosas fuera de Palestina. En agosto de 2026 respaldó al chileno José Nicolás Khamis tras su expulsión de Israel y denunció un patrón de hostigamiento hacia chilenos de origen palestino en fronteras israelíes."
+  comunidad_judia_chile:
+    nombre: Comunidad Judía de Chile
+    tipo: organizacion_social
+    pais: Chile
+    notas: "Organización que agrupa a la comunidad judía chilena. Según La Tercera (2018) financió 26 viajes de parlamentarios por $56,5 millones (40% del total) vía Project Interchange/AJC. Un asesor de la delegación de agosto de 2026 señaló a BioBioChile que habría costeado el viaje hermético de 11 parlamentarios a Israel (21-30 agosto) articulado por el American Jewish Committee (evento 20260828-1)."
+  american_jewish_committee:
+    nombre: American Jewish Committee (AJC)
+    tipo: organizacion_internacional
+    pais: Estados Unidos
+    notas: "Organización judía estadounidense (AJC) con programa Project Interchange/Intercambio que desde 2018 organiza viajes de parlamentarios chilenos a Israel junto a la Comunidad Judía de Chile. El canciller israelí Gideon Sa'ar atribuyó a AJC el liderazgo de la delegación chilena de agosto de 2026 ('led by AJC') y la calificó como señal de la 'relación renovada' (evento 20260828-1)."
   agencia_nacional_inteligencia:
     nombre: Agencia Nacional de Inteligencia (ANI)
     tipo: servicio_publico
@@ -14768,6 +14908,11 @@ organizations:
     tipo: ministerio
     pais: Chile
     notas: Cancillería.
+  ministerio_relaciones_exteriores_israel:
+    nombre: Ministerio de Asuntos Exteriores de Israel
+    tipo: ministerio
+    pais: Israel
+    notas: "Cancillería israelí. Su titular desde noviembre de 2024 es Gideon Sa'ar, quien el 24 de agosto de 2026 recibió a la delegación de 11 parlamentarios chilenos y calificó la visita como 'señal de la relación renovada' (evento 20260828-1)."
   dipreca:
     nombre: Dirección de Previsión de Carabineros (Dipreca)
     tipo: servicio_publico
@@ -17068,6 +17213,21 @@ organizations:
     tipo: medio_comunicacion
     pais: Chile
     notas: "Medio digital chileno (reportediario.cl)."
+  agencia_ajn:
+    nombre: Agencia AJN
+    tipo: medio_comunicacion
+    pais: Argentina
+    notas: "Agencia Judía de Noticias (AJN), agencia especializada en comunidad judía y Medio Oriente. Cubrió en 2016 el 15º viaje de parlamentarios chilenos a Israel organizado por la Comunidad Judía y AJC/Project Interchange (evento 20260828-1)."
+  vin_news:
+    nombre: VIN News
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Vos Iz Neias (VIN News), medio judío estadounidense con sede en Nueva York. El 24-ago-2026 replicó el post de Gideon Sa'ar sobre la delegación chilena y contextualizó el acercamiento como reconstrucción de lazos tras la elección de José Antonio Kast (evento 20260828-1)."
+  msn_noticias:
+    nombre: MSN Noticias
+    tipo: medio_comunicacion
+    pais: Estados Unidos
+    notas: "Agregador de noticias de Microsoft (msn.com). El 28-ago-2026 replicó íntegra la nota de BioBioChile sobre el viaje hermético de 11 parlamentarios a Israel (evento 20260828-1)."
   infobae:
     nombre: Infobae
     tipo: medio_comunicacion
@@ -17320,6 +17480,16 @@ organizations:
     tipo: medio_comunicacion
     pais: Reino Unido
     notas: "Servicio en español de la BBC. Portal bbc.com/mundo."
+  bbc:
+    nombre: BBC
+    tipo: medio_comunicacion
+    pais: Reino Unido
+    notas: "Corporación británica de radiodifusión. Portal bbc.com / bbc.co.uk."
+  europa_press:
+    nombre: Europa Press
+    tipo: medio_comunicacion
+    pais: España
+    notas: "Agencia de noticias española. Portal europapress.es."
   the_independent:
     nombre: The Independent
     tipo: medio_comunicacion

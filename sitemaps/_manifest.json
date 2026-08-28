@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-25T20:42:21.426Z",
+  "actualizado": "2026-08-28T21:43:28.727Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -1202,7 +1202,7 @@
     },
     "colegiocordillera": {
       "nombre": "Colegio Cordillera",
-      "ultima_sync": "2026-08-25T20:41:17.618Z",
+      "ultima_sync": "2026-08-28T21:41:17.059Z",
       "articulos": 123,
       "nuevos": 0,
       "años": 4
@@ -1409,6 +1409,286 @@
       "articulos": 2410,
       "nuevos": 24,
       "años": 1
+    },
+    "sernatur": {
+      "nombre": "SERNATUR",
+      "ultima_sync": "2026-08-28T20:58:21.742Z",
+      "articulos": 5784,
+      "nuevos": 0,
+      "años": 14
+    },
+    "herejia": {
+      "nombre": "Herejía",
+      "ultima_sync": "2026-08-28T20:58:21.748Z",
+      "articulos": 7,
+      "nuevos": 0,
+      "años": 2
+    },
+    "radioimagina": {
+      "nombre": "Radio Imagina",
+      "ultima_sync": "2026-08-28T20:58:34.092Z",
+      "articulos": 28703,
+      "nuevos": 0,
+      "años": 14
+    },
+    "piensachile": {
+      "nombre": "Piensa Chile",
+      "ultima_sync": "2026-08-28T20:58:38.075Z",
+      "articulos": 29809,
+      "nuevos": 0,
+      "años": 23
+    },
+    "ecosistemas": {
+      "nombre": "Ecosistemas",
+      "ultima_sync": "2026-08-28T20:58:34.166Z",
+      "articulos": 6633,
+      "nuevos": 0,
+      "años": 14
+    },
+    "colegiomedico": {
+      "nombre": "Colegio Médico de Chile",
+      "ultima_sync": "2026-08-28T20:59:25.775Z",
+      "articulos": 3134,
+      "nuevos": 3134,
+      "años": 9
+    },
+    "nostalgica": {
+      "nombre": "Nostálgica",
+      "ultima_sync": "2026-08-28T20:58:34.457Z",
+      "articulos": 29744,
+      "nuevos": 0,
+      "años": 3
+    },
+    "primedigital": {
+      "nombre": "Prime Digital",
+      "ultima_sync": "2026-08-28T20:58:28.180Z",
+      "articulos": 2102,
+      "nuevos": 2102,
+      "años": 3
+    },
+    "elinformador": {
+      "nombre": "El Informador Los Andes",
+      "ultima_sync": "2026-08-28T21:09:57.638Z",
+      "articulos": 8969,
+      "nuevos": 0,
+      "años": 10
+    },
+    "elovallino": {
+      "nombre": "El Ovallino",
+      "ultima_sync": "2026-08-28T21:09:57.675Z",
+      "articulos": 3351,
+      "nuevos": 0,
+      "años": 3
+    },
+    "diariolinares": {
+      "nombre": "Diario Linares",
+      "ultima_sync": "2026-08-28T21:09:57.751Z",
+      "articulos": 7698,
+      "nuevos": 0,
+      "años": 6
+    },
+    "latribunadecolchagua": {
+      "nombre": "La Tribuna de Colchagua",
+      "ultima_sync": "2026-08-28T21:12:21.303Z",
+      "articulos": 1003,
+      "nuevos": 0,
+      "años": 4
+    },
+    "fronteranorte": {
+      "nombre": "Frontera Norte",
+      "ultima_sync": "2026-08-28T21:10:48.172Z",
+      "articulos": 19517,
+      "nuevos": 19517,
+      "años": 8
+    },
+    "labatalla": {
+      "nombre": "La Batalla de Maipú",
+      "ultima_sync": "2026-08-28T21:11:01.335Z",
+      "articulos": 6623,
+      "nuevos": 6623,
+      "años": 17
+    },
+    "diarioantofagasta": {
+      "nombre": "Diario Antofagasta",
+      "ultima_sync": "2026-08-28T21:27:48.029Z",
+      "articulos": 27249,
+      "nuevos": 0,
+      "años": 16
+    },
+    "diarioregionalaysen": {
+      "nombre": "Diario Regional Aysén",
+      "ultima_sync": "2026-08-28T21:12:21.282Z",
+      "articulos": 25105,
+      "nuevos": 25105,
+      "años": 8
+    },
+    "diariolagoranco": {
+      "nombre": "Diario Lago Ranco",
+      "ultima_sync": "2026-08-28T21:16:10.466Z",
+      "articulos": 50987,
+      "nuevos": 0,
+      "años": 13
+    },
+    "redinformativa": {
+      "nombre": "Red Informativa",
+      "ultima_sync": "2026-08-28T21:16:10.471Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "diariodepuertomontt": {
+      "nombre": "Diario de Puerto Montt",
+      "ultima_sync": "2026-08-28T21:16:10.757Z",
+      "articulos": 22063,
+      "nuevos": 0,
+      "años": 10
+    },
+    "elcalbucano": {
+      "nombre": "El Calbucano",
+      "ultima_sync": "2026-08-28T21:19:17.958Z",
+      "articulos": 34196,
+      "nuevos": 0,
+      "años": 11
+    },
+    "frenteampliochile": {
+      "nombre": "Frente Amplio",
+      "ultima_sync": "2026-08-28T21:20:54.937Z",
+      "articulos": 104,
+      "nuevos": 0,
+      "años": 3
+    },
+    "frevs": {
+      "nombre": "Federación Regionalista Verde Social",
+      "ultima_sync": "2026-08-28T21:20:54.957Z",
+      "articulos": 1116,
+      "nuevos": 0,
+      "años": 10
+    },
+    "goretarapaca": {
+      "nombre": "Gobierno Regional de Tarapacá",
+      "ultima_sync": "2026-08-28T21:27:51.974Z",
+      "articulos": 4398,
+      "nuevos": 0,
+      "años": 11
+    },
+    "gobiernosantiago": {
+      "nombre": "Gobierno Regional Metropolitano",
+      "ultima_sync": "2026-08-28T21:27:38.671Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "rln": {
+      "nombre": "Radio Las Nieves",
+      "ultima_sync": "2026-08-28T21:27:39.016Z",
+      "articulos": 32126,
+      "nuevos": 0,
+      "años": 9
+    },
+    "insularfm": {
+      "nombre": "Insular FM",
+      "ultima_sync": "2026-08-28T21:27:39.057Z",
+      "articulos": 4000,
+      "nuevos": 0,
+      "años": 1
+    },
+    "diariosurnoticias": {
+      "nombre": "Diario Sur Noticias",
+      "ultima_sync": "2026-08-28T21:27:39.222Z",
+      "articulos": 14389,
+      "nuevos": 0,
+      "años": 13
+    },
+    "clgmedios": {
+      "nombre": "CLG Medios",
+      "ultima_sync": "2026-08-28T21:27:43.426Z",
+      "articulos": 3650,
+      "nuevos": 0,
+      "años": 2
+    },
+    "itvpatagonia": {
+      "nombre": "ITV Patagonia",
+      "ultima_sync": "2026-08-28T21:27:43.609Z",
+      "articulos": 14798,
+      "nuevos": 0,
+      "años": 4
+    },
+    "rfi": {
+      "nombre": "RFI Español",
+      "ultima_sync": "2026-08-28T21:39:11.699Z",
+      "articulos": 395264,
+      "nuevos": 395264,
+      "años": 18
+    },
+    "france24": {
+      "nombre": "France 24",
+      "ultima_sync": "2026-08-28T21:43:28.727Z",
+      "articulos": 235073,
+      "nuevos": 155079,
+      "años": 10
+    },
+    "holanews": {
+      "nombre": "HolaNews",
+      "ultima_sync": "2026-08-28T21:34:09.340Z",
+      "articulos": 17759,
+      "nuevos": 17759,
+      "años": 1
+    },
+    "theguardian": {
+      "nombre": "The Guardian",
+      "ultima_sync": "2026-08-28T21:34:10.283Z",
+      "articulos": 508,
+      "nuevos": 508,
+      "años": 1
+    },
+    "cepchile": {
+      "nombre": "CEP Chile",
+      "ultima_sync": "2026-08-28T21:34:17.325Z",
+      "articulos": 5033,
+      "nuevos": 5033,
+      "años": 25
+    },
+    "udec": {
+      "nombre": "Universidad de Concepción",
+      "ultima_sync": "2026-08-28T21:41:14.816Z",
+      "articulos": 13240,
+      "nuevos": 0,
+      "años": 7
+    },
+    "unab": {
+      "nombre": "Universidad Andrés Bello",
+      "ultima_sync": "2026-08-28T21:41:14.820Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "uautonoma": {
+      "nombre": "Universidad Autónoma de Chile",
+      "ultima_sync": "2026-08-28T21:42:02.624Z",
+      "articulos": 9001,
+      "nuevos": 9001,
+      "años": 7
+    },
+    "ucn": {
+      "nombre": "Universidad Católica del Norte",
+      "ultima_sync": "2026-08-28T21:41:59.126Z",
+      "articulos": 14366,
+      "nuevos": 14366,
+      "años": 15
+    },
+    "explora": {
+      "nombre": "Explora",
+      "ultima_sync": "2026-08-28T21:41:17.051Z",
+      "articulos": 35,
+      "nuevos": 0,
+      "años": 3
+    },
+    "fima": {
+      "nombre": "FIMA",
+      "ultima_sync": "2026-08-28T21:42:02.629Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
     }
   }
 }

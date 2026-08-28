@@ -20,9 +20,9 @@ description: Reacciones comunitarias y verificación de imágenes/audios virales
 
 ### Metodos de busqueda probados (2026-08)
 
-**Reddit r/chile** (los mas confiables):
-- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` funciona con `read_url` (la API JSON `search.json` devuelve 403; r.jina.ai sobre reddit tambien 403). El HTML del search lista titulo + puntos + comentarios + enlace del hilo.
-- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` responde 200; luego parsear con Python:
+**Reddit r/chile** (los mas confiables — **bloqueo 2026-08-28**):
+- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` funcionaba con `read_url` hasta 2026-08-28; desde esa fecha retorna 403 por política de red ("whoa there, pardner! Your request has been blocked due to a network policy" código 01a04a53) incluso con `Mozilla/5.0` UA (probado con `Invoke-WebRequest` y `webfetch`). La API JSON `search.json` ya devolvía 403; r.jina.ai sobre reddit también 403. Queda pendiente probar mirror (Pushshift bloqueado también 403) o acceso autenticado con credenciales developer.
+- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` respondía 200 hasta 2026-08-28; ahora retorna 403 en Cloud IP. Si se libera, luego parsear con Python:
   ```python
   import re, html
   blocks = re.split(r'<div class="entry', data)
@@ -44,7 +44,7 @@ description: Reacciones comunitarias y verificación de imágenes/audios virales
 
 | Red social | Busqueda | Extraccion de comentarios | Notas |
 | --- | --- | --- | --- |
-| Reddit r/chile | ✅ HTML search (read_url) | ✅ HTML + regex (curl) | API JSON y r.jina.ai bloqueados (403) |
+| Reddit r/chile | ⬜ bloqueado 2026-08-28 (403 network policy 01a04a53) | ⬜ bloqueado (403) | HTML search, API JSON y r.jina.ai bloqueados (403); ver métodos arriba para cuando se libere |
 | Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
 | X/Twitter | 🟡 solo via clipping del usuario o prensa | 🟡 comentarios del hilo en el clipping | Sin busqueda publica automatizada probada |
 | Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
