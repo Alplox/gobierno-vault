@@ -652,6 +652,7 @@
 - [2026/05/20260527-2 - Gobierno traslada reos comunes desde el ex penal Punta Peuco a otras cárceles del país](src/content/events/2026/05/20260527-2.md) — 6 fuentes
 - [2026/05/20260528-1 - Kast designa a Daniel Díaz, dirigente de Chuquicamata, como director de Codelco en cupo de los trabajadores](src/content/events/2026/05/20260528-1.md) — 4 fuentes
 - [2026/05/20260529-1 - Diputados interpelan al Gobierno por el documento filtrado 'Desafío 90': 'La estrategia es agobiar'](src/content/events/2026/05/20260529-1.md) — 9 fuentes
+- [2026/05/20260529-2 - INE: desocupación sube a 9,1% en febrero-abril, máximo en casi cinco años; debate en redes advierte 'no se le está tomando el peso'](src/content/events/2026/05/20260529-2.md) — 8 fuentes
 - [2026/06/20260601-1 - Renuncia seremi de Transportes de Aysén por incidente en comisaría](src/content/events/2026/06/20260601-1.md) — 2 fuentes
 - [2026/06/20260601-2 - Kast anuncia Registro Nacional de Vandales e Incivilidades en Cuenta Publica](src/content/events/2026/06/20260601-2.md) — 2 fuentes
 - [2026/06/20260601-3 - Gobierno de Kast solicita al Congreso aumento de techo de deuda por US$6.200 millones](src/content/events/2026/06/20260601-3.md) — 6 fuentes
@@ -718,6 +719,7 @@
 - [2026/07/20260705-1 - Corrupción y redes de ultraderecha: El flanco Orbán abierto en Chile](src/content/events/2026/07/20260705-1.md) — 2 fuentes
 - [2026/07/20260705-2 - Miles de ARMY protestan en Chile por la incertidumbre de los conciertos de BTS en el Estadio Nacional tras la polémica con el IND](src/content/events/2026/07/20260705-2.md) — 5 fuentes
 - [2026/07/20260707-1 - Kast cita a Republicanos en Cerro Castillo para reforzar coordinación tras tensiones oficialistas](src/content/events/2026/07/20260707-1.md) — 3 fuentes
+- [2026/07/20260707-2 - Gobierno recorta $123.914 millones al Sence (45% de su presupuesto) vía Decreto 330 pese a desempleo en máximos de cinco años](src/content/events/2026/07/20260707-2.md) — 4 fuentes
 - [2026/07/20260708-1 - Protesta de Confusam frente a La Moneda por los recortes a la atención primaria termina con ocho detenidos](src/content/events/2026/07/20260708-1.md) — 3 fuentes
 - [2026/07/20260708-2 - CIPER revela que Junji nombró como directora a educadora que destruyó registro de lesiones de infante asesinado por su padrastro en 2022](src/content/events/2026/07/20260708-2.md) — 3 fuentes
 - [2026/07/20260709-1 - Presidencia revela que Kast y Thiel conversaron sobre IA para el Estado, pero rechaza actas y nómina de asistentes](src/content/events/2026/07/20260709-1.md) — 6 fuentes
@@ -745,7 +747,7 @@
 - [2026/07/20260721-2 - Foro Madrid anuncia que V Encuentro Regional se realizará en Santiago el 3 de septiembre](src/content/events/2026/07/20260721-2.md) — 7 fuentes
 - [2026/07/20260721-3 - Traslado de 32 reos de Colina 1 a ex penal Punta Peuco](src/content/events/2026/07/20260721-3.md) — 4 fuentes
 - [2026/07/20260721-4 - Castillo (PC) anuncia Comisión Investigadora por respuesta tardía al sistema frontal](src/content/events/2026/07/20260721-4.md) — 2 fuentes
-- [2026/07/20260721-5 - Sedini acusa presiones y genera crisis en el oficialismo](src/content/events/2026/07/20260721-5.md) — 3 fuentes
+- [2026/07/20260721-5 - Mara Sedini reaparece en Sin Filtros: acusa presiones de 'una de las tres personas más poderosas' y ataca a Vallejo ('menos mal la hice mal')](src/content/events/2026/07/20260721-5.md) — 10 fuentes
 - [2026/07/20260721-6 - Balance del sistema frontal: 10 fallecidos, 4 desaparecidos y más de 104 mil personas aisladas](src/content/events/2026/07/20260721-6.md) — 5 fuentes
 - [2026/07/20260721-7 - Cámara aprueba corazón de la megarreforma y oposición activa ofensiva ante el TC](src/content/events/2026/07/20260721-7.md) — 5 fuentes
 - [2026/07/20260721-8 - Delegación presidencial no pudo llegar a Vallenar por temporal; jefe de avanzada ignoró alertas de seguridad](src/content/events/2026/07/20260721-8.md) — 4 fuentes
@@ -1298,7 +1300,7 @@
 - [2026/08/20260818-11 - Hackeo al Servicio Nacional de Migraciones envía correo masivo con imagen de Pinochet y bloquea trámites durante cuatro horas](src/content/events/2026/08/20260818-11.md) — 2 fuentes
 - [2026/08/20260818-12 - Minsal instruye a hospitales atender más pacientes por hora y Colegio Médico advierte que contempla tiempos incompatibles con una consulta de calidad](src/content/events/2026/08/20260818-12.md) — 1 fuente
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — 2 fuentes
-- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 26 fuentes
+- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 31 fuentes
 - [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 5 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
 - [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
@@ -1359,7 +1361,7 @@
 - [2026/08/20260821-5 - Vicepresidentes del PPD renuncian y anuncian la creación del movimiento 'Firmes por Chile', acusando falta de democracia interna y complicidad con la agenda de Kast](src/content/events/2026/08/20260821-5.md) — 3 fuentes
 - [2026/08/20260821-6 - Embajador de EE.UU. revela que Barros firmó la Declaración de la Americas Counter Cartel Coalition (A3C) el 12 de marzo, reabre debate sobre compromisos de Chile con Washington](src/content/events/2026/08/20260821-6.md) — 6 fuentes
 - [2026/08/20260821-7 - Arrau defiende las facultades del nuevo estado de excepción: 'Interceptar un teléfono no es tema' y promete intervención dura en situaciones puntuales](src/content/events/2026/08/20260821-7.md) — 1 fuente
-- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: Irarrázaval, Dülger y Costabal (Secom) integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 17 fuentes
+- [2026/08/20260821-8 - La sombra de Cerimedo en La Moneda: Irarrázaval, Dülger y Costabal (Secom) integraron 'Casa Común', el comando del Rechazo que contrató a Numen](src/content/events/2026/08/20260821-8.md) — 20 fuentes
 - [2026/08/20260821-9 - La doble función de la asesora legislativa de Lincolao: CEO de consultora de IA y ciberseguridad mientras coordina la tramitación de la Ley de IA](src/content/events/2026/08/20260821-9.md) — 1 fuente
 - [2026/08/20260822-1 - Marcha Nacional contra los Retrocesos Ambientales y por los Animales: movilizaciones en Santiago y regiones contra las políticas ambientales de Kast](src/content/events/2026/08/20260822-1.md) — 7 fuentes
 - [2026/08/20260822-2 - Interno gravemente herido con elemento cortopunzante en La Laguna de Talca: primer incidente grave en el penal de los traslados de Cancerbero](src/content/events/2026/08/20260822-2.md) — 1 fuente
@@ -1383,8 +1385,15 @@
 - [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
 - [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
 - [2026/08/20260826-4 - Arica: detecciones de ingresos irregulares suben 62,3% y Gobierno precisa que no equivale a nuevos cruces fronterizos](src/content/events/2026/08/20260826-4.md) — 8 fuentes
+- [2026/08/20260826-5 - TC publica sentencia fundada que declara inconstitucionales normas tributarias y ambientales de la megarreforma (Roles 17.828-17.832)](src/content/events/2026/08/20260826-5.md) — 5 fuentes
+- [2026/08/20260826-6 - Delegación de Valparaíso modifica registro de lobby y retira a Millones y Víctor Quiroz de reunión por Alto Santorini](src/content/events/2026/08/20260826-6.md) — 13 fuentes
+- [2026/08/20260826-7 - "¡Buena!": imputado por robo en florería de Lota celebra arresto domiciliario nocturno y es reprendido por juez](src/content/events/2026/08/20260826-7.md) — 7 fuentes
 - [2026/08/20260827-1 - Frente Amplio oficia a Migraciones por registros de Arica: pide aclarar metodología del alza de 62,3%](src/content/events/2026/08/20260827-1.md) — 8 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
+- [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 12 fuentes
+- [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
+- [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
+- [2026/08/20260828-5 - Ministro Quiroz en Feria CNTC anticipa segunda y tercera alza del diésel y cifra en $200 por litro lo pendiente de traspasar](src/content/events/2026/08/20260828-5.md) — 7 fuentes
 
 ## 2025
 

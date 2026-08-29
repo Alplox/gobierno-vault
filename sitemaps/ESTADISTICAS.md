@@ -2,12 +2,12 @@
 
 > Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.
 
-**Total de eventos:** 1197
+**Total de eventos:** 1206
 
-**Cobertura de fuentes:** 729 de 1197 eventos con 3+ fuentes (468 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 738 de 1206 eventos con 3+ fuentes (468 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 904
+- 2026: 913
 - 2025: 65
 - 2024: 36
 - 2023: 27
@@ -29,32 +29,32 @@
 - 1973: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (481)
-- Justicia (346)
-- Economia (243)
+- Politica (483)
+- Justicia (349)
+- Economia (249)
 - Defensa y seguridad (236)
-- Administración pública (182)
+- Administración pública (183)
 - Derechos humanos (148)
+- Proceso legislativo (105)
 - Corrupción (104)
-- Proceso legislativo (104)
 - Finanzas publicas (94)
 - Relaciones internacionales (83)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (246)
-- investigacion (152)
-- declaracion (143)
+- accion (247)
+- investigacion (153)
+- declaracion (144)
 - publicacion (135)
 - reaccion (129)
-- resultado (117)
-- fallo_judicial (94)
+- resultado (119)
+- fallo_judicial (96)
 - anuncio (77)
 - votacion (30)
 - entrevista (22)
 
 **Entidades registradas:**
-- Personas: 2076
-- Organizaciones: 1043
+- Personas: 2080
+- Organizaciones: 1046
 - Cifras: 1091
-- Fuentes: 4479
+- Fuentes: 4558
 - Temas: 75

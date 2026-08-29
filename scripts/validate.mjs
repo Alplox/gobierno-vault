@@ -142,6 +142,7 @@ const WHITELIST_MEDIOS = new Set([
   'Municipalidad de Santiago',
   'Municipalidad de Santiago (munistgo.cl)',
   'Municipalidad de Antofagasta',
+  'Federación CCU',
   'Municipalidad de Coquimbo',
   'Partido Republicano de Chile',
   'Embajada de China en Chile',
@@ -213,6 +214,8 @@ const WHITELIST_MEDIOS = new Set([
   'Servicio Nacional de Migraciones',
   'El Carrerino',
   'Ministerio de Obras Públicas',
+  'Tribunal Constitucional de Chile',
+  'Tribunal Constitucional',
 ]);
 
 let errors = 0;

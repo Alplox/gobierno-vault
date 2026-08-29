@@ -1922,11 +1922,188 @@ const MEDIA = {
     nombre: 'UCSC',
     index: 'https://ucsc.cl/sitemap_index.xml',
   },
+  // ---- Batch 8: gobierno, salud, regionales (28-ago-2026) ----
+  // WordPress 5.5+: wp-sitemap.xml
+  subtel: {
+    nombre: 'SUBTEL',
+    index: 'https://www.subtel.gob.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  fisa: {
+    nombre: 'FISA',
+    index: 'https://www.fisa.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  colegiodeenfermeras: {
+    nombre: 'Colegio de Enfermeras',
+    index: 'https://colegiodeenfermeras.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  mop: {
+    nombre: 'MOP',
+    index: 'https://www.mop.gob.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  // Otros sitemaps funcionales
+  senda: {
+    nombre: 'SENDA',
+    index: 'https://www.senda.gob.cl/sitemap_index.xml',
+  },
+  sochob: {
+    nombre: 'Sochob',
+    index: 'https://www.sochob.cl/sitemap.xml',
+  },
+  lanacion: {
+    nombre: 'La Nación',
+    index: 'https://lanacion.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  elsiglo: {
+    nombre: 'El Siglo',
+    index: 'https://elsiglo.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  mintrab: {
+    nombre: 'Ministerio del Trabajo',
+    index: 'https://www.mintrab.gob.cl/sitemap_index.xml',
+  },
+  minvu: {
+    nombre: 'Ministerio de Vivienda',
+    index: 'https://www.minvu.gob.cl/sitemap_index.xml',
+  },
+  // ---- Batch 9: regionales, negocios, medio ambiente (28-ago-2026) ----
+  lahora: {
+    nombre: 'La Hora',
+    index: 'https://lahora.cl/sitemap.xml',
+    // Custom: sitemap/DD-MM-YYYY.xml (diario desde 2014) + news-sitemap.xml
+    includeRe: /(?:sitemap-\d{2}-\d{2}-\d{4}|news-sitemap)\.xml$/,
+  },
+  elcachapoal: {
+    nombre: 'El Cachapoal',
+    index: 'https://elcachapoal.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  cchc: {
+    nombre: 'CCHC',
+    index: 'https://cchc.cl/sitemap.xml',
+    // Custom: sitemap_general.xml, sitemap_noticias.xml, sitemap_eventos.xml
+    includeRe: /sitemap_(general|noticias|eventos)\.xml$/,
+  },
+  terram: {
+    nombre: 'Fundación Terram',
+    index: 'https://www.terram.cl/sitemap.xml',
+    // Custom: sitemap-pt-post-YYYY-MM.xml (no Yoast estándar)
+    includeRe: /sitemap-pt-post-[^/]+\.xml$/,
+  },
   // PDC: robots.txt sin sitemap, sitemap_index.xml retorna 404 — descartado.
   // Conglomerado Estrella/Mercurio (estrellaantofagasta.cl retorna 450; sitemap_index es
   // conglomerado de ~19 diarios, no de un solo sitio — no sincronizable individualmente)
   // Ladera Sur (post-sitemap.xml vacío), G5 Noticias (sitemap descartado por script),
   // Diario Sur (1 URL útil), CLAPES UC (urlset sin artículos) — descartados.
+
+  // ---- Batch 10: gobierno, regional, nacional (28-ago-2026, desde tareas_sitemap) ----
+  // Gubernamentales / institucionales
+  conaf: {
+    nombre: 'CONAF',
+    index: 'https://www.conaf.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  bienesnacionales: {
+    nombre: 'Ministerio de Bienes Nacionales',
+    index: 'https://www.bienesnacionales.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // Regionales
+  elcondor: {
+    nombre: 'El Cóndor',
+    index: 'https://diariocondor.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // Nacionales
+  redaccion: {
+    nombre: 'Redacción',
+    index: 'https://redaccion.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Batch 11: regionales (28-ago-2026, desde tareas_sitemap) ----
+  elsoldeiquique: {
+    nombre: 'El Sol de Iquique',
+    index: 'https://elsoldeiquique.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  eltirapiedras: {
+    nombre: 'El Tirapiedras',
+    index: 'https://eltirapiedras.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radiopirque: {
+    nombre: 'Radio Pirque',
+    index: 'https://radiopirque.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  regionvisual: {
+    nombre: 'Región Visual',
+    index: 'https://regionvisual.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  timeline_cl: {
+    nombre: 'Timeline',
+    index: 'https://timeline.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  tusnoticias: {
+    nombre: 'Tus Noticias',
+    index: 'https://tusnoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  linaresenlinea: {
+    nombre: 'Linares en Línea',
+    index: 'https://linaresenlinea.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  quilpueonline: {
+    nombre: 'Quilpué Online',
+    index: 'https://quilpueonline.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Batch 12: gobierno, nacional, medio ambiente, partidos (28-ago-2026) ----
+  subtrab: {
+    nombre: 'Subsecretaría del Trabajo',
+    index: 'https://www.subtrab.gob.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  fonasa: {
+    nombre: 'Fonasa',
+    index: 'https://www.fonasa.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  liberaleschile: {
+    nombre: 'Partido Liberal de Chile',
+    index: 'https://liberaleschile.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  adiariocr: {
+    nombre: 'aDiarioCR',
+    index: 'https://adiariocr.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  sochicar: {
+    nombre: 'Sociedad Chilena de Cardiología',
+    index: 'https://sochicar.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // Descartados batch 12: munistgo/radiocamara/subturismo/mineduc/minsal/elcorto/
+  // chilenafm/chilenoticias/cctt/codeff/inach/meteored/utalca/ufro/udp/pcchile/pdc/
+  // ppd/democratas — flat urlset. aqua — DNS ENOTFOUND.
+  // Descartados (28-ago-2026 batch 11): elsancarlino/elurbanorural/frutillarhoy/guardiandelsur/
+  // lanoticia/larazon/pautalosrios/primeranota/pucontv/ladiscusion/latribuna — flat urlset.
+  // linaresnoticia/noticiascobquecura — DNS ENOTFOUND. cobquecura — 0 artículos.
+  // australtemuco/australosorno/australvaldivia — conglomerado Estrella/Mercurio (450).
+  // Descartados (28-ago-2026 batch 10): sernac/sii/sag/ispch/cultura/minmujeryeg/sence —
+  // sitemap_index.xml retorna flat urlset (no sitemapindex), articleOnly los descarta.
+  // diarioelheraldo/araucanianoticias/datossur/eltrabajo/elregional/elprovincial/aricaldia/
+  // antofagasta_tv/diariosol — sitemap_index.xml retorna flat urlset sin sub-sitemaps.
+  // elamaule — HTTP 403 (Cloudflare). inoticias — 0 artículos.
 };
 
 // ---------------------------------------------------------------------------

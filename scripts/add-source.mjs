@@ -690,6 +690,20 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'generadoras.cl': 'generadoras',
   'usm.cl': 'usm',
   'ucsc.cl': 'ucsc',
+  'subtel.gob.cl': 'subtel',
+  'senda.gob.cl': 'senda',
+  'fisa.cl': 'fisa',
+  'sochob.cl': 'sochob',
+  'lanacion.cl': 'lanacion',
+  'elsiglo.cl': 'elsiglo',
+  'colegiodeenfermeras.cl': 'colegiodeenfermeras',
+  'mop.gob.cl': 'mop',
+  'mintrab.gob.cl': 'mintrab',
+  'minvu.gob.cl': 'minvu',
+  'lahora.cl': 'lahora',
+  'elcachapoal.cl': 'elcachapoal',
+  'cchc.cl': 'cchc',
+  'terram.cl': 'terram',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -1082,6 +1096,20 @@ const CATALOG_MEDIO_NAMES = {
   generadoras: 'Generadoras de Chile',
   usm: 'USM',
   ucsc: 'UCSC',
+  subtel: 'SUBTEL',
+  senda: 'SENDA',
+  fisa: 'FISA',
+  sochob: 'Sochob',
+  lanacion: 'La Nación',
+  elsiglo: 'El Siglo',
+  colegiodeenfermeras: 'Colegio de Enfermeras',
+  mop: 'MOP',
+  mintrab: 'Ministerio del Trabajo',
+  minvu: 'Ministerio de Vivienda',
+  lahora: 'La Hora',
+  elcachapoal: 'El Cachapoal',
+  cchc: 'CCHC',
+  terram: 'Fundación Terram',
 };
 
 function catalogExists() {

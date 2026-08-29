@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-08-28T23:09:02.142Z",
+  "actualizado": "2026-08-29T00:46:00.904Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -1824,8 +1824,8 @@
       "años": 0
     },
     "pdc": {
-      "nombre": "PDC",
-      "ultima_sync": "2026-08-28T23:05:49.603Z",
+      "nombre": "Partido Demócrata Cristiano",
+      "ultima_sync": "2026-08-29T00:43:35.944Z",
       "articulos": 0,
       "nuevos": 0,
       "años": 0
@@ -1871,6 +1871,601 @@
       "articulos": 20616,
       "nuevos": 20616,
       "años": 18
+    },
+    "subtel": {
+      "nombre": "SUBTEL",
+      "ultima_sync": "2026-08-28T23:20:56.597Z",
+      "articulos": 3832,
+      "nuevos": 3832,
+      "años": 21
+    },
+    "senda": {
+      "nombre": "SENDA",
+      "ultima_sync": "2026-08-28T23:18:52.813Z",
+      "articulos": 11042,
+      "nuevos": 11042,
+      "años": 4
+    },
+    "fisa": {
+      "nombre": "FISA",
+      "ultima_sync": "2026-08-28T23:20:57.363Z",
+      "articulos": 140,
+      "nuevos": 140,
+      "años": 5
+    },
+    "sochob": {
+      "nombre": "Sochob",
+      "ultima_sync": "2026-08-28T23:18:55.914Z",
+      "articulos": 1,
+      "nuevos": 1,
+      "años": 1
+    },
+    "lanacion": {
+      "nombre": "La Nación",
+      "ultima_sync": "2026-08-28T23:19:12.633Z",
+      "articulos": 19655,
+      "nuevos": 19655,
+      "años": 7
+    },
+    "elsiglo": {
+      "nombre": "El Siglo",
+      "ultima_sync": "2026-08-28T23:19:44.379Z",
+      "articulos": 5483,
+      "nuevos": 5483,
+      "años": 4
+    },
+    "colegiodeenfermeras": {
+      "nombre": "Colegio de Enfermeras",
+      "ultima_sync": "2026-08-28T23:20:58.513Z",
+      "articulos": 1491,
+      "nuevos": 1491,
+      "años": 9
+    },
+    "mop": {
+      "nombre": "MOP",
+      "ultima_sync": "2026-08-28T23:21:01.913Z",
+      "articulos": 1689,
+      "nuevos": 1689,
+      "años": 10
+    },
+    "mintrab": {
+      "nombre": "Ministerio del Trabajo",
+      "ultima_sync": "2026-08-28T23:20:15.341Z",
+      "articulos": 5399,
+      "nuevos": 5399,
+      "años": 17
+    },
+    "minvu": {
+      "nombre": "Ministerio de Vivienda",
+      "ultima_sync": "2026-08-28T23:20:34.613Z",
+      "articulos": 2650,
+      "nuevos": 2650,
+      "años": 8
+    },
+    "elcachapoal": {
+      "nombre": "El Cachapoal",
+      "ultima_sync": "2026-08-28T23:44:02.226Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "cchc": {
+      "nombre": "CCHC",
+      "ultima_sync": "2026-08-28T23:43:43.680Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "terram": {
+      "nombre": "Fundación Terram",
+      "ultima_sync": "2026-08-28T23:47:17.012Z",
+      "articulos": 30808,
+      "nuevos": 30808,
+      "años": 25
+    },
+    "lahora": {
+      "nombre": "La Hora",
+      "ultima_sync": "2026-08-28T23:43:43.599Z",
+      "articulos": 44480,
+      "nuevos": 44480,
+      "años": 3
+    },
+    "conaf": {
+      "nombre": "CONAF",
+      "ultima_sync": "2026-08-29T00:10:30.662Z",
+      "articulos": 1735,
+      "nuevos": 0,
+      "años": 3
+    },
+    "sernac": {
+      "nombre": "SERNAC",
+      "ultima_sync": "2026-08-29T00:10:30.665Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "sii": {
+      "nombre": "SII",
+      "ultima_sync": "2026-08-29T00:10:35.353Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "sag": {
+      "nombre": "SAG",
+      "ultima_sync": "2026-08-29T00:10:35.359Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "ispch": {
+      "nombre": "Instituto de Salud Pública",
+      "ultima_sync": "2026-08-29T00:10:35.362Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "bienesnacionales": {
+      "nombre": "Ministerio de Bienes Nacionales",
+      "ultima_sync": "2026-08-29T00:10:35.394Z",
+      "articulos": 1575,
+      "nuevos": 0,
+      "años": 9
+    },
+    "cultura": {
+      "nombre": "Ministerio de las Culturas",
+      "ultima_sync": "2026-08-29T00:10:35.397Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "minmujeryeg": {
+      "nombre": "Ministerio de la Mujer y la Equidad de Género",
+      "ultima_sync": "2026-08-29T00:10:35.400Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "sence": {
+      "nombre": "SENCE",
+      "ultima_sync": "2026-08-29T00:10:35.403Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "australtemuco": {
+      "nombre": "Diario Austral Temuco",
+      "ultima_sync": "2026-08-29T00:10:51.410Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "diarioelheraldo": {
+      "nombre": "Diario El Heraldo",
+      "ultima_sync": "2026-08-29T00:10:51.616Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "araucanianoticias": {
+      "nombre": "Araucanía Noticias",
+      "ultima_sync": "2026-08-29T00:10:57.959Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "datossur": {
+      "nombre": "Datos Sur",
+      "ultima_sync": "2026-08-29T00:10:58.414Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elcondor": {
+      "nombre": "El Cóndor",
+      "ultima_sync": "2026-08-29T00:11:01.166Z",
+      "articulos": 1770,
+      "nuevos": 1770,
+      "años": 7
+    },
+    "eltrabajo": {
+      "nombre": "El Trabajo",
+      "ultima_sync": "2026-08-29T00:11:03.215Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elregional": {
+      "nombre": "El Regional",
+      "ultima_sync": "2026-08-29T00:11:04.793Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elprovincial": {
+      "nombre": "El Provincial",
+      "ultima_sync": "2026-08-29T00:11:09.512Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "aricaldia": {
+      "nombre": "Arica al Día",
+      "ultima_sync": "2026-08-29T00:11:15.513Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "antofagasta_tv": {
+      "nombre": "Antofagasta TV",
+      "ultima_sync": "2026-08-29T00:11:17.481Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "diariosol": {
+      "nombre": "Diario Sol",
+      "ultima_sync": "2026-08-29T00:11:22.394Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "diarioaustralosorno": {
+      "nombre": "Diario Austral Osorno",
+      "ultima_sync": "2026-08-29T00:11:42.206Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elamaule": {
+      "nombre": "El Amaule",
+      "ultima_sync": "2026-08-29T00:11:49.613Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "australvaldivia": {
+      "nombre": "Dirario Austral Valdivia",
+      "ultima_sync": "2026-08-29T00:11:54.707Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "redaccion": {
+      "nombre": "Redacción",
+      "ultima_sync": "2026-08-29T00:11:58.288Z",
+      "articulos": 204,
+      "nuevos": 204,
+      "años": 1
+    },
+    "inoticias": {
+      "nombre": "INoticias.CL",
+      "ultima_sync": "2026-08-29T00:12:01.366Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elsancarlino": {
+      "nombre": "El Sancarlino",
+      "ultima_sync": "2026-08-29T00:30:57.309Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "lanoticia": {
+      "nombre": "La Noticia",
+      "ultima_sync": "2026-08-29T00:31:26.577Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "larazon": {
+      "nombre": "La Razón",
+      "ultima_sync": "2026-08-29T00:31:32.796Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "linaresnoticia": {
+      "nombre": "Linares Noticia",
+      "ultima_sync": "2026-08-29T00:31:35.028Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "pautalosrios": {
+      "nombre": "Pauta Los Ríos",
+      "ultima_sync": "2026-08-29T00:31:38.647Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "primeranota": {
+      "nombre": "Primera Nota",
+      "ultima_sync": "2026-08-29T00:31:49.020Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "pucontv": {
+      "nombre": "Pucón TV",
+      "ultima_sync": "2026-08-29T00:31:50.517Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elsoldeiquique": {
+      "nombre": "El Sol de Iquique",
+      "ultima_sync": "2026-08-29T00:31:51.112Z",
+      "articulos": 29251,
+      "nuevos": 29251,
+      "años": 16
+    },
+    "eltirapiedras": {
+      "nombre": "El Tirapiedras",
+      "ultima_sync": "2026-08-29T00:32:28.307Z",
+      "articulos": 2385,
+      "nuevos": 2385,
+      "años": 7
+    },
+    "elurbanorural": {
+      "nombre": "El Urbano Rural",
+      "ultima_sync": "2026-08-29T00:32:35.462Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "frutillarhoy": {
+      "nombre": "FrutillarHoy",
+      "ultima_sync": "2026-08-29T00:32:40.061Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "guardiandelsur": {
+      "nombre": "Guardián del Sur",
+      "ultima_sync": "2026-08-29T00:32:43.281Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "radiopirque": {
+      "nombre": "Radio Pirque",
+      "ultima_sync": "2026-08-29T00:32:46.337Z",
+      "articulos": 430,
+      "nuevos": 430,
+      "años": 4
+    },
+    "regionvisual": {
+      "nombre": "Región Visual",
+      "ultima_sync": "2026-08-29T00:33:16.866Z",
+      "articulos": 4958,
+      "nuevos": 4958,
+      "años": 20
+    },
+    "timeline_cl": {
+      "nombre": "Timeline",
+      "ultima_sync": "2026-08-29T00:34:33.360Z",
+      "articulos": 19812,
+      "nuevos": 19812,
+      "años": 14
+    },
+    "tusnoticias": {
+      "nombre": "Tus Noticias",
+      "ultima_sync": "2026-08-29T00:35:16.776Z",
+      "articulos": 6112,
+      "nuevos": 6112,
+      "años": 7
+    },
+    "ladiscusion": {
+      "nombre": "La Discusión",
+      "ultima_sync": "2026-08-29T00:35:23.317Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "latribuna": {
+      "nombre": "La Tribuna",
+      "ultima_sync": "2026-08-29T00:35:28.574Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "linaresenlinea": {
+      "nombre": "Linares en Línea",
+      "ultima_sync": "2026-08-29T00:36:21.470Z",
+      "articulos": 19827,
+      "nuevos": 19827,
+      "años": 11
+    },
+    "quilpueonline": {
+      "nombre": "Quilpué Online",
+      "ultima_sync": "2026-08-29T00:37:28.020Z",
+      "articulos": 9262,
+      "nuevos": 9262,
+      "años": 15
+    },
+    "cobquecura": {
+      "nombre": "Municipalidad de Cobquecura",
+      "ultima_sync": "2026-08-29T00:37:36.342Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "noticiascobquecura": {
+      "nombre": "Noticias Cobquecura",
+      "ultima_sync": "2026-08-29T00:37:38.123Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "munistgo": {
+      "nombre": "Municipalidad de Santiago",
+      "ultima_sync": "2026-08-29T00:42:18.432Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "radiocamara": {
+      "nombre": "Radio Cámara",
+      "ultima_sync": "2026-08-29T00:42:20.165Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "subturismo": {
+      "nombre": "Subsecretaría de Turismo",
+      "ultima_sync": "2026-08-29T00:42:23.188Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "subtrab": {
+      "nombre": "Subsecretaría del Trabajo",
+      "ultima_sync": "2026-08-29T00:42:27.875Z",
+      "articulos": 2134,
+      "nuevos": 2134,
+      "años": 17
+    },
+    "mineduc": {
+      "nombre": "Ministerio de Educación",
+      "ultima_sync": "2026-08-29T00:42:37.260Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "minsal": {
+      "nombre": "Ministerio de Salud",
+      "ultima_sync": "2026-08-29T00:42:39.962Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "elcorto": {
+      "nombre": "El Corto",
+      "ultima_sync": "2026-08-29T00:42:50.589Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "chilenafm": {
+      "nombre": "Chilena FM",
+      "ultima_sync": "2026-08-29T00:42:52.472Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "chilenoticias": {
+      "nombre": "ChileNoticias",
+      "ultima_sync": "2026-08-29T00:42:53.118Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "cctt": {
+      "nombre": "Correo de los Trabajadores",
+      "ultima_sync": "2026-08-29T00:43:01.119Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "codeff": {
+      "nombre": "CODEFF",
+      "ultima_sync": "2026-08-29T00:43:03.064Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "inach": {
+      "nombre": "Instituto Antártico Chileno",
+      "ultima_sync": "2026-08-29T00:43:08.557Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "meteored": {
+      "nombre": "Meteored Chile",
+      "ultima_sync": "2026-08-29T00:43:10.567Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "fonasa": {
+      "nombre": "Fonasa",
+      "ultima_sync": "2026-08-29T00:43:24.188Z",
+      "articulos": 270,
+      "nuevos": 270,
+      "años": 3
+    },
+    "utalca": {
+      "nombre": "Universidad de Talca",
+      "ultima_sync": "2026-08-29T00:43:24.459Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "ufro": {
+      "nombre": "Universidad de La Frontera",
+      "ultima_sync": "2026-08-29T00:43:28.095Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "udp": {
+      "nombre": "Universidad Diego Portales",
+      "ultima_sync": "2026-08-29T00:43:28.773Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "pcchile": {
+      "nombre": "Partido Comunista de Chile",
+      "ultima_sync": "2026-08-29T00:43:33.573Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "ppd": {
+      "nombre": "Partido por la Democracia",
+      "ultima_sync": "2026-08-29T00:43:38.551Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "democratas": {
+      "nombre": "Demócratas Chile",
+      "ultima_sync": "2026-08-29T00:43:50.358Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
+    },
+    "liberaleschile": {
+      "nombre": "Partido Liberal de Chile",
+      "ultima_sync": "2026-08-29T00:44:20.443Z",
+      "articulos": 106,
+      "nuevos": 0,
+      "años": 6
+    },
+    "adiariocr": {
+      "nombre": "aDiarioCR",
+      "ultima_sync": "2026-08-29T00:45:49.601Z",
+      "articulos": 8209,
+      "nuevos": 8209,
+      "años": 8
+    },
+    "sochicar": {
+      "nombre": "Sociedad Chilena de Cardiología",
+      "ultima_sync": "2026-08-29T00:45:57.429Z",
+      "articulos": 135,
+      "nuevos": 135,
+      "años": 5
+    },
+    "aqua": {
+      "nombre": "AQUA",
+      "ultima_sync": "2026-08-29T00:46:00.904Z",
+      "articulos": 0,
+      "nuevos": 0,
+      "años": 0
     }
   }
 }
