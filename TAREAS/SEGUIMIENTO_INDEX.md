@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 306
+**Total tareas:** 309
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 223 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 226 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 280 · V: 8 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 283 · V: 8 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -290,6 +290,9 @@
 | S-2026-200 | ⬜ | 2026-08-28 | Caso Cerimedo — leads 28-ago Beller | Acusación “agente de la CIA” y filtro presidencial en Bolivia (“nadie llegaba a Paz sin Fernando”) — Beller lo presenta como asesor principal; contrastar con acta Casa Grande y versión Gálvez y audios/chats | `20260818-14` | Origen: <https://www.elmostrador.cl/unidad-de-investigacion/2026/08/28/nadia-beller-sobre-el-rey-de-los-trolls-el-era-cercano-tenia-proximidad-con-kast/> |
 | S-2026-201 | ⬜ | 2026-08-28 | JetSMART — embargo Sermig | JetSMART — desenlace judicial del embargo ($781M, 42 multas 2023-2025, 10.820 UTM): excepciones en ejecutivo (prueba), juicio nulidad GENDEC y recurso Sermig ante Suprema por sanción anulada por Corte Apelaciones | `20260828-3` | Origen: <https://www.24horas.cl/actualidad/nacional/jetsmart-responde-por-embargo-de-cuentas-y-acusa-que-el-sermig> |
 | S-2026-202 | ⬜ | 2026-08-28 | Combustibles — seguimiento MEPCO | Proyección Quiroz \"$200 por litro\" pendiente de traspasar al diésel (evento 20260828-5): verificar si ENAP aplica segunda y tercera alza | `20260828-5` | Origen: <https://eldesconcierto.cl/actualidad/valor-los-combustibles-ministro-quiroz-preve-una-segunda-y-tercera-alza-200-el-diesel-n5461814> |
+| S-2026-203 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Fiscalía regional resuelve denuncia Santana por granjas de bots (apertura/archivo/no delito) — remisión de Valencia a fiscalía regional (evento 20260828-6) | `20260828-6` | Origen: <https://www.cooperativa.cl/noticias/pais/politica/partido-socialista/diputado-ps-pide-investigar-si-kast-tiene-vinculos-con-fernando-cerimedo-y-sus-granjas-de-bots-/2026-08-28/144843.html> |
+| S-2026-204 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Servel informa si Numen/Numen SpA recibió pagos o prestó servicios en campañas chilenas (eventos 20260828-6, 20260821-8) | `20260828-6` `20260821-8` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/08/27/cuentas-vinculadas-a-cerimedo-y-comando-de-kast-la-denuncia-ingresada-a-fiscalia-por-diputado-santana.shtml> |
+| S-2026-205 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Peritaje de granja de bots y dispositivos incautados en La Paz + control de 180 días de prisión preventiva de Cerimedo en Bolivia | `20260818-14` `20260828-6` | Origen: <https://www.rtve.es/noticias/20260825/caida-trama-fernando-cerimedo-cerebro-digital-ultraderecha-latinoamericana/17201359.shtml> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

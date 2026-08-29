@@ -1388,12 +1388,17 @@
 - [2026/08/20260826-5 - TC publica sentencia fundada que declara inconstitucionales normas tributarias y ambientales de la megarreforma (Roles 17.828-17.832)](src/content/events/2026/08/20260826-5.md) — 5 fuentes
 - [2026/08/20260826-6 - Delegación de Valparaíso modifica registro de lobby y retira a Millones y Víctor Quiroz de reunión por Alto Santorini](src/content/events/2026/08/20260826-6.md) — 13 fuentes
 - [2026/08/20260826-7 - "¡Buena!": imputado por robo en florería de Lota celebra arresto domiciliario nocturno y es reprendido por juez](src/content/events/2026/08/20260826-7.md) — 7 fuentes
+- [2026/08/20260826-8 - En solo seis meses como diputado, Enrique Bassaletti ha recibido más de $33 millones en pensiones de Dipreca además de su dieta](src/content/events/2026/08/20260826-8.md) — 9 fuentes
 - [2026/08/20260827-1 - Frente Amplio oficia a Migraciones por registros de Arica: pide aclarar metodología del alza de 62,3%](src/content/events/2026/08/20260827-1.md) — 8 fuentes
+- [2026/08/20260827-2 - DW contrasta la cárcel La Laguna con Aldea Campesina: vecinos sin pavimentación ni alcantarillado denuncian mitigaciones incumplidas desde 2017](src/content/events/2026/08/20260827-2.md) — 15 fuentes
+- [2026/08/20260827-3 - Gobierno informa récord de 140.412 empresas creadas entre enero y julio de 2026 y lo califica de histórico](src/content/events/2026/08/20260827-3.md) — 11 fuentes
+- [2026/08/20260827-4 - Marta Lagos califica propuesta constitucional de Arrau como 'principio del fin del pinochetismo' y pone nota 2 al Gobierno y 1 a la oposición](src/content/events/2026/08/20260827-4.md) — 7 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 12 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
-- [2026/08/20260828-5 - Ministro Quiroz en Feria CNTC anticipa segunda y tercera alza del diésel y cifra en $200 por litro lo pendiente de traspasar](src/content/events/2026/08/20260828-5.md) — 7 fuentes
+- [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 10 fuentes
+- [2026/08/20260828-6 - Diputado PS Juan Santana denuncia a Cerimedo ante Fiscalía por granjas de bots y eventual financiamiento electoral; Fiscal Nacional deriva a fiscalía regional y Gobierno niega 'vínculo alguno' con Kast](src/content/events/2026/08/20260828-6.md) — 7 fuentes
 
 ## 2025
 

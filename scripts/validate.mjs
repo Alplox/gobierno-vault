@@ -88,6 +88,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Obras Públicas',
   'Ministerio de Vivienda y Urbanismo',
   'Ministerio del Trabajo y Previsión Social',
+  'Ministerio de Economía, Fomento y Turismo',
   'Ministerio de Justicia',
   'Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)',
   'Ministerio de Minería de Chile',

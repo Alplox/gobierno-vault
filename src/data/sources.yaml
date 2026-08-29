@@ -38706,3 +38706,305 @@ reddit-rchile-2026-07-22-sedini-vallejo-reacciones:
   fecha: 2026-07-22
   url: https://old.reddit.com/r/chile/comments/1v3ohc1/mara_sedini_si_hacer_bien_la_pega_es_ser_como/
   notas: "Hilo de r/chile (22-jul-2026) que replica la nota de El Mostrador. Reaccion comunitaria complementaria (NO fuente primaria): 'Soy weona y estoy orgullosa' (810 pts), 'Es que ya ni risa da, ya da hasta pena lo estupida que es' (349 pts), 'Vallejo farmeando aura sin querer' (252 pts), cadena sobre 7-10 millones de sueldo, y criticas transversales ('0 autocritica', 'Se topa con Vallejo y se hace caca'). Se registra solo como termometro de opinion; los hechos estan cubiertos por El Mostrador, BioBioChile, La Cuarta, Pagina 7 y Chilevision. Verificado por lectura directa."
+dwespanol-2026-08-27-laguna-vecinos-sin-pavimento:
+  tipo: video
+  medio: Deutsche Welle
+  titulo: "Vecinos sin pavimento ni alcantarillado junto a la carcel mas moderna de Chile"
+  autor: DW Espanol
+  fecha: 2026-08-27
+  url: https://www.youtube.com/watch?v=sdfFXMB3AKE
+  notas: "Reportaje DW Espanol (27-ago-2026, YouTube/IG/X) sobre el contraste entre la carcel La Laguna (14 modulos, hospital, escuela, 1500 camaras, escaneres corporales, sistema antidrones, placas solares) y la localidad vecina Aldea Campesina (Panguilemo, Talca). DW cifra la inversion del penal en 'mas de 160 millones de dolares' y reporta traslado reciente de 'casi 300 presos de alta peligrosidad' en operativo transmitido en vivo. Vecinos denuncian calles sin pavimentar ('en invierno comimos barro y en verano comimos tierra'), aguas servidas a la calle, plaga de murcielagos en la escuela, y temor por llegada de familiares de presos; relata promesas de mitigacion desde 2017 (agua potable, alcantarillado, CESFAM/SECOF, reten, jardin infantil, bomberos) incumplidas en gobiernos de Bachelet, Pinera y Boric (inauguracion 2025), y promesa del presidente Jose Antonio Kast de reten movil y revision de proyectos. DW cita poblacion de Aldea Campesina como 'cerca de 1500 residentes' en post y 'cerca de 10.000' en audio - discrepancia interna no verificada con censo. El presupuesto oficial del MOP para habilitacion y operacion es UF 1.400.000 (~USD 63 millones) segun DGC, no 160M. Video verificado por transcripcion con yt-dlp/auto-captions."
+
+x-2026-08-27-dw-espanol-post-laguna:
+  tipo: redes
+  medio: X (Twitter)
+  titulo: "Post de DW Espanol sobre vecinos sin pavimento junto a carcel La Laguna"
+  autor: DW Espanol
+  fecha: 2026-08-27
+  url: https://x.com/dw_espanol/status/2092993343462506657
+  notas: "Fuente complementaria (punto de partida, no fuente de datos). Post de DW Espanol en X (27-ago-2026) que promociona el video 'Vecinos sin pavimento ni alcantarillado junto a la carcel mas moderna de Chile' con el texto sobre inversiones millonarias y 1500 residentes sin servicios basicos. Hilo con comentarios que cuestionan sesgo (gestacion de la carcel en gobierno de Bachelet 2017, terreno agricola rural) y respuestas de DW citando minuto 1:38 del video. No aporta datos distintos al video; se registra como origen de la pista."
+
+diariotalca-2026-08-13-kast-reevaluar-aldea-campesina:
+  tipo: prensa
+  medio: Diario Talca
+  titulo: "Presidente Kast comprometio reevaluar en un ano avances de obras para vecinos de Aldea Campesina"
+  fecha: 2026-08-13
+  url: https://diariotalca.cl/presidente-kast-comprometio-reevaluar-en-un-ano-avances-de-obras-para-vecinos-de-aldea-campesina/
+  notas: "Cobertura local (13-ago-2026, actualizada 15-ago) de la reunion de Kast con vecinos de Aldea Campesina tras la Operacion Cancerbero: protesta por repoblamiento del penal a 1 km, demanda de alcantarillado, CESFAM, unidad policial y compania de Bomberos; declaracion del vocero Omar Ramirez sobre compromisos incumplidos pese a carta firmada por Boric en inauguracion 16-ene-2025 y mesa interrumpida en octubre 2025; respuesta de Kast de volver en agosto 2027 para evaluar avances, garantizar entorno libre de asentamientos precarios y comercio ambulante, y mencion a alcantarillado como obra mayor con RS y financiamiento pendiente. Incluye postura del alcalde Juan Carlos Diaz sobre falta de coordinacion."
+
+linaresenlinea-2026-08-13-no-se-ha-cumplido-nada:
+  tipo: prensa
+  medio: Linares en Línea
+  titulo: "'No se ha cumplido nada': vecinos de Aldea Campesina emplazan al presidente Kast por obras pendientes junto a carcel La Laguna"
+  fecha: 2026-08-13
+  url: https://www.linaresenlinea.cl/2026/08/13/no-se-ha-cumplido-nada-vecinos-de-aldea-campesina-emplazan-al-presidente-kast-por-obras-pendientes-junto-a-carcel-la-laguna/
+  notas: "Nota regional (13-ago-2026) con emplazamiento directo de Omar Ramirez a Kast durante visita a La Laguna: Aldea Campesina sigue sin agua potable ni alcantarillado, sin pavimentacion ni infraestructura deportiva/comunitaria pese a compromisos del Estado; exhibe carta firmada por Boric, mesa de trabajo interrumpida en octubre 2025 y preocupacion por nueva poblacion penal (~2.300 plazas) y poblacion flotante, seguridad, plusvalia y fosas septicas anegadas por napas tras lluvias. Confirma capacidad del penal ~2.300 y agenda oficial de Presidencia."
+
+diariotalca-2026-08-20-resguardo-carabineros-aldea:
+  tipo: prensa
+  medio: Diario Talca
+  titulo: "Confirman resguardo permanente de Carabineros para vecinos de Aldea Campesina en Talca"
+  fecha: 2026-08-20
+  url: https://diariotalca.cl/confirman-resguardo-permanente-de-carabineros-para-vecinos-de-aldea-campesina-en-talca/
+  notas: "Balance regional (19-20 ago 2026) tras nuevo traslado de 200 internos desde Valparaiso que eleva ocupacion a 75% de 2.320 plazas. Confirma instalacion de reten movil en Aldea Campesina la semana siguiente como primer compromiso concreto de la mesa creada por Kast, con Delegacion Presidencial (Juan Eduardo Prieto), GORE, municipio, Subdere y Seremi de Seguridad; revision del proyecto de cuartel de Bomberos (recursos asegurados, busqueda de nuevo terreno), pavimentacion, alcantarillado, agua potable, camaras y luminarias. Declaraciones de Raquel Soto (JJVV) y Omar Ramirez (APR Panguilemo) valorando avances; compromiso presidencial de volver en agosto 2027."
+
+veinticuatrohoras-2026-08-16-aldea-campesina-mitigacion:
+  tipo: prensa
+  medio: 24 Horas
+  titulo: "Vecinos de Aldea Campesina exigen cumplimiento de obras de mitigacion"
+  fecha: 2026-08-16
+  url: https://www.24horas.cl/regiones/zona-centro/maule/vecinos-de-aldea-campesina-exigen-cumplimiento-de-obras-de-mitigacion
+  notas: "Nota de TVN/24 Horas (13-ago-2026 publicada 16-ago) con video: vecinos se reunieron con el presidente durante la Operacion Cancerbero y exigen obras de mitigacion (alcantarillado, reten, CESFAM, bomberos). Kast se comprometio a regresar en un ano para conocer avances. Complementa a Diario Talca/Linares en Linea sobre el mismo operativo."
+
+diariotalca-2023-11-13-aldea-movilizaciones-promesas:
+  tipo: prensa
+  medio: Diario Talca
+  titulo: "REPORTAJE: Aldea Campesina prepara movilizaciones por promesas incumplidas"
+  fecha: 2023-11-13
+  url: https://diariotalca.cl/reportaje-aldea-campesina-prepara-movilizaciones-por-promesas-incumplidas/
+  notas: "Reportaje de fondo (13-nov-2023, Claudio Aguilar/Luis Casanova) un ano antes del funcionamiento de La Laguna: vecinos denuncian que pese a consulta ciudadana rechazada (82% en 2008) y mesa de sociabilizacion de 2017, a un ano de operar el penal (2.320 plazas) no hay CESFAM, cuartel de Bomberos, jardin infantil/sala cuna ni planta de tratamiento/alcantarillado. Listado de 5 proyectos 'imaginarios' (planta de tratamiento + agua/alcantarillado, cuartel de Carabineros descartado por falta de personal y reemplazable por tenencia movil, jardin infantil sin terreno/financiamiento, CESFAM sin terreno, pavimentacion). SEREMI de Justicia Jose Gonzalez confirma compromisos de 2017-2018, avances en planta de tratamiento con observaciones de MDS y regularizacion 2019 de terreno para jardin/CESFAM no priorizado por JJVV, y terreno entregado para Bomberos. Contexto historico clave para verificar promesas citadas por DW."
+
+publimicro-2026-08-22-cuartel-movil-aldea-laguna:
+  tipo: prensa
+  medio: Publimicro
+  titulo: "Instalaran cuartel movil de Carabineros en Aldea Campesina tras apertura de la carcel La Laguna en Talca"
+  fecha: 2026-08-22
+  url: https://publimicro.cl/instalaran-cuartel-movil-de-carabineros-en-aldea-campesina-tras-apertura-de-la-carcel-la-laguna-en-talca/
+  notas: "Nota regional (22-ago-2026) que confirma instalacion anunciada de reten movil en Aldea Campesina tras mesa de trabajo Presidencial, GORE y municipio, como primera medida de mitigacion de seguridad tras el poblamiento de La Laguna. Complementa a Diario Talca 20-ago."
+instagram-2026-08-27-dw-espanol-laguna-vecinos:
+  tipo: red_social
+  medio: Instagram
+  titulo: "Vecinos sin pavimento ni alcantarillado junto a la cárcel más moderna de Chile"
+  autor: DW Español
+  fecha: 2026-08-27
+  url: https://www.instagram.com/dw_espanol/reel/DcjEy_zDto5/
+  notas: "Reel de DW Español en Instagram (27-ago-2026) con el mismo reportaje en video que en YouTube y X: contraste entre la cárcel La Laguna (Panguilemo, Talca) y Aldea Campesina, con el texto 'Vecinos sin pavimento ni alcantarillado junto a la cárcel más moderna de Chile. Mientras que el recinto ha recibido inversiones millonarias (...) los habitantes de la localidad más cercana denuncian el persistente abandono (...) Calles sin pavimentar, problemas de saneamiento y deficiencias en servicios básicos son algunas de las promesas incumplidas a los cerca de 1500 residentes'. Misma cobertura que el video de YouTube dwespanol-2026-08-27-laguna-vecinos-sin-pavimento y el post en X; se registra como fuente de la cifra de 1.500 promovida en texto."
+cooperativa-2026-08-28-santana-cerimedo-kast-bots:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Diputado PS pide investigar si Kast tiene vínculos con Fernando Cerimedo y sus 'granjas de bots'"
+  autor: Cooperativa.cl
+  fecha: 2026-08-28
+  url: https://www.cooperativa.cl/noticias/pais/politica/partido-socialista/diputado-ps-pide-investigar-si-kast-tiene-vinculos-con-fernando-cerimedo-y-sus-granjas-de-bots-/2026-08-28/144843.html
+  notas: "Cooperativa (28-ago-2026 15:09). Diputado PS Juan Santana oficio al Ministerio Publico para investigar eventuales vinculos de Fernando Cerimedo con integrantes del equipo de Jose Antonio Kast en operaciones digitales con 'ejercitos de bots'. Incluye declaracion de Santana sobre 'graves antecedentes' y 'vinculos con personas del equipo de Kast' y respuesta del fiscal nacional Angel Valencia: 'Lo que corresponde... es remitir a fiscalia regional para que decida si procede abrir investigacion, archivarla o decidir que no hay delito'. Detalla contexto de Cerimedo: fundador Numen y La Derecha Diario, asesor Milei/Bolsonaro/Rodrigo Paz, detencion 18-ago por intento femicidio contra Nadia Beller y hallazgo de granja de bots. Verificada por lectura directa."
+biobiochile-2026-08-27-santana-denuncia-cerimedo-campanas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Diputado Santana denuncia a Cerimedo y solicita a Fiscalía indagar su actividad en campañas chilenas"
+  autor: Megam Ossandón
+  fecha: 2026-08-27
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/27/diputado-santana-denuncia-a-cerimedo-y-solicita-a-fiscalia-indagar-su-actividad-en-campanas-chilenas.shtml
+  notas: "BioBioChile (27-ago-2026 13:03). Santana pide indagar delitos informaticos y financiamiento electoral vinculados a Cerimedo, incluyendo su rol en campanas del Rechazo (Numen, encuesta El Mercurio 2020) y eventual participacion en campana presidencial de Kast (via Agustin Romo). Individualiza a Irarrazaval y Costabal como participantes de Casa Comun luego en La Moneda, y denuncia uso de cuentas contra Matthei (falso alzheimer). Incluye delitos invocados: amenazas, asociacion ilicita, tratamiento ilicito de datos. Verificada por lectura directa."
+biobiochile-2026-08-27-cuentas-vinculadas-santana-fiscalia:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Cuentas vinculadas a Cerimedo y comando de Kast: La denuncia ingresada a Fiscalía por diputado Santana"
+  autor: Antonio González
+  fecha: 2026-08-27
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/27/cuentas-vinculadas-a-cerimedo-y-comando-de-kast-la-denuncia-ingresada-a-fiscalia-por-diputado-santana.shtml
+  notas: "BioBioChile (27-ago-2026 22:27). Detalle del libelo: tres novedades (hechos nuevos post-sept 2025, tipificacion por amenazas/delitos informaticos vs bots sin sancion, acumulacion de causas), roles de Numen/El Mercurio/AIM en 2020, Numen SpA 2022 con Enrique Garcia Arancibia, operacion coordinada de cuentas @Drestrump_PL/@kasterizador/@JackedIn (Neuroc/Ricardo Inaiman), ataque coordinado contra Matthei (84 publicaciones contra Kaiser, falso Alzheimer), querella de mujer por injurias y datos personales (21 publicaciones 17-18 sep 2025), delitos art. 296, Ley 21.459 art. 2 y 6, art. 293-294, y desactivacion masiva 18-20 ago con urgencia de preservar IPs/correos. Verificada por lectura directa."
+adnradio-2026-08-27-santana-delitos-informaticos:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Diputado Juan Santana denunciará eventuales delitos informáticos vinculados a Fernando Cerimedo en Chile"
+  autor: Juan Carlos Castillo
+  fecha: 2026-08-27
+  url: https://www.adnradio.cl/2026/08/27/diputado-juan-santana-denunciara-eventuales-delitos-informaticos-vinculados-a-fernando-cerimedo-en-chile/
+  notas: "ADN Radio (27-ago-2026 08:36). Santana anuncia denuncia por eventuales delitos informaticos de red de bots atribuida a Cerimedo, su posible influencia en campanas chilenas y eventual relacion con desinformacion (modelo 'mentirle al algoritmo'), con antecedentes de estructura de miles de cuentas automatizadas y pagos a periodistas/influencers denunciados por Beller en Bolivia, y reaccion de Matthei alertando por granjas de bots. Verificada por lectura directa."
+rtve-2026-08-25-caida-trama-cerimedo:
+  tipo: prensa
+  medio: RTVE
+  titulo: "Caída y trama de Fernando Cerimedo, cerebro digital de la ultraderecha latinoamericana"
+  autor: Víctor García Guerrero
+  fecha: 2026-08-25
+  url: https://www.rtve.es/noticias/20260825/caida-trama-fernando-cerimedo-cerebro-digital-ultraderecha-latinoamericana/17201359.shtml
+  notas: "RTVE (25-ago-2026, actualizado 27-ago). Perfil internacional: detencion en Viru Viru por intento homicidio pareja embarazada Nadia Beller, hallazgo mini granja bots y vehiculos oficiales, red continental via Numen y La Derecha Diario con conexiones Miami/Trump (Brad Parscale 2016-2020), acusaciones adicionales en Mexico, vinculos con ultrasionismo/israeli y geopolitica EEUU, distanciamientos de Milei y Javier Negre (venta 50% La Derecha Diario). Corrobora con fuente europea el nucleo del caso y amplia contexto transnacional mas alla de prensa chilena. Verificada por lectura directa."
+biobiochile-2026-08-28-gobierno-descarta-nexos-cerimedo:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno de Kast descarta nexos con Fernando Cerimedo, 'Rey de los trolls': 'No hay vínculo alguno'"
+  autor: Jean Valencia
+  fecha: 2026-08-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/28/gobierno-de-kast-descarta-nexos-con-fernando-cerimedo-rey-de-los-trolls-no-hay-vinculo-alguno.shtml
+  notas: "BioBioChile (28-ago-2026 19:49). Subsecretario del Interior Maximo Pavez (citando 24 Horas) niega vinculacion: 'el Gobierno de Chile no tiene ninguna vinculacion con la persona que usted me menciona, todo lo vinculado con la campana del hoy Presidente estan aprobado, rendido. No hay vinculo alguno'. Recuerda investigaciones contra Cerimedo (femicidio frustrado, enriquecimiento ilicito, narcotrafico Bolivia) y rol Numen en Rechazo 2020-2022 con Irarrazaval y Costabal en Casa Comun, y modus operandi granja bots con Milei/Bolsonaro/Rodrigo Paz. Contrapeso oficial esencial para reducir sesgo. Verificada por lectura directa."
+infogate-2026-08-27-santana-cerimedo-fiscalia-bots:
+  tipo: prensa
+  medio: Infogate
+  titulo: "Diputado PS lleva caso Cerimedo a Fiscalía: pide indagar redes de bots y eventual financiamiento electoral"
+  autor: Hans Hansen
+  fecha: 2026-08-27
+  url: https://infogate.cl/2026/08/diputado-ps-lleva-caso-cerimedo-a-fiscal-a-pide-indagar-redes-de-bots-y-eventual-financiamiento-electoral/
+  notas: "Infogate (27-ago-2026). Replica de denuncia Santana: pide investigar delitos informaticos de redes de bots y eventual financiamiento electoral, previa solicitud al Servel sobre pagos a empresas vinculadas a Cerimedo/Numen, rol en encuesta Casa Comun/El Mercurio 2020, presencia de Irarrazaval/Costabal en La Moneda, cita a Agustin Romo sobre participacion en campana Kast, y novedad penal (amenazas/asociacion ilicita/datos personales, caso Matthei). Quinta fuente distinta para validar denuncia. Verificada por lectura directa."
+
+biobiochile-2026-08-27-gobierno-reporta-140-mil-empresas:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Gobierno reporta que se crearon 140.412 empresas en primer semestre y califica cifra de \"histórica\""
+  autor: Verónica Reyes
+  fecha: 2026-08-27
+  url: https://www.biobiochile.cl/noticias/economia/negocios-y-empresas/2026/08/27/gobierno-reporta-que-se-crearon-140-412-empresas-en-primer-semestre-y-califica-cifra-de-historica.shtml
+  notas: "BioBioChile (27-ago-2026). Reporta 140.412 constituciones enero-julio 2026, record desde 2013, +15.618 vs 2025. Cita a biministro Daniel Mas. Detalle julio 20.013 (-4 pct YoY), RM 8.408 (45,7 pct), Valparaiso 1.746 (9,5 pct), Biobio 1.409 (7,7 pct), SPA 14.938 (81,2 pct), EIRL 2.206 (12,0 pct), SRL 1.265 (6,8 pct), giros comercio/asesorias/transporte y participacion femenina 38,4 pct extranjeros 11,0 pct. Verificada via economia.gob.cl."
+economia-2026-08-27-constitucion-empresas-historica:
+  tipo: comunicado_oficial
+  medio: Ministerio de Economía, Fomento y Turismo
+  titulo: "Constitución de empresas alcanza histórica cifra: se han creado más de 140 mil durante 2026"
+  fecha: 2026-08-27
+  url: https://www.economia.gob.cl/2026/08/27/constitucion-de-empresas-alcanza-historica-cifra-se-han-creado-mas-de-140-mil-durante-2026.htm
+  notas: "Comunicado oficial (27-ago-2026 19:54 UTC). Informa 140.412 registros enero-julio 2026 (+15.618 vs 2025), mayor acumulado desde 2013 y RES 129.345 (90 pct+). Julio 20.013 (-4 pct YoY), RM 8.408 (45,7 pct), Valparaiso 9,5 pct, Biobio 7,7 pct, SPA 81,2 pct, EIRL 12,0 pct, SRL 6,8 pct. Giros comercio/asesorias/comercio internacional/arriendo/administracion/transporte, femenina 38,4 pct extranjeros 11,0 pct. Cita Daniel Mas 'resiliencia y dinamismo'. Fuente primaria."
+infobae-2026-08-28-gobierno-chile-celebra-140-mil-empresas:
+  tipo: prensa
+  medio: Infobae
+  titulo: "El gobierno de Chile celebró la histórica creación de 140 mil empresas en el primer semestre del año"
+  autor: Mauricio Palazzo
+  fecha: 2026-08-28
+  url: https://www.infobae.com/america/america-latina/2026/08/28/el-gobierno-de-chile-celebro-la-historica-creacion-de-140-mil-empresas-en-el-primer-semestre-del-ano/
+  notas: "Infobae (28-ago-2026). Replica cifra oficial 140.412 enero-julio (+15.618 vs 2025), cita completa a Daniel Mas y desglose regional y por tipo societario. Confirma con texto del Ministerio. Tercera fuente distinta para validar."
+
+x-2026-08-27-biobio-post-empresas:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Post de @biobio en X sobre creacion de 140.412 empresas"
+  fecha: 2026-08-27
+  url: https://x.com/biobio/status/2093036397443555611
+  notas: "Post de BioBioChile en X (27-ago-2026) que difunde nota 'Gobierno reporta 140.412 empresas'. Comentarios ilustran escepticismo (ej. 'Si cada empresa tuviese 3 empleados no habria desempleo', 'muchas cambiaron de Ltda a SpA'). Fuente complementaria de reacciones comunitarias, no de datos; los hechos estan cubiertos por economia.gob.cl y prensa."
+
+x-2026-08-27-lpercan-3-empleados:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Comentario de @lpercan sobre cifra 140.412 empresas"
+  autor: "@lpercan"
+  fecha: 2026-08-27
+  url: https://x.com/lpercan/status/2093048260759802078
+  notas: "Comentario en hilo de @biobio (27-ago-2026): 'Si cada una de esas empresas, además de su creador tuviese 3 empleados, no habría desempleo. Mala la mentira'. Fuente complementaria de reaccion comunitaria, no de datos."
+x-2026-08-28-crismcastros-ltda-spa:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Comentario de @CrisMCastroS sobre empresas Ltda a SpA"
+  autor: "@CrisMCastroS"
+  fecha: 2026-08-28
+  url: https://x.com/CrisMCastroS/status/2093382596574998904
+  notas: "Comentario en hilo de @biobio (28-ago-2026): 'Gobierno culiao penca, muchas ni siquiera son nuevas sino que cambiaron de Ltda a Spa'. Incluye capturas. Fuente complementaria de reaccion comunitaria."
+
+elpais-2026-08-27-marta-lagos-arrau-pinochetismo:
+  tipo: entrevista
+  medio: El País (Chile)
+  titulo: "Marta Lagos: “La propuesta constitucional de Arrau es el principio del fin del pinochetismo”"
+  autor: Rocío Montes
+  fecha: 2026-08-27
+  url: https://elpais.com/chile/2026-08-27/marta-lagos-la-propuesta-constitucional-de-arrau-es-el-principio-del-fin-del-pinochetismo.html
+  notas: "Entrevista en De esto se habla (El País/ADN, conducen Rocío Montes y Rafael Cavada, video YouTube). Marta Lagos analiza 5 meses de Gobierno Kast (nota 2), oposicion 1 ('no existe'), populismo y Franco Parisi, megarreforma de Jorge Quiroz y reforma constitucional restrictiva de Arrau para seguridad. Frase titular 'principio del fin del pinochetismo' y 'Bienvenido el error de Arrau porque la democracia saldrá fortalecida'. Verificada via r.jina (18400 chars) con paywall parcial; titulo y sumario verificados."
+elpais-2026-08-18-kast-nuevo-estado-excepcion:
+  tipo: prensa
+  medio: El País (Chile)
+  titulo: "Kast propone un nuevo estado de excepción para amenazas graves a la seguridad pública con fuertes restricciones"
+  autor: Rocío Montes
+  fecha: 2026-08-18
+  url: https://elpais.com/chile/2026-08-18/kast-propone-un-nuevo-estado-de-excepcion-para-amenazas-graves-a-la-seguridad-publica-con-fuertes-restricciones.html
+  notas: "Detalle de las 8 reformas constitucionales ACOT ingresadas al Senado el 18-ago-2026: nuevo estado de excepción 120 días prorrogable, suspensión/restricción de libertad personal/locomoción/reunión/asociación, interceptación comunicaciones y requisiciones. Explica Arrau en Tolerancia Cero (CNN) 'intervenciones profundas, temporales y con rendición de cuentas' y listado de crimen organizado Tren de Aragua/delito de pertenencia. Contexto borrador prestaciones sociales a ley de quorum. Verificada via r.jina (9468 chars)."
+
+elperiodista-2026-08-01-marta-lagos-helia-molina-extrema-derecha:
+  tipo: prensa
+  medio: El Periodista
+  titulo: "Marta Lagos y Helia Molina abren debate sobre carácter de “extrema derecha” del Gobierno"
+  fecha: 2026-08-01
+  url: https://www.elperiodista.cl/2026/08/marta-lagos-y-helia-molina-abren-debate-sobre-caracter-de-extrema-derecha-del-gobierno/
+  notas: "Cobertura del debate en X entre Marta Lagos y Helia Molina sobre calificación de extrema derecha al Gobierno Kast, con intervencion de Sergio Campos sobre rasgos de ultraderecha. Verificada via r.jina (6220 chars)."
+
+contrapoderchile-2026-08-26-bassaletti-33-millones:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "En solo 6 meses: Enrique Bassaletti ha recibido más de $33 millones en pensión desde que asumió como diputado republicano"
+  fecha: 2026-08-26
+  url: https://contrapoderchile.cl/en-solo-6-meses-enrique-bassaletti-ha-recibido-mas-de-33-millones-en-pension-desde-que-asumio-como-diputado-republicano/
+  notas: "Reportaje basado en planilla de Dipreca obtenida vía Transparencia: pensiones de retiro de Bassaletti como exgeneral ($5.016.530) y como profesor de Carabineros ($580.898) entre marzo y agosto de 2026; total $33.584.568 ($30.099.180 + $3.485.388). Dieta de diputado $8.239.091 y comparación con pensión AFP promedio menor a $500 mil y FF.AA. $1,5M según Fundación Sol. Incluye dato de 0 mociones entre marzo-junio y 11 posteriores."
+
+contrapoderchile-2026-01-05-bassaletti-doble-pension:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "Más de $60 millones anuales: Registro de la Dipreca revela que diputado Enrique Bassaletti recibe doble pensión como exgeneral"
+  fecha: 2026-01-05
+  url: https://contrapoderchile.cl/mas-de-60-millones-anuales-registro-de-la-dipreca-revela-que-diputado-electo-enrique-bassaletti-recibe-doble-pension-como-exgeneral/
+  notas: "Primer reportaje Dipreca vía Transparencia: Bassaletti recibe $4.893.337 como exgeneral y $561.580 como profesor (desde sept 2025), total $5.454.917 mensual; $60.966.364 en 2025. Antecedente directo del seguimiento de agosto 2026."
+
+elciudadano-2026-01-05-bassaletti-doble-pension:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Diputado electo: Revelan que Enrique Bassaletti recibe doble pensión en Carabineros y ganará casi $13 millones al mes"
+  autor: El Ciudadano
+  fecha: 2026-01-05
+  url: https://www.elciudadano.com/chile/diputado-electo-revelan-que-enrique-bassaletti-recibe-doble-pension-en-carabineros-y-ganara-casi-13-millones-al-mes/01/05/
+  notas: "Replica de Contrapoder 5-ene-2026: confirma doble pensión Dipreca de Bassaletti y suma dieta parlamentaria. Segunda fuente independiente del mismo dato primario."
+
+camara-2026-04-13-dieta-actualizada:
+  tipo: prensa
+  medio: Cámara de Diputados
+  titulo: "Dieta Parlamentaria año 2026 (Sueldo)"
+  fecha: 2026-04-13
+  url: https://www.camara.cl/transparencia/doc/dieta_actualizada.pdf
+  notas: "PDF oficial de Transparencia de la Cámara: dieta bruta mensual $8.239.091 desde julio 2020 (vigente 2026). Fuente gubernamental directa que valida el cálculo de $13.836.519 mensuales (dieta + pensiones) citado por Contrapoder."
+
+camara-2026-08-28-mociones-bassaletti:
+  tipo: prensa
+  medio: Cámara de Diputados
+  titulo: "Diputado Enrique Bassaletti Riess - Mociones"
+  fecha: 2026-08-28
+  url: https://www.camara.cl/diputados/detalle/mociones.aspx?prmID=1190
+  notas: "Ficha oficial de la Cámara: 13 mociones de Bassaletti desde 09-jun-2026 (desde 18353-07 a 18596-06). Valida el dato de Contrapoder de 0 mociones entre marzo y junio de 2026 para 15 republicanos incluida Bassaletti y las 11-13 mociones posteriores desde la semana del reportaje del 05-jun-2026."
+
+contrapoderchile-2026-06-05-bancada-republicana-0-mociones:
+  tipo: prensa
+  medio: Contrapoder Chile
+  titulo: "Entre ellos el diputado Kast: 15 diputados de la Bancada Republicana registraron 0% de mociones en tres meses"
+  fecha: 2026-06-05
+  url: https://contrapoderchile.cl/entre-ellos-el-diputado-kast-15-diputados-de-la-bancada-republicana-registran-0-de-mociones/
+  notas: "Revisión de registros oficiales de la Cámara (asistencia, oficios y mociones) entre marzo y junio de 2026: 15 de 31 republicanos con 0 mociones, entre ellos Bassaletti, Kast, Carter y Romero. Base del dato de mociones citado en el seguimiento de agosto."
+
+elciudadano-2026-05-23-pensiones-fuerza-fundacion-sol:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Estudio revela que FFAA reciben en promedio jubilaciones tres veces mayores que cotizantes AFP: Pensiones por la Fuerza de Fundación Sol"
+  autor: Alfredo Seguel
+  fecha: 2026-05-23
+  url: https://www.elciudadano.com/actualidad/estudio-revela-que-ffaa-reciben-en-promedio-jubilaciones-tres-veces-mayores-que-cotizantes-afp-pensiones-por-la-fuerza-de-fundacion-sol/05/23/
+  notas: "Versión 2026 del estudio Pensiones por la Fuerza (Fundación Sol): CAPREDENA 103.409 pensiones promedio $1.305.579 (retiro $1.511.727), DIPRECA 48.169 pensiones retiro $1.679.020; AFP vejez 25-30 años $500.970. Generales sobre $5M (9-10x). Gasto fiscal US$3.093M para 174.546 pensionados vs US$8.119M PGU para 2,7M. Permite contrastar la comparación de Contrapoder ($1,5M vs menor a $500 mil y 10x) con datos precisos."
+
+radio-uchile-2024-05-27-pensiones-ffaa-triplican-afp:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Estudio afirma que pensiones de las FF.AA. y de Orden son tres veces superiores a las que pagan las AFP"
+  fecha: 2024-05-27
+  url: https://radio.uchile.cl/2024/05/27/estudio-afirma-que-pensiones-de-las-ff-aa-y-de-orden-son-tres-veces-superiores-a-las-que-pagan-las-afp/
+  notas: "Cobertura 2024 del estudio Pensiones por la Fuerza (Fundación Sol): DIPRECA antigüedad promedio $1.572.157 (3,3x AFP), CAPREDENA $1.187.809 (2,9x), detalle por grado y gasto fiscal. Complemento histórico que valida la tendencia citada por Contrapoder 2026."
+
+ciperchile-2026-08-10-pensiones-100-millones-afp:
+  tipo: prensa
+  medio: CIPER Chile
+  titulo: "Estudio de Fundación Sol: trabajadores con $100 millones en sus cuentas de AFP obtienen una pensión autofinanciada menor al sueldo mínimo"
+  fecha: 2026-08-10
+  url: https://www.ciperchile.cl/2026/08/10/estudio-de-fundacion-sol-trabajadores-con-100-millones-en-sus-cuentas-de-afp-obtienen-una-pension-autofinanciada-menor-al-sueldo-minimo/
+  notas: "Entrevista a Marco Kremerman sobre Pensiones sin Seguridad Social (Fundación Sol): 150 mil jubilados 2025 con mediana autofinanciada menor a $86 mil; $100M alcanzan para $465k (hombre) / $412k (mujer), por debajo del mínimo $529 mil. Contexto para valorar la brecha con pensiones de retiro de FF.AA."
+
+biobiochile-2026-08-28-kast-agradece-camioneros-alza-combustibles:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Kast agradece a los camioneros por aceptar el alza de los combustibles"
+  autor: Samuel Fuentes
+  fecha: 2026-08-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/28/kast-agradece-a-los-camioneros-por-aceptar-el-alza-de-los-combustibles.shtml
+  notas: "Ceremonia Dia del Camionero 27-ago (publicado 28-ago 08:35): Kast agradecio al gremio por comprender el alza de combustibles decidida a inicios de ano como 'la mas responsable'; reconocio efectos economicos y geopoliticos por conflicto en Oriente Medio y Estrecho de Ormuz, caida en encuestas y defensa de 'hablar con la verdad' vs endeudarse; vinculo a agenda de seguridad ('tanto o mas caro que el alza del combustible') y a Juan Araya (CNDC) pidiendo certezas de crecimiento."
+
+prensa-presidencia-2026-08-27-kast-dia-camionero-comunicado:
+  tipo: prensa
+  medio: Presidencia de la República
+  titulo: "Presidente Jose Antonio Kast en conmemoracion del Dia del Camionero: Cual es el primer rol del Estado? Darles seguridad a las personas"
+  fecha: 2026-08-27
+  url: https://prensa.presidencia.cl/comunicado.aspx?id=339321
+  notas: "Comunicado oficial 27-ago-2026: Kast participo junto a Quiroz, De Grange y Koehler en Dia del Camionero; contexto de trabajo con gremios del transporte por alza internacional de combustibles y medidas de apoyo; discurso sobre seguridad como primer rol del Estado y 'animitas' en carretera. Fuente gubernamental directa que valida ceremonia y contexto citado por BioBio."
+
+prensa-presidencia-2026-08-27-kast-dia-camionero-discurso:
+  tipo: prensa
+  medio: Presidencia de la República
+  titulo: "Presidente de la Republica, Jose Antonio Kast, participa de ceremonia en conmemoracion al Dia del Camionero"
+  fecha: 2026-08-27
+  url: https://prensa.presidencia.cl/discurso.aspx?id=339388
+  notas: "Transcripcion integra del discurso 27-ago-2026: agradecimiento 'cuando Chile pasa por momentos dificiles, ustedes han estado ahi', reconocimiento de alza dura para vulnerables y camioneros, caida en encuestas, 'rendirse a la solucion facil?', 'nosotros estamos en una situacion mucho mas auspiciosa que decidieron endeudarse', mesas de trabajo con Transportes/Economia/Hacienda, y vinculo seguridad vs combustible. Valida citas textuales de BioBio."
