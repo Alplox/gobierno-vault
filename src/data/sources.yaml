@@ -38196,6 +38196,22 @@ reddit-rchile-2026-06-19-pensado-matarse-pega:
   fecha: 2026-06-19
   url: https://old.reddit.com/r/chile/comments/1uaazg3/alguien_ha_pensado_en_m4t4rse_por_no_tener_pega/
   notas: "Hilo r/chile (19-jun-2026) sobre ideación suicida ligada a desempleo. Reacciones con alta votación: 'Pienso en matarme cada 5 minutos y tengo pega' (557 pts), testimonio ingeniero civil Uchile 3 años sin pega (313 pts). Señala impacto en salud mental de la crisis laboral. Se registra con resguardo: no detalla métodos, se complementa con recurso de ayuda *4141 (Salud Responde) y derivación a apoyo. Rol c: muestra costo humano del desempleo más allá de cifras INE. (evento 20260828-2)."
+reddit-rchile-2026-08-29-busco-trabajo-5-anos:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Busco trabajo hace 5 años... Y no encuentro nada"
+  autor: Less-Sthep
+  fecha: 2026-08-29
+  url: https://old.reddit.com/r/chile/comments/1w1wo4x/busco_trabajo_hace_5_a%C3%B1os_y_no_encuentro_nada/
+  notas: "Hilo r/chile (29-ago-2026) de socióloga de Concepción, 30 años, egresada con licencia sin título (5-6 años), sin pega estable hace 5 años, solo empleos esporádicos, -8 miopía + astigmatismo impide licencia Uber, sin pituto ni capital para pyme, vive con familia. Reacciones comunitarias complementarias (rol c, 80+ comentarios): 'Por una puta vez: CIERREN UNIVERSIDADES Y CARRERAS DE MIERDA' (Dangerous-Spend-9852, 104 pts), debate 'educación es negocio' (New_Yak1897, 41 pts), testimonio paralelo 'Mi situación es parecida... llevo tiempo similar sin pega, humanista, emprendí volver con familia' (NotDaijobuGirl, 6 pts), 'llevo 3 años sin pega de lo estudié' (Cultural_Piano_3889), 'estoy en la misma, psicóloga hace 2 meses' (Forward-Ad-436, 5 pts) y consejos (terminar título con CAE, OMIL, Sercotec, fondos concursables). Ilustra saturación sociología/humanidades, barrera título/pituto y cesantía Concepción (>10,4% Biobío, ver 20260731-2/20260828-2). Verificado contra INE 9,5% MJJ y OCEC-UDP 8,3% desempleo ilustrado. (evento 20260828-2)."
+reddit-republicadechile-2026-08-29-busco-trabajo-5-anos:
+  tipo: redes
+  medio: Reddit r/RepublicadeChile
+  titulo: "Busco trabajo hace 5 años... Y no encuentro nada"
+  autor: Less-Sthep
+  fecha: 2026-08-29
+  url: https://old.reddit.com/r/RepublicadeChile/comments/1w1wn84/busco_trabajo_hace_5_a%C3%B1os_y_no_encuentro_nada/
+  notas: "Crosspost del mismo relato en r/RepublicadeChile (29-ago-2026, socióloga Concepción, 30 años, 5 años sin pega estable). Reacciones complementarias (rol c, plataforma distinta): 'está bastante feo... centro sur, en Temuco igual complicado' (RitzPrime, 9 pts), 'Por qué no te titulaste?' (TieApprehensive4558, 4 pts), oferta concreta 'Desuc LinkedIn busca encuestador telefónico, 800k si eres carismática' (Pepelota1, 6 pts), 'Trabajo hay, lo que no hay es gente que quiera trabajar' vs 'busco en lo que sea, por salud no puedo' (Horuke90/Less-Sthep), 'Sin pituto no lo vas a lograr' (EquivalentEarth2046, 1 pt). Aporta voces de segunda comunidad con matiz encuestador/Sence/OMIL y confirma transversabilidad del relato más allá de r/chile. (evento 20260828-2)."
 
 federacionccu-2026-08-28-desempleo-95:
   tipo: prensa
@@ -39802,3 +39818,92 @@ latercera-pulso-2026-07-10-valdes-fmi-bencinas-reino-unido:
   fecha: 2026-07-10
   url: https://www.latercera.com/pulso/noticia/rodrigo-valdes-fmi-y-alzas-de-bencinas-el-reino-unido-hizo-politicas-parecidas-a-las-de-chile-y-estan-alineadas-con-las-recomendaciones-que-hemos-propuesto/
   notas: "Rodrigo Valdés (ex FMI) señala que Reino Unido hizo políticas parecidas a Chile ante shock combustibles y están alineadas con recomendaciones FMI, citado en hilo Reddit 18-jul como contrapunto a crítica de traspaso."
+theclinic-2026-08-28-blumel-poblaciones-republicanos-arrau:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "“¿Cuántos de sus dirigentes viven o han vivido en poblaciones?”: Gonzalo Blumel arremete contra republicanos y responde al ministro Arrau"
+  autor: The Clinic
+  fecha: 2026-08-28
+  url: https://www.theclinic.cl/2026/08/28/cuantos-de-sus-dirigentes-viven-o-han-vivido-en-poblaciones-gonzalo-blumel-arremete-contra-republicanos-y-responde-al-ministro-arrau/
+eldinamo-2026-08-28-blumel-poblaciones-republicanos:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Exministro Blumel (Evópoli) arremete contra republicanos: “¿Cuántos han vivido en poblaciones?”"
+  autor: Paz Rubio
+  fecha: 2026-08-28
+  url: https://www.eldinamo.cl/politica/2026/08/28/exministro-blumel-evopoli-arremete-contra-republicanos-cuantos-han-vivido-en-poblaciones/
+t13-2026-08-28-blumel-republicanos-soberbia:
+  tipo: prensa
+  medio: T13
+  titulo: "Exministro Blumel apunta contra Republicanos ante tensión en el oficialismo: “Soberbia y superioridad moral”"
+  autor: T13
+  fecha: 2026-08-28
+  url: https://www.t13.cl/noticia/politica/exministro-gonzalo-blumel-apunta-contra-republicanos-ante-tension-oficialismo-28-8-2026
+adnradio-2026-08-28-blumel-logica-adversarial:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Gonzalo Blumel lanza dura crítica al Partido Republicano: “Siguen en esta lógica adversarial contra la centro derecha”"
+  autor: Nelson Quiroz
+  fecha: 2026-08-28
+  url: https://www.adnradio.cl/2026/08/28/gonzalo-blumel-lanza-dura-critica-al-partido-republicano-siguen-en-esta-logica-adversarial-contra-la-centro-derecha/
+cnnchile-2026-08-28-blumel-republicanos-poblaciones:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Exministro Blumel arremete contra Republicanos: “¿Cuántos de sus dirigentes han vivido en poblaciones y conocen las necesidades del pueblo?”"
+  autor: CNN Chile
+  fecha: 2026-08-28
+  url: https://www.cnnchile.com/pais/gonzalo-blumel-republicanos-reforma-seguridad-pueblo-soberbia/
+latercera-2026-08-30-republicanos-responden-blumel-clasista:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Republicanos responden a cuestionamientos de Gonzalo Blumel: “Este debate clasista y añejo no le hace bien a Chile”"
+  autor: Sofía Álvarez
+  fecha: 2026-08-30
+  url: https://www.latercera.com/politica/noticia/republicanos-responden-a-cuestionamientos-de-gonzalo-blumel-este-debate-clasista-y-anejo-no-le-hace-bien-a-chile/
+youtube-2026-08-28-radio13c-blumel-entrevista:
+  tipo: video
+  medio: YouTube
+  titulo: "Entrevista a Gonzalo Blumel en Radio 13C — reforma constitucional y críticas al Partido Republicano"
+  autor: Radio 13C
+  fecha: 2026-08-28
+  url: https://www.youtube.com/watch?v=c2MUinAMYhw
+biobiochile-2026-08-28-sedini-cerimedo-bots:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Mara Sedini pone las manos al fuego por Kast en pleno caso Cerimedo: \"No ganó por una campaña de bots\""
+  autor: Megam Ossandón
+  fecha: 2026-08-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/28/mara-sedini-pone-las-manos-al-fuego-por-kast-en-pleno-caso-cerimedo-no-gano-por-una-campana-de-bots.shtml
+  notas: "Entrevista de Mara Sedini a T13 Radio (Mesa Central, 28-ago-2026): niega haber conocido a Fernando Cerimedo ('no supe quién era hasta que salió en noticias'), defiende triunfo de Kast ('no ganó por campaña de bots, supo leer situación país, gobierno de emergencia'), descarta mea culpa por ataques a Evelyn Matthei ('discusión quedó en pasado', responsabilidad personal), responde a Gonzalo Winter ('ingenuidad') relativizando bots como fenómeno transversal ('no nos vemos la suerte entre gitanos'). Cita su rol limitado a vocerías sin campaña digital."
+theclinic-2026-08-28-sedini-cerimedo-bots:
+  tipo: prensa
+  medio: The Clinic
+  titulo: "Mara Sedini por las redes de Fernando Cerimedo en Chile y el triunfo de Kast: \"No ganó por una campaña de bots\""
+  autor: The Clinic
+  fecha: 2026-08-28
+  url: https://www.theclinic.cl/2026/08/28/mara-sedini-por-las-redes-de-fernando-cerimedo-en-chile-y-el-triunfo-de-kast-no-gano-por-una-campana-de-bots
+  notas: "Replica entrevista T13 Radio: Sedini niega vínculo con Cerimedo, limita su rol a vocerías ('no me dieron campaña digital porque no sabía cómo hacerla'), rechaza atribuir triunfo de Kast a bots, aborda críticas de Matthei ('se hace mucho daño' pero advierte limitar libertad expresión) y a Winter, consigna que también tenía bots en contra en el gobierno como fenómeno transversal."
+elmostrador-2026-08-28-sedini-cerimedo-bots:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Mara Sedini defendió a Kast ante caso Cerimedo y asegura que \"no ganó por una campaña de bots\""
+  autor: Mesa de noticias de El Mostrador
+  fecha: 2026-08-28
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/28/mara-sedini-defendio-a-kast-ante-caso-cerimedo-y-asegura-que-no-gano-por-una-campana-de-bots
+  notas: "Cobertura de la misma entrevista T13 Radio: primera ministra caída de Kast blinda triunfo, 'nunca lo conocí, me he enterado por prensa', rol limitado a voz en medios/plataformas, Kast ganó por leer situación país y 62% Rechazo fue sentido común, descarta mea culpa por Matthei ('sigan avanzando, quedó en pasado') y responde a Winter con tesis transversalidad ('acá no nos vemos la suerte entre gitanos')."
+eldinamo-2026-08-28-sedini-cerimedo-bots:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Mara Sedini asegura que nunca conoció a Cerimedo y defiende a Kast: \"No ganó por una campaña de bots\""
+  autor: El Dínamo
+  fecha: 2026-08-28
+  url: https://www.eldinamo.cl/politica/2026/08/28/mara-sedini-asegura-que-nunca-conocio-a-cerimedo-y-defiende-a-kast-no-gano-por-una-campana-de-bots
+  notas: "Replica Tele13 Radio: Sedini 'nunca lo conocí', rol solo vocerías, defensa Kast no ganó por bots y paralela con Reforma (respalda estado excepción nuevo como debate necesario con contrapesos), Matthei no exige mea culpa sin antecedentes ('no tengo antecedentes de quién ni cómo se hizo campaña digital'), Winter relativizado y 'tenía mis bots en contra'."
+tele13radio-2026-08-28-sedini-entrevista-mesa-central:
+  tipo: prensa
+  medio: T13
+  titulo: "Ex ministra Sedini por críticas de Matthei a Kast: \"El Presidente no ganó por campaña de bots (...) no hay que entrar en una pelea chica\""
+  autor: Tele13 Radio
+  fecha: 2026-08-28
+  url: https://tele13radio.cl/article/ex-ministra-sedini-por-criticas-de-matthei-a-kast-el-presidente-no-gano-por-campana-de-bots-no-hay-que-entrar-en-una-pelea-chica
+  notas: "Fuente primaria: entrevista Mesa Central con Iván Valenzuela (28-ago-2026). Sedini niega vínculo Cerimedo, defiende Kast ('no ganó por bots, supo leer situación país, campaña bonita'), descarta mea culpa Matthei por falta de antecedentes, aborda dispensarios (marido minoritario sin participación judicial), Foro Madrid (legítimo) y reforma constitucional/seguridad (necesarias nuevas herramientas)."

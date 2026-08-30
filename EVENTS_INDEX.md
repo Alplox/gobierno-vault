@@ -1401,7 +1401,9 @@
 - [2026/08/20260827-6 - Gobierno restituye Gabinete de la Primera Dama eliminado en 2022: resolución N°391 formaliza equipo de Pía Adriasola](src/content/events/2026/08/20260827-6.md) — 8 fuentes
 - [2026/08/20260827-7 - Exfuncionarios de Vitacura grabados en acto sexual demandan por $200 millones y juicio contra municipio queda fijado para noviembre de 2027](src/content/events/2026/08/20260827-7.md) — 8 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
-- [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 12 fuentes
+- [2026/08/20260828-10 - Gonzalo Blumel arremete contra republicanos por la reforma de seguridad: “¿Cuántos dirigentes viven o han vivido en poblaciones?” y acusa “soberbia”](src/content/events/2026/08/20260828-10.md) — 6 fuentes
+- [2026/08/20260828-11 - Mara Sedini blinda a Kast ante caso Cerimedo: 'No ganó por una campaña de bots', dice que nunca conoció al consultor y descarta mea culpa por ataques a Matthei](src/content/events/2026/08/20260828-11.md) — 5 fuentes
+- [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 14 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
 - [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 10 fuentes
@@ -1409,6 +1411,7 @@
 - [2026/08/20260828-7 - Detienen a dos carabineros por homicidio de rapero Vegetal en Padre Las Casas y Fiscalía formaliza por obstrucción](src/content/events/2026/08/20260828-7.md) — 8 fuentes
 - [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
+- [2026/08/20260830-1 - Republicanos responden a Blumel por “poblaciones”: “Este debate clasista y añejo no le hace bien a Chile” y “discurso cavernícola”](src/content/events/2026/08/20260830-1.md) — 6 fuentes
 
 ## 2025
 
