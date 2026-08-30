@@ -34642,6 +34642,22 @@ x-2022-09-04-cerimedo-se-festeja-rechazo:
   fecha: 2022-09-04
   url: https://x.com/FerCerimedo_ok/status/1566567079876202496
   notas: "Fuente primaria: el propio Cerimedo publicó esa noche la foto grupal de su equipo en Santiago celebrando el triunfo del Rechazo del 4-sep-2022 ('Se festeja, durisimo trabajo'), junto a otra imagen. La misma foto fue usada como imagen de portada del perfil de BBC Mundo/El Mostrador del 21-ago-2026 ('Fernando Cerimedo festejando el triunfo del rechazo en Santiago, en 2022'). Tras la detención de Cerimedo (ago-2026), versiones de la imagen con nombres superpuestos difundidas por cuentas partidistas (Barricada Informativa) y Reddit identificaron a otras personas presentes, incluida la diputada Paz Charpentier; Fast Check desmintió esa identificación el 24-ago-2026 (la mujer señalada no es Charpentier: estaba en Concepción ese día y la Bancada republicana lo confirmó); la identidad de la mujer sigue sin confirmarse."
+x-2022-10-30-cria-cuervos-pregunta-cerimedo:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Pregunta a Cerimedo: ¿Algún partido que te contrató ganó? En Chile 👎 En Brasil 👎"
+  autor: "Cría Cuervos 55,65% (@cria_cuerv0s)"
+  fecha: 2022-10-30
+  url: https://x.com/cria_cuerv0s/status/1586849236829741057
+  notas: "Fuente primaria complementaria (pregunta que origina la respuesta 'Chile si'): el 30-oct-2022 @cria_cuerv0s cuestionó a Cerimedo por resultados electorales ('En Chile 👎 En Brasil 👎'). Verificada por webfetch 2026-08-30. Es punto de partida, no dato por sí mismo; la respuesta es la declaración relevante."
+x-2022-10-30-cerimedo-chile-si:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Cerimedo responde 'Chile si' a pregunta por partido que lo contrató y ganó"
+  autor: "Fernando Cerimedo (@FerCerimedo_ok)"
+  fecha: 2022-10-30
+  url: https://x.com/FerCerimedo_ok/status/1586849927572983809
+  notas: "Fuente primaria complementaria: el 30-oct-2022 Cerimedo respondió 'Chile si' a @cria_cuerv0s que afirmaba que ningún partido que lo contrató ganó en Chile/Brasil. Verificada por webfetch 2026-08-30 (texto visible sin login). Es auto-atribución genérica sin especificar partido, campaña ni evidencia contractual; hasta 2026-08 no existe verificación del Servel ni de medios que acredite contratación formal para candidatura presidencial chilena (ver El País Teleserie 2026-08-23 y The Clinic/BioBio 2026-08-24 que acotan falta de evidencia). Se consigna como declaración del protagonista, no hecho establecido."
 x-2025-08-08-charpentier-gracias-neuroc:
   tipo: red_social
   medio: X (Twitter)
@@ -39526,3 +39542,119 @@ elmostrador-2026-08-28-prision-informatico-banda-narco:
   fecha: 2026-08-28
   url: https://www.elmostrador.cl/noticias/pais/2026/08/28/prision-preventiva-para-informatico-acusado-de-colaborar-con-banda-narco-en-santiago/
   notas: "Prisión preventiva para Jaime Osvaldo Inostroza Andrade (Tercer TOP Santiago, 29 años servicio) por peligro para la sociedad; Fiscal Marcos Pastén confirma cohecho agravado reiterado, obstrucción y revelación de secretos; análisis patrimonial de $80M por Brigada Anticorrupción; defensa (Tufit Bufadel) señala entrega de teléfonos y claves y colaboración, versus Fiscalía que niega colaboración; 200 días y traslado a Capitán Yáber o Punta Peuco por definir; sumario y querella de Corte de Apelaciones. Evento 20260828-9."
+adnradio-2026-08-28-revelan-video-clave-carabineros-datos-falsos:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Revelan video clave por muerte de músico en Temuco: carabineros habrían entregado datos falsos"
+  autor: Nelson Quiroz
+  fecha: 2026-08-28
+  url: https://www.adnradio.cl/2026/08/28/revelan-video-clave-por-muerte-de-musico-en-temuco-carabineros-proporcionaron-datos-falsos/
+  notas: "Video clave descarta agresión ilegítima contra funcionarios; cámara frontal del procedimiento sin funcionamiento; antecedentes falsos en al menos tres oportunidades; proyectil 9mm con trayectoria entrada y salida a ~1 metro; procedimiento iniciado tras llamado por robo. Detenidos cabo 1° Sebastián Zárate Palma (homicidio + obstrucción) y cabo 2° Manuel Méndez Muñoz (obstrucción); control detención 29-ago PDI Temuco. Evento 20260828-7."
+
+biobiochile-2025-06-27-vitacura-video-hot-suspendidos:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Identifican y suspenden a protagonistas de video 'hot' grabado en municipio de Vitacura"
+  autor: "Francia Quezada"
+  fecha: 2025-06-27
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2025/06/27/identifican-y-suspenden-a-protagonistas-de-video-hot-grabado-en-municipio-de-vitacura.shtml
+  notas: "La alcaldesa Camila Merino confirmó la identificación y suspensión de dos funcionarios grabados en acto sexual el 25-jun-2025 cerca de las 20:30 en edificio consistorial junto al Parque Bicentenario; el municipio abrió sumario, el fiscal municipal suspendió a los involucrados y la sanción podría llegar a destitución e inhabilitación por 5 años. Primera cobertura tras viralización en TikTok @carogalloo."
+
+cnnchile-2025-06-27-vitacura-video-suspendidos:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "'No lo podíamos creer, pensamos que era IA': Alcaldesa de Vitacura confirma suspensiones por video sexual captado en municipio"
+  autor: "Michel Nahas Miranda"
+  fecha: 2025-06-27
+  url: https://www.cnnchile.com/pais/video-sexual-vitacura-funcionarios-suspendidos-camila-merino/
+  notas: "Entrevista en Radio Pauta: Camila Merino confirmó suspensión de dos funcionarios tras viralización del 25-jun, pensaron inicialmente que era IA/fake, verificaron en cámaras (20:30), fiscal municipal decretó suspensión y advirtió riesgo de destitución con 5 años sin funciones públicas. Lamentó daño a imagen institucional."
+
+lanacion-2025-06-27-vitacura-funcionarios-suspendidos:
+  tipo: prensa
+  medio: La Nación
+  titulo: "Municipio identifica a funcionarios del video sexual de Vitacura: Fueron suspendidos y arriesgan extrema sanción"
+  autor: "Eduardo Córdova"
+  fecha: 2025-06-27
+  url: https://www.lanacion.cl/municipio-identifica-a-funcionarios-del-video-sexual-de-vitacura-fueron-suspendidos-y-arriesgan-extrema-sancion/
+  notas: "Registró viralización en TikTok por Carolina Gallo tras grabar desde exterior cerca del Parque Bicentenario a las 20:30 del 25-jun (5 minutos, mecanico), 100 mil likes iniciales, y confirmación de Merino en Radio Pauta de suspensión y sumario con eventual destitución."
+
+epicentrochile-2025-06-26-vitacura-sumario-videoviral:
+  tipo: prensa
+  medio: Epicentro Chile
+  titulo: "Video sexual Municipalidad Vitacura: abren sumario por polémico registro"
+  autor: "Sebastián Araya"
+  fecha: 2025-06-26
+  url: https://www.epicentrochile.com/2025/06/26/video-sexual-municipalidad-vitacura-abren-sumario-por-polemico-registro/
+  notas: "Comunicado oficial del 26-jun: Municipalidad de Vitacura condenó grave situación, abrió investigación sumaria inmediata para identificar responsables del video grabado desde el Parque Bicentenario y viralizado en TikTok, señalando que afecta imagen institucional y que la mayoría de funcionarios trabaja de forma ejemplar."
+
+centralnoticia-2025-06-26-vitacura-video-filtrado:
+  tipo: prensa
+  medio: Central Noticia
+  titulo: "Ni Arsmate se atrevió a tanto: filtran video de funcionarios de Vitacura en pleno acto dentro de oficina"
+  autor: "Central Noticia"
+  fecha: 2025-06-26
+  url: https://www.centralnoticia.cl/nacional/2025/06/26/ni-arsmate-se-atrevio-a-tanto-filtran-video-de-funcionarios-de-vitacura-en-pleno-acto-dentro-de-oficina/361219/
+  notas: "Cobertura inicial del 26-jun tras viralización en TikTok @carogalloo (Parque Bicentenario, noche del 25-jun, oficina municipal iluminada), con copia del comunicado municipal que anuncia sumario. Ilustra punto de partida viral del caso antes de identificación oficial del 27-jun."
+
+cnnchile-2025-11-20-vitacura-destitucion-admitieron:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Vitacura destituye a funcionarios captados teniendo relaciones sexuales dentro del municipio: Ambos admitieron el hecho"
+  autor: "Daniela Pérez"
+  fecha: 2025-11-20
+  url: https://www.cnnchile.com/pais/vitacura-destituye-a-funcionarios-captados-teniendo-relaciones-sexuales-dentro-del-municipio-ambos-admitieron-los-hechos/
+  notas: "Sumario concluyó en vulneración grave del principio de probidad; ambos admitieron los hechos del 25-jun en horario extraordinario en oficina que no era la suya (Oficina de Atención al Vecino del Centro Cívico), compañeros conocían relación y silueta plenamente identificable. Decisión adoptada en octubre pero reservada por descargos; cierre en noviembre 2025. Uno declaró que cometieron un error."
+
+chilevision-2025-11-21-vitacura-despedidos-fue-un-error:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "Funcionarios captados manteniendo relaciones en municipalidad fueron despedidos: 'Fue un error'"
+  autor: "Jose Espinoza"
+  fecha: 2025-11-21
+  url: https://www.chilevision.cl/programas/contigo-en-la-manana/funcionarios-captados-manteniendo-relaciones-en-municipalidad-fueron-despedidos-fue-un-error/
+  notas: "Contigo en la Mañana confirmó destitución tras viralización y sumario; uno de los involucrados calificó el hecho como error del que está profundamente arrepentido. Complementa a CNN Chile sobre cierre del sumario en noviembre 2025."
+
+biobiochile-2026-01-21-vitacura-funcionario-200-millones:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Sexo en la Municipalidad de Vitacura: funcionario destituido pide compensación de $200 millones"
+  autor: "David Vergara"
+  fecha: 2026-01-21
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/01/21/sexo-en-la-municipalidad-de-vitacura-funcionario-destituido-pide-compensacion-de-200-millones.shtml
+  notas: "Ingeniero informático exfuncionario (ingreso 2016, 9 años, nota 7, capacitador de 200 funcionarios) demandó el 18-dic-2025 ante 1er Juzgado de Letras del Trabajo por daño moral (200M), alegando sumario ilegal y que Merino anunció destitución antes del cierre, afectando defensa y honra; pide publicación en diario comunal y mural y capacitación a alcaldesa. Segunda involucrada no demandó entonces. TikTok @carogalloo con 28M visualizaciones."
+
+chilevision-2026-01-21-vitacura-demanda-200-millones:
+  tipo: prensa
+  medio: Chilevisión
+  titulo: "Exige $200 millones en compensación: Funcionario despedido por tener relaciones sexuales en Vitacura demandó a municipio"
+  autor: "Chilevisión"
+  fecha: 2026-01-21
+  url: https://www.chilevision.cl/noticias/nacional/exige-200-millones-en-compensacion-funcionario-despedido-por-tener-relaciones-sexuales-en-vitacura-demando-a-municipio/
+  notas: "Recoge La Tercera: ingeniero demandó el 18-dic-2025 por daño moral tras destitución en noviembre 2025 por faltas a la probidad, alegando trato vejatorio y vulneración laboral, lesión extra patrimonial con miedo/estrés/ansiedad, y solicita 200M, publicación en diario comunal y mural, y capacitación a Merino. Confirma viralización junio 2025 y sumario."
+
+biobiochile-2026-08-27-vitacura-juicio-200-millones:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Exfuncionarios de Vitacura grabados en acto sexual van a juicio con municipalidad: piden $200 millones"
+  autor: "David Vergara San Martín"
+  fecha: 2026-08-27
+  url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/27/exfuncionarios-de-vitacura-grabados-en-acto-sexual-van-a-juicio-con-municipalidad-piden-200-millones.shtml
+  notas: "Actualización 27-ago-2026: los dos exfuncionarios (Sebastián Valenzuela y Alejandra Guajardo) irán a juicio laboral el 27-nov-2027 tras fallida audiencia de conciliación (demandante sin intención de acuerdo extrajudicial, retomada semana previa). Demandas del 18-dic-2025 ante 1er Juzgado Letras Trabajo por daño moral (200M), peritaje psicológico por Pamela Díaz Contreras y toma de declaraciones a Pamela Navarro, Pablo Kreft, David Ramiro y Guillermo Copier; prueba incluye sumario y entrevista de Merino en Radio Pauta previa al cierre."
+
+latercera-2026-08-25-vitacura-perito-psicologico:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Inicia disputa judicial de exfuncionarios de Vitacura grabados teniendo relaciones: Perito evaluará daño psicológico"
+  autor: "Luciano Jiménez"
+  fecha: 2026-08-25
+  url: https://www.latercera.com/nacional/noticia/inicia-demanda-de-exfuncionarios-de-vitacura-grabados-teniendo-relaciones-designan-perito-para-evaluar-dano-psicologico/
+  notas: "Detalle de audiencia: juicio fijado 27-nov-2027 contra municipalidad de Camila Merino (Evópoli), demandas 18-dic-2025 por daño moral (200M), peritaje de Pamela Díaz Contreras para determinar afectación salud mental, cita textual daño psicológico y emocional con tratos vejatorios y lesión extra patrimonial, declaraciones a funcionarios y pruebas (sumario + entrevista Radio Pauta). Viralización 25-jun desde la calle."
+
+latercera-2026-01-21-vitacura-acusa-dano-moral:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Acusa daño moral: funcionario despedido por tener relaciones sexuales en Vitacura pide $200 millones de compensación"
+  autor: "La Tercera"
+  fecha: 2026-01-21
+  url: https://www.latercera.com/nacional/noticia/acusa-dano-moral-funcionario-despedido-por-tener-relaciones-sexuales-en-vitacura-pide-200-millones-de-compensacion/
+  notas: "Origen citado por BioBio/Chilevisión en enero 2026: ingeniero informático demanda por 200M ante 1er Juzgado Trabajo (18-dic-2025), alegando daño moral, sumario ilegal y anuncio anticipado de destitución por Merino. Fuente primaria de la judicialización."

@@ -1299,7 +1299,7 @@
 - [2026/08/20260818-11 - Hackeo al Servicio Nacional de Migraciones envía correo masivo con imagen de Pinochet y bloquea trámites durante cuatro horas](src/content/events/2026/08/20260818-11.md) — 2 fuentes
 - [2026/08/20260818-12 - Minsal instruye a hospitales atender más pacientes por hora y Colegio Médico advierte que contempla tiempos incompatibles con una consulta de calidad](src/content/events/2026/08/20260818-12.md) — 1 fuente
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — 2 fuentes
-- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 35 fuentes
+- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 38 fuentes
 - [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 5 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
 - [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
@@ -1397,13 +1397,14 @@
 - [2026/08/20260827-4 - Marta Lagos califica propuesta constitucional de Arrau como 'principio del fin del pinochetismo' y pone nota 2 al Gobierno y 1 a la oposición](src/content/events/2026/08/20260827-4.md) — 7 fuentes
 - [2026/08/20260827-5 - Cabo segundo Alejandro Ortiz Vásquez es asesinado de un disparo en el rostro en Renca mientras estaba de franco; Fiscalía ECOH y OS9 investigan encerrona y detienen a un sospechoso](src/content/events/2026/08/20260827-5.md) — 8 fuentes
 - [2026/08/20260827-6 - Gobierno restituye Gabinete de la Primera Dama eliminado en 2022: resolución N°391 formaliza equipo de Pía Adriasola](src/content/events/2026/08/20260827-6.md) — 8 fuentes
+- [2026/08/20260827-7 - Exfuncionarios de Vitacura grabados en acto sexual demandan por $200 millones y juicio contra municipio queda fijado para noviembre de 2027](src/content/events/2026/08/20260827-7.md) — 8 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 12 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
 - [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 10 fuentes
 - [2026/08/20260828-6 - Diputado PS Juan Santana denuncia a Cerimedo ante Fiscalía por granjas de bots y eventual financiamiento electoral; Fiscal Nacional deriva a fiscalía regional y Gobierno niega 'vínculo alguno' con Kast](src/content/events/2026/08/20260828-6.md) — 7 fuentes
-- [2026/08/20260828-7 - Detienen a dos carabineros por homicidio de rapero Vegetal en Padre Las Casas y Fiscalía formaliza por obstrucción](src/content/events/2026/08/20260828-7.md) — 7 fuentes
+- [2026/08/20260828-7 - Detienen a dos carabineros por homicidio de rapero Vegetal en Padre Las Casas y Fiscalía formaliza por obstrucción](src/content/events/2026/08/20260828-7.md) — 8 fuentes
 - [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 
@@ -1428,6 +1429,7 @@
 - [2025/06/20250601-1 - Cuarta y última Cuenta Pública de Boric: reforma de pensiones, sueldo mínimo de $539 mil, aborto con plazos y Punta Peuco como penal común](src/content/events/2025/06/20250601-1.md) — 12 fuentes
 - [2025/06/20250608-1 - El 'método Kast': la estrategia de campaña que lo mantiene en empate técnico con Matthei](src/content/events/2025/06/20250608-1.md) — 1 fuente
 - [2025/06/20250617-1 - Gobierno de Boric ordena cierre temporal de la embajada en Teherán y evacua personal diplomático tras el ataque de Israel a Irán](src/content/events/2025/06/20250617-1.md) — 7 fuentes
+- [2025/06/20250627-1 - Video sexual en edificio de la Municipalidad de Vitacura se viraliza y derivó en sumario y suspensión de dos funcionarios](src/content/events/2025/06/20250627-1.md) — 6 fuentes
 - [2025/06/20250629-1 - Primarias presidenciales 2025: Jeannette Jara gana la primaria de Unidad por Chile](src/content/events/2025/06/20250629-1.md) — 3 fuentes
 - [2025/07/20250701-2 - SERMIG Reporte 4: cifras 2015-dic 2024 precede al reporte que fija el -48,3% desde 2021](src/content/events/2025/07/20250701-2.md) — 2 fuentes
 - [2025/07/20250708-1 - Se promulga la Ley 21.755: rebaja del impuesto de primera categoría de las pymes al 12,5%](src/content/events/2025/07/20250708-1.md) — 3 fuentes
@@ -1454,6 +1456,7 @@
 - [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
+- [2025/11/20251120-1 - Municipalidad de Vitacura destituye a funcionarios grabados en video sexual tras sumario por falta grave a la probidad](src/content/events/2025/11/20251120-1.md) — 8 fuentes
 - [2025/11/20251123-1 - Primera semana del balotaje: todas las encuestas dan a Kast una ventaja de entre 14 y 21 puntos sobre Jara](src/content/events/2025/11/20251123-1.md) — 3 fuentes
 - [2025/11/20251130-1 - La última Cadem publicable antes de la veda ratifica 58% para Kast y 42% para Jara; desde la medianoche rige la prohibición de difundir encuestas](src/content/events/2025/11/20251130-1.md) — 3 fuentes
 - [2025/12/20251203-1 - Atlas Network: la desinformacion como arma neoliberal](src/content/events/2025/12/20251203-1.md) — 4 fuentes
