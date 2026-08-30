@@ -38,6 +38,10 @@ sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
 
 `people`/`organizations`/`topics` no existen como colecciones en disco — fluyen via YAML + `registry.ts`. `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
 
+## Checklist obligatorio antes de tocar `src/content/events/**` o `src/data/*.yaml`
+
+Antes de revisar enlaces, crear o editar evento, **DEBES** cargar: `content-model` + `event-rules` + `data-yaml` + `sitemaps` + `tools`. Si el tema toca Estado/cifra/voto/normativa → añade `fuentes-gubernamentales`; si toca Reddit/X/FB/reacciones → añade `social-media`; si toca gabinete/`cargos[]`/Cuentas Públicas → añade `gabinete`. Sin esto no edites — `validate.mjs` fallará por wikilinks, URLs o `medio`.
+
 ## Como crear/editar un evento — quick reference
 
 Ruta `src/content/events/YYYY/MM/YYYYMMDD-N.md` (`N` secuencial del dia). Ver `TEMPLATE.md` para plantilla completa y `.agents/skills/content-model/SKILL.md` para detalle.
@@ -92,9 +96,10 @@ pnpm run deploy   # build local + wrangler pages deploy dist --project-name gobi
 
 Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (Astro no aborta ante wikilink roto, deja pagina sin contenido). Detalle (CRLF, concurrency, pnpm, Cloudflare, Tailwind/daisyUI) en `.agents/skills/build-deploy/SKILL.md`.
 
-**Entorno shell — portable:** no uses comandos específicos de un shell (`wc`/`grep`/`awk`/`sed` en bash fallan en PowerShell como `no se reconoce como cmdlet`; `Get-Content`/`Set-Content`/`Select-String` fallan en bash y corrompen encoding). Usa herramientas cross-platform que ya están en el repo:
+**Entorno shell — portable:** no uses comandos específicos de un shell (`wc`/`grep`/`awk`/`sed`/`head`/`tail` en bash fallan en PowerShell como `no se reconoce como cmdlet`; `Get-Content`/`Set-Content`/`Select-String`/`Select-Object` fallan en bash y corrompen encoding). Usa herramientas cross-platform que ya están en el repo:
 - Líneas / contar `##` / tamaño: `rg -c "^##" AGENTS.md`, `rg --count`, o `node -e "console.log(readFileSync('AGENTS.md','utf8').split('\n').length)"` / `statSync` — funcionan en Windows, Linux y macOS
 - Búsqueda: `rg` (ver `.agents/skills/tools/SKILL.md` → ripgrep) — respeta `.gitignore`; evita `grep`/`Select-String`/`Get-ChildItem` (320× más lentos)
+- Paginación / `| head -n N`: no uses `| head` (no existe en PowerShell); usa `rg --max-count N`, `rg ... | Select-Object -First N` en PowerShell, o `node` con `.slice(0,N)` — ver `.agents/skills/tools/SKILL.md` → ripgrep
 - Nunca uses `>`/`Set-Content`/`Out-File` sobre YAML (ver `data-yaml/SKILL.md`) — usa `node` con `writeFileSync` `utf8` o las tools `Edit`/`Write` del agente
 - Si necesitas un comando shell nativo, verifica primero que exista sino elige el equivalente portable (`rg --version`, `node -e "console.log(process.platform)"`)
 
@@ -102,21 +107,21 @@ Estadisticas del vault: ver `sitemaps/ESTADISTICAS.md` (generado por `pnpm run g
 
 ## Skills bajo demanda
 
-Carga solo el que necesite tu tarea — el core ya cubre el 80% de contenido.
+**Obligatorios para revisar enlaces/crear/editar evento o tocar `src/data/*.yaml`** (ver checklist arriba): `content-model` + `event-rules` + `data-yaml` + `sitemaps` + `tools`. El core sin ellos no cubre `validate.mjs`.
 
 | Necesitas… | Carga… |
 | --- | --- |
-| Frontmatter completo, tipos, wikilinks, `svg_backup`, cifras en disputa, votaciones | `.agents/skills/content-model/SKILL.md` |
-| 16 reglas expandidas, enforcement prose, TAREAS lifecycle | `.agents/skills/event-rules/SKILL.md` |
+| Frontmatter completo, tipos, wikilinks, `svg_backup`, cifras en disputa, votaciones **(obligatorio)** | `.agents/skills/content-model/SKILL.md` |
+| 16 reglas expandidas, enforcement prose, TAREAS lifecycle **(obligatorio)** | `.agents/skills/event-rules/SKILL.md` |
+| Tocar `entities.yaml`/`sources.yaml`/`topics.yaml`/`sueldos.yaml`, encoding/CRLF **(obligatorio)** | `.agents/skills/data-yaml/SKILL.md` |
+| Catalogo sitemaps (sync, search, cobertura historica) **(obligatorio)** | `.agents/skills/sitemaps/SKILL.md` |
+| Fetch/paywall, PDF/Office/OCR, video transcript, ripgrep, mirrors **(obligatorio)** | `.agents/skills/tools/SKILL.md` |
+| Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo (si toca Estado/cifra/voto) | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
+| Redes sociales / reacciones comunitarias / verificacion imagen-viral (si toca Reddit/X/FB) | `.agents/skills/social-media/SKILL.md` |
+| Gabinete, `cargos[]`, Cuentas Publicas (si toca gabinete) | `.agents/skills/gabinete/SKILL.md` |
 | Tocar timeline/rail, grafo, filtros `/events`, View Transitions, TTS, estilos | `.agents/skills/frontend/SKILL.md` |
-| Tocar `entities.yaml`/`sources.yaml`/`topics.yaml`/`sueldos.yaml`, encoding/CRLF | `.agents/skills/data-yaml/SKILL.md` |
 | Build falla, validate, deploy, pnpm, Cloudflare, Tailwind | `.agents/skills/build-deploy/SKILL.md` |
-| Gabinete, `cargos[]`, Cuentas Publicas | `.agents/skills/gabinete/SKILL.md` |
-| Fetch/paywall, PDF/Office/OCR, video transcript, ripgrep, mirrors | `.agents/skills/tools/SKILL.md` |
-| Catalogo sitemaps (sync, search, cobertura historica) | `.agents/skills/sitemaps/SKILL.md` |
-| Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento con IDs `S/A/V-YYYY-NNN` por año + catálogo | `.agents/skills/seguimiento/SKILL.md` |
-| Redes sociales / reacciones comunitarias / verificacion imagen-viral | `.agents/skills/social-media/SKILL.md` |
 | Web research con Firecrawl (search/scrape/crawl/agent, 1000 créditos) — alternativa a fetch-impersonate | `firecrawl` CLI (`firecrawl search/scrape --help`, `firecrawl --status`) + MCP `https://mcp.firecrawl.dev/v2/mcp-oauth` — ver `.agents/skills/tools/SKILL.md` para fallback |
 | Respaldo offline `.gvault` | `.agents/skills/backup/SKILL.md` |
 

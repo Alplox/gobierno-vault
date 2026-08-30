@@ -20,7 +20,7 @@ Generada en build por `src/lib/cabinet.ts` desde `entities.yaml` — no se manti
 - **Orden keywords:** `interior` antes que `seguridad publica` (nombre histórico incluye “y Seguridad Publica”). No reordenar sin re-verificar.
 - **Org pages:** `organizations/[id].astro` muestra “Titulares del ministerio” para carteras (mismo helper).
 - **“Hoy”:** fecha del build en SSR + `gvRefreshHoy()` re-ancla corte/barras/duraciones a fecha real del cliente si deploy stale (ver `gabinete.astro`).
-- **Verificación fechas (1938-2026):** matriz por gobierno en `TAREAS/GABINETES-VERIFICACION.md` (estado ✅/🟡) con fuentes (Minsal, BCN, gob.cl, Diario Oficial, archivo Lagos UDP). Convención `desde` = juramento, `hasta` = cesación. Auditoría: `pnpm run verify-gabinete` vs anexos Wikipedia (cache `sitemaps/.cache/gabinete-wiki/`). Carteras históricas mapeadas `KEYWORD_MINISTERIO` (Guerra/Marina/Aviación→Defensa, etc.). Subsecretarios no se trackean en `cargos[]`.
+- **Verificación fechas (1938-2026):** matriz por gobierno en `TAREAS/GABINETES-VERIFICACION.md` (estado ✅/🟡) con fuentes (Minsal, BCN, gob.cl, Diario Oficial, archivo Lagos UDP). Convención `desde` = juramento, `hasta` = cesación. Auditoría: `pnpm run verify-gabinete` vs anexos Wikipedia (cache `sitemaps/.cache/gabinete-wiki/`). Carteras históricas mapeadas `KEYWORD_MINISTERIO` (Guerra/Marina/Aviación→Defensa, etc.). Subsecretarios no se trackean en `cargos[]` para `/gabinete` (solo ministros); jefes de gabinete y cargos de confianza sí con `desde`/`hasta` verificados vía Diario Oficial + InfoLobby.
 
 Para ajustar un ministro, editar `cargo`/`cargos[]` en `entities.yaml`.
 
@@ -30,11 +30,14 @@ Para ajustar un ministro, editar `cargo`/`cargos[]` en `entities.yaml`.
 cargos:
   - cargo: Seremi de Salud de Arica y Parinacota
     organizacion: seremi_salud_arica
-    desde: 2026-03-26
-    hasta: 2026-07-30
+    desde: 2026-03-26  # https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1
+    hasta: 2026-07-30  # https://www.diariooficial.interior.gob.cl/publicaciones/2026/07/30/...
+  - cargo: Jefe de gabinete de la Subsecretaría de la Niñez
+    organizacion: ministerio_desarrollo_social
+    desde: 2026-07-09  # https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1 + https://www.diariooficial.interior.gob.cl/publicaciones/2026/07/23/44506/01/2840050.pdf
 ```
 
-`cargo`/`organizacion` top-level quedan como rol actual (retrocompat). `src/pages/people/[id].astro` renderiza lista + diagrama Mermaid `timeline` si hay `desde`. Solo fechas verificables. Dep `mermaid` solo en páginas con timeline.
+`cargo`/`organizacion` top-level quedan como rol actual (retrocompat). `src/pages/people/[id].astro` renderiza lista + diagrama Mermaid `timeline` si hay `desde`. Solo fechas verificables. Dep `mermaid` solo en páginas con timeline. **Trazabilidad:** cada `desde`/`hasta` lleva comentario inline `# <URL>` con la URL exacta de la fuente (InfoLobby/Diario Oficial/BCN) para replicar la búsqueda.
 
 ## Cuentas Públicas presidenciales
 

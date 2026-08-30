@@ -39343,3 +39343,186 @@ reddit-rchile-2026-08-29-beller-nuevo-presidente:
   fecha: 2026-08-29
   url: https://old.reddit.com/r/chile/comments/1w1db1t/dec%C3%ADa_que_hab%C3%ADa_hecho_un_nuevo_presidente/
   notas: "Fuente primaria complementaria (punto de partida y termometro de opinion, no unica): hilo de r/chile (29-ago-2026) que replica nota BioBioChile sobre Beller/Cerimedo/Kast. Comentarios ilustran polarizacion con voces variadas y puntajes: criticas a bots/Kast ('En cualquier momento llegan los bots del kastrado' 148 pts, 'Aun hay muchos bots funcionando...' 24 pts), ironias oficialistas y minimizacion ('Llego el copium gourmet...' -134 pts, 'Traicion a la patria po wn' -104 pts, debate Cambridge Analytica vs 'metodo muy poco eficiente con voto obligatorio'), y defensa testimonial vs desinformacion. Los hechos estan cubiertos por BioBioChile/El Periodista/El Mostrador/Canal 9; la reaccion misma aporta dato complementario de percepcion ciudadana. Verificada por clipping aportado por usuario (Reddit bloqueado 403 desde 2026-08-28, no verificable via fetch directo)."
+
+biobiochile-2026-08-28-carvallo-subsecretaria-ninez:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social"
+  autor: "Francisca Cares"
+  fecha: 2026-08-28
+  url: https://www.biobiochile.cl/especial/bbcl-investiga/noticias/de-pasillo/2026/08/28/del-coro-a-la-subsecretaria-de-la-ninez-el-rapido-ascenso-de-sebastian-carvallo-en-desarrollo-social.shtml
+  notas: "BBCL Investiga De Pasillo (28-ago-2026 06:30, Francisca Cares). Reportaje con CV vía Transparencia: Sebastián Carvallo Greene (Trabajo Social PUC 2024, sin concluir Agronomía) asume jefe gabinete Subsecretaría Niñez julio 2026 (Res. 23-jul, sujeto pasivo Lobby). Sin experiencia previa en administración pública; último trabajo encargado nacional proyectos Ley Inclusión Corporación La Esperanza 2 meses (may-jul 2026), antes jefe proyectos Fundación Trabün feb-sep 2025. Recorrido católico: clases corales religión 8-16 años Fundación Misericordia 2020-2022, director coral Canto Católico, coordinador general Coro Misión País ene-2022/mar-2023. Vínculo Javiera Corvalán Azpiazu (ex jefa gabinete Marcelo Sánchez hasta may 2026, luego gabinete ministra) habría recomendado; ambos de coros católicos (dato de fuentes La Radio, no en CVs). Diferencia vs otros casos 2026: egresó 2024 no 2026. Respuesta Subsecretaría: designación por méritos/competencias, edad no criterio. Verificada por lectura directa."
+canal9-2026-08-28-carvallo-subsecretaria-ninez:
+  tipo: prensa
+  medio: Canal 9
+  titulo: "Del coro a la Subsecretaría de la Niñez: el veloz ascenso de Sebastián Carvallo en Desarrollo Social"
+  autor: "Francisca Cares"
+  fecha: 2026-08-28
+  url: https://www.canal9.cl/episodios/2026/08/28/del-coro-a-la-subsecretaria-de-la-ninez-el-rapido-ascenso-de-sebastian-carvallo-en-desarrollo-social
+  notas: "Canal 9 Bío Bío TV (28-ago-2026, replica BBCL Investiga, Francisca Cares). Mismo reportaje con matices: titula 'veloz ascenso', sitúa nombramiento 'oficializado en resolución 23-jul' sujeto pasivo Lobby, antecedente Javiera Corvalán y respuesta Subsecretaría 'méritos, competencias'. Segunda prensa distinta que valida núcleo factual. Verificada por lectura directa."
+diariooficial-2026-07-23-carvallo-lobby:
+  tipo: prensa
+  medio: Diario Oficial de la República de Chile
+  titulo: "Modifica Resolución SN N°116/2026 y establece nuevos sujetos pasivos de lobby de la Subsecretaría de la Niñez (Sebastián Carvallo Greene, jefe de Gabinete)"
+  fecha: 2026-07-23
+  url: https://www.diariooficial.interior.gob.cl/publicaciones/2026/07/23/44506/01/2840050.pdf
+  notas: "Diario Oficial N°44.506 (23-jul-2026, Res. Exenta SN 142/2026, Subsecretaría Niñez). Fuente primaria gubernamental: 'Establécese nuevos sujetos pasivos de lobby [...] 1. Sebastián Carvallo Greene, jefe de Gabinete. 2. Ricardo Correa Martínez [...]' y 'Sustitúyase [...] 1. Marcelo Sánchez Ahumada, Subsecretario [...] 2. Sebastián Carvallo Greene, jefe de Gabinete'. Fija fecha oficial del nombramiento (10-jul resuelve, 23-jul publica) y reemplazo de Javiera Corvalán. Valida con fuente directa antes que prensa reinterpretada."
+leylobby-2026-08-28-carvallo-lobby:
+  tipo: prensa
+  medio: Consejo para la Transparencia (CPLT)
+  titulo: "Cargos pasivos Subsecretaría de la Niñez — Sebastián Carvallo Greene (jefe de Gabinete desde 09-07-2026)"
+  fecha: 2026-08-28
+  url: https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1
+  notas: "Plataforma InfoLobby (AI009 Subsecretaría Niñez, consulta 28-ago-2026). Fuente gubernamental directa complementaria a Diario Oficial: lista 'Sebastian Carvallo Greene, Jefe(a) de Gabinete, 09-07-2026; Javiera Corvalán Azpiazu, Jefe(a) de Gabinete, 11-03-...' confirma vigencia y superposición temporal vs Diario Oficial. Reduce sesgo prensa."
+x-2022-04-07-kast-gobierno-practicantes:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Post de @joseantoniokast: 'Este es un gobierno de practicantes... No más improvisaciones!' (07-abr-2022)"
+  autor: "@joseantoniokast"
+  fecha: 2022-04-07
+  url: https://x.com/joseantoniokast/status/1511927964845322240
+  notas: "Fuente primaria complementaria histórica (no única, rol contextual): tuit de José Antonio Kast del 07-abr-2022 criticando al gobierno Boric por 'gobierno de practicantes' tras episodio Izkia Siches (comisión seguridad). Reflotado en hilo Reddit 28-ago-2026 como ironía ('siempre hay un tweet', 71 pts akkadito) para contrastar con caso Carvallo 2026. Texto: 'Este es un gobierno de practicantes y lo que Chile necesita es un equipo profesional... No más improvisaciones!'. Verificada por clipping usuario y archivo web."
+x-2022-04-06-izkia-siches-disculpas:
+  tipo: red_social
+  medio: X (Twitter)
+  titulo: "Post de @izkia: 'Hoy en la comisión de seguridad... emití información incorrecta... pido mis más sinceras disculpas' (06-abr-2022)"
+  autor: "@izkia"
+  fecha: 2022-04-06
+  url: https://x.com/izkia/status/1511925528986591232
+  notas: "Fuente primaria complementaria histórica: tuit disculpas Izkia Siches 06-abr-2022 por información incorrecta en comisión seguridad (avión con expulsados). Contexto del tuit de Kast 07-abr-2022 citado en Reddit. Verificada por clipping usuario."
+reddit-rchile-2026-08-28-carvallo-subsecretaria-ninez:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo — hilo r/chile"
+  autor: "HombreContrafactual"
+  fecha: 2026-08-28
+  url: https://old.reddit.com/r/chile/comments/1w0s4go/del_coro_a_la_subsecretar%C3%ADa_de_la_ni%C3%B1ez_el_r%C3%A1pido/
+  notas: "Fuente primaria complementaria (termómetro opinión, no única): hilo r/chile 28-ago-2026 replica nota BBCL Investiga Carvallo. Comentarios con voces variadas y puntajes: ironía 'gobierno de practicantes' (akkadito 71 pts cita Kast 2022), 'Nah viejo, eso eran solo metáforas' (Gizmoh_Chile 22 pts), oferta laboral '<2 años egreso' (aanl01 21 pts, bizarref00l 16 pts 'Y que sea republicano'), 'quieren mentes jóvenes fáciles de doblegar' (aguamxja 1 pt), 'se les acabaron profesionales... hijitos de amigos' (ravioli_luvr666 6 pts), críticas rodillas/artistas (eunoia_ciel 40 pts). Los hechos están cubiertos por BioBio/Canal9/Diario Oficial/InfoLobby; reacción aporta dato de percepción ciudadana sobre meritocracia/edad."
+
+exante-2026-08-26-kast-repone-gabinete-primera-dama:
+  tipo: prensa
+  medio: Ex-Ante
+  titulo: "Kast repone oficialmente gabinete de la Primera Dama eliminado en gobierno de Boric (lea el documento)"
+  autor: Ex-Ante
+  fecha: 2026-08-26
+  url: https://www.ex-ante.cl/politica/kast-repone-gabinete-primera-dama/
+  notas: "Ex-Ante revelo via Transparencia la resolucion exenta N391 de la Direccion Administrativa de la Presidencia del 13-may-2026 firmada por Julio Feres que reincorpora el Gabinete Primera Dama. Verificada por fetch-content. Evento 20260827-6."
+
+emol-2026-08-27-gabinete-primera-dama-restituido:
+  tipo: prensa
+  medio: Emol
+  titulo: "Gobierno restituye gabinete de la primera dama eliminado durante administracion de Boric"
+  autor: "María Cristina Romero"
+  fecha: 2026-08-27
+  url: https://www.emol.com/noticias/Nacional/2026/08/27/1209703/gabinete-primera-dama-es-reinstaurado.html
+  notas: "Emol cubre la reposicion del Gabinete Primera Dama via resolucion N391 del 13-may-2026 firmada por Julio Feres dada a conocer por Ex-Ante. Verificada. Evento 20260827-6."
+
+nostalgica-2026-08-27-kast-restituye-gabinete-primera-dama:
+  tipo: prensa
+  medio: Nostálgica
+  titulo: "Kast restituye el Gabinete de Primera Dama tras cuatro anos y formaliza el equipo de Pia Adriasola"
+  autor: "Nostálgica"
+  fecha: 2026-08-27
+  url: https://www.nostalgica.cl/kast-restituye-el-gabinete-de-primera-dama-tras-cuatro-anos-y-formaliza-el-equipo-de-pia-adriasola/
+  notas: "Nostalgica replica detalle de Ex-Ante sobre resolucion N391 del 13-may-2026 y equipo de Pia Adriasola. Verificada. Evento 20260827-6."
+
+radio-uchile-2026-08-27-kast-restituye-gabinete-primera-dama:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "A cuatro anos de su disolucion: Presidente Kast restituye gabinete de la Primera Dama"
+  autor: "Diario UChile"
+  fecha: 2026-08-27
+  url: https://radio.uchile.cl/2026/08/27/a-cuatro-anos-de-su-disolucion-presidente-kast-restituye-gabinete-de-la-primera-dama
+  notas: "Radio UChile confirma reposicion via resolucion N391 del 13-may-2026. Verificada. Evento 20260827-6."
+
+elmostrador-2026-08-27-gabinete-primera-dama-cuatro-anos:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Solo duro cuatro anos: Gobierno restituye gabinete de la primera dama eliminado en mandato de Boric"
+  autor: "Mesa de noticias de El Mostrador"
+  fecha: 2026-08-27
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/27/solo-duro-cuatro-anos-gobierno-restituye-gabinete-de-la-primera-dama-eliminado-en-mandato-de-boric
+  notas: "El Mostrador detalla que medida recoge y modifica resolucion de 2018 y equipo de Pia Adriasola. Verificada. Evento 20260827-6."
+
+eldinamo-2026-08-27-kast-restituye-gabinete-primera-dama:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "Kast restituye gabinete de primera dama eliminado por Boric: que implica y cuales son sus funciones"
+  autor: "Francisco Rosales"
+  fecha: 2026-08-27
+  url: https://www.eldinamo.cl/politica/2026/08/27/kast-restituye-gabinete-de-primera-dama-eliminado-por-boric-que-implica-y-cuales-son-sus-funciones
+  notas: "El Dinamo cubre reinstauracion via resolucion N391 del 13-may-2026. Verificada. Evento 20260827-6."
+
+biobiochile-2026-08-27-kast-restituye-gabinete-primera-dama:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Kast restituye el Gabinete de Primera Dama tras cuatro anos y formaliza el equipo de Pia Adriasola"
+  autor: "BioBioChile"
+  fecha: 2026-08-27
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/27/kast-restituye-el-gabinete-de-primera-dama-tras-cuatro-anos-y-formaliza-el-equipo-de-pia-adriasola.shtml
+  notas: "BioBioChile replica contenido de Ex-Ante sobre resolucion N391 del 13-may-2026. Verificada. Evento 20260827-6."
+
+reddit-rchile-2026-08-27-gabinete-primera-dama:
+  tipo: red_social
+  medio: Reddit r/chile
+  titulo: "Gobierno restituye gabinete de la primera dama eliminado durante administracion de Boric - hilo r/chile"
+  autor: "Agreeable_Dot2979"
+  fecha: 2026-08-27
+  url: https://old.reddit.com/r/chile/comments/1vzykwk/gobierno_restituye_gabinete_de_la_primera_dama/
+  notas: "Fuente complementaria (termometro opinion): hilo r/chile 27-ago-2026 ilustra polarizacion sobre gasto fiscal y rol de primera dama. Los hechos estan cubiertos por medios primarios. Evento 20260827-6."
+cooperativa-2026-08-28-prision-funcionario-judicial-filtracion:
+  tipo: prensa
+  medio: Cooperativa
+  titulo: "Prisión para funcionario del Poder Judicial acusado de filtrar información a bandas criminales"
+  autor: "Cooperativa.cl"
+  fecha: 2026-08-28
+  url: https://www.cooperativa.cl/noticias/pais/judicial/prision-para-funcionario-del-poder-judicial-acusado-de-filtrar/2026-08-28/163753.html
+  notas: "Formalización de Jaime Inostroza Andrade en el Juzgado de Garantía de San Bernardo por cohecho agravado reiterado, lavado de activos, obstrucción y entrega de antecedentes reservados en causa por narcotráfico; prisión preventiva por 200 días; desempeno en Tercer TOP Santiago; origen en banda narco de San Bernardo alertada de medidas intrusivas y cámara desmontada; viajes a EE.UU. e ingresos no justificados por $80M entre 2023-2026. Fuente primaria del usuario. Evento 20260828-9."
+latercera-2026-08-28-prision-preventiva-funcionario-judicial-filtraba:
+  tipo: prensa
+  medio: La Tercera
+  titulo: "Decretan prisión preventiva para funcionario del Poder Judicial que filtraba información a organizaciones criminales"
+  autor: "Claudio Portilla"
+  fecha: 2026-08-28
+  url: https://www.latercera.com/nacional/noticia/decretan-prision-preventiva-para-funcionario-del-poder-judicial-que-filtraba-informacion-a-organizaciones-criminales/
+  notas: "Confirma prisión preventiva para Jaime Inostroza Andrade (ingeniero informático, 3er TOP Santiago) en Juzgado de Garantía de San Bernardo; imputación por cohecho agravado reiterado, lavado de activos, obstrucción e infracción art. 38 Ley 20.000; Fiscalía Occidente originada en causa narco San Bernardo con imputados alertados de medidas intrusivas; cámara desmontada y accesos indebidos detectados; 80 millones sin justificar y viajes a EE.UU. entre 2023-2026; 200 días de investigación y ampliación previa de detención el 26-ago. Evento 20260828-9."
+redaccion-2026-08-28-prision-funcionario-judicial-filtraba:
+  tipo: prensa
+  medio: Redacción.cl
+  titulo: "En prisión preventiva queda funcionario judicial formalizado por cohecho y obstrucción de investigaciones por narcotráfico"
+  autor: "María Isabel Guzmán Muñoz"
+  fecha: 2026-08-28
+  url: https://redaccion.cl/en-prision-funcionario-judicial-filtraba-datos-narcos
+  notas: "Detalle de formalización: cohecho agravado reiterado, violación de secreto Ley 20.000 y obstrucción; Juzgado de Garantía de San Bernardo (juez Álvaro Mardones) decreta prisión por peligro para la sociedad; Fiscal Regional Marcos Pastén acredita 29 años de servicio (desde 1997), al menos $80M ingresados 2023-2026, viajes a EE.UU., 4 hechos formalizados con origen en filtración a banda narco San Bernardo; no formalizado aún por lavado pero arista investigada; análisis patrimonial por Brigada Anticorrupción PDI; teléfonos incautados y vaciados; Corte de Apelaciones ordenó sumario administrativo y querella. Evento 20260828-9."
+adnradio-2026-08-28-prision-funcionario-judicial-banda-narco:
+  tipo: prensa
+  medio: ADN Radio
+  titulo: "Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a banda narco"
+  autor: "Juan Carlos Castillo"
+  fecha: 2026-08-28
+  url: https://www.adnradio.cl/2026/08/28/prision-preventiva-para-funcionario-del-poder-judicial-acusado-de-filtrar-informacion-a-banda-narco/
+  notas: "Prisión preventiva para Jaime Inostroza decretada por gravedad y riesgo para la sociedad; 200 días de investigación; uso del cargo para filtrar información a organizaciones delictuales; remite a ampliación de detención del 25-ago y allanamiento al Centro de Justicia del 24-ago. Evento 20260828-9."
+t13-2026-08-28-prision-preventiva-funcionario-judicial:
+  tipo: prensa
+  medio: T13
+  titulo: "Dictan prisión preventiva para funcionario del Poder Judicial acusado por filtrar datos a organización narco"
+  autor: "T13"
+  fecha: 2026-08-28
+  url: https://www.t13.cl/noticia/nacional/prision-preventiva-funcionario-poder-judicial-acusado-filtrar-datos-28-8-2026
+  notas: "Prisión preventiva por 200 días (juez Álvaro Mardones) por peligro para la sociedad y pluralidad de delitos; Jaime Inostroza con 29 años en Poder Judicial detenido a inicios de semana; Fiscalía acreditó venta de información (causas, resoluciones, medidas cautelares) a banda narco San Bernardo; allanamientos con incautación de computadores y celulares. Evento 20260828-9."
+cnnchile-2026-08-28-prision-preventiva-funcionario-judicial:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Dictan prisión preventiva para funcionario del Poder Judicial acusado por filtrar datos de investigación"
+  autor: "Valentina Sánchez Cárdenas"
+  fecha: 2026-08-28
+  url: https://www.cnnchile.com/pais/dictan-prision-preventiva-para-funcionario-del-poder-judicial-acusado-por-filtrar-datos-de-investigacion/
+  notas: "Prisión preventiva en Juzgado de Garantía de San Bernardo con 200 días; Jaime Inostroza, ingeniero informático con 29 años en Poder Judicial; cohecho agravado reiterado, lavado de activos y vulneración art. 38 Ley 20.000; origen en banda narco San Bernardo alertada de pinchazos y allanamientos; mención a 'topo' en escuchas; incautación de dos celulares y computador. Evento 20260828-9."
+elmostrador-2026-08-28-prision-informatico-banda-narco:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "Prisión preventiva para informático acusado de colaborar con banda narco en Santiago"
+  autor: "Mesa de noticias de El Mostrador"
+  fecha: 2026-08-28
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/28/prision-preventiva-para-informatico-acusado-de-colaborar-con-banda-narco-en-santiago/
+  notas: "Prisión preventiva para Jaime Osvaldo Inostroza Andrade (Tercer TOP Santiago, 29 años servicio) por peligro para la sociedad; Fiscal Marcos Pastén confirma cohecho agravado reiterado, obstrucción y revelación de secretos; análisis patrimonial de $80M por Brigada Anticorrupción; defensa (Tufit Bufadel) señala entrega de teléfonos y claves y colaboración, versus Fiscalía que niega colaboración; 200 días y traslado a Capitán Yáber o Punta Peuco por definir; sumario y querella de Corte de Apelaciones. Evento 20260828-9."

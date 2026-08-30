@@ -62,9 +62,11 @@ Campos: `ID | estado ⬜/🟡 | fecha detección YYYY-MM-DD | bucket (primer hea
 ## Comandos
 
 ```bash
-# ver catálogo (sin leer 158KB)
+# ver catálogo (sin leer 158KB) — portable (sin | head, falla en PowerShell)
 rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md
-rg "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md | head
+rg "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md
+# alternativa con límite: rg --max-count 20 "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md
+# PowerShell si necesitas paginar: rg "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md | Select-Object -First 20
 
 # leer solo el año relevante
 read TAREAS/SEGUIMIENTO/2026.md

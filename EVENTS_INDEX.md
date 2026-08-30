@@ -1396,6 +1396,7 @@
 - [2026/08/20260827-3 - Gobierno informa récord de 140.412 empresas creadas entre enero y julio de 2026 y lo califica de histórico](src/content/events/2026/08/20260827-3.md) — 11 fuentes
 - [2026/08/20260827-4 - Marta Lagos califica propuesta constitucional de Arrau como 'principio del fin del pinochetismo' y pone nota 2 al Gobierno y 1 a la oposición](src/content/events/2026/08/20260827-4.md) — 7 fuentes
 - [2026/08/20260827-5 - Cabo segundo Alejandro Ortiz Vásquez es asesinado de un disparo en el rostro en Renca mientras estaba de franco; Fiscalía ECOH y OS9 investigan encerrona y detienen a un sospechoso](src/content/events/2026/08/20260827-5.md) — 8 fuentes
+- [2026/08/20260827-6 - Gobierno restituye Gabinete de la Primera Dama eliminado en 2022: resolución N°391 formaliza equipo de Pía Adriasola](src/content/events/2026/08/20260827-6.md) — 8 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 12 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
@@ -1403,6 +1404,8 @@
 - [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 10 fuentes
 - [2026/08/20260828-6 - Diputado PS Juan Santana denuncia a Cerimedo ante Fiscalía por granjas de bots y eventual financiamiento electoral; Fiscal Nacional deriva a fiscalía regional y Gobierno niega 'vínculo alguno' con Kast](src/content/events/2026/08/20260828-6.md) — 7 fuentes
 - [2026/08/20260828-7 - Detienen a dos carabineros por homicidio de rapero Vegetal en Padre Las Casas y Fiscalía formaliza por obstrucción](src/content/events/2026/08/20260828-7.md) — 7 fuentes
+- [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
+- [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 
 ## 2025
 

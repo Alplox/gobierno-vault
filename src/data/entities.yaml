@@ -13299,6 +13299,38 @@ people:
       marzo de 2026), casada con el Mandatario. Comparte el segundo piso de 'La
       Moneda chica' con el equipo de confianza del Presidente, incluido el
       asesor David Barchiesi (Ex-Ante, enero 2026).
+  miguel_rojas:
+    nombre: Miguel Rojas
+    cargo: Jefe de gabinete de la primera dama
+    organizacion: presidencia_chile
+    notas: Militante del Partido Republicano. Jefe de gabinete de la primera dama
+      Pía Adriasola desde marzo de 2026; integra el Gabinete Primera Dama
+      restituido por resolución exenta N°391 de la Dirección Administrativa de la
+      Presidencia del 13-may-2026 (Ex-Ante, Radio UChile y El Mostrador, ago-2026).
+  emilio_silva:
+    nombre: Emilio Silva
+    cargo: Jefe territorial de la primera dama
+    organizacion: presidencia_chile
+    notas: Militante del Partido Republicano. Jefe territorial del equipo de la
+      primera dama Pía Adriasola desde marzo de 2026; integra el Gabinete Primera
+      Dama restituido por resolución exenta N°391 de la Dirección Administrativa de
+      la Presidencia del 13-may-2026 (Ex-Ante, Radio UChile, ago-2026).
+  catalina_ariztia:
+    nombre: Catalina Ariztía
+    cargo: Periodista del Gabinete de la primera dama
+    organizacion: presidencia_chile
+    notas: Periodista. Integra el Gabinete Primera Dama de Pía Adriasola desde marzo
+      de 2026, junto a Paula Elizalde; equipo formalizado por resolución exenta
+      N°391 de la Dirección Administrativa de la Presidencia del 13-may-2026
+      (Ex-Ante, Nostalgica, ago-2026).
+  paula_elizalde:
+    nombre: Paula Elizalde
+    cargo: Periodista del Gabinete de la primera dama
+    organizacion: presidencia_chile
+    notas: Periodista. Integra el Gabinete Primera Dama de Pía Adriasola desde marzo
+      de 2026, junto a Catalina Ariztía; equipo formalizado por resolución exenta
+      N°391 de la Dirección Administrativa de la Presidencia del 13-may-2026
+      (Ex-Ante, Nostalgica, ago-2026).
   juan_carlos_reinao:
     nombre: Juan Carlos Reinao
     cargo: Exalcalde de Renaico
@@ -18456,6 +18488,54 @@ people:
     cargo: Fiscal ECOH
     organizacion: ministerio_publico
     notas: Fiscal del Equipo de Crimen Organizado y Homicidios (ECOH) de la Fiscalía Metropolitana. A cargo de la investigación del homicidio del cabo Alejandro Ortiz Vásquez en Renca (ago-2026).
+  sebastian_carvallo_greene:
+    nombre: Sebastián Carvallo Greene
+    cargo: Jefe de gabinete de la Subsecretaría de la Niñez
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Jefe de gabinete de la Subsecretaría de la Niñez
+        organizacion: ministerio_desarrollo_social
+        desde: 2026-07-09  # https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1 + https://www.diariooficial.interior.gob.cl/publicaciones/2026/07/23/44506/01/2840050.pdf
+    notas: Trabajador social PUC (egreso 2024). Jefe de gabinete de la Subsecretaría de la Niñez desde 09-jul-2026 (InfoLobby AI009 09-07-2026, Res. Exenta SN 142/2026 de 10-jul-2026 publicada Diario Oficial 23-jul-2026; Indefinido). Antes encargado nacional de proyectos Ley Inclusión en Corporación La Esperanza (may-jul 2026) y jefe de proyectos Fundación Trabün (feb-sep 2025). Director coral Coro Misión País (2022-2023), Fundación Misericordia y Canto Católico (2020-2022). Validado 2026-08-29 vía LeyLobby y Diario Oficial.
+  marcelo_sanchez_ahumada:
+    nombre: Marcelo Sánchez Ahumada
+    cargo: Subsecretario de la Niñez
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Subsecretario de la Niñez
+        organizacion: ministerio_desarrollo_social
+        desde: 2026-03-11  # https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1
+    notas: Subsecretario de la Niñez desde 11-mar-2026 (LeyLobby AI009 11-03-2026 Indefinido; confirma nómina subsecretarios 07-feb-2026 Radio Agricultura/Ex-Ante y Wikipedia; jefe directo de Sebastián Carvallo Greene desde jul-2026). Validado 2026-08-29 vía LeyLobby.
+  javiera_corvalan_azpiazu:
+    nombre: Javiera Corvalán Azpiazu
+    cargo: Jefa de gabinete del Ministerio de Desarrollo Social y Familia
+    organizacion: ministerio_desarrollo_social
+    cargos:
+      - cargo: Jefa de gabinete de la Subsecretaría de la Niñez
+        organizacion: ministerio_desarrollo_social
+        desde: 2026-03-11  # https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1
+        hasta: 2026-05-25  # https://www.leylobby.gob.cl/instituciones/AI009/cargos-pasivos?todos=1
+    notas: Jefa de gabinete de la Subsecretaría de la Niñez 11-mar-2026 al 25-may-2026 (LeyLobby AI009 11-03-2026 a 25-05-2026; BioBio 28-ago-2026 confirma aún en mayo, fuera en junio; Claudio Yáñez la sucede 25-may a 08-jul, luego Carvallo 09-jul). Luego gabinete ministra Desarrollo Social (según fuentes La Radio, BioBio). Recomendó a Sebastián Carvallo según fuentes (vínculo coros católicos, no en CVs). Validado 2026-08-29 vía LeyLobby.
+  jaime_inostroza_andrade:
+    nombre: Jaime Inostroza Andrade
+    cargo: Funcionario administrativo del Tercer Tribunal Oral en lo Penal de Santiago
+    organizacion: poder_judicial
+    notas: Ingeniero informático del Tercer TOP Santiago con 29 años de servicio. Detenido por la Brigada Anticorrupción de la PDI a solicitud de la Fiscalía Occidente por presunta filtración de información reservada a bandas narco de San Bernardo a cambio de retribuciones económicas. Formalizado en el Juzgado de Garantía de San Bernardo por cohecho agravado reiterado, obstrucción a la investigación e infracción art. 38 Ley 20.000; prisión preventiva por 200 días. Registra ingresos no justificados por $80 millones entre 2023-2026 y viajes a EE.UU.; 4 hechos formalizados y análisis patrimonial en curso por Brigada Anticorrupción.
+  marcos_pasten:
+    nombre: Marcos Pastén
+    cargo: Fiscal Regional Metropolitano Occidente
+    organizacion: ministerio_publico
+    notas: Fiscal Regional de la Fiscalía Metropolitana Occidente. A cargo de la investigación contra Jaime Inostroza Andrade por filtraciones a banda narco de San Bernardo; sostuvo en audiencia de formalización que se acreditó cohecho agravado reiterado, revelación de secretos y obstrucción, con 4 hechos aludidos y diligencias patrimoniales en curso.
+  alvaro_mardones:
+    nombre: Álvaro Mardones
+    cargo: Juez del Juzgado de Garantía de San Bernardo
+    organizacion: poder_judicial
+    notas: Juez del Juzgado de Garantía de San Bernardo que decretó prisión preventiva para Jaime Inostroza Andrade por peligro para la seguridad de la sociedad y fijó 200 días de investigación.
+  tufit_bufadel:
+    nombre: Tufit Bufadel
+    cargo: Abogado defensor
+    notas: Defensor de Jaime Inostroza Andrade; afirmó que su representado entregó teléfonos y claves y colaboró con la investigación, en contraste con la Fiscalía que señaló falta de colaboración.
+
 organizations:
   cge:
     nombre: CGE

@@ -94,7 +94,7 @@ El body es narrativa factual, no bitácora de decisiones del editor. **Nunca** i
 - Justificaciones sobre la selección de fuentes, cobertura o sesgo percibido.
 - Auto-referencia al proceso de edición ("este evento documenta X para reducir sesgo").
 
-La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate.mjs` (patrón `nota editorial`; desde 2026-08-29 incluye `validación cruzada`).
+La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate.mjs` (patrón `nota editorial`).
 
 ### Campo `svg_backup` (respaldo ASCII de imagen)
 
