@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 309
+**Total tareas:** 312
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 226 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 229 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 283 · V: 8 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 285 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -293,6 +293,8 @@
 | S-2026-203 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Fiscalía regional resuelve denuncia Santana por granjas de bots (apertura/archivo/no delito) — remisión de Valencia a fiscalía regional (evento 20260828-6) | `20260828-6` | Origen: <https://www.cooperativa.cl/noticias/pais/politica/partido-socialista/diputado-ps-pide-investigar-si-kast-tiene-vinculos-con-fernando-cerimedo-y-sus-granjas-de-bots-/2026-08-28/144843.html> |
 | S-2026-204 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Servel informa si Numen/Numen SpA recibió pagos o prestó servicios en campañas chilenas (eventos 20260828-6, 20260821-8) | `20260828-6` `20260821-8` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/08/27/cuentas-vinculadas-a-cerimedo-y-comando-de-kast-la-denuncia-ingresada-a-fiscalia-por-diputado-santana.shtml> |
 | S-2026-205 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Peritaje de granja de bots y dispositivos incautados en La Paz + control de 180 días de prisión preventiva de Cerimedo en Bolivia | `20260818-14` `20260828-6` | Origen: <https://www.rtve.es/noticias/20260825/caida-trama-fernando-cerimedo-cerebro-digital-ultraderecha-latinoamericana/17201359.shtml> |
+| S-2026-206 | ⬜ | 2026-08-29 | Homicidio Renca — seguimiento judicial | Homicidio cabo Alejandro Ortiz Vasquez (Renca 27-ago-2026): desenlace judicial del detenido y busqueda de coautores — formalizacion, cautelares, identificacion de banda, recuperacion arma y vehiculo quemado Quilicura | `20260827-5` | Origen: <https://cooperativa.cl/noticias/pais/policial/homicidios/carabinero-de-franco-fue-asesinado-en-la-comuna-de-renca/2026-08-27/203359.html> |
+| S-2026-207 | ⬜ | 2026-08-29 | Homicidio Renca — banda El Perejil | Banda El Perejil (Renca): verificar si el OS9/ECOH acredita patron serial de citaciones por Marketplace en Miraflores/21 de Mayo — al menos 2 casos previos senalados por vecinos, vehiculo quemado Aeropuerto/Central y heridos SAR Renca | `20260827-5` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/28/carabinero-asesinado-en-renca-nuevo-antecedente-revela-motivo-de-victima-para-ir-al-lugar-de-crimen.shtml> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
@@ -320,5 +322,6 @@
 | V-2026-006 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Operación Imperio Ámsterdam — seguimiento judicial (evento 20260819-1): la formalización se inició el 19-ago (BioBioC... | `20260819-1` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/19/asi-operaba-red-que-trabajaba-marihuana-bajo-fachada-medicinal-y-que-aspiraba-a-ganar-us20-millones.shtml> |
 | V-2026-007 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Columna El Arrebato / tesis de la seguridad como afecto: el debate sobre si "la disputa por la seguridad es afectiva ... | `20260526-3` | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-008 | ⬜ | 2026-08-10 | Página /gabinete (9-ago-2026) — feature + gaps de | Decisión de Kast sobre los indultos a uniformados (desde 10-ago-2026; actualizado 25-ago): la presión quedó instalada... | `20260819-9` | Origen: <https://www.cnnchile.com/pais/no-puede-ser-que-tengamos-un-presidente-de-derecha-que-no-tenga-el-coraje-para-indultar-senadora-kaiser-arremete-contra-el-presidente-kast-por-uniformados-condenados/> |
+| V-2026-009 | ⬜ | 2026-08-29 | Homicidio Renca — verificacion movil | Verificar movil del homicidio en Renca: encerrona por camioneta vs venta Marketplace vs entrega Uber Eats — contrastar version BioBio (emprendimiento Marketplace, TIPCAR al cuello) vs La Tercera (Uber Eats, banano, cuchillo) y normativa Carabineros sobre trabajo paralelo | `20260827-5` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/28/carabinero-asesinado-en-renca-nuevo-antecedente-revela-motivo-de-victima-para-ir-al-lugar-de-crimen.shtml> |
 
 *Estados: ⬜ pendiente, 🟡 parcial. Al cerrar, la fila se elimina del YYYY.md (como PENDIENTES) y el hecho queda en EVENTS_INDEX.md + git log.*

@@ -90,11 +90,11 @@ La bencina subió [[cifra/alza_bencina_mepco/370/pesos_por_litro]] [[source/late
 
 El body es narrativa factual, no bitácora de decisiones del editor. **Nunca** incluir en el evento:
 
-- Secciones o párrafos que expliquen por qué se agregaron o no se agregaron fuentes ("No se agregan como fuentes...", "complementarios por definición", "Matiz sobre sesgo y cobertura", "reduce el riesgo de reinterpretación", "medio con línea editorial... para contrastar sesgo").
+- Secciones o párrafos que expliquen por qué se agregaron o no se agregaron fuentes ("No se agregan como fuentes...", "complementarios por definición", "Matiz sobre sesgo y cobertura", "reduce el riesgo de reinterpretación", "medio con línea editorial... para contrastar sesgo", "Validación cruzada" como sección que justifica selección de fuentes).
 - Justificaciones sobre la selección de fuentes, cobertura o sesgo percibido.
 - Auto-referencia al proceso de edición ("este evento documenta X para reducir sesgo").
 
-La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate.mjs` (patrón `nota editorial`).
+La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate.mjs` (patrón `nota editorial`; desde 2026-08-29 incluye `validación cruzada`).
 
 ### Campo `svg_backup` (respaldo ASCII de imagen)
 
