@@ -19,7 +19,7 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 
 - SSG Astro con `ClientRouter`, prefetch y transiciones.
 - Contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` con validación de frontmatter y wikilinks.
-- Datos maestros YAML en `src/data/` (personas, orgs, cifras, temas, fuentes, colectivos, sectores, sueldos).
+- Contenido en `src/content/people|organizations|topics|sources|cifras/*.md` (markdown puro, Obsidian, sin YAML monolito) + `src/data/` solo `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml`.
 - Wikilinks `[[person/id]]` `[[org/id]]` `[[source/id]]` `[[cifra/...]]` `[[event/...]]` con plugin `remarkWikiLinks`.
 - Timeline lazy, rail temporal, grafo de relaciones y TTS (Piper) en cliente.
 - Catálogo local de prensa en `sitemaps/` (JSONL por medio/año, no commiteado) para búsquedas sin tocar la red.
@@ -27,7 +27,8 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 ## Estructura principal
 
 - `src/content/events/` — eventos por año/mes.
-- `src/data/` — `entities.yaml`, `sources.yaml`, `topics.yaml`, `colectivos.yaml`, `sectores.yaml`, `sueldos.yaml`.
+- `src/content/people|organizations|topics|sources|cifras/*.md` — personas, orgs, temas, fuentes, cifras (markdown, 9046 archivos).
+- `src/data/` — `colectivos.yaml`, `sectores.yaml`, `sueldos.yaml` (pequeños, no monolito).
 - `src/lib/` — `registry.ts`, `queries.ts`, `extractEntities.ts`, `remarkWikiLinks.mjs`, `cabinet.ts`, etc.
 - `src/components/` / `src/pages/` / `src/layouts/` — UI y rutas (`/`, `/events`, `/people`, `/gabinete`, `/sueldos`, `/llm.txt`).
 - `.agents/skills/*/SKILL.md` — guías modulares por dominio (contenido, reglas, frontend, datos, build, gabinete, sitemaps, fuentes gubernamentales, redes, backup, tools).
@@ -45,7 +46,7 @@ Usa **pnpm** (no npm). `pnpm install` primero.
 - `pnpm run deploy` — build local + `wrangler pages deploy dist --project-name gobierno-vault`.
 - `pnpm run validate` — valida wikilinks, `medio`, mojibake/BOM y prose (falla antes del build).
 - `pnpm run generate-index` — regenera `EVENTS_INDEX.md` + `README.md` › Estadísticas del vault.
-- `pnpm run add-source -- <URL>` — genera bloque YAML para `sources.yaml` (flags: `--append`, `--catalog-only`, `--search <texto>` con `--medio`/`--fecha`).
+- `pnpm run add-source -- <URL>` — genera `src/content/sources/<id>.md` (flags: `--append` crea `.md` sin colisión, `--catalog-only`, `--search <texto>` con `--medio`/`--fecha`).
 - `pnpm run sitemaps-sync -- <medio>` — sincroniza catálogo desde sitemaps públicos.
 - `pnpm run sitemaps-resync` — merge incremental diario + regenera índice y backup.
 - `pnpm run sitemaps-index` — regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md` (tablas para editores).
@@ -87,9 +88,11 @@ Ver `TEMPLATE.md` y `.agents/skills/content-model/SKILL.md` + `event-rules/SKILL
 
 ## Datos y entidades
 
-- `entities.yaml` — personas, organizaciones, cifras.
-- `sources.yaml` — fuentes (`medio-YYYY-MM-DD-slug`, URL completa, `medio` exacto).
-- `topics.yaml` — taxonomía de temas.
+- `src/content/people/*.md` — personas (`nombre`, `cargo`, `cargos[]`).
+- `src/content/organizations/*.md` — organizaciones (`nombre`, `tipo`).
+- `src/content/cifras/*.md` — cifras (`nombre`, `unidad_default`).
+- `src/content/sources/*.md` — fuentes (`medio-YYYY-MM-DD-slug`, URL completa, `medio` exacto).
+- `src/content/topics/*.md` — taxonomía de temas.
 - `colectivos.yaml` / `sectores.yaml` — arrays planos.
 - `sueldos.yaml` — montos y series de `/sueldos` sin hardcodear (resueltas vía `getPeopleRegistry`/`getSourcesRegistry`).
 

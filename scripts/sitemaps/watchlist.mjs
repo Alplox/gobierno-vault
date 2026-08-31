@@ -187,16 +187,46 @@ async function main() {
     }
   }
 
-  // Medios usados en sources.yaml (campo `medio:`).
-  const sourcesYaml = readFileSync(join(ROOT, 'src/data/sources.yaml'), 'utf8');
-  const mediosSources = new Set();
-  for (const m of sourcesYaml.matchAll(/^\s+medio:\s*(.+)$/gm)) {
-    mediosSources.add(norm(m[1].replace(/^["']|["']$/g, '')));
+  // Medios usados en fuentes (campo `medio:` — lee markdown si existe, fallback yaml)
+  let mediosSources = new Set();
+  try {
+    const sourcesDir = join(ROOT, 'src', 'content', 'sources');
+    if (existsSync(sourcesDir)) {
+      for (const f of readdirSync(sourcesDir).filter(f=>f.endsWith('.md'))) {
+        const raw = readFileSync(join(sourcesDir, f), 'utf8');
+        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+        if (m) {
+          const d = YAML.parse(m[1]);
+          if (d?.medio) mediosSources.add(norm(String(d.medio).replace(/^["']|["']$/g, '')));
+        }
+      }
+    }
+    if (mediosSources.size===0) throw new Error('empty');
+  } catch {
+    const sourcesYaml = readFileSync(join(ROOT, 'src/data/sources.yaml'), 'utf8');
+    for (const m of sourcesYaml.matchAll(/^\s+medio:\s*(.+)$/gm)) {
+      mediosSources.add(norm(m[1].replace(/^["']|["']$/g, '')));
+    }
   }
 
-  // Orgs de prensa en entities.yaml (nombre + notas con dominio cuando existe).
-  const entitiesYaml = readFileSync(join(ROOT, 'src/data/entities.yaml'), 'utf8');
-  const doc = YAML.parse(entitiesYaml);
+  // Orgs de prensa (lee markdown si existe, fallback yaml)
+  let doc;
+  try {
+    const orgDir = join(ROOT, 'src', 'content', 'organizations');
+    if (existsSync(orgDir)) {
+      const orgs = {};
+      for (const f of readdirSync(orgDir).filter(f=>f.endsWith('.md'))) {
+        const raw = readFileSync(join(orgDir, f), 'utf8');
+        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+        if (m) orgs[f.replace(/\.md$/,'')] = YAML.parse(m[1]);
+      }
+      if (Object.keys(orgs).length) doc = { organizations: orgs };
+      else throw new Error('empty');
+    } else throw new Error('no dir');
+  } catch {
+    const entitiesYaml = readFileSync(join(ROOT, 'src/data/entities.yaml'), 'utf8');
+    doc = YAML.parse(entitiesYaml);
+  }
   const orgsPrensa = new Map(); // nombre normalizado -> { nombre, url? }
   for (const org of Object.values(doc.organizations || {})) {
     const t = org.tipo || '';

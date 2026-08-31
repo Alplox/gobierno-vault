@@ -1,0 +1,9 @@
+---
+nombre: Carlos Quiñones López
+cargo: Ex ministro de Minería
+cargos:
+  - cargo: Ministro de Minería
+    organizacion: ministerio_mineria
+    desde: 1978-12-26
+    hasta: 1980-12-29
+---

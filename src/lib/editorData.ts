@@ -1,29 +1,67 @@
-import { readFileSync, readdirSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
+
+function readMarkdownCollection(collection: string): Record<string, unknown> | null {
+  const dir = join(process.cwd(), 'src', 'content', collection);
+  if (!existsSync(dir)) return null;
+  const files = readdirSync(dir).filter(f=>f.endsWith('.md'));
+  if (!files.length) return null;
+  const rec: Record<string, unknown> = {};
+  for (const f of files) {
+    const id = f.replace(/\.md$/, '');
+    const raw = readFileSync(join(dir, f), 'utf8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (m) rec[id] = YAML.parse(m[1]);
+  }
+  return Object.keys(rec).length ? rec : null;
+}
 
 export function getEditorData() {
   const dataDir = join(process.cwd(), 'src', 'data');
 
-  const entities = YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8'));
-  const sources = YAML.parse(readFileSync(join(dataDir, 'sources.yaml'), 'utf8'));
-  const topicsData = YAML.parse(readFileSync(join(dataDir, 'topics.yaml'), 'utf8'));
+  let entities: Record<string, unknown>;
+  const mdPeople = readMarkdownCollection('people');
+  const mdOrgs = readMarkdownCollection('organizations');
+  const mdCifras = readMarkdownCollection('cifras');
+  if (mdPeople || mdOrgs || mdCifras) {
+    entities = {
+      people: mdPeople ?? {},
+      organizations: mdOrgs ?? {},
+      cifras: mdCifras ?? {},
+    } as unknown as Record<string, unknown>;
+    // fallback to yaml for missing parts if not fully migrated
+    try {
+      const yamlEnt = YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8'));
+      if (!mdPeople && yamlEnt.people) (entities as Record<string, unknown>).people = yamlEnt.people;
+      if (!mdOrgs && yamlEnt.organizations) (entities as Record<string, unknown>).organizations = yamlEnt.organizations;
+      if (!mdCifras && yamlEnt.cifras) (entities as Record<string, unknown>).cifras = yamlEnt.cifras;
+    } catch {}
+  } else {
+    entities = YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8'));
+  }
+  let sources: Record<string, unknown>;
+  const mdSources = readMarkdownCollection('sources');
+  if (mdSources) sources = mdSources;
+  else sources = YAML.parse(readFileSync(join(dataDir, 'sources.yaml'), 'utf8'));
+  const mdTopics = readMarkdownCollection('topics');
+  const topicsData = mdTopics ?? YAML.parse(readFileSync(join(dataDir, 'topics.yaml'), 'utf8'));
   const colectivosData = YAML.parse(readFileSync(join(dataDir, 'colectivos.yaml'), 'utf8')) ?? [];
   const sectoresData = YAML.parse(readFileSync(join(dataDir, 'sectores.yaml'), 'utf8')) ?? [];
 
-  const people = Object.entries(entities.people ?? {}).map(([id, p]: [string, any]) => ({
+  const people = Object.entries((entities as Record<string, unknown> & { people?: Record<string, unknown> })['people'] ?? {}).map(([id, p]: [string, any]) => ({
     id,
     nombre: p.nombre,
     cargo: p.cargo ?? '',
   }));
 
-  const orgs = Object.entries(entities.organizations ?? {}).map(([id, o]: [string, any]) => ({
+  const orgs = Object.entries((entities as Record<string, unknown> & { organizations?: Record<string, unknown> })['organizations'] ?? {}).map(([id, o]: [string, any]) => ({
     id,
     nombre: o.nombre,
     tipo: o.tipo ?? '',
   }));
 
-  const cifras = Object.entries(entities.cifras ?? {}).map(([id, c]: [string, any]) => ({
+  const cifras = Object.entries((entities as Record<string, unknown> & { cifras?: Record<string, unknown> })['cifras'] ?? {}).map(([id, c]: [string, any]) => ({
     id,
     nombre: c.nombre,
     unidad_default: c.unidad_default ?? '',

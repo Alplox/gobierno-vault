@@ -8,7 +8,34 @@ const dataDir = join(srcRoot, 'data');
 const eventsDir = join(srcRoot, 'content', 'events');
 
 function readYaml(filename) {
-  return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+  try {
+    return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+  } catch {
+    const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
+    const coll = map[filename];
+    if (coll) {
+      const dir = join(process.cwd(), 'src', 'content', coll);
+      if (existsSync(dir)) {
+        const rec = {};
+        for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+          const id = f.replace(/\.md$/, '');
+          const raw = readFileSync(join(dir, f), 'utf8');
+          const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+          if (m) rec[id] = YAML.parse(m[1]);
+        }
+        if (Object.keys(rec).length) return rec;
+      }
+    }
+    if (filename === 'entities.yaml') {
+      const rec = { people: {}, organizations: {}, cifras: {} };
+      let found=false;
+      for (const [d,k] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
+        if (existsSync(d)) for (const f of readdirSync(d).filter(f=>f.endsWith('.md'))) { const id=f.replace(/\.md$/,''); const raw=readFileSync(join(d,f),'utf8'); const m=raw.match(/^---\r?\n([\s\S]*?)\r?\n---/); if(m){rec[k][id]=YAML.parse(m[1]); found=true;} }
+      }
+      if(found) return rec;
+    }
+    throw new Error('fallback failed');
+  }
 }
 
 function walkMd(dir) {

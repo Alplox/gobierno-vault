@@ -73,4 +73,84 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { events };
+const people = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/people' }),
+  schema: z.object({
+    nombre: z.string(),
+    cargo: z.string().optional(),
+    organizacion: z.string().optional(),
+    cargos: z
+      .array(
+        z.object({
+          cargo: z.string(),
+          organizacion: z.string().optional(),
+          desde: z.union([z.string(), z.coerce.date()]).optional().transform(v => v ? String(v).slice(0,10) : undefined),
+          hasta: z.union([z.string(), z.coerce.date()]).optional().transform(v => v ? String(v).slice(0,10) : undefined),
+        })
+      )
+      .optional(),
+    tipo: z.string().optional(),
+    pais: z.string().optional(),
+    notas: z.string().optional(),
+    bio: z.string().optional(),
+    aliases: z.array(z.string()).optional(),
+  }),
+});
+
+const organizations = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/organizations' }),
+  schema: z.object({
+    nombre: z.string(),
+    cargo: z.string().optional(),
+    organizacion: z.string().optional(),
+    cargos: z
+      .array(
+        z.object({
+          cargo: z.string(),
+          organizacion: z.string().optional(),
+          desde: z.union([z.string(), z.coerce.date()]).optional().transform(v => v ? String(v).slice(0,10) : undefined),
+          hasta: z.union([z.string(), z.coerce.date()]).optional().transform(v => v ? String(v).slice(0,10) : undefined),
+        })
+      )
+      .optional(),
+    tipo: z.string().optional(),
+    pais: z.string().optional(),
+    notas: z.string().optional(),
+    bio: z.string().optional(),
+    aliases: z.array(z.string()).optional(),
+  }),
+});
+
+const topics = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/topics' }),
+  schema: z.object({
+    nombre: z.string(),
+    descripcion: z.string().optional(),
+    relacionados: z.array(z.string()).optional(),
+    bio: z.string().optional(),
+  }),
+});
+
+const sources = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/sources' }),
+  schema: z.object({
+    tipo: z.string().optional().default('prensa'),
+    medio: z.string().optional().default(''),
+    titulo: z.string().optional().default(''),
+    autor: z.string().optional().default(''),
+    fecha: z.coerce.date().optional(),
+    url: z.string().url().optional().or(z.string().optional()),
+    notas: z.string().optional(),
+  }),
+});
+
+const cifras = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/cifras' }),
+  schema: z.object({
+    nombre: z.string(),
+    unidad_default: z.string(),
+    notas: z.string().optional(),
+  }),
+});
+
+export const collections = { events, people, organizations, topics, sources, cifras };

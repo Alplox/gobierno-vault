@@ -11,6 +11,38 @@ function readYaml(filename) {
   try {
     return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
   } catch (e) {
+    try {
+      const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
+      const coll = map[filename];
+      if (coll) {
+        const dir = join(process.cwd(), 'src', 'content', coll);
+        if (existsSync(dir)) {
+          const rec = {};
+          for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+            const id = f.replace(/\.md$/, '');
+            const raw = readFileSync(join(dir, f), 'utf8');
+            const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+            if (m) rec[id] = YAML.parse(m[1]);
+          }
+          if (Object.keys(rec).length) return rec;
+        }
+      }
+      if (filename === 'entities.yaml') {
+        const rec = { people: {}, organizations: {}, cifras: {} };
+        let found = false;
+        for (const [dir, key] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
+          if (existsSync(dir)) {
+            for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+              const id = f.replace(/\.md$/, '');
+              const raw = readFileSync(join(dir, f), 'utf8');
+              const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+              if (m) { rec[key][id] = YAML.parse(m[1]); found = true; }
+            }
+          }
+        }
+        if (found) return rec;
+      }
+    } catch {}
     console.error(`✖ YAML inválido en src/data/${filename}: ${e.message.split('\n')[0]}`);
     console.error(`  Causa típica: edición concurrente, caracteres reservados sin citar (ej. "autor: @usuario") o líneas basura de un grabado con encoding incorrecto (PowerShell Set-Content/Out-File).`);
     process.exit(1);
@@ -349,7 +381,23 @@ try {
 const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]|[\u0080-\u009f\uFFFD\u0400-\u04ff\u0100-\u024f]/g;
 const mojibakeScan = new RegExp(MOJIBAKE_RE.source, 'g');
 for (const f of ['sources.yaml', 'entities.yaml', 'topics.yaml', 'colectivos.yaml', 'sectores.yaml']) {
-  const raw = readFileSync(join(dataDir, f), 'utf8');
+  let raw;
+  try { raw = readFileSync(join(dataDir, f), 'utf8'); } catch (e) {
+    // Fallback markdown: si el YAML fue migrado a src/content/*, revisar .md en vez de fallar
+    const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics', 'entities.yaml': null };
+    if (map[f]) {
+      const dir = join(process.cwd(), 'src', 'content', map[f]);
+      if (existsSync(dir)) { raw = ''; for (const mf of readdirSync(dir).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(dir, mf), 'utf8'); } catch {} } }
+      else throw e;
+    } else if (f === 'entities.yaml') {
+      raw = '';
+      for (const coll of ['people','organizations','cifras']) {
+        const d = join(process.cwd(), 'src', 'content', coll);
+        if (existsSync(d)) for (const mf of readdirSync(d).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(d, mf), 'utf8'); } catch {} }
+      }
+      if (!raw) throw e;
+    } else throw e;
+  }
   const matches = raw.match(mojibakeScan);
   if (matches) {
     const lines = raw.split(/\r?\n/);

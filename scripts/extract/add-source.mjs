@@ -1,7 +1,9 @@
 #!/usr/bin/env node
 /**
- * add-source.mjs — Genera el bloque YAML de una fuente para `src/data/sources.yaml`
+ * add-source.mjs — Genera una fuente para `src/content/sources/<id>.md` (markdown, Obsidian)
  * a partir de una URL, extrayendo titulo, autor y fecha automaticamente.
+ * El YAML `src/data/sources.yaml` se mantiene como fallback legacy (dual-read en registry.ts)
+ * pero la fuente de verdad es el .md.
  *
  * Uso:
  *   pnpm run add-source -- https://www.latercera.com/articulo/...
@@ -10,7 +12,7 @@
  *   pnpm run add-source -- --search "reforma previsional"   (busca en el catálogo)
  *
  * Flags:
- *   --append   Agrega el bloque generado directamente al final de sources.yaml
+ *   --append   Crea `src/content/sources/<id>.md` directamente (sin colisión, evita editar monolito)
  *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda
  *   --catalog-only  No hace fetch web: usa los datos del catálogo de sitemaps
  *                   (título/fecha/medio) si la URL está indexada
@@ -28,7 +30,7 @@
  *   URL ya está indexada, pre-carga título/fecha/medio y puede saltarse la red.
  */
 
-import { readFileSync, appendFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, appendFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import readline from 'node:readline/promises';
@@ -38,6 +40,7 @@ import YAML from 'yaml';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
 const SOURCES_PATH = join(ROOT, 'src', 'data', 'sources.yaml');
+const SOURCES_MD_DIR = join(ROOT, 'src', 'content', 'sources');
 
 const MIRROR_PREFIXES = {
   jina: 'https://r.jina.ai/',
@@ -263,15 +266,32 @@ function hostnameOf(url) {
 
 function buildDomainMedioMap() {
   const map = { ...DEFAULT_DOMAIN_MEDIO };
+  // Preferir markdown, fallback a YAML legacy
+  try {
+    const mdDir = SOURCES_MD_DIR;
+    if (existsSync(mdDir)) {
+      for (const f of readdirSync(mdDir).filter(f => f.endsWith('.md'))) {
+        try {
+          const raw = readFileSync(join(mdDir, f), 'utf8');
+          const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+          if (!m) continue;
+          const src = YAML.parse(m[1]);
+          if (!src?.url || !src?.medio) continue;
+          const host = hostnameOf(src.url);
+          if (host) map[host] = src.medio;
+        } catch {}
+      }
+    }
+  } catch {}
   try {
     const data = YAML.parse(readFileSync(SOURCES_PATH, 'utf8')) ?? {};
     for (const [id, src] of Object.entries(data)) {
       if (!src?.url || !src?.medio) continue;
       const host = hostnameOf(src.url);
-      if (host) map[host] = src.medio;
+      if (host && !map[host]) map[host] = src.medio;
     }
   } catch (err) {
-    logWarn(`No se pudo leer sources.yaml para el mapa de medios: ${err.message}`);
+    logWarn(`No se pudo leer fuentes para el mapa de medios: ${err.message}`);
   }
   return map;
 }
@@ -1489,28 +1509,36 @@ async function main() {
   const block = buildBlock(id, fields);
 
   console.log('\n' + '='.repeat(64));
-  console.log('BLOQUE GENERADO — copia esto en sources.yaml:');
+  console.log('BLOQUE GENERADO — frontmatter para src/content/sources/' + id + '.md:');
   console.log('='.repeat(64));
   console.log(block);
   console.log('-'.repeat(64));
   console.log(`Wikilink para usar inline en eventos:  [[source/${id}]]`);
   console.log('='.repeat(64) + '\n');
 
-  // --- Colision e indicaciones ------------------------------
+  // --- Colision: verificar .md y YAML legacy ---
+  const mdPath = join(SOURCES_MD_DIR, `${id}.md`);
+  let exists = false;
   try {
-    const data = YAML.parse(readFileSync(SOURCES_PATH, 'utf8')) ?? {};
-    if (Object.prototype.hasOwnProperty.call(data, id)) {
-      logWarn(`OJO: el ID "${id}" ya existe en sources.yaml. Revisa antes de pegar.`);
+    if (existsSync(mdPath)) exists = true;
+    else {
+      const data = YAML.parse(readFileSync(SOURCES_PATH, 'utf8')) ?? {};
+      if (Object.prototype.hasOwnProperty.call(data, id)) exists = true;
     }
+    if (exists) logWarn(`OJO: el ID "${id}" ya existe (${existsSync(mdPath) ? mdPath : SOURCES_PATH}). Revisa antes de crear.`);
   } catch { /* ignorar */ }
 
   if (flags.has('--append')) {
-    if (await confirm('Agregar este bloque al final de sources.yaml?')) {
-      appendFileSync(SOURCES_PATH, `\n${block}\n`);
-      logOk(`BLOQUE AGREGADO a ${SOURCES_PATH}`);
+    if (await confirm(`Crear src/content/sources/${id}.md?`)) {
+      mkdirSync(SOURCES_MD_DIR, { recursive: true });
+      const fm = YAML.stringify({ tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo, autor: fields.autor, fecha: fields.fecha, url: fields.url, ...(fields.notas ? { notas: fields.notas } : {}) }).trim();
+      const md = `---\n${fm}\n---\n`;
+      writeFileSync(mdPath, md, 'utf8');
+      logOk(`FUENTE CREADA en ${mdPath} (sin colisión YAML)`);
     }
   } else {
-    logInfo('Para agregarlo automaticamente al archivo, vuelve a correr con --append.');
+    logInfo('Para crear src/content/sources/<id>.md automaticamente, vuelve a correr con --append.');
+    logInfo('O crea el archivo manualmente con el frontmatter de arriba.');
   }
 
   rl.close();

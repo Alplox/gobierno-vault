@@ -13,14 +13,15 @@ Base de conocimiento estatica sobre eventos de gobierno en Chile. Astro 7 + Tail
   - `TAREAS/PENDIENTES/TRANSVERSALES.md` — sin año unico
   - `TAREAS/SEGUIMIENTO/YYYY.md` — seguimiento activo por año con IDs estables `S/A/V-YYYY-NNN` (ver `.agents/skills/seguimiento/SKILL.md`), `TAREAS/SEGUIMIENTO_INDEX.md` catálogo auto-generado
 
-**Ciclo TAREAS:** detectar pendiente → registrar en `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO/YYYY.md` con ID `S-YYYY-NNN` y **`Origen: <url>`**) → retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md` sin parsear títulos → crear evento con `TEMPLATE.md` + 5 fuentes de medios distintos (nunca red social sola) + `entities.yaml` si era 2019-2021 → `pnpm run generate-index` + `pnpm run generate-seguimiento-index` → **eliminar la fila** de `TAREAS/` (no queda `✅`). Usuario valida con `pnpm run build`.
+**Ciclo TAREAS:** detectar pendiente → registrar en `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO/YYYY.md` con ID `S-YYYY-NNN` y **`Origen: <url>`**) → retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md` sin parsear títulos → crear evento con `TEMPLATE.md` + 5 fuentes de medios distintos (nunca red social sola) + `src/content/people|organizations` si era 2019-2021 → `pnpm run generate-index` + `pnpm run generate-seguimiento-index` → **eliminar la fila** de `TAREAS/` (no queda `✅`). Usuario valida con `pnpm run build`.
 
 ## Arquitectura
 
 ```
 src/
-  content/events/YYYY/MM/YYYYMMDD-N.md   ← coleccion unica de contenido
-  data/  entities.yaml, sources.yaml, topics.yaml, colectivos.yaml, sectores.yaml, sueldos.yaml
+  content/events/YYYY/MM/YYYYMMDD-N.md
+  content/people/*.md, organizations/*.md, topics/*.md, sources/*.md, cifras/*.md ← colecciones Obsidian (markdown puro, sin YAML monolito)
+  data/  colectivos.yaml, sectores.yaml, sueldos.yaml
   lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, remarkWikiLinks.mjs
   components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
@@ -31,14 +32,14 @@ sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
 
 | Entidad | Fuente | Acceso |
 | --- | --- | --- |
-| Personas / Orgs / Cifras | `entities.yaml` | `getPeopleRegistry()` / `getOrgsRegistry()` / `getCifrasRegistry()` |
-| Fuentes | `sources.yaml` | `getSourcesRegistry()` |
-| Temas | `topics.yaml` | `getTopicsRegistry()` |
+| Personas / Orgs / Cifras | `src/content/people \| organizations \| cifras/*.md` | `getPeopleRegistry()` / `getOrgsRegistry()` / `getCifrasRegistry()` |
+| Fuentes | `src/content/sources/*.md` | `getSourcesRegistry()` |
+| Temas | `src/content/topics/*.md` | `getTopicsRegistry()` |
 | Colectivos / Sectores | `colectivos.yaml` / `sectores.yaml` | array plano |
 
-`people`/`organizations`/`topics` no existen como colecciones en disco — fluyen via YAML + `registry.ts`. `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy. `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
 
-## Checklist obligatorio antes de tocar `src/content/events/**` o `src/data/*.yaml`
+## Checklist obligatorio antes de tocar `src/content/**` (`events`/`people`/`sources`/…)
 
 Antes de revisar enlaces, crear o editar evento, **DEBES** cargar: `content-model` + `event-rules` + `data-yaml` + `sitemaps` + `tools`. Si el tema toca Estado/cifra/voto/normativa → añade `fuentes-gubernamentales`; si toca Reddit/X/FB/reacciones → añade `social-media`; si toca gabinete/`cargos[]`/Cuentas Públicas → añade `gabinete`. Sin esto no edites — `scripts/validate/validate.mjs` fallará por wikilinks, URLs o `medio`.
 
@@ -141,7 +142,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | --- | --- |
 | Nuevo campo frontmatter | `content.config.ts`, `TEMPLATE.md`, `admin.astro`, `.agents/skills/content-model/SKILL.md` |
 | Nuevo tipo de evento/relacion | `content.config.ts`, `editorData.ts`, `lib/eventTypes.ts`, `lib/relations.ts` |
-| Nueva entidad/fuente/tema | `entities.yaml`/`sources.yaml`/`topics.yaml`, `.agents/skills/data-yaml/SKILL.md` |
+| Nueva entidad/fuente/tema | `src/content/people\|organizations\|sources\|topics\|cifras/*.md`, `.agents/skills/data-yaml/SKILL.md` |
 | Tocar `/sueldos` | `src/data/sueldos.yaml`, `src/lib/sueldos.ts` |
 | Fuente gubernamental directa | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento `S/A/V-YYYY-NNN` | `TAREAS/SEGUIMIENTO/YYYY.md`, `TAREAS/SEGUIMIENTO_INDEX.md`, `.agents/skills/seguimiento/SKILL.md` |

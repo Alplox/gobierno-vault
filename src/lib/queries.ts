@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 import { getCollection } from 'astro:content';
@@ -120,10 +120,15 @@ type CifraRegistryEntry = {
 
 let cifrasRegistryCache: Record<string, CifraRegistryEntry> | null = null;
 
+function readCifrasFallback(): Record<string, CifraRegistryEntry> | null { try { const dir = join(process.cwd(), 'src', 'content', 'cifras'); if (!existsSync(dir)) return null; const rec: Record<string, CifraRegistryEntry> = {}; for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) { const id=f.replace(/\.md$/,''); const raw=readFileSync(join(dir,f),'utf8'); const m=raw.match(/^---\r?\n([\s\S]*?)\r?\n---/); if(m) rec[id]=YAML.parse(m[1]); } return Object.keys(rec).length?rec:null; } catch { return null; } }
 export function getCifrasRegistry(): Record<string, CifraRegistryEntry> {
   if (!cifrasRegistryCache) {
-    const entities = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8'));
-    cifrasRegistryCache = entities.cifras ?? {};
+    const md = readCifrasFallback();
+    if (md) cifrasRegistryCache = md;
+    else {
+      const entities = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8'));
+      cifrasRegistryCache = entities.cifras ?? {};
+    }
   }
   return cifrasRegistryCache!;
 }

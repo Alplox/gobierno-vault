@@ -1,0 +1,4 @@
+---
+nombre: Ecuador
+tipo: pais
+---
