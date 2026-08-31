@@ -33,7 +33,7 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 - `.agents/skills/*/SKILL.md` — guías modulares por dominio (contenido, reglas, frontend, datos, build, gabinete, sitemaps, fuentes gubernamentales, redes, backup, tools).
 - `sitemaps/` — `*.jsonl` (gitignored), `.cache/` (XML), `_manifest.json`, `README.md`, `MEDIOS.md`, `ESTADISTICAS.md`.
 - `scripts/` — `validate.mjs`, `generate-index.mjs`, `sitemaps-index.mjs`, `sync-sitemaps.mjs`, `add-source.mjs`, `backup.mjs`, `validate-fuentes.mjs`, etc.
-- `TAREAS/` — pendientes `PENDIENTES/YYYY.md` + `SEGUIMIENTO.md` (anti recency bias).
+- `TAREAS/` — pendientes `PENDIENTES/YYYY.md` + `SEGUIMIENTO/YYYY.md` y `SEGUIMIENTO_INDEX.md` (anti recency bias).
 
 ## Comandos útiles
 

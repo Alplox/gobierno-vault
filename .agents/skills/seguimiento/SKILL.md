@@ -19,14 +19,11 @@ TAREAS/
     TRANSVERSAL.md       # multi-año (Cuentas Públicas transversales, estallido)
     AMPLIACIONES.md      # deuda de cobertura (ver abajo)
   SEGUIMIENTO_INDEX.md   # catálogo auto-generado — NO editar a mano
-  SEGUIMIENTO.md         # README redirigido (3 líneas)
 ```
 
 - **Por qué por año:** permite `read TAREAS/SEGUIMIENTO/2026.md` en vez del monolito de 158KB.
 - **`SEGUIMIENTO_INDEX.md`** se genera con `pnpm run generate-seguimiento-index` (lee `SEGUIMIENTO/*.md`, valida IDs únicos y `Origen:`).
 - **Formato `YYYY.md`:** tabla corta por ID (parseable con `rg`) + sección `## Detalle` con el texto operativo completo de cada tarea (qué registrar, desenlaces esperados) agrupado por bucket. La columna Título de la tabla es un resumen corto y puede terminar en `...` — el detalle completo siempre está en `## Detalle` del mismo archivo.
-- **Origen:** `scripts/restore-seguimiento-detail.mjs` restauró el `## Detalle` desde el monolito original (`git show HEAD:TAREAS/SEGUIMIENTO.md`) tras una migración que truncó los títulos (reporte en `SEGUIMIENTO/_restore-report.md`).
-- `TAREAS/SEGUIMIENTO.md` monolito original queda como README que apunta al índice.
 
 ## Taxonomía (tipo en ID)
 

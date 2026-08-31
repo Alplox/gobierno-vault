@@ -309,7 +309,7 @@ for (const [id, src] of Object.entries(sourcesData)) {
 
 // Regla AGENTS.md (bitácora TAREAS): todo ID de evento marcado como ✅ hecho en
 // la bitácora (patrón `✅ \`20260807-12\``, repartida en TAREAS/PENDIENTES/*.md +
-// TAREAS/SEGUIMIENTO.md) debe referenciar un archivo de evento EXISTENTE. Esto evita la colisión recurrente
+// TAREAS/SEGUIMIENTO/*.md y TAREAS/SEGUIMIENTO_INDEX.md) debe referenciar un archivo de evento EXISTENTE. Esto evita la colisión recurrente
 // de IDs pre-asignados: entradas que apuntaban a `20260807-11/-12/-13` antes de que
 // esos IDs fueran ocupados por otros eventos, dejando la fuente registrada sin evento
 // real (fuentes huérfanas).

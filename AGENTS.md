@@ -11,7 +11,7 @@ Base de conocimiento estatica sobre eventos de gobierno en Chile. Astro 7 + Tail
 - `TAREAS/` — bitacora de pendientes anti recency bias (desde 15-ago-2026). No hay `TAREAS.md` raiz ni archivo de completadas; lo hecho queda en `EVENTS_INDEX.md` + `git log`.
   - `TAREAS/PENDIENTES/YYYY.md` — `⬜ pendiente`/`🟡 parcial` por año (2016, 2019-2026)
   - `TAREAS/PENDIENTES/TRANSVERSALES.md` — sin año unico
-  - `TAREAS/SEGUIMIENTO/YYYY.md` — seguimiento activo por año con IDs estables `S/A/V-YYYY-NNN` (ver `.agents/skills/seguimiento/SKILL.md`), `TAREAS/SEGUIMIENTO_INDEX.md` catálogo auto-generado, `TAREAS/SEGUIMIENTO.md` es README
+  - `TAREAS/SEGUIMIENTO/YYYY.md` — seguimiento activo por año con IDs estables `S/A/V-YYYY-NNN` (ver `.agents/skills/seguimiento/SKILL.md`), `TAREAS/SEGUIMIENTO_INDEX.md` catálogo auto-generado
 
 **Ciclo TAREAS:** detectar pendiente → registrar en `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO/YYYY.md` con ID `S-YYYY-NNN` y **`Origen: <url>`**) → retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md` sin parsear títulos → crear evento con `TEMPLATE.md` + 5 fuentes de medios distintos (nunca red social sola) + `entities.yaml` si era 2019-2021 → `pnpm run generate-index` + `pnpm run generate-seguimiento-index` → **eliminar la fila** de `TAREAS/` (no queda `✅`). Usuario valida con `pnpm run build`.
 

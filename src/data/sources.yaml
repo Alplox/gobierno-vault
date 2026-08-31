@@ -35237,7 +35237,7 @@ cfr-registro-publico-38bis:
   autor: Comisión para la Fijación de Remuneraciones
   fecha: 2026-08-23
   url: https://comision38bis.gob.cl/registro-publico
-  notas: "Registro mensual autorreportado por cada institución. Lectura directa 23-ago-2026: Presidente $11.304.748 (periodo 2026-05) y $11.308.034 (periodo 2026-06); senadores/diputados $8.239.091 y SEREMIs $4.554.112 exactos vs Anexo 1 del Oficio N°26/2025. Seguimiento del exceso sistemático en TAREAS/SEGUIMIENTO.md."
+  notas: "Registro mensual autorreportado por cada institución. Lectura directa 23-ago-2026: Presidente $11.304.748 (periodo 2026-05) y $11.308.034 (periodo 2026-06); senadores/diputados $8.239.091 y SEREMIs $4.554.112 exactos vs Anexo 1 del Oficio N°26/2025."
 bcn-leychile-ley-19863:
   tipo: documento
   medio: Biblioteca del Congreso Nacional (Ley Chile)
@@ -36436,6 +36436,114 @@ nuevopoder-2026-08-23-marcha-santiago-retrocesos:
   fecha: 2026-08-22
   url: https://www.nuevopoder.cl/marcha-en-santiago-exige-frenar-retrocesos-ambientales-y-reforzar-proteccion-de-animales/
   notas: "Nuevo Poder (22/23-ago-2026): la marcha se desarrolló por la Alameda de Santiago; objetivos: advertir la vulnerabilidad de los ecosistemas, pedir medidas frente a la crisis climática, rechazar disminuciones de los estándares de protección vigentes e incorporar la protección de los animales a la conservación de la biodiversidad; llamado final a situar la protección de ecosistemas como pilar del desarrollo nacional. Nota al pie consigna '(NP-ChatGPT-Cooperativa)': texto asistido por IA sobre base Cooperativa — tratar detalles finos con cautela. Verificada por lectura directa."
+
+amnistia-2026-03-19-accion-urgente-indultos:
+  tipo: institucional
+  medio: Amnistía Internacional Chile
+  titulo: "Amnistía Internacional emite 'acción urgente' por riesgo de indulto a ex carabineros y militares condenados por graves violaciones de derechos humanos"
+  autor: Amnistía Internacional Chile
+  fecha: 2026-03-19
+  url: https://amnistia.cl/amnistia-internacional-emite-accion-urgente-por-riesgo-de-indulto-a-ex-carabineros-y-militares-condenados-por-graves-violaciones-de-derechos-humanos/
+  notas: "Amnistía Chile activa Acción Urgente tras el anuncio de Kast del 12-mar-2026 de estudiar indultos a exuniformados condenados por el estallido. Explica que el indulto perdona pena pero no delito, cifra 11.506 denuncias y más de 12 mil delitos (Fiscalía, oct-2025) con menos de 2% con condena, cita a Rodrigo Bustos y llama a escribir a dgcp@presidencia.cl. Verificada por lectura directa."
+
+amnesty-2026-03-19-chile-no-al-indulto:
+  tipo: institucional
+  medio: Amnistía Internacional Chile
+  titulo: "Chile: No al indulto para excarabineros y exmilitares condenados"
+  autor: Amnesty International
+  fecha: 2026-03-19
+  url: https://www.amnesty.org/es/documents/amr22/0830/2026/es/
+  notas: "Documento global AMR 22/0830/2026 (19-mar-2026) que replica la Acción Urgente chilena a nivel internacional. PDF disponible en amnesty.org. Verificado por lectura directa."
+
+elclarin-2026-03-19-amnistia-accion-urgente:
+  tipo: prensa
+  medio: El Clarín de Chile
+  titulo: "Amnistía Internacional activa 'acción urgente' ante posible indulto a condenados por violaciones a los derechos humanos"
+  autor: El Clarín de Chile
+  fecha: 2026-03-19
+  url: https://www.elclarin.cl/2026/03/19/amnistia-internacional-activa-accion-urgente-ante-posible-indulto-a-condenados-por-violaciones-a-los-derechos-humanos/
+  notas: "Cobertura de El Clarín de la Acción Urgente de Amnistía del 19-mar-2026: reproduce el anuncio de Kast del 12-mar, la cifra de 11.506 denuncias y más de 12 mil delitos (Fiscalía oct-2025, menos de 2% con condena) y la cita de Rodrigo Bustos sobre impunidad y tratados internacionales. Verificada por lectura directa."
+
+lemondediplomatique-2026-03-19-accion-urgente-indultos:
+  tipo: prensa
+  medio: Le Monde Diplomatique (edición chilena)
+  titulo: "Amnistía Internacional emite 'acción urgente' por riesgo de indulto a ex carabineros y militares condenados por graves violaciones de derechos humanos"
+  autor: Le Monde diplomatique Chile
+  fecha: 2026-03-19
+  url: https://www.lemondediplomatique.cl/amnistia-internacional-emite-accion-urgente-por-riesgo-de-indulto-a-ex.html
+  notas: "Replica íntegra de la Acción Urgente del 19-mar-2026 con mención del canal dgcp@presidencia.cl y definición de indulto. Verificada por lectura directa."
+
+amnistia-2026-04-30-no-al-indulto-14-condenados:
+  tipo: institucional
+  medio: Amnistía Internacional Chile
+  titulo: "Chile: No al indulto para excarabineros y exmilitares condenados — Ninguno de los 14 condenados está preso 'por servir'"
+  autor: Amnistía Internacional Chile
+  fecha: 2026-04-30
+  url: https://amnistia.cl/indultos/
+  notas: "Página central de Amnistía Chile del 30-abr-2026 (mirror en https://amnistia.cl/chile-no-al-indulto-para-excarabineros-y-exmilitares-condenados/). Amplía la Acción Urgente de marzo con fichas de 12 uniformados (14 personas) y 9 víctimas: Maturana (12a183d, caso Campillai), Cuéllar/Lastra (12a183d, Acuña), Morales (8a2d, Inostroza), Castillo (11a, A.C.J.), Ferrada/Neira (tortura, Fuentealba), Carvajal (7a, Brandon González), Faúndez/Robledo (15/10a, Veloz), Arenas (5a, Véliz) y Lavín (7a, Astudillo). Cifra 11.506 denuncias, 14 presos efectivos (0,1%) y cita a Rodrigo Bustos. Verificada por lectura directa (mismo contenido entregado por el usuario)."
+
+radionuevomundo-2026-08-27-amnistia-14-condenados-por-servir:
+  tipo: prensa
+  medio: Radio Nuevo Mundo
+  titulo: "Amnistía Internacional sobre indultos: Ninguno de los 14 condenados está preso 'por servir'"
+  autor: Radio Nuevo Mundo
+  fecha: 2026-08-27
+  url: https://radionuevomundo.cl/2026/08/amnistia-internacional-sobre-indultos-ninguno-de-los-14-condenados-esta-preso-por-servir/
+  notas: "Réplica de Radio Nuevo Mundo (27-ago-2026) del informe de Amnistía del 30-abr: desglosa 11.506 denuncias, 575 términos judiciales (5%), 219 condenas (1,9%) y solo 14 con cárcel efectiva (0,1%); reproduce la crítica a presosxservir.cl y la cita de Rodrigo Bustos. Verificada por lectura directa."
+
+cnnchile-2022-07-31-proyecto-sancionar-informacion-falsa-plebiscito:
+  tipo: prensa
+  medio: CNN Chile
+  titulo: "Presentan proyecto para sancionar la creación o difusión de información falsa sobre el plebiscito de salida"
+  autor: CNN Chile
+  fecha: 2022-07-31
+  url: https://www.cnnchile.com/pais/proyecto-sancionar-creacion-difusion-informacion-falsa-plebiscito_20220731/
+  notas: "Nota original del proyecto de Luis Cuello (PC): sanciona con 500 UTM a personas naturales/jurídicas que elaboren o difundan información falsa para influir en el plebiscito del 4-sep-2022; citas de Cuello ('el Rechazo recurra, como único fundamento, a la difusión de mentiras') y de Carolina Tello sobre material falso entregado en calles. Verificada por lectura directa."
+
+biobiochile-2022-07-31-plebiscito-fake-news-29-millones:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "Plebiscito 2022: presentan proyecto de ley que sanciona con $29 millones la difusión de fake news"
+  autor: Paola Valenzuela
+  fecha: 2022-07-31
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2022/07/31/plebiscito-2022-presentan-proyecto-de-ley-que-sanciona-con-29-millones-la-difusion-de-fake-news.shtml
+  notas: "Detalla la moción de Luis Cuello (PC, Valparaíso) ingresada el sábado 30-jul: multa 500 UTM a beneficio fiscal, ejemplo de Felipe Kast (aborto hasta 9 meses) y respaldo de Tello, Cariola, Hertz y Serrano. Verificada por lectura directa."
+
+eldinamo-2022-07-31-fake-news-nueva-constitucion:
+  tipo: prensa
+  medio: El Dínamo
+  titulo: "El proyecto de ley que busca sancionar las Fake News sobre la nueva Constitución"
+  autor: Luis Rivera
+  fecha: 2022-07-31
+  url: https://www.eldinamo.cl/politica/2022/07/31/el-proyecto-de-ley-que-busca-sancionar-las-fake-news-sobre-la-nueva-constitucion/
+  notas: "Replica la moción de Cuello y Tello: multa 500 UTM y llamado a tramitar rápido antes del plebiscito. Verificada por lectura directa."
+
+publimetro-2022-07-31-29-millones-fake-news:
+  tipo: prensa
+  medio: Publimetro
+  titulo: "¿29 millones de multa por publicar fake news para el plebiscito de salida?: Diputado PC presenta proyecto de ley"
+  autor: Aton Chile
+  fecha: 2022-07-31
+  url: https://www.publimetro.cl/noticias/2022/07/31/29-millones-de-multa-por-publicar-fake-news-para-el-pebliscito-de-salida-diputado-pc-presenta-proyecto-de-ley/
+  notas: "Versión Aton: transcribe el artículo sancionatorio (500 UTM) y la motivación de Cuello (asegurar elección limpia y voto informado). Verificada por lectura directa."
+
+elciudadano-2022-07-30-diputados-pc-fake-news:
+  tipo: prensa
+  medio: El Ciudadano
+  titulo: "Diputados PC presentan proyecto para sancionar difusión de información falsa sobre el plebiscito constitucional: «No podemos dejar a la ciudadanía tan a la deriva»"
+  autor: Absalón Opazo
+  fecha: 2022-07-30
+  url: https://www.elciudadano.com/chile/diputados-pc-presentan-proyecto-para-sancionar-difusion-de-informacion-falsa-sobre-el-plebiscito-constitucional-no-podemos-dejar-a-la-ciudadania-tan-a-la-deriva/07/30
+  notas: "Entrega el texto íntegro del artículo transitorio que modifica la LOC 18.700 sobre votaciones populares y escrutinios, y el contexto inmediato (caso Hube y material falso en La Florida/Puente Alto). Verificada por lectura directa."
+
+camara-2022-07-31-boletin-15234-06:
+  tipo: institucional
+  medio: Cámara de Diputados
+  titulo: "Boletín N°15234-06: Modifica la ley N°18.700, orgánica constitucional sobre votaciones populares y escrutinios, para sancionar la elaboración y difusión de noticias falsas referidas al plebiscito constitucional de 4 de septiembre de 2022"
+  autor: Cámara de Diputados
+  fecha: 2022-08-01
+  url: https://www.camara.cl/legislacion/ProyectosDeLey/tramitacion.aspx?prmBOLETIN=15234-06
+  notas: "Ficha oficial del proyecto de Luis Cuello y otras/os (Boletín 15234-06, ingresado 1-ago-2022, primer trámite constitucional, sin ley). Corrobora materia y autores citados en prensa. Verificada por referencia cruzada en acuerdo de la Cámara que lista el boletín entre los proyectos de fake news."
 
 elmaipo-2026-08-18-convocatoria-marcha-ambiental:
   tipo: prensa
@@ -39907,3 +40015,51 @@ tele13radio-2026-08-28-sedini-entrevista-mesa-central:
   fecha: 2026-08-28
   url: https://tele13radio.cl/article/ex-ministra-sedini-por-criticas-de-matthei-a-kast-el-presidente-no-gano-por-campana-de-bots-no-hay-que-entrar-en-una-pelea-chica
   notas: "Fuente primaria: entrevista Mesa Central con Iván Valenzuela (28-ago-2026). Sedini niega vínculo Cerimedo, defiende Kast ('no ganó por bots, supo leer situación país, campaña bonita'), descarta mea culpa Matthei por falta de antecedentes, aborda dispensarios (marido minoritario sin participación judicial), Foro Madrid (legítimo) y reforma constitucional/seguridad (necesarias nuevas herramientas)."
+radio-uchile-2026-08-28-niu-qingbao-emperador-america:
+  tipo: prensa
+  medio: Radio Universidad de Chile
+  titulo: "Embajador chino en Chile: “La mayor fuente de daño a los intereses de desarrollo de América Latina es EE.UU.”"
+  autor: Joana Carvalho
+  fecha: 2026-08-28
+  url: https://radio.uchile.cl/2026/08/28/embajador-chino-en-chile-la-mayor-fuente-de-dano-a-los-intereses-de-desarrollo-de-america-latina-es-ee-uu/
+  notas: "Fuente base (Radio UChile, 28-ago-2026, 17:34 UTC): carta de Niu Qingbao en El Mercurio 'Algunos en EE.UU. se creen el emperador de América Latina' — acusa injerencia y órdenes de Washington para limitar cooperación con China, defiende 'respeto mutuo sin China first', cita arancel 12,5% a Chile pese a superávit y TLC, seguridad (codicia territorios, derribar gobiernos, mayor consumidor drogas/fuente armas), ciberseguridad (FISA 702/PRISM/Typhoon), cable submarino China-Chile (1 de 13 pasos ITS revocado bajo presión), visas como arma y cables Google/Doctrina Monroe. Verificada por lectura directa."
+biobiochile-2026-08-28-niu-qingbao-emperador-america:
+  tipo: prensa
+  medio: BioBioChile
+  titulo: "La incendiaria crítica de embajador chino a EEUU por presionar a Chile: “Se cree emperador de América”"
+  autor: Megam Ossandón
+  fecha: 2026-08-28
+  url: https://www.biobiochile.cl/noticias/nacional/chile/2026/08/28/embajador-china-se-lanza-contra-eeuu-por-presionar-a-chile-se-creen-el-emperador-de-america.shtml
+  notas: "BioBioChile (28-ago-2026 12:27 CLT): amplía carta Niu Qingbao — detalla 'dañar órdenes', respeto mutuo vs intimidación, arancel 12,5% 'reciprocidad/trabajo forzoso', ventaja china demanda/capacidad tecnológica, cable submarino (construcción china vs operador datos, Subtel ITS 1/13 pasos revocado), visas 'matonería hegemonismo', Google 3 cables y Doctrina Monroe. Aporta síntesis completa del texto de El Mercurio con foco cable."
+elmostrador-2026-08-28-niu-qingbao-emperador:
+  tipo: prensa
+  medio: El Mostrador
+  titulo: "“Se creen el emperador de América Latina”: embajador de China arremete contra Estados Unidos"
+  autor: El Mostrador
+  fecha: 2026-08-28
+  url: https://www.elmostrador.cl/noticias/pais/2026/08/28/se-creen-el-emperador-de-america-latina-embajador-de-china-arremete-contra-estados-unidos/
+  notas: "El Mostrador (28-ago-2026 13:43 CLT): réplica carta Niu Qingbao — 'no es primera vez Washington se erige dueño de América, hipocresía alarmante', arancel 12,5% con TLC/superávit, cable submarino ITS revocado, visas como arma, bases/militarización zona de paz. Confirma titular y fecha publicación El Mercurio."
+emol-2026-08-28-niu-qingbao-carta-emperador:
+  tipo: prensa
+  medio: Emol
+  titulo: "Embajador de China en Chile: \"Algunos en EE.UU. se creen el emperador de América Latina\""
+  autor: Emol
+  fecha: 2026-08-28
+  url: https://www.emol.com/noticias/Nacional/2026/08/28/1209826/embajador-de-china-carta.html
+  notas: "Emol (28-ago-2026 08:49): transcripción más extensa de la carta — incluye 3 'señales' que EEUU envía (cooperación solo si autoriza, tecnologías/minerales solo con EEUU, cables solo bajo control EEUU), sección FISA 702/PRISM intercepta cables Pacífico/Atlántico y fabrica informes Typhoon, y detalle cable Humboldt vs China-Chile (Google propietario vs empresa construcción). Valida完整性 del texto."
+pauta-2026-08-28-niu-qingbao-cable-presiones:
+  tipo: prensa
+  medio: Pauta
+  titulo: "Embajador de China por presiones de EE.UU. por cable submarino"
+  autor: Pauta
+  fecha: 2026-08-28
+  url: https://www.pauta.cl/actualidad/2026/08/28/embajador-de-china-escala-criticas-contra-ee-uu-y-acusa-presiones-sobre-chile-por-cable-submarino.html
+  notas: "Pauta (28-ago-2026 11:19 CLT): encuadre centrado en cable submarino — presión y coacción EEUU, Subtel ITS revocado, visas, y antecedente Sofofa 12-ago ('resistir injerencia') y reunión Kast-Niu Qingbao 31-jul en La Moneda con Canciller Pérez Mackenna previo a APEC Shenzhen noviembre. Aporta contexto político reciente."
+reddit-rchile-2026-08-28-niu-qingbao-emperador:
+  tipo: redes
+  medio: Reddit r/chile
+  titulo: "Embajador chino en Chile: “La mayor fuente de daño a los intereses de desarrollo de América Latina es EE.UU.”"
+  autor: ElmerFigueroa
+  fecha: 2026-08-28
+  url: https://old.reddit.com/r/chile/comments/1w0xpyi/embajador_chino_en_chile_la_mayor_fuente_de_da%C3%B1o/
+  notas: "Hilo r/chile (28-ago-2026, 100+ comentarios) que replica Radio UChile. Reacciones comunitarias complementarias (rol c): 'Ya pos señor embajador construya la linea de trenes' (244 pts), 'Ni China ni EEUU son santos, nunca pongas todos los huevos en una canasta' (Wolfwod, 173 pts), debate EEUU dictadura/Operación Cóndor vs 'China no nos ha tocado' y 'África no es país' (Much-Bus7748, Wolfwod), 'Chino basado' (9 pts) vs 'No miente pero no se haga el inocente' (13 pts), y escepticismo sobre Belt and Road/puerto Chancay Perú. Ilustra polarización y framing pragmático vs ideológico. Solo complementario, hechos cubiertos por prensa. (evento 20260828-12)."

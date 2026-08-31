@@ -50,9 +50,9 @@ Vive en `TAREAS/`. No hay `TAREAS.md` raíz ni archivo de completadas — lo hec
 
 - `TAREAS/PENDIENTES/YYYY.md` — `⬜ pendiente`/`🟡 parcial` por año (2016, 2019-2026)
 - `TAREAS/PENDIENTES/TRANSVERSALES.md` — sin año único
-- `TAREAS/SEGUIMIENTO.md` — seguimiento activo (Cuentas Públicas, desenlaces judiciales, tandas de fuentes)
+- `TAREAS/SEGUIMIENTO/YYYY.md` — seguimiento activo por año con IDs `S/A/V-YYYY-NNN` (Cuentas Públicas, desenlaces judiciales, tandas de fuentes) + catálogo `TAREAS/SEGUIMIENTO_INDEX.md`
 
-**Al detectar un pendiente que no se implementará ahora:** registrar en `TAREAS/PENDIENTES/YYYY.md` o `SEGUIMIENTO.md` con fecha, tipo sugerido, estado `⬜`, y **origen obligatorio `Origen: <url>`** (si es red social, además URL de prensa que lo valida).
+**Al detectar un pendiente que no se implementará ahora:** registrar en `TAREAS/PENDIENTES/YYYY.md` o `TAREAS/SEGUIMIENTO/YYYY.md` con fecha, tipo sugerido, estado `⬜`, y **origen obligatorio `Origen: <url>`** (si es red social, además URL de prensa que lo valida).
 
 **Al completarse:** la fila **se ELIMINA** del archivo de pendientes — no queda con `✅`. Si un seguimiento conserva pendientes activos, reescribir conservando solo `⬜`/`🟡` y descartando lo hecho.
 
