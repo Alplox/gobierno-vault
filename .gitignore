@@ -4,6 +4,7 @@ dist/
 .remark-debug.log
 /tmp/
 .wrangler
+.obsidian/
 
 *.log
 

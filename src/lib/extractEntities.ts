@@ -137,9 +137,21 @@ export function getAllCifras(): Array<CifraEntry & { eventId: string; fecha: Dat
 function eventIdToDate(eventId: string): Date {
   const parts = eventId.split('/');
   if (parts.length >= 3) {
-    const [year, month, day] = parts;
-    return new Date(`${year}-${month}-${day}`);
+    const filename = parts[2]; // YYYYMMDD-N
+    const y = filename.slice(0, 4);
+    const m = filename.slice(4, 6);
+    const d = filename.slice(6, 8);
+    if (/^\d{4}$/.test(y) && /^\d{2}$/.test(m) && /^\d{2}$/.test(d)) {
+      return new Date(`${y}-${m}-${d}`);
+    }
+    // fallback: usar year/month del path si filename no parseable
+    const year = parts[0];
+    const month = parts[1];
+    return new Date(`${year}-${month}-01`);
   }
+  // fallback para IDs planos tipo 20260816-16
+  const m = eventId.match(/^(\d{4})(\d{2})(\d{2})-\d+/);
+  if (m) return new Date(`${m[1]}-${m[2]}-${m[3]}`);
   return new Date(0);
 }
 
