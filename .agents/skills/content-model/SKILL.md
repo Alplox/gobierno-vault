@@ -56,7 +56,7 @@ No declarar la misma conexión en ambas direcciones (ej. A `deriva_en` B y B `re
 
 - Fuentes se numeran por primera aparición; repeticiones reutilizan el número. Genera anchor `#ref-N`.
 - IDs desnudos `\b20\d{6}-\d{1,3}\b` (ej. `ver evento 20260618-3`) se auto-enlazan si existen — ver `remarkWikiLinks.mjs`. Usa `[[event/ID]]` para enlace explícito.
-- `[[cifra/...]]` no se valida en `scripts/validate.mjs` (paridad con el plugin); `source`/`person`/`org`/`event` sí.
+- `[[cifra/...]]` no se valida en `scripts/validate/validate.mjs` (paridad con el plugin); `source`/`person`/`org`/`event` sí.
 
 ### Medios de prensa en prosa
 
@@ -94,7 +94,7 @@ El body es narrativa factual, no bitácora de decisiones del editor. **Nunca** i
 - Justificaciones sobre la selección de fuentes, cobertura o sesgo percibido.
 - Auto-referencia al proceso de edición ("este evento documenta X para reducir sesgo").
 
-La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate.mjs` (patrón `nota editorial`).
+La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate/validate.mjs` (patrón `nota editorial`).
 
 ### Campo `svg_backup` (respaldo ASCII de imagen)
 
@@ -110,7 +110,7 @@ svg_backup:
 
 - **A:** archivo en `public/img-to-ascii/<evento>-<slug>.svg` (SVGs reales pesan MBs; ej. zanja 1,45 MB). Render `<img src>` sin `set:html` → sin XSS. Requiere `width`/`height` o `viewBox`. Queda fuera de `.light.gvault` (custodia git + zip del footer). **B:** inline `svg:` ≤100K, render `set:html` con validación anti-XSS (`<script`, `on*`, `javascript:` rechazados).
 - Confirmación humana obligatoria. Render en `src/pages/events/[year]/[id].astro` con etiqueta “Respaldo ASCII”. CSS `.ascii-svg`/`.ascii-svg-img` en `Base.astro`.
-- Schema `content.config.ts` + `scripts/validate.mjs` validan.
+- Schema `content.config.ts` + `scripts/validate/validate.mjs` validan.
 
 ## Dónde viven las entidades
 

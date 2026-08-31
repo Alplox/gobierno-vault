@@ -70,7 +70,7 @@ read TAREAS/SEGUIMIENTO/2026.md
 
 # regenerar índice tras editar SEGUIMIENTO/
 pnpm run generate-seguimiento-index
-node scripts/generate-seguimiento-index.mjs --dry-run  # solo valida IDs sin escribir
+node scripts/generate/generate-seguimiento-index.mjs --dry-run  # solo valida IDs sin escribir
 ```
 
 ## Qué va dónde
@@ -81,4 +81,4 @@ node scripts/generate-seguimiento-index.mjs --dry-run  # solo valida IDs sin esc
 
 ## Validación
 
-`scripts/generate-seguimiento-index.mjs` valida IDs únicos, estados permitidos (`⬜`/`🟡`), y que cada `⬜` tenga `Origen: <https://`>. Falla si hay duplicado o fila sin Origen (como `validate.mjs` para wikilinks).
+`scripts/generate/generate-seguimiento-index.mjs` valida IDs únicos, estados permitidos (`⬜`/`🟡`), y que cada `⬜` tenga `Origen: <https://`>. Falla si hay duplicado o fila sin Origen (como `validate.mjs` para wikilinks).

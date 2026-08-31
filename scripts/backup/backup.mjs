@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync, statSync, writeFileSync, mkdirSync, rmSync, existsSync } from 'node:fs';
 import { basename, join } from 'node:path';
 import { brotliCompressSync, constants as Z } from 'node:zlib';
-import { MAGIC, sha256 } from './gvault-util.mjs';
+import { MAGIC, sha256 } from '../lib/gvault-util.mjs';
 
 const root = process.cwd();
 const APP_VERSION = '0.1.0';

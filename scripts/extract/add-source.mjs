@@ -36,7 +36,7 @@ import { stdin as input, stdout as output } from 'node:process';
 import YAML from 'yaml';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
+const ROOT = join(__dirname, '../..');
 const SOURCES_PATH = join(ROOT, 'src', 'data', 'sources.yaml');
 
 const MIRROR_PREFIXES = {

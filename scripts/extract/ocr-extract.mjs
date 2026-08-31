@@ -37,7 +37,7 @@ const outFile = outIdx !== -1 ? args[outIdx + 1] : null;
 const inputPath = args.find(a => a.startsWith('/') || a.startsWith('./') || a.match(/^[A-Z]:\\/i) || a.endsWith('.png') || a.endsWith('.jpg') || a.endsWith('.jpeg') || a.endsWith('.tiff') || a.endsWith('.bmp') || a.endsWith('.gif'));
 
 // ═══════════════════════════════════════════════════════════════
-# Python snippet for OCR
+// Python snippet for OCR
 // ═══════════════════════════════════════════════════════════════
 
 const PYTHON_SNIPPET = `
@@ -79,7 +79,7 @@ except Exception as e:
 `;
 
 // ═══════════════════════════════════════════════════════════════
-# Check if OCR is available
+// Check if OCR is available
 // ═══════════════════════════════════════════════════════════════
 
 function checkOcr() {
@@ -95,7 +95,7 @@ function checkOcr() {
 }
 
 // ═══════════════════════════════════════════════════════════════
-# Main
+// Main
 // ═══════════════════════════════════════════════════════════════
 
 if (checkMode) {

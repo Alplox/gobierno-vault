@@ -5,8 +5,9 @@
 // Fuentes de datos:
 //   - awesome-chilean-rss (https://github.com/Alplox/awesome-chilean-rss):
 //     `feeds-database.json` (sites[] con feeds verificados) + `watchlist.json`
-//     (sitios candidatos, muchos sin feed RSS). Se requiere un clone local;
-//     pasar la ruta con `--source <dir>` (default: `../awesome-chilean-rss`).
+//     (sitios candidatos, muchos sin feed RSS). Por defecto se descargan online
+//     desde raw.githubusercontent.com; `--source <dir>` fuerza copia local
+//     (o `--offline` usa el clone hermano `../awesome-chilean-rss` sin red).
 //   - `sitemaps/_manifest.json` (medios ya sincronizados en el catálogo).
 //   - `src/data/sources.yaml` (campo `medio:` de las fuentes ya usadas).
 //   - `src/data/entities.yaml` (orgs tipo medio_comunicacion/red_social/etc.).
@@ -21,7 +22,7 @@ import { dirname, join } from 'node:path';
 import YAML from 'yaml';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
+const ROOT = join(__dirname, '../..');
 
 // Categorías de prensa y afines (se excluyen sports, gaming, jobs, entertainment, technology).
 const CATEGORIAS_PRENSA = new Set([
@@ -52,11 +53,16 @@ const NOMBRES_CATEGORIA = {
   culture: 'Cultura',
 };
 
+const REMOTE_BASE = 'https://raw.githubusercontent.com/Alplox/awesome-chilean-rss/main';
+const REMOTE_DB_URL = `${REMOTE_BASE}/feeds-database.json`;
+const REMOTE_WL_URL = `${REMOTE_BASE}/watchlist.json`;
+
 function parseArgs(argv) {
-  const out = { source: join(ROOT, '..', 'awesome-chilean-rss') };
+  const out = { source: null, offline: false };
   for (let i = 0; i < argv.length; i++) {
     if (argv[i] === '--source' && argv[i + 1]) out.source = argv[i + 1];
     if (argv[i] === '--out' && argv[i + 1]) out.out = argv[i + 1];
+    if (argv[i] === '--offline') out.offline = true;
   }
   return out;
 }
@@ -66,6 +72,18 @@ function loadJson(p) {
     return JSON.parse(readFileSync(p, 'utf8'));
   } catch {
     return null;
+  }
+}
+
+async function fetchJsonRemote(url, timeoutMs = 15000) {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), timeoutMs);
+  try {
+    const r = await fetch(url, { signal: ctrl.signal, headers: { 'User-Agent': 'gobierno-vault/watchlist' } });
+    if (!r.ok) throw new Error(`HTTP ${r.status} ${url}`);
+    return await r.json();
+  } finally {
+    clearTimeout(t);
   }
 }
 
@@ -82,15 +100,53 @@ function dominio(url = '') {
   }
 }
 
-function main() {
-  const { source, out = join(ROOT, 'TAREAS', 'tareas_sitemap.md') } = parseArgs(process.argv.slice(2));
+async function main() {
+  const { source, offline, out = join(ROOT, 'TAREAS', 'tareas_sitemap.md') } = parseArgs(process.argv.slice(2));
 
-  const db = loadJson(join(source, 'feeds-database.json'));
-  const wl = loadJson(join(source, 'watchlist.json'));
-  if (!db || !db.sites || !Array.isArray(wl)) {
-    console.error('No se pudo leer feeds-database.json/watchlist.json en', source);
-    console.error('Clona el repo: git clone --depth 1 https://github.com/Alplox/awesome-chilean-rss.git');
-    process.exit(1);
+  let db = null;
+  let wl = null;
+  let origen = '';
+
+  // 1) Fuente explícita --source => solo local
+  if (source) {
+    db = loadJson(join(source, 'feeds-database.json'));
+    wl = loadJson(join(source, 'watchlist.json'));
+    origen = source;
+    if (!db || !db.sites || !Array.isArray(wl)) {
+      console.error('No se pudo leer feeds-database.json/watchlist.json en', source);
+      console.error('Verifica --source <dir> (debe contener ambos JSON) o usa sin --source para descarga online.');
+      process.exit(1);
+    }
+  } else if (offline) {
+    const local = join(ROOT, '..', 'awesome-chilean-rss');
+    db = loadJson(join(local, 'feeds-database.json'));
+    wl = loadJson(join(local, 'watchlist.json'));
+    origen = local;
+    if (!db || !db.sites || !Array.isArray(wl)) {
+      console.error('Modo --offline: no se pudo leer', local);
+      console.error('Clona el repo: git clone --depth 1 https://github.com/Alplox/awesome-chilean-rss.git ../awesome-chilean-rss');
+      process.exit(1);
+    }
+  } else {
+    // 2) Por defecto: remoto online con fallback a clone hermano si existe
+    try {
+      console.log(`Descargando awesome-chilean-rss online...`);
+      [db, wl] = await Promise.all([fetchJsonRemote(REMOTE_DB_URL), fetchJsonRemote(REMOTE_WL_URL)]);
+      origen = REMOTE_BASE;
+      console.log(`✔ remoto: ${db.sites?.length ?? '?'} sites + ${Array.isArray(wl) ? wl.length : '?'} watchlist`);
+    } catch (e) {
+      console.warn(`⚠ fallo remoto (${e.message}), intentando clone local hermano...`);
+      const local = join(ROOT, '..', 'awesome-chilean-rss');
+      db = loadJson(join(local, 'feeds-database.json'));
+      wl = loadJson(join(local, 'watchlist.json'));
+      origen = local;
+      if (!db || !db.sites || !Array.isArray(wl)) {
+        console.error('No se pudo leer feeds-database.json/watchlist.json ni remoto ni en', local);
+        console.error('Opciones: (a) reintenta con red, (b) git clone --depth 1 https://github.com/Alplox/awesome-chilean-rss.git ../awesome-chilean-rss, (c) pnpm run sitemaps-watchlist -- --source <dir>');
+        process.exit(1);
+      }
+      console.log(`✔ fallback local: ${local}`);
+    }
   }
 
   // Medios ya sincronizados en el catálogo local (por dominio real derivado
@@ -123,7 +179,7 @@ function main() {
     }
   }
   // Refuerzo con el mapa de dominios de add-source.mjs (medios del catálogo).
-  const addSource = readFileSync(join(ROOT, 'scripts', 'add-source.mjs'), 'utf8');
+  const addSource = readFileSync(join(ROOT, 'scripts', 'extract', 'add-source.mjs'), 'utf8');
   for (const m of addSource.matchAll(/CATALOG_MEDIO_BY_DOMAIN\s*=\s*\{([\s\S]*?)\n\};/g)) {
     for (const e of m[1].matchAll(/'([^']+)'\s*:\s*'([^']+)'/g)) {
       catalogoDom.add(e[1].replace(/^www\./, ''));
@@ -215,11 +271,11 @@ function main() {
 > **Fuente de sitios:** [awesome-chilean-rss](https://github.com/Alplox/awesome-chilean-rss)
 > — \`feeds-database.json\` (sitios con feeds verificados) y \`watchlist.json\`
 > (candidatos, muchos sin feed RSS o con solo proxies de Google/Bing News).
-> Este archivo se genera con \`pnpm run sitemaps-watchlist -- --source <ruta-al-repo>\`.
+> Este archivo se genera con \`pnpm run sitemaps-watchlist\` (online por defecto) o \`pnpm run sitemaps-watchlist -- --source <ruta-al-repo>\` / \`--offline\`.
 >
 > **Cómo usar:** cada fila pendiente (\`⬜\`) se sincroniza con
 > \`pnpm run sitemaps-sync -- <slug>\` (tras agregar el medio a \`MEDIA\` en
-> \`scripts/sync-sitemaps.mjs\`) o se descarta si el sitio no tiene sitemap.
+> \`scripts/sitemaps/sync.mjs\`) o se descarta si el sitio no tiene sitemap.
 > Los sitios de la watchlist suelen no tener sitemap (solo RSS) — se marcan para
 > intentar el sync y registrar el resultado.
 
@@ -252,11 +308,11 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
     md += `| ${EMOJI[f.estado]} | **${limpiar(f.nombre)}** | \`${f.d}\` | ${region} | ${fuente} | ${notas} |\n`;
   }
 
-  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sync-sitemaps.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Agregar dominio y nombre a \`CATALOG_MEDIO_BY_DOMAIN\`/\`CATALOG_MEDIO_NAMES\` de \`scripts/add-source.mjs\`.\n6. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n7. Actualizar este archivo: \`pnpm run sitemaps-watchlist -- --source <ruta-al-repo>\`.\n`;
+  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/sync.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Agregar dominio y nombre a \`CATALOG_MEDIO_BY_DOMAIN\`/\`CATALOG_MEDIO_NAMES\` de \`scripts/extract/add-source.mjs\`.\n6. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n7. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
 
   writeFileSync(out, md, 'utf8');
-  console.log(`✔ ${filas.length} sitios de prensa → ${out}`);
+  console.log(`✔ ${filas.length} sitios de prensa → ${out} (origen: ${origen})`);
   console.log(`  catálogo: ${conteo.catalogo} | en uso: ${conteo.en_uso} | pendientes: ${conteo.pendiente}`);
 }
 
-main();
+main().catch(e => { console.error(e); process.exit(1); });

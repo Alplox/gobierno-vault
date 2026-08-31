@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * sync-sitemaps.mjs — Sincroniza el catálogo de artículos de prensa
+ * sitemaps/sync.mjs — Sincroniza el catálogo de artículos de prensa
  * (`sitemaps/<medio>/<año>.jsonl`) a partir de los sitemaps de cada medio.
  *
  * Pipeline: robots.txt → sitemap_index.xml → sub-sitemaps → parseo de <url>
@@ -60,7 +60,7 @@ import { fileURLToPath } from 'node:url';
 import { gunzipSync } from 'node:zlib';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
+const ROOT = join(__dirname, '../..');
 const SITEMAPS_DIR = join(ROOT, 'sitemaps');
 const CACHE_DIR = join(SITEMAPS_DIR, '.cache');
 const MANIFEST_PATH = join(SITEMAPS_DIR, '_manifest.json');

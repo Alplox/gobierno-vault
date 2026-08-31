@@ -1,6 +1,6 @@
 # Medios registrados
 
-> Generado por `pnpm run sitemaps-index` desde `scripts/sync-sitemaps.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.
+> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/sync.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.
 > Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |

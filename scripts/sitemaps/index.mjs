@@ -11,10 +11,10 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { MEDIA } from './sync-sitemaps.mjs';
+import { MEDIA } from './sync.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
+const ROOT = join(__dirname, '../..');
 const SITEMAPS_DIR = join(ROOT, 'sitemaps');
 const MANIFEST_PATH = join(SITEMAPS_DIR, '_manifest.json');
 const OUT = join(SITEMAPS_DIR, 'README.md');
@@ -92,7 +92,7 @@ function buildMediosMd(manifest) {
   const l = [];
   l.push('# Medios registrados');
   l.push('');
-  l.push('> Generado por `pnpm run sitemaps-index` desde `scripts/sync-sitemaps.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.');
+  l.push('> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/sync.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.');
   l.push('> Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.');
   l.push('');
   l.push('| Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |');

@@ -11,7 +11,7 @@ description: Build, validación y despliegue con validate, build.concurrency, pn
 ## Comandos
 
 ```bash
-pnpm run build     # node scripts/validate.mjs && astro build  (~1m40s, 7800+ páginas)
+pnpm run build     # node scripts/validate/validate.mjs && astro build  (~1m40s, 7800+ páginas)
 pnpm run dev       # preview local
 pnpm run preview   # wrangler pages dev dist
 pnpm run deploy    # build local + wrangler pages deploy dist --project-name gobierno-vault --branch main (~20s upload)
@@ -22,9 +22,9 @@ pnpm run sitemaps-index  # regenera sitemaps/README.md (ya no toca AGENTS.md)
 
 `--experimental-global-customevent` se setea en `astro.config.mjs` (cross-platform).
 
-## Validación temprana (`scripts/validate.mjs`)
+## Validación temprana (`scripts/validate/validate.mjs`)
 
-Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[[source/...]]` vs `sources.yaml`, `[[person/...]]`/`[[org/...]]` vs `entities.yaml`, `[[event/...]]` vs IDs existentes. También valida menciones en prosa (ver `event-rules.md` regla 8, `scripts/proseNames.mjs`; fixer `fix-prose-wikilinks.mjs`). Excluye ` ``` ` y `` ` ``. `[[cifra/...]]` no se valida; IDs desnudos solo se enlazan si existen.
+Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[[source/...]]` vs `sources.yaml`, `[[person/...]]`/`[[org/...]]` vs `entities.yaml`, `[[event/...]]` vs IDs existentes. También valida menciones en prosa (ver `event-rules.md` regla 8, `scripts/lib/proseNames.mjs`; fixer `fix-prose-wikilinks.mjs`). Excluye ` ``` ` y `` ` ``. `[[cifra/...]]` no se valida; IDs desnudos solo se enlazan si existen.
 
 - **CRLF:** regex tolerante `\r?\n` (con `core.autocrlf=true` Windows entrega `\r\n`).
 - **Astro glob-loader:** NO aborta build ante wikilink roto — loguea `Error rendering` y deja `rendered: undefined` (página sin contenido). Por eso `validate` es la red real.

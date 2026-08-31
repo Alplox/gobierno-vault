@@ -13,9 +13,9 @@
  *   8. add-source (extracción de metadata)
  *
  * Uso:
- *   node scripts/fetch-content.mjs -- https://sitio.cl/articulo
- *   node scripts/fetch-content.mjs -- https://sitio.cl/articulo --verbose
- *   node scripts/fetch-content.mjs -- https://sitio.cl/articulo --method r.jina.ai
+ *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo
+ *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo --verbose
+ *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo --method r.jina.ai
  *
  * Flags:
  *   --verbose    Muestra detalles de cada intento
@@ -33,7 +33,7 @@ const methodOnly = args.find((a, i) => args[i - 1] === '--method');
 const minChars = parseInt(args.find((a, i) => args[i - 1] === '--min-chars') || '500');
 
 if (!url) {
-  console.error('Uso: node scripts/fetch-content.mjs -- <URL> [--verbose] [--method X] [--min-chars N]');
+  console.error('Uso: node scripts/extract/fetch-content.mjs -- <URL> [--verbose] [--method X] [--min-chars N]');
   process.exit(1);
 }
 
@@ -126,7 +126,7 @@ async function tryArchive(u) {
 function tryImpersonate(u) {
   log(`Intentando fetch-impersonate (curl_cffi)...`);
   try {
-    const output = execFileSync('node', ['scripts/fetch-impersonate.mjs', '--', u], {
+    const output = execFileSync('node', ['scripts/extract/fetch-impersonate.mjs', '--', u], {
       encoding: 'utf-8',
       timeout: 60000,
       maxBuffer: 10 * 1024 * 1024,
@@ -201,7 +201,7 @@ async function tryHtmlRaw(u) {
 function tryAddSource(u) {
   log(`Intentando add-source (metadata)...`);
   try {
-    const output = execFileSync('node', ['scripts/add-source.mjs', '--', u], {
+    const output = execFileSync('node', ['scripts/extract/add-source.mjs', '--', u], {
       encoding: 'utf-8',
       timeout: 30000,
     });

@@ -1,4 +1,4 @@
-import { readFileSync, readdirSync, statSync, writeFileSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, writeFileSync, existsSync, unlinkSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import YAML from 'yaml';
 
@@ -172,44 +172,61 @@ const totalCifras = Object.keys(entitiesData.cifras || {}).length;
 const totalSources = Object.keys(sourcesData).length;
 const totalTopics = Object.keys(topicsData).length;
 
-// Estadísticas para editores: ya no se inyectan en AGENTS.md (desde 2026-08-26) para evitar diffs ruidosos.
-// Se generan como sitemaps/ESTADISTICAS.md (útil para editores) además de EVENTS_INDEX.md.
-// AGENTS.md solo apunta a ambos archivos.
-let statsSection = '# Estadísticas del vault\n\n';
-statsSection += '> Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.\n\n';
-statsSection += `**Total de eventos:** ${stats.totalEvents}\n\n`;
-statsSection += `**Cobertura de fuentes:** ${events.length - lowCount} de ${events.length} eventos con 3+ fuentes (${lowCount} requieren más fuentes para reducir sesgo)\n\n`;
-statsSection += '**Eventos por año:**\n';
+// Estadísticas para editores: se inyectan en README.md entre marcadores (desde 2026-08-31).
+// Antes vivían en sitemaps/ESTADISTICAS.md (eliminado). EVENTS_INDEX.md se genera aparte.
+let statsBody = '';
+statsBody += '> Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.\n\n';
+statsBody += `**Total de eventos:** ${stats.totalEvents}\n\n`;
+statsBody += `**Cobertura de fuentes:** ${events.length - lowCount} de ${events.length} eventos con 3+ fuentes (${lowCount} requieren más fuentes para reducir sesgo)\n\n`;
+statsBody += '**Eventos por año:**\n';
 const sortedYearsStats = Object.keys(stats.eventsByYear).sort((a, b) => b.localeCompare(a));
 for (const year of sortedYearsStats) {
-  statsSection += `- ${year}: ${stats.eventsByYear[year]}\n`;
+  statsBody += `- ${year}: ${stats.eventsByYear[year]}\n`;
 }
-statsSection += '\n';
+statsBody += '\n';
 const sortedTemas = Object.entries(stats.temasCount).sort((a, b) => b[1] - a[1]).slice(0, 10);
 if (sortedTemas.length > 0) {
-  statsSection += '**Temas más frecuentes (Top 10):**\n';
+  statsBody += '**Temas más frecuentes (Top 10):**\n';
   for (const [tema, count] of sortedTemas) {
     const temaName = topicsData[tema]?.nombre || tema;
-    statsSection += `- ${temaName} (${count})\n`;
+    statsBody += `- ${temaName} (${count})\n`;
   }
-  statsSection += '\n';
+  statsBody += '\n';
 }
 const sortedTipos = Object.entries(stats.tiposCount).sort((a, b) => b[1] - a[1]).slice(0, 10);
 if (sortedTipos.length > 0) {
-  statsSection += '**Tipos de eventos más frecuentes (Top 10):**\n';
+  statsBody += '**Tipos de eventos más frecuentes (Top 10):**\n';
   for (const [tipo, count] of sortedTipos) {
-    statsSection += `- ${tipo} (${count})\n`;
+    statsBody += `- ${tipo} (${count})\n`;
   }
-  statsSection += '\n';
+  statsBody += '\n';
 }
-statsSection += '**Entidades registradas:**\n';
-statsSection += `- Personas: ${totalPeople}\n`;
-statsSection += `- Organizaciones: ${totalOrgs}\n`;
-statsSection += `- Cifras: ${totalCifras}\n`;
-statsSection += `- Fuentes: ${totalSources}\n`;
-statsSection += `- Temas: ${totalTopics}\n`;
+statsBody += '**Entidades registradas:**\n';
+statsBody += `- Personas: ${totalPeople}\n`;
+statsBody += `- Organizaciones: ${totalOrgs}\n`;
+statsBody += `- Cifras: ${totalCifras}\n`;
+statsBody += `- Fuentes: ${totalSources}\n`;
+statsBody += `- Temas: ${totalTopics}\n`;
 
-const estadisticasPath = join(root, 'sitemaps', 'ESTADISTICAS.md');
-writeFileSync(estadisticasPath, statsSection, 'utf8');
-console.log(`✔ sitemaps/ESTADISTICAS.md generado: ${stats.totalEvents} eventos, ${events.length - lowCount}/${events.length} con 3+ fuentes`);
+// Inyectar en README.md entre marcadores AUTO-GENERATED:ESTADISTICAS
+const START = '<!-- AUTO-GENERATED:ESTADISTICAS:START -->';
+const END = '<!-- AUTO-GENERATED:ESTADISTICAS:END -->';
+const statsSection = `${START}\n## Estadísticas del vault\n\n${statsBody}${END}`;
+const readmePath = join(root, 'README.md');
+let readme = readFileSync(readmePath, 'utf8');
+if (readme.includes(START) && readme.includes(END)) {
+  readme = readme.replace(new RegExp(`${START}[\\s\\S]*?${END}`), statsSection);
+} else {
+  // fallback: insertar antes de ## Requisitos (o al final si no existe)
+  const anchor = '## Requisitos';
+  if (readme.includes(anchor)) {
+    readme = readme.replace(anchor, `${statsSection}\n\n${anchor}`);
+  } else {
+    readme = readme.trimEnd() + `\n\n${statsSection}\n`;
+  }
+}
+writeFileSync(readmePath, readme, 'utf8');
+console.log(`✔ README.md » Estadísticas del vault actualizado: ${stats.totalEvents} eventos, ${events.length - lowCount}/${events.length} con 3+ fuentes`);
 console.log(`  Personas: ${totalPeople} · Orgs: ${totalOrgs} · Cifras: ${totalCifras} · Fuentes: ${totalSources} · Temas: ${totalTopics}`);
+// Limpieza: eliminar archivo legacy si quedó
+try { const legacy = join(root, 'sitemaps', 'ESTADISTICAS.md'); if (existsSync(legacy)) unlinkSync(legacy); } catch {}

@@ -18,7 +18,7 @@ description: Datos YAML del vault con entities.yaml, sources.yaml, topics.yaml, 
 
 ### Campo `medio` en `sources.yaml`
 
-Debe ser EXACTAMENTE `nombre` de una org `tipo: medio_comunicacion|red_social|canal_television|programa_tv|programa_streaming` en `entities.yaml`. Si emisor no es prensa (Estado, encuestadora, plataforma), usar nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate.mjs`. `pnpm run validate` falla con el ID si no cumple. Ver también encoding abajo.
+Debe ser EXACTAMENTE `nombre` de una org `tipo: medio_comunicacion|red_social|canal_television|programa_tv|programa_streaming` en `entities.yaml`. Si emisor no es prensa (Estado, encuestadora, plataforma), usar nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate/validate.mjs`. `pnpm run validate` falla con el ID si no cumple. Ver también encoding abajo.
 
 ### Sueldos (`/sueldos`)
 
@@ -37,7 +37,7 @@ Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.
 - **NUNCA** PowerShell `Set-Content`/`Out-File`/`Add-Content` ni `>` sobre archivos del repo: reescriben con ANSI/CRLF y corrompen UTF-8 (un rename generó diff 31k líneas). Usar Node `readFileSync`/`writeFileSync` con `utf8` o tools Edit/Write del agente.
 - YAML que empieza con `@ * & %` debe ir entre comillas: `autor: "@hernan_sr"`.
 - `validate` parsea los 5 YAML al inicio y su detector de mojibake cubre doble-encoding C2/C3, controles C1 (`â€”`), U+FFFD, cirílico, Latin Ext-A/B. Reporta 3 ejemplos. También escanea `TAREAS/**/*.md` y rechaza BOM UTF-8 inicial. Si falso positivo por nombre legítimo, ajustar `MOJIBAKE_RE`.
-- Edición concurrente: verificar `git status` antes de operaciones masivas. Protocolo recuperación: (1) copiar dañado a temp fuera del repo; (2) `git checkout -- <archivo>`; (3) re-aplicar entradas extrayendo del backup con script Node (split por IDs) y concatenando utf8; (4) `node scripts/validate.mjs`.
+- Edición concurrente: verificar `git status` antes de operaciones masivas. Protocolo recuperación: (1) copiar dañado a temp fuera del repo; (2) `git checkout -- <archivo>`; (3) re-aplicar entradas extrayendo del backup con script Node (split por IDs) y concatenando utf8; (4) `node scripts/validate/validate.mjs`.
 
 ## Colecciones Astro vs YAML
 

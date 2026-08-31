@@ -48,7 +48,7 @@ import { readFileSync, writeFileSync, readdirSync, mkdirSync, existsSync, statSy
 import { join, dirname, isAbsolute, normalize, relative, basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { brotliCompressSync, brotliDecompressSync, constants as Z } from 'node:zlib';
-import { MAGIC, sha256 } from './gvault-util.mjs';
+import { MAGIC, sha256 } from '../lib/gvault-util.mjs';
 
 // Guard: solo ejecuta main() cuando se corre directo (permite importar las
 // funciones de compactación desde tests/otros scripts).
@@ -58,7 +58,7 @@ const isMain =
     process.argv[1].replace(/\\/g, '/').toLowerCase();
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
+const ROOT = join(__dirname, '../..');
 const SITEMAPS_DIR = join(ROOT, 'sitemaps');
 const DEFAULT_OUT = join(SITEMAPS_DIR, 'sitemaps.gvault');
 
@@ -277,7 +277,7 @@ function collectFiles(dir, compact) {
 //   tipo<TAB>path<TAB>fecha[<TAB>titulo]
 // donde `path` es la URL sin esquema ni dominio (dominio se guarda una vez por
 // archivo en la cabecera) y el título se omite cuando es derivable del slug
-// (misma regla de titleFromSlug en sync-sitemaps.mjs).
+// (misma regla de titleFromSlug en sitemaps/sync.mjs).
 //
 // Tipos:
 //   s  → entrada slug con título idéntico al derivado del slug; el título NO
@@ -294,7 +294,7 @@ function collectFiles(dir, compact) {
 const COMPACT_MAGIC = '#GVCOMPACT';
 
 // Título derivado de un slug — debe replicar EXACTAmente `titleFromSlug` de
-// sync-sitemaps.mjs (excepto el filtro ENGLISH_NOISE, que solo se aplica al
+// sitemaps/sync.mjs (excepto el filtro ENGLISH_NOISE, que solo se aplica al
 // crear entradas, no al reconstruirlas).
 function titleFromSlugPath(lastSegment) {
   const withoutExt = String(lastSegment || '').replace(/\.s?html?$/i, '').replace(/\.\d+$/, '');

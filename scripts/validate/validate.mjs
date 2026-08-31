@@ -1,7 +1,7 @@
 import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import YAML from 'yaml';
-import { buildPeopleIndex, findReplaceableMentions } from './proseNames.mjs';
+import { buildPeopleIndex, findReplaceableMentions } from '../lib/proseNames.mjs';
 
 const root = join(process.cwd(), 'src');
 const dataDir = join(root, 'data');

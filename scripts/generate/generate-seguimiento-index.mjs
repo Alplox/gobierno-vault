@@ -6,7 +6,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, basename } from 'node:path';
 
-const ROOT = join(import.meta.dirname || '.', '..');
+const ROOT = join(import.meta.dirname || '.', '../..');
 const SEGUIMIENTO_DIR = join(ROOT, 'TAREAS', 'SEGUIMIENTO');
 const INDEX_PATH = join(ROOT, 'TAREAS', 'SEGUIMIENTO_INDEX.md');
 const DRY = process.argv.includes('--dry-run');

@@ -3,7 +3,7 @@
  * sitemaps-resync.mjs — Resync manual del catálogo de sitemaps (correr a diario).
  *
  * Cadena de 3 pasos:
- *   1) sync-sitemaps.mjs  → modo MERGE incremental: nunca borra datos existentes.
+ *   1) sitemaps/sync.mjs  → modo MERGE incremental: nunca borra datos existentes.
  *      - `--incremental` omite sub-sitemaps servidos desde caché fresco (los ya
  *        capturados en sync previos; solo expiran los que cambian, ej. news-sitemaps).
  *      - Solo se sincronizan los medios YA presentes en `_manifest.json`
@@ -27,22 +27,22 @@ import { readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-// MEDIA ya se exporta de sync-sitemaps.mjs (con guard isMain: importarlo no
+// MEDIA ya se exporta de sitemaps/sync.mjs (con guard isMain: importarlo no
 // dispara un sync). Sirve para filtrar los slugs del manifest que ya no
 // existen en el registro (entradas huérfanas de intentos descartados) antes
-// de pasárselos como argumentos — sync-sitemaps.mjs valida todos los targets
+// de pasárselos como argumentos — sitemaps/sync.mjs valida todos los targets
 // upfront y hace exit(1) al primer slug desconocido, abortando TODO el resync.
-import { MEDIA } from './sync-sitemaps.mjs';
+import { MEDIA } from './sync.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const ROOT = join(__dirname, '..');
+const ROOT = join(__dirname, '../..');
 const MANIFEST_PATH = join(ROOT, 'sitemaps/_manifest.json');
 const NODE = process.execPath;
 
 const args = process.argv.slice(2);
 const staleArg = args.indexOf('--stale');
 const stale = staleArg >= 0 && args[staleArg + 1] ? args[staleArg + 1] : '24';
-// Flags opcionales de ventana temporal, pasados tal cual a sync-sitemaps.mjs
+// Flags opcionales de ventana temporal, pasados tal cual a sitemaps/sync.mjs
 // (--since <YYYY-MM-DD> o --days <n>): resync solo de contenido reciente.
 const sinceArg = args.indexOf('--since');
 const daysArg = args.indexOf('--days');
@@ -52,7 +52,7 @@ const syncExtra = [
 ];
 
 function run(script, scriptArgs = []) {
-  console.log(`\n▶ node scripts/${script} ${scriptArgs.join(' ')}`);
+  console.log(`\n▶ node scripts/sitemaps/${script} ${scriptArgs.join(' ')}`);
   const r = spawnSync(NODE, [join(__dirname, script), ...scriptArgs], {
     stdio: 'inherit',
     cwd: ROOT,
@@ -78,21 +78,21 @@ if (enManifest.length === 0) {
 }
 // El manifest puede tener entradas huérfanas: slugs sincronizados una vez con
 // un registro MEDIA distinto (ej. medios de la watchlist que resultaron sin
-// sitemap y quedaron con articulos: 0). Si se pasaran tal cual, sync-sitemaps.mjs
+// sitemap y quedaron con articulos: 0). Si se pasaran tal cual, sitemaps/sync.mjs
 // abortaría completo con "Medio desconocido". Se omiten con aviso.
 const medios = enManifest.filter((k) => !!MEDIA[k]);
 const huerfanos = enManifest.filter((k) => !MEDIA[k]);
 if (huerfanos.length > 0) {
-  console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de sync-sitemaps.mjs; se omiten:`);
+  console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de scripts/sitemaps/sync.mjs; se omiten:`);
   console.warn(`   ${huerfanos.join(', ')}`);
 }
 if (medios.length === 0) {
-  console.error('❌ Ningún medio del manifest está registrado en sync-sitemaps.mjs.');
+  console.error('❌ Ningún medio del manifest está registrado en scripts/sitemaps/sync.mjs.');
   process.exit(1);
 }
 
 console.log(`Resync incremental de: ${medios.join(', ')}`);
-run('sync-sitemaps.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale, ...syncExtra]);
-run('sitemaps-index.mjs');
-run('sitemaps-backup.mjs');
+run('sync.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale, ...syncExtra]);
+run('index.mjs');
+run('backup.mjs');
 console.log('\n✅ Resync completo (catálogo, README y backup actualizados).');

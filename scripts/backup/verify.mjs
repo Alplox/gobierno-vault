@@ -1,5 +1,5 @@
 import { readFileSync } from 'node:fs';
-import { parseBackup, verifyManifest } from './gvault-util.mjs';
+import { parseBackup, verifyManifest } from '../lib/gvault-util.mjs';
 
 const file = process.argv[2];
 if (!file || process.argv.includes('--help') || process.argv.includes('-h')) {

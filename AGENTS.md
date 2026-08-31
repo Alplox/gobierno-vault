@@ -40,7 +40,7 @@ sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
 
 ## Checklist obligatorio antes de tocar `src/content/events/**` o `src/data/*.yaml`
 
-Antes de revisar enlaces, crear o editar evento, **DEBES** cargar: `content-model` + `event-rules` + `data-yaml` + `sitemaps` + `tools`. Si el tema toca Estado/cifra/voto/normativa → añade `fuentes-gubernamentales`; si toca Reddit/X/FB/reacciones → añade `social-media`; si toca gabinete/`cargos[]`/Cuentas Públicas → añade `gabinete`. Sin esto no edites — `validate.mjs` fallará por wikilinks, URLs o `medio`.
+Antes de revisar enlaces, crear o editar evento, **DEBES** cargar: `content-model` + `event-rules` + `data-yaml` + `sitemaps` + `tools`. Si el tema toca Estado/cifra/voto/normativa → añade `fuentes-gubernamentales`; si toca Reddit/X/FB/reacciones → añade `social-media`; si toca gabinete/`cargos[]`/Cuentas Públicas → añade `gabinete`. Sin esto no edites — `scripts/validate/validate.mjs` fallará por wikilinks, URLs o `medio`.
 
 ## Como crear/editar un evento — quick reference
 
@@ -79,7 +79,7 @@ Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada
 
 1. **5 fuentes** de medios distintos por evento; nunca red social como fuente unica. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (tablas Presidencia/ministerios/BCN/Cámara/Senado) para reducir reinterpretación.
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
-3. **Wikilinks obligatorios** en prosa — `scripts/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[person/...]]` (`scripts/proseNames.mjs`; fix `fix-prose-wikilinks.mjs`).
+3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[person/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
 4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `(ver evento X)` si validos.
 5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
 6. **No duplicar relaciones** bidireccionales; `relaciones` apunta a `ID` sin extension.
@@ -103,7 +103,7 @@ Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (
 - Nunca uses `>`/`Set-Content`/`Out-File` sobre YAML (ver `data-yaml/SKILL.md`) — usa `node` con `writeFileSync` `utf8` o las tools `Edit`/`Write` del agente
 - Si necesitas un comando shell nativo, verifica primero que exista sino elige el equivalente portable (`rg --version`, `node -e "console.log(process.platform)"`)
 
-Estadisticas del vault: ver `sitemaps/ESTADISTICAS.md` (generado por `pnpm run generate-index`; también resumido en `EVENTS_INDEX.md`). Medios del catalogo: ver `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años, generada por `pnpm run sitemaps-index`), `sitemaps/README.md` y `sitemaps/_manifest.json` (~250 slugs, detalle en `.agents/skills/sitemaps/SKILL.md`). Ninguno se duplica aqui para evitar diffs ruidosos, pero siguen disponibles para editores.
+Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección auto-generada por `pnpm run generate-index`; también resumido en `EVENTS_INDEX.md`). Medios del catalogo: ver `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años, generada por `pnpm run sitemaps-index`), `sitemaps/README.md` y `sitemaps/_manifest.json` (~250 slugs, detalle en `.agents/skills/sitemaps/SKILL.md`). Ninguno se duplica aqui para evitar diffs ruidosos, pero siguen disponibles para editores.
 
 ## Skills bajo demanda
 
@@ -131,7 +131,7 @@ Estadisticas del vault: ver `sitemaps/ESTADISTICAS.md` (generado por `pnpm run g
 2. Manten conciso — nada de prosa innecesaria ni cronicas de bug de >3 lineas (deja 1 linea + referencia a archivo:linea o commit).
 3. Si borras/renombras campo, actualiza TODO lo que lo referencie (AGENTS.md + skills que lo mencionen).
 4. Si agregas coleccion YAML nueva, documenta schema y sumala a `ALLOWED` en `src/pages/data/[name].yaml.ts` + `src/lib/llmIndex.ts`.
-5. Tras cambios significativos, `pnpm run generate-index` (regenera `EVENTS_INDEX.md` + `sitemaps/ESTADISTICAS.md`), `pnpm run generate-seguimiento-index` tras tocar `SEGUIMIENTO/` (regenera `SEGUIMIENTO_INDEX.md`), y si tocaste `MEDIA`/`_manifest.json`, `pnpm run sitemaps-index` (regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md`).
+5. Tras cambios significativos, `pnpm run generate-index` (regenera `EVENTS_INDEX.md` + `README.md` › Estadísticas del vault), `pnpm run generate-seguimiento-index` tras tocar `SEGUIMIENTO/` (regenera `SEGUIMIENTO_INDEX.md`), y si tocaste `MEDIA`/`_manifest.json`, `pnpm run sitemaps-index` (regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md`).
 
 Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill. Si crece, moverlo. **Skills también se auto-actualizan** — un skill desactualizado es tan dañino como un AGENTS.md desactualizado para el handoff.
 
@@ -148,5 +148,5 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |
 | Gabinete / `cargos` / Cuentas Publicas | `.agents/skills/gabinete/SKILL.md`, `src/lib/cabinet.ts` |
 | Fetch / PDF / Office / OCR | `.agents/skills/tools/SKILL.md` |
-| Sitemaps / catalogo | `.agents/skills/sitemaps/SKILL.md`, `scripts/sync-sitemaps.mjs` |
+| Sitemaps / catalogo | `.agents/skills/sitemaps/SKILL.md`, `scripts/sitemaps/sync.mjs` |
 | Build / deploy / estilos | `.agents/skills/build-deploy/SKILL.md` |

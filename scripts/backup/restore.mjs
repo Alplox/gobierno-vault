@@ -1,6 +1,6 @@
 import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
-import { parseBackup, verifyManifest, entryBytes } from './gvault-util.mjs';
+import { parseBackup, verifyManifest, entryBytes } from '../lib/gvault-util.mjs';
 
 const file = process.argv[2];
 const getFlag = (name) => {

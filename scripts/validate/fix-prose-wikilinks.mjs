@@ -11,7 +11,7 @@
 // "Kast" → [[person/jose_antonio_kast]] renderiza "José Antonio Kast").
 
 import { readFileSync, writeFileSync } from 'node:fs';
-import { findReplaceableMentions, loadPeopleIndex, walkEventFiles } from './proseNames.mjs';
+import { findReplaceableMentions, loadPeopleIndex, walkEventFiles } from '../lib/proseNames.mjs';
 
 const args = process.argv.slice(2);
 const dryRun = args.includes('--dry-run');

@@ -125,7 +125,7 @@ export function getCifrasRegistry(): Record<string, CifraRegistryEntry> {
     const entities = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8'));
     cifrasRegistryCache = entities.cifras ?? {};
   }
-  return cifrasRegistryCache;
+  return cifrasRegistryCache!;
 }
 
 export { getAllCifras, getQuotesForPerson };
