@@ -289,7 +289,7 @@ const allEventBasenames = new Set(allFiles.map((f) => eventIdFromPath(f).split('
 const referencedSources = new Set();
 for (const file of allFiles) {
   const content = readFileSync(file, 'utf8');
-  for (const match of content.matchAll(/\[\[source\/([A-Za-z0-9_.-]+)\]\]/g)) {
+  for (const match of content.matchAll(/\[\[(?:source|sources)\/([A-Za-z0-9_.-]+)\]\]/g)) {
     referencedSources.add(match[1]);
   }
 }
@@ -510,20 +510,21 @@ for (const file of allFiles) {
   const noCode = body
     .replace(/```[\s\S]*?```/g, '')
     .replace(/`[^`\n]*`/g, '');
-  const WIKILINK_RE = /\[\[(source|person|org|cifra|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
+  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras?|cifra|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
   for (const m of noCode.matchAll(WIKILINK_RE)) {
-    const [, type, id] = m;
+    const [, rawType, id] = m;
+    const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;
     if (type === 'source' && !validSourceIds.has(id)) {
-      console.error(`✖ wikilink roto [[source/${id}]] → ${eventId} (fuente no registrada en sources.yaml)`);
+      console.error(`✖ wikilink roto [[${rawType}/${id}]] → ${eventId} (fuente no registrada)`);
       errors++;
     } else if (type === 'person' && !peopleData[id]) {
-      console.error(`✖ wikilink roto [[person/${id}]] → ${eventId} (persona no registrada en entities.yaml)`);
+      console.error(`✖ wikilink roto [[${rawType}/${id}]] → ${eventId} (persona no registrada)`);
       errors++;
     } else if (type === 'org' && !orgsData[id]) {
-      console.error(`✖ wikilink roto [[org/${id}]] → ${eventId} (org no registrada en entities.yaml)`);
+      console.error(`✖ wikilink roto [[${rawType}/${id}]] → ${eventId} (org no registrada)`);
       errors++;
     } else if (type === 'event' && !allEventBasenames.has(id)) {
-      console.error(`✖ wikilink roto [[event/${id}]] → ${eventId} (no existe evento con ese ID)`);
+      console.error(`✖ wikilink roto [[${rawType}/${id}]] → ${eventId} (no existe evento con ese ID)`);
       errors++;
     }
   }

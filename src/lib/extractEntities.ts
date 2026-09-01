@@ -3,8 +3,8 @@ import { join, relative } from 'node:path';
 import YAML from 'yaml';
 
 const eventsDir = join(process.cwd(), 'src', 'content', 'events');
-const wikiLinkPattern = /\[\[(source|person|org)\/([A-Za-z0-9_.-]+)\]\]/g;
-const cifraPattern = /\[\[cifra\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
+const wikiLinkPattern = /\[\[(sources?|people|person|organizations?|org)\/([A-Za-z0-9_.-]+)\]\]/g;
+const cifraPattern = /\[\[cifras?\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
 
 export type CifraEntry = {
   concepto: string;
@@ -60,9 +60,9 @@ function extractFromFile(filePath: string): ExtractedEntities {
   let match: RegExpExecArray | null;
   while ((match = wikiLinkPattern.exec(content)) !== null) {
     const [, type, id] = match;
-    if (type === 'person') personas.add(id);
-    else if (type === 'org') organizaciones.add(id);
-    else if (type === 'source') {
+    if (type === 'person' || type === 'people') personas.add(id);
+    else if (type === 'org' || type === 'organization' || type === 'organizations') organizaciones.add(id);
+    else if (type === 'source' || type === 'sources') {
       fuentes.add(id);
       if (!fuentesAll.includes(id)) fuentesAll.push(id);
     }
