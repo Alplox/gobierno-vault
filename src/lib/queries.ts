@@ -76,7 +76,7 @@ export async function getUniqueTopics(): Promise<string[]> {
   return [...ids].sort();
 }
 
-// ponytail: people and orgs are extracted from [[person/...]] and [[org/...]] in body text
+// ponytail: people and orgs are extracted from [[people/...]] and [[organizations/...]] in body text
 export { getAllPeopleIds as getUniquePeople };
 export { getAllOrgIds as getUniqueOrgs };
 

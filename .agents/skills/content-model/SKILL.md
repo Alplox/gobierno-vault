@@ -1,6 +1,6 @@
 ---
 name: content-model
-description: Modelo de contenido para eventos, frontmatter, tipos, wikilinks, svg_backup, cifras en disputa y votaciones. Usa esta skill SIEMPRE al crear o editar src/content/events/YYYY/MM/YYYYMMDD-N.md, validar tipo/relaciones, escribir [[person/org/source/cifra/event]] o citar cifras, incluso si el usuario solo dice 'crear evento' o 'agregar cifra'.
+description: Modelo de contenido para eventos, frontmatter, tipos, wikilinks, svg_backup, cifras en disputa y votaciones. Usa esta skill SIEMPRE al crear o editar src/content/events/YYYY/MM/YYYYMMDD-N.md, validar tipo/relaciones, escribir [[people/org/source/cifra/event]] o citar cifras, incluso si el usuario solo dice 'crear evento' o 'agregar cifra'.
 ---
 
 # Modelo de contenido — eventos, frontmatter y wikilinks
@@ -17,13 +17,13 @@ Ruta: `src/content/events/YYYY/MM/YYYYMMDD-N.md` — `N` secuencial dentro del d
 titulo: "Descripción breve"
 fecha: 2026-07-20T11:00:00Z          # ISO 8601 UTC
 tipo: decreto                          # ver enum abajo
-tema: emergencia, defensa_seguridad    # IDs de topics.yaml
+tema: emergencia, defensa_seguridad    # IDs de src/content/topics/*.md
 etiquetas: sistema_frontal, ...        # strings libres
 impacto:
-  colectivos: residentes, familias     # IDs de colectivos.yaml
-  sectores: agua_potable, ...          # IDs de sectores.yaml
+  colectivos: residentes, familias     # IDs de src/data/colectivos.yaml (excepción YAML)
+  sectores: agua_potable, ...          # IDs de src/data/sectores.yaml (excepción YAML)
 relaciones:
-  sucesor: 20260720-1                  # tipo_relacion: id_evento
+  sucesor: 20260720-1                  # tipo_relacion: id_evento (sin extensión)
 creado: 2026-07-20
 actualizado: 2026-07-20
 svg_backup:                            # opcional, ver sección svg_backup
@@ -31,6 +31,86 @@ svg_backup:                            # opcional, ver sección svg_backup
   archivo: /img-to-ascii/20260809-8-zanja.svg
 ---
 ```
+
+### Plantilla copiable {#plantilla-copiable}
+
+Copiar a `src/content/events/YYYY/MM/YYYYMMDD-N.md` (`N` secuencial del día). Reemplaza `YYYY-MM-DD`/`YYYYMMDD-N` y completa.
+
+```yaml
+---
+# (requerido) Título breve y objetivo
+titulo: Descripción breve y objetiva del evento
+
+# (requerido) Fecha y hora de ocurrencia — ISO 8601 UTC
+fecha: YYYY-MM-DDTHH:MM:SSZ
+
+# (requerido) Tipo — 14 valores:
+# declaracion | accion | anuncio | decreto | proyecto | ley |
+# votacion | fallo_judicial | entrevista | publicacion |
+# documento | investigacion | reaccion | resultado
+tipo: decreto
+
+# (requerido) Temas — IDs de src/content/topics/*.md, separados por coma
+tema: emergencia, defensa_seguridad
+
+# (opcional) Etiquetas libres — strings, sin taxonomy
+etiquetas: sistema_frontal, estado_de_catastrofe
+
+# (opcional) Impacto
+impacto:
+  colectivos: residentes, familias, pacientes   # IDs de src/data/colectivos.yaml (excepción YAML)
+  sectores: agua_potable, energia_electrica     # IDs de src/data/sectores.yaml (excepción YAML)
+
+# (opcional) Relaciones — tipo_relacion: id_sin_extension (no duplicar bidireccional)
+relaciones:
+  sucesor: 20260101-1
+  causa: 20251215-3
+  # ver tipos: contradice | confirma | cumple | incumple | amplia | corrige | rectifica
+  #           | responde_a | deriva_en | provoca | cita | reemplaza | actualiza
+
+# (opcional) Respaldo ASCII de imagen — evidencia visual preservada
+# El SVG se genera en herramienta externa (ej. https://ezascii.com/image-to-ascii)
+# y se guarda SOLO tras confirmar visualmente que se ve correcto. Nunca automático.
+svg_backup:
+  fuente: https://x.com/usuario/status/123/photo/1   # URL imagen original
+  archivo: /img-to-ascii/YYYYMMDD-N-slug.svg          # Opción A recomendada: .svg en public/img-to-ascii/ (SVGs reales pesan MBs)
+  # svg: |                                             # Opción B solo artesanal <=100K chars, inline
+  #   <svg ...>...</svg>
+
+# (requerido) Fechas de registro — YYYY-MM-DD
+creado: YYYY-MM-DD
+actualizado: YYYY-MM-DD
+---
+```
+
+```markdown
+## Qué pasó
+
+El [[people/jose_antonio_kast]] anunció desde [[organizations/presidencia_chile]] la medida X [[sources/latercera-2026-07-20-medida]].
+
+## Cifras del balance
+
+- [[cifra/fallecidos/5/personas]] fallecidos [[sources/latercera-2026-07-20-balance]]
+- [[cifra/damnificados/2205/personas]] damnificados [[sources/biobio-2026-07-20-balance]]
+
+Si cifras en disputa: párrafo que explica la desincronización + tabla comparativa (cifra | fuente | contexto). Ver § Cifras en disputa.
+
+## Qué dijo
+
+> Texto de la cita aquí - [[people/jose_antonio_kast]] [[sources/x-2026-07-20-post]]
+
+Separador ` - ` (espacio-guion-espacio) antes de `[[people/...]]`; `[[sources/...]]` después. Sin `"` ni `—`.
+
+## Votación (si tipo: votacion)
+
+Verificar conteos en Senado/Cámara oficial y citar URL como fuente (`medio: Senado de Chile` / `Cámara de Diputados`), cada conteo como `[[cifra/...]]`. Ver § Votaciones.
+
+Relaciones en prosa: `[[events/20260618-3]]` (wikilink explícito; no usar ID desnudo `20260618-3` — no es markdown puro y no auto-enlaza).
+
+No dejar notas de editor en el body (`ver TAREAS`, `pendiente verificación` etc. → van a `TAREAS/` con `Origen:`). `scripts/validate/validate.mjs` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos.
+```
+
+Fuentes **siempre inline** al final de la afirmación, nunca en `## Referencias` separada. `tema`/`impacto` usan IDs de `src/content/topics/*.md`/`src/data/colectivos.yaml`/`sectores.yaml`. Nueva persona/org/cifra → `src/content/people|organizations|cifras/*.md`; nueva fuente → `src/content/sources/<id>.md` (ID `medio-YYYY-MM-DD-slug`, URL completa nunca raíz). Consultar catálogo sitemaps ANTES de buscar en web: `rg -i -uu -g '*.jsonl' '<términos>' sitemaps`. `validate.mjs` falla si nombre/apellido de persona enlazada aparece sin `[[people/...]]` (fix: `node scripts/validate/fix-prose-wikilinks.mjs --dry-run`). Al crear por TAREAS: mínimo **5 fuentes** de medios distintos. `pnpm run generate-index` + `pnpm run validate` debe pasar. Ver `.agents/skills/event-rules/SKILL.md`.
 
 ### Tipos de evento (`tipo`)
 
@@ -48,42 +128,42 @@ No declarar la misma conexión en ambas direcciones (ej. A `deriva_en` B y B `re
 
 | Sintaxis | Render | Ejemplo |
 | --- | --- | --- |
-| `[[person/id]]` | `<span class="entity-ref entity-person">Nombre</span>` | `[[person/jose_antonio_kast]]` |
-| `[[org/id]]` | `<span class="entity-ref entity-org">Nombre</span>` | `[[org/senapred]]` |
-| `[[source/id]]` | `[N]` con tooltip | `[[source/latercera-2026-07-20-balance]]` |
+| `[[people/id]]` | `<span class="entity-ref entity-person">Nombre</span>` | `[[people/jose_antonio_kast]]` |
+| `[[organizations/id]]` | `<span class="entity-ref entity-org">Nombre</span>` | `[[organizations/senapred]]` |
+| `[[sources/id]]` | `[N]` con tooltip | `[[sources/latercera-2026-07-20-balance]]` |
 | `[[cifra/concepto/valor/unidad]]` | `<span class="cifra-badge">valor</span>` | `[[cifra/fallecidos/5/personas]]` |
-| `[[event/20260720-1]]` | `<a class="event-ref">Título</a>` | `[[event/20260720-1]]` |
+| `[[events/20260720-1]]` | `<a class="event-ref">Título</a>` | `[[events/20260720-1]]` |
 
 - Fuentes se numeran por primera aparición; repeticiones reutilizan el número. Genera anchor `#ref-N`.
-- IDs desnudos `\b20\d{6}-\d{1,3}\b` (ej. `ver evento 20260618-3`) se auto-enlazan si existen — ver `remarkWikiLinks.mjs`. Usa `[[event/ID]]` para enlace explícito.
-- `[[cifra/...]]` no se valida en `scripts/validate/validate.mjs` (paridad con el plugin); `source`/`person`/`org`/`event` sí.
+- `[[cifra/...]]` no se valida en `scripts/validate/validate.mjs` (paridad con el plugin); `people`/`organizations`/`sources`/`events` sí.
+- Solo wikilinks explícitos `[[events/ID]]` enlazan eventos (no hay auto-enlace de IDs desnudos `20260618-3` — no es markdown puro).
 
 ### Medios de prensa en prosa
 
-Medios = organizaciones `tipo: medio_comunicacion` en `entities.yaml`. Mencionarlos siempre como `[[org/id]]` (“según T13”, “reveló CIPER”). Estandariza el nombre visible y evita ambigüedades (“El País (Chile)” medio vs país).
+Medios = organizaciones `tipo: medio_comunicacion` en `src/content/organizations/*.md`. Mencionarlos siempre como `[[organizations/id]]` (“según T13”, “reveló CIPER”). Estandariza el nombre visible y evita ambigüedades (“El País (Chile)” medio vs país).
 
-- `nombre` canónico = lo que renderiza el wikilink (ej. `BioBioChile`, `El País (Chile)`). `sources.yaml:medio` debe usar el mismo nombre.
+- `nombre` canónico = lo que renderiza el wikilink (ej. `BioBioChile`, `El País (Chile)`). `src/content/sources/*.md:medio` debe usar el mismo nombre.
 - `tipo: red_social` para Reddit/X/YouTube — solo complementarias, nunca fuente única. Metodología en `social-media.md`.
-- ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `entities.yaml` antes de crear (~54 medios).
-- Helper: `pnpm run add-source -- <URL>` mapea dominio → medio.
+- ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `src/content/organizations/*.md` antes de crear (~1052 orgs, ~54 medios).
+- Helper: `pnpm run add-source -- <URL>` mapea dominio → medio y genera `src/content/sources/<id>.md`.
 
 ### Formato de citas (declaraciones)
 
 ```markdown
-> Texto de la cita aquí - [[person/jose_antonio_kast]]
-> Otra cita con fuente - [[person/jose_antonio_kast]] [[source/x-2026-07-20-kast-catastrofe]]
+> Texto de la cita aquí - [[people/jose_antonio_kast]]
+> Otra cita con fuente - [[people/jose_antonio_kast]] [[sources/x-2026-07-20-kast-catastrofe]]
 ```
 
-- Separador ` - ` (espacio-guion-espacio) antes de `[[person/...]]`.
-- `[[source/...]]` va después de `[[person/...]]` en la misma línea.
-- NO usar `"` ni `—` como separador. `extractEntities.ts` toma el último ` - [[person/...]]` como hablante.
+- Separador ` - ` (espacio-guion-espacio) antes de `[[people/...]]`.
+- `[[sources/...]]` va después de `[[people/...]]` en la misma línea.
+- NO usar `"` ni `—` como separador. `extractEntities.ts` toma el último ` - [[people/...]]` como hablante.
 
 ### Citación inline
 
 Fuentes **inline** al final de la afirmación, nunca en `## Referencias`:
 
 ```markdown
-La bencina subió [[cifra/alza_bencina_mepco/370/pesos_por_litro]] [[source/latercera-2026-03-19-mepco-impacto-ipc]].
+La bencina subió [[cifra/alza_bencina_mepco/370/pesos_por_litro]] [[sources/latercera-2026-03-19-mepco-impacto-ipc]].
 ```
 
 ### Prohibido contenido meta-editorial en body
@@ -94,7 +174,7 @@ El body es narrativa factual, no bitácora de decisiones del editor. **Nunca** i
 - Justificaciones sobre la selección de fuentes, cobertura o sesgo percibido.
 - Auto-referencia al proceso de edición ("este evento documenta X para reducir sesgo").
 
-La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[org/eldesconcierto]] replicó el matiz de SERMIG [[source/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate/validate.mjs` (patrón `nota editorial`).
+La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[organizations/eldesconcierto]] replicó el matiz de SERMIG [[sources/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate/validate.mjs` (patrón `nota editorial`).
 
 ### Campo `svg_backup` (respaldo ASCII de imagen)
 
@@ -116,23 +196,23 @@ svg_backup:
 
 | Entidad | Fuente | Acceso |
 | --- | --- | --- |
-| Personas | `entities.yaml > people` | `getPeopleRegistry()` |
-| Organizaciones | `entities.yaml > organizations` | `getOrgsRegistry()` |
-| Medios | `entities.yaml > organizations (tipo: medio_comunicacion)` | `getOrgsRegistry()` |
-| Cifras | `entities.yaml > cifras` | `getCifrasRegistry()` |
-| Fuentes | `sources.yaml` | `getSourcesRegistry()` |
-| Temas | `topics.yaml` | `getTopicsRegistry()` |
-| Colectivos | `colectivos.yaml` | array plano |
-| Sectores | `sectores.yaml` | array plano |
+| Personas | `src/content/people/*.md` | `getPeopleRegistry()` |
+| Organizaciones | `src/content/organizations/*.md` | `getOrgsRegistry()` |
+| Medios | `src/content/organizations/*.md` (`tipo: medio_comunicacion`) | `getOrgsRegistry()` |
+| Cifras | `src/content/cifras/*.md` | `getCifrasRegistry()` |
+| Fuentes | `src/content/sources/*.md` | `getSourcesRegistry()` |
+| Temas | `src/content/topics/*.md` | `getTopicsRegistry()` |
+| Colectivos | `src/data/colectivos.yaml` | array plano (excepción YAML) |
+| Sectores | `src/data/sectores.yaml` | array plano (excepción YAML) |
 
-`people`/`organizations`/`topics` están definidos en `content.config.ts` pero no existen como colecciones en disco — fluyen vía YAML + `registry.ts`. `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy (defensivo). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada. Migración 2026-08: `src/data/entities.yaml` (32093L), `sources.yaml` (40065L), `topics.yaml` (471L) eliminados → markdown puro (conversores `scripts/migrate-*.mjs` eliminados).
 
 ## Patrones especiales
 
 ### Cifras en disputa: párrafo + tabla
 
-Cuando fuentes no coinciden (conteos, plazas, montos — ej. `20260813-1` Cancerbero), además del párrafo que explica la desincronización, agregar tabla comparativa en la misma sección: cifra (`[[cifra/...]]`), fuente/emisor (`[[source/...]]`), contexto (qué mide, por qué difiere). Si se concilia, decirlo explícito y marcarlo en tabla. Registrar en `TAREAS/` solo lo pendiente real.
+Cuando fuentes no coinciden (conteos, plazas, montos — ej. `20260813-1` Cancerbero), además del párrafo que explica la desincronización, agregar tabla comparativa en la misma sección: cifra (`[[cifra/...]]`), fuente/emisor (`[[sources/...]]`), contexto (qué mide, por qué difiere). Si se concilia, decirlo explícito y marcarlo en tabla. Registrar en `TAREAS/` solo lo pendiente real.
 
 ### Votaciones (`tipo: votacion`): conteos con fuente oficial
 
-Verificar a favor/en contra/abstenciones en `senado.cl/actividad-legislativa/sala/votaciones` o `camara.cl/legislacion/sala_sesiones/votaciones.aspx` (`ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar URL concreta en `sources.yaml` (`medio: Senado de Chile`/`Cámara de Diputados`) y cada conteo como `[[cifra/...]]` (ej. `20260810-10`). Ver `.agents/skills/fuentes-gubernamentales/SKILL.md` → Poder Legislativo.
+Verificar a favor/en contra/abstenciones en `senado.cl/actividad-legislativa/sala/votaciones` o `camara.cl/legislacion/sala_sesiones/votaciones.aspx` (`ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar URL concreta en `src/content/sources/<id>.md` (`medio: Senado de Chile`/`Cámara de Diputados`) y cada conteo como `[[cifra/...]]` (ej. `20260810-10`). Ver `.agents/skills/fuentes-gubernamentales/SKILL.md` → Poder Legislativo.

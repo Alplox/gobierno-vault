@@ -317,7 +317,7 @@ for (const id of validSourceIds) {
 }
 for (const id of referencedSources) {
   if (!validSourceIds.has(id)) {
-    console.error(`✖ fuente citada sin registrar en sources.yaml: "[[source/${id}]]"`);
+    console.error(`✖ fuente citada sin registrar en sources.yaml: "[[sources/${id}]]"`);
     errors++;
   }
 }
@@ -530,14 +530,14 @@ for (const file of allFiles) {
   }
 
   // Regla AGENTS.md n.º 8: toda mención de una persona en el body debe llevar
-  // [[person/id]] — no solo la primera. Replica la misma lógica que el fixer
+  // [[people/id]] — no solo la primera. Replica la misma lógica que el fixer
   // (scripts/proseNames.mjs); si queda alguna mención reemplazable es un error
   // (correr node scripts/fix-prose-wikilinks.mjs para limpiar el backlog).
   const { mentions: proseMentions } = findReplaceableMentions(body, peopleProseIndex);
   if (proseMentions.length > 0) {
     const examples = proseMentions
       .slice(0, 5)
-      .map((m) => `"${m.phrase}" → [[person/${m.personId}]]`)
+      .map((m) => `"${m.phrase}" → [[people/${m.personId}]]`)
       .join('; ');
     const extra = proseMentions.length > 5 ? ` y ${proseMentions.length - 5} más` : '';
     console.error(

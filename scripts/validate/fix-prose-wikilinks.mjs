@@ -8,7 +8,7 @@
 //   node scripts/fix-prose-wikilinks.mjs --limit 20 # solo los primeros 20 archivos
 //
 // El texto visible cambia al nombre canónico de entities.yaml (la regla elegida:
-// "Kast" → [[person/jose_antonio_kast]] renderiza "José Antonio Kast").
+// "Kast" → [[people/jose_antonio_kast]] renderiza "José Antonio Kast").
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { findReplaceableMentions, loadPeopleIndex, walkEventFiles } from '../lib/proseNames.mjs';
@@ -48,13 +48,13 @@ for (const file of files) {
     replacedAny = true;
 
     if (dryRun && iter === 0) {
-      console.log(`${file}: ${mentions.length} mención(es) (${mentions.map((m) => `"${m.phrase}"→[[person/${m.personId}]]`).slice(0, 4).join(', ')}${mentions.length > 4 ? ', …' : ''})`);
+      console.log(`${file}: ${mentions.length} mención(es) (${mentions.map((m) => `"${m.phrase}"→[[people/${m.personId}]]`).slice(0, 4).join(', ')}${mentions.length > 4 ? ', …' : ''})`);
     }
 
     let out = body;
     for (let i = mentions.length - 1; i >= 0; i--) {
       const m = mentions[i];
-      out = out.slice(0, m.start) + `[[person/${m.personId}]]` + out.slice(m.end);
+      out = out.slice(0, m.start) + `[[people/${m.personId}]]` + out.slice(m.end);
     }
     content = content.slice(0, bodyStart) + out;
   }

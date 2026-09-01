@@ -63,7 +63,7 @@ function parseEventFrontmatter(filePath) {
   return YAML.parse(fmMatch[1]);
 }
 
-// Count unique [[source/...]] IDs referenced in a file body
+// Count unique [[sources/...]] IDs referenced in a file body
 function countSources(filePath) {
   const content = readFileSync(filePath, 'utf8');
   const ids = new Set();
@@ -106,7 +106,7 @@ events.sort((a, b) => a.id.localeCompare(b.id));
 // Generate EVENTS_INDEX.md
 let eventsIndex = '# Índice de Eventos\n\n';
 eventsIndex += '> Este archivo se genera automáticamente con `pnpm run generate-index`\n';
-eventsIndex += '> Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[source/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.\n\n';
+eventsIndex += '> Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.\n\n';
 
 // Seguimiento: eventos con menos de 3 fuentes
 const lowSourceEvents = events

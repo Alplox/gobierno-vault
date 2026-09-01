@@ -13,7 +13,7 @@ Base de conocimiento estatica sobre eventos de gobierno en Chile. Astro 7 + Tail
   - `TAREAS/PENDIENTES/TRANSVERSALES.md` — sin año unico
   - `TAREAS/SEGUIMIENTO/YYYY.md` — seguimiento activo por año con IDs estables `S/A/V-YYYY-NNN` (ver `.agents/skills/seguimiento/SKILL.md`), `TAREAS/SEGUIMIENTO_INDEX.md` catálogo auto-generado
 
-**Ciclo TAREAS:** detectar pendiente → registrar en `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO/YYYY.md` con ID `S-YYYY-NNN` y **`Origen: <url>`**) → retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md` sin parsear títulos → crear evento con `TEMPLATE.md` + 5 fuentes de medios distintos (nunca red social sola) + `src/content/people|organizations` si era 2019-2021 → `pnpm run generate-index` + `pnpm run generate-seguimiento-index` → **eliminar la fila** de `TAREAS/` (no queda `✅`). Usuario valida con `pnpm run build`.
+**Ciclo TAREAS:** detectar pendiente → registrar en `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO/YYYY.md` con ID `S-YYYY-NNN` y **`Origen: <url>`**) → retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md` sin parsear títulos → crear evento con `.agents/skills/content-model/SKILL.md#plantilla-copiable` + 5 fuentes de medios distintos (nunca red social sola) + `src/content/people|organizations` si era 2019-2021 → `pnpm run generate-index` + `pnpm run generate-seguimiento-index` → **eliminar la fila** de `TAREAS/` (no queda `✅`). Usuario valida con `pnpm run build`.
 
 ## Arquitectura
 
@@ -21,7 +21,7 @@ Base de conocimiento estatica sobre eventos de gobierno en Chile. Astro 7 + Tail
 src/
   content/events/YYYY/MM/YYYYMMDD-N.md
   content/people/*.md, organizations/*.md, topics/*.md, sources/*.md, cifras/*.md ← colecciones Obsidian (markdown puro, sin YAML monolito)
-  data/  colectivos.yaml, sectores.yaml, sueldos.yaml
+  data/  colectivos.yaml, sectores.yaml, sueldos.yaml ← única excepción YAML (arrays planos / sueldos, no migrado a md)
   lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, remarkWikiLinks.mjs
   components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
@@ -35,9 +35,9 @@ sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
 | Personas / Orgs / Cifras | `src/content/people \| organizations \| cifras/*.md` | `getPeopleRegistry()` / `getOrgsRegistry()` / `getCifrasRegistry()` |
 | Fuentes | `src/content/sources/*.md` | `getSourcesRegistry()` |
 | Temas | `src/content/topics/*.md` | `getTopicsRegistry()` |
-| Colectivos / Sectores | `colectivos.yaml` / `sectores.yaml` | array plano |
+| Colectivos / Sectores | `src/data/colectivos.yaml` / `src/data/sectores.yaml` | array plano (excepción YAML) |
 
-`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy. `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy (defensivo, monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
 
 ## Checklist obligatorio antes de tocar `src/content/**` (`events`/`people`/`sources`/…)
 
@@ -45,7 +45,7 @@ Antes de revisar enlaces, crear o editar evento, **DEBES** cargar: `content-mode
 
 ## Como crear/editar un evento — quick reference
 
-Ruta `src/content/events/YYYY/MM/YYYYMMDD-N.md` (`N` secuencial del dia). Ver `TEMPLATE.md` para plantilla completa y `.agents/skills/content-model/SKILL.md` para detalle.
+Ruta `src/content/events/YYYY/MM/YYYYMMDD-N.md` (`N` secuencial del dia). Ver `.agents/skills/content-model/SKILL.md#plantilla-copiable` para plantilla copiable y detalle.
 
 ```yaml
 ---
@@ -68,11 +68,11 @@ Cuerpo con wikilinks inline...
 
 | Sintaxis | Ejemplo |
 | --- | --- |
-| `[[person/id]]` | `[[person/jose_antonio_kast]]` |
-| `[[org/id]]` | `[[org/senapred]]` |
-| `[[source/id]]` | `[[source/latercera-2026-07-20-balance]]` |
+| `[[people/id]]` | `[[people/jose_antonio_kast]]` |
+| `[[organizations/id]]` | `[[organizations/senapred]]` |
+| `[[sources/id]]` | `[[sources/latercera-2026-07-20-balance]]` |
 | `[[cifra/concepto/valor/unidad]]` | `[[cifra/fallecidos/5/personas]]` |
-| `[[event/20260720-1]]` | `[[event/20260720-1]]` (+ IDs desnudos `20260618-3` auto-enlazan) |
+| `[[events/20260720-1]]` | `[[events/20260720-1]]` |
 
 Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada. Detalle completo (medios en prosa, formato citas, `svg_backup`, cifras en disputa, votaciones con fuente oficial) en `.agents/skills/content-model/SKILL.md`.
 
@@ -80,8 +80,8 @@ Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada
 
 1. **5 fuentes** de medios distintos por evento; nunca red social como fuente unica. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (tablas Presidencia/ministerios/BCN/Cámara/Senado) para reducir reinterpretación.
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
-3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[person/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
-4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `(ver evento X)` si validos.
+3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[people/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
+4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`).
 5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
 6. **No duplicar relaciones** bidireccionales; `relaciones` apunta a `ID` sin extension.
 
@@ -114,7 +114,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | --- | --- |
 | Frontmatter completo, tipos, wikilinks, `svg_backup`, cifras en disputa, votaciones **(obligatorio)** | `.agents/skills/content-model/SKILL.md` |
 | 16 reglas expandidas, enforcement prose, TAREAS lifecycle **(obligatorio)** | `.agents/skills/event-rules/SKILL.md` |
-| Tocar `entities.yaml`/`sources.yaml`/`topics.yaml`/`sueldos.yaml`, encoding/CRLF **(obligatorio)** | `.agents/skills/data-yaml/SKILL.md` |
+| Tocar `src/content/people\|organizations\|cifras/*.md`, `src/content/sources/*.md`, `src/content/topics/*.md`, `src/data/colectivos.yaml\|sectores.yaml\|sueldos.yaml`, encoding/CRLF **(obligatorio)** | `.agents/skills/data-yaml/SKILL.md` (nombre legacy; cubre md + excepción YAML) |
 | Catalogo sitemaps (sync, search, cobertura historica) **(obligatorio)** | `.agents/skills/sitemaps/SKILL.md` |
 | Fetch/paywall, PDF/Office/OCR, video transcript, ripgrep, mirrors **(obligatorio)** | `.agents/skills/tools/SKILL.md` |
 | Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo (si toca Estado/cifra/voto) | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
@@ -131,7 +131,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 1. Agregalo a la seccion correspondiente (o al skill adecuado si es detalle >5 lineas). **Si tu cambio toca un dominio de un skill, actualiza ese skill en la misma PR** — ver tabla de Skills bajo demanda.
 2. Manten conciso — nada de prosa innecesaria ni cronicas de bug de >3 lineas (deja 1 linea + referencia a archivo:linea o commit).
 3. Si borras/renombras campo, actualiza TODO lo que lo referencie (AGENTS.md + skills que lo mencionen).
-4. Si agregas coleccion YAML nueva, documenta schema y sumala a `ALLOWED` en `src/pages/data/[name].yaml.ts` + `src/lib/llmIndex.ts`.
+4. Si agregas colección nueva (markdown: `src/content/<name>/*.md` + `content.config.ts` + `registry.ts`; o YAML excepcional en `src/data/*.yaml` → `ALLOWED` en `src/pages/data/[name].yaml.ts` + `src/lib/llmIndex.ts`), documenta schema.
 5. Tras cambios significativos, `pnpm run generate-index` (regenera `EVENTS_INDEX.md` + `README.md` › Estadísticas del vault), `pnpm run generate-seguimiento-index` tras tocar `SEGUIMIENTO/` (regenera `SEGUIMIENTO_INDEX.md`), y si tocaste `MEDIA`/`_manifest.json`, `pnpm run sitemaps-index` (regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md`).
 
 Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill. Si crece, moverlo. **Skills también se auto-actualizan** — un skill desactualizado es tan dañino como un AGENTS.md desactualizado para el handoff.
@@ -140,7 +140,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 
 | Cambio | Revisar |
 | --- | --- |
-| Nuevo campo frontmatter | `content.config.ts`, `TEMPLATE.md`, `admin.astro`, `.agents/skills/content-model/SKILL.md` |
+| Nuevo campo frontmatter | `content.config.ts`, `.agents/skills/content-model/SKILL.md#plantilla-copiable`, `admin.astro`, `.agents/skills/content-model/SKILL.md` |
 | Nuevo tipo de evento/relacion | `content.config.ts`, `editorData.ts`, `lib/eventTypes.ts`, `lib/relations.ts` |
 | Nueva entidad/fuente/tema | `src/content/people\|organizations\|sources\|topics\|cifras/*.md`, `.agents/skills/data-yaml/SKILL.md` |
 | Tocar `/sueldos` | `src/data/sueldos.yaml`, `src/lib/sueldos.ts` |

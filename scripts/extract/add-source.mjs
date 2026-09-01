@@ -1513,7 +1513,7 @@ async function main() {
   console.log('='.repeat(64));
   console.log(block);
   console.log('-'.repeat(64));
-  console.log(`Wikilink para usar inline en eventos:  [[source/${id}]]`);
+  console.log(`Wikilink para usar inline en eventos:  [[sources/${id}]]`);
   console.log('='.repeat(64) + '\n');
 
   // --- Colision: verificar .md y YAML legacy ---

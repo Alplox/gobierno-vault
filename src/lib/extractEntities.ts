@@ -155,7 +155,7 @@ function eventIdToDate(eventId: string): Date {
   return new Date(0);
 }
 
-// Formato: > texto de la cita - [[person/id]] [[source/id]]
+// Formato: > texto de la cita - [[people/id]] [[sources/id]]
 const quoteLineRe = /^>\s*(.+)\s+-\s+\[\[person\/([^\]]+)\]\]/;
 const sourceInLine = /\[\[source\/([^\]]+)\]\]/g;
 
@@ -176,7 +176,7 @@ function extractQuotesFromFile(filePath: string): QuoteEntry[] {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    if (!line.startsWith('>') || !line.includes('[[person/')) continue;
+    if (!line.startsWith('>') || !line.includes('[[people/')) continue;
 
     const m = line.match(quoteLineRe);
     if (!m) continue;

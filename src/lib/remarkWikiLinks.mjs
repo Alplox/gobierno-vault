@@ -167,10 +167,8 @@ function cifraNode(concepto, raw, unidad) {
   };
 }
 
-// ID de evento "desnudo" en prosa: 8 dígitos (YYYYMMDD) + guion + número (20260618-3).
-// El patrón es inequívoco en el corpus del vault (los IDs ISO de fecha llevan guiones internos,
-// por lo que "2019-10-18" no matchea).
-const WIKILINK_OR_EVENT = /\[\[(sources?|people|person|organizations?|org|cifras?|cifra|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]|\b20\d{6}-\d{1,3}\b/g;
+// Solo wikilinks explícitos [[people|organizations|sources|cifra|events/...]] — no hay auto-enlace de IDs desnudos (no es markdown puro).
+const WIKILINK_OR_EVENT = /\[\[(sources?|people|person|organizations?|org|cifras?|cifra|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
 
 export default function remarkWikiLinks() {
   const sources = loadSources();
@@ -187,16 +185,8 @@ export default function remarkWikiLinks() {
       if (!Array.isArray(node.children)) return;
 
       node.children = node.children.flatMap((child) => {
-        // inlineCode: si el código es exactamente un ID de evento, convertirlo en link.
-        if (child.type === 'inlineCode') {
-          const code = child.value.trim();
-          if (/^20\d{6}-\d{1,3}$/.test(code) && eventIndex[code]) {
-            return [eventNode(code)];
-          }
-          return [child];
-        }
         if (child.type !== 'text') return [child];
-        if (!child.value.includes('[[') && !/\b20\d{6}-\d{1,3}\b/.test(child.value)) return [child];
+        if (!child.value.includes('[[')) return [child];
 
         const parts = [];
         let lastIndex = 0;
@@ -210,30 +200,23 @@ export default function remarkWikiLinks() {
             parts.push({ type: 'text', value: child.value.slice(lastIndex, match.index) });
           }
 
-          if (match[0].startsWith('[[')) {
-            const [, rawType, id, cifraValor, cifraUnidad] = match;
-            const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;
-            if (type === 'source') {
-              if (!sources[id]) missing.add(`[[${rawType}/${id}]]`);
-              if (!sourceNumbers.has(id)) sourceNumbers.set(id, ++nextNum);
-              parts.push(sourceTooltipNode(id, sources, sourceNumbers.get(id)));
-            } else if (type === 'person') {
-              if (!peopleMap[id]) missing.add(`[[${rawType}/${id}]]`);
-              parts.push(personNode(id, peopleMap));
-            } else if (type === 'org') {
-              if (!orgsMap[id]) missing.add(`[[${rawType}/${id}]]`);
-              parts.push(orgNode(id, orgsMap));
-            } else if (type === 'cifra' && cifraValor) {
-              parts.push(cifraNode(id, cifraValor, cifraUnidad));
-            } else if (type === 'event') {
-              if (!eventIndex[id]) missing.add(`[[${rawType}/${id}]]`);
-              else parts.push(eventNode(id));
-            }
-          } else {
-            // ID de evento desnudo: solo se enlaza si existe (evita falsos positivos).
-            const id = match[0];
-            if (eventIndex[id]) parts.push(eventNode(id));
-            else parts.push({ type: 'text', value: match[0] });
+          const [, rawType, id, cifraValor, cifraUnidad] = match;
+          const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;
+          if (type === 'source') {
+            if (!sources[id]) missing.add(`[[${rawType}/${id}]]`);
+            if (!sourceNumbers.has(id)) sourceNumbers.set(id, ++nextNum);
+            parts.push(sourceTooltipNode(id, sources, sourceNumbers.get(id)));
+          } else if (type === 'person') {
+            if (!peopleMap[id]) missing.add(`[[${rawType}/${id}]]`);
+            parts.push(personNode(id, peopleMap));
+          } else if (type === 'org') {
+            if (!orgsMap[id]) missing.add(`[[${rawType}/${id}]]`);
+            parts.push(orgNode(id, orgsMap));
+          } else if (type === 'cifra' && cifraValor) {
+            parts.push(cifraNode(id, cifraValor, cifraUnidad));
+          } else if (type === 'event') {
+            if (!eventIndex[id]) missing.add(`[[${rawType}/${id}]]`);
+            else parts.push(eventNode(id));
           }
 
           lastIndex = WIKILINK_OR_EVENT.lastIndex;

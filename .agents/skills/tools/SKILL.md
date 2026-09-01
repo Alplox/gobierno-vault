@@ -306,7 +306,7 @@ redes sociales, considerar también la sección de métodos de búsqueda de Redd
 
 `pnpm run add-source -- <URL>` (o `pnpm run add-source` sin URL para modo interactivo) extrae
 automaticamente `titulo`, `autor` y `fecha` de la URL y genera el bloque YAML listo para pegar
-en `sources.yaml`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[source/id]]`.
+en `sources.yaml`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[sources/id]]`.
 
 - Fetch del HTML directo; si falla o no hay titulo, relega a `r.jina.ai`.
 - El mapeo dominio → medio se precarga desde `sources.yaml` + un diccionario base en el script.

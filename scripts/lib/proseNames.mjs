@@ -1,5 +1,5 @@
 // Regla AGENTS.md n.º 8: toda mención de una persona en el body debe llevar su
-// wikilink [[person/id]] — no solo la primera aparición. Este módulo centraliza
+// wikilink [[people/id]] — no solo la primera aparición. Este módulo centraliza
 // la detección de menciones en prosa "reemplazables" (nombre completo o apellido
 // de una persona registrada en entities.yaml) para que scripts/validate.mjs
 // (enforcement: error si queda alguna) y scripts/fix-prose-wikilinks.mjs

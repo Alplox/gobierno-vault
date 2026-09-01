@@ -11,7 +11,7 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 - Sitio aún esta en desarrollo. Lo que implica constantes cambios, evolución y correcciones (o dejar abandonado).
 - Sitio esta de momento con una carga fuerte en cuanto a lo que tacharia de *recency bias*. Idea es con el tiempo nivelar esto con `TAREAS/` y `EVENTS_INDEX.md` para que no sea asi.
 - Se usa LLM para investigación/redacción, pero el formato Markdown/YAML es editable a mano.
-- Para contribuir, ver `AGENTS.md` (guía para agentes/humanos) y `TEMPLATE.md`. Reporta fallas o sesgo vía issue/PR.
+- Para contribuir, ver `AGENTS.md` (guía para agentes/humanos) y `.agents/skills/content-model/SKILL.md#plantilla-copiable` (plantilla copiable). Reporta fallas o sesgo vía issue/PR.
 - <https://xkcd.com/927/>
 - Sitio web es eso, un sitio web. No una fuente de la verdad. Se RECOMIENDA siempre usar multiples fuentes respecto a eventos catalogados como noticias para asi obtener multiples puntos de vista/información.
 
@@ -20,7 +20,7 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 - SSG Astro con `ClientRouter`, prefetch y transiciones.
 - Contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` con validación de frontmatter y wikilinks.
 - Contenido en `src/content/people|organizations|topics|sources|cifras/*.md` (markdown puro, Obsidian, sin YAML monolito) + `src/data/` solo `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml`.
-- Wikilinks `[[person/id]]` `[[org/id]]` `[[source/id]]` `[[cifra/...]]` `[[event/...]]` con plugin `remarkWikiLinks`.
+- Wikilinks `[[people/id]]` `[[organizations/id]]` `[[sources/id]]` `[[cifra/...]]` `[[events/...]]` con plugin `remarkWikiLinks`.
 - Timeline lazy, rail temporal, grafo de relaciones y TTS (Piper) en cliente.
 - Catálogo local de prensa en `sitemaps/` (JSONL por medio/año, no commiteado) para búsquedas sin tocar la red.
 
@@ -78,13 +78,13 @@ node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotl
 
 ## Convenciones de contenido
 
-- Frontmatter con `titulo`, `fecha` (ISO 8601 UTC), `tipo` (14 valores), `tema` (IDs de `topics.yaml`), `creado`/`actualizado` (YYYY-MM-DD); opcionales `etiquetas`, `impacto`, `relaciones`, `svg_backup`.
-- `tema`/`impacto` usan IDs de `topics.yaml`/`colectivos.yaml`/`sectores.yaml`.
-- Fuentes inline `[[source/id]]` al final de la afirmación, nunca en `## Referencias`.
+- Frontmatter con `titulo`, `fecha` (ISO 8601 UTC), `tipo` (14 valores), `tema` (IDs de `src/content/topics/*.md`), `creado`/`actualizado` (YYYY-MM-DD); opcionales `etiquetas`, `impacto`, `relaciones`, `svg_backup`.
+- `tema` usa IDs de `src/content/topics/*.md`; `impacto` usa IDs de `src/data/colectivos.yaml`/`sectores.yaml` (excepción YAML).
+- Fuentes inline `[[sources/id]]` al final de la afirmación, nunca en `## Referencias`.
 - Personas/orgs/cifras/eventos con wikilinks; IDs desnudos `20260618-3` auto-enlazan.
 - Prioriza fuente gubernamental directa (ver `.agents/skills/fuentes-gubernamentales/SKILL.md`) antes que prensa.
 
-Ver `TEMPLATE.md` y `.agents/skills/content-model/SKILL.md` + `event-rules/SKILL.md` para detalle.
+Ver `.agents/skills/content-model/SKILL.md#plantilla-copiable` (plantilla copiable) + `event-rules/SKILL.md` para detalle.
 
 ## Datos y entidades
 
@@ -116,15 +116,15 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 ## Contribuir
 
-1. Revisa `AGENTS.md` y `TEMPLATE.md`.
-2. Crea `src/content/events/YYYY/MM/YYYYMMDD-N.md` (N secuencial).
-3. Agrega entidades/fuentes/temas en `src/data/*.yaml` si faltan.
+1. Revisa `AGENTS.md` y `.agents/skills/content-model/SKILL.md#plantilla-copiable`.
+2. Crea `src/content/events/YYYY/MM/YYYYMMDD-N.md` (N secuencial) copiando plantilla de `content-model`.
+3. Agrega entidades/fuentes/temas en `src/content/people|organizations|cifras|topics|sources/*.md` o `src/data/colectivos.yaml|sectores.yaml` si faltan.
 4. Consulta `sitemaps/MEDIOS.md` y `rg -uu` antes de buscar en web; prioriza fuente oficial.
 5. Ejecuta `pnpm run validate` y `pnpm run build` antes de PR.
 
 ## Recursos adicionales
 
-- `TEMPLATE.md` — plantilla de evento.
+- `.agents/skills/content-model/SKILL.md#plantilla-copiable` — plantilla copiable de evento.
 - `AGENTS.md` — flujo interno y reglas.
 - `EVENTS_INDEX.md` — índice auto-generado (y `README.md` › Estadísticas del vault).
 - `.agents/skills/` — guías modulares.
@@ -137,7 +137,7 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 **Total de eventos:** 1231
 
-**Cobertura de fuentes:** 765 de 1231 eventos con 3+ fuentes (466 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 0 de 1231 eventos con 3+ fuentes (1231 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
 - 2026: 935
