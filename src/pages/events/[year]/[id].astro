@@ -119,7 +119,7 @@ Describe el error o la corrección sugerida.`)}`;
 
 <Base title={titulo}>
   <article class="max-w-3xl mx-auto">
-    <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm">
+    <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-4">
         <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
           <ArrowLeft class="h-3.5 w-3.5" />
@@ -159,7 +159,7 @@ Describe el error o la corrección sugerida.`)}`;
       <span id="tts-msg" class="text-[11px] text-base-content/40 font-medium" role="status"></span>
     </div>
 
-    <section class="prose prose-gray max-w-none mb-10 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm leading-relaxed text-base-content">
+    <section class="prose prose-gray max-w-none mb-10 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed text-base-content">
       <Content />
 
       {(svg_backup?.archivo || svg_backup?.svg) && (
@@ -172,7 +172,7 @@ Describe el error o la corrección sugerida.`)}`;
           </div>
           <div class="overflow-x-auto rounded-lg bg-base-100 border border-base-300/60 p-3 sm:p-4">
             {svg_backup.archivo ? (
-              <img src={svg_backup.archivo} alt={`Respaldo ASCII de la imagen del evento${svg_backup.fuente ? ` (fuente: ${svg_backup.fuente})` : ''}`} class="ascii-svg-img mx-auto max-w-full h-auto" loading="lazy" />
+              <img src={svg_backup.archivo} alt={`Respaldo ASCII de la imagen del evento${svg_backup.fuente ? ` (fuente: ${svg_backup.fuente})` : ''}`} class="ascii-svg-img mx-auto max-w-full h-auto rounded-lg" loading="lazy" />
             ) : (
               <div class="ascii-svg mx-auto" set:html={svg_backup.svg} />
             )}
@@ -255,7 +255,7 @@ Describe el error o la corrección sugerida.`)}`;
       </section>
     )}
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-4">
         <Tag class="h-5 w-5 text-primary shrink-0" />
         <h2 class="text-base font-bold text-base-content">Entidades y Etiquetas</h2>
@@ -353,7 +353,7 @@ Describe el error o la corrección sugerida.`)}`;
     </EventConnections>
 
     {refs.length > 0 && (
-      <section class="mb-10 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+      <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
         <div class="flex items-center gap-2 mb-4">
           <BookOpen class="h-5 w-5 text-primary shrink-0" />
           <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({refs.length})</h2>

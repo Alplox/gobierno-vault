@@ -11,7 +11,7 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 - Sitio aún esta en desarrollo. Lo que implica constantes cambios, evolución y correcciones (o dejar abandonado).
 - Sitio esta de momento con una carga fuerte en cuanto a lo que tacharia de *recency bias*. Idea es con el tiempo nivelar esto con `TAREAS/` y `EVENTS_INDEX.md` para que no sea asi.
 - Se usa LLM para investigación/redacción, pero el formato Markdown/YAML es editable a mano.
-- Para contribuir, ver `AGENTS.md` (guía para agentes/humanos) y `TEMPLATE.md`. Reporta fallas o sesgo vía issue/PR.
+- Para contribuir, ver `AGENTS.md` (guía para agentes/humanos) y `.agents/skills/content-model/SKILL.md#plantilla-copiable` (plantilla copiable). Reporta fallas o sesgo vía issue/PR.
 - <https://xkcd.com/927/>
 - Sitio web es eso, un sitio web. No una fuente de la verdad. Se RECOMIENDA siempre usar multiples fuentes respecto a eventos catalogados como noticias para asi obtener multiples puntos de vista/información.
 
@@ -19,21 +19,22 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 
 - SSG Astro con `ClientRouter`, prefetch y transiciones.
 - Contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` con validación de frontmatter y wikilinks.
-- Datos maestros YAML en `src/data/` (personas, orgs, cifras, temas, fuentes, colectivos, sectores, sueldos).
-- Wikilinks `[[person/id]]` `[[org/id]]` `[[source/id]]` `[[cifra/...]]` `[[event/...]]` con plugin `remarkWikiLinks`.
+- Contenido en `src/content/people|organizations|topics|sources|cifras/*.md` (markdown puro, Obsidian, sin YAML monolito) + `src/data/` solo `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml`.
+- Wikilinks `[[people/id]]` `[[organizations/id]]` `[[sources/id]]` `[[cifras/...]]` `[[events/...]]` con plugin `remarkWikiLinks`.
 - Timeline lazy, rail temporal, grafo de relaciones y TTS (Piper) en cliente.
 - Catálogo local de prensa en `sitemaps/` (JSONL por medio/año, no commiteado) para búsquedas sin tocar la red.
 
 ## Estructura principal
 
 - `src/content/events/` — eventos por año/mes.
-- `src/data/` — `entities.yaml`, `sources.yaml`, `topics.yaml`, `colectivos.yaml`, `sectores.yaml`, `sueldos.yaml`.
+- `src/content/people|organizations|topics|sources|cifras/*.md` — personas, orgs, temas, fuentes, cifras (markdown, 9046 archivos).
+- `src/data/` — `colectivos.yaml`, `sectores.yaml`, `sueldos.yaml` (pequeños, no monolito).
 - `src/lib/` — `registry.ts`, `queries.ts`, `extractEntities.ts`, `remarkWikiLinks.mjs`, `cabinet.ts`, etc.
 - `src/components/` / `src/pages/` / `src/layouts/` — UI y rutas (`/`, `/events`, `/people`, `/gabinete`, `/sueldos`, `/llm.txt`).
 - `.agents/skills/*/SKILL.md` — guías modulares por dominio (contenido, reglas, frontend, datos, build, gabinete, sitemaps, fuentes gubernamentales, redes, backup, tools).
-- `sitemaps/` — `*.jsonl` (gitignored), `.cache/` (XML), `_manifest.json`, `README.md`, `MEDIOS.md`, `ESTADISTICAS.md`.
-- `scripts/` — `validate.mjs`, `generate-index.mjs`, `sitemaps-index.mjs`, `sync-sitemaps.mjs`, `add-source.mjs`, `backup.mjs`, `validate-fuentes.mjs`, etc.
-- `TAREAS/` — pendientes `PENDIENTES/YYYY.md` + `SEGUIMIENTO.md` (anti recency bias).
+- `sitemaps/` — `*.jsonl` (gitignored), `.cache/` (XML), `_manifest.json`, `README.md`, `MEDIOS.md`.
+- `scripts/` — `validate/validate.mjs` + `generate/` + `sitemaps/sync.mjs` + `extract/add-source.mjs` + `backup/backup.mjs` + `lib/` (ver `scripts/README.md`).
+- `TAREAS/` — pendientes `PENDIENTES/YYYY.md` + `SEGUIMIENTO/YYYY.md` y `SEGUIMIENTO_INDEX.md` (anti recency bias).
 
 ## Comandos útiles
 
@@ -44,15 +45,15 @@ Usa **pnpm** (no npm). `pnpm install` primero.
 - `pnpm run preview` — `wrangler pages dev dist`.
 - `pnpm run deploy` — build local + `wrangler pages deploy dist --project-name gobierno-vault`.
 - `pnpm run validate` — valida wikilinks, `medio`, mojibake/BOM y prose (falla antes del build).
-- `pnpm run generate-index` — regenera `EVENTS_INDEX.md` + `sitemaps/ESTADISTICAS.md`.
-- `pnpm run add-source -- <URL>` — genera bloque YAML para `sources.yaml` (flags: `--append`, `--catalog-only`, `--search <texto>` con `--medio`/`--fecha`).
+- `pnpm run generate-index` — regenera `EVENTS_INDEX.md` + `README.md` › Estadísticas del vault.
+- `pnpm run add-source -- <URL>` — genera `src/content/sources/<id>.md` (flags: `--append` crea `.md` sin colisión, `--catalog-only`, `--search <texto>` con `--medio`/`--fecha`).
 - `pnpm run sitemaps-sync -- <medio>` — sincroniza catálogo desde sitemaps públicos.
 - `pnpm run sitemaps-resync` — merge incremental diario + regenera índice y backup.
 - `pnpm run sitemaps-index` — regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md` (tablas para editores).
 - `pnpm run sitemaps-backup` — empaqueta `sitemaps/sitemaps.gvault` (compacto lossless + Brotli, ~357MB → ~56MB; `--chunk-size 45` parte en `part1/2`).
 - `pnpm run backup` — respaldo `.light.gvault` en `public/backup/` (commiteado).
 - `pnpm run verify -- <archivo.gvault>` / `pnpm run restore -- <archivo.gvault> --dest <ruta>` — verifica/restaura.
-- `node scripts/validate-fuentes.mjs` — valida URLs de `.agents/skills/fuentes-gubernamentales/SKILL.md`.
+- `node scripts/validate/validate-fuentes.mjs` — valida URLs de `.agents/skills/fuentes-gubernamentales/SKILL.md`.
 - `pnpm run fetch-content -- <URL>` — cadena de mirrors (`r.jina` → `defuddle` → `paywallskip` → `archive` → `fetch-impersonate`).
 
 ## Ayudar con los respaldos (sin ser técnico)
@@ -77,19 +78,21 @@ node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotl
 
 ## Convenciones de contenido
 
-- Frontmatter con `titulo`, `fecha` (ISO 8601 UTC), `tipo` (14 valores), `tema` (IDs de `topics.yaml`), `creado`/`actualizado` (YYYY-MM-DD); opcionales `etiquetas`, `impacto`, `relaciones`, `svg_backup`.
-- `tema`/`impacto` usan IDs de `topics.yaml`/`colectivos.yaml`/`sectores.yaml`.
-- Fuentes inline `[[source/id]]` al final de la afirmación, nunca en `## Referencias`.
+- Frontmatter con `titulo`, `fecha` (ISO 8601 UTC), `tipo` (14 valores), `tema` (IDs de `src/content/topics/*.md`), `creado`/`actualizado` (YYYY-MM-DD); opcionales `etiquetas`, `impacto`, `relaciones`, `svg_backup`.
+- `tema` usa IDs de `src/content/topics/*.md`; `impacto` usa IDs de `src/data/colectivos.yaml`/`sectores.yaml` (excepción YAML).
+- Fuentes inline `[[sources/id]]` al final de la afirmación, nunca en `## Referencias`.
 - Personas/orgs/cifras/eventos con wikilinks; IDs desnudos `20260618-3` auto-enlazan.
 - Prioriza fuente gubernamental directa (ver `.agents/skills/fuentes-gubernamentales/SKILL.md`) antes que prensa.
 
-Ver `TEMPLATE.md` y `.agents/skills/content-model/SKILL.md` + `event-rules/SKILL.md` para detalle.
+Ver `.agents/skills/content-model/SKILL.md#plantilla-copiable` (plantilla copiable) + `event-rules/SKILL.md` para detalle.
 
 ## Datos y entidades
 
-- `entities.yaml` — personas, organizaciones, cifras.
-- `sources.yaml` — fuentes (`medio-YYYY-MM-DD-slug`, URL completa, `medio` exacto).
-- `topics.yaml` — taxonomía de temas.
+- `src/content/people/*.md` — personas (`nombre`, `cargo`, `cargos[]`).
+- `src/content/organizations/*.md` — organizaciones (`nombre`, `tipo`).
+- `src/content/cifras/*.md` — cifras (`nombre`, `unidad_default`).
+- `src/content/sources/*.md` — fuentes (`medio-YYYY-MM-DD-slug`, URL completa, `medio` exacto).
+- `src/content/topics/*.md` — taxonomía de temas.
 - `colectivos.yaml` / `sectores.yaml` — arrays planos.
 - `sueldos.yaml` — montos y series de `/sueldos` sin hardcodear (resueltas vía `getPeopleRegistry`/`getSourcesRegistry`).
 
@@ -113,19 +116,82 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 ## Contribuir
 
-1. Revisa `AGENTS.md` y `TEMPLATE.md`.
-2. Crea `src/content/events/YYYY/MM/YYYYMMDD-N.md` (N secuencial).
-3. Agrega entidades/fuentes/temas en `src/data/*.yaml` si faltan.
+1. Revisa `AGENTS.md` y `.agents/skills/content-model/SKILL.md#plantilla-copiable`.
+2. Crea `src/content/events/YYYY/MM/YYYYMMDD-N.md` (N secuencial) copiando plantilla de `content-model`.
+3. Agrega entidades/fuentes/temas en `src/content/people|organizations|cifras|topics|sources/*.md` o `src/data/colectivos.yaml|sectores.yaml` si faltan.
 4. Consulta `sitemaps/MEDIOS.md` y `rg -uu` antes de buscar en web; prioriza fuente oficial.
 5. Ejecuta `pnpm run validate` y `pnpm run build` antes de PR.
 
 ## Recursos adicionales
 
-- `TEMPLATE.md` — plantilla de evento.
+- `.agents/skills/content-model/SKILL.md#plantilla-copiable` — plantilla copiable de evento.
 - `AGENTS.md` — flujo interno y reglas.
-- `EVENTS_INDEX.md` — índice auto-generado (y `sitemaps/ESTADISTICAS.md` para editores).
+- `EVENTS_INDEX.md` — índice auto-generado (y `README.md` › Estadísticas del vault).
 - `.agents/skills/` — guías modulares.
 - `sitemaps/README.md` / `MEDIOS.md` — catálogo para editores.
+
+<!-- AUTO-GENERATED:ESTADISTICAS:START -->
+## Estadísticas del vault
+
+> Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.
+
+**Total de eventos:** 1231
+
+**Cobertura de fuentes:** 767 de 1231 eventos con 3+ fuentes (464 requieren más fuentes para reducir sesgo)
+
+**Eventos por año:**
+- 2026: 935
+- 2025: 67
+- 2024: 36
+- 2023: 27
+- 2022: 26
+- 2021: 19
+- 2020: 37
+- 2019: 36
+- 2018: 3
+- 2017: 2
+- 2016: 3
+- 2015: 10
+- 2014: 6
+- 2013: 2
+- 2012: 4
+- 2011: 3
+- 2010: 7
+- 2009: 6
+- 2003: 1
+- 1973: 1
+
+**Temas más frecuentes (Top 10):**
+- Politica (492)
+- Justicia (357)
+- Economia (255)
+- Defensa y seguridad (242)
+- Administración pública (187)
+- Derechos humanos (150)
+- Proceso legislativo (106)
+- Corrupción (104)
+- Finanzas publicas (96)
+- Relaciones internacionales (84)
+
+**Tipos de eventos más frecuentes (Top 10):**
+- accion (252)
+- investigacion (159)
+- declaracion (149)
+- publicacion (135)
+- reaccion (130)
+- resultado (119)
+- fallo_judicial (97)
+- anuncio (80)
+- votacion (30)
+- entrevista (24)
+
+**Entidades registradas:**
+- Personas: 2107
+- Organizaciones: 1052
+- Cifras: 26
+- Fuentes: 4729
+- Temas: 75
+<!-- AUTO-GENERATED:ESTADISTICAS:END -->
 
 ## Requisitos
 

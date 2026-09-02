@@ -92,7 +92,7 @@ function cardHTML(e) {
     ? `<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[11px] font-medium text-primary ring-1 ring-inset ring-primary/30"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
     : '';
 
-  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-etiquetas="${esc((e.etiquetas || []).join(','))}" data-search="${esc(e.search || '')}" class="block shadow-[0_1px_3px_rgba(0,0,0,0.04),0_1px_2px_rgba(0,0,0,0.06)] rounded-xl p-5 hover:shadow-md hover:border-primary/40 active:scale-[0.99] transition-all duration-200 bg-base-100 border border-base-300 overflow-hidden">
+  return `<a href="/events/${e.year}/${e.id}" data-tipo="${esc(e.tipo)}" data-tema="${esc((e.temas || []).join(','))}" data-personas="${esc((e.personas || []).join(','))}" data-orgs="${esc((e.orgs || []).join(','))}" data-etiquetas="${esc((e.etiquetas || []).join(','))}" data-search="${esc(e.search || '')}" class="block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out overflow-hidden">
   <div class="flex flex-wrap items-center gap-2 mb-2 text-xs">
     <span class="inline-flex items-center gap-1 rounded-md px-2 py-0.5 font-medium ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-base-200 text-base-content/80 ring-base-300'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
     <span class="inline-flex items-center gap-1 text-base-content/60 font-medium"><span>${esc(e.fechaStr)}</span></span>

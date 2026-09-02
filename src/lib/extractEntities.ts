@@ -3,8 +3,8 @@ import { join, relative } from 'node:path';
 import YAML from 'yaml';
 
 const eventsDir = join(process.cwd(), 'src', 'content', 'events');
-const wikiLinkPattern = /\[\[(source|person|org)\/([A-Za-z0-9_.-]+)\]\]/g;
-const cifraPattern = /\[\[cifra\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
+const wikiLinkPattern = /\[\[(sources?|people|person|organizations?|org)\/([A-Za-z0-9_.-]+)\]\]/g;
+const cifraPattern = /\[\[cifras\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
 
 export type CifraEntry = {
   concepto: string;
@@ -60,9 +60,9 @@ function extractFromFile(filePath: string): ExtractedEntities {
   let match: RegExpExecArray | null;
   while ((match = wikiLinkPattern.exec(content)) !== null) {
     const [, type, id] = match;
-    if (type === 'person') personas.add(id);
-    else if (type === 'org') organizaciones.add(id);
-    else if (type === 'source') {
+    if (type === 'person' || type === 'people') personas.add(id);
+    else if (type === 'org' || type === 'organization' || type === 'organizations') organizaciones.add(id);
+    else if (type === 'source' || type === 'sources') {
       fuentes.add(id);
       if (!fuentesAll.includes(id)) fuentesAll.push(id);
     }
@@ -137,13 +137,25 @@ export function getAllCifras(): Array<CifraEntry & { eventId: string; fecha: Dat
 function eventIdToDate(eventId: string): Date {
   const parts = eventId.split('/');
   if (parts.length >= 3) {
-    const [year, month, day] = parts;
-    return new Date(`${year}-${month}-${day}`);
+    const filename = parts[2]; // YYYYMMDD-N
+    const y = filename.slice(0, 4);
+    const m = filename.slice(4, 6);
+    const d = filename.slice(6, 8);
+    if (/^\d{4}$/.test(y) && /^\d{2}$/.test(m) && /^\d{2}$/.test(d)) {
+      return new Date(`${y}-${m}-${d}`);
+    }
+    // fallback: usar year/month del path si filename no parseable
+    const year = parts[0];
+    const month = parts[1];
+    return new Date(`${year}-${month}-01`);
   }
+  // fallback para IDs planos tipo 20260816-16
+  const m = eventId.match(/^(\d{4})(\d{2})(\d{2})-\d+/);
+  if (m) return new Date(`${m[1]}-${m[2]}-${m[3]}`);
   return new Date(0);
 }
 
-// Formato: > texto de la cita - [[person/id]] [[source/id]]
+// Formato: > texto de la cita - [[people/id]] [[sources/id]]
 const quoteLineRe = /^>\s*(.+)\s+-\s+\[\[person\/([^\]]+)\]\]/;
 const sourceInLine = /\[\[source\/([^\]]+)\]\]/g;
 
@@ -164,7 +176,7 @@ function extractQuotesFromFile(filePath: string): QuoteEntry[] {
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-    if (!line.startsWith('>') || !line.includes('[[person/')) continue;
+    if (!line.startsWith('>') || !line.includes('[[people/')) continue;
 
     const m = line.match(quoteLineRe);
     if (!m) continue;

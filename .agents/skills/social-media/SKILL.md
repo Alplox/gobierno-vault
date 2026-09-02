@@ -16,13 +16,21 @@ description: Reacciones comunitarias y verificación de imágenes/audios virales
 3. **Verificar los datos que plantean los usuarios** contra fuentes oficiales o prensa (BCN, SUSESO, tribunales, medios) y marcar explicitamente lo que no fue verificado (ej. "acusacion de IA no verificada por prensa, se registra como complementaria").
 4. **No mezclar la opinion del autor del hilo con la reaccion comunitaria**: el post original del usuario es el punto de partida; los comentarios de OTRAS personas son la reaccion. Citar ambos por separado.
 5. Si una afirmacion viral requiere validacion y no se resuelve, registrarla en `TAREAS/` (⬜ pendiente) en lugar del body.
-6. **Toda fuente de redes sociales debe declarar su ROL en el evento**: nunca se agrega "porque si". Al citar un post/hilo/comentario complementario, el body y la nota de `sources.yaml` deben explicar que aporta. Roles validos: (a) **permite verificar/validar un dato** que el post plantea (verificado contra BCN/SUSESO/tribunales/prensa — ej. los datos historicos del hilo de niñez); (b) **plantea un punto que la prensa no cubre** (ej. la cita del articulo 1° de la Constitucion en el debate del plan de seguridad, que los noticieros no mencionaron); (c) **documenta la reaccion ciudadana / opinion publica** con voces variadas de plataformas distintas; (d) **muestra la viralizacion de un tema** y su framing; (e) **aporta un desglose/analisis que la cobertura de prensa no detallaba** (ej. el desglose de cuenta propia de CLAPES UC difundido por Merken). Si un post no cumple ninguno de estos roles —o repite exactamente lo que ya cubre la prensa sin anadir nada—, NO agregarlo. Formato sugerido en el body: "Se registra como complementaria porque <rol>: <que aporta, verificado contra X>" o "El rol del hilo en este evento es <rol>, verificado contra <fuente>."
+6. **Toda fuente de redes sociales debe declarar su ROL en el evento**: nunca se agrega "porque si". Al citar un post/hilo/comentario complementario, el body y la nota de `sources.yaml` deben explicar que aporta. Roles validos: (a) **permite verificar/validar un dato** que el post plantea (verificado contra BCN/SUSESO/tribunales/prensa — ej. los datos historicos del hilo de niñez); (b) **plantea un punto que la prensa no cubre** (ej. la cita del articulo 1° de la Constitucion en el debate del plan de seguridad, que los noticieros no mencionaron); (c) **documenta la reaccion ciudadana / opinion publica** con voces variadas de plataformas distintas; (d) **muestra la viralizacion de un tema** y su framing; (e) **aporta un desglose/analisis que la cobertura de prensa no detallaba** (ej. el desglose de cuenta propia de CLAPES UC difundido por Merken). Si un post no cumple ninguno de estos roles —o repite exactamente lo que ya cubre la prensa sin anadir nada—, NO agregarlo como fuente, **pero nunca justificar la exclusión con un párrafo meta-editorial en el body** (`No se agregan como fuentes...`, `complementarios por definición`, `Matiz sobre sesgo`). La justificación va al commit/PR, no al evento (ver `content-model.md` → Prohibido contenido meta-editorial y `event-rules.md:13`).
+
+### Qué hacer cuando el usuario entrega clippings de Reddit/X/Facebook para verificar
+
+Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con comentarios y puntajes) para "verificar y agregar a eventos", no basta con decir "ya cubierto por prensa, no se agrega":
+
+- **Evalúa el rol (c) en primer lugar**: ¿los comentarios aportan voces variadas con puntajes que documentan la reacción ciudadana / polarización / framing que la prensa no cubre con ese detalle? Si sí —aunque el dato factual ya esté en prensa—, **sí cumple rol (c)** y debe documentarse con sección `## Reacciones comunitarias` (variadas, distinto signo, con usuario y puntaje) y fuentes `tipo: redes` en `sources.yaml`. Es el caso típico de hilos con 100+ comentarios que viralizan una nota: la reacción misma es el dato complementario.
+- Solo si el hilo no aporta voces distintas, ni framing, ni dato adicional —repite literal el titular sin comentarios sustantivos— se puede omitir, **sin dejar rastro en el body**. Registra la decisión en el commit (`"Reddit X omitido: repite titular sin reacción sustantiva"`).
+- Nunca usar el body para explicar por qué se omitió una red social.
 
 ### Metodos de busqueda probados (2026-08)
 
-**Reddit r/chile** (los mas confiables):
-- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` funciona con `read_url` (la API JSON `search.json` devuelve 403; r.jina.ai sobre reddit tambien 403). El HTML del search lista titulo + puntos + comentarios + enlace del hilo.
-- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` responde 200; luego parsear con Python:
+**Reddit r/chile** (los mas confiables — **bloqueo 2026-08-28**):
+- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` funcionaba con `read_url` hasta 2026-08-28; desde esa fecha retorna 403 por política de red ("whoa there, pardner! Your request has been blocked due to a network policy" código 01a04a53) incluso con `Mozilla/5.0` UA (probado con `Invoke-WebRequest` y `webfetch`). La API JSON `search.json` ya devolvía 403; r.jina.ai sobre reddit también 403. Queda pendiente probar mirror (Pushshift bloqueado también 403) o acceso autenticado con credenciales developer.
+- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` respondía 200 hasta 2026-08-28; ahora retorna 403 en Cloud IP. Si se libera, luego parsear con Python:
   ```python
   import re, html
   blocks = re.split(r'<div class="entry', data)
@@ -44,7 +52,7 @@ description: Reacciones comunitarias y verificación de imágenes/audios virales
 
 | Red social | Busqueda | Extraccion de comentarios | Notas |
 | --- | --- | --- | --- |
-| Reddit r/chile | ✅ HTML search (read_url) | ✅ HTML + regex (curl) | API JSON y r.jina.ai bloqueados (403) |
+| Reddit r/chile | ⬜ bloqueado 2026-08-28 (403 network policy 01a04a53) | ⬜ bloqueado (403) | HTML search, API JSON y r.jina.ai bloqueados (403); ver métodos arriba para cuando se libere |
 | Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
 | X/Twitter | 🟡 solo via clipping del usuario o prensa | 🟡 comentarios del hilo en el clipping | Sin busqueda publica automatizada probada |
 | Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |

@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 
@@ -55,6 +55,7 @@ export type SourceData = {
 export type SourceReference = string | SourceData;
 
 const dataDir = join(process.cwd(), 'src', 'data');
+const contentDir = join(process.cwd(), 'src', 'content');
 
 const yamlCache = new Map<string, unknown>();
 
@@ -63,6 +64,32 @@ function readYaml<T>(filename: string): T {
     yamlCache.set(filename, YAML.parse(readFileSync(join(dataDir, filename), 'utf8')));
   }
   return yamlCache.get(filename) as T;
+}
+
+function readMarkdownCollection<T>(collection: string): Record<string, T> | null {
+  const dir = join(contentDir, collection);
+  if (!existsSync(dir)) return null;
+  let files: string[] = [];
+  try {
+    files = readdirSync(dir).filter((f) => f.endsWith('.md'));
+  } catch {
+    return null;
+  }
+  if (files.length === 0) return null;
+  const record: Record<string, T> = {};
+  for (const file of files) {
+    const id = file.replace(/\.md$/, '');
+    try {
+      const raw = readFileSync(join(dir, file), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      const data = YAML.parse(m[1]) as T;
+      record[id] = data;
+    } catch {
+      // skip corrupt
+    }
+  }
+  return Object.keys(record).length ? record : null;
 }
 
 function toEntries(record: Record<string, EntityData> = {}): RegistryEntry[] {
@@ -79,12 +106,20 @@ function entities(): EntitiesFile {
 }
 
 export function getPeopleRegistry(): RegistryEntry[] {
-  if (!_peopleEntriesCache) _peopleEntriesCache = toEntries(entities().people);
+  if (!_peopleEntriesCache) {
+    const md = readMarkdownCollection<EntityData>('people');
+    if (md) _peopleEntriesCache = toEntries(md);
+    else _peopleEntriesCache = toEntries(entities().people);
+  }
   return _peopleEntriesCache;
 }
 
 export function getOrganizationsRegistry(): RegistryEntry[] {
-  if (!_orgEntriesCache) _orgEntriesCache = toEntries(entities().organizations);
+  if (!_orgEntriesCache) {
+    const md = readMarkdownCollection<EntityData>('organizations');
+    if (md) _orgEntriesCache = toEntries(md);
+    else _orgEntriesCache = toEntries(entities().organizations);
+  }
   return _orgEntriesCache;
 }
 
@@ -100,7 +135,8 @@ let _topicsEntriesCache: TopicRegistryEntry[] | null = null;
 
 export function getTopicsRegistry(): TopicRegistryEntry[] {
   if (!_topicsEntriesCache) {
-    const topics = readYaml<Record<string, TopicData>>('topics.yaml');
+    const md = readMarkdownCollection<TopicData>('topics');
+    const topics = md ?? readYaml<Record<string, TopicData>>('topics.yaml');
     _topicsEntriesCache = Object.entries(topics)
       .map(([id, data]) => ({ id, data }))
       .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
@@ -109,6 +145,11 @@ export function getTopicsRegistry(): TopicRegistryEntry[] {
 }
 
 export function getTopicRegistryById(id: string): TopicRegistryEntry | undefined {
+  const md = readMarkdownCollection<TopicData>('topics');
+  if (md) {
+    const data = md[id];
+    return data ? { id, data } : undefined;
+  }
   const topics = readYaml<Record<string, TopicData>>('topics.yaml');
   const data = topics[id];
   return data ? { id, data } : undefined;
@@ -118,13 +159,13 @@ let _sourcesCache: Record<string, SourceData> | null = null;
 
 export function getSourcesRegistry(): Record<string, SourceData> {
   if (!_sourcesCache) {
-    const sources = readYaml<Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date }>>(
-      'sources.yaml'
-    );
+    const md = readMarkdownCollection<Omit<SourceData, 'fecha'> & { fecha: string | Date; notas?: string }>('sources');
+    const raw: Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date; notas?: string }> =
+      md ?? readYaml<Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date }>>('sources.yaml');
     _sourcesCache = Object.fromEntries(
-      Object.entries(sources).map(([id, source]) => [
+      Object.entries(raw).map(([id, source]) => [
         id,
-        { ...source, fecha: new Date(source.fecha) },
+        { ...source, fecha: new Date(source.fecha as string | Date) },
       ])
     );
   }

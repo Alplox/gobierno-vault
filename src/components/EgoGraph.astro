@@ -76,7 +76,7 @@ const fechaStr = new Date(event.data.fecha).toLocaleDateString('es-CL', { day: '
 const markers = [...new Set([...rightCol.map((n) => n.relation), ...leftCol.map((n) => n.relation)])];
 ---
 
-<div class="mb-8 overflow-x-auto rounded-xl border border-base-300 bg-base-100">
+<div class="mb-8 overflow-x-auto rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]">
   <svg viewBox={`0 0 ${W} ${H}`} class="w-full min-w-[560px]" font-family="system-ui, -apple-system, sans-serif" role="img" aria-label="Grafo de conexiones del evento">
     <defs>
       {markers.map((tipo) => (

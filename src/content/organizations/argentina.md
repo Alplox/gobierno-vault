@@ -1,0 +1,4 @@
+---
+nombre: Argentina
+tipo: pais
+---

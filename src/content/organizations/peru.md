@@ -1,0 +1,4 @@
+---
+nombre: Perú
+tipo: pais
+---

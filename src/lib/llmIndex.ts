@@ -66,11 +66,11 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('');
   lines.push('En el body, los wikilinks tienen esta forma:');
   lines.push('');
-  lines.push('- `[[person/id]]` → persona registrada en entities.yaml');
-  lines.push('- `[[org/id]]` → organización o medio de prensa');
-  lines.push('- `[[source/id]]` → fuente de sources.yaml (medio, título, autor, fecha, URL)');
-  lines.push('- `[[cifra/concepto/valor/unidad]]` → cifra destacada');
-  lines.push('- `[[event/ID]]` o ID desnudo `20260101-1` → enlace a otro evento');
+  lines.push('- `[[people/id]]` → persona registrada en entities.yaml');
+  lines.push('- `[[organizations/id]]` → organización o medio de prensa');
+  lines.push('- `[[sources/id]]` → fuente de sources.yaml (medio, título, autor, fecha, URL)');
+  lines.push('- `[[cifras/concepto/valor/unidad]]` → cifra destacada');
+  lines.push('- `[[events/ID]]` o ID desnudo `20260101-1` → enlace a otro evento');
   lines.push('');
   lines.push('## Cifras');
   lines.push('');
@@ -91,10 +91,10 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('');
   lines.push(`## Nota para agentes`);
   lines.push('');
-  lines.push('Este vault es de **lectura factual**: cada evento cita fuentes inline con `[[source/...]]`');
+  lines.push('Este vault es de **lectura factual**: cada evento cita fuentes inline con `[[sources/...]]`');
   lines.push('y no incluye notas de gestión. Las relaciones entre eventos (`relaciones` en el frontmatter)');
   lines.push('permiten reconstruir cadenas causales. Para citar un evento, referir el título y la URL de la');
-  lines.push('página; los datos verificables están en las fuentes (`[[source/...]]` → sources.yaml → URL original).');
+  lines.push('página; los datos verificables están en las fuentes (`[[sources/...]]` → sources.yaml → URL original).');
   lines.push('');
 
   return lines.join('\n');

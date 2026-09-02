@@ -1,14 +1,47 @@
-import { readFileSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 
 const dataDir = join(process.cwd(), 'src', 'data');
 
 function loadSources() {
+  try {
+    const dir = join(process.cwd(), 'src', 'content', 'sources');
+    if (existsSync(dir) && readdirSync(dir).some(f=>f.endsWith('.md'))) {
+      const rec = {};
+      for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+        const id = f.replace(/\.md$/, '');
+        const raw = readFileSync(join(dir, f), 'utf8');
+        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+        if (m) rec[id] = YAML.parse(m[1]);
+      }
+      if (Object.keys(rec).length) return rec;
+    }
+  } catch {}
   return YAML.parse(readFileSync(join(dataDir, 'sources.yaml'), 'utf8')) ?? {};
 }
 
 function loadEntities() {
+  try {
+    const peopleDir = join(process.cwd(), 'src', 'content', 'people');
+    const orgsDir = join(process.cwd(), 'src', 'content', 'organizations');
+    const cifrasDir = join(process.cwd(), 'src', 'content', 'cifras');
+    if (existsSync(peopleDir) || existsSync(orgsDir) || existsSync(cifrasDir)) {
+      const rec = { people: {}, organizations: {}, cifras: {} };
+      let found = false;
+      for (const [dir, key] of [[peopleDir,'people'],[orgsDir,'organizations'],[cifrasDir,'cifras']]) {
+        if (existsSync(dir)) {
+          for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+            const id = f.replace(/\.md$/, '');
+            const raw = readFileSync(join(dir, f), 'utf8');
+            const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+            if (m) { rec[key][id] = YAML.parse(m[1]); found = true; }
+          }
+        }
+      }
+      if (found) return rec;
+    }
+  } catch {}
   return YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8')) ?? {};
 }
 
@@ -134,10 +167,8 @@ function cifraNode(concepto, raw, unidad) {
   };
 }
 
-// ID de evento "desnudo" en prosa: 8 dígitos (YYYYMMDD) + guion + número (20260618-3).
-// El patrón es inequívoco en el corpus del vault (los IDs ISO de fecha llevan guiones internos,
-// por lo que "2019-10-18" no matchea).
-const WIKILINK_OR_EVENT = /\[\[(source|person|org|cifra|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]|\b20\d{6}-\d{1,3}\b/g;
+// Solo wikilinks explícitos [[people|organizations|sources|cifras|events/...]] — no hay auto-enlace de IDs desnudos (no es markdown puro).
+const WIKILINK_OR_EVENT = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
 
 export default function remarkWikiLinks() {
   const sources = loadSources();
@@ -154,16 +185,8 @@ export default function remarkWikiLinks() {
       if (!Array.isArray(node.children)) return;
 
       node.children = node.children.flatMap((child) => {
-        // inlineCode: si el código es exactamente un ID de evento, convertirlo en link.
-        if (child.type === 'inlineCode') {
-          const code = child.value.trim();
-          if (/^20\d{6}-\d{1,3}$/.test(code) && eventIndex[code]) {
-            return [eventNode(code)];
-          }
-          return [child];
-        }
         if (child.type !== 'text') return [child];
-        if (!child.value.includes('[[') && !/\b20\d{6}-\d{1,3}\b/.test(child.value)) return [child];
+        if (!child.value.includes('[[')) return [child];
 
         const parts = [];
         let lastIndex = 0;
@@ -177,29 +200,23 @@ export default function remarkWikiLinks() {
             parts.push({ type: 'text', value: child.value.slice(lastIndex, match.index) });
           }
 
-          if (match[0].startsWith('[[')) {
-            const [, type, id, cifraValor, cifraUnidad] = match;
-            if (type === 'source') {
-              if (!sources[id]) missing.add(`[[source/${id}]]`);
-              if (!sourceNumbers.has(id)) sourceNumbers.set(id, ++nextNum);
-              parts.push(sourceTooltipNode(id, sources, sourceNumbers.get(id)));
-            } else if (type === 'person') {
-              if (!peopleMap[id]) missing.add(`[[person/${id}]]`);
-              parts.push(personNode(id, peopleMap));
-            } else if (type === 'org') {
-              if (!orgsMap[id]) missing.add(`[[org/${id}]]`);
-              parts.push(orgNode(id, orgsMap));
-            } else if (type === 'cifra' && cifraValor) {
-              parts.push(cifraNode(id, cifraValor, cifraUnidad));
-            } else if (type === 'event') {
-              if (!eventIndex[id]) missing.add(`[[event/${id}]]`);
-              else parts.push(eventNode(id));
-            }
-          } else {
-            // ID de evento desnudo: solo se enlaza si existe (evita falsos positivos).
-            const id = match[0];
-            if (eventIndex[id]) parts.push(eventNode(id));
-            else parts.push({ type: 'text', value: match[0] });
+          const [, rawType, id, cifraValor, cifraUnidad] = match;
+          const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;
+          if (type === 'source') {
+            if (!sources[id]) missing.add(`[[${rawType}/${id}]]`);
+            if (!sourceNumbers.has(id)) sourceNumbers.set(id, ++nextNum);
+            parts.push(sourceTooltipNode(id, sources, sourceNumbers.get(id)));
+          } else if (type === 'person') {
+            if (!peopleMap[id]) missing.add(`[[${rawType}/${id}]]`);
+            parts.push(personNode(id, peopleMap));
+          } else if (type === 'org') {
+            if (!orgsMap[id]) missing.add(`[[${rawType}/${id}]]`);
+            parts.push(orgNode(id, orgsMap));
+          } else if (type === 'cifra' && cifraValor) {
+            parts.push(cifraNode(id, cifraValor, cifraUnidad));
+          } else if (type === 'event') {
+            if (!eventIndex[id]) missing.add(`[[${rawType}/${id}]]`);
+            else parts.push(eventNode(id));
           }
 
           lastIndex = WIKILINK_OR_EVENT.lastIndex;

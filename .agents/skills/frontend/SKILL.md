@@ -15,7 +15,7 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 - `transition:name` compartido entre tarjeta/índice y detalle (ej. `event-title-${basename}`) → morphing del título.
 - `<nav transition:persist>` sin parpadeo; estado activo recalculado en `astro:page-load` (`updateNavActive`).
 - `astro.config.mjs: prefetch: { prefetchAll: true, defaultStrategy: 'hover' }`.
-- Scripts: listeners globales registrados una sola vez con guard `window.__gvXxxInit` + `cleanupFns`. No usar `DOMContentLoaded`; usar `astro:page-load`. Los `<script>` bundleados solo se ejecutan **una vez** — inits con `IntersectionObserver` (`initTimeline`/`initEventList`) deben ir en `astro:page-load` y desconectar observer previo, nunca cortocircuitar todo el init con `window.__gvXxxInit`. El guard por nodo `script.__gvLoaded` va primero (page-load también dispara en carga inicial → doble init). Ver comentarios en `Base.astro` y fix 24-ago-2026 en `eventListClient.js`.
+- Scripts: listeners globales registrados una sola vez con guard `window.__gvXxxInit` + `cleanupFns`. No usar `DOMContentLoaded`; usar `astro:page-load`. Los `<script>` bundleados solo se ejecutan **una vez** — inits con `IntersectionObserver` (`initTimeline`/`initEventList`) deben ir en `astro:page-load` y desconectar observer previo, nunca cortocircuitar todo el init con `window.__gvXxxInit`. El guard por nodo `script.__gvLoaded` va primero (page-load también dispara en carga inicial → doble init). Ver comentarios en `Base.astro` y fix en `eventListClient.js`.
 
 ## Lazy load + TimelineNav (rail temporal)
 
@@ -39,7 +39,7 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente sobre dataset JSON en `<script id="event-index-data">` (`eventListClient.js`).
 
 - **Dataset:** SSR emite `SSR_LIMIT = 12` tarjetas; resto viaja como JSON y se pinta bajo demanda por mes (IO). JSON excluye `ssrIds` para no duplicar.
-- **Filtros:** `applyFilters()` lee URL (`?tema`, `?persona`, `?org`, `?q`, `?tipo` repetible, `?etiqueta` token exacto), fuerza `forceFillAll`, oculta por `data-*`, oculta meses/años vacíos. `fillMonth` reaplica filtros a tarjetas recién insertadas (fix carrera 20-ago-2026).
+- **Filtros:** `applyFilters()` lee URL (`?tema`, `?persona`, `?org`, `?q`, `?tipo` repetible, `?etiqueta` token exacto), fuerza `forceFillAll`, oculta por `data-*`, oculta meses/años vacíos. `fillMonth` reaplica filtros a tarjetas recién insertadas.
 - **Búsqueda:** `data-search` normalizado (minúsculas + NFD sin acentos) de título/etiquetas/personas/orgs/temas/tipo/ID/fecha. Debe ser idéntica entre `EventCard.astro` y `eventListClient.js`.
 - **Persistencia:** abrir `<details>` programáticamente al filtrar no se guarda en localStorage — listener `toggle` respeta `window.__gvSkipPersist`.
 

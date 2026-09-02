@@ -308,9 +308,9 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
               ))}
             </ul>
           </details>
-          <button id="btn-sound" type="button" data-cuelume-press="press" class="p-2 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 transition-colors" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
-            <Volume2 id="icon-sound-on" class="h-5 w-5" />
-            <VolumeX id="icon-sound-off" class="h-5 w-5 hidden" />
+          <button id="btn-sound" type="button" data-cuelume-press="press" class="relative inline-flex items-center justify-center h-9 w-9 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 active:scale-[0.96] transition-[scale,background-color,color] duration-150 ease-out" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
+            <span id="icon-sound-on" class="absolute inset-0 flex items-center justify-center transition-[transform,opacity,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)]"><Volume2 class="h-5 w-5" /></span>
+            <span id="icon-sound-off" class="absolute inset-0 flex items-center justify-center transition-[transform,opacity,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)]"><VolumeX class="h-5 w-5" /></span>
           </button>
           <details id="mobile-menu" class="relative lg:hidden">
             <summary class="list-none flex items-center p-2 rounded-lg text-base-content/70 hover:text-base-content hover:bg-base-200 cursor-pointer" aria-label="Menu de navegacion">
@@ -356,15 +356,15 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
           <div class="px-4 pb-4 pt-1">
             <div class="flex flex-col sm:flex-row sm:items-start gap-3 mb-3">
               <div class="flex flex-col gap-2 shrink-0">
-                <a id="gvault-download-link" href="" download=""
-                   class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-content transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
-                   title="Respaldo light del vault (contenido actual del proyecto)">
-                  <Download class="h-4 w-4" /> Descargar respaldo (.gvault)
-                </a>
                 <a href="https://github.com/Alplox/gobierno-vault/archive/refs/heads/main.zip"
-                   class="inline-flex items-center justify-center gap-2 rounded-lg border border-base-300 bg-base-100 px-4 py-2 text-sm font-semibold text-base-content/80 transition-colors hover:bg-base-200 hover:border-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                   class="inline-flex items-center justify-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-semibold text-primary-content transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
                    title="Descarga el repositorio completo (todo el proyecto) en ZIP, como ofrece GitHub">
-                  <Download class="h-4 w-4 text-base-content/60" /> Descargar repositorio (.zip)
+                  <Download class="h-4 w-4" /> Descargar repositorio (.zip)
+                </a>
+                <a id="gvault-download-link" href="" download=""
+                   class="inline-flex items-center justify-center gap-2 rounded-lg border border-base-300 bg-base-100 px-4 py-2 text-sm font-semibold text-base-content/80 transition-colors hover:bg-base-200 hover:border-neutral focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40"
+                   title="Respaldo light del vault (contenido actual del proyecto)">
+                  <Download class="h-4 w-4 text-base-content/60" /> Descargar respaldo (.gvault)
                 </a>
               </div>
               <div class="text-xs text-base-content/60 leading-relaxed space-y-1 min-w-0">
@@ -519,8 +519,15 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       function gvSetSound() {
         setEnabled(soundOn);
         btnSound?.setAttribute('aria-pressed', String(soundOn));
-        iconOn?.classList.toggle('hidden', !soundOn);
-        iconOff?.classList.toggle('hidden', soundOn);
+        const onActive = soundOn;
+        const setIcon = (el, active) => {
+          if (!el) return;
+          el.style.transform = active ? 'scale(1)' : 'scale(0.25)';
+          el.style.opacity = active ? '1' : '0';
+          el.style.filter = active ? 'blur(0px)' : 'blur(4px)';
+        };
+        setIcon(iconOn, onActive);
+        setIcon(iconOff, !onActive);
       }
       gvSetSound();
       // Llega la señal de "arrival" al navegar con View Transitions (tras la

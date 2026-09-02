@@ -45,6 +45,62 @@
   }
 }
 
+/* Sombras como borde (better-ui: Surfaces — Shadows for Elevation).
+   Light: 3 capas (ring 1px + lift + ambient). Dark: anillo blanco translucido
+   (las capas de profundidad no se ven en fondos oscuros). Se usa via
+   shadow-[var(--shadow-border)] en cards/containers elevados; hover via
+   shadow-[var(--shadow-border-hover)] + transition-[box-shadow]. */
+:root {
+  --shadow-border: 0 0 0 1px oklch(0 0 0 / 0.06), 0 1px 2px -1px oklch(0 0 0 / 0.06), 0 2px 4px 0 oklch(0 0 0 / 0.04);
+  --shadow-border-hover: 0 0 0 1px oklch(0 0 0 / 0.08), 0 1px 2px -1px oklch(0 0 0 / 0.08), 0 2px 4px 0 oklch(0 0 0 / 0.06);
+}
+@media (prefers-color-scheme: dark) {
+  :root { --shadow-border: 0 0 0 1px oklch(1 0 0 / 0.08); --shadow-border-hover: 0 0 0 1px oklch(1 0 0 / 0.13); }
+}
+[data-theme='dark'],
+[data-theme='black'],
+[data-theme='dracula'],
+[data-theme='night'],
+[data-theme='forest'],
+[data-theme='business'],
+[data-theme='dim'],
+[data-theme='abyss'],
+[data-theme='halloween'],
+[data-theme='luxury'],
+[data-theme='synthwave'],
+[data-theme='coffee'] {
+  --shadow-border: 0 0 0 1px oklch(1 0 0 / 0.08);
+  --shadow-border-hover: 0 0 0 1px oklch(1 0 0 / 0.13);
+}
+
+/* Image outlines (better-ui: Surfaces — Image Outlines).
+   Outline 1px puro oklch(0 0 0 /0.1) light / oklch(1 0 0 /0.1) dark, nunca
+   slate/zinc tintado. Outline no afecta layout; offset -1px lo dibuja dentro
+   del borde respetando radius. */
+.prose img,
+.ascii-svg-img {
+  outline: 1px solid oklch(0 0 0 / 0.1);
+  outline-offset: -1px;
+}
+[data-theme='dark'] .prose img,
+[data-theme='dark'] .ascii-svg-img,
+[data-theme='black'] .prose img,
+[data-theme='black'] .ascii-svg-img,
+[data-theme='dracula'] .prose img,
+[data-theme='dracula'] .ascii-svg-img,
+[data-theme='night'] .prose img,
+[data-theme='night'] .ascii-svg-img,
+[data-theme='forest'] .prose img,
+[data-theme='forest'] .ascii-svg-img,
+[data-theme='business'] .prose img,
+[data-theme='business'] .ascii-svg-img,
+[data-theme='dim'] .prose img,
+[data-theme='dim'] .ascii-svg-img,
+[data-theme='abyss'] .prose img,
+[data-theme='abyss'] .ascii-svg-img {
+  outline-color: oklch(1 0 0 / 0.1);
+}
+
 /* Chips categoricos (tipo de evento y tipo de relacion): un hue por categoria
    via --chip-hue, mezclado con tokens del tema activo usando color-mix. El
    texto tinta el hue hacia base-content (oscurece en temas claros, aclara en

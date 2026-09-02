@@ -1,11 +1,11 @@
 ---
 name: backup
-description: Respaldo offline público .gvault con Brotli y SHA-256, verificación y restauración. Usa esta skill SIEMPRE al generar, verificar o restaurar backups, tocar scripts/backup.mjs, public/backup/ o el footer de backup, incluso si solo dice 'hacer backup'.
+description: Respaldo offline público .gvault con Brotli y SHA-256, verificación y restauración. Usa esta skill SIEMPRE al generar, verificar o restaurar backups, tocar scripts/backup/backup.mjs, public/backup/ o el footer de backup, incluso si solo dice 'hacer backup'.
 ---
 
 ## Respaldo / Restauracion (backup offline publico)
 
-> **Handoff:** si cambias `scripts/gvault-util.mjs`, `backup.mjs`, el formato `.gvault` o el footer de backup, actualiza este skill en la misma sesión.
+> **Handoff:** si cambias `scripts/lib/gvault-util.mjs`, `scripts/backup/backup.mjs`, el formato `.gvault` o el footer de backup, actualiza este skill en la misma sesión.
 
 El repo puede morir por el contenido sensible (politica/corrupcion), por eso se genera un
 respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son archivos
@@ -13,7 +13,7 @@ respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son a
 SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requiere
 dependencias nuevas.
 
-Scripts (ver `scripts/gvault-util.mjs` para el formato compartido):
+Scripts (ver `scripts/lib/gvault-util.mjs` para el formato compartido):
 - `pnpm run backup` — genera UN archivo `.light.gvault` (solo contenido actual: `src/**` +
   docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`, `public/`) DIRECTO en
   `public/backup/` (ubicacion canonica, SE COMMITEA) junto con `manifest.json` (`archivo`,
@@ -43,13 +43,13 @@ Convenciones:
   Ojo: el `toggle` de `<details>` NO burbujea — el listener se registra en **fase de captura**
   (`addEventListener('toggle', fn, true)`), si no el textarea nunca se llenaba. Si no existe
   backup, el footer muestra un aviso y deshabilita la descarga.
-- **Corrección de integridad (BOM):** `scripts/backup.mjs` usa `TextDecoder` con `ignoreBOM: true`
+- **Corrección de integridad (BOM):** `scripts/backup/backup.mjs` usa `TextDecoder` con `ignoreBOM: true`
   en `encodeFile`; sin esto los archivos con BOM UTF-8 (ej. `src/scripts/eventListClient.js`)
   perdían 3 bytes en el round-trip y `verify` reportaba hash incorrecto.
 - **Instrucciones para no técnicos embebidas en cada `.gvault`**: la cabecera INFORMACION explica
   paso a paso cómo comprobar la integridad (instalar Node → abrir terminal → pegar el one-liner
   `VERIFY_ONELINER`) y cómo recuperar los archivos sin el proyecto con un solo comando
-  (`RESTORE_ONELINER`, extrae todo a una carpeta). Ambos viven como consts en `scripts/backup.mjs`
+  (`RESTORE_ONELINER`, extrae todo a una carpeta). Ambos viven como consts en `scripts/backup/backup.mjs`
   y se interpolan en `buildInfo`. Usan
   `lastIndexOf('===METADATA===')` a propósito: la cabecera contiene ese texto DENTRO del propio
   one-liner de verificación, así que `indexOf` (primera aparición) apuntaría al lugar equivocado.

@@ -19,14 +19,11 @@ TAREAS/
     TRANSVERSAL.md       # multi-año (Cuentas Públicas transversales, estallido)
     AMPLIACIONES.md      # deuda de cobertura (ver abajo)
   SEGUIMIENTO_INDEX.md   # catálogo auto-generado — NO editar a mano
-  SEGUIMIENTO.md         # README redirigido (3 líneas)
 ```
 
 - **Por qué por año:** permite `read TAREAS/SEGUIMIENTO/2026.md` en vez del monolito de 158KB.
 - **`SEGUIMIENTO_INDEX.md`** se genera con `pnpm run generate-seguimiento-index` (lee `SEGUIMIENTO/*.md`, valida IDs únicos y `Origen:`).
 - **Formato `YYYY.md`:** tabla corta por ID (parseable con `rg`) + sección `## Detalle` con el texto operativo completo de cada tarea (qué registrar, desenlaces esperados) agrupado por bucket. La columna Título de la tabla es un resumen corto y puede terminar en `...` — el detalle completo siempre está en `## Detalle` del mismo archivo.
-- **Origen:** `scripts/restore-seguimiento-detail.mjs` restauró el `## Detalle` desde el monolito original (`git show HEAD:TAREAS/SEGUIMIENTO.md`) tras una migración que truncó los títulos (reporte en `SEGUIMIENTO/_restore-report.md`).
-- `TAREAS/SEGUIMIENTO.md` monolito original queda como README que apunta al índice.
 
 ## Taxonomía (tipo en ID)
 
@@ -62,16 +59,18 @@ Campos: `ID | estado ⬜/🟡 | fecha detección YYYY-MM-DD | bucket (primer hea
 ## Comandos
 
 ```bash
-# ver catálogo (sin leer 158KB)
+# ver catálogo (sin leer 158KB) — portable (sin | head, falla en PowerShell)
 rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md
-rg "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md | head
+rg "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md
+# alternativa con límite: rg --max-count 20 "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md
+# PowerShell si necesitas paginar: rg "^\| S-" TAREAS/SEGUIMIENTO_INDEX.md | Select-Object -First 20
 
 # leer solo el año relevante
 read TAREAS/SEGUIMIENTO/2026.md
 
 # regenerar índice tras editar SEGUIMIENTO/
 pnpm run generate-seguimiento-index
-node scripts/generate-seguimiento-index.mjs --dry-run  # solo valida IDs sin escribir
+node scripts/generate/generate-seguimiento-index.mjs --dry-run  # solo valida IDs sin escribir
 ```
 
 ## Qué va dónde
@@ -82,4 +81,4 @@ node scripts/generate-seguimiento-index.mjs --dry-run  # solo valida IDs sin esc
 
 ## Validación
 
-`scripts/generate-seguimiento-index.mjs` valida IDs únicos, estados permitidos (`⬜`/`🟡`), y que cada `⬜` tenga `Origen: <https://`>. Falla si hay duplicado o fila sin Origen (como `validate.mjs` para wikilinks).
+`scripts/generate/generate-seguimiento-index.mjs` valida IDs únicos, estados permitidos (`⬜`/`🟡`), y que cada `⬜` tenga `Origen: <https://`>. Falla si hay duplicado o fila sin Origen (como `validate.mjs` para wikilinks).

@@ -1,7 +1,7 @@
-import { readFileSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
-import { getCollection } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import {
   getOrganizationsRegistry,
   getPeopleRegistry,
@@ -12,7 +12,7 @@ import {
   getAllPeopleIds,
   getAllOrgIds,
   getEntitiesForEvent,
-  getAllCifras,
+  getAllCifras as getAllCifrasRaw,
   getQuotesForPerson,
   type CifraEntry,
   type QuoteEntry,
@@ -22,9 +22,9 @@ function basename(entryId: string): string {
   return entryId.split('/').pop() ?? entryId;
 }
 
-let _allEventsCache: Awaited<ReturnType<typeof getCollection>> | null = null;
+let _allEventsCache: CollectionEntry<'events'>[] | null = null;
 
-export async function getAllEvents() {
+export async function getAllEvents(): Promise<CollectionEntry<'events'>[]> {
   if (_allEventsCache) return _allEventsCache;
   const events = await getCollection('events');
   _allEventsCache = events.sort(
@@ -76,7 +76,7 @@ export async function getUniqueTopics(): Promise<string[]> {
   return [...ids].sort();
 }
 
-// ponytail: people and orgs are extracted from [[person/...]] and [[org/...]] in body text
+// ponytail: people and orgs are extracted from [[people/...]] and [[organizations/...]] in body text
 export { getAllPeopleIds as getUniquePeople };
 export { getAllOrgIds as getUniqueOrgs };
 
@@ -102,7 +102,8 @@ export async function getOrgsMap(): Promise<Map<string, string>> {
 }
 
 export function getEventEntities(eventId: string) {
-  return getEntitiesForEvent(eventId);
+  const e = getEntitiesForEvent(eventId);
+  return { ...e, cifras: e.cifras.map((c) => ({ ...c, concepto: resolveCifraConcept(c.concepto) })) };
 }
 
 export function eventHasPerson(eventId: string, personId: string): boolean {
@@ -116,17 +117,45 @@ export function eventHasOrg(eventId: string, orgId: string): boolean {
 type CifraRegistryEntry = {
   nombre: string;
   unidad_default: string;
+  aliases?: string[];
+  fuente_oficial?: string;
+  notas?: string;
 };
 
 let cifrasRegistryCache: Record<string, CifraRegistryEntry> | null = null;
 
+function readCifrasFallback(): Record<string, CifraRegistryEntry> | null { try { const dir = join(process.cwd(), 'src', 'content', 'cifras'); if (!existsSync(dir)) return null; const rec: Record<string, CifraRegistryEntry> = {}; for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) { const id=f.replace(/\.md$/,''); const raw=readFileSync(join(dir,f),'utf8'); const m=raw.match(/^---\r?\n([\s\S]*?)\r?\n---/); if(m) rec[id]=YAML.parse(m[1]); } return Object.keys(rec).length?rec:null; } catch { return null; } }
 export function getCifrasRegistry(): Record<string, CifraRegistryEntry> {
   if (!cifrasRegistryCache) {
-    const entities = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8'));
-    cifrasRegistryCache = entities.cifras ?? {};
+    const md = readCifrasFallback();
+    if (md) cifrasRegistryCache = md;
+    else {
+      const entities = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8'));
+      cifrasRegistryCache = entities.cifras ?? {};
+    }
   }
-  return cifrasRegistryCache;
+  return cifrasRegistryCache!;
 }
 
-export { getAllCifras, getQuotesForPerson };
+let cifrasAliasMapCache: Map<string, string> | null = null;
+export function getCifrasAliasMap(): Map<string, string> {
+  if (cifrasAliasMapCache) return cifrasAliasMapCache;
+  const registry = getCifrasRegistry();
+  const map = new Map<string, string>();
+  for (const [canonical, entry] of Object.entries(registry)) {
+    for (const alias of entry.aliases ?? []) {
+      if (!map.has(alias)) map.set(alias, canonical);
+    }
+  }
+  cifrasAliasMapCache = map;
+  return map;
+}
+export function resolveCifraConcept(concept: string): string {
+  return getCifrasAliasMap().get(concept) ?? concept;
+}
+
+export function getAllCifras(): Array<CifraEntry & { eventId: string; fecha: Date }> {
+  return getAllCifrasRaw().map((c) => ({ ...c, concepto: resolveCifraConcept(c.concepto) }));
+}
+export { getQuotesForPerson };
 export type { CifraEntry, QuoteEntry };

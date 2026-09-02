@@ -18,7 +18,7 @@ function sourceRow(s) {
   const fecha = s.fechaStr
     ? `<span class="inline-flex items-center gap-1"><span>${esc(s.fechaStr)}</span></span>`
     : '';
-  return `<div class="group block border border-base-300 shadow-sm rounded-xl p-5 hover:border-primary/50 hover:shadow-md transition-all duration-200 bg-base-100">
+  return `<div class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] transition-[box-shadow,border-color] duration-200 ease-out">
   <div class="flex items-start justify-between gap-3">
     <div class="min-w-0 flex-1">
       <a transition:name="source-title-${s.id}" href="/sources/${s.id}" class="font-bold text-base-content text-base leading-snug group-hover:text-primary transition-colors block">${esc(s.titulo)}</a>

@@ -101,7 +101,7 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Senado — Tramitación | <https://www.senado.cl/tramitacion-de-proyectos> | |
 | Senado — Votaciones en Sala | <https://www.senado.cl/actividad-legislativa/sala/votaciones> | |
 
-**Cámara (votaciones):** el listado por sesión permite ver el detalle nominal de cada votación; el listado por proyecto rastrea un boletín `NNNNN-NN` a lo largo de su tramitación. Para `tipo: votacion` cita la URL concreta como fuente oficial (`medio: Cámara de Diputados` / `Senado de Chile`) además de prensa y registra conteos como `[[cifra/...]]` (ej. vetos megarreforma `20260810-10`).
+**Cámara (votaciones):** el listado por sesión permite ver el detalle nominal de cada votación; el listado por proyecto rastrea un boletín `NNNNN-NN` a lo largo de su tramitación. Para `tipo: votacion` cita la URL concreta como fuente oficial (`medio: Cámara de Diputados` / `Senado de Chile`) además de prensa y registra conteos como `[[cifras/...]]` (ej. vetos megarreforma `20260810-10`).
 
 **BCN — Historia Política:** base de datos gubernamental, no prensa. Usar como hecho primario y citar `medio: Biblioteca del Congreso`. Es la fuente para verificar `cargos[]` históricos (gabinetes, `TAREAS/GABINETES-VERIFICACION.md`) y biografías.
 
@@ -153,11 +153,11 @@ Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones
 
 ## Estado de validación 2026-08-27
 
-Validado con `node scripts/validate-fuentes.mjs` (60 URLs, timeout 12s, UA Mozilla, `fetch` Node + `webfetch` cruzado):
+Validado con `node scripts/validate/validate-fuentes.mjs` (60 URLs, timeout 12s, UA Mozilla, `fetch` Node + `webfetch` cruzado):
 
 - **OK 46** — `gob.cl`, `hacienda.cl`, `economia.gob.cl`, `energia.gob.cl`, `interior.gob.cl`, `minjusticia.gob.cl`, `minsal.cl`, `mintrab.gob.cl`, `desarrollosocialyfamilia.gob.cl`, `minmujeryeg.gob.cl`, `mineduc.cl`, `cultura.gob.cl`, `mindep.cl`, `mop.gob.cl/noticias/` (corregido), `minvu.gob.cl`, `mtt.gob.cl`, `bienesnacionales.cl`, `minrel.gob.cl`, `minagri.gob.cl`, `mma.gob.cl`, `minciencia.gob.cl`, `senapred.cl`, `sii.cl`, `sernac.cl/` (corregido), `tgr.cl`, `aduana.cl/` (corregido), `cne.cl`, `sag.gob.cl`, `bcn.cl/*`, `senado.cl/*`, `portaltransparencia.cl/`, `comision38bis.gob.cl/*`, `calculadoraipc.ine.gob.cl`, `ine.gob.cl/.../metodología.pdf`, `jurisprudencia.cplt.cl`, `consejotransparencia.cl/*`, `tp.cplt.cl`, `infotransparencia.cl`, `gdeltproject.org`, `meganoticias.cl/hemeroteca`, `github.com/pisanvs/ley-chile`.
 - **WAF 403 esperado 4** — `camara.cl/*` (sesiones, votaciones, transparencia) bloquea `fetch` Node/curl; usar `fetch-impersonate` o verificar en menú (documentado).
 - **404 corregido 3** — `mop.gob.cl/prensa/` → `noticias/`, `sernac.cl/portal/noticias/` → `sernac.cl/`, `aduana.cl/.../taxport_1___1.html` → `aduana.cl/` (arriba). `leyes.pisanvs.cl/api/mcp` da 404 por `fetch` GET — es endpoint MCP, no página; usar tool MCP (no es fallo).
 - **Errores de red 9** — `prensa.presidencia.cl*`, `msgg.gob.cl`, `minmineria.gob.cl` (webfetch OK, `fetch` Node falla — usar `fetch-impersonate`), `ispch.cl`, `transparenciaactiva.presidencia.cl*` (4) — no responden a `fetch` Node desde esta red al 2026-08-27; pueden requerir `fetch-impersonate` o red chilena. Se mantienen con nota y fallback (`gob.cl`, `portaltransparencia.cl`).
 
-Para re-validar: `node scripts/validate-fuentes.mjs` (repite el chequeo; actualiza notas y handoff si cambias URLs).
+Para re-validar: `node scripts/validate/validate-fuentes.mjs` (repite el chequeo; actualiza notas y handoff si cambias URLs).

@@ -55,7 +55,7 @@ function eventRow(e) {
         ${temas ? `<div class="mt-2 flex flex-wrap gap-1">${temas}</div>` : ''}
         ${previews ? `<div class="mt-2.5 flex flex-wrap gap-1.5">${previews}</div>` : ''}
       </div>
-      <span class="mt-5 h-4 w-4 shrink-0 text-base-content/30 transition-all duration-200 group-hover:translate-x-0.5 group-hover:text-primary">›</span>
+      <span class="mt-5 h-4 w-4 shrink-0 text-base-content/30 transition-[translate,color] duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-primary">›</span>
     </div>
   </article>
 </a>`;
