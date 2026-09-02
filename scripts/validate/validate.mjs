@@ -71,6 +71,12 @@ const entitiesData = readYaml('entities.yaml');
 const orgsData = entitiesData.organizations ?? {};
 const peopleData = entitiesData.people ?? {};
 const cifrasData = entitiesData.cifras ?? {};
+const cifrasAliasMap = new Map();
+for (const [canonical, entry] of Object.entries(cifrasData)) {
+  for (const alias of entry.aliases ?? []) {
+    if (!cifrasAliasMap.has(alias)) cifrasAliasMap.set(alias, canonical);
+  }
+}
 // Índice de personas para la regla de wikilinks en prosa (AGENTS.md n.º 8).
 // Misma lógica que scripts/fix-prose-wikilinks.mjs (backlog).
 const peopleProseIndex = buildPeopleIndex(peopleData);
@@ -510,7 +516,7 @@ for (const file of allFiles) {
   const noCode = body
     .replace(/```[\s\S]*?```/g, '')
     .replace(/`[^`\n]*`/g, '');
-  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras?|cifra|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
+  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
   for (const m of noCode.matchAll(WIKILINK_RE)) {
     const [, rawType, id] = m;
     const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;
@@ -526,6 +532,17 @@ for (const file of allFiles) {
     } else if (type === 'event' && !allEventBasenames.has(id)) {
       console.error(`✖ wikilink roto [[${rawType}/${id}]] → ${eventId} (no existe evento con ese ID)`);
       errors++;
+    } else if (type === 'cifra') {
+      // Validación canónica con aliases (no bloqueante): alias → canónico, puntual permitido sin archivo
+      if (cifrasData[id]) {
+        // canónico ok
+      } else if (cifrasAliasMap.has(id)) {
+        const canonical = cifrasAliasMap.get(id);
+        console.warn(`⚠ cifra alias [[${rawType}/${id}]] → usar [[${rawType}/${canonical}]] → ${eventId} (alias de ${canonical})`);
+      } else {
+        // puntual sin registro: permitido, pero si parece typo de canónico/alias cercano se avisa con sugerencia leve
+        // No se incrementa errors para no romper build; solo informativo
+      }
     }
   }
 

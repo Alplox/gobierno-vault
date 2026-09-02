@@ -4,7 +4,7 @@ import { Filter, Tag, User, Building2, Search, X, Layers, Hash } from 'lucide-as
 const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astro.props;
 ---
 
-<form method="get" id="filter-form" data-filter-form class="flex flex-wrap gap-3 items-end p-4 bg-base-100 border border-base-300 shadow-sm rounded-xl mb-8">
+<form method="get" id="filter-form" data-filter-form class="flex flex-wrap gap-3 items-end p-4 bg-base-100 border-0 shadow-[var(--shadow-border)] rounded-xl mb-8">
   <div class="w-full min-w-[220px]">
     <label class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
       <Search class="h-3.5 w-3.5 text-base-content/40" />
@@ -74,7 +74,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
     </div>
   )}
   <div class="flex items-center gap-2 shrink-0">
-    <button type="submit" class="inline-flex items-center justify-center gap-1.5 text-sm font-medium bg-primary text-primary-content px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-[0.98] transition-all duration-150 shadow-sm">
+    <button type="submit" class="inline-flex items-center justify-center gap-1.5 text-sm font-medium bg-primary text-primary-content px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-[0.96] transition-[scale,background-color,box-shadow] duration-150 ease-out shadow-sm">
       <Filter class="h-4 w-4" />
       <span>Filtrar</span>
     </button>
@@ -82,7 +82,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
       type="button"
       id="clear-filters"
       data-clear-filters
-      class="hidden inline-flex items-center justify-center gap-1.5 text-sm font-medium bg-base-200 text-base-content/80 px-3 py-2 rounded-lg hover:bg-base-300 active:scale-[0.98] transition-all duration-150"
+      class="hidden inline-flex items-center justify-center gap-1.5 text-sm font-medium bg-base-200 text-base-content/80 px-3 py-2 rounded-lg hover:bg-base-300 active:scale-[0.96] transition-[scale,background-color] duration-150 ease-out"
     >
       <X class="h-4 w-4" />
       <span>Limpiar</span>

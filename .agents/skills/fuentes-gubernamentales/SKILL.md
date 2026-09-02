@@ -101,7 +101,7 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Senado — Tramitación | <https://www.senado.cl/tramitacion-de-proyectos> | |
 | Senado — Votaciones en Sala | <https://www.senado.cl/actividad-legislativa/sala/votaciones> | |
 
-**Cámara (votaciones):** el listado por sesión permite ver el detalle nominal de cada votación; el listado por proyecto rastrea un boletín `NNNNN-NN` a lo largo de su tramitación. Para `tipo: votacion` cita la URL concreta como fuente oficial (`medio: Cámara de Diputados` / `Senado de Chile`) además de prensa y registra conteos como `[[cifra/...]]` (ej. vetos megarreforma `20260810-10`).
+**Cámara (votaciones):** el listado por sesión permite ver el detalle nominal de cada votación; el listado por proyecto rastrea un boletín `NNNNN-NN` a lo largo de su tramitación. Para `tipo: votacion` cita la URL concreta como fuente oficial (`medio: Cámara de Diputados` / `Senado de Chile`) además de prensa y registra conteos como `[[cifras/...]]` (ej. vetos megarreforma `20260810-10`).
 
 **BCN — Historia Política:** base de datos gubernamental, no prensa. Usar como hecho primario y citar `medio: Biblioteca del Congreso`. Es la fuente para verificar `cargos[]` históricos (gabinetes, `TAREAS/GABINETES-VERIFICACION.md`) y biografías.
 

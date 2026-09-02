@@ -178,7 +178,7 @@ const graphLinks = graphEdges.map((e) => ({
 ---
 
 <div class:list={[
-  'relative overflow-hidden rounded-xl border border-base-300 bg-base-100',
+  'relative overflow-hidden rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]',
   size === 'mini' ? 'mb-6' : '',
 ]}>
   {size === 'full' && (
@@ -224,7 +224,7 @@ const graphLinks = graphEdges.map((e) => ({
     <div id="graph-modal-content" class="prose prose-sm max-w-none max-h-[55vh] overflow-y-auto border-y border-base-300 py-3 my-3"></div>
     <p id="graph-modal-links-title" class="mb-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/60">Conexiones</p>
     <div id="graph-modal-links" class="space-y-1.5 max-h-52 overflow-y-auto mb-4 pr-1"></div>
-    <a id="graph-modal-open" href="#" class="block text-center text-sm font-medium bg-primary text-primary-content px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-[0.99] transition-all">Leer evento completo →</a>
+    <a id="graph-modal-open" href="#" class="block text-center text-sm font-medium bg-primary text-primary-content px-4 py-2 rounded-lg hover:bg-primary/90 active:scale-[0.96] transition-[scale,background-color] duration-150 ease-out">Leer evento completo →</a>
   </div>
 </dialog>
 

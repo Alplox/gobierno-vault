@@ -17,7 +17,7 @@ description: Reglas de creación y validación de eventos, checklist de 16 regla
 5. **`impacto.colectivos`:** IDs de `src/data/colectivos.yaml` (excepción YAML).
 6. **`impacto.sectores`:** IDs de `src/data/sectores.yaml` (excepción YAML).
 7. **`relaciones`:** `tipo: id` sin extensión (ej. `20260720-1`). No duplicar bidireccional.
-8. **Wikilinks en body:** siempre que menciones persona/org/fuente/cifra, usa wikilink `[[people/]]`/`[[organizations/]]`/`[[sources/]]`/`[[cifra/]]`/`[[events/]]`. Ver detalle abajo.
+8. **Wikilinks en body:** siempre que menciones persona/org/fuente/cifra, usa wikilink `[[people/]]`/`[[organizations/]]`/`[[sources/]]`/`[[cifras/]]`/`[[events/]]`. Ver detalle abajo.
 9. **Fuentes:** agregar a `src/content/sources/<id>.md` si es nueva. ID `medio-YYYY-MM-DD-slug`. **Siempre inline**, nunca `## Referencias`.
 10. **URLs de fuentes:** nunca raíz/dominio; siempre URL completa del artículo. Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Para paywall usar mirrors de `tools.md`. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (skill) para reducir sesgo.
 11. **Personas/orgs nuevas:** agregar a `src/content/people/*.md` o `src/content/organizations/*.md`.
@@ -25,7 +25,7 @@ description: Reglas de creación y validación de eventos, checklist de 16 regla
 13. **Prohibido notas de editor en body:** no dejar `Nota de verificación`, `ver TAREAS*`, `para seguimiento`, `pendiente de validación`, `pendiente el desenlace`, **ni contenido meta-editorial sobre decisiones de edición** (`Matiz sobre sesgo`, `No se agregan como fuentes`, `complementarios por definición`, `reduce el riesgo de reinterpretación`, `medio con línea editorial... para contrastar sesgo`, `ilustran polarización pero no aportan dato`, `Validación cruzada` como sección que justifica selección de fuentes) como justificación en body). El body solo contiene hechos; cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`). Lo pendiente o la justificación de por qué se incluyó/excluyó una fuente va a `TAREAS/` con `⬜`/`🟡` o al mensaje de commit/PR, nunca al evento. `scripts/validate/validate.mjs` hace fallar el build si detecta el patrón (ver `content-model.md` → Prohibido contenido meta-editorial). Excepción: eventos-tracker diseñados (ej. `20250822-1`).
 14. **Consultar catálogo sitemaps ANTES de buscar en web** para medios con sitemap local (ver `sitemaps.md`). Buscar con `rg -i --no-heading -uu '<términos>' sitemaps/<slug>/` o `rg -i -uu -g '*.jsonl' '<términos>' sitemaps`. Entrega URL+fecha (+título si news-sitemap). Luego leer URL con `read_url`/mirrors. El catálogo no trae el cuerpo.
 15. **Cifras en disputa:** párrafo + tabla comparativa (ver `content-model.md`).
-16. **Votaciones:** conteos con fuente oficial Senado/Cámara + `[[cifra/...]]` (ver `content-model.md`).
+16. **Votaciones:** conteos con fuente oficial Senado/Cámara + `[[cifras/...]]` (ver `content-model.md`).
 
 ## Detalle regla 8 — enforcement de wikilinks en prosa
 

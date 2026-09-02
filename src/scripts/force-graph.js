@@ -512,9 +512,40 @@ function init() {
               el.removeAttribute('style');
             }
           });
+          // Inyectar referencias (li#ref-*) dentro del modal para que
+          // los [N] tengan destino. En /events el hash #ref-N no existe
+          // y navegaba a /events#ref-1 (bug reportado).
+          const refItems = doc.querySelectorAll('li[id^="ref-"]');
+          if (refItems.length) {
+            const refsWrap = document.createElement('div');
+            refsWrap.className = 'mt-4 border-t border-base-300 pt-3';
+            refsWrap.innerHTML = '<p class="text-[11px] font-bold uppercase tracking-wider text-base-content/60 mb-2">Referencias</p>';
+            const ol = document.createElement('ol');
+            ol.className = 'space-y-2';
+            refItems.forEach((li) => {
+              const clone = li.cloneNode(true);
+              clone.querySelectorAll('a[href^="/"]').forEach((a) => a.setAttribute('target', '_blank'));
+              ol.appendChild(clone);
+            });
+            refsWrap.appendChild(ol);
+            box.appendChild(refsWrap);
+          }
           // Links internos del preview en pestana nueva: navegar aqui perderia
           // el estado del grafo (la queja original del modal).
           box.querySelectorAll('a[href^="/"]').forEach((a) => a.setAttribute('target', '_blank'));
+          // Interceptar [N] → scroll dentro del modal en vez de
+          // navegar a /events#ref-N (hash del listado, sin destino).
+          box.querySelectorAll('a[href^="#ref-"]').forEach((a) => {
+            a.addEventListener('click', (e) => {
+              e.preventDefault();
+              e.stopPropagation();
+              const id = a.getAttribute('href').slice(1);
+              try {
+                const target = box.querySelector('#' + CSS.escape(id));
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+              } catch { /* CSS.escape no disponible */ }
+            });
+          });
           box.scrollTop = 0;
         })
         .catch(() => {

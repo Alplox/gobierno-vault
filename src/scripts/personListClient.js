@@ -14,7 +14,7 @@ function personCard(p) {
     ? `<p class="flex items-center gap-1.5 text-xs text-base-content/60 mt-0.5"><svg class="h-3.5 w-3.5 text-base-content/40 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14M9 9h.01M9 13h.01M9 17h.01M15 9h.01M15 13h.01M15 17h.01"/></svg><span>${esc(p.organizacion)}</span></p>`
     : '';
 
-  return `<a href="/people/${p.id}" class="group block border border-base-300 shadow-sm rounded-xl p-5 hover:border-primary/50 hover:shadow-md active:scale-[0.99] transition-all duration-200 bg-base-100">
+  return `<a href="/people/${p.id}" class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out">
   <div class="flex items-start gap-4">
     <div class="h-16 w-12 rounded-lg bg-base-200 flex items-center justify-center shrink-0"><svg class="h-5 w-5 text-base-content/40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
     <div class="min-w-0 flex-1">
@@ -22,7 +22,7 @@ function personCard(p) {
       ${cargo}
       ${org}
     </div>
-    <svg class="h-5 w-5 text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
+    <svg class="h-5 w-5 text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
   </div>
 </a>`;
 }

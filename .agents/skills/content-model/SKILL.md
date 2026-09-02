@@ -1,12 +1,12 @@
 ---
 name: content-model
-description: Modelo de contenido para eventos, frontmatter, tipos, wikilinks, svg_backup, cifras en disputa y votaciones. Usa esta skill SIEMPRE al crear o editar src/content/events/YYYY/MM/YYYYMMDD-N.md, validar tipo/relaciones, escribir [[people/org/source/cifra/event]] o citar cifras, incluso si el usuario solo dice 'crear evento' o 'agregar cifra'.
+description: Modelo de contenido para eventos, frontmatter, tipos, wikilinks, svg_backup, cifras en disputa y votaciones. Usa esta skill SIEMPRE al crear o editar src/content/events/YYYY/MM/YYYYMMDD-N.md, validar tipo/relaciones, escribir [[people/org/source/cifras/event]] o citar cifras, incluso si el usuario solo dice 'crear evento' o 'agregar cifra'.
 ---
 
 # Modelo de contenido — eventos, frontmatter y wikilinks
 
 > Cuándo cargar: vas a crear/editar `src/content/events/YYYY/MM/YYYYMMDD-N.md`, tocar frontmatter, wikilinks, cifras o el respaldo `svg_backup`. Para reglas de proceso (fuentes, validación, TAREAS) ver `event-rules.md`.
-> **Handoff:** si cambias el modelo de contenido (frontmatter, tipos, wikilinks, `svg_backup`, cifras), actualiza este skill en la misma sesión — un skill desactualizado rompe el handoff igual que `AGENTS.md`.
+> **Handoff:** si cambias el modelo de contenido (frontmatter, tipos, wikilinks, `svg_backup`, cifras nacionales), actualiza este skill en la misma sesión — un skill desactualizado rompe el handoff igual que `AGENTS.md`.
 
 ## Archivos de evento
 
@@ -90,8 +90,8 @@ El [[people/jose_antonio_kast]] anunció desde [[organizations/presidencia_chile
 
 ## Cifras del balance
 
-- [[cifra/fallecidos/5/personas]] fallecidos [[sources/latercera-2026-07-20-balance]]
-- [[cifra/damnificados/2205/personas]] damnificados [[sources/biobio-2026-07-20-balance]]
+- [[cifras/fallecidos/5/personas]] fallecidos [[sources/latercera-2026-07-20-balance]]
+- [[cifras/damnificados/2205/personas]] damnificados [[sources/biobio-2026-07-20-balance]]
 
 Si cifras en disputa: párrafo que explica la desincronización + tabla comparativa (cifra | fuente | contexto). Ver § Cifras en disputa.
 
@@ -103,7 +103,7 @@ Separador ` - ` (espacio-guion-espacio) antes de `[[people/...]]`; `[[sources/..
 
 ## Votación (si tipo: votacion)
 
-Verificar conteos en Senado/Cámara oficial y citar URL como fuente (`medio: Senado de Chile` / `Cámara de Diputados`), cada conteo como `[[cifra/...]]`. Ver § Votaciones.
+Verificar conteos en Senado/Cámara oficial y citar URL como fuente (`medio: Senado de Chile` / `Cámara de Diputados`), cada conteo como `[[cifras/...]]`. Ver § Votaciones.
 
 Relaciones en prosa: `[[events/20260618-3]]` (wikilink explícito; no usar ID desnudo `20260618-3` — no es markdown puro y no auto-enlaza).
 
@@ -131,11 +131,11 @@ No declarar la misma conexión en ambas direcciones (ej. A `deriva_en` B y B `re
 | `[[people/id]]` | `<span class="entity-ref entity-person">Nombre</span>` | `[[people/jose_antonio_kast]]` |
 | `[[organizations/id]]` | `<span class="entity-ref entity-org">Nombre</span>` | `[[organizations/senapred]]` |
 | `[[sources/id]]` | `[N]` con tooltip | `[[sources/latercera-2026-07-20-balance]]` |
-| `[[cifra/concepto/valor/unidad]]` | `<span class="cifra-badge">valor</span>` | `[[cifra/fallecidos/5/personas]]` |
+| `[[cifras/concepto/valor/unidad]]` | `<span class="cifra-badge">valor</span>` | `[[cifras/fallecidos/5/personas]]` |
 | `[[events/20260720-1]]` | `<a class="event-ref">Título</a>` | `[[events/20260720-1]]` |
 
 - Fuentes se numeran por primera aparición; repeticiones reutilizan el número. Genera anchor `#ref-N`.
-- `[[cifra/...]]` no se valida en `scripts/validate/validate.mjs` (paridad con el plugin); `people`/`organizations`/`sources`/`events` sí.
+- `[[cifras/...]]` es la única forma válida (`src/content/cifras/*.md`); la variante singular `[[cifra/...]]` está eliminada — no usar. Cifras canónicas viven en `src/content/cifras/*.md` con `aliases: []` y `unidad_default` canónica; `validate` avisa si usas alias de concepto (`desempleo`→`tasa_desocupacion`) y `queries.ts:resolveCifraConcept` agrupa serie por canónico (`/stats/tasa_desocupacion`). La fecha la da `event.data.fecha`, no el ID.
 - Solo wikilinks explícitos `[[events/ID]]` enlazan eventos (no hay auto-enlace de IDs desnudos `20260618-3` — no es markdown puro).
 
 ### Medios de prensa en prosa
@@ -163,7 +163,7 @@ Medios = organizaciones `tipo: medio_comunicacion` en `src/content/organizations
 Fuentes **inline** al final de la afirmación, nunca en `## Referencias`:
 
 ```markdown
-La bencina subió [[cifra/alza_bencina_mepco/370/pesos_por_litro]] [[sources/latercera-2026-03-19-mepco-impacto-ipc]].
+La bencina subió 370 pesos por litro [[sources/latercera-2026-03-19-mepco-impacto-ipc]].
 ```
 
 ### Prohibido contenido meta-editorial en body
@@ -211,8 +211,8 @@ svg_backup:
 
 ### Cifras en disputa: párrafo + tabla
 
-Cuando fuentes no coinciden (conteos, plazas, montos — ej. `20260813-1` Cancerbero), además del párrafo que explica la desincronización, agregar tabla comparativa en la misma sección: cifra (`[[cifra/...]]`), fuente/emisor (`[[sources/...]]`), contexto (qué mide, por qué difiere). Si se concilia, decirlo explícito y marcarlo en tabla. Registrar en `TAREAS/` solo lo pendiente real.
+Cuando fuentes no coinciden (conteos, plazas, montos — ej. `20260813-1` Cancerbero), además del párrafo que explica la desincronización, agregar tabla comparativa en la misma sección: cifra (`[[cifras/...]]`), fuente/emisor (`[[sources/...]]`), contexto (qué mide, por qué difiere). Si se concilia, decirlo explícito y marcarlo en tabla. Registrar en `TAREAS/` solo lo pendiente real.
 
 ### Votaciones (`tipo: votacion`): conteos con fuente oficial
 
-Verificar a favor/en contra/abstenciones en `senado.cl/actividad-legislativa/sala/votaciones` o `camara.cl/legislacion/sala_sesiones/votaciones.aspx` (`ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar URL concreta en `src/content/sources/<id>.md` (`medio: Senado de Chile`/`Cámara de Diputados`) y cada conteo como `[[cifra/...]]` (ej. `20260810-10`). Ver `.agents/skills/fuentes-gubernamentales/SKILL.md` → Poder Legislativo.
+Verificar a favor/en contra/abstenciones en `senado.cl/actividad-legislativa/sala/votaciones` o `camara.cl/legislacion/sala_sesiones/votaciones.aspx` (`ProyectosDeLey/votaciones.aspx?prmBOLETIN=NNNNN-NN`). Citar URL concreta en `src/content/sources/<id>.md` (`medio: Senado de Chile`/`Cámara de Diputados`) y cada conteo como `[[cifras/...]]` (ej. `20260810-10`). Ver `.agents/skills/fuentes-gubernamentales/SKILL.md` → Poder Legislativo.

@@ -108,7 +108,7 @@ for (const e of relatedEvents) {
     </a>
   </div>
 
-  <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm">
+  <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
     <div class="flex items-start gap-4">
       <div class="h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-lg shrink-0">
         <Tag class="h-6 w-6" />
@@ -124,11 +124,11 @@ for (const e of relatedEvents) {
   </header>
 
   {topic.data.bio && (
-    <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm leading-relaxed" set:html={topic.data.bio} />
+    <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed" set:html={topic.data.bio} />
   )}
 
   {topic.data.relacionados && topic.data.relacionados.length > 0 && (
-    <section class="mb-8 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+    <section class="mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <Layers class="h-4 w-4 text-primary" />
         <h2 class="text-sm font-bold text-base-content">Temas Relacionados</h2>
@@ -152,7 +152,7 @@ for (const e of relatedEvents) {
 
   {relatedEvents.length > 0 && (
     <section class="mt-8 space-y-4">
-      <div class="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+      <div class="bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
         <h2 class="text-sm font-bold text-base-content flex items-center gap-2 mb-5">
           <BarChart3 class="h-4 w-4 text-primary" />
           Panorama del tema
@@ -194,7 +194,7 @@ for (const e of relatedEvents) {
       </div>
 
       {(topPersonas.length > 0 || topOrgs.length > 0) && (
-        <div class="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+        <div class="bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
           <div class="grid gap-6 sm:grid-cols-2">
             {topPersonas.length > 0 && (
               <div>
@@ -241,7 +241,7 @@ for (const e of relatedEvents) {
       )}
 
       {topCifras.length > 0 && (
-        <div class="bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+        <div class="bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
           <p class="text-[11px] font-bold uppercase tracking-wider text-base-content/50 mb-3 flex items-center gap-1.5">
             <Hash class="h-3.5 w-3.5 text-primary" />
             Cifras destacadas

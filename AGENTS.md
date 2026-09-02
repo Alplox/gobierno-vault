@@ -71,7 +71,7 @@ Cuerpo con wikilinks inline...
 | `[[people/id]]` | `[[people/jose_antonio_kast]]` |
 | `[[organizations/id]]` | `[[organizations/senapred]]` |
 | `[[sources/id]]` | `[[sources/latercera-2026-07-20-balance]]` |
-| `[[cifra/concepto/valor/unidad]]` | `[[cifra/fallecidos/5/personas]]` |
+| `[[cifras/concepto/valor/unidad]]` | `[[cifras/fallecidos/5/personas]]` |
 | `[[events/20260720-1]]` | `[[events/20260720-1]]` |
 
 Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada. Detalle completo (medios en prosa, formato citas, `svg_backup`, cifras en disputa, votaciones con fuente oficial) en `.agents/skills/content-model/SKILL.md`.

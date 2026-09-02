@@ -8,7 +8,7 @@ const data = getEditorData();
 
 <Base title="Editor de Eventos">
   <div class="flex flex-col gap-6">
-    <header class="flex items-center justify-between bg-base-100 p-5 rounded-2xl border border-base-300 shadow-sm">
+    <header class="flex items-center justify-between bg-base-100 p-5 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2">
         <Edit3 class="h-6 w-6 text-primary shrink-0" />
         <h1 class="text-xl font-bold text-base-content">Editor de Eventos</h1>
@@ -121,14 +121,14 @@ const data = getEditorData();
 Usa [[people/nombre]] para referenciar personas.
 Usa [[organizations/nombre]] para referenciar organizaciones.
 Usa [[sources/id-fuente]] para referenciar fuentes.
-Usa [[cifra/concepto/valor/unidad]] para cifras.
+Usa [[cifras/concepto/valor/unidad]] para cifras.
 Usa > texto - [[people/id]] para citas (blockquote).
 
 Ejemplo:
 ## Anuncio del Presidente
 El [[people/jose_antonio_kast]] declaro Estado de Catastrofe en [[organizations/gobierno_regional_coquimbo]] por el sistema frontal que afecta a la zona.
 
-Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/15568/viviendas]]."></textarea>
+Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/15568/viviendas]]."></textarea>
 
           {/* Autocomplete dropdown */}
           <div id="ac-dropdown" class="hidden absolute z-50 bg-base-100 border rounded-lg shadow-lg max-h-56 overflow-y-auto w-80 text-sm"></div>
@@ -334,7 +334,7 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
       const unit = cifraUnit.value.trim() || cifras.find(c => c.id === concept)?.unidad_default || '';
       if (!value) return;
 
-      const wikilink = `[[cifra/${concept}/${value}/${unit}]]`;
+      const wikilink = `[[cifras/${concept}/${value}/${unit}]]`;
       const start = bodyEditor.selectionStart;
       bodyEditor.value = bodyEditor.value.substring(0, start) + wikilink + bodyEditor.value.substring(start);
       bodyEditor.focus();
@@ -626,7 +626,7 @@ Segun el balance, hay [[cifra/fallecidos/5/personas]] y [[cifra/damnificados/155
           }
           return `<sup class="text-primary font-mono text-[0.7rem]">[${sourceMap.get(id)}]</sup>`;
         })
-        .replace(/\[\[cifra\/([^\]]+)\/([^\]]+)\/([^\]]+)\]\]/g, (_, concept, val, unit) => {
+        .replace(/\[\[cifras\/([^\]]+)\/([^\]]+)\/([^\]]+)\]\]/g, (_, concept, val, unit) => {
           return `<span class="cifra-badge">${val}</span>`;
         })
         .replace(/\n\n/g, '<br><br>')

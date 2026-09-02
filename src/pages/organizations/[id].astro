@@ -30,7 +30,7 @@ const ministerio = getCabinetByMinistry().find((c) => c.ministerioId === org.id)
     </a>
   </div>
 
-  <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm">
+  <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
     <div class="flex items-start gap-4">
       <div class="h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-lg shrink-0">
         <Building2 class="h-6 w-6" />
@@ -54,11 +54,11 @@ const ministerio = getCabinetByMinistry().find((c) => c.ministerioId === org.id)
   </header>
 
   {org.data.bio && (
-    <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm leading-relaxed" set:html={org.data.bio} />
+    <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed" set:html={org.data.bio} />
   )}
 
   {ministerio && (
-    <section class="mb-8 bg-base-100 p-6 rounded-2xl border border-base-300 shadow-sm">
+    <section class="mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-bold text-base-content mb-4 flex items-center gap-2">
         <UserRound class="h-5 w-5 text-primary" />
         <span>Titulares del ministerio</span>

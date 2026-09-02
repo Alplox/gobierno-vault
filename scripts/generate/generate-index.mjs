@@ -67,7 +67,7 @@ function parseEventFrontmatter(filePath) {
 function countSources(filePath) {
   const content = readFileSync(filePath, 'utf8');
   const ids = new Set();
-  for (const match of content.matchAll(/\[\[source\/([A-Za-z0-9_.-]+)\]\]/g)) {
+  for (const match of content.matchAll(/\[\[(?:sources|source)\/([A-Za-z0-9_.-]+)\]\]/g)) {
     ids.add(match[1]);
   }
   return ids.size;

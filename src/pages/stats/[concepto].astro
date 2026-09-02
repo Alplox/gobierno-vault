@@ -37,7 +37,7 @@ const total = conceptoCifras.reduce((sum, c) => sum + c.valor, 0);
       </a>
     </div>
 
-    <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border border-base-300 shadow-sm">
+    <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-start gap-4">
         <div class="h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-lg shrink-0">
           <TrendingUp class="h-6 w-6" />
@@ -66,7 +66,7 @@ const total = conceptoCifras.reduce((sum, c) => sum + c.valor, 0);
             const year = event ? new Date(event.data.fecha).getFullYear() : cifra.fecha.getFullYear();
             const filename = cifra.eventId.split('/').pop() ?? cifra.eventId;
             return (
-              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-base-100 rounded-xl border border-base-300 shadow-sm hover:border-primary/50 transition-colors">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 p-4 bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] transition-[box-shadow,border-color] duration-200 ease-out">
                 <div class="flex items-baseline gap-2">
                   <span class="text-xl font-extrabold text-primary font-mono">
                     {cifra.raw}

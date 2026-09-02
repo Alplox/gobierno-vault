@@ -149,6 +149,8 @@ const cifras = defineCollection({
   schema: z.object({
     nombre: z.string(),
     unidad_default: z.string(),
+    aliases: z.array(z.string()).optional(),
+    fuente_oficial: z.preprocess((v) => (typeof v === 'string' ? v : undefined), z.string().optional()),
     notas: z.string().optional(),
   }),
 });

@@ -168,19 +168,19 @@ function statsGobierno(
   </div>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
-    <div class="bg-base-100 rounded-xl border border-base-300 shadow-sm p-4">
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
       <p class="text-2xl font-bold text-base-content">{carterasConTitular.length}<span class="text-base-content/40 text-base font-medium">/{cabinet.length}</span></p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Carteras con titular</p>
     </div>
-    <div class="bg-base-100 rounded-xl border border-base-300 shadow-sm p-4">
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
       <p class="text-2xl font-bold text-base-content">{ministrosVigentes}</p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Titulares en ejercicio</p>
     </div>
-    <div class="bg-base-100 rounded-xl border border-base-300 shadow-sm p-4">
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
       <p class="text-2xl font-bold text-base-content">{biministros}</p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Biministros</p>
     </div>
-    <div class="bg-base-100 rounded-xl border border-base-300 shadow-sm p-4">
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
       <p class="text-2xl font-bold text-base-content">{historicos}</p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Nombramientos históricos</p>
     </div>
@@ -195,7 +195,7 @@ function statsGobierno(
   <!-- VISTA 1: POR CARTERA (formato actual) -->
   <div id="gv-view-carteras" class="space-y-4" data-gv-panel="carteras">
     {cabinet.map((c) => (
-      <section class="bg-base-100 rounded-2xl border border-base-300 shadow-sm overflow-hidden">
+      <section class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] overflow-hidden">
         <header class="flex items-center justify-between gap-3 px-5 py-4 border-b border-base-300">
           <div class="min-w-0">
             <a href={`/organizations/${c.ministerioId}`} class="text-base font-bold text-base-content hover:text-primary transition-colors leading-snug">
@@ -291,7 +291,7 @@ function statsGobierno(
               }
             : {})}
         >
-          <div class="bg-base-100 rounded-2xl border border-base-300 shadow-sm overflow-hidden mb-6">
+          <div class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] overflow-hidden mb-6">
             <header class="px-5 py-4 border-b border-base-300 flex flex-wrap items-center justify-between gap-3">
               <div>
                 <h2 class="text-lg font-bold text-base-content">{g.gobierno.presidente}</h2>

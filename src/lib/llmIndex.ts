@@ -69,7 +69,7 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('- `[[people/id]]` → persona registrada en entities.yaml');
   lines.push('- `[[organizations/id]]` → organización o medio de prensa');
   lines.push('- `[[sources/id]]` → fuente de sources.yaml (medio, título, autor, fecha, URL)');
-  lines.push('- `[[cifra/concepto/valor/unidad]]` → cifra destacada');
+  lines.push('- `[[cifras/concepto/valor/unidad]]` → cifra destacada');
   lines.push('- `[[events/ID]]` o ID desnudo `20260101-1` → enlace a otro evento');
   lines.push('');
   lines.push('## Cifras');

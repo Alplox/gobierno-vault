@@ -29,7 +29,7 @@ const lazyData = lazyPeople.map((p) => ({
 
   <div id="people-index-root" class="grid gap-4 sm:grid-cols-2">
     {ssrPeople.map((person) => (
-        <a href={`/people/${person.id}`} class="group block border border-base-300 shadow-sm rounded-xl p-5 hover:border-primary/50 hover:shadow-md active:scale-[0.99] transition-all duration-200 bg-base-100">
+        <a href={`/people/${person.id}`} class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out">
           <div class="flex items-start gap-4">
             <div class="h-16 w-12 rounded-lg bg-base-200 flex items-center justify-center shrink-0">
               <Users class="h-5 w-5 text-base-content/40" />
@@ -47,7 +47,7 @@ const lazyData = lazyPeople.map((p) => ({
                 </p>
               )}
             </div>
-            <span class="ml-auto text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 mt-1">›</span>
+            <span class="ml-auto text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1">›</span>
           </div>
         </a>
     ))}

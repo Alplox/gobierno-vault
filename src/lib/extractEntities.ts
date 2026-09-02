@@ -4,7 +4,7 @@ import YAML from 'yaml';
 
 const eventsDir = join(process.cwd(), 'src', 'content', 'events');
 const wikiLinkPattern = /\[\[(sources?|people|person|organizations?|org)\/([A-Za-z0-9_.-]+)\]\]/g;
-const cifraPattern = /\[\[cifras?\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
+const cifraPattern = /\[\[cifras\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
 
 export type CifraEntry = {
   concepto: string;

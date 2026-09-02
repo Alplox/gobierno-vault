@@ -20,7 +20,7 @@ Base de conocimiento estática sobre eventos de gobierno en Chile. Astro 7 + Tai
 - SSG Astro con `ClientRouter`, prefetch y transiciones.
 - Contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` con validación de frontmatter y wikilinks.
 - Contenido en `src/content/people|organizations|topics|sources|cifras/*.md` (markdown puro, Obsidian, sin YAML monolito) + `src/data/` solo `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml`.
-- Wikilinks `[[people/id]]` `[[organizations/id]]` `[[sources/id]]` `[[cifra/...]]` `[[events/...]]` con plugin `remarkWikiLinks`.
+- Wikilinks `[[people/id]]` `[[organizations/id]]` `[[sources/id]]` `[[cifras/...]]` `[[events/...]]` con plugin `remarkWikiLinks`.
 - Timeline lazy, rail temporal, grafo de relaciones y TTS (Piper) en cliente.
 - Catálogo local de prensa en `sitemaps/` (JSONL por medio/año, no commiteado) para búsquedas sin tocar la red.
 
@@ -137,7 +137,7 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 **Total de eventos:** 1231
 
-**Cobertura de fuentes:** 0 de 1231 eventos con 3+ fuentes (1231 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 767 de 1231 eventos con 3+ fuentes (464 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
 - 2026: 935
@@ -188,8 +188,8 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 **Entidades registradas:**
 - Personas: 2107
 - Organizaciones: 1052
-- Cifras: 1091
-- Fuentes: 4721
+- Cifras: 26
+- Fuentes: 4729
 - Temas: 75
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 

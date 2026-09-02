@@ -167,8 +167,8 @@ function cifraNode(concepto, raw, unidad) {
   };
 }
 
-// Solo wikilinks explícitos [[people|organizations|sources|cifra|events/...]] — no hay auto-enlace de IDs desnudos (no es markdown puro).
-const WIKILINK_OR_EVENT = /\[\[(sources?|people|person|organizations?|org|cifras?|cifra|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
+// Solo wikilinks explícitos [[people|organizations|sources|cifras|events/...]] — no hay auto-enlace de IDs desnudos (no es markdown puro).
+const WIKILINK_OR_EVENT = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
 
 export default function remarkWikiLinks() {
   const sources = loadSources();
