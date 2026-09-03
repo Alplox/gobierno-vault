@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (464)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (463)
 
 <details>
-<summary>Ver lista (464 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (463 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -361,7 +361,6 @@
 - [2026/07/20260721-1 - Seremi de Culturas de Los Lagos Eduardo Leiva renuncia por motivos personales](src/content/events/2026/07/20260721-1.md) — **2 fuentes**
 - [2026/07/20260721-4 - Castillo (PC) anuncia Comisión Investigadora por respuesta tardía al sistema frontal](src/content/events/2026/07/20260721-4.md) — **2 fuentes**
 - [2026/07/20260721-9 - Contrapoder revela que David Barchiesi, hermano de la diputada Chiara Barchiesi y exconsejero constitucional, fue contratado por la Presidencia por $6,5 millones para revisar los discursos de Kast](src/content/events/2026/07/20260721-9.md) — **2 fuentes**
-- [2026/07/20260723-11 - Kast acepta renuncia del subsecretario de Hacienda Juan Pablo Rodríguez tras test de drogas positivo](src/content/events/2026/07/20260723-11.md) — **2 fuentes**
 - [2026/07/20260723-2 - Senado aplaza votacion de megarreforma ante riesgo de rechazo](src/content/events/2026/07/20260723-2.md) — **2 fuentes**
 - [2026/07/20260723-3 - Camara aprueba proyecto que regula deepfakes con multas hasta $716 millones](src/content/events/2026/07/20260723-3.md) — **2 fuentes**
 - [2026/07/20260724-12 - Trump impone arancel del 12,5% a Chile bajo Sección 301: afecta salmón, fruta, vino y madera](src/content/events/2026/07/20260724-12.md) — **2 fuentes**
@@ -547,11 +546,13 @@
 - [2026/03/20260311-5 - "Un país más pobre, pero más feliz": la frase del diputado Álvaro Carter que descolocó a Daniel Matamala en el día del cambio de mando](src/content/events/2026/03/20260311-5.md) — 3 fuentes
 - [2026/03/20260311-6 - Primera noche del gobierno: turba hiere a un carabinero en la Alameda y atacan el auto del subsecretario Patricio Torres en Plaza Italia](src/content/events/2026/03/20260311-6.md) — 9 fuentes
 - [2026/03/20260311-7 - Boric entrega a Kast una carta privada en pleno cambio de mando; ambos mantienen su contenido en reserva](src/content/events/2026/03/20260311-7.md) — 10 fuentes
+- [2026/03/20260311-8 - Cóctel de mil invitados en La Moneda y banquete en Cerro Castillo: contrataciones del cambio de mando](src/content/events/2026/03/20260311-8.md) — 7 fuentes
 - [2026/03/20260312-1 - Kast anuncia que utilizará la facultad de indulto para uniformados condenados por el estallido social](src/content/events/2026/03/20260312-1.md) — 7 fuentes
 - [2026/03/20260312-2 - Hallan a Rodrigo Rojas Vade maniatado, golpeado y rociado con acelerante en la Ruta 78, con mensajes políticos rayados en los brazos](src/content/events/2026/03/20260312-2.md) — 18 fuentes
 - [2026/03/20260312-3 - María Corina Machado pide a Chile ayudar a los venezolanos a 'volver a su país'; Kast responde que 'se entra por la puerta, no por la ventana'](src/content/events/2026/03/20260312-3.md) — 7 fuentes
 - [2026/03/20260312-4 - Ministra Arzola advierte un déficit en subvenciones escolares de ~$250 mil millones según la administración saliente: 'el presupuesto de educación ya se recortó'](src/content/events/2026/03/20260312-4.md) — 6 fuentes
 - [2026/03/20260313-1 - Trascendido: capitán Faúndez, condenado por la muerte de Romario Veloz, sería el primer indultado del gobierno de Kast](src/content/events/2026/03/20260313-1.md) — 3 fuentes
+- [2026/03/20260313-2 - Orden de $160 millones en frutas y verduras para La Moneda tensiona el discurso de austeridad](src/content/events/2026/03/20260313-2.md) — 5 fuentes
 - [2026/03/20260315-1 - Ministro Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'](src/content/events/2026/03/20260315-1.md) — 3 fuentes
 - [2026/03/20260316-1 - Inauguracion del Escudo Fronterizo en Chacalluta y orden de construir zanja](src/content/events/2026/03/20260316-1.md) — 7 fuentes
 - [2026/03/20260317-1 - Senador Macaya comparte imagen generada con IA que muestra avances falsos de la zanja fronteriza](src/content/events/2026/03/20260317-1.md) — 5 fuentes
@@ -742,6 +743,7 @@
 - [2026/07/20260720-2 - Municipalidad de Santiago elimina fotos de tercera muerte de persona sin techo durante el temporal](src/content/events/2026/07/20260720-2.md) — 6 fuentes
 - [2026/07/20260720-3 - Gobierno confirma proyecto para modernizar el INDH](src/content/events/2026/07/20260720-3.md) — 5 fuentes
 - [2026/07/20260720-4 - Estudio CORPA revela alza de victimización y delitos en transporte público en Santiago: 'La capital está menos segura'](src/content/events/2026/07/20260720-4.md) — 3 fuentes
+- [2026/07/20260720-5 - Viralizan orden de compra de $76,5 millones en carne de Presidencia](src/content/events/2026/07/20260720-5.md) — 15 fuentes
 - [2026/07/20260721-1 - Seremi de Culturas de Los Lagos Eduardo Leiva renuncia por motivos personales](src/content/events/2026/07/20260721-1.md) — 2 fuentes
 - [2026/07/20260721-10 - Colegio Médico exige reingresar los decretos de calidad del aire MP2,5 y de termoeléctricas retirados de Contraloría](src/content/events/2026/07/20260721-10.md) — 6 fuentes
 - [2026/07/20260721-2 - Foro Madrid anuncia que V Encuentro Regional se realizará en Santiago el 3 de septiembre](src/content/events/2026/07/20260721-2.md) — 7 fuentes
@@ -759,8 +761,7 @@
 - [2026/07/20260722-5 - Gobierno amplía Estado de Catástrofe a Tierra Amarilla](src/content/events/2026/07/20260722-5.md) — 3 fuentes
 - [2026/07/20260722-6 - Republicanos, UDI y libertarios presionan para cerrar el INDH, mientras RN apuesta por reformarlo](src/content/events/2026/07/20260722-6.md) — 4 fuentes
 - [2026/07/20260723-1 - Balance sistema frontal: 13 fallecidos, 61.557 aislados y 3.532 damnificados](src/content/events/2026/07/20260723-1.md) — 1 fuente
-- [2026/07/20260723-10 - Renuncia subsecretario de Hacienda Juan Pablo Rodriguez tras positivo en test de drogas](src/content/events/2026/07/20260723-10.md) — 12 fuentes
-- [2026/07/20260723-11 - Kast acepta renuncia del subsecretario de Hacienda Juan Pablo Rodríguez tras test de drogas positivo](src/content/events/2026/07/20260723-11.md) — 2 fuentes
+- [2026/07/20260723-10 - Renuncia subsecretario de Hacienda Juan Pablo Rodriguez tras positivo en test de drogas](src/content/events/2026/07/20260723-10.md) — 14 fuentes
 - [2026/07/20260723-12 - Megarreforma: compensación a municipios pone en jaque aprobación final](src/content/events/2026/07/20260723-12.md) — 5 fuentes
 - [2026/07/20260723-13 - Exsubsecretario de Hacienda renuncia tras test de drogas positivo: gobierno es criticado por renuncia 'apresurada'](src/content/events/2026/07/20260723-13.md) — 5 fuentes
 - [2026/07/20260723-14 - Balance sistema frontal: 13 fallecidos, 18 desaparecidos y 18.254 damnificados](src/content/events/2026/07/20260723-14.md) — 5 fuentes
@@ -1345,6 +1346,7 @@
 - [2026/08/20260820-21 - Squella y Longton anuncian indicaciones conjuntas al estado de excepción de seguridad: acuerdo del Congreso desde el inicio, revisión cada 30 días y dejar fuera las comunicaciones](src/content/events/2026/08/20260820-21.md) — 5 fuentes
 - [2026/08/20260820-22 - Organizaciones piden a la CIDH exigir explicaciones a Chile por el decreto que habilita data centers sin evaluación ambiental](src/content/events/2026/08/20260820-22.md) — 4 fuentes
 - [2026/08/20260820-23 - El auge y caída de la idea de plebiscitar la reforma de seguridad: Squella la abre, se reporta que La Moneda la estudia y el gobierno la desmiente horas después](src/content/events/2026/08/20260820-23.md) — 8 fuentes
+- [2026/08/20260820-24 - Gremios camioneros no descartan paralización ante el alza del diésel de $97 y exigen volver al esquema anterior del MEPCO](src/content/events/2026/08/20260820-24.md) — 8 fuentes
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 13 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
 - [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — 1 fuente
@@ -1415,8 +1417,11 @@
 - [2026/08/20260831-1 - Jefe de la Armada argentina reconoce que el Estrecho de Magallanes pertenece a Chile y contrasta con dichos de su par de la Fuerza Aérea](src/content/events/2026/08/20260831-1.md) — 6 fuentes
 - [2026/08/20260831-2 - Ministro de Seguridad Martín Arrau niega vínculo con Cerimedo y explica que tendencias se instalaron con personas reales](src/content/events/2026/08/20260831-2.md) — 6 fuentes
 - [2026/08/20260831-3 - Oposición reúne 62 firmas para comisión investigadora por caso Cerimedo y apunta a contaminación digital de procesos electorales desde 2020](src/content/events/2026/08/20260831-3.md) — 5 fuentes
+- [2026/08/20260831-4 - Indagan robo de computadores al Conservador de Concón Carlos Swett, imputado en el caso cuota Flores](src/content/events/2026/08/20260831-4.md) — 5 fuentes
+- [2026/08/20260831-5 - Kast defiende en Cooperativa su asistencia al Foro Madrid ('¿Por qué no puedo ir?') en medio de críticas del oficialismo y la oposición](src/content/events/2026/08/20260831-5.md) — 8 fuentes
 - [2026/09/20260901-1 - Bancada PS presenta 'ley Cerimedo' para transparentar gasto electoral digital y detectar bots](src/content/events/2026/09/20260901-1.md) — 4 fuentes
 - [2026/09/20260901-2 - Diputado Bassa (FA) propone tipificar como delito el uso de redes de bots para manipular elecciones](src/content/events/2026/09/20260901-2.md) — 6 fuentes
+- [2026/09/20260901-3 - Gobierno pide la renuncia al seremi de Transportes de Arica Patricio Löhr por presiones a la DGAC en favor de su empresa](src/content/events/2026/09/20260901-3.md) — 5 fuentes
 - [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 6 fuentes
 
 ## 2025

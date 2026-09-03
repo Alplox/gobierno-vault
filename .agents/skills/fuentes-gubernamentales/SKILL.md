@@ -14,7 +14,7 @@ description: Fuentes gubernamentales directas antes que prensa reinterpretada (P
 
 1. **Identifica el dominio** del evento (Presidencia, ministerio sectorial, servicio, legislativo, remuneraciones, normativa). Ubica la fila en las tablas de abajo.
 2. **Intenta la fuente oficial primero** con `read_url` o `defuddle`/`pnpm run fetch-content` (ver `tools.md`). Si falla por WAF/JS (ej. `camara.cl` 403, `consultatransparencia.cl` caído), usa el mirror o la alternativa documentada en la fila.
-3. **Cita la URL oficial como fuente primaria** en `sources.yaml` con `medio:` exacto (ej. `Presidencia de la República`, `Biblioteca del Congreso`, `Senado de Chile`, `Cámara de Diputados`, `Ministerio de Salud`). Agrega la prensa como fuente secundaria (mínimo 5 fuentes totales, nunca red social sola).
+3. **Cita la URL oficial como fuente primaria** en `src/content/sources/*.md` con `medio:` exacto (ej. `Presidencia de la República`, `Biblioteca del Congreso`, `Senado de Chile`, `Cámara de Diputados`, `Ministerio de Salud`). Agrega la prensa como fuente secundaria (mínimo 5 fuentes totales, nunca red social sola).
 4. **Si la fuente oficial está caída o no tiene sitemap**, no la agregues al catálogo `sitemaps/` — es `fetch-on-demand` (ver `sitemaps.md` → “Sitios institucionales SIN sitemap”).
 5. **Para votaciones** (`tipo: votacion`) siempre cita la URL nominal concreta de Cámara/Senado además de prensa (ver “Poder Legislativo” abajo y `content-model.md`).
 

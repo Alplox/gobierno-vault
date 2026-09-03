@@ -37,7 +37,7 @@ sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
 | Temas | `src/content/topics/*.md` | `getTopicsRegistry()` |
 | Colectivos / Sectores | `src/data/colectivos.yaml` / `src/data/sectores.yaml` | array plano (excepción YAML) |
 
-`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy (defensivo, monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts`/`queries.ts` leen `.md` frontmatter directo, sin fallback (monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
 
 ## Checklist obligatorio antes de tocar `src/content/**` (`events`/`people`/`sources`/…)
 

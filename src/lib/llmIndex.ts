@@ -24,7 +24,7 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('# Gobierno Vault');
   lines.push('');
   lines.push('> Base de conocimiento estática sobre eventos de gobierno en Chile.');
-  lines.push('> Generada desde Astro (SSG) con contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` y registros YAML en `src/data/`.');
+  lines.push('> Generada desde Astro (SSG) con contenido en `src/content/events/YYYY/MM/YYYYMMDD-N.md` y registros en `src/content/people|organizations|sources|topics|cifras/*.md` + `src/data/` (colectivos/sectores/sueldos).');
   lines.push('> Idioma: español. Actualización: continua vía agentes de edición.');
   lines.push('');
   lines.push('## Navegación');
@@ -47,9 +47,9 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('');
   lines.push('Los registros de datos están disponibles como **YAML crudo**:');
   lines.push('');
-  lines.push(`- Personas, organizaciones y cifras: \`${SITE}/data/entities.yaml\``);
-  lines.push(`- Fuentes periodísticas: \`${SITE}/data/sources.yaml\``);
-  lines.push(`- Temas (taxonomía): \`${SITE}/data/topics.yaml\``);
+  lines.push(`- Personas, organizaciones y cifras: \`${SITE}/data/entities.yaml\` (reconstruido desde \`src/content/people|organizations|cifras/*.md\`)`);
+  lines.push(`- Fuentes periodísticas: \`${SITE}/data/sources.yaml\` (reconstruido desde \`src/content/sources/*.md\`)`);
+  lines.push(`- Temas (taxonomía): \`${SITE}/data/topics.yaml\` (reconstruido desde \`src/content/topics/*.md\`)`);
   lines.push(`- Colectivos afectados: \`${SITE}/data/colectivos.yaml\``);
   lines.push(`- Sectores: \`${SITE}/data/sectores.yaml\``);
   lines.push(`- Datos de la página /sueldos (montos, series y referencias): \`${SITE}/data/sueldos.yaml\``);
@@ -61,14 +61,14 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('```yaml');
   lines.push('titulo, fecha (ISO UTC), tipo (declaracion/accion/anuncio/decreto/proyecto/ley/');
   lines.push('votacion/fallo_judicial/entrevista/publicacion/documento/investigacion/reaccion/resultado),');
-  lines.push('tema (IDs de topics.yaml), etiquetas, impacto (colectivos/sectores), relaciones, creado, actualizado');
+  lines.push('tema (IDs de src/content/topics/*.md), etiquetas, impacto (colectivos/sectores), relaciones, creado, actualizado');
   lines.push('```');
   lines.push('');
   lines.push('En el body, los wikilinks tienen esta forma:');
   lines.push('');
-  lines.push('- `[[people/id]]` → persona registrada en entities.yaml');
+  lines.push('- `[[people/id]]` → persona registrada en src/content/people/*.md');
   lines.push('- `[[organizations/id]]` → organización o medio de prensa');
-  lines.push('- `[[sources/id]]` → fuente de sources.yaml (medio, título, autor, fecha, URL)');
+  lines.push('- `[[sources/id]]` → fuente de src/content/sources/*.md (medio, título, autor, fecha, URL)');
   lines.push('- `[[cifras/concepto/valor/unidad]]` → cifra destacada');
   lines.push('- `[[events/ID]]` o ID desnudo `20260101-1` → enlace a otro evento');
   lines.push('');
@@ -94,7 +94,7 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('Este vault es de **lectura factual**: cada evento cita fuentes inline con `[[sources/...]]`');
   lines.push('y no incluye notas de gestión. Las relaciones entre eventos (`relaciones` en el frontmatter)');
   lines.push('permiten reconstruir cadenas causales. Para citar un evento, referir el título y la URL de la');
-  lines.push('página; los datos verificables están en las fuentes (`[[sources/...]]` → sources.yaml → URL original).');
+  lines.push('página; los datos verificables están en las fuentes (`[[sources/...]]` → src/content/sources/*.md → URL original).');
   lines.push('');
 
   return lines.join('\n');

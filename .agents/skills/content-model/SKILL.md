@@ -205,7 +205,7 @@ svg_backup:
 | Colectivos | `src/data/colectivos.yaml` | array plano (excepción YAML) |
 | Sectores | `src/data/sectores.yaml` | array plano (excepción YAML) |
 
-`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy (defensivo). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada. Migración 2026-08: `src/data/entities.yaml` (32093L), `sources.yaml` (40065L), `topics.yaml` (471L) eliminados → markdown puro (conversores `scripts/migrate-*.mjs` eliminados).
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts`/`queries.ts` leen `.md` frontmatter directo, sin fallback YAML. `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada. Migración 2026-08: `src/data/entities.yaml` (32093L), `sources.yaml` (40065L), `topics.yaml` (471L) eliminados → markdown puro, sin fallback (conversores `scripts/migrate-*.mjs` eliminados).
 
 ## Patrones especiales
 

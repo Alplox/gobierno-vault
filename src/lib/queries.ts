@@ -128,11 +128,8 @@ function readCifrasFallback(): Record<string, CifraRegistryEntry> | null { try {
 export function getCifrasRegistry(): Record<string, CifraRegistryEntry> {
   if (!cifrasRegistryCache) {
     const md = readCifrasFallback();
-    if (md) cifrasRegistryCache = md;
-    else {
-      const entities = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8'));
-      cifrasRegistryCache = entities.cifras ?? {};
-    }
+    if (!md) throw new Error('src/content/cifras/*.md no encontrado o vacío');
+    cifrasRegistryCache = md;
   }
   return cifrasRegistryCache!;
 }

@@ -9,8 +9,8 @@
 //     desde raw.githubusercontent.com; `--source <dir>` fuerza copia local
 //     (o `--offline` usa el clone hermano `../awesome-chilean-rss` sin red).
 //   - `sitemaps/_manifest.json` (medios ya sincronizados en el catálogo).
-//   - `src/data/sources.yaml` (campo `medio:` de las fuentes ya usadas).
-//   - `src/data/entities.yaml` (orgs tipo medio_comunicacion/red_social/etc.).
+//   - `src/content/sources/*.md` (campo `medio:` de las fuentes ya usadas).
+//   - `src/content/organizations/*.md` (orgs tipo medio_comunicacion/red_social/etc.).
 //
 // Solo se listan categorías de prensa y afines (noticias, regional, gobierno,
 // radio, partidos, negocios, comunidad, medio ambiente, educación, salud,
@@ -187,45 +187,33 @@ async function main() {
     }
   }
 
-  // Medios usados en fuentes (campo `medio:` — lee markdown si existe, fallback yaml)
+  // Medios usados en fuentes (campo `medio:` de src/content/sources/*.md)
   let mediosSources = new Set();
-  try {
+  {
     const sourcesDir = join(ROOT, 'src', 'content', 'sources');
-    if (existsSync(sourcesDir)) {
-      for (const f of readdirSync(sourcesDir).filter(f=>f.endsWith('.md'))) {
-        const raw = readFileSync(join(sourcesDir, f), 'utf8');
-        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-        if (m) {
-          const d = YAML.parse(m[1]);
-          if (d?.medio) mediosSources.add(norm(String(d.medio).replace(/^["']|["']$/g, '')));
-        }
+    for (const f of readdirSync(sourcesDir).filter(f=>f.endsWith('.md'))) {
+      const raw = readFileSync(join(sourcesDir, f), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (m) {
+        const d = YAML.parse(m[1]);
+        if (d?.medio) mediosSources.add(norm(String(d.medio).replace(/^["']|["']$/g, '')));
       }
     }
-    if (mediosSources.size===0) throw new Error('empty');
-  } catch {
-    const sourcesYaml = readFileSync(join(ROOT, 'src/data/sources.yaml'), 'utf8');
-    for (const m of sourcesYaml.matchAll(/^\s+medio:\s*(.+)$/gm)) {
-      mediosSources.add(norm(m[1].replace(/^["']|["']$/g, '')));
-    }
+    if (mediosSources.size===0) throw new Error('src/content/sources/*.md sin medios');
   }
 
-  // Orgs de prensa (lee markdown si existe, fallback yaml)
+  // Orgs de prensa (src/content/organizations/*.md)
   let doc;
-  try {
+  {
     const orgDir = join(ROOT, 'src', 'content', 'organizations');
-    if (existsSync(orgDir)) {
-      const orgs = {};
-      for (const f of readdirSync(orgDir).filter(f=>f.endsWith('.md'))) {
-        const raw = readFileSync(join(orgDir, f), 'utf8');
-        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-        if (m) orgs[f.replace(/\.md$/,'')] = YAML.parse(m[1]);
-      }
-      if (Object.keys(orgs).length) doc = { organizations: orgs };
-      else throw new Error('empty');
-    } else throw new Error('no dir');
-  } catch {
-    const entitiesYaml = readFileSync(join(ROOT, 'src/data/entities.yaml'), 'utf8');
-    doc = YAML.parse(entitiesYaml);
+    const orgs = {};
+    for (const f of readdirSync(orgDir).filter(f=>f.endsWith('.md'))) {
+      const raw = readFileSync(join(orgDir, f), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (m) orgs[f.replace(/\.md$/,'')] = YAML.parse(m[1]);
+    }
+    if (!Object.keys(orgs).length) throw new Error('src/content/organizations/*.md vacío');
+    doc = { organizations: orgs };
   }
   const orgsPrensa = new Map(); // nombre normalizado -> { nombre, url? }
   for (const org of Object.values(doc.organizations || {})) {
@@ -267,10 +255,10 @@ async function main() {
       estado = 'sin_sitemap';
       detalle = SIN_SITEMAP[s.d];
     } else if (mediosSources.has(n) || orgsPrensa.has(n)) {
-      // 2) ¿Ya referenciado en sources.yaml o como org de prensa?
+      // 2) ¿Ya referenciado en src/content/sources/*.md o como org de prensa?
       estado = 'en_uso';
       const org = orgsPrensa.get(n);
-      detalle = mediosSources.has(n) ? 'referenciado en sources.yaml' : 'org de prensa en entities.yaml';
+      detalle = mediosSources.has(n) ? 'referenciado en src/content/sources/*.md' : 'org de prensa en src/content/organizations/*.md';
       if (org && org.notas) {
         const m = String(org.notas).match(/https?:\/\/[a-z0-9.\-]+\.[a-z]{2,}/i);
         if (m) detalle += ` (${dominio(m[0])})`;

@@ -1,7 +1,7 @@
 // Regla AGENTS.md n.º 8: toda mención de una persona en el body debe llevar su
 // wikilink [[people/id]] — no solo la primera aparición. Este módulo centraliza
 // la detección de menciones en prosa "reemplazables" (nombre completo o apellido
-// de una persona registrada en entities.yaml) para que scripts/validate.mjs
+// de una persona registrada en src/content/people/*.md) para que scripts/validate.mjs
 // (enforcement: error si queda alguna) y scripts/fix-prose-wikilinks.mjs
 // (limpieza del backlog) usen EXACTAMENTE la misma definición.
 //
@@ -230,12 +230,18 @@ export function findReplaceableMentions(body, peopleIndex) {
   return { mentions: selected, linkedIds };
 }
 
-// Carga las personas desde src/data/entities.yaml (helper para scripts CLI).
+// Carga las personas desde src/content/people/*.md (helper para scripts CLI).
 export function loadPeopleIndex() {
-  const entities = YAML.parse(
-    readFileSync(join(process.cwd(), 'src', 'data', 'entities.yaml'), 'utf8')
-  ) ?? {};
-  return buildPeopleIndex(entities.people ?? {});
+  const dir = join(process.cwd(), 'src', 'content', 'people');
+  const rec = {};
+  for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+    const id = f.replace(/\.md$/, '');
+    const raw = readFileSync(join(dir, f), 'utf8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (m) rec[id] = YAML.parse(m[1]);
+  }
+  if (!Object.keys(rec).length) throw new Error('src/content/people/*.md no encontrado o vacío');
+  return buildPeopleIndex(rec);
 }
 
 // Recorre los archivos .md de src/content/events (helper para scripts CLI).
