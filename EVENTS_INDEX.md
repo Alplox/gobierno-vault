@@ -535,7 +535,7 @@
 - [2026/03/20260303-1 - Quiebre en la transición: Kast suspende el traspaso de mando tras tensa reunión con Boric por el cable submarino chino](src/content/events/2026/03/20260303-1.md) — 5 fuentes
 - [2026/03/20260304-1 - Transparencia revela que Capredena pagó más de $121 millones en pensiones a Krassnoff, Iturriaga, Corbalán y Herrera en un año](src/content/events/2026/03/20260304-1.md) — 2 fuentes
 - [2026/03/20260305-1 - Contraloría detecta que Camila Vallejo usó el auto fiscal con fines político-partidistas; Segegob asegura que envió antecedentes para subsanar](src/content/events/2026/03/20260305-1.md) — 4 fuentes
-- [2026/03/20260307-1 - Kast participa en la cumbre Escudo de las Américas de Trump en Miami con acuerdo de coalición militar](src/content/events/2026/03/20260307-1.md) — 6 fuentes
+- [2026/03/20260307-1 - Kast participa en la cumbre Escudo de las Américas de Trump en Miami con acuerdo de coalición militar](src/content/events/2026/03/20260307-1.md) — 13 fuentes
 - [2026/03/20260308-1 - La Tercera publica análisis sobre cómo cambió el lenguaje del gobierno de Boric en cuatro años](src/content/events/2026/03/20260308-1.md) — 2 fuentes
 - [2026/03/20260309-1 - SERMIG Reporte 5: denuncias por paso no habilitado caen 48,3% desde el peak de 2021 y 33,8% en 2024](src/content/events/2026/03/20260309-1.md) — 3 fuentes
 - [2026/03/20260310-1 - Contrapoder revela que la gestión de Mario Desbordes en la Municipalidad de Santiago contrató a Fullclean, empresa de la familia de Claudio Crespo, por casi $3 mil millones](src/content/events/2026/03/20260310-1.md) — 2 fuentes
@@ -1300,7 +1300,7 @@
 - [2026/08/20260818-11 - Hackeo al Servicio Nacional de Migraciones envía correo masivo con imagen de Pinochet y bloquea trámites durante cuatro horas](src/content/events/2026/08/20260818-11.md) — 2 fuentes
 - [2026/08/20260818-12 - Minsal instruye a hospitales atender más pacientes por hora y Colegio Médico advierte que contempla tiempos incompatibles con una consulta de calidad](src/content/events/2026/08/20260818-12.md) — 1 fuente
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — 2 fuentes
-- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 38 fuentes
+- [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 45 fuentes
 - [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 5 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
 - [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
@@ -1407,12 +1407,17 @@
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
 - [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 10 fuentes
-- [2026/08/20260828-6 - Diputado PS Juan Santana denuncia a Cerimedo ante Fiscalía por granjas de bots y eventual financiamiento electoral; Fiscal Nacional deriva a fiscalía regional y Gobierno niega 'vínculo alguno' con Kast](src/content/events/2026/08/20260828-6.md) — 7 fuentes
+- [2026/08/20260828-6 - Diputado PS Juan Santana denuncia a Cerimedo ante Fiscalía por granjas de bots y eventual financiamiento electoral; Fiscal Nacional deriva a fiscalía regional y Gobierno niega 'vínculo alguno' con Kast](src/content/events/2026/08/20260828-6.md) — 8 fuentes
 - [2026/08/20260828-7 - Detienen a dos carabineros por homicidio de rapero Vegetal en Padre Las Casas y Fiscalía formaliza por obstrucción](src/content/events/2026/08/20260828-7.md) — 8 fuentes
 - [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 - [2026/08/20260830-1 - Republicanos responden a Blumel por “poblaciones”: “Este debate clasista y añejo no le hace bien a Chile” y “discurso cavernícola”](src/content/events/2026/08/20260830-1.md) — 6 fuentes
 - [2026/08/20260831-1 - Jefe de la Armada argentina reconoce que el Estrecho de Magallanes pertenece a Chile y contrasta con dichos de su par de la Fuerza Aérea](src/content/events/2026/08/20260831-1.md) — 6 fuentes
+- [2026/08/20260831-2 - Ministro de Seguridad Martín Arrau niega vínculo con Cerimedo y explica que tendencias se instalaron con personas reales](src/content/events/2026/08/20260831-2.md) — 6 fuentes
+- [2026/08/20260831-3 - Oposición reúne 62 firmas para comisión investigadora por caso Cerimedo y apunta a contaminación digital de procesos electorales desde 2020](src/content/events/2026/08/20260831-3.md) — 5 fuentes
+- [2026/09/20260901-1 - Bancada PS presenta 'ley Cerimedo' para transparentar gasto electoral digital y detectar bots](src/content/events/2026/09/20260901-1.md) — 4 fuentes
+- [2026/09/20260901-2 - Diputado Bassa (FA) propone tipificar como delito el uso de redes de bots para manipular elecciones](src/content/events/2026/09/20260901-2.md) — 6 fuentes
+- [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 6 fuentes
 
 ## 2025
 

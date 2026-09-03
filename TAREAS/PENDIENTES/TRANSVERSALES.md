@@ -65,6 +65,22 @@
 | Colusión del papel tissue (CMPC/SCA) como evento propio | 2014-2015 | publicacion | ⬜ (multa TDLC 2015; sin evidencia de participación de Quiroz — confirmado en `20260805-4`) |
 ---
 
+## Bolivia Instrumentalizada — serie El País Tarija (descubierto vía Cerimedo)
+
+> Serie de 8 reportajes (14-may-2026) documentada en [[sources/elpais-bo-2026-05-14-cerimedo-hombre-maga-paz]] (parte 2). La parte 2 ya integrada en `20260818-14`. Restan 7 partes con potencial relevancia transversal Chile-Bolivia si se verifica impacto chileno.
+
+| Parte | Título | Potencial vínculo Chile | Estado |
+| --- | --- | --- | --- |
+| 1 | Bolivia, el país que llegó quebrado a las urnas | Contexto económico que permitió captura — sin vínculo Chile directo | ⬜ revisar si cita modelo chileno |
+| 3 | Numen y Parscale: la máquina de ganar elecciones opera en Bolivia | **Alto** — misma consultora que operó en Chile (Numen SpA, Facilitadores, encuesta El Mercurio 2020) | ⬜ cotejar con `20260818-14` y `20220726-1` |
+| 4 | El litio de Bolivia: garantías, condiciones y disputas no elegidas | **Medio** — litio triángulo Chile-Bolivia-Argentina | ⬜ verificar si menciona Chile |
+| 5 | Starlink en Bolivia: ¿Conectividad o soberanía comprometida? (DS 5509) | **Alto** — DS 5509 autoriza Starlink, complementa DS 5515 ya verificado | ⬜ cruzar con Gaceta/El Deber |
+| 6 | HondurasGate: 37 audios, red cobra apoyo en compromisos de Estado | **Medio** — misma red en Honduras (Nasry Asfura) citada en `20260818-14` | ⬜ verificar |
+| 7 | Bolivia, Argentina y Honduras: misma consultora, mismo programa económico | **Alto** — manual compartido Chile 2020-2022 vs Bolivia 2025 | ⬜ prioridad |
+| 8 | Bolivia en la próxima década: escenarios posibles | Contexto prospectivo | ⬜ |
+
+Orígenes: <https://elpais.bo/reportajes/20260514_bolivia-el-pais-que-llego-quebrado-a-las-urnas.html> y siguientes `20260514_*` (ver lista en `elpais-bo-2026-05-14-cerimedo-hombre-maga-paz.md`). No crear eventos Bolivia-puros sin impacto Chile; si hay impacto, usar mínimo 5 fuentes (incluir Gaceta Oficial Bolivia + prensa boliviana + chilena para contraste). Reddit/Twitter/Facebook solo complementarios.
+
 ## Telegram — ArchivandoChile (análisis del scraper)
 
 ### Datos disponibles

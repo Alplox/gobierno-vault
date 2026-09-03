@@ -1,7 +1,7 @@
 ---
 tipo: prensa
 medio: Radio Universidad de Chile
-titulo: "A cuatro anos de su disolucion: Presidente Kast restituye gabinete de
+titulo: "A cuatro años de su disolucion: Presidente Kast restituye gabinete de
   la Primera Dama"
 autor: Diario UChile
 fecha: 2026-08-27

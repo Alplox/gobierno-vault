@@ -1,7 +1,7 @@
 ---
 tipo: prensa
 medio: Nostálgica
-titulo: Kast restituye el Gabinete de Primera Dama tras cuatro anos y formaliza
+titulo: Kast restituye el Gabinete de Primera Dama tras cuatro años y formaliza
   el equipo de Pia Adriasola
 autor: Nostálgica
 fecha: 2026-08-27
