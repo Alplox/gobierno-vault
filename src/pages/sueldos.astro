@@ -71,9 +71,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Sueldos del sector público y brecha salarial</h1>
       </div>
       <p class="text-base-content/60 text-sm">
-        Sueldo del Presidente por gobierno (serie histórica 2006–2030, del más reciente al más antiguo), sueldo mínimo
-        por gobierno, indicadores económicos de seguimiento (UTM, UF e inflación), asesores de confianza y contexto de
-        costo de vida. Todos los datos están verificados contra las fuentes listadas al final de la página.
+        Sueldo del Presidente, sueldo mínimo, indicadores (UTM, UF, IPC) y topes de asesores. Datos verificados con las fuentes al final.
       </p>
     </header>
 
@@ -83,8 +81,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">Sueldo bruto del Presidente por gobierno</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-3">
-        El 11 de marzo de 2026 entró en vigencia el nuevo sistema de remuneraciones para altas autoridades, fijado por la
-        Comisión para la Fijación de Remuneraciones (Ley 21.233), que ordena la escala salarial del sector público.
+        Desde el 11 de marzo de 2026 rige el nuevo sistema de la Comisión para la Fijación de Remuneraciones (Ley 21.233).
         Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales <SRef n={5} /><SRef n={9} /><SRef n={10} />.
       </p>
       <div class="grid gap-4 md:grid-cols-2">
@@ -111,11 +108,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         ))}
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        Serie histórica construida con fuentes oficiales de transparencia (Presidencia), prensa verificada y el registro
-        público de la Comisión para la Fijación de Remuneraciones. Los montos son la renta bruta mensualizada de cada
-        período; los cambios entre gobiernos reflejan reajustes anuales del sector público, la rebaja transitoria de 2020
-        (Ley 21.233) y el nuevo sistema de remuneraciones de 2026 (Resolución N°5 de 2024). Los valores nominales no son
-        directamente comparables entre períodos sin ajustar por IPC.
+        Montos brutos mensuales por período (Transparencia, prensa verificada y Comisión). No comparables entre años sin ajustar por IPC.
       </p>
     </section>
 
@@ -125,7 +118,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">¿Cuántos sueldos mínimos gana el Presidente?</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Razón entre la dieta presidencial y el ingreso mínimo mensual vigente (cálculo propio sobre datos verificados).
+        Dieta presidencial frente al ingreso mínimo vigente.
       </p>
       <div class="space-y-4">
         {ratios.map((r) => {
@@ -164,12 +157,8 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">Indicadores económicos por gobierno (seguimiento)</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        UTM y UF de enero del primer año de cada mandato (para Frei y Lagos: serie histórica del SII, valores
-        de enero de cada año <SRef n={50} /><SRef n={51} />), junto a la variación anual del IPC
-        (diciembre a diciembre, INE) del año de inicio y la inflación acumulada del período (cálculo propio sobre la
-        serie empalmada del Banco Central <SRef n={41} /> y la serie 1928–2009 del INE
-        <SRef n={49} />). La única deflación del período (IPC -1,4% en 2009)
-        fue corroborada por Cooperativa <SRef n={42} />.
+        UTM y UF de enero del primer año de cada mandato, IPC del año de inicio y acumulado del período (INE, Banco Central, SII
+        <SRef n={50} /><SRef n={51} /><SRef n={41} /><SRef n={49} />).
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -225,9 +214,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         })()}
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        La UTM y la UF reajustan mensualmente según la inflación (IPC del mes anterior), por lo que la serie refleja el
-        poder adquisitivo de cada período: en pesos de hoy, los sueldos históricos equivalen a montos muy superiores.
-        Para convertirlos puede usarse la calculadora de reajuste por IPC del INE <SRef n={32} />.
+        UTM y UF se reajustan por IPC. Para convertir montos históricos, ver la calculadora del INE <SRef n={32} />.
       </p>
     </section>
 
@@ -237,15 +224,11 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">Sueldo presidencial en pesos de hoy (ajustado por IPC)</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Cada dieta bruta convertida a pesos de <strong>julio de 2026</strong> (último dato disponible del índice IPC,
-        serie empalmada base diciembre 2023 = 100 <SRef n={45} />), usando el índice del mes al que
-        corresponde cada sueldo. Cálculo propio: <em>sueldo × (IPC jul-2026 ÷ IPC del mes)</em>. La serie muestra el
-        quiebre de la Ley 19.863 (2003) — que elevó la dieta presidencial del grado máximo de la EUS (Frei ~$1,36M;
-        Lagos ~2.440 USD en 2001 <SRef n={47} />) al 150% de ese grado (Lagos
-        $5.229.000 brutos en 2004 <SRef n={46} />) —, y luego la rebaja transitoria de 2020 (Ley 21.233) y
-        la re-fijación de 2026 (Resolución N°5 de 2024): en pesos de hoy, Frei ganaba ~${freiAjustadoMillones} millones; Lagos ~${lagosAjustadoMillones}
-        millones; los presidentes de 2006–2022, entre ${millonesRangoPrevios.min} y ${millonesRangoPrevios.max} millones brutos; Boric, la mitad (~${boricAjustadoMillones} millones) y
-        Kast, ~${kastAjustadoMillones} millones.
+        Dietas en pesos de <strong>julio de 2026</strong> (IPC: <em>sueldo × (IPC jul-2026 ÷ IPC del mes)</em> <SRef n={45} />).
+        Se ve el salto de la Ley 19.863 (2003) — del tope EUS (Frei ~$1,36M; Lagos ~2.440 USD en 2001 <SRef n={47} />) al 150% de ese grado (Lagos
+        $5.229.000 en 2004 <SRef n={46} />) —, la rebaja de 2020 (Ley 21.233) y la re-fijación de 2026: en pesos de hoy, Frei ~${freiAjustadoMillones} millones; Lagos ~${lagosAjustadoMillones}
+        millones; 2006–2022, entre ${millonesRangoPrevios.min} y ${millonesRangoPrevios.max} millones; Boric ~${boricAjustadoMillones} millones y
+        Kast ~${kastAjustadoMillones} millones.
       </p>
       <div class="space-y-4">
         {sueldosAjustados.map((s) => {
@@ -284,14 +267,10 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         })}
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        Escala relativa al máximo real ({formatCLP(maxAjustado)} en pesos de julio 2026). Para Kast se usa la dieta
-        fijada de $11.070.064 (marzo 2026); con el monto del Registro Público de mayo 2026 ($11.304.748) el equivalente
-        sería {formatCLP(registroMayoAjustado)}. Los valores nominales provienen de las fuentes de la sección anterior; el IPC mensual de la
-        serie empalmada del Banco Central <SRef n={45} />. La estimación de Frei se ancla en la
-        declaración de Lagos de enero de 2001 <SRef n={47} /> deflactada por IPC a marzo de 2000 (no
-        existe registro oficial publicado para 1994-2000). Resultado: la dieta real de Kast sigue siendo
-        <span class="font-medium">{pctInferiorKast}% inferior</span> al promedio real de los cuatro presidentes previos a Boric
-        (2006–2022: {formatCLP(promedioPrevios)}).
+        Escala según el máximo real ({formatCLP(maxAjustado)} en pesos de julio 2026). Para Kast se usa la dieta
+        fijada de $11.070.064 (con el Registro de mayo 2026 sería {formatCLP(registroMayoAjustado)}). Frei es estimado (sin
+        registro oficial 1994-2000 <SRef n={47} />). La dieta real de Kast es
+        <span class="font-medium">{pctInferiorKast}% inferior</span> al promedio real 2006–2022 ({formatCLP(promedioPrevios)}).
       </p>
     </section>
 
@@ -301,10 +280,8 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">Bruta mensual del Presidente, mes a mes (Registro Público 38 bis)</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Serie mensual de la remuneración bruta efectivamente reportada al Registro Público
-        (fuente única: CFR, leída el 23/08/2026; cubre desde enero de 2025). Los picos de Boric son los meses con pago del
-        bono por cumplimiento de metas ($10.046.124); marzo de 2026 es el mes proporcional de Kast (asunción el 11/03);
-        desde abril rige la dieta nueva. El salto febrero→abril 2026 es de +{saltoFebAbr}%.
+        Bruta mensual reportada al Registro Público (CFR, desde ene-2025). Picos de Boric = bono por metas ($10.046.124); marzo de 2026 es proporcional (asunción 11/03);
+        desde abril rige la dieta nueva. Salto febrero→abril 2026: +{saltoFebAbr}%.
       </p>
       <figure class="overflow-x-auto">
         <svg viewBox={`0 0 ${CH.W} ${CH.H}`} class="w-full min-w-[640px]" role="img" aria-labelledby="chart-tl-title chart-tl-desc">
@@ -356,11 +333,8 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         </figcaption>
       </figure>
       <p class="text-xs text-base-content/40 mt-3">
-        Bajo Boric la base fue $7.033.974 (constante durante todo el período registrado), con bono trimestral por
-        cumplimiento de metas que llevó la bruta a $10.046.124 en marzo, junio, septiembre y diciembre. La dieta nueva de
-        Kast ($11.070.064 fijados + adecuaciones reportadas) supera en +{saltoFebAbr}% la bruta sin bono de febrero de 2026 y
-        en ~13% incluso a los meses con bono. Junio 2026 subió $3.286 sobre mayo, sin explicación pública aún.
-        Fuente: <SRef n={28} />.
+        Base Boric $7.033.974, con bono trimestral a $10.046.124 (mar, jun, sep, dic). La dieta Kast supera en +{saltoFebAbr}% la base sin bono de feb-2026 y
+        en ~13% los meses con bono. Fuente: <SRef n={28} />.
       </p>
     </section>
 
@@ -370,8 +344,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">Sueldo mínimo (Ingreso Mínimo Mensual) por gobierno</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-3">
-        Monto bruto mensual para trabajadores entre 18 y 65 años, según las leyes de reajuste. Tabla resumida
-        (serie completa 1958–2027 en la fuente de Wikipedia <SRef n={1} />).
+        Bruto mensual (18–65 años) según leyes de reajuste (serie completa 1958–2027 <SRef n={1} />).
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -427,10 +400,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
           febrero de 2026 (ChileAtiende <SRef n={19} />), es decir, cerca del 45% de un sueldo mínimo.
         </p>
         <div class="p-3 rounded-lg bg-warning/15 border border-warning/40 text-base-content text-sm">
-          <strong>Nota de verificación:</strong> los montos puntuales en pesos de la canasta básica (INE) y de la canasta
-          familiar (FNE) para 2025–2026 no pudieron ser verificados en fuentes accesibles durante la elaboración de esta
-          página. Conforme a la regla del proyecto (no publicar datos no verificados ni inventados), se omiten valores
-          puntuales; las referencias oficiales para consulta figuran en la sección de fuentes.
+          <strong>Nota:</strong> no publicamos montos puntuales 2025–2026 de ambas canastas por falta de fuente verificable; ver fuentes oficiales abajo.
         </div>
       </div>
     </section>
@@ -540,19 +510,9 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
           decreto.
         </p>
         <p>
-          <strong>Marco legal de la serie histórica:</strong> hasta 2003 las remuneraciones de las autoridades se regían por
-          la Escala Única de Sueldos (DL 249/1974), actualizada cada año por las leyes de reajuste del sector público como la
-          Ley 19.007 de 1990 <SRef n={34} /> y la Ley 19.553 de 1998, que añadió la asignación de modernización
-          <SRef n={35} />. La Ley 19.863 (2003) fijó la renta del Presidente en el 150% del grado más
-          alto de la escala <SRef n={29} />; su historia fidedigna documenta la discusión del proyecto
-          <SRef n={37} />. La reforma constitucional de 2020 (Ley 21.233) creó el artículo 38 bis, ordenó una rebaja
-          transitoria de remuneraciones ejecutada por el Consejo de Alta Dirección Pública —10% para el Presidente, 25% para
-          parlamentarios y ministros— <SRef n={26} /><SRef n={30} /> y dispuso que una comisión autónoma fijara las dietas. La Comisión para la
-          Fijación de Remuneraciones definió el nuevo sistema en la Resolución N°5 de 2024, vigente desde marzo de 2026
-          <SRef n={31} />. El régimen de los ex Presidentes está regulado por la reforma constitucional de la Ley 19.672
-          <SRef n={36} />, y las remuneraciones parlamentarias del período pueden consultarse en el Informe de Transparencia del Senado
-          <SRef n={38} />. Para comparar montos históricos en pesos de hoy puede usarse la calculadora de reajuste por IPC del INE
-          <SRef n={32} />.
+          <strong>Marco legal:</strong> hasta 2003 regía la Escala Única (DL 249/1974) <SRef n={34} /><SRef n={35} />; la Ley 19.863 (2003) fijó la renta en el 150% del grado máximo <SRef n={29} /><SRef n={37} />.
+          La Ley 21.233 (2020) creó el art. 38 bis, rebajó transitoriamente las dietas —10% Presidente, 25% parlamentarios y ministros— <SRef n={26} /><SRef n={30} /> y creó la comisión que fijó el sistema vigente desde marzo de 2026
+          <SRef n={31} />. Ex Presidentes: Ley 19.672 <SRef n={36} />; parlamentarios: Senado <SRef n={38} />.
         </p>
         <p class="text-base-content/60 text-xs">
           Evento registrado: <a href="/events/2026/20260320-2" class="text-primary hover:underline">20260320-2</a>
@@ -568,9 +528,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({fuentes.length})</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Cada dato de esta página se respalda con al menos una fuente leída directamente (y donde fue posible, tres o más).
-        Los números <sup class="text-primary font-mono text-xs">[N]</sup> en el texto apuntan a estas referencias; los
-        enlaces a la derecha abren mirrors automáticos de cada artículo original.
+        Los números <sup class="text-primary font-mono text-xs">[N]</sup> apuntan a las fuentes; los enlaces abren copias espejo.
       </p>
       <ol class="space-y-3 text-sm">
         {fuentes.map((f, i) => (
