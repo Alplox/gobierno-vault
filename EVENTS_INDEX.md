@@ -1436,6 +1436,7 @@
 - [2026/08/20260831-5 - Kast defiende en Cooperativa su asistencia al Foro Madrid ('¿Por qué no puedo ir?') en medio de críticas del oficialismo y la oposición](src/content/events/2026/08/20260831-5.md) — 8 fuentes
 - [2026/08/20260831-6 - La Tercera revela los financistas de Porcel TV: Golborne, exministro de Pinochet y exasesor de Kaiser entre los nuevos socios](src/content/events/2026/08/20260831-6.md) — 5 fuentes
 - [2026/08/20260831-7 - IPI cae 5,1% en julio por minería y manufacturas y analistas piden al Gobierno aterrizar la meta de crecimiento de 4%](src/content/events/2026/08/20260831-7.md) — 15 fuentes
+- [2026/08/20260831-8 - Alcalde Agustín Iglesias responde a Axel Kaiser en X por migración: 'Tu único acercamiento al fenómeno es el delivery'](src/content/events/2026/08/20260831-8.md) — 5 fuentes
 - [2026/09/20260901-1 - Bancada PS presenta 'ley Cerimedo' para transparentar gasto electoral digital y detectar bots](src/content/events/2026/09/20260901-1.md) — 4 fuentes
 - [2026/09/20260901-2 - Diputado Bassa (FA) propone tipificar como delito el uso de redes de bots para manipular elecciones](src/content/events/2026/09/20260901-2.md) — 6 fuentes
 - [2026/09/20260901-3 - Gobierno pide la renuncia al seremi de Transportes de Arica Patricio Löhr por presiones a la DGAC en favor de su empresa](src/content/events/2026/09/20260901-3.md) — 5 fuentes
@@ -1455,12 +1456,12 @@
 - [2026/09/20260902-9 - Hacienda pide la renuncia a la directora nacional de Aduanas Alejandra Arriaza tras informe de Contraloría con 25 contenedores sin aforo](src/content/events/2026/09/20260902-9.md) — 5 fuentes
 - [2026/09/20260903-1 - Gonzalo Durán (Fundación Sol) en Radio Futuro: tasa real de desempleo llegaría a 13,5% y casi la mitad de los desocupados tiene educación superior](src/content/events/2026/09/20260903-1.md) — 6 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 9 fuentes
-- [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 16 fuentes
-- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 16 fuentes
+- [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 23 fuentes
+- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 17 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 8 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 10 fuentes
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
-- [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 10 fuentes
+- [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 11 fuentes
 
 ## 2025
 
