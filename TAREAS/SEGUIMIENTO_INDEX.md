@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 313
+**Total tareas:** 317
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 230 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 234 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 286 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 290 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -296,6 +296,10 @@
 | S-2026-206 | ⬜ | 2026-08-29 | Homicidio Renca — seguimiento judicial | Homicidio cabo Alejandro Ortiz Vasquez (Renca 27-ago-2026): desenlace judicial del detenido y busqueda de coautores — formalizacion, cautelares, identificacion de banda, recuperacion arma y vehiculo quemado Quilicura | `20260827-5` | Origen: <https://cooperativa.cl/noticias/pais/policial/homicidios/carabinero-de-franco-fue-asesinado-en-la-comuna-de-renca/2026-08-27/203359.html> |
 | S-2026-207 | ⬜ | 2026-08-29 | Homicidio Renca — banda El Perejil | Banda El Perejil (Renca): verificar si el OS9/ECOH acredita patron serial de citaciones por Marketplace en Miraflores/21 de Mayo — al menos 2 casos previos senalados por vecinos, vehiculo quemado Aeropuerto/Central y heridos SAR Renca | `20260827-5` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/28/carabinero-asesinado-en-renca-nuevo-antecedente-revela-motivo-de-victima-para-ir-al-lugar-de-crimen.shtml> |
 | S-2026-211 | ⬜ | 2026-09-03 | Sernac — oficio Gazmuri a Contraloría | Respuesta de Contraloría al oficio de Gazmuri por sueldo de Herrera + resolución del sumario Ley Karin | `20260901-6` | Origen: <https://www.adnradio.cl/2026/09/01/ofician-al-sernac-director-suspendido-hace-un-ano-por-casos-de-ley-karin-sigue-cobrando-un-sueldo-que-supera-los-8-millones/> |
+| S-2026-212 | ⬜ | 2026-09-04 | Villarrica — denuncia Carter explotación sexual | Desenlace investigación de oficio por denuncia de Carter: hogar identificado, denuncia formal, diligencias Brisex PDI, formalizaciones | `20260902-6` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2026/09/02/senador-carter-en-villarrica-ninas-son-explotadas-sexualmente-por-gente-con-alto-poder-adquisitivo.shtml> |
+| S-2026-213 | ⬜ | 2026-09-04 | Visita Judd Los Cóndores / F-16 (evento `20260902-8`) | Respuesta oficial FACh/Gobierno sobre autorización y propósito de la visita + eventual escalada de Oliva (oficio, Contraloría) | `20260902-8` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/09/02/iquique-concejal-pide-explicar-vuelo-de-embajador-de-eeuu-en-un-f-16-a-bases-militares-estrategicas.shtml> |
+| S-2026-214 | ⬜ | 2026-09-04 | Aduanas — salida Arriaza (evento `20260902-9`) | Nombramiento del titular (concurso ADP) + resultado de sumarios del Informe Final N°599 de Contraloría | `20260902-9` | Origen: <https://www.cooperativa.cl/noticias/pais/organismos-del-estado/contraloria/hacienda-le-pidio-la-renuncia-a-la-directora-de-aduanas-tras-critico/2026-09-03/095000.html> |
+| S-2026-215 | ⬜ | 2026-09-04 | Seguro cesantía — giros adicionales (evento `20260903-7`) | Próximo reporte INE de desempleo — eventual nueva activación de giros si supera en 1 punto el promedio de 4 años | `20260903-7` | Origen: <https://www.spensiones.cl/portal/institucional/594/w3-article-17135.html> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

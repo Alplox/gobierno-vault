@@ -193,6 +193,29 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 
+### Descubrimiento online con Google News RSS (`news-search`)
+
+Cuando el catálogo no cubre lo buscado (tema muy reciente, medio sin sitemap o
+catálogo desactualizado), el paso siguiente NO es el websearch genérico sino
+`pnpm run news-search -- "<query>"` (`scripts/sitemaps/news-search.mjs`): consulta
+el RSS de Google News (`hl=es-419&gl=CL`, sin API key) y devuelve título + medio +
+fecha por ítem, resolviendo la URL original contra el catálogo por coincidencia
+de título. Lo ya presente en el vault se oculta (dedupe por URL y por título).
+
+```bash
+pnpm run news-search -- "Democracia Siempre" --since 2026-08-30
+pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
+# flags: --since YYYY-MM-DD · --medio <subcadena> · --limit N · --all · --json
+```
+
+- Los ítems resueltos traen la URL del artículo lista para `fetch-content`/`add-source`.
+- Los `[SIN RESOLVER]` (medio fuera del catálogo o JSONL desactualizado) traen el
+  comando sugerido (`add-source -- --search "<título>" [--medio <slug>]).
+- Límites conocidos (verificados sep-2026): los links `rss/articles/CBMi...` van
+  cifrados (doble base64 → ruido, no decodificables en local) y GDELT no responde
+  desde esta red — por eso la resolución es por título, no por link. El RSS no
+  trae cuerpos: después sigue la cadena `fetch-content` habitual.
+
 ### Sitios institucionales SIN sitemap utilizable (verificado 21-ago-2026)
 
 No se pueden agregar al catálogo (no exponen XML sitemap); usar fetch directo/defuddle bajo demanda:

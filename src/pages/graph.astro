@@ -1,12 +1,29 @@
 ---
 import Base from '../layouts/Base.astro';
 import EventGraph from '../components/EventGraph.astro';
-import { getAllEvents } from '../lib/queries';
-import { buildConnectionIndex } from '../lib/relations';
+import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, getTopicsMap, getPeopleMap, getOrgsMap } from '../lib/queries';
+import { buildConnectionIndex, eventYearFromDate } from '../lib/relations';
+import { TIPO_LABELS } from '../lib/eventTypes';
 import { ArrowLeft, GitFork } from 'lucide-astro';
 
 const events = await getAllEvents();
 const connectionIndex = buildConnectionIndex(events);
+
+const [topicIds, personIds, orgIds, topicsMap, peopleMap, orgsMap] = await Promise.all([
+  getUniqueTopics(),
+  getUniquePeople(),
+  getUniqueOrgs(),
+  getTopicsMap(),
+  getPeopleMap(),
+  getOrgsMap(),
+]);
+const filters = {
+  topics: topicIds.map((id) => ({ id, label: topicsMap.get(id) ?? id })),
+  people: personIds.map((id) => ({ id, label: peopleMap.get(id) ?? id })),
+  orgs: orgIds.map((id) => ({ id, label: orgsMap.get(id) ?? id })),
+  tipos: Object.entries(TIPO_LABELS).map(([id, label]) => ({ id, label })),
+  years: [...new Set(events.map((e) => eventYearFromDate(e.data.fecha)))].sort((a, b) => b - a),
+};
 ---
 
 <Base title="Grafo de Relaciones">
@@ -24,7 +41,7 @@ const connectionIndex = buildConnectionIndex(events);
       </div>
       <p class="text-base-content/60 text-sm">Visualización de conexiones entre eventos del vault.</p>
     </div>
-    <EventGraph events={events} connectionIndex={connectionIndex} size="full" />
+    <EventGraph events={events} connectionIndex={connectionIndex} size="full" filters={filters} />
   </article>
   <script>
     import '../scripts/force-graph.js';

@@ -1,12 +1,5 @@
 ---
-nombre: Jeannette Jara Román
-cargo: Exministra del Trabajo y excandidata presidencial (Unidad por Chile)
-cargos:
-  - cargo: Ministra del Trabajo y Previsión Social
-    organizacion: ministerio_trabajo
-    desde: 2022-03-11
-    hasta: 2025-04-07
-notas: Candidata oficialista en la segunda vuelta presidencial 2025. Obtuvo
-  41,84% de los votos. Ganó las primarias de Unidad por Chile el 29 de junio de
-  2025 con 60,16%.
+nombre: Jeannette Jara
+cargo: Excandidata presidencial
+notas: Excandidata presidencial. En septiembre de 2026 llamó al presidente Kast a no asistir al Foro Madrid —"un foro fanático, dogmático, como es el de la ultraderecha"— y a concentrarse en los problemas nacionales.
 ---
