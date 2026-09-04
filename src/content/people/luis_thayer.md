@@ -8,5 +8,7 @@ cargos:
 notas: Exdirector del Sermig; cuestionó en agosto de 2026 la nueva metodología
   de conteo de ingresos irregulares del gobierno de Kast ('introducir una nueva
   cifra para mostrar eventualmente un mejor resultado es una práctica que yo
-  encuentro que es poco transparente').
+  encuentro que es poco transparente'). El 14-ago-2026 renunció a su militancia
+  en el Frente Amplio acusando falta de respaldo público ante la crisis de los
+  niños haitianos (evento 20260820-25).
 ---

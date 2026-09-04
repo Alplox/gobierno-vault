@@ -666,6 +666,7 @@
 - [2026/06/20260602-5 - VerificaUDP califica de 'engañoso' que Chile deba 'volver a ser el país más seguro de Latinoamérica'](src/content/events/2026/06/20260602-5.md) — 1 fuente
 - [2026/06/20260603-1 - Miles de estudiantes marchan contra los recortes a la educación de Kast y la represión policial deja una joven con múltiples fracturas en el rostro](src/content/events/2026/06/20260603-1.md) — 3 fuentes
 - [2026/06/20260603-2 - Proyecto de electromovilidad para Osorno queda en duda por reajuste presupuestario en Transportes; senadores y Concejo Municipal critican la falta de claridad del gobierno](src/content/events/2026/06/20260603-2.md) — 5 fuentes
+- [2026/06/20260604-1 - Quiroz anuncia que Hacienda prepara un proyecto propio sobre secreto bancario con alzamiento solo por vía judicial](src/content/events/2026/06/20260604-1.md) — 5 fuentes
 - [2026/06/20260607-1 - Operación Tokio: la Fiscalía Sur desarticula la red de lavado de dinero del Tren de Aragua; 17 formalizados y 14 en prisión preventiva](src/content/events/2026/06/20260607-1.md) — 7 fuentes
 - [2026/06/20260608-1 - Presidencia confirma reunión de Kast con Peter Thiel en La Moneda y se niega a transparentar el contenido](src/content/events/2026/06/20260608-1.md) — 8 fuentes
 - [2026/06/20260608-2 - Kast respalda embargos a deudores del CAE y afirma que tuvieron oportunidades de ponerse al día](src/content/events/2026/06/20260608-2.md) — 4 fuentes
@@ -673,6 +674,7 @@
 - [2026/06/20260608-4 - Republicanos y libertarios formalizan acusación constitucional contra el exministro Nicolás Grau por el IFP4T25](src/content/events/2026/06/20260608-4.md) — 4 fuentes
 - [2026/06/20260609-1 - Senado despacha a comisión mixta la reforma política impulsada por Elizalde](src/content/events/2026/06/20260609-1.md) — 3 fuentes
 - [2026/06/20260609-2 - De prometer US$6.000M de recorte a pedir US$6.200M de deuda: la tensión fiscal del primer semestre de Kast](src/content/events/2026/06/20260609-2.md) — 6 fuentes
+- [2026/06/20260609-3 - Tercer empate 24-24 en el Senado sepulta el alzamiento administrativo del secreto bancario y el proyecto va a comisión mixta](src/content/events/2026/06/20260609-3.md) — 5 fuentes
 - [2026/06/20260610-1 - Primera encuesta CEP bajo Kast: 52% de desaprobación](src/content/events/2026/06/20260610-1.md) — 4 fuentes
 - [2026/06/20260610-2 - Cataldo reconoce que promesa de condonación del CAE de Boric pudo influir en la morosidad](src/content/events/2026/06/20260610-2.md) — 2 fuentes
 - [2026/06/20260610-3 - Hacienda proyecta crecimiento de 3% para 2027-2028 y 3,5% hacia 2030, bajo la meta de 4% del gobierno de Kast](src/content/events/2026/06/20260610-3.md) — 3 fuentes
@@ -684,6 +686,7 @@
 - [2026/06/20260615-2 - Kast presenta indicaciones a Sala Cuna Universal y advierte meses difíciles para el empleo](src/content/events/2026/06/20260615-2.md) — 7 fuentes
 - [2026/06/20260615-3 - Jefa de gabinete de Kast y sus hermanos obtuvieron subsidios habitacionales de clase media pese a patrimonio inmobiliario familiar](src/content/events/2026/06/20260615-3.md) — 4 fuentes
 - [2026/06/20260615-4 - Fiscalía y querellantes presentan recurso de nulidad contra la absolución de Claudio Crespo en el caso Gatica](src/content/events/2026/06/20260615-4.md) — 1 fuente
+- [2026/06/20260615-5 - Reportaje revela 64 niños haitianos inubicables y Fiscalía abre investigación por vuelos chárter de reunificación familiar](src/content/events/2026/06/20260615-5.md) — 5 fuentes
 - [2026/06/20260616-1 - Descubren puente clandestino que cruza la zanja fronteriza en Colchane](src/content/events/2026/06/20260616-1.md) — 1 fuente
 - [2026/06/20260616-2 - Seremi de Desarrollo Social de Aysén asume como subsecretaria de la Mujer](src/content/events/2026/06/20260616-2.md) — 4 fuentes
 - [2026/06/20260616-3 - Mario Marcel respalda indicaciones del Gobierno a Sala Cuna Universal y llama a la oposición a aprobar la reforma](src/content/events/2026/06/20260616-3.md) — 2 fuentes
@@ -695,12 +698,16 @@
 - [2026/06/20260618-2 - AP: Los 100 días de Kast — el foco en la economía desplaza la lucha contra el delito](src/content/events/2026/06/20260618-2.md) — 2 fuentes
 - [2026/06/20260618-3 - Ministro del Trabajo confirma que el Gobierno evalúa una indemnización laboral a todo evento](src/content/events/2026/06/20260618-3.md) — 4 fuentes
 - [2026/06/20260618-4 - Investigación de Contrapoder revela que Ecomac, ligada al biministro Daniel Mas, mantiene dos proyectos habitacionales vigentes con el MINVU de Coquimbo por casi $25 mil millones](src/content/events/2026/06/20260618-4.md) — 2 fuentes
+- [2026/06/20260618-5 - Estación Central encuentra a 7 niños haitianos hacinados con tutor y la PDI ubica a otros 25](src/content/events/2026/06/20260618-5.md) — 6 fuentes
 - [2026/06/20260619-1 - Aprueban la instalación del cable submarino Humboldt de Google que unirá Chile con Asia-Pacífico](src/content/events/2026/06/20260619-1.md) — 1 fuente
+- [2026/06/20260619-2 - Gobierno confirma hallazgo de 33 de 64 niños haitianos alertados por Contraloría](src/content/events/2026/06/20260619-2.md) — 6 fuentes
 - [2026/06/20260620-1 - Suboficial mayor Nelty Álvarez interpone tutela laboral contra general de Carabineros de Magallanes y denuncia desprotección de la ministra de la Mujer](src/content/events/2026/06/20260620-1.md) — 6 fuentes
 - [2026/06/20260622-1 - Carabineros da de baja a cabo que usó una patrulla para comprar en Máfil: video viral, sumario administrativo y derivación a la justicia](src/content/events/2026/06/20260622-1.md) — 3 fuentes
 - [2026/06/20260622-2 - Consejo Fiscal Autónomo concluye que el IFP4T25 no tiene errores aritméticos, desmintiendo al ministro Quiroz](src/content/events/2026/06/20260622-2.md) — 3 fuentes
+- [2026/06/20260622-3 - PDI ubica a 52 de 64 niños haitianos el 22 de junio y completa los 64 el 23 de junio](src/content/events/2026/06/20260622-3.md) — 14 fuentes
 - [2026/06/20260623-1 - Comisión de Evaluación Ambiental aprueba proyecto Alto Santorini en dunas de Concón](src/content/events/2026/06/20260623-1.md) — 2 fuentes
 - [2026/06/20260624-1 - Senado aprueba por el minimo idea de legislar megarreforma](src/content/events/2026/06/20260624-1.md) — 3 fuentes
+- [2026/06/20260624-2 - Contraloría determina que Migraciones actuó ilegalmente en ingreso de niños haitianos y Thayer se defiende](src/content/events/2026/06/20260624-2.md) — 5 fuentes
 - [2026/06/20260625-1 - Criticismo por alza del 20% en sueldos de seremis de Salud en medio de recortes](src/content/events/2026/06/20260625-1.md) — 5 fuentes
 - [2026/06/20260625-2 - Renuncia seremi de Agricultura de Arica Jorge Heiden tras positivo en test de drogas](src/content/events/2026/06/20260625-2.md) — 4 fuentes
 - [2026/06/20260625-3 - Kast protagoniza acalorada discusión con mujer y niño en Villarrica; detenida por órdenes de estafa](src/content/events/2026/06/20260625-3.md) — 12 fuentes
@@ -709,6 +716,7 @@
 - [2026/06/20260625-6 - Corte de Apelaciones admite recursos de nulidad del caso Gatica y revisará si anula el juicio que absolvió a Crespo](src/content/events/2026/06/20260625-6.md) — 1 fuente
 - [2026/06/20260625-7 - Contrapoder: drones de Carabineros por $7 mil millones estarían inoperativos y fueron comprados a empresa fundada por coronel condenado por fraude al Fisco](src/content/events/2026/06/20260625-7.md) — 6 fuentes
 - [2026/06/20260625-8 - Chile se incorpora a Pax Silica: firma la Declaración Conjunta sobre IA en la II Cumbre](src/content/events/2026/06/20260625-8.md) — 4 fuentes
+- [2026/06/20260625-9 - Prisión preventiva para dos haitianos formalizados por red que cobraba por ingresar niños desde Haití](src/content/events/2026/06/20260625-9.md) — 6 fuentes
 - [2026/06/20260627-1 - La semana en que se enquistaron las dos almas del Gobierno de Kast](src/content/events/2026/06/20260627-1.md) — 1 fuente
 - [2026/06/20260630-1 - Senado rechaza acusación constitucional contra exministro de Hacienda Nicolás Grau](src/content/events/2026/06/20260630-1.md) — 4 fuentes
 - [2026/06/20260630-2 - Comisión de Constitución aprueba en general proyecto que autoriza a militares a realizar controles de identidad en estados de excepción](src/content/events/2026/06/20260630-2.md) — 2 fuentes
@@ -718,6 +726,7 @@
 - [2026/07/20260703-1 - Primera etapa de la zanja fronteriza en etapa final; ingresos irregulares bajaron 90%](src/content/events/2026/07/20260703-1.md) — 5 fuentes
 - [2026/07/20260705-1 - Corrupción y redes de ultraderecha: El flanco Orbán abierto en Chile](src/content/events/2026/07/20260705-1.md) — 2 fuentes
 - [2026/07/20260705-2 - Miles de ARMY protestan en Chile por la incertidumbre de los conciertos de BTS en el Estadio Nacional tras la polémica con el IND](src/content/events/2026/07/20260705-2.md) — 5 fuentes
+- [2026/07/20260706-1 - Diputados RN denuncian a Luis Thayer ante Fiscalía por prevaricación administrativa tras informe de Contraloría](src/content/events/2026/07/20260706-1.md) — 5 fuentes
 - [2026/07/20260707-1 - Kast cita a Republicanos en Cerro Castillo para reforzar coordinación tras tensiones oficialistas](src/content/events/2026/07/20260707-1.md) — 3 fuentes
 - [2026/07/20260707-2 - Gobierno recorta $123.914 millones al Sence (45% de su presupuesto) vía Decreto 330 pese a desempleo en máximos de cinco años](src/content/events/2026/07/20260707-2.md) — 4 fuentes
 - [2026/07/20260708-1 - Protesta de Confusam frente a La Moneda por los recortes a la atención primaria termina con ocho detenidos](src/content/events/2026/07/20260708-1.md) — 3 fuentes
@@ -1322,6 +1331,7 @@
 - [2026/08/20260819-1 - Revelan que pareja de exministra Mara Sedini es accionista del dispensario de cannabis ligado a la Operación Imperio Ámsterdam](src/content/events/2026/08/20260819-1.md) — 9 fuentes
 - [2026/08/20260819-10 - Vanessa Kaiser advierte que la reforma de seguridad podría instaurar un "totalitarismo": "Cambiamos del régimen democrático a uno totalitario"](src/content/events/2026/08/20260819-10.md) — 3 fuentes
 - [2026/08/20260819-11 - CGE ficha a Simón Boric como gerente de comunicaciones tras 12 años en la U. de Chile y enfrenta ola de críticas en redes](src/content/events/2026/08/20260819-11.md) — 7 fuentes
+- [2026/08/20260819-12 - Declaran admisible querella contra Luis Hermosilla por presunto tráfico de influencias en el caso Luchsinger-Mackay](src/content/events/2026/08/20260819-12.md) — 8 fuentes
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
@@ -1347,6 +1357,7 @@
 - [2026/08/20260820-22 - Organizaciones piden a la CIDH exigir explicaciones a Chile por el decreto que habilita data centers sin evaluación ambiental](src/content/events/2026/08/20260820-22.md) — 4 fuentes
 - [2026/08/20260820-23 - El auge y caída de la idea de plebiscitar la reforma de seguridad: Squella la abre, se reporta que La Moneda la estudia y el gobierno la desmiente horas después](src/content/events/2026/08/20260820-23.md) — 8 fuentes
 - [2026/08/20260820-24 - Gremios camioneros no descartan paralización ante el alza del diésel de $97 y exigen volver al esquema anterior del MEPCO](src/content/events/2026/08/20260820-24.md) — 8 fuentes
+- [2026/08/20260820-25 - Luis Thayer renuncia al Frente Amplio y acusa al partido de dejarlo solo ante la crisis de los niños haitianos: 'le falta vieja política'](src/content/events/2026/08/20260820-25.md) — 5 fuentes
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 13 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
 - [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — 1 fuente
@@ -1401,6 +1412,7 @@
 - [2026/08/20260827-5 - Cabo segundo Alejandro Ortiz Vásquez es asesinado de un disparo en el rostro en Renca mientras estaba de franco; Fiscalía ECOH y OS9 investigan encerrona y detienen a un sospechoso](src/content/events/2026/08/20260827-5.md) — 8 fuentes
 - [2026/08/20260827-6 - Gobierno restituye Gabinete de la Primera Dama eliminado en 2022: resolución N°391 formaliza equipo de Pía Adriasola](src/content/events/2026/08/20260827-6.md) — 8 fuentes
 - [2026/08/20260827-7 - Exfuncionarios de Vitacura grabados en acto sexual demandan por $200 millones y juicio contra municipio queda fijado para noviembre de 2027](src/content/events/2026/08/20260827-7.md) — 8 fuentes
+- [2026/08/20260827-8 - Canasta dieciochera llega a $42.984 (+5,4% anual), el asado más caro en cinco años según estudio XTB con precios Odepa](src/content/events/2026/08/20260827-8.md) — 5 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
 - [2026/08/20260828-10 - Gonzalo Blumel arremete contra republicanos por la reforma de seguridad: “¿Cuántos dirigentes viven o han vivido en poblaciones?” y acusa “soberbia”](src/content/events/2026/08/20260828-10.md) — 6 fuentes
 - [2026/08/20260828-11 - Mara Sedini blinda a Kast ante caso Cerimedo: 'No ganó por una campaña de bots', dice que nunca conoció al consultor y descarta mea culpa por ataques a Matthei](src/content/events/2026/08/20260828-11.md) — 5 fuentes
@@ -1425,7 +1437,12 @@
 - [2026/09/20260901-3 - Gobierno pide la renuncia al seremi de Transportes de Arica Patricio Löhr por presiones a la DGAC en favor de su empresa](src/content/events/2026/09/20260901-3.md) — 5 fuentes
 - [2026/09/20260901-4 - Imacec de julio cae 1,5%, su mayor retroceso desde marzo de 2023, y reabre debate por el punto de inflexión de Quiroz](src/content/events/2026/09/20260901-4.md) — 9 fuentes
 - [2026/09/20260901-5 - Marcel califica de 'inédito' que Salud y Vivienda pidan más presupuesto por la prensa y anticipa una negociación 'bien difícil' para Quiroz](src/content/events/2026/09/20260901-5.md) — 6 fuentes
+- [2026/09/20260901-6 - Diputada Gazmuri oficia a Contraloría por sueldo de director del Sernac suspendido hace casi un año por Ley Karin](src/content/events/2026/09/20260901-6.md) — 6 fuentes
 - [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 6 fuentes
+- [2026/09/20260902-2 - Corte de Iquique revoca retorno del Clan Chen a Alto Hospicio y restituye a Gendarmería la potestad de traslados](src/content/events/2026/09/20260902-2.md) — 7 fuentes
+- [2026/09/20260902-3 - Ñuble suma 9 homicidios en 2026 (+80% interanual) y contradice balance del seremi que los daba a la baja tras crimen en San Carlos](src/content/events/2026/09/20260902-3.md) — 5 fuentes
+- [2026/09/20260902-4 - Comisión mixta de Inteligencia Económica inicia audiencias por secreto bancario con choque oposición-oficialismo y plan de cuatro sesiones de expertos](src/content/events/2026/09/20260902-4.md) — 6 fuentes
+- [2026/09/20260903-1 - Gonzalo Durán (Fundación Sol) en Radio Futuro: tasa real de desempleo llegaría a 13,5% y casi la mitad de los desocupados tiene educación superior](src/content/events/2026/09/20260903-1.md) — 6 fuentes
 
 ## 2025
 

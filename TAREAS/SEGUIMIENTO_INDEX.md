@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 312
+**Total tareas:** 313
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 229 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 230 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 285 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 286 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -295,6 +295,7 @@
 | S-2026-205 | ⬜ | 2026-08-28 | Caso Cerimedo — seguimiento judicial | Peritaje de granja de bots y dispositivos incautados en La Paz + control de 180 días de prisión preventiva de Cerimedo en Bolivia | `20260818-14` `20260828-6` | Origen: <https://www.rtve.es/noticias/20260825/caida-trama-fernando-cerimedo-cerebro-digital-ultraderecha-latinoamericana/17201359.shtml> |
 | S-2026-206 | ⬜ | 2026-08-29 | Homicidio Renca — seguimiento judicial | Homicidio cabo Alejandro Ortiz Vasquez (Renca 27-ago-2026): desenlace judicial del detenido y busqueda de coautores — formalizacion, cautelares, identificacion de banda, recuperacion arma y vehiculo quemado Quilicura | `20260827-5` | Origen: <https://cooperativa.cl/noticias/pais/policial/homicidios/carabinero-de-franco-fue-asesinado-en-la-comuna-de-renca/2026-08-27/203359.html> |
 | S-2026-207 | ⬜ | 2026-08-29 | Homicidio Renca — banda El Perejil | Banda El Perejil (Renca): verificar si el OS9/ECOH acredita patron serial de citaciones por Marketplace en Miraflores/21 de Mayo — al menos 2 casos previos senalados por vecinos, vehiculo quemado Aeropuerto/Central y heridos SAR Renca | `20260827-5` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/28/carabinero-asesinado-en-renca-nuevo-antecedente-revela-motivo-de-victima-para-ir-al-lugar-de-crimen.shtml> |
+| S-2026-211 | ⬜ | 2026-09-03 | Sernac — oficio Gazmuri a Contraloría | Respuesta de Contraloría al oficio de Gazmuri por sueldo de Herrera + resolución del sumario Ley Karin | `20260901-6` | Origen: <https://www.adnradio.cl/2026/09/01/ofician-al-sernac-director-suspendido-hace-un-ano-por-casos-de-ley-karin-sigue-cobrando-un-sueldo-que-supera-los-8-millones/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
