@@ -2,8 +2,7 @@
 /**
  * add-source.mjs — Genera una fuente para `src/content/sources/<id>.md` (markdown, Obsidian)
  * a partir de una URL, extrayendo titulo, autor y fecha automaticamente.
- * El YAML `src/data/sources.yaml` se mantiene como fallback legacy (dual-read en registry.ts)
- * pero la fuente de verdad es el .md.
+ * La fuente de verdad es `src/content/sources/<id>.md` (markdown, Obsidian).
  *
  * Uso:
  *   pnpm run add-source -- https://www.latercera.com/articulo/...
@@ -39,7 +38,6 @@ import YAML from 'yaml';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
-const SOURCES_PATH = join(ROOT, 'src', 'data', 'sources.yaml');
 const SOURCES_MD_DIR = join(ROOT, 'src', 'content', 'sources');
 
 const MIRROR_PREFIXES = {
@@ -266,32 +264,18 @@ function hostnameOf(url) {
 
 function buildDomainMedioMap() {
   const map = { ...DEFAULT_DOMAIN_MEDIO };
-  // Preferir markdown, fallback a YAML legacy
-  try {
-    const mdDir = SOURCES_MD_DIR;
-    if (existsSync(mdDir)) {
-      for (const f of readdirSync(mdDir).filter(f => f.endsWith('.md'))) {
-        try {
-          const raw = readFileSync(join(mdDir, f), 'utf8');
-          const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-          if (!m) continue;
-          const src = YAML.parse(m[1]);
-          if (!src?.url || !src?.medio) continue;
-          const host = hostnameOf(src.url);
-          if (host) map[host] = src.medio;
-        } catch {}
-      }
-    }
-  } catch {}
-  try {
-    const data = YAML.parse(readFileSync(SOURCES_PATH, 'utf8')) ?? {};
-    for (const [id, src] of Object.entries(data)) {
+  const mdDir = SOURCES_MD_DIR;
+  if (!existsSync(mdDir)) return map;
+  for (const f of readdirSync(mdDir).filter(f => f.endsWith('.md'))) {
+    try {
+      const raw = readFileSync(join(mdDir, f), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      const src = YAML.parse(m[1]);
       if (!src?.url || !src?.medio) continue;
       const host = hostnameOf(src.url);
-      if (host && !map[host]) map[host] = src.medio;
-    }
-  } catch (err) {
-    logWarn(`No se pudo leer fuentes para el mapa de medios: ${err.message}`);
+      if (host) map[host] = src.medio;
+    } catch {}
   }
   return map;
 }
@@ -1299,27 +1283,14 @@ async function fetchText(url, timeoutMs = 15000) {
 }
 
 // ---------------------------------------------------------------------------
-// YAML helpers
+// Frontmatter para src/content/sources/<id>.md
 // ---------------------------------------------------------------------------
-function yamlStr(value) {
-  const s = String(value);
-  // Solo deja plano si es seguro; si no, entrecomilla con dobles.
-  if (/^[A-Za-z0-9_ ,.()%$€/]+$/.test(s) && !/[:#]/.test(s)) return s;
-  return `"${s.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
-}
-
 function buildBlock(id, fields) {
-  const lines = [
-    `${id}:`,
-    `  tipo: ${fields.tipo}`,
-    `  medio: ${yamlStr(fields.medio)}`,
-    `  titulo: ${yamlStr(fields.titulo)}`,
-    `  autor: ${yamlStr(fields.autor)}`,
-    `  fecha: ${fields.fecha}`,
-    `  url: ${fields.url}`,
-  ];
-  if (fields.notas) lines.push(`  notas: ${yamlStr(fields.notas)}`);
-  return lines.join('\n');
+  // Frontmatter plano para src/content/sources/<id>.md (mismo formato que --append).
+  // El formato antiguo con prefijo `<id>:` era del monolito sources.yaml (eliminado) — no usar.
+  void id;
+  const fm = YAML.stringify({ tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo, autor: fields.autor, fecha: fields.fecha, url: fields.url, ...(fields.notas ? { notas: fields.notas } : {}) }).trim();
+  return `---\n${fm}\n---`;
 }
 
 
@@ -1342,7 +1313,7 @@ async function main() {
   const medioFilter = flagValue('--medio');
   const catalogOnly = flags.has('--catalog-only');
 
-  logInfo('Generador de fuentes para sources.yaml');
+  logInfo('Generador de fuentes para src/content/sources/*.md');
   logInfo('--------------------------------------');
 
   // --- Modo búsqueda en el catálogo (grep por fecha/medio) --
@@ -1516,16 +1487,10 @@ async function main() {
   console.log(`Wikilink para usar inline en eventos:  [[sources/${id}]]`);
   console.log('='.repeat(64) + '\n');
 
-  // --- Colision: verificar .md y YAML legacy ---
+  // --- Colision: verificar que el .md no exista ---
   const mdPath = join(SOURCES_MD_DIR, `${id}.md`);
-  let exists = false;
   try {
-    if (existsSync(mdPath)) exists = true;
-    else {
-      const data = YAML.parse(readFileSync(SOURCES_PATH, 'utf8')) ?? {};
-      if (Object.prototype.hasOwnProperty.call(data, id)) exists = true;
-    }
-    if (exists) logWarn(`OJO: el ID "${id}" ya existe (${existsSync(mdPath) ? mdPath : SOURCES_PATH}). Revisa antes de crear.`);
+    if (existsSync(mdPath)) logWarn(`OJO: el ID "${id}" ya existe en ${mdPath}. Revisa antes de crear.`);
   } catch { /* ignorar */ }
 
   if (flags.has('--append')) {
@@ -1534,7 +1499,7 @@ async function main() {
       const fm = YAML.stringify({ tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo, autor: fields.autor, fecha: fields.fecha, url: fields.url, ...(fields.notas ? { notas: fields.notas } : {}) }).trim();
       const md = `---\n${fm}\n---\n`;
       writeFileSync(mdPath, md, 'utf8');
-      logOk(`FUENTE CREADA en ${mdPath} (sin colisión YAML)`);
+      logOk(`FUENTE CREADA en ${mdPath}`);
     }
   } else {
     logInfo('Para crear src/content/sources/<id>.md automaticamente, vuelve a correr con --append.');

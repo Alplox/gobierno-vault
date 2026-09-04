@@ -1,48 +1,36 @@
-import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
+import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 
-const dataDir = join(process.cwd(), 'src', 'data');
-
 function loadSources() {
-  try {
-    const dir = join(process.cwd(), 'src', 'content', 'sources');
-    if (existsSync(dir) && readdirSync(dir).some(f=>f.endsWith('.md'))) {
-      const rec = {};
-      for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
-        const id = f.replace(/\.md$/, '');
-        const raw = readFileSync(join(dir, f), 'utf8');
-        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-        if (m) rec[id] = YAML.parse(m[1]);
-      }
-      if (Object.keys(rec).length) return rec;
-    }
-  } catch {}
-  return YAML.parse(readFileSync(join(dataDir, 'sources.yaml'), 'utf8')) ?? {};
+  const dir = join(process.cwd(), 'src', 'content', 'sources');
+  const rec = {};
+  for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+    const id = f.replace(/\.md$/, '');
+    const raw = readFileSync(join(dir, f), 'utf8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (m) rec[id] = YAML.parse(m[1]);
+  }
+  if (!Object.keys(rec).length) throw new Error('src/content/sources/*.md no encontrado o vacío');
+  return rec;
 }
 
 function loadEntities() {
-  try {
-    const peopleDir = join(process.cwd(), 'src', 'content', 'people');
-    const orgsDir = join(process.cwd(), 'src', 'content', 'organizations');
-    const cifrasDir = join(process.cwd(), 'src', 'content', 'cifras');
-    if (existsSync(peopleDir) || existsSync(orgsDir) || existsSync(cifrasDir)) {
-      const rec = { people: {}, organizations: {}, cifras: {} };
-      let found = false;
-      for (const [dir, key] of [[peopleDir,'people'],[orgsDir,'organizations'],[cifrasDir,'cifras']]) {
-        if (existsSync(dir)) {
-          for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
-            const id = f.replace(/\.md$/, '');
-            const raw = readFileSync(join(dir, f), 'utf8');
-            const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-            if (m) { rec[key][id] = YAML.parse(m[1]); found = true; }
-          }
-        }
-      }
-      if (found) return rec;
+  const peopleDir = join(process.cwd(), 'src', 'content', 'people');
+  const orgsDir = join(process.cwd(), 'src', 'content', 'organizations');
+  const cifrasDir = join(process.cwd(), 'src', 'content', 'cifras');
+  const rec = { people: {}, organizations: {}, cifras: {} };
+  let found = false;
+  for (const [dir, key] of [[peopleDir,'people'],[orgsDir,'organizations'],[cifrasDir,'cifras']]) {
+    for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+      const id = f.replace(/\.md$/, '');
+      const raw = readFileSync(join(dir, f), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (m) { rec[key][id] = YAML.parse(m[1]); found = true; }
     }
-  } catch {}
-  return YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8')) ?? {};
+  }
+  if (!found) throw new Error('src/content/people|organizations|cifras/*.md no encontrados');
+  return rec;
 }
 
 // Índice de eventos (id -> { titulo, fecha }) construido una sola vez por proceso.

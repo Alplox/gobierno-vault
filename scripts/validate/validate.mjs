@@ -8,43 +8,41 @@ const dataDir = join(root, 'data');
 const eventsDir = join(root, 'content', 'events');
 
 function readYaml(filename) {
+  // Fuente de verdad: colecciones markdown (el monolito src/data/entities|sources|topics.yaml
+  // se eliminó en ago-2026 y ya no existe). Solo colectivos/sectores se leen de src/data/.
   try {
+    const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
+    const coll = map[filename];
+    if (coll) {
+      const dir = join(process.cwd(), 'src', 'content', coll);
+      const rec = {};
+      for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+        const id = f.replace(/\.md$/, '');
+        const raw = readFileSync(join(dir, f), 'utf8');
+        const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+        if (m) rec[id] = YAML.parse(m[1]);
+      }
+      if (Object.keys(rec).length) return rec;
+      throw new Error(`sin entradas en src/content/${coll}/*.md`);
+    }
+    if (filename === 'entities.yaml') {
+      const rec = { people: {}, organizations: {}, cifras: {} };
+      let found = false;
+      for (const [dir, key] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
+        for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
+          const id = f.replace(/\.md$/, '');
+          const raw = readFileSync(join(dir, f), 'utf8');
+          const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+          if (m) { rec[key][id] = YAML.parse(m[1]); found = true; }
+        }
+      }
+      if (found) return rec;
+      throw new Error('sin entradas en src/content/people|organizations|cifras/*.md');
+    }
     return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
   } catch (e) {
-    try {
-      const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
-      const coll = map[filename];
-      if (coll) {
-        const dir = join(process.cwd(), 'src', 'content', coll);
-        if (existsSync(dir)) {
-          const rec = {};
-          for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
-            const id = f.replace(/\.md$/, '');
-            const raw = readFileSync(join(dir, f), 'utf8');
-            const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-            if (m) rec[id] = YAML.parse(m[1]);
-          }
-          if (Object.keys(rec).length) return rec;
-        }
-      }
-      if (filename === 'entities.yaml') {
-        const rec = { people: {}, organizations: {}, cifras: {} };
-        let found = false;
-        for (const [dir, key] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
-          if (existsSync(dir)) {
-            for (const f of readdirSync(dir).filter(f=>f.endsWith('.md'))) {
-              const id = f.replace(/\.md$/, '');
-              const raw = readFileSync(join(dir, f), 'utf8');
-              const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
-              if (m) { rec[key][id] = YAML.parse(m[1]); found = true; }
-            }
-          }
-        }
-        if (found) return rec;
-      }
-    } catch {}
-    console.error(`✖ YAML inválido en src/data/${filename}: ${e.message.split('\n')[0]}`);
-    console.error(`  Causa típica: edición concurrente, caracteres reservados sin citar (ej. "autor: @usuario") o líneas basura de un grabado con encoding incorrecto (PowerShell Set-Content/Out-File).`);
+    console.error(`✖ no se pudo cargar ${filename}: ${e.message.split('\n')[0]}`);
+    console.error(`  Causa típica: caracteres reservados sin citar en frontmatter (ej. "autor: @usuario") o grabado con encoding incorrecto (PowerShell Set-Content/Out-File).`);
     process.exit(1);
   }
 }
@@ -61,9 +59,9 @@ const validColectivos = new Set(Array.isArray(colectivosData) ? colectivosData :
 const validSectores = new Set(Array.isArray(sectoresData) ? sectoresData : Object.keys(sectoresData));
 
 // Regla AGENTS.md (convención de medios): el campo `medio:` de cada fuente en
-// sources.yaml debe ser EXACTAMENTE el nombre (`nombre`) de una org de prensa
+// src/content/sources/*.md debe ser EXACTAMENTE el nombre (`nombre`) de una org de prensa
 // (tipo medio_comunicacion / red_social / canal_television / programa_tv /
-// programa_streaming) registrada en entities.yaml, o estar en la lista blanca
+// programa_streaming) registrada en src/content/organizations/*.md, o estar en la lista blanca
 // de instituciones/plataformas/documentos (que no son "medios de prensa" y por
 // lo tanto no requieren org). Esto impide que las variantes de nombre (y el
 // mojibake de doble-encoding UTF-8) vuelvan a degradar la convención.
@@ -97,7 +95,7 @@ const mediaOrgNames = new Set(
 // plataformas sociales/documentos y publicaciones académicas que aparecen como
 // `medio:` de una fuente pero NO son medios de prensa (no necesitan org).
 // Solo agregar aquí lo que deliberadamente no sea prensa; los medios de prensa
-// nuevos deben registrarse en entities.yaml con tipo medio_comunicacion.
+// nuevos deben registrarse en src/content/organizations/*.md con tipo medio_comunicacion.
 const WHITELIST_MEDIOS = new Set([
   'Senado de Chile',
   'Cámara de Diputados',
@@ -184,6 +182,10 @@ const WHITELIST_MEDIOS = new Set([
   'Federación CCU',
   'Municipalidad de Coquimbo',
   'Partido Republicano de Chile',
+  'Partido Por la Democracia',
+  'Superintendencia de Pensiones',
+  'AFC Chile',
+  'Libertad y Desarrollo (LyD)',
   'Embajada de China en Chile',
   'Centro de Estudios Públicos',
   'Foro Madrid',
@@ -211,6 +213,8 @@ const WHITELIST_MEDIOS = new Set([
   'Contapapaya (asesoría contable)',
   'Empresas Logros (blog)',
   'DecideChile (Unholster)',
+  'Mercado Público (ChileCompra)',
+  'TodoLicitaciones',
   'Activa Research',
   'Criteria',
   'Cadem',
@@ -228,6 +232,7 @@ const WHITELIST_MEDIOS = new Set([
   'Scribd (documento filtrado)',
   'Facebook',
   'Instagram',
+  'LinkedIn',
   'Movilh',
   'TikTok',
   'Telegram',
@@ -317,13 +322,13 @@ try {
 }
 for (const id of validSourceIds) {
   if (!referencedSources.has(id)) {
-    console.error(`✖ fuente huerfana en sources.yaml: "${id}" (no citada en ningun evento)`);
+    console.error(`✖ fuente huerfana en src/content/sources/*.md: "${id}" (no citada en ningun evento)`);
     errors++;
   }
 }
 for (const id of referencedSources) {
   if (!validSourceIds.has(id)) {
-    console.error(`✖ fuente citada sin registrar en sources.yaml: "[[sources/${id}]]"`);
+    console.error(`✖ fuente citada sin registrar en src/content/sources/*.md: "[[sources/${id}]]"`);
     errors++;
   }
 }
@@ -340,7 +345,7 @@ for (const [id, src] of Object.entries(sourcesData)) {
   if (mediaOrgNames.has(src.medio)) continue;
   if (WHITELIST_MEDIOS.has(src.medio)) continue;
   console.error(
-    `✖ medio "${src.medio}" no corresponde al nombre de una org de prensa (${MEDIA_ORG_TYPES_LABEL}) ni esta en la lista blanca → fuente "${id}". Registrar la org en entities.yaml o agregar a WHITELIST_MEDIOS en validate.mjs si es institucion/plataforma.`
+    `✖ medio "${src.medio}" no corresponde al nombre de una org de prensa (${MEDIA_ORG_TYPES_LABEL}) ni esta en la lista blanca → fuente "${id}". Registrar la org en src/content/organizations/*.md o agregar a WHITELIST_MEDIOS en validate.mjs si es institucion/plataforma.`
   );
   errors++;
 }
@@ -386,23 +391,30 @@ try {
 // el vault es español — ningún nombre legítimo usa esos rangos).
 const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]|[\u0080-\u009f\uFFFD\u0400-\u04ff\u0100-\u024f]/g;
 const mojibakeScan = new RegExp(MOJIBAKE_RE.source, 'g');
-for (const f of ['sources.yaml', 'entities.yaml', 'topics.yaml', 'colectivos.yaml', 'sectores.yaml']) {
+// Origen por clave: colecciones markdown (monolito eliminado) salvo colectivos/sectores (src/data/).
+const MOJIBAKE_SRC = {
+  'sources': 'src/content/sources/*.md',
+  'entities': 'src/content/people|organizations|cifras/*.md',
+  'topics': 'src/content/topics/*.md',
+  'colectivos.yaml': 'src/data/colectivos.yaml',
+  'sectores.yaml': 'src/data/sectores.yaml',
+};
+for (const f of ['sources', 'entities', 'topics', 'colectivos.yaml', 'sectores.yaml']) {
   let raw;
-  try { raw = readFileSync(join(dataDir, f), 'utf8'); } catch (e) {
-    // Fallback markdown: si el YAML fue migrado a src/content/*, revisar .md en vez de fallar
-    const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics', 'entities.yaml': null };
-    if (map[f]) {
-      const dir = join(process.cwd(), 'src', 'content', map[f]);
-      if (existsSync(dir)) { raw = ''; for (const mf of readdirSync(dir).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(dir, mf), 'utf8'); } catch {} } }
-      else throw e;
-    } else if (f === 'entities.yaml') {
-      raw = '';
-      for (const coll of ['people','organizations','cifras']) {
-        const d = join(process.cwd(), 'src', 'content', coll);
-        if (existsSync(d)) for (const mf of readdirSync(d).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(d, mf), 'utf8'); } catch {} }
-      }
-      if (!raw) throw e;
-    } else throw e;
+  const collMap = { 'sources': 'sources', 'topics': 'topics' };
+  if (collMap[f]) {
+    const dir = join(process.cwd(), 'src', 'content', collMap[f]);
+    raw = '';
+    for (const mf of readdirSync(dir).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(dir, mf), 'utf8'); } catch {} }
+  } else if (f === 'entities') {
+    raw = '';
+    for (const coll of ['people','organizations','cifras']) {
+      const d = join(process.cwd(), 'src', 'content', coll);
+      if (existsSync(d)) for (const mf of readdirSync(d).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(d, mf), 'utf8'); } catch {} }
+    }
+    if (!raw) throw new Error('sin entradas en colecciones people|organizations|cifras');
+  } else {
+    raw = readFileSync(join(dataDir, f), 'utf8');
   }
   const matches = raw.match(mojibakeScan);
   if (matches) {
@@ -412,7 +424,7 @@ for (const f of ['sources.yaml', 'entities.yaml', 'topics.yaml', 'colectivos.yam
       mojibakeScan.lastIndex = 0;
       if (mojibakeScan.test(lines[li])) sample.push(`    línea ${li + 1}: ${lines[li].trim().slice(0, 90)}`);
     }
-    console.error(`✖ mojibake/carácter inválido en src/data/${f}: ${matches.length} ocurrencia(s) — corregir acentos/ñ/em-dashes dañados`);
+    console.error(`✖ mojibake/carácter inválido en ${MOJIBAKE_SRC[f]}: ${matches.length} ocurrencia(s) — corregir acentos/ñ/em-dashes dañados`);
     for (const s of sample) console.error(s);
     errors++;
   }
@@ -486,7 +498,7 @@ for (const file of allFiles) {
   const temas = rawTemas.map((t) => String(t).trim()).filter(Boolean);
   for (const t of temas) {
     if (!validTopicIds.has(t)) {
-      console.error(`✖ tema "${t}" no existe en topics.yaml → ${eventId}`);
+      console.error(`✖ tema "${t}" no existe en src/content/topics/*.md → ${eventId}`);
       errors++;
     }
   }

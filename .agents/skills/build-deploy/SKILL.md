@@ -24,11 +24,11 @@ pnpm run sitemaps-index  # regenera sitemaps/README.md (ya no toca AGENTS.md)
 
 ## Validación temprana (`scripts/validate/validate.mjs`)
 
-Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[[sources/...]]` vs `sources.yaml`, `[[people/...]]`/`[[organizations/...]]` vs `entities.yaml`, `[[events/...]]` vs IDs existentes. También valida menciones en prosa (ver `event-rules.md` regla 8, `scripts/lib/proseNames.mjs`; fixer `fix-prose-wikilinks.mjs`). Excluye ` ``` ` y `` ` ``. `[[cifras/...]]` no se valida; IDs desnudos solo se enlazan si existen.
+Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[[sources/...]]` vs `src/content/sources/*.md`, `[[people/...]]`/`[[organizations/...]]` vs `src/content/people|organizations/*.md`, `[[events/...]]` vs IDs existentes. También valida menciones en prosa (ver `event-rules.md` regla 8, `scripts/lib/proseNames.mjs`; fixer `fix-prose-wikilinks.mjs`). Excluye ` ``` ` y `` ` ``. `[[cifras/...]]` no se valida; IDs desnudos solo se enlazan si existen.
 
 - **CRLF:** regex tolerante `\r?\n` (con `core.autocrlf=true` Windows entrega `\r\n`).
 - **Astro glob-loader:** NO aborta build ante wikilink roto — loguea `Error rendering` y deja `rendered: undefined` (página sin contenido). Por eso `validate` es la red real.
-- **Medio + mojibake + BOM:** valida `sources.yaml:medio` contra orgs / `WHITELIST_MEDIOS`, escanea mojibake (C2/C3, C1, U+FFFD, cirílico) y BOM en `TAREAS/` (ver `data-yaml.md`).
+- **Medio + mojibake + BOM:** valida `medio` en `src/content/sources/*.md` contra orgs / `WHITELIST_MEDIOS`, escanea mojibake (C2/C3, C1, U+FFFD, cirílico) y BOM en `TAREAS/` (ver `data-yaml.md`).
 
 ## Build en paralelo
 

@@ -13,8 +13,8 @@ import { getPeopleRegistry, getSourcesRegistry } from './registry';
  *
  * Integración con los registros del vault:
  * - Personas (`presidente_id`, `persona_id`, `firmante_id`) se resuelven contra
- *   entities.yaml vía getPeopleRegistry(); el build falla si un ID no existe.
- * - Referencias (`orden_refs`, `vigencias[].fuente`) son IDs de sources.yaml;
+ *   src/content/people/*.md vía getPeopleRegistry(); el build falla si un ID no existe.
+ * - Referencias (`orden_refs`, `vigencias[].fuente`) son IDs de src/content/sources/*.md;
  *   getFuente(id) entrega medio/título/url para los <SRef /> y el build falla
  *   si algún ID falta o está duplicado.
  */
@@ -37,7 +37,7 @@ export type VigenciaSueldo = {
 };
 export type PresidenteSueldo = {
   presidente_id: string;
-  /** Nombre resuelto desde entities.yaml. */
+  /** Nombre resuelto desde src/content/people/*.md. */
   presidente: string;
   gobierno: string;
   periodo: string;
@@ -174,13 +174,13 @@ function build() {
   const raw = readFileSync(join(process.cwd(), 'src', 'data', 'sueldos.yaml'), 'utf8');
   const yaml = YAML.parse(raw) as SueldosYaml;
 
-  // --- Resolución de fuentes (sources.yaml) ---
+  // --- Resolución de fuentes (src/content/sources/*.md) ---
   const sourcesRegistry = getSourcesRegistry();
   const ordenRefs = yaml.orden_refs;
   const faltantes = [...new Set(ordenRefs)].filter((id) => !sourcesRegistry[id]);
   if (faltantes.length) {
     throw new Error(
-      `sueldos.yaml: fuentes de orden_refs sin entrada en sources.yaml: ${faltantes.join(', ')}`
+      `sueldos.yaml: fuentes de orden_refs sin entrada en src/content/sources/*.md: ${faltantes.join(', ')}`
     );
   }
   const dups = ordenRefs.filter((id, i) => ordenRefs.indexOf(id) !== i);
@@ -189,15 +189,15 @@ function build() {
   }
   const fuentesPorId = (id: string): FuenteResuelta => {
     const s = sourcesRegistry[id];
-    if (!s) throw new Error(`sueldos.yaml: fuente '${id}' no existe en sources.yaml`);
+    if (!s) throw new Error(`sueldos.yaml: fuente '${id}' no existe en src/content/sources/*.md`);
     return { medio: s.medio, titulo: s.titulo, url: s.url };
   };
 
-  // --- Resolución de personas (entities.yaml) ---
+  // --- Resolución de personas (src/content/people/*.md) ---
   const peopleById = new Map(getPeopleRegistry().map((p) => [p.id, p.data]));
   const nombrePersona = (id: string): string => {
     const p = peopleById.get(id);
-    if (!p?.nombre) throw new Error(`sueldos.yaml: persona '${id}' no existe en entities.yaml`);
+    if (!p?.nombre) throw new Error(`sueldos.yaml: persona '${id}' no existe en src/content/people/*.md`);
     return p.nombre;
   };
 

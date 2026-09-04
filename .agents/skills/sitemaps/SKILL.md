@@ -99,7 +99,7 @@ Notas de plataforma (complemento manual, no se reescribe):
   los limpia (ver `extractSitemapIndexLocs`). **Mestizos Magazine**: index por fechas
   (`/sitemap/sitemap-<DD-MM-YYYY>.xml`, ~2.400 sub-sitemaps diarios desde 2018, ~8,6k artículos).
 
-| `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en sources.yaml·entities / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio |
+| `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio |
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3 (2026-08-11)**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
@@ -192,6 +192,29 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
   `diarioestrategia`, `emol`, `senado`.
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
+
+### Descubrimiento online con Google News RSS (`news-search`)
+
+Cuando el catálogo no cubre lo buscado (tema muy reciente, medio sin sitemap o
+catálogo desactualizado), el paso siguiente NO es el websearch genérico sino
+`pnpm run news-search -- "<query>"` (`scripts/sitemaps/news-search.mjs`): consulta
+el RSS de Google News (`hl=es-419&gl=CL`, sin API key) y devuelve título + medio +
+fecha por ítem, resolviendo la URL original contra el catálogo por coincidencia
+de título. Lo ya presente en el vault se oculta (dedupe por URL y por título).
+
+```bash
+pnpm run news-search -- "Democracia Siempre" --since 2026-08-30
+pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
+# flags: --since YYYY-MM-DD · --medio <subcadena> · --limit N · --all · --json
+```
+
+- Los ítems resueltos traen la URL del artículo lista para `fetch-content`/`add-source`.
+- Los `[SIN RESOLVER]` (medio fuera del catálogo o JSONL desactualizado) traen el
+  comando sugerido (`add-source -- --search "<título>" [--medio <slug>]).
+- Límites conocidos (verificados sep-2026): los links `rss/articles/CBMi...` van
+  cifrados (doble base64 → ruido, no decodificables en local) y GDELT no responde
+  desde esta red — por eso la resolución es por título, no por link. El RSS no
+  trae cuerpos: después sigue la cadena `fetch-content` habitual.
 
 ### Sitios institucionales SIN sitemap utilizable (verificado 21-ago-2026)
 

@@ -29,7 +29,8 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 ## Grafo de relaciones (`/graph`, mini en `/events`, ego-grafo)
 
 - `EventGraph.astro` renderiza SVG estático fallback + JSON `<script id="graph-data">`; `force-graph.js` lo reemplaza por SVG interactivo `d3-force` (pan/pinch/drag). `init()` idempotente con `cleanup()`.
-- Full mode solo conectados por default (`connected` por nodo); checkbox `#graph-include-isolated` re-ejecuta `init()` (guard `__gvWired`).
+- Full mode solo conectados por default (`connected` por nodo); checkbox `#graph-include-isolated` re-ejecuta `init()`.
+- Filtros `/graph` (`#graph-filters` en `EventGraph.astro`, solo full): búsqueda (debounce 250ms) + selects tipo/año/tema/persona/org + `mín. vínc.` + aislados; `force-graph.js` filtra nodos/links y re-ejecuta `init()`, con estado en URL (`?q=&tipo=&year=&tema=&persona=&org=&minconn=&aislados=1`, `replaceState`) y contador `#graph-count` + `#graph-empty`. Nodos llevan `temas/personas/orgs/etiquetas/search` en el JSON. Cableado único en `wireGraphFilters()` (guard en el form, re-cablea tras swap VT; sync URL una vez por query). Mini (`/events`) sin filtros.
 - Tap en nodo abre `<dialog id="graph-modal">` (bottom-sheet en móvil), no navega; vecinos desde `links`. Umbral `dragMoved` distingue tap/drag. Sin modal (mini) navega directo.
 - `EgoGraph.astro` (SVG estático, cero JS) en slot `graph` de `EventConnections.astro`; anchors sin `transition:name` duplicado.
 - Perf: `alphaMin(0.01)` (~200 ticks) + `fitView` en `end`.

@@ -37,7 +37,7 @@ sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
 | Temas | `src/content/topics/*.md` | `getTopicsRegistry()` |
 | Colectivos / Sectores | `src/data/colectivos.yaml` / `src/data/sectores.yaml` | array plano (excepción YAML) |
 
-`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts` lee `.md` frontmatter con fallback YAML legacy (defensivo, monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts`/`queries.ts` leen `.md` frontmatter directo, sin fallback (monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
 
 ## Checklist obligatorio antes de tocar `src/content/**` (`events`/`people`/`sources`/…)
 
@@ -82,7 +82,7 @@ Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
 3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[people/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
 4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`).
-5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
+5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Si el catalogo no cubre (tema muy reciente o medio ausente), usar `pnpm run news-search -- "<query>"` antes del websearch generico. Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
 6. **No duplicar relaciones** bidireccionales; `relaciones` apunta a `ID` sin extension.
 
 Crear muchas entidades/fuentes: verificar `git status` antes (edicion concurrente) y nunca usar PowerShell `Set-Content`/`>` sobre YAML (corrompe UTF-8). Ver `.agents/skills/data-yaml/SKILL.md`.
@@ -123,7 +123,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | Tocar timeline/rail, grafo, filtros `/events`, View Transitions, TTS, estilos | `.agents/skills/frontend/SKILL.md` |
 | Build falla, validate, deploy, pnpm, Cloudflare, Tailwind | `.agents/skills/build-deploy/SKILL.md` |
 | Seguimiento con IDs `S/A/V-YYYY-NNN` por año + catálogo | `.agents/skills/seguimiento/SKILL.md` |
-| Web research con Firecrawl (search/scrape/crawl/agent, 1000 créditos) — alternativa a fetch-impersonate | `firecrawl` CLI (`firecrawl search/scrape --help`, `firecrawl --status`) + MCP `https://mcp.firecrawl.dev/v2/mcp-oauth` — ver `.agents/skills/tools/SKILL.md` para fallback |
+| Web research con Firecrawl (search/scrape/crawl/agent, 1000 créditos) — alternativa a fetch-impersonate | `firecrawl` CLI (`firecrawl search/scrape --help`, `firecrawl --status`) + MCP `<https://mcp.firecrawl.dev/v2/mcp-oauth>` — ver `.agents/skills/tools/SKILL.md` para fallback |
 | Respaldo offline `.gvault` | `.agents/skills/backup/SKILL.md` |
 
 ## Cuando descubras algo no documentado

@@ -26,7 +26,7 @@ export type CabinetByMinistry = {
   todos: CabinetAppointment[];
 };
 
-// Alias de orgs duplicadas en entities.yaml → id canónico (para el fallback por org).
+// Alias de orgs duplicadas en src/content/organizations/*.md → id canónico (para el fallback por org).
 const ORG_ALIASES: Record<string, string> = {
   ministerio_obras_publicas: 'ministerio_de_obras_publicas',
   ministerio_del_interior: 'ministerio_interior',
@@ -178,7 +178,7 @@ function cargoKey(cargo: string): string {
 }
 
 /**
- * Recolecta todos los nombramientos ministeriales de entities.yaml:
+ * Recolecta todos los nombramientos ministeriales de src/content/people/*.md (cargos[]):
  * - `cargos[]` con fechas (autoritativo cuando existe)
  * - `cargo` top-level sin fechas solo si no está duplicado en cargos[]
  */

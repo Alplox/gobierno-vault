@@ -28,11 +28,6 @@ type TopicData = {
   bio?: string;
 };
 
-type EntitiesFile = {
-  people?: Record<string, EntityData>;
-  organizations?: Record<string, EntityData>;
-};
-
 export type RegistryEntry = {
   id: string;
   data: EntityData;
@@ -54,17 +49,7 @@ export type SourceData = {
 
 export type SourceReference = string | SourceData;
 
-const dataDir = join(process.cwd(), 'src', 'data');
 const contentDir = join(process.cwd(), 'src', 'content');
-
-const yamlCache = new Map<string, unknown>();
-
-function readYaml<T>(filename: string): T {
-  if (!yamlCache.has(filename)) {
-    yamlCache.set(filename, YAML.parse(readFileSync(join(dataDir, filename), 'utf8')));
-  }
-  return yamlCache.get(filename) as T;
-}
 
 function readMarkdownCollection<T>(collection: string): Record<string, T> | null {
   const dir = join(contentDir, collection);
@@ -101,15 +86,11 @@ function toEntries(record: Record<string, EntityData> = {}): RegistryEntry[] {
 let _peopleEntriesCache: RegistryEntry[] | null = null;
 let _orgEntriesCache: RegistryEntry[] | null = null;
 
-function entities(): EntitiesFile {
-  return readYaml<EntitiesFile>('entities.yaml');
-}
-
 export function getPeopleRegistry(): RegistryEntry[] {
   if (!_peopleEntriesCache) {
     const md = readMarkdownCollection<EntityData>('people');
-    if (md) _peopleEntriesCache = toEntries(md);
-    else _peopleEntriesCache = toEntries(entities().people);
+    if (!md) throw new Error('src/content/people/*.md no encontrado o vacío');
+    _peopleEntriesCache = toEntries(md);
   }
   return _peopleEntriesCache;
 }
@@ -117,8 +98,8 @@ export function getPeopleRegistry(): RegistryEntry[] {
 export function getOrganizationsRegistry(): RegistryEntry[] {
   if (!_orgEntriesCache) {
     const md = readMarkdownCollection<EntityData>('organizations');
-    if (md) _orgEntriesCache = toEntries(md);
-    else _orgEntriesCache = toEntries(entities().organizations);
+    if (!md) throw new Error('src/content/organizations/*.md no encontrado o vacío');
+    _orgEntriesCache = toEntries(md);
   }
   return _orgEntriesCache;
 }
@@ -136,7 +117,8 @@ let _topicsEntriesCache: TopicRegistryEntry[] | null = null;
 export function getTopicsRegistry(): TopicRegistryEntry[] {
   if (!_topicsEntriesCache) {
     const md = readMarkdownCollection<TopicData>('topics');
-    const topics = md ?? readYaml<Record<string, TopicData>>('topics.yaml');
+    if (!md) throw new Error('src/content/topics/*.md no encontrado o vacío');
+    const topics = md;
     _topicsEntriesCache = Object.entries(topics)
       .map(([id, data]) => ({ id, data }))
       .sort((a, b) => a.data.nombre.localeCompare(b.data.nombre, 'es'));
@@ -146,12 +128,8 @@ export function getTopicsRegistry(): TopicRegistryEntry[] {
 
 export function getTopicRegistryById(id: string): TopicRegistryEntry | undefined {
   const md = readMarkdownCollection<TopicData>('topics');
-  if (md) {
-    const data = md[id];
-    return data ? { id, data } : undefined;
-  }
-  const topics = readYaml<Record<string, TopicData>>('topics.yaml');
-  const data = topics[id];
+  if (!md) return undefined;
+  const data = md[id];
   return data ? { id, data } : undefined;
 }
 
@@ -160,8 +138,8 @@ let _sourcesCache: Record<string, SourceData> | null = null;
 export function getSourcesRegistry(): Record<string, SourceData> {
   if (!_sourcesCache) {
     const md = readMarkdownCollection<Omit<SourceData, 'fecha'> & { fecha: string | Date; notas?: string }>('sources');
-    const raw: Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date; notas?: string }> =
-      md ?? readYaml<Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date }>>('sources.yaml');
+    if (!md) throw new Error('src/content/sources/*.md no encontrado o vacío');
+    const raw: Record<string, Omit<SourceData, 'fecha'> & { fecha: string | Date; notas?: string }> = md;
     _sourcesCache = Object.fromEntries(
       Object.entries(raw).map(([id, source]) => [
         id,

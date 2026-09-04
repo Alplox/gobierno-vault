@@ -24,28 +24,19 @@ export function getEditorData() {
   const mdPeople = readMarkdownCollection('people');
   const mdOrgs = readMarkdownCollection('organizations');
   const mdCifras = readMarkdownCollection('cifras');
-  if (mdPeople || mdOrgs || mdCifras) {
-    entities = {
-      people: mdPeople ?? {},
-      organizations: mdOrgs ?? {},
-      cifras: mdCifras ?? {},
-    } as unknown as Record<string, unknown>;
-    // fallback to yaml for missing parts if not fully migrated
-    try {
-      const yamlEnt = YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8'));
-      if (!mdPeople && yamlEnt.people) (entities as Record<string, unknown>).people = yamlEnt.people;
-      if (!mdOrgs && yamlEnt.organizations) (entities as Record<string, unknown>).organizations = yamlEnt.organizations;
-      if (!mdCifras && yamlEnt.cifras) (entities as Record<string, unknown>).cifras = yamlEnt.cifras;
-    } catch {}
-  } else {
-    entities = YAML.parse(readFileSync(join(dataDir, 'entities.yaml'), 'utf8'));
-  }
+  if (!mdPeople && !mdOrgs && !mdCifras) throw new Error('src/content/people|organizations|cifras/*.md no encontrados');
+  entities = {
+    people: mdPeople ?? {},
+    organizations: mdOrgs ?? {},
+    cifras: mdCifras ?? {},
+  } as unknown as Record<string, unknown>;
   let sources: Record<string, unknown>;
   const mdSources = readMarkdownCollection('sources');
-  if (mdSources) sources = mdSources;
-  else sources = YAML.parse(readFileSync(join(dataDir, 'sources.yaml'), 'utf8'));
+  if (!mdSources) throw new Error('src/content/sources/*.md no encontrado');
+  sources = mdSources;
   const mdTopics = readMarkdownCollection('topics');
-  const topicsData = mdTopics ?? YAML.parse(readFileSync(join(dataDir, 'topics.yaml'), 'utf8'));
+  if (!mdTopics) throw new Error('src/content/topics/*.md no encontrado');
+  const topicsData = mdTopics;
   const colectivosData = YAML.parse(readFileSync(join(dataDir, 'colectivos.yaml'), 'utf8')) ?? [];
   const sectoresData = YAML.parse(readFileSync(join(dataDir, 'sectores.yaml'), 'utf8')) ?? [];
 

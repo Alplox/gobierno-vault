@@ -1,14 +1,27 @@
 ---
 import { eventBasename, eventYearFromDate, RELATION_LABELS, countExplicitConnections, type EventConnections, type RelationEdge } from '../lib/relations';
 import { TIPO_LABELS, TIPO_COLORS } from '../lib/eventTypes';
+import { getEventEntities } from '../lib/queries';
+
+interface FilterOption {
+  id: string;
+  label: string;
+}
 
 interface Props {
   events: any[];
   connectionIndex: Map<string, EventConnections>;
   size: 'mini' | 'full';
+  filters?: {
+    topics: FilterOption[];
+    people: FilterOption[];
+    orgs: FilterOption[];
+    tipos: FilterOption[];
+    years: number[];
+  };
 }
 
-const { events, connectionIndex, size } = Astro.props;
+const { events, connectionIndex, size, filters } = Astro.props;
 
 const edgeColorMap: Record<string, string> = {
   contradice: '#ef4444', confirma: '#10b981', cumple: '#10b981',
@@ -153,8 +166,15 @@ for (let i = 0; i < graphEvents.length; i++) {
 
 const markers = [...new Set(graphEdges.map((e) => e.tipo))];
 
-// Build graph data for client-side interactivity
-const graphNodes = graphEvents.map((event, i) => ({
+// Build graph data for client-side interactivity.
+// Campos filtrables (temas/personas/orgs/etiquetas + search normalizado) para los
+// filtros de /graph en force-graph.js. Mini no los usa pero comparte el payload.
+function normalizeGraphSearch(s: string) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+const graphNodes = graphEvents.map((event, i) => {
+  const entities = getEventEntities(event.id);
+  return {
   id: eventBasename(event.id),
   label: event.data.titulo,
   color: TIPO_COLORS[event.data.tipo] ?? '#6b7280',
@@ -164,10 +184,26 @@ const graphNodes = graphEvents.map((event, i) => ({
   fecha: new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' }),
   connections: (() => { const c = connectionIndex.get(eventBasename(event.id)); return c ? countExplicitConnections(c) : 0; })(),
   connected: connectedSet.has(eventBasename(event.id)),
+  temas: event.data.tema ?? [],
+  personas: entities.personas,
+  orgs: entities.organizaciones,
+  etiquetas: event.data.etiquetas ?? [],
+  search: normalizeGraphSearch(
+    [
+      event.data.titulo,
+      ...(event.data.etiquetas ?? []),
+      ...entities.personas,
+      ...entities.organizaciones,
+      ...(event.data.tema ?? []),
+      event.data.tipo,
+      eventBasename(event.id),
+    ].join(' ')
+  ),
   x: positions[i].x,
   y: positions[i].y,
   url: `/events/${eventYearFromDate(event.data.fecha)}/${eventBasename(event.id)}`,
-}));
+};
+});
 
 const graphLinks = graphEdges.map((e) => ({
   source: graphNodes[e.from].id,
@@ -181,7 +217,11 @@ const graphLinks = graphEdges.map((e) => ({
   'relative overflow-hidden rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]',
   size === 'mini' ? 'mb-6' : '',
 ]}>
+  {size === 'mini' && (
+    <a href="/graph" class="absolute right-4 top-4 z-10 rounded-lg border border-base-300 bg-base-100 px-2.5 py-1 text-xs font-semibold text-primary shadow-sm hover:bg-primary/10 transition-colors">Ver grafo completo →</a>
+  )}
   {size === 'full' && (
+  <>
     <div class="border-b border-base-300 px-5 py-3 flex items-center justify-between gap-3 flex-wrap">
       <div>
         <h2 class="text-sm font-semibold text-base-content">Grafo de relaciones</h2>
@@ -192,6 +232,70 @@ const graphLinks = graphEdges.map((e) => ({
         Incluir sin conexiones ({isolatedCount})
       </label>
     </div>
+    {filters && (
+    <form id="graph-filters" class="flex flex-wrap gap-2.5 items-end border-b border-base-300 px-5 py-3" onsubmit="return false;">
+      <div class="w-full sm:w-auto sm:min-w-[200px] sm:flex-1">
+        <label for="graph-q" class="mb-1 block text-[11px] font-semibold text-base-content/70">Búsqueda</label>
+        <input
+          type="search"
+          id="graph-q"
+          placeholder="Título, ID, etiqueta…"
+          autocomplete="off"
+          class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2.5 py-1.5 focus:bg-base-100 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+        />
+      </div>
+      <div class="min-w-[130px] flex-1 sm:flex-none">
+        <label for="graph-tipo" class="mb-1 block text-[11px] font-semibold text-base-content/70">Tipo</label>
+        <select id="graph-tipo" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2 py-1.5">
+          <option value="">Todos</option>
+          {filters.tipos.map((t) => <option value={t.id}>{t.label}</option>)}
+        </select>
+      </div>
+      <div class="min-w-[110px] flex-1 sm:flex-none">
+        <label for="graph-year" class="mb-1 block text-[11px] font-semibold text-base-content/70">Año</label>
+        <select id="graph-year" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2 py-1.5">
+          <option value="">Todos</option>
+          {filters.years.map((y) => <option value={String(y)}>{y}</option>)}
+        </select>
+      </div>
+      <div class="min-w-[140px] flex-1 sm:flex-none">
+        <label for="graph-tema" class="mb-1 block text-[11px] font-semibold text-base-content/70">Tema</label>
+        <select id="graph-tema" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2 py-1.5">
+          <option value="">Todos</option>
+          {filters.topics.map((t) => <option value={t.id}>{t.label}</option>)}
+        </select>
+      </div>
+      <div class="min-w-[140px] flex-1 sm:flex-none">
+        <label for="graph-persona" class="mb-1 block text-[11px] font-semibold text-base-content/70">Persona</label>
+        <select id="graph-persona" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2 py-1.5">
+          <option value="">Todas</option>
+          {filters.people.map((p) => <option value={p.id}>{p.label}</option>)}
+        </select>
+      </div>
+      <div class="min-w-[140px] flex-1 sm:flex-none">
+        <label for="graph-org" class="mb-1 block text-[11px] font-semibold text-base-content/70">Organización</label>
+        <select id="graph-org" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2 py-1.5">
+          <option value="">Todas</option>
+          {filters.orgs.map((o) => <option value={o.id}>{o.label}</option>)}
+        </select>
+      </div>
+      <div class="w-[110px] flex-none">
+        <label for="graph-minconn" class="mb-1 block text-[11px] font-semibold text-base-content/70" title="Nº mínimo de vínculos explícitos">Mín. vínc.</label>
+        <input
+          type="number"
+          id="graph-minconn"
+          min="0"
+          value="0"
+          class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-2.5 py-1.5 focus:bg-base-100 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+        />
+      </div>
+      <div class="flex items-center gap-2 pb-0.5">
+        <button type="button" id="graph-clear" class="hidden text-xs font-medium bg-base-200 text-base-content/80 px-3 py-2 rounded-lg hover:bg-base-300 active:scale-[0.96] transition-[scale,background-color] duration-150 ease-out">Limpiar</button>
+        <span id="graph-count" class="text-[11px] text-base-content/50 whitespace-nowrap" aria-live="polite"></span>
+      </div>
+    </form>
+    )}
+  </>
   )}
   <div id="graph-container" data-width={width} data-height={height} class:list={[
     size === 'mini' ? 'mb-6' : '',
@@ -205,6 +309,7 @@ const graphLinks = graphEdges.map((e) => ({
       </div>
     </div>
   </div>
+  <p id="graph-empty" class="hidden px-5 py-12 text-center text-sm text-base-content/60">Sin eventos para los filtros seleccionados.</p>
   <div class="pointer-events-none absolute bottom-4 right-4 z-10 flex flex-col gap-1">
     <button id="zoom-in" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Acercar">+</button>
     <button id="zoom-out" class="pointer-events-auto flex h-8 w-8 items-center justify-center rounded-lg border border-base-300 bg-base-100 text-base-content/70 shadow-sm hover:bg-base-200 text-sm font-bold" title="Alejar">−</button>

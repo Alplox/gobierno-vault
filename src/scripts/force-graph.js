@@ -27,6 +27,100 @@ function addWindowListener(type, handler) {
   cleanupFns.push(() => window.removeEventListener(type, handler));
 }
 
+// --- Filtros de /graph (solo full + form #graph-filters presente; mini no los usa) ---
+function norm(s) {
+  return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+function readGraphFilters() {
+  const form = document.getElementById('graph-filters');
+  if (!form) return null;
+  const val = (id) => document.getElementById(id)?.value ?? '';
+  return {
+    q: val('graph-q').trim(),
+    tipo: val('graph-tipo'),
+    year: val('graph-year') ? Number(val('graph-year')) : 0,
+    tema: val('graph-tema'),
+    persona: val('graph-persona'),
+    org: val('graph-org'),
+    minConn: Math.max(0, parseInt(document.getElementById('graph-minconn')?.value || '0', 10) || 0),
+  };
+}
+
+// URL <-> controles (vistas compartibles ?q=&tipo=&year=&tema=&persona=&org=&minconn=&aislados=1).
+// Se sincroniza una vez por query distinto: con View Transitions el modulo persiste
+// y una visita nueva puede traer otro query.
+function syncGraphControlsFromURL() {
+  const key = location.search;
+  if (window.__gvGraphURLSynced === key) return;
+  window.__gvGraphURLSynced = key;
+  let sp;
+  try { sp = new URLSearchParams(key); } catch { return; }
+  const set = (id, v) => { const el = document.getElementById(id); if (el && v != null) el.value = v; };
+  set('graph-q', sp.get('q') || '');
+  set('graph-tipo', sp.get('tipo') || '');
+  set('graph-year', sp.get('year') || '');
+  set('graph-tema', sp.get('tema') || '');
+  set('graph-persona', sp.get('persona') || '');
+  set('graph-org', sp.get('org') || '');
+  set('graph-minconn', sp.get('minconn') || '0');
+  const iso = document.getElementById('graph-include-isolated');
+  if (iso) iso.checked = sp.get('aislados') === '1';
+}
+
+function writeGraphURL(f) {
+  const sp = new URLSearchParams();
+  if (f.q) sp.set('q', f.q);
+  if (f.tipo) sp.set('tipo', f.tipo);
+  if (f.year) sp.set('year', String(f.year));
+  if (f.tema) sp.set('tema', f.tema);
+  if (f.persona) sp.set('persona', f.persona);
+  if (f.org) sp.set('org', f.org);
+  if (f.minConn > 0) sp.set('minconn', String(f.minConn));
+  if (document.getElementById('graph-include-isolated')?.checked) sp.set('aislados', '1');
+  const qs = sp.toString();
+  try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '')); } catch { /* noop */ }
+}
+
+function graphFiltersActive(f) {
+  return !!(f.q || f.tipo || f.year || f.tema || f.persona || f.org || f.minConn > 0 ||
+    document.getElementById('graph-include-isolated')?.checked);
+}
+
+function updateGraphUI(f, shown, total) {
+  const count = document.getElementById('graph-count');
+  if (count) count.textContent = `Mostrando ${shown} de ${total}`;
+  document.getElementById('graph-clear')?.classList.toggle('hidden', !graphFiltersActive(f));
+}
+
+// Cablea controles una sola vez por DOM (guard en el form: tras un swap de View
+// Transitions el form es nuevo y hay que re-cablear). Incluye el checkbox de
+// aislados, que vive en el header fuera del form.
+function wireGraphFilters() {
+  const form = document.getElementById('graph-filters');
+  if (!form || form.__gvWired) return;
+  form.__gvWired = true;
+  let searchTimer = 0;
+  form.addEventListener('input', (e) => {
+    const id = e.target?.id;
+    if (id === 'graph-q') {
+      clearTimeout(searchTimer);
+      searchTimer = setTimeout(init, 250);
+    } else if (id === 'graph-minconn') {
+      init();
+    }
+    // selects: los cubre 'change' (algunos navegadores disparan ambos).
+  });
+  form.addEventListener('change', () => init());
+  document.getElementById('graph-include-isolated')?.addEventListener('change', () => init());
+  document.getElementById('graph-clear')?.addEventListener('click', () => {
+    form.reset();
+    const iso = document.getElementById('graph-include-isolated');
+    if (iso) iso.checked = false;
+    init();
+  });
+}
+
 function init() {
   // Debounce del doble init (llamada directa + astro:page-load en la misma carga):
   // si el SVG interactivo acaba de crearse, este init es redundante y solo
@@ -44,6 +138,7 @@ function init() {
   let { nodes: nodesData, links: linksData, size = 'full' } = data;
   if (!nodesData?.length) return;
 
+  const totalNodes = nodesData.length;
   const isMini = size === 'mini';
 
   // Toggle "Incluir sin conexiones" (solo full): por defecto se muestran solo los
@@ -55,7 +150,36 @@ function init() {
     const ids = new Set(nodesData.map((n) => n.id));
     linksData = linksData.filter((l) => ids.has(l.source) && ids.has(l.target));
   }
-  if (!nodesData.length) return;
+
+  // Filtros de /graph (ver helpers arriba): se aplican sobre el resultado del
+  // toggle de aislados y recortan links a nodos visibles.
+  let graphFilters = null;
+  if (!isMini && document.getElementById('graph-filters')) {
+    syncGraphControlsFromURL();
+    graphFilters = readGraphFilters();
+    const q = norm(graphFilters.q);
+    nodesData = nodesData.filter((n) =>
+      (!graphFilters.tipo || n.tipo === graphFilters.tipo) &&
+      (!graphFilters.year || n.year === graphFilters.year) &&
+      (!graphFilters.tema || (n.temas || []).includes(graphFilters.tema)) &&
+      (!graphFilters.persona || (n.personas || []).includes(graphFilters.persona)) &&
+      (!graphFilters.org || (n.orgs || []).includes(graphFilters.org)) &&
+      (!(graphFilters.minConn > 0) || (n.connections || 0) >= graphFilters.minConn) &&
+      (!q || (n.search || norm(n.label)).includes(q))
+    );
+    const ids = new Set(nodesData.map((n) => n.id));
+    linksData = linksData.filter((l) => ids.has(l.source) && ids.has(l.target));
+    writeGraphURL(graphFilters);
+    updateGraphUI(graphFilters, nodesData.length, totalNodes);
+  }
+  wireGraphFilters();
+  if (!nodesData.length) {
+    const skeletonEmpty = container.querySelector('[data-graph-skeleton]');
+    if (skeletonEmpty) skeletonEmpty.style.display = 'none';
+    document.getElementById('graph-empty')?.classList.remove('hidden');
+    return;
+  }
+  document.getElementById('graph-empty')?.classList.add('hidden');
   const W = parseInt(container.dataset.width) || (isMini ? 800 : 1200);
   const H = parseInt(container.dataset.height) || (isMini ? 280 : 600);
   const R = isMini ? 6 : 8;
@@ -625,13 +749,8 @@ function init() {
     cleanupFns.push(() => zoomReset.removeEventListener('click', onZoomReset));
   }
 
-  // Toggle de aislados: re-ejecuta init() (idempotente via cleanup) con el nuevo
-  // filtro. El guard evita duplicar el listener en el doble init de la carga inicial.
-  const includeCb = document.getElementById('graph-include-isolated');
-  if (includeCb && !includeCb.__gvWired) {
-    includeCb.__gvWired = true;
-    includeCb.addEventListener('change', () => init());
-  }
+  // Toggle de aislados + filtros: cableado centralizado en wireGraphFilters()
+  // (corre al inicio de init, antes del return por vacio, para no perderlo).
 }
 
 // Se ejecuta en cada carga de página, incluida la navegación con View Transitions.

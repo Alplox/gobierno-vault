@@ -1,11 +1,11 @@
-// Verifica los gabinetes de entities.yaml contra los anexos de gabinetes de Wikipedia.
+// Verifica los gabinetes de src/content/people/*.md (cargos[]) contra los anexos de gabinetes de Wikipedia.
 // Descarga el wikitexto (con caché local), parsea las tablas de ministros y compara
 // fechas/nombres. Reporte legible; no falla el build (herramienta de auditoría).
 //
 // Uso:      node scripts/verify-gabinete.mjs [--sin-cache]
 // Salida:   resumen por gobierno + listado de discrepancias.
 // Trazabilidad de fuentes por gobierno: TAREAS/GABINETES-VERIFICACION.md
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
 
@@ -132,13 +132,27 @@ function nombresCompatibles(a, b) {
   return comunes >= 2 && comunes >= Math.min(ta.size, tb.size) - 1;
 }
 
+function loadPeopleFromMarkdown() {
+  // Fuente de verdad: src/content/people/*.md (monolito eliminado ago-2026, sin fallback).
+  const dir = join(ROOT, 'src', 'content', 'people');
+  const rec = {};
+  for (const f of readdirSync(dir).filter((f) => f.endsWith('.md'))) {
+    const id = f.replace(/\.md$/, '');
+    const raw = readFileSync(join(dir, f), 'utf8');
+    const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+    if (m) rec[id] = YAML.parse(m[1]);
+  }
+  if (!Object.keys(rec).length) throw new Error('src/content/people/*.md no encontrado o vacío');
+  return rec;
+}
+
 async function main() {
-  const e = YAML.parse(readFileSync(join(ROOT, 'src', 'data', 'entities.yaml'), 'utf8'));
+  const people = loadPeopleFromMarkdown();
   const RE = /^(ministr[oa]|biministr[oa]?)\b/i;
   const EX = /corte|desregulaci[óo]n|\(\d{4}\)|de (china|estados unidos|argentina|brasil|per[uú]|bolivia|ecuador|colombia|venezuela|paraguay|uruguay|m[eé]xico|espa[ñn]a|francia|israel|rusia|russia|jap[oó]n|corea del norte|corea del sur|corea|india|reino unido)\b/i;
 
   const vault = [];
-  for (const [id, p] of Object.entries(e.people)) {
+  for (const [id, p] of Object.entries(people)) {
     for (const c of p.cargos ?? []) {
       const cargo = c.cargo ?? '';
       if (!RE.test(cargo) || EX.test(cargo) || !c.desde) continue;

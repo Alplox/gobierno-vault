@@ -7,7 +7,7 @@
 //   node scripts/fix-prose-wikilinks.mjs --dry-run  # solo reporta
 //   node scripts/fix-prose-wikilinks.mjs --limit 20 # solo los primeros 20 archivos
 //
-// El texto visible cambia al nombre canónico de entities.yaml (la regla elegida:
+// El texto visible cambia al nombre canónico de src/content/people/*.md (la regla elegida:
 // "Kast" → [[people/jose_antonio_kast]] renderiza "José Antonio Kast").
 
 import { readFileSync, writeFileSync } from 'node:fs';

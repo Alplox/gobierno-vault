@@ -6,10 +6,10 @@
 # Convenciones:
 # - Montos en pesos nominales (enteros, sin separador de miles).
 # - Fechas ISO 'YYYY-MM-DD' entre comillas.
-# - Personas: referenciar por ID de entities.yaml (`presidente_id`, `persona_id`,
+# - Personas: referenciar por ID de src/content/people/*.md (`presidente_id`, `persona_id`,
 #   `firmante_id`) — NUNCA nombre plano. src/lib/sueldos.ts resuelve el nombre y
 #   falla el build si el ID no existe.
-# - Fuentes: TODAS las referencias son IDs de sources.yaml (nada de URLs locales).
+# - Fuentes: TODAS las referencias son IDs de src/content/sources/*.md (nada de URLs locales).
 #   `orden_refs` fija la numeración [N] visible; los <SRef n={N} /> resuelven
 #   medio/título/url desde el registro de fuentes.
 # - Cada monto lleva `vigencias` (qué monto rigió cuándo y con qué fuente) para
