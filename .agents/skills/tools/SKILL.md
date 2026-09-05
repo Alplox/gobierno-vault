@@ -89,8 +89,12 @@ fallo y seguir con el siguiente método:
 | Cloudflare | "checking your browser", "Just a moment", "DDoS protection" |
 | Login | "sign in to continue", "log in required" |
 
-Mejora futura opcional de código: incorporar esta clasificación al resumen de fallos de
-`fetch-content.mjs` (hoy solo dice "sitio bloquea por geolocación o rate-limit").
+Desde sep-2026 esta clasificación vive en código (`scripts/lib/soft404.mjs:isSoft404`,
+más 404 blando, título genérico del home y titular que no corresponde al slug de la URL)
+y `fetch-content` la aplica a cada método: un 200 del mirror con la página de error ya no
+cuenta como éxito. Además hay pre-chequeo de origen: 404/410 aborta la cadena (la URL no
+existe), 403 sigue a mirrors (WAF/bot-block, no veredicto — caso Ex-Ante). Nota: `--method`
+no retornaba el éxito en modo único (bug hasta sep-2026); ya corregido.
 
 **Fetch respetuoso:** ante 429/transitorios, backoff exponencial antes de reintentar; jobs batch
 contra un mismo dominio: delay aleatorio 1–3s entre requests (el catálogo de sitemaps usa 300ms

@@ -24,6 +24,7 @@
     "restore": "node scripts/backup/restore.mjs",
     "verify": "node scripts/backup/verify.mjs",
     "verify-gabinete": "node scripts/validate/verify-gabinete.mjs",
+    "validate-sources": "node scripts/validate/validate-sources.mjs",
     "build": "node scripts/validate/validate.mjs && astro build",
     "preview": "pnpm run build && npx wrangler pages dev dist --port 4321",
     "deploy": "pnpm run build && npx wrangler pages deploy dist --project-name gobierno-vault --branch main"

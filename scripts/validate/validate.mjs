@@ -562,6 +562,22 @@ for (const file of allFiles) {
     }
   }
 
+  // IDs no-ASCII en wikilinks (caso 20260902-7, sep-2026: [[sources/clarín-…]]
+  // pasaba en silencio porque WIKILINK_RE y referencedSources solo aceptan
+  // ASCII. El plugin de render (remarkWikiLinks.mjs) usa la misma clase ASCII,
+  // así que tampoco renderizan. `sources` es error (slug ASCII obligatorio);
+  // people/orgs/cifras/events pre-existentes con ñ/acentos solo avisan hasta
+  // su migración (renombrar archivo + refs).
+  for (const m of noCode.matchAll(/\[\[((?:sources?|people|person|organizations?|org|cifras|events?|event))\/([^\]\s]*[^\x00-\x7F][^\]\s]*)\]\]/g)) {
+    const msg = `wikilink con ID no-ASCII [[${m[1]}/${m[2]}]] → ${eventId} (no renderiza; usar slug ASCII, ej. clarin en vez de clarín)`;
+    if (m[1] === 'source' || m[1] === 'sources') {
+      console.error(`✖ ${msg}`);
+      errors++;
+    } else {
+      console.warn(`⚠ ${msg}`);
+    }
+  }
+
   // Regla AGENTS.md n.º 8: toda mención de una persona en el body debe llevar
   // [[people/id]] — no solo la primera. Replica la misma lógica que el fixer
   // (scripts/proseNames.mjs); si queda alguna mención reemplazable es un error

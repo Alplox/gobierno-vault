@@ -12,7 +12,7 @@
  *
  * Flags:
  *   --append   Crea `src/content/sources/<id>.md` directamente (sin colisión, evita editar monolito)
- *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda
+ *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda *   --verify   Si el origen responde 404/410, exige confirmación para continuar
  *   --catalog-only  No hace fetch web: usa los datos del catálogo de sitemaps
  *                   (título/fecha/medio) si la URL está indexada
  *   --search <texto>  Busca en el catálogo local de sitemaps (título/URL/fecha)
@@ -1378,6 +1378,7 @@ async function main() {
   let html = null;
   let jina = null;
   let resolvedUrl = url;
+  let directStatus = 0;
   const skipFetch = catalogOnly || (catalogHit && catalogHit.entry.s === 'news');
   if (catalogHit && !skipFetch && catalogHit.entry.t) {
     logInfo('El catálogo solo trae título aproximado (slug). Intentando fetch para el título real...');
@@ -1386,6 +1387,7 @@ async function main() {
   if (!skipFetch && !flags.has('--mirror')) {
     logInfo(`Obteniendo ${url} ...`);
     const res = await fetchText(url);
+    directStatus = res.status;
     if (res.ok && /<html[\s>]/i.test(res.text)) {
       html = res.text;
       if (!extractHtmlTitle(html)) {
@@ -1410,6 +1412,15 @@ async function main() {
   }
 
   // --- Extraccion (el catálogo gana si el fetch no aporta) --
+  // URL muerta en origen (404/410): el título del espejo/catálogo puede ser
+  // de otra página (caso 20260902-7). Siempre se avisa; con --verify se exige
+  // confirmación para continuar.
+  if (directStatus === 404 || directStatus === 410) {
+    logWarn(`La URL origen responde HTTP ${directStatus} (no existe). Verifica el slug antes de crear la fuente.`);
+    if (flags.has('--verify') && !(await confirm('La URL no existe en origen. ¿Continuar de todos modos?', false))) {
+      process.exit(1);
+    }
+  }
   let titulo = html ? extractHtmlTitle(html) : null;
   let autor = html ? extractHtmlAuthor(html) : null;
   let fecha = html ? extractHtmlDate(html) : null;

@@ -4,7 +4,7 @@ cargo: Seremi de Transportes y Telecomunicaciones del Maule
 cargos:
   - cargo: Seremi de Transportes y Telecomunicaciones del Maule
     organizacion: ministerio_transportes
-    desde: 2026-04-01
+    desde: 2026-03-27  # https://www.vlnradio.cl/noticias/nacional/region-del-maule/2026/03/27/asumen-seremis-de-transportes-bienes-nacionales-y-desarrollo-social-en-el-maule/
 notas: Ex secretario ejecutivo de la CNTC y considerado la 'mano derecha' del
   dirigente camionero Sergio Pérez. Tuvo participación protagónica en las
   negociaciones del paro de camioneros de 2022. También fue seremi de
