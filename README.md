@@ -165,7 +165,7 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - Politica (518)
 - Justicia (368)
 - Economia (262)
-- Defensa y seguridad (249)
+- Defensa y seguridad (250)
 - Administración pública (187)
 - Derechos humanos (152)
 - Proceso legislativo (113)
@@ -187,9 +187,9 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 **Entidades registradas:**
 - Personas: 2181
-- Organizaciones: 1107
+- Organizaciones: 1109
 - Cifras: 29
-- Fuentes: 5157
+- Fuentes: 5159
 - Temas: 75
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 
