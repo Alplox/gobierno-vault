@@ -1213,6 +1213,7 @@
 - [2026/08/20260812-19 - Inmunomédica de Concepción querella a trabajadora que acumula 100 licencias médicas en 8 años: 'la relación laboral es inventada'](src/content/events/2026/08/20260812-19.md) — 2 fuentes
 - [2026/08/20260812-2 - Senado aprueba los tres vetos supresivos de Kast a la megarreforma y cierra su tramitación en el Congreso](src/content/events/2026/08/20260812-2.md) — 5 fuentes
 - [2026/08/20260812-20 - Boric hace autocrítica en la presentación del libro 'La Resaca' de Tironi: 'No fuimos creíbles' en seguridad y los retiros fueron 'un gran error'](src/content/events/2026/08/20260812-20.md) — 3 fuentes
+- [2026/08/20260812-21 - DGA fiscaliza al municipio de Tierra Amarilla por intervenir el río Copiapó; alcalde Zúñiga acusa al Gobierno y el MOP responde](src/content/events/2026/08/20260812-21.md) — 10 fuentes
 - [2026/08/20260812-3 - Kast promulga la Ley Escuelas Protegidas: revisión de mochilas en colegios y mayores facultades docentes, con el lema 'el que nada hace, nada teme'](src/content/events/2026/08/20260812-3.md) — 25 fuentes
 - [2026/08/20260812-4 - Diputados del Partido Cristiano presentan proyectos de resolución para instaurar el Día Nacional de la Oración y el Día Nacional de la Biblia](src/content/events/2026/08/20260812-4.md) — 5 fuentes
 - [2026/08/20260812-5 - Matthei critica la reforma constitucional de la ACOT: 'ha fracasado en todos los países, salvo El Salvador, pero eso no es democracia'](src/content/events/2026/08/20260812-5.md) — 3 fuentes
@@ -1417,6 +1418,7 @@
 - [2026/08/20260827-6 - Gobierno restituye Gabinete de la Primera Dama eliminado en 2022: resolución N°391 formaliza equipo de Pía Adriasola](src/content/events/2026/08/20260827-6.md) — 8 fuentes
 - [2026/08/20260827-7 - Exfuncionarios de Vitacura grabados en acto sexual demandan por $200 millones y juicio contra municipio queda fijado para noviembre de 2027](src/content/events/2026/08/20260827-7.md) — 8 fuentes
 - [2026/08/20260827-8 - Canasta dieciochera llega a $42.984 (+5,4% anual), el asado más caro en cinco años según estudio XTB con precios Odepa](src/content/events/2026/08/20260827-8.md) — 5 fuentes
+- [2026/08/20260827-9 - Fontaine y Couso piden a Kast retirar la reforma de seguridad por riesgo de dictadura constitucional y Arrau los tilda de opinólogos](src/content/events/2026/08/20260827-9.md) — 8 fuentes
 - [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
 - [2026/08/20260828-10 - Gonzalo Blumel arremete contra republicanos por la reforma de seguridad: “¿Cuántos dirigentes viven o han vivido en poblaciones?” y acusa “soberbia”](src/content/events/2026/08/20260828-10.md) — 6 fuentes
 - [2026/08/20260828-11 - Mara Sedini blinda a Kast ante caso Cerimedo: 'No ganó por una campaña de bots', dice que nunca conoció al consultor y descarta mea culpa por ataques a Matthei](src/content/events/2026/08/20260828-11.md) — 5 fuentes

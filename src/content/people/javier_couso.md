@@ -7,5 +7,7 @@ notas: Abogado constitucionalista, director del Doctorado en Derecho de la
   la obligación estatal de proteger a la población, señalando que el artículo 1°
   de la Constitución de 1980 ya establece que 'es deber del Estado resguardar la
   seguridad nacional, dar protección a la población y a la familia' y que 'eso
-  es falso' (entrevista con Al Pan Pan de El Mostrador).
+  es falso' (entrevista con Al Pan Pan de El Mostrador). Junto a Arturo Fontaine
+  pidió en carta en El Mercurio retirar la reforma constitucional de seguridad
+  por riesgo de 'dictadura constitucional' (evento 20260827-9).
 ---
