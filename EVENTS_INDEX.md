@@ -1420,6 +1420,7 @@
 - [2026/08/20260828-10 - Gonzalo Blumel arremete contra republicanos por la reforma de seguridad: “¿Cuántos dirigentes viven o han vivido en poblaciones?” y acusa “soberbia”](src/content/events/2026/08/20260828-10.md) — 6 fuentes
 - [2026/08/20260828-11 - Mara Sedini blinda a Kast ante caso Cerimedo: 'No ganó por una campaña de bots', dice que nunca conoció al consultor y descarta mea culpa por ataques a Matthei](src/content/events/2026/08/20260828-11.md) — 5 fuentes
 - [2026/08/20260828-12 - Niu Qingbao acusa a EE.UU. de creerse 'emperador de América Latina' en carta en El Mercurio: arancel 12,5% a Chile pese a TLC, presiones por cable submarino con China y visas como 'arma'](src/content/events/2026/08/20260828-12.md) — 6 fuentes
+- [2026/08/20260828-13 - Contralora Dorothy Pérez defiende que la ciudadanía pueda fiscalizar a autoridades y funcionarios públicos: 'si uno no quiere ser escrutado, tiene que buscarse otro trabajo'](src/content/events/2026/08/20260828-13.md) — 7 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 16 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
@@ -1429,6 +1430,7 @@
 - [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 - [2026/08/20260830-1 - Republicanos responden a Blumel por “poblaciones”: “Este debate clasista y añejo no le hace bien a Chile” y “discurso cavernícola”](src/content/events/2026/08/20260830-1.md) — 6 fuentes
+- [2026/08/20260830-2 - Alvarado y Núñez encauzan la reforma de seguridad a la Comisión de Constitución y exigen 29 votos con 'realismo legislativo'](src/content/events/2026/08/20260830-2.md) — 6 fuentes
 - [2026/08/20260831-1 - Jefe de la Armada argentina reconoce que el Estrecho de Magallanes pertenece a Chile y contrasta con dichos de su par de la Fuerza Aérea](src/content/events/2026/08/20260831-1.md) — 6 fuentes
 - [2026/08/20260831-2 - Ministro de Seguridad Martín Arrau niega vínculo con Cerimedo y explica que tendencias se instalaron con personas reales](src/content/events/2026/08/20260831-2.md) — 6 fuentes
 - [2026/08/20260831-3 - Oposición reúne 62 firmas para comisión investigadora por caso Cerimedo y apunta a contaminación digital de procesos electorales desde 2020](src/content/events/2026/08/20260831-3.md) — 5 fuentes
@@ -1446,7 +1448,9 @@
 - [2026/09/20260901-6 - Diputada Gazmuri oficia a Contraloría por sueldo de director del Sernac suspendido hace casi un año por Ley Karin](src/content/events/2026/09/20260901-6.md) — 6 fuentes
 - [2026/09/20260901-7 - Renuncia colectiva de 40 militantes al Partido Republicano en Ñuble por 'centralismo asfixiante' y falta de democracia interna](src/content/events/2026/09/20260901-7.md) — 7 fuentes
 - [2026/09/20260901-8 - Corte de Valparaíso acoge amparo de Camila Flores y limita el peritaje de sus dispositivos incautados](src/content/events/2026/09/20260901-8.md) — 5 fuentes
+- [2026/09/20260901-9 - Oficialismo sin 29 votos fuerza a La Moneda a abrir la reforma, Andrade habla de 'descrédito' y HRW pide al Congreso rechazarla](src/content/events/2026/09/20260901-9.md) — 5 fuentes
 - [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 6 fuentes
+- [2026/09/20260902-10 - Vecinos y comunidades mapuche marchan en Lautaro y cortan la Ruta 5 Sur contra el relleno sanitario Pintamahuida](src/content/events/2026/09/20260902-10.md) — 7 fuentes
 - [2026/09/20260902-2 - Corte de Iquique revoca retorno del Clan Chen a Alto Hospicio y restituye a Gendarmería la potestad de traslados](src/content/events/2026/09/20260902-2.md) — 7 fuentes
 - [2026/09/20260902-3 - Ñuble suma 9 homicidios en 2026 (+80% interanual) y contradice balance del seremi que los daba a la baja tras crimen en San Carlos](src/content/events/2026/09/20260902-3.md) — 5 fuentes
 - [2026/09/20260902-4 - Comisión mixta de Inteligencia Económica inicia audiencias por secreto bancario con choque oposición-oficialismo y plan de cuatro sesiones de expertos](src/content/events/2026/09/20260902-4.md) — 6 fuentes

@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 318
+**Total tareas:** 319
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 235 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 236 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 291 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 292 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -301,6 +301,7 @@
 | S-2026-214 | ⬜ | 2026-09-04 | Aduanas — salida Arriaza (evento `20260902-9`) | Nombramiento del titular (concurso ADP) + resultado de sumarios del Informe Final N°599 de Contraloría | `20260902-9` | Origen: <https://www.cooperativa.cl/noticias/pais/organismos-del-estado/contraloria/hacienda-le-pidio-la-renuncia-a-la-directora-de-aduanas-tras-critico/2026-09-03/095000.html> |
 | S-2026-215 | ⬜ | 2026-09-04 | Seguro cesantía — giros adicionales (evento `20260903-7`) | Próximo reporte INE de desempleo — eventual nueva activación de giros si supera en 1 punto el promedio de 4 años | `20260903-7` | Origen: <https://www.spensiones.cl/portal/institucional/594/w3-article-17135.html> |
 | S-2026-216 | ⬜ | 2026-09-05 | Paralización Confech 01-oct — Presupuesto 2027 (evento `20260903-4`) | Verificar si se realiza la paralización del 01-10 por Presupuesto 2027 + adhesiones, recorrido y balance | `20260903-4` | Origen: <https://radio.uchile.cl/2026/09/03/el-gobierno-no-quiere-escuchar-al-movimiento-estudiantil-estudiantes-denuncian-represion-durante-marcha-autorizada/> |
+| S-2026-217 | ⬜ | 2026-09-05 | Relleno Pintamahuida — voto COEVA 08-sep (evento `20260902-10`) | Verificar resultado de la votación de la Comisión de Evaluación Ambiental del 08-sep en Temuco + reacciones | `20260902-10` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2026/09/03/vecinos-y-comunidades-mapuche-protestan-contra-proyecto-de-relleno-sanitario-en-lautaro.shtml> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
