@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 320
+**Total tareas:** 322
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 15 · 2026: 237 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 238 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 293 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 295 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -88,6 +88,7 @@
 | S-2025-012 | ⬜ | 2026-08-27 | Página /gabinete (9-ago-2026) — feature + gaps de | Ministros históricos faltantes en el histórico de carteras: el histórico de varias carteras solo cubre Kast/Boric/Piñ... | — | Origen: página /gabinete (históricos por cartera). |
 | S-2025-013 | ⬜ | 2026-08-10 | Página /gabinete (9-ago-2026) — feature + gaps de | LarrainVial — arista SQM/boletas ideológicamente falsas: el repo corrupcion_chile lista a LarrainVial por boletas ide... | `20250113-1` | Origen: investigación web (10-ago-2026). |
 | S-2025-014 | ⬜ | 2026-08-16 | Patrón "decir y aclarar" — dichos de Kast que el g | Déficit estructural US$13.200M (2025) y proyección US$10.604M (2026) — NO verificable en prensa con esas cifras exact... | — | Origen: revisión de discurso público sobre la megarreforma (16-ago-2026); fuente: DIPRES. |
+| S-2025-015 | ⬜ | 2026-09-05 | Caso alcalde Río Bueno — desenlace de formalización | Audiencia de formalización del alcalde Luis Reyes + 6 imputados por cohecho agravado y lavado de activos (evento 2026... | `20260829-2` `20251222-2` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-de-los-rios/2026/08/29/fiscalia-formalizara-a-alcalde-de-rio-bueno-y-otros-6-sujetos-por-presunto-cohecho-y-lavado-de-activos.shtml> |
 | S-2026-001 | ⬜ | 2026-08-27 | Cuentas Públicas — seguimiento de anuncios | CP 2026 Kast (20260601-5): verificar el cumplimiento de los anuncios (siete fuerzas de tarea de seguridad, secciones ... | `20260601-5` `20260602-5` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-002 | ⬜ | 2026-08-22 | Sugerencias pendientes (para no perderlas) | Oficio de Manouchehri a La Moneda por Cerimedo — respuesta del Ejecutivo (eventos 20260821-8, 20260818-14): el diputa... | `20260821-8` `20260818-14` | Origen: <https://x.com/danimanouchehri/status/2091363540313477503> |
 | S-2026-003 | ⬜ | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Citación de Irarrázaval por el oficio de Jaime Araya — desenlace en Comisión de Futuro y Ciencias (evento 20260821-8)... | `20260821-8` | Origen: <https://www.elciudadano.com/actualidad/diputado-jaime-araya-emplaza-al-jefe-de-asesores-de-kast-a-aclarar-vinculos-con-fernando-cerimedo-exasesor-de-milei-imputado-por-presunto-sicariato-en-bolivia/08/23/> |
@@ -303,6 +304,7 @@
 | S-2026-216 | ⬜ | 2026-09-05 | Paralización Confech 01-oct — Presupuesto 2027 (evento `20260903-4`) | Verificar si se realiza la paralización del 01-10 por Presupuesto 2027 + adhesiones, recorrido y balance | `20260903-4` | Origen: <https://radio.uchile.cl/2026/09/03/el-gobierno-no-quiere-escuchar-al-movimiento-estudiantil-estudiantes-denuncian-represion-durante-marcha-autorizada/> |
 | S-2026-217 | ⬜ | 2026-09-05 | Relleno Pintamahuida — voto COEVA 08-sep (evento `20260902-10`) | Verificar resultado de la votación de la Comisión de Evaluación Ambiental del 08-sep en Temuco + reacciones | `20260902-10` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2026/09/03/vecinos-y-comunidades-mapuche-protestan-contra-proyecto-de-relleno-sanitario-en-lautaro.shtml> |
 | S-2026-218 | ⬜ | 2026-09-05 | DGA fiscaliza a Tierra Amarilla — descargos y resolución (evento `20260812-21`) | Descargos del municipio (8 días hábiles desde ~14-ago) y resolución DGA sobre la intervención del río Copiapó + eventual sanción | `20260812-21` | Origen: <https://www.elquehaydecierto.cl/noticia/sociedad/municipio-intervino-el-rio-copiapo-para-evitar-un-riesgo-y-ahora-enfrenta-una-fisca> |
+| S-2026-219 | ⬜ | 2026-09-05 | Paro recolectores Temuco — normalización con nueva concesionaria (evento `20260827-10`) | Normalización del servicio desde el 01-sep con la nueva concesionaria + cumplimiento de sueldos y dotación | `20260827-10` | Origen: <https://www.temuco.cl/temuco-activa-plan-de-mitigacion-tras-conflicto-entre-privados-y-trabajadores-por-recoleccion-de-basura/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

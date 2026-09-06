@@ -185,6 +185,7 @@ const WHITELIST_MEDIOS = new Set([
   'Municipalidad de Antofagasta',
   'Federación CCU',
   'Municipalidad de Coquimbo',
+  'Municipalidad de Temuco',
   'Partido Republicano de Chile',
   'Partido Por la Democracia',
   'Superintendencia de Pensiones',

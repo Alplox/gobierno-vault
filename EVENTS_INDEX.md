@@ -1221,7 +1221,7 @@
 - [2026/08/20260812-7 - Junaeb anuncia la digitalización gradual de la TNE: licitación en 2026 y fin progresivo del plástico](src/content/events/2026/08/20260812-7.md) — 5 fuentes
 - [2026/08/20260812-8 - Cadem edición 680: cae a 40% la percepción de que la delincuencia ha aumentado, con cambio metodológico en la pregunta y un 2025 sin mediciones](src/content/events/2026/08/20260812-8.md) — 6 fuentes
 - [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
-- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 29 fuentes
+- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 33 fuentes
 - [2026/08/20260813-10 - Duras críticas al canal de TV del Senado por publicitar una entrevista a la senadora Camila Flores, investigada por fraude al fisco en el caso cuota Flores](src/content/events/2026/08/20260813-10.md) — 1 fuente
 - [2026/08/20260813-11 - Rabat encarga la Reforma Procesal Civil a Trinidad Zegers, abogada que juró hace 4 meses: críticas por falta de experiencia y defensa de la cartera](src/content/events/2026/08/20260813-11.md) — 11 fuentes
 - [2026/08/20260813-12 - Corte de Apelaciones confirma 15 años de cárcel a Miguel Krassnoff por la desaparición del estudiante Dignaldo Araneda Pizzini (1974): sus penas superan los mil años](src/content/events/2026/08/20260813-12.md) — 3 fuentes
@@ -1402,6 +1402,8 @@
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-10 - Suspenden clases en Liceo de Mulchén por hallazgo de amenazas de muerte y rito en baño](src/content/events/2026/08/20260826-10.md) — 9 fuentes
 - [2026/08/20260826-11 - Corte Suprema confirma baja inmediata de carabinero por presunto hurto de $12 mil en Pronto Copec de Concepción](src/content/events/2026/08/20260826-11.md) — 6 fuentes
+- [2026/08/20260826-12 - Punta Arenas y Río Gallegos emiten declaración conjunta de hermandad y rechazan expresiones que alimenten desconfianza tras dichos sobre el Estrecho de Magallanes](src/content/events/2026/08/20260826-12.md) — 5 fuentes
+- [2026/08/20260826-13 - Falla informática expone granja de bots que inflaba apoyo a Milei en X: cuentas con etiquetas 'Reply1:'/'Reply7:' en publicaciones de Santiago Oría](src/content/events/2026/08/20260826-13.md) — 10 fuentes
 - [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
 - [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
 - [2026/08/20260826-4 - Arica: detecciones de ingresos irregulares suben 62,3% y Gobierno precisa que no equivale a nuevos cruces fronterizos](src/content/events/2026/08/20260826-4.md) — 8 fuentes
@@ -1411,6 +1413,7 @@
 - [2026/08/20260826-8 - En solo seis meses como diputado, Enrique Bassaletti ha recibido más de $33 millones en pensiones de Dipreca además de su dieta](src/content/events/2026/08/20260826-8.md) — 9 fuentes
 - [2026/08/20260826-9 - Gobierno pone en marcha FOGAES ampliado a 80 mil cupos y tope 6.000 UF y lanza subsidio Tramo 4.000](src/content/events/2026/08/20260826-9.md) — 3 fuentes
 - [2026/08/20260827-1 - Frente Amplio oficia a Migraciones por registros de Arica: pide aclarar metodología del alza de 62,3%](src/content/events/2026/08/20260827-1.md) — 8 fuentes
+- [2026/08/20260827-10 - Recolectores de basura de Temuco inician paro indefinido ante despidos y rebaja de sueldos por cambio de concesionaria; municipio activa plan de mitigación](src/content/events/2026/08/20260827-10.md) — 6 fuentes
 - [2026/08/20260827-2 - DW contrasta la cárcel La Laguna con Aldea Campesina: vecinos sin pavimentación ni alcantarillado denuncian mitigaciones incumplidas desde 2017](src/content/events/2026/08/20260827-2.md) — 15 fuentes
 - [2026/08/20260827-3 - Gobierno informa récord de 140.412 empresas creadas entre enero y julio de 2026 y lo califica de histórico](src/content/events/2026/08/20260827-3.md) — 11 fuentes
 - [2026/08/20260827-4 - Marta Lagos califica propuesta constitucional de Arrau como 'principio del fin del pinochetismo' y pone nota 2 al Gobierno y 1 a la oposición](src/content/events/2026/08/20260827-4.md) — 7 fuentes
@@ -1457,7 +1460,7 @@
 - [2026/09/20260901-9 - Oficialismo sin 29 votos fuerza a La Moneda a abrir la reforma, Andrade habla de 'descrédito' y HRW pide al Congreso rechazarla](src/content/events/2026/09/20260901-9.md) — 5 fuentes
 - [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 6 fuentes
 - [2026/09/20260902-10 - Vecinos y comunidades mapuche marchan en Lautaro y cortan la Ruta 5 Sur contra el relleno sanitario Pintamahuida](src/content/events/2026/09/20260902-10.md) — 7 fuentes
-- [2026/09/20260902-2 - Corte de Iquique revoca retorno del Clan Chen a Alto Hospicio y restituye a Gendarmería la potestad de traslados](src/content/events/2026/09/20260902-2.md) — 7 fuentes
+- [2026/09/20260902-2 - Corte de Iquique revoca retorno del Clan Chen a Alto Hospicio y restituye a Gendarmería la potestad de traslados](src/content/events/2026/09/20260902-2.md) — 8 fuentes
 - [2026/09/20260902-3 - Ñuble suma 9 homicidios en 2026 (+80% interanual) y contradice balance del seremi que los daba a la baja tras crimen en San Carlos](src/content/events/2026/09/20260902-3.md) — 5 fuentes
 - [2026/09/20260902-4 - Comisión mixta de Inteligencia Económica inicia audiencias por secreto bancario con choque oposición-oficialismo y plan de cuatro sesiones de expertos](src/content/events/2026/09/20260902-4.md) — 6 fuentes
 - [2026/09/20260902-5 - Operación Rutify: Fiscalía Supraterritorial y PDI detienen y formalizan a joven de 18 años por ciberataques y venta de datos de organismos públicos](src/content/events/2026/09/20260902-5.md) — 6 fuentes
@@ -1474,7 +1477,7 @@
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
 - [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 11 fuentes
 - [2026/09/20260903-9 - Cadem Plaza Pública N°686: aprobación de Kast cae a 34% y desaprobación sube a 61%, peor registro del mandato](src/content/events/2026/09/20260903-9.md) — 5 fuentes
-- [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con arraigo y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 12 fuentes
+- [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con arraigo y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 31 fuentes
 
 ## 2025
 
