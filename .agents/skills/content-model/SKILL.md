@@ -65,8 +65,13 @@ impacto:
 relaciones:
   sucesor: 20260101-1
   causa: 20251215-3
+  # Un tipo admite VARIOS targets como lista YAML (hermanos de serie):
+  mismo_contexto:
+    - 20260820-9
+    - 20260814-3
   # ver tipos: contradice | confirma | cumple | incumple | amplia | corrige | rectifica
   #           | responde_a | deriva_en | provoca | cita | reemplaza | actualiza
+  #           | mismo_contexto (casos paralelos de la misma serie — ej. 20260814-12)
 
 # (opcional) Respaldo ASCII de imagen — evidencia visual preservada
 # El SVG se genera en herramienta externa (ej. https://ezascii.com/image-to-ascii)
@@ -120,9 +125,16 @@ Ver `content.config.ts` (enum), `editorData.ts`, `lib/eventTypes.ts`.
 
 ### Tipos de relación (`relaciones`)
 
-`contradice` | `confirma` | `cumple` | `incumple` | `amplia` | `corrige` | `rectifica` | `responde_a` | `deriva_en` | `provoca` | `cita` | `reemplaza` | `actualiza`
+`contradice` | `confirma` | `cumple` | `incumple` | `amplia` | `corrige` | `rectifica` | `responde_a` | `deriva_en` | `provoca` | `cita` | `reemplaza` | `actualiza` | `mismo_contexto`
 
-No declarar la misma conexión en ambas direcciones (ej. A `deriva_en` B y B `responde_a` A). `src/lib/relations.ts:getEventConnections` deduplica quedándose con el outgoing; la etiqueta temporal (Siguiente/Anterior) se calcula por fecha real.
+- **`mismo_contexto`** = casos paralelos de la misma serie o del mismo debate (p. ej. detenciones sucesivas por amenazas en redes: `20260904-1` → `20260820-9`/`20260814-3`/`20260617-2`). **No es solo inferido del grafo** (`relations.ts` lo genera como inferencia), también se declara explícito cuando la conexión de serie es intencional.
+- **Sintaxis multi-target**: un mismo tipo acepta varias IDs como lista YAML (`mismo_contexto: [20260820-9, 20260814-3]` o bloque `- ID` por línea). `content.config.ts` schema: `z.record(string, string | string[])`.
+- No declarar la misma conexión en ambas direcciones (ej. A `deriva_en` B y B `responde_a` A). `src/lib/relations.ts:getEventConnections` deduplica quedándose con el outgoing; la etiqueta temporal (Siguiente/Anterior) se calcula por fecha real.
+- `validate` NO valida el tipo de relación: solo comprueba que el ID destino exista (`scripts/validate/validate.mjs` + `content.config.ts`). Un tipo desconocido renderiza la etiqueta cruda (`RELATION_LABELS[edge.tipo] ?? edge.tipo` en `relations.ts`); usa los tipos de la lista para un render limpio.
+
+### Relaciones en prosa (complemento)
+
+Las relaciones frontmatter alimentan el grafo/rail; el body debe **también** mencionar los eventos con wikilink explícito `[[events/20260618-3]]` (no ID desnudo) en la narrativa (p. ej. sección Contexto). Ambos coexisten: frontmatter = conexión estructural, prosa = justificación narrativa.
 
 ## Wikilinks (body markdown)
 
@@ -135,7 +147,7 @@ No declarar la misma conexión en ambas direcciones (ej. A `deriva_en` B y B `re
 | `[[events/20260720-1]]` | `<a class="event-ref">Título</a>` | `[[events/20260720-1]]` |
 
 - Fuentes se numeran por primera aparición; repeticiones reutilizan el número. Genera anchor `#ref-N`.
-- `[[cifras/...]]` es la única forma válida (`src/content/cifras/*.md`); la variante singular `[[cifra/...]]` está eliminada — no usar. Cifras canónicas viven en `src/content/cifras/*.md` con `aliases: []` y `unidad_default` canónica; `validate` avisa si usas alias de concepto (`desempleo`→`tasa_desocupacion`) y `queries.ts:resolveCifraConcept` agrupa serie por canónico (`/stats/tasa_desocupacion`). La fecha la da `event.data.fecha`, no el ID.
+- `[[cifras/...]]` es la única forma válida (`src/content/cifras/*.md`); la variante singular `[[cifra/...]]` está eliminada — no usar. **Solo cifras de carácter nacional/pais** (series INE/BCN/gobierno, presupuesto nacional, votaciones del Congreso): una cifra regional/municipal/local (montos de una causa judicial, presupuesto comunal, conteos de una comuna) **NO** va a `src/content/cifras/` ni como `[[cifras/...]]` — se escribe como valor en prosa con su fuente inline (`$174 millones`). Cifras canónicas viven en `src/content/cifras/*.md` con `aliases: []` y `unidad_default` canónica; `validate` avisa si usas alias de concepto (`desempleo`→`tasa_desocupacion`) y `queries.ts:resolveCifraConcept` agrupa serie por canónico (`/stats/tasa_desocupacion`). La fecha la da `event.data.fecha`, no el ID.
 - Solo wikilinks explícitos `[[events/ID]]` enlazan eventos (no hay auto-enlace de IDs desnudos `20260618-3` — no es markdown puro).
 
 ### Medios de prensa en prosa
@@ -144,7 +156,7 @@ Medios = organizaciones `tipo: medio_comunicacion` en `src/content/organizations
 
 - `nombre` canónico = lo que renderiza el wikilink (ej. `BioBioChile`, `El País (Chile)`). `src/content/sources/*.md:medio` debe usar el mismo nombre.
 - `tipo: red_social` para Reddit/X/YouTube — solo complementarias, nunca fuente única. Metodología en `social-media.md`.
-- ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `src/content/organizations/*.md` antes de crear (~1052 orgs, ~54 medios).
+- ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `src/content/organizations/*.md` antes de crear (~1052 orgs, ~54 medios). Ojo: el filename no siempre es predecible (`24_horas.md` vs `24horas.md`): buscar además por `nombre:` con `grep` antes de crear.
 - Helper: `pnpm run add-source -- <URL>` mapea dominio → medio y genera `src/content/sources/<id>.md`.
 
 ### Formato de citas (declaraciones)
@@ -174,7 +186,7 @@ El body es narrativa factual, no bitácora de decisiones del editor. **Nunca** i
 - Justificaciones sobre la selección de fuentes, cobertura o sesgo percibido.
 - Auto-referencia al proceso de edición ("este evento documenta X para reducir sesgo").
 
-La decisión de incluir o no una fuente y su justificación va al **mensaje de commit**, a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[organizations/eldesconcierto]] replicó el matiz de SERMIG [[sources/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate/validate.mjs` (patrón `nota editorial`).
+La decisión de incluir o no una fuente y su justificación va al **resumen que se entrega al usuario** (quien redacta el mensaje de commit — el agente nunca commitea), a `TAREAS/` (si queda pendiente) o a la discusión de PR, nunca al body del evento. Si un medio replica el matiz oficial, se reporta el hecho ("[[organizations/eldesconcierto]] replicó el matiz de SERMIG [[sources/...]]"), sin calificar su línea editorial ni teorizar sobre sesgo. Violaciones caen bajo `event-rules.md:13` y `scripts/validate/validate.mjs` (patrón `nota editorial`).
 
 ### Campo `svg_backup` (respaldo ASCII de imagen)
 

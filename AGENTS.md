@@ -15,6 +15,8 @@ Base de conocimiento estatica sobre eventos de gobierno en Chile. Astro 7 + Tail
 
 **Ciclo TAREAS:** detectar pendiente → registrar en `TAREAS/PENDIENTES/YYYY.md` (o `SEGUIMIENTO/YYYY.md` con ID `S-YYYY-NNN` y **`Origen: <url>`**) → retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md` sin parsear títulos → crear evento con `.agents/skills/content-model/SKILL.md#plantilla-copiable` + 5 fuentes de medios distintos (nunca red social sola) + `src/content/people|organizations` si era 2019-2021 → `pnpm run generate-index` + `pnpm run generate-seguimiento-index` → **eliminar la fila** de `TAREAS/` (no queda `✅`). Usuario valida con `pnpm run build`.
 
+**El agente NUNCA genera commits git** (`git add`/`git commit`/push): deja los cambios listos en el working tree y el usuario decide cuándo committear. La justificación de selección/omisión de fuentes va en el resumen que se entrega al usuario (o en el mensaje de commit que él redacte), nunca en el body del evento (regla 4).
+
 ## Arquitectura
 
 ```
@@ -74,11 +76,13 @@ Cuerpo con wikilinks inline...
 | `[[cifras/concepto/valor/unidad]]` | `[[cifras/fallecidos/5/personas]]` |
 | `[[events/20260720-1]]` | `[[events/20260720-1]]` |
 
+`[[cifras/...]]` solo para cifras de caracter nacional/pais (series INE/BCN/gobierno, votaciones del Congreso); cifras locales/regionales van como valor en prosa, nunca como wikilink — ver `.agents/skills/content-model/SKILL.md`.
+
 Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada. Detalle completo (medios en prosa, formato citas, `svg_backup`, cifras en disputa, votaciones con fuente oficial) en `.agents/skills/content-model/SKILL.md`.
 
 ## Reglas rapidas (detalle en `.agents/skills/event-rules/SKILL.md`)
 
-1. **5 fuentes** de medios distintos por evento; nunca red social como fuente unica. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (tablas Presidencia/ministerios/BCN/Cámara/Senado) para reducir reinterpretación.
+1. **5 fuentes** de medios distintos por evento (mínimo, sin techo: agotar las que coincidan con el body antes de descartar — ver `event-rules.md` → Máximo de fuentes); nunca red social como fuente unica. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (tablas Presidencia/ministerios/BCN/Cámara/Senado) para reducir reinterpretación.
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
 3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[people/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
 4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`).

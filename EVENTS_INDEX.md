@@ -1434,6 +1434,7 @@
 - [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 - [2026/08/20260829-1 - Manouchehri (PS) en Concepción: la megarreforma no se hizo cargo del desempleo y anticipa déficit, deuda y recortes](src/content/events/2026/08/20260829-1.md) — 6 fuentes
+- [2026/08/20260829-2 - Fiscalía pedirá formalizar al alcalde de Río Bueno y a otras 6 personas por cohecho agravado y lavado de activos: audiencia fijada para el 19 de octubre](src/content/events/2026/08/20260829-2.md) — 9 fuentes
 - [2026/08/20260830-1 - Republicanos responden a Blumel por “poblaciones”: “Este debate clasista y añejo no le hace bien a Chile” y “discurso cavernícola”](src/content/events/2026/08/20260830-1.md) — 6 fuentes
 - [2026/08/20260830-2 - Alvarado y Núñez encauzan la reforma de seguridad a la Comisión de Constitución y exigen 29 votos con 'realismo legislativo'](src/content/events/2026/08/20260830-2.md) — 6 fuentes
 - [2026/08/20260831-1 - Jefe de la Armada argentina reconoce que el Estrecho de Magallanes pertenece a Chile y contrasta con dichos de su par de la Fuerza Aérea](src/content/events/2026/08/20260831-1.md) — 6 fuentes
@@ -1473,6 +1474,7 @@
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
 - [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 11 fuentes
 - [2026/09/20260903-9 - Cadem Plaza Pública N°686: aprobación de Kast cae a 34% y desaprobación sube a 61%, peor registro del mandato](src/content/events/2026/09/20260903-9.md) — 5 fuentes
+- [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con arraigo y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 12 fuentes
 
 ## 2025
 
@@ -1540,6 +1542,7 @@
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md) — 6 fuentes
 - [2025/12/20251219-2 - Columna de opinión advierte que enfoque de seguridad de Kast profundizará fallas estructurales](src/content/events/2025/12/20251219-2.md) — 2 fuentes
 - [2025/12/20251221-1 - Kast presidente electo en entrevista a T13: baja la expectativa de las expulsiones, pide a funcionarios del acuerdo de sector público 'pensarlo bien' y anuncia viaje a Ecuador](src/content/events/2025/12/20251221-1.md) — 2 fuentes
+- [2025/12/20251222-2 - Segundo allanamiento de la Fiscalía en la Municipalidad de Río Bueno: incautan documentación física y digital en causa por cohecho y corrupción](src/content/events/2025/12/20251222-2.md) — 8 fuentes
 - [2025/12/20251223-1 - Tribunal declara culpable al exalcalde de Rancagua Juan Ramón Godoy por cohecho y fraude al fisco](src/content/events/2025/12/20251223-1.md) — 2 fuentes
 - [2025/12/20251224-1 - Equipo de Kast confirma criterio anti-nepotismo: sin ministros con familiares en el Congreso, con posibles excepciones](src/content/events/2025/12/20251224-1.md) — 5 fuentes
 - [2025/12/20251224-2 - Comisión para la Fijación de Remuneraciones eleva el sueldo del Presidente a $11,07 millones y Kast evita comprometer una rebaja: 'es una norma legal'](src/content/events/2025/12/20251224-2.md) — 3 fuentes

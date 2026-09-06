@@ -25,7 +25,7 @@ Scripts (ver `scripts/lib/gvault-util.mjs` para el formato compartido):
 Convenciones:
 - `public/backup/` se COMMITEA al repo (no esta en `.gitignore`): el respaldo queda descargable
   por cualquiera desde GitHub con un solo clic Y el footer del sitio lo sirve en `/backup/` sin
-  CPU extra en build. Al generar respaldo nuevo, commitea `public/backup/`. NO hay `.gvault` en
+  CPU extra en build. Al generar respaldo nuevo, deja `public/backup/` listo en el working tree — el agente NO genera commits (regla AGENTS.md); el usuario decide cuándo commitear. NO hay `.gvault` en
   la raiz: la unica copia vive en `public/backup/` (evita duplicacion; `public` está en
   `EXCLUDE_DIRS` de `backup.mjs` para que el respaldo no se incluya a sí mismo).
 - Ademas, se recomienda que quien descargue una copia la guarde FUERA del repo (USB, Drive, otras
