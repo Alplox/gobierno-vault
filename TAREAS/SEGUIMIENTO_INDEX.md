@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 322
+**Total tareas:** 323
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 238 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 239 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 295 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 296 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -305,6 +305,7 @@
 | S-2026-217 | ⬜ | 2026-09-05 | Relleno Pintamahuida — voto COEVA 08-sep (evento `20260902-10`) | Verificar resultado de la votación de la Comisión de Evaluación Ambiental del 08-sep en Temuco + reacciones | `20260902-10` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2026/09/03/vecinos-y-comunidades-mapuche-protestan-contra-proyecto-de-relleno-sanitario-en-lautaro.shtml> |
 | S-2026-218 | ⬜ | 2026-09-05 | DGA fiscaliza a Tierra Amarilla — descargos y resolución (evento `20260812-21`) | Descargos del municipio (8 días hábiles desde ~14-ago) y resolución DGA sobre la intervención del río Copiapó + eventual sanción | `20260812-21` | Origen: <https://www.elquehaydecierto.cl/noticia/sociedad/municipio-intervino-el-rio-copiapo-para-evitar-un-riesgo-y-ahora-enfrenta-una-fisca> |
 | S-2026-219 | ⬜ | 2026-09-05 | Paro recolectores Temuco — normalización con nueva concesionaria (evento `20260827-10`) | Normalización del servicio desde el 01-sep con la nueva concesionaria + cumplimiento de sueldos y dotación | `20260827-10` | Origen: <https://www.temuco.cl/temuco-activa-plan-de-mitigacion-tras-conflicto-entre-privados-y-trabajadores-por-recoleccion-de-basura/> |
+| S-2026-220 | ⬜ | 2026-09-06 | Los 4 Fantásticos — juicio y sentencias (evento `20260813-19`) | Juicio oral y sentencias contra Los Cojos de La Legua + extradición del líder del TdA para Sudamérica | `20260813-19` | Origen: <https://www.dw.com/es/los-4-fantásticos-el-cartel-narco-que-surge-en-chile/a-78435396> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

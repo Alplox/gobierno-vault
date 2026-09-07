@@ -1231,6 +1231,7 @@
 - [2026/08/20260813-16 - Daniel Mas presenta en seminario CLAPES UC las medidas mineras del gobierno: meta de 6 millones de toneladas de cobre, mesa de exploración y reactivación del tratado con Argentina](src/content/events/2026/08/20260813-16.md) — 3 fuentes
 - [2026/08/20260813-17 - Denuncian por maltrato laboral a la delegada presidencial de Quillota, Pilar Cuevas: al menos tres funcionarios de su propio equipo presentan acusaciones bajo la Ley Karin](src/content/events/2026/08/20260813-17.md) — 3 fuentes
 - [2026/08/20260813-18 - Corte Suprema anula el Decreto N° 24 del Minsal: cae la advertencia 'evita su consumo' en publicidad de alimentos con sellos](src/content/events/2026/08/20260813-18.md) — 3 fuentes
+- [2026/08/20260813-19 - Formalizan a 19 integrantes de Los Cojos de La Legua y revelan la estructura de Los 4 Fantásticos, el primer cartel narco chileno con vínculos con el Tren de Aragua](src/content/events/2026/08/20260813-19.md) — 6 fuentes
 - [2026/08/20260813-2 - Natalia Duco renuncia como ministra del Deporte junto al subsecretario Andrés Otero tras el caso del auto fiscal](src/content/events/2026/08/20260813-2.md) — 16 fuentes
 - [2026/08/20260813-3 - Verificación: el historial de ausencias de Kast como diputado (41% de inasistencias, 2002-2018) confirma parcialmente la crítica del hilo de la Ley de Incendios](src/content/events/2026/08/20260813-3.md) — 5 fuentes
 - [2026/08/20260813-4 - Tribunal Constitucional acoge parcialmente los requerimientos contra la megarreforma: inconstitucionales normas tributarias y ambientales](src/content/events/2026/08/20260813-4.md) — 6 fuentes
@@ -1402,7 +1403,7 @@
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-10 - Suspenden clases en Liceo de Mulchén por hallazgo de amenazas de muerte y rito en baño](src/content/events/2026/08/20260826-10.md) — 9 fuentes
 - [2026/08/20260826-11 - Corte Suprema confirma baja inmediata de carabinero por presunto hurto de $12 mil en Pronto Copec de Concepción](src/content/events/2026/08/20260826-11.md) — 6 fuentes
-- [2026/08/20260826-12 - Punta Arenas y Río Gallegos emiten declaración conjunta de hermandad y rechazan expresiones que alimenten desconfianza tras dichos sobre el Estrecho de Magallanes](src/content/events/2026/08/20260826-12.md) — 5 fuentes
+- [2026/08/20260826-12 - Punta Arenas y Río Gallegos emiten declaración conjunta de hermandad y rechazan expresiones que alimenten desconfianza tras dichos sobre el Estrecho de Magallanes](src/content/events/2026/08/20260826-12.md) — 7 fuentes
 - [2026/08/20260826-13 - Falla informática expone granja de bots que inflaba apoyo a Milei en X: cuentas con etiquetas 'Reply1:'/'Reply7:' en publicaciones de Santiago Oría](src/content/events/2026/08/20260826-13.md) — 10 fuentes
 - [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
 - [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
@@ -1414,6 +1415,8 @@
 - [2026/08/20260826-9 - Gobierno pone en marcha FOGAES ampliado a 80 mil cupos y tope 6.000 UF y lanza subsidio Tramo 4.000](src/content/events/2026/08/20260826-9.md) — 3 fuentes
 - [2026/08/20260827-1 - Frente Amplio oficia a Migraciones por registros de Arica: pide aclarar metodología del alza de 62,3%](src/content/events/2026/08/20260827-1.md) — 8 fuentes
 - [2026/08/20260827-10 - Recolectores de basura de Temuco inician paro indefinido ante despidos y rebaja de sueldos por cambio de concesionaria; municipio activa plan de mitigación](src/content/events/2026/08/20260827-10.md) — 6 fuentes
+- [2026/08/20260827-11 - Peso chileno es la única moneda latinoamericana del índice MSCI que se deprecia frente al dólar en 2026, con una caída de 1,4%](src/content/events/2026/08/20260827-11.md) — 5 fuentes
+- [2026/08/20260827-12 - Diputado César Valenzuela (PS) pide retirar la reforma de seguridad y acusa que entrega poderes autoritarios al Presidente](src/content/events/2026/08/20260827-12.md) — 6 fuentes
 - [2026/08/20260827-2 - DW contrasta la cárcel La Laguna con Aldea Campesina: vecinos sin pavimentación ni alcantarillado denuncian mitigaciones incumplidas desde 2017](src/content/events/2026/08/20260827-2.md) — 15 fuentes
 - [2026/08/20260827-3 - Gobierno informa récord de 140.412 empresas creadas entre enero y julio de 2026 y lo califica de histórico](src/content/events/2026/08/20260827-3.md) — 11 fuentes
 - [2026/08/20260827-4 - Marta Lagos califica propuesta constitucional de Arrau como 'principio del fin del pinochetismo' y pone nota 2 al Gobierno y 1 a la oposición](src/content/events/2026/08/20260827-4.md) — 7 fuentes
@@ -1477,7 +1480,7 @@
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
 - [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 11 fuentes
 - [2026/09/20260903-9 - Cadem Plaza Pública N°686: aprobación de Kast cae a 34% y desaprobación sube a 61%, peor registro del mandato](src/content/events/2026/09/20260903-9.md) — 5 fuentes
-- [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con arraigo y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 31 fuentes
+- [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con medidas cautelares y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 33 fuentes
 
 ## 2025
 
