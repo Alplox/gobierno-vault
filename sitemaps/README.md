@@ -3,26 +3,26 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 2/9/2026, 17:28:28
+- **Última sincronización:** 6/9/2026, 22:48:55
 - **Medios registrados:** 352
-- **Artículos indexados:** 8.037.900
+- **Artículos indexados:** 8.042.905
 
 ## Por medio
 
 | Medio | Artículos |
 | --- | --- |
 | Radio Bío Bío | 1.171.889 |
-| Emol | 1.112.624 |
-| Meganoticias | 434.231 |
-| RFI Español | 395.539 |
+| Emol | 1.112.978 |
+| Meganoticias | 434.508 |
+| RFI Español | 395.809 |
 | El Ciudadano | 304.989 |
-| Radio Agricultura | 299.266 |
-| Chilevisión | 281.622 |
-| El Dínamo | 251.763 |
-| France 24 | 235.364 |
-| CNN Chile | 227.387 |
+| Radio Agricultura | 299.597 |
+| Chilevisión | 281.964 |
+| El Dínamo | 251.861 |
+| France 24 | 235.634 |
+| CNN Chile | 227.609 |
 | The Clinic | 192.281 |
-| 24 Horas | 187.345 |
+| 24 Horas | 187.721 |
 | Radio Universidad de Chile | 108.165 |
 | Mediabanco | 107.003 |
 | PortalPortuario | 105.322 |
@@ -34,56 +34,56 @@
 | Nuevo Poder | 56.351 |
 | Tierramarillano | 52.215 |
 | Está Pasando | 51.334 |
-| Diario Lago Ranco | 51.048 |
+| Diario Lago Ranco | 51.099 |
 | REDIMIN | 48.319 |
-| La Hora | 44.640 |
+| La Hora | 44.808 |
 | La Hora | 44.480 |
 | Diario El Ranco | 42.218 |
 | Mi Radio LS | 40.135 |
 | El Observador | 38.528 |
 | El Calbucano | 34.196 |
-| Epicentro Chile | 33.939 |
+| Epicentro Chile | 34.033 |
 | Portal Minero | 32.906 |
 | Radio Las Nieves | 32.126 |
-| Fundación Terram | 30.826 |
+| Fundación Terram | 30.838 |
 | Portal Frutícola | 29.957 |
 | Piensa Chile | 29.809 |
 | Nostálgica | 29.744 |
-| El Sol de Iquique | 29.287 |
+| El Sol de Iquique | 29.310 |
 | El Contraste | 28.978 |
-| Radio Imagina | 28.720 |
-| Diario Antofagasta | 27.265 |
-| UDLA | 26.851 |
+| Radio Imagina | 28.739 |
+| Diario Antofagasta | 27.280 |
+| UDLA | 26.853 |
 | El Noticiero del Huasco | 26.018 |
-| Diario Regional Aysén | 25.156 |
-| Canal 9 | 24.011 |
+| Diario Regional Aysén | 25.201 |
+| Canal 9 | 24.249 |
 | El Maule Informa | 23.293 |
-| Diario de Puerto Montt | 22.102 |
+| Diario de Puerto Montt | 22.137 |
 | El Maipo | 21.039 |
 | El Clarín | 20.721 |
-| UCSC | 20.617 |
+| UCSC | 20.618 |
 | Diario Talca | 20.421 |
 | La Nación | 19.866 |
 | Linares en Línea | 19.827 |
 | Timeline | 19.812 |
 | La Nación | 19.655 |
 | Frontera Norte | 19.517 |
+| HolaNews | 18.758 |
 | El Magallánico | 18.666 |
-| Central Noticia | 18.387 |
-| Sabes.cl | 18.226 |
-| HolaNews | 18.209 |
-| Ex-Ante | 18.148 |
+| Central Noticia | 18.447 |
+| Sabes.cl | 18.316 |
+| Ex-Ante | 18.173 |
 | Diario El Pulso | 18.105 |
 | Diario Angamos | 18.004 |
 | El Quinto Poder | 17.724 |
 | Somos Chile | 17.544 |
 | Senado de Chile | 17.355 |
-| Radio Maray | 16.877 |
+| Radio Maray | 16.978 |
 | Universidad Adolfo Ibáñez | 15.656 |
 | Diario El Longino | 15.263 |
 | Vilas Radio | 15.178 |
-| ITV Patagonia | 14.837 |
-| Pontificia Universidad Católica de Valparaíso | 14.621 |
+| ITV Patagonia | 14.846 |
+| Pontificia Universidad Católica de Valparaíso | 14.632 |
 | Diario Sur Noticias | 14.389 |
 | Universidad Católica del Norte | 14.366 |
 | Radio Nuevo Mundo | 14.355 |
@@ -96,21 +96,21 @@
 | La Voz de los que Sobran | 12.113 |
 | Portal RedSalud | 12.069 |
 | Música y Noticias | 12.027 |
-| El Periscopio | 11.970 |
-| VLN Radio | 11.515 |
+| El Periscopio | 12.022 |
+| VLN Radio | 11.680 |
 | SENDA | 11.049 |
 | Radio UdeC | 10.999 |
 | Novena Digital | 10.673 |
+| Infogate | 10.667 |
 | Diario Chile | 10.649 |
 | AmCham Chile | 10.640 |
-| Infogate | 10.611 |
 | Publimicro | 10.293 |
 | Central Web | 10.009 |
 | La Cuarta | 9922 |
 | Antofagasta Noticias | 9658 |
+| Diario de Valdivia | 9611 |
 | Radio Paulina | 9583 |
 | Diario Curicó | 9564 |
-| Diario de Valdivia | 9543 |
 | Quilpué Online | 9262 |
 | Ministerio del Medio Ambiente | 9225 |
 | Universidad Autónoma de Chile | 9001 |
@@ -134,14 +134,14 @@
 | Universidad de los Lagos | 6669 |
 | Ecosistemas | 6633 |
 | La Batalla de Maipú | 6623 |
+| Diario de Osorno | 6621 |
 | Coquimbo Noticias | 6613 |
 | Página 19 | 6610 |
 | Desenfoque | 6575 |
-| Diario de Osorno | 6571 |
 | Diario El Centro | 6559 |
 | La Fontana | 6482 |
-| USM | 6165 |
-| Fast Check CL | 6142 |
+| USM | 6167 |
+| Fast Check CL | 6158 |
 | Alerta Noticias Temuco | 6133 |
 | Tus Noticias | 6112 |
 | UTE USACH Noticias | 5894 |
@@ -153,20 +153,20 @@
 | El Siglo | 5483 |
 | Atacama Noticias | 5445 |
 | El Siglo | 5429 |
-| Ministerio del Trabajo | 5401 |
-| Reporte Agrícola | 5383 |
+| Reporte Agrícola | 5410 |
+| Ministerio del Trabajo | 5403 |
 | CR2 | 5308 |
 | Entérate Hoy | 5239 |
-| CEP Chile | 5039 |
+| CEP Chile | 5040 |
 | Ministerio de Relaciones Exteriores | 4988 |
 | Región Visual | 4958 |
 | El Coquimbano | 4877 |
 | Gobierno UDD | 4854 |
 | JUNJI | 4723 |
 | El Morro de Arica | 4552 |
-| Gobierno Regional de Tarapacá | 4401 |
-| Chile Travel | 4361 |
-| Insular FM | 4102 |
+| Gobierno Regional de Tarapacá | 4403 |
+| Chile Travel | 4376 |
+| Insular FM | 4188 |
 | La Máquina Medio | 4038 |
 | Chile País Minero | 3943 |
 | SUBTEL | 3832 |
@@ -175,11 +175,11 @@
 | Sala de Prensa | 3495 |
 | El Ovallino | 3351 |
 | Antofacity | 3337 |
+| Diario El Día | 3165 |
 | Colegio Médico de Chile | 3134 |
 | Antofagasta al Día | 3114 |
-| Diario El Día | 2994 |
 | Cóndor | 2785 |
-| Ñuble Online | 2730 |
+| Ñuble Online | 2745 |
 | Colegio San Ignacio | 2663 |
 | Ministerio de Vivienda | 2650 |
 | Ministerio de Transportes y Telecomunicaciones | 2549 |
@@ -221,6 +221,7 @@
 | Oceana Chile | 908 |
 | Defensoría de la Niñez | 894 |
 | The Grange School | 880 |
+| Diario Financiero | 863 |
 | Radio Interamericana | 847 |
 | Tuki | 840 |
 | La Tendencia | 819 |
@@ -228,7 +229,6 @@
 | Pulso Público | 754 |
 | SIP Red de Colegios | 750 |
 | Aconcagua Digital | 732 |
-| Diario Financiero | 689 |
 | El Informador Chile | 670 |
 | Vergara 240 | 662 |
 | Diario El Cautín | 605 |
@@ -248,7 +248,7 @@
 | ADN Radio | 400 |
 | SOCHED | 397 |
 | RedSalud | 388 |
-| Contingencia Chile | 382 |
+| Contingencia Chile | 384 |
 | SENAPRED | 359 |
 | Colegio Alemán de Santiago | 354 |
 | Instituto de la Construcción | 354 |
@@ -258,10 +258,10 @@
 | El Mostrador | 297 |
 | Fonasa | 270 |
 | El Arrebato | 268 |
-| Publimetro | 254 |
+| Publimetro | 256 |
 | Diario El Gong | 246 |
+| Redacción | 226 |
 | Fundación Legado Chile | 217 |
-| Redacción | 215 |
 | Contapapaya | 204 |
 | Arauco | 190 |
 | Colegio Tabancura | 160 |
