@@ -252,6 +252,7 @@ const WHITELIST_MEDIOS = new Set([
   'Towards Data Science (Medium)',
   'InSight Crime',
   'OECO (Observatorio Ecuatoriano de Crimen Organizado)',
+  'OGMDH-Chile (Observatorio de Gobernanza Migratoria y Derechos Humanos)',
   'Banco Mundial',
   'Vergara 240 (Escuela de Periodismo UDP)',
   'Hudson Rock',

@@ -555,6 +555,7 @@
 - [2026/03/20260313-2 - Orden de $160 millones en frutas y verduras para La Moneda tensiona el discurso de austeridad](src/content/events/2026/03/20260313-2.md) — 5 fuentes
 - [2026/03/20260315-1 - Ministro Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'](src/content/events/2026/03/20260315-1.md) — 3 fuentes
 - [2026/03/20260316-1 - Inauguracion del Escudo Fronterizo en Chacalluta y orden de construir zanja](src/content/events/2026/03/20260316-1.md) — 7 fuentes
+- [2026/03/20260316-2 - Kast llama a prófugos a entregarse en Arica tras megaoperativo con 2.905 detenidos en tres días](src/content/events/2026/03/20260316-2.md) — 15 fuentes
 - [2026/03/20260317-1 - Senador Macaya comparte imagen generada con IA que muestra avances falsos de la zanja fronteriza](src/content/events/2026/03/20260317-1.md) — 5 fuentes
 - [2026/03/20260317-2 - Kast explica frase 'Chile se cae a pedazos' con graffitis, incidentes en aeropuerto y déficit educativo](src/content/events/2026/03/20260317-2.md) — 1 fuente
 - [2026/03/20260318-1 - Gobierno de Kast impulsa un 'reseteo': recortes a ministerios, retiro de 43 decretos de Medio Ambiente y de la negociación ramal](src/content/events/2026/03/20260318-1.md) — 3 fuentes
@@ -1447,7 +1448,7 @@
 - [2026/08/20260831-2 - Ministro de Seguridad Martín Arrau niega vínculo con Cerimedo y explica que tendencias se instalaron con personas reales](src/content/events/2026/08/20260831-2.md) — 6 fuentes
 - [2026/08/20260831-3 - Oposición reúne 62 firmas para comisión investigadora por caso Cerimedo y apunta a contaminación digital de procesos electorales desde 2020](src/content/events/2026/08/20260831-3.md) — 5 fuentes
 - [2026/08/20260831-4 - Indagan robo de computadores al Conservador de Concón Carlos Swett, imputado en el caso cuota Flores](src/content/events/2026/08/20260831-4.md) — 5 fuentes
-- [2026/08/20260831-5 - Kast defiende en Cooperativa su asistencia al Foro Madrid ('¿Por qué no puedo ir?') en medio de críticas del oficialismo y la oposición](src/content/events/2026/08/20260831-5.md) — 8 fuentes
+- [2026/08/20260831-5 - Kast defiende en Cooperativa su asistencia al Foro Madrid ('¿Por qué no puedo ir?') en medio de críticas del oficialismo y la oposición](src/content/events/2026/08/20260831-5.md) — 10 fuentes
 - [2026/08/20260831-6 - La Tercera revela los financistas de Porcel TV: Golborne, exministro de Pinochet y exasesor de Kaiser entre los nuevos socios](src/content/events/2026/08/20260831-6.md) — 5 fuentes
 - [2026/08/20260831-7 - IPI cae 5,1% en julio por minería y manufacturas y analistas piden al Gobierno aterrizar la meta de crecimiento de 4%](src/content/events/2026/08/20260831-7.md) — 15 fuentes
 - [2026/08/20260831-8 - Alcalde Agustín Iglesias responde a Axel Kaiser en X por migración: 'Tu único acercamiento al fenómeno es el delivery'](src/content/events/2026/08/20260831-8.md) — 5 fuentes
@@ -1483,6 +1484,7 @@
 - [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con medidas cautelares y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 33 fuentes
 - [2026/09/20260904-2 - Fuga en Copiapó: condenado por homicidio autorizado por el Juzgado de Garantía a salir sin custodia al bautizo de su hijo elude la supervisión y permanece prófugo; Arrau cuestiona al tribunal](src/content/events/2026/09/20260904-2.md) — 7 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
+- [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 7 fuentes
 
 ## 2025
 
