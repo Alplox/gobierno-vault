@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 325
+**Total tareas:** 324
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 241 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 240 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 296 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 295 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -93,7 +93,6 @@
 | S-2026-002 | ⬜ | 2026-08-22 | Sugerencias pendientes (para no perderlas) | Oficio de Manouchehri a La Moneda por Cerimedo — respuesta del Ejecutivo (eventos 20260821-8, 20260818-14): el diputa... | `20260821-8` `20260818-14` | Origen: <https://x.com/danimanouchehri/status/2091363540313477503> |
 | S-2026-003 | ⬜ | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Citación de Irarrázaval por el oficio de Jaime Araya — desenlace en Comisión de Futuro y Ciencias (evento 20260821-8)... | `20260821-8` | Origen: <https://www.elciudadano.com/actualidad/diputado-jaime-araya-emplaza-al-jefe-de-asesores-de-kast-a-aclarar-vinculos-con-fernando-cerimedo-exasesor-de-milei-imputado-por-presunto-sicariato-en-bolivia/08/23/> |
 | S-2026-004 | 🟡 | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión investigadora de José Montalva por manipulación digital y Cerimedo — aprobada 02-sep-2026 (evento 20260902-1) | `20260821-8` `20260902-1` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/08/25/algoritmos-bots-y-pagos-la-cruzada-del-congreso-para-destapar-la-influencia-de-cerimedo-en-chile.shtml> |
-| S-2026-005 | ⬜ | 2026-08-25 | Sugerencias pendientes (para no perderlas) | Reacción oficial chilena al tuit de Petro que acusa manipulación de la elección de Kast (evento 20260824-2): al cierr... | `20260824-2` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/08/24/petro-arremete-nuevamente-contra-chile-tras-caso-cerimedo-y-acusa-que-eleccion-de-kast-fue-manipulada.shtml> |
 | S-2026-007 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Declaración testimonial de Nadia Beller en Argentina por coimas ANDIS (evento 20260818-14): según Beller, Cerimedo le... | `20260818-14` | Origen: <https://www.laizquierdadiario.com/Caso-Cerimedo-Nadia-Beller-podria-declarar-en-Argentina-lo-que-sabe-de-las-coimas-de-Karina> |
 | S-2026-008 | ⬜ | 2026-08-24 | Sugerencias pendientes (para no perderlas) | Foto del equipo de Cerimedo (2022) — pendientes residuales tras el desmentido de Fast Check (evento 20260821-8): el f... | `20260821-8` | Origen: <https://www.instagram.com/barricada_informativa_cl/p/DcZWBa5BeYt/> |
 | S-2026-009 | ⬜ | 2026-08-24 | Sugerencias pendientes (para no perderlas) | Escurrimiento de cenizas de termoeléctricas en Tocopilla tras el aluvión — resultados de fiscalización (evento 202608... | `20260818-3` | Origen: <https://g5noticias.cl/2026/08/24/alerta-ambiental-en-tocopilla-jaime-araya-exige-fiscalizacion-y-advierte-riesgo-para-ecosistemas-y-la-salud-por-escurrimiento-de-cenizas-de-termoelectricas-al-mar/> |
