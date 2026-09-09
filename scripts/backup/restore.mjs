@@ -2,19 +2,22 @@ import { readFileSync, mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 import { parseBackup, verifyManifest, entryBytes } from '../lib/gvault-util.mjs';
 
-const file = process.argv[2];
+// pnpm reenvía el `--` literal (pnpm run restore -- <file>), se filtra para
+// que ambos formatos funcionen: con y sin separador.
+const args = process.argv.slice(2).filter((a) => a !== '--');
+const file = args[0];
 const getFlag = (name) => {
-  const i = process.argv.indexOf(name);
-  return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : undefined;
+  const i = args.indexOf(name);
+  return i >= 0 && args[i + 1] ? args[i + 1] : undefined;
 };
 const dest = getFlag('--dest') || process.cwd();
-const testOnly = process.argv.includes('--test') || process.argv.includes('--dry-run');
+const testOnly = args.includes('--test') || args.includes('--dry-run');
 
-if (!file || process.argv.includes('--help') || process.argv.includes('-h')) {
+if (!file || args.includes('--help') || args.includes('-h')) {
   console.log(`
 Restaura un respaldo .gvault a disco.
 
-Uso:  node scripts/restore.mjs <archivo.gvault> [flags]
+Uso:  node scripts/backup/restore.mjs <archivo.gvault> [flags]
 
 Flags:
   --dest <ruta>    Directorio destino (default: carpeta actual)

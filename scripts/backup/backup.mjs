@@ -24,15 +24,19 @@ const RESTORE_ONELINER =
 // Directorios / archivos regenerables o irrelevantes: nunca entran al respaldo.
 // 'public' es salida web (incluye la copia del respaldo que genera este script).
 const EXCLUDE_DIRS = new Set(['node_modules', 'dist', '.git', '.astro', '.wrangler', 'public']);
-const EXCLUDE_FILES = new Set(['.DS_Store']);
+// SEGUIMIENTO_INDEX.md se excluye por nombre (puede aparecer a cualquier
+// profundidad): es regenerable con pnpm run generate-seguimiento-index.
+const EXCLUDE_FILES = new Set(['.DS_Store', 'SEGUIMIENTO_INDEX.md']);
 
-// Diálogo de ayuda
-if (process.argv.includes('--help') || process.argv.includes('-h')) {
+// Diálogo de ayuda (pnpm reenvía el `--` literal: pnpm run backup -- --shallow;
+// se filtra para que ambos formatos funcionen)
+const ARGV = process.argv.slice(2).filter((a) => a !== '--');
+if (ARGV.includes('--help') || ARGV.includes('-h')) {
   console.log(`
 Respaldo de Gobierno Vault — genera UN archivo público (sin contraseña),
 comprimido con Brotli e íntegro (checksum SHA-256 verificable).
 
-Uso:  node scripts/backup.mjs [flags]
+Uso:  node scripts/backup/backup.mjs [flags]
 
 Flags:
   --out <prefijo>   Prefijo de nombre (default: gob-vault-backup-YYYY-MM-DD)
@@ -43,8 +47,8 @@ Genera:  public/backup/<prefijo>.light.gvault  → solo el contenido actual
          (markdown + datos + config, sin dist/) + manifest.json
 
 Verificar/restaurar el archivo resultante:
-  node scripts/verify.mjs   public/backup/<archivo.gvault>
-  node scripts/restore.mjs  public/backup/<archivo.gvault> [--dest <ruta>]
+  node scripts/backup/verify.mjs   public/backup/<archivo.gvault>
+  node scripts/backup/restore.mjs  public/backup/<archivo.gvault> [--dest <ruta>]
 `);
   process.exit(0);
 }
@@ -73,7 +77,6 @@ const ROOT_FILES = [
   'package.json',
   'pnpm-lock.yaml',
   'astro.config.mjs',
-  'tailwind.config.mjs',
   'tsconfig.json',
   'wrangler.jsonc',
   '.npmrc',
@@ -81,10 +84,21 @@ const ROOT_FILES = [
   '.gitignore',
   'AGENTS.md',
   'README.md',
-  'EVENTS_INDEX.md',
+  // EVENTS_INDEX.md NO entra: se regenera con pnpm run generate-index
+  // desde src/ + TAREAS/ (ambos ya incluidos en el respaldo).
+  // sitemaps/ (catálogo JSONL de prensa) NO entra a propósito:
+  //   - es regenerable: pnpm run sitemaps-sync (<medio>) re-sincroniza desde los
+  //     sitemaps web y pnpm run sitemaps-index regenera README/MEDIOS/_manifest;
+  //   - tiene su propio snapshot dedicado: sitemaps/sitemaps.gvault
+  //     (pnpm run sitemaps-backup) que sí contiene los JSONL;
+  //   - los JSONL no se commitean (decisión 2026-08-07, sitemaps/.gitignore).
+  // Los scripts que lo manejan (scripts/sitemaps/) sí van en el respaldo.
   'TAREAS',
-  'TEMPLATE.md',
   '.agents',
+  'scripts',
+  // .telegram-scrape: solo los scripts (scrape.py, extract.py). posts.json (~37MB)
+  // y posts.md (~35MB) están commiteados pero NO entran a propósito: inflarían el
+  // .gvault público a ~51MB (limite blando 50MB de GitHub).
   '.telegram-scrape/scrape.py',
   '.telegram-scrape/extract.py',
 ];
@@ -96,6 +110,9 @@ function collectFiles(shallow) {
   let plaintextBytes = 0;
 
   function add(absRel) {
+    // Exclusión en cualquier profundidad (no solo raíces): así archivos como
+    // TAREAS/SEGUIMIENTO_INDEX.md (regenerable) tampoco entran.
+    if (isExcludedRel(absRel)) return;
     const abs = join(root, absRel);
     if (!existsSync(abs)) return;
     const st = statSync(abs);
@@ -227,10 +244,10 @@ function formatBytes(n) {
 }
 
 // ---- main ----
-const has = (f) => process.argv.includes(f);
+const has = (f) => ARGV.includes(f);
 const getFlag = (name) => {
-  const i = process.argv.indexOf(name);
-  return i >= 0 && process.argv[i + 1] ? process.argv[i + 1] : undefined;
+  const i = ARGV.indexOf(name);
+  return i >= 0 && ARGV[i + 1] ? ARGV[i + 1] : undefined;
 };
 const shallow = has('--shallow');
 const outPrefix = getFlag('--out') || `gob-vault-backup-${new Date().toISOString().slice(0, 10)}`;
@@ -278,5 +295,5 @@ console.log('  ✔ public/backup/manifest.json');
 console.log('      SHA-256 del archivo: ' + fileSha + '  (' + formatBytes(bytes) + ')');
 
 console.log('\nListo. Verifica el archivo generado:');
-console.log(`  node scripts/verify.mjs  public/backup/${baseName}`);
+console.log(`  node scripts/backup/verify.mjs  public/backup/${baseName}`);
 console.log('');

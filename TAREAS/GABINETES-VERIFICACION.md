@@ -145,9 +145,10 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 
 ## Verificación automática
 
-`pnpm run verify-gabinete` (`scripts/verify-gabinete.mjs`) descarga los anexos de Wikipedia
+`pnpm run verify-gabinete` (`scripts/validate/verify-gabinete.mjs`) descarga los anexos de Wikipedia
 (con caché en `sitemaps/.cache/gabinete-wiki/`, `--sin-cache` para forzar), parsea las
-tablas de ministros y compara cada nombramiento fechado de `entities.yaml` contra ellas.
+tablas de ministros y compara cada nombramiento fechado de `src/content/people/*.md`
+(campo `cargos[]`) contra ellas.
 Reporta: exactos, diferencias de fecha, registros solo en el vault y filas solo en el
 anexo. Última ejecución (20-ago-2026): **509/557 exactos**; las diferencias restantes son
 artefactos conocidos del parser (filas de continuación con rowspan) o casos ya resueltos

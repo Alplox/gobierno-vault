@@ -14,8 +14,14 @@ SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requier
 dependencias nuevas.
 
 Scripts (ver `scripts/lib/gvault-util.mjs` para el formato compartido):
-- `pnpm run backup` — genera UN archivo `.light.gvault` (solo contenido actual: `src/**` +
-  docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`, `public/`) DIRECTO en
+- `pnpm run backup` — genera UN archivo `.light.gvault` (contenido actual: `src/**` +
+  `scripts/` + docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`,
+  `public/`). Índices regenerables quedan FUERA: `EVENTS_INDEX.md` (`pnpm run
+  generate-index`) y `TAREAS/SEGUIMIENTO_INDEX.md` (`pnpm run
+  generate-seguimiento-index`); sus fuentes (`src/` + `TAREAS/`) sí van. `sitemaps/`
+  tampoco entra: es regenerable (`sitemaps-sync`/`sitemaps-index`) y tiene su propio
+  snapshot `sitemaps/sitemaps.gvault` (`pnpm run sitemaps-backup`) con los JSONL.
+  DIRECTO en
   `public/backup/` (ubicacion canonica, SE COMMITEA) junto con `manifest.json` (`archivo`,
   `url`, `tamano`, `sha256` del archivo completo).
 - `pnpm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).

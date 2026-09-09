@@ -76,7 +76,7 @@ const currentPath = Astro.url.pathname;
 // One-liner de verificación de integridad de un .gvault (solo Node, sin el proyecto).
 // Se renderiza en el footer; vive aquí para no escribir `{`/`}` como texto en el
 // template (Astro los interpretaría como expresiones).
-// OJO: este one-liner también vive en scripts/backup.mjs (VERIFY_ONELINER,
+// OJO: este one-liner también vive en scripts/backup/backup.mjs (VERIFY_ONELINER,
 // cabecera de cada .gvault). Mantenerlos IDENTICOS.
 const GV_VERIFY_CMD = `node -e "const{readFileSync}=require('fs'),{createHash}=require('crypto'),{brotliDecompressSync}=require('zlib');const t=readFileSync(process.argv[1],'utf8'),a=t.lastIndexOf('===METADATA==='),n1=t.indexOf('\\n',a),n2=t.indexOf('\\n',n1+1),m=JSON.parse(t.slice(n1+1,n2)),c=Buffer.from(t.slice(n2+1),'base64');if(createHash('sha256').update(c).digest('hex')!==m.sha256){console.error('CORRUPTO, descarta este archivo');process.exit(1)}console.log('OK, integro:',m.kind,m.fileCount,'archivos')" <nombre.gvault>`;
 
