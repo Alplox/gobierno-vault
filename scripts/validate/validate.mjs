@@ -135,6 +135,7 @@ const WHITELIST_MEDIOS = new Set([
   'Defensoría de la Niñez',
   'Instituto de Previsión Social (IPS)',
   'Poder Judicial de Chile',
+  'Corporación de Asistencia Judicial Metropolitana',
   'Tribunal de la Libre Competencia',
   'Tribunal de Defensa de la Libre Competencia',
   'Fiscalía Nacional Económica',
@@ -142,10 +143,15 @@ const WHITELIST_MEDIOS = new Set([
   'FinCEN (Departamento del Tesoro de EE.UU.)',
   'Departamento de Estado de EE.UU.',
   'Electronic Frontier Foundation (EFF)',
+  'American Jewish Committee (AJC)',
   'IRS (Servicio de Impuestos Internos de EE.UU.)',
   'Unidad de Información Financiera de Italia (UIF - Banca d Italia)',
   'SAG',
   'Servicio Electoral (Servel)',
+  'CEPAL',
+  'PNUD Chile',
+  'Red de Integridad y Estado Abierto',
+  'X (anteriormente Twitter)',
   'Servicio de Evaluación Ambiental',
   'Dirección de Presupuestos (DIPRES)',
   'Ministerio del Medio Ambiente',
@@ -161,6 +167,7 @@ const WHITELIST_MEDIOS = new Set([
   'Biblioteca del Congreso Nacional (Ley Chile)',
   'Comisión Económica para América Latina y el Caribe (CEPAL)',
   'Subsecretaría de Telecomunicaciones',
+  'Subsecretaría de Previsión Social',
   'Diario Oficial de la República de Chile',
   'Cuerpo de Bomberos de Chile',
   'BCN Historia de la Ley',
@@ -172,6 +179,7 @@ const WHITELIST_MEDIOS = new Set([
   'El Universo',
   'Actualidad Jurídica DOE',
   'Portal de Datos Abiertos del Estado (datos.gob.cl)',
+  'DocDigital (doc.digital.gob.cl)',
   'Portal de Transparencia',
   'Delegación Presidencial Regional de La Araucanía',
   'Delegación Presidencial Regional de Antofagasta',
@@ -181,6 +189,7 @@ const WHITELIST_MEDIOS = new Set([
   'Municipalidad de Antofagasta',
   'Federación CCU',
   'Municipalidad de Coquimbo',
+  'Municipalidad de Temuco',
   'Partido Republicano de Chile',
   'Partido Por la Democracia',
   'Superintendencia de Pensiones',
@@ -247,6 +256,7 @@ const WHITELIST_MEDIOS = new Set([
   'Towards Data Science (Medium)',
   'InSight Crime',
   'OECO (Observatorio Ecuatoriano de Crimen Organizado)',
+  'OGMDH-Chile (Observatorio de Gobernanza Migratoria y Derechos Humanos)',
   'Banco Mundial',
   'Vergara 240 (Escuela de Periodismo UDP)',
   'Hudson Rock',
@@ -555,6 +565,22 @@ for (const file of allFiles) {
         // puntual sin registro: permitido, pero si parece typo de canónico/alias cercano se avisa con sugerencia leve
         // No se incrementa errors para no romper build; solo informativo
       }
+    }
+  }
+
+  // IDs no-ASCII en wikilinks (caso 20260902-7, sep-2026: [[sources/clarín-…]]
+  // pasaba en silencio porque WIKILINK_RE y referencedSources solo aceptan
+  // ASCII. El plugin de render (remarkWikiLinks.mjs) usa la misma clase ASCII,
+  // así que tampoco renderizan. `sources` es error (slug ASCII obligatorio);
+  // people/orgs/cifras/events pre-existentes con ñ/acentos solo avisan hasta
+  // su migración (renombrar archivo + refs).
+  for (const m of noCode.matchAll(/\[\[((?:sources?|people|person|organizations?|org|cifras|events?|event))\/([^\]\s]*[^\x00-\x7F][^\]\s]*)\]\]/g)) {
+    const msg = `wikilink con ID no-ASCII [[${m[1]}/${m[2]}]] → ${eventId} (no renderiza; usar slug ASCII, ej. clarin en vez de clarín)`;
+    if (m[1] === 'source' || m[1] === 'sources') {
+      console.error(`✖ ${msg}`);
+      errors++;
+    } else {
+      console.warn(`⚠ ${msg}`);
     }
   }
 

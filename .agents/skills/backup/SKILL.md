@@ -13,9 +13,21 @@ respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son a
 SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requiere
 dependencias nuevas.
 
+Compresion: `BROTLI_PARAM_QUALITY 11` (max) + `BROTLI_PARAM_LGWIN 24` (ventana 16MB, no
+el default 22 de 4MB): el payload (~12-15MB y creciendo) excede la ventana por defecto y
+subirla deja que el match de contexto cruce archivos (-5% medido 2026-09). La
+descompresion es param-independiente: restore y one-liners no cambian. Si el payload
+supera ~16MB, subir LGWIN a 26 (64MB, maximo de Node); win25/26 no aportan hoy.
+
 Scripts (ver `scripts/lib/gvault-util.mjs` para el formato compartido):
-- `pnpm run backup` — genera UN archivo `.light.gvault` (solo contenido actual: `src/**` +
-  docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`, `public/`) DIRECTO en
+- `pnpm run backup` — genera UN archivo `.light.gvault` (contenido actual: `src/**` +
+  `scripts/` + docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`,
+  `public/`). Índices regenerables quedan FUERA: `EVENTS_INDEX.md` (`pnpm run
+  generate-index`) y `TAREAS/SEGUIMIENTO_INDEX.md` (`pnpm run
+  generate-seguimiento-index`); sus fuentes (`src/` + `TAREAS/`) sí van. `sitemaps/`
+  tampoco entra: es regenerable (`sitemaps-sync`/`sitemaps-index`) y tiene su propio
+  snapshot `sitemaps/sitemaps.gvault` (`pnpm run sitemaps-backup`) con los JSONL.
+  DIRECTO en
   `public/backup/` (ubicacion canonica, SE COMMITEA) junto con `manifest.json` (`archivo`,
   `url`, `tamano`, `sha256` del archivo completo).
 - `pnpm run verify -- <archivo.gvault>` — comprueba integridad (uso publico).
@@ -25,7 +37,7 @@ Scripts (ver `scripts/lib/gvault-util.mjs` para el formato compartido):
 Convenciones:
 - `public/backup/` se COMMITEA al repo (no esta en `.gitignore`): el respaldo queda descargable
   por cualquiera desde GitHub con un solo clic Y el footer del sitio lo sirve en `/backup/` sin
-  CPU extra en build. Al generar respaldo nuevo, commitea `public/backup/`. NO hay `.gvault` en
+  CPU extra en build. Al generar respaldo nuevo, deja `public/backup/` listo en el working tree — el agente NO genera commits (regla AGENTS.md); el usuario decide cuándo commitear. NO hay `.gvault` en
   la raiz: la unica copia vive en `public/backup/` (evita duplicacion; `public` está en
   `EXCLUDE_DIRS` de `backup.mjs` para que el respaldo no se incluya a sí mismo).
 - Ademas, se recomienda que quien descargue una copia la guarde FUERA del repo (USB, Drive, otras

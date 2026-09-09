@@ -18,10 +18,10 @@
 ## Resumen
 
 - **Total de sitios de prensa listados:** 885
-- ✅ En catálogo local: **399**
+- ✅ En catálogo local: **405**
 - 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **70**
 - 🔒 Verificados sin sitemap: **2**
-- ⬜ Pendientes de sincronizar: **414**
+- ⬜ Pendientes de sincronizar: **408**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -35,7 +35,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **(Empresa) Apex Pymes** | `apexpymes.cl` | — | watchlist | Solo feeds proxy activos (feeds nativos inactivos) |
 | ✅ | **(Empresa) Contapapaya** | `contapapaya.cl` | — | database | sitemap en catálogo (contapapaya) |
 | ⬜ | **(Empresa) Logros Servicios Financieros** | `empresaslogros.cl` | — | database | Servicios financieros y contables, con artículos sobre finanzas y asesoría tributaria |
-| ⬜ | **(Empresa) Nexos Chile** | `nexos.cl` | — | database | Consultora de comunicación estratégica y asuntos públicos |
+| ✅ | **(Empresa) Nexos Chile** | `nexos.cl` | — | database | sitemap en catálogo (nexos) |
 | ✅ | **ABIF** | `abif.cl` | — | watchlist | Sin feed RSS detectado |
 | 🟡 | **Acero y Roca** | `aceroyroca.com` | — | database | referenciado en sources.yaml |
 | ✅ | **AmCham Chile** | `amchamchile.cl` | — | watchlist | Feed RSS existe pero vacío (0 ítems en feed) |
@@ -51,7 +51,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Diario Financiero** | `df.cl` | — | database | sitemap en catálogo (df) |
 | ⬜ | **Diario Pyme** | `diariopyme.com` | — | watchlist | Sitio no accesible |
 | ⬜ | **Economía y Negocios** | `economiaynegocios.cl` | — | watchlist | Sitio no responde (error de conexión) |
-| ⬜ | **El Periódico de la Energía** | `elperiodicodelaenergia.com` | — | database | Noticias del sector energético en español |
+| ✅ | **El Periódico de la Energía** | `elperiodicodelaenergia.com` | — | database | sitemap en catálogo (elperiodicodelaenergia) |
 | ✅ | **Electrominería** | `electromineria.cl` | — | database | sitemap en catálogo (electromineria) |
 | ⬜ | **Energía Estratégica** | `energiaestrategica.com` | — | watchlist | No RSS feed detected (site returns HTML en todas las rutas de /feed/, /rss/) |
 | ⬜ | **Estrategia** | `estrategia.cl` | — | watchlist | Sitio no responde (error de conexión) |
@@ -66,7 +66,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Portal Frutícola** | `portalfruticola.com` | — | database | sitemap en catálogo (portalfruticola) |
 | ✅ | **Portal Minero** | `portalminero.com` | — | database | sitemap en catálogo (portalminero) |
 | ✅ | **PortalPortuario** | `portalportuario.cl` | — | database | sitemap en catálogo (portalportuario) |
-| ⬜ | **pv magazine Latin America** | `pv-magazine-latam.com` | — | database | Noticias de la industria solar fotovoltaica en Latinoamérica |
+| ✅ | **pv magazine Latin America** | `pv-magazine-latam.com` | — | database | sitemap en catálogo (pvmagazine) |
 | ✅ | **REDIMIN** | `redimin.cl` | — | database | sitemap en catálogo (redimin) |
 | ✅ | **Reporte Agrícola** | `reporteagricola.cl` | — | watchlist | Sin feed RSS detectado (path /feed/ devuelve texto plano, no XML RSS) |
 | 🟡 | **Reporte Minero** | `reporteminero.cl` | — | watchlist | WordPress sin feed RSS detectable (todas las rutas /* retornan HTML homepage) |
@@ -82,15 +82,15 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **ANEF** | `anef.cl` | — | database | sitemap en catálogo (anef) |
 | ⬜ | **Atención Chilena** | `atencionchilena.cl` | — | watchlist | Feed RSS detectado pero sin items (feed vacío) |
 | ⬜ | **Bomberos de Chile** | `bomberos.cl` | — | watchlist | Sin feed RSS detectado |
-| ⬜ | **Capa9** | `capa9.net` | — | database | Comunidad chilena de tecnología, hardware y reviews |
+| ✅ | **Capa9** | `capa9.net` | — | database | sitemap en catálogo (capa9) |
 | ✅ | **Chile Travel** | `chile.travel` | — | database | sitemap en catálogo (chiletravel) |
-| ⬜ | **Coaniquem** | `coaniquem.cl` | — | database | Coaniquem, fundación chilena de atención integral al niño quemado |
+| ✅ | **Coaniquem** | `coaniquem.cl` | — | database | sitemap en catálogo (coaniquem) |
 | ⬜ | **CODEPU** | `codepu.cl` | — | database | Corporación de Defensa de los Derechos del Pueblo, con comunicados y noticias sobre derech |
 | ✅ | **ComunidadMujer** | `comunidadmujer.cl` | — | database | sitemap en catálogo (comunidadmujer) |
 | ✅ | **Corporación La Morada** | `lamorada.cl` | — | watchlist | Sin feed RSS detectado |
 | ⬜ | **Cupones Chile** | `cuponeschile.cl` | — | watchlist | Solo feeds proxy activos (feeds nativos inactivos) |
 | ⬜ | **CUT (Central Unitaria de Trabajadores de Chile)** | `cut.cl` | — | database | Central sindical que representa a trabajadores del sector público y privado en Chile |
-| ⬜ | **Defensa Civil de Chile** | `defensacivil.cl` | — | database | Defensa Civil de Chile, institución de voluntariado para emergencias y catástrofes |
+| ✅ | **Defensa Civil de Chile** | `defensacivil.cl` | — | database | sitemap en catálogo (defensacivil) |
 | ⬜ | **Diario El Itihue** | `diarioelitihue.blogspot.com` | — | database | Blog chileno de noticias comunitarias y crónica social |
 | 🟡 | **FASIC** | `fasic.cl` | — | database | referenciado en sources.yaml |
 | 🟡 | **Federación CCU** | `federacionccu.cl` | — | database | referenciado en sources.yaml |

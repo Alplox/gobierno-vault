@@ -7,7 +7,7 @@
 | Dominio | Carpeta | Scripts |
 |---|---|---|
 | **Validación / índice** | `validate/` | `validate.mjs` (principal, `pnpm run validate`/`build`), `validate-fuentes.mjs`, `fix-md034.mjs`, `fix-prose-wikilinks.mjs`, `verify-gabinete.mjs` |
-|  | `generate/` | `generate-index.mjs`, `generate-seguimiento-index.mjs`, `generate-eval-viewer.mjs` |
+|  | `generate/` | `generate-index.mjs`, `generate-seguimiento-index.mjs` |
 | **Catálogo sitemaps** | `sitemaps/` | `sync.mjs` (antes `sync-sitemaps.mjs`), `index.mjs`, `backup.mjs`, `resync.mjs`, `watchlist.mjs` |
 | **Extracción / fetching** | `extract/` | `fetch-content.mjs`, `fetch-impersonate.mjs`, `pdf-extract.mjs`, `doc-extract.mjs`, `ocr-extract.mjs`, `video-transcript.mjs`, `add-source.mjs` |
 | **Respaldo** | `backup/` | `backup.mjs`, `restore.mjs`, `verify.mjs` |
@@ -26,7 +26,6 @@
 | `scripts/verify-gabinete.mjs` | `scripts/validate/verify-gabinete.mjs` |
 | `scripts/generate-index.mjs` | `scripts/generate/generate-index.mjs` |
 | `scripts/generate-seguimiento-index.mjs` | `scripts/generate/generate-seguimiento-index.mjs` |
-| `scripts/generate-eval-viewer.mjs` | `scripts/generate/generate-eval-viewer.mjs` |
 | `scripts/sync-sitemaps.mjs` | `scripts/sitemaps/sync.mjs` |
 | `scripts/sitemaps-index.mjs` | `scripts/sitemaps/index.mjs` |
 | `scripts/sitemaps-backup.mjs` | `scripts/sitemaps/backup.mjs` |

@@ -12,7 +12,7 @@
  *
  * Flags:
  *   --append   Crea `src/content/sources/<id>.md` directamente (sin colisión, evita editar monolito)
- *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda
+ *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda *   --verify   Si el origen responde 404/410, exige confirmación para continuar
  *   --catalog-only  No hace fetch web: usa los datos del catálogo de sitemaps
  *                   (título/fecha/medio) si la URL está indexada
  *   --search <texto>  Busca en el catálogo local de sitemaps (título/URL/fecha)
@@ -708,6 +708,32 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'elcachapoal.cl': 'elcachapoal',
   'cchc.cl': 'cchc',
   'terram.cl': 'terram',
+  'defensacivil.cl': 'defensacivil',
+  'elperiodicodelaenergia.com': 'elperiodicodelaenergia',
+  'nexos.cl': 'nexos',
+  'www.nexos.cl': 'nexos',
+  'pv-magazine-latam.com': 'pvmagazine',
+  'www.pv-magazine-latam.com': 'pvmagazine',
+  'capa9.net': 'capa9',
+  'www.capa9.net': 'capa9',
+  'coaniquem.cl': 'coaniquem',
+  'www.ansalatina.com': 'ansalatina',
+  'ansalatina.com': 'ansalatina',
+  'www.bbc.com': 'bbc',
+  'bbc.com': 'bbc',
+  'www.ipsnoticias.net': 'ipsnoticias',
+  'ipsnoticias.net': 'ipsnoticias',
+  'es.mercopress.com': 'mercopress',
+  'lemondediplomatique.cl': 'lemondediplomatique',
+  'impresa.elmercurio.com': 'elmegacl',
+  'elpais.com': 'elpais',
+  'www.elpais.com': 'elpais',
+  'eldefinido.cl': 'eldefinido',
+  'www.eldefinido.cl': 'eldefinido',
+  'elpinguino.com': 'elpinguino',
+  'www.elpinguino.com': 'elpinguino',
+  'reuters.com': 'reuters',
+  'www.reuters.com': 'reuters',
 };
 
 const CATALOG_MEDIO_NAMES = {
@@ -1114,6 +1140,22 @@ const CATALOG_MEDIO_NAMES = {
   elcachapoal: 'El Cachapoal',
   cchc: 'CCHC',
   terram: 'Fundación Terram',
+  defensacivil: 'Defensa Civil de Chile',
+  elperiodicodelaenergia: 'El Periódico de la Energía',
+  nexos: 'Nexos Chile',
+  pvmagazine: 'pv magazine Latin America',
+  capa9: 'Capa9',
+  coaniquem: 'Coaniquem',
+  ansalatina: 'ANSA Latina',
+  bbc: 'BBC Mundo',
+  ipsnoticias: 'IPS Agencia de Noticias',
+  mercopress: 'MercoPress',
+  lemondediplomatique: 'Le Monde Diplomatique - Edición Chilena',
+  elmegacl: 'El Mercurio (Edición Impresa / La Segunda digital)',
+  elpais: 'El País',
+  eldefinido: 'El Definido',
+  elpinguino: 'El Pingüino',
+  reuters: 'Reuters',
 };
 
 function catalogExists() {
@@ -1378,6 +1420,7 @@ async function main() {
   let html = null;
   let jina = null;
   let resolvedUrl = url;
+  let directStatus = 0;
   const skipFetch = catalogOnly || (catalogHit && catalogHit.entry.s === 'news');
   if (catalogHit && !skipFetch && catalogHit.entry.t) {
     logInfo('El catálogo solo trae título aproximado (slug). Intentando fetch para el título real...');
@@ -1386,6 +1429,7 @@ async function main() {
   if (!skipFetch && !flags.has('--mirror')) {
     logInfo(`Obteniendo ${url} ...`);
     const res = await fetchText(url);
+    directStatus = res.status;
     if (res.ok && /<html[\s>]/i.test(res.text)) {
       html = res.text;
       if (!extractHtmlTitle(html)) {
@@ -1410,6 +1454,15 @@ async function main() {
   }
 
   // --- Extraccion (el catálogo gana si el fetch no aporta) --
+  // URL muerta en origen (404/410): el título del espejo/catálogo puede ser
+  // de otra página (caso 20260902-7). Siempre se avisa; con --verify se exige
+  // confirmación para continuar.
+  if (directStatus === 404 || directStatus === 410) {
+    logWarn(`La URL origen responde HTTP ${directStatus} (no existe). Verifica el slug antes de crear la fuente.`);
+    if (flags.has('--verify') && !(await confirm('La URL no existe en origen. ¿Continuar de todos modos?', false))) {
+      process.exit(1);
+    }
+  }
   let titulo = html ? extractHtmlTitle(html) : null;
   let autor = html ? extractHtmlAuthor(html) : null;
   let fecha = html ? extractHtmlDate(html) : null;

@@ -98,6 +98,27 @@ Notas de plataforma (complemento manual, no se reescribe):
 - **Chile País Minero**: index con `<loc>` envueltos en CDATA (a veces sin protocolo) — el parser
   los limpia (ver `extractSitemapIndexLocs`). **Mestizos Magazine**: index por fechas
   (`/sitemap/sitemap-<DD-MM-YYYY>.xml`, ~2.400 sub-sitemaps diarios desde 2018, ~8,6k artículos).
+- **pv magazine Latin America** (WordPress-Yoast, `articleOnly`): `includeRe` `/post-sitemap\.xml$/i`
+  descarta los `post-sitemap2..15.xml`, `page/author/category/tag` y otros CPTs; ~1.000 artículos/2 años
+  en la edición Latam. **Capa9** (XenForo): `sitemap.xml` es un índice mínimo de 2 sub-sitemaps
+  `sitemap-1.xml`/`sitemap-2.xml` (~98k URLs, ~37k artículos, 18 años). **Coaniquem**
+  (WordPress 5.5+ nativo): `sitemap.xml` → `wp-sitemap.xml` → `wp-sitemap-posts-post-1.xml` con
+  `includeRe` `/wp-sitemap-posts-post-\d+\.xml$/i` (descarta page/taxonomies/users); ~81 artículos.
+- **Tanda internacional (07-09-2026)**: **ANSA Latina** declara en robots el index
+  `sitemaps/sito_sitemap_index.xml` → único urlset con `news:news` (títulos reales, reciente con
+  `lastmod` por artículo; ~109 URLs. Fuera de robots, `/sitemap.xml` es 404 — usar el index de robots).
+  **BBC Mundo**: robots declara ~38 sitemaps; `includeRe` `/\/mundo\/sitemap\.xml$/i` deja solo la
+  edición Mundo (~100 URLs, `lastmod` reciente). **El País (elpais.com)**: bloqueo masivo de bots en
+  robots.txt y `/sitemap.xml` devuelve 404 → **no catalogable**, usar fetch directo bajo demanda.
+  **El Mercurio Edición Impresa (impresa.elmercurio.com)**: inaccesible/DNS fail → no catalogable.
+- **IPS Agencia de Noticias** (WordPress-Yoast, `articleOnly` sobre `wp-sitemap.xml`): 109.962
+  artículos en 33 años (~1993+). **MercoPress es** (SPIP): `includeRe` `/\/archive\/\d{4}\.xml$/i`
+  filtra los archivos anuales (46.637 artículos, 14 años); el `main.xml` mezcla páginas/portada.
+  **Le Monde Diplomatique ed. chilena** (SPIP): robots sin línea Sitemap; `includeRe` no aplica,
+  `index: /sitemap.xml` directo (~7 artículos — portal chico). **Defensa Civil de Chile**
+  (WP 5.5+ nativo `wp-sitemap-posts-post-N.xml`, 229 artículos). **El Periódico de la Energía**:
+  `index: /sitemaps/sitemap.xml` (91.452 artículos, 13 años). **Nexos Chile** (Yoast
+  `post-sitemap.xml`, 19 artículos — consultora, bajo volumen).
 
 | `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio |
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3 (2026-08-11)**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
@@ -149,7 +170,9 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
   `eldinamo`, `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`,
   `el_periodista`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
   `malaespina`, `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`,
-  `mestizos`, `diarioestrategia`.
+  `mestizos`, `diarioestrategia`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`, `bbc`,
+  `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
+  `elperiodicodelaenergia`, `nexos`, `elpais`, `elmegacl`.
   Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
@@ -189,7 +212,9 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
   `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`,
   `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
   `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
-  `diarioestrategia`, `emol`, `senado`.
+  `diarioestrategia`, `emol`, `senado`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`,
+  `bbc`, `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
+  `elperiodicodelaenergia`, `nexos`.
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 

@@ -1,12 +1,15 @@
 import { readFileSync } from 'node:fs';
 import { parseBackup, verifyManifest } from '../lib/gvault-util.mjs';
 
-const file = process.argv[2];
-if (!file || process.argv.includes('--help') || process.argv.includes('-h')) {
+// pnpm reenvía el `--` literal (pnpm run verify -- <file>), se filtra para
+// que ambos formatos funcionen: con y sin separador.
+const args = process.argv.slice(2).filter((a) => a !== '--');
+const file = args[0];
+if (!file || args.includes('--help') || args.includes('-h')) {
   console.log(`
 Verifica la integridad de un respaldo .gvault (uso público, sin contraseña).
 
-Uso:  node scripts/verify.mjs <archivo.gvault>
+Uso:  node scripts/backup/verify.mjs <archivo.gvault>
 `);
   process.exit(file ? 0 : 1);
 }

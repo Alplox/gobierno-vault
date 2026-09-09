@@ -263,7 +263,7 @@ Los posts de Oct 22-24, 2019 (días posteriores al estallido del 18 de octubre) 
 Para cada evento faltante:
 1. Seleccionar 5+ fuentes de sitemaps (diferentes medios)
 2. Cruzar con evidencia del Telegram (links de Twitter con videos/imágenes)
-3. Crear evento siguiendo TEMPLATE.md
+3. Crear evento siguiendo la plantilla de `.agents/skills/content-model/SKILL.md#plantilla-copiable`
 4. Registrar en EVENTS_INDEX.md
 
 

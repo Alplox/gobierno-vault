@@ -3,6 +3,7 @@
  * fetch-content.mjs — Fetch de contenido con cadena de fallbacks para agentes.
  *
  * Intenta múltiples métodos para obtener el contenido legible de una URL:
+ *   0. pre-chequeo de origen (404/410 aborta; 403 sigue a mirrors)
  *   1. fetch directo (Node)
  *   2. r.jina.ai (Jina AI reader)
  *   3. defuddle.md (Defuddle reader)
@@ -11,6 +12,9 @@
  *   6. archive.ph (Web archive)
  *   7. fetch-impersonate (curl_cffi con impersonación TLS)
  *   8. add-source (extracción de metadata)
+ *
+ * Cada resultado pasa por el clasificador soft-404 de scripts/lib/soft404.mjs:
+ * un mirror con HTTP 200 puede traer la página de error/bloqueo del sitio.
  *
  * Uso:
  *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo
@@ -25,6 +29,7 @@
 
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
+import { isSoft404, checkOriginStatus } from '../lib/soft404.mjs';
 
 const args = process.argv.slice(2);
 const url = args.find(a => a.startsWith('http'));
@@ -39,6 +44,16 @@ if (!url) {
 
 const log = verbose ? (msg) => console.error(`  ${msg}`) : () => {};
 
+// Acepta un texto como contenido real: largo mínimo + sin señales de
+// soft-404 (scripts/lib/soft404.mjs). Un mirror con HTTP 200 puede traer la
+// página de error del sitio en vez del artículo.
+function acceptResult(text, method, min = minChars, url = '') {
+  if (!(text.length > min)) return { ok: false, chars: text.length };
+  const verdict = isSoft404(text, { url });
+  if (verdict.soft) return { ok: false, error: `soft-404 (${verdict.reason})`, chars: text.length };
+  return { ok: true, content: text, chars: text.length, method };
+}
+
 // ═══════════════════════════════════════════════════════════════
 // Métodos de obtención
 // ═══════════════════════════════════════════════════════════════
@@ -52,11 +67,7 @@ async function tryJina(u) {
     });
     if (!r.ok) return { ok: false, error: `HTTP ${r.status}` };
     const text = await r.text();
-    // Jina sometimes returns navigation boilerplate for JS-heavy sites
-    if (text.includes('Selecciona tu región') || text.includes('Ingresa a Comunidad Bío Bío')) {
-      return { ok: false, error: 'Contenido es navigation/layout (JS rendering)', chars: text.length };
-    }
-    return { ok: text.length > minChars, content: text, chars: text.length, method: 'r.jina.ai' };
+    return acceptResult(text, 'r.jina.ai', minChars, u);
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -70,7 +81,7 @@ async function tryDefuddle(u) {
     });
     if (!r.ok) return { ok: false, error: `HTTP ${r.status}` };
     const text = await r.text();
-    return { ok: text.length > minChars, content: text, chars: text.length, method: 'defuddle.md' };
+    return acceptResult(text, 'defuddle.md', minChars, u);
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -84,7 +95,7 @@ async function tryMarkdownNew(u) {
     });
     if (!r.ok) return { ok: false, error: `HTTP ${r.status}` };
     const text = await r.text();
-    return { ok: text.length > minChars, content: text, chars: text.length, method: 'markdown.new' };
+    return acceptResult(text, 'markdown.new', minChars, u);
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -98,7 +109,7 @@ async function tryPaywallskip(u) {
     });
     if (!r.ok) return { ok: false, error: `HTTP ${r.status}` };
     const text = await r.text();
-    return { ok: text.length > minChars, content: text, chars: text.length, method: 'paywallskip.com' };
+    return acceptResult(text, 'paywallskip.com', minChars, u);
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -117,7 +128,7 @@ async function tryArchive(u) {
     if (text.includes('This URL has never been archived')) {
       return { ok: false, error: 'URL nunca archivada' };
     }
-    return { ok: text.length > minChars, content: text, chars: text.length, method: 'archive.ph' };
+    return acceptResult(text, 'archive.ph', minChars, u);
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -131,11 +142,7 @@ function tryImpersonate(u) {
       timeout: 60000,
       maxBuffer: 10 * 1024 * 1024,
     });
-    // Check if content is just navigation/layout
-    if (output.includes('Selecciona tu región') || output.includes('Ingresa a Comunidad Bío Bío')) {
-      return { ok: false, error: 'Contenido es navigation/layout (JS rendering)', chars: output.length };
-    }
-    return { ok: output.length > minChars, content: output, chars: output.length, method: 'fetch-impersonate' };
+    return acceptResult(output, 'fetch-impersonate', minChars, u);
   } catch (e) {
     return { ok: false, error: e.message?.slice(0, 200) };
   }
@@ -167,7 +174,7 @@ async function tryHtmlRaw(u) {
         .replace(/\s+/g, ' ')
         .trim();
       if (text.length > minChars) {
-        return { ok: true, content: text, chars: text.length, method: 'html-raw' };
+        return acceptResult(text, 'html-raw', minChars, u);
       }
     }
     // 2. Try to find JSON-LD structured data
@@ -177,7 +184,7 @@ async function tryHtmlRaw(u) {
         const data = JSON.parse(jsonLdMatch[1]);
         const text = data.articleBody || data.description || '';
         if (text.length > minChars) {
-          return { ok: true, content: text, chars: text.length, method: 'html-jsonld' };
+          return acceptResult(text, 'html-jsonld', minChars, u);
         }
       } catch {}
     }
@@ -192,7 +199,7 @@ async function tryHtmlRaw(u) {
     if (fullText.includes('Selecciona tu región') && fullText.length < 5000) {
       return { ok: false, error: 'HTML es solo navigation/layout', chars: fullText.length };
     }
-    return { ok: fullText.length > minChars * 2, content: fullText, chars: fullText.length, method: 'html-full' };
+    return acceptResult(fullText, 'html-full', minChars * 2, u);
   } catch (e) {
     return { ok: false, error: e.message };
   }
@@ -234,6 +241,19 @@ const FALLBACK_CHAIN = [
 async function main() {
   console.error(`\n═══ Fetching: ${url} ═══\n`);
 
+  // Pre-chequeo de origen (scripts/lib/soft404.mjs): un 404/410 es decisivo
+  // —la URL no existe— y se omite la cadena para evitar falsos éxitos de los
+  // mirrors (un 200 del mirror con la página de error del sitio). Un 403 es
+  // WAF/bot-block, no veredicto: se sigue con mirrors.
+  const origin = await checkOriginStatus(url);
+  if (origin.status === 404 || origin.status === 410) {
+    console.error(`✖ El origen responde HTTP ${origin.status}: la URL no existe. Cadena omitida.`);
+    process.exit(1);
+  }
+  if (origin.status === 403) log('Origen 403 (WAF/bot-block): se intenta vía mirrors.');
+  else if (origin.status) log(`Origen HTTP ${origin.status}.`);
+  else log(`Origen sin respuesta directa (${origin.error}): se intenta vía mirrors.`);
+
   const results = [];
 
   if (methodOnly) {
@@ -245,6 +265,11 @@ async function main() {
     }
     const result = await method.fn(url);
     results.push({ ...result, name: method.name });
+    if (result.ok) {
+      console.error(`\n✅ Éxito con ${method.name} (${result.chars} caracteres)\n`);
+      console.log(result.content);
+      return;
+    }
   } else {
     // Full chain
     for (const method of FALLBACK_CHAIN) {
