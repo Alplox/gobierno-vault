@@ -1408,6 +1408,7 @@
 - [2026/08/20260826-12 - Punta Arenas y Río Gallegos emiten declaración conjunta de hermandad y rechazan expresiones que alimenten desconfianza tras dichos sobre el Estrecho de Magallanes](src/content/events/2026/08/20260826-12.md) — 7 fuentes
 - [2026/08/20260826-13 - Falla informática expone granja de bots que inflaba apoyo a Milei en X: cuentas con etiquetas 'Reply1:'/'Reply7:' en publicaciones de Santiago Oría](src/content/events/2026/08/20260826-13.md) — 10 fuentes
 - [2026/08/20260826-14 - Diputada Betancurt (PDG) presenta reforma constitucional que exige tres años de experiencia para asesores, jefaturas y directivos del Estado](src/content/events/2026/08/20260826-14.md) — 6 fuentes
+- [2026/08/20260826-15 - Designación de Patricia Arancibia Clavel al directorio del Centro Cultural La Moneda](src/content/events/2026/08/20260826-15.md) — 5 fuentes
 - [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
 - [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
 - [2026/08/20260826-4 - Arica: detecciones de ingresos irregulares suben 62,3% y Gobierno precisa que no equivale a nuevos cruces fronterizos](src/content/events/2026/08/20260826-4.md) — 8 fuentes
