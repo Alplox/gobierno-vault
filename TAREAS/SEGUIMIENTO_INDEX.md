@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 325
+**Total tareas:** 326
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 241 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 242 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 298 · V: 9 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 297 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -306,7 +306,6 @@
 | S-2026-218 | ⬜ | 2026-09-05 | DGA fiscaliza a Tierra Amarilla — descargos y resolución (evento `20260812-21`) | Descargos del municipio (8 días hábiles desde ~14-ago) y resolución DGA sobre la intervención del río Copiapó + eventual sanción | `20260812-21` | Origen: <https://www.elquehaydecierto.cl/noticia/sociedad/municipio-intervino-el-rio-copiapo-para-evitar-un-riesgo-y-ahora-enfrenta-una-fisca> |
 | S-2026-219 | ⬜ | 2026-09-05 | Paro recolectores Temuco — normalización con nueva concesionaria (evento `20260827-10`) | Normalización del servicio desde el 01-sep con la nueva concesionaria + cumplimiento de sueldos y dotación | `20260827-10` | Origen: <https://www.temuco.cl/temuco-activa-plan-de-mitigacion-tras-conflicto-entre-privados-y-trabajadores-por-recoleccion-de-basura/> |
 | S-2026-220 | ⬜ | 2026-09-06 | Los 4 Fantásticos — juicio y sentencias (evento `20260813-19`) | Juicio oral y sentencias contra Los Cojos de La Legua + extradición del líder del TdA para Sudamérica | `20260813-19` | Origen: <https://www.dw.com/es/los-4-fantásticos-el-cartel-narco-que-surge-en-chile/a-78435396> |
-| S-2026-221 | ⬜ | 2026-09-06 | Fuga de reo en Copiapó — recaptura y desenlace (evento `20260904-2`) | Recaptura del prófugo Néstor Jair Quiñones Hernández (orden de detención vigente) y desenlace del caso por la autorización de salida sin custodia | `20260904-2` | Origen: <https://www.meganoticias.cl/nacional/531043-reo-condenado-homicidio-se-fuga-tras-asistir-a-bautizo-hijo-copiapo-05-09-2026.html> |
 | S-2026-222 | ⬜ | 2026-09-06 | Contrato de producción general de Presidencia — licitación (evento `20260905-1`) | Desenlace de la nueva licitación de servicios de producción general y destino del contrato de La Oreja Lab ampliado en 30% | `20260905-1` | Origen: <https://interferencia.cl/articulos/austeridad-fiscal-transmision-en-vivo-de-operacion-cancerbero-costo-185-millones-al-estado> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
@@ -336,5 +335,7 @@
 | V-2026-007 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Columna El Arrebato / tesis de la seguridad como afecto: el debate sobre si "la disputa por la seguridad es afectiva ... | `20260526-3` | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-008 | ⬜ | 2026-08-10 | Página /gabinete (9-ago-2026) — feature + gaps de | Decisión de Kast sobre los indultos a uniformados (desde 10-ago-2026; actualizado 25-ago): la presión quedó instalada... | `20260819-9` | Origen: <https://www.cnnchile.com/pais/no-puede-ser-que-tengamos-un-presidente-de-derecha-que-no-tenga-el-coraje-para-indultar-senadora-kaiser-arremete-contra-el-presidente-kast-por-uniformados-condenados/> |
 | V-2026-009 | ⬜ | 2026-08-29 | Homicidio Renca — verificacion movil | Verificar movil del homicidio en Renca: encerrona por camioneta vs venta Marketplace vs entrega Uber Eats — contrastar version BioBio (emprendimiento Marketplace, TIPCAR al cuello) vs La Tercera (Uber Eats, banano, cuchillo) y normativa Carabineros sobre trabajo paralelo | `20260827-5` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/28/carabinero-asesinado-en-renca-nuevo-antecedente-revela-motivo-de-victima-para-ir-al-lugar-de-crimen.shtml> |
+| V-2026-011 | ⬜ | 2026-09-08 | Moción Betancurt (PDG) — tres años de experiencia | Moción de tres años de experiencia (evento `20260826-14`): verificado 08-sep — sigue sin boletín (prensa 26-ago/07-sep no cita número; buscador Cámara sin resultados) y ausente del registro (último ingreso: 12-ago, 18605-15); próximo rechequeo ~15-sep | `20260826-14` | Origen: <https://www.camara.cl/diputados/detalle/mociones.aspx?prmID=1192> |
+| V-2026-012 | ⬜ | 2026-09-08 | Fuga Copiapó — rumores de relación sentimental y bautizo simulado (evento `20260904-2`) | Rumores atribuidos a 24 Horas televisado (TVN) según reporte de usuario, sin respaldo en prensa escrita al 08-sep; pendiente obtener el VOD para verificar qué se dijo exactamente | `20260904-2` | Origen: 24 Horas televisado (VOD pendiente) + reporte de usuario en sesión 08-sep-2026 |
 
 *Estados: ⬜ pendiente, 🟡 parcial. Al cerrar, la fila se elimina del YYYY.md (como PENDIENTES) y el hecho queda en EVENTS_INDEX.md + git log.*

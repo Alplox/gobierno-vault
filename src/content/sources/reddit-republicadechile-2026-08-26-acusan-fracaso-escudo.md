@@ -7,7 +7,7 @@ autor: r/RepublicadeChile
 fecha: 2026-08-26
 url: https://old.reddit.com/r/RepublicadeChile/comments/1vzfu3j/acusan_fracaso_de_escudo_fronterizo_migraciones/
 notas: "Hilo de r/RepublicadeChile (26-ago-2026) espejo del anterior. Reacciones
-  comunitarias complementarias (rol c) con mayor presencia de defensas del
+  comunitarias complementarias con mayor presencia de defensas del
   oficialismo: 'Es decir que la zanja no sirvió? Quien lo hubiese imaginado' 67
   pts, 'Pero si hace una semana decían que se habían reducido un 80%…' 36 pts
   con link a informe PDI, y réplicas que citan el matiz ('No lo es, la
