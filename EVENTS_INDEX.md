@@ -1501,6 +1501,7 @@
 - [2026/09/20260908-6 - Poduje dice en Radio 13C que la situación económica no es culpa del gobierno anterior y luego acusa de falso el titular de T13, que responde con el video y la transcripción](src/content/events/2026/09/20260908-6.md) — 8 fuentes
 - [2026/09/20260908-7 - AFP Capital explica en Radio 13C el régimen definitivo de los fondos generacionales que reemplazan a los multifondos desde abril de 2027](src/content/events/2026/09/20260908-7.md) — 6 fuentes
 - [2026/09/20260908-8 - Vallejo acusa cobardía de Kast ante Milei por no condenar sus dichos en el Foro Madrid: fue una vergüenza nacional, no se puede llamar patriota](src/content/events/2026/09/20260908-8.md) — 6 fuentes
+- [2026/09/20260908-9 - Mara Sedini debuta como conductora de Sin Filtros en reemplazo de Fernando Solabarrieta tras su errática animación](src/content/events/2026/09/20260908-9.md) — 9 fuentes
 
 ## 2025
 
