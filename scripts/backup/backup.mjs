@@ -215,8 +215,14 @@ function buildInfo(meta) {
 function serialize(files, manifest, plaintextBytes, kind) {
   const payloadObj = { kind, created: new Date().toISOString(), app: APP_VERSION, files, manifest };
   const json = JSON.stringify(payloadObj);
+  // LGWIN 24 (16MB) en vez del default 22 (4MB): el payload (~12-15MB y creciendo)
+  // excede la ventana por defecto, así que subirla deja que el match de contexto
+  // (frontmatter YAML, frases repetidas entre eventos) cruce archivos. Medido en
+  // 2026-09: 2.99MB → 2.84MB (-5%) sin costo de tiempo. Descompresión es
+  // param-independiente (restore/one-liners no cambian). Si el payload supera
+  // ~16MB, subir a 26 (64MB, máximo de Node) — win25/26 hoy no aportan.
   const compressed = brotliCompressSync(Buffer.from(json, 'utf8'), {
-    params: { [Z.BROTLI_PARAM_QUALITY]: 11 },
+    params: { [Z.BROTLI_PARAM_QUALITY]: 11, [Z.BROTLI_PARAM_LGWIN]: 24 },
   });
   const metadata = {
     version: 1,

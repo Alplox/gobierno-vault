@@ -13,6 +13,12 @@ respaldo offline publico (SIN contraseña) que cualquiera pueda custodiar. Son a
 SHA-256 (integridad verificable sin secretos) + manifest por archivo. No requiere
 dependencias nuevas.
 
+Compresion: `BROTLI_PARAM_QUALITY 11` (max) + `BROTLI_PARAM_LGWIN 24` (ventana 16MB, no
+el default 22 de 4MB): el payload (~12-15MB y creciendo) excede la ventana por defecto y
+subirla deja que el match de contexto cruce archivos (-5% medido 2026-09). La
+descompresion es param-independiente: restore y one-liners no cambian. Si el payload
+supera ~16MB, subir LGWIN a 26 (64MB, maximo de Node); win25/26 no aportan hoy.
+
 Scripts (ver `scripts/lib/gvault-util.mjs` para el formato compartido):
 - `pnpm run backup` — genera UN archivo `.light.gvault` (contenido actual: `src/**` +
   `scripts/` + docs raiz + config, sin `dist/`, `node_modules/`, `.astro/`, `.git/`,
