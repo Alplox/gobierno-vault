@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-09T02:03:36.171Z",
+  "actualizado": "2026-09-09T03:17:29.556Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -19,16 +19,16 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-07T18:52:47.130Z",
+      "ultima_sync": "2026-09-09T03:17:22.055Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
     },
     "adnradio": {
       "nombre": "ADN Radio",
-      "ultima_sync": "2026-09-07T18:52:47.137Z",
-      "articulos": 400,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-09T03:17:18.872Z",
+      "articulos": 500,
+      "nuevos": 100,
       "años": 1
     },
     "factchecking": {
@@ -68,9 +68,9 @@
     },
     "latercera": {
       "nombre": "La Tercera",
-      "ultima_sync": "2026-09-07T18:55:04.743Z",
-      "articulos": 14275,
-      "nuevos": 1655,
+      "ultima_sync": "2026-09-09T03:17:29.556Z",
+      "articulos": 14547,
+      "nuevos": 272,
       "años": 1
     },
     "cnnchile": {

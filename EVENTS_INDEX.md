@@ -1492,6 +1492,7 @@
 - [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 16 fuentes
 - [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 11 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 5 fuentes
+- [2026/09/20260907-5 - Kast participa en la Tefilá por Chile de la Comunidad Judía y compromete protección a la libertad religiosa](src/content/events/2026/09/20260907-5.md) — 8 fuentes
 - [2026/09/20260908-1 - Contrapoder revela que Interior contrató a honorarios por $2,35 millones a Sofía Pumpin, periodista recién titulada, para reportes de Delegaciones Presidenciales en el gabinete de Pavez](src/content/events/2026/09/20260908-1.md) — 6 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 7 fuentes
@@ -1499,6 +1500,7 @@
 - [2026/09/20260908-5 - IPC de agosto sube 0,6%, el doble de lo esperado, y lleva la inflación a 12 meses a 4,1% con la UF rumbo a $41.130](src/content/events/2026/09/20260908-5.md) — 8 fuentes
 - [2026/09/20260908-6 - Poduje dice en Radio 13C que la situación económica no es culpa del gobierno anterior y luego acusa de falso el titular de T13, que responde con el video y la transcripción](src/content/events/2026/09/20260908-6.md) — 8 fuentes
 - [2026/09/20260908-7 - AFP Capital explica en Radio 13C el régimen definitivo de los fondos generacionales que reemplazan a los multifondos desde abril de 2027](src/content/events/2026/09/20260908-7.md) — 6 fuentes
+- [2026/09/20260908-8 - Vallejo acusa cobardía de Kast ante Milei por no condenar sus dichos en el Foro Madrid: fue una vergüenza nacional, no se puede llamar patriota](src/content/events/2026/09/20260908-8.md) — 6 fuentes
 
 ## 2025
 
@@ -1617,6 +1619,7 @@
 - [2023/01/20230118-1 - El informe de la comisión investigadora de la Cámara sobre los incendios del Metro: televigilancia VENUS, peritajes deficientes y el dato Bassaletti](src/content/events/2023/01/20230118-1.md) — 1 fuente
 - [2023/01/20230127-1 - Tribunal rechaza la prisión preventiva del werken de Temucuicui Mijael Carvones](src/content/events/2023/01/20230127-1.md) — 3 fuentes
 - [2023/02/20230214-1 - Comunidad de Temucuicui amenaza con un levantamiento mapuche por la incautación de cosechas en Ercilla](src/content/events/2023/02/20230214-1.md) — 8 fuentes
+- [2023/02/20230216-1 - Kast califica de muy débil la respuesta de Cancillería a la intromisión de Fernández por la carta del Grupo de Puebla en apoyo a ME-O en el caso SQM](src/content/events/2023/02/20230216-1.md) — 6 fuentes
 - [2023/03/20230307-1 - Condenan a 4 años a la cabo de Carabineros Nadia Muñoz por vejaciones y agresiones contra manifestantes en Quilpué](src/content/events/2023/03/20230307-1.md) — 3 fuentes
 - [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md) — 2 fuentes
 - [2023/03/20230324-1 - Condenan a 2 años a tres carabineros de la 51° Comisaría de Pedro Aguirre Cerda por malos tratos a un detenido del estallido](src/content/events/2023/03/20230324-1.md) — 2 fuentes
