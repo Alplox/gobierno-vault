@@ -12,6 +12,9 @@ notas: Estudiante de primer año de Periodismo de la Universidad de Los Andes
   Interior y difundir actividades del ministro. Acredita licencia de Enseñanza
   Media. Sueldo inicial de $3.230.000 (marzo-abril) y $1.900.000 desde mayo;
   en sep-2026 el Gobierno anunció un ajuste a cerca de $1,2 millones según
-  instructivo Dipres. Antes fue community manager del área de mujeres de la
-  UDI y colaboró en estrategia digital del alcalde de Lo Barnechea.
+  instructivo Dipres y el 8-sep-2026 el ministro del Interior reconoció un
+  'error' en la contratación y abrió una investigación administrativa interna;
+  su continuidad quedó condicionada a aceptar las condiciones del instructivo
+  de austeridad de Hacienda. Antes fue community manager del área de mujeres
+  de la UDI y colaboró en estrategia digital del alcalde de Lo Barnechea.
 ---
