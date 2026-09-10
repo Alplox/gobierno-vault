@@ -1445,6 +1445,7 @@
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 - [2026/08/20260829-1 - Manouchehri (PS) en Concepción: la megarreforma no se hizo cargo del desempleo y anticipa déficit, deuda y recortes](src/content/events/2026/08/20260829-1.md) — 6 fuentes
 - [2026/08/20260829-2 - Fiscalía pedirá formalizar al alcalde de Río Bueno y a otras 6 personas por cohecho agravado y lavado de activos: audiencia fijada para el 19 de octubre](src/content/events/2026/08/20260829-2.md) — 9 fuentes
+- [2026/08/20260829-3 - Zaliasnik cuestiona cifras de la comunidad palestina en TV israelí, pide disculpas y es emplazado por la comunidad, la embajada palestina y diputados](src/content/events/2026/08/20260829-3.md) — 6 fuentes
 - [2026/08/20260830-1 - Republicanos responden a Blumel por “poblaciones”: “Este debate clasista y añejo no le hace bien a Chile” y “discurso cavernícola”](src/content/events/2026/08/20260830-1.md) — 6 fuentes
 - [2026/08/20260830-2 - Alvarado y Núñez encauzan la reforma de seguridad a la Comisión de Constitución y exigen 29 votos con 'realismo legislativo'](src/content/events/2026/08/20260830-2.md) — 6 fuentes
 - [2026/08/20260831-1 - Jefe de la Armada argentina reconoce que el Estrecho de Magallanes pertenece a Chile y contrasta con dichos de su par de la Fuerza Aérea](src/content/events/2026/08/20260831-1.md) — 6 fuentes
@@ -1476,6 +1477,7 @@
 - [2026/09/20260902-8 - Concejal de Iquique exige explicar visita de embajador Judd a Los Cóndores y supuesto vuelo en F-16; Embajada dice que fue simulador](src/content/events/2026/09/20260902-8.md) — 7 fuentes
 - [2026/09/20260902-9 - Hacienda pide la renuncia a la directora nacional de Aduanas Alejandra Arriaza tras informe de Contraloría con 25 contenedores sin aforo](src/content/events/2026/09/20260902-9.md) — 5 fuentes
 - [2026/09/20260903-1 - Gonzalo Durán (Fundación Sol) en Radio Futuro: tasa real de desempleo llegaría a 13,5% y casi la mitad de los desocupados tiene educación superior](src/content/events/2026/09/20260903-1.md) — 6 fuentes
+- [2026/09/20260903-10 - Sarah Rogers en el Foro Madrid atribuye a extremistas de izquierda la quema del Metro en 2019 y anuncia cooperación de seguridad con Kast](src/content/events/2026/09/20260903-10.md) — 6 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 9 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 26 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 26 fuentes
@@ -1486,14 +1488,18 @@
 - [2026/09/20260903-9 - Cadem Plaza Pública N°686: aprobación de Kast cae a 34% y desaprobación sube a 61%, peor registro del mandato](src/content/events/2026/09/20260903-9.md) — 5 fuentes
 - [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con medidas cautelares y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 33 fuentes
 - [2026/09/20260904-2 - Fuga en Copiapó: condenado por homicidio autorizado sin custodia al bautizo se fugó; fue recapturado en Antofagasta con ocho detenidos por colaboración y la Corte pidió informe al juez](src/content/events/2026/09/20260904-2.md) — 26 fuentes
-- [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 8 fuentes
+- [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 15 fuentes
+- [2026/09/20260904-4 - Paz Zárate cuestiona el comunicado conjunto Kast-Milei; texto redactado por Argentina que canjea gas por Malvinas sin derogar el decreto 457](src/content/events/2026/09/20260904-4.md) — 5 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
 - [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 16 fuentes
 - [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 11 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 5 fuentes
 - [2026/09/20260907-5 - Kast participa en la Tefilá por Chile de la Comunidad Judía y compromete protección a la libertad religiosa](src/content/events/2026/09/20260907-5.md) — 8 fuentes
-- [2026/09/20260908-1 - Contrapoder revela que Interior contrató a honorarios por $2,35 millones a Sofía Pumpin, periodista recién titulada, para reportes de Delegaciones Presidenciales en el gabinete de Pavez](src/content/events/2026/09/20260908-1.md) — 6 fuentes
+- [2026/09/20260907-6 - Matamala publica Ayúdeme usted, compadre y acusa pasividad de Kast ante Milei, Rogers y Judd en el Foro Madrid](src/content/events/2026/09/20260907-6.md) — 10 fuentes
+- [2026/09/20260907-7 - Kast respalda al canciller Pérez Mackenna por Magallanes y toma distancia de Judd con la doctrina proChile](src/content/events/2026/09/20260907-7.md) — 7 fuentes
+- [2026/09/20260908-1 - Contrapoder revela que Interior contrató a honorarios por $2,35 millones a Sofía Pumpin, periodista recién titulada, para reportes de Delegaciones Presidenciales en el gabinete de Pavez](src/content/events/2026/09/20260908-1.md) — 9 fuentes
+- [2026/09/20260908-10 - Gobierno reconoce 'error' en la contratación de Cristóbal Soto en Interior, ordena aplicar los instructivos de austeridad de Hacienda y abre investigación administrativa interna](src/content/events/2026/09/20260908-10.md) — 9 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 7 fuentes
 - [2026/09/20260908-4 - PISA 2025: Chile anota su peor resultado en Matemática con 59% bajo el nivel básico y retrocede en Lectura](src/content/events/2026/09/20260908-4.md) — 6 fuentes
@@ -1502,6 +1508,12 @@
 - [2026/09/20260908-7 - AFP Capital explica en Radio 13C el régimen definitivo de los fondos generacionales que reemplazan a los multifondos desde abril de 2027](src/content/events/2026/09/20260908-7.md) — 6 fuentes
 - [2026/09/20260908-8 - Vallejo acusa cobardía de Kast ante Milei por no condenar sus dichos en el Foro Madrid: fue una vergüenza nacional, no se puede llamar patriota](src/content/events/2026/09/20260908-8.md) — 6 fuentes
 - [2026/09/20260908-9 - Mara Sedini debuta como conductora de Sin Filtros en reemplazo de Fernando Solabarrieta tras su errática animación](src/content/events/2026/09/20260908-9.md) — 9 fuentes
+- [2026/09/20260909-1 - Cancillería cita a Judd por atribuir el estallido social a la izquierda; el embajador admite que EEUU no investigó en Chile y el canciller le recuerda que no debe opinar de política interna](src/content/events/2026/09/20260909-1.md) — 17 fuentes
+- [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
+- [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 6 fuentes
+- [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
+- [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 8 fuentes
+- [2026/09/20260910-1 - Alvarado fija postura ante la polémica por contratación de jóvenes: defiende darles oportunidades pero exige sueldos acorde a las normas y confirma que Soto aceptó la corrección y sigue en Interior](src/content/events/2026/09/20260910-1.md) — 5 fuentes
 
 ## 2025
 
@@ -1565,6 +1577,7 @@
 - [2025/12/20251210-4 - La Tercera perfila a Claudio Alvarado como el favorito para la Segpres de un eventual gobierno de Kast: la trayectoria del 'Coronel UDI' que terminó en Interior](src/content/events/2025/12/20251210-4.md) — 5 fuentes
 - [2025/12/20251214-1 - José Antonio Kast gana la segunda vuelta presidencial con 58,16% de los votos](src/content/events/2025/12/20251214-1.md) — 4 fuentes
 - [2025/12/20251215-1 - Cadem informa que su sondeo privado durante la veda proyectó correctamente el resultado del balotaje (58% para Kast)](src/content/events/2025/12/20251215-1.md) — 1 fuente
+- [2025/12/20251215-2 - Gobierno de Boric entrega nota de protesta a Colombia por dichos inaceptables de Petro contra Kast electo (hijo de Hitler)](src/content/events/2025/12/20251215-2.md) — 11 fuentes
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — 2 fuentes
 - [2025/12/20251217-1 - Gobierno de Boric y Mesa del Sector Público firman el reajuste salarial 2026 (3,4%): el acuerdo que la derecha entrante tildó de 'amarre'](src/content/events/2025/12/20251217-1.md) — 11 fuentes
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md) — 6 fuentes

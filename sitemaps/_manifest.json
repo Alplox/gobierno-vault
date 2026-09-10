@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-09T03:17:29.556Z",
+  "actualizado": "2026-09-10T19:19:08.807Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -19,15 +19,15 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-09T03:17:22.055Z",
+      "ultima_sync": "2026-09-10T18:43:56.466Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
     },
     "adnradio": {
       "nombre": "ADN Radio",
-      "ultima_sync": "2026-09-09T03:17:18.872Z",
-      "articulos": 500,
+      "ultima_sync": "2026-09-10T18:45:33.933Z",
+      "articulos": 600,
       "nuevos": 100,
       "años": 1
     },
@@ -54,9 +54,9 @@
     },
     "elmostrador": {
       "nombre": "El Mostrador",
-      "ultima_sync": "2026-09-07T18:54:57.067Z",
-      "articulos": 297,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-10T18:43:51.706Z",
+      "articulos": 397,
+      "nuevos": 100,
       "años": 1
     },
     "fastcheck": {
@@ -82,9 +82,9 @@
     },
     "eldinamo": {
       "nombre": "El Dínamo",
-      "ultima_sync": "2026-09-07T18:55:05.602Z",
-      "articulos": 251861,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-10T18:45:35.864Z",
+      "articulos": 251927,
+      "nuevos": 66,
       "años": 17
     },
     "radio_uchile": {
@@ -103,9 +103,9 @@
     },
     "el_periodista": {
       "nombre": "El Periodista",
-      "ultima_sync": "2026-09-07T18:55:18.117Z",
-      "articulos": 85743,
-      "nuevos": 617,
+      "ultima_sync": "2026-09-10T18:45:48.124Z",
+      "articulos": 85834,
+      "nuevos": 91,
       "años": 18
     },
     "el_siglo": {
@@ -138,9 +138,9 @@
     },
     "eldesconcierto": {
       "nombre": "El Desconcierto",
-      "ultima_sync": "2026-09-08T18:21:51.532Z",
-      "articulos": 136,
-      "nuevos": 50,
+      "ultima_sync": "2026-09-10T19:19:08.805Z",
+      "articulos": 202,
+      "nuevos": 66,
       "años": 1
     },
     "df": {
@@ -285,16 +285,16 @@
     },
     "lacuarta": {
       "nombre": "La Cuarta",
-      "ultima_sync": "2026-09-07T18:57:00.171Z",
-      "articulos": 10605,
-      "nuevos": 683,
+      "ultima_sync": "2026-09-10T18:48:29.684Z",
+      "articulos": 11041,
+      "nuevos": 436,
       "años": 1
     },
     "nuevopoder": {
       "nombre": "Nuevo Poder",
-      "ultima_sync": "2026-09-07T18:57:00.621Z",
-      "articulos": 56912,
-      "nuevos": 561,
+      "ultima_sync": "2026-09-10T18:46:32.585Z",
+      "articulos": 57011,
+      "nuevos": 99,
       "años": 5
     },
     "la_hora": {
@@ -320,9 +320,9 @@
     },
     "canal9": {
       "nombre": "Canal 9",
-      "ultima_sync": "2026-09-07T18:57:06.420Z",
-      "articulos": 24249,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-10T18:44:32.382Z",
+      "articulos": 24450,
+      "nuevos": 201,
       "años": 2
     },
     "24horas": {
@@ -334,7 +334,7 @@
     },
     "contrapoderchile": {
       "nombre": "Contrapoder Chile",
-      "ultima_sync": "2026-09-07T18:57:09.296Z",
+      "ultima_sync": "2026-09-10T18:45:02.354Z",
       "articulos": 512,
       "nuevos": 0,
       "años": 2
@@ -670,9 +670,9 @@
     },
     "laizquierdadiario": {
       "nombre": "La Izquierda Diario",
-      "ultima_sync": "2026-09-07T18:58:11.827Z",
-      "articulos": 578,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-10T18:46:39.396Z",
+      "articulos": 688,
+      "nuevos": 110,
       "años": 2
     },
     "aconcaguadigital": {
@@ -1454,9 +1454,9 @@
     },
     "nostalgica": {
       "nombre": "Nostálgica",
-      "ultima_sync": "2026-09-07T18:59:49.803Z",
-      "articulos": 29744,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-10T18:46:27.364Z",
+      "articulos": 29813,
+      "nuevos": 69,
       "años": 3
     },
     "primedigital": {
@@ -1587,7 +1587,7 @@
     },
     "insularfm": {
       "nombre": "Insular FM",
-      "ultima_sync": "2026-09-07T19:00:02.257Z",
+      "ultima_sync": "2026-09-10T18:46:39.942Z",
       "articulos": 4188,
       "nuevos": 0,
       "años": 1
