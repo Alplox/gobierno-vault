@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (463)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (465)
 
 <details>
-<summary>Ver lista (463 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (465 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -232,6 +232,8 @@
 - [2026/08/20260821-7 - Arrau defiende las facultades del nuevo estado de excepción: 'Interceptar un teléfono no es tema' y promete intervención dura en situaciones puntuales](src/content/events/2026/08/20260821-7.md) — **1 fuente**
 - [2026/08/20260821-9 - La doble función de la asesora legislativa de Lincolao: CEO de consultora de IA y ciberseguridad mientras coordina la tramitación de la Ley de IA](src/content/events/2026/08/20260821-9.md) — **1 fuente**
 - [2026/08/20260822-2 - Interno gravemente herido con elemento cortopunzante en La Laguna de Talca: primer incidente grave en el penal de los traslados de Cancerbero](src/content/events/2026/08/20260822-2.md) — **1 fuente**
+- [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — **1 fuente**
+- [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — **1 fuente**
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — **2 fuentes**
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — **2 fuentes**
 - [2010/01/20100114-1 - Concejal de Concepción Álvaro Ortiz condenado por violencia intrafamiliar; además enfrentaba proceso por ebriedad y daños](src/content/events/2010/01/20100114-1.md) — **2 fuentes**
@@ -1514,11 +1516,15 @@
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
 - [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 6 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
-- [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 8 fuentes
+- [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 24 fuentes
 - [2026/09/20260909-6 - Banco Central publica IPoM de septiembre: atribuye desempleo de 9,5% a costos laborales y automatización y recorta PIB 2026 a 0,25%-0,75%](src/content/events/2026/09/20260909-6.md) — 7 fuentes
 - [2026/09/20260910-1 - Alvarado fija postura ante la polémica por contratación de jóvenes: defiende darles oportunidades pero exige sueldos acorde a las normas y confirma que Soto aceptó la corrección y sigue en Interior](src/content/events/2026/09/20260910-1.md) — 5 fuentes
 - [2026/09/20260910-2 - Rau se desmarca de la meta de 6% de desempleo de Quiroz y luego se alinea: Quiroz reafirma 6,5% y crecimiento 4% tras seminario Clapes UC](src/content/events/2026/09/20260910-2.md) — 12 fuentes
 - [2026/09/20260910-3 - Carabineros rechaza reincorporar a Claudio Crespo tras su absolución en el caso Gatica: su defensa acusa ilegalidad y anuncia recurso de revisión](src/content/events/2026/09/20260910-3.md) — 7 fuentes
+- [2026/09/20260910-4 - Kast encabeza largada protocolar del WRC Rally Chile Biobío 2026 en Concepción entre pifias y aplausos](src/content/events/2026/09/20260910-4.md) — 15 fuentes
+- [2026/09/20260910-5 - Quiroz detalla en Meganoticias el Fonavi: tasa de 3,5%-3,6% a 30 años, refinanciamiento de primera vivienda y mesa técnica por créditos en pesos](src/content/events/2026/09/20260910-5.md) — 7 fuentes
+- [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — 1 fuente
+- [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — 1 fuente
 
 ## 2025
 
