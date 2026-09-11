@@ -1525,6 +1525,7 @@
 - [2026/09/20260910-5 - Quiroz detalla en Meganoticias el Fonavi: tasa de 3,5%-3,6% a 30 años, refinanciamiento de primera vivienda y mesa técnica por créditos en pesos](src/content/events/2026/09/20260910-5.md) — 7 fuentes
 - [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — 1 fuente
 - [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — 1 fuente
+- [2026/09/20260910-8 - Gobierno confirma que no habrá acto oficial por el 11 de septiembre y Kast mantendrá agenda habitual en Los Ríos](src/content/events/2026/09/20260910-8.md) — 10 fuentes
 
 ## 2025
 
