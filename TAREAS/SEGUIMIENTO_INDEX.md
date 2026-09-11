@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 324
+**Total tareas:** 325
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 240 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 241 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 295 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 296 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -135,11 +135,11 @@
 | S-2026-046 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Agenda municipal post-megarreforma (eventos creados 20260806-28, 20260806-29): seguir (1) la tramitación del proyecto... | `20260806-28` `20260806-29` `20260806-32` `20260806-33` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-047 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Fuentes del lote del 6-ago aún por procesar/verificar: (1) gamba.cl 'Camila Nieto: gritos de 'cuma' en el debate de l... | `20260804-6` `20260804-23` `20260806-31` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-048 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | PDG / Fiscalía — seguimiento (evento 20260806-42): registrar (1) el resultado de la investigación de la Fiscalía Cent... | `20260806-42` | Origen: <https://example.com/pendiente-revisar> |
-| S-2026-049 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Viajes de diputados en semana distrital — seguimiento (evento 20260806-43): (1) crear evento propio del caso Kunstman... | `20260806-43` | Origen: <https://example.com/pendiente-revisar> |
+| S-2026-049 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Viajes de diputados en semana distrital — seguimiento (eventos 20260806-43 y 20260909-7): (1) crear evento propio del ca... | `20260806-43` `20260909-7` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-050 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Requerimiento contra Kaiser — contexto (evento 20260806-41): el requerimiento del PS/PC se presentó en 2025 tras la e... | `20260806-41` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-051 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Retiro del MNOAL — seguimiento (evento 20260805-17, ampliado 7-ago): el evento pasó de 1 a 4 fuentes (The Clinic + Ra... | `20260805-17` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-052 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Reforma constitucional de seguridad — seguimiento (evento 20260806-44): verificar (1) el ingreso efectivo de la refor... | `20260806-44` | Origen: <https://example.com/pendiente-revisar> |
-| S-2026-053 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Feriado del 17 de septiembre — seguimiento (evento 20260806-45): el Ejecutivo ya manifestó su rechazo (Pavez, 7-ago: ... | `20260806-45` | Origen: <https://example.com/pendiente-revisar> |
+| S-2026-053 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Feriado del 17 de septiembre — posición de gremios (eventos 20260806-45, 20260909-7): el desenlace quedó documentado y ... | `20260806-45` `20260909-7` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-054 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Bianchi sobre la reforma constitucional — pendiente (El Mostrador, 6/7-ago): "Senador Bianchi ve 'innecesaria' reform... | `20260803-12` `20260806-26` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-055 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | IPC de julio 2026 (El Mostrador, 6/7-ago): "Inflación se modera en julio: IPC sube 0,1% y variación anual cae a 3,5%"... | `20260804-20` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-056 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Kast y la suspensión de la Ley Karin (6-ago): CNN tituló "Kast evita respaldar suspensión de Ley Karin, pero abre la ... | `20260806-14` | Origen: <https://example.com/pendiente-revisar> |
@@ -305,6 +305,7 @@
 | S-2026-219 | ⬜ | 2026-09-05 | Paro recolectores Temuco — normalización con nueva concesionaria (evento `20260827-10`) | Normalización del servicio desde el 01-sep con la nueva concesionaria + cumplimiento de sueldos y dotación | `20260827-10` | Origen: <https://www.temuco.cl/temuco-activa-plan-de-mitigacion-tras-conflicto-entre-privados-y-trabajadores-por-recoleccion-de-basura/> |
 | S-2026-220 | ⬜ | 2026-09-06 | Los 4 Fantásticos — juicio y sentencias (evento `20260813-19`) | Juicio oral y sentencias contra Los Cojos de La Legua + extradición del líder del TdA para Sudamérica | `20260813-19` | Origen: <https://www.dw.com/es/los-4-fantásticos-el-cartel-narco-que-surge-en-chile/a-78435396> |
 | S-2026-222 | ⬜ | 2026-09-06 | Contrato de producción general de Presidencia — licitación (evento `20260905-1`) | Desenlace de la nueva licitación de servicios de producción general y destino del contrato de La Oreja Lab ampliado en 30% | `20260905-1` | Origen: <https://interferencia.cl/articulos/austeridad-fiscal-transmision-en-vivo-de-operacion-cancerbero-costo-185-millones-al-estado> |
+| S-2026-223 | ⬜ | 2026-09-09 | Contrataciones Interior (Soto/Pumpin) — seguimiento | Investigación administrativa por contratación de Cristóbal Soto (evento `20260908-10`) — desenlace: ajuste del sueldo o salida + responsables y sanciones | `20260908-10` `20260908-1` | Origen: <https://www.latercera.com/politica/noticia/gobierno-reconoce-error-en-contratacion-de-estudiante-de-primer-ano-de-periodismo-por-19-millones-y-abre-investigacion/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

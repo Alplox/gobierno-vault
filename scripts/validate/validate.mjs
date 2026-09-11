@@ -115,6 +115,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Hacienda',
   'Ministerio de Salud',
   'Ministerio de Salud (Minsal)',
+  'Ministerio del Deporte',
   'Ministerio de Educación',
   'Fast Check CL',
   'AIM Chile',
