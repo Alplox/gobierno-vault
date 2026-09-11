@@ -51,6 +51,7 @@ Fixer: `node scripts/validate/fix-prose-wikilinks.mjs` (itera hasta punto fijo; 
 - **Verificar body antes de crear:** fetch completo (`read_url`/mirrors/`fetch-content`) o snippet sustantivo con título+autor+fecha+texto; metadata obligatoria (`medio`, `titulo`, `autor`, `fecha`, `url`, `notas` sin `: ` interno).
 - **Citar inline** donde respalda la afirmación, aunque duplique citas existentes; si aporta dato nuevo (ej. calificación jurídica, cautelar desestimada), agregarlo al body con su cita.
 - **Sí se descarta:** agregadores sin reportería propia (ej. MSN que replica), videos sin transcripción verificable o con datos contradictorios no confirmables, URLs no localizables (existe mención pero sin URL recuperable). Lo descartado y el motivo van al **resumen entregado al usuario**, nunca al body (regla 13).
+- **Origen en red social nunca se descarta:** si el hecho noticioso ES una declaración publicada en red social (post, video, hilo) y la prensa solo la reproduce, el post original se agrega SIEMPRE como fuente complementaria (`tipo: redes`, ej. `20260910-3` con `twitter-2026-09-10-...`) citada junto a la prensa en la afirmación. Solo la fuente original fija el texto acreditado; la transcripción de prensa puede ser incorrecta. Si el post no es fetcheable (login wall), se consigna en `notas` contra qué medios se verificó la transcripción.
 
 ## TAREAS — bitácora de pendientes anti recency bias
 
