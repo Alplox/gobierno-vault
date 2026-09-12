@@ -1498,6 +1498,7 @@
 - [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 15 fuentes
 - [2026/09/20260904-4 - Paz Zárate cuestiona el comunicado conjunto Kast-Milei; texto redactado por Argentina que canjea gas por Malvinas sin derogar el decreto 457](src/content/events/2026/09/20260904-4.md) — 5 fuentes
 - [2026/09/20260904-5 - Zambrano se reúne con Kast y con el Senado chileno en visita interparlamentaria centrada en seguridad](src/content/events/2026/09/20260904-5.md) — 6 fuentes
+- [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 8 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
@@ -1670,6 +1671,7 @@
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md) — 1 fuente
 - [2023/07/20230731-1 - Condenan a carabineros de la 43° Comisaría de Peñalolén por apremios reiterados contra detenidos del estallido](src/content/events/2023/07/20230731-1.md) — 3 fuentes
 - [2023/09/20230904-1 - Condenan a 6 años y 2 días a dos carabineros de La Serena por golpear a un niño de 13 años y falsificar el parte](src/content/events/2023/09/20230904-1.md) — 3 fuentes
+- [2023/09/20230908-1 - Defensoría de la Niñez revela que 150 niños, niñas y adolescentes fueron ejecutados y 40 desaparecieron en dictadura](src/content/events/2023/09/20230908-1.md) — 5 fuentes
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — 1 fuente
 - [2023/09/20230912-1 - TOP de La Serena condena al conscripto Carlos Robledo a 10 años por la muerte de Romario Veloz](src/content/events/2023/09/20230912-1.md) — 5 fuentes
 - [2023/09/20230922-1 - Condenan a 5 años al capitán de Carabineros Ricardo Luengo por tres agresiones distintas durante el estallido en Coquimbo](src/content/events/2023/09/20230922-1.md) — 3 fuentes
@@ -1813,6 +1815,7 @@
 - [2018/04/20180416-1 - Caso SQM: el entierro del financiamiento politico ilegal](src/content/events/2018/04/20180416-1.md) — 3 fuentes
 - [2018/04/20180426-1 - Proyecto de Evópoli contra el nepotismo genera críticas de UDI-RN, que centran fuego en Felipe Kast](src/content/events/2018/04/20180426-1.md) — 2 fuentes
 - [2018/07/20180729-1 - Atacantes enmascarados apuñalan a tres mujeres en marcha por el aborto libre en Santiago; movimiento Social Patriota reivindica la contraprotesta](src/content/events/2018/07/20180729-1.md) — 2 fuentes
+- [2018/10/20181006-1 - Inédito homenaje a Krassnoff en la Escuela Militar deriva en la baja del director y del hijo del exagente](src/content/events/2018/10/20181006-1.md) — 7 fuentes
 
 ## 2017
 
@@ -1862,6 +1865,7 @@
 ## 2011
 
 - [2011/06/20110608-1 - The Clinic revela el conflicto de interés de Ena von Baer por el convenio UPOV 91 y las semillas registradas por su familia](src/content/events/2011/06/20110608-1.md) — 3 fuentes
+- [2011/11/20111121-1 - Homenaje a Krassnoff convocado por Labbé termina con incidentes y funa en el Club Providencia](src/content/events/2011/11/20111121-1.md) — 7 fuentes
 - [2011/11/20111123-1 - Corte de Apelaciones de Santiago condena a once personas en la arista Banco Central del caso Inverlink](src/content/events/2011/11/20111123-1.md) — 4 fuentes
 - [2011/12/20111229-1 - Corte de Apelaciones de Santiago condena a Eduardo Monasterio y dos familiares por contrato simulado en caso Corfo-Inverlink](src/content/events/2011/12/20111229-1.md) — 5 fuentes
 
@@ -1888,7 +1892,13 @@
 
 - [2003/02/20030203-1 - Estalla el caso Inverlink: el Banco Central denuncia la filtración de información reservada desde el computador de su presidencia](src/content/events/2003/02/20030203-1.md) — 5 fuentes
 
+## 1975
+
+- [1975/07/19750724-1 - La Segunda titula 'Exterminados como ratones' en el montaje de la Operación Colombo](src/content/events/1975/07/19750724-1.md) — 7 fuentes
+
 ## 1973
 
+- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 11 fuentes
 - [1973/09/19730924-1 - Iglesias protestantes y evangélicas crean el CONAR, primer comité de ayuda a víctimas de la dictadura](src/content/events/1973/09/19730924-1.md) — 4 fuentes
+- [1973/10/19731002-1 - Detención y desaparición de Antonio Aguirre Vásquez, herido en la defensa de La Moneda](src/content/events/1973/10/19731002-1.md) — 8 fuentes
 
