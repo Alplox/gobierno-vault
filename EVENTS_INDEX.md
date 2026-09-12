@@ -825,7 +825,7 @@
 - [2026/07/20260727-17 - Fiscalía formaliza a exjefes de CONAF por cuasidelito de homicidio en megaincendio de Valparaíso: cadena de decisiones hizo perder 57 minutos de evacuación para las 138 víctimas](src/content/events/2026/07/20260727-17.md) — 4 fuentes
 - [2026/07/20260727-2 - Kast firma reforma constitucional para destituir autoridades que consuman drogas](src/content/events/2026/07/20260727-2.md) — 5 fuentes
 - [2026/07/20260727-3 - Kast viaja a Perú para asistir a la asunción de Keiko Fujimori](src/content/events/2026/07/20260727-3.md) — 4 fuentes
-- [2026/07/20260727-4 - Gobierno reúne a gremios exportadores para coordinar estrategia ante arancel de 12,5% de EEUU](src/content/events/2026/07/20260727-4.md) — 10 fuentes
+- [2026/07/20260727-4 - Gobierno reúne a gremios exportadores para coordinar estrategia ante arancel de 12,5% de EEUU](src/content/events/2026/07/20260727-4.md) — 14 fuentes
 - [2026/07/20260727-5 - Tres tornados golpean Ñuble y sistema frontal afecta a 107 personas](src/content/events/2026/07/20260727-5.md) — 4 fuentes
 - [2026/07/20260727-6 - Minvu utiliza IA para procesar 957 observaciones de consulta pública sobre OGUC](src/content/events/2026/07/20260727-6.md) — 3 fuentes
 - [2026/07/20260727-7 - Seremi de Vivienda del Maule Patricio Ponce renuncia tras menos de cinco meses](src/content/events/2026/07/20260727-7.md) — 1 fuente
@@ -1470,6 +1470,7 @@
 - [2026/09/20260901-9 - Oficialismo sin 29 votos fuerza a La Moneda a abrir la reforma, Andrade habla de 'descrédito' y HRW pide al Congreso rechazarla](src/content/events/2026/09/20260901-9.md) — 5 fuentes
 - [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 6 fuentes
 - [2026/09/20260902-10 - Vecinos y comunidades mapuche marchan en Lautaro y cortan la Ruta 5 Sur contra el relleno sanitario Pintamahuida](src/content/events/2026/09/20260902-10.md) — 7 fuentes
+- [2026/09/20260902-11 - V Encuentro Regional del Foro Madrid en Santiago: sede Casa Piedra, programa con Milei y Kast y asistencia confirmada del Presidente en medio de tensiones oficialistas](src/content/events/2026/09/20260902-11.md) — 6 fuentes
 - [2026/09/20260902-2 - Corte de Iquique revoca retorno del Clan Chen a Alto Hospicio y restituye a Gendarmería la potestad de traslados](src/content/events/2026/09/20260902-2.md) — 8 fuentes
 - [2026/09/20260902-3 - Ñuble suma 9 homicidios en 2026 (+80% interanual) y contradice balance del seremi que los daba a la baja tras crimen en San Carlos](src/content/events/2026/09/20260902-3.md) — 5 fuentes
 - [2026/09/20260902-4 - Comisión mixta de Inteligencia Económica inicia audiencias por secreto bancario con choque oposición-oficialismo y plan de cuatro sesiones de expertos](src/content/events/2026/09/20260902-4.md) — 6 fuentes
@@ -1487,7 +1488,7 @@
 - [2026/09/20260903-15 - Panel El punto de inflexión chileno del Foro Madrid deriva en embestida contra Bachelet y réplica del PS](src/content/events/2026/09/20260903-15.md) — 6 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 10 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 27 fuentes
-- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 26 fuentes
+- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 8 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 10 fuentes
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
@@ -1534,7 +1535,8 @@
 - [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — 1 fuente
 - [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — 1 fuente
 - [2026/09/20260910-8 - Gobierno confirma que no habrá acto oficial por el 11 de septiembre y Kast mantendrá agenda habitual en Los Ríos](src/content/events/2026/09/20260910-8.md) — 10 fuentes
-- [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 17 fuentes
+- [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 28 fuentes
+- [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 
 ## 2025
 
@@ -1699,6 +1701,7 @@
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — 2 fuentes
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — 2 fuentes
 - [2022/09/20220910-1 - '#BoricInternado': la fake news de La Derecha Diario sobre un presunto colapso nervioso de Boric tras el triunfo del Rechazo](src/content/events/2022/09/20220910-1.md) — 6 fuentes
+- [2022/10/20221012-1 - Kast en esRadio (Madrid): 'la primera dictadura en Chile fue la de Salvador Allende' y balance del plebiscito de salida](src/content/events/2022/10/20221012-1.md) — 6 fuentes
 - [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md) — 3 fuentes
 - [2022/11/20221112-1 - PDI detiene a hombre de 21 años que amenazó al Presidente Boric vía escribenos.presidencia.cl para evitar promulgación de Ley Papito Corazón](src/content/events/2022/11/20221112-1.md) — 6 fuentes
 - [2022/11/20221122-1 - Cámara aprueba resolución que rechaza categóricamente el uso de fake news en política: 37 diputados votan en contra, en su mayoría de Republicanos y Chile Vamos](src/content/events/2022/11/20221122-1.md) — 2 fuentes

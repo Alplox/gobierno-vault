@@ -131,6 +131,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Minería de Chile',
   'Ministerio de Seguridad Pública',
   'Ministerio de Relaciones Exteriores',
+  'Subrei',
   'Ministerio Secretaría General de Gobierno',
   'Contraloría General de la República',
   'Defensoría de la Niñez',
