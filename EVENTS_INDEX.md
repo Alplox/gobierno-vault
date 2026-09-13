@@ -486,6 +486,7 @@
 - [2026/01/20260107-1 - Kast viaja a Perú en su primera gira internacional como Presidente Electo](src/content/events/2026/01/20260107-1.md) — 4 fuentes
 - [2026/01/20260108-1 - Termina el juicio del caso Gatica: los argumentos finales de defensores y acusadores de Claudio Crespo](src/content/events/2026/01/20260108-1.md) — 1 fuente
 - [2026/01/20260109-1 - Gobierno inicia histórico pago de beneficios del Seguro Social a más de 1,3 millones de pensionados](src/content/events/2026/01/20260109-1.md) — 4 fuentes
+- [2026/01/20260109-2 - Senapred declara alerta roja por calor extremo en la Región Metropolitana: máximas de 31 a 34 grados para el fin de semana](src/content/events/2026/01/20260109-2.md) — 5 fuentes
 - [2026/01/20260112-1 - Congreso Futuro 2026: Boric y Kast debaten sobre ciencia e IA](src/content/events/2026/01/20260112-1.md) — 5 fuentes
 - [2026/01/20260112-2 - The Clinic perfila a May Chomali, la carta favorita de Kast para Salud: la médica del círculo de Mañalich, hermana del arzobispo y pilar en la condena del oncólogo Manuel Álvarez](src/content/events/2026/01/20260112-2.md) — 5 fuentes
 - [2026/01/20260113-1 - Cuarto Tribunal Oral absuelve a Claudio Crespo en el caso Gustavo Gatica: aplica retroactivamente la Ley Naín-Retamal y la legítima defensa](src/content/events/2026/01/20260113-1.md) — 5 fuentes
@@ -635,6 +636,7 @@
 - [2026/05/20260507-1 - Comité de Ministros revierte el tercer rechazo ambiental y aprueba la planta de potasio NX Uno de Peine en el Salar de Atacama](src/content/events/2026/05/20260507-1.md) — 10 fuentes
 - [2026/05/20260508-1 - Dictan prisión preventiva a Joaquín Lavín León: la formalización por fraude al Fisco, tráfico de influencias y falsificación que lo llevó a Capitán Yáber](src/content/events/2026/05/20260508-1.md) — 4 fuentes
 - [2026/05/20260508-2 - Fiscalía presenta acusación contra el exalcalde de Puerto Montt Gervoy Paredes y pide pena de 14 años de cárcel por corrupción](src/content/events/2026/05/20260508-2.md) — 2 fuentes
+- [2026/05/20260509-1 - Los papeles húngaros: documentos acreditan US$1,3 millones del Gobierno de Orbán a la PNfV presidida por Kast](src/content/events/2026/05/20260509-1.md) — 6 fuentes
 - [2026/05/20260511-1 - Renuncia subsecretario de Ciencia Rafael Araos por diferencias con ministra Lincolao](src/content/events/2026/05/20260511-1.md) — 2 fuentes
 - [2026/05/20260511-2 - Kast cuestiona inversión en investigación científica y genera rechazo del mundo académico](src/content/events/2026/05/20260511-2.md) — 14 fuentes
 - [2026/05/20260512-1 - Kast ejemplifica con un niño 'que lleva un sándwich y no almuerza' para justificar mejor uso de recursos de Junaeb](src/content/events/2026/05/20260512-1.md) — 2 fuentes
@@ -725,6 +727,7 @@
 - [2026/06/20260625-8 - Chile se incorpora a Pax Silica: firma la Declaración Conjunta sobre IA en la II Cumbre](src/content/events/2026/06/20260625-8.md) — 4 fuentes
 - [2026/06/20260625-9 - Prisión preventiva para dos haitianos formalizados por red que cobraba por ingresar niños desde Haití](src/content/events/2026/06/20260625-9.md) — 6 fuentes
 - [2026/06/20260627-1 - La semana en que se enquistaron las dos almas del Gobierno de Kast](src/content/events/2026/06/20260627-1.md) — 1 fuente
+- [2026/06/20260627-2 - Kast homenajea a Jaime Guzmán en el Consejo Social de la UDI: su legado "vive en los más humildes"](src/content/events/2026/06/20260627-2.md) — 8 fuentes
 - [2026/06/20260630-1 - Senado rechaza acusación constitucional contra exministro de Hacienda Nicolás Grau](src/content/events/2026/06/20260630-1.md) — 4 fuentes
 - [2026/06/20260630-2 - Comisión de Constitución aprueba en general proyecto que autoriza a militares a realizar controles de identidad en estados de excepción](src/content/events/2026/06/20260630-2.md) — 2 fuentes
 - [2026/06/20260630-3 - Mesa de Reactivación Laboral entrega 22 propuestas al Gobierno: jornada hasta 52 horas en ciclos, indemnización a todo evento y sala cuna urgente](src/content/events/2026/06/20260630-3.md) — 8 fuentes
@@ -759,7 +762,7 @@
 - [2026/07/20260720-2 - Municipalidad de Santiago elimina fotos de tercera muerte de persona sin techo durante el temporal](src/content/events/2026/07/20260720-2.md) — 6 fuentes
 - [2026/07/20260720-3 - Gobierno confirma proyecto para modernizar el INDH](src/content/events/2026/07/20260720-3.md) — 5 fuentes
 - [2026/07/20260720-4 - Estudio CORPA revela alza de victimización y delitos en transporte público en Santiago: 'La capital está menos segura'](src/content/events/2026/07/20260720-4.md) — 3 fuentes
-- [2026/07/20260720-5 - Viralizan orden de compra de $76,5 millones en carne de Presidencia](src/content/events/2026/07/20260720-5.md) — 15 fuentes
+- [2026/07/20260720-5 - Viralizan orden de compra de $76,5 millones en carne de Presidencia](src/content/events/2026/07/20260720-5.md) — 18 fuentes
 - [2026/07/20260721-1 - Seremi de Culturas de Los Lagos Eduardo Leiva renuncia por motivos personales](src/content/events/2026/07/20260721-1.md) — 2 fuentes
 - [2026/07/20260721-10 - Colegio Médico exige reingresar los decretos de calidad del aire MP2,5 y de termoeléctricas retirados de Contraloría](src/content/events/2026/07/20260721-10.md) — 6 fuentes
 - [2026/07/20260721-2 - Foro Madrid anuncia que V Encuentro Regional se realizará en Santiago el 3 de septiembre](src/content/events/2026/07/20260721-2.md) — 7 fuentes
@@ -1510,6 +1513,7 @@
 - [2026/09/20260907-6 - Matamala publica Ayúdeme usted, compadre y acusa pasividad de Kast ante Milei, Rogers y Judd en el Foro Madrid](src/content/events/2026/09/20260907-6.md) — 10 fuentes
 - [2026/09/20260907-7 - Kast respalda al canciller Pérez Mackenna por Magallanes y toma distancia de Judd con la doctrina proChile](src/content/events/2026/09/20260907-7.md) — 7 fuentes
 - [2026/09/20260907-8 - Kast reconoce en ADN Hoy que no han podido solucionar el desempleo y admite difícil la meta de crecimiento 2026](src/content/events/2026/09/20260907-8.md) — 6 fuentes
+- [2026/09/20260907-9 - Hungría activa la Autoridad de Recuperación de Activos contra la red de Orbán y la mira alcanza a la PNfV que presidió Kast](src/content/events/2026/09/20260907-9.md) — 10 fuentes
 - [2026/09/20260908-1 - Contrapoder revela que Interior contrató a honorarios por $2,35 millones a Sofía Pumpin, periodista recién titulada, para reportes de Delegaciones Presidenciales en el gabinete de Pavez](src/content/events/2026/09/20260908-1.md) — 9 fuentes
 - [2026/09/20260908-10 - Gobierno reconoce 'error' en la contratación de Cristóbal Soto en Interior, ordena aplicar los instructivos de austeridad de Hacienda y abre investigación administrativa interna](src/content/events/2026/09/20260908-10.md) — 9 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
@@ -1522,7 +1526,7 @@
 - [2026/09/20260908-9 - Mara Sedini debuta como conductora de Sin Filtros en reemplazo de Fernando Solabarrieta tras su errática animación](src/content/events/2026/09/20260908-9.md) — 9 fuentes
 - [2026/09/20260909-1 - Cancillería cita a Judd por atribuir el estallido social a la izquierda; el embajador admite que EEUU no investigó en Chile y el canciller le recuerda que no debe opinar de política interna](src/content/events/2026/09/20260909-1.md) — 17 fuentes
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
-- [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 6 fuentes
+- [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 8 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
 - [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 24 fuentes
 - [2026/09/20260909-6 - Banco Central publica IPoM de septiembre: atribuye desempleo de 9,5% a costos laborales y automatización y recorta PIB 2026 a 0,25%-0,75%](src/content/events/2026/09/20260909-6.md) — 7 fuentes
@@ -1537,6 +1541,10 @@
 - [2026/09/20260910-8 - Gobierno confirma que no habrá acto oficial por el 11 de septiembre y Kast mantendrá agenda habitual en Los Ríos](src/content/events/2026/09/20260910-8.md) — 10 fuentes
 - [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 28 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
+- [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
+- [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
+- [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones en carnes, banderas y pines en la previa de Fiestas Patrias](src/content/events/2026/09/20260911-5.md) — 11 fuentes
+- [2026/09/20260912-1 - Contrapoder revela que Presidencia contrató a honorarios por $2,85 millones al venezolano Romer Rubio, exconcejal de Maracaibo, como asesor del Segundo Piso: segundo caso migrante en el equipo tras Depablos](src/content/events/2026/09/20260912-1.md) — 12 fuentes
 
 ## 2025
 
@@ -1589,6 +1597,7 @@
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
 - [2025/11/20251120-1 - Municipalidad de Vitacura destituye a funcionarios grabados en video sexual tras sumario por falta grave a la probidad](src/content/events/2025/11/20251120-1.md) — 8 fuentes
 - [2025/11/20251123-1 - Primera semana del balotaje: todas las encuestas dan a Kast una ventaja de entre 14 y 21 puntos sobre Jara](src/content/events/2025/11/20251123-1.md) — 3 fuentes
+- [2025/11/20251128-1 - Kast da ultimátum de 103 días a inmigrantes irregulares para salir de Chile y estalla crisis en la frontera con Perú](src/content/events/2025/11/20251128-1.md) — 9 fuentes
 - [2025/11/20251130-1 - La última Cadem publicable antes de la veda ratifica 58% para Kast y 42% para Jara; desde la medianoche rige la prohibición de difundir encuestas](src/content/events/2025/11/20251130-1.md) — 3 fuentes
 - [2025/12/20251203-1 - Atlas Network: la desinformacion como arma neoliberal](src/content/events/2025/12/20251203-1.md) — 4 fuentes
 - [2025/12/20251203-2 - Columna de El Líbero analiza la estrategia de Kast y su pinza con Kaiser de cara a la elección](src/content/events/2025/12/20251203-2.md) — 2 fuentes
@@ -1610,6 +1619,8 @@
 - [2025/12/20251223-1 - Tribunal declara culpable al exalcalde de Rancagua Juan Ramón Godoy por cohecho y fraude al fisco](src/content/events/2025/12/20251223-1.md) — 2 fuentes
 - [2025/12/20251224-1 - Equipo de Kast confirma criterio anti-nepotismo: sin ministros con familiares en el Congreso, con posibles excepciones](src/content/events/2025/12/20251224-1.md) — 5 fuentes
 - [2025/12/20251224-2 - Comisión para la Fijación de Remuneraciones eleva el sueldo del Presidente a $11,07 millones y Kast evita comprometer una rebaja: 'es una norma legal'](src/content/events/2025/12/20251224-2.md) — 3 fuentes
+- [2025/12/20251226-1 - Gobierno lanza el Plan Verano Seguro 2025-2026: 1.386 carabineros en dos fases para destinos turísticos](src/content/events/2025/12/20251226-1.md) — 5 fuentes
+- [2025/12/20251230-1 - Evacúan el edificio de Senapred por activación de un detector de humo en pleno balance de incendios forestales](src/content/events/2025/12/20251230-1.md) — 6 fuentes
 
 ## 2024
 

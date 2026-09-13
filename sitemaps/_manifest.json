@@ -1,13 +1,13 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-12T01:33:43.465Z",
+  "actualizado": "2026-09-12T23:55:18.925Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
-      "ultima_sync": "2026-09-12T01:08:33.928Z",
-      "articulos": 2535,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-12T23:55:18.578Z",
+      "articulos": 2781,
+      "nuevos": 246,
       "años": 1
     },
     "elclarin": {
@@ -19,7 +19,7 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-12T01:09:01.970Z",
+      "ultima_sync": "2026-09-12T23:55:18.541Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
@@ -75,9 +75,9 @@
     },
     "cnnchile": {
       "nombre": "CNN Chile",
-      "ultima_sync": "2026-09-12T01:09:50.392Z",
-      "articulos": 227609,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-12T23:55:18.925Z",
+      "articulos": 227761,
+      "nuevos": 152,
       "años": 16
     },
     "eldinamo": {

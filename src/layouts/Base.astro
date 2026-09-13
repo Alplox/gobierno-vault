@@ -126,6 +126,12 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         };
         apply();
         document.addEventListener('astro:after-swap', apply);
+        // Sonido: exponer el estado guardado ANTES del primer paint para que
+        // el CSS muestre solo el icono correcto (sin flash del icono contrario
+        // ni ambos superpuestos hasta que corra el bundle diferido).
+        try {
+          document.documentElement.dataset.gvSound = localStorage.getItem('gv-sound') === '0' ? '0' : '1';
+        } catch (e) {}
       })();
     </script>
     <ClientRouter />
@@ -249,6 +255,25 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         width: 100%;
         height: auto;
       }
+      /* Toggle sonido del navbar: el estado lo maneja aria-pressed (y
+         data-gv-sound en <html> para el primer paint). Solo un icono visible;
+         sin esto ambos spans absolute se superponen con opacidad 1 hasta que
+         corre el JS diferido y parecen "ambos activos a la vez". */
+      #btn-sound > span { pointer-events: none; }
+      #btn-sound[aria-pressed="true"] #icon-sound-on,
+      html[data-gv-sound="1"] #btn-sound:not([aria-pressed="false"]) #icon-sound-on {
+        opacity: 1; transform: scale(1); filter: blur(0);
+      }
+      #btn-sound[aria-pressed="true"] #icon-sound-off,
+      html[data-gv-sound="1"] #btn-sound:not([aria-pressed="false"]) #icon-sound-off {
+        opacity: 0; transform: scale(0.25); filter: blur(4px);
+      }
+      #btn-sound[aria-pressed="false"] #icon-sound-on {
+        opacity: 0; transform: scale(0.25); filter: blur(4px);
+      }
+      #btn-sound[aria-pressed="false"] #icon-sound-off {
+        opacity: 1; transform: scale(1); filter: blur(0);
+      }
     </style>
   </head>
   <body class="bg-base-200/70 text-base-content min-h-screen antialiased flex flex-col">
@@ -309,8 +334,8 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
             </ul>
           </details>
           <button id="btn-sound" type="button" data-cuelume-press="press" class="relative inline-flex items-center justify-center h-9 w-9 rounded-lg text-base-content/60 hover:text-base-content hover:bg-base-200 active:scale-[0.96] transition-[scale,background-color,color] duration-150 ease-out" title="Activar o silenciar sonidos de la interfaz" aria-label="Activar o silenciar sonidos de la interfaz" aria-pressed="true">
-            <span id="icon-sound-on" class="absolute inset-0 flex items-center justify-center transition-[transform,opacity,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)]"><Volume2 class="h-5 w-5" /></span>
-            <span id="icon-sound-off" class="absolute inset-0 flex items-center justify-center transition-[transform,opacity,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)]"><VolumeX class="h-5 w-5" /></span>
+            <span id="icon-sound-on" aria-hidden="true" class="pointer-events-none absolute inset-0 flex items-center justify-center transition-[transform,opacity,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)]"><Volume2 class="h-5 w-5" /></span>
+            <span id="icon-sound-off" aria-hidden="true" class="pointer-events-none absolute inset-0 flex items-center justify-center transition-[transform,opacity,filter] duration-300 ease-[cubic-bezier(0.2,0,0,1)]"><VolumeX class="h-5 w-5" /></span>
           </button>
           <details id="mobile-menu" class="relative lg:hidden">
             <summary class="list-none flex items-center p-2 rounded-lg text-base-content/70 hover:text-base-content hover:bg-base-200 cursor-pointer" aria-label="Menu de navegacion">
@@ -514,20 +539,12 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       const SOUND_KEY = 'gv-sound';
       let soundOn = localStorage.getItem(SOUND_KEY) !== '0';
       const btnSound = document.getElementById('btn-sound');
-      const iconOn = document.getElementById('icon-sound-on');
-      const iconOff = document.getElementById('icon-sound-off');
       function gvSetSound() {
         setEnabled(soundOn);
         btnSound?.setAttribute('aria-pressed', String(soundOn));
-        const onActive = soundOn;
-        const setIcon = (el, active) => {
-          if (!el) return;
-          el.style.transform = active ? 'scale(1)' : 'scale(0.25)';
-          el.style.opacity = active ? '1' : '0';
-          el.style.filter = active ? 'blur(0px)' : 'blur(4px)';
-        };
-        setIcon(iconOn, onActive);
-        setIcon(iconOff, !onActive);
+        // Espejo para el CSS de primer paint (el nav persiste con
+        // transition:persist, así que el atributo sobrevive navegaciones).
+        document.documentElement.dataset.gvSound = soundOn ? '1' : '0';
       }
       gvSetSound();
       // Llega la señal de "arrival" al navegar con View Transitions (tras la
