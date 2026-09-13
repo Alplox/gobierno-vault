@@ -48,5 +48,5 @@ Cada Cuenta Pública ante Congreso Pleno tiene **un evento master**:
 - **Fuentes:** sitio oficial `gob.cl/cuentapublicaYYYY` (`medio: Gobierno de Chile`) + 2-3 medios del día (grep sitemaps `'cuenta publica' ... | grep '<año>-06'`).
 - **Anuncios granulares:** al implementarse, crear eventos propios con `relaciones: amplia`/`deriva_en`/`responde_a` hacia el master (ej. CP 2026 Kast `20260601-5` + `20260601-2/3`, `20260602-4`).
 - **Verificación:** cifras como `[[cifras/...]]`; seguimiento en `TAREAS/SEGUIMIENTO/` “Cuentas Públicas — seguimiento” (`TAREAS/SEGUIMIENTO_INDEX.md`).
-- **Estado serie:** 2022 ⬜ · 2023 ✅ `20230601-1` · 2024 ✅ `20240601-1` · 2025 ✅ `20250601-1` (master ampliada, Punta Peuco como sección) · 2026 ✅ `20260601-5`.
+- **Estado serie:** 2022 ✅ `20220601-1` · 2023 ✅ `20230601-1` · 2024 ✅ `20240601-1` · 2025 ✅ `20250601-1` (master ampliada, Punta Peuco como sección) · 2026 ✅ `20260601-5`.
 - Sectoriales/ministeriales (ej. Minsal `20260729-17`) generan eventos pero no son masters presidenciales.

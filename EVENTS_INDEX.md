@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (465)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (466)
 
 <details>
-<summary>Ver lista (465 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (466 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -473,6 +473,7 @@
 - [2026/08/20260821-10 - Fiscalía y PDI detienen a 12 personas e incautan más de 150 kilos de droga valorados en $1.000 millones en operativos en Los Ríos](src/content/events/2026/08/20260821-10.md) — **2 fuentes**
 - [2026/08/20260823-4 - Declaran culpables a cuatro excarabineros por apremios a detenido en Alto Hospicio: suman seis condenados por el caso de violencia institucional](src/content/events/2026/08/20260823-4.md) — **2 fuentes**
 - [2026/08/20260824-4 - Minvu abre los llamados 2026 del DS27 por sobre 10,7 millones de UF: mejoramiento de viviendas y barrios con meta de casi 20 mil empleos](src/content/events/2026/08/20260824-4.md) — **2 fuentes**
+- [2026/09/20260909-9 - Rojo Edwards respalda la rectificación de Judd: no dijo que tenía información de quién quemó el Metro](src/content/events/2026/09/20260909-9.md) — **2 fuentes**
 
 </details>
 
@@ -622,6 +623,7 @@
 - [2026/04/20260427-1 - Entra en vigencia la segunda etapa de la Ley de 40 horas (42 horas): comercio y expertos alertan por costos y empleo](src/content/events/2026/04/20260427-1.md) — 1 fuente
 - [2026/04/20260427-2 - CEPAL recorta proyección de crecimiento de Chile 2026 a 2% por tensión global e inflación](src/content/events/2026/04/20260427-2.md) — 1 fuente
 - [2026/04/20260427-3 - Orbán Files: Hungría investigará por corrupción el financiamiento público de la red conservadora internacional que incluyó a la PNfV presidida por Kast](src/content/events/2026/04/20260427-3.md) — 7 fuentes
+- [2026/04/20260427-4 - Siete reclamaciones impugnan la declaratoria del humedal urbano Rocuant-Andalién (1.377,2 ha) ante el Tribunal Ambiental: el GORE Biobío entre los opositores y ASMAR suma la octava](src/content/events/2026/04/20260427-4.md) — 10 fuentes
 - [2026/04/20260429-1 - Contraloría concluye que frase 'Estado quebrado' no cumplió estándares de moderación](src/content/events/2026/04/20260429-1.md) — 2 fuentes
 - [2026/04/20260430-1 - 37 audios filtrados revelan trama de injerencia internacional desde Honduras](src/content/events/2026/04/20260430-1.md) — 3 fuentes
 - [2026/04/20260430-2 - BBCL Investiga revela el auge y caída del Clan Chen, que lavó $160 mil millones en Chile](src/content/events/2026/04/20260430-2.md) — 1 fuente
@@ -1116,6 +1118,7 @@
 - [2026/08/20260808-13 - PDI y Fiscalía investigan posibles ciberataques a Entel, Movistar y Telmex tras alerta de EEUU: grupo 'Lilac Typhoon' ligado a China](src/content/events/2026/08/20260808-13.md) — 3 fuentes
 - [2026/08/20260808-14 - Neme protagoniza accidente de tránsito en Las Condes: queda apercibido y el criterio de la Fiscalía abre debate](src/content/events/2026/08/20260808-14.md) — 4 fuentes
 - [2026/08/20260808-15 - Oposición coordina su mesa nacional de presidentes de partidos y despliega encuentros regionales: 'la unidad más que un deseo es una obligación'](src/content/events/2026/08/20260808-15.md) — 3 fuentes
+- [2026/08/20260808-16 - Kast evalúa que el registro de bandas criminales de rango constitucional lo elabore el Ejecutivo con control del Senado y sin control judicial: debate en la Comisión de Seguridad](src/content/events/2026/08/20260808-16.md) — 7 fuentes
 - [2026/08/20260808-2 - El Mostrador: el sumario en Carabineros investiga las filtraciones de las cirugías de Janet Morales, no las operaciones, y Contraloría da 10 días a la institución y al Ministerio de Seguridad](src/content/events/2026/08/20260808-2.md) — 2 fuentes
 - [2026/08/20260808-3 - Columna de Prensa Opal advierte que el Registro de Actos Vandálicos castigaría con pérdida de beneficios sociales y discriminaría a la población pobre](src/content/events/2026/08/20260808-3.md) — 1 fuente
 - [2026/08/20260808-4 - BioBioChile reconstruye la historia de la 'bruja de Pinochet': Eugenia Pirzio-Biroli, la esotérica alcaldesa de Cisnes que vaticinaba el futuro del dictador](src/content/events/2026/08/20260808-4.md) — 2 fuentes
@@ -1397,6 +1400,7 @@
 - [2026/08/20260823-3 - Cadem edición 683: aprobación de Kast sube a 40% pero 51% pide retirar la reforma de seguridad para buscar acuerdos, 61% exige autorización del Congreso y 55% renovación mensual del estado de excepción](src/content/events/2026/08/20260823-3.md) — 8 fuentes
 - [2026/08/20260823-4 - Declaran culpables a cuatro excarabineros por apremios a detenido en Alto Hospicio: suman seis condenados por el caso de violencia institucional](src/content/events/2026/08/20260823-4.md) — 2 fuentes
 - [2026/08/20260824-1 - Kast en Radio Infinita: su reforma de seguridad 'no es iliberal' y 'se puede cambiar', defiende las 43 salidas del gabinete y relativiza el cruce por el Convenio 169](src/content/events/2026/08/20260824-1.md) — 11 fuentes
+- [2026/08/20260824-10 - 'Lista negra' de bandas: Walker la califica de peligrosa, Longton rechaza que el Senado valide decisiones penales y Moreira la respalda con garantías mientras Arrau defiende el delito de pertenencia](src/content/events/2026/08/20260824-10.md) — 6 fuentes
 - [2026/08/20260824-2 - Petro acusa en X que la elección de Kast fue manipulada 'mediante la mentira' y que cinco países fueron 'manipuladas por technofascismo', citando el caso Cerimedo: sin antecedentes y sin reacción oficial chilena documentada](src/content/events/2026/08/20260824-2.md) — 9 fuentes
 - [2026/08/20260824-4 - Minvu abre los llamados 2026 del DS27 por sobre 10,7 millones de UF: mejoramiento de viviendas y barrios con meta de casi 20 mil empleos](src/content/events/2026/08/20260824-4.md) — 2 fuentes
 - [2026/08/20260824-5 - Gobierno rebate el 'iliberalismo': Alvarado dice estar 'muy lejos' de lo señalado por Cruz-Coke y Arrau desafía a los 'opinólogos' a ir a las poblaciones](src/content/events/2026/08/20260824-5.md) — 3 fuentes
@@ -1499,10 +1503,11 @@
 - [2026/09/20260903-9 - Cadem Plaza Pública N°686: aprobación de Kast cae a 34% y desaprobación sube a 61%, peor registro del mandato](src/content/events/2026/09/20260903-9.md) — 5 fuentes
 - [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con medidas cautelares y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 33 fuentes
 - [2026/09/20260904-2 - Fuga en Copiapó: condenado por homicidio autorizado sin custodia al bautizo se fugó; fue recapturado en Antofagasta con ocho detenidos por colaboración y la Corte pidió informe al juez](src/content/events/2026/09/20260904-2.md) — 26 fuentes
-- [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 15 fuentes
+- [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 17 fuentes
 - [2026/09/20260904-4 - Paz Zárate cuestiona el comunicado conjunto Kast-Milei; texto redactado por Argentina que canjea gas por Malvinas sin derogar el decreto 457](src/content/events/2026/09/20260904-4.md) — 5 fuentes
 - [2026/09/20260904-5 - Zambrano se reúne con Kast y con el Senado chileno en visita interparlamentaria centrada en seguridad](src/content/events/2026/09/20260904-5.md) — 6 fuentes
 - [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 8 fuentes
+- [2026/09/20260904-7 - Expertos contra fiscal nacional por el registro: Couso y Duce lo ven inútil y ambiguo, Valencia defiende su conveniencia y la carta de Irarrázaval advierte presunción de derecho prohibida](src/content/events/2026/09/20260904-7.md) — 7 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
@@ -1516,6 +1521,7 @@
 - [2026/09/20260907-9 - Hungría activa la Autoridad de Recuperación de Activos contra la red de Orbán y la mira alcanza a la PNfV que presidió Kast](src/content/events/2026/09/20260907-9.md) — 10 fuentes
 - [2026/09/20260908-1 - Contrapoder revela que Interior contrató a honorarios por $2,35 millones a Sofía Pumpin, periodista recién titulada, para reportes de Delegaciones Presidenciales en el gabinete de Pavez](src/content/events/2026/09/20260908-1.md) — 9 fuentes
 - [2026/09/20260908-10 - Gobierno reconoce 'error' en la contratación de Cristóbal Soto en Interior, ordena aplicar los instructivos de austeridad de Hacienda y abre investigación administrativa interna](src/content/events/2026/09/20260908-10.md) — 9 fuentes
+- [2026/09/20260908-11 - Bianchi: Chile no tiene ninguna capacidad de control del Estrecho de Magallanes](src/content/events/2026/09/20260908-11.md) — 3 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 7 fuentes
 - [2026/09/20260908-4 - PISA 2025: Chile anota su peor resultado en Matemática con 59% bajo el nivel básico y retrocede en Lectura](src/content/events/2026/09/20260908-4.md) — 6 fuentes
@@ -1531,7 +1537,10 @@
 - [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 24 fuentes
 - [2026/09/20260909-6 - Banco Central publica IPoM de septiembre: atribuye desempleo de 9,5% a costos laborales y automatización y recorta PIB 2026 a 0,25%-0,75%](src/content/events/2026/09/20260909-6.md) — 7 fuentes
 - [2026/09/20260909-7 - Se cae el feriado del 17 de septiembre: la tramitación no alcanza antes de Fiestas Patrias](src/content/events/2026/09/20260909-7.md) — 10 fuentes
+- [2026/09/20260909-8 - Cuello, Santana y Serrano denuncian ante el fiscal nacional un eventual delito de Ley de Inteligencia por los dichos de Judd](src/content/events/2026/09/20260909-8.md) — 5 fuentes
+- [2026/09/20260909-9 - Rojo Edwards respalda la rectificación de Judd: no dijo que tenía información de quién quemó el Metro](src/content/events/2026/09/20260909-9.md) — 2 fuentes
 - [2026/09/20260910-1 - Alvarado fija postura ante la polémica por contratación de jóvenes: defiende darles oportunidades pero exige sueldos acorde a las normas y confirma que Soto aceptó la corrección y sigue en Interior](src/content/events/2026/09/20260910-1.md) — 5 fuentes
+- [2026/09/20260910-10 - Judd en El Mercurio: Chile es 'vulnerable al crimen organizado' y el Escudo de las Américas va en su interés, un día después del tirón de orejas](src/content/events/2026/09/20260910-10.md) — 6 fuentes
 - [2026/09/20260910-2 - Rau se desmarca de la meta de 6% de desempleo de Quiroz y luego se alinea: Quiroz reafirma 6,5% y crecimiento 4% tras seminario Clapes UC](src/content/events/2026/09/20260910-2.md) — 12 fuentes
 - [2026/09/20260910-3 - Carabineros rechaza reincorporar a Claudio Crespo tras su absolución en el caso Gatica: su defensa acusa ilegalidad y anuncia recurso de revisión](src/content/events/2026/09/20260910-3.md) — 7 fuentes
 - [2026/09/20260910-4 - Kast encabeza largada protocolar del WRC Rally Chile Biobío 2026 en Concepción entre pifias y aplausos](src/content/events/2026/09/20260910-4.md) — 15 fuentes
@@ -1539,12 +1548,14 @@
 - [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — 1 fuente
 - [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — 1 fuente
 - [2026/09/20260910-8 - Gobierno confirma que no habrá acto oficial por el 11 de septiembre y Kast mantendrá agenda habitual en Los Ríos](src/content/events/2026/09/20260910-8.md) — 10 fuentes
+- [2026/09/20260910-9 - Diputados PC ofician al canciller para declarar persona non grata a Judd: 'Yankee, go home'](src/content/events/2026/09/20260910-9.md) — 5 fuentes
 - [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 28 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
 - [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones en carnes, banderas y pines en la previa de Fiestas Patrias](src/content/events/2026/09/20260911-5.md) — 11 fuentes
 - [2026/09/20260912-1 - Contrapoder revela que Presidencia contrató a honorarios por $2,85 millones al venezolano Romer Rubio, exconcejal de Maracaibo, como asesor del Segundo Piso: segundo caso migrante en el equipo tras Depablos](src/content/events/2026/09/20260912-1.md) — 12 fuentes
+- [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
 
 ## 2025
 
@@ -1701,6 +1712,7 @@
 - [2022/05/20220502-1 - Querella contra Carabineros por la quema de la estación La Granja del Metro tras el reportaje '¿Quién quemó el Metro?' de La Red](src/content/events/2022/05/20220502-1.md) — 4 fuentes
 - [2022/05/20220504-1 - Convención aprueba norma que prohíbe la tortura con 38 abstenciones: solo Martín Arrau (UDI) y Helmuth Martínez votaron en contra](src/content/events/2022/05/20220504-1.md) — 3 fuentes
 - [2022/05/20220524-1 - Boric compromete desde Justicia una agenda de reparación para víctimas de violaciones a los DD.HH. del estallido social](src/content/events/2022/05/20220524-1.md) — 2 fuentes
+- [2022/06/20220601-1 - Primera Cuenta Pública de Boric: plebiscito de salida del 4 de septiembre, reforma tributaria de junio y 102 medidas en 5 ejes](src/content/events/2022/06/20220601-1.md) — 6 fuentes
 - [2022/07/20220704-1 - Boric realiza una cadena nacional tras recibir la propuesta de nueva Constitución y convoca al plebiscito del 4 de septiembre](src/content/events/2022/07/20220704-1.md) — 2 fuentes
 - [2022/07/20220705-1 - Ricardo Lagos llama a continuar el debate constituyente tras el plebiscito y Boric responde: 'habrá que depender del veto histórico de la derecha'](src/content/events/2022/07/20220705-1.md) — 3 fuentes
 - [2022/07/20220726-1 - Reparten trípticos falsos con la gráfica oficial de la Convención en La Florida y Puente Alto: tras el sitio 'Facilitadores Constitucionales' está Numen, la empresa de Cerimedo](src/content/events/2022/07/20220726-1.md) — 9 fuentes

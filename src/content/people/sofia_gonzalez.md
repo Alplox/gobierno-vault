@@ -1,9 +1,5 @@
 ---
 nombre: Sofía González
-cargo: Diputada
-organizacion: camara_diputados
-notas: Diputada del Partido Comunista. Tras la aprobación de los vetos de Kast a
-  la megarreforma (10-ago-2026) sostuvo que 'estos tres vetos demuestran cuál es
-  el alma de esta megarreforma, que es la defensa de los más ricos en desmedro
-  de quienes menos tienen' (evento 20260810-10).
+cargo: Diputada (PC)
+notas: Diputada del Partido Comunista. El 10 de septiembre de 2026 suscribió el oficio de la bancada PC al canciller para declarar persona non grata al embajador Brandon Judd.
 ---
