@@ -111,7 +111,8 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 
 | Institución | URL | Notas |
 | --- | --- | --- |
-| Presidencia — Gobierno Transparente (portal) | <https://transparenciaactiva.presidencia.cl/> | Validado 2026-08-27: `fetch` falla desde esta red (transport error); probar `fetch-impersonate` o `<https://www.portaltransparencia.cl/>` |
+| Presidencia — TA vigente (PortalPDdT) | <https://www.portaltransparencia.cl/PortalPdT/pdtta?codOrganismo=AA001> | Dato vivo 2026 (verificado 13-sep-2026, actualizado 10/09/2026): Personal y remuneraciones (Planta, Contrata, Honorarios, Escala), Adquisiciones, Info Presupuestaria. Detalle por JSF — fetch trae categorías, tablas requieren navegador |
+| Presidencia — Transparencia histórica | <https://transparenciaactiva.presidencia.cl/> | Congelado al 12/10/2018 (solo Boric I hacia atrás); el index deriva al PortalPdT. Causa del fallo `fetch`: cadena TLS incompleta (curl_cffi: unable to get local issuer); `fetch-impersonate` también falla — solo `NODE_TLS_REJECT_UNAUTHORIZED=0` para diagnóstico |
 | Presidencia — Dotación de Planta 2014 | <https://transparenciaactiva.presidencia.cl/2014/per_planta.html> | Mismo `fetch` que arriba |
 | Presidencia — Dotación de Planta 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_planta.html> | Mismo |
 | Presidencia — Remuneraciones 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_remuneraciones.html> | Mismo |

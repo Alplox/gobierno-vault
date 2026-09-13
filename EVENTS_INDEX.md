@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (466)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (465)
 
 <details>
-<summary>Ver lista (466 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (465 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -205,7 +205,6 @@
 - [2026/08/20260815-6 - Mirosevic emplaza a Kast a elegir entre 'seguir su trumpismo o cuidar el interés de Chile' ante los aranceles, la acusación de la Casa Blanca y la CPI](src/content/events/2026/08/20260815-6.md) — **1 fuente**
 - [2026/08/20260815-8 - Georreferencia sitúa a la pareja de Vivanco en la dirección del abogado Gonzalo Cisternas, cuyo cliente obtuvo un fallo favorable de la jueza tres días antes](src/content/events/2026/08/20260815-8.md) — **1 fuente**
 - [2026/08/20260815-9 - Exjefe de operaciones de la DEA Michael Vigil: 'Capturar a los capos no detiene el narcotráfico' y más del 90% de las drogas en EE.UU. las cruzan estadounidenses](src/content/events/2026/08/20260815-9.md) — **1 fuente**
-- [2026/08/20260816-10 - Parisi acusa falta de liderazgo de Kast: 'A Kast le pegan los ministros, le pega Squella, le pegan todos' y advierte que es percibido como un gobierno machista](src/content/events/2026/08/20260816-10.md) — **1 fuente**
 - [2026/08/20260816-12 - Gustavo Becerra revela en La Divina Comida las amenazas que recibió durante el estallido social: 'Conozco a sus hijos', le advirtieron por apoyar las manifestaciones](src/content/events/2026/08/20260816-12.md) — **1 fuente**
 - [2026/08/20260816-13 - PS y PC critican la 'descoordinación' del gobierno de Kast: Venegas afirma que 'si no tuviera mayoría parlamentaria, estaría en el suelo' y Serrano acusa improvisación](src/content/events/2026/08/20260816-13.md) — **1 fuente**
 - [2026/08/20260816-18 - Rodolfo Carter: 'Quiroz es la persona más influyente del gabinete', admite descoordinaciones y critica a Matthei](src/content/events/2026/08/20260816-18.md) — **1 fuente**
@@ -566,7 +565,7 @@
 - [2026/03/20260318-1 - Gobierno de Kast impulsa un 'reseteo': recortes a ministerios, retiro de 43 decretos de Medio Ambiente y de la negociación ramal](src/content/events/2026/03/20260318-1.md) — 3 fuentes
 - [2026/03/20260319-1 - Gobierno envia urgencia legislativa para proyecto que castiga migracion irregular](src/content/events/2026/03/20260319-1.md) — 3 fuentes
 - [2026/03/20260320-1 - Gobierno decreta alerta sanitaria nacional por cancer](src/content/events/2026/03/20260320-1.md) — 7 fuentes
-- [2026/03/20260320-2 - Kast eleva sueldo maximo de asesores de confianza a casi $10 millones](src/content/events/2026/03/20260320-2.md) — 5 fuentes
+- [2026/03/20260320-2 - Kast eleva sueldo maximo de asesores de confianza a casi $10 millones](src/content/events/2026/03/20260320-2.md) — 6 fuentes
 - [2026/03/20260321-1 - The Clinic perfila a Mara Sedini, la vocera de gobierno: la hockeysta, actriz que soñó con Broadway y opinóloga política que pasó de Sin Filtros a La Moneda](src/content/events/2026/03/20260321-1.md) — 7 fuentes
 - [2026/03/20260322-1 - Gobierno anuncia cambios al MEPCO tras alertas sobre impacto en IPC e inflación](src/content/events/2026/03/20260322-1.md) — 4 fuentes
 - [2026/03/20260323-1 - Recorte de $72 mil millones al presupuesto de Seguridad Pública](src/content/events/2026/03/20260323-1.md) — 5 fuentes
@@ -613,7 +612,7 @@
 - [2026/04/20260417-1 - Seremi de Culturas de Aysén Ángela Valdebenito renuncia por falta de experiencia](src/content/events/2026/04/20260417-1.md) — 2 fuentes
 - [2026/04/20260417-2 - Luis Calderón asume como Seremi de Seguridad de La Araucanía](src/content/events/2026/04/20260417-2.md) — 2 fuentes
 - [2026/04/20260417-3 - Mario Sepúlveda es reemplazado como seremi de Seguridad de La Araucanía tras 16 días](src/content/events/2026/04/20260417-3.md) — 5 fuentes
-- [2026/04/20260418-1 - Revelan contrato de Cristián Valenzuela: hasta $8,9 millones mensuales como asesor de Kast](src/content/events/2026/04/20260418-1.md) — 4 fuentes
+- [2026/04/20260418-1 - Revelan contrato de Cristián Valenzuela: hasta $8,9 millones mensuales como asesor de Kast](src/content/events/2026/04/20260418-1.md) — 5 fuentes
 - [2026/04/20260421-1 - Seremi de Trabajo de Coquimbo Viviana Torres renuncia por no cumplir requisito de 10 semestres](src/content/events/2026/04/20260421-1.md) — 3 fuentes
 - [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 7 fuentes
 - [2026/04/20260422-2 - Correo interno de la directora del Programa de DDHH revela instrucción de no alegar en causas de lesa humanidad y contradice al ministro Rabat](src/content/events/2026/04/20260422-2.md) — 3 fuentes
@@ -646,6 +645,7 @@
 - [2026/05/20260514-1 - Kast anuncia que su gobierno ordenará el sistema penal y separará a condenados por lesa humanidad](src/content/events/2026/05/20260514-1.md) — 7 fuentes
 - [2026/05/20260514-2 - Marcha de la ACES y la Confech por la Alameda contra los recortes en educación termina con intervención de Carabineros frente a La Moneda y cierre de tres estaciones de Metro](src/content/events/2026/05/20260514-2.md) — 5 fuentes
 - [2026/05/20260515-1 - Gobierno evalúa revertir cambio de régimen de Punta Peuco tras anuncio de Kast](src/content/events/2026/05/20260515-1.md) — 2 fuentes
+- [2026/05/20260518-1 - Comisión de Trabajo despacha megarreforma: rechaza eliminar franquicia Sence y aprueba destitución por licencias falsas](src/content/events/2026/05/20260518-1.md) — 6 fuentes
 - [2026/05/20260519-1 - Ministra de Seguridad Trinidad Steinert es removida del cargo](src/content/events/2026/05/20260519-1.md) — 3 fuentes
 - [2026/05/20260519-2 - Vocera de Gobierno Mara Sedini es removida del cargo](src/content/events/2026/05/20260519-2.md) — 4 fuentes
 - [2026/05/20260520-1 - Camara de Diputados despacha megarreforma al Senado](src/content/events/2026/05/20260520-1.md) — 5 fuentes
@@ -1088,7 +1088,7 @@
 - [2026/08/20260807-10 - La contradicción en privacidad de la ACOT: el gobierno defiende el secreto bancario pero contempla la interceptación de telecomunicaciones en el nuevo estado de excepción](src/content/events/2026/08/20260807-10.md) — 14 fuentes
 - [2026/08/20260807-11 - Gobierno reporta 50% de avance en zanjas del Plan Fronterizo de la Macrozona Norte y 80% en camellones (al 11 de julio)](src/content/events/2026/08/20260807-11.md) — 10 fuentes
 - [2026/08/20260807-12 - Bío Bío Investiga: cientos de fiscales recibieron correo extorsivo pidiendo US$750 en bitcoins desde una cuenta con dominio @fiscales.cl](src/content/events/2026/08/20260807-12.md) — 1 fuente
-- [2026/08/20260807-13 - Corte de Apelaciones de La Serena declara ilegal el doble cobro del CAE ejecutado por la TGR (precedente para frenar embargos administrativos)](src/content/events/2026/08/20260807-13.md) — 4 fuentes
+- [2026/08/20260807-13 - Corte de Apelaciones de La Serena declara ilegal el doble cobro del CAE ejecutado por la TGR (precedente para frenar embargos administrativos)](src/content/events/2026/08/20260807-13.md) — 5 fuentes
 - [2026/08/20260807-14 - Kast desde Colombia separa los indultos de la agenda de seguridad y abre la puerta a 'perfeccionar' la Ley Karin](src/content/events/2026/08/20260807-14.md) — 9 fuentes
 - [2026/08/20260807-15 - Felipe Harboe: 'No se logra disuadir al crimen organizado con copamiento policial' y descarta la utilidad de un nuevo estado de excepción](src/content/events/2026/08/20260807-15.md) — 1 fuente
 - [2026/08/20260807-16 - Diputada Urrutia (FA) sobre el estado de excepción en barrios: 'los militares han sido formados para otro tipo de funciones'](src/content/events/2026/08/20260807-16.md) — 1 fuente
@@ -1278,7 +1278,7 @@
 - [2026/08/20260815-8 - Georreferencia sitúa a la pareja de Vivanco en la dirección del abogado Gonzalo Cisternas, cuyo cliente obtuvo un fallo favorable de la jueza tres días antes](src/content/events/2026/08/20260815-8.md) — 1 fuente
 - [2026/08/20260815-9 - Exjefe de operaciones de la DEA Michael Vigil: 'Capturar a los capos no detiene el narcotráfico' y más del 90% de las drogas en EE.UU. las cruzan estadounidenses](src/content/events/2026/08/20260815-9.md) — 1 fuente
 - [2026/08/20260816-1 - Las primeras esquirlas del Decreto 333 en salud: desabastecimiento de alimentos en el Sótero del Río, ajustes en hospitales y recortes en la atención primaria](src/content/events/2026/08/20260816-1.md) — 4 fuentes
-- [2026/08/20260816-10 - Parisi acusa falta de liderazgo de Kast: 'A Kast le pegan los ministros, le pega Squella, le pegan todos' y advierte que es percibido como un gobierno machista](src/content/events/2026/08/20260816-10.md) — 1 fuente
+- [2026/08/20260816-10 - Parisi acusa falta de liderazgo de Kast: 'A Kast le pegan los ministros, le pega Squella, le pegan todos' y advierte que es percibido como un gobierno machista](src/content/events/2026/08/20260816-10.md) — 4 fuentes
 - [2026/08/20260816-11 - PDI busca a Thae Loiza Galaz, exconcejala de Graneros desaparecida hace 11 días: salió de un inmueble en Ñuñoa el 5 de agosto y se perdió su rastro](src/content/events/2026/08/20260816-11.md) — 2 fuentes
 - [2026/08/20260816-12 - Gustavo Becerra revela en La Divina Comida las amenazas que recibió durante el estallido social: 'Conozco a sus hijos', le advirtieron por apoyar las manifestaciones](src/content/events/2026/08/20260816-12.md) — 1 fuente
 - [2026/08/20260816-13 - PS y PC critican la 'descoordinación' del gobierno de Kast: Venegas afirma que 'si no tuviera mayoría parlamentaria, estaría en el suelo' y Serrano acusa improvisación](src/content/events/2026/08/20260816-13.md) — 1 fuente
@@ -1289,6 +1289,7 @@
 - [2026/08/20260816-18 - Rodolfo Carter: 'Quiroz es la persona más influyente del gabinete', admite descoordinaciones y critica a Matthei](src/content/events/2026/08/20260816-18.md) — 1 fuente
 - [2026/08/20260816-19 - Lautaro Carmona (PC) pide la renuncia de todo el gabinete tras la salida de Natalia Duco: 'Es un hecho grave'](src/content/events/2026/08/20260816-19.md) — 2 fuentes
 - [2026/08/20260816-2 - Sulantay (UDI) anuncia proyecto para impedir que deportistas trans compitan en categorías distintas a su sexo biológico](src/content/events/2026/08/20260816-2.md) — 2 fuentes
+- [2026/08/20260816-20 - Portazo UDI a la reforma de seguridad: Ramírez dice que 'daña la institucionalidad' y condiciona los votos, con réplicas en el oficialismo y matiz al día siguiente](src/content/events/2026/08/20260816-20.md) — 6 fuentes
 - [2026/08/20260816-3 - Crisis de natalidad: Cochamó, Portezuelo y Río Hurtado son las comunas donde ya mueren más personas de las que nacen; la fecundidad cae a 0,99 hijos por mujer](src/content/events/2026/08/20260816-3.md) — 3 fuentes
 - [2026/08/20260816-4 - Excarabinero dado de baja tras detención en Illapel denuncia 'graves irregularidades' del procedimiento y publica videos de su reducción](src/content/events/2026/08/20260816-4.md) — 3 fuentes
 - [2026/08/20260816-5 - Guillermo Ramírez desmarca a la UDI de la reforma constitucional de seguridad: 'En las condiciones actuales, la UDI no puede apoyar las reformas porque dañan la institucionalidad'](src/content/events/2026/08/20260816-5.md) — 2 fuentes
