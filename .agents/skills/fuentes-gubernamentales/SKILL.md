@@ -62,7 +62,7 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 
 | Institución | URL |
 | --- | --- |
-| Ministerio de Obras Públicas | <https://www.mop.gob.cl/noticias/> | Corregido 2026-08-27: `/prensa/` → 404, `/noticias/` es el listado vigente |
+| Ministerio de Obras Públicas | <https://www.mop.gob.cl/noticias/> (`/prensa/` da 404) |
 | Ministerio de Vivienda y Urbanismo | <https://www.minvu.gob.cl/noticias/> |
 | Ministerio de Transportes y Telecomunicaciones | <https://www.mtt.gob.cl/noticias> |
 | Ministerio de Bienes Nacionales | <https://www.bienesnacionales.cl/noticias/> |
@@ -111,7 +111,7 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 
 | Institución | URL | Notas |
 | --- | --- | --- |
-| Presidencia — TA vigente (PortalPDdT) | <https://www.portaltransparencia.cl/PortalPdT/pdtta?codOrganismo=AA001> | Dato vivo 2026 (verificado 13-sep-2026, actualizado 10/09/2026): Personal y remuneraciones (Planta, Contrata, Honorarios, Escala), Adquisiciones, Info Presupuestaria. Detalle por JSF — fetch trae categorías, tablas requieren navegador |
+| Presidencia — TA vigente (PortalPDdT) | <https://www.portaltransparencia.cl/PortalPdT/pdtta?codOrganismo=AA001> | Dato vivo: Personal y remuneraciones (Planta, Contrata, Honorarios, Escala), Adquisiciones, Info Presupuestaria. Detalle por JSF — fetch trae categorías, tablas requieren navegador |
 | Presidencia — Transparencia histórica | <https://transparenciaactiva.presidencia.cl/> | Congelado al 12/10/2018 (solo Boric I hacia atrás); el index deriva al PortalPdT. Causa del fallo `fetch`: cadena TLS incompleta (curl_cffi: unable to get local issuer); `fetch-impersonate` también falla — solo `NODE_TLS_REJECT_UNAUTHORIZED=0` para diagnóstico |
 | Presidencia — Dotación de Planta 2014 | <https://transparenciaactiva.presidencia.cl/2014/per_planta.html> | Mismo `fetch` que arriba |
 | Presidencia — Dotación de Planta 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_planta.html> | Mismo |
@@ -123,14 +123,14 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 
 ## Verificación de montos de autoridades (régimen 38 bis)
 
-Cadena 23-ago-2026: Resolución N°5/2024 → adecuación IPC **+7,8%** (Oficio N°26/2025 Anexo 1) → registro mensual (parlamentarios/SEREMIs cuadran; Presidente/ministros/subsecretarios/gobernadores reportan ~$220–285 mil extra sin desglose público).
+Cadena: Resolución N°5/2024 → adecuación IPC **+7,8%** (Oficio N°26/2025 Anexo 1) → registro mensual (parlamentarios/SEREMIs cuadran; Presidente/ministros/subsecretarios/gobernadores reportan ~$220–285 mil extra sin desglose público).
 
 | Fuente | URL | Uso para verificar montos |
 | --- | --- | --- |
 | CFR — Registro Público (bulk) | <https://comision38bis.gob.cl/registro-publico> (descargas al final) | Serie mensual completa: comparar contra Anexo 1 ×1,078 |
 | CFR — Actas de sesiones | <https://comision38bis.gob.cl/actas-de-sesiones> | Criterio de “renta bruta única y total”, cálculo IPC |
-| CPLT — Jurisprudencia (amparos) | <https://jurisprudencia.cplt.cl/> | Amparos sobre remuneraciones (reemplaza dictámenes CGR — contralor.cl stub al 23-ago-2026) |
-| Plataforma SAI (Ley 20.285) | <https://www.consejotransparencia.cl/solicitud-informacionpublica/> | Pedir desglose a Presidencia/CFR/DIPRES (vía decisiva; `consultatransparencia.cl` murió al 23-ago-2026) |
+| CPLT — Jurisprudencia (amparos) | <https://jurisprudencia.cplt.cl/> | Amparos sobre remuneraciones (reemplaza dictámenes CGR — contralor.cl es stub) |
+| Plataforma SAI (Ley 20.285) | <https://www.consejotransparencia.cl/solicitud-informacionpublica/> | Pedir desglose a Presidencia/CFR/DIPRES (vía decisiva; `consultatransparencia.cl` caído) |
 | Portales de transparencia estatal | <https://tp.cplt.cl/> · <https://www.infotransparencia.cl/> | Agregadores por organismo |
 | Transparencia activa por servicio | dominio `transparencia` de cada servicio (ej. SII, SAG, Junaeb, SEA, DT) | Planillas propias → validan ministros/subsecretarios/jefes de servicio |
 | GOREs — transparencia regional | sitio de cada GORE | Remuneración gobernador/a (dispersión por zona extrema) |
@@ -138,7 +138,7 @@ Cadena 23-ago-2026: Resolución N°5/2024 → adecuación IPC **+7,8%** (Oficio 
 | Empresas estatales — memorias | BancoEstado, TVN, CNTV, Banco Central | Únicos sobre Presidente ($16–17M): honorarios de directorio |
 | Prensa/fact-checking locales | catálogo `sitemaps/` (`grep -ih '11\.308\|9\.371\|17\.370' sitemaps/<medio>/*.jsonl`) | Cobertura mensual del registro |
 
-Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones de patrimonio sin portal verificado al 23-ago-2026 (`declaraciondeactivos.cl` caído).
+Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones de patrimonio sin portal verificado (`declaraciondeactivos.cl` caído).
 
 ## Referencias de investigación (no prensa)
 
@@ -152,13 +152,13 @@ Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones
 - **Hemeroteca Meganoticias:** catálogo ya indexa sitemap (desde 2011); hemeroteca es interfaz por fecha para hallar URL exacta.
 - **ley-chile MCP:** útil para consultas programáticas (texto vigente, historia, diff). Si `search_laws` falla (Meilisearch caído), usar acceso directo por `idNorma` o `leychile.cl` web. Citar siempre BCN.
 
-## Estado de validación 2026-08-27
+## Estado de validación (última revisión: 2026-08-27)
 
 Validado con `node scripts/validate/validate-fuentes.mjs` (60 URLs, timeout 12s, UA Mozilla, `fetch` Node + `webfetch` cruzado):
 
-- **OK 46** — `gob.cl`, `hacienda.cl`, `economia.gob.cl`, `energia.gob.cl`, `interior.gob.cl`, `minjusticia.gob.cl`, `minsal.cl`, `mintrab.gob.cl`, `desarrollosocialyfamilia.gob.cl`, `minmujeryeg.gob.cl`, `mineduc.cl`, `cultura.gob.cl`, `mindep.cl`, `mop.gob.cl/noticias/` (corregido), `minvu.gob.cl`, `mtt.gob.cl`, `bienesnacionales.cl`, `minrel.gob.cl`, `minagri.gob.cl`, `mma.gob.cl`, `minciencia.gob.cl`, `senapred.cl`, `sii.cl`, `sernac.cl/` (corregido), `tgr.cl`, `aduana.cl/` (corregido), `cne.cl`, `sag.gob.cl`, `bcn.cl/*`, `senado.cl/*`, `portaltransparencia.cl/`, `comision38bis.gob.cl/*`, `calculadoraipc.ine.gob.cl`, `ine.gob.cl/.../metodología.pdf`, `jurisprudencia.cplt.cl`, `consejotransparencia.cl/*`, `tp.cplt.cl`, `infotransparencia.cl`, `gdeltproject.org`, `meganoticias.cl/hemeroteca`, `github.com/pisanvs/ley-chile`.
+- **OK 46** — `gob.cl`, `hacienda.cl`, `economia.gob.cl`, `energia.gob.cl`, `interior.gob.cl`, `minjusticia.gob.cl`, `minsal.cl`, `mintrab.gob.cl`, `desarrollosocialyfamilia.gob.cl`, `minmujeryeg.gob.cl`, `mineduc.cl`, `cultura.gob.cl`, `mindep.cl`, `mop.gob.cl/noticias/`, `minvu.gob.cl`, `mtt.gob.cl`, `bienesnacionales.cl`, `minrel.gob.cl`, `minagri.gob.cl`, `mma.gob.cl`, `minciencia.gob.cl`, `senapred.cl`, `sii.cl`, `sernac.cl/`, `tgr.cl`, `aduana.cl/`, `cne.cl`, `sag.gob.cl`, `bcn.cl/*`, `senado.cl/*`, `portaltransparencia.cl/`, `comision38bis.gob.cl/*`, `calculadoraipc.ine.gob.cl`, `ine.gob.cl/.../metodología.pdf`, `jurisprudencia.cplt.cl`, `consejotransparencia.cl/*`, `tp.cplt.cl`, `infotransparencia.cl`, `gdeltproject.org`, `meganoticias.cl/hemeroteca`, `github.com/pisanvs/ley-chile`.
 - **WAF 403 esperado 4** — `camara.cl/*` (sesiones, votaciones, transparencia) bloquea `fetch` Node/curl; usar `fetch-impersonate` o verificar en menú (documentado).
-- **404 corregido 3** — `mop.gob.cl/prensa/` → `noticias/`, `sernac.cl/portal/noticias/` → `sernac.cl/`, `aduana.cl/.../taxport_1___1.html` → `aduana.cl/` (arriba). `leyes.pisanvs.cl/api/mcp` da 404 por `fetch` GET — es endpoint MCP, no página; usar tool MCP (no es fallo).
-- **Errores de red 9** — `prensa.presidencia.cl*`, `msgg.gob.cl`, `minmineria.gob.cl` (webfetch OK, `fetch` Node falla — usar `fetch-impersonate`), `ispch.cl`, `transparenciaactiva.presidencia.cl*` (4) — no responden a `fetch` Node desde esta red al 2026-08-27; pueden requerir `fetch-impersonate` o red chilena. Se mantienen con nota y fallback (`gob.cl`, `portaltransparencia.cl`).
+- **Reemplazos 3** — `mop.gob.cl/prensa/` → `noticias/`, `sernac.cl/portal/noticias/` → `sernac.cl/`, `aduana.cl/.../taxport_1___1.html` → `aduana.cl/` (arriba). `leyes.pisanvs.cl/api/mcp` da 404 por `fetch` GET — es endpoint MCP, no página; usar tool MCP (no es fallo).
+- **Errores de red 9** — `prensa.presidencia.cl*`, `msgg.gob.cl`, `minmineria.gob.cl` (webfetch OK, `fetch` Node falla — usar `fetch-impersonate`), `ispch.cl`, `transparenciaactiva.presidencia.cl*` (4) — no responden a `fetch` Node desde esta red; pueden requerir `fetch-impersonate` o red chilena. Se mantienen con nota y fallback (`gob.cl`, `portaltransparencia.cl`).
 
 Para re-validar: `node scripts/validate/validate-fuentes.mjs` (repite el chequeo; actualiza notas y handoff si cambias URLs).

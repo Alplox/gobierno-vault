@@ -33,7 +33,7 @@ Sin cifras ni entidades hardcodeadas:
 - Personas por ID (`presidente_id`, `persona_id`, `firmante_id`) resueltas vía `getPeopleRegistry()` contra `src/content/people/*.md` — build falla si ID no existe.
 - Referencias por ID de `src/content/sources/*.md` (`orden_refs` fija numeración `[N]`; `<SRef n={N}/>` resuelve contra `getSourcesRegistry()`). Insertar/eliminar fuente = tocar solo `orden_refs`.
 - Cada monto lleva `vigencias[]` (monto + fuente + descripción) anti-stale; derivados (ratios, IPC, promedios) se calculan en `src/lib/sueldos.ts`.
-- `serie_registro_publico.puntos[]` serie mensual bruta Presidente desde 2025-01 (fuente registro 23-ago-2026) para SVG estático.
+- `serie_registro_publico.puntos[]` serie mensual bruta Presidente desde 2025-01 para SVG estático.
 - YAML se sirve en `/data/sueldos.yaml`.
 
 Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.

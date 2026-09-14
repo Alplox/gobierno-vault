@@ -1,0 +1,26 @@
+---
+import Base from '../layouts/Base.astro';
+import { ShieldAlert, Calendar, Search } from 'lucide-astro';
+---
+
+<Base
+  title="Página no encontrada"
+  description="La página que buscas no existe en Gobierno Vault. Revisa la línea temporal o busca el acontecimiento."
+>
+  <div class="max-w-xl mx-auto py-16 text-center">
+    <ShieldAlert class="h-12 w-12 text-warning mx-auto mb-4" />
+    <p class="text-6xl font-bold text-base-content/20 mb-2">404</p>
+    <h1 class="text-2xl font-bold text-base-content mb-2">Página no encontrada</h1>
+    <p class="text-base-content/60 text-sm mb-6">
+      La dirección cambió o nunca existió. El archivo completo sigue disponible desde la línea temporal.
+    </p>
+    <div class="flex flex-wrap items-center justify-center gap-2">
+      <a href="/" class="btn btn-primary btn-sm gap-1.5">
+        <Calendar class="h-4 w-4" /> Ir a la línea temporal
+      </a>
+      <a href="/events" class="btn btn-ghost btn-sm gap-1.5">
+        <Search class="h-4 w-4" /> Explorar eventos
+      </a>
+    </div>
+  </div>
+</Base>

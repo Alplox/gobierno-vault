@@ -492,6 +492,7 @@
 - [2026/01/20260113-1 - Cuarto Tribunal Oral absuelve a Claudio Crespo en el caso Gustavo Gatica: aplica retroactivamente la Ley Naín-Retamal y la legítima defensa](src/content/events/2026/01/20260113-1.md) — 5 fuentes
 - [2026/01/20260115-1 - Centro de Información Palestina pide a Kast reconsiderar la designación de Eitan Bloch como asesor internacional](src/content/events/2026/01/20260115-1.md) — 5 fuentes
 - [2026/01/20260116-1 - El perfil de Francisco Undurraga, el ofrecido por Kast para el Ministerio de las Culturas sin trayectoria en el área: las 9 leyes de su paso por el Congreso](src/content/events/2026/01/20260116-1.md) — 7 fuentes
+- [2026/01/20260116-2 - Kast ofrece el Ministerio de las Culturas a Francisco Undurraga (Evópoli)](src/content/events/2026/01/20260116-2.md) — 6 fuentes
 - [2026/01/20260118-1 - Incendios forestales devastan Biobío y Ñuble: 20 fallecidos y estado de catástrofe](src/content/events/2026/01/20260118-1.md) — 5 fuentes
 - [2026/01/20260118-2 - Boric y Kast coordinan respuesta conjunta ante incendios forestales](src/content/events/2026/01/20260118-2.md) — 4 fuentes
 - [2026/01/20260120-1 - Kast presenta gabinete de 24 ministros para su gobierno](src/content/events/2026/01/20260120-1.md) — 5 fuentes
@@ -518,11 +519,13 @@
 - [2026/01/20260124-1 - Kast realiza cuarta gira internacional por Centroamérica](src/content/events/2026/01/20260124-1.md) — 7 fuentes
 - [2026/01/20260126-1 - Gobierno de Boric enfrenta crisis de gobernabilidad por incendios](src/content/events/2026/01/20260126-1.md) — 1 fuente
 - [2026/01/20260126-2 - Corte Suprema ratifica condena al capitán de Carabineros Tomás Rodríguez por disparar al rostro de la actriz María Paz Grandjean](src/content/events/2026/01/20260126-2.md) — 6 fuentes
+- [2026/01/20260131-1 - Undurraga anuncia que suspenderá el Pase Cultural por uso fraudulento; Boric y el ministerio lo defienden](src/content/events/2026/01/20260131-1.md) — 8 fuentes
 - [2026/02/20260204-1 - Kast envía comitiva de diputados evangélicos al Desayuno de Oración de Washington que encabeza Trump](src/content/events/2026/02/20260204-1.md) — 4 fuentes
 - [2026/02/20260206-1 - Health coach de Kast revela que conversaron instalar un gimnasio en La Moneda](src/content/events/2026/02/20260206-1.md) — 2 fuentes
 - [2026/02/20260207-1 - Kast presenta la nómina de subsecretarios y delegados presidenciales: predominio de perfiles técnicos genera tensión en Chile Vamos](src/content/events/2026/02/20260207-1.md) — 3 fuentes
 - [2026/02/20260208-1 - Marco Rubio vendrá a Chile al cambio de mando: señal de acercamiento de la administración Trump a Kast](src/content/events/2026/02/20260208-1.md) — 1 fuente
 - [2026/02/20260210-1 - CIPER revela los 15 registros que describen el rol de Jorge Quiroz en defensa de empresas sancionadas por colusión](src/content/events/2026/02/20260210-1.md) — 3 fuentes
+- [2026/02/20260210-2 - Nieves Ayress testimonia ante la Cámara de Representantes de EEUU en apoyo a la resolución del Buen Vecino](src/content/events/2026/02/20260210-2.md) — 7 fuentes
 - [2026/02/20260213-1 - IFP revela déficit estructural de 3,55% del PIB en 2025, tercer incumplimiento consecutivo de meta fiscal](src/content/events/2026/02/20260213-1.md) — 4 fuentes
 - [2026/02/20260214-1 - Columna de Interferencia advierte sobre 'los nuevos postulantes a la DINA de Kast': militares que se sienten reivindicados y el riesgo de una ANI política](src/content/events/2026/02/20260214-1.md) — 1 fuente
 - [2026/02/20260217-1 - Kast defiende relato de gobierno de emergencia: 'Tenemos un problema de gasto excesivo'](src/content/events/2026/02/20260217-1.md) — 3 fuentes
@@ -1252,7 +1255,7 @@
 - [2026/08/20260813-9 - Juzgado de Garantía de Valparaíso rechaza dos solicitudes de la defensa de Camila Flores en el caso cuota Flores y admite querella de Ymay Ortiz Pulgar](src/content/events/2026/08/20260813-9.md) — 2 fuentes
 - [2026/08/20260814-1 - Megarreforma (Ley de Reconstrucción Nacional y Desarrollo Económico y Social): registro textual de todo lo que propone](src/content/events/2026/08/20260814-1.md) — 22 fuentes
 - [2026/08/20260814-10 - Polémica por el menú del penal La Laguna de Talca: cazuela, guatitas y postres para reos de alta peligrosidad en contraste con la alimentación escolar y el BAES](src/content/events/2026/08/20260814-10.md) — 3 fuentes
-- [2026/08/20260814-11 - Segegob pone fin al Fondo de Estudios sobre el Pluralismo: cancela la convocatoria 2026 del convenio con ANID y académicos advierten por la Ley de Prensa](src/content/events/2026/08/20260814-11.md) — 5 fuentes
+- [2026/08/20260814-11 - Segegob pone fin al Fondo de Estudios sobre el Pluralismo: cancela la convocatoria 2026 del convenio con ANID y académicos advierten por la Ley de Prensa](src/content/events/2026/08/20260814-11.md) — 8 fuentes
 - [2026/08/20260814-12 - Encontrar trabajo en Chile se vuelve más difícil: los avisos laborales caen más de 20% y las vacantes por aviso más de 40% (2019-2025)](src/content/events/2026/08/20260814-12.md) — 1 fuente
 - [2026/08/20260814-13 - Denuncian al alcalde Mario Desbordes por el reiterado incumplimiento de un dictamen judicial: la abogada pide un nuevo apercibimiento y advierte por posible arresto de hasta dos meses](src/content/events/2026/08/20260814-13.md) — 1 fuente
 - [2026/08/20260814-14 - Fiscalía alerta por explotación sexual infantil en Magallanes: 46 investigaciones vigentes y una tasa regional que duplica el promedio nacional](src/content/events/2026/08/20260814-14.md) — 3 fuentes
@@ -1284,7 +1287,7 @@
 - [2026/08/20260816-13 - PS y PC critican la 'descoordinación' del gobierno de Kast: Venegas afirma que 'si no tuviera mayoría parlamentaria, estaría en el suelo' y Serrano acusa improvisación](src/content/events/2026/08/20260816-13.md) — 1 fuente
 - [2026/08/20260816-14 - Peter Thiel entra a la propiedad de Vista Energy y desembarca en Vaca Muerta: el fondo Thiel Macro compra el 1% del yacimiento que abastece a ENAP](src/content/events/2026/08/20260816-14.md) — 3 fuentes
 - [2026/08/20260816-15 - Criteria: desaprobación de Kast sube a 55% y 73% prioriza la seguridad sobre la libertad, con la gestión en seguridad evaluada peor de lo esperado](src/content/events/2026/08/20260816-15.md) — 3 fuentes
-- [2026/08/20260816-16 - Cadem edición 681: aprobación de Kast sube a 41% y 93% respalda el Plan Cancerbero, aunque 38% no ve un cambio significativo en seguridad](src/content/events/2026/08/20260816-16.md) — 10 fuentes
+- [2026/08/20260816-16 - Cadem edición 681: aprobación de Kast sube a 41% y 93% respalda el Plan Cancerbero, aunque 38% no ve un cambio significativo en seguridad](src/content/events/2026/08/20260816-16.md) — 11 fuentes
 - [2026/08/20260816-17 - Contraloría destapa nepotismo en la Municipalidad de El Tabo: Informe Final N° 596 detecta 56 funcionarios con vínculos familiares, 24 ligados al alcalde](src/content/events/2026/08/20260816-17.md) — 9 fuentes
 - [2026/08/20260816-18 - Rodolfo Carter: 'Quiroz es la persona más influyente del gabinete', admite descoordinaciones y critica a Matthei](src/content/events/2026/08/20260816-18.md) — 1 fuente
 - [2026/08/20260816-19 - Lautaro Carmona (PC) pide la renuncia de todo el gabinete tras la salida de Natalia Duco: 'Es un hecho grave'](src/content/events/2026/08/20260816-19.md) — 2 fuentes
@@ -1327,7 +1330,7 @@
 - [2026/08/20260818-12 - Minsal instruye a hospitales atender más pacientes por hora y Colegio Médico advierte que contempla tiempos incompatibles con una consulta de calidad](src/content/events/2026/08/20260818-12.md) — 1 fuente
 - [2026/08/20260818-13 - Alcalde de Coihueco Wilson Palma es formalizado por ocho delitos de carácter sexual contra funcionaria municipal](src/content/events/2026/08/20260818-13.md) — 2 fuentes
 - [2026/08/20260818-14 - Detienen en Bolivia a Fernando Cerimedo, asesor de Milei y referente de desinformación en Chile](src/content/events/2026/08/20260818-14.md) — 45 fuentes
-- [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 5 fuentes
+- [2026/08/20260818-15 - Kast defiende su gobierno ante críticas de 'iliberal' en ceremonia de la Federación de Medios: '¿Alguien podría decir que he abusado de alguna facultad para socavar la democracia?'](src/content/events/2026/08/20260818-15.md) — 6 fuentes
 - [2026/08/20260818-16 - Cámara de Diputados aprueba prohibición de carreras de perros con 80 votos y rechaza regulación de canódromos](src/content/events/2026/08/20260818-16.md) — 4 fuentes
 - [2026/08/20260818-17 - CIPER revela que el plan de Quiroz contra la 'permisología' benefició proyectos vinculados a él: su hermano en Alto Santorini y una empresa que lo contrató como consultor](src/content/events/2026/08/20260818-17.md) — 7 fuentes
 - [2026/08/20260818-18 - Contraloría dictamina que funcionarios a honorarios no pueden participar del Día del Funcionario Municipal](src/content/events/2026/08/20260818-18.md) — 1 fuente
@@ -1494,6 +1497,8 @@
 - [2026/09/20260903-13 - Kevin Roberts (Heritage Foundation) en el Foro Madrid de Santiago califica lo de Ceuta de 'invasión por parte de Marruecos'](src/content/events/2026/09/20260903-13.md) — 6 fuentes
 - [2026/09/20260903-14 - Tomás Zambrano (Honduras) en el panel Bloque de Libertad del Foro Madrid con promesa de que la izquierda no volverá a gobernar](src/content/events/2026/09/20260903-14.md) — 6 fuentes
 - [2026/09/20260903-15 - Panel El punto de inflexión chileno del Foro Madrid deriva en embestida contra Bachelet y réplica del PS](src/content/events/2026/09/20260903-15.md) — 6 fuentes
+- [2026/09/20260903-16 - Fiscalía Centro Norte abre causa penal por eventual intervención electoral de Cerimedo en Chile](src/content/events/2026/09/20260903-16.md) — 6 fuentes
+- [2026/09/20260903-17 - CIPER revela que socio chileno de Cerimedo y asesor de Arrau financiaron grupo del Rechazo que difundió información falsa en 2022](src/content/events/2026/09/20260903-17.md) — 10 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 10 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 27 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
@@ -1509,6 +1514,7 @@
 - [2026/09/20260904-5 - Zambrano se reúne con Kast y con el Senado chileno en visita interparlamentaria centrada en seguridad](src/content/events/2026/09/20260904-5.md) — 6 fuentes
 - [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 8 fuentes
 - [2026/09/20260904-7 - Expertos contra fiscal nacional por el registro: Couso y Duce lo ven inútil y ambiguo, Valencia defiende su conveniencia y la carta de Irarrázaval advierte presunción de derecho prohibida](src/content/events/2026/09/20260904-7.md) — 7 fuentes
+- [2026/09/20260904-8 - Frente Amplio oficia a Codelco, SII, Servel, UAF, Pensiones y CMF por fundación de Fontaine ligada a bots tras reportaje de $1.906 millones](src/content/events/2026/09/20260904-8.md) — 5 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
@@ -1532,6 +1538,7 @@
 - [2026/09/20260908-8 - Vallejo acusa cobardía de Kast ante Milei por no condenar sus dichos en el Foro Madrid: fue una vergüenza nacional, no se puede llamar patriota](src/content/events/2026/09/20260908-8.md) — 6 fuentes
 - [2026/09/20260908-9 - Mara Sedini debuta como conductora de Sin Filtros en reemplazo de Fernando Solabarrieta tras su errática animación](src/content/events/2026/09/20260908-9.md) — 9 fuentes
 - [2026/09/20260909-1 - Cancillería cita a Judd por atribuir el estallido social a la izquierda; el embajador admite que EEUU no investigó en Chile y el canciller le recuerda que no debe opinar de política interna](src/content/events/2026/09/20260909-1.md) — 17 fuentes
+- [2026/09/20260909-10 - Detienen al exfiscal Vinko Fodich y a tres funcionarios PDI por secuestros extorsivos contra comerciantes chinos; Fiscalía indaga falso cuartel policial](src/content/events/2026/09/20260909-10.md) — 6 fuentes
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
 - [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 8 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
@@ -1542,6 +1549,7 @@
 - [2026/09/20260909-9 - Rojo Edwards respalda la rectificación de Judd: no dijo que tenía información de quién quemó el Metro](src/content/events/2026/09/20260909-9.md) — 2 fuentes
 - [2026/09/20260910-1 - Alvarado fija postura ante la polémica por contratación de jóvenes: defiende darles oportunidades pero exige sueldos acorde a las normas y confirma que Soto aceptó la corrección y sigue en Interior](src/content/events/2026/09/20260910-1.md) — 5 fuentes
 - [2026/09/20260910-10 - Judd en El Mercurio: Chile es 'vulnerable al crimen organizado' y el Escudo de las Américas va en su interés, un día después del tirón de orejas](src/content/events/2026/09/20260910-10.md) — 6 fuentes
+- [2026/09/20260910-11 - Manouchehri y Cicardini ingresan proyecto de 'Traición Institucional' con cárcel e inhabilitación perpetua para funcionarios que colaboren con el crimen organizado](src/content/events/2026/09/20260910-11.md) — 5 fuentes
 - [2026/09/20260910-2 - Rau se desmarca de la meta de 6% de desempleo de Quiroz y luego se alinea: Quiroz reafirma 6,5% y crecimiento 4% tras seminario Clapes UC](src/content/events/2026/09/20260910-2.md) — 12 fuentes
 - [2026/09/20260910-3 - Carabineros rechaza reincorporar a Claudio Crespo tras su absolución en el caso Gatica: su defensa acusa ilegalidad y anuncia recurso de revisión](src/content/events/2026/09/20260910-3.md) — 7 fuentes
 - [2026/09/20260910-4 - Kast encabeza largada protocolar del WRC Rally Chile Biobío 2026 en Concepción entre pifias y aplausos](src/content/events/2026/09/20260910-4.md) — 15 fuentes
@@ -1555,8 +1563,12 @@
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
 - [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones en carnes, banderas y pines en la previa de Fiestas Patrias](src/content/events/2026/09/20260911-5.md) — 11 fuentes
+- [2026/09/20260911-6 - Prisión preventiva para el exfiscal Fodich, un inspector PDI y el primo de Parisi por el falso cuartel de secuestros extorsivos; Fodich admite que recibió $3,5 millones](src/content/events/2026/09/20260911-6.md) — 6 fuentes
 - [2026/09/20260912-1 - Contrapoder revela que Presidencia contrató a honorarios por $2,85 millones al venezolano Romer Rubio, exconcejal de Maracaibo, como asesor del Segundo Piso: segundo caso migrante en el equipo tras Depablos](src/content/events/2026/09/20260912-1.md) — 12 fuentes
+- [2026/09/20260912-2 - PDI da de baja a funcionario del LACRIM de La Serena que vendía consultas de sistemas policiales al Clan Chen a $100 mil cada una](src/content/events/2026/09/20260912-2.md) — 6 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
+- [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
+- [2026/09/20260914-1 - Kast aborda los indultos y afirma que no corresponde que una persona muera en la cárcel, con revisión caso a caso](src/content/events/2026/09/20260914-1.md) — 13 fuentes
 
 ## 2025
 
@@ -1667,6 +1679,7 @@
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — 2 fuentes
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — 2 fuentes
 - [2024/11/20241114-1 - PDI detiene al exsubsecretario Manuel Monsalve en Viña del Mar por violación y abuso sexual; la formalización termina en prisión preventiva](src/content/events/2024/11/20241114-1.md) — 3 fuentes
+- [2024/11/20241114-2 - Corte Suprema confirma condena a cinco exagentes de la DINA por el secuestro y las torturas de Luz Ayress](src/content/events/2024/11/20241114-2.md) — 7 fuentes
 - [2024/11/20241123-1 - Condenan al exgeneral director de Carabineros Eduardo Gordon por malversación de caudales públicos](src/content/events/2024/11/20241123-1.md) — 2 fuentes
 - [2024/11/20241126-1 - Hacienda propone nuevo esquema de tributación para grandes empresas y los expertos tributarios plantean dudas](src/content/events/2024/11/20241126-1.md) — 4 fuentes
 - [2024/12/20241203-1 - Corte Suprema condena a CMPC y SCA a pagar US$5 millones a papelera por daños de la colusión del tissue](src/content/events/2024/12/20241203-1.md) — 2 fuentes

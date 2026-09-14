@@ -1,4 +1,5 @@
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 import tailwindcss from '@tailwindcss/vite';
 import { unified } from '@astrojs/markdown-remark';
 import { availableParallelism } from 'node:os';
@@ -21,6 +22,14 @@ export default defineConfig({
   build: {
     concurrency: availableParallelism(),
   },
+  // Sitemap XML para indexación (robots.txt lo referencia). Astro ya define
+  // `site`, así que las URLs salen absolutas. Excluye /admin (herramienta
+  // interna, también bloqueada en robots.txt).
+  integrations: [
+    sitemap({
+      filter: (page) => !page.includes('/admin'),
+    }),
+  ],
   // Precarga las páginas al hover (compatible con ClientRouter de View Transitions)
   prefetch: {
     prefetchAll: true,

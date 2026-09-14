@@ -26,11 +26,12 @@ Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con
 - Solo si el hilo no aporta voces distintas, ni framing, ni dato adicional —repite literal el titular sin comentarios sustantivos— se puede omitir, **sin dejar rastro en el body**. Registra la decisión en el resumen entregado al usuario para su commit (`"Reddit X omitido: repite titular sin reacción sustantiva"`).
 - Nunca usar el body para explicar por qué se omitió una red social.
 
-### Metodos de busqueda probados (2026-08)
+### Metodos de busqueda probados
 
-**Reddit r/chile** (los mas confiables — **bloqueo 2026-08-28**):
-- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` funcionaba con `read_url` hasta 2026-08-28; desde esa fecha retorna 403 por política de red ("whoa there, pardner! Your request has been blocked due to a network policy" código 01a04a53) incluso con `Mozilla/5.0` UA (probado con `Invoke-WebRequest` y `webfetch`). La API JSON `search.json` ya devolvía 403; r.jina.ai sobre reddit también 403. Queda pendiente probar mirror (Pushshift bloqueado también 403) o acceso autenticado con credenciales developer.
-- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` respondía 200 hasta 2026-08-28; ahora retorna 403 en Cloud IP. Si se libera, luego parsear con Python:
+**Reddit r/chile** (los mas confiables — con bloqueo de red vigente):
+- **Descarga del hilo vía espejo `defuddle.md`**: `pnpm run fetch-content -- <https://old.reddit.com/r/<sub>/comments/<id>/<slug>/` resolvió con `defuddle.md` el hilo completo (post + comentarios con usuario, fecha y links permanentes; sin puntajes visibles). Revierte el bloqueo documentado abajo para lectura de hilos concretos — la búsqueda HTML/API sigue pendiente de re-verificación.
+- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` retorna 403 por política de red ("whoa there, pardner! Your request has been blocked due to a network policy" código 01a04a53) incluso con `Mozilla/5.0` UA (probado con `Invoke-WebRequest` y `webfetch`). La API JSON `search.json` ya devolvía 403; r.jina.ai sobre reddit también 403. Queda pendiente probar mirror (Pushshift bloqueado también 403) o acceso autenticado con credenciales developer.
+- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` actualmente retorna 403 en Cloud IP. Si se libera, luego parsear con Python:
   ```python
   import re, html
   blocks = re.split(r'<div class="entry', data)
@@ -46,6 +47,14 @@ Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con
 
 **X/Twitter**: el clipping del usuario trae el hilo y sus comentarios; para ampliar voces buscar cobertura de prensa del tema y usar el catalogo de sitemaps (`grep -ih '<termino>' sitemaps/<medio>/*.jsonl`). Los status IDs entregados por el usuario se validan con la URL de prensa que los confirma.
 
+**X/Twitter — mirrors verificados 2026-09-14** (probar en este orden; rotar si uno falla con 403/429/captcha — las instancias caen y se rate-limitean a menudo):
+- ✅ `https://x.n0g.xyz/<usuario>` — Nitter clásico, timeline completo verificado (probado `/elonmusk` con tweets, RTs, contadores y fechas).
+- ✅ `https://nitter.cf/<usuario>` y `https://xitter.cf/<usuario>` — frontend teapawt, mismo backend, timeline completo verificado.
+- ✅ `https://sotwe.com/<usuario>` — perfil + tendencias por país (incluye Trends Chile del día) + descarga de imágenes; sirve para timelines Y tendencias, no solo timelines.
+- Patrón URL: `<mirror>/<usuario>` para perfil, `<mirror>/<usuario>/status/<id>` para tweet individual. Leer con fetch directo (HTML liviano, sin JS).
+- 🟡 Parciales (homepage OK, timeline bloqueado el 2026-09-14 — reintentar otro día): `nitter.kareem.one` (403 en perfil), `tw.eir-nya.gay` (429 rate-limit), `shitter.thepixora.com` y `nitter.miningtcup.me` (captcha DogWAF anti-bot; miningtcup además prohíbe scraping en sus reglas — no usar).
+- ❌ Caídos el 2026-09-14: `nt.vern.cc` (sin respuesta), `goyimx.com` (418 en raíz y en perfil).
+
 **Instagram**: `read_url` sobre reels/posts devuelve descripcion y a veces comentarios; para reacciones amplias preferir prensa o Reddit.
 
 ### Estado de validacion por red social
@@ -54,7 +63,7 @@ Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con
 | --- | --- | --- | --- |
 | Reddit r/chile | ⬜ bloqueado 2026-08-28 (403 network policy 01a04a53) | ⬜ bloqueado (403) | HTML search, API JSON y r.jina.ai bloqueados (403); ver métodos arriba para cuando se libere |
 | Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
-| X/Twitter | 🟡 solo via clipping del usuario o prensa | 🟡 comentarios del hilo en el clipping | Sin busqueda publica automatizada probada |
+| X/Twitter | ✅ mirrors 2026-09-14 (x.n0g.xyz, nitter.cf, xitter.cf, sotwe.com) | ✅ timeline + contadores via mirror | Sin búsqueda pública en x.com; usar mirrors con `<mirror>/<usuario>` y rotar ante 403/429/captcha |
 | Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
 | TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado) |
 | YouTube | 🟡 titulo/descripcion si | ⬜ comentarios no | Comentarios requieren sesion: read_url y r.jina.ai piden "Sign in to confirm you're not a bot" (probado 2026-08) |
@@ -70,8 +79,7 @@ fuentes oficiales/prensa; esto es sobre el material mismo):
 - **Busqueda inversa de imagen**, en este orden: Yandex Images (el mejor para rostros) → TinEye →
   Google Lens. Objetivo: aparicion MAS ANTIGUA y contexto de primera publicacion.
 - **Credenciales de contenido (C2PA) — chequeo NICHO, ecosistema mayormente estadounidense/europeo**: util solo si se consigue el ARCHIVO ORIGINAL sin recomprimir.
-  `contentcredentials.org/verify` lee el manifiesto localmente en el navegador (dispositivo, historial de edicion, herramienta de IA;
-  verificado 2026-08: corre lector C2PA real en cliente y reporta "sin manifiesto" correctamente).
+  `contentcredentials.org/verify` lee el manifiesto localmente en el navegador (dispositivo, historial de edicion, herramienta de IA; corre lector C2PA real en cliente y reporta "sin manifiesto" correctamente).
   En la practica chilena casi siempre dira "sin credenciales": ningun medio local firma contenido (El Mostrador y La Razón solo
   ADHIRIERON a la iniciativa CAI en 2023, sin implementacion tecnica; la lista de publicantes verificados del IPTC es BBC/AFP/
   France Televisions/etc., cero Latinoamerica), el Estado tampoco firma, y lo viral llega como screenshot o recompresion que ELIMINA

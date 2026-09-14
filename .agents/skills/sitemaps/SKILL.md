@@ -15,7 +15,7 @@ NO guarda el cuerpo de los artículos.
 ### Regla clave: NO se commitea el catálogo
 
 - `sitemaps/*.jsonl`, `sitemaps/.cache/`, `sitemaps/sitemaps.gvault` y sus partes
-  `sitemaps.gvault.partN` están en `.gitignore` (decisión 2026-08-07): BioBio pesa ~307MB y el
+  `sitemaps.gvault.partN` están en `.gitignore`: BioBio pesa ~307MB y el
   catálogo es regenerable.
 - Lo que SÍ se commitea: los scripts (`scripts/sitemaps/sync.mjs`, `scripts/sitemaps/index.mjs`,
   `scripts/sitemaps/backup.mjs`, `scripts/generate/generate-index.mjs`), `package.json`, `sitemaps/_manifest.json` (estado de sync), `sitemaps/README.md` (resumen por medio), `sitemaps/MEDIOS.md` (tabla completa para editores, generada por `sitemaps-index`) y `README.md` › Estadísticas del vault (sección auto-generada por `generate-index`, antes `sitemaps/ESTADISTICAS.md`).
@@ -121,7 +121,7 @@ Notas de plataforma (complemento manual, no se reescribe):
   `post-sitemap.xml`, 19 artículos — consultora, bajo volumen).
 
 | `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio |
-| `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3 (2026-08-11)**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
+| `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
 — si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
@@ -135,7 +135,7 @@ solo `manifest.actualizado`.
 
 **Corrección de fechas (CNN, `dateFromSitemapPath`):** en modo merge la fecha solo se actualiza
 si el cambio es dentro del mismo año (la URL se busca en el mapa del año de la nueva fecha). Si un
-medio quedó con fechas falsas por un `<lastmod>` uniforme (caso CNN con el crawl de 2026-04-08),
+medio quedó con fechas falsas por un `<lastmod>` uniforme (caso CNN),
 reconstruir con `pnpm run sitemaps-sync -- cnnchile --replace` (el sitemap lista todo el historial,
 así que es seguro); después los resync incrementales no vuelven a degradar fechas.
 
@@ -198,7 +198,7 @@ rg -i --no-heading -uu -g '*.jsonl' 'cerimedo' sitemaps
 - **`-g '*.jsonl'` al buscar en todo `sitemaps/`**: excluye `sitemaps/.cache/` (XML crudo
   descargado, varios GB) — sin el glob la búsqueda puede tardar minutos.
 
-Benchmarks reales (24-ago-2026, catálogo completo, término 'cerimedo'): `rg` ≈ **114 ms**
+Benchmarks reales (catálogo completo, término 'cerimedo'): `rg` ≈ **114 ms**
 (36 matches) vs `Get-ChildItem | Select-String` ≈ **37 s** (~320× más lento). Fallback en
 entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalación Windows:
 `winget install BurntSushi.ripgrep.MSVC` (o scoop/choco/cargo install ripgrep).
@@ -236,12 +236,13 @@ pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
 - Los ítems resueltos traen la URL del artículo lista para `fetch-content`/`add-source`.
 - Los `[SIN RESOLVER]` (medio fuera del catálogo o JSONL desactualizado) traen el
   comando sugerido (`add-source -- --search "<título>" [--medio <slug>]).
-- Límites conocidos (verificados sep-2026): los links `rss/articles/CBMi...` van
+- Límites conocidos: los links `rss/articles/CBMi...` van
   cifrados (doble base64 → ruido, no decodificables en local) y GDELT no responde
   desde esta red — por eso la resolución es por título, no por link. El RSS no
-  trae cuerpos: después sigue la cadena `fetch-content` habitual.
+  trae cuerpos: después sigue la cadena `fetch-content` habitual. `--limit 8`
+  máximo (valores mayores revientan con `Maximum call stack size exceeded`).
 
-### Sitios institucionales SIN sitemap utilizable (verificado 21-ago-2026)
+### Sitios institucionales SIN sitemap utilizable
 
 No se pueden agregar al catálogo (no exponen XML sitemap); usar fetch directo/defuddle bajo demanda:
 

@@ -133,7 +133,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 ## Cuando descubras algo no documentado
 
 1. Agregalo a la seccion correspondiente (o al skill adecuado si es detalle >5 lineas). **Si tu cambio toca un dominio de un skill, actualiza ese skill en la misma PR** — ver tabla de Skills bajo demanda.
-2. Manten conciso — nada de prosa innecesaria ni cronicas de bug de >3 lineas (deja 1 linea + referencia a archivo:linea o commit).
+2. Manten conciso — nada de prosa innecesaria ni cronicas de bug de >3 lineas (deja 1 linea + referencia a archivo:linea o commit). Los skills documentan comportamiento vigente e instrucciones, nunca historial: prohibido "**Bug <fecha>**:", "ya corregido", "corregido el…" y sellos "(verificado <fecha>)" en instrucciones — si la vigencia importa, una sola fecha de última revisión en el encabezado de la sección basta; si arreglas el código, borra la nota obsoleta en la misma sesión en vez de anotar la corrección.
 3. Si borras/renombras campo, actualiza TODO lo que lo referencie (AGENTS.md + skills que lo mencionen).
 4. Si agregas colección nueva (markdown: `src/content/<name>/*.md` + `content.config.ts` + `registry.ts`; o YAML excepcional en `src/data/*.yaml` → `ALLOWED` en `src/pages/data/[name].yaml.ts` + `src/lib/llmIndex.ts`), documenta schema.
 5. Tras cambios significativos, `pnpm run generate-index` (regenera `EVENTS_INDEX.md` + `README.md` › Estadísticas del vault), `pnpm run generate-seguimiento-index` tras tocar `SEGUIMIENTO/` (regenera `SEGUIMIENTO_INDEX.md`), y si tocaste `MEDIA`/`_manifest.json`, `pnpm run sitemaps-index` (regenera `sitemaps/README.md` + `sitemaps/MEDIOS.md`).

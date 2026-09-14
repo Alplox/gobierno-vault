@@ -93,8 +93,7 @@ Desde sep-2026 esta clasificación vive en código (`scripts/lib/soft404.mjs:isS
 más 404 blando, título genérico del home y titular que no corresponde al slug de la URL)
 y `fetch-content` la aplica a cada método: un 200 del mirror con la página de error ya no
 cuenta como éxito. Además hay pre-chequeo de origen: 404/410 aborta la cadena (la URL no
-existe), 403 sigue a mirrors (WAF/bot-block, no veredicto — caso Ex-Ante). Nota: `--method`
-no retornaba el éxito en modo único (bug hasta sep-2026); ya corregido.
+existe), 403 sigue a mirrors (WAF/bot-block, no veredicto — caso Ex-Ante).
 
 **Fetch respetuoso:** ante 429/transitorios, backoff exponencial antes de reintentar; jobs batch
 contra un mismo dominio: delay aleatorio 1–3s entre requests (el catálogo de sitemaps usa 300ms
@@ -185,7 +184,7 @@ defuddle parse <https://sitio.cl/articulo> -p title   # también: author, descri
   mirrors. Los espejos (`defuddle.md`, `r.jina.ai`) quedan para sitios con JS pesado o
   bloqueos donde el fetch local no llega (BioBio sigue mejor con su espejo documentado).
 - **Instalación** (si falta): `npm install -g defuddle`.
-- Verificado 24-ago-2026 (v0.19.2) extrayendo limpio un artículo de El Ciudadano.
+- Probado con un artículo de El Ciudadano (extracción limpia).
 
 ## Búsqueda local con ripgrep (`rg`) — catálogo y repo
 
