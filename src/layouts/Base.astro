@@ -18,6 +18,7 @@ import {
   Download,
   FileText,
   Github,
+  Rss,
   ExternalLink,
   Palette,
 } from 'lucide-astro';
@@ -130,6 +131,7 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
     <meta property="og:image" content={ogImage} />
     <meta property="og:locale" content="es_CL" />
     <meta name="twitter:card" content="summary" />
+    <link rel="alternate" type="application/rss+xml" title="Gobierno Vault (RSS)" href="/rss.xml" />
     <script is:inline>
       // Tema daisyUI: aplicar el guardado ANTES del primer paint (anti-FOUC) y
       // re-aplicarlo tras cada astro:after-swap (View Transitions reemplaza
@@ -471,6 +473,11 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
              class="inline-flex items-center gap-1.5 text-xs text-base-content/40 hover:text-base-content/80 transition-colors"
              title="Repositorio público del proyecto en GitHub — código, datos y respaldo">
             <Github class="h-3.5 w-3.5" /> Repositorio GitHub <ExternalLink class="h-3 w-3 opacity-60" />
+          </a>
+          <a href="/rss.xml"
+             class="inline-flex items-center gap-1.5 text-xs text-base-content/40 hover:text-base-content/80 transition-colors"
+             title="Feed RSS con los últimos eventos publicados">
+            <Rss class="h-3.5 w-3.5" /> rss.xml
           </a>
           <a href="/llm.txt"
              class="inline-flex items-center gap-1.5 text-xs text-base-content/40 hover:text-base-content/80 transition-colors"
