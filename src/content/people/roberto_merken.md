@@ -17,5 +17,5 @@ notas: "Cuenta de opinión 'Ciudadano Roberto Kiltro' (@RobertoMerken). En agost
   del país a una abogada que juró hace apenas 4 meses' (evento 20260813-11). Ese
   mismo día criticó en X el anuncio del ministro Tomás Rau de la indemnización a
   todo evento: 'Nuevo derecho mermado... te paguen con suerte la mitad y pase a
-  una cuenta individual' (evento 20260814-8)."
+  una cuenta individual' (evento 20260814-8). El 28 de agosto de 2026 preguntó en X si Fernando Cerimedo se había reunido con José Antonio Kast en la cumbre Escudo de las Américas, con 2 imágenes y 11 respuestas (evento 20260307-1)."
 ---

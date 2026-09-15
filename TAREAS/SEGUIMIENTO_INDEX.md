@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 328
+**Total tareas:** 327
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 244 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 244 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 299 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 298 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -50,7 +50,6 @@
 | S-2019-011 | ⬜ | 2026-08-27 | Eventos nov-2019 — diversificación de fuentes y án | Opinión pública (encuestas Cadem, nov-2019): Cadem semanal marcó ~38% de apruebo al plebiscito constitucional en nov-... | — | Origen: <https://www.cadem.cl/> |
 | S-2019-012 | ⬜ | 2026-08-27 | Eventos nov-2019 — diversificación de fuentes y án | Cobertura internacional del estallido (nov-2019): BBC, NYT, The Guardian, Reuters cobrieron masivamente Chile en nov-... | — | Origen: <https://www.bbc.com/news/topics/c8nq32jw5r5t> |
 | S-2019-013 | ⬜ | 2026-08-27 | Eventos nov-2019 — diversificación de fuentes y án | Columnas de opinión (El Mostrador, The Clinic, CIPER, nov-2019): buscar columnas de analistas sobre la acusación cons... | — | Origen: catálogo de sitemaps (grep `'opinion' sitemaps/theclinic/2019.jsonl |
-| S-2019-014 | ⬜ | 2019-11-15 | Eventos nov-2019 — diversificación de fuentes y án | CIDH anuncia visita a Chile (2019-11-15): la Comisión Interamericana anunció que enviaría un equipo para evaluar dere... | — | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2019/11/15/cidh-visitara-chile-se-analizara-la-situacion-de-los-derechos-humanos-en-el-pais.shtml> |
 | S-2019-015 | 🟡 | 2019-11-14 | Eventos nov-2019 — diversificación de fuentes y án | Acuerdo constitucional: debate por los 3 puntos (2019-11-14/26): el desacuerdo sobre composición del órgano constituy... | `20191126-1` | Origen: <https://example.com/pendiente-revisar> |
 | S-2019-016 | ⬜ | 2019-11-21 | Eventos nov-2019 — diversificación de fuentes y án | Perdigones con plomo: estudio de la U. Austral (2019-11-21): la confirmación científica de plomo en perdigones de Car... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-2020-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Mutilados oculares — seguimiento: el documental de The Guardian (evento 20201019-1) documentó la búsqueda de justicia... | `20201019-1` | Origen: <https://example.com/pendiente-revisar> |

@@ -55,6 +55,9 @@ Notas de plataforma (complemento manual, no se reescribe):
   `n:` — el parser acepta `news:` o `n:`).
 - **Fast Check CL**: sitemap custom con `includeRe` `/(?:posts-\d{4}|news)\.xml$/i` →
   `posts-YYYY.xml` + `news.xml` (títulos reales); descarta `pages/categories/authors.xml`.
+  Ojo duplicados de fecha: un mismo slug puede aparecer con prefijo `/YYYY/MM/DD/` distinto
+  (caso sep-2026: serie Cuenta Pública con slug idéntico en `/2026/06/03/` y `/2026/06/04/`);
+  el canónico es el primero (`/06/03/`, HTTP 200; el `/06/04/` da 404) — citar siempre el canónico.
 - **ADN Radio**: Arc XP (~100 URLs recientes, sin títulos). **La Tercera**: Arc XP paginado
   (`sitemap-index` → ~100 sub-sitemaps `?from=N`, ~10.000 artículos recientes; `news-sitemap-index`
   trae títulos reales; los `<loc>` del index llegan con `&amp;` que el parser decodifica).
