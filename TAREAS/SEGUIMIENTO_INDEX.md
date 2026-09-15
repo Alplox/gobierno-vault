@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 327
+**Total tareas:** 328
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 243 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 17 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 244 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 298 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 299 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -308,6 +308,7 @@
 | S-2026-224 | ⬜ | 2026-09-14 | Caso Cerimedo — seguimiento judicial | Causa penal Fiscalía Centro Norte por intervención de Cerimedo (evento `20260903-16`): diligencias de Macarena Cañas, formalizaciones o archivo, peritajes de cuentas coordinadas | `20260903-16` | Origen: <https://eldesconcierto.cl/actualidad/caso-cerimedo-la-justicia-fiscalia-centro-norte-abre-causa-eventual-intervencion-electoral-chile-n5461971> |
 | S-2026-225 | ⬜ | 2026-09-14 | Caso Cerimedo — seguimiento judicial | Financiamiento "Unidos somos más fuertes" (evento `20260903-17`): respuesta de García/Yáñez/Arrau, pronunciamiento Servel sobre aportes, uso de antecedentes en causa penal y comisión investigadora | `20260903-17` | Origen: <https://www.ciperchile.cl/2026/09/03/socio-chileno-de-cerimedo-y-un-asesor-del-ministro-arrau-financiaron-a-grupo-que-difundio-informacion-falsa-del-rechazo/> |
 | S-2026-226 | ⬜ | 2026-09-14 | Caso Cerimedo — seguimiento judicial | Oficios FA por fundación de Fontaine (evento `20260904-8`): respuestas de Codelco, SII, Servel, UAF, SP y CMF + pronunciamiento de Fontaine | `20260904-8` | Origen: <https://eldesconcierto.cl/actualidad/caso-cerimedo-y-bernardo-fontaine-frente-amplio-presenta-oficios-fundacion-ligada-bots-y-fake-news-n5461999> |
+| S-2026-227 | ⬜ | 2026-09-15 | Viaje Barros Australia — seguimiento | Pasajes business a Australia cancelados (evento `60914-3): delegación chilena efectiva a la 11.ª SPDMM en Fiyi + devolución de pasajes + pronunciamiento de Contraloría | `60914-3 | Origen: <https://contrapoderchile.cl/y-la-austeridad-fiscal-ministerio-de-defensa-gasto-mas-de-14-millones-en-pasajes-business-class-para-viaje-del-ministro-barros-a-australia/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

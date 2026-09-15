@@ -89,6 +89,13 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Instituto de Salud Pública (ISP) | <https://www.ispch.cl/> | Portal principal (validado 2026-08-27: `/noticias/` no responde desde esta red; verificar con `fetch-impersonate`) |
 | Servicio Agrícola y Ganadero (SAG) | <https://www.sag.gob.cl/noticias> | |
 
+## Compras públicas — licitaciones y órdenes de compra
+
+| Institución | URL | Uso |
+| --- | --- | --- |
+| Mercado Público — ficha de licitación | <https://www.mercadopublico.cl/Procurement/Modules/RFB/DetailsAcquisition.aspx?idlicitacion=NNNNNN-N-LE26> | Bases, cronograma, estimado y descripción oficial; fetch-legible (verificado sep-2026). Citar como fuente `tipo: documento`, `medio: Mercado Público (ChileCompra)` (ya en `WHITELIST_MEDIOS`) |
+| TodoLicitaciones (espejo) | <https://www.todolicitaciones.cl/licitacion/NNNNNN-N-LE26/slug> | Adjudicatario y monto adjudicado cuando la ficha oficial no los renderiza; agregador sin reportería, solo como espejo con `medio: TodoLicitaciones` (ya en whitelist) y org `tipo: medio_comunicacion` con nota de espejo |
+
 ## Poder Legislativo — Historia política, normativa y votaciones
 
 | Institución | URL | Uso |

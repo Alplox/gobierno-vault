@@ -234,6 +234,7 @@ const WHITELIST_MEDIOS = new Set([
   'DecideChile (Unholster)',
   'Mercado Público (ChileCompra)',
   'TodoLicitaciones',
+  'Chile es Tuyo (Sernatur)',
   'Licitaciones de Chile',
   'Activa Research',
   'Criteria',
