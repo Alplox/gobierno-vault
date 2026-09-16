@@ -14,12 +14,9 @@
 | CIPER revela al carabinero infiltrado en ollas comunes de Lo Hermida que incitaba al enfrentamiento con la policía | 2020-06 (revelado) | investigacion | ⬜ |
 | Incendio de la bodega Kayser en Renca (Yoshua Osorio, Andrés Ponce, Julián Pérez, Manuel Muga, Luis "Toño" Salas) y del supermercado Líder de Quinta Normal (Gustavo Landaverde): 6 fallecidos, la jornada con más muertos del estallido | 2019-10-20 | result/accion | ⬜ (fuente: estallidosocial.com hitos) |
 | Muerte de Manuel Rebolledo (22) atropellado por patrulla de la Armada en Talcahuano (población Libertad) | 2019-10-21 | accion | ⬜ (fuente: estallidosocial.com no-olvidamos) |
-| Brutal golpiza de Carabineros a Mario Acuña en Buin que lo dejó postrado con daño cerebral | 2019-10-23 | investigacion | ⬜ (fuente: estallidosocial.com no-olvidamos) |
 | Conscripto del Ejército David Veloso detenido por negarse a participar del Estado de Emergencia | 2019-10-25 | accion | ⬜ (fuente: estallidosocial.com) |
-| Sochiof reporta 88 pacientes con trauma ocular severo a una semana del estallido | 2019-10-26 | publicacion | ⬜ |
 | Marasea multitudinaria Viña del Mar–Valparaíso que colmó la autopista | 2019-10-27 | accion | ⬜ |
 | Muerte de Alex Núñez (39) tras golpe de Carabineros en Maipú ("los pacos me pegaron") | 2019-10-29 | investigacion | ⬜ (fuente: estallidosocial.com no-olvidamos) |
-| Audio del general director de Carabineros Mario Rozas: "A nadie voy a dar de baja por procedimiento policial" | 2019-11-13 | investigacion | ⬜ |
 | Inicio de los trabajos de la Convención Constitucional (4-jul-2021), un mes después de su elección | 2021-07-04 | accion | ⬜ (fuente: France24 `france24-2021-07-04-inicio-convencion-constitucional`; complementa `20210515-1`) |
 | Ola latinoamericana: protestas en Colombia (21-nov-2019) y otros países citando a Chile como referente | 2019-11-21/22 | accion | ⬜ (fuente: Salon `salon-2019-11-22-protestas-colombia-ola-latinoamericana`; contexto internacional del estallido) |
 | Marcha feminista "Ni una menos" / día contra la violencia de género durante el estallido (manifestantes lanzan piedras, enfrentamiento con policías mujeres) | 2019-11 (25-N) | accion | ⬜ |
@@ -44,43 +41,8 @@
 | Colección "Estallido Social en Chile" en Archive.org (archive.org/details/estallido-social-en-chile y archivos de videos de Plaza de la Dignidad 8-nov-2019) | archivo | ⬜ |
 | Testigo En Línea (Datos Protegidos, datosprotegidos.org): plataforma de recopilación y sistematización de testimonios/contenidos sobre abusos policiales | plataforma | ⬜ |
 | Enlace torrent del hilo r/DataHoarder (mgnet.me/dRVn4G6) — fuente externa fuera de GitHub | torrent | ⬜ (ya referenciado en evento `20260806-9`) |
+
 ---
-## Corrupción — casos emblemáticos aún no documentados
-> El vault cubre bien los casos de financiamiento político de 2015-2018 (Penta, SQM, Caval),
-> los recientes de 2023-2026 (Audios/Hermosilla, Convenios, Lavín León/Barriga, Sernac, Pacogate)
-> y el fraude de los colusiones vía Quiroz. Faltan los **grandes casos estructurales** anteriores
-> (gobierno de Lagos y Piñera) y varias aristas nuevas de 2026. Casi todos requieren entidades
-> nuevas en `entities.yaml` (personas de época y orgs).
-### Grandes casos históricos (era Concertación)
-| Evento | Fecha | Tipo | Estado |
-| --- | --- | --- | --- |
-| **MOP-Gate** (2002-2016): sobresueldos pagados con contratos inflados por la empresa GATE en el MOP; condenas por fraude al Fisco a Carlos Cruz (exministro, 3 años), Sergio Cortés (jefe de Finanzas, 5 años) y otros, confirmadas por la Corte Suprema el 29-jun-2016; derivó en la ley de sector público y la Alta Dirección Pública | 2002-02 / sentencia 2016-06-29 | investigacion/fallo | ⬜ (fuente: Wikipedia MOP-Gate, BioBio 12-ago-2014, La Tercera/EyN 29-jun-2016) |
-| **Milicogate** (2015-2026): fraude y desviación de fondos de la Ley Reservada del Cobre por el Ejército, destapado por The Clinic (Mauricio Weibel) en 2015; procesados el ex C.J. del Ejército Juan Miguel Fuente-Alba y su esposa (Fiscalía pidió 15 y 10 años, 6-ago-2021); más de $6.100M defraudados; excabo Juan Carlos Cruz condenado a 12 años tras gastar $2.368M en el casino Monticello | 2015 (destape) / condenas 2018-2026 | investigacion | ⬜ (fuente: Wikipedia/Milicogate, T13 6-ago-2021, El Mostrador 27-may-2026) |
-| **Pacogate del Ejército / arista Fuente-Alba** la arista del incremento patrimonial injustificado (bienes no justificados con sueldos, casas en Chicureo/Colina) | 2019-02-04 | investigacion | ⬜ (puede fundirse con Milicogate) |
-| **Caso Coimas** (2002-2003): antecedente directo del MOP-Gate; sobornos en la Dirección de Vialidad/Concesiones por adjudicaciones de carreteras | 2002-05 | investigacion | ⬜ |
-### Casos de mercados financieros / colusiones (no de financiamiento político)
-| Evento | Fecha | Tipo | Estado |
-| --- | --- | --- | --- |
-| **Caso Opacidades** (2014-2015): fraude bursátil y uso de información privilegiada mediante las sociedades "Cascadas" controladas por Julio Ponce Lerou (SQM); multas judiciales y aristas penales | 2014-10 (SVS) / sanciones 2015-2016 | investigacion | ⬜ (vinculado al Caso SQM `20180416-1`; detalle del libro de CIPER "El padrino") |
-| Colusión del papel tissue (CMPC/SCA) como evento propio | 2014-2015 | publicacion | ⬜ (multa TDLC 2015; sin evidencia de participación de Quiroz — confirmado en `20260805-4`) |
----
-
-## Bolivia Instrumentalizada — serie El País Tarija (descubierto vía Cerimedo)
-
-> Serie de 8 reportajes (14-may-2026) documentada en [[sources/elpais-bo-2026-05-14-cerimedo-hombre-maga-paz]] (parte 2). La parte 2 ya integrada en `20260818-14`. Restan 7 partes con potencial relevancia transversal Chile-Bolivia si se verifica impacto chileno.
-
-| Parte | Título | Potencial vínculo Chile | Estado |
-| --- | --- | --- | --- |
-| 1 | Bolivia, el país que llegó quebrado a las urnas | Contexto económico que permitió captura — sin vínculo Chile directo | ⬜ revisar si cita modelo chileno |
-| 3 | Numen y Parscale: la máquina de ganar elecciones opera en Bolivia | **Alto** — misma consultora que operó en Chile (Numen SpA, Facilitadores, encuesta El Mercurio 2020) | ⬜ cotejar con `20260818-14` y `20220726-1` |
-| 4 | El litio de Bolivia: garantías, condiciones y disputas no elegidas | **Medio** — litio triángulo Chile-Bolivia-Argentina | ⬜ verificar si menciona Chile |
-| 5 | Starlink en Bolivia: ¿Conectividad o soberanía comprometida? (DS 5509) | **Alto** — DS 5509 autoriza Starlink, complementa DS 5515 ya verificado | ⬜ cruzar con Gaceta/El Deber |
-| 6 | HondurasGate: 37 audios, red cobra apoyo en compromisos de Estado | **Medio** — misma red en Honduras (Nasry Asfura) citada en `20260818-14` | ⬜ verificar |
-| 7 | Bolivia, Argentina y Honduras: misma consultora, mismo programa económico | **Alto** — manual compartido Chile 2020-2022 vs Bolivia 2025 | ⬜ prioridad |
-| 8 | Bolivia en la próxima década: escenarios posibles | Contexto prospectivo | ⬜ |
-
-Orígenes: <https://elpais.bo/reportajes/20260514_bolivia-el-pais-que-llego-quebrado-a-las-urnas.html> y siguientes `20260514_*` (ver lista en `elpais-bo-2026-05-14-cerimedo-hombre-maga-paz.md`). No crear eventos Bolivia-puros sin impacto Chile; si hay impacto, usar mínimo 5 fuentes (incluir Gaceta Oficial Bolivia + prensa boliviana + chilena para contraste). Reddit/Twitter/Facebook solo complementarios.
-
 ## Telegram — ArchivandoChile (análisis del scraper)
 
 ### Datos disponibles
@@ -104,8 +66,8 @@ Orígenes: <https://elpais.bo/reportajes/20260514_bolivia-el-pais-que-llego-queb
 | --- | --- | --- |
 | Actualizar scraper para obtener posts 2024-2026 | 🟡 | Requiere verificar si el canal sigue activo |
 | Buscar otros canales de Telegram (ej. noticieros) | 🟡 | Canales oficiales de medios podrían ser más útiles |
-| Revisar posts 2019-2021 para eventos faltantes del estallido | ⬜ | ~9,000 posts; usar grep por keywords relevantes |
-| Revisar posts 2022 para eventos del gobierno Boric | ⬜ | ~6,200 posts |
+| Revisar posts 2019-2021 para eventos faltantes del estallido | 🟡 minería de texto hecha 2026-09-16 (leads en PENDIENTES/2019.md); resta corroborar cada lead con prensa + explotar evidencia Twitter por fecha | ~9,000 posts; usar grep por keywords relevantes |
+| Revisar posts 2022 para eventos del gobierno Boric | 🟡 verificado 2026-09-16: 2021–2022 es feed de links sin texto, sin leads extraíbles; solo sirve cruce cuenta/fecha puntual | ~6,200 posts |
 
 
 ### Hallazgo: ArchivandoChile no es útil para eventos actuales
@@ -117,6 +79,15 @@ Los posts de 2022+ son exclusivamente links de Twitter/Instagram sin texto descr
 | `@ArchivandoChile` | Archivo histórico (2019-2023) | Útil solo para contexto histórico |
 | Canales oficiales de medios (ej. `@biobiochile`, `@theclinic_cl`) | Noticias | Potencialmente útiles si publican artículos completos |
 | Canales de política (ej. `@infogob_cl`, `@carabinerosdechile`) | Oficiales | Útiles para comunicados oficiales |
+
+### Revisión 2026-09-16 — minería de texto del scrape (posts.json, 39.772 posts)
+
+- Texto sustantivo útil solo en 2019–2020 (captions Instagram + tweets geolocalizados con pin de Google Maps); 2021–2023 es feed de links Twitter sin texto (sin leads extraíbles salvo cruce cuenta/fecha puntual).
+- 1.202 pines de geolocalización en posts 2019–2021: mapa de focos de registro ciudadano (RM concentra ~700; resto disperso en regiones + ruido).
+- Cuentas documentadoras más citadas: @PiensaPrensa (2.209), @MegafonoPopular (674), @EPInforma (515), @El_Ciudadano (278), @rsumen (182) — puntos de partida, nunca fuentes únicas.
+- archive.fo: 1.796 links de evidencia preservada (inaccesible programáticamente por CAPTCHA/rate-limit; ver sección Archivo.fo).
+- Leads con texto propio verificados contra el vault en `TAREAS/PENDIENTES/2019.md` (Abel Acuña/SAMU, metro Maipú 23-oct, disparo a INDH, toma Peñalolén 12-nov, red de recepción de evidencia) y `TAREAS/PENDIENTES/2020.md` (marcha Van Buren por Matías Orellana 2-ene-2020).
+- tracking.json sigue marcando solo 200 posts como revisados; la minería agregada de esta fecha no marca posts individuales (evitar falsos "reviewed").
 
 ### Acción recomendada
 Si se quiere monitorear Telegram para eventos nuevos, escanear canales oficiales de medios en lugar de ArchivandoChile. El scraper actual funciona bien pero el canal ya no tiene contenido útil para el vault.

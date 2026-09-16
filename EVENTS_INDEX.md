@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (465)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (464)
 
 <details>
-<summary>Ver lista (465 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (464 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -241,7 +241,6 @@
 - [2015/10/20151008-1 - Papa Francisco respalda al obispo de Osorno Juan Barros y califica de 'tontos' y 'zurdos' a los manifestantes que protestaban por el caso Karadima](src/content/events/2015/10/20151008-1.md) — **2 fuentes**
 - [2018/04/20180426-1 - Proyecto de Evópoli contra el nepotismo genera críticas de UDI-RN, que centran fuego en Felipe Kast](src/content/events/2018/04/20180426-1.md) — **2 fuentes**
 - [2018/07/20180729-1 - Atacantes enmascarados apuñalan a tres mujeres en marcha por el aborto libre en Santiago; movimiento Social Patriota reivindica la contraprotesta](src/content/events/2018/07/20180729-1.md) — **2 fuentes**
-- [2019/02/20190214-1 - Ordenan la detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba por fraude al fisco](src/content/events/2019/02/20190214-1.md) — **2 fuentes**
 - [2019/03/20190304-1 - La ministra Rutherford procesa al exjefe de finanzas del Ejército Jozo Santic Palomino por fraude al fisco](src/content/events/2019/03/20190304-1.md) — **2 fuentes**
 - [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — **2 fuentes**
 - [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — **2 fuentes**
@@ -585,6 +584,7 @@
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
 - [2026/03/20260331-1 - Seremi de Obras Públicas de Tarapacá Mauricio Montealegre renuncia antes de asumir](src/content/events/2026/03/20260331-1.md) — 1 fuente
 - [2026/03/20260331-2 - Gobierno retira de Contraloría el nuevo reglamento de la Ley Cholito y genera preocupación en agrupaciones animalistas](src/content/events/2026/03/20260331-2.md) — 4 fuentes
+- [2026/03/20260331-3 - Ministro Undurraga confirma en CNN que el recorte al presupuesto de Culturas será de 3%, 'incluso un poco más': gremios y frente de trabajadores se declaran en alerta](src/content/events/2026/03/20260331-3.md) — 7 fuentes
 - [2026/04/20260401-1 - Gobierno revoca nombramiento de Patricia Dinamarca como seremi de Educación de Los Lagos tras posts sobre estallido social](src/content/events/2026/04/20260401-1.md) — 2 fuentes
 - [2026/04/20260401-2 - Gobierno designa a ex dirigente camionero Baldemar Higueras como seremi de Transportes del Maule](src/content/events/2026/04/20260401-2.md) — 6 fuentes
 - [2026/04/20260404-1 - Gobierno de Kast autoriza participación de la estatal israelí IAI en FIDAE 2026 y la Comunidad Palestina denuncia quiebre de la política de Estado](src/content/events/2026/04/20260404-1.md) — 6 fuentes
@@ -662,6 +662,7 @@
 - [2026/05/20260526-3 - Columna de El Arrebato: 'el plan de seguridad de Kast es el plan de seguridad de Boric' y la tesis de la seguridad como afecto](src/content/events/2026/05/20260526-3.md) — 1 fuente
 - [2026/05/20260527-1 - Contrapoder revela que el jefe de gabinete de la senadora Camila Flores recibió un aumento salarial de $3.150.000 entre marzo y abril](src/content/events/2026/05/20260527-1.md) — 1 fuente
 - [2026/05/20260527-2 - Gobierno traslada reos comunes desde el ex penal Punta Peuco a otras cárceles del país](src/content/events/2026/05/20260527-2.md) — 6 fuentes
+- [2026/05/20260527-3 - Milicogate: ministra Osorio condena hasta 12 años a exuniformados en aristas Matriz y Mandos](src/content/events/2026/05/20260527-3.md) — 5 fuentes
 - [2026/05/20260528-1 - Kast designa a Daniel Díaz, dirigente de Chuquicamata, como director de Codelco en cupo de los trabajadores](src/content/events/2026/05/20260528-1.md) — 4 fuentes
 - [2026/05/20260529-1 - Diputados interpelan al Gobierno por el documento filtrado 'Desafío 90': 'La estrategia es agobiar'](src/content/events/2026/05/20260529-1.md) — 9 fuentes
 - [2026/05/20260529-2 - INE: desocupación sube a 9,1% en febrero-abril, máximo en casi cinco años; debate en redes advierte 'no se le está tomando el peso'](src/content/events/2026/05/20260529-2.md) — 8 fuentes
@@ -712,6 +713,7 @@
 - [2026/06/20260617-2 - Corte de Apelaciones confirma libertad de estudiante formalizado por amenaza contra Kast en chat de WhatsApp de la Confech: 'hay que hacerle un Charlie Kirk'](src/content/events/2026/06/20260617-2.md) — 3 fuentes
 - [2026/06/20260617-3 - Corte de Apelaciones de Santiago confirma condena de 7 años al excapitán de Carabineros Pablo Carvajal y rechaza aplicar la Ley Naín-Retamal](src/content/events/2026/06/20260617-3.md) — 2 fuentes
 - [2026/06/20260617-4 - Comisión de Seguridad de la Cámara aprueba en general el proyecto que aumenta sanciones por insultos a Carabineros y la PDI (Boletín 17.662-07)](src/content/events/2026/06/20260617-4.md) — 5 fuentes
+- [2026/06/20260617-5 - Comisión de Ciencias de la Cámara rechaza proyecto opositor de facilidades de pago para deudores del CAE](src/content/events/2026/06/20260617-5.md) — 5 fuentes
 - [2026/06/20260618-1 - BBC Mundo analiza el debate sobre rebaja del impuesto corporativo en Chile](src/content/events/2026/06/20260618-1.md) — 10 fuentes
 - [2026/06/20260618-2 - AP: Los 100 días de Kast — el foco en la economía desplaza la lucha contra el delito](src/content/events/2026/06/20260618-2.md) — 2 fuentes
 - [2026/06/20260618-3 - Ministro del Trabajo confirma que el Gobierno evalúa una indemnización laboral a todo evento](src/content/events/2026/06/20260618-3.md) — 4 fuentes
@@ -926,6 +928,7 @@
 - [2026/07/20260731-18 - Boletín de la DIPRES de junio 2026: el gasto de capital cae 14% acumulado en el primer semestre, pero el gasto total sube 1%](src/content/events/2026/07/20260731-18.md) — 1 fuente
 - [2026/07/20260731-19 - Comunidades atacameñas de Toconao y Peine reclaman ante el Primer Tribunal Ambiental para anular la aprobación del proyecto NX Uno de Peine](src/content/events/2026/07/20260731-19.md) — 4 fuentes
 - [2026/07/20260731-2 - INE: tasa de desocupación alcanza 9,4% en el trimestre abril-junio, su máximo nivel en casi cinco años](src/content/events/2026/07/20260731-2.md) — 12 fuentes
+- [2026/07/20260731-20 - Caso Julia Chuñil: de las detenciones de enero a la condena de julio en la arista de amenazas al fiscal](src/content/events/2026/07/20260731-20.md) — 7 fuentes
 - [2026/07/20260731-3 - Manouchehri impulsa comisión investigadora por narcotest y afirma que Rodríguez negoció la megarreforma 'bajo el efecto de las drogas'](src/content/events/2026/07/20260731-3.md) — 4 fuentes
 - [2026/07/20260731-4 - Panelistas de El Primer Café critican el tono del embajador Judd: 'El ofensor se da por ofendido'](src/content/events/2026/07/20260731-4.md) — 3 fuentes
 - [2026/07/20260731-5 - Candidato a la directiva del Partido Republicano en Arica es imputado por derrame en Lago Chungará y fue requerido por Interpol](src/content/events/2026/07/20260731-5.md) — 3 fuentes
@@ -1355,6 +1358,7 @@
 - [2026/08/20260819-10 - Vanessa Kaiser advierte que la reforma de seguridad podría instaurar un "totalitarismo": "Cambiamos del régimen democrático a uno totalitario"](src/content/events/2026/08/20260819-10.md) — 3 fuentes
 - [2026/08/20260819-11 - CGE ficha a Simón Boric como gerente de comunicaciones tras 12 años en la U. de Chile y enfrenta ola de críticas en redes](src/content/events/2026/08/20260819-11.md) — 7 fuentes
 - [2026/08/20260819-12 - Declaran admisible querella contra Luis Hermosilla por presunto tráfico de influencias en el caso Luchsinger-Mackay](src/content/events/2026/08/20260819-12.md) — 8 fuentes
+- [2026/08/20260819-13 - Se constituye la comisión mixta de Inteligencia Económica para destrabar el levantamiento del secreto bancario](src/content/events/2026/08/20260819-13.md) — 6 fuentes
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
@@ -1419,6 +1423,7 @@
 - [2026/08/20260825-1 - TC rechaza por 9-1 el requerimiento del Gobierno contra el artículo 31 de la megarreforma: la reconexión gratuita de servicios básicos queda firme](src/content/events/2026/08/20260825-1.md) — 13 fuentes
 - [2026/08/20260825-2 - Jefe del Estado Mayor de la Fuerza Aérea argentina atribuye Magallanes a la soberanía de su país; Chile anuncia nota de protesta y Argentina reafirma los tratados de 1881 y 1984](src/content/events/2026/08/20260825-2.md) — 14 fuentes
 - [2026/08/20260825-3 - Kast presenta Comisión Nueva Arquitectura del Estado presidida por Bettina Horst: 12 expertos tendrán 120 días para proponer reordenamiento de ministerios](src/content/events/2026/08/20260825-3.md) — 6 fuentes
+- [2026/08/20260825-4 - Tras el acuerdo Squella-Longton: la apertura del gobierno no convence a votos clave, Walker pide el retiro y la reforma llega dividida al receso](src/content/events/2026/08/20260825-4.md) — 7 fuentes
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-10 - Suspenden clases en Liceo de Mulchén por hallazgo de amenazas de muerte y rito en baño](src/content/events/2026/08/20260826-10.md) — 9 fuentes
 - [2026/08/20260826-11 - Corte Suprema confirma baja inmediata de carabinero por presunto hurto de $12 mil en Pronto Copec de Concepción](src/content/events/2026/08/20260826-11.md) — 6 fuentes
@@ -1505,6 +1510,7 @@
 - [2026/09/20260903-16 - Fiscalía Centro Norte abre causa penal por eventual intervención electoral de Cerimedo en Chile](src/content/events/2026/09/20260903-16.md) — 6 fuentes
 - [2026/09/20260903-17 - CIPER revela que socio chileno de Cerimedo y asesor de Arrau financiaron grupo del Rechazo que difundió información falsa en 2022](src/content/events/2026/09/20260903-17.md) — 10 fuentes
 - [2026/09/20260903-18 - Vocería de Kast con alcalde de San Bernardo termina sin preguntas y provoca denuncia de censura de Roberto Saa y crítica de Neme](src/content/events/2026/09/20260903-18.md) — 7 fuentes
+- [2026/09/20260903-19 - Orbán Files: la PNfV presidida por Kast fue disuelta en EEUU por no presentar balances desde 2021, con US$1,3 millones de Orbán bajo interrogante](src/content/events/2026/09/20260903-19.md) — 7 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 10 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 27 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
@@ -1548,7 +1554,7 @@
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
 - [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 8 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
-- [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 24 fuentes
+- [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 25 fuentes
 - [2026/09/20260909-6 - Banco Central publica IPoM de septiembre: atribuye desempleo de 9,5% a costos laborales y automatización y recorta PIB 2026 a 0,25%-0,75%](src/content/events/2026/09/20260909-6.md) — 7 fuentes
 - [2026/09/20260909-7 - Se cae el feriado del 17 de septiembre: la tramitación no alcanza antes de Fiestas Patrias](src/content/events/2026/09/20260909-7.md) — 10 fuentes
 - [2026/09/20260909-8 - Cuello, Santana y Serrano denuncian ante el fiscal nacional un eventual delito de Ley de Inteligencia por los dichos de Judd](src/content/events/2026/09/20260909-8.md) — 5 fuentes
@@ -1578,8 +1584,10 @@
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
 - [2026/09/20260914-1 - Kast aborda los indultos y afirma que no corresponde que una persona muera en la cárcel, con revisión caso a caso](src/content/events/2026/09/20260914-1.md) — 13 fuentes
 - [2026/09/20260914-2 - Cadem Plaza Pública: 62% evalúa al gobierno de Kast peor de lo esperado y le pone nota 3,4 a seis meses de mandato](src/content/events/2026/09/20260914-2.md) — 7 fuentes
-- [2026/09/20260914-3 - Ministro Barros cancela viaje a Australia en business class de más de $14 millones tras revelación de Contrapoder](src/content/events/2026/09/20260914-3.md) — 6 fuentes
+- [2026/09/20260914-3 - Ministro Barros cancela viaje a Australia en business class de más de $14 millones tras revelación de Contrapoder](src/content/events/2026/09/20260914-3.md) — 8 fuentes
 - [2026/09/20260914-4 - MMA e Inacap presentan recetario dieciochero para reutilizar sobras de Fiestas Patrias](src/content/events/2026/09/20260914-4.md) — 12 fuentes
+- [2026/09/20260914-5 - Quiroz presenta en el ChileDay Madrid la estrategia económica y la reforma al mercado de capitales ante 700 inversionistas](src/content/events/2026/09/20260914-5.md) — 7 fuentes
+- [2026/09/20260916-1 - Quiroz repite en el ChileDay Londres la receta para cuadruplicar la inversión y cierra la gira europea con el Make Chile Great Again](src/content/events/2026/09/20260916-1.md) — 7 fuentes
 
 ## 2025
 
@@ -1769,6 +1777,7 @@
 - [2021/05/20210517-1 - Caso San Ramón: Miguel Ángel Aguilera gana la reelección pese a que será formalizado por corrupción](src/content/events/2021/05/20210517-1.md) — 2 fuentes
 - [2021/07/20210724-1 - CDE se querella contra la ex intendenta de Coquimbo Lucía Pinto por fraude al Fisco en compra de terrenos por $9.800 millones](src/content/events/2021/07/20210724-1.md) — 1 fuente
 - [2021/07/20210726-1 - Formalizan a Miguel Ángel Aguilera y decretan prisión preventiva: el exalcalde de San Ramón queda preso por corrupción](src/content/events/2021/07/20210726-1.md) — 5 fuentes
+- [2021/08/20210806-1 - Fiscalía pide 15 años para Fuente-Alba y 10 años para su esposa por lavado de dinero del Milicogate](src/content/events/2021/08/20210806-1.md) — 5 fuentes
 - [2021/08/20210822-1 - Kast es proclamado candidato presidencial del Partido Republicano y promete rebajar su sueldo a la mitad](src/content/events/2021/08/20210822-1.md) — 3 fuentes
 - [2021/10/20211003-1 - Pandora Papers revelan que la familia Piñera vendió Minera Dominga a la familia Délano por US$152 millones](src/content/events/2021/10/20211003-1.md) — 4 fuentes
 - [2021/10/20211016-1 - Absuelven del incendio a los acusados por la estación La Granja del Metro en el segundo juicio por el 18-O](src/content/events/2021/10/20211016-1.md) — 6 fuentes
@@ -1824,7 +1833,7 @@
 
 ## 2019
 
-- [2019/02/20190214-1 - Ordenan la detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba por fraude al fisco](src/content/events/2019/02/20190214-1.md) — 2 fuentes
+- [2019/02/20190214-1 - Ordenan la detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba por fraude al fisco](src/content/events/2019/02/20190214-1.md) — 8 fuentes
 - [2019/03/20190304-1 - La ministra Rutherford procesa al exjefe de finanzas del Ejército Jozo Santic Palomino por fraude al fisco](src/content/events/2019/03/20190304-1.md) — 2 fuentes
 - [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — 2 fuentes
 - [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — 2 fuentes
@@ -1844,18 +1853,21 @@
 - [2019/10/20191023-3 - Más de 400 artistas exigen fin del estado de emergencia y el Partido Comunista trabaja en acusación constitucional a Piñera](src/content/events/2019/10/20191023-3.md) — 4 fuentes
 - [2019/10/20191024-1 - Piñera anuncia proyecto para anular alza de luz y convoca a figuras públicas a La Moneda mientras artistas franceses critican represión](src/content/events/2019/10/20191024-1.md) — 3 fuentes
 - [2019/10/20191025-1 - Marcha del 25 de octubre: más de un millón de personas protagonizan la mayor manifestación de la historia de Chile](src/content/events/2019/10/20191025-1.md) — 4 fuentes
+- [2019/10/20191026-1 - Sochiof reporta 88 pacientes con trauma ocular severo por balines a una semana del estallido](src/content/events/2019/10/20191026-1.md) — 5 fuentes
 - [2019/10/20191028-1 - Cambio de gabinete del 28 de octubre de 2019: Chadwick sale de Interior, entra Blumel y Piñera anuncia el fin del estado de emergencia](src/content/events/2019/10/20191028-1.md) — 4 fuentes
 - [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — 2 fuentes
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — 1 fuente
-- [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 22 fuentes
+- [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 23 fuentes
+- [2019/11/20191113-1 - Audio filtrado del general Mario Rozas ante suboficiales — "A nadie voy a dar de baja por procedimiento policial, aunque me obliguen"](src/content/events/2019/11/20191113-1.md) — 7 fuentes
 - [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 20 fuentes
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191115-2 - CIDH anuncia visita técnica a Chile entre el 18 y 21 de noviembre para evaluar la situación de derechos humanos](src/content/events/2019/11/20191115-2.md) — 5 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 3 fuentes
 - [2019/11/20191118-1 - Bioquímicos y científicos desmienten a Carabineros: el Mentholatum no alivia e incluso puede potenciar el efecto de los gases lacrimógenos](src/content/events/2019/11/20191118-1.md) — 4 fuentes
-- [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 14 fuentes
+- [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 15 fuentes
 - [2019/11/20191119-2 - Incendios forestales arrasan cerca de 3.000 hectáreas en Valparaíso: alerta roja regional, evacuaciones en Rodelillo y querellas por delito terrorista](src/content/events/2019/11/20191119-2.md) — 9 fuentes
 - [2019/11/20191121-1 - Informe de Amnistía Internacional, perdigones con plomo y acuerdo por pensiones marcan el 21 de noviembre](src/content/events/2019/11/20191121-1.md) — 14 fuentes
+- [2019/11/20191121-2 - Estudio de la U. Austral ratifica plomo en perdigones de Carabineros: microscopía electrónica confirma 80% metálico y Fiscalía investiga fraude al fisco](src/content/events/2019/11/20191121-2.md) — 7 fuentes
 - [2019/11/20191126-1 - Human Rights Watch publica informe sobre Chile y acuerdo constitucional sigue sin concretarse](src/content/events/2019/11/20191126-1.md) — 18 fuentes
 - [2019/12/20191212-1 - Cámara rechaza la acusación constitucional contra Piñera por las violaciones a los DD.HH. del estallido al acoger la 'cuestión previa' (79-73)](src/content/events/2019/12/20191212-1.md) — 4 fuentes
 - [2019/12/20191220-1 - Jornada del 20 de diciembre de 2019 en Plaza de la Dignidad: copamiento policial y uso masivo de gas lacrimógeno](src/content/events/2019/12/20191220-1.md) — 5 fuentes
@@ -1867,18 +1879,20 @@
 - [2018/04/20180416-1 - Caso SQM: el entierro del financiamiento politico ilegal](src/content/events/2018/04/20180416-1.md) — 3 fuentes
 - [2018/04/20180426-1 - Proyecto de Evópoli contra el nepotismo genera críticas de UDI-RN, que centran fuego en Felipe Kast](src/content/events/2018/04/20180426-1.md) — 2 fuentes
 - [2018/07/20180729-1 - Atacantes enmascarados apuñalan a tres mujeres en marcha por el aborto libre en Santiago; movimiento Social Patriota reivindica la contraprotesta](src/content/events/2018/07/20180729-1.md) — 2 fuentes
+- [2018/08/20180830-1 - Milicogate: Rutherford dicta las primeras condenas contra el cabo Cruz y la sargento Villagrán](src/content/events/2018/08/20180830-1.md) — 5 fuentes
 - [2018/10/20181006-1 - Inédito homenaje a Krassnoff en la Escuela Militar deriva en la baja del director y del hijo del exagente](src/content/events/2018/10/20181006-1.md) — 7 fuentes
 
 ## 2017
 
 - [2017/10/20171006-1 - CIPER revela los negocios del alcalde de San Ramón Miguel Ángel Aguilera que están en la mira de la UAF](src/content/events/2017/10/20171006-1.md) — 1 fuente
-- [2017/12/20171229-1 - TDLC confirma colusión del papel higiénico: multa a SCA por más de $11 mil millones y exoneración de CMPC por autodenuncia](src/content/events/2017/12/20171229-1.md) — 3 fuentes
+- [2017/12/20171229-1 - TDLC confirma colusión del papel higiénico: multa a SCA por más de $11 mil millones y exoneración de CMPC por autodenuncia](src/content/events/2017/12/20171229-1.md) — 7 fuentes
 
 ## 2016
 
 - [2016/01/20160118-1 - CDE pide reabrir el caso Riggs para investigar las malversaciones de la Fundación CEMA Chile](src/content/events/2016/01/20160118-1.md) — 1 fuente
 - [2016/02/20160211-1 - CIPER revela la 'lista de Carrasco': Inmobiliaria Ecomac y otras diez empresas financiaron por fuera de la vía legal la campaña de Golborne](src/content/events/2016/02/20160211-1.md) — 3 fuentes
 - [2016/03/20160307-1 - Corte Suprema confirma que el municipio de Viña del Mar debe restituir $1.840 millones a Corfo por el caso Inverlink](src/content/events/2016/03/20160307-1.md) — 5 fuentes
+- [2016/06/20160629-1 - Caso MOP-Gate: la Corte Suprema dicta sentencia definitiva y confirma las condenas por fraude al Fisco](src/content/events/2016/06/20160629-1.md) — 6 fuentes
 
 ## 2015
 
@@ -1889,13 +1903,15 @@
 - [2015/07/20150714-1 - Caso Caval: el polemico estudio vial que inclino la balanza](src/content/events/2015/07/20150714-1.md) — 3 fuentes
 - [2015/07/20150727-1 - Ministro en visita Carlos Gajardo dicta sentencia contra 13 imputados por la arista principal Corfo-Inverlink](src/content/events/2015/07/20150727-1.md) — 6 fuentes
 - [2015/08/20150812-1 - Corte Suprema ratifica las condenas contra 7 ex ejecutivos por la arista Corfo del caso Inverlink](src/content/events/2015/08/20150812-1.md) — 5 fuentes
+- [2015/08/20150813-1 - Milicogate: The Clinic destapa el desfalco al fondo reservado del cobre en el Ejército](src/content/events/2015/08/20150813-1.md) — 7 fuentes
 - [2015/10/20151008-1 - Papa Francisco respalda al obispo de Osorno Juan Barros y califica de 'tontos' y 'zurdos' a los manifestantes que protestaban por el caso Karadima](src/content/events/2015/10/20151008-1.md) — 2 fuentes
-- [2015/10/20151028-1 - FNE presenta requerimiento ante TDLC por colusión de precios en papel higiénico, pañuelos y servilletas entre CMPC Tissue y SCA ("Confortgate")](src/content/events/2015/10/20151028-1.md) — 8 fuentes
+- [2015/10/20151028-1 - FNE presenta requerimiento ante TDLC por colusión de precios en papel higiénico, pañuelos y servilletas entre CMPC Tissue y SCA ("Confortgate")](src/content/events/2015/10/20151028-1.md) — 12 fuentes
 - [2015/12/20151223-1 - TDLC condena a Asfaltos Chilenos, Dynal, Enex y Química Latinoamericana por colusión en la provisión de asfalto](src/content/events/2015/12/20151223-1.md) — 6 fuentes
 
 ## 2014
 
-- [2014/08/20140812-1 - Caso MOP-Gate: la Corte confirma condenas por sobresueldos con contratos del Ministerio de Obras Públicas](src/content/events/2014/08/20140812-1.md) — 3 fuentes
+- [2014/08/20140812-1 - Caso MOP-Gate: la Corte de Apelaciones confirma condenas por sobresueldos con contratos del Ministerio de Obras Públicas](src/content/events/2014/08/20140812-1.md) — 3 fuentes
+- [2014/09/20140902-1 - Caso Cascadas: la SVS aplica la mayor multa de su historia a Ponce Lerou y ejecutivos por el esquema bursátil de SQM](src/content/events/2014/09/20140902-1.md) — 9 fuentes
 - [2014/09/20140925-1 - TDLC condena a Agrosuper, Ariztía y Don Pollo por la colusión de los pollos y ordena disolver la APA](src/content/events/2014/09/20140925-1.md) — 5 fuentes
 - [2014/10/20141023-1 - Caso EFE: Corte ratifica condena contra Luis Ajenjo por fraude al fisco en la Empresa de Ferrocarriles del Estado](src/content/events/2014/10/20141023-1.md) — 8 fuentes
 - [2014/12/20141203-1 - Corte de Apelaciones de Santiago revoca absoluciones y condena a ocho ex ejecutivos de Inverlink a restituir $26.462 millones a Corfo](src/content/events/2014/12/20141203-1.md) — 5 fuentes
@@ -1943,6 +1959,10 @@
 ## 2003
 
 - [2003/02/20030203-1 - Estalla el caso Inverlink: el Banco Central denuncia la filtración de información reservada desde el computador de su presidencia](src/content/events/2003/02/20030203-1.md) — 5 fuentes
+
+## 2002
+
+- [2002/10/20021018-1 - Destape del Caso Coimas: denuncia de sobornos por plantas de revisión técnica en Rancagua](src/content/events/2002/10/20021018-1.md) — 12 fuentes
 
 ## 1975
 
