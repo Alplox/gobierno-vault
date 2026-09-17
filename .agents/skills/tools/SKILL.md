@@ -73,8 +73,9 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 **Notas de plataforma:**
 - BioBioChile: usa JS pesado; `defuddle.md` es el mejor método (no r.jina)
 - The Clinic: paywall suave; `paywallskip.com` o `r.jina.ai` funcionan
-- El Ciudadano: rate-limit; `fetch-impersonate` o `archive.ph`
+- El Ciudadano: rate-limit; `fetch-impersonate` o `archive.ph`. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
+- CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
 - Archive.ph: puede dar rate-limit 429; intentar con `fetch-impersonate` como fallback
 
 **Detección de falso éxito ("poison pills"):** cualquier método de la escalera puede responder

@@ -135,18 +135,18 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 > Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.
 
-**Total de eventos:** 1433
+**Total de eventos:** 1449
 
-**Cobertura de fuentes:** 969 de 1433 eventos con 3+ fuentes (464 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 985 de 1449 eventos con 3+ fuentes (464 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
 - 2026: 1111
 - 2025: 73
 - 2024: 37
-- 2023: 29
+- 2023: 31
 - 2022: 28
 - 2021: 20
-- 2020: 37
+- 2020: 38
 - 2019: 40
 - 2018: 5
 - 2017: 2
@@ -160,38 +160,45 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - 2009: 6
 - 2003: 1
 - 2002: 1
-- 1975: 1
-- 1973: 3
+- 1998: 1
+- 1988: 1
+- 1987: 2
+- 1983: 1
+- 1982: 1
+- 1981: 2
+- 1975: 3
+- 1973: 5
+- 1972: 1
 
 **Temas más frecuentes (Top 10):**
-- Politica (591)
-- Justicia (401)
-- Economia (287)
-- Defensa y seguridad (282)
+- Politica (594)
+- Justicia (413)
+- Economia (288)
+- Defensa y seguridad (285)
 - Administración pública (200)
-- Derechos humanos (177)
+- Derechos humanos (190)
+- Relaciones internacionales (126)
 - Proceso legislativo (125)
-- Relaciones internacionales (125)
 - Corrupción (120)
 - Finanzas publicas (110)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (286)
+- accion (298)
 - declaracion (201)
-- investigacion (197)
+- investigacion (199)
 - publicacion (145)
 - reaccion (142)
-- resultado (132)
-- fallo_judicial (105)
+- resultado (133)
+- fallo_judicial (106)
 - anuncio (91)
 - entrevista (36)
 - votacion (34)
 
 **Entidades registradas:**
-- Personas: 2375
-- Organizaciones: 1282
+- Personas: 2392
+- Organizaciones: 1287
 - Cifras: 37
-- Fuentes: 6350
+- Fuentes: 6454
 - Temas: 77
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 

@@ -1727,12 +1727,14 @@
 - [2023/06/20230616-1 - Caso Convenios: reportaje destapa millonarios traspasos a la Fundación Democracia Viva y gatilla indagatoria nacional](src/content/events/2023/06/20230616-1.md) — 4 fuentes
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md) — 1 fuente
 - [2023/07/20230731-1 - Condenan a carabineros de la 43° Comisaría de Peñalolén por apremios reiterados contra detenidos del estallido](src/content/events/2023/07/20230731-1.md) — 3 fuentes
+- [2023/08/20230822-1 - Suprema confirma 15 años contra exagentes DINA por secuestros y torturas en la Venda Sexy](src/content/events/2023/08/20230822-1.md) — 5 fuentes
 - [2023/09/20230904-1 - Condenan a 6 años y 2 días a dos carabineros de La Serena por golpear a un niño de 13 años y falsificar el parte](src/content/events/2023/09/20230904-1.md) — 3 fuentes
 - [2023/09/20230908-1 - Defensoría de la Niñez revela que 150 niños, niñas y adolescentes fueron ejecutados y 40 desaparecieron en dictadura](src/content/events/2023/09/20230908-1.md) — 5 fuentes
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — 1 fuente
 - [2023/09/20230912-1 - TOP de La Serena condena al conscripto Carlos Robledo a 10 años por la muerte de Romario Veloz](src/content/events/2023/09/20230912-1.md) — 5 fuentes
 - [2023/09/20230922-1 - Condenan a 5 años al capitán de Carabineros Ricardo Luengo por tres agresiones distintas durante el estallido en Coquimbo](src/content/events/2023/09/20230922-1.md) — 3 fuentes
 - [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — 2 fuentes
+- [2023/10/20231018-1 - Fiscalía archivó sin culpables la causa por suplantación de identidad del carabinero infiltrado en Lo Hermida](src/content/events/2023/10/20231018-1.md) — 7 fuentes
 - [2023/11/20231114-1 - Caso Hermosilla: Ciper revela audio que destapa coimas al SII y la CMF y sacude al sistema judicial](src/content/events/2023/11/20231114-1.md) — 2 fuentes
 - [2023/11/20231127-1 - El Mostrador analiza las cifras de la delincuencia: ingresos de causas +50%, homicidios +40% y secuestros +140% en una década](src/content/events/2023/11/20231127-1.md) — 1 fuente
 - [2023/12/20231217-1 - Plebiscito constitucional 2023: el En Contra gana con 55,76% y se cierra el segundo proceso constituyente](src/content/events/2023/12/20231217-1.md) — 3 fuentes
@@ -1818,6 +1820,7 @@
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
 - [2020/09/20200928-1 - La Pública accede por Ley de Transparencia a 200 minutos de cámaras corporales del GOPE de Carabineros del estallido: primera entrega de registros policiales](src/content/events/2020/09/20200928-1.md) — 3 fuentes
 - [2020/10/20201002-1 - Caso Pío Nono: carabinero lanza a un adolescente de 16 años desde un puente al río Mapocho y es formalizado por homicidio frustrado](src/content/events/2020/10/20201002-1.md) — 3 fuentes
+- [2020/10/20201015-1 - CIPER revela a un cabo de Carabineros infiltrado en ollas comunes de Lo Hermida que incitaba al enfrentamiento policial](src/content/events/2020/10/20201015-1.md) — 8 fuentes
 - [2020/10/20201018-2 - Primer aniversario del 18-O: 580 detenidos en todo el país y jornada de incidentes en la RM](src/content/events/2020/10/20201018-2.md) — 2 fuentes
 - [2020/10/20201019-1 - The Guardian estrena documental sobre los manifestantes cegados en el estallido que buscan justicia: 'This is mutilation'](src/content/events/2020/10/20201019-1.md) — 1 fuente
 - [2020/10/20201025-1 - Plebiscito de entrada: el Apruebo gana con 78,27% y la Convención Constitucional será la encargada de redactar la nueva Constitución](src/content/events/2020/10/20201025-1.md) — 2 fuentes
@@ -1964,13 +1967,47 @@
 
 - [2002/10/20021018-1 - Destape del Caso Coimas: denuncia de sobornos por plantas de revisión técnica en Rancagua](src/content/events/2002/10/20021018-1.md) — 12 fuentes
 
+## 1998
+
+- [1998/10/19981016-1 - Detención de Pinochet en Londres por orden del juez Garzón](src/content/events/1998/10/19981016-1.md) — 5 fuentes
+
+## 1988
+
+- [1988/10/19881005-1 - Triunfo del No en el plebiscito del 5 de octubre de 1988](src/content/events/1988/10/19881005-1.md) — 5 fuentes
+
+## 1987
+
+- [1987/06/19870615-1 - La CNI ejecuta la Operación Albania, 12 frentistas asesinados en un montaje de enfrentamientos](src/content/events/1987/06/19870615-1.md) — 8 fuentes
+- [1987/09/19870901-1 - El FPMR secuestra al coronel Carreño y la CNI monta la confesión televisada de Karin Eitel](src/content/events/1987/09/19870901-1.md) — 8 fuentes
+
+## 1983
+
+- [1983/09/19830907-1 - La CNI asesina a cinco miristas en Fuenteovejuna y Janequeo en falsos enfrentamientos](src/content/events/1983/09/19830907-1.md) — 8 fuentes
+
+## 1982
+
+- [1982/04/19820402-1 - Guerra de las Malvinas: Chile apoya al Reino Unido con radares e inteligencia](src/content/events/1982/04/19820402-1.md) — 5 fuentes
+
+## 1981
+
+- [1981/09/19810920-1 - El Ejército ejecuta a tres miristas en Remeco Alto, Neltume, en operativo presentado como enfrentamiento](src/content/events/1981/09/19810920-1.md) — 7 fuentes
+- [1981/12/19811211-1 - La CNI asesina a dos miristas en calle Rivadavia en un falso enfrentamiento con suicidio simulado](src/content/events/1981/12/19811211-1.md) — 6 fuentes
+
 ## 1975
 
+- [1975/02/19750220-1 - La DINA obliga a cuatro miristas detenidos a ofrecer una conferencia de prensa de rendición](src/content/events/1975/02/19750220-1.md) — 6 fuentes
 - [1975/07/19750724-1 - La Segunda titula 'Exterminados como ratones' en el montaje de la Operación Colombo](src/content/events/1975/07/19750724-1.md) — 7 fuentes
+- [1975/11/19751119-1 - La DINA monta un falso enfrentamiento en Rinconada de Maipú con seis detenidos asesinados](src/content/events/1975/11/19751119-1.md) — 7 fuentes
 
 ## 1973
 
-- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 11 fuentes
+- [1973/06/19730629-1 - Tanquetazo del 29 de junio de 1973, primer intento de golpe militar contra Salvador Allende](src/content/events/1973/06/19730629-1.md) — 6 fuentes
+- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 32 fuentes
 - [1973/09/19730924-1 - Iglesias protestantes y evangélicas crean el CONAR, primer comité de ayuda a víctimas de la dictadura](src/content/events/1973/09/19730924-1.md) — 4 fuentes
 - [1973/10/19731002-1 - Detención y desaparición de Antonio Aguirre Vásquez, herido en la defensa de La Moneda](src/content/events/1973/10/19731002-1.md) — 8 fuentes
+- [1973/10/19731019-1 - Caravana de la Muerte ejecuta a 26 detenidos en Calama](src/content/events/1973/10/19731019-1.md) — 7 fuentes
+
+## 1972
+
+- [1972/10/19721009-1 - Paro de octubre de 1972, lockout patronal de camioneros contra el gobierno de Salvador Allende](src/content/events/1972/10/19721009-1.md) — 6 fuentes
 

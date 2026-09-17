@@ -65,6 +65,8 @@ Vive en `TAREAS/`. No hay `TAREAS.md` raíz ni archivo de completadas — lo hec
 
 **Al completarse:** la fila **se ELIMINA** del archivo de pendientes — no queda con `✅`. Si un seguimiento conserva pendientes activos, reescribir conservando solo `⬜`/`🟡` y descartando lo hecho.
 
+**Fecha exacta o nada propio:** si tras agotar transcript/catálogo/fetch no se verifica el día exacto del hecho (caso 2026: visita Cruz Roja a Pisagua, solo mes tras ~17 métodos), NO crear evento con día inventado — se pliegan los datos como ampliación en un evento preexistente afín (precedente: Plan Z y Pisagua en `19730911-1`) y el episodio queda en `TAREAS/` como `🟡` con el log de métodos y leads abiertos. Una fecha inventada es peor que un pendiente documentado.
+
 **Para retomar una tarea:**
 1. Crear evento siguiendo `.agents/skills/content-model/SKILL.md#plantilla-copiable` (plantilla copiable)
 2. Mínimo 5 fuentes de medios distintos, nunca red social como fuente única
