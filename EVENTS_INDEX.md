@@ -1530,6 +1530,7 @@
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
+- [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 21 fuentes
 - [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 16 fuentes
 - [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 11 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 5 fuentes
@@ -1541,6 +1542,7 @@
 - [2026/09/20260908-1 - Contrapoder revela que Interior contrató a honorarios por $2,35 millones a Sofía Pumpin, periodista recién titulada, para reportes de Delegaciones Presidenciales en el gabinete de Pavez](src/content/events/2026/09/20260908-1.md) — 9 fuentes
 - [2026/09/20260908-10 - Gobierno reconoce 'error' en la contratación de Cristóbal Soto en Interior, ordena aplicar los instructivos de austeridad de Hacienda y abre investigación administrativa interna](src/content/events/2026/09/20260908-10.md) — 9 fuentes
 - [2026/09/20260908-11 - Bianchi: Chile no tiene ninguna capacidad de control del Estrecho de Magallanes](src/content/events/2026/09/20260908-11.md) — 3 fuentes
+- [2026/09/20260908-12 - Fonasa presenta querella criminal por eventual fraude de subvenciones de $8 mil millones con operativos de exámenes gratuitos](src/content/events/2026/09/20260908-12.md) — 8 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 7 fuentes
 - [2026/09/20260908-4 - PISA 2025: Chile anota su peor resultado en Matemática con 59% bajo el nivel básico y retrocede en Lectura](src/content/events/2026/09/20260908-4.md) — 6 fuentes
@@ -1552,7 +1554,7 @@
 - [2026/09/20260909-1 - Cancillería cita a Judd por atribuir el estallido social a la izquierda; el embajador admite que EEUU no investigó en Chile y el canciller le recuerda que no debe opinar de política interna](src/content/events/2026/09/20260909-1.md) — 17 fuentes
 - [2026/09/20260909-10 - Detienen al exfiscal Vinko Fodich y a tres funcionarios PDI por secuestros extorsivos contra comerciantes chinos; Fiscalía indaga falso cuartel policial](src/content/events/2026/09/20260909-10.md) — 6 fuentes
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
-- [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 8 fuentes
+- [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 12 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
 - [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 25 fuentes
 - [2026/09/20260909-6 - Banco Central publica IPoM de septiembre: atribuye desempleo de 9,5% a costos laborales y automatización y recorta PIB 2026 a 0,25%-0,75%](src/content/events/2026/09/20260909-6.md) — 7 fuentes
@@ -1577,7 +1579,9 @@
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
 - [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones en carnes, banderas y pines en la previa de Fiestas Patrias](src/content/events/2026/09/20260911-5.md) — 11 fuentes
 - [2026/09/20260911-6 - Prisión preventiva para el exfiscal Fodich, un inspector PDI y el primo de Parisi por el falso cuartel de secuestros extorsivos; Fodich admite que recibió $3,5 millones](src/content/events/2026/09/20260911-6.md) — 6 fuentes
-- [2026/09/20260912-1 - Contrapoder revela que Presidencia contrató a honorarios por $2,85 millones al venezolano Romer Rubio, exconcejal de Maracaibo, como asesor del Segundo Piso: segundo caso migrante en el equipo tras Depablos](src/content/events/2026/09/20260912-1.md) — 12 fuentes
+- [2026/09/20260911-7 - Kast justifica en Los Ríos el retorno de Duco al Segundo Piso: 'Se le pide la renuncia, pero eso no impide que el Gobierno le pida su colaboración'](src/content/events/2026/09/20260911-7.md) — 6 fuentes
+- [2026/09/20260911-8 - BioBio sintetiza cinco casos de estudiantes y recién egresados contratados como 'expertos' con sueldos millonarios e instala el debate por meritocracia](src/content/events/2026/09/20260911-8.md) — 16 fuentes
+- [2026/09/20260912-1 - Contrapoder revela que Presidencia contrató a honorarios por $2,85 millones al venezolano Romer Rubio, exconcejal de Maracaibo, como asesor del Segundo Piso: segundo caso migrante en el equipo tras Depablos](src/content/events/2026/09/20260912-1.md) — 14 fuentes
 - [2026/09/20260912-2 - PDI da de baja a funcionario del LACRIM de La Serena que vendía consultas de sistemas policiales al Clan Chen a $100 mil cada una](src/content/events/2026/09/20260912-2.md) — 6 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
 - [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
@@ -1587,7 +1591,13 @@
 - [2026/09/20260914-3 - Ministro Barros cancela viaje a Australia en business class de más de $14 millones tras revelación de Contrapoder](src/content/events/2026/09/20260914-3.md) — 8 fuentes
 - [2026/09/20260914-4 - MMA e Inacap presentan recetario dieciochero para reutilizar sobras de Fiestas Patrias](src/content/events/2026/09/20260914-4.md) — 12 fuentes
 - [2026/09/20260914-5 - Quiroz presenta en el ChileDay Madrid la estrategia económica y la reforma al mercado de capitales ante 700 inversionistas](src/content/events/2026/09/20260914-5.md) — 7 fuentes
+- [2026/09/20260914-6 - Kast defiende el retorno de Duco a La Moneda y responde por sus críticas a los 'premios de consuelo': 'Tiene una experiencia que es relevante'](src/content/events/2026/09/20260914-6.md) — 5 fuentes
+- [2026/09/20260914-7 - Concejal UDI de Isla de Maipo pide que La Consentida no se use como cueca en eventos de Fiestas Patrias y es desmentido técnicamente en plena sesión](src/content/events/2026/09/20260914-7.md) — 8 fuentes
+- [2026/09/20260915-1 - Concejal UDI que pidió vetar La Consentida es captado bailando la canción en vísperas de Fiestas Patrias y la hija de Jaime Atria responde](src/content/events/2026/09/20260915-1.md) — 7 fuentes
 - [2026/09/20260916-1 - Quiroz repite en el ChileDay Londres la receta para cuadruplicar la inversión y cierra la gira europea con el Make Chile Great Again](src/content/events/2026/09/20260916-1.md) — 7 fuentes
+- [2026/09/20260916-2 - Kast inaugura las fondas del Parque O'Higgins con su primer pie de cueca y una paya junto a Desbordes](src/content/events/2026/09/20260916-2.md) — 10 fuentes
+- [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
+- [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 10 fuentes
 
 ## 2025
 
@@ -1845,7 +1855,7 @@
 - [2019/04/20190424-1 - TDLC sanciona a navieras por cartel del transporte marítimo de vehículos hacia Chile](src/content/events/2019/04/20190424-1.md) — 5 fuentes
 - [2019/05/20190520-1 - Johnny Olate, el estudiante de la UC que inventó la denuncia de abuso sexual contra el gremialista José Ignacio Palma, era seguidor del movimiento de José Antonio Kast](src/content/events/2019/05/20190520-1.md) — 5 fuentes
 - [2019/10/20191001-1 - Cámara rechaza la acusación constitucional contra la ministra de Educación Marcela Cubillos](src/content/events/2019/10/20191001-1.md) — 2 fuentes
-- [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 9 fuentes
+- [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 10 fuentes
 - [2019/10/20191019-1 - Tres personas mueren en incendio de supermercado durante saqueos en San Bernardo y el aeropuerto de Santiago colapsa en la primera jornada de estado de emergencia](src/content/events/2019/10/20191019-1.md) — 5 fuentes
 - [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — 2 fuentes
 - [2019/10/20191020-1 - Video viral muestra a tres carabineros de Fuerzas Especiales aspirando una sustancia blanca en plena calle; Carabineros asegura que era Mentholatum contra los gases lacrimógenos](src/content/events/2019/10/20191020-1.md) — 12 fuentes
@@ -1860,12 +1870,12 @@
 - [2019/10/20191028-1 - Cambio de gabinete del 28 de octubre de 2019: Chadwick sale de Interior, entra Blumel y Piñera anuncia el fin del estado de emergencia](src/content/events/2019/10/20191028-1.md) — 4 fuentes
 - [2019/10/20191030-1 - Piñera anuncia la cancelación de la cumbre APEC y el traslado de la COP25 por el estallido social](src/content/events/2019/10/20191030-1.md) — 2 fuentes
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — 1 fuente
-- [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 23 fuentes
+- [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 24 fuentes
 - [2019/11/20191113-1 - Audio filtrado del general Mario Rozas ante suboficiales — "A nadie voy a dar de baja por procedimiento policial, aunque me obliguen"](src/content/events/2019/11/20191113-1.md) — 7 fuentes
 - [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 20 fuentes
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191115-2 - CIDH anuncia visita técnica a Chile entre el 18 y 21 de noviembre para evaluar la situación de derechos humanos](src/content/events/2019/11/20191115-2.md) — 5 fuentes
-- [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 3 fuentes
+- [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 5 fuentes
 - [2019/11/20191118-1 - Bioquímicos y científicos desmienten a Carabineros: el Mentholatum no alivia e incluso puede potenciar el efecto de los gases lacrimógenos](src/content/events/2019/11/20191118-1.md) — 4 fuentes
 - [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 15 fuentes
 - [2019/11/20191119-2 - Incendios forestales arrasan cerca de 3.000 hectáreas en Valparaíso: alerta roja regional, evacuaciones en Rodelillo y querellas por delito terrorista](src/content/events/2019/11/20191119-2.md) — 9 fuentes
@@ -1959,6 +1969,12 @@
 - [2009/12/20091220-1 - Frei invita al Partido Comunista a unirse a su campaña y el PC oficializa su apoyo para la segunda vuelta presidencial de 2009-2010](src/content/events/2009/12/20091220-1.md) — 3 fuentes
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — 2 fuentes
 
+## 2006
+
+- [2006/10/20061025-1 - Denuncian supuesto depósito de 9.000 kilos de oro de Pinochet en un banco de Hong Kong](src/content/events/2006/10/20061025-1.md) — 12 fuentes
+- [2006/10/20061026-1 - HSBC declara falsos los documentos del supuesto oro de Pinochet y la Corte habilita la investigación](src/content/events/2006/10/20061026-1.md) — 11 fuentes
+- [2006/12/20061220-1 - Jueces dictan tres sobreseimientos definitivos de Pinochet en casos Riggs, Caravana y Colombo](src/content/events/2006/12/20061220-1.md) — 7 fuentes
+
 ## 2003
 
 - [2003/02/20030203-1 - Estalla el caso Inverlink: el Banco Central denuncia la filtración de información reservada desde el computador de su presidencia](src/content/events/2003/02/20030203-1.md) — 5 fuentes
@@ -1993,6 +2009,14 @@
 - [1981/09/19810920-1 - El Ejército ejecuta a tres miristas en Remeco Alto, Neltume, en operativo presentado como enfrentamiento](src/content/events/1981/09/19810920-1.md) — 7 fuentes
 - [1981/12/19811211-1 - La CNI asesina a dos miristas en calle Rivadavia en un falso enfrentamiento con suicidio simulado](src/content/events/1981/12/19811211-1.md) — 6 fuentes
 
+## 1977
+
+- [1977/05/19770511-1 - Detención y muerte bajo tortura de Jorge Andrés Troncoso Aguirre en el montaje DINA del caso Veloso](src/content/events/1977/05/19770511-1.md) — 6 fuentes
+
+## 1976
+
+- [1976/05/19760512-1 - Detención y desaparición de Víctor Manuel Díaz López y Eliana Marina Espinoza Fernández por la DINA](src/content/events/1976/05/19760512-1.md) — 12 fuentes
+
 ## 1975
 
 - [1975/02/19750220-1 - La DINA obliga a cuatro miristas detenidos a ofrecer una conferencia de prensa de rendición](src/content/events/1975/02/19750220-1.md) — 6 fuentes
@@ -2001,8 +2025,12 @@
 
 ## 1973
 
+- [1973/03/19730304-1 - Elecciones parlamentarias del 4 de marzo de 1973, la CODE conserva mayoria sin dos tercios y la UP sube a 43 por ciento](src/content/events/1973/03/19730304-1.md) — 5 fuentes
 - [1973/06/19730629-1 - Tanquetazo del 29 de junio de 1973, primer intento de golpe militar contra Salvador Allende](src/content/events/1973/06/19730629-1.md) — 6 fuentes
-- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 32 fuentes
+- [1973/07/19730727-1 - Asesinato del edecan naval Arturo Araya Peters por un comando de ultraderecha en Providencia](src/content/events/1973/07/19730727-1.md) — 5 fuentes
+- [1973/08/19730822-1 - Acuerdo de la Camara de Diputados del 22 de agosto de 1973 sobre el grave quebrantamiento del orden constitucional](src/content/events/1973/08/19730822-1.md) — 5 fuentes
+- [1973/08/19730823-1 - Renuncia del general Carlos Prats a la comandancia del Ejercito y al Ministerio de Defensa, Allende nombra a Pinochet](src/content/events/1973/08/19730823-1.md) — 5 fuentes
+- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 40 fuentes
 - [1973/09/19730924-1 - Iglesias protestantes y evangélicas crean el CONAR, primer comité de ayuda a víctimas de la dictadura](src/content/events/1973/09/19730924-1.md) — 4 fuentes
 - [1973/10/19731002-1 - Detención y desaparición de Antonio Aguirre Vásquez, herido en la defensa de La Moneda](src/content/events/1973/10/19731002-1.md) — 8 fuentes
 - [1973/10/19731019-1 - Caravana de la Muerte ejecuta a 26 detenidos en Calama](src/content/events/1973/10/19731019-1.md) — 7 fuentes
@@ -2010,4 +2038,8 @@
 ## 1972
 
 - [1972/10/19721009-1 - Paro de octubre de 1972, lockout patronal de camioneros contra el gobierno de Salvador Allende](src/content/events/1972/10/19721009-1.md) — 6 fuentes
+
+## 1971
+
+- [1971/06/19710608-1 - Asesinato del exministro Edmundo Perez Zujovic por un comando de la VOP en Providencia](src/content/events/1971/06/19710608-1.md) — 6 fuentes
 

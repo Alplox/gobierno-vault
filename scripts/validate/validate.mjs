@@ -195,6 +195,7 @@ const WHITELIST_MEDIOS = new Set([
   'Federación CCU',
   'Municipalidad de Coquimbo',
   'Municipalidad de Temuco',
+  'Municipalidad de San Bernardo',
   'Partido Republicano de Chile',
   'Partido Por la Democracia',
   'Superintendencia de Pensiones',
@@ -284,6 +285,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Obras Públicas',
   'Tribunal Constitucional de Chile',
   'Tribunal Constitucional',
+  'Memoria y Vida (Corporación Pilmaiquen)',
 ]);
 
 let errors = 0;

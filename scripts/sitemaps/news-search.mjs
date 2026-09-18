@@ -85,8 +85,9 @@ function catalogEntries(slug, years) {
         }
       }
       catalogCache.set(key, arr);
-    }
-    out.push(...catalogCache.get(key));
+    }      // push(...) con spread explota (stack overflow) en JSONL grandes;
+      // loop plano en su lugar.
+      for (const e of catalogCache.get(key)) out.push(e);
   }
   return out;
 }

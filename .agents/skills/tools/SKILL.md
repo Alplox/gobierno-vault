@@ -319,5 +319,8 @@ en `src/content/sources/<id>.md`, junto con el ID `medio-YYYY-MM-DD-slug` y el w
 - Flags: `--append` (crea `src/content/sources/<id>.md` directo), `--mirror` (fuerza
   espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
   el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra).
+- `--append` es interactivo (confirma medio, autor, fecha, tipo, notas y creación): no acepta
+  respuestas por pipe de forma fiable; para tandas, genera el bloque sin `--append` o crea el
+  `.md` a mano con datos ya verificados por `fetch-content` (revisar `medio`/`fecha`/`autor` igual).
 - Siempre imprime la URL del articulo original (nunca el mirror), y avisa si el ID ya existe.
 - Revisar siempre `medio`/`fecha`/`autor` del bloque generado antes de usar el wikilink: el mapeo por dominio falla con medios nuevos (`medio: ""`, caso sep-2026 `mediainfo.cl`/`quintavisionahora.cl`) y puede errar el medio (`eldinamo.cl` → La Segunda) o dejar `fecha: "null"` y filenames `*-null-*`; también limpiar entidades HTML en `titulo` (`&raquo;`, `&#36;` → `$`) y renombrar el `.md` al formato `medio-YYYY-MM-DD-slug` si el ID salió genérico.
