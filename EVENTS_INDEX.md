@@ -619,6 +619,7 @@
 - [2026/04/20260421-1 - Seremi de Trabajo de Coquimbo Viviana Torres renuncia por no cumplir requisito de 10 semestres](src/content/events/2026/04/20260421-1.md) — 3 fuentes
 - [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 7 fuentes
 - [2026/04/20260422-2 - Correo interno de la directora del Programa de DDHH revela instrucción de no alegar en causas de lesa humanidad y contradice al ministro Rabat](src/content/events/2026/04/20260422-2.md) — 3 fuentes
+- [2026/04/20260423-1 - Robo de equipos audiovisuales y especies en el Ministerio de la Mujer y Equidad de Género: denuncia ante la PDI y sumario interno](src/content/events/2026/04/20260423-1.md) — 8 fuentes
 - [2026/04/20260424-1 - Encuesta Black & White: 52% apoya el Plan de Reconstrucción en general y la mayoría rechaza la rebaja del impuesto corporativo](src/content/events/2026/04/20260424-1.md) — 1 fuente
 - [2026/04/20260425-1 - Kast responde a críticas por recortes y critica al gobierno anterior: 'Ustedes le quitaron los alimentos a los niños'](src/content/events/2026/04/20260425-1.md) — 7 fuentes
 - [2026/04/20260426-1 - Gobierno diseña el Plan Entornos Digitales Seguros para prohibir redes sociales a menores de 16 años](src/content/events/2026/04/20260426-1.md) — 2 fuentes
@@ -1424,6 +1425,7 @@
 - [2026/08/20260825-2 - Jefe del Estado Mayor de la Fuerza Aérea argentina atribuye Magallanes a la soberanía de su país; Chile anuncia nota de protesta y Argentina reafirma los tratados de 1881 y 1984](src/content/events/2026/08/20260825-2.md) — 14 fuentes
 - [2026/08/20260825-3 - Kast presenta Comisión Nueva Arquitectura del Estado presidida por Bettina Horst: 12 expertos tendrán 120 días para proponer reordenamiento de ministerios](src/content/events/2026/08/20260825-3.md) — 6 fuentes
 - [2026/08/20260825-4 - Tras el acuerdo Squella-Longton: la apertura del gobierno no convence a votos clave, Walker pide el retiro y la reforma llega dividida al receso](src/content/events/2026/08/20260825-4.md) — 7 fuentes
+- [2026/08/20260825-5 - Juzgado de Letras y Garantía de Río Bueno ordena al alcalde Luis Reyes decretar en una sola cuota el pago de $432 millones de la deuda por la Casa Machmar](src/content/events/2026/08/20260825-5.md) — 6 fuentes
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-10 - Suspenden clases en Liceo de Mulchén por hallazgo de amenazas de muerte y rito en baño](src/content/events/2026/08/20260826-10.md) — 9 fuentes
 - [2026/08/20260826-11 - Corte Suprema confirma baja inmediata de carabinero por presunto hurto de $12 mil en Pronto Copec de Concepción](src/content/events/2026/08/20260826-11.md) — 6 fuentes
@@ -1577,7 +1579,7 @@
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
-- [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones en carnes, banderas y pines en la previa de Fiestas Patrias](src/content/events/2026/09/20260911-5.md) — 11 fuentes
+- [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones en carnes, banderas y pines en la previa de Fiestas Patrias](src/content/events/2026/09/20260911-5.md) — 18 fuentes
 - [2026/09/20260911-6 - Prisión preventiva para el exfiscal Fodich, un inspector PDI y el primo de Parisi por el falso cuartel de secuestros extorsivos; Fodich admite que recibió $3,5 millones](src/content/events/2026/09/20260911-6.md) — 6 fuentes
 - [2026/09/20260911-7 - Kast justifica en Los Ríos el retorno de Duco al Segundo Piso: 'Se le pide la renuncia, pero eso no impide que el Gobierno le pida su colaboración'](src/content/events/2026/09/20260911-7.md) — 6 fuentes
 - [2026/09/20260911-8 - BioBio sintetiza cinco casos de estudiantes y recién egresados contratados como 'expertos' con sueldos millonarios e instala el debate por meritocracia](src/content/events/2026/09/20260911-8.md) — 16 fuentes
@@ -1597,7 +1599,11 @@
 - [2026/09/20260916-1 - Quiroz repite en el ChileDay Londres la receta para cuadruplicar la inversión y cierra la gira europea con el Make Chile Great Again](src/content/events/2026/09/20260916-1.md) — 7 fuentes
 - [2026/09/20260916-2 - Kast inaugura las fondas del Parque O'Higgins con su primer pie de cueca y una paya junto a Desbordes](src/content/events/2026/09/20260916-2.md) — 10 fuentes
 - [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
-- [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 10 fuentes
+- [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 13 fuentes
+- [2026/09/20260917-2 - Robo a departamento de asistente de Producción de Presidencia en San Miguel: investigan sustracción de discos duros con presunta información secreta](src/content/events/2026/09/20260917-2.md) — 27 fuentes
+- [2026/09/20260918-1 - Cántico de «Chúpalo Kast» en fondas del Parque O'Higgins y el Estadio Nacional durante Fiestas Patrias y respuesta de Sichel en Ñuñoa](src/content/events/2026/09/20260918-1.md) — 22 fuentes
+- [2026/09/20260918-2 - Chomali pone el desempleo de 9,5% en el centro del Te Deum Ecuménico ante Kast](src/content/events/2026/09/20260918-2.md) — 8 fuentes
+- [2026/09/20260919-1 - Parada Militar 2026 en la elipse del Parque O'Higgins, primera encabezada por Kast y con debut de Gendarmería](src/content/events/2026/09/20260919-1.md) — 7 fuentes
 
 ## 2025
 
@@ -1619,6 +1625,7 @@
 - [2025/05/20250527-1 - Papaya Gate: formalizan a la exintendenta Lucía Pinto y a otros tres imputados por fraude al fisco](src/content/events/2025/05/20250527-1.md) — 1 fuente
 - [2025/05/20250528-1 - Boric retira los agregados militares, de defensa y aéreo de la embajada en Tel Aviv por la gravísima situación en Gaza: apoyo de Walker, réplicas de Kaiser y Jara, y contratos con Israel intactos](src/content/events/2025/05/20250528-1.md) — 11 fuentes
 - [2025/06/20250601-1 - Cuarta y última Cuenta Pública de Boric: reforma de pensiones, sueldo mínimo de $539 mil, aborto con plazos y Punta Peuco como penal común](src/content/events/2025/06/20250601-1.md) — 12 fuentes
+- [2025/06/20250602-1 - Reportaje "¿Hasta Cuándo?" de Mega revela depósitos por $174 millones al alcalde de Río Bueno Luis Reyes: 20 transferencias de la secretaria de un contratista municipal y $22 millones de funcionarios](src/content/events/2025/06/20250602-1.md) — 6 fuentes
 - [2025/06/20250608-1 - El 'método Kast': la estrategia de campaña que lo mantiene en empate técnico con Matthei](src/content/events/2025/06/20250608-1.md) — 1 fuente
 - [2025/06/20250617-1 - Gobierno de Boric ordena cierre temporal de la embajada en Teherán y evacua personal diplomático tras el ataque de Israel a Irán](src/content/events/2025/06/20250617-1.md) — 7 fuentes
 - [2025/06/20250627-1 - Video sexual en edificio de la Municipalidad de Vitacura se viraliza y derivó en sumario y suspensión de dos funcionarios](src/content/events/2025/06/20250627-1.md) — 6 fuentes
@@ -1735,6 +1742,7 @@
 - [2023/05/20230529-1 - SERMIG Reporte 1: estadísticas 2021-2022 inauguran serie de registros administrativos](src/content/events/2023/05/20230529-1.md) — 2 fuentes
 - [2023/06/20230601-1 - Segunda Cuenta Pública de Boric: Plan Calles Sin Violencia, sueldo mínimo a $500 mil, Ley 40 Horas y el discurso más largo desde el retorno a la democracia](src/content/events/2023/06/20230601-1.md) — 6 fuentes
 - [2023/06/20230616-1 - Caso Convenios: reportaje destapa millonarios traspasos a la Fundación Democracia Viva y gatilla indagatoria nacional](src/content/events/2023/06/20230616-1.md) — 4 fuentes
+- [2023/07/20230720-1 - Robo de 23 computadores y una caja fuerte al Ministerio de Desarrollo Social: el "cuento del tío" con falsos sobrinos de Jackson](src/content/events/2023/07/20230720-1.md) — 20 fuentes
 - [2023/07/20230725-1 - Think tanks ligados a partidos han recibido al menos $6.000 millones del Estado](src/content/events/2023/07/20230725-1.md) — 1 fuente
 - [2023/07/20230731-1 - Condenan a carabineros de la 43° Comisaría de Peñalolén por apremios reiterados contra detenidos del estallido](src/content/events/2023/07/20230731-1.md) — 3 fuentes
 - [2023/08/20230822-1 - Suprema confirma 15 años contra exagentes DINA por secuestros y torturas en la Venda Sexy](src/content/events/2023/08/20230822-1.md) — 5 fuentes

@@ -77,6 +77,7 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
 - Archive.ph: puede dar rate-limit 429; intentar con `fetch-impersonate` como fallback
+- `fetch-impersonate` en Windows con consola cp1252 falla con `UnicodeEncodeError` al imprimir HTML con símbolos fuera de Latin-1 (ej. `▼` en camara.cl): relanzar con `$env:PYTHONIOENCODING='utf-8'` en el mismo comando
 
 **Detección de falso éxito ("poison pills"):** cualquier método de la escalera puede responder
 HTTP 200 y devolver una página de bloqueo en vez del artículo. Antes de aceptar un resultado,

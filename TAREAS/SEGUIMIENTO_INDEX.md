@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 327
+**Total tareas:** 329
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 244 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 246 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 298 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 300 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -308,6 +308,8 @@
 | S-2026-226 | ⬜ | 2026-09-14 | Caso Cerimedo — seguimiento judicial | Oficios FA por fundación de Fontaine (evento `20260904-8`): respuestas de Codelco, SII, Servel, UAF, SP y CMF + pronunciamiento de Fontaine | `20260904-8` | Origen: <https://eldesconcierto.cl/actualidad/caso-cerimedo-y-bernardo-fontaine-frente-amplio-presenta-oficios-fundacion-ligada-bots-y-fake-news-n5461999> |
 | S-2026-227 | ⬜ | 2026-09-15 | Viaje Barros Australia — seguimiento | Pasajes business a Australia cancelados (evento `60914-3): delegación chilena efectiva a la 11.ª SPDMM en Fiyi + devolución de pasajes + pronunciamiento de Contraloría | `60914-3 | Origen: <https://contrapoderchile.cl/y-la-austeridad-fiscal-ministerio-de-defensa-gasto-mas-de-14-millones-en-pasajes-business-class-para-viaje-del-ministro-barros-a-australia/> |
 | S-2026-228 | ⬜ | 2026-09-17 | Caso Fonasa operativos — seguimiento judicial | Querella por fraude de subvenciones de $8 mil M con operativos de exámenes gratuitos (evento `20260908-12`): formalizaciones e imputados, otros prestadores con comportamiento sospechoso, coordinación MP-CDE, congelación de activos y recuperación de fondos | `20260908-12` | Origen: <https://www.fonasa.gob.cl/noticias/declaracion-publica-fraude-operativos/> |
+| S-2026-229 | ⬜ | 2026-09-18 | Río Bueno — Casa Machmar — ejecución de sentencia (evento `20260825-5`) | Cumplimiento del pago de $432M por Casa Machmar (pago parcial $215M, saldo ~$217M) + eventuales apremios y presupuesto 2027 | `20260825-5` | Origen: <https://diarioelranco.cl/2026/09/14/casa-machmar-golpea-las-finanzas-municipales/> |
+| S-2026-230 | ⬜ | 2026-09-19 | Robo discos duros funcionaria Presidencia — desenlace PDI (evento `20260917-2`) | Robo 16-sep a asistente de Producción de Presidencia en San Miguel (3 discos duros, uno con presunta info secreta según reporte policial; Presidencia dice todo era personal): identificación de responsables, peritaje del contenido de los discos, eventual sumario o protocolo de manejo de información | `20260917-2` | Origen: <https://www.elmostrador.cl/noticias/pais/2026/09/17/roban-disco-duro-con-informacion-secreta-de-presidencia-desde-departamento-de-funcionaria/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

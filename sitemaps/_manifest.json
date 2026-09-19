@@ -1,13 +1,13 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-18T17:25:52.470Z",
+  "actualizado": "2026-09-19T01:51:12.131Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
-      "ultima_sync": "2026-09-17T23:38:47.594Z",
-      "articulos": 2781,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-19T01:51:10.300Z",
+      "articulos": 3112,
+      "nuevos": 331,
       "años": 1
     },
     "elclarin": {
@@ -19,16 +19,16 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-17T21:24:50.695Z",
+      "ultima_sync": "2026-09-19T01:51:10.092Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
     },
     "adnradio": {
       "nombre": "ADN Radio",
-      "ultima_sync": "2026-09-17T23:39:20.287Z",
-      "articulos": 600,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-19T01:51:12.131Z",
+      "articulos": 700,
+      "nuevos": 100,
       "años": 1
     },
     "factchecking": {
@@ -54,9 +54,9 @@
     },
     "elmostrador": {
       "nombre": "El Mostrador",
-      "ultima_sync": "2026-09-17T23:40:46.914Z",
-      "articulos": 397,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-19T01:51:06.772Z",
+      "articulos": 497,
+      "nuevos": 100,
       "años": 1
     },
     "fastcheck": {
