@@ -37,6 +37,14 @@ Detección compartida con el fixer `scripts/lib/proseNames.mjs` — omite: apell
 
 Fixer: `node scripts/validate/fix-prose-wikilinks.mjs` (itera hasta punto fijo; `--dry-run` para revisar). Las regex de validate/fixer y `generate-index` son tolerantes a CRLF (`\r?\n`) por `core.autocrlf=true`.
 
+### Sin duplicar lo que el wikilink ya renderiza (regla 8b)
+
+El wikilink de org muestra su `nombre` canónico, así que el texto pegado no debe repetirlo — renderizaría duplicado ("Ministerio de Ministerio de Salud"). Prohibido:
+- `Ministerio de [[organizations/ministerio_salud]]`, `la Dirección Nacional del [[organizations/servicio_civil]]` (la cabeza ya está en el nombre) → solo `[[organizations/...]]` (conserva artículo/preposición previos: `la [[organizations/servicio_civil]]`).
+- `Instituto Nacional de Derechos Humanos ([[organizations/indh]])`, `El [[organizations/elciudadano]]`, `[[organizations/carabineros]] de Chile`, `[[organizations/american_jewish_committee]] (AJC)` (nombre/sigla ya incluidos) → solo `[[organizations/...]]`.
+
+Sí válido: preposición o cargo que NO está en el nombre (`del [[organizations/ministerio_interior]]`, `ministro del [[organizations/ministerio_justicia]]`, `la [[organizations/contraloria]]`), sigla en prosa cuyo nombre la expande (`la UDI ([[organizations/udi]])`, `la CCU ([[organizations/ccu]])`), y repetición encabezado→cuerpo en oraciones distintas. Fixer: `node scripts/validate/fix-redundant-wikilinks.mjs` (`--dry-run` para revisar; reglas A–E en su encabezado).
+
 ## URLs y fuentes — ampliado (regla 10)
 
 - NUNCA `<https://lasegunda.com/>` raíz. Siempre artículo específico.

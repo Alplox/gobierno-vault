@@ -149,6 +149,7 @@ Las relaciones frontmatter alimentan el grafo/rail; el body debe **también** me
 - Fuentes se numeran por primera aparición; repeticiones reutilizan el número. Genera anchor `#ref-N`.
 - `[[cifras/...]]` es la única forma válida (`src/content/cifras/*.md`); la variante singular `[[cifra/...]]` está eliminada — no usar. **Solo cifras de carácter nacional/pais** (series INE/BCN/gobierno, presupuesto nacional, votaciones del Congreso): una cifra regional/municipal/local (montos de una causa judicial, presupuesto comunal, conteos de una comuna) **NO** va a `src/content/cifras/` ni como `[[cifras/...]]` — se escribe como valor en prosa con su fuente inline (`$174 millones`). Cifras canónicas viven en `src/content/cifras/*.md` con `aliases: []` y `unidad_default` canónica; `validate` avisa si usas alias de concepto (`desempleo`→`tasa_desocupacion`) y `queries.ts:resolveCifraConcept` agrupa serie por canónico (`/stats/tasa_desocupacion`). La fecha la da `event.data.fecha`, no el ID.
 - Solo wikilinks explícitos `[[events/ID]]` enlazan eventos (no hay auto-enlace de IDs desnudos `20260618-3` — no es markdown puro).
+- El texto pegado al wikilink no repite su nombre (regla 8b en `event-rules.md`): `Instituto Nacional de Derechos Humanos ([[organizations/indh]])` → `[[organizations/indh]]`; `del [[organizations/ministerio_interior]]` se conserva (preposición no duplicada).
 
 ### Medios de prensa en prosa
 
