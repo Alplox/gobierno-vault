@@ -1,13 +1,13 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-19T01:51:12.131Z",
+  "actualizado": "2026-09-19T15:16:46.766Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
-      "ultima_sync": "2026-09-19T01:51:10.300Z",
-      "articulos": 3112,
-      "nuevos": 331,
+      "ultima_sync": "2026-09-19T15:15:22.911Z",
+      "articulos": 3247,
+      "nuevos": 135,
       "años": 1
     },
     "elclarin": {
@@ -19,16 +19,16 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-19T01:51:10.092Z",
+      "ultima_sync": "2026-09-19T14:56:58.216Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
     },
     "adnradio": {
       "nombre": "ADN Radio",
-      "ultima_sync": "2026-09-19T01:51:12.131Z",
+      "ultima_sync": "2026-09-19T15:15:22.864Z",
       "articulos": 700,
-      "nuevos": 100,
+      "nuevos": 0,
       "años": 1
     },
     "factchecking": {
@@ -47,16 +47,16 @@
     },
     "theclinic": {
       "nombre": "The Clinic",
-      "ultima_sync": "2026-09-17T23:40:46.721Z",
-      "articulos": 192935,
-      "nuevos": 108,
+      "ultima_sync": "2026-09-19T14:56:51.317Z",
+      "articulos": 192957,
+      "nuevos": 22,
       "años": 19
     },
     "elmostrador": {
       "nombre": "El Mostrador",
-      "ultima_sync": "2026-09-19T01:51:06.772Z",
+      "ultima_sync": "2026-09-19T15:16:16.367Z",
       "articulos": 497,
-      "nuevos": 100,
+      "nuevos": 0,
       "años": 1
     },
     "fastcheck": {
@@ -68,16 +68,16 @@
     },
     "latercera": {
       "nombre": "La Tercera",
-      "ultima_sync": "2026-09-17T23:40:54.575Z",
-      "articulos": 15731,
-      "nuevos": 396,
+      "ultima_sync": "2026-09-19T15:15:29.487Z",
+      "articulos": 15947,
+      "nuevos": 216,
       "años": 1
     },
     "cnnchile": {
       "nombre": "CNN Chile",
-      "ultima_sync": "2026-09-17T23:40:55.422Z",
-      "articulos": 227761,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-19T15:16:17.580Z",
+      "articulos": 227961,
+      "nuevos": 200,
       "años": 16
     },
     "eldinamo": {
@@ -103,7 +103,7 @@
     },
     "el_periodista": {
       "nombre": "El Periodista",
-      "ultima_sync": "2026-09-17T23:41:28.986Z",
+      "ultima_sync": "2026-09-19T15:00:30.996Z",
       "articulos": 86019,
       "nuevos": 0,
       "años": 18
@@ -236,16 +236,16 @@
     },
     "radioagricultura": {
       "nombre": "Radio Agricultura",
-      "ultima_sync": "2026-09-17T23:43:00.780Z",
-      "articulos": 299797,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-19T14:56:54.061Z",
+      "articulos": 299997,
+      "nuevos": 200,
       "años": 12
     },
     "emol": {
       "nombre": "Emol",
-      "ultima_sync": "2026-09-17T23:43:27.502Z",
-      "articulos": 1113853,
-      "nuevos": 271,
+      "ultima_sync": "2026-09-19T15:16:16.356Z",
+      "articulos": 1113948,
+      "nuevos": 95,
       "años": 27
     },
     "gob": {
@@ -285,9 +285,9 @@
     },
     "lacuarta": {
       "nombre": "La Cuarta",
-      "ultima_sync": "2026-09-17T23:43:36.881Z",
-      "articulos": 11334,
-      "nuevos": 100,
+      "ultima_sync": "2026-09-19T15:16:45.083Z",
+      "articulos": 11369,
+      "nuevos": 35,
       "años": 1
     },
     "nuevopoder": {
@@ -1510,9 +1510,9 @@
     },
     "diarioantofagasta": {
       "nombre": "Diario Antofagasta",
-      "ultima_sync": "2026-09-17T23:52:14.598Z",
-      "articulos": 27339,
-      "nuevos": 14,
+      "ultima_sync": "2026-09-19T15:16:46.766Z",
+      "articulos": 27359,
+      "nuevos": 20,
       "años": 16
     },
     "diarioregionalaysen": {

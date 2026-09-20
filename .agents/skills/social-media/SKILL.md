@@ -65,7 +65,7 @@ Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con
 | Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
 | X/Twitter | ✅ mirrors 2026-09-14 (x.n0g.xyz, nitter.cf, xitter.cf, sotwe.com) | ✅ timeline + contadores via mirror | Sin búsqueda pública en x.com; usar mirrors con `<mirror>/<usuario>` y rotar ante 403/429/captcha |
 | Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
-| TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado) |
+| TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado); `video-transcript` descarga audio pero puede colgarse sin backend Whisper — no reintentar a ciegas. Clipping con comentarios entregado por el usuario se documenta igual que X (rol c, entrecomillado literal + usuario + conteos del clipping) |
 | YouTube | 🟡 titulo/descripcion si | ⬜ comentarios no | Comentarios requieren sesion: read_url y r.jina.ai piden "Sign in to confirm you're not a bot" (probado 2026-08) |
 
 Para TikTok/YouTube la extraccion de comentarios NO esta resuelta: usar prensa o Reddit para reacciones y registrar el video solo como fuente complementaria de la declaracion (titulo + descripcion). Si algun dia se resuelve la extraccion de comentarios, actualizar esta tabla y la seccion "Medios de prensa en prosa" (orgs `tipo: red_social`).
