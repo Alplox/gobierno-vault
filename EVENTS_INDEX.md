@@ -1429,6 +1429,7 @@
 - [2026/08/20260825-3 - Kast presenta Comisión Nueva Arquitectura del Estado presidida por Bettina Horst: 12 expertos tendrán 120 días para proponer reordenamiento de ministerios](src/content/events/2026/08/20260825-3.md) — 6 fuentes
 - [2026/08/20260825-4 - Tras el acuerdo Squella-Longton: la apertura del gobierno no convence a votos clave, Walker pide el retiro y la reforma llega dividida al receso](src/content/events/2026/08/20260825-4.md) — 7 fuentes
 - [2026/08/20260825-5 - Juzgado de Letras y Garantía de Río Bueno ordena al alcalde Luis Reyes decretar en una sola cuota el pago de $432 millones de la deuda por la Casa Machmar](src/content/events/2026/08/20260825-5.md) — 6 fuentes
+- [2026/08/20260825-6 - Senador Araya (PPD) acusa que la reforma de seguridad fue redactada con un 'chatbot de IA gratuito': 'Es un copy paste mal hecho'](src/content/events/2026/08/20260825-6.md) — 5 fuentes
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-10 - Suspenden clases en Liceo de Mulchén por hallazgo de amenazas de muerte y rito en baño](src/content/events/2026/08/20260826-10.md) — 9 fuentes
 - [2026/08/20260826-11 - Corte Suprema confirma baja inmediata de carabinero por presunto hurto de $12 mil en Pronto Copec de Concepción](src/content/events/2026/08/20260826-11.md) — 6 fuentes
