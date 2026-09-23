@@ -138,12 +138,16 @@ export function buildPeopleIndex(peopleData) {
 // Devuelve las menciones en prosa reemplazables del body (sin frontmatter).
 // { mentions: [{ personId, phrase, kind, start, end }], linkedIds: Set }
 // Las posiciones son relativas al `body` original (los rangos bloqueados —
-// wikilinks existentes, código fenced/inline, URLs — se excluyen sin desplazar).
+// citas `>`, wikilinks existentes, código fenced/inline, URLs — se excluyen sin desplazar).
 export function findReplaceableMentions(body, peopleIndex) {
   // Rangos bloqueados: no se toca dentro de wikilinks, código ni URLs.
+  // Las líneas de cita (`>` blockquote) también se excluyen: una cita exacta
+  // prevalece sobre el enforcement — un nombre completo dentro de un quote no
+  // se enlaza ni se altera (decisión sep-2026).
   const blocked = [];
   for (const m of body.matchAll(/```[\s\S]*?```/g)) blocked.push([m.index, m.index + m[0].length]);
   for (const m of body.matchAll(/`[^`\n]*`/g)) blocked.push([m.index, m.index + m[0].length]);
+  for (const m of body.matchAll(/^[ \t]*>[^\n]*/gm)) blocked.push([m.index, m.index + m[0].length]);
   for (const m of body.matchAll(/\[\[[^\]]*\]\]/g)) blocked.push([m.index, m.index + m[0].length]);
   for (const m of body.matchAll(/https?:\/\/[^\s<>"')\]]+/g)) blocked.push([m.index, m.index + m[0].length]);
   const isBlocked = (start, end) => blocked.some(([s, e]) => start < e && end > s);

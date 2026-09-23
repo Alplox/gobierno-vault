@@ -1597,6 +1597,7 @@
 - [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
 - [2026/09/20260913-4 - Alcalde Concha responde a Undurraga por la medialuna: 'Es decadente que el gobierno termine respaldando prácticas clandestinas'](src/content/events/2026/09/20260913-4.md) — 5 fuentes
+- [2026/09/20260913-5 - Interno muere tras recibir disparo de centinela y caer desde muro de 8 metros en intento de fuga de la cárcel de Talca vestido de gendarme](src/content/events/2026/09/20260913-5.md) — 12 fuentes
 - [2026/09/20260914-1 - Kast aborda los indultos y afirma que no corresponde que una persona muera en la cárcel, con revisión caso a caso](src/content/events/2026/09/20260914-1.md) — 13 fuentes
 - [2026/09/20260914-10 - Alvarado afirma que no hay definiciones ni decisiones finales sobre las más de 100 solicitudes de indulto y que se evaluarán caso a caso](src/content/events/2026/09/20260914-10.md) — 6 fuentes
 - [2026/09/20260914-11 - Alvarado reconoce que la seguridad pasa a segundo plano por los temas económicos y anticipa anuncios contra el desempleo](src/content/events/2026/09/20260914-11.md) — 6 fuentes
@@ -1629,6 +1630,9 @@
 - [2026/09/20260919-4 - Paul Vásquez El Flaco es pifiado en La Pampilla de Coquimbo tras aludir a Kast y abandona el escenario antes de terminar](src/content/events/2026/09/20260919-4.md) — 11 fuentes
 - [2026/09/20260919-5 - Los Viking's 5 responden a las críticas por cantar en el cierre de campaña de Kast: trabajo por plata, sin militancia](src/content/events/2026/09/20260919-5.md) — 6 fuentes
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
+- [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 54 fuentes
+- [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
+- [2026/09/20260922-3 - Chile adhiere al Escudo de las Américas tras cita con Trump en Nueva York: de observador a miembro con 25 bandas identificadas](src/content/events/2026/09/20260922-3.md) — 12 fuentes
 
 ## 2025
 

@@ -33,7 +33,7 @@ description: Reglas de creación y validación de eventos, checklist de 16 regla
 - (a) el **nombre completo** de una persona en `src/content/people/*.md` aparece en prosa sin `[[people/id]]`, o
 - (b) una persona **ya enlazada** en el evento se menciona luego por apellido distintivo (“Kast” tras el primer enlace).
 
-Detección compartida con el fixer `scripts/lib/proseNames.mjs` — omite: apellidos ambiguos (dos personas con mismo apellido enlazadas), apellidos precedidos por nombre de pila (“Fernando Matthei” ≠ Evelyn), prefijos de org (“Fundación Kast”), apellidos de 3 letras que son palabras comunes (“del”, “san”, “mas”).
+Detección compartida con el fixer `scripts/lib/proseNames.mjs` — omite: apellidos ambiguos (dos personas con mismo apellido enlazadas), apellidos precedidos por nombre de pila (“Fernando Matthei” ≠ Evelyn), prefijos de org (“Fundación Kast”), apellidos de 3 letras que son palabras comunes (“del”, “san”, “mas”) y **líneas de cita (`>` blockquote): la cita exacta prevalece — un nombre completo dentro de un quote no se enlaza ni se altera**.
 
 Fixer: `node scripts/validate/fix-prose-wikilinks.mjs` (itera hasta punto fijo; `--dry-run` para revisar). Las regex de validate/fixer y `generate-index` son tolerantes a CRLF (`\r?\n`) por `core.autocrlf=true`.
 

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-19T15:16:46.766Z",
+  "actualizado": "2026-09-22T16:20:07.431Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -19,7 +19,7 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-19T14:56:58.216Z",
+      "ultima_sync": "2026-09-22T16:20:07.431Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
