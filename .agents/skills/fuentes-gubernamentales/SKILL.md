@@ -88,6 +88,7 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Comisión Nacional de Energía (CNE) | <https://www.cne.cl/noticias/> | Redirige a `/nuestros-servicios/.../noticias/` |
 | Instituto de Salud Pública (ISP) | <https://www.ispch.cl/> | Portal principal (validado 2026-08-27: `/noticias/` no responde desde esta red; verificar con `fetch-impersonate`) |
 | Servicio Agrícola y Ganadero (SAG) | <https://www.sag.gob.cl/noticias> | |
+| U. de Chile — Revalidación de títulos extranjeros | <https://revalidaciones.uchile.cl/> | Sitio de consulta de títulos revalidados (excluye países con tratado, cuyo registro lleva Minrel). Búsqueda por nombres/paterno/materno contra `GET /api/revalidaciones/revalidados`; 204 = sin resultados. Verificado sep-2026 (caso Rubio: tres combinaciones sin resultados). Solo referencial, no sustituye certificados oficiales |
 
 ## Compras públicas — licitaciones y órdenes de compra
 

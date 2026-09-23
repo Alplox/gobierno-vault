@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-22T16:20:07.431Z",
+  "actualizado": "2026-09-23T14:10:53.587Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -19,7 +19,7 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-09-22T16:20:07.431Z",
+      "ultima_sync": "2026-09-23T14:10:53.586Z",
       "articulos": 1171889,
       "nuevos": 0,
       "años": 18
@@ -334,9 +334,9 @@
     },
     "contrapoderchile": {
       "nombre": "Contrapoder Chile",
-      "ultima_sync": "2026-09-17T23:43:46.369Z",
-      "articulos": 512,
-      "nuevos": 0,
+      "ultima_sync": "2026-09-23T13:23:20.641Z",
+      "articulos": 535,
+      "nuevos": 23,
       "años": 2
     },
     "diariousach": {
