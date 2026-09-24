@@ -28,7 +28,7 @@ Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[
 
 - **CRLF:** regex tolerante `\r?\n` (con `core.autocrlf=true` Windows entrega `\r\n`).
 - **Astro glob-loader:** NO aborta build ante wikilink roto — loguea `Error rendering` y deja `rendered: undefined` (página sin contenido). Por eso `validate` es la red real.
-- **Medio + mojibake + BOM:** valida `medio` en `src/content/sources/*.md` contra orgs / `WHITELIST_MEDIOS`, escanea mojibake (C2/C3, C1, U+FFFD, cirílico) y BOM en `TAREAS/` (ver `data-yaml.md`).
+- **Medio + mojibake + BOM:** valida `medio` en `src/content/sources/*.md` contra orgs / `WHITELIST_MEDIOS`, escanea mojibake (C2/C3, C1, U+FFFD, cirílico) y BOM en `TAREAS/` (ver `data-yaml.md`). Al incorporar una institución oficial o una plataforma de datos como fuente, agregar su nombre exacto a `WHITELIST_MEDIOS` solo si no es un medio registrado (por ejemplo, `Bolsa de Comercio de Santiago` o `CompaniesMarketCap`).
 
 ## Build en paralelo
 
@@ -51,7 +51,7 @@ Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[
 
 ## Tailwind v4 + daisyUI 5
 
-Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/styles/global.css`, plugin `@tailwindcss/vite` + `drop-ort-wasm-assets` que elimina `.wasm` de `dist/_astro` (evita límite 25 MiB Cloudflare; si se cambia onnx a `auto`/`local`, revertir plugin).
+Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/styles/global.css`, plugin `@tailwindcss/vite` con `@source` y `@plugin "daisyui"` (Tailwind v4/daisyUI 5); si falla, revisar `build.concurrency` y `wrangler.jsonc` antes de tocar estilos.
 
 ## Formato LLM
 

@@ -90,6 +90,12 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Servicio Agrícola y Ganadero (SAG) | <https://www.sag.gob.cl/noticias> | |
 | U. de Chile — Revalidación de títulos extranjeros | <https://revalidaciones.uchile.cl/> | Sitio de consulta de títulos revalidados (excluye países con tratado, cuyo registro lleva Minrel). Búsqueda por nombres/paterno/materno contra `GET /api/revalidaciones/revalidados`; 204 = sin resultados. Verificado sep-2026 (caso Rubio: tres combinaciones sin resultados). Solo referencial, no sustituye certificados oficiales |
 
+## Mercado de capitales
+
+| Institución | URL | Uso |
+| --- | --- | --- |
+| Bolsa de Comercio de Santiago — Estadísticas Anuales | <https://servicioscms.bolsadesantiago.com/Sintesis%20y%20Estadisticas/Estad%C3%ADsticas%20Anuales%202006.pdf> | PDF oficial histórico; la página de ranking separa capitalización bursátil, montos transados y rentabilidad. Para años recientes el nombre/acento del archivo cambia (por ejemplo, `Sintesis%20y%20Estadistica%20Anual%202025.pdf`); localizar el PDF y citar la URL exacta, con `medio: Bolsa de Comercio de Santiago` en la lista blanca. |
+
 ## Compras públicas — licitaciones y órdenes de compra
 
 | Institución | URL | Uso |
@@ -155,6 +161,9 @@ Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones
 | GDELT Project | <https://www.gdeltproject.org/> | Base global de eventos (100+ idiomas, cada 15 min), API abierta para cruzar contexto internacional |
 | Meganoticias — Hemeroteca | <https://www.meganoticias.cl/hemeroteca/> | Archivo por año/trimestre/día (2026+); útil cuando sitemap no entrega URL |
 | ley-chile (repo + MCP) | <https://github.com/pisanvs/ley-chile> | DB leyes chilenas + MCP `<https://leyes.pisanvs.cl/api/mcp>` (8 tools: search_laws, get_law, get_article, …) — NO es fuente oficial, citar siempre `BCN/LeyChile` |
+| Embajada de Estados Unidos en Chile | <https://cl.usembassy.gov/> | Comunicados y textos primarios de la misión estadounidense en Chile; útil para contrastar documentos de seguridad y cooperación con la posición de Cancillería |
+| WIPO — Global Innovation Index | <https://www.wipo.int/gii-ranking/en/chile> | Perfil oficial de innovación de Chile; reporta ranking general, insumos y resultados, con advertencias metodológicas del GII |
+| OCDE — estudios económicos de Chile | <https://www.oecd.org/en/countries/chile.html> | Informes oficiales sobre productividad, I+D, innovación digital y proyecciones; preferir la página del informe o capítulo concreto |
 
 - **GDELT:** no es prensa ni gubernamental; útil para validar escala/contexto internacional antes de fijar expectativa en `TAREAS.md`. No reemplaza fuente primaria.
 - **Hemeroteca Meganoticias:** catálogo ya indexa sitemap (desde 2011); hemeroteca es interfaz por fecha para hallar URL exacta.
