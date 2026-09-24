@@ -26,6 +26,51 @@ Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con
 - Solo si el hilo no aporta voces distintas, ni framing, ni dato adicional —repite literal el titular sin comentarios sustantivos— se puede omitir, **sin dejar rastro en el body**. Registra la decisión en el resumen entregado al usuario para su commit (`"Reddit X omitido: repite titular sin reacción sustantiva"`).
 - Nunca usar el body para explicar por qué se omitió una red social.
 
+### Backend opcional de búsqueda ampliada: `last30days`
+
+Cuando los clippings entregados, los mirrors y la búsqueda directa no basten para reconstruir una reacción, `last30days` puede ampliar la búsqueda a **Reddit, X y YouTube**. Es un backend de captura, no una autoridad editorial: no reemplaza las reglas de este archivo, la verificación oficial ni la selección de voces.
+
+```bash
+# Instala una copia fijada y aislada de last30days v3.25.0 bajo .tools/ (gitignored).
+pnpm run social-search -- --setup
+
+# Preflight: confirma Python, fuentes disponibles y cookies desactivadas.
+pnpm run social-search -- --check
+
+# Búsqueda normal; stdout es JSON y no escribe eventos/fuentes en el vault.
+pnpm run social-search -- "reacciones a la declaración" --days 30
+
+# Reddit/X dirigidos:
+pnpm run social-search -- "tema" --subreddits <lista> --x-handle <usuario>
+```
+
+El wrapper `scripts/social/last30days-search.mjs` aplica por defecto solo `reddit,x,youtube`, `--no-browser-cookies`, `--web-backend=none`, salida `--emit=json --json-profile=raw`, sin `--store`, sin `--publish` y con `LAST30DAYS_CONFIG_DIR` vacío. X solo aparece si el proceso ya dispone de una credencial/API configurada; no se extraen cookies del navegador. No ejecutes el setup nativo de `last30days`: puede instalar CLIs adicionales, escribir configuración global e introducir credenciales fuera de este wrapper.
+
+**Cuándo usarlo:** después de agotar el material entregado y los métodos directos de este skill, cuando falten comentarios, una segunda plataforma, posts propios de una autoridad o contraste comunitario. **Cuándo omitirlo:** si ya hay clipping verificable, no repetir búsquedas para “aumentar” números ni usar engagement para decidir qué versión del hecho es verdadera.
+
+**Flujo obligatorio:**
+
+1. Define el tema y la ventana; usa primero las palabras exactas del evento y luego sinónimos institucionales.
+2. Ejecuta `social-search` y conserva el JSON crudo como **evidencia de búsqueda**, no como fuente del vault.
+3. Antes de citar un comentario, revisa `items_by_source[*].metadata.top_comments`/`comment_insights` y recupera autor, texto completo, fecha y permalink. Si el JSON solo ofrece `excerpt`, `summary` o la URL del hilo, no hay base suficiente para una cita literal: recupera el comentario desde su URL o déjalo como lead.
+4. Revisa `source_status`/`errors_by_source`: `partial`, `auth-failed`, `rate-limited` o `unreachable` no significan “no hubo reacciones”. Una fuente que no aparece en `source_status` puede haberse omitido por configuración o cobertura cero.
+5. Descarta homónimos, subtítulos, bots y comentarios que no tengan relación con el evento.
+6. Elige 2+ plataformas y posiciones distintas cuando existan; conserva usuario, texto literal, fecha y URL propia del post/comentario.
+7. Verifica cualquier dato factual contra fuente oficial o prensa. Si no se verifica, va a `TAREAS/`, no al body.
+8. Solo después crea/actualiza `src/content/sources/*.md` y el evento siguiendo `data-yaml` + `event-rules`; el JSON de `last30days` nunca se copia ciegamente al body.
+
+### Decidir si el hallazgo se integra ahora o queda como lead
+
+- **Mismo hecho de un evento existente:** si la fuente es original, recuperable y aporta una cita, cifra, versión o antecedente pertinente, se procesa **de inmediato** en el evento actual. No se aplaza por tener ya cinco fuentes.
+- **Hecho nuevo derivado del evento:** una medida, proyecto, renuncia, fiscalización, peritaje, identificación o desenlace posterior no se amontona en el evento original. Si ya cumple fecha, fuentes y reglas, se crea un evento nuevo y se relaciona con `deriva_en`, `provoca` o `responde_a`; si todavía no, queda en `TAREAS/PENDIENTES/YYYY.md` como candidato nuevo.
+- **Desenlace de una investigación abierta:** si la fuente entrega un resultado judicial, pericial o administrativo identificable, se crea el evento de resultado o se registra en `TAREAS/SEGUIMIENTO/YYYY.md` hasta poder documentarlo.
+- **Acusación o cifra no verificada:** siempre queda como lead en `TAREAS/`; una reacción social no autoriza escribirla en el body.
+- **Simple repetición:** si el post o comentario solo reproduce un titular, una frase oficial o una noticia ya representada por fuentes más completas, no se agrega. La decisión se informa en el resumen, nunca en el body.
+
+La regla depende del **estado editorial del hecho**, no de que el lead haya aparecido en una red social. El canal de descubrimiento no decide el destino.
+
+**Límites editoriales:** el ranking por likes/upvotes/views solo sirve para localizar conversación relevante. No demuestra veracidad, representatividad ni alcance nacional. Varias cuentas reproduciendo el mismo comunicado tampoco cuentan como corroboración independiente. Para el vault, las reacciones se documentan según las reglas de las líneas 12-19, aunque el backend entregue una síntesis con su propio tono.
+
 ### Metodos de busqueda probados
 
 **Reddit r/chile** (los mas confiables — con bloqueo de red vigente):
@@ -61,14 +106,14 @@ Si la tarea trae clippings de redes (ej. hilos de r/chile/r/RepublicadeChile con
 
 | Red social | Busqueda | Extraccion de comentarios | Notas |
 | --- | --- | --- | --- |
-| Reddit r/chile | ⬜ bloqueado 2026-08-28 (403 network policy 01a04a53) | ⬜ bloqueado (403) | HTML search, API JSON y r.jina.ai bloqueados (403); ver métodos arriba para cuando se libere |
+| Reddit r/chile | 🟡 búsqueda directa bloqueada; `social-search` puede descubrir candidatos por RSS/arctic | 🟡 depende de lo que devuelva el backend y del floor de relevancia | La búsqueda HTML/API directa sigue 403; un `source_status: reddit: ok` con `results: []` no prueba que no haya reacción |
 | Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
 | X/Twitter | ✅ mirrors 2026-09-14 (x.n0g.xyz, nitter.cf, xitter.cf, sotwe.com) | ✅ timeline + contadores via mirror | Sin búsqueda pública en x.com; usar mirrors con `<mirror>/<usuario>` y rotar ante 403/429/captcha |
 | Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
 | TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado); `video-transcript` descarga audio pero puede colgarse sin backend Whisper — no reintentar a ciegas. Clipping con comentarios entregado por el usuario se documenta igual que X (rol c, entrecomillado literal + usuario + conteos del clipping) |
-| YouTube | 🟡 titulo/descripcion si | ⬜ comentarios no | Comentarios requieren sesion: read_url y r.jina.ai piden "Sign in to confirm you're not a bot" (probado 2026-08) |
+| YouTube | 🟡 búsqueda/transcripción mediante `social-search` + `yt-dlp` disponible | 🟡 backend intenta comentarios cuando hay match | No usar `0 videos` como prueba de ausencia; registrar solo videos/comentarios con URL original y texto literal |
 
-Para TikTok/YouTube la extraccion de comentarios NO esta resuelta: usar prensa o Reddit para reacciones y registrar el video solo como fuente complementaria de la declaracion (titulo + descripcion). Si algun dia se resuelve la extraccion de comentarios, actualizar esta tabla y la seccion "Medios de prensa en prosa" (orgs `tipo: red_social`).
+Para TikTok la extracción de comentarios sigue sin resolver. En YouTube, `social-search` puede intentar búsqueda, transcripción y comentarios mediante `yt-dlp`, pero solo usarlos si devuelve una URL original y texto literal verificable; si no hay match, usar prensa/Reddit o el clipping entregado. El video por sí solo sigue siendo una fuente complementaria de la declaración, no prueba una reacción comunitaria.
 
 ### Verificacion de imagenes y audios virales (calibracion 2026)
 

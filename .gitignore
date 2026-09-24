@@ -16,3 +16,6 @@ storage/
 
 # Agents
 skills-workspace/
+
+# Optional pinned external research tools (installed via pnpm run social-search -- --setup)
+/.tools/

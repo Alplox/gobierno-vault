@@ -10,6 +10,7 @@
 |  | `generate/` | `generate-index.mjs`, `generate-seguimiento-index.mjs` |
 | **Catálogo sitemaps** | `sitemaps/` | `sync.mjs` (antes `sync-sitemaps.mjs`), `index.mjs`, `backup.mjs`, `resync.mjs`, `watchlist.mjs` |
 | **Extracción / fetching** | `extract/` | `fetch-content.mjs`, `fetch-impersonate.mjs`, `pdf-extract.mjs`, `doc-extract.mjs`, `ocr-extract.mjs`, `video-transcript.mjs`, `add-source.mjs` |
+| **Investigación social** | `social/` | `last30days-search.mjs` (wrapper portable y fijado; JSON, sin cookies/Store/publicación) |
 | **Respaldo** | `backup/` | `backup.mjs`, `restore.mjs`, `verify.mjs` |
 | **Lib compartida** | `lib/` | `proseNames.mjs` (usado por `validate` + fixer), `gvault-util.mjs` (usado por `backup`/`sitemaps/backup`) |
 
@@ -53,6 +54,8 @@ pnpm run sitemaps-index                 # scripts/sitemaps/index.mjs
 pnpm run sitemaps-backup                # scripts/sitemaps/backup.mjs
 pnpm run sitemaps-resync                # scripts/sitemaps/resync.mjs
 pnpm run sitemaps-watchlist             # scripts/sitemaps/watchlist.mjs
+pnpm run social-search -- --setup        # instala last30days v3.25.0 en .tools/ (gitignored)
+pnpm run social-search -- "<tema>"       # Reddit + X + YouTube, salida JSON
 pnpm run add-source -- <URL>            # scripts/extract/add-source.mjs
 pnpm run pdf-extract -- <URL>           # scripts/extract/pdf-extract.mjs
 pnpm run doc-extract -- <URL>           # scripts/extract/doc-extract.mjs

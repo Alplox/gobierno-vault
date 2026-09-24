@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 331
+**Total tareas:** 332
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 248 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 249 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 302 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 303 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -312,6 +312,7 @@
 | S-2026-230 | ⬜ | 2026-09-19 | Robo discos duros funcionaria Presidencia — desenlace PDI (evento `20260917-2`) | Robo 16-sep a asistente de Producción de Presidencia en San Miguel (3 discos duros, uno con presunta info secreta según reporte policial; Presidencia dice todo era personal): identificación de responsables, peritaje del contenido de los discos, eventual sumario o protocolo de manejo de información | `20260917-2` | Origen: <https://www.elmostrador.cl/noticias/pais/2026/09/17/roban-disco-duro-con-informacion-secreta-de-presidencia-desde-departamento-de-funcionaria/> |
 | S-2026-232 | ⬜ | 2026-09-23 | Escudo de las Américas — declaración conjunta 22-sep-2026 (evento `20260922-3`) | Reunión de consulta del TIAR ante la OEA: la declaración co-firmada anuncia solicitud al Consejo Permanente para crear un Órgano de Consulta (arts. 6 y 13 del TIAR) con participación ministerial. Registrar: presentación formal, posición de Chile y resolución adoptada | `20260922-3` | Origen: <https://www.state.gov/releases/office-of-the-spokesman/2026/09/joint-statement-on-defending-hemispheric-sovereignty/> |
 | S-2026-233 | ⬜ | 2026-09-23 | Escudo de las Américas — declaración conjunta 22-sep-2026 (evento `20260922-3`) | Desglose 25 vs 24 organizaciones: Cancillería habla de 25 sin nómina pública y Washington enumera 24. Registrar nómina chilena si se publica y cuál es la agrupación N°25; con la conciliación, actualizar la Nota de conteo de `20260922-3` | `20260922-3` | Origen: <https://www.biobiochile.cl/noticias/internacional/eeuu/2026/09/23/los-detalles-de-la-ultima-declaracion-de-compromisos-del-escudo-de-las-americas-al-que-se-unio-chile.shtml> |
+| S-2026-234 | ⬜ | 2026-09-23 | Pasajes de Presidencia — identificación de pasajeros y destino (evento `20260911-5`) | Verificar si Presidencia, Seguridad Presidencial, LATAM u otra entidad identifica a los pasajeros de la OC 661439-158-CM26 y explica el uso de los cuatro pasajes del 19 de agosto; revisar las OCs 661439-180-CM26 y 776-695-CM26 para el 9 de septiembre, su relación con el viaje a Valdivia y el estado final de la orden No aceptada | `20260911-5` | Origen: <https://x.com/ElHiloCL/status/2097498624099762325> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

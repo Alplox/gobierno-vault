@@ -13,6 +13,7 @@
     "sitemaps-resync": "node scripts/sitemaps/resync.mjs",
     "sitemaps-watchlist": "node scripts/sitemaps/watchlist.mjs",
     "news-search": "node scripts/sitemaps/news-search.mjs",
+    "social-search": "node scripts/social/last30days-search.mjs",
     "add-source": "node scripts/extract/add-source.mjs",
     "pdf-extract": "node scripts/extract/pdf-extract.mjs",
     "doc-extract": "node scripts/extract/doc-extract.mjs",

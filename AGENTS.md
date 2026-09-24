@@ -122,7 +122,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | Catalogo sitemaps (sync, search, cobertura historica) **(obligatorio)** | `.agents/skills/sitemaps/SKILL.md` |
 | Fetch/paywall, PDF/Office/OCR, video transcript, ripgrep, mirrors **(obligatorio)** | `.agents/skills/tools/SKILL.md` |
 | Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo (si toca Estado/cifra/voto) | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
-| Redes sociales / reacciones comunitarias / verificacion imagen-viral (si toca Reddit/X/FB) | `.agents/skills/social-media/SKILL.md` |
+| Redes sociales / reacciones comunitarias / verificacion imagen-viral (si toca Reddit/X/FB) | `.agents/skills/social-media/SKILL.md`; para búsqueda social ampliada usar `pnpm run social-search -- "<tema>"` (wrapper `last30days` fijado, solo Reddit/X/YouTube, sin cookies/Store/publicación) |
 | Gabinete, `cargos[]`, Cuentas Publicas (si toca gabinete) | `.agents/skills/gabinete/SKILL.md` |
 | Tocar timeline/rail, grafo, filtros `/events`, View Transitions, TTS, estilos | `.agents/skills/frontend/SKILL.md` |
 | Build falla, validate, deploy, pnpm, Cloudflare, Tailwind | `.agents/skills/build-deploy/SKILL.md` |
@@ -153,5 +153,6 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |
 | Gabinete / `cargos` / Cuentas Publicas | `.agents/skills/gabinete/SKILL.md`, `src/lib/cabinet.ts` |
 | Fetch / PDF / Office / OCR | `.agents/skills/tools/SKILL.md` |
+| Reacciones Reddit/X/YouTube mediante backend opcional | `scripts/social/last30days-search.mjs`, `.agents/skills/social-media/SKILL.md` |
 | Sitemaps / catalogo | `.agents/skills/sitemaps/SKILL.md`, `scripts/sitemaps/sync.mjs` |
 | Build / deploy / estilos | `.agents/skills/build-deploy/SKILL.md` |

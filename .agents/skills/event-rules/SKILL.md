@@ -71,6 +71,10 @@ Vive en `TAREAS/`. No hay `TAREAS.md` raíz ni archivo de completadas — lo hec
 
 **Al detectar un pendiente que no se implementará ahora:** registrar en `TAREAS/PENDIENTES/YYYY.md` o `TAREAS/SEGUIMIENTO/YYYY.md` con fecha, tipo sugerido, estado `⬜`, y **origen obligatorio `Origen: <url>`** (si es red social, además URL de prensa que lo valida).
 
+### Leads provenientes de reacciones o videos
+
+Un hallazgo social se integra **de inmediato al evento existente** solo cuando documenta el mismo hecho y aporta una fuente original recuperable, una cita, una cifra o un antecedente pertinente. Si revela un proyecto, medida, denuncia, peritaje, identificación o desenlace posterior, se trata como hecho nuevo: crear un evento cuando tenga fecha, fuentes y validación suficientes; mientras tanto, va a `TAREAS/PENDIENTES/YYYY.md`. Un resultado de investigación abierta que aún no puede documentarse va a `TAREAS/SEGUIMIENTO/YYYY.md`. Las acusaciones no verificadas nunca pasan al body como hechos: se citan como declaraciones o quedan como leads. Ver la matriz completa en `.agents/skills/social-media/SKILL.md` → **Decidir si el hallazgo se integra ahora o queda como lead**.
+
 **Al completarse:** la fila **se ELIMINA** del archivo de pendientes — no queda con `✅`. Si un seguimiento conserva pendientes activos, reescribir conservando solo `⬜`/`🟡` y descartando lo hecho.
 
 **Fecha exacta o nada propio:** si tras agotar transcript/catálogo/fetch no se verifica el día exacto del hecho (caso 2026: visita Cruz Roja a Pisagua, solo mes tras ~17 métodos), NO crear evento con día inventado — se pliegan los datos como ampliación en un evento preexistente afín (precedente: Plan Z y Pisagua en `19730911-1`) y el episodio queda en `TAREAS/` como `🟡` con el log de métodos y leads abiertos. Una fecha inventada es peor que un pendiente documentado.

@@ -24,7 +24,7 @@ description: Colecciones markdown people/organizations/sources/topics/cifras + e
 
 ### Campo `medio` en `sources/*.md`
 
-Debe ser EXACTAMENTE `nombre` de una org `tipo: medio_comunicacion|red_social|canal_television|programa_tv|programa_streaming` registrada en `src/content/organizations/<id>.md`. Si el emisor no es prensa (Estado, encuestadora, plataforma), usar nombre descriptivo y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate/validate.mjs`. `pnpm run validate` falla con el ID si no cumple. Ver también encoding abajo.
+Debe ser EXACTAMENTE `nombre` de una org `tipo: medio_comunicacion|red_social|canal_television|programa_tv|programa_streaming` registrada en `src/content/organizations/<id>.md`. Si el emisor no es prensa (Estado, encuestadora, plataforma, archivo documental o institución energética), usar el nombre descriptivo exacto y agregarlo a `WHITELIST_MEDIOS` en `scripts/validate/validate.mjs` cuando no sea una organización de tipo `medio_comunicacion` o `red_social` (por ejemplo, `U.S. Energy Information Administration`, `Atlantic Council`, `Gobierno de Argentina` o `Gobierno de Reino Unido`). `pnpm run validate` falla con el ID si no cumple. Ver también encoding abajo.
 
 ### Sueldos (`/sueldos`)
 
