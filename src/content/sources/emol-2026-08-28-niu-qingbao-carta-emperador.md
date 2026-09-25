@@ -11,5 +11,5 @@ notas: "Emol (28-ago-2026 08:49): transcripción más extensa de la carta —
   tecnologías/minerales solo con EEUU, cables solo bajo control EEUU), sección
   FISA 702/PRISM intercepta cables Pacífico/Atlántico y fabrica informes
   Typhoon, y detalle cable Humboldt vs China-Chile (Google propietario vs
-  empresa construcción). Valida完整性 del texto."
+  empresa construcción). Valida la integridad del texto."
 ---

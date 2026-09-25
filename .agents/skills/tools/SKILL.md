@@ -90,6 +90,7 @@ fallo y seguir con el siguiente método:
 | Captcha/bot | "verify you are human", "prove you're not a robot", "confirm you're not a bot" (YouTube, ya documentado en social-media.md) |
 | Cloudflare | "checking your browser", "Just a moment", "DDoS protection" |
 | Login | "sign in to continue", "log in required" |
+| archive.ph sin snapshot | "No results" + "You may want to" + "archive this url" (página de archivo inexistente; ~4.700 chars, supera el corte de 500) |
 
 Desde sep-2026 esta clasificación vive en código (`scripts/lib/soft404.mjs:isSoft404`,
 más 404 blando, título genérico del home y titular que no corresponde al slug de la URL)
@@ -231,6 +232,9 @@ ocultos — obligatorio en `sitemaps/` porque los JSONL no se commitean), `-g '*
 (filtra por glob y evita escanear `sitemaps/.cache/`), `--no-heading` (salida compacta),
 `-l` (solo lista de archivos), `-c` (solo conteo). Benchmarks medidos en la sección
 "Catálogo de sitemaps → Uso del catálogo por agentes" (~320× más rápido que Select-String).
+
+**`-h` NO es `--no-filename`:** en ripgrep `-h` imprime la ayuda del programa. Para agregar
+un campo de todos los `.md` de una colección usa `rg --no-filename -o '^tipo: .*' src/content/sources/ | Sort-Object -Unique`.
 
 ## Procesamiento de PDFs (lectura de documentos)
 

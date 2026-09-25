@@ -176,6 +176,10 @@ const WHITELIST_MEDIOS = new Set([
   'Instituto Nacional de Estadísticas (INE)',
   'Banco Central de Chile',
   'U.S. Energy Information Administration',
+  'Comisión Nacional de Energía',
+  'Observatorio del Contexto Económico de la Universidad Diego Portales (OCEC-UDP)',
+  'Empresa Nacional del Petróleo (ENAP)',
+  'Neuquén Informa',
   'Atlantic Council',
   'Comisión Chilena del Cobre (Cochilco)',
   'Codelco',
@@ -431,19 +435,23 @@ try {
 // Mojibake: doble-encoding UTF-8 y round-trips ANSI degradan títulos, notas y nombres.
 // Firma C2/C3 + byte 0x80-0xBF: doble-encoding clásico (Ã©, Ã±...).
 // Además: controles C1 (0080-009F) = UTF-8 leído como CP1252 (ej. em-dash "â€”"),
-// U+FFFD (reemplazo), cirílico y Latin Ext-A/B (basura de round-trips ANSI;
-// el vault es español — ningún nombre legítimo usa esos rangos).
-const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]|[\u0080-\u009f\uFFFD\u0400-\u04ff\u0100-\u024f]/g;
+// U+FFFD (reemplazo), cirílico, Latin Ext-A/B y CJK/kana/fullwidth (basura de
+// round-trips ANSI y de ediciones con otro idioma; el vault es español — ningún
+// título, nombre ni etiqueta legítimo usa esos rangos). Caso sep-2026: un
+// "documenta" completo en cirílico en un evento y "sistema_frontal" con la
+// etiqueta en han, que el rango anterior no cubría.
+const MOJIBAKE_RE = /[\u00c2\u00C3][\u0080-\u00BF]|[\u0080-\u009F\uFFFD\u0400-\u04FF\u0100-\u024F\u2E80-\u2EFF\u3000-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uFF00-\uFFEF]/g;
 const mojibakeScan = new RegExp(MOJIBAKE_RE.source, 'g');
 // Origen por clave: colecciones markdown (monolito eliminado) salvo colectivos/sectores (src/data/).
 const MOJIBAKE_SRC = {
   'sources': 'src/content/sources/*.md',
   'entities': 'src/content/people|organizations|cifras/*.md',
   'topics': 'src/content/topics/*.md',
+  'events': 'src/content/events/**/*.md',
   'colectivos.yaml': 'src/data/colectivos.yaml',
   'sectores.yaml': 'src/data/sectores.yaml',
 };
-for (const f of ['sources', 'entities', 'topics', 'colectivos.yaml', 'sectores.yaml']) {
+for (const f of ['sources', 'entities', 'topics', 'events', 'colectivos.yaml', 'sectores.yaml']) {
   let raw;
   const collMap = { 'sources': 'sources', 'topics': 'topics' };
   if (collMap[f]) {
@@ -457,6 +465,19 @@ for (const f of ['sources', 'entities', 'topics', 'colectivos.yaml', 'sectores.y
       if (existsSync(d)) for (const mf of readdirSync(d).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(d, mf), 'utf8'); } catch {} }
     }
     if (!raw) throw new Error('sin entradas en colecciones people|organizations|cifras');
+  } else if (f === 'events') {
+    raw = '';
+    const root = join(process.cwd(), 'src', 'content', 'events');
+    const stack = [root];
+    while (stack.length) {
+      const d = stack.pop();
+      for (const e of readdirSync(d, { withFileTypes: true })) {
+        const p = join(d, e.name);
+        if (e.isDirectory()) stack.push(p);
+        else if (e.name.endsWith('.md')) { try { raw += '\n' + readFileSync(p, 'utf8'); } catch {} }
+      }
+    }
+    if (!raw) throw new Error('sin eventos en src/content/events');
   } else {
     raw = readFileSync(join(dataDir, f), 'utf8');
   }

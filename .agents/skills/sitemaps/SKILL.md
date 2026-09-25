@@ -249,6 +249,15 @@ pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
   desde esta red — por eso la resolución es por título, no por link. El RSS no
   trae cuerpos: después sigue la cadena `fetch-content` habitual. `--limit 8`
   máximo (valores mayores revientan con `Maximum call stack size exceeded`).
+- **Resolver un `[SIN RESOLVER]` contra el news-sitemap en vivo del propio medio:**
+  cuando el JSONL local va atrasado, leer el endpoint que declara `robots.txt` y buscar
+  el `<loc>` cuyo `<news:title>` coincida con el titular del ítem. Funciona aunque el
+  slug no sea adivinable (Arc XP: `https://www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml`;
+  La Tercera: `https://www.latercera.com/arc/outboundfeeds/news-sitemap/?outputType=xml`,
+  paginado con `&from=100`, `&from=200`… donde los `<news:title>` van en CDATA). Los
+  sub-sitemaps del `sitemap-index` ordenan por fecha, así que las 2-3 primeras páginas
+  cubren lo reciente. Ojo: un slug adivinado que devuelve 301 a la home NO es evidencia
+  de nada; solo cuenta el `<loc>` del sitemap o el titular real del fetch.
 
 ### Sitios institucionales SIN sitemap utilizable
 
