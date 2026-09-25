@@ -26,6 +26,10 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 - `getBoundingClientRect()` miente dentro de `<details>` cerrado (Chrome: descendientes devuelven rects stale no-cero). Usar `hiddenByDetails()` que camina ancestros `details` (ver `Timeline.astro`).
 - Salto a mes en año/década colapsado: destino puede no estar en DOM (SSR no emite `<section>` si año cerrado). Ambos renderers exponen `window.__gvFillMonth(key)` (`timelineClient.js` / `eventListClient.js`); `expandAncestors` lo llama para forzar carga.
 
+## Volver arriba
+
+`#back-to-top` vive en `Base.astro`: aparece sobre 480 px de scroll, usa scroll suave salvo `prefers-reduced-motion` y evita el FAB temporal mediante un offset inferior calculado al hacer scroll/resize. Reengancha estado y listeners en `astro:page-load`, limpiando la instancia anterior.
+
 ## Grafo de relaciones (`/graph`, mini en `/events`, ego-grafo)
 
 - `EventGraph.astro` renderiza SVG estático fallback + JSON `<script id="graph-data">`; `force-graph.js` lo reemplaza por SVG interactivo `d3-force` (pan/pinch/drag). `init()` idempotente con `cleanup()`.

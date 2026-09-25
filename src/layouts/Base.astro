@@ -21,6 +21,7 @@ import {
   Rss,
   ExternalLink,
   Palette,
+  ArrowUp,
 } from 'lucide-astro';
 import { ClientRouter } from 'astro:transitions';
 
@@ -492,6 +493,21 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         </div>
       </div>
     </footer>
+
+    <button
+      id="back-to-top"
+      type="button"
+      class="fixed right-5 z-30 flex h-11 w-11 items-center justify-center rounded-full bg-neutral text-neutral-content shadow-lg transition-[opacity,transform,scale,background-color] duration-200 ease-out hover:scale-105 active:scale-95 motion-reduce:transition-none"
+      style="bottom: calc(1.25rem + env(safe-area-inset-bottom)); opacity: 0; transform: translateY(0.75rem); pointer-events: none;"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+      aria-hidden="true"
+      tabindex="-1"
+      inert
+    >
+      <ArrowUp class="h-5 w-5" aria-hidden="true" />
+    </button>
+
     <script>
       import { bind, play, setEnabled } from 'cuelume';
 
@@ -588,6 +604,51 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       }
       gvMarkTheme();
       document.addEventListener('astro:page-load', gvMarkTheme);
+
+      // Volver arriba: aparece tras superar la primera pantalla y se desplaza
+      // sobre el FAB temporal cuando este sigue visible en pantallas mviles.
+      let cleanupBackToTop: (() => void) | undefined;
+      function initBackToTop() {
+        cleanupBackToTop?.();
+        const button = document.getElementById('back-to-top') as HTMLButtonElement | null;
+        if (!button) return;
+
+        const update = () => {
+          const visible = window.scrollY > 480;
+          button.style.opacity = visible ? '1' : '0';
+          button.style.transform = visible ? 'translateY(0)' : 'translateY(0.75rem)';
+          button.style.pointerEvents = visible ? 'auto' : 'none';
+          button.setAttribute('aria-hidden', String(!visible));
+          button.tabIndex = visible ? 0 : -1;
+          button.toggleAttribute('inert', !visible);
+
+          const timelineFab = document.getElementById('timeline-fab');
+          const overlapsTimeline = timelineFab && window.getComputedStyle(timelineFab).display !== 'none';
+          button.style.bottom = `calc(${overlapsTimeline ? '5.75rem' : '1.25rem'} + env(safe-area-inset-bottom))`;
+        };
+
+        const onClick = () => {
+          const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+        };
+
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        button.addEventListener('click', onClick);
+        cleanupBackToTop = () => {
+          window.removeEventListener('scroll', update);
+          window.removeEventListener('resize', update);
+          button.removeEventListener('click', onClick);
+          cleanupBackToTop = undefined;
+        };
+        update();
+      }
+
+      if (!(window as any).__gvBackToTopInit) {
+        (window as any).__gvBackToTopInit = true;
+        document.addEventListener('astro:page-load', initBackToTop);
+      }
+      initBackToTop();
 
       if (!(window as any).__gvSoundInit) {
         (window as any).__gvSoundInit = true;
