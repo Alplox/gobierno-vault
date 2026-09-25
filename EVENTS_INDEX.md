@@ -1017,7 +1017,7 @@
 - [2026/08/20260805-14 - Ministra Duco arremete contra la prensa por cuestionamientos a su gestión: '¿Han estudiado lo que estamos haciendo?'](src/content/events/2026/08/20260805-14.md) — 1 fuente
 - [2026/08/20260805-15 - Ministra Lincolao admite que el Estado no ha medido el retorno de la millonaria inversión en Becas Chile](src/content/events/2026/08/20260805-15.md) — 3 fuentes
 - [2026/08/20260805-16 - Cae director del Sernac de Arica por contratar a militantes de partidos 'alineados' al Gobierno: aceptan su renuncia e instruyen sumario](src/content/events/2026/08/20260805-16.md) — 1 fuente
-- [2026/08/20260805-17 - Chile se retira del Movimiento de Países No Alineados tras 55 años: golpe de timón de la Cancillería en la ONU](src/content/events/2026/08/20260805-17.md) — 6 fuentes
+- [2026/08/20260805-17 - Chile se retira del Movimiento de Países No Alineados tras 55 años: golpe de timón de la Cancillería en la ONU](src/content/events/2026/08/20260805-17.md) — 8 fuentes
 - [2026/08/20260805-18 - Ignacio Briones: la megarreforma 'se quedó corta en la permisología' y la exención de contribuciones es 'la política más regresiva'](src/content/events/2026/08/20260805-18.md) — 1 fuente
 - [2026/08/20260805-19 - Alvarado confirma que seguirá pagando contribuciones pese a la exención para mayores de 65 años: 'es voluntario'](src/content/events/2026/08/20260805-19.md) — 1 fuente
 - [2026/08/20260805-2 - Encuestas post-despacho de la megareforma: Cadem registra 50% de desacuerdo y Descifra mide 63% de rechazo a la gestión de Quiroz](src/content/events/2026/08/20260805-2.md) — 5 fuentes
@@ -1646,7 +1646,7 @@
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 55 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
-- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 76 fuentes
+- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 96 fuentes
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
@@ -1655,7 +1655,7 @@
 - [2026/09/20260923-3 - UAF advierte que el acceso a información bancaria protegida por secreto bancario tarda 28 días hábiles en promedio](src/content/events/2026/09/20260923-3.md) — 12 fuentes
 - [2026/09/20260923-4 - Kast se reúne con Delcy Rodríguez y proyecta restablecer en meses las relaciones diplomáticas con Venezuela](src/content/events/2026/09/20260923-4.md) — 12 fuentes
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
-- [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 6 fuentes
+- [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 
 ## 2025
 
@@ -1722,7 +1722,7 @@
 - [2025/12/20251210-4 - La Tercera perfila a Claudio Alvarado como el favorito para la Segpres de un eventual gobierno de Kast: la trayectoria del 'Coronel UDI' que terminó en Interior](src/content/events/2025/12/20251210-4.md) — 5 fuentes
 - [2025/12/20251214-1 - José Antonio Kast gana la segunda vuelta presidencial con 58,16% de los votos](src/content/events/2025/12/20251214-1.md) — 4 fuentes
 - [2025/12/20251215-1 - Cadem informa que su sondeo privado durante la veda proyectó correctamente el resultado del balotaje (58% para Kast)](src/content/events/2025/12/20251215-1.md) — 1 fuente
-- [2025/12/20251215-2 - Gobierno de Boric entrega nota de protesta a Colombia por dichos inaceptables de Petro contra Kast electo (hijo de Hitler)](src/content/events/2025/12/20251215-2.md) — 11 fuentes
+- [2025/12/20251215-2 - Gobierno de Boric entrega nota de protesta a Colombia por dichos inaceptables de Petro contra Kast electo (hijo de Hitler)](src/content/events/2025/12/20251215-2.md) — 15 fuentes
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — 2 fuentes
 - [2025/12/20251217-1 - Gobierno de Boric y Mesa del Sector Público firman el reajuste salarial 2026 (3,4%): el acuerdo que la derecha entrante tildó de 'amarre'](src/content/events/2025/12/20251217-1.md) — 11 fuentes
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md) — 6 fuentes
