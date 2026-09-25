@@ -81,6 +81,8 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Institución | URL | Notas |
 | --- | --- | --- |
 | SENAPRED | <https://www.senapred.cl/noticias/> | Prevención y Respuesta ante Desastres |
+| Servicio Nacional de Migraciones (SERMIG) | <https://serviciomigraciones.cl/> | Portal oficial; el Balance Migratorio 2026 se consulta en <https://datastudio.google.com/reporting/c45a1db4-25a1-4afb-9a56-d19425f8a6d5/page/EiD0F> y actualiza mensualmente expulsiones, salidas, reconducciones e ingresos por pasos no habilitados |
+| Unidad de Análisis Financiero (UAF) | <https://www.uaf.cl/es-cl/> | Portal oficial; las notas se consultan en `noticia-detalle?id=<n>`. Fuente primaria para cifras de alertas, carga y propuestas de la UAF ante comisionesParlamentarias |
 | SII | <https://www.sii.cl/noticias/> | Servicio de Impuestos Internos |
 | SERNAC | <https://www.sernac.cl/> | Portal principal (validado 2026-08-27: `/portal/noticias/` → 404) |
 | Tesorería General de la República | <https://www.tgr.cl/noticias/> | Redirige a `tgr.gob.cl` |

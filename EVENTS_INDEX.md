@@ -1091,7 +1091,7 @@
 - [2026/08/20260806-50 - Bío Bío Investiga revela el 'Factor Mera': el ministro de la Corte de Santiago que siempre vota a favor de los Lavín-Barriga](src/content/events/2026/08/20260806-50.md) — 2 fuentes
 - [2026/08/20260806-51 - Hacienda crea grupo de trabajo para impulsar la exportación de servicios financieros: Quiroz proyecta 50 mil empleos adicionales](src/content/events/2026/08/20260806-51.md) — 1 fuente
 - [2026/08/20260806-52 - TC cierra definitivamente el caso Motorola: por unanimidad confirma la decisión de no perseverar contra Katherine Martorell](src/content/events/2026/08/20260806-52.md) — 3 fuentes
-- [2026/08/20260806-53 - Chile y Venezuela formalizan el reinicio de sus relaciones consulares mediante intercambio de notas diplomáticas](src/content/events/2026/08/20260806-53.md) — 3 fuentes
+- [2026/08/20260806-53 - Chile y Venezuela formalizan el reinicio de sus relaciones consulares mediante intercambio de notas diplomáticas](src/content/events/2026/08/20260806-53.md) — 4 fuentes
 - [2026/08/20260806-54 - Gobierno oficializa su respaldo a la candidatura del senador Rojo Edwards para presidir la Unión Interparlamentaria](src/content/events/2026/08/20260806-54.md) — 4 fuentes
 - [2026/08/20260806-55 - Ángela Vivanco declara casi nueve horas ante la Fiscalía por la trama bielorrusa y niega tráficos e irregularidades](src/content/events/2026/08/20260806-55.md) — 4 fuentes
 - [2026/08/20260806-56 - Diputada Javiera Rodríguez lanza la campaña 'Presos por servir' (presosxservir.cl) para reunir firmas por indultos a exuniformados condenados por el estallido](src/content/events/2026/08/20260806-56.md) — 3 fuentes
@@ -1391,6 +1391,7 @@
 - [2026/08/20260820-24 - Gremios camioneros no descartan paralización ante el alza del diésel de $97 y exigen volver al esquema anterior del MEPCO](src/content/events/2026/08/20260820-24.md) — 8 fuentes
 - [2026/08/20260820-25 - Luis Thayer renuncia al Frente Amplio y acusa al partido de dejarlo solo ante la crisis de los niños haitianos: 'le falta vieja política'](src/content/events/2026/08/20260820-25.md) — 5 fuentes
 - [2026/08/20260820-26 - Cadem 682: 58% rechaza que el Presidente decrete solo el estado de excepción, pero el apoyo sube a 52% con aprobación del Congreso](src/content/events/2026/08/20260820-26.md) — 7 fuentes
+- [2026/08/20260820-27 - La Autoridad del Canal de Panamá reduce cupos diarios por menor precipitación y aplaza ajustes de calado](src/content/events/2026/08/20260820-27.md) — 6 fuentes
 - [2026/08/20260820-3 - Rebelión oficialista contra la reforma de seguridad: Kaiser rechaza, Cruz-Coke advierte que faltan votos, Evópoli plantea reparos y Boric la califica como 'limitación de libertades inédita'](src/content/events/2026/08/20260820-3.md) — 13 fuentes
 - [2026/08/20260820-4 - Camioneros no descartan paralización si sigue la subida del diésel: 'Esto no soporta ningún cálculo'](src/content/events/2026/08/20260820-4.md) — 2 fuentes
 - [2026/08/20260820-5 - Abogado recién titulado hace 8 meses asumió como jefe de gabinete de la Subsecretaría de Educación Superior con sueldo de $4,8 millones: quinto caso de la 'generación sin currículum'](src/content/events/2026/08/20260820-5.md) — 1 fuente
@@ -1505,7 +1506,7 @@
 - [2026/09/20260902-4 - Comisión mixta de Inteligencia Económica inicia audiencias por secreto bancario con choque oposición-oficialismo y plan de cuatro sesiones de expertos](src/content/events/2026/09/20260902-4.md) — 6 fuentes
 - [2026/09/20260902-5 - Operación Rutify: Fiscalía Supraterritorial y PDI detienen y formalizan a joven de 18 años por ciberataques y venta de datos de organismos públicos](src/content/events/2026/09/20260902-5.md) — 6 fuentes
 - [2026/09/20260902-6 - Senador Carter denuncia explotación sexual de niñas en hogar de Villarrica y Fiscalía abre investigación de oficio](src/content/events/2026/09/20260902-6.md) — 5 fuentes
-- [2026/09/20260902-7 - Kast descarta exigir a Milei la firma de la derogación del decreto 457 sobre Magallanes y se desmarca de su canciller y su ministro de Defensa](src/content/events/2026/09/20260902-7.md) — 27 fuentes
+- [2026/09/20260902-7 - Kast descarta exigir a Milei la firma de la derogación del decreto 457 sobre Magallanes y se desmarca de su canciller y su ministro de Defensa](src/content/events/2026/09/20260902-7.md) — 31 fuentes
 - [2026/09/20260902-8 - Concejal de Iquique exige explicar visita de embajador Judd a Los Cóndores y supuesto vuelo en F-16; Embajada dice que fue simulador](src/content/events/2026/09/20260902-8.md) — 7 fuentes
 - [2026/09/20260902-9 - Hacienda pide la renuncia a la directora nacional de Aduanas Alejandra Arriaza tras informe de Contraloría con 25 contenedores sin aforo](src/content/events/2026/09/20260902-9.md) — 5 fuentes
 - [2026/09/20260903-1 - Gonzalo Durán (Fundación Sol) en Radio Futuro: tasa real de desempleo llegaría a 13,5% y casi la mitad de los desocupados tiene educación superior](src/content/events/2026/09/20260903-1.md) — 6 fuentes
@@ -1520,8 +1521,8 @@
 - [2026/09/20260903-18 - Vocería de Kast con alcalde de San Bernardo termina sin preguntas y provoca denuncia de censura de Roberto Saa y crítica de Neme](src/content/events/2026/09/20260903-18.md) — 7 fuentes
 - [2026/09/20260903-19 - Orbán Files: la PNfV presidida por Kast fue disuelta en EEUU por no presentar balances desde 2021, con US$1,3 millones de Orbán bajo interrogante](src/content/events/2026/09/20260903-19.md) — 7 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 10 fuentes
-- [2026/09/20260903-20 - Falkland Islands Development Corporation contrata a Easter Island Naviera para abrir una ruta de suministro entre Punta Arenas y Puerto Argentino](src/content/events/2026/09/20260903-20.md) — 10 fuentes
-- [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 27 fuentes
+- [2026/09/20260903-20 - Falkland Islands Development Corporation contrata a Easter Island Naviera para abrir una ruta de suministro entre Punta Arenas y Puerto Argentino](src/content/events/2026/09/20260903-20.md) — 16 fuentes
+- [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 30 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 12 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 10 fuentes
@@ -1536,6 +1537,7 @@
 - [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 14 fuentes
 - [2026/09/20260904-7 - Expertos contra fiscal nacional por el registro: Couso y Duce lo ven inútil y ambiguo, Valencia defiende su conveniencia y la carta de Irarrázaval advierte presunción de derecho prohibida](src/content/events/2026/09/20260904-7.md) — 7 fuentes
 - [2026/09/20260904-8 - Frente Amplio oficia a Codelco, SII, Servel, UAF, Pensiones y CMF por fundación de Fontaine ligada a bots tras reportaje de $1.906 millones](src/content/events/2026/09/20260904-8.md) — 5 fuentes
+- [2026/09/20260904-9 - Fernanda Cornejo responde a Milei en C5N por sus dichos sobre Allende y Pinochet, y Jeannette Jara rechaza la celebración de la dictadura](src/content/events/2026/09/20260904-9.md) — 6 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
@@ -1565,6 +1567,7 @@
 - [2026/09/20260908-9 - Mara Sedini debuta como conductora de Sin Filtros en reemplazo de Fernando Solabarrieta tras su errática animación](src/content/events/2026/09/20260908-9.md) — 9 fuentes
 - [2026/09/20260909-1 - Cancillería cita a Judd por atribuir el estallido social a la izquierda; el embajador admite que EEUU no investigó en Chile y el canciller le recuerda que no debe opinar de política interna](src/content/events/2026/09/20260909-1.md) — 17 fuentes
 - [2026/09/20260909-10 - Detienen al exfiscal Vinko Fodich y a tres funcionarios PDI por secuestros extorsivos contra comerciantes chinos; Fiscalía indaga falso cuartel policial](src/content/events/2026/09/20260909-10.md) — 6 fuentes
+- [2026/09/20260909-11 - Gobierno argentino dice desconocer la ruta Punta Arenas–Malvinas; CECIM intima a Quirno y Kusanovic cuestiona una sanción fueguina](src/content/events/2026/09/20260909-11.md) — 9 fuentes
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
 - [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 12 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
@@ -1617,7 +1620,7 @@
 - [2026/09/20260914-5 - Quiroz presenta en el ChileDay Madrid la estrategia económica y la reforma al mercado de capitales ante 700 inversionistas](src/content/events/2026/09/20260914-5.md) — 7 fuentes
 - [2026/09/20260914-6 - Kast defiende el retorno de Duco a La Moneda y responde por sus críticas a los 'premios de consuelo': 'Tiene una experiencia que es relevante'](src/content/events/2026/09/20260914-6.md) — 5 fuentes
 - [2026/09/20260914-7 - Concejal UDI de Isla de Maipo pide que La Consentida no se use como cueca en eventos de Fiestas Patrias y es desmentido técnicamente en plena sesión](src/content/events/2026/09/20260914-7.md) — 8 fuentes
-- [2026/09/20260914-8 - Kast reconoce en Radio Agricultura un periodo de crisis con inflación sobre lo esperado y crecimiento bajo lo proyectado, y sitúa el bencinazo como el primer golpe a su popularidad](src/content/events/2026/09/20260914-8.md) — 8 fuentes
+- [2026/09/20260914-8 - Kast reconoce en Radio Agricultura un periodo de crisis con inflación sobre lo esperado y crecimiento bajo lo proyectado, y sitúa el bencinazo como el primer golpe a su popularidad](src/content/events/2026/09/20260914-8.md) — 29 fuentes
 - [2026/09/20260914-9 - Presidente de BancoEstado respalda hipotecarios en pesos a 10 o 20 años: el inversionista extranjero no entiende la UF](src/content/events/2026/09/20260914-9.md) — 2 fuentes
 - [2026/09/20260915-1 - Concejal UDI que pidió vetar La Consentida es captado bailando la canción en vísperas de Fiestas Patrias y la hija de Jaime Atria responde](src/content/events/2026/09/20260915-1.md) — 7 fuentes
 - [2026/09/20260915-2 - Barómetro CIES-UDD y AFP: 21,6% de jóvenes de 25 a 34 años no estudia ni trabaja, nivel más alto desde 2023](src/content/events/2026/09/20260915-2.md) — 11 fuentes
@@ -1641,11 +1644,15 @@
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 55 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
-- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 27 fuentes
+- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 63 fuentes
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
+- [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
 - [2026/09/20260923-1 - Senadores presentan proyecto para penalizar la omisión de medidas de seguridad en establecimientos de cuidado de adultos mayores](src/content/events/2026/09/20260923-1.md) — 6 fuentes
-- [2026/09/20260923-2 - Trump apoya evaluar una restricción a las exportaciones estadounidenses de diésel y Chile queda expuesto a un posible choque de suministro](src/content/events/2026/09/20260923-2.md) — 9 fuentes
+- [2026/09/20260923-2 - Trump apoya evaluar una restricción a las exportaciones estadounidenses de diésel y Chile queda expuesto a un posible choque de suministro](src/content/events/2026/09/20260923-2.md) — 12 fuentes
+- [2026/09/20260923-3 - UAF advierte que el acceso a información bancaria protegida por secreto bancario tarda 28 días hábiles en promedio](src/content/events/2026/09/20260923-3.md) — 12 fuentes
+- [2026/09/20260923-4 - Kast se reúne con Delcy Rodríguez y proyecta restablecer en meses las relaciones diplomáticas con Venezuela](src/content/events/2026/09/20260923-4.md) — 12 fuentes
+- [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 
 ## 2025
 

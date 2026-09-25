@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 332
+**Total tareas:** 334
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 249 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 251 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 303 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 305 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -127,7 +127,7 @@
 | S-2026-039 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Lucho Miranda / dichos de Camila Flores (evento creado 20260806-23): verificar si la Comisión de Ética del Senado san... | `20260806-23` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-040 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Querella de Desbordes contra @hernan_sr (evento creado 20260806-25): verificar el desenlace de las diligencias del Sé... | `20260806-25` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-041 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Verificación de la frase de Desbordes 'Se gastan millones todos los meses para levantar mentiras' (agosto 2026): SIN ... | `20260406-2` `20260806-25` | Origen: <https://example.com/pendiente-revisar> |
-| S-2026-042 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Informe Estadístico Migratorio PDI (evento creado 20260806-27): seguimiento a la publicación del informe completo por... | `20260806-27` | Origen: <https://example.com/pendiente-revisar> |
+| S-2026-042 | 🟡 | 2026-09-24 | Sugerencias pendientes (para no perderlas) | Informe migratorio PDI/SERMIG — conciliar series 93,5%, 86% y 32,7%; auditar metodología y actualizar cifras | `20260806-27` `20260924-1` | Origen: <https://serviciomigraciones.cl/sermig-actualiza-los-datos-del-balance-migratorio-en-su-sitio-web/> |
 | S-2026-043 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Columna Prensa Opal / quinto estado de excepción (evento creado 20260806-26): verificar los datos puntuales citados (... | `20260806-26` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-044 | ⬜ | 2026-08-06 | Sugerencias pendientes (para no perderlas) | INE remuneraciones junio 2026 (evento creado 20260806-22): boletín del 6-ago verificado (INE primario + El Mostrador ... | `20260806-22` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-045 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Verificar el +26% de ministros (gráfico viral): el dato "ministros +26% (nuevo sistema 2026 vs. promedio 2025)" NO ti... | — | Origen: <https://example.com/pendiente-revisar> |
@@ -313,6 +313,8 @@
 | S-2026-232 | ⬜ | 2026-09-23 | Escudo de las Américas — declaración conjunta 22-sep-2026 (evento `20260922-3`) | Reunión de consulta del TIAR ante la OEA: la declaración co-firmada anuncia solicitud al Consejo Permanente para crear un Órgano de Consulta (arts. 6 y 13 del TIAR) con participación ministerial. Registrar: presentación formal, posición de Chile y resolución adoptada | `20260922-3` | Origen: <https://www.state.gov/releases/office-of-the-spokesman/2026/09/joint-statement-on-defending-hemispheric-sovereignty/> |
 | S-2026-234 | ⬜ | 2026-09-23 | Pasajes de Presidencia — identificación de pasajeros y destino (evento `20260911-5`) | Verificar si Presidencia, Seguridad Presidencial, LATAM u otra entidad identifica a los pasajeros de la OC 661439-158-CM26 y explica el uso de los cuatro pasajes del 19 de agosto; revisar las OCs 661439-180-CM26 y 776-695-CM26 para el 9 de septiembre, su relación con el viaje a Valdivia y el estado final de la orden No aceptada | `20260911-5` | Origen: <https://x.com/ElHiloCL/status/2097498624099762325> |
 | S-2026-235 | ⬜ | 2026-09-24 | Escudo de las Américas — reunión con excancilleres y presión estadounidense (eventos `20260922-3` `20260914-13`) | Contrastar el testimonio de Mariano Fernández sobre la reunión con excancilleres y la alegada presión de EE.UU. con el registro de la reunión, la respuesta de Cancillería y documentos oficiales; verificar si se aclarará la condición jurídica de observador, firmante o miembro | `20260922-3` `20260914-13` | Origen: <https://www.latercera.com/politica/noticia/adhesion-de-kast-al-escudo-de-las-americas-de-trump-desata-criticas-por-posible-coordinacion-militar-y-gobierno-lo-descarta/> |
+| S-2026-236 | ⬜ | 2026-09-24 | Chile–Venezuela — exequátur y normalización diplomática (evento `20260923-4`) | Verificar si Venezuela concede el exequátur al cónsul [[people/felipe_orellana_martinez]], la apertura efectiva de los consulados y el estado de las misiones diplomáticas tras la reunión Kast–Rodríguez | `20260923-4` | Origen: <https://www.latercera.com/nacional/noticia/tras-reunion-con-delcy-rodriguez-kast-promete-restablecimiento-de-relaciones-diplomaticas-con-venezuela-en-los-proximos-meses> |
+| S-2026-237 | ⬜ | 2026-09-24 | Exportación de diésel estadounidense — decisión y mitigación (evento `20260923-2`) | Verificar si Estados Unidos adopta, descarta o modifica una restricción de 90 días a las exportaciones de diésel, y qué medidas adopta Chile para aminorar el impacto en combustibles; separar anuncios de medidas concretas | `20260923-2` | Origen: <https://www.elperiodista.cl/2026/09/kast-afirma-que-estan-analizando-medidas-paliativas-ante-una-eventual-restriccion-a-exportacion-de-diesel/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

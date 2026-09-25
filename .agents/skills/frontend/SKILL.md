@@ -33,6 +33,7 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 - Filtros `/graph` (`#graph-filters` en `EventGraph.astro`, solo full): búsqueda (debounce 250ms) + selects tipo/año/tema/persona/org + `mín. vínc.` + aislados; `force-graph.js` filtra nodos/links y re-ejecuta `init()`, con estado en URL (`?q=&tipo=&year=&tema=&persona=&org=&minconn=&aislados=1`, `replaceState`) y contador `#graph-count` + `#graph-empty`. Nodos llevan `temas/personas/orgs/etiquetas/search` en el JSON. Cableado único en `wireGraphFilters()` (guard en el form, re-cablea tras swap VT; sync URL una vez por query). Mini (`/events`) sin filtros.
 - Tap en nodo abre `<dialog id="graph-modal">` (bottom-sheet en móvil), no navega; vecinos desde `links`. Umbral `dragMoved` distingue tap/drag. Sin modal (mini) navega directo.
 - `EgoGraph.astro` (SVG estático, cero JS) en slot `graph` de `EventConnections.astro`; anchors sin `transition:name` duplicado.
+- El skeleton usa solo el spinner local + `role="status"`; no usar `animate-pulse` sobre toda el área ni efectos React/canvas para esta carga local.
 - Perf: `alphaMin(0.01)` (~200 ticks) + `fitView` en `end`.
 
 ## Página `/events`: filtros y búsqueda en cliente
@@ -44,11 +45,17 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 - **Búsqueda:** `data-search` normalizado (minúsculas + NFD sin acentos) de título/etiquetas/personas/orgs/temas/tipo/ID/fecha. Debe ser idéntica entre `EventCard.astro` y `eventListClient.js`.
 - **Persistencia:** abrir `<details>` programáticamente al filtrar no se guarda en localStorage — listener `toggle` respeta `window.__gvSkipPersist`.
 
+## Consultas IA del detalle de evento
+
+- `chatPrompt` incluye URL canónica, metadatos, extracto normalizado de ~650 caracteres y fuentes. `chatPrefill` es un prompt compacto con presupuesto de contexto (incluye cantidad/títulos de fuentes sin URLs parciales); `data-ai-prefill` lo guarda una sola vez y el click lo inyecta en `q`. `data-prompt` conserva la versión completa, pero solo el botón “Copiar prompt” la copia. Los `href` SSR contienen solo un fallback con la URL del evento, nunca cuatro prompts completos.
+- `aiTargets` mantiene ChatGPT y Claude como servicios con cuenta, y Perplexity y Duck.ai como consultas sin cuenta; no sumar servicios que redirijan al login o tengan restricciones regionales sin verificarlos.
+
 ## TTS del detalle de evento
 
 `src/pages/events/[year]/[id].astro` — `#btn-tts` + `<select id="tts-voice">`, todo en cliente sobre `.prose`.
 
 - **Voces:** `speechSynthesis` (es-CL/es-ES primero) + `optgroup` Piper (`@realtimex/piper-tts-web`, peer `onnxruntime-web`). Piper = CDN lazy (`tts.voices()` a HF, `tts.predict()` baja modelo ~60-75 MB a OPFS).
+- **Carga Piper:** `gvTtsBusyTasks` deriva de las tareas reales; `#btn-tts` recibe `aria-busy` y un aro de tema estático. No agregar border beam/React/canvas: el texto de progreso es la fuente de verdad y el estado no anima continuamente.
 - **`onnxruntime-web` pineado a `1.22.0`** (CDN `ONNX_BASE`); no subir sin actualizar CDN. `.wasm` local no se bundlea — plugin `drop-ort-wasm-assets` en `astro.config.mjs` elimina `.wasm` de `dist/_astro` (límite 25 MiB Cloudflare). Si se cambia a `auto`/`local`, revertir plugin.
 - Flags `window.__gvEventActionsInit` + `astro:page-load` (pausa con `gvStopAll` al navegar).
 - Cancelable (`gvSynthCancel` entre trozos ~900 chars), un solo motor a la vez (`gvStopAll` corta Piper + speech), resaltado por bloques `gvBlockParts`/`gvSplitLong` con `.gv-tts-active` + `scrollIntoView`, cache WAV LRU 1 entrada (`voiceId|texto`).
