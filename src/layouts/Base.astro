@@ -149,9 +149,16 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         // Sonido: exponer el estado guardado ANTES del primer paint para que
         // el CSS muestre solo el icono correcto (sin flash del icono contrario
         // ni ambos superpuestos hasta que corra el bundle diferido).
-        try {
-          document.documentElement.dataset.gvSound = localStorage.getItem('gv-sound') === '0' ? '0' : '1';
-        } catch (e) {}
+        var applySound = function () {
+          try {
+            document.documentElement.dataset.gvSound = localStorage.getItem('gv-sound') === '0' ? '0' : '1';
+          } catch (e) {}
+        };
+        applySound();
+        if (!window.__gvSoundAfterSwapInit) {
+          window.__gvSoundAfterSwapInit = true;
+          document.addEventListener('astro:after-swap', applySound);
+        }
       })();
     </script>
     <ClientRouter />
@@ -163,6 +170,10 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       .source-ref { position: relative; cursor: help; text-decoration: none; }
       .source-ref:hover { text-decoration: underline; text-decoration-color: var(--color-primary); }
       .source-ref-num { color: var(--color-primary); font-family: ui-monospace, monospace; font-size: 0.75rem; font-weight: 500; }
+      /* Las fichas compactas de /sueldos mantienen la referencia en el flujo
+         del texto, sin que el <sup> se solape con la línea anterior. */
+      .sueldos-inline-ref { display: inline-block; white-space: nowrap; vertical-align: baseline; }
+      .sueldos-inline-ref .source-ref-num { display: inline-block; position: relative; top: 0; vertical-align: baseline; line-height: 1; }
       /* Bloque que el TTS Piper está leyendo (sincronizado via timeupdate).
          box-shadow con spread simula padding sin mover el layout. */
       .gv-tts-active {
@@ -292,6 +303,15 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         opacity: 0; transform: scale(0.25); filter: blur(4px);
       }
       #btn-sound[aria-pressed="false"] #icon-sound-off {
+        opacity: 1; transform: scale(1); filter: blur(0);
+      }
+      /* El HTML inicial siempre trae aria-pressed="true"; el estado guardado
+         puede ser "0" antes de que corra el módulo. Esta regla evita que el
+         icono de sonido activo tape el de silenciado durante ese primer paint. */
+      html[data-gv-sound="0"] #btn-sound #icon-sound-on {
+        opacity: 0; transform: scale(0.25); filter: blur(4px);
+      }
+      html[data-gv-sound="0"] #btn-sound #icon-sound-off {
         opacity: 1; transform: scale(1); filter: blur(0);
       }
     </style>
@@ -573,23 +593,35 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       }
       updateNavActive();
 
-      // Sonidos de interfaz (cuelume): bind una sola vez; el toggle global se
-      // persiste en localStorage y setEnabled hace no-op de play() al apagar.
-      bind();
+      // Sonidos de interfaz (cuelume): el estado vive en el módulo, pero el
+      // botón se busca en cada actualización. Con ClientRouter el nav puede
+      // ser reemplazado y una referencia capturada en la carga inicial queda
+      // obsoleta; además astro:page-load no siempre alcanza para el primer
+      // render. La inicialización se hace aquí y se repite en cada navegación.
       const SOUND_KEY = 'gv-sound';
-      let soundOn = localStorage.getItem(SOUND_KEY) !== '0';
-      const btnSound = document.getElementById('btn-sound');
+      function gvReadSound() {
+        try { return localStorage.getItem(SOUND_KEY) !== '0'; } catch { return true; }
+      }
+      let soundOn = gvReadSound();
       function gvSetSound() {
         setEnabled(soundOn);
+        const btnSound = document.getElementById('btn-sound');
         btnSound?.setAttribute('aria-pressed', String(soundOn));
-        // Espejo para el CSS de primer paint (el nav persiste con
-        // transition:persist, así que el atributo sobrevive navegaciones).
+        // Espejo para el CSS de primer paint y para el nav persistido.
         document.documentElement.dataset.gvSound = soundOn ? '1' : '0';
       }
-      gvSetSound();
+      function gvInitSound() {
+        // bind() es idempotente y cubre elementos añadidos por Astro.
+        bind();
+        gvSetSound();
+      }
+      gvInitSound();
       // Llega la señal de "arrival" al navegar con View Transitions (tras la
       // primera interacción del usuario; antes el navegador bloquea el audio).
-      document.addEventListener('astro:page-load', () => play('arrival'));
+      document.addEventListener('astro:page-load', () => {
+        gvInitSound();
+        play('arrival');
+      });
 
       // Selector de tema: marcar el activo en cada carga (el dropdown se
       // re-renderiza con las View Transitions). Sin tema guardado, daisyUI
@@ -668,9 +700,13 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
             return;
           }
           if (t?.closest('#btn-sound')) {
+            const wasOn = soundOn;
             soundOn = !soundOn;
-            localStorage.setItem(SOUND_KEY, soundOn ? '1' : '0');
+            try { localStorage.setItem(SOUND_KEY, soundOn ? '1' : '0'); } catch {}
             gvSetSound();
+            // Al activar desde el estado silenciado, confirma el gesto y
+            // desbloquea el AudioContext dentro del mismo click del usuario.
+            if (!wasOn && soundOn) play('toggle');
             return;
           }
           const menu = document.getElementById('mobile-menu') as HTMLDetailsElement | null;

@@ -31,9 +31,12 @@ Debe ser EXACTAMENTE `nombre` de una org `tipo: medio_comunicacion|red_social|ca
 Sin cifras ni entidades hardcodeadas:
 
 - Personas por ID (`presidente_id`, `persona_id`, `firmante_id`) resueltas vía `getPeopleRegistry()` contra `src/content/people/*.md` — build falla si ID no existe.
-- Referencias por ID de `src/content/sources/*.md` (`orden_refs` fija numeración `[N]`; `<SRef n={N}/>` resuelve contra `getSourcesRegistry()`). Insertar/eliminar fuente = tocar solo `orden_refs`.
-- Cada monto lleva `vigencias[]` (monto + fuente + descripción) anti-stale; derivados (ratios, IPC, promedios) se calculan en `src/lib/sueldos.ts`.
-- `serie_registro_publico.puntos[]` serie mensual bruta Presidente desde 2025-01 para SVG estático.
+- Referencias por ID de `src/content/sources/*.md` (`orden_refs` fija la numeración visible; `<SRef id="..."/>` resuelve el ID contra `getSourcesRegistry()` y evita desalineación al reordenar). `presidentes[].refs` y `vigencias[].fuente` también son IDs; toda fuente usada debe estar en `orden_refs`.
+- `presidentes[].fecha_label` contiene únicamente el mes/año de referencia; nunca nombres de medios ni notas de fuente. La atribución vive en `refs[]` y `vigencias[].fuente`, y se renderiza como `SRef`/enlace a la fuente original. Si hace falta una precisión metodológica, va en `detalle`.
+- Cada monto presidencial lleva `vigencias[]` (monto + fuente + descripción; opcionalmente `desde`, `hasta` y `tipo`) anti-stale; derivados (ratios, IPC, promedios y brechas) se calculan en `src/lib/sueldos.ts`.
+- `serie_registro_publico.puntos[]` es la serie mensual bruta del Presidente desde 2025-01; `tipo` distingue observado, bono y proporcional. `ipc.ago_2026` es el destino de los ajustes y `registro_presidente_julio_2026` conserva la última lectura CFR.
+- `indicadores[]` usa `ipc_inicio`/`ipc_fin` y sus fechas; la variación se deriva entre endpoints, sin producto de tasas anuales. Para mandatos anteriores a la serie BDE publicada, los endpoints pueden ser `null`.
+- `ingresos_esi`, `costo_vida`, `imm_2026` y `casen_2024` conservan explícitamente año/periodo, unidad, definiciones y fuente. La página mantiene separados ingreso individual neto, ingreso de hogar, umbral por persona equivalente y remuneración bruta.
 - YAML se sirve en `/data/sueldos.yaml`.
 
 Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.

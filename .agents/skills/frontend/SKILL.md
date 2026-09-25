@@ -14,6 +14,7 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 
 - `transition:name` compartido entre tarjeta/índice y detalle (ej. `event-title-${basename}`) → morphing del título.
 - `<nav transition:persist>` sin parpadeo; estado activo recalculado en `astro:page-load` (`updateNavActive`).
+- El toggle global de sonido (`#btn-sound`) se inicializa tanto en la carga inicial como en `astro:page-load`; busca el botón por ID en cada actualización (no conserva una referencia al DOM inicial) y sincroniza `localStorage` de forma segura. El atributo `data-gv-sound` se reaplica en `astro:after-swap`; al activar desde silencio, reproduce `toggle` dentro del gesto para desbloquear Web Audio.
 - `astro.config.mjs: prefetch: { prefetchAll: true, defaultStrategy: 'hover' }`.
 - Scripts: listeners globales registrados una sola vez con guard `window.__gvXxxInit` + `cleanupFns`. No usar `DOMContentLoaded`; usar `astro:page-load`. Los `<script>` bundleados solo se ejecutan **una vez** — inits con `IntersectionObserver` (`initTimeline`/`initEventList`) deben ir en `astro:page-load` y desconectar observer previo, nunca cortocircuitar todo el init con `window.__gvXxxInit`. El guard por nodo `script.__gvLoaded` va primero (page-load también dispara en carga inicial → doble init). Ver comentarios en `Base.astro` y fix en `eventListClient.js`.
 
@@ -52,7 +53,8 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 ## Consultas IA del detalle de evento
 
 - `chatPrompt` incluye URL canónica, metadatos, extracto normalizado de ~650 caracteres y fuentes. `chatPrefill` es un prompt compacto con presupuesto de contexto (incluye cantidad/títulos de fuentes sin URLs parciales); `data-ai-prefill` lo guarda una sola vez y el click lo inyecta en `q`. `data-prompt` conserva la versión completa, pero solo el botón “Copiar prompt” la copia. Los `href` SSR contienen solo un fallback con la URL del evento, nunca cuatro prompts completos.
-- `aiTargets` mantiene ChatGPT y Claude como servicios con cuenta, y Perplexity y Duck.ai como consultas sin cuenta; no sumar servicios que redirijan al login o tengan restricciones regionales sin verificarlos.
+- Markdown usa un split group (“Ver en Markdown” + copiar); ambos copiadores mantienen etiqueta y caja de icono estables, cambian `copy → check/alert` dentro del mismo slot y anuncian el resultado con un `role="status"` visualmente oculto para evitar reflow.
+- `aiTargets` mantiene Claude como servicio con cuenta, y ChatGPT, Perplexity y Duck.ai como consultas sin cuenta; no sumar servicios que redirijan al login o tengan restricciones regionales sin verificarlos.
 
 ## TTS del detalle de evento
 
@@ -61,9 +63,13 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 - **Voces:** `speechSynthesis` (es-CL/es-ES primero) + `optgroup` Piper (`@realtimex/piper-tts-web`, peer `onnxruntime-web`). Piper = CDN lazy (`tts.voices()` a HF, `tts.predict()` baja modelo ~60-75 MB a OPFS).
 - **Carga Piper:** `gvTtsBusyTasks` deriva de las tareas reales; `#btn-tts` recibe `aria-busy` y un aro de tema estático. No agregar border beam/React/canvas: el texto de progreso es la fuente de verdad y el estado no anima continuamente.
 - **`onnxruntime-web` pineado a `1.22.0`** (CDN `ONNX_BASE`); no subir sin actualizar CDN. `.wasm` local no se bundlea — plugin `drop-ort-wasm-assets` en `astro.config.mjs` elimina `.wasm` de `dist/_astro` (límite 25 MiB Cloudflare). Si se cambia a `auto`/`local`, revertir plugin.
-- Flags `window.__gvEventActionsInit` + `astro:page-load` (pausa con `gvStopAll` al navegar).
+- Flags `window.__gvEventActionsInit` + `astro:page-load` (pausa con `gvStopAll` al navegar). La inicialización de voces/Piper se llama también directamente al cargar el módulo, y la caché de voces neurales se indexa por `<select>` porque ClientRouter lo reemplaza en cada evento.
 - Cancelable (`gvSynthCancel` entre trozos ~900 chars), un solo motor a la vez (`gvStopAll` corta Piper + speech), resaltado por bloques `gvBlockParts`/`gvSplitLong` con `.gv-tts-active` + `scrollIntoView`, cache WAV LRU 1 entrada (`voiceId|texto`).
 - Multithreading: `public/_headers` `COOP: same-origin` + `COEP: credentialless` → `SharedArrayBuffer` → onnx multi-hilo (~2-4×). Site-wide por ClientRouter.
+
+## Referencias inline compactas
+
+`SRef` conserva siempre el tooltip. En las fichas densas de `/sueldos`, envolver la referencia en `.sueldos-inline-ref` para neutralizar el `vertical-align: super` del `<sup>` y evitar que el número se monte sobre la línea anterior; el enlace y el scroll a `#ref-N` no cambian.
 
 ## Estilos — Tailwind v4 + daisyUI 5
 

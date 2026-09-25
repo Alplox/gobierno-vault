@@ -28,6 +28,8 @@ import {
   RotateCcw,
   SkipForward,
   Copy,
+  Check,
+  TriangleAlert,
   Bot,
   Bug,
 } from 'lucide-astro';
@@ -182,8 +184,8 @@ const aiTargets: Array<{ id: string; label: string; url: string; title: string; 
     id: 'chatgpt',
     label: 'ChatGPT',
     url: `https://chatgpt.com/?q=${encodedAiFallbackPrompt}`,
-    title: 'Abrir ChatGPT con el contexto de Gobierno Vault. Requiere una cuenta de ChatGPT.',
-    accountRequired: true,
+    title: 'Abrir ChatGPT con el contexto. Funciona sin cuenta; el registro es opcional para guardar el historial.',
+    noLogin: true,
   },
   {
     id: 'claude',
@@ -291,14 +293,28 @@ Describe el error o la corrección sugerida.`)}`;
       )}
 
       <div class="mt-10 pt-5 border-t border-base-300/70 flex flex-wrap items-center gap-2.5 not-prose">
-        <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-colors">
-          <FileText class="h-4 w-4 shrink-0" />
-          <span>Ver en Markdown</span>
-        </a>
-        <button id="btn-copy-md" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary bg-primary/10 hover:bg-primary/15 px-3 py-1.5 rounded-lg transition-colors">
-          <Copy class="h-4 w-4 shrink-0" />
-          <span data-copy-label>Copiar como Markdown</span>
-        </button>
+        <div class="inline-flex min-h-9 items-stretch overflow-hidden rounded-lg border border-primary/20 bg-primary/10 text-primary shadow-xs" role="group" aria-label="Acciones de Markdown">
+          <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex min-h-9 items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary">
+            <FileText class="h-4 w-4 shrink-0" />
+            <span>Ver en Markdown</span>
+          </a>
+          <button
+            id="btn-copy-md"
+            type="button"
+            class="inline-flex size-9 shrink-0 items-center justify-center border-l border-primary/20 transition-[color,background-color,scale] duration-150 hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary active:scale-[0.96]"
+            aria-label="Copiar Markdown"
+            title="Copiar Markdown al portapapeles"
+            data-copy-success-message="Markdown copiado al portapapeles."
+            data-copy-error-message="No se pudo copiar Markdown."
+          >
+            <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
+              <span class="copy-icon" data-icon="idle"><Copy class="h-4 w-4 shrink-0" /></span>
+              <span class="copy-icon" data-icon="copied"><Check class="h-4 w-4 shrink-0" /></span>
+              <span class="copy-icon" data-icon="error"><TriangleAlert class="h-4 w-4 shrink-0" /></span>
+            </span>
+          </button>
+          <span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+        </div>
         <!-- Consultas IA: el prefill incluye contexto; el botón conserva la versión completa. -->
         <div class="flex w-full flex-col gap-2 rounded-xl border border-success/30 bg-success/10 p-2 sm:w-auto sm:flex-row sm:items-center" role="group" aria-label="Consultar este evento con una IA usando el contexto de Gobierno Vault">
           <span class="inline-flex shrink-0 flex-col gap-0.5 px-1 text-xs font-semibold text-success sm:border-r sm:border-success/25 sm:pr-3">
@@ -329,11 +345,23 @@ Describe el error o la corrección sugerida.`)}`;
                 )}
               </a>
             ))}
-            <button id="btn-copy-prompt" type="button" data-copy-prompt class={aiActionClass}
-                    title="Copiar el contexto completo, incluidas las fuentes, para pegarlo en cualquier IA">
-              <Copy class="h-3.5 w-3.5 shrink-0" />
-              <span data-copy-label role="status" aria-live="polite" aria-atomic="true">Copiar prompt</span>
+            <button
+              id="btn-copy-prompt"
+              type="button"
+              data-copy-prompt
+              class={`${aiActionClass} transition-[color,background-color,border-color,scale] duration-150 active:scale-[0.96]`}
+              title="Copiar el contexto completo, incluidas las fuentes, para pegarlo en cualquier IA"
+              data-copy-success-message="Prompt completo copiado al portapapeles."
+              data-copy-error-message="No se pudo copiar el prompt."
+            >
+              <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
+                <span class="copy-icon" data-icon="idle"><Copy class="h-3.5 w-3.5 shrink-0" /></span>
+                <span class="copy-icon" data-icon="copied"><Check class="h-3.5 w-3.5 shrink-0" /></span>
+                <span class="copy-icon" data-icon="error"><TriangleAlert class="h-3.5 w-3.5 shrink-0" /></span>
+              </span>
+              <span data-copy-label>Copiar prompt</span>
             </button>
+            <span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
           </div>
         </div>
         <a href={reportUrl} target="_blank" rel="noopener"
@@ -616,11 +644,14 @@ Describe el error o la corrección sugerida.`)}`;
       onProgress?.(Math.round((doneFiles / total) * 100));
     }
   }
-  let gvPiperFilled = false;
+  // ClientRouter reemplaza el <select> al cambiar de evento: la caché de
+  // voces neurales debe vivir por elemento, no en un booleano de página.
+  const gvPiperFilledSelects = new WeakSet<HTMLSelectElement>();
+  const gvPiperFillingSelects = new WeakSet<HTMLSelectElement>();
   async function gvFillPiperVoices() {
-    if (gvPiperFilled) return;
     const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
-    if (!sel) return;
+    if (!sel || gvPiperFilledSelects.has(sel) || gvPiperFillingSelects.has(sel)) return;
+    gvPiperFillingSelects.add(sel);
     try {
       gvRegArVoice();
       const all = await tts.voices();
@@ -643,9 +674,11 @@ Describe el error o la corrección sugerida.`)}`;
       group.appendChild(arOpt);
       sel.appendChild(group);
       sel.removeAttribute('disabled');
-      gvPiperFilled = true;
+      gvPiperFilledSelects.add(sel);
     } catch (err) {
       console.warn('Piper no disponible', err);
+    } finally {
+      gvPiperFillingSelects.delete(sel);
     }
   }
   // Rellena el <select>: primero las voces en español de la plataforma/neurales,
@@ -931,6 +964,28 @@ Describe el error o la corrección sugerida.`)}`;
     new Int16Array(ab, header).set(pcm);
     return new Blob([ab], { type: 'audio/wav' });
   }
+  type CopyFeedbackState = 'copied' | 'error';
+  const gvCopyResetTimers = new WeakMap<HTMLButtonElement, number>();
+  function gvSetCopyFeedback(button: HTMLButtonElement, state: CopyFeedbackState) {
+    const iconSwap = button.querySelector<HTMLElement>('[data-copy-swap]');
+    const status = button.parentElement?.querySelector<HTMLElement>(':scope > [data-copy-status]');
+    const previousTimer = gvCopyResetTimers.get(button);
+    if (previousTimer) window.clearTimeout(previousTimer);
+
+    if (iconSwap) iconSwap.dataset.state = state;
+    if (status) {
+      status.textContent = state === 'copied'
+        ? button.dataset.copySuccessMessage ?? 'Contenido copiado al portapapeles.'
+        : button.dataset.copyErrorMessage ?? 'No se pudo copiar el contenido.';
+    }
+
+    gvCopyResetTimers.set(button, window.setTimeout(() => {
+      if (iconSwap?.isConnected) iconSwap.dataset.state = 'idle';
+      if (status?.isConnected) status.textContent = '';
+      gvCopyResetTimers.delete(button);
+    }, state === 'copied' ? 2000 : 2500));
+  }
+
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
     const prose = document.querySelector('.prose');
@@ -1007,13 +1062,18 @@ Describe el error o la corrección sugerida.`)}`;
       return;
     }
     if (target.closest('#btn-copy-md')) {
-      if (!exportEl) return;
-      const btn = target.closest('#btn-copy-md');
-      navigator.clipboard.writeText(exportEl.getAttribute('data-md') ?? '').then(() => {
+      const btn = target.closest<HTMLButtonElement>('#btn-copy-md');
+      const markdown = exportEl?.getAttribute('data-md') ?? '';
+      if (!btn) return;
+      if (!navigator.clipboard || !markdown) {
+        gvSetCopyFeedback(btn, 'error');
+        return;
+      }
+      void navigator.clipboard.writeText(markdown).then(() => {
         play('success');
-        const label = btn?.querySelector('[data-copy-label]');
-        if (label) label.textContent = 'Copiado';
-        setTimeout(() => { if (label) label.textContent = 'Copiar como Markdown'; }, 2000);
+        gvSetCopyFeedback(btn, 'copied');
+      }).catch(() => {
+        gvSetCopyFeedback(btn, 'error');
       });
       return;
     }
@@ -1033,20 +1093,17 @@ Describe el error o la corrección sugerida.`)}`;
     }
     if (target.closest('[data-copy-prompt]')) {
       const fullPrompt = promptEl?.getAttribute('data-prompt') ?? '';
-      const btn = target.closest('[data-copy-prompt]');
-      const label = btn?.querySelector('[data-copy-label]');
+      const btn = target.closest<HTMLButtonElement>('[data-copy-prompt]');
+      if (!btn) return;
       if (!navigator.clipboard || !fullPrompt) {
-        if (label) label.textContent = 'No se pudo copiar';
-        setTimeout(() => { if (label) label.textContent = 'Copiar prompt'; }, 2500);
+        gvSetCopyFeedback(btn, 'error');
         return;
       }
-      navigator.clipboard.writeText(fullPrompt).then(() => {
+      void navigator.clipboard.writeText(fullPrompt).then(() => {
         play('success');
-        if (label) label.textContent = 'Prompt copiado';
-        setTimeout(() => { if (label) label.textContent = 'Copiar prompt'; }, 2500);
+        gvSetCopyFeedback(btn, 'copied');
       }).catch(() => {
-        if (label) label.textContent = 'No se pudo copiar';
-        setTimeout(() => { if (label) label.textContent = 'Copiar prompt'; }, 2500);
+        gvSetCopyFeedback(btn, 'error');
       });
     }
   });
@@ -1054,7 +1111,6 @@ Describe el error o la corrección sugerida.`)}`;
   if (window.speechSynthesis) {
     window.speechSynthesis.addEventListener?.('voiceschanged', () => { gvFillVoices(); gvFilled = true; });
   }
-  document.addEventListener('astro:page-load', gvEnsureVoices);
   // Si el texto de esta página ya está sintetizado (cache) y pausado, el botón
   // debe mostrar "Reanudar" en vez de "Escuchar"; re-zipea los bloques para que
   // el resaltado/salto funcionen sin resintetizar.
@@ -1071,7 +1127,15 @@ Describe el error o la corrección sugerida.`)}`;
     if (label) label.textContent = 'Reanudar';
     gvShowTtsControls(true);
   }
-  document.addEventListener('astro:page-load', () => { gvFillPiperVoices(); gvMarkResumable(); });
+  function gvInitTts() {
+    gvEnsureVoices();
+    void gvFillPiperVoices();
+    gvMarkResumable();
+  }
+  // Inicializa también en la carga directa: astro:page-load puede emitirse
+  // antes de que este módulo termine de evaluarse en una transición.
+  gvInitTts();
+  document.addEventListener('astro:page-load', gvInitTts);
   document.addEventListener('change', (e) => {
     const target = e.target as HTMLSelectElement | null;
     if (target?.id === 'tts-voice') {
@@ -1087,4 +1151,36 @@ Describe el error o la corrección sugerida.`)}`;
     }
   });
 </script>
+
+<style>
+  .copy-icon-swap {
+    position: relative;
+    display: inline-grid;
+    width: 1rem;
+    height: 1rem;
+  }
+  .copy-icon-swap > .copy-icon {
+    grid-area: 1 / 1;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.25);
+    pointer-events: none;
+    transition:
+      opacity 200ms cubic-bezier(0.2, 0, 0, 1),
+      filter 200ms cubic-bezier(0.2, 0, 0, 1),
+      transform 200ms cubic-bezier(0.2, 0, 0, 1);
+  }
+  .copy-icon-swap[data-state='idle'] > [data-icon='idle'],
+  .copy-icon-swap[data-state='copied'] > [data-icon='copied'],
+  .copy-icon-swap[data-state='error'] > [data-icon='error'] {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .copy-icon-swap > .copy-icon { transition: none; }
+  }
+</style>
 

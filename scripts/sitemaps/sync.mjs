@@ -27,6 +27,11 @@
  *                 sitemap ya no liste). Por defecto es modo MERGE: nunca se
  *                 borra una URL existente y los títulos solo se mejoran
  *                 (news > slug), nunca se degradan.
+ *   --since-last-sync
+ *                 Usa como ventana la fecha UTC de `ultima_sync` de cada medio
+ *                 en `_manifest.json` (inclusiva). Si no existe o no es válida,
+ *                 ese medio se sincroniza completo. No se puede combinar con
+ *                 `--since`, `--days` ni `--replace`.
  *   --since <YYYY-MM-DD>
  *                 Solo sincroniza contenido reciente, sin recargar el
  *                 catálogo completo (ideal cuando los sitemaps ya se
@@ -54,7 +59,7 @@
  *   actualiza títulos solo si el nuevo es mejor; NUNCA borra entradas.
  */
 
-import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync, statSync, openSync, closeSync, renameSync, rmSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { gunzipSync } from 'node:zlib';
@@ -64,6 +69,7 @@ const ROOT = join(__dirname, '../..');
 const SITEMAPS_DIR = join(ROOT, 'sitemaps');
 const CACHE_DIR = join(SITEMAPS_DIR, '.cache');
 const MANIFEST_PATH = join(SITEMAPS_DIR, '_manifest.json');
+const MANIFEST_LOCK_PATH = `${MANIFEST_PATH}.lock`;
 
 const COMMON_UA =
   'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36';
@@ -2175,13 +2181,13 @@ function sitemapUrlDate(u) {
   } catch {
     return null;
   }
-  let m = path.match(/(20\d{2})[-/](\d{2})[-/](\d{2})/);
+  let m = path.match(/((?:19|20)\d{2})[-/](\d{2})[-/](\d{2})/);
   if (m) return { y: +m[1], mo: +m[2], d: +m[3] };
-  m = path.match(/(?:^|[^\d])(\d{2})[-/](\d{2})[-/](20\d{2})/);
+  m = path.match(/(?:^|[^\d])(\d{2})[-/](\d{2})[-/]((?:19|20)\d{2})/);
   if (m) return { y: +m[3], mo: +m[2], d: +m[1] };
-  m = path.match(/(20\d{2})[-/](\d{2})(?=\D|$)/);
+  m = path.match(/((?:19|20)\d{2})[-/](\d{2})(?=\D|$)/);
   if (m) return { y: +m[1], mo: +m[2] };
-  m = path.match(/(?:^|[^\d])(20\d{2})(?:[^\d]|$)/);
+  m = path.match(/(?:^|[^\d])((?:19|20)\d{2})(?:[^\d]|$)/);
   if (m) return { y: +m[1] };
   return null;
 }
@@ -2248,16 +2254,115 @@ function cleanText(str = '') {
     .trim();
 }
 
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+function emptyManifest() {
+  return { version: 1, descripcion: '', actualizado: null, medios: {} };
+}
+
 function readManifest() {
   try {
     return JSON.parse(readFileSync(MANIFEST_PATH, 'utf8'));
-  } catch {
-    return { version: 1, descripcion: '', actualizado: null, medios: {} };
+  } catch (err) {
+    // Solo ausencia equivale a un manifest nuevo. Un JSON truncado o ilegible
+    // debe abortar: replace-all con un manifest vacío perdería todos los estados.
+    if (err?.code === 'ENOENT') return emptyManifest();
+    throw err;
   }
 }
 
-function writeManifest(manifest) {
-  writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2) + '\n', 'utf8');
+// Fecha UTC de la última sincronización guardada para un medio. `--since-last-sync`
+// la usa como cutoff inclusivo por medio: no necesita conocer qué sitemap cambia,
+// solo vuelve a evaluar los endpoints cuyo rango de fechas pueda intersectar la
+// ventana. Un medio sin timestamp válido conserva el sync completo.
+function lastSyncSince(manifest, medio) {
+  const raw = manifest?.medios?.[medio]?.ultima_sync;
+  if (!raw) return null;
+  const date = new Date(raw);
+  if (Number.isNaN(date.getTime())) return null;
+  return date.toISOString().slice(0, 10);
+}
+
+async function acquireManifestLock() {
+  const deadline = Date.now() + 20_000;
+  const transient = new Set(['EEXIST', 'EACCES', 'EBUSY', 'EPERM', 'UNKNOWN']);
+  while (Date.now() < deadline) {
+    let fd;
+    try {
+      fd = openSync(MANIFEST_LOCK_PATH, 'wx');
+      writeFileSync(fd, JSON.stringify({ pid: process.pid, acquiredAt: new Date().toISOString() }) + '\n', 'utf8');
+      closeSync(fd);
+      return;
+    } catch (err) {
+      if (fd !== undefined) {
+        try { closeSync(fd); } catch {}
+        try { rmSync(MANIFEST_LOCK_PATH, { force: true }); } catch {}
+      }
+      if (!transient.has(err?.code)) throw err;
+
+      // Un proceso que murió puede dejar el lock. El update normal tarda
+      // milisegundos, así que 10s es holgadamente stale.
+      try {
+        if (Date.now() - statSync(MANIFEST_LOCK_PATH).mtimeMs > 10_000) {
+          rmSync(MANIFEST_LOCK_PATH, { force: true });
+          continue;
+        }
+      } catch (statErr) {
+        if (statErr?.code === 'ENOENT') continue;
+      }
+      await sleep(100 + Math.floor(Math.random() * 100));
+    }
+  }
+  throw new Error(`No se pudo bloquear ${MANIFEST_LOCK_PATH} después de 20s`);
+}
+
+async function releaseManifestLock() {
+  for (let attempt = 0; attempt < 3; attempt++) {
+    try {
+      rmSync(MANIFEST_LOCK_PATH, { force: true });
+      return;
+    } catch {
+      await sleep(50 * (attempt + 1));
+    }
+  }
+}
+
+// Windows/antivirus pueden bloquear momentáneamente el open (`UNKNOWN`,
+// `EPERM`, `EBUSY`). Se escribe primero a un temporal único y se renombra de
+// forma atómica; el rename garantiza que nunca quede un manifest truncado.
+async function writeManifest(manifest) {
+  const data = JSON.stringify(manifest, null, 2) + '\n';
+  const tempPath = `${MANIFEST_PATH}.${process.pid}.${Date.now()}.${Math.random().toString(16).slice(2)}.tmp`;
+  let lastError;
+  for (let attempt = 0; attempt < 10; attempt++) {
+    try {
+      writeFileSync(tempPath, data, { encoding: 'utf8', flag: 'wx' });
+      renameSync(tempPath, MANIFEST_PATH);
+      return;
+    } catch (err) {
+      lastError = err;
+      try { rmSync(tempPath, { force: true }); } catch {}
+      if (attempt < 9) await sleep(Math.min(100 * 2 ** attempt, 1_000));
+    }
+  }
+  throw new Error(
+    `No se pudo escribir ${MANIFEST_PATH} tras 10 intentos (${lastError?.code ?? 'UNKNOWN'})`,
+    { cause: lastError },
+  );
+}
+
+// Read-modify-write protegido entre procesos. El lock evita lost updates cuando
+// varios syncs terminan a la vez; el rename atómico evita lecturas parciales.
+async function updateManifest(mutate) {
+  await acquireManifestLock();
+  try {
+    const manifest = readManifest();
+    const result = mutate(manifest);
+    await writeManifest(manifest);
+    return result;
+  } finally {
+    await releaseManifestLock();
+  }
 }
 
 // ---------------------------------------------------------------------------
@@ -2338,6 +2443,9 @@ async function fetchWithCrawlee(url, attempts = 3) {
         maxRequestsPerCrawl: 1,
         retryOnBlocked: true,
         maxRequestRetries: attempts - 1,
+        // SessionError tiene un límite de rotaciones separado (10 por defecto).
+        // Alinearlo para que `attempts` también sea el tope real.
+        maxSessionRotations: attempts - 1,
         requestHandler: async (ctx) => {
           const body = ctx.body;
           const status =
@@ -2539,12 +2647,14 @@ async function syncMedio(medio, conf, opts) {
   let urlFiltered = 0;      // sub-sitemaps omitidos por fecha en su URL
   let cacheFiltered = 0;    // sub-sitemaps omitidos por rango del XML cacheado
   let entriesFiltered = 0;  // entradas fuera de la ventana (no se tocan)
+  let failed = 0;           // endpoints que no se pudieron leer en este run
   logInfo(`=== Sincronizando ${conf.nombre} (${medio}) ===`);
 
   const discovered = await discoverSitemapUrls(medio, conf, opts);
   if (discovered.length === 0) {
+    failed++;
     logWarn(`${conf.nombre}: no se encontraron sitemaps.`);
-    return { medio, nombre: conf.nombre, urls: 0, fromCache: 0 };
+    return { medio, nombre: conf.nombre, urls: null, years: null, fromCache: 0, failed, complete: false };
   }
 
   // Sitemaps que NO contienen artículos de noticias (tags, categorías,
@@ -2599,6 +2709,7 @@ async function syncMedio(medio, conf, opts) {
       }
       flat.push(u);
     } else {
+      failed++;
       logWarn(`Sitemap inaccesible: ${u} (${res.status ?? 'error'})`);
     }
   }
@@ -2636,6 +2747,7 @@ async function syncMedio(medio, conf, opts) {
     }
     const res = await fetchText(u, { cacheKey: key, cacheDir, fresh, staleHours, noCache });
     if (!res.ok) {
+      failed++;
       logWarn(`[${i + 1}/${uniqueFlat.length}] no descargable: ${u} (${res.status ?? res.error})`);
       continue;
     }
@@ -2743,7 +2855,13 @@ async function syncMedio(medio, conf, opts) {
   if (since) {
     logOk(`   └ ventana --since ${since}: ${urlFiltered} sub-sitemap(s) históricos filtrados por URL, ${cacheFiltered} omitidos por caché, ${entriesFiltered} entradas fuera de ventana no tocadas`);
   }
-  return { medio, nombre: conf.nombre, urls: total, added, upgraded, kept, fromCache, years: Object.keys(years).length };
+  if (failed > 0) {
+    logWarn(`   └ ${failed} endpoint(s) fallaron; ultima_sync no avanzará para ${conf.nombre}.`);
+  }
+  if (limit) {
+    logWarn(`   └ --limit ${limit} puede truncar el recorrido; ultima_sync no avanzará para ${conf.nombre}.`);
+  }
+  return { medio, nombre: conf.nombre, urls: total, added, upgraded, kept, fromCache, failed, complete: failed === 0 && !limit, years: Object.keys(years).length };
 }
 
 // ---------------------------------------------------------------------------
@@ -2777,6 +2895,12 @@ async function main() {
   const delayMs = noDelay ? 0 : (Number.isNaN(delayRaw) ? 300 : delayRaw);
   const incremental = flags.has('--incremental');
   const replace = flags.has('--replace');
+  const sinceLastSync = flags.has('--since-last-sync');
+
+  if (sinceLastSync && (flags.has('--since') || flags.has('--days'))) {
+    logErr('--since-last-sync no se puede combinar con --since ni --days.');
+    process.exit(1);
+  }
 
   // --since <YYYY-MM-DD> / --days <n>: ventana temporal para sincronizar solo
   // lo reciente (ver comentario de cabecera). --replace + ventana borraría la
@@ -2797,8 +2921,8 @@ async function main() {
     since = d.toISOString().slice(0, 10);
     logInfo(`Ventana temporal: últimos ${days} día(s) (desde ${since})`);
   }
-  if (since && replace) {
-    logErr('--since/--days no es compatible con --replace (borraría la historia). Usa el modo merge por defecto o --incremental.');
+  if ((since || sinceLastSync) && replace) {
+    logErr('--since/--days/--since-last-sync no es compatible con --replace (borraría la historia). Usa el modo merge por defecto o --incremental.');
     process.exit(1);
   }
 
@@ -2817,29 +2941,52 @@ async function main() {
   const cacheDir = noCache ? null : CACHE_DIR;
   const results = [];
   const opts = { cacheDir, fresh, staleHours, noCache, limit, delayMs, incremental, replace, since };
+  // Snapshot ANTES del loop: `ultima_sync` se actualiza al final de cada medio y
+  // no debe cambiar el cutoff de los medios siguientes.
+  const manifestBefore = readManifest();
   for (const t of targets) {
-    const r = await syncMedio(t, MEDIA[t], opts);
+    const targetSince = sinceLastSync ? lastSyncSince(manifestBefore, t) : since;
+    if (sinceLastSync) {
+      if (targetSince) {
+        logInfo(`Ventana desde la última sync de ${MEDIA[t].nombre}: ${targetSince} (inclusive)`);
+      } else {
+        logWarn(`${MEDIA[t].nombre}: sin ultima_sync válida; se sincronizará completo.`);
+      }
+    }
+    const r = await syncMedio(t, MEDIA[t], { ...opts, since: targetSince });
     results.push(r);
-    // Escribir el manifest POR MEDIO (read-modify-write): si otro proceso
-    // sincroniza otro medio en paralelo, su entrada no se pisa (los JSONL de
-    // cada medio ya quedaron escritos por syncMedio). Sin esto, dos syncs
-    // simultáneos perdían las entradas del manifest del que terminaba primero
-    // (los JSONL quedaban, el estado se perdía).
-    const m = readManifest();
-    m.medios[t] = {
-      nombre: MEDIA[t].nombre,
-      ultima_sync: new Date().toISOString(),
-      articulos: r.urls,
-      nuevos: r.added ?? 0,
-      años: r.years,
-    };
-    m.actualizado = new Date().toISOString();
-    writeManifest(m);
+    // Update atómico y serializado POR MEDIO: si otro proceso sincroniza otro
+    // medio en paralelo, el lock + read-modify-write conserva ambas entradas.
+    const failed = r.failed ?? 0;
+    const complete = r.complete ?? failed === 0;
+    await updateManifest((m) => {
+      m.medios ??= {};
+      const now = new Date().toISOString();
+      const previous = m.medios[t] ?? {};
+      // `ultima_sync` es un watermark de cobertura, no solo de intento: si un
+      // endpoint falló o --limit truncó el recorrido, no se avanza. Así el próximo
+      // --since-last-sync reintenta desde la última ventana realmente completa.
+      m.medios[t] = {
+        nombre: MEDIA[t].nombre,
+        ultima_sync: complete ? now : (previous.ultima_sync ?? null),
+        articulos: r.urls ?? previous.articulos ?? 0,
+        nuevos: r.added ?? 0,
+        años: r.years ?? previous.años ?? 0,
+      };
+      m.actualizado = now;
+    });
   }
 
   console.log('\n=== Resumen ===');
   for (const r of results) {
-    console.log(`  ${r.nombre}: ${r.urls} artículos en ${r.years} año(s) (+${r.added ?? 0} nuevos)`);
+    if (r.urls == null) {
+      console.log(`  ${r.nombre}: sincronización incompleta; estado anterior conservado`);
+      continue;
+    }
+    const warning = r.complete === false
+      ? `; ${r.failed ? `${r.failed} endpoint(s) fallaron` : 'recorrido incompleto'}, ultima_sync conservada`
+      : '';
+    console.log(`  ${r.nombre}: ${r.urls} artículos en ${r.years} año(s) (+${r.added ?? 0} nuevos)${warning}`);
   }
 }
 
@@ -2857,4 +3004,4 @@ if (isMain) {
   });
 }
 
-export { MEDIA, isoDate, sitemapUrlDate, sitemapUrlInWindow, peekCachedMaxDate };
+export { MEDIA, isoDate, lastSyncSince, sitemapUrlDate, sitemapUrlInWindow, peekCachedMaxDate };

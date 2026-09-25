@@ -35,8 +35,8 @@ NO guarda el cuerpo de los artículos.
 
 | Comando | Función |
 | --- | --- |
-| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since`/`--days` sincroniza SOLO lo reciente (filtra sub-sitemaps históricos por la fecha de su URL —BioBio/CNN/Meganoticias/Mestizos/Publimetro/FastCheck—, omite por el rango del XML cacheado los que no llevan fecha —Yoast/Arc XP— y no toca entradas antiguas); incompatible con `--replace` |
-| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). Acepta `--since YYYY-MM-DD` / `--days N` para resync solo de contenido reciente (pasa el flag a `sitemaps-sync`). **Filtra huérfanos**: importa `MEDIA` desde `scripts/sitemaps/sync.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
+| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since-last-sync`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since-last-sync` usa para cada medio la fecha UTC inclusiva de su `ultima_sync`; si falta, sincroniza completo. `--since`/`--days` fija una ventana común relativa a fecha/hoy. Todas filtran sub-sitemaps históricos por la URL y, si no llevan fecha, por el rango del XML cacheado; no tocan entradas antiguas y son incompatibles con `--replace` |
+| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental desde la `ultima_sync` de cada medio + regenera README + backup. Nunca borra datos existentes. Si algún endpoint falla, ese medio conserva su watermark anterior y el siguiente resync reintenta la misma ventana. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). `--since YYYY-MM-DD` / `--days N` reemplaza el cutoff automático por una ventana común explícita. **Filtra huérfanos**: importa `MEDIA` desde `scripts/sitemaps/sync.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
 | `pnpm run sitemaps-index` | genera `sitemaps/README.md` (resumen) + `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años para editores). Antes generaba además la sección “Medios registrados” de `AGENTS.md` (marcadores `AUTO-GENERATED-SITEMAPS-MEDIOS`); `AGENTS.md` solo apunta a `sitemaps/MEDIOS.md` + `README.md` + `_manifest.json` para evitar diffs ruidosos |
 
 **Al agregar un medio nuevo** (a `MEDIA` en `scripts/sitemaps/sync.mjs`): además de `sitemaps-index`
@@ -81,8 +81,12 @@ Notas de plataforma (complemento manual, no se reescribe):
   histórico). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con decenas de URLs, pero no
   hay índice que los enumere: el sync captura solo lo reciente (~5-100 URLs).
 - **Emol** (CMS propio): index por año desde 1992 (`sitemap{N}_{year}.xml`, ~8.000 URLs por
-  sub-sitemap; ~1,1M artículos). El `robots.txt` declara además `sitemapIndexFotos.xml` y
-  `sitemapIndexVideos.xml` (tv.emol.com) — el `includeRe` `sitemap\d+_\d{4}\.xml$` los descarta.
+  sub-sitemap; ~1,1M artículos). El filtro temporal reconoce años 19xx y 20xx: desde
+  una ventana como 2026-09-22 descarta los shards 1992–2025 y descarga solo los del
+  año en curso; al ser shards anuales, luego filtra por fecha los artículos
+  fuera de la ventana. El `robots.txt`
+  declara además `sitemapIndexFotos.xml` y `sitemapIndexVideos.xml` (tv.emol.com) — el
+  `includeRe` `sitemap\d+_\d{4}\.xml$` los descarta.
   **Ojo protocolo**: el index y los `<loc>` de los artículos vienen en `http://` pero el sitio
   solo responde por `https://` (curl/node fetch fallan con http) — el flag `forceHttps: true`
   normaliza ambos (sub-sitemaps y URLs guardadas). **Sin `<lastmod>` ni `news:date`**: la fecha
@@ -130,9 +134,10 @@ Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos e
 — si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
 pasada mejora la entrada (`news` > `slug`).
 
-**Syncs paralelos**: `main()` escribe `_manifest.json` por medio (read-modify-write tras cada
-sync), así que correr medios en procesos paralelos ya no pisa el estado de los demás. Aun así,
-para varios medios conviene pasarlos como argumentos en un solo comando
+**Syncs paralelos**: `main()` actualiza `_manifest.json` por medio con un lock entre procesos y
+read-modify-write; el JSON se escribe a un temporal y se renombra atómicamente, con retries para
+locks transitorios de Windows/antivirus. Correr medios en paralelo ya no pisa el estado ni trunca
+el manifest. Aun así, para varios medios conviene pasarlos como argumentos en un solo comando
 (`pnpm run sitemaps-sync -- el_siglo la_nacion ...`): evita el throttle de los sitios y deja un
 solo `manifest.actualizado`.
 

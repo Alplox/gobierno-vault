@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import CabinetPortfolioHistory from '../components/CabinetPortfolioHistory.astro';
 import {
   getCabinetByMinistry,
   getCabinetByGobierno,
@@ -8,7 +9,7 @@ import {
   GOBIERNOS,
   type GobiernoAppointment,
 } from '../lib/cabinet';
-import { Landmark, UserRound, History, ChevronDown, Layers, Timer, CalendarRange, UserX, XCircle } from 'lucide-astro';
+import { Landmark, UserRound, Layers, Timer, CalendarRange, UserX, XCircle } from 'lucide-astro';
 
 const cabinet = getCabinetByMinistry();
 const gobiernos = getCabinetByGobierno();
@@ -32,7 +33,18 @@ const historicos = cabinet.reduce((s, c) => s + c.historico.length, 0);
 // Es solo el fallback sin-JS: gvRefreshHoy() re-ancla el corte a la fecha real
 // del cliente si el deploy quedó stale (barras de vigentes, línea "hoy",
 // duraciones móviles, stats y la fecha de corte del header).
-const fechaMaxDatos = new Date().toISOString().slice(0, 10);
+function fechaEnChile(date = new Date()): string {
+  const partes = new Intl.DateTimeFormat('en-CA', {
+    timeZone: 'America/Santiago',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+  }).formatToParts(date);
+  const valor = (tipo: string) => partes.find((parte) => parte.type === tipo)?.value ?? '';
+  return `${valor('year')}-${valor('month')}-${valor('day')}`;
+}
+
+const fechaMaxDatos = fechaEnChile();
 
 type Segmento = { leftPct: number; widthPct: number; a: GobiernoAppointment };
 
@@ -187,12 +199,12 @@ function statsGobierno(
   </div>
 
   <!-- Toggle de vista -->
-  <div class="flex items-center gap-1 mb-6 bg-base-200/80 rounded-xl p-1 w-fit border border-base-300/70" role="tablist" aria-label="Vista del gabinete">
-    <button type="button" data-gv-view="carteras" class="gv-view-btn rounded-lg px-4 py-2 text-sm font-semibold transition-colors cursor-pointer" aria-selected="true">Por cartera</button>
-    <button type="button" data-gv-view="gobiernos" class="gv-view-btn rounded-lg px-4 py-2 text-sm font-semibold transition-colors cursor-pointer" aria-selected="false">Por gobierno</button>
+  <div class="flex items-center gap-1 mb-6 bg-base-200/80 rounded-xl p-1 w-fit border border-base-300/70" role="group" aria-label="Vista del gabinete">
+    <button type="button" data-gv-view="carteras" class="gv-view-btn rounded-lg px-4 py-2 text-sm font-semibold transition-colors cursor-pointer" aria-pressed="true">Por cartera</button>
+    <button type="button" data-gv-view="gobiernos" class="gv-view-btn rounded-lg px-4 py-2 text-sm font-semibold transition-colors cursor-pointer" aria-pressed="false">Por gobierno</button>
   </div>
 
-  <!-- VISTA 1: POR CARTERA (formato actual) -->
+  <!-- VISTA 1: POR CARTERA (línea de tiempo + historial) -->
   <div id="gv-view-carteras" class="space-y-4" data-gv-panel="carteras">
     {cabinet.map((c) => (
       <section class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] overflow-hidden">
@@ -225,27 +237,7 @@ function statsGobierno(
           </a>
         </header>
 
-        {c.historico.length > 0 && (
-          <details class="group">
-            <summary class="flex items-center gap-2 px-5 py-2.5 text-xs font-semibold text-base-content/60 hover:text-base-content hover:bg-base-200 cursor-pointer list-none transition-colors select-none">
-              <History class="h-3.5 w-3.5 shrink-0" />
-              <span>Histórico de titulares ({c.historico.length})</span>
-              <ChevronDown class="h-3.5 w-3.5 ml-auto transition-transform group-open:rotate-180" />
-            </summary>
-            <ul class="px-5 pb-4 space-y-2.5">
-              {c.historico.map((a) => (
-                <li class="flex flex-wrap items-center gap-x-2 gap-y-1 text-sm pl-1 border-l-2 border-base-300">
-                  <a href={`/people/${a.personId}`} class="font-medium text-base-content/80 hover:text-primary transition-colors">{a.nombre}</a>
-                  <span class="text-xs text-base-content/40">{a.cargo}</span>
-                  <span class="text-xs text-base-content/40">· {periodoDe(a)}</span>
-                  {a.biministro && <span class="text-[10px] font-bold uppercase tracking-wide bg-warning/20 text-warning px-1.5 py-0.5 rounded-full">Biministro</span>}
-                  {a.subrogante && <span class="text-[10px] font-bold uppercase tracking-wide bg-warning/20 text-warning px-1.5 py-0.5 rounded-full">Subrogante</span>}
-                  {a.fechasSinRegistrar && <span class="text-[10px] font-medium text-base-content/40">(fechas sin registrar)</span>}
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
+        <CabinetPortfolioHistory cartera={c} corte={fechaMaxDatos} />
       </section>
     ))}
   </div>
@@ -253,11 +245,11 @@ function statsGobierno(
   <!-- VISTA 2: POR GOBIERNO (línea de tiempo) -->
   <div id="gv-view-gobiernos" class="hidden" data-gv-panel="gobiernos">
     <!-- Selector de presidente -->
-    <div class="flex flex-wrap gap-1.5 mb-6" role="tablist" aria-label="Seleccionar gobierno">
+    <div class="flex flex-wrap gap-1.5 mb-6" role="group" aria-label="Seleccionar gobierno">
       {GOBIERNOS.map((g) => (
           <button type="button" data-gv-gob={g.id}
             class="gv-gob-btn rounded-lg border border-base-300 bg-base-100 px-3 py-1.5 text-xs font-semibold text-base-content/70 hover:border-primary/50 hover:text-primary transition-colors cursor-pointer"
-            aria-selected={g.id === 'kast'}>
+            aria-pressed={g.id === 'kast'}>
             <span class="block leading-tight">{g.presidente}</span>
             <span class="block text-[10px] font-normal text-base-content/40">{g.partido} · {g.desde.slice(0, 4)}{g.hasta ? `–${g.hasta.slice(0, 4)}` : '–'}</span>
           </button>
@@ -310,7 +302,7 @@ function statsGobierno(
               <span class="inline-flex items-center gap-1"><span class="h-2.5 w-2.5 rounded-sm bg-primary/70 inline-block" /> Titular del periodo (incluye en ejercicio)</span>
               <span class="inline-flex items-center gap-1"><span class="h-2.5 w-2.5 rounded-sm bg-error/70 inline-block" /> Salida anticipada (renuncia/cambio)</span>
               {stats.promedio !== null && stats.masLongevo && stats.masBreve && (
-                <span class="inline-flex items-center gap-1.5 text-base-content/70 ml-auto">
+                <span class="flex flex-wrap items-center gap-1.5 text-base-content/70 basis-full sm:basis-auto sm:ml-auto">
                   <Timer class="h-3.5 w-3.5 shrink-0" />
                   <span>Duración media: <span data-gv-stat-prom>{stats.promedio}</span> días</span>
                   <span class="text-base-content/30">·</span>
@@ -396,6 +388,8 @@ function statsGobierno(
                                   data-gv-nombre={a.nombre}
                                   data-gv-dias={diasCargo(a, tDatos)}
                                   data-gv-vigente={!a.hastaGob ? '1' : undefined}
+                                  aria-label={`${a.nombre} · ${duracionCorta(a)}${etiquetaDias(a, tDatos)}`}
+                                  tabindex="-1"
                                   class={`gv-seg absolute top-0 h-full block ${segmentoClase(a)} transition-colors ${a.biministro ? 'ring-2 ring-inset ring-warning/50' : ''} ${a.subrogante ? 'ring-2 ring-inset ring-orange-300' : ''}`}
                                   style={`left:${leftPct.toFixed(2)}%;width:${widthPct.toFixed(2)}%;`}
                                   title={`${a.nombre} · ${duracionCorta(a)}${etiquetaDias(a, tDatos)}${a.salidaPrevia ? ' · SALIÓ ANTES DEL TÉRMINO' : ''}${a.biministro ? ' · Biministro' : ''}${a.subrogante ? ' · Subrogante' : ''}${a.fechasSinRegistrar ? ' · fechas sin registrar' : ''}`}
@@ -481,7 +475,7 @@ function statsGobierno(
   </div>
 
   <p class="text-xs text-base-content/40 mt-8 leading-relaxed">
-    «En ejercicio» = cargo sin fecha de término; «fechas sin registrar» indica información incompleta. En «Por gobierno» cada barra cubre el mandato completo (4 años): azul = completó el periodo o sigue vigente, rojo = salida anticipada. Pulsa un nombre o segmento para ver la ficha de la persona.
+    «En ejercicio» = cargo sin fecha de término; «fechas sin registrar» indica información incompleta. En «Por cartera», la cinta ubica cada mandato dentro del periodo documentado y el detalle añade su duración; el corte mostrado en el SSR se actualiza a la fecha local de Chile cuando hay JavaScript. En «Por gobierno» cada barra cubre el mandato completo (4 años): azul = completó el periodo o sigue vigente, rojo = salida anticipada. Pulsa un nombre o segmento para ver la ficha de la persona.
   </p>
 </Base>
 
@@ -498,7 +492,7 @@ function statsGobierno(
     });
     document.querySelectorAll('.gv-view-btn').forEach((btn) => {
       const active = btn.getAttribute('data-gv-view') === view;
-      btn.setAttribute('aria-selected', String(active));
+      btn.setAttribute('aria-pressed', String(active));
       btn.className = `gv-view-btn rounded-lg px-4 py-2 text-sm font-semibold transition-colors cursor-pointer ${active ? 'bg-base-100 shadow-sm text-base-content' : 'text-base-content/60 hover:text-base-content'}`;
     });
     gvPackNames();
@@ -510,7 +504,7 @@ function statsGobierno(
     });
     document.querySelectorAll('.gv-gob-btn').forEach((btn) => {
       const active = btn.getAttribute('data-gv-gob') === id;
-      btn.setAttribute('aria-selected', String(active));
+      btn.setAttribute('aria-pressed', String(active));
       btn.className = `gv-gob-btn rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors cursor-pointer ${active ? 'border-primary/60 bg-primary/10 text-primary' : 'border-base-300 bg-base-100 text-base-content/70 hover:border-primary/50 hover:text-primary'}`;
     });
     gvPackNames();
@@ -570,17 +564,133 @@ function statsGobierno(
   // datos ya presentes en el DOM (desde/vigente por segmento): no inventa
   // ministros nuevos — esos requieren rebuild. No-JS ve el snapshot con su
   // "corte al <fecha build>" explícito.
+  function gvFechaEnChile(date = new Date()): string {
+    const partes = new Intl.DateTimeFormat('en-CA', {
+      timeZone: 'America/Santiago',
+      year: 'numeric',
+      month: '2-digit',
+      day: '2-digit',
+    }).formatToParts(date);
+    const valor = (tipo: string) => partes.find((parte) => parte.type === tipo)?.value ?? '';
+    return `${valor('year')}-${valor('month')}-${valor('day')}`;
+  }
+
   const GV_MESES = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 
+  function gvFechaMs(iso: string): number {
+    if (/^\d{4}$/.test(iso)) return Date.parse(`${iso}-01-01T00:00:00Z`);
+    if (/^\d{4}-\d{2}$/.test(iso)) return Date.parse(`${iso}-01T00:00:00Z`);
+    return Date.parse(`${iso.slice(0, 10)}T00:00:00Z`);
+  }
+
+  function gvPlural(valor: number, singular: string, plural_: string): string {
+    return `${valor} ${valor === 1 ? singular : plural_}`;
+  }
+
+  function gvDuracionLegible(desdeIso: string, hastaIso: string): string {
+    const desde = gvFechaMs(desdeIso);
+    const hasta = gvFechaMs(hastaIso);
+    if (!Number.isFinite(desde) || !Number.isFinite(hasta) || hasta < desde) return 'Periodo sin registrar';
+    const dias = Math.max(0, Math.round((hasta - desde) / 86400000));
+    if (dias < 31) return dias === 0 ? 'Menos de 1 día' : gvPlural(dias, 'día', 'días');
+
+    const inicio = new Date(desde);
+    const fin = new Date(hasta);
+    let anios = fin.getUTCFullYear() - inicio.getUTCFullYear();
+    let meses = fin.getUTCMonth() - inicio.getUTCMonth();
+    let resto = fin.getUTCDate() - inicio.getUTCDate();
+    if (resto < 0) {
+      meses -= 1;
+      resto += new Date(Date.UTC(fin.getUTCFullYear(), fin.getUTCMonth(), 0)).getUTCDate();
+    }
+    if (meses < 0) {
+      anios -= 1;
+      meses += 12;
+    }
+    const partes: string[] = [];
+    if (anios) partes.push(gvPlural(anios, 'año', 'años'));
+    if (meses) partes.push(gvPlural(meses, 'mes', 'meses'));
+    if (resto) partes.push(gvPlural(resto, 'día', 'días'));
+    return partes.join(' y ');
+  }
+
+  function gvAnchoDuracion(dias: number): number {
+    return Math.max(1.25, Math.min(100, (dias / (8 * 365.2425)) * 100));
+  }
+
+  // Las miniaturas de "Por cartera" terminan en la fecha de corte del build.
+  // Si el deploy queda stale, recalculamos escala, duración y corte contra la
+  // fecha real del cliente para que todos los valores visibles sean coherentes.
+  function gvRefreshTimelineCarteras(hoyIso: string, hoy: number) {
+    document.querySelectorAll<HTMLElement>('[data-gv-cartera-timeline]').forEach((timeline) => {
+      const t0 = Number(timeline.dataset.gvCarteraT0);
+      const tFin = Math.max(Number(timeline.dataset.gvCarteraTfin), hoy);
+      const rango = tFin - t0;
+      if (!Number.isFinite(t0) || !Number.isFinite(tFin) || rango <= 0) return;
+
+      timeline.querySelectorAll<HTMLElement>('[data-gv-cartera-segment]').forEach((seg) => {
+        const desdeIso = seg.dataset.gvCarteraDesde ?? '';
+        const desde = gvFechaMs(desdeIso);
+        const vigente = seg.hasAttribute('data-gv-cartera-vigente');
+        const hasta = vigente ? hoy : gvFechaMs(seg.dataset.gvCarteraHasta ?? '');
+        if (!Number.isFinite(desde) || !Number.isFinite(hasta)) return;
+        const left = Math.max(0, Math.min(100, ((desde - t0) / rango) * 100));
+        const visibleStart = Math.max(t0, desde);
+        const visibleEnd = Math.min(tFin, hasta);
+        const width = Math.max(0.9, Math.min(100 - left, ((visibleEnd - visibleStart) / rango) * 100));
+        seg.style.left = `${left.toFixed(3)}%`;
+        seg.style.width = `${width.toFixed(3)}%`;
+        if (vigente) {
+          const dias = Math.max(0, Math.round((hoy - desde) / 86400000));
+          seg.title = `${seg.dataset.gvCarteraNombre ?? 'Titular'} · vigente · ${gvDuracionLegible(desdeIso, hoyIso)} · ${dias} días`;
+        }
+      });
+
+      const hoyPct = Math.max(0, Math.min(100, ((hoy - t0) / rango) * 100));
+      timeline.querySelectorAll<HTMLElement>('[data-gv-cartera-hoy]').forEach((marker) => {
+        marker.style.left = `${hoyPct.toFixed(3)}%`;
+      });
+    });
+
+    document.querySelectorAll<HTMLElement>('[data-gv-cartera-anio-fin]').forEach((label) => {
+      label.textContent = String(new Date(hoy).getUTCFullYear());
+    });
+    document.querySelectorAll<HTMLElement>('[data-gv-cartera-hoy-label]').forEach((label) => {
+      label.textContent = 'hoy';
+    });
+    document.querySelectorAll<HTMLElement>('[data-gv-cartera-fin]').forEach((label) => {
+      label.textContent = 'hoy';
+    });
+    document.querySelectorAll<HTMLElement>('[data-gv-cartera-duracion][data-gv-cartera-vigente]').forEach((badge) => {
+      const desdeIso = badge.dataset.gvCarteraDesde;
+      if (!desdeIso) return;
+      const texto = badge.querySelector<HTMLElement>('[data-gv-cartera-duracion-texto]');
+      if (texto) texto.textContent = gvDuracionLegible(desdeIso, hoyIso);
+    });
+    document.querySelectorAll<HTMLElement>('[data-gv-cartera-duracion-track][data-gv-cartera-vigente]').forEach((track) => {
+      const desdeIso = track.dataset.gvCarteraDesde;
+      if (!desdeIso) return;
+      const dias = Math.max(0, Math.round((hoy - gvFechaMs(desdeIso)) / 86400000));
+      track.title = `${dias} días en el cargo`;
+      const bar = track.querySelector<HTMLElement>('[data-gv-cartera-duracion-bar]');
+      if (bar) bar.style.width = `${gvAnchoDuracion(dias).toFixed(2)}%`;
+      const days = track.querySelector<HTMLElement>('[data-gv-cartera-dias]');
+      if (days) days.textContent = `${dias} días`;
+    });
+  }
+
   function gvRefreshHoy() {
+    const hoyIso = gvFechaEnChile();
+    const hoy = new Date(hoyIso).getTime();
+    if (!hoy) return;
+    gvRefreshTimelineCarteras(hoyIso, hoy);
+
     const panel = document.querySelector<HTMLElement>('[data-gv-actual]');
     if (!panel) return;
     const t0 = Number(panel.dataset.gvT0);
     const t1 = Number(panel.dataset.gvTfin);
     const tBuild = Number(panel.dataset.gvTdatos);
-    const hoyIso = new Date().toISOString().slice(0, 10);
-    const hoy = new Date(hoyIso).getTime();
-    if (!t0 || !t1 || !hoy || hoy <= tBuild) return; // build al día o reloj del cliente atrás
+    if (!t0 || !t1 || hoy <= tBuild) return; // build al día o reloj del cliente atrás
     const pct = ((hoy - t0) / (t1 - t0)) * 100;
     panel.querySelectorAll<HTMLElement>('[data-gv-hoy]').forEach((el) => {
       el.style.left = `${pct.toFixed(2)}%`;
@@ -628,11 +738,27 @@ function statsGobierno(
     if (corte && y && m && d) corte.textContent = ` · corte al ${d} de ${GV_MESES[m - 1]} de ${y}`;
   }
 
+  function gvStorageGet(key: string): string | null {
+    try {
+      return localStorage.getItem(key);
+    } catch {
+      return null;
+    }
+  }
+
+  function gvStorageSet(key: string, value: string): void {
+    try {
+      localStorage.setItem(key, value);
+    } catch {
+      // La vista sigue funcionando aunque el navegador bloquee el almacenamiento.
+    }
+  }
+
   function gvInitGabinete() {
-    const view = localStorage.getItem(STORAGE_VIEW) === 'gobiernos' ? 'gobiernos' : 'carteras';
+    const view = gvStorageGet(STORAGE_VIEW) === 'gobiernos' ? 'gobiernos' : 'carteras';
     gvApplyView(view);
     const gobIds = (window as any).__gvGobiernosIds ?? [];
-    const saved = localStorage.getItem(STORAGE_GOB);
+    const saved = gvStorageGet(STORAGE_GOB);
     const gob = saved && gobIds.includes(saved) ? saved : 'kast';
     gvApplyGob(gob);
   }
@@ -644,14 +770,14 @@ function statsGobierno(
       const viewBtn = target.closest('[data-gv-view]');
       if (viewBtn) {
         const view = viewBtn.getAttribute('data-gv-view')!;
-        localStorage.setItem(STORAGE_VIEW, view);
+        gvStorageSet(STORAGE_VIEW, view);
         gvApplyView(view);
         return;
       }
       const gobBtn = target.closest('[data-gv-gob]');
       if (gobBtn) {
         const id = gobBtn.getAttribute('data-gv-gob')!;
-        localStorage.setItem(STORAGE_GOB, id);
+        gvStorageSet(STORAGE_GOB, id);
         gvApplyGob(id);
         return;
       }

@@ -1402,6 +1402,7 @@
 - [2026/08/20260821-1 - Oficiales en servicio activo y en retiro rechazan sacar soldados a las calles contra el crimen organizado: 'los riesgos están estudiados y comprobados'](src/content/events/2026/08/20260821-1.md) — 2 fuentes
 - [2026/08/20260821-10 - Fiscalía y PDI detienen a 12 personas e incautan más de 150 kilos de droga valorados en $1.000 millones en operativos en Los Ríos](src/content/events/2026/08/20260821-10.md) — 2 fuentes
 - [2026/08/20260821-11 - Ejército repele ataque a disparos en paso no habilitado de Quebrada Concordia (Arica): patrulla fronteriza fue baleada desde una camioneta](src/content/events/2026/08/20260821-11.md) — 3 fuentes
+- [2026/08/20260821-12 - Bomberos y empresas de autopistas acuerdan TAG gratuito para vehículos inscritos en carreteras concesionadas](src/content/events/2026/08/20260821-12.md) — 8 fuentes
 - [2026/08/20260821-2 - Kast cuestiona el humedal urbano Rocuant-Andalién y plantea reducirlo a un tercio para viabilizar la inversión portuaria en el Gran Concepción](src/content/events/2026/08/20260821-2.md) — 9 fuentes
 - [2026/08/20260821-3 - Registro de Lobby contradice a delegado Millones: consigna su reunión con Víctor Quiroz para presentar Alto Santorini un mes antes de su aprobación](src/content/events/2026/08/20260821-3.md) — 1 fuente
 - [2026/08/20260821-4 - Auditoría del Plan Inspección Total detecta sobrecosto del 146% y competencia simulada en la construcción de nuevas oficinas del Ministerio de la Mujer](src/content/events/2026/08/20260821-4.md) — 5 fuentes
@@ -1521,7 +1522,8 @@
 - [2026/09/20260903-18 - Vocería de Kast con alcalde de San Bernardo termina sin preguntas y provoca denuncia de censura de Roberto Saa y crítica de Neme](src/content/events/2026/09/20260903-18.md) — 7 fuentes
 - [2026/09/20260903-19 - Orbán Files: la PNfV presidida por Kast fue disuelta en EEUU por no presentar balances desde 2021, con US$1,3 millones de Orbán bajo interrogante](src/content/events/2026/09/20260903-19.md) — 7 fuentes
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 10 fuentes
-- [2026/09/20260903-20 - Falkland Islands Development Corporation contrata a Easter Island Naviera para abrir una ruta de suministro entre Punta Arenas y Puerto Argentino](src/content/events/2026/09/20260903-20.md) — 16 fuentes
+- [2026/09/20260903-20 - Falkland Islands Development Corporation contrata a Easter Island Naviera para abrir una ruta de suministro entre Punta Arenas y Puerto Argentino](src/content/events/2026/09/20260903-20.md) — 18 fuentes
+- [2026/09/20260903-21 - Milei anuncia sanciones contra actividades petroleras en Malvinas y un proyecto de ley de defensa de la soberanía](src/content/events/2026/09/20260903-21.md) — 12 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 30 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 12 fuentes
@@ -1644,7 +1646,7 @@
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 55 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
-- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 77 fuentes
+- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 76 fuentes
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
@@ -1737,7 +1739,7 @@
 
 - [2024/01/20240116-1 - Condenan a 5 años al mayor de Carabineros Manuel Martínez por dejar sin visión a un manifestante en Temuco](src/content/events/2024/01/20240116-1.md) — 4 fuentes
 - [2024/01/20240119-1 - Nora Cuevas, exalcaldesa de San Bernardo, es imputada por fraude al fisco y malversación por más de $20 mil millones](src/content/events/2024/01/20240119-1.md) — 1 fuente
-- [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué: el siniestro más letal de la historia de Chile, con 138 fallecidos oficiales y estado de excepción](src/content/events/2024/02/20240202-1.md) — 8 fuentes
+- [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué: el siniestro más letal de la historia de Chile, con 138 fallecidos oficiales y estado de excepción](src/content/events/2024/02/20240202-1.md) — 17 fuentes
 - [2024/02/20240221-1 - Secuestro y homicidio del exmilitar venezolano Ronald Ojeda: la Fiscalía vincula el crimen al Tren de Aragua](src/content/events/2024/02/20240221-1.md) — 3 fuentes
 - [2024/03/20240315-1 - Renuncia el director general de la PDI, Sergio Muñoz, tras el allanamiento por el caso Audios](src/content/events/2024/03/20240315-1.md) — 3 fuentes
 - [2024/04/20240401-1 - Le Monde Diplomatique: 'El crimen organizado se hace evidente en Chile' — la paradoja de la baja delincuencia con temor récord](src/content/events/2024/04/20240401-1.md) — 1 fuente

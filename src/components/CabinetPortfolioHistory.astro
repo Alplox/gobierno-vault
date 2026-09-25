@@ -1,0 +1,301 @@
+---
+import {
+  GOBIERNOS,
+  fechaEs,
+  periodoDe,
+  type CabinetAppointment,
+  type CabinetByMinistry,
+} from '../lib/cabinet';
+import { ArrowRight, ChevronDown, Flag, History, Timer } from 'lucide-astro';
+
+interface Props {
+  cartera: CabinetByMinistry;
+  corte: string;
+}
+
+function parseIso(iso: string): Date {
+  if (/^\d{4}$/.test(iso)) return new Date(`${iso}-01-01T00:00:00Z`);
+  if (/^\d{4}-\d{2}$/.test(iso)) return new Date(`${iso}-01T00:00:00Z`);
+  return new Date(`${iso.slice(0, 10)}T00:00:00Z`);
+}
+
+const { cartera, corte } = Astro.props;
+const hoy = parseIso(corte);
+const hoyIso = corte.slice(0, 10);
+const titulares = [...cartera.todos].sort((a, b) => {
+  if (!a.desde && !b.desde) return 0;
+  if (!a.desde) return 1;
+  if (!b.desde) return -1;
+  return a.desde.localeCompare(b.desde);
+});
+
+const conFechas = titulares.filter((a) => a.desde);
+const inicio = conFechas.length ? Math.min(...conFechas.map((a) => parseIso(a.desde)!.getTime())) : null;
+const finRegistrado = conFechas.length
+  ? Math.max(
+      hoy.getTime(),
+      ...conFechas.map((a) => (a.hasta ? parseIso(a.hasta)!.getTime() : hoy.getTime()))
+    )
+  : null;
+const rango = inicio !== null && finRegistrado !== null ? finRegistrado - inicio : 0;
+
+function diasMandato(a: CabinetAppointment): number | null {
+  if (!a.desde) return null;
+  const desde = parseIso(a.desde).getTime();
+  const hasta = a.hasta ? parseIso(a.hasta).getTime() : hoy.getTime();
+  if (!Number.isFinite(desde) || !Number.isFinite(hasta) || hasta < desde) return null;
+  return Math.max(0, Math.round((hasta - desde) / 86400000));
+}
+
+const segmentos = conFechas.map((a) => {
+  const desde = parseIso(a.desde)!.getTime();
+  const hasta = a.hasta ? parseIso(a.hasta)!.getTime() : hoy.getTime();
+  const left = rango > 0 ? Math.max(0, Math.min(100, ((desde - inicio!) / rango) * 100)) : 0;
+  const width = rango > 0
+    ? Math.max(0.9, Math.min(100 - left, ((Math.min(hasta, finRegistrado!) - Math.max(desde, inicio!)) / rango) * 100))
+    : 100;
+  return { a, left, width, dias: diasMandato(a) };
+});
+const anioInicio = conFechas[0]?.desde.slice(0, 4) ?? '—';
+const anioFin = hoyIso.slice(0, 4);
+
+const MESES_CORTOS = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+
+function fechaCorta(iso?: string): string {
+  if (!iso) return 'fecha no registrada';
+  const [y, m, d] = iso.split('-').map(Number);
+  if (!y) return 'fecha no registrada';
+  if (!m) return String(y);
+  if (!d) return `${MESES_CORTOS[m - 1]} ${y}`;
+  return `${d} ${MESES_CORTOS[m - 1]} ${y}`;
+}
+
+function plural(valor: number, singular: string, plural_: string): string {
+  return `${valor} ${valor === 1 ? singular : plural_}`;
+}
+
+function duracionLegible(a: CabinetAppointment): string {
+  if (!a.desde) return 'Sin fecha';
+  const totalDias = diasMandato(a);
+  if (totalDias === null) return 'Periodo sin registrar';
+  if (totalDias < 31) return totalDias === 0 ? 'Menos de 1 día' : plural(totalDias, 'día', 'días');
+
+  const desde = parseIso(a.desde);
+  const hasta = a.hasta ? parseIso(a.hasta) : hoy;
+  let anios = hasta.getUTCFullYear() - desde.getUTCFullYear();
+  let meses = hasta.getUTCMonth() - desde.getUTCMonth();
+  let dias = hasta.getUTCDate() - desde.getUTCDate();
+
+  if (dias < 0) {
+    meses -= 1;
+    dias += new Date(Date.UTC(hasta.getUTCFullYear(), hasta.getUTCMonth(), 0)).getUTCDate();
+  }
+  if (meses < 0) {
+    anios -= 1;
+    meses += 12;
+  }
+
+  if (anios > 0) {
+    const partes = [plural(anios, 'año', 'años')];
+    if (meses) partes.push(plural(meses, 'mes', 'meses'));
+    if (dias) partes.push(plural(dias, 'día', 'días'));
+    return partes.join(' y ');
+  }
+  if (meses > 0) return `${plural(meses, 'mes', 'meses')}${dias ? ` y ${plural(dias, 'día', 'días')}` : ''}`;
+  return plural(dias, 'día', 'días');
+}
+
+function gobiernoDe(a: CabinetAppointment) {
+  if (!a.desde) return undefined;
+  return [...GOBIERNOS].reverse().find((g) => a.desde! >= g.desde && (!g.hasta || a.desde! < g.hasta));
+}
+
+function anchoDuracion(dias: number | null): number {
+  if (dias === null) return 0;
+  // Escala común a toda la vista: 0–8 años. Los mandatos mayores llegan al tope;
+  // el texto con fechas y duración sigue indicando su duración exacta.
+  return Math.max(1.25, Math.min(100, (dias / (8 * 365.2425)) * 100));
+}
+
+const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioNombre}. El detalle desplegable muestra las fechas y duraciones exactas.`;
+---
+
+{conFechas.length > 0 && (
+  <div
+    class="px-5 py-4 border-t border-base-300/80"
+    data-gv-cartera-timeline
+    data-gv-cartera-t0={inicio}
+    data-gv-cartera-tfin={finRegistrado}
+  >
+    <div class="mb-2.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-base-content/60">
+          Periodo documentado
+        </p>
+        <div class="mt-1 flex items-center gap-2 text-[11px] text-base-content/60" role="group" aria-label="Leyenda de la línea de tiempo">
+          <span class="inline-flex items-center gap-1"><span class="h-1.5 w-3 rounded-full bg-primary" aria-hidden="true"></span> vigente</span>
+          <span class="inline-flex items-center gap-1"><span class="h-1.5 w-3 rounded-full bg-primary/45" aria-hidden="true"></span> histórico</span>
+        </div>
+      </div>
+      <p class="text-xs font-medium tabular-nums text-base-content/55">
+        <span>{anioInicio}</span>
+        <span aria-hidden="true" class="mx-1.5 text-base-content/25">—</span>
+        <span>{titulares.length} {titulares.length === 1 ? 'mandato' : 'mandatos'}</span>
+        <span aria-hidden="true" class="mx-1.5 text-base-content/25">—</span>
+        <span data-gv-cartera-anio-fin>{anioFin}</span>
+      </p>
+    </div>
+
+    <div
+      class="gv-cartera-track relative h-2.5 overflow-visible rounded-full bg-base-200"
+      role="img"
+      aria-label={timelineLabel}
+    >
+      {segmentos.map(({ a, left, width }) => (
+        <span
+          class={`gv-cartera-segment absolute inset-y-0 rounded-full ${a === cartera.actual ? 'bg-primary' : 'bg-primary/45'}`}
+          style={`left:${left.toFixed(3)}%;width:${width.toFixed(3)}%;`}
+          title={`${a.nombre} · ${periodoDe(a)} · ${duracionLegible(a)}${!a.hasta ? ` · corte: ${fechaCorta(corte)}` : ''}`}
+          aria-hidden="true"
+          data-gv-cartera-segment
+          data-gv-cartera-nombre={a.nombre}
+          data-gv-cartera-desde={a.desde}
+          data-gv-cartera-hasta={a.hasta}
+          data-gv-cartera-vigente={!a.hasta ? '1' : undefined}
+        ></span>
+      ))}
+      <span
+        class="gv-cartera-hoy absolute inset-y-[-3px] w-0.5 rounded-full bg-primary"
+        style="left:100%;"
+        data-gv-cartera-hoy
+        aria-hidden="true"
+      ></span>
+    </div>
+
+    <div class="mt-1.5 flex items-center justify-between text-[11px] font-medium tabular-nums text-base-content/60" aria-hidden="true">
+      <span>{anioInicio}</span>
+      <span class="font-bold text-primary" data-gv-cartera-hoy-label>corte: {fechaCorta(corte)}</span>
+    </div>
+  </div>
+)}
+
+{titulares.length > 0 && (
+  <details class="gv-cartera-detalle group border-t border-base-300/80">
+    <summary class="flex min-h-11 cursor-pointer list-none items-center gap-2 px-5 py-3 text-sm font-semibold text-base-content/65 transition-colors hover:bg-base-200/60 hover:text-base-content">
+      <History class="h-4 w-4 shrink-0" aria-hidden="true" />
+      <span>Titulares y duración</span>
+      <span class="rounded-full bg-base-200 px-2 py-0.5 text-xs tabular-nums text-base-content/60">{titulares.length}</span>
+      <ChevronDown class="ml-auto h-4 w-4 shrink-0 transition-transform group-open:rotate-180" aria-hidden="true" />
+    </summary>
+
+    <div class="px-5 pb-5 pt-1">
+      <p class="mb-4 text-xs leading-relaxed text-base-content/60">
+        Del más antiguo al más reciente. Las barras usan una escala común de 0 a 8 años; los mandatos muy breves se mantienen visibles y el texto conserva las fechas y la duración exactas.
+      </p>
+
+      <ol class="relative ml-2.5 space-y-2.5 border-s border-base-300 ps-6">
+        {titulares.map((a) => {
+          const dias = diasMandato(a);
+          const gobierno = gobiernoDe(a);
+          const actual = a === cartera.actual;
+          return (
+            <li class="relative">
+              <span
+                class={`absolute -start-[1.6875rem] top-5 h-2.5 w-2.5 rounded-full border-2 border-base-100 ${actual ? 'bg-primary ring-2 ring-primary/25' : 'bg-base-content/25'}`}
+                aria-hidden="true"
+              ></span>
+              <article class={`rounded-xl p-3.5 transition-colors sm:p-4 ${actual ? 'bg-primary/10 ring-1 ring-primary/20' : 'bg-base-200/55 hover:bg-base-200'}`}>
+                <div class="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
+                  <div class="min-w-0">
+                    <div class="flex flex-wrap items-center gap-1.5">
+                      <a href={`/people/${a.personId}`} class="font-semibold leading-snug text-base-content hover:text-primary hover:underline">
+                        {a.nombre}
+                      </a>
+                      {actual && (
+                        <span class="rounded-full bg-primary/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Actual</span>
+                      )}
+                      {a.biministro && (
+                        <span class="rounded-full bg-warning/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-warning">Biministro</span>
+                      )}
+                      {a.subrogante && (
+                        <span class="rounded-full bg-warning/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-warning">Subrogante</span>
+                      )}
+                    </div>
+                    <p class="mt-0.5 text-xs leading-relaxed text-base-content/50">{a.cargo}</p>
+                  </div>
+                  <span
+                    data-gv-cartera-duracion
+                    data-gv-cartera-desde={a.desde}
+                    data-gv-cartera-vigente={!a.hasta ? '1' : undefined}
+                    class={`inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold tabular-nums ${actual ? 'bg-primary/15 text-primary' : 'bg-base-100 text-base-content/65 shadow-xs'}`}
+                  >
+                    <Timer class="h-3.5 w-3.5" aria-hidden="true" />
+                    <span data-gv-cartera-duracion-texto>{duracionLegible(a)}</span>
+                  </span>
+                </div>
+
+                <div class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-relaxed text-base-content/55">
+                  {gobierno && (
+                    <span class="inline-flex items-center gap-1 font-medium text-base-content/65">
+                      <Flag class="h-3 w-3 text-base-content/35" aria-hidden="true" />
+                      {gobierno.presidente}
+                    </span>
+                  )}
+                  {a.desde && (
+                    <>
+                      {gobierno && <span aria-hidden="true" class="text-base-content/25">·</span>}
+                      <time datetime={a.desde} title={fechaEs(a.desde) ?? undefined} class="tabular-nums whitespace-nowrap">{fechaCorta(a.desde)}</time>
+                      <ArrowRight class="h-3 w-3 shrink-0 text-base-content/30" aria-hidden="true" />
+                      {a.hasta ? (
+                        <time datetime={a.hasta} title={fechaEs(a.hasta) ?? undefined} class="tabular-nums whitespace-nowrap">{fechaCorta(a.hasta)}</time>
+                      ) : (
+                        <span class="font-semibold text-primary" data-gv-cartera-fin>corte: {fechaCorta(corte)}</span>
+                      )}
+                    </>
+                  )}
+                  {!a.desde && <span class="italic text-base-content/40">Periodo sin fechas registradas</span>}
+                </div>
+
+                {dias !== null && (
+                  <div
+                    data-gv-cartera-duracion-track
+                    data-gv-cartera-desde={a.desde}
+                    data-gv-cartera-vigente={!a.hasta ? '1' : undefined}
+                    class="mt-3 flex items-center gap-2"
+                    title={`${dias} días en el cargo`}
+                  >
+                    <div class="h-1.5 flex-1 overflow-hidden rounded-full bg-base-300/70">
+                      <div
+                        data-gv-cartera-duracion-bar
+                        class={`h-full rounded-full ${actual ? 'bg-primary' : 'bg-primary/45'}`}
+                        style={`width:${anchoDuracion(dias).toFixed(2)}%;`}
+                      ></div>
+                    </div>
+                    <span data-gv-cartera-dias class="w-14 text-right text-xs font-medium tabular-nums text-base-content/60">{dias} días</span>
+                  </div>
+                )}
+              </article>
+            </li>
+          );
+        })}
+      </ol>
+    </div>
+  </details>
+)}
+
+<style>
+  .gv-cartera-segment {
+    box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-base-100) 80%, transparent);
+  }
+
+  .gv-cartera-detalle summary::-webkit-details-marker {
+    display: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .gv-cartera-detalle summary,
+    .gv-cartera-detalle summary :global(svg) {
+      transition: none;
+    }
+  }
+</style>

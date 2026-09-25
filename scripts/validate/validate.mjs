@@ -356,7 +356,7 @@ try {
   for (const id of sueldos.orden_refs ?? []) pushRef(id);
   pushRef(sueldos.segundo_piso?.fuente);
   pushRef(sueldos.topes_dipres?.fuente);
-  pushRef(sueldos.ipc?.registro_presidente_mayo_2026?.fuente);
+  pushRef(sueldos.ipc?.registro_presidente_julio_2026?.fuente);
   for (const p of sueldos.presidentes ?? []) {
     for (const v of p.vigencias ?? []) pushRef(v.fuente);
   }

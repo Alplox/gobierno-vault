@@ -133,7 +133,12 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 | Presidencia — Dotación de Planta 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_planta.html> | Mismo |
 | Presidencia — Remuneraciones 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_remuneraciones.html> | Mismo |
 | Senado — Informe de Transparencia | <https://tramitacion.senado.cl/appsenado/index.php?ac=informeTransparencia&anno=2023&mesid=0&mo=transparencia&tipo=10> | |
-| CFR — Registro Público (Comisión 38 bis) | <https://comision38bis.gob.cl/registro-publico> | |
+| CFR — Registro Público (Comisión 38 bis) | <https://comision38bis.gob.cl/registro-publico> | La consulta por mes usa `?mes=YYYY-MM` (por ejemplo, <https://comision38bis.gob.cl/registro-publico?mes=2026-07>); el registro declara que los montos son reportados por cada institución |
+| BCN — Ley 21.830 | <https://www.bcn.cl/leychile/navegar?idNorma=1225354> | Texto oficial; fija $553.553 (18–65), $412.938 (menores de 18/mayores de 65) y $356.815 (no remuneracionales) desde mayo de 2026 |
+| INE — BDE IPC serie empalmada | <https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_PRECIOS/MN_CAP_PRECIOS/IPC_EMP_2023/638415285164039007> | Serie base diciembre de 2023=100; para agosto de 2026 muestra 113,15 |
+| Observatorio Social — CBA y líneas | <https://observatorio.ministeriodesarrollosocial.gob.cl/nueva-serie-cba-2026> | Informes mensuales; para agosto de 2026, CBA $92.327 y líneas por persona equivalente según condición de arrendatario |
+| Observatorio Social — CASEN ingresos | <https://observatorio.ministeriodesarrollosocial.gob.cl/storage/docs/casen/2024/Resultados_ingresos_Casen_2024.pdf> | Ingresos monetarios de hogar y per cápita; no mezclar con remuneración individual |
+| INE — ESI 2025 | <https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/07/14/la-mitad-de-las-personas-ocupadas-en-chile-percibieron-ingresos-menores-o-iguales-a-$680.000-en-2025> | Ingreso laboral neto por persona ocupada; no confundir con ingreso de hogar |
 | INE — Calculadora IPC | <https://calculadoraipc.ine.gob.cl/> | |
 | INE — Manual IPC (PDF) | <https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/metodologias/base-anual-2018-100/metodolog%C3%ADa.pdf> | PDF metodología |
 

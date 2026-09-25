@@ -10,21 +10,19 @@
 #   `firmante_id`) — NUNCA nombre plano. src/lib/sueldos.ts resuelve el nombre y
 #   falla el build si el ID no existe.
 # - Fuentes: TODAS las referencias son IDs de src/content/sources/*.md (nada de URLs locales).
-#   `orden_refs` fija la numeración [N] visible; los <SRef n={N} /> resuelven
+#   `orden_refs` fija la numeración [N] visible; los <SRef id="..."/> resuelven
 #   medio/título/url desde el registro de fuentes.
 # - Cada monto lleva `vigencias` (qué monto rigió cuándo y con qué fuente) para
 #   que el dato no quede stale ni huérfano de origen.
 
 # Orden de numeración [N] de las referencias inline de toda la página (1-based).
-# Al insertar/eliminar una fuente aquí NO hay que tocar el template: los <SRef />
-# resuelven por posición contra esta lista.
+# Las referencias del template se escriben por ID (`<SRef id="..."/>`); este
+# orden solo fija el número visible y permite detectar fuentes ausentes.
 orden_refs: [
-  wikipedia-anexo-salario-minimo,
   senado-2026-06-16-reajuste-ingreso-minimo-mensual,
   infobae-2026-05-13-reajuste-salario-minimo,
   radio-uchile-2026-04-29-cut-rechaza-reajuste-minimo,
   emol-2026-03-11-sistema-sueldos-altas-autoridades,
-  lacuarta-2026-03-23-tope-sueldos-asesores,
   emol-2026-02-19-boric-bono-metas,
   theclinic-2026-03-31-kast-bajarse-sueldo,
   diariousach-2025-12-24-voltereta-kast-renta,
@@ -36,8 +34,6 @@ orden_refs: [
   meganoticias-2026-08-03-superintendencias-46,
   theclinic-2026-05-19-sueldos-segundo-piso,
   theclinic-2026-03-20-sueldos-asesores,
-  ine-2026-01-08-ipc-diciembre-2025,
-  chileatiende-pgu-aumento-febrero-2026,
   mds-observatorio-social-canasta-basica,
   fne-canasta-familiar-trimestral,
   theclinic-2010-01-27-sueldo-presidente-chile,
@@ -50,26 +46,37 @@ orden_refs: [
   bcn-leychile-ley-19863,
   bcn-leychile-ley-21233,
   bcn-leychile-resolucion-5-2024-cfr,
-  ine-calculadora-ipc,
   presidencia-transparencia-remuneraciones-2018,
-  bcn-leychile-ley-19007,
-  bcn-leychile-ley-19553,
-  bcn-leychile-ley-19672,
   bcn-historia-ley-19863,
-  senado-informe-transparencia-2023,
   sii-utm-valores-anuales,
   sii-uf-valores-diarios,
-  bcentral-bde-ipc-varacion-anual-historica,
-  cooperativa-2010-01-07-ipc-2009-deflacion,
-  eldinamo-2014-01-08-ipc-diciembre-2013,
-  latercera-pulso-ipc-diciembre-2024,
   bcentral-bde-ipc-empalmado-base-2023,
   eluniverso-2004-07-18-lagos-sueldo,
   emol-2001-01-03-lagos-salario-usd,
   bcn-remuneraciones-altas-autoridades-2018,
   ine-serie-historica-ipc-1928-2009,
-  sii-utm-1994,
+  bcn-leychile-ley-21830,
+  ine-2026-07-14-esi-2025-ingresos,
+  mds-casen-2024-ingresos,
+  cfr-informe-tecnico-resolucion-5,
+  cfr-oficio-n26-2025,
+  bcn-leychile-dl-249-1974,
+  # Contexto histórico y metodológico de la página; las fuentes secundarias se
+  # identifican como tales en la prosa.
+  bcentral-bde-ipc-varacion-anual-historica,
+  bcn-leychile-ley-19007,
+  bcn-leychile-ley-19553,
+  bcn-leychile-ley-19672,
+  chileatiende-pgu-aumento-febrero-2026,
+  cooperativa-2010-01-07-ipc-2009-deflacion,
+  eldinamo-2014-01-08-ipc-diciembre-2013,
+  ine-2026-01-08-ipc-diciembre-2025,
+  ine-calculadora-ipc,
+  latercera-pulso-ipc-diciembre-2024,
+  senado-informe-transparencia-2023,
   sii-uf-1994,
+  sii-utm-1994,
+  wikipedia-anexo-salario-minimo,
 ]
 
 # ---------------------------------------------------------------------------
@@ -115,60 +122,85 @@ topes_dipres:
 # Sueldo bruto mensual del Presidente por gobierno (serie histórica, más reciente
 # primero). `ipc` = índice IPC mensual empalmado base dic-2023=100 (BCCh BDE) del
 # mes al que corresponde el sueldo; `ratio_minimo_fecha` fija el divisor del ratio
-# contra el sueldo mínimo. `vigencias` documenta cada monto conocido del mandato
-# con su ventana temporal y su fuente (seguimiento anti-stale).
+# contra el sueldo mínimo. `fecha_label` es solo mes/año: las atribuciones viven
+# en `refs[]` y `vigencias[].fuente`. `vigencias` documenta cada monto conocido
+# del mandato con su ventana temporal y su fuente (seguimiento anti-stale).
 presidentes:
   - presidente_id: jose_antonio_kast
     gobierno: Kast
     periodo: 2026–2030
-    sueldo: 11070064
-    fecha_ref: '2026-03-01'
-    fecha_label: >-
-      marzo 2026 (dieta fijada; el Registro Público de mayo 2026 consigna
-      $11.304.748)
-    ipc: 110.75
+    sueldo: 11308034
+    fecha_ref: '2026-07-01'
+    fecha_label: julio 2026
+    ipc: 113.15
     ratio_minimo_fecha: '2026-05-01'
-    refs: [5, 8, 9, 10, 11, 12, 13, 14, 15, 28]
+    monto_legal: 11070064
+    refs:
+      - emol-2026-03-11-sistema-sueldos-altas-autoridades
+      - theclinic-2026-03-31-kast-bajarse-sueldo
+      - diariousach-2025-12-24-voltereta-kast-renta
+      - t13-2025-12-24-sueldo-proximo-presidente
+      - latercera-2025-12-21-kast-no-debatido-monto-sueldo
+      - t13-2021-08-22-kast-rebajar-sueldo-mitad
+      - partidorepublicano-2021-08-23-kast-bajar-sueldo
+      - emol-2026-08-03-superintendencias-46-funcionarios
+      - meganoticias-2026-08-03-superintendencias-46
+      - biobiochile-2024-09-16-sueldo-presidente-proximo
+      - cfr-registro-publico-38bis
+      - cfr-informe-tecnico-resolucion-5
+      - cfr-oficio-n26-2025
     vigencias:
       - monto: 10269076
+        desde: '2026-03-11'
+        tipo: base
         fuente: cfr-informe-tecnico-resolucion-5
-        descripcion: Monto original fijado por la Resolución N°5/2024 (18 meses de anticipación), vigente desde el 11/03/2026
+        descripcion: Monto original fijado por la Resolución N°5/2024, vigente desde el 11/03/2026
       - monto: 11070064
+        desde: '2026-03-11'
+        tipo: ajuste
         fuente: cfr-oficio-n26-2025
-        descripcion: Dieta ajustada (+7,8% IPC excepcional del Oficio N°26/2025), vigente desde el 11/03/2026
-      - monto: 11304748
-        fuente: cfr-registro-publico-38bis
-        descripcion: Bruta reportada al Registro Público, periodo 2026-05 (+$237.970 sobre la dieta ajustada; exceso sistemático bajo investigación)
-      - monto: 11308034
-        fuente: cfr-registro-publico-38bis
-        descripcion: Bruta reportada al Registro Público, periodo 2026-06 (+$237.970 sobre la dieta ajustada)
+        descripcion: Dieta ajustada por el Oficio N°26/2025, vigente desde el 11/03/2026
       - monto: 7536499
+        desde: '2026-03-11'
+        hasta: '2026-03-31'
+        tipo: proporcional
         fuente: cfr-registro-publico-38bis
-        descripcion: Bruta del mes proporcional marzo 2026 (asunción 11/03; 2/3 del mes)
+        descripcion: Mes proporcional por asunción el 11 de marzo
+      - monto: 11304748
+        desde: '2026-05-01'
+        hasta: '2026-05-31'
+        tipo: reportado
+        fuente: cfr-registro-publico-38bis
+        descripcion: Bruta reportada al Registro Público para mayo de 2026
+      - monto: 11308034
+        desde: '2026-06-01'
+        hasta: '2026-07-31'
+        tipo: reportado
+        fuente: cfr-registro-publico-38bis
+        descripcion: Bruta reportada al Registro Público para junio y julio de 2026
     detalle: >-
-      Fijado por la Comisión para la Fijación de Remuneraciones (Resolución N°5 de
-      2024, Ley 21.233), vigente desde el 11/03/2026: $10.269.076 originales +
-      adecuación excepcional por IPC (+7,8%, Oficio N°26/2025) = $11.070.064. El
-      Registro Público de la Comisión consigna $11.304.748 brutos en mayo 2026 y
-      $11.308.034 en junio 2026 — $237.970 sobre el monto ajustado. Verificado
-      23-ago-2026: el exceso es sistemático en cargos de confianza (ministros
-      +$261.098, subsecretarios +$251.171), mientras parlamentarios y SEREMIs cobran
-      exactamente el monto ajustado; sin documento público que desglose la
-      diferencia. Emol lo reporta en $11,3
-      millones. En marzo de 2026 Kast anunció su intención de rebajarlo de forma
-      estructural. El monto contradice su promesa de campaña de 2021 de rebajarse
-      el sueldo a la mitad ("gobernar con el ejemplo"); al ser consultado en
-      diciembre de 2025 respondió que el monto "es una norma legal" que "decidió el
-      Congreso".
+      El sistema de la Comisión para la Fijación de Remuneraciones entró en
+      vigencia el 11 de marzo de 2026. La dieta legal ajustada fue de
+      $11.070.064; el Registro Público de la Comisión reporta $11.304.748 en
+      mayo y $11.308.034 en junio y julio de 2026. La diferencia observada entre
+      el monto legal y el reportado es de $237.970. El registro es una
+      declaración de las instituciones y no publica un desglose de esa
+      diferencia. En marzo de 2026 Kast anunció su intención de rebajarlo de
+      forma estructural; la cifra legal y el registro se mantienen separados en
+      esta página.
   - presidente_id: gabriel_boric
     gobierno: Boric
     periodo: 2022–2026
     sueldo: 7033974
     fecha_ref: '2025-11-01'
-    fecha_label: noviembre 2025 (Comisión para la Fijación de Remuneraciones)
+    fecha_label: noviembre 2025
     ipc: 109.47
     ratio_minimo_fecha: '2025-05-01'
-    refs: [7, 10, 27]
+    refs:
+      - emol-2026-02-19-boric-bono-metas
+      - t13-2025-12-24-sueldo-proximo-presidente
+      - biobiochile-2024-09-16-sueldo-presidente-proximo
+      - cfr-registro-publico-38bis
     vigencias:
       - monto: 7033974
         fuente: t13-2025-12-24-sueldo-proximo-presidente
@@ -190,10 +222,13 @@ presidentes:
     periodo: 2018–2022
     sueldo: 9681545
     fecha_ref: '2018-06-01'
-    fecha_label: junio 2018 (El Dínamo)
+    fecha_label: junio 2018
     ipc: 74.98
-    ratio_minimo_fecha: '2018-09-01'
-    refs: [25, 26, 33]
+    ratio_minimo_fecha: '2018-06-01'
+    refs:
+      - eldinamo-2018-06-19-debate-rebaja-sueldos
+      - abccolor-2020-06-30-rebaja-salarios-cadp
+      - presidencia-transparencia-remuneraciones-2018
     vigencias:
       - monto: 9681545
         fuente: eldinamo-2018-06-19-debate-rebaja-sueldos
@@ -207,10 +242,12 @@ presidentes:
     periodo: 2014–2018
     sueldo: 9322303
     fecha_ref: '2015-01-01'
-    fecha_label: enero 2015 (T13); igual a la dotación de planta 2014
+    fecha_label: enero 2015
     ipc: 67.49
     ratio_minimo_fecha: '2014-07-01'
-    refs: [23, 24]
+    refs:
+      - presidencia-transparencia-dotacion-planta-2014
+      - t13-bachelet-pena-nieto-sueldos-latam
     vigencias:
       - monto: 9322303
         fuente: presidencia-transparencia-dotacion-planta-2014
@@ -224,10 +261,11 @@ presidentes:
     periodo: 2010–2014
     sueldo: 8947053
     fecha_ref: '2014-03-01'
-    fecha_label: marzo 2014 (dotación de planta de Presidencia 2014)
+    fecha_label: marzo 2014
     ipc: 65.41
-    ratio_minimo_fecha: '2014-07-01'
-    refs: [23]
+    ratio_minimo_fecha: '2014-03-01'
+    refs:
+      - presidencia-transparencia-dotacion-planta-2014
     vigencias:
       - monto: 8947053
         fuente: presidencia-transparencia-dotacion-planta-2014
@@ -241,10 +279,11 @@ presidentes:
     periodo: 2006–2010
     sueldo: 7673910
     fecha_ref: '2010-01-01'
-    fecha_label: enero 2010 (The Clinic, citando la página de Presidencia)
+    fecha_label: enero 2010
     ipc: 57.61
     ratio_minimo_fecha: '2009-07-01'
-    refs: [22]
+    refs:
+      - theclinic-2010-01-27-sueldo-presidente-chile
     vigencias:
       - monto: 7673910
         fuente: theclinic-2010-01-27-sueldo-presidente-chile
@@ -258,10 +297,13 @@ presidentes:
     periodo: 2000–2006
     sueldo: 5229000
     fecha_ref: '2004-07-01'
-    fecha_label: julio 2004 (Contraloría, vía El Universo)
+    fecha_label: julio 2004
     ipc: 47.05
     ratio_minimo_fecha: '2004-07-01'
-    refs: [46, 47, 37]
+    refs:
+      - eluniverso-2004-07-18-lagos-sueldo
+      - emol-2001-01-03-lagos-salario-usd
+      - bcn-historia-ley-19863
     vigencias:
       - monto: 5229000
         fuente: eluniverso-2004-07-18-lagos-sueldo
@@ -281,10 +323,13 @@ presidentes:
     periodo: 1994–2000
     sueldo: 1362000
     fecha_ref: '2000-03-01'
-    fecha_label: marzo 2000 (estimación del régimen pre-Ley 19.863)
+    fecha_label: marzo 2000
     ipc: 42.26
     ratio_minimo_fecha: '1999-06-01'
-    refs: [47, 48, 49]
+    refs:
+      - emol-2001-01-03-lagos-salario-usd
+      - bcn-remuneraciones-altas-autoridades-2018
+      - ine-serie-historica-ipc-1928-2009
     vigencias:
       - monto: 1362000
         fuente: emol-2001-01-03-lagos-salario-usd
@@ -297,37 +342,38 @@ presidentes:
       la prensa de la época no lo transparentaba.
 
 # ---------------------------------------------------------------------------
-# Serie mensual de la bruta presidencial según el Registro Público 38 bis
-# (leída completa el 23-ago-2026; el registro cubre desde 2025-01). Alimenta la
-# línea de tiempo de /sueldos. Picos $10.046.124 bajo Boric = meses con pago del
-# bono por cumplimiento de metas (PMG trimestral). 2026-03 = mes proporcional de
-# Kast (asunción 11/03).
+# Serie mensual de la bruta presidencial según el Registro Público 38 bis.
+# El registro fue consultado el 25-sep-2026 y cubre desde 2025-01. `tipo`
+# distingue montos observados, pagos extraordinarios y el mes proporcional de
+# asunción de Kast. La última lectura disponible es julio de 2026.
 serie_registro_publico:
   fuente: cfr-registro-publico-38bis
   puntos:
-    - { periodo: '2025-01', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-02', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-03', gobierno: Boric, monto: 10046124, nota: Bono metas (PMG) }
-    - { periodo: '2025-04', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-05', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-06', gobierno: Boric, monto: 10046124, nota: Bono metas (PMG) }
-    - { periodo: '2025-07', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-08', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-09', gobierno: Boric, monto: 10046124, nota: Bono metas (PMG) }
-    - { periodo: '2025-10', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-11', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2025-12', gobierno: Boric, monto: 10046124, nota: Bono metas (PMG) }
-    - { periodo: '2026-01', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2026-02', gobierno: Boric, monto: 7033974 }
-    - { periodo: '2026-03', gobierno: Kast, monto: 7536499, nota: Mes proporcional (asunción 11/03) }
-    - { periodo: '2026-04', gobierno: Kast, monto: 11304748, nota: Primer mes completo con dieta nueva }
-    - { periodo: '2026-05', gobierno: Kast, monto: 11304748 }
-    - { periodo: '2026-06', gobierno: Kast, monto: 11308034 }
+    - { periodo: '2025-01', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-02', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-03', gobierno: Boric, monto: 10046124, tipo: bono, nota: Bono metas (PMG) }
+    - { periodo: '2025-04', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-05', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-06', gobierno: Boric, monto: 10046124, tipo: bono, nota: Bono metas (PMG) }
+    - { periodo: '2025-07', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-08', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-09', gobierno: Boric, monto: 10046124, tipo: bono, nota: Bono metas (PMG) }
+    - { periodo: '2025-10', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-11', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2025-12', gobierno: Boric, monto: 10046124, tipo: bono, nota: Bono metas (PMG) }
+    - { periodo: '2026-01', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2026-02', gobierno: Boric, monto: 7033974, tipo: observado }
+    - { periodo: '2026-03', gobierno: Kast, monto: 7536499, tipo: proporcional, nota: Mes proporcional por asunción el 11/03 }
+    - { periodo: '2026-04', gobierno: Kast, monto: 11304748, tipo: observado, nota: Primer mes completo con dieta nueva }
+    - { periodo: '2026-05', gobierno: Kast, monto: 11304748, tipo: observado }
+    - { periodo: '2026-06', gobierno: Kast, monto: 11308034, tipo: observado }
+    - { periodo: '2026-07', gobierno: Kast, monto: 11308034, tipo: observado, nota: Último registro disponible }
 
 # ---------------------------------------------------------------------------
-# Sueldo mínimo (ingreso mínimo mensual, 18 a 65 años), más reciente primero.
-# La fuente normativa de cada tramo es su propia ley (`ley`); las referencias [1]-[4]
-# (Wikipedia/Senado/Infobae/Radio UChile) documentan la serie completa.
+# Ingreso mínimo mensual para 18 a 65 años, más reciente primero. La serie
+# publicada en esta página cubre 1994–mayo de 2026; la Ley 21.830 define el
+# reajuste posterior por IPC desde enero de 2027. `gobierno` identifica el
+# gobierno vigente cuando se fijó el tramo, no el partido autor de la ley.
 sueldo_minimo:
   - { desde: '2026-05-01', monto: 553553, gobierno: Kast, ley: 'Ley 21.830' }
   - { desde: '2026-01-01', monto: 539000, gobierno: Boric, ley: 'Ley 21.751' }
@@ -374,35 +420,159 @@ sueldo_minimo:
   - { desde: '1994-06-01', monto: 52150, gobierno: Frei, ley: 'Ley 19.307' }
 
 # ---------------------------------------------------------------------------
-# Indicadores económicos por gobierno (UTM/UF de enero del primer año del
-# mandato; IPC anual dic-dic del año de inicio; acumulado = producto de las
-# variaciones anuales de los años calendario completos del mandato).
+# Indicadores de referencia. UTM y UF corresponden a enero del primer año del
+# mandato. El IPC se calcula entre dos índices mensuales del BDE, no como
+# producto de variaciones anuales ni como promedio de años calendario.
 indicadores:
-  - { gobierno: Kast, periodo: 2026–2030, utm: 69751, uf: 39731.79, ipc_anual: 3.5, ipc_acumulado: null,
-      nota: 'En curso. IPC anual 3,5% a julio de 2026 (mandato desde marzo 2026).' }
-  - { gobierno: Boric, periodo: 2022–2026, utm: 54442, uf: 30996.73, ipc_anual: 12.8, ipc_acumulado: 26.8,
-      nota: 'Inicio: IPC 12,8% (2022, máximo desde 1991). Cierre: 3,5% (2025).' }
-  - { gobierno: Piñera II, periodo: 2018–2022, utm: 47019, uf: 26799.01, ipc_anual: 2.6, ipc_acumulado: 16.7,
-      nota: 'Inicio: IPC 2,6% (2018). Cierre: 7,2% (2021). El 12,8% de 2022 se materializó bajo el gobierno siguiente.' }
-  - { gobierno: Bachelet II, periodo: 2014–2018, utm: 40935, uf: 23312.57, ipc_anual: 4.6, ipc_acumulado: 14.7,
-      nota: 'Inicio: IPC 4,6% (2014). Cierre: 2,3% (2017).' }
-  - { gobierno: Piñera I, periodo: 2010–2014, utm: 36679, uf: 20939.49, ipc_anual: 3.0, ipc_acumulado: 12.4,
-      nota: 'Inicio: IPC 3,0% (2010). Cierre: 3,0% (2013); 2012 cerró en 1,5%.' }
-  - { gobierno: Bachelet I, periodo: 2006–2010, utm: 31508, uf: 17973.65, ipc_anual: 2.6, ipc_acumulado: 16.8,
-      nota: 'Inicio: IPC 2,6% (2006). 2008 alcanzó 7,1% y el cierre (2009) registró deflación de -1,4%.' }
-  - { gobierno: Lagos, periodo: 2000–2006, utm: 26441, uf: 15067.93, ipc_anual: 4.5, ipc_acumulado: 18.4,
-      nota: 'Inicio: IPC 4,5% (2000). Cierre: 3,7% (2005). La Ley 19.863 (2003) elevó la dieta presidencial al 150% del grado máximo de la EUS.' }
-  - { gobierno: Frei, periodo: 1994–2000, utm: 18638, uf: 10623.53, ipc_anual: 8.9, ipc_acumulado: 42.7,
-      nota: 'Inicio: IPC 8,9% (1994). Cierre: 2,3% (1999). La alta inflación de mediados de los 90 elevó el acumulado del período.' }
+  - gobierno: Kast
+    periodo: 2026–2030
+    utm: 69751
+    uf: 39731.79
+    ipc_inicio: 110.75
+    ipc_fin: 113.15
+    ipc_inicio_fecha: '2026-03-01'
+    ipc_fin_fecha: '2026-08-01'
+    nota: 'Medición entre marzo y agosto de 2026; el mandato sigue en curso.'
+  - gobierno: Boric
+    periodo: 2022–2026
+    utm: 54442
+    uf: 30996.73
+    ipc_inicio: 81.45
+    ipc_fin: 109.70
+    ipc_inicio_fecha: '2021-03-01'
+    ipc_fin_fecha: '2026-02-01'
+    nota: 'Medición entre marzo de 2021 y febrero de 2026, último mes completo antes del cambio de gobierno.'
+  - gobierno: Piñera II
+    periodo: 2018–2022
+    utm: 47019
+    uf: 26799.01
+    ipc_inicio: 74.46
+    ipc_fin: 87.48
+    ipc_inicio_fecha: '2018-03-01'
+    ipc_fin_fecha: '2022-02-01'
+    nota: 'Medición entre marzo de 2018 y febrero de 2022, último mes completo antes del cambio de gobierno.'
+  - gobierno: Bachelet II
+    periodo: 2014–2018
+    utm: 40935
+    uf: 23312.57
+    ipc_inicio: 65.41
+    ipc_fin: 74.31
+    ipc_inicio_fecha: '2014-03-01'
+    ipc_fin_fecha: '2018-02-01'
+    nota: 'Medición entre marzo de 2014 y febrero de 2018, último mes completo antes del cambio de gobierno.'
+  - gobierno: Piñera I
+    periodo: 2010–2014
+    utm: 36679
+    uf: 20939.49
+    ipc_inicio: 57.82
+    ipc_fin: 64.87
+    ipc_inicio_fecha: '2010-03-01'
+    ipc_fin_fecha: '2014-02-01'
+    nota: 'Medición entre marzo de 2010 y febrero de 2014, último mes completo antes del cambio de gobierno.'
+  - gobierno: Bachelet I
+    periodo: 2006–2010
+    utm: 31508
+    uf: 17973.65
+    ipc_inicio: null
+    ipc_fin: null
+    ipc_inicio_fecha: null
+    ipc_fin_fecha: null
+    nota: 'La serie BDE empalmada base 2023 publicada para esta página comienza en 2009; no se muestra un acumulado comparable para este mandato.'
+  - gobierno: Lagos
+    periodo: 2000–2006
+    utm: 26441
+    uf: 15067.93
+    ipc_inicio: null
+    ipc_fin: null
+    ipc_inicio_fecha: null
+    ipc_fin_fecha: null
+    nota: 'La serie BDE empalmada base 2023 publicada para esta página comienza en 2009; no se muestra un acumulado comparable para este mandato.'
+  - gobierno: Frei
+    periodo: 1994–2000
+    utm: 18638
+    uf: 10623.53
+    ipc_inicio: null
+    ipc_fin: null
+    ipc_inicio_fecha: null
+    ipc_fin_fecha: null
+    nota: 'La serie BDE empalmada base 2023 publicada para esta página comienza en 2009; no se muestra un acumulado comparable para este mandato.'
 
 # ---------------------------------------------------------------------------
 # IPC para ajustar sueldos históricos a pesos corrientes (índice serie empalmada
 # BCCh, base dic-2023 = 100).
 ipc:
-  jul_2026: 112.45
-  # Monto del Registro Público de mayo 2026 para el Presidente y su índice IPC
-  # (nota al pie de la sección "Sueldo presidencial en pesos de hoy").
-  registro_presidente_mayo_2026:
-    monto: 11304748
-    indice: 112.37
+  base: 'dic-2023 = 100'
+  mes_referencia: '2026-08'
+  ago_2026: 113.15
+  registro_presidente_julio_2026:
+    monto: 11308034
+    indice: 113.15
     fuente: cfr-registro-publico-38bis
+
+# ---------------------------------------------------------------------------
+# Ingresos laborales individuales de la ESI 2025. Todos los montos son netos
+# mensuales por persona ocupada; no son remuneraciones brutas ni ingresos de hogar.
+ingresos_esi:
+  ano: 2025
+  periodo: 'octubre–diciembre de 2025'
+  unidad: 'pesos netos mensuales por persona ocupada'
+  fuente: ine-2026-07-14-esi-2025-ingresos
+  mediana: 680000
+  promedio: 962945
+  asalariados_publicos_promedio: 1321228
+  porcentaje_1m_o_mas: 29.4
+  porcentaje_3m_o_mas: 4.3
+  nota: >-
+    La mediana divide a la población ocupada en dos mitades; el promedio
+    resume el total de ingresos y puede ser influido por los ingresos altos.
+    El dato de asalariados públicos es un promedio de esa categoría, no la
+    remuneración del Presidente.
+
+# ---------------------------------------------------------------------------
+# CBA y líneas de pobreza. La unidad es por persona o persona equivalente al
+# mes; las líneas se separan según condición de arrendatario.
+costo_vida:
+  periodo: 'agosto de 2026'
+  unidad: 'pesos mensuales por persona o persona equivalente'
+  fuente: mds-observatorio-social-canasta-basica
+  cba_persona: 92327
+  linea_pobreza_no_arrendatario: 254273
+  linea_pobreza_extrema_no_arrendatario: 169516
+  linea_pobreza_arrendatario: 376670
+  linea_pobreza_extrema_arrendatario: 251113
+  nota: >-
+    La metodología 2024 actualiza la CBA y diferencia las líneas de pobreza
+    según tenencia de vivienda. Son umbrales de ingreso para medir pobreza, no
+    sueldos ni presupuesto mensual de una persona.
+
+# ---------------------------------------------------------------------------
+# Categorías del ingreso mínimo mensual fijadas por la Ley 21.830.
+imm_2026:
+  desde: '2026-05-01'
+  unidad: 'pesos brutos mensuales'
+  fuente: bcn-leychile-ley-21830
+  categorias:
+    - { id: '18-65', etiqueta: 'Trabajadores de 18 a 65 años', monto: 553553 }
+    - { id: 'menores-18-mayores-65', etiqueta: 'Menores de 18 y mayores de 65 años', monto: 412938 }
+    - { id: 'no-remuneracionales', etiqueta: 'Efectos no remuneracionales', monto: 356815 }
+  nota: >-
+    Desde el 1 de enero de 2027 el monto de 18 a 65 años se reajustará por la
+    variación del IPC entre mayo y diciembre de 2026, según la misma ley.
+
+# ---------------------------------------------------------------------------
+# Contexto de ingresos de hogares CASEN 2024. Se conserva separado de la ESI:
+# ingreso agregado del hogar y per cápita responden a preguntas distintas.
+casen_2024:
+  ano: 2024
+  periodo: 'noviembre de 2024'
+  unidad: 'pesos mensuales; promedios de ingresos de hogares'
+  fuente: mds-casen-2024-ingresos
+  promedio_ingreso_trabajo_hogar: 1259980
+  promedio_ingreso_autonomo_hogar: 1456694
+  promedio_ingreso_monetario_hogar: 1541266
+  promedio_ingreso_autonomo_per_capita_decil_x: 2467419
+  nota: >-
+    El informe oficial publica promedios, no medianas, y distingue el ingreso
+    del trabajo, el ingreso autónomo y el ingreso monetario del hogar. El
+    promedio del decil X es ingreso autónomo per cápita de ese subgrupo, no el
+    sueldo de una persona ocupada.
