@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 337
+**Total tareas:** 338
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 254 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 255 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 308 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 309 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -318,6 +318,7 @@
 | S-2026-238 | ⬜ | 2026-09-25 | Combustibles — cuarta alza consecutiva (evento `20260909-12`) | Informe semanal de [[organizations/enap]] del miércoles 30 de septiembre de 2026: verificar si se materializa la cuarta alza proyectada para el jueves 1 de octubre. El 25-sep-2026 se publicaron proyecciones de mercado de gasolina de 93 octanos entre $34 y $40 por litro, de 97 entre $34 y $42, y diésel entre $90 y $110, según lamesa de mercados de XTB. El 23-sep-2026 [[organizations/enap]] había registrado variación nula en todos los derivados | `20260909-12` | Origen: <https://www.adnradio.cl/2026/09/25/quiroz-estima-que-eeuu-no-restringira-el-acceso-al-diesel-pero-expertos-anticipan-fuerte-incremento-en-las-bencinas/> |
 | S-2026-239 | ⬜ | 2026-09-25 | Etanol en gasolina — memo del Ministerio de Energía (evento `20260917-5`) | Verificar el memo interno del [[organizations/ministerio_energia]] publicado por [[organizations/reuters]]: (1) si la cartera entrega o hace públicos los documentos y la fecha del memo; (2) el informe del Consejo de Granos de Estados Unidos que lo sustenta, con la cifra de 85% de dependencia de gasolina estadounidense y el horizonte 2030; (3) si se reabre la discusión de una mezcla E10, que excede el techo legal de 5% del Decreto Supremo N°11 de 2008; (4) el estudio de ACS Omega de abril de 2026 sobre mezclas etanol-gasolina, citado por la prensa nacional; (5) la sección 6.4 (bioetanol) del informe de combustibles carbono neutral de la [[organizations/comision_nacional_energia]] | `20260917-5` | Origen: <https://www.reuters.com/business/energy/chile-weighs-ethanol-gasoline-blend-government-seeks-cheaper-fuels-amid-fiscal-2026-09-17/> |
 | S-2026-240 | ⬜ | 2026-09-25 | Costo fiscal del MEPCO — inconsistencia de cifras (evento `20260909-12`) | La Brújula Macroeconómica N°44 del [[organizations/ocec_udp]] consigna el escenario contrafactual en US$2.761 millones y también en US$2.791 millones, y declara un ahorro de US$2.046 millones que no coincide con la resta de los dos escenarios. Verificar el PDF completo y si una versión posterior corrige las cifras; aclarar la atribución dual a [[people/juan_ortiz]] (OCEC-UDP) y [[people/carlos_smith]] (CIES-UDP) | `20260909-12` | Origen: <https://ocec.udp.cl/proyecto/brujula-macroeconomica-n44-costo-fiscal-del-mepco-en-2026-y-trayectoria-de-precios/> |
+| S-2026-241 | ⬜ | 2026-09-25 | Absolución de Víctor Ortiz Baeza — resultado administrativo (evento `20260910-13`) | Verificar el resultado de la remisión al Juzgado de Letras y Garantía de Bulnes y si la Fiscalía pidió cuentas por la prueba omitida | `20260910-13` | Origen: <https://enestrado.com/wp-content/uploads/2026/09/Absolucion-Pia-Galletas.pdf> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
