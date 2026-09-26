@@ -689,6 +689,7 @@
 - [2026/06/20260602-5 - VerificaUDP califica de 'engañoso' que Chile deba 'volver a ser el país más seguro de Latinoamérica'](src/content/events/2026/06/20260602-5.md) — 1 fuente
 - [2026/06/20260603-1 - Miles de estudiantes marchan contra los recortes a la educación de Kast y la represión policial deja una joven con múltiples fracturas en el rostro](src/content/events/2026/06/20260603-1.md) — 7 fuentes
 - [2026/06/20260603-2 - Proyecto de electromovilidad para Osorno queda en duda por reajuste presupuestario en Transportes; senadores y Concejo Municipal critican la falta de claridad del gobierno](src/content/events/2026/06/20260603-2.md) — 5 fuentes
+- [2026/06/20260603-3 - El SII habilita a los casinos online extranjeros a pagar IVA: la Resolución Exenta N°69 abre un conflicto entre el fisco, la justicia y el Congreso](src/content/events/2026/06/20260603-3.md) — 28 fuentes
 - [2026/06/20260604-1 - Quiroz anuncia que Hacienda prepara un proyecto propio sobre secreto bancario con alzamiento solo por vía judicial](src/content/events/2026/06/20260604-1.md) — 5 fuentes
 - [2026/06/20260604-2 - Fact-checkers confirman el empleo de la Cuenta Pública salvo la frase de cifras nunca vistas](src/content/events/2026/06/20260604-2.md) — 11 fuentes
 - [2026/06/20260604-3 - Fact-checkers confirman el déficit de 3,7% de la Cuenta Pública pero corrigen los ingresos a 2,3 puntos bajo lo presupuestado](src/content/events/2026/06/20260604-3.md) — 6 fuentes
@@ -770,6 +771,7 @@
 - [2026/07/20260713-1 - Senapred declara Alerta Temprana Preventiva en RM y Gobierno decreta emergencia preventiva en 10 regiones por sistema frontal](src/content/events/2026/07/20260713-1.md) — 6 fuentes
 - [2026/07/20260714-1 - Proyecto 'Escucha su corazón' condiciona aborto a escuchar latidos fetales y genera debate por acusaciones de tortura](src/content/events/2026/07/20260714-1.md) — 9 fuentes
 - [2026/07/20260714-2 - Fiscalía alista el cierre del caso Rojas Vade: 'no hubo responsables', concluye autolesiones y falso secuestro bajo consumo de drogas](src/content/events/2026/07/20260714-2.md) — 8 fuentes
+- [2026/07/20260714-3 - Ninguna plataforma se inscribió: el SII fija la base imponible, publica la nómina de retención y activa el cambio de sujeto desde el 1 de agosto](src/content/events/2026/07/20260714-3.md) — 11 fuentes
 - [2026/07/20260715-1 - DMC emite Alarma Meteorológica AA3/2026 y alarma se amplía a O'Higgins; evacuaciones preventivas en curso](src/content/events/2026/07/20260715-1.md) — 3 fuentes
 - [2026/07/20260715-2 - Caso Fundamenta: la Fiscalía detecta que el abogado Eduardo Lagos ordenó un pago de $13 millones a la pareja de la exministra Ángela Vivanco](src/content/events/2026/07/20260715-2.md) — 4 fuentes
 - [2026/07/20260716-1 - Senado aprueba megarreforma de Kast en madrugada maratónica](src/content/events/2026/07/20260716-1.md) — 7 fuentes
@@ -1125,6 +1127,7 @@
 - [2026/08/20260807-25 - Más de 40 gremios y organizaciones MIPYME rechazan el veto al pago a 30 días y llaman al Senado a no ratificarlo](src/content/events/2026/08/20260807-25.md) — 3 fuentes
 - [2026/08/20260807-26 - Escándalo argentino por venta de tierras a extranjeros salpica a Chile: Max Kaiser, hermano de Johannes, aparece como representante de Glocal Terra](src/content/events/2026/08/20260807-26.md) — 4 fuentes
 - [2026/08/20260807-27 - Tribunal Oral de Cañete condena a 15 años de cárcel al exalcalde de Renaico Juan Carlos Reinao por estupro, abuso sexual y aborto](src/content/events/2026/08/20260807-27.md) — 4 fuentes
+- [2026/08/20260807-28 - Corte de Santiago fija un protocolo de bloqueo por DNS en cinco etapas para hacer efectiva la sentencia que prohíbe las apuestas en línea no autorizadas](src/content/events/2026/08/20260807-28.md) — 13 fuentes
 - [2026/08/20260807-3 - Campaña del Día del Niño: Gobierno interviene los logos de los ministerios con nombres infantiles y el Ministerio del Medio Ambiente figura en Facebook como 'Ministerio de cuidar la plata' por unos minutos](src/content/events/2026/08/20260807-3.md) — 10 fuentes
 - [2026/08/20260807-4 - Banco Central: Índice de Avisos Laborales de Internet cae 10,5% interanual en julio y suma nueve meses consecutivos de retrocesos](src/content/events/2026/08/20260807-4.md) — 2 fuentes
 - [2026/08/20260807-5 - Mañalich cuestiona el sistema de test de drogas del gobierno: 'la mitad de los funcionarios va a salir falsamente positivo al menos una vez'](src/content/events/2026/08/20260807-5.md) — 3 fuentes

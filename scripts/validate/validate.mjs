@@ -143,6 +143,7 @@ const WHITELIST_MEDIOS = new Set([
   'Subrei',
   'Ministerio Secretaría General de Gobierno',
   'Contraloría General de la República',
+  'Servicio de Impuestos Internos (SII)',
   'Defensoría de la Niñez',
   'Instituto de Previsión Social (IPS)',
   'Poder Judicial de Chile',

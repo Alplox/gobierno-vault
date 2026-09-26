@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 339
+**Total tareas:** 340
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 256 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 6 · 2023: 3 · 2024: 5 · 2025: 16 · 2026: 257 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 310 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 311 · V: 11 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -320,6 +320,7 @@
 | S-2026-240 | ⬜ | 2026-09-25 | Costo fiscal del MEPCO — inconsistencia de cifras (evento `20260909-12`) | La Brújula Macroeconómica N°44 del [[organizations/ocec_udp]] consigna el escenario contrafactual en US$2.761 millones y también en US$2.791 millones, y declara un ahorro de US$2.046 millones que no coincide con la resta de los dos escenarios. Verificar el PDF completo y si una versión posterior corrige las cifras; aclarar la atribución dual a [[people/juan_ortiz]] (OCEC-UDP) y [[people/carlos_smith]] (CIES-UDP) | `20260909-12` | Origen: <https://ocec.udp.cl/proyecto/brujula-macroeconomica-n44-costo-fiscal-del-mepco-en-2026-y-trayectoria-de-precios/> |
 | S-2026-241 | ⬜ | 2026-09-25 | Absolución de Víctor Ortiz Baeza — resultado administrativo (evento `20260910-13`) | Verificar el resultado de la remisión al Juzgado de Letras y Garantía de Bulnes y si la Fiscalía pidió cuentas por la prueba omitida | `20260910-13` | Origen: <https://enestrado.com/wp-content/uploads/2026/09/Absolucion-Pia-Galletas.pdf> |
 | S-2026-242 | ⬜ | 2026-11-30 | Sugerencias pendientes (para no perderlas) | Sexta sesion del Comite Negociador de la Convencion sobre Cooperacion Fiscal Internacional de la ONU (Nairobi, 30-nov a 10-dic-2026): Chile ausente por el retiro del 9-sep (evento `20260909-13`) | `20260909-13` | Origen: <https://financing.desa.un.org/unfcitc> |
+| S-2026-243 | ⬜ | 2026-09-26 | Sugerencias pendientes (para no perderlas) | Saga SII-casinos online (eventos 20260603-3, 20260714-3, 20260807-28) — seguimiento de la ejecución: (1) Subtel ordenó el 1-sep-2026 el bloqueo por DNS de 42 sitios remitidos por la Superintendencia de Casinos de Juego (48 horas) y el 23-sep otros 37 dominios, con recurso de protección de una casa de apuestas (15-sep) y un reclamo de aPAL por exceso de Subtel (21-sep); (2) el SII sumó 39 plataformas inscritas al 8-sep-2026; (3) el proyecto de ley de regulación sigue en segundo trámite del Senado y la Comisión de Economía acordó mesa técnica con el Gobierno; (4) el dictamen D348/2026 de la Contraloría dejó la impugnación en sede judicial. Evento propio pendiente si se concentra nueva cobertura | `20260603-3` `20260714-3` `20260807-28` | Origen: <https://www.cnnchile.com/pais/casas-de-apuestas-online-subtel-ordena-el-bloqueo-de-42-sitios-en-un-plazo-maximo-de-48-horas/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
