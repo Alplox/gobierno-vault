@@ -1560,6 +1560,7 @@
 - [2026/09/20260908-12 - Fonasa presenta querella criminal por eventual fraude de subvenciones de $8 mil millones con operativos de exámenes gratuitos](src/content/events/2026/09/20260908-12.md) — 8 fuentes
 - [2026/09/20260908-13 - Senado despacha Sala Cuna Universal a la Cámara con doble revés al Gobierno y micrófono abierto de Rau: Qué desastre, hueón](src/content/events/2026/09/20260908-13.md) — 8 fuentes
 - [2026/09/20260908-14 - Cerimedo es trasladado de Palmasola al penal de máxima seguridad de Chonchocoro para cumplir una segunda detención preventiva](src/content/events/2026/09/20260908-14.md) — 6 fuentes
+- [2026/09/20260908-15 - Judd declara en exclusiva de Meganoticias que el Estrecho de Magallanes pertenece a Chile y que es la política de Estados Unidos](src/content/events/2026/09/20260908-15.md) — 7 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 12 fuentes
 - [2026/09/20260908-4 - PISA 2025: Chile anota su peor resultado en Matemática con 59% bajo el nivel básico y retrocede en Lectura](src/content/events/2026/09/20260908-4.md) — 6 fuentes

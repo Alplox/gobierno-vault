@@ -258,6 +258,35 @@ pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
   sub-sitemaps del `sitemap-index` ordenan por fecha, así que las 2-3 primeras páginas
   cubren lo reciente. Ojo: un slug adivinado que devuelve 301 a la home NO es evidencia
   de nada; solo cuenta el `<loc>` del sitemap o el titular real del fetch.
+- **Un ítem `[RESUELTO]` puede apuntar al artículo equivocado:** la resolución es por
+  *coincidencia de título*, no por ID, así que un titular reutilizado months después
+  (caso sep-2026: "El Estrecho de Magallanes pertenece a Chile", nota del 08-sep
+  resuelta contra un slug de abril sobre el jefe de Hidrografía argentino) devuelve
+  una URL de otro mes. **Siempre contrastar la fecha del ítem con la del slug** y con
+  el `Published Time` del fetch antes de citar; si no calzan, tratar el ítem como no
+  resuelto y seguir los pasos siguientes.
+- **Sitemaps por mes/archivo en vivo, cuando el news-sitemap ya no cubre la fecha:**
+  muchos medios exponen un índice con shards mensuales o de archivo que conservan
+  todo el mes aunque el news-sitemap haya rotado. Basta con leer el shard del mes
+  buscado y filtrar por slug o por término. Endpoints útiles verificados:
+  Meganoticias `robots.txt` declara `/sitemaps/sitemap-news.xml` (solo ~2 días) más
+  `/sitemaps/sitemap-noticias-index-content.xml` → `.../sitemaps/content-noticias/sitemap-YYYY-MM.xml`
+  (todo el mes) y además `/sitemaps/sitemap-noticias-index-video.xml` →
+  `.../sitemaps/video-noticias/sitemap-video-YYYY-MM.xml`, que el `includeRe` del
+  sync descarta y que sirve para encontrar la nota *de video* de una entrevista
+  (el mismo hecho suele tener versión artículo y versión video con IDs contiguos);
+  Perfil `sitemap/archive/YYYY/MM`; Infodefensa `sitemap/month/YYYYMM`. Ojo
+  BioBioChile: `static/sitemap-YYYY-MM.xml` es una **ventana móvil** de los últimos
+  ~25 días, no el mes completo, y su buscador web (`/buscador/`, `/buscar/`,
+  `/search`) devuelve 404 — para fechas fuera de la ventana hay que ir a otro método.
+- **DDG HTML como último recurso para localizar la URL:** cuando el catálogo local
+  va atrasado, el medio no expone sitemap de archivo y `news-search` no resuelve,
+  `https://html.duckduckgo.com/html/?q=<CONSULTA>` responde 200 y los resultados
+  reales vienen en `uddg=<URL codificada>` dentro del HTML (extraer y decodificar;
+  `lite.duckduckgo.com` no resuelve DNS desde esta red). Un `site:dominio` más 3-4
+  palabras del titular bastó para recuperar la URL exacta de BioBioChile,
+  Infodefensa, Perfil y Diario Sur Noticias. Sirve para *ubicar* la nota; el cuerpo
+  se sigue leyendo con `fetch-content`.
 
 ### Sitios institucionales SIN sitemap utilizable
 

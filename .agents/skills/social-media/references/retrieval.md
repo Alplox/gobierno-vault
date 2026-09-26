@@ -53,6 +53,12 @@
 
    `https://markdown.new/https://x.com/<HANDLE>/status/<ID>`
 
+4. Para el post que **difunde un artículo** (titular, URL de destino y miniatura van en la tarjeta, no en el texto), el endpoint de sindicación de X entrega el JSON completo sin autenticación ni login wall:
+
+   `https://cdn.syndication.twimg.com/tweet-result?id=<ID>&lang=es`
+
+   Devuelve `text`, `created_at` en ISO UTC, `favorite_count`, `conversation_count` y `card` con `expanded_url` (la URL original expandida, nunca la de `t.co`), `description` e imagen. Es la vía más barata para citar un post cuyo valor es la nota que enlaza, cuando `r.jina.ai` bloquea `x.com` (lo hace por rate-limit de abuso, no por el post) y FxTwitter no está disponible.
+
 ### Búsqueda y timelines
 
 `nitter.cf` y `xitter.cf` son frontends teapawt y actualmente exponen búsqueda, perfiles, timelines, replies y RSS:
