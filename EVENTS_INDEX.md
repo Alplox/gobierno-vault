@@ -887,6 +887,7 @@
 - [2026/07/20260729-23 - Partido Socialista y Federación de Supervisores del Cobre rechazan privatización: 'El cobre no se vende'](src/content/events/2026/07/20260729-23.md) — 2 fuentes
 - [2026/07/20260729-24 - IPS: el negacionismo de Kast amenaza la memoria de DDHH en Chile](src/content/events/2026/07/20260729-24.md) — 1 fuente
 - [2026/07/20260729-25 - El Mostrador revela que la esposa del general director de Carabineros, Janet Morales, se realizó cuatro cirugías estéticas en el Hospital institucional con cobertura de Dipreca](src/content/events/2026/07/20260729-25.md) — 5 fuentes
+- [2026/07/20260729-26 - Especialistas advierten que el Convenio Marco tributario de la ONU subordinaría la política impositiva a los derechos humanos](src/content/events/2026/07/20260729-26.md) — 5 fuentes
 - [2026/07/20260729-3 - Mineduc suspende clases en toda la región del Bío Bío por sistema frontal](src/content/events/2026/07/20260729-3.md) — 1 fuente
 - [2026/07/20260729-4 - Contraloría suspende a directora jurídica de la Municipalidad de Valparaíso](src/content/events/2026/07/20260729-4.md) — 1 fuente
 - [2026/07/20260729-5 - Iván Flores (DC) responde a ministro Quiroz por compensación a municipios](src/content/events/2026/07/20260729-5.md) — 3 fuentes

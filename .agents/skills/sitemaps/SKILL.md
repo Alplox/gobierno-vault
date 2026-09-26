@@ -111,6 +111,7 @@ Notas de plataforma (complemento manual, no se reescribe):
   `sitemap-1.xml`/`sitemap-2.xml` (~98k URLs, ~37k artículos, 18 años). **Coaniquem**
   (WordPress 5.5+ nativo): `sitemap.xml` → `wp-sitemap.xml` → `wp-sitemap-posts-post-1.xml` con
   `includeRe` `/wp-sitemap-posts-post-\d+\.xml$/i` (descarta page/taxonomies/users); ~81 artículos.
+- **Canal 9 (`canal9.cl`)**: es el canal de televisión de **Radio Bío Bío**, no una redacción propia. Reproduce notas de Radio Bío Bío con la misma persona autora y **los mismos audios alojados en `media.biobiochile.cl`** (caso sep-2026: la nota "ONU busca vincular impuestos y derechos humanos", de Vanesa Gajardo, aparece el mismo día en `biobiochile.cl` y en `canal9.cl` con los MP3 de Deloitte y de la U. de Chile idénticos). **No cuenta como medio independiente**: duplica la fuente Radio Bío Bío. Además su sync fecha a nivel de mes (`d` = día 01) aunque la URL lleve el día real (`/episodios/AAAA/MM/DD/...`, p. ej. `d=2026-07-01` para un artículo del 29-jul) — tomar siempre la fecha de la URL, no la del catálogo
 - **Tanda internacional (07-09-2026)**: **ANSA Latina** declara en robots el index
   `sitemaps/sito_sitemap_index.xml` → único urlset con `news:news` (títulos reales, reciente con
   `lastmod` por artículo; ~109 URLs. Fuera de robots, `/sitemap.xml` es 404 — usar el index de robots).
