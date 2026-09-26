@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (467)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (468)
 
 <details>
-<summary>Ver lista (467 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (468 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -475,6 +475,7 @@
 - [2026/08/20260824-4 - Minvu abre los llamados 2026 del DS27 por sobre 10,7 millones de UF: mejoramiento de viviendas y barrios con meta de casi 20 mil empleos](src/content/events/2026/08/20260824-4.md) — **2 fuentes**
 - [2026/09/20260909-9 - Rojo Edwards respalda la rectificación de Judd: no dijo que tenía información de quién quemó el Metro](src/content/events/2026/09/20260909-9.md) — **2 fuentes**
 - [2026/09/20260914-9 - Presidente de BancoEstado respalda hipotecarios en pesos a 10 o 20 años: el inversionista extranjero no entiende la UF](src/content/events/2026/09/20260914-9.md) — **2 fuentes**
+- [2026/09/20260924-7 - Presidencia adjudica producción general a AM Producciones por $294 millones](src/content/events/2026/09/20260924-7.md) — **2 fuentes**
 
 </details>
 
@@ -557,13 +558,13 @@
 - [2026/03/20260311-5 - "Un país más pobre, pero más feliz": la frase del diputado Álvaro Carter que descolocó a Daniel Matamala en el día del cambio de mando](src/content/events/2026/03/20260311-5.md) — 3 fuentes
 - [2026/03/20260311-6 - Primera noche del gobierno: turba hiere a un carabinero en la Alameda y atacan el auto del subsecretario Patricio Torres en Plaza Italia](src/content/events/2026/03/20260311-6.md) — 9 fuentes
 - [2026/03/20260311-7 - Boric entrega a Kast una carta privada en pleno cambio de mando; ambos mantienen su contenido en reserva](src/content/events/2026/03/20260311-7.md) — 10 fuentes
-- [2026/03/20260311-8 - Cóctel de mil invitados en La Moneda y banquete en Cerro Castillo: contrataciones del cambio de mando](src/content/events/2026/03/20260311-8.md) — 7 fuentes
+- [2026/03/20260311-8 - Cóctel de mil invitados en La Moneda y banquete en Cerro Castillo: contrataciones del cambio de mando](src/content/events/2026/03/20260311-8.md) — 9 fuentes
 - [2026/03/20260312-1 - Kast anuncia que utilizará la facultad de indulto para uniformados condenados por el estallido social](src/content/events/2026/03/20260312-1.md) — 7 fuentes
 - [2026/03/20260312-2 - Hallan a Rodrigo Rojas Vade maniatado, golpeado y rociado con acelerante en la Ruta 78, con mensajes políticos rayados en los brazos](src/content/events/2026/03/20260312-2.md) — 18 fuentes
 - [2026/03/20260312-3 - María Corina Machado pide a Chile ayudar a los venezolanos a 'volver a su país'; Kast responde que 'se entra por la puerta, no por la ventana'](src/content/events/2026/03/20260312-3.md) — 7 fuentes
 - [2026/03/20260312-4 - Ministra Arzola advierte un déficit en subvenciones escolares de ~$250 mil millones según la administración saliente: 'el presupuesto de educación ya se recortó'](src/content/events/2026/03/20260312-4.md) — 6 fuentes
 - [2026/03/20260313-1 - Trascendido: capitán Faúndez, condenado por la muerte de Romario Veloz, sería el primer indultado del gobierno de Kast](src/content/events/2026/03/20260313-1.md) — 3 fuentes
-- [2026/03/20260313-2 - Orden de $160 millones en frutas y verduras para La Moneda tensiona el discurso de austeridad](src/content/events/2026/03/20260313-2.md) — 5 fuentes
+- [2026/03/20260313-2 - Orden de $160 millones en frutas y verduras para La Moneda tensiona el discurso de austeridad](src/content/events/2026/03/20260313-2.md) — 10 fuentes
 - [2026/03/20260315-1 - Ministro Alvarado defiende los indultos a uniformados: 'Fuimos elegidos para gobernar, no para pensar si la oposición se va a molestar'](src/content/events/2026/03/20260315-1.md) — 3 fuentes
 - [2026/03/20260316-1 - Inauguracion del Escudo Fronterizo en Chacalluta y orden de construir zanja](src/content/events/2026/03/20260316-1.md) — 7 fuentes
 - [2026/03/20260316-2 - Kast llama a prófugos a entregarse en Arica tras megaoperativo con 2.905 detenidos en tres días](src/content/events/2026/03/20260316-2.md) — 15 fuentes
@@ -642,7 +643,7 @@
 - [2026/04/20260430-3 - Cadem: aprobación de Kast baja al 40% y desaprobación alcanza un peak de 57%](src/content/events/2026/04/20260430-3.md) — 1 fuente
 - [2026/04/20260430-4 - Amnistía Internacional lanza campaña 'No al indulto' y acción urgente contra los indultos a 14 exuniformados condenados por el estallido](src/content/events/2026/04/20260430-4.md) — 7 fuentes
 - [2026/05/20260501-1 - Renuncia seremi de Bienes Nacionales de Tarapacá tras 34 días](src/content/events/2026/05/20260501-1.md) — 2 fuentes
-- [2026/05/20260501-2 - ANCI investiga presunta filtración de datos que afectaría a TGR, Registro Civil y operadores de telecomunicaciones (caso Rutify)](src/content/events/2026/05/20260501-2.md) — 6 fuentes
+- [2026/05/20260501-2 - ANCI investiga presunta filtración de datos que afectaría a TGR, Registro Civil y operadores de telecomunicaciones (caso Rutify)](src/content/events/2026/05/20260501-2.md) — 12 fuentes
 - [2026/05/20260504-1 - Diputados activan ofensiva para indagar nexo de Kast con red de Orbán investigada en Hungría](src/content/events/2026/05/20260504-1.md) — 4 fuentes
 - [2026/05/20260505-1 - CFA presenta dura crítica a la megarreforma y detecta nueve riesgos directos para las arcas fiscales](src/content/events/2026/05/20260505-1.md) — 1 fuente
 - [2026/05/20260506-1 - Renuncia seremi de Bienes Nacionales de Antofagasta](src/content/events/2026/05/20260506-1.md) — 2 fuentes
@@ -786,7 +787,7 @@
 - [2026/07/20260720-2 - Municipalidad de Santiago elimina fotos de tercera muerte de persona sin techo durante el temporal](src/content/events/2026/07/20260720-2.md) — 6 fuentes
 - [2026/07/20260720-3 - Gobierno confirma proyecto para modernizar el INDH](src/content/events/2026/07/20260720-3.md) — 5 fuentes
 - [2026/07/20260720-4 - Estudio CORPA revela alza de victimización y delitos en transporte público en Santiago: 'La capital está menos segura'](src/content/events/2026/07/20260720-4.md) — 3 fuentes
-- [2026/07/20260720-5 - Viralizan orden de compra de $76,5 millones en carne de Presidencia](src/content/events/2026/07/20260720-5.md) — 18 fuentes
+- [2026/07/20260720-5 - Viralizan orden de compra de $76,5 millones en carne de Presidencia](src/content/events/2026/07/20260720-5.md) — 23 fuentes
 - [2026/07/20260721-1 - Seremi de Culturas de Los Lagos Eduardo Leiva renuncia por motivos personales](src/content/events/2026/07/20260721-1.md) — 2 fuentes
 - [2026/07/20260721-10 - Colegio Médico exige reingresar los decretos de calidad del aire MP2,5 y de termoeléctricas retirados de Contraloría](src/content/events/2026/07/20260721-10.md) — 6 fuentes
 - [2026/07/20260721-2 - Foro Madrid anuncia que V Encuentro Regional se realizará en Santiago el 3 de septiembre](src/content/events/2026/07/20260721-2.md) — 7 fuentes
@@ -1453,7 +1454,7 @@
 - [2026/08/20260826-15 - Designación de Patricia Arancibia Clavel al directorio del Centro Cultural La Moneda](src/content/events/2026/08/20260826-15.md) — 5 fuentes
 - [2026/08/20260826-2 - Contraloría detecta $796 mil millones en saldos contables sin movimiento en organismos públicos y municipios vía RADAR](src/content/events/2026/08/20260826-2.md) — 7 fuentes
 - [2026/08/20260826-3 - Matthei acusa a Kast de mentir sobre bots y apunta a Cerimedo: 'No le creí nada y sigo no creyéndole nada'](src/content/events/2026/08/20260826-3.md) — 6 fuentes
-- [2026/08/20260826-4 - Arica: detecciones de ingresos irregulares suben 62,3% y Gobierno precisa que no equivale a nuevos cruces fronterizos](src/content/events/2026/08/20260826-4.md) — 8 fuentes
+- [2026/08/20260826-4 - Arica: detecciones de ingresos irregulares suben 62,3% y Gobierno precisa que no equivale a nuevos cruces fronterizos](src/content/events/2026/08/20260826-4.md) — 9 fuentes
 - [2026/08/20260826-5 - TC publica sentencia fundada que declara inconstitucionales normas tributarias y ambientales de la megarreforma (Roles 17.828-17.832)](src/content/events/2026/08/20260826-5.md) — 5 fuentes
 - [2026/08/20260826-6 - Delegación de Valparaíso modifica registro de lobby y retira a Millones y Víctor Quiroz de reunión por Alto Santorini](src/content/events/2026/08/20260826-6.md) — 13 fuentes
 - [2026/08/20260826-7 - "¡Buena!": imputado por robo en florería de Lota celebra arresto domiciliario nocturno y es reprendido por juez](src/content/events/2026/08/20260826-7.md) — 7 fuentes
@@ -1611,6 +1612,7 @@
 - [2026/09/20260910-9 - Diputados PC ofician al canciller para declarar persona non grata a Judd: 'Yankee, go home'](src/content/events/2026/09/20260910-9.md) — 5 fuentes
 - [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 30 fuentes
 - [2026/09/20260911-10 - DF Tax: especialistas desdramatizan el retiro y lo cifran como pérdida de influencia, con Chile en la mesa directiva del Comité Negociador](src/content/events/2026/09/20260911-10.md) — 1 fuente
+- [2026/09/20260911-11 - Presidencia adjudica suministro de pescados y mariscos por $94,5 millones tras licitación desierta](src/content/events/2026/09/20260911-11.md) — 3 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
@@ -1682,6 +1684,7 @@
 - [2026/09/20260924-4 - Barros anuncia en Punta Arenas un plan de renovación de capacidades estratégicas para la zona suraustral: reemplazo de los F-5, renovación de los UH-1H y los Hércules, patrullaje de largo alcance, Leopard 1 y nuevas bases](src/content/events/2026/09/20260924-4.md) — 11 fuentes
 - [2026/09/20260924-5 - La Embajada de Israel remite al rector de la UC una carta que acusa al académico Sebastián Gray de injurias públicas; la universidad revisa sus publicaciones](src/content/events/2026/09/20260924-5.md) — 6 fuentes
 - [2026/09/20260924-6 - Vecinos y religiosas del Barrio Matta instalan 'duchas anti rucos' en el Monasterio de las Hermanas Clarisas Capuchinas y personas en situación de calle cuestionan la medida](src/content/events/2026/09/20260924-6.md) — 9 fuentes
+- [2026/09/20260924-7 - Presidencia adjudica producción general a AM Producciones por $294 millones](src/content/events/2026/09/20260924-7.md) — 2 fuentes
 - [2026/09/20260925-1 - Sistema frontal golpea La Araucanía: 9.400 personas aisladas y más de 300 viviendas con daños](src/content/events/2026/09/20260925-1.md) — 8 fuentes
 - [2026/09/20260925-2 - Subsecretaría de Evaluación Social integra 25 programas sociales en nueve para el Presupuesto 2027 y objeta técnicamente tres](src/content/events/2026/09/20260925-2.md) — 14 fuentes
 - [2026/09/20260925-3 - El embajador de Israel publica y borra un mensaje contra Michelle Bachelet, lo republica y enfrenta a Carmen Hertz en X; Winter e Insunza exigen una respuesta de La Moneda](src/content/events/2026/09/20260925-3.md) — 10 fuentes

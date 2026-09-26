@@ -119,6 +119,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Desarrollo Social y Familia',
   'Ministerio Secretaría General de la Presidencia',
   'Unidad de Análisis Financiero (UAF)',
+  'Agencia Nacional de Ciberseguridad (ANCI)',
   'Ministerio de Salud',
   'Ministerio de Salud (Minsal)',
   'Ministerio del Deporte',
