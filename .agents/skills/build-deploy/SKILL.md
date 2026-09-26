@@ -49,7 +49,7 @@ Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[
 - **RSS:** `src/pages/rss.xml.ts` (`@astrojs/rss`) genera `dist/rss.xml` con los últimos 100 eventos: cuerpo HTML (mismo pipeline markdown + `remarkWikiLinks`, enlaces absolutizados) + pie con URL canónica y `Referencias` numeradas con URLs reales (las citas `[[sources/…]]` se resuelven a `[N](url)` porque `#ref-N` muere fuera del sitio). Descubrimiento: `rel="alternate"` en `Base.astro` + link en footer.
 
 - **Build automático DESACTIVADO** (`production_deployments_enabled: false`, preview `none`): pushes no gatillan deploy (límite 20 min). Publicar requiere `pnpm run deploy` local tras push.
-- Creación inicial: `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o `CLOUDFLARE_API_TOKEN`). Re-habilitar: PATCH `.../pages/projects/gobierno-vault` con `source.config.production_deployments_enabled: true`.
+- Creación inicial: `pnpm dlx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o `CLOUDFLARE_API_TOKEN`). Re-habilitar: PATCH `.../pages/projects/gobierno-vault` con `source.config.production_deployments_enabled: true`.
 
 ## Tailwind v4 + daisyUI 5
 

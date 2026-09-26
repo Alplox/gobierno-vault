@@ -1,0 +1,46 @@
+---
+// Una declaracion de una persona, con su evento de contexto. Se usa tanto en el
+// SSR (primeras N) como en el cliente (el resto), asi que el HTML se genera aqui
+// y el texto normalizado para la busqueda viaja en `data-search`.
+import QuoteCard from './QuoteCard.astro';
+import { Newspaper } from 'lucide-astro';
+import type { QuoteEntry } from '../lib/extractEntities';
+
+interface Props {
+  quote: QuoteEntry;
+  eventHref: string;
+  eventTitle: string;
+}
+
+const { quote, eventHref, eventTitle } = Astro.props;
+
+const dateStr = new Date(quote.fecha).toLocaleDateString('es-ES', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+});
+const search = `${quote.text} ${quote.titulo} ${dateStr}`
+  .toLowerCase()
+  .normalize('NFD')
+  .replace(/[\u0300-\u036f]/g, '');
+const eventDate = new Date(quote.fecha).toLocaleDateString('es-ES', {
+  day: 'numeric',
+  month: 'short',
+  year: 'numeric',
+});
+---
+
+<article class="rounded-xl bg-base-200/50 p-3.5" data-quote-item data-search={search}>
+  <QuoteCard quotes={[quote]} />
+  <a
+    href={eventHref}
+    class="mt-1.5 flex items-baseline gap-1.5 text-xs text-base-content/55 hover:text-primary transition-colors group"
+    title={eventTitle}
+  >
+    <Newspaper class="h-3 w-3 shrink-0 translate-y-0.5 opacity-60" aria-hidden="true" />
+    <span class="min-w-0">
+      <span class="tabular-nums text-base-content/45">{eventDate} · </span>
+      <span class="break-line">{eventTitle}</span>
+    </span>
+  </a>
+</article>

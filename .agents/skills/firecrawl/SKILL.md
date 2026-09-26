@@ -25,7 +25,7 @@ the workflow skills for producing repeatable deliverables. It also opens
 browser auth so the human can sign in or create an account.
 
 ```bash
-npx -y firecrawl-cli@latest init --all --browser
+pnpm dlx firecrawl-cli@latest init --all --browser
 ```
 
 This gives you:
@@ -332,7 +332,7 @@ SDK). It is rate-limited, so use it as a fallback rather than the
 default.
 
 - **MCP**: point any MCP-compatible client at `https://mcp.firecrawl.dev/v2/mcp`
-- **CLI**: run `npx -y firecrawl-cli@latest` and use `scrape`, `search`, `interact`, or `parse` with no login
+- **CLI**: run `pnpm dlx firecrawl-cli@latest` and use `scrape`, `search`, `interact`, or `parse` with no login
 - **API**: the research index endpoints (`/search/research/*`) can be called without an `Authorization` header
 
 Search, scrape, interact, parse, and the research index are available

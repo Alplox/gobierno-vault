@@ -210,7 +210,7 @@ defuddle parse <https://sitio.cl/articulo> -p title   # también: author, descri
 - **Cuándo usarlo vs los espejos**: primera opción para páginas estándar antes de recurrir a
   mirrors. Los espejos (`defuddle.md`, `r.jina.ai`) quedan para sitios con JS pesado o
   bloqueos donde el fetch local no llega (BioBio sigue mejor con su espejo documentado).
-- **Instalación** (si falta): `npm install -g defuddle`.
+- **Instalación** (si falta): `pnpm add -g defuddle`.
 - Probado con un artículo de El Ciudadano (extracción limpia).
 
 ## Búsqueda local con ripgrep (`rg`) — catálogo y repo

@@ -86,7 +86,9 @@ export function getEditorData() {
         walkEvents(fullPath);
       } else if (entry.name.endsWith('.md')) {
         const content = readFileSync(fullPath, 'utf8');
-        const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+        // `\r?` por los eventos en CRLF; con el patron estricto no se
+        // reconocía el frontmatter y el conjunto de etiquetas/impactos salía vacío.
+        const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
         if (fmMatch) {
           const fm = YAML.parse(fmMatch[1]);
           if (fm.etiquetas) {

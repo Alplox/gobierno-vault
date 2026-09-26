@@ -22,12 +22,47 @@ const sourceDetails = allSourceIds.map((id) => ({
 const peopleMap = new Map(getPeopleRegistry().map((p) => [p.id, p.data.nombre]));
 const orgsMap = new Map(getOrganizationsRegistry().map((o) => [o.id, o.data.nombre]));
 
+function esc(s: string): string {
+  return String(s)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+/**
+ * Convierte el texto de la cita en HTML. extractEntities separa los párrafos de
+ * una cita multilínea con "\n\n" (un blockquote puede ocupar varias líneas y su
+ * atribución va en la última); aquí cada párrafo se cierra con <p> para que se
+ * lea como tal en vez de quedar todo pegado. El texto se escapa antes de pasar
+ * por los wikilinks porque va con set:html.
+ */
 function renderQuoteText(text: string): string {
   return text
-    .replace(/\[\[person\/([^\]]+)\]\]/g, (_, id) =>
-      `<span class="entity-ref entity-person">${peopleMap.get(id) ?? id}</span>`)
-    .replace(/\[\[org\/([^\]]+)\]\]/g, (_, id) =>
-      `<span class="entity-ref entity-org">${orgsMap.get(id) ?? id}</span>`);
+    .split(/\n{2,}/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+    .map((p) =>
+      esc(p)
+        .replace(/\[\[(?:person|people)\/([^\]|]+)(?:\|[^\]]*)?\]\]/g, (_, id) =>
+          `<span class="entity-ref entity-person">${esc(peopleMap.get(id) ?? id)}</span>`)
+        .replace(/\[\[(?:org|organizations?)\/([^\]|]+)(?:\|[^\]]*)?\]\]/g, (_, id) =>
+          `<span class="entity-ref entity-org">${esc(orgsMap.get(id) ?? id)}</span>`)
+        .replace(/\n/g, '<br />')
+    )
+    .map((p) => `<p class="mb-2 last:mb-0">${p}</p>`)
+    .join('');
+}
+
+/**
+ * Envoltura de la cita. Las comillas tipográficas van DENTRO del primer y del
+ * último párrafo: si se dejan fuera, cada <p> es un bloque y la comilla de
+ * apertura cae en una línea propia, sola.
+ */
+function quoteBody(text: string): string {
+  const html = renderQuoteText(text);
+  const abierta = html.replace('<p class="mb-2 last:mb-0">', '<p class="mb-2 last:mb-0">&ldquo;');
+  // Última etiqueta de cierre del último párrafo.
+  return abierta.replace(/<\/p>(?![\s\S]*<\/p>)/, '&rdquo;</p>');
 }
 
 const payload = {
@@ -73,7 +108,7 @@ const payload = {
   <div class="flex flex-col gap-2">
     {quotes.map((q) => (
       <blockquote class="text-sm text-base-content/80 leading-relaxed italic border-l-2 border-primary/20 pl-3">
-        &ldquo;<Fragment set:html={renderQuoteText(q.text)} />&rdquo;
+        <Fragment set:html={quoteBody(q.text)} />
       </blockquote>
     ))}
   </div>
@@ -143,16 +178,26 @@ const payload = {
           const urls = q.sources
             .map((id: string) => data.sources?.[id]?.url)
             .filter((u: string | undefined) => u);
-          return `${q.person} (${fechaApa(q.fecha)}). “${q.text}”. ${data.titulo}.${urls.length ? ` Recuperado de ${urls.join(', ')}` : ''}`;
+          // Una cita multilínea se copia como un solo párrafo: los saltos son
+          // maquetación del blockquote, no pausas de la frase.
+          const texto = String(q.text).replace(/\s*\n+\s*/g, ' ').trim();
+          return `${q.person} (${fechaApa(q.fecha)}). “${texto}”. ${data.titulo}.${urls.length ? ` Recuperado de ${urls.join(', ')}` : ''}`;
         })
         .join('\n\n');
       copyText(apa, btn);
       return;
     }
 
+    // En markdown hay que prefijar CADA línea con '>' o el bloque se parte y el
+    // resto del texto se sale de la cita.
     const md = data.quotes
-      .map((q: any) =>
-        `> ${q.text} - ${q.person}. Fuente: ${q.sources.map(sourceLink).join(', ')}`)
+      .map((q: any) => {
+        const lineas = String(q.text)
+          .split('\n')
+          .map((l: string) => `> ${l}`.trimEnd());
+        lineas[lineas.length - 1] += ` - ${q.person}. Fuente: ${q.sources.map(sourceLink).join(', ')}`;
+        return lineas.join('\n');
+      })
       .join('\n\n');
     copyText(md, btn);
   }

@@ -1,0 +1,205 @@
+---
+// Linea de tiempo de cargos, en SVG estatico. Sustituye al diagrama Mermaid que
+// antes se cargaba aqui: Mermaid pesa ~1 MB, dibuja con su propio tema (ignora los
+// 35 temas daisyUI del sitio) y no admite enlace. Este SVG usa tokens del tema,
+// escala con el contenedor y cada cargo enlaza a su organizacion.
+import type { RegistryEntry } from '../lib/registry';
+
+interface Props {
+  cargos: { cargo: string; organizacion?: string; desde?: string; hasta?: string }[];
+  orgHref?: (id: string) => string;
+  orgNombre?: (id?: string) => string | null;
+}
+
+const { cargos, orgHref, orgNombre } = Astro.props;
+
+type Row = {
+  cargo: string;
+  org: string | null;
+  orgId: string | null;
+  desde: string;
+  hasta: string | null;
+  desdeMs: number;
+  hastaMs: number;
+  ongoing: boolean;
+  dias: number;
+};
+
+const MES_POR_ANIO = 30.44;
+// `desde`/`hasta` llegan como string desde el registry, pero YAML puede
+// materializar una fecha sin comillas como Date. Se normaliza a ISO-day.
+function isoDay(v: unknown): string | null {
+  if (v === null || v === undefined || v === '') return null;
+  if (v instanceof Date) return Number.isNaN(v.getTime()) ? null : v.toISOString().slice(0, 10);
+  return String(v).slice(0, 10);
+}
+
+function diasEntre(desde: string, hasta: string | null): number {
+  const a = Date.parse(`${desde}T00:00:00Z`);
+  const b = hasta ? Date.parse(`${hasta}T00:00:00Z`) : Date.parse('2026-09-26T00:00:00Z');
+  if (Number.isNaN(a) || Number.isNaN(b)) return 1;
+  return Math.max(1, Math.round((b - a) / 86_400_000));
+}
+
+const rows: Row[] = cargos
+  .map((c) => ({ ...c, desde: isoDay(c.desde), hasta: isoDay(c.hasta) }))
+  .filter((c): c is { cargo: string; desde: string; hasta: string | null; organizacion?: string } => Boolean(c.desde))
+  .map((c) => {
+    const dias = diasEntre(c.desde, c.hasta);
+    return {
+      cargo: c.cargo,
+      org: orgNombre?.(c.organizacion) ?? null,
+      orgId: c.organizacion ?? null,
+      desde: c.desde,
+      hasta: c.hasta,
+      desdeMs: Date.parse(`${c.desde}T00:00:00Z`),
+      hastaMs: Date.parse(`${c.desde}T00:00:00Z`) + dias * 86_400_000,
+      ongoing: !c.hasta,
+      dias,
+    };
+  })
+  .sort((a, b) => a.desdeMs - b.desdeMs);
+
+if (rows.length === 0) return null;
+
+const nowMs = Date.parse('2026-09-26T00:00:00Z');
+const minMs = rows[0].desdeMs;
+// "Hoy" solo entra en el rango si algún cargo sigue vigente. Si no, extender
+// hasta la fecha actual aplasta un carrera histórica de 2 años (1952-1954)
+// dentro de un eje de 74 años: la barra mide 2 px y el eje queda ilegible.
+const hayVigente = rows.some((r) => r.ongoing);
+const maxMs =
+  Math.max(...rows.map((r) => r.hastaMs), hayVigente ? nowMs : -Infinity) +
+  MES_POR_ANIO * 86_400_000 * 0.6;
+
+const ROW_H = 44;
+const BAR_H = 14;
+const W = 760;
+// Carril izquierdo reservado para la etiqueta: sin el, el texto se monta
+// encima de la barra (que en un cargo vigente llega hasta el borde derecho).
+const LABEL_W = 210;
+const PAD_L = 8;
+const PAD_R = 8;
+const PAD_T = 24;
+const AXIS_H = 24;
+const LANE_X = PAD_L + LABEL_W + 12;
+const LANE_W = W - LANE_X - PAD_R;
+const H = PAD_T + rows.length * ROW_H + AXIS_H;
+
+// Marcas del eje. Se eligen por AÑO COMPLETO contenido en el rango (no desde
+// yearFrom stepping), y el paso se calcula para que nunca se solapen: cada
+// etiqueta de 4 digitos necesita ~28 px de carril.
+const yearFrom = new Date(minMs).getUTCFullYear();
+const yearTo = new Date(maxMs).getUTCFullYear();
+const span = yearTo - yearFrom + 1;
+const maxTicks = Math.max(2, Math.floor(LANE_W / 34));
+const yearStep = Math.max(1, Math.ceil(span / maxTicks));
+const years: number[] = [];
+for (let y = yearFrom; y <= yearTo; y += yearStep) years.push(y);
+// Si el último salto deja el eje sin cerrar, añade el año final para que se lea
+// hasta dónde llega el rango.
+if (years[years.length - 1] < yearTo && yearTo - years[years.length - 1] >= yearStep * 0.6) {
+  years.push(yearTo);
+}
+
+// Las barras se dibujan en su propio carril, a la derecha de las etiquetas.
+const x = (ms: number) => LANE_X + ((ms - minMs) / (maxMs - minMs)) * LANE_W;
+const yFor = (i: number) => PAD_T + i * ROW_H + ROW_H / 2;
+
+function fmt(iso: string): string {
+  const [y, m] = iso.split('-');
+  const meses = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+  const mi = Number(m);
+  return `${mi ? `${meses[mi - 1]} ` : ''}${y}`;
+}
+function dur(dias: number): string {
+  if (dias >= 720) return `${(dias / 365).toFixed(1).replace('.0', '')} años`;
+  if (dias >= 60) return `${Math.round(dias / 30.44)} meses`;
+  return `${dias} días`;
+}
+function trunc(s: string, n: number): string {
+  return s.length > n ? `${s.slice(0, n - 1)}…` : s;
+}
+
+const nowX = x(nowMs);
+---
+
+<div class="overflow-x-auto rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]">
+  <svg
+    viewBox={`0 0 ${W} ${H}`}
+    class="w-full min-w-[520px] h-auto"
+    role="img"
+    aria-label="Línea de tiempo de cargos"
+    font-family="system-ui, -apple-system, sans-serif"
+  >
+    {/* Rejilla vertical por año */}
+    {years.map((y) => {
+      const gx = x(Date.parse(`${y}-01-01T00:00:00Z`));
+      if (gx < LANE_X || gx > W - PAD_R) return null;
+      return (
+        <g>
+          <line x1={gx} y1={PAD_T - 10} x2={gx} y2={H - AXIS_H} stroke="var(--color-base-300)" stroke-width="1" />
+          <text x={gx} y={H - AXIS_H + 15} text-anchor="middle" font-size="9.5" fill="var(--color-base-content)" fill-opacity="0.5">
+            {y}
+          </text>
+        </g>
+      );
+    })}
+
+    {/* Marca de "hoy" */}
+    {nowX > LANE_X && nowX < W - PAD_R && (
+      <g>
+        <line x1={nowX} y1={PAD_T - 16} x2={nowX} y2={H - AXIS_H} stroke="var(--color-primary)" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.55" />
+        <text x={nowX} y={PAD_T - 20} text-anchor="middle" font-size="8.5" font-weight="600" fill="var(--color-primary)" opacity="0.8">
+          hoy
+        </text>
+      </g>
+    )}
+
+    {/* Barras por cargo. La etiqueta va en el carril izquierdo y la barra en el
+        derecho, de modo que un cargo vigente (que llega hasta "hoy") no tape su
+        propio texto. */}
+    {rows.map((r, i) => {
+      const bx = x(r.desdeMs);
+      const bw = Math.max(4, x(r.hastaMs) - bx);
+      const by = yFor(i) - BAR_H / 2;
+      const fill = r.ongoing ? 'var(--color-success)' : 'var(--color-primary)';
+      const rango = `${fmt(r.desde)} → ${r.hasta ? fmt(r.hasta) : 'actual'} · ${dur(r.dias)}`;
+      const bar = (
+        <>
+          <rect x={bx} y={by} width={bw} height={BAR_H} rx="4" fill={fill} opacity={r.ongoing ? 0.9 : 0.7} />
+          <rect x={bx} y={by} width={bw} height={BAR_H} rx="4" fill="url(#cargoShade)" />
+        </>
+      );
+      return (
+        <g>
+          <text x={PAD_L} y={yFor(i) - 3} font-size="10.5" font-weight="600" fill="var(--color-base-content)">
+            <title>{`${r.cargo} — ${r.org ?? ''} (${rango})`}</title>
+            {trunc(r.cargo, 30)}
+          </text>
+          <text x={PAD_L} y={yFor(i) + 10} font-size="8.8" fill="var(--color-base-content)" fill-opacity="0.6">
+            {rango}
+          </text>
+          {r.orgId && orgHref ? (
+            <a href={orgHref(r.orgId)}>
+              {bar}
+              <title>{`${r.cargo} — ${r.org ?? r.orgId} (${rango})`}</title>
+            </a>
+          ) : (
+            <g>
+              {bar}
+              <title>{`${r.cargo} — ${r.org ?? ''} (${rango})`}</title>
+            </g>
+          )}
+        </g>
+      );
+    })}
+
+    <defs>
+      <linearGradient id="cargoShade" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#fff" stop-opacity="0.22" />
+        <stop offset="100%" stop-color="#000" stop-opacity="0.10" />
+      </linearGradient>
+    </defs>
+  </svg>
+</div>

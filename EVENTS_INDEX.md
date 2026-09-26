@@ -508,7 +508,7 @@
 - [2026/01/20260120-6 - The Clinic perfila a María Jesús Wulf, la futura ministra de Desarrollo Social de Kast: la socióloga del Movimiento Gremial y primera compañera de ruta del republicano](src/content/events/2026/01/20260120-6.md) — 3 fuentes
 - [2026/01/20260120-7 - The Clinic perfila a María Paz Arzola, la futura ministra de Educación de Kast: la investigadora de Libertad y Desarrollo que impulsa volver a la selección escolar](src/content/events/2026/01/20260120-7.md) — 3 fuentes
 - [2026/01/20260120-8 - Mala Espina perfila a Trinidad Steinert, la exfiscal de Tarapacá que será ministra de Seguridad de Kast: la 'Patricia Bullrich' chilena](src/content/events/2026/01/20260120-8.md) — 4 fuentes
-- [2026/01/20260120-9 - Mala Espina perfila a Fernando Barros, el abogado tributarista que será ministro de Defensa de Kast: el defensor de Pinochet en Londres y abogado de Piñera por 30 años](src/content/events/2026/01/20260120-9.md) — 3 fuentes
+- [2026/01/20260120-9 - Mala Espina perfila a Fernando Barros, el abogado tributarista que será ministro de Defensa de Kast: el defensor de Pinochet en Londres y abogado de Piñera por 30 años](src/content/events/2026/01/20260120-9.md) — 4 fuentes
 - [2026/01/20260121-1 - Cámara Minera critica designación de agrónomo al frente de Minería](src/content/events/2026/01/20260121-1.md) — 3 fuentes
 - [2026/01/20260121-2 - La Tercera perfila 'el lado A' de Daniel Mas, el único biministro de Kast: la empresa familiar Ecomac, la agenda anti-permisología y las facturas falsas de la 'lista de Carrasco'](src/content/events/2026/01/20260121-2.md) — 5 fuentes
 - [2026/01/20260121-3 - Mala Espina perfila a Fernando Rabat, el académico de la UDD que será ministro de Justicia de Kast: el exabogado de Pinochet en el caso Riggs y la Operación Colombo](src/content/events/2026/01/20260121-3.md) — 4 fuentes
@@ -749,6 +749,7 @@
 - [2026/06/20260630-2 - Comisión de Constitución aprueba en general proyecto que autoriza a militares a realizar controles de identidad en estados de excepción](src/content/events/2026/06/20260630-2.md) — 2 fuentes
 - [2026/06/20260630-3 - Mesa de Reactivación Laboral entrega 22 propuestas al Gobierno: jornada hasta 52 horas en ciclos, indemnización a todo evento y sala cuna urgente](src/content/events/2026/06/20260630-3.md) — 8 fuentes
 - [2026/06/20260630-4 - Operación Topógrafo: condenan al exjuez Juan Poblete y al ex director de Inteligencia del Ejército Schafik Nazal por espionaje ilegal](src/content/events/2026/06/20260630-4.md) — 1 fuente
+- [2026/07/20260701-1 - Barros en Mesa Central fija la doctrina de Defensa: las Fuerzas Armadas no están creadas para combatir el delito común y su presencia en las calles no habría evitado la muerte del niño de San Bernardo](src/content/events/2026/07/20260701-1.md) — 7 fuentes
 - [2026/07/20260702-1 - Contraloría concluye que exministra Steinert actuó ilegalmente al solicitar datos a la PDI](src/content/events/2026/07/20260702-1.md) — 3 fuentes
 - [2026/07/20260703-1 - Primera etapa de la zanja fronteriza en etapa final; ingresos irregulares bajaron 90%](src/content/events/2026/07/20260703-1.md) — 5 fuentes
 - [2026/07/20260705-1 - Corrupción y redes de ultraderecha: El flanco Orbán abierto en Chile](src/content/events/2026/07/20260705-1.md) — 2 fuentes
@@ -774,7 +775,7 @@
 - [2026/07/20260718-1 - Gobierno decreta tres días de duelo nacional por muerte del cabo Marcos Cosme](src/content/events/2026/07/20260718-1.md) — 3 fuentes
 - [2026/07/20260719-1 - Aprobación de Kast cae a 28,9%, mínimo histórico de su gobierno](src/content/events/2026/07/20260719-1.md) — 7 fuentes
 - [2026/07/20260719-2 - Tercer pulso del sistema frontal: cuatro fallecidos, evacuaciones en Coquimbo y corte de agua en La Serena](src/content/events/2026/07/20260719-2.md) — 5 fuentes
-- [2026/07/20260719-3 - Ministro de Defensa genera críticas por viaje a Hawái en plena emergencia por sistema frontal](src/content/events/2026/07/20260719-3.md) — 4 fuentes
+- [2026/07/20260719-3 - Ministro de Defensa genera críticas por viaje a Hawái en plena emergencia por sistema frontal](src/content/events/2026/07/20260719-3.md) — 5 fuentes
 - [2026/07/20260720-1 - Kast decreta Estado de Catastrofe en Coquimbo y Huasco ante criticas por gestion del sistema frontal](src/content/events/2026/07/20260720-1.md) — 14 fuentes
 - [2026/07/20260720-2 - Municipalidad de Santiago elimina fotos de tercera muerte de persona sin techo durante el temporal](src/content/events/2026/07/20260720-2.md) — 6 fuentes
 - [2026/07/20260720-3 - Gobierno confirma proyecto para modernizar el INDH](src/content/events/2026/07/20260720-3.md) — 5 fuentes
@@ -1417,7 +1418,7 @@
 - [2026/08/20260822-2 - Interno gravemente herido con elemento cortopunzante en La Laguna de Talca: primer incidente grave en el penal de los traslados de Cancerbero](src/content/events/2026/08/20260822-2.md) — 1 fuente
 - [2026/08/20260822-3 - Cancillería anuncia el cierre de la embajada de Chile en Irán desde el 31 de agosto: 'no implica el cese de las relaciones diplomáticas'](src/content/events/2026/08/20260822-3.md) — 8 fuentes
 - [2026/08/20260823-1 - Alvarado defiende en Mesa Central la reforma de seguridad, niega que habilite detenciones sin orden judicial y minimiza el paralelo con Orbán](src/content/events/2026/08/20260823-1.md) — 6 fuentes
-- [2026/08/20260823-2 - Ministro de Defensa Barros pide que Chile salga del Convenio 169 de la OIT y 'deshacerse' de la Ley Lafkenche: La Moneda cierra la puerta y el Congreso exige orden](src/content/events/2026/08/20260823-2.md) — 10 fuentes
+- [2026/08/20260823-2 - Ministro de Defensa Barros pide que Chile salga del Convenio 169 de la OIT y 'deshacerse' de la Ley Lafkenche: La Moneda cierra la puerta y el Congreso exige orden](src/content/events/2026/08/20260823-2.md) — 11 fuentes
 - [2026/08/20260823-3 - Cadem edición 683: aprobación de Kast sube a 40% pero 51% pide retirar la reforma de seguridad para buscar acuerdos, 61% exige autorización del Congreso y 55% renovación mensual del estado de excepción](src/content/events/2026/08/20260823-3.md) — 8 fuentes
 - [2026/08/20260823-4 - Declaran culpables a cuatro excarabineros por apremios a detenido en Alto Hospicio: suman seis condenados por el caso de violencia institucional](src/content/events/2026/08/20260823-4.md) — 2 fuentes
 - [2026/08/20260824-1 - Kast en Radio Infinita: su reforma de seguridad 'no es iliberal' y 'se puede cambiar', defiende las 43 salidas del gabinete y relativiza el cruce por el Convenio 169](src/content/events/2026/08/20260824-1.md) — 11 fuentes
@@ -1657,7 +1658,7 @@
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 57 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
-- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 96 fuentes
+- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 97 fuentes
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
@@ -1668,6 +1669,7 @@
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes
+- [2026/09/20260924-4 - Barros anuncia en Punta Arenas un plan de renovación de capacidades estratégicas para la zona suraustral: reemplazo de los F-5, renovación de los UH-1H y los Hércules, patrullaje de largo alcance, Leopard 1 y nuevas bases](src/content/events/2026/09/20260924-4.md) — 11 fuentes
 
 ## 2025
 
@@ -2056,6 +2058,10 @@
 ## 2002
 
 - [2002/10/20021018-1 - Destape del Caso Coimas: denuncia de sobornos por plantas de revisión técnica en Rancagua](src/content/events/2002/10/20021018-1.md) — 12 fuentes
+
+## 1999
+
+- [1999/03/19990324-1 - La Cámara de los Lores desecha la inmunidad de Pinochet y devuelve el caso a Jack Straw: solo quedan cargos por tortura posteriores a 1988](src/content/events/1999/03/19990324-1.md) — 7 fuentes
 
 ## 1998
 

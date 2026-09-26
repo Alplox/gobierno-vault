@@ -50,6 +50,23 @@ Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.
 - `validate` lee las colecciones markdown (+ los 3 YAML vivos) al inicio con fallback md si el YAML falta; su detector de mojibake cubre doble-encoding C2/C3, controles C1 (`â€”`), U+FFFD, cirílico, Latin Ext-A/B **y CJK/kana/fullwidth**, y escanea `sources`/`people`/`organizations`/`cifras`/`topics`/**`events`** + `TAREAS/**/*.md` (rechaza BOM UTF-8 inicial). Caso sep-2026 que motivó los rangos CJK y el barrido de `events`: un `documenta` completo en cirílico dentro de un evento, una etiqueta `系统_frontal` en otro, y texto CJK en dos notas de fuente — el rango anterior no los cubría y `events` no se escaneaba. Si algún día una cita legítima va en otro idioma, transcribirla o ajustar `MOJIBAKE_RE` en `scripts/validate/validate.mjs` con un comentario que lo justifique. Si falso positivo por nombre legítimo, ajustar `MOJIBAKE_RE`.
 - Edición concurrente: verificar `git status` antes de operaciones masivas. Protocolo recuperación: (1) copiar dañado a temp fuera del repo; (2) `git checkout -- <archivo>`; (3) re-aplicar entradas extrayendo del backup con script Node (split por IDs) y concatenando utf8; (4) `node scripts/validate/validate.mjs`.
 
+## Lectura de archivos: CRLF y wikilinks (extracción)
+
+El corpus es mixto: la mayoría de los eventos están en **CRLF** (1.362 de 1.543 al último conteo). Dos clases de bug ya baratas de reintroducir:
+
+- **Toda regex de frontmatter debe llevar `\r?`**: `^---\r?\n([\s\S]*?)\r?\n---`. Con el patrón estricto (`\n` solo), los archivos CRLF no matchean y el lector se los salta **en silencio** — sin error, sin evento, sin cita. Pasó con `extractEntities.ts` (era el único lector sin `\r?`; dejó las declaraciones en 0 de 1.711) y con `editorData.ts` (dejó etiquetas e impactos vacíos en el admin). Al añadir un lector de `.md`, copiar la regex de `registry.ts`, que ya es la correcta.
+- **El corpus escribe wikilinks en plural**: `[[people/id]]` y `[[sources/id]]`, nunca `[[person/]]` ni `[[source/]]`. Un regex con el singular en silencio no encuentra nada. Aceptar ambos con `[[(people|person)/…]]`.
+- La atribución de una cita es el **último** wikilink de la línea: el grupo del texto debe ser `(.+)` greedy, no `(.+?)` lazy, o `> X - [[people/a]] y luego - [[people/b]]` se atribuye a `a`.
+- **Una cita puede ocupar varias líneas de blockquote** y poner la atribución solo en la última:
+  ```
+  > Párrafo uno.
+  >
+  > Párrafo dos.
+  > - [[people/id]] [[sources/id]]
+  ```
+  Hay que **acumular la racha de líneas `>`** y usar la última con atribución como cierre, uniendo los párrafos con `\n\n`. Si se evalúa línea por línea sobrevive solo la de la atribución: de esa cita de Boric se mostraba únicamente "Unabraso" (2 casos en el corpus, ambos en `2026/09/20260922-3.md`). Una línea vacía **sin** `>` cierra el grupo; una línea `>` suelta solo separa párrafos.
+- Admite alias: `[[people/id|Nombre legible]]` y `[[people/alejandro_layseca|Alejandro Layseca]]`. El patrón de id es `[A-Za-z0-9_.-]+` y el alias opcional `(?:\|[^\]]*)?` antes de `]]`; sin eso los 58 wikilinks con alias del corpus no contaban como entidad.
+
 ## Colecciones Astro (sin fallback YAML)
 
 `content.config.ts` define las 6 colecciones vía `glob` (`events`, `people`, `organizations`, `topics`, `sources`, `cifras`). `registry.ts` (`people/orgs/topics/sources`), `queries.ts` (`cifras`) y `editorData.ts` (admin) leen `.md` directo, sin fallback: el monolito (`entities/sources/topics.yaml`) se eliminó en ago-2026 y ninguna ruta de código lo lee. Excepción: `src/pages/data/[name].yaml.ts` reconstruye `entities`/`sources`/`topics` desde md para mantener vivas las URLs públicas `/data/*.yaml` (ver `llmIndex.ts`). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.

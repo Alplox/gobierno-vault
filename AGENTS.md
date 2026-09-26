@@ -24,8 +24,8 @@ src/
   content/events/YYYY/MM/YYYYMMDD-N.md
   content/people/*.md, organizations/*.md, topics/*.md, sources/*.md, cifras/*.md ← colecciones Obsidian (markdown puro, sin YAML monolito)
   data/  colectivos.yaml, sectores.yaml, sueldos.yaml ← única excepción YAML (arrays planos / sueldos, no migrado a md)
-  lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, remarkWikiLinks.mjs
-  components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge
+  lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, personStats.ts, remarkWikiLinks.mjs
+  components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge, Person{ActivityChart,Network,StatTiles,TopicMix,CargoTimeline,QuoteItem,EventFilters}
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
   pages/  /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin, /llm.txt, /events/[year]/[id].md, /data/*.yaml
 sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
@@ -79,6 +79,8 @@ Cuerpo con wikilinks inline...
 `[[cifras/...]]` solo para cifras de caracter nacional/pais (series INE/BCN/gobierno, votaciones del Congreso); cifras locales/regionales van como valor en prosa, nunca como wikilink — ver `.agents/skills/content-model/SKILL.md`.
 
 Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada. Detalle completo (medios en prosa, formato citas, `svg_backup`, cifras en disputa, votaciones con fuente oficial) en `.agents/skills/content-model/SKILL.md`.
+
+**Al escribir o leer código que parsee `.md`:** el corpus es mixto LF/CRLF (mayoría CRLF) y los wikilinks son **siempre en plural** (`[[people/]]`, `[[sources/]]`). Toda regex de frontmatter necesita `\r?` (`^---\r?\n([\s\S]*?)\r?\n---`) y todo regex de entidad acepta `[[(people|person)/…]]` + alias opcional `|Alias`. Un singular o un `\n` estricto no da error: **hace que el lector se salte el archivo en silencio** (dejó las 1.711 declaraciones del vault en 0). Detalle en `.agents/skills/data-yaml/SKILL.md` → "Lectura de archivos: CRLF y wikilinks".
 
 ## Reglas rapidas (detalle en `.agents/skills/event-rules/SKILL.md`)
 
@@ -151,6 +153,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Fuente gubernamental directa | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento `S/A/V-YYYY-NNN` | `TAREAS/SEGUIMIENTO/YYYY.md`, `TAREAS/SEGUIMIENTO_INDEX.md`, `.agents/skills/seguimiento/SKILL.md` |
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |
+| Ficha de persona (`/people/[id]`, graficos, panorama) | `.agents/skills/frontend/SKILL.md` → "Ficha de persona", `src/lib/personStats.ts` |
 | Gabinete / `cargos` / Cuentas Publicas | `.agents/skills/gabinete/SKILL.md`, `src/lib/cabinet.ts` |
 | Fetch / PDF / Office / OCR | `.agents/skills/tools/SKILL.md` |
 | Reacciones Reddit/X/YouTube mediante backend opcional | `scripts/social/last30days-search.mjs`, `.agents/skills/social-media/SKILL.md` |

@@ -3,7 +3,8 @@ import { join, relative } from 'node:path';
 import YAML from 'yaml';
 
 const eventsDir = join(process.cwd(), 'src', 'content', 'events');
-const wikiLinkPattern = /\[\[(sources?|people|person|organizations?|org)\/([A-Za-z0-9_.-]+)\]\]/g;
+// Acepta alias de wikilink: [[people/id]] y [[people/id|Nombre legible]].
+const wikiLinkPattern = /\[\[(sources?|people|person|organizations?|org)\/([A-Za-z0-9_.-]+)(?:\|[^\]]*)?\]\]/g;
 const cifraPattern = /\[\[cifras\/([a-z_]+)\/(-?[\d.,]+)(?:\/([^\]]+))?\]\]/g;
 
 export type CifraEntry = {
@@ -156,15 +157,29 @@ function eventIdToDate(eventId: string): Date {
 }
 
 // Formato: > texto de la cita - [[people/id]] [[sources/id]]
-const quoteLineRe = /^>\s*(.+)\s+-\s+\[\[person\/([^\]]+)\]\]/;
-const sourceInLine = /\[\[source\/([^\]]+)\]\]/g;
+// OJO: el corpus escribe SIEMPRE en plural ([[people/]], [[sources/]]); el
+// singular existe en la regla por compatibilidad con notas antiguas, pero usarlo
+// solo hacía que 0 de 1.711 citas se detectaran.
+// `.+` (greedy) a proposito: la atribucion es el ULTIMO wikilink de la linea.
+// Con `> X - [[people/a]] y luego - [[people/b]]` el texto debe ser "X -
+// [[people/a]] y luego" y la persona b, no al reves.
+const quoteLineRe = /^>\s*(.+)\s+-\s+\[\[(?:people|person)\/([^\]|]+)(?:\|[^\]]*)?\]\]/;
+const sourceInLine = /\[\[(?:sources|source)\/([^\]|]+)(?:\|[^\]]*)?\]\]/g;
+// Wikilink a una persona citada DENTRO del texto de la frase, que no es la
+// atribucion final. Se quita del texto para que el QuoteCard no lo vuelva a
+// renderizar como entidad (y para no contarlo como fuente).
+const inlinePersonLink = /\[\[(?:people|person|org|organizations?)\/[^\]|]+(?:\|[^\]]*)?\]\]/g;
+// "> " a secas: separador de parrafo dentro de un blockquote multilinea.
+const isBlankQuoteLine = (line: string) => /^>\s*$/.test(line);
 
 function extractQuotesFromFile(filePath: string): QuoteEntry[] {
   const content = readFileSync(filePath, 'utf8');
   const eventId = eventIdFromPath(filePath);
   const quotes: QuoteEntry[] = [];
 
-  const fmMatch = content.match(/^---\n([\s\S]*?)\n---/);
+  // `\r?` es imprescindible: la mayoria de los eventos estan en CRLF y con el
+  // patron estricto (solo LF) se descartaban enteros, con sus citas.
+  const fmMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
   if (!fmMatch) return quotes;
 
   const fm = YAML.parse(fmMatch[1]);
@@ -174,17 +189,55 @@ function extractQuotesFromFile(filePath: string): QuoteEntry[] {
   const body = content.slice(fmMatch[0].length);
   const lines = body.split('\n');
 
-  for (let i = 0; i < lines.length; i++) {
-    const line = lines[i];
-    if (!line.startsWith('>') || !line.includes('[[people/')) continue;
+  // Una cita puede ocupar VARIAS lineas de blockquote:
+  //
+  //   > Parrafo uno de la declaracion.
+  //   >
+  //   > Parrafo dos.
+  //   > - [[people/id]] [[sources/id]]
+  //
+  // Es una sola cita cuya atribucion va en la ultima linea. Sin acumular el
+  // grupo, cada linea se evaluaba por separado y solo sobrevivia la que llevaba
+  // la atribucion: de "Con @mbachelet hemos escrito... / Invitamos al
+  // Presidente... / Un abrazo" solo se mostraba "Un abrazo".
+  //
+  // Reglas de agrupacion:
+  // - Es grupo toda racha consecutiva de lineas que empiezan por '>'. Una linea
+  //   vacia (sin '>') CIERRA el grupo, de modo que dos citas separadas por una
+  //   linea en blanco siguen siendo dos citas.
+  // - Una linea '>' sola es un separador de parrafo dentro del grupo, no un corte.
+  // - Una linea con atribucion CIERRA la cita en curso. Asi, dos citas pegadas
+  //   (cada una con su atribucion) siguen siendo dos, y una cita larga con
+  //   vinetas se mantiene junta.
+  let buffer: string[] = [];
 
-    const m = line.match(quoteLineRe);
-    if (!m) continue;
+  const flush = () => {
+    if (!buffer.length) return;
+    const pending = buffer;
+    buffer = [];
+    // Ultima linea del grupo con atribucion: cierra la cita.
+    const attrIdx = pending.map((l) => quoteLineRe.test(l)).lastIndexOf(true);
+    if (attrIdx < 0) return;
+    const attrLine = pending[attrIdx];
+    const personId = attrLine.match(quoteLineRe)![2];
+    const sources = [...attrLine.matchAll(sourceInLine)].map((x) => x[1]);
 
-    const text = m[1].trim();
-    const personId = m[2];
-    const sources = [...line.matchAll(sourceInLine)].map((x) => x[1]);
+    // Texto = todo el grupo hasta la atribucion. El texto de esa ultima linea
+    // es lo que queda ANTES del guion de la atribucion.
+    const parrafos: string[] = [];
+    for (let i = 0; i < attrIdx; i++) parrafos.push(pending[i].replace(/^>\s?/, '').trim());
+    const ultimo = attrLine.match(quoteLineRe)![1].trim();
+    if (ultimo) parrafos.push(ultimo);
 
+    // Se limpian los wikilinks a personas citadas DENTRO de la frase (no la
+    // atribucion) y se colapsa el espacio de cada parrafo. Los parrafos se
+    // conservan separados por \n\n para que el render los muestre como parrafos.
+    const text = parrafos
+      .map((p) => p.replace(inlinePersonLink, '').replace(/[ \t]{2,}/g, ' ').trim())
+      .filter(Boolean)
+      .join('\n\n');
+
+    if (!text) return;
     quotes.push({
       personId,
       text,
@@ -192,9 +245,22 @@ function extractQuotesFromFile(filePath: string): QuoteEntry[] {
       fecha,
       titulo,
       sources,
-      line: i,
+      line: attrIdx,
     });
+  };
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i];
+    if (line.startsWith('>')) {
+      buffer.push(line);
+      // Una atribucion presente cierra la cita; la siguiente linea '>' empieza
+      // una nueva. Las lineas '>' vacias se ignoran como separador.
+      if (quoteLineRe.test(line) && !isBlankQuoteLine(line)) flush();
+      continue;
+    }
+    flush();
   }
+  flush();
 
   return quotes;
 }

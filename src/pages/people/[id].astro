@@ -2,17 +2,27 @@
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
-import { getAllPeople, getAllEvents, eventHasPerson, getQuotesForPerson, getEventEntities, getPeopleMap, getTopicsMap } from '../../lib/queries';
-import { getOrganizationsRegistry } from '../../lib/registry';
+import PersonQuoteItem from '../../components/PersonQuoteItem.astro';
+import PersonStatTiles from '../../components/PersonStatTiles.astro';
+import PersonActivityChart from '../../components/PersonActivityChart.astro';
+import PersonTopicMix from '../../components/PersonTopicMix.astro';
+import PersonNetwork from '../../components/PersonNetwork.astro';
+import PersonCargoTimeline from '../../components/PersonCargoTimeline.astro';
+import PersonEventFilters from '../../components/PersonEventFilters.astro';
+import { TIPO_LABELS } from '../../lib/eventTypes';
+import { getAllPeople, getEventEntities, getPeopleMap, getTopicsMap } from '../../lib/queries';
+import { getOrganizationsRegistry, getPeopleRegistry } from '../../lib/registry';
+import { getPersonPanorama, groupEventsByYear, primePersonIndex } from '../../lib/personStats';
 import { eventBasename } from '../../lib/relations';
 import type { QuoteEntry } from '../../lib/extractEntities';
-import { ArrowLeft, Briefcase, Building2, Calendar } from 'lucide-astro';
+import { ArrowLeft, Briefcase, Building2, Calendar, Tag, Users, MessageSquareQuote, Layers, ChevronRight, Search, X } from 'lucide-astro';
 
 function yearOf(fecha: Date): number {
   return Number(new Intl.DateTimeFormat('en-CA', { timeZone: 'America/Santiago', year: 'numeric' }).format(fecha));
 }
 
 export async function getStaticPaths() {
+  await primePersonIndex();
   const people = await getAllPeople();
   return people.map((person) => ({
     params: { id: person.id },
@@ -22,9 +32,10 @@ export async function getStaticPaths() {
 
 const { person } = Astro.props;
 
-const allEvents = await getAllEvents();
-const relatedEvents = allEvents.filter((e) => eventHasPerson(e.id, person.id));
-const quotes = getQuotesForPerson(person.id);
+await primePersonIndex();
+const panorama = await getPersonPanorama(person.id);
+const relatedEvents = panorama.events;
+const quotes = panorama.citas;
 
 const quotesByEvent = new Map<string, QuoteEntry[]>();
 for (const q of quotes) {
@@ -46,11 +57,12 @@ const cargoPortada = latestCargo ? { ...latestCargo, ex: Boolean(latestCargo.has
 const PERSON_EVENTS_LIMIT = 12;
 const ssrEvents = relatedEvents.slice(0, PERSON_EVENTS_LIMIT);
 const lazyEvents = relatedEvents.slice(PERSON_EVENTS_LIMIT);
-const ssrEventIds = new Set(ssrEvents.map((e) => eventBasename(e.id)));
 const [peopleNames, topicsNames] = await Promise.all([getPeopleMap(), getTopicsMap()]);
 
+// Los ids de persona/tema viajan, no los nombres: repetirlos por evento
+// multiplicaba el peso. El `search` tampoco viaja — lo arma el cliente, que ya
+// tiene titulo, etiquetas, tipo y los nombres resueltos.
 const lazyEventData = lazyEvents.map((event) => {
-  const entities = getEventEntities(event.id);
   const d = new Date(event.data.fecha);
   return {
     year: yearOf(event.data.fecha),
@@ -59,12 +71,20 @@ const lazyEventData = lazyEvents.map((event) => {
     fechaStr: d.toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
     tipo: event.data.tipo,
     titulo: event.data.titulo,
-    personas: entities.personas.map((p) => peopleNames.get(p) ?? p),
-    temas: event.data.tema.map((t) => topicsNames.get(t) ?? t),
+    personas: getEventEntities(event.id).personas,
+    temas: event.data.tema,
+    etiquetas: event.data.etiquetas ?? [],
     links: 0,
     previews: [],
   };
 });
+
+// Mapas con SOLO los ids referenciados por estos eventos: incluir el registro
+// completo (2.502 personas) adding 97 KB a cada una de las 2.500 fichas.
+const peopleNeeded = new Set(lazyEventData.flatMap((e) => e.personas));
+const topicsNeeded = new Set(lazyEventData.flatMap((e) => e.temas));
+const peopleMapSubset = Object.fromEntries([...peopleNeeded].map((id) => [id, peopleNames.get(id) ?? id]));
+const topicsMapSubset = Object.fromEntries([...topicsNeeded].map((id) => [id, topicsNames.get(id) ?? id]));
 
 const meses = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
 function fechaEs(iso?: string | number): string | null {
@@ -77,20 +97,80 @@ function orgNombre(id?: string): string | null {
   return id ? (orgNames.get(id) ?? id) : null;
 }
 
-const mermaidTimeline = datedCargos.length
-  ? `timeline\n    title Cargos de ${person.data.nombre}\n` +
-    datedCargos
-      .map((c) => {
-        const org = orgNombre(c.organizacion);
-        const rango = c.hasta ? `${c.desde} → ${c.hasta}` : `desde ${c.desde}`;
-        const label = [c.cargo, org, rango].filter(Boolean).join(' · ').replace(/:/g, '\\:');
-        return `    ${c.desde} : ${label}`;
-      })
-      .join('\n')
-  : null;
+const n = (v: number) => v.toLocaleString('es-CL');
+const slug = person.id;
+const initials = person.data.nombre
+  .split(/\s+/)
+  .slice(0, 2)
+  .map((w) => w.charAt(0))
+  .join('')
+  .toUpperCase();
+
+// Eventos agrupados por año para el selector de la lista.
+const byYear = groupEventsByYear(relatedEvents);
+
+// Declaraciones por año (para los botones de filtro).
+const citaYears = [...new Set(quotes.map((q) => yearOf(new Date(q.fecha))))].sort((a, b) => b - a);
+const citasPorYear = new Map<number, number>();
+for (const q of quotes) {
+  const y = yearOf(new Date(q.fecha));
+  citasPorYear.set(y, (citasPorYear.get(y) ?? 0) + 1);
+}
+
+// Una ficha con muchas citas (Kast: 282) pesa demasiado si se pintan todas:
+// el SSR emite solo las primeras y el resto viaja como JSON compacto.
+const QUOTES_SSR_LIMIT = 12;
+const ssrQuotes = quotes.slice(0, QUOTES_SSR_LIMIT);
+const lazyQuotes = quotes.slice(QUOTES_SSR_LIMIT);
+
+const eventById = new Map(relatedEvents.map((e) => [e.id, e]));
+function quoteEventHref(q: QuoteEntry): string {
+  const ev = eventById.get(q.eventId);
+  if (ev) return `/events/${yearOf(ev.data.fecha)}/${eventBasename(ev.id)}`;
+  const parts = q.eventId.split('/');
+  const file = parts[parts.length - 1];
+  const pathYear = parts[0];
+  const fechaYear = q.fecha.slice(0, 4);
+  return `/events/${/^\d{4}$/.test(pathYear) ? pathYear : fechaYear}/${file}`;
+}
+
+const MEZCLAS = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+function norm(s: string): string {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+function fechaLarga(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return `${d.getUTCDate()} de ${MEZCLAS[d.getUTCMonth()]} de ${d.getUTCFullYear()}`;
+}
+function fechaCorta(iso: string): string {
+  const d = new Date(iso);
+  if (Number.isNaN(d.getTime())) return iso;
+  return `${d.getUTCDate()} ${MEZCLAS[d.getUTCMonth()].slice(0, 3)}. ${d.getUTCFullYear()}`;
+}
+
+const lazyQuoteData = lazyQuotes.map((q) => ({
+  year: yearOf(new Date(q.fecha)),
+  texto: q.text,
+  fecha: q.fecha,
+  fechaLarga: fechaLarga(q.fecha),
+  fechaCorta: fechaCorta(q.fecha),
+  titulo: q.titulo,
+  href: quoteEventHref(q),
+  fuentes: q.sources,
+  search: norm(`${q.text} ${q.titulo} ${fechaLarga(q.fecha)}`),
+}));
+
+const aliases = person.data.aliases ?? [];
+const orgIdPrincipal = person.data.organizacion ?? cargos.at(-1)?.organizacion ?? cargoPortada.organizacion;
+
+// Comprobación de huérfanos: cuántas personas citadas no tienen ficha. Se muestra
+// solo si hay alguna, como pista de calidad del vault (no como error en la página).
+const peopleRegistryIds = new Set(getPeopleRegistry().map((p) => p.id));
+const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).length;
 ---
 
-<Base title={person.data.nombre}>
+<Base title={person.data.nombre} description={`Panorama de ${person.data.nombre}: ${n(panorama.total)} eventos, ${n(panorama.citas.length)} declaraciones y su red de apariciones en Gobierno Vault.`}>
   <div class="mb-6">
     <a href="/people" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
       <ArrowLeft class="h-3.5 w-3.5" />
@@ -98,15 +178,21 @@ const mermaidTimeline = datedCargos.length
     </a>
   </div>
 
-  <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+  <header class="mb-6 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
     <div class="flex items-start gap-6">
-      <div class="h-16 w-16 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-2xl shrink-0">
-        {person.data.nombre.charAt(0)}
+      <div class="h-16 w-16 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-2xl shrink-0" aria-hidden="true">
+        {initials}
       </div>
       <div class="min-w-0 flex-1">
         <h1 transition:name={`person-title-${person.id}`} class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">{person.data.nombre}</h1>
+        {aliases.length > 0 && (
+          <p class="text-xs text-base-content/50 mt-1">
+            <span class="sr-only">También conocida como: </span>
+            {aliases.map((a) => a).join(' · ')}
+          </p>
+        )}
         {cargoPortada.cargo && (
-          <p class="flex items-center gap-1.5 text-sm text-base-content/80 font-medium mt-1">
+          <p class="flex items-center gap-1.5 text-sm text-base-content/80 font-medium mt-1 flex-wrap">
             <Briefcase class="h-4 w-4 text-base-content/40 shrink-0" />
             <span>{cargoPortada.ex ? 'Ex ' : ''}{cargoPortada.cargo}</span>
             {cargoPortada.desde && (
@@ -123,64 +209,313 @@ const mermaidTimeline = datedCargos.length
             )}
           </p>
         )}
-        {(person.data.organizacion ?? cargos.at(-1)?.organizacion ?? cargoPortada.organizacion) && (
+        {orgIdPrincipal && (
           <p class="flex items-center gap-1.5 text-xs text-base-content/60 mt-1">
             <Building2 class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
-            <span>{orgNombre(person.data.organizacion ?? cargos.at(-1)?.organizacion ?? cargoPortada.organizacion)}</span>
+            <a href={`/organizations/${orgIdPrincipal}`} class="hover:text-primary transition-colors">{orgNombre(orgIdPrincipal)}</a>
           </p>
+        )}
+        {person.data.tipo && (
+          <p class="text-xs text-base-content/50 mt-1">{person.data.tipo}</p>
         )}
       </div>
     </div>
   </header>
 
   {person.data.bio && (
-    <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed" set:html={person.data.bio} />
+    <div class="prose prose-gray max-w-none mb-6 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed" set:html={person.data.bio} />
   )}
 
+  {/* ---- Indicadores auto-generados ---- */}
+  {panorama.total > 0 && (
+    <section aria-labelledby="pv-stats-h" class="mb-6">
+      <h2 id="pv-stats-h" class="sr-only">Indicadores</h2>
+      <PersonStatTiles panorama={panorama} />
+    </section>
+  )}
+
+  {/* ---- Actividad por año ---- */}
+  {panorama.years.length > 0 && (
+    <section class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]" aria-labelledby="pv-chart-h">
+      <div class="flex items-center justify-between gap-3 mb-4">
+        <h2 id="pv-chart-h" class="text-lg font-bold text-base-content flex items-center gap-2">
+          <Calendar class="h-5 w-5 text-primary" />
+          <span>Actividad por año</span>
+        </h2>
+        <a href="/events" class="inline-flex items-center gap-1 text-xs font-medium text-base-content/60 hover:text-primary transition-colors shrink-0">
+          <span>Filtrar en /events</span>
+          <ChevronRight class="h-3.5 w-3.5" />
+        </a>
+      </div>
+      <PersonActivityChart panorama={panorama} slug={slug} />
+    </section>
+  )}
+
+  {/* ---- Reparto por tipo ---- */}
+  {panorama.porTipo.length > 1 && (
+    <section id="reparto" class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-mix-h">
+      <h2 id="pv-mix-h" class="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
+        <Layers class="h-5 w-5 text-primary" />
+        <span>Reparto por tipo de evento</span>
+      </h2>
+      <PersonTopicMix panorama={panorama} slug={slug} />
+    </section>
+  )}
+
+  <div class="grid gap-6 lg:grid-cols-2 mb-6">
+    {/* ---- Temas ---- */}
+    {panorama.temas.length > 0 && (
+      <section id="temas" class="bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-temas-h">
+        <h2 id="pv-temas-h" class="text-base font-bold text-base-content flex items-center gap-2 mb-1">
+          <Tag class="h-4 w-4 text-primary" />
+          <span>Temas en los que aparece</span>
+        </h2>
+        <p class="text-xs text-base-content/55 mb-4">Cuántos de sus eventos tocan cada tema.</p>
+        <ul class="space-y-2">
+          {panorama.temas.map((t) => {
+            const max = panorama.temas[0].n;
+            return (
+              <li>
+                <a href={`/events?persona=${slug}&tema=${t.id}`} class="group block" title={`Ver los ${n(t.n)} eventos de ${t.nombre} linked a esta persona en /events`}>
+                  <div class="flex items-baseline justify-between gap-3 text-xs mb-1">
+                    <span class="font-medium text-base-content/80 group-hover:text-primary transition-colors truncate">{t.nombre}</span>
+                    <span class="tabular-nums font-semibold text-base-content/60 shrink-0">{n(t.n)}</span>
+                  </div>
+                  <div class="h-1.5 rounded-full bg-base-200 overflow-hidden">
+                    <div class="h-full rounded-full bg-primary/70 group-hover:bg-primary transition-colors" style={`width:${Math.max(4, (t.n / max) * 100)}%`} />
+                  </div>
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    )}
+
+    {/* ---- Organizaciones ---- */}
+    {panorama.orgs.length > 0 && (
+      <section id="organizaciones" class="bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-orgs-h">
+        <h2 id="pv-orgs-h" class="text-base font-bold text-base-content flex items-center gap-2 mb-1">
+          <Building2 class="h-4 w-4 text-primary" />
+          <span>Organizaciones</span>
+        </h2>
+        <p class="text-xs text-base-content/55 mb-4">Entidades mencionadas junto a esta persona.</p>
+        <ul class="flex flex-wrap gap-1.5">
+          {panorama.orgs.map((o) => (
+            <li>
+              <a
+                href={`/organizations/${o.id}`}
+                class="inline-flex items-center gap-1.5 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 transition-colors hover:bg-primary/10 hover:text-primary"
+                title={`${n(o.n)} evento${o.n === 1 ? '' : 's'} en común con ${o.nombre}`}
+              >
+                <span class="max-w-[18rem] truncate">{o.nombre}</span>
+                <span class="tabular-nums font-semibold text-primary">{n(o.n)}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+
+  {/* ---- Red de co-apariciones ---- */}
+  {panorama.coPeople.length > 0 && (
+    <section id="red" class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-red-h">
+      <div class="flex items-center justify-between gap-3 mb-1">
+        <h2 id="pv-red-h" class="text-lg font-bold text-base-content flex items-center gap-2">
+          <Users class="h-5 w-5 text-primary" />
+          <span>Con quién aparece</span>
+        </h2>
+        {huerfanos > 0 && (
+          <span class="text-[11px] text-base-content/45" title={`${huerfanos} persona(s) citada(s) en eventos aún sin ficha en src/content/people/`}>
+            {huerfanos} sin ficha
+          </span>
+        )}
+      </div>
+      <p class="text-xs text-base-content/55 mb-4">
+        Figuras con las que comparte más eventos. El tamaño del nodo y el grosor del enlace
+        siguen el número de apariciones en común.
+      </p>
+      <PersonNetwork panorama={panorama} personName={person.data.nombre} slug={slug} />
+    </section>
+  )}
+
+  {/* ---- Cargos ---- */}
   {cargos.length > 0 && (
-    <section class="mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
-      <h2 class="text-lg font-bold text-base-content mb-4">Cargos</h2>
-      <ul class="space-y-3">
+    <section class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]" aria-labelledby="pv-cargos-h">
+      <h2 id="pv-cargos-h" class="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
+        <Briefcase class="h-5 w-5 text-primary" />
+        <span>Cargos</span>
+      </h2>
+      <ol class="space-y-3 mb-5">
         {cargos.map((c) => {
           const org = orgNombre(c.organizacion);
           const desde = fechaEs(c.desde);
           const hasta = fechaEs(c.hasta);
+          const vigente = c.desde && !c.hasta;
           return (
             <li class="flex items-start gap-3">
-              <span class="mt-1 h-2.5 w-2.5 rounded-full bg-primary shrink-0" />
-              <div>
-                <p class="font-semibold text-base-content text-sm">{c.cargo}</p>
-                {(org || desde) && (
-                  <p class="text-xs text-base-content/60 mt-0.5">
-                    {[org, desde && `desde ${desde}`, hasta && `hasta ${hasta}`].filter(Boolean).join(' · ')}
-                  </p>
-                )}
+              <span class={`mt-1.5 h-2.5 w-2.5 rounded-full shrink-0 ${vigente ? 'bg-success' : 'bg-primary'}`} aria-hidden="true" />
+              <div class="min-w-0">
+                <p class="font-semibold text-base-content text-sm">
+                  {c.organizacion ? (
+                    <a href={`/organizations/${c.organizacion}`} class="hover:text-primary transition-colors">{c.cargo}</a>
+                  ) : (
+                    c.cargo
+                  )}
+                </p>
+                <p class="text-xs text-base-content/60 mt-0.5">
+                  {[org, desde && `desde ${desde}`, hasta && `hasta ${hasta}`].filter(Boolean).join(' · ')}
+                </p>
               </div>
+              {vigente && (
+                <span class="ml-auto shrink-0 text-[10px] font-bold uppercase tracking-wide bg-success/15 text-success px-1.5 py-0.5 rounded-full">
+                  Actual
+                </span>
+              )}
             </li>
           );
         })}
-      </ul>
-      {mermaidTimeline && <div class="overflow-x-auto"><pre class="mermaid mt-6">{mermaidTimeline}</pre></div>}
+      </ol>
+      <PersonCargoTimeline cargos={cargos} orgHref={(id) => `/organizations/${id}`} orgNombre={orgNombre} />
     </section>
   )}
 
-  <section class="mt-8">
-    <div class="flex items-center justify-between mb-4">
+  {/* ---- Declaraciones ---- */}
+  {quotes.length > 0 && (
+    <section id="declaraciones" class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-quotes-h">
+      <div class="flex items-center justify-between gap-3 mb-1 flex-wrap">
+        <h2 id="pv-quotes-h" class="text-lg font-bold text-base-content flex items-center gap-2">
+          <MessageSquareQuote class="h-5 w-5 text-primary" />
+          <span>Declaraciones ({n(quotes.length)})</span>
+        </h2>
+        {quotes.length > 12 && (
+          <div class="flex items-center gap-2">
+            <label class="sr-only" for="pv-quote-search">Buscar en las declaraciones</label>
+            <div class="relative">
+              <Search class="absolute left-2.5 top-1/2 -translate-y-1/2 h-3.5 w-3.5 text-base-content/35 pointer-events-none" aria-hidden="true" />
+              <input
+                type="search"
+                id="pv-quote-search"
+                data-quote-search
+                placeholder="Buscar en declaraciones"
+                class="w-44 sm:w-56 text-xs bg-base-200 border border-base-300 rounded-lg pl-8 pr-2.5 py-1.5 focus:bg-base-100 focus:ring-2 focus:ring-primary focus:border-primary transition-colors"
+              />
+            </div>
+            <button
+              type="button"
+              data-quote-clear
+              class="hidden items-center gap-1 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/70 hover:bg-base-300 transition-colors"
+            >
+              <X class="h-3 w-3" />
+              <span>Limpiar</span>
+            </button>
+          </div>
+        )}
+      </div>
+      <p class="text-xs text-base-content/55 mb-4">
+        Fragmentos citados textualmente en el vault, de más reciente a más antiguo.
+        {citaYears.length > 1 && ` Presentes en ${citaYears.length} años distintos.`}
+      </p>
+
+      {citaYears.length > 1 && (
+        <div class="flex flex-wrap gap-1.5 mb-4" role="group" aria-label="Filtrar declaraciones por año">
+          <button
+            type="button"
+            data-quote-year=""
+            aria-pressed="true"
+            class="rounded-md px-2.5 py-1 text-xs font-medium bg-primary text-primary-content transition-colors"
+          >
+            Todos los años
+          </button>
+          {citaYears.map((y) => (
+            <button
+              type="button"
+              data-quote-year={y}
+              aria-pressed="false"
+              class="rounded-md px-2.5 py-1 text-xs font-medium bg-base-200 text-base-content/70 hover:bg-base-300 transition-colors"
+            >
+              {y} <span class="tabular-nums opacity-60">({n(citasPorYear.get(y) ?? 0)})</span>
+            </button>
+          ))}
+        </div>
+      )}
+
+      <div id="pv-quote-list" class="space-y-4">
+        {ssrQuotes.map((q) => (
+          <div data-quote-group={yearOf(new Date(q.fecha))} data-year={yearOf(new Date(q.fecha))}>
+            <PersonQuoteItem quote={q} eventHref={quoteEventHref(q)} eventTitle={q.titulo} />
+          </div>
+        ))}
+      </div>
+      <p data-quote-empty class="hidden text-sm text-base-content/60 text-center py-6 border border-dashed border-base-300 rounded-xl">
+        Ninguna declaración coincide con la búsqueda.
+      </p>
+      {lazyQuotes.length > 0 && (
+        <div class="mt-4 flex justify-center">
+          <button
+            id="load-more-person-quotes"
+            class="inline-flex items-center gap-2 rounded-lg border border-base-300 bg-base-100 px-4 py-2 text-xs font-semibold text-base-content/75 hover:bg-base-200 transition-colors"
+          >
+            <span class="person-quote-more-label">Cargar más declaraciones ({n(lazyQuotes.length)} restantes)</span>
+          </button>
+        </div>
+      )}
+    </section>
+  )}
+
+  {/* ---- Eventos ---- */}
+  <section id="eventos" class="mt-8 scroll-mt-24">
+    <div class="mb-4 flex items-center justify-between gap-3 flex-wrap">
       <h2 class="text-lg font-bold text-base-content flex items-center gap-2">
         <Calendar class="h-5 w-5 text-primary" />
-        <span>Eventos relacionados ({relatedEvents.length})</span>
+        <span>Eventos ({n(panorama.total)})</span>
         {quotes.length > 0 && (
-          <span class="text-sm font-medium text-base-content/60">
-            · Declaraciones ({quotes.length})
-          </span>
+          <span class="text-sm font-medium text-base-content/60">· {n(quotes.length)} declaraciones</span>
         )}
       </h2>
+      <a
+        href={`/events?persona=${slug}`}
+        class="inline-flex items-center gap-1 text-xs font-medium text-base-content/60 hover:text-primary transition-colors shrink-0"
+      >
+        <span>Ver en /events</span>
+        <ChevronRight class="h-3.5 w-3.5" />
+      </a>
     </div>
+
+    <p class="mb-4 text-xs text-base-content/55">
+      Del más reciente al más antiguo. La lista se amplía sola al bajar; los filtros combinan
+      año, tipo, tema y texto.
+    </p>
+
+    {relatedEvents.length > 0 && (
+      <PersonEventFilters panorama={panorama} byYear={byYear} slug={slug} />
+    )}
+
     <div id="person-events-root" class="grid gap-4">
       {ssrEvents.map((event) => {
         const eventQuotes = quotesByEvent.get(event.id) ?? [];
         return (
-          <div class="space-y-3 min-w-0 max-w-full">
+          <div
+            class="space-y-3 min-w-0 max-w-full"
+            data-event-item
+            data-year={yearOf(event.data.fecha)}
+            data-tipo={event.data.tipo}
+            data-temas={event.data.tema.join(',')}
+            /* Debe coincidir campo por campo con el `data-search` que emite
+               EventCard.astro (que ya incluye personas, temas, tipo, id, fecha
+               y año), o la búsqueda no encuentra unas u otras tarjetas. */
+            data-search={norm([
+              event.data.titulo,
+              ...(event.data.etiquetas ?? []),
+              ...getEventEntities(event.id).personas.map((p) => peopleNames.get(p) ?? p),
+              ...event.data.tema.map((t) => topicsNames.get(t) ?? t),
+              TIPO_LABELS[event.data.tipo] ?? event.data.tipo,
+              eventBasename(event.id),
+              new Date(event.data.fecha).toLocaleDateString('es-ES', { year: 'numeric', month: 'long', day: 'numeric' }),
+              yearOf(event.data.fecha),
+            ].join(' '))}
+          >
             <EventCard event={event} />
             {eventQuotes.length > 0 && <QuoteCard quotes={eventQuotes} />}
           </div>
@@ -188,39 +523,51 @@ const mermaidTimeline = datedCargos.length
       })}
       {relatedEvents.length === 0 && (
         <p class="text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center">
-          No hay eventos registrados para esta persona.
+          No hay eventos registrados para esta persona.{' '}
+          <a href="/admin" class="text-primary hover:underline">Se documentan desde el editor de contenido.</a>
         </p>
       )}
     </div>
-    {lazyEvents.length > 0 && (
-      <div class="mt-6 flex justify-center">
-        <button
-          id="load-more-person-events"
-          class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-base-300 bg-base-100 px-5 py-2.5 text-sm font-semibold text-base-content/80 shadow-sm hover:bg-base-200"
-          data-root="person-events-root"
-          data-data-id="person-events-data"
-        >
-          <span class="person-event-more-label">Cargar más eventos de {person.data.nombre} ({lazyEvents.length} restantes)</span>
-        </button>
-      </div>
-    )}
+
+    <p data-event-status class="mt-4 text-center text-xs text-base-content/45" role="status" aria-live="polite"></p>
   </section>
 </Base>
 
-<script type="application/json" id="person-events-data" set:html={JSON.stringify(lazyEventData)} />
+<script
+  type="application/json"
+  id="person-events-data"
+  set:html={JSON.stringify({
+    maps: {
+      people: peopleMapSubset,
+      topics: topicsMapSubset,
+    },
+    events: lazyEventData,
+  })}
+/>
+
+{quotes.length > 0 && (
+  <script type="application/json" id="person-quotes-data" set:html={JSON.stringify(lazyQuoteData)} />
+)}
 
 <script>
   import { initPersonEventList } from '../../scripts/personEventClient.js';
+  // El scroll infinito usa un IntersectionObserver sobre el DOM actual: sin
+  // re-ejecutar en cada navegación (View Transitions reemplaza el DOM) el
+  // observer queda mirando nodos viejos y la lista deja de crecer. El guard
+  // protege solo el REGISTRO del listener, porque el script del módulo se
+  // evalúa una sola vez (patrón events/index.astro).
+  if (!(window as any).__gvPersonEventListPageLoad) {
+    (window as any).__gvPersonEventListPageLoad = true;
+    document.addEventListener('astro:page-load', initPersonEventList);
+  }
   initPersonEventList();
 </script>
 
-{datedCargos.length > 0 && (
-  <script>
-    (async () => {
-      const mermaid = await import('mermaid');
-      mermaid.default.initialize({ startOnLoad: false, theme: 'neutral' });
-      mermaid.default.run().catch((err) => console.error('Mermaid error:', err));
-    })();
-  </script>
-)}
-
+<script>
+  import { initPersonFilters } from '../../scripts/personPageClient.js';
+  if (!(window as any).__gvPersonFiltersPageLoad) {
+    (window as any).__gvPersonFiltersPageLoad = true;
+    document.addEventListener('astro:page-load', initPersonFilters);
+  }
+  initPersonFilters();
+</script>
