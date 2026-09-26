@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: La Discusión
+medio: La Discusión (Chillán)
 titulo: Portezuelo es la segunda comuna con mayor decrecimiento natural del país
 autor: ""
 fecha: 2026-06-10

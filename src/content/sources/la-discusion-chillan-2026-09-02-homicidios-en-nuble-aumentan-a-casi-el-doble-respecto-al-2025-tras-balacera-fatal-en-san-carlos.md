@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: La Discusión
+medio: La Discusión (Chillán)
 titulo: Homicidios en Ñuble aumentan a casi el doble respecto al 2025 tras
   balacera fatal en San Carlos
 autor: ""

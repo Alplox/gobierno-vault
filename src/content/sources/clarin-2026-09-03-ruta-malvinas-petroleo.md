@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Clarín (Argentina)
+medio: Clarín
 titulo: "Acuerdan la apertura de una ruta marítima desde Chile a las islas Malvinas para la explotación petrolera"
 autor: Natasha Niebieskikwiat
 fecha: 2026-09-03

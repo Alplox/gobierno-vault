@@ -41,6 +41,24 @@ Sin cifras ni entidades hardcodeadas:
 
 Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.
 
+## Anti-duplicados — verificar antes de crear entidad
+
+Antes de crear un archivo en `src/content/organizations/*.md`, `src/content/people/*.md` o `src/content/sources/*.md`:
+
+1. **Buscar por nombre normalizado:** `rg -i '^nombre:.*<término>' src/content/organizations/`
+2. **Buscar por sigla/ID aproximado:** `rg -i '<sigla>' src/content/organizations/`
+3. **Si ya existe** → reutilizar el ID existente o agregar `aliases[]` al archivo previo
+4. **ID y `nombre` con nombre completo, nunca abreviado:** la forma corta (`eduardo_frei`, `victor_perez`) colisiona con homónimos y obliga a una segunda ficha desambiguadora. Nuevas personas: `nombre_apellido_paterno_apellido_materno.md` con `nombre` completo (`eduardo_frei_ruiz_tagle.md` / `Eduardo Frei Ruiz-Tagle` — caso sep-2026: distinguió del padre `eduardo_frei_montalva`). Nuevas orgs: nombre institucional completo, no sigla (`union_democrata_independiente`, no `udi`; la sigla va en `aliases[]`). Si un homónimo real aparece después, la ficha abreviada preexistente se renombra a completa y la variante queda en `aliases[]`.
+
+El campo `aliases[]` en frontmatter (ya soportado por el schema) permite registrar siglas y variantes de nombre sin crear archivos duplicados:
+
+```yaml
+nombre: Unión Demócrata Independiente (UDI)
+aliases: [UDI, "UDI Chile"]
+```
+
+Script de validación: `node scripts/validate/check-duplicates.mjs` (solo `organizations`), `--all` añade `people`, `--strict` omite la heurística de sigla, `--json` para consumo programático. Escanea `organizations` y `people`; **`sources` se excluye a propósito** (su identidad es el ID `medio-fecha-slug`, y comparar por `medio` haría colisionar todos los artículos de un mismo medio). Compara el `nombre` normalizado (sin acentos, sin paréntesis de país) y exige `pais` compatible, para no confundir homónimos de países distintos. Salida: aviso (exit 1) sin tocar el build; `validate.mjs` imprime un resumen de nombres duplicados en cada corrida.
+
 ## Encoding y edición concurrente
 
 - **NUNCA** PowerShell `Set-Content`/`Out-File`/`Add-Content` ni `>` sobre archivos del repo: reescriben con ANSI/CRLF y corrompen UTF-8 (un rename generó diff 31k líneas). Usar Node `readFileSync`/`writeFileSync` con `utf8` o tools Edit/Write del agente.

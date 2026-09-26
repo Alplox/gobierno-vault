@@ -225,6 +225,7 @@ const WHITELIST_MEDIOS = new Set([
   'Municipalidad de Puerto Montt',
   'Partido Republicano de Chile',
   'Partido Por la Democracia',
+  'Partido por la Democracia (PPD)',
   'Superintendencia de Pensiones',
   'AFC Chile',
   'Libertad y Desarrollo (LyD)',
@@ -277,6 +278,7 @@ const WHITELIST_MEDIOS = new Set([
   'Amnistía Internacional Chile',
   'Amnistía Internacional',
   'Consejo para la Transparencia (CPLT)',
+  'Consejo para la Transparencia',
   'Carabineros de Chile',
   'BCN (Ley Chile)',
   'SUSESO (Superintendencia de Seguridad Social)',
@@ -738,6 +740,39 @@ for (const file of allFiles) {
     }
   }
 }
+
+// Anti-duplicados: aviso informativo, NO cuenta como error (rompería el build
+// mientras haya entidades duplicadas legítimas por consolidar). El detalle vive en
+// scripts/validate/check-duplicates.mjs; se ejecuta aquí solo para dar visibilidad
+// en cada `pnpm run validate` sin obligar a un paso extra.
+try {
+  const { readdirSync: rd, readFileSync: rf, existsSync: ex } = await import('node:fs');
+  const { join: jn } = await import('node:path');
+  const normName = (s) => (s || '').toLowerCase().normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '').replace(/\([^)]*\)/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+  const orgDir = jn(process.cwd(), 'src', 'content', 'organizations');
+  if (ex(orgDir)) {
+    const byName = new Map();
+    for (const f of rd(orgDir).filter(f => f.endsWith('.md'))) {
+      const raw = rf(jn(orgDir, f), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      let d = {}; try { d = YAML.parse(m[1]) ?? {}; } catch { continue; }
+      const k = normName(d.nombre);
+      if (k.length < 5) continue;
+      const pk = (d.pais || '').toLowerCase().trim() || '(sin pais)';
+      const key = `${k}::${pk}`;
+      if (!byName.has(key)) byName.set(key, []);
+      byName.get(key).push(f.replace(/\.md$/, ''));
+    }
+    const dupes = [...byName.values()].filter(g => g.length > 1);
+    if (dupes.length) {
+      console.warn(`⚠ ${dupes.length} organización(es) con nombre duplicado (ver check-duplicates.mjs):`);
+      for (const g of dupes) console.warn(`  ${g.join(' | ')}`);
+    }
+  }
+} catch { /* el aviso de duplicados nunca debe romper la validación */ }
 
 if (errors > 0) {
   console.error(`\n✖ ${errors} error(es) de validación`);

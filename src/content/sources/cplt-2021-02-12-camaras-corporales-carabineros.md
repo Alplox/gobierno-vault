@@ -1,6 +1,6 @@
 ---
 tipo: comunicado
-medio: Consejo para la Transparencia (CPLT)
+medio: Consejo para la Transparencia
 titulo: CPLT ordena a Carabineros entrega de registros de cámaras corporales
   usadas en operativos por estallido social
 autor: ""

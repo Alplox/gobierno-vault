@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Clarín (Argentina)
+medio: Clarín
 titulo: "Ahora una naviera chilena busca sumarse al negocio petrolero en las Malvinas y dejan a la Argentina afuera"
 autor: Natasha Niebieskikwiat
 fecha: 2026-07-24

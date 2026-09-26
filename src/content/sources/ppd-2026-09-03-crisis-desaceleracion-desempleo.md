@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Partido Por la Democracia
+medio: Partido por la Democracia (PPD)
 titulo: "Crisis Económica: Desaceleración y Desempleo en Aumento"
 autor: Editorial Team
 fecha: 2026-09-03

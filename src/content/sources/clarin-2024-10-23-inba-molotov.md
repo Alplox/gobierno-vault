@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Clarín (Argentina)
+medio: Clarín
 titulo: "Estalla una bomba molotov manipulada por alumnos en el baño de una
   escuela en Chile: hay 35 heridos, 15 de ellos de gravedad"
 autor: Clarín

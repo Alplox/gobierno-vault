@@ -2,6 +2,7 @@
 nombre: Defensoría de la Niñez
 tipo: organismo_publico
 pais: Chile
+aliases: ["Defensoría de la Niñez"]
 notas: Organismo público autónomo creado en 2018 para la protección de los
   derechos de niños, niñas y adolescentes. En el caso Pío Nono (octubre de 2020)
   se querelló contra Carabineros y pidió prisión preventiva para el carabinero

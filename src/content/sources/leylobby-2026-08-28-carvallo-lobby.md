@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Consejo para la Transparencia (CPLT)
+medio: Consejo para la Transparencia
 titulo: Cargos pasivos Subsecretaría de la Niñez — Sebastián Carvallo Greene
   (jefe de Gabinete desde 09-07-2026)
 autor: ""
