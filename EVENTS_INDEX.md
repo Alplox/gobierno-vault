@@ -1478,6 +1478,7 @@
 - [2026/08/20260828-12 - Niu Qingbao acusa a EE.UU. de creerse 'emperador de América Latina' en carta en El Mercurio: arancel 12,5% a Chile pese a TLC, presiones por cable submarino con China y visas como 'arma'](src/content/events/2026/08/20260828-12.md) — 6 fuentes
 - [2026/08/20260828-13 - Contralora Dorothy Pérez defiende que la ciudadanía pueda fiscalizar a autoridades y funcionarios públicos: 'si uno no quiere ser escrutado, tiene que buscarse otro trabajo'](src/content/events/2026/08/20260828-13.md) — 7 fuentes
 - [2026/08/20260828-14 - Atentado incendiario en faena forestal entre Traiguén y Los Sauces: queman excavadora y dos camionetas y roban un tercer vehículo](src/content/events/2026/08/20260828-14.md) — 6 fuentes
+- [2026/08/20260828-15 - Eduardo Artés difunde un video hecho con inteligencia artificial en que combate a 'sionistas' en la Patagonia y defiende la tesis del Plan Andinia](src/content/events/2026/08/20260828-15.md) — 6 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 16 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
@@ -2035,6 +2036,7 @@
 
 ## 2011
 
+- [2011/01/20110107-1 - Chile reconoce al Estado de Palestina como Estado libre, independiente y soberano y eleva a embajada su representación en Santiago](src/content/events/2011/01/20110107-1.md) — 8 fuentes
 - [2011/06/20110608-1 - The Clinic revela el conflicto de interés de Ena von Baer por el convenio UPOV 91 y las semillas registradas por su familia](src/content/events/2011/06/20110608-1.md) — 3 fuentes
 - [2011/11/20111121-1 - Homenaje a Krassnoff convocado por Labbé termina con incidentes y funa en el Club Providencia](src/content/events/2011/11/20111121-1.md) — 7 fuentes
 - [2011/11/20111123-1 - Corte de Apelaciones de Santiago condena a once personas en la arista Banco Central del caso Inverlink](src/content/events/2011/11/20111123-1.md) — 4 fuentes
