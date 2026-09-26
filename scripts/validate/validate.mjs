@@ -116,6 +116,8 @@ const WHITELIST_MEDIOS = new Set([
   'Prensa Presidencia',
   'SENAPRED',
   'Ministerio de Hacienda',
+  'Ministerio de Desarrollo Social y Familia',
+  'Ministerio Secretaría General de la Presidencia',
   'Unidad de Análisis Financiero (UAF)',
   'Ministerio de Salud',
   'Ministerio de Salud (Minsal)',

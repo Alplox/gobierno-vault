@@ -629,6 +629,7 @@
 - [2026/04/20260422-2 - Correo interno de la directora del Programa de DDHH revela instrucción de no alegar en causas de lesa humanidad y contradice al ministro Rabat](src/content/events/2026/04/20260422-2.md) — 3 fuentes
 - [2026/04/20260423-1 - Robo de equipos audiovisuales y especies en el Ministerio de la Mujer y Equidad de Género: denuncia ante la PDI y sumario interno](src/content/events/2026/04/20260423-1.md) — 8 fuentes
 - [2026/04/20260424-1 - Encuesta Black & White: 52% apoya el Plan de Reconstrucción en general y la mayoría rechaza la rebaja del impuesto corporativo](src/content/events/2026/04/20260424-1.md) — 1 fuente
+- [2026/04/20260424-2 - Filtrado el Oficio Circular N°16 de Hacienda que recomendaba descontinuar 142 programas y rebajar otros 260](src/content/events/2026/04/20260424-2.md) — 15 fuentes
 - [2026/04/20260425-1 - Kast responde a críticas por recortes y critica al gobierno anterior: 'Ustedes le quitaron los alimentos a los niños'](src/content/events/2026/04/20260425-1.md) — 7 fuentes
 - [2026/04/20260426-1 - Gobierno diseña el Plan Entornos Digitales Seguros para prohibir redes sociales a menores de 16 años](src/content/events/2026/04/20260426-1.md) — 2 fuentes
 - [2026/04/20260427-1 - Entra en vigencia la segunda etapa de la Ley de 40 horas (42 horas): comercio y expertos alertan por costos y empleo](src/content/events/2026/04/20260427-1.md) — 1 fuente
@@ -1678,7 +1679,11 @@
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes
 - [2026/09/20260924-4 - Barros anuncia en Punta Arenas un plan de renovación de capacidades estratégicas para la zona suraustral: reemplazo de los F-5, renovación de los UH-1H y los Hércules, patrullaje de largo alcance, Leopard 1 y nuevas bases](src/content/events/2026/09/20260924-4.md) — 11 fuentes
+- [2026/09/20260924-5 - La Embajada de Israel remite al rector de la UC una carta que acusa al académico Sebastián Gray de injurias públicas; la universidad revisa sus publicaciones](src/content/events/2026/09/20260924-5.md) — 6 fuentes
+- [2026/09/20260924-6 - Vecinos y religiosas del Barrio Matta instalan 'duchas anti rucos' en el Monasterio de las Hermanas Clarisas Capuchinas y personas en situación de calle cuestionan la medida](src/content/events/2026/09/20260924-6.md) — 9 fuentes
 - [2026/09/20260925-1 - Sistema frontal golpea La Araucanía: 9.400 personas aisladas y más de 300 viviendas con daños](src/content/events/2026/09/20260925-1.md) — 8 fuentes
+- [2026/09/20260925-2 - Subsecretaría de Evaluación Social integra 25 programas sociales en nueve para el Presupuesto 2027 y objeta técnicamente tres](src/content/events/2026/09/20260925-2.md) — 14 fuentes
+- [2026/09/20260925-3 - El embajador de Israel publica y borra un mensaje contra Michelle Bachelet, lo republica y enfrenta a Carmen Hertz en X; Winter e Insunza exigen una respuesta de La Moneda](src/content/events/2026/09/20260925-3.md) — 10 fuentes
 
 ## 2025
 
