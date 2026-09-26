@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (466)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (467)
 
 <details>
-<summary>Ver lista (466 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (467 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -326,6 +326,7 @@
 - [2026/04/20260401-1 - Gobierno revoca nombramiento de Patricia Dinamarca como seremi de Educación de Los Lagos tras posts sobre estallido social](src/content/events/2026/04/20260401-1.md) — **2 fuentes**
 - [2026/04/20260407-1 - Seremi del Trabajo de Valparaíso Carlos Montero renuncia a los 5 días de asumir](src/content/events/2026/04/20260407-1.md) — **2 fuentes**
 - [2026/04/20260414-1 - Renuncia seremi de Justicia de Antofagasta Karina Trujillo por cuestionamientos a su trayectoria](src/content/events/2026/04/20260414-1.md) — **2 fuentes**
+- [2026/04/20260414-4 - Detienen a dos estudiantes de 13 y 15 años por porte de elementos incendiarios en el Liceo Lastarria](src/content/events/2026/04/20260414-4.md) — **2 fuentes**
 - [2026/04/20260415-1 - Patrick Dungan deja de asistir a la oficina y gobierno retira su nombramiento como seremi de Energía de La Araucanía](src/content/events/2026/04/20260415-1.md) — **2 fuentes**
 - [2026/04/20260416-3 - Contrapoder revela que al menos seis ministros del gabinete de Kast se beneficiarían de la exención de contribuciones para mayores de 65 años](src/content/events/2026/04/20260416-3.md) — **2 fuentes**
 - [2026/04/20260417-1 - Seremi de Culturas de Aysén Ángela Valdebenito renuncia por falta de experiencia](src/content/events/2026/04/20260417-1.md) — **2 fuentes**
@@ -590,6 +591,7 @@
 - [2026/03/20260331-1 - Seremi de Obras Públicas de Tarapacá Mauricio Montealegre renuncia antes de asumir](src/content/events/2026/03/20260331-1.md) — 1 fuente
 - [2026/03/20260331-2 - Gobierno retira de Contraloría el nuevo reglamento de la Ley Cholito y genera preocupación en agrupaciones animalistas](src/content/events/2026/03/20260331-2.md) — 4 fuentes
 - [2026/03/20260331-3 - Ministro Undurraga confirma en CNN que el recorte al presupuesto de Culturas será de 3%, 'incluso un poco más': gremios y frente de trabajadores se declaran en alerta](src/content/events/2026/03/20260331-3.md) — 7 fuentes
+- [2026/03/20260331-4 - Incendio al interior del Liceo José Victorino Lastarria obligó a cerrar avenida Providencia](src/content/events/2026/03/20260331-4.md) — 7 fuentes
 - [2026/04/20260401-1 - Gobierno revoca nombramiento de Patricia Dinamarca como seremi de Educación de Los Lagos tras posts sobre estallido social](src/content/events/2026/04/20260401-1.md) — 2 fuentes
 - [2026/04/20260401-2 - Gobierno designa a ex dirigente camionero Baldemar Higueras como seremi de Transportes del Maule](src/content/events/2026/04/20260401-2.md) — 6 fuentes
 - [2026/04/20260404-1 - Gobierno de Kast autoriza participación de la estatal israelí IAI en FIDAE 2026 y la Comunidad Palestina denuncia quiebre de la política de Estado](src/content/events/2026/04/20260404-1.md) — 6 fuentes
@@ -611,6 +613,7 @@
 - [2026/04/20260414-1 - Renuncia seremi de Justicia de Antofagasta Karina Trujillo por cuestionamientos a su trayectoria](src/content/events/2026/04/20260414-1.md) — 2 fuentes
 - [2026/04/20260414-2 - Nombramiento de Antaris Varela como seremi de la Mujer del Biobío deja sin efecto por licencia de embarazo de antecesora](src/content/events/2026/04/20260414-2.md) — 1 fuente
 - [2026/04/20260414-3 - Gustavo Baehr renuncia como seremi de Culturas y Artes de la RM tras dos semanas](src/content/events/2026/04/20260414-3.md) — 1 fuente
+- [2026/04/20260414-4 - Detienen a dos estudiantes de 13 y 15 años por porte de elementos incendiarios en el Liceo Lastarria](src/content/events/2026/04/20260414-4.md) — 2 fuentes
 - [2026/04/20260415-1 - Patrick Dungan deja de asistir a la oficina y gobierno retira su nombramiento como seremi de Energía de La Araucanía](src/content/events/2026/04/20260415-1.md) — 2 fuentes
 - [2026/04/20260415-2 - Renato Münster renuncia como seremi de Culturas de la RM a las 24 horas de asumir](src/content/events/2026/04/20260415-2.md) — 1 fuente
 - [2026/04/20260415-3 - Kast anuncia en cadena nacional el Plan de Reconstrucción Nacional con más de 40 medidas](src/content/events/2026/04/20260415-3.md) — 6 fuentes
@@ -1377,7 +1380,7 @@
 - [2026/08/20260819-9 - Urrutia y Vanessa Kaiser condicionan la reforma de seguridad al indulto general; Johannes Kaiser niega extorsión pero mantiene la exigencia](src/content/events/2026/08/20260819-9.md) — 6 fuentes
 - [2026/08/20260820-1 - Defensoría de la Niñez presenta denuncia ante la Fiscalía por procedimiento policial contra estudiantes del Liceo Rayen Mapu de Quellón](src/content/events/2026/08/20260820-1.md) — 3 fuentes
 - [2026/08/20260820-10 - Entra en vigencia el registro obligatorio de números prepago: fin de los teléfonos anónimos en Chile](src/content/events/2026/08/20260820-10.md) — 10 fuentes
-- [2026/08/20260820-11 - Ministra Lincolao plantea que profesores pueden reconvertirse en 'vendedores o servicio al cliente' de la IA; Colegio de Profesores RM responde que es 'una falta de respeto'](src/content/events/2026/08/20260820-11.md) — 9 fuentes
+- [2026/08/20260820-11 - Ministra Lincolao plantea que profesores pueden reconvertirse en 'vendedores o servicio al cliente' de la IA; Colegio de Profesores RM responde que es 'una falta de respeto'](src/content/events/2026/08/20260820-11.md) — 11 fuentes
 - [2026/08/20260820-12 - Oposición impulsa comisión investigadora por eventuales conflictos de interés del ministro Quiroz en el plan contra la 'permisología'](src/content/events/2026/08/20260820-12.md) — 5 fuentes
 - [2026/08/20260820-13 - Hacienda constituye la mesa de reconstrucción de Coquimbo y Atacama y anuncia fondo financiado con venta de activos fiscales](src/content/events/2026/08/20260820-13.md) — 2 fuentes
 - [2026/08/20260820-14 - Kast descarta plebiscito y defiende reforma de seguridad: 'La libertad en Chile ha sido restringida por el crimen organizado'](src/content/events/2026/08/20260820-14.md) — 7 fuentes
@@ -1436,6 +1439,7 @@
 - [2026/08/20260825-4 - Tras el acuerdo Squella-Longton: la apertura del gobierno no convence a votos clave, Walker pide el retiro y la reforma llega dividida al receso](src/content/events/2026/08/20260825-4.md) — 7 fuentes
 - [2026/08/20260825-5 - Juzgado de Letras y Garantía de Río Bueno ordena al alcalde Luis Reyes decretar en una sola cuota el pago de $432 millones de la deuda por la Casa Machmar](src/content/events/2026/08/20260825-5.md) — 6 fuentes
 - [2026/08/20260825-6 - Senador Araya (PPD) acusa que la reforma de seguridad fue redactada con un 'chatbot de IA gratuito': 'Es un copy paste mal hecho'](src/content/events/2026/08/20260825-6.md) — 5 fuentes
+- [2026/08/20260825-7 - Hitos previos de la reforma de seguridad: autoría cuestionada, defensa de Arrau y estrategia RN por estado de excepción](src/content/events/2026/08/20260825-7.md) — 6 fuentes
 - [2026/08/20260826-1 - Revés para la Operación Cancerbero: Juzgado de Iquique ordena retorno del Clan Chen a Alto Hospicio y oficialismo arremete contra la justicia por 'normas garantistas'](src/content/events/2026/08/20260826-1.md) — 7 fuentes
 - [2026/08/20260826-10 - Suspenden clases en Liceo de Mulchén por hallazgo de amenazas de muerte y rito en baño](src/content/events/2026/08/20260826-10.md) — 9 fuentes
 - [2026/08/20260826-11 - Corte Suprema confirma baja inmediata de carabinero por presunto hurto de $12 mil en Pronto Copec de Concepción](src/content/events/2026/08/20260826-11.md) — 6 fuentes
@@ -1641,6 +1645,7 @@
 - [2026/09/20260916-2 - Kast inaugura las fondas del Parque O'Higgins con su primer pie de cueca y una paya junto a Desbordes](src/content/events/2026/09/20260916-2.md) — 10 fuentes
 - [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
 - [2026/09/20260916-4 - Quiroz advierte en Londres una "gran recesión minera" con caída de 7% en el año y adelanta plan de reactivación y Presupuesto 2027 con techo de 1%](src/content/events/2026/09/20260916-4.md) — 7 fuentes
+- [2026/09/20260916-5 - INDH oficia a Senama, Seremi de Salud y Municipalidad de Pitrufquén por incendio en hogar El Edén](src/content/events/2026/09/20260916-5.md) — 5 fuentes
 - [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 13 fuentes
 - [2026/09/20260917-2 - Robo a departamento de asistente de Producción de Presidencia en San Miguel: investigan sustracción de discos duros con presunta información secreta](src/content/events/2026/09/20260917-2.md) — 27 fuentes
 - [2026/09/20260917-3 - Pancho Saavedra rompe el protocolo en la inauguración de La Gran Fonda con una paya a quienes conducen Chile](src/content/events/2026/09/20260917-3.md) — 9 fuentes
