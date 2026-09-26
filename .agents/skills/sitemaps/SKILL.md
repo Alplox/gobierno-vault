@@ -287,6 +287,13 @@ pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
   palabras del titular bastó para recuperar la URL exacta de BioBioChile,
   Infodefensa, Perfil y Diario Sur Noticias. Sirve para *ubicar* la nota; el cuerpo
   se sigue leyendo con `fetch-content`.
+- **DDG puede devolver 403 y `websearch` es el sustituto:** en sep-2026
+  `Invoke-WebRequest` contra `html.duckduckgo.com` respondió 403 (server error)
+  en dos consultas consecutivas, así que el bloque anterior no siempre aplica desde
+  esta red. Cuando el 403 aparece, la tool `websearch` sí recuperó las URL exactas
+  de T13, El País Chile, Mala Espina Check y Chilevisión con el titular literal entre
+  comillas. Orden: `news-search` → `websearch` con el titular entre comillas y
+  `site:` si hace falta → DDG HTML → sharding de sitemap en vivo.
 
 ### Sitios institucionales SIN sitemap utilizable
 

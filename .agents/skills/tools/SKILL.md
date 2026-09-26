@@ -76,6 +76,9 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 - El Ciudadano: rate-limit; `fetch-impersonate` o `archive.ph`. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
+- Diario Financiero (`df.cl`): los mirrors no alcanzan el cuerpo. `r.jina.ai` devuelve 161 chars y `defuddle` solo el menú lateral, pero el HTML crudo de `fetch-impersonate` sí trae los `<p>` del artículo con las declaraciones textuales. Filtrar con `rg` sobre el HTML: `fetch-content -- <URL> --method fetch-impersonate` y después `rg -i "<término>"`. El autor se lee de `<meta name="author">` y de `<p class="author__name">`
+- UN DESA (`financing.desa.un.org`): las páginas del Comité Negociador cargan el cuerpo con JavaScript, así que `fetch-content` devuelve solo navegación. El calendario de sesiones sí está en el texto indexado del sitio y se puede recuperar por buscador con el nombre de la sesión; como contraste cruzado sirve el resumen de Tax Justice Network, que reproduce las mismas fechas
+- Instagram: un post individual sí es legible con `r.jina.ai`, que devuelve el pie de foto completo en el campo `Title` (incluye el texto de la imagen como descripción). Sirve para verificar el origen de una gráfica viral, no para citar el contenido como fuente periodística
 - Archive.ph: puede dar rate-limit 429; intentar con `fetch-impersonate` como fallback
 - `fetch-impersonate` en Windows con consola cp1252 falla con `UnicodeEncodeError` al imprimir HTML con símbolos fuera de Latin-1 (ej. `▼` en camara.cl): relanzar con `$env:PYTHONIOENCODING='utf-8'` en el mismo comando
 
@@ -91,6 +94,7 @@ fallo y seguir con el siguiente método:
 | Cloudflare | "checking your browser", "Just a moment", "DDoS protection" |
 | Login | "sign in to continue", "log in required" |
 | archive.ph sin snapshot | "No results" + "You may want to" + "archive this url" (página de archivo inexistente; ~4.700 chars, supera el corte de 500) |
+| Agregador con texto generado | nota larga, fluida y sin atribución propia, que resume un cable en vez de reportear: pie que nombra al modelo (Nuevo Poder firma sus piezas con `(NP-ChatGPT-Bio Bio-Agencias)`) o sección final de "Conclusión" con tesis editorial (El Minuto, caso sep-2026). No es un 404: es una pieza sin reportería, así que se descarta por la regla de fuentes, no por `isSoft404` |
 
 Desde sep-2026 esta clasificación vive en código (`scripts/lib/soft404.mjs:isSoft404`,
 más 404 blando, título genérico del home y titular que no corresponde al slug de la URL)
