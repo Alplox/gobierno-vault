@@ -98,6 +98,10 @@ Notas de plataforma (complemento manual, no se reescribe):
   (`articleOnly`). El Ciudadano tiene ~309 post-sitemaps (~277k artículos, 18 años): el index y los
   subs son lentos y el sitio rate-limitea (fetch directo puede devolver 0 `<loc>`); si un sync se
   corta, los subs cacheados en `.cache/` retoman sin pérdida (relanzar el mismo comando).
+- **El Filtrador** (`elfiltrador.com`, WordPress-Yoast `articleOnly`): index con `post-sitemap.xml`
+  .. `post-sitemap23.xml` (~22,5k artículos, 9 años) más CPTs propios (`tdb_templates`, `persona`,
+  `programa`, `tema`) que `articleOnly` descarta. Solo declara el sitemap en `robots.txt` (no en el
+  index), se sincroniza por `index` directo.
 - **Diario Financiero (df) / Diario Estrategia** (Prontus): robots declara sitemaps por separado
   (`extra`); el DF trae ~87 URLs recientes (pags + news + port) y Diario Estrategia ~100
   (`/sitemap/news` + `/sitemap/lastarticles`, IDs `/texto-diario/mostrar/`). Cobertura reciente,
@@ -177,7 +181,7 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
 - Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
   `ciper`, `theclinic`, `elmostrador`, `emol`, `fastcheck`, `latercera`, `cnnchile`,
   `eldinamo`, `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`,
-  `el_periodista`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
+  `el_periodista`, `elfiltrador`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
   `malaespina`, `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`,
   `mestizos`, `diarioestrategia`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`, `bbc`,
   `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
@@ -219,7 +223,7 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
 - Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
   `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
   `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`,
-  `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
+  `elfiltrador`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
   `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
   `diarioestrategia`, `emol`, `senado`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`,
   `bbc`, `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,

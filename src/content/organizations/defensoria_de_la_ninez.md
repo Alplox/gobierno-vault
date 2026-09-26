@@ -6,5 +6,7 @@ notas: Organismo público autónomo creado en 2018 para la protección de los
   derechos de niños, niñas y adolescentes. En el caso Pío Nono (octubre de 2020)
   se querelló contra Carabineros y pidió prisión preventiva para el carabinero
   Sebastián Zamora, condenando la 'acción criminal' contra el adolescente
-  lanzado desde el puente.
+  lanzado desde el puente. Fue interpelada por la diputada Emilia Schneider en
+  relación con el procedimiento policial en el Liceo Rayen Mapu de Quellón
+  (agosto 2026).
 ---

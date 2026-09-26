@@ -195,6 +195,11 @@ const MEDIA = {
     index: 'https://www.elperiodista.cl/sitemap_index.xml',
     articleOnly: true, // Yoast (mezcla http/https en los <loc>)
   },
+  elfiltrador: {
+    nombre: 'El Filtrador',
+    index: 'https://elfiltrador.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (índice con post-sitemap.xml..post-sitemapN.xml)
+  },
   meganoticias: {
     nombre: 'Meganoticias',
     robots: 'https://www.meganoticias.cl/robots.txt',

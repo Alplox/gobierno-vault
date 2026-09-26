@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-25T23:19:30.264Z",
+  "actualizado": "2026-09-26T19:33:45.905Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3089,6 +3089,13 @@
       "articulos": 16880,
       "nuevos": 1614,
       "años": 4
+    },
+    "elfiltrador": {
+      "nombre": "El Filtrador",
+      "ultima_sync": "2026-09-26T19:33:45.905Z",
+      "articulos": 22549,
+      "nuevos": 22549,
+      "años": 9
     }
   }
 }

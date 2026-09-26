@@ -3,28 +3,28 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 25/9/2026, 15:50:18
-- **Medios registrados:** 441
-- **Artículos indexados:** 9.641.087
+- **Última sincronización:** 26/9/2026, 16:33:45
+- **Medios registrados:** 442
+- **Artículos indexados:** 9.667.712
 
 ## Por medio
 
 | Medio | Artículos |
 | --- | --- |
 | Radio Bío Bío | 1.171.889 |
-| Emol | 1.114.416 |
+| Emol | 1.114.419 |
 | Meganoticias | 434.641 |
 | RFI Español | 397.581 |
-| El Ciudadano | 305.945 |
+| El Ciudadano | 306.289 |
 | Radio Agricultura | 299.997 |
 | Chilevisión | 281.964 |
 | Voz de América | 254.383 |
 | El Dínamo | 252.385 |
 | France 24 | 237.156 |
-| CNN Chile | 227.961 |
-| The Clinic | 193.036 |
+| CNN Chile | 228.161 |
+| The Clinic | 193.167 |
 | El Pingüino | 192.731 |
-| 24 Horas | 189.372 |
+| 24 Horas | 190.063 |
 | IPS Agencia de Noticias | 109.988 |
 | Radio Universidad de Chile | 108.402 |
 | Mediabanco | 107.003 |
@@ -75,6 +75,7 @@
 | Diario Regional Aysén | 25.400 |
 | Canal 9 | 24.450 |
 | El Maule Informa | 23.293 |
+| El Filtrador | 22.549 |
 | Diario de Puerto Montt | 22.325 |
 | Maule Hoy | 21.741 |
 | HolaNews | 21.479 |
@@ -102,11 +103,11 @@
 | Somos Chile | 17.544 |
 | Senado de Chile | 17.355 |
 | Radio Maray | 16.978 |
-| La Tercera | 16.142 |
+| Reuters | 16.880 |
+| La Tercera | 16.236 |
 | En Línea Maule | 15.786 |
 | Universidad Adolfo Ibáñez | 15.656 |
 | Diario El Longino | 15.517 |
-| Reuters | 15.266 |
 | Vilas Radio | 15.178 |
 | ITV Patagonia | 14.983 |
 | Pontificia Universidad Católica de Valparaíso | 14.713 |
@@ -120,8 +121,8 @@
 | Ñuble Actual | 13.257 |
 | Universidad de Concepción | 13.240 |
 | Clave 9 | 13.125 |
+| VLN Radio | 12.549 |
 | Portal Metropolitano | 12.538 |
-| VLN Radio | 12.522 |
 | Informa Al Minuto | 12.435 |
 | Portal RedSalud | 12.203 |
 | Música y Noticias | 12.195 |
@@ -216,6 +217,7 @@
 | Insular FM | 4188 |
 | Chile País Minero | 4070 |
 | La Máquina Medio | 4063 |
+| Cooperativa | 3944 |
 | Los Ríos Noticias | 3885 |
 | SUBTEL | 3832 |
 | Diario El Día | 3738 |
@@ -227,7 +229,6 @@
 | Radio Puerta Norte | 3436 |
 | El Ovallino | 3351 |
 | Antofacity | 3337 |
-| Cooperativa | 3247 |
 | Antofagasta al Día | 3164 |
 | Colegio Médico de Chile | 3134 |
 | Radio La Señal | 3078 |
@@ -287,17 +288,18 @@
 | Radio Ventisqueros | 872 |
 | La Tendencia | 819 |
 | Diario Avísale | 815 |
+| ADN Radio | 798 |
 | SOFOFA | 788 |
 | Pulso Público | 774 |
 | SIP Red de Colegios | 750 |
 | Radio Chilena | 745 |
 | Aconcagua Digital | 732 |
 | Agencia de Noticias | 703 |
-| ADN Radio | 700 |
 | La Izquierda Diario | 688 |
 | Vergara 240 | 662 |
 | El Minuto | 645 |
 | Diario El Cautín | 605 |
+| El Mostrador | 597 |
 | ANSA Latina | 587 |
 | ComunidadMujer | 546 |
 | Contrapoder Chile | 535 |
@@ -305,7 +307,6 @@
 | The Guardian | 508 |
 | Diario Concepción | 501 |
 | Hogar de Cristo | 500 |
-| El Mostrador | 497 |
 | Santiago Times | 490 |
 | Municipalidad de Alto Biobío | 483 |
 | El Comunicador | 482 |
@@ -324,6 +325,7 @@
 | SENAPRED | 359 |
 | ABIF | 312 |
 | Fundación Rewilding Chile | 310 |
+| El Desconcierto | 279 |
 | Fonasa | 270 |
 | Redacción | 269 |
 | El Arrebato | 268 |
@@ -332,7 +334,6 @@
 | Defensa Civil de Chile | 229 |
 | Fundación Legado Chile | 217 |
 | Contapapaya | 206 |
-| El Desconcierto | 202 |
 | Arauco | 190 |
 | Colegio Tabancura | 161 |
 | Centro Cultural La Moneda | 140 |
