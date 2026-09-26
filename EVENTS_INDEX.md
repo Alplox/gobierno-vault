@@ -1483,7 +1483,7 @@
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 16 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
-- [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 10 fuentes
+- [2026/08/20260828-5 - Alza de combustibles: Quiroz anticipa dos alzas más del diésel por $200 y Kast agradece a camioneros en Día del Camionero](src/content/events/2026/08/20260828-5.md) — 16 fuentes
 - [2026/08/20260828-6 - Diputado PS Juan Santana denuncia a Cerimedo ante Fiscalía por granjas de bots y eventual financiamiento electoral; Fiscal Nacional deriva a fiscalía regional y Gobierno niega 'vínculo alguno' con Kast](src/content/events/2026/08/20260828-6.md) — 8 fuentes
 - [2026/08/20260828-7 - Detienen a dos carabineros por homicidio de rapero Vegetal en Padre Las Casas y Fiscalía formaliza por obstrucción](src/content/events/2026/08/20260828-7.md) — 8 fuentes
 - [2026/08/20260828-8 - Del coro a la Subsecretaría de la Niñez: el rápido ascenso de Sebastián Carvallo en Desarrollo Social](src/content/events/2026/08/20260828-8.md) — 7 fuentes
@@ -1503,6 +1503,7 @@
 - [2026/08/20260831-8 - Alcalde Agustín Iglesias responde a Axel Kaiser en X por migración: 'Tu único acercamiento al fenómeno es el delivery'](src/content/events/2026/08/20260831-8.md) — 5 fuentes
 - [2026/08/20260831-9 - Kast blinda en Cooperativa el nuevo estado de excepción ('no es renunciable') y baja la urgencia de la reforma de suma a simple](src/content/events/2026/08/20260831-9.md) — 6 fuentes
 - [2026/09/20260901-1 - Bancada PS presenta 'ley Cerimedo' para transparentar gasto electoral digital y detectar bots](src/content/events/2026/09/20260901-1.md) — 4 fuentes
+- [2026/09/20260901-10 - Hacienda confirma test de drogas positivo de exseremi Vergara pero reserva el informe completo](src/content/events/2026/09/20260901-10.md) — 7 fuentes
 - [2026/09/20260901-2 - Diputado Bassa (FA) propone tipificar como delito el uso de redes de bots para manipular elecciones](src/content/events/2026/09/20260901-2.md) — 6 fuentes
 - [2026/09/20260901-3 - Gobierno pide la renuncia al seremi de Transportes de Arica Patricio Löhr por presiones a la DGAC en favor de su empresa](src/content/events/2026/09/20260901-3.md) — 5 fuentes
 - [2026/09/20260901-4 - Imacec de julio cae 1,5%, su mayor retroceso desde marzo de 2023, y reabre debate por el punto de inflexión de Quiroz](src/content/events/2026/09/20260901-4.md) — 55 fuentes
@@ -1659,6 +1660,7 @@
 - [2026/09/20260917-4 - Corte de Santiago rechaza amparo de Iturriaga Neumann para cumplir sus más de 500 años en domicilio; seguirá en Punta Peuco](src/content/events/2026/09/20260917-4.md) — 6 fuentes
 - [2026/09/20260917-5 - Reuters publica un memo con una propuesta de gasolina E10 y el Ministerio de Energía la desmiente: no hay ninguna propuesta formal](src/content/events/2026/09/20260917-5.md) — 16 fuentes
 - [2026/09/20260917-6 - Quiroz tras el ChileDay: el bencinazo está envejeciendo bien y evitó US$2.500 millones](src/content/events/2026/09/20260917-6.md) — 5 fuentes
+- [2026/09/20260917-7 - Beller declara en Cámara Gesell por enriquecimiento ilícito de Cerimedo y Fiscalía confirma causa narco en Beni con vínculo del jefe de inteligencia Correa](src/content/events/2026/09/20260917-7.md) — 6 fuentes
 - [2026/09/20260918-1 - Cántico de «Chúpalo Kast» en fondas del Parque O'Higgins y el Estadio Nacional durante Fiestas Patrias y respuesta de Sichel en Ñuñoa](src/content/events/2026/09/20260918-1.md) — 38 fuentes
 - [2026/09/20260918-2 - Chomali pone el desempleo de 9,5% en el centro del Te Deum Ecuménico ante Kast](src/content/events/2026/09/20260918-2.md) — 8 fuentes
 - [2026/09/20260918-3 - Trabajador de 23 años de cocinería muere apuñalado en la Fonda Oficial de Rengo tras compartir alcohol con hombre venezolano en situación irregular; el municipio clausura el local](src/content/events/2026/09/20260918-3.md) — 5 fuentes
