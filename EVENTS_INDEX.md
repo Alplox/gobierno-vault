@@ -1670,6 +1670,7 @@
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes
 - [2026/09/20260924-4 - Barros anuncia en Punta Arenas un plan de renovación de capacidades estratégicas para la zona suraustral: reemplazo de los F-5, renovación de los UH-1H y los Hércules, patrullaje de largo alcance, Leopard 1 y nuevas bases](src/content/events/2026/09/20260924-4.md) — 11 fuentes
+- [2026/09/20260925-1 - Sistema frontal golpea La Araucanía: 9.400 personas aisladas y más de 300 viviendas con daños](src/content/events/2026/09/20260925-1.md) — 8 fuentes
 
 ## 2025
 
@@ -2122,4 +2123,9 @@
 ## 1971
 
 - [1971/06/19710608-1 - Asesinato del exministro Edmundo Perez Zujovic por un comando de la VOP en Providencia](src/content/events/1971/06/19710608-1.md) — 6 fuentes
+
+## 1969
+
+- [1969/03/19690309-1 - Desalojo de la toma de Pampa Irigoin en Puerto Montt con 11 pobladores muertos](src/content/events/1969/03/19690309-1.md) — 7 fuentes
+- [1969/10/19691021-1 - Acuartelamiento del Regimiento Tacna encabezado por el general Viaux (Tacnazo)](src/content/events/1969/10/19691021-1.md) — 6 fuentes
 
