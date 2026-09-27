@@ -224,6 +224,7 @@ const WHITELIST_MEDIOS = new Set([
   'Federación CCU',
   'Municipalidad de Coquimbo',
   'Municipalidad de Temuco',
+  'Municipalidad de Rinconada',
   'Municipalidad de San Bernardo',
   'Municipalidad de Puerto Montt',
   'Partido Republicano de Chile',

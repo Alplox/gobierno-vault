@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (468)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (471)
 
 <details>
-<summary>Ver lista (468 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (471 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -321,6 +321,7 @@
 - [2026/03/20260304-1 - Transparencia revela que Capredena pagó más de $121 millones en pensiones a Krassnoff, Iturriaga, Corbalán y Herrera en un año](src/content/events/2026/03/20260304-1.md) — **2 fuentes**
 - [2026/03/20260308-1 - La Tercera publica análisis sobre cómo cambió el lenguaje del gobierno de Boric en cuatro años](src/content/events/2026/03/20260308-1.md) — **2 fuentes**
 - [2026/03/20260310-1 - Contrapoder revela que la gestión de Mario Desbordes en la Municipalidad de Santiago contrató a Fullclean, empresa de la familia de Claudio Crespo, por casi $3 mil millones](src/content/events/2026/03/20260310-1.md) — **2 fuentes**
+- [2026/03/20260310-3 - Municipio de Rinconada denuncia a Casino Enjoy por impago de más de $1.200 millones del impuesto al juego](src/content/events/2026/03/20260310-3.md) — **2 fuentes**
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — **2 fuentes**
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — **2 fuentes**
 - [2026/04/20260401-1 - Gobierno revoca nombramiento de Patricia Dinamarca como seremi de Educación de Los Lagos tras posts sobre estallido social](src/content/events/2026/04/20260401-1.md) — **2 fuentes**
@@ -347,6 +348,7 @@
 - [2026/06/20260602-2 - Subsecretario de Seguridad Pública Andrés Jouannet renuncia](src/content/events/2026/06/20260602-2.md) — **2 fuentes**
 - [2026/06/20260602-3 - Subsecretaria de Prevención del Delito Ana Victoria Quintana renuncia](src/content/events/2026/06/20260602-3.md) — **2 fuentes**
 - [2026/06/20260602-4 - Kast presenta su primera Cuenta Pública ante el Congreso pleno](src/content/events/2026/06/20260602-4.md) — **2 fuentes**
+- [2026/06/20260605-1 - Abogado de exconcejales renuncia a la remoción de Galdames ante el TER para asumir como subsecretario de Prevención del Delito](src/content/events/2026/06/20260605-1.md) — **2 fuentes**
 - [2026/06/20260608-3 - Consejo Fiscal Autónomo alerta que la megarreforma mantiene riesgos para las finanzas del Estado](src/content/events/2026/06/20260608-3.md) — **2 fuentes**
 - [2026/06/20260610-2 - Cataldo reconoce que promesa de condonación del CAE de Boric pudo influir en la morosidad](src/content/events/2026/06/20260610-2.md) — **2 fuentes**
 - [2026/06/20260612-1 - Minsal solicita renuncia del seremi de Salud de Ñuble](src/content/events/2026/06/20260612-1.md) — **2 fuentes**
@@ -474,6 +476,7 @@
 - [2026/08/20260823-4 - Declaran culpables a cuatro excarabineros por apremios a detenido en Alto Hospicio: suman seis condenados por el caso de violencia institucional](src/content/events/2026/08/20260823-4.md) — **2 fuentes**
 - [2026/08/20260824-4 - Minvu abre los llamados 2026 del DS27 por sobre 10,7 millones de UF: mejoramiento de viviendas y barrios con meta de casi 20 mil empleos](src/content/events/2026/08/20260824-4.md) — **2 fuentes**
 - [2026/09/20260909-9 - Rojo Edwards respalda la rectificación de Judd: no dijo que tenía información de quién quemó el Metro](src/content/events/2026/09/20260909-9.md) — **2 fuentes**
+- [2026/09/20260910-16 - Tribunal sustituye el arresto domiciliario nocturno de Galdames por firma semanal y mantiene el arraigo nacional](src/content/events/2026/09/20260910-16.md) — **2 fuentes**
 - [2026/09/20260914-9 - Presidente de BancoEstado respalda hipotecarios en pesos a 10 o 20 años: el inversionista extranjero no entiende la UF](src/content/events/2026/09/20260914-9.md) — **2 fuentes**
 - [2026/09/20260924-7 - Presidencia adjudica producción general a AM Producciones por $294 millones](src/content/events/2026/09/20260924-7.md) — **2 fuentes**
 
@@ -552,6 +555,7 @@
 - [2026/03/20260309-1 - SERMIG Reporte 5: denuncias por paso no habilitado caen 48,3% desde el peak de 2021 y 33,8% en 2024](src/content/events/2026/03/20260309-1.md) — 3 fuentes
 - [2026/03/20260310-1 - Contrapoder revela que la gestión de Mario Desbordes en la Municipalidad de Santiago contrató a Fullclean, empresa de la familia de Claudio Crespo, por casi $3 mil millones](src/content/events/2026/03/20260310-1.md) — 2 fuentes
 - [2026/03/20260310-2 - Lula cancela su asistencia al cambio de mando tras revelarse la invitación a Flavio Bolsonaro; oposición chilena lo llama 'error diplomático'](src/content/events/2026/03/20260310-2.md) — 11 fuentes
+- [2026/03/20260310-3 - Municipio de Rinconada denuncia a Casino Enjoy por impago de más de $1.200 millones del impuesto al juego](src/content/events/2026/03/20260310-3.md) — 2 fuentes
 - [2026/03/20260311-1 - Gobierno de emergencia: Kast firma 6 decretos en su primera noche](src/content/events/2026/03/20260311-1.md) — 6 fuentes
 - [2026/03/20260311-2 - Análisis estratégico identifica ocho desafíos de Kast en defensa y seguridad](src/content/events/2026/03/20260311-2.md) — 1 fuente
 - [2026/03/20260311-3 - José Antonio Kast asume la Presidencia de la República en ceremonia de cambio de mando](src/content/events/2026/03/20260311-3.md) — 4 fuentes
@@ -707,6 +711,7 @@
 - [2026/06/20260604-4 - Fact-checkers confirman el récord de inversión del SEIA de la Cuenta Pública y precisan el monto de la cartera en calificación](src/content/events/2026/06/20260604-4.md) — 10 fuentes
 - [2026/06/20260604-5 - Fact-checkers confirman los cupos Fonasa y el peso del cáncer de la Cuenta Pública pero corrigen el avance oncológico](src/content/events/2026/06/20260604-5.md) — 6 fuentes
 - [2026/06/20260604-6 - Fact-checkers confirman homicidios y expulsiones de la Cuenta Pública con un matiz de una víctima en la cifra preliminar](src/content/events/2026/06/20260604-6.md) — 7 fuentes
+- [2026/06/20260605-1 - Abogado de exconcejales renuncia a la remoción de Galdames ante el TER para asumir como subsecretario de Prevención del Delito](src/content/events/2026/06/20260605-1.md) — 2 fuentes
 - [2026/06/20260607-1 - Operación Tokio: la Fiscalía Sur desarticula la red de lavado de dinero del Tren de Aragua; 17 formalizados y 14 en prisión preventiva](src/content/events/2026/06/20260607-1.md) — 7 fuentes
 - [2026/06/20260608-1 - Presidencia confirma reunión de Kast con Peter Thiel en La Moneda y se niega a transparentar el contenido](src/content/events/2026/06/20260608-1.md) — 8 fuentes
 - [2026/06/20260608-2 - Kast respalda embargos a deudores del CAE y afirma que tuvieron oportunidades de ponerse al día](src/content/events/2026/06/20260608-2.md) — 4 fuentes
@@ -1567,6 +1572,7 @@
 - [2026/09/20260904-8 - Frente Amplio oficia a Codelco, SII, Servel, UAF, Pensiones y CMF por fundación de Fontaine ligada a bots tras reportaje de $1.906 millones](src/content/events/2026/09/20260904-8.md) — 5 fuentes
 - [2026/09/20260904-9 - Fernanda Cornejo responde a Milei en C5N por sus dichos sobre Allende y Pinochet, y Jeannette Jara rechaza la celebración de la dictadura](src/content/events/2026/09/20260904-9.md) — 6 fuentes
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
+- [2026/09/20260905-2 - Galdames incumple por tercera vez su arresto domiciliario nocturno y el juzgado admite su querella contra tres exconcejales](src/content/events/2026/09/20260905-2.md) — 3 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
 - [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 21 fuentes
@@ -1614,6 +1620,7 @@
 - [2026/09/20260910-13 - Justicia absuelve en un segundo juicio a Víctor Ortiz Baeza, condenado a 5 años y un día por robar dos paquetes de galletas Carioca en Bulnes](src/content/events/2026/09/20260910-13.md) — 14 fuentes
 - [2026/09/20260910-14 - Perú anuncia su incorporación al Escudo de las Américas durante la visita de Marco Rubio a Lima](src/content/events/2026/09/20260910-14.md) — 7 fuentes
 - [2026/09/20260910-15 - Especialistas y el exministro Heraldo Muñoz cuestionan el retiro de la Convención fiscal de la ONU: "una decisión más bien política" y "difícil de entender"](src/content/events/2026/09/20260910-15.md) — 4 fuentes
+- [2026/09/20260910-16 - Tribunal sustituye el arresto domiciliario nocturno de Galdames por firma semanal y mantiene el arraigo nacional](src/content/events/2026/09/20260910-16.md) — 2 fuentes
 - [2026/09/20260910-2 - Rau se desmarca de la meta de 6% de desempleo de Quiroz y luego se alinea: Quiroz reafirma 6,5% y crecimiento 4% tras seminario Clapes UC](src/content/events/2026/09/20260910-2.md) — 12 fuentes
 - [2026/09/20260910-3 - Carabineros rechaza reincorporar a Claudio Crespo tras su absolución en el caso Gatica: su defensa acusa ilegalidad y anuncia recurso de revisión](src/content/events/2026/09/20260910-3.md) — 7 fuentes
 - [2026/09/20260910-4 - Kast encabeza largada protocolar del WRC Rally Chile Biobío 2026 en Concepción entre pifias y aplausos](src/content/events/2026/09/20260910-4.md) — 15 fuentes
@@ -1707,6 +1714,7 @@
 
 - [2025/01/20250102-1 - Condenan a 8 años y 2 días al excabo de Carabineros Belisario Morales por disparar contra manifestante desde el balcón municipal de La Cisterna](src/content/events/2025/01/20250102-1.md) — 1 fuente
 - [2025/01/20250113-1 - Caso Factop y Audios: formalizan a 16 imputados, entre ellos ocho ejecutivos de LarrainVial, por lavado de activos y estafa](src/content/events/2025/01/20250113-1.md) — 3 fuentes
+- [2025/01/20250116-1 - Galdames responde en Mega por contratos millonarios y traspasos a entidades de familiares tras el apagón de Rinconada](src/content/events/2025/01/20250116-1.md) — 3 fuentes
 - [2025/01/20250120-1 - Caso Convenios: el Juzgado de Garantía de Temuco sobresee definitivamente a seis imputados en la arista Manicure](src/content/events/2025/01/20250120-1.md) — 3 fuentes
 - [2025/01/20250125-1 - Venezuela afirmó que las relaciones con Chile están rotas desde agosto](src/content/events/2025/01/20250125-1.md) — 2 fuentes
 - [2025/01/20250129-1 - Congreso despacha a ley la reforma previsional de Boric tras años de debate y dos proyectos fallidos](src/content/events/2025/01/20250129-1.md) — 3 fuentes
@@ -1749,6 +1757,7 @@
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — 2 fuentes
 - [2025/11/20251105-1 - Operación Fortaleza 3: megaoperativo nacional de Carabineros y PDI deja 2.495 detenidos y 452 kilos de droga incautados bajo el gobierno de Boric](src/content/events/2025/11/20251105-1.md) — 5 fuentes
 - [2025/11/20251109-1 - Vocero de Kast dice que el comando 'no va a entrar' en el debate de DD.HH. e indultos, en plena polémica por Kaiser y Punta Peuco](src/content/events/2025/11/20251109-1.md) — 3 fuentes
+- [2025/11/20251110-1 - Fiscalía abre nueva causa por cohecho contra el alcalde de Río Bueno Luis Reyes tras separar las causas de delitos económicos](src/content/events/2025/11/20251110-1.md) — 3 fuentes
 - [2025/11/20251113-1 - CIPER revela DMs de Iván Poduje —del comando de Kast— con cuentas troll que atacaron a Matthei y Jara: 'Tenemos un café pendiente'](src/content/events/2025/11/20251113-1.md) — 6 fuentes
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
 - [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
@@ -1775,7 +1784,7 @@
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md) — 6 fuentes
 - [2025/12/20251219-2 - Columna de opinión advierte que enfoque de seguridad de Kast profundizará fallas estructurales](src/content/events/2025/12/20251219-2.md) — 2 fuentes
 - [2025/12/20251221-1 - Kast presidente electo en entrevista a T13: baja la expectativa de las expulsiones, pide a funcionarios del acuerdo de sector público 'pensarlo bien' y anuncia viaje a Ecuador](src/content/events/2025/12/20251221-1.md) — 2 fuentes
-- [2025/12/20251222-2 - Segundo allanamiento de la Fiscalía en la Municipalidad de Río Bueno: incautan documentación física y digital en causa por cohecho y corrupción](src/content/events/2025/12/20251222-2.md) — 8 fuentes
+- [2025/12/20251222-2 - Segundo allanamiento de la Fiscalía en la Municipalidad de Río Bueno: incautan documentación física y digital en causa por cohecho y corrupción](src/content/events/2025/12/20251222-2.md) — 9 fuentes
 - [2025/12/20251223-1 - Tribunal declara culpable al exalcalde de Rancagua Juan Ramón Godoy por cohecho y fraude al fisco](src/content/events/2025/12/20251223-1.md) — 2 fuentes
 - [2025/12/20251224-1 - Equipo de Kast confirma criterio anti-nepotismo: sin ministros con familiares en el Congreso, con posibles excepciones](src/content/events/2025/12/20251224-1.md) — 5 fuentes
 - [2025/12/20251224-2 - Comisión para la Fijación de Remuneraciones eleva el sueldo del Presidente a $11,07 millones y Kast evita comprometer una rebaja: 'es una norma legal'](src/content/events/2025/12/20251224-2.md) — 3 fuentes
@@ -1803,8 +1812,10 @@
 - [2024/07/20240730-1 - Boric condena expulsión de diplomáticos chilenos, pero descarta romper relaciones con Venezuela](src/content/events/2024/07/20240730-1.md) — 1 fuente
 - [2024/08/20240804-1 - Van Klaveren: 'Chile está disponible para desempeñar un papel útil de mediación frente a la crisis venezolana'](src/content/events/2024/08/20240804-1.md) — 1 fuente
 - [2024/08/20240806-3 - SERMIG Reporte 3: cifras 2014-dic 2023 consolidan serie decenal y marco de regularización 2021](src/content/events/2024/08/20240806-3.md) — 2 fuentes
+- [2024/08/20240818-1 - Apagón en Rinconada durante reportaje de Mega contra el alcalde Galdames: Fiscalía investiga y el municipio se querella](src/content/events/2024/08/20240818-1.md) — 8 fuentes
 - [2024/08/20240821-1 - Caso Audios: comienza la formalización de Luis Hermosilla, Leonarda Villalobos y otros por soborno y cohecho](src/content/events/2024/08/20240821-1.md) — 2 fuentes
 - [2024/08/20240826-1 - Primera condena a Carabineros por tortura en el estallido: 5 y 4 años para Neira y Ferrada por el caso de Renzo Fuentealba](src/content/events/2024/08/20240826-1.md) — 3 fuentes
+- [2024/09/20240916-1 - Diputados Longton y Barchiesi denuncian a Galdames ante Contraloría y piden a Chile Vamos quitarle el apoyo; el alcalde lo lamenta y habla de maniobra política](src/content/events/2024/09/20240916-1.md) — 5 fuentes
 - [2024/09/20240923-1 - Revelan el millonario sueldo de Marcela Cubillos como docente de la USS y la sospecha de financiamiento irregular de la política](src/content/events/2024/09/20240923-1.md) — 2 fuentes
 - [2024/09/20240927-1 - CIPER revela que la Subsecretaría de Educación pagó $1.479 millones a la USS cuando Marcela Cubillos era ministra](src/content/events/2024/09/20240927-1.md) — 1 fuente
 - [2024/10/20241001-1 - Caso Riggs: Corte de Apelaciones confirma el fraude fiscal de Pinochet y ratifica liquidación del SII por $1.550 millones](src/content/events/2024/10/20241001-1.md) — 2 fuentes
@@ -1814,6 +1825,7 @@
 - [2024/10/20241018-1 - A cinco años del 18-O, '¿quién quemó el Metro?' sigue sin respuesta completa: solo tres condenas por incendio y la tesis oficial descarta la coordinación](src/content/events/2024/10/20241018-1.md) — 8 fuentes
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — 2 fuentes
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — 2 fuentes
+- [2024/10/20241027-1 - Juan Galdames es reelecto alcalde de Rinconada con 34,93% pese a la investigación por corrupción y el apagón durante el reportaje de Mega](src/content/events/2024/10/20241027-1.md) — 5 fuentes
 - [2024/11/20241114-1 - PDI detiene al exsubsecretario Manuel Monsalve en Viña del Mar por violación y abuso sexual; la formalización termina en prisión preventiva](src/content/events/2024/11/20241114-1.md) — 3 fuentes
 - [2024/11/20241114-2 - Corte Suprema confirma condena a cinco exagentes de la DINA por el secuestro y las torturas de Luz Ayress](src/content/events/2024/11/20241114-2.md) — 7 fuentes
 - [2024/11/20241123-1 - Condenan al exgeneral director de Carabineros Eduardo Gordon por malversación de caudales públicos](src/content/events/2024/11/20241123-1.md) — 2 fuentes
