@@ -253,6 +253,7 @@ const WHITELIST_MEDIOS = new Set([
   'Vicaría de la Solidaridad',
   'Memoria Chilena',
   'Universidad de Chile',
+  'Universidad del Bío-Bío',
   'Museo de la Solidaridad Salvador Allende',
   'Museo de la Memoria y los Derechos Humanos',
   'Memoria Viva',

@@ -1575,6 +1575,7 @@
 - [2026/09/20260905-1 - Interferencia revela que Presidencia pagó $18.549.720 a La Oreja Lab SpA por la transmisión en vivo de la Operación Cancerbero, con cargo a un contrato de producción general adjudicado en el gobierno de Boric](src/content/events/2026/09/20260905-1.md) — 5 fuentes
 - [2026/09/20260905-2 - Galdames incumple por tercera vez su arresto domiciliario nocturno y el juzgado admite su querella contra tres exconcejales](src/content/events/2026/09/20260905-2.md) — 3 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
+- [2026/09/20260906-2 - Romería al Cementerio General por los 53 años del golpe termina con incidentes: balance escala de 24 a 50 detenidos y 1 lesionada](src/content/events/2026/09/20260906-2.md) — 8 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
 - [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 21 fuentes
 - [2026/09/20260907-11 - Municipalidad de Peñalolén clausura la medialuna del Club de Huasos por operar sin patente ni permisos en zona de riesgo](src/content/events/2026/09/20260907-11.md) — 7 fuentes
@@ -1630,9 +1631,10 @@
 - [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — 1 fuente
 - [2026/09/20260910-8 - Gobierno confirma que no habrá acto oficial por el 11 de septiembre y Kast mantendrá agenda habitual en Los Ríos](src/content/events/2026/09/20260910-8.md) — 10 fuentes
 - [2026/09/20260910-9 - Diputados PC ofician al canciller para declarar persona non grata a Judd: 'Yankee, go home'](src/content/events/2026/09/20260910-9.md) — 5 fuentes
-- [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 30 fuentes
+- [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 33 fuentes
 - [2026/09/20260911-10 - DF Tax: especialistas desdramatizan el retiro y lo cifran como pérdida de influencia, con Chile en la mesa directiva del Comité Negociador](src/content/events/2026/09/20260911-10.md) — 1 fuente
 - [2026/09/20260911-11 - Presidencia adjudica suministro de pescados y mariscos por $94,5 millones tras licitación desierta](src/content/events/2026/09/20260911-11.md) — 3 fuentes
+- [2026/09/20260911-12 - Marcha y actos por los 53 años del golpe en Chillán: Plaza de Armas al Memorial Parque de la Meditación y jornada universitaria, con romería opositora al día siguiente](src/content/events/2026/09/20260911-12.md) — 8 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
@@ -1647,6 +1649,7 @@
 - [2026/09/20260912-4 - Incendio en el hogar El Edén de Pitrufquén deja 16 fallecidos y genera investigación sobre su funcionamiento](src/content/events/2026/09/20260912-4.md) — 17 fuentes
 - [2026/09/20260912-5 - Jonás Preller publica la columna Economía incómoda y plantea una brecha chilena entre innovación, empleo y automatización](src/content/events/2026/09/20260912-5.md) — 21 fuentes
 - [2026/09/20260912-6 - Mala Espina desmiente que Chile se haya retirado de la ONU y rastrea el titular viral a la gráfica de Koncevisión del 9 de septiembre](src/content/events/2026/09/20260912-6.md) — 5 fuentes
+- [2026/09/20260912-7 - Arrau entrega balance de las jornadas del 10 y 11 de septiembre: 284 detenidos y 198 eventos de violencia a nivel nacional](src/content/events/2026/09/20260912-7.md) — 9 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
 - [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
@@ -1866,6 +1869,7 @@
 - [2023/09/20230908-1 - Defensoría de la Niñez revela que 150 niños, niñas y adolescentes fueron ejecutados y 40 desaparecieron en dictadura](src/content/events/2023/09/20230908-1.md) — 5 fuentes
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — 1 fuente
 - [2023/09/20230912-1 - TOP de La Serena condena al conscripto Carlos Robledo a 10 años por la muerte de Romario Veloz](src/content/events/2023/09/20230912-1.md) — 5 fuentes
+- [2023/09/20230912-2 - Balance policial de los 50 años del golpe: 108 detenidos y 22 lesionados entre el 10 y 11 de septiembre de 2023](src/content/events/2023/09/20230912-2.md) — 5 fuentes
 - [2023/09/20230922-1 - Condenan a 5 años al capitán de Carabineros Ricardo Luengo por tres agresiones distintas durante el estallido en Coquimbo](src/content/events/2023/09/20230922-1.md) — 3 fuentes
 - [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — 2 fuentes
 - [2023/10/20231018-1 - Fiscalía archivó sin culpables la causa por suplantación de identidad del carabinero infiltrado en Lo Hermida](src/content/events/2023/10/20231018-1.md) — 7 fuentes
