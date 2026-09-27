@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-26T19:33:45.905Z",
+  "actualizado": "2026-09-27T23:07:04.548Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3096,6 +3096,55 @@
       "articulos": 22549,
       "nuevos": 22549,
       "años": 9
+    },
+    "tvn": {
+      "nombre": "TVN",
+      "ultima_sync": "2026-09-27T22:17:51.679Z",
+      "articulos": 68157,
+      "nuevos": 68157,
+      "años": 5
+    },
+    "duna": {
+      "nombre": "Radio Duna",
+      "ultima_sync": "2026-09-27T22:15:46.374Z",
+      "articulos": 47571,
+      "nuevos": 47571,
+      "años": 2
+    },
+    "terra": {
+      "nombre": "Terra Chile",
+      "ultima_sync": "2026-09-27T22:16:23.808Z",
+      "articulos": 42218,
+      "nuevos": 42218,
+      "años": 6
+    },
+    "elregionalista": {
+      "nombre": "El Regionalista",
+      "ultima_sync": "2026-09-27T22:18:24.417Z",
+      "articulos": 2093,
+      "nuevos": 2093,
+      "años": 6
+    },
+    "concierto": {
+      "nombre": "Radio Concierto",
+      "ultima_sync": "2026-09-27T22:16:32.526Z",
+      "articulos": 36,
+      "nuevos": 36,
+      "años": 1
+    },
+    "pagina7": {
+      "nombre": "Página 7",
+      "ultima_sync": "2026-09-27T22:58:24.587Z",
+      "articulos": 221593,
+      "nuevos": 221593,
+      "años": 13
+    },
+    "lasegunda": {
+      "nombre": "La Segunda",
+      "ultima_sync": "2026-09-27T23:07:04.548Z",
+      "articulos": 903050,
+      "nuevos": 903050,
+      "años": 21
     }
   }
 }

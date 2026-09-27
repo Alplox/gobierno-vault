@@ -20,6 +20,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import YAML from 'yaml';
+import { MEDIA, mediaHosts } from './media.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -31,11 +32,66 @@ const CATEGORIAS_PRENSA = new Set([
   'education', 'health', 'culture',
 ]);
 
-// Dominios verificados SIN sitemap (revisado a mano el 2026-08-19): no se
-// reintentan en cada regeneración. Key: dominio, value: nota.
+// Dominios verificados SIN sitemap utilizable (revisado a mano): no se
+// reintentan en cada regeneración. Incluye sitemaps existentes pero no
+// catalogables como prensa. Key: dominio, value: nota.
 const SIN_SITEMAP = {
   'efe.cl': 'verificado sin sitemap (solo RSS /feed/)',
   'fiscaliadechile.cl': 'verificado sin sitemap (Drupal 10 sin xmlsitemap)',
+  'pjud.cl': 'verificado sin sitemap (robots.txt 404)',
+  'ssff.cl': 'verificado sin sitemap (robots.txt 404)',
+  'chvnoticias.cl': 'verificado sin sitemap (todos los endpoints devuelven la home)',
+  'bcn.cl': 'sitemap de portal con ~70k sub-sitemaps (normas LeyChile, no prensa) — no catalogable',
+  // Intentos previos documentados en scripts/sitemaps/media.mjs (flat urlset /
+  // DNS / 450 / 403 / 0 artículos): no reintentar. Solo dominios hoy ⬜ —
+  // jamás 🟡 (la referencia en el vault tiene precedencia).
+  'radiocamara.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'subturismo.gob.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'minmujeryeg.gob.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'sence.gob.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'sernac.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'ispch.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'chilenafm.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'chilenoticias.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'codeff.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'inach.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'meteored.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'utalca.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'ufro.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'udp.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'pcchile.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'pdc.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'ppd.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'democratas.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'elsancarlino.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'elurbanorural.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'frutillarhoy.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'guardiandelsur.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'lanoticia.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'pautalosrios.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'primeranota.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'pucontv.com': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'ladiscusion.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'datossur.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'eltrabajo.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'elregional.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'elprovincial.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'aricaldia.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'antofagasta.tv': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'diariosol.cl': 'sitemap_index plano sin sub-sitemaps (flat urlset)',
+  'linaresnoticia.cl': 'DNS ENOTFOUND (verificado)',
+  'aqua.cl': 'DNS ENOTFOUND (verificado)',
+  'cobquecura.cl': 'verificado sin artículos en el catálogo',
+  'inoticias.cl': 'verificado sin artículos en el catálogo',
+  'ellanquihue.cl': 'verificado sin artículos en el catálogo',
+  'estrellaantofagasta.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'laestrellachiloe.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'estrellaloa.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'mercurioantofagasta.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'mercuriocalama.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'australosorno.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'australtemuco.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
+  'elamaule.cl': 'HTTP 403 Cloudflare (verificado)',
 };
 
 const NOMBRES_CATEGORIA = {
@@ -153,11 +209,15 @@ async function main() {
   // de las URLs de sus JSONL, o del mapa de add-source.mjs).
   const manifest = loadJson(join(ROOT, 'sitemaps', '_manifest.json'));
   const catalogoDom = new Set();
-  const catalogoNombres = new Set();
+  const catalogoSlugPorNombre = new Map(); // nombre normalizado -> { slug, articulos } (gana el de más artículos)
   const catalogoSlugs = new Map(); // dominio -> slug
   if (manifest?.medios) {
     for (const [slug, info] of Object.entries(manifest.medios)) {
-      catalogoNombres.add(norm(info.nombre || slug));
+      const key = norm(info.nombre || slug);
+      const prev = catalogoSlugPorNombre.get(key);
+      if (!prev || (info.articulos | 0) > prev.articulos) {
+        catalogoSlugPorNombre.set(key, { slug, articulos: info.articulos | 0 });
+      }
       // Dominio derivado de la primera URL del JSONL del medio.
       const dir = join(ROOT, 'sitemaps', slug);
       if (existsSync(dir)) {
@@ -178,12 +238,15 @@ async function main() {
       }
     }
   }
-  // Refuerzo con el mapa de dominios de add-source.mjs (medios del catálogo).
-  const addSource = readFileSync(join(ROOT, 'scripts', 'extract', 'add-source.mjs'), 'utf8');
-  for (const m of addSource.matchAll(/CATALOG_MEDIO_BY_DOMAIN\s*=\s*\{([\s\S]*?)\n\};/g)) {
-    for (const e of m[1].matchAll(/'([^']+)'\s*:\s*'([^']+)'/g)) {
-      catalogoDom.add(e[1].replace(/^www\./, ''));
-      if (!catalogoSlugs.has(e[1].replace(/^www\./, ''))) catalogoSlugs.set(e[1].replace(/^www\./, ''), e[2]);
+  // Refuerzo con los dominios de MEDIA (scripts/sitemaps/media.mjs): cubre
+  // medios registrados cuyo JSONL aún no existe o falló el parseo anterior.
+  // (Antes se parseaba el literal CATALOG_MEDIO_BY_DOMAIN de add-source.mjs;
+  // ahora ese mapa también deriva de MEDIA, así que se usa la fuente.)
+  for (const [slug, cfg] of Object.entries(MEDIA)) {
+    for (const d of mediaHosts(cfg)) {
+      const bare = d.replace(/^www\./, '');
+      catalogoDom.add(bare);
+      if (!catalogoSlugs.has(bare)) catalogoSlugs.set(bare, slug);
     }
   }
 
@@ -246,11 +309,18 @@ async function main() {
     const n = norm(s.nombre);
     let estado = 'pendiente';
     let detalle = '';
-    // 1) ¿Ya sincronizado en el catálogo local? (por nombre o dominio real)
+    // 1) ¿Ya sincronizado en el catálogo local? Solo por dominio real
+    // (catalogoSlugs o el propio slug). El match solo-por-nombre NO marca ✅:
+    // la fila es por dominio — ej. lasegunda.cl (muerto) vs lasegunda.com
+    // catalogado. En ese caso se anota el slug como referencia.
     const slugCat = catalogoSlugs.get(s.d) || (catalogoDom.has(s.d) ? s.d : null);
-    if (catalogoNombres.has(n) || slugCat) {
+    // Nota si el MEDIO tiene datos en catálogo bajo otro dominio (solo si el
+    // slug trae artículos reales: un slug huérfano con 0 artículos no respalda nada).
+    const alias = !slugCat ? catalogoSlugPorNombre.get(n) : null;
+    const notaAlias = alias && alias.articulos > 0 ? `[medio en catálogo como ${alias.slug}]` : '';
+    if (slugCat) {
       estado = 'catalogo';
-      detalle = `sitemap en catálogo${slugCat ? ` (${slugCat})` : ''}`;
+      detalle = `sitemap en catálogo (${slugCat})`;
     } else if (SIN_SITEMAP[s.d]) {
       estado = 'sin_sitemap';
       detalle = SIN_SITEMAP[s.d];
@@ -264,6 +334,7 @@ async function main() {
         if (m) detalle += ` (${dominio(m[0])})`;
       }
     }
+    if (notaAlias && estado !== 'catalogo') detalle = (detalle ? detalle + ' ' : '') + notaAlias;
     return { ...s, estado, detalle };
   });
 
@@ -293,7 +364,7 @@ async function main() {
 >
 > **Cómo usar:** cada fila pendiente (\`⬜\`) se sincroniza con
 > \`pnpm run sitemaps-sync -- <slug>\` (tras agregar el medio a \`MEDIA\` en
-> \`scripts/sitemaps/sync.mjs\`) o se descarta si el sitio no tiene sitemap.
+> \`scripts/sitemaps/media.mjs\`) o se descarta si el sitio no tiene sitemap.
 > Los sitios de la watchlist suelen no tener sitemap (solo RSS) — se marcan para
 > intentar el sync y registrar el resultado.
 
@@ -322,11 +393,13 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
     const region = f.region ? f.region.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : '—';
     const fuente = f.fuente === 'db' ? 'database' : 'watchlist';
     const limpiar = (s) => String(s).replace(/\|/g, '/').replace(/[\r\n]+/g, ' ').trim();
-    const notas = limpiar((f.razon || f.detalle || f.desc || '').slice(0, 90));
+    // El veredicto de catálogo (detalle) manda sobre el estado del feed (razon):
+    // es lo que la bitácora cruza (✅/🔒 y notas de alias van en detalle).
+    const notas = limpiar((f.detalle || f.razon || f.desc || '').slice(0, 90));
     md += `| ${EMOJI[f.estado]} | **${limpiar(f.nombre)}** | \`${f.d}\` | ${region} | ${fuente} | ${notas} |\n`;
   }
 
-  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/sync.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Agregar dominio y nombre a \`CATALOG_MEDIO_BY_DOMAIN\`/\`CATALOG_MEDIO_NAMES\` de \`scripts/extract/add-source.mjs\`.\n6. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n7. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
+  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/media.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n6. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
 
   writeFileSync(out, md, 'utf8');
   console.log(`✔ ${filas.length} sitios de prensa → ${out} (origen: ${origen})`);

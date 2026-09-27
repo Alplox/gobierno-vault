@@ -10,14 +10,14 @@ extraído de los sitemaps públicos de cada medio. Evita fetch/búsquedas web re
 está en la URL+fecha (post-sitemaps) y URL+fecha+título real (news-sitemaps, últimos 2-3 días).
 NO guarda el cuerpo de los artículos.
 
-> **Handoff:** si cambias `MEDIA` en `scripts/sitemaps/sync.mjs`, `scripts/sitemaps/index.mjs`, `scripts/generate/generate-index.mjs` o el formato JSONL, actualiza este skill en la misma sesión.
+> **Handoff:** si cambias `MEDIA` en `scripts/sitemaps/media.mjs`, `scripts/sitemaps/index.mjs`, `scripts/generate/generate-index.mjs` o el formato JSONL, actualiza este skill en la misma sesión.
 
 ### Regla clave: NO se commitea el catálogo
 
 - `sitemaps/*.jsonl`, `sitemaps/.cache/`, `sitemaps/sitemaps.gvault` y sus partes
   `sitemaps.gvault.partN` están en `.gitignore`: BioBio pesa ~307MB y el
   catálogo es regenerable.
-- Lo que SÍ se commitea: los scripts (`scripts/sitemaps/sync.mjs`, `scripts/sitemaps/index.mjs`,
+- Lo que SÍ se commitea: los scripts (`scripts/sitemaps/media.mjs` — registro `MEDIA` —, `scripts/sitemaps/sync.mjs`, `scripts/sitemaps/index.mjs`,
   `scripts/sitemaps/backup.mjs`, `scripts/generate/generate-index.mjs`), `package.json`, `sitemaps/_manifest.json` (estado de sync), `sitemaps/README.md` (resumen por medio), `sitemaps/MEDIOS.md` (tabla completa para editores, generada por `sitemaps-index`) y `README.md` › Estadísticas del vault (sección auto-generada por `generate-index`, antes `sitemaps/ESTADISTICAS.md`).
 - Si se clona el repo, hay que correr `pnpm run sitemaps-sync -- <medio>` para regenerar local.
 - **Excepción opcional (snapshot público)**: el catálogo completo comprimido pesa ~56MB
@@ -36,13 +36,15 @@ NO guarda el cuerpo de los artículos.
 | Comando | Función |
 | --- | --- |
 | `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since-last-sync`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since-last-sync` usa para cada medio la fecha UTC inclusiva de su `ultima_sync`; si falta, sincroniza completo. `--since`/`--days` fija una ventana común relativa a fecha/hoy. Todas filtran sub-sitemaps históricos por la URL y, si no llevan fecha, por el rango del XML cacheado; no tocan entradas antiguas y son incompatibles con `--replace` |
-| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental desde la `ultima_sync` de cada medio + regenera README + backup. Nunca borra datos existentes. Si algún endpoint falla, ese medio conserva su watermark anterior y el siguiente resync reintenta la misma ventana. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). `--since YYYY-MM-DD` / `--days N` reemplaza el cutoff automático por una ventana común explícita. **Filtra huérfanos**: importa `MEDIA` desde `scripts/sitemaps/sync.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
+| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental desde la `ultima_sync` de cada medio + regenera README + backup. Nunca borra datos existentes. Si algún endpoint falla, ese medio conserva su watermark anterior y el siguiente resync reintenta la misma ventana. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). `--since YYYY-MM-DD` / `--days N` reemplaza el cutoff automático por una ventana común explícita. **Filtra huérfanos**: importa `MEDIA` desde `scripts/sitemaps/media.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
 | `pnpm run sitemaps-index` | genera `sitemaps/README.md` (resumen) + `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años para editores). Antes generaba además la sección “Medios registrados” de `AGENTS.md` (marcadores `AUTO-GENERATED-SITEMAPS-MEDIOS`); `AGENTS.md` solo apunta a `sitemaps/MEDIOS.md` + `README.md` + `_manifest.json` para evitar diffs ruidosos |
 
-**Al agregar un medio nuevo** (a `MEDIA` en `scripts/sitemaps/sync.mjs`): además de `sitemaps-index`
-(que regenera `sitemaps/MEDIOS.md` + `sitemaps/README.md`), hay que agregar el dominio y el nombre a
-`CATALOG_MEDIO_BY_DOMAIN`/`CATALOG_MEDIO_NAMES` de `scripts/extract/add-source.mjs` para que el lookup
-del generador de fuentes lo reconozca.
+**Al agregar un medio nuevo** (a `MEDIA` en `scripts/sitemaps/media.mjs`): basta con `sitemaps-index`
+(que regenera `sitemaps/MEDIOS.md` + `sitemaps/README.md`). Los mapas `CATALOG_MEDIO_BY_DOMAIN` /
+`CATALOG_MEDIO_NAMES` de `scripts/extract/add-source.mjs` derivan solos de `MEDIA` (vía `mediaHosts()`),
+así que el lookup del generador de fuentes reconoce el dominio sin alta manual. Excepciones: si el
+dominio queda compartido con otro slug, fijar preferencia en `CATALOG_HOST_OVERRIDES` (avisa con `⚠️`
+al cargar); si el slug reemplaza a uno con datos y el viejo debe seguir resolviendo, va a `*_LEGACY`.
 
 Vault stats para editores (`README.md` › Estadísticas del vault, antes `sitemaps/ESTADISTICAS.md`) se generan con `pnpm run generate-index` (ver `AGENTS.md` → Build y verificación).
 
@@ -131,8 +133,45 @@ Notas de plataforma (complemento manual, no se reescribe):
   (WP 5.5+ nativo `wp-sitemap-posts-post-N.xml`, 229 artículos). **El Periódico de la Energía**:
   `index: /sitemaps/sitemap.xml` (91.452 artículos, 13 años). **Nexos Chile** (Yoast
   `post-sitemap.xml`, 19 artículos — consultora, bajo volumen).
+- **Tanda batch 13 (27-09-2026, 5 pendientes ⬜ de `tareas_sitemap.md`)**: **TVN**
+  (Prontus: `extra: tvn/site/sitemap_pags.xml`, índice mensual `.xml.gz` 2022-09→hoy,
+  ~68k artículos/5 años; `includeRe` `/sitemap_pags_\d{6}\.xml\.gz$/i` descarta
+  `ports`/`tax`. OJO doble: el `robots.txt` se sirve como `text/plain` y el crawler
+  lo rechaza — por eso `extra` directo en vez de `robots`; y el `<lastmod>` es
+  timestamp Unix en segundos, que `isoDate()` convierte a ISO). **Radio Duna**
+  (custom: `index: duna.cl/sitemap.xml`, `includeRe` `/\/articles(_\d+)?\.xml$/i`
+  deja `articles.xml` + `articles_2.xml`, ~47,5k artículos/2 años; descarta
+  categories/shows/lives/episodes). **Terra Chile** (`robots`, `includeRe`
+  `/(?:articles\/\d{4}-\d{2}\.xml|news\.xml)$/i`: mensuales `articles/YYYY-MM`
+  desde 2020-06 + `news.xml` con títulos reales, ~42k artículos/6 años; descarta
+  sections/topics/authors/static). **El Regionalista** (All in One SEO:
+  `index: www.elregionalista.cl/sitemap.xml`, `articleOnly` cubre
+  `post-sitemap[2,3].xml`, ~2k artículos/6 años; el bare domain da 406 sin UA
+  de navegador — usar `www`). **Radio Concierto** (CMS Iberoamericana:
+  `robots` declara `out/sitemap.xml` plano + `news-sitemap.xml` con títulos
+  reales; cobertura solo reciente, ~36 artículos — mismo CMS que
+  Infinita/Rock&Pop/Los40, candidatas para el próximo batch).
+- **Tanda batch 14 (28-09-2026)**: **La Segunda** (CMS propio: índice de 199
+  sub-sitemaps paginados `sitemap{N}_{YYYY}.xml`, 2000→hoy con hueco 2017-2021,
+  ~903k artículos/21 años; `includeRe` `/sitemap\d+_\d{4}\.xml$/i`. Sin `<lastmod>`:
+  fecha real en el path `/Noticias/<seccion>/YYYY/MM/` vía `locDateRe` de 2 grupos
+  (día 01 aproximado — `extractPairs` acepta día ausente). OJO: mezcla
+  `/Noticias/` y `/noticias/` en el path — el pre-filtro de `lookupCatalogUrl`
+  necesitó fallback insensible a mayúsculas). **Página 7** (mismo CMS que CNN:
+  `_files/sitemaps/YYYY/MM.xml` 2014/07→hoy + `sitemap_lasts.xml` +
+  `sitemap_news.xml` con títulos reales, ~222k artículos/13 años;
+  `dateFromSitemapPath` como CNN por `<lastmod>` regenerado).
+- **Verificados SIN sitemap utilizable (28-09-2026)**: **T13** (Drupal
+  `simple_sitemap` con 1 sola URL = la home). **CHV Noticias** (`/sitemap.xml`,
+  `/sitemap_index.xml`, `/news-sitemap.xml` y `/wp-sitemap.xml` devuelven el HTML
+  de la home). **Poder Judicial** (`robots.txt` 404) y **SSFF** (`robots.txt` 404)
+  → `SIN_SITEMAP` en `watchlist.mjs`. **BCN** (`bcn.cl/sitemap.xml`): índice real
+  pero de portal (~70k sub-sitemaps de normas LeyChile, no prensa) → no catalogable
+  como prensa, también en `SIN_SITEMAP` con nota. **`ine.cl` no es el INE**
+  (el real es `ine.gob.cl`, tampoco con sitemap): `DEFAULT_DOMAIN_MEDIO` remapeado
+  a `ine.gob.cl`.
 
-| `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio |
+| `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio. Regla de match (28-09-2026): ✅ exige evidencia de **dominio** (primera URL de los JSONL o hosts de `MEDIA`); el match solo-por-nombre NO marca ✅ (caso `lasegunda.cl` muerto vs `lasegunda.com` catalogado) sino nota `[medio en catálogo como <slug>]` —solo si el slug trae artículos— y en Notas el veredicto de catálogo manda sobre el estado del feed. `SIN_SITEMAP` curado (~50 dominios con motivo: flat urlset / DNS / 450 conglomerado / 403 / 0 artículos): esos ⬜ pasaron a 🔒 para no reintentar |
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
@@ -185,7 +224,8 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
   `malaespina`, `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`,
   `mestizos`, `diarioestrategia`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`, `bbc`,
   `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
-  `elperiodicodelaenergia`, `nexos`, `elpais`, `elmegacl`.
+  `elperiodicodelaenergia`, `nexos`, `elpais`, `elmegacl`, `tvn`, `duna`, `terra`,
+  `elregionalista`, `concierto`, `lasegunda`, `pagina7`.
   Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
@@ -227,7 +267,8 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
   `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
   `diarioestrategia`, `emol`, `senado`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`,
   `bbc`, `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
-  `elperiodicodelaenergia`, `nexos`.
+  `elperiodicodelaenergia`, `nexos`, `tvn`, `duna`, `terra`, `elregionalista`, `concierto`,
+  `lasegunda`, `pagina7`.
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 
@@ -312,12 +353,17 @@ No se pueden agregar al catálogo (no exponen XML sitemap); usar fetch directo/d
   digitalizada desde 1811 (El Mercurio, El Sur, La Nación, etc.). Clave para pre-2000.
 - **diariooficial.interior.gob.cl** — sin sitemap; PDFs desde 1875, buscador propio.
 - **camara.cl** — `sitemap.xml` responde 403 (WAF) incluso con User-Agent de navegador.
+- **pjud.cl / ssff.cl** — `robots.txt` 404, sin variantes (verificado 28-09-2026).
+- **chvnoticias.cl** — todos los endpoints de sitemap devuelven la home (verificado 28-09-2026).
+- **t13.cl** — Drupal `simple_sitemap` con solo la home (verificado 28-09-2026).
+- **bcn.cl** — sí tiene sitemap, pero de portal (~70k sub-sitemaps de normas LeyChile, no prensa): no catalogable como prensa. BCN/Historia Política y LeyChile siguen on-demand (ver cobertura histórica).
 - **puntofinal.cl / lediplomatique.cl / indh.cl / interferencia.cl** — inaccesibles o bloqueados
   desde esta red al momento de la verificación.
 
 ### Cobertura histórica del catálogo (para ir a años previos)
 
-- **emol** es el medio más profundo: ~1999/2000 en adelante (27 años).
+- **emol** es el medio más profundo: ~1999/2000 en adelante (27 años). Lo sigue
+  **La Segunda**: 2000→hoy con hueco 2017-2021 (~903k artículos, fecha a nivel de mes).
 - **elciudadano** llega a ~2004; biobiochile/radio_uchile/el_periodista a ~2008.
 - **senado**: URLs desde ~2013, pero el `<lastmod>` es de la migración del sitio (masa en 2024);
   para eventos previos buscar por slug (suele llevar la fecha), no por fecha.

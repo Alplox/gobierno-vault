@@ -1635,6 +1635,8 @@
 - [2026/09/20260911-10 - DF Tax: especialistas desdramatizan el retiro y lo cifran como pérdida de influencia, con Chile en la mesa directiva del Comité Negociador](src/content/events/2026/09/20260911-10.md) — 1 fuente
 - [2026/09/20260911-11 - Presidencia adjudica suministro de pescados y mariscos por $94,5 millones tras licitación desierta](src/content/events/2026/09/20260911-11.md) — 3 fuentes
 - [2026/09/20260911-12 - Marcha y actos por los 53 años del golpe en Chillán: Plaza de Armas al Memorial Parque de la Meditación y jornada universitaria, con romería opositora al día siguiente](src/content/events/2026/09/20260911-12.md) — 8 fuentes
+- [2026/09/20260911-13 - Estudiantes UDP marchan a República 550 y secundarios romería en Alameda con intervención policial](src/content/events/2026/09/20260911-13.md) — 6 fuentes
+- [2026/09/20260911-14 - Marcha en Valparaiso recorre Avenida Brasil hasta el Memorial de los Detenidos Desaparecidos y termina con barricada encendida](src/content/events/2026/09/20260911-14.md) — 9 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes

@@ -20,7 +20,7 @@ import { readFileSync, readdirSync, existsSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normalizeUrlForMatch } from '../extract/add-source.mjs';
-import { MEDIA } from './sync.mjs';
+import { MEDIA } from './media.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
 const CATALOG_DIR = join(ROOT, 'sitemaps');

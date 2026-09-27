@@ -31,12 +31,12 @@ import { readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-// MEDIA ya se exporta de sitemaps/sync.mjs (con guard isMain: importarlo no
-// dispara un sync). Sirve para filtrar los slugs del manifest que ya no
-// existen en el registro (entradas huérfanas de intentos descartados) antes
-// de pasárselos como argumentos — sitemaps/sync.mjs valida todos los targets
-// upfront y hace exit(1) al primer slug desconocido, abortando TODO el resync.
-import { MEDIA } from './sync.mjs';
+// MEDIA vive en sitemaps/media.mjs (importarlo no dispara ningún sync). Sirve
+// para filtrar los slugs del manifest que ya no existen en el registro
+// (entradas huérfanas de intentos descartados) antes de pasárselos como
+// argumentos — sitemaps/sync.mjs valida todos los targets upfront y hace
+// exit(1) al primer slug desconocido, abortando TODO el resync.
+import { MEDIA } from './media.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -90,11 +90,11 @@ if (enManifest.length === 0) {
 const medios = enManifest.filter((k) => !!MEDIA[k]);
 const huerfanos = enManifest.filter((k) => !MEDIA[k]);
 if (huerfanos.length > 0) {
-  console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de scripts/sitemaps/sync.mjs; se omiten:`);
+  console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de scripts/sitemaps/media.mjs; se omiten:`);
   console.warn(`   ${huerfanos.join(', ')}`);
 }
 if (medios.length === 0) {
-  console.error('❌ Ningún medio del manifest está registrado en scripts/sitemaps/sync.mjs.');
+  console.error('❌ Ningún medio del manifest está registrado en scripts/sitemaps/media.mjs.');
   process.exit(1);
 }
 

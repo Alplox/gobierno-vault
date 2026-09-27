@@ -1,0 +1,2151 @@
+/**
+ * media.mjs — Registro de medios del catálogo de sitemaps (`sitemaps/<medio>/`).
+ *
+ * Cada entrada define cómo descubrir los sitemaps de un medio:
+ *   robots  → leer el robots.txt y parsear líneas "Sitemap:"
+ *   index   → URL directa del sitemap index (o del sitemap único)
+ *   extra   → sitemaps adicionales que no están en robots.txt (opcional)
+ * Filtros: articleOnly (whitelist Yoast post/news-sitemap) | includeRe (whitelist
+ * por medio) | urlRe (whitelist de URLs de artículo) | dateFromSitemapPath /
+ * locDateRe / forceHttps (ver sync.mjs).
+ *
+ * Al agregar un medio: sincronizar (`pnpm run sitemaps-sync -- <slug>`) y regenerar
+ * índices (`pnpm run sitemaps-index`). Los mapas de dominios/nombres de
+ * scripts/extract/add-source.mjs derivan solos de este registro (más
+ * CATALOG_HOST_OVERRIDES/CATALOG_HOST_LEGACY para colisiones y slugs históricos).
+ */
+// ---------------------------------------------------------------------------
+// Registro de medios. Cada entrada define cómo descubrir sus sitemaps:
+//   robots  → leer el robots.txt y parsear líneas "Sitemap:"
+//   index   → URL directa del sitemap index (o del sitemap único)
+//   extra   → sitemaps adicionales que no están en robots.txt (opcional)
+// ---------------------------------------------------------------------------
+export const MEDIA = {
+  elclarin: {
+    nombre: 'El Clarín',
+    index: 'https://www.elclarin.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: solo post-sitemap* / news-sitemap*
+  },
+  biobiochile: {
+    nombre: 'Radio Bío Bío',
+    robots: 'https://www.biobiochile.cl/robots.txt',
+  },
+  cooperativa: {
+    nombre: 'Cooperativa',
+    robots: 'https://www.cooperativa.cl/robots.txt',
+  },
+  adnradio: {
+    nombre: 'ADN Radio',
+    index: 'https://www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml',
+  },
+  factchecking: {
+    nombre: 'Factchecking.cl',
+    index: 'https://factchecking.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap + descarta page/category/author/gp_*
+  },
+  ciper: {
+    nombre: 'CIPER Chile',
+    index: 'https://www.ciperchile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: solo post-sitemap* (descarta newsletters, radar, etc.)
+  },
+  theclinic: {
+    nombre: 'The Clinic',
+    index: 'https://www.theclinic.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elmostrador: {
+    nombre: 'El Mostrador',
+    robots: 'https://www.elmostrador.cl/robots.txt',
+  },
+  fastcheck: {
+    nombre: 'Fast Check CL',
+    index: 'https://www.fastcheck.cl/sitemap.xml',
+    // Sitemap custom (no Yoast): index → posts-YYYY.xml (artículos) +
+    // news.xml (títulos reales). Se descartan pages/categories/authors.xml.
+    includeRe: /(?:posts-\d{4}|news)\.xml$/i,
+  },
+  latercera: {
+    nombre: 'La Tercera',
+    robots: 'https://www.latercera.com/robots.txt',
+    // Arc XP: robots declara sitemap-index (paginado por from=N, 100 URLs
+    // por sub-sitemap, ~10.000 artículos) + news-sitemap-index (títulos
+    // reales, últimos ~400 artículos) + sitemap único. Los `<loc>` del index
+    // llegan con `&amp;` que extractSitemapIndexLocs decodifica a `&`.
+  },
+  cnnchile: {
+    nombre: 'CNN Chile',
+    robots: 'https://www.cnnchile.com/robots.txt',
+    // CMS propio: sitemap_index.xml (sub-sitemaps por mes desde 2011) +
+    // sitemap_lasts.xml (últimos artículos) + sitemap_news.xml (títulos).
+    // OJO: los sub-sitemaps mensuales regeneran el <lastmod> a la fecha del
+    // crawl (uniforme y falso: todos los artículos de 2011-2026 salen con la
+    // misma fecha). La fecha real del artículo está en el path YYYY/MM del
+    // sub-sitemap, así que se usa como fallback (dateFromSitemapPath).
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  eldinamo: {
+    nombre: 'El Dínamo',
+    robots: 'https://www.eldinamo.cl/robots.txt',
+    // Mismo CMS que CNN Chile: index por mes desde 2010 + lasts + news.
+  },
+  radioagricultura: {
+    nombre: 'Radio Agricultura',
+    robots: 'https://www.radioagricultura.cl/robots.txt',
+    // Mismo CMS que CNN Chile: index por mes desde 2015 + lasts + news.
+    // Los sub-sitemaps mensuales regeneran el <lastmod> a la fecha del crawl
+    // (uniforme y falso); la fecha real está en el path YYYY/MM del sub-sitemap.
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  emol: {
+    nombre: 'Emol',
+    robots: 'https://www.emol.com/robots.txt',
+    // Sitemaps por año desde 1992 (sitemap{N}_{year}.xml), ~8.000 URLs por
+    // sub-sitemap. El robots declara además sitemapIndexFotos.xml y
+    // sitemapIndexVideos.xml (tv.emol.com) — se descartan con includeRe.
+    includeRe: /sitemap\d+_\d{4}\.xml$/i,
+    // El index y los <loc> de los artículos vienen en http:// pero el sitio
+    // solo responde por https:// (curl/node fetch fallan con http).
+    forceHttps: true,
+    // Sin <lastmod> ni news:date: la fecha real está en el path del artículo
+    // (/noticias/<seccion>/YYYY/MM/DD/<id>/<slug>.html).
+    locDateRe: /\/(\d{4})\/(\d{2})\/(\d{2})\//,
+  },
+  radio_uchile: {
+    nombre: 'Radio Universidad de Chile',
+    index: 'https://radio.uchile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml + news-sitemap*.xml
+  },
+  el_siglo: {
+    nombre: 'El Siglo',
+    index: 'https://elsiglo.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (canónico sin www)
+  },
+  la_nacion: {
+    nombre: 'La Nación',
+    index: 'https://www.lanacion.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  ex_ante: {
+    nombre: 'Ex-Ante',
+    index: 'https://www.ex-ante.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (post-sitemap1.xml; el robots.txt no declara sitemaps)
+  },
+  el_periodista: {
+    nombre: 'El Periodista',
+    index: 'https://www.elperiodista.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (mezcla http/https en los <loc>)
+  },
+  elfiltrador: {
+    nombre: 'El Filtrador',
+    index: 'https://elfiltrador.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (índice con post-sitemap.xml..post-sitemapN.xml)
+  },
+  meganoticias: {
+    nombre: 'Meganoticias',
+    robots: 'https://www.meganoticias.cl/robots.txt',
+    // CMS propio: sitemap-noticias-index-content.xml (index mensual por
+    // content-noticias/sitemap-YYYY-MM.xml desde 2011) + sitemap-news.xml
+    // (títulos reales). Se descartan videos, secciones, autores, columnistas,
+    // seccion-temas y hemeroteca (páginas de listado, no artículos).
+    // OJO: los sub-sitemaps mensuales no traen lastmod fiable; la fecha real
+    // está en el path YYYY-MM del archivo (dateFromSitemapPath).
+    includeRe: /(?:content-noticias\/sitemap-\d{4}-\d{2}\.xml|sitemap-news\.xml)$/i,
+    dateFromSitemapPath: /content-noticias\/sitemap-(\d{4})-(\d{2})\.xml$/,
+  },
+  eldesconcierto: {
+    nombre: 'El Desconcierto',
+    robots: 'https://eldesconcierto.cl/robots.txt',
+    // Sitemaps SIN historia: sitemap.xml (~8 recientes) + sitemap-news.xml
+    // (~20 con títulos reales de los últimos días). No hay índices por año
+    // (todas las variantes históricas devuelven 404).
+  },
+  publimetro: {
+    nombre: 'Publimetro',
+    index: 'https://www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml',
+    // Arc XP: el índice solo lista `latest` + el día actual (sin paginación
+    // histórica). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con
+    // decenas de URLs, pero no hay índice que los enumere: el sync captura
+    // lo reciente (latest).
+  },
+  elciudadano: {
+    nombre: 'El Ciudadano',
+    index: 'https://www.elciudadano.com/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  df: {
+    nombre: 'Diario Financiero',
+    // Prontus: robots declara 3 sitemaps (pags histórico + news + port).
+    // La URL canónica de artículos es /texto-diario/mostrar/<id>/<slug>.
+    extra: [
+      'https://www.df.cl/noticias/site/sitemap_pags.xml',
+      'https://www.df.cl/noticias/site/sitemap_news.xml',
+      'https://www.df.cl/noticias/site/list/port/sitemap_df.xml',
+    ],
+  },
+  malaespina: {
+    nombre: 'Mala Espina',
+    index: 'https://malaespinacheck.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (fact-checking)
+  },
+  elquintopoder: {
+    nombre: 'El Quinto Poder',
+    index: 'https://www.elquintopoder.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (periodismo ciudadano/opinión)
+  },
+  radioudec: {
+    nombre: 'Radio UdeC',
+    index: 'https://www.radioudec.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (radio universitaria)
+  },
+  chocale: {
+    nombre: 'Chocale',
+    index: 'https://chocale.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  redimin: {
+    nombre: 'REDIMIN',
+    index: 'https://www.redimin.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (revista minería)
+  },
+  chilepaisminero: {
+    nombre: 'Chile País Minero',
+    index: 'https://chilepaisminero.com/sitemap.xml',
+    // Sitemap index plano (sitemap.xml + sitemap.rss en robots).
+  },
+  mestizos: {
+    nombre: 'Mestizos Magazine',
+    index: 'https://www.mestizos.cl/sitemap.xml',
+    // Index por fechas: /sitemap/sitemap-<DD-MM-YYYY>.xml (uno por día).
+  },
+  diarioestrategia: {
+    nombre: 'Diario Estrategia',
+    // Prontus: robots declara sitemap/news + sitemap/lastarticles (~100 URLs
+    // recientes cada uno, IDs /texto-diario/mostrar/).
+    extra: [
+      'https://www.diarioestrategia.cl/sitemap/news',
+      'https://www.diarioestrategia.cl/sitemap/lastarticles',
+    ],
+  },
+  quepasaaraucania: {
+    nombre: 'Qué Pasa Araucanía',
+    index: 'https://quepasaaraucania.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (regional La Araucanía)
+  },
+  lafontana: {
+    nombre: 'La Fontana',
+    index: 'https://lafontana.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (regional Ñuble)
+  },
+  quirihue_noticias: {
+    nombre: 'Quirihue Noticias',
+    index: 'https://quirihuenoticias.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast (local Quirihue)
+  },
+  gob: {
+    nombre: 'Gobierno de Chile',
+    index: 'https://www.gob.cl/sitemap-articles.xml',
+    // Sitemap news del gobierno central (prensa presidencial, anuncios
+    // de ministerios). Solo artículos recientes (~últimos 2-3 meses);
+    // no hay archivo histórico. Titles reales del news-sitemap.
+  },
+  abif: {
+    nombre: 'ABIF',
+    robots: 'https://www.abif.cl/robots.txt',
+    // Wix: robots declara sitemap.xml (índice) → blog-posts-sitemap.xml
+    // (notas de prensa) + dynamic-abif-informa...-sitemap.xml (newsletters
+    // "ABIF Informa" con cifras). Se descartan categories, pages, estatutos
+    // y documentos-legales (páginas estáticas/documentos, no artículos).
+    includeRe: /blog-posts-sitemap\.xml$|dynamic-abif-informa.*-sitemap\.xml$/i,
+  },
+  amchamchile: {
+    nombre: 'AmCham Chile',
+    index: 'https://amchamchile.cl/sitemap_index.xml',
+    // WordPress: index con sitemaps por CPT. Solo noticias (news-sitemap*.xml,
+    // sin news:title, título derivado del slug) + opiniones y estudios.
+    // Se descartan page/benefits/campaigns/committees/events/members/offers/
+    // partners/sponsors/publications y los *_tax-sitemap (taxonomías).
+    includeRe: /(?:news-sitemap\d*|opinions-sitemap|studies-sitemap)\.xml$/i,
+  },
+  senado: {
+    nombre: 'Senado de Chile',
+    index: 'https://www.senado.cl/sitemap.xml',
+    // Sitemap institucional (no WordPress): un índice con 2 "páginas"
+    // (?page=1/2, ~26 mil URLs en total) que mezclan noticias, galerías,
+    // secciones y la home. urlRe deja solo las noticias de comunicaciones;
+    // cubre desde ~2013 (sesiones y notas legislativas históricas).
+    // OJO: el <lastmod> es de la migración del sitio — casi todo queda en
+    // 2024 aunque el slug lleve la fecha real (ej. "sesion-...-06-de-
+    // noviembre-de-2013"). Para eventos previos a 2024 buscar por slug, no
+    // por fecha.
+    urlRe: /\/comunicaciones\/noticias\/.+$/i,
+  },
+  chilevision: {
+    nombre: 'Chilevisión',
+    robots: 'https://www.chilevision.cl/robots.txt',
+    // CMS propio (mismo que CNN Chile): sitemap_index.xml (sub-sitemaps por
+    // mes) + sitemap_lasts.xml + sitemap_news.xml (títulos reales).
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  lacuarta: {
+    nombre: 'La Cuarta',
+    index: 'https://www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml',
+    // Arc XP: sitemap-index paginado + news-sitemap con títulos reales.
+  },
+  nuevopoder: {
+    nombre: 'Nuevo Poder',
+    index: 'https://www.nuevopoder.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+
+  la_hora: {
+    nombre: 'La Hora',
+    index: 'https://lahora.cl/sitemap.xml',
+    // Custom: index diario sitemap-DD-MM-YYYY.xml + latest.xml. No es Yoast.
+    // articleOnly descarta page/category; los archivos diarios (sitemap-DD-MM-YYYY.xml)
+    // matchean el includeRe.
+    includeRe: /(?:sitemap-\d{2}-\d{2}-\d{4}\.xml|latest\.xml)$/i,
+  },
+
+  elperiodico: {
+    nombre: 'El Periódico',
+    index: 'https://elperiodico.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast
+  },
+  diarioconcepcion: {
+    nombre: 'Diario Concepción',
+    index: 'https://www.diarioconcepcion.cl/sitemap.xml',
+    // Sitemap + sitemap_news (títulos reales).
+    extra: [
+      'https://www.diarioconcepcion.cl/sitemap_news.xml',
+    ],
+  },
+  canal9: {
+    nombre: 'Canal 9',
+    // Custom CMS: sitemap index mensual desde 2014 + sitemap-news (títulos reales).
+    index: 'https://www.canal9.cl/sitemap',
+    // Los sub-sitemaps son /sitemap/articles/YYYY/MM, articles vs news se
+    // distinguen por el path, no por nombre. articleOnly no aplica aquí.
+    dateFromSitemapPath: /\/articles\/(\d{4})\/(\d{2})$/, // fallback: path del sub-sitemap
+    // El sitemap-news tiene <news:publication_date> confiable.
+    extra: [
+      'https://www.canal9.cl/sitemap-news',
+    ],
+  },
+  '24horas': {
+    nombre: '24 Horas',
+    // Arc XP: sitemap index mensual gzipped desde 2022.
+    robots: 'https://www.24horas.cl/robots.txt',
+  },
+  contrapoderchile: {
+    nombre: 'Contrapoder Chile',
+    // Yoast: un solo post-sitemap.xml con todos los posts (no paginado).
+    index: 'https://contrapoderchile.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  epicentrochile: {
+    nombre: 'Epicentro Chile',
+    // Yoast: post-sitemap*.xml (múltiples, desde ~2013).
+    index: 'https://www.epicentrochile.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  infogate: {
+    nombre: 'Infogate',
+    // Custom: sitemap-posts-YYYY.xml (uno por año) + pages + categories.
+    index: 'https://www.infogate.cl/sitemap.xml',
+    includeRe: /sitemap-posts-\d{4}\.xml$/i,
+  },
+  elinformadorchile: {
+    nombre: 'El Informador Chile',
+    // Yoast: post-sitemap*.xml (múltiples).
+    index: 'https://www.elinformadorchile.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  diariousach: {
+    nombre: 'Diario USACH',
+    // Arc XP: sitemap index mensual gzipped (mismo formato que CNN Chile).
+    robots: 'https://www.diariousach.cl/robots.txt',
+  },
+  elarrebato: {
+    nombre: 'El Arrebato',
+    // Yoast: post-sitemap*.xml (múltiples).
+    index: 'https://elarrebato.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radiopaulina: {
+    nombre: 'Radio Paulina',
+    // Jetpack: sitemap-index-1.xml → sitemap-N.xml (posts).
+    index: 'https://radiopaulina.cl/sitemap.xml',
+    includeRe: /sitemap-index-\d+\.xml$/i,
+  },
+  vlnradio: {
+    nombre: 'VLN Radio',
+    // WordPress XML Sitemap Feed: sitemap-posttype-post.YYYY.xml.
+    index: 'https://www.vlnradio.cl/sitemap.xml',
+    includeRe: /sitemap-posttype-post\.\d{4}\.xml$/i,
+  },
+  sabes: {
+    nombre: 'Sabes.cl',
+    // Custom: monthly sitemaps /sitemap/sitemap-YYYY-MM.xml + news sitemap.
+    index: 'https://sabes.cl/sitemap.xml',
+    includeRe: /(?:sitemap-\d{4}-\d{2}\.xml|sitemap-news\.xml)$/i,
+    dateFromSitemapPath: /sitemap-(\d{4})-(\d{2})\.xml$/,
+  },
+  infodefensa: {
+    nombre: 'Infodefensa',
+    // Prontus: /sitemap/lastarticles (~100 URLs recientes, con <lastmod>).
+    extra: [
+      'https://www.infodefensa.com/sitemap/lastarticles',
+    ],
+  },
+  nubleonline: {
+    nombre: 'Ñuble Online',
+    // Yoast: post-sitemap*.xml.
+    index: 'https://nubleonline.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  vilasradio: {
+    nombre: 'Vilas Radio',
+    // WordPress5.x native: wp-sitemap-posts-post-N.xml.
+    index: 'https://vilasradio.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  publimicro: {
+    nombre: 'Publimicro',
+    // Yoast: post-sitemap*.xml.
+    index: 'https://publimicro.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  senapred: {
+    nombre: 'SENAPRED',
+    // All in One SEO: post-sitemap.xml (relativo en el index).
+    extra: [
+      'https://www.senapred.cl/post-sitemap.xml',
+    ],
+  },
+  diariodeosorno: {
+    nombre: 'Diario de Osorno',
+    // Custom: /sitemap/YYYY/MM/sitemap-pt-post.xml (mensual).
+    index: 'https://www.diariodeosorno.cl/sitemap.xml',
+    includeRe: /sitemap-pt-post\.xml$/i,
+    dateFromSitemapPath: /\/sitemap\/(\d{4})\/(\d{2})\//,
+  },
+  diariodevaldivia: {
+    nombre: 'Diario de Valdivia',
+    // Custom: /sitemap/YYYY/MM/sitemap-pt-post.xml (mismo que Osorno).
+    index: 'https://www.diariodevaldivia.cl/sitemap.xml',
+    includeRe: /sitemap-pt-post\.xml$/i,
+    dateFromSitemapPath: /\/sitemap\/(\d{4})\/(\d{2})\//,
+  },
+  diarioelcentro: {
+    nombre: 'Diario El Centro',
+    // Yoast: post-sitemap*.xml.
+    index: 'https://www.diarioelcentro.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  alertanoticiastemuco: {
+    nombre: 'Alerta Noticias Temuco',
+    // Yoast: post-sitemap*.xml.
+    index: 'http://alertanoticiastemuco.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  centralnoticia: {
+    nombre: 'Central Noticia',
+    // Yoast: post-sitemap*.xml.
+    index: 'https://www.centralnoticia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  atacamanoticias: {
+    nombre: 'Atacama Noticias',
+    // WordPress5.x native: wp-sitemap-posts-post-N.xml.
+    index: 'https://www.atacamanoticias.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  chicureohoy: {
+    nombre: 'Chicureo Hoy',
+    // Google Sitemap Generator: post-sitemap.xml.
+    index: 'https://www.chicureohoy.cl/sitemap.xml',
+    articleOnly: true,
+  },
+  // --- Nuevos medios (23-ago-2026, desde tareas_sitemap.md) ---
+  diarioeldia: {
+    nombre: 'Diario El Día',
+    index: 'https://www.diarioeldia.cl/sitemap.xml',
+  },
+  diarioelranco: {
+    nombre: 'Diario El Ranco',
+    index: 'https://www.diarioelranco.cl/sitemap.xml',
+    articleOnly: true,
+  },
+  elmaipo: {
+    nombre: 'El Maipo',
+    index: 'https://elmaipo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  laopiniondechiloe: {
+    nombre: 'La Opinión de Chiloé',
+    index: 'https://www.laopiniondechiloe.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  laprensaaustral: {
+    nombre: 'La Prensa Austral',
+    index: 'https://laprensaaustral.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  novenadigital: {
+    nombre: 'Novena Digital',
+    index: 'https://novenadigital.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  nubleactual: {
+    nombre: 'Ñuble Actual',
+    index: 'https://www.nubleactual.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  tierramarillano: {
+    nombre: 'Tierramarillano',
+    index: 'https://tierramarillano.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  zonazero: {
+    nombre: 'Zona Zero',
+    index: 'https://www.zonazero.cl/sitemap.xml',
+  },
+  desenfoque: {
+    nombre: 'Desenfoque',
+    index: 'https://desenfoque.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  factos: {
+    nombre: 'Factos',
+    index: 'https://factos.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  pagina19: {
+    nombre: 'Página 19',
+    index: 'https://pagina19.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  pulsopublico: {
+    nombre: 'Pulso Público',
+    index: 'https://www.pulsopublico.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  reportea: {
+    nombre: 'Reportea',
+    index: 'https://reportea.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radiointeramericana: {
+    nombre: 'Radio Interamericana',
+    index: 'https://radiointeramericana.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  radiolasenal: {
+    nombre: 'Radio La Señal',
+    index: 'https://radiolasenal.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radiomodelo: {
+    nombre: 'Radio Modelo',
+    index: 'https://radiomodelo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radionuevomundo: {
+    nombre: 'Radio Nuevo Mundo',
+    index: 'https://radionuevomundo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  mma: {
+    nombre: 'Ministerio del Medio Ambiente',
+    index: 'https://mma.gob.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  defensorianinez: {
+    nombre: 'Defensoría de la Niñez',
+    index: 'https://www.defensorianinez.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  ellibero: {
+    nombre: 'El Líbero',
+    index: 'https://www.ellibero.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  ellibertario: {
+    nombre: 'El Libertario',
+    index: 'https://www.ellibertario.cl/sitemap.xml',
+  },
+  elperiscopio: {
+    nombre: 'El Periscopio',
+    index: 'https://www.elperiscopio.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elradar: {
+    nombre: 'El Radar',
+    index: 'https://elradar.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  lavozdelosquesobran: {
+    nombre: 'La Voz de los que Sobran',
+    index: 'https://www.lavozdelosquesobran.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  miradiols: {
+    nombre: 'Mi Radio LS',
+    index: 'https://www.miradiols.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  uteusachnoticias: {
+    nombre: 'UTE USACH Noticias',
+    index: 'https://corporacionuteusach-noticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  laizquierdadiario: {
+    nombre: 'La Izquierda Diario',
+    index: 'https://www.laizquierdadiario.cl/sitemap.xml',
+  },
+  // --- Nuevos medios batch 2 (23-ago-2026, watchlist) ---
+  aconcaguadigital: {
+    nombre: 'Aconcagua Digital',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://aconcaguadigital.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  alertanoticias: {
+    nombre: 'Alerta Noticias',
+    index: 'https://alertanoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  antofacity: {
+    nombre: 'Antofacity',
+    index: 'https://antofacity.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  antofagastaaldia: {
+    nombre: 'Antofagasta al Día',
+    index: 'https://antofagastaaldia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  antofagastanoticias: {
+    nombre: 'Antofagasta Noticias',
+    index: 'https://antofagastanoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  aricaesnoticia: {
+    nombre: 'Arica es Noticia',
+    index: 'https://aricaesnoticia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  atacamaenlinea: {
+    nombre: 'Atacama en Línea',
+    index: 'https://atacamaenlinea.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  clave9: {
+    nombre: 'Clave 9',
+    index: 'https://clave9.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  coquimbonoticias: {
+    nombre: 'Coquimbo Noticias',
+    // Google Sitemap Generator: post-sitemap*.xml
+    index: 'https://www.coquimbonoticias.cl/sitemap.xml',
+    includeRe: /post-sitemap\d*\.xml$/i,
+  },
+  diarioangamos: {
+    nombre: 'Diario Angamos',
+    // Jetpack: sitemap-index-N.xml
+    index: 'https://diarioangamos.com/sitemap.xml',
+    includeRe: /sitemap-index-\d+\.xml$/i,
+  },
+  diariocauquenes: {
+    nombre: 'Diario Cauquenes',
+    index: 'https://diariocauquenes.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  diariocurico: {
+    nombre: 'Diario Curicó',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://diariocurico.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  diarioelcautin: {
+    nombre: 'Diario El Cautín',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://diarioelcautin.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  diarioelpulso: {
+    nombre: 'Diario El Pulso',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://www.diarioelpulso.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  diariolongino: {
+    nombre: 'Diario El Longino',
+    index: 'https://diariolongino.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  diarioloslagos: {
+    nombre: 'Diario Los Lagos',
+    index: 'https://diarioloslagos.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  diariopuertovaras: {
+    nombre: 'Diario Puerto Varas',
+    index: 'https://diariopuertovaras.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  diariotalca: {
+    nombre: 'Diario Talca',
+    index: 'https://diariotalca.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elandacollino: {
+    nombre: 'El Andacollino',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://www.elandacollino.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  elcomunicador: {
+    nombre: 'El Comunicador',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://elcomunicador.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  elcontraste: {
+    nombre: 'El Contraste',
+    index: 'https://elcontraste.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elcoquimbano: {
+    nombre: 'El Coquimbano',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://www.elcoquimbano.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  eldiariodelaaraucania: {
+    nombre: 'El Diario de La Araucanía',
+    index: 'https://eldiariodelaaraucania.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elgong: {
+    nombre: 'El Gong Araucanía',
+    // Flat urlset (no sitemap index)
+    extra: [
+      'https://elgong.cl/sitemap.xml',
+    ],
+  },
+  // ---- Sitemaps pendientes de tareas_sitemap.md (batch extra 2026-09-07) ----
+  // Nacional / internacional: pendientes ⬜ de la watchlist (noticias).
+  elmegacl: {
+    nombre: 'El Mercurio (Edición Impresa / La Segunda digital)',
+    robots: 'https://impresa.elmercurio.com/robots.txt',
+  },
+  elinsular: {
+    nombre: 'El Insular',
+    index: 'https://elinsular.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elmagallanico: {
+    nombre: 'El Magallánico',
+    // WordPress: sitemap.xml + news-sitemap.xml from robots.txt
+    robots: 'https://elmagallanico.com/robots.txt',
+  },
+  elmauleinforma: {
+    nombre: 'El Maule Informa',
+    index: 'https://elmauleinforma.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elmorrodearica: {
+    nombre: 'El Morro de Arica',
+    index: 'https://elmorrodearica.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elnoticierodelhuasco: {
+    nombre: 'El Noticiero del Huasco',
+    // WordPress 5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://elnoticierodelhuasco.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  observador: {
+    nombre: 'El Observador',
+    index: 'https://observador.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elrancaguino: {
+    nombre: 'El Rancagüino',
+    index: 'https://elrancaguino.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elreporterodeiquique: {
+    nombre: 'El Reportero de Iquique',
+    index: 'https://elreporterodeiquique.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elserenense: {
+    nombre: 'El Serenense',
+    index: 'https://elserenense.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elvicuense: {
+    nombre: 'El Vicuñense',
+    index: 'https://xn--elvicuense-y9a.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elquiglobal: {
+    nombre: 'Elqui Global',
+    index: 'https://elquiglobal.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  enlalinea: {
+    nombre: 'En La Línea',
+    index: 'https://enlalinea.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  enlineamaule: {
+    nombre: 'En Línea Maule',
+    index: 'https://enlineamaule.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  enfoquedigital: {
+    nombre: 'Enfoque Digital',
+    index: 'https://enfoquedigital.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  enfoquedigitalohiggins: {
+    nombre: 'Enfoque Digital O\'Higgins',
+    index: 'https://vi.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  hdn: {
+    nombre: 'HDN',
+    index: 'https://hdn.cl/sitemap.xml',
+    articleOnly: true,
+  },
+  horadenoticias: {
+    nombre: 'Hora de Noticias',
+    index: 'https://horadenoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  informaalminuto: {
+    nombre: 'Informa Al Minuto',
+    index: 'https://informaalminuto.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  iquiquetv: {
+    nombre: 'Iquique TV',
+    index: 'https://iquiquetv.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  estrellaiquique: {
+    nombre: 'La Estrella de Iquique',
+    index: 'https://estrellaiquique.cl/sitemap.xml',
+    articleOnly: true,
+  },
+  lakalle: {
+    nombre: 'La Kalle',
+    index: 'https://lakalle.cl/sitemap.xml',
+    articleOnly: true,
+  },
+  lamegafm: {
+    nombre: 'La Mega FM',
+    index: 'https://lamegafm.cl/sitemap.xml',
+    urlRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  laperladellimari: {
+    nombre: 'La Perla del Limarí',
+    index: 'https://laperladellimari.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  laserenaonline: {
+    nombre: 'La Serena Online',
+    index: 'https://laserenaonline.cl/sitemap.xml',
+    includeRe: /\/sitemap-posttype-post\.\d{4}\.xml$/i,
+  },
+  diariolaunion: {
+    nombre: 'La Unión',
+    index: 'https://diariolaunion.cl/sitemap.xml',
+    // Fecha real en el path /sitemap/YYYY/MM/ (mismo CMS que Diario de Osorno).
+    includeRe: /\/sitemap-pt-post\.xml$/i,
+    dateFromSitemapPath: /\/sitemap\/(\d{4})\/(\d{2})\//,
+  },
+  lasnoticiasdemalleco: {
+    nombre: 'Las Noticias de Malleco',
+    index: 'https://lasnoticiasdemalleco.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  losriosnoticias: {
+    nombre: 'Los Ríos Noticias',
+    index: 'https://losriosnoticias.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  malleco7: {
+    nombre: 'Malleco 7',
+    index: 'https://malleco7.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  margamargatv: {
+    nombre: 'Margamarga TV',
+    index: 'https://margamargatv.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  masnoticia: {
+    nombre: 'Más Noticia',
+    index: 'https://masnoticia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  maulehoy: {
+    nombre: 'Maule Hoy',
+    index: 'https://maulehoy.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  nacimentano: {
+    nombre: 'Nacimentano',
+    index: 'https://nacimentano.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  norteonline: {
+    nombre: 'Norte Online',
+    index: 'https://norteonline.cl/sitemap.xml',
+    includeRe: /\/sitemap-index-\d+\.xml$/i,
+  },
+  noticiasbiobio: {
+    nombre: 'Noticias Biobío',
+    index: 'https://noticiasbiobio.cl/sitemap.xml',
+    includeRe: /\/sitemap-index-\d+\.xml$/i,
+  },
+  noticiaschiloe: {
+    nombre: 'Noticias Chiloé',
+    index: 'https://noticiaschiloe.cl/sitemap.xml',
+    includeRe: /\/sitemap-index-\d+\.xml$/i,
+  },
+  noticiasdellago: {
+    nombre: 'Noticias del Lago',
+    index: 'https://noticiasdellago.cl/sitemap.xml',
+    articleOnly: true,
+  },
+  noticiasdelsur: {
+    nombre: 'Noticias del Sur',
+    index: 'https://noticiasdelsur.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  nubledigital: {
+    nombre: 'Ñuble Digital',
+    index: 'https://nubledigital.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  ovallehoy: {
+    nombre: 'Ovalle Hoy',
+    index: 'https://ovallehoy.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  paislobo: {
+    nombre: 'País Lobo',
+    index: 'https://paislobo.cl/sitemap.xml',
+    includeRe: /sitemap\.xml\?page=\d+$/i,
+  },
+  pichilemunews: {
+    nombre: 'Pichilemu News',
+    index: 'https://pichilemunews.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  portalinformativo: {
+    nombre: 'Portal Informativo',
+    index: 'https://portalinformativo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  prensaciudadana: {
+    nombre: 'Prensa Ciudadana',
+    index: 'https://prensaciudadana.cl/sitemap.xml',
+    includeRe: /\/sitemap-index-\d+\.xml$/i,
+  },
+  queilen: {
+    nombre: 'Queilen',
+    index: 'https://queilen.cl/sitemap.xml',
+    includeRe: /\/blog-posts-sitemap\.xml$/i,
+  },
+  radiomagallanes: {
+    nombre: 'Radio Magallanes',
+    index: 'https://radiomagallanes.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  radiopuertanorte: {
+    nombre: 'Radio Puerta Norte',
+    index: 'https://radiopuertanorte.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radioventisqueros: {
+    nombre: 'Radio Ventisqueros',
+    index: 'https://radioventisqueros.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  regionalista: {
+    nombre: 'Regionalista',
+    index: 'https://regionalista.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  rioenlinea: {
+    nombre: 'Río en Línea',
+    index: 'https://rioenlinea.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  sancarlosonline: {
+    nombre: 'San Carlos On Line',
+    index: 'https://sancarlosonline.cl/sitemap.xml',
+    includeRe: /sitemap\.xml\?page=\d+$/i,
+  },
+  seranoticia: {
+    nombre: 'Sera Noticia',
+    index: 'https://seranoticia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  serenaycoquimbo: {
+    nombre: 'Serena y Coquimbo',
+    index: 'https://serenaycoquimbo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  sitiodelsuceso: {
+    nombre: 'Sitio del Suceso',
+    index: 'https://sitiodelsuceso.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  temucodiario: {
+    nombre: 'Temuco Diario',
+    index: 'https://temucodiario.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  tiempo21: {
+    nombre: 'Tiempo 21',
+    index: 'https://tiempo21.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  tomealdia: {
+    nombre: 'Tomé al Día',
+    index: 'https://tomealdia.com/sitemap.xml',
+    includeRe: /sitemap\.xml\?page=\d+$/i,
+  },
+  traiguencity: {
+    nombre: 'Traiguén City',
+    index: 'https://traiguencity.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  vallenardigital: {
+    nombre: 'Vallenar Digital',
+    index: 'https://vallenardigital.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  villarricaldia: {
+    nombre: 'Villarrica al Día',
+    index: 'https://villarricaldia.cl/sitemap.xml',
+    urlRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  radiochilena: {
+    nombre: 'Radio Chilena',
+    index: 'https://radiochilena.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  fmcentro: {
+    nombre: 'Radio FM Centro',
+    index: 'https://fmcentro.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  radiomaria: {
+    nombre: 'Radio María Chile',
+    index: 'https://radiomaria.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radioriquelme: {
+    nombre: 'Radio Riquelme',
+    index: 'https://radioriquelme.cl/sitemap.xml',
+    includeRe: /\/sitemap-index-\d+\.xml$/i,
+  },
+  agenciadenoticias: {
+    nombre: 'Agencia de Noticias',
+    index: 'https://agenciadenoticias.org/sitemap_index.xml',
+    articleOnly: true,
+  },
+  basenacional: {
+    nombre: 'Base Nacional',
+    index: 'https://basenacional.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  eldefinido: {
+    nombre: 'El Definido',
+    index: 'https://eldefinido.cl/sitemap_index.xml',
+    articleOnly: true,
+    // Verificado 09-sep-2026: sin sitemap (todas las variantes devuelven el
+    // HTML del home; robots.txt sin línea Sitemap; homepage sin menciones).
+    // Se mantiene la entrada como registro del intento (0 artículos).
+  },
+  elminuto: {
+    nombre: 'El Minuto',
+    index: 'https://elminuto.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  estapasando: {
+    nombre: 'Está Pasando',
+    index: 'https://estapasando.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  piensachile: {
+    nombre: 'Piensa Chile',
+    index: 'https://piensachile.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  portalmetropolitano: {
+    nombre: 'Portal Metropolitano',
+    index: 'https://portalmetropolitano.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  santiagotimes: {
+    nombre: 'Santiago Times',
+    index: 'https://santiagotimes.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  vivimoslanoticia: {
+    nombre: 'Vivimos la Noticia',
+    index: 'https://vivimoslanoticia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  vozdeamerica: {
+    nombre: 'Voz de América',
+    index: 'https://vozdeamerica.com/sitemap.xml',
+    includeRe: /sitemap_\d+_\d+\.xml\.gz$/i,
+  },
+  elporteno: {
+    nombre: 'El Porteño',
+    index: 'https://elporteno.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  laprensadiariolaprensa: {
+    nombre: 'La Prensa',
+    index: 'https://new.diariolaprensa.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  elpinguino: {
+    nombre: 'El Pingüino',
+    robots: 'https://elpinguino.com/robots.txt',
+    // Mismo CMS que CNN Chile / El Dínamo: robots declara
+    // _files/sitemaps/sitemap_index.xml + sitemap_lasts.xml + sitemap_news.xml.
+    // OJO como CNN: los sub-sitemaps mensuales regeneran el <lastmod> a la
+    // fecha del crawl (falso: todo sale 2026); la fecha real está en el path
+    // YYYY/MM del sub-sitemap (dateFromSitemapPath).
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  elproa: {
+    nombre: 'El Proa',
+    index: 'https://elproa.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  infotarapaca: {
+    nombre: 'Info Tarapacá',
+    index: 'https://infotarapaca.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  miradasurtv: {
+    nombre: 'Mirada Sur TV',
+    index: 'https://miradasurtv.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  ovejeronoticias: {
+    nombre: 'Ovejero Noticias',
+    index: 'https://ovejeronoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  tarapacaonline: {
+    nombre: 'Tarapacá Online',
+    index: 'https://tarapacaonline.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  chanarcillo: {
+    nombre: 'Diario Chañarcillo',
+    index: 'https://chanarcillo.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  diarioavisale: {
+    nombre: 'Diario Avísale',
+    index: 'https://diarioavisale.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  edicioncero: {
+    nombre: 'Edición Cero',
+    index: 'https://edicioncero.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  // ---- Nuevos sitios (agregados 22-ago-2026) ----
+  // ---- Sitemaps pendientes (batch internacional, 2026-09-07) ----
+  elpais: {
+    nombre: 'El País',
+    index: 'https://www.elpais.com/sitemap.xml',
+  },
+  // ---- Sitemaps pendientes de tareas_sitemap.md (batch extra 2026-09-07) ----
+  // Nacional / internacional: pendientes ⬜ de la watchlist (noticias).
+  bbc: {
+    nombre: 'BBC Mundo',
+    robots: 'https://www.bbc.com/robots.txt',
+    // Solo la edición Mundo (los sitemaps por idioma viven en /<idioma>/sitemap.xml).
+    includeRe: /\/mundo\/sitemap\.xml$/i,
+  },
+  lemondediplomatique: {
+    nombre: 'Le Monde Diplomatique - Edición Chilena',
+    // SPIP: robots.txt sin línea Sitemap; el index real es /sitemap.xml.
+    index: 'https://lemondediplomatique.cl/sitemap.xml',
+  },
+  mercopress: {
+    nombre: 'MercoPress',
+    index: 'https://es.mercopress.com/sitemap.xml',
+    // Solo los archivos anuales (main.xml mezcla páginas/portada).
+    includeRe: /\/archive\/\d{4}\.xml$/i,
+  },
+  ipsnoticias: {
+    nombre: 'IPS Agencia de Noticias',
+    // Yoast: el wp-sitemap.xml indexa post-sitemap*.xml (articleOnly).
+    index: 'https://ipsnoticias.net/wp-sitemap.xml',
+    articleOnly: true,
+  },
+  ansalatina: {
+    nombre: 'ANSA Latina',
+    robots: 'https://www.ansalatina.com/robots.txt',
+    // El robots.txt declara el index; apunta a un único urlset con news:news
+    // (títulos reales, ~72KB, reciente con lastmod por artículo).
+    index: 'https://www.ansalatina.com/americalatina/sitemaps/sito_sitemap_index.xml',
+  },
+  saladeprensa: {
+    nombre: 'Sala de Prensa',
+    // Yoast: post-sitemap*.xml
+    index: 'https://www.saladeprensa.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  valparaisonoticias: {
+    nombre: 'Valparaíso Noticias',
+    // Custom: sitemap.xml (flat urlset or index)
+    index: 'https://www.valparaisonoticias.cl/sitemap.xml',
+  },
+  reporteagricola: {
+    nombre: 'Reporte Agrícola',
+    // Custom: sitemap.xml (flat urlset)
+    extra: [
+      'https://www.reporteagricola.cl/sitemap.xml',
+    ],
+  },
+  ecoceanos: {
+    nombre: 'ECOceanos',
+    // Yoast: post-sitemap*.xml
+    index: 'https://www.ecoceanos.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  redsalud: {
+    nombre: 'RedSalud',
+    // Custom: sitemap.xml (flat urlset)
+    extra: [
+      'https://www.redsalud.cl/sitemap.xml',
+    ],
+  },
+  arauco: {
+    nombre: 'Arauco',
+    // Yoast: post-sitemap*.xml
+    index: 'https://arauco.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Gobernables e institucionales (22-ago-2026) ----
+  mtt: {
+    nombre: 'Ministerio de Transportes y Telecomunicaciones',
+    // Yoast: post-sitemap*.xml
+    index: 'https://mtt.gob.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  consejotransparencia: {
+    nombre: 'Consejo para la Transparencia',
+    // Yoast: post-sitemap*.xml
+    index: 'https://www.consejotransparencia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  economia: {
+    nombre: 'Ministerio de Economía',
+    // Yoast: post-sitemap*.xml (www.* en sitemap)
+    index: 'https://www.economia.gob.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radiosantamaria: {
+    nombre: 'Radio Santa María',
+    // Yoast: post-sitemap*.xml
+    index: 'https://www.radiosantamaria.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  maray: {
+    nombre: 'Radio Maray',
+    // Yoast: post-sitemap*.xml
+    index: 'https://www.maray.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  resonanciadiario: {
+    nombre: 'Resonancia Diario',
+    // Yoast: post-sitemap*.xml
+    index: 'https://www.resonanciadiario.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  anip: {
+    nombre: 'ANIP',
+    // Custom: sitemap.xml (flat urlset)
+    extra: [
+      'https://anip.cl/sitemap.xml',
+    ],
+  },
+  funcionariopublico: {
+    nombre: 'Funcionario Público',
+    // WordPress5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://funcionariopublico.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  minrel: {
+    nombre: 'Ministerio de Relaciones Exteriores',
+    // Custom: minrel/site/sitemap_pags.xml (single sitemap)
+    extra: [
+      'https://minrel.gob.cl/minrel/site/sitemap_pags.xml',
+    ],
+  },
+  // ---- Más medios (22-ago-2026, tanda 2) ----
+  quintero: {
+    nombre: 'Quintero',
+    index: 'https://quintero.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  tuki: {
+    nombre: 'Tuki',
+    extra: [
+      'https://tuki.cl/sitemap.xml',
+    ],
+  },
+  uruguay: {
+    nombre: 'Uruguay',
+    index: 'https://uruguay.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  portalminero: {
+    nombre: 'Portal Minero',
+    extra: [
+      'https://www.portalminero.com/sitemap.xml',
+    ],
+  },
+  portalfruticola: {
+    nombre: 'Portal Frutícola',
+    index: 'https://www.portalfruticola.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  portalportuario: {
+    nombre: 'PortalPortuario',
+    index: 'https://portalportuario.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  sofofa: {
+    nombre: 'SOFOFA',
+    index: 'https://www.sofofa.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  somoschile: {
+    nombre: 'Somos Chile',
+    extra: [
+      'https://www.somoschile.cl/sitemap.xml',
+    ],
+  },
+  aitnews: {
+    nombre: 'AIT News',
+    index: 'https://aitnews.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  angolnoticias: {
+    nombre: 'Angol Noticias',
+    index: 'https://www.angolnoticiasnew.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Universidades (22-ago-2026) ----
+  uai: {
+    nombre: 'Universidad Adolfo Ibáñez',
+    extra: [
+      'https://www.uai.cl/sitemap.xml',
+    ],
+  },
+  ulagos: {
+    nombre: 'Universidad de los Lagos',
+    // WordPress5.x native: wp-sitemap-posts-post-N.xml
+    index: 'https://www.ulagos.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  umayor: {
+    nombre: 'Universidad Mayor',
+    extra: [
+      'https://www.umayor.cl/sitemap.xml',
+    ],
+  },
+  pucv: {
+    nombre: 'Pontificia Universidad Católica de Valparaíso',
+    // Custom: pucv/site/sitemap_pags.xml (single sitemap)
+    extra: [
+      'https://www.pucv.cl/pucv/site/sitemap_pags.xml',
+    ],
+  },
+
+  contapapaya: {
+    nombre: 'Contapapaya',
+    index: 'https://contapapaya.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  electromineria: {
+    nombre: 'Electrominería',
+    index: 'https://electromineria.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  iconstruccion: {
+    nombre: 'Instituto de la Construcción',
+    index: 'https://iconstruccion.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  losabogadoslaborales: {
+    nombre: 'Los Abogados Laborales',
+    index: 'https://losabogadoslaborales.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  anda: {
+    nombre: 'Anda',
+    index: 'https://anda.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  anef: {
+    nombre: 'ANEF',
+    index: 'https://anef.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  comunidadmujer: {
+    nombre: 'ComunidadMujer',
+    index: 'https://comunidadmujer.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  lamorada: {
+    nombre: 'Corporación La Morada',
+    index: 'https://lamorada.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  guiaturismo: {
+    nombre: 'Guía Turismo Chile',
+    index: 'https://guiaturismo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  xox: {
+    nombre: 'XOX.cl',
+    index: 'https://xox.cl/sitemap.xml',    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+  },
+  cclm: {
+    nombre: 'Centro Cultural La Moneda',
+    index: 'https://cclm.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  chileestuyo: {
+    nombre: 'Chile es Tuyo',
+    index: 'https://chileestuyo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  latendencia: {
+    nombre: 'La Tendencia',
+    index: 'https://latendencia.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  museovioletaparra: {
+    nombre: 'Museo Violeta Parra',
+    index: 'https://museovioletaparra.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  dsstgo: {
+    nombre: 'Colegio Alemán de Santiago',
+    index: 'https://dsstgo.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  sanignacio: {
+    nombre: 'Colegio San Ignacio',
+    index: 'https://sanignacio.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  tabancura: {
+    nombre: 'Colegio Tabancura',
+    index: 'https://tabancura.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  junji: {
+    nombre: 'JUNJI',
+    index: 'https://junji.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  liceodeaplicacion: {
+    nombre: 'Liceo de Aplicación',
+    index: 'https://liceodeaplicacion.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  saintgeorge: {
+    nombre: "Saint George's College",
+    index: 'https://saintgeorge.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  sip: {
+    nombre: 'SIP Red de Colegios',
+    index: 'https://sip.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  grange: {
+    nombre: "The Grange School",
+    index: 'https://grange.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  vergara240: {
+    nombre: 'Vergara 240',
+    index: 'https://vergara240.udp.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  acera: {
+    nombre: 'ACERA',
+    index: 'https://acera.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  legadochile: {
+    nombre: 'Fundación Legado Chile',
+    index: 'https://legadochile.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  rewildingchile: {
+    nombre: 'Fundación Rewilding Chile',
+    index: 'https://rewildingchile.org/sitemap_index.xml',
+    articleOnly: true,
+  },
+  oceana: {
+    nombre: 'Oceana Chile',
+    index: 'https://oceana.org/sitemap_index.xml',
+    articleOnly: true,
+  },
+  munialtobiobio: {
+    nombre: 'Municipalidad de Alto Biobío',
+    index: 'https://munialtobiobio.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  mtraiguen: {
+    nombre: 'Municipalidad de Traiguén',
+    index: 'https://mtraiguen.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  gobiernoudd: {
+    nombre: 'Gobierno UDD',
+    index: 'https://gobierno.udd.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  cruzroja: {
+    nombre: 'Cruz Roja Chile',
+    index: 'https://cruzroja.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  observatoriomedicina: {
+    nombre: 'Observatorio Medicina UC',
+    index: 'https://observatorio.medicina.uc.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  portalredsalud: {
+    nombre: 'Portal RedSalud',
+    index: 'https://portalredsalud.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  soched: {
+    nombre: 'SOCHED',
+    index: 'https://soched.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  auroranoticias: {
+    nombre: 'Aurora Noticias',
+    index: 'https://auroranoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  centralweb: {
+    nombre: 'Central Web',
+    index: 'https://centralweb.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  diarioelgong: {
+    nombre: 'Diario El Gong',
+    index: 'https://diarioelgong.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  enteratehoy: {
+    nombre: 'Entérate Hoy',
+    index: 'https://enteratehoy.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  lamaquinamedio: {
+    nombre: 'La Máquina Medio',
+    index: 'https://lamaquinamedio.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  magiadigital: {
+    nombre: 'Magia Digital',
+    index: 'https://magiadigital.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  musicaynoticias: {
+    nombre: 'Música y Noticias',
+    index: 'https://musicaynoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  panoramanoticioso: {
+    nombre: 'Panorama Noticioso',
+    index: 'https://panoramanoticioso.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Nuevos sitios batch 3 (28-ago-2026, tareas_sitemap watchlist) ----
+  sernatur: {
+    nombre: 'SERNATUR',
+    index: 'https://sernatur.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  herejia: {
+    nombre: 'Herejía',
+    index: 'https://herejia.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  radioimagina: {
+    nombre: 'Radio Imagina',
+    index: 'https://radioimagina.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  ecosistemas: {
+    nombre: 'Ecosistemas',
+    index: 'https://ecosistemas.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  colegiomedico: {
+    nombre: 'Colegio Médico de Chile',
+    // All in One SEO: un solo wp-sitemap.xml flat (urlset con 3135 URLs)
+    extra: [
+      'https://colegiomedico.cl/wp-sitemap.xml',
+    ],
+  },
+  nostalgica: {
+    nombre: 'Nostálgica',
+    index: 'https://nostalgica.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  primedigital: {
+    nombre: 'Prime Digital',
+    index: 'https://primedigital.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  // ---- Nuevos sitios batch 4 (28-ago-2026, regional/gobierno/político/radio) ----
+  elinformador: {
+    nombre: 'El Informador Los Andes',
+    index: 'https://elinformador.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  elovallino: {
+    nombre: 'El Ovallino',
+    index: 'https://elovallino.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariolinares: {
+    nombre: 'Diario Linares',
+    index: 'https://diariolinares.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diarioantofagasta: {
+    nombre: 'Diario Antofagasta',
+    index: 'https://diarioantofagasta.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (185 sub-sitemaps)
+  },
+  diarioregionalaysen: {
+    nombre: 'Diario Regional Aysén',
+    index: 'https://diarioregionalaysen.cl/sitemap.xml',
+  },
+  latribunadecolchagua: {
+    nombre: 'La Tribuna de Colchagua',
+    index: 'https://latribunadecolchagua.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariolagoranco: {
+    nombre: 'Diario Lago Ranco',
+    index: 'https://diariolagoranco.cl/sitemap.xml',
+  },
+  fronteranorte: {
+    nombre: 'Frontera Norte',
+    index: 'https://fronteranorte.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  redinformativa: {
+    nombre: 'Red Informativa',
+    index: 'https://redinformativa.cl/sitemap.xml',
+  },
+  labatalla: {
+    nombre: 'La Batalla de Maipú',
+    index: 'https://labatalla.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariodepuertomontt: {
+    nombre: 'Diario de Puerto Montt',
+    index: 'https://diariodepuertomontt.cl/sitemap.xml',
+  },
+  elcalbucano: {
+    nombre: 'El Calbucano',
+    index: 'https://elcalbucano.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  goretarapaca: {
+    nombre: 'Gobierno Regional de Tarapacá',
+    index: 'https://goretarapaca.gov.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml (267 sub-sitemaps)
+  },
+  frenteampliochile: {
+    nombre: 'Frente Amplio',
+    index: 'https://frenteampliochile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  frevs: {
+    nombre: 'Federación Regionalista Verde Social',
+    index: 'https://frevs.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  gobiernosantiago: {
+    nombre: 'Gobierno Regional Metropolitano',
+    index: 'https://gobiernosantiago.cl/sitemap.xml',
+  },
+  rln: {
+    nombre: 'Radio Las Nieves',
+    index: 'https://rln.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  insularfm: {
+    nombre: 'Insular FM',
+    index: 'https://insularfm.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  diariosurnoticias: {
+    nombre: 'Diario Sur Noticias',
+    index: 'https://diariosurnoticias.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  clgmedios: {
+    nombre: 'CLG Medios',
+    index: 'https://clgmedios.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  itvpatagonia: {
+    nombre: 'ITV Patagonia',
+    index: 'https://itvpatagonia.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  // ---- Batch 5: internacionales + educación (28-ago-2026) ----
+  reuters: {
+    nombre: 'Reuters',
+    robots: 'https://www.reuters.com/robots.txt',
+    // Arc XP: sitemap-index + news-sitemap-index. Robots declara 12 sitemaps.
+    // Solo feeds de artículos EN recientes (outboundfeeds sitemap/news/plj +
+    // plus); fuera: pictures, video-sitemap, graphics, topic, pressrelease,
+    // edición árabe (sitemap-ar) y el archivo histórico (service/archive,
+    // ~6.400 sub-sitemaps — backfill pendiente, ver SKILL).
+    includeRe: /\/(?:arc\/outboundfeeds\/(?:news-)?sitemap(?:-plj)?\/(?:\?|$)|plus\/sitemap\.xml)/i,
+  },
+  rfi: {
+    nombre: 'RFI Español',
+    index: 'https://www.rfi.fr/sitemaps/es/index.xml',
+    // Custom: contents_YYYYMM.xml (artículos por mes). articleOnly descarta
+    // tags/shows/pagebuilders; includeRe whitelist puro contenido.
+    includeRe: /contents_\d{6}\.xml$/,
+  },
+  france24: {
+    nombre: 'France 24',
+    index: 'https://www.france24.com/sitemaps/es/index.xml',
+    includeRe: /contents_\d{6}\.xml$/,
+  },
+  holanews: {
+    nombre: 'HolaNews',
+    index: 'https://holanews.com/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  theguardian: {
+    nombre: 'The Guardian',
+    extra: [
+      'https://www.theguardian.com/sitemaps/news.xml',
+    ],
+    // Custom: news sitemap con títulos reales.
+  },
+  cepchile: {
+    nombre: 'CEP Chile',
+    index: 'https://cepchile.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  udec: {
+    nombre: 'Universidad de Concepción',
+    index: 'https://noticias.udec.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  unab: {
+    nombre: 'Universidad Andrés Bello',
+    index: 'https://unab.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  uautonoma: {
+    nombre: 'Universidad Autónoma de Chile',
+    index: 'https://uautonoma.cl/sitemap_index.xml',
+    // Custom CPT: noticias-sitemap*.xml
+    includeRe: /noticias-sitemap\d*\.xml$/i,
+  },
+  ucn: {
+    nombre: 'Universidad Católica del Norte',
+    index: 'https://ucn.cl/sitemap_index.xml',
+    // Custom CPT: noticias-sitemap*.xml (no usa post-sitemap)
+    includeRe: /noticias-sitemap\d*\.xml$/i,
+  },
+  explora: {
+    nombre: 'Explora',
+    index: 'https://explora.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  fima: {
+    nombre: 'FIMA',
+    // Flat urlset (sitemap_index.xml returns urlset, not sitemapindex)
+    extra: [
+      'https://fima.cl/sitemap_index.xml',
+    ],
+  },
+  // ---- Batch 6: nacionales, regionales, salud, educación, medio ambiente (28-ago-2026) ----
+  // WordPress 5.5+: wp-sitemap.xml (includeRe en vez de articleOnly porque WP5.5
+  // usa wp-sitemap-posts-post-*.xml, no post-sitemap*.xml)
+  condor: {
+    nombre: 'Cóndor',
+    index: 'https://condor.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  diariochile: {
+    nombre: 'Diario Chile',
+    index: 'https://diariochile.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  cenabast: {
+    nombre: 'CENABAST',
+    index: 'https://cenabast.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  cr2: {
+    nombre: 'CR2',
+    index: 'https://cr2.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  mediabanco: {
+    nombre: 'Mediabanco',
+    index: 'https://mediabanco.com/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  contingenciachile: {
+    nombre: 'Contingencia Chile',
+    index: 'https://contingenciachile.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  // Otros sitemaps funcionales
+  chiletravel: {
+    nombre: 'Chile Travel',
+    index: 'https://chile.travel/sitemap_index.xml',
+  },
+  udla: {
+    nombre: 'UDLA',
+    index: 'https://udla.cl/sitemap_index.xml',
+  },
+  uteusach: {
+    nombre: 'UTE USACH Noticias',
+    index: 'https://corporacionuteusach-noticias.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  // ---- Batch 7: partidos, comunidades, medio ambiente, educación (28-ago-2026) ----
+  // ---- Batch 7: partidos, comunidades, medio ambiente, educación (28-ago-2026) ----
+  rn: {
+    nombre: 'RN',
+    index: 'https://www.rn.cl/sitemap.xml',
+    // No es Yoast estándar: blog-posts, event-pages, dynamic-*
+    includeRe: /(?:blog-posts|event-pages|dynamic-[^/]+)\.xml$/,
+    // blog-posts tiene 1 URL; se incluye por completitud.
+  },
+  iguales: {
+    nombre: 'Fundación Iguales',
+    index: 'https://iguales.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  hogardecristo: {
+    nombre: 'Hogar de Cristo',
+    index: 'https://hogardecristo.cl/sitemap.xml',
+  },
+  wwf: {
+    nombre: 'WWF Chile',
+    index: 'https://www.wwf.cl/sitemap.xml',
+  },
+  generadoras: {
+    nombre: 'Generadoras de Chile',
+    index: 'https://generadoras.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  ucsc: {
+    nombre: 'UCSC',
+    index: 'https://ucsc.cl/sitemap_index.xml',
+  },
+  // ---- Batch 8: gobierno, salud, regionales (28-ago-2026) ----
+  // WordPress 5.5+: wp-sitemap.xml
+  subtel: {
+    nombre: 'SUBTEL',
+    index: 'https://www.subtel.gob.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  fisa: {
+    nombre: 'FISA',
+    index: 'https://www.fisa.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  colegiodeenfermeras: {
+    nombre: 'Colegio de Enfermeras',
+    index: 'https://colegiodeenfermeras.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  mop: {
+    nombre: 'MOP',
+    index: 'https://www.mop.gob.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  // Otros sitemaps funcionales
+  senda: {
+    nombre: 'SENDA',
+    index: 'https://www.senda.gob.cl/sitemap_index.xml',
+  },
+  sochob: {
+    nombre: 'Sochob',
+    index: 'https://www.sochob.cl/sitemap.xml',
+  },
+  lanacion: {
+    nombre: 'La Nación',
+    index: 'https://lanacion.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  elsiglo: {
+    nombre: 'El Siglo',
+    index: 'https://elsiglo.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap*.xml
+  },
+  mintrab: {
+    nombre: 'Ministerio del Trabajo',
+    index: 'https://www.mintrab.gob.cl/sitemap_index.xml',
+  },
+  minvu: {
+    nombre: 'Ministerio de Vivienda',
+    index: 'https://www.minvu.gob.cl/sitemap_index.xml',
+  },
+  // ---- Batch 9: regionales, negocios, medio ambiente (28-ago-2026) ----
+  lahora: {
+    nombre: 'La Hora',
+    index: 'https://lahora.cl/sitemap.xml',
+    // Custom: sitemap/DD-MM-YYYY.xml (diario desde 2014) + news-sitemap.xml
+    includeRe: /(?:sitemap-\d{2}-\d{2}-\d{4}|news-sitemap)\.xml$/,
+  },
+  elcachapoal: {
+    nombre: 'El Cachapoal',
+    index: 'https://elcachapoal.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/,
+  },
+  cchc: {
+    nombre: 'CCHC',
+    index: 'https://cchc.cl/sitemap.xml',
+    // Custom: sitemap_general.xml, sitemap_noticias.xml, sitemap_eventos.xml
+    includeRe: /sitemap_(general|noticias|eventos)\.xml$/,
+  },
+  terram: {
+    nombre: 'Fundación Terram',
+    index: 'https://www.terram.cl/sitemap.xml',
+    // Custom: sitemap-pt-post-YYYY-MM.xml (no Yoast estándar)
+    includeRe: /sitemap-pt-post-[^/]+\.xml$/,
+  },
+  // PDC: robots.txt sin sitemap, sitemap_index.xml retorna 404 — descartado.
+  // Conglomerado Estrella/Mercurio (estrellaantofagasta.cl retorna 450; sitemap_index es
+  // conglomerado de ~19 diarios, no de un solo sitio — no sincronizable individualmente)
+  // Ladera Sur (post-sitemap.xml vacío), G5 Noticias (sitemap descartado por script),
+  // Diario Sur (1 URL útil), CLAPES UC (urlset sin artículos) — descartados.
+
+  // ---- Batch 10: gobierno, regional, nacional (28-ago-2026, desde tareas_sitemap) ----
+  // Gubernamentales / institucionales
+  conaf: {
+    nombre: 'CONAF',
+    index: 'https://www.conaf.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  bienesnacionales: {
+    nombre: 'Ministerio de Bienes Nacionales',
+    index: 'https://www.bienesnacionales.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // Regionales
+  elcondor: {
+    nombre: 'El Cóndor',
+    index: 'https://diariocondor.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // Nacionales
+  redaccion: {
+    nombre: 'Redacción',
+    index: 'https://redaccion.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Batch 11: regionales (28-ago-2026, desde tareas_sitemap) ----
+  elsoldeiquique: {
+    nombre: 'El Sol de Iquique',
+    index: 'https://elsoldeiquique.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  eltirapiedras: {
+    nombre: 'El Tirapiedras',
+    index: 'https://eltirapiedras.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  radiopirque: {
+    nombre: 'Radio Pirque',
+    index: 'https://radiopirque.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  regionvisual: {
+    nombre: 'Región Visual',
+    index: 'https://regionvisual.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  timeline_cl: {
+    nombre: 'Timeline',
+    index: 'https://timeline.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  tusnoticias: {
+    nombre: 'Tus Noticias',
+    index: 'https://tusnoticias.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  linaresenlinea: {
+    nombre: 'Linares en Línea',
+    index: 'https://linaresenlinea.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  quilpueonline: {
+    nombre: 'Quilpué Online',
+    index: 'https://quilpueonline.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ---- Batch 12: gobierno, nacional, medio ambiente, partidos (28-ago-2026) ----
+  subtrab: {
+    nombre: 'Subsecretaría del Trabajo',
+    index: 'https://www.subtrab.gob.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  fonasa: {
+    nombre: 'Fonasa',
+    index: 'https://www.fonasa.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  liberaleschile: {
+    nombre: 'Partido Liberal de Chile',
+    index: 'https://liberaleschile.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  adiariocr: {
+    nombre: 'aDiarioCR',
+    index: 'https://adiariocr.com/sitemap_index.xml',
+    articleOnly: true,
+  },
+  sochicar: {
+    nombre: 'Sociedad Chilena de Cardiología',
+    index: 'https://sochicar.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  // ── Agregados 07-sep-2026 ──────────────────────────────────────────
+  defensacivil: {
+    nombre: 'Defensa Civil de Chile',
+    index: 'https://defensacivil.cl/wp-sitemap.xml',
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  elperiodicodelaenergia: {
+    nombre: 'El Periódico de la Energía',
+    index: 'https://elperiodicodelaenergia.com/sitemaps/sitemap.xml',
+  },
+  nexos: {
+    nombre: 'Nexos Chile',
+    index: 'https://www.nexos.cl/sitemap.xml',
+    includeRe: /\/post-sitemap\.xml$/i,
+  },
+  // ── Agregados 08-sep-2026 ──────────────────────────────────────────
+  pvmagazine: {
+    nombre: 'pv magazine Latin America',
+    index: 'https://pv-magazine-latam.com/sitemap_index.xml',
+    includeRe: /\/post-sitemap\.xml$/i,
+  },
+  capa9: {
+    nombre: 'Capa9',
+    index: 'https://capa9.net/sitemap.xml',
+  },
+  coaniquem: {
+    nombre: 'Coaniquem',
+    index: 'https://coaniquem.cl/wp-sitemap.xml',
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  // ── Agregados 28-09-2026 (batch 14: lasegunda + pagina7 tenían sitemap) ──
+  lasegunda: {
+    nombre: 'La Segunda',
+    robots: 'https://www.lasegunda.com/robots.txt',
+    // CMS propio: índice de 199 sub-sitemaps paginados sitemap{N}_{YYYY}.xml
+    // (2000→hoy, ~5.400 URLs c/u). Sin <lastmod>: fecha real en el path
+    // /Noticias/<seccion>/YYYY/MM/<id>/<slug> (día 01 aproximado).
+    includeRe: /sitemap\d+_\d{4}\.xml$/i,
+    locDateRe: /\/(20\d{2})\/(\d{2})\//,
+  },
+  pagina7: {
+    nombre: 'Página 7',
+    robots: 'https://www.pagina7.cl/robots.txt',
+    // Mismo CMS que CNN Chile: _files/sitemaps/YYYY/MM.xml (2014/07→hoy) +
+    // sitemap_lasts.xml + sitemap_news.xml (títulos reales).
+    // OJO como CNN: los sub-sitemaps mensuales regeneran el <lastmod> a la
+    // fecha del crawl (falso); la fecha real está en el path YYYY/MM.
+    dateFromSitemapPath: /_files\/sitemaps\/(\d{4})\/(\d{2})\.xml$/,
+  },
+  // ── Agregados 27-sep-2026 (batch 13: 5 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  tvn: {
+    nombre: 'TVN',
+    // Prontus: índice mensual .xml.gz (el robots.txt se sirve como text/plain
+    // y el crawler lo rechaza, así que se apunta directo al índice).
+    // OJO: <lastmod> con timestamp Unix en segundos (lo parsea isoDate).
+    extra: [
+      'https://www.tvn.cl/tvn/site/sitemap_pags.xml',
+    ],
+    // Solo los índices mensuales de artículos (descarta ports/tax: secciones).
+    includeRe: /sitemap_pags_\d{6}\.xml\.gz$/i,
+  },
+  duna: {
+    nombre: 'Radio Duna',
+    index: 'https://duna.cl/sitemap.xml',
+    // Custom: articles.xml + articles_2.xml (descarta categories/shows/lives/episodes).
+    includeRe: /\/articles(_\d+)?\.xml$/i,
+  },
+  terra: {
+    nombre: 'Terra Chile',
+    robots: 'https://www.terra.cl/robots.txt',
+    // Custom: articles/YYYY-MM mensuales desde 2020 + news.xml (títulos reales).
+    includeRe: /(?:articles\/\d{4}-\d{2}\.xml|news\.xml)$/i,
+  },
+  elregionalista: {
+    nombre: 'El Regionalista',
+    index: 'https://www.elregionalista.cl/sitemap.xml',
+    articleOnly: true, // All in One SEO: post-sitemap.xml
+  },
+  concierto: {
+    nombre: 'Radio Concierto',
+    robots: 'https://www.concierto.cl/robots.txt',
+    // Custom Iberoamericana: out/sitemap.xml (artículos, fecha en path /YYYY/MM/)
+    // + news-sitemap.xml (títulos reales). Ojo: out/sitemap.xml es urlset plano.
+  },
+  // Descartados batch 12: munistgo/radiocamara/subturismo/mineduc/minsal/elcorto/
+  // chilenafm/chilenoticias/cctt/codeff/inach/meteored/utalca/ufro/udp/pcchile/pdc/
+  // ppd/democratas — flat urlset. aqua — DNS ENOTFOUND.
+  // Descartados (28-ago-2026 batch 11): elsancarlino/elurbanorural/frutillarhoy/guardiandelsur/
+  // lanoticia/larazon/pautalosrios/primeranota/pucontv/ladiscusion/latribuna — flat urlset.
+  // linaresnoticia/noticiascobquecura — DNS ENOTFOUND. cobquecura — 0 artículos.
+  // australtemuco/australosorno/australvaldivia — conglomerado Estrella/Mercurio (450).
+  // Descartados (28-ago-2026 batch 10): sernac/sii/sag/ispch/cultura/minmujeryeg/sence —
+  // sitemap_index.xml retorna flat urlset (no sitemapindex), articleOnly los descarta.
+  // diarioelheraldo/araucanianoticias/datossur/eltrabajo/elregional/elprovincial/aricaldia/
+  // antofagasta_tv/diariosol — sitemap_index.xml retorna flat urlset sin sub-sitemaps.
+  // elamaule — HTTP 403 (Cloudflare). inoticias — 0 artículos.
+};
+
+// ---------------------------------------------------------------------------
+// Utilidad compartida: hosts (sin www, minúsculas) de los endpoints de un
+// medio (robots/index/extra). La usan add-source.mjs (mapas del catálogo) y
+// watchlist.mjs (cruce de dominios) para derivar dominios sin transcribir.
+// ---------------------------------------------------------------------------
+export function mediaHosts(cfg) {
+  const urls = [cfg?.robots, cfg?.index, ...(cfg?.extra || [])].filter(Boolean);
+  const out = new Set();
+  for (const u of urls) {
+    try {
+      out.add(new URL(u).hostname.toLowerCase().replace(/^www\./, ''));
+    } catch { /* URL inválida: se omite */ }
+  }
+  return [...out];
+}

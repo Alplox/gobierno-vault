@@ -1,6 +1,6 @@
 # Medios registrados
 
-> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/sync.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.
+> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/media.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.
 > Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
@@ -57,6 +57,7 @@
 | `colegiomedico` | Colegio Médico de Chile | `colegiomedico.cl/wp-sitemap.xml` | — | 3.134 | 9 |
 | `comunidadmujer` | ComunidadMujer | `comunidadmujer.cl/sitemap_index.xml` | articleOnly (Yoast) | 546 | 5 |
 | `conaf` | CONAF | `www.conaf.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.735 | 3 |
+| `concierto` | Radio Concierto | `www.concierto.cl/robots.txt` | — | 36 | 1 |
 | `condor` | Cóndor | `condor.cl/wp-sitemap.xml` | includeRe | 2.785 | 9 |
 | `consejotransparencia` | Consejo para la Transparencia | `www.consejotransparencia.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.012 | 19 |
 | `contapapaya` | Contapapaya | `contapapaya.cl/sitemap_index.xml` | articleOnly (Yoast) | 206 | 1 |
@@ -98,6 +99,7 @@
 | `diariotalca` | Diario Talca | `diariotalca.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.421 | 6 |
 | `diariousach` | Diario USACH | `www.diariousach.cl/robots.txt` | — | 73 | 1 |
 | `dsstgo` | Colegio Alemán de Santiago | `dsstgo.cl/sitemap_index.xml` | articleOnly (Yoast) | 375 | 2 |
+| `duna` | Radio Duna | `duna.cl/sitemap.xml` | includeRe | 47.571 | 2 |
 | `ecoceanos` | ECOceanos | `www.ecoceanos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.157 | 12 |
 | `economia` | Ministerio de Economía | `www.economia.gob.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.655 | 15 |
 | `ecosistemas` | Ecosistemas | `ecosistemas.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.633 | 14 |
@@ -146,6 +148,7 @@
 | `elquintopoder` | El Quinto Poder | `www.elquintopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 17.724 | 15 |
 | `elradar` | El Radar | `elradar.cl/sitemap_index.xml` | articleOnly (Yoast) | 446 | 2 |
 | `elrancaguino` | El Rancagüino | `elrancaguino.cl/sitemap_index.xml` | articleOnly (Yoast) | 70.735 | 16 |
+| `elregionalista` | El Regionalista | `www.elregionalista.cl/sitemap.xml` | articleOnly (Yoast) | 2.093 | 6 |
 | `elreporterodeiquique` | El Reportero de Iquique | `elreporterodeiquique.com/sitemap_index.xml` | articleOnly (Yoast) | 61.152 | 9 |
 | `elserenense` | El Serenense | `elserenense.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
 | `elsiglo` | El Siglo | `elsiglo.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.483 | 4 |
@@ -214,6 +217,7 @@
 | `laperladellimari` | La Perla del Limarí | `laperladellimari.cl/sitemap.xml` | includeRe | 2.670 | 7 |
 | `laprensaaustral` | La Prensa Austral | `laprensaaustral.cl/wp-sitemap.xml` | includeRe | 67.619 | 7 |
 | `laprensadiariolaprensa` | La Prensa | `new.diariolaprensa.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.596 | 6 |
+| `lasegunda` | La Segunda | `www.lasegunda.com/robots.txt` | includeRe | 903.050 | 21 |
 | `laserenaonline` | La Serena Online | `laserenaonline.cl/sitemap.xml` | includeRe | 39.461 | 11 |
 | `lasnoticiasdemalleco` | Las Noticias de Malleco | `lasnoticiasdemalleco.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.695 | 5 |
 | `latendencia` | La Tendencia | `latendencia.cl/sitemap_index.xml` | articleOnly (Yoast) | 819 | 3 |
@@ -269,6 +273,7 @@
 | `ovallehoy` | Ovalle Hoy | `ovallehoy.cl/sitemap.xml` | includeRe | 30.065 | 13 |
 | `ovejeronoticias` | Ovejero Noticias | `ovejeronoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
 | `pagina19` | Página 19 | `pagina19.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.610 | 9 |
+| `pagina7` | Página 7 | `www.pagina7.cl/robots.txt` | — | 221.593 | 13 |
 | `paislobo` | País Lobo | `paislobo.cl/sitemap.xml` | includeRe | 51.409 | 8 |
 | `panoramanoticioso` | Panorama Noticioso | `panoramanoticioso.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.630 | 1 |
 | `pichilemunews` | Pichilemu News | `pichilemunews.cl/sitemap.xml` | includeRe | 5.980 | 9 |
@@ -347,6 +352,7 @@
 | `tabancura` | Colegio Tabancura | `tabancura.cl/sitemap_index.xml` | articleOnly (Yoast) | 161 | 4 |
 | `tarapacaonline` | Tarapacá Online | `tarapacaonline.cl/sitemap.xml` | includeRe | 4.690 | 3 |
 | `temucodiario` | Temuco Diario | `temucodiario.cl/sitemap.xml` | includeRe | 7.878 | 8 |
+| `terra` | Terra Chile | `www.terra.cl/robots.txt` | includeRe | 42.218 | 6 |
 | `terram` | Fundación Terram | `www.terram.cl/sitemap.xml` | includeRe | 30.916 | 25 |
 | `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 193.167 | 19 |
 | `theguardian` | The Guardian | `www.theguardian.com/sitemaps/news.xml` | — | 508 | 1 |
@@ -357,6 +363,7 @@
 | `traiguencity` | Traiguén City | `traiguencity.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.667 | 14 |
 | `tuki` | Tuki | `tuki.cl/sitemap.xml` | — | 905 | 1 |
 | `tusnoticias` | Tus Noticias | `tusnoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.112 | 7 |
+| `tvn` | TVN | `www.tvn.cl/tvn/site/sitemap_pags.xml` | includeRe | 68.157 | 5 |
 | `uai` | Universidad Adolfo Ibáñez | `www.uai.cl/sitemap.xml` | — | 15.656 | 9 |
 | `uautonoma` | Universidad Autónoma de Chile | `uautonoma.cl/sitemap_index.xml` | includeRe | 9.001 | 7 |
 | `ucn` | Universidad Católica del Norte | `ucn.cl/sitemap_index.xml` | includeRe | 14.366 | 15 |

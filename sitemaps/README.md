@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 26/9/2026, 16:33:45
-- **Medios registrados:** 442
-- **Artículos indexados:** 9.667.712
+- **Última sincronización:** 27/9/2026, 20:07:04
+- **Medios registrados:** 449
+- **Artículos indexados:** 10.952.430
 
 ## Por medio
 
@@ -13,6 +13,7 @@
 | --- | --- |
 | Radio Bío Bío | 1.171.889 |
 | Emol | 1.114.419 |
+| La Segunda | 903.050 |
 | Meganoticias | 434.641 |
 | RFI Español | 397.581 |
 | El Ciudadano | 306.289 |
@@ -22,6 +23,7 @@
 | El Dínamo | 252.385 |
 | France 24 | 237.156 |
 | CNN Chile | 228.161 |
+| Página 7 | 221.593 |
 | The Clinic | 193.167 |
 | El Pingüino | 192.731 |
 | 24 Horas | 190.063 |
@@ -34,6 +36,7 @@
 | AIT News | 79.295 |
 | El Líbero | 72.942 |
 | El Rancagüino | 70.735 |
+| TVN | 68.157 |
 | La Prensa Austral | 67.619 |
 | Noticias del Lago | 65.046 |
 | El Reportero de Iquique | 61.152 |
@@ -44,11 +47,13 @@
 | Diario Lago Ranco | 51.327 |
 | REDIMIN | 49.281 |
 | La Unión | 47.962 |
+| Radio Duna | 47.571 |
 | MercoPress | 46.710 |
 | La Hora | 45.513 |
 | La Hora | 44.538 |
 | San Carlos On Line | 42.599 |
 | Diario El Ranco | 42.218 |
+| Terra Chile | 42.218 |
 | Serena y Coquimbo | 40.676 |
 | Mi Radio LS | 40.481 |
 | La Serena Online | 39.461 |
@@ -250,6 +255,7 @@
 | Subsecretaría del Trabajo | 2134 |
 | Fundación Iguales | 2109 |
 | Prime Digital | 2102 |
+| El Regionalista | 2093 |
 | Consejo para la Transparencia | 2012 |
 | El Andacollino | 1873 |
 | El Cóndor | 1770 |
@@ -356,6 +362,7 @@
 | Radio María Chile | 67 |
 | WWF Chile | 66 |
 | Guía Turismo Chile | 38 |
+| Radio Concierto | 36 |
 | Explora | 36 |
 | Quintero | 30 |
 | El Libertario | 26 |
