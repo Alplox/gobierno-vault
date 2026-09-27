@@ -517,6 +517,7 @@
 - [2026/01/20260121-4 - Mala Espina perfila a Tomás Rau, el economista de la UC que será ministro del Trabajo de Kast: el discípulo de David Card y crítico de las políticas laborales de Boric](src/content/events/2026/01/20260121-4.md) — 3 fuentes
 - [2026/01/20260121-5 - Mala Espina perfila a Catalina Parot, la abogada que vuelve a Bienes Nacionales en el gabinete de Kast: exministra de Piñera, presidenta del CNTV y ex candidata](src/content/events/2026/01/20260121-5.md) — 2 fuentes
 - [2026/01/20260121-6 - Mala Espina perfila a Judith Marín, la profesora evangélica de 30 años que será ministra de la Mujer de Kast: la integrante más joven del gabinete y su perfil conservador](src/content/events/2026/01/20260121-6.md) — 3 fuentes
+- [2026/01/20260121-7 - Entra en vigencia el DS 17/2025 del MMA que modifica el Reglamento del SEIA: nuevos umbrales de ingreso y fin del gatillo ambiental para data centers](src/content/events/2026/01/20260121-7.md) — 10 fuentes
 - [2026/01/20260122-1 - Mala Espina perfila a Francisca Toledo, la ingeniera de LyD que será ministra de Medio Ambiente de Kast: la crítica del royalty minero que llegó al equipo de La Moneda chica](src/content/events/2026/01/20260122-1.md) — 3 fuentes
 - [2026/01/20260122-2 - Mala Espina perfila a Ximena Lincolao, la primera ministra con ascendencia mapuche directa desde el retorno a la democracia: la emprendedora tecnológica que será ministra de Ciencia de Kast](src/content/events/2026/01/20260122-2.md) — 5 fuentes
 - [2026/01/20260124-1 - Kast realiza cuarta gira internacional por Centroamérica](src/content/events/2026/01/20260124-1.md) — 7 fuentes
@@ -600,6 +601,7 @@
 - [2026/04/20260405-2 - Gobierno desestima la auditoría externa internacional al Estado pese a promesa de campaña](src/content/events/2026/04/20260405-2.md) — 4 fuentes
 - [2026/04/20260406-1 - Primer viaje al exterior: Kast visita a Milei en Argentina](src/content/events/2026/04/20260406-1.md) — 3 fuentes
 - [2026/04/20260406-2 - Desbordes comparte y luego elimina una fake news contra El Ciudadano vinculada a desinformación rusa](src/content/events/2026/04/20260406-2.md) — 1 fuente
+- [2026/04/20260406-3 - Tribunal Ambiental confirma la RCA del data center de Amazon en Huechuraba y descarta el fraccionamiento alegado por vecinos](src/content/events/2026/04/20260406-3.md) — 10 fuentes
 - [2026/04/20260407-1 - Seremi del Trabajo de Valparaíso Carlos Montero renuncia a los 5 días de asumir](src/content/events/2026/04/20260407-1.md) — 2 fuentes
 - [2026/04/20260407-2 - Contraloría cuestiona pagos irregulares a seremi de Culturas del Maule por trabajo en Municipalidad de Villa Alegre](src/content/events/2026/04/20260407-2.md) — 3 fuentes
 - [2026/04/20260407-3 - Ex-Ante anticipa el paquete económico de Kast: 45 medidas, ajustes a la clase media y estrategia anti-fragmentación](src/content/events/2026/04/20260407-3.md) — 1 fuente
@@ -615,6 +617,7 @@
 - [2026/04/20260414-2 - Nombramiento de Antaris Varela como seremi de la Mujer del Biobío deja sin efecto por licencia de embarazo de antecesora](src/content/events/2026/04/20260414-2.md) — 1 fuente
 - [2026/04/20260414-3 - Gustavo Baehr renuncia como seremi de Culturas y Artes de la RM tras dos semanas](src/content/events/2026/04/20260414-3.md) — 1 fuente
 - [2026/04/20260414-4 - Detienen a dos estudiantes de 13 y 15 años por porte de elementos incendiarios en el Liceo Lastarria](src/content/events/2026/04/20260414-4.md) — 2 fuentes
+- [2026/04/20260414-5 - Jefe de Hidrografía Naval argentina atribuye a su país la boca oriental del Estrecho de Magallanes; Cancillería reafirma la soberanía chilena y los tratados de 1881 y 1984](src/content/events/2026/04/20260414-5.md) — 13 fuentes
 - [2026/04/20260415-1 - Patrick Dungan deja de asistir a la oficina y gobierno retira su nombramiento como seremi de Energía de La Araucanía](src/content/events/2026/04/20260415-1.md) — 2 fuentes
 - [2026/04/20260415-2 - Renato Münster renuncia como seremi de Culturas de la RM a las 24 horas de asumir](src/content/events/2026/04/20260415-2.md) — 1 fuente
 - [2026/04/20260415-3 - Kast anuncia en cadena nacional el Plan de Reconstrucción Nacional con más de 40 medidas](src/content/events/2026/04/20260415-3.md) — 6 fuentes
@@ -677,6 +680,7 @@
 - [2026/05/20260528-1 - Kast designa a Daniel Díaz, dirigente de Chuquicamata, como director de Codelco en cupo de los trabajadores](src/content/events/2026/05/20260528-1.md) — 4 fuentes
 - [2026/05/20260529-1 - Diputados interpelan al Gobierno por el documento filtrado 'Desafío 90': 'La estrategia es agobiar'](src/content/events/2026/05/20260529-1.md) — 9 fuentes
 - [2026/05/20260529-2 - INE: desocupación sube a 9,1% en febrero-abril, máximo en casi cinco años; debate en redes advierte 'no se le está tomando el peso'](src/content/events/2026/05/20260529-2.md) — 8 fuentes
+- [2026/05/20260530-1 - Alcalde de Rinconada Juan Galdames formalizado por fraude al fisco, falsificación de instrumento público y negociación incompatible: arresto domiciliario nocturno y arraigo](src/content/events/2026/05/20260530-1.md) — 8 fuentes
 - [2026/06/20260601-1 - Renuncia seremi de Transportes de Aysén por incidente en comisaría](src/content/events/2026/06/20260601-1.md) — 2 fuentes
 - [2026/06/20260601-2 - Kast anuncia Registro Nacional de Vandales e Incivilidades en Cuenta Publica](src/content/events/2026/06/20260601-2.md) — 2 fuentes
 - [2026/06/20260601-3 - Gobierno de Kast solicita al Congreso aumento de techo de deuda por US$6.200 millones](src/content/events/2026/06/20260601-3.md) — 6 fuentes
@@ -1363,6 +1367,7 @@
 - [2026/08/20260818-21 - Ministerio de Energía excluye septiembre del período de control de punta para aliviar el costo eléctrico de las empresas](src/content/events/2026/08/20260818-21.md) — 4 fuentes
 - [2026/08/20260818-22 - Comisión del 18-O aprueba informe final que atribuye excesivos incumplimientos al gobierno de Piñera y desata pugna en la derecha](src/content/events/2026/08/20260818-22.md) — 4 fuentes
 - [2026/08/20260818-23 - Absuelven a tres carabineros acusados de tortura contra una dirigente mapuche detenida durante el estallido en Coquimbo: INDH y Corporación 20 de Octubre llevaban la causa tras el no perseverar fiscal](src/content/events/2026/08/20260818-23.md) — 4 fuentes
+- [2026/08/20260818-24 - Cuide Chile, la fundación de Adriasola: lobby en 14 comisiones sin memorias ante Justicia ni donaciones ante el SII; PNFV la confirma como fundadora](src/content/events/2026/08/20260818-24.md) — 7 fuentes
 - [2026/08/20260818-3 - Aluvión en Tocopilla activa quebradas y obliga a evacuar cuatro sectores: alcaldesa quedó aislada](src/content/events/2026/08/20260818-3.md) — 18 fuentes
 - [2026/08/20260818-4 - CIPER revela que el plan de Quiroz contra la 'permisología' aprobó el proyecto de su hermano pese a objeción del Sernageomin por riesgo de remoción en masa](src/content/events/2026/08/20260818-4.md) — 10 fuentes
 - [2026/08/20260818-5 - Columna CIPER analiza el negocio de arriendo de infraestructura de TVN y la transformación de la industria televisiva chilena](src/content/events/2026/08/20260818-5.md) — 1 fuente
@@ -1473,7 +1478,7 @@
 - [2026/08/20260827-7 - Exfuncionarios de Vitacura grabados en acto sexual demandan por $200 millones y juicio contra municipio queda fijado para noviembre de 2027](src/content/events/2026/08/20260827-7.md) — 8 fuentes
 - [2026/08/20260827-8 - Canasta dieciochera llega a $42.984 (+5,4% anual), el asado más caro en cinco años según estudio XTB con precios Odepa](src/content/events/2026/08/20260827-8.md) — 5 fuentes
 - [2026/08/20260827-9 - Fontaine y Couso piden a Kast retirar la reforma de seguridad por riesgo de dictadura constitucional y Arrau los tilda de opinólogos](src/content/events/2026/08/20260827-9.md) — 8 fuentes
-- [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 9 fuentes
+- [2026/08/20260828-1 - Once parlamentarios viajan a Israel en semana distrital en visita hermética financiada vía Comunidad Judía y celebrada por Israel como 'relación renovada'](src/content/events/2026/08/20260828-1.md) — 15 fuentes
 - [2026/08/20260828-10 - Gonzalo Blumel arremete contra republicanos por la reforma de seguridad: “¿Cuántos dirigentes viven o han vivido en poblaciones?” y acusa “soberbia”](src/content/events/2026/08/20260828-10.md) — 6 fuentes
 - [2026/08/20260828-11 - Mara Sedini blinda a Kast ante caso Cerimedo: 'No ganó por una campaña de bots', dice que nunca conoció al consultor y descarta mea culpa por ataques a Matthei](src/content/events/2026/08/20260828-11.md) — 5 fuentes
 - [2026/08/20260828-12 - Niu Qingbao acusa a EE.UU. de creerse 'emperador de América Latina' en carta en El Mercurio: arancel 12,5% a Chile pese a TLC, presiones por cable submarino con China y visas como 'arma'](src/content/events/2026/08/20260828-12.md) — 6 fuentes
@@ -1490,7 +1495,7 @@
 - [2026/08/20260828-9 - Prisión preventiva para funcionario del Poder Judicial acusado de filtrar información a bandas narco: 200 días de investigación y $80 millones sin justificar](src/content/events/2026/08/20260828-9.md) — 7 fuentes
 - [2026/08/20260829-1 - Manouchehri (PS) en Concepción: la megarreforma no se hizo cargo del desempleo y anticipa déficit, deuda y recortes](src/content/events/2026/08/20260829-1.md) — 6 fuentes
 - [2026/08/20260829-2 - Fiscalía pedirá formalizar al alcalde de Río Bueno y a otras 6 personas por cohecho agravado y lavado de activos: audiencia fijada para el 19 de octubre](src/content/events/2026/08/20260829-2.md) — 9 fuentes
-- [2026/08/20260829-3 - Zaliasnik cuestiona cifras de la comunidad palestina en TV israelí, pide disculpas y es emplazado por la comunidad, la embajada palestina y diputados](src/content/events/2026/08/20260829-3.md) — 6 fuentes
+- [2026/08/20260829-3 - Zaliasnik cuestiona cifras de la comunidad palestina en TV israelí, pide disculpas y es emplazado por la comunidad, la embajada palestina y diputados](src/content/events/2026/08/20260829-3.md) — 12 fuentes
 - [2026/08/20260830-1 - Republicanos responden a Blumel por “poblaciones”: “Este debate clasista y añejo no le hace bien a Chile” y “discurso cavernícola”](src/content/events/2026/08/20260830-1.md) — 6 fuentes
 - [2026/08/20260830-2 - Alvarado y Núñez encauzan la reforma de seguridad a la Comisión de Constitución y exigen 29 votos con 'realismo legislativo'](src/content/events/2026/08/20260830-2.md) — 6 fuentes
 - [2026/08/20260831-1 - Jefe de la Armada argentina reconoce que el Estrecho de Magallanes pertenece a Chile y contrasta con dichos de su par de la Fuerza Aérea](src/content/events/2026/08/20260831-1.md) — 6 fuentes
@@ -1690,6 +1695,7 @@
 - [2026/09/20260925-1 - Sistema frontal golpea La Araucanía: 9.400 personas aisladas y más de 300 viviendas con daños](src/content/events/2026/09/20260925-1.md) — 8 fuentes
 - [2026/09/20260925-2 - Subsecretaría de Evaluación Social integra 25 programas sociales en nueve para el Presupuesto 2027 y objeta técnicamente tres](src/content/events/2026/09/20260925-2.md) — 14 fuentes
 - [2026/09/20260925-3 - El embajador de Israel publica y borra un mensaje contra Michelle Bachelet, lo republica y enfrenta a Carmen Hertz en X; Winter e Insunza exigen una respuesta de La Moneda](src/content/events/2026/09/20260925-3.md) — 10 fuentes
+- [2026/09/20260925-4 - Comisión de Defensa sesiona en Punta Arenas por el Estrecho de Magallanes en plena visita de Barros](src/content/events/2026/09/20260925-4.md) — 6 fuentes
 
 ## 2025
 
