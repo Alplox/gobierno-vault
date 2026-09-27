@@ -35,8 +35,8 @@ NO guarda el cuerpo de los artículos.
 
 | Comando | Función |
 | --- | --- |
-| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since`/`--days` sincroniza SOLO lo reciente (filtra sub-sitemaps históricos por la fecha de su URL —BioBio/CNN/Meganoticias/Mestizos/Publimetro/FastCheck—, omite por el rango del XML cacheado los que no llevan fecha —Yoast/Arc XP— y no toca entradas antiguas); incompatible con `--replace` |
-| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental de los medios del catálogo + regenera README + backup. Nunca borra datos existentes. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). Acepta `--since YYYY-MM-DD` / `--days N` para resync solo de contenido reciente (pasa el flag a `sitemaps-sync`). **Filtra huérfanos**: importa `MEDIA` desde `scripts/sitemaps/sync.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
+| `pnpm run sitemaps-sync -- <medio>...` | robots.txt → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Flags: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`, `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since-last-sync`, `--since YYYY-MM-DD` / `--days N`. Filtrado por medio: `articleOnly` (Yoast: solo post/news-sitemap) o `includeRe` (whitelist custom, ej. FastCheck) o denylist genérica. `--since-last-sync` usa para cada medio la fecha UTC inclusiva de su `ultima_sync`; si falta, sincroniza completo. `--since`/`--days` fija una ventana común relativa a fecha/hoy. Todas filtran sub-sitemaps históricos por la URL y, si no llevan fecha, por el rango del XML cacheado; no tocan entradas antiguas y son incompatibles con `--replace` |
+| `pnpm run sitemaps-resync` | **Resync manual diario**: sync MERGE incremental desde la `ultima_sync` de cada medio + regenera README + backup. Nunca borra datos existentes. Si algún endpoint falla, ese medio conserva su watermark anterior y el siguiente resync reintenta la misma ventana. Solo sincroniza los medios ya presentes en `_manifest.json` (los nuevos se agregan con `sitemaps-sync -- <medio>`). `--since YYYY-MM-DD` / `--days N` reemplaza el cutoff automático por una ventana común explícita. **Filtra huérfanos**: importa `MEDIA` desde `scripts/sitemaps/sync.mjs` y omite con aviso (`⚠️`) los slugs del manifest que ya no están en el registro (entradas con `articulos: 0` de intentos watchlist descartados) — antes un solo slug desconocido abortaba el resync completo porque sync-sitemaps valida todos los targets upfront y hace `exit(1)` al primero desconocido |
 | `pnpm run sitemaps-index` | genera `sitemaps/README.md` (resumen) + `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años para editores). Antes generaba además la sección “Medios registrados” de `AGENTS.md` (marcadores `AUTO-GENERATED-SITEMAPS-MEDIOS`); `AGENTS.md` solo apunta a `sitemaps/MEDIOS.md` + `README.md` + `_manifest.json` para evitar diffs ruidosos |
 
 **Al agregar un medio nuevo** (a `MEDIA` en `scripts/sitemaps/sync.mjs`): además de `sitemaps-index`
@@ -81,8 +81,12 @@ Notas de plataforma (complemento manual, no se reescribe):
   histórico). Existen sitemaps por fecha (`/sitemap/YYYY-MM-DD/`) con decenas de URLs, pero no
   hay índice que los enumere: el sync captura solo lo reciente (~5-100 URLs).
 - **Emol** (CMS propio): index por año desde 1992 (`sitemap{N}_{year}.xml`, ~8.000 URLs por
-  sub-sitemap; ~1,1M artículos). El `robots.txt` declara además `sitemapIndexFotos.xml` y
-  `sitemapIndexVideos.xml` (tv.emol.com) — el `includeRe` `sitemap\d+_\d{4}\.xml$` los descarta.
+  sub-sitemap; ~1,1M artículos). El filtro temporal reconoce años 19xx y 20xx: desde
+  una ventana como 2026-09-22 descarta los shards 1992–2025 y descarga solo los del
+  año en curso; al ser shards anuales, luego filtra por fecha los artículos
+  fuera de la ventana. El `robots.txt`
+  declara además `sitemapIndexFotos.xml` y `sitemapIndexVideos.xml` (tv.emol.com) — el
+  `includeRe` `sitemap\d+_\d{4}\.xml$` los descarta.
   **Ojo protocolo**: el index y los `<loc>` de los artículos vienen en `http://` pero el sitio
   solo responde por `https://` (curl/node fetch fallan con http) — el flag `forceHttps: true`
   normaliza ambos (sub-sitemaps y URLs guardadas). **Sin `<lastmod>` ni `news:date`**: la fecha
@@ -94,6 +98,10 @@ Notas de plataforma (complemento manual, no se reescribe):
   (`articleOnly`). El Ciudadano tiene ~309 post-sitemaps (~277k artículos, 18 años): el index y los
   subs son lentos y el sitio rate-limitea (fetch directo puede devolver 0 `<loc>`); si un sync se
   corta, los subs cacheados en `.cache/` retoman sin pérdida (relanzar el mismo comando).
+- **El Filtrador** (`elfiltrador.com`, WordPress-Yoast `articleOnly`): index con `post-sitemap.xml`
+  .. `post-sitemap23.xml` (~22,5k artículos, 9 años) más CPTs propios (`tdb_templates`, `persona`,
+  `programa`, `tema`) que `articleOnly` descarta. Solo declara el sitemap en `robots.txt` (no en el
+  index), se sincroniza por `index` directo.
 - **Diario Financiero (df) / Diario Estrategia** (Prontus): robots declara sitemaps por separado
   (`extra`); el DF trae ~87 URLs recientes (pags + news + port) y Diario Estrategia ~100
   (`/sitemap/news` + `/sitemap/lastarticles`, IDs `/texto-diario/mostrar/`). Cobertura reciente,
@@ -107,6 +115,7 @@ Notas de plataforma (complemento manual, no se reescribe):
   `sitemap-1.xml`/`sitemap-2.xml` (~98k URLs, ~37k artículos, 18 años). **Coaniquem**
   (WordPress 5.5+ nativo): `sitemap.xml` → `wp-sitemap.xml` → `wp-sitemap-posts-post-1.xml` con
   `includeRe` `/wp-sitemap-posts-post-\d+\.xml$/i` (descarta page/taxonomies/users); ~81 artículos.
+- **Canal 9 (`canal9.cl`)**: es el canal de televisión de **Radio Bío Bío**, no una redacción propia. Reproduce notas de Radio Bío Bío con la misma persona autora y **los mismos audios alojados en `media.biobiochile.cl`** (caso sep-2026: la nota "ONU busca vincular impuestos y derechos humanos", de Vanesa Gajardo, aparece el mismo día en `biobiochile.cl` y en `canal9.cl` con los MP3 de Deloitte y de la U. de Chile idénticos). **No cuenta como medio independiente**: duplica la fuente Radio Bío Bío. Además su sync fecha a nivel de mes (`d` = día 01) aunque la URL lleve el día real (`/episodios/AAAA/MM/DD/...`, p. ej. `d=2026-07-01` para un artículo del 29-jul) — tomar siempre la fecha de la URL, no la del catálogo
 - **Tanda internacional (07-09-2026)**: **ANSA Latina** declara en robots el index
   `sitemaps/sito_sitemap_index.xml` → único urlset con `news:news` (títulos reales, reciente con
   `lastmod` por artículo; ~109 URLs. Fuera de robots, `/sitemap.xml` es 404 — usar el index de robots).
@@ -130,9 +139,10 @@ Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos e
 — si una URL aparece primero sin título y luego con título real (caso El Mostrador), la segunda
 pasada mejora la entrada (`news` > `slug`).
 
-**Syncs paralelos**: `main()` escribe `_manifest.json` por medio (read-modify-write tras cada
-sync), así que correr medios en procesos paralelos ya no pisa el estado de los demás. Aun así,
-para varios medios conviene pasarlos como argumentos en un solo comando
+**Syncs paralelos**: `main()` actualiza `_manifest.json` por medio con un lock entre procesos y
+read-modify-write; el JSON se escribe a un temporal y se renombra atómicamente, con retries para
+locks transitorios de Windows/antivirus. Correr medios en paralelo ya no pisa el estado ni trunca
+el manifest. Aun así, para varios medios conviene pasarlos como argumentos en un solo comando
 (`pnpm run sitemaps-sync -- el_siglo la_nacion ...`): evita el throttle de los sitios y deja un
 solo `manifest.actualizado`.
 
@@ -171,7 +181,7 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
 - Medios del catálogo: `elclarin`, `biobiochile`, `cooperativa`, `adnradio`, `factchecking`,
   `ciper`, `theclinic`, `elmostrador`, `emol`, `fastcheck`, `latercera`, `cnnchile`,
   `eldinamo`, `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`,
-  `el_periodista`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
+  `el_periodista`, `elfiltrador`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`,
   `malaespina`, `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`,
   `mestizos`, `diarioestrategia`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`, `bbc`,
   `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
@@ -213,7 +223,7 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
 - Medios cubiertos: `biobiochile`, `elmostrador`, `theclinic`, `cooperativa`, `elclarin`,
   `adnradio`, `ciper`, `factchecking`, `fastcheck`, `latercera`, `cnnchile`, `eldinamo`,
   `radioagricultura`, `radio_uchile`, `el_siglo`, `la_nacion`, `ex_ante`, `el_periodista`,
-  `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
+  `elfiltrador`, `meganoticias`, `eldesconcierto`, `publimetro`, `elciudadano`, `df`, `malaespina`,
   `elquintopoder`, `radioudec`, `chocale`, `redimin`, `chilepaisminero`, `mestizos`,
   `diarioestrategia`, `emol`, `senado`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`,
   `bbc`, `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
@@ -244,6 +254,51 @@ pnpm run news-search -- "marcha estudiantil" --medio biobio --limit 10
   desde esta red — por eso la resolución es por título, no por link. El RSS no
   trae cuerpos: después sigue la cadena `fetch-content` habitual. `--limit 8`
   máximo (valores mayores revientan con `Maximum call stack size exceeded`).
+- **Resolver un `[SIN RESOLVER]` contra el news-sitemap en vivo del propio medio:**
+  cuando el JSONL local va atrasado, leer el endpoint que declara `robots.txt` y buscar
+  el `<loc>` cuyo `<news:title>` coincida con el titular del ítem. Funciona aunque el
+  slug no sea adivinable (Arc XP: `https://www.adnradio.cl/arc/outboundfeeds/sitemap/?outputType=xml`;
+  La Tercera: `https://www.latercera.com/arc/outboundfeeds/news-sitemap/?outputType=xml`,
+  paginado con `&from=100`, `&from=200`… donde los `<news:title>` van en CDATA). Los
+  sub-sitemaps del `sitemap-index` ordenan por fecha, así que las 2-3 primeras páginas
+  cubren lo reciente. Ojo: un slug adivinado que devuelve 301 a la home NO es evidencia
+  de nada; solo cuenta el `<loc>` del sitemap o el titular real del fetch.
+- **Un ítem `[RESUELTO]` puede apuntar al artículo equivocado:** la resolución es por
+  *coincidencia de título*, no por ID, así que un titular reutilizado months después
+  (caso sep-2026: "El Estrecho de Magallanes pertenece a Chile", nota del 08-sep
+  resuelta contra un slug de abril sobre el jefe de Hidrografía argentino) devuelve
+  una URL de otro mes. **Siempre contrastar la fecha del ítem con la del slug** y con
+  el `Published Time` del fetch antes de citar; si no calzan, tratar el ítem como no
+  resuelto y seguir los pasos siguientes.
+- **Sitemaps por mes/archivo en vivo, cuando el news-sitemap ya no cubre la fecha:**
+  muchos medios exponen un índice con shards mensuales o de archivo que conservan
+  todo el mes aunque el news-sitemap haya rotado. Basta con leer el shard del mes
+  buscado y filtrar por slug o por término. Endpoints útiles verificados:
+  Meganoticias `robots.txt` declara `/sitemaps/sitemap-news.xml` (solo ~2 días) más
+  `/sitemaps/sitemap-noticias-index-content.xml` → `.../sitemaps/content-noticias/sitemap-YYYY-MM.xml`
+  (todo el mes) y además `/sitemaps/sitemap-noticias-index-video.xml` →
+  `.../sitemaps/video-noticias/sitemap-video-YYYY-MM.xml`, que el `includeRe` del
+  sync descarta y que sirve para encontrar la nota *de video* de una entrevista
+  (el mismo hecho suele tener versión artículo y versión video con IDs contiguos);
+  Perfil `sitemap/archive/YYYY/MM`; Infodefensa `sitemap/month/YYYYMM`. Ojo
+  BioBioChile: `static/sitemap-YYYY-MM.xml` es una **ventana móvil** de los últimos
+  ~25 días, no el mes completo, y su buscador web (`/buscador/`, `/buscar/`,
+  `/search`) devuelve 404 — para fechas fuera de la ventana hay que ir a otro método.
+- **DDG HTML como último recurso para localizar la URL:** cuando el catálogo local
+  va atrasado, el medio no expone sitemap de archivo y `news-search` no resuelve,
+  `https://html.duckduckgo.com/html/?q=<CONSULTA>` responde 200 y los resultados
+  reales vienen en `uddg=<URL codificada>` dentro del HTML (extraer y decodificar;
+  `lite.duckduckgo.com` no resuelve DNS desde esta red). Un `site:dominio` más 3-4
+  palabras del titular bastó para recuperar la URL exacta de BioBioChile,
+  Infodefensa, Perfil y Diario Sur Noticias. Sirve para *ubicar* la nota; el cuerpo
+  se sigue leyendo con `fetch-content`.
+- **DDG puede devolver 403 y `websearch` es el sustituto:** en sep-2026
+  `Invoke-WebRequest` contra `html.duckduckgo.com` respondió 403 (server error)
+  en dos consultas consecutivas, así que el bloque anterior no siempre aplica desde
+  esta red. Cuando el 403 aparece, la tool `websearch` sí recuperó las URL exactas
+  de T13, El País Chile, Mala Espina Check y Chilevisión con el titular literal entre
+  comillas. Orden: `news-search` → `websearch` con el titular entre comillas y
+  `site:` si hace falta → DDG HTML → sharding de sitemap en vivo.
 
 ### Sitios institucionales SIN sitemap utilizable
 

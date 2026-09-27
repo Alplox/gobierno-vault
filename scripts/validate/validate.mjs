@@ -103,6 +103,7 @@ const WHITELIST_MEDIOS = new Set([
   'Voto Visible',
   'Sociedad de Fomento Fabril',
   'Partido Socialista de Chile',
+  'Political Network for Values',
   'Gobierno de Chile',
   'Gobierno de Argentina',
   'Gobierno de Reino Unido',
@@ -116,6 +117,10 @@ const WHITELIST_MEDIOS = new Set([
   'Prensa Presidencia',
   'SENAPRED',
   'Ministerio de Hacienda',
+  'Ministerio de Desarrollo Social y Familia',
+  'Ministerio Secretaría General de la Presidencia',
+  'Unidad de Análisis Financiero (UAF)',
+  'Agencia Nacional de Ciberseguridad (ANCI)',
   'Ministerio de Salud',
   'Ministerio de Salud (Minsal)',
   'Ministerio del Deporte',
@@ -134,19 +139,32 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Minería de Chile',
   'Ministerio de Seguridad Pública',
   'Ministerio de Relaciones Exteriores',
+  'Ministerio de Defensa Nacional',
+  'Cámara de los Lores del Reino Unido',
+  'Comisión Nacional de Verdad y Reconciliación',
+  'Corte Internacional de Justicia',
+  'Ministerio del Poder Popular para Relaciones Exteriores y Comercio Internacional',
   'Subrei',
   'Ministerio Secretaría General de Gobierno',
   'Contraloría General de la República',
+  'Servicio de Impuestos Internos (SII)',
   'Defensoría de la Niñez',
   'Instituto de Previsión Social (IPS)',
   'Poder Judicial de Chile',
   'Corporación de Asistencia Judicial Metropolitana',
   'Tribunal de la Libre Competencia',
   'Tribunal de Defensa de la Libre Competencia',
+  'Segundo Tribunal Ambiental',
   'Fiscalía Nacional Económica',
   'Fiscalía de Chile (División de Estudios, Unidad de DDHH)',
   'FinCEN (Departamento del Tesoro de EE.UU.)',
   'Departamento de Estado de EE.UU.',
+  'Embajada de Estados Unidos en Chile',
+  'Organización Mundial de la Propiedad Intelectual',
+  'Organización para la Cooperación y el Desarrollo Económicos',
+  'CompaniesMarketCap',
+  'Bolsa de Comercio de Santiago',
+  'Ministerio de Ciencia, Tecnología, Conocimiento e Innovación',
   'National Security Archive',
   'United States Holocaust Memorial Museum',
   'Electronic Frontier Foundation (EFF)',
@@ -168,6 +186,10 @@ const WHITELIST_MEDIOS = new Set([
   'Instituto Nacional de Estadísticas (INE)',
   'Banco Central de Chile',
   'U.S. Energy Information Administration',
+  'Comisión Nacional de Energía',
+  'Observatorio del Contexto Económico de la Universidad Diego Portales (OCEC-UDP)',
+  'Empresa Nacional del Petróleo (ENAP)',
+  'Neuquén Informa',
   'Atlantic Council',
   'Comisión Chilena del Cobre (Cochilco)',
   'Codelco',
@@ -202,14 +224,18 @@ const WHITELIST_MEDIOS = new Set([
   'Federación CCU',
   'Municipalidad de Coquimbo',
   'Municipalidad de Temuco',
+  'Municipalidad de Rinconada',
   'Municipalidad de San Bernardo',
+  'Municipalidad de Puerto Montt',
   'Partido Republicano de Chile',
   'Partido Por la Democracia',
+  'Partido por la Democracia (PPD)',
   'Superintendencia de Pensiones',
   'AFC Chile',
   'Libertad y Desarrollo (LyD)',
   'Embajada de China en Chile',
   'Centro de Estudios Públicos',
+  'Centro de Extensión e Investigación Luis Emilio Recabarren',
   'Foro Madrid',
   'La Vía Campesina',
   'Chile Mejor Sin TLC',
@@ -254,7 +280,10 @@ const WHITELIST_MEDIOS = new Set([
   'Instituto Nacional de Derechos Humanos',
   'Fiscalía de Chile',
   'Amnistía Internacional Chile',
+  'Amnistía Internacional',
   'Consejo para la Transparencia (CPLT)',
+  'Consejo para la Transparencia',
+  'KKL-JNF',
   'Carabineros de Chile',
   'BCN (Ley Chile)',
   'SUSESO (Superintendencia de Seguridad Social)',
@@ -282,6 +311,7 @@ const WHITELIST_MEDIOS = new Set([
   'OGMDH-Chile (Observatorio de Gobernanza Migratoria y Derechos Humanos)',
   'Banco Mundial',
   'Naciones Unidas',
+  'Autoridad del Canal de Panamá',
   'Vergara 240 (Escuela de Periodismo UDP)',
   'Hudson Rock',
   'Conadecus',
@@ -347,7 +377,7 @@ try {
   for (const id of sueldos.orden_refs ?? []) pushRef(id);
   pushRef(sueldos.segundo_piso?.fuente);
   pushRef(sueldos.topes_dipres?.fuente);
-  pushRef(sueldos.ipc?.registro_presidente_mayo_2026?.fuente);
+  pushRef(sueldos.ipc?.registro_presidente_julio_2026?.fuente);
   for (const p of sueldos.presidentes ?? []) {
     for (const v of p.vigencias ?? []) pushRef(v.fuente);
   }
@@ -422,19 +452,23 @@ try {
 // Mojibake: doble-encoding UTF-8 y round-trips ANSI degradan títulos, notas y nombres.
 // Firma C2/C3 + byte 0x80-0xBF: doble-encoding clásico (Ã©, Ã±...).
 // Además: controles C1 (0080-009F) = UTF-8 leído como CP1252 (ej. em-dash "â€”"),
-// U+FFFD (reemplazo), cirílico y Latin Ext-A/B (basura de round-trips ANSI;
-// el vault es español — ningún nombre legítimo usa esos rangos).
-const MOJIBAKE_RE = /[\u00c2\u00c3][\u0080-\u00bf]|[\u0080-\u009f\uFFFD\u0400-\u04ff\u0100-\u024f]/g;
+// U+FFFD (reemplazo), cirílico, Latin Ext-A/B y CJK/kana/fullwidth (basura de
+// round-trips ANSI y de ediciones con otro idioma; el vault es español — ningún
+// título, nombre ni etiqueta legítimo usa esos rangos). Caso sep-2026: un
+// "documenta" completo en cirílico en un evento y "sistema_frontal" con la
+// etiqueta en han, que el rango anterior no cubría.
+const MOJIBAKE_RE = /[\u00c2\u00C3][\u0080-\u00BF]|[\u0080-\u009F\uFFFD\u0400-\u04FF\u0100-\u024F\u2E80-\u2EFF\u3000-\u30FF\u3400-\u4DBF\u4E00-\u9FFF\uF900-\uFAFF\uFF00-\uFFEF]/g;
 const mojibakeScan = new RegExp(MOJIBAKE_RE.source, 'g');
 // Origen por clave: colecciones markdown (monolito eliminado) salvo colectivos/sectores (src/data/).
 const MOJIBAKE_SRC = {
   'sources': 'src/content/sources/*.md',
   'entities': 'src/content/people|organizations|cifras/*.md',
   'topics': 'src/content/topics/*.md',
+  'events': 'src/content/events/**/*.md',
   'colectivos.yaml': 'src/data/colectivos.yaml',
   'sectores.yaml': 'src/data/sectores.yaml',
 };
-for (const f of ['sources', 'entities', 'topics', 'colectivos.yaml', 'sectores.yaml']) {
+for (const f of ['sources', 'entities', 'topics', 'events', 'colectivos.yaml', 'sectores.yaml']) {
   let raw;
   const collMap = { 'sources': 'sources', 'topics': 'topics' };
   if (collMap[f]) {
@@ -448,6 +482,19 @@ for (const f of ['sources', 'entities', 'topics', 'colectivos.yaml', 'sectores.y
       if (existsSync(d)) for (const mf of readdirSync(d).filter(f=>f.endsWith('.md'))) { try { raw += '\n' + readFileSync(join(d, mf), 'utf8'); } catch {} }
     }
     if (!raw) throw new Error('sin entradas en colecciones people|organizations|cifras');
+  } else if (f === 'events') {
+    raw = '';
+    const root = join(process.cwd(), 'src', 'content', 'events');
+    const stack = [root];
+    while (stack.length) {
+      const d = stack.pop();
+      for (const e of readdirSync(d, { withFileTypes: true })) {
+        const p = join(d, e.name);
+        if (e.isDirectory()) stack.push(p);
+        else if (e.name.endsWith('.md')) { try { raw += '\n' + readFileSync(p, 'utf8'); } catch {} }
+      }
+    }
+    if (!raw) throw new Error('sin eventos en src/content/events');
   } else {
     raw = readFileSync(join(dataDir, f), 'utf8');
   }
@@ -698,6 +745,39 @@ for (const file of allFiles) {
     }
   }
 }
+
+// Anti-duplicados: aviso informativo, NO cuenta como error (rompería el build
+// mientras haya entidades duplicadas legítimas por consolidar). El detalle vive en
+// scripts/validate/check-duplicates.mjs; se ejecuta aquí solo para dar visibilidad
+// en cada `pnpm run validate` sin obligar a un paso extra.
+try {
+  const { readdirSync: rd, readFileSync: rf, existsSync: ex } = await import('node:fs');
+  const { join: jn } = await import('node:path');
+  const normName = (s) => (s || '').toLowerCase().normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '').replace(/\([^)]*\)/g, ' ')
+    .replace(/[^a-z0-9]+/g, ' ').trim().replace(/\s+/g, ' ');
+  const orgDir = jn(process.cwd(), 'src', 'content', 'organizations');
+  if (ex(orgDir)) {
+    const byName = new Map();
+    for (const f of rd(orgDir).filter(f => f.endsWith('.md'))) {
+      const raw = rf(jn(orgDir, f), 'utf8');
+      const m = raw.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+      if (!m) continue;
+      let d = {}; try { d = YAML.parse(m[1]) ?? {}; } catch { continue; }
+      const k = normName(d.nombre);
+      if (k.length < 5) continue;
+      const pk = (d.pais || '').toLowerCase().trim() || '(sin pais)';
+      const key = `${k}::${pk}`;
+      if (!byName.has(key)) byName.set(key, []);
+      byName.get(key).push(f.replace(/\.md$/, ''));
+    }
+    const dupes = [...byName.values()].filter(g => g.length > 1);
+    if (dupes.length) {
+      console.warn(`⚠ ${dupes.length} organización(es) con nombre duplicado (ver check-duplicates.mjs):`);
+      for (const g of dupes) console.warn(`  ${g.join(' | ')}`);
+    }
+  }
+} catch { /* el aviso de duplicados nunca debe romper la validación */ }
 
 if (errors > 0) {
   console.error(`\n✖ ${errors} error(es) de validación`);

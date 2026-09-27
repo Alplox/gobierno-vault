@@ -28,6 +28,8 @@ import {
   RotateCcw,
   SkipForward,
   Copy,
+  Check,
+  TriangleAlert,
   Bot,
   Bug,
 } from 'lucide-astro';
@@ -98,19 +100,116 @@ const exportMd = [
   `**Fuente (Gobierno Vault):** ${eventUrl}`,
   refLines ? `**Referencias:**\n${refLines}` : '',
 ].join('\n');
-// Prompt para IAs: título en su propio párrafo (línea en blanco antes y después),
-// fuentes como lista debajo - evita que el título quede pegado a las fuentes.
-const chatPrompt = `Analiza y contextualiza este evento y propón fuentes o datos adicionales que lo confirmen o contradigan.
-
-Título: ${titulo}
-
-## Fuentes conocidas:
-${refLines || '(sin fuentes registradas)'}`;
-// Best-effort: el prefill vía URL corta los mensajes largos, así que se envía un
-// prompt corto; el botón "Copiar prompt" deja el prompt completo para pegar.
-const chatPrefill = chatPrompt.slice(0, 1500);
-const chatGptUrl = `https://chatgpt.com/?q=${encodeURIComponent(chatPrefill)}`;
-const claudeUrl = `https://claude.ai/new?q=${encodeURIComponent(chatPrefill)}`;
+// Contexto compacto para IAs: conserva nombres legibles de entidades y un extracto
+// acotado del cuerpo. La URL canónica permite verificar el evento en servicios con web.
+const aiEntityMaps: Record<string, Map<string, string>> = {
+  people: peopleMap,
+  organizations: orgsMap,
+  topics: topicsMap,
+};
+function aiExcerpt(markdown: string, maxChars = 650) {
+  const plain = markdown
+    .replace(/```[\s\S]*?```/g, ' ')
+    .replace(/!\[[^\]]*]\([^)]*\)/g, ' ')
+    .replace(/\[([^\]]+)]\([^)]*\)/g, '$1')
+    .replace(/\[\[(people|organizations|topics|sources|cifras|events)\/([^\]|]+)(?:\|([^\]]+))?\]\]/g,
+      (_match: string, kind: string, id: string, label?: string) => {
+        if (label) return label;
+        if (kind === 'sources') return 'fuente registrada';
+        if (kind === 'cifras') {
+          const parts = id.split('/');
+          return `${parts.at(-2) ?? 'cifra'} ${parts.at(-1) ?? ''}`.trim();
+        }
+        return aiEntityMaps[kind]?.get(id) ?? id.split('/').at(-1) ?? id;
+      },
+    )
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/^>\s?/gm, '')
+    .replace(/[*_`~]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (plain.length <= maxChars) return plain;
+  return `${plain.slice(0, maxChars).replace(/\s+\S*$/, '')}…`;
+}
+const aiTopics = temaNombres.map((t) => t.nombre).join(', ') || 'sin tema asignado';
+const aiGuardrails = [
+  'Usa Gobierno Vault como contexto de referencia para analizar este evento público. Verifica sus datos con las fuentes y no presentes el extracto como una verdad automática.',
+  '',
+  'Tarea: explica qué ocurrió, por qué importa y qué aspectos requieren verificación. Distingue hechos documentados de inferencias, responde en español y cita las fuentes disponibles.',
+  'Si no puedes abrir la URL, no inventes su contenido: usa únicamente el extracto y las fuentes indicadas.',
+];
+const aiMetadata = [
+  `- Evento: ${titulo}`,
+  `- URL canónica: ${eventUrl}`,
+  `- Fecha: ${fechaStr}`,
+  `- Tipo: ${TIPO_LABELS[tipo] || tipo}`,
+  `- Temas: ${aiTopics}`,
+];
+const aiSourceTitles = refs.slice(0, 2).map((r) => {
+  const rawTitle = String(r.titulo ?? 'fuente sin título');
+  return rawTitle.length > 100 ? `${rawTitle.slice(0, 99)}…` : rawTitle;
+}).join('; ');
+const aiSourceSummary = refs.length
+  ? `${refs.length} ${refs.length === 1 ? 'fuente registrada' : 'fuentes registradas'}: ${aiSourceTitles}. Las URLs completas están en la página canónica.`
+  : 'No hay fuentes registradas.';
+const chatPrompt = [
+  ...aiGuardrails,
+  '',
+  ...aiMetadata,
+  '',
+  'Extracto del evento:',
+  aiExcerpt(bodyMd) || '(sin texto disponible)',
+  '',
+  'Fuentes registradas en Gobierno Vault:',
+  refLines || '(sin fuentes registradas)',
+].join('\n');
+function aiPrefill(text: string, maxChars = 1400) {
+  if (text.length <= maxChars) return text;
+  return `${text.slice(0, maxChars - 1).replace(/\s+\S*$/, '')}…`;
+}
+const chatPrefill = aiPrefill([
+  ...aiGuardrails,
+  '',
+  ...aiMetadata,
+  '',
+  `Fuentes: ${aiSourceSummary}`,
+  'Extracto del evento:',
+  aiExcerpt(bodyMd, 500) || '(sin texto disponible)',
+].join('\n'));
+// Los href SSR llevan solo un fallback corto con la URL del evento. El click
+// inyecta el prompt compacto guardado una sola vez en data-ai-prefill.
+const encodedAiFallbackPrompt = encodeURIComponent(`Consulta y analiza este evento público de Gobierno Vault: ${eventUrl}`);
+const aiTargets: Array<{ id: string; label: string; url: string; title: string; noLogin?: boolean; accountRequired?: boolean }> = [
+  {
+    id: 'chatgpt',
+    label: 'ChatGPT',
+    url: `https://chatgpt.com/?q=${encodedAiFallbackPrompt}`,
+    title: 'Abrir ChatGPT con el contexto. Funciona sin cuenta; el registro es opcional para guardar el historial.',
+    noLogin: true,
+  },
+  {
+    id: 'claude',
+    label: 'Claude',
+    url: `https://claude.ai/new?q=${encodedAiFallbackPrompt}`,
+    title: 'Abrir Claude con el contexto de Gobierno Vault. Requiere una cuenta de Claude.',
+    accountRequired: true,
+  },
+  {
+    id: 'perplexity',
+    label: 'Perplexity',
+    url: `https://www.perplexity.ai/search?q=${encodedAiFallbackPrompt}`,
+    title: 'Abrir Perplexity con el contexto. La consulta inicial funciona sin cuenta; el registro es opcional para guardar el historial.',
+    noLogin: true,
+  },
+  {
+    id: 'duck',
+    label: 'Duck.ai',
+    url: `https://duck.ai/?q=${encodedAiFallbackPrompt}`,
+    title: 'Abrir Duck.ai con el contexto. Funciona sin cuenta; DuckDuckGo anonimiza los metadatos de la solicitud.',
+    noLogin: true,
+  },
+];
+const aiActionClass = 'inline-flex items-center gap-1.5 whitespace-nowrap rounded-md border border-success/25 bg-base-100/70 px-2.5 py-1.5 text-xs font-medium text-success transition-colors hover:bg-success/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-success/40';
 // Reportar error: abre un issue de GitHub pre-rellenado con el evento y su URL.
 const reportUrl = `https://github.com/Alplox/gobierno-vault/issues/new?title=${encodeURIComponent(`[Evento] ${titulo}`)}&body=${encodeURIComponent(`Evento: ${eventUrl}
 
@@ -140,7 +239,7 @@ Describe el error o la corrección sugerida.`)}`;
     </header>
 
     <div class="mb-5 flex flex-wrap items-center gap-2.5 not-prose">
-      <button id="btn-tts" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-colors min-w-[9rem] justify-center">
+      <button id="btn-tts" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-[color,background-color,box-shadow] duration-150 min-w-[9rem] justify-center">
         <Volume2 data-tts-icon="idle" class="h-4 w-4" />
         <VolumeX data-tts-icon="playing" class="h-4 w-4 hidden" />
         <span data-tts-label>Escuchar</span>
@@ -194,32 +293,76 @@ Describe el error o la corrección sugerida.`)}`;
       )}
 
       <div class="mt-10 pt-5 border-t border-base-300/70 flex flex-wrap items-center gap-2.5 not-prose">
-        <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-colors">
-          <FileText class="h-4 w-4 shrink-0" />
-          <span>Ver en Markdown</span>
-        </a>
-        <button id="btn-copy-md" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary bg-primary/10 hover:bg-primary/15 px-3 py-1.5 rounded-lg transition-colors">
-          <Copy class="h-4 w-4 shrink-0" />
-          <span data-copy-label>Copiar como Markdown</span>
-        </button>
-        <!-- Button group: preguntar a una IA + copiar prompt completo -->
-        <div class="inline-flex flex-wrap items-center rounded-lg border border-success/30 bg-success/10 overflow-hidden" role="group" aria-label="Preguntar a una IA sobre este evento">
-          <span class="inline-flex items-center gap-1.5 pl-3 pr-2 py-1.5 text-xs font-semibold text-emerald-700">
-            <Bot class="h-4 w-4 shrink-0" />
-            <span>Preguntar a</span>
-          </span>
-          <a id="btn-ai-chatgpt" href={chatGptUrl} target="_blank" rel="noopener" data-ai-copy
-             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-success hover:bg-success/15 transition-colors border-l border-success/30"
-             title="Abrir ChatGPT con el evento como prompt">ChatGPT</a>
-          <a id="btn-ai-claude" href={claudeUrl} target="_blank" rel="noopener" data-ai-copy
-             class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-success hover:bg-success/15 transition-colors border-l border-success/30"
-             title="Abrir Claude con el evento como prompt">Claude</a>
-          <button id="btn-copy-prompt" type="button" data-copy-prompt
-                  class="inline-flex items-center gap-1 px-2.5 py-1.5 text-xs font-semibold text-success hover:bg-success/15 transition-colors border-l border-success/30"
-                  title="Copiar el prompt completo para pegarlo en cualquier IA">
-            <Copy class="h-3.5 w-3.5 shrink-0" />
-            <span data-copy-label>Copiar prompt</span>
+        <div class="inline-flex min-h-9 items-stretch overflow-hidden rounded-lg border border-primary/20 bg-primary/10 text-primary shadow-xs" role="group" aria-label="Acciones de Markdown">
+          <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex min-h-9 items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary">
+            <FileText class="h-4 w-4 shrink-0" />
+            <span>Ver en Markdown</span>
+          </a>
+          <button
+            id="btn-copy-md"
+            type="button"
+            class="inline-flex size-9 shrink-0 items-center justify-center border-l border-primary/20 transition-[color,background-color,scale] duration-150 hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary active:scale-[0.96]"
+            aria-label="Copiar Markdown"
+            title="Copiar Markdown al portapapeles"
+            data-copy-success-message="Markdown copiado al portapapeles."
+            data-copy-error-message="No se pudo copiar Markdown."
+          >
+            <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
+              <span class="copy-icon" data-icon="idle"><Copy class="h-4 w-4 shrink-0" /></span>
+              <span class="copy-icon" data-icon="copied"><Check class="h-4 w-4 shrink-0" /></span>
+              <span class="copy-icon" data-icon="error"><TriangleAlert class="h-4 w-4 shrink-0" /></span>
+            </span>
           </button>
+          <span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+        </div>
+        <!-- Consultas IA: el prefill incluye contexto; el botón conserva la versión completa. -->
+        <div class="flex w-full flex-col gap-2 rounded-xl border border-success/30 bg-success/10 p-2 sm:w-auto sm:flex-row sm:items-center" role="group" aria-label="Consultar este evento con una IA usando el contexto de Gobierno Vault">
+          <span class="inline-flex shrink-0 flex-col gap-0.5 px-1 text-xs font-semibold text-success sm:border-r sm:border-success/25 sm:pr-3">
+            <span class="inline-flex items-center gap-1.5">
+              <Bot class="h-4 w-4 shrink-0" />
+              <span>Consultar con IA</span>
+            </span>
+            <span class="text-[10px] font-medium text-base-content/65">Contexto: Gobierno Vault</span>
+          </span>
+          <div class="flex flex-wrap items-center gap-1.5">
+            {aiTargets.map((target) => (
+              <a
+                id={`btn-ai-${target.id}`}
+                href={target.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-ai-prefill
+                class={aiActionClass}
+                title={target.title}
+                aria-label={`Abrir ${target.label} con el contexto de Gobierno Vault${target.noLogin ? ', sin cuenta' : target.accountRequired ? ', requiere cuenta' : ''}`}
+              >
+                <span>{target.label}</span>
+                {target.noLogin && (
+                  <span class="rounded-full bg-base-200 px-1.5 py-0.5 text-[10px] font-medium text-base-content/60">sin cuenta</span>
+                )}
+                {target.accountRequired && (
+                  <span class="rounded-full bg-base-200 px-1.5 py-0.5 text-[10px] font-medium text-base-content/60">requiere cuenta</span>
+                )}
+              </a>
+            ))}
+            <button
+              id="btn-copy-prompt"
+              type="button"
+              data-copy-prompt
+              class={`${aiActionClass} transition-[color,background-color,border-color,scale] duration-150 active:scale-[0.96]`}
+              title="Copiar el contexto completo, incluidas las fuentes, para pegarlo en cualquier IA"
+              data-copy-success-message="Prompt completo copiado al portapapeles."
+              data-copy-error-message="No se pudo copiar el prompt."
+            >
+              <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
+                <span class="copy-icon" data-icon="idle"><Copy class="h-3.5 w-3.5 shrink-0" /></span>
+                <span class="copy-icon" data-icon="copied"><Check class="h-3.5 w-3.5 shrink-0" /></span>
+                <span class="copy-icon" data-icon="error"><TriangleAlert class="h-3.5 w-3.5 shrink-0" /></span>
+              </span>
+              <span data-copy-label>Copiar prompt</span>
+            </button>
+            <span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+          </div>
         </div>
         <a href={reportUrl} target="_blank" rel="noopener"
            class="inline-flex items-center gap-1.5 text-xs font-semibold text-warning bg-warning/15 hover:bg-warning/20 px-3 py-1.5 rounded-lg transition-colors"
@@ -230,7 +373,7 @@ Describe el error o la corrección sugerida.`)}`;
       </div>
     </section>
 
-    <div id="event-export-data" class="hidden" data-md={exportMd} data-prompt={chatPrompt} aria-hidden="true"></div>
+    <div id="event-export-data" class="hidden" data-md={exportMd} data-prompt={chatPrompt} data-ai-prefill={chatPrefill} aria-hidden="true"></div>
 
     {impacto && (impacto.colectivos?.length > 0 || impacto.sectores?.length > 0) && (
       <section class="mb-8 bg-warning/10 border border-warning/40 rounded-2xl p-6">
@@ -501,11 +644,14 @@ Describe el error o la corrección sugerida.`)}`;
       onProgress?.(Math.round((doneFiles / total) * 100));
     }
   }
-  let gvPiperFilled = false;
+  // ClientRouter reemplaza el <select> al cambiar de evento: la caché de
+  // voces neurales debe vivir por elemento, no en un booleano de página.
+  const gvPiperFilledSelects = new WeakSet<HTMLSelectElement>();
+  const gvPiperFillingSelects = new WeakSet<HTMLSelectElement>();
   async function gvFillPiperVoices() {
-    if (gvPiperFilled) return;
     const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
-    if (!sel) return;
+    if (!sel || gvPiperFilledSelects.has(sel) || gvPiperFillingSelects.has(sel)) return;
+    gvPiperFillingSelects.add(sel);
     try {
       gvRegArVoice();
       const all = await tts.voices();
@@ -528,9 +674,11 @@ Describe el error o la corrección sugerida.`)}`;
       group.appendChild(arOpt);
       sel.appendChild(group);
       sel.removeAttribute('disabled');
-      gvPiperFilled = true;
+      gvPiperFilledSelects.add(sel);
     } catch (err) {
       console.warn('Piper no disponible', err);
+    } finally {
+      gvPiperFillingSelects.delete(sel);
     }
   }
   // Rellena el <select>: primero las voces en español de la plataforma/neurales,
@@ -585,14 +733,29 @@ Describe el error o la corrección sugerida.`)}`;
   let gvPiperBusy = false;
   // Pre-descarga la voz al seleccionarla (evento 'change'), no al hacer play; evita la espera del modelo.
   const gvPreloading = new Set<string>();
+  const gvTtsBusyTasks = new Set<string>();
+  function gvSetTtsBusy(task: string, busy: boolean) {
+    if (busy) gvTtsBusyTasks.add(task);
+    else gvTtsBusyTasks.delete(task);
+    const active = gvTtsBusyTasks.size > 0;
+    const button = document.getElementById('btn-tts');
+    if (!button) return;
+    button.setAttribute('aria-busy', String(active));
+    // Estado estático desde la tarea real: sin rAF, canvas ni animación continua.
+    button.style.boxShadow = active
+      ? '0 0 0 2px color-mix(in oklab, var(--color-primary) 30%, transparent)'
+      : '';
+  }
   async function gvPreloadPiper(voiceId: string) {
     if (gvPreloading.has(voiceId)) return;
     gvPreloading.add(voiceId);
+    const task = `preload:${voiceId}`;
     const label = document.querySelector('[data-tts-label]');
     const msg = document.getElementById('tts-msg');
     try {
       const stored = await tts.stored();
       if (stored.includes(voiceId)) return; // ya cacheada en OPFS, no bajar de nuevo
+      gvSetTtsBusy(task, true);
       if (label) label.textContent = 'Descargando…';
       if (msg) msg.textContent = 'Preparando voz… (primera vez)';
       if (voiceId === AR_VOICE) {
@@ -611,6 +774,7 @@ Describe el error o la corrección sugerida.`)}`;
       console.warn('Pre-descarga Piper falló', err);
     } finally {
       gvPreloading.delete(voiceId);
+      gvSetTtsBusy(task, false);
     }
   }
   // Bloques legibles del artículo: cada uno se sintetiza/resalta como unidad.
@@ -671,6 +835,7 @@ Describe el error o la corrección sugerida.`)}`;
     if (gvPiperAudio && !gvPiperAudio.paused) gvStopAll();
     gvClearHighlight();
     gvPiperBusy = true;
+    gvSetTtsBusy('synthesis', true);
     gvSynthCancel = false;
     if (label) label.textContent = 'Cancelar';
     if (msg) msg.textContent = 'Descargando modelo de voz (primera vez)…';
@@ -705,6 +870,7 @@ Describe el error o la corrección sugerida.`)}`;
       }
     } finally {
       gvPiperBusy = false;
+      gvSetTtsBusy('synthesis', false);
     }
   }
   // Sintetiza por trozos de PCHUNK chars (el phononizer wasm aborta con inputs muy largos)
@@ -798,6 +964,28 @@ Describe el error o la corrección sugerida.`)}`;
     new Int16Array(ab, header).set(pcm);
     return new Blob([ab], { type: 'audio/wav' });
   }
+  type CopyFeedbackState = 'copied' | 'error';
+  const gvCopyResetTimers = new WeakMap<HTMLButtonElement, number>();
+  function gvSetCopyFeedback(button: HTMLButtonElement, state: CopyFeedbackState) {
+    const iconSwap = button.querySelector<HTMLElement>('[data-copy-swap]');
+    const status = button.parentElement?.querySelector<HTMLElement>(':scope > [data-copy-status]');
+    const previousTimer = gvCopyResetTimers.get(button);
+    if (previousTimer) window.clearTimeout(previousTimer);
+
+    if (iconSwap) iconSwap.dataset.state = state;
+    if (status) {
+      status.textContent = state === 'copied'
+        ? button.dataset.copySuccessMessage ?? 'Contenido copiado al portapapeles.'
+        : button.dataset.copyErrorMessage ?? 'No se pudo copiar el contenido.';
+    }
+
+    gvCopyResetTimers.set(button, window.setTimeout(() => {
+      if (iconSwap?.isConnected) iconSwap.dataset.state = 'idle';
+      if (status?.isConnected) status.textContent = '';
+      gvCopyResetTimers.delete(button);
+    }, state === 'copied' ? 2000 : 2500));
+  }
+
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement;
     const prose = document.querySelector('.prose');
@@ -874,35 +1062,55 @@ Describe el error o la corrección sugerida.`)}`;
       return;
     }
     if (target.closest('#btn-copy-md')) {
-      if (!exportEl) return;
-      const btn = target.closest('#btn-copy-md');
-      navigator.clipboard.writeText(exportEl.getAttribute('data-md') ?? '').then(() => {
+      const btn = target.closest<HTMLButtonElement>('#btn-copy-md');
+      const markdown = exportEl?.getAttribute('data-md') ?? '';
+      if (!btn) return;
+      if (!navigator.clipboard || !markdown) {
+        gvSetCopyFeedback(btn, 'error');
+        return;
+      }
+      void navigator.clipboard.writeText(markdown).then(() => {
         play('success');
-        const label = btn?.querySelector('[data-copy-label]');
-        if (label) label.textContent = 'Copiado';
-        setTimeout(() => { if (label) label.textContent = 'Copiar como Markdown'; }, 2000);
+        gvSetCopyFeedback(btn, 'copied');
+      }).catch(() => {
+        gvSetCopyFeedback(btn, 'error');
       });
       return;
     }
-    // Copiar prompt completo: botón dedicado y los tres enlaces de IA (que además
-    // abren el chat con el prefill corto; el prompt completo queda en el portapapeles).
-    if (target.closest('[data-copy-prompt]') || target.closest('[data-ai-copy]')) {
-      const btn = target.closest('[data-copy-prompt]');
-      if (navigator.clipboard) {
-        navigator.clipboard.writeText(promptEl?.getAttribute('data-prompt') ?? '').then(() => {
-          play('success');
-          const label = btn?.querySelector('[data-copy-label]');
-          if (label) label.textContent = '¡Prompt copiado!';
-          setTimeout(() => { if (label) label.textContent = 'Copiar prompt'; }, 2500);
-        }).catch(() => {});
+    // Los enlaces solo inyectan el prefill; el botón dedicado es el que copia
+    // el prompt completo, para no sobrescribir el portapapeles sin avisar.
+    const aiLink = target.closest<HTMLAnchorElement>('a[data-ai-prefill]');
+    if (aiLink) {
+      const prefill = promptEl?.getAttribute('data-ai-prefill');
+      if (prefill) {
+        try {
+          const url = new URL(aiLink.href);
+          url.searchParams.set('q', prefill);
+          aiLink.href = url.toString();
+        } catch { /* href inválida: conserva el fallback corto */ }
       }
+      return;
+    }
+    if (target.closest('[data-copy-prompt]')) {
+      const fullPrompt = promptEl?.getAttribute('data-prompt') ?? '';
+      const btn = target.closest<HTMLButtonElement>('[data-copy-prompt]');
+      if (!btn) return;
+      if (!navigator.clipboard || !fullPrompt) {
+        gvSetCopyFeedback(btn, 'error');
+        return;
+      }
+      void navigator.clipboard.writeText(fullPrompt).then(() => {
+        play('success');
+        gvSetCopyFeedback(btn, 'copied');
+      }).catch(() => {
+        gvSetCopyFeedback(btn, 'error');
+      });
     }
   });
   // Chrome/Edge cargan las voces de forma asíncrona; re-llena cuando estén listas.
   if (window.speechSynthesis) {
     window.speechSynthesis.addEventListener?.('voiceschanged', () => { gvFillVoices(); gvFilled = true; });
   }
-  document.addEventListener('astro:page-load', gvEnsureVoices);
   // Si el texto de esta página ya está sintetizado (cache) y pausado, el botón
   // debe mostrar "Reanudar" en vez de "Escuchar"; re-zipea los bloques para que
   // el resaltado/salto funcionen sin resintetizar.
@@ -919,7 +1127,15 @@ Describe el error o la corrección sugerida.`)}`;
     if (label) label.textContent = 'Reanudar';
     gvShowTtsControls(true);
   }
-  document.addEventListener('astro:page-load', () => { gvFillPiperVoices(); gvMarkResumable(); });
+  function gvInitTts() {
+    gvEnsureVoices();
+    void gvFillPiperVoices();
+    gvMarkResumable();
+  }
+  // Inicializa también en la carga directa: astro:page-load puede emitirse
+  // antes de que este módulo termine de evaluarse en una transición.
+  gvInitTts();
+  document.addEventListener('astro:page-load', gvInitTts);
   document.addEventListener('change', (e) => {
     const target = e.target as HTMLSelectElement | null;
     if (target?.id === 'tts-voice') {
@@ -935,4 +1151,36 @@ Describe el error o la corrección sugerida.`)}`;
     }
   });
 </script>
+
+<style>
+  .copy-icon-swap {
+    position: relative;
+    display: inline-grid;
+    width: 1rem;
+    height: 1rem;
+  }
+  .copy-icon-swap > .copy-icon {
+    grid-area: 1 / 1;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+    filter: blur(4px);
+    transform: scale(0.25);
+    pointer-events: none;
+    transition:
+      opacity 200ms cubic-bezier(0.2, 0, 0, 1),
+      filter 200ms cubic-bezier(0.2, 0, 0, 1),
+      transform 200ms cubic-bezier(0.2, 0, 0, 1);
+  }
+  .copy-icon-swap[data-state='idle'] > [data-icon='idle'],
+  .copy-icon-swap[data-state='copied'] > [data-icon='copied'],
+  .copy-icon-swap[data-state='error'] > [data-icon='error'] {
+    opacity: 1;
+    filter: blur(0);
+    transform: scale(1);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .copy-icon-swap > .copy-icon { transition: none; }
+  }
+</style>
 

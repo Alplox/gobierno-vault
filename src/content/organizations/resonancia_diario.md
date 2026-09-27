@@ -2,5 +2,6 @@
 nombre: Resonancia Diario
 tipo: medio_comunicacion
 pais: Chile
-notas: Medio digital chileno (resonanciadiario.cl).
+aliases: ["Resonancia Diario"]
+notas: Medio digital chileno (resonanciadiario.cl). Medio digital de Antofagasta.
 ---

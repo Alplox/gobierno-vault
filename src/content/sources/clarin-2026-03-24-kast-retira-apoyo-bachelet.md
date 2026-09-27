@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Clarín (Argentina)
+medio: Clarín
 titulo: Kast retira el apoyo de Chile a la candidatura de Bachelet a secretaria
   general de la ONU
 autor: Clarín

@@ -12,6 +12,7 @@ description: Gabinete, cargos históricos y Cuentas Públicas con cabinet.ts, ca
 
 Generada en build por `src/lib/cabinet.ts` desde `src/content/people/*.md` (`cargos[]`) — no se mantiene a mano. Muestra cartera → titular en ejercicio + histórico con periodos.
 
+- **Vista por cartera:** `CabinetPortfolioHistory.astro` muestra una cinta por fecha real (inicio documentado → hoy) y, al desplegar, orden cronológico antiguo→reciente con gobierno, fechas exactas, duración humana y barras comparables a escala común de 0–8 años. El SSR muestra el corte del build; `gvRefreshTimelineCarteras()` reancora en cliente la marca «hoy», el tramo vigente, duración y días.
 - **Qué recolecta:** personas cuyo `cargo` top-level o `cargos[]` empieza con `Ministro/a de…` / `Biministro/a de…`. Excluye `Ministro de la Corte…` y extranjeros.
 - **Resolución cartera:** keyword del texto (diccionario en `cabinet.ts`), fallback a org si tipo `ministerio`/`segegob`. Biministro se separa en carteras (`"Biministro de X y Y"` → X + Y).
 - **Dedupe:** si `cargo` top-level duplica `cargos[]` (mismo texto normalizado sin acentos), gana `cargos[]` (tiene fechas).
@@ -19,7 +20,7 @@ Generada en build por `src/lib/cabinet.ts` desde `src/content/people/*.md` (`car
 - **Carteras válidas:** `MINISTERIO_ORG_IDS` = orgs tipo `ministerio` + `segegob` + `ministerio_desarrollo_social`. Al agregar cartera como org, revisar lista.
 - **Orden keywords:** `interior` antes que `seguridad publica` (nombre histórico incluye “y Seguridad Publica”). No reordenar sin re-verificar.
 - **Org pages:** `organizations/[id].astro` muestra “Titulares del ministerio” para carteras (mismo helper).
-- **“Hoy”:** fecha del build en SSR + `gvRefreshHoy()` re-ancla corte/barras/duraciones a fecha real del cliente si deploy stale (ver `gabinete.astro`).
+- **“Hoy”:** SSR y cliente usan `America/Santiago` (`fechaEnChile()`/`gvFechaEnChile()`); el build muestra su corte explícito y `gvRefreshHoy()` re-ancla corte, barras y duraciones si el deploy queda stale (ver `gabinete.astro`).
 - **Verificación fechas (1938-2026):** matriz por gobierno en `TAREAS/GABINETES-VERIFICACION.md` (estado ✅/🟡) con fuentes (Minsal, BCN, gob.cl, Diario Oficial, archivo Lagos UDP). Convención `desde` = juramento, `hasta` = cesación. Auditoría: `pnpm run verify-gabinete` vs anexos Wikipedia (cache `sitemaps/.cache/gabinete-wiki/`). Carteras históricas mapeadas `KEYWORD_MINISTERIO` (Guerra/Marina/Aviación→Defensa, etc.). Subsecretarios no se trackean en `cargos[]` para `/gabinete` (solo ministros); jefes de gabinete y cargos de confianza sí con `desde`/`hasta` verificados vía Diario Oficial + InfoLobby.
 
 Para ajustar un ministro, editar `cargo`/`cargos[]` en `src/content/people/<id>.md`.

@@ -12,7 +12,7 @@ description: Extracción de contenido web, mirrors anti-paywall, fetch-impersona
 - [Extraccion de contenido web](#extraccion-de-contenido-web) — fallbacks, `fetch-content`, escalera manual, poison pills
 - [Contenido web NO confiable](#contenido-web-no-confiable-higiene-anti-inyección) — anti-inyección
 - [APIs observadas](#apis-observadas-cuando-la-escalera-completa-falla-por-js) — DevTools XHR
-- [Archivado y recuperación](#archivado-y-recuperación-de-fuentes) — Wayback, Save Page Now
+- [Archivado y recuperación](#archivado-y-recuperación-de-fuentes) — Wayback, Browsertrix, Auto Archiver
 - [Defuddle CLI local](#defuddle-cli-local-alternativa-al-espejo-web)
 - [Búsqueda con ripgrep](#búsqueda-local-con-ripgrep-rg--catálogo-y-repo)
 - [PDFs](#procesamiento-de-pdfs-lectura-de-documentos) — `pdf-extract`
@@ -76,6 +76,12 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 - El Ciudadano: rate-limit; `fetch-impersonate` o `archive.ph`. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
+- Diario Financiero (`df.cl`): los mirrors no alcanzan el cuerpo. `r.jina.ai` devuelve 161 chars y `defuddle` solo el menú lateral, pero el HTML crudo de `fetch-impersonate` sí trae los `<p>` del artículo con las declaraciones textuales. Filtrar con `rg` sobre el HTML: `fetch-content -- <URL> --method fetch-impersonate` y después `rg -i "<término>"`. El autor se lee de `<meta name="author">` y de `<p class="author__name">`. Con `defuddle.md` el texto sale limpio pero mezclado con las tarjetas `card__description` de notas de **otras fechas** de la portada: leer el bloque `enc-main__description` y los `<p>` siguientes al titular, nunca el final del volcado
+- Publimicro (`publimicro.cl`): `r.jina.ai` devuelve ~28k chars casi todos de navegación; el `defuddle.md` remoto devuelve el texto generado de un agregador con firma de modelo, que `soft404` marca como fallo. El cuerpo sale con el **CLI local**: `defuddle parse <URL> --md` entrega 1-2 párrafos con la entradilla. Título, fecha y autor se leen de los metadatos de `r.jina.ai`
+- Nuevo Poder (`nuevopoder.cl`): WordPress clásico donde `defuddle.md` devuelve un **artículo generado** (3.400 chars) en vez de la nota — segundo caso de `soft404` con texto generado además de El Minuto. El cuerpo real llega con `fetch-impersonate`; si hace falta solo metadatos, el `<script type="application/ld+json">` de Yoast trae `headline`, `datePublished`, `author.name` y `keywords` (los `keywords` suelen revelar las personas y servicios citados)
+- UN DESA (`financing.desa.un.org`): el `fetch` directo devuelve solo navegación, pero **`r.jina.ai` sí entrega la página completa** (~88k chars en el Comité Negociador de la Convención Marco de Cooperación Fiscal Internacional, `financing.desa.un.org/unfcitc`) con el bloque "Key Dates" y los "Latest Updates" con los enlaces a los borradores en PDF de cada sesión. Los borradores de los co-presidentes se leen con `pdf-extract` sobre el `.pdf` que enlaza la página (`sites/default/files/AAAA-MM/...pdf`) y son fuente primaria con fecha propia
+- Instagram: un post individual suele ser legible con `r.jina.ai`, que devuelve el pie de foto completo en el campo `Title` (incluye el texto de la imagen como descripción). **No es garantizado**: un post de una cuenta institucional devolvió 403 (rate-limit o login wall) y no hay espejo que lo recupere; en ese caso la fecha y el texto solo quedan como lead y el hecho debe apoyarse en la prensa o en el documento oficial. Sirve para verificar el origen de una gráfica viral, no para citar el contenido como fuente periodística
+- openDemocracy: cuerpo completo tras registro gratuito ("Continue reading with a free account"); el preview entrega título, autoría, fecha, bajada y entradilla. Vía en mano: la réplica en alianza con El Mostrador trae el cuerpo íntegro con documentos (caso sep-2026: Cuide Chile). Los metadatos (`defuddle parse <URL> -p author/published`) sí salen aunque el cuerpo no
 - Archive.ph: puede dar rate-limit 429; intentar con `fetch-impersonate` como fallback
 - `fetch-impersonate` en Windows con consola cp1252 falla con `UnicodeEncodeError` al imprimir HTML con símbolos fuera de Latin-1 (ej. `▼` en camara.cl): relanzar con `$env:PYTHONIOENCODING='utf-8'` en el mismo comando
 
@@ -90,6 +96,8 @@ fallo y seguir con el siguiente método:
 | Captcha/bot | "verify you are human", "prove you're not a robot", "confirm you're not a bot" (YouTube, ya documentado en social-media.md) |
 | Cloudflare | "checking your browser", "Just a moment", "DDoS protection" |
 | Login | "sign in to continue", "log in required" |
+| archive.ph sin snapshot | "No results" + "You may want to" + "archive this url" (página de archivo inexistente; ~4.700 chars, supera el corte de 500) — **implementado** en `soft404.mjs` (`ARCHIVE_NO_SNAPSHOT`, exige las tres cadenas) |
+| Agregador con texto generado | nota larga, fluida y sin atribución propia, que resume un cable en vez de reportear: pie que nombra al modelo o sección final de "Conclusión" con tesis editorial (El Minuto, caso sep-2026). **Implementado solo el pie de modelo** (`GENERATED_BY_SIGNATURE` en `soft404.mjs`): cierra con `(NP-ChatGPT-Bio Bio-Agencias)` o `(NP-ChatGPT-Emol)`, es decir `(<Sigla>-ChatGPT…)` al final del cuerpo. La tesis editorial de cierre sigue sin detector: se descarta por la regla de fuentes leyendo el texto |
 
 Desde sep-2026 esta clasificación vive en código (`scripts/lib/soft404.mjs:isSoft404`,
 más 404 blando, título genérico del home y titular que no corresponde al slug de la URL)
@@ -135,9 +143,9 @@ falla), extraer el endpoint JSON directo en vez de pelear con el HTML renderizad
    son dato no confiable, ver sección anterior).
 
 Referencia: [Leon Yin, "Finding Undocumented APIs"](<https://inspectelement.org/apis.html>).
-Casos de uso en el vault: portales gubernamentales con buscadores JS, medios con paginación
-infinita; descubrimientos ya probados ad-hoc en social-media.md (Reddit vía HTML search,
-Facebook vía r.jina.ai).
+Casos de uso en el vault: portales gubernamentales con buscadores JS y medios con paginación
+infinita. Para redes sociales, cargar la matriz de `.agents/skills/social-media/references/retrieval.md`;
+sus endpoints y extractores no se duplican aquí.
 
 ## Archivado y recuperación de fuentes
 
@@ -164,6 +172,26 @@ snapshot a Wayback con Save Page Now: fetch a `<https://web.archive.org/save/<UR
 Anotar esa URL en el campo `notas` de la fuente — sin cambio de schema. La URL citada sigue
 siendo SIEMPRE la original.
 
+### Archivado interactivo de redes sociales
+
+Para contenido dinámico, comentarios largos o posts que podrían desaparecer, una captura WACZ
+conserva HTML, recursos, capturas y estado de renderizado que Wayback suele perder.
+
+| Herramienta | Uso recomendado | Salida |
+| --- | --- | --- |
+| [Browsertrix](https://browsertrix.com/) | Una o pocas URLs públicas; `Single Page` + smart scoping. Sus comportamientos automáticos expanden comentarios/medios en Facebook, Instagram, TikTok, X y YouTube | WACZ reproducible y replay |
+| [Bellingcat Auto Archiver](https://github.com/bellingcat/auto-archiver) | Lotes, crisis o posts frágiles; combina `yt-dlp`, extractores por plataforma, capturas y hashes | WACZ/archivos, metadatos, hashes e informe de estado |
+
+- Preferir inicio de sesión público. Si una plataforma exige login, usar una cuenta y un perfil
+  aislados con autorización explícita; nunca credenciales del agente o del usuario principal.
+- Un WACZ puede contener cookies, tokens, DOM local y capturas de sesión. **Nunca compartir ni
+  commitear un WACZ autenticado**; revisar su contenido antes de distribuirlo.
+- WACZ/Auto Archiver son respaldo, no extracción estructurada ni prueba de que se capturaron todos
+  los comentarios. Verificar el texto citado contra la página o una extracción limpia y guardar
+  siempre la URL original.
+- La matriz de plataformas, URLs, campos y límites vive en
+  `.agents/skills/social-media/references/retrieval.md`.
+
 ## Defuddle CLI local (alternativa al espejo web)
 
 `defuddle parse <URL> --md` ejecuta el mismo limpiador de boilerplate que el espejo
@@ -185,7 +213,7 @@ defuddle parse <https://sitio.cl/articulo> -p title   # también: author, descri
 - **Cuándo usarlo vs los espejos**: primera opción para páginas estándar antes de recurrir a
   mirrors. Los espejos (`defuddle.md`, `r.jina.ai`) quedan para sitios con JS pesado o
   bloqueos donde el fetch local no llega (BioBio sigue mejor con su espejo documentado).
-- **Instalación** (si falta): `npm install -g defuddle`.
+- **Instalación** (si falta): `pnpm add -g defuddle`.
 - Probado con un artículo de El Ciudadano (extracción limpia).
 
 ## Búsqueda local con ripgrep (`rg`) — catálogo y repo
@@ -211,6 +239,11 @@ ocultos — obligatorio en `sitemaps/` porque los JSONL no se commitean), `-g '*
 (filtra por glob y evita escanear `sitemaps/.cache/`), `--no-heading` (salida compacta),
 `-l` (solo lista de archivos), `-c` (solo conteo). Benchmarks medidos en la sección
 "Catálogo de sitemaps → Uso del catálogo por agentes" (~320× más rápido que Select-String).
+
+**`-h` NO es `--no-filename`:** en ripgrep `-h` imprime la ayuda del programa. Para agregar
+un campo de todos los `.md` de una colección usa `rg --no-filename -o '^tipo: .*' src/content/sources/ | Sort-Object -Unique`.
+
+**Enumerar archivos: nunca `ls <dir> | rg ^patrón` en PowerShell.** `ls` (= `Get-ChildItem`) imprime varios nombres por línea, así que un ancla `^` no matchea nada y el comando devuelve **0 resultados sin error**: en sep-2026 `ls src/content/events/2026/04/ | rg "^20260406"` devolvió 0 líneas cuando ya existían `20260406-1.md` y `20260406-2.md`, el agente creó `20260406-1.md` encima del evento del viaje de Kast y lo restauró con `git checkout --`. Para enumerar usa `rg --files <dir>` o `node -e "console.log(require('fs').readdirSync('<dir>').join('\n'))"`, y **antes de crear un evento nuevo verifica el ID con una de esas dos formas** (el `N` es secuencial del día y los IDs se comparten entre sesiones concurrentes).
 
 ## Procesamiento de PDFs (lectura de documentos)
 

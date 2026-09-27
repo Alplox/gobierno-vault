@@ -1,0 +1,9 @@
+---
+tipo: agencia
+medio: Reuters
+titulo: "Chile weighs ethanol-gasoline blend as government seeks cheaper fuels amid fiscal strains"
+autor: Kylie Madry
+fecha: 2026-09-17
+url: https://www.reuters.com/business/energy/chile-weighs-ethanol-gasoline-blend-government-seeks-cheaper-fuels-amid-fiscal-2026-09-17/
+notas: "Exclusiva de Reuters del 17 de septiembre de 2026, 10:08 UTC, con edicion de Lucinda Elliott y David Gregorio, basada en documentos vistos por la agencia. El Ministerio de Energia redacto una propuesta para pasar a la mezcla E10, con 10 por ciento de etanol, que reduciria en unos 107 millones de dolares anuales el costo de suministro de combustibles del Gobierno, segun un memorando de funcionarios de la cartera. El memorando estima que ENAP necesitaria invertir unos 10,8 millones de dolares para adaptar refinacion, terminales y almacenamiento, y que la transicion podria compensarse parcialmente con menores pagos del impuesto al carbono. Chile no tiene mandato de mezcla de etanol y es uno de los pocos paises de la region que sigue dependiendo del MTBE, aditivo de octanaje; depende de Estados Unidos para el 85 por ciento de su suministro de gasolina y sus importaciones de etanol provienen principalmente de Argentina, seguida de Bolivia, segun un informe del Consejo de Granos de Estados Unidos revisado por Reuters. El propio memorando reconoce que la medida reemplaza una dependencia de importacion por otra. En mayo la cartera publico una hoja de ruta para diversificar fuentes de combustibles y bajar emisiones de carbono a 2030, incluidos los combustibles mezclados. Segun datos de la OPEP, Chile importo 181 mil barriles diarios de crudo en 2025, y el Brent operaba sobre 105 dolares el barril el miercoles 16 de septiembre frente a unos 73 dolares antes de la guerra. Version en espanol: https://www.reuters.com/es/negocio/4MUNUPAULNPJLKMKLBWHSLNFGE-2026-09-17/"
+---

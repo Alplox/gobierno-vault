@@ -11,8 +11,8 @@ notas: "Diario El Ranco (10-11-2025): replica el reporte de Radio Bío Bío sobr
   habría depositado $15 millones al jefe comunal entre 2017 y 2019, los
   contratos por más de $1.800 millones a la empresa adjudicataria, el allano
   PDI de octubre 2024 y la investigación paralela a la exalcaldesa Carolina
-  Silva. Nota: este es el único artículo de medio distinto a BioBioChile que
-  documenta la apertura de la causa en su fecha; cobertura adicional
-  pendiente en TAREAS/PENDIENTES/2025.md. Verificada por lectura directa
+  Silva. Nota: segundo medio regional en documentar la apertura en su fecha
+  junto a Noticias Los Ríos (11-11-2025); cobertura adicional pendiente en
+  TAREAS/PENDIENTES/2025.md. Verificada por lectura directa
   (r.jina.ai)."
 ---

@@ -1,5 +1,5 @@
 ---
-nombre: Maximo Pavez
+nombre: Máximo Pavez
 cargo: Subsecretario del Interior
 organizacion: ministerio_interior
 cargos:

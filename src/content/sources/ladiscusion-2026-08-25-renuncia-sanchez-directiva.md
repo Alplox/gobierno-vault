@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: La Discusión
+medio: La Discusión (Chillán)
 titulo: "Nueva directiva republicana debuta con la renuncia de histórico militante"
 autor: Isabel Charlín
 fecha: 2026-08-25

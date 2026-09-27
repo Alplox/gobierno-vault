@@ -26,9 +26,11 @@ pnpm run sitemaps-index  # regenera sitemaps/README.md (ya no toca AGENTS.md)
 
 Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[[sources/...]]` vs `src/content/sources/*.md`, `[[people/...]]`/`[[organizations/...]]` vs `src/content/people|organizations/*.md`, `[[events/...]]` vs IDs existentes. También valida menciones en prosa (ver `event-rules.md` regla 8, `scripts/lib/proseNames.mjs`; fixer `fix-prose-wikilinks.mjs`). Excluye ` ``` ` y `` ` ``. `[[cifras/...]]` no se valida; IDs desnudos solo se enlazan si existen.
 
+- **Fuentes de `/sueldos`:** cuentan como citadas `orden_refs`, `segundo_piso.fuente`, `topes_dipres.fuente`, `ipc.registro_presidente_julio_2026.fuente` y `presidentes[].vigencias[].fuente`; mantener el nombre de la última clave sincronizado con `src/data/sueldos.yaml`.
+
 - **CRLF:** regex tolerante `\r?\n` (con `core.autocrlf=true` Windows entrega `\r\n`).
 - **Astro glob-loader:** NO aborta build ante wikilink roto — loguea `Error rendering` y deja `rendered: undefined` (página sin contenido). Por eso `validate` es la red real.
-- **Medio + mojibake + BOM:** valida `medio` en `src/content/sources/*.md` contra orgs / `WHITELIST_MEDIOS`, escanea mojibake (C2/C3, C1, U+FFFD, cirílico) y BOM en `TAREAS/` (ver `data-yaml.md`).
+- **Medio + mojibake + BOM:** valida `medio` en `src/content/sources/*.md` contra orgs / `WHITELIST_MEDIOS`, escanea mojibake (C2/C3, C1, U+FFFD, cirílico) y BOM en `TAREAS/` (ver `data-yaml.md`). Al incorporar una institución oficial —chilena o extranjera— o una plataforma de datos como fuente, agregar su nombre exacto a `WHITELIST_MEDIOS` solo si no es un medio registrado (por ejemplo, `Bolsa de Comercio de Santiago`, `CompaniesMarketCap` o un ministerio oficial extranjero).
 
 ## Build en paralelo
 
@@ -47,11 +49,11 @@ Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[
 - **RSS:** `src/pages/rss.xml.ts` (`@astrojs/rss`) genera `dist/rss.xml` con los últimos 100 eventos: cuerpo HTML (mismo pipeline markdown + `remarkWikiLinks`, enlaces absolutizados) + pie con URL canónica y `Referencias` numeradas con URLs reales (las citas `[[sources/…]]` se resuelven a `[N](url)` porque `#ref-N` muere fuera del sitio). Descubrimiento: `rel="alternate"` en `Base.astro` + link en footer.
 
 - **Build automático DESACTIVADO** (`production_deployments_enabled: false`, preview `none`): pushes no gatillan deploy (límite 20 min). Publicar requiere `pnpm run deploy` local tras push.
-- Creación inicial: `npx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o `CLOUDFLARE_API_TOKEN`). Re-habilitar: PATCH `.../pages/projects/gobierno-vault` con `source.config.production_deployments_enabled: true`.
+- Creación inicial: `pnpm dlx wrangler pages project create gobierno-vault --production-branch main` (requiere `wrangler login` o `CLOUDFLARE_API_TOKEN`). Re-habilitar: PATCH `.../pages/projects/gobierno-vault` con `source.config.production_deployments_enabled: true`.
 
 ## Tailwind v4 + daisyUI 5
 
-Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/styles/global.css`, plugin `@tailwindcss/vite` + `drop-ort-wasm-assets` que elimina `.wasm` de `dist/_astro` (evita límite 25 MiB Cloudflare; si se cambia onnx a `auto`/`local`, revertir plugin).
+Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/styles/global.css`, plugin `@tailwindcss/vite` con `@source` y `@plugin "daisyui"` (Tailwind v4/daisyUI 5); si falla, revisar `build.concurrency` y `wrangler.jsonc` antes de tocar estilos.
 
 ## Formato LLM
 

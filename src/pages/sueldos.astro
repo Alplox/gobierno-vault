@@ -5,47 +5,76 @@ import { DollarSign, Scale, TrendingUp, BookOpen, ExternalLink } from 'lucide-as
 import { getSueldos } from '../lib/sueldos';
 
 // Todos los datos viven en src/data/sueldos.yaml; los valores derivados (ratios,
-// ajustes IPC, promedios) se calculan en src/lib/sueldos.ts. Este template no
-// contiene cifras escritas a mano: las que aparecen en la prosa vienen de `d`.
+// ajustes IPC, brechas) se calculan en src/lib/sueldos.ts. El template no
+// escribe montos ni periodos en la prosa: los obtiene de `d`.
 const d = getSueldos();
-const { fuentes } = d;
+const {
+  fuentes,
+  presidentes,
+  actualPresidente,
+  indicadores,
+  sueldo_minimo,
+  serie_registro_publico,
+} = d;
+const { formatCLP, pctDiff } = d;
 const {
   ratios,
   sueldosAjustados,
   maxAjustado,
   promedioPrevios,
   pctInferiorKast,
-  registroMayoAjustado,
-  ratioKastVecesRedondeado,
   ratioBoricVecesRedondeado,
   ratio2010sTexto,
   ratioBacheletITexto,
-  millonesRangoPrevios,
-  kastAjustadoMillones,
-  boricAjustadoMillones,
-  freiAjustadoMillones,
-  lagosAjustadoMillones,
+  ratioLegalKast,
+  legalDiet,
 } = d.derivados;
 
 const cargos = d.segundo_piso.cargos;
+const segundoPisoFuenteId = d.segundo_piso.fuente.id;
+const topesFuenteId = d.topes_dipres.fuente.id;
 const topes = d.topes_dipres.filas;
-const {
-  presidentes,
-  sueldo_minimo,
-  indicadores,
-  formatCLP,
-  pctDiff,
-} = d;
+const brecha = d.brecha;
+const esi = d.ingresos_esi;
+const costoVida = d.costo_vida;
+const imm = d.imm_2026;
+const casen = d.casen_2024;
+const ipcDestino = d.ipc.mes_referencia;
+const [ipcYear, ipcMonth] = ipcDestino.split('-').map(Number);
+const MESES = [
+  'enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio',
+  'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre',
+];
+const MESES_AB = ['ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic'];
+const ipcDestinoLabel = `${MESES[ipcMonth - 1]} de ${ipcYear}`;
 
-// '2026-05-01' -> '01/05/2026' (formato de la tabla histórica).
-const fmtFecha = (iso: string) => iso.split('-').reverse().join('/');
 const fmtDecimal = (n: number) => n.toFixed(1).replace('.', ',');
+const fmtMillones = (n: number) => `$${(n / 1_000_000).toFixed(0)}M`;
+const fmtPorcentaje = (n: number) => `${fmtDecimal(n)}%`;
+const fmtFecha = (iso: string) => iso.split('-').reverse().join('/');
+const fmtMes = (iso: string | null) => {
+  if (!iso) return '—';
+  const [year, month] = iso.split('-').map(Number);
+  return `${MESES_AB[month - 1]} ${String(year).slice(2)}`;
+};
+const fmtPeriodo = (periodo: string) => {
+  const [year, month] = periodo.split('-').map(Number);
+  return `${MESES_AB[month - 1]} ${String(year).slice(2)}`;
+};
+const fmtVigencia = (v: { desde?: string; hasta?: string }) => {
+  if (v.desde && v.hasta) return `${fmtFecha(v.desde)}–${fmtFecha(v.hasta)}`;
+  if (v.desde) return `desde ${fmtFecha(v.desde)}`;
+  return 'fecha no especificada';
+};
+const tipoVigencia = (tipo?: string) => tipo ? tipo[0].toUpperCase() + tipo.slice(1) : 'Monto';
 
 // --- Línea de tiempo mensual (Registro Público): geometría del SVG estático ---
-const serie = d.serie_registro_publico.puntos;
+const serie = serie_registro_publico.puntos;
 const CH = { W: 760, H: 310, mL: 64, mR: 18, mT: 24, mB: 42 };
-const yMinChart = 6_500_000; // eje truncado (rotulado en la nota)
-const yMaxChart = 11_600_000;
+const yMinRaw = Math.min(...serie.map((p) => p.monto));
+const yMaxRaw = Math.max(...serie.map((p) => p.monto));
+const yMinChart = Math.floor((yMinRaw - 300_000) / 500_000) * 500_000;
+const yMaxChart = Math.ceil((yMaxRaw + 300_000) / 500_000) * 500_000;
 const chX = (i: number) => CH.mL + (i * (CH.W - CH.mL - CH.mR)) / (serie.length - 1);
 const chY = (v: number) => CH.mT + (CH.H - CH.mT - CH.mB) * (1 - (v - yMinChart) / (yMaxChart - yMinChart));
 const seriePath = serie
@@ -53,14 +82,32 @@ const seriePath = serie
   .join(' ');
 const iTrans = serie.findIndex((p) => p.gobierno === 'Kast');
 const xTrans = iTrans > 0 ? (chX(iTrans - 1) + chX(iTrans)) / 2 : CH.mL;
-const MESES_AB = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-const labelPeriodo = (p: string) => {
-  const [yy, mm] = p.split('-').map(Number);
-  return `${MESES_AB[mm - 1]} ${String(yy).slice(2)}`;
-};
-const chartGrid = [7_000_000, 8_000_000, 9_000_000, 10_000_000, 11_000_000];
-const chartTicks = [0, 3, 6, 9, 12, serie.length - 1];
-const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto ?? 1) * 100 - 100).toFixed(0);
+const chartGrid = Array.from(
+  { length: Math.floor((yMaxChart - yMinChart) / 1_000_000) + 1 },
+  (_, i) => yMinChart + i * 1_000_000,
+);
+const chartTicks = [...new Set([0, 3, 6, 9, 12, serie.length - 1])].filter((i) => i >= 0 && i < serie.length);
+const puntoTransicion = serie[iTrans];
+const puntoAnterior = iTrans > 0 ? serie[iTrans - 1] : undefined;
+const puntoKastCompleto = serie[iTrans + 1];
+const saltoFebAbr = puntoKastCompleto && puntoAnterior
+  ? (puntoKastCompleto.monto / puntoAnterior.monto - 1) * 100
+  : 0;
+const chartTitle = `Remuneración bruta mensual del Presidente, ${fmtPeriodo(serie[0].periodo)} – ${fmtPeriodo(serie[serie.length - 1].periodo)}`;
+const chartDesc = `Serie reportada por la Comisión para la Fijación de Remuneraciones. El último punto es ${formatCLP(serie[serie.length - 1].monto)} en ${fmtPeriodo(serie[serie.length - 1].periodo)}.`;
+const bonoPuntos = serie.filter((p) => p.tipo === 'bono');
+const promedioSegundoPisoKast = Math.round(cargos.reduce((sum, c) => sum + c.kast.sueldo, 0) / cargos.length);
+const promedioSegundoPisoBoric = Math.round(cargos.reduce((sum, c) => sum + c.boric.sueldo, 0) / cargos.length);
+const cambioPromedioSegundoPiso = ((promedioSegundoPisoKast / promedioSegundoPisoBoric) - 1) * 100;
+const promedioCambiosSegundoPiso = cargos.reduce((sum, c) => sum + ((c.kast.sueldo / c.boric.sueldo) - 1), 0) / cargos.length * 100;
+
+const umbralesCostoVida = [
+  { etiqueta: 'CBA por persona', monto: costoVida.cba_persona, unidad: 'canasta básica de alimentos' },
+  { etiqueta: 'Línea de pobreza · no arrendatario', monto: costoVida.linea_pobreza_no_arrendatario, unidad: 'persona equivalente' },
+  { etiqueta: 'Línea de pobreza extrema · no arrendatario', monto: costoVida.linea_pobreza_extrema_no_arrendatario, unidad: 'persona equivalente' },
+  { etiqueta: 'Línea de pobreza · arrendatario', monto: costoVida.linea_pobreza_arrendatario, unidad: 'persona equivalente' },
+  { etiqueta: 'Línea de pobreza extrema · arrendatario', monto: costoVida.linea_pobreza_extrema_arrendatario, unidad: 'persona equivalente' },
+];
 ---
 
 <Base title="Sueldos y brecha salarial">
@@ -71,54 +118,129 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Sueldos del sector público y brecha salarial</h1>
       </div>
       <p class="text-base-content/60 text-sm">
-        Sueldo del Presidente, sueldo mínimo, indicadores (UTM, UF, IPC) y topes de asesores. Datos verificados con las fuentes al final.
+        Remuneraciones del Registro Público 38 bis, ingresos laborales de la ESI y umbrales oficiales de costo de vida. Cada cifra conserva su periodo, unidad y fuente primaria.
       </p>
     </header>
+
+    <section id="brecha" class="mb-10 bg-base-100 p-5 sm:p-6 rounded-2xl border border-primary/20 shadow-[var(--shadow-border)]">
+      <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
+        <div class="max-w-2xl">
+          <p class="text-xs font-semibold uppercase tracking-[0.18em] text-primary mb-2">Brecha en una mirada</p>
+          <h2 class="text-xl sm:text-2xl font-bold text-base-content leading-tight">El Estado y la ciudadanía no viven la misma escala de ingresos</h2>
+          <p class="text-sm text-base-content/65 mt-2">
+            El último registro presidencial es bruto y de julio de 2026. La ESI mide ingresos netos de personas ocupadas en 2025; las líneas de pobreza son umbrales por persona equivalente de agosto de 2026.
+          </p>
+        </div>
+        <div class="rounded-xl bg-primary/10 text-primary px-3 py-2 text-xs font-semibold text-right">
+          <div>Presidente</div>
+          <div class="text-lg tabular-nums">{formatCLP(brecha.presidente.monto)}</div>
+          <div class="font-normal">bruto / mes</div>
+        </div>
+      </div>
+
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4 mb-5">
+        {brecha.tarjetas.map((t) => (
+          <article class={`rounded-xl border p-4 ${t.clave === 'presidente' ? 'border-primary/40 bg-primary/5' : 'border-base-300 bg-base-200/40'}`}>
+            <p class="text-xs font-semibold text-base-content/60 leading-snug">{t.etiqueta}</p>
+            <p class="text-xl font-bold tabular-nums text-base-content mt-2">{formatCLP(t.monto)}</p>
+            <p class="text-[11px] text-base-content/55 mt-1">{t.unidad} <SRef id={t.fuente.id} /></p>
+          </article>
+        ))}
+      </div>
+
+      <div class="overflow-x-auto rounded-xl border border-base-300">
+        <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Comparación de magnitudes entre remuneración presidencial e ingresos y umbrales de referencia</caption>
+          <thead>
+            <tr class="border-b border-base-300 bg-base-200/50">
+              <th class="text-left py-2.5 px-3 font-semibold text-base-content/75">Referencia</th>
+              <th class="text-right py-2.5 px-3 font-semibold text-base-content/75">Monto</th>
+              <th class="text-right py-2.5 px-3 font-semibold text-base-content/75">Presidente ÷ referencia</th>
+              <th class="text-left py-2.5 px-3 font-semibold text-base-content/75">Qué mide</th>
+            </tr>
+          </thead>
+          <tbody>
+            {brecha.comparaciones.map((c) => (
+              <tr class="border-b border-base-300 last:border-0">
+                <td class="py-2.5 px-3 text-base-content/85">{c.etiqueta} <SRef id={c.fuente.id} /></td>
+                <td class="py-2.5 px-3 text-right tabular-nums whitespace-nowrap">{formatCLP(c.monto)}<span class="block text-[10px] text-base-content/45">{c.unidad}</span></td>
+                <td class="py-2.5 px-3 text-right tabular-nums font-semibold text-primary whitespace-nowrap">{fmtDecimal(c.veces)}×</td>
+                <td class="py-2.5 px-3 text-xs text-base-content/60">{c.nota}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div class="mt-4 rounded-xl border border-warning/35 bg-warning/10 p-4 text-sm text-base-content/80" role="note">
+        <strong class="text-base-content">Cómo leerlo:</strong> son razones de magnitud, no una equivalencia salarial. Se mezclan una remuneración bruta de julio de 2026, ingresos netos de 2025 y umbrales de agosto de 2026; además, una persona ocupada y una persona equivalente no son la misma unidad. Las comparaciones no ajustan esas diferencias por fecha, impuestos ni tamaño del hogar.
+      </div>
+      <p class="mt-3 text-xs text-base-content/45">
+        En la ESI 2025, {fmtPorcentaje(esi.porcentaje_1m_o_mas)} de las personas ocupadas recibió $1.000.000 o más y {fmtPorcentaje(esi.porcentaje_3m_o_mas)} recibió $3.000.000 o más. <SRef id={esi.fuente.id} />
+      </p>
+    </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <Scale class="h-5 w-5 text-primary shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Sueldo bruto del Presidente por gobierno</h2>
       </div>
-      <p class="text-sm text-base-content/60 mb-3">
-        Desde el 11 de marzo de 2026 rige el nuevo sistema de la Comisión para la Fijación de Remuneraciones (Ley 21.233).
-        Bajo Kast, la dieta presidencial quedó en torno a los $11 millones brutos mensuales <SRef n={5} /><SRef n={9} /><SRef n={10} />.
+      <p class="text-sm text-base-content/60 mb-4">
+        Montos brutos mensuales del registro o de la fuente histórica indicada. Para Kast se muestra el último registro CFR disponible, no solo la dieta legal. <SRef id="cfr-registro-publico-38bis" /><SRef id="cfr-oficio-n26-2025" />
       </p>
       <div class="grid gap-4 md:grid-cols-2">
         {presidentes.map((p) => (
-          <div class="rounded-xl border border-base-300 bg-base-200/50 p-4">
+          <article class="rounded-xl border border-base-300 bg-base-200/50 p-4">
             <div class="flex items-baseline justify-between gap-2">
               <span class="font-semibold text-base-content">{p.presidente}</span>
               <span class="text-xs text-base-content/60 whitespace-nowrap">{p.periodo}</span>
             </div>
-            <div class="text-lg font-bold tabular-nums text-base-content mt-1">{formatCLP(p.sueldo)}</div>
+            <div class="text-lg font-bold tabular-nums text-base-content mt-1">{formatCLP(p.sueldo)} <span class="text-xs font-normal text-base-content/50">brutos / mes</span></div>
+            <p class="text-[11px] text-base-content/55 mt-0.5">{p.fecha_label}</p>
             {p.vigencias.length > 1 && (
-              <p class="text-[11px] text-base-content/50 tabular-nums mt-0.5">
-                Montos del mandato: {p.vigencias.map((v) => formatCLP(v.monto)).join(' → ')}
-              </p>
+              <details class="mt-4 rounded-xl border border-base-300/70 bg-base-200/30 p-3 text-xs">
+                <summary class="flex cursor-pointer list-none items-center justify-between gap-2 rounded-lg px-1 py-1.5 font-medium text-primary transition-colors hover:bg-base-200/70 [&::-webkit-details-marker]:hidden">
+                  <span>Montos y ventanas conocidas</span>
+                  <span class="text-[10px] font-normal text-base-content/45">ver detalle</span>
+                </summary>
+                <ul class="mt-3 space-y-3 border-t border-base-300/70 pt-3">
+                  {p.vigencias.map((v) => (
+                    <li class="min-w-0 rounded-r-lg border-l-2 border-base-300 bg-base-100/40 py-2.5 pl-3 pr-2">
+                      <div class="grid grid-cols-1 gap-1 sm:grid-cols-[minmax(0,1fr)_auto] sm:items-start sm:gap-x-3">
+                        <div class="min-w-0">
+                          <span class="block text-[11px] font-medium text-base-content/75">{tipoVigencia(v.tipo)}</span>
+                          <span class="mt-0.5 block text-[10px] text-base-content/45">{fmtVigencia(v)}</span>
+                        </div>
+                        <span class="text-sm font-semibold tabular-nums text-base-content sm:text-right">{formatCLP(v.monto)}</span>
+                      </div>
+                      <p class="mt-2 min-w-0 break-words text-[11px] leading-relaxed text-base-content/60">
+                        {v.descripcion} <span class="sueldos-inline-ref"><SRef id={v.fuente} /></span>
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </details>
             )}
-            <p class="text-xs text-base-content/70 leading-relaxed mt-2">{p.detalle}</p>
-            <p class="text-[11px] text-base-content/40 mt-2">
-              Fuentes:{' '}
-              {p.refs.map((n) => (
-                <SRef n={n} />
-              ))}
+            <p class="text-xs text-base-content/70 leading-relaxed mt-3">{p.detalle}</p>
+            <p class="mt-2 flex flex-wrap items-center gap-x-1 gap-y-1 text-[11px] leading-relaxed text-base-content/40">
+              <span>Fuentes:</span>
+              {p.refs.map((id) => <SRef id={id} />)}
             </p>
-          </div>
+          </article>
         ))}
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        Montos brutos mensuales por período (Transparencia, prensa verificada y Comisión). No comparables entre años sin ajustar por IPC.
+        Los montos de distintos años no son comparables sin ajustar por IPC. La diferencia entre la dieta legal de Kast y el último registro se muestra como {formatCLP(brecha.presidente.diferencia_legal)}.
       </p>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-primary shrink-0" />
-        <h2 class="text-lg font-semibold text-base-content">¿Cuántos sueldos mínimos gana el Presidente?</h2>
+        <h2 class="text-lg font-semibold text-base-content">¿Cuántos ingresos mínimos contemporáneos?</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Dieta presidencial frente al ingreso mínimo vigente.
+        Cada ratio usa el sueldo de la fecha de referencia y el ingreso mínimo vigente en esa fecha, no un mes posterior arbitrario. <SRef id="bcn-leychile-ley-21830" />
       </p>
       <div class="space-y-4">
         {ratios.map((r) => {
@@ -126,109 +248,68 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
           const width = Math.min(100, Math.round((r.veces / maxVeces) * 100));
           return (
             <div>
-              <div class="flex justify-between text-sm mb-1">
+              <div class="flex justify-between text-sm mb-1 gap-3">
                 <span class="font-medium text-base-content">Gobierno de {r.gobierno}</span>
-                <span class="tabular-nums text-base-content/70">{fmtDecimal(r.veces)} veces el sueldo mínimo</span>
+                <span class="tabular-nums text-base-content/70 whitespace-nowrap">{fmtDecimal(r.veces)} veces</span>
               </div>
               <div class="h-5 bg-base-200 rounded-full overflow-hidden" aria-hidden="true">
-                <div
-                  class={`h-full rounded-full ${r.gobierno === 'Kast' ? 'bg-primary' : 'bg-neutral/60'}`}
-                  style={`width: ${width}%`}
-                ></div>
+                <div class={`h-full rounded-full ${r.gobierno === 'Kast' ? 'bg-primary' : 'bg-neutral/60'}`} style={`width: ${width}%`}></div>
               </div>
-              <p class="text-xs text-base-content/40 mt-1">Divisor: {r.divisor}</p>
+              <p class="text-[11px] text-base-content/45 mt-1">Divisor: {r.divisor}</p>
             </div>
           );
         })}
       </div>
       <div class="mt-4 p-3 rounded-lg bg-base-200 border border-base-300 text-sm text-base-content/70">
-        La dieta de Kast equivale a <span class="font-semibold">{ratioKastVecesRedondeado} veces</span> el sueldo mínimo vigente
-        (según el monto de $11.070.064 fijado por la comisión autónoma <SRef n={5} /><SRef n={10} />). La base bruta de Boric (~$7 millones) equivalía a
-        <span class="font-semibold"> unas {ratioBoricVecesRedondeado} veces</span> el mínimo vigente en 2025 <SRef n={7} />.
-        Históricamente el ratio fue mayor: en la década de 2010 la dieta presidencial equivalía a entre {ratio2010sTexto.min} y {ratio2010sTexto.max}
-        sueldos mínimos ({ratio2010sTexto.detalle} <SRef n={23} />), en parte porque el sueldo mínimo partía de valores más bajos.
-        En 2006–2010 el ratio llegó a {ratioBacheletITexto} (Bachelet I <SRef n={22} />), cuando el mínimo vigente era de $165.000 (desde julio de 2009).
+        El último registro de Kast equivale a <span class="font-semibold">{fmtDecimal(brecha.presidente.veces_imm)} veces</span> el ingreso mínimo bruto de {formatCLP(imm.categorias[0].monto)} vigente desde {fmtFecha(imm.desde)}. La dieta legal ({formatCLP(legalDiet)}) habría sido {fmtDecimal(ratioLegalKast)} veces el mínimo vigente en marzo de 2026. La base observada de Boric (~$7 millones) equivalía a <span class="font-semibold">{ratioBoricVecesRedondeado} veces</span> el mínimo de 2025. En la década de 2010 el rango fue de {ratio2010sTexto.min} a {ratio2010sTexto.max} ({ratio2010sTexto.detalle}); en 2006–2010 llegó a {ratioBacheletITexto}.
       </div>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-primary shrink-0" />
-        <h2 class="text-lg font-semibold text-base-content">Indicadores económicos por gobierno (seguimiento)</h2>
+        <h2 class="text-lg font-semibold text-base-content">Indicadores de referencia por gobierno</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        UTM y UF de enero del primer año de cada mandato, IPC del año de inicio y acumulado del período (INE, Banco Central, SII
-        <SRef n={50} /><SRef n={51} /><SRef n={41} /><SRef n={49} />).
+        UTM y UF corresponden a enero del primer año del mandato. Para los años 1994 y 2000 se contrastan con las series históricas del SII <SRef id="sii-utm-1994" /><SRef id="sii-uf-1994" />. El IPC se calcula entre dos índices mensuales del BDE, <em>(índice final ÷ índice inicial − 1)</em>; no es una suma de tasas anuales. La serie anual histórica del BDE se conserva como contexto, no como cálculo de los ratios <SRef id="bcentral-bde-ipc-varacion-anual-historica" /><SRef id="bcentral-bde-ipc-empalmado-base-2023" />.
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
           <thead>
             <tr class="border-b border-base-300">
               <th class="text-left py-2 px-3 font-medium text-base-content/80">Gobierno</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">UTM (ene, año 1°)</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">UF (ene, año 1°)</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">IPC año inicio</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">IPC acumulado mandato</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">UTM</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">UF</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">IPC entre fechas</th>
+              <th class="text-left py-2 px-3 font-medium text-base-content/80">Ventana</th>
             </tr>
           </thead>
           <tbody>
             {indicadores.map((i) => (
               <tr class={`border-b border-base-300 ${i.gobierno === 'Kast' ? 'bg-primary/10' : ''}`}>
-                <td class="py-2 px-3 text-base-content font-medium">
-                  {i.gobierno}
-                  <span class="text-base-content/40 font-normal"> · {i.periodo}</span>
-                </td>
+                <td class="py-2 px-3 text-base-content font-medium">{i.gobierno}<span class="block text-[10px] text-base-content/40 font-normal">{i.periodo}</span></td>
                 <td class="py-2 px-3 text-right tabular-nums">{formatCLP(i.utm)}</td>
                 <td class="py-2 px-3 text-right tabular-nums">${i.uf.toLocaleString('es-CL')}</td>
-                <td class="py-2 px-3 text-right tabular-nums">{fmtDecimal(i.ipc_anual)}%</td>
-                <td class="py-2 px-3 text-right tabular-nums font-medium">
-                  {i.ipc_acumulado ? `${fmtDecimal(i.ipc_acumulado)}%` : '—'}
-                </td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium">{i.ipc_periodo === null ? '—' : fmtPorcentaje(i.ipc_periodo)}</td>
+                <td class="py-2 px-3 text-xs text-base-content/60">{fmtMes(i.ipc_inicio_fecha)} → {fmtMes(i.ipc_fin_fecha)}<span class="block text-[10px] text-base-content/40">{i.nota}</span></td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
-      <div class="mt-5 space-y-3">
-        <p class="text-xs font-medium text-base-content/60 uppercase tracking-wide">Inflación acumulada del mandato (%)</p>
-        {(() => {
-          const maxAcum = Math.max(...indicadores.map((x) => x.ipc_acumulado ?? 0));
-          return indicadores.map((i) => {
-          const width = i.ipc_acumulado ? Math.max(3, Math.round((i.ipc_acumulado / maxAcum) * 100)) : 3;
-          return (
-            <div>
-              <div class="flex justify-between text-sm mb-1">
-                <span class="font-medium text-base-content">Gobierno de {i.gobierno}</span>
-                <span class="tabular-nums text-base-content/70">{i.ipc_acumulado ? `${fmtDecimal(i.ipc_acumulado)}%` : 'en curso'}</span>
-              </div>
-              <div class="h-4 bg-base-200 rounded-full overflow-hidden" aria-hidden="true">
-                <div
-                  class={`h-full rounded-full ${i.ipc_acumulado && i.ipc_acumulado >= 25 ? 'bg-warning/80' : 'bg-primary'}`}
-                  style={`width: ${width}%`}
-                ></div>
-              </div>
-              <p class="text-xs text-base-content/40 mt-0.5">{i.nota}</p>
-            </div>
-          );
-          });
-        })()}
-      </div>
-      <p class="text-xs text-base-content/40 mt-3">
-        UTM y UF se reajustan por IPC. Para convertir montos históricos, ver la calculadora del INE <SRef n={32} />.
+      <p class="text-xs text-base-content/45 mt-3">
+        Como contexto, los cierres anuales publicados fueron 3,5% en 2025, 4,5% en 2024, 3,0% en 2013 y −1,4% en 2009. No se multiplican para calcular los cambios de la tabla, que usan endpoints mensuales del BDE. <SRef id="ine-2026-01-08-ipc-diciembre-2025" /><SRef id="latercera-pulso-ipc-diciembre-2024" /><SRef id="eldinamo-2014-01-08-ipc-diciembre-2013" /><SRef id="cooperativa-2010-01-07-ipc-2009-deflacion" />
       </p>
+      <p class="text-xs text-base-content/40 mt-3">Para convertir montos históricos se usa la serie empalmada del BDE, base {d.ipc.base}.</p>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-primary shrink-0" />
-        <h2 class="text-lg font-semibold text-base-content">Sueldo presidencial en pesos de hoy (ajustado por IPC)</h2>
+        <h2 class="text-lg font-semibold text-base-content">Sueldo presidencial en pesos de hoy (ajuste por IPC)</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Dietas en pesos de <strong>julio de 2026</strong> (IPC: <em>sueldo × (IPC jul-2026 ÷ IPC del mes)</em> <SRef n={45} />).
-        Se ve el salto de la Ley 19.863 (2003) — del tope EUS (Frei ~$1,36M; Lagos ~2.440 USD en 2001 <SRef n={47} />) al 150% de ese grado (Lagos
-        $5.229.000 en 2004 <SRef n={46} />) —, la rebaja de 2020 (Ley 21.233) y la re-fijación de 2026: en pesos de hoy, Frei ~${freiAjustadoMillones} millones; Lagos ~${lagosAjustadoMillones}
-        millones; 2006–2022, entre ${millonesRangoPrevios.min} y ${millonesRangoPrevios.max} millones; Boric ~${boricAjustadoMillones} millones y
-        Kast ~${kastAjustadoMillones} millones.
+        Dietas expresadas en pesos de <strong>{ipcDestinoLabel}</strong>, mediante <em>sueldo × (IPC destino ÷ IPC del mes de referencia)</em> <SRef id="bcentral-bde-ipc-empalmado-base-2023" />. La calculadora del INE permite reproducir estas conversiones <SRef id="ine-calculadora-ipc" />. El ajuste conserva la magnitud de cada observación; no corrige diferencias de cobertura ni entre bruto y neto.
       </p>
       <div class="space-y-4">
         {sueldosAjustados.map((s) => {
@@ -243,22 +324,18 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
                 </div>
                 <div class="text-right">
                   <div class="text-sm font-bold tabular-nums text-base-content">{formatCLP(s.ajustado)}</div>
-                  <div class="text-[11px] text-base-content/40 tabular-nums">en pesos de jul-2026</div>
+                  <div class="text-[11px] text-base-content/40">en pesos de {ipcDestinoLabel}</div>
                 </div>
               </div>
               <div class="space-y-1.5">
                 <div class="flex items-center gap-2">
                   <span class="w-20 text-[11px] text-base-content/40 shrink-0">Real (IPC)</span>
-                  <div class="h-4 bg-base-200 rounded-full overflow-hidden flex-1" aria-hidden="true">
-                    <div class="h-full rounded-full bg-primary" style={`width: ${widthAjustado}%`}></div>
-                  </div>
+                  <div class="h-4 bg-base-200 rounded-full overflow-hidden flex-1" aria-hidden="true"><div class="h-full rounded-full bg-primary" style={`width: ${widthAjustado}%`}></div></div>
                   <span class="text-xs tabular-nums text-base-content/70 w-28 text-right shrink-0">{formatCLP(s.ajustado)}</span>
                 </div>
                 <div class="flex items-center gap-2">
                   <span class="w-20 text-[11px] text-base-content/40 shrink-0">Nominal</span>
-                  <div class="h-4 bg-base-200 rounded-full overflow-hidden flex-1" aria-hidden="true">
-                    <div class="h-full rounded-full bg-neutral/60" style={`width: ${widthNominal}%`}></div>
-                  </div>
+                  <div class="h-4 bg-base-200 rounded-full overflow-hidden flex-1" aria-hidden="true"><div class="h-full rounded-full bg-neutral/60" style={`width: ${widthNominal}%`}></div></div>
                   <span class="text-xs tabular-nums text-base-content/60 w-28 text-right shrink-0">{formatCLP(s.sueldo)}</span>
                 </div>
               </div>
@@ -267,10 +344,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         })}
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        Escala según el máximo real ({formatCLP(maxAjustado)} en pesos de julio 2026). Para Kast se usa la dieta
-        fijada de $11.070.064 (con el Registro de mayo 2026 sería {formatCLP(registroMayoAjustado)}). Frei es estimado (sin
-        registro oficial 1994-2000 <SRef n={47} />). La dieta real de Kast es
-        <span class="font-medium">{pctInferiorKast}% inferior</span> al promedio real 2006–2022 ({formatCLP(promedioPrevios)}).
+        Escala según el máximo real ({formatCLP(maxAjustado)}). El promedio de {formatCLP(promedioPrevios)} es el promedio de cuatro observaciones puntuales de 2006–2022, no una serie completa de salarios. La observación de Kast queda {pctInferiorKast}% por debajo de ese promedio; la dieta legal y el registro CFR se mantienen separados ({formatCLP(legalDiet)} frente a {formatCLP(actualPresidente.sueldo)}).
       </p>
     </section>
 
@@ -280,79 +354,77 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         <h2 class="text-lg font-semibold text-base-content">Bruta mensual del Presidente, mes a mes (Registro Público 38 bis)</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Bruta mensual reportada al Registro Público (CFR, desde ene-2025). Picos de Boric = bono por metas ($10.046.124); marzo de 2026 es proporcional (asunción 11/03);
-        desde abril rige la dieta nueva. Salto febrero→abril 2026: +{saltoFebAbr}%.
+        Registro autorreportado por cada institución, consultado el 25 de septiembre de 2026 y disponible desde enero de 2025. Los puntos dorados son pagos por metas; marzo de 2026 es proporcional por la asunción del 11 de marzo. <SRef id={serie_registro_publico.fuente.id} />
       </p>
       <figure class="overflow-x-auto">
         <svg viewBox={`0 0 ${CH.W} ${CH.H}`} class="w-full min-w-[640px]" role="img" aria-labelledby="chart-tl-title chart-tl-desc">
-          <title id="chart-tl-title">Remuneración bruta mensual del Presidente de la República, enero 2025 – junio 2026</title>
-          <desc id="chart-tl-desc">Boric percibió $7.033.974 brutos mensuales, con pagos de $10.046.124 en meses de bono por metas (marzo, junio, septiembre y diciembre). Desde abril de 2026, Kast percibe $11.304.748 (junio: $11.308.034). Marzo 2026 fue proporcional por la asunción del 11 de marzo.</desc>
-          {/* zona de gobierno Kast */}
+          <title id="chart-tl-title">{chartTitle}</title>
+          <desc id="chart-tl-desc">{chartDesc}</desc>
           <rect x={xTrans} y={CH.mT} width={CH.W - CH.mR - xTrans} height={CH.H - CH.mT - CH.mB} class="fill-primary/5" />
-          {/* grilla + labels Y */}
           {chartGrid.map((v) => (
             <g>
               <line x1={CH.mL} x2={CH.W - CH.mR} y1={chY(v)} y2={chY(v)} class="stroke-base-300/60" stroke-dasharray="2 4" />
-              <text x={CH.mL - 8} y={chY(v) + 3} text-anchor="end" class="fill-base-content/50" font-size="10">${v / 1_000_000}M</text>
+              <text x={CH.mL - 8} y={chY(v) + 3} text-anchor="end" class="fill-base-content/50" font-size="10">{fmtMillones(v)}</text>
             </g>
           ))}
-          {/* línea de transición de gobierno */}
           <line x1={xTrans} x2={xTrans} y1={CH.mT - 4} y2={CH.H - CH.mB} class="stroke-warning/70" stroke-dasharray="4 3" />
-          <text x={xTrans + 5} y={CH.mT + 8} class="fill-warning text-[10px] font-medium">11-mar-2026</text>
-          {/* serie */}
+          <text x={xTrans + 5} y={CH.mT + 8} class="fill-warning text-[10px] font-medium">nuevo gobierno</text>
           <path d={seriePath} fill="none" class="stroke-base-content/35" stroke-width="2" />
-          {serie.map((p, i) => {
-            const esKast = p.gobierno === 'Kast';
-            const bono = Boolean(p.nota && p.nota.startsWith('Bono'));
-            return (
-              <g>
-                {bono && <circle cx={chX(i)} cy={chY(p.monto)} r={7.5} fill="none" class="stroke-warning/70" stroke-width="1.5" />}
-                <circle cx={chX(i)} cy={chY(p.monto)} r={4} class={esKast ? 'fill-primary' : 'fill-neutral/70'}>
-                  <title>{`${labelPeriodo(p.periodo)} · ${p.gobierno} · ${formatCLP(p.monto)}${p.nota ? ` (${p.nota})` : ''}`}</title>
-                </circle>
-              </g>
-            );
-          })}
-          {/* etiquetas de valor en puntos clave */}
-          <text x={chX(0)} y={chY(serie[0].monto) - 12} text-anchor="start" class="fill-base-content/70" font-size="9">$7.033.974</text>
-          <text x={chX(iTrans - 1)} y={chY(serie[iTrans - 1].monto) - 12} text-anchor="middle" class="fill-base-content/70" font-size="9">$10.046.124</text>
-          <text x={chX(iTrans)} y={chY(serie[iTrans].monto) + 16} text-anchor="middle" class="fill-base-content/70" font-size="9">$7.536.499 (prop.)</text>
-          <text x={chX(iTrans + 1)} y={chY(serie[iTrans + 1].monto) - 11} text-anchor="middle" class="fill-base-content/80 font-semibold" font-size="9">$11.304.748</text>
+          {serie.map((p, i) => (
+            <g>
+              {p.tipo === 'bono' && <circle cx={chX(i)} cy={chY(p.monto)} r={7.5} fill="none" class="stroke-warning/70" stroke-width="1.5" />}
+              <circle cx={chX(i)} cy={chY(p.monto)} r={4} class={p.gobierno === 'Kast' ? 'fill-primary' : 'fill-neutral/70'}>
+                <title>{`${fmtPeriodo(p.periodo)} · ${p.gobierno} · ${formatCLP(p.monto)}${p.nota ? ` (${p.nota})` : ''}`}</title>
+              </circle>
+            </g>
+          ))}
+          <text x={chX(0)} y={chY(serie[0].monto) - 12} text-anchor="start" class="fill-base-content/70" font-size="9">{formatCLP(serie[0].monto)}</text>
+          {puntoAnterior && <text x={chX(iTrans - 1)} y={chY(puntoAnterior.monto) - 12} text-anchor="middle" class="fill-base-content/70" font-size="9">{formatCLP(puntoAnterior.monto)}</text>}
+          {puntoTransicion && <text x={chX(iTrans)} y={chY(puntoTransicion.monto) + 16} text-anchor="middle" class="fill-base-content/70" font-size="9">{formatCLP(puntoTransicion.monto)} (prop.)</text>}
+          {puntoKastCompleto && <text x={chX(iTrans + 1)} y={chY(puntoKastCompleto.monto) - 11} text-anchor="middle" class="fill-base-content/80 font-semibold" font-size="9">{formatCLP(puntoKastCompleto.monto)}</text>}
           <text x={chX(serie.length - 1)} y={chY(serie[serie.length - 1].monto) - 12} text-anchor="end" class="fill-base-content/80 font-semibold" font-size="9">{formatCLP(serie[serie.length - 1].monto)}</text>
-          {/* eje X */}
           <line x1={CH.mL} x2={CH.W - CH.mR} y1={CH.H - CH.mB} y2={CH.H - CH.mB} class="stroke-base-300" />
           {chartTicks.map((i) => (
-            <text x={chX(i)} y={CH.H - CH.mB + 14} text-anchor="middle" class="fill-base-content/50" font-size="9">{labelPeriodo(serie[i].periodo)}</text>
+            <text x={chX(i)} y={CH.H - CH.mB + 14} text-anchor="middle" class="fill-base-content/50" font-size="9">{fmtPeriodo(serie[i].periodo)}</text>
           ))}
         </svg>
         <figcaption class="flex flex-wrap items-center gap-x-4 gap-y-1 mt-3 text-[11px] text-base-content/50">
-          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full bg-neutral/70"></span> Gobierno Boric</span>
-          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full bg-primary"></span> Gobierno Kast</span>
-          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full border-2 border-warning/70"></span> Mes con bono por metas ($10.046.124)</span>
-          <span>Eje vertical truncado en $6,5M para visibilizar las variaciones.</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full bg-neutral/70"></span> Boric</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full bg-primary"></span> Kast</span>
+          <span class="inline-flex items-center gap-1.5"><span class="inline-block h-2.5 w-2.5 rounded-full border-2 border-warning/70"></span> bono por metas ({bonoPuntos.length} meses)</span>
+          <span>Eje truncado en {formatCLP(yMinChart)} para visibilizar las variaciones.</span>
         </figcaption>
       </figure>
       <p class="text-xs text-base-content/40 mt-3">
-        Base Boric $7.033.974, con bono trimestral a $10.046.124 (mar, jun, sep, dic). La dieta Kast supera en +{saltoFebAbr}% la base sin bono de feb-2026 y
-        en ~13% los meses con bono. Fuente: <SRef n={28} />.
+        La serie termina en {fmtPeriodo(serie[serie.length - 1].periodo)} con {formatCLP(serie[serie.length - 1].monto)}. El salto entre el último punto de Boric y el primer mes completo de Kast es {fmtPorcentaje(saltoFebAbr)}. Fuente: <SRef id={serie_registro_publico.fuente.id} />.
       </p>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <DollarSign class="h-5 w-5 text-primary shrink-0" />
-        <h2 class="text-lg font-semibold text-base-content">Sueldo mínimo (Ingreso Mínimo Mensual) por gobierno</h2>
+        <h2 class="text-lg font-semibold text-base-content">Ingreso mínimo mensual por tramo</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-3">
-        Bruto mensual (18–65 años) según leyes de reajuste (serie completa 1958–2027 <SRef n={1} />).
+        La Ley 21.830 fija tres categorías desde el {fmtFecha(imm.desde)}. Son montos brutos mensuales y no deben confundirse con un promedio de ingresos. <SRef id={imm.fuente.id} /> El anexo histórico de sueldos se conserva como referencia secundaria para contrastar la serie resumida desde 1994 <SRef id="wikipedia-anexo-salario-minimo" />.
       </p>
+      <div class="grid gap-3 sm:grid-cols-3 mb-5">
+        {imm.categorias.map((c) => (
+          <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+            <p class="text-xs text-base-content/60">{c.etiqueta}</p>
+            <p class="text-lg font-bold tabular-nums mt-1">{formatCLP(c.monto)}</p>
+            <p class="text-[11px] text-base-content/45">{imm.unidad}</p>
+          </div>
+        ))}
+      </div>
+      <p class="text-xs text-base-content/50 mb-3">La tabla histórica cubre los tramos 1994–mayo de 2026; “gobierno” identifica el gobierno vigente cuando se fijó el tramo.</p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
           <thead>
             <tr class="border-b border-base-300">
               <th class="text-left py-2 px-3 font-medium text-base-content/80">Desde</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">Monto</th>
-              <th class="text-left py-2 px-3 font-medium text-base-content/80">Gobierno</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Monto 18–65</th>
+              <th class="text-left py-2 px-3 font-medium text-base-content/80">Gobierno vigente</th>
               <th class="text-left py-2 px-3 font-medium text-base-content/80">Norma</th>
             </tr>
           </thead>
@@ -369,47 +441,69 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
         </table>
       </div>
       <p class="text-xs text-base-content/40 mt-3">
-        El reajuste de mayo de 2026 ($553.553) fue despachado por el Senado el 16 de junio de 2026 (Ley 21.830 <SRef n={2} />) tras una
-        negociación sin acuerdo con la CUT, que pedía cerca de $637.000 <SRef n={3} /><SRef n={4} />. Desde enero de 2027 el IMM se reajustará por IPC.
+        La negociación de 2026 resultó en un incremento final de {formatCLP(imm.categorias[0].monto - sueldo_minimo[1].monto)} desde el tramo anterior; la propuesta de la CUT y la discusión pública están documentadas por <SRef id="infobae-2026-05-13-reajuste-salario-minimo" /><SRef id="radio-uchile-2026-04-29-cut-rechaza-reajuste-minimo" /><SRef id="senado-2026-06-16-reajuste-ingreso-minimo-mensual" />. Desde enero de 2027, el IMM de 18–65 años se reajusta por IPC según la misma ley.
       </p>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <BookOpen class="h-5 w-5 text-primary shrink-0" />
-        <h2 class="text-lg font-semibold text-base-content">Canasta familiar y costo de vida</h2>
+        <h2 class="text-lg font-semibold text-base-content">Costo de vida y líneas de pobreza</h2>
       </div>
-      <div class="prose prose-sm max-w-none text-base-content/80 space-y-3">
-        <p>
-          En Chile se usan dos referencias de canasta: la <strong>Canasta Básica de Alimentos</strong> (INE / Ministerio de
-          Desarrollo Social <SRef n={20} />), base de las líneas de pobreza, y la <strong>Canasta Familiar</strong> que publica
-          trimestralmente la Fiscalía Nacional Económica (FNE <SRef n={21} />) para una familia de cuatro personas, junto al
-          "sueldo ideal" que permitiría cubrirla.
-        </p>
-        <p>
-          La discusión del reajuste del sueldo mínimo en 2026 giró en torno a esa brecha. En el debate del Senado
-          (16/06/2026), senadores de diversos sectores sostuvieron que el incremento aprobado "es incapaz de ganarle a la
-          inflación acumulada y al valor de los servicios más básicos" y que "es incapaz de cubrir las necesidades de las
-          familias".
-        </p>
-        <p>
-          La CUT rechazó la propuesta del gobierno —que ofrecía un alza cercana a $23.000 por IPC— y planteó un sueldo mínimo
-          de <span class="font-medium">alrededor de $637.000</span> <SRef n={3} /><SRef n={4} />, argumentando que "hoy día las cosas son más caras en el mes de
-          abril que en el mes de enero" y que el sueldo mínimo tiene "menos poder adquisitivo por el alza del petróleo".
-          Referencias de contexto: la inflación acumulada de 2025 fue de 3,5% (INE <SRef n={18} />) y la PGU máxima pasó a $250.275 desde
-          febrero de 2026 (ChileAtiende <SRef n={19} />), es decir, cerca del 45% de un sueldo mínimo.
-        </p>
-        <div class="p-3 rounded-lg bg-warning/15 border border-warning/40 text-base-content text-sm">
-          <strong>Nota:</strong> no publicamos montos puntuales 2025–2026 de ambas canastas por falta de fuente verificable; ver fuentes oficiales abajo.
+      <p class="text-sm text-base-content/60 mb-4">
+        El Observatorio Social publica mensualmente la CBA y las líneas de pobreza bajo la metodología 2024. Los montos de {costoVida.periodo} están en {costoVida.unidad}. <SRef id={costoVida.fuente.id} />
+      </p>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+        {umbralesCostoVida.map((u) => (
+          <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+            <p class="text-xs text-base-content/60 min-h-8">{u.etiqueta}</p>
+            <p class="text-lg font-bold tabular-nums mt-2">{formatCLP(u.monto)}</p>
+            <p class="text-[11px] text-base-content/45">{u.unidad}</p>
+          </div>
+        ))}
+      </div>
+      <div class="mt-4 rounded-xl border border-base-300 bg-base-200/40 p-4 text-sm text-base-content/70">
+        {costoVida.nota} La línea de pobreza no arrendatario es la referencia usada en la tabla de brecha; la línea de arrendatario incluye el costo de arriendo y no es intercambiable con ella. Como referencia adicional, la PGU es una transferencia y no una remuneración: sus topes de febrero de 2026 fueron $250.275 y $231.732 <SRef id="chileatiende-pgu-aumento-febrero-2026" />.
+      </div>
+    </section>
+
+    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <div class="flex items-center gap-2 mb-3">
+        <BookOpen class="h-5 w-5 text-primary shrink-0" />
+        <h2 class="text-lg font-semibold text-base-content">Contexto de ingresos de hogares (CASEN 2024)</h2>
+      </div>
+      <p class="text-sm text-base-content/60 mb-4">
+        El informe oficial de {casen.periodo} publica promedios de ingresos de hogares y de subgrupos, no medianas. Se muestran separados para no confundirlos con una remuneración individual. <SRef id={casen.fuente.id} />
+      </p>
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+          <p class="text-xs text-base-content/60">Promedio del ingreso del trabajo del hogar</p>
+          <p class="text-xl font-bold tabular-nums mt-2">{formatCLP(casen.promedio_ingreso_trabajo_hogar)}</p>
+          <p class="text-[11px] text-base-content/45 mt-1">total del hogar</p>
+        </div>
+        <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+          <p class="text-xs text-base-content/60">Promedio del ingreso autónomo del hogar</p>
+          <p class="text-xl font-bold tabular-nums mt-2">{formatCLP(casen.promedio_ingreso_autonomo_hogar)}</p>
+          <p class="text-[11px] text-base-content/45 mt-1">total del hogar</p>
+        </div>
+        <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+          <p class="text-xs text-base-content/60">Promedio del ingreso monetario del hogar</p>
+          <p class="text-xl font-bold tabular-nums mt-2">{formatCLP(casen.promedio_ingreso_monetario_hogar)}</p>
+          <p class="text-[11px] text-base-content/45 mt-1">incluye subsidios monetarios</p>
+        </div>
+        <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+          <p class="text-xs text-base-content/60">Promedio de ingreso autónomo per cápita · decil X</p>
+          <p class="text-xl font-bold tabular-nums mt-2">{formatCLP(casen.promedio_ingreso_autonomo_per_capita_decil_x)}</p>
+          <p class="text-[11px] text-base-content/45 mt-1">subgrupo de hogares de mayores ingresos</p>
         </div>
       </div>
+      <p class="text-xs text-base-content/40 mt-3">{casen.nota}</p>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-semibold text-base-content mb-3">Topes salariales fijados por Dipres</h2>
       <p class="text-sm text-base-content/60 mb-3">
-        Límites de remuneración para asesores de confianza definidos por el Oficio Circular N°15 de la Dipres, firmado por
-        el ministro de Hacienda <span class="font-medium">{d.topes_dipres.firmante}</span> <SRef n={17} />.
+        Instantánea publicada por The Clinic sobre el instructivo vigente desde {fmtFecha(d.topes_dipres.vigencia_desde)}. No es una serie de remuneraciones observadas cargo por cargo. <SRef id={topesFuenteId} />
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
@@ -426,12 +520,8 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
               <tr class="border-b border-base-300">
                 <td class="sticky left-0 bg-base-100 py-2 px-3 text-base-content">{t.rango}</td>
                 <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(t.tope_kast)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-base-content/60">
-                  {t.tope_boric ? formatCLP(t.tope_boric) : '—'}
-                </td>
-                <td class="py-2 px-3 text-right tabular-nums text-error font-medium">
-                  {t.tope_boric ? `+${pctDiff(t.tope_kast, t.tope_boric)}%` : '—'}
-                </td>
+                <td class="py-2 px-3 text-right tabular-nums text-base-content/60">{t.tope_boric ? formatCLP(t.tope_boric) : '—'}</td>
+                <td class="py-2 px-3 text-right tabular-nums text-error font-medium">{t.tope_boric ? `+${pctDiff(t.tope_kast, t.tope_boric)}%` : '—'}</td>
               </tr>
             ))}
           </tbody>
@@ -441,9 +531,7 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-semibold text-base-content mb-3">Comparación cargo a cargo ({d.segundo_piso.periodo_label})</h2>
-      <p class="text-sm text-base-content/60 mb-3">
-        {d.segundo_piso.nota} <SRef n={16} />
-      </p>
+      <p class="text-sm text-base-content/60 mb-3">{d.segundo_piso.nota} <SRef id={segundoPisoFuenteId} /></p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
           <thead>
@@ -464,60 +552,41 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
                 <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(c.kast.sueldo)}</td>
                 <td class="py-2 px-3 text-base-content/60">{c.boric.nombre}</td>
                 <td class="py-2 px-3 text-right tabular-nums text-base-content/60">{formatCLP(c.boric.sueldo)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-error font-medium">
-                  +{pctDiff(c.kast.sueldo, c.boric.sueldo)}%
-                </td>
+                <td class="py-2 px-3 text-right tabular-nums text-error font-medium">+{pctDiff(c.kast.sueldo, c.boric.sueldo)}%</td>
               </tr>
             ))}
           </tbody>
           <tfoot>
             <tr class="border-t-2 border-base-300 font-bold">
-              <td class="py-2 px-3" colspan={2}>Promedio</td>
-              <td class="py-2 px-3 text-right tabular-nums">
-                {formatCLP(Math.round(cargos.reduce((s, c) => s + c.kast.sueldo, 0) / cargos.length))}
-              </td>
+              <td class="py-2 px-3" colspan={2}>Promedio de la muestra</td>
+              <td class="py-2 px-3 text-right tabular-nums">{formatCLP(promedioSegundoPisoKast)}</td>
               <td class="py-2 px-3" colspan={2}></td>
-              <td class="py-2 px-3 text-right tabular-nums text-error">
-                +{pctDiff(
-                  cargos.reduce((s, c) => s + c.kast.sueldo, 0) / cargos.length,
-                  cargos.reduce((s, c) => s + c.boric.sueldo, 0) / cargos.length
-                )}%
-              </td>
+              <td class="py-2 px-3 text-right tabular-nums text-error">+{fmtPorcentaje(cambioPromedioSegundoPiso)}</td>
             </tr>
           </tfoot>
         </table>
       </div>
+      <p class="text-xs text-base-content/45 mt-3">
+        El cambio del promedio de remuneraciones es {fmtPorcentaje(cambioPromedioSegundoPiso)}; el promedio de los cambios porcentuales individuales es {fmtPorcentaje(promedioCambiosSegundoPiso)}. Son métricas distintas y esta tabla es una instantánea de abril de 2026.
+      </p>
     </section>
 
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
-      <h2 class="text-lg font-semibold text-base-content mb-3">Contexto</h2>
+      <h2 class="text-lg font-semibold text-base-content mb-3">Contexto legal e institucional</h2>
       <div class="prose prose-sm max-w-none text-base-content/80 space-y-3">
         <p>
-          El 17 de marzo de 2026, la Dipres emitió el Oficio Circular N°15 que fijó los nuevos topes salariales
-          para asesores estratégicos del Presidente y ministros. La medida fue firmada por el ministro de Hacienda
-          <span class="font-medium">{d.topes_dipres.firmante}</span> <SRef n={17} />.
+          El Registro Público 38 bis es la fuente primaria para las remuneraciones efectivamente reportadas por las instituciones. La CFR señala que el registro contiene información reportada por cada organismo; por eso la página distingue entre la dieta legal y el monto reportado. <SRef id="cfr-registro-publico-38bis" />
         </p>
         <p>
-          Durante el gobierno de Boric, los asesores percibían entre 25% y 90% de la remuneración del subsecretario
-          correspondiente, con un tope real de alrededor de $5,5 millones <SRef n={16} />. El nuevo esquema de Kast eleva ese tope a
-          casi $10 millones <SRef n={17} /><SRef n={6} />, con un mínimo del 70% de la remuneración de la autoridad asesorada.
+          Antes de la Ley 19.863, la referencia remuneratoria era la Escala Única de Sueldos del Decreto Ley 249. <SRef id="bcn-leychile-dl-249-1974" /> Las leyes de reajuste sectorial y la asignación de modernización formaron parte de ese marco <SRef id="bcn-leychile-ley-19007" /><SRef id="bcn-leychile-ley-19553" />. La Ley 19.863 fijó la dieta presidencial en 150% del grado máximo. <SRef id="bcn-leychile-ley-19863" /> La reforma sobre el estatuto de los ex Presidentes es la Ley 19.672 <SRef id="bcn-leychile-ley-19672" />. La Ley 21.233 creó el artículo 38 bis y el sistema de remuneraciones asociado. <SRef id="bcn-leychile-ley-21233" /> El sistema de la CFR entró en vigor en marzo de 2026. <SRef id="bcn-leychile-resolucion-5-2024-cfr" /> Las remuneraciones parlamentarias del período pueden contrastarse con el informe de transparencia del Senado de 2023 <SRef id="senado-informe-transparencia-2023" />.
         </p>
         <p>
-          La medida se produce en un contexto de "emergencia" declarada por el propio gobierno, que ha anunciado
-          recortes presupuestarios en diversas áreas, incluyendo un recorte de $706 millones al presupuesto de la
-          Presidencia de la República. En marzo de 2026, el propio Kast anunció su intención de rebajar su sueldo de
-          forma estructural <SRef n={8} />, aunque técnicamente la dieta es fijada por la comisión autónoma y no puede ajustarse por
-          decreto.
-        </p>
-        <p>
-          <strong>Marco legal:</strong> hasta 2003 regía la Escala Única (DL 249/1974) <SRef n={34} /><SRef n={35} />; la Ley 19.863 (2003) fijó la renta en el 150% del grado máximo <SRef n={29} /><SRef n={37} />.
-          La Ley 21.233 (2020) creó el art. 38 bis, rebajó transitoriamente las dietas —10% Presidente, 25% parlamentarios y ministros— <SRef n={26} /><SRef n={30} /> y creó la comisión que fijó el sistema vigente desde marzo de 2026
-          <SRef n={31} />. Ex Presidentes: Ley 19.672 <SRef n={36} />; parlamentarios: Senado <SRef n={38} />.
+          En abril de 2026, el Segundo Piso de Kast fue reportado con remuneraciones entre {formatCLP(Math.min(...cargos.map((c) => c.kast.sueldo)))} y {formatCLP(Math.max(...cargos.map((c) => c.kast.sueldo)))}. <SRef id={segundoPisoFuenteId} />
         </p>
         <p class="text-base-content/60 text-xs">
-          Evento registrado: <a href="/events/2026/20260320-2" class="text-primary hover:underline">20260320-2</a>
-          · Evento MEPCO (impacto en precios): <a href="/events/2026/20260326-1" class="text-primary hover:underline">20260326-1</a>
-          · 46 funcionarios de superintendencias con sueldo igual o mayor al del Presidente <SRef n={14} /><SRef n={15} />: <a href="/events/2026/20260803-18" class="text-primary hover:underline">20260803-18</a>
+          Eventos relacionados: <a href="/events/2026/20260320-2" class="text-primary hover:underline">20260320-2</a>
+          · <a href="/events/2026/20260326-1" class="text-primary hover:underline">20260326-1</a>
+          · <a href="/events/2026/20260803-18" class="text-primary hover:underline">20260803-18</a>
         </p>
       </div>
     </section>
@@ -525,35 +594,32 @@ const saltoFebAbr = ((serie[iTrans + 1]?.monto ?? 0) / (serie[iTrans - 1]?.monto
     <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-4">
         <BookOpen class="h-5 w-5 text-primary shrink-0" />
-        <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({fuentes.length})</h2>
+        <h2 class="text-base font-bold text-base-content">Fuentes ({fuentes.length})</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Los números <sup class="text-primary font-mono text-xs">[N]</sup> apuntan a las fuentes; los enlaces abren copias espejo.
+        Los números <sup class="text-primary font-mono text-xs">[N]</sup> apuntan a la fuente original. Las referencias se citan por ID para que reordenar la lista no cambie el sentido de una cita.
       </p>
       <ol class="space-y-3 text-sm">
         {fuentes.map((f, i) => (
           <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-base-content/80 scroll-mt-20 p-2.5 rounded-lg hover:bg-base-200 transition-colors border border-transparent hover:border-base-300/60">
-            <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-primary font-mono text-xs shrink-0 font-semibold mt-0.5">
-              {i + 1}
-            </span>
+            <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-primary font-mono text-xs shrink-0 font-semibold mt-0.5">{i + 1}</span>
             <div class="min-w-0 flex-1">
               <a href={f.url} class="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary hover:underline" target="_blank" rel="noopener">
-                <span>{f.titulo}</span>
-                <ExternalLink class="h-3.5 w-3.5 shrink-0 text-primary" />
+                <span>{f.titulo}</span><ExternalLink class="h-3.5 w-3.5 shrink-0 text-primary" />
               </a>
-              <span class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
-                <a href={`https://web.archive.org/web/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-primary transition-colors" target="_blank" rel="noopener" title="Wayback Machine">Archive</a>
-                <a href={`https://archive.ph/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-orange-500 transition-colors" target="_blank" rel="noopener" title="archive.ph">archive.ph</a>
-                <a href={`https://ghostarchive.org/search?term=${encodeURIComponent(f.url ?? '')}`} class="text-[10px] font-medium text-base-content/40 hover:text-purple-500 transition-colors" target="_blank" rel="noopener" title="Ghostarchive">Ghost</a>
-                <a href={`https://timetravel.mementoweb.org/memento/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-teal-500 transition-colors" target="_blank" rel="noopener" title="Memento Time Travel">Memento</a>
-                <a href={`https://r.jina.ai/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-green-500 transition-colors" target="_blank" rel="noopener" title="Versión Texto Limpio">Reader</a>
-                <a href={`https://www.paywallskip.com/article?url=${encodeURIComponent(f.url ?? '')}`} class="text-[10px] font-medium text-base-content/40 hover:text-warning transition-colors" target="_blank" rel="noopener" title="Paywall Skip">Paywall</a>
-                <a href={`https://defuddle.md/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-indigo-500 transition-colors" target="_blank" rel="noopener" title="Defuddle">Defuddle</a>
-                <a href={`https://markdown.new/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-pink-500 transition-colors" target="_blank" rel="noopener" title="Markdown">MD</a>
-              </span>
-              <p class="text-xs text-base-content/60 mt-0.5">
-                Medio: <span class="font-medium text-base-content/80">{f.medio}</span> · ID: <code class="text-base-content/50">{f.id}</code>
-              </p>
+              {f.url && (
+                <span class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
+                  <a href={`https://web.archive.org/web/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-primary transition-colors" target="_blank" rel="noopener" title="Wayback Machine">Archive</a>
+                  <a href={`https://archive.ph/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-orange-500 transition-colors" target="_blank" rel="noopener" title="archive.ph">archive.ph</a>
+                  <a href={`https://ghostarchive.org/search?term=${encodeURIComponent(f.url ?? '')}`} class="text-[10px] font-medium text-base-content/40 hover:text-purple-500 transition-colors" target="_blank" rel="noopener" title="Ghostarchive">Ghost</a>
+                  <a href={`https://timetravel.mementoweb.org/memento/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-teal-500 transition-colors" target="_blank" rel="noopener" title="Memento Time Travel">Memento</a>
+                  <a href={`https://r.jina.ai/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-green-500 transition-colors" target="_blank" rel="noopener" title="Versión Texto Limpio">Reader</a>
+                  <a href={`https://www.paywallskip.com/article?url=${encodeURIComponent(f.url ?? '')}`} class="text-[10px] font-medium text-base-content/40 hover:text-warning transition-colors" target="_blank" rel="noopener" title="Paywall Skip">Paywall</a>
+                  <a href={`https://defuddle.md/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-indigo-500 transition-colors" target="_blank" rel="noopener" title="Defuddle">Defuddle</a>
+                  <a href={`https://markdown.new/${f.url}`} class="text-[10px] font-medium text-base-content/40 hover:text-pink-500 transition-colors" target="_blank" rel="noopener" title="Markdown">MD</a>
+                </span>
+              )}
+              <p class="text-xs text-base-content/60 mt-0.5">Medio: <span class="font-medium text-base-content/80">{f.medio}</span> · ID: <code class="text-base-content/50">{f.id}</code></p>
             </div>
           </li>
         ))}

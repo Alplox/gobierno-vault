@@ -1,10 +1,10 @@
 {
   // Deploy estático del sitio Astro (output: static) en Cloudflare Pages.
-  // `npm run deploy` ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main`,
+  // `pnpm deploy` ejecuta `wrangler pages deploy dist --project-name gobierno-vault --branch main`,
   // lo que genera la URL https://gobierno-vault.pages.dev (subdominio .pages.dev, no .workers.dev).
   // Crear el proyecto UNA sola vez (requiere login/token de Cloudflare):
-  //   npx wrangler pages project create gobierno-vault --production-branch main
-  // Preview local: `npm run preview` (wrangler pages dev dist).
+  //   pnpm dlx wrangler pages project create gobierno-vault --production-branch main
+  // Preview local: `pnpm preview` (wrangler pages dev dist).
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
   "name": "gobierno-vault",
   "compatibility_date": "2026-07-01",

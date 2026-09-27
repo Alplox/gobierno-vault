@@ -1,5 +1,5 @@
 ---
-nombre: Daniel Nunez
+nombre: Daniel Núñez
 cargo: Senador (PC)
 cargos:
   - cargo: Senador (PC)

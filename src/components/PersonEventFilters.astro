@@ -1,0 +1,159 @@
+---
+// Barra de filtros de la lista de eventos de una persona: búsqueda de texto,
+// tipo de evento (multi), tema y año. Todo se aplica en cliente sobre el dataset
+// que ya viaja en la página (SSG sin runtime), así que aquí solo se emite el
+// markup y los datos necesarios para que personPageClient.js lo cablee.
+//
+// Cada control es un <button>/<input> nativo con estado en `aria-pressed` /
+// `value`: el filtro activo se refleja en #person-events-root para que el
+// renderer de scroll infinito lo aplique a cada tanda nueva.
+import { Search, X, Tag, Layers, Calendar } from 'lucide-astro';
+import type { PersonPanorama } from '../lib/personStats';
+import { TIPO_LABELS, TIPO_STYLES } from '../lib/eventTypes';
+
+interface Props {
+  panorama: PersonPanorama;
+  byYear: { year: number; events: unknown[] }[];
+  slug: string;
+}
+
+const { panorama, byYear, slug } = Astro.props;
+
+const n = (v: number) => v.toLocaleString('es-CL');
+// Solo los tipos con 2+ eventos: un chip de 1 evento es ruido con 14 tipos.
+const tipos = panorama.porTipo.filter((t) => t.n >= 2);
+const temas = panorama.temas.filter((t) => t.n >= 2);
+const hayAnios = byYear.length > 1;
+const hayTipos = tipos.length > 1;
+const hayTemas = temas.length > 1;
+---
+
+<div
+  id="person-event-filters"
+  class="mb-4 flex flex-col gap-3 rounded-xl bg-base-100 p-4 border-0 shadow-[var(--shadow-border)]"
+  data-total={panorama.total}
+>
+  {/* Búsqueda */}
+  <div class="flex flex-wrap items-end gap-2">
+    <div class="min-w-[13rem] flex-1">
+      <label for="pv-event-search" class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
+        <Search class="h-3.5 w-3.5 text-base-content/40" />
+        Buscar en sus eventos
+      </label>
+      <div class="relative">
+        <Search class="pointer-events-none absolute left-2.5 top-1/2 h-3.5 w-3.5 -translate-y-1/2 text-base-content/35" aria-hidden="true" />
+        <input
+          type="search"
+          id="pv-event-search"
+          data-event-search
+          placeholder="Título, tema, etiqueta o medio (ej.-blindando)"
+          class="w-full rounded-lg border border-base-300 bg-base-200 py-1.5 pl-8 pr-2.5 text-sm transition-colors focus:border-primary focus:bg-base-100 focus:ring-2 focus:ring-primary"
+        />
+      </div>
+    </div>
+    <div class="flex items-center gap-2">
+      <button
+        type="button"
+        data-event-reset
+        class="hidden items-center gap-1.5 rounded-lg bg-base-200 px-3 py-2 text-sm font-medium text-base-content/80 transition-colors hover:bg-base-300"
+      >
+        <X class="h-3.5 w-3.5" />
+        <span>Limpiar</span>
+      </button>
+    </div>
+  </div>
+
+  {/* Tipo de evento */}
+  {hayTipos && (
+    <div>
+      <span class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
+        <Layers class="h-3.5 w-3.5 text-base-content/40" />
+        Tipo <span class="font-normal text-base-content/50">(clic para combinar)</span>
+      </span>
+      <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filtrar eventos por tipo">
+        {tipos.map((t) => (
+          <button
+            type="button"
+            data-event-type={t.id}
+            data-style-on={TIPO_STYLES[t.id] || ''}
+            aria-pressed="false"
+            class={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset transition-colors ${TIPO_STYLES[t.id] || 'bg-base-200 text-base-content/70 ring-base-300'} bg-base-100 text-base-content/60 ring-base-300 hover:bg-base-200`}
+          >
+            {TIPO_LABELS[t.id] ?? t.id}
+            <span class="tabular-nums opacity-60">{n(t.n)}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {/* Tema */}
+  {hayTemas && (
+    <div>
+      <span class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
+        <Tag class="h-3.5 w-3.5 text-base-content/40" />
+        Tema
+      </span>
+      <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filtrar eventos por tema">
+        <button
+          type="button"
+          data-event-topic=""
+          aria-pressed="true"
+          class="rounded-md bg-primary px-2.5 py-1 text-xs font-medium text-primary-content transition-colors"
+        >
+          Todos
+        </button>
+        {temas.map((t) => (
+          <button
+            type="button"
+            data-event-topic={t.id}
+            aria-pressed="false"
+            class="rounded-md bg-base-200 px-2.5 py-1 text-xs font-medium text-base-content/70 transition-colors hover:bg-base-300"
+          >
+            {t.nombre} <span class="tabular-nums opacity-60">{n(t.n)}</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )}
+
+  {/* Año */}
+  {hayAnios && (
+    <div>
+      <span class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
+        <Calendar class="h-3.5 w-3.5 text-base-content/40" />
+        Año
+      </span>
+      <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filtrar eventos por año">
+        <button
+          type="button"
+          data-event-year=""
+          aria-pressed="true"
+          class="rounded-md bg-primary px-2.5 py-1 text-xs font-medium text-primary-content transition-colors"
+        >
+          Todos
+        </button>
+        {byYear.map((g) => (
+          <button
+            type="button"
+            data-event-year={g.year}
+            aria-pressed="false"
+            class="rounded-md bg-base-200 px-2.5 py-1 text-xs font-medium text-base-content/70 transition-colors hover:bg-base-300"
+          >
+            {g.year} <span class="tabular-nums opacity-60">({n(g.events.length)})</span>
+          </button>
+        ))}
+      </div>
+    </div>
+  )}
+
+  <p data-event-count data-total={panorama.total} class="text-xs text-base-content/60" role="status" aria-live="polite"></p>
+
+  <noscript>
+    <p class="text-xs text-base-content/60">
+      Los filtros y el desplazamiento infinito requieren JavaScript. Sin él se muestran los
+      primeros {n(12)} eventos; el listado completo está en
+      <a href={`/events?persona=${slug}`} class="text-primary hover:underline">/events?persona={slug}</a>.
+    </p>
+  </noscript>
+</div>

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: El Día
+medio: El Día (La Serena)
 titulo: "Directora de SLEP Puerto Cordillera responde a sanción: 'Fue por una
   urgencia médica'"
 autor: Equipo El Día

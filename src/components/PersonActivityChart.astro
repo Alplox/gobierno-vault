@@ -1,0 +1,330 @@
+---
+// Grafico de actividad de una persona: columnas apiladas por ano (reparto por
+// tipo de evento) + barra de reparto global por tipo. SVG estatico, cero JS:
+// el unico JS opcional es el filtro por ano del listado de eventos, que degrada
+// a enlaces `href="#anio-YYYY"` sin JavaScript.
+//
+// Escala: lineal por defecto. Cuando un ano domina (p. ej. 589 eventos en 2026
+// frente a 39 en 2025) el resto de las barras se aplana, asi que se pasa a escala
+// logaritmica y se rotula explicitamente en vez de falsear la proporcion.
+import { TIPO_LABELS, TIPO_COLORS } from '../lib/eventTypes';
+import type { PersonPanorama } from '../lib/personStats';
+
+interface Props {
+  panorama: PersonPanorama;
+  slug: string;
+}
+
+const { panorama, slug } = Astro.props;
+
+const W = 760;
+const H = 250;
+const PAD_L = 36;
+const PAD_R = 14;
+const PAD_T = 16;
+const PAD_B = 40;
+const plotW = W - PAD_L - PAD_R;
+const plotH = H - PAD_T - PAD_B;
+
+// Rango contiguo de anos: los anos sin actividad tambien se dibujan (0), para
+// que un hueco se vea como un hueco y no como un salto.
+const MAX_SPAN = 36;
+let yearFrom = panorama.yearFrom;
+let yearTo = panorama.yearTo;
+if (yearFrom !== null && yearTo !== null) {
+  if (yearTo - yearFrom + 1 > MAX_SPAN) yearFrom = yearTo - (MAX_SPAN - 1);
+}
+const byYear = new Map(panorama.years.map((b) => [b.year, b]));
+const span = yearFrom === null ? [] : Array.from({ length: yearTo! - yearFrom + 1 }, (_, i) => yearFrom! + i);
+
+// Top 5 tipos + "Otros": con hasta 14 tipos el apilado por ano es ilegible.
+const topTipos = panorama.porTipo.slice(0, 5);
+const topTipoIds = new Set(topTipos.map((t) => t.id));
+const OTROS = '__otros__';
+const OTROS_COLOR = 'var(--color-base-content)';
+
+function colorOf(tipo: string): string {
+  return topTipoIds.has(tipo) ? (TIPO_COLORS[tipo] ?? OTROS_COLOR) : OTROS_COLOR;
+}
+function labelOf(tipo: string): string {
+  return tipo === OTROS ? 'Otros' : (TIPO_LABELS[tipo] ?? tipo);
+}
+function seriesFor(year: number): { tipo: string; n: number }[] {
+  const b = byYear.get(year);
+  if (!b) return [];
+  const other = b.tipos.filter((t) => !topTipoIds.has(t.tipo)).reduce((s, t) => s + t.n, 0);
+  const list = b.tipos.filter((t) => topTipoIds.has(t.tipo)).slice(0, 5);
+  return other > 0 ? [...list, { tipo: OTROS, n: other }] : list;
+}
+
+const maxTotal = Math.max(1, ...span.map((y) => byYear.get(y)?.total ?? 0));
+const peakYear = span.reduce((best, y) => ((byYear.get(y)?.total ?? 0) > (byYear.get(best)?.total ?? 0) ? y : best), span[0] ?? 0);
+const peakTotal = byYear.get(peakYear)?.total ?? 0;
+
+// Eleccion de escala explicita (y visible en el pie del grafico).
+const nonZero = span.map((y) => byYear.get(y)?.total ?? 0).filter((n) => n > 0);
+const minNonZero = nonZero.length ? Math.min(...nonZero) : 0;
+const LOG = maxTotal >= 40 && minNonZero > 0 && maxTotal / minNonZero >= 8;
+
+const scale = (n: number) => {
+  if (n <= 0) return 0;
+  return LOG ? Math.log1p(n) / Math.log1p(maxTotal) : n / maxTotal;
+};
+
+// Marcas del eje Y (redondeadas a un numero "limpio").
+const ticks = [0.25, 0.5, 0.75, 1].map((f) => ({ frac: f, y: PAD_T + plotH - f * plotH }));
+
+const slot = span.length ? plotW / span.length : plotW;
+const barW = Math.max(3, Math.min(30, slot * 0.6));
+const labelEvery = Math.ceil(span.length / 12);
+
+const totalFmt = (n: number) => n.toLocaleString('es-CL');
+
+// Leyenda: tipos usados + "Otros", con el total de cada uno.
+const legend = [
+  ...topTipos.map((t) => ({ tipo: t.id, n: t.n, color: TIPO_COLORS[t.id] ?? OTROS_COLOR })),
+  ...(panorama.porTipo.length > topTipos.length
+    ? [
+        {
+          tipo: OTROS,
+          n: panorama.porTipo.slice(topTipos.length).reduce((s, t) => s + t.n, 0),
+          color: OTROS_COLOR,
+        },
+      ]
+    : []),
+];
+
+const desc = `Actividad por año: ${panorama.years
+  .map((b) => `${b.year}: ${b.total} evento${b.total === 1 ? '' : 's'}`)
+  .join('; ')}.`;
+---
+
+<div class="flex flex-col gap-5">
+  <div class="overflow-x-auto">
+    <svg
+      viewBox={`0 0 ${W} ${H}`}
+      class="w-full min-w-[520px] h-auto"
+      role="img"
+      aria-labelledby={`pv-act-title-${slug} pv-act-desc-${slug}`}
+      font-family="system-ui, -apple-system, sans-serif"
+    >
+      <title id={`pv-act-title-${slug}`}>Actividad por año</title>
+      <desc id={`pv-act-desc-${slug}`}>{desc}</desc>
+
+      {/* Rejilla y eje Y */}
+      {ticks.map((t) => (
+        <g>
+          <line x1={PAD_L} y1={t.y} x2={W - PAD_R} y2={t.y} stroke="var(--color-base-300)" stroke-width="1" />
+          <text
+            x={PAD_L - 6}
+            y={t.y + 3}
+            text-anchor="end"
+            font-size="9"
+            fill="var(--color-base-content)"
+            fill-opacity="0.45"
+          >
+            {LOG ? Math.round(Math.expm1(t.frac * Math.log1p(maxTotal))) : Math.round(t.frac * maxTotal)}
+          </text>
+        </g>
+      ))}
+
+      {/* Columnas por ano */}
+      {span.map((year, i) => {
+        const series = seriesFor(year);
+        const b = byYear.get(year);
+        const total = b?.total ?? 0;
+        const x = PAD_L + i * slot + (slot - barW) / 2;
+        const isPeak = year === peakYear && total > 0;
+        const tipW = 158;
+        const tipX = Math.max(4, Math.min(W - tipW - 4, x + barW / 2 - tipW / 2));
+        const tipH = 34 + Math.min(4, series.length) * 13;
+        const tipY = Math.max(2, PAD_T + plotH - scale(total) * plotH - tipH - 10);
+        return (
+          <g class="pv-col">
+            {/* Zona de hover/focus a lo alto de la columna, para no exigir puntero fino */}
+            <a href={`#anio-${year}`} data-pv-year={year}>
+              <rect
+                x={PAD_L + i * slot}
+                y={PAD_T}
+                width={slot}
+                height={plotH}
+                fill="transparent"
+                class="pv-hit"
+              />
+              {series.length === 0 && (
+                <rect
+                  x={x}
+                  y={PAD_T + plotH - 2}
+                  width={barW}
+                  height="2"
+                  fill="var(--color-base-300)"
+                />
+              )}
+              {(() => {
+                let acc = 0;
+                return series.map((s) => {
+                  const h = scale(s.n) * plotH;
+                  const y = PAD_T + plotH - (acc + scale(s.n)) * plotH;
+                  acc += scale(s.n);
+                  return (
+                    <rect
+                      x={x}
+                      y={y}
+                      width={barW}
+                      height={Math.max(1, h)}
+                      fill={colorOf(s.tipo)}
+                      opacity={isPeak ? 1 : 0.82}
+                      rx="1.5"
+                      class="pv-seg"
+                    >
+                      <title>{`${year} · ${labelOf(s.tipo)}: ${totalFmt(s.n)}`}</title>
+                    </rect>
+                  );
+                });
+              })()}
+              {total > 0 && (
+                <text
+                  x={x + barW / 2}
+                  y={PAD_T + plotH - scale(total) * plotH - 5}
+                  text-anchor="middle"
+                  font-size="9"
+                  font-weight={isPeak ? '700' : '500'}
+                  fill="var(--color-base-content)"
+                  fill-opacity={isPeak ? '0.95' : '0.5'}
+                >
+                  {totalFmt(total)}
+                </text>
+              )}
+              {i % labelEvery === 0 && (
+                <text
+                  x={PAD_L + i * slot + slot / 2}
+                  y={H - PAD_B + 15}
+                  text-anchor="middle"
+                  font-size="9.5"
+                  font-weight={isPeak ? '700' : '400'}
+                  fill="var(--color-base-content)"
+                  fill-opacity={isPeak ? '0.95' : '0.5'}
+                >
+                  {year}
+                </text>
+              )}
+            </a>
+
+            {/* Tooltip (CSS puro: aparece con hover o focus del grupo) */}
+            <g class="pv-tip" transform={`translate(${tipX}, ${tipY})`} aria-hidden="true">
+              <rect
+                width={tipW}
+                height={tipH}
+                rx="7"
+                fill="var(--color-base-100)"
+                stroke="var(--color-base-300)"
+                stroke-width="1"
+              />
+              <text x="9" y="15" font-size="10.5" font-weight="700" fill="var(--color-base-content)">
+                {year} · {totalFmt(total)} evento{total === 1 ? '' : 's'}
+              </text>
+              {b?.citas ? (
+                <text x="9" y="29" font-size="9.5" fill="var(--color-base-content)" fill-opacity="0.7">
+                  {b.citas} declaracion{b.citas === 1 ? '' : 'es'}
+                </text>
+              ) : null}
+              {series.slice(0, 4).map((s, k) => (
+                <g transform={`translate(9, ${44 + k * 13})`}>
+                  <rect width="7" height="7" y="-6" rx="1.5" fill={colorOf(s.tipo)} />
+                  <text x="12" font-size="9" fill="var(--color-base-content)" fill-opacity="0.75">
+                    {labelOf(s.tipo)}: {totalFmt(s.n)}
+                  </text>
+                </g>
+              ))}
+            </g>
+          </g>
+        );
+      })}
+
+      {/* Marca del ano punta */}
+      {peakTotal > 0 && (
+        <line
+          x1={PAD_L}
+          y1={PAD_T + plotH - scale(peakTotal) * plotH}
+          x2={W - PAD_R}
+          y2={PAD_T + plotH - scale(peakTotal) * plotH}
+          stroke="var(--color-primary)"
+          stroke-width="1"
+          stroke-dasharray="3 3"
+          opacity="0.5"
+        />
+      )}
+    </svg>
+  </div>
+
+  <div class="flex flex-wrap items-center gap-x-4 gap-y-1.5 px-1">
+    {legend.map((l) => (
+      <span class="inline-flex items-center gap-1.5 text-[11px] text-base-content/70">
+        <span class="h-2 w-2 rounded-sm shrink-0" style={`background:${l.color}`} aria-hidden="true" />
+        <span>{labelOf(l.tipo)}</span>
+        <span class="tabular-nums font-semibold text-base-content/90">{totalFmt(l.n)}</span>
+      </span>
+    ))}
+    <span class="ml-auto text-[11px] text-base-content/45">
+      {LOG
+        ? 'Escala logarítmica: un año concentra la actividad'
+        : `Pico en ${peakYear} con ${totalFmt(peakTotal)} eventos`}
+    </span>
+  </div>
+
+  {/* Alternativa textual para lectores de pantalla. Va en un <div> y no en la
+      tabla: `sr-only` sobre un <table> recorta la caja pero no su
+      <caption> (display: table-caption), que se dibuja fuera del recorte. */}
+  <div class="sr-only">
+    <table>
+      <caption>Actividad por año de la persona</caption>
+      <thead>
+        <tr><th scope="col">Año</th><th scope="col">Eventos</th><th scope="col">Declaraciones</th></tr>
+      </thead>
+      <tbody>
+        {span.map((year) => (
+          <tr>
+            <th scope="row">{year}</th>
+            <td>{byYear.get(year)?.total ?? 0}</td>
+            <td>{byYear.get(year)?.citas ?? 0}</td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .pv-hit {
+    cursor: pointer;
+  }
+  .pv-col .pv-seg,
+  .pv-col .pv-hit {
+    transition: opacity 0.15s ease-out;
+  }
+  .pv-col:hover .pv-seg,
+  .pv-col:focus-within .pv-seg {
+    opacity: 1;
+  }
+  .pv-tip {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.12s ease-out;
+  }
+  .pv-col:hover .pv-tip,
+  .pv-col:focus-within .pv-tip {
+    opacity: 1;
+  }
+  .pv-col:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .pv-col .pv-seg,
+    .pv-col .pv-hit,
+    .pv-tip {
+      transition: none;
+    }
+  }
+</style>

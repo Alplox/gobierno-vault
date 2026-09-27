@@ -22,7 +22,7 @@
  *                   cooperativa, adnradio, factchecking, ciper, theclinic,
  *                   elmostrador, fastcheck, latercera, cnnchile, eldinamo,
  *                   radio_uchile, el_siglo, la_nacion, ex_ante, el_periodista,
- *                   meganoticias, eldesconcierto, publimetro)
+ *                   elfiltrador, meganoticias, eldesconcierto, publimetro)
  *
  * Notas:
  * - Antes de hacer fetch, consulta el catálogo de sitemaps (si existe): si la
@@ -238,6 +238,7 @@ const DEFAULT_DOMAIN_MEDIO = {
   'elsiglo.cl': 'El Siglo',
   'lanacion.cl': 'La Nación',
   'elperiodista.cl': 'El Periodista',
+  'elfiltrador.com': 'El Filtrador',
   'eldesconcierto.cl': 'El Desconcierto',
   'pagina7.cl': 'Página 7',
   'publimetro.cl': 'Publimetro',
@@ -306,6 +307,7 @@ const CATALOG_MEDIO_BY_DOMAIN = {
   'lanacion.cl': 'la_nacion',
   'ex-ante.cl': 'ex_ante',
   'elperiodista.cl': 'el_periodista',
+  'elfiltrador.com': 'elfiltrador',
   'meganoticias.cl': 'meganoticias',
   'eldesconcierto.cl': 'eldesconcierto',
   'publimetro.cl': 'publimetro',
@@ -758,6 +760,7 @@ const CATALOG_MEDIO_NAMES = {
   la_nacion: 'La Nación',
   ex_ante: 'Ex-Ante',
   el_periodista: 'El Periodista',
+  elfiltrador: 'El Filtrador',
   meganoticias: 'Meganoticias',
   eldesconcierto: 'El Desconcierto',
   publimetro: 'Publimetro',

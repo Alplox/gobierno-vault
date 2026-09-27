@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: El Día
+medio: El Día (La Serena)
 titulo: "'He luchado 6 años por justicia': Mamá de Romario rechaza eventual
   indulto a militar"
 autor: Franco Riveros

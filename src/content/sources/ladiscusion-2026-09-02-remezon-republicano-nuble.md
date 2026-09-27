@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: La Discusión
+medio: La Discusión (Chillán)
 titulo: "Remezón republicano en Ñuble: 40 militantes renuncian y cuestionan
   conducción nacional del partido"
 fecha: 2026-09-02

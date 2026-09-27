@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: El Día
+medio: El Día (La Serena)
 titulo: "Adolescentes chilenos: 1 de cada 3 probó un vapeador, alerta Minsal"
 autor: El Día
 fecha: 2026-08-05

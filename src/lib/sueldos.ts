@@ -3,21 +3,13 @@ import { join } from 'node:path';
 import YAML from 'yaml';
 import { getPeopleRegistry, getSourcesRegistry } from './registry';
 
-/**
- * Datos y derivados de la página /sueldos.
- *
- * La fuente de verdad es src/data/sueldos.yaml (servido también en /data/sueldos.yaml).
- * Este módulo carga el YAML una vez por proceso y expone TODOS los valores derivados
- * (ratios contra el sueldo mínimo, ajustes por IPC, promedios) para que la página no
- * tenga cifras escritas a mano que puedan desafinarse de los datos.
- *
- * Integración con los registros del vault:
- * - Personas (`presidente_id`, `persona_id`, `firmante_id`) se resuelven contra
- *   src/content/people/*.md vía getPeopleRegistry(); el build falla si un ID no existe.
- * - Referencias (`orden_refs`, `vigencias[].fuente`) son IDs de src/content/sources/*.md;
- *   getFuente(id) entrega medio/título/url para los <SRef /> y el build falla
- *   si algún ID falta o está duplicado.
- */
+export type FuenteResuelta = {
+  id: string;
+  medio: string;
+  titulo: string;
+  url: string;
+  fecha: Date;
+};
 
 export type SueldoPersona = { nombre: string; sueldo: number };
 export type CargoComparado = {
@@ -34,23 +26,22 @@ export type VigenciaSueldo = {
   monto: number;
   fuente: string;
   descripcion: string;
+  desde?: string;
+  hasta?: string;
+  tipo?: string;
 };
 export type PresidenteSueldo = {
   presidente_id: string;
-  /** Nombre resuelto desde src/content/people/*.md. */
   presidente: string;
   gobierno: string;
   periodo: string;
   sueldo: number;
-  /** Mes al que corresponde el sueldo (para el ajuste IPC). ISO 'YYYY-MM-01'. */
   fecha_ref: string;
   fecha_label: string;
-  /** Índice IPC serie empalmada (base dic-2023 = 100) de fecha_ref. */
   ipc: number;
-  /** Mes cuyo sueldo mínimo se usa como divisor del ratio presidencial. */
   ratio_minimo_fecha: string;
-  refs: number[];
-  /** Montos conocidos del mandato, con ventana temporal y fuente. */
+  monto_legal?: number;
+  refs: string[];
   vigencias: VigenciaSueldo[];
   detalle: string;
 };
@@ -65,20 +56,38 @@ export type IndicadorGobierno = {
   periodo: string;
   utm: number;
   uf: number;
-  ipc_anual: number;
-  ipc_acumulado: number | null;
+  ipc_inicio: number | null;
+  ipc_fin: number | null;
+  ipc_inicio_fecha: string | null;
+  ipc_fin_fecha: string | null;
   nota: string;
+  ipc_periodo: number | null;
 };
-
-/** Punto mensual de la bruta presidencial según el Registro Público 38 bis. */
 export type SeriePunto = {
-  periodo: string; // 'YYYY-MM'
+  periodo: string;
   gobierno: string;
   monto: number;
+  tipo?: 'observado' | 'bono' | 'proporcional';
   nota?: string;
 };
 
-type FuenteResuelta = { medio: string; titulo: string; url?: string };
+export type ComparacionBrecha = {
+  clave: string;
+  etiqueta: string;
+  monto: number;
+  unidad: string;
+  veces: number;
+  diferencia: number;
+  fuente: FuenteResuelta;
+  nota: string;
+};
+export type TarjetaBrecha = {
+  clave: string;
+  etiqueta: string;
+  monto: number;
+  unidad: string;
+  fuente: FuenteResuelta;
+};
 
 type SueldosYaml = {
   orden_refs: string[];
@@ -98,30 +107,71 @@ type SueldosYaml = {
     vigencia_desde: string;
     filas: TopeDipres[];
   };
-  presidentes: Array<
-    Omit<PresidenteSueldo, 'presidente'> & { presidente_id: string }
-  >;
+  presidentes: Array<Omit<PresidenteSueldo, 'presidente'> & { presidente_id: string }>;
   sueldo_minimo: SueldoMinimoFila[];
-  indicadores: IndicadorGobierno[];
+  indicadores: Array<Omit<IndicadorGobierno, 'ipc_periodo'>>;
   serie_registro_publico: {
     fuente: string;
     puntos: SeriePunto[];
   };
   ipc: {
-    jul_2026: number;
-    registro_presidente_mayo_2026: {
+    base: string;
+    mes_referencia: string;
+    ago_2026: number;
+    registro_presidente_julio_2026: {
       monto: number;
       indice: number;
       fuente: string;
     };
   };
+  ingresos_esi: {
+    ano: number;
+    periodo: string;
+    unidad: string;
+    fuente: string;
+    mediana: number;
+    promedio: number;
+    asalariados_publicos_promedio: number;
+    porcentaje_1m_o_mas: number;
+    porcentaje_3m_o_mas: number;
+    nota: string;
+  };
+  costo_vida: {
+    periodo: string;
+    unidad: string;
+    fuente: string;
+    cba_persona: number;
+    linea_pobreza_no_arrendatario: number;
+    linea_pobreza_extrema_no_arrendatario: number;
+    linea_pobreza_arrendatario: number;
+    linea_pobreza_extrema_arrendatario: number;
+    nota: string;
+  };
+  imm_2026: {
+    desde: string;
+    unidad: string;
+    fuente: string;
+    categorias: Array<{ id: string; etiqueta: string; monto: number }>;
+    nota: string;
+  };
+  casen_2024: {
+    ano: number;
+    periodo: string;
+    unidad: string;
+    fuente: string;
+    promedio_ingreso_trabajo_hogar: number;
+    promedio_ingreso_autonomo_hogar: number;
+    promedio_ingreso_monetario_hogar: number;
+    promedio_ingreso_autonomo_per_capita_decil_x: number;
+    nota: string;
+  };
 };
 
-/** Ratio sueldo presidencial ÷ sueldo mínimo, con el divisor resuelto del YAML. */
 export type RatioGobierno = {
   gobierno: string;
   veces: number;
   divisor: string;
+  fecha_divisor: string;
 };
 
 export type SueldoAjustado = {
@@ -130,6 +180,12 @@ export type SueldoAjustado = {
   sueldo: number;
   fecha: string;
   ajustado: number;
+};
+
+export type BrechaData = {
+  presidente: TarjetaBrecha & { periodo: string; veces_imm: number; legal: number; diferencia_legal: number };
+  tarjetas: TarjetaBrecha[];
+  comparaciones: ComparacionBrecha[];
 };
 
 const MESES_ES = [
@@ -142,17 +198,23 @@ export function formatCLP(n: number): string {
 }
 
 export function pctDiff(a: number, b: number): string {
-  return ((a - b) / b * 100).toFixed(1);
+  return ((a - b) / b * 100).toFixed(1).replace('.', ',');
 }
 
-/** 1234567 -> '1,2 millones' (un decimal, coma decimal chilena). */
 export function enMillones(n: number): string {
   return (n / 1_000_000).toFixed(1).replace('.', ',');
 }
 
 function parseISO(iso: string): Date {
-  const [y, m] = iso.split('-').map(Number);
-  return new Date(Date.UTC(y, m - 1, 1));
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(iso)) {
+    throw new Error(`sueldos.yaml: fecha inválida '${iso}', se espera YYYY-MM-DD`);
+  }
+  const [y, m, d] = iso.split('-').map(Number);
+  const date = new Date(Date.UTC(y, m - 1, d));
+  if (date.getUTCFullYear() !== y || date.getUTCMonth() !== m - 1 || date.getUTCDate() !== d) {
+    throw new Error(`sueldos.yaml: fecha imposible '${iso}'`);
+  }
+  return date;
 }
 
 function labelMes(iso: string): string {
@@ -160,10 +222,16 @@ function labelMes(iso: string): string {
   return `${MESES_ES[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
 }
 
-/** Último sueldo mínimo vigente a la fecha indicada (la lista va más reciente primero). */
+function validarPositivo(valor: number, contexto: string): void {
+  if (!Number.isFinite(valor) || valor <= 0) {
+    throw new Error(`sueldos.yaml: ${contexto} debe ser un número positivo`);
+  }
+}
+
 function minimoVigente(filas: SueldoMinimoFila[], fechaISO: string): SueldoMinimoFila {
   const fecha = parseISO(fechaISO);
-  const fila = filas.find((f) => parseISO(f.desde) <= fecha);
+  const ordenadas = [...filas].sort((a, b) => parseISO(b.desde).getTime() - parseISO(a.desde).getTime());
+  const fila = ordenadas.find((f) => parseISO(f.desde) <= fecha);
   if (!fila) throw new Error(`sueldos.yaml: no hay sueldo mínimo vigente para ${fechaISO}`);
   return fila;
 }
@@ -177,6 +245,9 @@ function build() {
   // --- Resolución de fuentes (src/content/sources/*.md) ---
   const sourcesRegistry = getSourcesRegistry();
   const ordenRefs = yaml.orden_refs;
+  if (!Array.isArray(ordenRefs) || ordenRefs.some((id) => typeof id !== 'string')) {
+    throw new Error('sueldos.yaml: orden_refs debe ser un arreglo de IDs');
+  }
   const faltantes = [...new Set(ordenRefs)].filter((id) => !sourcesRegistry[id]);
   if (faltantes.length) {
     throw new Error(
@@ -190,8 +261,29 @@ function build() {
   const fuentesPorId = (id: string): FuenteResuelta => {
     const s = sourcesRegistry[id];
     if (!s) throw new Error(`sueldos.yaml: fuente '${id}' no existe en src/content/sources/*.md`);
-    return { medio: s.medio, titulo: s.titulo, url: s.url };
+    if (!s.url) throw new Error(`sueldos.yaml: la fuente '${id}' no tiene URL`);
+    return { id, medio: s.medio, titulo: s.titulo, url: s.url, fecha: s.fecha };
   };
+  const assertFuente = (id: string, contexto: string): void => {
+    if (!ordenRefs.includes(id)) {
+      throw new Error(`sueldos.yaml: ${contexto} usa '${id}', que no está en orden_refs`);
+    }
+    fuentesPorId(id);
+  };
+
+  // Todas las fuentes citadas por datos deben aparecer en la bibliografía visible.
+  for (const p of yaml.presidentes) {
+    p.refs.forEach((id) => assertFuente(id, `presidentes.${p.gobierno}.refs`));
+    p.vigencias.forEach((v) => assertFuente(v.fuente, `presidentes.${p.gobierno}.vigencias`));
+  }
+  assertFuente(yaml.segundo_piso.fuente, 'segundo_piso.fuente');
+  assertFuente(yaml.topes_dipres.fuente, 'topes_dipres.fuente');
+  assertFuente(yaml.serie_registro_publico.fuente, 'serie_registro_publico.fuente');
+  assertFuente(yaml.ipc.registro_presidente_julio_2026.fuente, 'ipc.registro_presidente_julio_2026.fuente');
+  assertFuente(yaml.ingresos_esi.fuente, 'ingresos_esi.fuente');
+  assertFuente(yaml.costo_vida.fuente, 'costo_vida.fuente');
+  assertFuente(yaml.imm_2026.fuente, 'imm_2026.fuente');
+  assertFuente(yaml.casen_2024.fuente, 'casen_2024.fuente');
 
   // --- Resolución de personas (src/content/people/*.md) ---
   const peopleById = new Map(getPeopleRegistry().map((p) => [p.id, p.data]));
@@ -201,49 +293,156 @@ function build() {
     return p.nombre;
   };
 
-  // --- Ratios presidenciales derivados (sueldo ÷ mínimo vigente del mes elegido) ---
+  // --- Invariantes de series y montos ---
+  const fechasMinimo = new Set<string>();
+  for (const fila of yaml.sueldo_minimo) {
+    parseISO(fila.desde);
+    validarPositivo(fila.monto, `sueldo_minimo ${fila.desde}`);
+    if (fechasMinimo.has(fila.desde)) throw new Error(`sueldos.yaml: sueldo mínimo duplicado en ${fila.desde}`);
+    fechasMinimo.add(fila.desde);
+  }
+  const periodosSerie = new Set<string>();
+  for (const punto of yaml.serie_registro_publico.puntos) {
+    if (!/^\d{4}-\d{2}$/.test(punto.periodo)) throw new Error(`sueldos.yaml: periodo inválido ${punto.periodo}`);
+    validarPositivo(punto.monto, `serie ${punto.periodo}`);
+    if (periodosSerie.has(punto.periodo)) throw new Error(`sueldos.yaml: periodo duplicado en serie ${punto.periodo}`);
+    periodosSerie.add(punto.periodo);
+  }
+  validarPositivo(yaml.ipc.ago_2026, 'ipc.ago_2026');
+
+  const actual = yaml.presidentes.find((p) => p.gobierno === 'Kast');
+  const boric = yaml.presidentes.find((p) => p.gobierno === 'Boric');
+  if (!actual || !boric) throw new Error('sueldos.yaml: se requiere un registro Kast y uno Boric');
+
+  // --- Ratios provisionales derivados (sueldo ÷ mínimo vigente del mes elegido) ---
   const ratios: RatioGobierno[] = yaml.presidentes.map((p) => {
     const min = minimoVigente(yaml.sueldo_minimo, p.ratio_minimo_fecha);
     return {
       gobierno: p.gobierno,
       veces: p.sueldo / min.monto,
       divisor: `${formatCLP(min.monto)} (mínimo desde ${labelMes(min.desde)})`,
+      fecha_divisor: min.desde,
     };
   });
 
-  // --- Sueldo ajustado a pesos de julio 2026 ---
-  const ipcJul = yaml.ipc.jul_2026;
+  // --- Sueldos ajustados a agosto de 2026 ---
+  const ipcAgo = yaml.ipc.ago_2026;
   const sueldosAjustados: SueldoAjustado[] = yaml.presidentes.map((p) => ({
     gobierno: p.gobierno,
     periodo: p.periodo,
     sueldo: p.sueldo,
     fecha: p.fecha_label,
-    ajustado: Math.round((p.sueldo * ipcJul) / p.ipc),
+    ajustado: Math.round((p.sueldo * ipcAgo) / p.ipc),
   }));
 
-  const maxAjustado = Math.max(...sueldosAjustados.map((x) => x.ajustado));
-
-  // Promedio real de los cuatro gobiernos previos a Boric (Piñera II..Bachelet I).
-  const previosABoric = sueldosAjustados.slice(2, 6).map((s) => s.ajustado);
+  const porGobierno = (nombre: string): SueldoAjustado => {
+    const valor = sueldosAjustados.find((s) => s.gobierno === nombre);
+    if (!valor) throw new Error(`sueldos.yaml: no existe sueldo ajustado para ${nombre}`);
+    return valor;
+  };
+  const previosABoric = ['Piñera II', 'Bachelet II', 'Piñera I', 'Bachelet I'].map(porGobierno);
   const promedioPrevios = Math.round(
-    previosABoric.reduce((acc, n) => acc + n, 0) / previosABoric.length
+    previosABoric.reduce((acc, n) => acc + n.ajustado, 0) / previosABoric.length
   );
-  const pctInferiorKast = Math.round((1 - sueldosAjustados[0].ajustado / promedioPrevios) * 100);
+  const maxAjustado = Math.max(...sueldosAjustados.map((x) => x.ajustado));
+  const pctInferiorKast = Math.round((1 - porGobierno('Kast').ajustado / promedioPrevios) * 100);
 
-  // Monto del Registro Público (mayo 2026) ajustado a pesos de julio 2026.
-  const regMayo = yaml.ipc.registro_presidente_mayo_2026;
-  const registroMayoAjustado = Math.round((regMayo.monto * ipcJul) / regMayo.indice);
+  const ratioKast = ratios.find((r) => r.gobierno === 'Kast');
+  const ratioBoric = ratios.find((r) => r.gobierno === 'Boric');
+  const ratio2010s = ratios.filter((r) => ['Piñera II', 'Bachelet II', 'Piñera I'].includes(r.gobierno));
+  const ratioBacheletI = ratios.find((r) => r.gobierno === 'Bachelet I');
+  if (!ratioKast || !ratioBoric || !ratioBacheletI) throw new Error('sueldos.yaml: faltan ratios históricos requeridos');
 
-  // Rango real (en millones) de los cuatro gobiernos 2006–2022, para la nota de la sección IPC.
+  const legalDiet = actual.monto_legal ?? actual.vigencias.find((v) => v.tipo === 'ajuste')?.monto;
+  if (!legalDiet) throw new Error('sueldos.yaml: falta monto legal del Presidente vigente');
+  const minimoMarzoKast = minimoVigente(yaml.sueldo_minimo, '2026-03-01');
+  const ratioLegalKast = legalDiet / minimoMarzoKast.monto;
+
+  // --- Indicadores: variación entre endpoints, no producto deIPC anual ---
+  const indicadores: IndicadorGobierno[] = yaml.indicadores.map((i) => ({
+    ...i,
+    ipc_periodo: i.ipc_inicio !== null && i.ipc_fin !== null
+      ? Number((((i.ipc_fin / i.ipc_inicio) - 1) * 100).toFixed(1))
+      : null,
+  }));
+
+  // --- Ingresos y brechas ---
+  const ingresos_esi = { ...yaml.ingresos_esi, fuente: fuentesPorId(yaml.ingresos_esi.fuente) };
+  const costo_vida = { ...yaml.costo_vida, fuente: fuentesPorId(yaml.costo_vida.fuente) };
+  const imm_2026 = { ...yaml.imm_2026, fuente: fuentesPorId(yaml.imm_2026.fuente) };
+  const casen_2024 = { ...yaml.casen_2024, fuente: fuentesPorId(yaml.casen_2024.fuente) };
+
+  const actualTarjeta: TarjetaBrecha = {
+    clave: 'presidente',
+    etiqueta: `Presidente · ${actual.fecha_label}`,
+    monto: actual.sueldo,
+    unidad: 'bruto mensual',
+    fuente: fuentesPorId(yaml.serie_registro_publico.fuente),
+  };
+  const tarjeta = (
+    clave: string,
+    etiqueta: string,
+    monto: number,
+    unidad: string,
+    fuente: FuenteResuelta,
+  ): TarjetaBrecha => ({ clave, etiqueta, monto, unidad, fuente });
+  const comparacion = (
+    clave: string,
+    etiqueta: string,
+    monto: number,
+    unidad: string,
+    fuente: FuenteResuelta,
+    nota: string,
+  ): ComparacionBrecha => ({
+    clave,
+    etiqueta,
+    monto,
+    unidad,
+    veces: actual.sueldo / monto,
+    diferencia: actual.sueldo - monto,
+    fuente,
+    nota,
+  });
+  const fuenteESI = ingresos_esi.fuente;
+  const fuenteCBA = costo_vida.fuente;
+  const fuenteIMM = imm_2026.fuente;
+  const tarjetas: TarjetaBrecha[] = [
+    actualTarjeta,
+    tarjeta('esi-mediana', `Mediana ESI · ${ingresos_esi.ano}`, ingresos_esi.mediana, 'neto mensual por persona ocupada', fuenteESI),
+    tarjeta('asalariados-publicos', `Asalariados públicos · ${ingresos_esi.ano}`, ingresos_esi.asalariados_publicos_promedio, 'neto mensual promedio', fuenteESI),
+    tarjeta('linea-pobreza', `Línea de pobreza · ${costo_vida.periodo}`, costo_vida.linea_pobreza_no_arrendatario, 'persona equivalente, no arrendatario', fuenteCBA),
+  ];
+  const comparaciones: ComparacionBrecha[] = [
+    comparacion('esi-mediana', `Mediana ESI ${ingresos_esi.ano}`, ingresos_esi.mediana, 'neto / persona ocupada / mes', fuenteESI, 'Magnitud orientativa; bruto 2026 contra neto 2025.'),
+    comparacion('esi-promedio', `Promedio ESI ${ingresos_esi.ano}`, ingresos_esi.promedio, 'neto / persona ocupada / mes', fuenteESI, 'El promedio puede ser influido por ingresos altos.'),
+    comparacion('asalariados-publicos', `Asalariados públicos ESI ${ingresos_esi.ano}`, ingresos_esi.asalariados_publicos_promedio, 'neto / asalariado público / mes', fuenteESI, 'Categoría de la ESI; no incluye la dieta presidencial.'),
+    comparacion('imm', 'Ingreso mínimo 18–65 años', imm_2026.categorias[0].monto, 'bruto / mes', fuenteIMM, 'Monto bruto del tramo 18–65 años.'),
+    comparacion('linea-pobreza', `Línea de pobreza no arrendatario · ${costo_vida.periodo}`, costo_vida.linea_pobreza_no_arrendatario, 'persona equivalente / mes', fuenteCBA, 'Umbral de pobreza, no ingreso disponible.'),
+    comparacion('linea-pobreza-extrema', `Línea de pobreza extrema no arrendatario · ${costo_vida.periodo}`, costo_vida.linea_pobreza_extrema_no_arrendatario, 'persona equivalente / mes', fuenteCBA, 'Umbral de pobreza extrema, no ingreso disponible.'),
+  ];
+  const brecha: BrechaData = {
+    presidente: {
+      ...actualTarjeta,
+      periodo: actual.fecha_label,
+      veces_imm: actual.sueldo / imm_2026.categorias[0].monto,
+      legal: legalDiet,
+      diferencia_legal: actual.sueldo - legalDiet,
+    },
+    tarjetas,
+    comparaciones,
+  };
+
+  const registro = yaml.ipc.registro_presidente_julio_2026;
+  const registroAjustado = Math.round((registro.monto * ipcAgo) / registro.indice);
   const millonesPrevios = previosABoric.map(enMillones);
-
-  const ratioKast = ratios[0];
-  const ratioBoric = ratios[1];
-  const ratio2010s = [ratios[2], ratios[3], ratios[4]]; // Piñera II, Bachelet II, Piñera I
-  const ratioBacheletI = ratios[5];
 
   const presidentes: PresidenteSueldo[] = yaml.presidentes.map((p) => ({
     ...p,
+    vigencias: [...p.vigencias].sort((a, b) => {
+      const fechaA = a.desde ?? '9999-12-31';
+      const fechaB = b.desde ?? '9999-12-31';
+      return fechaA.localeCompare(fechaB);
+    }),
     presidente: nombrePersona(p.presidente_id),
   }));
 
@@ -266,30 +465,38 @@ function build() {
   };
 
   const ipc = {
-    jul_2026: yaml.ipc.jul_2026,
-    registro_presidente_mayo_2026: {
-      ...regMayo,
-      fuente: fuentesPorId(yaml.ipc.registro_presidente_mayo_2026.fuente),
+    base: yaml.ipc.base,
+    mes_referencia: yaml.ipc.mes_referencia,
+    ago_2026: ipcAgo,
+    registro_presidente_julio_2026: {
+      ...registro,
+      fuente: fuentesPorId(registro.fuente),
     },
   };
 
   const serie_registro_publico = {
     fuente: fuentesPorId(yaml.serie_registro_publico.fuente),
-    puntos: [...yaml.serie_registro_publico.puntos].sort((a, b) =>
-      a.periodo.localeCompare(b.periodo)
-    ),
+    puntos: [...yaml.serie_registro_publico.puntos].sort((a, b) => a.periodo.localeCompare(b.periodo)),
   };
+
+  const fuentes = ordenRefs.map((id, index) => ({ ...fuentesPorId(id), index: index + 1 }));
 
   return {
     ordenRefs,
-    fuentes: ordenRefs.map((id) => ({ id, ...fuentesPorId(id) })),
+    fuentes,
     presidentes,
+    actualPresidente: presidentes.find((p) => p.gobierno === 'Kast') ?? presidentes[0],
     segundo_piso,
     topes_dipres,
     sueldo_minimo: yaml.sueldo_minimo,
-    indicadores: yaml.indicadores,
+    indicadores,
     serie_registro_publico,
     ipc,
+    ingresos_esi,
+    costo_vida,
+    imm_2026,
+    casen_2024,
+    brecha,
     formatCLP,
     pctDiff,
     enMillones,
@@ -299,7 +506,9 @@ function build() {
       maxAjustado,
       promedioPrevios,
       pctInferiorKast,
-      registroMayoAjustado,
+      registroAjustado,
+      ratioLegalKast,
+      legalDiet,
       ratioKastVecesRedondeado: Math.round(ratioKast.veces),
       ratioBoricVecesRedondeado: Math.round(ratioBoric.veces),
       ratio2010sTexto: {
@@ -311,17 +520,14 @@ function build() {
       },
       ratioBacheletITexto: ratioBacheletI.veces.toFixed(1).replace('.', ','),
       millonesRangoPrevios: {
-        min: enMillones(Math.min(...previosABoric)),
-        max: enMillones(Math.max(...previosABoric)),
+        min: enMillones(Math.min(...previosABoric.map((s) => s.ajustado))),
+        max: enMillones(Math.max(...previosABoric.map((s) => s.ajustado))),
       },
-      kastAjustadoMillones: enMillones(sueldosAjustados[0].ajustado),
-      boricAjustadoMillones: enMillones(sueldosAjustados[1].ajustado),
-      freiAjustadoMillones: enMillones(
-        sueldosAjustados[sueldosAjustados.length - 1].ajustado
-      ),
-      lagosAjustadoMillones: enMillones(
-        sueldosAjustados[sueldosAjustados.length - 2].ajustado
-      ),
+      kastAjustadoMillones: enMillones(porGobierno('Kast').ajustado),
+      boricAjustadoMillones: enMillones(porGobierno('Boric').ajustado),
+      freiAjustadoMillones: enMillones(porGobierno('Frei').ajustado),
+      lagosAjustadoMillones: enMillones(porGobierno('Lagos').ajustado),
+      millonesPrevios,
     },
   };
 }

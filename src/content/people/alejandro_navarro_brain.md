@@ -1,7 +1,14 @@
 ---
 nombre: Alejandro Navarro Brain
 cargo: Exsenador de la República
-notas: Exsenador por la Región del Biobío (2006-2022). Autor de la columna de
-  opinión en BioBioChile que criticó el recorte del presupuesto del MOP en el
-  Biobío y llamó a una marcha regional a Santiago en octubre de 2026.
+cargos:
+  - cargo: Senador por la Región del Biobío
+    desde: 2006-03-11 # https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Alejandro_Navarro_Brain
+    hasta: 2022-03-11 # https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Alejandro_Navarro_Brain
+notas: Senador del Movimiento Amplio Social (MAS) por el Biobío (2006-2022). En
+  junio de 2011 apoyó la solicitud de Ximena Rincón a la Contraloría por el
+  convenio UPOV 91; en noviembre de 2019 anunció querella contra Piñera por lesa
+  humanidad tras el informe de DDHH. En agosto de 2026 publicó columna en
+  BioBioChile contra el recorte del presupuesto del MOP en el Biobío y llamó a
+  una marcha regional a Santiago.
 ---

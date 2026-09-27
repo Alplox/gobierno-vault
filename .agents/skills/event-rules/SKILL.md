@@ -61,6 +61,11 @@ Sí válido: preposición o cargo que NO está en el nombre (`del [[organization
 - **Sí se descarta:** agregadores sin reportería propia (ej. MSN que replica), videos sin transcripción verificable o con datos contradictorios no confirmables, URLs no localizables (existe mención pero sin URL recuperable). Lo descartado y el motivo van al **resumen entregado al usuario**, nunca al body (regla 13).
 - **Origen en red social nunca se descarta:** si el hecho noticioso ES una declaración publicada en red social (post, video, hilo) y la prensa solo la reproduce, el post original se agrega SIEMPRE como fuente complementaria (`tipo: redes`, ej. `20260910-3` con `twitter-2026-09-10-...`) citada junto a la prensa en la afirmación. Solo la fuente original fija el texto acreditado; la transcripción de prensa puede ser incorrecta. Si el post no es fetcheable (login wall), se consigna en `notas` contra qué medios se verificó la transcripción.
 
+## Eventos internacionales y reacciones
+
+- Un episodio internacional sin acción, política o efecto chileno sustantivo no se registra como evento independiente por cada ataque, anuncio o escalada. Integra su cronología, hechos y límites en el evento chileno de contexto que explique la relación (por ejemplo, energía, comercio exterior o navegación); evita una cascada de eventos internacionales sin valor añadido para Chile.
+- Un hilo o post que formula una opinión, tesis o pronóstico no constituye por sí solo una noticia ni una tarea de seguimiento. Puede aparecer como reacción o referencia en un evento cercano, con sus afirmaciones separadas de los hechos verificados; no crear un evento independiente sólo para alojarlo.
+
 ## TAREAS — bitácora de pendientes anti recency bias
 
 Vive en `TAREAS/`. No hay `TAREAS.md` raíz ni archivo de completadas — lo hecho queda en `EVENTS_INDEX.md` + `git log`.

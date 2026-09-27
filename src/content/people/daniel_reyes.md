@@ -1,5 +1,6 @@
 ---
 nombre: Daniel Reyes
+aliases: [Daniel Reyes Morales]
 cargo: Alcalde de La Florida (Republicano)
 cargos:
   - cargo: Alcalde de La Florida (Republicano)

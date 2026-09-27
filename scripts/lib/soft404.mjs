@@ -40,6 +40,12 @@ export const SOFT404_PATTERNS = [
   'ingresa a comunidad bío bío',
 ];
 
+// archive.today sin snapshot: responde 200 con la página de búsqueda vacía
+// ("No results" + "You may want to" + "archive this url"), unos 4.500 chars que
+// superan el corte de longitud. Las tres cadenas juntas no aparecen en un
+// artículo real.
+const ARCHIVE_NO_SNAPSHOT = ['no results', 'you may want to', 'archive this url'];
+
 // Marcadores de chrome/boilerplate (reproductor, compartir, píxeles de ads).
 // Un cuerpo real no debería estar dominado por ellos.
 const BOILERPLATE_MARKERS = [
@@ -55,6 +61,13 @@ const BOILERPLATE_MARKERS = [
 
 const BOILERPLATE_THRESHOLD = 5; // coincidencias distintas para sospechar
 const MIN_BODY_PARAGRAPH = 400; // párrafo más largo bajo el cual no hay cuerpo
+
+// Agregador con texto generado: la pieza no es un 404, es una reescritura
+// firmada por un modelo. La firma va entre paréntesis al cierre del cuerpo y el
+// prefijo es la sigla del medio (Nuevo Poder: "NP-ChatGPT-Bio Bio-Agencias",
+// "NP-ChatGPT-Emol"). Es la variante en código del patrón documentado en la
+// tabla de poison pills de .agents/skills/tools/SKILL.md.
+const GENERATED_BY_SIGNATURE = /\(\s*[A-Z][A-Za-z]{1,6}-ChatGPT[\w\s.-]{0,40}\)\s*[.!]?\s*$/m;
 
 function longestParagraph(text) {
   return text
@@ -91,6 +104,10 @@ export function isSoft404(text, { url = '' } = {}) {
     if (lower.includes(p)) return { soft: true, reason: `patrón "${p}"` };
   }
 
+  if (ARCHIVE_NO_SNAPSHOT.every((p) => lower.includes(p))) {
+    return { soft: true, reason: 'archive.today sin snapshot' };
+  }
+
   const markers = BOILERPLATE_MARKERS.filter((m) => lower.includes(m));
   if (markers.length >= BOILERPLATE_THRESHOLD && longestParagraph(text) < MIN_BODY_PARAGRAPH) {
     return { soft: true, reason: `boilerplate sin cuerpo (${markers.length} marcadores)` };
@@ -107,6 +124,11 @@ export function isSoft404(text, { url = '' } = {}) {
   const overlap = slugTitleOverlap(text, url);
   if (overlap !== null && overlap < 0.3) {
     return { soft: true, reason: `titular no corresponde al slug (overlap ${overlap.toFixed(2)})` };
+  }
+
+  // Cuerpo que cierra con la firma de un modelo: no hay reportería propia.
+  if (GENERATED_BY_SIGNATURE.test(text)) {
+    return { soft: true, reason: 'texto generado (firma de modelo al cierre)' };
   }
 
   return { soft: false };

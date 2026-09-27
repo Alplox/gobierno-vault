@@ -4,6 +4,10 @@
  *
  * Cadena de 3 pasos:
  *   1) sitemaps/sync.mjs  → modo MERGE incremental: nunca borra datos existentes.
+ *      - Por defecto usa `--since-last-sync`: cada medio parte de su propio
+ *        `ultima_sync` y solo descarga endpoints que puedan contener la ventana
+ *        transcurrida. Si se pasan `--since`/`--days`, esa ventana explícita
+ *        reemplaza el cálculo automático para todos los medios.
  *      - `--incremental` omite sub-sitemaps servidos desde caché fresco (los ya
  *        capturados en sync previos; solo expiran los que cambian, ej. news-sitemaps).
  *      - Solo se sincronizan los medios YA presentes en `_manifest.json`
@@ -17,9 +21,9 @@
  * usar explícitamente `pnpm run sitemaps-sync -- --all --replace`.
  *
  * Uso:
- *   pnpm run sitemaps-resync                 # resync de los medios del catálogo
+ *   pnpm run sitemaps-resync                 # desde la última sync de cada medio
  *   pnpm run sitemaps-resync -- --stale 12   # caché más corto (news frescas)
- *   pnpm run sitemaps-resync -- --days 7     # solo contenido reciente (sin
+ *   pnpm run sitemaps-resync -- --days 7     # override: solo contenido reciente (sin
  *                                            # recargar el catálogo completo)
  */
 
@@ -42,14 +46,17 @@ const NODE = process.execPath;
 const args = process.argv.slice(2);
 const staleArg = args.indexOf('--stale');
 const stale = staleArg >= 0 && args[staleArg + 1] ? args[staleArg + 1] : '24';
-// Flags opcionales de ventana temporal, pasados tal cual a sitemaps/sync.mjs
-// (--since <YYYY-MM-DD> o --days <n>): resync solo de contenido reciente.
+// Ventana temporal. Por defecto cada medio usa su propia `ultima_sync`; una
+// ventana explícita --since/--days reemplaza ese comportamiento para el resync.
 const sinceArg = args.indexOf('--since');
 const daysArg = args.indexOf('--days');
-const syncExtra = [
-  ...(sinceArg >= 0 ? ['--since', args[sinceArg + 1]] : []),
-  ...(daysArg >= 0 ? ['--days', args[daysArg + 1]] : []),
-];
+const explicitWindow = sinceArg >= 0 || daysArg >= 0;
+const syncExtra = explicitWindow
+  ? [
+      ...(sinceArg >= 0 ? ['--since', args[sinceArg + 1]] : []),
+      ...(daysArg >= 0 ? ['--days', args[daysArg + 1]] : []),
+    ]
+  : ['--since-last-sync'];
 
 function run(script, scriptArgs = []) {
   console.log(`\n▶ node scripts/sitemaps/${script} ${scriptArgs.join(' ')}`);
@@ -91,7 +98,7 @@ if (medios.length === 0) {
   process.exit(1);
 }
 
-console.log(`Resync incremental de: ${medios.join(', ')}`);
+console.log(`Resync incremental (${explicitWindow ? 'ventana explícita' : 'desde la última sync por medio'}) de: ${medios.join(', ')}`);
 run('sync.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale, ...syncExtra]);
 run('index.mjs');
 run('backup.mjs');

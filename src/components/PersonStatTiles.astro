@@ -1,0 +1,100 @@
+---
+// Fila de indicadores auto-generados para el panorama de una persona. Todos los
+// valores se derivan de los eventos y citas registrados; ninguno es manual.
+import type { PersonPanorama } from '../lib/personStats';
+import { Calendar, MessageSquareQuote, Layers, Users, Building2, Flame, CalendarDays, Newspaper } from 'lucide-astro';
+
+interface Props {
+  panorama: PersonPanorama;
+}
+
+const { panorama } = Astro.props;
+
+const n = (v: number) => v.toLocaleString('es-CL');
+const rango = panorama.yearFrom !== null ? `${panorama.yearFrom}–${panorama.yearTo}` : '—';
+
+const tiles = [
+  {
+    icon: Calendar,
+    value: n(panorama.total),
+    label: 'Eventos',
+    hint: panorama.total > 0 ? `${n(panorama.diasActivos)} días con actividad` : 'Sin eventos',
+    href: '#eventos',
+  },
+  {
+    icon: MessageSquareQuote,
+    value: n(panorama.citas.length),
+    label: 'Declaraciones',
+    hint: panorama.citas.length
+      ? `Citadas textualmente en ${n(new Set(panorama.citas.map((q) => q.eventId)).size)} eventos`
+      : 'Sin citas textuales',
+    href: '#declaraciones',
+  },
+  {
+    icon: Flame,
+    value: n(panorama.vozPropia),
+    label: 'Voz propia',
+    hint: 'Eventos de tipo declaración o entrevista',
+    href: '#reparto',
+  },
+  {
+    icon: CalendarDays,
+    value: rango,
+    label: 'Periodo documentado',
+    hint: `${panorama.years.length} años con actividad · ${panorama.mediaAnual}/año`,
+  },
+  {
+    icon: Layers,
+    value: n(panorama.temas.length),
+    label: 'Temas',
+    hint: panorama.temas[0] ? `Principal: ${panorama.temas[0].nombre}` : '—',
+    href: '#temas',
+  },
+  {
+    icon: Building2,
+    value: n(panorama.orgs.length),
+    label: 'Organizaciones',
+    hint: panorama.orgs[0] ? `Principal: ${panorama.orgs[0].nombre}` : '—',
+    href: '#organizaciones',
+  },
+  {
+    icon: Users,
+    value: n(panorama.coPeople.length),
+    label: 'Personas vinculadas',
+    hint: panorama.coPeople[0] ? `Más frecuente: ${panorama.coPeople[0].nombre}` : '—',
+    href: '#red',
+  },
+  {
+    icon: Newspaper,
+    value: n(panorama.mediosDistintos),
+    label: 'Medios distintos',
+    hint: `${n(panorama.fuentesTotales)} fuentes citadas en total`,
+  },
+].filter((t) => t.href === undefined || panorama.total > 0);
+---
+
+<ul class="grid grid-cols-2 gap-2.5 sm:grid-cols-3 lg:grid-cols-4">
+  {tiles.map((t) => {
+    const inner = (
+      <>
+        <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/55">
+          <t.icon class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
+          <span class="truncate">{t.label}</span>
+        </span>
+        <span class="mt-1 block text-xl font-bold tabular-nums leading-none text-base-content">{t.value}</span>
+        <span class="mt-1 block truncate text-[11px] text-base-content/55" title={t.hint}>{t.hint}</span>
+      </>
+    );
+    return (
+      <li class="rounded-xl bg-base-200/60 px-3.5 py-3">
+        {t.href ? (
+          <a href={t.href} class="block transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded">
+            {inner}
+          </a>
+        ) : (
+          <div>{inner}</div>
+        )}
+      </li>
+    );
+  })}
+</ul>

@@ -302,9 +302,9 @@ const graphLinks = graphEdges.map((e) => ({
     size === 'full' ? 'h-[420px] overflow-x-auto sm:h-[560px]' : '',
   ]}>
     <!-- Skeleton: se muestra hasta que force-graph.js crea el SVG interactivo y lo oculta. Reemplaza el SVG estático solapado previo. -->
-    <div data-graph-skeleton class="flex w-full animate-pulse items-center justify-center bg-base-200" style={size === 'mini' ? 'height:280px' : 'height:100%'}>
-      <div class="flex flex-col items-center gap-2 py-8 text-base-content/40">
-        <div class="h-8 w-8 animate-spin rounded-full border-2 border-base-300 border-t-primary"></div>
+    <div data-graph-skeleton class="flex w-full items-center justify-center bg-base-200" style={size === 'mini' ? 'height:280px' : 'height:100%'}>
+      <div class="flex flex-col items-center gap-2 py-8 text-base-content/40" role="status" aria-live="polite" aria-atomic="true">
+        <div class="h-8 w-8 animate-spin rounded-full border-2 border-base-300 border-t-primary" aria-hidden="true"></div>
         <span class="text-xs">Cargando grafo…</span>
       </div>
     </div>

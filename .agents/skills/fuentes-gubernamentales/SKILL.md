@@ -81,7 +81,9 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Institución | URL | Notas |
 | --- | --- | --- |
 | SENAPRED | <https://www.senapred.cl/noticias/> | Prevención y Respuesta ante Desastres |
-| SII | <https://www.sii.cl/noticias/> | Servicio de Impuestos Internos |
+| Servicio Nacional de Migraciones (SERMIG) | <https://serviciomigraciones.cl/> | Portal oficial; el Balance Migratorio 2026 se consulta en <https://datastudio.google.com/reporting/c45a1db4-25a1-4afb-9a56-d19425f8a6d5/page/EiD0F> y actualiza mensualmente expulsiones, salidas, reconducciones e ingresos por pasos no habilitados |
+| Unidad de Análisis Financiero (UAF) | <https://www.uaf.cl/es-cl/> | Portal oficial; las notas se consultan en `noticia-detalle?id=<n>`. Fuente primaria para cifras de alertas, carga y propuestas de la UAF ante comisionesParlamentarias |
+| SII | <https://www.sii.cl/noticias/> | Servicio de Impuestos Internos. **Resoluciones exentas**: el índice del año (`<https://www.sii.cl/normativa_legislacion/resoluciones/2026/res_ind2026.htm>`) enlaza cada una como `resoNN.pdf` con comillas simples, sin link visible en el listado; la URL se compone directo (`.../2026/reso69.pdf`) y se lee con `pnpm run pdf-extract`. **Noticias**: `sii.cl/noticias/AAAAMMDDnotiNN<slug>.htm` (el nombre codifica la fecha, p. ej. `2026/030626noti01smn.htm`); traen la postura oficial y las nóminas, pero sin `<p>` con texto legible para `fetch` (el contenido va en tablas). Los comunicados de las comparecencias ante comisiones del Senado tienen su propia nota en `senado.cl/comunicaciones/noticias/` |
 | SERNAC | <https://www.sernac.cl/> | Portal principal (validado 2026-08-27: `/portal/noticias/` → 404) |
 | Tesorería General de la República | <https://www.tgr.cl/noticias/> | Redirige a `tgr.gob.cl` |
 | Servicio Nacional de Aduanas | <https://www.aduana.cl/> | Portal principal (validado 2026-08-27: `/noticias/aduana/site/...` → 404) |
@@ -89,6 +91,21 @@ Si la fuente directa contradice la prensa, documenta la desincronización con p�
 | Instituto de Salud Pública (ISP) | <https://www.ispch.cl/> | Portal principal (validado 2026-08-27: `/noticias/` no responde desde esta red; verificar con `fetch-impersonate`) |
 | Servicio Agrícola y Ganadero (SAG) | <https://www.sag.gob.cl/noticias> | |
 | U. de Chile — Revalidación de títulos extranjeros | <https://revalidaciones.uchile.cl/> | Sitio de consulta de títulos revalidados (excluye países con tratado, cuyo registro lleva Minrel). Búsqueda por nombres/paterno/materno contra `GET /api/revalidaciones/revalidados`; 204 = sin resultados. Verificado sep-2026 (caso Rubio: tres combinaciones sin resultados). Solo referencial, no sustituye certificados oficiales |
+
+## Combustibles y energía — ENAP, CNE y normativa
+
+| Institución | URL | Notas |
+| --- | --- | --- |
+| ENAP — Informe semanal de precios de combustibles | Índice vigente <https://www.enap.cl/informacion-comercial/informe-semanal-de-precios> · histórico <https://www.enap.cl/informe-semanal-de-precios> | **Fuente primaria de toda variación de combustibles.** Se publica **todos los miércoles** y cubre la semana siguiente (jueves a miércoles). Cada informe es un PDF de 1 página en `https://www.enap.cl/files/get/<id>`, firmado "Santiago, <fecha>" al pie, con la variación estimada por litro de gasolina 93/97, diésel, kerosene y GLP vehicular, y el aviso de que ENAP no fija el precio final. El histórico ordena los PDFs por rótulo ("INFORME DE PRECIOS ESTIMADOS PARA COMBUSTIBLES-<DD> AL <DD> DE <MES> DE <AÑO>"), así que el del día se localiza por el rango de fechas y no por fecha de subida. `fetch-content` cae en `archive.ph` con "No results" en estas páginas de índice (soft-404 que la escalera no siempre detecta): leer el índice con `Invoke-WebRequest` + regex `href="(https://www\.enap\.cl/files/get/\d+)"` y luego `pnpm run pdf-extract -- <URL del PDF>` |
+| ENAP — capacidad de refinación | <https://www.enap.cl/nuestras-operaciones/refinacion-y-comercializacion-rc/enap-refinerias/bio-bio> | Fichas por refinería (capacidad de destilación, dotación); sin fecha de publicación, la fecha de la fuente es la de consulta |
+| CNE — informes y estudios | <https://www.cne.cl/noticias/> | Además del Reporte Mensual del Sector Energético, la CNE publica estudios en `cne.cl/wp-content/uploads/<AAAA>/<MM>/<archivo>.pdf` (p. ej. el informe de combustibles carbono neutral elaborado por DEUMAN, subido en marzo de 2026 y de 204 páginas). Son la fuente primaria para el marco regulatorio de biocombustibles y mezclas: su sección 6.4 analiza bioetanol y su capítulo de normativa cita el D.S. N°11/2008, que limita la mezcla con gasolina a 2% o 5% |
+| LeyChile vía MCP `leychile` → URL oficial | `https://www.bcn.cl/leychile/navegar?idNorma=<idNorma>` | El `idNorma` que devuelve el MCP es **el mismo** de BCN/LeyChile, así que la URL oficial se compone sin buscar: `search_laws` para localizar, `get_article`/`get_modifications`/`list_versions` para leer articulado, vigencia y cadena de modificaciones, y `https://www.bcn.cl/leychile/navegar?idNorma=<idNorma>` como `url` de la fuente con `medio: Biblioteca del Congreso Nacional (LeyChile)`. Citar el articulado literal (ej. D.S. N°11/2008 art. 11 sobre mezcla de bioetanol) permite contrastar lo que afirma la prensa sin tener que abrir bcn.cl |
+
+## Mercado de capitales
+
+| Institución | URL | Uso |
+| --- | --- | --- |
+| Bolsa de Comercio de Santiago — Estadísticas Anuales | <https://servicioscms.bolsadesantiago.com/Sintesis%20y%20Estadisticas/Estad%C3%ADsticas%20Anuales%202006.pdf> | PDF oficial histórico; la página de ranking separa capitalización bursátil, montos transados y rentabilidad. Para años recientes el nombre/acento del archivo cambia (por ejemplo, `Sintesis%20y%20Estadistica%20Anual%202025.pdf`); localizar el PDF y citar la URL exacta, con `medio: Bolsa de Comercio de Santiago` en la lista blanca. |
 
 ## Compras públicas — licitaciones y órdenes de compra
 
@@ -125,7 +142,12 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 | Presidencia — Dotación de Planta 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_planta.html> | Mismo |
 | Presidencia — Remuneraciones 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_remuneraciones.html> | Mismo |
 | Senado — Informe de Transparencia | <https://tramitacion.senado.cl/appsenado/index.php?ac=informeTransparencia&anno=2023&mesid=0&mo=transparencia&tipo=10> | |
-| CFR — Registro Público (Comisión 38 bis) | <https://comision38bis.gob.cl/registro-publico> | |
+| CFR — Registro Público (Comisión 38 bis) | <https://comision38bis.gob.cl/registro-publico> | La consulta por mes usa `?mes=YYYY-MM` (por ejemplo, <https://comision38bis.gob.cl/registro-publico?mes=2026-07>); el registro declara que los montos son reportados por cada institución |
+| BCN — Ley 21.830 | <https://www.bcn.cl/leychile/navegar?idNorma=1225354> | Texto oficial; fija $553.553 (18–65), $412.938 (menores de 18/mayores de 65) y $356.815 (no remuneracionales) desde mayo de 2026 |
+| INE — BDE IPC serie empalmada | <https://si3.bcentral.cl/Siete/ES/Siete/Cuadro/CAP_PRECIOS/MN_CAP_PRECIOS/IPC_EMP_2023/638415285164039007> | Serie base diciembre de 2023=100; para agosto de 2026 muestra 113,15 |
+| Observatorio Social — CBA y líneas | <https://observatorio.ministeriodesarrollosocial.gob.cl/nueva-serie-cba-2026> | Informes mensuales; para agosto de 2026, CBA $92.327 y líneas por persona equivalente según condición de arrendatario |
+| Observatorio Social — CASEN ingresos | <https://observatorio.ministeriodesarrollosocial.gob.cl/storage/docs/casen/2024/Resultados_ingresos_Casen_2024.pdf> | Ingresos monetarios de hogar y per cápita; no mezclar con remuneración individual |
+| INE — ESI 2025 | <https://www.ine.gob.cl/sala-de-prensa/prensa/general/noticia/2026/07/14/la-mitad-de-las-personas-ocupadas-en-chile-percibieron-ingresos-menores-o-iguales-a-$680.000-en-2025> | Ingreso laboral neto por persona ocupada; no confundir con ingreso de hogar |
 | INE — Calculadora IPC | <https://calculadoraipc.ine.gob.cl/> | |
 | INE — Manual IPC (PDF) | <https://www.ine.gob.cl/docs/default-source/%C3%ADndice-de-precios-al-consumidor/metodologias/base-anual-2018-100/metodolog%C3%ADa.pdf> | PDF metodología |
 
@@ -155,6 +177,10 @@ Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones
 | GDELT Project | <https://www.gdeltproject.org/> | Base global de eventos (100+ idiomas, cada 15 min), API abierta para cruzar contexto internacional |
 | Meganoticias — Hemeroteca | <https://www.meganoticias.cl/hemeroteca/> | Archivo por año/trimestre/día (2026+); útil cuando sitemap no entrega URL |
 | ley-chile (repo + MCP) | <https://github.com/pisanvs/ley-chile> | DB leyes chilenas + MCP `<https://leyes.pisanvs.cl/api/mcp>` (8 tools: search_laws, get_law, get_article, …) — NO es fuente oficial, citar siempre `BCN/LeyChile` |
+| Embajada de Estados Unidos en Chile | <https://cl.usembassy.gov/> | Comunicados y textos primarios de la misión estadounidense en Chile; útil para contrastar documentos de seguridad y cooperación con la posición de Cancillería |
+| WIPO — Global Innovation Index | <https://www.wipo.int/gii-ranking/en/chile> | Perfil oficial de innovación de Chile; reporta ranking general, insumos y resultados, con advertencias metodológicas del GII |
+| ONU DESA — Comité Negociador (Convención Marco de Cooperación Fiscal Internacional) | <https://financing.desa.un.org/unfcitc> | Fuente primaria del proceso multilateral. El `fetch` directo devuelve solo navegación: leer con `r.jina.ai` (trae "Key Dates" y los "Latest Updates" con los PDF de cada sesión). Los borradores de los co-presidentes se citan como `tipo: documento` con `medio: Naciones Unidas` y fecha propia del documento, p. ej. `A/AC.298/CRP.32` del 21-jul-2026 (Zero Draft de la Convención), que se lee con `pnpm run pdf-extract` sobre el `.pdf` en `sites/default/files/AAAA-MM/`. Contiene el articulado citado en los eventos del vault sobre soberanía fiscal |
+| OCDE — estudios económicos de Chile | <https://www.oecd.org/en/countries/chile.html> | Informes oficiales sobre productividad, I+D, innovación digital y proyecciones; preferir la página del informe o capítulo concreto |
 
 - **GDELT:** no es prensa ni gubernamental; útil para validar escala/contexto internacional antes de fijar expectativa en `TAREAS.md`. No reemplaza fuente primaria.
 - **Hemeroteca Meganoticias:** catálogo ya indexa sitemap (desde 2011); hemeroteca es interfaz por fecha para hallar URL exacta.

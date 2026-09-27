@@ -24,8 +24,8 @@ src/
   content/events/YYYY/MM/YYYYMMDD-N.md
   content/people/*.md, organizations/*.md, topics/*.md, sources/*.md, cifras/*.md ← colecciones Obsidian (markdown puro, sin YAML monolito)
   data/  colectivos.yaml, sectores.yaml, sueldos.yaml ← única excepción YAML (arrays planos / sueldos, no migrado a md)
-  lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, remarkWikiLinks.mjs
-  components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge
+  lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, personStats.ts, remarkWikiLinks.mjs
+  components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge, Person{ActivityChart,Network,StatTiles,TopicMix,CargoTimeline,QuoteItem,EventFilters}
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
   pages/  /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin, /llm.txt, /events/[year]/[id].md, /data/*.yaml
 sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
@@ -80,9 +80,11 @@ Cuerpo con wikilinks inline...
 
 Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada. Detalle completo (medios en prosa, formato citas, `svg_backup`, cifras en disputa, votaciones con fuente oficial) en `.agents/skills/content-model/SKILL.md`.
 
+**Al escribir o leer código que parsee `.md`:** el corpus es mixto LF/CRLF (mayoría CRLF) y los wikilinks son **siempre en plural** (`[[people/]]`, `[[sources/]]`). Toda regex de frontmatter necesita `\r?` (`^---\r?\n([\s\S]*?)\r?\n---`) y todo regex de entidad acepta `[[(people|person)/…]]` + alias opcional `|Alias`. Un singular o un `\n` estricto no da error: **hace que el lector se salte el archivo en silencio** (dejó las 1.711 declaraciones del vault en 0). Detalle en `.agents/skills/data-yaml/SKILL.md` → "Lectura de archivos: CRLF y wikilinks".
+
 ## Reglas rapidas (detalle en `.agents/skills/event-rules/SKILL.md`)
 
-1. **5 fuentes** de medios distintos por evento (mínimo, sin techo: agotar las que coincidan con el body antes de descartar — ver `event-rules.md` → Máximo de fuentes); nunca red social como fuente unica. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (tablas Presidencia/ministerios/BCN/Cámara/Senado) para reducir reinterpretación.
+1. **5 fuentes** de medios distintos por evento (mínimo, sin techo: agotar las que coincidan con el body antes de descartar — ver `event-rules.md` → Máximo de fuentes); nunca red social como fuente unica. **Prioriza fuente gubernamental directa antes que prensa** — ver `.agents/skills/fuentes-gubernamentales/SKILL.md` (tablas Presidencia/ministerios/BCN/Cámara/Senado) para reducir reinterpretación. **Anti-duplicados:** antes de crear `organizations|people|sources/*.md`, buscar por nombre y sigla con `rg`; si ya existe, reutilizar el ID o agregar `aliases[]` (script: `node scripts/validate/check-duplicates.mjs`, detalle en `.agents/skills/data-yaml/SKILL.md` → Anti-duplicados).
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
 3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[people/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
 4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`).
@@ -105,6 +107,7 @@ Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (
 - Líneas / contar `##` / tamaño: `rg -c "^##" AGENTS.md`, `rg --count`, o `node -e "console.log(readFileSync('AGENTS.md','utf8').split('\n').length)"` / `statSync` — funcionan en Windows, Linux y macOS
 - Búsqueda: `rg` (ver `.agents/skills/tools/SKILL.md` → ripgrep) — respeta `.gitignore`; evita `grep`/`Select-String`/`Get-ChildItem` (320× más lentos)
 - Paginación / `| head -n N`: no uses `| head` (no existe en PowerShell); usa `rg --max-count N`, `rg ... | Select-Object -First N` en PowerShell, o `node` con `.slice(0,N)` — ver `.agents/skills/tools/SKILL.md` → ripgrep
+- **Enumerar archivos, nunca con `ls | rg ^patrón`:** en PowerShell `ls` (= `Get-ChildItem`) imprime varios nombres por línea, así que `ls src/content/events/2026/04/ | rg "^20260406"` devuelve **0 líneas y no da error** aunque los archivos existan (caso sep-2026: se sobrescribió `20260406-1.md`, que ya era el evento del viaje de Kast a Argentina; se detectó por `git status` y se restauró con `git checkout --`). Para listar nombres usa `rg --files <dir>` o `node -e "console.log(require('fs').readdirSync('dir').join('\n'))"` — y **antes de crear un evento nuevo, enumera con esas dos formas**, no con `ls`
 - Nunca uses `>`/`Set-Content`/`Out-File` sobre YAML (ver `data-yaml/SKILL.md`) — usa `node` con `writeFileSync` `utf8` o las tools `Edit`/`Write` del agente
 - Si necesitas un comando shell nativo, verifica primero que exista sino elige el equivalente portable (`rg --version`, `node -e "console.log(process.platform)"`)
 
@@ -151,6 +154,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Fuente gubernamental directa | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento `S/A/V-YYYY-NNN` | `TAREAS/SEGUIMIENTO/YYYY.md`, `TAREAS/SEGUIMIENTO_INDEX.md`, `.agents/skills/seguimiento/SKILL.md` |
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |
+| Ficha de persona (`/people/[id]`, graficos, panorama) | `.agents/skills/frontend/SKILL.md` → "Ficha de persona", `src/lib/personStats.ts` |
 | Gabinete / `cargos` / Cuentas Publicas | `.agents/skills/gabinete/SKILL.md`, `src/lib/cabinet.ts` |
 | Fetch / PDF / Office / OCR | `.agents/skills/tools/SKILL.md` |
 | Reacciones Reddit/X/YouTube mediante backend opcional | `scripts/social/last30days-search.mjs`, `.agents/skills/social-media/SKILL.md` |

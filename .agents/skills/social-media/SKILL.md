@@ -71,49 +71,44 @@ La regla depende del **estado editorial del hecho**, no de que el lead haya apar
 
 **Límites editoriales:** el ranking por likes/upvotes/views solo sirve para localizar conversación relevante. No demuestra veracidad, representatividad ni alcance nacional. Varias cuentas reproduciendo el mismo comunicado tampoco cuentan como corroboración independiente. Para el vault, las reacciones se documentan según las reglas de las líneas 12-19, aunque el backend entregue una síntesis con su propio tono.
 
-### Metodos de busqueda probados
+### Recuperación de posts y comentarios
 
-**Reddit r/chile** (los mas confiables — con bloqueo de red vigente):
-- **Descarga del hilo vía espejo `defuddle.md`**: `pnpm run fetch-content -- <https://old.reddit.com/r/<sub>/comments/<id>/<slug>/` resolvió con `defuddle.md` el hilo completo (post + comentarios con usuario, fecha y links permanentes; sin puntajes visibles). Revierte el bloqueo documentado abajo para lectura de hilos concretos — la búsqueda HTML/API sigue pendiente de re-verificación.
-- **Busqueda por HTML**: `<https://old.reddit.com/r/chile/search?q=<termino>s>&restrict_sr=on&sort=new&t=month` retorna 403 por política de red ("whoa there, pardner! Your request has been blocked due to a network policy" código 01a04a53) incluso con `Mozilla/5.0` UA (probado con `Invoke-WebRequest` y `webfetch`). La API JSON `search.json` ya devolvía 403; r.jina.ai sobre reddit también 403. Queda pendiente probar mirror (Pushshift bloqueado también 403) o acceso autenticado con credenciales developer.
-- **Descarga del hilo**: `curl -s -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" "<https://old.reddit.com/r/chile/comments/<i>d>/<slug>/" -o <archivo>.html` actualmente retorna 403 en Cloud IP. Si se libera, luego parsear con Python:
-  ```python
-  import re, html
-  blocks = re.split(r'<div class="entry', data)
-  user = re.search(r'/user/([^"/]+)', b)
-  score = re.search(r'score unvoted" title="([^"]+)"', b)
-  body = re.search(r'<div class="md">(.*?)</div>', b, re.S)
-  ```
-  Guardar el HTML en un archivo DENTRO del repo (ej. `tmp_<slug>.html`) y borrarlo al terminar: en Git Bash de Windows `/tmp` no es visible para Python (FileNotFoundError). Prefijar la impresion con `PYTHONIOENCODING=utf-8` para evitar errores de encoding cp1252 en consola Windows.
-- Ordenar comentarios por puntaje (desc) y tomar los top ~20 + los negativos para capturar el disenso.
+> **Referencia operativa:** cargar `references/retrieval.md` antes de usar mirrors, APIs de terceros o archivers.
 
-**Facebook** (posts de paginas de medios):
-- `r.jina.ai/<https://www.facebook.com/<pagin>a>/posts/<slug>/` devuelve el texto del post + los comentarios "Most relevant" con su conteo de reacciones (probado con El Dínamo y Kapital FM, 2026-08). `read_url` directa tambien funciona para algunos posts.
+- Usar solo contenido público y nunca cookies o credenciales del navegador del agente. Las cuentas de investigación requieren perfil aislado y autorización explícita.
+- Guardar siempre la URL original como fuente; mirrors, proxies y extractores son solo capas de lectura.
+- Citar únicamente texto completo. Si aparece `…`, `See more` o `Ver más`, expandirlo en navegador o descartar el comentario.
+- Registrar la captura de puntajes/reacciones porque pueden cambiar o llegar desde cachés distintas.
+- Una extracción vacía, bloqueada o fallida no prueba que no existan comentarios.
+- No usar undelete/PullPush/Pushshift para reconstruir contenido eliminado.
 
-**X/Twitter**: el clipping del usuario trae el hilo y sus comentarios; para ampliar voces buscar cobertura de prensa del tema y usar el catalogo de sitemaps (`grep -ih '<termino>' sitemaps/<medio>/*.jsonl`). Los status IDs entregados por el usuario se validan con la URL de prensa que los confirma.
+#### Cadena recomendada
 
-**X/Twitter — mirrors verificados 2026-09-14** (probar en este orden; rotar si uno falla con 403/429/captcha — las instancias caen y se rate-limitean a menudo):
-- ✅ `https://x.n0g.xyz/<usuario>` — Nitter clásico, timeline completo verificado (probado `/elonmusk` con tweets, RTs, contadores y fechas).
-- ✅ `https://nitter.cf/<usuario>` y `https://xitter.cf/<usuario>` — frontend teapawt, mismo backend, timeline completo verificado.
-- ✅ `https://sotwe.com/<usuario>` — perfil + tendencias por país (incluye Trends Chile del día) + descarga de imágenes; sirve para timelines Y tendencias, no solo timelines.
-- Patrón URL: `<mirror>/<usuario>` para perfil, `<mirror>/<usuario>/status/<id>` para tweet individual. Leer con fetch directo (HTML liviano, sin JS).
-- 🟡 Parciales (homepage OK, timeline bloqueado el 2026-09-14 — reintentar otro día): `nitter.kareem.one` (403 en perfil), `tw.eir-nya.gay` (429 rate-limit), `shitter.thepixora.com` y `nitter.miningtcup.me` (captcha DogWAF anti-bot; miningtcup además prohíbe scraping en sus reglas — no usar).
-- ❌ Caídos el 2026-09-14: `nt.vern.cc` (sin respuesta), `goyimx.com` (418 en raíz y en perfil).
+- **X:** oEmbed oficial para texto/autor + FxTwitter v2 para métricas, hilo y respuestas; `markdown.new` como muestra secundaria. `nitter.cf`/`xitter.cf` solo para buscar, timeline o RSS.
+- **Reddit:** `embed.reddit.com` + Defuddle para post/comentarios; Redlib para búsqueda y, solo si hace falta, puntajes vía Jina.
+- **Instagram:** `markdown.new` para caption y comentarios visibles; Defuddle para caption/metadatos; navegador o Browsertrix para cargar más comentarios.
+- **Facebook:** navegador público sin cookies, expandiendo `Ver más` en cada comentario citado; Jina/Defuddle solo como pistas y para el cuerpo del post.
+- **TikTok:** `yt-dlp` para metadatos + wrapper público de TikWM para comentarios/respuestas; oEmbed oficial para una comprobación mínima.
+- **YouTube:** `yt-dlp` con comentarios; usar la API oficial solo si ya hay credenciales y cuota.
 
-**Instagram**: `read_url` sobre reels/posts devuelve descripcion y a veces comentarios; para reacciones amplias preferir prensa o Reddit.
+#### Mirrors y servicios volátiles
 
-### Estado de validacion por red social
+- **X:** no promover `sotwe.com`, `x.n0g.xyz`, `xcancel.com` o `nitter.net` sin una comprobación actual. `nitter.cf` y `xitter.cf` funcionan, pero Nitter/teapawt está sujeto a caídas, límites y acciones legales; preferir FxTwitter.
+- **Reddit:** obtener las instancias vigentes de `redlib-org/redlib-instances`; no mantener una lista local de hosts porque cambia frecuentemente.
+- **Archivado:** Browsertrix genera WACZ y expande comentarios en varias redes; Bellingcat Auto Archiver es preferible para lotes. Un WACZ puede contener cookies: nunca compartir una captura creada con sesión autenticada.
 
-| Red social | Busqueda | Extraccion de comentarios | Notas |
+### Estado de validación por red social
+
+| Red social | Lectura | Comentarios | Fallback y límite |
 | --- | --- | --- | --- |
-| Reddit r/chile | 🟡 búsqueda directa bloqueada; `social-search` puede descubrir candidatos por RSS/arctic | 🟡 depende de lo que devuelva el backend y del floor de relevancia | La búsqueda HTML/API directa sigue 403; un `source_status: reddit: ok` con `results: []` no prueba que no haya reacción |
-| Facebook | ✅ r.jina.ai sobre posts de paginas | ✅ comentarios + reacciones | Solo paginas publicas; requiere el slug del post |
-| X/Twitter | ✅ mirrors 2026-09-14 (x.n0g.xyz, nitter.cf, xitter.cf, sotwe.com) | ✅ timeline + contadores via mirror | Sin búsqueda pública en x.com; usar mirrors con `<mirror>/<usuario>` y rotar ante 403/429/captcha |
-| Instagram | 🟡 read_url directa | 🟡 parcial (descripcion, pocos comentarios) | Reels/posts publicos |
-| TikTok | ⬜ no legible | ⬜ no legible | `read_url` devuelve "No readable text found" (JS pesado); `video-transcript` descarga audio pero puede colgarse sin backend Whisper — no reintentar a ciegas. Clipping con comentarios entregado por el usuario se documenta igual que X (rol c, entrecomillado literal + usuario + conteos del clipping) |
-| YouTube | 🟡 búsqueda/transcripción mediante `social-search` + `yt-dlp` disponible | 🟡 backend intenta comentarios cuando hay match | No usar `0 videos` como prueba de ausencia; registrar solo videos/comentarios con URL original y texto literal |
+| Reddit | ✅ `embed.reddit.com` + Defuddle | ✅ texto/autor/fecha/permalink; puntajes vía Redlib/Jina | La búsqueda directa suele estar bloqueada; Redlib es volátil y sus cachés pueden diferir |
+| Facebook | ✅ texto del post | ✅ texto completo en navegador público | Jina/Defuddle pueden devolver login, CAPTCHA o comentarios truncados |
+| X/Twitter | ✅ oEmbed + FxTwitter | ✅ respuestas estructuradas | Búsqueda/timeline vía Nitter/teapawt; preferir el endpoint oficial |
+| Instagram | ✅ `markdown.new` | ✅ comentarios visibles + permalinks | Defuddle para caption; navegador/Browsertrix para cargar más |
+| TikTok | ✅ `yt-dlp` + oEmbed | ✅ comentarios/respuestas vía TikWM | TikWM no es oficial ni tiene SLA; una falla no significa cero comentarios |
+| YouTube | ✅ `social-search` + `yt-dlp` | ✅ `yt-dlp` con IDs, autores y likes | API Data oficial opcional; no usar `0 videos` como prueba de ausencia |
 
-Para TikTok la extracción de comentarios sigue sin resolver. En YouTube, `social-search` puede intentar búsqueda, transcripción y comentarios mediante `yt-dlp`, pero solo usarlos si devuelve una URL original y texto literal verificable; si no hay match, usar prensa/Reddit o el clipping entregado. El video por sí solo sigue siendo una fuente complementaria de la declaración, no prueba una reacción comunitaria.
+En TikTok y YouTube, el video por sí solo es fuente complementaria del hecho, no prueba una reacción comunitaria. Para documentar reacciones deben existir varias voces, textos literales verificables y URLs propias.
 
 ### Verificacion de imagenes y audios virales (calibracion 2026)
 

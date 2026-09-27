@@ -6,5 +6,6 @@ notas: "Especialista en hacking ético. En agosto de 2026 explicó a Bío Bío
   asociadosanf-bounces@fiscales.cl) correspondía a una suplantación del dominio
   institucional: la casilla 'bounces' se usa para rebotes de correos y una
   configuración deficiente permitiría que terceros envíen mensajes que aparenten
-  provenir del organismo."
+  provenir del organismo. En mayo de 2026 analizó el caso Rutify para BBCL
+  Investiga y recomendó autenticación multifactor en los servicios del Estado."
 ---

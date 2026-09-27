@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: El Día
+medio: El Día (La Serena)
 titulo: Militar que dio muerte a Romario Veloz sería el primer indultado de Kast
 autor: ""
 fecha: 2026-03-13
