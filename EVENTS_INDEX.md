@@ -587,6 +587,7 @@
 - [2026/03/20260326-1 - Nombramiento de Alexander Nanjarí como seremi de Educación del Biobío revocado por polémicos tuits](src/content/events/2026/03/20260326-1.md) — 3 fuentes
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
 - [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 6 fuentes
+- [2026/03/20260326-4 - Seis alcaldes firman convenio de compra conjunta de 500 mil vales de gas para enfrentar el alza de combustibles](src/content/events/2026/03/20260326-4.md) — 6 fuentes
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
 - [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
@@ -596,6 +597,7 @@
 - [2026/03/20260331-4 - Incendio al interior del Liceo José Victorino Lastarria obligó a cerrar avenida Providencia](src/content/events/2026/03/20260331-4.md) — 7 fuentes
 - [2026/04/20260401-1 - Gobierno revoca nombramiento de Patricia Dinamarca como seremi de Educación de Los Lagos tras posts sobre estallido social](src/content/events/2026/04/20260401-1.md) — 2 fuentes
 - [2026/04/20260401-2 - Gobierno designa a ex dirigente camionero Baldemar Higueras como seremi de Transportes del Maule](src/content/events/2026/04/20260401-2.md) — 6 fuentes
+- [2026/04/20260401-3 - Kast anuncia aporte de US$225 millones a municipios para gas licuado y bono de $100 mil a la pesca artesanal ante el bencinazo](src/content/events/2026/04/20260401-3.md) — 6 fuentes
 - [2026/04/20260404-1 - Gobierno de Kast autoriza participación de la estatal israelí IAI en FIDAE 2026 y la Comunidad Palestina denuncia quiebre de la política de Estado](src/content/events/2026/04/20260404-1.md) — 6 fuentes
 - [2026/04/20260405-1 - Renuncia seremi de Salud de Valparaíso Aldo Ibani tras tres días por cuestionamientos a su idoneidad](src/content/events/2026/04/20260405-1.md) — 3 fuentes
 - [2026/04/20260405-2 - Gobierno desestima la auditoría externa internacional al Estado pese a promesa de campaña](src/content/events/2026/04/20260405-2.md) — 4 fuentes
@@ -640,6 +642,7 @@
 - [2026/04/20260427-2 - CEPAL recorta proyección de crecimiento de Chile 2026 a 2% por tensión global e inflación](src/content/events/2026/04/20260427-2.md) — 1 fuente
 - [2026/04/20260427-3 - Orbán Files: Hungría investigará por corrupción el financiamiento público de la red conservadora internacional que incluyó a la PNfV presidida por Kast](src/content/events/2026/04/20260427-3.md) — 7 fuentes
 - [2026/04/20260427-4 - Siete reclamaciones impugnan la declaratoria del humedal urbano Rocuant-Andalién (1.377,2 ha) ante el Tribunal Ambiental: el GORE Biobío entre los opositores y ASMAR suma la octava](src/content/events/2026/04/20260427-4.md) — 10 fuentes
+- [2026/04/20260428-1 - Municipios declaran desierta la compra conjunta de 500 mil vales de gas por ofertas hasta 34% sobre el Convenio Marco](src/content/events/2026/04/20260428-1.md) — 8 fuentes
 - [2026/04/20260429-1 - Contraloría concluye que frase 'Estado quebrado' no cumplió estándares de moderación](src/content/events/2026/04/20260429-1.md) — 2 fuentes
 - [2026/04/20260430-1 - 37 audios filtrados revelan trama de injerencia internacional desde Honduras](src/content/events/2026/04/20260430-1.md) — 3 fuentes
 - [2026/04/20260430-2 - BBCL Investiga revela el auge y caída del Clan Chen, que lavó $160 mil millones en Chile](src/content/events/2026/04/20260430-2.md) — 1 fuente
@@ -662,9 +665,11 @@
 - [2026/05/20260514-1 - Kast anuncia que su gobierno ordenará el sistema penal y separará a condenados por lesa humanidad](src/content/events/2026/05/20260514-1.md) — 7 fuentes
 - [2026/05/20260514-2 - Marcha de la ACES y la Confech por la Alameda contra los recortes en educación termina con intervención de Carabineros frente a La Moneda y cierre de tres estaciones de Metro](src/content/events/2026/05/20260514-2.md) — 5 fuentes
 - [2026/05/20260515-1 - Gobierno evalúa revertir cambio de régimen de Punta Peuco tras anuncio de Kast](src/content/events/2026/05/20260515-1.md) — 2 fuentes
+- [2026/05/20260516-1 - La Florida inicia la entrega de 200 mil tickets de gas con recursos municipales y anuncia fiscalización antifraude](src/content/events/2026/05/20260516-1.md) — 5 fuentes
 - [2026/05/20260518-1 - Comisión de Trabajo despacha megarreforma: rechaza eliminar franquicia Sence y aprueba destitución por licencias falsas](src/content/events/2026/05/20260518-1.md) — 6 fuentes
 - [2026/05/20260519-1 - Ministra de Seguridad Trinidad Steinert es removida del cargo](src/content/events/2026/05/20260519-1.md) — 3 fuentes
 - [2026/05/20260519-2 - Vocera de Gobierno Mara Sedini es removida del cargo](src/content/events/2026/05/20260519-2.md) — 4 fuentes
+- [2026/05/20260519-3 - Gobierno abre la activación del Cupón de Gas Licuado de $27.000 para 7,7 millones de hogares vulnerables](src/content/events/2026/05/20260519-3.md) — 6 fuentes
 - [2026/05/20260520-1 - Camara de Diputados despacha megarreforma al Senado](src/content/events/2026/05/20260520-1.md) — 5 fuentes
 - [2026/05/20260521-1 - Presidente Kast llama a líderes políticos a 'recuperar el amor por Chile' en las Glorias Navales](src/content/events/2026/05/20260521-1.md) — 5 fuentes
 - [2026/05/20260524-1 - Gobierno concreta tercer vuelo de expulsión de migrantes, el primero en aerolínea comercial](src/content/events/2026/05/20260524-1.md) — 5 fuentes
@@ -737,6 +742,7 @@
 - [2026/06/20260618-5 - Estación Central encuentra a 7 niños haitianos hacinados con tutor y la PDI ubica a otros 25](src/content/events/2026/06/20260618-5.md) — 6 fuentes
 - [2026/06/20260619-1 - Aprueban la instalación del cable submarino Humboldt de Google que unirá Chile con Asia-Pacífico](src/content/events/2026/06/20260619-1.md) — 1 fuente
 - [2026/06/20260619-2 - Gobierno confirma hallazgo de 33 de 64 niños haitianos alertados por Contraloría](src/content/events/2026/06/20260619-2.md) — 6 fuentes
+- [2026/06/20260619-3 - A días del cobro del Cupón de Gas: denuncian sobreprecios de distribuidoras y reventa en redes; el Gobierno anuncia sanciones](src/content/events/2026/06/20260619-3.md) — 8 fuentes
 - [2026/06/20260620-1 - Suboficial mayor Nelty Álvarez interpone tutela laboral contra general de Carabineros de Magallanes y denuncia desprotección de la ministra de la Mujer](src/content/events/2026/06/20260620-1.md) — 6 fuentes
 - [2026/06/20260622-1 - Carabineros da de baja a cabo que usó una patrulla para comprar en Máfil: video viral, sumario administrativo y derivación a la justicia](src/content/events/2026/06/20260622-1.md) — 3 fuentes
 - [2026/06/20260622-2 - Consejo Fiscal Autónomo concluye que el IFP4T25 no tiene errores aritméticos, desmintiendo al ministro Quiroz](src/content/events/2026/06/20260622-2.md) — 3 fuentes
