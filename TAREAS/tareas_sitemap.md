@@ -20,8 +20,8 @@
 - **Total de sitios de prensa listados:** 1001
 - ✅ En catálogo local: **385**
 - 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **105**
-- 🔒 Verificados sin sitemap: **91**
-- ⬜ Pendientes de sincronizar: **420**
+- 🔒 Verificados sin sitemap: **92**
+- ⬜ Pendientes de sincronizar: **419**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -949,7 +949,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🔒 | **La Voz de Valdivia** | `lavozdevaldivia.cl` | Los Rios | watchlist | sin sitemap (los 4 endpoints no devuelven locs) |
 | ⬜ | **La Voz del Norte** | `lavozdelnorte.cl` | Coquimbo | database | Medio digital regional con sede en La Serena que cubre Coquimbo y asuntos nacionales, cult |
 | ✅ | **Las Noticias de Malleco** | `lasnoticiasdemalleco.cl` | Araucania | database | sitemap en catálogo (lasnoticiasdemalleco) |
-| 🔒 | **Las Últimas Noticias** | `lun.com` | — | watchlist | robots.txt 200 sin línea Sitemap (verificado 27-09-2026) |
+| 🔒 | **Las Últimas Noticias** | `lun.com` | — | watchlist | robots.txt (en www) 200 sin línea Sitemap y con `Googlebot: Disallow: /`; el apex falla el |
 | ✅ | **Linares en Línea** | `linaresenlinea.cl` | Maule | database | sitemap en catálogo (linaresenlinea) |
 | 🔒 | **Linares Noticia** | `linaresnoticia.cl` | Maule | database | DNS ENOTFOUND (verificado) |
 | ⬜ | **Los Andes On Line** | `losandesonline.cl` | — | watchlist | sin feed RSS detectado |
@@ -1020,7 +1020,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Red Araucanía** | `redaraucania.com` | Araucania | watchlist | sin feed RSS detectado |
 | ✅ | **Red Informativa** | `redinformativa.cl` | Araucania | database | sitemap en catálogo (redinformativa) |
 | ⬜ | **Red Maule** | `redmaule.com` | Maule | watchlist | sin feed RSS detectado |
-| ⬜ | **Red Valparaíso** | `redvalparaiso.com` | Valparaiso | watchlist | sin feed RSS detectado |
+| 🔒 | **Red Valparaíso** | `redvalparaiso.com` | Valparaiso | watchlist | Prontus: sitemap_pags.xml plano de 1.001 locs SIN <lastmod> ni fecha en el path, y sin sha |
 | 🔒 | **Región 2** | `region2.cl` | — | database | /sitemap.xml es un urlset plano de 500 URLs, sin historia |
 | ✅ | **Región de Coquimbo** | `regiondecoquimbo.cl` | Coquimbo | database | sitemap en catálogo (regiondecoquimbo) |
 | ✅ | **Región Visual** | `regionvisual.com` | Valparaiso | database | sitemap en catálogo (regionvisual) |

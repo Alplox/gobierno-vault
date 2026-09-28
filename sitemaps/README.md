@@ -3,7 +3,7 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 28/9/2026, 0:41:00
+- **Última sincronización:** 28/9/2026, 1:29:51
 - **Medios registrados:** 462
 - **Artículos indexados:** 11.074.344
 

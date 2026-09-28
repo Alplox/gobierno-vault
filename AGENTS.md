@@ -111,6 +111,12 @@ Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (
 - Nunca uses `>`/`Set-Content`/`Out-File` sobre YAML (ver `data-yaml/SKILL.md`) — usa `node` con `writeFileSync` `utf8` o las tools `Edit`/`Write` del agente
 - Si necesitas un comando shell nativo, verifica primero que exista sino elige el equivalente portable (`rg --version`, `node -e "console.log(process.platform)"`)
 
+**Dónde dejar archivos temporales:** todo lo que escribas y no sea un archivo del repo va **dentro del proyecto**, nunca al temp del sistema:
+
+- `tmp/` (ya está en `.gitignore`) para scripts y volcados de un solo uso: análisis puntual, greps, conversiones. Es desechable; bórralo al terminar la tarea.
+- Un skill que necesite herramientas reutilizables las lleva en su `scripts/` (ej. `.agents/skills/sitemaps/scripts/probe-sitemap.mjs`), y sus evals o workspaces en un hermano `<skill>-workspace/` (ej. `.agents/skills/sitemaps-workspace/`), ambos gitignoreados.
+- El motivo es práctico, no de estilo: un archivo en el temp del sistema no aparece en `git status`, no se abre con un clic, y al día siguiente ni el agente que lo escribió lo encuentra. Si el trabajo sirve, que viva donde el próximo agente lo pueda ver.
+
 Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección auto-generada por `pnpm run generate-index`; también resumido en `EVENTS_INDEX.md`). Medios del catalogo: ver `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años, generada por `pnpm run sitemaps-index`), `sitemaps/README.md` y `sitemaps/_manifest.json` (~250 slugs, detalle en `.agents/skills/sitemaps/SKILL.md`). Ninguno se duplica aqui para evitar diffs ruidosos, pero siguen disponibles para editores.
 
 ## Skills bajo demanda

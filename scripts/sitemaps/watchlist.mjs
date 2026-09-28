@@ -35,7 +35,9 @@ const CATEGORIAS_PRENSA = new Set([
 // Dominios verificados SIN sitemap utilizable (revisado a mano): no se
 // reintentan en cada regeneración. Incluye sitemaps existentes pero no
 // catalogables como prensa. Key: dominio, value: nota.
-const SIN_SITEMAP = {
+// Exportado para que scripts/probe-sitemap.mjs pueda avisar "ya descartado por X"
+// sin volver a sondear el dominio.
+export const SIN_SITEMAP = {
   'efe.cl': 'verificado sin sitemap (solo RSS /feed/)',
   'fiscaliadechile.cl': 'verificado sin sitemap (Drupal 10 sin xmlsitemap)',
   'pjud.cl': 'verificado sin sitemap (robots.txt 404)',
@@ -97,7 +99,7 @@ const SIN_SITEMAP = {
   // motivo, para que la fila pase a 🔒 y no se reintente en cada regeneración.
   // La nota debe decir qué se verificó, no solo "no sirve".
   // Batch 16:
-  'lun.com': 'robots.txt 200 sin línea Sitemap (verificado 27-09-2026)',
+  'lun.com': 'robots.txt (en www) 200 sin línea Sitemap y con `Googlebot: Disallow: /`; el apex falla el handshake TLS (verificado 28-09-2026)',
   'elmatutino.cl': '/sitemap.xml es un urlset de 1 loc (la home)',
   'noticiasimportantes.cl': '/sitemap.xml responde 0 locs (declarado en robots)',
   'sancarlosaldia.cl': 'robots declara /sitemap.xml pero responde HTTP 404',
@@ -142,6 +144,7 @@ const SIN_SITEMAP = {
   'arica365.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
   'mapuexpress.org': 'sin sitemap (los 4 endpoints no devuelven locs)',
   'rengonotas.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
+  'redvalparaiso.com': 'Prontus: sitemap_pags.xml plano de 1.001 locs SIN <lastmod> ni fecha en el path, y sin shards paginados (los sitemap_pags_YYYYMM.xml.gz dan 404). El sitemap_news.xml publica los <loc> de diariosenred.com, otro dominio',
 };
 
 const NOMBRES_CATEGORIA = {
@@ -456,4 +459,15 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
   console.log(`  catálogo: ${conteo.catalogo} | en uso: ${conteo.en_uso} | pendientes: ${conteo.pendiente}`);
 }
 
-main().catch(e => { console.error(e); process.exit(1); });
+// Guard: solo regenera TAREAS/tareas_sitemap.md si se corre directo. Importar el
+// módulo (p. ej. desde scripts/probe-sitemap.mjs para leer SIN_SITEMAP) no debe
+// disparar la descarga online de awesome-chilean-rss. Mismo patrón que
+// add-source.mjs.
+const isMain =
+  process.argv[1] &&
+  fileURLToPath(import.meta.url).replace(/\\/g, '/').toLowerCase() ===
+    process.argv[1].replace(/\\/g, '/').toLowerCase();
+
+if (isMain) {
+  main().catch(e => { console.error(e); process.exit(1); });
+}

@@ -16,6 +16,9 @@ storage/
 
 # Agents
 skills-workspace/
+# Workspaces y artefactos de evaluacion de skills (hermanos de <skill>/):
+# .agents/skills/sitemaps-workspace/ con los evals, grading y review.html.
+.agents/skills/*-workspace/
 
 # Optional pinned external research tools (installed via pnpm run social-search -- --setup)
 /.tools/

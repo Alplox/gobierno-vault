@@ -300,14 +300,27 @@ export const MEDIA = {
   la_hora: {
     nombre: 'La Hora',
     index: 'https://lahora.cl/sitemap.xml',
+    // El <lastmod> y el <news:publication_date> son el INSTANTE en UTC, pero el
+    // sitio publica en hora local -04:00: lo publicado después de las 20:00
+    // caía al día siguiente al convertir a UTC y ~12% de las 45k entradas
+    // quedaban fechadas D+1 (verificado contra el datePublished del sitio, que
+    // siempre coincide con la fecha del path). preferLocDate invierte newsDate y
+    // locDate para que gane la fecha del path.
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
     // Custom: index diario sitemap-DD-MM-YYYY.xml + latest.xml. No es Yoast.
     // articleOnly descarta page/category; los archivos diarios (sitemap-DD-MM-YYYY.xml)
     // matchean el includeRe. El ancla `\/` + el path con `sitemap/` es lo que
     // descarta sitemap/latest.xml y sitemap/category-sitemap*.xml.
-    // sitemap/news-sitemap.xml (250 URLs, título real) entra para mejorar los
-    // títulos de los últimos días; el path DD-MM-YYYY lo reconoce sitemapUrlDate
-    // (2º patrón), así que el resync --since omite los días viejos sin bajarlos.
     includeRe: /\/sitemap\/(?:sitemap-\d{2}-\d{2}-\d{4}|news-sitemap)\.xml$/i,
+    // OJO: /sitemap.xml NO declara sitemap/news-sitemap.xml (solo latest.xml y
+    // los diarios), así que el includeRe de arriba no alcanzaba: el news-sitemap
+    // tiene que entrar por `extra` o nunca se descubre y las 250 URLs con título
+    // real no se catalogan. (Por eso no se usa `robots`: su línea Sitemap apuntaría
+    // a /sitemap.xml, que el includeRe descartaría por no ser un shard diário.)
+    extra: [
+      'https://lahora.cl/sitemap/news-sitemap.xml',
+    ],
   },
 
   elperiodico: {

@@ -285,11 +285,15 @@ function mediaHostNames() {
 
 // Preferencia explícita donde dos slugs de MEDIA comparten dominio
 // (first-wins elegiría el otro; valores del mapa manual anterior).
+// OJO al consolidar un slug duplicado: si borrás la entrada vieja del override
+// pero dejás la línea, el lookup resuelve a un slug inexistente y
+// lookupCatalogUrl() devuelve null para TODAS las URLs de ese medio, en
+// silencio (no hay error, solo no encuentra nada). Si el dominio queda con un
+// solo slug, la entrada sobra: borrarla.
 const CATALOG_HOST_OVERRIDES = {
   'corporacionuteusach-noticias.cl': 'uteusachnoticias',
   'lanacion.cl': 'lanacion',
   'elsiglo.cl': 'elsiglo',
-  'lahora.cl': 'lahora',
 };
 
 // Dominios de slugs con datos en sitemaps/ pero sin entrada en MEDIA

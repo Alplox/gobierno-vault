@@ -734,8 +734,21 @@ async function syncMedio(medio, conf, opts) {
       if (conf.urlRe && !conf.urlRe.test(e.loc)) continue;
       const seenBefore = seen.has(e.loc);
       if (!seenBefore) seen.add(e.loc);
-      const fecha = isoDate(e.newsDate) ?? e.locDate ?? pathDate ?? isoDate(e.lastmod);
+      // Precedencia: newsDate > locDate > pathDate > lastmod.
+      // `preferLocDate` invierte los dos primeros para medios que publican en
+      // hora local y cuyo <lastmod>/<news:publication_date> es el instante en
+      // UTC: ahí lo publicado después de las 20:00 local cae al día siguiente
+      // al convertir a UTC y ~12% de las entradas quedan fechadas D+1. La fecha
+      // del path es la que declara el propio sitio en su datePublished, así que
+      // es la buena. Opt-in por medio (ver `la_hora` en media.mjs).
+      const fecha =
+        (conf.preferLocDate ? e.locDate : null) ??
+        isoDate(e.newsDate) ?? e.locDate ?? pathDate ?? isoDate(e.lastmod);
       if (!fecha) continue;
+      // ¿La fecha salió del path (del artículo o del sub-sitemap) y no del
+      // lastmod? Solo en ese caso el merge puede corregir una fecha ya guardada;
+      // si la entrada nueva solo trae lastmod, "corregir" sería degradarla.
+      const fechaDelPath = Boolean(e.locDate ?? pathDate);
       // --since: las entradas anteriores a la ventana no se tocan (ni se
       // agregan ni se mejoran sus títulos). En modo merge lo existente se
       // conserva intacto; solo se actualiza lo reciente.
@@ -761,7 +774,11 @@ async function syncMedio(medio, conf, opts) {
                  // Medios con dateFromSitemapPath (CNN): el lastmod puede ser
                  // la fecha de regeneración (falsa); si la fecha derivada del
                  // path del sub-sitemap difiere, se actualiza (más confiable).
-                 (conf.dateFromSitemapPath && entry.d !== prev.d)) {
+                 (conf.dateFromSitemapPath && entry.d !== prev.d) ||
+                 // Idem con locDateRe: si la fecha viene del path del artículo
+                 // manda sobre el lastmod, así que el merge también corrige las
+                 // fechas ya guardadas (no solo las de este run).
+                 ((conf.locDateRe && fechaDelPath) && entry.d !== prev.d)) {
         // Mejora real de título (ej. ahora el news-sitemap trae el real):
         // se actualiza sin borrar la URL. IMPORTANTE: esto puede ocurrir
         // aunque la URL ya se haya visto en OTRO sub-sitemap del mismo run
