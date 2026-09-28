@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 28/9/2026, 1:29:51
-- **Medios registrados:** 462
-- **Artículos indexados:** 11.074.344
+- **Última sincronización:** 28/9/2026, 2:51:07
+- **Medios registrados:** 477
+- **Artículos indexados:** 11.163.052
 
 ## Por medio
 
@@ -40,6 +40,7 @@
 | La Prensa Austral | 67.619 |
 | Noticias del Lago | 65.046 |
 | El Reportero de Iquique | 61.152 |
+| Diario UACh | 58.496 |
 | Nuevo Poder | 57.175 |
 | Diario Futrono | 56.725 |
 | Tierramarillano | 52.551 |
@@ -119,6 +120,7 @@
 | Vilas Radio | 15.178 |
 | ITV Patagonia | 14.983 |
 | Pontificia Universidad Católica de Valparaíso | 14.713 |
+| El América | 14.484 |
 | Prensa Ciudadana | 14.444 |
 | Radio Nuevo Mundo | 14.428 |
 | Radio Riquelme | 14.410 |
@@ -209,6 +211,7 @@
 | Ñuble Digital | 5326 |
 | CR2 | 5308 |
 | Entérate Hoy | 5239 |
+| Iquique Hoy | 5170 |
 | Noticias Chiloé | 5056 |
 | CEP Chile | 5040 |
 | Ministerio de Relaciones Exteriores | 4988 |
@@ -260,6 +263,7 @@
 | HDN | 2252 |
 | Tomé al Día | 2241 |
 | Diario Financiero | 2183 |
+| Radio Santa Cruz | 2180 |
 | Aurora Noticias | 2164 |
 | Subsecretaría del Trabajo | 2134 |
 | Fundación Iguales | 2109 |
@@ -268,6 +272,7 @@
 | Consejo para la Transparencia | 2012 |
 | Espacio Público | 2000 |
 | El Andacollino | 1873 |
+| El Capo de Provincia | 1854 |
 | El Cóndor | 1770 |
 | CONAF | 1735 |
 | MOP | 1689 |
@@ -281,13 +286,16 @@
 | Universidad Mayor | 1350 |
 | Radio Modelo | 1325 |
 | Diario Los Lagos | 1302 |
+| Tu Región Noticias | 1296 |
 | Diario Mapuche | 1291 |
 | Qué Pasa Araucanía | 1270 |
 | Chile es Tuyo | 1244 |
 | El Periódico | 1179 |
 | ECOceanos | 1157 |
 | Zona Zero | 1153 |
+| Cámara de Comercio de Santiago | 1148 |
 | Resonancia Diario | 1144 |
+| Espacio Regional | 1118 |
 | Federación Regionalista Verde Social | 1116 |
 | El Informador Chile | 1051 |
 | La Tribuna de Colchagua | 1033 |
@@ -304,12 +312,14 @@
 | Defensoría de la Niñez | 901 |
 | The Grange School | 880 |
 | Radio Ventisqueros | 872 |
+| Instituto de Seguridad Laboral | 871 |
 | La Tendencia | 819 |
 | Diario Avísale | 815 |
 | El Huemul | 812 |
 | ADN Radio | 798 |
 | SOFOFA | 788 |
 | Pulso Público | 774 |
+| Partido Humanista | 760 |
 | SIP Red de Colegios | 750 |
 | Radio Chilena | 745 |
 | Aconcagua Digital | 732 |
@@ -327,6 +337,7 @@
 | Diario Concepción | 501 |
 | Hogar de Cristo | 500 |
 | Santiago Times | 490 |
+| Ruta 2050 | 484 |
 | Municipalidad de Alto Biobío | 483 |
 | El Comunicador | 482 |
 | Generadoras de Chile | 482 |
@@ -344,10 +355,12 @@
 | SENAPRED | 359 |
 | ABIF | 312 |
 | Fundación Rewilding Chile | 310 |
+| Partido Igualdad | 295 |
 | El Desconcierto | 279 |
 | Fonasa | 270 |
 | Redacción | 269 |
 | El Arrebato | 268 |
+| Puerto a Puerto | 250 |
 | Queilen | 247 |
 | Diario El Gong | 246 |
 | Defensa Civil de Chile | 229 |
@@ -355,6 +368,8 @@
 | Contapapaya | 206 |
 | Arauco | 190 |
 | Colegio Tabancura | 161 |
+| Observatorio de Gobernanza Migratoria y DDHH | 160 |
+| UDI (Unión Demócrata Independiente) | 142 |
 | Centro Cultural La Moneda | 140 |
 | FISA | 140 |
 | Sociedad Chilena de Cardiología | 135 |

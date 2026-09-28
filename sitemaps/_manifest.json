@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-28T04:29:51.446Z",
+  "actualizado": "2026-09-28T05:51:07.868Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3236,6 +3236,111 @@
       "articulos": 5694,
       "nuevos": 5694,
       "años": 10
+    },
+    "udi": {
+      "nombre": "UDI (Unión Demócrata Independiente)",
+      "ultima_sync": "2026-09-28T05:23:24.632Z",
+      "articulos": 142,
+      "nuevos": 142,
+      "años": 5
+    },
+    "espacioregional": {
+      "nombre": "Espacio Regional",
+      "ultima_sync": "2026-09-28T05:23:25.959Z",
+      "articulos": 1118,
+      "nuevos": 1118,
+      "años": 9
+    },
+    "diario_uach": {
+      "nombre": "Diario UACh",
+      "ultima_sync": "2026-09-28T05:24:39.820Z",
+      "articulos": 58496,
+      "nuevos": 58496,
+      "años": 25
+    },
+    "partidohumanista": {
+      "nombre": "Partido Humanista",
+      "ultima_sync": "2026-09-28T05:31:43.471Z",
+      "articulos": 760,
+      "nuevos": 760,
+      "años": 9
+    },
+    "partidoigualdad": {
+      "nombre": "Partido Igualdad",
+      "ultima_sync": "2026-09-28T05:31:45.990Z",
+      "articulos": 295,
+      "nuevos": 295,
+      "años": 11
+    },
+    "isl": {
+      "nombre": "Instituto de Seguridad Laboral",
+      "ultima_sync": "2026-09-28T05:31:47.639Z",
+      "articulos": 871,
+      "nuevos": 871,
+      "años": 3
+    },
+    "ogmdh": {
+      "nombre": "Observatorio de Gobernanza Migratoria y DDHH",
+      "ultima_sync": "2026-09-28T05:38:37.050Z",
+      "articulos": 160,
+      "nuevos": 160,
+      "años": 2
+    },
+    "ruta2050": {
+      "nombre": "Ruta 2050",
+      "ultima_sync": "2026-09-28T05:38:39.356Z",
+      "articulos": 484,
+      "nuevos": 484,
+      "años": 3
+    },
+    "puertoapuerto": {
+      "nombre": "Puerto a Puerto",
+      "ultima_sync": "2026-09-28T05:38:43.509Z",
+      "articulos": 250,
+      "nuevos": 250,
+      "años": 9
+    },
+    "ccs": {
+      "nombre": "Cámara de Comercio de Santiago",
+      "ultima_sync": "2026-09-28T05:44:36.735Z",
+      "articulos": 1148,
+      "nuevos": 1148,
+      "años": 7
+    },
+    "trnoticias": {
+      "nombre": "Tu Región Noticias",
+      "ultima_sync": "2026-09-28T05:44:37.508Z",
+      "articulos": 1296,
+      "nuevos": 1296,
+      "años": 2
+    },
+    "iquiquehoy": {
+      "nombre": "Iquique Hoy",
+      "ultima_sync": "2026-09-28T05:44:50.501Z",
+      "articulos": 5170,
+      "nuevos": 5170,
+      "años": 7
+    },
+    "santacruzfm": {
+      "nombre": "Radio Santa Cruz",
+      "ultima_sync": "2026-09-28T05:50:56.145Z",
+      "articulos": 2180,
+      "nuevos": 2180,
+      "años": 6
+    },
+    "elamerica": {
+      "nombre": "El América",
+      "ultima_sync": "2026-09-28T05:51:06.593Z",
+      "articulos": 14484,
+      "nuevos": 14484,
+      "años": 4
+    },
+    "capodeprovincia": {
+      "nombre": "El Capo de Provincia",
+      "ultima_sync": "2026-09-28T05:51:07.868Z",
+      "articulos": 1854,
+      "nuevos": 1854,
+      "años": 17
     }
   }
 }

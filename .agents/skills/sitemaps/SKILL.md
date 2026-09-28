@@ -72,6 +72,36 @@ trabajo que cuesta caro repetir.
    (filas ⬜→✅) y `generate-index` (EVENTS_INDEX + stats del README).
 8. **Actualizar este skill** si el medio trajo una trampa que no está en la receta.
 
+### Cruce con awesome-chilean-rss y reporte de faltantes
+
+`sitemaps-watchlist` ya descarga el repo fuente por defecto, así que la bitácora se
+mantiene sola. Para saber **qué hay de nuevo** y **qué le falta al repo**:
+
+```bash
+node .agents/skills/sitemaps/scripts/report-awesome.mjs --verificar --out TAREAS/reporte_awesome_chilean_rss.md
+```
+
+Dos trampas al leer ese reporte, ambas ya resueltas en el script:
+
+- **"Sitios nuevos" solo cuenta los de prensa.** El repo también publica deportes,
+  gaming, empleos, entretenimiento, tecnología y blogs personales, que el vault
+  excluye por diseño: contarlos como "nuevos" infla el número y sugiere trabajo que
+  no existe. El script separa `nuevos de prensa` de `fuera de alcance` en el
+  resumen de stderr. Un 0 en el primero es la respuesta sana.
+- **"Nuestros medios ausentes" necesita filtro de verdad.** El vault cita como
+  `medio:` a X, Reddit, YouTube, Presidencia, Senado, INE, BCN, Diario Oficial y
+  prensa internacional: ~420 dominios que no son objeto de un repo de RSS chileno.
+  Sin filtrar, el reporte es inservible. El script aplica filtro de dominio
+  (descarta redes sociales, organismos del Estado y TLDs del exterior: `.ec`,
+  `.bo`, `.ar`…) y además clasifica cada candidato en `prensa` / `institución` /
+  `internacional-otros`, porque un `.cl` no basta: un archivo nacional con feed
+  tampoco es prensa.
+
+El aporte al repo es la **sección 3 del reporte** (solo tipo `prensa` con feed
+verificado), que es texto listo para issue. Los nombres salen de `MEDIA` y del
+campo `medio:` de las fuentes, así que hay que revisar que coincidan con el nombre
+editorial del repo antes de enviar. El reporte se commitea; el script no toca nada.
+
 ### Anti-duplicados
 
 El alta es por **slug**, no por dominio: nada impide crear `lahora` junto a `la_hora`, y el
@@ -155,6 +185,13 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
     retoman sin pérdida.
 12. **Un shard con fecha de regeneración** no rompe el sync, pero deja todas las entradas de
     ese shard con la misma fecha: para eventos históricos, buscar por slug.
+13. **`robots.txt` o el índice pueden declarar el sitemap con `http://`** aunque el sitio
+    sirva perfecto por https. Ocurre en WP/Yoast con plugin de seguridad mal configurado
+    (visto en `partidoigualdad.cl`, cuyo `Sitemap:` y cuyo `sitemap_index.xml` apuntan a
+    `http://` y los `<loc>` del shard salen ya en https). Síntoma: el sync baja 0 locs o
+    errores de mixed content/redirect **sin** mensaje de descarte. Se arregla con
+    `forceHttps: true`, no con cambiar el `index` a mano. Verificá antes con un
+    `Invoke-WebRequest` al shard por https.
 
 ---
 
@@ -309,7 +346,9 @@ Los descartes de sitios de la watchlist están en `SIN_SITEMAP`
 | `pnpm run sitemaps-probe -- <dominio>...` | Sondea candidatos: parsea el `robots.txt`, prueba los endpoints estándar, cuenta `<loc>`, reconoce el CMS y **avisa si el dominio ya está en `MEDIA` o ya fue descartado**, con el slug o el motivo. Sale con código ≠ 0 si hay conflicto |
 | `node .agents/skills/sitemaps/scripts/check-fechas.mjs [slug...]` | Audita que la fecha guardada de cada artículo sea la de su URL, en todos los medios con `locDateRe` (o los slugs indicados). Es la forma objetiva de detectar las dos fallas de fecha silenciosas: `lastmod` de migración y desfase D+1 por huso horario. 100% de coincidencia es lo esperado; si falla, el arreglo casi siempre es `locDateRe` o `preferLocDate` + `--replace` |
 
-Ambos son de solo lectura: no escriben nada en el repo.
+| `node .agents/skills/sitemaps/scripts/report-awesome.mjs --verificar` | Cruce en las **dos direcciones** con awesome-chilean-rss: qué sitios del repo la bitácora todavía no evaluó, y qué medios del catálogo o citados en `src/content/sources/*.md` el repo no lista. Con `--verificar` busca `/feed/`, `/rss/`, `/rss.xml`, `/feed/atom.xml`… en cada candidato y separa los que responden con un feed real de los que no. Genera el reporte para devolver al repo (`--out`). Usa el clon hermano `../awesome-chilean-rss` o `--fuente <dir>` |
+
+Los tres son de solo lectura: no escriben nada en el repo.
 
 Los evals de este skill viven en `.agents/skills/sitemaps-workspace/` (gitignoreado):
 `setup.mjs` crea un worktree por config con la versión nueva y la anterior del `SKILL.md`,

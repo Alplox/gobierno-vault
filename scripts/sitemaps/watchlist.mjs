@@ -133,6 +133,22 @@ export const SIN_SITEMAP = {
   'lapaia.cl': '/sitemap.xml es un índice de 3 entradas (categorías), sin artículos',
   'terceradosis.cl': '/sitemap.xml es un índice de 3 entradas (pags/image/video), sin artículos',
   'informechile.cl': '/sitemap.xml es un índice de 2 entradas, sin artículos',
+  // Batch 24:
+  'norteyenergia.cl': 'robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs',
+  'lidersanantonio.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial). Además /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
+  // Batch 23:
+  'cut.cl': 'sin sitemap: robots.txt sin línea Sitemap y los 3 endpoints estándar dan 404',
+  'fundacionpobreza.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'energiaestrategica.com': 'sin sitemap: robots.txt sin línea Sitemap y los 3 endpoints dan 404 o 0 locs',
+  'cpc.cl': 'robots.txt declara sitemap.xml y sitemap.rss, pero ambos responden 0 locs',
+  'lavozdelnorte.cl': 'robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs',
+  'thepuertovaras.cl': 'robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs',
+  'contraplano.cl': 'robots.txt declara sitemap_index.xml, pero ese y sitemap.xml dan 404',
+  'prensadigital.cl': 'índice con 133 shards sitemap-posttype-post.YYYYMM.xml, pero TODOS son resultados de loterías (kino, loto, sorteos): sin contenido editorial',
+  'analisis.com': 'urlset plano de 1.400 URLs de las que solo 586 son /articulo/YYYY-MM-DD-…, todas de 2026 (sin historia) y con <lastmod> uniforme de 2026-09-25',
+  // Batch 20:
+  'codepu.cl': 'sin sitemap: robots.txt 404 y los 3 endpoints estándar (sitemap, sitemap_index, wp-sitemap) devuelven 0 locs',
+  'mch.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap y robots.txt sin línea Sitemap',
   // Batch 19:
   'tehuelchenoticias.cl': 'Wix: store/sitemap-dru-index.xml responde 0 locs',
   'region2.cl': '/sitemap.xml es un urlset plano de 500 URLs, sin historia',

@@ -1641,6 +1641,9 @@
 - [2026/09/20260911-13 - Estudiantes UDP marchan a República 550 y secundarios romería en Alameda con intervención policial](src/content/events/2026/09/20260911-13.md) — 9 fuentes
 - [2026/09/20260911-14 - Marcha en Valparaiso recorre Avenida Brasil hasta el Memorial de los Detenidos Desaparecidos y termina con barricada encendida](src/content/events/2026/09/20260911-14.md) — 9 fuentes
 - [2026/09/20260911-15 - El Gobierno despliega seguridad preventiva en 12 puntos críticos de la Región Metropolitana para el 11-S y cierra la jornada sin cifras oficiales de detenidos](src/content/events/2026/09/20260911-15.md) — 12 fuentes
+- [2026/09/20260911-16 - Cinco detenidos en Cerro Navia la noche del 11-S con 90 artefactos incendiarios: tres menores en tres procedimientos sin panfletos](src/content/events/2026/09/20260911-16.md) — 7 fuentes
+- [2026/09/20260911-17 - Barricadas nocturnas del 11-S en siete comunas: una decena entre Rotonda Grecia y Tobalaba, disparos en Villa Francia y operativo en Mapocho](src/content/events/2026/09/20260911-17.md) — 5 fuentes
+- [2026/09/20260911-18 - Encapuchados irrumpen en el Instituto Nacional por el 11-S: 7 detenidos, 5 estudiantes, evacuación y suspensión de clases](src/content/events/2026/09/20260911-18.md) — 5 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
@@ -1682,6 +1685,8 @@
 - [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
 - [2026/09/20260916-4 - Quiroz advierte en Londres una "gran recesión minera" con caída de 7% en el año y adelanta plan de reactivación y Presupuesto 2027 con techo de 1%](src/content/events/2026/09/20260916-4.md) — 7 fuentes
 - [2026/09/20260916-5 - INDH oficia a Senama, Seremi de Salud y Municipalidad de Pitrufquén por incendio en hogar El Edén](src/content/events/2026/09/20260916-5.md) — 5 fuentes
+- [2026/09/20260916-6 - Kaiser en Punto de Quiebre: Chile tuvo suerte de no terminar en un baño de sangre en el 18-O y la violencia de 1973 fue evidente](src/content/events/2026/09/20260916-6.md) — 5 fuentes
+- [2026/09/20260916-7 - Municipalidad de Santiago se querella contra adultos que habrían pagado $70 mil a exalumno de 14 años por lanzar molotov el 11-S](src/content/events/2026/09/20260916-7.md) — 8 fuentes
 - [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 13 fuentes
 - [2026/09/20260917-2 - Robo a departamento de asistente de Producción de Presidencia en San Miguel: investigan sustracción de discos duros con presunta información secreta](src/content/events/2026/09/20260917-2.md) — 27 fuentes
 - [2026/09/20260917-3 - Pancho Saavedra rompe el protocolo en la inauguración de La Gran Fonda con una paya a quienes conducen Chile](src/content/events/2026/09/20260917-3.md) — 9 fuentes
@@ -1723,6 +1728,7 @@
 - [2026/09/20260925-4 - Comisión de Defensa sesiona en Punta Arenas por el Estrecho de Magallanes en plena visita de Barros](src/content/events/2026/09/20260925-4.md) — 6 fuentes
 - [2026/09/20260925-5 - Vecinos de la población Juan Riquelme cortan la Ruta 146 en Concepción y exigen respuesta de Essbio por los cortes de agua](src/content/events/2026/09/20260925-5.md) — 10 fuentes
 - [2026/09/20260926-1 - Segundo día de corte en la ruta a Cabrero: vecinos de la población Juan Riquelme vuelven a manifestarse por los cortes de agua](src/content/events/2026/09/20260926-1.md) — 7 fuentes
+- [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
 
 ## 2025
 

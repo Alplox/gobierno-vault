@@ -18,10 +18,10 @@
 ## Resumen
 
 - **Total de sitios de prensa listados:** 1001
-- ✅ En catálogo local: **385**
+- ✅ En catálogo local: **400**
 - 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **105**
-- 🔒 Verificados sin sitemap: **92**
-- ⬜ Pendientes de sincronizar: **419**
+- 🔒 Verificados sin sitemap: **103**
+- ⬜ Pendientes de sincronizar: **393**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -42,14 +42,14 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🟡 | **Acero y Roca** | `aceroyroca.com` | — | database | referenciado en src/content/sources/*.md |
 | ✅ | **AmCham Chile** | `amchamchile.cl` | — | watchlist | sitemap en catálogo (amchamchile) |
 | ⬜ | **América Economía** | `americaeconomia.com` | — | watchlist | sitio no responde |
-| ⬜ | **Análisis.com** | `analisis.com` | — | database | Medio de noticias de economía, mercados y negocios de América Latina |
+| 🔒 | **Análisis.com** | `analisis.com` | — | database | urlset plano de 1.400 URLs de las que solo 586 son /articulo/YYYY-MM-DD-…, todas de 2026 ( |
 | 🔒 | **AQUA** | `aqua.cl` | — | database | DNS ENOTFOUND (verificado) |
 | ⬜ | **BancoEstado** | `bancoestado.cl` | — | watchlist | sin feed RSS detectado |
 | ✅ | **Cámara Chilena de la Construcción** | `cchc.cl` | — | watchlist | sitemap en catálogo (cchc) |
-| ⬜ | **Cámara de Comercio de Santiago** | `ccs.cl` | — | watchlist | sin feed RSS detectado |
+| ✅ | **Cámara de Comercio de Santiago** | `ccs.cl` | — | watchlist | sitemap en catálogo (ccs) |
 | ✅ | **Chile País Minero** | `chilepaisminero.com` | — | database | sitemap en catálogo (chilepaisminero) |
 | ✅ | **Chocale** | `chocale.cl` | — | database | sitemap en catálogo (chocale) |
-| ⬜ | **CPC** | `cpc.cl` | — | database | Feed principal de la CPC |
+| 🔒 | **CPC** | `cpc.cl` | — | database | robots.txt declara sitemap.xml y sitemap.rss, pero ambos responden 0 locs |
 | 🟡 | **Diario Agrícola** | `diarioagricola.com` | — | database | referenciado en src/content/sources/*.md |
 | ✅ | **Diario Estrategia** | `diarioestrategia.cl` | — | database | sitemap en catálogo (diarioestrategia) |
 | ✅ | **Diario Financiero** | `df.cl` | — | database | sitemap en catálogo (df) |
@@ -57,7 +57,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Economía y Negocios** | `economiaynegocios.cl` | — | watchlist | sitio no responde |
 | ✅ | **El Periódico de la Energía** | `elperiodicodelaenergia.com` | — | database | sitemap en catálogo (elperiodicodelaenergia) |
 | ✅ | **Electrominería** | `electromineria.cl` | — | database | sitemap en catálogo (electromineria) |
-| ⬜ | **Energía Estratégica** | `energiaestrategica.com` | — | watchlist | sin feed RSS detectado |
+| 🔒 | **Energía Estratégica** | `energiaestrategica.com` | — | watchlist | sin sitemap: robots.txt sin línea Sitemap y los 3 endpoints dan 404 o 0 locs |
 | ⬜ | **Estrategia** | `estrategia.cl` | — | watchlist | sitio no responde |
 | ✅ | **FISA** | `fisa.cl` | — | watchlist | sitemap en catálogo (fisa) |
 | ⬜ | **Forbes Chile** | `forbeschile.com` | — | watchlist | sitio no responde |
@@ -66,7 +66,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Instituto de la Construcción** | `iconstruccion.cl` | — | watchlist | sitemap en catálogo (iconstruccion) |
 | ✅ | **Los Abogados Laborales** | `losabogadoslaborales.cl` | — | watchlist | sitemap en catálogo (losabogadoslaborales) |
 | ⬜ | **Marketing4eCommerce Chile** | `marketing4ecommerce.cl` | — | database | Feed principal de Marketing4eCommerce Chile |
-| ⬜ | **MCH (Mineria Chilena)** | `mch.cl` | — | database | MCH, medio de comunicación especializado en minería, construcción y energía |
+| 🔒 | **MCH (Mineria Chilena)** | `mch.cl` | — | database | fetch failed en sitemap/sitemap_index/wp-sitemap y robots.txt sin línea Sitemap |
 | 🟡 | **Mundo Minería** | `mundomineria.cl` | — | database | referenciado en src/content/sources/*.md |
 | ⬜ | **NSS** | `nss.cl` | — | watchlist | sin feed RSS detectado |
 | 🟡 | **Portal Agro Chile** | `portalagrochile.cl` | — | database | referenciado en src/content/sources/*.md |
@@ -74,15 +74,15 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Portal Frutícola** | `portalfruticola.com` | — | database | sitemap en catálogo (portalfruticola) |
 | ✅ | **Portal Minero** | `portalminero.com` | — | database | sitemap en catálogo (portalminero) |
 | ✅ | **PortalPortuario** | `portalportuario.cl` | — | database | sitemap en catálogo (portalportuario) |
-| ⬜ | **Prensa Digital** | `prensadigital.cl` | — | database | Medio chileno de actualidad y economía que cubre empresas, mercados, comercio exterior, tr |
-| ⬜ | **Puerto a Puerto** | `puertoapuerto.cl` | Los Lagos | database | Revista regional de Osorno y Puerto Montt sobre economía, salmonicultura, turismo, ciencia |
+| 🔒 | **Prensa Digital** | `prensadigital.cl` | — | database | índice con 133 shards sitemap-posttype-post.YYYYMM.xml, pero TODOS son resultados de loter |
+| ✅ | **Puerto a Puerto** | `puertoapuerto.cl` | Los Lagos | database | sitemap en catálogo (puertoapuerto) |
 | ✅ | **pv magazine Latin America** | `pv-magazine-latam.com` | — | database | sitemap en catálogo (pvmagazine) |
 | ⬜ | **RBC Asesores** | `rbcasesores.cl` | — | database | Feed principal de RBC Asesores |
 | ✅ | **REDIMIN** | `redimin.cl` | — | database | sitemap en catálogo (redimin) |
 | ✅ | **Reporte Agrícola** | `reporteagricola.cl` | — | watchlist | sitemap en catálogo (reporteagricola) |
 | 🟡 | **Reporte Minero** | `reporteminero.cl` | — | watchlist | referenciado en src/content/sources/*.md |
 | ⬜ | **Revista Capital** | `capital.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Ruta 2050** | `ruta2050.cl` | — | database | Medio especializado en minería y energía en Chile, con cobertura de cobre, litio, renovabl |
+| ✅ | **Ruta 2050** | `ruta2050.cl` | — | database | sitemap en catálogo (ruta2050) |
 | ⬜ | **SalmonExpert** | `salmonexpert.cl` | — | watchlist | sin feed RSS detectado |
 | ✅ | **SOFOFA** | `sofofa.cl` | — | database | sitemap en catálogo (sofofa) |
 | ⬜ | **Terminal Puerto Arica** | `portal.tpa.cl` | Arica Y Parinacota | watchlist | sitio no responde |
@@ -102,13 +102,13 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Chile Travel** | `chile.travel` | — | database | sitemap en catálogo (chiletravel) |
 | ⬜ | **ChileMujeres** | `chilemujeres.cl` | — | database | Feed principal de ChileMujeres |
 | ✅ | **Coaniquem** | `coaniquem.cl` | — | database | sitemap en catálogo (coaniquem) |
-| ⬜ | **CODEPU** | `codepu.cl` | — | database | Corporación de Defensa de los Derechos del Pueblo, con comunicados y noticias sobre derech |
+| 🔒 | **CODEPU** | `codepu.cl` | — | database | sin sitemap: robots.txt 404 y los 3 endpoints estándar (sitemap, sitemap_index, wp-sitemap |
 | ✅ | **ComunidadMujer** | `comunidadmujer.cl` | — | database | sitemap en catálogo (comunidadmujer) |
 | 🟡 | **Conadecus** | `conadecus.cl` | — | database | referenciado en src/content/sources/*.md |
 | ✅ | **Corporación La Morada** | `lamorada.cl` | — | watchlist | sitemap en catálogo (lamorada) |
 | ⬜ | **Cuerpo de Bomberos de Santiago** | `cbs.cl` | Metropolitana | database | Cuerpo de bomberos voluntarios que publica novedades operativas, institucionales y de capa |
 | ⬜ | **Cupones Chile** | `cuponeschile.cl` | — | watchlist | feed stale (último item: 2025-12-02, 286 días) |
-| ⬜ | **CUT (Central Unitaria de Trabajadores de Chile)** | `cut.cl` | — | database | Central sindical que representa a trabajadores del sector público y privado en Chile |
+| 🔒 | **CUT (Central Unitaria de Trabajadores de Chile)** | `cut.cl` | — | database | sin sitemap: robots.txt sin línea Sitemap y los 3 endpoints estándar dan 404 |
 | ✅ | **Defensa Civil de Chile** | `defensacivil.cl` | — | database | sitemap en catálogo (defensacivil) |
 | ⬜ | **Diario El Itihue** | `diarioelitihue.blogspot.com` | — | database | Blog chileno de noticias comunitarias y crónica social |
 | ✅ | **Diario Mapuche** | `mapuchediario.cl` | Araucania | database | sitemap en catálogo (mapuchediario) |
@@ -119,7 +119,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Fundación Iguales** | `iguales.cl` | — | database | sitemap en catálogo (iguales) |
 | ⬜ | **Fundación Las Rosas** | `lasrosas.cl` | — | watchlist | feed stale (último item: 2020-01-22, 2428 días) |
 | ⬜ | **Fundación Paréntesis** | `fundacionparentesis.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Fundación Superación de la Pobreza** | `fundacionpobreza.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Fundación Superación de la Pobreza** | `fundacionpobreza.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde) |
 | ✅ | **Guía Turismo Chile** | `guiaturismo.cl` | — | database | sitemap en catálogo (guiaturismo) |
 | ✅ | **Hogar de Cristo** | `hogardecristo.cl` | — | database | sitemap en catálogo (hogardecristo) |
 | ⬜ | **Iglesia.cl** | `iglesia.cl` | — | watchlist | sin feed RSS detectado |
@@ -130,7 +130,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Mi Voz** | `comercial.mivoz.cl` | — | watchlist | sin feed RSS detectado |
 | ⬜ | **MUMS** | `mums.cl` | — | database | Movimiento por la Diversidad Sexual en Chile |
 | ⬜ | **Observatorio Ciudadano** | `observatorio.cl` | — | database | Organización de derechos humanos y medio ambiente |
-| ⬜ | **Observatorio de Gobernanza Migratoria y DDHH** | `ogmdh-chile.org` | — | database | Observatorio de gobernanza migratoria y derechos humanos de Chile |
+| ✅ | **Observatorio de Gobernanza Migratoria y DDHH** | `ogmdh-chile.org` | — | database | sitemap en catálogo (ogmdh) |
 | ⬜ | **ODECU** | `odecu.cl` | — | database | Organización chilena de consumidores que trabaja en la defensa de los derechos de las pers |
 | ⬜ | **Prensa Eventos** | `prensaeventos.cl` | — | database | Portal chileno de noticias y agendas sobre eventos, ferias, congresos, cultura, tecnología |
 | ⬜ | **Reddit** | `reddit.com` | — | database | Reddit feeds from various chilean subreddits |
@@ -158,7 +158,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **CineChile** | `cinechile.cl` | — | watchlist | sin feed RSS detectado |
 | ⬜ | **Disorder** | `disorder.cl` | — | watchlist | feed stale (último item: 2023-06-30, 1172 días) |
 | ⬜ | **Editorial Quimantú** | `quimantu.cl` | — | database | Editorial chilena independiente con enfoque en cultura, pueblos originarios y literatura m |
-| ⬜ | **Espacio Regional** | `espacioregional.cl` | Valparaiso | database | Medio independiente y colaborativo de sociedad, política y cultura, con especial presencia |
+| ✅ | **Espacio Regional** | `espacioregional.cl` | Valparaiso | database | sitemap en catálogo (espacioregional) |
 | ⬜ | **Fondos Cultura** | `fondosdecultura.cl` | — | database | Sitio de fondos concursables del Ministerio de las Culturas, las Artes y el Patrimonio de |
 | ⬜ | **Fundación Cultural de Providencia** | `culturaprovidencia.cl` | — | database | Corporación cultural de la comuna de Providencia, Santiago |
 | ⬜ | **Fundación Teatro a Mil** | `teatroamil.cl` | — | watchlist | sin feed RSS detectado |
@@ -196,7 +196,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Comunidad Escolar** | `comunidadescolar.cl` | — | database | Portal de noticias del sistema escolar chileno, dirigido a sostenedores y comunidades educ |
 | ⬜ | **CONICYT** | `conicyt.cl` | — | database | Feed principal de CONICYT |
 | ⬜ | **DaemsPP** | `daemspp.cl` | — | database | Feed principal de DaemsPP |
-| ⬜ | **Diario UACh** | `diario.uach.cl` | — | database | Medio institucional de la Universidad Austral de Chile con noticias sobre su comunidad, in |
+| ✅ | **Diario UACh** | `diario.uach.cl` | — | database | sitemap en catálogo (diario_uach) |
 | ⬜ | **Dirección de Educación Pública** | `dep.gob.cl` | — | database | Portal oficial de la Dirección de Educación Pública del Ministerio de Educación de Chile |
 | ✅ | **Espacio Público** | `espaciopublico.cl` | — | database | sitemap en catálogo (espaciopublico) |
 | ✅ | **Explora** | `explora.cl` | — | database | sitemap en catálogo (explora) |
@@ -404,7 +404,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Hospital Clínico U. de Chile** | `hospitalclinico.uchile.cl` | — | watchlist | sitio no responde |
 | ⬜ | **Hospital Clínico UFRO** | `hospitalclinicoufro.cl` | — | watchlist | sitio no responde |
 | ⬜ | **Hospital Digital** | `hospitaldigital.minsal.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Instituto de Seguridad Laboral** | `isl.gob.cl` | — | database | Institución nacional dedicada a la prevención de accidentes laborales, la seguridad en el |
+| ✅ | **Instituto de Seguridad Laboral** | `isl.gob.cl` | — | database | sitemap en catálogo (isl) |
 | ⬜ | **Instituto Nacional del Tórax** | `torax.cl` | — | watchlist | feed stale (último item: 2026-08-07, 38 días) |
 | ⬜ | **Medwave** | `medwave.cl` | — | watchlist | sin feed RSS detectado |
 | ✅ | **Observatorio de Salud Pública UC** | `observatorio.medicina.uc.cl` | — | watchlist | sitemap en catálogo (observatoriomedicina) |
@@ -631,13 +631,13 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **Fundación Nodo XXI** | `nodoxxi.cl` | — | database | Fundación chilena dedicada al análisis y debate sobre política, ciudadanía y sociedad |
 | 🔒 | **Partido Comunista de Chile** | `pcchile.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
 | 🔒 | **Partido Demócrata Cristiano** | `pdc.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
-| ⬜ | **Partido Humanista de Chile** | `partidohumanista.cl` | — | database | Partido político chileno - Noticias, comunicados y actividades del Partido Humanista |
-| ⬜ | **Partido Igualdad** | `partidoigualdad.cl` | — | database | Partido político chileno - Noticias, comunicados y actividades del Partido Igualdad de Chi |
+| ✅ | **Partido Humanista de Chile** | `partidohumanista.cl` | — | database | sitemap en catálogo (partidohumanista) |
+| ✅ | **Partido Igualdad** | `partidoigualdad.cl` | — | database | sitemap en catálogo (partidoigualdad) |
 | ✅ | **Partido Liberal de Chile** | `liberaleschile.cl` | — | database | sitemap en catálogo (liberaleschile) |
 | 🔒 | **Partido por la Democracia** | `ppd.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
 | 🟡 | **Partido Republicano de Chile** | `partidorepublicanodechile.cl` | — | database | referenciado en src/content/sources/*.md |
 | 🟡 | **Partido Socialista de Chile** | `pschile.cl` | — | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Unión Demócrata Independiente** | `udi.cl` | — | database | Partido político chileno - Noticias, comunicados y actividades de la UDI |
+| ✅ | **Unión Demócrata Independiente** | `udi.cl` | — | database | sitemap en catálogo (udi) |
 ### Radio (radio)
 
 | Estado | Sitio | Web | Región | Fuente | Notas |
@@ -696,7 +696,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Radio Riquelme** | `radioriquelme.cl` | — | database | sitemap en catálogo (radioriquelme) |
 | ⬜ | **Radio Romántica** | `romantica.cl` | — | database | Emisora chilena de música romántica |
 | 🟡 | **Radio Sago** | `radiosago.cl` | — | watchlist | referenciado en src/content/sources/*.md |
-| ⬜ | **Radio Santa Cruz** | `santacruzfm.cl` | Ohiggins | database | Radio regional de Santa Cruz y O’Higgins con noticias, deporte, programas y cobertura loca |
+| ✅ | **Radio Santa Cruz** | `santacruzfm.cl` | Ohiggins | database | sitemap en catálogo (santacruzfm) |
 | ⬜ | **Radio Santiago** | `radiosantiago.cl` | Metropolitana | watchlist | sin feed RSS detectado |
 | ⬜ | **Radio Sinfonía** | `radiosinfonia.cl` | — | watchlist | sin feed RSS detectado |
 | ⬜ | **Radio Tiempo** | `radiotiempo.cl` | — | watchlist | sitio no responde |
@@ -825,13 +825,13 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Edición Cero** | `edicioncero.cl` | Tarapaca | database | sitemap en catálogo (edicioncero) |
 | ⬜ | **El Aconcagua** | `elaconcagua.cl` | Valparaiso | database | Diario regional de San Felipe, Valparaíso |
 | 🔒 | **El Amaule** | `elamaule.cl` | — | watchlist | HTTP 403 Cloudflare (verificado) |
-| ⬜ | **El América** | `elamerica.cl` | Antofagasta | database | Diario regional de Calama, Antofagasta |
+| ✅ | **El América** | `elamerica.cl` | Antofagasta | database | sitemap en catálogo (elamerica) |
 | ✅ | **El Andacollino** | `elandacollino.cl` | Coquimbo | database | sitemap en catálogo (elandacollino) |
 | ⬜ | **El Andino** | `elandino.cl` | — | watchlist | sitio no responde |
 | 🟡 | **El Boyaldía** | `elboyaldia.cl` | Tarapaca | watchlist | referenciado en src/content/sources/*.md |
 | ✅ | **El Cachapoal** | `elcachapoal.cl` | — | database | sitemap en catálogo (elcachapoal) |
 | ✅ | **El Calbucano** | `elcalbucano.cl` | Los Lagos | database | sitemap en catálogo (elcalbucano) |
-| ⬜ | **El Capo de Provincia** | `capodeprovincia.cl` | Valparaiso | database | Medio digital de la Provincia de San Antonio, Región de Valparaíso |
+| ✅ | **El Capo de Provincia** | `capodeprovincia.cl` | Valparaiso | database | sitemap en catálogo (capodeprovincia) |
 | ⬜ | **El Chelenko** | `elchelenko.cl` | Aysen | watchlist | HTTP error (401) |
 | ✅ | **El Comunicador** | `elcomunicador.cl` | Metropolitana | database | sitemap en catálogo (elcomunicador) |
 | ⬜ | **El Concecuente** | `elconcecuente.cl` | — | watchlist | sitio no responde |
@@ -914,7 +914,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Info Tarapacá** | `infotarapaca.cl` | Tarapaca | database | sitemap en catálogo (infotarapaca) |
 | ✅ | **Informa Al Minuto** | `informaalminuto.cl` | Los Rios | database | sitemap en catálogo (informaalminuto) |
 | ✅ | **Insular FM** | `insularfm.cl` | Los Lagos | database | sitemap en catálogo (insularfm) |
-| ⬜ | **Iquique Hoy** | `iquiquehoy.cl` | Tarapaca | database | Medio digital de noticias de Iquique, Alto Hospicio y Tarapacá, con cobertura nacional, de |
+| ✅ | **Iquique Hoy** | `iquiquehoy.cl` | Tarapaca | database | sitemap en catálogo (iquiquehoy) |
 | ⬜ | **Iquique Online** | `iquiqueonline.cl` | Tarapaca | watchlist | sitio no responde |
 | ✅ | **Iquique TV** | `iquiquetv.cl` | Tarapaca | database | sitemap en catálogo (iquiquetv) |
 | ✅ | **ITV Patagonia** | `itvpatagonia.com` | Magallanes | database | sitemap en catálogo (itvpatagonia) |
@@ -947,7 +947,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **La Voz de Paillaco** | `lavozdepaillaco.cl` | — | watchlist | sin feed RSS detectado |
 | ✅ | **La Voz de Pucón** | `lavozdepucon.cl` | Araucania | database | sitemap en catálogo (lavozdepucon) |
 | 🔒 | **La Voz de Valdivia** | `lavozdevaldivia.cl` | Los Rios | watchlist | sin sitemap (los 4 endpoints no devuelven locs) |
-| ⬜ | **La Voz del Norte** | `lavozdelnorte.cl` | Coquimbo | database | Medio digital regional con sede en La Serena que cubre Coquimbo y asuntos nacionales, cult |
+| 🔒 | **La Voz del Norte** | `lavozdelnorte.cl` | Coquimbo | database | robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs |
 | ✅ | **Las Noticias de Malleco** | `lasnoticiasdemalleco.cl` | Araucania | database | sitemap en catálogo (lasnoticiasdemalleco) |
 | 🔒 | **Las Últimas Noticias** | `lun.com` | — | watchlist | robots.txt (en www) 200 sin línea Sitemap y con `Googlebot: Disallow: /`; el apex falla el |
 | ✅ | **Linares en Línea** | `linaresenlinea.cl` | Maule | database | sitemap en catálogo (linaresenlinea) |
@@ -990,7 +990,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **PanoramicAysén** | `panoramicaysen.cl` | Aysen | database | sitemap en catálogo (panoramicaysen) |
 | ⬜ | **Parral Actual** | `parralactual.com` | Maule | watchlist | sitio no responde |
 | 🔒 | **Pauta Los Ríos** | `pautalosrios.cl` | Los Rios | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
-| ⬜ | **Periódico Contraplano** | `contraplano.cl` | — | database | Medio de comunicación de la Región de Valparaíso |
+| 🔒 | **Periódico Contraplano** | `contraplano.cl` | — | database | robots.txt declara sitemap_index.xml, pero ese y sitemap.xml dan 404 |
 | 🔒 | **Periódico Los Ríos** | `periodicolosrios.cl` | Los Rios | watchlist | sin sitemap (los 4 endpoints no devuelven locs) |
 | ✅ | **Pichilemu News** | `pichilemunews.cl` | Ohiggins | database | sitemap en catálogo (pichilemunews) |
 | ✅ | **Portal Informativo** | `portalinformativo.cl` | Los Lagos | database | sitemap en catálogo (portalinformativo) |
@@ -1058,7 +1058,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Temuco Diario** | `temucodiario.cl` | Araucania | database | sitemap en catálogo (temucodiario) |
 | ⬜ | **Temuco Televisión** | `temucotelevision.cl` | Araucania | database | Canal de televisión online con noticias y coberturas de La Araucanía, especialmente Temuco |
 | 🔒 | **Temuco Ya** | `temucoya.cl` | Araucania | database | sitemap mensual WP válido (sitemap-pt-post-YYYY-MM, 76 meses) pero solo ~1.000 artículos: |
-| ⬜ | **The Puerto Varas** | `thepuertovaras.cl` | Los Lagos | database | Medio digital de Puerto Varas y Los Lagos con noticias locales, economía, opinión, pódcast |
+| 🔒 | **The Puerto Varas** | `thepuertovaras.cl` | Los Lagos | database | robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs |
 | ✅ | **Tiempo 21** | `tiempo21.cl` | Araucania | database | sitemap en catálogo (tiempo21) |
 | ⬜ | **Tiempo 21 Araucanía** | `tiempo21araucania.cl` | Araucania | watchlist | sin feed RSS detectado |
 | ✅ | **Tierramarillano** | `tierramarillano.cl` | Atacama | database | sitemap en catálogo (tierramarillano) |
@@ -1066,7 +1066,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Tomé al Día** | `tomealdia.com` | Biobio | database | sitemap en catálogo (tomealdia) |
 | ✅ | **Traiguén City** | `traiguencity.cl` | Araucania | database | sitemap en catálogo (traiguencity) |
 | ⬜ | **Tribuna del Biobío** | `tribunadelbiobio.cl` | Biobio | watchlist | sin feed RSS detectado |
-| ⬜ | **Tu Región Noticias** | `trnoticias.cl` | Maule | database | Portal regional centrado en el Maule, con noticias sobre política, educación, salud, depor |
+| ✅ | **Tu Región Noticias** | `trnoticias.cl` | Maule | database | sitemap en catálogo (trnoticias) |
 | ✅ | **Tus Noticias** | `tusnoticias.cl` | Biobio | database | sitemap en catálogo (tusnoticias) |
 | ⬜ | **TV Canal 5** | `tvcanal5.cl` | Los Lagos | database | Canal local de Puerto Montt con noticias y programación regional. |
 | ⬜ | **TVO San Vicente** | `tvosanvicente.cl` | Ohiggins | database | Estación de televisión local de San Vicente de Tagua Tagua y Santa Cruz, Región de O’Higgi |
