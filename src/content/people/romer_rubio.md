@@ -15,6 +15,12 @@ cargos:
   - cargo: Coordinador de la Plataforma Unitaria de Venezolanos en Chile
   - cargo: Encargado de la Oficina de Migración
     organizacion: municipalidad_independencia
+    desde: 2025-01
+    hasta: 2026-03
+  - cargo: Profesor
+    organizacion: universidad_central
+  - cargo: Consultor académico
+    organizacion: universidad_andres_bello
   - cargo: Concejal de Maracaibo
     desde: 2014
     hasta: 2018
@@ -29,5 +35,9 @@ notas: >-
   Migración de la Municipalidad de Independencia durante la gestión de Agustín Iglesias y fue
   funcionario público en el segundo gobierno de Sebastián Piñera. El régimen de Maduro le anuló
   el pasaporte en agosto de 2024. Académico de la Escuela de Gobierno de la Universidad Andrés
-  Bello y coordinador de la Plataforma Unitaria de Venezolanos en Chile.
+  Bello y coordinador de la Plataforma Unitaria de Venezolanos en Chile. Su perfil de LinkedIn
+  (relevado por Nuevo Poder y BioBioChile entre el 22 y el 26 de septiembre de 2026) consigna
+  también como profesor de la Universidad Central de Chile y consultor académico de la Universidad
+  Andrés Bello, y sitúa la Oficina de Migración de la Municipalidad de Independencia entre enero de
+  2025 y marzo de 2026.
 ---

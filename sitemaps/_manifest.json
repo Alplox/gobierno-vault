@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-27T23:07:04.548Z",
+  "actualizado": "2026-09-28T03:41:00.501Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -300,8 +300,8 @@
     "la_hora": {
       "nombre": "La Hora",
       "ultima_sync": "2026-09-25T18:46:10.503Z",
-      "articulos": 45513,
-      "nuevos": 0,
+      "articulos": 45656,
+      "nuevos": 143,
       "años": 3
     },
     "elperiodico": {
@@ -1963,13 +1963,6 @@
       "nuevos": 0,
       "años": 25
     },
-    "lahora": {
-      "nombre": "La Hora",
-      "ultima_sync": "2026-09-25T18:49:30.653Z",
-      "articulos": 44538,
-      "nuevos": 0,
-      "años": 3
-    },
     "conaf": {
       "nombre": "CONAF",
       "ultima_sync": "2026-09-25T18:49:30.673Z",
@@ -3145,6 +3138,104 @@
       "articulos": 903050,
       "nuevos": 903050,
       "años": 21
+    },
+    "espaciopublico": {
+      "nombre": "Espacio Público",
+      "ultima_sync": "2026-09-27T23:37:58.384Z",
+      "articulos": 2000,
+      "nuevos": 2000,
+      "años": 9
+    },
+    "lavozdepucon": {
+      "nombre": "La Voz de Pucón",
+      "ultima_sync": "2026-09-27T23:38:03.799Z",
+      "articulos": 4741,
+      "nuevos": 4741,
+      "años": 9
+    },
+    "regiondecoquimbo": {
+      "nombre": "Región de Coquimbo",
+      "ultima_sync": "2026-09-27T23:38:15.845Z",
+      "articulos": 4343,
+      "nuevos": 4343,
+      "años": 5
+    },
+    "primerafuente": {
+      "nombre": "Primera Fuente",
+      "ultima_sync": "2026-09-28T00:36:43.643Z",
+      "articulos": 4314,
+      "nuevos": 4314,
+      "años": 4
+    },
+    "diarioaconcagua": {
+      "nombre": "Diario Aconcagua",
+      "ultima_sync": "2026-09-28T00:36:44.238Z",
+      "articulos": 3640,
+      "nuevos": 3640,
+      "años": 11
+    },
+    "dialogosur": {
+      "nombre": "Diálogo Sur",
+      "ultima_sync": "2026-09-28T00:55:37.194Z",
+      "articulos": 41396,
+      "nuevos": 41396,
+      "años": 15
+    },
+    "elhuemul": {
+      "nombre": "El Huemul",
+      "ultima_sync": "2026-09-28T00:56:39.424Z",
+      "articulos": 812,
+      "nuevos": 812,
+      "años": 3
+    },
+    "hvaradio": {
+      "nombre": "Radio HVA",
+      "ultima_sync": "2026-09-28T00:56:48.287Z",
+      "articulos": 16209,
+      "nuevos": 16209,
+      "años": 8
+    },
+    "cauquenesnet": {
+      "nombre": "CauquenesNet",
+      "ultima_sync": "2026-09-28T00:57:28.074Z",
+      "articulos": 20449,
+      "nuevos": 20449,
+      "años": 19
+    },
+    "diariofutrono": {
+      "nombre": "Diario Futrono",
+      "ultima_sync": "2026-09-28T01:09:57.569Z",
+      "articulos": 56725,
+      "nuevos": 56725,
+      "años": 14
+    },
+    "panoramicaysen": {
+      "nombre": "PanoramicAysén",
+      "ultima_sync": "2026-09-28T01:09:58.278Z",
+      "articulos": 3695,
+      "nuevos": 3695,
+      "años": 3
+    },
+    "mapuchediario": {
+      "nombre": "Diario Mapuche",
+      "ultima_sync": "2026-09-28T03:40:18.796Z",
+      "articulos": 1291,
+      "nuevos": 1291,
+      "años": 5
+    },
+    "aysentv": {
+      "nombre": "Aysén TV",
+      "ultima_sync": "2026-09-28T03:40:25.062Z",
+      "articulos": 1000,
+      "nuevos": 1000,
+      "años": 3
+    },
+    "aricachile": {
+      "nombre": "Arica Chile",
+      "ultima_sync": "2026-09-28T03:41:00.501Z",
+      "articulos": 5694,
+      "nuevos": 5694,
+      "años": 10
     }
   }
 }

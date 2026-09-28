@@ -302,8 +302,12 @@ export const MEDIA = {
     index: 'https://lahora.cl/sitemap.xml',
     // Custom: index diario sitemap-DD-MM-YYYY.xml + latest.xml. No es Yoast.
     // articleOnly descarta page/category; los archivos diarios (sitemap-DD-MM-YYYY.xml)
-    // matchean el includeRe.
-    includeRe: /(?:sitemap-\d{2}-\d{2}-\d{4}\.xml|latest\.xml)$/i,
+    // matchean el includeRe. El ancla `\/` + el path con `sitemap/` es lo que
+    // descarta sitemap/latest.xml y sitemap/category-sitemap*.xml.
+    // sitemap/news-sitemap.xml (250 URLs, título real) entra para mejorar los
+    // títulos de los últimos días; el path DD-MM-YYYY lo reconoce sitemapUrlDate
+    // (2º patrón), así que el resync --since omite los días viejos sin bajarlos.
+    includeRe: /\/sitemap\/(?:sitemap-\d{2}-\d{2}-\d{4}|news-sitemap)\.xml$/i,
   },
 
   elperiodico: {
@@ -1914,12 +1918,11 @@ export const MEDIA = {
     index: 'https://www.minvu.gob.cl/sitemap_index.xml',
   },
   // ---- Batch 9: regionales, negocios, medio ambiente (28-ago-2026) ----
-  lahora: {
-    nombre: 'La Hora',
-    index: 'https://lahora.cl/sitemap.xml',
-    // Custom: sitemap/DD-MM-YYYY.xml (diario desde 2014) + news-sitemap.xml
-    includeRe: /(?:sitemap-\d{2}-\d{2}-\d{4}|news-sitemap)\.xml$/,
-  },
+  // OJO: La Hora tenía DOS slugs para el mismo dominio — `la_hora` (línea ~300, el
+  // canónico) y `lahora` (este bloque, 44.538 artículos redundantes). Se
+  // consolidó todo en `la_hora` (45.656 artículos): los JSONL de `lahora` eran un
+  // subconjunto, así que su directorio se copió al canónico y su entrada se
+  // eliminó de aquí y de `_manifest.json`. No volver a dar de alta el dominio.
   elcachapoal: {
     nombre: 'El Cachapoal',
     index: 'https://elcachapoal.cl/wp-sitemap.xml',
@@ -2120,6 +2123,166 @@ export const MEDIA = {
     // Custom Iberoamericana: out/sitemap.xml (artículos, fecha en path /YYYY/MM/)
     // + news-sitemap.xml (títulos reales). Ojo: out/sitemap.xml es urlset plano.
   },
+  // ── Agregados 27-09-2026 (batch 15: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  espaciopublico: {
+    nombre: 'Espacio Público',
+    index: 'https://espaciopublico.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: wp-sitemap-posts-post-1.xml (descarta page/equipo/documentos/
+    // areas/nuestro_trabajo/tribe_*/taxonomías). Tope de 2.000 posts por archivo y el
+    // índice declara un post-2.xml que NO existe (devuelve el HTML de la home, 0 locs):
+    // el catálogo queda topado en los ~2.000 posts más antiguos (2016→2024).
+    // OJO: ~1.008 URLs comparten <lastmod> 2021-06-13 (masa de una migración del sitio),
+    // igual que el caso `senado` — al buscar, filtrar por slug y no por fecha.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  lavozdepucon: {
+    nombre: 'La Voz de Pucón',
+    index: 'https://www.lavozdepucon.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: wp-sitemap-posts-post-1..3.xml (~4.741 artículos, 2018-05→hoy).
+    // Descarta page/event/taxonomías. Los <lastmod> son reales (los shards se solapan
+    // en rango porque WordPress pagina por chunks de 2.000, no por fecha).
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  regiondecoquimbo: {
+    nombre: 'Región de Coquimbo',
+    index: 'https://regiondecoquimbo.cl/sitemap_index.xml',
+    // Yoast: post-sitemap.xml .. post-sitemap5.xml (1.000 URLs c/u menos el último,
+    // ~4.343 artículos, 2022-10→hoy). articleOnly descarta page/category/post_tag/author.
+    articleOnly: true,
+  },
+  // ── Agregados 27-09-2026 (batch 16: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  dialogosur: {
+    nombre: 'Diálogo Sur',
+    robots: 'https://dialogosur.cl/robots.txt',
+    // Yoast: índice de 41 post-sitemap*.xml (~1.000 URLs c/u) desde 2010, sin
+    // <lastmod> → fecha real en el path /YYYY/MM/<slug> (día 01 aproximado, como
+    // lasegunda). includeRe en vez de articleOnly para no meter la home que
+    // devuelve sitemap-news.xml (1 loc = raíz del sitio).
+    // OJO: cada sub-sitemap tarda ~22 s en responder: el sync completo es lento.
+    includeRe: /\/post-sitemap\d*\.xml$/i,
+    locDateRe: /\/(20\d{2})\/(\d{2})\//,
+  },
+  primerafuente: {
+    nombre: 'Primera Fuente',
+    robots: 'https://primerafuente.cl/robots.txt',
+    // Yoast: post-sitemap.xml .. post-sitemap5.xml (~4.300 artículos, 2021→hoy)
+    // con <lastmod> reales. articleOnly descarta page/category/post_tag/author.
+    // Ojo: los shards más antiguos (post-sitemap.xml, 2021) mezclan notas
+    // regions reales con posts de SEO en inglés: filtrar por slug al buscar.
+    articleOnly: true,
+  },
+  diarioaconcagua: {
+    nombre: 'Diario Aconcagua',
+    index: 'https://www.diarioaconcagua.cl/sitemap.xml',
+    // Wix: índice de 3 sub-sitemaps; los artículos viven en el CPT `blog-posts`
+    // (3.640 URLs, 2016→2026, <lastmod> reales) — por eso includeRe y no
+    // articleOnly, que solo reconoce post-sitemap*.xml. Descarta pages/categories.
+    includeRe: /\/blog-posts-sitemap\.xml$/i,
+  },
+  // Descartados batch 16: lun.com/elmatutino/noticiasimportantes (sin sitemap o
+  // 1 loc = home), eldiariodecuracavi (1 post-sitemap residual), eldiarioelcondor
+  // (wp-sitemap solo declara pages, sin posts), elmatutino/sancarlosaldia
+  // (404), m360 (DNS fail en /noticias/sitemap_pags.xml).
+  // ── Agregados 27-09-2026 (batch 17: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  cauquenesnet: {
+    nombre: 'CauquenesNet',
+    robots: 'https://cauquenesnet.cl/robots.txt',
+    // Tema WP con sitemaps paginados: robots → /sitemap.xml (índice) →
+    // sitemap-index-1.xml → sitemap-N.xml (~21 shards × 1.000 URLs, 2016→hoy,
+    // <lastmod> reales, path /YYYY/MM/DD/<slug>). includeRe para descartar
+    // image-sitemap-index-1.xml y video-sitemap-1.xml; el news-sitemap.xml
+    // (5 URLs con título real) sí entra. Ojo: cada shard mezcla 3-4 páginas
+    // estáticas (home, corporativo, contacto) entre los artículos.
+    includeRe: /\/(?:sitemap-(?:index-)?\d+|news-sitemap)\.xml$/i,
+  },
+  elhuemul: {
+    nombre: 'El Huemul',
+    index: 'https://elhuemul.cl/sitemap_index.xml',
+    // Yoast: post-sitemap1.xml .. post-sitemap4.xml (Chaitén, Los Lagos; ~3.700
+    // artículos, 2020→hoy, <lastmod> reales y path /YYYY/MM/DD/<slug>).
+    includeRe: /\/post-sitemap\d*\.xml$/i,
+  },
+  hvaradio: {
+    nombre: 'Radio HVA',
+    index: 'https://www.hvaradio.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: wp-sitemap-posts-post-1..4.xml (~8.000 artículos, 2023→hoy,
+    // <lastmod> reales; chicharregional de Atacama).
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  // ── Agregados 27-09-2026 (batch 18: 2 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  diariofutrono: {
+    nombre: 'Diario Futrono',
+    index: 'https://www.diariofutrono.cl/sitemap.xml',
+    // Tema WP con sitemap MENSUAL propio: /sitemap/YYYY/MM/sitemap-pt-post.xml.
+    // El índice lista 179 meses (2011/11→hoy) pero los primeros están vacíos
+    // (0 locs): el contenido real arranca ~2013. Descarta category-sitemap.xml
+    // y el resto de CPTs. El path YYYY/MM lo lee sitemapUrlDate (3er patrón).
+    includeRe: /\/sitemap\/\d{4}\/\d{2}\/sitemap-pt-post\.xml$/i,
+  },
+  panoramicaysen: {
+    nombre: 'PanoramicAysén',
+    index: 'https://www.panoramicaysen.cl/sitemap.xml',
+    // Wix (como diarioaconcagua): los artículos están en el CPT `blog-posts`
+    // → includeRe, porque articleOnly solo reconoce post-sitemap*.xml.
+    // 3.695 artículos 2024-03→hoy con <lastmod> reales (Puerto Aysén).
+    includeRe: /\/blog-posts-sitemap\.xml$/i,
+  },
+  // ── Agregados 28-09-2026 (batch 19: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  aysentv: {
+    nombre: 'Aysén TV',
+    index: 'https://www.aysentv.cl/sitemap.xml',
+    // Urlset PLANO de 1.011 URLs: 1.000 artículos con path /YYYY/MM/DD/<slug>
+    // (2024-02→hoy) + 11 páginas estáticas (radio, programas, tu salud en casa).
+    // urlRe deja solo los artículos; locDateRe porque el <lastmod> del primer
+    // <url> (2026-08-27) no corresponde al artículo más reciente del listado.
+    urlRe: /\/20\d{2}\/\d{2}\/\d{2}\//,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  aricachile: {
+    nombre: 'Arica Chile',
+    robots: 'https://www.aricachile.cl/robots.txt',
+    // Custom: robots declara 5 families (news, google-news, static, categories,
+    // tags). news y google-news son índices paginados de 100 en 100
+    // (news/{0,100,…} → ~5.800 artículos 2018-03→hoy); el includeRe tiene que
+    // aceptar el índice padre Y sus hijos, por eso el grupo (?:news|google-news)
+    // con sufijo opcional — sin el sufijo, el sync descarta el índice y no baja
+    // nada (mismo caso que cauquenesnet). OJO: el <lastmod> de estos shards es
+    // la fecha de regeneración (el shard 5700 marca 2023-06 con artículos de
+    // 2018-03), así que la fecha sale del path con locDateRe, no del lastmod.
+    includeRe: /\/sitemap\/(?:news|google-news)(?:\/\d+)?\/sitemap\.xml$/i,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  mapuchediario: {
+    nombre: 'Diario Mapuche',
+    index: 'https://www.mapuchediario.cl/sitemap_index.xml',
+    // Yoast: post-sitemap1.xml .. post-sitemap5.xml (~1.000 artículos,
+    // 2023-07→hoy, <lastmod> reales). articleOnly descarta page/category/post_tag.
+    articleOnly: true,
+  },
+  // Descartados batch 19: tehuelchenoticias.cl (Wix: `store/sitemap-dru-index.xml`
+  // responde 0 locs), region2.cl (urlset plano de 500, sin historia),
+  // temucoya.cl (sitemap-pt-post-YYYY-MM mensual pero 76 meses ≈ 1.000 artículos),
+  // chillanonline.cl/centralnoticias.cl/eldiariopanguipulli.cl/periodicolosrios.cl/
+  // lavozdevaldivia.cl/arica365.cl/mapuexpress.org/rengonotas.cl (nada).
+  // Descartes de las tandas 16-19 van como entradas de SIN_SITEMAP en
+  // watchlist.mjs (fila 🔒 de TAREAS/tareas_sitemap.md, cada una con su motivo);
+  // los comentarios siguientes son solo el resumen del sondeo.
+  // Descartados batch 18: werken.cl (índice plano de ~90 artículos, sin
+  // paginación), chilenews.cl (urlset plano de 100),
+  // laopiniononline.cl/montealegre.cl/laliguanoticias.cl/angelino.cl (WP, pero
+  // 1-3 shards residuales), elpaila/terceradosis/informechile (índices de 2-3
+  // entradas), prensacurico/maulealdia/quintainterior/radioaraucania/
+  // eldiariopanguipulli (los 4 endpoints WP devuelven 0 locs).
+  // diarioconcepcion.cl NO es un descarte: ya estaba en el catálogo (línea ~318).
+  // Descartados batch 17: davidnoticias.cl (índice de 1.292 shards íntegramente
+  // SEO spam: ?id=link-slot*/daftar-slot*, sin un solo artículo), radiocristalina
+  // (wp-sitemap con 1 solo shard post), radioaustralvaldivia/radioguayacan/
+  // radiobuenanueva/diariolaguino/diarioriobueno/diariolanco/diariomafil
+  // (sitemaps planos sin índice ni news), ceinoticias/hvaradio-dns/estrellavalpo
+  // — DNS ENOTFOUND o 404.
   // Descartados batch 12: munistgo/radiocamara/subturismo/mineduc/minsal/elcorto/
   // chilenafm/chilenoticias/cctt/codeff/inach/meteored/utalca/ufro/udp/pcchile/pdc/
   // ppd/democratas — flat urlset. aqua — DNS ENOTFOUND.

@@ -1579,6 +1579,7 @@
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
 - [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 21 fuentes
 - [2026/09/20260907-11 - Municipalidad de Peñalolén clausura la medialuna del Club de Huasos por operar sin patente ni permisos en zona de riesgo](src/content/events/2026/09/20260907-11.md) — 7 fuentes
+- [2026/09/20260907-12 - Miguel Krassnoff escribe desde Punta Peuco al senador Iván Flores: no necesita indultos, reivindica la DINA y anuncia una "pronta libertad total"](src/content/events/2026/09/20260907-12.md) — 11 fuentes
 - [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 16 fuentes
 - [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 11 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 8 fuentes
@@ -1607,6 +1608,7 @@
 - [2026/09/20260909-11 - Gobierno argentino dice desconocer la ruta Punta Arenas–Malvinas; CECIM intima a Quirno y Kusanovic cuestiona una sanción fueguina](src/content/events/2026/09/20260909-11.md) — 9 fuentes
 - [2026/09/20260909-12 - ENAP confirma la tercera alza consecutiva de combustibles: bencinas +$35 y diésel +$89 desde el 10 de septiembre, y Quiroz apela al patriotismo de los camioneros para evitar paralizaciones](src/content/events/2026/09/20260909-12.md) — 30 fuentes
 - [2026/09/20260909-13 - Cancillería retira a Chile de las negociaciones de la Convención sobre Cooperación Fiscal Internacional de la ONU por riesgo a la soberanía fiscal](src/content/events/2026/09/20260909-13.md) — 21 fuentes
+- [2026/09/20260909-14 - Kast ratifica ante republicanos y libertarios en Cerro Castillo que avanzará en indultos a exuniformados, sin plazos y caso a caso](src/content/events/2026/09/20260909-14.md) — 7 fuentes
 - [2026/09/20260909-2 - Frei dice que el estallido no fue natural ni espontáneo y cita la advertencia de Duque a Piñera; elude comentar los dichos de Judd](src/content/events/2026/09/20260909-2.md) — 11 fuentes
 - [2026/09/20260909-3 - Contrapoder revela que el Servicio Civil contrató a contrata por hasta $5,6 millones a la activista venezolana Lucy Depablos como jefa de Comunicaciones](src/content/events/2026/09/20260909-3.md) — 12 fuentes
 - [2026/09/20260909-4 - ADN revela que Emilio Court, estudiante de Derecho de 22 años, trabaja en la Avanzada de Kast con pagos de hasta $3,7 millones como experto](src/content/events/2026/09/20260909-4.md) — 6 fuentes
@@ -1623,6 +1625,7 @@
 - [2026/09/20260910-14 - Perú anuncia su incorporación al Escudo de las Américas durante la visita de Marco Rubio a Lima](src/content/events/2026/09/20260910-14.md) — 7 fuentes
 - [2026/09/20260910-15 - Especialistas y el exministro Heraldo Muñoz cuestionan el retiro de la Convención fiscal de la ONU: "una decisión más bien política" y "difícil de entender"](src/content/events/2026/09/20260910-15.md) — 4 fuentes
 - [2026/09/20260910-16 - Tribunal sustituye el arresto domiciliario nocturno de Galdames por firma semanal y mantiene el arraigo nacional](src/content/events/2026/09/20260910-16.md) — 2 fuentes
+- [2026/09/20260910-17 - Kaiser admite que no hay disposición del Gobierno para indultos a exuniformados del estallido social](src/content/events/2026/09/20260910-17.md) — 8 fuentes
 - [2026/09/20260910-2 - Rau se desmarca de la meta de 6% de desempleo de Quiroz y luego se alinea: Quiroz reafirma 6,5% y crecimiento 4% tras seminario Clapes UC](src/content/events/2026/09/20260910-2.md) — 12 fuentes
 - [2026/09/20260910-3 - Carabineros rechaza reincorporar a Claudio Crespo tras su absolución en el caso Gatica: su defensa acusa ilegalidad y anuncia recurso de revisión](src/content/events/2026/09/20260910-3.md) — 7 fuentes
 - [2026/09/20260910-4 - Kast encabeza largada protocolar del WRC Rally Chile Biobío 2026 en Concepción entre pifias y aplausos](src/content/events/2026/09/20260910-4.md) — 15 fuentes
@@ -1635,8 +1638,9 @@
 - [2026/09/20260911-10 - DF Tax: especialistas desdramatizan el retiro y lo cifran como pérdida de influencia, con Chile en la mesa directiva del Comité Negociador](src/content/events/2026/09/20260911-10.md) — 1 fuente
 - [2026/09/20260911-11 - Presidencia adjudica suministro de pescados y mariscos por $94,5 millones tras licitación desierta](src/content/events/2026/09/20260911-11.md) — 3 fuentes
 - [2026/09/20260911-12 - Marcha y actos por los 53 años del golpe en Chillán: Plaza de Armas al Memorial Parque de la Meditación y jornada universitaria, con romería opositora al día siguiente](src/content/events/2026/09/20260911-12.md) — 8 fuentes
-- [2026/09/20260911-13 - Estudiantes UDP marchan a República 550 y secundarios romería en Alameda con intervención policial](src/content/events/2026/09/20260911-13.md) — 6 fuentes
+- [2026/09/20260911-13 - Estudiantes UDP marchan a República 550 y secundarios romería en Alameda con intervención policial](src/content/events/2026/09/20260911-13.md) — 9 fuentes
 - [2026/09/20260911-14 - Marcha en Valparaiso recorre Avenida Brasil hasta el Memorial de los Detenidos Desaparecidos y termina con barricada encendida](src/content/events/2026/09/20260911-14.md) — 9 fuentes
+- [2026/09/20260911-15 - El Gobierno despliega seguridad preventiva en 12 puntos críticos de la Región Metropolitana para el 11-S y cierra la jornada sin cifras oficiales de detenidos](src/content/events/2026/09/20260911-15.md) — 12 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
@@ -1651,7 +1655,7 @@
 - [2026/09/20260912-4 - Incendio en el hogar El Edén de Pitrufquén deja 16 fallecidos y genera investigación sobre su funcionamiento](src/content/events/2026/09/20260912-4.md) — 17 fuentes
 - [2026/09/20260912-5 - Jonás Preller publica la columna Economía incómoda y plantea una brecha chilena entre innovación, empleo y automatización](src/content/events/2026/09/20260912-5.md) — 21 fuentes
 - [2026/09/20260912-6 - Mala Espina desmiente que Chile se haya retirado de la ONU y rastrea el titular viral a la gráfica de Koncevisión del 9 de septiembre](src/content/events/2026/09/20260912-6.md) — 5 fuentes
-- [2026/09/20260912-7 - Arrau entrega balance de las jornadas del 10 y 11 de septiembre: 284 detenidos y 198 eventos de violencia a nivel nacional](src/content/events/2026/09/20260912-7.md) — 9 fuentes
+- [2026/09/20260912-7 - Arrau entrega balance de las jornadas del 10 y 11 de septiembre: 284 detenidos y 198 eventos de violencia a nivel nacional](src/content/events/2026/09/20260912-7.md) — 15 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
 - [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
@@ -1705,6 +1709,7 @@
 - [2026/09/20260923-2 - Trump apoya evaluar una restricción a las exportaciones estadounidenses de diésel y Chile queda expuesto a un posible choque de suministro](src/content/events/2026/09/20260923-2.md) — 13 fuentes
 - [2026/09/20260923-3 - UAF advierte que el acceso a información bancaria protegida por secreto bancario tarda 28 días hábiles en promedio](src/content/events/2026/09/20260923-3.md) — 12 fuentes
 - [2026/09/20260923-4 - Kast se reúne con Delcy Rodríguez y proyecta restablecer en meses las relaciones diplomáticas con Venezuela](src/content/events/2026/09/20260923-4.md) — 12 fuentes
+- [2026/09/20260923-5 - Contraloría exige a Presidencia acreditar en 10 días hábiles la calidad de experto de Romer Rubio, asesor del Segundo Piso sin título revalidado en Chile](src/content/events/2026/09/20260923-5.md) — 10 fuentes
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes

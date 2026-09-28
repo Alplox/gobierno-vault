@@ -92,6 +92,56 @@ const SIN_SITEMAP = {
   'australosorno.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
   'australtemuco.cl': 'conglomerado Estrella/Mercurio: 450 (verificado)',
   'elamaule.cl': 'HTTP 403 Cloudflare (verificado)',
+  // ── Descartes de las tandas 16-19 (28 y 27-09-2026) ────────────────────────
+  // Regla: TODO medio que se descarte después de sondearlo se anota acá con su
+  // motivo, para que la fila pase a 🔒 y no se reintente en cada regeneración.
+  // La nota debe decir qué se verificó, no solo "no sirve".
+  // Batch 16:
+  'lun.com': 'robots.txt 200 sin línea Sitemap (verificado 27-09-2026)',
+  'elmatutino.cl': '/sitemap.xml es un urlset de 1 loc (la home)',
+  'noticiasimportantes.cl': '/sitemap.xml responde 0 locs (declarado en robots)',
+  'sancarlosaldia.cl': 'robots declara /sitemap.xml pero responde HTTP 404',
+  'diarioelcondor.cl': 'wp-sitemap.xml solo declara posts-page + taxonomías, sin posts',
+  'eldiariodecuracavi.cl': 'wp-sitemap con un único post-sitemap residual',
+  'm360.cl': 'DNS fail al pedir /noticias/sitemap_pags.xml (declarado en robots)',
+  // Batch 17:
+  'davidnoticias.cl': 'índice de 1.292 shards íntegramente SEO spam (?id=link-slot*), sin un solo artículo',
+  'radiocristalina.cl': 'wp-sitemap con un solo shard wp-sitemap-posts-post-1.xml',
+  'radioaustralvaldivia.cl': 'wp-sitemap con shards de posts residuales; radio sin volumen',
+  'radioguayacan.cl': 'robots.txt vacío (0 bytes), sin sitemap',
+  'radiobuenanueva.cl': 'robots.txt 404, sin sitemap',
+  'diariolaguino.cl': '/sitemap.xml es un urlset plano de 180 páginas, sin artículos',
+  'diarioriobueno.cl': '/sitemap.xml es un urlset plano de 180 páginas, sin artículos',
+  'diariolanco.cl': '/sitemap.xml es un urlset plano de 180 páginas, sin artículos',
+  'diariomafil.cl': '/sitemap.xml es un urlset plano de 180 páginas, sin artículos',
+  'ceinoticias.cl': 'DNS ENOTFOUND (verificado 27-09-2026)',
+  'estrellavalpo.cl': 'DNS ENOTFOUND (verificado 27-09-2026)',
+  // Batch 18:
+  'werken.cl': 'índice plano de ~90 artículos (temática mapuche), sin paginación',
+  'chilenews.cl': '/sitemap.xml es un urlset plano de 100 URLs',
+  'laopiniononline.cl': 'wp-sitemap con shards de posts residuales (volumen bajo)',
+  'montealegre.cl': 'wp-sitemap con shards de posts residuales (volumen bajo)',
+  'laliguanoticias.cl': 'wp-sitemap con shards de posts residuales (volumen bajo)',
+  'angelino.cl': 'wp-sitemap con shards de posts residuales (volumen bajo)',
+  'prensacurico.cl': 'los 4 endpoints WP (wp-sitemap/sitemap_index/sitemap) devuelven 0 locs',
+  'maulealdia.cl': 'los 4 endpoints WP devuelven 0 locs',
+  'quintainterior.cl': 'los 4 endpoints WP devuelven 0 locs',
+  'radioaraucania.cl': 'los 4 endpoints WP devuelven 0 locs',
+  'eldiariopanguipulli.cl': 'los 4 endpoints WP devuelven 0 locs',
+  'lapaia.cl': '/sitemap.xml es un índice de 3 entradas (categorías), sin artículos',
+  'terceradosis.cl': '/sitemap.xml es un índice de 3 entradas (pags/image/video), sin artículos',
+  'informechile.cl': '/sitemap.xml es un índice de 2 entradas, sin artículos',
+  // Batch 19:
+  'tehuelchenoticias.cl': 'Wix: store/sitemap-dru-index.xml responde 0 locs',
+  'region2.cl': '/sitemap.xml es un urlset plano de 500 URLs, sin historia',
+  'temucoya.cl': 'sitemap mensual WP válido (sitemap-pt-post-YYYY-MM, 76 meses) pero solo ~1.000 artículos: reevaluar si crece',
+  'chillanonline.cl': 'sin sitemap (robots, wp-sitemap, sitemap_index, sitemap y news-sitemap sin locs útiles)',
+  'centralnoticias.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
+  'periodicolosrios.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
+  'lavozdevaldivia.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
+  'arica365.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
+  'mapuexpress.org': 'sin sitemap (los 4 endpoints no devuelven locs)',
+  'rengonotas.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
 };
 
 const NOMBRES_CATEGORIA = {

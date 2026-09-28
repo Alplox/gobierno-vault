@@ -46,6 +46,14 @@ así que el lookup del generador de fuentes reconoce el dominio sin alta manual.
 dominio queda compartido con otro slug, fijar preferencia en `CATALOG_HOST_OVERRIDES` (avisa con `⚠️`
 al cargar); si el slug reemplaza a uno con datos y el viejo debe seguir resolviendo, va a `*_LEGACY`.
 
+**Anti-duplicados al dar de alta un medio** (el alta es por *slug*, no por dominio, así que nada
+impide crear `lahora` junto a `la_hora`): sacar los candidatos **de las filas `⬜` de
+`TAREAS/tareas_sitemap.md`** (un dominio que no aparece ahí ya está catalogado o ya se descartó) y
+confirmar el dominio contra `MEDIA` / `sitemaps/MEDIOS.md` antes de escribir la entrada. Si el
+dominio ya existe, **mejorar el `includeRe` del slug existente y resincronizar** en vez de agregar
+otro: los JSONL se pueden copiar al directorio canónico y el manifest se actualiza a mano, porque
+el run nuevo es un superconjunto del viejo cuando el `includeRe` solo agregaba shards.
+
 Vault stats para editores (`README.md` › Estadísticas del vault, antes `sitemaps/ESTADISTICAS.md`) se generan con `pnpm run generate-index` (ver `AGENTS.md` → Build y verificación).
 
 Notas de plataforma (complemento manual, no se reescribe):
@@ -161,6 +169,29 @@ Notas de plataforma (complemento manual, no se reescribe):
   `_files/sitemaps/YYYY/MM.xml` 2014/07→hoy + `sitemap_lasts.xml` +
   `sitemap_news.xml` con títulos reales, ~222k artículos/13 años;
   `dateFromSitemapPath` como CNN por `<lastmod>` regenerado).
+- **Tanda batch 15 (27-09-2026, 3 pendientes ⬜ de `tareas_sitemap.md`, +11.084
+  artículos)**: **Espacio Público** (WP 5.5+ nativo, `includeRe`
+  `/wp-sitemap-posts-post-\d+\.xml$/i`, 2.000 artículos 2016→2024). OJO dos límites:
+  el tope de 2.000 posts por archivo hace que el índice declare un `post-2.xml`
+  **que no existe** (responde con el HTML de la home → 0 locs, inofensivo) y el
+  catálogo queda topado en los posts más antiguos; además **1.334 de las 2.000 URLs
+  comparten `<lastmod>` 2021-06-13** (masa de una migración del sitio, mismo caso que
+  `senado`) — buscar por slug, nunca por fecha. **La Voz de Pucón** (WP nativo,
+  `post-1..3.xml`, 4.741 artículos 2018-05→hoy, `<lastmod>` reales; los shards se
+  solapan en rango porque WordPress pagina por chunks de 2.000, no por fecha).
+  **Región de Coquimbo** (Yoast, `articleOnly`, `post-sitemap.xml`..
+  `post-sitemap5.xml`, 4.343 artículos 2022-10→hoy). Descartados del mismo sondeo:
+  `laderasur.com` (sin línea Sitemap; `/sitemap.xml` es urlset plano de 27 URLs,
+  `/sitemap_index.xml` 404), `eldesarrollo.cl` (urlset plano de 236 URLs sin historia
+  + `news-sitemap.xml` de 19), `infosalmon.cl` (13), `espacioregional.cl` (6),
+  `revistanos.cl` (403 en `sitemap_index.xml`), `contraplano.cl` (404),
+  `eldiariodemaule.com` (el índice solo lista `page-sitemap` + `blocks-sitemap`, sin
+  posts), `rockandpop.cl`/`infinita.cl` (mismo CMS Iberoamericana que `concierto`:
+  `out/sitemap.xml` urlset plano, ~38 y ~50 artículos, sin historia). Patrón WP 5.5+
+  nativo dominante en la watchlist: `includeRe`
+  `/wp-sitemap-posts-post-\d+\.xml$/i` + `articleOnly` (como `coaniquem`,
+  `defensacivil`); el `wp-sitemap.xml` de estos sitios lista además taxonomías y
+  CPTs (page/event/equipo/documentos/areas/tribe_*/users) que `articleOnly` descarta.
 - **Verificados SIN sitemap utilizable (28-09-2026)**: **T13** (Drupal
   `simple_sitemap` con 1 sola URL = la home). **CHV Noticias** (`/sitemap.xml`,
   `/sitemap_index.xml`, `/news-sitemap.xml` y `/wp-sitemap.xml` devuelven el HTML
@@ -170,8 +201,96 @@ Notas de plataforma (complemento manual, no se reescribe):
   como prensa, también en `SIN_SITEMAP` con nota. **`ine.cl` no es el INE**
   (el real es `ine.gob.cl`, tampoco con sitemap): `DEFAULT_DOMAIN_MEDIO` remapeado
   a `ine.gob.cl`.
+- **Tanda batch 16 (27-09-2026, 3 pendientes ⬜ de `tareas_sitemap.md`)**: **Diálogo Sur**
+  (Punta Arenas/Magallanes; Yoast, `includeRe` `/\/post-sitemap\d*\.xml$/i` sobre 41
+  shards ~1.000 URLs desde 2010; **sin `<lastmod>`** → `locDateRe` de 2 grupos
+  `/(20\d{2})\/(\d{2})\//`, día 01 aproximado como `lasegunda`; se usa `includeRe` y no
+  `articleOnly` porque su `sitemap-news.xml` devuelve 1 loc = la home. OJO **cada
+  sub-sitemap tarda ~22 s**: el sync completo es el más lento del catálogo).
+  **Primera Fuente** (Curicó/Maule; Yoast `sitemap_index`, `post-sitemap.xml`..
+  `post-sitemap5.xml`, 4.314 artículos 2021→hoy con `<lastmod>` reales; los shards
+  antiguos mezclan notas regionales con posts de SEO en inglés → filtrar por slug).
+  **Diario Aconcagua** (San Felipe/Valparaíso; **Wix**, no WP: los artículos están en el
+  CPT `blog-posts` → `includeRe` `/blog-posts-sitemap\.xml$/i` porque `articleOnly`
+  solo reconoce `post-sitemap*.xml`; 3.640 artículos 2015→2026, `<lastmod>` reales).
+  Descartados del mismo sondeo: `lun.com` (robots 200 sin línea Sitemap),
+  `elmatutino.cl` (`/sitemap.xml` = 1 loc, la home), `noticiasimportantes.com`
+  (0 locs), `sancarlosaldia.cl` (404), `diarioelcondor.cl` (`wp-sitemap.xml` solo
+  declara `posts-page` + taxonomías, sin posts), `eldiariodecuracavi.cl` (un solo
+  `post-sitemap.xml` residual), `m360.cl` (DNS fail en
+  `/noticias/sitemap_pags.xml` pese a la línea Sitemap del robots),
+  `radiovalparaiso.cl` (843 artículos 2024-07→2026-05, topado y stagnant: sin shard
+  nuevo desde mayo).
+- **Tanda batch 17 (27-09-2026, 3 pendientes ⬜ de `tareas_sitemap.md`, +37.470
+  artículos)**: **CauquenesNet** (Cauquenes, Maule; tema WP con sitemaps paginados:
+  `robots` → `/sitemap.xml` → `sitemap-index-1.xml` → `sitemap-N.xml`, 20.449
+  artículos 2017→2026 con `<lastmod>` reales y path `/YYYY/MM/DD/<slug>`). El
+  `includeRe` tiene que aceptar **el índice anidado**:
+  `/\/(?:sitemap-(?:index-)?\d+|news-sitemap)\.xml$/i` — con el patrón sin
+  `sitemap-index` el sync solo baja el news-sitemap y cataloga 12 URLs (tuve que
+  `--replace`); el ancla `\/` inicial es lo que descarta
+  `image-sitemap-index-1.xml` y `video-sitemap-1.xml`, porque sin ella
+  `video-sitemap-1.xml` matchea el patrón `sitemap-1.xml` y mete 8 URLs de video.
+  **El Huemul** (Chaitén, Los Lagos; Yoast `post-sitemap1..4.xml`, solo 812
+  artículos 2024→2026). **Radio HVA** (Atacama; WP 5.5+ nativo
+  `wp-sitemap-posts-post-1..9.xml`, **16.209 artículos 2019→2026**: el índice solo
+  declara 4 shards visibles, pero cada uno trae 2.000 URLs, muy por encima del
+  conteo que anuncia `wp-sitemap.xml`). Descartados del mismo sondeo:
+  `davidnoticias.cl` (índice de **1.292 shards que son íntegramente SEO spam**
+  `?id=link-slot*`/`daftar-slot*`, sin un solo artículo), `radiocristalina.cl`
+  (wp-sitemap con 1 solo shard post), `radioaustralvaldivia`, `radioguayacan`,
+  `radiobuenanueva`, `diariolaguino`, `diarioriobueno`, `diariolanco`,
+  `diariomafil` (sitemaps planos sin índice ni news), `ceinoticias`/`estrellavalpo`
+  (DNS o 404).
+- **Tanda batch 18 (27-09-2026, 2 pendientes ⬜ de `TAREAS/tareas_sitemap.md`)**: **Diario
+  Futrono** (Río Bueno, Los Lagos; tema WP con sitemap **mensual** propio
+  `/sitemap/YYYY/MM/sitemap-pt-post.xml`, 179 meses listados desde 2011/11 pero con
+  contenido real desde 2013 → **56.725 artículos 2013→2026**; `includeRe`
+  `/\/sitemap\/\d{4}\/\d{2}\/sitemap-pt-post\.xml$/i` descarta el
+  `category-sitemap.xml` de la raíz). **PanoramicAysén** (Puerto Aysén; **Wix**
+  como `diarioaconcagua`: `includeRe` `/blog-posts-sitemap\.xml$/i`, 3.695
+  artículos 2024-03→hoy). **La Hora** se consolidó en vez de agregarse: el repo
+  tenía **dos slugs para el mismo dominio** (`la_hora` y `lahora`, el segundo
+  desde ago-2026 con 44.538 artículos redundantes). Se copiaron los JSONL de
+  `lahora` —que eran un subconjunto— al directorio `la_hora`, se borró la entrada
+  duplicada de `MEDIA` y de `_manifest.json`, y el `includeRe` de `la_hora` pasó a
+  `/\/sitemap\/(?:sitemap-\d{2}-\d{2}-\d{4}|news-sitemap)\.xml$/i`, lo que suma
+  el `sitemap/news-sitemap.xml` (250 URLs con **título real**) y descarta
+  `sitemap/latest.xml`; el catálogo quedó en 45.656 artículos 2024→2026 (18.934 /
+  16.871 / 9.851 por año). El path `DD-MM-YYYY` de los shards lo reconoce
+  `sitemapUrlDate` (2º patrón), así que el resync `--since` omite los días
+  antiguos **por URL, sin descargar los shards**; ojo que la mitad de las ~95k URLs
+  descargadas son duplicados dentro del propio run (el mismo artículo se lista en
+  varios días y en el news-sitemap), por eso el log reporta `+N nuevos` muy por
+  debajo del total. Descartes de la tanda: `werken.cl`
+  (índice plano de ~90 artículos de temática mapuche, sin paginación), `chilenews.cl`
+  (100 planos), `laopiniononline.cl`/`montealegre.cl`/`laliguanoticias.cl`/
+  `angelino.cl` (WP pero 1-3 shards residuales), `prensacurico.cl`/`maulealdia.cl`/
+  `quintainterior.cl`/`radioaraucania.cl`/`eldiariopanguipulli.cl` (los 4 endpoints
+  WP devuelven 0 locs), `lapaila.cl`/`terceradosis.cl`/`informechile.cl`
+  (índices de 2-3 entradas) — todos anotados en `SIN_SITEMAP` con su motivo.
+- **Tanda batch 19 (28-09-2026, 3 pendientes ⬜ de `TAREAS/tareas_sitemap.md`)**: **Aysén
+  TV** (Puerto Aysén; **urlset plano** de 1.011 URLs = 1.000 artículos con path
+  `/YYYY/MM/DD/<slug>` 2024→hoy + 11 páginas estáticas → `urlRe`
+  `/\/20\d{2}\/\d{2}\/\d{2}\//` para dejar solo los artículos, y `locDateRe` porque el
+  `<lastmod>` del primer `<url>` (2026-08-27) no corresponde al artículo más
+  reciente del listado). **Arica Chile** (Tarapacá; robots declara 5 familias
+  `news`/`google-news`/`static`/`categories`/`tags`; `news` y `google-news` son
+  **índices paginados de 100 en 100** `news/{0,100,…}` → 5.694 artículos
+  2018-03→2026-09. El `includeRe` es
+  `/\/sitemap\/(?:news|google-news)(?:\/\d+)?\/sitemap\.xml$/i`: el **sufijo
+  opcional es obligatorio** para que entre el índice padre además de sus hijos (sin
+  él el sync descarta el índice y baja 0). OJO su `<lastmod>` es la **fecha de
+  regeneración**, no la del artículo (el shard 5700 marca 2023-06 con artículos de
+  2018-03) → fecha por `locDateRe`. **Diario Mapuche** (1.291 artículos
+  2022→2026, Yoast `post-sitemap1..7.xml`). Descartados: `tehuelchenoticias.cl`
+  (Wix: `store/sitemap-dru-index.xml` responde 0 locs), `region2.cl` (500 planos),
+  `temucoya.cl` (76 meses mensuales pero solo ~1.000 artículos),
+  `chillanonline.cl`/`centralnoticias.cl`/`eldiariopanguipulli.cl`/
+  `periodicolosrios.cl`/`lavozdevaldivia.cl`/`arica365.cl`/`mapuexpress.org`/
+  `rengonotas.cl` (nada).
 
-| `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio. Regla de match (28-09-2026): ✅ exige evidencia de **dominio** (primera URL de los JSONL o hosts de `MEDIA`); el match solo-por-nombre NO marca ✅ (caso `lasegunda.cl` muerto vs `lasegunda.com` catalogado) sino nota `[medio en catálogo como <slug>]` —solo si el slug trae artículos— y en Notas el veredicto de catálogo manda sobre el estado del feed. `SIN_SITEMAP` curado (~50 dominios con motivo: flat urlset / DNS / 450 conglomerado / 403 / 0 artículos): esos ⬜ pasaron a 🔒 para no reintentar |
+| `pnpm run sitemaps-watchlist [-- --source <ruta>] [--offline] [--out <archivo>]` | genera `TAREAS/tareas_sitemap.md` (default): bitácora de sitios de prensa chilenos (awesome-chilean-rss `feeds-database.json` + `watchlist.json` descargados online desde `raw.githubusercontent.com` por defecto; `--source <ruta>` o `--offline` fuerza copia local) pendientes de sincronizar su sitemap al catálogo, cruzados por estado (✅ catálogo / 🟡 usado en src/content/sources|organizations / ⬜ pendiente). Solo categorías de prensa y afines (noticias, regional, gobierno, radio, partidos, negocios, comunidad, medio ambiente, educación, salud, cultura) y solo la URL del sitio. Regla de match (28-09-2026): ✅ exige evidencia de **dominio** (primera URL de los JSONL o hosts de `MEDIA`); el match solo-por-nombre NO marca ✅ (caso `lasegunda.cl` muerto vs `lasegunda.com` catalogado) sino nota `[medio en catálogo como <slug>]` —solo si el slug trae artículos— y en Notas el veredicto de catálogo manda sobre el estado del feed. `SIN_SITEMAP` curado (~90 dominios con motivo: flat urlset / DNS / 450 conglomerado / 403 / 0 artículos / spam): esos ⬜ pasaron a 🔒 para no reintentar. **Todo medio que se descarte después de sondearlo debe anotarse ahí con su motivo** (el comentario `Descartados batch N` de `media.mjs` es solo el resumen del sondeo, no el registro): sin la entrada, la fila vuelve a ⬜ en la siguiente regeneración y el próximo agente re-sondea lo mismo. La nota debe decir **qué se verificó**, no "no sirve" (ej. `'/sitemap.xml responde 0 locs'`, `'wp-sitemap.xml solo declara posts-page, sin posts'`). Precedencia de estados: ✅ catálogo > 🟡 en uso > 🔒 sin sitemap > ⬜ pendiente, así que **nunca anotas en `SIN_SITEMAP` un dominio que ya esté en `MEDIA`** (sobra y da una nota contradictoria; el ✅ gana solo porque se evalúa antes) |
 | `pnpm run sitemaps-backup` | empaqueta `sitemaps/` en `sitemaps/sitemaps.gvault`. **Compacto lossless por defecto** (`--compact`): los JSONL se transforman a un formato tab-separado que omite dominio (1× por archivo) y títulos derivables del slug; el restore reconstruye el JSONL byte-idéntico (verificado por SHA-256). **Payload binario v3**: el contenido viaja como header JSON pequeño (índice de offsets por archivo + manifest SHA-256) seguido de un blob de bytes crudos concatenados; el restore localiza cada archivo por `off/len`. Antes el payload era un único `JSON.stringify` con los archivos en base64: cuando el catálogo superó ~500MB de JSONL ese string excedía el límite de V8 (`RangeError: Invalid string length`). El restore sigue leyendo los .gvault v2 (base64) existentes. **Contenedor binario por defecto** (`--bin`): payload Brotli como bytes crudos (~25% menos que base64; `--text` para el formato v1 legible). **`--chunk-size <MB>`**: parte el snapshot en `<out>.part1, .part2…` (~28MB c/u con `45`; bajo el límite de 50MB de GitHub); `meta.chunks` indica el total. `--restore [src]` auto-detecta y une las partes; `--join [src]` arma el .gvault único. Resultado: ~94MB (vs ~690MB raw). `--no-compact` guarda JSONL crudo |
 
 Detalle de merge: el dedupe del run (`seen`) NO bloquea el upgrade de títulos entre sub-sitemaps
@@ -225,7 +344,12 @@ así que es seguro); después los resync incrementales no vuelven a degradar fec
   `mestizos`, `diarioestrategia`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`, `bbc`,
   `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
   `elperiodicodelaenergia`, `nexos`, `elpais`, `elmegacl`, `tvn`, `duna`, `terra`,
-  `elregionalista`, `concierto`, `lasegunda`, `pagina7`.
+  `elregionalista`, `concierto`, `lasegunda`, `pagina7`, `espaciopublico`,
+  `dialogosur`, `primerafuente`, `diarioaconcagua`, `cauquenesnet`, `elhuemul`,
+  `hvaradio`, `diariofutrono`, `panoramicaysen`,
+  `lavozdepucon`, `regiondecoquimbo`, `aysentv`, `aricachile`, `mapuchediario`.
+  (`la_hora` = La Hora; el slug `lahora` se
+  consolidó en él, ver la nota anti-duplicados.)
   Si el dominio no está en el catálogo, el flujo es el clásico (fetch + mirrors).
 - El módulo exporta funciones puras (`lookupCatalogUrl`, `catalogSearchAndPick`, `buildBlock`,
   `normalizeUrlForMatch`) para testing; el flujo interactivo solo corre si se invoca directo.
@@ -268,7 +392,10 @@ entornos Unix sin rg: `grep -ih 'término' sitemaps/<medio>/*.jsonl`. Instalaci�
   `diarioestrategia`, `emol`, `senado`, `pvmagazine`, `capa9`, `coaniquem`, `ansalatina`,
   `bbc`, `ipsnoticias`, `mercopress`, `lemondediplomatique`, `defensacivil`,
   `elperiodicodelaenergia`, `nexos`, `tvn`, `duna`, `terra`, `elregionalista`, `concierto`,
-  `lasegunda`, `pagina7`.
+  `lasegunda`, `pagina7`, `espaciopublico`, `lavozdepucon`, `regiondecoquimbo`,
+  `dialogosur`, `primerafuente`, `diarioaconcagua`, `cauquenesnet`, `elhuemul`,
+  `hvaradio`, `diariofutrono`, `panoramicaysen`, `la_hora`, `aysentv`, `aricachile`,
+  `mapuchediario`.
   (Los JSONL no se commitean; regenerar con
   `pnpm run sitemaps-sync -- <medio>` si el repo se clona.)
 

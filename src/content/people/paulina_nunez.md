@@ -1,11 +1,9 @@
 ---
-nombre: Paulina Nunez
-cargo: Presidenta del Senado (RN)
+nombre: Paulina Núñez
+cargo: Presidenta del Senado de Chile
+organizacion: senado
 cargos:
-  - cargo: Senadora (RN)
-    organizacion: renovacion_nacional
+  - cargo: Presidenta del Senado de Chile
     desde: 2026-03-11
-  - cargo: Presidenta del Senado
-    organizacion: senado
-    desde: 2026-03-11
+notas: Presidenta del Senado desde marzo de 2026. El 8 de septiembre de 2026 BioBioChile la consultó por el contenido de la carta de Miguel Krassnoff y por los emplazamientos dirigidos al Congreso, sin obtener respuesta.
 ---

@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 27/9/2026, 20:07:04
-- **Medios registrados:** 449
-- **Artículos indexados:** 10.952.430
+- **Última sincronización:** 28/9/2026, 0:41:00
+- **Medios registrados:** 462
+- **Artículos indexados:** 11.074.344
 
 ## Por medio
 
@@ -41,6 +41,7 @@
 | Noticias del Lago | 65.046 |
 | El Reportero de Iquique | 61.152 |
 | Nuevo Poder | 57.175 |
+| Diario Futrono | 56.725 |
 | Tierramarillano | 52.551 |
 | Está Pasando | 51.988 |
 | País Lobo | 51.409 |
@@ -49,11 +50,11 @@
 | La Unión | 47.962 |
 | Radio Duna | 47.571 |
 | MercoPress | 46.710 |
-| La Hora | 45.513 |
-| La Hora | 44.538 |
+| La Hora | 45.656 |
 | San Carlos On Line | 42.599 |
 | Diario El Ranco | 42.218 |
 | Terra Chile | 42.218 |
+| Diálogo Sur | 41.396 |
 | Serena y Coquimbo | 40.676 |
 | Mi Radio LS | 40.481 |
 | La Serena Online | 39.461 |
@@ -87,6 +88,7 @@
 | El Maipo | 21.193 |
 | El Clarín | 20.721 |
 | UCSC | 20.621 |
+| CauquenesNet | 20.449 |
 | Diario Talca | 20.421 |
 | Enfoque Digital O'Higgins | 20.379 |
 | La Nación | 19.866 |
@@ -110,6 +112,7 @@
 | Radio Maray | 16.978 |
 | Reuters | 16.880 |
 | La Tercera | 16.236 |
+| Radio HVA | 16.209 |
 | En Línea Maule | 15.786 |
 | Universidad Adolfo Ibáñez | 15.656 |
 | Diario El Longino | 15.517 |
@@ -195,6 +198,7 @@
 | La Opinión de Chiloé | 5848 |
 | SERNATUR | 5784 |
 | Quirihue Noticias | 5721 |
+| Arica Chile | 5694 |
 | Valparaíso Noticias | 5691 |
 | Reporte Agrícola | 5603 |
 | Sitio del Suceso | 5512 |
@@ -211,6 +215,7 @@
 | Región Visual | 4958 |
 | El Coquimbano | 4877 |
 | Gobierno UDD | 4854 |
+| La Voz de Pucón | 4741 |
 | Malleco 7 | 4726 |
 | JUNJI | 4723 |
 | Tarapacá Online | 4690 |
@@ -219,6 +224,8 @@
 | Norte Online | 4584 |
 | Gobierno Regional de Tarapacá | 4403 |
 | Chile Travel | 4376 |
+| Región de Coquimbo | 4343 |
+| Primera Fuente | 4314 |
 | Insular FM | 4188 |
 | Chile País Minero | 4070 |
 | La Máquina Medio | 4063 |
@@ -227,8 +234,10 @@
 | SUBTEL | 3832 |
 | Diario El Día | 3738 |
 | Mirada Sur TV | 3722 |
+| PanoramicAysén | 3695 |
 | Ministerio de Economía | 3655 |
 | CLG Medios | 3650 |
+| Diario Aconcagua | 3640 |
 | Sala de Prensa | 3534 |
 | Radio Magallanes | 3484 |
 | Radio Puerta Norte | 3436 |
@@ -257,6 +266,7 @@
 | Prime Digital | 2102 |
 | El Regionalista | 2093 |
 | Consejo para la Transparencia | 2012 |
+| Espacio Público | 2000 |
 | El Andacollino | 1873 |
 | El Cóndor | 1770 |
 | CONAF | 1735 |
@@ -271,6 +281,7 @@
 | Universidad Mayor | 1350 |
 | Radio Modelo | 1325 |
 | Diario Los Lagos | 1302 |
+| Diario Mapuche | 1291 |
 | Qué Pasa Araucanía | 1270 |
 | Chile es Tuyo | 1244 |
 | El Periódico | 1179 |
@@ -281,6 +292,7 @@
 | El Informador Chile | 1051 |
 | La Tribuna de Colchagua | 1033 |
 | Corporación La Morada | 1026 |
+| Aysén TV | 1000 |
 | pv magazine Latin America | 1000 |
 | Cruz Roja Chile | 996 |
 | Enfoque Digital | 971 |
@@ -294,6 +306,7 @@
 | Radio Ventisqueros | 872 |
 | La Tendencia | 819 |
 | Diario Avísale | 815 |
+| El Huemul | 812 |
 | ADN Radio | 798 |
 | SOFOFA | 788 |
 | Pulso Público | 774 |
