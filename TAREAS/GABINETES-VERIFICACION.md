@@ -165,8 +165,8 @@ Ninguna: las fichas ya eran correctas. Se agregó trazabilidad con la URL de BCN
 
 | Persona | `cargos[]` registrado | Fuente primaria que lo confirma |
 | --- | --- | --- |
-| `carolina_toha` | Interior 2022-09-06 → 2025-03-04 | [BCN Tohá](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Carolina_Toh%C3%A1_Morales): "Ministra de Interior y Seguridad Pública, 6 de septiembre de 2022 - 4 de marzo de 2025" |
-| `alvaro_elizalde` | Segpres 2023-04-19 → 2025-03-04 · Interior 2025-03-04 → 2026-03-11 | [BCN Elizalde](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/%C3%81lvaro_Antonio_Elizalde_Soto): "Ministro de Secretario General de la Presidencia, 19 de abril de 2023 - 4 de marzo de 2025… Ministro de Interior y Seguridad Pública, 4 de marzo de 2025 - 11 de marzo de 2026" |
+| `carolina_toha` | Interior 2022-09-06 → 2025-03-04 | [BCN Tohá](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Carolina_Toh%C3%A1_Morales>): "Ministra de Interior y Seguridad Pública, 6 de septiembre de 2022 - 4 de marzo de 2025" |
+| `alvaro_elizalde` | Segpres 2023-04-19 → 2025-03-04 · Interior 2025-03-04 → 2026-03-11 | [BCN Elizalde](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/%C3%81lvaro_Antonio_Elizalde_Soto>): "Ministro de Secretario General de la Presidencia, 19 de abril de 2023 - 4 de marzo de 2025… Ministro de Interior y Seguridad Pública, 4 de marzo de 2025 - 11 de marzo de 2026" |
 
 La sucesión es continua y sin solape: Tohá cesa el 4-mar-2025 y Elizalde asume el Interior ese
 mismo día. Cerró `S-2022-003`. La hipótesis del seguimiento (que Elizalde había sido Segpres

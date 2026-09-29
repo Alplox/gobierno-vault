@@ -180,8 +180,8 @@ conserva HTML, recursos, capturas y estado de renderizado que Wayback suele perd
 
 | Herramienta | Uso recomendado | Salida |
 | --- | --- | --- |
-| [Browsertrix](https://browsertrix.com/) | Una o pocas URLs públicas; `Single Page` + smart scoping. Sus comportamientos automáticos expanden comentarios/medios en Facebook, Instagram, TikTok, X y YouTube | WACZ reproducible y replay |
-| [Bellingcat Auto Archiver](https://github.com/bellingcat/auto-archiver) | Lotes, crisis o posts frágiles; combina `yt-dlp`, extractores por plataforma, capturas y hashes | WACZ/archivos, metadatos, hashes e informe de estado |
+| [Browsertrix](<https://browsertrix.com/>) | Una o pocas URLs públicas; `Single Page` + smart scoping. Sus comportamientos automáticos expanden comentarios/medios en Facebook, Instagram, TikTok, X y YouTube | WACZ reproducible y replay |
+| [Bellingcat Auto Archiver](<https://github.com/bellingcat/auto-archiver>) | Lotes, crisis o posts frágiles; combina `yt-dlp`, extractores por plataforma, capturas y hashes | WACZ/archivos, metadatos, hashes e informe de estado |
 
 - Preferir inicio de sesión público. Si una plataforma exige login, usar una cuenta y un perfil
   aislados con autorización explícita; nunca credenciales del agente o del usuario principal.

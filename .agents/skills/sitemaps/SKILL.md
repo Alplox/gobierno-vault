@@ -380,7 +380,7 @@ Escalera cuando eso no basta, en orden:
 3. **`websearch` con el titular entre comillas** (y `site:` si hace falta). Es el sustituto
    cuando DDG bloquea: `html.duckduckgo.com` respondió 403 en sep-2026, pero `websearch`
    recuperó las URL exactas de T13, El País, Mala Espina y Chilevisión. Sin DDG, la forma
-   HTML (`https://html.duckduckgo.com/html/?q=`) trae los resultados en `uddg=<URL
+   HTML (`<https://html.duckduckgo.com/html/?q=>`) trae los resultados en `uddg=<URL
    codificada>`; `lite.duckduckgo.com` no resuelve DNS desde esta red.
 4. **Sharding de sitemap en vivo**, cuando el news-sitemap ya rotó pero el mes sigue
    disponible: shards mensuales o de archivo (`Perfil` `sitemap/archive/YYYY/MM`,

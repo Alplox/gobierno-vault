@@ -130,6 +130,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Educación',
   'Fast Check CL',
   'AIM Chile',
+  'Fundación Nodo XXI',
   'Ministerio del Interior',
   'Subsecretaria del Interior',
   'Subsecretaría del Interior',

@@ -22,7 +22,7 @@ Eres un investigador de datos públicos en Chile. Tu tarea es investigar el sigu
    **Estrategia A — API de búsqueda de GitHub (recomendada):**
    Consulta la API de búsqueda de código para ver si el nombre aparece en el vault:
    ```
-   GET https://api.github.com/search/code?q={apellido_o_nombre}+repo:Alplox/gobierno-vault+path:src/content/people
+   GET <https://api.github.com/search/code?q={apellido_o_nombre}+repo:Alplox/gobierno-vault+path:src/content/people>
    ```
    Si la busqueda en `people/` no da resultados, repite con `path:src/content/organizations`.
    La respuesta incluye `total_count` y los archivos encontrados en `items[].path`.
@@ -31,7 +31,7 @@ Eres un investigador de datos públicos en Chile. Tu tarea es investigar el sigu
    **Estrategia B — Acceso directo al archivo (si conoces el ID probable):**
    Si ya sabes cómo se llamaría el archivo (snake_case del nombre), consulta directamente:
    ```
-   GET https://api.github.com/repos/Alplox/gobierno-vault/contents/src/content/people/{id_probable}.md
+   GET <https://api.github.com/repos/Alplox/gobierno-vault/contents/src/content/people/{id_probable}.md>
    HTTP 200 = existe | HTTP 404 = no existe
    ```
    Ejemplo: para "José Antonio Kast" → consultar `people/jose_antonio_kast.md`
@@ -39,7 +39,7 @@ Eres un investigador de datos públicos en Chile. Tu tarea es investigar el sigu
    **Estrategia C — Listar directorio (para medios de comunicación):**
    Para verificar si un medio ya está registrado como organización:
    ```
-   GET https://api.github.com/search/code?q={nombre_del_medio}+repo:Alplox/gobierno-vault+path:src/content/organizations
+   GET <https://api.github.com/search/code?q={nombre_del_medio}+repo:Alplox/gobierno-vault+path:src/content/organizations>
    ```
 
    **Resultado de la verificación:** Para cada persona/organización identificada en la investigación, indica en tu respuesta:
@@ -128,14 +128,14 @@ FUENTE_1:
   medio: "Nombre del medio de comunicación"
   autor: "Nombre del autor" (si está disponible, si no: "Redacción")
   fecha: YYYY-MM-DD
-  url: https://URL_COMPLETA_DEL_ARTICULO
+  url: <https://URL_COMPLETA_DEL_ARTICULO>
 
 FUENTE_2:
   titulo: "..."
   medio: "..."
   autor: "..."
   fecha: YYYY-MM-DD
-  url: https://...
+  url: <https://>...
 
 [Continuar para cada fuente — mínimo 5]
 ```

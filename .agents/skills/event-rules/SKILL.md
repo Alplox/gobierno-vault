@@ -50,7 +50,7 @@ Sí válido: preposición o cargo que NO está en el nombre (`del [[organization
 - NUNCA `<https://lasegunda.com/>` raíz. Siempre artículo específico.
 - Mirrors para paywall (guardar SIEMPRE URL original en `src/content/sources/<id>.md`, nunca la del mirror): `paywallskip.com`, `r.jina.ai`, `defuddle.md`, `markdown.new`, `archive.ph` + cadena `pnpm run fetch-content` (ver `tools.md`).
 - **Fuente directa primero:** antes de prensa privada, intenta la fuente gubernamental que genera el dato (Presidencia, ministerio, BCN, Cámara/Senado, servicio). Ver `.agents/skills/fuentes-gubernamentales/SKILL.md` — tablas por ministerio/servicio/legislativo con URLs y notas de uso.
-- **URLs bare (MD034):** en prosa Markdown los URLs sueltos van envueltos `<https://...>` (los de `[](...)` y `<...>` quedan como están). En frontmatter YAML **sin** `<>` (`fuente: https://...` — rompe `validate`). Fix en lote idempotente: `node scripts/validate/fix-md034.mjs` (salta frontmatter y code blocks).
+- **URLs bare (MD034):** en prosa Markdown los URLs sueltos van envueltos `<https://...>` (los de `[](...)` y `<...>` quedan como están). En frontmatter YAML **sin** `<>` (`fuente: <https://...>` — rompe `validate`). Fix en lote idempotente: `node scripts/validate/fix-md034.mjs` (salta frontmatter y code blocks).
 
 ## Máximo de fuentes — agotar antes de descartar
 

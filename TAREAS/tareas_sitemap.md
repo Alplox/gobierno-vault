@@ -4,7 +4,7 @@
 > local (`sitemaps/<medio>/`) y así poder revisar eventos de gobiernos pasados
 > con mayor variedad de puntos de vista al verificar datos.
 >
-> **Fuente de sitios:** [awesome-chilean-rss](https://github.com/Alplox/awesome-chilean-rss)
+> **Fuente de sitios:** [awesome-chilean-rss](<https://github.com/Alplox/awesome-chilean-rss>)
 > — `feeds-database.json` (sitios con feeds verificados) y `watchlist.json`
 > (candidatos, muchos sin feed RSS o con solo proxies de Google/Bing News).
 > Este archivo se genera con `pnpm run sitemaps-watchlist` (online por defecto) o `pnpm run sitemaps-watchlist -- --source <ruta-al-repo>` / `--offline`.
