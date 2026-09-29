@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 28/9/2026, 2:51:07
-- **Medios registrados:** 477
-- **Artículos indexados:** 11.163.052
+- **Última sincronización:** 28/9/2026, 20:11:59
+- **Medios registrados:** 498
+- **Artículos indexados:** 11.459.116
 
 ## Por medio
 
@@ -43,6 +43,7 @@
 | Diario UACh | 58.496 |
 | Nuevo Poder | 57.175 |
 | Diario Futrono | 56.725 |
+| Diario Paillaco | 56.540 |
 | Tierramarillano | 52.551 |
 | Está Pasando | 51.988 |
 | País Lobo | 51.409 |
@@ -52,6 +53,7 @@
 | Radio Duna | 47.571 |
 | MercoPress | 46.710 |
 | La Hora | 45.656 |
+| Diario San José | 43.119 |
 | San Carlos On Line | 42.599 |
 | Diario El Ranco | 42.218 |
 | Terra Chile | 42.218 |
@@ -65,6 +67,7 @@
 | El Calbucano | 34.271 |
 | Epicentro Chile | 34.033 |
 | Portal Minero | 33.196 |
+| Radio Festival | 32.819 |
 | Radio Las Nieves | 32.193 |
 | Fundación Terram | 30.916 |
 | Portal Frutícola | 30.084 |
@@ -92,6 +95,8 @@
 | CauquenesNet | 20.449 |
 | Diario Talca | 20.421 |
 | Enfoque Digital O'Higgins | 20.379 |
+| Los Ríos al Día | 20.350 |
+| Diario Chiloé | 19.924 |
 | La Nación | 19.866 |
 | Timeline | 19.842 |
 | Linares en Línea | 19.827 |
@@ -103,12 +108,14 @@
 | El Proa | 18.753 |
 | El Magallánico | 18.666 |
 | La Prensa | 18.596 |
+| Araucanía Cuenta | 18.463 |
 | Ex-Ante | 18.348 |
 | Diario El Pulso | 18.196 |
 | Hora de Noticias | 18.106 |
 | Diario Angamos | 18.004 |
 | El Quinto Poder | 17.724 |
 | Somos Chile | 17.544 |
+| Calama en Línea | 17.452 |
 | Senado de Chile | 17.355 |
 | Radio Maray | 16.978 |
 | Reuters | 16.880 |
@@ -117,6 +124,7 @@
 | En Línea Maule | 15.786 |
 | Universidad Adolfo Ibáñez | 15.656 |
 | Diario El Longino | 15.517 |
+| Libertad y Desarrollo | 15.415 |
 | Vilas Radio | 15.178 |
 | ITV Patagonia | 14.983 |
 | Pontificia Universidad Católica de Valparaíso | 14.713 |
@@ -138,6 +146,8 @@
 | Música y Noticias | 12.195 |
 | La Voz de los que Sobran | 12.113 |
 | El Periscopio | 12.022 |
+| Cabrero en Línea | 11.859 |
+| Prensa Eventos | 11.612 |
 | La Cuarta | 11.469 |
 | SENDA | 11.049 |
 | Radio UdeC | 11.047 |
@@ -155,6 +165,7 @@
 | Sera Noticia | 9278 |
 | Quilpué Online | 9262 |
 | Ministerio del Medio Ambiente | 9225 |
+| Noticias U. del Bío-Bío | 9128 |
 | Noticias del Sur | 9078 |
 | Universidad Autónoma de Chile | 9001 |
 | El Informador Los Andes | 8969 |
@@ -170,12 +181,15 @@
 | Diario Linares | 7698 |
 | Las Noticias de Malleco | 7695 |
 | Traiguén City | 7667 |
+| El Aconcagua | 7630 |
 | Chicureo Hoy | 7624 |
 | Diario Puerto Varas | 7623 |
+| Actualidad UDLA | 7479 |
 | Arica es Noticia | 7479 |
 | Mala Espina | 7473 |
 | Atacama en Línea | 7371 |
 | Base Nacional | 7223 |
+| Revista NOS | 7118 |
 | Anda | 7112 |
 | Electrominería | 6956 |
 | Radio Santa María | 6922 |
@@ -193,6 +207,7 @@
 | Alerta Noticias Temuco | 6246 |
 | Fast Check CL | 6205 |
 | USM | 6170 |
+| Colegio de Profesores | 6123 |
 | Tus Noticias | 6112 |
 | Pichilemu News | 5980 |
 | UTE USACH Noticias | 5960 |
@@ -222,6 +237,7 @@
 | Malleco 7 | 4726 |
 | JUNJI | 4723 |
 | Tarapacá Online | 4690 |
+| De Mar a Cordillera TV | 4670 |
 | El Morro de Arica | 4610 |
 | Radio FM Centro | 4588 |
 | Norte Online | 4584 |
@@ -260,6 +276,7 @@
 | ANEF | 2522 |
 | Factos | 2437 |
 | El Tirapiedras | 2385 |
+| Curicaví Digital | 2267 |
 | HDN | 2252 |
 | Tomé al Día | 2241 |
 | Diario Financiero | 2183 |
@@ -292,14 +309,17 @@
 | Chile es Tuyo | 1244 |
 | El Periódico | 1179 |
 | ECOceanos | 1157 |
+| Radio El Puelche | 1157 |
 | Zona Zero | 1153 |
 | Cámara de Comercio de Santiago | 1148 |
 | Resonancia Diario | 1144 |
 | Espacio Regional | 1118 |
 | Federación Regionalista Verde Social | 1116 |
+| Aysén Ahora | 1070 |
 | El Informador Chile | 1051 |
 | La Tribuna de Colchagua | 1033 |
 | Corporación La Morada | 1026 |
+| Patagonia News | 1026 |
 | Aysén TV | 1000 |
 | pv magazine Latin America | 1000 |
 | Cruz Roja Chile | 996 |
@@ -313,6 +333,7 @@
 | The Grange School | 880 |
 | Radio Ventisqueros | 872 |
 | Instituto de Seguridad Laboral | 871 |
+| Radio Valparaíso | 843 |
 | La Tendencia | 819 |
 | Diario Avísale | 815 |
 | El Huemul | 812 |

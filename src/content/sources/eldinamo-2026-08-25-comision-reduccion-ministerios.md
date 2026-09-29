@@ -9,6 +9,6 @@ notas: Perfil de los 12 integrantes con breves reseñas (Horst/LyD, Monckeberg,
   Blumel, Luksic, Hevia, Urzúa, González/CPLT, Piergentili/PPD, Silva/UDD,
   Andrade, Zaldívar, Delpiano). Cita el mandato de la Cuenta Pública del 1 de
   junio y la cifra 18→25 ministerios. Fuente clave para biografías de
-  integrantes faltantes en entities.yaml (Hevia, Luksic, Piergentili, Silva).
+  integrantes faltantes en people/*.md (Hevia, Luksic, Piergentili, Silva).
   Evento 20260825-3.
 ---

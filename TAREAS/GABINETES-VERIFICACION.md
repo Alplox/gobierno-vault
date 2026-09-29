@@ -1,18 +1,21 @@
 # Gabinetes ministeriales — Verificación de fechas y cargos (1938–2026)
 
 > Archivo de seguimiento para sesiones futuras: cruzar y validar las fechas y cargos
-> registrados en `entities.yaml` (`cargos[]`) contra eventos del vault y fuentes externas
+> registrados en `src/content/people/*.md` (`cargos[]` en el frontmatter de cada persona)
+> contra eventos del vault y fuentes externas
 > (sitios oficiales y prensa). Cubre Aguirre Cerda (1938) en adelante; Ríos (1942-46)
 > pendiente por formato de fuente.
-> **Última verificación integral:** 20-ago-2026 — `pnpm run verify-gabinete`:
-> **891/929 nombramientos exactos (96%)** contra los anexos de gabinetes de Wikipedia;
+> **Última verificación integral:** 28-sep-2026 — `pnpm run verify-gabinete`:
+> **889/927 nombramientos exactos (96%)** contra los anexos de gabinetes de Wikipedia;
 > discrepancias restantes son artefactos del parser o casos resueltos y documentados abajo.
 
 ## Cómo re-verificar en una sesión futura
 
-1. Extraer todos los `cargos[]` ministeriales fechados de `src/data/entities.yaml`
-   (regex `/^(ministr[oa]|biministr[oa]?)\b/i`, excluyendo `/corte|.../` — ver
-   `EXCLUDE_RE` en `src/lib/cabinet.ts`).
+1. Extraer todos los `cargos[]` ministeriales fechados de `src/content/people/*.md`
+   (un `.md` por persona; el frontmatter se parsea con `^---\r?\n([\s\S]*?)\r?\n---` —
+   ver `loadPeopleFromMarkdown()` en `scripts/validate/verify-gabinete.mjs`; el corpus es
+   LF/CRLF mixto). Filtro de cargo: regex `/^(ministr[oa]|biministr[oa]?)\b/i`, excluyendo
+   `/corte|.../` — ver `EXCLUDE_RE` en `src/lib/cabinet.ts`.
 2. Comparar contra:
    - **Fuente secundaria completa**: anexos de gabinetes de Wikipedia es.wikipedia.org
      (`Anexo:Gabinetes ministeriales de los gobiernos de la Concertación`, `...del primer
@@ -47,7 +50,7 @@
 
 ## Estado de verificación por gobierno
 
-Resumen: 929 nombramientos fechados en el vault (1938-2026), 891 coincidencia exacta con
+Resumen: 927 nombramientos fechados en el vault (1938-2026), 889 coincidencia exacta con
 los anexos de Wikipedia (`pnpm run verify-gabinete`); todas las discrepancias 1990-2026
 resueltas contra fuente oficial o prensa (detalle en "Correcciones aplicadas"). El detalle
 de **de dónde se obtuvo y con qué se verificó cada gobierno** está en las subsecciones
@@ -79,7 +82,7 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 
 ### Pinochet (1973-1990) — importado 20-ago-2026
 
-- **Obtención** (única fuente masiva por ahora): [Anexo:Gabinetes ministeriales de la dictadura militar chilena](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena>) — 157 filas parseadas → **131 personas nuevas** en `entities.yaml`.
+- **Obtención** (única fuente masiva por ahora): [Anexo:Gabinetes ministeriales de la dictadura militar chilena](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena>) — 157 filas parseadas → **131 personas nuevas** en `src/content/people/*.md`.
 - **Verificación oficial (muestreo 20-ago-2026)**: 3 ministros / 6 cargos contra BCN y fuentes biográficas:
   - [BCN Sergio Fernández Fernández](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Sergio_Fern%C3%A1ndez_Fern%C3%A1ndez>): Trabajo 8-mar-1976→1-ene-1978 ✅ e Interior 14-abr-1978→22-abr-1982 ✅ exactos; su 2.º Interior figura como designado 7-jul-1987 (texto BCN) pero asumido 11-jul-1987 (tabla BCN) — el import usa 8-jul-1987, fecha uniforme del remix en el anexo para los 14 ministros de ese cambio; se deja así y queda anotado.
   - Mónica Madariaga ([Wikipedia](<https://es.wikipedia.org/wiki/M%C3%B3nica_Madariaga>), [revista RLD UAI](<https://lals.uai.cl/index.php/rld/article/view/139/231>)): Justicia 20-abr-1977→14-feb-1983 ✅ y Educación Pública 14-feb-1983→18-oct-1983 ✅ exactos.
@@ -88,7 +91,7 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 - Panel `/gabinete`: 136 nombramientos visibles (114 personas, carteras mapeables a ministerios actuales).
 - **Cierres**: los 7 titulares sin fecha de término se cerraron en `1990-03-11` (fin del gobierno).
 - **Carteras históricas mapeadas** en `cabinet.ts` (`KEYWORD_MINISTERIO`): Guerra/Marina/Aviación → Defensa Nacional; Salud Pública → Salud. Educación Pública y Obras Públicas y Transportes matchean keywords existentes.
-- **Carteras sin equivalente actual** (registradas en YAML pero sin panel): Tierras y Colonización, Coordinación Económica y Desarrollo, Oficina de Planificación (ODEPLAN), Jefatura de Estado Mayor Presidencial.
+- **Carteras sin equivalente actual** (registradas en `cargos[]` pero sin panel): Tierras y Colonización, Coordinación Económica y Desarrollo, Oficina de Planificación (ODEPLAN), Jefatura de Estado Mayor Presidencial.
 - **Fuera de alcance por ahora**: gobiernos anteriores a 1973 (anexos wiki disponibles para Frei Montalva, Allende, Jorge Alessandri, Ibáñez, González Videla, Ríos, Aguirre Cerda, etc. — mismo método de importación aplica).
 
 ### Aylwin (1990-1994) — 24 nombramientos, 24 exactos ✅
@@ -139,7 +142,7 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 
 ### Kast (2026-) — 28 nombramientos, 28 verificados ✅
 
-- **Obtención**: eventos propios del vault (`20260120-1` anuncio, `20260519-1/-2` remix, `20260813-2` Duco, `20260814-2` Riveros) con sus fuentes en `sources.yaml`.
+- **Obtención**: eventos propios del vault (`20260120-1` anuncio, `20260519-1/-2` remix, `20260813-2` Duco, `20260814-2` Riveros) con sus fuentes en `src/content/sources/*.md`.
 - **Cruce externo**: [Anexo:Gabinetes ministeriales del gobierno de José Antonio Kast](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Jos%C3%A9_Antonio_Kast>) — 23/28 exactos; 5 diffs explicadas (biministros Alvarado/de Grange no desglosados en el anexo; Duco 14-ago en wiki vs comunicado oficial de Presidencia del 13-ago que sigue el vault).
 - **Oficial/prensa**: [El País organigrama 11-mar-2026](<https://elpais.com/chile/2026-03-11/quienes-son-los-ministros-subsecretarios-y-delegados-presidenciales-de-jose-antonio-kast.html>) — lista nominal completa de los 24 ministros; [La Tercera 11-mar-2026](<https://www.latercera.com/politica/noticia/jose-antonio-kast-asume-como-presidente-de-chile-y-pone-en-marcha-el-gobierno-de-emergencia/>) y [Radio Uchile 11-mar-2026](<https://radio.uchile.cl/2026/03/11/jose-antonio-kast-asume-la-presidencia-y-marca-inicio-del-gobierno-de-emergencia/>) confirman la ceremonia de juramento de los ministros ese mismo día tras el cambio de mando; [CIPER 20-ene-2026](<https://www.ciperchile.cl/2026/01/20/radar-20-01-2026/>) (lista nominal del anuncio); [prensa.presidencia.cl comunicado 13-ago-2026](<https://prensa.presidencia.cl/comunicado.aspx?id=338091>) (salida Duco); [Emol 14-ago-2026](<https://www.emol.com/noticias/Nacional/2026/08/14/1208526/cambio-gabinete-riveros-ministro-deportes.html>) y [CNN Chile](<https://www.cnnchile.com/pais/francisco-riveros-prioridades-ministro-deporte-natalia-duco-ceremonia/>) (Riveros juró el 14-ago al mediodía).
 
@@ -150,9 +153,24 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 tablas de ministros y compara cada nombramiento fechado de `src/content/people/*.md`
 (campo `cargos[]`) contra ellas.
 Reporta: exactos, diferencias de fecha, registros solo en el vault y filas solo en el
-anexo. Última ejecución (20-ago-2026): **509/557 exactos**; las diferencias restantes son
+anexo. Última ejecución (28-sep-2026): **889/927 exactos** (16 paneles de gobierno, parser
+v4); las diferencias restantes son
 artefactos conocidos del parser (filas de continuación con rowspan) o casos ya resueltos
 y documentados arriba. Es una herramienta de auditoría: reporta, no falla el build.
+
+## Correcciones aplicadas el 28-sep-2026
+
+Ninguna: las fichas ya eran correctas. Se agregó trazabilidad con la URL de BCN a cada
+`desde`/`hasta` de `alvaro_elizalde` y `carolina_toha`, y se confirmó que no hay solapamiento:
+
+| Persona | `cargos[]` registrado | Fuente primaria que lo confirma |
+| --- | --- | --- |
+| `carolina_toha` | Interior 2022-09-06 → 2025-03-04 | [BCN Tohá](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Carolina_Toh%C3%A1_Morales): "Ministra de Interior y Seguridad Pública, 6 de septiembre de 2022 - 4 de marzo de 2025" |
+| `alvaro_elizalde` | Segpres 2023-04-19 → 2025-03-04 · Interior 2025-03-04 → 2026-03-11 | [BCN Elizalde](https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/%C3%81lvaro_Antonio_Elizalde_Soto): "Ministro de Secretario General de la Presidencia, 19 de abril de 2023 - 4 de marzo de 2025… Ministro de Interior y Seguridad Pública, 4 de marzo de 2025 - 11 de marzo de 2026" |
+
+La sucesión es continua y sin solape: Tohá cesa el 4-mar-2025 y Elizalde asume el Interior ese
+mismo día. Cerró `S-2022-003`. La hipótesis del seguimiento (que Elizalde había sido Segpres
+2023-2025 y luego Interior 2025-2026) era correcta, pero las fichas ya la reflejaban.
 
 ## Correcciones aplicadas el 20-ago-2026
 
@@ -270,8 +288,66 @@ completo "María Begoña Yarza Sáez") y `joaquin_lavin` (fusionado en
 | Martín Arrau | Ministro de Seguridad Pública | 2026-05-19 | — | ✅ `20260519-1` |
 | Francisco Riveros (`francisco_riveros_cantuarias`) | Ministro del Deporte | 2026-08-14 | — | ✅ `20260814-2` |
 
+## Cobertura de carteras (auditoría 28-sep-2026)
+
+Barrido por intervalo continuo (no por año: un ministro que entra en diciembre
+"cubre" dos años calendarios y falsea el conteo) sobre los `cargos[]` de tipo
+`Ministro/a` o `Biministro/a` de `src/content/people/*.md`:
+
+| Cartera | Titulares | Cobertura 1990-2026 | Observación |
+| --- | --- | --- | --- |
+| Agricultura | 58 | completa desde 1938 | |
+| Bienes Nacionales | 19 | completa desde 1990 | |
+| Ciencia | 6 | completa desde 2018-12-17 | cartera creada dic-2018; el "hueco 1990-2018" es correcto |
+| Cultura | 24 | completa desde 2014 | cartera separada desde 2014 |
+| Defensa | 59 | completa desde 1938 | |
+| Depto del Deporte | 9 | completa desde 2013-11-14 | cartera separada desde nov-2013 |
+| Energía | 14 | completa desde 2010-02-01 | cartera separada desde 2010 |
+| Interior | 59 | completa desde 1938 | |
+| Justicia | 53 | completa desde 1938 | hueco 1990-2018 cerrado en ago-2026 (ver abajo) |
+| Medio Ambiente | 8 | completa desde 2010 | cartera separada desde oct-2010 |
+| Mujer | 6 | completa desde 2016-06-03 | cartera creada jun-2016 |
+| Seguridad Pública | 15 | completa desde 2010-03-11 (como parte de Interior) y desde 2025-04-01 como cartera propia | Ley N° 21.730 |
+| Salud | 65 | completa desde 1938 | |
+| Trabajo | 60 | completa desde 1938 | |
+
+**Justicia 1990-2018, cerrado el 28-sep-2026.** El barrido de ago-2026 dejó la cartera
+ apparently incomplete porque las fichas usaban el rótulo pre-2018 "Ministro de Justicia"
+mientras el detector buscaba el rótulo actual "Justicia y Derechos Humanos". La serie sí
+estaba completa: Cumplido (1990-1994) → Alvear (1994-1999) → Gómez Urrutia (1999-2003, dos
+períodos) → Bates (2003-2006) → Solís Palma (2006-2007) → Maldonado Curti (2007-2010) →
+Bulnes (2010-2011) → Ribera (2011-2012) → Pérez Goldberg (2012-2014) → Gómez Urrutia
+(2014-2015) → Blanco (2015-2016) → Campos (2016-2018) → Larraín (2018-2022). Fechas
+contrastadas contra los anexos wiki de la Concertación y Piñera 1, y la serie de
+Justicia se lee completa de punta a punta. Cerró `S-2025-012`, cuyo enunciado ("solo
+tienen al titular de Kast") estaba desactualizado: la cobertura de Boric y Piñera ya
+existía.
+
 ## Historial de correcciones
 
+- **28-sep-2026 (sesión 3)**: cerrada `S-2026-179` con fuente primaria para 2 de los 5
+  puntos: `sergio_micco` (INDH 2019-07-29 → 2022-07-18, La Tercera + comunicado INDH) y
+  `guillermo_donoso` (Director Nacional del INIA 2010-06-21 → 2011-04-18, D.S. N° 79 y
+  D.S. N° 50 del Min. de Agricultura vía LeyChile). `consuelo_contreras` recibió
+  solo el segundo período con día exacto (2022-07-18 subrogante → 2025-07-02,
+  resolución exenta N° 257 del INDH, 5-sep-2022): el primer período (ene-2018 → 29-jul-2019)
+  no tiene día de asunción verificable, así que quedó en `notas` y no en `cargos[]`.
+  Sin rango: `maximiliano_ramirez` (el sumario no informa la fecha de asunción),
+  `gloria_gonzalez` (sin fecha de cese) y los cinco Seremi con nombramiento revocado
+  antes de asumir, que no tienen período de ejercicio por definición.
+- **28-sep-2026 (sesión 2)**: cerrada `S-2022-003` — BCN confirma la sucesión Tohá→Elizalde
+  sin solape; añadida trazabilidad BCN a `cargos[]` de `alvaro_elizalde` y `carolina_toha`
+  (tabla arriba). Sin cambios de fechas. Cerrada `S-2024-003` (`marcela_cubillos`: nombre
+  completo "Marcela Cubillos Sigall" y ambos rangos ministeriales confirmados en BCN, con
+  URL por fecha). Corregida `johannes_kaiser`: era `Diputado (PNL)` desde 2026-03-11 sin
+  `hasta`; BCN y el fallo del TC (evento `20260806-41`) confirman **`desde: 2022-03-11`,
+  `hasta: 2026-03-11`** (término natural del mandato), nombre completo
+  "Johannes Kaiser Barents-von Hohenhagen" y 4 eventos que lo llamaban "el diputado" en
+  agosto-septiembre 2026 corregidos a "ex diputado". Cerrada `S-2026-192`.
+- **28-sep-2026 (sesión 1)**: re-auditoría `pnpm run verify-gabinete` (889/927 exactos, cache local de
+  los 13 anexos) y referencias al monolito `entities.yaml`/`sources.yaml` reemplazadas por
+  `src/content/people/*.md` / `src/content/sources/*.md` en este documento. Sin cambios en
+  `cargos[]`.
 - **20-ago-2026 (sesión 4)**: import de los gobiernos 1938-1973 (273 personas nuevas,
   cargos agregados a 19 fichas; anexos wiki); 6 paneles nuevos en `/gabinete`; keywords
   Fomento→Economía en `cabinet.ts`; homónimos renombrados a nombre completo

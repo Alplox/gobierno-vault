@@ -133,6 +133,118 @@ export const SIN_SITEMAP = {
   'lapaia.cl': '/sitemap.xml es un índice de 3 entradas (categorías), sin artículos',
   'terceradosis.cl': '/sitemap.xml es un índice de 3 entradas (pags/image/video), sin artículos',
   'informechile.cl': '/sitemap.xml es un índice de 2 entradas, sin artículos',
+  // Batch 31 (categorías cultura/comunidad):
+  'museodelamemoria.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'villagrimaldi.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'aldeasinfantiles.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'losangeles.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'mnba.gob.cl': '/sitemap.xml es un urlset de 1 loc (google-news-xml); los otros endpoints dan 404',
+  'gam.cl': 'su robots declara /sitemap.xml, que responde HTTP 500; los otros endpoints dan 404',
+  'bibliotecanacional.gob.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'iglesia.cl': 'urlset plano de 6 locs (home + noticias.php), sin artículos',
+  'atencionchilena.cl': 'su sitemap_index.xml declara una sola entrada: page-sitemap.xml',
+  'quimantu.cl': 'índice de 4 CPTs sin archivo periodístico: 61 "noticias" (incluida la página de listado) y 155 fichas de libro',
+  'teatroamil.cl': 'urlset plano de 287 locs, casi todas páginas institucionales (/quienes-somos/…) sin fecha en el path',
+  // Batch 30 (categorías gobierno/salud/educación):
+  'contraloria.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'dpp.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'senadis.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'supersalud.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'sea.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'sii.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'minjusticia.gob.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'energia.gob.cl': '/sitemap.xml devuelve 404 y sitemap_index.xml + wp-sitemap.xml devuelven 0 locs',
+  'corfo.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt sin línea Sitemap)',
+  'aduana.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'medwave.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'sociedadcirugia.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'conicyt.cl': 'su robots declara http://www.conicyt.cl/sitemap.xml, que devuelve 404; los otros endpoints dan 0 locs',
+  'revistamedicadechile.cl': 'OJS con 36.051 artículos, pero SIN ningún <lastmod> y casi sin fecha en el path (679 de 36.051); además duplica cada artículo con su PDF (/article/view/N y /article/view/N/M)',
+  'anid.cl': 'urlset plano de 388 locs, casi todas páginas institucionales (conoce-anid, etc.), sin artículos',
+  'torax.cl': 'wp-sitemap con un único shard de 9 artículos: reevaluar si crece',
+  // Batch 29:
+  'portalnacional.cl': 'Yoast con 8.157 artículos, pero el <lastmod> es el dateModified: una oleada de retoques (2026-06-20, 2026-09-28) fechó en 2026 ~7.900 entradas cuyo datePublished es de 2025 o feb-2026 (verificado en 5 URLs). Sin fecha en el path no hay forma de corregirlas',
+  'correodellago.cl': 'su wp-sitemap-posts-post-1.xml responde HTTP 500 pero entrega 133 URLs de contenido SEO/listados (jardinería, insomnio, nostalgia), no prensa',
+  'elchelenko.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'elconcordia.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'lectoronline.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'natalesonline.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'orbitanoticias.cl': 'los 3 endpoints estándar devuelven HTTP 500',
+  'puertoaldia.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'suractual.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  // Batch 28:
+  'soyantofagasta.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'soycalama.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'soyconcepcion.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'soycopiapo.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'soyiquique.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'soyvalparaiso.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'soychiloe.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'temucotelevision.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'radarinformativo.cl': 'agregador que republica notas de otros medios (/medio/biobio, etc.): sus 1.200 URLs /n/<id>-<slug> cubren solo 5 días (lastmod 2026-09-23 a 09-28) y duplican lo ya catalogado',
+  // Batch 27:
+  'angolinos.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'elparadiario14.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'elrepuertero.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'elvacanudo.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'iquiqueonline.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'sextanoticias.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'pscchile.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'ufromedios.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'chilemosaico.cl': 'su robots declara /eventos/wp-sitemap.xml, que responde 0 locs; los otros 3 endpoints dan 404',
+  'chasquis.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'dtvaldivia.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'elnortero.cl': 'HTTP 403 en los 3 endpoints estándar (robots.txt sin línea Sitemap)',
+  'libertaddigital.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de fifa55cs.com (otro sitio del mismo hosting); robots.txt 200 pero sin línea Sitemap',
+  'hoyxhoy.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450',
+  'en.mercopress.com': 'misma agencia que mercopress.cl (ya catalogado, 46.710 artículos): la edición en inglés duplicaría el contenido',
+  // Batch 26:
+  'eldiarioatacama.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'elmonitorparral.com': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'elpailadigital.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'canalsurpatagonia.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'noticias.123.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'diarioinformativo.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
+  'tiempo21araucania.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'somos9.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'diariolatribuna.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'diariolaquinta.cl': 'robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs',
+  'hoy.cl': 'los 3 endpoints estándar devuelven 404 (robots.txt no declara sitemap)',
+  'orocoipo.cl': 'variantes ?sitemapindex.xml y ?sitemapNNN.xml con 0 locs; /sitemap.xml es un urlset de 1 loc (la home)',
+  'estrellatocopilla.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450',
+  'revistaenfoque.cl': 'wp-sitemap con 786 artículos, pero todos de moda y turismo de Argentina (slugs en inglés): no es prensa de gobierno chilena',
+  'chile21.cl': 'urlset plano de 777 locs que mezcla 664 URLs de un solo segmento (secciones y artículos, sin fecha en el path) con 9 de profundidad de article: no se puede separar por patrón',
+  'eldesarrollo.cl': 'urlset plano de 237 locs (142 con <lastmod>, todos de sept-2026) y sin fecha en el path: no hay archivo histórico que catalogar',
+  // Batch 25:
+  'eldivisadero.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'soytemuco.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'soypuertomontt.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'soyosorno.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'soyarica.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'ariamia.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'ellanquihue.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'vientopatagon.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'diariolabrador.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'laestrelladeconcepcion.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
+  'cronicanoticias.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'tribunadelbiobio.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'lacoyuntura.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'aricaonline.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'ptowilliams.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'septimapaginanoticias.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'elnaveghable.cl': 'HTTP 403 en los 3 endpoints estándar (robots.txt no declara sitemap)',
+  'elmagallanews.cl': 'HTTP 403 en los 3 endpoints estándar (robots.txt no declara sitemap)',
+  'elrancahuaso.cl': 'HTTP 403 en los 3 endpoints estándar (robots.txt no declara sitemap)',
+  'granvalparaiso.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'eha.cl': '/sitemap.xml es un urlset de 41 locs (home + 40 noticias) sin fecha en el path y con <lastmod> uniforme de regeneración; elheraldoaustral.cl sirve exactamente el mismo sitemap (es el mismo sitio)',
+  'elheraldoaustral.cl': 'alias de eha.cl: devuelve el mismo /sitemap.xml de 41 locs',
+  'redmaule.com': 'Prontus declara solo sitemap_pags.xml: 1.001 locs SIN ningún <lastmod> y sin fecha en el path, así que el catálogo quedaría sin fechas',
+  'diarioviregion.cl': 'su robots declara el sitemap de diariosextaregion.cl: 2.078 locs de páginas SEO autogeneradas (/quality/version/f3mbjnabz8e0ncv.shtml), sin un solo artículo',
+  'diariosextaregion.cl': 'índice de 2.078 locs, todas páginas SEO autogeneradas con IDs aleatorios, sin artículos',
+  'mercuriovalpo.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
+  'cronicachillan.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
+  'australvaldivia.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
+  'megatiempo.cl': 'mismo CMS y shards content-noticias/sitemap-YYYY-MM.xml que meganoticias (ya catalogado): mismo grupo editorial, no agregar por separado',
   // Batch 24:
   'norteyenergia.cl': 'robots.txt declara sitemap.xml y sitemap.rss, ambos con 0 locs',
   'lidersanantonio.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial). Además /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
@@ -441,7 +553,7 @@ async function main() {
 
 - **Total de sitios de prensa listados:** ${filas.length}
 - ✅ En catálogo local: **${conteo.catalogo}**
-- 🟡 Ya usados en el vault (sources.yaml/orgs) sin sitemap: **${conteo.en_uso}**
+- 🟡 Ya usados en el vault (\`src/content/sources/*.md\` / \`organizations/*.md\`) sin sitemap: **${conteo.en_uso}**
 - 🔒 Verificados sin sitemap: **${conteo.sin_sitemap}**
 - ⬜ Pendientes de sincronizar: **${conteo.pendiente}**
 
@@ -468,7 +580,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
     md += `| ${EMOJI[f.estado]} | **${limpiar(f.nombre)}** | \`${f.d}\` | ${region} | ${fuente} | ${notas} |\n`;
   }
 
-  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`sources.yaml\` o como org de prensa en \`entities.yaml\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/media.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Registrar la org de prensa en \`entities.yaml\` si no existe (regla de wikilinks).\n6. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
+  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`src/content/sources/*.md\` o como org de prensa en \`src/content/organizations/*.md\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/media.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Registrar la org de prensa en \`src/content/organizations/*.md\` si no existe (regla de wikilinks).\n6. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
 
   writeFileSync(out, md, 'utf8');
   console.log(`✔ ${filas.length} sitios de prensa → ${out} (origen: ${origen})`);

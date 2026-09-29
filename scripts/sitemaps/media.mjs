@@ -2441,6 +2441,253 @@ export const MEDIA = {
     includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
     locDateRe: /\/(20\d{2})\/(\d{2})\//,
   },
+  // ── Agregados 28-09-2026 (batch 25: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  diariochiloe: {
+    nombre: 'Diario Chiloé',
+    index: 'https://www.diariochiloe.cl/sitemap.xml',
+    // Mismo tema WP con sitemap MENSUAL propio que diariofutrono/diariodeosorno/
+    // diariodevaldivia: /sitemap/YYYY/MM/sitemap-pt-post.xml, 111 meses
+    // (2017/07→2026/09) y <lastmod> reales. El includeRe descarta
+    // category-sitemap.xml y el resto de CPTs; la fecha sale del nombre del
+    // shard (YYYY/MM, lo lee sitemapUrlDate), que es la precisión real del medio:
+    // el path del artículo solo trae YYYY/MM, no el día.
+    includeRe: /\/sitemap\/\d{4}\/\d{2}\/sitemap-pt-post\.xml$/i,
+  },
+  diariopaillaco: {
+    nombre: 'Diario Paillaco',
+    index: 'https://www.diariopaillaco.cl/sitemap.xml',
+    // Misma familia que Diario Chiloé: 179 meses (2011/11→2026/09), ~366 locs el
+    // mes más lleno (Los Ríos / Paillaco).
+    includeRe: /\/sitemap\/\d{4}\/\d{2}\/sitemap-pt-post\.xml$/i,
+  },
+  curacavidigital: {
+    nombre: 'Curicaví Digital',
+    index: 'https://www.curacavidigital.cl/sitemap_index.xml',
+    // Yoast: post-sitemap.xml..3.xml ≈ 2.267 artículos 2011-01→2026-09;
+    // articleOnly descarta page/tdb_templates/category/post_tag/author. El path es
+    // /YYYY/MM/DD/<slug> y el <lastmod> es el instante UTC de publicación, así
+    // que preferLocDate + locDateRe hacen ganar la fecha del path (evita el
+    // corrimiento D+1 de lo publicado después de las 20:00 hora local).
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  // portalnacional.cl NO se agregó: es Yoast con 8.157 artículos y el <lastmod>
+  // es el dateModified, no el de publicación. Una oleada de retoques (2026-06-20,
+  // 2026-09-28) dejó ~7.900 entradas fechadas en 2026 cuyo datePublished real es de
+  // 2025 o feb-2026 (verificado en 5 URLs). Sin fecha en el path no hay forma de
+  // recuperarlas, así que el catálogo quedaría con fechas equivocadas.
+  // ── Agregados 28-09-2026 (batch 31: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  prensaeventos: {
+    nombre: 'Prensa Eventos',
+    index: 'https://prensaeventos.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap.xml..12.xml ≈ 11.612 artículos 2016-01→2026-09
+    // El path es un slug plano, pero el <lastmod> coincide con el datePublished en
+    // las 3 URLs revisadas (2016-01-31, 2016-02-22, 2016-03-14): no hace falta locDateRe.
+  },
+  revistanos: {
+    nombre: 'Revista NOS',
+    index: 'https://revistanos.cl/sitemap_index.xml',
+    // Yoast: post-sitemap.xml..8.xml ≈ 7.118 artículos, 2000→2026. OJO: su
+    // sitemap_index declara los sub-sitemaps con `http://` (trampa 13), así que se
+    // apunta directo al https y se deja forceHttps por si algún <loc> viene en http.
+    // El <lastmod> coincide con el datePublished (verificado en 2 de 3; el tercero
+    // era la página de listado /blog/).
+    articleOnly: true,
+    forceHttps: true,
+  },
+  colegiodeprofesores: {
+    nombre: 'Colegio de Profesores',
+    index: 'https://www.colegiodeprofesores.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 4 shards ≈ 6.123 artículos. Las 6.123 URLs traen /YYYY/MM/DD/
+    // y el <lastmod> es de EDICIÓN (artículos de 2015 con lastmod 2017-04-27,
+    // 2019-03-21), así que gana la fecha del path.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  // ── Agregados 28-09-2026 (batch 30: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  noticiasubiobio: {
+    nombre: 'Noticias U. del Bío-Bío',
+    index: 'https://noticias.ubiobio.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap.xml..10.xml ≈ 9.128 artículos 2012→2026
+    // El path es /YYYY/MM/DD/<slug>. El <lastmod> coincide con el datePublished en la
+    // mayoría, pero en los artículos retocados se va 1-10 días (2016-10-24 con
+    // lastmod 2016-11-02), así que gana la fecha del path.
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  actualidadudla: {
+    nombre: 'Actualidad UDLA',
+    index: 'https://actualidad.udla.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap.xml..8.xml ≈ 7.479 artículos 2020→2026
+    // El path es /YYYY/MM/<slug> (sin día) y el <lastmod> es la fecha real CON día
+    // (±1-3 días en los retocados): se deja el lastmod, porque forzar día 01 desde
+    // el path perdería precisión real. (Al revés que noticiasubiobio, cuyo path sí
+    // trae el día y su lastmod se corre más.)
+  },
+  lyd: {
+    nombre: 'Libertad y Desarrollo',
+    index: 'https://lyd.org/sitemap.xml',
+    articleOnly: true, // Yoast: post-sitemap.xml..16.xml ≈ 15.422 posts, 2003→2026
+    // El path es /<seccion>/YYYY/MM/<slug> y el <lastmod> es de EDICIÓN: una columna
+    // de 2009 republicada en 2011 tiene lastmod 2011-03-14, así que gana la fecha del
+    // path (a nivel de mes, que es la precisión real del medio). OJO: el CMS
+    // enmascara el año en algunas entradas (0004/00, 0207/01); el rango (19|20) las
+    // deja fuera y esas caen al lastmod. El urlRe además descarta las páginas de
+    // listado tipo /otros-contenidos/2011/04/, que no tienen slug después del mes.
+    // OJO: el año va en el grupo 1 COMPLETO —`((?:19|20)\d{2})`, no `(19|20)\d{2}`:
+    // con la alternancia dentro del grupo, g1 captura "19" y la fecha sale "19-04-01".
+    urlRe: /\/(?:19|20)\d{2}\/\d{2}\/[^/]+\/?$/,
+    preferLocDate: true,
+    locDateRe: /((?:19|20)\d{2})\/(\d{2})\//,
+  },
+  // ── Agregados 28-09-2026 (batch 29: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  elaconcagua: {
+    nombre: 'El Aconcagua',
+    index: 'https://www.elaconcagua.cl/sitemap.xml',
+    // Arc XP con índice DOBLE: /sitemap.xml declara sitemap-index-1.xml, que a su vez
+    // declara sitemap-1..8.xml (el sync expande los dos niveles). El includeRe tiene
+    // que dejar entrar los TRES niveles —raíz, índice intermedio y shards— o baja 0
+    // (trampa 1); el ancla `\/` hace que image-sitemap-index-1.xml y
+    // video-sitemap-1.xml queden fuera (trampa 3).
+    // ~7.000 artículos desde 2017-05 (San Felipe, Aconcagua), /YYYY/MM/DD/<slug>.
+    // OJO: es la TERCERA propiedad de la provincia (junto a diarioaconcagua y
+    // aconcaguadigital) y comparte 19 slugs con esta última: son sitios del mismo
+    // grupo, no el mismo medio, así que va por separado.
+    includeRe: /\/sitemap(?:-index-1)?\.xml$/i,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  radiovalparaiso: {
+    nombre: 'Radio Valparaíso',
+    index: 'https://radiovalparaiso.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: un solo post-sitemap.xml con 843 artículos 2024-07→2026-05
+    // El <lastmod> coincide con el datePublished en 6 de 6 URLs revisadas (el
+    // sitio no declara dateModified), así que no necesita locDateRe: el path es
+    // un slug plano.
+  },
+  cabreroenlinea: {
+    nombre: 'Cabrero en Línea',
+    index: 'https://wp.cabreroenlinea.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 6 shards ≈ 11.859 artículos, TODOS de 2026 (el subdominio
+    // `wp.` es el portal del diario de Cabrero, Bío Bío). El path es
+    // /YYYY/MM/DD/<slug>, así que la fecha sale de ahí aunque el <lastmod> venga
+    // en -03:00.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  // ── Agregados 28-09-2026 (batch 28: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  calamaenlinea: {
+    nombre: 'Calama en Línea',
+    index: 'https://noticias.calamaenlinea.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 9 shards posts-post-1..9.xml ≈ 17.452 artículos 2020-06→2026-09
+    // (Calama, Antofagasta). El path es /<seccion>/<slug> sin fecha, pero el
+    // <lastmod> está bien repartido (máx. 17 el mismo día) y con offset -03:00, que
+    // es la hora local: no hay D+1 ni lastmod de migración que corregir.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  demaracordilleratv: {
+    nombre: 'De Mar a Cordillera TV',
+    index: 'https://demaracordilleratv.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 3 shards ≈ 4.670 artículos 2021-12→2026-09 (O'Higgins).
+    // El path es /YYYY/MM/DD/<slug>; el <lastmod> NO sirve: 1.378 de 4.000 locs
+    // comparten lastmod 2026-04-03/2026-03-30 (oleada de retoques, como
+    // capodeprovincia). Sin locDateRe el catálogo parecería un medio de 2 meses.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  elpuelche: {
+    nombre: 'Radio El Puelche',
+    index: 'https://www.elpuelche.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: un único shard con 1.157 artículos de 2009-10 a 2026-06
+    // (Maule). El <lastmod> es de EDICIÓN, no de publicación —la migración del
+    // sitio dejó 86 artículos el 2024-07-19, 63 el 07-24, 40 el 07-25—, pero las
+    // 1.157 URLs traen /YYYY/MM/DD/, así que locDateRe recupera los 17 años.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  // ── Agregados 28-09-2026 (batch 27: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  radiofestival: {
+    nombre: 'Radio Festival',
+    index: 'https://www.radiofestival.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 17 shards wp-sitemap-posts-post-1..17.xml (2.000 locs c/u)
+    // ≈ 32.819 artículos 2015-09→2026-09 (Valparaíso/Quilpué). El path es un
+    // slug plano, sin fecha, pero el <lastmod> viene con offset -03:00 —que es la
+    // hora local de publicación—, así que no hay corrimiento D+1 al convertir.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  losriosaldia: {
+    nombre: 'Los Ríos al Día',
+    index: 'https://www.losriosaldia.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 11 shards ≈ 20.350 artículos 2013-11→2026-09. El path es
+    // /YYYY/MM/DD/<slug> y el <lastmod> es el instante UTC: preferLocDate +
+    // locDateRe hacen ganar la fecha del path (el mismo criterio que curacavidigital).
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  araucaniacuenta: {
+    nombre: 'Araucanía Cuenta',
+    index: 'https://www.araucaniacuenta.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 10 shards ≈ 18.463 artículos 2014-11→2026-09. OJO: slug
+    // plano sin fecha en el path y <lastmod> en UTC (+00:00), así que lo publicado
+    // después de las 21:00 hora local puede quedar D+1 — no hay fecha en el path
+    // con la cual corregirlo (a diferencia de los dos de arriba).
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  // ── Agregados 28-09-2026 (batch 26: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  diariosanjose: {
+    nombre: 'Diario San José',
+    index: 'https://www.diariosanjose.cl/sitemap.xml',
+    // Mismo tema WP con sitemap MENSUAL propio que futrono/chiloe/paillaco:
+    // 100 shards /sitemap/YYYY/MM/sitemap-pt-post.xml (2018/06→2026/09) con
+    // <lastmod> reales (San José de la Mariquina, Los Ríos).
+    includeRe: /\/sitemap\/\d{4}\/\d{2}\/sitemap-pt-post\.xml$/i,
+  },
+  patagonianews: {
+    nombre: 'Patagonia News',
+    index: 'https://www.patagonianews.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap.xml (1.000 locs) + post-sitemap2.xml (25)
+    // OJO: el <lastmod> es FALSO. Los 1.026 locs traen lastmod de ago-sep 2026
+    // (el sitio regenera los shards), pero las URLs van de 2015 a 2026: sin
+    // locDateRe el catálogo parecería un medio de 2 meses. La fecha real está en
+    // el path /YYYY/MM/DD/<slug>, así que preferLocDate + locDateRe la hacen
+    // ganar. 1.025 artículos, 2019→2026 (el grueso 2019-2020).
+    // OJO 2: los grupos 1 y 2 del locDateRe TIENEN que ser el año y el mes —
+    // extractPairs arma la fecha como `g1-g2-(g3 ?? 01)`, así que un patrón con
+    // el año solo (`(20\d{2})\/\d{2}\/\d{2}`) no da error: guarda "2019-undefined-01".
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  aysenahora: {
+    nombre: 'Aysén Ahora',
+    index: 'https://www.aysenahora.cl/sitemap_index.xml',
+    articleOnly: true, // Yoast: post-sitemap.xml (1.000) + post-sitemap2.xml (70)
+    // 1.070 artículos 2024-05→2026-09 (Coyhaique). El path es un slug plano
+    // (sin fecha), pero el <lastmod> sí es la fecha real de publicación, así que
+    // no hace falta locDateRe.
+  },
+  // Descartados batch 25: eldivisadero/soytemuco/soypuertomontt/soyarica/
+  // soyosorno/cronicanoticias — sin robots (fetch failed) o endpoints con 0 locs.
+  // eha.cl (y su alias elheraldoaustral.cl, mismo sitemap): urlset plano de 41
+  // locs, todas con el mismo <lastmod> de regeneración y sin fecha en el path.
+  // redmaule.com: Prontus declara solo sitemap_pags.xml (1.001 locs) SIN ningún
+  // <lastmod> y sin fecha en el path: el catálogo quedaría sin fechas.
+  // diariosextaregion.cl (el robots de diarioviregion.cl lo declara): 2.078 locs
+  // de páginas SEO autogeneradas (/quality/version/f3mbjnabz8e0ncv.shtml), sin
+  // un solo artículo.
   // Descartados batch 24: norteyenergia.cl (robots declara sitemap.xml y
   // sitemap.rss, ambos 0 locs), lidersanantonio.cl (su /sitemap.xml no es suyo:
   // devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl, otro

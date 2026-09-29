@@ -1689,6 +1689,7 @@
 - [2026/09/20260916-5 - INDH oficia a Senama, Seremi de Salud y Municipalidad de Pitrufquén por incendio en hogar El Edén](src/content/events/2026/09/20260916-5.md) — 5 fuentes
 - [2026/09/20260916-6 - Kaiser en Punto de Quiebre: Chile tuvo suerte de no terminar en un baño de sangre en el 18-O y la violencia de 1973 fue evidente](src/content/events/2026/09/20260916-6.md) — 5 fuentes
 - [2026/09/20260916-7 - Municipalidad de Santiago se querella contra adultos que habrían pagado $70 mil a exalumno de 14 años por lanzar molotov el 11-S](src/content/events/2026/09/20260916-7.md) — 8 fuentes
+- [2026/09/20260916-8 - Balance a seis meses: el Gobierno de Kast acumula 47 salidas de autoridades, 37 de ellas seremis, y ordena una revisión de la segunda línea regional](src/content/events/2026/09/20260916-8.md) — 7 fuentes
 - [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 13 fuentes
 - [2026/09/20260917-2 - Robo a departamento de asistente de Producción de Presidencia en San Miguel: investigan sustracción de discos duros con presunta información secreta](src/content/events/2026/09/20260917-2.md) — 27 fuentes
 - [2026/09/20260917-3 - Pancho Saavedra rompe el protocolo en la inauguración de La Gran Fonda con una paya a quienes conducen Chile](src/content/events/2026/09/20260917-3.md) — 9 fuentes
@@ -1731,6 +1732,8 @@
 - [2026/09/20260925-3 - El embajador de Israel publica y borra un mensaje contra Michelle Bachelet, lo republica y enfrenta a Carmen Hertz en X; Winter e Insunza exigen una respuesta de La Moneda](src/content/events/2026/09/20260925-3.md) — 10 fuentes
 - [2026/09/20260925-4 - Comisión de Defensa sesiona en Punta Arenas por el Estrecho de Magallanes en plena visita de Barros](src/content/events/2026/09/20260925-4.md) — 6 fuentes
 - [2026/09/20260925-5 - Vecinos de la población Juan Riquelme cortan la Ruta 146 en Concepción y exigen respuesta de Essbio por los cortes de agua](src/content/events/2026/09/20260925-5.md) — 10 fuentes
+- [2026/09/20260925-6 - Servel alerta por un recorte del 15% a su presupuesto 2027 y el Gobierno descarta que afecte las tareas esenciales](src/content/events/2026/09/20260925-6.md) — 9 fuentes
+- [2026/09/20260925-7 - Contratistas de Codelco piden reunión ante un posible recorte de entre 5% y 20% de la dotación](src/content/events/2026/09/20260925-7.md) — 8 fuentes
 - [2026/09/20260926-1 - Segundo día de corte en la ruta a Cabrero: vecinos de la población Juan Riquelme vuelven a manifestarse por los cortes de agua](src/content/events/2026/09/20260926-1.md) — 7 fuentes
 - [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
 

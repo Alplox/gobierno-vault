@@ -58,7 +58,14 @@ trabajo que cuesta caro repetir.
    firma del CMS.
 3. **Confirmar que hay artículos, no páginas**: abrir un sub-sitemap hijo y mirar que las
    URLs llevan fecha y slug (`/2026/09/26/titular/`), no `/categoria/…`. Un `urlset` de
-   20-200 URLs sin fechas es páginas estáticas: se descarta.
+   20-200 URLs sin fechas es páginas estáticas: se descarta. Además, **que el sitemap sea
+   del dominio**: en hosting compartido el `/sitemap.xml` responde con el de otro medio (el
+   conglomerado Estrella/Mercurio sirve `estrellaarica.cl` + `estrellaiquique.cl` desde
+   `mercuriovalpo.cl`, `cronicachillan.cl`, `australvaldivia.cl`…), y un CMS con páginas
+   autogeneradas devuelve miles de URLs tipo `/quality/version/<id>.shtml` sin un solo
+   artículo. Si los `<loc>` no son del dominio sondeado, es un descarte, no un medio.
+   Ojo también con los `alias`: dos dominios de la misma nota (p. ej. `eha.cl` y
+   `elheraldoaustral.cl`) sirven el mismo sitemap → uno solo al catálogo.
 4. **Agregar la entrada a `MEDIA`** en `scripts/sitemaps/media.mjs`, eligiendo la config
    según la receta de abajo, y comentando **por qué** esa config y no otra.
 5. **Sincronizar**: `pnpm run sitemaps-sync -- <slug>`.
@@ -160,16 +167,36 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
    el `lastmod` es uniforme y falso: se resuelve con `dateFromSitemapPath` (fecha del nombre
    del sub-sitemap) o `locDateRe` (fecha en el path del artículo). Precedencia de la fecha
    final: `newsDate` > `locDate` > `pathDate` > `lastmod`.
+   **Cómo se comprueba en vez de suponerlo:** abrir 4-6 artículos del shard más grande y
+   comparar su `datePublished` con el `<lastmod>` del sitemap. Si coinciden, el `lastmod`
+   sirve; si el `datePublished` es anterior, el `lastmod` es `dateModified` y una oleada de
+   retoques está falseando el archivo. Si además el path no trae fecha, **no hay arreglo
+   posible**: mejor descartar el medio que catalogarlo con fechas corridas (pasó con
+   `portalnacional.cl`, ~7.900 entradas de 2025 fechadas en 2026).
 5. **`<lastmod>` en UTC vs. fecha local: el D+1.** Si el medio publica en hora local y su
    `lastmod`/`news:publication_date` es el instante en UTC, todo lo publicado después de las
    20:00 cae al día siguiente: ~12% de las entradas quedan fechadas D+1 y **el síntoma es
    invisible** (no hay error, solo fechas corridas). La fecha buena es la del path, que es la
    que declara el sitio en su `datePublished`. Para esos medios, `preferLocDate: true`
    invierte `newsDate` y `locDate`; después hay que reconstruir con `--replace`, porque un
-   merge normal no corrige las fechas ya guardadas.
+   merge normal no corrige las fechas ya guardadas. El offset del `<lastmod>` dice si el
+   medio cae en el caso: `2015-09-29T23:16:44-03:00` es la hora local declarada y no se
+   corre; `2014-11-27T23:16:10+00:00` es el instante UTC y sí. Cuando el path no trae
+   fecha no hay con qué corregirlo, y eso hay que dejarlo anotado en la config.
 6. **`locDateRe` con `20\d{2}` pierde la prensa pre-2000.** Si el medio tiene historia
    anterior a 2000, el rango tiene que ser `(19|20)\d{2}`: con el patrón acotado al siglo
    XXI se descartan en silencio las décadas previas.
+   Además, **los grupos 1 y 2 son el año y el mes, obligatorios**: `extractPairs` arma la
+   fecha como `` `${g1}-${g2}-${g3 ?? '01'}` ``, así que un patrón que solo capture el año
+   (`(20\d{2})\/\d{2}\/\d{2}`) no da error y guarda `"2019-undefined-01"` en todas las
+   entradas, y uno con la alternancia dentro del grupo (`(19|20)\d{2}`) guarda `"19-04-01"`.
+   El año completo va en el grupo 1: `((?:19|20)\d{2})`. Con el grupo 3 ausente el día cae a
+   `01` a propósito (meses, no días). Chequeo rápido tras el sync: `rg -c 'undefined|^\{"u"[^\n]*"d":"[0-9]{2}-' sitemaps/<slug>/` debe dar 0.
+   **Y `--replace` no limpia las fechas corruptas**: reescribe los años presentes en el run
+   y vacía los `YYYY.jsonl` sin entradas, pero solo vacía archivos que matchean `^\d{4}\.jsonl$`
+   — y una fecha malformada genera justamente un `19-0.jsonl`, que sobrevive al rebuild (pasó
+   con `lyd`: el `--replace` dejó las 15.415 entradas corruptas junto a las 15.415 buenas).
+   Para reconstruir de verdad hay que **borrar `sitemaps/<slug>/` primero** y resincar.
 7. **Un urlset plano suele mezclar páginas y artículos.** `urlRe` filtra por patrón de URL;
    `articleOnly` y `includeRe` filtran por *nombre de sub-sitemap*, así que no ayudan en un
    urlset plano.

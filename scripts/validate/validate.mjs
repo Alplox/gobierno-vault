@@ -7,12 +7,15 @@ const root = join(process.cwd(), 'src');
 const dataDir = join(root, 'data');
 const eventsDir = join(root, 'content', 'events');
 
-function readYaml(filename) {
-  // Fuente de verdad: colecciones markdown (el monolito src/data/entities|sources|topics.yaml
-  // se eliminó en ago-2026 y ya no existe). Solo colectivos/sectores se leen de src/data/.
+// Lectura de datos del vault. Las colecciones `people`/`organizations`/`cifras`/`sources`/
+// `topics` viven en src/content/<coll>/*.md (el monolito src/data/*.yaml se eliminó en
+// ago-2026 y ya no existe — NO reintroducirlo). Los únicos YAML reales son
+// `colectivos` y `sectores` en src/data/. La API se llama por nombre lógico de colección.
+function readCollection(name) {
+  // Fuente de verdad: colecciones markdown. `dataDir` solo para la excepción YAML.
   try {
-    const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
-    const coll = map[filename];
+    const map = { sources: 'sources', topics: 'topics' };
+    const coll = map[name];
     if (coll) {
       const dir = join(process.cwd(), 'src', 'content', coll);
       const rec = {};
@@ -25,7 +28,7 @@ function readYaml(filename) {
       if (Object.keys(rec).length) return rec;
       throw new Error(`sin entradas en src/content/${coll}/*.md`);
     }
-    if (filename === 'entities.yaml') {
+    if (name === 'entities') {
       const rec = { people: {}, organizations: {}, cifras: {} };
       let found = false;
       for (const [dir, key] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
@@ -39,22 +42,22 @@ function readYaml(filename) {
       if (found) return rec;
       throw new Error('sin entradas en src/content/people|organizations|cifras/*.md');
     }
-    return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+    return YAML.parse(readFileSync(join(dataDir, `${name}.yaml`), 'utf8')) ?? {};
   } catch (e) {
-    console.error(`✖ no se pudo cargar ${filename}: ${e.message.split('\n')[0]}`);
+    console.error(`✖ no se pudo cargar la colección "${name}": ${e.message.split('\n')[0]}`);
     console.error(`  Causa típica: caracteres reservados sin citar en frontmatter (ej. "autor: @usuario") o grabado con encoding incorrecto (PowerShell Set-Content/Out-File).`);
     process.exit(1);
   }
 }
 
-const sourcesData = readYaml('sources.yaml');
+const sourcesData = readCollection('sources');
 const validSourceIds = new Set(Object.keys(sourcesData));
 
-const topicsData = readYaml('topics.yaml');
+const topicsData = readCollection('topics');
 const validTopicIds = new Set(Object.keys(topicsData));
 
-const colectivosData = readYaml('colectivos.yaml');
-const sectoresData = readYaml('sectores.yaml');
+const colectivosData = readCollection('colectivos');
+const sectoresData = readCollection('sectores');
 const validColectivos = new Set(Array.isArray(colectivosData) ? colectivosData : Object.keys(colectivosData));
 const validSectores = new Set(Array.isArray(sectoresData) ? sectoresData : Object.keys(sectoresData));
 
@@ -65,7 +68,7 @@ const validSectores = new Set(Array.isArray(sectoresData) ? sectoresData : Objec
 // de instituciones/plataformas/documentos (que no son "medios de prensa" y por
 // lo tanto no requieren org). Esto impide que las variantes de nombre (y el
 // mojibake de doble-encoding UTF-8) vuelvan a degradar la convención.
-const entitiesData = readYaml('entities.yaml');
+const entitiesData = readCollection('entities');
 const orgsData = entitiesData.organizations ?? {};
 const peopleData = entitiesData.people ?? {};
 const cifrasData = entitiesData.cifras ?? {};

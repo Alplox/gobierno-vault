@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-28T05:51:07.868Z",
+  "actualizado": "2026-09-28T23:11:59.702Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3341,6 +3341,153 @@
       "articulos": 1854,
       "nuevos": 1854,
       "años": 17
+    },
+    "diariochiloe": {
+      "nombre": "Diario Chiloé",
+      "ultima_sync": "2026-09-28T22:04:44.761Z",
+      "articulos": 19924,
+      "nuevos": 19924,
+      "años": 10
+    },
+    "diariopaillaco": {
+      "nombre": "Diario Paillaco",
+      "ultima_sync": "2026-09-28T22:07:18.473Z",
+      "articulos": 56540,
+      "nuevos": 56540,
+      "años": 14
+    },
+    "curacavidigital": {
+      "nombre": "Curicaví Digital",
+      "ultima_sync": "2026-09-28T22:07:20.673Z",
+      "articulos": 2267,
+      "nuevos": 2267,
+      "años": 14
+    },
+    "diariosanjose": {
+      "nombre": "Diario San José",
+      "ultima_sync": "2026-09-28T22:19:58.530Z",
+      "articulos": 43119,
+      "nuevos": 43119,
+      "años": 9
+    },
+    "patagonianews": {
+      "nombre": "Patagonia News",
+      "ultima_sync": "2026-09-28T22:20:30.581Z",
+      "articulos": 1026,
+      "nuevos": 1026,
+      "años": 8
+    },
+    "aysenahora": {
+      "nombre": "Aysén Ahora",
+      "ultima_sync": "2026-09-28T22:20:04.442Z",
+      "articulos": 1070,
+      "nuevos": 1070,
+      "años": 3
+    },
+    "radiofestival": {
+      "nombre": "Radio Festival",
+      "ultima_sync": "2026-09-28T22:33:32.270Z",
+      "articulos": 32819,
+      "nuevos": 32819,
+      "años": 12
+    },
+    "losriosaldia": {
+      "nombre": "Los Ríos al Día",
+      "ultima_sync": "2026-09-28T22:33:37.748Z",
+      "articulos": 20350,
+      "nuevos": 20350,
+      "años": 14
+    },
+    "araucaniacuenta": {
+      "nombre": "Araucanía Cuenta",
+      "ultima_sync": "2026-09-28T22:33:44.804Z",
+      "articulos": 18463,
+      "nuevos": 18463,
+      "años": 13
+    },
+    "calamaenlinea": {
+      "nombre": "Calama en Línea",
+      "ultima_sync": "2026-09-28T22:43:40.028Z",
+      "articulos": 17452,
+      "nuevos": 17452,
+      "años": 7
+    },
+    "demaracordilleratv": {
+      "nombre": "De Mar a Cordillera TV",
+      "ultima_sync": "2026-09-28T22:43:42.861Z",
+      "articulos": 4670,
+      "nuevos": 4670,
+      "años": 6
+    },
+    "elpuelche": {
+      "nombre": "Radio El Puelche",
+      "ultima_sync": "2026-09-28T22:43:44.939Z",
+      "articulos": 1157,
+      "nuevos": 1157,
+      "años": 18
+    },
+    "elaconcagua": {
+      "nombre": "El Aconcagua",
+      "ultima_sync": "2026-09-28T22:50:05.625Z",
+      "articulos": 7630,
+      "nuevos": 7630,
+      "años": 11
+    },
+    "cabreroenlinea": {
+      "nombre": "Cabrero en Línea",
+      "ultima_sync": "2026-09-28T22:49:35.899Z",
+      "articulos": 11859,
+      "nuevos": 11859,
+      "años": 1
+    },
+    "radiovalparaiso": {
+      "nombre": "Radio Valparaíso",
+      "ultima_sync": "2026-09-28T22:51:35.800Z",
+      "articulos": 843,
+      "nuevos": 843,
+      "años": 3
+    },
+    "noticiasubiobio": {
+      "nombre": "Noticias U. del Bío-Bío",
+      "ultima_sync": "2026-09-28T23:01:07.886Z",
+      "articulos": 9128,
+      "nuevos": 9128,
+      "años": 15
+    },
+    "actualidadudla": {
+      "nombre": "Actualidad UDLA",
+      "ultima_sync": "2026-09-28T23:01:38.918Z",
+      "articulos": 7479,
+      "nuevos": 7479,
+      "años": 7
+    },
+    "lyd": {
+      "nombre": "Libertad y Desarrollo",
+      "ultima_sync": "2026-09-28T23:03:30.175Z",
+      "articulos": 15415,
+      "nuevos": 15415,
+      "años": 33
+    },
+    "prensaeventos": {
+      "nombre": "Prensa Eventos",
+      "ultima_sync": "2026-09-28T23:11:46.173Z",
+      "articulos": 11612,
+      "nuevos": 11612,
+      "años": 11
+    },
+    "revistanos": {
+      "nombre": "Revista NOS",
+      "ultima_sync": "2026-09-28T23:11:54.284Z",
+      "articulos": 7118,
+      "nuevos": 7118,
+      "años": 22
+    },
+    "colegiodeprofesores": {
+      "nombre": "Colegio de Profesores",
+      "ultima_sync": "2026-09-28T23:11:59.702Z",
+      "articulos": 6123,
+      "nuevos": 6123,
+      "años": 11
     }
   }
 }

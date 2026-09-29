@@ -7,5 +7,7 @@ notas: Abogado, exjefe de la Sección de Atención a Público y Regulados de la
   administrativo (concluido el 3 de junio de 2026) por almacenar más de 3.000
   archivos creados con inteligencia artificial sexualizando a compañeras de
   trabajo y otras mujeres de su círculo; los antecedentes fueron derivados al
-  Ministerio Público (evento 20260815-4).
+  Ministerio Público (evento 20260815-4). No se registra rango en
+  `cargos[]`; el sumario no informa la fecha en que asumió el cargo de jefe de
+  sección, solo la del cierre.
 ---
