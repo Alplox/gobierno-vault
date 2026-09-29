@@ -22,7 +22,7 @@
      gobierno de Sebastián Piñera`, `...del segundo gobierno de Michelle Bachelet`,
      `...del segundo gobierno de Sebastián Piñera`, `...del gobierno de Gabriel Boric`,
      y `Ministro de Estado de Chile` para el gabinete vigente). Descargar wikitexto con
-     `curl "<https://es.wikipedia.org/w/index.php?title=<PAGIN>A>&action=raw"` y parsear
+     `curl "<https://es.wikipedia.org/w/index.php?title=<PAGINA>&action=raw>"` y parsear
      tablas `! Ministerio !! Nombre`.
    - **Fuentes oficiales por cartera** (preferentes para fechas):
      - Salud: <https://www.minsal.cl/historial-de-ministros-de-salud/> (tabla completa 1990–hoy)

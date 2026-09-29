@@ -600,6 +600,7 @@
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
 - [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
+- [2026/03/20260330-1 - Los cuatro gremios descartan el paro tras La Moneda: actualización del ICT, canal de denuncias y traspaso del diésel a tarifa](src/content/events/2026/03/20260330-1.md) — 6 fuentes
 - [2026/03/20260331-1 - Seremi de Obras Públicas de Tarapacá Mauricio Montealegre renuncia antes de asumir](src/content/events/2026/03/20260331-1.md) — 1 fuente
 - [2026/03/20260331-2 - Gobierno retira de Contraloría el nuevo reglamento de la Ley Cholito y genera preocupación en agrupaciones animalistas](src/content/events/2026/03/20260331-2.md) — 4 fuentes
 - [2026/03/20260331-3 - Ministro Undurraga confirma en CNN que el recorte al presupuesto de Culturas será de 3%, 'incluso un poco más': gremios y frente de trabajadores se declaran en alerta](src/content/events/2026/03/20260331-3.md) — 7 fuentes
@@ -620,6 +621,7 @@
 - [2026/04/20260408-2 - Nombramiento de Jorge Ravelo como seremi de Energía de Los Lagos es revocado](src/content/events/2026/04/20260408-2.md) — 1 fuente
 - [2026/04/20260408-3 - Renuncia seremi de la Mujer de Antofagasta Ángel Colque por no tener título profesional](src/content/events/2026/04/20260408-3.md) — 1 fuente
 - [2026/04/20260409-1 - Renuncia seremi de Desarrollo Social de Antofagasta Lizet Tapia por no tener título profesional](src/content/events/2026/04/20260409-1.md) — 1 fuente
+- [2026/04/20260409-2 - Ultimátum camionero del 8 y 9 de abril: la CNTC no descarta un paro nacional y la CNDC emplaza a generadores de carga ante una nueva alza](src/content/events/2026/04/20260409-2.md) — 7 fuentes
 - [2026/04/20260413-1 - Director de Migraciones defiende efectividad de la zanja fronteriza; detienen a dos bolivianos rellenándola con retroexcavadora](src/content/events/2026/04/20260413-1.md) — 5 fuentes
 - [2026/04/20260413-2 - Seremi de Trabajo de La Araucanía Francisco Farías renuncia por motivos personales](src/content/events/2026/04/20260413-2.md) — 5 fuentes
 - [2026/04/20260413-3 - Denuncian a la Contraloría almuerzo de Kast con excompañeros de la UC en La Moneda](src/content/events/2026/04/20260413-3.md) — 9 fuentes
@@ -635,11 +637,13 @@
 - [2026/04/20260416-1 - Gendarmería se incorpora a las Fuerzas de Orden y Seguridad Pública](src/content/events/2026/04/20260416-1.md) — 3 fuentes
 - [2026/04/20260416-2 - Gobierno anuncia que no renovará el subsidio eléctrico y luego rectifica: 2 millones de hogares expuestos antes del tarifazo](src/content/events/2026/04/20260416-2.md) — 5 fuentes
 - [2026/04/20260416-3 - Contrapoder revela que al menos seis ministros del gabinete de Kast se beneficiarían de la exención de contribuciones para mayores de 65 años](src/content/events/2026/04/20260416-3.md) — 2 fuentes
+- [2026/04/20260416-4 - El norte anuncia el paro y el sur se ordena: Tarapacá fija movilización con plazo de 5 días y Valparaíso convoca para el lunes 20](src/content/events/2026/04/20260416-4.md) — 8 fuentes
 - [2026/04/20260417-1 - Seremi de Culturas de Aysén Ángela Valdebenito renuncia por falta de experiencia](src/content/events/2026/04/20260417-1.md) — 2 fuentes
 - [2026/04/20260417-2 - Luis Calderón asume como Seremi de Seguridad de La Araucanía](src/content/events/2026/04/20260417-2.md) — 2 fuentes
 - [2026/04/20260417-3 - Mario Sepúlveda es reemplazado como seremi de Seguridad de La Araucanía tras 16 días](src/content/events/2026/04/20260417-3.md) — 5 fuentes
 - [2026/04/20260417-4 - Reunión clave entre Gobierno y camioneros: 15 días del Ejecutivo, 20 del gremio, y el paro de Valparaíso suspendido horas después de anunciarse](src/content/events/2026/04/20260417-4.md) — 11 fuentes
 - [2026/04/20260418-1 - Revelan contrato de Cristián Valenzuela: hasta $8,9 millones mensuales como asesor de Kast](src/content/events/2026/04/20260418-1.md) — 5 fuentes
+- [2026/04/20260420-1 - El 19 y 20 de abril: Valparaíso suspende el paro del lunes 20, el Biobío no descarta sumarse y la CNDC se declara en alerta total](src/content/events/2026/04/20260420-1.md) — 10 fuentes
 - [2026/04/20260421-1 - Seremi de Trabajo de Coquimbo Viviana Torres renuncia por no cumplir requisito de 10 semestres](src/content/events/2026/04/20260421-1.md) — 3 fuentes
 - [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 7 fuentes
 - [2026/04/20260422-2 - Correo interno de la directora del Programa de DDHH revela instrucción de no alegar en causas de lesa humanidad y contradice al ministro Rabat](src/content/events/2026/04/20260422-2.md) — 3 fuentes
@@ -1716,7 +1720,7 @@
 - [2026/09/20260920-2 - Lluvias dejan 105 viviendas afectadas en Concepción; en Juan Riquelme y Chaimávida el barro entra a las casas y la sede de la Junta de Vecinos queda inutilizada](src/content/events/2026/09/20260920-2.md) — 10 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 57 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
-- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 97 fuentes
+- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 102 fuentes
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
