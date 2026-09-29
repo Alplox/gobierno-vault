@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-29T18:52:04.662Z",
+  "actualizado": "2026-09-29T20:10:06.216Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3747,6 +3747,27 @@
       "articulos": 46268,
       "nuevos": 0,
       "años": 18
+    },
+    "marketing4ecommerce": {
+      "nombre": "Marketing4eCommerce Chile",
+      "ultima_sync": "2026-09-29T20:09:53.612Z",
+      "articulos": 4913,
+      "nuevos": 4913,
+      "años": 10
+    },
+    "revistaecociencias": {
+      "nombre": "Revista Ecociencias",
+      "ultima_sync": "2026-09-29T20:10:00.020Z",
+      "articulos": 2568,
+      "nuevos": 2568,
+      "años": 9
+    },
+    "infosalmon": {
+      "nombre": "InfoSalmón",
+      "ultima_sync": "2026-09-29T20:10:06.216Z",
+      "articulos": 6944,
+      "nuevos": 6944,
+      "años": 6
     }
   }
 }

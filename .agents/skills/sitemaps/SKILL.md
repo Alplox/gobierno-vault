@@ -293,6 +293,15 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
     tiene 11.739 con archivo **2013→2026**; y radioactiva parecía un archivo de
     2009-2021 con un único artículo de 2026, cuando son 47 shards que cubren
     2009→2026. La profundidad real solo aparece mirando el último shard.
+19. **Un 403 uniforme en los 4 endpoints suele ser el User-Agent, no el sitio.**
+    `probe-sitemap.mjs` manda un UA largo de Chrome y hay WAFs que lo bloquean de
+    forma reproducible: `www.fjguzman.cl` devolvía 403 en robots, sitemap.xml,
+    sitemap_index.xml y wp-sitemap.xml, pero el mismo `/sitemap_index.xml` —el que
+    el propio robots declara— responde **200 con 8 locs** con un UA corto
+    (`Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36`). El veredicto
+    del probe era "sin sitemap útil" y el medio queda ⬜ para siempre. **Antes de
+    anotar un descarte por 403, repetí la petición con un UA corto**: si el 403
+    desaparece, el medio es catalogable y lo que se bloquea es el fingerprint.
 
 ---
 

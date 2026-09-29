@@ -388,6 +388,13 @@ export const SIN_SITEMAP = {
   'mapuexpress.org': 'sin sitemap (los 4 endpoints no devuelven locs)',
   'rengonotas.cl': 'sin sitemap (los 4 endpoints no devuelven locs)',
   'redvalparaiso.com': 'Prontus: sitemap_pags.xml plano de 1.001 locs SIN <lastmod> ni fecha en el path, y sin shards paginados (los sitemap_pags_YYYYMM.xml.gz dan 404). El sitemap_news.xml publica los <loc> de diariosenred.com, otro dominio',
+  // Batch 26 (29-sep-2026): sondeados de las filas ⬜. Tres sitemaps entra al
+  // catálogo (marketing4ecommerce, revistaecociencias, infosalmon) y estos
+  // cuatro quedan descartados con el motivo verificado.
+  "elnacional.com": "prensa venezolana (El Nacional, Caracas), fuera del alcance chileno; además sus <loc> apuntan a bitlysdowssl-aws.com, no al dominio propio",
+  "riotimesonline.com": "The Rio Times: medio en inglés de Río de Janeiro (Brasil), no es prensa chilena",
+  "forbeschile.com": "inaccesible desde esta red: robots.txt, sitemap.xml, sitemap_index.xml y wp-sitemap.xml dan fetch failed",
+  "patagonia.cl": "es la tienda de ecommerce patagonia.com: su /sitemap.xml es un índice de sitemap_agentic_discovery y sitemap_products_*, sin artículos",
 };
 
 const NOMBRES_CATEGORIA = {

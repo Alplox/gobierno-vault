@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 29/9/2026, 15:52:04
-- **Medios registrados:** 535
-- **Artículos indexados:** 11.702.131
+- **Última sincronización:** 29/9/2026, 17:10:06
+- **Medios registrados:** 538
+- **Artículos indexados:** 11.716.556
 
 ## Por medio
 
@@ -204,6 +204,7 @@
 | Revista NOS | 7118 |
 | Anda | 7112 |
 | Electrominería | 6956 |
+| InfoSalmón | 6944 |
 | Radio Santa María | 6922 |
 | Diario Cauquenes | 6821 |
 | Universidad de los Lagos | 6669 |
@@ -246,6 +247,7 @@
 | CEP Chile | 5040 |
 | Ministerio de Relaciones Exteriores | 4988 |
 | Región Visual | 4958 |
+| Marketing4eCommerce Chile | 4913 |
 | El Coquimbano | 4877 |
 | Gobierno UDD | 4854 |
 | La Voz de Pucón | 4741 |
@@ -289,6 +291,7 @@
 | Colegio San Ignacio | 2663 |
 | Ministerio de Vivienda | 2650 |
 | Panorama Noticioso | 2630 |
+| Revista Ecociencias | 2568 |
 | Ministerio de Transportes y Telecomunicaciones | 2549 |
 | Noticias Biobío | 2536 |
 | ANEF | 2522 |

@@ -243,6 +243,7 @@
 | `infodefensa` | Infodefensa | `www.infodefensa.com/sitemap/lastarticles` | — | 100 | 1 |
 | `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 11.023 | 1 |
 | `informaalminuto` | Informa Al Minuto | `informaalminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.435 | 6 |
+| `infosalmon` | InfoSalmón | `infosalmon.cl/wp-sitemap.xml` | includeRe | 6.944 | 6 |
 | `infotarapaca` | Info Tarapacá | `infotarapaca.cl/sitemap.xml` | includeRe | 948 | 2 |
 | `insularfm` | Insular FM | `insularfm.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.188 | 1 |
 | `ipsnoticias` | IPS Agencia de Noticias | `ipsnoticias.net/wp-sitemap.xml` | articleOnly (Yoast) | 109.988 | 33 |
@@ -290,6 +291,7 @@
 | `mapuchediario` | Diario Mapuche | `www.mapuchediario.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.291 | 5 |
 | `maray` | Radio Maray | `www.maray.cl/sitemap_index.xml` | articleOnly (Yoast) | 16.978 | 3 |
 | `margamargatv` | Margamarga TV | `margamargatv.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.334 | 5 |
+| `marketing4ecommerce` | Marketing4eCommerce Chile | `marketing4ecommerce.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.913 | 10 |
 | `masnoticia` | Más Noticia | `masnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
 | `maulehoy` | Maule Hoy | `maulehoy.cl/sitemap.xml` | includeRe | 21.741 | 7 |
 | `mediabanco` | Mediabanco | `mediabanco.com/wp-sitemap.xml` | includeRe | 107.003 | 13 |
@@ -399,6 +401,7 @@
 | `reporteagricola` | Reporte Agrícola | `www.reporteagricola.cl/sitemap.xml` | — | 5.643 | 3 |
 | `resonanciadiario` | Resonancia Diario | `www.resonanciadiario.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.144 | 3 |
 | `reuters` | Reuters | `www.reuters.com/robots.txt` | includeRe | 17.739 | 4 |
+| `revistaecociencias` | Revista Ecociencias | `revistaecociencias.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.568 | 9 |
 | `revistanos` | Revista NOS | `revistanos.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.118 | 22 |
 | `rewildingchile` | Fundación Rewilding Chile | `rewildingchile.org/sitemap_index.xml` | articleOnly (Yoast) | 310 | 6 |
 | `rfi` | RFI Español | `www.rfi.fr/sitemaps/es/index.xml` | includeRe | 397.957 | 18 |

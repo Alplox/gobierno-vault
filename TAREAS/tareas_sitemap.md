@@ -4,7 +4,7 @@
 > local (`sitemaps/<medio>/`) y así poder revisar eventos de gobiernos pasados
 > con mayor variedad de puntos de vista al verificar datos.
 >
-> **Fuente de sitios:** [awesome-chilean-rss](<https://github.com/Alplox/awesome-chilean-rss>)
+> **Fuente de sitios:** [awesome-chilean-rss](https://github.com/Alplox/awesome-chilean-rss)
 > — `feeds-database.json` (sitios con feeds verificados) y `watchlist.json`
 > (candidatos, muchos sin feed RSS o con solo proxies de Google/Bing News).
 > Este archivo se genera con `pnpm run sitemaps-watchlist` (online por defecto) o `pnpm run sitemaps-watchlist -- --source <ruta-al-repo>` / `--offline`.
@@ -18,10 +18,10 @@
 ## Resumen
 
 - **Total de sitios de prensa listados:** 1001
-- ✅ En catálogo local: **457**
-- 🟡 Ya usados en el vault (`src/content/sources/*.md` / `organizations/*.md`) sin sitemap: **104**
-- 🔒 Verificados sin sitemap: **322**
-- ⬜ Pendientes de sincronizar: **118**
+- ✅ En catálogo local: **460**
+- 🟡 Ya usados en el vault (`src/content/sources/*.md` / `organizations/*.md`) sin sitemap: **105**
+- 🔒 Verificados sin sitemap: **326**
+- ⬜ Pendientes de sincronizar: **110**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -60,12 +60,12 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🔒 | **Energía Estratégica** | `energiaestrategica.com` | — | watchlist | sin sitemap: robots.txt sin línea Sitemap y los 3 endpoints dan 404 o 0 locs |
 | ⬜ | **Estrategia** | `estrategia.cl` | — | watchlist | sitio no responde |
 | ✅ | **FISA** | `fisa.cl` | — | watchlist | sitemap en catálogo (fisa) |
-| ⬜ | **Forbes Chile** | `forbeschile.com` | — | watchlist | sitio no responde |
+| 🔒 | **Forbes Chile** | `forbeschile.com` | — | watchlist | inaccesible desde esta red: robots.txt, sitemap.xml, sitemap_index.xml y wp-sitemap.xml da |
 | ⬜ | **Gerencia** | `gerencia.cl` | — | database | Feed principal de Gerencia |
 | ⬜ | **ICARE** | `icare.cl` | — | watchlist | sin feed RSS detectado |
 | ✅ | **Instituto de la Construcción** | `iconstruccion.cl` | — | watchlist | sitemap en catálogo (iconstruccion) |
 | ✅ | **Los Abogados Laborales** | `losabogadoslaborales.cl` | — | watchlist | sitemap en catálogo (losabogadoslaborales) |
-| ⬜ | **Marketing4eCommerce Chile** | `marketing4ecommerce.cl` | — | database | Feed principal de Marketing4eCommerce Chile |
+| ✅ | **Marketing4eCommerce Chile** | `marketing4ecommerce.cl` | — | database | sitemap en catálogo (marketing4ecommerce) |
 | 🔒 | **MCH (Mineria Chilena)** | `mch.cl` | — | database | fetch failed en sitemap/sitemap_index/wp-sitemap y robots.txt sin línea Sitemap |
 | 🟡 | **Mundo Minería** | `mundomineria.cl` | — | database | referenciado en src/content/sources/*.md |
 | 🔒 | **NSS** | `nss.cl` | — | watchlist | urlset plano de 754 locs, casi todas páginas corporativas replicadas en 4 idiomas (en/zh/p |
@@ -86,7 +86,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ⬜ | **SalmonExpert** | `salmonexpert.cl` | — | watchlist | sin feed RSS detectado |
 | ✅ | **SOFOFA** | `sofofa.cl` | — | database | sitemap en catálogo (sofofa) |
 | ⬜ | **Terminal Puerto Arica** | `portal.tpa.cl` | Arica Y Parinacota | watchlist | sitio no responde |
-| ⬜ | **The Rio Times** | `riotimesonline.com` | — | database | Publicación en inglés sobre negocios, finanzas, política y comunidades de expatriados en C |
+| 🔒 | **The Rio Times** | `riotimesonline.com` | — | database | The Rio Times: medio en inglés de Río de Janeiro (Brasil), no es prensa chilena |
 | ⬜ | **TodoLicitaciones Chile** | `todolicitaciones.cl` | — | watchlist | sin feed RSS detectado |
 | 🔒 | **VC Magazine** | `vcmagazine.cl` | Los Lagos | database | su sitemap_index declara 9 entradas, pero el único post-sitemap.xml devuelve 0 locs |
 
@@ -276,15 +276,15 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Generadoras de Chile** | `generadoras.cl` | — | database | sitemap en catálogo (generadoras) |
 | ⬜ | **Greenpeace Chile** | `greenpeace.org` | — | database | Greenpeace Chile, organización ambientalista con campañas locales en Chile |
 | 🔒 | **Induambiente** | `induambiente.cl` | — | watchlist | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
-| ⬜ | **InfoSalmon** | `infosalmon.cl` | — | database | Plataforma de difusión de conocimiento técnico y científico sobre acuicultura y salmonicul |
+| ✅ | **InfoSalmon** | `infosalmon.cl` | — | database | sitemap en catálogo (infosalmon) |
 | 🔒 | **Instituto Antártico Chileno** | `inach.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
 | ⬜ | **Instituto de Ecología y Biodiversidad** | `ie-b.cl` | — | watchlist | sitio no responde |
 | ⬜ | **Ladera Sur** | `laderasur.com` | — | database | Medio de comunicación y multiplataforma sobre naturaleza, conservación, medio ambiente, ci |
 | 🔒 | **Meteored Chile** | `meteored.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
 | ✅ | **Oceana Chile** | `oceana.org` | — | watchlist | sitemap en catálogo (oceana) |
 | 🟡 | **OLCA** | `olca.cl` | — | watchlist | referenciado en src/content/sources/*.md |
-| ⬜ | **Patagonia.cl** | `patagonia.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Revista Ecociencias** | `revistaecociencias.cl` | — | database | Revista digital chilena dedicada a la divulgación de ciencia, naturaleza, biodiversidad, s |
+| 🔒 | **Patagonia.cl** | `patagonia.cl` | — | watchlist | es la tienda de ecommerce patagonia.com: su /sitemap.xml es un índice de sitemap_agentic_d |
+| ✅ | **Revista Ecociencias** | `revistaecociencias.cl` | — | database | sitemap en catálogo (revistaecociencias) |
 | ⬜ | **Semillas de Agua** | `semillasdeagua.cl` | — | watchlist | feed stale (último item: 2015-10-18, 3984 días) |
 | ⬜ | **Sostenibilidad UNAB** | `sostenibilidad.unab.cl` | — | database | Portal institucional de la UNAB sobre sostenibilidad, gestión ambiental y carbono neutrali |
 | ⬜ | **Superintendencia del Medio Ambiente** | `portal.sma.gob.cl` | — | database | Organismo nacional que publica fiscalizaciones, sanciones, proyectos, permisos y medidas a |
@@ -614,7 +614,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **ANSA Latina** | `ansalatina.com` | — | watchlist | sitemap en catálogo (ansalatina) |
 | ✅ | **BBC Mundo** | `bbc.com` | — | database | sitemap en catálogo (bbc) |
 | ⬜ | **Cadena Política** | `cadenapolitica.com` | — | database | Portal mexicano de noticias políticas, salud y actualidad |
-| ⬜ | **El Nacional** | `elnacional.com` | — | database | Diario venezolano de noticias nacionales e internacionales |
+| 🔒 | **El Nacional** | `elnacional.com` | — | database | prensa venezolana (El Nacional, Caracas), fuera del alcance chileno; además sus `<loc>` apun |
 | ✅ | **France 24** | `france24.com` | — | database | sitemap en catálogo (france24) |
 | ⬜ | **Ground News - Chile** | `ground.news` | — | watchlist | sin feed RSS detectado |
 | ✅ | **HolaNews** | `holanews.com` | — | database | sitemap en catálogo (holanews) |
@@ -637,7 +637,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Federación Regionalista Verde Social** | `frevs.cl` | — | database | sitemap en catálogo (frevs) |
 | ✅ | **Frente Amplio** | `frenteampliochile.cl` | — | database | sitemap en catálogo (frenteampliochile) |
 | ⬜ | **Fundación Jaime Guzmán** | `fjguzman.cl` | — | database | Centro de estudios vinculado a la UDI |
-| ⬜ | **Fundación Nodo XXI** | `nodoxxi.cl` | — | database | Fundación chilena dedicada al análisis y debate sobre política, ciudadanía y sociedad |
+| 🟡 | **Fundación Nodo XXI** | `nodoxxi.cl` | — | database | referenciado en src/content/sources/*.md |
 | 🔒 | **Partido Comunista de Chile** | `pcchile.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
 | 🔒 | **Partido Demócrata Cristiano** | `pdc.cl` | — | database | sitemap_index plano sin sub-sitemaps (flat urlset) |
 | ✅ | **Partido Humanista de Chile** | `partidohumanista.cl` | — | database | sitemap en catálogo (partidohumanista) |

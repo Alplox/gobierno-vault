@@ -3063,6 +3063,37 @@ export const MEDIA = {
     // (sin fecha), pero el <lastmod> sí es la fecha real de publicación, así que
     // no hace falta locDateRe.
   },
+  marketing4ecommerce: {
+    nombre: 'Marketing4eCommerce Chile',
+    // Yoast: post-sitemap.xml..post-sitemap5.xml (articleOnly deja fuera
+    // page/category/post_tag/author). ~5.000 artículos de e-commerce, marketing
+    // digital y pagos de la industria chilena (Utalca/Telefónica). El path es un
+    // slug plano sin fecha, así que la fecha sale del <lastmod>: verificado
+    // contra `datePublished` (coinciden al día; el único desfase observado es un
+    // `dateModified` del mismo día).
+    index: 'https://marketing4ecommerce.cl/sitemap_index.xml',
+    articleOnly: true,
+  },
+  revistaecociencias: {
+    nombre: 'Revista Ecociencias',
+    // Yoast: post-sitemap.xml..post-sitemap3.xml (~3.000 artículos de ciencia y
+    // ambiente en Chile). El path sí trae fecha (/YYYY/MM/DD/), así que
+    // locDateRe manda sobre el <lastmod>, que es `dateModified` (en la muestra
+    // verificada, 10 días después de la publicación).
+    index: 'https://revistaecociencias.cl/sitemap_index.xml',
+    articleOnly: true,
+    locDateRe: /\/((?:19|20)\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  infosalmon: {
+    nombre: 'InfoSalmón',
+    // WP 5.5+ nativo: wp-sitemap-posts-post-1..4.xml (2.000 locs cada uno, ~8.000
+    // artículos). articleOnly no reconoce el prefijo wp-, va includeRe. Ojo con la
+    // fecha: el <lastmod> es el `dateModified` en hora local (-03:00) y el path
+    // no trae fecha, así que un retoque posterior puede correr el día; anotado
+    // porque no hay fecha alternativa disponible.
+    index: 'https://infosalmon.cl/wp-sitemap.xml',
+    includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
+  },
   // Descartados batch 25: eldivisadero/soytemuco/soypuertomontt/soyarica/
   // soyosorno/cronicanoticias — sin robots (fetch failed) o endpoints con 0 locs.
   // eha.cl (y su alias elheraldoaustral.cl, mismo sitemap): urlset plano de 41
