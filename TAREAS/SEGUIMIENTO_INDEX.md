@@ -3,15 +3,14 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 347
+**Total tareas:** 346
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 16 · 2020: 5 · 2021: 3 · 2022: 5 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 267 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 5 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 267 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 19 · S: 316 · V: 12 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 18 · S: 316 · V: 12 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
-| A-2019-001 | ⬜ | 2026-08-27 | Eventos nov-2019 — diversificación de fuentes y án | Ampliar fuentes de 20191114-1 (Catrillanca aniversario): buscar cobertura de Emol del juicio oral y de CNN Chile del ... | `20191114-1` | Origen: <https://www.theclinic.cl/2019/11/14/indh-querellante-a-un-ano-de-la-muerte-de-camilo-catrillanca-se-inicia-juicio-oral-contra-carabineros/> |
 | A-2022-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Pendiente de verificar/añadir: (1) movilización ENAP/combustible de mayo de 2022 (T13: "ENAP retoma sus operaciones",... | — | Origen: <https://example.com/pendiente-revisar> |
 | A-2025-001 | ⬜ | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados (página /sueldos, evento 20251224-2) — validado 23-ago-2026: recon... | `20251224-2` | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo>]=2026-06 |
 | A-2026-001 | ⬜ | 2022-07-05 | Sugerencias pendientes (para no perderlas) | Fullclean / contratos con el Estado — seguimiento (evento 20260310-1): verificar (1) la respuesta del alcalde Mario D... | `20260310-1` | Origen: <https://example.com/pendiente-revisar> |

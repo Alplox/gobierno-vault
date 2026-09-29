@@ -155,6 +155,8 @@ slug, la entrada sobra y hay que borrarla.
 | CMS propio mensual | `…/YYYY/MM.xml` | `dateFromSitemapPath: /…\/(\d{4})\/(\d{2})\.xml$/` (ver trampa 3) |
 | Índice paginado de 100 | `news/{0,100,…}/sitemap.xml` | `includeRe` con sufijo del padre **opcional** (trampa 1) |
 | Urlset plano con páginas estáticas mezcladas | `/sitemap.xml` | `urlRe: /\/20\d{2}\/\d{2}\/\d{2}\//` + `locDateRe` (trampa 4) |
+| WP 5.5+ **sin guiones bajos** | `/wp-sitemap.xml` | `includeRe: /wp_sitemap_posts_post_\d+\.xml$/i` — `articleOnly` no lo reconoce, y su índice cuelga 7 shards de `post_tag` de 1.000 locs cada uno |
+| Índice propio de radio (`/sitemap/news/N/`) | el shard de noticias | sin `includeRe` si el `index` ya es el de noticias; ojo al `<lastmod>undefined</lastmod>` (trampa 15) |
 | Sin fecha en el sitemap, fecha en el path del artículo | — | `locDateRe` con grupos YYYY/MM/DD (el día es opcional: si el path solo trae YYYY/MM queda día 01). Rango `(19\|20)\d{2}` si hay historia pre-2000 |
 | Publica en hora local y el `lastmod` es el instante UTC | — | `preferLocDate: true` + `locDateRe`, y reconstruir con `--replace` (trampa 5) |
 
@@ -241,6 +243,25 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
     Lo mismo pasa con las tools de edición: su `oldString` tiene que traer el `\r\n`.
     Es el mismo motivo por el que el corpus de contenido es mixto y toda regex de
     frontmatter lleva `\r?`.
+15. **`<lastmod>undefined</lastmod>` no rompe el sync: lo pierde en silencio.**
+    `isoDate()` no matchea `"undefined"`, devuelve `null` y la entrada se salta
+    (`if (!fecha) continue`). El medio entra al catálogo "con éxito" pero sin esas
+    entradas, y no sale ningún aviso. Radio Polar anunciaba ~10.000 locs y dejó
+    8.118: el 15% venía con el `lastmod` literal `undefined` y sin fecha en el path.
+    **Compará siempre los locs que anuncia el sitemap con las entradas que
+    quedaron escritas** (el resumen del sync y el conteo por año lo delatan): un
+    medio puede quedar con un tercio menos de lo prometido.
+16. **Un `urlRe` también sirve para tirar las fechas falsas, no solo para elegir
+    artículos.** El Marino (Pichilemu) tiene 422 locs con fecha anterior a 2000
+    (`/1913/02/02/nuestros-propositos/`): son páginas institucionales con la fecha de
+    fundación del diario, no artículos. Con un `urlRe` que exige `/20\d{2}/` quedan
+    las 17.976 reales y el archivo arranca en 2000 en vez de 1907.
+17. **Si `check-fechas` dice "el locDateRe no matchea ninguna URL", el arreglo no
+    es relajar el patrón: es decidir qué fecha manda.** Con el path `/YYYY/MM/`
+    (sin día) un patrón de 3 grupos nunca matchea, y cambiarlo a 2 grupos no
+    arregla nada: baja **todas** las fechas a día 01. Si el `<lastmod>` es de
+    publicación y trae el día real (Alto La Dehesa), lo correcto es quitar
+    `preferLocDate` y `locDateRe` y quedarse con el `lastmod`.
 
 ---
 

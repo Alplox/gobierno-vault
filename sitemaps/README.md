@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 28/9/2026, 23:53:30
-- **Medios registrados:** 505
-- **Artículos indexados:** 11.470.921
+- **Última sincronización:** 29/9/2026, 0:43:12
+- **Medios registrados:** 521
+- **Artículos indexados:** 11.577.142
 
 ## Por medio
 
@@ -80,6 +80,7 @@
 | Diario Antofagasta | 27.359 |
 | UDLA | 26.866 |
 | Edición Cero | 26.824 |
+| Duplos | 26.467 |
 | El Noticiero del Huasco | 26.075 |
 | Vallenar Digital | 25.789 |
 | Diario Regional Aysén | 25.400 |
@@ -113,6 +114,7 @@
 | Diario El Pulso | 18.196 |
 | Hora de Noticias | 18.106 |
 | Diario Angamos | 18.004 |
+| El Marino (Pichilemu) | 17.976 |
 | El Quinto Poder | 17.724 |
 | Somos Chile | 17.544 |
 | Calama en Línea | 17.452 |
@@ -141,6 +143,7 @@
 | Clave 9 | 13.125 |
 | VLN Radio | 12.549 |
 | Portal Metropolitano | 12.538 |
+| Arica Hoy | 12.459 |
 | Informa Al Minuto | 12.435 |
 | Portal RedSalud | 12.203 |
 | Música y Noticias | 12.195 |
@@ -165,10 +168,12 @@
 | Sera Noticia | 9278 |
 | Quilpué Online | 9262 |
 | Ministerio del Medio Ambiente | 9225 |
+| Desierto FM (Antofagasta) | 9222 |
 | Noticias U. del Bío-Bío | 9128 |
 | Noticias del Sur | 9078 |
 | Universidad Autónoma de Chile | 9001 |
 | El Informador Los Andes | 8969 |
+| TVO San Vicente | 8964 |
 | Iquique TV | 8813 |
 | Mestizos Magazine | 8638 |
 | El Porteño | 8611 |
@@ -176,6 +181,7 @@
 | Alerta Noticias | 8434 |
 | Margamarga TV | 8334 |
 | aDiarioCR | 8209 |
+| Radio Polar (Magallanes) | 8118 |
 | Temuco Diario | 7878 |
 | El Diario de La Araucanía | 7863 |
 | Diario Linares | 7698 |
@@ -209,6 +215,7 @@
 | USM | 6170 |
 | Colegio de Profesores | 6123 |
 | Tus Noticias | 6112 |
+| Los Lagos al Día | 5996 |
 | Pichilemu News | 5980 |
 | UTE USACH Noticias | 5960 |
 | UTE USACH Noticias | 5896 |
@@ -217,6 +224,7 @@
 | Quirihue Noticias | 5721 |
 | Arica Chile | 5694 |
 | Valparaíso Noticias | 5691 |
+| TV Canal 5 (Puerto Montt) | 5689 |
 | Disorder (magazine) | 5642 |
 | Reporte Agrícola | 5603 |
 | Sitio del Suceso | 5512 |
@@ -242,10 +250,12 @@
 | El Morro de Arica | 4610 |
 | Radio FM Centro | 4588 |
 | Norte Online | 4584 |
+| Fresia Ahora | 4460 |
 | Gobierno Regional de Tarapacá | 4403 |
 | Chile Travel | 4376 |
 | Región de Coquimbo | 4343 |
 | Primera Fuente | 4314 |
+| El Nortino (Alto Hospicio) | 4247 |
 | Insular FM | 4188 |
 | Chile País Minero | 4070 |
 | La Máquina Medio | 4063 |
@@ -302,6 +312,7 @@
 | Museo Violeta Parra | 1564 |
 | Radio Interamericana | 1546 |
 | Colegio de Enfermeras | 1491 |
+| Vértice TV (Puerto Montt) | 1421 |
 | Universidad Mayor | 1350 |
 | Radio Modelo | 1325 |
 | Diario Los Lagos | 1302 |
@@ -360,6 +371,7 @@
 | ComunidadMujer | 546 |
 | Contrapoder Chile | 535 |
 | Observatorio Medicina UC | 530 |
+| Mi San Felipe | 513 |
 | The Guardian | 508 |
 | Diario Concepción | 501 |
 | Hogar de Cristo | 500 |
@@ -380,6 +392,7 @@
 | Colegio Alemán de Santiago | 375 |
 | Instituto de la Construcción | 363 |
 | SENAPRED | 359 |
+| Diario Aysén | 320 |
 | ABIF | 312 |
 | Fundación Rewilding Chile | 310 |
 | Partido Igualdad | 295 |
@@ -390,6 +403,7 @@
 | Puerto a Puerto | 250 |
 | Queilen | 247 |
 | Diario El Gong | 246 |
+| Radio Siente (Arica) | 242 |
 | Defensa Civil de Chile | 229 |
 | Fundación Legado Chile | 217 |
 | Contapapaya | 206 |
@@ -405,6 +419,7 @@
 | Reportea | 120 |
 | Partido Liberal de Chile | 106 |
 | Frente Amplio | 105 |
+| Arica TV | 104 |
 | Nacimentano | 102 |
 | BBC Mundo | 100 |
 | Infodefensa | 100 |
@@ -423,6 +438,7 @@
 | Quintero | 30 |
 | El Libertario | 26 |
 | RN | 25 |
+| Alto La Dehesa | 23 |
 | Nexos Chile | 19 |
 | Factchecking.cl | 14 |
 | Gobierno de Chile | 9 |

@@ -1692,11 +1692,12 @@
 - [2026/09/20260916-6 - Kaiser en Punto de Quiebre: Chile tuvo suerte de no terminar en un baño de sangre en el 18-O y la violencia de 1973 fue evidente](src/content/events/2026/09/20260916-6.md) — 5 fuentes
 - [2026/09/20260916-7 - Municipalidad de Santiago se querella contra adultos que habrían pagado $70 mil a exalumno de 14 años por lanzar molotov el 11-S](src/content/events/2026/09/20260916-7.md) — 8 fuentes
 - [2026/09/20260916-8 - Balance a seis meses: el Gobierno de Kast acumula 47 salidas de autoridades, 37 de ellas seremis, y ordena una revisión de la segunda línea regional](src/content/events/2026/09/20260916-8.md) — 7 fuentes
+- [2026/09/20260916-9 - Cicardini y Manouchehri (PS) emplazan a Kast y a Quiroz por el 18 más caro de la historia y piden la salida del ministro](src/content/events/2026/09/20260916-9.md) — 6 fuentes
 - [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 13 fuentes
 - [2026/09/20260917-2 - Robo a departamento de asistente de Producción de Presidencia en San Miguel: investigan sustracción de discos duros con presunta información secreta](src/content/events/2026/09/20260917-2.md) — 27 fuentes
 - [2026/09/20260917-3 - Pancho Saavedra rompe el protocolo en la inauguración de La Gran Fonda con una paya a quienes conducen Chile](src/content/events/2026/09/20260917-3.md) — 9 fuentes
 - [2026/09/20260917-4 - Corte de Santiago rechaza amparo de Iturriaga Neumann para cumplir sus más de 500 años en domicilio; seguirá en Punta Peuco](src/content/events/2026/09/20260917-4.md) — 6 fuentes
-- [2026/09/20260917-5 - Reuters publica un memo con una propuesta de gasolina E10 y el Ministerio de Energía la desmiente: no hay ninguna propuesta formal](src/content/events/2026/09/20260917-5.md) — 16 fuentes
+- [2026/09/20260917-5 - Reuters publica un memo con una propuesta de gasolina E10 y el Ministerio de Energía la desmiente: no hay ninguna propuesta formal](src/content/events/2026/09/20260917-5.md) — 25 fuentes
 - [2026/09/20260917-6 - Quiroz tras el ChileDay: el bencinazo está envejeciendo bien y evitó US$2.500 millones](src/content/events/2026/09/20260917-6.md) — 5 fuentes
 - [2026/09/20260917-7 - Beller declara en Cámara Gesell por enriquecimiento ilícito de Cerimedo y Fiscalía confirma causa narco en Beni con vínculo del jefe de inteligencia Correa](src/content/events/2026/09/20260917-7.md) — 6 fuentes
 - [2026/09/20260918-1 - Cántico de «Chúpalo Kast» en fondas del Parque O'Higgins y el Estadio Nacional durante Fiestas Patrias y respuesta de Sichel en Ñuñoa](src/content/events/2026/09/20260918-1.md) — 38 fuentes
@@ -1721,6 +1722,7 @@
 - [2026/09/20260923-3 - UAF advierte que el acceso a información bancaria protegida por secreto bancario tarda 28 días hábiles en promedio](src/content/events/2026/09/20260923-3.md) — 12 fuentes
 - [2026/09/20260923-4 - Kast se reúne con Delcy Rodríguez y proyecta restablecer en meses las relaciones diplomáticas con Venezuela](src/content/events/2026/09/20260923-4.md) — 12 fuentes
 - [2026/09/20260923-5 - Contraloría exige a Presidencia acreditar en 10 días hábiles la calidad de experto de Romer Rubio, asesor del Segundo Piso sin título revalidado en Chile](src/content/events/2026/09/20260923-5.md) — 10 fuentes
+- [2026/09/20260923-6 - Cámara aprueba la Ley Antibarricadas 2.0 y la despacha al Senado con la indicación Leiva que exime protestas pacíficas: 89 a favor y revés parcial al Gobierno](src/content/events/2026/09/20260923-6.md) — 6 fuentes
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes
@@ -1739,6 +1741,7 @@
 - [2026/09/20260926-1 - Segundo día de corte en la ruta a Cabrero: vecinos de la población Juan Riquelme vuelven a manifestarse por los cortes de agua](src/content/events/2026/09/20260926-1.md) — 7 fuentes
 - [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
 - [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
+- [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
 
 ## 2025
 
@@ -2026,7 +2029,7 @@
 - [2019/11/20191112-1 - Manifestantes derriban con láseres un dron policial en Santiago, táctica difundida desde las protestas de Hong Kong](src/content/events/2019/11/20191112-1.md) — 1 fuente
 - [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 24 fuentes
 - [2019/11/20191113-1 - Audio filtrado del general Mario Rozas ante suboficiales — "A nadie voy a dar de baja por procedimiento policial, aunque me obliguen"](src/content/events/2019/11/20191113-1.md) — 7 fuentes
-- [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 20 fuentes
+- [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 28 fuentes
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191115-2 - CIDH anuncia visita técnica a Chile entre el 18 y 21 de noviembre para evaluar la situación de derechos humanos](src/content/events/2019/11/20191115-2.md) — 5 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 5 fuentes

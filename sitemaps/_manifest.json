@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-29T02:53:30.286Z",
+  "actualizado": "2026-09-29T03:43:12.324Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3537,6 +3537,118 @@
       "articulos": 197,
       "nuevos": 197,
       "años": 7
+    },
+    "duplos": {
+      "nombre": "Duplos",
+      "ultima_sync": "2026-09-29T03:40:31.457Z",
+      "articulos": 26467,
+      "nuevos": 26467,
+      "años": 7
+    },
+    "diarioelmarino": {
+      "nombre": "El Marino (Pichilemu)",
+      "ultima_sync": "2026-09-29T03:40:37.436Z",
+      "articulos": 17976,
+      "nuevos": 17976,
+      "años": 26
+    },
+    "aricahoy": {
+      "nombre": "Arica Hoy",
+      "ultima_sync": "2026-09-29T03:40:46.346Z",
+      "articulos": 12459,
+      "nuevos": 12459,
+      "años": 15
+    },
+    "radiopolar": {
+      "nombre": "Radio Polar (Magallanes)",
+      "ultima_sync": "2026-09-29T03:41:24.616Z",
+      "articulos": 8118,
+      "nuevos": 8118,
+      "años": 2
+    },
+    "tvosanvicente": {
+      "nombre": "TVO San Vicente",
+      "ultima_sync": "2026-09-29T03:41:28.117Z",
+      "articulos": 8964,
+      "nuevos": 8964,
+      "años": 13
+    },
+    "desiertofm": {
+      "nombre": "Desierto FM (Antofagasta)",
+      "ultima_sync": "2026-09-29T03:41:31.684Z",
+      "articulos": 9222,
+      "nuevos": 9222,
+      "años": 4
+    },
+    "loslagosaldia": {
+      "nombre": "Los Lagos al Día",
+      "ultima_sync": "2026-09-29T03:41:37.526Z",
+      "articulos": 5996,
+      "nuevos": 5996,
+      "años": 2
+    },
+    "tvcanal5": {
+      "nombre": "TV Canal 5 (Puerto Montt)",
+      "ultima_sync": "2026-09-29T03:41:40.292Z",
+      "articulos": 5689,
+      "nuevos": 5689,
+      "años": 7
+    },
+    "fresiaahora": {
+      "nombre": "Fresia Ahora",
+      "ultima_sync": "2026-09-29T03:41:44.312Z",
+      "articulos": 4460,
+      "nuevos": 4460,
+      "años": 6
+    },
+    "diarioelnortino": {
+      "nombre": "El Nortino (Alto Hospicio)",
+      "ultima_sync": "2026-09-29T03:42:19.558Z",
+      "articulos": 4247,
+      "nuevos": 4247,
+      "años": 7
+    },
+    "verticetv": {
+      "nombre": "Vértice TV (Puerto Montt)",
+      "ultima_sync": "2026-09-29T03:42:27.704Z",
+      "articulos": 1421,
+      "nuevos": 1421,
+      "años": 2
+    },
+    "misanfelipe": {
+      "nombre": "Mi San Felipe",
+      "ultima_sync": "2026-09-29T03:42:29.455Z",
+      "articulos": 513,
+      "nuevos": 513,
+      "años": 5
+    },
+    "diarioaysen": {
+      "nombre": "Diario Aysén",
+      "ultima_sync": "2026-09-29T03:42:31.726Z",
+      "articulos": 320,
+      "nuevos": 320,
+      "años": 5
+    },
+    "radiosiente": {
+      "nombre": "Radio Siente (Arica)",
+      "ultima_sync": "2026-09-29T03:42:33.864Z",
+      "articulos": 242,
+      "nuevos": 242,
+      "años": 11
+    },
+    "aricastv": {
+      "nombre": "Arica TV",
+      "ultima_sync": "2026-09-29T03:42:36.196Z",
+      "articulos": 104,
+      "nuevos": 104,
+      "años": 2
+    },
+    "altoladehesa": {
+      "nombre": "Alto La Dehesa",
+      "ultima_sync": "2026-09-29T03:43:12.324Z",
+      "articulos": 23,
+      "nuevos": 23,
+      "años": 4
     }
   }
 }
