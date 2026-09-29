@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-28T23:11:59.702Z",
+  "actualizado": "2026-09-29T02:53:30.286Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3488,6 +3488,55 @@
       "articulos": 6123,
       "nuevos": 6123,
       "años": 11
+    },
+    "disorder": {
+      "nombre": "Disorder (magazine)",
+      "ultima_sync": "2026-09-29T02:36:09.741Z",
+      "articulos": 5642,
+      "nuevos": 5642,
+      "años": 18
+    },
+    "cbs": {
+      "nombre": "Cuerpo de Bomberos de Santiago",
+      "ultima_sync": "2026-09-29T02:36:12.195Z",
+      "articulos": 2084,
+      "nuevos": 2084,
+      "años": 6
+    },
+    "dep": {
+      "nombre": "Dirección de Educación Pública",
+      "ultima_sync": "2026-09-29T02:36:15.423Z",
+      "articulos": 1162,
+      "nuevos": 1162,
+      "años": 11
+    },
+    "vialidad": {
+      "nombre": "Dirección de Vialidad (MOP)",
+      "ultima_sync": "2026-09-29T02:53:22.357Z",
+      "articulos": 1171,
+      "nuevos": 1171,
+      "años": 18
+    },
+    "anepe": {
+      "nombre": "ANEPE (empleados públicos)",
+      "ultima_sync": "2026-09-29T02:53:28.090Z",
+      "articulos": 753,
+      "nuevos": 753,
+      "años": 7
+    },
+    "anci": {
+      "nombre": "ANI (Agencia Nacional de Ciberseguridad)",
+      "ultima_sync": "2026-09-29T02:53:29.140Z",
+      "articulos": 796,
+      "nuevos": 796,
+      "años": 8
+    },
+    "dicrep": {
+      "nombre": "DICREP (Crédito Prendario)",
+      "ultima_sync": "2026-09-29T02:53:30.286Z",
+      "articulos": 197,
+      "nuevos": 197,
+      "años": 7
     }
   }
 }

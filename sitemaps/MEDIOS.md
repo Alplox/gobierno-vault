@@ -17,8 +17,10 @@
 | `alertanoticias` | Alerta Noticias | `alertanoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.434 | 7 |
 | `alertanoticiastemuco` | Alerta Noticias Temuco | `alertanoticiastemuco.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.246 | 2 |
 | `amchamchile` | AmCham Chile | `amchamchile.cl/sitemap_index.xml` | includeRe | 10.640 | 12 |
+| `anci` | ANI (Agencia Nacional de Ciberseguridad) | `anci.gob.cl/sitemap.xml` | — | 796 | 8 |
 | `anda` | Anda | `anda.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.112 | 10 |
 | `anef` | ANEF | `anef.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.522 | 5 |
+| `anepe` | ANEPE (empleados públicos) | `anepe.cl/wp-sitemap.xml` | includeRe | 753 | 7 |
 | `angolnoticias` | Angol Noticias | `www.angolnoticiasnew.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.624 | 4 |
 | `anip` | ANIP | `anip.cl/sitemap.xml` | — | 70 | 5 |
 | `ansalatina` | ANSA Latina | `www.ansalatina.com/robots.txt, www.ansalatina.com/americalatina/sitemaps/sito_sitemap_index.xml` | — | 587 | 1 |
@@ -44,6 +46,7 @@
 | `capa9` | Capa9 | `capa9.net/sitemap.xml` | — | 37.352 | 18 |
 | `capodeprovincia` | El Capo de Provincia | `capodeprovincia.cl/wp-sitemap.xml` | includeRe | 1.854 | 17 |
 | `cauquenesnet` | CauquenesNet | `cauquenesnet.cl/robots.txt` | includeRe | 20.449 | 19 |
+| `cbs` | Cuerpo de Bomberos de Santiago | `www.cbs.cl/wp-sitemap.xml` | includeRe | 2.084 | 6 |
 | `cchc` | CCHC | `cchc.cl/sitemap.xml` | includeRe | 0 | 0 |
 | `cclm` | Centro Cultural La Moneda | `cclm.cl/sitemap_index.xml` | articleOnly (Yoast) | 140 | 7 |
 | `ccs` | Cámara de Comercio de Santiago | `www.ccs.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.148 | 7 |
@@ -82,6 +85,7 @@
 | `defensacivil` | Defensa Civil de Chile | `defensacivil.cl/wp-sitemap.xml` | includeRe | 229 | 4 |
 | `defensorianinez` | Defensoría de la Niñez | `www.defensorianinez.cl/sitemap_index.xml` | articleOnly (Yoast) | 901 | 8 |
 | `demaracordilleratv` | De Mar a Cordillera TV | `demaracordilleratv.cl/wp-sitemap.xml` | includeRe | 4.670 | 6 |
+| `dep` | Dirección de Educación Pública | `dep.gob.cl/wp-sitemap.xml` | includeRe | 1.162 | 11 |
 | `desenfoque` | Desenfoque | `desenfoque.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.637 | 5 |
 | `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 2.183 | 2 |
 | `dialogosur` | Diálogo Sur | `dialogosur.cl/robots.txt` | includeRe | 41.396 | 15 |
@@ -118,6 +122,8 @@
 | `diariosurnoticias` | Diario Sur Noticias | `diariosurnoticias.com/sitemap_index.xml` | articleOnly (Yoast) | 14.389 | 13 |
 | `diariotalca` | Diario Talca | `diariotalca.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.421 | 6 |
 | `diariousach` | Diario USACH | `www.diariousach.cl/robots.txt` | — | 73 | 1 |
+| `dicrep` | DICREP (Crédito Prendario) | `www.dicrep.cl/wp-sitemap.xml` | includeRe | 197 | 7 |
+| `disorder` | Disorder (magazine) | `www.disorder.cl/wp-sitemap.xml` | includeRe | 5.642 | 18 |
 | `dsstgo` | Colegio Alemán de Santiago | `dsstgo.cl/sitemap_index.xml` | articleOnly (Yoast) | 375 | 2 |
 | `duna` | Radio Duna | `duna.cl/sitemap.xml` | includeRe | 47.571 | 2 |
 | `ecoceanos` | ECOceanos | `www.ecoceanos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.157 | 12 |
@@ -428,6 +434,7 @@
 | `vallenardigital` | Vallenar Digital | `vallenardigital.cl/sitemap.xml` | includeRe | 25.789 | 15 |
 | `valparaisonoticias` | Valparaíso Noticias | `www.valparaisonoticias.cl/sitemap.xml` | — | 5.691 | 9 |
 | `vergara240` | Vergara 240 | `vergara240.udp.cl/sitemap_index.xml` | articleOnly (Yoast) | 662 | 5 |
+| `vialidad` | Dirección de Vialidad (MOP) | `vialidad.mop.gob.cl/wp-sitemap.xml` | includeRe | 1.171 | 18 |
 | `vilasradio` | Vilas Radio | `vilasradio.cl/wp-sitemap.xml` | includeRe | 15.178 | 2 |
 | `villarricaldia` | Villarrica al Día | `villarricaldia.cl/sitemap.xml` | — | 77 | 1 |
 | `vivimoslanoticia` | Vivimos la Noticia | `vivimoslanoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |

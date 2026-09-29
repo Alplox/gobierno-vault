@@ -41,8 +41,6 @@ export const SIN_SITEMAP = {
   'efe.cl': 'verificado sin sitemap (solo RSS /feed/)',
   'fiscaliadechile.cl': 'verificado sin sitemap (Drupal 10 sin xmlsitemap)',
   'pjud.cl': 'verificado sin sitemap (robots.txt 404)',
-  'ssff.cl': 'verificado sin sitemap (robots.txt 404)',
-  'chvnoticias.cl': 'verificado sin sitemap (todos los endpoints devuelven la home)',
   'bcn.cl': 'sitemap de portal con ~70k sub-sitemaps (normas LeyChile, no prensa) — no catalogable',
   // Intentos previos documentados en scripts/sitemaps/media.mjs (flat urlset /
   // DNS / 450 / 403 / 0 artículos): no reintentar. Solo dominios hoy ⬜ —
@@ -100,7 +98,6 @@ export const SIN_SITEMAP = {
   // La nota debe decir qué se verificó, no solo "no sirve".
   // Batch 16:
   'lun.com': 'robots.txt (en www) 200 sin línea Sitemap y con `Googlebot: Disallow: /`; el apex falla el handshake TLS (verificado 28-09-2026)',
-  'elmatutino.cl': '/sitemap.xml es un urlset de 1 loc (la home)',
   'noticiasimportantes.cl': '/sitemap.xml responde 0 locs (declarado en robots)',
   'sancarlosaldia.cl': 'robots declara /sitemap.xml pero responde HTTP 404',
   'diarioelcondor.cl': 'wp-sitemap.xml solo declara posts-page + taxonomías, sin posts',
@@ -130,9 +127,47 @@ export const SIN_SITEMAP = {
   'quintainterior.cl': 'los 4 endpoints WP devuelven 0 locs',
   'radioaraucania.cl': 'los 4 endpoints WP devuelven 0 locs',
   'eldiariopanguipulli.cl': 'los 4 endpoints WP devuelven 0 locs',
-  'lapaia.cl': '/sitemap.xml es un índice de 3 entradas (categorías), sin artículos',
   'terceradosis.cl': '/sitemap.xml es un índice de 3 entradas (pags/image/video), sin artículos',
   'informechile.cl': '/sitemap.xml es un índice de 2 entradas, sin artículos',
+  // Batch 33 (categoría Gobierno / instituciones, los 22 pendientes ⬜):
+  'elmartutino.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven HTTP 403',
+  'lapaila.cl': 'urlset plano de 3 locs (la home + 2 páginas de categoría), sin artículos',
+  'diarioatacama.cl': 'su /sitemap.xml no es suyo: devuelve el índice compartido de Prontus con los sitemaps de estrellaarica.cl y estrellaiquique.cl (19 locs de esos sitios); los otros endpoints dan HTTP 450',
+  'estrellaconcepcion.cl': 'su /sitemap.xml no es suyo: devuelve el índice compartido de Prontus con los sitemaps de estrellaarica.cl y estrellaiquique.cl (19 locs de esos sitios); los otros endpoints dan HTTP 450',
+  'aricamia.cl': 'Yoast con 51 locs, pero las 51 tienen <lastmod> 2026-03-03 (el día que se publicó el sitio) y son landings de sección (/gastronomia-arica/, /universidades-arica/), no artículos',
+  'chile.gob.cl': 'su robots declara `http://www.chile.gob.cl/chile/sitemap_pags.xml`, que devuelve 404; los otros endpoints dan 0 locs',
+  'dprlaaraucania.dpr.gob.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'providencia.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'snamchile.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'cultura.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'gobiernoenterreno.interior.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
+  'muniarica.cl': 'su robots declara /sitemap.xml, que responde HTTP 500; sitemap_index.xml y wp-sitemap.xml dan 0 locs',
+  'chilecompra.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'mercadopublico.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'minagri.gob.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'munistgo.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'munivina.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'prochile.gob.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'transparenciaactiva.presidencia.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'marcachile.cl': 'post-sitemap.xml con 1.667 artículos, pero el <lastmod> es una migración de feb-2025 (1.041 con 2025-02-12) mientras el datePublished real llega a 2008, y no hay fecha en el path: no hay forma de fecharlos',
+  'metro.cl': 'urlset plano de 66 locs, todas páginas de servicio (planificador, estado-red, estaciones, tarifas, carga Bip), sin noticias',
+  'ammot.cl': 'wp-sitemap con un único shard de 9 posts, varios con slug opaco (937-2, 954-2): reevaluar si crece',
+  'spensiones.cl': 'alias: el sitio real es pensiones.cl (su sitemap declara post-sitemap1.xml), con solo 4 locs, 3 artículos y ninguno con fecha en el path: reevaluar si crece',
+  // Batch 32 (gobierno / medio ambiente / negocios):
+  'camara.cl': 'bloquea el rastreo: robots.txt responde HTTP 403 y los 3 endpoints estándar también 403',
+  'dt.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'sag.gob.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'shoa.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'diariooficial.interior.gob.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'ine.gob.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'minmineria.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'tierraadentro.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'induambiente.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
+  'revistachilenadepediatria.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven HTTP 403',
+  'musicapopular.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
+  'capital.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde)',
+  'vcmagazine.cl': 'su sitemap_index declara 9 entradas, pero el único post-sitemap.xml devuelve 0 locs',
+  'nss.cl': 'urlset plano de 754 locs, casi todas páginas corporativas replicadas en 4 idiomas (en/zh/pt/es), sin artículos',
   // Batch 31 (categorías cultura/comunidad):
   'museodelamemoria.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404',
   'villagrimaldi.cl': 'robots.txt 404 y los 3 endpoints estándar devuelven 404',
@@ -199,9 +234,7 @@ export const SIN_SITEMAP = {
   'hoyxhoy.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450',
   'en.mercopress.com': 'misma agencia que mercopress.cl (ya catalogado, 46.710 artículos): la edición en inglés duplicaría el contenido',
   // Batch 26:
-  'eldiarioatacama.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
   'elmonitorparral.com': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
-  'elpailadigital.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
   'canalsurpatagonia.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
   'noticias.123.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
   'diarioinformativo.cl': 'fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde)',
@@ -221,11 +254,9 @@ export const SIN_SITEMAP = {
   'soypuertomontt.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
   'soyosorno.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
   'soyarica.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
-  'ariamia.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
   'ellanquihue.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
   'vientopatagon.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
   'diariolabrador.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
-  'laestrelladeconcepcion.cl': 'robots.txt no responde (fetch failed) y los 3 endpoints estándar dan 0 locs',
   'cronicanoticias.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
   'tribunadelbiobio.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
   'lacoyuntura.cl': 'robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs',
@@ -240,7 +271,6 @@ export const SIN_SITEMAP = {
   'elheraldoaustral.cl': 'alias de eha.cl: devuelve el mismo /sitemap.xml de 41 locs',
   'redmaule.com': 'Prontus declara solo sitemap_pags.xml: 1.001 locs SIN ningún <lastmod> y sin fecha en el path, así que el catálogo quedaría sin fechas',
   'diarioviregion.cl': 'su robots declara el sitemap de diariosextaregion.cl: 2.078 locs de páginas SEO autogeneradas (/quality/version/f3mbjnabz8e0ncv.shtml), sin un solo artículo',
-  'diariosextaregion.cl': 'índice de 2.078 locs, todas páginas SEO autogeneradas con IDs aleatorios, sin artículos',
   'mercuriovalpo.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
   'cronicachillan.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
   'australvaldivia.cl': 'su /sitemap.xml no le pertenece: devuelve los sitemaps de estrellaarica.cl y estrellaiquique.cl (otro conglomerado editorial); /sitemap_index.xml y /wp-sitemap.xml responden 450 y robots.txt da 404',
@@ -521,6 +551,18 @@ async function main() {
 
   filas.sort((a, b) => a.categoria.localeCompare(b.categoria) || a.nombre.localeCompare(b.nombre));
 
+  // Clave de SIN_SITEMAP que no corresponde a ninguna fila del repo fuente: casi
+  // siempre es un error de dominio (se anotó el que se sondeó, no el de la fila —
+  // p. ej. 'pensiones.cl' en vez de 'spensiones.cl'). No rompe nada, pero la fila
+  // real queda ⬜ para siempre y el descarte se pierde. Se avisa, no se falla.
+  const dominiosFila = new Set(filas.map((f) => f.d));
+  const sinFila = Object.keys(SIN_SITEMAP).filter((d) => !dominiosFila.has(d));
+  if (sinFila.length) {
+    console.warn(
+      `⚠️  SIN_SITEMAP: ${sinFila.length} clave(s) sin fila en el repo fuente: ${sinFila.join(', ')}`,
+    );
+  }
+
   const conteo = { catalogo: 0, en_uso: 0, sin_sitemap: 0, pendiente: 0 };
   for (const f of filas) conteo[f.estado]++;
 
@@ -568,12 +610,30 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
   for (const f of filas) {
     if (f.categoria !== catActual) {
       catActual = f.categoria;
+      // Línea en blanco entre la tabla de la categoría anterior y este encabezado:
+      // sin ella markdownlint marca MD058 (tabla sin blancos) y MD022 (encabezado
+      // pegado arriba) en cada frontera de categoría.
+      if (!md.endsWith('\n\n')) md += '\n';
       md += `### ${NOMBRES_CATEGORIA[catActual] || catActual} (${f.categoria})\n\n`;
       md += `| Estado | Sitio | Web | Región | Fuente | Notas |\n| --- | --- | --- | --- | --- | --- |\n`;
     }
     const region = f.region ? f.region.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) : '—';
     const fuente = f.fuente === 'db' ? 'database' : 'watchlist';
-    const limpiar = (s) => String(s).replace(/\|/g, '/').replace(/[\r\n]+/g, ' ').trim();
+    // Las notas son texto libre (motivos de SIN_SITEMAP y descripciones del repo
+    // fuente) y redactan con `<lastmod>` y URLs sueltas: markdownlint lo marca como
+    // MD033 (HTML inline) y MD034 (URL desnuda), así que se envuelven en backticks.
+    // El lookbehind evita re-marcar lo ya envuelto y no parte dentro de una palabra.
+    const limpiar = (s) =>
+      String(s)
+        .replace(/\|/g, '/')
+        .replace(/[\r\n]+/g, ' ')
+        .replace(/(?<![\w(`])<(\/?[a-zA-Z][^>]*)>/g, (m) => `\`${m}\``)
+        .replace(/(?<![\w(`])https?:\/\/[^\s`]+/g, (m) => {
+          // La puntuación final ("…sitemap.xml,") va FUERA del código.
+          const url = m.replace(/[.,;:!?)\]]+$/, '');
+          return url ? `\`${url}\`` + m.slice(url.length) : m;
+        })
+        .trim();
     // El veredicto de catálogo (detalle) manda sobre el estado del feed (razon):
     // es lo que la bitácora cruza (✅/🔒 y notas de alias van en detalle).
     const notas = limpiar((f.detalle || f.razon || f.desc || '').slice(0, 90));

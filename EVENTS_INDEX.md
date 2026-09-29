@@ -584,6 +584,7 @@
 - [2026/03/20260321-1 - The Clinic perfila a Mara Sedini, la vocera de gobierno: la hockeysta, actriz que soñó con Broadway y opinóloga política que pasó de Sin Filtros a La Moneda](src/content/events/2026/03/20260321-1.md) — 7 fuentes
 - [2026/03/20260322-1 - Gobierno anuncia cambios al MEPCO tras alertas sobre impacto en IPC e inflación](src/content/events/2026/03/20260322-1.md) — 4 fuentes
 - [2026/03/20260323-1 - Recorte de $72 mil millones al presupuesto de Seguridad Pública](src/content/events/2026/03/20260323-1.md) — 5 fuentes
+- [2026/03/20260323-2 - Hacienda fija en cuatro semanas el cálculo del MEPCO por decreto y confirma alza de $370 en bencinas y $580 en diésel](src/content/events/2026/03/20260323-2.md) — 10 fuentes
 - [2026/03/20260324-1 - Filtracion de minuta 'cierre epico' de Secom por crisis de combustibles](src/content/events/2026/03/20260324-1.md) — 12 fuentes
 - [2026/03/20260324-2 - Filtracion de minuta de Secom con 20 preguntas y respuestas para justificar retiro de apoyo a Bachelet en la ONU](src/content/events/2026/03/20260324-2.md) — 12 fuentes
 - [2026/03/20260324-3 - Revelan que ONG noruega Norwegian People's Aid financia a comunidades lafkenche para frenar salmoneras](src/content/events/2026/03/20260324-3.md) — 3 fuentes
@@ -593,6 +594,7 @@
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
 - [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 6 fuentes
 - [2026/03/20260326-4 - Seis alcaldes firman convenio de compra conjunta de 500 mil vales de gas para enfrentar el alza de combustibles](src/content/events/2026/03/20260326-4.md) — 6 fuentes
+- [2026/03/20260326-5 - Entra en vigencia el bencinazo: la bencina de 93 sube $372,2 y el diésel $580,3 por litro](src/content/events/2026/03/20260326-5.md) — 5 fuentes
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
 - [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
@@ -1736,6 +1738,7 @@
 - [2026/09/20260925-7 - Contratistas de Codelco piden reunión ante un posible recorte de entre 5% y 20% de la dotación](src/content/events/2026/09/20260925-7.md) — 8 fuentes
 - [2026/09/20260926-1 - Segundo día de corte en la ruta a Cabrero: vecinos de la población Juan Riquelme vuelven a manifestarse por los cortes de agua](src/content/events/2026/09/20260926-1.md) — 7 fuentes
 - [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
+- [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
 
 ## 2025
 
@@ -1918,6 +1921,8 @@
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — 2 fuentes
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — 2 fuentes
 - [2022/09/20220910-1 - '#BoricInternado': la fake news de La Derecha Diario sobre un presunto colapso nervioso de Boric tras el triunfo del Rechazo](src/content/events/2022/09/20220910-1.md) — 6 fuentes
+- [2022/09/20220927-1 - Gobierno llama a "orden y prudencia" al embajador en España Javier Velasco por foto en auto y dichos sobre los 30 años](src/content/events/2022/09/20220927-1.md) — 8 fuentes
+- [2022/09/20220930-1 - Pablo Iglesias participa en foro sobre medios en la Universidad de Chile en medio de polémica con Kast](src/content/events/2022/09/20220930-1.md) — 7 fuentes
 - [2022/10/20221012-1 - Kast en esRadio (Madrid): 'la primera dictadura en Chile fue la de Salvador Allende' y balance del plebiscito de salida](src/content/events/2022/10/20221012-1.md) — 6 fuentes
 - [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md) — 3 fuentes
 - [2022/11/20221112-1 - PDI detiene a hombre de 21 años que amenazó al Presidente Boric vía escribenos.presidencia.cl para evitar promulgación de Ley Papito Corazón](src/content/events/2022/11/20221112-1.md) — 6 fuentes

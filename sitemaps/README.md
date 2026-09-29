@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 28/9/2026, 20:11:59
-- **Medios registrados:** 498
-- **Artículos indexados:** 11.459.116
+- **Última sincronización:** 28/9/2026, 23:53:30
+- **Medios registrados:** 505
+- **Artículos indexados:** 11.470.921
 
 ## Por medio
 
@@ -217,6 +217,7 @@
 | Quirihue Noticias | 5721 |
 | Arica Chile | 5694 |
 | Valparaíso Noticias | 5691 |
+| Disorder (magazine) | 5642 |
 | Reporte Agrícola | 5603 |
 | Sitio del Suceso | 5512 |
 | El Siglo | 5483 |
@@ -286,6 +287,7 @@
 | Fundación Iguales | 2109 |
 | Prime Digital | 2102 |
 | El Regionalista | 2093 |
+| Cuerpo de Bomberos de Santiago | 2084 |
 | Consejo para la Transparencia | 2012 |
 | Espacio Público | 2000 |
 | El Andacollino | 1873 |
@@ -308,6 +310,8 @@
 | Qué Pasa Araucanía | 1270 |
 | Chile es Tuyo | 1244 |
 | El Periódico | 1179 |
+| Dirección de Vialidad (MOP) | 1171 |
+| Dirección de Educación Pública | 1162 |
 | ECOceanos | 1157 |
 | Radio El Puelche | 1157 |
 | Zona Zero | 1153 |
@@ -338,9 +342,11 @@
 | Diario Avísale | 815 |
 | El Huemul | 812 |
 | ADN Radio | 798 |
+| ANI (Agencia Nacional de Ciberseguridad) | 796 |
 | SOFOFA | 788 |
 | Pulso Público | 774 |
 | Partido Humanista | 760 |
+| ANEPE (empleados públicos) | 753 |
 | SIP Red de Colegios | 750 |
 | Radio Chilena | 745 |
 | Aconcagua Digital | 732 |
@@ -387,6 +393,7 @@
 | Defensa Civil de Chile | 229 |
 | Fundación Legado Chile | 217 |
 | Contapapaya | 206 |
+| DICREP (Crédito Prendario) | 197 |
 | Arauco | 190 |
 | Colegio Tabancura | 161 |
 | Observatorio de Gobernanza Migratoria y DDHH | 160 |

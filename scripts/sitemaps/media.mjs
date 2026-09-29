@@ -2477,6 +2477,83 @@ export const MEDIA = {
   // 2026-09-28) dejó ~7.900 entradas fechadas en 2026 cuyo datePublished real es de
   // 2025 o feb-2026 (verificado en 5 URLs). Sin fecha en el path no hay forma de
   // recuperarlas, así que el catálogo quedaría con fechas equivocadas.
+  // ── Agregados 28-09-2026 (batch 33: los 22 pendientes ⬜ de Gobierno / instituciones) ──
+  vialidad: {
+    nombre: 'Dirección de Vialidad (MOP)',
+    index: 'https://vialidad.mop.gob.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo. El includeRe deja solo los posts: los CPT `document` (122
+    // locs) e `iframe` (1) son PDFs y embeds sin fecha, no noticias.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    // Las 1.171 URLs de posts traen /YYYY/MM/DD/ y el <lastmod> coincide con esa
+    // fecha en 1.078 de 1.171 (las otras 93 son retoques; 976 tienen lastmod a
+    // medianoche, o sea fecha pura). Gana el path: archivo 2009→2026, 18 años.
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  anepe: {
+    nombre: 'ANEPE (empleados públicos)',
+    index: 'https://anepe.cl/wp-sitemap.xml',
+    // WP 5.5+ con 7 CPTs: el includeRe se queda con los 753 posts y descarta
+    // personnel/portfolio/elementskit/blogshowcase (311 locs de perfiles y
+    // plantillas). Sin fecha en el path, pero el <lastmod> sí es de publicación:
+    // ningún timestamp se repite (el más repetido aparece 1 vez) y llega a 2026.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  anci: {
+    nombre: 'ANI (Agencia Nacional de Ciberseguridad)',
+    index: 'https://anci.gob.cl/sitemap.xml',
+    // urlset plano del portal Gobierno (no es WP): 885 locs = 403 /noticias/,
+    // 336 /ciberconsejos/, 65 /eventos/ y ~81 páginas institucionales. El urlRe
+    // exige un slug tras la sección, así que también cae el listado /noticias/.
+    // Los 885 <loc> vienen en http:// y el sitio responde por https (verificado),
+    // por eso forceHttps (trampa 13). El <lastmod> sí es de publicación.
+    urlRe: /\/(noticias|ciberconsejos|eventos)\/[^/]+\/?$/,
+    forceHttps: true,
+  },
+  dicrep: {
+    nombre: 'DICREP (Crédito Prendario)',
+    index: 'https://www.dicrep.cl/wp-sitemap.xml',
+    // Su robots declara www.dicrep.cl pero el sitemap sirve los CPTs en
+    // www.dicrep.gob.cl: son el mismo sitio con dos dominios. WP 5.5+ nativo,
+    // 197 posts 2020→2026, sin fecha en el path y con <lastmod> de publicación
+    // (ningún timestamp se repite).
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  // ── Agregados 28-09-2026 (batch 32: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
+  disorder: {
+    nombre: 'Disorder (magazine)',
+    index: 'https://www.disorder.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 3 shards ≈ 5.642 artículos, 2006→2024. Las 5.642 URLs traen
+    // /YYYY/MM/DD/ (permalink de WP) y el <lastmod> es una MIGRACIÓN: los artículos
+    // de mayo 2006 tienen lastmod 2010-04-03T16:00, o sea todos el mismo día. Sin
+    // preferLocDate el catálogo quedaría con medio archivo corrido a 2010.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  cbs: {
+    nombre: 'Cuerpo de Bomberos de Santiago',
+    index: 'https://www.cbs.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 2 shards ≈ 2.084 artículos, 2021→2026. Sin fecha en el path,
+    // pero el <lastmod> es de publicación, no de edición: dentro de un mismo shard
+    // corre en minutos consecutivos (2021-11-12T00:12, 00:13, 00:15) y es siempre
+    // -03:00 (hora local). Fuente institucional de emergencias, útil para el vault.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  dep: {
+    nombre: 'Dirección de Educación Pública',
+    index: 'https://dep.gob.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 1 shard ≈ 1.162 noticias, 2016→2026. Sin fecha en el path;
+    // el <lastmod> es de publicación y va en -03:00, también en minutos consecutivos
+    // dentro del shard (2018-01-08T17:09, 17:19, 17:21, 17:25).
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
   // ── Agregados 28-09-2026 (batch 31: 3 pendientes ⬜ de TAREAS/tareas_sitemap.md) ──
   prensaeventos: {
     nombre: 'Prensa Eventos',

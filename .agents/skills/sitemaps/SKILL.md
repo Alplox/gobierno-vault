@@ -75,8 +75,22 @@ trabajo que cuesta caro repetir.
    comprobaste*, no "no sirve": `'/sitemap.xml responde 0 locs'`, `'wp-sitemap.xml solo
    declara posts-page, sin posts'`, `'DNS ENOTFOUND'`.
    Nunca anotes ahí un dominio que ya esté en `MEDIA`: sobra y da una nota contradictoria.
+   **La clave es el dominio tal como aparece en la fila, no el que sondeaste**: sondear
+   `pensiones.cl` y anotar `'pensiones.cl'` no marca la fila, que se llama `spensiones.cl`
+   (mismo sitio, otro nombre de dominio). Pasa con alias y con erratas
+   (`elmatutino.cl` vs `elmartutino.cl`, `ariamia.cl` vs `aricamia.cl`). Desde que existe
+   el aviso, `sitemaps-watchlist` lista al final las claves de `SIN_SITEMAP` que no
+   corresponden a ninguna fila: si aparece una, el descarte no se está aplicando
+   —corrige la clave (con el motivo recién verificado, no el heredado) o bórrala si la fila
+   ya no existe en el repo fuente.
 7. **Regenerar índices**: `sitemaps-index` (README + MEDIOS), `sitemaps-watchlist`
    (filas ⬜→✅) y `generate-index` (EVENTS_INDEX + stats del README).
+   Después, `node .agents/skills/sitemaps/scripts/check-markdown.mjs`: la bitácora se
+   abre en el VS Code con markdownlint, y el markdown que genera `watchlist.mjs` tiene
+   que salir limpio. Dos reglas del generador que hay que respetar al tocarlo: **toda
+   tabla y todo encabezado necesitan línea en blanco arriba y abajo** (las fronteras de
+   categoría se pegaban entre sí), y **el texto libre de las notas va envuelto en
+   backticks si trae `<lastmod>` o una URL** — o se vuelve HTML inline y URL desnuda.
 8. **Actualizar este skill** si el medio trajo una trampa que no está en la receta.
 
 ### Cruce con awesome-chilean-rss y reporte de faltantes
@@ -219,6 +233,14 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
     errores de mixed content/redirect **sin** mensaje de descarte. Se arregla con
     `forceHttps: true`, no con cambiar el `index` a mano. Verificá antes con un
     `Invoke-WebRequest` al shard por https.
+14. **El repo es mixto LF/CRLF, y eso rompe las ediciones por script**: un script que quite
+    o agregue líneas con literales `\n` contra un archivo en CRLF no matchea nada y
+    **no falla** — parece que trabajó y el cambio no existe (pasó al remediar 9 claves
+    huérfanas de `SIN_SITEMAP` en `watchlist.mjs`). Antes de armar los literales,
+    detectá el salto de línea: aquí `watchlist.mjs` está en CRLF y `SKILL.md` en LF.
+    Lo mismo pasa con las tools de edición: su `oldString` tiene que traer el `\r\n`.
+    Es el mismo motivo por el que el corpus de contenido es mixto y toda regex de
+    frontmatter lleva `\r?`.
 
 ---
 
@@ -372,7 +394,7 @@ Los descartes de sitios de la watchlist están en `SIN_SITEMAP`
 | --- | --- |
 | `pnpm run sitemaps-probe -- <dominio>...` | Sondea candidatos: parsea el `robots.txt`, prueba los endpoints estándar, cuenta `<loc>`, reconoce el CMS y **avisa si el dominio ya está en `MEDIA` o ya fue descartado**, con el slug o el motivo. Sale con código ≠ 0 si hay conflicto |
 | `node .agents/skills/sitemaps/scripts/check-fechas.mjs [slug...]` | Audita que la fecha guardada de cada artículo sea la de su URL, en todos los medios con `locDateRe` (o los slugs indicados). Es la forma objetiva de detectar las dos fallas de fecha silenciosas: `lastmod` de migración y desfase D+1 por huso horario. 100% de coincidencia es lo esperado; si falla, el arreglo casi siempre es `locDateRe` o `preferLocDate` + `--replace` |
-
+| `node .agents/skills/sitemaps/scripts/check-markdown.mjs [<archivo.md>...]` | Revisa los markdown **generados** contra las reglas de markdownlint que marca el VS Code: MD058/MD022 (tablas y encabezados sin línea en blanco alrededor), MD033 (el `<lastmod>` de un motivo de `SIN_SITEMAP` se interpreta como etiqueta HTML), MD034 (URL desnuda), MD012. Sin argumentos revisa `TAREAS/tareas_sitemap.md`, `sitemaps/MEDIOS.md` y `sitemaps/README.md` |
 | `node .agents/skills/sitemaps/scripts/report-awesome.mjs --verificar` | Cruce en las **dos direcciones** con awesome-chilean-rss: qué sitios del repo la bitácora todavía no evaluó, y qué medios del catálogo o citados en `src/content/sources/*.md` el repo no lista. Con `--verificar` busca `/feed/`, `/rss/`, `/rss.xml`, `/feed/atom.xml`… en cada candidato y separa los que responden con un feed real de los que no. Genera el reporte para devolver al repo (`--out`). Usa el clon hermano `../awesome-chilean-rss` o `--fuente <dir>` |
 
 Los tres son de solo lectura: no escriben nada en el repo.
