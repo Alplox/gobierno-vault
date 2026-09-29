@@ -18,10 +18,10 @@
 ## Resumen
 
 - **Total de sitios de prensa listados:** 1001
-- ✅ En catálogo local: **443**
-- 🟡 Ya usados en el vault (`src/content/sources/*.md` / `organizations/*.md`) sin sitemap: **105**
-- 🔒 Verificados sin sitemap: **261**
-- ⬜ Pendientes de sincronizar: **192**
+- ✅ En catálogo local: **457**
+- 🟡 Ya usados en el vault (`src/content/sources/*.md` / `organizations/*.md`) sin sitemap: **104**
+- 🔒 Verificados sin sitemap: **322**
+- ⬜ Pendientes de sincronizar: **118**
 
 Categorías consideradas (prensa y afines): Noticias nacionales, Noticias internacionales, Regional, Gobierno / instituciones, Radio, Partidos políticos, Negocios / economía, Comunidad / sociedad civil, Medio ambiente, Educación, Salud, Cultura.
 Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
@@ -436,13 +436,13 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **aDiarioCR** | `adiariocr.com` | — | database | sitemap en catálogo (adiariocr) |
 | ✅ | **ADN Radio** | `adnradio.cl` | — | database | sitemap en catálogo (adnradio) |
 | ✅ | **Agencia de Noticias** | `agenciadenoticias.org` | — | database | sitemap en catálogo (agenciadenoticias) |
-| ⬜ | **Amarillos por Chile** | `amarillosxchile.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Amarillos por Chile** | `amarillosxchile.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | ✅ | **Aurora Noticias** | `auroranoticias.cl` | — | database | sitemap en catálogo (auroranoticias) |
 | ✅ | **Base Nacional** | `basenacional.cl` | — | database | sitemap en catálogo (basenacional) |
 | ✅ | **BioBioChile** | `biobiochile.cl` | — | database | sitemap en catálogo (biobiochile) |
 | 🟡 | **Cambio21** | `cambio21.cl` | — | database | referenciado en src/content/sources/*.md |
 | 🟡 | **Canal 13** | `13.cl` | — | watchlist | referenciado en src/content/sources/*.md |
-| ⬜ | **Canal de Noticias** | `canaldenoticias.cl` | — | watchlist | sin feed RSS detectado |
+| 🔒 | **Canal de Noticias** | `canaldenoticias.cl` | — | watchlist | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 200 con 0 locs |
 | ✅ | **CentralWeb** | `centralweb.cl` | — | database | sitemap en catálogo (centralweb) |
 | 🟡 | **Chile Mejor Sin TLC** | `mejorsintlc.cl` | — | database | referenciado en src/content/sources/*.md |
 | 🔒 | **Chile21** | `chile21.cl` | — | database | urlset plano de 777 locs que mezcla 664 URLs de un solo segmento (secciones y artículos, s |
@@ -456,15 +456,15 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Contingencia Chile** | `contingenciachile.cl` | — | database | sitemap en catálogo (contingenciachile) |
 | ✅ | **Contrapoder Chile** | `contrapoderchile.cl` | — | database | sitemap en catálogo (contrapoderchile) |
 | 🟡 | **Correo de los Trabajadores** | `cctt.cl` | — | database | referenciado en src/content/sources/*.md |
-| ⬜ | **CREAS UAH** | `creas.uahurtado.cl` | — | watchlist | feed stale (último item: 2014-12-31, 4275 días) |
+| 🔒 | **CREAS UAH** | `creas.uahurtado.cl` | — | watchlist | subdominio sin sitemap: fetch failed en los 3 endpoints y su robots.txt no responde |
 | 🟡 | **Crónicas de Chile** | `cronicasdechile.cl` | — | watchlist | referenciado en src/content/sources/*.md |
 | 🟡 | **Dalenoticias** | `dalenoticias.cl` | — | database | referenciado en src/content/sources/*.md |
 | ✅ | **Desenfoque** | `desenfoque.cl` | — | database | sitemap en catálogo (desenfoque) |
 | ✅ | **Diario Chile** | `diariochile.cl` | — | database | sitemap en catálogo (diariochile) |
-| ⬜ | **Diario El Observador** | `diarioelobservador.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Diario El Progreso** | `diarioelprogreso.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Diario El Observador** | `diarioelobservador.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Diario El Progreso** | `diarioelprogreso.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | 🔒 | **Diario Informativo** | `diarioinformativo.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt tampoco responde) |
-| ⬜ | **Diario La Portada** | `diariolaportada.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Diario La Portada** | `diariolaportada.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | 🔒 | **Diario La Tribuna** | `diariolatribuna.cl` | — | watchlist | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 0 locs |
 | ✅ | **Diario USACH** | `diariousach.cl` | — | watchlist | sitemap en catálogo (diariousach) |
 | ✅ | **El Arrebato** | `elarrebato.cl` | — | database | sitemap en catálogo (elarrebato) |
@@ -474,7 +474,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **El Definido** | `eldefinido.cl` | — | watchlist | sitemap en catálogo (eldefinido) |
 | 🔒 | **El Desarrollo** | `eldesarrollo.cl` | — | database | urlset plano de 237 locs (142 con `<lastmod>`, todos de sept-2026) y sin fecha en el path: n |
 | ✅ | **El Desconcierto** | `eldesconcierto.cl` | — | database | sitemap en catálogo (eldesconcierto) |
-| 🟡 | **El Diario de Santiago** | `eldiariodesantiago.cl` | — | watchlist | referenciado en src/content/sources/*.md |
+| ✅ | **El Diario de Santiago** | `eldiariodesantiago.cl` | — | watchlist | sitemap en catálogo (eldiariodesantiago) |
 | 🟡 | **El Diario Santiago** | `eldiariosantiago.cl` | — | database | referenciado en src/content/sources/*.md |
 | ✅ | **El Dínamo** | `eldinamo.cl` | — | watchlist | sitemap en catálogo (eldinamo) |
 | ✅ | **El Filtrador** | `elfiltrador.com` | — | watchlist | sitemap en catálogo (elfiltrador) |
@@ -496,19 +496,19 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🟡 | **El Telescopio** | `eltelescopio.cl` | — | watchlist | referenciado en src/content/sources/*.md |
 | 🟡 | **El Vigilante** | `elvigilante.cl` | — | watchlist | referenciado en src/content/sources/*.md |
 | ✅ | **Emol** | `emol.com` | — | database | sitemap en catálogo (emol) |
-| ⬜ | **En la Ciudad** | `enlaciudad.cl` | — | database | Blog de noticias locales en Blogger, con secciones de economía, tecnología, deportes y act |
+| 🔒 | **En la Ciudad** | `enlaciudad.cl` | — | database | blog en Blogger sin sitemap: fetch failed en los 3 endpoints y robots.txt no responde |
 | ✅ | **Entérate Hoy** | `enteratehoy.cl` | — | watchlist | sitemap en catálogo (enteratehoy) |
-| ⬜ | **Esperanza FM** | `esperanzafm.cl` | Araucania | database | Emisora regional parte de la región del Bio Bio y Los Lagos 101.3 FM |
+| ✅ | **Esperanza FM** | `esperanzafm.cl` | Araucania | database | sitemap en catálogo (esperanzafm) |
 | ✅ | **Está Pasando** | `estapasando.cl` | — | database | sitemap en catálogo (estapasando) |
 | ✅ | **Ex-Ante** | `ex-ante.cl` | Metropolitana | database | sitemap en catálogo (ex_ante) |
 | ✅ | **Fact Checking UC** | `factchecking.cl` | — | watchlist | sitemap en catálogo (factchecking) |
 | ✅ | **Factos** | `factos.cl` | — | database | sitemap en catálogo (factos) |
 | ✅ | **FastCheckCL** | `fastcheck.cl` | — | database | sitemap en catálogo (fastcheck) |
-| ⬜ | **Futura FM** | `futurafm.cl` | Maule | database | Emisora regional de Talca 100.7 FM |
+| ✅ | **Futura FM** | `futurafm.cl` | Maule | database | sitemap en catálogo (futurafm) |
 | 🟡 | **G5 Noticias** | `g5noticias.cl` | — | database | referenciado en src/content/sources/*.md |
-| ⬜ | **G80** | `g80.cl` | — | watchlist | sitio no responde |
+| 🔒 | **G80** | `g80.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | 🟡 | **Gamba.cl** | `gamba.cl` | — | watchlist | referenciado en src/content/sources/*.md |
-| ⬜ | **Google News** | `news.google.com` | — | database | Segregador de noticias de Google |
+| 🔒 | **Google News** | `news.google.com` | — | database | robots.txt 200 sin línea Sitemap y los 3 endpoints devuelven 200 con 0 locs; además es un |
 | 🔒 | **Hoy** | `hoy.cl` | — | watchlist | los 3 endpoints estándar devuelven 404 (robots.txt no declara sitemap) |
 | ✅ | **Infogate** | `infogate.cl` | — | watchlist | sitemap en catálogo (infogate) |
 | 🔒 | **Informe:Chile** | `informechile.cl` | — | watchlist | /sitemap.xml es un índice de 2 entradas, sin artículos |
@@ -524,14 +524,14 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **La Máquina Medio** | `lamaquinamedio.com` | — | database | sitemap en catálogo (lamaquinamedio) |
 | ✅ | **La Nación** | `lanacion.cl` | — | database | sitemap en catálogo (lanacion) |
 | 🟡 | **La Segunda** | `lasegunda.cl` | — | watchlist | referenciado en src/content/sources/*.md [medio en catálogo como lasegunda] |
-| ⬜ | **La Segunda (Edición Impresa)** | `impresa.lasegunda.com` | — | watchlist | sitio no responde |
+| 🔒 | **La Segunda (Edición Impresa)** | `impresa.lasegunda.com` | — | watchlist | subdominio de la edición impresa: fetch failed en los 3 endpoints. El sitemap del medio ya |
 | ✅ | **La Tercera** | `latercera.com` | — | database | sitemap en catálogo (latercera) |
 | ✅ | **La Voz de los que Sobran** | `lavozdelosquesobran.cl` | — | database | sitemap en catálogo (lavozdelosquesobran) |
 | 🔒 | **Libertad Digital** | `libertaddigital.cl` | — | watchlist | su /sitemap.xml no le pertenece: devuelve los sitemaps de fifa55cs.com (otro sitio del mis |
 | 🔒 | **M360** | `m360.cl` | — | watchlist | DNS fail al pedir /noticias/sitemap_pags.xml (declarado en robots) |
 | ✅ | **Magia Digital** | `magiadigital.cl` | — | watchlist | sitemap en catálogo (magiadigital) |
 | ✅ | **Mala Espina** | `malaespinacheck.cl` | — | database | sitemap en catálogo (malaespina) |
-| ⬜ | **Mapuche Nation** | `mapuche-nation.org` | — | database | Portal de noticias mapuche |
+| 🔒 | **Mapuche Nation** | `mapuche-nation.org` | — | database | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 200 con 0 locs |
 | 🔒 | **Mapuexpress** | `mapuexpress.org` | — | watchlist | sin sitemap (los 4 endpoints no devuelven locs) |
 | ✅ | **Mediabanco** | `mediabanco.com` | — | database | sitemap en catálogo (mediabanco) |
 | 🟡 | **Mega** | `mega.cl` | — | watchlist | referenciado en src/content/sources/*.md |
@@ -540,7 +540,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🔒 | **Mercurio de Antofagasta** | `mercurioantofagasta.cl` | Antofagasta | database | conglomerado Estrella/Mercurio: 450 (verificado) |
 | 🔒 | **Mercurio de Calama** | `mercuriocalama.cl` | Antofagasta | database | conglomerado Estrella/Mercurio: 450 (verificado) |
 | ✅ | **Mi Radio LS** | `miradiols.cl` | — | database | sitemap en catálogo (miradiols) |
-| ⬜ | **MQN (Más Que Noticias)** | `mqn.cl` | — | database | Medio digital con noticias de Chile sobre actualidad, deportes, economía y tecnología |
+| 🔒 | **MQN (Más Que Noticias)** | `mqn.cl` | — | database | post-sitemap plano de 85 locs, todas de 2026 (el `<lastmod>` máximo se repite 2 veces): volu |
 | ✅ | **Música y Noticias** | `musicaynoticias.cl` | — | database | sitemap en catálogo (musicaynoticias) |
 | ✅ | **Nostálgica** | `nostalgica.cl` | — | database | sitemap en catálogo (nostalgica) |
 | 🟡 | **NotiChile** | `notichile.cl` | — | database | referenciado en src/content/sources/*.md |
@@ -549,21 +549,21 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🔒 | **Oro Coipo** | `orocoipo.cl` | Ohiggins | database | variantes ?sitemapindex.xml y ?sitemapNNN.xml con 0 locs; /sitemap.xml es un urlset de 1 l |
 | ✅ | **Página 19** | `pagina19.cl` | — | database | sitemap en catálogo (pagina19) |
 | ✅ | **Panorama Noticioso** | `panoramanoticioso.cl` | — | database | sitemap en catálogo (panoramanoticioso) |
-| ⬜ | **Partido de la Gente** | `partidodelagente.cl` | — | watchlist | feed stale (último item: 2023-07-31, 1141 días) |
+| 🔒 | **Partido de la Gente** | `partidodelagente.cl` | — | watchlist | post-sitemap plano de 9 locs de 2023 y medio inactivo (su feed moría en 2023-07) |
 | 🔒 | **Partido Social Cristiano** | `pscchile.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
-| ⬜ | **Periodismo Sanador** | `periodismosanador.blogspot.com` | — | watchlist | sitio no responde |
-| ⬜ | **Periodismo2** | `periodismo2.cl` | — | database | Medio digital con noticias de Chile y el mundo |
+| 🔒 | **Periodismo Sanador** | `periodismosanador.blogspot.com` | — | watchlist | blog en Blogger sin sitemap: fetch failed en los 3 endpoints y robots.txt no responde |
+| 🔒 | **Periodismo2** | `periodismo2.cl` | — | database | agregador: urlset plano topado en 5.000 locs que solo cubre 2026-06-17→2026-09-26 (66% en |
 | ✅ | **Piensa Chile** | `piensachile.com` | — | database | sitemap en catálogo (piensachile) |
 | ✅ | **Portal Metropolitano** | `portalmetropolitano.cl` | — | database | sitemap en catálogo (portalmetropolitano) |
 | 🔒 | **Portal Nacional** | `portalnacional.cl` | — | database | Yoast con 8.157 artículos, pero el `<lastmod>` es el dateModified: una oleada de retoques (2 |
 | ✅ | **Prime Digital** | `primedigital.cl` | — | watchlist | sitemap en catálogo (primedigital) |
 | ✅ | **Publimetro Chile** | `publimetro.cl` | — | database | sitemap en catálogo (publimetro) |
 | ✅ | **Publimicro** | `publimicro.cl` | — | database | sitemap en catálogo (publimicro) |
-| ⬜ | **Puerto Montt Online** | `puertomonttonline.cl` | Los Lagos | watchlist | feed stale (último item: 2023-12-09, 1010 días) |
+| 🔒 | **Puerto Montt Online** | `puertomonttonline.cl` | Los Lagos | watchlist | post-sitemap plano de 120 locs con el `<lastmod>` de una migración (2023-12-12) mientras el |
 | ✅ | **Pulso Público** | `pulsopublico.cl` | — | database | sitemap en catálogo (pulsopublico) |
 | 🟡 | **Puranoticia** | `puranoticia.cl` | — | watchlist | referenciado en src/content/sources/*.md |
 | 🟡 | **PuraNoticia** | `puranoticia.pnt.cl` | Valparaiso | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Qué Pasa** | `quepasa.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Qué Pasa** | `quepasa.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | 🟡 | **Radar BioBio** | `radarbiobio.cl` | — | database | referenciado en src/content/sources/*.md |
 | 🔒 | **Radar Informativo** | `radarinformativo.cl` | — | watchlist | agregador que republica notas de otros medios (/medio/biobio, etc.): sus 1.200 URLs /n/<id |
 | ✅ | **Radio Agricultura** | `radioagricultura.cl` | — | watchlist | sitemap en catálogo (radioagricultura) |
@@ -574,15 +574,15 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | ✅ | **Radio El Puelche** | `elpuelche.cl` | Los Lagos | database | sitemap en catálogo (elpuelche) |
 | ✅ | **Radio Festival** | `radiofestival.cl` | — | database | sitemap en catálogo (radiofestival) |
 | ✅ | **Radio Imagina** | `radioimagina.cl` | — | database | sitemap en catálogo (radioimagina) |
-| ⬜ | **Radio Infinita** | `infinita.cl` | — | database | Emisora FM con programación informativa y musical |
+| ✅ | **Radio Infinita** | `infinita.cl` | — | database | sitemap en catálogo (infinita) |
 | ✅ | **Radio Nuevo Mundo** | `radionuevomundo.cl` | — | database | sitemap en catálogo (radionuevomundo) |
 | 🟡 | **Radio Ñuble** | `radionuble.cl` | Nuble | database | referenciado en src/content/sources/*.md |
 | ✅ | **Radio Paulina** | `radiopaulina.cl` | Tarapaca | database | sitemap en catálogo (radiopaulina) |
 | 🟡 | **Radio Pauta** | `pauta.cl` | — | watchlist | referenciado en src/content/sources/*.md |
-| ⬜ | **Radio Pilmaiquén** | `radiopilmaiquen.cl` | — | watchlist | feed stale (último item: 2023-04-02, 1262 días) |
-| ⬜ | **Radio Presidente Ibáñez** | `radiopresidenteibanez.cl` | Magallanes | database | Emisora regional de Magallanes 88.5 FM |
-| ⬜ | **Radio Pudahuel** | `pudahuel.cl` | — | database | Radio chilena de música, entretención y noticias 90.5 FM |
-| ⬜ | **Radio San Bartolomé** | `radiosanbartolome.cl` | Coquimbo | database | Emisora regional de coquimbo 96.7 FM |
+| 🔒 | **Radio Pilmaiquén** | `radiopilmaiquen.cl` | — | watchlist | su /sitemap.xml es un índice de 4 CPTs, pero el shard wp-sitemap-posts-post-1.xml devuelve |
+| 🔒 | **Radio Presidente Ibáñez** | `radiopresidenteibanez.cl` | Magallanes | database | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
+| 🔒 | **Radio Pudahuel** | `pudahuel.cl` | — | database | el único sitemap con artículos es el /out/sitemap.xml que declara su robots: 61 locs con / |
+| 🔒 | **Radio San Bartolomé** | `radiosanbartolome.cl` | Coquimbo | database | robots.txt 500 y los 3 endpoints estándar devuelven 500 |
 | ✅ | **Radio UdeC** | `radioudec.cl` | Biobio | database | sitemap en catálogo (radioudec) |
 | ✅ | **Radio Valparaíso** | `radiovalparaiso.cl` | Valparaiso | watchlist | sitemap en catálogo (radiovalparaiso) |
 | 🟡 | **Red Digital** | `reddigital.cl` | — | watchlist | referenciado en src/content/sources/*.md |
@@ -599,9 +599,9 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | 🔒 | **Tercera Dosis** | `terceradosis.cl` | — | watchlist | /sitemap.xml es un índice de 3 entradas (pags/image/video), sin artículos |
 | ✅ | **Terra Chile** | `terra.cl` | — | watchlist | sitemap en catálogo (terra) |
 | ✅ | **The Clinic** | `theclinic.cl` | — | database | sitemap en catálogo (theclinic) |
-| ⬜ | **The Times en Español** | `thetime.cl` | — | database | Noticias, deportes, política, negocios y actualidad de Chile |
+| 🔒 | **The Times en Español** | `thetime.cl` | — | database | el sitio responde desde otro dominio (thetimeslatino.com) y su sitemap plano de 269 locs s |
 | 🟡 | **The Times Latino** | `thetimeslatino.com` | — | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Tropezón Tu Diario** | `nuevotropezon.tropezon.cl` | — | database | Diario con noticias de actualidad, policial y emergencias |
+| ✅ | **Tropezón Tu Diario** | `nuevotropezon.tropezon.cl` | — | database | sitemap en catálogo (nuevotropezon) |
 | ✅ | **TVN** | `tvn.cl` | — | watchlist | sitemap en catálogo (tvn) |
 | 🔒 | **Ufro Medios** | `ufromedios.cl` | — | database | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | ✅ | **Vivimos la Noticia** | `vivimoslanoticia.cl` | Maule | database | sitemap en catálogo (vivimoslanoticia) |
@@ -653,75 +653,75 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
 | Estado | Sitio | Web | Región | Fuente | Notas |
 | --- | --- | --- | --- | --- | --- |
 | ✅ | **Duna** | `duna.cl` | — | watchlist | sitemap en catálogo (duna) |
-| ⬜ | **FM Joven** | `fmjoven.com` | — | watchlist | sin feed RSS detectado |
+| 🔒 | **FM Joven** | `fmjoven.com` | — | watchlist | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 200 con 0 locs |
 | 🟡 | **FM Plus** | `fmplus.cl` | — | watchlist | referenciado en src/content/sources/*.md |
-| ⬜ | **FM Stylo** | `fmstylo.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **La Radioneta** | `laradioneta.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Los 40** | `los40.cl` | — | database | Radio chilena Los 40, música popular y actualidad |
-| ⬜ | **Mirador FM** | `miradorfm.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Ojo Subterráneo** | `ojosubterraneo.caster.fm` | — | watchlist | HTTP error (404) |
+| 🔒 | **FM Stylo** | `fmstylo.cl` | — | watchlist | es una estación de la red Patagonia Radio: su robots declara el sitemap de patagoniaradio. |
+| 🔒 | **La Radioneta** | `laradioneta.cl` | — | watchlist | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 200 con 0 locs |
+| 🔒 | **Los 40** | `los40.cl` | — | database | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 404 |
+| 🔒 | **Mirador FM** | `miradorfm.cl` | — | watchlist | el sitio real es mirador.fm y su wp-sitemap no declara ningún shard de posts: los 16 CPTs |
+| 🔒 | **Ojo Subterráneo** | `ojosubterraneo.caster.fm` | — | watchlist | el sitemap que declara es el de la plataforma (www.caster.fm) y sus 34 locs son noticias d |
 | 🟡 | **Orolonco FM** | `oroloncofm.cl` | Valparaiso | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Radio 1° de Mayo** | `radio1demayo.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Radio 1° de Mayo** | `radio1demayo.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | 🟡 | **Radio 45 Sur** | `radio45sur.cl` | Los Rios | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Radio 80** | `radio80.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio 920** | `radionueveveinte.com` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Acogida** | `radioacogida.cl` | Los Lagos | database | Radio comunitaria con señales en Los Muermos, Puyehue y Puerto Octay; cubre Osorno, Llanqu |
-| ⬜ | **Radio Activa** | `radioactiva.cl` | — | database | Radioemisora chilena de música contemporánea |
-| ⬜ | **Radio Alborada** | `radioalborada.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Alternativa** | `radioalternativa.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Angelina** | `radioangelina.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Armonía** | `radioarmonia.cl` | — | watchlist | sin feed RSS detectado |
+| 🔒 | **Radio 80** | `radio80.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Radio 920** | `radionueveveinte.com` | — | watchlist | dominio estacionado: su /sitemap.xml devuelve 2 locs de otro sitio (www.foriamking.nl) y l |
+| ✅ | **Radio Acogida** | `radioacogida.cl` | Los Lagos | database | sitemap en catálogo (radioacogida) |
+| ✅ | **Radio Activa** | `radioactiva.cl` | — | database | sitemap en catálogo (radioactiva) |
+| 🔒 | **Radio Alborada** | `radioalborada.cl` | — | watchlist | robots.txt 403 y los 3 endpoints estándar devuelven 403 |
+| 🔒 | **Radio Alternativa** | `radioalternativa.cl` | — | watchlist | los 3 endpoints estándar dan timeout (fetch aborted) |
+| 🔒 | **Radio Angelina** | `radioangelina.cl` | — | watchlist | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
+| 🔒 | **Radio Armonía** | `radioarmonia.cl` | — | watchlist | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
 | 🟡 | **Radio Atacama** | `radioatacama.cl` | Atacama | database | referenciado en src/content/sources/*.md |
 | 🔒 | **Radio Austral CD 970** | `radioaustralvaldivia.cl` | Los Rios | database | wp-sitemap con shards de posts residuales; radio sin volumen |
-| ⬜ | **Radio Azúcar** | `radioazucar.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Beat** | `radiobeat.cl` | — | watchlist | feed stale (último item: 2025-07-14, 428 días) |
-| ⬜ | **Radio Carillón** | `radiocarillon.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Carolina** | `carolina.cl` | — | database | Emisora chilena de música |
+| 🔒 | **Radio Azúcar** | `radioazucar.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| ✅ | **Radio Beat** | `radiobeat.cl` | — | watchlist | sitemap en catálogo (radiobeat) |
+| 🔒 | **Radio Carillón** | `radiocarillon.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| ✅ | **Radio Carolina** | `carolina.cl` | — | database | sitemap en catálogo (carolina) |
 | ✅ | **Radio Chilena** | `radiochilena.cl` | — | watchlist | sitemap en catálogo (radiochilena) |
-| ⬜ | **Radio Colo-Colo** | `radiocolocolo.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Comunicativa de Ovalle** | `radiocomunicativa.cl` | Coquimbo | database | Radio 93.7 FM y señal online con noticias de Ovalle, el Limarí y la Región de Coquimbo. |
+| 🔒 | **Radio Colo-Colo** | `radiocolocolo.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap: el sitio no responde desde esta red |
+| ✅ | **Radio Comunicativa de Ovalle** | `radiocomunicativa.cl` | Coquimbo | database | sitemap en catálogo (radiocomunicativa) |
 | 🟡 | **Radio Contacto** | `radiocontacto.cl` | Nuble | database | referenciado en src/content/sources/*.md |
 | 🔒 | **Radio Cristalina** | `radiocristalina.cl` | — | database | wp-sitemap con un solo shard wp-sitemap-posts-post-1.xml |
-| ⬜ | **Radio del Mar** | `radiodelmar.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Disney Chile** | `radiodisney.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio El Conquistador** | `elconquistador.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Radio del Mar** | `radiodelmar.cl` | — | watchlist | 1.001 locs con slugs en inglés traducidos y temas genéricos globales (`take-precautions-wh |
+| 🔒 | **Radio Disney Chile** | `radiodisney.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Radio El Conquistador** | `elconquistador.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | ✅ | **Radio FM Centro** | `fmcentro.cl` | Araucania | database | sitemap en catálogo (fmcentro) |
 | 🟡 | **Radio Futuro** | `futuro.cl` | — | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Radio Galactika** | `galactika.wordpress.com` | — | watchlist | feed stale (último item: 2015-08-18, 4045 días) |
+| ✅ | **Radio Galactika** | `galactika.wordpress.com` | — | watchlist | sitemap en catálogo (galactika) |
 | 🔒 | **Radio Guayacán** | `radioguayacan.cl` | Coquimbo | database | robots.txt vacío (0 bytes), sin sitemap |
-| ⬜ | **Radio Horizonte** | `horizonte.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Radio Horizonte** | `horizonte.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | ✅ | **Radio HVA** | `hvaradio.cl` | Atacama | database | sitemap en catálogo (hvaradio) |
 | ✅ | **Radio Interamericana** | `radiointeramericana.cl` | Biobio | database | sitemap en catálogo (radiointeramericana) |
 | 🟡 | **Radio JGM** | `radiojgm.uchile.cl` | — | database | referenciado en src/content/sources/*.md |
-| ⬜ | **Radio Konciencia** | `radiokonciencia.org` | — | watchlist | feed stale (último item: 2023-05-19, 1215 días) |
-| ⬜ | **Radio La Clave** | `laclave.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Radio Konciencia** | `radiokonciencia.org` | — | watchlist | 48 locs, todas de 2023, sobre cultura japonesa (sección kyouteijou) y sin cobertura de gob |
+| 🔒 | **Radio La Clave** | `laclave.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
 | ✅ | **Radio La Señal** | `radiolasenal.cl` | — | database | sitemap en catálogo (radiolasenal) |
 | ✅ | **Radio María Chile** | `radiomaria.cl` | — | database | sitemap en catálogo (radiomaria) |
-| ⬜ | **Radio Máxima** | `radiomaxima.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Melodía** | `radiomelodia.cl` | — | database | Radio Melodía, emisora chilena |
+| 🔒 | **Radio Máxima** | `radiomaxima.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| ✅ | **Radio Melodía** | `radiomelodia.cl` | — | database | sitemap en catálogo (radiomelodia) |
 | ✅ | **Radio Modelo** | `radiomodelo.cl` | — | database | sitemap en catálogo (radiomodelo) |
-| ⬜ | **Radio Placeres** | `radioplaceres.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Play** | `radioplay.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Portales** | `radioportales.cl` | — | watchlist | sitio no responde |
+| 🔒 | **Radio Placeres** | `radioplaceres.cl` | — | watchlist | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
+| 🔒 | **Radio Play** | `radioplay.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Radio Portales** | `radioportales.cl` | — | watchlist | robots.txt 500 y los 3 endpoints estándar devuelven 500 |
 | ✅ | **Radio Riquelme** | `radioriquelme.cl` | — | database | sitemap en catálogo (radioriquelme) |
-| ⬜ | **Radio Romántica** | `romantica.cl` | — | database | Emisora chilena de música romántica |
+| ✅ | **Radio Romántica** | `romantica.cl` | — | database | sitemap en catálogo (romantica) |
 | 🟡 | **Radio Sago** | `radiosago.cl` | — | watchlist | referenciado en src/content/sources/*.md |
 | ✅ | **Radio Santa Cruz** | `santacruzfm.cl` | Ohiggins | database | sitemap en catálogo (santacruzfm) |
-| ⬜ | **Radio Santiago** | `radiosantiago.cl` | Metropolitana | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Sinfonía** | `radiosinfonia.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Tiempo** | `radiotiempo.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Universal** | `radiouniversal.cl` | — | watchlist | sin feed RSS detectado |
+| 🔒 | **Radio Santiago** | `radiosantiago.cl` | Metropolitana | watchlist | su robots declara el wp-sitemap de eldiariodesantiago.cl: es el mismo sitio bajo otro nomb |
+| 🔒 | **Radio Sinfonía** | `radiosinfonia.cl` | — | watchlist | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
+| 🔒 | **Radio Tiempo** | `radiotiempo.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| ✅ | **Radio Universal** | `radiouniversal.cl` | — | watchlist | sitemap en catálogo (radiouniversal) |
 | ✅ | **Radio Universidad de Chile** | `radio.uchile.cl` | Metropolitana | database | sitemap en catálogo (radio_uchile) |
-| ⬜ | **Radio Universo** | `radiouniverso.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Uno** | `radiouno.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Usach** | `radio.usach.cl` | — | watchlist | sitio no responde |
-| ⬜ | **Radio Valentín Letelier** | `rvl.uv.cl` | Valparaiso | database | Radio de la Universidad de Valparaíso |
-| ⬜ | **Radio Villa Francia** | `radiovillafrancia.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radio Zero** | `radiozero.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Radios Regionales** | `radiosregionales.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **Rock & Pop** | `rockandpop.cl` | — | database | Radio chilena de rock, música y actualidad |
-| ⬜ | **Soberanía Radio** | `soberaniaradio.cl` | — | watchlist | sin feed RSS detectado |
-| ⬜ | **UC Radio Beethoven** | `beethovenfm.cl` | — | watchlist | feed stale (último item: 2021-04-02, 1991 días) |
+| 🔒 | **Radio Universo** | `radiouniverso.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Radio Uno** | `radiouno.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Radio Usach** | `radio.usach.cl` | — | watchlist | fetch failed en sitemap/sitemap_index/wp-sitemap (robots.txt no responde) |
+| 🔒 | **Radio Valentín Letelier** | `rvl.uv.cl` | Valparaiso | database | robots.txt 404 y los 3 endpoints estándar devuelven 500 |
+| 🔒 | **Radio Villa Francia** | `radiovillafrancia.cl` | — | watchlist | robots.txt 200 sin línea Sitemap y los 3 endpoints estándar devuelven 200 con 0 locs |
+| 🔒 | **Radio Zero** | `radiozero.cl` | — | watchlist | su wp-sitemap declara un único shard (wp-sitemap-posts-page-1.xml): solo páginas, ningún a |
+| 🔒 | **Radios Regionales** | `radiosregionales.cl` | — | watchlist | mismo caso que fmstylo.cl: su robots declara el sitemap de patagoniaradio.cl y sus 3 endpo |
+| 🔒 | **Rock & Pop** | `rockandpop.cl` | — | database | el único sitemap con artículos es su /out/sitemap.xml, con 37 locs de 2026 y el path /YYYY |
+| 🔒 | **Soberanía Radio** | `soberaniaradio.cl` | — | watchlist | robots.txt 404 y los 3 endpoints estándar devuelven 404 |
+| 🔒 | **UC Radio Beethoven** | `beethovenfm.cl` | — | watchlist | post-sitemap plano de 2 locs, ambas de 2021: medio inactivo |
 | ✅ | **Vilas Radio** | `vilasradio.cl` | Tarapaca | database | sitemap en catálogo (vilasradio) |
 
 ### Regional (regional)

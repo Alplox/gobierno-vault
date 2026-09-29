@@ -7,11 +7,10 @@
 
 **Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 5 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 267 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 18 · S: 316 · V: 12 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 317 · V: 12 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
-| A-2022-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Pendiente de verificar/añadir: (1) movilización ENAP/combustible de mayo de 2022 (T13: "ENAP retoma sus operaciones",... | — | Origen: <https://example.com/pendiente-revisar> |
 | A-2025-001 | ⬜ | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados (página /sueldos, evento 20251224-2) — validado 23-ago-2026: recon... | `20251224-2` | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo>]=2026-06 |
 | A-2026-001 | ⬜ | 2022-07-05 | Sugerencias pendientes (para no perderlas) | Fullclean / contratos con el Estado — seguimiento (evento 20260310-1): verificar (1) la respuesta del alcalde Mario D... | `20260310-1` | Origen: <https://example.com/pendiente-revisar> |
 | A-2026-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Economistas / pilares de la megarreforma — validación cruzada (evento 20260806-46): el evento proviene de una única f... | `20260806-46` | Origen: <https://example.com/pendiente-revisar> |
@@ -64,6 +63,7 @@
 | S-2022-002 | ⬜ | 2026-08-10 | Página /gabinete (9-ago-2026) — feature + gaps de | Casos de corrupción municipal pendientes de la lista de corrupcion_chile (sin evento aún, para tandas futuras): Virgi... | — | Origen: CSV de corrupcion_chile + investigación web (10-ago-2026). |
 | S-2022-004 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Pendiente: cobertura de prensa del caso de la 43° Comisaría de Peñalolén tras la nulidad parcial (penas ajustadas de ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-2022-005 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | pendiente: cobertura del incidente de la rotura del concentraducto (ago-2022) como evento propio si hay fuentes; esta... | — | Origen: <https://example.com/pendiente-revisar> |
+| S-2022-006 | ⬜ | 2026-09-29 | Eventos mar-abr 2026 — combustibles y camioneros | Alza de combustibles 2026: línea de tiempo completa de amenazas y descartes de paro de camioneros (mar-abr) | `20260326-5` `20260417-4` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/04/17/reunion-clave-de-camioneros-y-gobierno-gremios-amenazan-con-paro-si-hay-nuevas-alzas-de-combustibles.shtml> |
 | S-2023-001 | ⬜ | 2026-08-27 | Cuentas Públicas — seguimiento de anuncios | CP 2023 (20230601-1) — verificar implementación: (1) los US$1.500 millones adicionales en seguridad dependían de la r... | `20230601-1` | Origen: <https://example.com/pendiente-revisar> |
 | S-2023-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Papeles de la Dictadura — ampliación: el evento 20230911-1 documenta el plan de cierre de Merino; CIPER mantiene el b... | `20230911-1` | Origen: <https://example.com/pendiente-revisar> |
 | S-2023-003 | ⬜ | 2023-01-17 | Sugerencias pendientes (para no perderlas) | Polémica listas de espera del Minsal (punto de partida): tuit viral de @MrRangerR1 (17-ene-2023) recuerda el dicho de... | — | Origen: <https://example.com/pendiente-revisar> |

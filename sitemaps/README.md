@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
 
-- **Última sincronización:** 29/9/2026, 0:43:12
-- **Medios registrados:** 521
-- **Artículos indexados:** 11.577.142
+- **Última sincronización:** 29/9/2026, 1:30:53
+- **Medios registrados:** 535
+- **Artículos indexados:** 11.697.574
 
 ## Por medio
 
@@ -52,6 +52,7 @@
 | La Unión | 47.962 |
 | Radio Duna | 47.571 |
 | MercoPress | 46.710 |
+| Radio Activa | 46.268 |
 | La Hora | 45.656 |
 | Diario San José | 43.119 |
 | San Carlos On Line | 42.599 |
@@ -86,6 +87,7 @@
 | Diario Regional Aysén | 25.400 |
 | Canal 9 | 24.450 |
 | El Maule Informa | 23.293 |
+| El Diario de Santiago | 23.244 |
 | El Filtrador | 22.549 |
 | Diario de Puerto Montt | 22.325 |
 | Maule Hoy | 21.741 |
@@ -141,6 +143,7 @@
 | Ñuble Actual | 13.257 |
 | Universidad de Concepción | 13.240 |
 | Clave 9 | 13.125 |
+| Radio Universal | 12.897 |
 | VLN Radio | 12.549 |
 | Portal Metropolitano | 12.538 |
 | Arica Hoy | 12.459 |
@@ -148,8 +151,10 @@
 | Portal RedSalud | 12.203 |
 | Música y Noticias | 12.195 |
 | La Voz de los que Sobran | 12.113 |
+| Radio Melodía | 12.038 |
 | El Periscopio | 12.022 |
 | Cabrero en Línea | 11.859 |
+| Radio Comunicativa (Ovalle) | 11.739 |
 | Prensa Eventos | 11.612 |
 | La Cuarta | 11.469 |
 | SENDA | 11.049 |
@@ -181,6 +186,7 @@
 | Alerta Noticias | 8434 |
 | Margamarga TV | 8334 |
 | aDiarioCR | 8209 |
+| Futura FM (Talca) | 8201 |
 | Radio Polar (Magallanes) | 8118 |
 | Temuco Diario | 7878 |
 | El Diario de La Araucanía | 7863 |
@@ -278,6 +284,7 @@
 | Radio La Señal | 3078 |
 | Ñuble Online | 2804 |
 | Cóndor | 2785 |
+| Radio Acogida | 2730 |
 | La Perla del Limarí | 2670 |
 | Colegio San Ignacio | 2663 |
 | Ministerio de Vivienda | 2650 |
@@ -313,11 +320,13 @@
 | Radio Interamericana | 1546 |
 | Colegio de Enfermeras | 1491 |
 | Vértice TV (Puerto Montt) | 1421 |
+| Esperanza FM (Biobío / Los Lagos) | 1387 |
 | Universidad Mayor | 1350 |
 | Radio Modelo | 1325 |
 | Diario Los Lagos | 1302 |
 | Tu Región Noticias | 1296 |
 | Diario Mapuche | 1291 |
+| Tropezón Tu Diario | 1282 |
 | Qué Pasa Araucanía | 1270 |
 | Chile es Tuyo | 1244 |
 | El Periódico | 1179 |
@@ -408,9 +417,11 @@
 | Fundación Legado Chile | 217 |
 | Contapapaya | 206 |
 | DICREP (Crédito Prendario) | 197 |
+| Radio Galactika | 195 |
 | Arauco | 190 |
 | Colegio Tabancura | 161 |
 | Observatorio de Gobernanza Migratoria y DDHH | 160 |
+| Radio Beat | 151 |
 | UDI (Unión Demócrata Independiente) | 142 |
 | Centro Cultural La Moneda | 140 |
 | FISA | 140 |
@@ -422,7 +433,10 @@
 | Arica TV | 104 |
 | Nacimentano | 102 |
 | BBC Mundo | 100 |
+| Radio Carolina | 100 |
+| Radio Infinita | 100 |
 | Infodefensa | 100 |
+| Radio Romántica | 100 |
 | Liceo de Aplicación | 97 |
 | XOX.cl | 85 |
 | Coaniquem | 81 |

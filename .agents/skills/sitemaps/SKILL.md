@@ -64,6 +64,17 @@ trabajo que cuesta caro repetir.
    `mercuriovalpo.cl`, `cronicachillan.cl`, `australvaldivia.cl`…), y un CMS con páginas
    autogeneradas devuelve miles de URLs tipo `/quality/version/<id>.shtml` sin un solo
    artículo. Si los `<loc>` no son del dominio sondeado, es un descarte, no un medio.
+   Y al revés, **un sitemap enorme tampoco alcanza**: si las URLs son opacas
+   (`/article/<uuid>`) y el urlset plano está topado (típico 5.000 locs) cubriendo
+   uno o dos meses, es un agregador sin archivo — se descarta con la medición a la
+   Dos sabores más que se confunden con un medio real: el **dominio estacionado**,
+   que responde 200 con el sitemap de otro sitio (`radionueveveinte.com` → 2 locs de
+   `foriamking.nl`), y el **fundo de contenido traducido**, un .cl con slugs en
+   inglés y temas globales (`radiodelmar.cl` →
+   `take-precautions-when-shopping-at-huge-malls-to-prevent-viruses`). En los dos
+   casos el descarte se apoya en leer los locs, no en el código de respuesta.
+   vista (Periodismo2: 5.000 locs = jun-sep 2026, el 66% en junio y casi todo
+   deportes y mundo).
    Ojo también con los `alias`: dos dominios de la misma nota (p. ej. `eha.cl` y
    `elheraldoaustral.cl`) sirven el mismo sitemap → uno solo al catálogo.
 4. **Agregar la entrada a `MEDIA`** en `scripts/sitemaps/media.mjs`, eligiendo la config
@@ -126,6 +137,14 @@ editorial del repo antes de enviar. El reporte se commitea; el script no toca na
 ### Anti-duplicados
 
 El alta es por **slug**, no por dominio: nada impide crear `lahora` junto a `la_hora`, y el
+
+Cuando el dominio de la fila ⬜ es un **alias** del sitio real, el alta se hace con el
+dominio verdadero y la fila del alias se cierra en `SIN_SITEMAP` con ese motivo.
+Pasó con `radiosantiago.cl`, cuyo `robots.txt` declara el `wp-sitemap.xml` de
+`eldiariodesantiago.cl`: al catálogo entró el segundo. Y con las estaciones de una
+red, que sirven el sitemap de la casa madre (`fmstylo.cl` y `radiosregionales.cl` →
+`patagoniaradio.cl`, cuyo índice mensual da ~7 locs por shard).
+
 catálogo queda con el doble de archivos y dos fuentes de verdad. Si el dominio ya existe,
 **mejorá el `includeRe` del slug existente y resincronizá** en vez de crear otro. Cuando el
 run nuevo es un superconjunto del viejo (lo normal cuando el `includeRe` solo agregaba
@@ -154,6 +173,7 @@ slug, la entrada sobra y hay que borrarla.
 | CMS propio por año | `sitemap{N}_{YYYY}.xml` | `includeRe: /sitemap\d+_\d{4}\.xml$/i`; `forceHttps: true` si el index trae `http://` |
 | CMS propio mensual | `…/YYYY/MM.xml` | `dateFromSitemapPath: /…\/(\d{4})\/(\d{2})\.xml$/` (ver trampa 3) |
 | Índice paginado de 100 | `news/{0,100,…}/sitemap.xml` | `includeRe` con sufijo del padre **opcional** (trampa 1) |
+| El sitemap que declara el `robots.txt` es un stub | `/sitemap.xml` con 5-20 locs (la home y sus anclas) | apuntar al `/wp-sitemap.xml` aunque el robots no lo mencione: el probe prueba los 3 endpoints, y el stub no quiere decir que no haya artículos (Esperanza FM: 5 locs declaradas, 1.387 artículos en el wp-sitemap) |
 | Urlset plano con páginas estáticas mezcladas | `/sitemap.xml` | `urlRe: /\/20\d{2}\/\d{2}\/\d{2}\//` + `locDateRe` (trampa 4) |
 | WP 5.5+ **sin guiones bajos** | `/wp-sitemap.xml` | `includeRe: /wp_sitemap_posts_post_\d+\.xml$/i` — `articleOnly` no lo reconoce, y su índice cuelga 7 shards de `post_tag` de 1.000 locs cada uno |
 | Índice propio de radio (`/sitemap/news/N/`) | el shard de noticias | sin `includeRe` si el `index` ya es el de noticias; ojo al `<lastmod>undefined</lastmod>` (trampa 15) |
@@ -198,6 +218,9 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
    merge normal no corrige las fechas ya guardadas. El offset del `<lastmod>` dice si el
    medio cae en el caso: `2015-09-29T23:16:44-03:00` es la hora local declarada y no se
    corre; `2014-11-27T23:16:10+00:00` es el instante UTC y sí. Cuando el path no trae
+    Verificado en Radio Comunicativa (Ovalle): un artículo con `datePublished`
+    2014-01-01T22:08 quedó fechado 2014-01-02, y no hay arreglo porque su path solo
+    trae `/YYYY/MM/`. Anota el caso en la config para que no se lea como bug.
    fecha no hay con qué corregirlo, y eso hay que dejarlo anotado en la config.
 6. **`locDateRe` con `20\d{2}` pierde la prensa pre-2000.** Si el medio tiene historia
    anterior a 2000, el rango tiene que ser `(19|20)\d{2}`: con el patrón acotado al siglo
@@ -250,6 +273,7 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
     8.118: el 15% venía con el `lastmod` literal `undefined` y sin fecha en el path.
     **Compará siempre los locs que anuncia el sitemap con las entradas que
     quedaron escritas** (el resumen del sync y el conteo por año lo delatan): un
+    No es un caso único: Futura FM (Talca) perdió 1.199 de ~9.400 locs por lo mismo.
     medio puede quedar con un tercio menos de lo prometido.
 16. **Un `urlRe` también sirve para tirar las fechas falsas, no solo para elegir
     artículos.** El Marino (Pichilemu) tiene 422 locs con fecha anterior a 2000
@@ -262,6 +286,13 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
     arregla nada: baja **todas** las fechas a día 01. Si el `<lastmod>` es de
     publicación y trae el día real (Alto La Dehesa), lo correcto es quitar
     `preferLocDate` y `locDateRe` y quedarse con el `lastmod`.
+18. **Mide shards del principio y del final, no solo los primeros.** Los shards de
+    1.000 locs de un mismo tipo no vienen en orden de fecha, y medir solo los
+    primeros 25 dio una lectura falsa de dos medios del lote Radio:
+    radiocomunicativa parecía arrancar en 2025 con ~15.600 artículos y en realidad
+    tiene 11.739 con archivo **2013→2026**; y radioactiva parecía un archivo de
+    2009-2021 con un único artículo de 2026, cuando son 47 shards que cubren
+    2009→2026. La profundidad real solo aparece mirando el último shard.
 
 ---
 

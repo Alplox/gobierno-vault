@@ -636,6 +636,7 @@
 - [2026/04/20260417-1 - Seremi de Culturas de Aysén Ángela Valdebenito renuncia por falta de experiencia](src/content/events/2026/04/20260417-1.md) — 2 fuentes
 - [2026/04/20260417-2 - Luis Calderón asume como Seremi de Seguridad de La Araucanía](src/content/events/2026/04/20260417-2.md) — 2 fuentes
 - [2026/04/20260417-3 - Mario Sepúlveda es reemplazado como seremi de Seguridad de La Araucanía tras 16 días](src/content/events/2026/04/20260417-3.md) — 5 fuentes
+- [2026/04/20260417-4 - Reunión clave entre Gobierno y camioneros: 15 días del Ejecutivo, 20 del gremio, y el paro de Valparaíso suspendido horas después de anunciarse](src/content/events/2026/04/20260417-4.md) — 11 fuentes
 - [2026/04/20260418-1 - Revelan contrato de Cristián Valenzuela: hasta $8,9 millones mensuales como asesor de Kast](src/content/events/2026/04/20260418-1.md) — 5 fuentes
 - [2026/04/20260421-1 - Seremi de Trabajo de Coquimbo Viviana Torres renuncia por no cumplir requisito de 10 semestres](src/content/events/2026/04/20260421-1.md) — 3 fuentes
 - [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 7 fuentes
@@ -1742,6 +1743,7 @@
 - [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
 - [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
 - [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
+- [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 8 fuentes
 
 ## 2025
 
@@ -1838,6 +1840,7 @@
 - [2024/05/20240508-1 - CIPER revela 133 reuniones de ministros y subsecretarios con empresarios no registradas en la Ley de Lobby; Vallejo reconoce el caso](src/content/events/2024/05/20240508-1.md) — 4 fuentes
 - [2024/05/20240508-2 - SERMIG Reporte 2: estadísticas 2014-jun 2023 sistematizan primera década de registros](src/content/events/2024/05/20240508-2.md) — 2 fuentes
 - [2024/05/20240510-1 - Pacogate: condena a 28 carabineros por fraude al fisco](src/content/events/2024/05/20240510-1.md) — 3 fuentes
+- [2024/05/20240513-1 - Paro indefinido de camioneros en el norte grande: nueve puntos por seguridad, cierre de fronteras y Estado de Excepción](src/content/events/2024/05/20240513-1.md) — 8 fuentes
 - [2024/06/20240601-1 - Tercera Cuenta Pública de Boric: 61 propuestas, aborto legal, mayor presupuesto de seguridad en ocho años y sociedad de cuidados](src/content/events/2024/06/20240601-1.md) — 10 fuentes
 - [2024/06/20240609-1 - Primarias municipales y de gobernadores 2024: baja participación marca la jornada electoral](src/content/events/2024/06/20240609-1.md) — 2 fuentes
 - [2024/07/20240712-1 - Coeva de la Región Metropolitana aprueba el data center de Amazon en Huechuraba tras un proceso con 57 observaciones ciudadanas](src/content/events/2024/07/20240712-1.md) — 9 fuentes
@@ -1911,6 +1914,8 @@
 - [2022/04/20220417-1 - Excandidatos presidenciales critican el primer mes del gobierno de Boric](src/content/events/2022/04/20220417-1.md) — 9 fuentes
 - [2022/05/20220502-1 - Querella contra Carabineros por la quema de la estación La Granja del Metro tras el reportaje '¿Quién quemó el Metro?' de La Red](src/content/events/2022/05/20220502-1.md) — 4 fuentes
 - [2022/05/20220504-1 - Convención aprueba norma que prohíbe la tortura con 38 abstenciones: solo Martín Arrau (UDI) y Helmuth Martínez votaron en contra](src/content/events/2022/05/20220504-1.md) — 3 fuentes
+- [2022/05/20220506-1 - ENAP paraliza toda su logística al sur por el bloqueo de la refinería Bío Bío y advierte cinco días de combustible; el desbloqueo que anuncia es desmentido por los trabajadores](src/content/events/2022/05/20220506-1.md) — 12 fuentes
+- [2022/05/20220509-1 - El Gobierno ordena a Carabineros desalojar la refinería Bío Bío de ENAP tras ocho días de bloqueo; gases, siete detenidos y el emplazamiento “Boric, yo te di el voto”](src/content/events/2022/05/20220509-1.md) — 9 fuentes
 - [2022/05/20220524-1 - Boric compromete desde Justicia una agenda de reparación para víctimas de violaciones a los DD.HH. del estallido social](src/content/events/2022/05/20220524-1.md) — 2 fuentes
 - [2022/06/20220601-1 - Primera Cuenta Pública de Boric: plebiscito de salida del 4 de septiembre, reforma tributaria de junio y 102 medidas en 5 ejes](src/content/events/2022/06/20220601-1.md) — 6 fuentes
 - [2022/07/20220704-1 - Boric realiza una cadena nacional tras recibir la propuesta de nueva Constitución y convoca al plebiscito del 4 de septiembre](src/content/events/2022/07/20220704-1.md) — 2 fuentes

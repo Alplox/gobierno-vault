@@ -48,6 +48,7 @@
 | `canal9` | Canal 9 | `www.canal9.cl/sitemap, www.canal9.cl/sitemap-news` | — | 24.450 | 2 |
 | `capa9` | Capa9 | `capa9.net/sitemap.xml` | — | 37.352 | 18 |
 | `capodeprovincia` | El Capo de Provincia | `capodeprovincia.cl/wp-sitemap.xml` | includeRe | 1.854 | 17 |
+| `carolina` | Radio Carolina | `www.carolina.cl/sitemap.xml` | — | 100 | 1 |
 | `cauquenesnet` | CauquenesNet | `cauquenesnet.cl/robots.txt` | includeRe | 20.449 | 19 |
 | `cbs` | Cuerpo de Bomberos de Santiago | `www.cbs.cl/wp-sitemap.xml` | includeRe | 2.084 | 6 |
 | `cchc` | CCHC | `cchc.cl/sitemap.xml` | includeRe | 0 | 0 |
@@ -155,6 +156,7 @@
 | `eldefinido` | El Definido | `eldefinido.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
 | `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 279 | 1 |
 | `eldiariodelaaraucania` | El Diario de La Araucanía | `eldiariodelaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.863 | 3 |
+| `eldiariodesantiago` | El Diario de Santiago | `eldiariodesantiago.cl/wp-sitemap.xml` | includeRe | 23.244 | 6 |
 | `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 252.385 | 17 |
 | `electromineria` | Electrominería | `electromineria.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.956 | 5 |
 | `elfiltrador` | El Filtrador | `elfiltrador.com/sitemap_index.xml` | articleOnly (Yoast) | 22.549 | 9 |
@@ -202,6 +204,7 @@
 | `epicentrochile` | Epicentro Chile | `www.epicentrochile.com/sitemap_index.xml` | articleOnly (Yoast) | 34.033 | 2 |
 | `espaciopublico` | Espacio Público | `espaciopublico.cl/wp-sitemap.xml` | includeRe | 2.000 | 9 |
 | `espacioregional` | Espacio Regional | `www.espacioregional.cl/wp-sitemap.xml` | includeRe | 1.118 | 9 |
+| `esperanzafm` | Esperanza FM (Biobío / Los Lagos) | `esperanzafm.cl/wp-sitemap.xml` | includeRe | 1.387 | 3 |
 | `estapasando` | Está Pasando | `estapasando.cl/sitemap_index.xml` | articleOnly (Yoast) | 51.988 | 6 |
 | `estrellaiquique` | La Estrella de Iquique | `estrellaiquique.cl/sitemap.xml` | articleOnly (Yoast) | 0 | 0 |
 | `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.348 | 7 |
@@ -219,6 +222,8 @@
 | `frevs` | Federación Regionalista Verde Social | `frevs.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.116 | 10 |
 | `fronteranorte` | Frontera Norte | `fronteranorte.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.517 | 8 |
 | `funcionariopublico` | Funcionario Público | `funcionariopublico.cl/wp-sitemap.xml` | includeRe | 1 | 1 |
+| `futurafm` | Futura FM (Talca) | `www.futurafm.cl/sitemap/news/sitemap.xml` | — | 8.201 | 4 |
+| `galactika` | Radio Galactika | `galactika.wordpress.com/sitemap.xml` | — | 195 | 6 |
 | `generadoras` | Generadoras de Chile | `generadoras.cl/wp-sitemap.xml` | includeRe | 482 | 23 |
 | `gob` | Gobierno de Chile | `www.gob.cl/sitemap-articles.xml` | — | 9 | 1 |
 | `gobiernosantiago` | Gobierno Regional Metropolitano | `gobiernosantiago.cl/sitemap.xml` | — | 0 | 0 |
@@ -234,6 +239,7 @@
 | `hvaradio` | Radio HVA | `www.hvaradio.cl/wp-sitemap.xml` | includeRe | 16.209 | 8 |
 | `iconstruccion` | Instituto de la Construcción | `iconstruccion.cl/sitemap_index.xml` | articleOnly (Yoast) | 363 | 6 |
 | `iguales` | Fundación Iguales | `iguales.cl/wp-sitemap.xml` | includeRe | 2.109 | 16 |
+| `infinita` | Radio Infinita | `www.infinita.cl/sitemap.xml` | — | 100 | 1 |
 | `infodefensa` | Infodefensa | `www.infodefensa.com/sitemap/lastarticles` | — | 100 | 1 |
 | `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 10.962 | 1 |
 | `informaalminuto` | Informa Al Minuto | `informaalminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.435 | 6 |
@@ -317,6 +323,7 @@
 | `nubledigital` | Ñuble Digital | `nubledigital.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.326 | 9 |
 | `nubleonline` | Ñuble Online | `nubleonline.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.804 | 2 |
 | `nuevopoder` | Nuevo Poder | `www.nuevopoder.cl/sitemap_index.xml` | articleOnly (Yoast) | 57.175 | 5 |
+| `nuevotropezon` | Tropezón Tu Diario | `nuevotropezon.tropezon.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.282 | 3 |
 | `observador` | El Observador | `observador.cl/sitemap_index.xml` | articleOnly (Yoast) | 38.528 | 10 |
 | `observatoriomedicina` | Observatorio Medicina UC | `observatorio.medicina.uc.cl/sitemap_index.xml` | articleOnly (Yoast) | 530 | 9 |
 | `oceana` | Oceana Chile | `oceana.org/sitemap_index.xml` | articleOnly (Yoast) | 909 | 17 |
@@ -355,14 +362,19 @@
 | `quintero` | Quintero | `quintero.cl/sitemap_index.xml` | articleOnly (Yoast) | 30 | 1 |
 | `quirihue_noticias` | Quirihue Noticias | `quirihuenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.721 | 6 |
 | `radio_uchile` | Radio Universidad de Chile | `radio.uchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108.402 | 18 |
+| `radioacogida` | Radio Acogida | `radioacogida.cl/wp-sitemap.xml` | includeRe | 2.730 | 3 |
+| `radioactiva` | Radio Activa | `www.radioactiva.cl/sitemap_index.xml` | articleOnly (Yoast) | 46.268 | 18 |
 | `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 299.997 | 12 |
+| `radiobeat` | Radio Beat | `www.radiobeat.cl/sitemap.xml` | includeRe | 151 | 5 |
 | `radiochilena` | Radio Chilena | `radiochilena.cl/sitemap_index.xml` | articleOnly (Yoast) | 745 | 11 |
+| `radiocomunicativa` | Radio Comunicativa (Ovalle) | `radiocomunicativa.cl/sitemap_index.xml` | articleOnly (Yoast) | 11.739 | 14 |
 | `radiofestival` | Radio Festival | `www.radiofestival.cl/wp-sitemap.xml` | includeRe | 32.819 | 12 |
 | `radioimagina` | Radio Imagina | `radioimagina.cl/sitemap_index.xml` | articleOnly (Yoast) | 28.810 | 14 |
 | `radiointeramericana` | Radio Interamericana | `radiointeramericana.cl/wp-sitemap.xml` | includeRe | 1.546 | 1 |
 | `radiolasenal` | Radio La Señal | `radiolasenal.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.078 | 2 |
 | `radiomagallanes` | Radio Magallanes | `radiomagallanes.cl/sitemap.xml` | includeRe | 3.484 | 2 |
 | `radiomaria` | Radio María Chile | `radiomaria.cl/sitemap_index.xml` | articleOnly (Yoast) | 67 | 1 |
+| `radiomelodia` | Radio Melodía | `radiomelodia.cl/wp-sitemap.xml` | includeRe | 12.038 | 2 |
 | `radiomodelo` | Radio Modelo | `radiomodelo.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.325 | 1 |
 | `radionuevomundo` | Radio Nuevo Mundo | `radionuevomundo.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.428 | 9 |
 | `radiopaulina` | Radio Paulina | `radiopaulina.cl/sitemap.xml` | includeRe | 9.627 | 2 |
@@ -373,6 +385,7 @@
 | `radiosantamaria` | Radio Santa María | `www.radiosantamaria.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.922 | 9 |
 | `radiosiente` | Radio Siente (Arica) | `www.radiosiente.com/sitemap_index.xml` | articleOnly (Yoast) | 242 | 11 |
 | `radioudec` | Radio UdeC | `www.radioudec.cl/sitemap_index.xml` | articleOnly (Yoast) | 11.047 | 7 |
+| `radiouniversal` | Radio Universal | `www.radiouniversal.cl/sitemap.xml` | — | 12.897 | 6 |
 | `radiovalparaiso` | Radio Valparaíso | `radiovalparaiso.cl/sitemap_index.xml` | articleOnly (Yoast) | 843 | 3 |
 | `radioventisqueros` | Radio Ventisqueros | `radioventisqueros.cl/sitemap.xml` | includeRe | 872 | 3 |
 | `redaccion` | Redacción | `redaccion.cl/sitemap_index.xml` | articleOnly (Yoast) | 269 | 1 |
@@ -392,6 +405,7 @@
 | `rioenlinea` | Río en Línea | `rioenlinea.cl/sitemap.xml` | includeRe | 19.352 | 9 |
 | `rln` | Radio Las Nieves | `rln.cl/sitemap_index.xml` | articleOnly (Yoast) | 32.193 | 9 |
 | `rn` | RN | `www.rn.cl/sitemap.xml` | includeRe | 25 | 2 |
+| `romantica` | Radio Romántica | `www.romantica.cl/sitemap.xml` | — | 100 | 1 |
 | `ruta2050` | Ruta 2050 | `ruta2050.cl/sitemap_index.xml` | articleOnly (Yoast) | 484 | 3 |
 | `sabes` | Sabes.cl | `sabes.cl/sitemap.xml` | includeRe | 18.863 | 2 |
 | `saintgeorge` | Saint George's College | `saintgeorge.cl/sitemap_index.xml` | articleOnly (Yoast) | 1 | 1 |

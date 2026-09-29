@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-29T03:43:12.324Z",
+  "actualizado": "2026-09-29T04:30:53.583Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3649,6 +3649,104 @@
       "articulos": 23,
       "nuevos": 23,
       "años": 4
+    },
+    "esperanzafm": {
+      "nombre": "Esperanza FM (Biobío / Los Lagos)",
+      "ultima_sync": "2026-09-29T03:59:56.934Z",
+      "articulos": 1387,
+      "nuevos": 1387,
+      "años": 3
+    },
+    "futurafm": {
+      "nombre": "Futura FM (Talca)",
+      "ultima_sync": "2026-09-29T04:00:40.605Z",
+      "articulos": 8201,
+      "nuevos": 8201,
+      "años": 4
+    },
+    "infinita": {
+      "nombre": "Radio Infinita",
+      "ultima_sync": "2026-09-29T04:00:40.706Z",
+      "articulos": 100,
+      "nuevos": 100,
+      "años": 1
+    },
+    "nuevotropezon": {
+      "nombre": "Tropezón Tu Diario",
+      "ultima_sync": "2026-09-29T04:00:47.939Z",
+      "articulos": 1282,
+      "nuevos": 1282,
+      "años": 3
+    },
+    "eldiariodesantiago": {
+      "nombre": "El Diario de Santiago",
+      "ultima_sync": "2026-09-29T04:19:45.894Z",
+      "articulos": 23244,
+      "nuevos": 23244,
+      "años": 6
+    },
+    "radiocomunicativa": {
+      "nombre": "Radio Comunicativa (Ovalle)",
+      "ultima_sync": "2026-09-29T04:20:39.413Z",
+      "articulos": 11739,
+      "nuevos": 11739,
+      "años": 14
+    },
+    "radiouniversal": {
+      "nombre": "Radio Universal",
+      "ultima_sync": "2026-09-29T04:20:40.056Z",
+      "articulos": 12897,
+      "nuevos": 12897,
+      "años": 6
+    },
+    "radiomelodia": {
+      "nombre": "Radio Melodía",
+      "ultima_sync": "2026-09-29T04:20:43.608Z",
+      "articulos": 12038,
+      "nuevos": 12038,
+      "años": 2
+    },
+    "radioacogida": {
+      "nombre": "Radio Acogida",
+      "ultima_sync": "2026-09-29T04:20:46.609Z",
+      "articulos": 2730,
+      "nuevos": 2730,
+      "años": 3
+    },
+    "radiobeat": {
+      "nombre": "Radio Beat",
+      "ultima_sync": "2026-09-29T04:20:47.833Z",
+      "articulos": 151,
+      "nuevos": 151,
+      "años": 5
+    },
+    "galactika": {
+      "nombre": "Radio Galactika",
+      "ultima_sync": "2026-09-29T04:20:47.895Z",
+      "articulos": 195,
+      "nuevos": 195,
+      "años": 6
+    },
+    "carolina": {
+      "nombre": "Radio Carolina",
+      "ultima_sync": "2026-09-29T04:20:48.039Z",
+      "articulos": 100,
+      "nuevos": 100,
+      "años": 1
+    },
+    "romantica": {
+      "nombre": "Radio Romántica",
+      "ultima_sync": "2026-09-29T04:20:48.320Z",
+      "articulos": 100,
+      "nuevos": 100,
+      "años": 1
+    },
+    "radioactiva": {
+      "nombre": "Radio Activa",
+      "ultima_sync": "2026-09-29T04:30:53.583Z",
+      "articulos": 46268,
+      "nuevos": 46268,
+      "años": 18
     }
   }
 }

@@ -2477,6 +2477,158 @@ export const MEDIA = {
   // 2026-09-28) dejó ~7.900 entradas fechadas en 2026 cuyo datePublished real es de
   // 2025 o feb-2026 (verificado en 5 URLs). Sin fecha en el path no hay forma de
   // recuperarlas, así que el catálogo quedaría con fechas equivocadas.
+  // ── Agregados 29-09-2026 (batch 36: los 48 pendientes ⬜ de Radio) ──
+  radioactiva: {
+    nombre: 'Radio Activa',
+    index: 'https://www.radioactiva.cl/sitemap_index.xml',
+    // Yoast con 47 shards de post-sitemap → 46.268 artículos, 18 años (2009→2026): el
+    // más profundo que apareció en la categoría Radio. OJO: el path es /YYYY/MM/<slug>/
+    // SIN día, así que no va locDateRe (con 2 grupos el día caería a 01, trampa 17); se
+    // usa el <lastmod>. Comprobado sobre 10 artículos de cinco años (2009, 2012, 2015,
+    // 2020, 2025): 9 coinciden con el datePublished al minuto; las 2 excepciones son un
+    // D+1 en la frontera de año (algo publicado el 2019-12-31 quedó el 2020-01-01), que
+    // afecta entre 3 y 29 artículos por año (0,0-0,6% del total). No hay masa corrida.
+    // Los artículos más recientes también salen por su /out/sitemap.xml (30 locs), pero
+    // el índice los declara todos: no hace falta nada en extra.
+    articleOnly: true,
+  },
+  eldiariodesantiago: {
+    nombre: 'El Diario de Santiago',
+    index: 'https://eldiariodesantiago.cl/wp-sitemap.xml',
+    // La fila de la bitácora se llama radiosantiago.cl, pero ese dominio redirige acá: al
+    // catálogo entra el sitemap del sitio real, no el del alias.
+    // WP 5.5+ nativo: 12 CPTs → 23.244 artículos, 2021→2026, todos con /YYYY/MM/DD/ en el path. Hace
+    // falta preferLocDate porque hay artículos con el <lastmod> corrido (uno de abr-2023
+    // con datePublished 2022-06-14): el path es el que declara la fecha real.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  radiocomunicativa: {
+    nombre: 'Radio Comunicativa (Ovalle)',
+    index: 'https://radiocomunicativa.cl/sitemap_index.xml',
+    // Yoast: 78 shards → 11.739 artículos con archivo 2013→2026 (los shards vienen del
+    // más nuevo al más viejo, así que medir solo los primeros 25 da una falsa impresión de
+    // que el medio arranca en 2025). El path es /YYYY/MM/<slug>/ sin día y el <lastmod>
+    // se corre hasta 10 h del datePublished por retoques, así que va el <lastmod>: con un
+    // locDateRe de 2 grupos todas las fechas caerían a día 01 (trampa 17).
+    // OJO: su /sitemap.xml es un urlset de 1 loc (la home) y el sitemap-news.xml solo
+    // trae 15: el que sirve es el índice.
+    // OJO: su <lastmod> es el instante UTC, así que lo publicado después de las 20:00
+    // queda con D+1 (verificado: un artículo con datePublished 2014-01-01T22:08 quedó
+    // fechado 2014-01-02). Es el caso "no hay con qué corregirlo" de la trampa 5: sin
+    // fecha en el path no hay de dónde recuperar el día.
+    articleOnly: true,
+  },
+  radiouniversal: {
+    nombre: 'Radio Universal',
+    index: 'https://www.radiouniversal.cl/sitemap.xml',
+    // Urlset plano de 12.897 locs, sin fecha en el path y sin línea Sitemap en el
+    // robots.txt: el /sitemap.xml es el único endpoint vivo (el sitemap_index y el
+    // wp-sitemap devuelven 403). El <lastmod> coincide con el datePublished y ningún
+    // timestamp se repite más de 2 veces → archivo 2021→2026 sin correcciones.
+  },
+  radiomelodia: {
+    nombre: 'Radio Melodía',
+    index: 'https://radiomelodia.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 7 CPTs ≈ 12.038 locs, sin fecha en el path. El <lastmod> se
+    // concentra en tramos de minutos porque el sitio carga por lotes (el primer shard
+    // abre con varias entradas de 2025-01-01 10:2x), pero en el conjunto son 606 días
+    // distintos y ningún día pasa de 80 artículos: no es una migración, son lotes de
+    // carga. Archivo 2025→2026.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  radioacogida: {
+    nombre: 'Radio Acogida',
+    index: 'https://radioacogida.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 2 shards ≈ 2.730 locs, sin fecha en el path. <lastmod> de
+    // publicación: 683 días distintos y ningún día con más de 20 artículos. Radio
+    // comunitaria mapuche con señales en Los Muermos (Puyehue) y Muermos.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  radiobeat: {
+    nombre: 'Radio Beat',
+    index: 'https://www.radiobeat.cl/sitemap.xml',
+    // Wix: los artículos viven en el CPT /post/, o sea en blog-posts-sitemap.xml, y
+    // articleOnly no lo reconoce. 151 locs de 2021→2025. Su <lastmod> viene como fecha
+    // pura ("2022-11-28") y coincide con el datePublished.
+    includeRe: /\/blog-posts-sitemap\.xml$/i,
+  },
+  galactika: {
+    nombre: 'Radio Galactika',
+    index: 'https://galactika.wordpress.com/sitemap.xml',
+    // Blog de WordPress.com (radio comunitaria alternativa de Santiago). Urlset plano de
+    // 196 locs, 195 con /YYYY/MM/DD/ en el path, y el <lastmod> coincide con el path
+    // (2015-08-18T15:25 para /2015/08/18/), así que se prefiere el path igual. Valor
+    // propio: uno de los pocos archivos radiales que llega a 2009-2011. El urlRe deja
+    // fuera la loc sin fecha (las páginas fijas del blog).
+    urlRe: /\/\d{4}\/\d{2}\/\d{2}\//,
+    preferLocDate: true,
+    locDateRe: /\/((?:19|20)\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  carolina: {
+    nombre: 'Radio Carolina',
+    index: 'https://www.carolina.cl/sitemap.xml',
+    // Urlset plano de 101 locs (100 artículos + la home) con /YYYY/MM/DD/ en el path. El
+    // <lastmod> va 2-3 h después del datePublished (retoque de la jornada), así que
+    // manda la fecha del path. Misma plataforma que Radio Infinita y Romántica.
+    urlRe: /\/20\d{2}\/\d{2}\/\d{2}\//,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  romantica: {
+    nombre: 'Radio Romántica',
+    index: 'https://www.romantica.cl/sitemap.xml',
+    // Misma plataforma plana que Carolina: 101 locs, 100 con /YYYY/MM/DD/ en el path.
+    // Aquí el <lastmod> sí coincide con el datePublished, pero se mantiene preferLocDate
+    // por consistencia con las otras emisoras del grupo.
+    urlRe: /\/20\d{2}\/\d{2}\/\d{2}\//,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  // ── Agregados 29-09-2026 (batch 35: los 26 pendientes ⬜ de Noticias nacionales) ──
+  esperanzafm: {
+    nombre: 'Esperanza FM (Biobío / Los Lagos)',
+    index: 'https://esperanzafm.cl/wp-sitemap.xml',
+    // WP 5.5+ nativo: 1 shard de posts ≈ 1.387 locs. OJO: el /sitemap.xml que declara su
+    // robots.txt es un urlset plano de 5 locs (la home y sus anclas), sin un solo
+    // artículo: hay que apuntar al wp-sitemap. Sin fecha en el path, pero el <lastmod> es
+    // de publicación: ningún timestamp se repite (máx. 1 vez). Ventana 2024→2026.
+    includeRe: /\/wp-sitemap-posts-post-\d+\.xml$/i,
+    articleOnly: true,
+  },
+  futurafm: {
+    nombre: 'Futura FM (Talca)',
+    index: 'https://www.futurafm.cl/sitemap/news/sitemap.xml',
+    // Índice propio de la radio: 94 shards de /sitemap/news/N/ ≈ 9.400 locs. Sin
+    // includeRe porque todos los hijos de este índice son de noticias (los de categorías,
+    // tags y static cuelgan de otros sitemaps declarados aparte en el robots). Sin fecha en
+    // el path y el <lastmod> es de publicación, aunque viene como "2026-09-10 16:58" (con
+    // espacio y sin T), que isoDate recorta a los 10 primeros caracteres.
+    // OJO: una de cada ocho entradas trae <lastmod>undefined</lastmod> y el sync las
+    // descarta en silencio (trampa 15): de las ~9.400 locs quedaron 8.201, de 2023→2026.
+  },
+  infinita: {
+    nombre: 'Radio Infinita',
+    index: 'https://www.infinita.cl/sitemap.xml',
+    // Urlset plano de 101 locs (100 artículos + la home), todas con /YYYY/MM/DD/ en el
+    // path. El <lastmod> coincide con el datePublished, pero se prefiere la fecha del path
+    // porque la home llega con lm a las 00:55: el sitio publica cerca de medianoche y su
+    // lastmod se corre al día siguiente. El urlRe deja fuera la home (sin fecha en el path).
+    urlRe: /\/20\d{2}\/\d{2}\/\d{2}\//,
+    preferLocDate: true,
+    locDateRe: /\/(20\d{2})\/(\d{2})\/(\d{2})\//,
+  },
+  nuevotropezon: {
+    nombre: 'Tropezón Tu Diario',
+    index: 'https://nuevotropezon.tropezon.cl/sitemap_index.xml',
+    // Yoast: 2 shards ≈ 1.282 locs, sin fecha en el path. El <lastmod> coincide con el
+    // datePublished (comprobado en 2 URLs). Diario regional del Mataquito / Melipilla.
+    articleOnly: true,
+  },
   // ── Agregados 29-09-2026 (batch 34: los 36 pendientes ⬜ de Regional) ──
   duplos: {
     nombre: 'Duplos',
