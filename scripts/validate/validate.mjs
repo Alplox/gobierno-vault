@@ -208,6 +208,7 @@ const WHITELIST_MEDIOS = new Set([
   'Fondo Nacional de Salud (Fonasa)',
   'Diario Oficial de la República de Chile',
   'Cuerpo de Bomberos de Chile',
+  'Armada de Chile',
   'BCN Historia de la Ley',
   'Wikipedia',
   'Comisión para la Fijación de Remuneraciones',

@@ -1750,9 +1750,9 @@
 - [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
 - [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
 - [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
-- [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 8 fuentes
+- [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
-- [2026/09/20260928-4 - Interpelación al canciller Pérez Mackenna en la Cámara: Venegas pregunta por Judd, el Escudo y Magallanes y el ministro cierra con que solo el Presidente puede pedirle la renuncia](src/content/events/2026/09/20260928-4.md) — 10 fuentes
+- [2026/09/20260928-4 - Interpelación al canciller Pérez Mackenna en la Cámara: Venegas pregunta por Judd, el Escudo y Magallanes y el ministro cierra con que solo el Presidente puede pedirle la renuncia](src/content/events/2026/09/20260928-4.md) — 12 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 8 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 
@@ -2010,6 +2010,7 @@
 - [2020/10/20201025-1 - Plebiscito de entrada: el Apruebo gana con 78,27% y la Convención Constitucional será la encargada de redactar la nueva Constitución](src/content/events/2020/10/20201025-1.md) — 2 fuentes
 - [2020/11/20201107-1 - Confusam anuncia paro nacional de 48 horas: 'la salud de las personas no es valorada por el gobierno'](src/content/events/2020/11/20201107-1.md) — 1 fuente
 - [2020/11/20201111-1 - Julio Ponce Lerou paga la multa de $2.152 millones por el caso Cascadas tras una polémica rebaja](src/content/events/2020/11/20201111-1.md) — 2 fuentes
+- [2020/11/20201113-1 - State Grid acuerda con Naturgy la compra del 96,04% de CGE por 2.570 millones de euros](src/content/events/2020/11/20201113-1.md) — 5 fuentes
 - [2020/11/20201120-1 - Ciper revela que el manual interno de Carabineros reconoce el alto riesgo para la salud del uso intensivo de gas CS](src/content/events/2020/11/20201120-1.md) — 4 fuentes
 - [2020/11/20201127-1 - Caso Corpesca: el lobby de la Ley de Pesca](src/content/events/2020/11/20201127-1.md) — 3 fuentes
 - [2020/12/20201203-1 - Cámara despacha a ley el segundo retiro del 10% de las AFP y la Contraloría toma razón de su promulgación](src/content/events/2020/12/20201203-1.md) — 2 fuentes
@@ -2029,6 +2030,7 @@
 - [2019/04/20190424-1 - TDLC sanciona a navieras por cartel del transporte marítimo de vehículos hacia Chile](src/content/events/2019/04/20190424-1.md) — 5 fuentes
 - [2019/05/20190520-1 - Johnny Olate, el estudiante de la UC que inventó la denuncia de abuso sexual contra el gremialista José Ignacio Palma, era seguidor del movimiento de José Antonio Kast](src/content/events/2019/05/20190520-1.md) — 5 fuentes
 - [2019/10/20191001-1 - Cámara rechaza la acusación constitucional contra la ministra de Educación Marcela Cubillos](src/content/events/2019/10/20191001-1.md) — 2 fuentes
+- [2019/10/20191014-1 - State Grid compra Chilquinta a Sempra por US$2.230 millones en el mayor negocio del año](src/content/events/2019/10/20191014-1.md) — 6 fuentes
 - [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 10 fuentes
 - [2019/10/20191019-1 - Tres personas mueren en incendio de supermercado durante saqueos en San Bernardo y el aeropuerto de Santiago colapsa en la primera jornada de estado de emergencia](src/content/events/2019/10/20191019-1.md) — 5 fuentes
 - [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — 2 fuentes
@@ -2114,6 +2116,7 @@
 
 - [2012/01/20120104-1 - Ministro en visita Patricio Villarroel dicta acusación contra 22 personas en la arista principal Corfo-Inverlink](src/content/events/2012/01/20120104-1.md) — 6 fuentes
 - [2012/01/20120130-1 - TDLC condena a Cruz Verde y Salcobrand por colusión en el precio de 206 medicamentos y la Corte Suprema ratifica las multas de 20.000 UTA](src/content/events/2012/01/20120130-1.md) — 6 fuentes
+- [2012/04/20120426-1 - Panetta y Allamand desmienten que el centro CECOPAC de Fuerte Aguayo sea una base militar de EE.UU.](src/content/events/2012/04/20120426-1.md) — 7 fuentes
 - [2012/11/20121109-1 - Corte Suprema confirma las condenas de la arista Banco Central del caso Inverlink](src/content/events/2012/11/20121109-1.md) — 2 fuentes
 - [2012/12/20121217-1 - Corte Suprema confirma la condena por contrato simulado en la arista Corfo del caso Inverlink](src/content/events/2012/12/20121217-1.md) — 4 fuentes
 
