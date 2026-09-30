@@ -143,6 +143,7 @@ const WHITELIST_MEDIOS = new Set([
   'Ministerio de Minería de Chile',
   'Ministerio de Seguridad Pública',
   'Ministerio de Relaciones Exteriores',
+  'Ministerio de Bienes Nacionales',
   'Ministerio de Defensa Nacional',
   'Cámara de los Lores del Reino Unido',
   'Comisión Nacional de Verdad y Reconciliación',

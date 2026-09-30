@@ -591,6 +591,7 @@
 - [2026/03/20260324-3 - Revelan que ONG noruega Norwegian People's Aid financia a comunidades lafkenche para frenar salmoneras](src/content/events/2026/03/20260324-3.md) — 3 fuentes
 - [2026/03/20260324-4 - Banco Central mantiene TPM en 4,5% y advierte que IPC subirá a 4% en segundo trimestre por combustibles](src/content/events/2026/03/20260324-4.md) — 5 fuentes
 - [2026/03/20260324-5 - Escalada camionera del 24 al 27 de marzo: CNDC en reflexión por el alza del diésel, CNTC dice que las bases mandan y el gremio fija reunión clave para el lunes](src/content/events/2026/03/20260324-5.md) — 7 fuentes
+- [2026/03/20260324-6 - Quiroz defiende en la Cámara el plan de combustibles entre encaramiento de Videla y ola de renuncias a la bencina parlamentaria](src/content/events/2026/03/20260324-6.md) — 6 fuentes
 - [2026/03/20260325-1 - Contraloría requiere informe a Secom por publicaciones sobre 'Estado quebrado'](src/content/events/2026/03/20260325-1.md) — 1 fuente
 - [2026/03/20260326-1 - Nombramiento de Alexander Nanjarí como seremi de Educación del Biobío revocado por polémicos tuits](src/content/events/2026/03/20260326-1.md) — 3 fuentes
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
@@ -730,6 +731,7 @@
 - [2026/06/20260609-1 - Senado despacha a comisión mixta la reforma política impulsada por Elizalde](src/content/events/2026/06/20260609-1.md) — 3 fuentes
 - [2026/06/20260609-2 - De prometer US$6.000M de recorte a pedir US$6.200M de deuda: la tensión fiscal del primer semestre de Kast](src/content/events/2026/06/20260609-2.md) — 6 fuentes
 - [2026/06/20260609-3 - Tercer empate 24-24 en el Senado sepulta el alzamiento administrativo del secreto bancario y el proyecto va a comisión mixta](src/content/events/2026/06/20260609-3.md) — 5 fuentes
+- [2026/06/20260609-4 - Quiroz firma con Kast el Decreto de Política Fiscal: déficit estructural de 2,6% a 1,5% del PIB a 2030 y ancla de deuda en 45%](src/content/events/2026/06/20260609-4.md) — 7 fuentes
 - [2026/06/20260610-1 - Primera encuesta CEP bajo Kast: 52% de desaprobación](src/content/events/2026/06/20260610-1.md) — 4 fuentes
 - [2026/06/20260610-2 - Cataldo reconoce que promesa de condonación del CAE de Boric pudo influir en la morosidad](src/content/events/2026/06/20260610-2.md) — 2 fuentes
 - [2026/06/20260610-3 - Hacienda proyecta crecimiento de 3% para 2027-2028 y 3,5% hacia 2030, bajo la meta de 4% del gobierno de Kast](src/content/events/2026/06/20260610-3.md) — 3 fuentes
@@ -1507,6 +1509,7 @@
 - [2026/08/20260828-13 - Contralora Dorothy Pérez defiende que la ciudadanía pueda fiscalizar a autoridades y funcionarios públicos: 'si uno no quiere ser escrutado, tiene que buscarse otro trabajo'](src/content/events/2026/08/20260828-13.md) — 7 fuentes
 - [2026/08/20260828-14 - Atentado incendiario en faena forestal entre Traiguén y Los Sauces: queman excavadora y dos camionetas y roban un tercer vehículo](src/content/events/2026/08/20260828-14.md) — 6 fuentes
 - [2026/08/20260828-15 - Eduardo Artés difunde un video hecho con inteligencia artificial en que combate a 'sionistas' en la Patagonia y defiende la tesis del Plan Andinia](src/content/events/2026/08/20260828-15.md) — 6 fuentes
+- [2026/08/20260828-16 - Kast encabeza en Cerro Castillo el 7° Consejo de Gabinete: seguridad, presupuesto y Foro Madrid tras una semana de desorden oficialista](src/content/events/2026/08/20260828-16.md) — 8 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 16 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
@@ -1756,7 +1759,7 @@
 - [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 12 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 15 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
-- [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 11 fuentes
+- [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 17 fuentes
 
 ## 2025
 
