@@ -187,6 +187,20 @@ Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones
 - **Hemeroteca Meganoticias:** catálogo ya indexa sitemap (desde 2011); hemeroteca es interfaz por fecha para hallar URL exacta.
 - **ley-chile MCP:** útil para consultas programáticas (texto vigente, historia, diff). Si `search_laws` falla (Meilisearch caído), usar acceso directo por `idNorma` o `leychile.cl` web. Citar siempre BCN.
 
+## Historia económica de la dictadura (1973-1990)
+
+El catálogo de `sitemaps/` **no cubre esta época** (los medios grandes llegan a ~2004-2009; emol a 1999), así que los eventos de 1970-1980 salen por fetch bajo demanda. Fuentes primarias que sí resuelven la fecha exacta:
+
+| Fuente | URL | Uso |
+| --- | --- | --- |
+| LeyChile (normas de la Junta) | `<https://www.bcn.cl/leychile/navegar?idNorma=N>` | Fecha y articulado literal de los decretos leyes. El MCP `leychile` **no indexa el período 1973-1990** (las búsquedas devuelven normas de otros organismos y de otra época): llegar por `idNorma` directo o por el `idNorma` que cita un artículo académico. Ej. DL 966 de 1975 = `idNorma=6423`; el texto lleva la fecha de firma en el encabezado y el día de publicación en el `Published Time` |
+| BCN — Asesoría Técnica Parlamentaria | `<https://www.bcn.cl/obtienearchivo?id=repositorio/.../archivo.pdf>` | Informes que compilan series históricas (desempleo, precios). **El endpoint da 503 intermitente por WAF** con `fetch` simple: reintentar o usar `pdf-extract`, que sí lo baja completo. `medio: Biblioteca del Congreso Nacional de Chile` |
+| Memoria Chilena (Biblioteca Nacional) | `<https://www.memoriachilena.gob.cl/602/w3-article-NNNNN.html>` | Fichas de documentos primarios con la fecha del hecho en la descripción, no en el `<meta>`: el `fecha:` de la fuente es el día en que se consulta y eso va anotado en `notas`. Aquí están el texto del Programa de Recuperación Económica, la carta de Friedman a Pinochet y *El Ladrillo* |
+| Economía y Sociedad | `<https://www.economiaysociedad.cl/...>` | Dossier Revolución Liberal: reproduce discursos y cartas completos con la fecha en el subtítulo. `r.jina.ai` y `defuddle.md` los leen bien |
+| FPP Chile / Fundación de Estudios Económicos BHC | `<https://www.fppchile.org/wp-content/uploads/...>` | PDF de las publicaciones de los ciclos de 1975 (conferencia de Friedman). Solo por `pdf-extract`: `fetch` devuelve el binario crudo |
+
+**Datación de hitos económicos:** el patrón que funcionó para 1975 fue anclar cada anuncio en un documento con fecha propia (el decreto ley que lo obliga, la hemeroteca que lo transcribe) y no en un artículo de prensa que lo retrospectiva. La diferencia importa: el 24-abr-1975 sale de la transcripción DIPRES y del rótulo del discurso, con el DL 966 de 10-abr como contexto legal; no de un "50 años después" de prensa.
+
 ## Estado de validación (última revisión: 2026-08-27)
 
 Validado con `node scripts/validate/validate-fuentes.mjs` (60 URLs, timeout 12s, UA Mozilla, `fetch` Node + `webfetch` cruzado):

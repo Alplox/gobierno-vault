@@ -331,6 +331,15 @@ const WHITELIST_MEDIOS = new Set([
   'Tribunal Constitucional de Chile',
   'Tribunal Constitucional',
   'Memoria y Vida (Corporación Pilmaiquen)',
+  // Historia económica: archivo documental y revista académica que publican fuentes primarias
+  'Biblioteca Digital de la Dirección de Presupuestos',
+  'Economía y Sociedad',
+  'Memoria Chilena',
+  'Cuadernos de Historia (SciELO)',
+  'Biblioteca del Congreso Nacional de Chile',
+  'Fundación de Estudios Económicos BHC',
+  'Revista Santiago',
+  'Perfiles Económicos',
 ]);
 
 let errors = 0;

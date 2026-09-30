@@ -1774,7 +1774,7 @@
 - [2025/04/20250402-1 - Boric dice desde India que Trump pareciera pretender ser un nuevo emperador](src/content/events/2025/04/20250402-1.md) — 5 fuentes
 - [2025/04/20250409-1 - Estudio UDD revela impacto desigual de las alertas SAE en los incendios de Valparaíso de 2024](src/content/events/2025/04/20250409-1.md) — 1 fuente
 - [2025/04/20250424-1 - Kast vinculado a líder de banda criminal detenido por robo de cobre en Coquimbo (2025)](src/content/events/2025/04/20250424-1.md) — 2 fuentes
-- [2025/04/20250429-1 - CIPER publica siete videos de los enfrentamientos de Claudio Crespo con la 'primera línea' grabados por cámaras de Carabineros](src/content/events/2025/04/20250429-1.md) — 7 fuentes
+- [2025/04/20250429-1 - CIPER publica siete videos de los enfrentamientos de Claudio Crespo con la 'primera línea' grabados por cámaras de Carabineros](src/content/events/2025/04/20250429-1.md) — 11 fuentes
 - [2025/05/20250519-1 - José Antonio Kast presenta el Plan Implacable de seguridad durante campaña presidencial](src/content/events/2025/05/20250519-1.md) — 2 fuentes
 - [2025/05/20250527-1 - Papaya Gate: formalizan a la exintendenta Lucía Pinto y a otros tres imputados por fraude al fisco](src/content/events/2025/05/20250527-1.md) — 1 fuente
 - [2025/05/20250528-1 - Boric retira los agregados militares, de defensa y aéreo de la embajada en Tel Aviv por la gravísima situación en Gaza: apoyo de Walker, réplicas de Kaiser y Jara, y contratos con Israel intactos](src/content/events/2025/05/20250528-1.md) — 11 fuentes
@@ -2004,6 +2004,7 @@
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
 - [2020/09/20200928-1 - La Pública accede por Ley de Transparencia a 200 minutos de cámaras corporales del GOPE de Carabineros del estallido: primera entrega de registros policiales](src/content/events/2020/09/20200928-1.md) — 3 fuentes
 - [2020/10/20201002-1 - Caso Pío Nono: carabinero lanza a un adolescente de 16 años desde un puente al río Mapocho y es formalizado por homicidio frustrado](src/content/events/2020/10/20201002-1.md) — 3 fuentes
+- [2020/10/20201014-1 - Amnistía Internacional publica «Ojos sobre Chile» y pide investigar penalmente a los altos mandos de Carabineros](src/content/events/2020/10/20201014-1.md) — 10 fuentes
 - [2020/10/20201015-1 - CIPER revela a un cabo de Carabineros infiltrado en ollas comunes de Lo Hermida que incitaba al enfrentamiento policial](src/content/events/2020/10/20201015-1.md) — 8 fuentes
 - [2020/10/20201018-2 - Primer aniversario del 18-O: 580 detenidos en todo el país y jornada de incidentes en la RM](src/content/events/2020/10/20201018-2.md) — 2 fuentes
 - [2020/10/20201019-1 - The Guardian estrena documental sobre los manifestantes cegados en el estallido que buscan justicia: 'This is mutilation'](src/content/events/2020/10/20201019-1.md) — 1 fuente
@@ -2202,6 +2203,8 @@
 ## 1975
 
 - [1975/02/19750220-1 - La DINA obliga a cuatro miristas detenidos a ofrecer una conferencia de prensa de rendición](src/content/events/1975/02/19750220-1.md) — 6 fuentes
+- [1975/03/19750326-1 - Milton Friedman visita Chile y se reúne con Pinochet, y defiende en público el tratamiento de shock frente al gradualismo](src/content/events/1975/03/19750326-1.md) — 5 fuentes
+- [1975/04/19750424-1 - El ministro de Hacienda Jorge Cauas anuncia por cadena nacional el Programa de Recuperación Económica, el tratamiento de shock de la dictadura](src/content/events/1975/04/19750424-1.md) — 11 fuentes
 - [1975/07/19750724-1 - La Segunda titula 'Exterminados como ratones' en el montaje de la Operación Colombo](src/content/events/1975/07/19750724-1.md) — 7 fuentes
 - [1975/11/19751119-1 - La DINA monta un falso enfrentamiento en Rinconada de Maipú con seis detenidos asesinados](src/content/events/1975/11/19751119-1.md) — 7 fuentes
 
