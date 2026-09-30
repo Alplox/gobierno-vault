@@ -115,6 +115,7 @@ function loadExistingJsonl(medioDir) {
 
 function writeYears(medioDir, years, yearKeys) {
   let written = 0;
+  if (yearKeys.length) mkdirSync(medioDir, { recursive: true });
   for (const year of [...yearKeys].sort((a, b) => b.localeCompare(a))) {
     const list = [...years[year].values()]
       .sort((a, b) => (a.d < b.d ? -1 : a.d > b.d ? 1 : a.u.localeCompare(b.u)));
@@ -200,6 +201,7 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
   logInfo(`yt-dlp: ${entries.length} video(s) en el tab`);
 
   const dir = catalogDir(medio);
+  mkdirSync(dir, { recursive: true });
   const years = replace ? {} : loadExistingJsonl(dir);
   let added = 0;
   let upgraded = 0;
