@@ -85,7 +85,7 @@ El corpus es mixto: la mayoría de los eventos están en **CRLF** (1.362 de 1.54
   > - [[people/id]] [[sources/id]]
   ```
   Hay que **acumular la racha de líneas `>`** y usar la última con atribución como cierre, uniendo los párrafos con `\n\n`. Si se evalúa línea por línea sobrevive solo la de la atribución: de esa cita de Boric se mostraba únicamente "Unabraso" (2 casos en el corpus, ambos en `2026/09/20260922-3.md`). Una línea vacía **sin** `>` cierra el grupo; una línea `>` suelta solo separa párrafos.
-- Admite alias: `[[people/id|Nombre legible]]` y `[[people/alejandro_layseca|Alejandro Layseca]]`. El patrón de id es `[A-Za-z0-9_.-]+` y el alias opcional `(?:\|[^\]]*)?` antes de `]]`; sin eso los 58 wikilinks con alias del corpus no contaban como entidad.
+- Prohibido alias inline `[[people/id|Texto]]`: el render muestra el `nombre` canónico del registry. Los lectores lo toleran solo como red de seguridad (`(?:\|[^\]]*)?` antes de `]]` en `extractEntities.ts`, `remarkWikiLinks.mjs` y `validate.mjs`); `validate.mjs` lo marca como error.
 
 ## Colecciones Astro (sin fallback YAML)
 

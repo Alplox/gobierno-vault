@@ -206,7 +206,7 @@ const allEventBasenames = new Set(allFiles.map((f) => eventIdFromPath(f).split('
 const referencedSources = new Set();
 for (const file of allFiles) {
   const content = readFileSync(file, 'utf8');
-  for (const match of content.matchAll(/\[\[(?:source|sources)\/([A-Za-z0-9_.-]+)\]\]/g)) {
+  for (const match of content.matchAll(/\[\[(?:source|sources)\/([A-Za-z0-9_.-]+)(?:\|[^\]]*)?\]\]/g)) {
     referencedSources.add(match[1]);
   }
 }
@@ -488,7 +488,11 @@ for (const file of allFiles) {
   const noCode = body
     .replace(/```[\s\S]*?```/g, '')
     .replace(/`[^`\n]*`/g, '');
-  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
+  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]|]+))?)?(?:\|[^\]]*)?\]\]/g;
+  for (const m of noCode.matchAll(/\[\[((?:sources?|people|person|organizations?|org|cifras|events?|event)\/[^\]]+?)\|[^\]]+\]\]/g)) {
+    console.error(`✖ alias inline prohibido [[${m[1]}|...]] → ${eventId} (usar [[${m[1]}]]; el render muestra el nombre canónico)`);
+    errors++;
+  }
   for (const m of noCode.matchAll(WIKILINK_RE)) {
     const [, rawType, id] = m;
     const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;
