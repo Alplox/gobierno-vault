@@ -1,5 +1,5 @@
 // Genera `TAREAS/tareas_sitemap.md`: bitácora de sitios de prensa chilenos pendientes de
-// sincronizar su sitemap al catálogo local (sitemaps/<medio>/), para ampliar la
+// sincronizar su sitemap al catálogo local (sitemaps/websites/<medio>/), para ampliar la
 // variedad de puntos de vista al verificar eventos de gobiernos pasados.
 //
 // Fuentes de datos:
@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import YAML from 'yaml';
 import { MEDIA, mediaHosts } from './media.mjs';
+import { medioDir } from './paths.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -522,7 +523,7 @@ async function main() {
         catalogoSlugPorNombre.set(key, { slug, articulos: info.articulos | 0 });
       }
       // Dominio derivado de la primera URL del JSONL del medio.
-      const dir = join(ROOT, 'sitemaps', slug);
+      const dir = medioDir(slug);
       if (existsSync(dir)) {
         const files = readdirSync(dir).filter((f) => f.endsWith('.jsonl'));
         for (const f of files) {
@@ -669,7 +670,7 @@ async function main() {
   let md = `# Tareas — Ampliación del catálogo de sitemaps
 
 > Bitácora de sitios de prensa chilenos para sincronizar su sitemap al catálogo
-> local (\`sitemaps/<medio>/\`) y así poder revisar eventos de gobiernos pasados
+> local (\`sitemaps/websites/<medio>/\`) y así poder revisar eventos de gobiernos pasados
 > con mayor variedad de puntos de vista al verificar datos.
 >
 > **Fuente de sitios:** [awesome-chilean-rss](https://github.com/Alplox/awesome-chilean-rss)
@@ -732,7 +733,7 @@ Se excluyen: deportes, gaming, empleos, entretenimiento y tecnología.
     md += `| ${EMOJI[f.estado]} | **${limpiar(f.nombre)}** | \`${f.d}\` | ${region} | ${fuente} | ${notas} |\n`;
   }
 
-  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`src/content/sources/*.md\` o como org de prensa en \`src/content/organizations/*.md\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/media.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Registrar la org de prensa en \`src/content/organizations/*.md\` si no existe (regla de wikilinks).\n6. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
+  md += `\n## Leyenda\n\n- ✅ **En catálogo:** el sitemap del medio ya está sincronizado en \`sitemaps/websites/<slug>/\`.\n- 🟡 **En uso:** el medio ya aparece como fuente en \`src/content/sources/*.md\` o como org de prensa en \`src/content/organizations/*.md\`, pero su sitemap aún no se sincroniza — prioridad para ampliar el catálogo.\n- 🔒 **Sin sitemap:** el sitio fue verificado y no expone sitemap; no reintentar.\n- ⬜ **Pendiente:** sitio de prensa sin sitemap en el catálogo ni referencia en el vault.\n\n## Instrucciones para agregar un medio nuevo\n\n1. Verificar el sitemap del sitio (robots.txt o \`/sitemap.xml\`).\n2. Agregar la entrada a \`MEDIA\` en \`scripts/sitemaps/media.mjs\` (slug, nombre, sitemaps, filtro).\n3. Sincronizar: \`pnpm run sitemaps-sync -- <slug>\`.\n4. Regenerar README/AGENTS: \`pnpm run sitemaps-index\`.\n5. Registrar la org de prensa en \`src/content/organizations/*.md\` si no existe (regla de wikilinks).\n6. Actualizar este archivo: \`pnpm run sitemaps-watchlist\` (o \`--source <ruta>\` / \`--offline\`).\n`;
 
   writeFileSync(out, md, 'utf8');
   console.log(`✔ ${filas.length} sitios de prensa → ${out} (origen: ${origen})`);

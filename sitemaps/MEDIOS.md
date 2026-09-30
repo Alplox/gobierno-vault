@@ -1,6 +1,6 @@
 # Medios registrados
 
-> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/media.mjs:MEDIA` + `sitemaps/_manifest.json`. No editar a mano.
+> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/media.mjs:MEDIA` + `scripts/sitemaps/channels.mjs:CHANNELS` + `sitemaps/_manifest.json`. No editar a mano.
 > Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
@@ -476,5 +476,14 @@
 | `wwf` | WWF Chile | `www.wwf.cl/sitemap.xml` | — | 66 | 1 |
 | `xox` | XOX.cl | `xox.cl/sitemap.xml` | includeRe | 85 | 2 |
 | `zonazero` | Zona Zero | `www.zonazero.cl/sitemap.xml` | — | 1.153 | 1 |
+
+## Canales de YouTube
+
+> Sincronizados con yt-dlp (`scripts/sitemaps/youtube.mjs`), no con sitemaps XML.
+> `s:"yt"` = fecha estimada del tab · `s:"yt-exact"` = fecha real verificada.
+
+| Slug | Nombre | Canal | Tab | Videos | Años |
+| --- | --- | --- | --- | --- | --- |
+| `yt_t13` | Teletrece (YouTube) | `@T13_cl` | videos | 62.812 | 13 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.

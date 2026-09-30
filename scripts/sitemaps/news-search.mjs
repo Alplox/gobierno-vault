@@ -21,9 +21,9 @@ import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { normalizeUrlForMatch } from '../extract/add-source.mjs';
 import { MEDIA } from './media.mjs';
+import { medioDir } from './paths.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..');
-const CATALOG_DIR = join(ROOT, 'sitemaps');
 const SOURCES_DIR = join(ROOT, 'src', 'content', 'sources');
 
 const GN_RSS = 'https://news.google.com/rss/search';
@@ -68,7 +68,7 @@ function slugForDomain(domain) {
 const catalogCache = new Map();
 function catalogEntries(slug, years) {
   const out = [];
-  const dir = join(CATALOG_DIR, slug);
+  const dir = medioDir(slug);
   if (!existsSync(dir)) return out;
   for (const y of years) {
     const key = `${slug}/${y}`;

@@ -1,11 +1,12 @@
 # Catálogo de Sitemaps
 
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
-> Los datos crudos viven en `sitemaps/<medio>/<año>.jsonl` (una línea JSON por artículo).
+> Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 29/9/2026, 17:10:06
-- **Medios registrados:** 538
-- **Artículos indexados:** 11.716.556
+- **Última sincronización:** 30/9/2026, 14:52:18
+- **Medios registrados:** 539
+- **Artículos indexados:** 11.779.368
+- **Canales de YouTube:** 1 (62.812 videos)
 
 ## Por medio
 
@@ -466,3 +467,9 @@
 | Funcionario Público | 1 |
 | Saint George's College | 1 |
 | Sochob | 1 |
+
+## Canales de YouTube
+
+| Canal | Videos | Años |
+| --- | --- | --- |
+| Teletrece (YouTube) | 62.812 | 2014–2026 |

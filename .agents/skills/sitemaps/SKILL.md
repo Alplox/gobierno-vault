@@ -6,7 +6,9 @@ description: Catálogo local de sitemaps de prensa con JSONL, MEDIA, sync/index/
 ## Qué es
 
 `sitemaps/` en la raíz: catálogo de artículos de prensa (URL + fecha + título si existe)
-extraído de los sitemaps públicos de cada medio. Evita fetch/búsquedas web redundantes: el valor
+extraído de los sitemaps públicos de cada medio. Layout: `sitemaps/websites/<slug>/`
+(prensa, sitemaps XML) y `sitemaps/youtube_channels/<slug>/` (canales, yt-dlp).
+Evita fetch/búsquedas web redundantes: el valor
 está en la URL+fecha y, en los news-sitemaps, en el título real (últimos 2-3 días).
 **NO guarda el cuerpo de los artículos.**
 
@@ -18,8 +20,9 @@ Formato JSONL, una línea por artículo:
 
 `s:"news"` = título real del news-sitemap · `s:"slug"` = título aproximado derivado de la URL.
 
-> **Handoff:** si cambias `MEDIA` en `scripts/sitemaps/media.mjs`, el formato JSONL o
-> `scripts/sitemaps/{sync,index,backup,watchlist}.mjs`, actualiza este skill en la misma sesión.
+> **Handoff:** si cambias `MEDIA` en `scripts/sitemaps/media.mjs`, `CHANNELS` en
+> `scripts/sitemaps/channels.mjs`, las rutas en `scripts/sitemaps/paths.mjs`, el formato JSONL o
+> `scripts/sitemaps/{sync,index,backup,watchlist,youtube}.mjs`, actualiza este skill en la misma sesión.
 
 ### Regla clave: el catálogo NO se commitea
 
@@ -230,12 +233,12 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
    (`(20\d{2})\/\d{2}\/\d{2}`) no da error y guarda `"2019-undefined-01"` en todas las
    entradas, y uno con la alternancia dentro del grupo (`(19|20)\d{2}`) guarda `"19-04-01"`.
    El año completo va en el grupo 1: `((?:19|20)\d{2})`. Con el grupo 3 ausente el día cae a
-   `01` a propósito (meses, no días). Chequeo rápido tras el sync: `rg -c 'undefined|^\{"u"[^\n]*"d":"[0-9]{2}-' sitemaps/<slug>/` debe dar 0.
+   `01` a propósito (meses, no días). Chequeo rápido tras el sync: `rg -c 'undefined|^\{"u"[^\n]*"d":"[0-9]{2}-' sitemaps/websites/<slug>/` debe dar 0.
    **Y `--replace` no limpia las fechas corruptas**: reescribe los años presentes en el run
    y vacía los `YYYY.jsonl` sin entradas, pero solo vacía archivos que matchean `^\d{4}\.jsonl$`
    — y una fecha malformada genera justamente un `19-0.jsonl`, que sobrevive al rebuild (pasó
    con `lyd`: el `--replace` dejó las 15.415 entradas corruptas junto a las 15.415 buenas).
-   Para reconstruir de verdad hay que **borrar `sitemaps/<slug>/` primero** y resincar.
+   Para reconstruir de verdad hay que **borrar `sitemaps/websites/<slug>/` primero** y resincar.
 7. **Un urlset plano suele mezclar páginas y artículos.** `urlRe` filtra por patrón de URL;
    `articleOnly` y `includeRe` filtran por *nombre de sub-sitemap*, así que no ayudan en un
    urlset plano.
@@ -345,7 +348,7 @@ pisan el manifest.
 ## Buscar en el catálogo (antes de buscar en la web)
 
 ```bash
-rg -i --no-heading -uu 'secreto bancario' sitemaps/theclinic/   # un medio
+rg -i --no-heading -uu 'secreto bancario' sitemaps/websites/theclinic/   # un medio
 rg -i --no-heading -uu -g '*.jsonl' 'cerimedo' sitemaps        # todos
 ```
 
@@ -354,7 +357,7 @@ Dos flags no negociables: **`-uu`** porque los JSONL están gitignoreados y rg l
 `sitemaps/`, que excluye `.cache/` (XML crudo, varios GB).
 
 Medio real: `rg` ≈ 114 ms contra 37 s de `Get-ChildItem | Select-String` (~320×). Sin rg:
-`grep -ih 'término' sitemaps/<medio>/*.jsonl`.
+`grep -ih 'término' sitemaps/websites/<medio>/*.jsonl`.
 
 El catálogo da URL + fecha (+ título real en los news-sitemaps recientes), **no el cuerpo**:
 después del match hay que leer la URL. Si el término no aparece o el medio no está, recién
@@ -402,6 +405,56 @@ decodificables localmente) y GDELT no responde desde esta red.
 
 ---
 
+## Canales de YouTube
+
+Los canales de YouTube de los medios viven en el mismo catálogo (`sitemaps/youtube_channels/yt_<slug>/`,
+mismo JSONL, mismo `rg -uu -g '*.jsonl'`), pero **no son sitemaps XML**: el RSS de
+YouTube (`feeds/videos.xml`) devuelve 404 incluso para canales vigentes, así que el sync
+va por `yt-dlp --flat-playlist` (`scripts/sitemaps/youtube.mjs`, ya instalado).
+
+Entrada en `CHANNELS` (`scripts/sitemaps/channels.mjs`, ver `yt_t13`) — viven ahí y
+no en `MEDIA`, porque los mapas de dominios (`mediaHosts()`, watchlist, probe,
+news-search) asumen sitemaps XML y un canal no es un dominio:
+
+```js
+yt_t13: {
+  nombre: 'Teletrece (YouTube)',
+  tipo: 'youtube',  // sync.mjs delega en youtube.mjs; mediaHosts() los excluye
+  channel: '@T13_cl',  // handle real (NO @teletrece: sin tab de videos; NO @t13: 404)
+  channelId: 'UCsRnhjcUCR78Q3Ud6OXCTNg',  // cacheado
+  tab: 'videos',  // videos | streams | shorts (shorts sin fecha: opt-in, se omiten)
+},
+```
+
+Comandos (mismo `sitemaps-sync`, flags propios):
+
+```bash
+pnpm run sitemaps-sync -- yt_t13                    # sync completo (merge, nunca borra)
+pnpm run sitemaps-sync -- yt_t13 --playlist-end 200 # prueba acotada (no avanza ultima_sync)
+pnpm run sitemaps-sync -- yt_t13 --exact 50         # fecha real de los 50 más antiguos
+pnpm run sitemaps-sync -- yt_t13 --exact-id a1b2c3,d4e5f6  # videos puntuales a citar
+```
+
+`pnpm run sitemaps-resync` los salta (refresh bajo demanda, no diario), y
+`pnpm run sitemaps-sync -- --all` cubre solo la prensa (los canales van explícitos).
+En `README.md` y `MEDIOS.md` salen en tabla propia, no mezclados con la prensa.
+
+Marcadores de fecha: `s:"yt"` = estimada del tab, `s:"yt-exact"` = real verificada.
+
+- **La fecha del tab es una estimación** (texto relativo "hace N meses" vía
+  `youtubetab:approximate_date`): exacta en lo reciente, error creciente en profundidad
+  (1 día a 20 videos, 5 a 100, 11 a 500, 28 a 2.500). Para citar un video viejo, `--exact`
+  primero (~1.25 s por video).
+- **Sin `youtube:lang=es` los títulos salen auto-traducidos al inglés** y el `rg` en
+  español no matchea. Pero con `lang=es` el tab pierde las fechas (las relativas vienen en
+  español y no se parsean): por eso el sync hace doble pasada (fechas + títulos, join por
+  id). Los dos `--extractor-args` van como flags separados; con `;` en uno solo el segundo
+  extractor no lo recibe, sin error visible.
+- **Anti-bot**: si yt-dlp devuelve 429 o "sign in to confirm", el run aborta sin escribir
+  nada (nunca un parcial silencioso) y `ultima_sync` no avanza.
+
+---
+
 ## Sitios sin sitemap: fetch directo bajo demanda
 
 No se pueden agregar al catálogo; se leen con fetch/defuddle cuando hacen falta.
@@ -446,6 +499,8 @@ Los descartes de sitios de la watchlist están en `SIN_SITEMAP`
 | `sitemaps/_manifest.json` | `ultima_sync`, artículos y años por medio (generada) |
 | `TAREAS/tareas_sitemap.md` | Estado de cada sitio de la watchlist: ✅ / 🟡 / 🔒 / ⬜ (generada) |
 | `scripts/sitemaps/media.mjs` | Config de cada medio, con el porqué de cada `includeRe` |
+| `scripts/sitemaps/channels.mjs` | Registro `CHANNELS` de canales YouTube (no van en `MEDIA`) |
+| `scripts/sitemaps/paths.mjs` | `medioDir(slug)`: resuelve `websites/` vs `youtube_channels/` |
 | `scripts/sitemaps/watchlist.mjs` | `SIN_SITEMAP`: descartes con su motivo |
 | `references/medios.md` | Trampas por medio (bloqueos, fechas falsas, duplicados) |
 

@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-29T20:10:06.216Z",
+  "actualizado": "2026-09-30T18:03:02.095Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3768,6 +3768,13 @@
       "articulos": 6944,
       "nuevos": 6944,
       "años": 6
+    },
+    "yt_t13": {
+      "nombre": "Teletrece (YouTube)",
+      "ultima_sync": "2026-09-30T17:42:08.860Z",
+      "articulos": 62812,
+      "nuevos": 0,
+      "años": 13
     }
   }
 }

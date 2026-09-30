@@ -31,12 +31,13 @@ import { readFileSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
-// MEDIA vive en sitemaps/media.mjs (importarlo no dispara ningún sync). Sirve
-// para filtrar los slugs del manifest que ya no existen en el registro
+// MEDIA + CHANNELS viven en sus módulos (importarlos no dispara ningún sync).
+// Sirven para filtrar los slugs del manifest que ya no existen en los registros
 // (entradas huérfanas de intentos descartados) antes de pasárselos como
 // argumentos — sitemaps/sync.mjs valida todos los targets upfront y hace
 // exit(1) al primer slug desconocido, abortando TODO el resync.
 import { MEDIA } from './media.mjs';
+import { CHANNELS } from './channels.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -88,7 +89,15 @@ if (enManifest.length === 0) {
 // sitemap y quedaron con articulos: 0). Si se pasaran tal cual, sitemaps/sync.mjs
 // abortaría completo con "Medio desconocido". Se omiten con aviso.
 const medios = enManifest.filter((k) => !!MEDIA[k]);
-const huerfanos = enManifest.filter((k) => !MEDIA[k]);
+// Los canales de YouTube (CHANNELS) no entran al resync diario (tabs de miles
+// de videos; refresh bajo demanda con `pnpm run sitemaps-sync -- <slug>`).
+// Se omiten con aviso, no como huérfanos.
+const ytOmitidos = enManifest.filter((k) => !MEDIA[k] && !!CHANNELS[k]);
+if (ytOmitidos.length > 0) {
+  console.warn(`⏭️  ${ytOmitidos.length} canal(es) YouTube omitidos (refresh bajo demanda, no diario):`);
+  console.warn(`   ${ytOmitidos.join(', ')}`);
+}
+const huerfanos = enManifest.filter((k) => !MEDIA[k] && !CHANNELS[k]);
 if (huerfanos.length > 0) {
   console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de scripts/sitemaps/media.mjs; se omiten:`);
   console.warn(`   ${huerfanos.join(', ')}`);

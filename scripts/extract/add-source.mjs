@@ -36,6 +36,7 @@ import readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
 import YAML from 'yaml';
 import { MEDIA, mediaHosts } from '../sitemaps/media.mjs';
+import { medioDir } from '../sitemaps/paths.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -378,7 +379,7 @@ function yearFromUrl(url) {
 
 // Archivos de un medio del catálogo, del año más reciente al más antiguo.
 function catalogFilesFor(medio) {
-  const dir = join(CATALOG_DIR, medio);
+  const dir = medioDir(medio);
   if (!existsSync(dir)) return [];
   return readdirSync(dir)
     .filter((f) => /^\d{4}\.jsonl$/.test(f))
@@ -404,7 +405,7 @@ function lookupCatalogUrl(url) {
     ? files.filter((f) => f.startsWith(yearHint)).concat(files.filter((f) => !f.startsWith(yearHint)))
     : files;
   for (const f of ordered) {
-    const raw = readFileSync(join(CATALOG_DIR, medio, f), 'utf8');
+    const raw = readFileSync(join(medioDir(medio), f), 'utf8');
     if (pathCore && !raw.includes(pathCore)) {
       // URLs con mayúsculas en el path (ej. /Deportes/ de emol): el pre-filtro
       // sensible falla aunque el artículo esté indexado. Fallback insensible
@@ -452,7 +453,7 @@ async function catalogSearchAndPick(query, fechaFilter, medioFilter) {
       if (fechaFilter && year !== fechaFilter.slice(0, 4)) continue;
       let raw;
       try {
-        raw = readFileSync(join(CATALOG_DIR, medio, f), 'utf8');
+        raw = readFileSync(join(medioDir(medio), f), 'utf8');
       } catch {
         continue;
       }
@@ -475,7 +476,7 @@ async function catalogSearchAndPick(query, fechaFilter, medioFilter) {
   }
 
   if (results.length === 0) {
-    logWarn('Sin resultados en el catálogo. (Para búsquedas exhaustivas usa grep sobre sitemaps/<medio>/<año>.jsonl).');
+    logWarn('Sin resultados en el catálogo. (Para búsquedas exhaustivas usa grep sobre sitemaps/websites/<medio>/<año>.jsonl).');
     return null;
   }
   logOk(`${results.length} resultado(s) en el catálogo de sitemaps:`);

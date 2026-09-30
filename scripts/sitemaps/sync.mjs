@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * sitemaps/sync.mjs — Sincroniza el catálogo de artículos de prensa
- * (`sitemaps/<medio>/<año>.jsonl`) a partir de los sitemaps de cada medio.
+ * (`sitemaps/websites/<medio>/<año>.jsonl`) a partir de los sitemaps de cada medio.
  *
  * Pipeline: robots.txt → sitemap_index.xml → sub-sitemaps → parseo de <url>
  * (loc, lastmod, news:title, news:publication_date) → dedupe por URL →
@@ -9,7 +9,7 @@
  *
  * Uso:
  *   pnpm run sitemaps-sync -- <medio>        # sincroniza un medio (slug)
- *   pnpm run sitemaps-sync -- --all          # sincroniza todos los registrados
+ *   pnpm run sitemaps-sync -- --all          # sincroniza toda la prensa (MEDIA; canales van explicitos)
  *   pnpm run sitemaps-sync -- --list         # lista los medios conocidos
  *
  * Flags:
@@ -48,6 +48,14 @@
  *   --days <n>    Equivalente a --since con la fecha de hace n días (default 7).
  *                 NO compatible con --replace (borraría la historia).
  *
+ * Flags solo para canales de YouTube (tipo youtube, ver youtube.mjs):
+ *   --playlist-end N  Solo los primeros N videos del tab (prueba acotada).
+ *                 Marca el run como incompleto (ultima_sync no avanza).
+ *   --exact N     Fija la fecha real de los N videos mas antiguos con fecha estimada.
+ *   --exact-id A,B  Ids de video puntuales para fecha exacta, separados por coma.
+ * --since/--days se ignoran en canales (el tab es nuevo a viejo y el merge cubre);
+ * el resync diario los salta: refresh bajo demanda.
+ *
  * Notas:
  * - Node fetch descomprime gzip automáticamente (varios medios sirven los
  *   sitemaps comprimidos, ej. El Clarín).
@@ -77,6 +85,19 @@ const COMMON_UA =
 // Registro de medios (MEDIA): vive en ./media.mjs (mismo directorio). Se importa
 // aquí y se re-exporta abajo para compatibilidad (index/resync/news-search).
 import { MEDIA } from './media.mjs';
+import { CHANNELS } from './channels.mjs';
+// Registro unificado para el CLI: prensa (MEDIA, sitemaps XML) + canales
+// (CHANNELS, YouTube vía yt-dlp). Los scripts de prensa (add-source,
+// watchlist, probe, news-search, check-fechas, report-awesome) usan MEDIA
+// directo y nunca ven los canales.
+// Canales de YouTube (`tipo: 'youtube'` en CHANNELS): el sync va por yt-dlp, no
+// por XML — ver youtube.mjs. sync.mjs solo delega y comparte flags/manifest.
+import { isYoutubeConf, syncCanalYoutube, exactifyDates } from './youtube.mjs';
+import { medioDir } from './paths.mjs';
+
+// Registro unificado para el CLI. La colisión de slugs se valida en main():
+// un slug no puede estar en MEDIA y CHANNELS a la vez.
+const REGISTRY = { ...MEDIA, ...CHANNELS };
 
 // ---------------------------------------------------------------------------
 // Utilidades
@@ -671,9 +692,9 @@ async function syncMedio(medio, conf, opts) {
   logInfo(`${uniqueFlat.length} sitemap(s) a descargar`);
 
   // Modo merge (default): cargar lo existente para NO perder nada.
-  const medioDir = join(SITEMAPS_DIR, medio);
-  mkdirSync(medioDir, { recursive: true });
-  const years = replace ? {} : loadExistingJsonl(medioDir);
+  const dir = medioDir(medio);
+  mkdirSync(dir, { recursive: true });
+  const years = replace ? {} : loadExistingJsonl(dir);
   let added = 0;      // URLs nuevas
   let upgraded = 0;   // títulos mejorados (news > slug > ninguno)
   let kept = 0;       // entradas existentes sin cambios
@@ -806,17 +827,17 @@ async function syncMedio(medio, conf, opts) {
   let written = 0;
   for (const year of yearKeys.sort((a, b) => b.localeCompare(a))) {
     const list = [...years[year].values()].sort((a, b) => (a.d < b.d ? -1 : a.d > b.d ? 1 : a.u.localeCompare(b.u)));
-    const file = join(medioDir, `${year}.jsonl`);
+    const file = join(dir, `${year}.jsonl`);
     const lines = list.map((e) => JSON.stringify(e));
     writeFileSync(file, lines.join('\n') + (lines.length ? '\n' : ''), 'utf8');
     written += lines.length;
   }
   // En --replace: limpiar archivos de años que ya no tienen entradas.
   // (En modo merge esto NUNCA ocurre: lo que no se re-parsea se conserva.)
-  if (replace && existsSync(medioDir)) {
-    for (const f of readdirSync(medioDir)) {
+  if (replace && existsSync(dir)) {
+    for (const f of readdirSync(dir)) {
       if (/^\d{4}\.jsonl$/.test(f) && !years[f.slice(0, 4)]) {
-        writeFileSync(join(medioDir, f), '', 'utf8');
+        writeFileSync(join(dir, f), '', 'utf8');
       }
     }
   }
@@ -843,7 +864,7 @@ async function main() {
   const flags = new Set(args.filter((a) => a.startsWith('--')));
   // Los argumentos posicionales excluyen los valores de flags con parámetro
   // (--limit N, --stale N) para que no se confundan con slugs de medios.
-  const flagWithValue = new Set(['--limit', '--stale', '--delay', '--since', '--days']);
+  const flagWithValue = new Set(['--limit', '--stale', '--delay', '--since', '--days', '--playlist-end', '--exact', '--exact-id']);
   const posArgs = args.filter((a, i) => {
     if (a.startsWith('--')) return false;
     return !flagWithValue.has(args[i - 1]);
@@ -851,8 +872,9 @@ async function main() {
 
   if (flags.has('--list')) {
     logInfo('Medios registrados:');
-    for (const [slug, conf] of Object.entries(MEDIA)) {
-      logInfo(`  ${slug.padEnd(14)} ${conf.nombre}`);
+    for (const [slug, conf] of Object.entries(REGISTRY)) {
+      const tag = conf.tipo === 'youtube' ? ' (youtube)' : '';
+      logInfo(`  ${slug.padEnd(14)} ${conf.nombre}${tag}`);
     }
     return;
   }
@@ -867,6 +889,11 @@ async function main() {
   const incremental = flags.has('--incremental');
   const replace = flags.has('--replace');
   const sinceLastSync = flags.has('--since-last-sync');
+  // Solo canales YouTube (ver youtube.mjs). Guardas con flags.has: sin ellas,
+  // args.indexOf() devuelve -1 y args[0] (el slug) se parsearía como valor.
+  const playlistEnd = flags.has('--playlist-end') ? parseInt(args[args.indexOf('--playlist-end') + 1] ?? '0', 10) || 0 : 0;
+  const exactCount = flags.has('--exact') ? parseInt(args[args.indexOf('--exact') + 1] ?? '0', 10) || 0 : 0;
+  const exactIds = flags.has('--exact-id') ? ((args[args.indexOf('--exact-id') + 1] ?? '').split(',').map((s) => s.trim()).filter(Boolean)) : [];
 
   if (sinceLastSync && (flags.has('--since') || flags.has('--days'))) {
     logErr('--since-last-sync no se puede combinar con --since ni --days.');
@@ -898,15 +925,32 @@ async function main() {
   }
 
   const targets = flags.has('--all') ? Object.keys(MEDIA) : posArgs;
+  if (flags.has('--all') && Object.keys(CHANNELS).length > 0) {
+    // --all cubre solo la prensa: los canales van explícitos (son tabs de
+    // miles de videos, no entran en corridas masivas; igual que el resync).
+    logInfo(`Canales YouTube no incluidos en --all (van explícitos): ${Object.keys(CHANNELS).join(', ')}`);
+  }
   if (targets.length === 0) {
     logErr('Indica un medio (slug) o usa --all. Ver `--list` para los medios.');
     process.exit(1);
   }
+  for (const s of Object.keys(MEDIA)) {
+    if (CHANNELS[s]) {
+      logErr(`Slug duplicado en MEDIA y CHANNELS: ${s}. Los slugs deben ser únicos.`);
+      process.exit(1);
+    }
+  }
   for (const t of targets) {
-    if (!MEDIA[t]) {
+    if (!REGISTRY[t]) {
       logErr(`Medio desconocido: ${t}. Usa --list para ver los registrados.`);
       process.exit(1);
     }
+  }
+  // --playlist-end/--exact/--exact-id solo aplican a canales YouTube.
+  const ytFlags = flags.has('--playlist-end') || flags.has('--exact') || flags.has('--exact-id');
+  if (ytFlags && targets.some((t) => !isYoutubeConf(REGISTRY[t]))) {
+    logErr('--playlist-end/--exact/--exact-id solo aplican a canales YouTube (tipo: youtube).');
+    process.exit(1);
   }
 
   const cacheDir = noCache ? null : CACHE_DIR;
@@ -919,12 +963,24 @@ async function main() {
     const targetSince = sinceLastSync ? lastSyncSince(manifestBefore, t) : since;
     if (sinceLastSync) {
       if (targetSince) {
-        logInfo(`Ventana desde la última sync de ${MEDIA[t].nombre}: ${targetSince} (inclusive)`);
+        logInfo(`Ventana desde la última sync de ${REGISTRY[t].nombre}: ${targetSince} (inclusive)`);
       } else {
-        logWarn(`${MEDIA[t].nombre}: sin ultima_sync válida; se sincronizará completo.`);
+        logWarn(`${REGISTRY[t].nombre}: sin ultima_sync válida; se sincronizará completo.`);
       }
     }
-    const r = await syncMedio(t, MEDIA[t], { ...opts, since: targetSince });
+    let r;
+    if (isYoutubeConf(REGISTRY[t])) {
+      if (exactIds.length > 0 || exactCount > 0) {
+        r = await exactifyDates(t, REGISTRY[t], { count: exactCount, ids: exactIds });
+      } else {
+        if (targetSince) {
+          logWarn(`${REGISTRY[t].nombre}: --since/--since-last-sync se ignora en canales (el tab es nuevo a viejo y el merge cubre).`);
+        }
+        r = await syncCanalYoutube(t, REGISTRY[t], { playlistEnd, replace });
+      }
+    } else {
+      r = await syncMedio(t, REGISTRY[t], { ...opts, since: targetSince });
+    }
     results.push(r);
     // Update atómico y serializado POR MEDIO: si otro proceso sincroniza otro
     // medio en paralelo, el lock + read-modify-write conserva ambas entradas.
@@ -937,9 +993,10 @@ async function main() {
       // `ultima_sync` es un watermark de cobertura, no solo de intento: si un
       // endpoint falló o --limit truncó el recorrido, no se avanza. Así el próximo
       // --since-last-sync reintenta desde la última ventana realmente completa.
+      // Los runs --exact de YouTube tampoco la avanzan: fijan fechas, no cobertura.
       m.medios[t] = {
-        nombre: MEDIA[t].nombre,
-        ultima_sync: complete ? now : (previous.ultima_sync ?? null),
+        nombre: REGISTRY[t].nombre,
+        ultima_sync: complete && !r.exact ? now : (previous.ultima_sync ?? null),
         articulos: r.urls ?? previous.articulos ?? 0,
         nuevos: r.added ?? 0,
         años: r.years ?? previous.años ?? 0,

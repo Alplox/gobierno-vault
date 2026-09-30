@@ -1,5 +1,5 @@
 /**
- * media.mjs — Registro de medios del catálogo de sitemaps (`sitemaps/<medio>/`).
+ * media.mjs — Registro de medios del catálogo de sitemaps (`sitemaps/websites/<medio>/`).
  *
  * Cada entrada define cómo descubrir los sitemaps de un medio:
  *   robots  → leer el robots.txt y parsear líneas "Sitemap:"
@@ -8,6 +8,8 @@
  * Filtros: articleOnly (whitelist Yoast post/news-sitemap) | includeRe (whitelist
  * por medio) | urlRe (whitelist de URLs de artículo) | dateFromSitemapPath /
  * locDateRe / forceHttps (ver sync.mjs).
+ * Canales de YouTube: viven en channels.mjs (CHANNELS), no aquí (ver nota al
+ * final del registro).
  *
  * Al agregar un medio: sincronizar (`pnpm run sitemaps-sync -- <slug>`) y regenerar
  * índices (`pnpm run sitemaps-index`). Los mapas de dominios/nombres de
@@ -3094,6 +3096,9 @@ export const MEDIA = {
     index: 'https://infosalmon.cl/wp-sitemap.xml',
     includeRe: /wp-sitemap-posts-post-\d+\.xml$/i,
   },
+  // ── Canales de YouTube: viven en channels.mjs (CHANNELS), no aquí ──
+  // Un canal no es un dominio: mediaHosts() y los mapas que derivan de MEDIA
+  // (add-source, watchlist, probe, news-search) asumen sitemaps XML.
   // Descartados batch 25: eldivisadero/soytemuco/soypuertomontt/soyarica/
   // soyosorno/cronicanoticias — sin robots (fetch failed) o endpoints con 0 locs.
   // eha.cl (y su alias elheraldoaustral.cl, mismo sitemap): urlset plano de 41

@@ -29,8 +29,7 @@ import fs from 'node:fs';
 // La raíz del repo son 4 niveles arriba desde .agents/skills/sitemaps/scripts/.
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..', '..', '..', '..');
 const { MEDIA } = await import(pathToFileURL(join(ROOT, 'scripts/sitemaps/media.mjs')).href);
-
-const CAT = join(ROOT, 'sitemaps');
+const { medioDir } = await import(pathToFileURL(join(ROOT, 'scripts/sitemaps/paths.mjs')).href);
 const pedidos = process.argv.slice(2).filter((a) => !a.startsWith('--'));
 const conLocDate = Object.entries(MEDIA).filter(([slug, c]) => c.locDateRe && (!pedidos.length || pedidos.includes(slug)));
 const soloConCatalogo = process.argv.includes('--solo-con-catalogo');
@@ -45,7 +44,7 @@ console.log('(* = preferLocDate activo)\n');
 
 let conProblemas = 0;
 for (const [slug, cfg] of conLocDate) {
-  const dir = join(CAT, slug);
+  const dir = medioDir(slug);
   if (!fs.existsSync(dir)) {
     if (!soloConCatalogo) console.log(`${slug}: sin catálogo local (corrá sitemaps-sync -- ${slug} primero)`);
     continue;
