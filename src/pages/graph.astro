@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import EventGraph from '../components/EventGraph.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import { getAllEvents, getUniqueTopics, getUniquePeople, getUniqueOrgs, getTopicsMap, getPeopleMap, getOrgsMap } from '../lib/queries';
 import { buildConnectionIndex, eventYearFromDate } from '../lib/relations';
 import { TIPO_LABELS } from '../lib/eventTypes';
@@ -40,6 +41,9 @@ const filters = {
         <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Grafo de Relaciones</h1>
       </div>
       <p class="text-base-content/60 text-sm">Visualización de conexiones entre eventos del vault.</p>
+      <div class="mt-4">
+        <ShareButtons url={new URL('/graph', Astro.site).href} title="Grafo de Relaciones" />
+      </div>
     </div>
     <EventGraph events={events} connectionIndex={connectionIndex} size="full" filters={filters} />
   </article>

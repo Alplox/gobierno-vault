@@ -4,6 +4,7 @@ import tailwindcss from '@tailwindcss/vite';
 import { unified } from '@astrojs/markdown-remark';
 import { availableParallelism } from 'node:os';
 import remarkWikiLinks from './src/lib/remarkWikiLinks.mjs';
+import rehypeTableWrap from './src/lib/rehypeTableWrap.mjs';
 
 // ponytail: cross-platform — setear NODE_OPTIONS aquí evita depender de `set` (Windows)
 // o `export` (Linux) en el script de build. El flag necesita estar antes del arranque
@@ -61,6 +62,7 @@ export default defineConfig({
   markdown: {
     processor: unified({
       remarkPlugins: [remarkWikiLinks],
+      rehypePlugins: [rehypeTableWrap],
     }),
   },
 });

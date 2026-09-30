@@ -1,0 +1,144 @@
+---
+import { Share2, Copy, Check, Facebook, Twitter, MessageCircle, Send } from 'lucide-astro';
+
+interface Props {
+  /** URL canónica absoluta de la página a compartir. */
+  url: string;
+  /** Título de la página (se usa como texto del mensaje). */
+  title: string;
+}
+
+const { url, title } = Astro.props;
+const text = `${title} — Gobierno Vault`;
+const eUrl = encodeURIComponent(url);
+const eText = encodeURIComponent(text);
+const xHref = `https://x.com/intent/post?text=${eText}&url=${eUrl}`;
+const fbHref = `https://www.facebook.com/sharer/sharer.php?u=${eUrl}`;
+const waHref = `https://wa.me/?text=${eText}%20${eUrl}`;
+const tgHref = `https://t.me/share/url?url=${eUrl}&text=${eText}`;
+
+const btn =
+  'inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-colors';
+const iconBtn =
+  'inline-flex items-center justify-center h-[1.875rem] w-[1.875rem] rounded-lg text-base-content/70 bg-base-200 hover:bg-base-300 transition-colors';
+---
+
+<div class="gv-share flex flex-wrap items-center gap-2" data-share-url={url} data-share-title={text} role="group" aria-label="Compartir esta página">
+  <button
+    type="button"
+    data-share-native
+    class={`${btn} hidden`}
+    title="Compartir con las apps de tu dispositivo"
+    aria-label="Compartir con las apps de tu dispositivo"
+  >
+    <Share2 class="h-4 w-4 shrink-0" />
+    <span>Compartir</span>
+  </button>
+  <button
+    type="button"
+    data-share-copy
+    class={`${btn} min-w-[8.75rem] justify-center`}
+    title="Copiar el enlace de esta página"
+    aria-label="Copiar el enlace de esta página"
+  >
+    <span data-share-icon="copy"><Copy class="h-4 w-4 shrink-0" /></span>
+    <span data-share-icon="done" class="hidden"><Check class="h-4 w-4 shrink-0" /></span>
+    <span data-share-copy-label>Copiar enlace</span>
+  </button>
+  <a href={xHref} target="_blank" rel="noopener noreferrer" class={iconBtn} title="Compartir en X" aria-label="Compartir en X">
+    <Twitter class="h-4 w-4 shrink-0" />
+  </a>
+  <a href={fbHref} target="_blank" rel="noopener noreferrer" class={iconBtn} title="Compartir en Facebook" aria-label="Compartir en Facebook">
+    <Facebook class="h-4 w-4 shrink-0" />
+  </a>
+  <a href={waHref} target="_blank" rel="noopener noreferrer" class={iconBtn} title="Compartir por WhatsApp" aria-label="Compartir por WhatsApp">
+    <MessageCircle class="h-4 w-4 shrink-0" />
+  </a>
+  <a href={tgHref} target="_blank" rel="noopener noreferrer" class={iconBtn} title="Compartir por Telegram" aria-label="Compartir por Telegram">
+    <Send class="h-4 w-4 shrink-0" />
+  </a>
+  <span data-share-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+</div>
+
+<script>
+  // Botones de compartir: delegación en document (el bundle corre una sola
+  // vez; con View Transitions el DOM se reemplaza, así que los nodos se
+  // buscan en cada evento, nunca se cachean).
+  if (!(window as any).__gvShareInit) {
+    (window as any).__gvShareInit = true;
+
+    const showNative = () => {
+      const ok = typeof navigator !== 'undefined' && typeof (navigator as any).share === 'function';
+      document.querySelectorAll('[data-share-native]').forEach((b) => {
+        b.classList.toggle('hidden', !ok);
+        b.classList.toggle('inline-flex', ok);
+      });
+    };
+    showNative();
+    document.addEventListener('astro:page-load', showNative);
+
+    const copyTimers = new WeakMap<HTMLButtonElement, number>();
+    document.addEventListener('click', async (e) => {
+      const t = e.target as HTMLElement | null;
+
+      const nativeBtn = t?.closest('[data-share-native]') as HTMLElement | null;
+      if (nativeBtn) {
+        const root = nativeBtn.closest('.gv-share') as HTMLElement | null;
+        try {
+          await (navigator as any).share({
+            title: root?.dataset.shareTitle ?? document.title,
+            url: root?.dataset.shareUrl ?? location.href,
+          });
+        } catch {
+          /* AbortError = el usuario canceló: no es un error */
+        }
+        return;
+      }
+
+      const copyBtn = t?.closest('[data-share-copy]') as HTMLButtonElement | null;
+      if (!copyBtn) return;
+      const root = copyBtn.closest('.gv-share') as HTMLElement | null;
+      const url = root?.dataset.shareUrl ?? location.href;
+      let ok = false;
+      try {
+        await navigator.clipboard.writeText(url);
+        ok = true;
+      } catch {
+        try {
+          const ta = document.createElement('textarea');
+          ta.value = url;
+          ta.setAttribute('readonly', '');
+          ta.style.position = 'fixed';
+          ta.style.opacity = '0';
+          document.body.appendChild(ta);
+          ta.select();
+          ok = document.execCommand('copy');
+          ta.remove();
+        } catch {
+          ok = false;
+        }
+      }
+      const label = copyBtn.querySelector('[data-share-copy-label]');
+      const iconCopy = copyBtn.querySelector('[data-share-icon="copy"]');
+      const iconDone = copyBtn.querySelector('[data-share-icon="done"]');
+      const status = root?.querySelector('[data-share-status]');
+      if (label) label.textContent = ok ? '¡Copiado!' : 'No se pudo copiar';
+      iconCopy?.classList.add('hidden');
+      iconDone?.classList.remove('hidden');
+      if (status) status.textContent = ok ? 'Enlace copiado al portapapeles.' : 'No se pudo copiar el enlace.';
+      const prev = copyTimers.get(copyBtn);
+      if (prev) window.clearTimeout(prev);
+      copyTimers.set(
+        copyBtn,
+        window.setTimeout(() => {
+          if (!copyBtn.isConnected) return;
+          if (label) label.textContent = 'Copiar enlace';
+          iconCopy?.classList.remove('hidden');
+          iconDone?.classList.add('hidden');
+          if (status?.isConnected) status.textContent = '';
+          copyTimers.delete(copyBtn);
+        }, 2000),
+      );
+    });
+  }
+</script>

@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import CabinetPortfolioHistory from '../components/CabinetPortfolioHistory.astro';
+import ShareButtons from '../components/ShareButtons.astro';
 import {
   getCabinetByMinistry,
   getCabinetByGobierno,
@@ -177,6 +178,9 @@ function statsGobierno(
     <p class="text-base-content/60 text-sm">
       Carteras ministeriales y sus titulares (actuales e históricos), generado automáticamente desde los cargos registrados en <code class="text-base-content/70 bg-base-200 px-1 py-0.5 rounded text-xs">src/content/people/*.md</code>.
     </p>
+    <div class="mt-4">
+      <ShareButtons url={new URL('/gabinete', Astro.site).href} title="Gabinete Ministerial" />
+    </div>
   </div>
 
   <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">

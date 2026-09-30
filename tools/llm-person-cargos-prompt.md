@@ -95,11 +95,11 @@ organizacion: id_organizacion_actual         # ID snake_case EXISTE o propuesto 
 cargos:
   - cargo: "Cargo más antiguo"
     organizacion: id_org                     # ID snake_case, nunca texto libre
-    desde: 2018-03-11 # https://URL_COMPLETA_QUE_RESPALDA_EL_DESDE
-    hasta: 2022-03-11 # https://URL_COMPLETA_QUE_RESPALDA_EL_HASTA
+    desde: 2018-03-11 # <https://URL_COMPLETA_QUE_RESPALDA_EL_DESDE>
+    hasta: 2022-03-11 # <https://URL_COMPLETA_QUE_RESPALDA_EL_HASTA>
   - cargo: "Cargo vigente"
     organizacion: id_org
-    desde: 2023-06-01 # https://URL_COMPLETA + https://SEGUNDA_URL_SI_HAY
+    desde: 2023-06-01 # <https://URL_COMPLETA> + <https://SEGUNDA_URL_SI_HAY>
     # sin `hasta` = en ejercicio
 aliases:
   - "Apellido"
@@ -122,7 +122,7 @@ Una fila por cargo, para verificación humana rápida:
 ```
 | # | Cargo | Organización (ID) | Desde | Hasta | Evidencia (URLs completas) |
 |---|-------|-------------------|-------|-------|----------------------------|
-| 1 | Presidente de ChileTransporte | chile_transporte | 2024-05-10 | vigente | https://URL_1 (elección directiva) + https://URL_2 (nota 2026 que lo nombra vigente) |
+| 1 | Presidente de ChileTransporte | chile_transporte | 2024-05-10 | vigente | <https://URL_1> (elección directiva) + <https://URL_2> (nota 2026 que lo nombra vigente) |
 | 2 | ... | ... | ... | ... | ... |
 ```
 

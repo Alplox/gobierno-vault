@@ -92,6 +92,22 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 
 `SRef` conserva siempre el tooltip. En las fichas densas de `/sueldos`, envolver la referencia en `.sueldos-inline-ref` para neutralizar el `vertical-align: super` del `<sup>` y evitar que el número se monte sobre la línea anterior; el enlace y el scroll a `#ref-N` no cambian.
 
+## Botones de compartir
+
+`ShareButtons.astro` (`url` + `title` props) es la única pieza de compartir: botón nativo (`navigator.share`, oculto por defecto y revelado por JS si existe), "Copiar enlace" (clipboard con fallback `execCommand`, feedback `copy → check` con label y `role="status"`), y enlaces intents a X, Facebook, WhatsApp y Telegram. Va en las 9 páginas de ficha/sección: evento (en la fila de acciones, junto a "Ver en Markdown"), `/people/[id]`, `/organizations/[id]`, `/topics/[id]`, `/sources/[id]`, `/stats/[concepto]`, `/sueldos`, `/gabinete`, `/graph`.
+
+- El `<script>` del componente usa delegación en `document` con guard `window.__gvShareInit` (el bundle corre una sola vez y ClientRouter reemplaza el DOM: nunca cachear nodos, buscar por `[data-share-*]` en cada evento).
+- URL canónica siempre absoluta y calculada en build: `new URL(Astro.url.pathname, Astro.site).href` (en páginas estáticas literales como `/sueldos`, `new URL('/sueldos', Astro.site)`), nunca `location.href` en el href SSR.
+- Los intents de red son `<a target="_blank" rel="noopener noreferrer">` con la URL ya codificada: funcionan sin JS; solo el nativo y el copiado necesitan script.
+
+## Tablas de eventos en móvil
+
+Las tablas markdown del detalle de evento se envuelven en build con `rehypeTableWrap` (`src/lib/rehypeTableWrap.mjs`, registrado como `rehypePlugins` en `astro.config.mjs`): `<div class="gv-table-scroll" tabindex="0" role="region" data-cols="N">`. Sin wrapper, 3-5 columnas desbordaban la tarjeta `.prose` (`overflow:visible` por los tooltips) y quedaban cortadas sin scroll.
+
+- Estilos en `src/styles/global.css` (`.gv-table-scroll`, tokens semánticos, cero JS): scroll-x táctil, celdas con `min-width:9rem` + `white-space:normal` y padding amplio para que el texto largo envuelva en vez de compactar filas, header `base-200`, zebra sutil.
+- `.is-wide` (≥4 columnas, `data-cols`): primera columna `sticky left` con fondo sólido + sombra como pista de scroll.
+- Tradeoff conocido: los tooltips `.source-ref-tip` dentro de tablas quedan recortados por el scroll-x (igual que el modal del grafo); el salto a `#ref-N` sigue funcionando.
+
 ## Estilos — Tailwind v4 + daisyUI 5
 
 CSS en `src/styles/global.css` (`@import "tailwindcss"` + `@plugin "@tailwindcss/typography"` + `@plugin "daisyui"`, temas `light --default, dark --prefersdark`). Plugin Vite `@tailwindcss/vite`. No existe `tailwind.config.mjs`.

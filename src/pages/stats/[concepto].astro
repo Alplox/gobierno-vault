@@ -1,5 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 import { getAllCifras, getCifrasRegistry, getAllEvents } from '../../lib/queries';
 import { ArrowLeft, TrendingUp, Calendar, Hash, ExternalLink } from 'lucide-astro';
 
@@ -53,6 +54,10 @@ const total = conceptoCifras.reduce((sum, c) => sum + c.valor, 0);
         </div>
       </div>
     </header>
+
+    <div class="mb-8">
+      <ShareButtons url={new URL(Astro.url.pathname, Astro.site).href} title={reg?.nombre ?? concepto} />
+    </div>
 
     {conceptoCifras.length > 0 ? (
       <section>

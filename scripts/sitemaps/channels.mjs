@@ -40,4 +40,53 @@ export const CHANNELS = {
     channelId: 'UCkccyEbqhhM3uKOI6Shm-4Q',
     tab: 'videos',
   },
+  yt_theclinic: {
+    nombre: 'The Clinic (YouTube)',
+    tipo: 'youtube',
+    channel: '@theclinic_cl', // "The Clinic" (verificado por channel_id)
+    channelId: 'UCKr6ve0z-_k1bC_jW3TAWtA',
+    tab: 'videos',
+  },
+  yt_gobierno: {
+    nombre: 'Gobierno de Chile (YouTube)',
+    tipo: 'youtube',
+    channel: '@GobiernoDeChile', // canal oficial (verificado por channel_id)
+    channelId: 'UC_5Sh9VhJlgCspl4mLM2duw',
+    tab: 'videos',
+  },
+  yt_boric: {
+    nombre: 'Gabriel Boric (YouTube)',
+    tipo: 'youtube',
+    channel: '@gabrielboricpresidente', // "Gabriel Boric Font" (verificado por channel_id)
+    channelId: 'UC0gQkOPt6VVvJGO9mDy0ikw',
+    tab: 'videos',
+  },
+  yt_pinera: {
+    nombre: 'Sebastián Piñera (YouTube)',
+    tipo: 'youtube',
+    channel: '@sebastianpinera', // (verificado por channel_id)
+    channelId: 'UCOltFBLjyQORr3VzE7NuRqQ',
+    tab: 'videos',
+  },
+  yt_kast: {
+    nombre: 'José Antonio Kast (YouTube)',
+    tipo: 'youtube',
+    channel: '@JoséAntonioKastOficial', // (verificado por channel_id)
+    channelId: 'UCGLRRRKMp4K1AKJabf8OeEg',
+    tab: 'videos',
+  },
+  yt_biobio: {
+    nombre: 'Bio Bío (YouTube)',
+    tipo: 'youtube',
+    channel: '@BioBioChile', // "Bio Bio" (verificado por channel_id)
+    channelId: 'UCuvM3c8rmdApmk-g22shZ7w',
+    tab: 'videos',
+  },
+  yt_df: {
+    nombre: 'Diario Financiero (YouTube)',
+    tipo: 'youtube',
+    channel: '@DiarioFinancieroTV', // "Diario Financiero" (verificado por channel_id)
+    channelId: 'UClsjSNCR-0KAFw0v5uVMCHQ',
+    tab: 'videos',
+  },
 };

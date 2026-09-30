@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-30T18:03:02.095Z",
+  "actualizado": "2026-09-30T22:02:51.938Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3775,6 +3775,55 @@
       "articulos": 62812,
       "nuevos": 0,
       "años": 13
+    },
+    "yt_theclinic": {
+      "nombre": "The Clinic (YouTube)",
+      "ultima_sync": "2026-09-30T21:35:57.064Z",
+      "articulos": 1973,
+      "nuevos": 1973,
+      "años": 10
+    },
+    "yt_gobierno": {
+      "nombre": "Gobierno de Chile (YouTube)",
+      "ultima_sync": "2026-09-30T21:36:46.472Z",
+      "articulos": 2100,
+      "nuevos": 2100,
+      "años": 17
+    },
+    "yt_boric": {
+      "nombre": "Gabriel Boric (YouTube)",
+      "ultima_sync": "2026-09-30T21:42:10.308Z",
+      "articulos": 469,
+      "nuevos": 469,
+      "años": 12
+    },
+    "yt_pinera": {
+      "nombre": "Sebastián Piñera (YouTube)",
+      "ultima_sync": "2026-09-30T21:42:22.316Z",
+      "articulos": 440,
+      "nuevos": 440,
+      "años": 9
+    },
+    "yt_kast": {
+      "nombre": "José Antonio Kast (YouTube)",
+      "ultima_sync": "2026-09-30T21:42:40.252Z",
+      "articulos": 746,
+      "nuevos": 746,
+      "años": 9
+    },
+    "yt_biobio": {
+      "nombre": "Bio Bío (YouTube)",
+      "ultima_sync": "2026-09-30T21:56:42.444Z",
+      "articulos": 23580,
+      "nuevos": 23580,
+      "años": 10
+    },
+    "yt_df": {
+      "nombre": "Diario Financiero (YouTube)",
+      "ultima_sync": "2026-09-30T22:02:51.938Z",
+      "articulos": 17787,
+      "nuevos": 17787,
+      "años": 15
     }
   }
 }

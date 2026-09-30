@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import EventCard from '../../components/EventCard.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 import { getAllOrganizations, getAllEvents, eventHasOrg } from '../../lib/queries';
 import { getCabinetByMinistry, periodoDe } from '../../lib/cabinet';
 import { ArrowLeft, Building2, Layers, Globe, Calendar, UserRound, History } from 'lucide-astro';
@@ -52,6 +53,10 @@ const ministerio = getCabinetByMinistry().find((c) => c.ministerioId === org.id)
       </div>
     </div>
   </header>
+
+  <div class="mb-8">
+    <ShareButtons url={new URL(Astro.url.pathname, Astro.site).href} title={org.data.nombre} />
+  </div>
 
   {org.data.bio && (
     <div class="prose prose-gray max-w-none mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed" set:html={org.data.bio} />

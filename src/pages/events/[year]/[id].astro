@@ -3,6 +3,7 @@ import Base from '../../../layouts/Base.astro';
 import EventConnections from '../../../components/EventConnections.astro';
 import EventTimelineConnector from '../../../components/EventTimelineConnector.astro';
 import EgoGraph from '../../../components/EgoGraph.astro';
+import ShareButtons from '../../../components/ShareButtons.astro';
 import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
@@ -293,6 +294,7 @@ Describe el error o la corrección sugerida.`)}`;
       )}
 
       <div class="mt-10 pt-5 border-t border-base-300/70 flex flex-wrap items-center gap-2.5 not-prose">
+        <ShareButtons url={eventUrl} title={titulo} />
         <div class="inline-flex min-h-9 items-stretch overflow-hidden rounded-lg border border-primary/20 bg-primary/10 text-primary shadow-xs" role="group" aria-label="Acciones de Markdown">
           <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex min-h-9 items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary">
             <FileText class="h-4 w-4 shrink-0" />

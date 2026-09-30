@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 30/9/2026, 14:52:18
-- **Medios registrados:** 539
-- **Artículos indexados:** 11.779.368
-- **Canales de YouTube:** 1 (62.812 videos)
+- **Última sincronización:** 30/9/2026, 19:02:51
+- **Medios registrados:** 546
+- **Artículos indexados:** 11.976.184
+- **Canales de YouTube:** 10 (259.628 videos)
 
 ## Por medio
 
@@ -472,4 +472,13 @@
 
 | Canal | Videos | Años |
 | --- | --- | --- |
+| yt_24horas | 92.278 | 2008–2026 |
 | Teletrece (YouTube) | 62.812 | 2014–2026 |
+| yt_meganoticias | 57.443 | 2017–2026 |
+| Bio Bío (YouTube) | 23.580 | 2017–2026 |
+| Diario Financiero (YouTube) | 17.787 | 2012–2026 |
+| Gobierno de Chile (YouTube) | 2100 | 2010–2026 |
+| The Clinic (YouTube) | 1973 | 2017–2026 |
+| José Antonio Kast (YouTube) | 746 | 2017–2025 |
+| Gabriel Boric (YouTube) | 469 | 2014–2025 |
+| Sebastián Piñera (YouTube) | 440 | 2008–2021 |
