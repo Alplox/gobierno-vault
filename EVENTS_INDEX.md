@@ -1766,6 +1766,8 @@
 - [2026/09/20260929-4 - Confusam inicia paro nacional de 48 horas por el per cápita de la atención primaria y marcha en Valparaíso ante el ingreso del Presupuesto 2027](src/content/events/2026/09/20260929-4.md) — 10 fuentes
 - [2026/09/20260929-5 - Se conoce la declaración de Luis Hermosilla ante la Fiscalía: admite pagos en efectivo de Piñera y gestiones en nombramientos de jueces](src/content/events/2026/09/20260929-5.md) — 8 fuentes
 - [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 17 fuentes
+- [2026/09/20260930-2 - Camioneros dan 48 horas al Gobierno por el diésel y luego niegan el ultimátum y descartan el paro tras reunirse en Economía](src/content/events/2026/09/20260930-2.md) — 10 fuentes
+- [2026/09/20260930-3 - Dos seremis de la Región Metropolitana renuncian con horas de diferencia y las salidas llegan a 41 seremis y 51 autoridades](src/content/events/2026/09/20260930-3.md) — 11 fuentes
 
 ## 2025
 
@@ -1932,6 +1934,8 @@
 
 ## 2022
 
+- [2022/01/20220112-1 - Juan Araya acusa que el Gobierno de Piñera pidió a los camioneros paralizar en 2020 para aprobar la Ley Juan Barrios, el Ejecutivo lo desestima y el dirigente matiza](src/content/events/2022/01/20220112-1.md) — 10 fuentes
+- [2022/02/20220217-1 - Sergio Pérez se querella por injurias y calumnias contra Juan Araya por acusarlo de organizar con el Gobierno el paro camionero de 2020](src/content/events/2022/02/20220217-1.md) — 5 fuentes
 - [2022/03/20220311-1 - Gabriel Boric asume la Presidencia de Chile a los 36 años, el Mandatario más joven de la historia](src/content/events/2022/03/20220311-1.md) — 2 fuentes
 - [2022/03/20220316-1 - Senado aprueba la prórroga del estado de excepción en la Macrozona norte: el primer respaldo legislativo al gobierno de Boric](src/content/events/2022/03/20220316-1.md) — 4 fuentes
 - [2022/04/20220417-1 - Excandidatos presidenciales critican el primer mes del gobierno de Boric](src/content/events/2022/04/20220417-1.md) — 9 fuentes
