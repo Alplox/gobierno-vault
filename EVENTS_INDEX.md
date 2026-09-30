@@ -1765,6 +1765,7 @@
 - [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 25 fuentes
 - [2026/09/20260929-4 - Confusam inicia paro nacional de 48 horas por el per cápita de la atención primaria y marcha en Valparaíso ante el ingreso del Presupuesto 2027](src/content/events/2026/09/20260929-4.md) — 10 fuentes
 - [2026/09/20260929-5 - Se conoce la declaración de Luis Hermosilla ante la Fiscalía: admite pagos en efectivo de Piñera y gestiones en nombramientos de jueces](src/content/events/2026/09/20260929-5.md) — 8 fuentes
+- [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 14 fuentes
 
 ## 2025
 
