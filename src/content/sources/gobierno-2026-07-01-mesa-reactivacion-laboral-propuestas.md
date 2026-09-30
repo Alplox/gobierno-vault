@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Gobierno de Chile (gob.cl)
+medio: Gobierno de Chile
 titulo: Mesa de Reactivación Laboral entrega más de 20 propuestas para recuperar
   el empleo en el país
 autor: ""

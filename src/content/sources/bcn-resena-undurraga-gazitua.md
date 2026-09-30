@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Reseña Biográfica Juan Francisco Undurraga Gazitúa
 autor: Biblioteca del Congreso Nacional
 fecha: 2026-01-01

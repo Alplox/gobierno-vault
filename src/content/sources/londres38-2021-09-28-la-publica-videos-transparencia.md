@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: Londres 38
+medio: Londres 38, espacio de memorias
 titulo: La Pública accede a videos de Carabineros vía Ley de Transparencia y
   realiza taller con organizaciones para solicitar información a organismos
   públicos

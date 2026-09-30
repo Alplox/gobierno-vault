@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.830: reajusta el ingreso mínimo mensual y asignaciones familiares"
 autor: Biblioteca del Congreso Nacional
 fecha: 2026-06-22

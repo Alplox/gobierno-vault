@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: SENAPRED
+medio: SENAPRED - Servicio Nacional de Prevención y Respuesta ante Desastres
 titulo: Gobierno concentra despliegue en Coquimbo, Huasco y Tiltil para
   enfrentar las zonas mas criticas del sistema frontal
 autor: SENAPRED

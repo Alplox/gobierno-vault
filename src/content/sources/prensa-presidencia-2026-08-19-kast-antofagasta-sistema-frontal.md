@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: "Presidente José Antonio Kast encabeza en Antofagasta coordinación en terreno por efectos del sistema frontal"
 autor: Prensa Presidencia
 fecha: 2026-08-19

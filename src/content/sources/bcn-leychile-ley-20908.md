@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 20.908: modifica la Ley de Concesiones de Obras Públicas y reglamentos asociados"
 autor: Biblioteca del Congreso Nacional de Chile
 fecha: 2016-04-20

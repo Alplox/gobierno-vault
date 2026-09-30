@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Amnistía Internacional Chile
+medio: Amnistía Internacional
 titulo: "Chile: Ojos sobre Chile: Violencia policial y responsabilidad de mando durante el estallido social"
 autor: Amnistía Internacional Chile
 fecha: 2020-10-14

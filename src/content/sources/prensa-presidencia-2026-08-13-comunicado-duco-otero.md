@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Presidencia de Chile
+medio: Presidencia de la República de Chile
 titulo: S.E. el Presidente de la República acepta renuncia de ministra y
   subsecretario del Deporte
 autor: Presidencia de Chile

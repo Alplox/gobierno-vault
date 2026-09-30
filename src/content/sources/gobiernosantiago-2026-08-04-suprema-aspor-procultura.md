@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Gobierno de Santiago (GORE Metropolitano)
+medio: Gobierno Regional Metropolitano (Gobierno de Santiago)
 titulo: Corte Suprema rechaza recurso y confirma resolución de la CMF que los
   obliga a pagar dineros protegidos por el Gobierno de Santiago en el caso
   ProCultura

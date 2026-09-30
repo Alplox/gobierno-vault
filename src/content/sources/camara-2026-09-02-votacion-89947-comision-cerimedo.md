@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: "Votación 89947: Creación Comisión Especial Investigadora por bots y caso Cerimedo (02-sep-2026)"
 autor: Cámara de Diputadas y Diputados
 fecha: 2026-09-02

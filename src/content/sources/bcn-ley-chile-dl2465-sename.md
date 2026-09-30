@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: BCN (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Decreto Ley 2465, 16-ENE-1979, Ministerio de Justicia (crea el Servicio
   Nacional de Menores)
 autor: Biblioteca del Congreso Nacional

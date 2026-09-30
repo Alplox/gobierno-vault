@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Dirección de Presupuestos (DIPRES)
+medio: Dirección de Presupuestos
 titulo: Informe de Finanzas Públicas, primer trimestre 2026, con balance
   cíclicamente ajustado de 2025 en 3,7% del PIB
 autor: Dirección de Presupuestos

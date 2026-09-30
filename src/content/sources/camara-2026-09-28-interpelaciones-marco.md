@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: "Interpelaciones: mecanismo de fiscalización de la Cámara"
 autor: Cámara de Diputados
 fecha: 2026-09-28

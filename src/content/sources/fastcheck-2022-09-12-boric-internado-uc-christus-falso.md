@@ -1,6 +1,6 @@
 ---
 tipo: investigacion
-medio: Fast Check CL
+medio: Fast Check
 titulo: "Boric fue internado por seria descompensación mental en la UC Christus: Falso"
 autor: ""
 fecha: 2022-09-12

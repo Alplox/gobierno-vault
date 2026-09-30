@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 19.007 (1990): otorga reajuste de remuneraciones al sector público,
   aguinaldo de Navidad y otras normas pecuniarias"
 autor: Biblioteca del Congreso Nacional

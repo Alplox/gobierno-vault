@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Oficios de fiscalización sobre el robo al Ministerio de Desarrollo Social
   y Familia (julio 2023)
 autor: ""

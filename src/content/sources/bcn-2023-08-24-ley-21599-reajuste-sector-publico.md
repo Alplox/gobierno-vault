@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.599 — Sustituye el reajuste de las remuneraciones del sector público fijado en los incisos quinto y noveno del artículo 1 de la Ley N° 21.526"
 autor: Ministerio de Hacienda
 fecha: 2023-08-24

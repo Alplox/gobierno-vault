@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Tribunal de la Libre Competencia
+medio: Tribunal de Defensa de la Libre Competencia
 titulo: "Sentencia N° 171/2019: Requerimiento de la FNE contra CCNI S.A. y otras
   (C 292-15)"
 autor: TDLC

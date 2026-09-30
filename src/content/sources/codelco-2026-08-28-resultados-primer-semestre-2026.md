@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Codelco
+medio: Corporación Nacional del Cobre de Chile
 titulo: Codelco mejora sus resultados financieros en un escenario favorable para
   el cobre y prioriza recuperar la productividad
 autor: Codelco

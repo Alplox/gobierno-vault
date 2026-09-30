@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: "Fallo Rol N° 1.087-2022, Episodio Luz de las Nieves Ayress Moreno"
 fecha: 2024-11-12
 url: https://media-front.elmostrador.cl/2024/11/Lea-el-fallo-del-caso-1.pdf

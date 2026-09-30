@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Subtel incumple plazo de entrega de informe sobre bloqueo a casinos online y Corte de Santiago amenaza con sanciones
 autor: Fast Check CL
 fecha: 2026-06-05

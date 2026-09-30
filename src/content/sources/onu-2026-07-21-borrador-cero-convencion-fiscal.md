@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Naciones Unidas
+medio: Organización de las Naciones Unidas (ONU)
 titulo: "Co-Lead's Zero Draft of UN Framework Convention on International Tax
   Cooperation (A/AC.298/CRP.32)"
 autor: Naciones Unidas, Comité Negociador Intergubernamental

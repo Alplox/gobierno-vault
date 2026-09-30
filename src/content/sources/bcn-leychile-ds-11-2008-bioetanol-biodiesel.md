@@ -1,6 +1,6 @@
 ---
 tipo: norma
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Decreto Supremo N° 11 de 2008 del Ministerio de Economía, Fomento y Reconstrucción: aprueba definiciones y especificaciones de calidad para bioetanol y biodiesel"
 autor: Ministerio de Economía, Fomento y Reconstrucción
 fecha: 2008-05-09

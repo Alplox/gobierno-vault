@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.252: Establece un financiamiento con aporte fiscal para la
   protección de los ingresos de la clase media en los casos que indica (Bono
   Clase Media y Préstamo Solidario)"

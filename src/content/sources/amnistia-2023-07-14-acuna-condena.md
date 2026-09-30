@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: Amnistía Internacional Chile
+medio: Amnistía Internacional
 titulo: La condena a carabineros que atacaron a Mario Acuña es un paso
   importante a favor de la justicia y los derechos humanos
 autor: Amnistía Internacional Chile

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: El año 2025 cerró con déficit estructural de 3,7% del PIB, más del
   doble del 1,6% comprometido (veredicto Real)
 autor: Fast Check CL

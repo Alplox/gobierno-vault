@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: "Caso Corpesca: Tercer TOP de Santiago dicta condena por fraude al
   fisco, cohecho y soborno"
 autor: Poder Judicial de Chile

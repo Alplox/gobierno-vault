@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Es falso que la cárcel La Laguna tiene entre 200 y 300 presos, y que su
   capacidad es para 3.000 reclusos
 autor: Miguel Aburto (Verifica UDP)

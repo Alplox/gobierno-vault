@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Verdadero, los homicidios disminuyeron 14,6% respecto al mismo
   período de 2025
 autor: Carolina Torres y Cristóbal Villalobos

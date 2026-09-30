@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Decreto 17, de 2025, del Ministerio del Medio Ambiente: aprueba modificación al DS 40 de 2012, Reglamento del SEIA"
 autor: Biblioteca del Congreso Nacional
 fecha: 2026-01-21

@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Amnistía Internacional Chile
+medio: Amnistía Internacional
 titulo: "Chile: No al indulto para excarabineros y exmilitares condenados —
   Ninguno de los 14 condenados está preso 'por servir'"
 autor: Amnistía Internacional Chile

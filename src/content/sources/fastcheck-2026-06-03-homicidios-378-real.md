@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Al 31 de mayo se registraron 378 víctimas de homicidio frente a 444
   del año pasado (veredicto Real)
 autor: Fast Check CL

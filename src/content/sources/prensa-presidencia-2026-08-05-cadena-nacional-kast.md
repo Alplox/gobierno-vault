@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: Presidente Kast anuncia Agenda Contra el Crimen Organizado y Terrorismo
   (ACOT) en Cadena Nacional
 autor: Gobierno de Chile

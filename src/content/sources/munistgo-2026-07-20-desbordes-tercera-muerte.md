@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Municipalidad de Santiago (munistgo.cl)
+medio: Municipalidad de Santiago
 titulo: Alcalde Desbordes llama a reforzar el apoyo a personas en situación de
   calle tras un nuevo fallecimiento en Santiago
 autor: Redacción

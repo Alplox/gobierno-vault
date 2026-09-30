@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Impreciso, los 389 proyectos en evaluación ambiental superan los 91
   mil millones de dólares de inversión proyectada
 autor: Redacción VerificaUDP

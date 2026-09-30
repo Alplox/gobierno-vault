@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Licitación 618923-15-LE26: Pasajes Aéreos Internacionales Multidestino (Subsecretaría para las Fuerzas Armadas)"
 autor: Subsecretaría para las Fuerzas Armadas
 fecha: 2026-09-02

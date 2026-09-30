@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Licitación 776-23-LP26: Suministro de pescados y mariscos frescos y congelados"
 autor: Presidencia de la República
 fecha: 2026-08-03

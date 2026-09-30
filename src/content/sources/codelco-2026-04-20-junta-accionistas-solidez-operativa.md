@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Codelco
+medio: Corporación Nacional del Cobre de Chile
 titulo: "Codelco reafirma solidez operativa y rol estratégico para el desarrollo de Chile"
 autor: Codelco
 fecha: 2026-04-20

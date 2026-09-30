@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: Sala desestimó admisibilidad de acusación constitucional en contra del
   Presidente Piñera (79-73)
 autor: Cámara de Diputadas y Diputados

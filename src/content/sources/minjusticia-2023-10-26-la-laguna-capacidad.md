@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)
+medio: Ministerio de Justicia y Derechos Humanos
 titulo: En el segundo semestre de 2024 comenzaría a funcionar nuevo complejo
   penitenciario La Laguna
 autor: Ministerio de Justicia y Derechos Humanos

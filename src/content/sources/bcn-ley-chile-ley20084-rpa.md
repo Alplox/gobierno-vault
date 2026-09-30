@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: BCN (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Ley 20.084 sobre Responsabilidad Penal Adolescente
 autor: Biblioteca del Congreso Nacional
 fecha: 2005-12-07

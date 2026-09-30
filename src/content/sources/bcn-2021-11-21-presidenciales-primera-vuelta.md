@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Elecciones presidenciales de 2021
 autor: ""
 fecha: 2021-11-21

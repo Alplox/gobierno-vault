@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Al nivel de mujeres, el desempleo llega al 10,5% y el de las mujeres
   jóvenes está por sobre el 25% (veredicto Real)
 autor: Fast Check CL

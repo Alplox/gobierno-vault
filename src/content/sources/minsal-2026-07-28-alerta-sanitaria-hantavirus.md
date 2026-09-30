@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Ministerio de Salud (Minsal)
+medio: Ministerio de Salud
 titulo: Ministerio de Salud declara Alerta Sanitaria por hantavirus desde
   Atacama a Magallanes
 autor: Departamento de Comunicaciones Minsal

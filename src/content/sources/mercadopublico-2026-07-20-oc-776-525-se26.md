@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-525-SE26: ACC-Addendum aumento de contrato
   Suministro productos cárneos y derivados STGO"
 autor: Presidencia de la República

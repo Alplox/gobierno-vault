@@ -1,6 +1,6 @@
 ---
 tipo: web
-medio: Fast Check CL
+medio: Fast Check
 titulo: "A ocho meses de titularse: José Tomás Lira Larraín asumió como jefe de
   gabinete de la Subsecretaría de Educación Superior"
 autor: Elias Miranda, Pablo Flores, Betsi Gatica

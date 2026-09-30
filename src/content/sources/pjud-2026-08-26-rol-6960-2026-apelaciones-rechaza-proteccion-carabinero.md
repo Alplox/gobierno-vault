@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: Corte de Apelaciones de Concepción rechaza protección de carabinero (Rol
   6.960-2026)
 autor: ""

@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: "Presidente Kast en la clausura del V encuentro del Foro de Madrid: \"El verdadero desafío es gobernar bien y cumplir aquellas cosas que planteamos\""
 autor: Gobierno de Chile
 fecha: 2026-09-03

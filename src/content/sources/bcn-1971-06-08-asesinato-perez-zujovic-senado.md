@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Asesinato del ex Vicepresidente y ex Ministro don Edmundo Perez Zujovic"
 autor: "Jose Tomas Reyes Vicuna"
 fecha: 1971-06-08

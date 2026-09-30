@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Son 40 meses de desempleo sobre el 8% (veredicto Real)
 autor: Fast Check CL
 fecha: 2026-06-03

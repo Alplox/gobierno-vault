@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Gobierno de Chile (gob.cl)
+medio: Gobierno de Chile
 titulo: "Zanja fronteriza: Ejecución ya alcanza el 100% en Chacalluta y más del
   60% en Colchane"
 autor: Gobierno de Chile

@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: SENAPRED
+medio: SENAPRED - Servicio Nacional de Prevención y Respuesta ante Desastres
 titulo: Gobierno refuerza medidas preventivas ante sistema frontal y anuncia
   suspension de clases en cinco regiones
 autor: SENAPRED

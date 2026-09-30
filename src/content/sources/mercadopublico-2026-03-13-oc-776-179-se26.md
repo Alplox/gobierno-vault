@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-179-SE26: suministro de frutas y verduras para
   la Presidencia"
 autor: Presidencia de la República

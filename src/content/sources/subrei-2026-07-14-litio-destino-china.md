@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Subrei
+medio: Subsecretaría de Relaciones Económicas Internacionales
 titulo: "4.º Informe sobre el mercado del litio: una perspectiva desde el comercio internacional"
 autor: Dirección de Estudios de la Subsecretaría de Relaciones Económicas Internacionales
 fecha: 2026-07-14

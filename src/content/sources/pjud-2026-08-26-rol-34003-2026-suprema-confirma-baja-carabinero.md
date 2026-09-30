@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: Corte Suprema confirma sentencia que rechazó protección de carabinero
   dado de baja por hurto en Pronto Copec (Rol 34.003-2026)
 autor: ""

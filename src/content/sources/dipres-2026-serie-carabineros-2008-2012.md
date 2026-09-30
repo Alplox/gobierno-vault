@@ -1,6 +1,6 @@
 ---
 tipo: documento_oficial
-medio: Dirección de Presupuestos (DIPRES)
+medio: Dirección de Presupuestos
 titulo: "Serie histórica 2008-2012: Información de ejecución presupuestaria -
   Carabineros de Chile"
 autor: DIPRES

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: "S.E. el Presidente de la República, José Antonio Kast, participa del lanzamiento del WRC Rally Biobío"
 autor: Prensa Presidencia
 fecha: 2026-08-27

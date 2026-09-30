@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Acuerdo por Chile: cronograma del proceso constitucional 2023"
 autor: BCN
 fecha: 2023-01-17

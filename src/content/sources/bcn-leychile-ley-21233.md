@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.233 (2020): reforma constitucional que crea el artículo 38 bis y
   ordena la rebaja transitoria de remuneraciones por el CADP"
 autor: Biblioteca del Congreso Nacional

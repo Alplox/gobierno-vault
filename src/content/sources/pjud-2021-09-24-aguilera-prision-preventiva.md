@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: 15° Juzgado de Garantía de Santiago confirma la prisión preventiva de
   exalcalde de San Ramón
 autor: ""

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: Diputado Enrique Bassaletti Riess - Mociones
 autor: ""
 fecha: 2026-08-28

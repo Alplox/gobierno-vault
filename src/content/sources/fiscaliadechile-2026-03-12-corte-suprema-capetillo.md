@@ -1,6 +1,6 @@
 ---
 tipo: oficial
-medio: Fiscalía de Chile
+medio: Ministerio Público de Chile
 titulo: Corte Suprema confirma condena a 700 días de presidio contra funcionario
   de más alto rango sancionado en el contexto del conflicto social
 autor: Fiscalía de Chile

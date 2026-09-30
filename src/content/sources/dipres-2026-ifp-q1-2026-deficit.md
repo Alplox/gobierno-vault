@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Dirección de Presupuestos (DIPRES)
+medio: Dirección de Presupuestos
 titulo: "Informe de Finanzas Públicas — Q1 2026: déficit fiscal se triplica a
   US$4.163M"
 autor: DIPRES

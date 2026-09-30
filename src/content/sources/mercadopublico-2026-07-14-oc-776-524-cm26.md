@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-524-CM26: MVC - MINUTA AGOSTO"
 autor: Presidencia de la República
 fecha: 2026-07-14

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Presidencia de la República
+medio: Presidencia de la República de Chile
 titulo: "Presidente Jose Antonio Kast en conmemoracion del Dia del Camionero:
   Cual es el primer rol del Estado? Darles seguridad a las personas"
 autor: ""

@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: TOP de San Bernardo condena a 12 años y 183 días de presidio a
   carabineros por apremios ilegítimos
 autor: Poder Judicial de Chile

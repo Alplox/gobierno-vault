@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Naciones Unidas
+medio: Organización de las Naciones Unidas (ONU)
 titulo: "Chile; His Excellency José Antonio Kast, President; General Debate, 81st session"
 autor: Naciones Unidas
 fecha: 2026-09-22

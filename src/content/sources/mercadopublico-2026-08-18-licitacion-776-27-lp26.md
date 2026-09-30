@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Licitación 776-27-LP26: Servicio de producción general para la Presidencia"
 autor: Presidencia de la República
 fecha: 2026-08-18

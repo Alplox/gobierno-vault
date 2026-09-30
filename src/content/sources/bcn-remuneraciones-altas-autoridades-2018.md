@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Remuneraciones de las principales autoridades y funcionarios del país
   (2018): el Presidente de la República recibe 35 ingresos mínimos mensuales
   (grado más alto de la EUS)"

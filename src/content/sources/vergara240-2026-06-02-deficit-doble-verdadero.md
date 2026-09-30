@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Verdadero, el déficit estructural de 2025 fue más del doble de lo
   comprometido
 autor: Redacción VerificaUDP

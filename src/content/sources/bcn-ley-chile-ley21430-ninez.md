@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: BCN (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Ley 21.430 sobre Garantías y Protección Integral de los Derechos de la
   Niñez y Adolescencia
 autor: Biblioteca del Congreso Nacional

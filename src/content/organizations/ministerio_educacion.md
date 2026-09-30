@@ -1,6 +1,6 @@
 ---
-nombre: Ministerio de Educacion
+nombre: Ministerio de Educación
 tipo: ministerio
 pais: Chile
-aliases: ["Mineduc"]
+aliases: ["Mineduc", "Ministerio de Educacion"]
 ---

@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Homenaje a la memoria del Capitan de Navio Arturo Araya Peeters"
 autor: "Senado"
 fecha: 1973-08-07

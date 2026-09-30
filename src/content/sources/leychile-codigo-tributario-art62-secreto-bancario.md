@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Artículo 62 del Código Tributario: acceso del SII a información bancaria"
 autor: Biblioteca del Congreso Nacional
 fecha: 1974-12-27

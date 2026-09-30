@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Movilh
+medio: Movimiento de Integración y Liberación Homosexual (Movilh)
 titulo: 'Rechazo a Encuentro del Foro Madrid en Chile por promover una agenda internacional contraria a los derechos humanos'
 autor: Comunicaciones
 fecha: 2026-09-02

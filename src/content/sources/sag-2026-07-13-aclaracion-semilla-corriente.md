@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: SAG
+medio: Servicio Agrícola y Ganadero (SAG)
 titulo: Aclaración SAG sobre consulta ciudadana que establece requisitos para la
   comercialización de semilla corriente
 autor: Servicio Agrícola y Ganadero (SAG)

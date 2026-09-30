@@ -1,6 +1,6 @@
 ---
 tipo: oficial
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: Corte Suprema rechaza recurso de nulidad y confirma condena por abuso
   sexual de menores en Placilla
 autor: Poder Judicial de Chile

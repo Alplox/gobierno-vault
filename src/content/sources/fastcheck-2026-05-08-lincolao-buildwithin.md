@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: ¿Ministra y CEO? BuildWithin, la empresa de Ximena Lincolao y las dudas
   sobre su rol en ella
 autor: Benjamín Bravo Yusta

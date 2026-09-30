@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Tribunal Constitucional de Chile
+medio: Tribunal Constitucional
 titulo: "Sentencia Roles N°17.828-26, N°17.829-26 y N°17.832-26 (acumulados) –
   Boletín N°18.216-05: requerimientos de inconstitucionalidad sobre la Ley de
   Reconstrucción Nacional"

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Han aumentado desde el 11 de marzo también las expulsiones
   (veredicto Real)
 autor: Fast Check CL

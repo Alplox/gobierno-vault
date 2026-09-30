@@ -1,6 +1,6 @@
 ---
 tipo: oficial
-medio: Fiscalía de Chile (División de Estudios, Unidad de DDHH)
+medio: Ministerio Público de Chile
 titulo: Informe Estadístico del Estallido Social (18 de octubre de 2019 a 31 de
   marzo de 2020)
 autor: Fiscalía de Chile

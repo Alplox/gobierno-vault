@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: Séptimo TOP de Santiago condena a carabineros por apremios ilegítimos en
   comisaría de Peñalolén
 autor: Poder Judicial de Chile

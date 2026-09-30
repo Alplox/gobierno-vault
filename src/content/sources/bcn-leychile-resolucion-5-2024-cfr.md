@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Resolución N°5 de 2024 de la Comisión para la Fijación de Remuneraciones
   (nuevo sistema de remuneraciones vigente desde marzo 2026)
 autor: Biblioteca del Congreso Nacional

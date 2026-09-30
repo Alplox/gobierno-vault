@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Presidencia de la República
+medio: Presidencia de la República de Chile
 titulo: Presidente de la Republica, Jose Antonio Kast, participa de ceremonia en
   conmemoracion al Dia del Camionero
 autor: ""

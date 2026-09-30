@@ -1,6 +1,6 @@
 ---
 tipo: reportaje
-medio: Londres 38
+medio: Londres 38, espacio de memorias
 titulo: Caso Carlos Astudillo
 autor: Londres 38
 fecha: 2020-01-01

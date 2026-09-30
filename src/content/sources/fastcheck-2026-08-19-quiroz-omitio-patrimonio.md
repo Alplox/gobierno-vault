@@ -1,6 +1,6 @@
 ---
 tipo: investigacion
-medio: Fast Check CL
+medio: Fast Check
 titulo: Ministro Quiroz omitió en su primera declaración de patrimonio una
   sociedad que comparte con un exmilitante del PPD
 autor: Elias Miranda

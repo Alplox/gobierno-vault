@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)
+medio: Ministerio de Justicia y Derechos Humanos
 titulo: "Catastro de Sitios de Memoria y Testimonios: CONAR/FASIC"
 autor: Ministerio de Justicia y Derechos Humanos de Chile
 fecha: 2026-08-03

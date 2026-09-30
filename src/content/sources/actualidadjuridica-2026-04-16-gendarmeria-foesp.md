@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Actualidad Jurídica DOE
+medio: Actualidad Jurídica
 titulo: Ley incorpora a Gendarmería a las Fuerzas de Orden y Seguridad
 autor: Equipo AJ
 fecha: 2026-04-16

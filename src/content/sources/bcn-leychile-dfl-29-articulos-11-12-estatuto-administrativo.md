@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "DFL 29, Estatuto Administrativo, artículos 11 y 12 vigentes"
 autor: Biblioteca del Congreso Nacional
 fecha: 2024-08-01

@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Ficha biográfica Helmuth Martínez Llancapán — Fichas Biográficas de las
   y los Convencionales Constituyentes
 autor: BCN

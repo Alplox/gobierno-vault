@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Son más de 940 mil chilenos buscando trabajo y 1 de cada 4 en la
   informalidad (veredicto Real)
 autor: Fast Check CL

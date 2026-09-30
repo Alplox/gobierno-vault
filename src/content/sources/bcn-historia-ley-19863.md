@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: BCN Historia de la Ley
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Historia de la Ley 19.863 (2003): sobre remuneraciones de autoridades
   de gobierno y cargos críticos de la administración pública, y normas sobre
   gastos reservados"

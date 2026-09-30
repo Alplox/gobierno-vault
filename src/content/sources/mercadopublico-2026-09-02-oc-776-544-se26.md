@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-544-SE26: Suministro de carnes de aves"
 autor: Presidencia de la República
 fecha: 2026-09-02

@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Consejo de Monumentos Nacionales
+medio: Consejo de Monumentos Nacionales (CMN)
 titulo: Archivo de la Fundación de Ayuda Social de las Iglesias Cristianas (FASIC)
 autor: Consejo de Monumentos Nacionales de Chile
 fecha: 2018-01-01

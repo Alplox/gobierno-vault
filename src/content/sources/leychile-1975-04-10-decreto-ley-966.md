@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Decreto Ley N.o 966, modifica estructura de conducción económica"
 autor: Junta de Gobierno de Chile
 fecha: 1975-04-10

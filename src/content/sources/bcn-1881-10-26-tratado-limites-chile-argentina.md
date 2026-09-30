@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Tratado de Límites entre Chile y Argentina de 1881"
 autor: República de Chile y República Argentina
 fecha: 1881-10-26

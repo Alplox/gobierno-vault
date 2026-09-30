@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Constitución Política de la República de Chile (Decreto 100, texto
   refundido 2005)
 autor: BCN LeyChile

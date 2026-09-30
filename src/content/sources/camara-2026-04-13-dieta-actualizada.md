@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: Dieta Parlamentaria año 2026 (Sueldo)
 autor: ""
 fecha: 2026-04-13

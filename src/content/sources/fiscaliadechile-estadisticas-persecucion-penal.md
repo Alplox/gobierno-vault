@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Fiscalía de Chile
+medio: Ministerio Público de Chile
 titulo: Estadísticas del Ministerio Público (persecución penal)
 autor: ""
 fecha: 2026-08-15

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Subrei
+medio: Subsecretaría de Relaciones Económicas Internacionales
 titulo: "Chile y Estados Unidos concretan reunión de alto nivel por aranceles: negociación continuará durante las próximas semanas"
 autor: ""
 fecha: 2026-08-24
