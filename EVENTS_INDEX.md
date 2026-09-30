@@ -799,7 +799,7 @@
 - [2026/07/20260709-1 - Presidencia revela que Kast y Thiel conversaron sobre IA para el Estado, pero rechaza actas y nómina de asistentes](src/content/events/2026/07/20260709-1.md) — 6 fuentes
 - [2026/07/20260710-1 - Empresario de Vitacura persigue, retiene y amenaza de muerte a menores que jugaban 'ring raja': detención y prisión preventiva por sustracción de menores](src/content/events/2026/07/20260710-1.md) — 4 fuentes
 - [2026/07/20260710-2 - Contrapoder revela que Eduardo Macaya Zentilli sigue siendo alguacil del Círculo de Amigos de Carabineros pese a estar condenado por abuso sexual](src/content/events/2026/07/20260710-2.md) — 3 fuentes
-- [2026/07/20260710-3 - Kast lanza el plan 'Modo Empleo': $50 mil millones en subsidios a la contratación y 25.000 cupos Sence con meta de 50.000 puestos hacia octubre](src/content/events/2026/07/20260710-3.md) — 8 fuentes
+- [2026/07/20260710-3 - Kast lanza el plan 'Modo Empleo': $50 mil millones en subsidios a la contratación y 25.000 cupos Sence con meta de 50.000 puestos hacia octubre](src/content/events/2026/07/20260710-3.md) — 9 fuentes
 - [2026/07/20260711-1 - Kast defiende traspaso del alza de bencinas a la ciudadanía por responsabilidad y afirma que 'hoy en todos los países miran lo que hicimos'](src/content/events/2026/07/20260711-1.md) — 5 fuentes
 - [2026/07/20260713-1 - Senapred declara Alerta Temprana Preventiva en RM y Gobierno decreta emergencia preventiva en 10 regiones por sistema frontal](src/content/events/2026/07/20260713-1.md) — 6 fuentes
 - [2026/07/20260714-1 - Proyecto 'Escucha su corazón' condiciona aborto a escuchar latidos fetales y genera debate por acusaciones de tortura](src/content/events/2026/07/20260714-1.md) — 9 fuentes
@@ -1759,7 +1759,7 @@
 - [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
 - [2026/09/20260928-4 - Interpelación al canciller Pérez Mackenna en la Cámara: Venegas pregunta por Judd, el Escudo y Magallanes y el ministro cierra con que solo el Presidente puede pedirle la renuncia](src/content/events/2026/09/20260928-4.md) — 12 fuentes
-- [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 19 fuentes
+- [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 25 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 15 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 - [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 24 fuentes
