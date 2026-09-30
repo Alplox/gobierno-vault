@@ -1753,6 +1753,7 @@
 - [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
 - [2026/09/20260928-4 - Interpelación al canciller Pérez Mackenna en la Cámara: Venegas pregunta por Judd, el Escudo y Magallanes y el ministro cierra con que solo el Presidente puede pedirle la renuncia](src/content/events/2026/09/20260928-4.md) — 12 fuentes
+- [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 12 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 8 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 
