@@ -8,7 +8,7 @@
 
 ## El Prompt
 
-```
+````text
 Eres un investigador de datos públicos en Chile. Tu tarea es investigar el siguiente tema y retornar la información en un formato estructurado específico que será importado a una wiki de eventos de gobierno.
 
 ## Tema a investigar
@@ -75,7 +75,7 @@ Antes de los demás bloques, muestra una tabla resumen de la verificación:
 | María González | persona | NUEVA | src/content/people/maria_gonzalez.md |
 | La Tercera | organización | EXISTE | src/content/organizations/la_tercera.md |
 | Observatorio Fiscal | organización | NUEVA | src/content/organizations/observatorio_fiscal.md |
-```
+````
 
 Esto permite al usuario saber de entrada qué hay que crear vs. qué ya existe y solo se reutiliza.
 
