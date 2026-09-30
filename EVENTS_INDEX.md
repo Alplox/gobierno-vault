@@ -645,6 +645,7 @@
 - [2026/04/20260417-4 - Reunión clave entre Gobierno y camioneros: 15 días del Ejecutivo, 20 del gremio, y el paro de Valparaíso suspendido horas después de anunciarse](src/content/events/2026/04/20260417-4.md) — 11 fuentes
 - [2026/04/20260418-1 - Revelan contrato de Cristián Valenzuela: hasta $8,9 millones mensuales como asesor de Kast](src/content/events/2026/04/20260418-1.md) — 5 fuentes
 - [2026/04/20260420-1 - El 19 y 20 de abril: Valparaíso suspende el paro del lunes 20, el Biobío no descarta sumarse y la CNDC se declara en alerta total](src/content/events/2026/04/20260420-1.md) — 10 fuentes
+- [2026/04/20260420-2 - Junta de accionistas de Codelco: Quiroz y Mas emplazan a Pacheco por falta de autocrítica y reabren debate sobre deuda y privatización](src/content/events/2026/04/20260420-2.md) — 8 fuentes
 - [2026/04/20260421-1 - Seremi de Trabajo de Coquimbo Viviana Torres renuncia por no cumplir requisito de 10 semestres](src/content/events/2026/04/20260421-1.md) — 3 fuentes
 - [2026/04/20260422-1 - Kast ingresa al Congreso su megarreforma económica de 203 páginas](src/content/events/2026/04/20260422-1.md) — 7 fuentes
 - [2026/04/20260422-2 - Correo interno de la directora del Programa de DDHH revela instrucción de no alegar en causas de lesa humanidad y contradice al ministro Rabat](src/content/events/2026/04/20260422-2.md) — 3 fuentes
