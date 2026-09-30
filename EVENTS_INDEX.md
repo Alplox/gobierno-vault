@@ -577,7 +577,7 @@
 - [2026/03/20260317-1 - Senador Macaya comparte imagen generada con IA que muestra avances falsos de la zanja fronteriza](src/content/events/2026/03/20260317-1.md) — 5 fuentes
 - [2026/03/20260317-2 - Kast explica frase 'Chile se cae a pedazos' con graffitis, incidentes en aeropuerto y déficit educativo](src/content/events/2026/03/20260317-2.md) — 1 fuente
 - [2026/03/20260317-3 - Camioneros piden definiciones sobre el MEPCO ante Hacienda: la CNTC se reúne con Quiroz y la CNDC advierte un estrés de precios en la cadena logística](src/content/events/2026/03/20260317-3.md) — 6 fuentes
-- [2026/03/20260318-1 - Gobierno de Kast impulsa un 'reseteo': recortes a ministerios, retiro de 43 decretos de Medio Ambiente y de la negociación ramal](src/content/events/2026/03/20260318-1.md) — 3 fuentes
+- [2026/03/20260318-1 - Gobierno de Kast impulsa un 'reseteo': recortes a ministerios, retiro de 43 decretos de Medio Ambiente y de la negociación ramal](src/content/events/2026/03/20260318-1.md) — 6 fuentes
 - [2026/03/20260319-1 - Gobierno envia urgencia legislativa para proyecto que castiga migracion irregular](src/content/events/2026/03/20260319-1.md) — 3 fuentes
 - [2026/03/20260319-2 - Gobierno pide la renuncia al superintendente de Educación Superior en medio de la formulación de cargos contra la USS](src/content/events/2026/03/20260319-2.md) — 11 fuentes
 - [2026/03/20260320-1 - Gobierno decreta alerta sanitaria nacional por cancer](src/content/events/2026/03/20260320-1.md) — 7 fuentes
@@ -598,6 +598,7 @@
 - [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 6 fuentes
 - [2026/03/20260326-4 - Seis alcaldes firman convenio de compra conjunta de 500 mil vales de gas para enfrentar el alza de combustibles](src/content/events/2026/03/20260326-4.md) — 6 fuentes
 - [2026/03/20260326-5 - Entra en vigencia el bencinazo: la bencina de 93 sube $372,2 y el diésel $580,3 por litro](src/content/events/2026/03/20260326-5.md) — 5 fuentes
+- [2026/03/20260326-6 - Kast promulga la Ley de Emergencia Energética con Quiroz, De Grange y Rincón y llama a no protestar en el transporte público](src/content/events/2026/03/20260326-6.md) — 7 fuentes
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
 - [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
@@ -666,6 +667,7 @@
 - [2026/04/20260430-4 - Amnistía Internacional lanza campaña 'No al indulto' y acción urgente contra los indultos a 14 exuniformados condenados por el estallido](src/content/events/2026/04/20260430-4.md) — 7 fuentes
 - [2026/05/20260501-1 - Renuncia seremi de Bienes Nacionales de Tarapacá tras 34 días](src/content/events/2026/05/20260501-1.md) — 2 fuentes
 - [2026/05/20260501-2 - ANCI investiga presunta filtración de datos que afectaría a TGR, Registro Civil y operadores de telecomunicaciones (caso Rutify)](src/content/events/2026/05/20260501-2.md) — 12 fuentes
+- [2026/05/20260503-1 - Quiroz defiende en Estado Nacional el oficio de Hacienda: niega recorte a la PGU y cifra el ajuste por decreto en $1,7 billones](src/content/events/2026/05/20260503-1.md) — 7 fuentes
 - [2026/05/20260504-1 - Diputados activan ofensiva para indagar nexo de Kast con red de Orbán investigada en Hungría](src/content/events/2026/05/20260504-1.md) — 4 fuentes
 - [2026/05/20260505-1 - CFA presenta dura crítica a la megarreforma y detecta nueve riesgos directos para las arcas fiscales](src/content/events/2026/05/20260505-1.md) — 1 fuente
 - [2026/05/20260506-1 - Renuncia seremi de Bienes Nacionales de Antofagasta](src/content/events/2026/05/20260506-1.md) — 2 fuentes
@@ -1760,7 +1762,7 @@
 - [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 12 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 15 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
-- [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 17 fuentes
+- [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 23 fuentes
 
 ## 2025
 
