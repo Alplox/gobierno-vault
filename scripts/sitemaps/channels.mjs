@@ -89,4 +89,25 @@ export const CHANNELS = {
     channelId: 'UClsjSNCR-0KAFw0v5uVMCHQ',
     tab: 'videos',
   },
+  yt_elmostrador: {
+    nombre: 'El Mostrador (YouTube)',
+    tipo: 'youtube',
+    channel: '@ElMostradorvodcast', // "El Mostrador" (nota: el handle dice "vodcast"; verificado por channel_id)
+    channelId: 'UCAOZvFm0xSBcom35r6-mcEA',
+    tab: 'videos',
+  },
+  yt_adnradio: {
+    nombre: 'ADN Radio (YouTube)',
+    tipo: 'youtube',
+    channel: '@adnradio', // "ADN Chile" (verificado por channel_id)
+    channelId: 'UCczkrFICr0xEgDsk51zZojA',
+    tab: 'videos',
+  },
+  yt_viax: {
+    nombre: 'Viax (YouTube)',
+    tipo: 'youtube',
+    channel: '@Viax', // el handle se canonicalizó a @Viax (verificado por channel_id)
+    channelId: 'UCEAfJxzcEzDhDi5-bm81KJg',
+    tab: 'videos',
+  },
 };

@@ -485,14 +485,17 @@
 | Slug | Nombre | Canal | Tab | Videos | Años |
 | --- | --- | --- | --- | --- | --- |
 | `yt_24horas` | 24 Horas (YouTube) | `@24Horas_TVNChile` | videos | — | — |
+| `yt_adnradio` | ADN Radio (YouTube) | `@adnradio` | videos | 14.882 | 14 |
 | `yt_biobio` | Bio Bío (YouTube) | `@BioBioChile` | videos | 23.580 | 10 |
 | `yt_boric` | Gabriel Boric (YouTube) | `@gabrielboricpresidente` | videos | 469 | 12 |
 | `yt_df` | Diario Financiero (YouTube) | `@DiarioFinancieroTV` | videos | 17.787 | 15 |
+| `yt_elmostrador` | El Mostrador (YouTube) | `@ElMostradorvodcast` | videos | 6.302 | 15 |
 | `yt_gobierno` | Gobierno de Chile (YouTube) | `@GobiernoDeChile` | videos | 2.100 | 17 |
 | `yt_kast` | José Antonio Kast (YouTube) | `@JoséAntonioKastOficial` | videos | 746 | 9 |
 | `yt_meganoticias` | Meganoticias (YouTube) | `@Meganoticiasoficial` | videos | — | — |
 | `yt_pinera` | Sebastián Piñera (YouTube) | `@sebastianpinera` | videos | 440 | 9 |
 | `yt_t13` | Teletrece (YouTube) | `@T13_cl` | videos | 62.812 | 13 |
 | `yt_theclinic` | The Clinic (YouTube) | `@theclinic_cl` | videos | 1.973 | 10 |
+| `yt_viax` | Viax (YouTube) | `@Viax` | videos | 8 | 1 |
 
 Nota: los JSONL no se commitean (regenerables); el estado vive en `_manifest.json`.
