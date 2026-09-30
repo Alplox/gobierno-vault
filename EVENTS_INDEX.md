@@ -1763,6 +1763,7 @@
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 15 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 - [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 23 fuentes
+- [2026/09/20260929-4 - Confusam inicia paro nacional de 48 horas por el per cápita de la atención primaria y marcha en Valparaíso ante el ingreso del Presupuesto 2027](src/content/events/2026/09/20260929-4.md) — 10 fuentes
 
 ## 2025
 
