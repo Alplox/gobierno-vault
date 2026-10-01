@@ -100,7 +100,6 @@ for (const o of Object.values(orgsData)) {
 // avisa con ⚠ si una entrada ya coincide con una org). Los medios de prensa
 // nuevos deben registrarse con tipo medio_comunicacion (o red_social, etc.).
 const WHITELIST_MEDIOS_LIST = [
-  'Voto Visible',
   'Gobierno de Argentina',
   'Gobierno de Reino Unido',
   'Gobierno de Hungría',
