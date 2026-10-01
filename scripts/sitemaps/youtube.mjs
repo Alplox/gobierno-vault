@@ -24,6 +24,10 @@
  *   pnpm run sitemaps-sync -- yt_t13 --playlist-end 200  # prueba acotada
  *   pnpm run sitemaps-sync -- yt_t13 --exact 50       # fija fecha real (50 oldest)
  *   pnpm run sitemaps-sync -- yt_t13 --exact-id a1b2c3,d4e5f6  # videos puntuales
+ *
+ * Tabs: `conf.tab` acepta string o array (ej. ['videos','streams']). /streams y
+ * /shorts suelen traer fecha con `approximate_date`, pero si alguna entrada
+ * queda sin ella se rescata con fetch por video (solo en sync completo).
  */
 
 import { spawnSync } from 'node:child_process';
@@ -35,8 +39,16 @@ export function isYoutubeConf(conf) {
   return conf?.tipo === 'youtube';
 }
 
-export function channelUrl(conf) {
-  return `https://www.youtube.com/${conf.channel}/${conf.tab || 'videos'}`;
+// Tabs a recorrer. `tab` acepta string o array; por defecto solo /videos.
+// Ojo: /streams y /shorts NO traen fecha en --flat-playlist (timestamp=null),
+// por eso necesitan el fetch individual de fechas (ver fetchExactDates).
+export function channelTabs(conf) {
+  const t = conf.tab ?? 'videos';
+  return (Array.isArray(t) ? t : [t]).filter(Boolean);
+}
+
+export function channelUrl(conf, tab = 'videos') {
+  return `https://www.youtube.com/${conf.channel}/${tab}`;
 }
 
 function log(prefix, text) {
@@ -158,7 +170,44 @@ function fetchTab(url, { playlistEnd = 0, extractorArgs = [] } = {}) {
   }
 }
 
-export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace = false } = {}) {
+// ---------------------------------------------------------------------------
+// Fechas que el tab no trae: /streams y /shorts devuelven timestamp=null en
+// --flat-playlist, así que sin esto quedarían fuera del catálogo entero.
+// Se resuelve con un fetch por video (~1.25 s c/u) en lotes, reutilizando el
+// mismo --print que usa exactifyDates. Chunked para no pasar 5K URLs en argv.
+// ---------------------------------------------------------------------------
+function fetchExactDates(ids) {
+  const out = new Map();
+  const CHUNK = 100;
+  for (let i = 0; i < ids.length; i += CHUNK) {
+    const chunk = ids.slice(i, i + CHUNK);
+    const r = spawnSync(
+      'yt-dlp',
+      ['--skip-download', '--no-warnings', '--ignore-errors', '--print', '%(id)s|%(upload_date)s|%(duration)s|%(view_count)s', ...chunk.map(watchUrl)],
+      { encoding: 'utf8', timeout: Math.max(120000, chunk.length * 15000), maxBuffer: 16 * 1024 * 1024 }
+    );
+    const combined = `${r.stdout || ''}\n${r.stderr || ''}\n${r.error?.message || ''}`;
+    if (botBlocked(combined)) {
+      logWarn('YouTube bloqueó el fetch de fechas (anti-bot/429); el resto del tab se conserva.');
+      break;
+    }
+    for (const line of (r.stdout || '').split('\n')) {
+      const m = line.trim().match(/^([A-Za-z0-9_-]{6,})\|(\d{8}|NA)\|([\d.]+|NA)\|(\d+|NA)$/);
+      if (!m) continue;
+      const fecha = ymd(m[2] === 'NA' ? null : m[2]);
+      if (!fecha) continue;
+      const dur = m[3] === 'NA' ? null : Number(m[3]);
+      const views = m[4] === 'NA' ? null : Number(m[4]);
+      out.set(m[1], { fecha, dur, views });
+    }
+    if (chunk.length > 1) {
+      logInfo(`   └ fechasYt: ${Math.min(i + CHUNK, ids.length)}/${ids.length}`);
+    }
+  }
+  return out;
+}
+
+export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace = false, dateFetch = true } = {}) {
   if (!conf?.channel) {
     logErr(`${medio}: config youtube sin 'channel' (handle, ej. @T13_cl).`);
     return { medio, nombre: conf?.nombre ?? medio, urls: null, years: null, failed: 1, complete: false };
@@ -170,35 +219,40 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
     logErr(`${conf.nombre}: ${err.message}`);
     return { medio, nombre: conf.nombre, urls: null, years: null, failed: 1, complete: false };
   }
-  const url = channelUrl(conf);
+  const tabs = channelTabs(conf);
   logInfo(`=== Sincronizando ${conf.nombre} (${medio}) [yt-dlp ${version}] ===`);
-  logInfo(`canal: ${url}${playlistEnd > 0 ? ` (primeros ${playlistEnd})` : ''}`);
+  logInfo(`canal: https://www.youtube.com/${conf.channel}/${tabs.join('+')}${playlistEnd > 0 ? ` (primeros ${playlistEnd})` : ''}`);
 
-  // Doble pasada: con lang=es el tab trae titulos originales pero SIN fechas
-  // (las relativas vienen en espanol y approximate_date no las parsea); sin lang
-  // trae fechas pero titulos auto-traducidos al ingles. Join por id.
-  const pass1 = fetchTab(url, { playlistEnd, extractorArgs: ['youtubetab:approximate_date'] });
-  if (pass1.error) {
-    // Guarda anti-bloqueo: abortar sin escribir nada, nunca un parcial silencioso.
-    logErr(conf.nombre + ': ' + pass1.error + '. Catalogo intacto; reintentar mas tarde.');
-    return { medio, nombre: conf.nombre, urls: null, years: null, failed: 1, complete: false };
-  }
-  const pass2 = fetchTab(url, { playlistEnd, extractorArgs: ['youtube:lang=es'] });
+  // Doble pasada por tab: con lang=es el tab trae titulos originales pero SIN
+  // fechas (las relativas vienen en espanol y approximate_date no las parsea);
+  // sin lang trae fechas pero titulos auto-traducidos al ingles. Join por id.
+  const entries = [];
   const titlesEs = new Map();
-  if (pass2.error) {
-    logWarn(conf.nombre + ': pasada de titulos en espanol fallo (' + pass2.error + '); se usan los del tab por defecto.');
-  } else {
-    for (const e of pass2.entries) if (e && e.id && e.title) titlesEs.set(e.id, String(e.title));
-  }
-  const entries = pass1.entries;
   let titlesFallback = 0;
+  for (const tab of tabs) {
+    const url = channelUrl(conf, tab);
+    const pass1 = fetchTab(url, { playlistEnd, extractorArgs: ['youtubetab:approximate_date'] });
+    if (pass1.error) {
+      // Guarda anti-bloqueo: abortar sin escribir nada, nunca un parcial silencioso.
+      logErr(`${conf.nombre} [/${tab}]: ${pass1.error}. Catalogo intacto; reintentar mas tarde.`);
+      return { medio, nombre: conf.nombre, urls: null, years: null, failed: 1, complete: false };
+    }
+    const pass2 = fetchTab(url, { playlistEnd, extractorArgs: ['youtube:lang=es'] });
+    if (pass2.error) {
+      logWarn(conf.nombre + ` [/${tab}]: pasada de titulos en espanol fallo (${pass2.error}); se usan los del tab por defecto.`);
+    } else {
+      for (const e of pass2.entries) if (e && e.id && e.title) titlesEs.set(e.id, String(e.title));
+    }
+    logInfo(`yt-dlp: ${pass1.entries.length} video(s) en /${tab}`);
+    // _tab se usa para el log y para saber si un id ya venía de otro tab.
+    for (const e of pass1.entries) if (e) entries.push({ ...e, _tab: tab });
+  }
   if (entries.length === 0) {
     // Un canal con contenido nunca devuelve 0: tratarlo como fallo, no como
     // catálogo vacío (un merge con 0 no borraría, pero el run sería engañoso).
     logErr(`${conf.nombre}: yt-dlp devolvió 0 videos (¿bloqueo parcial? ultima_sync no avanza).`);
     return { medio, nombre: conf.nombre, urls: null, years: null, failed: 1, complete: false };
   }
-  logInfo(`yt-dlp: ${entries.length} video(s) en el tab`);
 
   const dir = catalogDir(medio);
   mkdirSync(dir, { recursive: true });
@@ -207,25 +261,44 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
   let upgraded = 0;
   let kept = 0;
   let skipped = 0;
+  let rescued = 0;
   const dirty = new Set();
+
+  // Rescate de fechas para tabs que no las traen (/streams, /shorts): se pide
+  // el dato real por video solo para los que quedaron sin fecha, nunca a todo
+  // el tab. Con --playlist-end es una prueba: no se paga el coste.
+  const sinFecha = entries.filter((e) => e?.id && !entryDate(e));
+  const fechasYt = new Map();
+  if (sinFecha.length > 0) {
+    if (dateFetch && playlistEnd === 0) {
+      logInfo(`Fechas ausentes en /${[...new Set(sinFecha.map((e) => e._tab))].join(',/')}: rescato ${sinFecha.length} con fetch por video (~1.25 s c/u).`);
+      for (const [id, info] of fetchExactDates(sinFecha.map((e) => e.id))) fechasYt.set(id, info);
+    } else {
+      logWarn(`${sinFecha.length} video(s) sin fecha (${dateFetch ? 'omitido: --playlist-end' : 'omitido: --no-date-fetch'}).`);
+    }
+  }
 
   for (const e of entries) {
     if (!e?.id) { skipped++; continue; }
-    const fecha = entryDate(e);
-    // Sin fecha no hay año donde archivar (pasa en /shorts sin approximate_date):
-    // se salta y se cuenta, no se inventa.
+    const rescatada = fechasYt.get(e.id);
+    // Sin fecha no hay año donde archivar; el rescate la resuelve cuando el tab
+    // no la trae. Lo que siga sin fecha se salta y se cuenta, no se inventa.
+    const fecha = entryDate(e) ?? rescatada?.fecha ?? null;
     if (!fecha) { skipped++; continue; }
+    // Fecha del rescate = real, no estimación de approximate_date.
+    const exacto = Boolean(rescatada) && !entryDate(e);
     const u = watchUrl(e.id);
-    const entry = { u, d: fecha, s: 'yt' };
+    const entry = { u, d: fecha, s: exacto ? 'yt-exact' : 'yt' };
     // Título en español de la 2ª pasada; si el id no vino (el tab se movió
     // entre pasadas), fallback al título del tab por defecto (puede ser EN).
     const tEs = titlesEs.get(e.id);
     if (tEs) entry.t = tEs;
     else if (e.title) { entry.t = String(e.title); titlesFallback++; }
-    const dur = Number(e.duration);
+    const dur = Number(e.duration) || Number(rescatada?.dur);
     if (Number.isFinite(dur) && dur > 0) entry.dur = Math.round(dur);
-    const views = Number(e.view_count);
+    const views = Number(e.view_count) || Number(rescatada?.views);
     if (Number.isFinite(views) && views >= 0) entry.views = views;
+    if (exacto) rescued++;
     const year = fecha.slice(0, 4);
     const map = years[year] ??= new Map();
     const prev = map.get(u);
@@ -255,7 +328,7 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
 
   const total = Object.values(years).reduce((acc, m) => acc + m.size, 0);
   const truncated = playlistEnd > 0;
-  logOk(`${conf.nombre}: ${total} videos totales (+${added} nuevos, ${upgraded} mejorados, ${kept} sin cambios${skipped ? `, ${skipped} sin fecha omitidos` : ''}${titlesFallback ? `, ${titlesFallback} con titulo EN (fallback)` : ''})`);
+  logOk(`${conf.nombre}: ${total} videos totales (+${added} nuevos, ${upgraded} mejorados, ${kept} sin cambios${rescued ? `, ${rescued} con fecha rescatada` : ''}${skipped ? `, ${skipped} sin fecha omitidos` : ''}${titlesFallback ? `, ${titlesFallback} con titulo EN (fallback)` : ''})`);
   if (truncated) logWarn(`   └ --playlist-end ${playlistEnd}: recorrido acotado; ultima_sync no avanza.`);
   return { medio, nombre: conf.nombre, urls: total, added, upgraded, kept, fromCache: 0, failed: 0, complete: !truncated, years: Object.keys(years).length };
 }
@@ -267,6 +340,7 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
 // ---------------------------------------------------------------------------
 export async function exactifyDates(medio, conf, { count = 0, ids = [] } = {}) {
   const dir = catalogDir(medio);
+  const years = loadExistingJsonl(dir);
   const byUrl = new Map(); // u → { entry, year }
   for (const [year, map] of Object.entries(years)) {
     for (const [u, e] of map) byUrl.set(u, { entry: e, year });

@@ -422,9 +422,13 @@ yt_t13: {
   tipo: 'youtube',  // sync.mjs delega en youtube.mjs; mediaHosts() los excluye
   channel: '@T13_cl',  // handle real (NO @teletrece: sin tab de videos; NO @t13: 404)
   channelId: 'UCsRnhjcUCR78Q3Ud6OXCTNg',  // cacheado
-  tab: 'videos',  // videos | streams | shorts (shorts sin fecha: opt-in, se omiten)
+  tab: 'videos',  // string o array: 'videos' | 'streams' | 'shorts'
 },
 ```
+
+`tab` acepta **array** para recorrer varios: `tab: ['videos', 'streams']` (el caso de
+`@Presidencia_cl`, donde `/videos` tiene 11 y `/streams` 186). Cada tab se sincroniza
+en secuencia con la doble pasada habitual.
 
 Comandos (mismo `sitemaps-sync`, flags propios):
 
@@ -433,6 +437,7 @@ pnpm run sitemaps-sync -- yt_t13                    # sync completo (merge, nunc
 pnpm run sitemaps-sync -- yt_t13 --playlist-end 200 # prueba acotada (no avanza ultima_sync)
 pnpm run sitemaps-sync -- yt_t13 --exact 50         # fecha real de los 50 más antiguos
 pnpm run sitemaps-sync -- yt_t13 --exact-id a1b2c3,d4e5f6  # videos puntuales a citar
+pnpm run sitemaps-sync -- yt_t13 --no-date-fetch          # no rescata fechas faltantes
 ```
 
 `pnpm run sitemaps-resync` los salta (refresh bajo demanda, no diario), y
@@ -445,6 +450,17 @@ Marcadores de fecha: `s:"yt"` = estimada del tab, `s:"yt-exact"` = real verifica
   `youtubetab:approximate_date`): exacta en lo reciente, error creciente en profundidad
   (1 día a 20 videos, 5 a 100, 11 a 500, 28 a 2.500). Para citar un video viejo, `--exact`
   primero (~1.25 s por video).
+- **Probe siempre con el mismo extractor-arg del sync.** Sin
+  `youtubetab:approximate_date`, `/streams` devuelve `timestamp: null` y parece un tab
+  sin fecha; con él, trae fecha. Antes de concluir "este tab no se puede indexar",
+  replicar el comando real: `yt-dlp --flat-playlist --extractor-args
+  "youtubetab:approximate_date" --playlist-end 2 -J <url>`.
+- **Rescate de fechas**: si aun así quedan entradas sin fecha tras la doble pasada
+  (tabs raros, shorts, estimaciones que no parsean), el sync las recupera con un fetch
+  por video (`--print '%(id)s|%(upload_date)s|...'`, lotes de 100) y las marca
+  `s:"yt-exact"` porque la fecha ya es real. Cuesta ~1.25 s por video, así que solo
+  corre en un sync completo y solo sobre los que faltaban; `--playlist-end` y
+  `--no-date-fetch` lo saltan.
 - **Sin `youtube:lang=es` los títulos salen auto-traducidos al inglés** y el `rg` en
   español no matchea. Pero con `lang=es` el tab pierde las fechas (las relativas vienen en
   español y no se parsean): por eso el sync hace doble pasada (fechas + títulos, join por

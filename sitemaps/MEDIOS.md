@@ -5,7 +5,7 @@
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 | --- | --- | --- | --- | --- | --- |
-| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 190.378 | 2 |
+| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 190.527 | 2 |
 | `abif` | ABIF | `www.abif.cl/robots.txt` | includeRe | 312 | 3 |
 | `acera` | ACERA | `acera.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.647 | 8 |
 | `aconcaguadigital` | Aconcagua Digital | `aconcaguadigital.cl/wp-sitemap.xml` | includeRe | 732 | 4 |
@@ -68,7 +68,7 @@
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
 | `clave9` | Clave 9 | `clave9.cl/sitemap_index.xml` | articleOnly (Yoast) | 13.125 | 10 |
 | `clgmedios` | CLG Medios | `clgmedios.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.650 | 2 |
-| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 228.161 | 16 |
+| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 228.293 | 16 |
 | `coaniquem` | Coaniquem | `coaniquem.cl/wp-sitemap.xml` | includeRe | 81 | 7 |
 | `colegiodeenfermeras` | Colegio de Enfermeras | `colegiodeenfermeras.cl/wp-sitemap.xml` | includeRe | 1.491 | 9 |
 | `colegiodeprofesores` | Colegio de Profesores | `www.colegiodeprofesores.cl/wp-sitemap.xml` | includeRe | 6.123 | 11 |
@@ -154,7 +154,7 @@
 | `elcontraste` | El Contraste | `elcontraste.cl/sitemap_index.xml` | articleOnly (Yoast) | 29.116 | 8 |
 | `elcoquimbano` | El Coquimbano | `www.elcoquimbano.cl/wp-sitemap.xml` | includeRe | 4.877 | 7 |
 | `eldefinido` | El Definido | `eldefinido.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
-| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 279 | 1 |
+| `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 361 | 1 |
 | `eldiariodelaaraucania` | El Diario de La Araucanía | `eldiariodelaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.863 | 3 |
 | `eldiariodesantiago` | El Diario de Santiago | `eldiariodesantiago.cl/wp-sitemap.xml` | includeRe | 23.244 | 6 |
 | `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 252.487 | 17 |
@@ -241,7 +241,7 @@
 | `iguales` | Fundación Iguales | `iguales.cl/wp-sitemap.xml` | includeRe | 2.109 | 16 |
 | `infinita` | Radio Infinita | `www.infinita.cl/sitemap.xml` | — | 100 | 1 |
 | `infodefensa` | Infodefensa | `www.infodefensa.com/sitemap/lastarticles` | — | 100 | 1 |
-| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 11.023 | 1 |
+| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 11.048 | 1 |
 | `informaalminuto` | Informa Al Minuto | `informaalminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.435 | 6 |
 | `infosalmon` | InfoSalmón | `infosalmon.cl/wp-sitemap.xml` | includeRe | 6.944 | 6 |
 | `infotarapaca` | Info Tarapacá | `infotarapaca.cl/sitemap.xml` | includeRe | 948 | 2 |
@@ -486,14 +486,18 @@
 | --- | --- | --- | --- | --- | --- |
 | `yt_24horas` | 24 Horas (YouTube) | `@24Horas_TVNChile` | videos | — | — |
 | `yt_adnradio` | ADN Radio (YouTube) | `@adnradio` | videos | 14.882 | 14 |
+| `yt_agricultura` | Agricultura TV (YouTube) | `@agriculturatv` | videos | 7.579 | 14 |
 | `yt_biobio` | Bio Bío (YouTube) | `@BioBioChile` | videos | 23.580 | 10 |
 | `yt_boric` | Gabriel Boric (YouTube) | `@gabrielboricpresidente` | videos | 469 | 12 |
+| `yt_chv` | CHV Noticias (YouTube) | `@CHVNoticiasTV` | videos | 41.966 | 13 |
+| `yt_cnnchile` | CNN Chile (YouTube) | `@cnnchile` | videos | 83.651 | 16 |
 | `yt_df` | Diario Financiero (YouTube) | `@DiarioFinancieroTV` | videos | 17.787 | 15 |
 | `yt_elmostrador` | El Mostrador (YouTube) | `@ElMostradorvodcast` | videos | 6.302 | 15 |
 | `yt_gobierno` | Gobierno de Chile (YouTube) | `@GobiernoDeChile` | videos | 2.100 | 17 |
 | `yt_kast` | José Antonio Kast (YouTube) | `@JoséAntonioKastOficial` | videos | 746 | 9 |
 | `yt_meganoticias` | Meganoticias (YouTube) | `@Meganoticiasoficial` | videos | — | — |
 | `yt_pinera` | Sebastián Piñera (YouTube) | `@sebastianpinera` | videos | 440 | 9 |
+| `yt_presidencia` | Presidencia de la República (YouTube) | `@Presidencia_cl` | videos,streams,shorts | 220 | 1 |
 | `yt_t13` | Teletrece (YouTube) | `@T13_cl` | videos | 62.812 | 13 |
 | `yt_theclinic` | The Clinic (YouTube) | `@theclinic_cl` | videos | 1.973 | 10 |
 | `yt_viax` | Viax (YouTube) | `@Viax` | videos | 8 | 1 |

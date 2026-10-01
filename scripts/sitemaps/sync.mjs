@@ -53,6 +53,7 @@
  *                 Marca el run como incompleto (ultima_sync no avanza).
  *   --exact N     Fija la fecha real de los N videos mas antiguos con fecha estimada.
  *   --exact-id A,B  Ids de video puntuales para fecha exacta, separados por coma.
+ *   --no-date-fetch  No rescata entradas sin fecha (el rescate es por video, ~1.25 s c/u).
  * --since/--days se ignoran en canales (el tab es nuevo a viejo y el merge cubre);
  * el resync diario los salta: refresh bajo demanda.
  *
@@ -946,10 +947,10 @@ async function main() {
       process.exit(1);
     }
   }
-  // --playlist-end/--exact/--exact-id solo aplican a canales YouTube.
-  const ytFlags = flags.has('--playlist-end') || flags.has('--exact') || flags.has('--exact-id');
+  // --playlist-end/--exact/--exact-id/--no-date-fetch solo aplican a canales YouTube.
+  const ytFlags = flags.has('--playlist-end') || flags.has('--exact') || flags.has('--exact-id') || flags.has('--no-date-fetch');
   if (ytFlags && targets.some((t) => !isYoutubeConf(REGISTRY[t]))) {
-    logErr('--playlist-end/--exact/--exact-id solo aplican a canales YouTube (tipo: youtube).');
+    logErr('--playlist-end/--exact/--exact-id/--no-date-fetch solo aplican a canales YouTube (tipo: youtube).');
     process.exit(1);
   }
 
@@ -976,7 +977,7 @@ async function main() {
         if (targetSince) {
           logWarn(`${REGISTRY[t].nombre}: --since/--since-last-sync se ignora en canales (el tab es nuevo a viejo y el merge cubre).`);
         }
-        r = await syncCanalYoutube(t, REGISTRY[t], { playlistEnd, replace });
+        r = await syncCanalYoutube(t, REGISTRY[t], { playlistEnd, replace, dateFetch: !flags.has('--no-date-fetch') });
       }
     } else {
       r = await syncMedio(t, REGISTRY[t], { ...opts, since: targetSince });

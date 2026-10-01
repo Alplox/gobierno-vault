@@ -7,7 +7,9 @@
  * Cada entrada define el canal para `scripts/sitemaps/youtube.mjs` (yt-dlp):
  *   channel    → handle (@T13_cl, con @)
  *   channelId  → id del canal (cacheado: evita resolver el handle cada sync)
- *   tab        → 'videos' | 'streams' | 'shorts' (shorts sin fecha → opt-in)
+ *   tab        → 'videos' | 'streams' | 'shorts', o un array de varios.
+ *                streams/shorts no traen fecha en --flat-playlist; el sync la
+ *                rescata con fetch por video (~1.25 s c/u, solo los que falten).
  *
  * El JSONL es el mismo formato que la prensa ({u, d, t, s} + dur/views), así
  * que el mismo `rg -uu -g '*.jsonl'` cubre ambos. `sync.mjs` une MEDIA +
@@ -108,6 +110,36 @@ export const CHANNELS = {
     tipo: 'youtube',
     channel: '@Viax', // el handle se canonicalizó a @Viax (verificado por channel_id)
     channelId: 'UCEAfJxzcEzDhDi5-bm81KJg',
+    tab: 'videos',
+  },
+  yt_presidencia: {
+    nombre: 'Presidencia de la República (YouTube)',
+    tipo: 'youtube',
+    channel: '@Presidencia_cl', // canal oficial (verificado por channel_id)
+    channelId: 'UCTZvq1-aBRTTBzYgKMLhUnQ',
+    // Acepta string o array. /streams y /shorts no traen fecha en
+    // --flat-playlist, pero el sync la rescata con fetch por video (s:yt-exact).
+    tab: ['videos', 'streams', 'shorts'],
+  },
+  yt_cnnchile: {
+    nombre: 'CNN Chile (YouTube)',
+    tipo: 'youtube',
+    channel: '@cnnchile', // handle sin @ en la URL, canonicalizado (verificado por channel_id)
+    channelId: 'UCpOAcjJNAp0Y0fhznRrXIJQ',
+    tab: 'videos',
+  },
+  yt_agricultura: {
+    nombre: 'Agricultura TV (YouTube)',
+    tipo: 'youtube',
+    channel: '@agriculturatv', // (verificado por channel_id)
+    channelId: 'UCBkkqRIsRTbio4W7MwAZiEw',
+    tab: 'videos',
+  },
+  yt_chv: {
+    nombre: 'CHV Noticias (YouTube)',
+    tipo: 'youtube',
+    channel: '@CHVNoticiasTV', // (verificado por channel_id)
+    channelId: 'UCRsUoZYC1ULUspipMRnMhwg',
     tab: 'videos',
   },
 };

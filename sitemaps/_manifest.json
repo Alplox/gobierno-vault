@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-09-30T22:38:45.330Z",
+  "actualizado": "2026-10-01T01:35:08.414Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -75,9 +75,9 @@
     },
     "cnnchile": {
       "nombre": "CNN Chile",
-      "ultima_sync": "2026-09-29T18:20:54.693Z",
-      "articulos": 228161,
-      "nuevos": 0,
+      "ultima_sync": "2026-10-01T00:42:48.269Z",
+      "articulos": 228293,
+      "nuevos": 132,
       "años": 16
     },
     "eldinamo": {
@@ -138,9 +138,9 @@
     },
     "eldesconcierto": {
       "nombre": "El Desconcierto",
-      "ultima_sync": "2026-09-29T18:21:39.332Z",
-      "articulos": 279,
-      "nuevos": 0,
+      "ultima_sync": "2026-10-01T00:42:47.321Z",
+      "articulos": 361,
+      "nuevos": 82,
       "años": 1
     },
     "df": {
@@ -306,7 +306,7 @@
     },
     "elperiodico": {
       "nombre": "El Periódico",
-      "ultima_sync": "2026-09-29T18:23:02.637Z",
+      "ultima_sync": "2026-10-01T00:42:08.700Z",
       "articulos": 1179,
       "nuevos": 0,
       "años": 2
@@ -327,9 +327,9 @@
     },
     "24horas": {
       "nombre": "24 Horas",
-      "ultima_sync": "2026-09-29T18:23:07.291Z",
-      "articulos": 190378,
-      "nuevos": 315,
+      "ultima_sync": "2026-10-01T00:42:46.846Z",
+      "articulos": 190527,
+      "nuevos": 149,
       "años": 2
     },
     "contrapoderchile": {
@@ -348,9 +348,9 @@
     },
     "infogate": {
       "nombre": "Infogate",
-      "ultima_sync": "2026-09-29T18:23:10.864Z",
-      "articulos": 11023,
-      "nuevos": 61,
+      "ultima_sync": "2026-10-01T00:42:44.102Z",
+      "articulos": 11048,
+      "nuevos": 25,
       "años": 1
     },
     "elinformadorchile": {
@@ -3845,6 +3845,34 @@
       "articulos": 8,
       "nuevos": 8,
       "años": 1
+    },
+    "yt_presidencia": {
+      "nombre": "Presidencia de la República (YouTube)",
+      "ultima_sync": "2026-10-01T01:35:08.414Z",
+      "articulos": 220,
+      "nuevos": 23,
+      "años": 1
+    },
+    "yt_cnnchile": {
+      "nombre": "CNN Chile (YouTube)",
+      "ultima_sync": "2026-10-01T01:05:25.114Z",
+      "articulos": 83651,
+      "nuevos": 83651,
+      "años": 16
+    },
+    "yt_agricultura": {
+      "nombre": "Agricultura TV (YouTube)",
+      "ultima_sync": "2026-10-01T01:07:50.144Z",
+      "articulos": 7579,
+      "nuevos": 7579,
+      "años": 14
+    },
+    "yt_chv": {
+      "nombre": "CHV Noticias (YouTube)",
+      "ultima_sync": "2026-10-01T01:23:50.984Z",
+      "articulos": 41966,
+      "nuevos": 41966,
+      "años": 13
     }
   }
 }

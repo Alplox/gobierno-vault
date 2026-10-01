@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 30/9/2026, 19:38:45
-- **Medios registrados:** 549
-- **Artículos indexados:** 11.997.376
-- **Canales de YouTube:** 13 (280.820 videos)
+- **Última sincronización:** 30/9/2026, 22:35:08
+- **Medios registrados:** 553
+- **Artículos indexados:** 12.131.180
+- **Canales de YouTube:** 17 (414.236 videos)
 
 ## Por medio
 
@@ -23,11 +23,11 @@
 | Voz de América | 254.383 |
 | El Dínamo | 252.487 |
 | France 24 | 237.507 |
-| CNN Chile | 228.161 |
+| CNN Chile | 228.293 |
 | Página 7 | 221.593 |
 | The Clinic | 193.229 |
 | El Pingüino | 192.731 |
-| 24 Horas | 190.378 |
+| 24 Horas | 190.527 |
 | IPS Agencia de Noticias | 109.988 |
 | Radio Universidad de Chile | 108.402 |
 | Mediabanco | 107.003 |
@@ -159,8 +159,8 @@
 | Prensa Eventos | 11.612 |
 | La Cuarta | 11.569 |
 | SENDA | 11.049 |
+| Infogate | 11.048 |
 | Radio UdeC | 11.047 |
-| Infogate | 11.023 |
 | Novena Digital | 10.673 |
 | Diario Chile | 10.649 |
 | AmCham Chile | 10.640 |
@@ -404,12 +404,12 @@
 | Contingencia Chile | 384 |
 | Colegio Alemán de Santiago | 375 |
 | Instituto de la Construcción | 363 |
+| El Desconcierto | 361 |
 | SENAPRED | 359 |
 | Diario Aysén | 320 |
 | ABIF | 312 |
 | Fundación Rewilding Chile | 310 |
 | Partido Igualdad | 295 |
-| El Desconcierto | 279 |
 | Redacción | 277 |
 | Fonasa | 270 |
 | El Arrebato | 268 |
@@ -473,15 +473,19 @@
 | Canal | Videos | Años |
 | --- | --- | --- |
 | yt_24horas | 92.278 | 2008–2026 |
+| CNN Chile (YouTube) | 83.651 | 2011–2026 |
 | Teletrece (YouTube) | 62.812 | 2014–2026 |
 | yt_meganoticias | 57.443 | 2017–2026 |
+| CHV Noticias (YouTube) | 41.966 | 2014–2026 |
 | Bio Bío (YouTube) | 23.580 | 2017–2026 |
 | Diario Financiero (YouTube) | 17.787 | 2012–2026 |
 | ADN Radio (YouTube) | 14.882 | 2013–2026 |
+| Agricultura TV (YouTube) | 7579 | 2013–2026 |
 | El Mostrador (YouTube) | 6302 | 2012–2026 |
 | Gobierno de Chile (YouTube) | 2100 | 2010–2026 |
 | The Clinic (YouTube) | 1973 | 2017–2026 |
 | José Antonio Kast (YouTube) | 746 | 2017–2025 |
 | Gabriel Boric (YouTube) | 469 | 2014–2025 |
 | Sebastián Piñera (YouTube) | 440 | 2008–2021 |
+| Presidencia de la República (YouTube) | 220 | 2026 |
 | Viax (YouTube) | 8 | 2006 |
