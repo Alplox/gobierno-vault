@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 30/9/2026, 22:35:08
-- **Medios registrados:** 553
-- **Artículos indexados:** 12.131.180
-- **Canales de YouTube:** 17 (414.236 videos)
+- **Última sincronización:** 30/9/2026, 23:25:18
+- **Medios registrados:** 556
+- **Artículos indexados:** 12.149.235
+- **Canales de YouTube:** 20 (432.291 videos)
 
 ## Por medio
 
@@ -480,8 +480,11 @@
 | Bio Bío (YouTube) | 23.580 | 2017–2026 |
 | Diario Financiero (YouTube) | 17.787 | 2012–2026 |
 | ADN Radio (YouTube) | 14.882 | 2013–2026 |
+| Radio Usach (YouTube) | 7705 | 2012–2026 |
 | Agricultura TV (YouTube) | 7579 | 2013–2026 |
+| Radio Infinita (YouTube) | 6720 | 2023–2026 |
 | El Mostrador (YouTube) | 6302 | 2012–2026 |
+| La Voz de los que Sobran (YouTube) | 3630 | 2020–2026 |
 | Gobierno de Chile (YouTube) | 2100 | 2010–2026 |
 | The Clinic (YouTube) | 1973 | 2017–2026 |
 | José Antonio Kast (YouTube) | 746 | 2017–2025 |

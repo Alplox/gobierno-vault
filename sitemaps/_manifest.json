@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-01T01:35:08.414Z",
+  "actualizado": "2026-10-01T02:25:18.666Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3873,6 +3873,27 @@
       "articulos": 41966,
       "nuevos": 41966,
       "años": 13
+    },
+    "yt_delosquesobran": {
+      "nombre": "La Voz de los que Sobran (YouTube)",
+      "ultima_sync": "2026-10-01T02:21:04.561Z",
+      "articulos": 3630,
+      "nuevos": 3630,
+      "años": 7
+    },
+    "yt_radioinfinita": {
+      "nombre": "Radio Infinita (YouTube)",
+      "ultima_sync": "2026-10-01T02:23:03.716Z",
+      "articulos": 6720,
+      "nuevos": 6720,
+      "años": 4
+    },
+    "yt_radiousach": {
+      "nombre": "Radio Usach (YouTube)",
+      "ultima_sync": "2026-10-01T02:25:18.666Z",
+      "articulos": 7705,
+      "nuevos": 7705,
+      "años": 15
     }
   }
 }

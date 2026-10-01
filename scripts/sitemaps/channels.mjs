@@ -142,4 +142,25 @@ export const CHANNELS = {
     channelId: 'UCRsUoZYC1ULUspipMRnMhwg',
     tab: 'videos',
   },
+  yt_delosquesobran: {
+    nombre: 'La Voz de los que Sobran (YouTube)',
+    tipo: 'youtube',
+    channel: '@delosquesobran', // "La Voz De Los Que Sobran" (verificado por channel_id)
+    channelId: 'UCEnSee5vPeNAm2EFpb_UaRw',
+    tab: 'videos',
+  },
+  yt_radioinfinita: {
+    nombre: 'Radio Infinita (YouTube)',
+    tipo: 'youtube',
+    channel: '@radioinfinitaFM', // "Radio Infinita " (espacio final en el nombre real; verificado por channel_id)
+    channelId: 'UCqRSHnlmSRcHEnr0TjmmKow',
+    tab: 'videos',
+  },
+  yt_radiousach: {
+    nombre: 'Radio Usach (YouTube)',
+    tipo: 'youtube',
+    channel: '@RadioUsachoficial', // "Radio Usach" (verificado por channel_id)
+    channelId: 'UChVNqCo0-9mtYq2QNX-hhrA',
+    tab: 'videos',
+  },
 };

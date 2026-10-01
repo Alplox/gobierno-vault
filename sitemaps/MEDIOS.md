@@ -491,6 +491,7 @@
 | `yt_boric` | Gabriel Boric (YouTube) | `@gabrielboricpresidente` | videos | 469 | 12 |
 | `yt_chv` | CHV Noticias (YouTube) | `@CHVNoticiasTV` | videos | 41.966 | 13 |
 | `yt_cnnchile` | CNN Chile (YouTube) | `@cnnchile` | videos | 83.651 | 16 |
+| `yt_delosquesobran` | La Voz de los que Sobran (YouTube) | `@delosquesobran` | videos | 3.630 | 7 |
 | `yt_df` | Diario Financiero (YouTube) | `@DiarioFinancieroTV` | videos | 17.787 | 15 |
 | `yt_elmostrador` | El Mostrador (YouTube) | `@ElMostradorvodcast` | videos | 6.302 | 15 |
 | `yt_gobierno` | Gobierno de Chile (YouTube) | `@GobiernoDeChile` | videos | 2.100 | 17 |
@@ -498,6 +499,8 @@
 | `yt_meganoticias` | Meganoticias (YouTube) | `@Meganoticiasoficial` | videos | — | — |
 | `yt_pinera` | Sebastián Piñera (YouTube) | `@sebastianpinera` | videos | 440 | 9 |
 | `yt_presidencia` | Presidencia de la República (YouTube) | `@Presidencia_cl` | videos,streams,shorts | 220 | 1 |
+| `yt_radioinfinita` | Radio Infinita (YouTube) | `@radioinfinitaFM` | videos | 6.720 | 4 |
+| `yt_radiousach` | Radio Usach (YouTube) | `@RadioUsachoficial` | videos | 7.705 | 15 |
 | `yt_t13` | Teletrece (YouTube) | `@T13_cl` | videos | 62.812 | 13 |
 | `yt_theclinic` | The Clinic (YouTube) | `@theclinic_cl` | videos | 1.973 | 10 |
 | `yt_viax` | Viax (YouTube) | `@Viax` | videos | 8 | 1 |
