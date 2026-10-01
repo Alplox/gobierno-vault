@@ -870,6 +870,7 @@
 - [2026/07/20260724-9 - Kast anuncia reestructuración ministerial, pero la comisión de expertos para fusionar ministerios sigue sin constituirse 80 días después](src/content/events/2026/07/20260724-9.md) — 4 fuentes
 - [2026/07/20260725-1 - PDI detiene a Nelson Haase, último prófugo por asesinato de Víctor Jara y Littré Quiroga](src/content/events/2026/07/20260725-1.md) — 3 fuentes
 - [2026/07/20260725-2 - Detención del ex seremi de Salud de Magallanes por abuso sexual a menor](src/content/events/2026/07/20260725-2.md) — 18 fuentes
+- [2026/07/20260725-3 - Detienen en Cauquenes al presunto autor de amenazas con coronas fúnebres contra Gendarmería y queda en prisión preventiva por 60 días](src/content/events/2026/07/20260725-3.md) — 7 fuentes
 - [2026/07/20260726-1 - Repudio por video de asesor del PNL con burlas a niños autistas y alusiones a pedofilia](src/content/events/2026/07/20260726-1.md) — 19 fuentes
 - [2026/07/20260726-2 - Encuesta Criteria: desaprobación de Kast sube a 54% y proyecto 'Escucha tu corazón' tiene rechazo transversal](src/content/events/2026/07/20260726-2.md) — 3 fuentes
 - [2026/07/20260726-3 - Encuesta Cadem: pesimismo alcanza nivel más alto desde 2015 y desaprobación de Kast sube a 59%](src/content/events/2026/07/20260726-3.md) — 4 fuentes
@@ -1781,7 +1782,7 @@
 - [2026/09/20260930-3 - Dos seremis de la Región Metropolitana renuncian con horas de diferencia y las salidas llegan a 41 seremis y 51 autoridades](src/content/events/2026/09/20260930-3.md) — 18 fuentes
 - [2026/09/20260930-4 - Kast confirma al oficialismo alza de 1,5% para el Presupuesto 2027 y cadena nacional, y se abre el debate por la base de cálculo](src/content/events/2026/09/20260930-4.md) — 15 fuentes
 - [2026/09/20260930-5 - Kast reúne en Cerro Castillo a presidentes de comisiones y condiciona el retiro de la reforma de seguridad a un texto alternativo](src/content/events/2026/09/20260930-5.md) — 12 fuentes
-- [2026/09/20260930-6 - Operación Apocalipsis II: la PDI detiene en cuatro regiones a Álex Vega, exdirigente de la ANFUP, y a otras dos personas por corrupción en Santiago 1](src/content/events/2026/09/20260930-6.md) — 39 fuentes
+- [2026/09/20260930-6 - Operación Apocalipsis II: la PDI detiene en cuatro regiones a Álex Vega, exdirigente de la ANFUP, y a otras dos personas por corrupción en Santiago 1](src/content/events/2026/09/20260930-6.md) — 42 fuentes
 - [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 15 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 13 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
@@ -1789,6 +1790,8 @@
 - [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 43 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 5 fuentes
+- [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
+- [2026/10/20261001-6 - Detienen a cuatro carabineros de Rancagua por red de receptación y blanqueo de vehículos robados: quedan desvinculados y la Fiscalía pide ampliar la detención](src/content/events/2026/10/20261001-6.md) — 6 fuentes
 
 ## 2025
 
