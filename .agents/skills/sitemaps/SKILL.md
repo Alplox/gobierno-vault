@@ -466,6 +466,12 @@ Marcadores de fecha: `s:"yt"` = estimada del tab, `s:"yt-exact"` = real verifica
   español y no se parsean): por eso el sync hace doble pasada (fechas + títulos, join por
   id). Los dos `--extractor-args` van como flags separados; con `;` en uno solo el segundo
   extractor no lo recibe, sin error visible.
+- **La pasada `lang=es` puede fallar sola y es transitoria** (`unable to extract yt
+  initial data`). El sync no aborta: sigue y loguea `N con titulo EN (fallback)`, que
+  es la señal de que ese canal quedó con títulos inglés y por tanto **no sirve para
+  `rg` en español**. Se corrige re-sincronizando: el merge actualiza el título en
+  sitio cuando la pasada ES trae uno distinto, sin tocar la fecha (una `yt-exact` no
+  vuelve a ser estimada). El log distingue el tipo: `177 mejorados (177 solo de título)`.
 - **Anti-bot**: si yt-dlp devuelve 429 o "sign in to confirm", el run aborta sin escribir
   nada (nunca un parcial silencioso) y `ultima_sync` no avanza.
 

@@ -163,4 +163,32 @@ export const CHANNELS = {
     channelId: 'UChVNqCo0-9mtYq2QNX-hhrA',
     tab: 'videos',
   },
+  yt_voceriagob: {
+    nombre: 'Vocería de Gobierno (YouTube)',
+    tipo: 'youtube',
+    channel: '@voceriadegobierno', // "Vocería de Gobierno" (verificado por channel_id)
+    channelId: 'UCtpl7gqF1PM3jiYga8xIN7g',
+    tab: 'videos',
+  },
+  yt_exante: {
+    nombre: 'Ex-Ante (YouTube)',
+    tipo: 'youtube',
+    channel: '@ex-ante', // "Ex-Ante" (verificado por channel_id)
+    channelId: 'UChjwgLHnGrlxdsFRkiUWn1Q',
+    tab: 'videos',
+  },
+  yt_latercera: {
+    nombre: 'La Tercera (YouTube)',
+    tipo: 'youtube',
+    channel: '@latercera', // "La Tercera" (verificado por channel_id)
+    channelId: 'UCEQ_IiWGNvyvwSF3Sd-aQFA',
+    tab: 'videos',
+  },
+  yt_todonoticias: {
+    nombre: 'Todo Noticias (YouTube)',
+    tipo: 'youtube',
+    channel: '@todonoticias', // "Todo Noticias" (verificado por channel_id)
+    channelId: 'UCj6PcyLvpnIRT_2W_mwa9Aw',
+    tab: 'videos',
+  },
 };

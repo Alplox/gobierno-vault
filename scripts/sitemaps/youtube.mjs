@@ -262,6 +262,7 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
   let kept = 0;
   let skipped = 0;
   let rescued = 0;
+  let retitled = 0;
   const dirty = new Set();
 
   // Rescate de fechas para tabs que no las traen (/streams, /shorts): se pide
@@ -310,6 +311,16 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
       map.set(u, entry);
       upgraded++;
       dirty.add(year);
+    } else if (tEs && prev.t !== tEs) {
+      // Título en español disponible y distinto al guardado. Se actualiza SOLO
+      // el título, in situ: reemplazar la entry entera degradaría una fecha
+      // `yt-exact` ya verificada a la estimación del tab. Pasa cuando una pasada
+      // `lang=es` falla y deja los títulos auto-traducidos al inglés: el
+      // re-sync los corrige sin perder las fechas.
+      prev.t = tEs;
+      upgraded++;
+      retitled++;
+      dirty.add(year);
     } else {
       kept++;
     }
@@ -328,7 +339,7 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
 
   const total = Object.values(years).reduce((acc, m) => acc + m.size, 0);
   const truncated = playlistEnd > 0;
-  logOk(`${conf.nombre}: ${total} videos totales (+${added} nuevos, ${upgraded} mejorados, ${kept} sin cambios${rescued ? `, ${rescued} con fecha rescatada` : ''}${skipped ? `, ${skipped} sin fecha omitidos` : ''}${titlesFallback ? `, ${titlesFallback} con titulo EN (fallback)` : ''})`);
+  logOk(`${conf.nombre}: ${total} videos totales (+${added} nuevos, ${upgraded} mejorados${retitled ? ` (${retitled} solo de título)` : ''}, ${kept} sin cambios${rescued ? `, ${rescued} con fecha rescatada` : ''}${skipped ? `, ${skipped} sin fecha omitidos` : ''}${titlesFallback ? `, ${titlesFallback} con titulo EN (fallback)` : ''})`);
   if (truncated) logWarn(`   └ --playlist-end ${playlistEnd}: recorrido acotado; ultima_sync no avanza.`);
   return { medio, nombre: conf.nombre, urls: total, added, upgraded, kept, fromCache: 0, failed: 0, complete: !truncated, years: Object.keys(years).length };
 }
