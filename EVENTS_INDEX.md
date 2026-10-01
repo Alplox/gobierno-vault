@@ -1782,8 +1782,8 @@
 - [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 15 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 12 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
-- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 22 fuentes
-- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 26 fuentes
+- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 33 fuentes
+- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 27 fuentes
 
 ## 2025
 

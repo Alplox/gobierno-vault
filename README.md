@@ -201,10 +201,10 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - votacion (39)
 
 **Entidades registradas:**
-- Personas: 2632
-- Organizaciones: 1460
+- Personas: 2635
+- Organizaciones: 1463
 - Cifras: 41
-- Fuentes: 8690
+- Fuentes: 8702
 - Temas: 77
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 
