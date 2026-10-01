@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-01T16:42:49.995Z",
+  "actualizado": "2026-10-01T19:45:35.491Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3921,6 +3921,62 @@
       "ultima_sync": "2026-10-01T16:42:49.995Z",
       "articulos": 68152,
       "nuevos": 3,
+      "años": 10
+    },
+    "yt_servel": {
+      "nombre": "Servicio Electoral (YouTube)",
+      "ultima_sync": "2026-10-01T19:38:58.999Z",
+      "articulos": 364,
+      "nuevos": 361,
+      "años": 12
+    },
+    "yt_camara": {
+      "nombre": "Cámara de Diputados (YouTube)",
+      "ultima_sync": "2026-10-01T19:29:23.854Z",
+      "articulos": 24651,
+      "nuevos": 24651,
+      "años": 12
+    },
+    "yt_senado": {
+      "nombre": "Senado (TV Senado, YouTube)",
+      "ultima_sync": "2026-10-01T19:34:09.654Z",
+      "articulos": 14316,
+      "nuevos": 14316,
+      "años": 10
+    },
+    "yt_poderjudicial": {
+      "nombre": "Poder Judicial (YouTube)",
+      "ultima_sync": "2026-10-01T19:38:28.587Z",
+      "articulos": 14603,
+      "nuevos": 14603,
+      "años": 15
+    },
+    "yt_tconstitucional": {
+      "nombre": "Tribunal Constitucional (YouTube)",
+      "ultima_sync": "2026-10-01T19:38:49.340Z",
+      "articulos": 1054,
+      "nuevos": 1054,
+      "años": 17
+    },
+    "yt_pc": {
+      "nombre": "Partido Comunista de Chile (YouTube)",
+      "ultima_sync": "2026-10-01T19:39:06.819Z",
+      "articulos": 244,
+      "nuevos": 0,
+      "años": 11
+    },
+    "yt_24horas": {
+      "nombre": "24 Horas (YouTube)",
+      "ultima_sync": null,
+      "articulos": 92279,
+      "nuevos": 1,
+      "años": 19
+    },
+    "yt_meganoticias": {
+      "nombre": "Meganoticias (YouTube)",
+      "ultima_sync": null,
+      "articulos": 57445,
+      "nuevos": 2,
       "años": 10
     }
   }

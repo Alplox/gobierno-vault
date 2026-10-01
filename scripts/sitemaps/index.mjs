@@ -38,7 +38,9 @@ function loadCatalog() {
     if (!existsSync(root)) continue;
     for (const medio of readdirSync(root)) {
       const medioDir = join(root, medio);
-      if (!statSync(medioDir).isDirectory() || medio.startsWith('.')) continue;
+      // `_` y `.` reservan directorios auxiliares que no son medios (copias de
+      // trabajo, catálogos de referencia). No son slugs indexables.
+      if (!statSync(medioDir).isDirectory() || medio.startsWith('.') || medio.startsWith('_')) continue;
       for (const file of readdirSync(medioDir)) {
         if (!/^\d{4}\.jsonl$/.test(file)) continue;
         const raw = readFileSync(join(medioDir, file), 'utf8');
@@ -55,6 +57,15 @@ function loadCatalog() {
     }
   }
   return items;
+}
+
+// Nombre legible de un slug. El registro (`MEDIA`/`CHANNELS`) es la fuente
+// autoritativa; `_manifest.json` es solo cache de estado de sync y sus entradas
+// se pueden perder (lectura-modificación-escritura entre procesos), así que
+// nunca se usa como única fuente del nombre. `porMedio`/`porCanal` ya traen el
+// conteo leído del disco, que tampoco depende del manifest.
+function nombreDe(medio, manifest) {
+  return MEDIA[medio]?.nombre ?? CHANNELS[medio]?.nombre ?? manifest.medios?.[medio]?.nombre ?? medio;
 }
 
 function buildMarkdown(items, manifest) {
@@ -100,8 +111,7 @@ function buildMarkdown(items, manifest) {
     l.push('| Medio | Artículos |');
     l.push('| --- | --- |');
     for (const [medio, n] of Object.entries(porMedio).sort((a, b) => b[1] - a[1])) {
-      const nombre = manifest.medios?.[medio]?.nombre ?? medio;
-      l.push(`| ${nombre} | ${n.toLocaleString('es-ES')} |`);
+      l.push(`| ${nombreDe(medio, manifest)} | ${n.toLocaleString('es-ES')} |`);
     }
     l.push('');
   }
@@ -111,10 +121,9 @@ function buildMarkdown(items, manifest) {
     l.push('| Canal | Videos | Años |');
     l.push('| --- | --- | --- |');
     for (const [medio, n] of Object.entries(porCanal).sort((a, b) => b[1] - a[1])) {
-      const nombre = manifest.medios?.[medio]?.nombre ?? medio;
       const r = rangoCanal[medio];
       const años = r ? (r.min === r.max ? r.min : `${r.min}–${r.max}`) : '—';
-      l.push(`| ${nombre} | ${n.toLocaleString('es-ES')} | ${años} |`);
+      l.push(`| ${nombreDe(medio, manifest)} | ${n.toLocaleString('es-ES')} | ${años} |`);
     }
     l.push('');
   }
@@ -131,7 +140,7 @@ function buildMediosMd(manifest) {
   l.push('# Medios registrados');
   l.push('');
   l.push('> Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/media.mjs:MEDIA` + `scripts/sitemaps/channels.mjs:CHANNELS` + `sitemaps/_manifest.json`. No editar a mano.');
-  l.push('> Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.');
+  l.push('> Para el resumen por conteo ver `sitemaps/README.md`; el nombre y el total salen del registro y del disco, y `_manifest.json` aporta solo el estado de sync.');
   l.push('');
   l.push('| Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |');
   l.push('| --- | --- | --- | --- | --- | --- |');

@@ -475,6 +475,36 @@ Marcadores de fecha: `s:"yt"` = estimada del tab, `s:"yt-exact"` = real verifica
 - **Anti-bot**: si yt-dlp devuelve 429 o "sign in to confirm", el run aborta sin escribir
   nada (nunca un parcial silencioso) y `ultima_sync` no avanza.
 
+### Cómo encontrar canales: IDs curados, nunca handles adivinados
+
+**No deduzcas el handle del nombre del medio.** Sondeo de 41 candidatos sobre los medios
+más citados del vault: la mayoría no existe, varios existen pero **sin tab de videos**
+(`@Emol`, `@cooperativa`, `@senadochile` — mismo error que `@teletrece`), y cuatro resuelven
+a **canales de personas**: `@telesur` → "Carlos Javier San Juan Pagola", `@el_ciudadano` →
+"Carlos Esparza", `@elmerino` → un canal con un video ("De fiesta Con mis amigos"). Otros dos
+tienen el nombre correcto y el contenido equivocado: `@Camaradediputados` son `.avi` de 1979,
+`@diputadoschile` son trabajos de colegios.
+
+La fuente que sí funciona es la **curaduría comunitaria** de canales
+[Alplox/json-teles](https://github.com/Alplox/json-teles) — directorio IPTV, ~199 canales
+chilenos con su `channel_id` por país. **No la copies al repo**: se desactualiza en silencio
+respecto del upstream. Se consulta directo y ya:
+
+```bash
+curl -sL https://raw.githubusercontent.com/Alplox/json-teles/main/countries/cl.json -o tmp/cl.json
+# filtrar por categoría: news | legislative | general
+node -e "const c=require('./tmp/cl.json').channels.filter(x=>x.youtube&&['legislative','news'].includes(x.category));c.forEach(x=>console.log(x.name,x.youtube))"
+```
+
+Trae las categorías que importan al vault: `legislative` (Senado, Cámara, Poder Judicial,
+Tribunal Constitucional, Servel), `news` y `general` (regionales y TVs nacionales).
+
+Por eso el registro acepta **`channelId` sin `channel`**: el ID es lo estable y es lo que dan
+las curadurías. Igual hay que **verificar el canal real, no solo que el ID resuelva** — mirar
+`channel` y 2-3 títulos con `yt-dlp --flat-playlist -J`, porque un ID válido puede apuntar a
+otro emisor. Casos donde el nombre difiere del medio: la Cámara es "Diputadas y Diputados de
+Chile" (24.651 videos) y el Senado "TVSenado Chile" (14.316).
+
 ---
 
 ## Sitios sin sitemap: fetch directo bajo demanda

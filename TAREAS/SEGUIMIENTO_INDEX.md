@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 346
+**Total tareas:** 347
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 4 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 268 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 4 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 269 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 317 · V: 12 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 317 · V: 13 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -346,7 +346,7 @@
 | S-TRANS-017 | ⬜ | 2026-08-27 | Metro Santa Isabel (incendio Línea 5) — seguimient | Conducta imprudente de pasajero en Línea 5 (5-ago): Cooperativa reportó servicio parcial por "conducta imprudente de ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-018 | ⬜ | 2026-08-27 | ACOT — detalles de la Escuela de Carabineros (segu | Ingreso efectivo de los proyectos: cuáles de los 9-15 proyectos nuevos ingresan al Congreso en las próximas semanas y... | — | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso Johnny Lagos (amenazas a Kast y Quiroz) — desenlace judicial (evento 20260820-9): el imputado quedó en libertad ... | `20260820-9` | Origen: <https://www.cnnchile.com/pais/era-una-satira-de-humor-politico-imputado-por-amenazas-a-presidente-kast-y-ministro-quiroz-explica-sus-dichos-tras-quedar-con-medidas-cautelares/> |
-| V-2026-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gira del canciller Pérez Mackenna a China (evento 20260817-5): visita oficial del 18 al 22 de agosto de 2026 (Beijing... | `20260817-5` | Origen: <https://infogate.cl/2026/08/canciller-viaja-a-china-en-medio-de-negociaciones-por-aranceles-impuestos-por-eeuu/> |
+| V-2026-002 | 🟡 | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Alineamiento Chile-EE.UU.-China: los resultados de la gira del canciller Pérez Mackenna por China quedaron en el evento 20260822-4; siguen abiertos el desenlace de la negociación arancelaria con Washington y la visita de Kast a la APEC de noviembre | `20260817-5` `20260822-4` | Origen: <https://infogate.cl/2026/08/canciller-viaja-a-china-en-medio-de-negociaciones-por-aranceles-impuestos-por-eeuu/> |
 | V-2026-003 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Sanción a la APA en el caso pollos — conciliar cifras: el evento 20260805-4  menciona '20.000 UTA y disolución para l... | `20260805-4` `20140925-1` | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-004 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Agustín Iglesias y las contribuciones — seguimiento: (1) verificar la afirmación de Iglesias sobre el origen de la fo... | `20260806-3` | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-005 | ⬜ | 2026-08-25 | Sugerencias pendientes (para no perderlas) | Megarreforma — TC: requerimiento del Gobierno por reconexión gratuita (artículo 31, medida R3): el TC rechazó por 9-1... | `20260825-1` `20260818-19` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/tc-admite-requerimiento-del-gobierno-por-norma-que-obliga-a-reconectar-gratis-servicios-en-emergencias.shtml> |
@@ -357,5 +357,6 @@
 | V-2026-011 | ⬜ | 2026-09-08 | Moción Betancurt (PDG) — tres años de experiencia | Moción de tres años de experiencia (evento `20260826-14`): verificado 08-sep — sigue sin boletín (prensa 26-ago/07-sep no cita número; buscador Cámara sin resultados) y ausente del registro (último ingreso: 12-ago, 18605-15); próximo rechequeo ~15-sep | `20260826-14` | Origen: <https://www.camara.cl/diputados/detalle/mociones.aspx?prmID=1192> |
 | V-2026-012 | ⬜ | 2026-09-08 | Fuga Copiapó — rumores de relación sentimental y bautizo simulado (evento `20260904-2`) | Rumores atribuidos a 24 Horas televisado (TVN) según reporte de usuario, sin respaldo en prensa escrita al 08-sep; pendiente obtener el VOD para verificar qué se dijo exactamente | `20260904-2` | Origen: 24 Horas televisado (VOD pendiente) + reporte de usuario en sesión 08-sep-2026 |
 | V-2026-013 | ⬜ | 2026-09-26 | Caso Cerimedo — seguimiento judicial | Comisión diaria US$1,5M por vuelos de cocaína atribuida a Correa — cifra solo en redes, sin respaldo fiscal ni pericial | `20260917-7` `20260818-14` | Origen: <https://x.com/Disperzoo/status/2093160368935739472> |
+| V-2026-255 | ⬜ | 2026-10-01 | Agresión contraprotesta UC 01-oct (evento `20261001-2`) | Financiamiento de poleras y banderas de la contraprotesta de Solidaridad UC y Movimiento Gremial en el frontis UC — de dónde salió el dinero, acusación en X sin respaldo en prensa | `20261001-2` | Origen: <https://x.com/Curvaspoliticas/status/2105705355082862726> |
 
 *Estados: ⬜ pendiente, 🟡 parcial. Al cerrar, la fila se elimina del YYYY.md (como PENDIENTES) y el hecho queda en EVENTS_INDEX.md + git log.*

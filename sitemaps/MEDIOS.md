@@ -1,7 +1,7 @@
 # Medios registrados
 
 > Generado por `pnpm run sitemaps-index` desde `scripts/sitemaps/media.mjs:MEDIA` + `scripts/sitemaps/channels.mjs:CHANNELS` + `sitemaps/_manifest.json`. No editar a mano.
-> Para el resumen por conteo ver `sitemaps/README.md`; la fuente de verdad del estado es `_manifest.json`.
+> Para el resumen por conteo ver `sitemaps/README.md`; el nombre y el total salen del registro y del disco, y `_manifest.json` aporta solo el estado de sync.
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 | --- | --- | --- | --- | --- | --- |
@@ -484,11 +484,12 @@
 
 | Slug | Nombre | Canal | Tab | Videos | Años |
 | --- | --- | --- | --- | --- | --- |
-| `yt_24horas` | 24 Horas (YouTube) | `@24Horas_TVNChile` | videos | — | — |
+| `yt_24horas` | 24 Horas (YouTube) | `@24Horas_TVNChile` | videos | 92.279 | 19 |
 | `yt_adnradio` | ADN Radio (YouTube) | `@adnradio` | videos | 14.882 | 14 |
 | `yt_agricultura` | Agricultura TV (YouTube) | `@agriculturatv` | videos | 7.579 | 14 |
 | `yt_biobio` | Bio Bío (YouTube) | `@BioBioChile` | videos | 23.580 | 10 |
 | `yt_boric` | Gabriel Boric (YouTube) | `@gabrielboricpresidente` | videos | 469 | 12 |
+| `yt_camara` | Cámara de Diputados (YouTube) | `undefined` | videos | 24.651 | 12 |
 | `yt_chv` | CHV Noticias (YouTube) | `@CHVNoticiasTV` | videos | 41.966 | 13 |
 | `yt_cnnchile` | CNN Chile (YouTube) | `@cnnchile` | videos | 83.651 | 16 |
 | `yt_delosquesobran` | La Voz de los que Sobran (YouTube) | `@delosquesobran` | videos | 3.630 | 7 |
@@ -498,12 +499,17 @@
 | `yt_gobierno` | Gobierno de Chile (YouTube) | `@GobiernoDeChile` | videos | 2.100 | 17 |
 | `yt_kast` | José Antonio Kast (YouTube) | `@JoséAntonioKastOficial` | videos | 746 | 9 |
 | `yt_latercera` | La Tercera (YouTube) | `@latercera` | videos | 12.350 | 15 |
-| `yt_meganoticias` | Meganoticias (YouTube) | `@Meganoticiasoficial` | videos | — | — |
+| `yt_meganoticias` | Meganoticias (YouTube) | `@Meganoticiasoficial` | videos | 57.445 | 10 |
+| `yt_pc` | Partido Comunista de Chile (YouTube) | `undefined` | videos | 244 | 11 |
 | `yt_pinera` | Sebastián Piñera (YouTube) | `@sebastianpinera` | videos | 440 | 9 |
+| `yt_poderjudicial` | Poder Judicial (YouTube) | `undefined` | videos | 14.603 | 15 |
 | `yt_presidencia` | Presidencia de la República (YouTube) | `@Presidencia_cl` | videos,streams,shorts | 220 | 1 |
 | `yt_radioinfinita` | Radio Infinita (YouTube) | `@radioinfinitaFM` | videos | 6.720 | 4 |
 | `yt_radiousach` | Radio Usach (YouTube) | `@RadioUsachoficial` | videos | 7.705 | 15 |
+| `yt_senado` | Senado (TV Senado, YouTube) | `undefined` | videos | 14.316 | 10 |
+| `yt_servel` | Servicio Electoral (YouTube) | `undefined` | videos | 364 | 12 |
 | `yt_t13` | Teletrece (YouTube) | `@T13_cl` | videos | 62.812 | 13 |
+| `yt_tconstitucional` | Tribunal Constitucional (YouTube) | `undefined` | videos | 1.054 | 17 |
 | `yt_theclinic` | The Clinic (YouTube) | `@theclinic_cl` | videos | 1.973 | 10 |
 | `yt_todonoticias` | Todo Noticias (YouTube) | `@todonoticias` | videos | 68.152 | 10 |
 | `yt_viax` | Viax (YouTube) | `@Viax` | videos | 8 | 1 |

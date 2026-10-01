@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 1/10/2026, 13:42:49
-- **Medios registrados:** 560
-- **Artículos indexados:** 12.236.118
-- **Canales de YouTube:** 24 (515.091 videos)
+- **Última sincronización:** 1/10/2026, 16:45:35
+- **Medios registrados:** 568
+- **Artículos indexados:** 12.291.353
+- **Canales de YouTube:** 30 (570.326 videos)
 
 ## Por medio
 
@@ -472,15 +472,18 @@
 
 | Canal | Videos | Años |
 | --- | --- | --- |
-| yt_24horas | 92.278 | 2008–2026 |
+| 24 Horas (YouTube) | 92.279 | 2008–2026 |
 | CNN Chile (YouTube) | 83.651 | 2011–2026 |
 | Todo Noticias (YouTube) | 68.152 | 2017–2026 |
 | Teletrece (YouTube) | 62.812 | 2014–2026 |
-| yt_meganoticias | 57.443 | 2017–2026 |
+| Meganoticias (YouTube) | 57.445 | 2017–2026 |
 | CHV Noticias (YouTube) | 41.966 | 2014–2026 |
+| Cámara de Diputados (YouTube) | 24.651 | 2015–2026 |
 | Bio Bío (YouTube) | 23.580 | 2017–2026 |
 | Diario Financiero (YouTube) | 17.787 | 2012–2026 |
 | ADN Radio (YouTube) | 14.882 | 2013–2026 |
+| Poder Judicial (YouTube) | 14.603 | 2012–2026 |
+| Senado (TV Senado, YouTube) | 14.316 | 2017–2026 |
 | La Tercera (YouTube) | 12.350 | 2012–2026 |
 | Radio Usach (YouTube) | 7705 | 2012–2026 |
 | Agricultura TV (YouTube) | 7579 | 2013–2026 |
@@ -490,9 +493,12 @@
 | Gobierno de Chile (YouTube) | 2100 | 2010–2026 |
 | The Clinic (YouTube) | 1973 | 2017–2026 |
 | Vocería de Gobierno (YouTube) | 1943 | 2015–2026 |
+| Tribunal Constitucional (YouTube) | 1054 | 2010–2026 |
 | José Antonio Kast (YouTube) | 746 | 2017–2025 |
 | Gabriel Boric (YouTube) | 469 | 2014–2025 |
 | Sebastián Piñera (YouTube) | 440 | 2008–2021 |
+| Servicio Electoral (YouTube) | 364 | 2014–2026 |
 | Ex-Ante (YouTube) | 355 | 2021–2026 |
+| Partido Comunista de Chile (YouTube) | 244 | 2016–2026 |
 | Presidencia de la República (YouTube) | 220 | 2026 |
 | Viax (YouTube) | 8 | 2006 |

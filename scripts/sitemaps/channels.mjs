@@ -5,8 +5,10 @@
  * CATALOG_MEDIO_BY_DOMAIN en add-source.mjs, watchlist, probe, news-search)
  * asumen endpoints de sitemap (robots/index/extra) y un canal no es un dominio.
  * Cada entrada define el canal para `scripts/sitemaps/youtube.mjs` (yt-dlp):
- *   channel    → handle (@T13_cl, con @)
- *   channelId  → id del canal (cacheado: evita resolver el handle cada sync)
+ *   channel    → handle (@T13_cl, con @). Alternativa a channelId.
+ *   channelId  → id del canal (cacheado: evita resolver el handle cada sync).
+ *                Basta uno de los dos; el id es más estable y es lo que traen
+ *                las curadurías externas (Alplox/json-teles, countries/cl.json).
  *   tab        → 'videos' | 'streams' | 'shorts', o un array de varios.
  *                streams/shorts no traen fecha en --flat-playlist; el sync la
  *                rescata con fetch por video (~1.25 s c/u, solo los que falten).
@@ -189,6 +191,49 @@ export const CHANNELS = {
     tipo: 'youtube',
     channel: '@todonoticias', // "Todo Noticias" (verificado por channel_id)
     channelId: 'UCj6PcyLvpnIRT_2W_mwa9Aw',
+    tab: 'videos',
+  },
+
+  // --- Institucionales: fuente primaria del Estado, no prensa. -------------
+  // IDs desde la curaduría Alplox/json-teles (countries/cl.json, categoria
+  // `legislative`), verificados uno a uno: el nombre del canal no coincide con
+  // el del medio y varios no son adivinables por handle.
+  yt_camara: {
+    nombre: 'Cámara de Diputados (YouTube)',
+    tipo: 'youtube',
+    // "Diputadas y Diputados de Chile" — NO el handle @Camaradediputados, que
+    // resuelve a un canal con archivos .avi de 1979.
+    channelId: 'UCYd5k2TyOyOmUJNx0SH17KA',
+    tab: 'videos',
+  },
+  yt_senado: {
+    nombre: 'Senado (TV Senado, YouTube)',
+    tipo: 'youtube',
+    channelId: 'UC4GJ43VNn4AYfiYa0RBCHQg', // "TVSenado Chile"
+    tab: 'videos',
+  },
+  yt_poderjudicial: {
+    nombre: 'Poder Judicial (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCo0C1-ocUG9a0Yb3iO0V-xg', // "Poder Judicial Chile"
+    tab: 'videos',
+  },
+  yt_tconstitucional: {
+    nombre: 'Tribunal Constitucional (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCZaI-1N1oaGb-U8K2VNztjg', // "Tribunal Constitucional de Chile"
+    tab: 'videos',
+  },
+  yt_servel: {
+    nombre: 'Servicio Electoral (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCB8s6rETjmWgXrp_BxyXqdg', // "Servicio Electoral de Chile"
+    tab: 'videos',
+  },
+  yt_pc: {
+    nombre: 'Partido Comunista de Chile (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCDsK-sQQrMpWJT3auRQh6BA', // "Communist Party of Chile"
     tab: 'videos',
   },
 };

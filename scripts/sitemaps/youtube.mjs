@@ -47,8 +47,17 @@ export function channelTabs(conf) {
   return (Array.isArray(t) ? t : [t]).filter(Boolean);
 }
 
+// Un canal se identifica por handle (`channel: '@T13_cl'`) o por id
+// (`channelId: 'UC…'`). El id es lo más estable que da YouTube y es lo que
+// traen las curadurías externas (ej. el catálogo IPTV de Alplox/json-teles),
+// así que ambas formas son válidas y basta con una.
 export function channelUrl(conf, tab = 'videos') {
-  return `https://www.youtube.com/${conf.channel}/${tab}`;
+  if (conf.channel) return `https://www.youtube.com/${conf.channel}/${tab}`;
+  return `https://www.youtube.com/channel/${conf.channelId}/${tab}`;
+}
+
+function canalLabel(conf) {
+  return conf.channel ? conf.channel : `channel/${conf.channelId}`;
 }
 
 function log(prefix, text) {
@@ -208,8 +217,8 @@ function fetchExactDates(ids) {
 }
 
 export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace = false, dateFetch = true } = {}) {
-  if (!conf?.channel) {
-    logErr(`${medio}: config youtube sin 'channel' (handle, ej. @T13_cl).`);
+  if (!conf?.channel && !conf?.channelId) {
+    logErr(`${medio}: config youtube sin 'channel' (handle, ej. @T13_cl) ni 'channelId' (UC…).`);
     return { medio, nombre: conf?.nombre ?? medio, urls: null, years: null, failed: 1, complete: false };
   }
   let version;
@@ -221,7 +230,7 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
   }
   const tabs = channelTabs(conf);
   logInfo(`=== Sincronizando ${conf.nombre} (${medio}) [yt-dlp ${version}] ===`);
-  logInfo(`canal: https://www.youtube.com/${conf.channel}/${tabs.join('+')}${playlistEnd > 0 ? ` (primeros ${playlistEnd})` : ''}`);
+  logInfo(`canal: ${canalLabel(conf)} [${tabs.join('+')}]${playlistEnd > 0 ? ` (primeros ${playlistEnd})` : ''}`);
 
   // Doble pasada por tab: con lang=es el tab trae titulos originales pero SIN
   // fechas (las relativas vienen en espanol y approximate_date no las parsea);
