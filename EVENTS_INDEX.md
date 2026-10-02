@@ -1577,6 +1577,7 @@
 - [2026/09/20260903-2 - Kast cierra primera jornada del V Encuentro Regional del Foro Madrid en Santiago: 'si no hacemos las cosas como corresponde, la izquierda podría volver'](src/content/events/2026/09/20260903-2.md) — 10 fuentes
 - [2026/09/20260903-20 - Falkland Islands Development Corporation contrata a Easter Island Naviera para abrir una ruta de suministro entre Punta Arenas y Puerto Argentino](src/content/events/2026/09/20260903-20.md) — 18 fuentes
 - [2026/09/20260903-21 - Milei anuncia sanciones contra actividades petroleras en Malvinas y un proyecto de ley de defensa de la soberanía](src/content/events/2026/09/20260903-21.md) — 12 fuentes
+- [2026/09/20260903-22 - Profesores de El Monte levantan movilización de brazos caídos tras completarse el pago de remuneraciones](src/content/events/2026/09/20260903-22.md) — 10 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 30 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 12 fuentes
