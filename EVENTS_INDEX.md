@@ -1588,7 +1588,7 @@
 - [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 17 fuentes
 - [2026/09/20260904-4 - Paz Zárate cuestiona el comunicado conjunto Kast-Milei; texto redactado por Argentina que canjea gas por Malvinas sin derogar el decreto 457](src/content/events/2026/09/20260904-4.md) — 5 fuentes
 - [2026/09/20260904-5 - Zambrano se reúne con Kast y con el Senado chileno en visita interparlamentaria centrada en seguridad](src/content/events/2026/09/20260904-5.md) — 6 fuentes
-- [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 14 fuentes
+- [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 15 fuentes
 - [2026/09/20260904-7 - Expertos contra fiscal nacional por el registro: Couso y Duce lo ven inútil y ambiguo, Valencia defiende su conveniencia y la carta de Irarrázaval advierte presunción de derecho prohibida](src/content/events/2026/09/20260904-7.md) — 7 fuentes
 - [2026/09/20260904-8 - Frente Amplio oficia a Codelco, SII, Servel, UAF, Pensiones y CMF por fundación de Fontaine ligada a bots tras reportaje de $1.906 millones](src/content/events/2026/09/20260904-8.md) — 5 fuentes
 - [2026/09/20260904-9 - Fernanda Cornejo responde a Milei en C5N por sus dichos sobre Allende y Pinochet, y Jeannette Jara rechaza la celebración de la dictadura](src/content/events/2026/09/20260904-9.md) — 6 fuentes
@@ -1635,7 +1635,7 @@
 - [2026/09/20260909-5 - Kast presenta en Cerro Castillo la reforma al mercado de capitales con Fonavi y ahorro estatal para el pie de la primera vivienda hasta 6.000 UF](src/content/events/2026/09/20260909-5.md) — 25 fuentes
 - [2026/09/20260909-6 - Banco Central publica IPoM de septiembre: atribuye desempleo de 9,5% a costos laborales y automatización y recorta PIB 2026 a 0,25%-0,75%](src/content/events/2026/09/20260909-6.md) — 11 fuentes
 - [2026/09/20260909-7 - Se cae el feriado del 17 de septiembre: la tramitación no alcanza antes de Fiestas Patrias](src/content/events/2026/09/20260909-7.md) — 10 fuentes
-- [2026/09/20260909-8 - Cuello, Santana y Serrano denuncian ante el fiscal nacional un eventual delito de Ley de Inteligencia por los dichos de Judd](src/content/events/2026/09/20260909-8.md) — 5 fuentes
+- [2026/09/20260909-8 - Cuello, Santana y Serrano denuncian ante el fiscal nacional un eventual delito de Ley de Inteligencia por los dichos de Judd](src/content/events/2026/09/20260909-8.md) — 8 fuentes
 - [2026/09/20260909-9 - Rojo Edwards respalda la rectificación de Judd: no dijo que tenía información de quién quemó el Metro](src/content/events/2026/09/20260909-9.md) — 2 fuentes
 - [2026/09/20260910-1 - Alvarado fija postura ante la polémica por contratación de jóvenes: defiende darles oportunidades pero exige sueldos acorde a las normas y confirma que Soto aceptó la corrección y sigue en Interior](src/content/events/2026/09/20260910-1.md) — 5 fuentes
 - [2026/09/20260910-10 - Judd en El Mercurio: Chile es 'vulnerable al crimen organizado' y el Escudo de las Américas va en su interés, un día después del tirón de orejas](src/content/events/2026/09/20260910-10.md) — 6 fuentes
@@ -1783,7 +1783,7 @@
 - [2026/09/20260930-4 - Kast confirma al oficialismo alza de 1,5% para el Presupuesto 2027 y cadena nacional, y se abre el debate por la base de cálculo](src/content/events/2026/09/20260930-4.md) — 15 fuentes
 - [2026/09/20260930-5 - Kast reúne en Cerro Castillo a presidentes de comisiones y condiciona el retiro de la reforma de seguridad a un texto alternativo](src/content/events/2026/09/20260930-5.md) — 12 fuentes
 - [2026/09/20260930-6 - Operación Apocalipsis II: la PDI detiene en cuatro regiones a Álex Vega, exdirigente de la ANFUP, y a otras dos personas por corrupción en Santiago 1](src/content/events/2026/09/20260930-6.md) — 42 fuentes
-- [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 15 fuentes
+- [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 16 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 13 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
 - [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 36 fuentes
@@ -1792,6 +1792,7 @@
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 5 fuentes
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
 - [2026/10/20261001-6 - Detienen a cuatro carabineros de Rancagua por red de receptación y blanqueo de vehículos robados: quedan desvinculados y la Fiscalía pide ampliar la detención](src/content/events/2026/10/20261001-6.md) — 6 fuentes
+- [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 7 fuentes
 
 ## 2025
 
