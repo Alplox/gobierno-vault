@@ -399,6 +399,14 @@ Escalera cuando eso no basta, en orden:
    `Infodefensa` `sitemap/month/YYYYMM`, Meganoticias `…/content-noticias/sitemap-YYYY-MM.xml`).
    El video-sitemap de Meganoticitas sirve para encontrar la nota *de video* de una
    entrevista, que suele tener versión artículo con IDs contiguos.
+5. **`sitemap.xml` plano del medio**, cuando todo lo anterior falla y el día es muy
+   reciente: varios medios y El Mostrador exponen un `sitemap.xml` con las ~200-300 URLs
+   del día y la fecha ya en el path (`/noticias/pais/AAAA/MM/DD/slug/`). Oct-2026: con
+   `news-search` devolviendo `[SIN RESOLVER]` para cuatro notas del 02-oct (BioBioChile,
+   Canal 9, La Tercera), el `sitemap.xml` de El Mostrador entregó el slug exacto de una de
+   ellas en un solo fetch; el de The Clinic responde 403 en `sitemap.xml`, pero su
+   `sitemap_index.xml` lista los shards y hay que abrir los `post-sitemapN.xml`. Conviene
+   filtrar por `/AAAA/MM/DD/` en los `<loc>` porque los shards también traen años anteriores.
 
 Límites conocidos: los links `rss/articles/CBMi…` van cifrados (doble base64, no
 decodificables localmente) y GDELT no responde desde esta red.
