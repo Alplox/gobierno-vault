@@ -1780,7 +1780,7 @@
 - [2026/09/20260929-7 - La Moneda evalúa continuidad de Zaliasnik tras declaración de Hermosilla: Alvarado evita juicios y diputados piden su salida](src/content/events/2026/09/20260929-7.md) — 7 fuentes
 - [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 19 fuentes
 - [2026/09/20260930-10 - Kast presenta en cadena nacional el Presupuesto 2027 con alza de 1,5% y cuatro prioridades, crecimiento, seguridad, niñez y beneficios sociales](src/content/events/2026/09/20260930-10.md) — 20 fuentes
-- [2026/09/20260930-11 - Bacheletazo en La Pintana, homenaje a Bachelet con Boric, Vallejo y Jara, no me iré para la casa y trampa tras trampa contra el Gobierno](src/content/events/2026/09/20260930-11.md) — 14 fuentes
+- [2026/09/20260930-11 - Bacheletazo en La Pintana, homenaje a Bachelet con Boric, Vallejo y Jara, no me iré para la casa y trampa tras trampa contra el Gobierno](src/content/events/2026/09/20260930-11.md) — 16 fuentes
 - [2026/09/20260930-13 - Cámara despacha a ley la reforma al sistema político con condena a los totalitarismos: 125 a favor, 12 en contra y reserva de Mulet](src/content/events/2026/09/20260930-13.md) — 16 fuentes
 - [2026/09/20260930-2 - Camioneros dan 48 horas al Gobierno por el diésel, niegan el ultimátum y descartan el paro tras dos horas de reunión con Economía, mientras reflotan un video de 2020 con elogios de Sergio Pérez a Kast](src/content/events/2026/09/20260930-2.md) — 24 fuentes
 - [2026/09/20260930-3 - Dos seremis de la Región Metropolitana renuncian con horas de diferencia y las salidas llegan a 41 seremis y 51 autoridades](src/content/events/2026/09/20260930-3.md) — 18 fuentes
@@ -1790,17 +1790,17 @@
 - [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 19 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 15 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
-- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 69 fuentes
+- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 78 fuentes
 - [2026/10/20261001-10 - Comisión de Hacienda aprueba en general la reforma al mercado de capitales por 11 votos a 2 y abre la pelea por la norma de fraudes bancarios](src/content/events/2026/10/20261001-10.md) — 8 fuentes
-- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 44 fuentes
+- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 47 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
-- [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 5 fuentes
+- [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 7 fuentes
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
 - [2026/10/20261001-6 - Detienen a cuatro carabineros de Rancagua por red de receptación y blanqueo de vehículos robados: quedan desvinculados y la Fiscalía pide ampliar la detención](src/content/events/2026/10/20261001-6.md) — 6 fuentes
 - [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 9 fuentes
-- [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 10 fuentes
+- [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 12 fuentes
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
-- [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 9 fuentes
+- [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 20 fuentes
 
 ## 2025
 

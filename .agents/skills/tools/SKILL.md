@@ -312,11 +312,34 @@ descarga el audio y lo transcribe con Whisper.
 
 | Plataforma | Estado | Método |
 | --- | --- | --- |
-| YouTube | ✅ | Subtítulos manuales/auto-generados (yt-dlp) |
+| YouTube | ✅ | Subtítulos manuales/auto-generados (yt-dlp) — ⚠️ sin subtítulos **no** cae a Whisper, ver fallback manual abajo |
 | TikTok | ✅ | Download audio + Whisper transcription |
 | Instagram | ✅ | Download audio + Whisper transcription |
 | Twitter/X | ✅ | Download audio + Whisper transcription |
 | Facebook | ✅ | Download audio + Whisper transcription |
+
+**Fallback: YouTube SIN subtítulos.** La rama de Whisper del script solo se dispara para
+plataformas distintas de YouTube; con `--list` saliendo en `has no subtitles` / `has no
+automatic captions` hay que hacerlo a mano (los videos de gobierno en vivo —charlas de
+ministros, encuentros-sectoriales— suelen venir sin subtítulos):
+
+```bash
+# 1. Metadatos + audio
+yt-dlp --print "%(title)s|||%(duration)s|||%(upload_date)s|||%(channel)s" "<URL>"
+yt-dlp -f bestaudio/best -x --audio-format mp3 -o tmp/yt/<id>.%(ext)s "<URL>"
+
+# 2. faster-whisper (ya instalado; `whisper`/`whisper-cli` no están)
+#    ~large-v3 int8 en CPU ≈ 12 s de carga + ~1 s por 2 s de audio (26 min ≈ 20 min)
+python tmp/yt/transcribe.py tmp/yt/<id>.mp3 tmp/yt/<id>.txt es
+```
+
+Mínimo del script: `WhisperModel("large-v3", device="cpu", compute_type="int8")` +
+`vad_filter=True` (los silencios largos del audio de sala ralentizan sin necesidad) +
+`condition_on_previous_text=False` (evita que un error temprano se propague en bucle).
+Salida recomendada `[mm:ss] texto` por línea para citar con timestamp. Guardar siempre en
+`tmp/` (gitignored). Para publicar el resultado, corregir a mano los errores de oído
+inequívocos (nombres propios, siglas) y marcar `[?]` lo dudoso: la salida de Whisper no es
+citable tal cual.
 
 **Cadena de backends de Whisper** (el script prueba en orden hasta encontrar uno disponible):
 
