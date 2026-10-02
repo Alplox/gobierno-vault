@@ -38,24 +38,24 @@
 
 1. Para texto, autor y fecha usa el oEmbed oficial sin autenticación:
 
-   `https://publish.x.com/oembed?url=<URL_X_URL_ENCODADA>`
+   `<https://publish.x.com/oembed?url=<URL_X_URL_ENCODEADA>>`
 
 2. Para métricas, hilo y respuestas usa FxTwitter v2, enviando siempre un `User-Agent` no vacío:
 
-   - Post: `https://api.fxtwitter.com/2/status/<ID>`
-   - Hilo: `https://api.fxtwitter.com/2/thread/<ID>`
-   - Conversación: `https://api.fxtwitter.com/2/conversation/<ID>?ranking_mode=likes`
-   - Timeline: `https://api.fxtwitter.com/2/profile/<HANDLE>/statuses`
+   - Post: `<https://api.fxtwitter.com/2/status/<ID>>`
+   - Hilo: `<https://api.fxtwitter.com/2/thread/<ID>>`
+   - Conversación: `<https://api.fxtwitter.com/2/conversation/<ID>?ranking_mode=likes>`
+   - Timeline: `<https://api.fxtwitter.com/2/profile/<HANDLE>/statuses>`
 
    La respuesta de `conversation` contiene `status`, `thread`, `replies`, `author` y `cursor.bottom`. Cada reply incluye URL original de X, texto, autor, fecha y contadores. Paginar solo cuando se necesite una muestra más amplia; no automatizar la descarga completa de una conversación grande.
 
 3. Para una muestra pequeña de respuestas visibles:
 
-   `https://markdown.new/https://x.com/<HANDLE>/status/<ID>`
+   `<https://markdown.new/<https://x.com/<HANDLE>/status/<ID>>`
 
 4. Para el post que **difunde un artículo** (titular, URL de destino y miniatura van en la tarjeta, no en el texto), el endpoint de sindicación de X entrega el JSON completo sin autenticación ni login wall:
 
-   `https://cdn.syndication.twimg.com/tweet-result?id=<ID>&lang=es`
+   `<https://cdn.syndication.twimg.com/tweet-result?id=<ID>&lang=es>`
 
    Devuelve `text`, `created_at` en ISO UTC, `favorite_count`, `conversation_count` y `card` con `expanded_url` (la URL original expandida, nunca la de `t.co`), `description` e imagen. Es la vía más barata para citar un post cuyo valor es la nota que enlaza, cuando `r.jina.ai` bloquea `x.com` (lo hace por rate-limit de abuso, no por el post) y FxTwitter no está disponible.
 
@@ -63,10 +63,10 @@
 
 `nitter.cf` y `xitter.cf` son frontends teapawt y actualmente exponen búsqueda, perfiles, timelines, replies y RSS:
 
-- `https://nitter.cf/<HANDLE>`
-- `https://nitter.cf/search?f=tweets&q=<CONSULTA>`
-- `https://nitter.cf/<HANDLE>/rss`
-- `https://nitter.cf/<HANDLE>/status/<ID>`
+- `<https://nitter.cf/<HANDL>E>>`
+- `<https://nitter.cf/search?f=tweets&q=<CONSULTA>>`
+- `<https://nitter.cf/<HANDLE>/rss>`
+- `<https://nitter.cf/<HANDLE>/status/<ID>>`
 
 Son **fallbacks volátiles**, no infraestructura estable. El proyecto Nitter recibió una intimación legal de X en agosto de 2026 y varias instancias fueron suspendidas o bloqueadas.
 
@@ -76,29 +76,29 @@ Usar poco volumen, rotar si aparece 403/429/captcha y volver al endpoint oficial
 
 ### Lectura de un post
 
-1. `https://embed.reddit.com/r/<SUBREDDIT>/comments/<ID>/<SLUG>/` entrega el post público y permite comprobar su puntaje.
+1. `<https://embed.reddit.com/r/<SUBREDDIT>/comments/<ID>/<SLUG>/>` entrega el post público y permite comprobar su puntaje.
 2. Para limpiar post y comentarios:
 
-   `https://defuddle.md/https://embed.reddit.com/r/<SUBREDDIT>/comments/<ID>/<SLUG>/`
+   `<https://defuddle.md/<https://embed.reddit.com/r/<SUBREDDIT>/comments/<ID>/<SLUG>/>`
 
    Defuddle entrega texto, autor, fecha y permalink de cada comentario, pero no todos los puntajes.
 3. El oEmbed oficial sirve como comprobación mínima de autor/título:
 
-   `https://www.reddit.com/oembed?url=<URL_REDDIT_URL_ENCODADA>`
+   `<https://www.reddit.com/oembed?url=<URL_REDDIT_URL_ENCODEADA>>`
 
 ### Búsqueda y puntajes
 
 El catálogo vigente está en:
 
-`https://raw.githubusercontent.com/redlib-org/redlib-instances/main/instances.json`
+`<https://raw.githubusercontent.com/redlib-org/redlib-instances/main/instances.json>`
 
 Para una búsqueda pública usar una instancia Redlib del catálogo y envolverla con Jina:
 
-`https://r.jina.ai/https://<HOST_REDLIB>/r/<SUBREDDIT>/search?q=<CONSULTA>&restrict_sr=on&sort=new&t=month`
+`<https://r.jina.ai/<https://<HOST_REDLIB>/r/<SUBREDDIT>/search?q=<CONSULTA>&restrict_sr=on&sort=new&t=month>`
 
 Para recuperar puntajes de comentarios:
 
-`https://r.jina.ai/https://<HOST_REDLIB>/r/<SUBREDDIT>/comments/<ID>/<SLUG>/`
+`<https://r.jina.ai/<https://<HOST_REDLIB>/r/<SUBREDDIT>/comments/<ID>/<SLUG>/>`
 
 Los puntajes pueden variar entre instancias por caché. Si el post y el comentario no coinciden con la captura original, conservar el texto/autor/fecha y omitir el puntaje en vez de inventar una cifra.
 
@@ -108,23 +108,23 @@ No usar mirrors undelete para completar comentarios eliminados o removidos.
 
 ### Método primario
 
-`https://markdown.new/https://www.instagram.com/p/<SHORTCODE>/`
+`<https://markdown.new/<https://www.instagram.com/p/<SHORTCODE>/>`
 
 La salida puede incluir caption, fecha, likes, cantidad de comentarios, usuarios, texto y permalinks como:
 
-`https://www.instagram.com/p/<SHORTCODE>/c/<COMMENT_ID>/`
+`<https://www.instagram.com/p/<SHORTCODE>/c/<COMMENT_ID>/>`
 
-Usar `https://instagram.com/reel/<SHORTCODE>/` cuando el post sea un reel. Para cargar más comentarios, usar un navegador público o Browsertrix; no asumir que la primera tanda es representativa.
+Usar `<https://instagram.com/reel/<SHORTCODE>/>` cuando el post sea un reel. Para cargar más comentarios, usar un navegador público o Browsertrix; no asumir que la primera tanda es representativa.
 
 ### Fallback
 
-`https://defuddle.md/https://www.instagram.com/p/<SHORTCODE>/`
+`<https://defuddle.md/<https://www.instagram.com/p/<SHORTCODE>/>`
 
 Defuddle suele recuperar caption, autor, fecha y contadores, pero no todos los comentarios. `r.jina.ai` puede ser una pista adicional, pero queda sujeto a bloqueos por abuso del dominio.
 
 ### Límites
 
-El endpoint oficial `https://graph.facebook.com/v26.0/instagram_oembed?url=<URL>` se usa solo para verificar/embeber una publicación pública. Meta limita su uso a embeddings; no usarlo como API de extracción de captions o comentarios. `instaloader` es útil para archivo, pero los comentarios requieren una sesión y pueden exponer la cuenta: solo con perfil dedicado y autorización explícita.
+El endpoint oficial `<https://graph.facebook.com/v26.0/instagram_oembed?url=<URL>>` se usa solo para verificar/embeber una publicación pública. Meta limita su uso a embeddings; no usarlo como API de extracción de captions o comentarios. `instaloader` es útil para archivo, pero los comentarios requieren una sesión y pueden exponer la cuenta: solo con perfil dedicado y autorización explícita.
 
 ## Facebook
 
@@ -151,16 +151,16 @@ Defuddle suele recuperar el cuerpo del post y enlaces de imagen. Jina puede devo
 
 ### Metadatos del video
 
-- oEmbed oficial: `https://www.tiktok.com/oembed?url=<URL_TIKTOK>`
+- oEmbed oficial: `<https://www.tiktok.com/oembed?url=<URL_TIKTOK>>`
 - `yt-dlp --skip-download --no-warnings --print "%(id)s | %(timestamp)s | %(uploader)s | %(view_count)s | %(like_count)s | %(comment_count)s | %(share_count)s | %(webpage_url)s" <URL>`
 
 ### Comentarios
 
 El wrapper público de TikWM acepta URLs de TikTok y no requiere clave para esta prueba de lectura:
 
-- Video: `https://www.tikwm.com/api/?url=<URL_TIKTOK_URL_ENCODADA>&hd=1`
-- Comentarios: `https://www.tikwm.com/api/comment/list?url=<URL_TIKTOK_URL_ENCODADA>&count=20&cursor=0`
-- Replies: `https://www.tikwm.com/api/comment/reply?comment_id=<COMMENT_ID>&video_id=<VIDEO_ID>&count=20&cursor=0`
+- Video: `<https://www.tikwm.com/api/?url=<URL_TIKTOK_URL_ENCODADA>&hd=1>`
+- Comentarios: `<https://www.tikwm.com/api/comment/list?url=<URL_TIKTOK_URL_ENCODADA>&count=20&cursor=0>`
+- Replies: `<https://www.tikwm.com/api/comment/reply?comment_id=<COMMENT_I>D>&video_id=<VIDEO_ID>&count=20&cursor=0>`
 
 Los comentarios incluyen `id`, `text`, `create_time`, `digg_count`, `reply_total` y `user.unique_id`. Usar el ID para el permalink:
 
@@ -193,29 +193,29 @@ for comment in info.get("comments") or []:
 
 El permalink canónico es:
 
-`https://www.youtube.com/watch?v=<VIDEO_ID>&lc=<COMMENT_ID>`
+`<https://www.youtube.com/watch?v=<VIDEO_ID>&lc=<COMMENT_ID>>`
 
 La API oficial `commentThreads.list` y `comments.list` es una alternativa con credenciales y cuota. El texto plano oficial puede normalizar enlaces; contrastar con la página o con el clipping cuando la cita sea sensible.
 
 ## Referencias APIs y extractores
 
-- [X oEmbed API](https://docs.x.com/x-for-websites/oembed-api) y [FxEmbed/FxTwitter](https://github.com/FxEmbed/FxEmbed)
-- [Redlib](https://github.com/redlib-org/redlib) y su [catálogo de instancias](https://github.com/redlib-org/redlib-instances)
-- [Meta oEmbed Post](https://developers.facebook.com/docs/graph-api/reference/oembed-post)
-- [TikTok Embed Player](https://developers.tiktok.com/docs/en/embed-player)
-- [YouTube Data API: comments.list](https://developers.google.com/youtube/v3/docs/comments/list)
+- [X oEmbed API](<https://docs.x.com/x-for-websites/oembed-api>) y [FxEmbed/FxTwitter](<https://github.com/FxEmbed/FxEmbed>)
+- [Redlib](<https://github.com/redlib-org/redlib>) y su [catálogo de instancias](<https://github.com/redlib-org/redlib-instances>)
+- [Meta oEmbed Post](<https://developers.facebook.com/docs/graph-api/reference/oembed-post>)
+- [TikTok Embed Player](<https://developers.tiktok.com/docs/en/embed-player>)
+- [YouTube Data API: comments.list](<https://developers.google.com/youtube/v3/docs/comments/list>)
 
 ## Preservación: Browsertrix y Auto Archiver
 
 ### Browsertrix
 
-[Browsertrix](https://browsertrix.com/) usa un navegador real y produce WACZ. Sus comportamientos específicos cubren Bluesky, Facebook, Instagram, Telegram, TikTok, X y YouTube; en Facebook, Instagram, TikTok y YouTube intentan expandir comentarios y medios. Es la opción recomendada para una sola publicación pública cuando se necesita una captura reproducible o un archivo WACZ.
+[Browsertrix](<https://browsertrix.com/>) usa un navegador real y produce WACZ. Sus comportamientos específicos cubren Bluesky, Facebook, Instagram, Telegram, TikTok, X y YouTube; en Facebook, Instagram, TikTok y YouTube intentan expandir comentarios y medios. Es la opción recomendada para una sola publicación pública cuando se necesita una captura reproducible o un archivo WACZ.
 
 Usar `Single Page` + `smart scoping` cuando corresponda. El WACZ conserva HTML, recursos, capturas y estado de sesión: **no compartir un WACZ creado con cookies**. Si se necesita login, usar una cuenta desechable y un perfil aislado, nunca el perfil personal del agente.
 
 ### Bellingcat Auto Archiver
 
-[Auto Archiver](https://github.com/bellingcat/auto-archiver) es de código abierto y mantiene extractores para redes, medios, hashes y metadatos. Preferirlo para lotes, eventos de crisis o posts que van a desaparecer; no usarlo como reemplazo de una cita estructurada. Puede producir WACZ, capturas, hashes y un informe de estado.
+[Auto Archiver](<https://github.com/bellingcat/auto-archiver>) es de código abierto y mantiene extractores para redes, medios, hashes y metadatos. Preferirlo para lotes, eventos de crisis o posts que van a desaparecer; no usarlo como reemplazo de una cita estructurada. Puede producir WACZ, capturas, hashes y un informe de estado.
 
 ### Orden de preservación
 

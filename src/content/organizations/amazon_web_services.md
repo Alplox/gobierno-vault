@@ -8,5 +8,5 @@ notas: División de infraestructura de Amazon. En Chile sostiene el proyecto Cen
   calificado favorablemente por la Comisión de Evaluación de la Región
   Metropolitana en julio de 2024, con una inversión estimada de US$205 millones.
   La filial chilena, Servicios Amazon Data Services Chile SpA, es la titular del
-  proyecto (evento 20260406-3).
+  proyecto (eventos 20240712-1 y 20260406-3).
 ---

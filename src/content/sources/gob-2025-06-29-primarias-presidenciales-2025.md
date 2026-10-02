@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Gob.cl
+medio: Gobierno de Chile
 titulo: "Elecciones primarias presidenciales 2025: cuándo son y cómo funcionan"
 autor: Gobierno de Chile
 fecha: 2025-06-29

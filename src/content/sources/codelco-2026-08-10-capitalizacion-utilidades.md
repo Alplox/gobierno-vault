@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Codelco
+medio: Corporación Nacional del Cobre de Chile
 titulo: Codelco capitalizará por primera vez el 100% de sus utilidades anuales
 autor: Codelco
 fecha: 2026-08-10

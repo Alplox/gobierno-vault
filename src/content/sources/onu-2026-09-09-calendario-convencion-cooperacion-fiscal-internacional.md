@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Naciones Unidas
+medio: Organización de las Naciones Unidas (ONU)
 titulo: "Intergovernmental Negotiations for UN Framework Convention on International Tax Cooperation"
 autor: Naciones Unidas, Oficina de Financiamiento para el Desarrollo Sostenible
 fecha: 2026-09-09

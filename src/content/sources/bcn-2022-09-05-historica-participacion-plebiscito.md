@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Con histórica participación electoral propuesta de nueva Constitución fue rechazada
 autor: Biblioteca del Congreso Nacional
 fecha: 2022-09-05

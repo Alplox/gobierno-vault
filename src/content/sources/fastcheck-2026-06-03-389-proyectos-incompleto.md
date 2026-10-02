@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Tenemos 389 proyectos en calificación ambiental por cerca de 89 mil
   millones de dólares (veredicto Incompleto)
 autor: Fast Check CL

@@ -1,6 +1,6 @@
 ---
 tipo: documento_oficial
-medio: Servicio Electoral (Servel)
+medio: Servicio Electoral
 titulo: Programa de Gobierno de José Antonio Kast - La Fuerza del Cambio
 autor: Partido Republicano
 fecha: 2025-08-22

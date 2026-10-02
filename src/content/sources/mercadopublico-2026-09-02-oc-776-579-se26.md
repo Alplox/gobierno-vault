@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-579-SE26: Suministro de carnes de cerdo y vacuno"
 autor: Presidencia de la República
 fecha: 2026-09-02

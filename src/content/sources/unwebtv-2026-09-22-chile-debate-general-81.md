@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Naciones Unidas
+medio: Organización de las Naciones Unidas (ONU)
 titulo: "Chile - General Debate, 81st Session (UN Web TV)"
 autor: Naciones Unidas
 fecha: 2026-09-22

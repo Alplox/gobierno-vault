@@ -7,10 +7,12 @@ const srcRoot = join(root, 'src');
 const dataDir = join(srcRoot, 'data');
 const eventsDir = join(srcRoot, 'content', 'events');
 
-function readYaml(filename) {
-  // Fuente de verdad: colecciones markdown (monolito eliminado ago-2026).
-  const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
-  const coll = map[filename];
+// Lectura por nombre lógico de colección. `people`/`organizations`/`cifras`/`sources`/`topics`
+// viven en src/content/<coll>/*.md (el monolito src/data/*.yaml se eliminó en ago-2026 y ya no
+// existe — NO reintroducirlo). `dataDir` solo se usa para la excepción YAML (`colectivos`, etc.).
+function readCollection(name) {
+  const map = { sources: 'sources', topics: 'topics' };
+  const coll = map[name];
   if (coll) {
     const dir = join(process.cwd(), 'src', 'content', coll);
     const rec = {};
@@ -21,18 +23,18 @@ function readYaml(filename) {
       if (m) rec[id] = YAML.parse(m[1]);
     }
     if (Object.keys(rec).length) return rec;
-    throw new Error('fallback failed');
+    throw new Error(`sin entradas en src/content/${coll}/*.md`);
   }
-  if (filename === 'entities.yaml') {
+  if (name === 'entities') {
     const rec = { people: {}, organizations: {}, cifras: {} };
     let found=false;
     for (const [d,k] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
       for (const f of readdirSync(d).filter(f=>f.endsWith('.md'))) { const id=f.replace(/\.md$/,''); const raw=readFileSync(join(d,f),'utf8'); const m=raw.match(/^---\r?\n([\s\S]*?)\r?\n---/); if(m){rec[k][id]=YAML.parse(m[1]); found=true;} }
     }
     if(found) return rec;
-    throw new Error('fallback failed');
+    throw new Error('sin entradas en src/content/people|organizations|cifras/*.md');
   }
-  return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+  return YAML.parse(readFileSync(join(dataDir, `${name}.yaml`), 'utf8')) ?? {};
 }
 
 function walkMd(dir) {
@@ -172,21 +174,21 @@ for (const event of events) {
 // Load entities for stats (with error handling)
 let entitiesData, sourcesData, topicsData;
 try {
-  entitiesData = readYaml('entities.yaml');
+  entitiesData = readCollection('entities');
 } catch (e) {
-  console.warn('⚠ Error leyendo people/organizations/cifras (*.md + fallback entities.yaml):', e.message);
+  console.warn('⚠ Error leyendo people/organizations/cifras (src/content/*.md):', e.message);
   entitiesData = { people: {}, organizations: {}, cifras: {} };
 }
 try {
-  sourcesData = readYaml('sources.yaml');
+  sourcesData = readCollection('sources');
 } catch (e) {
-  console.warn('⚠ Error leyendo sources (*.md + fallback sources.yaml):', e.message);
+  console.warn('⚠ Error leyendo sources (src/content/sources/*.md):', e.message);
   sourcesData = {};
 }
 try {
-  topicsData = readYaml('topics.yaml');
+  topicsData = readCollection('topics');
 } catch (e) {
-  console.warn('⚠ Error leyendo topics (*.md + fallback topics.yaml):', e.message);
+  console.warn('⚠ Error leyendo topics (src/content/topics/*.md):', e.message);
   topicsData = {};
 }
 

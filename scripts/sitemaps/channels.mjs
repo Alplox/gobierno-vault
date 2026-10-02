@@ -1,0 +1,239 @@
+/**
+ * channels.mjs — Registro de canales de YouTube del catálogo (`sitemaps/youtube_channels/<slug>/`).
+ *
+ * Viven AQUÍ, no en `media.mjs`: los mapas de dominios (`mediaHosts()`,
+ * CATALOG_MEDIO_BY_DOMAIN en add-source.mjs, watchlist, probe, news-search)
+ * asumen endpoints de sitemap (robots/index/extra) y un canal no es un dominio.
+ * Cada entrada define el canal para `scripts/sitemaps/youtube.mjs` (yt-dlp):
+ *   channel    → handle (@T13_cl, con @). Alternativa a channelId.
+ *   channelId  → id del canal (cacheado: evita resolver el handle cada sync).
+ *                Basta uno de los dos; el id es más estable y es lo que traen
+ *                las curadurías externas (Alplox/json-teles, countries/cl.json).
+ *   tab        → 'videos' | 'streams' | 'shorts', o un array de varios.
+ *                streams/shorts no traen fecha en --flat-playlist; el sync la
+ *                rescata con fetch por video (~1.25 s c/u, solo los que falten).
+ *
+ * El JSONL es el mismo formato que la prensa ({u, d, t, s} + dur/views), así
+ * que el mismo `rg -uu -g '*.jsonl'` cubre ambos. `sync.mjs` une MEDIA +
+ * CHANNELS en un solo registro; `resync.mjs` los salta (refresh bajo demanda);
+ * `index.mjs` los reporta en tabla propia.
+ *
+ * Al agregar un canal: verificar el handle real (los parecidos dan 404 o tabs
+ * vacíos), sincronizar (`pnpm run sitemaps-sync -- <slug>`) y regenerar
+ * índices (`pnpm run sitemaps-index`).
+ */
+export const CHANNELS = {
+  yt_t13: {
+    nombre: 'Teletrece (YouTube)',
+    tipo: 'youtube', // marca el canal: sync.mjs delega en youtube.mjs
+    channel: '@T13_cl', // handle real — NO @teletrece (sin tab de videos) ni @t13 (404)
+    channelId: 'UCsRnhjcUCR78Q3Ud6OXCTNg', // cacheado: evita resolver el handle cada sync
+    tab: 'videos', // videos | streams | shorts (shorts sin fecha → opt-in)
+  },
+  yt_24horas: {
+    nombre: '24 Horas (YouTube)',
+    tipo: 'youtube',
+    channel: '@24Horas_TVNChile', // "24 Horas - TVN Chile" (verificado por channel_id)
+    channelId: 'UCTXNz3gjAypWp3EhlIATEJQ',
+    tab: 'videos',
+  },
+  yt_meganoticias: {
+    nombre: 'Meganoticias (YouTube)',
+    tipo: 'youtube',
+    channel: '@Meganoticiasoficial', // "Meganoticias" (verificado por channel_id)
+    channelId: 'UCkccyEbqhhM3uKOI6Shm-4Q',
+    tab: 'videos',
+  },
+  yt_theclinic: {
+    nombre: 'The Clinic (YouTube)',
+    tipo: 'youtube',
+    channel: '@theclinic_cl', // "The Clinic" (verificado por channel_id)
+    channelId: 'UCKr6ve0z-_k1bC_jW3TAWtA',
+    tab: 'videos',
+  },
+  yt_gobierno: {
+    nombre: 'Gobierno de Chile (YouTube)',
+    tipo: 'youtube',
+    channel: '@GobiernoDeChile', // canal oficial (verificado por channel_id)
+    channelId: 'UC_5Sh9VhJlgCspl4mLM2duw',
+    tab: 'videos',
+  },
+  yt_boric: {
+    nombre: 'Gabriel Boric (YouTube)',
+    tipo: 'youtube',
+    channel: '@gabrielboricpresidente', // "Gabriel Boric Font" (verificado por channel_id)
+    channelId: 'UC0gQkOPt6VVvJGO9mDy0ikw',
+    tab: 'videos',
+  },
+  yt_pinera: {
+    nombre: 'Sebastián Piñera (YouTube)',
+    tipo: 'youtube',
+    channel: '@sebastianpinera', // (verificado por channel_id)
+    channelId: 'UCOltFBLjyQORr3VzE7NuRqQ',
+    tab: 'videos',
+  },
+  yt_kast: {
+    nombre: 'José Antonio Kast (YouTube)',
+    tipo: 'youtube',
+    channel: '@JoséAntonioKastOficial', // (verificado por channel_id)
+    channelId: 'UCGLRRRKMp4K1AKJabf8OeEg',
+    tab: 'videos',
+  },
+  yt_biobio: {
+    nombre: 'Bio Bío (YouTube)',
+    tipo: 'youtube',
+    channel: '@BioBioChile', // "Bio Bio" (verificado por channel_id)
+    channelId: 'UCuvM3c8rmdApmk-g22shZ7w',
+    tab: 'videos',
+  },
+  yt_df: {
+    nombre: 'Diario Financiero (YouTube)',
+    tipo: 'youtube',
+    channel: '@DiarioFinancieroTV', // "Diario Financiero" (verificado por channel_id)
+    channelId: 'UClsjSNCR-0KAFw0v5uVMCHQ',
+    tab: 'videos',
+  },
+  yt_elmostrador: {
+    nombre: 'El Mostrador (YouTube)',
+    tipo: 'youtube',
+    channel: '@ElMostradorvodcast', // "El Mostrador" (nota: el handle dice "vodcast"; verificado por channel_id)
+    channelId: 'UCAOZvFm0xSBcom35r6-mcEA',
+    tab: 'videos',
+  },
+  yt_adnradio: {
+    nombre: 'ADN Radio (YouTube)',
+    tipo: 'youtube',
+    channel: '@adnradio', // "ADN Chile" (verificado por channel_id)
+    channelId: 'UCczkrFICr0xEgDsk51zZojA',
+    tab: 'videos',
+  },
+  yt_viax: {
+    nombre: 'Viax (YouTube)',
+    tipo: 'youtube',
+    channel: '@Viax', // el handle se canonicalizó a @Viax (verificado por channel_id)
+    channelId: 'UCEAfJxzcEzDhDi5-bm81KJg',
+    tab: 'videos',
+  },
+  yt_presidencia: {
+    nombre: 'Presidencia de la República (YouTube)',
+    tipo: 'youtube',
+    channel: '@Presidencia_cl', // canal oficial (verificado por channel_id)
+    channelId: 'UCTZvq1-aBRTTBzYgKMLhUnQ',
+    // Acepta string o array. /streams y /shorts no traen fecha en
+    // --flat-playlist, pero el sync la rescata con fetch por video (s:yt-exact).
+    tab: ['videos', 'streams', 'shorts'],
+  },
+  yt_cnnchile: {
+    nombre: 'CNN Chile (YouTube)',
+    tipo: 'youtube',
+    channel: '@cnnchile', // handle sin @ en la URL, canonicalizado (verificado por channel_id)
+    channelId: 'UCpOAcjJNAp0Y0fhznRrXIJQ',
+    tab: 'videos',
+  },
+  yt_agricultura: {
+    nombre: 'Agricultura TV (YouTube)',
+    tipo: 'youtube',
+    channel: '@agriculturatv', // (verificado por channel_id)
+    channelId: 'UCBkkqRIsRTbio4W7MwAZiEw',
+    tab: 'videos',
+  },
+  yt_chv: {
+    nombre: 'CHV Noticias (YouTube)',
+    tipo: 'youtube',
+    channel: '@CHVNoticiasTV', // (verificado por channel_id)
+    channelId: 'UCRsUoZYC1ULUspipMRnMhwg',
+    tab: 'videos',
+  },
+  yt_delosquesobran: {
+    nombre: 'La Voz de los que Sobran (YouTube)',
+    tipo: 'youtube',
+    channel: '@delosquesobran', // "La Voz De Los Que Sobran" (verificado por channel_id)
+    channelId: 'UCEnSee5vPeNAm2EFpb_UaRw',
+    tab: 'videos',
+  },
+  yt_radioinfinita: {
+    nombre: 'Radio Infinita (YouTube)',
+    tipo: 'youtube',
+    channel: '@radioinfinitaFM', // "Radio Infinita " (espacio final en el nombre real; verificado por channel_id)
+    channelId: 'UCqRSHnlmSRcHEnr0TjmmKow',
+    tab: 'videos',
+  },
+  yt_radiousach: {
+    nombre: 'Radio Usach (YouTube)',
+    tipo: 'youtube',
+    channel: '@RadioUsachoficial', // "Radio Usach" (verificado por channel_id)
+    channelId: 'UChVNqCo0-9mtYq2QNX-hhrA',
+    tab: 'videos',
+  },
+  yt_voceriagob: {
+    nombre: 'Vocería de Gobierno (YouTube)',
+    tipo: 'youtube',
+    channel: '@voceriadegobierno', // "Vocería de Gobierno" (verificado por channel_id)
+    channelId: 'UCtpl7gqF1PM3jiYga8xIN7g',
+    tab: 'videos',
+  },
+  yt_exante: {
+    nombre: 'Ex-Ante (YouTube)',
+    tipo: 'youtube',
+    channel: '@ex-ante', // "Ex-Ante" (verificado por channel_id)
+    channelId: 'UChjwgLHnGrlxdsFRkiUWn1Q',
+    tab: 'videos',
+  },
+  yt_latercera: {
+    nombre: 'La Tercera (YouTube)',
+    tipo: 'youtube',
+    channel: '@latercera', // "La Tercera" (verificado por channel_id)
+    channelId: 'UCEQ_IiWGNvyvwSF3Sd-aQFA',
+    tab: 'videos',
+  },
+  yt_todonoticias: {
+    nombre: 'Todo Noticias (YouTube)',
+    tipo: 'youtube',
+    channel: '@todonoticias', // "Todo Noticias" (verificado por channel_id)
+    channelId: 'UCj6PcyLvpnIRT_2W_mwa9Aw',
+    tab: 'videos',
+  },
+
+  // --- Institucionales: fuente primaria del Estado, no prensa. -------------
+  // IDs desde la curaduría Alplox/json-teles (countries/cl.json, categoria
+  // `legislative`), verificados uno a uno: el nombre del canal no coincide con
+  // el del medio y varios no son adivinables por handle.
+  yt_camara: {
+    nombre: 'Cámara de Diputados (YouTube)',
+    tipo: 'youtube',
+    // "Diputadas y Diputados de Chile" — NO el handle @Camaradediputados, que
+    // resuelve a un canal con archivos .avi de 1979.
+    channelId: 'UCYd5k2TyOyOmUJNx0SH17KA',
+    tab: 'videos',
+  },
+  yt_senado: {
+    nombre: 'Senado (TV Senado, YouTube)',
+    tipo: 'youtube',
+    channelId: 'UC4GJ43VNn4AYfiYa0RBCHQg', // "TVSenado Chile"
+    tab: 'videos',
+  },
+  yt_poderjudicial: {
+    nombre: 'Poder Judicial (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCo0C1-ocUG9a0Yb3iO0V-xg', // "Poder Judicial Chile"
+    tab: 'videos',
+  },
+  yt_tconstitucional: {
+    nombre: 'Tribunal Constitucional (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCZaI-1N1oaGb-U8K2VNztjg', // "Tribunal Constitucional de Chile"
+    tab: 'videos',
+  },
+  yt_servel: {
+    nombre: 'Servicio Electoral (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCB8s6rETjmWgXrp_BxyXqdg', // "Servicio Electoral de Chile"
+    tab: 'videos',
+  },
+  yt_pc: {
+    nombre: 'Partido Comunista de Chile (YouTube)',
+    tipo: 'youtube',
+    channelId: 'UCDsK-sQQrMpWJT3auRQh6BA', // "Communist Party of Chile"
+    tab: 'videos',
+  },
+};

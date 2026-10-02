@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: "Votación de la Resolución N°245: rechazo a la utilización de noticias
   falsas o Fake News en política"
 autor: Cámara de Diputados

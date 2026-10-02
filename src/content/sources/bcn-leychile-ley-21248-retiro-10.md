@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.248: Reforma Constitucional que permite el retiro excepcional de
   los fondos acumulados de capitalización individual"
 autor: BCN

@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Artículo 154 del DFL 3/1997 (Ley General de Bancos): secreto bancario y
   su levantamiento"
 autor: Biblioteca del Congreso Nacional

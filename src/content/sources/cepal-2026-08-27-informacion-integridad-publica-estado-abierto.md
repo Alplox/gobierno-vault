@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: CEPAL
+medio: Comisión Económica para América Latina y el Caribe (CEPAL)
 titulo: "Integridad pública y Estado abierto para devolver la confianza ciudadana en las instituciones públicas"
 autor: CEPAL
 fecha: 2026-08-28

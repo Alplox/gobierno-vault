@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Amnistía Internacional Chile
+medio: Amnistía Internacional
 titulo: "Chile: No al indulto para excarabineros y exmilitares condenados"
 autor: Amnesty International
 fecha: 2026-03-19

@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.242: Establece un beneficio para los trabajadores independientes
   que indica (Bono y Préstamo Solidario para independientes con boletas de
   honorarios)"

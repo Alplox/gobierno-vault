@@ -1,6 +1,6 @@
 ---
 tipo: video
-medio: Presidencia de la República
+medio: Presidencia de la República de Chile
 titulo: Presidente Kast encabeza largada del Mundial de Rally en Concepción
 autor: Presidencia de la República de Chile
 fecha: 2026-09-10

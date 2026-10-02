@@ -135,26 +135,26 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 > Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.
 
-**Total de eventos:** 1586
+**Total de eventos:** 1692
 
-**Cobertura de fuentes:** 1115 de 1586 eventos con 3+ fuentes (471 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 1221 de 1692 eventos con 3+ fuentes (471 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 1225
-- 2025: 78
-- 2024: 40
-- 2023: 32
-- 2022: 28
+- 2026: 1314
+- 2025: 79
+- 2024: 42
+- 2023: 33
+- 2022: 34
 - 2021: 20
-- 2020: 38
-- 2019: 40
+- 2020: 41
+- 2019: 41
 - 2018: 5
 - 2017: 2
 - 2016: 4
 - 2015: 11
 - 2014: 7
 - 2013: 2
-- 2012: 4
+- 2012: 5
 - 2011: 5
 - 2010: 7
 - 2009: 6
@@ -170,41 +170,41 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - 1981: 2
 - 1977: 1
 - 1976: 1
-- 1975: 3
+- 1975: 5
 - 1973: 9
 - 1972: 1
 - 1971: 1
 - 1969: 2
 
 **Temas más frecuentes (Top 10):**
-- Politica (625)
-- Justicia (453)
-- Economia (311)
-- Defensa y seguridad (307)
-- Administración pública (219)
-- Derechos humanos (202)
-- Relaciones internacionales (149)
-- Proceso legislativo (134)
-- Corrupción (133)
-- Finanzas publicas (122)
+- Politica (642)
+- Justicia (467)
+- Economia (353)
+- Defensa y seguridad (327)
+- Administración pública (228)
+- Derechos humanos (212)
+- Relaciones internacionales (165)
+- Proceso legislativo (143)
+- Finanzas publicas (139)
+- Corrupción (136)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (329)
-- declaracion (227)
-- investigacion (223)
-- reaccion (151)
-- publicacion (149)
-- resultado (141)
+- accion (378)
+- declaracion (242)
+- investigacion (226)
+- reaccion (155)
+- resultado (152)
+- publicacion (150)
 - fallo_judicial (116)
-- anuncio (104)
-- entrevista (39)
-- votacion (37)
+- anuncio (113)
+- entrevista (44)
+- votacion (40)
 
 **Entidades registradas:**
-- Personas: 2541
-- Organizaciones: 1381
-- Cifras: 39
-- Fuentes: 7824
+- Personas: 2655
+- Organizaciones: 1479
+- Cifras: 41
+- Fuentes: 8886
 - Temas: 77
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 

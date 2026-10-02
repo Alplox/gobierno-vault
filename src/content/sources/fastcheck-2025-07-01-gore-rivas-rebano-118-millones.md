@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: GORE de Luciano Rivas pagó 118 millones a consultora vinculada con
   empresa acusada de crear noticias falsas
 autor: ""

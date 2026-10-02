@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-124-SE26: MVC-SUM. Productos cárneos y derivados STGO 776-16-LQ25"
 autor: Presidencia de la República
 fecha: 2026-02-13

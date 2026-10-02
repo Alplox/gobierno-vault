@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Ministerio del Deporte
+medio: Ministerio del Deporte (Mindep)
 titulo: Presidente José Antonio Kast participa junto al ministro del Deporte en el lanzamiento del WRC Rally Biobío 2026
 autor: Ministerio del Deporte
 fecha: 2026-08-28

@@ -1,6 +1,6 @@
 ---
 tipo: red_social
-medio: X (anteriormente Twitter)
+medio: X (Twitter)
 titulo: "@cepal_onu: Seminario de integridad pública, Estado abierto y confianza ciudadana — 27 de agosto 2026, CEPAL Santiago"
 autor: CEPAL (cuenta @cepal_onu)
 fecha: 2026-08-27

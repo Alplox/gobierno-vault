@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: "Mensaje: reforma constitucional de seguridad pública"
 autor: Gobierno de Chile
 fecha: 2026-08-10

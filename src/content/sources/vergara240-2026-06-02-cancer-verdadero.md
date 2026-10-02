@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Es verdadero que en Chile una de cada cuatro personas fallece por
   causa del cáncer
 autor: Redacción VerificaUDP

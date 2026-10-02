@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: Presidente Kast y Presidente Lee Jae Myung encabezan firma de acuerdos
   de cooperación en minería, seguridad y antártica
 autor: Dirección de Prensa, Presidencia

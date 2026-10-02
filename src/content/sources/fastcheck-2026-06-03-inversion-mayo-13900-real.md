@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: En mayo alcanzamos el mayor monto de inversión aprobada en 11 años,
   13.900 millones de dólares (veredicto Real)
 autor: Fast Check CL

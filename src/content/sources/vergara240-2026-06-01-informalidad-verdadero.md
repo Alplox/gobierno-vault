@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Es verdadero que una de cada cuatro personas trabaja en la
   informalidad en Chile
 autor: Silvana Campos Hidalgo

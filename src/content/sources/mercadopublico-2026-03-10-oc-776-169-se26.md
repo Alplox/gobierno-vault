@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-169-SE26: CMV - Ser. prod. cambio de mando
   desde licitación 776-5-LE26"
 autor: Presidencia de la República

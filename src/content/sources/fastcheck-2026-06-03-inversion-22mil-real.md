@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Solo desde el 11 de marzo han ingresado más de 22 mil millones de
   dólares a la inversión en Chile (veredicto Real)
 autor: Fast Check CL

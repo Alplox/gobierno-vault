@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: "Tramitación del proyecto de ley Boletín 18.216-05: Ley de
   Reconstrucción Nacional y Desarrollo Económico y Social"
 autor: Cámara de Diputados

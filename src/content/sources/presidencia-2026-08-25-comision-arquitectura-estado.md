@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: "Presidente Kast presenta Comisión Nueva Arquitectura del Estado: tendrá
   120 días para proponer nueva estructura ministerial"
 autor: Prensa Presidencia

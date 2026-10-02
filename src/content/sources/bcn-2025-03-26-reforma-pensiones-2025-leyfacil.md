@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: Reforma de Pensiones de 2025
 fecha: 2025-03-26
 url: https://www.bcn.cl/api-leyfacil/servicio/ObtenerGuiaPublicadaHTML?uri=reforma-de-pensiones-de-2025

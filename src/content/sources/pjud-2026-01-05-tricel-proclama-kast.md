@@ -1,6 +1,6 @@
 ---
 tipo: periodistica
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: Tricel proclama a José Antonio Kast como Presidente Electo para el
   período 2026-2030
 autor: Poder Judicial

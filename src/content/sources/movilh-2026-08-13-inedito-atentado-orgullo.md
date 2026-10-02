@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Movilh
+medio: Movimiento de Integración y Liberación Homosexual (Movilh)
 titulo: "Inédito atentado contra el Orgullo: multan a la marcha y dictan orden
   de reclusión contra activista del Movilh"
 autor: ""

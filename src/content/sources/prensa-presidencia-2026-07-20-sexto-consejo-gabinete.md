@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Presidencia de Chile
+medio: Presidencia de la República de Chile
 titulo: Palabras de S.E. al encabezar sexto consejo de gabinete
 autor: José Antonio Kast Rist
 fecha: 2026-07-20

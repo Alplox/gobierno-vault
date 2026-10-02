@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-680-TD26: Banderas de escritorio"
 autor: Presidencia de la República
 fecha: 2026-09-08

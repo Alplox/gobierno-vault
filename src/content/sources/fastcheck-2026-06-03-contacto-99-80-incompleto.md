@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Logramos contactar al 99% de las más de 33 mil personas en lista de
   espera y cerca del 80% de avance (veredicto Incompleto)
 autor: Fast Check CL

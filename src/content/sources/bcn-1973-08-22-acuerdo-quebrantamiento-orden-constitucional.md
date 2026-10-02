@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Sesion ordinaria N 32 de la Camara de Diputados, Legislatura 1973"
 autor: "Camara de Diputados"
 fecha: 1973-08-22

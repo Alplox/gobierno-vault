@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: En Chile una de cada cuatro muertes tiene la misma causa, el cáncer,
   60 mil diagnósticos y 30 mil fallecidos al año (veredicto Real)
 autor: Fast Check CL

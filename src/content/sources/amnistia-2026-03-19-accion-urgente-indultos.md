@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Amnistía Internacional Chile
+medio: Amnistía Internacional
 titulo: Amnistía Internacional emite 'acción urgente' por riesgo de indulto a ex
   carabineros y militares condenados por graves violaciones de derechos humanos
 autor: Amnistía Internacional Chile

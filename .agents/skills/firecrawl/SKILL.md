@@ -31,9 +31,9 @@ pnpm dlx firecrawl-cli@latest init --all --browser
 This gives you:
 
 - **CLI tools** — `firecrawl search`, `firecrawl scrape`, `firecrawl interact`, `firecrawl parse`, `firecrawl monitor`, `firecrawl research`, `firecrawl ask`, `firecrawl docs-search`, and more
-- **CLI skills** ([`firecrawl/cli`](https://github.com/firecrawl/cli)) — teach the agent how to drive the Firecrawl CLI during its own session: which command to run, when to scrape vs search vs interact, how to chain results, and how to recover when a job fails. Use these when the agent itself needs web data right now.
-- **Build skills** ([`firecrawl/skills`](https://github.com/firecrawl/skills)) — teach the agent how to add Firecrawl to a product's codebase: pick the right API endpoint, install the matching SDK, store `FIRECRAWL_API_KEY` safely, write the call site to match the project's conventions, and ship a smoke-tested integration. Use these when the agent is shipping code that other people will run, not running the agent's own web tools.
-- **Workflow skills** ([`firecrawl/firecrawl-workflows`](https://github.com/firecrawl/firecrawl-workflows)) — turn Firecrawl web data into finished deliverables such as research briefs, SEO audits, lead lists, QA reports, knowledge bases, and design clones. Use these when the agent's job is to produce a finished artifact, not raw extraction or product code.
+- **CLI skills** ([`firecrawl/cli`](<https://github.com/firecrawl/cli>)) — teach the agent how to drive the Firecrawl CLI during its own session: which command to run, when to scrape vs search vs interact, how to chain results, and how to recover when a job fails. Use these when the agent itself needs web data right now.
+- **Build skills** ([`firecrawl/skills`](<https://github.com/firecrawl/skills>)) — teach the agent how to add Firecrawl to a product's codebase: pick the right API endpoint, install the matching SDK, store `FIRECRAWL_API_KEY` safely, write the call site to match the project's conventions, and ship a smoke-tested integration. Use these when the agent is shipping code that other people will run, not running the agent's own web tools.
+- **Workflow skills** ([`firecrawl/firecrawl-workflows`](<https://github.com/firecrawl/firecrawl-workflows>)) — turn Firecrawl web data into finished deliverables such as research briefs, SEO audits, lead lists, QA reports, knowledge bases, and design clones. Use these when the agent's job is to produce a finished artifact, not raw extraction or product code.
 - **Browser auth** — walks the human through sign-in or account creation
 
 The three skill segments map to three different jobs:
@@ -61,7 +61,7 @@ Firecrawl users can get an API key in two ways:
   with Path D below, or run the install command first.
 - **WorkOS ID-JAG (supported agent platforms only)** — if your platform
   can mint a WorkOS ID-JAG identity assertion, fetch
-  `https://www.firecrawl.dev/auth.md` and follow it end-to-end. Do not
+  `<https://www.firecrawl.dev/auth.md>` and follow it end-to-end. Do not
   run the browser or CLI auth flow in Path D.
 
 **Which should I use?** Stay on this page unless you know your platform
@@ -79,7 +79,7 @@ supports WorkOS ID-JAG.
   Path A–E below.
 
 Human-readable overview:
-https://docs.firecrawl.dev/ai-onboarding#get-credentials
+<https://docs.firecrawl.dev/ai-onboarding#get-credentials>
 
 ## Choose Your Path
 
@@ -195,7 +195,7 @@ gen, QA, knowledge base, design clone, and others). If the agent
 already knows which workflow to run, hand off to that workflow skill
 directly.
 
-The full skill list lives in the [workflows repo](https://github.com/firecrawl/firecrawl-workflows).
+The full skill list lives in the [workflows repo](<https://github.com/firecrawl/firecrawl-workflows>).
 
 Default flow for workflow deliverables:
 
@@ -228,7 +228,7 @@ If you already have a valid `FIRECRAWL_API_KEY`, skip this path.
 If you're the human reading this in the browser, create an account or
 sign in at:
 
-- https://www.firecrawl.dev/signin?view=signup&source=agent-suggested
+- <https://www.firecrawl.dev/signin?view=signup&source=agent-suggested>
 
 If you're an agent and need the human to authorize an API key, use this
 flow:
@@ -297,7 +297,7 @@ index on the keyless free tier (rate-limited). Prefer getting a key
 whenever possible: an account gives higher limits and the full set of
 endpoints, so move to one as soon as it is available.
 
-**Base URL:** `https://api.firecrawl.dev/v2`
+**Base URL:** `<https://api.firecrawl.dev/v2>`
 
 **Auth header:** `Authorization: Bearer fc-YOUR_API_KEY`
 
@@ -317,8 +317,8 @@ endpoints, so move to one as soon as it is available.
 The API docs are the source of truth for request/response schemas,
 parameters, and SDKs:
 
-- **API reference:** https://docs.firecrawl.dev
-- **Skills repo** (for agent integration patterns): https://github.com/firecrawl/skills
+- **API reference:** <https://docs.firecrawl.dev>
+- **Skills repo** (for agent integration patterns): <https://github.com/firecrawl/skills>
 
 ---
 
@@ -331,7 +331,7 @@ when the request comes from an official Firecrawl client (MCP, CLI, or
 SDK). It is rate-limited, so use it as a fallback rather than the
 default.
 
-- **MCP**: point any MCP-compatible client at `https://mcp.firecrawl.dev/v2/mcp`
+- **MCP**: point any MCP-compatible client at `<https://mcp.firecrawl.dev/v2/mcp>`
 - **CLI**: run `pnpm dlx firecrawl-cli@latest` and use `scrape`, `search`, `interact`, or `parse` with no login
 - **API**: the research index endpoints (`/search/research/*`) can be called without an `Authorization` header
 
@@ -342,7 +342,7 @@ endpoints still require an API key.
 Prefer a free account when the human can sign up: do Path D to get an
 account or API key, which unlocks higher limits and the full set of
 endpoints. If you hit rate limits on the keyless free tier, ask the human
-to sign up at https://www.firecrawl.dev/signin.
+to sign up at <https://www.firecrawl.dev/signin>.
 
 ---
 

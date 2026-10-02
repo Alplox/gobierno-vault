@@ -4,6 +4,7 @@ import EventCard from '../../components/EventCard.astro';
 import QuoteCard from '../../components/QuoteCard.astro';
 import PersonQuoteItem from '../../components/PersonQuoteItem.astro';
 import PersonStatTiles from '../../components/PersonStatTiles.astro';
+import ShareButtons from '../../components/ShareButtons.astro';
 import PersonActivityChart from '../../components/PersonActivityChart.astro';
 import PersonTopicMix from '../../components/PersonTopicMix.astro';
 import PersonNetwork from '../../components/PersonNetwork.astro';
@@ -221,6 +222,10 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
       </div>
     </div>
   </header>
+
+  <div class="mb-6">
+    <ShareButtons url={new URL(Astro.url.pathname, Astro.site).href} title={person.data.nombre} />
+  </div>
 
   {person.data.bio && (
     <div class="prose prose-gray max-w-none mb-6 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed" set:html={person.data.bio} />

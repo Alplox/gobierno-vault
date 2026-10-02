@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.323: Establece un nuevo Bono Clase Media y un préstamo solidario
   para la protección de los ingresos de la clase media (versión 2021)"
 autor: BCN

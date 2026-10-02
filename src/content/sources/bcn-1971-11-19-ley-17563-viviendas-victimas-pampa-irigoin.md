@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 17563 - Ordena transferencia gratuita de viviendas y otros beneficios en favor de las personas que indica"
 autor: "Ministerio de Vivienda y Urbanismo"
 fecha: 1971-11-19

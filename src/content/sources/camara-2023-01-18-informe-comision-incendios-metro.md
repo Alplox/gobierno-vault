@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Cámara de Diputados
+medio: Cámara de Diputadas y Diputados de Chile
 titulo: Informe de la Comisión Especial Investigadora encargada de fiscalizar
   los actos del gobierno, especialmente los del Ministerio del Interior,
   Carabineros y Metro, respecto de los incendios de estaciones del Metro en

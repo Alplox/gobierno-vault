@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: Los ingresos del Estado el año 2025 terminaron casi dos puntos del
   PIB por debajo de lo presupuestado (veredicto Incompleto)
 autor: Fast Check CL

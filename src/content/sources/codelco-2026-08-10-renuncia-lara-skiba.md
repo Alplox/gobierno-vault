@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Codelco
+medio: Corporación Nacional del Cobre de Chile
 titulo: Codelco informa renuncia de su vicepresidente de Integración de
   Operaciones Andina
 autor: Codelco

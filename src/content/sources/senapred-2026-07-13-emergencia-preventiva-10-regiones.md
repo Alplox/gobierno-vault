@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: SENAPRED
+medio: SENAPRED - Servicio Nacional de Prevención y Respuesta ante Desastres
 titulo: Gobierno anuncia medidas ante llegada de sistema frontal y declara
   emergencia preventiva en diez regiones
 autor: SENAPRED

@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Conadecus
+medio: Corporación Nacional de Consumidores y Usuarios de Chile (CONADECUS)
 titulo: "Caso Farmacias: Corte confirma absoluciones y desestima tipo penal
   invocado por la fiscalía"
 autor: Conadecus

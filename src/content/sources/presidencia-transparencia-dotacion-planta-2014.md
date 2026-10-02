@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Presidencia de la República
+medio: Presidencia de la República de Chile
 titulo: "Dotación de Planta de Presidencia de la República 2014 (Gobierno
   Transparente): Piñera I $8.947.053 y Bachelet II $9.322.303 brutos mensuales"
 autor: Presidencia de la República

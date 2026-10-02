@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: "Presidente Boric: como Gobierno haremos todos los esfuerzos para que la
   propuesta de nueva Constitución sea recibida por toda la ciudadanía y así
   llevar adelante un voto informado y consciente"

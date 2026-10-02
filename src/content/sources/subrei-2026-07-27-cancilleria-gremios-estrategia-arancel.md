@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Subrei
+medio: Subsecretaría de Relaciones Económicas Internacionales
 titulo: "Cancillería se reúne con gremios para coordinar estrategia de Chile ante nuevo arancel de Estados Unidos"
 autor: ""
 fecha: 2026-07-27

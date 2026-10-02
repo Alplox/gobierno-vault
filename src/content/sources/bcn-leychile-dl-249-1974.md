@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Decreto Ley 249 de 1973: fija la Escala Única de Sueldos"
 autor: Biblioteca del Congreso Nacional
 fecha: 1974-01-05

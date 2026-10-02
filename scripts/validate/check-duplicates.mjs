@@ -75,6 +75,18 @@ function readCollection(name) {
   return out;
 }
 
+/** Pares `id_sigla` revisados a mano: distintas entidades, no fusionar. Clave "sigla|completa". */
+const ALLOW_ID_SIGLA = new Map([
+  ['as_chile|geografas_chile', 'colisión de substring: diario deportivo (Prisa) vs medio digital'],
+  ['biobiochile|biobiochile-bbclexplica', 'sub-marca explicadora, emisora propia'],
+  ['bloomberg|bloomberg_linea', 'agencia global vs edición LatAm en español'],
+  ['concierto|eldesconcierto', 'radio musical (Prisa) vs medio digital de izquierda'],
+  ['pauta|radio_pauta', 'mismo grupo (pauta.cl), canales distintos: digital vs radio'],
+  ['reddit|reddit_chile_autos', 'subreddits distintos (convención: uno por ficha)'],
+  ['reddit|reddit_chile_transporte', 'subreddits distintos (convención: uno por ficha)'],
+  ['resumen|resumen_latinoamericano', 'resumen.cl (Chile) vs resumenlatinoamericano.org (LatAm)'],
+]);
+
 /** Señal 1: mismo nombre normalizado, y `pais` compatible (ambos vacíos, o iguales). */
 function findSameName(entries) {
   const byKey = new Map();
@@ -178,13 +190,26 @@ const unique = findings.filter(f => {
   return true;
 });
 
+// Allowlist: filtra pares revisados (no son duplicados) y avisa si una entrada
+// deja de usarse (fichas renombradas/fusionadas → borrar de la lista).
+const usedAllow = new Set();
+const effective = unique.filter(f => {
+  if (f.senal !== 'id_sigla') return true;
+  const k = `${f.sigla}|${f.completa}`;
+  if (ALLOW_ID_SIGLA.has(k)) { usedAllow.add(k); return false; }
+  return true;
+});
+for (const k of ALLOW_ID_SIGLA.keys()) {
+  if (!usedAllow.has(k)) console.warn(`⚠ allowlist sin uso en check-duplicates: "${k}" (¿fichas renombradas/fusionadas?) — ${ALLOW_ID_SIGLA.get(k)}`);
+}
+
 if (jsonMode) {
-  console.log(JSON.stringify(unique, null, 2));
-} else if (!unique.length) {
+  console.log(JSON.stringify(effective, null, 2));
+} else if (!effective.length) {
   console.log(`✓ Sin duplicados: ${colls.join(', ')}`);
 } else {
-  console.log(`⚠ ${unique.length} candidato(s) a duplicado en ${colls.join(', ')}:`);
-  const bySignal = unique.reduce((acc, f) => ((acc[f.senal] ||= []).push(f), acc), {});
+  console.log(`⚠ ${effective.length} candidato(s) a duplicado en ${colls.join(', ')}:`);
+  const bySignal = effective.reduce((acc, f) => ((acc[f.senal] ||= []).push(f), acc), {});
   for (const [senal, list] of Object.entries(bySignal)) {
     console.log(`\n[${senal}] ${list.length}`);
     for (const f of list) {
@@ -195,4 +220,4 @@ if (jsonMode) {
   }
 }
 
-process.exit(unique.length ? 1 : 0);
+process.exit(effective.length ? 1 : 0);

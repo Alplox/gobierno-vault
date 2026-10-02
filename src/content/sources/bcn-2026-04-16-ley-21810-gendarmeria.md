@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: BCN Historia de la Ley
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.810: Modifica la Carta Fundamental para incorporar a Gendarmería
   de Chile dentro de las Fuerzas de Orden y Seguridad Pública"
 autor: BCN

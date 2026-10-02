@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Presidencia de la República
+medio: Presidencia de la República de Chile
 titulo: "Escala de remuneraciones de Presidencia de la República 2018 (Gobierno
   Transparente): la Autoridad de Gobierno aparece con $10.154.157 brutos en la
   captura de archivo de 2021, reflejando reajustes acumulados desde la cifra de

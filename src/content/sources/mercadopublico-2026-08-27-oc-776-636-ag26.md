@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-636-AG26: Pin metálico institucional Bandera Chilena"
 autor: Presidencia de la República
 fecha: 2026-08-27

@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Prensa Presidencia
+medio: Presidencia de la República de Chile
 titulo: 'Presidente Kast firma reforma constitucional en el marco de la ACOT y
   asegura: "Sin seguridad no hay libertad"'
 autor: Dirección de Prensa, Presidencia

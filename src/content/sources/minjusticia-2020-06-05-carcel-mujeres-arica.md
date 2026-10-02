@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Ministerio de Justicia
+medio: Ministerio de Justicia y Derechos Humanos
 titulo: Ministerio de Justicia y Gendarmería inauguran nueva cárcel de mujeres
   de Arica, la primera sin vigilancia perimetral humana
 autor: Ministerio de Justicia y DDHH

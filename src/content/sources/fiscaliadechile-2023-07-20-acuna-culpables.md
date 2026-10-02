@@ -1,6 +1,6 @@
 ---
 tipo: noticia
-medio: Fiscalía de Chile
+medio: Ministerio Público de Chile
 titulo: "Caso Mario Acuña: TOP San Bernardo declara culpables a 3 exCarabineros
   por golpiza que dejó a hombre en estado vegetal"
 autor: Fiscalía de Chile

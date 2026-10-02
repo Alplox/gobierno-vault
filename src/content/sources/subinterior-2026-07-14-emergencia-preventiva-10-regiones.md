@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Subsecretaria del Interior
+medio: Subsecretaría del Interior
 titulo: Gobierno anuncia medidas ante llegada de sistema frontal y declara
   emergencia preventiva en diez regiones
 autor: Subsecretaria del Interior

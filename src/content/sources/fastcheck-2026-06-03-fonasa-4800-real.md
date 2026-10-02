@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: A través de Fonasa pusimos a disposición más de 4.800 cupos para
   atender casos oncológicos en las regiones (veredicto Real)
 autor: Fast Check CL

@@ -1,6 +1,6 @@
 ---
 tipo: oficial
-medio: Ministerio de Minería de Chile
+medio: Ministerio de Minería
 titulo: Biministro Daniel Mas destaca nuevas medidas del gobierno en
   modernización regulatoria y exploración minera para incrementar producción de
   cobre

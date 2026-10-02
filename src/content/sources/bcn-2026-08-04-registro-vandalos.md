@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Registro Nacional de Actos Vandálicos e Incivilidades: análisis del
   Boletín N°18.341-25 y legislación extranjera"
 autor: Juan Pablo Cavada Herrera

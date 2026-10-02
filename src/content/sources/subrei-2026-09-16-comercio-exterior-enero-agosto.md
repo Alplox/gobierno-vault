@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Subrei
+medio: Subsecretaría de Relaciones Económicas Internacionales
 titulo: "Informe Mensual de Comercio Exterior de Chile, enero–agosto de 2026"
 autor: Dirección de Estudios de la Subsecretaría de Relaciones Económicas Internacionales
 fecha: 2026-09-16

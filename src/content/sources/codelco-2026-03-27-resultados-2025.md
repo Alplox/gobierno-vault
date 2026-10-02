@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: Codelco
+medio: Corporación Nacional del Cobre de Chile
 titulo: Codelco cerró 2025 con un Ebitda de US$6.670 millones, una utilidad
   consolidada de US$2.423 millones y un aporte al Fisco de US$1.778 millones
 autor: Codelco

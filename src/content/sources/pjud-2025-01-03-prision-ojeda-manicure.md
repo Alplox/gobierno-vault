@@ -1,6 +1,6 @@
 ---
 tipo: oficial
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: "Caso Manicure: Juzgado de Temuco decreta la prisión preventiva de
   diputado imputado por fraude al fisco"
 autor: Poder Judicial de Chile

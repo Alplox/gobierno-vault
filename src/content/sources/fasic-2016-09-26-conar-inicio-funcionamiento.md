@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: FASIC
+medio: Fundación de Ayuda Social de las Iglesias Cristianas (FASIC)
 titulo: El 24 de septiembre de 1973, comenzó a funcionar el CONAR
 autor: FASIC
 fecha: 2016-09-26

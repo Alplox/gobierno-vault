@@ -7,12 +7,15 @@ const root = join(process.cwd(), 'src');
 const dataDir = join(root, 'data');
 const eventsDir = join(root, 'content', 'events');
 
-function readYaml(filename) {
-  // Fuente de verdad: colecciones markdown (el monolito src/data/entities|sources|topics.yaml
-  // se eliminó en ago-2026 y ya no existe). Solo colectivos/sectores se leen de src/data/.
+// Lectura de datos del vault. Las colecciones `people`/`organizations`/`cifras`/`sources`/
+// `topics` viven en src/content/<coll>/*.md (el monolito src/data/*.yaml se eliminó en
+// ago-2026 y ya no existe — NO reintroducirlo). Los únicos YAML reales son
+// `colectivos` y `sectores` en src/data/. La API se llama por nombre lógico de colección.
+function readCollection(name) {
+  // Fuente de verdad: colecciones markdown. `dataDir` solo para la excepción YAML.
   try {
-    const map = { 'sources.yaml': 'sources', 'topics.yaml': 'topics' };
-    const coll = map[filename];
+    const map = { sources: 'sources', topics: 'topics' };
+    const coll = map[name];
     if (coll) {
       const dir = join(process.cwd(), 'src', 'content', coll);
       const rec = {};
@@ -25,7 +28,7 @@ function readYaml(filename) {
       if (Object.keys(rec).length) return rec;
       throw new Error(`sin entradas en src/content/${coll}/*.md`);
     }
-    if (filename === 'entities.yaml') {
+    if (name === 'entities') {
       const rec = { people: {}, organizations: {}, cifras: {} };
       let found = false;
       for (const [dir, key] of [[join(process.cwd(),'src/content/people'),'people'],[join(process.cwd(),'src/content/organizations'),'organizations'],[join(process.cwd(),'src/content/cifras'),'cifras']]) {
@@ -39,33 +42,33 @@ function readYaml(filename) {
       if (found) return rec;
       throw new Error('sin entradas en src/content/people|organizations|cifras/*.md');
     }
-    return YAML.parse(readFileSync(join(dataDir, filename), 'utf8')) ?? {};
+    return YAML.parse(readFileSync(join(dataDir, `${name}.yaml`), 'utf8')) ?? {};
   } catch (e) {
-    console.error(`✖ no se pudo cargar ${filename}: ${e.message.split('\n')[0]}`);
+    console.error(`✖ no se pudo cargar la colección "${name}": ${e.message.split('\n')[0]}`);
     console.error(`  Causa típica: caracteres reservados sin citar en frontmatter (ej. "autor: @usuario") o grabado con encoding incorrecto (PowerShell Set-Content/Out-File).`);
     process.exit(1);
   }
 }
 
-const sourcesData = readYaml('sources.yaml');
+const sourcesData = readCollection('sources');
 const validSourceIds = new Set(Object.keys(sourcesData));
 
-const topicsData = readYaml('topics.yaml');
+const topicsData = readCollection('topics');
 const validTopicIds = new Set(Object.keys(topicsData));
 
-const colectivosData = readYaml('colectivos.yaml');
-const sectoresData = readYaml('sectores.yaml');
+const colectivosData = readCollection('colectivos');
+const sectoresData = readCollection('sectores');
 const validColectivos = new Set(Array.isArray(colectivosData) ? colectivosData : Object.keys(colectivosData));
 const validSectores = new Set(Array.isArray(sectoresData) ? sectoresData : Object.keys(sectoresData));
 
 // Regla AGENTS.md (convención de medios): el campo `medio:` de cada fuente en
-// src/content/sources/*.md debe ser EXACTAMENTE el nombre (`nombre`) de una org de prensa
-// (tipo medio_comunicacion / red_social / canal_television / programa_tv /
-// programa_streaming) registrada en src/content/organizations/*.md, o estar en la lista blanca
-// de instituciones/plataformas/documentos (que no son "medios de prensa" y por
-// lo tanto no requieren org). Esto impide que las variantes de nombre (y el
-// mojibake de doble-encoding UTF-8) vuelvan a degradar la convención.
-const entitiesData = readYaml('entities.yaml');
+// src/content/sources/*.md debe ser EXACTAMENTE el `nombre` (o un `alias`) de una
+// org registrada en src/content/organizations/*.md —de cualquier tipo, no solo
+// prensa— o estar en la lista blanca de emisores sin ficha (documentos efímeros,
+// compilaciones ciudadanas, PDFs filtrados). La ficha org es la fuente de verdad;
+// la whitelist solo cubre lo que deliberadamente no tendrá ficha. Esto impide que
+// las variantes de nombre (y el mojibake de doble-encoding UTF-8) degraden la convención.
+const entitiesData = readCollection('entities');
 const orgsData = entitiesData.organizations ?? {};
 const peopleData = entitiesData.people ?? {};
 const cifrasData = entitiesData.cifras ?? {};
@@ -78,254 +81,91 @@ for (const [canonical, entry] of Object.entries(cifrasData)) {
 // Índice de personas para la regla de wikilinks en prosa (AGENTS.md n.º 8).
 // Misma lógica que scripts/fix-prose-wikilinks.mjs (backlog).
 const peopleProseIndex = buildPeopleIndex(peopleData);
-const MEDIA_ORG_TYPES = new Set([
-  'medio_comunicacion',
-  'red_social',
-  'canal_television',
-  'programa_tv',
-  'programa_streaming',
-]);
-const mediaOrgNames = new Set(
-  Object.values(orgsData)
-    .filter((o) => o && MEDIA_ORG_TYPES.has(o.tipo) && typeof o.nombre === 'string')
-    .map((o) => o.nombre)
-);
+// Nombres autorizados como `medio:`: `nombre` + `aliases[]` de TODAS las orgs
+// registradas (cualquier `tipo`: prensa, ministerio, universidad, empresa,
+// encuestadora…). Crear la ficha org es el único camino para un emisor estable.
+const orgMedioNames = new Set();
+for (const o of Object.values(orgsData)) {
+  if (!o || typeof o.nombre !== 'string') continue;
+  orgMedioNames.add(o.nombre);
+  for (const a of Array.isArray(o.aliases) ? o.aliases : []) {
+    if (typeof a === 'string' && a) orgMedioNames.add(a);
+  }
+}
 
-// Lista blanca: instituciones del Estado, organismos, encuestadoras,
-// plataformas sociales/documentos y publicaciones académicas que aparecen como
-// `medio:` de una fuente pero NO son medios de prensa (no necesitan org).
-// Solo agregar aquí lo que deliberadamente no sea prensa; los medios de prensa
-// nuevos deben registrarse en src/content/organizations/*.md con tipo medio_comunicacion.
-const WHITELIST_MEDIOS = new Set([
-  'Senado de Chile',
-  'Cámara de Diputados',
-  'Cámara de Diputadas y Diputados',
-  'Voto Visible',
-  'Sociedad de Fomento Fabril',
-  'Partido Socialista de Chile',
-  'Political Network for Values',
-  'Gobierno de Chile',
+// Lista blanca residual: emisores que aparecen como `medio:` de una fuente pero
+// deliberadamente NO tienen ficha org (documentos efímeros, compilaciones
+// ciudadanas, PDFs filtrados, plataformas puntuales). Todo emisor estable debe
+// tener su ficha en src/content/organizations/*.md y NO estar aquí (validate
+// avisa con ⚠ si una entrada ya coincide con una org). Los medios de prensa
+// nuevos deben registrarse con tipo medio_comunicacion (o red_social, etc.).
+const WHITELIST_MEDIOS_LIST = [
   'Gobierno de Argentina',
   'Gobierno de Reino Unido',
   'Gobierno de Hungría',
   'Puig Abogados',
-  'Gobierno de Chile (gob.cl)',
-  'Gob.cl',
-  'Gobierno de Santiago (GORE Metropolitano)',
-  'Presidencia de Chile',
-  'Presidencia de la República',
-  'Prensa Presidencia',
-  'SENAPRED',
-  'Ministerio de Hacienda',
-  'Ministerio de Desarrollo Social y Familia',
-  'Ministerio Secretaría General de la Presidencia',
-  'Unidad de Análisis Financiero (UAF)',
-  'Agencia Nacional de Ciberseguridad (ANCI)',
-  'Ministerio de Salud',
-  'Ministerio de Salud (Minsal)',
-  'Ministerio del Deporte',
-  'Ministerio de Educación',
-  'Fast Check CL',
-  'AIM Chile',
-  'Ministerio del Interior',
-  'Subsecretaria del Interior',
-  'Subsecretaría del Interior',
-  'Ministerio de Obras Públicas',
-  'Ministerio de Vivienda y Urbanismo',
-  'Ministerio del Trabajo y Previsión Social',
-  'Ministerio de Economía, Fomento y Turismo',
-  'Ministerio de Justicia',
-  'Ministerio de Justicia y Derechos Humanos (Subsecretaría de DDHH)',
-  'Ministerio de Minería de Chile',
-  'Ministerio de Seguridad Pública',
-  'Ministerio de Relaciones Exteriores',
-  'Ministerio de Defensa Nacional',
-  'Cámara de los Lores del Reino Unido',
-  'Comisión Nacional de Verdad y Reconciliación',
-  'Corte Internacional de Justicia',
-  'Ministerio del Poder Popular para Relaciones Exteriores y Comercio Internacional',
-  'Subrei',
-  'Ministerio Secretaría General de Gobierno',
-  'Contraloría General de la República',
-  'Servicio de Impuestos Internos (SII)',
-  'Defensoría de la Niñez',
-  'Instituto de Previsión Social (IPS)',
-  'Poder Judicial de Chile',
-  'Corporación de Asistencia Judicial Metropolitana',
-  'Tribunal de la Libre Competencia',
-  'Tribunal de Defensa de la Libre Competencia',
-  'Segundo Tribunal Ambiental',
-  'Fiscalía Nacional Económica',
-  'Fiscalía de Chile (División de Estudios, Unidad de DDHH)',
   'FinCEN (Departamento del Tesoro de EE.UU.)',
   'Departamento de Estado de EE.UU.',
-  'Embajada de Estados Unidos en Chile',
-  'Organización Mundial de la Propiedad Intelectual',
-  'Organización para la Cooperación y el Desarrollo Económicos',
   'CompaniesMarketCap',
-  'Bolsa de Comercio de Santiago',
-  'Ministerio de Ciencia, Tecnología, Conocimiento e Innovación',
   'National Security Archive',
   'United States Holocaust Memorial Museum',
   'Electronic Frontier Foundation (EFF)',
-  'American Jewish Committee (AJC)',
   'IRS (Servicio de Impuestos Internos de EE.UU.)',
   'Unidad de Información Financiera de Italia (UIF - Banca d Italia)',
-  'SAG',
-  'Servicio Electoral (Servel)',
-  'CEPAL',
   'PNUD Chile',
   'Red de Integridad y Estado Abierto',
-  'X (anteriormente Twitter)',
-  'Servicio de Evaluación Ambiental',
-  'Dirección de Presupuestos (DIPRES)',
-  'Ministerio del Medio Ambiente',
-  'Ministerio del Medio Ambiente (MMA)',
-  'Universidad Austral de Chile',
-  'Tesorería General de la República',
-  'Instituto Nacional de Estadísticas (INE)',
-  'Banco Central de Chile',
-  'U.S. Energy Information Administration',
-  'Comisión Nacional de Energía',
-  'Observatorio del Contexto Económico de la Universidad Diego Portales (OCEC-UDP)',
-  'Empresa Nacional del Petróleo (ENAP)',
-  'Neuquén Informa',
-  'Atlantic Council',
-  'Comisión Chilena del Cobre (Cochilco)',
-  'Codelco',
-  'Archivo Nacional de Chile',
-  'Biblioteca del Congreso Nacional',
-  'Biblioteca del Congreso Nacional (LeyChile)',
-  'Biblioteca del Congreso Nacional (Ley Chile)',
-  'Comisión Económica para América Latina y el Caribe (CEPAL)',
-  'Subsecretaría de Telecomunicaciones',
-  'Subsecretaría de Previsión Social',
-  'Subsecretaría de Prevención del Delito',
-  'Fondo Nacional de Salud (Fonasa)',
-  'Diario Oficial de la República de Chile',
-  'Cuerpo de Bomberos de Chile',
-  'BCN Historia de la Ley',
   'Wikipedia',
-  'Comisión para la Fijación de Remuneraciones',
-  'Servicio de Impuestos Internos (SII)',
   'ChileAtiende',
   'Observatorio Social (MDS)',
-  'El Universo',
-  'Actualidad Jurídica DOE',
   'Portal de Datos Abiertos del Estado (datos.gob.cl)',
   'DocDigital (doc.digital.gob.cl)',
   'Portal de Transparencia',
-  'Delegación Presidencial Regional de La Araucanía',
-  'Delegación Presidencial Regional de Antofagasta',
-  'Consejo de Monumentos Nacionales',
-  'Municipalidad de Santiago',
-  'Municipalidad de Santiago (munistgo.cl)',
-  'Municipalidad de Antofagasta',
-  'Federación CCU',
-  'Municipalidad de Coquimbo',
-  'Municipalidad de Temuco',
-  'Municipalidad de Rinconada',
-  'Municipalidad de San Bernardo',
-  'Municipalidad de Puerto Montt',
-  'Partido Republicano de Chile',
-  'Partido Por la Democracia',
-  'Partido por la Democracia (PPD)',
-  'Superintendencia de Pensiones',
-  'AFC Chile',
-  'Libertad y Desarrollo (LyD)',
-  'Embajada de China en Chile',
-  'Centro de Estudios Públicos',
   'Centro de Extensión e Investigación Luis Emilio Recabarren',
-  'Foro Madrid',
   'La Vía Campesina',
   'Chile Mejor Sin TLC',
-  'Observatorio de Datos UAI',
   'Universidad del Desarrollo (Ingeniería)',
   'Cuadernos del Centro de Estudios de Diseño y Comunicación (Universidad de Palermo)',
   'Tramas y Redes (CLACSO)',
   'OCMAL (Observatorio de Conflictos Mineros de América Latina)',
-  'Federación de Trabajadores del Cobre (FTC)',
   'Museo Universitario Arte Contemporáneo (MUAC-UNAM)',
   'Andes Pediátrica (SciELO)',
-  'Forensic Architecture',
-  'Fundación Terram',
-  'FASIC',
-  'Vicaría de la Solidaridad',
-  'Memoria Chilena',
-  'Universidad de Chile',
   'Museo de la Solidaridad Salvador Allende',
-  'Museo de la Memoria y los Derechos Humanos',
-  'Memoria Viva',
   'Equipo Nizkor',
   'Archivo Andrés Aylwin',
-  'Fotografía Patrimonial',
-  'Londres 38',
-  'Human Rights Watch',
   'Programa de gobierno Kast 2025',
   'CentroCompetencia (PDF programa Kast 2022-2026)',
   'PiensaChile (PDF del documento filtrado)',
-  'piensaChile',
   'RobotLabot (LaBot)',
   'Contapapaya (asesoría contable)',
   'Empresas Logros (blog)',
   'DecideChile (Unholster)',
-  'Mercado Público (ChileCompra)',
-  'TodoLicitaciones',
   'Chile es Tuyo (Sernatur)',
   'Licitaciones de Chile',
-  'Activa Research',
-  'Criteria',
-  'Cadem',
-  'CLAPES UC',
-  'Instituto Nacional de Derechos Humanos',
-  'Fiscalía de Chile',
-  'Amnistía Internacional Chile',
-  'Amnistía Internacional',
-  'Consejo para la Transparencia (CPLT)',
-  'Consejo para la Transparencia',
-  'KKL-JNF',
-  'Carabineros de Chile',
-  'BCN (Ley Chile)',
   'SUSESO (Superintendencia de Seguridad Social)',
   'XTB Chile',
   'Alerta Prevencion (AGRICET)',
   'Scribd',
   'Scribd (documento filtrado)',
-  'Facebook',
-  'Instagram',
   'LinkedIn',
-  'Movilh',
-  'TikTok',
   'Telegram',
   'Google Drive (compilación ciudadana)',
   'Dropbox (compilación ciudadana)',
   'Imgur',
   // Subreddits distintos de r/chile: el org `reddit` es específico de r/chile;
   // los demás subreddits quedan como plataforma complementaria en la lista blanca.
-  'Reddit r/RepublicadeChile',
   'Reddit (r/DataHoarder)',
   'Reddit r/iamatotalpieceofshit',
   'Towards Data Science (Medium)',
-  'InSight Crime',
   'OECO (Observatorio Ecuatoriano de Crimen Organizado)',
   'OGMDH-Chile (Observatorio de Gobernanza Migratoria y Derechos Humanos)',
   'Banco Mundial',
-  'Naciones Unidas',
-  'Autoridad del Canal de Panamá',
-  'Vergara 240 (Escuela de Periodismo UDP)',
-  'Hudson Rock',
-  'Conadecus',
-  'Economía y Negocios',
-  'El Rancagüino',
-  'Región XV',
-  'Vilas Radio',
-  'Servicio Nacional de Migraciones',
-  'El Carrerino',
-  'Ministerio de Obras Públicas',
-  'Tribunal Constitucional de Chile',
-  'Tribunal Constitucional',
-  'Memoria y Vida (Corporación Pilmaiquen)',
-]);
+  // Historia económica: archivo documental y revista académica que publican fuentes primarias
+  'Biblioteca Digital de la Dirección de Presupuestos',
+  'Cuadernos de Historia (SciELO)',
+  'Revista Santiago',
+  'Perfiles Económicos',
+];
+const WHITELIST_MEDIOS = new Set(WHITELIST_MEDIOS_LIST);
 
 let errors = 0;
 
@@ -365,7 +205,7 @@ const allEventBasenames = new Set(allFiles.map((f) => eventIdFromPath(f).split('
 const referencedSources = new Set();
 for (const file of allFiles) {
   const content = readFileSync(file, 'utf8');
-  for (const match of content.matchAll(/\[\[(?:source|sources)\/([A-Za-z0-9_.-]+)\]\]/g)) {
+  for (const match of content.matchAll(/\[\[(?:source|sources)\/([A-Za-z0-9_.-]+)(?:\|[^\]]*)?\]\]/g)) {
     referencedSources.add(match[1]);
   }
 }
@@ -398,19 +238,56 @@ for (const id of referencedSources) {
   }
 }
 
-// Convención de medios: `medio:` debe ser el nombre canónico de una org de
-// prensa o pertenecer a la lista blanca de instituciones/plataformas.
-const MEDIA_ORG_TYPES_LABEL = [...MEDIA_ORG_TYPES].join(' / ');
+// Convención de medios: `medio:` debe ser `nombre`/`alias` de una org registrada
+// o pertenecer a la lista blanca residual de emisores sin ficha.
+// Guardarraíles anti-stale: la whitelist no puede tener duplicados (error) ni
+// entradas que ya coincidan con una org (aviso: borrar de la lista).
+for (const d of findDuplicates(WHITELIST_MEDIOS_LIST)) {
+  console.error(`✖ medio duplicado en WHITELIST_MEDIOS_LIST: "${d}"`);
+  errors++;
+}
+for (const w of WHITELIST_MEDIOS) {
+  if (orgMedioNames.has(w)) console.warn(`⚠ "${w}" en WHITELIST_MEDIOS ya tiene ficha org → borrar de la lista`);
+}
+// Distancia de edición para sugerir el nombre canónico ante un typo (solo se
+// usa en la ruta de error, poco frecuente).
+function levMedio(a, b) {
+  const m = a.length, n = b.length;
+  if (!m) return n;
+  if (!n) return m;
+  let prev = [];
+  for (let j = 0; j <= n; j++) prev[j] = j;
+  for (let i = 1; i <= m; i++) {
+    const cur = [i];
+    for (let j = 1; j <= n; j++) {
+      cur[j] = Math.min(prev[j] + 1, cur[j - 1] + 1, prev[j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    }
+    prev = cur;
+  }
+  return prev[n];
+}
+const medioCands = [...orgMedioNames, ...WHITELIST_MEDIOS];
+function hintMedio(medio) {
+  const low = medio.toLowerCase();
+  const caseHit = medioCands.find((c) => c.toLowerCase() === low);
+  if (caseHit) return ` ¿quisiste decir "${caseHit}"? (difiere solo en mayúsculas/espacios)`;
+  const scored = medioCands
+    .map((c) => [c, levMedio(medio, c)])
+    .sort((x, y) => x[1] - y[1])
+    .slice(0, 3)
+    .filter(([, d]) => d <= Math.max(2, Math.floor(medio.length / 4)));
+  return scored.length ? ` ¿quisiste decir ${scored.map(([c]) => `"${c}"`).join(' / ')}?` : '';
+}
 for (const [id, src] of Object.entries(sourcesData)) {
   if (!src || typeof src.medio !== 'string' || src.medio.trim() === '') {
     console.error(`✖ fuente sin campo medio: "${id}"`);
     errors++;
     continue;
   }
-  if (mediaOrgNames.has(src.medio)) continue;
+  if (orgMedioNames.has(src.medio)) continue;
   if (WHITELIST_MEDIOS.has(src.medio)) continue;
   console.error(
-    `✖ medio "${src.medio}" no corresponde al nombre de una org de prensa (${MEDIA_ORG_TYPES_LABEL}) ni esta en la lista blanca → fuente "${id}". Registrar la org en src/content/organizations/*.md o agregar a WHITELIST_MEDIOS en validate.mjs si es institucion/plataforma.`
+    `✖ medio "${src.medio}" no es nombre/alias de ninguna org en src/content/organizations/*.md ni esta en la lista blanca → fuente "${id}".${hintMedio(src.medio)} Registrar la org (cualquier tipo) o agregar a WHITELIST_MEDIOS_LIST solo si es un emisor efímero sin ficha.`
   );
   errors++;
 }
@@ -610,7 +487,11 @@ for (const file of allFiles) {
   const noCode = body
     .replace(/```[\s\S]*?```/g, '')
     .replace(/`[^`\n]*`/g, '');
-  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]]+))?)?\]\]/g;
+  const WIKILINK_RE = /\[\[(sources?|people|person|organizations?|org|cifras|events?|event)\/([A-Za-z0-9_.-]+)(?:\/(-?[\d.,]+)(?:\/([^\]|]+))?)?(?:\|[^\]]*)?\]\]/g;
+  for (const m of noCode.matchAll(/\[\[((?:sources?|people|person|organizations?|org|cifras|events?|event)\/[^\]]+?)\|[^\]]+\]\]/g)) {
+    console.error(`✖ alias inline prohibido [[${m[1]}|...]] → ${eventId} (usar [[${m[1]}]]; el render muestra el nombre canónico)`);
+    errors++;
+  }
   for (const m of noCode.matchAll(WIKILINK_RE)) {
     const [, rawType, id] = m;
     const type = rawType === 'people' ? 'person' : rawType === 'organizations' || rawType === 'organization' ? 'org' : rawType === 'sources' ? 'source' : rawType === 'cifras' ? 'cifra' : rawType === 'events' ? 'event' : rawType;

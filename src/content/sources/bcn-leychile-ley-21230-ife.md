@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (LeyChile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Ley 21.230: Concede un Ingreso Familiar de Emergencia"
 autor: BCN
 fecha: 2020-05-27

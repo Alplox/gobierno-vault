@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Dirección de Presupuestos (DIPRES)
+medio: Dirección de Presupuestos
 titulo: Reporte de Pasivos Contingentes — Estimación de costos del CAE
 autor: DIPRES
 fecha: 2024-08-01

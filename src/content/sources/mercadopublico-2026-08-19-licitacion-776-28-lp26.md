@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Licitación 776-28-LP26: Suministro de abarrotes y perecibles para el PLM"
 autor: Presidencia de la República
 fecha: 2026-08-19

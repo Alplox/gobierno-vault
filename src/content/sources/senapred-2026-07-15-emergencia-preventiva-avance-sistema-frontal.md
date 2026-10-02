@@ -1,6 +1,6 @@
 ---
 tipo: comunicado_oficial
-medio: SENAPRED
+medio: SENAPRED - Servicio Nacional de Prevención y Respuesta ante Desastres
 titulo: Gobierno refuerza medidas preventivas ante avance del sistema frontal y
   amplia alarma meteorologica a la Region de O'Higgins
 autor: SENAPRED

@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Dirección de Presupuestos (DIPRES)
+medio: Dirección de Presupuestos
 titulo: "Boletín de Ejecución Presupuestaria junio 2026: el gasto de capital cae
   12,7% real anual y 14,0% acumulado en el primer semestre"
 autor: DIPRES

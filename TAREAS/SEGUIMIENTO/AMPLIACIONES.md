@@ -4,8 +4,6 @@
 
 | ID | Estado | Bucket | Titulo | Origen |
 | --- | --- | --- | --- | --- |
-| A-2019-001 | ⬜ | Eventos nov-2019 — diversificación de fuentes y án | Ampliar fuentes de 20191114-1 (Catrillanca aniversario): buscar cobertura de Emol del juicio oral y de CNN Chile del ... | Origen: <https://www.theclinic.cl/2019/11/14/indh-querellante-a-un-ano-de-la-muerte-de-camilo-catrillanca-se-inicia-juicio-oral-contra-carabineros/> |
-| A-2022-001 | ⬜ | Sugerencias pendientes (para no perderlas) | Pendiente de verificar/añadir: (1) movilización ENAP/combustible de mayo de 2022 (T13: "ENAP retoma sus operaciones",... | Origen: <https://example.com/pendiente-revisar> |
 | A-2025-001 | ⬜ | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados (página /sueldos, evento 20251224-2) — validado 23-ago-2026: recon... | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo>]=2026-06 |
 | A-2026-001 | ⬜ | Sugerencias pendientes (para no perderlas) | Fullclean / contratos con el Estado — seguimiento (evento 20260310-1): verificar (1) la respuesta del alcalde Mario D... | Origen: <https://example.com/pendiente-revisar> |
 | A-2026-002 | ⬜ | Sugerencias pendientes (para no perderlas) | Economistas / pilares de la megarreforma — validación cruzada (evento 20260806-46): el evento proviene de una única f... | Origen: <https://example.com/pendiente-revisar> |

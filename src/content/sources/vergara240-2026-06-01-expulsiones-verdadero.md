@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Vergara 240 (Escuela de Periodismo UDP)
+medio: Vergara 240 (UDP)
 titulo: Verdadero, las expulsiones de migrantes en situación irregular
   aumentaron desde el 11 de marzo
 autor: Daniel Farías Sereño y Daniela Vargas Duarte

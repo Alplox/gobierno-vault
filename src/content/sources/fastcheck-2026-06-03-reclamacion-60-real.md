@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: En pocos meses resolvimos el 60% de la inversión trabada por recursos
   de reclamación (veredicto Real)
 autor: Fast Check CL

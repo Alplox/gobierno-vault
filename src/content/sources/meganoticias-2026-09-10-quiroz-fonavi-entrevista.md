@@ -12,7 +12,7 @@ Information about the YouTube Video:
 Title: Entrevista exclusiva con el ministro Quiroz: Los desafíos y anuncios clave para el país en economía
 Channel: Meganoticias
 Upload Date: 10 sept 2026
-URL: https://www.youtube.com/watch?v=QTNScRT3YNs
+URL: <https://www.youtube.com/watch?v=QTNScRT3YNs>
 
 YouTube Transcript:
 Chapter: Introducción: Bienvenida y balance del panorama actual

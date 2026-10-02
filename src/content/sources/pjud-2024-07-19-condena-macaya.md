@@ -1,6 +1,6 @@
 ---
 tipo: oficial
-medio: Poder Judicial de Chile
+medio: Poder Judicial
 titulo: TOP de San Fernando condena a la pena única de 6 años de presidio
   efectivo a autor de abuso sexual de menores de 14 años
 autor: Poder Judicial de Chile

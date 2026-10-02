@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Londres 38
+medio: Londres 38, espacio de memorias
 titulo: "Caso Fuente Ovejuna"
 autor: Londres 38
 url: http://archivodigital.londres38.cl/index.php/caso-fuente-ovejuna?onlyDirect=1

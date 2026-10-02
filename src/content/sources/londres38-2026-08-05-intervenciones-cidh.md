@@ -1,6 +1,6 @@
 ---
 tipo: comunicado
-medio: Londres 38
+medio: Londres 38, espacio de memorias
 titulo: Lee las intervenciones de la demanda ante la Comisión Interamericana de
   DDHH contra las políticas de Kast
 autor: Londres 38

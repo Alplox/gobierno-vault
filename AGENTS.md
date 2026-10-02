@@ -28,7 +28,7 @@ src/
   components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge, Person{ActivityChart,Network,StatTiles,TopicMix,CargoTimeline,QuoteItem,EventFilters}
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
   pages/  /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin, /llm.txt, /events/[year]/[id].md, /data/*.yaml
-sitemaps/  catalogo local de prensa (JSONL por medio/año, no commiteado)
+sitemaps/  catalogo local de prensa y YouTube (JSONL por medio/año en websites/ + youtube_channels/, no commiteado)
   .cache/  XML crudo (gitignored)  _manifest.json (estado, commiteado)  README.md (indice, commiteado)
 ```
 
@@ -88,7 +88,7 @@ Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
 3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[people/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
 4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`).
-5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Si el catalogo no cubre (tema muy reciente o medio ausente), usar `pnpm run news-search -- "<query>"` antes del websearch generico. Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
+5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/websites/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Si el catalogo no cubre (tema muy reciente o medio ausente), usar `pnpm run news-search -- "<query>"` antes del websearch generico. Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
 6. **No duplicar relaciones** bidireccionales; `relaciones` apunta a `ID` sin extension.
 
 Crear muchas entidades/fuentes: verificar `git status` antes (edicion concurrente) y nunca usar PowerShell `Set-Content`/`>` sobre YAML (corrompe UTF-8). Ver `.agents/skills/data-yaml/SKILL.md`.
@@ -111,7 +111,13 @@ Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (
 - Nunca uses `>`/`Set-Content`/`Out-File` sobre YAML (ver `data-yaml/SKILL.md`) — usa `node` con `writeFileSync` `utf8` o las tools `Edit`/`Write` del agente
 - Si necesitas un comando shell nativo, verifica primero que exista sino elige el equivalente portable (`rg --version`, `node -e "console.log(process.platform)"`)
 
-Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección auto-generada por `pnpm run generate-index`; también resumido en `EVENTS_INDEX.md`). Medios del catalogo: ver `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años, generada por `pnpm run sitemaps-index`), `sitemaps/README.md` y `sitemaps/_manifest.json` (~250 slugs, detalle en `.agents/skills/sitemaps/SKILL.md`). Ninguno se duplica aqui para evitar diffs ruidosos, pero siguen disponibles para editores.
+**Dónde dejar archivos temporales:** todo lo que escribas y no sea un archivo del repo va **dentro del proyecto**, nunca al temp del sistema:
+
+- `tmp/` (ya está en `.gitignore`) para scripts y volcados de un solo uso: análisis puntual, greps, conversiones. Es desechable; bórralo al terminar la tarea.
+- Un skill que necesite herramientas reutilizables las lleva en su `scripts/` (ej. `.agents/skills/sitemaps/scripts/probe-sitemap.mjs`), y sus evals o workspaces en un hermano `<skill>-workspace/` (ej. `.agents/skills/sitemaps-workspace/`), ambos gitignoreados.
+- El motivo es práctico, no de estilo: un archivo en el temp del sistema no aparece en `git status`, no se abre con un clic, y al día siguiente ni el agente que lo escribió lo encuentra. Si el trabajo sirve, que viva donde el próximo agente lo pueda ver.
+
+Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección auto-generada por `pnpm run generate-index`; también resumido en `EVENTS_INDEX.md`). Medios del catalogo: ver `sitemaps/MEDIOS.md` (tabla completa Slug/Nombre/Sitemap/Filtro/Artículos/Años, generada por `pnpm run sitemaps-index`), `sitemaps/README.md` y `sitemaps/_manifest.json` (~400 slugs, detalle en `.agents/skills/sitemaps/SKILL.md`). Cruce con el repo fuente de sitios: `TAREAS/tareas_sitemap.md` (bitácora ⬜/✅/🔒) y `TAREAS/reporte_awesome_chilean_rss.md` (sitios nuevos del repo + medios del vault ausentes en él, generado por `.agents/skills/sitemaps/scripts/report-awesome.mjs --verificar`). Ninguno se duplica aqui para evitar diffs ruidosos, pero siguen disponibles para editores.
 
 ## Skills bajo demanda
 
@@ -122,7 +128,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | Frontmatter completo, tipos, wikilinks, `svg_backup`, cifras en disputa, votaciones **(obligatorio)** | `.agents/skills/content-model/SKILL.md` |
 | 16 reglas expandidas, enforcement prose, TAREAS lifecycle **(obligatorio)** | `.agents/skills/event-rules/SKILL.md` |
 | Tocar `src/content/people\|organizations\|cifras/*.md`, `src/content/sources/*.md`, `src/content/topics/*.md`, `src/data/colectivos.yaml\|sectores.yaml\|sueldos.yaml`, encoding/CRLF **(obligatorio)** | `.agents/skills/data-yaml/SKILL.md` (nombre legacy; cubre md + excepción YAML) |
-| Catalogo sitemaps (sync, search, cobertura historica) **(obligatorio)** | `.agents/skills/sitemaps/SKILL.md` |
+| Catalogo sitemaps + YouTube (sync, search, cobertura historica) **(obligatorio)** | `.agents/skills/sitemaps/SKILL.md` |
 | Fetch/paywall, PDF/Office/OCR, video transcript, ripgrep, mirrors **(obligatorio)** | `.agents/skills/tools/SKILL.md` |
 | Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo (si toca Estado/cifra/voto) | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Redes sociales / reacciones comunitarias / verificacion imagen-viral (si toca Reddit/X/FB) | `.agents/skills/social-media/SKILL.md`; para búsqueda social ampliada usar `pnpm run social-search -- "<tema>"` (wrapper `last30days` fijado, solo Reddit/X/YouTube, sin cookies/Store/publicación) |

@@ -1,6 +1,6 @@
 ---
 tipo: institucional
-medio: Biblioteca del Congreso Nacional
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Resena Biografica Augusto Pinochet Ugarte"
 autor: "BCN Historia Politica"
 fecha: 2026-09-17

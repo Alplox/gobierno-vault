@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: Fast Check CL
+medio: Fast Check
 titulo: El empleo hoy está en cifras que no habíamos visto nunca
   (veredicto Falso)
 autor: Fast Check CL

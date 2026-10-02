@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Naciones Unidas
+medio: Organización de las Naciones Unidas (ONU)
 titulo: "Statement by the Government of Chile recognizing the State of Palestine"
 autor: "Gobierno de Chile"
 fecha: 2011-01-07

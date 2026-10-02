@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Biblioteca del Congreso Nacional (Ley Chile)
+medio: Biblioteca del Congreso Nacional de Chile
 titulo: "Decreto 32 (14-mar-2026) del Ministerio del Interior: nombra a Máximo Pavez como Subsecretario del Interior desde el 9 de marzo de 2026"
 autor: Biblioteca del Congreso Nacional de Chile
 fecha: 2026-03-14

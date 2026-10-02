@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Mercado Público (ChileCompra)
+medio: Mercado Público
 titulo: "Orden de Compra N°776-695-CM26: dos pasajes LATAM de seguridad entre Santiago y Concepción"
 autor: Presidencia de la República
 fecha: 2026-09-08

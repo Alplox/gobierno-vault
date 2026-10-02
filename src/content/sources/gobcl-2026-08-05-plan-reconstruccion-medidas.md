@@ -1,6 +1,6 @@
 ---
 tipo: documento
-medio: Gobierno de Chile (gob.cl)
+medio: Gobierno de Chile
 titulo: Principales medidas del Plan de Reconstrucción Nacional
 autor: Gobierno de Chile
 fecha: 2026-08-05
