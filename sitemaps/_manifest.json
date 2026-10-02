@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-02T15:46:06.122Z",
+  "actualizado": "2026-10-02T17:00:37.524Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3920,7 +3920,7 @@
       "nombre": "Todo Noticias (YouTube)",
       "ultima_sync": "2026-10-01T16:42:49.995Z",
       "articulos": 68152,
-      "nuevos": 3,
+      "nuevos": 0,
       "años": 10
     },
     "yt_servel": {
