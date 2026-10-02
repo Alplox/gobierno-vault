@@ -596,7 +596,7 @@
 - [2026/03/20260325-1 - Contraloría requiere informe a Secom por publicaciones sobre 'Estado quebrado'](src/content/events/2026/03/20260325-1.md) — 1 fuente
 - [2026/03/20260326-1 - Nombramiento de Alexander Nanjarí como seremi de Educación del Biobío revocado por polémicos tuits](src/content/events/2026/03/20260326-1.md) — 3 fuentes
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
-- [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 8 fuentes
+- [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 12 fuentes
 - [2026/03/20260326-4 - Seis alcaldes firman convenio de compra conjunta de 500 mil vales de gas para enfrentar el alza de combustibles](src/content/events/2026/03/20260326-4.md) — 6 fuentes
 - [2026/03/20260326-5 - Entra en vigencia el bencinazo: la bencina de 93 sube $372,2 y el diésel $580,3 por litro](src/content/events/2026/03/20260326-5.md) — 5 fuentes
 - [2026/03/20260326-6 - Kast promulga la Ley de Emergencia Energética con Quiroz, De Grange y Rincón y llama a no protestar en el transporte público](src/content/events/2026/03/20260326-6.md) — 7 fuentes
@@ -662,6 +662,7 @@
 - [2026/04/20260427-4 - Siete reclamaciones impugnan la declaratoria del humedal urbano Rocuant-Andalién (1.377,2 ha) ante el Tribunal Ambiental: el GORE Biobío entre los opositores y ASMAR suma la octava](src/content/events/2026/04/20260427-4.md) — 10 fuentes
 - [2026/04/20260428-1 - Municipios declaran desierta la compra conjunta de 500 mil vales de gas por ofertas hasta 34% sobre el Convenio Marco](src/content/events/2026/04/20260428-1.md) — 8 fuentes
 - [2026/04/20260429-1 - Contraloría concluye que frase 'Estado quebrado' no cumplió estándares de moderación](src/content/events/2026/04/20260429-1.md) — 2 fuentes
+- [2026/04/20260429-2 - Mochilazo estudiantil en Santiago y protestas de salud contra Kast en Temuco durante inauguracion del centro oncologico TROI](src/content/events/2026/04/20260429-2.md) — 10 fuentes
 - [2026/04/20260430-1 - 37 audios filtrados revelan trama de injerencia internacional desde Honduras](src/content/events/2026/04/20260430-1.md) — 3 fuentes
 - [2026/04/20260430-2 - BBCL Investiga revela el auge y caída del Clan Chen, que lavó $160 mil millones en Chile](src/content/events/2026/04/20260430-2.md) — 1 fuente
 - [2026/04/20260430-3 - Cadem: aprobación de Kast baja al 40% y desaprobación alcanza un peak de 57%](src/content/events/2026/04/20260430-3.md) — 1 fuente
@@ -717,7 +718,7 @@
 - [2026/06/20260602-3 - Subsecretaria de Prevención del Delito Ana Victoria Quintana renuncia](src/content/events/2026/06/20260602-3.md) — 2 fuentes
 - [2026/06/20260602-4 - Kast presenta su primera Cuenta Pública ante el Congreso pleno](src/content/events/2026/06/20260602-4.md) — 2 fuentes
 - [2026/06/20260602-5 - VerificaUDP califica de 'engañoso' que Chile deba 'volver a ser el país más seguro de Latinoamérica'](src/content/events/2026/06/20260602-5.md) — 1 fuente
-- [2026/06/20260603-1 - Miles de estudiantes marchan contra los recortes a la educación de Kast y la represión policial deja una joven con múltiples fracturas en el rostro](src/content/events/2026/06/20260603-1.md) — 7 fuentes
+- [2026/06/20260603-1 - Miles de estudiantes marchan contra los recortes a la educación de Kast y la represión policial deja una joven con múltiples fracturas en el rostro](src/content/events/2026/06/20260603-1.md) — 8 fuentes
 - [2026/06/20260603-2 - Proyecto de electromovilidad para Osorno queda en duda por reajuste presupuestario en Transportes; senadores y Concejo Municipal critican la falta de claridad del gobierno](src/content/events/2026/06/20260603-2.md) — 5 fuentes
 - [2026/06/20260603-3 - El SII habilita a los casinos online extranjeros a pagar IVA: la Resolución Exenta N°69 abre un conflicto entre el fisco, la justicia y el Congreso](src/content/events/2026/06/20260603-3.md) — 28 fuentes
 - [2026/06/20260604-1 - Quiroz anuncia que Hacienda prepara un proyecto propio sobre secreto bancario con alzamiento solo por vía judicial](src/content/events/2026/06/20260604-1.md) — 5 fuentes
@@ -1580,7 +1581,7 @@
 - [2026/09/20260903-21 - Milei anuncia sanciones contra actividades petroleras en Malvinas y un proyecto de ley de defensa de la soberanía](src/content/events/2026/09/20260903-21.md) — 12 fuentes
 - [2026/09/20260903-22 - Profesores de El Monte levantan movilización de brazos caídos tras completarse el pago de remuneraciones](src/content/events/2026/09/20260903-22.md) — 10 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 30 fuentes
-- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 27 fuentes
+- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 28 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 12 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 10 fuentes
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
@@ -1731,9 +1732,9 @@
 - [2026/09/20260919-6 - Bachelet baja su candidatura a la Secretaría General de la ONU tras un tercer sondeo adverso del Consejo de Seguridad](src/content/events/2026/09/20260919-6.md) — 16 fuentes
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260920-2 - Lluvias dejan 105 viviendas afectadas en Concepción; en Juan Riquelme y Chaimávida el barro entra a las casas y la sede de la Junta de Vecinos queda inutilizada](src/content/events/2026/09/20260920-2.md) — 10 fuentes
-- [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 57 fuentes
+- [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 62 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
-- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 117 fuentes
+- [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 120 fuentes
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
@@ -1752,7 +1753,7 @@
 - [2026/09/20260924-6 - Vecinos y religiosas del Barrio Matta instalan 'duchas anti rucos' en el Monasterio de las Hermanas Clarisas Capuchinas y personas en situación de calle cuestionan la medida](src/content/events/2026/09/20260924-6.md) — 9 fuentes
 - [2026/09/20260924-7 - Presidencia adjudica producción general a AM Producciones por $294 millones](src/content/events/2026/09/20260924-7.md) — 2 fuentes
 - [2026/09/20260924-8 - Megaoperativo anticorrupción en Atacama, Biobío y Metropolitana: la PDI detiene a nueve imputados por fraude al fisco, cohecho, asociación ilícita y lavado de activos](src/content/events/2026/09/20260924-8.md) — 11 fuentes
-- [2026/09/20260924-9 - Kast descarta pérdida de soberanía por eventuales ejercicios militares del Escudo y defiende a Pérez Mackenna ante la interpelación](src/content/events/2026/09/20260924-9.md) — 3 fuentes
+- [2026/09/20260924-9 - Kast descarta pérdida de soberanía por eventuales ejercicios militares del Escudo y defiende a Pérez Mackenna ante la interpelación](src/content/events/2026/09/20260924-9.md) — 4 fuentes
 - [2026/09/20260925-1 - Sistema frontal golpea La Araucanía: 9.400 personas aisladas y más de 300 viviendas con daños](src/content/events/2026/09/20260925-1.md) — 8 fuentes
 - [2026/09/20260925-2 - Subsecretaría de Evaluación Social integra 25 programas sociales en nueve para el Presupuesto 2027 y objeta técnicamente tres](src/content/events/2026/09/20260925-2.md) — 14 fuentes
 - [2026/09/20260925-3 - El embajador de Israel publica y borra un mensaje contra Michelle Bachelet, lo republica y enfrenta a Carmen Hertz en X; Winter e Insunza exigen una respuesta de La Moneda](src/content/events/2026/09/20260925-3.md) — 10 fuentes
@@ -1789,8 +1790,9 @@
 - [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 19 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 15 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
-- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 36 fuentes
-- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 43 fuentes
+- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 37 fuentes
+- [2026/10/20261001-10 - Comisión de Hacienda aprueba en general la reforma al mercado de capitales por 11 votos a 2 y abre la pelea por la norma de fraudes bancarios](src/content/events/2026/10/20261001-10.md) — 8 fuentes
+- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 44 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 5 fuentes
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes

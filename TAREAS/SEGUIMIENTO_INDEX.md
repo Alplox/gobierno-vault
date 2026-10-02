@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 351
+**Total tareas:** 352
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 4 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 273 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 4 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 274 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 320 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 321 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -329,6 +329,7 @@
 | S-2026-256 | ⬜ | 2026-10-01 | Sugerencias pendientes (para no perderlas) | Sumario interno en la Unidad de Relaciones Internacionales del Senado por el fallido viaje del senador [[people/daniel_nunez]] a la [[organizations/union_interparlamentaria]] (evento `20261001-5`): la Mesa del [[organizations/senado]] negó gestiones de visa y [[people/daniel_nunez]] pidió un sumario que esclarezca las acciones y omisiones de la unidad. Falta el resultado del sumario, la respuesta de la [[organizations/embajada_eeuu_chile]] y si el caso deriva en comisión u oficio | `20261001-5` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/10/01/nunez-exige-respeto-a-embajador-judd-dice-que-senado-omitio-gestiones-de-visa-a-eeuu-y-pide-sumario.shtml> |
 | S-2026-257 | ⬜ | 2026-10-01 | Cerro Navia — balacera 31-ago-2026 | Autores de la balacera en Las Torres con Salvador Gutiérrez que baleó a una niña de 5 años: identificación, peritaje balístico, estado clínico de la menor y vínculo con el auto abandonado con 10+ impactos | `20260831-10` | Origen: <https://www.elperiscopio.cl/destacado-1/balacera-deja-a-una-nina-de-5-anos-grave-y-kast-aborda-el-hecho-es-un-dia-de-contradicciones/> |
 | S-2026-258 | ⬜ | 2026-10-01 | Parafina — premisa de consumo y descontinuacion del valor fijado (eventos `20260930-8` y `20261001-7`) | Verificar la serie mensual de ventas de kerosene que sostiene el argumento del subsidio casi en cero, si el consumo de octubre y noviembre se acerca al 10% del de julio proyectado, el efecto en el gasto de los hogares del sur y si el Ejecutivo reconsidera el valor fijado | `20261001-7` | Origen: <https://www.youtube.com/watch?v=47JclM7jzDI> |
+| S-2026-259 | ⬜ | 2026-10-02 | Reforma mercado de capitales — seguimiento | Votacion en particular MK4 el 20 y 21-oct (hasta total despacho) y desenlace de la norma de fraudes bancarios: culpa leve con presuncion, seguros permitidos y rechazo UDI anunciado | `20261001-10` | Origen: <https://www.latercera.com/pulso/noticia/comision-de-hacienda-de-la-camara-de-diputados-aprueba-en-general-proyecto-de-reforma-al-mercado-de-capitales/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

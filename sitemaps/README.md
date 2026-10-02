@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 1/10/2026, 16:45:35
+- **Última sincronización:** 2/10/2026, 12:46:06
 - **Medios registrados:** 568
-- **Artículos indexados:** 12.291.353
+- **Artículos indexados:** 12.291.684
 - **Canales de YouTube:** 30 (570.326 videos)
 
 ## Por medio
@@ -23,11 +23,11 @@
 | Voz de América | 254.383 |
 | El Dínamo | 252.564 |
 | France 24 | 237.713 |
-| CNN Chile | 228.293 |
+| CNN Chile | 228.364 |
 | Página 7 | 221.616 |
 | The Clinic | 193.317 |
 | El Pingüino | 192.743 |
-| 24 Horas | 190.527 |
+| 24 Horas | 190.652 |
 | IPS Agencia de Noticias | 109.988 |
 | Radio Universidad de Chile | 108.402 |
 | Mediabanco | 107.003 |
@@ -47,15 +47,15 @@
 | Diario Paillaco | 56.577 |
 | Tierramarillano | 52.551 |
 | Está Pasando | 51.988 |
+| Diario Lago Ranco | 51.419 |
 | País Lobo | 51.409 |
-| Diario Lago Ranco | 51.380 |
 | REDIMIN | 49.281 |
-| La Unión | 47.962 |
+| La Unión | 47.980 |
 | Radio Duna | 47.571 |
 | MercoPress | 46.739 |
 | Radio Activa | 46.268 |
 | La Hora | 45.842 |
-| Diario San José | 43.119 |
+| Diario San José | 43.162 |
 | San Carlos On Line | 42.599 |
 | Terra Chile | 42.231 |
 | Diario El Ranco | 42.218 |
@@ -158,8 +158,8 @@
 | Radio Comunicativa (Ovalle) | 11.739 |
 | La Cuarta | 11.669 |
 | Prensa Eventos | 11.612 |
+| Infogate | 11.082 |
 | SENDA | 11.049 |
-| Infogate | 11.048 |
 | Radio UdeC | 11.047 |
 | Novena Digital | 10.673 |
 | Diario Chile | 10.649 |
@@ -231,7 +231,7 @@
 | SERNATUR | 5784 |
 | Quirihue Noticias | 5721 |
 | Arica Chile | 5694 |
-| Valparaíso Noticias | 5691 |
+| Valparaíso Noticias | 5692 |
 | TV Canal 5 (Puerto Montt) | 5689 |
 | Reporte Agrícola | 5667 |
 | Disorder (magazine) | 5642 |
