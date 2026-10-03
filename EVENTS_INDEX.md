@@ -595,6 +595,7 @@
 - [2026/03/20260324-5 - Escalada camionera del 24 al 27 de marzo: CNDC en reflexión por el alza del diésel, CNTC dice que las bases mandan y el gremio fija reunión clave para el lunes](src/content/events/2026/03/20260324-5.md) — 8 fuentes
 - [2026/03/20260324-6 - Quiroz defiende en la Cámara el plan de combustibles entre encaramiento de Videla y ola de renuncias a la bencina parlamentaria](src/content/events/2026/03/20260324-6.md) — 6 fuentes
 - [2026/03/20260325-1 - Contraloría requiere informe a Secom por publicaciones sobre 'Estado quebrado'](src/content/events/2026/03/20260325-1.md) — 1 fuente
+- [2026/03/20260325-2 - Congreso despacha a ley las medidas transitorias para la parafina y los taxistas: el Senado aprueba 32 a 0 y la Cámara cierra el tercer trámite](src/content/events/2026/03/20260325-2.md) — 6 fuentes
 - [2026/03/20260326-1 - Nombramiento de Alexander Nanjarí como seremi de Educación del Biobío revocado por polémicos tuits](src/content/events/2026/03/20260326-1.md) — 3 fuentes
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
 - [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 12 fuentes
@@ -604,6 +605,7 @@
 - [2026/03/20260326-7 - Gobierno remueve a Iván Mlynarz de la vicepresidencia ejecutiva de ENAMI sin informar motivos: Javiera Estrada asume subrogante y Juan Carlos Sáez titular cuatro días después](src/content/events/2026/03/20260326-7.md) — 6 fuentes
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
 - [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
+- [2026/03/20260327-3 - Alcance regional del bencinazo: hasta $1.810 por litro de 93 en zonas aisladas de Los Lagos y el impacto en Coyhaique](src/content/events/2026/03/20260327-3.md) — 6 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
 - [2026/03/20260330-1 - Los cuatro gremios descartan el paro tras La Moneda: actualización del ICT, canal de denuncias y traspaso del diésel a tarifa](src/content/events/2026/03/20260330-1.md) — 6 fuentes
 - [2026/03/20260331-1 - Seremi de Obras Públicas de Tarapacá Mauricio Montealegre renuncia antes de asumir](src/content/events/2026/03/20260331-1.md) — 1 fuente
@@ -1814,6 +1816,7 @@
 - [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 93 fuentes
 - [2026/10/20261001-10 - Comisión de Hacienda aprueba en general la reforma al mercado de capitales por 11 votos a 2 y abre la pelea por la norma de fraudes bancarios](src/content/events/2026/10/20261001-10.md) — 8 fuentes
 - [2026/10/20261001-11 - Paro docente en Antofagasta por al menos 19 desvinculaciones de la CMDS tras la evaluación docente, con manifestación y adhesión a la marcha estudiantil](src/content/events/2026/10/20261001-11.md) — 6 fuentes
+- [2026/10/20261001-12 - Presidencia adjudica suministro de abarrotes y perecibles a tres proveedores por $355 millones estimados](src/content/events/2026/10/20261001-12.md) — 3 fuentes
 - [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 58 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 7 fuentes
