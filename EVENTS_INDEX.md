@@ -1660,7 +1660,7 @@
 - [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — 1 fuente
 - [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — 1 fuente
 - [2026/09/20260910-8 - Gobierno confirma que no habrá acto oficial por el 11 de septiembre y Kast mantendrá agenda habitual en Los Ríos](src/content/events/2026/09/20260910-8.md) — 10 fuentes
-- [2026/09/20260910-9 - Diputados PC ofician al canciller para declarar persona non grata a Judd: 'Yankee, go home'](src/content/events/2026/09/20260910-9.md) — 5 fuentes
+- [2026/09/20260910-9 - Diputados PC ofician al canciller para declarar persona non grata a Judd: 'Yankee, go home'](src/content/events/2026/09/20260910-9.md) — 6 fuentes
 - [2026/09/20260911-1 - Kast defiende desde Corral no realizar acto oficial por el 11-S y llama a mirar el futuro](src/content/events/2026/09/20260911-1.md) — 33 fuentes
 - [2026/09/20260911-10 - DF Tax: especialistas desdramatizan el retiro y lo cifran como pérdida de influencia, con Chile en la mesa directiva del Comité Negociador](src/content/events/2026/09/20260911-10.md) — 1 fuente
 - [2026/09/20260911-11 - Presidencia adjudica suministro de pescados y mariscos por $94,5 millones tras licitación desierta](src/content/events/2026/09/20260911-11.md) — 3 fuentes
@@ -1773,6 +1773,7 @@
 - [2026/09/20260925-6 - Servel alerta por un recorte del 15% a su presupuesto 2027 y el Gobierno descarta que afecte las tareas esenciales](src/content/events/2026/09/20260925-6.md) — 9 fuentes
 - [2026/09/20260925-7 - Contratistas de Codelco piden reunión ante un posible recorte de entre 5% y 20% de la dotación](src/content/events/2026/09/20260925-7.md) — 8 fuentes
 - [2026/09/20260925-8 - Meme mundial de Chile largo y angosto: nace en Francia, suma aerolínea y divide a los chilenos entre orgullo y bullying](src/content/events/2026/09/20260925-8.md) — 7 fuentes
+- [2026/09/20260925-9 - Embajador Brandon Judd cuestiona en el CCRI las críticas a Estados Unidos y objeta el rol de China como principal socio comercial de Chile](src/content/events/2026/09/20260925-9.md) — 5 fuentes
 - [2026/09/20260926-1 - Segundo día de corte en la ruta a Cabrero: vecinos de la población Juan Riquelme vuelven a manifestarse por los cortes de agua](src/content/events/2026/09/20260926-1.md) — 7 fuentes
 - [2026/09/20260926-2 - Ministerio Público pide formalizar a Leonarda Villalobos por prevaricación tras la querella de Sauer por la grabación del caso Audio](src/content/events/2026/09/20260926-2.md) — 7 fuentes
 - [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
@@ -1790,6 +1791,7 @@
 - [2026/09/20260929-5 - Se conoce la declaración de Luis Hermosilla ante la Fiscalía: admite pagos en efectivo de Piñera y gestiones en nombramientos de jueces](src/content/events/2026/09/20260929-5.md) — 8 fuentes
 - [2026/09/20260929-6 - Vodanovic en 24 Horas califica la reforma de seguridad de espanto juridico, pide retirarla e impulsar el boletin 16707-07](src/content/events/2026/09/20260929-6.md) — 9 fuentes
 - [2026/09/20260929-7 - La Moneda evalúa continuidad de Zaliasnik tras declaración de Hermosilla: Alvarado evita juicios y diputados piden su salida](src/content/events/2026/09/20260929-7.md) — 7 fuentes
+- [2026/09/20260929-8 - El embajador Brandon Judd asiste al funeral del cabo Christopher Aguilera y un matinal de Chilevisión cuestiona su presencia](src/content/events/2026/09/20260929-8.md) — 5 fuentes
 - [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 19 fuentes
 - [2026/09/20260930-10 - Kast presenta en cadena nacional el Presupuesto 2027 con alza de 1,5% y cuatro prioridades, crecimiento, seguridad, niñez y beneficios sociales](src/content/events/2026/09/20260930-10.md) — 20 fuentes
 - [2026/09/20260930-11 - Bacheletazo en La Pintana, homenaje a Bachelet con Boric, Vallejo y Jara, no me iré para la casa y trampa tras trampa contra el Gobierno](src/content/events/2026/09/20260930-11.md) — 16 fuentes
@@ -1814,6 +1816,7 @@
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
 - [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 20 fuentes
 - [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
+- [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 8 fuentes
 
 ## 2025
 
