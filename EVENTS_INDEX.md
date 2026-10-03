@@ -1699,7 +1699,7 @@
 - [2026/09/20260914-14 - Corte de Apelaciones de Santiago ordena a La Moneda reincorporar a la jefa de repostería despedida por falta de confianza; el Gobierno apela vía CDE a la Suprema](src/content/events/2026/09/20260914-14.md) — 7 fuentes
 - [2026/09/20260914-2 - Cadem Plaza Pública: 62% evalúa al gobierno de Kast peor de lo esperado y le pone nota 3,4 a seis meses de mandato](src/content/events/2026/09/20260914-2.md) — 8 fuentes
 - [2026/09/20260914-3 - Ministro Barros cancela viaje a Australia en business class de más de $14 millones tras revelación de Contrapoder](src/content/events/2026/09/20260914-3.md) — 8 fuentes
-- [2026/09/20260914-4 - MMA e Inacap presentan recetario dieciochero para reutilizar sobras de Fiestas Patrias](src/content/events/2026/09/20260914-4.md) — 12 fuentes
+- [2026/09/20260914-4 - MMA e Inacap presentan recetario dieciochero para reutilizar sobras de Fiestas Patrias](src/content/events/2026/09/20260914-4.md) — 28 fuentes
 - [2026/09/20260914-5 - Quiroz presenta en el ChileDay Madrid la estrategia económica y la reforma al mercado de capitales ante 700 inversionistas](src/content/events/2026/09/20260914-5.md) — 7 fuentes
 - [2026/09/20260914-6 - Kast defiende el retorno de Duco a La Moneda y responde por sus críticas a los 'premios de consuelo': 'Tiene una experiencia que es relevante'](src/content/events/2026/09/20260914-6.md) — 5 fuentes
 - [2026/09/20260914-7 - Concejal UDI de Isla de Maipo pide que La Consentida no se use como cueca en eventos de Fiestas Patrias y es desmentido técnicamente en plena sesión](src/content/events/2026/09/20260914-7.md) — 8 fuentes
