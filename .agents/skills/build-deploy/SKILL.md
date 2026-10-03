@@ -55,6 +55,8 @@ Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[
 
 Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/styles/global.css`, plugin `@tailwindcss/vite` con `@source` y `@plugin "daisyui"` (Tailwind v4/daisyUI 5); si falla, revisar `build.concurrency` y `wrangler.jsonc` antes de tocar estilos.
 
+- **Scan de clases (dev lento):** Tailwind v4 tokeniza todo lo no ignorado (~15k archivos/~99 MB: 13k prosas de `src/content` + blobs de 80 MB en `.telegram-scrape`/`public/backup`/`img-to-ascii`) y el primer compile de `global.css` tardaba ~64s > timeout `vite:invoke` de 60s. `global.css` lleva `@source not` explícitos (colecciones de `src/content`, `public`, `sitemaps`, `.telegram-scrape`, caches, `dist`); el scan medido pasó de ~64s a ~60ms. Verificado: `src/content` no tiene ningún `class=` y `public/` no tiene HTML — si un `.md` llegara a usar HTML con utilidades, hay que quitar su exclusión. `vite.server.watch.ignored` en `astro.config.mjs` excluye lo mismo del watcher: el boot pasó de ~43s a ~19s (el supervisor de `astro dev` mata el server si no está listo en 30s).
+
 ## Formato LLM
 
 `/llm.txt` (alias `/llms.txt`) generado por `src/lib/llmIndex.ts` (`src/pages/llm.txt.ts`) con índice completo; `/events/AAAA/ID.md` sirve markdown fuente; `/data/{entities,sources,topics,colectivos,sectores}.yaml` sirve YAML crudo (`ALLOWED` en `src/pages/data/[name].yaml.ts`). Footer enlaza a `/llm.txt`.

@@ -5,7 +5,7 @@
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 | --- | --- | --- | --- | --- | --- |
-| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 190.527 | 2 |
+| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 190.652 | 2 |
 | `abif` | ABIF | `www.abif.cl/robots.txt` | includeRe | 312 | 3 |
 | `acera` | ACERA | `acera.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.647 | 8 |
 | `aconcaguadigital` | Aconcagua Digital | `aconcaguadigital.cl/wp-sitemap.xml` | includeRe | 732 | 4 |
@@ -68,7 +68,7 @@
 | `ciper` | CIPER Chile | `www.ciperchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.446 | 18 |
 | `clave9` | Clave 9 | `clave9.cl/sitemap_index.xml` | articleOnly (Yoast) | 13.125 | 10 |
 | `clgmedios` | CLG Medios | `clgmedios.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.650 | 2 |
-| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 228.293 | 16 |
+| `cnnchile` | CNN Chile | `www.cnnchile.com/robots.txt` | — | 228.364 | 16 |
 | `coaniquem` | Coaniquem | `coaniquem.cl/wp-sitemap.xml` | includeRe | 81 | 7 |
 | `colegiodeenfermeras` | Colegio de Enfermeras | `colegiodeenfermeras.cl/wp-sitemap.xml` | includeRe | 1.491 | 9 |
 | `colegiodeprofesores` | Colegio de Profesores | `www.colegiodeprofesores.cl/wp-sitemap.xml` | includeRe | 6.123 | 11 |
@@ -118,15 +118,15 @@
 | `diarioelranco` | Diario El Ranco | `www.diarioelranco.cl/sitemap.xml` | articleOnly (Yoast) | 42.218 | 18 |
 | `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 400 | 1 |
 | `diariofutrono` | Diario Futrono | `www.diariofutrono.cl/sitemap.xml` | includeRe | 56.774 | 14 |
-| `diariolagoranco` | Diario Lago Ranco | `diariolagoranco.cl/sitemap.xml` | — | 51.380 | 13 |
-| `diariolaunion` | La Unión | `diariolaunion.cl/sitemap.xml` | includeRe | 47.962 | 10 |
+| `diariolagoranco` | Diario Lago Ranco | `diariolagoranco.cl/sitemap.xml` | — | 51.419 | 13 |
+| `diariolaunion` | La Unión | `diariolaunion.cl/sitemap.xml` | includeRe | 47.980 | 10 |
 | `diariolinares` | Diario Linares | `diariolinares.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.698 | 6 |
 | `diariolongino` | Diario El Longino | `diariolongino.cl/sitemap_index.xml` | articleOnly (Yoast) | 15.517 | 6 |
 | `diarioloslagos` | Diario Los Lagos | `diarioloslagos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.302 | 2 |
 | `diariopaillaco` | Diario Paillaco | `www.diariopaillaco.cl/sitemap.xml` | includeRe | 56.577 | 14 |
 | `diariopuertovaras` | Diario Puerto Varas | `diariopuertovaras.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.623 | 10 |
 | `diarioregionalaysen` | Diario Regional Aysén | `diarioregionalaysen.cl/sitemap.xml` | — | 25.469 | 8 |
-| `diariosanjose` | Diario San José | `www.diariosanjose.cl/sitemap.xml` | includeRe | 43.119 | 9 |
+| `diariosanjose` | Diario San José | `www.diariosanjose.cl/sitemap.xml` | includeRe | 43.162 | 9 |
 | `diariosurnoticias` | Diario Sur Noticias | `diariosurnoticias.com/sitemap_index.xml` | articleOnly (Yoast) | 14.389 | 13 |
 | `diariotalca` | Diario Talca | `diariotalca.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.421 | 6 |
 | `diariousach` | Diario USACH | `www.diariousach.cl/robots.txt` | — | 80 | 1 |
@@ -241,7 +241,7 @@
 | `iguales` | Fundación Iguales | `iguales.cl/wp-sitemap.xml` | includeRe | 2.109 | 16 |
 | `infinita` | Radio Infinita | `www.infinita.cl/sitemap.xml` | — | 100 | 1 |
 | `infodefensa` | Infodefensa | `www.infodefensa.com/sitemap/lastarticles` | — | 100 | 1 |
-| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 11.048 | 1 |
+| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 11.082 | 1 |
 | `informaalminuto` | Informa Al Minuto | `informaalminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.435 | 6 |
 | `infosalmon` | InfoSalmón | `infosalmon.cl/wp-sitemap.xml` | includeRe | 6.968 | 6 |
 | `infotarapaca` | Info Tarapacá | `infotarapaca.cl/sitemap.xml` | includeRe | 948 | 2 |
@@ -464,7 +464,7 @@
 | `uteusach` | UTE USACH Noticias | `corporacionuteusach-noticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.960 | 7 |
 | `uteusachnoticias` | UTE USACH Noticias | `corporacionuteusach-noticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.896 | 7 |
 | `vallenardigital` | Vallenar Digital | `vallenardigital.cl/sitemap.xml` | includeRe | 25.829 | 15 |
-| `valparaisonoticias` | Valparaíso Noticias | `www.valparaisonoticias.cl/sitemap.xml` | — | 5.691 | 9 |
+| `valparaisonoticias` | Valparaíso Noticias | `www.valparaisonoticias.cl/sitemap.xml` | — | 5.692 | 9 |
 | `vergara240` | Vergara 240 | `vergara240.udp.cl/sitemap_index.xml` | articleOnly (Yoast) | 662 | 5 |
 | `verticetv` | Vértice TV (Puerto Montt) | `verticetv.cl/sitemaps.xml` | articleOnly (Yoast) | 1.421 | 2 |
 | `vialidad` | Dirección de Vialidad (MOP) | `vialidad.mop.gob.cl/wp-sitemap.xml` | includeRe | 1.171 | 18 |

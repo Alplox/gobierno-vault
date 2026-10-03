@@ -39,6 +39,26 @@ export default defineConfig({
   // Tailwind v4 vía plugin Vite (el CSS vive en src/styles/global.css con
   // @import "tailwindcss" + @plugin daisyui/typography).
   vite: {
+    // Watch: no observar los corpus pesados (sitemaps/ 20k archivos, dist/
+    // 17k, .telegram-scrape, caches). Chokidar los recorría en cada arranque
+    // (~20s extra en dev) y cada sync/backup disparaba miles de eventos HMR.
+    // Ninguno aporta clases ni páginas: el contenido vive en src/content.
+    server: {
+      watch: {
+        ignored: [
+          '**/sitemaps/**',
+          '**/dist/**',
+          '**/.astro/**',
+          '**/.telegram-scrape/**',
+          '**/.wrangler/**',
+          '**/.tools/**',
+          '**/.firecrawl/**',
+          '**/storage/**',
+          '**/tmp/**',
+          '**/public/backup/**',
+        ],
+      },
+    },
     plugins: [
       tailwindcss(),
       // onnxruntime-web (motor de Piper TTS) se sirve desde CDN en runtime: el

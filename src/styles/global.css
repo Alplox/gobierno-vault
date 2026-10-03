@@ -1,5 +1,26 @@
 @import "tailwindcss";
 @plugin "@tailwindcss/typography";
+/* Detección automática de clases: excluir corpus sin utilidades Tailwind.
+   El scan tokeniza ~15k archivos/~99 MB (prosa + blobs gigantes) y tarda
+   ~64s > timeout vite:invoke de 60s en el primer compile de dev.
+   Verificado: src/content no tiene ningún `class=` y public/ no tiene HTML.
+   Rutas relativas a este stylesheet. */
+@source not "../../sitemaps";
+@source not "../../.telegram-scrape";
+@source not "../../public";
+@source not "../../src/content/cifras";
+@source not "../../src/content/events";
+@source not "../../src/content/organizations";
+@source not "../../src/content/people";
+@source not "../../src/content/sources";
+@source not "../../src/content/topics";
+@source not "../../.wrangler";
+@source not "../../storage";
+@source not "../../tmp";
+@source not "../../.astro";
+@source not "../../.firecrawl";
+@source not "../../.tools";
+@source not "../../dist";
 /* Todos los temas built-in de daisyUI disponibles para el selector del navbar.
    light es el default (mantiene el look actual); dark entra por prefers-color-scheme
    solo si no hay elección guardada. */
