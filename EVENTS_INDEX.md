@@ -1740,6 +1740,9 @@
 - [2026/09/20260919-4 - Paul Vásquez El Flaco es pifiado en La Pampilla de Coquimbo tras aludir a Kast y abandona el escenario antes de terminar](src/content/events/2026/09/20260919-4.md) — 11 fuentes
 - [2026/09/20260919-5 - Los Viking's 5 responden a las críticas por cantar en el cierre de campaña de Kast: trabajo por plata, sin militancia](src/content/events/2026/09/20260919-5.md) — 6 fuentes
 - [2026/09/20260919-6 - Bachelet baja su candidatura a la Secretaría General de la ONU tras un tercer sondeo adverso del Consejo de Seguridad](src/content/events/2026/09/20260919-6.md) — 16 fuentes
+- [2026/09/20260919-7 - Davor Gjuranovic califica al aire la Parada Militar 2026 como una de las mejores del siglo y responde a las críticas en redes](src/content/events/2026/09/20260919-7.md) — 8 fuentes
+- [2026/09/20260919-8 - Mosca se posó en la cabeza de Kast durante la entrega de medallas en la Parada Militar 2026 y se volvió viral con publicidad de Tanax](src/content/events/2026/09/20260919-8.md) — 9 fuentes
+- [2026/09/20260919-9 - Familiares con cupo y adherentes de Kast denuncian que no pudieron ingresar a las galerías de la Parada Militar 2026](src/content/events/2026/09/20260919-9.md) — 10 fuentes
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260920-2 - Lluvias dejan 105 viviendas afectadas en Concepción; en Juan Riquelme y Chaimávida el barro entra a las casas y la sede de la Junta de Vecinos queda inutilizada](src/content/events/2026/09/20260920-2.md) — 10 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 62 fuentes
