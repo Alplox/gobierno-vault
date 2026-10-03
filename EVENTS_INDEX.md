@@ -1671,6 +1671,7 @@
 - [2026/09/20260911-16 - Cinco detenidos en Cerro Navia la noche del 11-S con 90 artefactos incendiarios: tres menores en tres procedimientos sin panfletos](src/content/events/2026/09/20260911-16.md) — 7 fuentes
 - [2026/09/20260911-17 - Barricadas nocturnas del 11-S en siete comunas: una decena entre Rotonda Grecia y Tobalaba, disparos en Villa Francia y operativo en Mapocho](src/content/events/2026/09/20260911-17.md) — 5 fuentes
 - [2026/09/20260911-18 - Encapuchados irrumpen en el Instituto Nacional por el 11-S: 7 detenidos, 5 estudiantes, evacuación y suspensión de clases](src/content/events/2026/09/20260911-18.md) — 5 fuentes
+- [2026/09/20260911-19 - Corte Suprema remueve a 11 jueces por viajar al extranjero con licencia médica y deja pendientes los casos congelados por el TC](src/content/events/2026/09/20260911-19.md) — 7 fuentes
 - [2026/09/20260911-2 - Miles conmemoran los 53 años del golpe en el Estadio Nacional con visitas guiadas, música y velatón, sin acto oficial del Gobierno](src/content/events/2026/09/20260911-2.md) — 6 fuentes
 - [2026/09/20260911-3 - Ministro Jaime Campos respalda no realizar acto oficial por el 11-S: "No tenemos nada que conmemorar"](src/content/events/2026/09/20260911-3.md) — 6 fuentes
 - [2026/09/20260911-4 - Diputado Luis Sánchez compara detenidos desaparecidos con "víctimas" de la reforma agraria al defender ausencia de acto por el 11-S](src/content/events/2026/09/20260911-4.md) — 6 fuentes
@@ -1686,6 +1687,8 @@
 - [2026/09/20260912-5 - Jonás Preller publica la columna Economía incómoda y plantea una brecha chilena entre innovación, empleo y automatización](src/content/events/2026/09/20260912-5.md) — 21 fuentes
 - [2026/09/20260912-6 - Mala Espina desmiente que Chile se haya retirado de la ONU y rastrea el titular viral a la gráfica de Koncevisión del 9 de septiembre](src/content/events/2026/09/20260912-6.md) — 5 fuentes
 - [2026/09/20260912-7 - Arrau entrega balance de las jornadas del 10 y 11 de septiembre: 284 detenidos y 198 eventos de violencia a nivel nacional](src/content/events/2026/09/20260912-7.md) — 15 fuentes
+- [2026/09/20260912-8 - Corte de Apelaciones de Santiago rechaza que Juan Manuel Aliste Vega cumpla su pena en casa por enfermedad terminal](src/content/events/2026/09/20260912-8.md) — 5 fuentes
+- [2026/09/20260912-9 - Ingresa la Ley Mariana: proyecto declara imprescriptibles homicidios, femicidios y parricidios tras el sobreseimiento del confeso](src/content/events/2026/09/20260912-9.md) — 8 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
 - [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
@@ -1697,6 +1700,10 @@
 - [2026/09/20260914-12 - Republicanos y el Club de Huasos llevan a Contraloría la clausura de la medialuna de Peñalolén y la Corte declara inadmisible su recurso de protección](src/content/events/2026/09/20260914-12.md) — 10 fuentes
 - [2026/09/20260914-13 - Kast afirma que Chile sigue como observador del Escudo de las Américas pese a documentos estadounidenses que lo listan como miembro](src/content/events/2026/09/20260914-13.md) — 8 fuentes
 - [2026/09/20260914-14 - Corte de Apelaciones de Santiago ordena a La Moneda reincorporar a la jefa de repostería despedida por falta de confianza; el Gobierno apela vía CDE a la Suprema](src/content/events/2026/09/20260914-14.md) — 7 fuentes
+- [2026/09/20260914-15 - Camioneta detona mina antitanque en campo minado del Hito 16 en la frontera con Perú y se indaga contrabando de cobre](src/content/events/2026/09/20260914-15.md) — 5 fuentes
+- [2026/09/20260914-16 - SEC formula cargos contra Enel por miles de medidores que registraban consumo sin carga conectada](src/content/events/2026/09/20260914-16.md) — 6 fuentes
+- [2026/09/20260914-17 - Luis Cordero advierte al Gobierno de Kast por eventuales indultos: los crímenes de lesa humanidad no son indultables](src/content/events/2026/09/20260914-17.md) — 7 fuentes
+- [2026/09/20260914-18 - Gobierno de Kast presenta balance legislativo de seis meses y se compara con Boric: 220 proyectos frente a 175](src/content/events/2026/09/20260914-18.md) — 5 fuentes
 - [2026/09/20260914-2 - Cadem Plaza Pública: 62% evalúa al gobierno de Kast peor de lo esperado y le pone nota 3,4 a seis meses de mandato](src/content/events/2026/09/20260914-2.md) — 8 fuentes
 - [2026/09/20260914-3 - Ministro Barros cancela viaje a Australia en business class de más de $14 millones tras revelación de Contrapoder](src/content/events/2026/09/20260914-3.md) — 8 fuentes
 - [2026/09/20260914-4 - MMA e Inacap presentan recetario dieciochero para reutilizar sobras de Fiestas Patrias](src/content/events/2026/09/20260914-4.md) — 28 fuentes
@@ -1719,9 +1726,9 @@
 - [2026/09/20260916-9 - Cicardini y Manouchehri (PS) emplazan a Kast y a Quiroz por el 18 más caro de la historia y piden la salida del ministro](src/content/events/2026/09/20260916-9.md) — 6 fuentes
 - [2026/09/20260917-1 - Kast y White encabezan desfile de Glorias del Ejército en San Bernardo con despliegue inédito tras las amenazas al alcalde](src/content/events/2026/09/20260917-1.md) — 13 fuentes
 - [2026/09/20260917-2 - Robo a departamento de asistente de Producción de Presidencia en San Miguel: investigan sustracción de discos duros con presunta información secreta](src/content/events/2026/09/20260917-2.md) — 27 fuentes
-- [2026/09/20260917-3 - Pancho Saavedra rompe el protocolo en la inauguración de La Gran Fonda con una paya a quienes conducen Chile](src/content/events/2026/09/20260917-3.md) — 9 fuentes
+- [2026/09/20260917-3 - Pancho Saavedra rompe el protocolo en la inauguración de La Gran Fonda con una paya a quienes conducen Chile](src/content/events/2026/09/20260917-3.md) — 10 fuentes
 - [2026/09/20260917-4 - Corte de Santiago rechaza amparo de Iturriaga Neumann para cumplir sus más de 500 años en domicilio; seguirá en Punta Peuco](src/content/events/2026/09/20260917-4.md) — 6 fuentes
-- [2026/09/20260917-5 - Reuters publica un memo con una propuesta de gasolina E10 y el Ministerio de Energía la desmiente: no hay ninguna propuesta formal](src/content/events/2026/09/20260917-5.md) — 25 fuentes
+- [2026/09/20260917-5 - Reuters publica un memo con una propuesta de gasolina E10 y el Ministerio de Energía la desmiente: no hay ninguna propuesta formal](src/content/events/2026/09/20260917-5.md) — 27 fuentes
 - [2026/09/20260917-6 - Quiroz tras el ChileDay: el bencinazo está envejeciendo bien y evitó US$2.500 millones](src/content/events/2026/09/20260917-6.md) — 5 fuentes
 - [2026/09/20260917-7 - Beller declara en Cámara Gesell por enriquecimiento ilícito de Cerimedo y Fiscalía confirma causa narco en Beni con vínculo del jefe de inteligencia Correa](src/content/events/2026/09/20260917-7.md) — 6 fuentes
 - [2026/09/20260918-1 - Cántico de «Chúpalo Kast» en fondas del Parque O'Higgins y el Estadio Nacional durante Fiestas Patrias y respuesta de Sichel en Ñuñoa](src/content/events/2026/09/20260918-1.md) — 38 fuentes
@@ -1803,9 +1810,10 @@
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
 - [2026/10/20261001-6 - Detienen a cuatro carabineros de Rancagua por red de receptación y blanqueo de vehículos robados: quedan desvinculados y la Fiscalía pide ampliar la detención](src/content/events/2026/10/20261001-6.md) — 6 fuentes
 - [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 9 fuentes
-- [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 18 fuentes
+- [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 19 fuentes
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
 - [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 20 fuentes
+- [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
 
 ## 2025
 
