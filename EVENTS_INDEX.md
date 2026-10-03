@@ -601,6 +601,7 @@
 - [2026/03/20260326-4 - Seis alcaldes firman convenio de compra conjunta de 500 mil vales de gas para enfrentar el alza de combustibles](src/content/events/2026/03/20260326-4.md) — 6 fuentes
 - [2026/03/20260326-5 - Entra en vigencia el bencinazo: la bencina de 93 sube $372,2 y el diésel $580,3 por litro](src/content/events/2026/03/20260326-5.md) — 5 fuentes
 - [2026/03/20260326-6 - Kast promulga la Ley de Emergencia Energética con Quiroz, De Grange y Rincón y llama a no protestar en el transporte público](src/content/events/2026/03/20260326-6.md) — 7 fuentes
+- [2026/03/20260326-7 - Gobierno remueve a Iván Mlynarz de la vicepresidencia ejecutiva de ENAMI sin informar motivos: Javiera Estrada asume subrogante y Juan Carlos Sáez titular cuatro días después](src/content/events/2026/03/20260326-7.md) — 6 fuentes
 - [2026/03/20260327-1 - Gobierno deja sin efecto nombramiento de Jorge Salazar como seremi de Obras Públicas de Los Ríos](src/content/events/2026/03/20260327-1.md) — 2 fuentes
 - [2026/03/20260327-2 - Ataque en colegio de Calama: estudiante mata a inspectora y hiere a cuatro personas en el Instituto Obispo Silva Lezaeta](src/content/events/2026/03/20260327-2.md) — 11 fuentes
 - [2026/03/20260329-1 - Aprobación de Kast cae tras el 'bencinazo': Pulso Ciudadano la ubica en 34,7% y Criteria en 43% con desaprobación récord](src/content/events/2026/03/20260329-1.md) — 2 fuentes
@@ -683,6 +684,7 @@
 - [2026/05/20260511-1 - Renuncia subsecretario de Ciencia Rafael Araos por diferencias con ministra Lincolao](src/content/events/2026/05/20260511-1.md) — 2 fuentes
 - [2026/05/20260511-2 - Kast cuestiona inversión en investigación científica y genera rechazo del mundo académico](src/content/events/2026/05/20260511-2.md) — 14 fuentes
 - [2026/05/20260512-1 - Kast ejemplifica con un niño 'que lleva un sándwich y no almuerza' para justificar mejor uso de recursos de Junaeb](src/content/events/2026/05/20260512-1.md) — 2 fuentes
+- [2026/05/20260512-2 - Laura Mlynarz (Conectemos la Chile) gana la presidencia de la FECh con 60,6% y 49,1% de participación: primera mesa directiva en dos años](src/content/events/2026/05/20260512-2.md) — 7 fuentes
 - [2026/05/20260513-1 - Kast califica de 'metafora' su promesa de expulsar 300 mil migrantes](src/content/events/2026/05/20260513-1.md) — 3 fuentes
 - [2026/05/20260514-1 - Kast anuncia que su gobierno ordenará el sistema penal y separará a condenados por lesa humanidad](src/content/events/2026/05/20260514-1.md) — 7 fuentes
 - [2026/05/20260514-2 - Marcha de la ACES y la Confech por la Alameda contra los recortes en educación termina con intervención de Carabineros frente a La Moneda y cierre de tres estaciones de Metro](src/content/events/2026/05/20260514-2.md) — 5 fuentes
@@ -1809,7 +1811,7 @@
 - [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 19 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 15 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
-- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 87 fuentes
+- [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 93 fuentes
 - [2026/10/20261001-10 - Comisión de Hacienda aprueba en general la reforma al mercado de capitales por 11 votos a 2 y abre la pelea por la norma de fraudes bancarios](src/content/events/2026/10/20261001-10.md) — 8 fuentes
 - [2026/10/20261001-11 - Paro docente en Antofagasta por al menos 19 desvinculaciones de la CMDS tras la evaluación docente, con manifestación y adhesión a la marcha estudiantil](src/content/events/2026/10/20261001-11.md) — 6 fuentes
 - [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 58 fuentes
