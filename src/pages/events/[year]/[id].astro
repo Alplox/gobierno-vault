@@ -25,8 +25,8 @@ import {
   Hash,
   Activity,
   FileText,
-  Volume2,
-  VolumeX,
+  Play,
+  Square,
   RotateCcw,
   SkipBack,
   SkipForward,
@@ -242,9 +242,9 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     </header>
 
     <div class="mb-5 flex flex-wrap items-center gap-2.5 not-prose">
-      <button id="btn-tts" type="button" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-[color,background-color,box-shadow] duration-150 min-w-[9rem] justify-center">
-        <Volume2 data-tts-icon="idle" class="h-4 w-4" />
-        <VolumeX data-tts-icon="playing" class="h-4 w-4 hidden" />
+      <button id="btn-tts" type="button" title="Escuchar el evento en voz alta" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-[color,background-color,box-shadow] duration-150 min-w-[9rem] justify-center">
+        <Play data-tts-icon="idle" class="h-4 w-4" />
+        <Square data-tts-icon="playing" class="h-4 w-4 hidden" fill="currentColor" />
         <span data-tts-label>Escuchar</span>
       </button>
       {/* Controles de salto Piper: ocultos hasta que haya audio sintetizado */}
@@ -563,14 +563,109 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 </Base>
 
 <script>
-  // TTS (con selector de voz: navegador + Piper neural) + copiar markdown + ChatGPT.
-  import * as tts from '@realtimex/piper-tts-web';
+  // Copiar Markdown y el prompt completo para IAs.
   import { play } from 'cuelume';
-  const PIPER_PREFIX = 'piper:';
+  type CopyFeedbackState = 'copied' | 'error';
+  const gvCopyResetTimers = new WeakMap<HTMLButtonElement, number>();
+  function gvSetCopyFeedback(button: HTMLButtonElement, state: CopyFeedbackState) {
+    const iconSwap = button.querySelector<HTMLElement>('[data-copy-swap]');
+    const status = button.parentElement?.querySelector<HTMLElement>(':scope > [data-copy-status]');
+    const previousTimer = gvCopyResetTimers.get(button);
+    if (previousTimer) window.clearTimeout(previousTimer);
+
+    if (iconSwap) iconSwap.dataset.state = state;
+    if (status) {
+      status.textContent = state === 'copied'
+        ? button.dataset.copySuccessMessage ?? 'Contenido copiado al portapapeles.'
+        : button.dataset.copyErrorMessage ?? 'No se pudo copiar el contenido.';
+    }
+
+    gvCopyResetTimers.set(button, window.setTimeout(() => {
+      if (iconSwap?.isConnected) iconSwap.dataset.state = 'idle';
+      if (status?.isConnected) status.textContent = '';
+      gvCopyResetTimers.delete(button);
+    }, state === 'copied' ? 2000 : 2500));
+  }
+  document.addEventListener('click', (e) => {
+    const target = e.target as HTMLElement;
+    const exportEl = document.getElementById('event-export-data');
+    const promptEl = document.getElementById('event-export-data');
+    if (target.closest('#btn-copy-md')) {
+      const btn = target.closest<HTMLButtonElement>('#btn-copy-md');
+      const markdown = exportEl?.getAttribute('data-md') ?? '';
+      if (!btn) return;
+      if (!navigator.clipboard || !markdown) {
+        gvSetCopyFeedback(btn, 'error');
+        return;
+      }
+      void navigator.clipboard.writeText(markdown).then(() => {
+        play('success');
+        gvSetCopyFeedback(btn, 'copied');
+      }).catch(() => {
+        gvSetCopyFeedback(btn, 'error');
+      });
+      return;
+    }
+    // Los enlaces solo inyectan el prefill; el botón dedicado es el que copia
+    // el prompt completo, para no sobrescribir el portapapeles sin avisar.
+    const aiLink = target.closest<HTMLAnchorElement>('a[data-ai-prefill]');
+    if (aiLink) {
+      const prefill = promptEl?.getAttribute('data-ai-prefill');
+      if (prefill) {
+        try {
+          const url = new URL(aiLink.href);
+          url.searchParams.set('q', prefill);
+          aiLink.href = url.toString();
+        } catch { /* href inválida: conserva el fallback corto */ }
+      }
+      return;
+    }
+    if (target.closest('[data-copy-prompt]')) {
+      const fullPrompt = promptEl?.getAttribute('data-prompt') ?? '';
+      const btn = target.closest<HTMLButtonElement>('[data-copy-prompt]');
+      if (!btn) return;
+      if (!navigator.clipboard || !fullPrompt) {
+        gvSetCopyFeedback(btn, 'error');
+        return;
+      }
+      void navigator.clipboard.writeText(fullPrompt).then(() => {
+        play('success');
+        gvSetCopyFeedback(btn, 'copied');
+      }).catch(() => {
+        gvSetCopyFeedback(btn, 'error');
+      });
+    }
+  });
+</script>
+
+<script>
+  // TTS inline en la ficha del evento (selector de voz: navegador + Piper neural).
+  //
+  // Piper corre a UN HILO en un Web Worker (src/workers/piper.worker.ts): sin
+  // SharedArrayBuffer no hay COOP+COEP y por tanto no hay página separada — los videos de
+  // las referencias se siguen embebiendo con normalidad. El worker evita que la inferencia
+  // congele scroll, clic y cancelar; la página solo conserva el transporte (reproducción por
+  // trozos, resaltado, estado) y pide cada trozo con synthesizeChunk(). Medido: ~8-12 s por
+  // trozo a un hilo frente a ~1,6 s multihilo, pero un trozo típico son 15-30 s de audio,
+  // así que la síntesis sigue yendo por delante con el colchón de 2 trozos del arranque.
+  // Lo que no usa wasm (listado de voces, descarga preventiva del modelo a OPFS) sigue aquí.
+  import * as tts from '@realtimex/piper-tts-web';
+  import {
+    PIPER_PREFIX,
+    PIPER_PATHS,
+    PIPER_CURATED,
+    regPiperPaths,
+    cachePiperFiles,
+  } from '../../../lib/piper';
+  import {
+    synthesizeChunk,
+    cancelSynthesis,
+    stopWorker as stopPiperWorker,
+  } from '../../../lib/piperTtsClient';
   let gvPiperAudio: HTMLAudioElement | null = null;
   // Clave (voz|texto) del artículo cuyos trozos ya están en gvChunkUrls. El estado vive a
-  // nivel de módulo (window persiste entre navegaciones View Transitions): Detener pausa en
-  // vez de destruir, y volver a la página retoma desde el mismo trozo sin resintetizar.
+  // nivel de módulo y sobrevive a las navegaciones SPA entre eventos: el LRU se comparte y
+  // volver a un evento ya escuchado no resintetiza.
   let gvCacheKey: string | null = null;
   // Reproducción por trozos: una object URL por trozo (~1,3 MB cada uno), en orden, y el
   // índice del que suena. Cada trozo ya viene como WAV Blob de predict(), así que no hay
@@ -580,9 +675,12 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
   let gvIdx = 0;
   let gvActiveIdx = -1;
   // Estados del transporte. 'waiting' = el audio terminó pero la síntesis del siguiente
-  // trozo sigue corriendo (caso límite: la síntesis es más rápida que el audio).
+  // trozo sigue corriendo (el audio va más rápido que la síntesis en ese punto).
   let gvTtsState: 'idle' | 'playing' | 'paused' | 'waiting' | 'ended' = 'idle';
   let gvSynthDone = false;
+  // La reproducción arranca con dos trozos listos (ver gvPiperLoad): marca si ya arrancó
+  // en esta pasada para no re-disparar el play en cada trozo siguiente.
+  let gvStarted = false;
   // LRU de trozos por (voz|texto de trozo), en vez de un único WAV por artículo. Al
   // volver a un párrafo ya leído no se resintetiza, y cambiar de artículo no tira todo.
   const GV_CHUNK_CACHE_MAX = 12;
@@ -669,10 +767,6 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       if (gvTtsState === 'playing') gvTtsState = 'paused';
     }
   }
-  if (!(window as any).__gvEventActionsInit) {
-    (window as any).__gvEventActionsInit = true;
-    document.addEventListener('astro:page-load', gvStopAll);
-  }
   const TTS_KEY = 'gv-tts-voice';
   const RATE_KEY = 'gv-tts-rate';
   // 1,25× recorta un evento promedio (~5 min) a ~4 sin alterar el timbre: los pitch
@@ -709,70 +803,13 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     return window.speechSynthesis?.getVoices() ?? [];
   }
   // Voces neurales Piper (es): se descargan la primera vez desde HF CDN y se cachean en OPFS.
-  // Estas tres NO están en el mirror de la librería (diffusionstudio) sino en rhasspy/piper-
-  // voices (~60 MB cada una, verificado). Se registran en PATH_MAP y se bajan de ahí a OPFS
-  // a mano; el resto de voces es que exponga el mirror se sigue resolviendo por tts.download().
-  const AR_BASE = 'https://huggingface.co/rhasspy/piper-voices/resolve/main/';
-  const GV_PIPER_PATHS: Record<string, string> = {
-    'es_MX-claude-high': 'es/es_MX/claude/high/es_MX-claude-high.onnx',
-    'es_AR-daniela-high': 'es/es_AR/daniela/high/es_AR-daniela-high.onnx',
-    'es_ES-davefx-medium': 'es/es_ES/davefx/medium/es_ES-davefx-medium.onnx',
-  };
-  // Curadas primero en el selector: el vault es chileno y es_MX es el acento latinoamericano
-  // más neutro disponible en Piper (es_AR suena rioplatense, es_ES europeo). Las pistas van
-  // en title/aria-label porque el option va truncado por el max-w del select.
-  const GV_PIPER_CURATED = [
-    {
-      key: 'es_MX-claude-high',
-      label: 'Latinoamericana',
-      tag: 'es_MX',
-      hint: 'Acento mexicano neutro; la más cercana a una voz de televisión para texto latinoamericano.',
-    },
-    { key: 'es_AR-daniela-high', label: 'Rioplatense', tag: 'es_AR', hint: 'Acento de Río de la Plata.' },
-    {
-      key: 'es_ES-davefx-medium',
-      label: 'Española',
-      tag: 'es_ES',
-      hint: 'Acento de España. Mismo tamaño de descarga (~60 MB) que las otras dos.',
-    },
-  ];
-  function gvRegPiperPaths() {
-    try {
-      const map = (tts as any).PATH_MAP;
-      if (!map) return;
-      for (const [key, path] of Object.entries(GV_PIPER_PATHS)) map[key] = path;
-    } catch { /* ya no soporta mutar */ }
-  }
-  // Descarga .onnx y .onnx.json directo a OPFS (misma estructura de cache que la librería).
-  // Verifica existencia por archivo antes de bajar: idempotente, se puede llamar siempre.
-  async function gvCachePiperFiles(voiceId: string, onProgress?: (p: number) => void) {
-    const path = GV_PIPER_PATHS[voiceId];
-    if (!path) throw new Error(`Voz Piper sin ruta en HF: ${voiceId}`);
-    const blame = (u: string) => u.split('/').at(-1) as string;
-    const total = 2;
-    let doneFiles = 0;
-    const root = await navigator.storage.getDirectory();
-    const dir = await root.getDirectoryHandle('piper', { create: true });
-    for (const suffix of ['', '.json']) {
-      const url = `${AR_BASE}${path}${suffix}`;
-      try {
-        const file = await dir.getFileHandle(blame(url), { create: false });
-        await file.getFile(); // existe ya → no re-descarga
-        doneFiles++;
-        onProgress?.(Math.round((doneFiles / total) * 100));
-        continue;
-      } catch { /* no existe, descargar */ }
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status} para ${blame(url)}`);
-      const blob = await res.blob();
-      const file = await dir.getFileHandle(blame(url), { create: true });
-      const w = await file.createWritable();
-      await w.write(blob);
-      await w.close();
-      doneFiles++;
-      onProgress?.(Math.round((doneFiles / total) * 100));
-    }
-  }
+  // Las tres curadas (PIPER_CURATED/PIPER_PATHS en lib/piper.ts) NO están en el mirror de la
+  // librería (diffusionstudio) sino en rhasspy/piper-voices (~60 MB cada una, verificado): se
+  // registran en PATH_MAP y se bajan de ahí a OPFS a mano con cachePiperFiles(); el resto de
+  // voces es que exponga el mirror se sigue resolviendo por tts.download().
+  //
+  // El worker comparte OPFS con la página (mismo origen), así que bajar el modelo antes de
+  // sintetizar sirve igual.
   // ClientRouter reemplaza el <select> al cambiar de evento: la caché de
   // voces neurales debe vivir por elemento, no en un booleano de página.
   const gvPiperFilledSelects = new WeakSet<HTMLSelectElement>();
@@ -782,13 +819,13 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     if (!sel || gvPiperFilledSelects.has(sel) || gvPiperFillingSelects.has(sel)) return;
     gvPiperFillingSelects.add(sel);
     try {
-      gvRegPiperPaths();
+      regPiperPaths(tts);
       const saved = localStorage.getItem(TTS_KEY);
       // Las curadas se pintan de forma síncrona: el select nunca queda deshabilitado
       // por culpa de la red, y el mirror solo agrega extras (no define la oferta).
       const curated = document.createElement('optgroup');
       curated.label = 'Voz neural (Piper, descarga única)';
-      for (const v of GV_PIPER_CURATED) {
+      for (const v of PIPER_CURATED) {
         const opt = document.createElement('option');
         opt.value = PIPER_PREFIX + v.key;
         opt.textContent = `${v.label} (${v.tag}) Piper`;
@@ -801,7 +838,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       // Extras del mirror, deduplicadas contra las curadas. Si el mirror no responde,
       // las curadas siguen en pie: no es un fallo silencioso de disponibilidad.
       try {
-        const extra = (await tts.voices()).filter((v) => v.key.startsWith('es_') && !GV_PIPER_PATHS[v.key]);
+        const extra = (await tts.voices()).filter((v) => v.key.startsWith('es_') && !PIPER_PATHS[v.key]);
         if (extra.length > 0) {
           const more = document.createElement('optgroup');
           more.label = 'Otras voces en español';
@@ -902,10 +939,10 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       gvSetTtsBusy(task, true);
       if (label) label.textContent = 'Descargando…';
       if (msg) msg.textContent = 'Preparando voz… (primera vez)';
-      if (GV_PIPER_PATHS[voiceId]) {
+      if (PIPER_PATHS[voiceId]) {
         // Las curadas no pasan por tts.download(): se bajan desde HF a OPFS con
         // verificación por archivo, que ya es idempotente.
-        await gvCachePiperFiles(voiceId, (p) => {
+        await cachePiperFiles(voiceId, (p) => {
           if (msg) msg.textContent = `Preparando voz… ${p}%`;
         });
       } else {
@@ -953,30 +990,20 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
   function gvProseText(prose: Element | null): string {
     return gvBuildChunks(gvBlockParts(prose)).map((c) => c.text).join(' ');
   }
-  // `predict()` de @realtimex/piper-tts-web es singleton: la primera voz carga el .onnx en
-  // _ortSession y para toda la vida de la página solo se reescribe la propiedad voiceId
-  // (dist/piper-tts-web.js:263-268). Cambiar de voz, por tanto, no recarga el modelo y se
-  // sigue oyendo la primera. Se descarta el _instance para forzar una sesión nueva; el
-  // .onnx ya está en OPFS, así que no vuelve a bajarlo.
-  let gvSessionVoice: string | null = null;
-  async function gvEnsureSessionVoice(voiceId: string, onMsg?: (m: string) => void) {
-    if (gvSessionVoice === voiceId) return;
-    gvSessionVoice = voiceId;
-    try {
-      (tts as any).TtsSession._instance = null;
-      await tts.TtsSession.create({ voiceId });
-      onMsg?.('');
-    } catch (err) {
-      // Si la sesión no se puede crear, se limpia el marcador para reintentar la próxima.
-      gvSessionVoice = null;
-      throw err;
-    }
-  }
+  // La sesión de Piper (modelo ONNX + hilo) vive en el worker, no aquí: por eso no hace falta
+  // el truco de anular TtsSession._instance al cambiar de voz — basta con reiniciar el worker
+  // (stopPiperWorker), que además libera los hilos. Ver src/workers/piper.worker.ts.
   async function gvPiperToggle(voiceId: string, prose: Element | null, msg: HTMLElement | null) {
     const label = document.querySelector('[data-tts-label]');
-    // Sintetizando → segundo clic CANCELA (revisado entre trozos; latencia ~1 trozo).
+    // Sintetizando → segundo clic CANCELA. Además de la bandera cooperativa (que el loop
+    // revisa entre trozos) se mata el worker: la inferencia en curso no se puede abortar
+    // —no hay AbortSignal dentro del wasm— y seguiría monopolizando la CPU. El modelo está
+    // en OPFS, así que la próxima síntesis solo paga recompilar el wasm.
     if (gvPiperBusy) {
       gvSynthCancel = true;
+      cancelSynthesis();
+      stopPiperWorker();
+      gvStopAll();
       return;
     }
     const chunks = gvBuildChunks(gvBlockParts(prose));
@@ -1091,8 +1118,8 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     gvStopAll();
     gvUtt(msg);
   }
-  // Sintetiza (o reutiliza del LRU) cada trozo. Arranca a reproducir el primero en cuanto
-  // está listo y sigue con el resto en segundo plano; no concatena ni arma un WAV grande.
+  // Sintetiza (o reutiliza del LRU) cada trozo. Arranca a reproducir con dos trozos listos
+  // y sigue con el resto en segundo plano; no concatena ni arma un WAV grande.
   async function gvPiperLoad(
     chunks: { el: Element; text: string }[],
     voiceId: string,
@@ -1107,6 +1134,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     gvActiveIdx = -1;
     gvSynthDone = false;
     gvTtsState = 'idle';
+    gvStarted = false;
     // Los trozos del artículo anterior ya no están en gvChunkUrls: se pueden podar.
     gvPruneChunkCache();
     // Todo en cache (volver al artículo, o saltar atrás): reproducir sin sintetizar.
@@ -1121,27 +1149,34 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     }
     for (let i = 0; i < chunks.length; i++) {
       if (gvSynthCancel) throw new DOMException('Síntesis cancelada', 'AbortError');
-      // Antes del primer predict: si la voz es nueva, la sesión singleton debe recrearse
-      // o se sintetizaría con el modelo de la voz anterior.
-      if (i === 0 && !cached[i]) await gvEnsureSessionVoice(voiceId, (m) => gvStatus(msg, 0, chunks.length, m));
       let url = gvChunkCacheGet(keys[i]);
       if (!url) {
         gvStatus(msg, i, chunks.length, 'Sintetizando', true);
-        const blob = await tts.predict({ text: chunks[i].text, voiceId }, (p) => {
-          if (p.total > 0) gvStatus(msg, i, chunks.length, 'Descargando voz');
+        // El worker carga la sesión ONNX si hace falta; su aviso cambia el texto para que
+        // "Sintetizando 1/12" no parezca colgado durante la carga del modelo.
+        const blob = await synthesizeChunk(chunks[i].text, voiceId, {
+          onPhase: (m) => { if (m && msg) msg.textContent = `${m} (clic para cancelar)`; },
+          onProgress: (p) => {
+            if (p.total > 0) gvStatus(msg, i, chunks.length, 'Descargando voz');
+          },
         });
         url = URL.createObjectURL(blob);
         gvChunkCacheSet(keys[i], url);
       }
       gvChunkUrls.push(url);
-      if (i === 0) {
-        // Primer trozo listo → empieza a sonar ya, sin esperar el resto.
+      // La reproducción arranca con DOS trozos listos, no uno: el primer bloque suele ser
+      // un header corto que suena casi instantáneo y sin colchón se oye el corte antes de
+      // que el siguiente párrafo termine de sintetizarse. Con un solo trozo en total se
+      // arranca igual en cuanto está.
+      const isLast = i === chunks.length - 1;
+      if (!gvStarted && (i === 1 || isLast)) {
+        gvStarted = true;
         gvShowTtsControls(true);
         if (label) label.textContent = 'Detener';
         gvSetTtsPlaying(true);
         await gvPiperPlayIdx(0, msg);
         if (msg) msg.textContent = chunks.length > 1 ? `Leyendo… (quedan ${chunks.length - 1} párrafos)` : 'Leyendo con voz neural…';
-      } else if (gvTtsState === 'waiting') {
+      } else if (gvStarted && gvTtsState === 'waiting') {
         void gvPiperPlayIdx(gvIdx + 1, msg);
       }
     }
@@ -1191,40 +1226,16 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     }
     return chunks;
   }
-  type CopyFeedbackState = 'copied' | 'error';
-  const gvCopyResetTimers = new WeakMap<HTMLButtonElement, number>();
-  function gvSetCopyFeedback(button: HTMLButtonElement, state: CopyFeedbackState) {
-    const iconSwap = button.querySelector<HTMLElement>('[data-copy-swap]');
-    const status = button.parentElement?.querySelector<HTMLElement>(':scope > [data-copy-status]');
-    const previousTimer = gvCopyResetTimers.get(button);
-    if (previousTimer) window.clearTimeout(previousTimer);
-
-    if (iconSwap) iconSwap.dataset.state = state;
-    if (status) {
-      status.textContent = state === 'copied'
-        ? button.dataset.copySuccessMessage ?? 'Contenido copiado al portapapeles.'
-        : button.dataset.copyErrorMessage ?? 'No se pudo copiar el contenido.';
-    }
-
-    gvCopyResetTimers.set(button, window.setTimeout(() => {
-      if (iconSwap?.isConnected) iconSwap.dataset.state = 'idle';
-      if (status?.isConnected) status.textContent = '';
-      gvCopyResetTimers.delete(button);
-    }, state === 'copied' ? 2000 : 2500));
-  }
-
-  document.addEventListener('click', (e) => {
+  function gvOnTtsClick(e: Event) {
     const target = e.target as HTMLElement;
     const prose = document.querySelector('.prose');
-    const exportEl = document.getElementById('event-export-data');
-    const promptEl = document.getElementById('event-export-data');
-    // A nivel del listener: las ramas de reinicio/siguiente también necesitan el nodo de
-    // estado, no solo la de #btn-tts (declararlo dentro de esa rama daba ReferenceError).
+    // A nivel del listener: las ramas de reinicio/siguiente tambien necesitan el nodo de
+    // estado, no solo el de #btn-tts (declararlo dentro de esa rama daba ReferenceError).
     const msg = document.getElementById('tts-msg');
     gvEnsureVoices();
 
     if (target.closest('#btn-tts')) {
-      e.preventDefault();
+      (e as MouseEvent).preventDefault?.();
       const sel = document.getElementById('tts-voice') as HTMLSelectElement | null;
       const voiceId = sel?.value ?? '';
       if (voiceId.startsWith(PIPER_PREFIX)) {
@@ -1246,91 +1257,74 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       const utter = new SpeechSynthesisUtterance(text);
       const voice = (sel && gvVoices().find((v) => v.name === sel.value)) || gvSpanishVoice(gvVoices());
       if (voice) { utter.voice = voice; utter.lang = voice.lang; }
-      // La misma velocidad que en Piper; sobre ~2 el navegador suena roto, así que se topa.
+      // La misma velocidad que en Piper; sobre ~2 el navegador suena roto, asi que se topa.
       utter.rate = Math.min(0.98 * gvRate(), 2);
       utter.onend = utter.onerror = () => gvUtt(msg);
       speechSynthesis.speak(utter);
       const label = document.querySelector('[data-tts-label]');
       if (label) label.textContent = 'Detener';
       gvSetTtsPlaying(true);
-      if (msg) msg.textContent = 'Lectura en voz alta en progreso…';
+      if (msg) msg.textContent = 'Lectura en voz alta en progreso\u2026';
       return;
     }
     if (target.closest('#btn-tts-restart')) {
-      e.preventDefault();
+      (e as MouseEvent).preventDefault?.();
       if (!gvJumpable()) return;
       gvSynthCancel = false;
       void gvPiperPlayIdx(0, msg).then(gvMarkPlaying);
       return;
     }
     if (target.closest('#btn-tts-prev')) {
-      e.preventDefault();
+      (e as MouseEvent).preventDefault?.();
       if (!gvJumpable()) return;
       gvSynthCancel = false;
-      // Párrafo anterior; en el primero se reinicia ese mismo (no hay a dónde ir).
+      // Parrafo anterior; en el primero se reinicia ese mismo (no hay a donde ir).
       void gvPiperPlayIdx(Math.max(0, gvIdx - 1), msg).then(gvMarkPlaying);
       return;
     }
     if (target.closest('#btn-tts-next')) {
-      e.preventDefault();
+      (e as MouseEvent).preventDefault?.();
       if (!gvJumpable()) return;
       gvSynthCancel = false;
-      // Salta al párrafo siguiente; tras el último, vuelve al inicio.
+      // Salta al parrafo siguiente; tras el ultimo, vuelve al inicio.
       void gvPiperPlayIdx((gvIdx + 1) % gvChunkUrls.length, msg).then(gvMarkPlaying);
+    }
+  }
+  function gvOnTtsChange(e: Event) {
+    const target = e.target as HTMLSelectElement | null;
+    if (target?.id === 'tts-rate') {
+      // Cambiar la velocidad no corta el audio: se aplica sobre el elemento en vivo.
+      localStorage.setItem(RATE_KEY, target.value);
+      gvApplyRate();
       return;
     }
-    if (target.closest('#tts-rate') || target.closest('#tts-voice')) return; // los gestiona 'change'
-    // La persistencia de #tts-voice y #tts-rate vive en el listener de 'change': con
-    // teclado el <select> emite change sin click, y ahí es donde se guarda.
-    if (target.closest('#btn-copy-md')) {
-      const btn = target.closest<HTMLButtonElement>('#btn-copy-md');
-      const markdown = exportEl?.getAttribute('data-md') ?? '';
-      if (!btn) return;
-      if (!navigator.clipboard || !markdown) {
-        gvSetCopyFeedback(btn, 'error');
-        return;
+    if (target?.id === 'tts-voice') {
+      localStorage.setItem(TTS_KEY, target.value);
+      const next = target.value.startsWith(PIPER_PREFIX) ? target.value.slice(PIPER_PREFIX.length) : null;
+      const prev = gvCacheKey?.split('|')[0] ?? null;
+      // Cambiar de voz corta toda reproducción previa (Piper y navegador): nunca deben
+      // sonar dos motores a la vez, y el resaltado del anterior ya no corresponde.
+      gvSynthCancel = true;
+      gvPiperBusy = false;
+      // La sesión ONNX del worker está atada a una voz: se reinicia entero en vez de anular
+      // el singleton de la librería (el módulo vive en el worker, no se puede tocar desde aquí).
+      stopPiperWorker();
+      gvStopAll();
+      gvClearHighlight();
+      if (next && next !== prev) {
+        // Los trozos en cache son de la voz anterior: se sueltan para que el resaltado y
+        // los saltos no apunten a audio que ya no se está usando.
+        gvCacheKey = null;
+        gvChunkUrls = [];
+        gvChunkEls = [];
+        gvIdx = 0;
+        gvSynthDone = false;
+        gvTtsState = 'idle';
       }
-      void navigator.clipboard.writeText(markdown).then(() => {
-        play('success');
-        gvSetCopyFeedback(btn, 'copied');
-      }).catch(() => {
-        gvSetCopyFeedback(btn, 'error');
-      });
-      return;
+      gvShowTtsControls(false);
+      gvUtt(document.getElementById('tts-msg'));
+      if (next) gvPreloadPiper(next);
     }
-    // Los enlaces solo inyectan el prefill; el botón dedicado es el que copia
-    // el prompt completo, para no sobrescribir el portapapeles sin avisar.
-    const aiLink = target.closest<HTMLAnchorElement>('a[data-ai-prefill]');
-    if (aiLink) {
-      const prefill = promptEl?.getAttribute('data-ai-prefill');
-      if (prefill) {
-        try {
-          const url = new URL(aiLink.href);
-          url.searchParams.set('q', prefill);
-          aiLink.href = url.toString();
-        } catch { /* href inválida: conserva el fallback corto */ }
-      }
-      return;
-    }
-    if (target.closest('[data-copy-prompt]')) {
-      const fullPrompt = promptEl?.getAttribute('data-prompt') ?? '';
-      const btn = target.closest<HTMLButtonElement>('[data-copy-prompt]');
-      if (!btn) return;
-      if (!navigator.clipboard || !fullPrompt) {
-        gvSetCopyFeedback(btn, 'error');
-        return;
-      }
-      void navigator.clipboard.writeText(fullPrompt).then(() => {
-        play('success');
-        gvSetCopyFeedback(btn, 'copied');
-      }).catch(() => {
-        gvSetCopyFeedback(btn, 'error');
-      });
-    }
-  });
-  // Chrome/Edge cargan las voces de forma asíncrona; re-llena cuando estén listas.
-  if (window.speechSynthesis) {
-    window.speechSynthesis.addEventListener?.('voiceschanged', () => { gvFillVoices(); gvFilled = true; });
   }
   // Si el texto de esta página ya está sintetizado (cache) y pausado, el botón
   // debe mostrar "Reanudar" en vez de "Escuchar"; re-zipea los bloques para que
@@ -1357,41 +1351,26 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     void gvFillPiperVoices().then(gvSyncVoiceUi);
     gvMarkResumable();
   }
-  gvInitTts();
-  document.addEventListener('astro:page-load', gvInitTts);
-  document.addEventListener('change', (e) => {
-    const target = e.target as HTMLSelectElement | null;
-    if (target?.id === 'tts-rate') {
-      // Cambiar la velocidad no corta el audio: se aplica sobre el elemento en vivo.
-      localStorage.setItem(RATE_KEY, target.value);
-      gvApplyRate();
-      return;
-    }
-    if (target?.id === 'tts-voice') {
-      localStorage.setItem(TTS_KEY, target.value);
-      const next = target.value.startsWith(PIPER_PREFIX) ? target.value.slice(PIPER_PREFIX.length) : null;
-      const prev = gvCacheKey?.split('|')[0] ?? null;
-      // Cambiar de voz corta toda reproducción previa (Piper y navegador): nunca deben
-      // sonar dos motores a la vez, y el resaltado del anterior ya no corresponde.
-      gvSynthCancel = true;
-      gvPiperBusy = false;
+  // ClientRouter re-ejecuta este módulo en cada navegación SPA entre eventos: los listeners
+  // se cablean UNA sola vez (el estado —audio, LRU, worker— vive en el primer closure y se
+  // comparte), y cada ejecución re-sincroniza la UI del DOM nuevo con gvInitTts().
+  if (!(window as any).__gvTtsWired) {
+    (window as any).__gvTtsWired = true;
+    document.addEventListener('click', gvOnTtsClick);
+    document.addEventListener('change', gvOnTtsChange);
+    document.addEventListener('astro:page-load', () => {
       gvStopAll();
-      gvClearHighlight();
-      if (next && next !== prev) {
-        // Los trozos en cache son de la voz anterior: se sueltan para que el resaltado y
-        // los saltos no apunten a audio que ya no se está usando.
-        gvCacheKey = null;
-        gvChunkUrls = [];
-        gvChunkEls = [];
-        gvIdx = 0;
-        gvSynthDone = false;
-        gvTtsState = 'idle';
-      }
-      gvShowTtsControls(false);
-      gvUtt(document.getElementById('tts-msg'));
-      if (next) gvPreloadPiper(next);
+      // El worker se mata al salir: no tiene sentido sostener ~60 MB de pesos ONNX y varios
+      // hilos mientras se lee otra página. Los trozos ya sintetizados siguen en el LRU.
+      stopPiperWorker();
+      gvInitTts();
+    });
+    // Chrome/Edge cargan las voces de forma asíncrona; re-llena cuando estén listas.
+    if (window.speechSynthesis) {
+      window.speechSynthesis.addEventListener?.('voiceschanged', () => { gvFillVoices(); gvFilled = true; });
     }
-  });
+  }
+  gvInitTts();
 </script>
 
 <style>
