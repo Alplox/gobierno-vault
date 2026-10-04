@@ -1587,7 +1587,7 @@
 - [2026/09/20260903-21 - Milei anuncia sanciones contra actividades petroleras en Malvinas y un proyecto de ley de defensa de la soberanía](src/content/events/2026/09/20260903-21.md) — 12 fuentes
 - [2026/09/20260903-22 - Profesores de El Monte levantan movilización de brazos caídos tras completarse el pago de remuneraciones](src/content/events/2026/09/20260903-22.md) — 10 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 30 fuentes
-- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 28 fuentes
+- [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 29 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 12 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 10 fuentes
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
@@ -2134,12 +2134,14 @@
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
 - [2019/11/20191115-2 - CIDH anuncia visita técnica a Chile entre el 18 y 21 de noviembre para evaluar la situación de derechos humanos](src/content/events/2019/11/20191115-2.md) — 5 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 5 fuentes
+- [2019/11/20191117-1 - Incendio destruye la sede del Partido Socialista en Valdivia: Bomberos sostiene la hipótesis de intencionalidad](src/content/events/2019/11/20191117-1.md) — 7 fuentes
 - [2019/11/20191118-1 - Bioquímicos y científicos desmienten a Carabineros: el Mentholatum no alivia e incluso puede potenciar el efecto de los gases lacrimógenos](src/content/events/2019/11/20191118-1.md) — 4 fuentes
 - [2019/11/20191119-1 - Oposición presenta acusación constitucional contra Piñera por vulneración de derechos humanos](src/content/events/2019/11/20191119-1.md) — 15 fuentes
-- [2019/11/20191119-2 - Incendios forestales arrasan cerca de 3.000 hectáreas en Valparaíso: alerta roja regional, evacuaciones en Rodelillo y querellas por delito terrorista](src/content/events/2019/11/20191119-2.md) — 9 fuentes
+- [2019/11/20191119-2 - Incendios forestales arrasan cerca de 3.000 hectáreas en Valparaíso: alerta roja regional, evacuaciones en Rodelillo y querellas por delito terrorista](src/content/events/2019/11/20191119-2.md) — 20 fuentes
 - [2019/11/20191121-1 - Informe de Amnistía Internacional, perdigones con plomo y acuerdo por pensiones marcan el 21 de noviembre](src/content/events/2019/11/20191121-1.md) — 14 fuentes
 - [2019/11/20191121-2 - Estudio de la U. Austral ratifica plomo en perdigones de Carabineros: microscopía electrónica confirma 80% metálico y Fiscalía investiga fraude al fisco](src/content/events/2019/11/20191121-2.md) — 7 fuentes
 - [2019/11/20191126-1 - Human Rights Watch publica informe sobre Chile y acuerdo constitucional sigue sin concretarse](src/content/events/2019/11/20191126-1.md) — 18 fuentes
+- [2019/11/20191126-2 - Saquean e incendian las oficinas del diario El Líder de San Antonio en pleno estallido social](src/content/events/2019/11/20191126-2.md) — 5 fuentes
 - [2019/12/20191212-1 - Cámara rechaza la acusación constitucional contra Piñera por las violaciones a los DD.HH. del estallido al acoger la 'cuestión previa' (79-73)](src/content/events/2019/12/20191212-1.md) — 4 fuentes
 - [2019/12/20191220-1 - Jornada del 20 de diciembre de 2019 en Plaza de la Dignidad: copamiento policial y uso masivo de gas lacrimógeno](src/content/events/2019/12/20191220-1.md) — 5 fuentes
 - [2019/12/20191223-1 - Informe Anual 2019 del INDH: 'las más graves violaciones a los DD.HH. desde 1989' durante el estallido social](src/content/events/2019/12/20191223-1.md) — 2 fuentes
