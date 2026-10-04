@@ -2166,6 +2166,7 @@
 - [2016/02/20160211-1 - CIPER revela la 'lista de Carrasco': Inmobiliaria Ecomac y otras diez empresas financiaron por fuera de la vía legal la campaña de Golborne](src/content/events/2016/02/20160211-1.md) — 3 fuentes
 - [2016/03/20160307-1 - Corte Suprema confirma que el municipio de Viña del Mar debe restituir $1.840 millones a Corfo por el caso Inverlink](src/content/events/2016/03/20160307-1.md) — 5 fuentes
 - [2016/06/20160629-1 - Caso MOP-Gate: la Corte Suprema dicta sentencia definitiva y confirma las condenas por fraude al Fisco](src/content/events/2016/06/20160629-1.md) — 6 fuentes
+- [2016/09/20160908-1 - El Mepco no contiene el alza de $20,4 en la bencina de 97 y parlamentarios cuestionan su eficacia](src/content/events/2016/09/20160908-1.md) — 7 fuentes
 
 ## 2015
 

@@ -1,9 +1,9 @@
 {
-  "archivo": "gob-vault-backup-2026-10-03.light.gvault",
-  "url": "/backup/gob-vault-backup-2026-10-03.light.gvault",
-  "tamanoBytes": 5956266,
-  "tamano": "5.68 MB",
-  "sha256": "d3867c0da9012917b2b9c19bc539ffb6f10f4fe6a282c9e5f52534fe6ae8a3e4",
-  "creado": "2026-10-03T02:53:45.373Z",
+  "archivo": "gob-vault-backup-2026-10-04.light.gvault",
+  "url": "/backup/gob-vault-backup-2026-10-04.light.gvault",
+  "tamanoBytes": 6025366,
+  "tamano": "5.75 MB",
+  "sha256": "fbfab94a1e19e2bac31c12dae5339aedba2bd5be7e86236d364a0a8e9c351e0f",
+  "creado": "2026-10-04T02:41:17.038Z",
   "tipo": "light"
 }
