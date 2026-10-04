@@ -4,6 +4,7 @@ import EventConnections from '../../../components/EventConnections.astro';
 import EventTimelineConnector from '../../../components/EventTimelineConnector.astro';
 import EgoGraph from '../../../components/EgoGraph.astro';
 import ShareButtons from '../../../components/ShareButtons.astro';
+import VideoEmbed from '../../../components/VideoEmbed.astro';
 import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
@@ -546,6 +547,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
                 <p class="text-xs text-base-content/60 mt-0.5">
                   Medio: <span class="font-medium text-base-content/80">{ref.medio}</span> {ref.autor ? `· Autor: ${ref.autor}` : ''}
                 </p>
+                {ref.url && <VideoEmbed url={ref.url} label={ref.titulo} />}
               </div>
             </li>
           ))}
