@@ -101,6 +101,17 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 
 `SRef` conserva siempre el tooltip. En las fichas densas de `/sueldos`, envolver la referencia en `.sueldos-inline-ref` para neutralizar el `vertical-align: super` del `<sup>` y evitar que el número se monte sobre la línea anterior; el enlace y el scroll a `#ref-N` no cambian.
 
+## Reproducción de fuentes audiovisuales en referencias
+
+`VideoEmbed.astro` + `src/lib/videoEmbed.ts`: en "Referencias y Fuentes" del detalle de evento, si la URL de una fuente es de YouTube/Vimeo/Instagram/TikTok/Facebook (video)/Dailymotion/Google Drive o un archivo `.mp4|webm|mov|…`, la referencia se envuelve en un `<details data-gv-video>` "Reproducir aquí".
+
+- **Cero `<iframe>` en el HTML**: el SSR solo emite `data-gv-src` y un slot vacío. El `<iframe>` (o `<video>`) se crea en el `toggle` de apertura y se **destruye al cerrar** (`replaceChildren()`). No es cosmético: el `display:none` de `<details>` no detiene el media de un iframe de terceros, así que un video cerrado seguiría sonando de fondo.
+- El evento `toggle` de `<details>` **no burbujea**: no sirve la delegación en `document`. El script cablea cada nodo por instancia (`data-gv-wired`) en la llamada directa y en `astro:page-load`, con guard por nodo.
+- El script del componente queda hoisteado a nivel de página: se incluye una sola vez aunque el componente se repita (19 embeds → 1 copia) y también en páginas de evento sin ningún video (~450 B inline).
+- YouTube usa `youtube-nocookie.com`. Facebook solo si la ruta es de video (`/videos/`, `/reel/`, `?v=`) vía `plugins/video.php`; un post de texto no genera reproductor. X/Twitter y Reddit quedan fuera a propósito: la mayoría de sus URLs son posts de texto, no video.
+- Formato por plataforma: `landscape` (16/9), `square` (Instagram `p`) o `portrait` (reels/TikTok) con `max-w` propio, para que un vertical no ocupe todo el ancho.
+- `public/_headers` usa COEP `credentialless`, que permite cargar recursos cross-origin sin `require-corp` (si una plataforma igual bloqueara el embed, la referencia conserva su enlace directo y el `<a>` de `noscript`).
+
 ## Botones de compartir
 
 `ShareButtons.astro` (`url` + `title` props) es la única pieza de compartir: botón nativo (`navigator.share`, oculto por defecto y revelado por JS si existe), "Copiar enlace" (clipboard con fallback `execCommand`, feedback `copy → check` con label y `role="status"`), y enlaces intents a X, Facebook, WhatsApp y Telegram. Va en las 9 páginas de ficha/sección: evento (en la fila de acciones, junto a "Ver en Markdown"), `/people/[id]`, `/organizations/[id]`, `/topics/[id]`, `/sources/[id]`, `/stats/[concepto]`, `/sueldos`, `/gabinete`, `/graph`.
