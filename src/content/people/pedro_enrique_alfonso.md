@@ -14,6 +14,10 @@ cargos:
     organizacion: ministerio_interior
     desde: 1950-02-27
     hasta: 1951-03-29
+  - cargo: Ministro de Economía y Comercio
+    organizacion: ministerio_economia
+    desde: 1945-05-14 # https://es.wikipedia.org/wiki/Pedro_Enrique_Alfonso (infobox 14-may-1945 → 3-feb-1946, gobierno Ríos; sucesor Arriagada)
+    hasta: 1946-02-03 # https://es.wikipedia.org/wiki/Pedro_Enrique_Alfonso
   - cargo: Ministro de Agricultura
     organizacion: ministerio_agricultura
     desde: 1963-08-01

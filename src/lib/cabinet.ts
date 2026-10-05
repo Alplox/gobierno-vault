@@ -125,10 +125,11 @@ const KEYWORD_MINISTERIO: [RegExp, string][] = [
   [/hacienda/i, 'ministerio_hacienda'],
   // Carteras históricas (pre-1990): Guerra/Marina/Aviación precedieron a Defensa Nacional;
   // Salud Pública fue el nombre del ministerio de salud hasta 1979; Fomento precedió a
-  // Economía (hasta 1953).
+  // Economía (hasta 1953) y Comercio y Abastecimiento a Economía y Comercio (1941-1942).
   [/guerra|marina|aviaci[óo]n/i, 'ministerio_defensa'],
   [/salud p[úu]blica|salubridad/i, 'ministerio_salud'],
   [/fomento/i, 'ministerio_economia'],
+  [/comercio/i, 'ministerio_economia'],
   [/defensa/i, 'ministerio_defensa'],
   [/salud/i, 'ministerio_salud'],
   [/vivienda/i, 'ministerio_vivienda'],

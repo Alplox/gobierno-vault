@@ -5,9 +5,11 @@
 > contra eventos del vault y fuentes externas
 > (sitios oficiales y prensa). Cubre Aguirre Cerda (1938) en adelante; Ríos (1942-46)
 > pendiente por formato de fuente.
-> **Última verificación integral:** 28-sep-2026 — `pnpm run verify-gabinete`:
-> **889/927 nombramientos exactos (96%)** contra los anexos de gabinetes de Wikipedia;
-> discrepancias restantes son artefactos del parser o casos resueltos y documentados abajo.
+> **Última verificación integral:** 05-oct-2026 — `pnpm run verify-gabinete`:
+> **905/1025 exactos (88%)** + **67 nombramientos
+> Ríos** contra su anexo compacto (64 aporta-fecha, 3 de cola 1946 que el anexo
+> no trae); discrepancias restantes son filas incompletas del anexo
+> o casos resueltos y documentados abajo.
 
 ## Cómo re-verificar en una sesión futura
 
@@ -50,9 +52,12 @@
 
 ## Estado de verificación por gobierno
 
-Resumen: 927 nombramientos fechados en el vault (1938-2026), 889 coincidencia exacta con
-los anexos de Wikipedia (`pnpm run verify-gabinete`); todas las discrepancias 1990-2026
-resueltas contra fuente oficial o prensa (detalle en "Correcciones aplicadas"). El detalle
+Resumen: 1025 nombramientos fechados en el vault (1938-2026), 905 coincidencia exacta con
+los anexos de Wikipedia (`pnpm run verify-gabinete`, parser v6 con conciencia de
+cartera y soporte Ríos compacto); el resto va a buckets informativos (misma cartera
+con fecha distinta, anexo sin fila para la cartera, anexo sin fechas —incluidos los
+64 aporta-fecha de Ríos, cuyo anexo solo da años—) o a solo-vault/wiki ya triageados
+abajo. El detalle
 de **de dónde se obtuvo y con qué se verificó cada gobierno** está en las subsecciones
 siguientes.
 
@@ -67,7 +72,7 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 | --- | --- | --- | --- |
 | Aguirre Cerda (1938-41) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Pedro_Aguirre_Cerda>) | 43 | Incluye carteras extintas: Fomento, Comercio y Abastecimiento, Salubridad |
 | González Videla (1946-52) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Gabriel_Gonz%C3%A1lez_Videla>) | 73 | 9 filas sin fecha exacta omitidas |
-| Ibáñez 2.º (1952-58) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo>) | 106 | El anexo no trae fechas del Interior 1952-57 (22 filas omitidas); 🟡 completar |
+| Ibáñez 2.º (1952-58) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo>) | 106 | Interior 1952-58 completado el 04-oct-2026 (16/16 con fecha, ver tanda 3) |
 | Jorge Alessandri (1958-64) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Jorge_Alessandri>) | 49 | |
 | Frei Montalva (1964-70) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Eduardo_Frei_Montalva>) | 28 | 8 filas sin fecha omitidas; incluye creación de Vivienda (1965) |
 | Allende (1970-73) | [Anexo](<https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Salvador_Allende>) | 73 | |
@@ -88,7 +93,7 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
   - Mónica Madariaga ([Wikipedia](<https://es.wikipedia.org/wiki/M%C3%B3nica_Madariaga>), [revista RLD UAI](<https://lals.uai.cl/index.php/rld/article/view/139/231>)): Justicia 20-abr-1977→14-feb-1983 ✅ y Educación Pública 14-feb-1983→18-oct-1983 ✅ exactos.
   - [BCN Sergio Onofre Jarpa](<https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Sergio_Onofre_Jarpa_Reyes>): Interior 10-ago-1983→12-feb-1985 ✅ exacto.
   - Resultado del muestreo: **5/6 cargos exactos**, 1 ambigüedad de fuente documentada.
-- Panel `/gabinete`: 136 nombramientos visibles (114 personas, carteras mapeables a ministerios actuales).
+- Panel `/gabinete`: 137 nombramientos visibles (115 personas, carteras mapeables a ministerios actuales).
 - **Cierres**: los 7 titulares sin fecha de término se cerraron en `1990-03-11` (fin del gobierno).
 - **Carteras históricas mapeadas** en `cabinet.ts` (`KEYWORD_MINISTERIO`): Guerra/Marina/Aviación → Defensa Nacional; Salud Pública → Salud. Educación Pública y Obras Públicas y Transportes matchean keywords existentes.
 - **Carteras sin equivalente actual** (registradas en `cargos[]` pero sin panel): Tierras y Colonización, Coordinación Económica y Desarrollo, Oficina de Planificación (ODEPLAN), Jefatura de Estado Mayor Presidencial.
@@ -153,10 +158,185 @@ alessandri_jorge (41), frei_mtva (24), allende (70).
 tablas de ministros y compara cada nombramiento fechado de `src/content/people/*.md`
 (campo `cargos[]`) contra ellas.
 Reporta: exactos, diferencias de fecha, registros solo en el vault y filas solo en el
-anexo. Última ejecución (28-sep-2026): **889/927 exactos** (16 paneles de gobierno, parser
-v4); las diferencias restantes son
-artefactos conocidos del parser (filas de continuación con rowspan) o casos ya resueltos
-y documentados arriba. Es una herramienta de auditoría: reporta, no falla el build.
+anexo. Última ejecución (05-oct-2026): **905/1025** (17 gobiernos, parser
+v6: captura 2.os tramos, alias `julo`, matching por cartera con buckets `sinFilaCartera`/
+`aportaFecha`, alias Segegob/Segpres y fomento→obras, gobierno `rios` con anexo
+compacto multi-nombre); 29 diffs misma-persona-misma-cartera (triage
+abajo), 13 sin fila en anexo para la cartera, 68 vault-aporta-fecha (64 Ríos +
+4 Ibáñez), 10 solo-vault.
+Es una herramienta de
+auditoría: reporta, no falla el build.
+
+## Correcciones aplicadas el 04-oct-2026
+
+4 splits por renombre de ministerio (convención vigente: el cambio de nombre divide
+la entrada, precedente `hugo_lavados` Economía 2010-02-12) + 2 fichas de Minería
+Pinochet con fechas reales. Cada frontera lleva su URL inline en `cargos[]`:
+
+| Persona | Campo antes | Campo ahora | Fuente que respalda |
+| --- | --- | --- | --- |
+| `rodrigo_hinzpeter` | Interior y Seg. Pública 2010-03-11 → 2012-11-05 | **Interior 2010-03-11 → 2011-02-21** + **Interior y Seg. Pública 2011-02-21 → 2012-11-05** | Anexo Piñera 1 (nota: "renombrado el 21 de febrero de 2011, mediante la ley N° 20.502") |
+| `alfredo_moreno` | Desarrollo Social y Familia 2018-03-11 → 2019-06-13 | **Desarrollo Social 2018-03-11 → 2019-04-02** + **Des. Social y Familia 2019-04-02 → 2019-06-13** | Anexo Piñera 2 (nota: "El 2 de abril de 2019, el Ministerio de Desarrollo Social fue renombrado") |
+| `joaquin_lavin_infante` | Desarrollo Social 2011-07-18 → 2013-06-09 | **Planificación 2011-07-18 → 2011-10-13** + **Desarrollo Social 2011-10-13 → 2013-06-09** | Anexo Piñera 1 (nota: MDS "creado el 13 de octubre de 2011. Anterior a ello, era Mideplan"; misma `organizacion: ministerio_desarrollo_social` que `felipe_kast`) |
+| `alvaro_elizalde` | Interior y Seg. Pública 2025-03-04 → 2026-03-11 | **Interior y Seg. Pública 2025-03-04 → 2025-04-01** + **Interior 2025-04-01 → 2026-03-11** | Anexo Boric (nota: cambio de nombre por Ley N° 21.730; espeja `luis_cordero` Seguridad desde 2025-04-01) |
+| `pablo_baraona_urzua` | Minería hasta 1990-03-11 | **1989-06-05** | [Ministerio de Minería — lista de titulares](<https://es.wikipedia.org/wiki/Ministerio_de_Miner%C3%ADa_de_Chile>) (sucesor López Bain desde esa fecha; elimina el solape con él) |
+| `jorge_lopez_bain` | Minería 1990-03-11 → 1990-03-11 (rango cero, asignado a Aylwin) | **Minería 1989-06-05 → 1990-03-11 (gobierno pinochet)** + `notas` | [Biografía](<https://es.wikipedia.org/wiki/Jorge_L%C3%B3pez_Bain>) (infobox 5-jun-1989 → 11-mar-1990, último ministro de Pinochet, sucesor Hamilton) + [DTO-128 10-mar-1990](<https://nuevo.leychile.cl/servicios/Consulta/Exportar?exportar_con_notas_al_pie=False&exportar_con_notas_originales=False&exportar_con_notas_bcn=False&exportar_formato=pdf&hddResultadoExportar=90550.1990-03-10.0.0%23&nombrearchivo=DTO-128_10-MAR-1990&radioExportar=Normas>) firmado por él como ministro |
+
+## Correcciones aplicadas el 04-oct-2026 (segunda tanda: parser v5 + juramentos)
+
+**Parser v5** (`scripts/validate/verify-gabinete.mjs`): captura los 2.os tramos de
+periodo (líneas de continuación sin `|` inicial → fila propia mismo ministerio+nombre,
+con refs limpiadas antes de extraer fechas) y alias `julo` (typo del anexo
+Concertación). **892/931 → 904/931**: cierran Provoste (el "14 de julo" era typo),
+las 4 colas de splits (Hinzpeter, Moreno, Elizalde), Lavados (el anexo también lo
+parte en 2010-02-12), Pascual, Ottone y Benítez (tramos servicio→ministerio que
+el v4 perdía). Solo-vault quedan 2 (Boccardo, Lobos: la tabla del anexo solo trae
+su subrogancia, el vault registra la titularidad con Diario Oficial/prensa).
+
+4 fechas corregidas contra prensa del día (el vault decía el anuncio, la convención
+exige el juramento):
+
+| Persona | Campo antes | Campo ahora | Fuente que respalda |
+| --- | --- | --- | --- |
+| `ingrid_antonijevic` | Economía hasta 2006-07-17 | **2006-07-14** | Cooperativa 14-jul-2006 (anuncio) + Crónica Digital (juramento viernes 19:50, 1.5h después del anuncio); pares del mismo cambio (Zaldívar, Zilic, Velasco, Provoste) ya estaban en 07-14 |
+| `alejandro_ferreiro` | Economía desde 2006-07-17 | **2006-07-14** | Ídem; su bio dice "14 de julio de 2006" |
+| `monica_jimenez` | Educación desde 2008-04-17 | **2008-04-18** | Diario Financiero 18-abr-2008 ("juró hoy") + Clarín 17-abr ("asumirá mañana viernes"); interinato Cortázar 16→18-abr no abre entrada (subrogancia) |
+| `carolina_toha` | Segegob desde 2009-03-13 | **2009-03-12** | Emol 12-mar-2009 ("asumirá desde hoy") + Clarín/Proceso (juramento jueves 12 en Montt-Varas con Vidal); Vidal Segegob→Defensa ya estaba en 03-12. BCN dice 13 pero su propia bajada dice "nombrada el 12" |
+| `jaime_estevez` | sin cambio (trazabilidad) | `# arle.udp.cl juramento 2005-01-03` en ambos `desde` | Archivo Lagos UDP (juramento y reemplazo de Etcheberry) + su bio (MOP 3-ene-2005): el "2000-01-03" del anexo es typo por 2005 (en 2000 presidía BancoEstado) |
+
+## Correcciones aplicadas el 04-oct-2026 (tercera tanda: Interior Ibáñez 16/16 + fusiones)
+
+Cadena completa del Interior 1952-58 (el anexo trae los nombres sin fechas; cada
+tramo lleva su URL inline): del Pedregal 1952-11-03 → Koch 1953-04-01 → Wilson
+1954-03-01 → Araos 1954-04-23 → Parra 1954-06-05 → Olavarría 1954-11-17 → Recabarren
+1955-01-06 → Montero Schmidt 1955-02-21 → Koch 1955-05-30 → Videla 1955-12-30 →
+Aravena 1957-04-23 → O'Ryan 1957-07-03 → Arce 1957-09-09 → O'Ryan 1957-11-11 →
+Urzúa 1958-02-18 → Valdés 1958-06-16 → 1958-11-03. Fuentes: bios con infobox,
+BCN reseñas (Olavarría, Recabarren, Aravena), listas oficiales de Hacienda,
+tabla `Carlos Ibáñez del Campo cabinet ministers` y Anexo Interior para la cadena.
+`verify-gabinete`: ibanez2 106 → 127 nombramientos (wiki: 128).
+
+Fusiones persona (cero referencias en el corpus, merge directo + `aliases[]`):
+`guillermo_del_pedregal` + `guillermo_del_pedregal_herrera` (8 cargos 1941-1954,
+incluye Hacienda/Economía/RR.EE. de Ríos con lista oficial de Hacienda),
+`osvaldo_koch` + `osvaldo_koch_krefft` (Interior ×2), `arturo_olavarria` +
+`arturo_olavarria_bravo` (Interior 1954 con BCN). Renames a nombre completo sin
+refs: `jorge_aravena` → `jorge_aravena_carrasco`, `abel_valdes` →
+`abel_valdes_acuna` (traslape Agricultura→Interior 16/19-jun-1958 anotado en
+`notas`), `santiago_wilson` → `santiago_wilson_hernandez` (+ Economía 01→14-abr-1953).
+Nuevas: `jorge_araos_salinas`, `sergio_recabarren_valenzuela` (+ Hacienda con
+BCN+biblio.hacienda), `carlos_montero_schmidt`, `eduardo_urzua_merino` (+ Hacienda
+1956-58 oficial).
+
+Ajustes con fuente que el vault prevalece: Koch Justicia desde 03-02 → 03-01
+(bio; cierra el encadenamiento con Wilson); del Pedregal Hacienda 1941-06-10 →
+1942-04-02 en una entrada (precedente Gómez: el cambio de presidente no divide;
+el anexo la parte por Aguirre/Méndez).
+
+**Matcher v5.1** (mismo script): conciencia de cartera por tokens (stopwords +
+alias Segegob/Segpres) con buckets `sinFilaCartera` (anexo trae a la persona en
+otra cartera: los 12 Interior Ibáñez + Kast/Planificación) y `aportaFecha` (fila
+del anexo sin fechas: del Pedregal ×3 + Wilson Economía). Sin el alias Segegob,
+el biministro Alvarado caía a diff contra la fila Interior en vez de matchear
+exacto su fila Segegob 19-may (bug detectado y corregido en la misma sesión).
+## Correcciones aplicadas el 05-oct-2026 (quinta tanda: gobierno Ríos completo)
+
+37 fichas nuevas + 15 ediciones. Fuentes: 4 listas ministeriales con día exacto
+(Interior, RR.EE., Salud, Justicia) + lista oficial de Hacienda (biblio.hacienda
+n°192-197) + bios es/en.wikipedia con infobox + BCN (Bustos) + Time jun-1943
+(gabinete militar) + Diario de Sesiones (pensión Ortúzar). Cada tramo lleva su
+URL inline en `cargos[]`. Cadenas completas verificadas punta a punta:
+Interior 8/8, Hacienda 5/5, Salud 5/5, RR.EE. 2/2, Trabajo 3/3, Tierras 7/7,
+Agricultura 7/7 (el anexo no trae a Mendoza 1946).
+
+Renames a nombre completo sin refs (cero citas en el corpus): `alfonso_quintana_burgos`
+→ `jaime_alfonso_quintana_burgos` (+ Interior 44-45, Agricultura 43-44, Interior
+1948 y 1951-52 de González Videla), `fernando_moller` → `fernando_moller_bordeu`
+(+ Agricultura 42-43, Economía 43-44, Justicia 46), `ricardo_bascunan` →
+`ricardo_bascunan_stonner` (+ OO.PP. feb→sep-1943), `eugenio_puga` →
+`eugenio_puga_fisher` (+ Justicia sep→nov-1946), `fernando_claro_x` →
+`fernando_claro_salas` (nombre del anexo Salud), `fidel_estay` → `fidel_estay_cortes`
+(+ Tierras 1945-46).
+
+Vault prevalece sobre bio/anexo (documentado por caso): Barros Jarpa RR.EE.
+hasta 26-oct (bio dice 26, anexo 21; coincide inicio Fernández); Escudero Salud
+hasta 15-ago (bio 17-ago; coincide inicio Etchebarne); Bascuñán OO.PP. hasta
+1-sep-1943 (su bio dice 6-oct-1944 pero Alcaíno asumió 1-sep con 2 refs);
+Riveros Comercio 1941 hasta 2-abr-1942 (decía 25-nov-1941; DS 1549 + bio:
+siguió con Méndez); Arriagada Justicia desde 14-may-1945 (su bio dice 1944,
+imposible: Gajardo ocupó hasta sep-1944; coincide con el gran cambio del
+14-may-1945 y con la lista del Min. de Justicia).
+Fechas por encadenamiento entre dos fuentes (anotado `notas` en cada ficha):
+Marshall Herrera Educación, Escudero Defensa, Fuenzalida Tierras, Jaramillo
+Comercio. Divergencias no dirimidas sin Diario Oficial (sin cambios):
+Alfonso Agricultura 1963 (26-sep vs 14-sep, previa), Pérez Zujovic Interior
+1968-69 (15-feb/10-jul vs 05-feb/09-jul, previa).
+
+`cabinet.ts`: keyword `/comercio/i` → `ministerio_economia` (Comercio y
+Abastecimiento 1941-42 precedió a Economía y Comercio; mismo precedente que
+Fomento→Economía).
+
+## Correcciones aplicadas el 04-oct-2026 (cuarta tanda: muestreo ampliado)
+
+Muestreo oficial extendido a todos los gobiernos (bio + listas oficiales + prensa
+del día; todo lo no listado aquí coincidió exacto y no requirió cambios):
+
+| Persona | Resultado |
+| --- | --- |
+| `sergio_de_castro` | ✅ Economía 1975-04-14→1976-12-27 y Hacienda 1976-12-31→1982-04-22 (bio + biblio.hacienda #232) |
+| `miguel_kast_rist` | ✅ ODEPLAN 1978-12-26→1980-12-29 y Trabajo 1980-12-29→1982-04-22 (bio + BCN Historia Ley 20.181) |
+| `jose_pinera_echenique` | ✅ ya traía URLs, confirmado |
+| `carlos_caceres_contreras` | **Hacienda hasta 1984-04-22 → 1984-04-02**: CSM 03-abr-1984 (ceremonia lunes 2-abr) + biblio.hacienda #235 + old.hacienda.cl + genealog. Las bios dicen 22-abr por confusión con el 22-abr-1982 de De Castro; el anexo arrastra ese error (nuevo diff documentado). Interior ✅ |
+| `luis_escobar_cerda` | **Hacienda desde 1984-04-22 → 1984-04-02** (ídem) + **Economía 1961-08-26→1963-09-26 agregada** (bio + anexo Alessandri, exacto) |
+| `roberto_vergara_herrera` | ✅ triministro 1958-11-03→1960-09-15 (bio + anexo + BCN Diario Sesiones feb-1960 firmando como "Ministro de Economía, Hacienda y Minería") |
+| `hernan_buchi_buc` | ✅ ODEPLAN 1983-08-10→1984-05-08 y Hacienda 1985-02-12→1989-04-05 (bio + El País feb-1985) |
+| `jose_toha_gonzalez` | ✅ Interior 1970-11-03→1972-01-22 y Defensa 1972-01-07→1973-07-05 (bio: el traslape 7/22-ene-1972 es real, doble titularidad en la crisis de la acusación) |
+| `clodomiro_almeyda_medina` | ✅ RR.EE. 1970-11-03→1973-05-22, Defensa 1973-07-05→1973-08-09, RR.EE. 1973-08-09→1973-09-11 (bio + BCN) |
+| `orlando_letelier_del_solar` | ✅ RR.EE./Interior/Defensa may-sep 1973 (bio + juramento 09-ago en prensa) |
+| `jacques_chonchol` | ✅ Agricultura 1970-11-03→1972-11-02 (bio + anexo) |
+| `pedro_enrique_alfonso` | ✅ Interior/Hacienda 1938-40, Interior 1950-51 (bio; cadenas continuas) + **Economía 1945-05-14→1946-02-03 agregada** (bio es+en, gobierno Ríos). Agricultura 1963: vault==anexo (09-26) pero bio y lista ministerial dicen 09-14 — divergencia no dirimida sin Diario Oficial, sin cambios |
+| `marcial_mora_miranda` | ✅ RR.EE. 1940-07-30→1940-11-07 y Hacienda 1940-11-07→1941-06-10 (BCN + biblio.hacienda #190; mismo-día RR.EE.→Hacienda sostiene el 11-07) |
+| `edmundo_perez_zujovic` | ✅ OO.PP. 1965-12-16→1967-09-07; Interior vault==anexo (1968-02-15→1969-07-10) pero bios dicen 05-feb/09-jul — sin fuente primaria no se mueve |
+
+Gap detectado (no es error, falta la ficha): el expresidente `Jorge Alessandri Rodríguez`
+(Hacienda 1947-50) no tiene `src/content/people/*.md` (`jorge_alessandri.md` es el
+diputado UDI homónimo); su fila vive solo en `soloWiki`. Crear la ficha requiere
+ciclo TAREAS completo (5 fuentes), queda como pendiente de contenido.
+
+Triage de los 29 diffs + buckets (todos explicados, ninguno es error del vault):
+renuncia vs juramento 1-3 días con vault en juramento (Prokurica/Jobet/Desbordes
+18-dic-2020, Beyer destituido 16-abr-2013, Matthei cese aceptado 23-jul-2013,
+Blanco/Campos 19-oct-2016, Montt decreto 02-nov-1992, Jiménez Moraga asume
+13-ago-1997, Foxley 13-mar-2009 —Fernández no estaba en Santiago el 12—,
+Lavín/Baranda juramento domingo 09-jun-2013 vs renuncia 06-jun, Duco comunicado
+oficial 13-ago-2026 vs 14, Koch Justicia bio 01-mar vs anexo 02-mar);
+filas del anexo con una sola fecha vs cierre documentado del vault
+(Baraona, López Bain, 4 ODEPLAN de Pinochet);
+tramos que cruzan cambio de presidente en una entrada por convención
+(del Pedregal Hacienda 1941-42; el anexo parte por Aguirre/Méndez);
+errores del anexo donde el vault prevalece (Vallejo: subrogancia prenatal dic-2024
+confundida con término; Estévez "2000" por 2005; Gómez: sección Frei cortada en
+2000-03-11, continúa en Lagos; Alvarado Interior original vs biministro no
+desglosado —el biministro SÍ matchea su fila—; de Grange igual;
+Kast fusionado en Desarrollo Social aunque era Mideplan hasta oct-2011;
+Cáceres/Escobar Hacienda abr-1984: anexo y bios dicen 22-abr, vault 02-abr con
+CSM del día + biblio.hacienda oficial ×2;
+Riveros Comercio 1941: anexo Aguirre corta 25-nov-1941, vault 02-abr-1942 con
+DS 1549 + bio (siguió con Méndez; precede a Álvarez sin hueco)).
+`sinFilaCartera` (13) y `aportaFecha` (4) son vault con fuente donde el anexo no
+tiene la fila o la tiene sin fechas; `soloVault` Ibáñez (Araos, Recabarren ×2,
+Urzúa ×2) tiene bio/BCN/Hacienda oficial y el anexo simplemente no trae esas
+filas (Interior sin fechas + Hacienda).
+Ríos aparte: `aportaFecha` 64 (el anexo compacto trae persona+cartera sin fechas;
+el vault aporta el día exacto con bio/lista oficial), `soloVault` 3 (cola 1946
+que el anexo no lista: Merino Interior, Garafulic Salud, Mendoza Agricultura),
+`soloWiki` 1 (Solar Neira Comercio 1942, sin bio ni fechas: posible interinato
+entre Álvarez y Arriagada, que encadenan el mismo 21-oct).
+Vista por gobierno (`/gabinete`, panel `rios` 1941-11-25→1946-06-27): las 7
+Tierras no tienen panel (cartera sin equivalente actual, documentado) y 3
+entradas del interinato jun→nov-1946 quedan fuera del rango del panel
+(Puga Justicia, Gajardo Economía, Iribarren Interior) — visibles en vista por
+cartera, ficha y auditoría.
 
 ## Correcciones aplicadas el 28-sep-2026
 
@@ -210,19 +390,62 @@ completo "María Begoña Yarza Sáez") y `joaquin_lavin` (fusionado en
 
 ## Pendientes 🟡
 
-- 🟡 **Pinochet y 1938-1973: ampliar muestreo oficial** — Pinochet tiene 3 ministros
-  verificados (5/6 cargos exactos); los 6 gobiernos 1938-1973 importados aún sin cruce
-  individual contra BCN/Diario Oficial. La ambigüedad del remix del 8-jul-1987
-  (designación 7-jul vs asunción 11-jul en BCN) aplica a 14 entradas del import.
-  Origen: <https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_de_la_dictadura_militar_chilena>
-- 🟡 **Ibáñez 2.º: fechas del Interior 1952-57** — el anexo no las trae; completar desde
-  BCN/Diario Oficial (22 filas omitidas).
-  Origen: <https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_segundo_gobierno_de_Carlos_Ib%C3%A1%C3%B1ez_del_Campo>
-- ⬜ **Ríos (1942-46)**: su anexo usa formato compacto (solo años, varios ministros por
-  celda) — requiere parser propio o carga manual.
+- ✅ **Muestreo oficial ampliado el 04-oct-2026** (resuelve este pendiente): Pinochet
+  3 → 11 ministros (de Castro, Kast, Piñera, Cáceres, Vergara, Büchi, Escobar +
+  Fernández/Madariaga/Jarpa previos; hallado y corregido el error 22-abr-1984 de
+  Cáceres/Escobar), Allende 4/4 (Tohá, Almeyda, Letelier, Chonchol), Aguirre 3
+  (Alfonso, Mora + Wachholtz por cadena), Alessandri 2 (Vergara, Escobar),
+  Frei 1 (Pérez Zujovic), González Videla 1 (Alfonso), Ibáñez completo (tanda 3).
+  Detalle por persona en tanda 4 arriba.
+- ✅ **Ríos completado el 05-oct-2026** (cierra el otro pendiente): 12 carteras con
+  cadena continua, 36 fichas nuevas, 5 renames. Detalle en tanda 5 arriba.
+- ✅ **Ibáñez 2.º Interior 1952-58 completado el 04-oct-2026** (resuelve este
+  pendiente): cadena 16/16 con fechas y URL inline (tanda 3 arriba); ibanez2
+  106 → 127 nombramientos. Discrepancia anotada: BCN dice Wilson Interior hasta
+  5-jun-1954, pero Anexo + bio + sucesor Araos 23-abr coinciden en 23-abr.
+- ⬜ **Ríos (1942-46)**: su anexo usa formato compacto (`[[Nombre]] (años)` con varios
+  ministros por celda, solo años) — un parser daría rangos anuales que violan la
+  convención `cargos[]` (exige día exacto; ver skill gabinete "Rango a medias").
+  Completar requiere bio por bio como Ibáñez (ej: del Pedregal 1942-43 ya está).
+  `verify-gabinete` tiene gobierno `rios` en `GOBIERNOS` desde el 05-oct-2026
+  (parser v6: celdas multi-nombre, anexo sin fechas → bucket aportaFecha).
   Origen: <https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_gobierno_de_Juan_Antonio_R%C3%ADos>
+- ✅ **Ríos (1942-46) completado el 05-oct-2026** (resuelve este pendiente): 37 fichas
+  nuevas + 15 editadas bio por bio (Interior 7/7, Hacienda 5/5 vía lista oficial,
+  Salud 5/5, RR.EE. 2/2, Justicia 4/5, Educación 5/5, Defensa 3/3, Fomento/OO.PP.
+  6/6, Tierras 7/7, Agricultura 7/7, Trabajo 3/3, Comercio 8/9). `verify-gabinete`
+  parser v6: gobierno `rios`, celdas multi-nombre, alias fomento→obras, fix
+  "Pedro Pobrete"→Poblete. Resultado: vault 67 / wiki 62, 64 aporta-fecha,
+  3 soloVault de cola 1946 que el anexo no trae (Merino, Garafulic, Mendoza),
+  1 soloWiki (Solar Neira, sin fechas). Detalle en tanda 5 abajo.
+- ✅ **Ficha Jorge Alessandri Rodríguez creada el 05-oct-2026** (cierra el gap): Hacienda 1947-08-02→1950-02-07 (BCN + biblio.hacienda) + Presidencia 1958-63; 2 refs históricas re-apuntadas (`20221012-1`, `20260112-2`).
+- ✅ **Cuevas Interior 1946 resuelto el 05-oct-2026**: BCN confirma 17-oct→2-nov como suplente bajo Iribarren (sin entrada por convención) + titular 3-nov-1946→2-ago-1947; rename a nombre completo con alias.
+- ✅ **Fernández Defensa 1961 resuelto el 05-oct-2026**: su bio es internamente contradictoria (infobox 25-abr vs prosa 15-abr); vault==anexo==infobox, sin cambios.
+- ✅ **Solape Puga Fisher feb-1950 documentado el 05-oct-2026**: viene del propio anexo GV (dos filas 7-feb/10-feb); vault==anexo, sucedido por Ruperto Puga el 27-feb.
+- ✅ **Fichas Bulnes Sanfuentes + Concha Quezada creadas el 05-oct-2026**: Defensa y Agricultura 1946-11-03→1947-04-16 (bio+anexo coinciden en ambos); homónimos modernos distintos, sin renames.
 - ⬜ **Gobiernos anteriores a 1938**: sin datos en el vault. Anexos wiki disponibles por
   gobierno — mismo método de importación aplica.
+
+### Pendientes Ríos (05-oct-2026, sin día exacto verificable)
+
+- Solar Neira (Comercio 1942, único soloWiki Ríos): sin bio en ningún idioma;
+  las cadenas Álvarez (→21-oct) → Arriagada (21-oct→) no dejan hueco — posible
+  interinato o error del anexo.
+- Tovarías Arroyo (OO.PP. desde 28-ene-1946, sucesor de Frei según su bio): sin
+  bio ni fechas; cola fuera del anexo.
+- Puga Fisher Justicia 1944-45 (entre Claro interino y Arriagada): solo años.
+- Marshall Herrera Educación (6-oct-1944→14-may-1945 por encadenamiento),
+  Escudero Defensa (7-jun-1943→6-oct-1944), Fuenzalida Tierras
+  (4-feb→7-jun-1943), Jaramillo Comercio (4-feb→7-may-1943): día exacto por
+  confirmar con Diario Oficial.
+- OO.PP. 21-oct→19-dic-1942 sin titular (Schnake→Hidalgo); el sucesor que da la
+  bio de Schnake ("Amagada", probable typo por Arriagada) no se sostiene como
+  titular. Duhalde Interior 17→28-ene-1946 idem (asume VP el 17, Merino el 28).
+- Bascuñán Stonner 1947-48 (González Videla): vault ago-1947 vs bio oct-1947
+  (arrastra a Estay desde 14-ago); dirimir con Diario Oficial. Su OO.PP.
+  jul→nov-1952 (Ibáñez) sin verificar en el vault.
+- Puga Fisher: solape 7→10-feb-1950 heredado del propio anexo GV (dos filas; vault==anexo, documentado en ficha).
+- Fernández Defensa 1961: resuelto (bio internamente contradictoria; vault==anexo==infobox). Cuevas Interior 1946: resuelto (suplencia sin entrada).
 
 ### Decisiones de alcance
 

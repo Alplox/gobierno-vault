@@ -9,5 +9,5 @@ cargos:
   - cargo: Ministro de Minería
     organizacion: ministerio_mineria
     desde: 1988-10-21
-    hasta: 1990-03-11
+    hasta: 1989-06-05 # https://es.wikipedia.org/wiki/Ministerio_de_Miner%C3%ADa_de_Chile (sucesor Jorge López Bain desde esa fecha)
 ---
