@@ -579,6 +579,7 @@
 - [2026/03/20260317-2 - Kast explica frase 'Chile se cae a pedazos' con graffitis, incidentes en aeropuerto y déficit educativo](src/content/events/2026/03/20260317-2.md) — 1 fuente
 - [2026/03/20260317-3 - Camioneros piden definiciones sobre el MEPCO ante Hacienda: la CNTC se reúne con Quiroz y la CNDC advierte un estrés de precios en la cadena logística](src/content/events/2026/03/20260317-3.md) — 6 fuentes
 - [2026/03/20260318-1 - Gobierno de Kast impulsa un 'reseteo': recortes a ministerios, retiro de 43 decretos de Medio Ambiente y de la negociación ramal](src/content/events/2026/03/20260318-1.md) — 6 fuentes
+- [2026/03/20260318-2 - Kast designa a Santa Cruz embajador ante la OCDE y Cruz-Coke asume Evopoli](src/content/events/2026/03/20260318-2.md) — 5 fuentes
 - [2026/03/20260319-1 - Gobierno envia urgencia legislativa para proyecto que castiga migracion irregular](src/content/events/2026/03/20260319-1.md) — 3 fuentes
 - [2026/03/20260319-2 - Gobierno pide la renuncia al superintendente de Educación Superior en medio de la formulación de cargos contra la USS](src/content/events/2026/03/20260319-2.md) — 11 fuentes
 - [2026/03/20260320-1 - Gobierno decreta alerta sanitaria nacional por cancer](src/content/events/2026/03/20260320-1.md) — 7 fuentes
@@ -1865,6 +1866,7 @@
 - [2025/07/20250728-1 - Robo de $6.150 millones al Banco Itaú de Valparaíso: forado desde local colindante y oxicorte para vaciar la bóveda](src/content/events/2025/07/20250728-1.md) — 11 fuentes
 - [2025/07/20250728-2 - Evelyn Matthei anuncia querella contra el Partido Republicano por campañas de bots y fake news: 'Yo no mando a bots a decir las cosas'](src/content/events/2025/07/20250728-2.md) — 9 fuentes
 - [2025/08/20250806-1 - Confesiones de un creador de fake news del plebiscito 2022: guiones para desinformar en Rebaño Consultores, un operador de Copesa y visitas de diputados de derecha; su exdirector terminó contratado por la ANFP](src/content/events/2025/08/20250806-1.md) — 3 fuentes
+- [2025/08/20250812-1 - Santa Cruz dice que le doleria la guata gobernar con Kast y el republicano le receta viadil](src/content/events/2025/08/20250812-1.md) — 6 fuentes
 - [2025/08/20250813-1 - Kast no asiste a comisión investigadora por robo de cables de cobre](src/content/events/2025/08/20250813-1.md) — 17 fuentes
 - [2025/08/20250817-1 - Kast minimiza al Congreso durante campaña ('no es tan relevante como ustedes se imaginan') y promete gobernar sin nuevas leyes: críticas de autoritarismo incluso dentro de Chile Vamos](src/content/events/2025/08/20250817-1.md) — 1 fuente
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md) — 10 fuentes
@@ -1902,6 +1904,7 @@
 - [2025/12/20251215-1 - Cadem informa que su sondeo privado durante la veda proyectó correctamente el resultado del balotaje (58% para Kast)](src/content/events/2025/12/20251215-1.md) — 1 fuente
 - [2025/12/20251215-2 - Gobierno de Boric entrega nota de protesta a Colombia por dichos inaceptables de Petro contra Kast electo (hijo de Hitler)](src/content/events/2025/12/20251215-2.md) — 15 fuentes
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — 2 fuentes
+- [2025/12/20251216-2 - Operación Apocalipsis: megaoperativo anticorrupción en siete regiones desbarata red de coimas en Santiago 1 y el CPF de San Joaquín](src/content/events/2025/12/20251216-2.md) — 9 fuentes
 - [2025/12/20251217-1 - Gobierno de Boric y Mesa del Sector Público firman el reajuste salarial 2026 (3,4%): el acuerdo que la derecha entrante tildó de 'amarre'](src/content/events/2025/12/20251217-1.md) — 11 fuentes
 - [2025/12/20251219-1 - Contraloría revela sueldo irregular de madre de Rodolfo Carter en Municipalidad de La Florida](src/content/events/2025/12/20251219-1.md) — 6 fuentes
 - [2025/12/20251219-2 - Columna de opinión advierte que enfoque de seguridad de Kast profundizará fallas estructurales](src/content/events/2025/12/20251219-2.md) — 2 fuentes
@@ -1969,6 +1972,7 @@
 - [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md) — 2 fuentes
 - [2023/03/20230324-1 - Condenan a 2 años a tres carabineros de la 51° Comisaría de Pedro Aguirre Cerda por malos tratos a un detenido del estallido](src/content/events/2023/03/20230324-1.md) — 2 fuentes
 - [2023/03/20230325-1 - DecideChile lanza 'Chile en 30 años': datos abiertos de seguridad muestran la caída de los delitos y el quiebre de 2021-2022 en homicidios](src/content/events/2023/03/20230325-1.md) — 1 fuente
+- [2023/03/20230328-1 - Condenan a Sebastián Izquierdo a 598 días de presidio por lesiones en marchas del Rechazo; pena se da por cumplida](src/content/events/2023/03/20230328-1.md) — 6 fuentes
 - [2023/03/20230330-1 - Kast exige investigar la contratación del 'cuñado' de Giorgio Jackson en el MOP; Vicente Gutiérrez renuncia ante la ola de críticas](src/content/events/2023/03/20230330-1.md) — 5 fuentes
 - [2023/04/20230411-1 - Congreso aprueba la ley de 40 horas: la jornada laboral se reducirá gradualmente a 40 horas semanales](src/content/events/2023/04/20230411-1.md) — 2 fuentes
 - [2023/04/20230419-1 - Crisis migratoria en el norte: gobierno mantiene expulsiones y activa Ley de Infraestructura Crítica](src/content/events/2023/04/20230419-1.md) — 2 fuentes
@@ -2061,6 +2065,7 @@
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
 - [2020/03/20200306-1 - Muere Cristián Valdebenito, alcanzado por una bomba lacrimógena de Carabineros en Plaza Dignidad: primera víctima fatal del año en las protestas](src/content/events/2020/03/20200306-1.md) — 2 fuentes
 - [2020/03/20200308-1 - 8M 2020: la marcha feminista más multitudinaria de la historia de Chile reúne a más de un millón de personas en Santiago](src/content/events/2020/03/20200308-1.md) — 1 fuente
+- [2020/03/20200312-1 - Perfil de Sebastián Izquierdo: prontuario, denuncia de la UDI y desmarque del partido](src/content/events/2020/03/20200312-1.md) — 5 fuentes
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — 1 fuente
 - [2020/03/20200318-1 - Piñera decreta Estado de Excepción Constitucional de Catástrofe por 90 días ante el avance del COVID-19](src/content/events/2020/03/20200318-1.md) — 3 fuentes
 - [2020/03/20200319-1 - Partidos acuerdan postergar el plebiscito constitucional del 26 de abril al 25 de octubre por la pandemia](src/content/events/2020/03/20200319-1.md) — 2 fuentes
@@ -2076,9 +2081,11 @@
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — 1 fuente
 - [2020/08/20200801-1 - Se publica la Ley 21.252 del Préstamo Solidario y el Bono Clase Media: origen legislativo de la serie de ayudas de la pandemia de covid-19](src/content/events/2020/08/20200801-1.md) — 6 fuentes
 - [2020/08/20200805-1 - Comuneros mapuche en huelga de hambre rechazan la invitación del gobierno y Celestino Córdova inicia huelga seca](src/content/events/2020/08/20200805-1.md) — 3 fuentes
+- [2020/08/20200813-1 - Formalizan a Sebastián Izquierdo y Roberto Belmar por agresiones en marchas del Rechazo; quedan con arresto domiciliario nocturno](src/content/events/2020/08/20200813-1.md) — 7 fuentes
 - [2020/08/20200828-1 - Paro de camioneros de agosto de 2020: bloqueos de rutas, desabastecimiento y rechazo a la Ley de Seguridad del Estado bajo Piñera](src/content/events/2020/08/20200828-1.md) — 4 fuentes
 - [2020/09/20200901-1 - Video de fiesta con alcohol y mujeres en plena ruta marca el sexto día del paro camionero: Gobierno anuncia querella, Fedesur lo desmarca y Fiscalía investiga](src/content/events/2020/09/20200901-1.md) — 11 fuentes
 - [2020/09/20200906-1 - El Mercurio porta la encuesta de Numen que proyectaba un triunfo del Rechazo; el gremio de encuestadores alerta por sondeos de 'fuentes no habituales'](src/content/events/2020/09/20200906-1.md) — 10 fuentes
+- [2020/09/20200910-1 - Tribunal prohíbe a Sebastián Izquierdo y Roberto Belmar participar en marchas y reuniones públicas](src/content/events/2020/09/20200910-1.md) — 5 fuentes
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
 - [2020/09/20200928-1 - La Pública accede por Ley de Transparencia a 200 minutos de cámaras corporales del GOPE de Carabineros del estallido: primera entrega de registros policiales](src/content/events/2020/09/20200928-1.md) — 3 fuentes
 - [2020/10/20201002-1 - Caso Pío Nono: carabinero lanza a un adolescente de 16 años desde un puente al río Mapocho y es formalizado por homicidio frustrado](src/content/events/2020/10/20201002-1.md) — 3 fuentes
