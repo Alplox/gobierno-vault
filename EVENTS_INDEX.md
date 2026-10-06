@@ -1627,6 +1627,7 @@
 - [2026/09/20260908-13 - Senado despacha Sala Cuna Universal a la Cámara con doble revés al Gobierno y micrófono abierto de Rau: Qué desastre, hueón](src/content/events/2026/09/20260908-13.md) — 8 fuentes
 - [2026/09/20260908-14 - Cerimedo es trasladado de Palmasola al penal de máxima seguridad de Chonchocoro para cumplir una segunda detención preventiva](src/content/events/2026/09/20260908-14.md) — 6 fuentes
 - [2026/09/20260908-15 - Judd declara en exclusiva de Meganoticias que el Estrecho de Magallanes pertenece a Chile y que es la política de Estados Unidos](src/content/events/2026/09/20260908-15.md) — 7 fuentes
+- [2026/09/20260908-16 - Paulina Núñez acusa a Barros de parecer vocero opinando de todo por la reforma de seguridad, el ministro responde que no tiene por qué saber lo que se hace y senadores de RN y PS lo rechazan](src/content/events/2026/09/20260908-16.md) — 5 fuentes
 - [2026/09/20260908-2 - Confesión a 18 años de la desaparición de Mariana Sepúlveda en Conchalí: vecino detenido, hallazgo óseo bajo su cama y control de detención con debate por prescripción](src/content/events/2026/09/20260908-2.md) — 9 fuentes
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 14 fuentes
 - [2026/09/20260908-4 - PISA 2025: Chile anota su peor resultado en Matemática con 59% bajo el nivel básico y retrocede en Lectura](src/content/events/2026/09/20260908-4.md) — 6 fuentes
@@ -1788,6 +1789,7 @@
 - [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
 - [2026/09/20260927-2 - Alvarado en Estado Nacional: EE.UU. adelantó la firma del Escudo para aprovechar la ONU y Chile adhirió por convicción](src/content/events/2026/09/20260927-2.md) — 9 fuentes
 - [2026/09/20260927-3 - Pulso Ciudadano de septiembre: aprobación de Kast cae a 28,2% y desaprobación sube a 57,6%, con desconfianza en máximo histórico](src/content/events/2026/09/20260927-3.md) — 8 fuentes
+- [2026/09/20260927-4 - Barros aborda en Radio Polar la disputa por Malvinas y respalda el comercio entre Punta Arenas y las islas; Argentina lo tilda de confuso y Alvarado lo respalda](src/content/events/2026/09/20260927-4.md) — 5 fuentes
 - [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
 - [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
@@ -1823,13 +1825,14 @@
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 7 fuentes
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
 - [2026/10/20261001-6 - Detienen a cuatro carabineros de Rancagua por red de receptación y blanqueo de vehículos robados: quedan desvinculados y la Fiscalía pide ampliar la detención](src/content/events/2026/10/20261001-6.md) — 6 fuentes
-- [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 9 fuentes
+- [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 11 fuentes
 - [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 21 fuentes
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
-- [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 20 fuentes
+- [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 28 fuentes
 - [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
 - [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 11 fuentes
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
+- [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 
 ## 2025
 
@@ -2244,6 +2247,10 @@
 - [2006/10/20061025-1 - Denuncian supuesto depósito de 9.000 kilos de oro de Pinochet en un banco de Hong Kong](src/content/events/2006/10/20061025-1.md) — 12 fuentes
 - [2006/10/20061026-1 - HSBC declara falsos los documentos del supuesto oro de Pinochet y la Corte habilita la investigación](src/content/events/2006/10/20061026-1.md) — 11 fuentes
 - [2006/12/20061220-1 - Jueces dictan tres sobreseimientos definitivos de Pinochet en casos Riggs, Caravana y Colombo](src/content/events/2006/12/20061220-1.md) — 7 fuentes
+
+## 2005
+
+- [2005/03/20050316-1 - Senado de EE.UU. revela red de al menos 125 cuentas secretas de Pinochet con 10 nombres disfrazados y el alias Daniel Lopez](src/content/events/2005/03/20050316-1.md) — 5 fuentes
 
 ## 2003
 
