@@ -11,7 +11,7 @@
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
-| A-2025-001 | ⬜ | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados (página /sueldos, evento 20251224-2) — validado 23-ago-2026: recon... | `20251224-2` | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo>]=2026-06 |
+| A-2025-001 | 🟡 | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados: el exceso es el gasto de representación (Oficio I N°1/2026), evento `20260303-3` | `20251224-2` `20260303-3` `20260320-2` `20260418-1` `20260803-18` | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo]=2026-06 |
 | A-2026-001 | ⬜ | 2022-07-05 | Sugerencias pendientes (para no perderlas) | Fullclean / contratos con el Estado — seguimiento (evento 20260310-1): verificar (1) la respuesta del alcalde Mario D... | `20260310-1` | Origen: <https://example.com/pendiente-revisar> |
 | A-2026-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Economistas / pilares de la megarreforma — validación cruzada (evento 20260806-46): el evento proviene de una única f... | `20260806-46` | Origen: <https://example.com/pendiente-revisar> |
 | A-2026-003 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Poduje / viviendas en zonas de inundación — validación cruzada (evento 20260806-47): el evento proviene de una única ... | `20260806-47` | Origen: <https://example.com/pendiente-revisar> |

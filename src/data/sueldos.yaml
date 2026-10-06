@@ -60,6 +60,8 @@ orden_refs: [
   mds-casen-2024-ingresos,
   cfr-informe-tecnico-resolucion-5,
   cfr-oficio-n26-2025,
+  cfr-oficio-i-n1-2026-beneficios,
+  cfr-oficio-d-n46-2026-reajuste-beneficios,
   bcn-leychile-dl-249-1974,
   # Contexto histórico y metodológico de la página; las fuentes secundarias se
   # identifican como tales en la prosa.
@@ -183,9 +185,11 @@ presidentes:
       vigencia el 11 de marzo de 2026. La dieta legal ajustada fue de
       $11.070.064; el Registro Público de la Comisión reporta $11.304.748 en
       mayo y $11.308.034 en junio y julio de 2026. La diferencia observada entre
-      el monto legal y el reportado es de $237.970. El registro es una
-      declaración de las instituciones y no publica un desglose de esa
-      diferencia. En marzo de 2026 Kast anunció su intención de rebajarlo de
+      el monto legal y el reportado es de $237.970, y corresponde al gasto de
+      representación: el Oficio I N°1 de 2026 de la Comisión lo fija en el 30%
+      del sueldo base de la Escala Única de Sueldos asociado al grado del cargo,
+      un beneficio que el numeral 36 de la Resolución N°5 de 2024 mantiene
+      vigente. En marzo de 2026 Kast anunció su intención de rebajarlo de
       forma estructural; la cifra legal y el registro se mantienen separados en
       esta página.
   - presidente_id: gabriel_boric
