@@ -101,6 +101,8 @@ pnpm run dev      # preview
 pnpm run deploy   # build local + wrangler pages deploy dist --project-name gobierno-vault --branch main
 ```
 
+Auditoría de cobertura (puntos ciegos: prensa vs vault vs oficial): `pnpm run coverage-audit -- --from YYYY-MM-DD --to YYYY-MM-DD` — ver `.agents/skills/cobertura/SKILL.md`.
+
 Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (Astro no aborta ante wikilink roto, deja pagina sin contenido). Detalle (CRLF, concurrency, pnpm, Cloudflare, Tailwind/daisyUI) en `.agents/skills/build-deploy/SKILL.md`.
 
 **Entorno shell — portable:** no uses comandos específicos de un shell (`wc`/`grep`/`awk`/`sed`/`head`/`tail` en bash fallan en PowerShell como `no se reconoce como cmdlet`; `Get-Content`/`Set-Content`/`Select-String`/`Select-Object` fallan en bash y corrompen encoding). Usa herramientas cross-platform que ya están en el repo:
@@ -136,6 +138,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | Tocar timeline/rail, grafo, filtros `/events`, View Transitions, TTS, estilos | `.agents/skills/frontend/SKILL.md` |
 | Build falla, validate, deploy, pnpm, Cloudflare, Tailwind | `.agents/skills/build-deploy/SKILL.md` |
 | Seguimiento con IDs `S/A/V-YYYY-NNN` por año + catálogo | `.agents/skills/seguimiento/SKILL.md` |
+| Puntos ciegos / sesgo de agenda (qué pasó bajo el radar de la prensa) | `.agents/skills/cobertura/SKILL.md` |
 | Web research con Firecrawl (search/scrape/crawl/agent, 1000 créditos) — alternativa a fetch-impersonate | `firecrawl` CLI (`firecrawl search/scrape --help`, `firecrawl --status`) + MCP `<https://mcp.firecrawl.dev/v2/mcp-oauth>` — ver `.agents/skills/tools/SKILL.md` para fallback |
 | Respaldo offline `.gvault` | `.agents/skills/backup/SKILL.md` |
 
