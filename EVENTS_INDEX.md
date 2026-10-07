@@ -1838,6 +1838,9 @@
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
 - [2026/10/20261002-5 - Declaran Alerta Roja preventiva en Punta Arenas por el aumento del caudal del río Las Minas: el Cogrid la levanta el 5 de octubre y abre una fase de rehabilitación](src/content/events/2026/10/20261002-5.md) — 9 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
+- [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
+- [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
+- [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 
 ## 2025
 
