@@ -1839,8 +1839,16 @@
 - [2026/10/20261002-5 - Declaran Alerta Roja preventiva en Punta Arenas por el aumento del caudal del río Las Minas: el Cogrid la levanta el 5 de octubre y abre una fase de rehabilitación](src/content/events/2026/10/20261002-5.md) — 9 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
+- [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 7 fuentes
+- [2026/10/20261005-3 - Quiroz reconoce en entrevista con Diario Financiero que subestimó el daño a la economía y al sector minero y se arrepiente de la frase sobre la parafina](src/content/events/2026/10/20261005-3.md) — 7 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
+- [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 7 fuentes
+- [2026/10/20261006-4 - Primer tropiezo del Presupuesto 2027: la Cuarta Subcomisión Mixta rechaza la rebaja de 12% al Servel](src/content/events/2026/10/20261006-4.md) — 6 fuentes
+- [2026/10/20261006-5 - Codelco lleva al Ministerio Público nuevas duplicidades que habrían inflado la producción de Ministro Hales y Salvador en 2024 y 2025](src/content/events/2026/10/20261006-5.md) — 6 fuentes
+- [2026/10/20261006-6 - Senado ratifica por 35 votos a favor a Marisol Rojas Moya como nueva ministra de la Corte Suprema](src/content/events/2026/10/20261006-6.md) — 7 fuentes
+- [2026/10/20261006-7 - Corte de Apelaciones de Puerto Montt confirma por unanimidad el desafuero del senador Miguel Ángel Calisto por fraude al fisco](src/content/events/2026/10/20261006-7.md) — 7 fuentes
+- [2026/10/20261007-1 - El Gobierno retira su reforma constitucional de seguridad y senadores ingresan una nueva propuesta: crimen organizado equiparado al terrorismo y estado de excepción preventivo](src/content/events/2026/10/20261007-1.md) — 7 fuentes
 
 ## 2025
 
