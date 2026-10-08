@@ -32,6 +32,8 @@ const {
 } = d.derivados;
 
 const cargos = d.segundo_piso.cargos;
+const segundoPisoJulio = d.segundo_piso_julio;
+const otrasAutoridades = d.otras_autoridades;
 const segundoPisoFuenteId = d.segundo_piso.fuente.id;
 const topesFuenteId = d.topes_dipres.fuente.id;
 const topes = d.topes_dipres.filas;
@@ -71,6 +73,7 @@ const tipoVigencia = (tipo?: string) => tipo ? tipo[0].toUpperCase() + tipo.slic
 
 // --- Línea de tiempo mensual (Registro Público): geometría del SVG estático ---
 const serie = serie_registro_publico.puntos;
+const transicionBoric = serie_registro_publico.transicion_boric_marzo;
 const CH = { W: 760, H: 310, mL: 64, mR: 18, mT: 24, mB: 42 };
 const yMinRaw = Math.min(...serie.map((p) => p.monto));
 const yMaxRaw = Math.max(...serie.map((p) => p.monto));
@@ -359,7 +362,7 @@ const umbralesCostoVida = [
         <h2 class="text-lg font-semibold text-base-content">Bruta mensual del Presidente, mes a mes (Registro Público 38 bis)</h2>
       </div>
       <p class="text-sm text-base-content/60 mb-4">
-        Registro autorreportado por cada institución, consultado el 25 de septiembre de 2026 y disponible desde enero de 2025. Los puntos dorados son pagos por metas; marzo de 2026 es proporcional por la asunción del 11 de marzo. <SRef id={serie_registro_publico.fuente.id} />
+        Registro autorreportado por cada institución, consultado el 25 de septiembre de 2026 y disponible desde enero de 2025. Los puntos dorados son pagos por metas; marzo de 2026 es proporcional por la asunción del 11 de marzo (Kast {formatCLP(puntoTransicion.monto)}; Boric {formatCLP(transicionBoric.monto)}). <SRef id={serie_registro_publico.fuente.id} />
       </p>
       <figure class="overflow-x-auto">
         <svg viewBox={`0 0 ${CH.W} ${CH.H}`} class="w-full min-w-[640px]" role="img" aria-labelledby="chart-tl-title chart-tl-desc">
@@ -573,6 +576,61 @@ const umbralesCostoVida = [
       </div>
       <p class="text-xs text-base-content/45 mt-3">
         El cambio del promedio de remuneraciones es {fmtPorcentaje(cambioPromedioSegundoPiso)}; el promedio de los cambios porcentuales individuales es {fmtPorcentaje(promedioCambiosSegundoPiso)}. Son métricas distintas y esta tabla es una instantánea de abril de 2026.
+      </p>
+      <h3 class="text-sm font-semibold text-base-content mt-6 mb-2">Lectura del Registro a {segundoPisoJulio.periodo_label}</h3>
+      <p class="text-sm text-base-content/60 mb-3">{segundoPisoJulio.nota} <SRef id={segundoPisoJulio.fuente.id} /></p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-base-300">
+              <th class="sticky left-0 z-10 bg-base-100 text-left py-2 px-3 font-medium text-base-content/80">Cargo</th>
+              <th class="text-left py-2 px-3 font-medium text-base-content/80">Persona</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Sueldo {segundoPisoJulio.periodo_label}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {segundoPisoJulio.filas.map((f) => (
+              <tr class="border-b border-base-300">
+                <td class="sticky left-0 bg-base-100 py-2 px-3 text-base-content font-medium">{f.cargo}</td>
+                <td class="py-2 px-3 text-base-content/80">{f.nombre}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium whitespace-nowrap">{formatCLP(f.sueldo)}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <h2 class="text-lg font-semibold text-base-content mb-3">Congreso y otras autoridades ({otrasAutoridades.periodo_label})</h2>
+      <p class="text-sm text-base-content/60 mb-3">
+        Montos brutos del Registro Público. Se muestra el valor más frecuente por cargo y cuántos cargos traen monto. <SRef id={otrasAutoridades.fuente.id} />
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <thead>
+            <tr class="border-b border-base-300">
+              <th class="sticky left-0 z-10 bg-base-100 text-left py-2 px-3 font-medium text-base-content/80">Cargo</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Monto modal</th>
+              <th class="text-left py-2 px-3 font-medium text-base-content/80">Cobertura</th>
+              <th class="text-left py-2 px-3 font-medium text-base-content/80">Detalle</th>
+            </tr>
+          </thead>
+          <tbody>
+            {otrasAutoridades.filas.map((f) => (
+              <tr class="border-b border-base-300">
+                <td class="sticky left-0 bg-base-100 py-2 px-3 text-base-content font-medium">{f.cargo}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-medium whitespace-nowrap">{formatCLP(f.monto_modal)}</td>
+                <td class="py-2 px-3 text-base-content/70 text-xs">{f.cobertura}</td>
+                <td class="py-2 px-3 text-base-content/60 text-xs">{f.detalle}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-base-content/45 mt-3">{otrasAutoridades.nota} <SRef id={otrasAutoridades.fuente.id} /></p>
+      <p class="text-xs text-base-content/45 mt-3">
+        Las planillas de transparencia por servicio cuentan más cargos sobre la renta presidencial que este Registro porque incluyen personal fuera del artículo 38 bis. <SRef id="emol-2026-08-03-superintendencias-46-funcionarios" /><SRef id="meganoticias-2026-08-03-superintendencias-46" />
       </p>
     </section>
 

@@ -100,6 +100,13 @@ type SueldosYaml = {
       kast: { persona_id: string; sueldo: number };
       boric: { persona_id: string; sueldo: number };
     }>;
+    lectura_registro_julio: {
+      periodo: string;
+      periodo_label: string;
+      fuente: string;
+      nota: string;
+      filas: Array<{ cargo: string; persona_id: string; sueldo: number }>;
+    };
   };
   topes_dipres: {
     firmante_id: string;
@@ -112,12 +119,20 @@ type SueldosYaml = {
   indicadores: Array<Omit<IndicadorGobierno, 'ipc_periodo'>>;
   serie_registro_publico: {
     fuente: string;
+    transicion_boric_marzo: { periodo: string; monto: number; nota: string };
     puntos: SeriePunto[];
+  };
+  otras_autoridades: {
+    periodo: string;
+    periodo_label: string;
+    fuente: string;
+    nota: string;
+    filas: Array<{ cargo: string; monto_modal: number; cobertura: string; detalle: string }>;
   };
   ipc: {
     base: string;
     mes_referencia: string;
-    ago_2026: number;
+    sep_2026: number;
     registro_presidente_julio_2026: {
       monto: number;
       indice: number;
@@ -279,6 +294,8 @@ function build() {
   assertFuente(yaml.segundo_piso.fuente, 'segundo_piso.fuente');
   assertFuente(yaml.topes_dipres.fuente, 'topes_dipres.fuente');
   assertFuente(yaml.serie_registro_publico.fuente, 'serie_registro_publico.fuente');
+  assertFuente(yaml.segundo_piso.lectura_registro_julio.fuente, 'segundo_piso.lectura_registro_julio.fuente');
+  assertFuente(yaml.otras_autoridades.fuente, 'otras_autoridades.fuente');
   assertFuente(yaml.ipc.registro_presidente_julio_2026.fuente, 'ipc.registro_presidente_julio_2026.fuente');
   assertFuente(yaml.ingresos_esi.fuente, 'ingresos_esi.fuente');
   assertFuente(yaml.costo_vida.fuente, 'costo_vida.fuente');
@@ -308,7 +325,13 @@ function build() {
     if (periodosSerie.has(punto.periodo)) throw new Error(`sueldos.yaml: periodo duplicado en serie ${punto.periodo}`);
     periodosSerie.add(punto.periodo);
   }
-  validarPositivo(yaml.ipc.ago_2026, 'ipc.ago_2026');
+  if (!/^\d{4}-\d{2}$/.test(yaml.serie_registro_publico.transicion_boric_marzo.periodo)) throw new Error('sueldos.yaml: periodo inválido en transicion_boric_marzo');
+  validarPositivo(yaml.serie_registro_publico.transicion_boric_marzo.monto, 'serie transicion_boric_marzo');
+  if (!/^\d{4}-\d{2}$/.test(yaml.segundo_piso.lectura_registro_julio.periodo)) throw new Error('sueldos.yaml: periodo inválido en lectura_registro_julio');
+  for (const fila of yaml.segundo_piso.lectura_registro_julio.filas) validarPositivo(fila.sueldo, `lectura_registro_julio ${fila.cargo}`);
+  if (!/^\d{4}-\d{2}$/.test(yaml.otras_autoridades.periodo)) throw new Error('sueldos.yaml: periodo inválido en otras_autoridades');
+  for (const fila of yaml.otras_autoridades.filas) validarPositivo(fila.monto_modal, `otras_autoridades ${fila.cargo}`);
+  validarPositivo(yaml.ipc.sep_2026, 'ipc.sep_2026');
 
   const actual = yaml.presidentes.find((p) => p.gobierno === 'Kast');
   const boric = yaml.presidentes.find((p) => p.gobierno === 'Boric');
@@ -326,13 +349,13 @@ function build() {
   });
 
   // --- Sueldos ajustados a agosto de 2026 ---
-  const ipcAgo = yaml.ipc.ago_2026;
+  const ipcRef = yaml.ipc.sep_2026;
   const sueldosAjustados: SueldoAjustado[] = yaml.presidentes.map((p) => ({
     gobierno: p.gobierno,
     periodo: p.periodo,
     sueldo: p.sueldo,
     fecha: p.fecha_label,
-    ajustado: Math.round((p.sueldo * ipcAgo) / p.ipc),
+    ajustado: Math.round((p.sueldo * ipcRef) / p.ipc),
   }));
 
   const porGobierno = (nombre: string): SueldoAjustado => {
@@ -433,7 +456,7 @@ function build() {
   };
 
   const registro = yaml.ipc.registro_presidente_julio_2026;
-  const registroAjustado = Math.round((registro.monto * ipcAgo) / registro.indice);
+  const registroAjustado = Math.round((registro.monto * ipcRef) / registro.indice);
   const millonesPrevios = previosABoric.map(enMillones);
 
   const presidentes: PresidenteSueldo[] = yaml.presidentes.map((p) => ({
@@ -456,6 +479,16 @@ function build() {
       boric: { nombre: nombrePersona(c.boric.persona_id), sueldo: c.boric.sueldo },
     })),
   };
+  const segundo_piso_julio = {
+    periodo_label: yaml.segundo_piso.lectura_registro_julio.periodo_label,
+    nota: yaml.segundo_piso.lectura_registro_julio.nota,
+    fuente: fuentesPorId(yaml.segundo_piso.lectura_registro_julio.fuente),
+    filas: yaml.segundo_piso.lectura_registro_julio.filas.map((f) => ({
+      cargo: f.cargo,
+      nombre: nombrePersona(f.persona_id),
+      sueldo: f.sueldo,
+    })),
+  };
 
   const topes_dipres = {
     firmante: nombrePersona(yaml.topes_dipres.firmante_id),
@@ -463,11 +496,17 @@ function build() {
     vigencia_desde: yaml.topes_dipres.vigencia_desde,
     filas: yaml.topes_dipres.filas,
   };
+  const otras_autoridades = {
+    periodo_label: yaml.otras_autoridades.periodo_label,
+    nota: yaml.otras_autoridades.nota,
+    fuente: fuentesPorId(yaml.otras_autoridades.fuente),
+    filas: yaml.otras_autoridades.filas,
+  };
 
   const ipc = {
     base: yaml.ipc.base,
     mes_referencia: yaml.ipc.mes_referencia,
-    ago_2026: ipcAgo,
+    sep_2026: ipcRef,
     registro_presidente_julio_2026: {
       ...registro,
       fuente: fuentesPorId(registro.fuente),
@@ -476,6 +515,7 @@ function build() {
 
   const serie_registro_publico = {
     fuente: fuentesPorId(yaml.serie_registro_publico.fuente),
+    transicion_boric_marzo: { ...yaml.serie_registro_publico.transicion_boric_marzo },
     puntos: [...yaml.serie_registro_publico.puntos].sort((a, b) => a.periodo.localeCompare(b.periodo)),
   };
 
@@ -487,7 +527,9 @@ function build() {
     presidentes,
     actualPresidente: presidentes.find((p) => p.gobierno === 'Kast') ?? presidentes[0],
     segundo_piso,
+    segundo_piso_julio,
     topes_dipres,
+    otras_autoridades,
     sueldo_minimo: yaml.sueldo_minimo,
     indicadores,
     serie_registro_publico,

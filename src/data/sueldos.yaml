@@ -105,20 +105,61 @@ segundo_piso:
       kast: { persona_id: eitan_bloch, sueldo: 6500000 }
       boric: { persona_id: carlos_figueroa, sueldo: 4520921 }
     - cargo: Administrador de La Moneda
-      kast: { persona_id: julio_feres, sueldo: 7866893 }
+      kast: { persona_id: julio_feres, sueldo: 7866293 }
       boric: { persona_id: antonia_illanes, sueldo: 7724792 }
+  lectura_registro_julio:
+    periodo: '2026-07'
+    periodo_label: julio de 2026
+    fuente: cfr-registro-publico-38bis
+    nota: >-
+      Lectura del Registro Público para julio de 2026. Los montos de abril
+      provienen del reportaje citado; Irarrázaval y Ugarte subieron respecto
+      de abril y Feres se reajustó levemente.
+    filas:
+      - { cargo: Jefe de asesores (Segundo Piso), persona_id: alejandro_irarrazaval, sueldo: 9500000 }
+      - { cargo: Jefa de gabinete presidencial, persona_id: catalina_ugarte, sueldo: 7900000 }
+      - { cargo: Jefa de comunicaciones, persona_id: maria_paz_fadel, sueldo: 6500000 }
+      - { cargo: Asesor internacional, persona_id: eitan_bloch, sueldo: 6500000 }
+      - { cargo: Administrador de La Moneda, persona_id: julio_feres, sueldo: 7870221 }
 
 # ---------------------------------------------------------------------------
 # Topes salariales para asesores de confianza (Oficio Circular N°15, Dipres).
 topes_dipres:
-  firmante_id: jorge_quiroz
+  firmante_id: jose_pablo_gomez
   fuente: theclinic-2026-03-20-sueldos-asesores
   vigencia_desde: '2026-03-17'
   filas:
-    - { rango: Asesores del Presidente, tope_kast: 9963058, tope_boric: 5490352 }
+    - { rango: Asesores del Presidente, tope_kast: 9963058, tope_boric: null }
     - { rango: Asesores comité político, tope_kast: 8199480, tope_boric: null }
     - { rango: Asesores resto ministerios, tope_kast: 7415182, tope_boric: null }
     - { rango: 'Honorarios gabinetes (tope)', tope_kast: 5490352, tope_boric: null }
+
+# ---------------------------------------------------------------------------
+# Otras autoridades del Registro Público (julio de 2026). `monto_modal` es el
+# valor más frecuente del cargo; `cobertura` resume cuántos cargos traen monto
+# y `detalle` el rango o los casos fuera de la moda. El Senado figura
+# informado en 0 en julio (sin reporte efectivo) y se documenta con junio.
+otras_autoridades:
+  periodo: '2026-07'
+  periodo_label: julio de 2026
+  fuente: cfr-registro-publico-38bis
+  nota: >-
+    Montos brutos del Registro Público para julio de 2026. En junio de 2026 el
+    Senado registraba $8.239.091 por senador y $9.110.534 en su presidencia.
+  filas:
+    - { cargo: Diputadas y diputados, monto_modal: 8239091, cobertura: '152 de 152 con monto', detalle: Valor único en la Cámara }
+    - { cargo: Presidencia de la Cámara y vicepresidencias, monto_modal: 9110534, cobertura: '3 de 3 con monto', detalle: Valor único }
+    - { cargo: Ministros, monto_modal: 8500189, cobertura: '14 de 21 con monto (4 cargos en 0)', detalle: 'Rango $8.496.584–$9.371.632; Interior, RR.EE. y Defensa en el máximo' }
+    - { cargo: Subsecretarios, monto_modal: 7913526, cobertura: '21 de 37 con monto (3 cargos en 0)', detalle: 'Rango $6.382.871–$8.329.120' }
+    - { cargo: Secretarios regionales ministeriales, monto_modal: 4554112, cobertura: '62 de 282 con monto (50 cargos en 0)', detalle: 'Segunda moda $4.733.809 (×50); rango amplio por asignaciones de zona' }
+    - { cargo: Delegados presidenciales regionales, monto_modal: 7754571, cobertura: '4 de 16 con monto', detalle: 'Rango $7.754.571–$8.849.921' }
+    - { cargo: Delegados presidenciales provinciales, monto_modal: 4669956, cobertura: '15 de 40 con monto', detalle: 'Rango $4.669.956–$6.447.713' }
+    - { cargo: Gobernadores regionales, monto_modal: 9013751, cobertura: '16 de 16 con monto', detalle: 'Sin moda clara (máximo 2×); rango $9.010.664–$10.109.101' }
+    - { cargo: Superintendente de Salud, monto_modal: 12288318, cobertura: '1 de 1 con monto', detalle: Registro de julio de 2026 }
+    - { cargo: Superintendente de Pensiones, monto_modal: 12623120, cobertura: '1 de 1 con monto', detalle: Registro de julio de 2026 }
+    - { cargo: Presidente de BancoEstado, monto_modal: 17370362, cobertura: '1 de 1 con monto', detalle: Registro de julio de 2026 }
+    - { cargo: Vicepresidencia del consejo y gerencia general (BancoEstado), monto_modal: 16501844, cobertura: '2 de 2 con monto', detalle: Mismo monto en ambos cargos }
+    - { cargo: Fiscal de BancoEstado, monto_modal: 15440321, cobertura: '1 de 1 con monto', detalle: Registro de julio de 2026 }
 
 # ---------------------------------------------------------------------------
 # Sueldo bruto mensual del Presidente por gobierno (serie histórica, más reciente
@@ -134,7 +175,7 @@ presidentes:
     sueldo: 11308034
     fecha_ref: '2026-07-01'
     fecha_label: julio 2026
-    ipc: 113.15
+    ipc: 112.45
     ratio_minimo_fecha: '2026-05-01'
     monto_legal: 11070064
     refs:
@@ -208,7 +249,7 @@ presidentes:
     vigencias:
       - monto: 7033974
         fuente: t13-2025-12-24-sueldo-proximo-presidente
-        descripcion: Renta bruta de noviembre 2025 según la CFR ($5.765.081 líquidos)
+        descripcion: Renta bruta de noviembre 2025 según Transparencia ($5.765.081 líquidos)
       - monto: 5742240
         fuente: biobiochile-2024-09-16-sueldo-presidente-proximo
         descripcion: Renta bruta de septiembre 2024
@@ -217,8 +258,7 @@ presidentes:
         descripcion: Diciembre 2025 con pago del bono por cumplimiento de metas (PMG; monto exacto del Registro Público)
     detalle: >-
       Renta bruta en noviembre de 2025 según la Comisión para la Fijación de
-      Remuneraciones ($5.765.081 líquidos; promedio mensualizado del trimestre:
-      $7.787.000). En septiembre de 2024 la renta bruta era $5.742.240. Entre
+      Remuneraciones ($5.765.081 líquidos). En septiembre de 2024 la renta bruta era $5.742.240. Entre
       noviembre y diciembre de 2025 el bono PMG (cumplimiento de metas, 99,44%)
       elevó su sueldo bruto a unos $10 millones.
   - presidente_id: sebastian_pinera
@@ -325,10 +365,10 @@ presidentes:
   - presidente_id: eduardo_frei_ruiz_tagle
     gobierno: Frei
     periodo: 1994–2000
-    sueldo: 1362000
+    sueldo: 1355000
     fecha_ref: '2000-03-01'
     fecha_label: marzo 2000
-    ipc: 42.26
+    ipc: 42.06
     ratio_minimo_fecha: '1999-06-01'
     refs:
       - emol-2001-01-03-lagos-salario-usd
@@ -352,6 +392,10 @@ presidentes:
 # asunción de Kast. La última lectura disponible es julio de 2026.
 serie_registro_publico:
   fuente: cfr-registro-publico-38bis
+  transicion_boric_marzo:
+    periodo: '2026-03'
+    monto: 4352758
+    nota: Proporcional de Boric por el cambio de gobierno el 11/03
   puntos:
     - { periodo: '2025-01', gobierno: Boric, monto: 7033974, tipo: observado }
     - { periodo: '2025-02', gobierno: Boric, monto: 7033974, tipo: observado }
@@ -389,7 +433,7 @@ sueldo_minimo:
   - { desde: '2023-01-01', monto: 410000, gobierno: Boric, ley: 'Ley 21.456 Art.8' }
   - { desde: '2022-08-01', monto: 400000, gobierno: Boric, ley: 'Ley 21.456' }
   - { desde: '2022-05-01', monto: 380000, gobierno: Boric, ley: 'Ley 21.456' }
-  - { desde: '2022-01-01', monto: 350000, gobierno: Boric, ley: 'Ley 21.360' }
+  - { desde: '2022-01-01', monto: 350000, gobierno: Piñera II, ley: 'Ley 21.360' }
   - { desde: '2021-05-01', monto: 337000, gobierno: Piñera II, ley: 'Ley 21.360' }
   - { desde: '2020-09-01', monto: 326500, gobierno: Piñera II, ley: 'Ley 21.283' }
   - { desde: '2020-03-01', monto: 320500, gobierno: Piñera II, ley: 'Ley 21.112' }
@@ -403,7 +447,7 @@ sueldo_minimo:
   - { desde: '2015-07-01', monto: 241000, gobierno: Bachelet II, ley: 'Ley 20.763' }
   - { desde: '2014-07-01', monto: 225000, gobierno: Bachelet II, ley: 'Ley 20.763' }
   - { desde: '2013-08-01', monto: 210000, gobierno: Piñera I, ley: 'Ley 20.689' }
-  - { desde: '2012-08-01', monto: 193000, gobierno: Piñera I, ley: 'Ley 20.614' }
+  - { desde: '2012-07-01', monto: 193000, gobierno: Piñera I, ley: 'Ley 20.614' }
   - { desde: '2011-07-01', monto: 182000, gobierno: Piñera I, ley: 'Ley 20.524' }
   - { desde: '2010-07-01', monto: 172000, gobierno: Piñera I, ley: 'Ley 20.449' }
   - { desde: '2009-07-01', monto: 165000, gobierno: Bachelet I, ley: 'Ley 20.359' }
@@ -506,11 +550,11 @@ indicadores:
 # BCCh, base dic-2023 = 100).
 ipc:
   base: 'dic-2023 = 100'
-  mes_referencia: '2026-08'
-  ago_2026: 113.15
+  mes_referencia: '2026-09'
+  sep_2026: 113.59
   registro_presidente_julio_2026:
     monto: 11308034
-    indice: 113.15
+    indice: 112.45
     fuente: cfr-registro-publico-38bis
 
 # ---------------------------------------------------------------------------
