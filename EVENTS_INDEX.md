@@ -1825,7 +1825,7 @@
 - [2026/10/20261001-12 - Presidencia adjudica suministro de abarrotes y perecibles a tres proveedores por $355 millones estimados](src/content/events/2026/10/20261001-12.md) — 3 fuentes
 - [2026/10/20261001-13 - Radiopatrulla de Carabineros atropella a cuatro peatones en La Florida durante un procedimiento: víctimas quedan fuera de riesgo vital y el SIAT investiga](src/content/events/2026/10/20261001-13.md) — 8 fuentes
 - [2026/10/20261001-14 - Caso Ronald Ojeda: el Segundo Tribunal de Juicio Oral condena a Maickel Villegas por el secuestro con homicidio del exteniente venezolano en el primer juicio oral de la causa](src/content/events/2026/10/20261001-14.md) — 6 fuentes
-- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 58 fuentes
+- [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 60 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 7 fuentes
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
@@ -1849,6 +1849,7 @@
 - [2026/10/20261006-5 - Codelco lleva al Ministerio Público nuevas duplicidades que habrían inflado la producción de Ministro Hales y Salvador en 2024 y 2025](src/content/events/2026/10/20261006-5.md) — 6 fuentes
 - [2026/10/20261006-6 - Senado ratifica por 35 votos a favor a Marisol Rojas Moya como nueva ministra de la Corte Suprema](src/content/events/2026/10/20261006-6.md) — 7 fuentes
 - [2026/10/20261006-7 - Corte de Apelaciones de Puerto Montt confirma por unanimidad el desafuero del senador Miguel Ángel Calisto por fraude al fisco](src/content/events/2026/10/20261006-7.md) — 7 fuentes
+- [2026/10/20261006-8 - Kast propone cruzar datos con IA para detectar irregularidades y fija meta de 80% de interoperabilidad](src/content/events/2026/10/20261006-8.md) — 7 fuentes
 - [2026/10/20261007-1 - El Gobierno retira su reforma constitucional de seguridad y senadores ingresan una nueva propuesta: crimen organizado equiparado al terrorismo y estado de excepción preventivo](src/content/events/2026/10/20261007-1.md) — 7 fuentes
 - [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 17 fuentes
 
