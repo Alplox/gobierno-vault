@@ -137,7 +137,7 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 **Total de eventos:** 1760
 
-**Cobertura de fuentes:** 1289 de 1760 eventos con 3+ fuentes (471 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 1290 de 1760 eventos con 3+ fuentes (470 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
 - 2026: 1368
@@ -202,10 +202,10 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - votacion (43)
 
 **Entidades registradas:**
-- Personas: 2766
+- Personas: 2768
 - Organizaciones: 1511
 - Cifras: 41
-- Fuentes: 9517
+- Fuentes: 9537
 - Temas: 78
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 

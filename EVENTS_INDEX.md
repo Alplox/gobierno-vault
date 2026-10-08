@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (471)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (470)
 
 <details>
-<summary>Ver lista (471 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (470 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -276,7 +276,6 @@
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — **2 fuentes**
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — **2 fuentes**
 - [2022/11/20221122-1 - Cámara aprueba resolución que rechaza categóricamente el uso de fake news en política: 37 diputados votan en contra, en su mayoría de Republicanos y Chile Vamos](src/content/events/2022/11/20221122-1.md) — **2 fuentes**
-- [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — **2 fuentes**
 - [2023/01/20230117-1 - Acuerdo por Chile: fuerzas políticas firman nuevo itinerario constituyente para 2023](src/content/events/2023/01/20230117-1.md) — **2 fuentes**
 - [2023/03/20230308-1 - Cámara de Diputados rechaza la idea de legislar la reforma tributaria de Boric](src/content/events/2023/03/20230308-1.md) — **2 fuentes**
 - [2023/03/20230324-1 - Condenan a 2 años a tres carabineros de la 51° Comisaría de Pedro Aguirre Cerda por malos tratos a un detenido del estallido](src/content/events/2023/03/20230324-1.md) — **2 fuentes**
@@ -1790,14 +1789,14 @@
 - [2026/09/20260927-1 - García Ruminot en Mesa Central asume la caída de la reforma de expulsiones, anuncia insistencia en sala cuna y descarta cirugía mayor al gabinete](src/content/events/2026/09/20260927-1.md) — 7 fuentes
 - [2026/09/20260927-2 - Alvarado en Estado Nacional: EE.UU. adelantó la firma del Escudo para aprovechar la ONU y Chile adhirió por convicción](src/content/events/2026/09/20260927-2.md) — 9 fuentes
 - [2026/09/20260927-3 - Pulso Ciudadano de septiembre: aprobación de Kast cae a 28,2% y desaprobación sube a 57,6%, con desconfianza en máximo histórico](src/content/events/2026/09/20260927-3.md) — 8 fuentes
-- [2026/09/20260927-4 - Barros aborda en Radio Polar la disputa por Malvinas y respalda el comercio entre Punta Arenas y las islas; Argentina lo tilda de confuso y Alvarado lo respalda](src/content/events/2026/09/20260927-4.md) — 12 fuentes
+- [2026/09/20260927-4 - Barros aborda en Radio Polar la disputa por Malvinas y respalda el comercio entre Punta Arenas y las islas; Argentina lo tilda de confuso y Alvarado lo respalda](src/content/events/2026/09/20260927-4.md) — 13 fuentes
 - [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
 - [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
 - [2026/09/20260928-4 - Interpelación al canciller Pérez Mackenna en la Cámara: Venegas pregunta por Judd, el Escudo y Magallanes y el ministro cierra con que solo el Presidente puede pedirle la renuncia](src/content/events/2026/09/20260928-4.md) — 15 fuentes
 - [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 51 fuentes
 - [2026/09/20260928-6 - 28S en Santiago: pañuelazo en Baquedano y marcha por el aborto legal con carta de 35 colectividades al Congreso por el Presupuesto 2027](src/content/events/2026/09/20260928-6.md) — 8 fuentes
-- [2026/09/20260928-7 - Milei ordena arbitraje contra el Reino Unido por Sea Lion y acciones penales por vuelos entre Malvinas y Punta Arenas](src/content/events/2026/09/20260928-7.md) — 6 fuentes
+- [2026/09/20260928-7 - Milei ordena arbitraje contra el Reino Unido por Sea Lion y acciones penales por vuelos entre Malvinas y Punta Arenas](src/content/events/2026/09/20260928-7.md) — 10 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 18 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 - [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 25 fuentes
@@ -1806,7 +1805,7 @@
 - [2026/09/20260929-6 - Vodanovic en 24 Horas califica la reforma de seguridad de espanto juridico, pide retirarla e impulsar el boletin 16707-07](src/content/events/2026/09/20260929-6.md) — 9 fuentes
 - [2026/09/20260929-7 - La Moneda evalúa continuidad de Zaliasnik tras declaración de Hermosilla: Alvarado evita juicios y diputados piden su salida](src/content/events/2026/09/20260929-7.md) — 7 fuentes
 - [2026/09/20260929-8 - El embajador Brandon Judd asiste al funeral del cabo Christopher Aguilera y un matinal de Chilevisión cuestiona su presencia](src/content/events/2026/09/20260929-8.md) — 6 fuentes
-- [2026/09/20260929-9 - Encuentro empresarial Punta Arenas–Falkland cierra con 822 reuniones y choca con el reclamo argentino](src/content/events/2026/09/20260929-9.md) — 12 fuentes
+- [2026/09/20260929-9 - Encuentro empresarial Punta Arenas–Falkland cierra con 822 reuniones y choca con el reclamo argentino](src/content/events/2026/09/20260929-9.md) — 17 fuentes
 - [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 19 fuentes
 - [2026/09/20260930-10 - Kast presenta en cadena nacional el Presupuesto 2027 con alza de 1,5% y cuatro prioridades, crecimiento, seguridad, niñez y beneficios sociales](src/content/events/2026/09/20260930-10.md) — 20 fuentes
 - [2026/09/20260930-11 - Bacheletazo en La Pintana, homenaje a Bachelet con Boric, Vallejo y Jara, no me iré para la casa y trampa tras trampa contra el Gobierno](src/content/events/2026/09/20260930-11.md) — 16 fuentes
@@ -1851,7 +1850,7 @@
 - [2026/10/20261006-6 - Senado ratifica por 35 votos a favor a Marisol Rojas Moya como nueva ministra de la Corte Suprema](src/content/events/2026/10/20261006-6.md) — 7 fuentes
 - [2026/10/20261006-7 - Corte de Apelaciones de Puerto Montt confirma por unanimidad el desafuero del senador Miguel Ángel Calisto por fraude al fisco](src/content/events/2026/10/20261006-7.md) — 7 fuentes
 - [2026/10/20261007-1 - El Gobierno retira su reforma constitucional de seguridad y senadores ingresan una nueva propuesta: crimen organizado equiparado al terrorismo y estado de excepción preventivo](src/content/events/2026/10/20261007-1.md) — 7 fuentes
-- [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 16 fuentes
+- [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 17 fuentes
 
 ## 2025
 
@@ -2051,7 +2050,7 @@
 - [2022/11/20221112-1 - PDI detiene a hombre de 21 años que amenazó al Presidente Boric vía escribenos.presidencia.cl para evitar promulgación de Ley Papito Corazón](src/content/events/2022/11/20221112-1.md) — 6 fuentes
 - [2022/11/20221122-1 - Cámara aprueba resolución que rechaza categóricamente el uso de fake news en política: 37 diputados votan en contra, en su mayoría de Republicanos y Chile Vamos](src/content/events/2022/11/20221122-1.md) — 2 fuentes
 - [2022/11/20221125-1 - Corte Suprema condena a más de 7 años al capitán de Carabineros Hugo Navarro por homicidio frustrado de Benjamín Huerta en Ovalle](src/content/events/2022/11/20221125-1.md) — 4 fuentes
-- [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — 2 fuentes
+- [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — 13 fuentes
 - [2022/12/20221222-1 - Megaincendio forestal en Viña del Mar: 2 fallecidos, 130 viviendas destruidas y estado de excepción por catástrofe en la víspera de Navidad](src/content/events/2022/12/20221222-1.md) — 3 fuentes
 - [2022/12/20221223-1 - Mónica Pérez pregunta '¿cómo va a celebrar la Navidad?' a un damnificado del incendio de Viña del Mar y el CNTV acumula más de 3.000 denuncias](src/content/events/2022/12/20221223-1.md) — 5 fuentes
 - [2022/12/20221223-2 - Carabineros reprime a pobladores de Panguecillo en el bloqueo de 12 días contra Minera Los Pelambres: perdigones al cuerpo y lacrimógenas en pastizales](src/content/events/2022/12/20221223-2.md) — 4 fuentes
