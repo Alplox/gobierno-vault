@@ -1714,7 +1714,7 @@
 - [2026/09/20260914-2 - Cadem Plaza Pública: 62% evalúa al gobierno de Kast peor de lo esperado y le pone nota 3,4 a seis meses de mandato](src/content/events/2026/09/20260914-2.md) — 8 fuentes
 - [2026/09/20260914-3 - Ministro Barros cancela viaje a Australia en business class de más de $14 millones tras revelación de Contrapoder](src/content/events/2026/09/20260914-3.md) — 8 fuentes
 - [2026/09/20260914-4 - MMA e Inacap presentan recetario dieciochero para reutilizar sobras de Fiestas Patrias](src/content/events/2026/09/20260914-4.md) — 28 fuentes
-- [2026/09/20260914-5 - Quiroz presenta en el ChileDay Madrid la estrategia económica y la reforma al mercado de capitales ante 700 inversionistas](src/content/events/2026/09/20260914-5.md) — 7 fuentes
+- [2026/09/20260914-5 - Quiroz presenta en el ChileDay Madrid la estrategia económica y la reforma al mercado de capitales ante 700 inversionistas](src/content/events/2026/09/20260914-5.md) — 9 fuentes
 - [2026/09/20260914-6 - Kast defiende el retorno de Duco a La Moneda y responde por sus críticas a los 'premios de consuelo': 'Tiene una experiencia que es relevante'](src/content/events/2026/09/20260914-6.md) — 5 fuentes
 - [2026/09/20260914-7 - Concejal UDI de Isla de Maipo pide que La Consentida no se use como cueca en eventos de Fiestas Patrias y es desmentido técnicamente en plena sesión](src/content/events/2026/09/20260914-7.md) — 8 fuentes
 - [2026/09/20260914-8 - Kast reconoce en Radio Agricultura un periodo de crisis con inflación sobre lo esperado y crecimiento bajo lo proyectado, y sitúa el bencinazo como el primer golpe a su popularidad](src/content/events/2026/09/20260914-8.md) — 29 fuentes
@@ -1833,7 +1833,7 @@
 - [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 11 fuentes
 - [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 21 fuentes
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
-- [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 28 fuentes
+- [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 29 fuentes
 - [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
 - [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 11 fuentes
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
@@ -1842,6 +1842,7 @@
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
 - [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 7 fuentes
 - [2026/10/20261005-3 - Quiroz reconoce en entrevista con Diario Financiero que subestimó el daño a la economía y al sector minero y se arrepiente de la frase sobre la parafina](src/content/events/2026/10/20261005-3.md) — 7 fuentes
+- [2026/10/20261005-4 - Quiroz abre la negociación del Presupuesto 2027: "Cálmensen, vamos a tener la discusión" y cada punto es negociable, pero sin mover el gasto total](src/content/events/2026/10/20261005-4.md) — 4 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 - [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 11 fuentes
@@ -1852,8 +1853,10 @@
 - [2026/10/20261006-8 - Kast propone cruzar datos con IA para detectar irregularidades y fija meta de 80% de interoperabilidad](src/content/events/2026/10/20261006-8.md) — 7 fuentes
 - [2026/10/20261006-9 - Sesión especial de la Cámara por el Estrecho de Magallanes: siete resoluciones para reforzar la soberanía y revertir los recortes a Magallanes](src/content/events/2026/10/20261006-9.md) — 6 fuentes
 - [2026/10/20261007-1 - El Gobierno retira su reforma constitucional de seguridad y senadores ingresan una nueva propuesta: crimen organizado equiparado al terrorismo y estado de excepción preventivo](src/content/events/2026/10/20261007-1.md) — 7 fuentes
-- [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 17 fuentes
+- [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 18 fuentes
 - [2026/10/20261007-3 - Presupuesto 2027 deja sin financiamiento al Instituto Chileno de Campos de Hielo y Cancillería responde que DIFROL concentrará los estudios](src/content/events/2026/10/20261007-3.md) — 7 fuentes
+- [2026/10/20261007-4 - Subtel presenta los ejes del Plan Nacional Digital 2026-2036: ruta hacia el 6G, apagón del 3G al fin del gobierno y reforma a la Ley General de Telecomunicaciones en marzo de 2027](src/content/events/2026/10/20261007-4.md) — 9 fuentes
+- [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 
 ## 2025
 
