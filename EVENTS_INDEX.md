@@ -1840,11 +1840,14 @@
 - [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 11 fuentes
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
 - [2026/10/20261002-5 - Declaran Alerta Roja preventiva en Punta Arenas por el aumento del caudal del río Las Minas: el Cogrid la levanta el 5 de octubre y abre una fase de rehabilitación](src/content/events/2026/10/20261002-5.md) — 9 fuentes
+- [2026/10/20261002-6 - Presupuesto 2027 recorta 10,1% en Cultura con caídas de hasta 66% en fondos sectoriales](src/content/events/2026/10/20261002-6.md) — 5 fuentes
+- [2026/10/20261002-7 - Presupuesto 2027 recorta 25,3% el Programa Sitios de Memoria y congela el Museo de la Memoria](src/content/events/2026/10/20261002-7.md) — 4 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
 - [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 7 fuentes
 - [2026/10/20261005-3 - Quiroz reconoce en entrevista con Diario Financiero que subestimó el daño a la economía y al sector minero y se arrepiente de la frase sobre la parafina](src/content/events/2026/10/20261005-3.md) — 7 fuentes
 - [2026/10/20261005-4 - Quiroz abre la negociación del Presupuesto 2027: "Cálmensen, vamos a tener la discusión" y cada punto es negociable, pero sin mover el gasto total](src/content/events/2026/10/20261005-4.md) — 4 fuentes
+- [2026/10/20261005-5 - Presupuesto 2027 recorta 59% la línea climática NDC y deja a Escazú sin asignación en Medio Ambiente](src/content/events/2026/10/20261005-5.md) — 6 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 - [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 11 fuentes
@@ -1858,6 +1861,8 @@
 - [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 21 fuentes
 - [2026/10/20261007-3 - Presupuesto 2027 deja sin financiamiento al Instituto Chileno de Campos de Hielo y Cancillería responde que DIFROL concentrará los estudios](src/content/events/2026/10/20261007-3.md) — 7 fuentes
 - [2026/10/20261007-4 - Subtel presenta los ejes del Plan Nacional Digital 2026-2036: ruta hacia el 6G, apagón del 3G al fin del gobierno y reforma a la Ley General de Telecomunicaciones en marzo de 2027](src/content/events/2026/10/20261007-4.md) — 9 fuentes
+- [2026/10/20261007-5 - CIPER revela recorte de $34.451 millones en siete programas de infancia del Presupuesto 2027](src/content/events/2026/10/20261007-5.md) — 8 fuentes
+- [2026/10/20261007-6 - Presupuesto 2027 recorta 14,6% el Fondo Ricarte Soto y el Gobierno promete mantener las garantías](src/content/events/2026/10/20261007-6.md) — 7 fuentes
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 
 ## 2025

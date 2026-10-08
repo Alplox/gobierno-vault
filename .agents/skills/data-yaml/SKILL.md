@@ -42,6 +42,17 @@ Sin cifras ni entidades hardcodeadas:
 
 Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.
 
+### Presupuesto (`/presupuesto`)
+
+Mismo patrón que Sueldos pero un archivo por ejercicio (un solo YAML gigante sería ineditable):
+
+- `src/data/presupuesto/AAAA.yaml` por año: `{ ano, gobierno, estado, estado_label, ley:{nombre,fuente,nota?}, totales:{inicial,vigente,ejecutado,saldo} (cada uno `{monto|null,nota?,fuente?}`), hitos[] ({etiqueta,valor,fuente}), variaciones[] ({alcance,variacion_texto,ministerio_id|null,nivel_impacto,fuente,evento_id|null,nota?}), movimientos[] ({tipo,descripcion,fecha?,monto|null,monto_nota?,objetivo_declarado|null,evento_id|null,fuente,nivel_impacto,nota?}), orden_refs[] }`.
+- `nivel_impacto: directo | indirecto | institucional` describe el canal (ciudadanía / vía terceros / funcionamiento interno), nunca el mérito.
+- `objetivo_declarado: null` = recorte sin objetivo ni destino publicado (badge factual, no editorial).
+- `src/lib/presupuesto.ts` (`getPresupuesto()`) valida y falla el build si: fuente no está en `orden_refs` o no existe en `sources/*.md`, `ministerio_id`/`organizacion_id` sin ficha org, `evento_id` sin archivo de evento, monto no positivo, `nivel_impacto` fuera del enum.
+- `scripts/validate/validate.mjs` cuenta las fuentes de `presupuesto/*.yaml` como citadas (igual que `sueldos.yaml`).
+- Solo cifras publicadas por la fuente oficial; lo no publicado es `monto: null` con `nota`, nunca estimado.
+
 ## Anti-duplicados — verificar antes de crear entidad
 
 Antes de crear un archivo en `src/content/organizations/*.md`, `src/content/people/*.md` o `src/content/sources/*.md`:

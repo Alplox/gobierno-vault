@@ -1,0 +1,119 @@
+# Ejercicio 2026 — Ley de Presupuestos 2026, en ejecución.
+# Fuente primaria de montos y ejecución: Dipres. Solo cifras publicadas por la
+# fuente oficial; lo no publicado queda en null con nota (nada de montos estimados).
+# IDs de fuentes: src/content/sources/*.md. IDs de eventos: basename sin extensión.
+ano: 2026
+gobierno: Kast
+estado: en_ejecucion
+estado_label: En ejecución
+ley:
+  nombre: Ley de Presupuestos 2026
+  fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+  nota: Cifras del primer semestre según boletín Dipres con cierre estadístico al 23 de julio de 2026.
+totales:
+  inicial: { monto: null, nota: En carga desde Dipres }
+  vigente: { monto: null, nota: En carga desde Dipres }
+  ejecutado: { monto: null, nota: Primer semestre con 48,7 por ciento de ejecución sobre la Ley aprobada }
+  saldo: { monto: null, nota: Ejercicio en curso }
+hitos:
+  - etiqueta: Ejecución del gasto al primer semestre
+    valor: 48,7% de la Ley aprobada
+    fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+  - etiqueta: Variación real del gasto en el semestre
+    valor: +1,0% real acumulado (+0,0% en junio)
+    fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+  - etiqueta: Gasto de capital acumulado en el semestre
+    valor: -14,0% real anual (-12,7% en junio)
+    fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+  - etiqueta: Déficit acumulado del semestre
+    valor: -$2.509.353 millones (-0,7% del PIB)
+    fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+  - etiqueta: Deuda bruta a junio
+    valor: 43,1% del PIB (US$164.717,7 millones)
+    fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+  - etiqueta: Déficit fiscal corregido en el IFP del primer trimestre
+    valor: 2,4% del PIB (antes 1,5%), validado por el Consejo Fiscal Autónomo
+    fuente: dipres-2026-ifp-q1-2026-deficit
+  - etiqueta: Deuda bruta frente al límite prudencial
+    valor: Pegada al 45% del PIB en 2026 y lo cruzaría en 2027
+    fuente: dipres-2026-ifp-q1-2026-deficit
+  - etiqueta: Endeudamiento adicional autorizado en junio
+    valor: US$6.200 millones para cerrar 2026
+    fuente: hacienda-2026-06-01-proyecto-endeudamiento-2026
+  - etiqueta: Meta de recorte anunciada en febrero
+    valor: US$6.000 millones de gasto
+    fuente: latercera-2026-02-17-kast-gobierno-emergencia
+  - etiqueta: Recortes anunciados a mitad de año
+    valor: Cercanos a los US$2.000 millones
+    fuente: bbc-2026-06-18-impuesto-corporativo-kast-analisis
+variaciones:
+  - alcance: Gasto de capital contemplado en la Ley 2026 frente a 2025
+    variacion_texto: -6,1% real
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
+    nota: Caída ya contemplada en la ley, antes de la priorización de la nueva administración.
+movimientos:
+  - tipo: recorte
+    descripcion: Reducción del presupuesto del Ministerio de Seguridad Pública
+    fecha: '2026-03-23'
+    monto: 72000000000
+    monto_nota: $72.000 millones anunciados ante la Comisión de Seguridad de la Cámara
+    objetivo_declarado: Ajuste transversal del 3% dentro del plan de reducir US$6.000 millones en 18 meses
+    evento_id: 20260323-1
+    fuente: ciper-2026-03-26-recorte-carabineros
+    nivel_impacto: directo
+    organizacion_id: ministerio_seguridad
+    nota: Carabineros $51.612 millones (vehículos $33.271M), PDI $16.669 millones y programas $3.743 millones (Calles Sin Violencia $1.078M, Somos Barrio $914M).
+  - tipo: recorte
+    descripcion: Rebaja del presupuesto del Ministerio de las Culturas
+    fecha: '2026-03-31'
+    monto: null
+    monto_nota: 3%, incluso un poco más, según el ministro
+    objetivo_declarado: Gasto excesivo en cultura y transferencias recibidas no ocupadas en su objeto según el ministro
+    evento_id: 20260331-3
+    fuente: cnnchile-2026-03-31-undurraga-recorte-3-culturas
+    nivel_impacto: directo
+    organizacion_id: ministerio_culturas
+    nota: Gremios denuncian además un recorte de más del 50% en fondos de sitios de memoria.
+  - tipo: revision_programas
+    descripcion: Oficio de Hacienda que recomienda un ajuste de al menos 15% en la PGU
+    fecha: '2026-04-29'
+    monto: null
+    monto_nota: Recomendación de ajuste, no recorte ejecutado
+    objetivo_declarado: null
+    evento_id: 20260907-3
+    fuente: lacuarta-2026-04-29-te-amo-pgu-oficio-hacienda-ajuste
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Firmado en abril en medio del debate por la meta de reducir el gasto en US$6.000 millones.
+  - tipo: recorte
+    descripcion: Rebaja transversal del gasto de los ministerios aplicada por Dipres
+    fecha: '2026-03-18'
+    monto: null
+    monto_nota: 3% del gasto bruto de cada ministerio más US$1.000 millones adicionales al sector público
+    objetivo_declarado: Reconstrucción fiscal con contención del gasto
+    evento_id: 20260318-1
+    fuente: emol-2026-03-18-reseteo-gobierno-kast
+    nivel_impacto: indirecto
+    nota: Las carteras debían reportar espacios de eficiencia a la Dipres antes del 20 de marzo.
+  - tipo: revision_programas
+    descripcion: Oficio Dipres sobre programas a descontinuar
+    fecha: '2026-04-27'
+    monto: null
+    objetivo_declarado: Reformulación de programas según aclaración posterior de Dipres
+    evento_id: null
+    fuente: biobiochile-2026-04-27-dipres-descontinuar-reformular
+    nivel_impacto: institucional
+    nota: Dipres aclaró que la palabra descontinuar debía leerse como reformular.
+orden_refs:
+  - dipres-2026-07-31-ejecucion-junio-gasto-capital
+  - biobiochile-2026-04-27-dipres-descontinuar-reformular
+  - dipres-2026-ifp-q1-2026-deficit
+  - hacienda-2026-06-01-proyecto-endeudamiento-2026
+  - latercera-2026-02-17-kast-gobierno-emergencia
+  - bbc-2026-06-18-impuesto-corporativo-kast-analisis
+  - emol-2026-03-18-reseteo-gobierno-kast
+  - ciper-2026-03-26-recorte-carabineros
+  - cnnchile-2026-03-31-undurraga-recorte-3-culturas
+  - lacuarta-2026-04-29-te-amo-pgu-oficio-hacienda-ajuste

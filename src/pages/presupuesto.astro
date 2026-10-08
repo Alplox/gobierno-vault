@@ -1,0 +1,229 @@
+---
+import Base from '../layouts/Base.astro';
+import SourceRef from '../components/SourceRef.astro';
+import ShareButtons from '../components/ShareButtons.astro';
+import { Wallet, ArrowRightLeft, TriangleAlert, Users } from 'lucide-astro';
+import { getPresupuesto } from '../lib/presupuesto';
+
+const { ejercicios, fuentes, formatCLP } = getPresupuesto();
+
+const todosMovs = ejercicios.flatMap((e) => e.movimientos.map((m) => ({ ...m, ano: e.ano })));
+const todasVars = ejercicios.flatMap((e) => e.variaciones.map((v) => ({ ...v, ano: e.ano })));
+const sinObjetivo = todosMovs.filter((m) => !m.objetivo_declarado);
+const directos = [...todosMovs, ...todasVars].filter((x) => x.nivel_impacto === 'directo').length;
+
+const tipoBadge = (t: string) =>
+  t === 'recorte' ? 'badge-error' : t === 'redistribucion' ? 'badge-warning' : t === 'ingreso' ? 'badge-success' : 'badge-info';
+const impactoBadge = (n: string) =>
+  n === 'directo' ? 'badge-primary' : n === 'indirecto' ? 'badge-secondary' : 'badge-ghost';
+const anchor = (ano: number, id: string, refs: string[]) => `pref-${ano}-${refs.indexOf(id) + 1}`;
+const eventoHref = (id: string) => `/events/${id.slice(0, 4)}/${id}`;
+const fmtFecha = (iso: string | null) => {
+  if (!iso) return 'sin fecha publicada';
+  const [y, m, d] = iso.split('-').map(Number);
+  const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return `${d} de ${MESES[m - 1]} de ${y}`;
+};
+---
+
+<Base title="Presupuesto">
+  <div class="mb-8">
+    <div class="flex items-center gap-2 mb-1">
+      <Wallet class="h-6 w-6 text-primary shrink-0" />
+      <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Presupuesto</h1>
+    </div>
+    <p class="text-base-content/60 text-sm">
+      Seguimiento del dinero del Estado: monto inicial aprobado por ley, ejecución y movimientos
+      (recortes, redistribuciones) por ejercicio, con fuente primaria y evento que los documenta.
+      Cobertura parcial: {ejercicios.map((e) => e.ano).join(' y ')}. Los estados describen lo publicado,
+      sin calificar la decisión.
+    </p>
+    <div class="mt-4">
+      <ShareButtons url={new URL('/presupuesto', Astro.site).href} title="Presupuesto" />
+    </div>
+  </div>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
+      <p class="text-2xl font-bold text-base-content">{ejercicios.length}</p>
+      <p class="text-xs text-base-content/60 font-medium mt-0.5">Ejercicios cubiertos</p>
+    </div>
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
+      <p class="text-2xl font-bold text-base-content">{todosMovs.length}</p>
+      <p class="text-xs text-base-content/60 font-medium mt-0.5">Movimientos registrados</p>
+    </div>
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
+      <p class="text-2xl font-bold text-base-content">{sinObjetivo.length}</p>
+      <p class="text-xs text-base-content/60 font-medium mt-0.5">Sin objetivo publicado</p>
+    </div>
+    <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
+      <p class="text-2xl font-bold text-base-content">{directos}</p>
+      <p class="text-xs text-base-content/60 font-medium mt-0.5">De impacto directo</p>
+    </div>
+  </div>
+
+  <div class="flex flex-wrap gap-1.5 mb-6" role="group" aria-label="Seleccionar ejercicio">
+    {ejercicios.map((e, i) => (
+      <button type="button" data-pres-ano={e.ano}
+        class="pres-ano-btn rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors cursor-pointer"
+        aria-pressed={i === 0 ? 'true' : 'false'}>
+        <span class="block leading-tight">{e.ano} · {e.gobierno}</span>
+        <span class="block text-[10px] font-normal opacity-60">{e.estado_label}</span>
+      </button>
+    ))}
+  </div>
+
+  {ejercicios.map((e, i) => (
+    <section data-pres-panel={e.ano} class={i === 0 ? 'space-y-4 mb-10' : 'space-y-4 mb-10 hidden'}>
+      <div class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] overflow-hidden">
+        <header class="px-5 py-4 border-b border-base-300 flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <h2 class="text-lg font-bold text-base-content">Ejercicio {e.ano} · Gobierno {e.gobierno}</h2>
+            <p class="text-xs text-base-content/60 mt-0.5">
+              {e.ley.nombre}
+              <SourceRef id="" index={e.refs.indexOf(e.ley.fuente) + 1} href={`#${anchor(e.ano, e.ley.fuente, e.refs)}`} title={`${fuentes[e.ley.fuente].medio} — ${fuentes[e.ley.fuente].titulo}`} tip={`${fuentes[e.ley.fuente].medio}\n${fuentes[e.ley.fuente].titulo}`} />
+              {e.ley.nota && <span class="block mt-0.5">{e.ley.nota}</span>}
+            </p>
+          </div>
+          <span class="badge badge-outline">{e.estado_label}</span>
+        </header>
+
+        <div class="px-5 py-4 grid grid-cols-2 sm:grid-cols-4 gap-3 border-b border-base-300">
+          {(Object.entries({ inicial: 'Inicial (ley)', vigente: 'Vigente', ejecutado: 'Ejecutado', saldo: 'Saldo' }) as Array<[keyof typeof e.totales, string]>).map(([k, label]) => (
+            <div class="bg-base-200/60 rounded-xl p-3">
+              <p class="text-[11px] font-semibold uppercase tracking-wide text-base-content/50">{label}</p>
+              <p class="text-base font-bold text-base-content mt-0.5">
+                {e.totales[k].monto !== null ? formatCLP(e.totales[k].monto!) : 'En carga'}
+              </p>
+              {e.totales[k].nota && <p class="text-[11px] text-base-content/60 mt-0.5">{e.totales[k].nota}</p>}
+            </div>
+          ))}
+        </div>
+
+        {e.hitos.length > 0 && (
+          <ul class="px-5 py-4 space-y-1.5 border-b border-base-300">
+            {e.hitos.map((h) => (
+              <li class="text-sm text-base-content/80">
+                <span class="font-semibold text-base-content">{h.etiqueta}:</span> {h.valor}
+                <SourceRef id="" index={e.refs.indexOf(h.fuente) + 1} href={`#${anchor(e.ano, h.fuente, e.refs)}`} title={`${fuentes[h.fuente].medio} — ${fuentes[h.fuente].titulo}`} tip={`${fuentes[h.fuente].medio}\n${fuentes[h.fuente].titulo}`} />
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {e.variaciones.length > 0 && (
+          <div class="px-5 py-4 border-b border-base-300">
+            <h3 class="text-sm font-bold text-base-content mb-3">Variaciones por partida y programa</h3>
+            <div class="space-y-2.5">
+              {e.variaciones.map((v) => (
+                <div class="bg-base-200/60 rounded-xl p-3">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class="text-sm font-bold text-base-content">{v.variacion_texto}</span>
+                    <span class={`badge badge-sm ${impactoBadge(v.nivel_impacto)}`}>{v.nivel_impacto}</span>
+                  </div>
+                  <p class="text-sm text-base-content/80 mt-1">
+                    {v.ministerio_id ? (
+                      <><a href={`/organizations/${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
+                    ) : null}{v.alcance}
+                    <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio} — ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
+                  </p>
+                  {(v.evento_id || v.nota) && (
+                    <p class="text-xs text-base-content/60 mt-1">
+                      {v.evento_id && <a href={eventoHref(v.evento_id)} class="link link-primary">Ver evento {v.evento_id}</a>}
+                      {v.evento_id && v.nota && ' · '}
+                      {v.nota}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {e.movimientos.length > 0 && (
+          <div class="px-5 py-4">
+            <h3 class="text-sm font-bold text-base-content mb-3 flex items-center gap-1.5">
+              <ArrowRightLeft class="h-4 w-4" /> Movimientos: en qué quedó el dinero
+            </h3>
+            <div class="space-y-2.5">
+              {e.movimientos.map((m) => (
+                <article class="bg-base-200/60 rounded-xl p-3">
+                  <div class="flex flex-wrap items-center gap-2">
+                    <span class={`badge badge-sm ${tipoBadge(m.tipo)}`}>{m.tipo.replace(/_/g, ' ')}</span>
+                    <span class={`badge badge-sm badge-outline ${impactoBadge(m.nivel_impacto)}`}>{m.nivel_impacto}</span>
+                    <span class="text-xs text-base-content/50">{fmtFecha(m.fecha)}</span>
+                  </div>
+                  <p class="text-sm font-semibold text-base-content mt-1.5">
+                    {m.organizacion_id ? (
+                      <><a href={`/organizations/${m.organizacion_id}`} class="hover:text-primary transition-colors">{m.organizacionNombre}</a>{' · '}</>
+                    ) : null}{m.descripcion}
+                    <SourceRef id="" index={e.refs.indexOf(m.fuente) + 1} href={`#${anchor(e.ano, m.fuente, e.refs)}`} title={`${fuentes[m.fuente].medio} — ${fuentes[m.fuente].titulo}`} tip={`${fuentes[m.fuente].medio}\n${fuentes[m.fuente].titulo}`} />
+                  </p>
+                  <p class="text-sm text-base-content/80 mt-0.5">
+                    Monto: {m.monto !== null ? <span class="font-bold">{formatCLP(m.monto)}</span> : 'no publicado'}
+                    {m.monto_nota && <span class="text-xs text-base-content/60"> ({m.monto_nota})</span>}
+                  </p>
+                  {m.objetivo_declarado ? (
+                    <p class="text-xs text-base-content/70 mt-0.5">Objetivo declarado: {m.objetivo_declarado}</p>
+                  ) : (
+                    <p class="mt-1.5 flex items-start gap-1.5 text-xs font-semibold text-warning">
+                      <TriangleAlert class="h-3.5 w-3.5 shrink-0 mt-0.5" />
+                      <span>Sin objetivo ni destino publicado a la fecha</span>
+                    </p>
+                  )}
+                  {(m.evento_id || m.nota) && (
+                    <p class="text-xs text-base-content/60 mt-1">
+                      {m.evento_id && <a href={eventoHref(m.evento_id)} class="link link-primary">Ver evento {m.evento_id}</a>}
+                      {m.evento_id && m.nota && ' · '}
+                      {m.nota}
+                    </p>
+                  )}
+                </article>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <div class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] px-5 py-4">
+        <h3 class="text-sm font-bold text-base-content mb-2">Fuentes del ejercicio {e.ano}</h3>
+        <ol class="space-y-1.5">
+          {e.refs.map((id, n) => (
+            <li id={anchor(e.ano, id, e.refs)} class="text-xs text-base-content/70 scroll-mt-24">
+              <span class="font-bold text-base-content">[{n + 1}]</span> {fuentes[id].medio} ·{' '}
+              <a href={fuentes[id].url} class="link link-primary" target="_blank" rel="noopener">{fuentes[id].titulo}</a>
+            </li>
+          ))}
+        </ol>
+      </div>
+    </section>
+  ))}
+
+  <p class="text-xs text-base-content/40 mt-8 leading-relaxed flex items-start gap-1.5">
+    <Users class="h-3.5 w-3.5 shrink-0 mt-0.5" />
+    <span>Impacto directo = llega a la ciudadanía (beca, vacuna, subsidio); indirecto = vía terceros (regiones, municipios); institucional = funcionamiento interno del Estado. La etiqueta describe el canal, no el mérito de la medida.</span>
+  </p>
+</Base>
+
+<script>
+  function presApply(ano: string) {
+    document.querySelectorAll('[data-pres-panel]').forEach((el) => {
+      el.classList.toggle('hidden', el.getAttribute('data-pres-panel') !== ano);
+    });
+    document.querySelectorAll('.pres-ano-btn').forEach((btn) => {
+      const active = btn.getAttribute('data-pres-ano') === ano;
+      btn.setAttribute('aria-pressed', String(active));
+      btn.className = `pres-ano-btn rounded-lg border px-3 py-1.5 text-xs font-semibold transition-colors cursor-pointer ${active ? 'border-primary/60 bg-primary/10 text-primary' : 'border-base-300 bg-base-100 text-base-content/70 hover:border-primary/50 hover:text-primary'}`;
+    });
+  }
+  function presInit() {
+    const first = document.querySelector('[data-pres-panel]');
+    if (first) presApply(first.getAttribute('data-pres-panel')!);
+  }
+  document.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest('[data-pres-ano]');
+    if (btn) presApply(btn.getAttribute('data-pres-ano')!);
+  });
+  document.addEventListener('astro:page-load', presInit);
+  presInit();
+</script>
