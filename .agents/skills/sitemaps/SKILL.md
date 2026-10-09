@@ -389,6 +389,7 @@ Escalera cuando eso no basta, en orden:
    aunque el slug no sea adivinable. Los sub-sitemaps suelen ordenar por fecha, así que las
    2-3 primeras páginas cubren lo reciente. Ojo: un slug adivinado que da 301 a la home no
    es evidencia de nada.
+   **BioBioChile: el news-sitemap que declara el robots está congelado en 2025 — el vivo es static/google-news-sitemap.xml** (~376 locs con la URL exacta de cada nota del día, incluidas las especiales bbcl-investiga). Fue la vía para localizar las notas del aluvión de Las Condes del 8-9-oct-2026 cuando el JSONL del catálogo apenas llegaba al 30-sep.
 3. **`websearch` con el titular entre comillas** (y `site:` si hace falta). Es el sustituto
    cuando DDG bloquea: `html.duckduckgo.com` respondió 403 en sep-2026, pero `websearch`
    recuperó las URL exactas de T13, El País, Mala Espina y Chilevisión. Sin DDG, la forma
