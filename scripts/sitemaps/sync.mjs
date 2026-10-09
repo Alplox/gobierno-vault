@@ -960,7 +960,8 @@ async function main() {
   // Snapshot ANTES del loop: `ultima_sync` se actualiza al final de cada medio y
   // no debe cambiar el cutoff de los medios siguientes.
   const manifestBefore = readManifest();
-  for (const t of targets) {
+  for (const [i, t] of targets.entries()) {
+    if (targets.length > 1) logInfo(`--- [${i + 1}/${targets.length}] ${REGISTRY[t].nombre} (${t}) ---`);
     const targetSince = sinceLastSync ? lastSyncSince(manifestBefore, t) : since;
     if (sinceLastSync) {
       if (targetSince) {

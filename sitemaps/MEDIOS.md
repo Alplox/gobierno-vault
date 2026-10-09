@@ -296,7 +296,7 @@
 | `maulehoy` | Maule Hoy | `maulehoy.cl/sitemap.xml` | includeRe | 21.741 | 7 |
 | `mediabanco` | Mediabanco | `mediabanco.com/wp-sitemap.xml` | includeRe | 107.114 | 13 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 434.672 | 16 |
-| `mercopress` | MercoPress | `es.mercopress.com/sitemap.xml` | includeRe | 46.739 | 14 |
+| `mercopress` | MercoPress | `es.mercopress.com/sitemap.xml` | includeRe | 46.749 | 14 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.638 | 9 |
 | `minrel` | Ministerio de Relaciones Exteriores | `minrel.gob.cl/minrel/site/sitemap_pags.xml` | — | 4.990 | 2 |
 | `mintrab` | Ministerio del Trabajo | `www.mintrab.gob.cl/sitemap_index.xml` | — | 5.403 | 17 |

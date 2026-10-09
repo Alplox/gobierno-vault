@@ -30,7 +30,7 @@
  * queda sin ella se rescata con fetch por video (solo en sync completo).
  */
 
-import { spawnSync } from 'node:child_process';
+import { spawnSync, spawn } from 'node:child_process';
 import { readFileSync, writeFileSync, mkdirSync, existsSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
 import { medioDir as catalogDir } from './paths.mjs';
@@ -150,9 +150,19 @@ function writeYears(medioDir, years, yearKeys) {
 // ---------------------------------------------------------------------------
 // Sync de un canal: tab completo (o acotado) → JSONL por año, modo merge.
 // ---------------------------------------------------------------------------
+// Formato corto de duracion para los logs de progreso (45s, 3min 12s).
+function fmtElapsed(ms) {
+  const s = Math.max(0, Math.floor(ms / 1000));
+  if (s < 60) return `${s}s`;
+  return `${Math.floor(s / 60)}min ${s % 60}s`;
+}
+
 // Una pasada del tab con los extractor-args dados. Devuelve { entries } o
 // { error } (bloqueo anti-bot, fallo de yt-dlp o JSON inválido).
-function fetchTab(url, { playlistEnd = 0, extractorArgs = [] } = {}) {
+// Es async con heartbeat: los tabs grandes tardan minutos (T13 ~9 min por
+// pasada) y con spawnSync la consola quedaba muda y parecia colgado.
+// onProgress(elapsed, lastStderrLine) se llama cada 45 s mientras descarga.
+function fetchTab(url, { playlistEnd = 0, extractorArgs = [] } = {}, onProgress = null) {
   const args = ['--flat-playlist'];
   for (const a of extractorArgs) args.push('--extractor-args', a);
   args.push('-J');
@@ -161,22 +171,58 @@ function fetchTab(url, { playlistEnd = 0, extractorArgs = [] } = {}) {
 
   // -J vuelca un solo JSON con `entries[]`: robusto contra títulos con `|`,
   // tabs o saltos de línea (un --print por líneas se rompería con ellos).
-  const r = spawnSync('yt-dlp', args, {
-    encoding: 'utf8',
-    timeout: 1800000, // 30 min: el tab /videos de T13 (~68K) tarda ~9 min por pasada
-    maxBuffer: 256 * 1024 * 1024,
+  return new Promise((resolve) => {
+    const t0 = Date.now();
+    let settled = false;
+    const finish = (result) => {
+      if (settled) return;
+      settled = true;
+      clearInterval(beat);
+      clearTimeout(kill);
+      resolve(result);
+    };
+    let child;
+    try {
+      child = spawn('yt-dlp', args, { stdio: ['ignore', 'pipe', 'pipe'] });
+    } catch (err) {
+      resolve({ error: `yt-dlp no se pudo lanzar (${err.message})` });
+      return;
+    }
+    const MAX = 256 * 1024 * 1024;
+    let stdout = '';
+    let stderr = '';
+    child.stdout.on('data', (d) => { if (stdout.length < MAX) stdout += d; });
+    let lastLine = '';
+    child.stderr.on('data', (d) => {
+      stderr += d;
+      const lines = String(d).split('\n').map((l) => l.trim()).filter(Boolean);
+      if (lines.length) lastLine = lines[lines.length - 1].slice(0, 160);
+    });
+    const beat = setInterval(() => {
+      if (onProgress) onProgress(fmtElapsed(Date.now() - t0), lastLine);
+    }, 45000);
+    if (beat.unref) beat.unref();
+    const kill = setTimeout(() => {
+      try { child.kill('SIGKILL'); } catch { /* ya termino */ }
+      finish({ error: 'yt-dlp excedio 30 min (timeout)' });
+    }, 1800000); // 30 min: el tab /videos de T13 (~68K) tarda ~9 min por pasada
+    if (kill.unref) kill.unref();
+    child.on('error', (err) => finish({ error: `yt-dlp falló (${err.message})` }));
+    child.on('close', (code) => {
+      const combined = `${stdout}\n${stderr}\n`;
+      if (botBlocked(combined)) { finish({ error: 'bloqueo anti-bot/429 de YouTube' }); return; }
+      if (code !== 0) {
+        const tail = stderr.trim().split('\n').slice(-3).join(' | ');
+        finish({ error: `yt-dlp falló (exit ${code})${tail ? `: ${tail}` : ''}` });
+        return;
+      }
+      try {
+        finish({ entries: JSON.parse(stdout || '').entries ?? [] });
+      } catch {
+        finish({ error: 'la salida de yt-dlp no es JSON parseable' });
+      }
+    });
   });
-  const combined = `${r.stdout || ''}\n${r.stderr || ''}\n${r.error?.message || ''}`;
-  if (botBlocked(combined)) return { error: 'bloqueo anti-bot/429 de YouTube' };
-  if (r.error || r.status !== 0) {
-    const tail = (r.stderr || '').trim().split('\n').slice(-3).join(' | ');
-    return { error: `yt-dlp falló (${r.error?.message ?? `exit ${r.status}`})${tail ? `: ${tail}` : ''}` };
-  }
-  try {
-    return { entries: JSON.parse(r.stdout || '').entries ?? [] };
-  } catch {
-    return { error: 'la salida de yt-dlp no es JSON parseable' };
-  }
 }
 
 // ---------------------------------------------------------------------------
@@ -188,8 +234,10 @@ function fetchTab(url, { playlistEnd = 0, extractorArgs = [] } = {}) {
 function fetchExactDates(ids) {
   const out = new Map();
   const CHUNK = 100;
+  const totalChunks = Math.ceil(ids.length / CHUNK);
   for (let i = 0; i < ids.length; i += CHUNK) {
     const chunk = ids.slice(i, i + CHUNK);
+    logInfo(`   └ fechasYt: lote ${Math.floor(i / CHUNK) + 1}/${totalChunks} (${Math.min(i + CHUNK, ids.length)}/${ids.length}; ~${Math.max(1, Math.ceil(((ids.length - i) * 1.25) / 60))} min restantes)...`);
     const r = spawnSync(
       'yt-dlp',
       ['--skip-download', '--no-warnings', '--ignore-errors', '--print', '%(id)s|%(upload_date)s|%(duration)s|%(view_count)s', ...chunk.map(watchUrl)],
@@ -238,21 +286,27 @@ export async function syncCanalYoutube(medio, conf, { playlistEnd = 0, replace =
   const entries = [];
   const titlesEs = new Map();
   let titlesFallback = 0;
-  for (const tab of tabs) {
+  for (const [ti, tab] of tabs.entries()) {
     const url = channelUrl(conf, tab);
-    const pass1 = fetchTab(url, { playlistEnd, extractorArgs: ['youtubetab:approximate_date'] });
+    const tag = tabs.length > 1 ? ` [${ti + 1}/${tabs.length}]` : '';
+    const t1 = Date.now();
+    const pass1 = await fetchTab(url, { playlistEnd, extractorArgs: ['youtubetab:approximate_date'] },
+      (el, last) => logInfo(`   └ /${tab} pasada 1/2 en curso (${el} transcurridos)${last ? ` — ${last}` : ''}`));
     if (pass1.error) {
       // Guarda anti-bloqueo: abortar sin escribir nada, nunca un parcial silencioso.
       logErr(`${conf.nombre} [/${tab}]: ${pass1.error}. Catalogo intacto; reintentar mas tarde.`);
       return { medio, nombre: conf.nombre, urls: null, years: null, failed: 1, complete: false };
     }
-    const pass2 = fetchTab(url, { playlistEnd, extractorArgs: ['youtube:lang=es'] });
+    logInfo(`   └ /${tab}${tag} pasada 1/2 lista: ${pass1.entries.length} video(s) (${fmtElapsed(Date.now() - t1)})`);
+    const t2 = Date.now();
+    const pass2 = await fetchTab(url, { playlistEnd, extractorArgs: ['youtube:lang=es'] },
+      (el, last) => logInfo(`   └ /${tab} pasada 2/2 en curso (${el} transcurridos)${last ? ` — ${last}` : ''}`));
     if (pass2.error) {
       logWarn(conf.nombre + ` [/${tab}]: pasada de titulos en espanol fallo (${pass2.error}); se usan los del tab por defecto.`);
     } else {
       for (const e of pass2.entries) if (e && e.id && e.title) titlesEs.set(e.id, String(e.title));
+      logInfo(`   └ /${tab}${tag} pasada 2/2 lista: ${pass2.entries.length} titulo(s) (${fmtElapsed(Date.now() - t2)})`);
     }
-    logInfo(`yt-dlp: ${pass1.entries.length} video(s) en /${tab}`);
     // _tab se usa para el log y para saber si un id ya venía de otro tab.
     for (const e of pass1.entries) if (e) entries.push({ ...e, _tab: tab });
   }
@@ -391,7 +445,7 @@ export async function exactifyDates(medio, conf, { count = 0, ids = [] } = {}) {
     logErr(`${conf.nombre}: ${err.message}`);
     return { medio, nombre: conf.nombre, urls: null, years: null, failed: 1, complete: false };
   }
-  logInfo(`=== Fijando fecha exacta de ${targets.length} video(s) de ${conf.nombre} ===`);
+  logInfo(`=== Fijando fecha exacta de ${targets.length} video(s) de ${conf.nombre} (~1.25 s c/u, aprox. ${Math.max(1, Math.round((targets.length * 1.25) / 60))} min) ===`);
 
   const urls = targets.map((t) => watchUrl(t.id));
   // Se pide también el título por si la entrada no lo trae (rara vez).

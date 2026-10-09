@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 8/10/2026, 13:02:31
+- **Última sincronización:** 9/10/2026, 12:13:25
 - **Medios registrados:** 568
-- **Artículos indexados:** 12.297.218
+- **Artículos indexados:** 12.297.228
 - **Canales de YouTube:** 30 (570.326 videos)
 
 ## Por medio
@@ -52,7 +52,7 @@
 | REDIMIN | 49.281 |
 | La Unión | 47.980 |
 | Radio Duna | 47.571 |
-| MercoPress | 46.739 |
+| MercoPress | 46.749 |
 | Radio Activa | 46.268 |
 | La Hora | 46.067 |
 | Diario San José | 43.230 |
