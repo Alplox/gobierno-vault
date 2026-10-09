@@ -1870,10 +1870,11 @@
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 11 fuentes
 - [2026/10/20261008-5 - Suspenden clases en 10 comunas de la Región Metropolitana para el viernes 9 de octubre](src/content/events/2026/10/20261008-5.md) — 5 fuentes
-- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 14 fuentes
+- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 16 fuentes
 - [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 11 fuentes
-- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 23 fuentes
+- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 24 fuentes
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
+- [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 
 ## 2025
 
