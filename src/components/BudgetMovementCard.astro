@@ -1,6 +1,6 @@
 ---
 // Tarjeta visual de un movimiento del presupuesto: el monto manda (numero grande
-// a escala tabular), el riel de color dice el sentido del movimiento y el
+// a escala tabular, en el color del sentido del movimiento) y el
 // objetivo declarado (o su ausencia) va en un panel propio. El detalle largo
 // (nota, monto en palabras, fuente y evento) queda colapsado para que la grilla
 // se lea como un tablero y no como un documento.
@@ -40,11 +40,9 @@ const fmtFecha = (iso: string | null) => {
 
 <article
   id={ancla}
-  class="relative overflow-hidden rounded-2xl bg-base-100 shadow-[var(--shadow-border)] scroll-mt-24"
+  class="rounded-2xl bg-base-100 shadow-[var(--shadow-border)] scroll-mt-24"
 >
-  <span class="absolute inset-y-0 left-0 w-1.5" style={`background:${riel}`} aria-hidden="true" />
-
-  <div class="pl-5 pr-4 py-4 flex flex-col gap-2.5">
+  <div class="px-4 py-4 flex flex-col gap-2.5">
     <div class="flex flex-wrap items-center gap-2">
       <span class={`badge badge-sm ${tipoBadge}`}>{mov.tipo.replace(/_/g, ' ')}</span>
       <span class={`badge badge-sm badge-outline ${impactoBadge}`}>{mov.nivel_impacto}</span>
@@ -74,7 +72,7 @@ const fmtFecha = (iso: string | null) => {
     </p>
 
     {mov.objetivo_declarado ? (
-      <div class="rounded-xl bg-base-200/60 border-l-2 border-primary/50 px-3 py-2">
+      <div class="rounded-xl bg-base-200/60 px-3 py-2">
         <p class="text-[10px] font-semibold text-base-content/50">Objetivo declarado</p>
         <p class="text-xs text-base-content/80 mt-0.5 leading-relaxed">{mov.objetivo_declarado}</p>
       </div>

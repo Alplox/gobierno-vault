@@ -39,6 +39,8 @@ usuario que provea el contenido.** Cada método tiene fortalezas distintas:
 
 **Script automatizado `pnpm run fetch-content`:**
 
+**Firecrawl MCP (`firecrawl_scrape`/`firecrawl_search` vía tools.firecrawl):** rate limit duro de ~11 req/min; un burst de >8 en paralelo devuelve HTML vacío (len 0) en todos los lotes siguientes y solo los reintentos secuenciales con pausa recuperan. Para varios artículos, scrapear de a uno con pausa de 4-5 s. Si tras reintentar sigue vacío, `r.jina.ai` vía fetch directo funciona para La Tercera, El Mostrador y T13 (el ruido de navegación se recorta filtrando párrafos por palabras clave).
+
 ```bash
 # Cadena completa de fallbacks (r.jina → defuddle → markdown.new → paywallskip → archive → impersonate → add-source)
 pnpm run fetch-content -- <https://sitio.cl/articulo>

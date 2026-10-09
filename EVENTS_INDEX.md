@@ -1866,6 +1866,14 @@
 - [2026/10/20261007-6 - Presupuesto 2027 recorta 14,6% el Fondo Ricarte Soto y el Gobierno promete mantener las garantías](src/content/events/2026/10/20261007-6.md) — 7 fuentes
 - [2026/10/20261007-7 - PDI y SERMIG fiscalizan comercio y barberías en San Antonio de Temuco: 9 extranjeros controlados y 7 denunciados](src/content/events/2026/10/20261007-7.md) — 8 fuentes
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
+- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 29 fuentes
+- [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
+- [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 10 fuentes
+- [2026/10/20261008-5 - Suspenden clases en 10 comunas de la Región Metropolitana para el viernes 9 de octubre](src/content/events/2026/10/20261008-5.md) — 5 fuentes
+- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 6 fuentes
+- [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 6 fuentes
+- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 11 fuentes
+- [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 
 ## 2025
 

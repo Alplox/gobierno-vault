@@ -210,8 +210,8 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                   </p>
                   <ul class="mt-2 flex flex-wrap gap-1.5">
                     {sk.pendientes.map((p) => (
-                      <li>
-                        <a href={`#${p.ancla}`} class="badge badge-outline badge-sm max-w-[22rem] whitespace-normal text-left leading-tight hover:border-primary hover:text-primary transition-colors">
+                      <li class="min-w-0">
+                        <a href={`#${p.ancla}`} class="inline-flex max-w-[22rem] items-center rounded-lg border border-base-300 px-2.5 py-1.5 text-left text-xs leading-snug text-base-content/70 [overflow-wrap:anywhere] [text-wrap:pretty] hover:border-primary/60 hover:text-primary active:scale-[0.98] transition-colors">
                           {p.descripcion}
                         </a>
                       </li>
@@ -241,7 +241,7 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                         {v.ministerio_id ? (
                           <><a href={`/organizations/${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
                         ) : null}{v.alcance}
-                        <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio}  -  ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
+                        <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio} - ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
                       </p>
                       {(v.evento_id || v.nota) && (
                         <p class="text-xs text-base-content/60 mt-1">
