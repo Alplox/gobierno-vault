@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-09T16:40:26.754Z",
+  "actualizado": "2026-10-09T18:02:43.068Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3771,86 +3771,86 @@
     },
     "yt_t13": {
       "nombre": "Teletrece (YouTube)",
-      "ultima_sync": "2026-09-30T17:42:08.860Z",
-      "articulos": 62812,
-      "nuevos": 0,
+      "ultima_sync": "2026-10-09T17:39:40.130Z",
+      "articulos": 64985,
+      "nuevos": 2173,
       "años": 13
     },
     "yt_theclinic": {
       "nombre": "The Clinic (YouTube)",
-      "ultima_sync": "2026-09-30T21:35:57.064Z",
-      "articulos": 1973,
-      "nuevos": 1973,
+      "ultima_sync": "2026-10-09T17:40:22.568Z",
+      "articulos": 2065,
+      "nuevos": 92,
       "años": 10
     },
     "yt_gobierno": {
       "nombre": "Gobierno de Chile (YouTube)",
-      "ultima_sync": "2026-09-30T21:36:46.472Z",
-      "articulos": 2100,
-      "nuevos": 2100,
+      "ultima_sync": "2026-10-09T17:41:04.388Z",
+      "articulos": 2156,
+      "nuevos": 56,
       "años": 17
     },
     "yt_boric": {
       "nombre": "Gabriel Boric (YouTube)",
-      "ultima_sync": "2026-09-30T21:42:10.308Z",
-      "articulos": 469,
-      "nuevos": 469,
+      "ultima_sync": "2026-10-09T17:41:16.243Z",
+      "articulos": 478,
+      "nuevos": 9,
       "años": 12
     },
     "yt_pinera": {
       "nombre": "Sebastián Piñera (YouTube)",
-      "ultima_sync": "2026-09-30T21:42:22.316Z",
-      "articulos": 440,
-      "nuevos": 440,
+      "ultima_sync": "2026-10-09T17:41:27.336Z",
+      "articulos": 448,
+      "nuevos": 8,
       "años": 9
     },
     "yt_kast": {
       "nombre": "José Antonio Kast (YouTube)",
-      "ultima_sync": "2026-09-30T21:42:40.252Z",
-      "articulos": 746,
-      "nuevos": 746,
-      "años": 9
+      "ultima_sync": "2026-10-09T17:41:44.411Z",
+      "articulos": 768,
+      "nuevos": 22,
+      "años": 10
     },
     "yt_biobio": {
       "nombre": "Bio Bío (YouTube)",
-      "ultima_sync": "2026-09-30T21:56:42.444Z",
-      "articulos": 23580,
-      "nuevos": 23580,
+      "ultima_sync": "2026-10-09T17:49:38.402Z",
+      "articulos": 24613,
+      "nuevos": 1033,
       "años": 10
     },
     "yt_df": {
       "nombre": "Diario Financiero (YouTube)",
-      "ultima_sync": "2026-09-30T22:02:51.938Z",
-      "articulos": 17787,
-      "nuevos": 17787,
+      "ultima_sync": "2026-10-09T17:55:11.128Z",
+      "articulos": 18289,
+      "nuevos": 502,
       "años": 15
     },
     "yt_elmostrador": {
       "nombre": "El Mostrador (YouTube)",
-      "ultima_sync": "2026-09-30T22:33:39.422Z",
-      "articulos": 6302,
-      "nuevos": 6302,
+      "ultima_sync": "2026-10-09T17:57:09.046Z",
+      "articulos": 6513,
+      "nuevos": 211,
       "años": 15
     },
     "yt_adnradio": {
       "nombre": "ADN Radio (YouTube)",
-      "ultima_sync": "2026-09-30T22:38:41.469Z",
-      "articulos": 14882,
-      "nuevos": 14882,
+      "ultima_sync": "2026-10-09T18:02:00.803Z",
+      "articulos": 15516,
+      "nuevos": 634,
       "años": 14
     },
     "yt_viax": {
       "nombre": "Viax (YouTube)",
-      "ultima_sync": "2026-09-30T22:38:45.330Z",
+      "ultima_sync": "2026-10-09T18:02:04.378Z",
       "articulos": 8,
-      "nuevos": 8,
+      "nuevos": 0,
       "años": 1
     },
     "yt_presidencia": {
       "nombre": "Presidencia de la República (YouTube)",
-      "ultima_sync": "2026-10-01T01:35:08.414Z",
-      "articulos": 220,
-      "nuevos": 23,
+      "ultima_sync": "2026-10-09T18:02:43.068Z",
+      "articulos": 238,
+      "nuevos": 18,
       "años": 1
     },
     "yt_cnnchile": {
