@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-09T20:17:49.166Z",
+  "actualizado": "2026-10-09T21:17:45.113Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3967,16 +3967,16 @@
     },
     "yt_24horas": {
       "nombre": "24 Horas (YouTube)",
-      "ultima_sync": null,
-      "articulos": 92279,
-      "nuevos": 1,
-      "años": 19
+      "ultima_sync": "2026-10-09T20:50:16.358Z",
+      "articulos": 95087,
+      "nuevos": 2808,
+      "años": 20
     },
     "yt_meganoticias": {
       "nombre": "Meganoticias (YouTube)",
-      "ultima_sync": null,
-      "articulos": 57445,
-      "nuevos": 2,
+      "ultima_sync": "2026-10-09T21:17:45.113Z",
+      "articulos": 59769,
+      "nuevos": 2324,
       "años": 10
     }
   }
