@@ -3,15 +3,15 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 351
+**Total tareas:** 352
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 4 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 273 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 275 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 320 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 321 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
-| A-2025-001 | ⬜ | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados (página /sueldos, evento 20251224-2) — validado 23-ago-2026: recon... | `20251224-2` | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo>]=2026-06 |
+| A-2025-001 | 🟡 | 2026-08-23 | Sugerencias pendientes (para no perderlas) | Registro Público 38 bis jun-2026 vs montos fijados: el exceso es el gasto de representación (Oficio I N°1/2026), evento `20260303-3` | `20251224-2` `20260303-3` `20260320-2` `20260418-1` `20260803-18` | Origen: <https://comision38bis.gob.cl/registro-publico?reportes_publicos[periodo]=2026-06 |
 | A-2026-001 | ⬜ | 2022-07-05 | Sugerencias pendientes (para no perderlas) | Fullclean / contratos con el Estado — seguimiento (evento 20260310-1): verificar (1) la respuesta del alcalde Mario D... | `20260310-1` | Origen: <https://example.com/pendiente-revisar> |
 | A-2026-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Economistas / pilares de la megarreforma — validación cruzada (evento 20260806-46): el evento proviene de una única f... | `20260806-46` | Origen: <https://example.com/pendiente-revisar> |
 | A-2026-003 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Poduje / viviendas en zonas de inundación — validación cruzada (evento 20260806-47): el evento proviene de una única ... | `20260806-47` | Origen: <https://example.com/pendiente-revisar> |
@@ -59,7 +59,6 @@
 | S-2021-001 | ⬜ | 2023-01-18 | Sugerencias pendientes (para no perderlas) | Incendios del Metro 18-O / dato Bassaletti — seguimiento (eventos 20211016-1, 20211125-1, 20220502-1, 20230118-1, 202... | `20211016-1` `20211125-1` `20220502-1` `20230118-1` `20241018-1` | Origen: <https://www.camara.cl/verDoc.aspx?prmID=71458&prmTipo=INFORME_COMISION> |
 | S-2021-002 | ⬜ | 2026-08-27 | Página /gabinete (9-ago-2026) — feature + gaps de | San Ramón — destitución de Aguilera solicitada por concejales en 2020 (CIPER): sigue sin evento propio; la formalizac... | `20210726-1` | Origen: <https://www.ciperchile.cl/2020/09/17/concejales-de-san-ramon-presentan-solicitud-de-destitucion-contra-alcalde-aguilera/> |
 | S-2021-003 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Ciclo constituyente — plebiscito de salida del 4-sep-2022 (Rechazo 61,9%): para cerrar el ciclo electoral/constitucio... | `20211121-1` `20201025-1` | Origen: <https://example.com/pendiente-revisar> |
-| S-2022-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Paro nacional de camioneros de noviembre de 2022 (era Boric) → ya en vault (20221128-1); las páginas de etiqueta docu... | `20221128-1` | Origen: <https://example.com/pendiente-revisar> |
 | S-2022-002 | ⬜ | 2026-08-10 | Página /gabinete (9-ago-2026) — feature + gaps de | Casos de corrupción municipal pendientes de la lista de corrupcion_chile (sin evento aún, para tandas futuras): Virgi... | — | Origen: CSV de corrupcion_chile + investigación web (10-ago-2026). |
 | S-2022-004 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Pendiente: cobertura de prensa del caso de la 43° Comisaría de Peñalolén tras la nulidad parcial (penas ajustadas de ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-2022-005 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | pendiente: cobertura del incidente de la rotura del concentraducto (ago-2022) como evento propio si hay fuentes; esta... | — | Origen: <https://example.com/pendiente-revisar> |
@@ -329,6 +328,8 @@
 | S-2026-257 | ⬜ | 2026-10-01 | Cerro Navia — balacera 31-ago-2026 | Autores de la balacera en Las Torres con Salvador Gutiérrez que baleó a una niña de 5 años: identificación, peritaje balístico, estado clínico de la menor y vínculo con el auto abandonado con 10+ impactos | `20260831-10` | Origen: <https://www.elperiscopio.cl/destacado-1/balacera-deja-a-una-nina-de-5-anos-grave-y-kast-aborda-el-hecho-es-un-dia-de-contradicciones/> |
 | S-2026-258 | ⬜ | 2026-10-01 | Parafina — premisa de consumo y descontinuacion del valor fijado (eventos `20260930-8` y `20261001-7`) | Verificar la serie mensual de ventas de kerosene que sostiene el argumento del subsidio casi en cero, si el consumo de octubre y noviembre se acerca al 10% del de julio proyectado, el efecto en el gasto de los hogares del sur y si el Ejecutivo reconsidera el valor fijado | `20261001-7` | Origen: <https://www.youtube.com/watch?v=47JclM7jzDI> |
 | S-2026-259 | ⬜ | 2026-10-02 | Reforma mercado de capitales — seguimiento | Votacion en particular MK4 el 20 y 21-oct (hasta total despacho) y desenlace de la norma de fraudes bancarios: culpa leve con presuncion, seguros permitidos y rechazo UDI anunciado | `20261001-10` | Origen: <https://www.latercera.com/pulso/noticia/comision-de-hacienda-de-la-camara-de-diputados-aprueba-en-general-proyecto-de-reforma-al-mercado-de-capitales/> |
+| S-2026-260 | ⬜ | 2026-10-08 | Presupuesto 2027 — seguimiento | Desenlace de la línea del [[organizations/instituto_chileno_de_campos_de_hielo]] en la tramitación del Presupuesto 2027 | `20261007-3` | Origen: <https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/> |
+| S-2026-261 | ⬜ | 2026-10-08 | Plan Nacional Digital — seguimiento | Fecha del apagado del 3G e ingreso de la reforma a la Ley General de Telecomunicaciones | `20261007-4` | Origen: <https://www.latercera.com/pulso/noticia/subtel-hara-cambios-a-la-ley-general-de-telecomunicaciones-en-el-marco-del-nuevo-plan-nacional-digital/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

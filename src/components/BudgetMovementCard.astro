@@ -1,0 +1,110 @@
+---
+// Tarjeta visual de un movimiento del presupuesto: el monto manda (numero grande
+// a escala tabular, en el color del sentido del movimiento) y el
+// objetivo declarado (o su ausencia) va en un panel propio. El detalle largo
+// (nota, monto en palabras, fuente y evento) queda colapsado para que la grilla
+// se lea como un tablero y no como un documento.
+import { ArrowUpRight, TriangleAlert, ChevronDown } from 'lucide-astro';
+import SourceRef from './SourceRef.astro';
+import {
+  TIPO_PRESUPUESTO_BADGE,
+  IMPACTO_PRESUPUESTO_BADGE,
+  TIPO_PRESUPUESTO_COLOR,
+  type Movimiento,
+  type PresupuestoFuente,
+} from '../lib/presupuesto';
+
+interface Props {
+  mov: Movimiento;
+  ancla: string;
+  fuente: PresupuestoFuente;
+  refIndex: number;
+  refAnchor: string;
+  eventoHref: string | null;
+}
+
+const { mov, ancla, fuente, refIndex, refAnchor, eventoHref } = Astro.props;
+
+const tipoBadge = TIPO_PRESUPUESTO_BADGE[mov.tipo] ?? 'badge-info';
+const impactoBadge = IMPACTO_PRESUPUESTO_BADGE[mov.nivel_impacto] ?? 'badge-ghost';
+const riel = TIPO_PRESUPUESTO_COLOR[mov.tipo] ?? 'var(--color-info)';
+const hayDetalle = Boolean(mov.nota || mov.monto_nota);
+
+const fmtFecha = (iso: string | null) => {
+  if (!iso) return 'sin fecha publicada';
+  const [y, m, d] = iso.split('-').map(Number);
+  const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+  return `${d} de ${MESES[m - 1]} de ${y}`;
+};
+---
+
+<article
+  id={ancla}
+  class="rounded-2xl bg-base-100 shadow-[var(--shadow-border)] scroll-mt-24"
+>
+  <div class="px-4 py-4 flex flex-col gap-2.5">
+    <div class="flex flex-wrap items-center gap-2">
+      <span class={`badge badge-sm ${tipoBadge}`}>{mov.tipo.replace(/_/g, ' ')}</span>
+      <span class={`badge badge-sm badge-outline ${impactoBadge}`}>{mov.nivel_impacto}</span>
+      <span class="ml-auto text-[11px] text-base-content/50 tabular-nums">{fmtFecha(mov.fecha)}</span>
+    </div>
+
+    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+      <p class="text-xl font-bold tabular-nums leading-none" style={mov.monto === null ? '' : `color:${riel}`}>
+        {mov.monto !== null ? '$' + mov.monto.toLocaleString('es-CL') : 'Monto no publicado'}
+      </p>
+      {mov.organizacion_id && (
+        <a href={`/organizations/${mov.organizacion_id}`} class="text-xs font-semibold text-base-content/70 hover:text-primary transition-colors">
+          {mov.organizacionNombre}
+        </a>
+      )}
+    </div>
+
+    <p class="text-sm text-base-content/90 leading-snug">
+      {mov.descripcion}
+      <SourceRef
+        id=""
+        index={refIndex}
+        href={`#${refAnchor}`}
+        title={`${fuente.medio} - ${fuente.titulo}`}
+        tip={`${fuente.medio}\n${fuente.titulo}`}
+      />
+    </p>
+
+    {mov.objetivo_declarado ? (
+      <div class="rounded-xl bg-base-200/60 px-3 py-2">
+        <p class="text-[10px] font-semibold text-base-content/50">Objetivo declarado</p>
+        <p class="text-xs text-base-content/80 mt-0.5 leading-relaxed">{mov.objetivo_declarado}</p>
+      </div>
+    ) : (
+      <p class="flex items-start gap-1.5 rounded-xl bg-warning/10 px-3 py-2 text-xs font-semibold text-warning">
+        <TriangleAlert class="h-3.5 w-3.5 shrink-0 mt-0.5" />
+        <span>Sin objetivo ni destino publicado a la fecha</span>
+      </p>
+    )}
+
+    {(hayDetalle || mov.evento_id) && (
+      <details class="group/det rounded-xl bg-base-200/40 px-3 py-2">
+        <summary class="flex items-center gap-1.5 cursor-pointer list-none text-xs font-semibold text-base-content/60 hover:text-primary transition-colors">
+          <ChevronDown class="h-3.5 w-3.5 transition-transform group-open/det:rotate-180" />
+          Detalle y fuente
+        </summary>
+        <div class="mt-2 space-y-1.5 text-xs text-base-content/70">
+          {mov.monto_nota && <p>{mov.monto_nota}</p>}
+          {mov.nota && <p>{mov.nota}</p>}
+          {mov.evento_id && eventoHref && (
+            <p>
+              <a href={eventoHref} class="link link-primary inline-flex items-center gap-0.5">
+                Ver evento {mov.evento_id} <ArrowUpRight class="h-3 w-3" />
+              </a>
+            </p>
+          )}
+          <p class="text-base-content/50">
+            Fuente: {fuente.medio} ·{' '}
+            <a href={fuente.url} class="link link-primary" target="_blank" rel="noopener">{fuente.titulo}</a>
+          </p>
+        </div>
+      </details>
+    )}
+  </div>
+</article>

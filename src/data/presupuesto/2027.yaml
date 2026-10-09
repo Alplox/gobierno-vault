@@ -1,0 +1,392 @@
+# Proyecto de Ley de Presupuestos 2027 — presentado el 30 de septiembre de 2026,
+# en tramitación en el Congreso (despacho hasta el 30 de noviembre).
+# Variaciones y movimientos documentados en eventos del vault con su fuente;
+# lo sin monto publicado queda en null con nota.
+ano: 2027
+gobierno: Kast
+estado: proyecto
+estado_label: Proyecto en tramitación
+ley:
+  nombre: Proyecto de Ley de Presupuestos 2027
+  fuente: adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
+  nota: Ingresado al Congreso el 30 de septiembre de 2026 por el ministro Jorge Quiroz.
+totales:
+  inicial: { monto: null, nota: Proyecto en tramitación, sin ley aprobada }
+  vigente: { monto: null, nota: Proyecto en tramitación, sin ley aprobada }
+  ejecutado: { monto: null, nota: Proyecto en tramitación, sin ejecución }
+  saldo: { monto: null, nota: Proyecto en tramitación }
+hitos:
+  - etiqueta: Aumento del gasto del proyecto frente a 2026
+    valor: +1,5%
+    fuente: adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
+  - etiqueta: Autorización de endeudamiento solicitada
+    valor: US$25.000 millones
+    fuente: latercera-2026-10-05-presupuesto-endeudamiento-us25000
+  - etiqueta: Endeudamiento del último presupuesto de Boric más adicional de julio de 2026
+    valor: US$17.400 + US$6.200 millones
+    fuente: latercera-2026-10-05-presupuesto-endeudamiento-us25000
+  - etiqueta: Gasto fiscal evitado por el esquema aplicado en lugar del Mepco
+    valor: US$2.900 millones aprox.
+    fuente: adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
+  - etiqueta: Composición del endeudamiento solicitado
+    valor: Unos US$17.000 millones para amortizar deudas y US$8.000 millones de deuda neta
+    fuente: eldinamo-2026-10-06-quiroz-rebaja-crecimiento-endeudamiento
+  - etiqueta: Total de la partida 09 de Educación
+    valor: 24,53 billones (+0,78% real)
+    fuente: youtube-2026-10-02-biobio-alertas-recortes-educacion
+variaciones:
+  - alcance: Partida 09 frente a 2026
+    variacion_texto: +3,9% nominal (+0,78% real con inflación proyectada de 3,1%)
+    ministerio_id: ministerio_educacion
+    nivel_impacto: directo
+    fuente: latercera-2026-10-01-presupuesto-mineduc-detalle
+    evento_id: 20261002-1
+    nota: Detalle de la partida 09 conocido al ingresar el proyecto al Congreso.
+  - alcance: Liceos Bicentenario, sin nuevas convocatorias
+    variacion_texto: -46,71% real
+    ministerio_id: ministerio_educacion
+    nivel_impacto: directo
+    fuente: latercera-2026-10-01-presupuesto-mineduc-detalle
+    evento_id: 20261002-1
+    nota: Recorte real dentro de la partida 09 de Educación.
+  - alcance: Cartera frente a 2026
+    variacion_texto: +23,9% con meta de 400 mil viviendas y 190 mil empleos
+    ministerio_id: ministerio_vivienda
+    nivel_impacto: directo
+    fuente: cooperativa-2026-08-16-poduje-239-minvu-2027
+    evento_id: 20260901-5
+    nota: El ministro sostuvo que el ajuste debe concentrarse en otras carteras.
+  - alcance: Cartera frente a 2026
+    variacion_texto: +4,7%
+    ministerio_id: ministerio_salud
+    nivel_impacto: directo
+    fuente: youtube-2026-10-02-biobio-alertas-recortes-educacion
+    evento_id: 20261002-1
+    nota: Cifra declarada por la ministra según registro audiovisual citado en el evento.
+  - alcance: Gobiernos regionales frente a 2026
+    variacion_texto: -10% a -20% según región (hasta $270.000 millones menos)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: eldinamo-2026-10-05-gobernadores-presionan-quiroz
+    evento_id: 20261005-2
+    nota: La rebaja siguió en pie tras la reunión con Hacienda.
+movimientos:
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Tenencia Responsable de Animales de Compañía
+    fecha: '2026-10-06'
+    monto: 3120000000
+    monto_nota: De $3.634 a $514 millones (-86%)
+    objetivo_declarado: Revisión por falta de evaluación e indicadores de impacto según la Subdere
+    evento_id: 20261006-2
+    fuente: biobiochile-2026-10-05-kast-voto-cholito-recorte-86
+    nivel_impacto: directo
+    organizacion_id: subdere
+    nota: Transferencias a municipios de $2.794 a $149 millones (-94,7%) y Fondo Concursable de $631 a $150 millones máximo (-76,2%).
+  - tipo: recorte
+    descripcion: Cierre de Prodemu con fondos solo hasta el 31 de marzo de 2027
+    fecha: '2026-10-06'
+    monto: null
+    monto_nota: Partida 27 del Ministerio de la Mujer, solo gastos de cierre y liquidación
+    objetivo_declarado: Deuda de $3.000 millones y 80% del presupuesto en remuneraciones y arriendos según el ministerio
+    evento_id: 20261006-2
+    fuente: biobiochile-2026-10-05-fin-prodemu-despidos
+    nivel_impacto: directo
+    organizacion_id: prodemu
+    nota: Fundación con 380 funcionarios; su continuidad quedó sujeta a lo que resuelva el Congreso.
+  - tipo: recorte
+    descripcion: Eliminación del financiamiento explícito de las Becas TIC de Junaeb
+    fecha: '2026-10-01'
+    monto: 35000000000
+    monto_nota: Cerca de $35 mil millones, presupuesto 2026 del programa
+    objetivo_declarado: null
+    evento_id: 20261001-8
+    fuente: biobiochile-2026-10-01-yo-elijo-mi-pc-fin-presupuesto-2027
+    nivel_impacto: directo
+    nota: En 2026 benefició a 96.100 estudiantes. Continuidad de Yo elijo mi PC (2009) y Me Conecto para Aprender (2015).
+  - tipo: recorte
+    descripcion: Techo de horas docentes máximas en los SLEP con efecto en dotación
+    fecha: '2026-10-01'
+    monto: null
+    monto_nota: -3,6% en horas máximas (-83.000 horas, unas 1.888 jornadas de 44 horas)
+    objetivo_declarado: Eficiencia ante la caída de la natalidad y concentración de establecimientos
+    evento_id: 20261001-16
+    fuente: latercera-2026-10-01-mineduc-bicentenario-universidades-jardines
+    nivel_impacto: directo
+    organizacion_id: ministerio_educacion
+    nota: Glosa de Dotación máxima de personal por SLEP con sanción al director ejecutivo por incumplimiento imputable; en el Biobío la baja es de 5.736 horas (-3%).
+  - tipo: recorte
+    descripcion: Rebaja de 12% a lo solicitado por el Servel para 2027
+    fecha: '2026-10-06'
+    monto: 4000000000
+    monto_nota: Cerca de $4.000 millones, 12% respecto de lo solicitado por el organismo
+    objetivo_declarado: null
+    evento_id: 20261006-4
+    fuente: elmostrador-2026-10-06-subcomision-rechaza-rebaja-servel
+    nivel_impacto: institucional
+    organizacion_id: servel
+    nota: La Cuarta Subcomisión Mixta rechazó la partida (3 votos contra 1 a favor y 1 abstención); vuelve a la Comisión Mixta. El organismo advirtió riesgo para la transmisión de resultados del ciclo 2028-2029.
+  - tipo: recorte
+    descripcion: Eliminación de la transferencia al Instituto Chileno de Campos de Hielo
+    fecha: '2026-10-07'
+    monto: null
+    monto_nota: Monto de la glosa no publicado en la cobertura citada
+    objetivo_declarado: null
+    evento_id: 20261007-3
+    fuente: theclinic-2026-10-07-campos-hielo-presupuesto
+    nivel_impacto: institucional
+    nota: Glosa de la Subsecretaría de Relaciones Exteriores, partida 06, vigente desde 2012.
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Cuidado Alternativo de niñez vulnerable
+    fecha: '2026-10-07'
+    monto: 16879000000
+    monto_nota: De $177.000 a $160.000 millones (-10%)
+    objetivo_declarado: Sin baja de plazas; reasignación al plan Crecer en Familia (desinternación 0-3 años y familias de acogida)
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Con evaluación favorable de la Dipres; cerca del 11% de los atendidos por el Servicio de Protección Especializada está en este programa.
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Diagnóstico Clínico Especializado y Pericia
+    fecha: '2026-10-07'
+    monto: 14271000000
+    monto_nota: Beneficia a 84.827 menores; objetado por falta de criterios de priorización
+    objetivo_declarado: Fortalecer la capacidad de diagnóstico dentro de otras líneas de intervención
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Evaluación inicial integral para cada niño que ingresa al Servicio de Protección Especializada.
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Apoyo al Recién Nacido (ajuar)
+    fecha: '2026-10-07'
+    monto: 1394000000
+    monto_nota: De $17.600 a $16.200 millones (-10,7% real); natalidad -22,9% y cobertura de 92% a 87%
+    objetivo_declarado: Ajuste a natalidad, stock disponible y subejecución
+    evento_id: 20261007-5
+    fuente: latercera-2026-10-07-presupuesto-salud-ajuar-ricarte-soto
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Entrega de ajuar en hospitales públicos; 70.336 nacimientos en el primer semestre de 2024 según el INE.
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Apoyo a Familias para el Autoconsumo
+    fecha: '2026-10-07'
+    monto: 1119000000
+    monto_nota: Bien evaluado; dificultades en tiempos de ejecución y delimitación frente a INDAP
+    objetivo_declarado: Mejorar la oportunidad de las intervenciones y delimitar el ámbito frente a la oferta de INDAP
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Aumenta la disponibilidad de alimentos saludables en familias de Chile Solidario.
+  - tipo: recorte
+    descripcion: Rebaja del Programa Comunidades Solidarias
+    fecha: '2026-10-07'
+    monto: 550000000
+    monto_nota: Kits de alimentos a hogares en pobreza, incluidos hogares con niños vulnerables
+    objetivo_declarado: null
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Con recomendación favorable en evaluación ex ante.
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Adopción
+    fecha: '2026-10-07'
+    monto: 514000000
+    monto_nota: Funciones trasladadas al Servicio Nacional de Protección Especializada (16 unidades de evaluación familiar)
+    objetivo_declarado: null
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Prepara a padres adoptivos y resguarda el derecho a vivir en familia; recomendado favorablemente en 2024.
+  - tipo: recorte
+    descripcion: Rebaja del Programa Educativo de primera infancia
+    fecha: '2026-10-07'
+    monto: null
+    monto_nota: Monto no publicado en la cobertura citada; monitoreo Dipres 2025 evidenció subejecución
+    objetivo_declarado: Mejoras de eficiencia sin disminución de cobertura
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Material educativo para padres desde la gestación hasta los 4 años.
+  - tipo: aumento
+    descripcion: Alza del Programa de Intervenciones Ambulatorias de Reparación
+    fecha: '2026-10-07'
+    monto: 54034000000
+    monto_nota: Reparación para niños gravemente vulnerados vía organismos colaboradores
+    objetivo_declarado: Prioridad del Ejecutivo para la niñez
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Opera de forma externalizada a través de fundaciones y corporaciones.
+  - tipo: aumento
+    descripcion: Alza del Programa de Fortalecimiento y Vinculación
+    fecha: '2026-10-07'
+    monto: 13426000000
+    monto_nota: +27,7%; vínculo con familias o residencias y preparación para la vida independiente
+    objetivo_declarado: Prioridad del Ejecutivo para la niñez
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Sin nota adicional.
+  - tipo: aumento
+    descripcion: Alza del Fondo de Intervenciones de Apoyo al Desarrollo Infantil
+    fecha: '2026-10-07'
+    monto: 6643000000
+    monto_nota: Ejecución municipal en centros de salud, colegios y Oficinas Locales de la Niñez
+    objetivo_declarado: Prioridad del Ejecutivo para la niñez
+    evento_id: 20261007-5
+    fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Recomendado favorablemente en 2021.
+  - tipo: recorte
+    descripcion: Rebaja total del Ministerio de las Culturas, las Artes y el Patrimonio
+    fecha: '2026-10-02'
+    monto: 49381000000
+    monto_nota: De $489.899 a $440.518 millones (-10,1% sobre base comparable)
+    objetivo_declarado: Continuidad de fondos concursables, museos y organismos colaboradores
+    evento_id: 20261002-6
+    fuente: ciperchile-2026-10-02-recorte-253-sitios-memoria
+    nivel_impacto: directo
+    organizacion_id: ministerio_culturas
+    nota: El documento filtrado previo hablaba de -16%; la base comparable descuenta partidas no recurrentes como los $20.000 millones del GAM.
+  - tipo: recorte
+    descripcion: Rebaja y refocalización del Pase Cultural
+    fecha: '2026-10-06'
+    monto: null
+    monto_nota: -50,8% con dotación de $3.000 millones para 2027
+    objetivo_declarado: Eficiencia del gasto y evitar subejecución con foco en familias
+    evento_id: 20261002-6
+    fuente: latercera-2026-10-06-mundo-cultura-critica-recortes
+    nivel_impacto: directo
+    organizacion_id: ministerio_culturas
+    nota: Para jefes de hogar con hijos menores del 40% más vulnerable; beneficio sube de $50.000 a $75.000 para 40.000 familias.
+  - tipo: recorte
+    descripcion: Rebaja del Programa Sitios de Memoria
+    fecha: '2026-10-02'
+    monto: 231000000
+    monto_nota: De $915 a $683 millones (-25,3%)
+    objetivo_declarado: null
+    evento_id: 20261002-7
+    fuente: ciperchile-2026-10-02-recorte-253-sitios-memoria
+    nivel_impacto: directo
+    organizacion_id: ministerio_culturas
+    nota: Museo de la Memoria congelado en $2.642 millones; instituciones colaboradoras de $4.200 a $4.154 millones (-1,1%, -$47 millones).
+  - tipo: recorte
+    descripcion: Rebaja de la línea de Cambio Climático y NDC del Ministerio del Medio Ambiente
+    fecha: '2026-10-05'
+    monto: 424000000
+    monto_nota: De $717 a $293 millones (-59,1%)
+    objetivo_declarado: null
+    evento_id: 20261005-5
+    fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    nivel_impacto: directo
+    organizacion_id: ministerio_medio_ambiente
+    nota: Financia los compromisos de la NDC 2025-2035, en implementación desde 2027.
+  - tipo: recorte
+    descripcion: Rebaja del Programa de Desarrollo Sostenible
+    fecha: '2026-10-05'
+    monto: 3554000000
+    monto_nota: De $8.109 a $4.555 millones (-43,8%)
+    objetivo_declarado: null
+    evento_id: 20261005-5
+    fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    nivel_impacto: directo
+    organizacion_id: ministerio_medio_ambiente
+    nota: Calefacción Sustentable -53% y Planes de Descontaminación -6%.
+  - tipo: recorte
+    descripcion: Rebaja del Fondo de Protección Ambiental
+    fecha: '2026-10-05'
+    monto: 255000000
+    monto_nota: De $866 a $611 millones (-29,4%)
+    objetivo_declarado: null
+    evento_id: 20261005-5
+    fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    nivel_impacto: directo
+    organizacion_id: ministerio_medio_ambiente
+    nota: Financia iniciativas de organizaciones sociales y comunitarias.
+  - tipo: recorte
+    descripcion: Eliminación de la glosa para implementar el Acuerdo de Escazú
+    fecha: '2026-10-05'
+    monto: null
+    monto_nota: Glosa de hasta $144,5 millones en 2026 sin asignación identificada en 2027
+    objetivo_declarado: null
+    evento_id: 20261005-5
+    fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    nivel_impacto: directo
+    organizacion_id: ministerio_medio_ambiente
+    nota: Primera vez desde la adhesión de 2022 sin fondos reservados, según Escazú Ahora.
+  - tipo: aumento
+    descripcion: Alza del Servicio de Biodiversidad y Áreas Protegidas
+    fecha: '2026-10-05'
+    monto: 4911000000
+    monto_nota: De $17.393 a $22.304 millones
+    objetivo_declarado: null
+    evento_id: 20261005-5
+    fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_medio_ambiente
+    nota: Explica el alza nominal de la cartera total a $98.632 millones.
+  - tipo: recorte
+    descripcion: Rebaja del Fondo para Diagnósticos y Tratamientos de Alto Costo (Ley Ricarte Soto)
+    fecha: '2026-10-07'
+    monto: 22745000000
+    monto_nota: De $189.696 a $166.951 millones (-14,6% real, cerca de $28.000 millones con inflación)
+    objetivo_declarado: Continuidad de las garantías con recursos adicionales en ejecución y reforma por sostenibilidad
+    evento_id: 20261007-6
+    fuente: latercera-2026-10-07-presupuesto-salud-ajuar-ricarte-soto
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Ley 20.850 con 27 problemas de salud garantizados; a agosto de 2026 ya se habían ejecutado $189.683 millones.
+orden_refs:
+  - adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
+  - latercera-2026-10-05-presupuesto-endeudamiento-us25000
+  - eldinamo-2026-10-06-quiroz-rebaja-crecimiento-endeudamiento
+  - latercera-2026-10-01-presupuesto-mineduc-detalle
+  - youtube-2026-10-02-biobio-alertas-recortes-educacion
+  - cooperativa-2026-08-16-poduje-239-minvu-2027
+  - eldinamo-2026-10-05-gobernadores-presionan-quiroz
+  - biobiochile-2026-10-05-kast-voto-cholito-recorte-86
+  - biobiochile-2026-10-05-fin-prodemu-despidos
+  - biobiochile-2026-10-01-yo-elijo-mi-pc-fin-presupuesto-2027
+  - theclinic-2026-10-07-campos-hielo-presupuesto
+  - elmostrador-2026-10-06-subcomision-rechaza-rebaja-servel
+  - ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+  - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
+  - revistatierrabella-2026-10-07-cuidado-alternativo-16879-millones
+  - latercera-2026-10-07-presupuesto-salud-ajuar-ricarte-soto
+  - meganoticias-2026-10-01-wulf-ninez-prioridad-presupuesto
+  - emol-2026-10-01-wulf-ninez-prioridad-presupuesto
+  - mdsf-2026-10-08-wulf-aumento-7-ninez
+  - infinita-2026-10-01-wulf-entrevista-ninez-pobreza
+  - eldesconcierto-2026-10-02-recorte-16-cultura-fondos-libro
+  - ciperchile-2026-10-02-recorte-253-sitios-memoria
+  - radio-uchile-2026-10-07-undurraga-defiende-cultura-101
+  - latercera-2026-10-06-mundo-cultura-critica-recortes
+  - elmostrador-2026-10-06-quiroz-aplanadora-negociar-punto
+  - eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+  - terram-2026-10-06-replica-desconcierto-recorte-59-medio-ambiente
+  - elmostrador-2026-10-06-giro-ambiental-enfria-accion-climatica
+  - diarioconcepcion-2026-10-07-medio-ambiente-sbap-subsecretaria
+  - terram-2026-10-07-escazu-ahora-critica-sin-fondos-defensores
+  - induambiente-2026-10-07-recorte-fiscalizacion-evaluacion-ambiental
+  - eldesconcierto-2026-10-02-sitios-memoria-recorte-253
+  - t13-2026-10-04-boric-festival-muda-memoria
+  - biobiochile-2026-10-08-chomali-ricarte-soto-tecnicismo
+  - 24horas-2026-10-07-27-enfermedades-ricarte-soto
+  - t13-2026-10-07-parlamentarios-critican-28-mil-millones-ricarte
+  - eldesconcierto-2026-10-08-mirosevic-grasa-estado-ricarte
+  - elclarin-2026-10-08-ricarte-soto-presupuesto-agotado
+  - biobiochile-2026-10-01-2-mil-docentes-oposicion-ajuste
+  - biobiochile-2026-10-01-educacion-ajusta-horas-reduccion
+  - latercera-2026-10-01-mineduc-bicentenario-universidades-jardines
+  - elciudadano-2026-10-06-profesores-alerta-aguilar-2000-docentes
+  - infogate-2026-10-02-quiroz-horas-docentes-despidos
+  - radio-uchile-2026-10-05-aguilar-falta-recursos
+  - diarioconcepcion-2026-10-08-biobio-horas-docentes-slep

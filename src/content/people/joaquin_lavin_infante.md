@@ -6,9 +6,13 @@ cargos:
     organizacion: ministerio_educacion
     desde: 2010-03-11
     hasta: 2011-07-18
-  - cargo: Ministro de Desarrollo Social
+  - cargo: Ministro de Planificación
     organizacion: ministerio_desarrollo_social
     desde: 2011-07-18
+    hasta: 2011-10-13 # https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_primer_gobierno_de_Sebasti%C3%A1n_Pi%C3%B1era (Mideplan reemplazado por Desarrollo Social)
+  - cargo: Ministro de Desarrollo Social
+    organizacion: ministerio_desarrollo_social
+    desde: 2011-10-13 # https://es.wikipedia.org/wiki/Anexo:Gabinetes_ministeriales_del_primer_gobierno_de_Sebasti%C3%A1n_Pi%C3%B1era (ministerio creado)
     hasta: 2013-06-09
   - cargo: Alcalde de Las Condes
     desde: 2016-12-06

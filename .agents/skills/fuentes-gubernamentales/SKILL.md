@@ -139,7 +139,7 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 | --- | --- | --- |
 | Presidencia — TA vigente (PortalPDdT) | <https://www.portaltransparencia.cl/PortalPdT/pdtta?codOrganismo=AA001> | Dato vivo: Personal y remuneraciones (Planta, Contrata, Honorarios, Escala), Adquisiciones, Info Presupuestaria. Detalle por JSF — fetch trae categorías, tablas requieren navegador |
 | Presidencia — Transparencia histórica | <https://transparenciaactiva.presidencia.cl/> | Congelado al 12/10/2018 (solo Boric I hacia atrás); el index deriva al PortalPdT. Causa del fallo `fetch`: cadena TLS incompleta (curl_cffi: unable to get local issuer); `fetch-impersonate` también falla — solo `NODE_TLS_REJECT_UNAUTHORIZED=0` para diagnóstico |
-| Presidencia — Dotación de Planta 2014 | <https://transparenciaactiva.presidencia.cl/2014/per_planta.html> | Mismo `fetch` que arriba |
+| Presidencia — Dotación de Planta 2014 | <https://transparenciaactiva.presidencia.cl/2014/per_planta.html> | fetch directo y fetch-impersonate fallan, pero r.jina.ai/ la trae completa (verificado oct-2026 con la tabla de autoridades) |
 | Presidencia — Dotación de Planta 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_planta.html> | Mismo |
 | Presidencia — Remuneraciones 2018 | <https://transparenciaactiva.presidencia.cl/2018/per_remuneraciones.html> | Mismo |
 | Senado — Informe de Transparencia | <https://tramitacion.senado.cl/appsenado/index.php?ac=informeTransparencia&anno=2023&mesid=0&mo=transparencia&tipo=10> | |
@@ -154,22 +154,28 @@ Referencia para sueldos de autoridades, reajuste legal y actualización IPC.
 
 ## Verificación de montos de autoridades (régimen 38 bis)
 
-Cadena: Resolución N°5/2024 → adecuación IPC **+7,8%** (Oficio N°26/2025 Anexo 1) → registro mensual (parlamentarios/SEREMIs cuadran; Presidente/ministros/subsecretarios/gobernadores reportan ~$220–285 mil extra sin desglose público).
+Cadena: Resolución N°5/2024 → adecuación IPC **+7,8%** (Oficio N°26/2025 Anexo 1) → registro mensual. **El "exceso" de ~$220–285 mil en los cargos de confianza ya está explicado: es el gasto de representación**, equivalente al 30% del sueldo base de la EUS del grado, beneficio que el numeral 36 de la Resolución N°5/2024 mantiene vigente. Dieta legal + gasto de representación = monto reportado, y cuadra al peso para Presidente, ministros, subsecretarios y Director Administrativo de Presidencia. Parlamentarios y SEREMIs base no lo llevan porque su tope no lo incluye.
 
 | Fuente | URL | Uso para verificar montos |
 | --- | --- | --- |
-| CFR — Registro Público (bulk) | <https://comision38bis.gob.cl/registro-publico> (descargas al final) | Serie mensual completa: comparar contra Anexo 1 ×1,078 |
-| CFR — Actas de sesiones | <https://comision38bis.gob.cl/actas-de-sesiones> | Criterio de “renta bruta única y total”, cálculo IPC |
+| CFR — Registro Público | <https://comision38bis.gob.cl/registro-publico?reportes_publicos%5Bperiodo%5D=AAAA-MM> | Serie mensual completa. El período va **URL-encoded** entre corchetes; sin él devuelve el mes más reciente (no hay botón de descarga: parsear el HTML por `<thead class="registro-publico">`, que agrupa en secciones Autoridades y Asesores) |
+| CFR — Oficio I N°1 de 2026 (3-mar-2026) | <https://comision38bis.gob.cl/resoluciones-y-publicaciones/oficio-i-n-1-de-la-comision-para-la-fijacion-de-remuneraciones-que> | **Clave del exceso**: gasto de representación = 30% del sueldo base EUS, con ejemplo oficial `$870.325 x 0,3 = $261.098`; viáticos al 12% del grado 1A; asignación de zona con el +40% de la Ley N°19.354; zonas extremas en 4 cuotas; prohíbe compensar horas extra |
+| CFR — Base jurisprudencial | <https://comision38bis.gob.cl/base-jurisprudencial> | Oficios D interpretativos. El listado trae el **título completo** en el `<a>` aunque el slug esté truncado; cada slug sirve el PDF directo (leer con `pdf-extract`). El D N°46 (11-jun-2026) reajusta +1,4% la base de esos beneficios (Ley N°21.806); D N°04 y D N°09 delimitan qué emolumentos quedan fuera |
+| CFR — Resoluciones exentas (monto adicional SEREMIs) | <https://comision38bis.gob.cl/resoluciones-y-publicaciones> | N°5/2026 (Salud, +20%), N°7 y N°8/2026 (Medio Ambiente y Obras Públicas): aplican el 10% o el 20% del resuelvo N°9 de la Resolución N°5/2024 |
+| CFR — Informes periódicos | <https://comision38bis.gob.cl/resoluciones-y-publicaciones> | "Informe sobre el Registro Público" (jun-2025) e "Informe sobre la implementación y alcances del nuevo sistema" (jul-2025–mar-2026); el segundo documenta el esquema de carga doble de marzo 2026 y lista los oficios emitidos |
+| CFR — Actas de sesiones | <https://comision38bis.gob.cl/actas-de-sesiones> | Criterio de "renta bruta única y total", cálculo del IPC |
 | CPLT — Jurisprudencia (amparos) | <https://jurisprudencia.cplt.cl/> | Amparos sobre remuneraciones (reemplaza dictámenes CGR — contralor.cl es stub) |
 | Plataforma SAI (Ley 20.285) | <https://www.consejotransparencia.cl/solicitud-informacionpublica/> | Pedir desglose a Presidencia/CFR/DIPRES (vía decisiva; `consultatransparencia.cl` caído) |
 | Portales de transparencia estatal | <https://tp.cplt.cl/> · <https://www.infotransparencia.cl/> | Agregadores por organismo |
-| Transparencia activa por servicio | dominio `transparencia` de cada servicio (ej. SII, SAG, Junaeb, SEA, DT) | Planillas propias → validan ministros/subsecretarios/jefes de servicio |
-| GOREs — transparencia regional | sitio de cada GORE | Remuneración gobernador/a (dispersión por zona extrema) |
+| Transparencia activa por servicio | dominio `transparencia` de cada servicio (ej. SII, SAG, Junaeb, SEA, DT) | Planillas propias. Cuentan **más** cargos por sobre la renta presidencial que el Registro CFR (los "46 funcionarios" frente a 12 en jun-2026) porque la planilla incluye personal ajeno al artículo 38 bis: son poblaciones distintas, no cifras contradictorias |
+| GOREs — transparencia regional | sitio de cada GORE | Remuneración del gobernador/a (dispersión por zona extrema) |
 | Cámara — Transparencia activa | <https://www.camara.cl/transparencia/transparencia_activa.aspx> | Dietas + asignaciones (WAF 403 a curl; verificar en menú) |
 | Empresas estatales — memorias | BancoEstado, TVN, CNTV, Banco Central | Únicos sobre Presidente ($16–17M): honorarios de directorio |
-| Prensa/fact-checking locales | catálogo `sitemaps/` (`grep -ih '11\.308\|9\.371\|17\.370' sitemaps/<medio>/*.jsonl`) | Cobertura mensual del registro |
+| Prensa/fact-checking locales | catálogo `sitemaps/` (`rg -i -uu '11\.308\|9\.371\|17\.370' sitemaps/websites/<medio>/`) | Cobertura mensual del registro |
 
-Prioridad exceso: (1) SAI, (2) jurisprudencia CPLT, (3) actas CFR. Declaraciones de patrimonio sin portal verificado (`declaraciondeactivos.cl` caído).
+**Gasto de representación medido contra el Registro (jun-2026)**: Presidente $237.970 · ministros $261.098 · subsecretarios $251.171 · Director Administrativo de Presidencia $284.489. SEREMI con monto autorizado: +10% = $5.014.707 y +20% = $5.464.934, sobre la base de $4.554.112.
+
+Pendientes conocidos: (a) los topes de los asesores se fijan como porcentaje de la remuneración de la autoridad asesorada (Coordinador de Asesores 85%, Asesor Estratégico 90%), pero la **autorización del cupo de excepción que exige DIPRES + visación CFR no se publica** — es lo que hay que pedir por SAI; (b) el Registro marca "NO APLICA" en cargos con cartera dupla (p. ej. el biministro de Minería, cuya renta se imputa en Economía) y no explica los meses atípicos puntuales.
 
 ## Referencias de investigación (no prensa)
 
@@ -208,6 +214,6 @@ Validado con `node scripts/validate/validate-fuentes.mjs` (60 URLs, timeout 12s,
 - **OK 46** — `gob.cl`, `hacienda.cl`, `economia.gob.cl`, `energia.gob.cl`, `interior.gob.cl`, `minjusticia.gob.cl`, `minsal.cl`, `mintrab.gob.cl`, `desarrollosocialyfamilia.gob.cl`, `minmujeryeg.gob.cl`, `mineduc.cl`, `cultura.gob.cl`, `mindep.cl`, `mop.gob.cl/noticias/`, `minvu.gob.cl`, `mtt.gob.cl`, `bienesnacionales.cl`, `minrel.gob.cl`, `minagri.gob.cl`, `mma.gob.cl`, `minciencia.gob.cl`, `senapred.cl`, `sii.cl`, `sernac.cl/`, `tgr.cl`, `aduana.cl/`, `cne.cl`, `sag.gob.cl`, `bcn.cl/*`, `senado.cl/*`, `portaltransparencia.cl/`, `comision38bis.gob.cl/*`, `calculadoraipc.ine.gob.cl`, `ine.gob.cl/.../metodología.pdf`, `jurisprudencia.cplt.cl`, `consejotransparencia.cl/*`, `tp.cplt.cl`, `infotransparencia.cl`, `gdeltproject.org`, `meganoticias.cl/hemeroteca`, `github.com/pisanvs/ley-chile`.
 - **WAF 403 esperado 4** — `camara.cl/*` (sesiones, votaciones, transparencia) bloquea `fetch` Node/curl; usar `fetch-impersonate` o verificar en menú (documentado).
 - **Reemplazos 3** — `mop.gob.cl/prensa/` → `noticias/`, `sernac.cl/portal/noticias/` → `sernac.cl/`, `aduana.cl/.../taxport_1___1.html` → `aduana.cl/` (arriba). `leyes.pisanvs.cl/api/mcp` da 404 por `fetch` GET — es endpoint MCP, no página; usar tool MCP (no es fallo).
-- **Errores de red 9** — `prensa.presidencia.cl*`, `msgg.gob.cl`, `minmineria.gob.cl` (webfetch OK, `fetch` Node falla — usar `fetch-impersonate`), `ispch.cl`, `transparenciaactiva.presidencia.cl*` (4) — no responden a `fetch` Node desde esta red; pueden requerir `fetch-impersonate` o red chilena. Se mantienen con nota y fallback (`gob.cl`, `portaltransparencia.cl`).
+- **Errores de red 9** — `prensa.presidencia.cl*`, `msgg.gob.cl`, `minmineria.gob.cl` (webfetch OK, `fetch` Node falla — usar `fetch-impersonate`), `ispch.cl`, `transparenciaactiva.presidencia.cl*` (4, salvo dotacion 2014 via r.jina.ai) — no responden a `fetch` Node desde esta red; pueden requerir `fetch-impersonate` o red chilena. Se mantienen con nota y fallback (`gob.cl`, `portaltransparencia.cl`).
 
 Para re-validar: `node scripts/validate/validate-fuentes.mjs` (repite el chequeo; actualiza notas y handoff si cambias URLs).

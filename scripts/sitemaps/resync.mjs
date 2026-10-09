@@ -25,6 +25,8 @@
  *   pnpm run sitemaps-resync -- --stale 12   # caché más corto (news frescas)
  *   pnpm run sitemaps-resync -- --days 7     # override: solo contenido reciente (sin
  *                                            # recargar el catálogo completo)
+ *   pnpm run sitemaps-resync -- --youtube       # prensa + canales YT guardados
+ *   pnpm run sitemaps-resync -- --youtube-only  # solo los canales YT guardados
  */
 
 import { readFileSync } from 'node:fs';
@@ -52,6 +54,8 @@ const stale = staleArg >= 0 && args[staleArg + 1] ? args[staleArg + 1] : '24';
 const sinceArg = args.indexOf('--since');
 const daysArg = args.indexOf('--days');
 const explicitWindow = sinceArg >= 0 || daysArg >= 0;
+const wantYoutube = args.includes('--youtube') || args.includes('--yt');
+const youtubeOnly = args.includes('--youtube-only');
 const syncExtra = explicitWindow
   ? [
       ...(sinceArg >= 0 ? ['--since', args[sinceArg + 1]] : []),
@@ -89,26 +93,46 @@ if (enManifest.length === 0) {
 // sitemap y quedaron con articulos: 0). Si se pasaran tal cual, sitemaps/sync.mjs
 // abortaría completo con "Medio desconocido". Se omiten con aviso.
 const medios = enManifest.filter((k) => !!MEDIA[k]);
-// Los canales de YouTube (CHANNELS) no entran al resync diario (tabs de miles
+// Los canales de YouTube (CHANNELS) no entran al resync diario salvo --youtube (tabs de miles
 // de videos; refresh bajo demanda con `pnpm run sitemaps-sync -- <slug>`).
 // Se omiten con aviso, no como huérfanos.
-const ytOmitidos = enManifest.filter((k) => !MEDIA[k] && !!CHANNELS[k]);
-if (ytOmitidos.length > 0) {
-  console.warn(`⏭️  ${ytOmitidos.length} canal(es) YouTube omitidos (refresh bajo demanda, no diario):`);
-  console.warn(`   ${ytOmitidos.join(', ')}`);
+const ytGuardados = enManifest.filter((k) => !!CHANNELS[k]);
+const withYoutube = wantYoutube || youtubeOnly;
+if (!withYoutube && ytGuardados.length > 0) {
+  console.warn(`⏭️  ${ytGuardados.length} canal(es) YouTube omitidos (usa --youtube para incluirlos):`);
+  console.warn(`   ${ytGuardados.join(', ')}`);
 }
 const huerfanos = enManifest.filter((k) => !MEDIA[k] && !CHANNELS[k]);
 if (huerfanos.length > 0) {
   console.warn(`⚠️  ${huerfanos.length} slug(s) del manifest ya no están en el registro MEDIA de scripts/sitemaps/media.mjs; se omiten:`);
   console.warn(`   ${huerfanos.join(', ')}`);
 }
-if (medios.length === 0) {
+if (medios.length === 0 && !(youtubeOnly && ytGuardados.length > 0)) {
   console.error('❌ Ningún medio del manifest está registrado en scripts/sitemaps/media.mjs.');
   process.exit(1);
 }
 
-console.log(`Resync incremental (${explicitWindow ? 'ventana explícita' : 'desde la última sync por medio'}) de: ${medios.join(', ')}`);
-run('sync.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale, ...syncExtra]);
+if (youtubeOnly) {
+  if (ytGuardados.length === 0) {
+    console.error('❌ No hay canales YouTube guardados en el manifest. Agrégalos con: pnpm run sitemaps-sync -- <slug>');
+    process.exit(1);
+  }
+  // Sin ventana temporal: en canales --since/--days se ignora (el tab va de
+  // nuevo a viejo y el merge cubre); pasarla solo generaría un aviso por canal.
+  console.log(`Resync YouTube (${ytGuardados.length} canal(es)): ${ytGuardados.join(', ')}`);
+  run('sync.mjs', [...ytGuardados, '--no-delay']);
+} else {
+  console.log(`Resync incremental (${explicitWindow ? 'ventana explícita' : 'desde la última sync por medio'}) de: ${medios.join(', ')}`);
+  run('sync.mjs', [...medios, '--incremental', '--no-delay', '--stale', stale, ...syncExtra]);
+  if (withYoutube) {
+    if (ytGuardados.length === 0) {
+      console.warn('⚠️  --youtube pedido pero no hay canales YouTube guardados en el manifest.');
+    } else {
+      console.log(`Resync YouTube (${ytGuardados.length} canal(es)): ${ytGuardados.join(', ')}`);
+      run('sync.mjs', [...ytGuardados, '--no-delay']);
+    }
+  }
+}
 run('index.mjs');
 run('backup.mjs');
 console.log('\n✅ Resync completo (catálogo, README y backup actualizados).');

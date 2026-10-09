@@ -23,7 +23,7 @@ Base de conocimiento estatica sobre eventos de gobierno en Chile. Astro 7 + Tail
 src/
   content/events/YYYY/MM/YYYYMMDD-N.md
   content/people/*.md, organizations/*.md, topics/*.md, sources/*.md, cifras/*.md ← colecciones Obsidian (markdown puro, sin YAML monolito)
-  data/  colectivos.yaml, sectores.yaml, sueldos.yaml ← única excepción YAML (arrays planos / sueldos, no migrado a md)
+  data/  colectivos.yaml, sectores.yaml, sueldos.yaml, presupuesto/*.yaml ← única excepción YAML (arrays planos / sueldos / ejercicios presupuesto, no migrado a md)
   lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, personStats.ts, remarkWikiLinks.mjs
   components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge, Person{ActivityChart,Network,StatTiles,TopicMix,CargoTimeline,QuoteItem,EventFilters}
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
@@ -39,7 +39,7 @@ sitemaps/  catalogo local de prensa y YouTube (JSONL por medio/año en websites/
 | Temas | `src/content/topics/*.md` | `getTopicsRegistry()` |
 | Colectivos / Sectores | `src/data/colectivos.yaml` / `src/data/sectores.yaml` | array plano (excepción YAML) |
 
-`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts`/`queries.ts` leen `.md` frontmatter directo, sin fallback (monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
+`people`/`organizations`/`topics`/`sources`/`cifras` son colecciones Astro (`src/content.config.ts` + `glob`); `registry.ts`/`queries.ts` leen `.md` frontmatter directo, sin fallback (monolito 2026-08 eliminado). `colectivos.yaml`/`sectores.yaml`/`sueldos.yaml`/`presupuesto/*.yaml` se leen YAML directo (excepción). `extractEntities.ts` extrae wikilinks del `.md` crudo con regex cacheada.
 
 ## Checklist obligatorio antes de tocar `src/content/**` (`events`/`people`/`sources`/…)
 
@@ -96,10 +96,12 @@ Crear muchas entidades/fuentes: verificar `git status` antes (edicion concurrent
 ## Build y verificacion
 
 ```bash
-pnpm run build    # validate + astro build (~1m40s)
+pnpm run build    # validate + astro build (~4m30s, 15800+ páginas)
 pnpm run dev      # preview
 pnpm run deploy   # build local + wrangler pages deploy dist --project-name gobierno-vault --branch main
 ```
+
+Auditoría de cobertura (puntos ciegos: prensa vs vault vs oficial): `pnpm run coverage-audit -- --from YYYY-MM-DD --to YYYY-MM-DD` — ver `.agents/skills/cobertura/SKILL.md`.
 
 Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (Astro no aborta ante wikilink roto, deja pagina sin contenido). Detalle (CRLF, concurrency, pnpm, Cloudflare, Tailwind/daisyUI) en `.agents/skills/build-deploy/SKILL.md`.
 
@@ -136,6 +138,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | Tocar timeline/rail, grafo, filtros `/events`, View Transitions, TTS, estilos | `.agents/skills/frontend/SKILL.md` |
 | Build falla, validate, deploy, pnpm, Cloudflare, Tailwind | `.agents/skills/build-deploy/SKILL.md` |
 | Seguimiento con IDs `S/A/V-YYYY-NNN` por año + catálogo | `.agents/skills/seguimiento/SKILL.md` |
+| Puntos ciegos / sesgo de agenda (qué pasó bajo el radar de la prensa) | `.agents/skills/cobertura/SKILL.md` |
 | Web research con Firecrawl (search/scrape/crawl/agent, 1000 créditos) — alternativa a fetch-impersonate | `firecrawl` CLI (`firecrawl search/scrape --help`, `firecrawl --status`) + MCP `<https://mcp.firecrawl.dev/v2/mcp-oauth>` — ver `.agents/skills/tools/SKILL.md` para fallback |
 | Respaldo offline `.gvault` | `.agents/skills/backup/SKILL.md` |
 
@@ -157,6 +160,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Nuevo tipo de evento/relacion | `content.config.ts`, `editorData.ts`, `lib/eventTypes.ts`, `lib/relations.ts` |
 | Nueva entidad/fuente/tema | `src/content/people\|organizations\|sources\|topics\|cifras/*.md`, `.agents/skills/data-yaml/SKILL.md` |
 | Tocar `/sueldos` | `src/data/sueldos.yaml`, `src/lib/sueldos.ts` |
+| Tocar `/presupuesto` | `src/data/presupuesto/AAAA.yaml` (un archivo por ejercicio), `src/lib/presupuesto.ts` (deriva `sankey`/`sankeyGlobal`), `src/components/BudgetSankey.astro` + `BudgetMovementCard.astro` |
 | Fuente gubernamental directa | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento `S/A/V-YYYY-NNN` | `TAREAS/SEGUIMIENTO/YYYY.md`, `TAREAS/SEGUIMIENTO_INDEX.md`, `.agents/skills/seguimiento/SKILL.md` |
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |

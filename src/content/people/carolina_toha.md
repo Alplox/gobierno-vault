@@ -5,7 +5,7 @@ organizacion: ministerio_interior
 cargos:
   - cargo: Ministra Secretaria General de Gobierno
     organizacion: segegob
-    desde: 2009-03-13 # https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Carolina_Toh%C3%A1_Morales (D.O. 14.03.2009)
+    desde: 2009-03-12 # https://www.emol.com/noticias/nacional/2009/03/12/348547/carolina-toha-es-la-primera-mujer-que-asume-la-voceria-de-gobierno.html (asume desde hoy; juramento 12-mar) + https://archivo.elclarin.cl/2009/03/12/bachelet-realiza-sorpresivo-cambio-en-ministerios-clave/ (juramento en Montt-Varas)
     hasta: 2009-12-14 # https://www.bcn.cl/historiapolitica/resenas_parlamentarias/wiki/Carolina_Toh%C3%A1_Morales
   - cargo: Ministra del Interior y Seguridad Pública
     organizacion: ministerio_interior

@@ -225,6 +225,23 @@ try {
   // sueldos.yaml ausente o ilegible: no aporta referencias (los errores propios
   // de esa página se detectan en el build de Astro).
 }
+// Fuentes referenciadas desde src/data/presupuesto/*.yaml (página /presupuesto):
+// cuentan como citadas. Estructura: orden_refs[] + ley.fuente + hitos[].fuente +
+// variaciones[].fuente + movimientos[].fuente.
+try {
+  const dirPresupuesto = join(process.cwd(), 'src', 'data', 'presupuesto');
+  for (const f of readdirSync(dirPresupuesto).filter((x) => x.endsWith('.yaml'))) {
+    const ej = YAML.parse(readFileSync(join(dirPresupuesto, f), 'utf8'));
+    for (const id of ej.orden_refs ?? []) pushRef(id);
+    pushRef(ej.ley?.fuente);
+    for (const h of ej.hitos ?? []) pushRef(h.fuente);
+    for (const v of ej.variaciones ?? []) pushRef(v.fuente);
+    for (const m of ej.movimientos ?? []) pushRef(m.fuente);
+  }
+} catch {
+  // sin ejercicios o ilegibles: no aportan referencias (los errores propios
+  // de esa página se detectan en el build de Astro).
+}
 for (const id of validSourceIds) {
   if (!referencedSources.has(id)) {
     console.error(`✖ fuente huerfana en src/content/sources/*.md: "${id}" (no citada en ningun evento)`);

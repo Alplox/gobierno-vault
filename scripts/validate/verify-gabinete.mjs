@@ -32,10 +32,15 @@ const PAGINAS = [
   { file: 'pinera2.txt', titulo: 'Anexo:Gabinetes ministeriales del segundo gobierno de Sebastián Piñera', secciones: [{ gobierno: 'pinera2', re: 'Ministros' }] },
   { file: 'boric.txt', titulo: 'Anexo:Gabinetes ministeriales del gobierno de Gabriel Boric', secciones: [{ gobierno: 'boric', re: 'Ministros' }] },
   { file: 'kast.txt', titulo: 'Anexo:Gabinetes ministeriales del gobierno de José Antonio Kast', secciones: [{ gobierno: 'kast', re: '.' }] },
+  // Ríos: anexo compacto (varios ministros por celda, solo años) — las filas salen
+  // sin fechas y sirven como roster: el vault aporta la fecha (bucket aportaFecha),
+  // lo ausente en el vault va a soloWiki. Ver parseTabla multi-nombre abajo.
+  { file: 'rios.txt', titulo: 'Anexo:Gabinetes ministeriales del gobierno de Juan Antonio Ríos', secciones: [{ gobierno: 'rios', re: 'Lista de Ministros' }] },
 ];
 
 const GOBIERNOS = [
-  ['aguirre_cerda', '1938-12-24', '1941-11-25'], ['gonzalez_videla', '1946-11-03', '1952-11-03'],
+  ['aguirre_cerda', '1938-12-24', '1941-11-25'], ['rios', '1942-04-02', '1946-11-03'],
+  ['gonzalez_videla', '1946-11-03', '1952-11-03'],
   ['ibanez2', '1952-11-03', '1958-11-03'], ['alessandri_jorge', '1958-11-03', '1964-11-03'],
   ['frei_mtva', '1964-11-03', '1970-11-03'], ['allende', '1970-11-03', '1973-09-11'],
   ['pinochet', '1973-09-11', '1990-03-11'],
@@ -46,7 +51,11 @@ const GOBIERNOS = [
   ['kast', '2026-03-11', null],
 ];
 
-const MESES = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
+const MESES = { enero: 1, febrero: 2, marzo: 3, abril: 4, mayo: 5, junio: 6, julio: 7, julo: 7, agosto: 8, septiembre: 9, setiembre: 9, octubre: 10, noviembre: 11, diciembre: 12 };
+// julo = typo del anexo Concertación ("14 de julo de 2006", Provoste); setiembre = variante real.
+// Typos del anexo Ríos que romperían el match por nombre (se aplican al nombreNorm wiki).
+const ANEXO_FIX = { 'pedro pobrete': 'pedro poblete vera' };
+// "Pedro Pobrete" es typo por Pedro Poblete Vera en el anexo Ríos (Tierras 1942).
 
 function norm(s) {
   return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9 ]/g, ' ').replace(/\s+/g, ' ').trim();
@@ -84,11 +93,12 @@ function parseTabla(tabla, gobierno) {
     if (l.trim().startsWith('!')) header += ' ' + l.trim().replace(/^!/, '');
     else if (header && !l.trim().startsWith('!')) break;
   }
-  if (!/ministerio|ministros/i.test(header) || !/nombre|titular/i.test(header) || /subsecretar/i.test(header)) return [];
+  if (!/ministerio|ministros?\b/i.test(header) || !/nombre|titular/i.test(header) || /subsecretar/i.test(header)) return [];
   let ministerioActual = null;
   const out = [];
   for (const rawRow of tabla.split(/^\|-.*$/m)) {
-    const lineas = rawRow.split('\n').filter((l) => l.trim().startsWith('|'));
+    const todas = rawRow.split('\n');
+    const lineas = todas.filter((l) => l.trim().startsWith('|'));
     if (!lineas.length) continue;
     const fila = lineas.map((l) => l.trim().replace(/^\|/, '')).join(' || ');
     const celdas = fila.split('||').map((c) => c.trim()).filter(Boolean);
@@ -105,10 +115,29 @@ function parseTabla(tabla, gobierno) {
       ministerioActual = ministerio;
     }
     // nombres con sufijo de partido "(PDC)", "(Militar)", etc.
-    const nombre = limpiar(celdas[idx] ?? '').replace(/\s*\((?:pdc|pcch|ps|psd|pr|pri|pir|mapu|ic|api|ind\.?|militar|frap|padena|usopo)\)\s*$/i, '').trim();
-    if (!nombre || !ministerio) continue;
-    const fechas = extraerFechas(celdas.slice(idx + 1).join(' '));
-    out.push({ gobierno, ministerio: norm(ministerio), nombre, nombreNorm: norm(nombre), desde: fechas[0] ?? null, hasta: fechas.length > 1 ? fechas[fechas.length - 1] : null });
+    // v6 Ríos: la celda de nombre trae VARIOS ministros separados por <br />
+    // ("[[Raúl Morales Beltramí]] (1942-1943)<br />[[Julio Allard Pinto]] (1943)...").
+    // Se emite una fila por ministro (sin fechas: el anexo solo da años) y se
+    // recorta el rango anual final. En anexos normales la celda tiene un solo
+    // nombre y el comportamiento no cambia.
+    const partes = (celdas[idx] ?? '').split(/<br\s*\/?>/i);
+    for (const parte of partes) {
+      const nombre = limpiar(parte).replace(/\s*\(\d{4}[^)]*\)\s*$/, '').replace(/\s*\((?:pdc|pcch|ps|psd|pr|pri|pir|mapu|ic|api|ind\.?|militar|frap|padena|usopo)\)\s*$/i, '').trim();
+      if (!nombre || !ministerio) continue;
+      const fechas = extraerFechas(celdas.slice(idx + 1).join(' '));
+      const fila = { gobierno, ministerio: norm(ministerio), nombre, nombreNorm: ANEXO_FIX[norm(nombre)] ?? norm(nombre), desde: fechas[0] ?? null, hasta: fechas.length > 1 ? fechas[fechas.length - 1] : null };
+      out.push(fila);
+      // v5: líneas de continuación del periodo (segundo tramo tras un rowspan: no
+      // empiezan con `|` y el parser las perdía). Se limpian refs antes de extraer
+      // para no heredar fechas de la nota al pie. Cada tramo → fila propia con el
+      // mismo ministerio+nombre, para que los splits del vault por renombre matcheen.
+      for (const l of todas) {
+        const t = l.trim();
+        if (!t || t.startsWith('|') || t.startsWith('!') || t.startsWith('{|') || t.startsWith('|}')) continue;
+        const f = extraerFechas(limpiar(t));
+        if (f.length) out.push({ ...fila, desde: f[0], hasta: f.length > 1 ? f[f.length - 1] : null });
+      }
+    }
   }
   return out;
 }
@@ -184,17 +213,39 @@ async function main() {
   console.log(`Vault: ${vault.length} nombramientos fechados | Wikipedia: ${wiki.length} filas\n`);
 
   let exactos = 0;
-  const difFecha = [], soloVault = [];
+  const difFecha = [], soloVault = [], sinFilaCartera = [], aportaFecha = [];
   const usados = new Set();
+  // v5.1: matching con conciencia de cartera (el anexo trae a la persona en otra
+  // cartera, o sin fechas: van a buckets informativos, no a diffs).
+  const STOP = new Set(['ministro', 'ministra', 'biministro', 'biministra', 'ex', 'de', 'del', 'la', 'las', 'el', 'los', 'en', 'y', 'e', 'chile', 'nacional', 'estado', 'secretaria', 'secretario', 'general', 'subrogante', 'director', 'directora', 'publico', 'publica', 'social']);
+  // Siglas de secretarías → token de cartera (el anexo escribe el nombre extendido).
+  // fomento→obras: el anexo Ríos trae "Ministro de Fomento" y el vault registra
+  // OO.PP. (Fomento se dividió en ago-1942) — sin el alias caen a sinFilaCartera.
+  const ALIAS = { segegob: ['gobierno'], segpres: ['presidencia'], fomento: ['obras'] };
+  const tokens = (s) => {
+    const base = norm(s).split(' ').filter((t) => t && !STOP.has(t));
+    const out = new Set(base);
+    for (const t of base) if (ALIAS[t]) for (const x of ALIAS[t]) out.add(x);
+    return out;
+  };
+  const mismaCartera = (cargo, min) => {
+    const a = tokens(cargo), b = tokens(min);
+    for (const t of a) if (b.has(t)) return true;
+    return false;
+  };
   for (const v of vault) {
     const cand = wiki.map((w, i) => ({ w, i })).filter(({ w }) => w.gobierno === v.gob && nombresCompatibles(w.nombreNorm, v.nombreNorm));
     if (!cand.length) { soloVault.push(v); continue; }
-    const m = cand.find(({ w }) => w.desde === v.desde && (w.hasta ?? null) === v.hasta)
-      ?? cand.find(({ w }) => w.desde === v.desde)
-      ?? cand[0];
+    const misma = cand.filter(({ w }) => mismaCartera(v.cargo, w.ministerio));
+    const pool = misma.length ? misma : cand;
+    const m = pool.find(({ w }) => w.desde === v.desde && (w.hasta ?? null) === v.hasta)
+      ?? pool.find(({ w }) => w.desde === v.desde)
+      ?? pool[0];
     usados.add(m.i);
     const w = m.w;
     if (w.desde === v.desde && (w.hasta ?? null) === v.hasta) { exactos++; continue; }
+    if (w.desde == null && w.hasta == null) { aportaFecha.push({ v, w }); continue; }
+    if (!misma.length) { sinFilaCartera.push({ v, w }); continue; }
     difFecha.push({ v, w });
   }
   const soloWiki = wiki.filter((_, i) => !usados.has(i));
@@ -208,10 +259,20 @@ async function main() {
   console.log(`\nEXACTOS: ${exactos}/${vault.length}`);
 
   if (difFecha.length) {
-    console.log(`\n=== DIFERENCIA DE FECHAS (${difFecha.length}) — revisar manualmente; muchas son artefactos de rowspan del parser ===`);
+    console.log(`\n=== DIFERENCIA DE FECHAS (${difFecha.length}) — misma persona y cartera, revisar ===`);
     for (const { v, w } of difFecha) {
       console.log(`[${v.gob}] ${v.id} (${v.cargo}) | vault: ${v.desde} → ${v.hasta ?? 'VIGENTE'} | wiki: ${w.desde} → ${w.hasta ?? 'VIGENTE'} [${w.ministerio}]`);
     }
+  }
+  if (sinFilaCartera.length) {
+    console.log(`\n=== SIN FILA EN ANEXO PARA LA CARTERA (${sinFilaCartera.length}) — el anexo trae a la persona en otra cartera o fusionada; vault con fuente propia ===`);
+    for (const { v, w } of sinFilaCartera.slice(0, 40)) console.log(`[${v.gob}] ${v.id} | ${v.cargo} | ${v.desde} → ${v.hasta ?? 'VIGENTE'} (anexo la trae en: ${w.ministerio})`);
+    if (sinFilaCartera.length > 40) console.log(`  … y ${sinFilaCartera.length - 40} más`);
+  }
+  if (aportaFecha.length) {
+    console.log(`\n=== VAULT APORTA FECHA (${aportaFecha.length}) — fila del anexo sin fechas; vault fechado con fuente ===`);
+    for (const v of aportaFecha.slice(0, 40)) console.log(`[${v.v.gob}] ${v.v.id} | ${v.v.cargo} | ${v.v.desde} → ${v.v.hasta ?? 'VIGENTE'}`);
+    if (aportaFecha.length > 40) console.log(`  … y ${aportaFecha.length - 40} más`);
   }
   if (soloVault.length) {
     console.log(`\n=== SOLO EN VAULT (${soloVault.length}) — sin match por nombre en el anexo ===`);

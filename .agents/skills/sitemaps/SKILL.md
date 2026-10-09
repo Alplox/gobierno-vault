@@ -313,7 +313,7 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
 | Comando | Qué hace |
 | --- | --- |
 | `pnpm run sitemaps-sync -- <medio>...` | robots → sitemap_index → sub-sitemaps → dedupe → JSONL por medio/año. Acepta varios medios en una llamada (evita el throttle y deja un solo `manifest.actualizado`) |
-| `pnpm run sitemaps-resync` | Resync diario: merge incremental desde la `ultima_sync` de cada medio, más README y backup. Solo los medios ya presentes en `_manifest.json`; omite con aviso los slugs que ya no están en `MEDIA` |
+| `pnpm run sitemaps-resync` | Resync diario: merge incremental desde la `ultima_sync` de cada medio, más README y backup. Solo los medios ya presentes en `_manifest.json`; omite con aviso los slugs que ya no están en `MEDIA`. Flags: `--youtube` suma los canales YT guardados (segunda pasada sin ventana, que en canales se ignora), `--youtube-only` solo ellos |
 | `pnpm run sitemaps-index` | Regenera `sitemaps/README.md` y `sitemaps/MEDIOS.md` |
 | `pnpm run sitemaps-watchlist` | Regenera `TAREAS/tareas_sitemap.md` con el estado de cada sitio (✅ catálogo / 🟡 en uso / 🔒 sin sitemap / ⬜ pendiente) |
 | `pnpm run sitemaps-probe -- <dominio>...` | Sondea candidatos y avisa si el dominio ya está catalogado o ya fue descartado (ver alta de medio) |
@@ -389,6 +389,7 @@ Escalera cuando eso no basta, en orden:
    aunque el slug no sea adivinable. Los sub-sitemaps suelen ordenar por fecha, así que las
    2-3 primeras páginas cubren lo reciente. Ojo: un slug adivinado que da 301 a la home no
    es evidencia de nada.
+   **BioBioChile: el news-sitemap que declara el robots está congelado en 2025 — el vivo es static/google-news-sitemap.xml** (~376 locs con la URL exacta de cada nota del día, incluidas las especiales bbcl-investiga). Fue la vía para localizar las notas del aluvión de Las Condes del 8-9-oct-2026 cuando el JSONL del catálogo apenas llegaba al 30-sep.
 3. **`websearch` con el titular entre comillas** (y `site:` si hace falta). Es el sustituto
    cuando DDG bloquea: `html.duckduckgo.com` respondió 403 en sep-2026, pero `websearch`
    recuperó las URL exactas de T13, El País, Mala Espina y Chilevisión. Sin DDG, la forma
@@ -448,7 +449,7 @@ pnpm run sitemaps-sync -- yt_t13 --exact-id a1b2c3,d4e5f6  # videos puntuales a 
 pnpm run sitemaps-sync -- yt_t13 --no-date-fetch          # no rescata fechas faltantes
 ```
 
-`pnpm run sitemaps-resync` los salta (refresh bajo demanda, no diario), y
+`pnpm run sitemaps-resync` los salta salvo `--youtube` / `--youtube-only` (refresh bajo demanda, no diario), y
 `pnpm run sitemaps-sync -- --all` cubre solo la prensa (los canales van explícitos).
 En `README.md` y `MEDIOS.md` salen en tabla propia, no mezclados con la prensa.
 
@@ -482,6 +483,9 @@ Marcadores de fecha: `s:"yt"` = estimada del tab, `s:"yt-exact"` = real verifica
   vuelve a ser estimada). El log distingue el tipo: `177 mejorados (177 solo de título)`.
 - **Anti-bot**: si yt-dlp devuelve 429 o "sign in to confirm", el run aborta sin escribir
   nada (nunca un parcial silencioso) y `ultima_sync` no avanza.
+- **Progreso**: cada pasada del tab loguea inicio/fin con conteo y tiempo, más heartbeat
+  cada 45 s (`en curso, X transcurridos`) mientras yt-dlp descarga; ver esa línea es
+  espera normal, no cuelgue. En corridas batch `sync.mjs` marca `[i/N]` por medio.
 
 ### Cómo encontrar canales: IDs curados, nunca handles adivinados
 

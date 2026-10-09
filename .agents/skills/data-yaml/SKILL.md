@@ -34,12 +34,27 @@ Sin cifras ni entidades hardcodeadas:
 - Referencias por ID de `src/content/sources/*.md` (`orden_refs` fija la numeración visible; `<SRef id="..."/>` resuelve el ID contra `getSourcesRegistry()` y evita desalineación al reordenar). `presidentes[].refs` y `vigencias[].fuente` también son IDs; toda fuente usada debe estar en `orden_refs`.
 - `presidentes[].fecha_label` contiene únicamente el mes/año de referencia; nunca nombres de medios ni notas de fuente. La atribución vive en `refs[]` y `vigencias[].fuente`, y se renderiza como `SRef`/enlace a la fuente original. Si hace falta una precisión metodológica, va en `detalle`.
 - Cada monto presidencial lleva `vigencias[]` (monto + fuente + descripción; opcionalmente `desde`, `hasta` y `tipo`) anti-stale; derivados (ratios, IPC, promedios y brechas) se calculan en `src/lib/sueldos.ts`.
-- `serie_registro_publico.puntos[]` es la serie mensual bruta del Presidente desde 2025-01; `tipo` distingue observado, bono y proporcional. `ipc.ago_2026` es el destino de los ajustes y `registro_presidente_julio_2026` conserva la última lectura CFR.
+- `serie_registro_publico.puntos[]` es la serie mensual bruta del Presidente desde 2025-01; `tipo` distingue observado, bono y proporcional, y `transicion_boric_marzo` conserva el proporcional de Boric de mar-2026 (dos presidentes ese mes). `ipc.sep_2026` es el destino de los ajustes y `registro_presidente_julio_2026` conserva la última lectura CFR.
+- `segundo_piso.lectura_registro_julio` actualiza los 5 cargos a la última lectura mensual del Registro (misma fuente CFR); `otras_autoridades.filas[]` (`cargo`, `monto_modal`, `cobertura`, `detalle`) cubre Congreso, ministros, subsecretarios, SEREMIs, delegados, gobernadores, superintendentes y BancoEstado con la misma fuente.
 - `indicadores[]` usa `ipc_inicio`/`ipc_fin` y sus fechas; la variación se deriva entre endpoints, sin producto de tasas anuales. Para mandatos anteriores a la serie BDE publicada, los endpoints pueden ser `null`.
 - `ingresos_esi`, `costo_vida`, `imm_2026` y `casen_2024` conservan explícitamente año/periodo, unidad, definiciones y fuente. La página mantiene separados ingreso individual neto, ingreso de hogar, umbral por persona equivalente y remuneración bruta.
 - YAML se sirve en `/data/sueldos.yaml`.
 
 Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.
+
+### Presupuesto (`/presupuesto`)
+
+Mismo patrón que Sueldos pero un archivo por ejercicio (un solo YAML gigante sería ineditable):
+
+- `src/data/presupuesto/AAAA.yaml` por año: `{ ano, gobierno, estado, estado_label, ley:{nombre,fuente,nota?}, totales:{inicial,vigente,ejecutado,saldo} (cada uno `{monto|null,nota?,fuente?}`), hitos[] ({etiqueta,valor,fuente}), variaciones[] ({alcance,variacion_texto,ministerio_id|null,nivel_impacto,fuente,evento_id|null,nota?}), movimientos[] ({tipo,descripcion,fecha?,monto|null,monto_nota?,objetivo_declarado|null,evento_id|null,fuente,nivel_impacto,nota?}), orden_refs[] }`.
+- `nivel_impacto: directo | indirecto | institucional` describe el canal (ciudadanía / vía terceros / funcionamiento interno), nunca el mérito.
+- `objetivo_declarado: null` = recorte sin objetivo ni destino publicado (badge factual, no editorial).
+- `src/lib/presupuesto.ts` (`getPresupuesto()`) valida y falla el build si: fuente no está en `orden_refs` o no existe en `sources/*.md`, `ministerio_id`/`organizacion_id` sin ficha org, `evento_id` sin archivo de evento, monto no positivo, `nivel_impacto` fuera del enum.
+- `scripts/validate/validate.mjs` cuenta las fuentes de `presupuesto/*.yaml` como citadas (igual que `sueldos.yaml`).
+- Solo cifras publicadas por la fuente oficial; lo no publicado es `monto: null` con `nota`, nunca estimado.
+- `getPresupuesto()` deriva además los flujos del diagrama: `PresupuestoFlujo` (movimiento con monto, `ancla` `mov-AAAA-orden`, `objetivo`/`sinObjetivo`, `montoTexto`), `PresupuestoPendiente` (`motivo: sin_monto | en_revision`) y `PresupuestoSankey` por ejercicio (`Ejercicio.sankey`) más el global (`sankeyGlobal`). `Movimiento.orden` es la posición 1..n dentro de su ejercicio y da el ancla de la tarjeta.
+- **Al Sankey solo entran `tipo: recorte` (retiro) y `tipo: aumento` (inyección) con monto publicado.** Un `revision_programas` es una recomendación, no un ajuste ejecutado: dibujarlo como salida afirmaría algo que no ocurrió. Esas filas y las sin monto se listan aparte como "fuera del flujo".
+- Badges y colores por tipo/impacto viven en `TIPO_PRESUPUESTO_BADGE` / `IMPACTO_PRESUPUESTO_BADGE` / `TIPO_PRESUPUESTO_COLOR` (`src/lib/presupuesto.ts`), para que la tarjeta y la cinta del Sankey no pinten el mismo tipo con criterios distintos.
 
 ## Anti-duplicados — verificar antes de crear entidad
 
@@ -57,7 +72,7 @@ nombre: Unión Demócrata Independiente (UDI)
 aliases: [UDI, "UDI Chile"]
 ```
 
-Script de validación: `node scripts/validate/check-duplicates.mjs` (solo `organizations`), `--all` añade `people`, `--strict` omite la heurística de sigla, `--json` para consumo programático. Escanea `organizations` y `people`; **`sources` se excluye a propósito** (su identidad es el ID `medio-fecha-slug`, y comparar por `medio` haría colisionar todos los artículos de un mismo medio). Compara el `nombre` normalizado (sin acentos, sin paréntesis de país) y exige `pais` compatible, para no confundir homónimos de países distintos. Salida: aviso (exit 1) sin tocar el build; `validate.mjs` imprime un resumen de nombres duplicados en cada corrida.
+Script de validación: `node scripts/validate/check-duplicates.mjs` (solo `organizations`), `--all` añade `people`, `--strict` omite la heurística de sigla, `--json` para consumo programático. Escanea `organizations` y `people`; **`sources` se excluye a propósito** (su identidad es el ID `medio-fecha-slug`, y comparar por `medio` haría colisionar todos los artículos de un mismo medio). Compara el `nombre` normalizado (sin acentos, sin paréntesis de país) y exige `pais` compatible, para no confundir homónimos de países distintos. Salida: aviso (exit 1) sin tocar el build; `validate.mjs` imprime un resumen de nombres duplicados en cada corrida. Falsos positivos confirmados oct-2026 (homónimos distintos, no fusionar): `juan_gonzalez_coronel`/`juan_jaime_gonzalez_zuniga`, `roberto_belmar`/`roberto_belmar_vergara`, `carlos_silva`/`carlos_silva_echiburu`, `diego_barba`/`diego_barba_valdes`, `jorge_silva`/`jorge_silva_hinojosa`, `pedro_sabat`/`pedro_sabat_fernandez` (padre/hijo), `sergio_perez`/`sergio_perez_hormazabal`, `victor_jara`/`victor_jara_herrera`.
 
 ## Encoding y edición concurrente
 

@@ -35,6 +35,8 @@ description: Reglas de creación y validación de eventos, checklist de 16 regla
 
 Detección compartida con el fixer `scripts/lib/proseNames.mjs` — omite: apellidos ambiguos (dos personas con mismo apellido enlazadas), apellidos precedidos por nombre de pila (“Fernando Matthei” ≠ Evelyn), prefijos de org (“Fundación Kast”), apellidos de 3 letras que son palabras comunes (“del”, “san”, “mas”) y **líneas de cita (`>` blockquote): la cita exacta prevalece — un nombre completo dentro de un quote no se enlaza ni se altera**.
 
+**Trampa: topónimos bautizados con nombre de persona.** El checker no distingue institución de persona: el Parque Inundable Víctor Jara o un estadio con nombre propio disparan el error `[[people/victor_jara]]` igual que una mención de la persona. La cita literal (`>`) queda exenta: mueve el fragmento a blockquote con atribución, o reformula sin el nombre completo (“el parque del Zanjón de la Aguada”).
+
 Fixer: `node scripts/validate/fix-prose-wikilinks.mjs` (itera hasta punto fijo; `--dry-run` para revisar). Las regex de validate/fixer y `generate-index` son tolerantes a CRLF (`\r?\n`) por `core.autocrlf=true`.
 
 ### Sin duplicar lo que el wikilink ya renderiza (regla 8b)

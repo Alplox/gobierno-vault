@@ -15,6 +15,7 @@
     "sitemaps-watchlist": "node scripts/sitemaps/watchlist.mjs",
     "sitemaps-probe": "node .agents/skills/sitemaps/scripts/probe-sitemap.mjs",
     "news-search": "node scripts/sitemaps/news-search.mjs",
+    "coverage-audit": "node scripts/coverage/audit.mjs",
     "social-search": "node scripts/social/last30days-search.mjs",
     "add-source": "node scripts/extract/add-source.mjs",
     "pdf-extract": "node scripts/extract/pdf-extract.mjs",
