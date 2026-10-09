@@ -1,29 +1,31 @@
 ---
+// /presupuesto — poster del dinero del Estado: el Sankey manda (que se retira y
+// que se inyecta, con sus justificaciones y sus vacios), las tarjetas de
+// movimiento son el tablero, y el detalle largo (hitos, variaciones, fuentes)
+// queda colapsado para que la pagina se lea de un vistazo.
 import Base from '../layouts/Base.astro';
-import SourceRef from '../components/SourceRef.astro';
 import ShareButtons from '../components/ShareButtons.astro';
-import { Wallet, ArrowRightLeft, TriangleAlert, Users } from 'lucide-astro';
-import { getPresupuesto } from '../lib/presupuesto';
+import SourceRef from '../components/SourceRef.astro';
+import BudgetSankey from '../components/BudgetSankey.astro';
+import BudgetMovementCard from '../components/BudgetMovementCard.astro';
+import { Wallet, ArrowRightLeft, Users, TrendingDown, TrendingUp, ChevronDown, MinusCircle } from 'lucide-astro';
+import { getPresupuesto, type PresupuestoSankey } from '../lib/presupuesto';
 
-const { ejercicios, fuentes, formatCLP } = getPresupuesto();
+const { ejercicios, fuentes, formatCLP, sankeyGlobal } = getPresupuesto();
 
-const todosMovs = ejercicios.flatMap((e) => e.movimientos.map((m) => ({ ...m, ano: e.ano })));
-const todasVars = ejercicios.flatMap((e) => e.variaciones.map((v) => ({ ...v, ano: e.ano })));
-const sinObjetivo = todosMovs.filter((m) => !m.objetivo_declarado);
-const directos = [...todosMovs, ...todasVars].filter((x) => x.nivel_impacto === 'directo').length;
+const conMonto = sankeyGlobal.retiros.length + sankeyGlobal.inyecciones.length;
+const sinObjetivoGlobal = [...sankeyGlobal.retiros, ...sankeyGlobal.inyecciones].filter((f) => f.sinObjetivo).length;
 
-const tipoBadge = (t: string) =>
-  t === 'recorte' ? 'badge-error' : t === 'redistribucion' ? 'badge-warning' : t === 'ingreso' ? 'badge-success' : 'badge-info';
-const impactoBadge = (n: string) =>
-  n === 'directo' ? 'badge-primary' : n === 'indirecto' ? 'badge-secondary' : 'badge-ghost';
 const anchor = (ano: number, id: string, refs: string[]) => `pref-${ano}-${refs.indexOf(id) + 1}`;
-const eventoHref = (id: string) => `/events/${id.slice(0, 4)}/${id}`;
-const fmtFecha = (iso: string | null) => {
-  if (!iso) return 'sin fecha publicada';
-  const [y, m, d] = iso.split('-').map(Number);
-  const MESES = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
-  return `${d} de ${MESES[m - 1]} de ${y}`;
-};
+const eventoHref = (id: string | null) => (id ? `/events/${id.slice(0, 4)}/${id}` : null);
+const pct = (total: number, suma: number) => (suma > 0 ? (total / suma) * 100 : 0);
+const tieneTotales = (e: (typeof ejercicios)[number]) => Object.values(e.totales).some((t) => t.monto !== null);
+const notasTotales = (e: (typeof ejercicios)[number]) =>
+  Object.values(e.totales)
+    .map((t) => t.nota)
+    .filter(Boolean)
+    .join(' · ');
+const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
 ---
 
 <Base title="Presupuesto">
@@ -32,9 +34,10 @@ const fmtFecha = (iso: string | null) => {
       <Wallet class="h-6 w-6 text-primary shrink-0" />
       <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Presupuesto</h1>
     </div>
-    <p class="text-base-content/60 text-sm">
-      Seguimiento del dinero del Estado: monto inicial aprobado por ley, ejecución y movimientos
-      (recortes, redistribuciones) por ejercicio, con fuente primaria y evento que los documenta.
+    <p class="text-base-content/60 text-sm max-w-3xl">
+      El dinero del Estado, trazado: cada cinta del diagrama es un movimiento publicado con su monto,
+      su justificación declarada o el vacío donde no la hay. Monto inicial aprobado por ley, ejecución y
+      movimientos (recortes, aumentos, revisiones) por ejercicio, con fuente primaria y evento que los documenta.
       Cobertura parcial: {ejercicios.map((e) => e.ano).join(' y ')}. Los estados describen lo publicado,
       sin calificar la decisión.
     </p>
@@ -43,22 +46,76 @@ const fmtFecha = (iso: string | null) => {
     </div>
   </div>
 
-  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+  {/* Titular del poster: el contraste entre lo que sale y lo que entra. */}
+  <section class="rounded-3xl bg-base-100 shadow-[var(--shadow-border)] overflow-hidden mb-8">
+    <div class="px-5 sm:px-7 pt-6 pb-4 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <h2 class="text-lg sm:text-xl font-bold text-base-content">El dinero que se mueve</h2>
+        <p class="text-xs text-base-content/60 mt-1 max-w-2xl">
+          {conMonto} movimientos con monto publicado por la cobertura del vault. Cada cinta es independiente:
+          el diagrama <strong class="font-semibold text-base-content/80">no</strong> afirma que lo retirado de una partida
+          se haya reasignado a otra, porque ninguna fuente lo documenta así.
+        </p>
+      </div>
+      <p class="text-[11px] text-base-content/45 sm:text-right">
+        Suma de movimientos de ejercicios distintos (no es el saldo de un año).
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 border-y border-base-300">
+      <div class="px-5 sm:px-7 py-4 sm:border-r border-base-300">
+        <p class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-error">
+          <TrendingDown class="h-3.5 w-3.5" /> Retiros publicados
+        </p>
+        <p class="text-3xl sm:text-4xl font-bold tabular-nums text-base-content mt-1">{formatCLP(sankeyGlobal.totalRetiros)}</p>
+        <p class="text-[11px] text-base-content/50 mt-0.5">{sankeyGlobal.retiros.length} movimientos con monto publicado</p>
+      </div>
+      <div class="px-5 sm:px-7 py-4">
+        <p class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-success">
+          <TrendingUp class="h-3.5 w-3.5" /> Inyecciones publicadas
+        </p>
+        <p class="text-3xl sm:text-4xl font-bold tabular-nums text-base-content mt-1">{formatCLP(sankeyGlobal.totalInyecciones)}</p>
+        <p class="text-[11px] text-base-content/50 mt-0.5">{sankeyGlobal.inyecciones.length} movimientos con monto publicado</p>
+      </div>
+    </div>
+
+    <div class="px-3 sm:px-7 py-6">
+      {conMonto > 0 ? (
+        <BudgetSankey id="global" retiros={sankeyGlobal.retiros} inyecciones={sankeyGlobal.inyecciones} />
+      ) : (
+        <p class="text-sm text-base-content/60 px-2">Todavía no hay movimientos con monto publicado.</p>
+      )}
+    </div>
+
+    {sankeyGlobal.pendientes.length > 0 && (
+      <p class="px-5 sm:px-7 pb-6 -mt-2 text-[11px] text-base-content/50 flex items-start gap-1.5">
+        <MinusCircle class="h-3.5 w-3.5 shrink-0 mt-0.5" />
+        <span>
+          {sankeyGlobal.pendientes.length} movimientos quedan fuera del flujo por no tener monto publicado o por ser
+          recomendaciones en revisión. Están listados, con su tarjeta, en el detalle de cada ejercicio.
+        </span>
+      </p>
+    )}
+  </section>
+
+  <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-8">
     <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
-      <p class="text-2xl font-bold text-base-content">{ejercicios.length}</p>
+      <p class="text-2xl font-bold text-base-content tabular-nums">{ejercicios.length}</p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Ejercicios cubiertos</p>
     </div>
     <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
-      <p class="text-2xl font-bold text-base-content">{todosMovs.length}</p>
+      <p class="text-2xl font-bold text-base-content tabular-nums">{ejercicios.reduce((s, e) => s + e.movimientos.length, 0)}</p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Movimientos registrados</p>
     </div>
     <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
-      <p class="text-2xl font-bold text-base-content">{sinObjetivo.length}</p>
+      <p class="text-2xl font-bold text-warning tabular-nums">{sinObjetivoGlobal}</p>
       <p class="text-xs text-base-content/60 font-medium mt-0.5">Sin objetivo publicado</p>
     </div>
     <div class="bg-base-100 rounded-xl border-0 shadow-[var(--shadow-border)] p-4">
-      <p class="text-2xl font-bold text-base-content">{directos}</p>
-      <p class="text-xs text-base-content/60 font-medium mt-0.5">De impacto directo</p>
+      <p class="text-2xl font-bold text-base-content tabular-nums">
+        {[...sankeyGlobal.retiros, ...sankeyGlobal.inyecciones].filter((f) => f.organizacion).length}
+      </p>
+      <p class="text-xs text-base-content/60 font-medium mt-0.5">Con organismo identificado</p>
     </div>
   </div>
 
@@ -73,131 +130,179 @@ const fmtFecha = (iso: string | null) => {
     ))}
   </div>
 
-  {ejercicios.map((e, i) => (
-    <section data-pres-panel={e.ano} class={i === 0 ? 'space-y-4 mb-10' : 'space-y-4 mb-10 hidden'}>
-      <div class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] overflow-hidden">
-        <header class="px-5 py-4 border-b border-base-300 flex flex-wrap items-center justify-between gap-3">
-          <div>
-            <h2 class="text-lg font-bold text-base-content">Ejercicio {e.ano} · Gobierno {e.gobierno}</h2>
-            <p class="text-xs text-base-content/60 mt-0.5">
-              {e.ley.nombre}
-              <SourceRef id="" index={e.refs.indexOf(e.ley.fuente) + 1} href={`#${anchor(e.ano, e.ley.fuente, e.refs)}`} title={`${fuentes[e.ley.fuente].medio} — ${fuentes[e.ley.fuente].titulo}`} tip={`${fuentes[e.ley.fuente].medio}\n${fuentes[e.ley.fuente].titulo}`} />
-              {e.ley.nota && <span class="block mt-0.5">{e.ley.nota}</span>}
-            </p>
-          </div>
-          <span class="badge badge-outline">{e.estado_label}</span>
-        </header>
-
-        <div class="px-5 py-4 grid grid-cols-2 sm:grid-cols-4 gap-3 border-b border-base-300">
-          {(Object.entries({ inicial: 'Inicial (ley)', vigente: 'Vigente', ejecutado: 'Ejecutado', saldo: 'Saldo' }) as Array<[keyof typeof e.totales, string]>).map(([k, label]) => (
-            <div class="bg-base-200/60 rounded-xl p-3">
-              <p class="text-[11px] font-semibold uppercase tracking-wide text-base-content/50">{label}</p>
-              <p class="text-base font-bold text-base-content mt-0.5">
-                {e.totales[k].monto !== null ? formatCLP(e.totales[k].monto!) : 'En carga'}
+  {ejercicios.map((e, i) => {
+    const sk = e.sankey;
+    const suma = sumaSk(sk);
+    const totalMovs = e.movimientos.length;
+    return (
+      <section data-pres-panel={e.ano} class={i === 0 ? 'space-y-4 mb-12' : 'space-y-4 mb-12 hidden'}>
+        <div class="rounded-3xl bg-base-100 shadow-[var(--shadow-border)] overflow-hidden">
+          <header class="px-5 py-4 border-b border-base-300 flex flex-wrap items-center justify-between gap-3">
+            <div>
+              <h2 class="text-lg font-bold text-base-content">Ejercicio {e.ano} · Gobierno {e.gobierno}</h2>
+              <p class="text-xs text-base-content/60 mt-0.5">
+                {e.ley.nombre}
+                <SourceRef id="" index={e.refs.indexOf(e.ley.fuente) + 1} href={`#${anchor(e.ano, e.ley.fuente, e.refs)}`} title={`${fuentes[e.ley.fuente].medio} — ${fuentes[e.ley.fuente].titulo}`} tip={`${fuentes[e.ley.fuente].medio}\n${fuentes[e.ley.fuente].titulo}`} />
+                {e.ley.nota && <span class="block mt-0.5">{e.ley.nota}</span>}
               </p>
-              {e.totales[k].nota && <p class="text-[11px] text-base-content/60 mt-0.5">{e.totales[k].nota}</p>}
             </div>
-          ))}
-        </div>
+            <span class="badge badge-outline">{e.estado_label}</span>
+          </header>
 
-        {e.hitos.length > 0 && (
-          <ul class="px-5 py-4 space-y-1.5 border-b border-base-300">
-            {e.hitos.map((h) => (
-              <li class="text-sm text-base-content/80">
-                <span class="font-semibold text-base-content">{h.etiqueta}:</span> {h.valor}
-                <SourceRef id="" index={e.refs.indexOf(h.fuente) + 1} href={`#${anchor(e.ano, h.fuente, e.refs)}`} title={`${fuentes[h.fuente].medio} — ${fuentes[h.fuente].titulo}`} tip={`${fuentes[h.fuente].medio}\n${fuentes[h.fuente].titulo}`} />
-              </li>
-            ))}
-          </ul>
-        )}
-
-        {e.variaciones.length > 0 && (
-          <div class="px-5 py-4 border-b border-base-300">
-            <h3 class="text-sm font-bold text-base-content mb-3">Variaciones por partida y programa</h3>
-            <div class="space-y-2.5">
-              {e.variaciones.map((v) => (
-                <div class="bg-base-200/60 rounded-xl p-3">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class="text-sm font-bold text-base-content">{v.variacion_texto}</span>
-                    <span class={`badge badge-sm ${impactoBadge(v.nivel_impacto)}`}>{v.nivel_impacto}</span>
-                  </div>
-                  <p class="text-sm text-base-content/80 mt-1">
-                    {v.ministerio_id ? (
-                      <><a href={`/organizations/${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
-                    ) : null}{v.alcance}
-                    <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio} — ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
+          {/* Bloque visual del ejercicio: mini-flujo + barra retiros/inyecciones. */}
+          <div class="px-3 sm:px-5 py-5 border-b border-base-300 bg-base-200/30">
+            {suma > 0 ? (
+              <>
+                <div class="flex flex-wrap items-baseline justify-between gap-2 px-1 mb-0.5">
+                  <h3 class="text-sm font-bold text-base-content">De dónde se retira y a dónde se inyecta</h3>
+                  <p class="text-[11px] text-base-content/50 tabular-nums">
+                    {formatCLP(sk.totalRetiros)} retirados · {formatCLP(sk.totalInyecciones)} inyectados
                   </p>
-                  {(v.evento_id || v.nota) && (
-                    <p class="text-xs text-base-content/60 mt-1">
-                      {v.evento_id && <a href={eventoHref(v.evento_id)} class="link link-primary">Ver evento {v.evento_id}</a>}
-                      {v.evento_id && v.nota && ' · '}
-                      {v.nota}
-                    </p>
-                  )}
+                </div>
+                <div class="flex h-2.5 rounded-full overflow-hidden bg-base-300 mt-2 mb-4" role="img"
+                  aria-label={`${formatCLP(sk.totalRetiros)} retirados frente a ${formatCLP(sk.totalInyecciones)} inyectados`}>
+                  <span class="bg-error" style={`width:${pct(sk.totalRetiros, suma)}%`} />
+                  <span class="bg-success" style={`width:${pct(sk.totalInyecciones, suma)}%`} />
+                </div>
+                <BudgetSankey id={`ano-${e.ano}`} retiros={sk.retiros} inyecciones={sk.inyecciones} compact />
+              </>
+            ) : (
+              <p class="text-sm text-base-content/60 px-2">
+                Sin movimientos de dinero con monto publicado en este ejercicio: la información disponible son los
+                hitos y las cifras del cuadro de abajo.
+              </p>
+            )}
+          </div>
+
+          {tieneTotales(e) ? (
+            <div class="px-5 py-4 grid grid-cols-2 sm:grid-cols-4 gap-3 border-b border-base-300">
+              {(Object.entries({ inicial: 'Inicial (ley)', vigente: 'Vigente', ejecutado: 'Ejecutado', saldo: 'Saldo' }) as Array<[keyof typeof e.totales, string]>).map(([k, label]) => (
+                <div class="bg-base-200/60 rounded-xl p-3">
+                  <p class="text-[11px] font-semibold uppercase tracking-wide text-base-content/50">{label}</p>
+                  <p class="text-base font-bold text-base-content mt-0.5 tabular-nums">
+                    {e.totales[k].monto !== null ? formatCLP(e.totales[k].monto!) : 'En carga'}
+                  </p>
+                  {e.totales[k].nota && <p class="text-[11px] text-base-content/60 mt-0.5">{e.totales[k].nota}</p>}
                 </div>
               ))}
             </div>
-          </div>
-        )}
+          ) : (
+            <p class="px-5 py-3 text-[11px] text-base-content/50 border-b border-base-300">
+              Cuadro de totales en carga desde Dipres: {notasTotales(e) || 'sin cifras publicadas todavía'}.
+            </p>
+          )}
 
-        {e.movimientos.length > 0 && (
-          <div class="px-5 py-4">
-            <h3 class="text-sm font-bold text-base-content mb-3 flex items-center gap-1.5">
-              <ArrowRightLeft class="h-4 w-4" /> Movimientos: en qué quedó el dinero
-            </h3>
-            <div class="space-y-2.5">
-              {e.movimientos.map((m) => (
-                <article class="bg-base-200/60 rounded-xl p-3">
-                  <div class="flex flex-wrap items-center gap-2">
-                    <span class={`badge badge-sm ${tipoBadge(m.tipo)}`}>{m.tipo.replace(/_/g, ' ')}</span>
-                    <span class={`badge badge-sm badge-outline ${impactoBadge(m.nivel_impacto)}`}>{m.nivel_impacto}</span>
-                    <span class="text-xs text-base-content/50">{fmtFecha(m.fecha)}</span>
-                  </div>
-                  <p class="text-sm font-semibold text-base-content mt-1.5">
-                    {m.organizacion_id ? (
-                      <><a href={`/organizations/${m.organizacion_id}`} class="hover:text-primary transition-colors">{m.organizacionNombre}</a>{' · '}</>
-                    ) : null}{m.descripcion}
-                    <SourceRef id="" index={e.refs.indexOf(m.fuente) + 1} href={`#${anchor(e.ano, m.fuente, e.refs)}`} title={`${fuentes[m.fuente].medio} — ${fuentes[m.fuente].titulo}`} tip={`${fuentes[m.fuente].medio}\n${fuentes[m.fuente].titulo}`} />
+          {totalMovs > 0 && (
+            <div class="px-5 py-5">
+              <h3 class="text-sm font-bold text-base-content mb-3 flex items-center gap-1.5">
+                <ArrowRightLeft class="h-4 w-4" /> Movimientos: en qué quedó el dinero
+                <span class="text-xs font-normal text-base-content/50">({totalMovs})</span>
+              </h3>
+              <div class="grid grid-cols-1 xl:grid-cols-2 gap-3">
+                {e.movimientos.map((m) => (
+                  <BudgetMovementCard
+                    mov={m}
+                    ancla={`mov-${e.ano}-${m.orden}`}
+                    fuente={fuentes[m.fuente]}
+                    refIndex={e.refs.indexOf(m.fuente) + 1}
+                    refAnchor={anchor(e.ano, m.fuente, e.refs)}
+                    eventoHref={eventoHref(m.evento_id)}
+                  />
+                ))}
+              </div>
+
+              {sk.pendientes.length > 0 && (
+                <div class="mt-4 rounded-2xl bg-base-200/50 px-4 py-3">
+                  <p class="text-[11px] font-semibold text-base-content/60 flex items-center gap-1.5">
+                    <MinusCircle class="h-3.5 w-3.5" />
+                    Fuera del flujo: sin monto publicado o en revisión ({sk.pendientes.length})
                   </p>
-                  <p class="text-sm text-base-content/80 mt-0.5">
-                    Monto: {m.monto !== null ? <span class="font-bold">{formatCLP(m.monto)}</span> : 'no publicado'}
-                    {m.monto_nota && <span class="text-xs text-base-content/60"> ({m.monto_nota})</span>}
-                  </p>
-                  {m.objetivo_declarado ? (
-                    <p class="text-xs text-base-content/70 mt-0.5">Objetivo declarado: {m.objetivo_declarado}</p>
-                  ) : (
-                    <p class="mt-1.5 flex items-start gap-1.5 text-xs font-semibold text-warning">
-                      <TriangleAlert class="h-3.5 w-3.5 shrink-0 mt-0.5" />
-                      <span>Sin objetivo ni destino publicado a la fecha</span>
-                    </p>
-                  )}
-                  {(m.evento_id || m.nota) && (
-                    <p class="text-xs text-base-content/60 mt-1">
-                      {m.evento_id && <a href={eventoHref(m.evento_id)} class="link link-primary">Ver evento {m.evento_id}</a>}
-                      {m.evento_id && m.nota && ' · '}
-                      {m.nota}
-                    </p>
-                  )}
-                </article>
-              ))}
+                  <ul class="mt-2 flex flex-wrap gap-1.5">
+                    {sk.pendientes.map((p) => (
+                      <li>
+                        <a href={`#${p.ancla}`} class="badge badge-outline badge-sm max-w-[22rem] whitespace-normal text-left leading-tight hover:border-primary hover:text-primary transition-colors">
+                          {p.descripcion}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
-          </div>
-        )}
-      </div>
+          )}
 
-      <div class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] px-5 py-4">
-        <h3 class="text-sm font-bold text-base-content mb-2">Fuentes del ejercicio {e.ano}</h3>
-        <ol class="space-y-1.5">
-          {e.refs.map((id, n) => (
-            <li id={anchor(e.ano, id, e.refs)} class="text-xs text-base-content/70 scroll-mt-24">
-              <span class="font-bold text-base-content">[{n + 1}]</span> {fuentes[id].medio} ·{' '}
-              <a href={fuentes[id].url} class="link link-primary" target="_blank" rel="noopener">{fuentes[id].titulo}</a>
-            </li>
-          ))}
-        </ol>
-      </div>
-    </section>
-  ))}
+          <div class="px-5 pb-5 space-y-2">
+            {e.variaciones.length > 0 && (
+              <details class="group/var rounded-2xl bg-base-200/40 px-4 py-3">
+                <summary class="flex items-center gap-1.5 cursor-pointer list-none text-sm font-bold text-base-content/80 hover:text-primary transition-colors">
+                  <ChevronDown class="h-4 w-4 transition-transform group-open/var:rotate-180" />
+                  Variaciones por partida y programa
+                  <span class="text-xs font-normal text-base-content/50">({e.variaciones.length})</span>
+                </summary>
+                <div class="mt-3 space-y-2.5">
+                  {e.variaciones.map((v) => (
+                    <div class="bg-base-100 rounded-xl px-3 py-2.5">
+                      <div class="flex flex-wrap items-center gap-2">
+                        <span class="text-sm font-bold text-base-content tabular-nums">{v.variacion_texto}</span>
+                        <span class={`badge badge-sm badge-outline ml-auto ${v.nivel_impacto === 'directo' ? 'badge-primary' : v.nivel_impacto === 'indirecto' ? 'badge-secondary' : 'badge-ghost'}`}>{v.nivel_impacto}</span>
+                      </div>
+                      <p class="text-sm text-base-content/80 mt-1">
+                        {v.ministerio_id ? (
+                          <><a href={`/organizations/${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
+                        ) : null}{v.alcance}
+                        <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio} — ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
+                      </p>
+                      {(v.evento_id || v.nota) && (
+                        <p class="text-xs text-base-content/60 mt-1">
+                          {v.evento_id && <a href={eventoHref(v.evento_id)!} class="link link-primary">Ver evento {v.evento_id}</a>}
+                          {v.evento_id && v.nota && ' · '}
+                          {v.nota}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </details>
+            )}
+
+            {e.hitos.length > 0 && (
+              <details class="group/hit rounded-2xl bg-base-200/40 px-4 py-3">
+                <summary class="flex items-center gap-1.5 cursor-pointer list-none text-sm font-bold text-base-content/80 hover:text-primary transition-colors">
+                  <ChevronDown class="h-4 w-4 transition-transform group-open/hit:rotate-180" />
+                  Hitos y cifras del ejercicio
+                  <span class="text-xs font-normal text-base-content/50">({e.hitos.length})</span>
+                </summary>
+                <ul class="mt-3 space-y-1.5">
+                  {e.hitos.map((h) => (
+                    <li class="text-sm text-base-content/80">
+                      <span class="font-semibold text-base-content">{h.etiqueta}:</span> {h.valor}
+                      <SourceRef id="" index={e.refs.indexOf(h.fuente) + 1} href={`#${anchor(e.ano, h.fuente, e.refs)}`} title={`${fuentes[h.fuente].medio} — ${fuentes[h.fuente].titulo}`} tip={`${fuentes[h.fuente].medio}\n${fuentes[h.fuente].titulo}`} />
+                    </li>
+                  ))}
+                </ul>
+              </details>
+            )}
+
+            <details class="group/fnt rounded-2xl bg-base-200/40 px-4 py-3">
+              <summary class="flex items-center gap-1.5 cursor-pointer list-none text-sm font-bold text-base-content/80 hover:text-primary transition-colors">
+                <ChevronDown class="h-4 w-4 transition-transform group-open/fnt:rotate-180" />
+                Fuentes del ejercicio {e.ano}
+                <span class="text-xs font-normal text-base-content/50">({e.refs.length})</span>
+              </summary>
+              <ol class="mt-3 space-y-1.5">
+                {e.refs.map((id, n) => (
+                  <li id={anchor(e.ano, id, e.refs)} class="text-xs text-base-content/70 scroll-mt-24">
+                    <span class="font-bold text-base-content">[{n + 1}]</span> {fuentes[id].medio} ·{' '}
+                    <a href={fuentes[id].url} class="link link-primary" target="_blank" rel="noopener">{fuentes[id].titulo}</a>
+                  </li>
+                ))}
+              </ol>
+            </details>
+          </div>
+        </div>
+      </section>
+    );
+  })}
 
   <p class="text-xs text-base-content/40 mt-8 leading-relaxed flex items-start gap-1.5">
     <Users class="h-3.5 w-3.5 shrink-0 mt-0.5" />
@@ -221,8 +326,27 @@ const fmtFecha = (iso: string | null) => {
     if (first) presApply(first.getAttribute('data-pres-panel')!);
   }
   document.addEventListener('click', (e) => {
-    const btn = (e.target as HTMLElement).closest('[data-pres-ano]');
-    if (btn) presApply(btn.getAttribute('data-pres-ano')!);
+    const target = e.target as HTMLElement | null;
+    const btn = target?.closest?.('[data-pres-ano]');
+    if (btn) {
+      presApply(btn.getAttribute('data-pres-ano')!);
+      return;
+    }
+    // Las cintas del Sankey global apuntan a tarjetas que viven en paneles de
+    // año ocultos: sin abrir el panel el scroll no tendría destino.
+    const link = target?.closest?.('a[href^="#mov-"]') as HTMLAnchorElement | null;
+    if (!link) return;
+    const match = (link.getAttribute('href') ?? '').match(/^#mov-(\d{4})-/);
+    if (!match) return;
+    const panel = document.querySelector(`[data-pres-panel="${match[1]}"]`);
+    if (!panel) return;
+    e.preventDefault();
+    presApply(match[1]);
+    const dest = document.getElementById(link.getAttribute('href')!.slice(1));
+    if (!dest) return;
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    dest.scrollIntoView({ block: 'center', behavior: reduce ? 'auto' : 'smooth' });
+    history.replaceState(null, '', link.getAttribute('href'));
   });
   document.addEventListener('astro:page-load', presInit);
   presInit();

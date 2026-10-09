@@ -11,7 +11,7 @@ description: Build, validación y despliegue con validate, build.concurrency, pn
 ## Comandos
 
 ```bash
-pnpm run build     # node scripts/validate/validate.mjs && astro build  (~1m40s, 7800+ páginas)
+pnpm run build     # node scripts/validate/validate.mjs && astro build  (~4m30s, 15800+ páginas)
 pnpm run dev       # preview local
 pnpm run preview   # wrangler pages dev dist
 pnpm run deploy    # build local + wrangler pages deploy dist --project-name gobierno-vault --branch main (~20s upload)
@@ -34,7 +34,9 @@ Replica `remarkWikiLinks.mjs` y falla ANTES del build si hay wikilinks rotos: `[
 
 ## Build en paralelo
 
-`astro.config.mjs: build.concurrency = availableParallelism()` — default Astro 7 es 1; vault >8600 páginas. Build corre local (`pnpm run deploy`); si presión RAM, cap a `Math.min(availableParallelism(), N)`.
+`astro.config.mjs: build.concurrency = availableParallelism()` — default Astro 7 es 1; vault 15800+ páginas (medido: ~4m30s). Build corre local (`pnpm run deploy`); si presión RAM, cap a `Math.min(availableParallelism(), N)`.
+
+**Nunca dos builds a la vez.** `astro build` escribe `dist/.prerender/chunks/*.mjs` y el paso de bundle los importa: dos procesos sobre el mismo `dist` se pisan y el build muere con `ERR_MODULE_NOT_FOUND ... dist/.prerender/chunks/...` en páginas al azar (`/llms.txt`, `/organizations/*`), un error que no tiene nada que ver con el cambio en curso. Un comando en primer plano que expira no mata el proceso: antes de relanzar, confirmar que no quedó un `node` vivo y borrar `dist`.
 
 ## Gestor y CI
 

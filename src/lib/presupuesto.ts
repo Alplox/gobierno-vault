@@ -26,6 +26,8 @@ export type Variacion = {
 export type Movimiento = {
   tipo: string;
   descripcion: string;
+  /** Orden del movimiento dentro de su ejercicio (1..n). Ancla `mov-AAAA-orden`. */
+  orden: number;
   fecha: string | null;
   monto: number | null;
   monto_nota?: string;
@@ -37,6 +39,47 @@ export type Movimiento = {
   organizacionNombre: string | null;
   nota?: string;
 };
+
+/** Cinta del Sankey: un movimiento publicado con monto, listo para dibujar. */
+export type PresupuestoFlujo = {
+  /** Ancla de la tarjeta del movimiento en la pagina (`mov-AAAA-N`). */
+  ancla: string;
+  descripcion: string;
+  monto: number;
+  montoTexto: string;
+  tipo: string;
+  ejercicio: number;
+  organizacion: string | null;
+  objetivo: string | null;
+  sinObjetivo: boolean;
+  evento_id: string | null;
+};
+
+/**
+ * Movimiento que NO puede entrar al Sankey: no trae monto publicado, o su `tipo`
+ * no es una salida/entrada de dinero (p. ej. `revision_programas`, que es una
+ * recomendacion de ajuste, no un ajuste ejecutado). Se listan aparte para no
+ * falsear el flujo.
+ */
+export type PresupuestoPendiente = {
+  ancla: string;
+  descripcion: string;
+  tipo: string;
+  ejercicio: number;
+  organizacion: string | null;
+  sinObjetivo: boolean;
+  motivo: 'sin_monto' | 'en_revision';
+  montoNota: string | null;
+};
+
+export type PresupuestoSankey = {
+  retiros: PresupuestoFlujo[];
+  inyecciones: PresupuestoFlujo[];
+  pendientes: PresupuestoPendiente[];
+  totalRetiros: number;
+  totalInyecciones: number;
+};
+
 export type Ejercicio = {
   ano: number;
   gobierno: string;
@@ -47,6 +90,7 @@ export type Ejercicio = {
   hitos: Hito[];
   variaciones: Variacion[];
   movimientos: Movimiento[];
+  sankey: PresupuestoSankey;
   refs: string[];
 };
 
@@ -69,6 +113,82 @@ export function formatCLP(n: number): string {
 
 const NIVELES = new Set(['directo', 'indirecto', 'institucional']);
 
+// Presentacion compartida entre la pagina y sus componentes (tarjetas y Sankey),
+// para que un badge y una cinta no cuenten el mismo tipo con colores distintos.
+export const TIPO_PRESUPUESTO_BADGE: Record<string, string> = {
+  recorte: 'badge-error',
+  redistribucion: 'badge-warning',
+  revision_programas: 'badge-warning',
+  ingreso: 'badge-success',
+  aumento: 'badge-success',
+};
+export const IMPACTO_PRESUPUESTO_BADGE: Record<string, string> = {
+  directo: 'badge-primary',
+  indirecto: 'badge-secondary',
+  institucional: 'badge-ghost',
+};
+/** Color de la cinta/riel segun el sentido del movimiento. */
+export const TIPO_PRESUPUESTO_COLOR: Record<string, string> = {
+  recorte: 'var(--color-error)',
+  redistribucion: 'var(--color-warning)',
+  revision_programas: 'var(--color-warning)',
+  ingreso: 'var(--color-success)',
+  aumento: 'var(--color-success)',
+};
+
+// Solo estos `tipo` son movimientos de dinero trazables como flujo. Cualquier
+// otro (p. ej. `revision_programas`, que es una recomendacion) queda fuera del
+// Sankey: dibujarlo como salida afirmaria un ajuste que no ocurrio.
+const TIPOS_RETIRO = new Set(['recorte']);
+const TIPOS_INYECCION = new Set(['aumento']);
+
+function buildSankey(movs: Array<{ m: Movimiento; ano: number }>): PresupuestoSankey {
+  const retiros: PresupuestoFlujo[] = [];
+  const inyecciones: PresupuestoFlujo[] = [];
+  const pendientes: PresupuestoPendiente[] = [];
+
+  for (const { m, ano } of movs) {
+    const ancla = `mov-${ano}-${m.orden}`;
+    const objetivo = m.objetivo_declarado?.trim() ? m.objetivo_declarado : null;
+    const base = {
+      ancla,
+      descripcion: m.descripcion,
+      tipo: m.tipo,
+      ejercicio: ano,
+      organizacion: m.organizacionNombre,
+      sinObjetivo: objetivo === null,
+    };
+    const lado = TIPOS_RETIRO.has(m.tipo) ? 'retiro' : TIPOS_INYECCION.has(m.tipo) ? 'inyeccion' : null;
+    if (lado === null) {
+      pendientes.push({ ...base, motivo: 'en_revision', montoNota: m.monto_nota ?? null });
+      continue;
+    }
+    if (m.monto === null) {
+      pendientes.push({ ...base, motivo: 'sin_monto', montoNota: m.monto_nota ?? null });
+      continue;
+    }
+    const flujo: PresupuestoFlujo = {
+      ...base,
+      monto: m.monto,
+      montoTexto: formatCLP(m.monto),
+      objetivo,
+      evento_id: m.evento_id,
+    };
+    (lado === 'retiro' ? retiros : inyecciones).push(flujo);
+  }
+
+  const porMonto = (a: PresupuestoFlujo, b: PresupuestoFlujo) => b.monto - a.monto;
+  retiros.sort(porMonto);
+  inyecciones.sort(porMonto);
+  return {
+    retiros,
+    inyecciones,
+    pendientes,
+    totalRetiros: retiros.reduce((s, f) => s + f.monto, 0),
+    totalInyecciones: inyecciones.reduce((s, f) => s + f.monto, 0),
+  };
+}
+
 function collectEventBasenames(): Set<string> {
   const root = join(process.cwd(), 'src', 'content', 'events');
   const out = new Set<string>();
@@ -84,7 +204,7 @@ function collectEventBasenames(): Set<string> {
   return out;
 }
 
-let cache: { ejercicios: Ejercicio[]; fuentes: Record<string, PresupuestoFuente>; formatCLP: typeof formatCLP } | null = null;
+let cache: { ejercicios: Ejercicio[]; fuentes: Record<string, PresupuestoFuente>; formatCLP: typeof formatCLP; sankeyGlobal: PresupuestoSankey } | null = null;
 
 function build() {
   const dir = join(process.cwd(), 'src', 'data', 'presupuesto');
@@ -154,12 +274,12 @@ function build() {
       const mid = assertOrg(v.ministerio_id ?? null, `variaciones.${v.alcance}`);
       return { ...v, ministerio_id: mid, ministerioNombre: mid ? orgNames.get(mid) ?? mid : null, evento_id: assertEvento(v.evento_id ?? null, `variaciones.${v.alcance}`) };
     });
-    const movimientos: Movimiento[] = (y.movimientos ?? []).map((m) => {
+    const movimientos: Movimiento[] = (y.movimientos ?? []).map((m, idx) => {
       assertFuente(m.fuente, `movimientos.${m.descripcion}`);
       if (!NIVELES.has(m.nivel_impacto)) throw new Error(`${ctx}: nivel_impacto inválido en '${m.descripcion}'`);
       if (m.fecha && !/^\d{4}-\d{2}-\d{2}$/.test(m.fecha)) throw new Error(`${ctx}: fecha inválida en '${m.descripcion}'`);
       const oid = assertOrg(m.organizacion_id ?? null, `movimientos.${m.descripcion}`);
-      return { ...m, monto: assertMonto(m.monto ?? null, `movimientos.${m.descripcion}`), evento_id: assertEvento(m.evento_id ?? null, `movimientos.${m.descripcion}`), organizacion_id: oid, organizacionNombre: oid ? orgNames.get(oid) ?? oid : null };
+      return { ...m, orden: idx + 1, monto: assertMonto(m.monto ?? null, `movimientos.${m.descripcion}`), evento_id: assertEvento(m.evento_id ?? null, `movimientos.${m.descripcion}`), organizacion_id: oid, organizacionNombre: oid ? orgNames.get(oid) ?? oid : null };
     });
 
     ejercicios.push({
@@ -172,12 +292,14 @@ function build() {
       hitos: y.hitos ?? [],
       variaciones,
       movimientos,
+      sankey: buildSankey(movimientos.map((m) => ({ m, ano: y.ano }))),
       refs: orden,
     });
   }
 
   ejercicios.sort((a, b) => b.ano - a.ano);
-  return { ejercicios, fuentes, formatCLP };
+  const sankeyGlobal = buildSankey(ejercicios.flatMap((e) => e.movimientos.map((m) => ({ m, ano: e.ano }))));
+  return { ejercicios, fuentes, formatCLP, sankeyGlobal };
 }
 
 export type PresupuestoData = ReturnType<typeof build>;

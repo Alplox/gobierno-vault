@@ -52,6 +52,9 @@ Mismo patrón que Sueldos pero un archivo por ejercicio (un solo YAML gigante se
 - `src/lib/presupuesto.ts` (`getPresupuesto()`) valida y falla el build si: fuente no está en `orden_refs` o no existe en `sources/*.md`, `ministerio_id`/`organizacion_id` sin ficha org, `evento_id` sin archivo de evento, monto no positivo, `nivel_impacto` fuera del enum.
 - `scripts/validate/validate.mjs` cuenta las fuentes de `presupuesto/*.yaml` como citadas (igual que `sueldos.yaml`).
 - Solo cifras publicadas por la fuente oficial; lo no publicado es `monto: null` con `nota`, nunca estimado.
+- `getPresupuesto()` deriva además los flujos del diagrama: `PresupuestoFlujo` (movimiento con monto, `ancla` `mov-AAAA-orden`, `objetivo`/`sinObjetivo`, `montoTexto`), `PresupuestoPendiente` (`motivo: sin_monto | en_revision`) y `PresupuestoSankey` por ejercicio (`Ejercicio.sankey`) más el global (`sankeyGlobal`). `Movimiento.orden` es la posición 1..n dentro de su ejercicio y da el ancla de la tarjeta.
+- **Al Sankey solo entran `tipo: recorte` (retiro) y `tipo: aumento` (inyección) con monto publicado.** Un `revision_programas` es una recomendación, no un ajuste ejecutado: dibujarlo como salida afirmaría algo que no ocurrió. Esas filas y las sin monto se listan aparte como "fuera del flujo".
+- Badges y colores por tipo/impacto viven en `TIPO_PRESUPUESTO_BADGE` / `IMPACTO_PRESUPUESTO_BADGE` / `TIPO_PRESUPUESTO_COLOR` (`src/lib/presupuesto.ts`), para que la tarjeta y la cinta del Sankey no pinten el mismo tipo con criterios distintos.
 
 ## Anti-duplicados — verificar antes de crear entidad
 

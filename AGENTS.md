@@ -96,7 +96,7 @@ Crear muchas entidades/fuentes: verificar `git status` antes (edicion concurrent
 ## Build y verificacion
 
 ```bash
-pnpm run build    # validate + astro build (~1m40s)
+pnpm run build    # validate + astro build (~4m30s, 15800+ páginas)
 pnpm run dev      # preview
 pnpm run deploy   # build local + wrangler pages deploy dist --project-name gobierno-vault --branch main
 ```
@@ -160,7 +160,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Nuevo tipo de evento/relacion | `content.config.ts`, `editorData.ts`, `lib/eventTypes.ts`, `lib/relations.ts` |
 | Nueva entidad/fuente/tema | `src/content/people\|organizations\|sources\|topics\|cifras/*.md`, `.agents/skills/data-yaml/SKILL.md` |
 | Tocar `/sueldos` | `src/data/sueldos.yaml`, `src/lib/sueldos.ts` |
-| Tocar `/presupuesto` | `src/data/presupuesto/AAAA.yaml` (un archivo por ejercicio), `src/lib/presupuesto.ts` |
+| Tocar `/presupuesto` | `src/data/presupuesto/AAAA.yaml` (un archivo por ejercicio), `src/lib/presupuesto.ts` (deriva `sankey`/`sankeyGlobal`), `src/components/BudgetSankey.astro` + `BudgetMovementCard.astro` |
 | Fuente gubernamental directa | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento `S/A/V-YYYY-NNN` | `TAREAS/SEGUIMIENTO/YYYY.md`, `TAREAS/SEGUIMIENTO_INDEX.md`, `.agents/skills/seguimiento/SKILL.md` |
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |

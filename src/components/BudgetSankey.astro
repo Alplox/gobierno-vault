@@ -1,0 +1,428 @@
+---
+// Sankey "poster" del presupuesto: cada cinta es un movimiento publicado con
+// monto (retiro a la izquierda, inyeccion a la derecha), colgando de un eje
+// central. SVG estatico, cero JS: tooltips por CSS, textura diagonal para los
+// movimientos sin objetivo declarado, y cada cinta enlaza a su tarjeta.
+//
+// Honestidad de la escala (dos decisiones explicitas):
+// 1. Un solo px-por-peso para las dos columnas, tomado del lado mayor, para que
+//    el bloque de retiros y el de inyecciones se puedan comparar; la altura del
+//    eje de cada lado es su suma real.
+// 2. Las cintas mas delgadas que MIN_H se dibujan a MIN_H para que sigan siendo
+//    visibles. Eso infla un poco el lado con mas movimientos minusculos y el pie
+//    del grafico lo declara, en vez de falsear la proporcion en silencio.
+//
+// Nada de tipos aqui: `tipo: recorte` -> retiro, `tipo: aumento` -> inyeccion.
+// Las recomendaciones (`revision_programas`) y lo sin monto publicado no entran
+// al flujo y los lista la pagina aparte: dibujarlas como salida afirmaria un
+// ajuste que no ocurrio.
+import type { PresupuestoFlujo } from '../lib/presupuesto';
+
+interface Props {
+  /** Prefijo de los ids de accesibilidad; unico por instancia en la pagina. */
+  id: string;
+  retiros: PresupuestoFlujo[];
+  inyecciones: PresupuestoFlujo[];
+  compact?: boolean;
+}
+
+const { id, retiros, inyecciones, compact = false } = Astro.props;
+
+const G = compact
+  ? { W: 700, PAD_Y: 14, LABEL: 254, GAP: 8, RIBBON: 70, NODE: 8, MIN_H: 3, BAND_GAP: 5, FS: 8.2, LINE: 10.5, BASE: 190, WRAP: 44, TIP_W: 244 }
+  : { W: 840, PAD_Y: 20, LABEL: 296, GAP: 12, RIBBON: 96, NODE: 10, MIN_H: 3, BAND_GAP: 6, FS: 9, LINE: 11.5, BASE: 420, WRAP: 54, TIP_W: 292 };
+
+const sinDatos = retiros.length === 0 && inyecciones.length === 0;
+
+const totalRetiros = retiros.reduce((s, f) => s + f.monto, 0);
+const totalInyecciones = inyecciones.reduce((s, f) => s + f.monto, 0);
+const px = G.BASE / Math.max(totalRetiros, totalInyecciones, 1);
+
+const alto = (f: PresupuestoFlujo) => Math.max(G.MIN_H, f.monto * px);
+
+type Banda = { f: PresupuestoFlujo; h: number; outTop: number; nodeTop: number; cy: number };
+type Etiqueta = { f: PresupuestoFlujo; lines: string[]; top: number; blockH: number; cy: number; bandCy: number };
+
+function wrapText(text: string, max: number, maxLines: number): string[] {
+  const words = text.split(/\s+/).filter(Boolean);
+  const lines: string[] = [];
+  let cur = '';
+  for (const w of words) {
+    if (!cur) cur = w;
+    else if (cur.length + 1 + w.length <= max) cur += ' ' + w;
+    else { lines.push(cur); cur = w; }
+  }
+  if (cur) lines.push(cur);
+  if (lines.length <= maxLines) return lines;
+  const kept = lines.slice(0, maxLines - 1);
+  const rest = lines.slice(maxLines - 1).join(' ');
+  kept.push(rest.length > max ? rest.slice(0, max - 1).trimEnd() + '…' : rest);
+  return kept;
+}
+
+// Bandas: en el eje los tramos son contiguos (su suma ES la altura del eje), y
+// hacia afuera se abren con BAND_GAP. Esa diferencia es lo que dibuja el
+// abanico del Sankey sin inventar ninguna proporcion.
+function layoutBandas(flujos: PresupuestoFlujo[]) {
+  const hs = flujos.map(alto);
+  const suma = hs.reduce((s, h) => s + h, 0);
+  const outerH = flujos.length ? suma + G.BAND_GAP * (flujos.length - 1) : 0;
+  const nodeTop0 = (outerH - suma) / 2;
+  let out = 0;
+  let node = nodeTop0;
+  const bandas: Banda[] = flujos.map((f, i) => {
+    const b: Banda = { f, h: hs[i], outTop: out, nodeTop: node, cy: out + hs[i] / 2 };
+    out += hs[i] + G.BAND_GAP;
+    node += hs[i];
+    return b;
+  });
+  return { bandas, outerH, nodeH: suma };
+}
+
+// Las etiquetas van afuera del abanico y se empujan hacia abajo cuando dos
+// cintas delgadas quedan juntas: con linea guia se sigue leyendo cual es cual.
+// `blockH` reserva tambien la linea del monto, que va bajo el nombre.
+function layoutEtiquetas(bandas: Banda[], variosAnios: boolean) {
+  const out: Etiqueta[] = [];
+  let piso = -Infinity;
+  for (const b of bandas) {
+    const cabeDos = b.h >= G.LINE * 2 + 4;
+    const texto = variosAnios ? `${b.f.ejercicio} · ${b.f.descripcion}` : b.f.descripcion;
+    const lines = wrapText(texto, G.WRAP, cabeDos ? 2 : 1);
+    const blockH = lines.length * G.LINE + G.LINE;
+    const top = Math.max(b.cy - blockH / 2, piso + 1);
+    piso = top + blockH;
+    out.push({ f: b.f, lines, top, blockH, cy: top + blockH / 2, bandCy: b.cy });
+  }
+  return out;
+}
+
+const L = layoutBandas(retiros);
+const R = layoutBandas(inyecciones);
+const bandsH = Math.max(L.outerH, R.outerH, G.MIN_H);
+const offL = (bandsH - L.outerH) / 2;
+const offR = (bandsH - R.outerH) / 2;
+
+const variosAnios = new Set([...retiros, ...inyecciones].map((f) => f.ejercicio)).size > 1;
+const eL = layoutEtiquetas(L.bandas, variosAnios).map((e) => ({ ...e, top: e.top + offL, cy: e.cy + offL, bandCy: e.bandCy + offL }));
+const eR = layoutEtiquetas(R.bandas, variosAnios).map((e) => ({ ...e, top: e.top + offR, cy: e.cy + offR, bandCy: e.bandCy + offR }));
+
+// El empuje de etiquetas puede salirse del area de cintas: el alto del SVG se
+// deriva de lo que realmente se dibuja (y de ahi el desplazamiento global).
+const tops = [...eL, ...eR].map((e) => e.top);
+const bots = [...eL, ...eR].map((e) => e.top + e.blockH);
+const localTop = Math.min(0, ...(tops.length ? tops : [0]));
+const localBot = Math.max(bandsH, ...(bots.length ? bots : [0]));
+const SHIFT = G.PAD_Y - localTop;
+const H = localBot - localTop + G.PAD_Y * 2 + (compact ? 0 : 6);
+
+const cx = G.W / 2;
+const nodeL = cx - G.NODE - 1;
+const nodeR = cx + 1;
+const ribbonL = nodeL - G.RIBBON;
+const ribbonR = nodeR + G.RIBBON;
+const labelLx = ribbonL - G.GAP;
+const labelRx = ribbonR + G.GAP;
+
+const k = G.RIBBON * 0.5;
+/** Cinta desde el tramo del eje (x0, y0Top) hasta el extremo externo (x1, y1Top). */
+const bandaPath = (x0: number, y0Top: number, x1: number, y1Top: number, h: number, haciaIzq: boolean) => {
+  const dx = haciaIzq ? -k : k;
+  const y0Bot = y0Top + h;
+  const y1Bot = y1Top + h;
+  return [
+    `M ${x0} ${y0Top}`,
+    `C ${x0 + dx} ${y0Top} ${x1 - dx} ${y1Top} ${x1} ${y1Top}`,
+    `L ${x1} ${y1Bot}`,
+    `C ${x1 - dx} ${y1Bot} ${x0 + dx} ${y0Bot} ${x0} ${y0Bot}`,
+    'Z',
+  ].join(' ');
+};
+
+const conObjetivo = [...retiros, ...inyecciones].filter((f) => !f.sinObjetivo).length;
+const sinObjetivo = retiros.length + inyecciones.length - conObjetivo;
+const marcados = sinObjetivo > 0;
+
+const rango = (bandas: Banda[]) => (bandas.length ? { top: bandas[0].cy, bot: bandas[bandas.length - 1].cy } : null);
+const ejeL = rango(L.bandas);
+const ejeR = rango(R.bandas);
+
+const fmt = (n: number) => '$' + n.toLocaleString('es-CL');
+
+const desc = [
+  `Sankey de movimientos publicados: ${retiros.length} retiros por ${fmt(totalRetiros)} y ${inyecciones.length} inyecciones por ${fmt(totalInyecciones)}.`,
+  'Cada cinta es un movimiento documentado de forma independiente; el diagrama no afirma que lo retirado de una partida se haya reasignado a otra.',
+].join(' ');
+---
+
+{!sinDatos && (
+  <div class="flex flex-col gap-4">
+    <div class="overflow-x-auto">
+      <svg
+        viewBox={`0 0 ${G.W} ${H}`}
+        class={compact ? 'w-full min-w-[620px] h-auto' : 'w-full min-w-[760px] h-auto'}
+        role="img"
+        aria-labelledby={`gv-sk-title-${id} gv-sk-desc-${id}`}
+        font-family="system-ui, -apple-system, sans-serif"
+      >
+        <title id={`gv-sk-title-${id}`}>Flujo de los movimientos publicados del presupuesto</title>
+        <desc id={`gv-sk-desc-${id}`}>{desc}</desc>
+
+        <defs>
+          <pattern id={`gv-sk-hatch-${id}`} patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+            <rect width="7" height="7" fill="var(--color-warning)" fill-opacity="0.16" />
+            <line x1="0" y1="0" x2="0" y2="7" stroke="var(--color-warning)" stroke-width="2.4" />
+          </pattern>
+        </defs>
+
+        {/* Ejes: la altura de cada barra es la suma real de su lado y comparten
+            escala, asi que su diferencia de alto es la comparacion verdadera. */}
+        {ejeL && (
+          <rect
+            x={nodeL}
+            y={SHIFT + offL + ejeL.top - L.bandas[0].h / 2}
+            width={G.NODE}
+            height={L.nodeH}
+            rx="2"
+            fill="var(--color-error)"
+            fill-opacity="0.75"
+          />
+        )}
+        {ejeR && (
+          <rect
+            x={nodeR}
+            y={SHIFT + offR + ejeR.top - R.bandas[0].h / 2}
+            width={G.NODE}
+            height={R.nodeH}
+            rx="2"
+            fill="var(--color-success)"
+            fill-opacity="0.75"
+          />
+        )}
+
+        {/* Retiros (izquierda) */}
+        {L.bandas.map((b, i) => {
+          const yTop = SHIFT + offL + b.outTop;
+          const nTop = SHIFT + offL + b.nodeTop;
+          const e = eL[i];
+          const tip = wrapText(b.f.objetivo ?? 'Sin objetivo declarado publicado', G.TIP_W / (G.FS * 0.55), 3);
+          const tipH = 30 + tip.length * 11;
+          const tipY = Math.max(G.PAD_Y, Math.min(H - tipH - G.PAD_Y, SHIFT + offL + b.cy - tipH / 2));
+          return (
+            <g class="gv-sk-band">
+              <a href={`#${b.f.ancla}`} class="gv-sk-link">
+                <path
+                  d={bandaPath(nodeL, nTop, ribbonL, yTop, b.h, true)}
+                  fill="var(--color-error)"
+                  fill-opacity={b.f.sinObjetivo ? 0.5 : 0.82}
+                  class="gv-sk-ribbon"
+                />
+                {b.f.sinObjetivo && (
+                  <path d={bandaPath(nodeL, nTop, ribbonL, yTop, b.h, true)} fill={`url(#gv-sk-hatch-${id})`} />
+                )}
+                <line
+                  x1={labelLx}
+                  y1={SHIFT + e.cy}
+                  x2={ribbonL}
+                  y2={SHIFT + e.bandCy}
+                  stroke="var(--color-base-content)"
+                  stroke-opacity="0.22"
+                  stroke-width="0.8"
+                />
+                {e.lines.map((ln, j) => (
+                  <text
+                    x={labelLx}
+                    y={SHIFT + e.top + G.LINE * j + G.FS * 0.85}
+                    text-anchor="end"
+                    font-size={G.FS}
+                    fill="var(--color-base-content)"
+                    fill-opacity="0.85"
+                    class="gv-sk-label"
+                  >
+                    {ln}
+                  </text>
+                ))}
+                <text x={labelLx} y={SHIFT + e.top + e.lines.length * G.LINE + G.FS * 0.9} text-anchor="end" font-size={G.FS * 0.94} font-weight="700" fill="var(--color-error)">
+                  {b.f.montoTexto}
+                </text>
+                <g class="gv-sk-tip" transform={`translate(${cx - G.TIP_W / 2}, ${tipY})`} aria-hidden="true">
+                  <rect width={G.TIP_W} height={tipH} rx="7" fill="var(--color-base-100)" stroke="var(--color-base-300)" stroke-width="1" />
+                  <text x="9" y="14" font-size="10" font-weight="700" fill="var(--color-error)">
+                    Retiro · {b.f.montoTexto} · {b.f.ejercicio}
+                  </text>
+                  {tip.map((ln, j) => (
+                    <text x="9" y={27 + j * 11} font-size="9" fill="var(--color-base-content)" fill-opacity="0.75">
+                      {ln}
+                    </text>
+                  ))}
+                </g>
+              </a>
+            </g>
+          );
+        })}
+
+        {/* Inyecciones (derecha) */}
+        {R.bandas.map((b, i) => {
+          const yTop = SHIFT + offR + b.outTop;
+          const nTop = SHIFT + offR + b.nodeTop;
+          const e = eR[i];
+          const tip = wrapText(b.f.objetivo ?? 'Sin objetivo declarado publicado', G.TIP_W / (G.FS * 0.55), 3);
+          const tipH = 30 + tip.length * 11;
+          const tipY = Math.max(G.PAD_Y, Math.min(H - tipH - G.PAD_Y, SHIFT + offR + b.cy - tipH / 2));
+          return (
+            <g class="gv-sk-band">
+              <a href={`#${b.f.ancla}`} class="gv-sk-link">
+                <path
+                  d={bandaPath(nodeR, nTop, ribbonR, yTop, b.h, false)}
+                  fill="var(--color-success)"
+                  fill-opacity={b.f.sinObjetivo ? 0.5 : 0.82}
+                  class="gv-sk-ribbon"
+                />
+                {b.f.sinObjetivo && (
+                  <path d={bandaPath(nodeR, nTop, ribbonR, yTop, b.h, false)} fill={`url(#gv-sk-hatch-${id})`} />
+                )}
+                <line
+                  x1={labelRx}
+                  y1={SHIFT + e.cy}
+                  x2={ribbonR}
+                  y2={SHIFT + e.bandCy}
+                  stroke="var(--color-base-content)"
+                  stroke-opacity="0.22"
+                  stroke-width="0.8"
+                />
+                {e.lines.map((ln, j) => (
+                  <text
+                    x={labelRx}
+                    y={SHIFT + e.top + G.LINE * j + G.FS * 0.85}
+                    text-anchor="start"
+                    font-size={G.FS}
+                    fill="var(--color-base-content)"
+                    fill-opacity="0.85"
+                    class="gv-sk-label"
+                  >
+                    {ln}
+                  </text>
+                ))}
+                <text x={labelRx} y={SHIFT + e.top + e.lines.length * G.LINE + G.FS * 0.9} text-anchor="start" font-size={G.FS * 0.94} font-weight="700" fill="var(--color-success)">
+                  {b.f.montoTexto}
+                </text>
+                <g class="gv-sk-tip" transform={`translate(${cx - G.TIP_W / 2}, ${tipY})`} aria-hidden="true">
+                  <rect width={G.TIP_W} height={tipH} rx="7" fill="var(--color-base-100)" stroke="var(--color-base-300)" stroke-width="1" />
+                  <text x="9" y="14" font-size="10" font-weight="700" fill="var(--color-success)">
+                    Inyección · {b.f.montoTexto} · {b.f.ejercicio}
+                  </text>
+                  {tip.map((ln, j) => (
+                    <text x="9" y={27 + j * 11} font-size="9" fill="var(--color-base-content)" fill-opacity="0.75">
+                      {ln}
+                    </text>
+                  ))}
+                </g>
+              </a>
+            </g>
+          );
+        })}
+      </svg>
+    </div>
+
+    <div class="flex flex-wrap items-center gap-x-4 gap-y-2 px-1">
+      <span class="inline-flex items-center gap-1.5 text-[11px] text-base-content/70">
+        <span class="h-2.5 w-4 rounded-xs shrink-0" style="background:var(--color-error)" aria-hidden="true" />
+        Retiros publicados
+        <span class="tabular-nums font-bold text-base-content/90">{fmt(totalRetiros)}</span>
+      </span>
+      <span class="inline-flex items-center gap-1.5 text-[11px] text-base-content/70">
+        <span class="h-2.5 w-4 rounded-xs shrink-0" style="background:var(--color-success)" aria-hidden="true" />
+        Inyecciones publicadas
+        <span class="tabular-nums font-bold text-base-content/90">{fmt(totalInyecciones)}</span>
+      </span>
+      {marcados && (
+        <span class="inline-flex items-center gap-1.5 text-[11px] text-base-content/70">
+          <svg width="16" height="10" aria-hidden="true" class="shrink-0">
+            <defs>
+              <pattern id={`gv-sk-leg-${id}`} patternUnits="userSpaceOnUse" width="7" height="7" patternTransform="rotate(45)">
+                <rect width="7" height="7" fill="var(--color-warning)" fill-opacity="0.16" />
+                <line x1="0" y1="0" x2="0" y2="7" stroke="var(--color-warning)" stroke-width="2.4" />
+              </pattern>
+            </defs>
+            <rect width="16" height="10" rx="2" fill="var(--color-error)" fill-opacity="0.5" />
+            <rect width="16" height="10" rx="2" fill={`url(#gv-sk-leg-${id})`} />
+          </svg>
+          Textura = sin objetivo ni destino publicado ({sinObjetivo})
+        </span>
+      )}
+    </div>
+
+    <p class="text-[11px] text-base-content/45 leading-relaxed px-1">
+      Cada cinta es un movimiento documentado de forma independiente: el diagrama no afirma que lo retirado de
+      una partida se haya reasignado a otra. La altura es proporcional al monto, con un mínimo de {G.MIN_H} px
+      para que los montos pequeños sigan siendo visibles, y las dos columnas comparten la misma escala.
+      Pasa el cursor sobre una cinta para ver el objetivo declarado; el enlace lleva a su tarjeta.
+    </p>
+
+    <div class="sr-only">
+      <table>
+        <caption>Flujo de los movimientos publicados del presupuesto</caption>
+        <thead>
+          <tr><th scope="col">Lado</th><th scope="col">Movimiento</th><th scope="col">Monto</th><th scope="col">Objetivo declarado</th></tr>
+        </thead>
+        <tbody>
+          {retiros.map((f) => (
+            <tr>
+              <th scope="row">Retiro</th>
+              <td>{f.ejercicio} · {f.descripcion}</td>
+              <td>{f.montoTexto}</td>
+              <td>{f.objetivo ?? 'Sin objetivo ni destino publicado'}</td>
+            </tr>
+          ))}
+          {inyecciones.map((f) => (
+            <tr>
+              <th scope="row">Inyección</th>
+              <td>{f.ejercicio} · {f.descripcion}</td>
+              <td>{f.montoTexto}</td>
+              <td>{f.objetivo ?? 'Sin objetivo ni destino publicado'}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+)}
+
+<style>
+  .gv-sk-link {
+    text-decoration: none;
+  }
+  .gv-sk-ribbon,
+  .gv-sk-label {
+    transition: opacity 0.15s ease-out, fill-opacity 0.15s ease-out;
+  }
+  .gv-sk-band:hover .gv-sk-ribbon,
+  .gv-sk-band:focus-within .gv-sk-ribbon {
+    fill-opacity: 1;
+  }
+  .gv-sk-band:hover .gv-sk-label,
+  .gv-sk-band:focus-within .gv-sk-label {
+    fill-opacity: 1;
+    text-decoration: underline;
+  }
+  .gv-sk-tip {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.12s ease-out;
+  }
+  .gv-sk-band:hover .gv-sk-tip,
+  .gv-sk-band:focus-within .gv-sk-tip {
+    opacity: 1;
+  }
+  .gv-sk-band:focus-within {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .gv-sk-ribbon,
+    .gv-sk-label,
+    .gv-sk-tip {
+      transition: none;
+    }
+  }
+</style>

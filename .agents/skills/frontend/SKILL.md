@@ -62,6 +62,19 @@ Todo el panorama se deriva en build de `src/lib/personStats.ts` (índice inverti
 - El skeleton usa solo el spinner local + `role="status"`; no usar `animate-pulse` sobre toda el área ni efectos React/canvas para esta carga local.
 - Perf: `alphaMin(0.01)` (~200 ticks) + `fitView` en `end`.
 
+## `/presupuesto` — poster con Sankey
+
+La página se lee como un diagrama, no como una tabla: `BudgetSankey.astro` (SVG estático, cero JS) + `BudgetMovementCard.astro` (tarjetas con el monto grande), y el detalle largo (variaciones, hitos, fuentes) dentro de `<details>`.
+
+- **Un solo px-por-peso para las dos columnas**, tomado del lado mayor, para que el bloque de retiros y el de inyecciones se puedan comparar de verdad; la altura de cada eje es la suma de sus cintas (`PresupuestoSankey` en `src/lib/presupuesto.ts`). Las cintas bajo `MIN_H` (3 px) se dibujan a 3 px para no desaparecer: eso infla levemente el lado con más movimientos minúsculos (medido: ~3% en la razón dibujada) y **el pie del gráfico lo declara**; si cambia el mínimo, cambia el texto.
+- El abanico sale de la diferencia entre los dos extremos de la cinta: en el eje los tramos son contiguos y hacia afuera se abren con `BAND_GAP`. Nada de posiciones decorativas.
+- Etiquetas afuera, con **empuje hacia abajo** (piso + alto del bloque) y línea guía: dos cintas de 3 px contiguas pisarían sus etiquetas. Alto del SVG y etiquetas se calculan antes de fijar el `viewBox` (el empuje puede salirse del área de cintas).
+- `objetivo_declarado: null` → cinta con **textura diagonal** (`<pattern>`, `--color-warning`) y leyenda «Textura = sin objetivo ni destino publicado». Es la contradicción que la página hace visible sin escribir una línea de juicio.
+- Tooltip por CSS (`.gv-sk-tip`, `hover`/`focus-within` del `<g>`, nunca JS), `<title>`/`<desc>`, y tabla `sr-only` con una fila por cinta. El SVG va en `overflow-x-auto` + `min-w-[760px]` (`min-w-[620px]` en el compacto).
+- **Cada cinta enlaza a su tarjeta** (`#mov-AAAA-N`, derivado de `Movimiento.orden`). Las del Sankey global apuntan a tarjetas que están en paneles de año ocultos: el script de la página intercepta `a[href^="#mov-"]`, llama `presApply(AAAA)`, y solo entonces hace `scrollIntoView` + `history.replaceState`. Sin ese paso el salto no tiene destino (el elemento existe pero `display:none`).
+- El script delega en `document` con guard por rama (botón de año / cinta) y se reengancha en `astro:page-load`.
+- **Verificación** (`scripts/` de este skill, corren desde la raíz): `node .agents/skills/frontend/scripts/check-presupuesto-sankey.mjs` revisa el HTML de `dist/` — proporcionalidad de cada cinta contra su monto impreso, que el mínimo de espesor solo cubra las cintas que no alcanzarían, textura = filas sin objetivo, el global = unión de los años, y que todo enlace resuelva. `serve-dist.mjs` (background, puerto 4319) + `e2e-presupuesto.mjs` (puppeteer) comprueban en navegador que la cinta del global abra el panel del año correcto, el tooltip y el móvil.
+
 ## Página `/events`: filtros y búsqueda en cliente
 
 SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente sobre dataset JSON en `<script id="event-index-data">` (`eventListClient.js`).
