@@ -628,6 +628,7 @@
 - [2026/04/20260407-1 - Seremi del Trabajo de Valparaíso Carlos Montero renuncia a los 5 días de asumir](src/content/events/2026/04/20260407-1.md) — 2 fuentes
 - [2026/04/20260407-2 - Contraloría cuestiona pagos irregulares a seremi de Culturas del Maule por trabajo en Municipalidad de Villa Alegre](src/content/events/2026/04/20260407-2.md) — 3 fuentes
 - [2026/04/20260407-3 - Ex-Ante anticipa el paquete económico de Kast: 45 medidas, ajustes a la clase media y estrategia anti-fragmentación](src/content/events/2026/04/20260407-3.md) — 1 fuente
+- [2026/04/20260407-4 - Christian Pino asume como jefe de comunicaciones de la Subsecretaría de Seguridad Pública](src/content/events/2026/04/20260407-4.md) — 5 fuentes
 - [2026/04/20260408-1 - Renuncia seremi del Trabajo de Arica Nataly Cruz tras 8 días por no acreditar experiencia](src/content/events/2026/04/20260408-1.md) — 3 fuentes
 - [2026/04/20260408-2 - Nombramiento de Jorge Ravelo como seremi de Energía de Los Lagos es revocado](src/content/events/2026/04/20260408-2.md) — 1 fuente
 - [2026/04/20260408-3 - Renuncia seremi de la Mujer de Antofagasta Ángel Colque por no tener título profesional](src/content/events/2026/04/20260408-3.md) — 1 fuente
@@ -737,6 +738,7 @@
 - [2026/06/20260604-5 - Fact-checkers confirman los cupos Fonasa y el peso del cáncer de la Cuenta Pública pero corrigen el avance oncológico](src/content/events/2026/06/20260604-5.md) — 6 fuentes
 - [2026/06/20260604-6 - Fact-checkers confirman homicidios y expulsiones de la Cuenta Pública con un matiz de una víctima en la cifra preliminar](src/content/events/2026/06/20260604-6.md) — 7 fuentes
 - [2026/06/20260605-1 - Abogado de exconcejales renuncia a la remoción de Galdames ante el TER para asumir como subsecretario de Prevención del Delito](src/content/events/2026/06/20260605-1.md) — 2 fuentes
+- [2026/06/20260605-2 - Christian Pino renuncia como jefe de comunicaciones de la Subsecretaría de Seguridad Pública tras la reestructuración del Ministerio de Seguridad](src/content/events/2026/06/20260605-2.md) — 6 fuentes
 - [2026/06/20260607-1 - Operación Tokio: la Fiscalía Sur desarticula la red de lavado de dinero del Tren de Aragua; 17 formalizados y 14 en prisión preventiva](src/content/events/2026/06/20260607-1.md) — 7 fuentes
 - [2026/06/20260608-1 - Presidencia confirma reunión de Kast con Peter Thiel en La Moneda y se niega a transparentar el contenido](src/content/events/2026/06/20260608-1.md) — 8 fuentes
 - [2026/06/20260608-2 - Kast respalda embargos a deudores del CAE y afirma que tuvieron oportunidades de ponerse al día](src/content/events/2026/06/20260608-2.md) — 4 fuentes
@@ -1871,15 +1873,15 @@
 - [2026/10/20261007-7 - PDI y SERMIG fiscalizan comercio y barberías en San Antonio de Temuco: 9 extranjeros controlados y 7 denunciados](src/content/events/2026/10/20261007-7.md) — 8 fuentes
 - [2026/10/20261007-8 - Rectores piden rechazar la partida de Educación Superior del Presupuesto 2027 y la subcomisión la rechaza; Arzola defiende el foco en primera infancia](src/content/events/2026/10/20261007-8.md) — 8 fuentes
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
-- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 74 fuentes
+- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 75 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 11 fuentes
 - [2026/10/20261008-5 - Suspenden clases en 10 comunas de la Región Metropolitana para el viernes 9 de octubre](src/content/events/2026/10/20261008-5.md) — 5 fuentes
-- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 20 fuentes
+- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 25 fuentes
 - [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 11 fuentes
 - [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 9 fuentes
 - [2026/10/20261008-9 - Presidencia pagó $17.200.001 a TVN por transmitir el Te Deum Evangélico 2026, el primer gasto estatal de este tipo desde 2011](src/content/events/2026/10/20261008-9.md) — 4 fuentes
-- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 39 fuentes
+- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 41 fuentes
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
