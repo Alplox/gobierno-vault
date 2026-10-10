@@ -1878,6 +1878,7 @@
 - [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 20 fuentes
 - [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 11 fuentes
 - [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 9 fuentes
+- [2026/10/20261008-9 - Presidencia pagó $17.200.001 a TVN por transmitir el Te Deum Evangélico 2026, el primer gasto estatal de este tipo desde 2011](src/content/events/2026/10/20261008-9.md) — 4 fuentes
 - [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 39 fuentes
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
