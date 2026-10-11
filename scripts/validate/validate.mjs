@@ -227,16 +227,16 @@ try {
 }
 // Fuentes referenciadas desde src/data/presupuesto/*.yaml (página /presupuesto):
 // cuentan como citadas. Estructura: orden_refs[] + ley.fuente + hitos[].fuente +
-// variaciones[].fuente + movimientos[].fuente.
+// variaciones[].fuente + movimientos[].fuente + fuentes_secundarias[] de cada uno.
 try {
   const dirPresupuesto = join(process.cwd(), 'src', 'data', 'presupuesto');
   for (const f of readdirSync(dirPresupuesto).filter((x) => x.endsWith('.yaml'))) {
     const ej = YAML.parse(readFileSync(join(dirPresupuesto, f), 'utf8'));
     for (const id of ej.orden_refs ?? []) pushRef(id);
     pushRef(ej.ley?.fuente);
-    for (const h of ej.hitos ?? []) pushRef(h.fuente);
-    for (const v of ej.variaciones ?? []) pushRef(v.fuente);
-    for (const m of ej.movimientos ?? []) pushRef(m.fuente);
+    for (const h of ej.hitos ?? []) { pushRef(h.fuente); for (const id of h.fuentes_secundarias ?? []) pushRef(id); }
+    for (const v of ej.variaciones ?? []) { pushRef(v.fuente); for (const id of v.fuentes_secundarias ?? []) pushRef(id); }
+    for (const m of ej.movimientos ?? []) { pushRef(m.fuente); for (const id of m.fuentes_secundarias ?? []) pushRef(id); }
   }
 } catch {
   // sin ejercicios o ilegibles: no aportan referencias (los errores propios

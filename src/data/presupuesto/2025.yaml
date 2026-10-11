@@ -7,26 +7,26 @@ estado: cerrado
 estado_label: Cerrado (IFP cuarto trimestre)
 ley:
   nombre: Ley de Presupuestos 2025
-  fuente: biobio-2026-02-13-ifp-deficit-355
-  nota: Meta de déficit estructural de 1,1% del PIB planteada en la ley.
+  fuente: bcn-2024-12-13-ley-21722-presupuestos-2025
+  nota: Ley N° 21.722, publicada el 13-dic-2024. Meta de déficit estructural de 1,1% del PIB planteada en la ley.
 totales:
-  inicial: { monto: null, nota: En carga desde Dipres }
-  vigente: { monto: null, nota: En carga desde Dipres }
-  ejecutado: { monto: null, nota: Ejercicio cerrado, en carga desde Dipres }
+  inicial: { monto: null, nota: Ley aprobada por $82 billones (+2% frente a 2024, con recorte de US$600 millones en la tramitación) }
+  vigente: { monto: null, nota: Sin cifra de gasto vigente publicada en la cobertura citada }
+  ejecutado: { monto: 82132035000000, nota: Gasto del Gobierno Central Total 2025 según el IFP del cuarto trimestre (+3,5% real, 24,3% del PIB) }
   saldo: { monto: null, nota: Caja de cierre en disputa, ver hitos }
 hitos:
   - etiqueta: Déficit estructural de cierre
     valor: 3,55% del PIB ($12.028.692 millones)
-    fuente: biobio-2026-02-13-ifp-deficit-355
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
   - etiqueta: Meta de la ley frente a proyección del tercer trimestre
     valor: Meta 1,1% frente a 2,2% proyectado
     fuente: df-2026-02-13-deficit-estructural-2025
   - etiqueta: Deuda bruta del Gobierno Central
     valor: 41,7% del PIB, estable frente a 2024
-    fuente: emol-2026-02-13-deficit-estructural-2025
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
   - etiqueta: Recaudación tributaria no minera
     valor: 16,4% del PIB, nivel más bajo desde 2014
-    fuente: df-2026-02-13-deficit-estructural-2025
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
   - etiqueta: Desviación de ingresos del año
     valor: Unos $1,3 billones
     fuente: emol-2026-02-13-deficit-estructural-2025
@@ -39,11 +39,54 @@ hitos:
   - etiqueta: Caja según el exministro Grau en réplica
     valor: US$1.406 millones a fines de enero y sobre US$800 millones en marzo
     fuente: eldinamo-2026-03-13-quiroz-sin-caja-grau
-movimientos: []
-variaciones: []
+  - etiqueta: Ejecución del gasto respecto de la Ley aprobada
+    valor: 99,5% a diciembre (corriente 101,7%, capital 87,9%)
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
+  - etiqueta: Déficit efectivo 2025
+    valor: $9.525.510 millones (2,8% del PIB)
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
+  - etiqueta: Ley de Presupuestos 2025 aprobada
+    valor: $82 billones (+2% frente a 2024)
+    fuente: gob-cl-2024-11-27-aprobacion-presupuesto-2025
+  - etiqueta: Recorte acordado en la tramitación frente al proyecto original
+    valor: US$600 millones (el proyecto traía +2,7% con US$500 millones)
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+  - etiqueta: Reposición de recursos del INDH en la negociación del despacho
+    valor: Recursos del Instituto Nacional de Derechos Humanos repuestos tras el recorte propuesto
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+  - etiqueta: Ingresos del Gobierno Central 2025
+    valor: $72.606.525 millones (+3,5% real, 21,4% del PIB)
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
+  - etiqueta: Gasto primario 2025
+    valor: 23,0% del PIB, nivel no visto en casi una década
+    fuente: emol-2026-02-13-deficit-estructural-2025
+movimientos:
+  - tipo: recorte
+    descripcion: Rebaja de la Segegob en la tramitación de la Ley 2025
+    fecha: '2024-11-27'
+    monto: 140000000
+    monto_nota: De $540 a $400 millones
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+    nivel_impacto: institucional
+    organizacion_id: segegob
+    nota: Recorte acordado en la negociación del despacho a ley.
+variaciones:
+  - alcance: Ley 2025 frente a 2024
+    variacion_texto: +2% (proyecto original +2,7% con recorte de US$500 millones; ley con US$600 millones)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+    evento_id: null
+    nota: Último presupuesto ejecutado íntegramente por el gobierno de Boric.
 orden_refs:
   - biobio-2026-02-13-ifp-deficit-355
   - df-2026-02-13-deficit-estructural-2025
   - emol-2026-02-13-deficit-estructural-2025
   - emol-2026-03-18-reseteo-gobierno-kast
   - eldinamo-2026-03-13-quiroz-sin-caja-grau
+  - gob-cl-2024-11-27-aprobacion-presupuesto-2025
+  - biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+  - dipres-2026-02-13-ifp-cuarto-trimestre-2025
+  - bcn-2024-12-13-ley-21722-presupuestos-2025

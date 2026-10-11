@@ -1,0 +1,140 @@
+---
+ // Tablero estadístico de /presupuesto: balance retiros/inyecciones por ejercicio,
+ // ranking de mayores movimientos con monto y cobertura del registro. HTML + CSS
+ // puro (barras por ancho relativo, sin JS): cada cifra sale de getPresupuesto(),
+ // asi que el tablero nunca se desincroniza de las tarjetas y el Sankey.
+import { formatCLP, type Ejercicio } from '../lib/presupuesto';
+
+interface Props {
+  ejercicios: Ejercicio[];
+  conRespaldoOficial: number;
+}
+
+const { ejercicios, conRespaldoOficial } = Astro.props;
+
+const RETIROS = new Set(['recorte']);
+const INYECCIONES = new Set(['aumento']);
+
+const conMonto = ejercicios.flatMap((e) => e.movimientos.map((m) => ({ m, ano: e.ano }))).filter(({ m }) => m.monto !== null);
+const topRecortes = conMonto
+  .filter(({ m }) => RETIROS.has(m.tipo))
+  .sort((a, b) => b.m.monto! - a.m.monto!)
+  .slice(0, 5);
+const topAumentos = conMonto
+  .filter(({ m }) => INYECCIONES.has(m.tipo))
+  .sort((a, b) => b.m.monto! - a.m.monto!)
+  .slice(0, 5);
+
+const barras = ejercicios.map((e) => ({
+  ano: e.ano,
+  retiros: e.sankey.totalRetiros,
+  inyecciones: e.sankey.totalInyecciones,
+}));
+const maxBarra = Math.max(1, ...barras.flatMap((b) => [b.retiros, b.inyecciones]));
+const maxTop = Math.max(1, ...topRecortes.map(({ m }) => m.monto!), ...topAumentos.map(({ m }) => m.monto!));
+
+const totalMovs = ejercicios.reduce((s, e) => s + e.movimientos.length, 0);
+const enFlujo = ejercicios.reduce((s, e) => s + e.sankey.retiros.length + e.sankey.inyecciones.length, 0);
+const sinMonto = ejercicios
+  .flatMap((e) => e.sankey.pendientes)
+  .filter((p) => p.motivo === 'sin_monto').length;
+const enRevision = ejercicios
+  .flatMap((e) => e.sankey.pendientes)
+  .filter((p) => p.motivo === 'en_revision').length;
+---
+
+<section class="rounded-3xl bg-base-100 shadow-[var(--shadow-border)] overflow-hidden mb-8" aria-labelledby="pres-stats">
+  <div class="px-5 sm:px-7 pt-6 pb-2 max-w-2xl">
+    <h2 id="pres-stats" class="text-lg sm:text-xl font-bold text-base-content">Estadísticas de los movimientos</h2>
+    <p class="text-xs text-base-content/60 mt-1">
+      Lo mismo que muestran las tarjetas y el flujo, agregado: de dónde sale y a dónde entra por ejercicio,
+      los mayores montos publicados y cuántos movimientos tienen respaldo oficial.
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 px-5 sm:px-7 py-5">
+    <div>
+      <h3 class="text-sm font-bold text-base-content mb-3">Balance por ejercicio</h3>
+      <ul class="space-y-3">
+        {barras.map((b) => (
+          <li>
+            <p class="text-xs font-semibold text-base-content/70 mb-1 tabular-nums">{b.ano}</p>
+            <div class="space-y-1">
+              <div class="flex items-center gap-2">
+                <span class="w-20 shrink-0 text-[11px] text-error text-right tabular-nums">{formatCLP(b.retiros)}</span>
+                <div class="flex-1 h-2.5 rounded-full bg-base-200 overflow-hidden">
+                  <div class="h-full rounded-full bg-error/80" style={`width:${((b.retiros / maxBarra) * 100).toFixed(1)}%`} />
+                </div>
+              </div>
+              <div class="flex items-center gap-2">
+                <span class="w-20 shrink-0 text-[11px] text-success text-right tabular-nums">{formatCLP(b.inyecciones)}</span>
+                <div class="flex-1 h-2.5 rounded-full bg-base-200 overflow-hidden">
+                  <div class="h-full rounded-full bg-success/80" style={`width:${((b.inyecciones / maxBarra) * 100).toFixed(1)}%`} />
+                </div>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ul>
+      <p class="text-[11px] text-base-content/45 mt-2 flex flex-wrap gap-x-3 gap-y-1">
+        <span class="inline-flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-error/80" />Retiros</span>
+        <span class="inline-flex items-center gap-1"><span class="h-2 w-2 rounded-full bg-success/80" />Inyecciones</span>
+        <span>Barras a escala compartida entre ejercicios.</span>
+      </p>
+    </div>
+
+    <div>
+      <h3 class="text-sm font-bold text-base-content mb-3">Cobertura del registro</h3>
+      <div class="h-3.5 rounded-full bg-base-200 overflow-hidden flex" role="img" aria-label={`${enFlujo} en el flujo, ${sinMonto} sin monto publicado, ${enRevision} en revisión`}>
+        <div class="h-full bg-primary/80" style={`width:${((enFlujo / Math.max(1, totalMovs)) * 100).toFixed(1)}%`} />
+        <div class="h-full bg-warning/80" style={`width:${((sinMonto / Math.max(1, totalMovs)) * 100).toFixed(1)}%`} />
+        <div class="h-full bg-base-300" style={`width:${((enRevision / Math.max(1, totalMovs)) * 100).toFixed(1)}%`} />
+      </div>
+      <ul class="mt-2 space-y-1 text-xs text-base-content/70 tabular-nums">
+        <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-primary/80 shrink-0" />{enFlujo} en el flujo (con monto publicado)</li>
+        <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warning/80 shrink-0" />{sinMonto} sin monto publicado</li>
+        <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-base-300 shrink-0" />{enRevision} recomendaciones en revisión</li>
+        <li class="flex items-center gap-1.5"><span class="badge badge-xs badge-success shrink-0">oficial</span>{conRespaldoOficial} de {totalMovs} con respaldo oficial además de prensa</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 px-5 sm:px-7 pb-6">
+    <div>
+      <h3 class="text-sm font-bold text-base-content mb-3">Mayores recortes publicados</h3>
+      <ol class="space-y-2.5">
+        {topRecortes.map(({ m, ano }) => (
+          <li>
+            <div class="flex items-baseline justify-between gap-2 text-xs">
+              <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-primary transition-colors truncate">
+                <span class="badge badge-xs badge-outline mr-1.5 tabular-nums">{ano}</span>{m.descripcion}
+              </a>
+              <span class="font-bold text-error tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-base-200 overflow-hidden mt-1">
+              <div class="h-full rounded-full bg-error/70" style={`width:${((m.monto! / maxTop) * 100).toFixed(1)}%`} />
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+    <div>
+      <h3 class="text-sm font-bold text-base-content mb-3">Mayores inyecciones publicadas</h3>
+      <ol class="space-y-2.5">
+        {topAumentos.map(({ m, ano }) => (
+          <li>
+            <div class="flex items-baseline justify-between gap-2 text-xs">
+              <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-primary transition-colors truncate">
+                <span class="badge badge-xs badge-outline mr-1.5 tabular-nums">{ano}</span>{m.descripcion}
+              </a>
+              <span class="font-bold text-success tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
+            </div>
+            <div class="h-1.5 rounded-full bg-base-200 overflow-hidden mt-1">
+              <div class="h-full rounded-full bg-success/70" style={`width:${((m.monto! / maxTop) * 100).toFixed(1)}%`} />
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </div>
+</section>

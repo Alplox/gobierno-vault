@@ -8,10 +8,10 @@ estado: en_ejecucion
 estado_label: En ejecución
 ley:
   nombre: Ley de Presupuestos 2026
-  fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
-  nota: Cifras del primer semestre según boletín Dipres con cierre estadístico al 23 de julio de 2026.
+  fuente: dipres-2025-12-12-ley-21796-presupuesto-2026
+  nota: Texto oficial de la ley (Ley N° 21.796, publicada el 12-dic-2025). Cifras de ejecución del primer semestre según boletín Dipres con cierre estadístico al 23 de julio de 2026.
 totales:
-  inicial: { monto: null, nota: En carga desde Dipres }
+  inicial: { monto: null, nota: Ley despachada por $86,2 billones (+1,7% frente a 2025), último presupuesto de Boric }
   vigente: { monto: null, nota: En carga desde Dipres }
   ejecutado: { monto: null, nota: Primer semestre con 48,7 por ciento de ejecución sobre la Ley aprobada }
   saldo: { monto: null, nota: Ejercicio en curso }
@@ -46,6 +46,31 @@ hitos:
   - etiqueta: Recortes anunciados a mitad de año
     valor: Cercanos a los US$2.000 millones
     fuente: bbc-2026-06-18-impuesto-corporativo-kast-analisis
+  - etiqueta: Ley de Presupuestos 2026 despachada
+    valor: $86,2 billones (+1,7% frente a 2025)
+    fuente: radio-uchile-2025-11-27-despacho-presupuesto-2026
+  - etiqueta: Reasignación para prioridades en la Ley 2026
+    valor: US$2.800 millones (0,8% del PIB)
+    fuente: radio-uchile-2025-11-27-despacho-presupuesto-2026
+  - etiqueta: Oficio de Hacienda de abril con programas a descontinuar y rebajar
+    valor: 142 programas a descontinuar y 260 a rebajar, con ahorro estimado de $5,47 billones solo por descontinuaciones
+    fuente: theclinic-2026-04-24-descontinuar-142-programas-260-rebajar
+    fuentes_secundarias:
+      - bbcl-explica-2026-04-24-24-programas-salud-descontinuar
+  - etiqueta: Inyección del plan Chile Despega para inversión rápida
+    valor: $800.000 millones ($155.000 millones en el cuarto trimestre de 2026 y $635.000 millones en 2027)
+    fuente: interior-2026-09-28-chile-despega-plan-empleo
+    fuentes_secundarias:
+      - eldinamo-2026-09-28-chile-despega-100-mil-empleos
+  - etiqueta: Capitalización del 100% de las utilidades 2025 de Codelco
+    valor: US$2.423 millones que permanecen en la empresa
+    fuente: radio-uchile-2026-08-10-codelco-capitaliza-utilidades
+  - etiqueta: Per cápita basal de la salud municipal frente a lo comprometido
+    valor: $11.932 mensuales por inscrito frente a $12.259 con reajustes; más de $37.000 millones pendientes entre diciembre de 2025 y septiembre de 2026
+    fuente: elciudadano-2026-09-29-confusam-ratifica-paro-per-capita
+  - etiqueta: Ajustes 2026 que distorsionan la base de comparación del proyecto 2027
+    valor: Ajustes por $1.307.729 millones más el D333 de Salud por $413.200 millones, según Rumbo Colectivo
+    fuente: latercera-2026-09-29-kast-oficialismo-presupuesto
 variaciones:
   - alcance: Gasto de capital contemplado en la Ley 2026 frente a 2025
     variacion_texto: -6,1% real
@@ -95,6 +120,8 @@ movimientos:
     objetivo_declarado: Reconstrucción fiscal con contención del gasto
     evento_id: 20260318-1
     fuente: emol-2026-03-18-reseteo-gobierno-kast
+    fuentes_secundarias:
+      - dipres-2026-10-09-decretos-modificacion
     nivel_impacto: indirecto
     nota: Las carteras debían reportar espacios de eficiencia a la Dipres antes del 20 de marzo.
   - tipo: revision_programas
@@ -106,10 +133,171 @@ movimientos:
     fuente: biobiochile-2026-04-27-dipres-descontinuar-reformular
     nivel_impacto: institucional
     nota: Dipres aclaró que la palabra descontinuar debía leerse como reformular.
+  - tipo: recorte
+    descripcion: Ajuste de perillas en Transportes por el 3% transversal (decreto N.º 337)
+    fecha: '2026-05-15'
+    monto: 56161000000
+    monto_nota: Sobre una ley de $1.872.061 millones; Secretaría $50.394 millones y Subtel $5.766 millones
+    objetivo_declarado: Cumplir la exigencia fiscal de Hacienda sin afectar servicios según el ministro
+    evento_id: null
+    fuente: biobiochile-2026-05-15-ajuste-perillas-transportes
+    fuentes_secundarias:
+      - dipres-2026-10-09-decretos-modificacion
+      - emol-2026-04-29-de-grange-recorte-transportes
+    partida: Partida 19 · Transportes y Telecomunicaciones
+    nivel_impacto: directo
+    organizacion_id: ministerio_transportes
+    nota: Subsidio Nacional -$45.410 millones (Fondo regional -$15.250 millones), RED Movilidad -$2.084 millones, UOCT -$608 millones y Fiscalización -$584 millones.
+  - tipo: recorte
+    descripcion: Lineamientos del recorte 3% en Transportes con fin a los buses de dos pisos
+    fecha: '2026-04-29'
+    monto: null
+    monto_nota: 3% de la cartera sin monto publicado; reemplazo de articulados nocturnos por buses de 12 metros
+    objetivo_declarado: Eficiencia operacional sin afectar frecuencia ni calidad de servicio
+    evento_id: null
+    fuente: emol-2026-04-29-de-grange-recorte-transportes
+    fuentes_secundarias:
+      - biobiochile-2026-05-15-ajuste-perillas-transportes
+    partida: Partida 19 · Transportes y Telecomunicaciones
+    nivel_impacto: directo
+    organizacion_id: ministerio_transportes
+    nota: Anunciado por el ministro en Radio Duna; el decreto de mayo lo precisó en $56.161 millones.
+  - tipo: recorte
+    descripcion: Recorte al Fondo de Emergencia para la reconstrucción de Viña del Mar
+    fecha: '2026-05-05'
+    monto: 17581000000
+    monto_nota: $17.581 millones oficializados sin que el Minvu estuviera enterado; subejecución de 2% de $502.000 millones según la subsecretaría
+    objetivo_declarado: Sinceramiento ante la subejecución del fondo
+    evento_id: 20260503-1
+    fuente: desenfoque-2026-05-05-quiroz-poduje-vina
+    fuentes_secundarias:
+      - dipres-2026-10-09-decretos-modificacion
+    partida: Partida 18 · Vivienda y Urbanismo
+    nivel_impacto: directo
+    organizacion_id: ministerio_vivienda
+    nota: El exministro calificó la medida de extraña por el ciclo secuencial del fondo hasta 2028.
+  - tipo: recorte
+    descripcion: Recorte a los Serviu de las regiones más afectadas por el temporal
+    fecha: '2026-07-31'
+    monto: 71000000000
+    monto_nota: Más de $71.000 millones aplicados en abril y revelados en julio
+    objetivo_declarado: null
+    evento_id: 20260723-17
+    fuente: contrapoder-2026-07-31-serviu-recorte-temporal
+    fuentes_secundarias:
+      - dipres-2026-10-09-decretos-modificacion
+    partida: Partida 18 · Vivienda y Urbanismo (Serviu)
+    nivel_impacto: directo
+    organizacion_id: ministerio_vivienda
+    nota: El medio contrastó el ajuste con el llamado a la solidaridad ciudadana del Gobierno.
+  - tipo: recorte
+    descripcion: Recorte al presupuesto de Salud dentro del ajuste transversal
+    fecha: '2026-09-14'
+    monto: 120000000000
+    monto_nota: Más de $120.000 millones según el medio, una de las áreas más afectadas
+    objetivo_declarado: null
+    evento_id: 20260914-3
+    fuente: contrapoder-2026-09-14-barros-australia-business-class
+    partida: Partida 16 · Salud
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Cifra publicada por el medio en el marco del ajuste de 3% instruido por Hacienda.
+  - tipo: recorte
+    descripcion: Reducción del presupuesto de la atención primaria de salud municipal en 2026
+    fecha: '2026-09-29'
+    monto: 19000000000
+    monto_nota: $19.000 millones menos con restricciones en insumos y extensiones horarias según el gremio
+    objetivo_declarado: null
+    evento_id: 20260929-4
+    fuente: elmaipo-2026-09-29-confusam-paro-48-horas
+    fuentes_secundarias:
+      - elciudadano-2026-09-29-confusam-ratifica-paro-per-capita
+    partida: Partida 16 · Salud (atención primaria municipal)
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: El gremio cifra además en más de $37.000 millones la deuda del per cápita entre diciembre de 2025 y septiembre de 2026.
+  - tipo: revision_programas
+    descripcion: Oficio de Hacienda que recomienda descontinuar 142 programas y rebajar otros 260
+    fecha: '2026-04-24'
+    monto: null
+    monto_nota: Ahorro estimado de $5.466.542.228.000 solo por las descontinuaciones; en Educación 42 reajustes y 15 descontinuaciones, en Salud 24 programas por más de $300.000 millones
+    objetivo_declarado: Eficiencia y reformulación de programas según aclaración posterior de Dipres
+    evento_id: 20260424-2
+    fuente: theclinic-2026-04-24-descontinuar-142-programas-260-rebajar
+    fuentes_secundarias:
+      - bbcl-explica-2026-04-24-24-programas-salud-descontinuar
+      - biobiochile-2026-04-24-matthei-quiroz-recorte-pae
+    nivel_impacto: institucional
+    nota: Recomendación de ajuste, no recorte ejecutado; alcanzó a Ciencia ($68.000 millones en becas Chile y $32.000 millones al extranjero) y al PAE de Junaeb.
+  - tipo: aumento
+    descripcion: Inyección del plan Chile Despega para inversión pública rápida
+    fecha: '2026-09-28'
+    monto: 800000000000
+    monto_nota: $155.000 millones para el cuarto trimestre de 2026 y $635.000 millones para 2027; el MOP suma cerca de US$400 millones con 241 contratos en todas las regiones
+    objetivo_declarado: Acelerar la inversión pública y las obras de rápida ejecución para mover el empleo desde el cuarto trimestre de 2026
+    evento_id: 20260928-5
+    fuente: interior-2026-09-28-chile-despega-plan-empleo
+    fuentes_secundarias:
+      - eldinamo-2026-09-28-chile-despega-100-mil-empleos
+      - economia-2026-09-29-chile-despega-mop-400-millones
+    nivel_impacto: directo
+    nota: MOP busca completar $3,1 billones ejecutando $1,4 billones entre septiembre y diciembre; Vivienda proyecta $460.000 millones y Subdere agiliza $90.000 millones.
+  - tipo: aumento
+    descripcion: Refuerzo a Seguridad Pública y las policías en la tramitación de la Ley 2026
+    fecha: '2025-11-27'
+    monto: 5000000000
+    monto_nota: $5.000 millones adicionales acordados en la mixta junto a la reposición del Congreso, sitios de memoria y Pase Cultural
+    objetivo_declarado: null
+    evento_id: 20251127-1
+    fuente: radio-uchile-2025-11-27-despacho-presupuesto-2026
+    nivel_impacto: directo
+    organizacion_id: ministerio_seguridad
+    nota: Salud, seguridad, vivienda y educación mejoraron respecto del proyecto sin aumentar el gasto total.
+  - tipo: recorte
+    descripcion: Recorte al presupuesto 2026 de Senapred por el decreto 371 de Dipres
+    fecha: '2026-10-09'
+    monto: 918000000
+    monto_nota: $918 millones (574 en bienes y servicios de consumo, 274 en gestión del riesgo y casi 70 en personal); decreto de mayo con toma de razón en julio
+    objetivo_declarado: null
+    evento_id: 20261008-6
+    fuente: theclinic-2026-10-09-recorte-senapred-918-millones
+    fuentes_secundarias:
+      - dipres-2026-10-09-decretos-modificacion
+    partida: Partida 05 · Interior (Senapred)
+    nivel_impacto: directo
+    organizacion_id: senapred
+    nota: La contralora había advertido una semana antes que el servicio es extremadamente precario, con $100 millones para preparación de desastres.
+  - tipo: aumento
+    descripcion: Subsidios al empleo del plan Chile Despega (de 25.000 a 100.000 cupos)
+    fecha: '2026-09-28'
+    monto: 91000000000
+    monto_nota: $91.000 millones ejecutables entre 2026 y 2027 con foco en mujeres y jóvenes; el Subsidio Unificado al Empleo de la Ley 21.808 parte el mes siguiente
+    objetivo_declarado: Impulsar la contratación y el empleo directo como segundo eje del plan
+    evento_id: 20260928-5
+    fuente: interior-2026-09-28-chile-despega-plan-empleo
+    fuentes_secundarias:
+      - theclinic-2026-09-28-kast-lanza-chile-despega
+    nivel_impacto: directo
+    organizacion_id: sence
+    nota: El plan total se cifró en $1,3 billones (unos US$1.350 millones) con meta de 100.000 puestos.
+  - tipo: aumento
+    descripcion: Capital Semilla Modo Empleo de Sercotec para desempleados que emprendan
+    fecha: '2026-08-24'
+    monto: 5000000000
+    monto_nota: Subsidio no reembolsable de $3 millones por beneficiario; dos etapas de $2.500 millones para 583 emprendedores en la primera
+    objetivo_declarado: Reconversión de desempleados en emprendedores formales con foco en jóvenes, mujeres y mayores de 55
+    evento_id: 20260710-3
+    fuente: biobiochile-2026-08-24-subsidio-emprendedores-desempleados
+    fuentes_secundarias:
+      - radio_uchile-2026-08-25-capital-semilla-modo-empleo
+    nivel_impacto: directo
+    organizacion_id: sercotec
+    nota: Postulaciones del 25 de agosto al 8 de septiembre vía sercotec.cl.
 orden_refs:
   - dipres-2026-07-31-ejecucion-junio-gasto-capital
   - biobiochile-2026-04-27-dipres-descontinuar-reformular
   - dipres-2026-ifp-q1-2026-deficit
+  - dipres-2025-12-12-ley-21796-presupuesto-2026
   - hacienda-2026-06-01-proyecto-endeudamiento-2026
   - latercera-2026-02-17-kast-gobierno-emergencia
   - bbc-2026-06-18-impuesto-corporativo-kast-analisis
@@ -117,3 +305,28 @@ orden_refs:
   - ciper-2026-03-26-recorte-carabineros
   - cnnchile-2026-03-31-undurraga-recorte-3-culturas
   - lacuarta-2026-04-29-te-amo-pgu-oficio-hacienda-ajuste
+  - radio-uchile-2025-11-27-despacho-presupuesto-2026
+  - biobiochile-2025-11-27-grau-presupuesto-2026
+  - biobiochile-2025-11-26-allende-paig-presupuesto-2026
+  - dipres-2025-11-26-despacho-presupuesto-2026
+  - gob-cl-2025-11-27-presupuesto-2026-distribucion
+  - biobiochile-2026-05-15-ajuste-perillas-transportes
+  - emol-2026-04-29-de-grange-recorte-transportes
+  - dipres-2026-10-09-decretos-modificacion
+  - desenfoque-2026-05-05-quiroz-poduje-vina
+  - contrapoder-2026-07-31-serviu-recorte-temporal
+  - contrapoder-2026-09-14-barros-australia-business-class
+  - elmaipo-2026-09-29-confusam-paro-48-horas
+  - elciudadano-2026-09-29-confusam-ratifica-paro-per-capita
+  - theclinic-2026-04-24-descontinuar-142-programas-260-rebajar
+  - bbcl-explica-2026-04-24-24-programas-salud-descontinuar
+  - biobiochile-2026-04-24-matthei-quiroz-recorte-pae
+  - interior-2026-09-28-chile-despega-plan-empleo
+  - eldinamo-2026-09-28-chile-despega-100-mil-empleos
+  - economia-2026-09-29-chile-despega-mop-400-millones
+  - radio-uchile-2026-08-10-codelco-capitaliza-utilidades
+  - theclinic-2026-10-09-recorte-senapred-918-millones
+  - theclinic-2026-09-28-kast-lanza-chile-despega
+  - biobiochile-2026-08-24-subsidio-emprendedores-desempleados
+  - radio_uchile-2026-08-25-capital-semilla-modo-empleo
+  - latercera-2026-09-29-kast-oficialismo-presupuesto

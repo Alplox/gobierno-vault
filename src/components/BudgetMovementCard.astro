@@ -4,7 +4,7 @@
 // objetivo declarado (o su ausencia) va en un panel propio. El detalle largo
 // (nota, monto en palabras, fuente y evento) queda colapsado para que la grilla
 // se lea como un tablero y no como un documento.
-import { ArrowUpRight, TriangleAlert, ChevronDown } from 'lucide-astro';
+import { ArrowUpRight, TriangleAlert, ChevronDown, Landmark } from 'lucide-astro';
 import SourceRef from './SourceRef.astro';
 import {
   TIPO_PRESUPUESTO_BADGE,
@@ -21,9 +21,10 @@ interface Props {
   refIndex: number;
   refAnchor: string;
   eventoHref: string | null;
+  secundarias?: Array<{ fuente: PresupuestoFuente; index: number; anchor: string; oficial: boolean }>;
 }
 
-const { mov, ancla, fuente, refIndex, refAnchor, eventoHref } = Astro.props;
+const { mov, ancla, fuente, refIndex, refAnchor, eventoHref, secundarias = [] } = Astro.props;
 
 const tipoBadge = TIPO_PRESUPUESTO_BADGE[mov.tipo] ?? 'badge-info';
 const impactoBadge = IMPACTO_PRESUPUESTO_BADGE[mov.nivel_impacto] ?? 'badge-ghost';
@@ -46,6 +47,7 @@ const fmtFecha = (iso: string | null) => {
     <div class="flex flex-wrap items-center gap-2">
       <span class={`badge badge-sm ${tipoBadge}`}>{mov.tipo.replace(/_/g, ' ')}</span>
       <span class={`badge badge-sm badge-outline ${impactoBadge}`}>{mov.nivel_impacto}</span>
+      {mov.partida && <span class="badge badge-sm badge-outline badge-info">{mov.partida}</span>}
       <span class="ml-auto text-[11px] text-base-content/50 tabular-nums">{fmtFecha(mov.fecha)}</span>
     </div>
 
@@ -69,6 +71,15 @@ const fmtFecha = (iso: string | null) => {
         title={`${fuente.medio} - ${fuente.titulo}`}
         tip={`${fuente.medio}\n${fuente.titulo}`}
       />
+      {secundarias.map((s) => (
+        <SourceRef
+          id=""
+          index={s.index}
+          href={`#${s.anchor}`}
+          title={`${s.fuente.medio} - ${s.fuente.titulo}`}
+          tip={`${s.fuente.medio}\n${s.fuente.titulo}`}
+        />
+      ))}
     </p>
 
     {mov.objetivo_declarado ? (
@@ -103,6 +114,22 @@ const fmtFecha = (iso: string | null) => {
             Fuente: {fuente.medio} ·{' '}
             <a href={fuente.url} class="link link-primary" target="_blank" rel="noopener">{fuente.titulo}</a>
           </p>
+          {secundarias.length > 0 && (
+            <div class="rounded-lg bg-base-200/60 px-2.5 py-2 space-y-1">
+              <p class="text-[10px] font-semibold uppercase tracking-wide text-base-content/50 flex items-center gap-1">
+                <Landmark class="h-3 w-3" /> Trazabilidad ({secundarias.length + 1} fuentes)
+              </p>
+              <ul class="space-y-0.5">
+                {secundarias.map((s) => (
+                  <li class="flex flex-wrap items-center gap-1">
+                    {s.oficial && <span class="badge badge-xs badge-success">oficial</span>}
+                    <span class="text-base-content/60">{s.fuente.medio} ·</span>{' '}
+                    <a href={s.fuente.url} class="link link-primary" target="_blank" rel="noopener">{s.fuente.titulo}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
         </div>
       </details>
     )}

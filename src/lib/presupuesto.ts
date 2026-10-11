@@ -12,7 +12,7 @@ export type PresupuestoFuente = {
 };
 
 export type TotalFoto = { monto: number | null; nota?: string; fuente?: string };
-export type Hito = { etiqueta: string; valor: string; fuente: string };
+export type Hito = { etiqueta: string; valor: string; fuente: string; fuentes_secundarias?: string[]; fuentesSecundarias?: PresupuestoFuente[] };
 export type Variacion = {
   alcance: string;
   variacion_texto: string;
@@ -20,6 +20,9 @@ export type Variacion = {
   ministerioNombre: string | null;
   nivel_impacto: 'directo' | 'indirecto' | 'institucional';
   fuente: string;
+  /** IDs de `orden_refs` que corroboran la variación (oficial + prensa). */
+  fuentes_secundarias?: string[];
+  fuentesSecundarias?: PresupuestoFuente[];
   evento_id: string | null;
   nota?: string;
 };
@@ -34,6 +37,11 @@ export type Movimiento = {
   objetivo_declarado: string | null;
   evento_id: string | null;
   fuente: string;
+  /** IDs de `orden_refs` que corroboran el movimiento: oficial primero, prensa después. */
+  fuentes_secundarias?: string[];
+  fuentesSecundarias?: PresupuestoFuente[];
+  /** Referencia trazable al documento oficial (p. ej. `Partida 19 · Transportes`). */
+  partida?: string | null;
   nivel_impacto: 'directo' | 'indirecto' | 'institucional';
   organizacion_id: string | null;
   organizacionNombre: string | null;
@@ -135,6 +143,17 @@ export const TIPO_PRESUPUESTO_COLOR: Record<string, string> = {
   ingreso: 'var(--color-success)',
   aumento: 'var(--color-success)',
 };
+
+/**
+ * ¿La fuente es un emisor oficial (Dipres, Cámara/Senado, ministerio, servicio)?
+ * Decide el badge "respaldo oficial" de la página /presupuesto. Heurística por
+ * `medio`, no por tipo: una nota de prensa de un ministerio también es oficial.
+ */
+export function esFuenteOficial(medio: string): boolean {
+  return /direcci[oó]n de presupuestos|\bdipres\b|c[aá]mara de diputad|senado de chile|ministerio|subsecretar[ií]a|gobierno de chile|presidencia|biblioteca del congreso|contralor[ií]a|instituto nacional de estad[ií]sticas|\bservicio\b|tesorer[ií]a general|comisi[oó]n para el mercado/i.test(
+    medio,
+  );
+}
 
 // Solo estos `tipo` son movimientos de dinero trazables como flujo. Cualquier
 // otro (p. ej. `revision_programas`, que es una recomendacion) queda fuera del
@@ -267,19 +286,48 @@ function build() {
       assertMonto(t.monto ?? null, `totales.${k}.monto`);
       if (t.fuente) assertFuente(t.fuente, `totales.${k}.fuente`);
     }
-    for (const h of y.hitos ?? []) assertFuente(h.fuente, `hitos.${h.etiqueta}`);
+    const assertSecundarias = (ids: unknown, campo: string): string[] => {
+      if (ids === undefined || ids === null) return [];
+      if (!Array.isArray(ids) || ids.some((id) => typeof id !== 'string')) {
+        throw new Error(`${ctx}: ${campo}.fuentes_secundarias debe ser un arreglo de IDs`);
+      }
+      for (const id of ids) {
+        if (!orden.includes(id)) throw new Error(`${ctx}: ${campo} usa secundaria '${id}', que no está en orden_refs`);
+      }
+      return ids as string[];
+    };
+    const hitos: Hito[] = (y.hitos ?? []).map((h) => {
+      assertFuente(h.fuente, `hitos.${h.etiqueta}`);
+      return {
+        ...h,
+        fuentesSecundarias: assertSecundarias(
+          (h as { fuentes_secundarias?: unknown }).fuentes_secundarias,
+          `hitos.${h.etiqueta}`,
+        ).map((id) => fuenteResuelta(id)),
+      };
+    });
     const variaciones: Variacion[] = (y.variaciones ?? []).map((v) => {
       assertFuente(v.fuente, `variaciones.${v.alcance}`);
+      const sec = assertSecundarias(v.fuentes_secundarias, `variaciones.${v.alcance}`);
+      if (sec.includes(v.fuente)) throw new Error(`${ctx}: variaciones.${v.alcance} repite la fuente primaria en secundarias`);
+      if (new Set(sec).size !== sec.length) throw new Error(`${ctx}: variaciones.${v.alcance} repite IDs en secundarias`);
       if (!NIVELES.has(v.nivel_impacto)) throw new Error(`${ctx}: nivel_impacto inválido en '${v.alcance}'`);
       const mid = assertOrg(v.ministerio_id ?? null, `variaciones.${v.alcance}`);
-      return { ...v, ministerio_id: mid, ministerioNombre: mid ? orgNames.get(mid) ?? mid : null, evento_id: assertEvento(v.evento_id ?? null, `variaciones.${v.alcance}`) };
+      return { ...v, ministerio_id: mid, ministerioNombre: mid ? orgNames.get(mid) ?? mid : null, evento_id: assertEvento(v.evento_id ?? null, `variaciones.${v.alcance}`), fuentesSecundarias: sec.map((id) => fuenteResuelta(id)) };
     });
     const movimientos: Movimiento[] = (y.movimientos ?? []).map((m, idx) => {
       assertFuente(m.fuente, `movimientos.${m.descripcion}`);
+      const sec = assertSecundarias(m.fuentes_secundarias, `movimientos.${m.descripcion}`);
+      if (sec.includes(m.fuente)) throw new Error(`${ctx}: movimientos.${m.descripcion} repite la fuente primaria en secundarias`);
+      if (new Set(sec).size !== sec.length) throw new Error(`${ctx}: movimientos.${m.descripcion} repite IDs en secundarias`);
       if (!NIVELES.has(m.nivel_impacto)) throw new Error(`${ctx}: nivel_impacto inválido en '${m.descripcion}'`);
       if (m.fecha && !/^\d{4}-\d{2}-\d{2}$/.test(m.fecha)) throw new Error(`${ctx}: fecha inválida en '${m.descripcion}'`);
       const oid = assertOrg(m.organizacion_id ?? null, `movimientos.${m.descripcion}`);
-      return { ...m, orden: idx + 1, monto: assertMonto(m.monto ?? null, `movimientos.${m.descripcion}`), evento_id: assertEvento(m.evento_id ?? null, `movimientos.${m.descripcion}`), organizacion_id: oid, organizacionNombre: oid ? orgNames.get(oid) ?? oid : null };
+      const partida = (m.partida ?? null) as string | null;
+      if (partida !== null && (typeof partida !== 'string' || !partida.trim())) {
+        throw new Error(`${ctx}: movimientos.${m.descripcion} trae partida vacía`);
+      }
+      return { ...m, orden: idx + 1, monto: assertMonto(m.monto ?? null, `movimientos.${m.descripcion}`), evento_id: assertEvento(m.evento_id ?? null, `movimientos.${m.descripcion}`), organizacion_id: oid, organizacionNombre: oid ? orgNames.get(oid) ?? oid : null, partida: partida?.trim() ?? null, fuentesSecundarias: sec.map((id) => fuenteResuelta(id)) };
     });
 
     ejercicios.push({
@@ -289,7 +337,7 @@ function build() {
       estado_label: y.estado_label,
       ley: y.ley,
       totales: y.totales,
-      hitos: y.hitos ?? [],
+      hitos,
       variaciones,
       movimientos,
       sankey: buildSankey(movimientos.map((m) => ({ m, ano: y.ano }))),

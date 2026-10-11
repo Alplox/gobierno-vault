@@ -34,6 +34,22 @@ hitos:
   - etiqueta: Total de la partida 09 de Educación
     valor: 24,53 billones (+0,78% real)
     fuente: youtube-2026-10-02-biobio-alertas-recortes-educacion
+  - etiqueta: Aumento del gasto del proyecto contra la Ley 2026 aprobada
+    valor: +2,7%
+    fuente: adnradio-2026-10-01-quiroz-gasto-fiscal-27-2027
+  - etiqueta: Fondo de Reconstrucción Norte y cartera de obras de conservación
+    valor: Más de $500.000 millones para reconstrucción con 241 obras públicas en todas las regiones desde enero
+    fuente: gob-cl-2026-09-30-presupuesto-2027-cuatro-prioridades
+    fuentes_secundarias:
+      - t13-2026-09-30-kast-presupuesto-95-billones
+  - etiqueta: Refuerzo anunciado para Sercotec
+    valor: +23,5% con el primer año del plan habitacional (más de 166 mil subsidios en camino a 400 mil soluciones)
+    fuente: gob-cl-2026-09-30-presupuesto-2027-cuatro-prioridades
+  - etiqueta: Senapred en el proyecto 2027
+    valor: Servicio -2,5% real a $31.265 millones; Programa de Gestión del Riesgo de Desastres en $584 millones (-32,6% real)
+    fuente: theclinic-2026-10-10-herrera-cuento-del-tio
+    fuentes_secundarias:
+      - cooperativa-2026-10-09-pavez-radares-senapred
 variaciones:
   - alcance: Partida 09 frente a 2026
     variacion_texto: +3,9% nominal (+0,78% real con inflación proyectada de 3,1%)
@@ -68,8 +84,27 @@ variaciones:
     ministerio_id: null
     nivel_impacto: indirecto
     fuente: eldinamo-2026-10-05-gobernadores-presionan-quiroz
+    fuentes_secundarias:
+      - presupuestokast-2026-10-11-partida-31-gobiernos-regionales
     evento_id: 20261005-2
     nota: La rebaja siguió en pie tras la reunión con Hacienda.
+  - alcance: Partida 19 de Transportes y Telecomunicaciones frente a 2026
+    variacion_texto: -1,3% real contra la ley aprobada (+2,2% según DIPRES)
+    ministerio_id: ministerio_transportes
+    nivel_impacto: directo
+    fuente: presupuestokast-2026-10-11-partida-19-transportes
+    fuentes_secundarias:
+      - camara-2026-09-30-partida-19-transportes-pdf
+      - malaespinacheck-2026-10-08-presupuesto-transportes-recortes
+    evento_id: 20261008-11
+    nota: Partida en $1,90 billones; la base oficial descuenta los ajustes de 2026.
+  - alcance: Partida 31 de Gobiernos Regionales frente a 2026
+    variacion_texto: -7,7% real contra la ley aprobada (-4,8% según DIPRES)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: presupuestokast-2026-10-11-partida-31-gobiernos-regionales
+    evento_id: 20261005-2
+    nota: Partida en $1,80 billones; la distancia entre ambas mediciones sale de la base.
 movimientos:
   - tipo: recorte
     descripcion: Rebaja del Programa de Tenencia Responsable de Animales de Compañía
@@ -79,6 +114,7 @@ movimientos:
     objetivo_declarado: Revisión por falta de evaluación e indicadores de impacto según la Subdere
     evento_id: 20261006-2
     fuente: biobiochile-2026-10-05-kast-voto-cholito-recorte-86
+    partida: Partida 05 · Interior (Subdere)
     nivel_impacto: directo
     organizacion_id: subdere
     nota: Transferencias a municipios de $2.794 a $149 millones (-94,7%) y Fondo Concursable de $631 a $150 millones máximo (-76,2%).
@@ -90,6 +126,7 @@ movimientos:
     objetivo_declarado: Deuda de $3.000 millones y 80% del presupuesto en remuneraciones y arriendos según el ministerio
     evento_id: 20261006-2
     fuente: biobiochile-2026-10-05-fin-prodemu-despidos
+    partida: Partida 27 · Mujer y Equidad de Género (Prodemu)
     nivel_impacto: directo
     organizacion_id: prodemu
     nota: Fundación con 380 funcionarios; su continuidad quedó sujeta a lo que resuelva el Congreso.
@@ -101,6 +138,9 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261001-8
     fuente: biobiochile-2026-10-01-yo-elijo-mi-pc-fin-presupuesto-2027
+    fuentes_secundarias:
+      - dipres-2022-02-yo-elijo-mi-pc-impacto
+    partida: Partida 09 · Educación (Junaeb)
     nivel_impacto: directo
     nota: En 2026 benefició a 96.100 estudiantes. Continuidad de Yo elijo mi PC (2009) y Me Conecto para Aprender (2015).
   - tipo: recorte
@@ -122,6 +162,7 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261006-4
     fuente: elmostrador-2026-10-06-subcomision-rechaza-rebaja-servel
+    partida: Servel (organismo autónomo)
     nivel_impacto: institucional
     organizacion_id: servel
     nota: La Cuarta Subcomisión Mixta rechazó la partida (3 votos contra 1 a favor y 1 abstención); vuelve a la Comisión Mixta. El organismo advirtió riesgo para la transmisión de resultados del ciclo 2028-2029.
@@ -143,6 +184,9 @@ movimientos:
     objetivo_declarado: Sin baja de plazas; reasignación al plan Crecer en Familia (desinternación 0-3 años y familias de acogida)
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
+      - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Con evaluación favorable de la Dipres; cerca del 11% de los atendidos por el Servicio de Protección Especializada está en este programa.
@@ -154,6 +198,9 @@ movimientos:
     objetivo_declarado: Fortalecer la capacidad de diagnóstico dentro de otras líneas de intervención
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
+      - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Evaluación inicial integral para cada niño que ingresa al Servicio de Protección Especializada.
@@ -165,6 +212,8 @@ movimientos:
     objetivo_declarado: Ajuste a natalidad, stock disponible y subejecución
     evento_id: 20261007-5
     fuente: latercera-2026-10-07-presupuesto-salud-ajuar-ricarte-soto
+    fuentes_secundarias:
+      - ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Entrega de ajuar en hospitales públicos; 70.336 nacimientos en el primer semestre de 2024 según el INE.
@@ -176,6 +225,9 @@ movimientos:
     objetivo_declarado: Mejorar la oportunidad de las intervenciones y delimitar el ámbito frente a la oferta de INDAP
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
+      - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Aumenta la disponibilidad de alimentos saludables en familias de Chile Solidario.
@@ -187,6 +239,9 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
+      - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Con recomendación favorable en evaluación ex ante.
@@ -198,6 +253,9 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
+      - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Prepara a padres adoptivos y resguarda el derecho a vivir en familia; recomendado favorablemente en 2024.
@@ -220,6 +278,8 @@ movimientos:
     objetivo_declarado: Prioridad del Ejecutivo para la niñez
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Opera de forma externalizada a través de fundaciones y corporaciones.
@@ -231,6 +291,8 @@ movimientos:
     objetivo_declarado: Prioridad del Ejecutivo para la niñez
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Sin nota adicional.
@@ -242,6 +304,8 @@ movimientos:
     objetivo_declarado: Prioridad del Ejecutivo para la niñez
     evento_id: 20261007-5
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
+    fuentes_secundarias:
+      - mdsf-2026-10-08-wulf-aumento-7-ninez
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Recomendado favorablemente en 2021.
@@ -253,6 +317,9 @@ movimientos:
     objetivo_declarado: Continuidad de fondos concursables, museos y organismos colaboradores
     evento_id: 20261002-6
     fuente: ciperchile-2026-10-02-recorte-253-sitios-memoria
+    fuentes_secundarias:
+      - radio-uchile-2026-10-07-undurraga-defiende-cultura-101
+    partida: Partida 29 · Culturas, Artes y Patrimonio
     nivel_impacto: directo
     organizacion_id: ministerio_culturas
     nota: El documento filtrado previo hablaba de -16%; la base comparable descuenta partidas no recurrentes como los $20.000 millones del GAM.
@@ -275,6 +342,9 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261002-7
     fuente: ciperchile-2026-10-02-recorte-253-sitios-memoria
+    fuentes_secundarias:
+      - eldesconcierto-2026-10-02-sitios-memoria-recorte-253
+    partida: Partida 29 · Culturas, Artes y Patrimonio
     nivel_impacto: directo
     organizacion_id: ministerio_culturas
     nota: Museo de la Memoria congelado en $2.642 millones; instituciones colaboradoras de $4.200 a $4.154 millones (-1,1%, -$47 millones).
@@ -286,6 +356,8 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261005-5
     fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    fuentes_secundarias:
+      - terram-2026-10-06-replica-desconcierto-recorte-59-medio-ambiente
     nivel_impacto: directo
     organizacion_id: ministerio_medio_ambiente
     nota: Financia los compromisos de la NDC 2025-2035, en implementación desde 2027.
@@ -297,6 +369,8 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261005-5
     fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    fuentes_secundarias:
+      - diarioconcepcion-2026-10-07-medio-ambiente-sbap-subsecretaria
     nivel_impacto: directo
     organizacion_id: ministerio_medio_ambiente
     nota: Calefacción Sustentable -53% y Planes de Descontaminación -6%.
@@ -308,6 +382,8 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261005-5
     fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    fuentes_secundarias:
+      - terram-2026-10-06-replica-desconcierto-recorte-59-medio-ambiente
     nivel_impacto: directo
     organizacion_id: ministerio_medio_ambiente
     nota: Financia iniciativas de organizaciones sociales y comunitarias.
@@ -330,6 +406,8 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261005-5
     fuente: eldesconcierto-2026-10-05-recorte-59-medio-ambiente-escazu
+    fuentes_secundarias:
+      - diarioconcepcion-2026-10-07-medio-ambiente-sbap-subsecretaria
     nivel_impacto: indirecto
     organizacion_id: ministerio_medio_ambiente
     nota: Explica el alza nominal de la cartera total a $98.632 millones.
@@ -341,9 +419,70 @@ movimientos:
     objetivo_declarado: Continuidad de las garantías con recursos adicionales en ejecución y reforma por sostenibilidad
     evento_id: 20261007-6
     fuente: latercera-2026-10-07-presupuesto-salud-ajuar-ricarte-soto
+    fuentes_secundarias:
+      - biobiochile-2026-10-08-chomali-ricarte-soto-tecnicismo
+      - elclarin-2026-10-08-ricarte-soto-presupuesto-agotado
     nivel_impacto: directo
     organizacion_id: ministerio_salud
     nota: Ley 20.850 con 27 problemas de salud garantizados; a agosto de 2026 ya se habían ejecutado $189.683 millones.
+  - tipo: recorte
+    descripcion: Rebaja de la transferencia al Fondo de Apoyo al Transporte Público y la Conectividad Regional
+    fecha: '2026-10-08'
+    monto: 45190000000
+    monto_nota: De $57.546 a $12.356 millones (-78,5% nominal; -71,6% real en pesos de 2027)
+    objetivo_declarado: null
+    evento_id: 20261008-11
+    fuente: malaespinacheck-2026-10-08-presupuesto-transportes-recortes
+    fuentes_secundarias:
+      - camara-2026-09-30-partida-19-transportes-pdf
+      - presupuestokast-2026-10-11-partida-19-transportes
+    partida: Partida 19 · Transportes y Telecomunicaciones
+    nivel_impacto: indirecto
+    organizacion_id: null
+    nota: Suben en paralelo los subsidios a la operación regional (+33,9%); la caída es en transferencias de capital.
+  - tipo: recorte
+    descripcion: Rebaja de las iniciativas de inversión de Red Movilidad
+    fecha: '2026-10-08'
+    monto: 19565000000
+    monto_nota: De $44.537 a $24.971 millones (-43,9% nominal; -38,4% real en pesos de 2027)
+    objetivo_declarado: null
+    evento_id: 20261008-11
+    fuente: malaespinacheck-2026-10-08-presupuesto-transportes-recortes
+    fuentes_secundarias:
+      - camara-2026-09-30-partida-19-transportes-pdf
+      - presupuestokast-2026-10-11-partida-19-transportes
+    partida: Partida 19 · Transportes y Telecomunicaciones
+    nivel_impacto: directo
+    organizacion_id: red_movilidad
+    nota: Explica casi $20 mil millones de los $21.372 millones que cae la inversión total del ministerio.
+  - tipo: aumento
+    descripcion: Alza del Subsidio Nacional al Transporte Público
+    fecha: '2026-10-08'
+    monto: 79000000000
+    monto_nota: +$79 mil millones en pesos de 2027 (+17,4% real en transferencias corrientes al sector privado)
+    objetivo_declarado: null
+    evento_id: 20261008-11
+    fuente: presupuestokast-2026-10-11-partida-19-transportes
+    fuentes_secundarias:
+      - camara-2026-09-30-partida-19-transportes-pdf
+      - malaespinacheck-2026-10-08-presupuesto-transportes-recortes
+    partida: Partida 19 · Transportes y Telecomunicaciones
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Incluye +$5,8 mil millones en subsidios al transporte regional (+30,2%) y +$3,9 mil millones en tarifa rebajada de adulto mayor en regiones.
+  - tipo: aumento
+    descripcion: Fondo de Reconstrucción Norte en el Tesoro Público
+    fecha: '2026-09-30'
+    monto: 122000000000
+    monto_nota: Línea de $122.000 millones en transferencias de capital del Tesoro; el paquete total de reconstrucción anunciado supera los $500.000 millones
+    objetivo_declarado: Volver a crecer, crear trabajo y reconstruir ($9,5 billones, +8,1%, primera de las cuatro prioridades)
+    evento_id: 20260930-10
+    fuente: gob-cl-2026-09-30-presupuesto-2027-cuatro-prioridades
+    fuentes_secundarias:
+      - t13-2026-09-30-kast-presupuesto-95-billones
+    partida: Partida 50 · Tesoro Público (Fondo de Reconstrucción Norte)
+    nivel_impacto: directo
+    nota: Con la cartera extraordinaria de 241 obras de conservación desde enero, el primer año del plan habitacional y +23,5% para Sercotec.
 orden_refs:
   - adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
   - latercera-2026-10-05-presupuesto-endeudamiento-us25000
@@ -390,3 +529,15 @@ orden_refs:
   - infogate-2026-10-02-quiroz-horas-docentes-despidos
   - radio-uchile-2026-10-05-aguilar-falta-recursos
   - diarioconcepcion-2026-10-08-biobio-horas-docentes-slep
+  - malaespinacheck-2026-10-08-presupuesto-transportes-recortes
+  - presupuestokast-2026-10-11-partida-19-transportes
+  - camara-2026-09-30-partida-19-transportes-pdf
+  - radiopaulina-2026-10-09-seremi-fondos-espejo-tarapaca
+  - emol-2026-04-29-de-grange-recorte-transportes
+  - adnradio-2026-10-01-quiroz-gasto-fiscal-27-2027
+  - presupuestokast-2026-10-11-partida-31-gobiernos-regionales
+  - dipres-2022-02-yo-elijo-mi-pc-impacto
+  - gob-cl-2026-09-30-presupuesto-2027-cuatro-prioridades
+  - t13-2026-09-30-kast-presupuesto-95-billones
+  - theclinic-2026-10-10-herrera-cuento-del-tio
+  - cooperativa-2026-10-09-pavez-radares-senapred
