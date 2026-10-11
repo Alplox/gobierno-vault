@@ -1852,7 +1852,7 @@
 - [2026/10/20261003-1 - Ripamonti pide a Kast medidas urgentes tras el fin del sistema de detección de incendios en Viña del Mar](src/content/events/2026/10/20261003-1.md) — 6 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
-- [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 7 fuentes
+- [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 9 fuentes
 - [2026/10/20261005-3 - Quiroz reconoce en entrevista con Diario Financiero que subestimó el daño a la economía y al sector minero y se arrepiente de la frase sobre la parafina](src/content/events/2026/10/20261005-3.md) — 7 fuentes
 - [2026/10/20261005-4 - Quiroz abre la negociación del Presupuesto 2027: "Cálmensen, vamos a tener la discusión" y cada punto es negociable, pero sin mover el gasto total](src/content/events/2026/10/20261005-4.md) — 4 fuentes
 - [2026/10/20261005-5 - Presupuesto 2027 recorta 59% la línea climática NDC y deja a Escazú sin asignación en Medio Ambiente](src/content/events/2026/10/20261005-5.md) — 6 fuentes
@@ -1875,20 +1875,20 @@
 - [2026/10/20261007-8 - Rectores piden rechazar la partida de Educación Superior del Presupuesto 2027 y la subcomisión la rechaza; Arzola defiende el foco en primera infancia](src/content/events/2026/10/20261007-8.md) — 8 fuentes
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 - [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
-- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 78 fuentes
+- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 85 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
-- [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 11 fuentes
+- [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
 - [2026/10/20261008-5 - Suspenden clases en 10 comunas de la Región Metropolitana para el viernes 9 de octubre](src/content/events/2026/10/20261008-5.md) — 5 fuentes
 - [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 25 fuentes
 - [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 11 fuentes
-- [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 9 fuentes
+- [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 10 fuentes
 - [2026/10/20261008-9 - Presidencia pagó $17.200.001 a TVN por transmitir el Te Deum Evangélico 2026, el primer gasto estatal de este tipo desde 2011](src/content/events/2026/10/20261008-9.md) — 4 fuentes
-- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 45 fuentes
+- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 50 fuentes
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
-- [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 200 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 19 fuentes
-- [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 12 fuentes
+- [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 200 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 24 fuentes
+- [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 15 fuentes
 - [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — 1 fuente
 
 ## 2025
