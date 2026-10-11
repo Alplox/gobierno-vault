@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (471)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (472)
 
 <details>
-<summary>Ver lista (471 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (472 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -479,6 +479,7 @@
 - [2026/09/20260910-16 - Tribunal sustituye el arresto domiciliario nocturno de Galdames por firma semanal y mantiene el arraigo nacional](src/content/events/2026/09/20260910-16.md) — **2 fuentes**
 - [2026/09/20260914-9 - Presidente de BancoEstado respalda hipotecarios en pesos a 10 o 20 años: el inversionista extranjero no entiende la UF](src/content/events/2026/09/20260914-9.md) — **2 fuentes**
 - [2026/09/20260924-7 - Presidencia adjudica producción general a AM Producciones por $294 millones](src/content/events/2026/09/20260924-7.md) — **2 fuentes**
+- [2026/10/20261010-4 - Gobierno concreta décimo vuelo de expulsión de migrantes y acumula 1.874 deportados en 2026](src/content/events/2026/10/20261010-4.md) — **2 fuentes**
 
 </details>
 
@@ -1850,6 +1851,7 @@
 - [2026/10/20261002-6 - Presupuesto 2027 recorta 10,1% en Cultura con caídas de hasta 66% en fondos sectoriales](src/content/events/2026/10/20261002-6.md) — 5 fuentes
 - [2026/10/20261002-7 - Presupuesto 2027 recorta 25,3% el Programa Sitios de Memoria y congela el Museo de la Memoria](src/content/events/2026/10/20261002-7.md) — 4 fuentes
 - [2026/10/20261003-1 - Ripamonti pide a Kast medidas urgentes tras el fin del sistema de detección de incendios en Viña del Mar](src/content/events/2026/10/20261003-1.md) — 6 fuentes
+- [2026/10/20261003-2 - Presunta violación grupal en Rapa Nui: cuatro funcionarios de la Armada formalizados y en prisión preventiva; protestas exigen el retiro de la Guarnición](src/content/events/2026/10/20261003-2.md) — 11 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
 - [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 10 fuentes
@@ -1888,9 +1890,11 @@
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
-- [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 200 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 24 fuentes
+- [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 1.000 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 31 fuentes
 - [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 15 fuentes
 - [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — 1 fuente
+- [2026/10/20261010-4 - Gobierno concreta décimo vuelo de expulsión de migrantes y acumula 1.874 deportados en 2026](src/content/events/2026/10/20261010-4.md) — 2 fuentes
+- [2026/10/20261011-1 - Criteria baja la aprobación de Kast al 27% y la desaprobación sube al 64%, el peor registro desde marzo](src/content/events/2026/10/20261011-1.md) — 6 fuentes
 
 ## 2025
 
