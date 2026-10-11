@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (470)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (471)
 
 <details>
-<summary>Ver lista (470 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (471 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -234,6 +234,7 @@
 - [2026/09/20260910-6 - Quiroz en Clapes UC: el Fonavi no estará cautivo de las constructoras y el fondo llegará hasta US$20 mil millones](src/content/events/2026/09/20260910-6.md) — **1 fuente**
 - [2026/09/20260910-7 - Parisi anticipa apoyo del PDG a la MK4 como "proposición" y pide financiar el Fonavi vía AFP con un mortgage-backed security](src/content/events/2026/09/20260910-7.md) — **1 fuente**
 - [2026/09/20260911-10 - DF Tax: especialistas desdramatizan el retiro y lo cifran como pérdida de influencia, con Chile en la mesa directiva del Comité Negociador](src/content/events/2026/09/20260911-10.md) — **1 fuente**
+- [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — **1 fuente**
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — **2 fuentes**
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — **2 fuentes**
 - [2010/01/20100114-1 - Concejal de Concepción Álvaro Ortiz condenado por violencia intrafamiliar; además enfrentaba proceso por ebriedad y daños](src/content/events/2010/01/20100114-1.md) — **2 fuentes**
@@ -1873,6 +1874,7 @@
 - [2026/10/20261007-7 - PDI y SERMIG fiscalizan comercio y barberías en San Antonio de Temuco: 9 extranjeros controlados y 7 denunciados](src/content/events/2026/10/20261007-7.md) — 8 fuentes
 - [2026/10/20261007-8 - Rectores piden rechazar la partida de Educación Superior del Presupuesto 2027 y la subcomisión la rechaza; Arzola defiende el foco en primera infancia](src/content/events/2026/10/20261007-8.md) — 8 fuentes
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
+- [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
 - [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 78 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 11 fuentes
@@ -1886,7 +1888,8 @@
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
 - [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 200 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 19 fuentes
-- [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 11 fuentes
+- [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 12 fuentes
+- [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — 1 fuente
 
 ## 2025
 
