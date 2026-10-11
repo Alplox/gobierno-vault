@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 353
+**Total tareas:** 354
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 276 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 277 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 322 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 323 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -331,6 +331,7 @@
 | S-2026-260 | ⬜ | 2026-10-08 | Presupuesto 2027 — seguimiento | Desenlace de la línea del [[organizations/instituto_chileno_de_campos_de_hielo]] en la tramitación del Presupuesto 2027 | `20261007-3` | Origen: <https://www.theclinic.cl/2026/10/07/se-acaba-el-financiamiento-presupuesto-del-gobierno-deja-sin-recursos-al-instituto-chileno-de-campos-de-hielo/> |
 | S-2026-261 | ⬜ | 2026-10-08 | Plan Nacional Digital — seguimiento | Fecha del apagado del 3G e ingreso de la reforma a la Ley General de Telecomunicaciones | `20261007-4` | Origen: <https://www.latercera.com/pulso/noticia/subtel-hara-cambios-a-la-ley-general-de-telecomunicaciones-en-el-marco-del-nuevo-plan-nacional-digital/> |
 | S-2026-262 | ⬜ | 2026-10-09 | Aluvión Las Condes — seguimiento | Desenlace del nuevo sistema frontal proyectado para el lunes 12 de octubre de 2026 (precipitaciones, alertas y afectación en precordillera y Talagante durante la recuperación) | `20261009-1` | Origen: <https://www.adnradio.cl/2026/10/09/tras-devastador-aluvion-en-las-condes-la-advertencia-del-gobierno-para-el-fin-de-semana-largo/> |
+| S-2026-263 | ⬜ | 2026-10-10 | Aluvión Las Condes — causa Fiscalía Oriente | Desenlace de la investigación por el origen del aluvión (OS9 y Labocar, fiscalías Lanas y Zará): peritajes, eventual citación de Municipio, Senapred y MOP, avance de la querella por el incendio de diciembre de 2025 y posibles formalizaciones | `20261008-7` `20261010-2` | Origen: <https://www.cnnchile.com/pais/catalina-san-martin-fiscalia-incendio-san-carlos-apoquindo-aluvion/> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

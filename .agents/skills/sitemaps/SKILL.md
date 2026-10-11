@@ -389,7 +389,7 @@ Escalera cuando eso no basta, en orden:
    aunque el slug no sea adivinable. Los sub-sitemaps suelen ordenar por fecha, así que las
    2-3 primeras páginas cubren lo reciente. Ojo: un slug adivinado que da 301 a la home no
    es evidencia de nada.
-   **BioBioChile: el news-sitemap que declara el robots está congelado en 2025 — el vivo es static/google-news-sitemap.xml** (~376 locs con la URL exacta de cada nota del día, incluidas las especiales bbcl-investiga). Fue la vía para localizar las notas del aluvión de Las Condes del 8-9-oct-2026 cuando el JSONL del catálogo apenas llegaba al 30-sep.
+   **BioBioChile: el news-sitemap que declara el robots está congelado en 2025 — el vivo es static/google-news-sitemap.xml** (~376 locs con la URL exacta de cada nota del día, incluidas las especiales bbcl-investiga). Fue la vía para localizar las notas del aluvión de Las Condes del 8-9-oct-2026 cuando el JSONL del catálogo apenas llegaba al 30-sep. Otros endpoints vivos verificados oct-2026 para esa misma cobertura (todos salen del `robots.txt` de cada medio): **Meganoticias** `sitemaps/sitemap-news.xml` más el mensual `sitemaps/content-noticias/sitemap-YYYY-MM.xml` (~660 URLs de oct-2026 con `<lastmod>`); **CNN Chile** `/_files/sitemaps/sitemap_news.xml` (200 locs con `<news:publication_date>` en UTC — restar 3 h para la fecha local); **Cooperativa** `noticias/sitemap_news.xml` (301 locs con título y fecha `-03:00`); **El Mostrador** `sitemap.xml` plano (~100 locs con fecha en el path).
 3. **`websearch` con el titular entre comillas** (y `site:` si hace falta). Es el sustituto
    cuando DDG bloquea: `html.duckduckgo.com` respondió 403 en sep-2026, pero `websearch`
    recuperó las URL exactas de T13, El País, Mala Espina y Chilevisión. Sin DDG, la forma
@@ -445,7 +445,7 @@ Comandos (mismo `sitemaps-sync`, flags propios):
 pnpm run sitemaps-sync -- yt_t13                    # sync completo (merge, nunca borra)
 pnpm run sitemaps-sync -- yt_t13 --playlist-end 200 # prueba acotada (no avanza ultima_sync)
 pnpm run sitemaps-sync -- yt_t13 --exact 50         # fecha real de los 50 más antiguos
-pnpm run sitemaps-sync -- yt_t13 --exact-id a1b2c3,d4e5f6  # videos puntuales a citar
+pnpm run sitemaps-sync -- yt_t13 --exact-id a1b2c3,d4e5f6  # videos puntuales a citar (solo si YA están en el catálogo: si no, el sync avisa "no está en el catálogo" y hay que sincronizar el canal antes)
 pnpm run sitemaps-sync -- yt_t13 --no-date-fetch          # no rescata fechas faltantes
 ```
 

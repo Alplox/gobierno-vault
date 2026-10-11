@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-09T21:17:45.113Z",
+  "actualizado": "2026-10-10T18:36:39.144Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -3856,8 +3856,8 @@
     "yt_cnnchile": {
       "nombre": "CNN Chile (YouTube)",
       "ultima_sync": "2026-10-09T18:39:55.360Z",
-      "articulos": 85533,
-      "nuevos": 1882,
+      "articulos": 85552,
+      "nuevos": 19,
       "años": 16
     },
     "yt_agricultura": {
@@ -3975,8 +3975,8 @@
     "yt_meganoticias": {
       "nombre": "Meganoticias (YouTube)",
       "ultima_sync": "2026-10-09T21:17:45.113Z",
-      "articulos": 59769,
-      "nuevos": 2324,
+      "articulos": 59795,
+      "nuevos": 26,
       "años": 10
     }
   }
