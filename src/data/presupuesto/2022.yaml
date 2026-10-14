@@ -1,0 +1,188 @@
+# Ejercicio 2022 — Ley de Presupuestos 2022 (Ley 21.395), ejecutada por el
+# gobierno de Boric desde el 11 de marzo. Aprobada bajo el gobierno de Piñera
+# y marcada por el retiro del estímulo fiscal de la pandemia.
+# IDs de fuentes: src/content/sources/*.md. IDs de eventos: basename sin extensión.
+ano: 2022
+gobierno: Boric
+estado: cerrado
+estado_label: Cerrado (IFP primer trimestre de 2023)
+ley:
+  nombre: Ley de Presupuestos 2022
+  fuente: dipres-2021-12-15-ley-21395-presupuesto-2022
+  nota: Ley N° 21.395, publicada el 15-dic-2021. Ejercicio ejecutado por el gobierno de Boric desde marzo de 2022; su gasto presupuestario cayó 23,0% real frente a 2021 al retirarse el estímulo fiscal de la pandemia.
+totales:
+  inicial: { monto: 60681594000000, fuente: dipres-2023-05-01-ifp-primer-trimestre-2023, nota: Ley aprobada más FET según el Cuadro I.6.1 del IFP }
+  vigente: { monto: 65861512000000, fuente: dipres-2023-05-01-ifp-primer-trimestre-2023, nota: Ley vigente más FET; considera los decretos totalmente tramitados del ejercicio }
+  ejecutado: { monto: 65672839000000, fuente: dipres-2023-05-01-ifp-primer-trimestre-2023, nota: Gasto presupuestario del Gobierno Central a diciembre de 2022, -23,0% real frente a 2021 }
+  saldo: { monto: 2958527000000, fuente: dipres-2023-05-01-ifp-primer-trimestre-2023, nota: Superávit efectivo de 2022, el primer saldo positivo desde 2012 }
+hitos:
+  - etiqueta: Balance efectivo 2022
+    valor: Superávit de $2.958.527 millones (1,1% del PIB), el primero desde 2012
+    fuente: dipres-2023-05-01-ifp-primer-trimestre-2023
+  - etiqueta: Balance cíclicamente ajustado 2022
+    valor: "+$644.834 millones (0,2% del PIB), tras un déficit estructural de 10,8% en 2021"
+    fuente: dipres-2023-05-01-ifp-primer-trimestre-2023
+  - etiqueta: Variación real del gasto presupuestario en 2022
+    valor: "-23,0% (corriente -26,2%, capital +4,7%)"
+    fuente: dipres-2023-05-01-ifp-primer-trimestre-2023
+  - etiqueta: Ejecución frente a la Ley aprobada
+    valor: 107,3% incluido el FET (113,4% de la ley regular)
+    fuente: dipres-2023-05-01-ifp-primer-trimestre-2023
+  - etiqueta: Plan Chile Apoya
+    valor: Más de US$3.700 millones y meta de medio millón de empleos
+    fuente: theclinic-2022-06-01-primera-cuenta-publica-boric
+movimientos:
+  - tipo: aumento
+    descripcion: Reajuste de 6,1% a las remuneraciones del sector público vigente durante 2022
+    fecha: '2021-12-22'
+    monto: null
+    monto_nota: Reajuste de 6,1% desde el 1 de diciembre de 2021 más aguinaldos y bonos; costo fiscal total no publicado en las fuentes consultadas
+    objetivo_declarado: Otorgar reajuste de remuneraciones y aguinaldos a los trabajadores del sector público
+    evento_id: null
+    fuente: bcn-2021-12-22-ley-21405-reajuste-sector-publico
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Ley N° 21.405 publicada el 22-dic-2021 bajo el gobierno de Piñera y ejecutada por el gobierno de Boric durante todo 2022; es el reajuste que rige el gasto en personal del ejercicio.
+  - tipo: aumento
+    descripcion: Ampliación de los recursos del Mepco para contener el precio de los combustibles
+    fecha: '2022-03-23'
+    monto: null
+    monto_nota: Línea de amortiguación de US$750 millones a US$1.500 millones, con alzas limitadas a $6,7 semanales; despacho a ley en el Senado por 44 votos a 0
+    objetivo_declarado: Amortiguar el alza de las gasolinas y el diésel
+    evento_id: null
+    fuente: biobiochile-2022-03-23-senado-despacha-ley-mepco
+    fuentes_secundarias:
+      - biobiochile-2022-03-21-mepco-duplicar-recursos
+    nivel_impacto: directo
+    organizacion_id: ministerio_hacienda
+    nota: Parte de la agenda del gobierno entrante ante el alza internacional de los combustibles.
+  - tipo: aumento
+    descripcion: Plan Chile Apoya de transferencias y reactivación
+    fecha: '2022-04-07'
+    monto: null
+    monto_nota: Más de US$3.700 millones; US$1.386 millones en empleo y sectores rezagados más US$1.340 millones en ayudas directas más US$1.000 millones a mipymes, según el desglose del Gobierno
+    objetivo_declarado: Aliviar el costo de la vida y crear medio millón de empleos
+    evento_id: null
+    fuente: theclinic-2022-06-01-primera-cuenta-publica-boric
+    fuentes_secundarias:
+      - biobiochile-2022-04-07-boric-anuncia-plan-chile-apoya
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Anunciado en la primera Cuenta Pública de Boric; incluye congelamiento de tarifas de transporte, estabilización de la parafina y aporte a la canasta básica.
+  - tipo: aumento
+    descripcion: Inyección de recursos al Fondo de Estabilización de Precios del Petróleo para contener la parafina
+    fecha: '2022-05-02'
+    monto: null
+    monto_nota: Inversión de US$40 millones en el FEPP; monto en pesos no publicado en la fuente citada
+    objetivo_declarado: Contener el precio de la parafina ante el invierno
+    evento_id: null
+    fuente: biobiochile-2022-05-02-boric-inyeccion-40-millones-parafina
+    nivel_impacto: directo
+    organizacion_id: ministerio_hacienda
+    nota: Proyecto presentado por Boric junto a Marcel y Huepe; en el mismo acto se anunció un futuro proyecto de estabilización de cuentas de electricidad.
+  - tipo: aumento
+    descripcion: Reajuste del ingreso mínimo a $400.000 con aporte compensatorio de canasta básica y subsidio a mipymes
+    fecha: '2022-05-26'
+    monto: null
+    monto_nota: Desembolso fiscal de US$850 millones según Marcel, en parte con fondos de la Ley de Presupuestos y en parte con el fondo de emergencia; incluye alza a $380.000 en mayo y $400.000 en agosto más aporte de $6.410 por carga de canasta básica en el primer mes
+    objetivo_declarado: Reajustar el ingreso mínimo y compensar el alza de la canasta básica de alimentos
+    evento_id: null
+    fuente: bcn-2022-05-26-ley-21456-salario-minimo-canasta
+    fuentes_secundarias:
+      - emol-2022-04-26-marcel-detalle-reajuste-salario-minimo
+    nivel_impacto: directo
+    organizacion_id: ministerio_trabajo
+    nota: Ley N° 21.456 publicada el 26-may-2022; otorga además un subsidio temporal a micro, pequeñas y medianas empresas.
+  - tipo: aumento
+    descripcion: Ampliación del límite del Mepco a US$3.000 millones para frenar el alza de combustibles
+    fecha: '2022-06-08'
+    monto: null
+    monto_nota: Tope elevado a US$3.000 millones con gasto fiscal cercano a US$1.050 millones; evita un alza de $400 por litro de bencina y rige al menos hasta octubre con máximo hasta diciembre
+    objetivo_declarado: Amortiguar el alza de gasolinas y diésel por la guerra en Ucrania
+    evento_id: null
+    fuente: biobiochile-2022-06-08-congreso-aprueba-mepco-3000-millones
+    fuentes_secundarias:
+      - bcn-2022-06-14-ley-21465-mepco
+    nivel_impacto: directo
+    organizacion_id: ministerio_hacienda
+    nota: Ley N° 21.465 aprobada en el Senado por 38 votos a 0; complementa el aumento de marzo desde US$750 hasta US$1.500 millones.
+  - tipo: aumento
+    descripcion: Ejecución de recursos del Fondo de Emergencia Transitorio en el primer semestre de 2022
+    fecha: '2022-06-30'
+    monto: null
+    monto_nota: Fondo creado hasta el 30-jun-2022 por un máximo de $9,72 billones equivalentes a US$12.000 millones; Marcel indicó que parte del paquete de US$850 millones de abril-mayo se financia con el fondo de emergencia, sin desglose publicado
+    objetivo_declarado: Solventar gastos derivados de la crisis del Covid-19 y la reactivación económica
+    evento_id: null
+    fuente: bcn-2020-12-14-ley-21288-fet
+    fuentes_secundarias:
+      - emol-2022-04-26-marcel-detalle-reajuste-salario-minimo
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: La Ley N° 21.288 permite ejecutar el FET mediante las leyes de presupuestos 2020, 2021 y 2022; la ejecución 2022 superó la ley aprobada en parte por el FET con un 107,3% ya registrado como hito.
+  - tipo: aumento
+    descripcion: Bono extraordinario Chile Apoya de Invierno de $120.000
+    fecha: '2022-07-27'
+    monto: null
+    monto_nota: Aporte no postulable de $120.000 para cerca de 7,5 millones de personas; costo total no publicado en las fuentes citadas
+    objetivo_declarado: Enfrentar las alzas de precios de alimentos y servicios básicos en invierno
+    evento_id: null
+    fuente: bcn-2022-07-27-ley-21474-bono-invierno
+    fuentes_secundarias:
+      - biobiochile-2022-07-27-bono-chile-apoya-invierno-ley
+    nivel_impacto: directo
+    organizacion_id: ministerio_hacienda
+    nota: Ley N° 21.474 publicada en el Diario Oficial el 27-jul-2022; extiende además el Permiso Postnatal Parental hasta por 60 días retroactivos.
+  - tipo: aumento
+    descripcion: Creación del Fondo de Estabilización de Tarifas y mecanismo transitorio de precios de electricidad
+    fecha: '2022-08-02'
+    monto: null
+    monto_nota: Aporte inicial de hasta US$15 millones al fondo y aportes anuales de hasta US$20 millones según la ley; montos en pesos no publicados
+    objetivo_declarado: Evitar un alza brusca en las cuentas de electricidad
+    evento_id: null
+    fuente: bcn-2022-08-02-ley-21472-fondo-tarifas
+    fuentes_secundarias:
+      - emol-2022-07-12-senado-estabilizacion-precios-luz
+    nivel_impacto: directo
+    organizacion_id: ministerio_energia
+    nota: Ley N° 21.472 aprobada en el Senado el 12-jul-2022 y publicada el 2-ago-2022; el mecanismo se financia además con cargos a clientes regulados.
+  - tipo: aumento
+    descripcion: Nuevo Fogape con garantías de hasta 95% y flexibilización de convenios de pago tributario
+    fecha: '2022-12-03'
+    monto: null
+    monto_nota: Cobertura de hasta 95% para microempresas, 90% pequeña y 85% mediana, tasa máxima de TPM más 5%, convenios de hasta 48 cuotas sin pie y condonación del 100% de intereses y multas; monto fiscal total no publicado
+    objetivo_declarado: Reactivar a mipymes con escaso o nulo acceso a financiamiento bancario
+    evento_id: null
+    fuente: bcn-2022-12-03-ley-21514-fogape
+    fuentes_secundarias:
+      - emol-2022-07-14-anuncio-fogape-mipymes
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_economia
+    nota: Ley N° 21.514 publicada el 3-dic-2022; anunciada en julio por Grau, Marcel y BancoEstado como parte del ecosistema Chile Apoya.
+variaciones:
+  - alcance: Gasto presupuestario 2022 frente a 2021
+    variacion_texto: "-23,0% real (corriente -26,2%, capital +4,7%)"
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2023-05-01-ifp-primer-trimestre-2023
+    evento_id: null
+    nota: Retiro del estímulo fiscal de la pandemia; el gasto social extraordinario de 2021 explica la caída.
+orden_refs:
+  - dipres-2021-12-15-ley-21395-presupuesto-2022
+  - dipres-2023-05-01-ifp-primer-trimestre-2023
+  - theclinic-2022-06-01-primera-cuenta-publica-boric
+  - biobiochile-2022-03-21-mepco-duplicar-recursos
+  - bcn-2021-12-22-ley-21405-reajuste-sector-publico
+  - biobiochile-2022-03-23-senado-despacha-ley-mepco
+  - biobiochile-2022-04-07-boric-anuncia-plan-chile-apoya
+  - biobiochile-2022-05-02-boric-inyeccion-40-millones-parafina
+  - bcn-2022-05-26-ley-21456-salario-minimo-canasta
+  - emol-2022-04-26-marcel-detalle-reajuste-salario-minimo
+  - biobiochile-2022-06-08-congreso-aprueba-mepco-3000-millones
+  - bcn-2022-06-14-ley-21465-mepco
+  - bcn-2020-12-14-ley-21288-fet
+  - bcn-2022-07-27-ley-21474-bono-invierno
+  - biobiochile-2022-07-27-bono-chile-apoya-invierno-ley
+  - bcn-2022-08-02-ley-21472-fondo-tarifas
+  - emol-2022-07-12-senado-estabilizacion-precios-luz
+  - bcn-2022-12-03-ley-21514-fogape
+  - emol-2022-07-14-anuncio-fogape-mipymes

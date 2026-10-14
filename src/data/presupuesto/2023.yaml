@@ -1,0 +1,164 @@
+# Ejercicio 2023 — Ley de Presupuestos 2023 (Ley 21.516), primer presupuesto
+# formulado y ejecutado íntegramente por el gobierno de Boric.
+# IDs de fuentes: src/content/sources/*.md. IDs de eventos: basename sin extensión.
+ano: 2023
+gobierno: Boric
+estado: cerrado
+estado_label: Cerrado (IFP cuarto trimestre de 2023)
+ley:
+  nombre: Ley de Presupuestos 2023
+  fuente: dipres-2022-12-20-ley-21516-presupuesto-2023
+  nota: Ley N° 21.516, publicada el 20-dic-2022. Cerrada con una ejecución de 100,0% de la ley aprobada y una caída de los ingresos tributarios que obligó a un ajuste en agosto.
+totales:
+  inicial: { monto: 70830600000, fuente: dipres-2024-02-08-ifp-cuarto-trimestre-2023, nota: Ejecución de 100,0% de la Ley aprobada con gasto efectivo de $70.830.600 millones; la ley aprobada equivale a esa cifra al redondeo publicado }
+  vigente: { monto: null, nota: Presupuesto vigente no desagregado en el IFP citado; la ejecución cerró en 100,0% de la ley aprobada }
+  ejecutado: { monto: 70830600000000, fuente: dipres-2024-02-08-ifp-cuarto-trimestre-2023, nota: Gasto del Gobierno Central Total 2023 (+1,0% real, 25,4% del PIB) }
+  saldo: { monto: null, nota: Déficit efectivo de $6.718.709 millones (2,4% del PIB) }
+hitos:
+  - etiqueta: Déficit efectivo 2023
+    valor: $6.718.709 millones (2,4% del PIB), bajo el 2,7% previsto en la ley
+    fuente: dipres-2024-02-08-ifp-cuarto-trimestre-2023
+  - etiqueta: Balance cíclicamente ajustado 2023
+    valor: "-2,6% del PIB, meta de la ley cumplida"
+    fuente: dipres-2024-02-08-ifp-cuarto-trimestre-2023
+  - etiqueta: Deuda bruta del Gobierno Central
+    valor: 39,8% del PIB
+    fuente: dipres-2024-02-08-ifp-cuarto-trimestre-2023
+  - etiqueta: Ejecución del gasto frente a la Ley aprobada
+    valor: 100,0%
+    fuente: dipres-2024-02-08-ifp-cuarto-trimestre-2023
+  - etiqueta: Ajuste fiscal anunciado en agosto por menores ingresos
+    valor: Reasignación en torno a US$2.000 millones con ingresos US$2.500 millones bajo lo proyectado
+    fuente: emol-2023-08-18-hacienda-ajuste-fiscal-us2000
+    fuentes_secundarias:
+      - radio-uchile-2023-08-18-ajuste-fiscal-us2000
+movimientos:
+  - tipo: recorte
+    descripcion: Partidas del INDH y el Museo de la Memoria rechazadas en la Cámara
+    fecha: '2022-11-17'
+    monto: null
+    monto_nota: La Cámara dejó sin fondos a ambos organismos; monto no publicado en la cobertura citada
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2022-11-17-camara-presupuesto-2023-indh-museo
+    nivel_impacto: directo
+    organizacion_id: indh
+    nota: Sesión de casi 22 horas en la tramitación del primer presupuesto del gobierno de Boric.
+  - tipo: aumento
+    descripcion: Reposición de las partidas rechazadas en el Senado
+    fecha: '2022-11-25'
+    monto: 15000000000
+    monto_nota: Casi $15.000 millones rechazados por la Cámara según CNN Chile; el Museo de la Memoria quedó repuesto sin monto publicado
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2022-11-25-senado-repone-partidas-presupuesto-2023
+    fuentes_secundarias:
+      - cnnchile-2022-11-24-senado-repone-indh
+    nivel_impacto: directo
+    organizacion_id: indh
+    nota: El Senado aprobó las 32 partidas revirtiendo el rechazo de la Cámara, por 18 votos contra 16 y con un aumento de 5% real respecto del presupuesto 2022.
+  - tipo: aumento
+    descripcion: Reajuste del sector público de dic-2022 vigente durante 2023
+    fecha: '2022-12-28'
+    monto: null
+    monto_nota: Reajuste acordado en diciembre de 2022; costo fiscal total no publicado en las fuentes consultadas
+    objetivo_declarado: Otorgar reajuste de remuneraciones y aguinaldos a los trabajadores del sector público
+    evento_id: null
+    fuente: bcn-2022-12-28-ley-21526-reajuste-sector-publico
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Ley N° 21.526 publicada el 28-dic-2022; es el reajuste que rige el gasto en personal del ejercicio 2023.
+  - tipo: aumento
+    descripcion: Plan de Recuperación y Ayudas Tempranas por incendios forestales en Ñuble, Biobío y La Araucanía
+    fecha: '2023-02-09'
+    monto: 35000000000
+    monto_nota: Costo inicial de las 13 medidas anunciado por el Gobierno
+    objetivo_declarado: Alivio inmediato en la estabilización de la emergencia y el inicio de la reconstrucción en las zonas afectadas
+    evento_id: null
+    fuente: hacienda-2023-02-09-plan-recuperacion-ayudas-tempranas
+    nivel_impacto: directo
+    organizacion_id: subsecretaria_interior
+    nota: Incluye bono de recuperación de $1.500.000 por familia, viviendas transitorias dignas y alivios tributarios como condonación de multas, postergación del impuesto territorial y exención de impuestos aduaneros.
+  - tipo: aumento
+    descripcion: Constitución del comité asesor del Fondo Nacional de la Reconstrucción por incendios forestales
+    fecha: '2023-02-20'
+    monto: null
+    monto_nota: Fondo con saldo de donaciones por $3.316 millones a la fecha, canaliza aportes privados con beneficio tributario según Ley 20.444
+    objetivo_declarado: Canalizar ayudas de privados para la reconstrucción en agricultura, infraestructura, viviendas y bienes públicos
+    evento_id: null
+    fuente: cnnchile-2023-02-21-fondo-reconstruccion-incendios
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Comité integrado por Interior, Economía, Vivienda y la delegada presidencial para la Reconstrucción Paulina Saball. Reunión constitutiva en Teatinos 120 con el ministro Marcel y la subsecretaria Sanhueza.
+  - tipo: aumento
+    descripcion: Pago del Bono de Recuperación a la segunda nómina de hogares damnificados por incendios
+    fecha: '2023-02-23'
+    monto: 1909500000
+    monto_nota: Inversión aproximada informada con la segunda nómina, más de 3.200 hogares beneficiados en total entre ambas nóminas
+    objetivo_declarado: Apoyar a las familias en la recuperación de las condiciones de habitabilidad perdidas por la emergencia
+    evento_id: null
+    fuente: midesof-2023-02-23-bono-recuperacion-segunda-nomina
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Bono de $750.000 o $1.500.000 según grado de afectación FIBE, pagado vía CuentaRUT o BancoEstado. Segunda nómina de 1.512 hogares, 139 en Ñuble, 177 en La Araucanía y el resto en Biobío. Subconjunto del Plan de $35.000 millones del 9 de febrero.
+  - tipo: recorte
+    descripcion: Instructivo Hacienda-Dipres que endurece requisitos para transferencias a instituciones privadas sin fines de lucro
+    fecha: '2023-08-11'
+    monto: null
+    monto_nota: Medida regulatoria sin monto en pesos, restringe el flujo de convenios tras el caso Convenios
+    objetivo_declarado: Asegurar que los recursos transferidos a instituciones privadas sin fines de lucro se destinen a los objetivos definidos
+    evento_id: null
+    fuente: hacienda-2023-08-11-instructivo-transferencias-convenios
+    nivel_impacto: institucional
+    organizacion_id: dipres
+    nota: 16 medidas aplicables al Gobierno Central y los Gobiernos Regionales, con concurso obligatorio, garantías, rendición electrónica ante Contraloría y prohibición de fraccionar convenios.
+  - tipo: recorte
+    descripcion: Ajuste fiscal de agosto de 2023 por menores ingresos
+    fecha: '2023-08-18'
+    monto: null
+    monto_nota: Reasignación en torno a US$2.000 millones; ingresos US$2.500 millones bajo lo presupuestado
+    objetivo_declarado: Cumplir la meta fiscal sin reducir el gasto público en su conjunto
+    evento_id: null
+    fuente: emol-2023-08-18-hacienda-ajuste-fiscal-us2000
+    fuentes_secundarias:
+      - radio-uchile-2023-08-18-ajuste-fiscal-us2000
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Segundo ajuste del gobierno, tras el recorte ejecutado en el Presupuesto 2022. Explicado por la Operación Renta, la tributación minera y gastos mayores en salud y emergencias.
+  - tipo: aumento
+    descripcion: Reajuste de remuneraciones del sector público
+    fecha: '2023-08-24'
+    monto: null
+    monto_nota: Reajuste de 10,5% desde el 1 de agosto de 2023 y 1,36% adicional desde el 1 de diciembre; costo fiscal total no publicado en la fuente citada
+    objetivo_declarado: null
+    evento_id: null
+    fuente: bcn-2023-08-24-ley-21599-reajuste-sector-publico
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Ley 21.599, que sustituye el reajuste fijado en la Ley 21.526.
+  - tipo: aumento
+    descripcion: Aumento del gasto 2023 por emergencias de lluvias, Juegos Panamericanos e intereses
+    fecha: '2023-10-03'
+    monto: 875311000000
+    monto_nota: Alza respecto del gasto proyectado en el IFP del segundo trimestre de 2023
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2023-10-03-ifp-tercer-trimestre-2023
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Gasto del Gobierno Central 2023 proyectado en $71.669.058 millones, con déficit efectivo estimado de $6.465.582 millones equivalente a 2,3% del PIB.
+orden_refs:
+  - dipres-2022-12-20-ley-21516-presupuesto-2023
+  - dipres-2024-02-08-ifp-cuarto-trimestre-2023
+  - biobiochile-2022-11-17-camara-presupuesto-2023-indh-museo
+  - biobiochile-2022-11-25-senado-repone-partidas-presupuesto-2023
+  - emol-2023-08-18-hacienda-ajuste-fiscal-us2000
+  - radio-uchile-2023-08-18-ajuste-fiscal-us2000
+  - bcn-2023-08-24-ley-21599-reajuste-sector-publico
+  - hacienda-2023-02-09-plan-recuperacion-ayudas-tempranas
+  - cnnchile-2023-02-21-fondo-reconstruccion-incendios
+  - midesof-2023-02-23-bono-recuperacion-segunda-nomina
+  - hacienda-2023-08-11-instructivo-transferencias-convenios
+  - dipres-2023-10-03-ifp-tercer-trimestre-2023
+  - cnnchile-2022-11-24-senado-repone-indh
+  - bcn-2022-12-28-ley-21526-reajuste-sector-publico

@@ -10,14 +10,16 @@ ley:
   fuente: bcn-2024-12-13-ley-21722-presupuestos-2025
   nota: Ley N° 21.722, publicada el 13-dic-2024. Meta de déficit estructural de 1,1% del PIB planteada en la ley.
 totales:
-  inicial: { monto: null, nota: Ley aprobada por $82 billones (+2% frente a 2024, con recorte de US$600 millones en la tramitación) }
-  vigente: { monto: null, nota: Sin cifra de gasto vigente publicada en la cobertura citada }
-  ejecutado: { monto: 82132035000000, nota: Gasto del Gobierno Central Total 2025 según el IFP del cuarto trimestre (+3,5% real, 24,3% del PIB) }
+  inicial: { monto: 82531667000000, fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025, nota: Ley aprobada por el Congreso según el Cuadro I.4.1 del IFP (+4,0% nominal frente a 2024) }
+  vigente: { monto: 82132035000000, fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025, nota: Actualización del gasto del IFP 4T25; ley aprobada más $338.726 millones en intereses menos $738.358 millones de ajuste fiscal }
+  ejecutado: { monto: 82132035000000, fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025, nota: Gasto del Gobierno Central Total 2025 según el IFP del cuarto trimestre (+3,5% real, 24,3% del PIB) }
   saldo: { monto: null, nota: Caja de cierre en disputa, ver hitos }
 hitos:
   - etiqueta: Déficit estructural de cierre
     valor: 3,55% del PIB ($12.028.692 millones)
     fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
+    fuentes_secundarias:
+      - biobio-2026-02-13-ifp-deficit-355
   - etiqueta: Meta de la ley frente a proyección del tercer trimestre
     valor: Meta 1,1% frente a 2,2% proyectado
     fuente: df-2026-02-13-deficit-estructural-2025
@@ -39,6 +41,9 @@ hitos:
   - etiqueta: Caja según el exministro Grau en réplica
     valor: US$1.406 millones a fines de enero y sobre US$800 millones en marzo
     fuente: eldinamo-2026-03-13-quiroz-sin-caja-grau
+  - etiqueta: Ajuste fiscal ejecutado en el año
+    valor: -$738.358 millones (más $338.726 millones en gasto por intereses)
+    fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
   - etiqueta: Ejecución del gasto respecto de la Ley aprobada
     valor: 99,5% a diciembre (corriente 101,7%, capital 87,9%)
     fuente: dipres-2026-02-13-ifp-cuarto-trimestre-2025
@@ -62,6 +67,19 @@ hitos:
     fuente: emol-2026-02-13-deficit-estructural-2025
 movimientos:
   - tipo: recorte
+    descripcion: Ajuste transversal del gasto en la tramitación de la Ley 2025
+    fecha: '2024-11-08'
+    monto: 543539000000
+    monto_nota: $543.539 millones, baja el crecimiento de 2,7% a 2,0%
+    objetivo_declarado: Marco de acuerdos para la última fase con gestión fiscal responsable
+    evento_id: null
+    fuente: biobiochile-2024-11-08-marcel-acuerdo-presupuesto-2025
+    fuentes_secundarias:
+      - biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+      - gob-cl-2024-11-27-aprobacion-presupuesto-2025
+    nivel_impacto: indirecto
+    nota: Sin afectar salud, policías, Gendarmería, educación ni vivienda. Incluye recapitalización del FEES y límite de endeudamiento de US$16.000 millones. No confundir con la rebaja preventiva de $544.000 millones ejecutada en enero de 2025 como mandato de la ley (ver recortes de ene-2025); montos cercanos pero eventos distintos, uno en la tramitación y otro en la ejecución.
+  - tipo: recorte
     descripcion: Rebaja de la Segegob en la tramitación de la Ley 2025
     fecha: '2024-11-27'
     monto: 140000000
@@ -72,6 +90,162 @@ movimientos:
     nivel_impacto: institucional
     organizacion_id: segegob
     nota: Recorte acordado en la negociación del despacho a ley.
+  - tipo: recorte
+    descripcion: Recorte al presupuesto 2025 del Ministerio Público
+    fecha: '2025-01-15'
+    monto: 7000000000
+    monto_nota: $7.000 millones dentro del ajuste de $544.000 millones del año (rebaja preventiva de enero, mandato de la ley; distinta del recorte de $543.539 millones acordado en la tramitación de nov-2024)
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2025-01-15-marcel-recorte-fiscalia
+    nivel_impacto: directo
+    organizacion_id: ministerio_publico
+    nota: Fiscalía advierte impacto en protección de víctimas, peritajes y software forense; Corte Suprema advierte impacto en tribunales. Hacienda comprometió reunión y adecuaciones dentro del marco legal. Parte de la rebaja preventiva de $544.000 millones (mandato de la ley, ene-2025).
+  - tipo: recorte
+    descripcion: Recorte al presupuesto 2025 del Poder Judicial
+    fecha: '2025-01-14'
+    monto: 17000000000
+    monto_nota: $17.000 millones dentro de la rebaja preventiva de $544.000 millones
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2025-01-14-corte-suprema-recorte-tribunales
+    fuentes_secundarias:
+      - biobiochile-2025-01-10-hacienda-recorte-us600-millones
+    nivel_impacto: directo
+    organizacion_id: poder_judicial
+    nota: Pleno de la Corte Suprema advierte sobrecarga laboral y déficit de 47% en dotación de jueces de primera instancia; afecta áreas laboral, familia y penal.
+  - tipo: recorte
+    descripcion: Recorte al presupuesto 2025 del Ministerio de Salud
+    fecha: '2025-01-15'
+    monto: 15968000000
+    monto_nota: $15.968 millones dentro de la rebaja preventiva de $544.000 millones, pese al acuerdo que excluía a salud
+    objetivo_declarado: null
+    evento_id: null
+    fuente: senado-2025-01-15-recorte-salud-dipres
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Comisión de Salud del Senado oficia a Hacienda. Detalle; Fonasa poco más de $3.000 millones, ISP $1.700 millones, Subsecretaría de Salud Pública $5.600 millones, Redes Asistenciales $4.800 millones, Superintendencia de Salud $492 millones, PPI $32 millones y GRD $44 millones.
+  - tipo: aumento
+    descripcion: Reposición de recursos del INDH en el despacho
+    fecha: '2024-11-27'
+    monto: null
+    monto_nota: Monto repuesto no publicado en la cobertura citada
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+    fuentes_secundarias:
+      - gob-cl-2024-11-27-aprobacion-presupuesto-2025
+    nivel_impacto: directo
+    organizacion_id: indh
+    nota: Reposición en la negociación del despacho a ley.
+  - tipo: aumento
+    descripcion: Reposición de recursos de Chile Crece Contigo en el despacho
+    fecha: '2024-11-27'
+    monto: null
+    monto_nota: Monto repuesto no publicado en la cobertura citada
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+    fuentes_secundarias:
+      - gob-cl-2024-11-27-aprobacion-presupuesto-2025
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Reposición en la negociación del despacho a ley.
+  - tipo: aumento
+    descripcion: Reposición de recursos del PAIG en el despacho
+    fecha: '2024-11-27'
+    monto: null
+    monto_nota: Monto repuesto no publicado en la cobertura citada
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
+    fuentes_secundarias:
+      - gob-cl-2024-11-27-aprobacion-presupuesto-2025
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Programa de acompañamiento para niños y niñas trans; en la tramitación se había recortado el PAIG en la partida de Salud.
+  - tipo: aumento
+    descripcion: Reposición de fondos del programa Calles sin Violencia en la tramitación
+    fecha: '2024-11-08'
+    monto: null
+    monto_nota: Monto repuesto no publicado en la cobertura citada
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2024-11-08-marcel-acuerdo-presupuesto-2025
+    nivel_impacto: directo
+    organizacion_id: subsecretaria_prevencion_delito
+    nota: Plan a cargo de la Subsecretaría de Prevención del Delito (Interior). En la misma jornada se recortó el PAIG en Salud y se rechazaron recursos de la Subsecretaría de Derechos Humanos.
+  - tipo: aumento
+    descripcion: Incremento del programa de Contingencias Operacionales para listas de espera
+    fecha: '2024-11-14'
+    monto: 73000000000
+    monto_nota: $73.000 millones sujetos a la entrada en vigencia de la ley de licencias de grandes emisores
+    objetivo_declarado: Reducción de casos en listas de espera de cirugía, procedimientos y especialistas
+    evento_id: null
+    fuente: dipres-2024-11-07-compromisos-presupuesto-2025
+    partida: Partida 16 · Salud
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Protocolo de Salud del 14-nov-2024 con metas por región e informe de resultados en diciembre de 2025.
+  - tipo: aumento
+    descripcion: Suplemento del plan de recuperación de liceos emblemáticos
+    fecha: '2024-11-21'
+    monto: 500000000
+    monto_nota: $500 millones vía reasignación durante el primer semestre de 2025
+    objetivo_declarado: Recuperación del mérito y la excelencia académica
+    evento_id: null
+    fuente: dipres-2024-11-07-compromisos-presupuesto-2025
+    partida: Partida 09 · Educación
+    nivel_impacto: directo
+    organizacion_id: ministerio_educacion
+    nota: Protocolo de Educación del 21-nov-2024 con actualización del plan en el primer trimestre de 2025.
+  - tipo: aumento
+    descripcion: Licitación del angiógrafo de la región de Coyhaique
+    fecha: '2024-11-27'
+    monto: 5237000000
+    monto_nota: $5.237 millones para instalación del equipo
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-11-07-compromisos-presupuesto-2025
+    partida: Partida 16 · Salud
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Compromiso sectorial del 27-nov-2024 junto a la red oncológica de 17 iniciativas.
+  - tipo: aumento
+    descripcion: Ampliación condicional del convenio del Hospital Clínico de la Universidad de Chile
+    fecha: '2024-11-27'
+    monto: null
+    monto_nota: Hasta $5.000 millones si los ingresos estructurales superan lo proyectado en el segundo IFP de 2025, monto condicional no ejecutado a la firma
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-11-07-compromisos-presupuesto-2025
+    partida: Partida 16 · Salud
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Modificación del convenio con el Servicio de Salud Metropolitano Norte según ejecución del convenio.
+  - tipo: aumento
+    descripcion: Incremento del GRD del Hospital de Iquique
+    fecha: '2024-11-27'
+    monto: null
+    monto_nota: Total de $102.000 millones en GRD con +16,4%, incremento no desagregado en el documento citado
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-11-07-compromisos-presupuesto-2025
+    partida: Partida 16 · Salud
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Compromiso sectorial del 27-nov-2024 dentro de la partida de Salud.
+  - tipo: aumento
+    descripcion: Reasignación para la Oficina de Grandes Proyectos
+    fecha: '2024-11-27'
+    monto: 506000000
+    monto_nota: $506 millones reasignados para incrementar el programa
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-11-07-compromisos-presupuesto-2025
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_economia
+    nota: Compromiso sectorial del 27-nov-2024 con glosa de seguimiento al Plan Huachipato.
 variaciones:
   - alcance: Ley 2025 frente a 2024
     variacion_texto: +2% (proyecto original +2,7% con recorte de US$500 millones; ley con US$600 millones)
@@ -80,12 +254,103 @@ variaciones:
     fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
     evento_id: null
     nota: Último presupuesto ejecutado íntegramente por el gobierno de Boric.
+  - alcance: Becas de capacitación Sence (15-05-01-24-03-003) frente a 2024
+    variacion_texto: +71,4% (M$2.185.843 en el proyecto 2025)
+    ministerio_id: ministerio_trabajo
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Aumenta por mayor cobertura, con 2.794 beneficiarios proyectados para 2025.
+  - alcance: Bono de capacitación para micro y pequeños empresarios, Sence (15-05-01-24-03-004) frente a 2024
+    variacion_texto: -34,0% (M$2.023.226 en el proyecto 2025)
+    ministerio_id: ministerio_trabajo
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Disminuye por sostenida subejecución; desde 2019 su ejecución nunca superó el 72,7% y llegó a 27,1%.
+  - alcance: Subsidio al Empleo de la Mujer, Ley 20.595 (Sence 15-05-04-24-01-454) frente a 2024
+    variacion_texto: +12,5% (M$107.669.199 en el proyecto 2025)
+    ministerio_id: ministerio_trabajo
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Aumenta por el fin del Ingreso Mínimo Garantizado y la reasignación hacia otros subsidios.
+  - alcance: Programa Recuperación de Barrios (Minvu 18-01-04) frente a 2024
+    variacion_texto: +61,7% (M$41.769.943 en el proyecto 2025)
+    ministerio_id: ministerio_vivienda
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Aumenta para continuar con barrios de arrastre e iniciar proyectos y obras en barrios nuevos.
+  - alcance: Programa de Integración Social y Territorial (Minvu) frente a 2024
+    variacion_texto: +45,9% (M$374.536.514 en el proyecto 2025)
+    ministerio_id: ministerio_vivienda
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Agrega Subsecretaría y Servicios de Vivienda y Urbanización en una misma ficha.
+  - alcance: Programa Noche Digna (21-01-01-24-03-998) frente a 2024
+    variacion_texto: +24,7% (M$25.226.135 en el proyecto 2025)
+    ministerio_id: ministerio_desarrollo_social
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Subsecretaría de Servicios Sociales; Protege Calle y Centros temporales para la superación.
+  - alcance: Programa de Fortalecimiento Municipal (Subsecretaría de la Niñez 21-10-02-24-03-003) frente a 2024
+    variacion_texto: -57,4% (M$962.207 en el proyecto 2025)
+    ministerio_id: ministerio_desarrollo_social
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Disminuye por la instalación progresiva de las Oficinas Locales de la Niñez que absorben sus funciones.
+  - alcance: Protección ambulatoria y cuidado alternativo, Mejor Niñez (21-11-01) frente a 2024
+    variacion_texto: +63,5% (M$61.796.425 en el proyecto 2025)
+    ministerio_id: ministerio_desarrollo_social
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Servicio Nacional de Protección Especializada en ficha Dipres de variación sobre 5%.
+  - alcance: Fondo de Fomento de la Música Nacional (29-01-02-24-01-520) frente a 2024
+    variacion_texto: +34,0% (M$10.519.668 en el proyecto 2025)
+    ministerio_id: ministerio_culturas
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Subsecretaría de las Culturas y las Artes en ficha Dipres de variación sobre 5%.
+  - alcance: Subsidio previsional a trabajadores jóvenes (IPS 15-09-01-24-01-009) frente a 2024
+    variacion_texto: +31,3% (M$8.712.108 en el proyecto 2025)
+    ministerio_id: ministerio_trabajo
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Instituto de Previsión Social en ficha Dipres de variación sobre 5%.
+  - alcance: Programa de Reconversión Laboral (Sence 15-05-01-24-03-477) frente a 2024
+    variacion_texto: +98,9% (M$11.704.207 en el proyecto 2025)
+    ministerio_id: ministerio_trabajo
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Aumenta para avanzar en el cierre de brechas por talento digital.
+  - alcance: Programa de Apoyo a Personas en Situación de Calle (21-01-05-24-03-343) frente a 2024
+    variacion_texto: -11,5% (M$3.532.644 en el proyecto 2025)
+    ministerio_id: ministerio_desarrollo_social
+    nivel_impacto: directo
+    fuente: dipres-2024-10-variacion-programas-2025
+    evento_id: null
+    nota: Disminuye por una proyección de cobertura 2025 menor a la de 2024.
 orden_refs:
   - biobio-2026-02-13-ifp-deficit-355
   - df-2026-02-13-deficit-estructural-2025
   - emol-2026-02-13-deficit-estructural-2025
   - emol-2026-03-18-reseteo-gobierno-kast
   - eldinamo-2026-03-13-quiroz-sin-caja-grau
+  - biobiochile-2024-11-08-marcel-acuerdo-presupuesto-2025
+  - biobiochile-2025-01-10-hacienda-recorte-us600-millones
+  - biobiochile-2025-01-14-corte-suprema-recorte-tribunales
+  - senado-2025-01-15-recorte-salud-dipres
+  - biobiochile-2025-01-15-marcel-recorte-fiscalia
+  - dipres-2024-11-07-compromisos-presupuesto-2025
+  - dipres-2024-10-variacion-programas-2025
   - gob-cl-2024-11-27-aprobacion-presupuesto-2025
   - biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
   - dipres-2026-02-13-ifp-cuarto-trimestre-2025

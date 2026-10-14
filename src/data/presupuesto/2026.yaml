@@ -71,6 +71,33 @@ hitos:
   - etiqueta: Ajustes 2026 que distorsionan la base de comparación del proyecto 2027
     valor: Ajustes por $1.307.729 millones más el D333 de Salud por $413.200 millones, según Rumbo Colectivo
     fuente: latercera-2026-09-29-kast-oficialismo-presupuesto
+  - etiqueta: Primera ley de Presupuestos sin Glosa Republicana
+    valor: Con 1% de los recursos reasignable por el Gobierno entrante
+    fuente: biobiochile-2025-11-27-grau-presupuesto-2026
+  - etiqueta: Reajuste del sector público 2026 con financiamiento en duda
+    valor: US$1.150 millones desfinanciados según un estudio posterior al acuerdo con la Mesa del Sector Público
+    fuente: biobiochile-2025-12-24-reajuste-desfinanciado-us1150
+  - etiqueta: Defensa fuera del recorte transversal
+    valor: El Gobierno excluye a Defensa del ajuste del 3% y anuncia renovación de equipos militares
+    fuente: 24horas-2026-09-24-gobierno-excluye-defensa-3-recortes
+  - etiqueta: Costo fiscal acumulado del Mepco para contener el alza de combustibles
+    valor: US$715 millones entre el 5 de marzo y el 10 de septiembre (US$2.761 millones en el escenario sin el ajuste de parámetro)
+    fuente: cnnchile-2026-09-17-mepco-costo-fiscal-715-millones
+    fuentes_secundarias:
+      - ocec-udp-2026-brujula-44-costo-fiscal-mepco
+      - biobiochile-2026-09-18-cifran-2-mil-millones-ahorro-fiscal-mepco
+      - latercera-2026-09-16-gobierno-gasto-700-millones-combustibles
+  - etiqueta: Riesgo fiscal detectado por la auditoría al Estado
+    valor: Más de US$9.200 millones (US$1.000 millones a proveedores de salud, US$650 millones a Junaeb y US$400 millones en gratuidad)
+    fuente: emol-2026-05-25-auditoria-9200-millones
+    fuentes_secundarias:
+      - theclinic-2026-05-25-auditoria-9200-millones
+  - etiqueta: Meta de equilibrio fiscal postergada a 2030 en el decreto de política fiscal
+    valor: Déficit estructural de 1,5% del PIB al 2030 y endeudamiento de US$6.200 millones hacia US$24.000 millones totales
+    fuente: ex-ante-2026-06-09-decreto-fiscal-equilibrio
+    fuentes_secundarias:
+      - radio-uchile-2026-06-09-quiroz-equilibrio-fiscal-2030
+      - latercera-2026-06-11-hacienda-pib-decreto-fiscal
 variaciones:
   - alcance: Gasto de capital contemplado en la Ley 2026 frente a 2025
     variacion_texto: -6,1% real
@@ -78,6 +105,27 @@ variaciones:
     nivel_impacto: indirecto
     fuente: dipres-2026-07-31-ejecucion-junio-gasto-capital
     nota: Caída ya contemplada en la ley, antes de la priorización de la nueva administración.
+  - alcance: Salud frente a 2025 en la Ley 2026
+    variacion_texto: +5,7% (más de 30% en el período)
+    ministerio_id: ministerio_salud
+    nivel_impacto: directo
+    fuente: gob-cl-2025-11-27-presupuesto-2026-distribucion
+    evento_id: null
+    nota: Incluye mayor inversión GES y 115 mil cirugías comprometidas.
+  - alcance: Seguridad frente a 2025 en la Ley 2026
+    variacion_texto: +16,8%
+    ministerio_id: ministerio_seguridad
+    nivel_impacto: directo
+    fuente: gob-cl-2025-11-27-presupuesto-2026-distribucion
+    evento_id: null
+    nota: Financia 3.700 carabineros y más de 700 detectives.
+  - alcance: Vivienda frente a 2025 en la Ley 2026
+    variacion_texto: +37% (+7,6% entre 2025 y 2026)
+    ministerio_id: ministerio_vivienda
+    nivel_impacto: directo
+    fuente: gob-cl-2025-11-27-presupuesto-2026-distribucion
+    evento_id: null
+    nota: Considera la Red de Cuidados con un alza de 300% en el período.
 movimientos:
   - tipo: recorte
     descripcion: Reducción del presupuesto del Ministerio de Seguridad Pública
@@ -98,6 +146,10 @@ movimientos:
     objetivo_declarado: Gasto excesivo en cultura y transferencias recibidas no ocupadas en su objeto según el ministro
     evento_id: 20260331-3
     fuente: cnnchile-2026-03-31-undurraga-recorte-3-culturas
+    fuentes_secundarias:
+      - lacuarta-2026-03-13-gobierno-defiende-recorte-3-cultura
+      - latercera-2026-04-01-undurraga-recorte-3-pase-cultural
+      - elclarin-2026-04-03-trabajadores-alerta-recorte
     nivel_impacto: directo
     organizacion_id: ministerio_culturas
     nota: Gremios denuncian además un recorte de más del 50% en fondos de sitios de memoria.
@@ -111,7 +163,9 @@ movimientos:
     fuente: lacuarta-2026-04-29-te-amo-pgu-oficio-hacienda-ajuste
     nivel_impacto: directo
     organizacion_id: null
-    nota: Firmado en abril en medio del debate por la meta de reducir el gasto en US$6.000 millones.
+    fuentes_secundarias:
+      - adnradio-2026-08-18-pgu-revision-beneficiarios
+    nota: Firmado en abril en medio del debate por la meta de reducir el gasto en US$6.000 millones; en agosto el Gobierno confirmó la revisión de la lista de 2,2 millones de beneficiarios, con un gasto de US$5.800 millones y US$60 millones de ahorro por cada punto.
   - tipo: recorte
     descripcion: Rebaja transversal del gasto de los ministerios aplicada por Dipres
     fecha: '2026-03-18'
@@ -227,6 +281,10 @@ movimientos:
     fuentes_secundarias:
       - bbcl-explica-2026-04-24-24-programas-salud-descontinuar
       - biobiochile-2026-04-24-matthei-quiroz-recorte-pae
+      - epicentrochile-2026-04-24-hacienda-recortes-educacion
+      - sabes-2026-04-24-24-programas-salud-hacienda
+      - theclinic-2026-04-24-quiroz-orientacion-descontinuar-142
+      - 24horas-2026-04-27-dipres-descontinuar-reformular
     nivel_impacto: institucional
     nota: Recomendación de ajuste, no recorte ejecutado; alcanzó a Ciencia ($68.000 millones en becas Chile y $32.000 millones al extranjero) y al PAE de Junaeb.
   - tipo: aumento
@@ -293,6 +351,145 @@ movimientos:
     nivel_impacto: directo
     organizacion_id: sercotec
     nota: Postulaciones del 25 de agosto al 8 de septiembre vía sercotec.cl.
+  - tipo: recorte
+    descripcion: Exclusión de la Fundación Salvador Allende y del PAIG en el despacho del Presupuesto 2026
+    fecha: '2025-11-26'
+    monto: null
+    monto_nota: Sin glosas 03 y 04 del Tesoro para traspasos de los GORE a empresas públicas y sin aportes a la Fundación Salvador Allende ni al PAIG; montos excluidos no publicados
+    objetivo_declarado: null
+    evento_id: null
+    fuente: biobiochile-2025-11-26-allende-paig-presupuesto-2026
+    fuentes_secundarias:
+      - dipres-2025-11-26-despacho-presupuesto-2026
+    partida: Partida 50 · Tesoro Público
+    nivel_impacto: indirecto
+    organizacion_id: null
+    nota: La comisión mixta resolvió 14 discrepancias; la Cámara aprobó 66 a 35 y el Senado 27 a 1.
+  - tipo: recorte
+    descripcion: Recorte a la APS Universal en Arica
+    fecha: '2026-08-05'
+    monto: 1300000000
+    monto_nota: Más de $1.300 millones menos de financiamiento para la APS Universal; los consultorios redujeron horarios, sobre todo los sábados
+    objetivo_declarado: null
+    evento_id: null
+    fuente: adnradio-2026-08-05-recorte-aps-arica
+    partida: Partida 16 · Salud (atención primaria municipal)
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Se enmarca en los recortes a la atención primaria denunciados por Confusam.
+  - tipo: aumento
+    descripcion: Reajuste de remuneraciones del sector público para 2026
+    fecha: '2025-12-17'
+    monto: null
+    monto_nota: Reajuste general gradual de 3,4% y 5% para las remuneraciones mínimas, más bonos para los trabajadores de menores ingresos; costo fiscal no publicado en la fuente
+    objetivo_declarado: Reponer el poder de compra de los funcionarios públicos
+    evento_id: null
+    fuente: biobiochile-2025-12-17-acuerdo-reajuste-sector-publico
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Acuerdo de la madrugada del 17-dic-2025 entre Hacienda y la Mesa del Sector Público, con el proyecto de ley enviado al Congreso en los días siguientes.
+  - tipo: aumento
+    descripcion: Bono a taxistas y mitigación del alza de la parafina
+    fecha: '2026-03-24'
+    monto: 111530000000
+    monto_nota: Informe Financiero del proyecto por $111.530 millones, con bono de $100.000 a taxistas, rebaja del crédito fiscal a no transportistas y mitigación en la parafina
+    objetivo_declarado: Amortiguar el alza del petróleo en la parafina y el transporte
+    evento_id: null
+    fuente: biobiochile-2026-03-24-parafina-bono-111-mil-millones
+    nivel_impacto: directo
+    organizacion_id: ministerio_hacienda
+    nota: Proyecto del FEPP en debate en la Cámara el 24-mar-2026.
+  - tipo: recorte
+    descripcion: Recorte de $123.914 millones al Sence por el decreto N.º 330
+    fecha: '2026-04-24'
+    monto: 123914400000
+    monto_nota: 45% del presupuesto del servicio; el mismo decreto rebaja la Dirección del Trabajo en $2.109 millones, el IPS en $7.607 millones y el Crédito Prendario en $1.996 millones
+    objetivo_declarado: null
+    evento_id: 20260707-2
+    fuente: contrapoderchile-2026-07-12-sence-123mil
+    fuentes_secundarias:
+      - latercera-2026-05-15-sence-recorte-45
+    partida: Partida 20 · Trabajo y Previsión Social (Sence)
+    nivel_impacto: directo
+    organizacion_id: sence
+    nota: Decreto firmado por el ministro Quiroz el 24 de abril de 2026 con toma de razón el 14 de mayo; la cobertura lo contrastó con el desempleo en máximos de cinco años (9,4%).
+  - tipo: recorte
+    descripcion: Cese del ingreso de nuevas participantes al Programa Mujeres Rurales
+    fecha: '2026-06-01'
+    monto: null
+    monto_nota: Sin monto publicado; oficio de la Dirección Nacional de INDAP a PRODEMU con reducción progresiva hasta la extinción del programa en 2029
+    objetivo_declarado: null
+    evento_id: 20260601-6
+    fuente: elmostrador-2026-07-21-mujeres-rurales
+    partida: Partida 13 · Agricultura (INDAP–PRODEMU)
+    nivel_impacto: directo
+    organizacion_id: indap
+    nota: El programa lo ejecuta PRODEMU con financiamiento de INDAP; la columna cita el oficio del 1 de junio de 2026.
+  - tipo: recorte
+    descripcion: Reducción de las raciones del Programa de Alimentación Escolar en el Liceo San José de Punta Arenas
+    fecha: '2026-08-12'
+    monto: null
+    monto_nota: De 330 a 160 raciones los martes (día de legumbres) por baja aceptabilidad; Junaeb Magallanes lo califica de ajuste técnico para evitar pérdidas de alimentos
+    objetivo_declarado: Ajuste técnico según el seguimiento de consumo de la Junaeb regional
+    evento_id: 20260812-15
+    fuente: itvpatagonia-2026-08-12-junaeb-liceo-san-jose
+    partida: Partida 09 · Educación (Junaeb, PAE)
+    nivel_impacto: directo
+    organizacion_id: junaeb
+    nota: El liceo confirmó la reducción por la plataforma PAE Online y pidió su reconsideración; el recorte empezó a regir en agosto.
+  - tipo: aumento
+    descripcion: Aporte a los municipios para el balón de gas licuado al 80% más vulnerable
+    fecha: '2026-04-01'
+    monto: null
+    monto_nota: US$225 millones para 7,5 millones de familias, entregados a través de los municipios; el monto en pesos no fue publicado
+    objetivo_declarado: Paliar el alza de combustibles decretada en marzo
+    evento_id: 20260401-3
+    fuente: epicentrochile-2026-04-01-balon-gas-bono-pescadores-bencinazo
+    fuentes_secundarias:
+      - latercera-2026-04-01-kast-medidas-alza-combustibles-gas
+      - lacuarta-2026-04-01-bono-pescadores-balon-gas-bencinazo
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Segunda sesión del comité Chile Sale Adelante; el balón de 15 kilos se entrega vía municipios a hogares del 80% más vulnerable.
+  - tipo: aumento
+    descripcion: Bono de $100.000 a pescadores artesanales por el alza de combustibles
+    fecha: '2026-04-01'
+    monto: null
+    monto_nota: $100.000 mensuales por seis meses para embarcaciones de hasta 12 metros (unas 9.000 naves con actividad en 2025); el total no fue publicado
+    objetivo_declarado: Compensar el alza del diésel en la pesca artesanal
+    evento_id: 20260401-3
+    fuente: latercera-2026-04-01-kast-medidas-alza-combustibles-gas
+    fuentes_secundarias:
+      - epicentrochile-2026-04-01-balon-gas-bono-pescadores-bencinazo
+    nivel_impacto: directo
+    organizacion_id: null
+    nota: Anunciado junto al aporte municipal para el gas licuado y a la parafina congelada en $1.050.
+  - tipo: recorte
+    descripcion: Congelamiento de la adjudicación de corredores de transporte público del Gran Concepción
+    fecha: '2026-08-04'
+    monto: null
+    monto_nota: Detiene la tramitación de los decretos que adjudicaban al Grupo Azvi los corredores Ruta 160 y Ruta 150 de la Autopista Concepción-Talcahuano por US$400 millones
+    objetivo_declarado: null
+    evento_id: 20260804-2
+    fuente: df-2026-08-04-hacienda-congela-corredores
+    partida: Partida 19 · Transportes y Telecomunicaciones
+    nivel_impacto: directo
+    organizacion_id: ministerio_transportes
+    nota: Exclusiva de Diario Financiero citada después por The Clinic y BioBioChile.
+  - tipo: aumento
+    descripcion: Extensión de los bonos por alza de combustibles hasta diciembre y capitalización del Fogape
+    fecha: '2026-09-29'
+    monto: null
+    monto_nota: Subsidios hasta diciembre para los sectores afectados y capitalización del Fogape de hasta $300.000 millones; requisitos de focalización y pymes excluidas en la tramitación
+    objetivo_declarado: Sostener los subsidios al transporte y reforzar el financiamiento de las pymes
+    evento_id: 20260929-1
+    fuente: nuevopoder-2026-09-29-firma-proyecto-bonos-fogape
+    fuentes_secundarias:
+      - radio-uchile-2026-09-29-bonos-diciembre
+      - cnnchile-2026-09-29-extension-bono-100mil-combustibles
+    nivel_impacto: directo
+    organizacion_id: ministerio_hacienda
+    nota: Iniciativa firmada por el Presidente el 29 de septiembre y enviada al Congreso el mismo día del ingreso del proyecto 2027.
 orden_refs:
   - dipres-2026-07-31-ejecucion-junio-gasto-capital
   - biobiochile-2026-04-27-dipres-descontinuar-reformular
@@ -330,3 +527,36 @@ orden_refs:
   - biobiochile-2026-08-24-subsidio-emprendedores-desempleados
   - radio_uchile-2026-08-25-capital-semilla-modo-empleo
   - latercera-2026-09-29-kast-oficialismo-presupuesto
+  - adnradio-2026-08-05-recorte-aps-arica
+  - biobiochile-2026-03-24-parafina-bono-111-mil-millones
+  - biobiochile-2025-12-17-acuerdo-reajuste-sector-publico
+  - biobiochile-2025-12-24-reajuste-desfinanciado-us1150
+  - 24horas-2026-09-24-gobierno-excluye-defensa-3-recortes
+  - contrapoderchile-2026-07-12-sence-123mil
+  - elmostrador-2026-07-21-mujeres-rurales
+  - itvpatagonia-2026-08-12-junaeb-liceo-san-jose
+  - epicentrochile-2026-04-24-hacienda-recortes-educacion
+  - sabes-2026-04-24-24-programas-salud-hacienda
+  - theclinic-2026-04-24-quiroz-orientacion-descontinuar-142
+  - 24horas-2026-04-27-dipres-descontinuar-reformular
+  - lacuarta-2026-03-13-gobierno-defiende-recorte-3-cultura
+  - latercera-2026-04-01-undurraga-recorte-3-pase-cultural
+  - elclarin-2026-04-03-trabajadores-alerta-recorte
+  - latercera-2026-05-15-sence-recorte-45
+  - epicentrochile-2026-04-01-balon-gas-bono-pescadores-bencinazo
+  - latercera-2026-04-01-kast-medidas-alza-combustibles-gas
+  - lacuarta-2026-04-01-bono-pescadores-balon-gas-bencinazo
+  - df-2026-08-04-hacienda-congela-corredores
+  - nuevopoder-2026-09-29-firma-proyecto-bonos-fogape
+  - radio-uchile-2026-09-29-bonos-diciembre
+  - cnnchile-2026-09-29-extension-bono-100mil-combustibles
+  - adnradio-2026-08-18-pgu-revision-beneficiarios
+  - cnnchile-2026-09-17-mepco-costo-fiscal-715-millones
+  - ocec-udp-2026-brujula-44-costo-fiscal-mepco
+  - biobiochile-2026-09-18-cifran-2-mil-millones-ahorro-fiscal-mepco
+  - latercera-2026-09-16-gobierno-gasto-700-millones-combustibles
+  - emol-2026-05-25-auditoria-9200-millones
+  - theclinic-2026-05-25-auditoria-9200-millones
+  - ex-ante-2026-06-09-decreto-fiscal-equilibrio
+  - radio-uchile-2026-06-09-quiroz-equilibrio-fiscal-2030
+  - latercera-2026-06-11-hacienda-pib-decreto-fiscal

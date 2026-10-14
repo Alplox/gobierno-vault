@@ -19,6 +19,9 @@ hitos:
   - etiqueta: Aumento del gasto del proyecto frente a 2026
     valor: +1,5%
     fuente: adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
+    fuentes_secundarias:
+      - df-2026-09-30-presupuesto-2027-quiroz-defiende-alza
+      - biobiochile-2026-09-30-oposicion-fustiga-presupuesto-recortes
   - etiqueta: Autorización de endeudamiento solicitada
     valor: US$25.000 millones
     fuente: latercera-2026-10-05-presupuesto-endeudamiento-us25000
@@ -50,6 +53,14 @@ hitos:
     fuente: theclinic-2026-10-10-herrera-cuento-del-tio
     fuentes_secundarias:
       - cooperativa-2026-10-09-pavez-radares-senapred
+  - etiqueta: Meta de recorte de US$6.000 millones en duda tras el proyecto
+    valor: El biministro Alvarado no confirma la meta de campaña; el proyecto suma más de US$2.000 millones en recortes y 0,5% extra por empleo
+    fuente: biobiochile-2026-10-01-alvarado-recorte-6-mil-millones
+    fuentes_secundarias:
+      - elmostrador-2026-10-06-quiroz-aplanadora-negociar-punto
+  - etiqueta: Defensa presidencial de los ajustes del proyecto
+    valor: Kast sostiene que cada peso recuperado irá a los sectores más necesitados y anuncia cruces de datos contra pagos irregulares
+    fuente: 24horas-2026-10-06-kast-defiende-recortes-presupuesto
 variaciones:
   - alcance: Partida 09 frente a 2026
     variacion_texto: +3,9% nominal (+0,78% real con inflación proyectada de 3,1%)
@@ -77,6 +88,8 @@ variaciones:
     ministerio_id: ministerio_salud
     nivel_impacto: directo
     fuente: youtube-2026-10-02-biobio-alertas-recortes-educacion
+    fuentes_secundarias:
+      - latercera-2026-08-13-chomali-45-salud-2027
     evento_id: 20261002-1
     nota: Cifra declarada por la ministra según registro audiovisual citado en el evento.
   - alcance: Gobiernos regionales frente a 2026
@@ -105,6 +118,20 @@ variaciones:
     fuente: presupuestokast-2026-10-11-partida-31-gobiernos-regionales
     evento_id: 20261005-2
     nota: Partida en $1,80 billones; la distancia entre ambas mediciones sale de la base.
+  - alcance: Seguridad pública frente a 2026
+    variacion_texto: +9,1%
+    ministerio_id: ministerio_seguridad
+    nivel_impacto: directo
+    fuente: youtube-2026-10-02-24horas-ingresa-erario
+    evento_id: 20261002-1
+    nota: Una de las cuatro prioridades del proyecto presentado por el ministro Quiroz.
+  - alcance: Niñez frente a 2026
+    variacion_texto: +4,1%
+    ministerio_id: ministerio_desarrollo_social
+    nivel_impacto: directo
+    fuente: youtube-2026-10-02-24horas-ingresa-erario
+    evento_id: 20261002-1
+    nota: El detalle por partida se conoce al ingresar el proyecto al Congreso.
 movimientos:
   - tipo: recorte
     descripcion: Rebaja del Programa de Tenencia Responsable de Animales de Compañía
@@ -151,6 +178,13 @@ movimientos:
     objetivo_declarado: Eficiencia ante la caída de la natalidad y concentración de establecimientos
     evento_id: 20261001-16
     fuente: latercera-2026-10-01-mineduc-bicentenario-universidades-jardines
+    fuentes_secundarias:
+      - biobiochile-2026-10-01-2-mil-docentes-oposicion-ajuste
+      - biobiochile-2026-10-01-educacion-ajusta-horas-reduccion
+      - elciudadano-2026-10-06-profesores-alerta-aguilar-2000-docentes
+      - infogate-2026-10-02-quiroz-horas-docentes-despidos
+      - radio-uchile-2026-10-05-aguilar-falta-recursos
+      - diarioconcepcion-2026-10-08-biobio-horas-docentes-slep
     nivel_impacto: directo
     organizacion_id: ministerio_educacion
     nota: Glosa de Dotación máxima de personal por SLEP con sanción al director ejecutivo por incumplimiento imputable; en el Biobío la baja es de 5.736 horas (-3%).
@@ -174,6 +208,8 @@ movimientos:
     objetivo_declarado: null
     evento_id: 20261007-3
     fuente: theclinic-2026-10-07-campos-hielo-presupuesto
+    fuentes_secundarias:
+      - presupuestokast-2026-10-08-partida-06-relaciones-exteriores
     nivel_impacto: institucional
     nota: Glosa de la Subsecretaría de Relaciones Exteriores, partida 06, vigente desde 2012.
   - tipo: recorte
@@ -187,6 +223,7 @@ movimientos:
     fuentes_secundarias:
       - mdsf-2026-10-08-wulf-aumento-7-ninez
       - elciudadano-2026-10-08-infancia-prioridad-siete-programas-34-mil-millones
+      - revistatierrabella-2026-10-07-cuidado-alternativo-16879-millones
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Con evaluación favorable de la Dipres; cerca del 11% de los atendidos por el Servicio de Protección Especializada está en este programa.
@@ -280,6 +317,9 @@ movimientos:
     fuente: ciperchile-2026-10-07-recorte-34-mil-millones-infancia-vulnerable
     fuentes_secundarias:
       - mdsf-2026-10-08-wulf-aumento-7-ninez
+      - meganoticias-2026-10-01-wulf-ninez-prioridad-presupuesto
+      - emol-2026-10-01-wulf-ninez-prioridad-presupuesto
+      - infinita-2026-10-01-wulf-entrevista-ninez-pobreza
     nivel_impacto: directo
     organizacion_id: ministerio_desarrollo_social
     nota: Opera de forma externalizada a través de fundaciones y corporaciones.
@@ -344,6 +384,7 @@ movimientos:
     fuente: ciperchile-2026-10-02-recorte-253-sitios-memoria
     fuentes_secundarias:
       - eldesconcierto-2026-10-02-sitios-memoria-recorte-253
+      - t13-2026-10-04-boric-festival-muda-memoria
     partida: Partida 29 · Culturas, Artes y Patrimonio
     nivel_impacto: directo
     organizacion_id: ministerio_culturas
@@ -422,6 +463,9 @@ movimientos:
     fuentes_secundarias:
       - biobiochile-2026-10-08-chomali-ricarte-soto-tecnicismo
       - elclarin-2026-10-08-ricarte-soto-presupuesto-agotado
+      - 24horas-2026-10-07-27-enfermedades-ricarte-soto
+      - t13-2026-10-07-parlamentarios-critican-28-mil-millones-ricarte
+      - eldesconcierto-2026-10-08-mirosevic-grasa-estado-ricarte
     nivel_impacto: directo
     organizacion_id: ministerio_salud
     nota: Ley 20.850 con 27 problemas de salud garantizados; a agosto de 2026 ya se habían ejecutado $189.683 millones.
@@ -483,6 +527,94 @@ movimientos:
     partida: Partida 50 · Tesoro Público (Fondo de Reconstrucción Norte)
     nivel_impacto: directo
     nota: Con la cartera extraordinaria de 241 obras de conservación desde enero, el primer año del plan habitacional y +23,5% para Sercotec.
+  - tipo: recorte
+    descripcion: Rebaja de la fiscalización y la evaluación ambiental del proyecto 2027
+    fecha: '2026-10-07'
+    monto: null
+    monto_nota: Superintendencia del Medio Ambiente con fiscalización -19,2% real y 14 cargos menos; Servicio de Evaluación Ambiental con evaluación -23% real y tres glosas eliminadas; la partida sube 2,1% nominal y cae 0,7% real (3,5% sin el SBAP)
+    objetivo_declarado: null
+    evento_id: 20261005-5
+    fuente: induambiente-2026-10-07-recorte-fiscalizacion-evaluacion-ambiental
+    fuentes_secundarias:
+      - elmostrador-2026-10-06-giro-ambiental-enfria-accion-climatica
+      - terram-2026-10-07-escazu-ahora-critica-sin-fondos-defensores
+    partida: Partida 24 · Medio Ambiente
+    nivel_impacto: directo
+    organizacion_id: superintendencia_medio_ambiente
+    nota: Informe de Rumbo Colectivo citado por el medio; el alza del SBAP compensa en parte la caída de la partida.
+  - tipo: recorte
+    descripcion: Rebaja del Fondo del Libro y la Lectura en el documento filtrado de la partida de Culturas
+    fecha: '2026-10-02'
+    monto: null
+    monto_nota: -21,8% en el Fondo del Libro; Artes Escénicas -19,5% y Audiovisual -16,24%
+    objetivo_declarado: null
+    evento_id: 20261002-6
+    fuente: eldesconcierto-2026-10-02-recorte-16-cultura-fondos-libro
+    partida: Partida 29 · Culturas, Artes y Patrimonio
+    nivel_impacto: directo
+    organizacion_id: ministerio_culturas
+    nota: Documento filtrado previo a la difusión de la base comparable, que dejó el total de la partida en -10,1%.
+  - tipo: recorte
+    descripcion: Recorte del 7% a los Gobiernos Regionales proyectado por Hacienda
+    fecha: '2026-09-23'
+    monto: null
+    monto_nota: Rebaja de 7% proyectada por Hacienda; los gobernadores cifraron después caídas de 10% a 20% según la región, por hasta $270.000 millones
+    objetivo_declarado: Ajuste fiscal con incentivo a la ejecución presupuestaria regional
+    evento_id: 20261005-2
+    fuente: adnradio-2026-09-23-gobernadores-recorte-7-hacienda
+    fuentes_secundarias:
+      - eldinamo-2026-10-05-gobernadores-presionan-quiroz
+    partida: Partida 31 · Gobiernos Regionales
+    nivel_impacto: indirecto
+    organizacion_id: null
+    nota: Los gobernadores rechazaron la cifra y encararon a Hacienda por diferencias en la medición de la base.
+  - tipo: recorte
+    descripcion: Rebaja de los aportes basales de educación superior rechazada en la Cuarta Subcomisión
+    fecha: '2026-10-07'
+    monto: null
+    monto_nota: Rebaja de 1% concentrada en cuatro asignaciones basales por más de $36.000 millones; Fondo Basal por Desempeño -12,41% real e investigación -25,2%
+    objetivo_declarado: Priorizar la primera infancia y los aprendizajes básicos en un contexto de estrechez fiscal
+    evento_id: 20261007-8
+    fuente: latercera-2026-10-07-rechazo-comision-mixta-educacion-superior
+    fuentes_secundarias:
+      - radio-universidad-chile-2026-10-07-rectores-rechazar-presupuesto
+      - adnradio-2026-10-07-rector-uc-rechazar-presupuesto-educacion
+      - latercera-2026-10-07-carta-de-la-llera-puc-presupuesto
+    partida: Partida 09 · Educación (educación superior)
+    nivel_impacto: directo
+    organizacion_id: ministerio_educacion
+    nota: La partida fue rechazada y vuelve a negociación con el Ejecutivo; el rector de la UC cifró en $20.000 millones anuales la brecha de la gratuidad en su universidad y el Ministerio de Ciencia cae 6,4%.
+  - tipo: revision_programas
+    descripcion: Integración de 25 programas sociales en nueve para el Presupuesto 2027
+    fecha: '2026-09-25'
+    monto: null
+    monto_nota: 25 programas consolidados en nueve reformulados, una reducción neta de 16; de 46 programas evaluados, 43 con recomendación favorable y tres objetados técnicamente
+    objetivo_declarado: Optimizar la oferta programática y reducir su atomización
+    evento_id: 20260925-2
+    fuente: theclinic-2026-09-25-fusion-25-programas-9
+    fuentes_secundarias:
+      - mdsf-2026-09-25-informe-evaluacion-ex-ante-2027
+      - theclinic-2026-09-25-detalle-25-programas-fusionados
+    partida: Programas sociales · 11 ministerios
+    nivel_impacto: institucional
+    organizacion_id: subsecretaria_evaluacion_social
+    nota: Las Becas Aysén, Patagonia Aysén y Magallanes de Junaeb pasan a Becas Patagonia; los simulacros de Senapred a Chile Preparado; Biblioteca Pública Digital y Bibliomás a Frecuencia Lectora; y cuatro líneas de CONADI al Fondo de Desarrollo Indígena.
+  - tipo: revision_programas
+    descripcion: Revisión de los beneficiarios de la gratuidad universitaria anunciada por Hacienda
+    fecha: '2026-10-02'
+    monto: null
+    monto_nota: Sin monto publicado; cerca de 80.000 beneficiarios declaran vivir solos y el Gobierno califica el dato de sospechoso
+    objetivo_declarado: Chequear y eliminar la viveza en el acceso a la gratuidad del 60% más vulnerable
+    evento_id: 20261002-1
+    fuente: biobiochile-2026-10-02-quiroz-revision-gratuidad-viveza
+    fuentes_secundarias:
+      - cnnchile-2026-10-02-quiroz-revision-gratuidad
+      - eldinamo-2026-10-02-quiroz-gratuidad-viveza
+      - cooperativa-2026-09-27-gratuidad-recorte-arzola
+    partida: Partida 09 · Educación (educación superior)
+    nivel_impacto: directo
+    organizacion_id: ministerio_educacion
+    nota: Anuncio del ministro Quiroz en Radio Infinita, anticipado por la ministra Arzola días antes; la Confech lo usó para convocar el paro nacional del 1 de octubre.
 orden_refs:
   - adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
   - latercera-2026-10-05-presupuesto-endeudamiento-us25000
@@ -541,3 +673,22 @@ orden_refs:
   - t13-2026-09-30-kast-presupuesto-95-billones
   - theclinic-2026-10-10-herrera-cuento-del-tio
   - cooperativa-2026-10-09-pavez-radares-senapred
+  - biobiochile-2026-10-01-alvarado-recorte-6-mil-millones
+  - 24horas-2026-10-06-kast-defiende-recortes-presupuesto
+  - adnradio-2026-09-23-gobernadores-recorte-7-hacienda
+  - youtube-2026-10-02-24horas-ingresa-erario
+  - presupuestokast-2026-10-08-partida-06-relaciones-exteriores
+  - latercera-2026-10-07-rechazo-comision-mixta-educacion-superior
+  - radio-universidad-chile-2026-10-07-rectores-rechazar-presupuesto
+  - adnradio-2026-10-07-rector-uc-rechazar-presupuesto-educacion
+  - latercera-2026-10-07-carta-de-la-llera-puc-presupuesto
+  - theclinic-2026-09-25-fusion-25-programas-9
+  - mdsf-2026-09-25-informe-evaluacion-ex-ante-2027
+  - theclinic-2026-09-25-detalle-25-programas-fusionados
+  - biobiochile-2026-10-02-quiroz-revision-gratuidad-viveza
+  - cnnchile-2026-10-02-quiroz-revision-gratuidad
+  - eldinamo-2026-10-02-quiroz-gratuidad-viveza
+  - cooperativa-2026-09-27-gratuidad-recorte-arzola
+  - df-2026-09-30-presupuesto-2027-quiroz-defiende-alza
+  - biobiochile-2026-09-30-oposicion-fustiga-presupuesto-recortes
+  - latercera-2026-08-13-chomali-45-salud-2027

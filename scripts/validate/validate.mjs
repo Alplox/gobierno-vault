@@ -211,9 +211,9 @@ for (const file of allFiles) {
 }
 // Fuentes referenciadas desde src/data/sueldos.yaml (página /sueldos): cuentan
 // como citadas. Estructura: orden_refs[] + fuentes de sección + vigencias[].fuente.
+const pushRef = (id) => { if (id) referencedSources.add(id); };
 try {
   const sueldos = YAML.parse(readFileSync(join(process.cwd(), 'src', 'data', 'sueldos.yaml'), 'utf8'));
-  const pushRef = (id) => { if (id) referencedSources.add(id); };
   for (const id of sueldos.orden_refs ?? []) pushRef(id);
   pushRef(sueldos.segundo_piso?.fuente);
   pushRef(sueldos.topes_dipres?.fuente);
