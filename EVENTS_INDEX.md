@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (472)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (471)
 
 <details>
-<summary>Ver lista (472 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (471 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -95,7 +95,6 @@
 - [2026/07/20260723-1 - Balance sistema frontal: 13 fallecidos, 61.557 aislados y 3.532 damnificados](src/content/events/2026/07/20260723-1.md) — **1 fuente**
 - [2026/07/20260723-15 - Megarreforma avanza en Senado con mecanismo de urgencia que acelera votación particular](src/content/events/2026/07/20260723-15.md) — **1 fuente**
 - [2026/07/20260723-16 - Gobierno justifica alza de precios de tomates por cortes en carreteras](src/content/events/2026/07/20260723-16.md) — **1 fuente**
-- [2026/07/20260723-6 - Aguas del Valle proyecta normalizar suministro en Coquimbo durante el fin de semana](src/content/events/2026/07/20260723-6.md) — **1 fuente**
 - [2026/07/20260723-7 - Gobierno confirma suspension de clases el jueves y viernes en regiones afectadas](src/content/events/2026/07/20260723-7.md) — **1 fuente**
 - [2026/07/20260723-8 - 42 trabajadores de Pascua-Lama aislados mas de una semana en cordillera](src/content/events/2026/07/20260723-8.md) — **1 fuente**
 - [2026/07/20260724-17 - Cancillería confirma plan de acción tras nuevos aranceles de EEUU](src/content/events/2026/07/20260724-17.md) — **1 fuente**
@@ -826,10 +825,11 @@
 - [2026/07/20260716-2 - Sistema frontal golpea con fuerza: 535 mil clientes sin luz, tres fallecidos y marejadas destruyen viviendas en Penco](src/content/events/2026/07/20260716-2.md) — 2 fuentes
 - [2026/07/20260717-1 - Renuncia seremi de Hacienda de Arica y Parinacota](src/content/events/2026/07/20260717-1.md) — 2 fuentes
 - [2026/07/20260718-1 - Gobierno decreta tres días de duelo nacional por muerte del cabo Marcos Cosme](src/content/events/2026/07/20260718-1.md) — 3 fuentes
+- [2026/07/20260718-2 - Alerta roja en toda Coquimbo y evacuaciones en Tambillos, Tongoy e Islón por desbordes](src/content/events/2026/07/20260718-2.md) — 8 fuentes
 - [2026/07/20260719-1 - Aprobación de Kast cae a 28,9%, mínimo histórico de su gobierno](src/content/events/2026/07/20260719-1.md) — 7 fuentes
 - [2026/07/20260719-2 - Tercer pulso del sistema frontal: cuatro fallecidos, evacuaciones en Coquimbo y corte de agua en La Serena](src/content/events/2026/07/20260719-2.md) — 5 fuentes
 - [2026/07/20260719-3 - Ministro de Defensa genera críticas por viaje a Hawái en plena emergencia por sistema frontal](src/content/events/2026/07/20260719-3.md) — 5 fuentes
-- [2026/07/20260720-1 - Kast decreta Estado de Catastrofe en Coquimbo y Huasco ante criticas por gestion del sistema frontal](src/content/events/2026/07/20260720-1.md) — 14 fuentes
+- [2026/07/20260720-1 - Kast decreta Estado de Catastrofe en Coquimbo y Huasco ante criticas por gestion del sistema frontal](src/content/events/2026/07/20260720-1.md) — 41 fuentes
 - [2026/07/20260720-2 - Municipalidad de Santiago elimina fotos de tercera muerte de persona sin techo durante el temporal](src/content/events/2026/07/20260720-2.md) — 6 fuentes
 - [2026/07/20260720-3 - Gobierno confirma proyecto para modernizar el INDH](src/content/events/2026/07/20260720-3.md) — 5 fuentes
 - [2026/07/20260720-4 - Estudio CORPA revela alza de victimización y delitos en transporte público en Santiago: 'La capital está menos segura'](src/content/events/2026/07/20260720-4.md) — 3 fuentes
@@ -840,7 +840,7 @@
 - [2026/07/20260721-3 - Traslado de 32 reos de Colina 1 a ex penal Punta Peuco](src/content/events/2026/07/20260721-3.md) — 4 fuentes
 - [2026/07/20260721-4 - Castillo (PC) anuncia Comisión Investigadora por respuesta tardía al sistema frontal](src/content/events/2026/07/20260721-4.md) — 2 fuentes
 - [2026/07/20260721-5 - Mara Sedini reaparece en Sin Filtros: acusa presiones de 'una de las tres personas más poderosas' y ataca a Vallejo ('menos mal la hice mal')](src/content/events/2026/07/20260721-5.md) — 10 fuentes
-- [2026/07/20260721-6 - Balance del sistema frontal: 10 fallecidos, 4 desaparecidos y más de 104 mil personas aisladas](src/content/events/2026/07/20260721-6.md) — 5 fuentes
+- [2026/07/20260721-6 - Balance del sistema frontal: 10 fallecidos, 4 desaparecidos y más de 104 mil personas aisladas](src/content/events/2026/07/20260721-6.md) — 8 fuentes
 - [2026/07/20260721-7 - Cámara aprueba corazón de la megarreforma y oposición activa ofensiva ante el TC](src/content/events/2026/07/20260721-7.md) — 5 fuentes
 - [2026/07/20260721-8 - Delegación presidencial no pudo llegar a Vallenar por temporal; jefe de avanzada ignoró alertas de seguridad](src/content/events/2026/07/20260721-8.md) — 4 fuentes
 - [2026/07/20260721-9 - Contrapoder revela que David Barchiesi, hermano de la diputada Chiara Barchiesi y exconsejero constitucional, fue contratado por la Presidencia por $6,5 millones para revisar los discursos de Kast](src/content/events/2026/07/20260721-9.md) — 2 fuentes
@@ -863,7 +863,7 @@
 - [2026/07/20260723-3 - Camara aprueba proyecto que regula deepfakes con multas hasta $716 millones](src/content/events/2026/07/20260723-3.md) — 2 fuentes
 - [2026/07/20260723-4 - Ministra de Salud anuncia envio de 66 mil vacunas a zonas afectadas](src/content/events/2026/07/20260723-4.md) — 6 fuentes
 - [2026/07/20260723-5 - Gobierno buscara sanciones contra rescatados en Cajón del Maipo](src/content/events/2026/07/20260723-5.md) — 4 fuentes
-- [2026/07/20260723-6 - Aguas del Valle proyecta normalizar suministro en Coquimbo durante el fin de semana](src/content/events/2026/07/20260723-6.md) — 1 fuente
+- [2026/07/20260723-6 - Aguas del Valle proyecta normalizar suministro en Coquimbo durante el fin de semana](src/content/events/2026/07/20260723-6.md) — 4 fuentes
 - [2026/07/20260723-7 - Gobierno confirma suspension de clases el jueves y viernes en regiones afectadas](src/content/events/2026/07/20260723-7.md) — 1 fuente
 - [2026/07/20260723-8 - 42 trabajadores de Pascua-Lama aislados mas de una semana en cordillera](src/content/events/2026/07/20260723-8.md) — 1 fuente
 - [2026/07/20260723-9 - Camara aprueba ley que regula deepfakes generados con IA](src/content/events/2026/07/20260723-9.md) — 4 fuentes
@@ -886,6 +886,7 @@
 - [2026/07/20260725-1 - PDI detiene a Nelson Haase, último prófugo por asesinato de Víctor Jara y Littré Quiroga](src/content/events/2026/07/20260725-1.md) — 3 fuentes
 - [2026/07/20260725-2 - Detención del ex seremi de Salud de Magallanes por abuso sexual a menor](src/content/events/2026/07/20260725-2.md) — 18 fuentes
 - [2026/07/20260725-3 - Detienen en Cauquenes al presunto autor de amenazas con coronas fúnebres contra Gendarmería y queda en prisión preventiva por 60 días](src/content/events/2026/07/20260725-3.md) — 7 fuentes
+- [2026/07/20260725-4 - Voluntarios limpian el borde costero de La Serena entre escombros y alerta sanitaria por aguas servidas](src/content/events/2026/07/20260725-4.md) — 6 fuentes
 - [2026/07/20260726-1 - Repudio por video de asesor del PNL con burlas a niños autistas y alusiones a pedofilia](src/content/events/2026/07/20260726-1.md) — 19 fuentes
 - [2026/07/20260726-2 - Encuesta Criteria: desaprobación de Kast sube a 54% y proyecto 'Escucha tu corazón' tiene rechazo transversal](src/content/events/2026/07/20260726-2.md) — 3 fuentes
 - [2026/07/20260726-3 - Encuesta Cadem: pesimismo alcanza nivel más alto desde 2015 y desaprobación de Kast sube a 59%](src/content/events/2026/07/20260726-3.md) — 4 fuentes
@@ -1813,7 +1814,7 @@
 - [2026/09/20260929-7 - La Moneda evalúa continuidad de Zaliasnik tras declaración de Hermosilla: Alvarado evita juicios y diputados piden su salida](src/content/events/2026/09/20260929-7.md) — 11 fuentes
 - [2026/09/20260929-8 - El embajador Brandon Judd asiste al funeral del cabo Christopher Aguilera y un matinal de Chilevisión cuestiona su presencia](src/content/events/2026/09/20260929-8.md) — 6 fuentes
 - [2026/09/20260929-9 - Encuentro empresarial Punta Arenas–Falkland cierra con 822 reuniones y choca con el reclamo argentino](src/content/events/2026/09/20260929-9.md) — 17 fuentes
-- [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 19 fuentes
+- [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 23 fuentes
 - [2026/09/20260930-10 - Kast presenta en cadena nacional el Presupuesto 2027 con alza de 1,5% y cuatro prioridades, crecimiento, seguridad, niñez y beneficios sociales](src/content/events/2026/09/20260930-10.md) — 20 fuentes
 - [2026/09/20260930-11 - Bacheletazo en La Pintana, homenaje a Bachelet con Boric, Vallejo y Jara, no me iré para la casa y trampa tras trampa contra el Gobierno](src/content/events/2026/09/20260930-11.md) — 16 fuentes
 - [2026/09/20260930-13 - Cámara despacha a ley la reforma al sistema político con condena a los totalitarismos: 125 a favor, 12 en contra y reserva de Mulet](src/content/events/2026/09/20260930-13.md) — 16 fuentes
@@ -1878,23 +1879,24 @@
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 - [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
-- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 85 fuentes
+- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 86 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
 - [2026/10/20261008-5 - Suspenden clases en 10 comunas de la Región Metropolitana para el viernes 9 de octubre](src/content/events/2026/10/20261008-5.md) — 5 fuentes
 - [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 25 fuentes
 - [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 11 fuentes
-- [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 10 fuentes
+- [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 11 fuentes
 - [2026/10/20261008-9 - Presidencia pagó $17.200.001 a TVN por transmitir el Te Deum Evangélico 2026, el primer gasto estatal de este tipo desde 2011](src/content/events/2026/10/20261008-9.md) — 4 fuentes
 - [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 50 fuentes
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
-- [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 1.000 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 31 fuentes
+- [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 1.000 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 35 fuentes
 - [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 15 fuentes
 - [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — 1 fuente
 - [2026/10/20261010-4 - Gobierno concreta décimo vuelo de expulsión de migrantes y acumula 1.874 deportados en 2026](src/content/events/2026/10/20261010-4.md) — 2 fuentes
 - [2026/10/20261011-1 - Criteria baja la aprobación de Kast al 27% y la desaprobación sube al 64%, el peor registro desde marzo](src/content/events/2026/10/20261011-1.md) — 6 fuentes
+- [2026/10/20261011-2 - Embalses de Coquimbo alcanzan niveles históricos tras el sistema frontal de julio](src/content/events/2026/10/20261011-2.md) — 9 fuentes
 
 ## 2025
 
