@@ -1897,6 +1897,8 @@
 - [2026/10/20261010-4 - Gobierno concreta décimo vuelo de expulsión de migrantes y acumula 1.874 deportados en 2026](src/content/events/2026/10/20261010-4.md) — 7 fuentes
 - [2026/10/20261011-1 - Criteria baja la aprobación de Kast al 27% y la desaprobación sube al 64%, el peor registro desde marzo](src/content/events/2026/10/20261011-1.md) — 7 fuentes
 - [2026/10/20261011-2 - Embalses de Coquimbo alcanzan niveles históricos tras el sistema frontal de julio](src/content/events/2026/10/20261011-2.md) — 9 fuentes
+- [2026/10/20261013-1 - Migueles cambia su versión y declara que Vivanco sabía de los pagos de Lagos por los fallos a favor del consorcio bielorruso](src/content/events/2026/10/20261013-1.md) — 10 fuentes
+- [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
 
 ## 2025
 
