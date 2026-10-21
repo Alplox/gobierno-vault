@@ -1,6 +1,6 @@
 ---
 name: tools
-description: Extracción de contenido web, mirrors anti-paywall, fetch-impersonate, PDF/Office/OCR, video transcript y ripgrep. Usa esta skill SIEMPRE cuando una URL no se pueda leer, necesites bypass de paywall, extraer PDF/docx, OCR, transcribir video o buscar en catálogo con rg, incluso si solo dice 'no puedo leer X'.
+description: Extracción de contenido web, mirrors anti-paywall, navegador real (Puppeteer/nodriver), fetch-impersonate, PDF/Office/OCR, video transcript y ripgrep. Usa esta skill SIEMPRE cuando una URL no se pueda leer, necesites bypass de paywall, extraer PDF/docx, OCR, transcribir video o buscar en catálogo con rg, incluso si solo dice 'no puedo leer X'.
 ---
 
 ## Extraccion de contenido web
@@ -34,6 +34,8 @@ usuario que provea el contenido.** Cada método tiene fortalezas distintas:
 | `archive.ph` | Snapshot archivado en caché | Artículos eliminados |
 | `fetch-impersonate` | TLS fingerprinting real | Cloudflare challenge, rate-limit |
 | `html-raw` | HTML crudo + extracción de article/JSON-LD | Fallback cuando mirrors fallan |
+| `browser` | Chrome real (Puppeteer) headless, sin dependencias nuevas | BioBioChile, sitios JS; `fetch-content` rechaza solo-nav |
+| `browser-stealth` | nodriver (Chrome indetectable), opcional | The Clinic / El Ciudadano con `--headed`; Turnstile |
 | `add-source` | Solo metadata (título/autor/fecha) | Fallback último recurso |
 | `ocr-extract` | OCR de imágenes/screenshots | Tablas en imagen, screenshots de redes |
 
@@ -42,7 +44,7 @@ usuario que provea el contenido.** Cada método tiene fortalezas distintas:
 **Firecrawl MCP (`firecrawl_scrape`/`firecrawl_search` vía tools.firecrawl):** rate limit duro de ~11 req/min; un burst de >8 en paralelo devuelve HTML vacío (len 0) en todos los lotes siguientes y solo los reintentos secuenciales con pausa recuperan. Para varios artículos, scrapear de a uno con pausa de 4-5 s. Si tras reintentar sigue vacío, `r.jina.ai` vía fetch directo funciona para La Tercera, El Mostrador y T13 (el ruido de navegación se recorta filtrando párrafos por palabras clave).
 
 ```bash
-# Cadena completa de fallbacks (r.jina → defuddle → markdown.new → paywallskip → archive → impersonate → add-source)
+# Cadena completa de fallbacks (r.jina → defuddle → markdown.new → paywallskip → archive → impersonate → html-raw → browser → browser-stealth → add-source)
 pnpm run fetch-content -- <https://sitio.cl/articulo>
 
 # Con verbose para ver cada intento
@@ -50,10 +52,48 @@ pnpm run fetch-content -- <https://sitio.cl/articulo> --verbose
 
 # Solo un método específico
 pnpm run fetch-content -- <https://sitio.cl/articulo> --method defuddle.md
+
+# Navegador real headless (Chrome del sistema vía puppeteer-core)
+pnpm run browser-extract -- <https://sitio.cl/articulo> --json
+pnpm run browser-check
+
+# Navegador stealth (requiere nodriver; ver instalación abajo)
+pnpm run browser-stealth -- --url <https://sitio.cl/articulo> --json
+
+# Challenge Turnstile que no pasa en headless: Chrome visible (abre ventana)
+pnpm run fetch-content -- <https://sitio.cl/articulo> --headed --verbose
 ```
 
 El script intenta cada método en orden y retorna el primer resultado con ≥500 caracteres.
 Si TODOS fallan, imprime un resumen de por qué falló cada uno y sugiere pedir al usuario.
+
+Los dos métodos de navegador van al final de la cadena. `browser` usa el Chrome/Edge
+instalado (no descarga Chromium; `puppeteer-core` ya es devDependency) y sirve para JS
+rendering y challenges simples. `browser-stealth` usa nodriver y solo se intenta si
+`python -c "import nodriver"` funciona. Ambos eligen el contenedor por texto en `<p>`
+(no el `<body>`, que arrastra header/nav). Si el mejor contenedor es `BODY`,
+`fetch-content` lo acepta solo cuando tiene ≥2 párrafos, al menos uno de ≥250 chars y
+≥600 chars en total; si no, devuelve `sin cuerpo (solo navegación)` para no aceptar una
+portada, un menú de mercados o un paywall como artículo. Si un sitio legítimo cae en
+body, pasar `--selector` con el contenedor correcto
+(`pnpm run browser-extract -- <URL> --selector article`).
+
+`--headed` abre una ventana de Chrome en el escritorio del usuario: usarlo solo en
+extracción interactiva, nunca en batch. Es la única forma documentada de pasar Turnstile
+en The Clinic y El Ciudadano (headless se queda en el challenge).
+
+**Instalación de `browser-stealth` (opcional):**
+
+```bash
+python -m pip install --user -r scripts/extract/requirements-browser.txt
+python scripts/extract/browser-stealth.py --check
+```
+
+nodriver es AGPL-3.0: se usa como herramienta local del agente, no se empaqueta en el
+build ni se distribuye con el sitio. El script usa perfil temporal, parchea
+`navigator.webdriver`, mata el árbol de procesos al cerrar y borra el perfil; si Chrome
+queda colgado, `pnpm run browser-check` (Puppeteer) o `browser-stealth.py --check`
+(nodriver) muestran el binario detectado.
 
 **Regla para agentes:** Si `read_url` falla o retorna navigation/layout (JS rendering), ejecutar
 `pnpm run fetch-content -- <URL> --verbose` ANTES de informar al usuario. Solo informar al
@@ -70,16 +110,18 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 6. `archive.ph` + URL
 7. `<https://web.archive.org/web/<UR>L>` — snapshot histórico en Wayback (historial más profundo que archive.ph)
 8. `pnpm run fetch-impersonate -- <URL>` — curl_cffi (Python) con impersonación TLS
-9. `pnpm run add-source -- <URL>` — solo metadata
+9. `pnpm run browser-extract -- <URL>` — Chrome real headless (Puppeteer)
+10. `pnpm run browser-stealth -- --url <URL>` — nodriver headless; añadir `--headed` si hay Turnstile
+11. `pnpm run add-source -- <URL>` — solo metadata
 
 **Notas de plataforma:**
-- BioBioChile: usa JS pesado; `defuddle.md` es el mejor método (no r.jina)
-- The Clinic: paywall suave; `paywallskip.com` o `r.jina.ai` funcionan
-- El Ciudadano: rate-limit; `fetch-impersonate` o `archive.ph`. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
+- BioBioChile: usa JS pesado; `defuddle.md` es el mejor método (no r.jina). Si defuddle falla, `browser` extrae el contenedor `article.post` limpio (~1.800 chars)
+- The Clinic: paywall suave; `paywallskip.com` o `r.jina.ai` funcionan para la portada. Para artículos con challenge, `browser-stealth --headed` pasa Turnstile y extrae el cuerpo; headless se queda en "Verificación de seguridad en curso"
+- El Ciudadano: rate-limit/WAF; `fetch-impersonate` o `archive.ph`. `browser-stealth --headed` pasa el bloqueo ("Sorry, you have been blocked"), `browser`/Puppeteer no. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
 - **`fecha` del catálogo ≠ día real** en los medios por shard (CNN, El Dínamo, El Periódista, 24 Horas): el `d` del JSONL es la fecha del shard del día de indexación, no la de publicación (sep-2026: CNN "puntos críticos 11S" con `d` 11-sep y `Published Time` 10-sep 22:27; El Dínamo `d` 11-sep con `/2026/09/10/` en la URL; El Periódista `d` 12-sep con `/2026/09/10/`). Fijar `fecha:` contra `defuddle parse <URL> -p published` o el `Published Time` de `fetch-content`, y anotar la discrepancia en `notas`
-- Diario Financiero (`df.cl`): los mirrors no alcanzan el cuerpo. `r.jina.ai` devuelve 161 chars y `defuddle` solo el menú lateral, pero el HTML crudo de `fetch-impersonate` sí trae los `<p>` del artículo con las declaraciones textuales. Filtrar con `rg` sobre el HTML: `fetch-content -- <URL> --method fetch-impersonate` y después `rg -i "<término>"`. El autor se lee de `<meta name="author">` y de `<p class="author__name">`. Con `defuddle.md` el texto sale limpio pero mezclado con las tarjetas `card__description` de notas de **otras fechas** de la portada: leer el bloque `enc-main__description` y los `<p>` siguientes al titular, nunca el final del volcado
+- Diario Financiero (`df.cl`): los mirrors no alcanzan el cuerpo. `r.jina.ai` devuelve 161 chars y `defuddle` solo el menú lateral, pero el HTML crudo de `fetch-impersonate` sí trae los `<p>` del artículo con las declaraciones textuales. Filtrar con `rg` sobre el HTML: `fetch-content -- <URL> --method fetch-impersonate` y después `rg -i "<término>"`. El autor se lee de `<meta name="author">` y de `<p class="author__name">`. Con `defuddle.md` el texto sale limpio pero mezclado con las tarjetas `card__description` de notas de **otras fechas** de la portada: leer el bloque `enc-main__description` y los `<p>` siguientes al titular, nunca el final del volcado. **Navegador:** Puppeteer cae a `about:blank`; nodriver carga la portada pero el cuerpo del artículo no está en el DOM y `fetch-content` lo rechaza como solo-nav. No insistir con `browser`/`browser-stealth` en df.cl: usar `fetch-impersonate`
 - Publimicro (`publimicro.cl`): `r.jina.ai` devuelve ~28k chars casi todos de navegación; el `defuddle.md` remoto devuelve el texto generado de un agregador con firma de modelo, que `soft404` marca como fallo. El cuerpo sale con el **CLI local**: `defuddle parse <URL> --md` entrega 1-2 párrafos con la entradilla. Título, fecha y autor se leen de los metadatos de `r.jina.ai`
 - Nuevo Poder (`nuevopoder.cl`): WordPress clásico donde `defuddle.md` devuelve un **artículo generado** (3.400 chars) en vez de la nota — segundo caso de `soft404` con texto generado además de El Minuto. El cuerpo real llega con `fetch-impersonate`; si hace falta solo metadatos, el `<script type="application/ld+json">` de Yoast trae `headline`, `datePublished`, `author.name` y `keywords` (los `keywords` suelen revelar las personas y servicios citados)
 - UN DESA (`financing.desa.un.org`): el `fetch` directo devuelve solo navegación, pero **`r.jina.ai` sí entrega la página completa** (~88k chars en el Comité Negociador de la Convención Marco de Cooperación Fiscal Internacional, `financing.desa.un.org/unfcitc`) con el bloque "Key Dates" y los "Latest Updates" con los enlaces a los borradores en PDF de cada sesión. Los borradores de los co-presidentes se leen con `pdf-extract` sobre el `.pdf` que enlaza la página (`sites/default/files/AAAA-MM/...pdf`) y son fuente primaria con fecha propia
@@ -87,6 +129,7 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 - openDemocracy: cuerpo completo tras registro gratuito ("Continue reading with a free account"); el preview entrega título, autoría, fecha, bajada y entradilla. Vía en mano: la réplica en alianza con El Mostrador trae el cuerpo íntegro con documentos (caso sep-2026: Cuide Chile). Los metadatos (`defuddle parse <URL> -p author/published`) sí salen aunque el cuerpo no
 - Archive.ph: puede dar rate-limit 429; intentar con `fetch-impersonate` como fallback
 - `fetch-impersonate` en Windows con consola cp1252 falla con `UnicodeEncodeError` al imprimir HTML con símbolos fuera de Latin-1 (ej. `▼` en camara.cl): relanzar con `$env:PYTHONIOENCODING='utf-8'` en el mismo comando
+- `browser-extract`/`browser-stealth`: usan el Chrome/Edge del sistema, perfil temporal y cierre con `taskkill /T /F` en Windows. Si el proceso queda colgado, `pnpm run browser-check` muestra el binario detectado; `GV_BROWSER_EXECUTABLE` fuerza otro. El `--json` incluye `rootTag`/`pCount`/`maxParagraph`/`pSum` para depurar por qué `fetch-content` rechazó un resultado (`sin cuerpo (solo navegación)` = el contenedor BODY no tenía ≥2 párrafos, uno de ≥250 chars y ≥600 chars en total)
 
 **Detección de falso éxito ("poison pills"):** cualquier método de la escalera puede responder
 HTTP 200 y devolver una página de bloqueo en vez del artículo. Antes de aceptar un resultado,
@@ -97,7 +140,7 @@ fallo y seguir con el siguiente método:
 | --- | --- |
 | Paywall | "subscribe to continue", "subscription required", "you've reached your limit", "create an account to continue reading" |
 | Captcha/bot | "verify you are human", "prove you're not a robot", "confirm you're not a bot" (YouTube, ya documentado en social-media.md) |
-| Cloudflare | "checking your browser", "Just a moment", "DDoS protection" |
+| Cloudflare | "checking your browser", "Just a moment", "DDoS protection", "Attention Required", "Sorry, you have been blocked", "Performance & security by Cloudflare", "Verificación de seguridad en curso" |
 | Login | "sign in to continue", "log in required" |
 | archive.ph sin snapshot | "No results" + "You may want to" + "archive this url" (página de archivo inexistente; ~4.700 chars, supera el corte de 500) — **implementado** en `soft404.mjs` (`ARCHIVE_NO_SNAPSHOT`, exige las tres cadenas) |
 | Agregador con texto generado | nota larga, fluida y sin atribución propia, que resume un cable en vez de reportear: pie que nombra al modelo o sección final de "Conclusión" con tesis editorial (El Minuto, caso sep-2026). **Implementado solo el pie de modelo** (`GENERATED_BY_SIGNATURE` en `soft404.mjs`): cierra con `(NP-ChatGPT-Bio Bio-Agencias)` o `(NP-ChatGPT-Emol)`, es decir `(<Sigla>-ChatGPT…)` al final del cuerpo. La tesis editorial de cierre sigue sin detector: se descarta por la regla de fuentes leyendo el texto |

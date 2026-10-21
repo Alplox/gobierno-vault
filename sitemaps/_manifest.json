@@ -1,39 +1,39 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-10-10T18:36:39.144Z",
+  "actualizado": "2026-10-21T17:38:00.975Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
-      "ultima_sync": "2026-10-09T19:06:03.762Z",
-      "articulos": 4942,
-      "nuevos": 0,
+      "ultima_sync": "2026-10-21T17:35:18.382Z",
+      "articulos": 5940,
+      "nuevos": 998,
       "años": 1
     },
     "elclarin": {
       "nombre": "El Clarín",
-      "ultima_sync": "2026-10-09T19:06:00.632Z",
-      "articulos": 21093,
-      "nuevos": 348,
+      "ultima_sync": "2026-10-21T17:33:28.690Z",
+      "articulos": 21180,
+      "nuevos": 87,
       "años": 10
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-10-09T19:06:03.729Z",
+      "ultima_sync": "2026-10-21T17:35:18.110Z",
       "articulos": 1181957,
       "nuevos": 0,
       "años": 18
     },
     "adnradio": {
       "nombre": "ADN Radio",
-      "ultima_sync": "2026-10-09T19:06:03.775Z",
-      "articulos": 898,
+      "ultima_sync": "2026-10-21T17:35:19.057Z",
+      "articulos": 998,
       "nuevos": 100,
       "años": 1
     },
     "factchecking": {
       "nombre": "Factchecking.cl",
-      "ultima_sync": "2026-10-09T19:06:06.521Z",
+      "ultima_sync": "2026-10-21T17:35:22.315Z",
       "articulos": 14,
       "nuevos": 0,
       "años": 5
@@ -42,7 +42,7 @@
       "nombre": "CIPER Chile",
       "ultima_sync": "2026-10-09T19:06:08.727Z",
       "articulos": 8652,
-      "nuevos": 206,
+      "nuevos": 0,
       "años": 18
     },
     "theclinic": {

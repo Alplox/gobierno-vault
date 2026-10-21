@@ -1593,6 +1593,7 @@
 - [2026/09/20260903-20 - Falkland Islands Development Corporation contrata a Easter Island Naviera para abrir una ruta de suministro entre Punta Arenas y Puerto Argentino](src/content/events/2026/09/20260903-20.md) — 18 fuentes
 - [2026/09/20260903-21 - Milei anuncia sanciones contra actividades petroleras en Malvinas y un proyecto de ley de defensa de la soberanía](src/content/events/2026/09/20260903-21.md) — 12 fuentes
 - [2026/09/20260903-22 - Profesores de El Monte levantan movilización de brazos caídos tras completarse el pago de remuneraciones](src/content/events/2026/09/20260903-22.md) — 10 fuentes
+- [2026/09/20260903-23 - PDI detiene en Lampa a mujer de 32 años por comentar 'háganle un Charlie Kirk' contra Kast: queda con arraigo nacional y prohibición de acercarse](src/content/events/2026/09/20260903-23.md) — 7 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 30 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 29 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 12 fuentes
@@ -1606,7 +1607,7 @@
 - [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 17 fuentes
 - [2026/09/20260904-4 - Paz Zárate cuestiona el comunicado conjunto Kast-Milei; texto redactado por Argentina que canjea gas por Malvinas sin derogar el decreto 457](src/content/events/2026/09/20260904-4.md) — 5 fuentes
 - [2026/09/20260904-5 - Zambrano se reúne con Kast y con el Senado chileno en visita interparlamentaria centrada en seguridad](src/content/events/2026/09/20260904-5.md) — 6 fuentes
-- [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 15 fuentes
+- [2026/09/20260904-6 - Balances del V Encuentro Regional del Foro Madrid: jornada única el 03-sep en San Carlos de Apoquindo, contraste entre Milei y Kast, grieta en el oficialismo y protestas](src/content/events/2026/09/20260904-6.md) — 18 fuentes
 - [2026/09/20260904-7 - Expertos contra fiscal nacional por el registro: Couso y Duce lo ven inútil y ambiguo, Valencia defiende su conveniencia y la carta de Irarrázaval advierte presunción de derecho prohibida](src/content/events/2026/09/20260904-7.md) — 7 fuentes
 - [2026/09/20260904-8 - Frente Amplio oficia a Codelco, SII, Servel, UAF, Pensiones y CMF por fundación de Fontaine ligada a bots tras reportaje de $1.906 millones](src/content/events/2026/09/20260904-8.md) — 5 fuentes
 - [2026/09/20260904-9 - Fernanda Cornejo responde a Milei en C5N por sus dichos sobre Allende y Pinochet, y Jeannette Jara rechaza la celebración de la dictadura](src/content/events/2026/09/20260904-9.md) — 6 fuentes
@@ -1879,15 +1880,15 @@
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 - [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
-- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 88 fuentes
+- [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 89 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
 - [2026/10/20261008-5 - Suspenden clases en 10 comunas de la Región Metropolitana para el viernes 9 de octubre](src/content/events/2026/10/20261008-5.md) — 5 fuentes
-- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 27 fuentes
+- [2026/10/20261008-6 - Alvarado explica por qué no se emitieron alertas SAE durante el aluvión de Las Condes: más confusión que ayuda](src/content/events/2026/10/20261008-6.md) — 30 fuentes
 - [2026/10/20261008-7 - Fiscalía Metropolitana Oriente abre investigación por el origen del aluvión en Las Condes y eventuales responsabilidades penales](src/content/events/2026/10/20261008-7.md) — 11 fuentes
-- [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 11 fuentes
+- [2026/10/20261008-8 - Desborde del río Mapocho en Talagante: Senapred activa el SAE y ordena evacuar el Campamento Ribera del Río](src/content/events/2026/10/20261008-8.md) — 12 fuentes
 - [2026/10/20261008-9 - Presidencia pagó $17.200.001 a TVN por transmitir el Te Deum Evangélico 2026, el primer gasto estatal de este tipo desde 2011](src/content/events/2026/10/20261008-9.md) — 4 fuentes
-- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 53 fuentes
+- [2026/10/20261009-1 - Día después del aluvión de Las Condes: seis lesionados, más de 2.000 viviendas afectadas, 55 con problemas de habitabilidad y un detenido por robos](src/content/events/2026/10/20261009-1.md) — 54 fuentes
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes

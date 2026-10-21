@@ -1,0 +1,4 @@
+# Dependencia opcional del método `browser-stealth` de fetch-content.
+# nodriver es AGPL-3.0; se instala como herramienta local del agente, no en el build.
+#   python -m pip install --user -r scripts/extract/requirements-browser.txt
+nodriver==0.47.0

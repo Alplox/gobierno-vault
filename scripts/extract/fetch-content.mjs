@@ -11,7 +11,10 @@
  *   5. paywallskip.com (Paywall bypass)
  *   6. archive.ph (Web archive)
  *   7. fetch-impersonate (curl_cffi con impersonación TLS)
- *   8. add-source (extracción de metadata)
+ *   8. html-raw (HTML crudo + article/JSON-LD)
+ *   9. browser (Chrome real vía puppeteer-core, sin dependencias nuevas)
+ *  10. browser-stealth (nodriver, opcional: pip install --user -r scripts/extract/requirements-browser.txt)
+ *  11. add-source (extracción de metadata)
  *
  * Cada resultado pasa por el clasificador soft-404 de scripts/lib/soft404.mjs:
  * un mirror con HTTP 200 puede traer la página de error/bloqueo del sitio.
@@ -19,26 +22,29 @@
  * Uso:
  *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo
  *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo --verbose
- *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo --method r.jina.ai
+ *   node scripts/extract/fetch-content.mjs -- https://sitio.cl/articulo --method browser
  *
  * Flags:
  *   --verbose    Muestra detalles de cada intento
- *   --method X   Solo usa el método especificado (jina, defuddle, markdown, paywallskip, archive, impersonate, add-source)
+ *   --method X   Solo usa el método especificado (r.jina.ai, defuddle.md, markdown.new, paywallskip.com, archive.ph, fetch-impersonate, html-raw, browser, browser-stealth, add-source)
  *   --min-chars N Mínimo de caracteres para considerar exitoso (default: 500)
+ *   --headed     Chrome visible en browser/browser-stealth (Cloudflare Turnstile que no pasa en headless)
  */
 
 import { execFileSync } from 'node:child_process';
 import { readFileSync } from 'node:fs';
+import { fileURLToPath } from 'node:url';
 import { isSoft404, checkOriginStatus } from '../lib/soft404.mjs';
 
 const args = process.argv.slice(2);
 const url = args.find(a => a.startsWith('http'));
 const verbose = args.includes('--verbose');
+const headed = args.includes('--headed');
 const methodOnly = args.find((a, i) => args[i - 1] === '--method');
 const minChars = parseInt(args.find((a, i) => args[i - 1] === '--min-chars') || '500');
 
 if (!url) {
-  console.error('Uso: node scripts/extract/fetch-content.mjs -- <URL> [--verbose] [--method X] [--min-chars N]');
+  console.error('Uso: node scripts/extract/fetch-content.mjs -- <URL> [--verbose] [--method X] [--min-chars N] [--headed]');
   process.exit(1);
 }
 
@@ -205,6 +211,123 @@ async function tryHtmlRaw(u) {
   }
 }
 
+// ═══════════════════════════════════════════════════════════════
+// Métodos de navegador real (último recurso antes de metadata)
+// ═══════════════════════════════════════════════════════════════
+
+const BROWSER_EXTRACT = fileURLToPath(new URL('./browser-extract.mjs', import.meta.url));
+const BROWSER_STEALTH = fileURLToPath(new URL('./browser-stealth.py', import.meta.url));
+
+let pythonCache;
+function findPython() {
+  if (pythonCache !== undefined) return pythonCache;
+  for (const cmd of [process.env.PYTHON, 'python3', 'python']) {
+    if (!cmd) continue;
+    try {
+      execFileSync(cmd, ['--version'], { stdio: 'ignore', timeout: 5000, windowsHide: true });
+      pythonCache = cmd;
+      return cmd;
+    } catch {}
+  }
+  pythonCache = null;
+  return null;
+}
+
+let stealthCache;
+function stealthAvailable() {
+  if (stealthCache !== undefined) return stealthCache;
+  const python = findPython();
+  if (!python) {
+    stealthCache = false;
+    return false;
+  }
+  try {
+    execFileSync(python, ['-c', 'import nodriver'], { stdio: 'ignore', timeout: 20000, windowsHide: true });
+    stealthCache = true;
+  } catch {
+    stealthCache = false;
+  }
+  return stealthCache;
+}
+
+// El script de navegador devuelve JSON con title/finalUrl/content. Se valida
+// con soft404 sintetizando la línea "Title:" (habilita los chequeos de titular
+// vs slug y de título genérico que usan los mirrors) y se devuelve el texto
+// limpio sin el prefijo.
+function acceptBrowserJson(raw, method, u) {
+  let meta;
+  try {
+    meta = JSON.parse(raw);
+  } catch {
+    return acceptResult(raw, method, minChars, u);
+  }
+  const content = (meta.content || '').trim();
+  const title = (meta.title || '').trim();
+  const titleLine = title ? `Title: ${title}\n` : '';
+  const synthesized = `${titleLine}URL: ${meta.finalUrl || u}\n\n${content}`;
+  const verdict = isSoft404(synthesized, { url: u });
+  if (verdict.soft) return { ok: false, error: `soft-404 (${verdict.reason})`, chars: content.length };
+  if (meta.rootTag === 'BODY') {
+    const pCount = Number(meta.pCount) || 0;
+    const maxParagraph = Number(meta.maxParagraph) || 0;
+    const pSum = Number(meta.pSum) || 0;
+    if (pCount < 2 || maxParagraph < 250 || pSum < 600) {
+      return { ok: false, error: 'sin cuerpo (solo navegación)', chars: content.length };
+    }
+  }
+  if (!(content.length > minChars)) return { ok: false, chars: content.length };
+  return {
+    ok: true,
+    content,
+    chars: content.length,
+    method,
+    meta: { title: meta.title, status: meta.status, ms: meta.ms, rootTag: meta.rootTag },
+  };
+}
+
+function tryBrowser(u) {
+  log('Intentando browser (Chrome real vía puppeteer-core)...');
+  try {
+    const raw = execFileSync(
+      process.execPath,
+      [BROWSER_EXTRACT, '--url', u, '--json', '--timeout', '30', ...(headed ? ['--headed'] : [])],
+      { encoding: 'utf-8', timeout: 90000, maxBuffer: 20 * 1024 * 1024, windowsHide: true },
+    );
+    return acceptBrowserJson(raw, 'browser', u);
+  } catch (e) {
+    const stderr = e.stderr ? Buffer.from(e.stderr).toString('utf-8').trim() : '';
+    return { ok: false, error: (stderr || e.message || 'error').slice(0, 300) };
+  }
+}
+
+function tryBrowserStealth(u) {
+  log('Intentando browser-stealth (nodriver)...');
+  if (!stealthAvailable()) {
+    return {
+      ok: false,
+      error: 'nodriver no instalado (pip install --user -r scripts/extract/requirements-browser.txt)',
+    };
+  }
+  const python = findPython();
+  try {
+    const raw = execFileSync(
+      python,
+      [BROWSER_STEALTH, '--url', u, '--json', '--timeout', '40', ...(headed ? ['--headed'] : [])],
+      {
+        encoding: 'utf-8',
+        timeout: 120000,
+        maxBuffer: 20 * 1024 * 1024,
+        windowsHide: true,
+        env: { ...process.env, PYTHONIOENCODING: 'utf-8' },
+      },
+    );
+    return acceptBrowserJson(raw, 'browser-stealth', u);
+  } catch (e) {
+    const stderr = e.stderr ? Buffer.from(e.stderr).toString('utf-8').trim() : '';
+    return { ok: false, error: (stderr || e.message || 'error').slice(0, 300) };
+  }
+}
+
 function tryAddSource(u) {
   log(`Intentando add-source (metadata)...`);
   try {
@@ -235,6 +358,8 @@ const FALLBACK_CHAIN = [
   { name: 'archive.ph', fn: tryArchive },
   { name: 'fetch-impersonate', fn: tryImpersonate },
   { name: 'html-raw', fn: tryHtmlRaw },
+  { name: 'browser', fn: tryBrowser },
+  { name: 'browser-stealth', fn: tryBrowserStealth },
   { name: 'add-source', fn: tryAddSource },
 ];
 

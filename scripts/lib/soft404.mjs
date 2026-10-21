@@ -32,6 +32,14 @@ export const SOFT404_PATTERNS = [
   'checking your browser',
   'just a moment',
   'ddos protection',
+  // Cloudflare / WAF bloqueo duro (403 con página de error propia)
+  'attention required',
+  'sorry, you have been blocked',
+  'you are unable to access',
+  'un momento…',
+  'verificación de seguridad en curso',
+  'verificacion de seguridad en curso',
+  'performance & security by cloudflare',
   // Login
   'sign in to continue',
   'log in required',

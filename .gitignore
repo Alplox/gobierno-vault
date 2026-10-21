@@ -14,6 +14,10 @@ storage/
 # Firecrawl cache (search/scrape)
 .firecrawl/
 
+# Python (browser-stealth opcional)
+__pycache__/
+*.pyc
+
 # Agents
 skills-workspace/
 # Workspaces y artefactos de evaluacion de skills (hermanos de <skill>/):
