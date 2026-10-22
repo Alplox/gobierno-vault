@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: TemucoDiario
+medio: Temuco Diario
 titulo: "Manifestantes interrumpen el tránsito en Lautaro en rechazo al proyecto de relleno sanitario Pintamahuida"
 autor: Francisco Carrasco
 fecha: 2026-09-03

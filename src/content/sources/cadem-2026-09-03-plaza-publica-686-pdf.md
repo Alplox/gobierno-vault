@@ -1,0 +1,10 @@
+---
+tipo: documento
+medio: Cadem
+titulo: "Plaza P\u00fablica N\u00b0 686 \u2014 Aprobaci\u00f3n del Presidente Kast cae 4 puntos a 34% y alcanza su nivel m\u00e1s bajo desde marzo 2026. 61% desaprueba su gesti\u00f3n"
+autor: Cadem
+fecha: 2026-09-03
+url: https://cadem.cl/wp-content/uploads/2026/09/Track-PP-686-Septiembre-S1-M1-VF.pdf
+notas: |
+  PDF primario descargado y revisado. Plaza P\u00fablica N\u00b0 686, terreno mi\u00e9rcoles 2 de septiembre de 2026, 1.002 casos, 169 comunas, muestreo online no probabil\u00edstico con cuotas y ponderaci\u00f3n. Aprobaci\u00f3n de Kast 34% (-4pts), desaprobaci\u00f3n 61% (+2pts), 5% no responde; peor registro del mandato desde el 11 de marzo (57% de respaldo). 63% considera que Chile va por mal camino (+5pts, nivel m\u00e1s alto del gobierno) vs 32% buen camino. Situaci\u00f3n econ\u00f3mica mala/muy mala 79% vs 20% buena; 86% ve econom\u00eda estancada o en retroceso vs 12% progresando; 74% supo del Imacec negativo de julio (-1,5%) y 83% no se sorprendi\u00f3. Empleo mala/muy mala 91% (peor desde mediados de 2020); 64% preocupado por estabilidad laboral; 82% eval\u00faa negativa la situaci\u00f3n del consumidor para comprar bienes y servicios (peor desde julio 2014). Presupuesto familiar: 52% justo, 36% no alcanza, 10% ahorra. Expectativas segundo semestre: 36% empeorar\u00e1, 37% igual, 24% mejorar\u00e1. Tras megarreforma: 4% cree que el crecimiento aumentar\u00e1 en corto plazo, 20% igual, 38% mediano/largo plazo, 33% disminuir\u00e1. Seguridad del gobierno cae 8pts a 41% y 58% considera que el Ejecutivo deb\u00eda retirar el proyecto. La p\u00e1gina HTML del estudio en cadem.cl/estudios/ devolvi\u00f3 404 al momento de la verificaci\u00f3n; el PDF primario es la fuente verificable. Prevalece sobre la prensa ante discrepancias.
+---

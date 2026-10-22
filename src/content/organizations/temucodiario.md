@@ -1,6 +1,6 @@
 ---
-nombre: TemucoDiario
+nombre: Temuco Diario
 tipo: medio_comunicacion
 pais: Chile
-notas: Diario digital regional de Temuco, La Araucanía (temucodiario.cl).
+notas: Medio digital regional de La Araucanía (temucodiario.cl).
 ---
