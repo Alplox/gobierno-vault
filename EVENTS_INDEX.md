@@ -1608,7 +1608,7 @@
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 14 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 11 fuentes
 - [2026/09/20260903-7 - SP instruye a la AFC dos pagos extra del seguro de cesantía para beneficiarios del Fondo Solidario ante desempleo de 9,5%](src/content/events/2026/09/20260903-7.md) — 10 fuentes
-- [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 13 fuentes
+- [2026/09/20260903-8 - Embajador Brandon Judd en el Foro Madrid: Chile 'está ejerciendo la Doctrina Donroe' y con Kast 'se vuelve muy fácil'](src/content/events/2026/09/20260903-8.md) — 14 fuentes
 - [2026/09/20260903-9 - Cadem Plaza Pública N°686: aprobación de Kast cae a 34% y desaprobación sube a 61%, peor registro del mandato](src/content/events/2026/09/20260903-9.md) — 6 fuentes
 - [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con medidas cautelares y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 33 fuentes
 - [2026/09/20260904-10 - Gremios del transporte exigen cifras concretas y la aplicación del Mepco](src/content/events/2026/09/20260904-10.md) — 6 fuentes
@@ -1625,6 +1625,7 @@
 - [2026/09/20260905-2 - Galdames incumple por tercera vez su arresto domiciliario nocturno y el juzgado admite su querella contra tres exconcejales](src/content/events/2026/09/20260905-2.md) — 3 fuentes
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260906-2 - Romería al Cementerio General por los 53 años del golpe termina con incidentes: balance escala de 24 a 50 detenidos y 1 lesionada](src/content/events/2026/09/20260906-2.md) — 8 fuentes
+- [2026/09/20260906-3 - Siete gremios de la educación caminan más de 70 km desde Santiago al Congreso contra el recorte al Presupuesto 2027](src/content/events/2026/09/20260906-3.md) — 9 fuentes
 - [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
 - [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 23 fuentes
 - [2026/09/20260907-11 - Municipalidad de Peñalolén clausura la medialuna del Club de Huasos por operar sin patente ni permisos en zona de riesgo](src/content/events/2026/09/20260907-11.md) — 7 fuentes
