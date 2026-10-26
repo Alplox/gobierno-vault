@@ -1604,6 +1604,7 @@
 - [2026/09/20260903-28 - Corte Suprema revoca prisión preventiva y decreta arresto domiciliario total para médico condenado por megafraude a Fonasa](src/content/events/2026/09/20260903-28.md) — 3 fuentes
 - [2026/09/20260903-29 - Roberto Gargarella califica la reforma constitucional de Kast como 'dos bombazos contra la democracia'](src/content/events/2026/09/20260903-29.md) — 2 fuentes
 - [2026/09/20260903-3 - Milei abre el V Encuentro Regional del Foro Madrid en Santiago con duras críticas a la izquierda ('zurdos mugrosos', 'comunista Allende') y provoca reproches de la oposición](src/content/events/2026/09/20260903-3.md) — 35 fuentes
+- [2026/09/20260903-30 - MINSAL reporta positividad de 57,9% en la semana epidemiológica 34, la más alta en tres años, con alza de hospitalizaciones en menores de un año](src/content/events/2026/09/20260903-30.md) — 5 fuentes
 - [2026/09/20260903-4 - Marcha estudiantil de la ACES en la Alameda contra el gobierno de Kast y el Foro Madrid termina con intervención de Carabineros y 4 detenidos](src/content/events/2026/09/20260903-4.md) — 29 fuentes
 - [2026/09/20260903-5 - Kast y Milei sostienen bilateral de 35 minutos en La Moneda y emiten declaración conjunta: soberanía chilena de Magallanes, Malvinas y Apablaza](src/content/events/2026/09/20260903-5.md) — 14 fuentes
 - [2026/09/20260903-6 - Oposición realiza el encuentro 'Democracia Siempre' en el Hotel Fundador como contrapunto al Foro Madrid, con críticas a Kast y Milei y velatón por Escalona](src/content/events/2026/09/20260903-6.md) — 11 fuentes
@@ -1613,6 +1614,8 @@
 - [2026/09/20260904-1 - PDI detiene en Cunco a hombre de 44 años por imagen intervenida de Quiroz con disparo en la cabeza; es formalizado y queda con medidas cautelares y prohibición de acercarse](src/content/events/2026/09/20260904-1.md) — 33 fuentes
 - [2026/09/20260904-10 - Gremios del transporte exigen cifras concretas y la aplicación del Mepco](src/content/events/2026/09/20260904-10.md) — 6 fuentes
 - [2026/09/20260904-11 - OLCA y MOSACAT piden al SEA que el data center de Google en Cerrillos ingrese al SEIA](src/content/events/2026/09/20260904-11.md) — 7 fuentes
+- [2026/09/20260904-12 - Vidal acusa al canciller argentino de romper los tratados de 1881 y 1984 por llamar 'bioceánico' a su país](src/content/events/2026/09/20260904-12.md) — 8 fuentes
+- [2026/09/20260904-13 - Gobierno conmemora el Día Internacional de la Mujer Indígena en Lautaro con cerca de 400 mujeres mapuche y una advertencia por el programa Küme Mognen Pu Zomo](src/content/events/2026/09/20260904-13.md) — 7 fuentes
 - [2026/09/20260904-2 - Fuga en Copiapó: condenado por homicidio autorizado sin custodia al bautizo se fugó; fue recapturado en Antofagasta con ocho detenidos por colaboración y la Corte pidió informe al juez](src/content/events/2026/09/20260904-2.md) — 26 fuentes
 - [2026/09/20260904-3 - Contrapoder revela que Interior contrató a honorarios por $1,9 millones a Cristóbal Soto, estudiante de 19 años de primer año de Periodismo, para redes sociales: críticas del PDG y republicanos y ajuste del sueldo](src/content/events/2026/09/20260904-3.md) — 17 fuentes
 - [2026/09/20260904-4 - Paz Zárate cuestiona el comunicado conjunto Kast-Milei; texto redactado por Argentina que canjea gas por Malvinas sin derogar el decreto 457](src/content/events/2026/09/20260904-4.md) — 10 fuentes
@@ -1626,7 +1629,7 @@
 - [2026/09/20260906-1 - Bellolio propone en Mesa Central un subsidio inmediato al empleo y pide al Gobierno obras de confianza ante el 9,5% de desempleo](src/content/events/2026/09/20260906-1.md) — 6 fuentes
 - [2026/09/20260906-2 - Romería al Cementerio General por los 53 años del golpe termina con incidentes: balance escala de 24 a 50 detenidos y 1 lesionada](src/content/events/2026/09/20260906-2.md) — 8 fuentes
 - [2026/09/20260906-3 - Siete gremios de la educación caminan más de 70 km desde Santiago al Congreso contra el recorte al Presupuesto 2027](src/content/events/2026/09/20260906-3.md) — 9 fuentes
-- [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 13 fuentes
+- [2026/09/20260907-1 - Kast en ADN Hoy: llamado a prófugos a entregarse, balance de seis meses en seguridad y apertura a flexibilizar la reforma del estado de excepción](src/content/events/2026/09/20260907-1.md) — 15 fuentes
 - [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 23 fuentes
 - [2026/09/20260907-11 - Municipalidad de Peñalolén clausura la medialuna del Club de Huasos por operar sin patente ni permisos en zona de riesgo](src/content/events/2026/09/20260907-11.md) — 7 fuentes
 - [2026/09/20260907-12 - Miguel Krassnoff escribe desde Punta Peuco al senador Iván Flores: no necesita indultos, reivindica la DINA y anuncia una "pronta libertad total"](src/content/events/2026/09/20260907-12.md) — 11 fuentes
@@ -1914,10 +1917,14 @@
 - [2026/10/20261013-1 - Migueles cambia su versión y declara que Vivanco sabía de los pagos de Lagos por los fallos a favor del consorcio bielorruso](src/content/events/2026/10/20261013-1.md) — 10 fuentes
 - [2026/10/20261014-1 - Ruta comercial Punta Arenas-Malvinas: el gobierno defiende el zarpe privado del Danstar y el canciller argentino dice que Chile no dará logística](src/content/events/2026/10/20261014-1.md) — 7 fuentes
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
+- [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
 - [2026/10/20261019-1 - SEA resuelve que el data center de Google en Cerrillos no debe ingresar al SEIA y OLCA y MOSACAT anuncian impugnación](src/content/events/2026/10/20261019-1.md) — 6 fuentes
-- [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 9 fuentes
-- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 22 fuentes
-- [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 8 fuentes
+- [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 13 fuentes
+- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 27 fuentes
+- [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
+- [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 6 fuentes
+- [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 8 fuentes
+- [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 7 fuentes
 
 ## 2025
 
