@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 356
+**Total tareas:** 357
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 279 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 280 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 325 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 326 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -334,6 +334,7 @@
 | S-2026-263 | ⬜ | 2026-10-10 | Aluvión Las Condes — causa Fiscalía Oriente | Desenlace de la investigación por el origen del aluvión (OS9 y Labocar, fiscalías Lanas y Zará): peritajes, eventual citación de Municipio, Senapred y MOP, avance de la querella por el incendio de diciembre de 2025 y posibles formalizaciones | `20261008-7` `20261010-2` | Origen: <https://www.cnnchile.com/pais/catalina-san-martin-fiscalia-incendio-san-carlos-apoquindo-aluvion/> |
 | S-2026-268 | ⬜ | 2026-10-28 | Rebajas de condena 2026 | Sesión especial de la Cámara del 28-oct-2026: comparecencia de [[people/fernando_rabat]], definición de la acusación constitucional de los seis partidos de oposición y posición del PDG | `20261023-1` `20261023-2` | Origen: <https://www.theclinic.cl/2026/10/23/oposicion-exige-a-kast-la-salida-de-rabat-por-rebaja-de-penas-a-abusadores-sexuales-y-estudian-acusacion-constitucional-contra-el-ministro/> |
 | S-2026-269 | ⬜ | 2026-10-23 | Rebajas de condena 2026 | Desenlace de la suspensión de decretos y de los proyectos con discusión inmediata: texto, boletines y votación; si se revierten los 56 decretos ejecutoriados y los tres de lesa humanidad, y qué responde Contraloría al recurso anunciado por diputados | `20261023-1` `20261021-1` `20261022-1` | Origen: <https://www.cnnchile.com/politica/justicia-suspende-tramitacion-decretos-rebaja-de-condenas-y-anuncia-proyectos-con-discusion-inmediata/> |
+| S-2026-270 | ⬜ | 2026-10-26 | Rebajas de condena 2026 | Protocolo de aviso a víctimas y monitoreo de liberados por rebajas: el seremi de Valparaíso confirmó dos liberados y el delegado Manuel Millones propuso alertas sin protocolo definido | `20261023-4` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-de-valparaiso/2026/10/23/dos-condenados-por-violacion-de-ninos-quedaron-libres-tras-rebaja-de-penas-en-la-region-de-valparaiso.shtml> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

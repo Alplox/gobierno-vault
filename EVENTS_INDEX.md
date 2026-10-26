@@ -1919,12 +1919,17 @@
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
 - [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
 - [2026/10/20261019-1 - SEA resuelve que el data center de Google en Cerrillos no debe ingresar al SEIA y OLCA y MOSACAT anuncian impugnación](src/content/events/2026/10/20261019-1.md) — 6 fuentes
+- [2026/10/20261019-2 - Gobierno ingresa proyecto que reforma el INDH: elimina la facultad de querellarse, reduce el Consejo de 11 a 5 y deja una sola sede en Santiago](src/content/events/2026/10/20261019-2.md) — 7 fuentes
 - [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 13 fuentes
-- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 27 fuentes
+- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 29 fuentes
 - [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
 - [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 6 fuentes
-- [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 8 fuentes
-- [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 7 fuentes
+- [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 11 fuentes
+- [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 9 fuentes
+- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 11 fuentes
+- [2026/10/20261024-1 - 23 Premios Nacionales rechazan la reforma al INDH y piden al Congreso frenarla: acusan un intento de "neutralizar" al organismo](src/content/events/2026/10/20261024-1.md) — 7 fuentes
+- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 6 fuentes
+- [2026/10/20261026-2 - Identifican a los dos condenados por secuestro y torturas que salieron de Punta Peuco con rebajas firmadas por Rabat](src/content/events/2026/10/20261026-2.md) — 7 fuentes
 
 ## 2025
 
