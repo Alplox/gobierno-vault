@@ -101,7 +101,7 @@ La regla depende del **estado editorial del hecho**, no de que el lead haya apar
 
 | Red social | Lectura | Comentarios | Fallback y límite |
 | --- | --- | --- | --- |
-| Reddit | ✅ `embed.reddit.com` + Defuddle | ✅ texto/autor/fecha/permalink; puntajes vía Redlib/Jina | La búsqueda directa suele estar bloqueada; Redlib es volátil y sus cachés pueden diferir |
+| Reddit | ⚠️ `embed.reddit.com` entrega el título y el número de comentarios, **no el texto**; `old.reddit.com` deriva a login y `r.jina.ai` responde 403 | ✅ texto/autor/fecha/permalink; puntajes vía Redlib/Jina cuando la instancia responde | Redlib es volátil (429/403) y safereddit exige proof-of-work (Anubis). Si ningún camino devuelve los comentarios, no cites voces: deja el hilo como lead en `TAREAS/PENDIENTES/YYYY.md` con el log de métodos o pide el clipping |
 | Facebook | ✅ texto del post | ✅ texto completo en navegador público | Jina/Defuddle pueden devolver login, CAPTCHA o comentarios truncados |
 | X/Twitter | ✅ oEmbed + FxTwitter | ✅ respuestas estructuradas | Búsqueda/timeline vía Nitter/teapawt; preferir el endpoint oficial |
 | Instagram | ✅ `markdown.new` | ✅ comentarios visibles + permalinks | Defuddle para caption; navegador/Browsertrix para cargar más |
