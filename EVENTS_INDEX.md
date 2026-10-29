@@ -1633,8 +1633,11 @@
 - [2026/09/20260907-10 - Natalia Duco regresa a La Moneda como asesora del Segundo Piso a 24 días de su renuncia al Deporte](src/content/events/2026/09/20260907-10.md) — 23 fuentes
 - [2026/09/20260907-11 - Municipalidad de Peñalolén clausura la medialuna del Club de Huasos por operar sin patente ni permisos en zona de riesgo](src/content/events/2026/09/20260907-11.md) — 7 fuentes
 - [2026/09/20260907-12 - Miguel Krassnoff escribe desde Punta Peuco al senador Iván Flores: no necesita indultos, reivindica la DINA y anuncia una "pronta libertad total"](src/content/events/2026/09/20260907-12.md) — 11 fuentes
+- [2026/09/20260907-13 - Irarrázaval debuta ante la comisión investigadora por la gestión de Steinert: descarta rol del Segundo Piso en la PDI y admite que el oficio debió consultarse](src/content/events/2026/09/20260907-13.md) — 5 fuentes
+- [2026/09/20260907-14 - INE informa alzas de 7,8% en remuneraciones y 8,7% en costos laborales en julio: el índice real sube 4,1% y los costos completan doce meses por sobre los sueldos](src/content/events/2026/09/20260907-14.md) — 6 fuentes
+- [2026/09/20260907-15 - Trabajadores del Colegio Calasanz inician la primera huelga en 75 años y el Centro de Estudiantes llama a asistir a clases en apoyo](src/content/events/2026/09/20260907-15.md) — 6 fuentes
 - [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 16 fuentes
-- [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 11 fuentes
+- [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 13 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 8 fuentes
 - [2026/09/20260907-5 - Kast participa en la Tefilá por Chile de la Comunidad Judía y compromete protección a la libertad religiosa](src/content/events/2026/09/20260907-5.md) — 8 fuentes
 - [2026/09/20260907-6 - Matamala publica Ayúdeme usted, compadre y acusa pasividad de Kast ante Milei, Rogers y Judd en el Foro Madrid](src/content/events/2026/09/20260907-6.md) — 10 fuentes
@@ -1653,7 +1656,7 @@
 - [2026/09/20260908-3 - Cámara aprueba por 57 votos interpelar al canciller Francisco Pérez Mackenna el 28 de septiembre por Magallanes y la conducción de la política exterior](src/content/events/2026/09/20260908-3.md) — 14 fuentes
 - [2026/09/20260908-4 - PISA 2025: Chile anota su peor resultado en Matemática con 59% bajo el nivel básico y retrocede en Lectura](src/content/events/2026/09/20260908-4.md) — 6 fuentes
 - [2026/09/20260908-5 - IPC de agosto sube 0,6%, el doble de lo esperado, y lleva la inflación a 12 meses a 4,1% con la UF rumbo a $41.130](src/content/events/2026/09/20260908-5.md) — 8 fuentes
-- [2026/09/20260908-6 - Poduje dice en Radio 13C que la situación económica no es culpa del gobierno anterior y luego acusa de falso el titular de T13, que responde con el video y la transcripción](src/content/events/2026/09/20260908-6.md) — 8 fuentes
+- [2026/09/20260908-6 - Poduje dice en Radio 13C que la situación económica no es culpa del gobierno anterior y luego acusa de falso el titular de T13, que responde con el video y la transcripción](src/content/events/2026/09/20260908-6.md) — 11 fuentes
 - [2026/09/20260908-7 - AFP Capital explica en Radio 13C el régimen definitivo de los fondos generacionales que reemplazan a los multifondos desde abril de 2027](src/content/events/2026/09/20260908-7.md) — 6 fuentes
 - [2026/09/20260908-8 - Vallejo acusa cobardía de Kast ante Milei por no condenar sus dichos en el Foro Madrid: fue una vergüenza nacional, no se puede llamar patriota](src/content/events/2026/09/20260908-8.md) — 6 fuentes
 - [2026/09/20260908-9 - Mara Sedini debuta como conductora de Sin Filtros en reemplazo de Fernando Solabarrieta tras su errática animación](src/content/events/2026/09/20260908-9.md) — 9 fuentes
