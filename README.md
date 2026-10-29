@@ -178,11 +178,11 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - 1969: 2
 
 **Temas más frecuentes (Top 10):**
-- Politica (673)
+- Politica (674)
 - Justicia (513)
 - Economia (393)
 - Defensa y seguridad (347)
-- Derechos humanos (235)
+- Derechos humanos (236)
 - Administración pública (235)
 - Relaciones internacionales (176)
 - Proceso legislativo (165)
@@ -202,10 +202,10 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - votacion (44)
 
 **Entidades registradas:**
-- Personas: 2832
-- Organizaciones: 1569
+- Personas: 2833
+- Organizaciones: 1570
 - Cifras: 43
-- Fuentes: 10476
+- Fuentes: 10500
 - Temas: 81
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 

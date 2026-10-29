@@ -503,12 +503,12 @@
 - [2026/01/20260116-2 - Kast ofrece el Ministerio de las Culturas a Francisco Undurraga (Evópoli)](src/content/events/2026/01/20260116-2.md) — 6 fuentes
 - [2026/01/20260118-1 - Incendios forestales devastan Biobío y Ñuble: 20 fallecidos y estado de catástrofe](src/content/events/2026/01/20260118-1.md) — 5 fuentes
 - [2026/01/20260118-2 - Boric y Kast coordinan respuesta conjunta ante incendios forestales](src/content/events/2026/01/20260118-2.md) — 4 fuentes
-- [2026/01/20260120-1 - Kast presenta gabinete de 24 ministros para su gobierno](src/content/events/2026/01/20260120-1.md) — 5 fuentes
+- [2026/01/20260120-1 - Kast presenta gabinete de 24 ministros para 25 carteras con mayoría de independientes](src/content/events/2026/01/20260120-1.md) — 12 fuentes
 - [2026/01/20260120-10 - Mala Espina perfila a José García Ruminot, el histórico senador RN que será ministro Segpres de Kast: el operador legislativo con 36 años en el Congreso](src/content/events/2026/01/20260120-10.md) — 3 fuentes
 - [2026/01/20260120-11 - Mala Espina perfila a Martín Arrau, el ingeniero republicano que será ministro de Obras Públicas de Kast: exintendente de Ñuble y jefe de campaña del presidente electo](src/content/events/2026/01/20260120-11.md) — 3 fuentes
 - [2026/01/20260120-12 - Mala Espina perfila a Ximena Rincón, la senadora Demócratas que será ministra de Energía de Kast: el fichaje de la ex Concertación que marca el giro político](src/content/events/2026/01/20260120-12.md) — 3 fuentes
 - [2026/01/20260120-13 - Mala Espina perfila a Natalia Duco, la lanzadora de bala que será ministra del Deporte de Kast: la primera olímpica en la cartera, con el sello del dopaje de 2018](src/content/events/2026/01/20260120-13.md) — 4 fuentes
-- [2026/01/20260120-2 - Polémica por ex abogados de Pinochet en gabinete de Kast](src/content/events/2026/01/20260120-2.md) — 5 fuentes
+- [2026/01/20260120-2 - Rechazo a los dos ex abogados de Pinochet designados en Defensa y Justicia](src/content/events/2026/01/20260120-2.md) — 8 fuentes
 - [2026/01/20260120-3 - La veintena de cargos que Francisco Pérez Mackenna dejará en el grupo Luksic para asumir en Cancillería: el perfil del 'canciller de Luksic' y sus nexos con Kast](src/content/events/2026/01/20260120-3.md) — 3 fuentes
 - [2026/01/20260120-4 - Emol perfila a Iván Poduje, el más que seguro ministro de Vivienda de Kast: el urbanista polémico de Atisba, Sin Filtro y las polémicas de los trolls, el Servel y el CDE](src/content/events/2026/01/20260120-4.md) — 13 fuentes
 - [2026/01/20260120-5 - Emol perfila a Jaime Campos, el radical elegido por Kast para Agricultura: el ex ministro que le dijo no a Bachelet por Punta Peuco y sus polémicas de Justicia](src/content/events/2026/01/20260120-5.md) — 7 fuentes
@@ -533,7 +533,7 @@
 - [2026/02/20260204-1 - Kast envía comitiva de diputados evangélicos al Desayuno de Oración de Washington que encabeza Trump](src/content/events/2026/02/20260204-1.md) — 4 fuentes
 - [2026/02/20260206-1 - Health coach de Kast revela que conversaron instalar un gimnasio en La Moneda](src/content/events/2026/02/20260206-1.md) — 2 fuentes
 - [2026/02/20260206-2 - Los informes que advirtieron el aluvión de Las Condes: dos del montañista Carlos Valdivia Davidson y uno de Sernageomin, en poder del municipio y el GORE desde febrero](src/content/events/2026/02/20260206-2.md) — 5 fuentes
-- [2026/02/20260207-1 - Kast presenta la nómina de subsecretarios y delegados presidenciales: predominio de perfiles técnicos genera tensión en Chile Vamos](src/content/events/2026/02/20260207-1.md) — 3 fuentes
+- [2026/02/20260207-1 - Kast presenta la nómina de subsecretarios y delegados presidenciales: predominio de perfiles técnicos genera tensión en Chile Vamos](src/content/events/2026/02/20260207-1.md) — 4 fuentes
 - [2026/02/20260208-1 - Marco Rubio vendrá a Chile al cambio de mando: señal de acercamiento de la administración Trump a Kast](src/content/events/2026/02/20260208-1.md) — 1 fuente
 - [2026/02/20260210-1 - CIPER revela los 15 registros que describen el rol de Jorge Quiroz en defensa de empresas sancionadas por colusión](src/content/events/2026/02/20260210-1.md) — 3 fuentes
 - [2026/02/20260210-2 - Nieves Ayress testimonia ante la Cámara de Representantes de EEUU en apoyo a la resolución del Buen Vecino](src/content/events/2026/02/20260210-2.md) — 7 fuentes
@@ -1909,14 +1909,14 @@
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
 - [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 1.000 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 35 fuentes
-- [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 15 fuentes
+- [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 16 fuentes
 - [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — 1 fuente
 - [2026/10/20261010-4 - Gobierno concreta décimo vuelo de expulsión de migrantes y acumula 1.874 deportados en 2026](src/content/events/2026/10/20261010-4.md) — 7 fuentes
 - [2026/10/20261011-1 - Criteria baja la aprobación de Kast al 27% y la desaprobación sube al 64%, el peor registro desde marzo](src/content/events/2026/10/20261011-1.md) — 7 fuentes
 - [2026/10/20261011-2 - Embalses de Coquimbo alcanzan niveles históricos tras el sistema frontal de julio](src/content/events/2026/10/20261011-2.md) — 9 fuentes
-- [2026/10/20261012-1 - Gobierno anuncia rebaja de hasta 25% en el TAG de Autopista Central a cambio de 20 meses más de concesión](src/content/events/2026/10/20261012-1.md) — 13 fuentes
+- [2026/10/20261012-1 - Gobierno anuncia rebaja de hasta 25% en el TAG de Autopista Central a cambio de 20 meses más de concesión](src/content/events/2026/10/20261012-1.md) — 18 fuentes
 - [2026/10/20261013-1 - Migueles cambia su versión y declara que Vivanco sabía de los pagos de Lagos por los fallos a favor del consorcio bielorruso](src/content/events/2026/10/20261013-1.md) — 10 fuentes
-- [2026/10/20261013-2 - El debate por la rebaja del TAG: críticas por los 20 meses de concesión, advertencias por congestión y reclamo de regiones](src/content/events/2026/10/20261013-2.md) — 18 fuentes
+- [2026/10/20261013-2 - El debate por la rebaja del TAG: críticas por los 20 meses de concesión, advertencias por congestión y reclamo de regiones](src/content/events/2026/10/20261013-2.md) — 29 fuentes
 - [2026/10/20261014-1 - Ruta comercial Punta Arenas-Malvinas: el gobierno defiende el zarpe privado del Danstar y el canciller argentino dice que Chile no dará logística](src/content/events/2026/10/20261014-1.md) — 7 fuentes
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
 - [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
