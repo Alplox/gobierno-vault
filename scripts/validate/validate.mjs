@@ -164,6 +164,8 @@ const WHITELIST_MEDIOS_LIST = [
   'Cuadernos de Historia (SciELO)',
   'Revista Santiago',
   'Perfiles Económicos',
+  // Fuente primaria institucional (programas y listas de expositores de foros regionales)
+  'CAF (Banco de Desarrollo de América Latina y el Caribe)',
 ];
 const WHITELIST_MEDIOS = new Set(WHITELIST_MEDIOS_LIST);
 
