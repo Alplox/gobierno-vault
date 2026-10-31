@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 362
+**Total tareas:** 361
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 285 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 284 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 330 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 329 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -338,7 +338,6 @@
 | S-2026-271 | ⬜ | 2026-08-29 | Caso Cerimedo — seguimiento judicial | Teresa Zañartu (Segundo Piso) en la foto de la sede de RN: verificar su rol, reacción de La Moneda y eventual citación de la CEI (evento `20260821-8`) | `20260821-8` | Origen: <https://www.theclinic.cl/2026/08/28/el-dia-que-el-rey-de-los-trolls-llego-a-la-sede-de-rn-la-viralizada-foto-con-cerimedo-que-reunio-a-figuras-ligadas-a-la-udi-parisi-y-el-actual-segundo-piso/> |
 | S-2026-273 | ⬜ | 2026-08-29 | Caso Cerimedo — seguimiento judicial | ElHiloCL atribuye a Cerimedo las fake news de los incendios de Viña (feb-2024) y la muerte de Piñera: buscar prensa o fact-check que documente los tuits (evento `20260818-14`) | `20260818-14` | Origen: <https://x.com/ElHiloCL/status/2093672703626502347> |
 | S-2026-274 | ⬜ | 2026-08-29 | Caso Cerimedo — seguimiento judicial | ElHiloCL atribuye a Gonzalo de la Carrera la difusión de la foto de Boric con encapuchados por orden del comando de Kast (2022), con origen en Cerimedo: verificar (evento `20260821-8`) | `20260821-8` | Origen: <https://x.com/ElHiloCL/status/2093675131344167091> |
-| S-2026-276 | ⬜ | 2026-10-30 | Amenazas a autoridades — seguimiento | Detención en Chillán por amenazas a Kast: resultado del control de detención del 30-oct | `20261029-2` | Origen: <https://www.t13.cl/noticia/nacional/detienen-mujer-22-anos-por-amenazar-al-presidente-kast-durante-su-visita-nuble-29-10-2026> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |
