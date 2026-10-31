@@ -1952,8 +1952,11 @@
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
+- [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 17 fuentes
+- [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
+- [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
 - [2026/10/20261031-1 - Juzgado de Garantía de Linares declara ilegal la detención de una estudiante de 17 años por amenazas a Kast y la Fiscalía formaliza igualmente](src/content/events/2026/10/20261031-1.md) — 5 fuentes
 
 ## 2025
