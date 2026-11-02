@@ -1876,6 +1876,7 @@
 - [2026/10/20261002-8 - BBCL Investiga revela que Fiscalía, PDI y Carabineros usaron el software Oxygen, de origen ruso oculto, bajo causa en EEUU con dos detenidos y dominio incautado](src/content/events/2026/10/20261002-8.md) — 6 fuentes
 - [2026/10/20261003-1 - Ripamonti pide a Kast medidas urgentes tras el fin del sistema de detección de incendios en Viña del Mar](src/content/events/2026/10/20261003-1.md) — 6 fuentes
 - [2026/10/20261003-2 - Presunta violación grupal en Rapa Nui: cuatro funcionarios de la Armada formalizados y en prisión preventiva; protestas exigen el retiro de la Guarnición](src/content/events/2026/10/20261003-2.md) — 11 fuentes
+- [2026/10/20261003-3 - Frei defiende la adhesión al Escudo de las Américas en una carta y abre una fisura en la DC: oficialismo lo agradece y la oposición lo critica](src/content/events/2026/10/20261003-3.md) — 8 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
 - [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 10 fuentes
