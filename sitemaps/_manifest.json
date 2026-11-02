@@ -1,7 +1,7 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-11-02T14:58:45.078Z",
+  "actualizado": "2026-11-02T15:07:01.310Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
@@ -2672,147 +2672,147 @@
     },
     "noticiasdellago": {
       "nombre": "Noticias del Lago",
-      "ultima_sync": "2026-10-26T15:19:59.208Z",
+      "ultima_sync": "2026-11-02T14:58:46.671Z",
       "articulos": 65609,
       "nuevos": 0,
       "años": 16
     },
     "noticiasdelsur": {
       "nombre": "Noticias del Sur",
-      "ultima_sync": "2026-10-26T15:20:00.258Z",
+      "ultima_sync": "2026-11-02T14:58:47.832Z",
       "articulos": 9314,
       "nuevos": 0,
       "años": 8
     },
     "nubledigital": {
       "nombre": "Ñuble Digital",
-      "ultima_sync": "2026-10-26T15:20:01.924Z",
+      "ultima_sync": "2026-11-02T14:58:50.111Z",
       "articulos": 5342,
       "nuevos": 0,
       "años": 9
     },
     "ovallehoy": {
       "nombre": "Ovalle Hoy",
-      "ultima_sync": "2026-10-26T15:20:04.970Z",
+      "ultima_sync": "2026-11-02T14:58:53.198Z",
       "articulos": 30202,
       "nuevos": 0,
       "años": 13
     },
     "paislobo": {
       "nombre": "País Lobo",
-      "ultima_sync": "2026-10-26T15:20:08.533Z",
-      "articulos": 52187,
-      "nuevos": 87,
+      "ultima_sync": "2026-11-02T14:58:54.946Z",
+      "articulos": 52341,
+      "nuevos": 154,
       "años": 8
     },
     "portalinformativo": {
       "nombre": "Portal Informativo",
-      "ultima_sync": "2026-10-26T15:20:09.326Z",
+      "ultima_sync": "2026-11-02T14:58:55.942Z",
       "articulos": 1567,
       "nuevos": 0,
       "años": 7
     },
     "pichilemunews": {
       "nombre": "Pichilemu News",
-      "ultima_sync": "2026-10-26T15:20:10.326Z",
+      "ultima_sync": "2026-11-02T14:59:01.188Z",
       "articulos": 6077,
       "nuevos": 0,
       "años": 9
     },
     "prensaciudadana": {
       "nombre": "Prensa Ciudadana",
-      "ultima_sync": "2026-10-26T15:20:14.413Z",
+      "ultima_sync": "2026-11-02T14:59:03.595Z",
       "articulos": 14611,
       "nuevos": 0,
       "años": 7
     },
     "queilen": {
       "nombre": "Queilen",
-      "ultima_sync": "2026-10-26T15:20:15.481Z",
+      "ultima_sync": "2026-11-02T14:59:05.179Z",
       "articulos": 247,
       "nuevos": 0,
       "años": 11
     },
     "radiomagallanes": {
       "nombre": "Radio Magallanes",
-      "ultima_sync": "2026-10-26T15:20:16.336Z",
-      "articulos": 4031,
-      "nuevos": 38,
+      "ultima_sync": "2026-11-02T14:59:06.502Z",
+      "articulos": 4090,
+      "nuevos": 59,
       "años": 2
     },
     "radiopuertanorte": {
       "nombre": "Radio Puerta Norte",
-      "ultima_sync": "2026-10-26T15:20:17.513Z",
+      "ultima_sync": "2026-11-02T14:59:07.831Z",
       "articulos": 3456,
       "nuevos": 0,
       "años": 8
     },
     "radioventisqueros": {
       "nombre": "Radio Ventisqueros",
-      "ultima_sync": "2026-10-26T15:20:20.638Z",
+      "ultima_sync": "2026-11-02T14:59:10.166Z",
       "articulos": 900,
       "nuevos": 0,
       "años": 3
     },
     "regionalista": {
       "nombre": "Regionalista",
-      "ultima_sync": "2026-10-26T15:20:22.109Z",
+      "ultima_sync": "2026-11-02T14:59:11.661Z",
       "articulos": 9593,
       "nuevos": 0,
       "años": 4
     },
     "rioenlinea": {
       "nombre": "Río en Línea",
-      "ultima_sync": "2026-10-26T15:20:23.335Z",
+      "ultima_sync": "2026-11-02T14:59:12.660Z",
       "articulos": 19528,
       "nuevos": 0,
       "años": 9
     },
     "sancarlosonline": {
       "nombre": "San Carlos On Line",
-      "ultima_sync": "2026-10-26T15:20:25.479Z",
-      "articulos": 42879,
-      "nuevos": 33,
+      "ultima_sync": "2026-11-02T14:59:14.630Z",
+      "articulos": 42937,
+      "nuevos": 58,
       "años": 16
     },
     "seranoticia": {
       "nombre": "Sera Noticia",
-      "ultima_sync": "2026-10-26T15:20:30.563Z",
+      "ultima_sync": "2026-11-02T14:59:19.629Z",
       "articulos": 9386,
       "nuevos": 0,
       "años": 7
     },
     "serenaycoquimbo": {
       "nombre": "Serena y Coquimbo",
-      "ultima_sync": "2026-10-26T15:20:33.319Z",
-      "articulos": 40923,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-02T14:59:23.378Z",
+      "articulos": 40971,
+      "nuevos": 48,
       "años": 14
     },
     "sitiodelsuceso": {
       "nombre": "Sitio del Suceso",
-      "ultima_sync": "2026-10-26T15:20:37.537Z",
+      "ultima_sync": "2026-11-02T14:59:26.824Z",
       "articulos": 5512,
       "nuevos": 0,
       "años": 4
     },
     "temucodiario": {
       "nombre": "Temuco Diario",
-      "ultima_sync": "2026-10-26T15:20:38.318Z",
+      "ultima_sync": "2026-11-02T14:59:27.325Z",
       "articulos": 8147,
       "nuevos": 0,
       "años": 8
     },
     "traiguencity": {
       "nombre": "Traiguén City",
-      "ultima_sync": "2026-10-26T15:20:41.314Z",
+      "ultima_sync": "2026-11-02T14:59:29.880Z",
       "articulos": 7788,
       "nuevos": 0,
       "años": 14
     },
     "tiempo21": {
       "nombre": "Tiempo 21",
-      "ultima_sync": "2026-10-26T15:20:43.051Z",
+      "ultima_sync": "2026-11-02T14:59:31.591Z",
       "articulos": 0,
       "nuevos": 0,
       "años": 0
@@ -2826,70 +2826,70 @@
     },
     "radiomaria": {
       "nombre": "Radio María Chile",
-      "ultima_sync": "2026-10-26T15:20:48.613Z",
+      "ultima_sync": "2026-11-02T14:59:37.788Z",
       "articulos": 104,
       "nuevos": 0,
       "años": 1
     },
     "tomealdia": {
       "nombre": "Tomé al Día",
-      "ultima_sync": "2026-10-26T15:20:50.248Z",
+      "ultima_sync": "2026-11-02T14:59:39.767Z",
       "articulos": 2257,
       "nuevos": 0,
       "años": 13
     },
     "vallenardigital": {
       "nombre": "Vallenar Digital",
-      "ultima_sync": "2026-10-26T15:20:52.927Z",
+      "ultima_sync": "2026-11-02T14:59:42.898Z",
       "articulos": 26304,
       "nuevos": 0,
       "años": 15
     },
     "agenciadenoticias": {
       "nombre": "Agencia de Noticias",
-      "ultima_sync": "2026-10-26T15:20:53.503Z",
+      "ultima_sync": "2026-11-02T14:59:44.890Z",
       "articulos": 703,
       "nuevos": 0,
       "años": 5
     },
     "elminuto": {
       "nombre": "El Minuto",
-      "ultima_sync": "2026-10-26T15:20:54.974Z",
-      "articulos": 720,
-      "nuevos": 11,
+      "ultima_sync": "2026-11-02T14:59:46.749Z",
+      "articulos": 742,
+      "nuevos": 22,
       "años": 3
     },
     "villarricaldia": {
       "nombre": "Villarrica al Día",
-      "ultima_sync": "2026-10-26T15:20:56.616Z",
+      "ultima_sync": "2026-11-02T14:59:48.493Z",
       "articulos": 77,
       "nuevos": 0,
       "años": 1
     },
     "fmcentro": {
       "nombre": "Radio FM Centro",
-      "ultima_sync": "2026-10-26T15:20:58.420Z",
+      "ultima_sync": "2026-11-02T14:59:50.452Z",
       "articulos": 4733,
-      "nuevos": 3,
+      "nuevos": 0,
       "años": 6
     },
     "radioriquelme": {
       "nombre": "Radio Riquelme",
-      "ultima_sync": "2026-10-26T15:20:59.529Z",
+      "ultima_sync": "2026-11-02T14:59:51.567Z",
       "articulos": 14664,
       "nuevos": 0,
       "años": 8
     },
     "portalmetropolitano": {
       "nombre": "Portal Metropolitano",
-      "ultima_sync": "2026-10-26T15:21:01.543Z",
+      "ultima_sync": "2026-11-02T14:59:53.608Z",
       "articulos": 13130,
       "nuevos": 0,
       "años": 5
     },
     "vivimoslanoticia": {
       "nombre": "Vivimos la Noticia",
-      "ultima_sync": "2026-10-26T15:21:02.325Z",
+      "ultima_sync": "2026-11-02T14:59:54.196Z",
       "articulos": 0,
       "nuevos": 0,
       "años": 0
@@ -2903,177 +2903,177 @@
     },
     "laprensadiariolaprensa": {
       "nombre": "La Prensa",
-      "ultima_sync": "2026-10-26T15:21:09.588Z",
+      "ultima_sync": "2026-11-02T15:00:02.244Z",
       "articulos": 19076,
-      "nuevos": 50,
+      "nuevos": 0,
       "años": 6
     },
     "miradasurtv": {
       "nombre": "Mirada Sur TV",
-      "ultima_sync": "2026-10-26T15:21:10.516Z",
-      "articulos": 4282,
-      "nuevos": 47,
+      "ultima_sync": "2026-11-02T15:00:02.884Z",
+      "articulos": 4372,
+      "nuevos": 90,
       "años": 2
     },
     "ovejeronoticias": {
       "nombre": "Ovejero Noticias",
-      "ultima_sync": "2026-10-26T15:21:12.044Z",
+      "ultima_sync": "2026-11-02T15:00:04.337Z",
       "articulos": 0,
       "nuevos": 0,
       "años": 0
     },
     "diarioavisale": {
       "nombre": "Diario Avísale",
-      "ultima_sync": "2026-10-26T15:21:15.222Z",
+      "ultima_sync": "2026-11-02T15:00:07.847Z",
       "articulos": 815,
       "nuevos": 0,
       "años": 1
     },
     "bbc": {
       "nombre": "BBC Mundo",
-      "ultima_sync": "2026-10-26T15:21:32.997Z",
+      "ultima_sync": "2026-11-02T15:00:29.018Z",
       "articulos": 100,
       "nuevos": 0,
       "años": 1
     },
     "mercopress": {
       "nombre": "MercoPress",
-      "ultima_sync": "2026-10-09T16:28:36.779Z",
-      "articulos": 46775,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-02T15:00:59.809Z",
+      "articulos": 46892,
+      "nuevos": 117,
       "años": 14
     },
     "santiagotimes": {
       "nombre": "Santiago Times",
-      "ultima_sync": "2026-10-26T15:23:02.614Z",
+      "ultima_sync": "2026-11-02T15:01:08.055Z",
       "articulos": 490,
       "nuevos": 0,
       "años": 5
     },
     "elproa": {
       "nombre": "El Proa",
-      "ultima_sync": "2026-10-26T15:23:03.620Z",
+      "ultima_sync": "2026-11-02T15:01:08.902Z",
       "articulos": 19196,
       "nuevos": 0,
       "años": 6
     },
     "infotarapaca": {
       "nombre": "Info Tarapacá",
-      "ultima_sync": "2026-10-26T15:23:05.399Z",
+      "ultima_sync": "2026-11-02T15:01:10.559Z",
       "articulos": 1010,
       "nuevos": 0,
       "años": 2
     },
     "tarapacaonline": {
       "nombre": "Tarapacá Online",
-      "ultima_sync": "2026-10-26T15:23:06.664Z",
+      "ultima_sync": "2026-11-02T15:01:13.241Z",
       "articulos": 4980,
       "nuevos": 0,
       "años": 3
     },
     "chanarcillo": {
       "nombre": "Diario Chañarcillo",
-      "ultima_sync": "2026-10-26T15:23:08.546Z",
+      "ultima_sync": "2026-11-02T15:01:15.031Z",
       "articulos": 35415,
       "nuevos": 0,
       "años": 10
     },
     "edicioncero": {
       "nombre": "Edición Cero",
-      "ultima_sync": "2026-10-26T15:23:11.193Z",
+      "ultima_sync": "2026-11-02T15:01:17.752Z",
       "articulos": 27000,
       "nuevos": 0,
       "años": 16
     },
     "xox": {
       "nombre": "XOX.cl",
-      "ultima_sync": "2026-10-26T15:23:12.979Z",
+      "ultima_sync": "2026-11-02T15:01:22.696Z",
       "articulos": 85,
       "nuevos": 0,
       "años": 2
     },
     "vozdeamerica": {
       "nombre": "Voz de América",
-      "ultima_sync": "2026-10-26T15:23:14.245Z",
+      "ultima_sync": "2026-11-02T15:01:24.288Z",
       "articulos": 254425,
       "nuevos": 0,
       "años": 25
     },
     "ipsnoticias": {
       "nombre": "IPS Agencia de Noticias",
-      "ultima_sync": "2026-10-26T15:23:15.709Z",
-      "articulos": 111138,
-      "nuevos": 1,
+      "ultima_sync": "2026-11-02T15:01:26.047Z",
+      "articulos": 111140,
+      "nuevos": 2,
       "años": 33
     },
     "lemondediplomatique": {
       "nombre": "Le Monde Diplomatique - Edición Chilena",
-      "ultima_sync": "2026-10-26T15:23:18.006Z",
+      "ultima_sync": "2026-11-02T15:01:30.477Z",
       "articulos": 27,
       "nuevos": 0,
       "años": 1
     },
     "defensacivil": {
       "nombre": "Defensa Civil de Chile",
-      "ultima_sync": "2026-10-26T15:23:19.898Z",
+      "ultima_sync": "2026-11-02T15:01:35.893Z",
       "articulos": 237,
       "nuevos": 0,
       "años": 4
     },
     "elperiodicodelaenergia": {
       "nombre": "El Periódico de la Energía",
-      "ultima_sync": "2026-10-26T15:23:21.245Z",
+      "ultima_sync": "2026-11-02T15:01:36.869Z",
       "articulos": 92852,
       "nuevos": 0,
       "años": 13
     },
     "nexos": {
       "nombre": "Nexos Chile",
-      "ultima_sync": "2026-10-26T15:23:23.460Z",
+      "ultima_sync": "2026-11-02T15:01:37.100Z",
       "articulos": 39,
       "nuevos": 0,
       "años": 1
     },
     "pvmagazine": {
       "nombre": "pv magazine Latin America",
-      "ultima_sync": "2026-10-22T01:34:01.077Z",
+      "ultima_sync": "2026-11-02T15:01:39.503Z",
       "articulos": 1000,
       "nuevos": 0,
       "años": 2
     },
     "capa9": {
       "nombre": "Capa9",
-      "ultima_sync": "2026-10-26T15:24:16.505Z",
-      "articulos": 37468,
-      "nuevos": 72,
+      "ultima_sync": "2026-11-02T15:01:43.838Z",
+      "articulos": 37492,
+      "nuevos": 24,
       "años": 18
     },
     "coaniquem": {
       "nombre": "Coaniquem",
-      "ultima_sync": "2026-10-26T15:24:17.642Z",
+      "ultima_sync": "2026-11-02T15:01:44.825Z",
       "articulos": 83,
       "nuevos": 0,
       "años": 7
     },
     "ansalatina": {
       "nombre": "ANSA Latina",
-      "ultima_sync": "2026-10-26T15:24:19.083Z",
-      "articulos": 1135,
-      "nuevos": 136,
+      "ultima_sync": "2026-11-02T15:01:47.900Z",
+      "articulos": 1256,
+      "nuevos": 121,
       "años": 1
     },
     "eldefinido": {
       "nombre": "El Definido",
-      "ultima_sync": "2026-10-26T15:24:21.515Z",
+      "ultima_sync": "2026-11-02T15:01:49.157Z",
       "articulos": 0,
       "nuevos": 0,
       "años": 0
     },
     "elpinguino": {
       "nombre": "El Pingüino",
-      "ultima_sync": "2026-10-26T15:24:22.472Z",
-      "articulos": 194396,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-02T15:01:51.442Z",
+      "articulos": 194424,
+      "nuevos": 28,
       "años": 19
     },
     "reuters": {
@@ -3085,175 +3085,175 @@
     },
     "elfiltrador": {
       "nombre": "El Filtrador",
-      "ultima_sync": "2026-10-26T15:24:44.087Z",
+      "ultima_sync": "2026-11-02T15:02:21.916Z",
       "articulos": 22703,
       "nuevos": 0,
       "años": 9
     },
     "tvn": {
       "nombre": "TVN",
-      "ultima_sync": "2026-10-26T15:24:44.877Z",
-      "articulos": 69950,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-02T15:02:22.229Z",
+      "articulos": 70031,
+      "nuevos": 81,
       "años": 5
     },
     "duna": {
       "nombre": "Radio Duna",
-      "ultima_sync": "2026-10-26T15:24:45.772Z",
+      "ultima_sync": "2026-11-02T15:02:23.073Z",
       "articulos": 59793,
       "nuevos": 0,
       "años": 2
     },
     "terra": {
       "nombre": "Terra Chile",
-      "ultima_sync": "2026-10-26T15:24:46.187Z",
-      "articulos": 43175,
-      "nuevos": 12,
+      "ultima_sync": "2026-11-02T15:02:23.452Z",
+      "articulos": 43198,
+      "nuevos": 23,
       "años": 6
     },
     "elregionalista": {
       "nombre": "El Regionalista",
-      "ultima_sync": "2026-10-26T15:24:47.531Z",
+      "ultima_sync": "2026-11-02T15:02:25.048Z",
       "articulos": 2126,
       "nuevos": 0,
       "años": 6
     },
     "concierto": {
       "nombre": "Radio Concierto",
-      "ultima_sync": "2026-10-26T15:24:48.223Z",
+      "ultima_sync": "2026-11-02T15:02:26.631Z",
       "articulos": 137,
       "nuevos": 0,
       "años": 1
     },
     "pagina7": {
       "nombre": "Página 7",
-      "ultima_sync": "2026-10-26T15:24:49.819Z",
-      "articulos": 223058,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-02T15:02:28.286Z",
+      "articulos": 223128,
+      "nuevos": 70,
       "años": 13
     },
     "lasegunda": {
       "nombre": "La Segunda",
-      "ultima_sync": "2026-10-09T20:09:56.241Z",
-      "articulos": 903529,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-02T15:02:35.277Z",
+      "articulos": 903546,
+      "nuevos": 17,
       "años": 21
     },
     "espaciopublico": {
       "nombre": "Espacio Público",
-      "ultima_sync": "2026-10-26T15:24:58.574Z",
+      "ultima_sync": "2026-11-02T15:02:38.927Z",
       "articulos": 2000,
       "nuevos": 0,
       "años": 9
     },
     "lavozdepucon": {
       "nombre": "La Voz de Pucón",
-      "ultima_sync": "2026-10-26T15:24:59.586Z",
+      "ultima_sync": "2026-11-02T15:02:39.873Z",
       "articulos": 4782,
       "nuevos": 0,
       "años": 9
     },
     "regiondecoquimbo": {
       "nombre": "Región de Coquimbo",
-      "ultima_sync": "2026-10-26T15:25:00.569Z",
+      "ultima_sync": "2026-11-02T15:02:41.004Z",
       "articulos": 4424,
       "nuevos": 0,
       "años": 5
     },
     "primerafuente": {
       "nombre": "Primera Fuente",
-      "ultima_sync": "2026-10-26T15:25:01.351Z",
+      "ultima_sync": "2026-11-02T15:02:58.271Z",
       "articulos": 4386,
       "nuevos": 0,
       "años": 4
     },
     "diarioaconcagua": {
       "nombre": "Diario Aconcagua",
-      "ultima_sync": "2026-10-26T15:25:01.883Z",
+      "ultima_sync": "2026-11-02T15:02:58.736Z",
       "articulos": 3659,
       "nuevos": 0,
       "años": 11
     },
     "dialogosur": {
       "nombre": "Diálogo Sur",
-      "ultima_sync": "2026-10-26T15:33:22.835Z",
+      "ultima_sync": "2026-11-02T15:03:52.431Z",
       "articulos": 41506,
       "nuevos": 0,
       "años": 15
     },
     "elhuemul": {
       "nombre": "El Huemul",
-      "ultima_sync": "2026-10-26T15:33:23.281Z",
+      "ultima_sync": "2026-11-02T15:03:53.206Z",
       "articulos": 812,
       "nuevos": 0,
       "años": 3
     },
     "hvaradio": {
       "nombre": "Radio HVA",
-      "ultima_sync": "2026-10-26T15:33:24.404Z",
+      "ultima_sync": "2026-11-02T15:03:54.491Z",
       "articulos": 16510,
       "nuevos": 0,
       "años": 8
     },
     "cauquenesnet": {
       "nombre": "CauquenesNet",
-      "ultima_sync": "2026-10-26T15:33:24.719Z",
+      "ultima_sync": "2026-11-02T15:03:55.534Z",
       "articulos": 20478,
       "nuevos": 0,
       "años": 19
     },
     "diariofutrono": {
       "nombre": "Diario Futrono",
-      "ultima_sync": "2026-10-26T15:33:25.900Z",
-      "articulos": 57106,
-      "nuevos": 50,
+      "ultima_sync": "2026-11-02T15:03:56.766Z",
+      "articulos": 57212,
+      "nuevos": 106,
       "años": 14
     },
     "panoramicaysen": {
       "nombre": "PanoramicAysén",
-      "ultima_sync": "2026-10-26T15:33:44.009Z",
+      "ultima_sync": "2026-11-02T15:03:57.289Z",
       "articulos": 3840,
       "nuevos": 0,
       "años": 3
     },
     "mapuchediario": {
       "nombre": "Diario Mapuche",
-      "ultima_sync": "2026-10-26T15:33:45.865Z",
+      "ultima_sync": "2026-11-02T15:03:58.848Z",
       "articulos": 1298,
       "nuevos": 0,
       "años": 5
     },
     "aysentv": {
       "nombre": "Aysén TV",
-      "ultima_sync": "2026-10-26T15:33:47.713Z",
+      "ultima_sync": "2026-11-02T15:04:00.863Z",
       "articulos": 1013,
       "nuevos": 0,
       "años": 3
     },
     "aricachile": {
       "nombre": "Arica Chile",
-      "ultima_sync": "2026-10-26T15:33:49.234Z",
+      "ultima_sync": "2026-11-02T15:04:02.273Z",
       "articulos": 5785,
       "nuevos": 0,
       "años": 10
     },
     "udi": {
       "nombre": "UDI (Unión Demócrata Independiente)",
-      "ultima_sync": "2026-10-26T15:33:52.213Z",
+      "ultima_sync": "2026-11-02T15:04:05.352Z",
       "articulos": 142,
       "nuevos": 0,
       "años": 5
     },
     "espacioregional": {
       "nombre": "Espacio Regional",
-      "ultima_sync": "2026-10-26T15:33:58.108Z",
+      "ultima_sync": "2026-11-02T15:04:08.564Z",
       "articulos": 1121,
       "nuevos": 0,
       "años": 9
     },
     "diario_uach": {
       "nombre": "Diario UACh",
-      "ultima_sync": "2026-10-26T15:33:58.987Z",
+      "ultima_sync": "2026-11-02T15:04:09.439Z",
       "articulos": 58672,
       "nuevos": 0,
       "años": 25
@@ -3267,133 +3267,133 @@
     },
     "partidoigualdad": {
       "nombre": "Partido Igualdad",
-      "ultima_sync": "2026-10-26T15:34:05.543Z",
+      "ultima_sync": "2026-11-02T15:04:16.056Z",
       "articulos": 296,
       "nuevos": 0,
       "años": 11
     },
     "isl": {
       "nombre": "Instituto de Seguridad Laboral",
-      "ultima_sync": "2026-10-26T15:34:05.930Z",
+      "ultima_sync": "2026-11-02T15:04:16.727Z",
       "articulos": 885,
       "nuevos": 0,
       "años": 3
     },
     "ogmdh": {
       "nombre": "Observatorio de Gobernanza Migratoria y DDHH",
-      "ultima_sync": "2026-10-26T15:34:06.853Z",
+      "ultima_sync": "2026-11-02T15:04:17.843Z",
       "articulos": 178,
       "nuevos": 0,
       "años": 2
     },
     "ruta2050": {
       "nombre": "Ruta 2050",
-      "ultima_sync": "2026-10-26T15:34:08.026Z",
+      "ultima_sync": "2026-11-02T15:04:19.900Z",
       "articulos": 501,
       "nuevos": 0,
       "años": 3
     },
     "puertoapuerto": {
       "nombre": "Puerto a Puerto",
-      "ultima_sync": "2026-10-26T15:34:10.346Z",
+      "ultima_sync": "2026-11-02T15:04:22.144Z",
       "articulos": 253,
       "nuevos": 0,
       "años": 9
     },
     "ccs": {
       "nombre": "Cámara de Comercio de Santiago",
-      "ultima_sync": "2026-10-26T15:34:15.334Z",
+      "ultima_sync": "2026-11-02T15:04:23.251Z",
       "articulos": 1148,
       "nuevos": 0,
       "años": 7
     },
     "trnoticias": {
       "nombre": "Tu Región Noticias",
-      "ultima_sync": "2026-10-26T15:34:15.722Z",
+      "ultima_sync": "2026-11-02T15:04:24.687Z",
       "articulos": 1307,
       "nuevos": 0,
       "años": 2
     },
     "iquiquehoy": {
       "nombre": "Iquique Hoy",
-      "ultima_sync": "2026-10-26T15:34:18.367Z",
-      "articulos": 5268,
-      "nuevos": 12,
+      "ultima_sync": "2026-11-02T15:04:27.367Z",
+      "articulos": 5292,
+      "nuevos": 24,
       "años": 7
     },
     "santacruzfm": {
       "nombre": "Radio Santa Cruz",
-      "ultima_sync": "2026-10-26T15:34:19.393Z",
+      "ultima_sync": "2026-11-02T15:04:28.051Z",
       "articulos": 2209,
       "nuevos": 0,
       "años": 6
     },
     "elamerica": {
       "nombre": "El América",
-      "ultima_sync": "2026-10-26T15:34:22.806Z",
+      "ultima_sync": "2026-11-02T15:04:29.723Z",
       "articulos": 14786,
       "nuevos": 0,
       "años": 4
     },
     "capodeprovincia": {
       "nombre": "El Capo de Provincia",
-      "ultima_sync": "2026-10-26T15:34:24.610Z",
+      "ultima_sync": "2026-11-02T15:04:30.985Z",
       "articulos": 1856,
       "nuevos": 0,
       "años": 17
     },
     "diariochiloe": {
       "nombre": "Diario Chiloé",
-      "ultima_sync": "2026-10-26T15:34:26.083Z",
-      "articulos": 20151,
-      "nuevos": 49,
+      "ultima_sync": "2026-11-02T15:04:32.333Z",
+      "articulos": 20210,
+      "nuevos": 59,
       "años": 10
     },
     "diariopaillaco": {
       "nombre": "Diario Paillaco",
-      "ultima_sync": "2026-10-26T15:34:27.663Z",
-      "articulos": 56900,
-      "nuevos": 46,
+      "ultima_sync": "2026-11-02T15:04:34.335Z",
+      "articulos": 56994,
+      "nuevos": 94,
       "años": 14
     },
     "curacavidigital": {
       "nombre": "Curicaví Digital",
-      "ultima_sync": "2026-10-26T15:34:28.300Z",
+      "ultima_sync": "2026-11-02T15:04:34.710Z",
       "articulos": 2297,
       "nuevos": 0,
       "años": 14
     },
     "diariosanjose": {
       "nombre": "Diario San José",
-      "ultima_sync": "2026-10-26T15:34:30.248Z",
-      "articulos": 43434,
-      "nuevos": 44,
+      "ultima_sync": "2026-11-02T15:04:35.960Z",
+      "articulos": 43517,
+      "nuevos": 83,
       "años": 9
     },
     "patagonianews": {
       "nombre": "Patagonia News",
-      "ultima_sync": "2026-10-26T15:34:32.187Z",
+      "ultima_sync": "2026-11-02T15:04:37.427Z",
       "articulos": 1080,
       "nuevos": 0,
       "años": 8
     },
     "aysenahora": {
       "nombre": "Aysén Ahora",
-      "ultima_sync": "2026-10-26T15:34:34.470Z",
+      "ultima_sync": "2026-11-02T15:04:39.724Z",
       "articulos": 1135,
       "nuevos": 0,
       "años": 3
     },
     "radiofestival": {
       "nombre": "Radio Festival",
-      "ultima_sync": "2026-10-26T15:34:35.703Z",
+      "ultima_sync": "2026-11-02T15:04:41.556Z",
       "articulos": 33002,
       "nuevos": 0,
       "años": 12
     },
     "losriosaldia": {
       "nombre": "Los Ríos al Día",
-      "ultima_sync": "2026-10-26T15:34:39.485Z",
+      "ultima_sync": "2026-11-02T15:04:48.081Z",
       "articulos": 20350,
       "nuevos": 0,
       "años": 14
@@ -3407,217 +3407,217 @@
     },
     "calamaenlinea": {
       "nombre": "Calama en Línea",
-      "ultima_sync": "2026-10-26T15:34:44.421Z",
+      "ultima_sync": "2026-11-02T15:04:53.450Z",
       "articulos": 17604,
       "nuevos": 0,
       "años": 7
     },
     "demaracordilleratv": {
       "nombre": "De Mar a Cordillera TV",
-      "ultima_sync": "2026-10-26T15:34:44.959Z",
+      "ultima_sync": "2026-11-02T15:04:54.206Z",
       "articulos": 4725,
       "nuevos": 0,
       "años": 6
     },
     "elpuelche": {
       "nombre": "Radio El Puelche",
-      "ultima_sync": "2026-10-26T15:34:48.091Z",
+      "ultima_sync": "2026-11-02T15:04:55.529Z",
       "articulos": 1158,
       "nuevos": 0,
       "años": 18
     },
     "elaconcagua": {
       "nombre": "El Aconcagua",
-      "ultima_sync": "2026-10-26T15:34:51.146Z",
+      "ultima_sync": "2026-11-02T15:04:57.862Z",
       "articulos": 7682,
       "nuevos": 0,
       "años": 11
     },
     "cabreroenlinea": {
       "nombre": "Cabrero en Línea",
-      "ultima_sync": "2026-10-26T15:34:53.337Z",
+      "ultima_sync": "2026-11-02T15:04:58.868Z",
       "articulos": 14119,
       "nuevos": 0,
       "años": 1
     },
     "radiovalparaiso": {
       "nombre": "Radio Valparaíso",
-      "ultima_sync": "2026-10-26T15:34:53.965Z",
+      "ultima_sync": "2026-11-02T15:04:59.651Z",
       "articulos": 843,
       "nuevos": 0,
       "años": 3
     },
     "noticiasubiobio": {
       "nombre": "Noticias U. del Bío-Bío",
-      "ultima_sync": "2026-10-26T15:34:55.550Z",
+      "ultima_sync": "2026-11-02T15:05:01.988Z",
       "articulos": 9177,
       "nuevos": 0,
       "años": 15
     },
     "actualidadudla": {
       "nombre": "Actualidad UDLA",
-      "ultima_sync": "2026-10-26T15:34:56.927Z",
+      "ultima_sync": "2026-11-02T15:05:03.533Z",
       "articulos": 7566,
       "nuevos": 0,
       "años": 7
     },
     "lyd": {
       "nombre": "Libertad y Desarrollo",
-      "ultima_sync": "2026-10-26T15:34:58.606Z",
+      "ultima_sync": "2026-11-02T15:05:05.208Z",
       "articulos": 15460,
       "nuevos": 0,
       "años": 33
     },
     "prensaeventos": {
       "nombre": "Prensa Eventos",
-      "ultima_sync": "2026-10-26T15:34:59.758Z",
+      "ultima_sync": "2026-11-02T15:05:06.455Z",
       "articulos": 11862,
       "nuevos": 0,
       "años": 11
     },
     "revistanos": {
       "nombre": "Revista NOS",
-      "ultima_sync": "2026-10-26T15:35:00.695Z",
+      "ultima_sync": "2026-11-02T15:05:07.556Z",
       "articulos": 7129,
       "nuevos": 0,
       "años": 22
     },
     "colegiodeprofesores": {
       "nombre": "Colegio de Profesores",
-      "ultima_sync": "2026-10-26T15:35:01.524Z",
+      "ultima_sync": "2026-11-02T15:05:08.066Z",
       "articulos": 6178,
       "nuevos": 0,
       "años": 11
     },
     "disorder": {
       "nombre": "Disorder (magazine)",
-      "ultima_sync": "2026-10-26T15:35:03.499Z",
+      "ultima_sync": "2026-11-02T15:05:09.706Z",
       "articulos": 5642,
       "nuevos": 0,
       "años": 18
     },
     "cbs": {
       "nombre": "Cuerpo de Bomberos de Santiago",
-      "ultima_sync": "2026-10-26T15:35:04.112Z",
+      "ultima_sync": "2026-11-02T15:05:10.560Z",
       "articulos": 2113,
       "nuevos": 0,
       "años": 6
     },
     "dep": {
       "nombre": "Dirección de Educación Pública",
-      "ultima_sync": "2026-10-26T15:35:05.068Z",
+      "ultima_sync": "2026-11-02T15:05:11.290Z",
       "articulos": 1170,
       "nuevos": 0,
       "años": 11
     },
     "vialidad": {
       "nombre": "Dirección de Vialidad (MOP)",
-      "ultima_sync": "2026-10-26T15:35:06.848Z",
+      "ultima_sync": "2026-11-02T15:05:13.070Z",
       "articulos": 1178,
       "nuevos": 0,
       "años": 18
     },
     "anepe": {
       "nombre": "ANEPE (empleados públicos)",
-      "ultima_sync": "2026-10-26T15:35:08.350Z",
+      "ultima_sync": "2026-11-02T15:05:14.596Z",
       "articulos": 767,
       "nuevos": 0,
       "años": 7
     },
     "anci": {
       "nombre": "ANI (Agencia Nacional de Ciberseguridad)",
-      "ultima_sync": "2026-10-26T15:35:08.984Z",
+      "ultima_sync": "2026-11-02T15:05:15.048Z",
       "articulos": 808,
       "nuevos": 0,
       "años": 8
     },
     "dicrep": {
       "nombre": "DICREP (Crédito Prendario)",
-      "ultima_sync": "2026-10-26T15:35:09.276Z",
+      "ultima_sync": "2026-11-02T15:05:15.781Z",
       "articulos": 395,
       "nuevos": 0,
       "años": 7
     },
     "duplos": {
       "nombre": "Duplos",
-      "ultima_sync": "2026-10-26T15:35:14.580Z",
-      "articulos": 27223,
-      "nuevos": 57,
+      "ultima_sync": "2026-11-02T15:05:19.765Z",
+      "articulos": 27240,
+      "nuevos": 17,
       "años": 7
     },
     "diarioelmarino": {
       "nombre": "El Marino (Pichilemu)",
-      "ultima_sync": "2026-10-26T15:35:15.129Z",
+      "ultima_sync": "2026-11-02T15:05:20.639Z",
       "articulos": 18029,
       "nuevos": 0,
       "años": 26
     },
     "aricahoy": {
       "nombre": "Arica Hoy",
-      "ultima_sync": "2026-10-26T15:35:16.213Z",
+      "ultima_sync": "2026-11-02T15:05:21.767Z",
       "articulos": 12540,
       "nuevos": 0,
       "años": 15
     },
     "radiopolar": {
       "nombre": "Radio Polar (Magallanes)",
-      "ultima_sync": "2026-10-26T15:35:16.879Z",
+      "ultima_sync": "2026-11-02T15:05:22.101Z",
       "articulos": 8885,
       "nuevos": 0,
       "años": 2
     },
     "tvosanvicente": {
       "nombre": "TVO San Vicente",
-      "ultima_sync": "2026-10-26T15:35:17.475Z",
+      "ultima_sync": "2026-11-02T15:05:23.199Z",
       "articulos": 9005,
       "nuevos": 0,
       "años": 13
     },
     "desiertofm": {
       "nombre": "Desierto FM (Antofagasta)",
-      "ultima_sync": "2026-10-26T15:35:18.002Z",
+      "ultima_sync": "2026-11-02T15:05:24.182Z",
       "articulos": 9551,
       "nuevos": 0,
       "años": 4
     },
     "loslagosaldia": {
       "nombre": "Los Lagos al Día",
-      "ultima_sync": "2026-10-26T15:35:19.075Z",
+      "ultima_sync": "2026-11-02T15:05:24.974Z",
       "articulos": 6044,
       "nuevos": 0,
       "años": 2
     },
     "tvcanal5": {
       "nombre": "TV Canal 5 (Puerto Montt)",
-      "ultima_sync": "2026-10-26T15:35:19.340Z",
+      "ultima_sync": "2026-11-02T15:05:25.462Z",
       "articulos": 5712,
       "nuevos": 0,
       "años": 7
     },
     "fresiaahora": {
       "nombre": "Fresia Ahora",
-      "ultima_sync": "2026-10-26T15:35:20.562Z",
+      "ultima_sync": "2026-11-02T15:05:27.016Z",
       "articulos": 4529,
       "nuevos": 0,
       "años": 6
     },
     "diarioelnortino": {
       "nombre": "El Nortino (Alto Hospicio)",
-      "ultima_sync": "2026-10-26T15:35:22.596Z",
+      "ultima_sync": "2026-11-02T15:06:07.627Z",
       "articulos": 4333,
       "nuevos": 0,
       "años": 7
     },
     "verticetv": {
       "nombre": "Vértice TV (Puerto Montt)",
-      "ultima_sync": "2026-10-26T15:35:27.424Z",
-      "articulos": 1577,
-      "nuevos": 27,
+      "ultima_sync": "2026-11-02T15:06:14.419Z",
+      "articulos": 1642,
+      "nuevos": 65,
       "años": 2
     },
     "misanfelipe": {
       "nombre": "Mi San Felipe",
-      "ultima_sync": "2026-10-26T15:35:28.069Z",
+      "ultima_sync": "2026-11-02T15:06:15.971Z",
       "articulos": 516,
       "nuevos": 0,
       "años": 5
@@ -3631,119 +3631,119 @@
     },
     "radiosiente": {
       "nombre": "Radio Siente (Arica)",
-      "ultima_sync": "2026-10-26T15:35:33.673Z",
+      "ultima_sync": "2026-11-02T15:06:22.248Z",
       "articulos": 244,
       "nuevos": 0,
       "años": 11
     },
     "aricastv": {
       "nombre": "Arica TV",
-      "ultima_sync": "2026-10-26T15:35:36.454Z",
+      "ultima_sync": "2026-11-02T15:06:24.676Z",
       "articulos": 201,
       "nuevos": 0,
       "años": 2
     },
     "altoladehesa": {
       "nombre": "Alto La Dehesa",
-      "ultima_sync": "2026-10-26T15:35:40.300Z",
+      "ultima_sync": "2026-11-02T15:06:31.106Z",
       "articulos": 23,
       "nuevos": 0,
       "años": 4
     },
     "esperanzafm": {
       "nombre": "Esperanza FM (Biobío / Los Lagos)",
-      "ultima_sync": "2026-10-26T15:35:41.844Z",
+      "ultima_sync": "2026-11-02T15:06:32.812Z",
       "articulos": 1394,
       "nuevos": 0,
       "años": 3
     },
     "futurafm": {
       "nombre": "Futura FM (Talca)",
-      "ultima_sync": "2026-10-26T15:35:42.794Z",
+      "ultima_sync": "2026-11-02T15:06:34.130Z",
       "articulos": 8255,
       "nuevos": 0,
       "años": 4
     },
     "infinita": {
       "nombre": "Radio Infinita",
-      "ultima_sync": "2026-10-26T15:35:42.994Z",
+      "ultima_sync": "2026-11-02T15:06:34.519Z",
       "articulos": 268,
       "nuevos": 0,
       "años": 1
     },
     "nuevotropezon": {
       "nombre": "Tropezón Tu Diario",
-      "ultima_sync": "2026-10-26T15:35:43.992Z",
+      "ultima_sync": "2026-11-02T15:06:35.795Z",
       "articulos": 1318,
       "nuevos": 0,
       "años": 3
     },
     "eldiariodesantiago": {
       "nombre": "El Diario de Santiago",
-      "ultima_sync": "2026-10-26T15:35:44.342Z",
+      "ultima_sync": "2026-11-02T15:06:36.238Z",
       "articulos": 23686,
       "nuevos": 0,
       "años": 6
     },
     "radiocomunicativa": {
       "nombre": "Radio Comunicativa (Ovalle)",
-      "ultima_sync": "2026-10-26T15:35:46.385Z",
-      "articulos": 15695,
-      "nuevos": 35,
+      "ultima_sync": "2026-11-02T15:06:39.668Z",
+      "articulos": 15759,
+      "nuevos": 64,
       "años": 14
     },
     "radiouniversal": {
       "nombre": "Radio Universal",
-      "ultima_sync": "2026-10-26T15:35:47.811Z",
+      "ultima_sync": "2026-11-02T15:06:40.879Z",
       "articulos": 13000,
       "nuevos": 0,
       "años": 6
     },
     "radiomelodia": {
       "nombre": "Radio Melodía",
-      "ultima_sync": "2026-10-26T15:35:48.164Z",
+      "ultima_sync": "2026-11-02T15:06:41.318Z",
       "articulos": 12042,
       "nuevos": 0,
       "años": 2
     },
     "radioacogida": {
       "nombre": "Radio Acogida",
-      "ultima_sync": "2026-10-26T15:35:49.164Z",
+      "ultima_sync": "2026-11-02T15:06:42.542Z",
       "articulos": 2777,
       "nuevos": 0,
       "años": 3
     },
     "radiobeat": {
       "nombre": "Radio Beat",
-      "ultima_sync": "2026-10-26T15:35:51.118Z",
+      "ultima_sync": "2026-11-02T15:06:44.244Z",
       "articulos": 151,
       "nuevos": 0,
       "años": 5
     },
     "galactika": {
       "nombre": "Radio Galactika",
-      "ultima_sync": "2026-10-26T15:35:51.209Z",
+      "ultima_sync": "2026-11-02T15:06:44.524Z",
       "articulos": 195,
       "nuevos": 0,
       "años": 6
     },
     "carolina": {
       "nombre": "Radio Carolina",
-      "ultima_sync": "2026-10-26T15:35:51.646Z",
+      "ultima_sync": "2026-11-02T15:06:44.960Z",
       "articulos": 191,
       "nuevos": 0,
       "años": 1
     },
     "romantica": {
       "nombre": "Radio Romántica",
-      "ultima_sync": "2026-10-26T15:35:51.998Z",
+      "ultima_sync": "2026-11-02T15:06:45.355Z",
       "articulos": 126,
       "nuevos": 0,
       "años": 1
     },
     "radioactiva": {
       "nombre": "Radio Activa",
-      "ultima_sync": "2026-10-26T15:35:59.143Z",
+      "ultima_sync": "2026-11-02T15:06:51.260Z",
       "articulos": 46461,
       "nuevos": 0,
       "años": 18
@@ -3764,7 +3764,7 @@
     },
     "infosalmon": {
       "nombre": "InfoSalmón",
-      "ultima_sync": "2026-10-26T15:36:04.931Z",
+      "ultima_sync": "2026-11-02T15:07:01.310Z",
       "articulos": 7136,
       "nuevos": 0,
       "años": 6
