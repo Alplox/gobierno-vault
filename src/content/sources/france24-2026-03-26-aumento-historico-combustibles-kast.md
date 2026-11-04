@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: FRANCE 24 Español
+medio: France 24
 titulo: "Chile: aumento histórico en el precio de los combustibles y medidas del Gobierno Kast"
 autor: FRANCE 24 Español
 fecha: 2026-03-26

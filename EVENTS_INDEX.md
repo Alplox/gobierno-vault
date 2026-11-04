@@ -1901,6 +1901,7 @@
 - [2026/10/20261007-6 - Presupuesto 2027 recorta 14,6% el Fondo Ricarte Soto y el Gobierno promete mantener las garantías](src/content/events/2026/10/20261007-6.md) — 11 fuentes
 - [2026/10/20261007-7 - PDI y SERMIG fiscalizan comercio y barberías en San Antonio de Temuco: 9 extranjeros controlados y 7 denunciados](src/content/events/2026/10/20261007-7.md) — 8 fuentes
 - [2026/10/20261007-8 - Rectores piden rechazar la partida de Educación Superior del Presupuesto 2027 y la subcomisión la rechaza; Arzola defiende el foco en primera infancia](src/content/events/2026/10/20261007-8.md) — 8 fuentes
+- [2026/10/20261007-9 - Bachelet abre la puerta a una tercera candidatura presidencial: "Yo creo que sí"](src/content/events/2026/10/20261007-9.md) — 5 fuentes
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 - [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
@@ -1960,6 +1961,8 @@
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 17 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
+- [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
+- [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 7 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
 - [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 16 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
@@ -1972,8 +1975,10 @@
 - [2026/11/20261101-3 - Pulso Ciudadano de octubre: Kast cae a 22,1% de aprobación y 67,5% de desaprobación, con 74,2% pidiendo la salida de Rabat](src/content/events/2026/11/20261101-3.md) — 7 fuentes
 - [2026/11/20261101-4 - Cadem: Kast cae a 26% y acumula siete puntos de retroceso, con 70% en contra de mantener a Rabat y 78% de desaprobación al ministro](src/content/events/2026/11/20261101-4.md) — 7 fuentes
 - [2026/11/20261102-1 - Oposición entrega en La Moneda una carta a Kast para exigir la renuncia de Rabat y lo declara "no interlocutor válido"](src/content/events/2026/11/20261102-1.md) — 7 fuentes
-- [2026/11/20261102-2 - Rabat descarta renunciar, anuncia una mesa de defensa a la víctima y Parisi alinea al PDG con la acusación constitucional](src/content/events/2026/11/20261102-2.md) — 10 fuentes
+- [2026/11/20261102-2 - Rabat descarta renunciar, anuncia una mesa de defensa a la víctima y Parisi alinea al PDG con la acusación constitucional](src/content/events/2026/11/20261102-2.md) — 11 fuentes
 - [2026/11/20261102-3 - Elizalde afirma que Rabat cometió infracciones legales y Gómez relata por qué rechazó decretos de rebaja en 2014](src/content/events/2026/11/20261102-3.md) — 7 fuentes
+- [2026/11/20261102-4 - Imacec de septiembre crece 0,2%: la minería cae 12,1% y el Gobierno habla de estabilización](src/content/events/2026/11/20261102-4.md) — 6 fuentes
+- [2026/11/20261102-5 - Landerretche: sin un "big push" de corto plazo no hay reformas posibles y Chile sigue atrapado en un crecimiento de 2%](src/content/events/2026/11/20261102-5.md) — 5 fuentes
 
 ## 2025
 

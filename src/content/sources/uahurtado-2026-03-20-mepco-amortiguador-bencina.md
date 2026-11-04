@@ -1,6 +1,6 @@
 ---
 tipo: prensa
-medio: FEN Universidad Alberto Hurtado
+medio: Universidad Alberto Hurtado
 titulo: "MEPCO en Chile: el “amortiguador” de la bencina que hoy cuesta millones al mes"
 autor: Catalina Téllez
 fecha: 2026-03-20
