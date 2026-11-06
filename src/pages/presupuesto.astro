@@ -8,8 +8,9 @@ import ShareButtons from '../components/ShareButtons.astro';
 import SourceRef from '../components/SourceRef.astro';
 import BudgetSankey from '../components/BudgetSankey.astro';
 import BudgetMovementCard from '../components/BudgetMovementCard.astro';
-import { Wallet, ArrowRightLeft, Users, TrendingDown, TrendingUp, ChevronDown, MinusCircle } from 'lucide-astro';
-import { getPresupuesto, type PresupuestoSankey } from '../lib/presupuesto';
+import BudgetStats from '../components/BudgetStats.astro';
+import { Wallet, ArrowRightLeft, Users, TrendingDown, TrendingUp, ChevronDown, MinusCircle, Landmark } from 'lucide-astro';
+import { getPresupuesto, esFuenteOficial, type PresupuestoSankey } from '../lib/presupuesto';
 
 const { ejercicios, fuentes, formatCLP, sankeyGlobal } = getPresupuesto();
 
@@ -18,6 +19,12 @@ const sinObjetivoGlobal = [...sankeyGlobal.retiros, ...sankeyGlobal.inyecciones]
 
 const anchor = (ano: number, id: string, refs: string[]) => `pref-${ano}-${refs.indexOf(id) + 1}`;
 const eventoHref = (id: string | null) => (id ? `/events/${id.slice(0, 4)}/${id}` : null);
+const secRef = (ano: number, id: string, refs: string[]) => ({ index: refs.indexOf(id) + 1, anchor: anchor(ano, id, refs) });
+const conRespaldoOficial = ejercicios.reduce(
+  (s, e) => s + e.movimientos.filter((m) => (m.fuentesSecundarias ?? []).some((f) => esFuenteOficial(f.medio))).length,
+  0,
+);
+const totalMovsGlobal = ejercicios.reduce((s, e) => s + e.movimientos.length, 0);
 const tieneTotales = (e: (typeof ejercicios)[number]) => Object.values(e.totales).some((t) => t.monto !== null);
 const notasTotales = (e: (typeof ejercicios)[number]) =>
   Object.values(e.totales)
@@ -36,8 +43,11 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
     <p class="text-base-content/60 text-sm max-w-[65ch]">
       Cada cinta es un movimiento publicado con monto, justificacion declarada o vacio.
     </p>
-    <p class="text-xs text-base-content/50 mt-1">
-      Monto inicial por ley, ejecucion y cambios por ejercicio. Cobertura parcial: {ejercicios.map((e) => e.ano).join(', ')}. Los estados describen lo publicado, sin calificar la decision.
+    <p class="text-xs text-base-content/50 mt-1 flex flex-wrap items-center gap-1.5">
+      <Landmark class="h-3.5 w-3.5 shrink-0" />
+      <span>
+        Monto inicial por ley, ejecucion y cambios por ejercicio. Cobertura parcial: {ejercicios.map((e) => e.ano).join(', ')}. {conRespaldoOficial} de {totalMovsGlobal} movimientos traen respaldo oficial además de prensa. Los estados describen lo publicado, sin calificar la decision.
+      </span>
     </p>
     <div class="mt-4">
       <ShareButtons url={new URL('/presupuesto', Astro.site).href} title="Presupuesto" />
@@ -115,6 +125,8 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
     </div>
   </dl>
 
+  <BudgetStats ejercicios={ejercicios} conRespaldoOficial={conRespaldoOficial} />
+
   <div class="flex flex-wrap gap-1.5 mb-6" role="group" aria-label="Seleccionar ejercicio">
     {ejercicios.map((e, i) => (
       <button type="button" data-pres-ano={e.ano}
@@ -187,7 +199,7 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
             <div class="px-5 py-5">
               <h3 class="text-sm font-bold text-base-content mb-3 flex items-center gap-1.5">
                 <ArrowRightLeft class="h-4 w-4" /> Movimientos: en qué quedó el dinero
-                <span class="text-xs font-normal text-base-content/50">({totalMovs})</span>
+                <span class="text-xs font-normal text-base-content/50">({totalMovs} · {e.movimientos.filter((m) => (m.fuentesSecundarias ?? []).some((f) => esFuenteOficial(f.medio))).length} con respaldo oficial)</span>
               </h3>
               <div class="grid grid-cols-1 xl:grid-cols-2 gap-3">
                 {e.movimientos.map((m) => (
@@ -198,6 +210,7 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                     refIndex={e.refs.indexOf(m.fuente) + 1}
                     refAnchor={anchor(e.ano, m.fuente, e.refs)}
                     eventoHref={eventoHref(m.evento_id)}
+                    secundarias={(m.fuentesSecundarias ?? []).map((f) => ({ fuente: f, ...secRef(e.ano, f.id, e.refs), oficial: esFuenteOficial(f.medio) }))}
                   />
                 ))}
               </div>
@@ -242,6 +255,9 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                           <><a href={`/organizations/${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
                         ) : null}{v.alcance}
                         <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio} - ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
+                        {(v.fuentesSecundarias ?? []).map((f) => (
+                          <SourceRef id="" index={e.refs.indexOf(f.id) + 1} href={`#${anchor(e.ano, f.id, e.refs)}`} title={`${f.medio} - ${f.titulo}`} tip={`${f.medio}\n${f.titulo}`} />
+                        ))}
                       </p>
                       {(v.evento_id || v.nota) && (
                         <p class="text-xs text-base-content/60 mt-1">
@@ -268,6 +284,9 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                     <li class="text-sm text-base-content/80">
                       <span class="font-semibold text-base-content">{h.etiqueta}:</span> {h.valor}
                       <SourceRef id="" index={e.refs.indexOf(h.fuente) + 1} href={`#${anchor(e.ano, h.fuente, e.refs)}`} title={`${fuentes[h.fuente].medio}  -  ${fuentes[h.fuente].titulo}`} tip={`${fuentes[h.fuente].medio}\n${fuentes[h.fuente].titulo}`} />
+                      {(h.fuentesSecundarias ?? []).map((f) => (
+                        <SourceRef id="" index={e.refs.indexOf(f.id) + 1} href={`#${anchor(e.ano, f.id, e.refs)}`} title={`${f.medio}  -  ${f.titulo}`} tip={`${f.medio}\n${f.titulo}`} />
+                      ))}
                     </li>
                   ))}
                 </ul>

@@ -9,7 +9,8 @@
  *   pnpm run sitemaps-index
  */
 
-import { readFileSync, writeFileSync, readdirSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync, existsSync, statSync, createReadStream } from 'node:fs';
+import { createInterface } from 'node:readline';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MEDIA } from './media.mjs';
@@ -30,45 +31,49 @@ function readManifest() {
   }
 }
 
-// Carga todos los JSONL: [{ medio, fecha, url, titulo, source }]
-function loadCatalog() {
-  const items = [];
-  if (!existsSync(SITEMAPS_DIR)) return items;
+// Procesa los JSONL en streaming y devuelve solo agregados (no los items),
+// para evitar cargar ~13M objetos en memoria (OOM).
+async function loadCatalog() {
+  const stats = { total: 0, totalVideos: 0, porMedio: {}, porCanal: {}, rangoCanal: {} };
+  if (!existsSync(SITEMAPS_DIR)) return stats;
   for (const root of [WEBSITES_DIR, CHANNELS_DIR]) {
     if (!existsSync(root)) continue;
     for (const medio of readdirSync(root)) {
       const medioDir = join(root, medio);
-      // `_` y `.` reservan directorios auxiliares que no son medios (copias de
-      // trabajo, catálogos de referencia). No son slugs indexables.
       if (!statSync(medioDir).isDirectory() || medio.startsWith('.') || medio.startsWith('_')) continue;
       for (const file of readdirSync(medioDir)) {
         if (!/^\d{4}\.jsonl$/.test(file)) continue;
-        const raw = readFileSync(join(medioDir, file), 'utf8');
-        for (const line of raw.split('\n')) {
+        const rl = createInterface({ input: createReadStream(join(medioDir, file), { encoding: 'utf8' }), crlfDelay: Infinity });
+        for await (const line of rl) {
           if (!line.trim()) continue;
-          try {
-            const e = JSON.parse(line);
-            items.push({ medio, d: e.d, u: e.u, t: e.t ?? null, s: e.s ?? null });
-          } catch {
-            /* línea corrupta: se omite */
+          let e;
+          try { e = JSON.parse(line); } catch { continue; }
+          stats.total++;
+          const isYt = !!CHANNELS[medio];
+          if (isYt) {
+            stats.totalVideos++;
+            stats.porCanal[medio] = (stats.porCanal[medio] ?? 0) + 1;
+            const y = (e.d || '').slice(0, 4);
+            if (/^\d{4}$/.test(y)) {
+              const r = stats.rangoCanal[medio] ??= { min: y, max: y };
+              if (y < r.min) r.min = y;
+              if (y > r.max) r.max = y;
+            }
+          } else {
+            stats.porMedio[medio] = (stats.porMedio[medio] ?? 0) + 1;
           }
         }
       }
     }
   }
-  return items;
+  return stats;
 }
 
-// Nombre legible de un slug. El registro (`MEDIA`/`CHANNELS`) es la fuente
-// autoritativa; `_manifest.json` es solo cache de estado de sync y sus entradas
-// se pueden perder (lectura-modificación-escritura entre procesos), así que
-// nunca se usa como única fuente del nombre. `porMedio`/`porCanal` ya traen el
-// conteo leído del disco, que tampoco depende del manifest.
 function nombreDe(medio, manifest) {
   return MEDIA[medio]?.nombre ?? CHANNELS[medio]?.nombre ?? manifest.medios?.[medio]?.nombre ?? medio;
 }
 
-function buildMarkdown(items, manifest) {
+function buildMarkdown(stats, manifest) {
   const l = [];
   l.push('# Catálogo de Sitemaps');
   l.push('');
@@ -79,32 +84,16 @@ function buildMarkdown(items, manifest) {
   const actualizado = manifest.actualizado;
   const totalMedios = Object.keys(manifest.medios ?? {}).length;
   const totalCanales = Object.keys(CHANNELS).length;
-  const totalVideos = items.filter((it) => !!CHANNELS[it.medio]).length;
+  const totalVideos = stats.totalVideos;
   l.push(`- **Última sincronización:** ${actualizado ? new Date(actualizado).toLocaleString('es-ES') : 'pendiente'}`);
   l.push(`- **Medios registrados:** ${totalMedios}`);
-  l.push(`- **Artículos indexados:** ${items.length.toLocaleString('es-ES')}`);
+  l.push(`- **Artículos indexados:** ${stats.total.toLocaleString('es-ES')}`);
   l.push(`- **Canales de YouTube:** ${totalCanales} (${totalVideos.toLocaleString('es-ES')} videos)`);
   l.push('');
 
-  // Conteo por medio (prensa) y por canal (YouTube): los videos viven en el
-  // mismo JSONL pero se reportan aparte para no mezclarlos con artículos.
-  const isYt = (medio) => !!CHANNELS[medio];
-  const porMedio = {};
-  const porCanal = {};
-  const rangoCanal = {};
-  for (const it of items) {
-    if (isYt(it.medio)) {
-      porCanal[it.medio] = (porCanal[it.medio] ?? 0) + 1;
-      const y = (it.d || '').slice(0, 4);
-      if (/^\d{4}$/.test(y)) {
-        const r = rangoCanal[it.medio] ??= { min: y, max: y };
-        if (y < r.min) r.min = y;
-        if (y > r.max) r.max = y;
-      }
-    } else {
-      porMedio[it.medio] = (porMedio[it.medio] ?? 0) + 1;
-    }
-  }
+  const porMedio = stats.porMedio;
+  const porCanal = stats.porCanal;
+  const rangoCanal = stats.rangoCanal;
   if (Object.keys(porMedio).length) {
     l.push('## Por medio');
     l.push('');
@@ -131,8 +120,6 @@ function buildMarkdown(items, manifest) {
   return l.join('\n');
 }
 
-// AGENTS.md ya no contiene la tabla de medios (desde modularizacion 2026-08-26) para evitar diffs ruidosos.
-// Para editores, la tabla completa se genera aqui como sitemaps/MEDIOS.md (antes vivia en AGENTS.md).
 const MEDIOS_OUT = join(SITEMAPS_DIR, 'MEDIOS.md');
 
 function buildMediosMd(manifest) {
@@ -180,11 +167,11 @@ function buildMediosMd(manifest) {
   return l.join('\n');
 }
 
-const items = loadCatalog();
+const stats = await loadCatalog();
 const manifest = readManifest();
-const md = buildMarkdown(items, manifest);
+const md = buildMarkdown(stats, manifest);
 writeFileSync(OUT, md, 'utf8');
-console.log(`✔ sitemaps/README.md generado: ${items.length.toLocaleString('es-ES')} artículos`);
+console.log(`✔ sitemaps/README.md generado: ${stats.total.toLocaleString('es-ES')} artículos`);
 const mediosMd = buildMediosMd(manifest);
 writeFileSync(MEDIOS_OUT, mediosMd, 'utf8');
 console.log(`✔ sitemaps/MEDIOS.md generado: ${Object.keys(MEDIA).length} slugs`);

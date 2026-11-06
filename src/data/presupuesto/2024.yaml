@@ -1,0 +1,203 @@
+# Ejercicio 2024 — Ley de Presupuestos 2024 (Ley 21.640), cerrado con un
+# ajuste de gasto en el segundo semestre y un déficit estructural sobre la meta.
+# IDs de fuentes: src/content/sources/*.md. IDs de eventos: basename sin extensión.
+ano: 2024
+gobierno: Boric
+estado: cerrado
+estado_label: Cerrado (IFP cuarto trimestre de 2024)
+ley:
+  nombre: Ley de Presupuestos 2024
+  fuente: bcn-2023-12-18-ley-21640-presupuesto-2024
+  nota: Ley N° 21.640, publicada el 18-dic-2023. El proyecto se presentó con un aumento de 3,5% del gasto y se despachó con protocolos de acuerdo en Salud y Educación.
+totales:
+  inicial: { monto: null, nota: Ley inicial 2024 con gasto -1,0% bajo ella según el IFP; cifra exacta no extraída del documento citado }
+  vigente: { monto: 76163870000, fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024, nota: Actualización del gasto del IFP 4T24, igual al cierre ejecutado }
+  ejecutado: { monto: 76163870000000, fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024, nota: Gasto del Gobierno Central 2024 (+3,5% real, 24,8% del PIB y -1,0% frente a la ley inicial) }
+  saldo: { monto: null, nota: Déficit efectivo de $8.880.648 millones (2,9% del PIB) }
+hitos:
+  - etiqueta: Proyecto de Presupuesto 2024
+    valor: +3,5% del gasto público, con foco en seguridad pública, probidad, salud, vivienda y cultura
+    fuente: biobiochile-2023-09-28-boric-presupuesto-2024
+  - etiqueta: Despacho de la ley en el Senado
+    valor: 32 partidas y articulado aprobados con protocolos de acuerdo en Salud y Educación
+    fuente: diariotalca-2023-11-24-aprueban-presupuesto-2024
+  - etiqueta: Déficit efectivo 2024
+    valor: $8.880.648 millones (2,9% del PIB)
+    fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024
+  - etiqueta: Déficit estructural 2024
+    valor: 3,2% del PIB, sobre la meta de 1,9%
+    fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024
+  - etiqueta: Deuda bruta a diciembre
+    valor: 42,3% del PIB, con una caída del stock de casi US$10.000 millones frente al tercer trimestre
+    fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024
+  - etiqueta: Recaudación bajo lo proyectado en 2024
+    valor: $4.056.767 millones, con la Operación Renta $3 billones abajo y el precio del litio -79%
+    fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024
+  - etiqueta: Gasto en seguridad 2024
+    valor: 4,2 billones, tras 4 billones en 2023
+    fuente: gobcl-2024-06-01-cuenta-publica-2024
+movimientos:
+  - tipo: recorte
+    descripcion: Recorte a Bomberos en el proyecto de Presupuesto 2024
+    fecha: '2023-10-25'
+    monto: 3000000000
+    monto_nota: $3.000 millones menos para 2024; Bomberos pedía mantener los $57.000 millones de 2023 más las acreencias bancarias
+    objetivo_declarado: null
+    evento_id: null
+    fuente: diariotalca-2023-10-25-bomberos-recorte-presupuesto-2024
+    nivel_impacto: directo
+    organizacion_id: cuerpo_bomberos_chile
+    nota: Recorte revertido el 03-nov-2023 con acuerdo de Marcel; ver el movimiento de reposición siguiente. Bomberos había anunciado una activación de sirenas a nivel nacional.
+  - tipo: aumento
+    descripcion: Reposición de $3.160 millones a Bomberos tras revertir el recorte del proyecto 2024
+    fecha: '2023-11-03'
+    monto: 3160000000
+    monto_nota: $3.160 millones repuestos más el aporte de las acreencias bancarias, con lo que el presupuesto de operaciones sumó $27.568 millones y un aumento efectivo de 25%
+    objetivo_declarado: null
+    evento_id: null
+    fuente: diariotalca-2023-11-03-bomberos-reintegro-3160-millones
+    fuentes_secundarias:
+      - diariotalca-2023-10-25-bomberos-recorte-presupuesto-2024
+    nivel_impacto: directo
+    organizacion_id: cuerpo_bomberos_chile
+    nota: Acuerdo anunciado por el ministro Marcel con Hacienda y Dipres que dejó sin efecto el recorte y levantó la exigencia de boletas de garantía para proyectos con gobiernos regionales.
+  - tipo: aumento
+    descripcion: Protocolo de 17 puntos con Salud que destraba la partida con alza del per cápita y recontratación de personal COVID
+    fecha: '2023-11-24'
+    monto: null
+    monto_nota: Acuerdo de 17 puntos entre Minsal y Dipres sin monto total publicado, con alza del per cápita de APS y reintegro de honorarios COVID para recintos que inician operación en 2024
+    objetivo_declarado: Destrabar la aprobación de la partida de Salud incorporando alza del per cápita y recontratación de personal COVID
+    evento_id: null
+    fuente: elperiodista-2023-11-24-salud-per-capita-honorarios-covid
+    fuentes_secundarias:
+      - biobiochile-2023-10-24-rechazo-partida-salud
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: La partida había sido rechazada unánime en subcomisión el 24-oct incluso con votos oficialistas por 6.300 desvinculaciones, listas de espera y deuda de Fonasa.
+  - tipo: aumento
+    descripcion: Emisión de bono social por US$1.700 millones y retiro de US$800 millones del FEES para el plan 2024
+    fecha: '2024-01-19'
+    monto: null
+    monto_nota: Bono de Tesorería en dólares a 5 años por US$1.700 millones a tasa 4,85% más retiro de US$800 millones del FEES, dentro de un plan de emisiones 2024 por US$16.500 millones equivalentes
+    objetivo_declarado: Financiar programas sociales según el Marco de Bonos Sostenibles de Chile con una estrategia mixta que ahorra unos US$10,8 millones en intereses
+    evento_id: null
+    fuente: elperiodista-2024-01-19-bono-social-1700-millones
+    nivel_impacto: institucional
+    organizacion_id: ministerio_hacienda
+    nota: La demanda alcanzó US$11.100 millones, unas 7,5 veces lo ofertado, y el FEES representaba 1,8% del PIB a nov-2023.
+  - tipo: aumento
+    descripcion: Bono de Recuperación y ayudas de emergencia para damnificados por los incendios de Valparaíso
+    fecha: '2024-02-05'
+    monto: null
+    monto_nota: Sin total agregado publicado, con tramos de $1.500.000 por mayor afectación y $750.000 por afectación moderada, más Bono de Acogida de 10 UF y Bolsillo Electrónico de Emergencia de 50 UF, con 1.930 familias en la primera nómina
+    objetivo_declarado: Apoyar a las familias damnificadas por los incendios forestales de la Región de Valparaíso
+    evento_id: null
+    fuente: cnnchile-2024-02-05-bono-recuperacion-incendios
+    fuentes_secundarias:
+      - chocale-2024-02-12-bono-recuperacion-pago
+    nivel_impacto: directo
+    organizacion_id: ministerio_del_interior
+    nota: Anunciado por el subsecretario Monsalve con pago vía CuentaRUT desde el 9-feb contra Ficha FIBE y 300 viviendas de emergencia disponibles en Senapred.
+  - tipo: aumento
+    descripcion: Reactivación del Bolsillo Familiar Electrónico en invierno con reajuste del SUF y la Asignación Familiar
+    fecha: '2024-07-10'
+    monto: null
+    monto_nota: Sin costo agregado publicado, con extensión del BFE de julio a septiembre para cerca de 1,3 millones de hogares y más de 1.750.000 cargas beneficiadas en total
+    objetivo_declarado: Contar con un mecanismo adicional de apoyo a los hogares de menos recursos en invierno incluyendo parafina y cuentas de luz
+    evento_id: null
+    fuente: cnnchile-2024-07-10-bolsillo-familiar-invierno-ley
+    nivel_impacto: directo
+    organizacion_id: ministerio_desarrollo_social
+    nota: Ley despachada por unanimidad que materializa acuerdos con la CUT e inyecta recursos al FEPP y estabiliza el precio de la parafina.
+  - tipo: recorte
+    descripcion: Rebaja del gasto de 2024 por menores ingresos (IFP del segundo trimestre)
+    fecha: '2024-09-16'
+    monto: 779404000000
+    monto_nota: $779.404 millones (unos US$850 millones) al ajustar la proyección de ingresos a la baja en $828.806 millones; el crecimiento del gasto bajó de 4,9% a 3,9%
+    objetivo_declarado: Cumplir las metas fiscales comprometidas
+    evento_id: null
+    fuente: cnnchile-2024-09-01-recorte-fiscal-us850-presupuesto-2025
+    fuentes_secundarias:
+      - biobiochile-2024-09-16-recorte-gasto-us1000-millones
+      - emol-2024-09-11-marcel-ajuste-adicional-gasto
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: El Consejo Fiscal Autónomo advirtió que la rebaja no bastaba para la meta de déficit estructural de 1,9% del PIB.
+  - tipo: recorte
+    descripcion: Rebaja de más de US$1.000 millones en el gasto 2024 anunciada con variación negativa en el cuarto trimestre
+    fecha: '2024-11-05'
+    monto: null
+    monto_nota: Más de US$1.000 millones según Marcel ante la comisión mixta, con el gasto corriente por debajo de años previos y una estimación OCEC-UDP de US$1.170 millones para la meta de -1,9% del PIB
+    objetivo_declarado: Cumplir la meta de balance estructural de -1,9% del PIB compensando menores ingresos de operación renta y litio
+    evento_id: null
+    fuente: nuevopoder-2024-11-06-marcel-rebaja-us1000-millones
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Con gasto acumulado creciendo 5,5% a septiembre frente al 3,5% comprometido y 45% de los ingresos anuales aún por recaudar a tres meses del cierre.
+  - tipo: recorte
+    descripcion: Rebaja de $10.000 millones al Gobierno Regional de Los Lagos decretada por Dipres
+    fecha: '2024-11-14'
+    monto: 10000000000
+    monto_nota: $10.000 millones decretados que el CORE redistribuyó postergando chatarrización de maquinaria y pagos a Saesa por zonas aisladas
+    objetivo_declarado: null
+    evento_id: null
+    fuente: elinsular-2024-11-14-ajuste-dipres-los-lagos
+    fuentes_secundarias:
+      - elhuemul-2024-11-15-ajuste-dipres-los-lagos
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Medida de alcance nacional por menor recaudación que también afectó a O’Higgins con otros $10.000 millones y priorizó obras en ejecución y proveedores.
+  - tipo: aumento
+    descripcion: Reajuste general gradual de 4,9% para el sector público despachado a ley
+    fecha: '2024-12-18'
+    monto: null
+    monto_nota: Sin costo fiscal publicado en las fuentes consultadas, con 3,0% en dic-2024 más 1,2% en ene-2025 y 0,64% en jun-2025, más reajuste de bonos de 4,2% y de hasta 6,9% para rentas bajas
+    objetivo_declarado: Generar buenas condiciones de trabajo en el sector público para servir mejor a la ciudadanía
+    evento_id: null
+    fuente: diariolongino-2024-12-19-reajuste-sector-publico
+    fuentes_secundarias:
+      - diariotalca-2024-12-07-acuerdo-reajuste-sector-publico
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Acuerdo de 21 puntos con la Mesa del Sector Público que regula aguinaldos e incentivos al retiro y destrabó la mixta con protocolo por bono a Carabineros y pedagogía.
+  - tipo: recorte
+    descripcion: Ajuste del gasto del segundo semestre de 2024
+    fecha: '2024-12-31'
+    monto: null
+    monto_nota: Cercano a los US$1.500 millones; el crecimiento anual del gasto se redujo 1,8% en el último trimestre
+    objetivo_declarado: Contener el crecimiento del gasto y cumplir la meta fiscal
+    evento_id: null
+    fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Materializado durante el segundo semestre y calibrado según la ejecución presupuestaria.
+variaciones:
+  - alcance: Gasto del Gobierno Central 2024 frente a la ley inicial
+    variacion_texto: "-1,0% real"
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024
+    evento_id: null
+    nota: El gasto efectivo creció 3,5% real frente a 2023 pero quedó bajo lo aprobado en la ley.
+orden_refs:
+  - bcn-2023-12-18-ley-21640-presupuesto-2024
+  - dipres-2025-02-07-ifp-cuarto-trimestre-2024
+  - biobiochile-2023-09-28-boric-presupuesto-2024
+  - diariotalca-2023-11-24-aprueban-presupuesto-2024
+  - diariotalca-2023-10-25-bomberos-recorte-presupuesto-2024
+  - cnnchile-2024-09-01-recorte-fiscal-us850-presupuesto-2025
+  - biobiochile-2024-09-16-recorte-gasto-us1000-millones
+  - emol-2024-09-11-marcel-ajuste-adicional-gasto
+  - gobcl-2024-06-01-cuenta-publica-2024
+  - diariotalca-2023-11-03-bomberos-reintegro-3160-millones
+  - biobiochile-2023-10-24-rechazo-partida-salud
+  - elperiodista-2023-11-24-salud-per-capita-honorarios-covid
+  - elperiodista-2024-01-19-bono-social-1700-millones
+  - cnnchile-2024-02-05-bono-recuperacion-incendios
+  - chocale-2024-02-12-bono-recuperacion-pago
+  - cnnchile-2024-07-10-bolsillo-familiar-invierno-ley
+  - nuevopoder-2024-11-06-marcel-rebaja-us1000-millones
+  - elinsular-2024-11-14-ajuste-dipres-los-lagos
+  - elhuemul-2024-11-15-ajuste-dipres-los-lagos
+  - diariotalca-2024-12-07-acuerdo-reajuste-sector-publico
+  - diariolongino-2024-12-19-reajuste-sector-publico

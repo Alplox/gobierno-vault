@@ -88,7 +88,7 @@ Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada
 2. **URLs completas** del articulo (nunca raiz). Si paywall sin URL exacta, usa secundaria que cite original + `notas` en YAML. Guarda siempre URL original, nunca la del mirror.
 3. **Wikilinks obligatorios** en prosa — `scripts/validate/validate.mjs` falla si el nombre completo o el apellido de una persona enlazada aparece sin `[[people/...]]` (`scripts/lib/proseNames.mjs`; fix `scripts/validate/fix-prose-wikilinks.mjs`).
 4. **Prohibido notas de editor en body** (`ver TAREAS`, `pendiente verificacion`, etc.) — van a `TAREAS/` con `⬜`/`🟡`; `validate` hace fallar el build. Cross-refs `[[events/ID]]` sí válidos (wikilink explícito, no `(ver evento X)`).
-5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/websites/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Si el catalogo no cubre (tema muy reciente o medio ausente), usar `pnpm run news-search -- "<query>"` antes del websearch generico. Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`.
+5. **Consultar catalogo sitemaps ANTES de buscar en web** para medios con sitemap: `rg -i --no-heading -uu '<terminos>' sitemaps/websites/<slug>/` o `rg -i -uu -g '*.jsonl' '<term>' sitemaps` (ver `.agents/skills/sitemaps/SKILL.md`). Si el catalogo no cubre (tema muy reciente o medio ausente), usar `pnpm run news-search -- "<query>"` antes del websearch generico. Luego leer URL con mirrors de `.agents/skills/tools/SKILL.md`; si sigue bloqueada, `fetch-content` incluye `browser` (Chrome+Puppeteer) y `browser-stealth` (nodriver opcional), con `--headed` para Turnstile.
 6. **No duplicar relaciones** bidireccionales; `relaciones` apunta a `ID` sin extension.
 
 Crear muchas entidades/fuentes: verificar `git status` antes (edicion concurrente) y nunca usar PowerShell `Set-Content`/`>` sobre YAML (corrompe UTF-8). Ver `.agents/skills/data-yaml/SKILL.md`.
@@ -111,6 +111,7 @@ Si falla: frontmatter YAML o wikilink roto. `pnpm run validate` es la red real (
 - Paginación / `| head -n N`: no uses `| head` (no existe en PowerShell); usa `rg --max-count N`, `rg ... | Select-Object -First N` en PowerShell, o `node` con `.slice(0,N)` — ver `.agents/skills/tools/SKILL.md` → ripgrep
 - **Enumerar archivos, nunca con `ls | rg ^patrón`:** en PowerShell `ls` (= `Get-ChildItem`) imprime varios nombres por línea, así que `ls src/content/events/2026/04/ | rg "^20260406"` devuelve **0 líneas y no da error** aunque los archivos existan (caso sep-2026: se sobrescribió `20260406-1.md`, que ya era el evento del viaje de Kast a Argentina; se detectó por `git status` y se restauró con `git checkout --`). Para listar nombres usa `rg --files <dir>` o `node -e "console.log(require('fs').readdirSync('dir').join('\n'))"` — y **antes de crear un evento nuevo, enumera con esas dos formas**, no con `ls`
 - Nunca uses `>`/`Set-Content`/`Out-File` sobre YAML (ver `data-yaml/SKILL.md`) — usa `node` con `writeFileSync` `utf8` o las tools `Edit`/`Write` del agente
+- `> archivo.txt` para capturar salida de comando **también** codifica UTF-16LE en PowerShell (git status, fetch-content…) — para leerlo después hay que usar `readFileSync(p,'utf16le')` o, mejor, capturar con `node -e` dentro del mismo comando
 - Si necesitas un comando shell nativo, verifica primero que exista sino elige el equivalente portable (`rg --version`, `node -e "console.log(process.platform)"`)
 
 **Dónde dejar archivos temporales:** todo lo que escribas y no sea un archivo del repo va **dentro del proyecto**, nunca al temp del sistema:
@@ -131,7 +132,7 @@ Estadisticas del vault: ver `README.md` › Estadísticas del vault (sección au
 | 16 reglas expandidas, enforcement prose, TAREAS lifecycle **(obligatorio)** | `.agents/skills/event-rules/SKILL.md` |
 | Tocar `src/content/people\|organizations\|cifras/*.md`, `src/content/sources/*.md`, `src/content/topics/*.md`, `src/data/colectivos.yaml\|sectores.yaml\|sueldos.yaml`, encoding/CRLF **(obligatorio)** | `.agents/skills/data-yaml/SKILL.md` (nombre legacy; cubre md + excepción YAML) |
 | Catalogo sitemaps + YouTube (sync, search, cobertura historica) **(obligatorio)** | `.agents/skills/sitemaps/SKILL.md` |
-| Fetch/paywall, PDF/Office/OCR, video transcript, ripgrep, mirrors **(obligatorio)** | `.agents/skills/tools/SKILL.md` |
+| Fetch/paywall, navegador real (Puppeteer/nodriver), PDF/Office/OCR, video transcript, ripgrep, mirrors **(obligatorio)** | `.agents/skills/tools/SKILL.md` |
 | Fuente gubernamental directa (Presidencia, ministerios, BCN, Cámara/Senado, servicios) — anti-sesgo (si toca Estado/cifra/voto) | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Redes sociales / reacciones comunitarias / verificacion imagen-viral (si toca Reddit/X/FB) | `.agents/skills/social-media/SKILL.md`; para búsqueda social ampliada usar `pnpm run social-search -- "<tema>"` (wrapper `last30days` fijado, solo Reddit/X/YouTube, sin cookies/Store/publicación) |
 | Gabinete, `cargos[]`, Cuentas Publicas (si toca gabinete) | `.agents/skills/gabinete/SKILL.md` |
@@ -160,7 +161,7 @@ Regla de tamaño: **AGENTS.md ≤ 300 lineas**. Detalle >5 lineas va a un skill.
 | Nuevo tipo de evento/relacion | `content.config.ts`, `editorData.ts`, `lib/eventTypes.ts`, `lib/relations.ts` |
 | Nueva entidad/fuente/tema | `src/content/people\|organizations\|sources\|topics\|cifras/*.md`, `.agents/skills/data-yaml/SKILL.md` |
 | Tocar `/sueldos` | `src/data/sueldos.yaml`, `src/lib/sueldos.ts` |
-| Tocar `/presupuesto` | `src/data/presupuesto/AAAA.yaml` (un archivo por ejercicio), `src/lib/presupuesto.ts` (deriva `sankey`/`sankeyGlobal`), `src/components/BudgetSankey.astro` + `BudgetMovementCard.astro` |
+| Tocar `/presupuesto` | `src/data/presupuesto/AAAA.yaml` (un archivo por ejercicio; movimientos/variaciones aceptan `partida` trazable y `fuentes_secundarias[]` de `orden_refs`, oficial primero), `src/lib/presupuesto.ts` (deriva `sankey`/`sankeyGlobal`, `esFuenteOficial()`), `src/components/BudgetSankey.astro` + `BudgetMovementCard.astro` + `BudgetStats.astro` (balance, top montos, cobertura) |
 | Fuente gubernamental directa | `.agents/skills/fuentes-gubernamentales/SKILL.md` |
 | Seguimiento `S/A/V-YYYY-NNN` | `TAREAS/SEGUIMIENTO/YYYY.md`, `TAREAS/SEGUIMIENTO_INDEX.md`, `.agents/skills/seguimiento/SKILL.md` |
 | Frontend (transitions, timeline, grafo, filtros, TTS) | `.agents/skills/frontend/SKILL.md` |

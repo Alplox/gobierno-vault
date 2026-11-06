@@ -1,6 +1,9 @@
 import { readFileSync, writeFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 
+// Uso: node scripts/validate/fix-md034.mjs [--dry-run]  # --dry-run solo reporta, no escribe
+const dryRun = process.argv.includes('--dry-run');
+
 function fixFile(path) {
   try {
     let c = readFileSync(path, 'utf8');
@@ -57,7 +60,7 @@ function fixFile(path) {
     c = c.replace(/<(https:\/\/[^>,]+),>/g, '<$1>,');
     c = c.replace(/<(https:\/\/[^>.]+)\.>/g, '<$1>.');
     if (c !== orig) {
-      writeFileSync(path, c, 'utf8');
+      if (!dryRun) writeFileSync(path, c, 'utf8');
       return true;
     }
   } catch (e) {
@@ -76,7 +79,7 @@ function walk(dir) {
       fixed += walk(full);
     } else if (entry.endsWith('.md')) {
       if (fixFile(full)) {
-        console.log('fixed', full);
+        console.log(dryRun ? 'would fix' : 'fixed', full);
         fixed++;
       }
     }
@@ -87,5 +90,5 @@ function walk(dir) {
 let total = 0;
 total += walk('.');
 total += walk('.agents');
-console.log(`done, fixed ${total} files`);
+console.log(`${dryRun ? '[dry-run] ' : ''}done, fixed ${total} files`);
 
