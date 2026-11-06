@@ -1724,7 +1724,7 @@
 - [2026/09/20260912-8 - Corte de Apelaciones de Santiago rechaza que Juan Manuel Aliste Vega cumpla su pena en casa por enfermedad terminal](src/content/events/2026/09/20260912-8.md) — 5 fuentes
 - [2026/09/20260912-9 - Ingresa la Ley Mariana: proyecto declara imprescriptibles homicidios, femicidios y parricidios tras el sobreseimiento del confeso](src/content/events/2026/09/20260912-9.md) — 8 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
-- [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 10 fuentes
+- [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 12 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
 - [2026/09/20260913-4 - Alcalde Concha responde a Undurraga por la medialuna: 'Es decadente que el gobierno termine respaldando prácticas clandestinas'](src/content/events/2026/09/20260913-4.md) — 5 fuentes
 - [2026/09/20260913-5 - Interno muere tras recibir disparo de centinela y caer desde muro de 8 metros en intento de fuga de la cárcel de Talca vestido de gendarme](src/content/events/2026/09/20260913-5.md) — 12 fuentes
@@ -1836,7 +1836,7 @@
 - [2026/09/20260929-7 - La Moneda evalúa continuidad de Zaliasnik tras declaración de Hermosilla: Alvarado evita juicios y diputados piden su salida](src/content/events/2026/09/20260929-7.md) — 11 fuentes
 - [2026/09/20260929-8 - El embajador Brandon Judd asiste al funeral del cabo Christopher Aguilera y un matinal de Chilevisión cuestiona su presencia](src/content/events/2026/09/20260929-8.md) — 6 fuentes
 - [2026/09/20260929-9 - Encuentro empresarial Punta Arenas–Falkland cierra con 822 reuniones y choca con el reclamo argentino](src/content/events/2026/09/20260929-9.md) — 17 fuentes
-- [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 23 fuentes
+- [2026/09/20260930-1 - INE: desocupación sube a 9,6% en junio-agosto, nuevo máximo en más de cinco años; Rau habla de situación muy difícil y Mas de urgencia social](src/content/events/2026/09/20260930-1.md) — 24 fuentes
 - [2026/09/20260930-10 - Kast presenta en cadena nacional el Presupuesto 2027 con alza de 1,5% y cuatro prioridades, crecimiento, seguridad, niñez y beneficios sociales](src/content/events/2026/09/20260930-10.md) — 20 fuentes
 - [2026/09/20260930-11 - Bacheletazo en La Pintana, homenaje a Bachelet con Boric, Vallejo y Jara, no me iré para la casa y trampa tras trampa contra el Gobierno](src/content/events/2026/09/20260930-11.md) — 16 fuentes
 - [2026/09/20260930-13 - Cámara despacha a ley la reforma al sistema político con condena a los totalitarismos: 125 a favor, 12 en contra y reserva de Mulet](src/content/events/2026/09/20260930-13.md) — 16 fuentes
@@ -1868,6 +1868,7 @@
 - [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 31 fuentes
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
 - [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 30 fuentes
+- [2026/10/20261002-10 - Bancada UDI propone recortar el INDH y el gasto por licencias médicas para reponer "Yo elijo mi PC" y los Liceos Bicentenario](src/content/events/2026/10/20261002-10.md) — 7 fuentes
 - [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
 - [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 11 fuentes
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
@@ -1875,9 +1876,11 @@
 - [2026/10/20261002-6 - Presupuesto 2027 recorta 10,1% en Cultura con caídas de hasta 66% en fondos sectoriales](src/content/events/2026/10/20261002-6.md) — 5 fuentes
 - [2026/10/20261002-7 - Presupuesto 2027 recorta 25,3% el Programa Sitios de Memoria y congela el Museo de la Memoria](src/content/events/2026/10/20261002-7.md) — 4 fuentes
 - [2026/10/20261002-8 - BBCL Investiga revela que Fiscalía, PDI y Carabineros usaron el software Oxygen, de origen ruso oculto, bajo causa en EEUU con dos detenidos y dominio incautado](src/content/events/2026/10/20261002-8.md) — 6 fuentes
+- [2026/10/20261002-9 - Dispositivo de niebla no tóxica para disuadir a quienes orinan en la calle se viraliza en Valparaíso](src/content/events/2026/10/20261002-9.md) — 5 fuentes
 - [2026/10/20261003-1 - Ripamonti pide a Kast medidas urgentes tras el fin del sistema de detección de incendios en Viña del Mar](src/content/events/2026/10/20261003-1.md) — 6 fuentes
 - [2026/10/20261003-2 - Presunta violación grupal en Rapa Nui: cuatro funcionarios de la Armada formalizados y en prisión preventiva; protestas exigen el retiro de la Guarnición](src/content/events/2026/10/20261003-2.md) — 11 fuentes
 - [2026/10/20261003-3 - Frei defiende la adhesión al Escudo de las Américas en una carta y abre una fisura en la DC: oficialismo lo agradece y la oposición lo critica](src/content/events/2026/10/20261003-3.md) — 8 fuentes
+- [2026/10/20261003-4 - Presidenta de la Comisión de Cultura “celebra” los ajustes al presupuesto de la cartera y afirma que “las prioridades cambiaron”](src/content/events/2026/10/20261003-4.md) — 6 fuentes
 - [2026/10/20261004-1 - Alcaldesa de Hualaihué ironiza bajo la lluvia por el alza de la parafina y emplaza a Quiroz a conocer las comunas apartadas; alcalde de Futaleufú apunta a la zona fronteriza](src/content/events/2026/10/20261004-1.md) — 5 fuentes
 - [2026/10/20261005-1 - Cadem lleva la desaprobación de Kast a 63% y Criteria a 60%, máximos desde marzo en medio del ajuste y la cadena nacional](src/content/events/2026/10/20261005-1.md) — 7 fuentes
 - [2026/10/20261005-2 - Gobernadores regionales presionan a Quiroz por el recorte de hasta 20% y $270 mil millones a los presupuestos regionales](src/content/events/2026/10/20261005-2.md) — 10 fuentes
@@ -1952,12 +1955,15 @@
 - [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 8 fuentes
 - [2026/10/20261026-5 - Bío Bío identifica a 33 de los 56 condenados por delitos sexuales beneficiados con rebajas: informes de Gendarmería advertían alto riesgo de reincidencia y las víctimas no fueron notificadas](src/content/events/2026/10/20261026-5.md) — 7 fuentes
 - [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 6 fuentes
+- [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 11 fuentes
+- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 4 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 8 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 6 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 6 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 17 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
