@@ -1426,6 +1426,7 @@
 - [2026/08/20260819-11 - CGE ficha a Simón Boric como gerente de comunicaciones tras 12 años en la U. de Chile y enfrenta ola de críticas en redes](src/content/events/2026/08/20260819-11.md) — 7 fuentes
 - [2026/08/20260819-12 - Declaran admisible querella contra Luis Hermosilla por presunto tráfico de influencias en el caso Luchsinger-Mackay](src/content/events/2026/08/20260819-12.md) — 8 fuentes
 - [2026/08/20260819-13 - Se constituye la comisión mixta de Inteligencia Económica para destrabar el levantamiento del secreto bancario](src/content/events/2026/08/20260819-13.md) — 6 fuentes
+- [2026/08/20260819-14 - El matinal de Chilevisión llega a Caleta Buena antes que las autoridades y Eduardo de la Iglesia lanza: 'se les perdió el mapa'](src/content/events/2026/08/20260819-14.md) — 12 fuentes
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
@@ -1897,6 +1898,7 @@
 - [2026/10/20261006-8 - Kast propone cruzar datos con IA para detectar irregularidades y fija meta de 80% de interoperabilidad](src/content/events/2026/10/20261006-8.md) — 7 fuentes
 - [2026/10/20261006-9 - Sesión especial de la Cámara por el Estrecho de Magallanes: siete resoluciones para reforzar la soberanía y revertir los recortes a Magallanes](src/content/events/2026/10/20261006-9.md) — 6 fuentes
 - [2026/10/20261007-1 - El Gobierno retira su reforma constitucional de seguridad y senadores ingresan una nueva propuesta: crimen organizado equiparado al terrorismo y estado de excepción preventivo](src/content/events/2026/10/20261007-1.md) — 7 fuentes
+- [2026/10/20261007-10 - INE informa alzas de 7,6% en remuneraciones y 8,3% en costos laborales en agosto: el índice real baja a 3,4% y los costos siguen creciendo por sobre los sueldos](src/content/events/2026/10/20261007-10.md) — 5 fuentes
 - [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 21 fuentes
 - [2026/10/20261007-3 - Presupuesto 2027 deja sin financiamiento al Instituto Chileno de Campos de Hielo y Cancillería responde que DIFROL concentrará los estudios](src/content/events/2026/10/20261007-3.md) — 7 fuentes
 - [2026/10/20261007-4 - Subtel presenta los ejes del Plan Nacional Digital 2026-2036: ruta hacia el 6G, apagón del 3G al fin del gobierno y reforma a la Ley General de Telecomunicaciones en marzo de 2027](src/content/events/2026/10/20261007-4.md) — 9 fuentes
@@ -1973,12 +1975,13 @@
 - [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 16 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
 - [2026/10/20261030-4 - Fiscalía Centro Norte abre investigación contra Rabat y Silva por presunta prevaricación administrativa en las rebajas de condena](src/content/events/2026/10/20261030-4.md) — 7 fuentes
+- [2026/10/20261030-5 - Paro del aseo nocturno en Santiago: calles con basura, plan de contingencia municipal y reanudación del servicio tras 24 horas](src/content/events/2026/10/20261030-5.md) — 8 fuentes
 - [2026/10/20261031-1 - Juzgado de Garantía de Linares declara ilegal la detención de una estudiante de 17 años por amenazas a Kast y la Fiscalía formaliza igualmente](src/content/events/2026/10/20261031-1.md) — 7 fuentes
 - [2026/10/20261031-2 - Las hijas del general Carlos Prats piden a Kast no indultar a condenados por lesa humanidad y derogar la facultad presidencial](src/content/events/2026/10/20261031-2.md) — 5 fuentes
 - [2026/10/20261031-3 - PDI detiene en Pitrufquén a un hombre por enviar fotos sexuales a dos adolescentes por Instagram e invitarlas a su casa](src/content/events/2026/10/20261031-3.md) — 5 fuentes
 - [2026/11/20261101-1 - Criteria: Kast cae a 25% de aprobación, 65% de rechazo y 72% pide que Rabat deje Justicia](src/content/events/2026/11/20261101-1.md) — 5 fuentes
 - [2026/11/20261101-2 - Arenas defiende a Quiroz en Mesa Central: "Es mucho más razonable y más lúcido de lo que aparenta"](src/content/events/2026/11/20261101-2.md) — 4 fuentes
-- [2026/11/20261101-3 - Pulso Ciudadano de octubre: Kast cae a 22,1% de aprobación y 67,5% de desaprobación, con 74,2% pidiendo la salida de Rabat](src/content/events/2026/11/20261101-3.md) — 7 fuentes
+- [2026/11/20261101-3 - Pulso Ciudadano de octubre: Kast cae a 22,1% de aprobación y 67,5% de desaprobación, con 74,2% pidiendo la salida de Rabat](src/content/events/2026/11/20261101-3.md) — 9 fuentes
 - [2026/11/20261101-4 - Cadem: Kast cae a 26% y acumula siete puntos de retroceso, con 70% en contra de mantener a Rabat y 78% de desaprobación al ministro](src/content/events/2026/11/20261101-4.md) — 7 fuentes
 - [2026/11/20261102-1 - Oposición entrega en La Moneda una carta a Kast para exigir la renuncia de Rabat y lo declara "no interlocutor válido"](src/content/events/2026/11/20261102-1.md) — 7 fuentes
 - [2026/11/20261102-2 - Rabat descarta renunciar, anuncia una mesa de defensa a la víctima y Parisi alinea al PDG con la acusación constitucional](src/content/events/2026/11/20261102-2.md) — 11 fuentes
@@ -2467,7 +2470,7 @@
 - [1973/07/19730727-1 - Asesinato del edecan naval Arturo Araya Peters por un comando de ultraderecha en Providencia](src/content/events/1973/07/19730727-1.md) — 5 fuentes
 - [1973/08/19730822-1 - Acuerdo de la Camara de Diputados del 22 de agosto de 1973 sobre el grave quebrantamiento del orden constitucional](src/content/events/1973/08/19730822-1.md) — 5 fuentes
 - [1973/08/19730823-1 - Renuncia del general Carlos Prats a la comandancia del Ejercito y al Ministerio de Defensa, Allende nombra a Pinochet](src/content/events/1973/08/19730823-1.md) — 5 fuentes
-- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 41 fuentes
+- [1973/09/19730911-1 - Golpe de Estado del 11 de septiembre de 1973 contra el gobierno de Salvador Allende](src/content/events/1973/09/19730911-1.md) — 48 fuentes
 - [1973/09/19730924-1 - Iglesias protestantes y evangélicas crean el CONAR, primer comité de ayuda a víctimas de la dictadura](src/content/events/1973/09/19730924-1.md) — 4 fuentes
 - [1973/10/19731002-1 - Detención y desaparición de Antonio Aguirre Vásquez, herido en la defensa de La Moneda](src/content/events/1973/10/19731002-1.md) — 8 fuentes
 - [1973/10/19731019-1 - Caravana de la Muerte ejecuta a 26 detenidos en Calama](src/content/events/1973/10/19731019-1.md) — 7 fuentes
