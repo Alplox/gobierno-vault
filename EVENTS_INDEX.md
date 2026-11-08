@@ -1750,6 +1750,7 @@
 - [2026/09/20260915-1 - Concejal UDI que pidió vetar La Consentida es captado bailando la canción en vísperas de Fiestas Patrias y la hija de Jaime Atria responde](src/content/events/2026/09/20260915-1.md) — 7 fuentes
 - [2026/09/20260915-2 - Barómetro CIES-UDD y AFP: 21,6% de jóvenes de 25 a 34 años no estudia ni trabaja, nivel más alto desde 2023](src/content/events/2026/09/20260915-2.md) — 11 fuentes
 - [2026/09/20260915-3 - Minsal solicita la renuncia del seremi de Salud de La Araucanía, José Bravo Burgos, por comparar el cierre de ELEAM con un vertedero tras el incendio de Pitrufquén](src/content/events/2026/09/20260915-3.md) — 18 fuentes
+- [2026/09/20260915-4 - El CPLT abre la puerta a sumarios contra 34 organismos que no acataron sus órdenes de entrega de información, entre ellos la PDI, el SII y Santiago 2023](src/content/events/2026/09/20260915-4.md) — 5 fuentes
 - [2026/09/20260916-1 - Quiroz repite en el ChileDay Londres la receta para cuadruplicar la inversión y cierra la gira europea con el Make Chile Great Again](src/content/events/2026/09/20260916-1.md) — 7 fuentes
 - [2026/09/20260916-2 - Kast inaugura las fondas del Parque O'Higgins con su primer pie de cueca y una paya junto a Desbordes](src/content/events/2026/09/20260916-2.md) — 10 fuentes
 - [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
@@ -1969,7 +1970,7 @@
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 6 fuentes
 - [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 6 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
-- [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 17 fuentes
+- [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
 - [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 9 fuentes
@@ -1991,6 +1992,7 @@
 - [2026/11/20261102-3 - Elizalde afirma que Rabat cometió infracciones legales y Gómez relata por qué rechazó decretos de rebaja en 2014](src/content/events/2026/11/20261102-3.md) — 7 fuentes
 - [2026/11/20261102-4 - Imacec de septiembre crece 0,2%: la minería cae 12,1% y el Gobierno habla de estabilización](src/content/events/2026/11/20261102-4.md) — 6 fuentes
 - [2026/11/20261102-5 - Landerretche: sin un "big push" de corto plazo no hay reformas posibles y Chile sigue atrapado en un crecimiento de 2%](src/content/events/2026/11/20261102-5.md) — 5 fuentes
+- [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 
 ## 2025
 

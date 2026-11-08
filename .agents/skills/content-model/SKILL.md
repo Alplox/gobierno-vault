@@ -161,6 +161,19 @@ Medios = organizaciones `tipo: medio_comunicacion` en `src/content/organizations
 - ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `src/content/organizations/*.md` antes de crear (~1052 orgs, ~54 medios). Ojo: el filename no siempre es predecible (`24_horas.md` vs `24horas.md`): buscar además por `nombre:` con `grep` antes de crear.
 - Helper: `pnpm run add-source -- <URL>` mapea dominio → medio y genera `src/content/sources/<id>.md`.
 
+**Medio en prosa, además del número.** Todo `[[sources/...]]` renderiza `[N]` y el `[N]` no dice quién publicó el dato. Cuando la afirmación depende de **quién** la publica — discrepancias entre crónicas, cifras que difieren, atribuciones ("reveló X", "según Y"), versiones en disputa — el medio va nombrado en prosa con `[[organizations/id]]` antes de su `[[sources/...]]`. No basta el número.
+
+```markdown
+<!-- ✗ sólo números: el lector no sabe qué medio dice qué -->
+Las crónicas difieren en las cautelares pedidas: [[sources/meganoticias-2026-10-30-meta-chat-libertad]] consigna arraigo nacional, mientras [[sources/emol-2026-10-30-tribunal-cautelares-mujer-amenazas-kast]] registra prohibición de salir del país.
+
+<!-- ✓ medio en prosa + fuente al cierre de cada tramo -->
+Las crónicas difieren en las cautelares pedidas: [[organizations/meganoticias]] consigna arraigo nacional [[sources/meganoticias-2026-10-30-meta-chat-libertad]], mientras [[organizations/emol]] registra prohibición de salir del país [[sources/emol-2026-10-30-tribunal-cautelares-mujer-amenazas-kast]].
+```
+
+- Vale también para tablas: la celda abre con el medio (`[[organizations/t13]] [[sources/t13-...]]`); dos `[N]` sueltos en una celda "Fuente" no informan nada.
+- Si dos medios independientes coinciden, se nombran ambos. Si uno reproduce al otro (mismo titular, otro dominio), no es cobertura independiente: no se presenta como contraste.
+
 ### Formato de citas (declaraciones)
 
 ```markdown
