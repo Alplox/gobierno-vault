@@ -1939,6 +1939,7 @@
 - [2026/10/20261019-2 - Gobierno ingresa proyecto que reforma el INDH: elimina la facultad de querellarse, reduce el Consejo de 11 a 5 y deja una sola sede en Santiago](src/content/events/2026/10/20261019-2.md) — 7 fuentes
 - [2026/10/20261020-1 - Juez de Garantía de Arica suspende por 60 días la quema de evidencia del caso narcomaderas y cita a audiencia por nuevos peritajes](src/content/events/2026/10/20261020-1.md) — 6 fuentes
 - [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 14 fuentes
+- [2026/10/20261021-2 - Contraloría remite a la Fiscalía el viaje a Shanghái de Raúl Domínguez, exjefe de Fiscalización de la Subtel, por eventual cohecho](src/content/events/2026/10/20261021-2.md) — 10 fuentes
 - [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 29 fuentes
 - [2026/10/20261022-2 - PDI incauta en Lampa 739 kilos de droga de la Operación Tempestad traídos desde Arica, avaluados en $13.500 millones, y detiene a dos camioneros](src/content/events/2026/10/20261022-2.md) — 6 fuentes
 - [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
@@ -1947,6 +1948,7 @@
 - [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 13 fuentes
 - [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 11 fuentes
 - [2026/10/20261023-6 - Interferencia publica los decretos de Casablanca y Petorca firmados por Rabat y Silva y la responsabilidad del Gobierno se desplaza hacia los mandos medios](src/content/events/2026/10/20261023-6.md) — 6 fuentes
+- [2026/10/20261023-7 - Corte de Apelaciones de Punta Arenas avala la desvinculación de una funcionaria del Registro Civil que acumuló 345 días de licencias médicas](src/content/events/2026/10/20261023-7.md) — 6 fuentes
 - [2026/10/20261024-1 - 23 Premios Nacionales rechazan la reforma al INDH y piden al Congreso frenarla: acusan un intento de "neutralizar" al organismo](src/content/events/2026/10/20261024-1.md) — 7 fuentes
 - [2026/10/20261024-2 - Rubilar pide a Kast reconocer un “error gravísimo” por las 56 rebajas y exige disculpas públicas de Rabat](src/content/events/2026/10/20261024-2.md) — 6 fuentes
 - [2026/10/20261024-3 - La comparación viral de dos portadas de LUN contrapone los 13 indultos de 2022 con una portada de farándula de 2026](src/content/events/2026/10/20261024-3.md) — 10 fuentes
