@@ -1911,7 +1911,7 @@
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 - [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
-- [2026/10/20261008-12 - Judd afirma que 'no hay una Antártica que pertenezca a Chile' y Cancillería reafirma que la soberanía está definida por tratados](src/content/events/2026/10/20261008-12.md) — 7 fuentes
+- [2026/10/20261008-12 - Judd afirma que 'no hay una Antártica que pertenezca a Chile' y Cancillería reafirma que la soberanía está definida por tratados](src/content/events/2026/10/20261008-12.md) — 8 fuentes
 - [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 89 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
@@ -2171,6 +2171,7 @@
 - [2022/01/20220112-1 - Juan Araya acusa que el Gobierno de Piñera pidió a los camioneros paralizar en 2020 para aprobar la Ley Juan Barrios, el Ejecutivo lo desestima y el dirigente matiza](src/content/events/2022/01/20220112-1.md) — 10 fuentes
 - [2022/02/20220217-1 - Sergio Pérez se querella por injurias y calumnias contra Juan Araya por acusarlo de organizar con el Gobierno el paro camionero de 2020](src/content/events/2022/02/20220217-1.md) — 5 fuentes
 - [2022/03/20220311-1 - Gabriel Boric asume la Presidencia de Chile a los 36 años, el Mandatario más joven de la historia](src/content/events/2022/03/20220311-1.md) — 2 fuentes
+- [2022/03/20220315-1 - Boric critica al rey Felipe VI por el retraso del cambio de mando y un locutor de COPE lo llama "merluzo"](src/content/events/2022/03/20220315-1.md) — 8 fuentes
 - [2022/03/20220316-1 - Senado aprueba la prórroga del estado de excepción en la Macrozona norte: el primer respaldo legislativo al gobierno de Boric](src/content/events/2022/03/20220316-1.md) — 4 fuentes
 - [2022/04/20220417-1 - Excandidatos presidenciales critican el primer mes del gobierno de Boric](src/content/events/2022/04/20220417-1.md) — 9 fuentes
 - [2022/05/20220502-1 - Querella contra Carabineros por la quema de la estación La Granja del Metro tras el reportaje '¿Quién quemó el Metro?' de La Red](src/content/events/2022/05/20220502-1.md) — 4 fuentes
@@ -2184,6 +2185,7 @@
 - [2022/07/20220726-1 - Reparten trípticos falsos con la gráfica oficial de la Convención en La Florida y Puente Alto: tras el sitio 'Facilitadores Constitucionales' está Numen, la empresa de Cerimedo](src/content/events/2022/07/20220726-1.md) — 9 fuentes
 - [2022/07/20220731-1 - Diputado Luis Cuello presenta proyecto de ley para sancionar con 500 UTM la difusión de información falsa sobre el plebiscito de salida](src/content/events/2022/07/20220731-1.md) — 6 fuentes
 - [2022/08/20220803-1 - Boric presenta el Plan PACTO de reparación integral para víctimas de trauma ocular del 18-O](src/content/events/2022/08/20220803-1.md) — 2 fuentes
+- [2022/08/20220805-1 - Boric se refiere al insulto de "merluzo" y reflexiona sobre las cámaras de eco en redes sociales](src/content/events/2022/08/20220805-1.md) — 10 fuentes
 - [2022/09/20220901-1 - Tribunal Oral de San Bernardo declara culpable a Patricio Maturana, excapitán de Carabineros que dejó ciega a Fabiola Campillai](src/content/events/2022/09/20220901-1.md) — 1 fuente
 - [2022/09/20220904-1 - Plebiscito de salida: la opción Rechazo gana con 61,86% y la propuesta de nueva Constitución es derrotada](src/content/events/2022/09/20220904-1.md) — 2 fuentes
 - [2022/09/20220905-1 - Ricardo Lagos propone imitar a Alessandri Palma con un comité de expertos para redactar nueva Constitución y se ofrece a integrarlo: 'yo quiero a Chile'](src/content/events/2022/09/20220905-1.md) — 4 fuentes
