@@ -1900,7 +1900,7 @@
 - [2026/10/20261006-9 - Sesión especial de la Cámara por el Estrecho de Magallanes: siete resoluciones para reforzar la soberanía y revertir los recortes a Magallanes](src/content/events/2026/10/20261006-9.md) — 6 fuentes
 - [2026/10/20261007-1 - El Gobierno retira su reforma constitucional de seguridad y senadores ingresan una nueva propuesta: crimen organizado equiparado al terrorismo y estado de excepción preventivo](src/content/events/2026/10/20261007-1.md) — 7 fuentes
 - [2026/10/20261007-10 - INE informa alzas de 7,6% en remuneraciones y 8,3% en costos laborales en agosto: el índice real baja a 3,4% y los costos siguen creciendo por sobre los sueldos](src/content/events/2026/10/20261007-10.md) — 5 fuentes
-- [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 21 fuentes
+- [2026/10/20261007-2 - Judd condiciona el apoyo de EEUU en el Estrecho de Magallanes a trabajar con Washington; Pérez responde que Chile defiende sola su soberanía y el Senado recalca que no está en discusión](src/content/events/2026/10/20261007-2.md) — 22 fuentes
 - [2026/10/20261007-3 - Presupuesto 2027 deja sin financiamiento al Instituto Chileno de Campos de Hielo y Cancillería responde que DIFROL concentrará los estudios](src/content/events/2026/10/20261007-3.md) — 7 fuentes
 - [2026/10/20261007-4 - Subtel presenta los ejes del Plan Nacional Digital 2026-2036: ruta hacia el 6G, apagón del 3G al fin del gobierno y reforma a la Ley General de Telecomunicaciones en marzo de 2027](src/content/events/2026/10/20261007-4.md) — 9 fuentes
 - [2026/10/20261007-5 - CIPER revela recorte de $34.451 millones en siete programas de infancia del Presupuesto 2027](src/content/events/2026/10/20261007-5.md) — 10 fuentes
@@ -1911,6 +1911,7 @@
 - [2026/10/20261008-1 - IPC de septiembre sube 0,4% y la inflación a doce meses se estanca en 4,1%; Quiroz responsabiliza al Banco Central y llama "desafiante" la meta de 3,8%](src/content/events/2026/10/20261008-1.md) — 10 fuentes
 - [2026/10/20261008-10 - Quiroz llama a empresarios a "sacar la voz" y afirma: "Todavía estamos asustados por el 18 de octubre" en seminario de la USEC](src/content/events/2026/10/20261008-10.md) — 7 fuentes
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
+- [2026/10/20261008-12 - Judd afirma que 'no hay una Antártica que pertenezca a Chile' y Cancillería reafirma que la soberanía está definida por tratados](src/content/events/2026/10/20261008-12.md) — 7 fuentes
 - [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 89 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
@@ -1923,10 +1924,12 @@
 - [2026/10/20261009-2 - Gobierno promulga la Ley de Reconstrucción pese a la suspensión de la ceremonia por el aluvión de Las Condes](src/content/events/2026/10/20261009-2.md) — 6 fuentes
 - [2026/10/20261009-3 - Kast y Quiroz realizan una visita protocolar al Banco Central y son recibidos por Costa, un día después de que el ministro responsabilizara al emisor por el IPC](src/content/events/2026/10/20261009-3.md) — 5 fuentes
 - [2026/10/20261009-4 - ANFP suspende el partido Universidad Católica-Audax Italiano en el Claro Arena por el aluvión en Las Condes](src/content/events/2026/10/20261009-4.md) — 5 fuentes
+- [2026/10/20261009-5 - Bancada PC e independientes exige la salida de Judd y Cuello advierte una acusación constitucional contra el canciller](src/content/events/2026/10/20261009-5.md) — 6 fuentes
 - [2026/10/20261010-1 - Sábado de limpieza en Las Condes: más de 1.000 voluntarios, 15 buses y vacunatorios móviles; el catastro confirma 2.015 viviendas afectadas](src/content/events/2026/10/20261010-1.md) — 35 fuentes
 - [2026/10/20261010-2 - ¿Se pudo anticipar? La modelación digital del aluvión, el informe de Sernageomin y el debate por negligencia en Las Condes](src/content/events/2026/10/20261010-2.md) — 16 fuentes
 - [2026/10/20261010-3 - Luis Eduardo Escobar: "Jorge Quiroz diseñó la estrategia económica, así que tiene toda la responsabilidad de la situación económica del país"](src/content/events/2026/10/20261010-3.md) — 1 fuente
 - [2026/10/20261010-4 - Gobierno concreta décimo vuelo de expulsión de migrantes y acumula 1.874 deportados en 2026](src/content/events/2026/10/20261010-4.md) — 7 fuentes
+- [2026/10/20261010-5 - Catorce diputados de oposición piden declarar persona non grata a Judd y Cancillería descarta una nota de protesta](src/content/events/2026/10/20261010-5.md) — 7 fuentes
 - [2026/10/20261011-1 - Criteria baja la aprobación de Kast al 27% y la desaprobación sube al 64%, el peor registro desde marzo](src/content/events/2026/10/20261011-1.md) — 8 fuentes
 - [2026/10/20261011-2 - Embalses de Coquimbo alcanzan niveles históricos tras el sistema frontal de julio](src/content/events/2026/10/20261011-2.md) — 9 fuentes
 - [2026/10/20261012-1 - Gobierno anuncia rebaja de hasta 25% en el TAG de Autopista Central a cambio de 20 meses más de concesión](src/content/events/2026/10/20261012-1.md) — 18 fuentes
