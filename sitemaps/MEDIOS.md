@@ -5,7 +5,7 @@
 
 | Slug | Nombre | Sitemap(s) | Filtro | Artículos | Años |
 | --- | --- | --- | --- | --- | --- |
-| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 194.493 | 2 |
+| `24horas` | 24 Horas | `www.24horas.cl/robots.txt` | — | 194.653 | 2 |
 | `abif` | ABIF | `www.abif.cl/robots.txt` | includeRe | 317 | 3 |
 | `acera` | ACERA | `acera.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.655 | 8 |
 | `aconcaguadigital` | Aconcagua Digital | `aconcaguadigital.cl/wp-sitemap.xml` | includeRe | 750 | 4 |
@@ -55,13 +55,13 @@
 | `cclm` | Centro Cultural La Moneda | `cclm.cl/sitemap_index.xml` | articleOnly (Yoast) | 146 | 7 |
 | `ccs` | Cámara de Comercio de Santiago | `www.ccs.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.148 | 7 |
 | `cenabast` | CENABAST | `cenabast.cl/wp-sitemap.xml` | includeRe | 951 | 15 |
-| `centralnoticia` | Central Noticia | `www.centralnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 25.901 | 2 |
+| `centralnoticia` | Central Noticia | `www.centralnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 25.958 | 2 |
 | `centralweb` | Central Web | `centralweb.cl/sitemap_index.xml` | articleOnly (Yoast) | 10.229 | 5 |
 | `cepchile` | CEP Chile | `cepchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.079 | 25 |
 | `chanarcillo` | Diario Chañarcillo | `chanarcillo.cl/sitemap.xml` | includeRe | 35.415 | 10 |
 | `chicureohoy` | Chicureo Hoy | `www.chicureohoy.cl/sitemap.xml` | articleOnly (Yoast) | 49.133 | 11 |
 | `chileestuyo` | Chile es Tuyo | `chileestuyo.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.274 | 12 |
-| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 8.536 | 4 |
+| `chilepaisminero` | Chile País Minero | `chilepaisminero.com/sitemap.xml` | — | 8.555 | 4 |
 | `chiletravel` | Chile Travel | `chile.travel/sitemap_index.xml` | — | 4.559 | 3 |
 | `chilevision` | Chilevisión | `www.chilevision.cl/robots.txt` | — | 286.737 | 15 |
 | `chocale` | Chocale | `chocale.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.800 | 10 |
@@ -90,7 +90,7 @@
 | `defensorianinez` | Defensoría de la Niñez | `www.defensorianinez.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.830 | 8 |
 | `demaracordilleratv` | De Mar a Cordillera TV | `demaracordilleratv.cl/wp-sitemap.xml` | includeRe | 4.725 | 6 |
 | `dep` | Dirección de Educación Pública | `dep.gob.cl/wp-sitemap.xml` | includeRe | 1.170 | 11 |
-| `desenfoque` | Desenfoque | `desenfoque.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.082 | 5 |
+| `desenfoque` | Desenfoque | `desenfoque.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.092 | 5 |
 | `desiertofm` | Desierto FM (Antofagasta) | `www.desiertofm.cl/wp-sitemap.xml` | includeRe | 9.551 | 4 |
 | `df` | Diario Financiero | `www.df.cl/noticias/site/sitemap_pags.xml, www.df.cl/noticias/site/sitemap_news.xml, www.df.cl/noticias/site/list/port/sitemap_df.xml` | — | 368.937 | 3 |
 | `dialogosur` | Diálogo Sur | `dialogosur.cl/robots.txt` | includeRe | 41.506 | 15 |
@@ -102,31 +102,31 @@
 | `diarioaysen` | Diario Aysén | `www.diarioaysen.cl/sitemap_index.xml` | articleOnly (Yoast) | 320 | 5 |
 | `diariocauquenes` | Diario Cauquenes | `diariocauquenes.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.887 | 6 |
 | `diariochile` | Diario Chile | `diariochile.cl/wp-sitemap.xml` | includeRe | 10.687 | 15 |
-| `diariochiloe` | Diario Chiloé | `www.diariochiloe.cl/sitemap.xml` | includeRe | 20.275 | 10 |
+| `diariochiloe` | Diario Chiloé | `www.diariochiloe.cl/sitemap.xml` | includeRe | 20.288 | 10 |
 | `diarioconcepcion` | Diario Concepción | `www.diarioconcepcion.cl/sitemap.xml, www.diarioconcepcion.cl/sitemap_news.xml` | — | 501 | 1 |
 | `diariocurico` | Diario Curicó | `diariocurico.cl/wp-sitemap.xml` | includeRe | 9.685 | 6 |
 | `diariodeosorno` | Diario de Osorno | `www.diariodeosorno.cl/sitemap.xml` | includeRe | 30.722 | 10 |
-| `diariodepuertomontt` | Diario de Puerto Montt | `diariodepuertomontt.cl/sitemap.xml` | — | 22.719 | 10 |
+| `diariodepuertomontt` | Diario de Puerto Montt | `diariodepuertomontt.cl/sitemap.xml` | — | 22.733 | 10 |
 | `diariodevaldivia` | Diario de Valdivia | `www.diariodevaldivia.cl/sitemap.xml` | includeRe | 59.270 | 12 |
 | `diarioelcautin` | Diario El Cautín | `diarioelcautin.cl/wp-sitemap.xml` | includeRe | 732 | 1 |
-| `diarioelcentro` | Diario El Centro | `www.diarioelcentro.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.153 | 5 |
-| `diarioeldia` | Diario El Día | `www.diarioeldia.cl/sitemap.xml` | — | 5.225 | 15 |
+| `diarioelcentro` | Diario El Centro | `www.diarioelcentro.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.168 | 5 |
+| `diarioeldia` | Diario El Día | `www.diarioeldia.cl/sitemap.xml` | — | 5.274 | 15 |
 | `diarioelgong` | Diario El Gong | `diarioelgong.cl/sitemap_index.xml` | articleOnly (Yoast) | 246 | 6 |
 | `diarioelmarino` | El Marino (Pichilemu) | `www.diarioelmarino.cl/wp-sitemap.xml` | includeRe | 18.029 | 26 |
 | `diarioelnortino` | El Nortino (Alto Hospicio) | `diarioelnortino.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.333 | 7 |
 | `diarioelpulso` | Diario El Pulso | `www.diarioelpulso.cl/wp-sitemap.xml` | includeRe | 18.592 | 8 |
 | `diarioelranco` | Diario El Ranco | `www.diarioelranco.cl/sitemap.xml` | articleOnly (Yoast) | 42.740 | 18 |
 | `diarioestrategia` | Diario Estrategia | `www.diarioestrategia.cl/sitemap/news, www.diarioestrategia.cl/sitemap/lastarticles` | — | 605 | 1 |
-| `diariofutrono` | Diario Futrono | `www.diariofutrono.cl/sitemap.xml` | includeRe | 57.327 | 14 |
-| `diariolagoranco` | Diario Lago Ranco | `diariolagoranco.cl/sitemap.xml` | — | 51.895 | 13 |
+| `diariofutrono` | Diario Futrono | `www.diariofutrono.cl/sitemap.xml` | includeRe | 57.347 | 14 |
+| `diariolagoranco` | Diario Lago Ranco | `diariolagoranco.cl/sitemap.xml` | — | 51.913 | 13 |
 | `diariolaunion` | La Unión | `diariolaunion.cl/sitemap.xml` | includeRe | 48.513 | 10 |
 | `diariolinares` | Diario Linares | `diariolinares.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.799 | 6 |
-| `diariolongino` | Diario El Longino | `diariolongino.cl/sitemap_index.xml` | articleOnly (Yoast) | 16.241 | 6 |
+| `diariolongino` | Diario El Longino | `diariolongino.cl/sitemap_index.xml` | articleOnly (Yoast) | 16.252 | 6 |
 | `diarioloslagos` | Diario Los Lagos | `diarioloslagos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.576 | 2 |
-| `diariopaillaco` | Diario Paillaco | `www.diariopaillaco.cl/sitemap.xml` | includeRe | 57.103 | 14 |
+| `diariopaillaco` | Diario Paillaco | `www.diariopaillaco.cl/sitemap.xml` | includeRe | 57.124 | 14 |
 | `diariopuertovaras` | Diario Puerto Varas | `diariopuertovaras.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.660 | 10 |
-| `diarioregionalaysen` | Diario Regional Aysén | `diarioregionalaysen.cl/sitemap.xml` | — | 25.910 | 8 |
-| `diariosanjose` | Diario San José | `www.diariosanjose.cl/sitemap.xml` | includeRe | 43.616 | 9 |
+| `diarioregionalaysen` | Diario Regional Aysén | `diarioregionalaysen.cl/sitemap.xml` | — | 25.926 | 8 |
+| `diariosanjose` | Diario San José | `www.diariosanjose.cl/sitemap.xml` | includeRe | 43.633 | 9 |
 | `diariosurnoticias` | Diario Sur Noticias | `diariosurnoticias.com/sitemap_index.xml` | articleOnly (Yoast) | 14.487 | 13 |
 | `diariotalca` | Diario Talca | `diariotalca.cl/sitemap_index.xml` | articleOnly (Yoast) | 21.147 | 6 |
 | `diariousach` | Diario USACH | `www.diariousach.cl/robots.txt` | — | 43.912 | 7 |
@@ -134,7 +134,7 @@
 | `disorder` | Disorder (magazine) | `www.disorder.cl/wp-sitemap.xml` | includeRe | 5.642 | 18 |
 | `dsstgo` | Colegio Alemán de Santiago | `dsstgo.cl/sitemap_index.xml` | articleOnly (Yoast) | 769 | 2 |
 | `duna` | Radio Duna | `duna.cl/sitemap.xml` | includeRe | 59.793 | 2 |
-| `duplos` | Duplos | `duplos.cl/sitemap_index.xml` | articleOnly (Yoast) | 27.240 | 7 |
+| `duplos` | Duplos | `duplos.cl/sitemap_index.xml` | articleOnly (Yoast) | 27.434 | 7 |
 | `ecoceanos` | ECOceanos | `www.ecoceanos.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.165 | 12 |
 | `economia` | Ministerio de Economía | `www.economia.gob.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.726 | 15 |
 | `ecosistemas` | Ecosistemas | `ecosistemas.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.635 | 14 |
@@ -147,7 +147,7 @@
 | `elarrebato` | El Arrebato | `elarrebato.cl/sitemap_index.xml` | articleOnly (Yoast) | 395 | 4 |
 | `elcachapoal` | El Cachapoal | `elcachapoal.cl/wp-sitemap.xml` | includeRe | 0 | 0 |
 | `elcalbucano` | El Calbucano | `elcalbucano.cl/sitemap_index.xml` | articleOnly (Yoast) | 34.703 | 11 |
-| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 308.083 | 22 |
+| `elciudadano` | El Ciudadano | `www.elciudadano.com/sitemap_index.xml` | articleOnly (Yoast) | 308.171 | 22 |
 | `elclarin` | El Clarín | `www.elclarin.cl/sitemap_index.xml` | articleOnly (Yoast) | 21.180 | 10 |
 | `elcomunicador` | El Comunicador | `elcomunicador.cl/wp-sitemap.xml` | includeRe | 522 | 2 |
 | `elcondor` | El Cóndor | `diariocondor.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.924 | 7 |
@@ -157,13 +157,13 @@
 | `eldesconcierto` | El Desconcierto | `eldesconcierto.cl/robots.txt` | — | 541 | 1 |
 | `eldiariodelaaraucania` | El Diario de La Araucanía | `eldiariodelaaraucania.cl/sitemap_index.xml` | articleOnly (Yoast) | 8.502 | 3 |
 | `eldiariodesantiago` | El Diario de Santiago | `eldiariodesantiago.cl/wp-sitemap.xml` | includeRe | 23.686 | 6 |
-| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 253.777 | 17 |
+| `eldinamo` | El Dínamo | `www.eldinamo.cl/robots.txt` | — | 253.829 | 17 |
 | `electromineria` | Electrominería | `electromineria.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.956 | 5 |
 | `elfiltrador` | El Filtrador | `elfiltrador.com/sitemap_index.xml` | articleOnly (Yoast) | 22.703 | 9 |
 | `elgong` | El Gong Araucanía | `elgong.cl/sitemap.xml` | — | 1 | 1 |
 | `elhuemul` | El Huemul | `elhuemul.cl/sitemap_index.xml` | includeRe | 812 | 3 |
 | `elinformador` | El Informador Los Andes | `elinformador.cl/sitemap_index.xml` | articleOnly (Yoast) | 9.059 | 10 |
-| `elinformadorchile` | El Informador Chile | `www.elinformadorchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.943 | 1 |
+| `elinformadorchile` | El Informador Chile | `www.elinformadorchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.968 | 1 |
 | `elinsular` | El Insular | `elinsular.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.260 | 7 |
 | `ellibero` | El Líbero | `www.ellibero.cl/sitemap_index.xml` | articleOnly (Yoast) | 73.864 | 12 |
 | `ellibertario` | El Libertario | `www.ellibertario.cl/sitemap.xml` | — | 26 | 1 |
@@ -195,11 +195,11 @@
 | `elsoldeiquique` | El Sol de Iquique | `elsoldeiquique.cl/sitemap_index.xml` | articleOnly (Yoast) | 29.666 | 16 |
 | `eltirapiedras` | El Tirapiedras | `eltirapiedras.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.424 | 7 |
 | `elvicuense` | El Vicuñense | `xn--elvicuense-y9a.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
-| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.118.681 | 27 |
-| `enfoquedigital` | Enfoque Digital | `enfoquedigital.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.556 | 3 |
+| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.118.834 | 27 |
+| `enfoquedigital` | Enfoque Digital | `enfoquedigital.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.675 | 3 |
 | `enfoquedigitalohiggins` | Enfoque Digital O'Higgins | `vi.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.468 | 3 |
-| `enlalinea` | En La Línea | `enlalinea.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.957 | 4 |
-| `enlineamaule` | En Línea Maule | `enlineamaule.cl/sitemap_index.xml` | articleOnly (Yoast) | 15.976 | 13 |
+| `enlalinea` | En La Línea | `enlalinea.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.964 | 4 |
+| `enlineamaule` | En Línea Maule | `enlineamaule.cl/sitemap_index.xml` | articleOnly (Yoast) | 15.982 | 13 |
 | `enteratehoy` | Entérate Hoy | `enteratehoy.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.239 | 3 |
 | `epicentrochile` | Epicentro Chile | `www.epicentrochile.com/sitemap_index.xml` | articleOnly (Yoast) | 91.304 | 15 |
 | `espaciopublico` | Espacio Público | `espaciopublico.cl/wp-sitemap.xml` | includeRe | 2.000 | 9 |
@@ -207,16 +207,16 @@
 | `esperanzafm` | Esperanza FM (Biobío / Los Lagos) | `esperanzafm.cl/wp-sitemap.xml` | includeRe | 1.394 | 3 |
 | `estapasando` | Está Pasando | `estapasando.cl/sitemap_index.xml` | articleOnly (Yoast) | 53.123 | 6 |
 | `estrellaiquique` | La Estrella de Iquique | `estrellaiquique.cl/sitemap.xml` | articleOnly (Yoast) | 0 | 0 |
-| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 23.017 | 7 |
+| `ex_ante` | Ex-Ante | `www.ex-ante.cl/sitemap_index.xml` | articleOnly (Yoast) | 23.032 | 7 |
 | `explora` | Explora | `explora.cl/sitemap_index.xml` | articleOnly (Yoast) | 38 | 3 |
 | `factchecking` | Factchecking.cl | `factchecking.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 5 |
 | `factos` | Factos | `factos.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.471 | 2 |
-| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.394 | 7 |
+| `fastcheck` | Fast Check CL | `www.fastcheck.cl/sitemap.xml` | includeRe | 6.400 | 7 |
 | `fima` | FIMA | `fima.cl/sitemap_index.xml` | — | 0 | 0 |
 | `fisa` | FISA | `www.fisa.cl/wp-sitemap.xml` | includeRe | 140 | 5 |
 | `fmcentro` | Radio FM Centro | `fmcentro.cl/sitemap.xml` | includeRe | 4.733 | 6 |
 | `fonasa` | Fonasa | `www.fonasa.cl/sitemap_index.xml` | articleOnly (Yoast) | 281 | 3 |
-| `france24` | France 24 | `www.france24.com/sitemaps/es/index.xml` | includeRe | 243.141 | 10 |
+| `france24` | France 24 | `www.france24.com/sitemaps/es/index.xml` | includeRe | 243.246 | 10 |
 | `frenteampliochile` | Frente Amplio | `frenteampliochile.cl/sitemap_index.xml` | articleOnly (Yoast) | 108 | 3 |
 | `fresiaahora` | Fresia Ahora | `www.fresiaahora.cl/wp-sitemap.xml` | includeRe | 4.529 | 6 |
 | `frevs` | Federación Regionalista Verde Social | `frevs.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.119 | 10 |
@@ -234,28 +234,28 @@
 | `hdn` | HDN | `hdn.cl/sitemap.xml` | articleOnly (Yoast) | 4.511 | 12 |
 | `herejia` | Herejía | `herejia.cl/sitemap_index.xml` | articleOnly (Yoast) | 14 | 2 |
 | `hogardecristo` | Hogar de Cristo | `hogardecristo.cl/sitemap.xml` | — | 500 | 2 |
-| `holanews` | HolaNews | `holanews.com/sitemap_index.xml` | articleOnly (Yoast) | 28.318 | 1 |
+| `holanews` | HolaNews | `holanews.com/sitemap_index.xml` | articleOnly (Yoast) | 28.550 | 1 |
 | `horadenoticias` | Hora de Noticias | `horadenoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.339 | 8 |
 | `hvaradio` | Radio HVA | `www.hvaradio.cl/wp-sitemap.xml` | includeRe | 16.510 | 8 |
 | `iconstruccion` | Instituto de la Construcción | `iconstruccion.cl/sitemap_index.xml` | articleOnly (Yoast) | 373 | 6 |
 | `iguales` | Fundación Iguales | `iguales.cl/wp-sitemap.xml` | includeRe | 2.109 | 16 |
 | `infinita` | Radio Infinita | `www.infinita.cl/sitemap.xml` | — | 268 | 1 |
 | `infodefensa` | Infodefensa | `www.infodefensa.com/sitemap/lastarticles` | — | 300 | 1 |
-| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 48.752 | 1 |
+| `infogate` | Infogate | `www.infogate.cl/sitemap.xml` | includeRe | 48.778 | 1 |
 | `informaalminuto` | Informa Al Minuto | `informaalminuto.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.623 | 6 |
 | `infosalmon` | InfoSalmón | `infosalmon.cl/wp-sitemap.xml` | includeRe | 7.136 | 6 |
 | `infotarapaca` | Info Tarapacá | `infotarapaca.cl/sitemap.xml` | includeRe | 1.010 | 2 |
 | `insularfm` | Insular FM | `insularfm.cl/sitemap_index.xml` | articleOnly (Yoast) | 5.058 | 1 |
-| `ipsnoticias` | IPS Agencia de Noticias | `ipsnoticias.net/wp-sitemap.xml` | articleOnly (Yoast) | 111.150 | 33 |
-| `iquiquehoy` | Iquique Hoy | `www.iquiquehoy.cl/sitemap.xml` | includeRe | 5.328 | 7 |
+| `ipsnoticias` | IPS Agencia de Noticias | `ipsnoticias.net/wp-sitemap.xml` | articleOnly (Yoast) | 111.159 | 33 |
+| `iquiquehoy` | Iquique Hoy | `www.iquiquehoy.cl/sitemap.xml` | includeRe | 5.335 | 7 |
 | `iquiquetv` | Iquique TV | `iquiquetv.cl/sitemap.xml` | includeRe | 8.910 | 8 |
 | `isl` | Instituto de Seguridad Laboral | `www.isl.gob.cl/sitemap_index.xml` | articleOnly (Yoast) | 885 | 3 |
 | `itvpatagonia` | ITV Patagonia | `itvpatagonia.com/sitemap_index.xml` | articleOnly (Yoast) | 15.577 | 4 |
 | `junji` | JUNJI | `junji.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.802 | 11 |
-| `la_hora` | La Hora | `lahora.cl/sitemap.xml, lahora.cl/sitemap/news-sitemap.xml` | includeRe | 47.370 | 3 |
+| `la_hora` | La Hora | `lahora.cl/sitemap.xml, lahora.cl/sitemap/news-sitemap.xml` | includeRe | 47.426 | 3 |
 | `la_nacion` | La Nación | `www.lanacion.cl/sitemap_index.xml` | articleOnly (Yoast) | 21.545 | 7 |
 | `labatalla` | La Batalla de Maipú | `labatalla.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.809 | 17 |
-| `lacuarta` | La Cuarta | `www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 13.242 | 1 |
+| `lacuarta` | La Cuarta | `www.lacuarta.com/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 13.329 | 1 |
 | `lafontana` | La Fontana | `lafontana.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.707 | 7 |
 | `laizquierdadiario` | La Izquierda Diario | `www.laizquierdadiario.cl/sitemap.xml` | — | 1.528 | 2 |
 | `lakalle` | La Kalle | `lakalle.cl/sitemap.xml` | articleOnly (Yoast) | 0 | 0 |
@@ -268,10 +268,10 @@
 | `laprensaaustral` | La Prensa Austral | `laprensaaustral.cl/wp-sitemap.xml` | includeRe | 69.219 | 7 |
 | `laprensadiariolaprensa` | La Prensa | `new.diariolaprensa.cl/sitemap_index.xml` | articleOnly (Yoast) | 19.076 | 6 |
 | `lasegunda` | La Segunda | `www.lasegunda.com/robots.txt` | includeRe | 903.546 | 21 |
-| `laserenaonline` | La Serena Online | `laserenaonline.cl/sitemap.xml` | includeRe | 40.114 | 11 |
+| `laserenaonline` | La Serena Online | `laserenaonline.cl/sitemap.xml` | includeRe | 40.132 | 11 |
 | `lasnoticiasdemalleco` | Las Noticias de Malleco | `lasnoticiasdemalleco.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.840 | 5 |
 | `latendencia` | La Tendencia | `latendencia.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.608 | 3 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 22.092 | 1 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 22.188 | 1 |
 | `latribunadecolchagua` | La Tribuna de Colchagua | `latribunadecolchagua.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.059 | 4 |
 | `lavozdelosquesobran` | La Voz de los que Sobran | `www.lavozdelosquesobran.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.166 | 7 |
 | `lavozdepucon` | La Voz de Pucón | `www.lavozdepucon.cl/wp-sitemap.xml` | includeRe | 4.782 | 9 |
@@ -290,13 +290,13 @@
 | `malleco7` | Malleco 7 | `malleco7.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.791 | 8 |
 | `mapuchediario` | Diario Mapuche | `www.mapuchediario.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.298 | 5 |
 | `maray` | Radio Maray | `www.maray.cl/sitemap_index.xml` | articleOnly (Yoast) | 18.168 | 3 |
-| `margamargatv` | Margamarga TV | `margamargatv.cl/sitemap_index.xml` | articleOnly (Yoast) | 11.532 | 5 |
+| `margamargatv` | Margamarga TV | `margamargatv.cl/sitemap_index.xml` | articleOnly (Yoast) | 11.547 | 5 |
 | `marketing4ecommerce` | Marketing4eCommerce Chile | `marketing4ecommerce.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.913 | 10 |
 | `masnoticia` | Más Noticia | `masnoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
 | `maulehoy` | Maule Hoy | `maulehoy.cl/sitemap.xml` | includeRe | 22.073 | 7 |
 | `mediabanco` | Mediabanco | `mediabanco.com/wp-sitemap.xml` | includeRe | 108.161 | 13 |
 | `meganoticias` | Meganoticias | `www.meganoticias.cl/robots.txt` | includeRe | 438.975 | 16 |
-| `mercopress` | MercoPress | `es.mercopress.com/sitemap.xml` | includeRe | 46.937 | 14 |
+| `mercopress` | MercoPress | `es.mercopress.com/sitemap.xml` | includeRe | 46.944 | 14 |
 | `mestizos` | Mestizos Magazine | `www.mestizos.cl/sitemap.xml` | — | 8.639 | 9 |
 | `minrel` | Ministerio de Relaciones Exteriores | `minrel.gob.cl/minrel/site/sitemap_pags.xml` | — | 5.136 | 2 |
 | `mintrab` | Ministerio del Trabajo | `www.mintrab.gob.cl/sitemap_index.xml` | — | 5.424 | 17 |
@@ -310,7 +310,7 @@
 | `mtt` | Ministerio de Transportes y Telecomunicaciones | `mtt.gob.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.568 | 2 |
 | `munialtobiobio` | Municipalidad de Alto Biobío | `munialtobiobio.cl/sitemap_index.xml` | articleOnly (Yoast) | 486 | 3 |
 | `museovioletaparra` | Museo Violeta Parra | `museovioletaparra.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.572 | 12 |
-| `musicaynoticias` | Música y Noticias | `musicaynoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 24.900 | 3 |
+| `musicaynoticias` | Música y Noticias | `musicaynoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 24.923 | 3 |
 | `nacimentano` | Nacimentano | `nacimentano.cl/sitemap_index.xml` | articleOnly (Yoast) | 109 | 2 |
 | `nexos` | Nexos Chile | `www.nexos.cl/sitemap.xml` | includeRe | 39 | 1 |
 | `norteonline` | Norte Online | `norteonline.cl/sitemap.xml` | includeRe | 4.704 | 6 |
@@ -334,7 +334,7 @@
 | `ovejeronoticias` | Ovejero Noticias | `ovejeronoticias.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
 | `pagina19` | Página 19 | `pagina19.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.859 | 9 |
 | `pagina7` | Página 7 | `www.pagina7.cl/robots.txt` | — | 223.128 | 13 |
-| `paislobo` | País Lobo | `paislobo.cl/sitemap.xml` | includeRe | 52.574 | 8 |
+| `paislobo` | País Lobo | `paislobo.cl/sitemap.xml` | includeRe | 52.625 | 8 |
 | `panoramanoticioso` | Panorama Noticioso | `panoramanoticioso.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.807 | 1 |
 | `panoramicaysen` | PanoramicAysén | `www.panoramicaysen.cl/sitemap.xml` | includeRe | 3.840 | 3 |
 | `partidohumanista` | Partido Humanista | `partidohumanista.cl/sitemap_index.xml` | articleOnly (Yoast) | 760 | 9 |
@@ -345,14 +345,14 @@
 | `portalfruticola` | Portal Frutícola | `www.portalfruticola.com/sitemap_index.xml` | articleOnly (Yoast) | 30.437 | 3 |
 | `portalinformativo` | Portal Informativo | `portalinformativo.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.567 | 7 |
 | `portalmetropolitano` | Portal Metropolitano | `portalmetropolitano.cl/sitemap_index.xml` | articleOnly (Yoast) | 13.130 | 5 |
-| `portalminero` | Portal Minero | `www.portalminero.com/sitemap.xml` | — | 33.656 | 15 |
+| `portalminero` | Portal Minero | `www.portalminero.com/sitemap.xml` | — | 33.674 | 15 |
 | `portalportuario` | PortalPortuario | `portalportuario.cl/sitemap_index.xml` | articleOnly (Yoast) | 107.976 | 12 |
 | `portalredsalud` | Portal RedSalud | `portalredsalud.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.616 | 11 |
 | `prensaciudadana` | Prensa Ciudadana | `prensaciudadana.cl/sitemap.xml` | includeRe | 14.611 | 7 |
 | `prensaeventos` | Prensa Eventos | `prensaeventos.cl/sitemap_index.xml` | articleOnly (Yoast) | 11.862 | 11 |
 | `primedigital` | Prime Digital | `primedigital.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.128 | 3 |
 | `primerafuente` | Primera Fuente | `primerafuente.cl/robots.txt` | articleOnly (Yoast) | 4.386 | 4 |
-| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 574 | 1 |
+| `publimetro` | Publimetro | `www.publimetro.cl/arc/outboundfeeds/sitemap-index/?outputType=xml` | — | 594 | 1 |
 | `publimicro` | Publimicro | `publimicro.cl/sitemap_index.xml` | articleOnly (Yoast) | 34.822 | 7 |
 | `pucv` | Pontificia Universidad Católica de Valparaíso | `www.pucv.cl/pucv/site/sitemap_pags.xml` | — | 14.843 | 5 |
 | `puertoapuerto` | Puerto a Puerto | `puertoapuerto.cl/wp-sitemap.xml` | includeRe | 253 | 9 |
@@ -369,16 +369,16 @@
 | `radioagricultura` | Radio Agricultura | `www.radioagricultura.cl/robots.txt` | — | 304.476 | 12 |
 | `radiobeat` | Radio Beat | `www.radiobeat.cl/sitemap.xml` | includeRe | 151 | 5 |
 | `radiochilena` | Radio Chilena | `radiochilena.cl/sitemap_index.xml` | articleOnly (Yoast) | 754 | 11 |
-| `radiocomunicativa` | Radio Comunicativa (Ovalle) | `radiocomunicativa.cl/sitemap_index.xml` | articleOnly (Yoast) | 15.858 | 14 |
+| `radiocomunicativa` | Radio Comunicativa (Ovalle) | `radiocomunicativa.cl/sitemap_index.xml` | articleOnly (Yoast) | 15.873 | 14 |
 | `radiofestival` | Radio Festival | `www.radiofestival.cl/wp-sitemap.xml` | includeRe | 33.002 | 12 |
 | `radioimagina` | Radio Imagina | `radioimagina.cl/sitemap_index.xml` | articleOnly (Yoast) | 29.227 | 14 |
 | `radiointeramericana` | Radio Interamericana | `radiointeramericana.cl/wp-sitemap.xml` | includeRe | 2.971 | 1 |
-| `radiolasenal` | Radio La Señal | `radiolasenal.cl/sitemap_index.xml` | articleOnly (Yoast) | 6.951 | 2 |
+| `radiolasenal` | Radio La Señal | `radiolasenal.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.056 | 2 |
 | `radiomagallanes` | Radio Magallanes | `radiomagallanes.cl/sitemap.xml` | includeRe | 4.090 | 2 |
 | `radiomaria` | Radio María Chile | `radiomaria.cl/sitemap_index.xml` | articleOnly (Yoast) | 104 | 1 |
 | `radiomelodia` | Radio Melodía | `radiomelodia.cl/wp-sitemap.xml` | includeRe | 12.042 | 2 |
 | `radiomodelo` | Radio Modelo | `radiomodelo.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.325 | 1 |
-| `radionuevomundo` | Radio Nuevo Mundo | `radionuevomundo.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.983 | 9 |
+| `radionuevomundo` | Radio Nuevo Mundo | `radionuevomundo.cl/sitemap_index.xml` | articleOnly (Yoast) | 14.998 | 9 |
 | `radiopaulina` | Radio Paulina | `radiopaulina.cl/sitemap.xml` | includeRe | 40.830 | 14 |
 | `radiopirque` | Radio Pirque | `radiopirque.cl/sitemap_index.xml` | articleOnly (Yoast) | 442 | 4 |
 | `radiopolar` | Radio Polar (Magallanes) | `www.radiopolar.com/sitemap/news/sitemap.xml` | — | 8.885 | 2 |
@@ -391,29 +391,29 @@
 | `radiovalparaiso` | Radio Valparaíso | `radiovalparaiso.cl/sitemap_index.xml` | articleOnly (Yoast) | 843 | 3 |
 | `radioventisqueros` | Radio Ventisqueros | `radioventisqueros.cl/sitemap.xml` | includeRe | 900 | 3 |
 | `redaccion` | Redacción | `redaccion.cl/sitemap_index.xml` | articleOnly (Yoast) | 362 | 1 |
-| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 52.611 | 8 |
+| `redimin` | REDIMIN | `www.redimin.cl/sitemap_index.xml` | articleOnly (Yoast) | 52.725 | 8 |
 | `redinformativa` | Red Informativa | `redinformativa.cl/sitemap.xml` | — | 0 | 0 |
 | `redsalud` | RedSalud | `www.redsalud.cl/sitemap.xml` | — | 395 | 1 |
 | `regionalista` | Regionalista | `regionalista.cl/sitemap.xml` | includeRe | 9.593 | 4 |
 | `regiondecoquimbo` | Región de Coquimbo | `regiondecoquimbo.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.424 | 5 |
 | `regionvisual` | Región Visual | `regionvisual.com/sitemap_index.xml` | articleOnly (Yoast) | 4.983 | 20 |
 | `reportea` | Reportea | `reportea.cl/sitemap_index.xml` | articleOnly (Yoast) | 142 | 2 |
-| `reporteagricola` | Reporte Agrícola | `www.reporteagricola.cl/sitemap.xml` | — | 6.089 | 3 |
+| `reporteagricola` | Reporte Agrícola | `www.reporteagricola.cl/sitemap.xml` | — | 6.118 | 3 |
 | `resonanciadiario` | Resonancia Diario | `www.resonanciadiario.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.310 | 3 |
 | `reuters` | Reuters | `www.reuters.com/robots.txt` | includeRe | 31.542 | 4 |
 | `revistaecociencias` | Revista Ecociencias | `revistaecociencias.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.586 | 9 |
 | `revistanos` | Revista NOS | `revistanos.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.129 | 22 |
 | `rewildingchile` | Fundación Rewilding Chile | `rewildingchile.org/sitemap_index.xml` | articleOnly (Yoast) | 313 | 6 |
-| `rfi` | RFI Español | `www.rfi.fr/sitemaps/es/index.xml` | includeRe | 401.963 | 18 |
+| `rfi` | RFI Español | `www.rfi.fr/sitemaps/es/index.xml` | includeRe | 402.077 | 18 |
 | `rioenlinea` | Río en Línea | `rioenlinea.cl/sitemap.xml` | includeRe | 19.528 | 9 |
 | `rln` | Radio Las Nieves | `rln.cl/sitemap_index.xml` | articleOnly (Yoast) | 32.618 | 9 |
 | `rn` | RN | `www.rn.cl/sitemap.xml` | includeRe | 25 | 2 |
 | `romantica` | Radio Romántica | `www.romantica.cl/sitemap.xml` | — | 126 | 1 |
 | `ruta2050` | Ruta 2050 | `ruta2050.cl/sitemap_index.xml` | articleOnly (Yoast) | 501 | 3 |
-| `sabes` | Sabes.cl | `sabes.cl/sitemap.xml` | includeRe | 33.679 | 7 |
+| `sabes` | Sabes.cl | `sabes.cl/sitemap.xml` | includeRe | 33.722 | 7 |
 | `saintgeorge` | Saint George's College | `saintgeorge.cl/sitemap_index.xml` | articleOnly (Yoast) | 1 | 1 |
-| `saladeprensa` | Sala de Prensa | `www.saladeprensa.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.690 | 4 |
-| `sancarlosonline` | San Carlos On Line | `sancarlosonline.cl/sitemap.xml` | includeRe | 43.021 | 16 |
+| `saladeprensa` | Sala de Prensa | `www.saladeprensa.cl/sitemap_index.xml` | articleOnly (Yoast) | 3.699 | 4 |
+| `sancarlosonline` | San Carlos On Line | `sancarlosonline.cl/sitemap.xml` | includeRe | 43.032 | 16 |
 | `sanignacio` | Colegio San Ignacio | `sanignacio.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.685 | 10 |
 | `santacruzfm` | Radio Santa Cruz | `santacruzfm.cl/wp-sitemap.xml` | includeRe | 2.209 | 6 |
 | `santiagotimes` | Santiago Times | `santiagotimes.cl/sitemap.xml` | includeRe | 490 | 5 |
@@ -435,9 +435,9 @@
 | `tabancura` | Colegio Tabancura | `tabancura.cl/sitemap_index.xml` | articleOnly (Yoast) | 162 | 4 |
 | `tarapacaonline` | Tarapacá Online | `tarapacaonline.cl/sitemap.xml` | includeRe | 4.980 | 3 |
 | `temucodiario` | Temuco Diario | `temucodiario.cl/sitemap.xml` | includeRe | 8.147 | 8 |
-| `terra` | Terra Chile | `www.terra.cl/robots.txt` | includeRe | 43.228 | 6 |
-| `terram` | Fundación Terram | `www.terram.cl/sitemap.xml` | includeRe | 31.115 | 25 |
-| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 194.344 | 19 |
+| `terra` | Terra Chile | `www.terra.cl/robots.txt` | includeRe | 43.233 | 6 |
+| `terram` | Fundación Terram | `www.terram.cl/sitemap.xml` | includeRe | 31.121 | 25 |
+| `theclinic` | The Clinic | `www.theclinic.cl/sitemap_index.xml` | articleOnly (Yoast) | 194.407 | 19 |
 | `theguardian` | The Guardian | `www.theguardian.com/sitemaps/news.xml` | — | 1.521 | 1 |
 | `tiempo21` | Tiempo 21 | `tiempo21.cl/sitemap.xml` | includeRe | 0 | 0 |
 | `tierramarillano` | Tierramarillano | `tierramarillano.cl/wp-sitemap.xml` | includeRe | 53.360 | 10 |
@@ -456,7 +456,7 @@
 | `ucsc` | UCSC | `ucsc.cl/sitemap_index.xml` | — | 41.889 | 18 |
 | `udec` | Universidad de Concepción | `noticias.udec.cl/sitemap_index.xml` | articleOnly (Yoast) | 13.521 | 7 |
 | `udi` | UDI (Unión Demócrata Independiente) | `udi.cl/wp-sitemap.xml` | includeRe | 142 | 5 |
-| `udla` | UDLA | `udla.cl/sitemap_index.xml` | — | 27.846 | 16 |
+| `udla` | UDLA | `udla.cl/sitemap_index.xml` | — | 27.859 | 16 |
 | `ulagos` | Universidad de los Lagos | `www.ulagos.cl/wp-sitemap.xml` | includeRe | 6.851 | 10 |
 | `umayor` | Universidad Mayor | `www.umayor.cl/sitemap.xml` | — | 1.350 | 3 |
 | `unab` | Universidad Andrés Bello | `unab.cl/sitemap_index.xml` | articleOnly (Yoast) | 2 | 2 |
@@ -466,16 +466,16 @@
 | `vallenardigital` | Vallenar Digital | `vallenardigital.cl/sitemap.xml` | includeRe | 26.304 | 15 |
 | `valparaisonoticias` | Valparaíso Noticias | `www.valparaisonoticias.cl/sitemap.xml` | — | 5.903 | 9 |
 | `vergara240` | Vergara 240 | `vergara240.udp.cl/sitemap_index.xml` | articleOnly (Yoast) | 669 | 5 |
-| `verticetv` | Vértice TV (Puerto Montt) | `verticetv.cl/sitemaps.xml` | articleOnly (Yoast) | 1.720 | 2 |
+| `verticetv` | Vértice TV (Puerto Montt) | `verticetv.cl/sitemaps.xml` | articleOnly (Yoast) | 1.730 | 2 |
 | `vialidad` | Dirección de Vialidad (MOP) | `vialidad.mop.gob.cl/wp-sitemap.xml` | includeRe | 1.178 | 18 |
 | `vilasradio` | Vilas Radio | `vilasradio.cl/wp-sitemap.xml` | includeRe | 34.084 | 7 |
 | `villarricaldia` | Villarrica al Día | `villarricaldia.cl/sitemap.xml` | — | 77 | 1 |
 | `vivimoslanoticia` | Vivimos la Noticia | `vivimoslanoticia.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
-| `vlnradio` | VLN Radio | `www.vlnradio.cl/sitemap.xml` | includeRe | 48.189 | 11 |
+| `vlnradio` | VLN Radio | `www.vlnradio.cl/sitemap.xml` | includeRe | 48.260 | 11 |
 | `vozdeamerica` | Voz de América | `vozdeamerica.com/sitemap.xml` | includeRe | 254.425 | 25 |
 | `wwf` | WWF Chile | `www.wwf.cl/sitemap.xml` | — | 66 | 1 |
 | `xox` | XOX.cl | `xox.cl/sitemap.xml` | includeRe | 85 | 2 |
-| `zonazero` | Zona Zero | `www.zonazero.cl/sitemap.xml` | — | 1.513 | 1 |
+| `zonazero` | Zona Zero | `www.zonazero.cl/sitemap.xml` | — | 1.529 | 1 |
 
 ## Canales de YouTube
 
