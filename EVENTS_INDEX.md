@@ -1949,13 +1949,13 @@
 - [2026/10/20261020-1 - Juez de Garantía de Arica suspende por 60 días la quema de evidencia del caso narcomaderas y cita a audiencia por nuevos peritajes](src/content/events/2026/10/20261020-1.md) — 6 fuentes
 - [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 14 fuentes
 - [2026/10/20261021-2 - Contraloría remite a la Fiscalía el viaje a Shanghái de Raúl Domínguez, exjefe de Fiscalización de la Subtel, por eventual cohecho](src/content/events/2026/10/20261021-2.md) — 10 fuentes
-- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 29 fuentes
+- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 34 fuentes
 - [2026/10/20261022-2 - PDI incauta en Lampa 739 kilos de droga de la Operación Tempestad traídos desde Arica, avaluados en $13.500 millones, y detiene a dos camioneros](src/content/events/2026/10/20261022-2.md) — 6 fuentes
 - [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
-- [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 6 fuentes
+- [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 8 fuentes
 - [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 12 fuentes
 - [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 13 fuentes
-- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 11 fuentes
+- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 12 fuentes
 - [2026/10/20261023-6 - Interferencia publica los decretos de Casablanca y Petorca firmados por Rabat y Silva y la responsabilidad del Gobierno se desplaza hacia los mandos medios](src/content/events/2026/10/20261023-6.md) — 6 fuentes
 - [2026/10/20261023-7 - Corte de Apelaciones de Punta Arenas avala la desvinculación de una funcionaria del Registro Civil que acumuló 345 días de licencias médicas](src/content/events/2026/10/20261023-7.md) — 6 fuentes
 - [2026/10/20261023-8 - Exgeneral argentino Calandín plantea "eliminar Puerto Williams" cortándole el gas y autoridades chilenas responden que el suministro es propio](src/content/events/2026/10/20261023-8.md) — 12 fuentes
@@ -1963,15 +1963,16 @@
 - [2026/10/20261024-2 - Rubilar pide a Kast reconocer un “error gravísimo” por las 56 rebajas y exige disculpas públicas de Rabat](src/content/events/2026/10/20261024-2.md) — 6 fuentes
 - [2026/10/20261024-3 - La comparación viral de dos portadas de LUN contrapone los 13 indultos de 2022 con una portada de farándula de 2026](src/content/events/2026/10/20261024-3.md) — 10 fuentes
 - [2026/10/20261025-1 - Rabat descarta renunciar y estudia dos vías para revertir las rebajas, admite que no revisó caso a caso y Cordero advierte un riesgo jurídico por la suspensión](src/content/events/2026/10/20261025-1.md) — 10 fuentes
-- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 6 fuentes
-- [2026/10/20261026-2 - Identifican a los dos condenados por secuestro y torturas que salieron de Punta Peuco con rebajas firmadas por Rabat](src/content/events/2026/10/20261026-2.md) — 7 fuentes
+- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 7 fuentes
+- [2026/10/20261026-2 - Identifican a los dos condenados por secuestro y torturas que salieron de Punta Peuco con rebajas firmadas por Rabat](src/content/events/2026/10/20261026-2.md) — 8 fuentes
 - [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 7 fuentes
 - [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 8 fuentes
 - [2026/10/20261026-5 - Bío Bío identifica a 33 de los 56 condenados por delitos sexuales beneficiados con rebajas: informes de Gendarmería advertían alto riesgo de reincidencia y las víctimas no fueron notificadas](src/content/events/2026/10/20261026-5.md) — 7 fuentes
 - [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 6 fuentes
-- [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 11 fuentes
-- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 4 fuentes
+- [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 13 fuentes
+- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 10 fuentes
 - [2026/10/20261027-3 - Revelan planes argentinos para detener, escoltar o multar el Danstar y exalmirantes reivindican la libre navegación frente a Moreno y Van Klaveren](src/content/events/2026/10/20261027-3.md) — 13 fuentes
+- [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 5 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
 - [2026/10/20261028-10 - Camioneros independientes de San Antonio inician un paro de siete días y bloquean los depósitos de contenedores](src/content/events/2026/10/20261028-10.md) — 20 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
@@ -2013,10 +2014,12 @@
 - [2026/11/20261111-1 - Tercer día del paro nacional: el Gobierno retira el proyecto de tope a las alzas y los camioneros vuelven a La Moneda](src/content/events/2026/11/20261111-1.md) — 17 fuentes
 - [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 7 fuentes
 - [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
+- [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
 - [2026/11/20261112-2 - Cuarto día del paro: Fedequinta, Asoducam, pescadores y microbuseros se suman y el comercio advierte riesgo de abastecimiento](src/content/events/2026/11/20261112-2.md) — 8 fuentes
 - [2026/11/20261112-3 - Acuerdo con los camioneros: rebaja de $142 al diésel, techo hasta marzo de 2027 y disidencia](src/content/events/2026/11/20261112-3.md) — 6 fuentes
 - [2026/11/20261113-1 - El día después del acuerdo: Tohá critica el costo, Pérez defiende el trato y la entrevista deriva en cruce por el desembolso fiscal](src/content/events/2026/11/20261113-1.md) — 6 fuentes
+- [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
 
 ## 2025
 
