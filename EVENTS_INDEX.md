@@ -1971,10 +1971,10 @@
 - [2026/10/20261024-2 - Rubilar pide a Kast reconocer un “error gravísimo” por las 56 rebajas y exige disculpas públicas de Rabat](src/content/events/2026/10/20261024-2.md) — 6 fuentes
 - [2026/10/20261024-3 - La comparación viral de dos portadas de LUN contrapone los 13 indultos de 2022 con una portada de farándula de 2026](src/content/events/2026/10/20261024-3.md) — 11 fuentes
 - [2026/10/20261024-4 - Kast y el primer ministro británico Burnham conversan por teléfono: defensa, comercio y autodeterminación de los isleños](src/content/events/2026/10/20261024-4.md) — 7 fuentes
-- [2026/10/20261025-1 - Rabat descarta renunciar y estudia dos vías para revertir las rebajas, admite que no revisó caso a caso y Cordero advierte un riesgo jurídico por la suspensión](src/content/events/2026/10/20261025-1.md) — 10 fuentes
+- [2026/10/20261025-1 - Rabat descarta renunciar y estudia dos vías para revertir las rebajas, admite que no revisó caso a caso y Cordero advierte un riesgo jurídico por la suspensión](src/content/events/2026/10/20261025-1.md) — 11 fuentes
 - [2026/10/20261025-2 - Ottone reedita “El segundo piso” y cuestiona el liderazgo de Kast y el rol de los asesores: “Es un liderazgo francamente muy pobre”](src/content/events/2026/10/20261025-2.md) — 7 fuentes
 - [2026/10/20261025-3 - Criteria: Kast iguala su mínimo con 27% de aprobación y 64% de desaprobación, y 73% duda de que el Gobierno enmiende el rumbo](src/content/events/2026/10/20261025-3.md) — 5 fuentes
-- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 9 fuentes
+- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 10 fuentes
 - [2026/10/20261026-2 - Identifican a los dos condenados por secuestro y torturas que salieron de Punta Peuco con rebajas firmadas por Rabat](src/content/events/2026/10/20261026-2.md) — 8 fuentes
 - [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 7 fuentes
 - [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 8 fuentes
@@ -1987,6 +1987,8 @@
 - [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 8 fuentes
 - [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 11 fuentes
 - [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 10 fuentes
+- [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
+- [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 5 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
 - [2026/10/20261028-10 - Camioneros independientes de San Antonio inician un paro de siete días y bloquean los depósitos de contenedores](src/content/events/2026/10/20261028-10.md) — 20 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
@@ -2108,6 +2110,7 @@
 - [2025/12/20251210-2 - El enredo por las 40 horas: Kast asegura que no tocará derechos adquiridos tras la polémica por su propuesta para pymes](src/content/events/2025/12/20251210-2.md) — 9 fuentes
 - [2025/12/20251210-3 - Megaproyecto INNA: la polémica por el hidrógeno verde en Taltal y las posiciones de Jara y Kast frente a los cielos astronómicos](src/content/events/2025/12/20251210-3.md) — 5 fuentes
 - [2025/12/20251210-4 - La Tercera perfila a Claudio Alvarado como el favorito para la Segpres de un eventual gobierno de Kast: la trayectoria del 'Coronel UDI' que terminó en Interior](src/content/events/2025/12/20251210-4.md) — 5 fuentes
+- [2025/12/20251210-5 - Exsocio acusa a Jorge Quiroz de apropiarse de Sierra Atacama y obtiene retención de US$2,8 millones](src/content/events/2025/12/20251210-5.md) — 9 fuentes
 - [2025/12/20251214-1 - José Antonio Kast gana la segunda vuelta presidencial con 58,16% de los votos](src/content/events/2025/12/20251214-1.md) — 4 fuentes
 - [2025/12/20251215-1 - Cadem informa que su sondeo privado durante la veda proyectó correctamente el resultado del balotaje (58% para Kast)](src/content/events/2025/12/20251215-1.md) — 1 fuente
 - [2025/12/20251215-2 - Gobierno de Boric entrega nota de protesta a Colombia por dichos inaceptables de Petro contra Kast electo (hijo de Hitler)](src/content/events/2025/12/20251215-2.md) — 15 fuentes
@@ -2332,7 +2335,7 @@
 - [2019/09/20190911-1 - Varela detalla financiamiento y logística de la COP25 y Barros reafirma sus críticas con apoyos privados](src/content/events/2019/09/20190911-1.md) — 7 fuentes
 - [2019/10/20191001-1 - Cámara rechaza la acusación constitucional contra la ministra de Educación Marcela Cubillos](src/content/events/2019/10/20191001-1.md) — 2 fuentes
 - [2019/10/20191014-1 - State Grid compra Chilquinta a Sempra por US$2.230 millones en el mayor negocio del año](src/content/events/2019/10/20191014-1.md) — 6 fuentes
-- [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 10 fuentes
+- [2019/10/20191018-1 - Estallido social: la evasión masiva al Metro por el alza de $30 desata protestas y el estado de emergencia en Santiago](src/content/events/2019/10/20191018-1.md) — 15 fuentes
 - [2019/10/20191019-1 - Tres personas mueren en incendio de supermercado durante saqueos en San Bernardo y el aeropuerto de Santiago colapsa en la primera jornada de estado de emergencia](src/content/events/2019/10/20191019-1.md) — 5 fuentes
 - [2019/10/20191019-2 - 20 estaciones de Metro quemadas y 41 con daños: el recuento oficial de las jornadas de protesta del 18-O](src/content/events/2019/10/20191019-2.md) — 2 fuentes
 - [2019/10/20191020-1 - Video viral muestra a tres carabineros de Fuerzas Especiales aspirando una sustancia blanca en plena calle; Carabineros asegura que era Mentholatum contra los gases lacrimógenos](src/content/events/2019/10/20191020-1.md) — 12 fuentes
