@@ -2043,6 +2043,7 @@
 ## 2025
 
 - [2025/01/20250102-1 - Condenan a 8 años y 2 días al excabo de Carabineros Belisario Morales por disparar contra manifestante desde el balcón municipal de La Cisterna](src/content/events/2025/01/20250102-1.md) — 1 fuente
+- [2025/01/20250110-1 - Rebaja preventiva de $544.000 millones al presupuesto 2025: recortes a Ministerio Público, Poder Judicial y Salud](src/content/events/2025/01/20250110-1.md) — 8 fuentes
 - [2025/01/20250113-1 - Caso Factop y Audios: formalizan a 16 imputados, entre ellos ocho ejecutivos de LarrainVial, por lavado de activos y estafa](src/content/events/2025/01/20250113-1.md) — 3 fuentes
 - [2025/01/20250116-1 - Galdames responde en Mega por contratos millonarios y traspasos a entidades de familiares tras el apagón de Rinconada](src/content/events/2025/01/20250116-1.md) — 3 fuentes
 - [2025/01/20250120-1 - Caso Convenios: el Juzgado de Garantía de Temuco sobresee definitivamente a seis imputados en la arista Manicure](src/content/events/2025/01/20250120-1.md) — 3 fuentes
@@ -2081,6 +2082,7 @@
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md) — 10 fuentes
 - [2025/09/20250904-1 - Renuncia Patricio Góngora al directorio de Canal 13 tras reportaje de Chilevisión que lo vinculó a la cuenta troll 'Patito Verde'](src/content/events/2025/09/20250904-1.md) — 10 fuentes
 - [2025/09/20250911-1 - Fact Check de La Tercera desmiente a ME-O: la tasa de homicidios no se duplicó en tres gobiernos](src/content/events/2025/09/20250911-1.md) — 1 fuente
+- [2025/09/20250915-1 - Santa Cruz dice que ya no tiene 'dolor de guata' y destaca cambio de ánimo en la campaña de Matthei](src/content/events/2025/09/20250915-1.md) — 5 fuentes
 - [2025/09/20250917-1 - Funcionario municipal muerde y arranca parte de la oreja al alcalde de Melipeuco durante una celebración de Fiestas Patrias](src/content/events/2025/09/20250917-1.md) — 15 fuentes
 - [2025/09/20250923-1 - Boric presenta la candidatura de Bachelet a la Secretaría General de la ONU](src/content/events/2025/09/20250923-1.md) — 2 fuentes
 - [2025/10/20251003-1 - CIPER revela chat donde la cuenta troll 'Neuroc' admite contacto frecuente con el community manager de Kast](src/content/events/2025/10/20251003-1.md) — 10 fuentes
@@ -2097,6 +2099,7 @@
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
 - [2025/11/20251120-1 - Municipalidad de Vitacura destituye a funcionarios grabados en video sexual tras sumario por falta grave a la probidad](src/content/events/2025/11/20251120-1.md) — 8 fuentes
+- [2025/11/20251121-1 - Contraloría recepciona denuncia por contrataciones de Christian Pino para charlas de actualidad en cinco municipalidades y tres corporaciones culturales](src/content/events/2025/11/20251121-1.md) — 6 fuentes
 - [2025/11/20251123-1 - Primera semana del balotaje: todas las encuestas dan a Kast una ventaja de entre 14 y 21 puntos sobre Jara](src/content/events/2025/11/20251123-1.md) — 3 fuentes
 - [2025/11/20251127-1 - Congreso despacha la Ley de Presupuestos 2026, la última de Boric: $86,2 billones con +1,7% y sin fondos para la Fundación Allende ni el PAIG](src/content/events/2025/11/20251127-1.md) — 5 fuentes
 - [2025/11/20251128-1 - Kast da ultimátum de 103 días a inmigrantes irregulares para salir de Chile y estalla crisis en la frontera con Perú](src/content/events/2025/11/20251128-1.md) — 9 fuentes
@@ -2166,6 +2169,7 @@
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — 2 fuentes
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — 2 fuentes
 - [2024/10/20241027-1 - Juan Galdames es reelecto alcalde de Rinconada con 34,93% pese a la investigación por corrupción y el apagón durante el reportaje de Mega](src/content/events/2024/10/20241027-1.md) — 5 fuentes
+- [2024/11/20241108-1 - Tramitación de la Ley de Presupuestos 2025: acuerdo de $543.539 millones, reposiciones y despacho a ley](src/content/events/2024/11/20241108-1.md) — 10 fuentes
 - [2024/11/20241114-1 - PDI detiene al exsubsecretario Manuel Monsalve en Viña del Mar por violación y abuso sexual; la formalización termina en prisión preventiva](src/content/events/2024/11/20241114-1.md) — 3 fuentes
 - [2024/11/20241114-2 - Corte Suprema confirma condena a cinco exagentes de la DINA por el secuestro y las torturas de Luz Ayress](src/content/events/2024/11/20241114-2.md) — 7 fuentes
 - [2024/11/20241123-1 - Condenan al exgeneral director de Carabineros Eduardo Gordon por malversación de caudales públicos](src/content/events/2024/11/20241123-1.md) — 2 fuentes
