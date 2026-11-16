@@ -601,6 +601,7 @@
 - [2026/03/20260324-7 - Informe BCN y análisis del costo fiscal del MEPCO; gobierno anuncia plan 'Chile Sale Adelante'](src/content/events/2026/03/20260324-7.md) — 5 fuentes
 - [2026/03/20260325-1 - Contraloría requiere informe a Secom por publicaciones sobre 'Estado quebrado'](src/content/events/2026/03/20260325-1.md) — 1 fuente
 - [2026/03/20260325-2 - Congreso despacha a ley las medidas transitorias para la parafina y los taxistas: el Senado aprueba 32 a 0 y la Cámara cierra el tercer trámite](src/content/events/2026/03/20260325-2.md) — 6 fuentes
+- [2026/03/20260325-3 - 26 alcaldes de la RM entregan carta a Kast por el bencinazo y Bobadilla afirma que 'le mintió a toda la clase trabajadora'](src/content/events/2026/03/20260325-3.md) — 30 fuentes
 - [2026/03/20260326-1 - Nombramiento de Alexander Nanjarí como seremi de Educación del Biobío revocado por polémicos tuits](src/content/events/2026/03/20260326-1.md) — 3 fuentes
 - [2026/03/20260326-2 - Hackeo a cuentas personales del Presidente Kast en X e Instagram](src/content/events/2026/03/20260326-2.md) — 9 fuentes
 - [2026/03/20260326-3 - Primera marcha estudiantil contra el gobierno de Kast: Confech y ACES marchan por la Alameda contra el recorte en educación y la gratuidad con tope de 30 años](src/content/events/2026/03/20260326-3.md) — 13 fuentes
@@ -1869,7 +1870,7 @@
 - [2026/10/20261001-5 - Núñez pide sumario en el Senado por su fallido viaje a la UIP y responde al embajador Judd por la negativa de visa a EE.UU.](src/content/events/2026/10/20261001-5.md) — 15 fuentes
 - [2026/10/20261001-6 - Detienen a cuatro carabineros de Rancagua por red de receptación y blanqueo de vehículos robados: quedan desvinculados y la Fiscalía pide ampliar la detención](src/content/events/2026/10/20261001-6.md) — 6 fuentes
 - [2026/10/20261001-7 - Repercusiones por la frase de Quiroz sobre la parafina: La Moneda lo respalda, el ministro se defiende con el IPC estacional y parlamentarios del oficialismo y la oposición lo cuestionan](src/content/events/2026/10/20261001-7.md) — 11 fuentes
-- [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 31 fuentes
+- [2026/10/20261001-8 - Presupuesto 2027 sin Becas TIC: Junaeb deja de financiar "Yo elijo mi PC" por primera vez en 17 años](src/content/events/2026/10/20261001-8.md) — 35 fuentes
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
 - [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 30 fuentes
 - [2026/10/20261002-10 - Bancada UDI propone recortar el INDH y el gasto por licencias médicas para reponer "Yo elijo mi PC" y los Liceos Bicentenario](src/content/events/2026/10/20261002-10.md) — 7 fuentes
@@ -1952,6 +1953,7 @@
 - [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 14 fuentes
 - [2026/10/20261021-2 - Contraloría remite a la Fiscalía el viaje a Shanghái de Raúl Domínguez, exjefe de Fiscalización de la Subtel, por eventual cohecho](src/content/events/2026/10/20261021-2.md) — 10 fuentes
 - [2026/10/20261021-3 - Kast nombra a Gonzalo Arenas como subsecretario de la Segegob y vocero de Gobierno en reemplazo de José Francisco Lagos](src/content/events/2026/10/20261021-3.md) — 8 fuentes
+- [2026/10/20261021-4 - Renuncia Isabel Seoane, segunda jefa de gabinete de Iván Poduje en el Minvu](src/content/events/2026/10/20261021-4.md) — 6 fuentes
 - [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 34 fuentes
 - [2026/10/20261022-2 - PDI incauta en Lampa 739 kilos de droga de la Operación Tempestad traídos desde Arica, avaluados en $13.500 millones, y detiene a dos camioneros](src/content/events/2026/10/20261022-2.md) — 6 fuentes
 - [2026/10/20261022-3 - Dos tutores del CIP Coronel son sorprendidos fumando marihuana con internos: el seremi confirma la separación de funciones y los gremios exhiben después un test negativo](src/content/events/2026/10/20261022-3.md) — 9 fuentes
@@ -2033,7 +2035,7 @@
 - [2026/11/20261112-3 - Acuerdo con los camioneros: rebaja de $142 al diésel, techo hasta marzo de 2027 y disidencia](src/content/events/2026/11/20261112-3.md) — 6 fuentes
 - [2026/11/20261112-4 - La oposición ingresa la acusación constitucional contra Rabat: 189 páginas y tres capítulos](src/content/events/2026/11/20261112-4.md) — 9 fuentes
 - [2026/11/20261113-1 - El día después del acuerdo: Tohá critica el costo, Pérez defiende el trato y la entrevista deriva en cruce por el desembolso fiscal](src/content/events/2026/11/20261113-1.md) — 6 fuentes
-- [2026/11/20261113-2 - Doce ONG y una ofensiva parlamentaria contra las alertas de Meta a la PDI: piden el convenio, la cifra de detenciones y control judicial previo](src/content/events/2026/11/20261113-2.md) — 5 fuentes
+- [2026/11/20261113-2 - Doce ONG y una ofensiva parlamentaria contra las alertas de Meta a la PDI: piden el convenio, la cifra de detenciones y control judicial previo](src/content/events/2026/11/20261113-2.md) — 6 fuentes
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
 
 ## 2025
