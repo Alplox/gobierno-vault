@@ -960,7 +960,7 @@
 - [2026/07/20260730-13 - Ministro Arrau confirma sumario en Carabineros por cirugías estéticas a esposa de general director cubiertas con Dipreca](src/content/events/2026/07/20260730-13.md) — 3 fuentes
 - [2026/07/20260730-14 - Entrevista de Arturo Squella en TVN genera polémica y ola de críticas en redes sociales](src/content/events/2026/07/20260730-14.md) — 8 fuentes
 - [2026/07/20260730-15 - Presidente Kast recibe en La Moneda a su par de Corea del Sur, Lee Jae Myung: firman acuerdos de minería, seguridad y cooperación antártica](src/content/events/2026/07/20260730-15.md) — 10 fuentes
-- [2026/07/20260730-16 - Minsal solicita la renuncia de la seremi de Salud de Arica, Karla Kepec, tras filtrarse mensaje que exigía militancia republicana para cupos laborales](src/content/events/2026/07/20260730-16.md) — 13 fuentes
+- [2026/07/20260730-16 - Minsal solicita la renuncia de la seremi de Salud de Arica, Karla Kepec, tras filtrarse mensaje que exigía militancia republicana para cupos laborales](src/content/events/2026/07/20260730-16.md) — 14 fuentes
 - [2026/07/20260730-17 - Chile y Venezuela anuncian hoja de ruta para normalizar relaciones y reactivan vínculos consulares](src/content/events/2026/07/20260730-17.md) — 9 fuentes
 - [2026/07/20260730-18 - Laboratorio Corthorn Health confirma doble positivo en test de drogas de exsubsecretario de Hacienda y rechaza derivar contramuestra](src/content/events/2026/07/20260730-18.md) — 7 fuentes
 - [2026/07/20260730-19 - Diputados Roberto Arroyo y Flor Contreras ingresan proyecto de ley para sancionar penalmente la ofensa racial](src/content/events/2026/07/20260730-19.md) — 5 fuentes
@@ -1713,7 +1713,7 @@
 - [2026/09/20260911-5 - Fast Check verifica como reales cinco órdenes de compra de Presidencia por $264 millones; otros registros documentan pasajes LATAM de emergencia y seguridad](src/content/events/2026/09/20260911-5.md) — 25 fuentes
 - [2026/09/20260911-6 - Prisión preventiva para el exfiscal Fodich, un inspector PDI y el primo de Parisi por el falso cuartel de secuestros extorsivos; Fodich admite que recibió $3,5 millones](src/content/events/2026/09/20260911-6.md) — 6 fuentes
 - [2026/09/20260911-7 - Kast justifica en Los Ríos el retorno de Duco al Segundo Piso: 'Se le pide la renuncia, pero eso no impide que el Gobierno le pida su colaboración'](src/content/events/2026/09/20260911-7.md) — 6 fuentes
-- [2026/09/20260911-8 - BioBio sintetiza cinco casos de estudiantes y recién egresados contratados como 'expertos' con sueldos millonarios e instala el debate por meritocracia](src/content/events/2026/09/20260911-8.md) — 16 fuentes
+- [2026/09/20260911-8 - BioBio sintetiza cinco casos de estudiantes y recién egresados contratados como 'expertos' con sueldos millonarios e instala el debate por meritocracia](src/content/events/2026/09/20260911-8.md) — 17 fuentes
 - [2026/09/20260911-9 - Quiroz proyecta en Radio Agricultura créditos hipotecarios en pesos hacia 4 o 5 años más con internacionalización del peso, sin eliminar la UF](src/content/events/2026/09/20260911-9.md) — 6 fuentes
 - [2026/09/20260912-1 - Contrapoder revela que Presidencia contrató a honorarios por $2,85 millones al venezolano Romer Rubio, exconcejal de Maracaibo, como asesor del Segundo Piso: segundo caso migrante en el equipo tras Depablos](src/content/events/2026/09/20260912-1.md) — 16 fuentes
 - [2026/09/20260912-2 - PDI da de baja a funcionario del LACRIM de La Serena que vendía consultas de sistemas policiales al Clan Chen a $100 mil cada una](src/content/events/2026/09/20260912-2.md) — 6 fuentes
@@ -1891,6 +1891,7 @@
 - [2026/10/20261005-3 - Quiroz reconoce en entrevista con Diario Financiero que subestimó el daño a la economía y al sector minero y se arrepiente de la frase sobre la parafina](src/content/events/2026/10/20261005-3.md) — 7 fuentes
 - [2026/10/20261005-4 - Quiroz abre la negociación del Presupuesto 2027: "Cálmensen, vamos a tener la discusión" y cada punto es negociable, pero sin mover el gasto total](src/content/events/2026/10/20261005-4.md) — 4 fuentes
 - [2026/10/20261005-5 - Presupuesto 2027 recorta 59% la línea climática NDC y deja a Escazú sin asignación en Medio Ambiente](src/content/events/2026/10/20261005-5.md) — 6 fuentes
+- [2026/10/20261005-6 - La resolución que contrató a Natalia Ducó como asesora senior en deportes fija honorarios brutos por $17,1 millones hasta diciembre](src/content/events/2026/10/20261005-6.md) — 7 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 - [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 13 fuentes
@@ -1950,10 +1951,12 @@
 - [2026/10/20261020-1 - Juez de Garantía de Arica suspende por 60 días la quema de evidencia del caso narcomaderas y cita a audiencia por nuevos peritajes](src/content/events/2026/10/20261020-1.md) — 6 fuentes
 - [2026/10/20261021-1 - Interferencia revela 56 rebajas de condena a condenados por delitos sexuales contra menores y Justicia las atribuye a la doctrina de la Suprema](src/content/events/2026/10/20261021-1.md) — 14 fuentes
 - [2026/10/20261021-2 - Contraloría remite a la Fiscalía el viaje a Shanghái de Raúl Domínguez, exjefe de Fiscalización de la Subtel, por eventual cohecho](src/content/events/2026/10/20261021-2.md) — 10 fuentes
+- [2026/10/20261021-3 - Kast nombra a Gonzalo Arenas como subsecretario de la Segegob y vocero de Gobierno en reemplazo de José Francisco Lagos](src/content/events/2026/10/20261021-3.md) — 8 fuentes
 - [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 34 fuentes
 - [2026/10/20261022-2 - PDI incauta en Lampa 739 kilos de droga de la Operación Tempestad traídos desde Arica, avaluados en $13.500 millones, y detiene a dos camioneros](src/content/events/2026/10/20261022-2.md) — 6 fuentes
 - [2026/10/20261022-3 - Dos tutores del CIP Coronel son sorprendidos fumando marihuana con internos: el seremi confirma la separación de funciones y los gremios exhiben después un test negativo](src/content/events/2026/10/20261022-3.md) — 9 fuentes
 - [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
+- [2026/10/20261023-10 - Lagos se incorpora al Segundo Piso como asesor de programación dos días después de dejar la Segegob y el oficialismo cuestiona el destino de las exautoridades](src/content/events/2026/10/20261023-10.md) — 10 fuentes
 - [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 8 fuentes
 - [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 12 fuentes
 - [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 13 fuentes
@@ -1964,7 +1967,7 @@
 - [2026/10/20261023-9 - Kast inaugura el Edificio Médico Quirúrgico del Hospital Parroquial de San Bernardo y elogia que funcione "a pesar de la escasez de recursos"](src/content/events/2026/10/20261023-9.md) — 7 fuentes
 - [2026/10/20261024-1 - 23 Premios Nacionales rechazan la reforma al INDH y piden al Congreso frenarla: acusan un intento de "neutralizar" al organismo](src/content/events/2026/10/20261024-1.md) — 7 fuentes
 - [2026/10/20261024-2 - Rubilar pide a Kast reconocer un “error gravísimo” por las 56 rebajas y exige disculpas públicas de Rabat](src/content/events/2026/10/20261024-2.md) — 6 fuentes
-- [2026/10/20261024-3 - La comparación viral de dos portadas de LUN contrapone los 13 indultos de 2022 con una portada de farándula de 2026](src/content/events/2026/10/20261024-3.md) — 10 fuentes
+- [2026/10/20261024-3 - La comparación viral de dos portadas de LUN contrapone los 13 indultos de 2022 con una portada de farándula de 2026](src/content/events/2026/10/20261024-3.md) — 11 fuentes
 - [2026/10/20261024-4 - Kast y el primer ministro británico Burnham conversan por teléfono: defensa, comercio y autodeterminación de los isleños](src/content/events/2026/10/20261024-4.md) — 7 fuentes
 - [2026/10/20261025-1 - Rabat descarta renunciar y estudia dos vías para revertir las rebajas, admite que no revisó caso a caso y Cordero advierte un riesgo jurídico por la suspensión](src/content/events/2026/10/20261025-1.md) — 10 fuentes
 - [2026/10/20261025-2 - Ottone reedita “El segundo piso” y cuestiona el liderazgo de Kast y el rol de los asesores: “Es un liderazgo francamente muy pobre”](src/content/events/2026/10/20261025-2.md) — 7 fuentes
@@ -2017,6 +2020,7 @@
 - [2026/11/20261102-5 - Landerretche: sin un "big push" de corto plazo no hay reformas posibles y Chile sigue atrapado en un crecimiento de 2%](src/content/events/2026/11/20261102-5.md) — 5 fuentes
 - [2026/11/20261104-1 - Fenatrac anuncia un paro de pymes tolveras en la Región Metropolitana y transportistas de Antofagasta marchan y entregan un petitorio al Gobierno](src/content/events/2026/11/20261104-1.md) — 6 fuentes
 - [2026/11/20261104-2 - Frutas de Chile cancela su participación en el lanzamiento de la temporada de cerezas y advierte que el bloqueo en San Antonio pone en riesgo las exportaciones](src/content/events/2026/11/20261104-2.md) — 5 fuentes
+- [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 10 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 - [2026/11/20261109-1 - Kast limita a $40 el alza del 12 de noviembre y anuncia un proyecto para topar las alzas en $20 por 90 días; los camioneros rechazan la propuesta y convocan un paro nacional](src/content/events/2026/11/20261109-1.md) — 22 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
