@@ -246,6 +246,35 @@ movimientos:
     nivel_impacto: indirecto
     organizacion_id: ministerio_economia
     nota: Compromiso sectorial del 27-nov-2024 con glosa de seguimiento al Plan Huachipato.
+  - tipo: recorte
+    descripcion: Nueva rebaja del 5% aplicada por Dipres a todos los Gobiernos Regionales en la Ley 2025
+    fecha: '2025-02-11'
+    monto: null
+    monto_nota: Más de $87.000 millones en el agregado nacional; $5.111 millones en O'Higgins, que pasó de $102.236.519 a $97.124.693 según el comunicado del GORE
+    objetivo_declarado: null
+    evento_id: null
+    fuente: goreohiggins-2025-02-11-rebaja-5-por-ciento
+    fuentes_secundarias:
+      - dipres-2025-01-10-rebaja-preventiva-544000
+      - ciper-2025-02-27-estrechez-fiscal-gore-223690
+    partida: Partida 31 · Gobiernos Regionales
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: La rebaja se aplicó en bienes y servicios, activos no financieros y transferencias de capital; el recorte del 2% en personal excluyó a los GORE. El gobernador Silva Amaya advirtió que era probable un segundo ajuste.
+  - tipo: aumento
+    descripcion: Transferencias de Dipres a los Gobiernos Regionales en enero de 2025 presentadas como pago de deuda flotante 2024
+    fecha: '2025-01-31'
+    monto: null
+    monto_nota: Dipres informó $270.050 millones transferidos en enero, pero no los presentó como reposición del recorte; cinco gobernaciones dijeron a CIPER que corresponden a remesas del presupuesto 2025. No hay cifra oficial de una reposición nacional
+    objetivo_declarado: Pago de la deuda flotante de 2024 según Dipres, versión disputada por los GORE
+    evento_id: null
+    fuente: ciper-2025-02-27-estrechez-fiscal-gore-223690
+    fuentes_secundarias:
+      - latercera-2024-12-14-tension-gobiernos-regionales-dipres
+    partida: Partida 31 · Gobiernos Regionales
+    nivel_impacto: institucional
+    organizacion_id: dipres
+    nota: La Tercera documentó reposiciones parciales y bilaterales sin identificar regiones ni total nacional. No debe interpretarse como una reposición confirmada del recorte de 2024.
 variaciones:
   - alcance: Ley 2025 frente a 2024
     variacion_texto: +2% (proyecto original +2,7% con recorte de US$500 millones; ley con US$600 millones)
@@ -355,3 +384,7 @@ orden_refs:
   - biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
   - dipres-2026-02-13-ifp-cuarto-trimestre-2025
   - bcn-2024-12-13-ley-21722-presupuestos-2025
+  - goreohiggins-2025-02-11-rebaja-5-por-ciento
+  - dipres-2025-01-10-rebaja-preventiva-544000
+  - ciper-2025-02-27-estrechez-fiscal-gore-223690
+  - latercera-2024-12-14-tension-gobiernos-regionales-dipres

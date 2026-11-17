@@ -26,11 +26,26 @@ export type Variacion = {
   evento_id: string | null;
   nota?: string;
 };
+/**
+ * Vínculo documentado por un atributo compartido con otros movimientos. NO es
+ * una relación de derivación: el vault no publica fuentes que digan que un
+ * recorte se reasignó a otra partida. Por eso el texto siempre nombra el
+ * atributo (evento, partida, organismo) y nunca "deriva de".
+ */
+export type Vinculo = {
+  kind: 'evento' | 'partida' | 'organizacion';
+  texto: string;
+  /** Anclas `mov-AAAA-N` de los otros movimientos del mismo grupo. */
+  anchors: string[];
+};
+
 export type Movimiento = {
   tipo: string;
   descripcion: string;
   /** Orden del movimiento dentro de su ejercicio (1..n). Ancla `mov-AAAA-orden`. */
   orden: number;
+  /** Atributos compartidos con otros movimientos; vacío = sin vínculo documentado. */
+  vinculos: Vinculo[];
   fecha: string | null;
   monto: number | null;
   monto_nota?: string;
@@ -208,6 +223,49 @@ function buildSankey(movs: Array<{ m: Movimiento; ano: number }>): PresupuestoSa
   };
 }
 
+/**
+ * Agrupa por atributos que SÍ están en los datos y produce vínculos navegables.
+ * Se calcula sobre todos los ejercicios a la vez (un evento puede abarcar dos
+ * años). Un grupo de 1 no genera vínculo: no hay nada que enlazar.
+ */
+function buildVinculos(ejercicios: Ejercicio[]): void {
+  type Item = { m: Movimiento; ano: number };
+  const todos: Item[] = ejercicios.flatMap((e) => e.movimientos.map((m) => ({ m, ano: e.ano })));
+  const ancla = ({ m, ano }: Item) => `mov-${ano}-${m.orden}`;
+
+  const agrupar = (clave: (i: Item) => string | null) => {
+    const mapa = new Map<string, Item[]>();
+    for (const item of todos) {
+      const k = clave(item);
+      if (!k) continue;
+      const lista = mapa.get(k) ?? [];
+      lista.push(item);
+      mapa.set(k, lista);
+    }
+    return mapa;
+  };
+  const porEvento = agrupar((i) => i.m.evento_id);
+  const porPartida = agrupar((i) => i.m.partida);
+  const porOrg = agrupar((i) => i.m.organizacion_id);
+
+  for (const item of todos) {
+    const yo = ancla(item);
+    const v: Vinculo[] = [];
+    const añadir = (grupo: Item[] | undefined, kind: Vinculo['kind'], texto: (n: number) => string) => {
+      if (!grupo || grupo.length < 2) return;
+      v.push({
+        kind,
+        texto: texto(grupo.length),
+        anchors: grupo.map(ancla).filter((a) => a !== yo),
+      });
+    };
+    añadir(item.m.evento_id ? porEvento.get(item.m.evento_id) : undefined, 'evento', (n) => `Evento ${item.m.evento_id} · ${n} movimientos`);
+    añadir(item.m.partida ? porPartida.get(item.m.partida) : undefined, 'partida', (n) => `${item.m.partida} · ${n} movimientos`);
+    añadir(item.m.organizacion_id ? porOrg.get(item.m.organizacion_id) : undefined, 'organizacion', (n) => `${item.m.organizacionNombre} · ${n} movimientos`);
+    item.m.vinculos = v;
+  }
+}
+
 function collectEventBasenames(): Set<string> {
   const root = join(process.cwd(), 'src', 'content', 'events');
   const out = new Set<string>();
@@ -327,7 +385,7 @@ function build() {
       if (partida !== null && (typeof partida !== 'string' || !partida.trim())) {
         throw new Error(`${ctx}: movimientos.${m.descripcion} trae partida vacía`);
       }
-      return { ...m, orden: idx + 1, monto: assertMonto(m.monto ?? null, `movimientos.${m.descripcion}`), evento_id: assertEvento(m.evento_id ?? null, `movimientos.${m.descripcion}`), organizacion_id: oid, organizacionNombre: oid ? orgNames.get(oid) ?? oid : null, partida: partida?.trim() ?? null, fuentesSecundarias: sec.map((id) => fuenteResuelta(id)) };
+      return { ...m, orden: idx + 1, vinculos: [], monto: assertMonto(m.monto ?? null, `movimientos.${m.descripcion}`), evento_id: assertEvento(m.evento_id ?? null, `movimientos.${m.descripcion}`), organizacion_id: oid, organizacionNombre: oid ? orgNames.get(oid) ?? oid : null, partida: partida?.trim() ?? null, fuentesSecundarias: sec.map((id) => fuenteResuelta(id)) };
     });
 
     ejercicios.push({
@@ -345,6 +403,7 @@ function build() {
     });
   }
 
+  buildVinculos(ejercicios);
   ejercicios.sort((a, b) => b.ano - a.ano);
   const sankeyGlobal = buildSankey(ejercicios.flatMap((e) => e.movimientos.map((m) => ({ m, ano: e.ano }))));
   return { ejercicios, fuentes, formatCLP, sankeyGlobal };

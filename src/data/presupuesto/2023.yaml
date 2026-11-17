@@ -122,6 +122,7 @@ movimientos:
     fuente: emol-2023-08-18-hacienda-ajuste-fiscal-us2000
     fuentes_secundarias:
       - radio-uchile-2023-08-18-ajuste-fiscal-us2000
+      - ex-ante-2023-08-24-recortes-inversion-publica-reasignacion-marcel
     nivel_impacto: indirecto
     organizacion_id: ministerio_hacienda
     nota: Segundo ajuste del gobierno, tras el recorte ejecutado en el Presupuesto 2022. Explicado por la Operación Renta, la tributación minera y gastos mayores en salud y emergencias.
@@ -147,6 +148,70 @@ movimientos:
     nivel_impacto: indirecto
     organizacion_id: ministerio_hacienda
     nota: Gasto del Gobierno Central 2023 proyectado en $71.669.058 millones, con déficit efectivo estimado de $6.465.582 millones equivalente a 2,3% del PIB.
+  - tipo: aumento
+    descripcion: Anuncio de $164.000 millones para seguridad pública en el presupuesto 2023
+    fecha: '2022-09-29'
+    monto: 164000000000
+    monto_nota: $164 mil millones (4,4%), con $38 mil millones para la Política Nacional Contra el Crimen Organizado y $25 mil millones para Carabineros; la PDI sumó $3.400 millones según la comisión mixta
+    objetivo_declarado: Atender las urgencias inmediatas de la ciudadanía y combatir la delincuencia
+    evento_id: null
+    fuente: ex-ante-2022-10-20-presupuesto-2023-seguridad
+    partida: Seguridad pública (Interior, Carabineros, PDI)
+    nivel_impacto: directo
+    organizacion_id: subsecretaria_interior
+    nota: RN objetó que, ajustando por inflación y decretos de reasignación de la ley 2022, Carabineros creciera solo 0,5% y la PDI cayera 1,8%. Anunciado en 2022 pero pertenece al ejercicio 2023.
+  - tipo: redistribucion
+    descripcion: Reasignación de $168 millones en la partida de Culturas para cubrir las demandas de ANATRAP
+    fecha: '2022-11-12'
+    monto: 168000000
+    monto_nota: Traspaso de $168.000.000 desde el subtítulo 22 al subtítulo 21 del Programa 01 del Servicio Nacional del Patrimonio Cultural; monto neto cero
+    objetivo_declarado: Cubrir la eliminación del tramo 6 del escalafón y la suspensión de los grados 22 y 21 de los estamentos administrativo y auxiliar
+    evento_id: null
+    fuente: cultura-2022-11-12-comision-mixta-partida-reasignacion
+    fuentes_secundarias:
+      - biobiochile-2022-11-25-senado-repone-partidas-presupuesto-2023
+    partida: Servicio Nacional del Patrimonio Cultural · Programa 01
+    nivel_impacto: directo
+    organizacion_id: ministerio_culturas
+    nota: Fuente primaria oficial. La comisión mixta aprobó la partida con 15 votos a favor y 4 abstenciones y ANATRAP depuso el paro de museos, bibliotecas y archivos regionales.
+  - tipo: recorte
+    descripcion: Rebaja por decreto 1227 de la Provisión del Fondo Nacional de Desarrollo Regional
+    fecha: '2023-09-25'
+    monto: 38269326000
+    monto_nota: $38.269.326 miles de pesos según el PDF de Dipres, equivalentes a $38.269.326.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2023-decretos-modificacion-transferencias-gore
+    fuentes_secundarias:
+      - emol-2023-08-18-hacienda-ajuste-fiscal-us2000
+    partida: '050505 · Transferencias a Gobiernos Regionales · Provisión FNDR'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Decreto N° 1227 del 25-sep-2023; materialización por decreto del ajuste fiscal de agosto documentado en prensa.
+  - tipo: recorte
+    descripcion: Rebaja por decreto 574 de la Provisión FNDR dispuesta en mayo de 2023
+    fecha: '2023-05-25'
+    monto: 15000000000
+    monto_nota: $15.000.000 miles de pesos según el PDF de Dipres, equivalentes a $15.000.000.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2023-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales · Provisión FNDR'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Decreto N° 574; precede al ajuste de agosto y muestra que la contracción del FNDR fue gradual.
+  - tipo: redistribucion
+    descripcion: Reasignación por decreto 398 desde el Fondo de Apoyo Contingencia Regional a programas de inversión regional
+    fecha: '2023-04-21'
+    monto: 17013352000
+    monto_nota: $17.013.352 miles al programa de inversión regional, con contrapartida de -$17.013.352 miles en el Fondo de Apoyo Contingencia Regional. Monto neto cero
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2023-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales · Programas de Inversión / FACR'
+    nivel_impacto: institucional
+    organizacion_id: dipres
+    nota: Decreto N° 398; los recursos salen del fondo de contingencia, no son gasto nuevo.
 orden_refs:
   - dipres-2022-12-20-ley-21516-presupuesto-2023
   - dipres-2024-02-08-ifp-cuarto-trimestre-2023
@@ -162,3 +227,7 @@ orden_refs:
   - dipres-2023-10-03-ifp-tercer-trimestre-2023
   - cnnchile-2022-11-24-senado-repone-indh
   - bcn-2022-12-28-ley-21526-reajuste-sector-publico
+  - ex-ante-2022-10-20-presupuesto-2023-seguridad
+  - cultura-2022-11-12-comision-mixta-partida-reasignacion
+  - dipres-2023-decretos-modificacion-transferencias-gore
+  - ex-ante-2023-08-24-recortes-inversion-publica-reasignacion-marcel

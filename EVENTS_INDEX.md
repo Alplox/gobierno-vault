@@ -1571,7 +1571,7 @@
 - [2026/09/20260901-7 - Renuncia colectiva de 40 militantes al Partido Republicano en Ñuble por 'centralismo asfixiante' y falta de democracia interna](src/content/events/2026/09/20260901-7.md) — 7 fuentes
 - [2026/09/20260901-8 - Corte de Valparaíso acoge amparo de Camila Flores y limita el peritaje de sus dispositivos incautados](src/content/events/2026/09/20260901-8.md) — 5 fuentes
 - [2026/09/20260901-9 - Oficialismo sin 29 votos fuerza a La Moneda a abrir la reforma, Andrade habla de 'descrédito' y HRW pide al Congreso rechazarla](src/content/events/2026/09/20260901-9.md) — 10 fuentes
-- [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 7 fuentes
+- [2026/09/20260902-1 - Cámara aprueba comisión investigadora por caso Cerimedo tras rechazo previo por falta de quórum](src/content/events/2026/09/20260902-1.md) — 9 fuentes
 - [2026/09/20260902-10 - Vecinos y comunidades mapuche marchan en Lautaro y cortan la Ruta 5 Sur contra el relleno sanitario Pintamahuida](src/content/events/2026/09/20260902-10.md) — 7 fuentes
 - [2026/09/20260902-11 - V Encuentro Regional del Foro Madrid en Santiago: sede Casa Piedra, programa con Milei y Kast y asistencia confirmada del Presidente en medio de tensiones oficialistas](src/content/events/2026/09/20260902-11.md) — 7 fuentes
 - [2026/09/20260902-12 - Movilh rechaza la realización en Chile del Foro Madrid por una agenda internacional contraria a los derechos humanos](src/content/events/2026/09/20260902-12.md) — 6 fuentes
@@ -1591,7 +1591,7 @@
 - [2026/09/20260903-13 - Kevin Roberts (Heritage Foundation) en el Foro Madrid de Santiago califica lo de Ceuta de 'invasión por parte de Marruecos'](src/content/events/2026/09/20260903-13.md) — 6 fuentes
 - [2026/09/20260903-14 - Tomás Zambrano (Honduras) en el panel Bloque de Libertad del Foro Madrid con promesa de que la izquierda no volverá a gobernar](src/content/events/2026/09/20260903-14.md) — 6 fuentes
 - [2026/09/20260903-15 - Panel El punto de inflexión chileno del Foro Madrid deriva en embestida contra Bachelet y réplica del PS](src/content/events/2026/09/20260903-15.md) — 6 fuentes
-- [2026/09/20260903-16 - Fiscalía Centro Norte abre causa penal por eventual intervención electoral de Cerimedo en Chile](src/content/events/2026/09/20260903-16.md) — 6 fuentes
+- [2026/09/20260903-16 - Fiscalía Centro Norte abre causa penal por eventual intervención electoral de Cerimedo en Chile](src/content/events/2026/09/20260903-16.md) — 10 fuentes
 - [2026/09/20260903-17 - CIPER revela que socio chileno de Cerimedo y asesor de Arrau financiaron grupo del Rechazo que difundió información falsa en 2022](src/content/events/2026/09/20260903-17.md) — 11 fuentes
 - [2026/09/20260903-18 - Vocería de Kast con alcalde de San Bernardo termina sin preguntas y provoca denuncia de censura de Roberto Saa y crítica de Neme](src/content/events/2026/09/20260903-18.md) — 7 fuentes
 - [2026/09/20260903-19 - Orbán Files: la PNfV presidida por Kast fue disuelta en EEUU por no presentar balances desde 2021, con US$1,3 millones de Orbán bajo interrogante](src/content/events/2026/09/20260903-19.md) — 7 fuentes
@@ -1640,7 +1640,7 @@
 - [2026/09/20260907-13 - Irarrázaval debuta ante la comisión investigadora por la gestión de Steinert: descarta rol del Segundo Piso en la PDI y admite que el oficio debió consultarse](src/content/events/2026/09/20260907-13.md) — 5 fuentes
 - [2026/09/20260907-14 - INE informa alzas de 7,8% en remuneraciones y 8,7% en costos laborales en julio: el índice real sube 4,1% y los costos completan doce meses por sobre los sueldos](src/content/events/2026/09/20260907-14.md) — 6 fuentes
 - [2026/09/20260907-15 - Trabajadores del Colegio Calasanz inician la primera huelga en 75 años y el Centro de Estudiantes llama a asistir a clases en apoyo](src/content/events/2026/09/20260907-15.md) — 6 fuentes
-- [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 16 fuentes
+- [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 20 fuentes
 - [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 13 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 8 fuentes
 - [2026/09/20260907-5 - Kast participa en la Tefilá por Chile de la Comunidad Judía y compromete protección a la libertad religiosa](src/content/events/2026/09/20260907-5.md) — 8 fuentes
@@ -1769,7 +1769,7 @@
 - [2026/09/20260917-4 - Corte de Santiago rechaza amparo de Iturriaga Neumann para cumplir sus más de 500 años en domicilio; seguirá en Punta Peuco](src/content/events/2026/09/20260917-4.md) — 6 fuentes
 - [2026/09/20260917-5 - Reuters publica un memo con una propuesta de gasolina E10 y el Ministerio de Energía la desmiente: no hay ninguna propuesta formal](src/content/events/2026/09/20260917-5.md) — 27 fuentes
 - [2026/09/20260917-6 - Quiroz tras el ChileDay: el bencinazo está envejeciendo bien y evitó US$2.500 millones](src/content/events/2026/09/20260917-6.md) — 5 fuentes
-- [2026/09/20260917-7 - Beller declara en Cámara Gesell por enriquecimiento ilícito de Cerimedo y Fiscalía confirma causa narco en Beni con vínculo del jefe de inteligencia Correa](src/content/events/2026/09/20260917-7.md) — 6 fuentes
+- [2026/09/20260917-7 - Beller declara en Cámara Gesell por enriquecimiento ilícito de Cerimedo y Fiscalía confirma causa narco en Beni con vínculo del jefe de inteligencia Correa](src/content/events/2026/09/20260917-7.md) — 7 fuentes
 - [2026/09/20260917-8 - Querella criminal contra el ministro Jorge Quiroz por tráfico de influencias, negociación incompatible y prevaricación administrativa es admitida a trámite](src/content/events/2026/09/20260917-8.md) — 1 fuente
 - [2026/09/20260918-1 - Cántico de «Chúpalo Kast» en fondas del Parque O'Higgins y el Estadio Nacional durante Fiestas Patrias y respuesta de Sichel en Ñuñoa](src/content/events/2026/09/20260918-1.md) — 38 fuentes
 - [2026/09/20260918-2 - Chomali pone el desempleo de 9,5% en el centro del Te Deum Ecuménico ante Kast](src/content/events/2026/09/20260918-2.md) — 8 fuentes
@@ -1943,7 +1943,9 @@
 - [2026/10/20261013-2 - El debate por la rebaja del TAG: críticas por los 20 meses de concesión, advertencias por congestión y reclamo de regiones](src/content/events/2026/10/20261013-2.md) — 31 fuentes
 - [2026/10/20261013-3 - Cancillería califica de "troyano argentino" la cláusula Kast-Milei sobre logística a Malvinas y senadores ofician por la ley que autoriza interceptar buques](src/content/events/2026/10/20261013-3.md) — 6 fuentes
 - [2026/10/20261013-4 - Gobierno abre la Semana de la Pyme 2026 con dos proyectos ProPyme y la cifra récord de 180.372 empresas creadas entre enero y septiembre](src/content/events/2026/10/20261013-4.md) — 8 fuentes
+- [2026/10/20261013-5 - Sheinbaum denuncia plan de Cerimedo para intervenir elecciones en México y “reventarla” políticamente](src/content/events/2026/10/20261013-5.md) — 5 fuentes
 - [2026/10/20261014-1 - Ruta comercial Punta Arenas-Malvinas: el gobierno defiende el zarpe privado del Danstar y el canciller argentino dice que Chile no dará logística](src/content/events/2026/10/20261014-1.md) — 8 fuentes
+- [2026/10/20261014-2 - Fast Check desmiente que video de joven esnifando corresponda a la marcha por Palestina ni al Frente Amplio](src/content/events/2026/10/20261014-2.md) — 5 fuentes
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
 - [2026/10/20261016-1 - Kast realiza la primera visita de Estado de un presidente chileno a Bolivia en 71 años y firma cinco instrumentos con Paz](src/content/events/2026/10/20261016-1.md) — 10 fuentes
 - [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
@@ -1976,12 +1978,13 @@
 - [2026/10/20261025-3 - Criteria: Kast iguala su mínimo con 27% de aprobación y 64% de desaprobación, y 73% duda de que el Gobierno enmiende el rumbo](src/content/events/2026/10/20261025-3.md) — 5 fuentes
 - [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 10 fuentes
 - [2026/10/20261026-2 - Identifican a los dos condenados por secuestro y torturas que salieron de Punta Peuco con rebajas firmadas por Rabat](src/content/events/2026/10/20261026-2.md) — 8 fuentes
-- [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 7 fuentes
-- [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 8 fuentes
+- [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 9 fuentes
+- [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 9 fuentes
 - [2026/10/20261026-5 - Bío Bío identifica a 33 de los 56 condenados por delitos sexuales beneficiados con rebajas: informes de Gendarmería advertían alto riesgo de reincidencia y las víctimas no fueron notificadas](src/content/events/2026/10/20261026-5.md) — 8 fuentes
 - [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 6 fuentes
+- [2026/10/20261026-7 - Superintendente eleva a más de US$10 mil millones las pérdidas valorizadas de los cinco multifondos y confirma alertas a las AFP desde 2024](src/content/events/2026/10/20261026-7.md) — 13 fuentes
 - [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 13 fuentes
-- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 10 fuentes
+- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 13 fuentes
 - [2026/10/20261027-3 - Revelan planes argentinos para detener, escoltar o multar el Danstar y exalmirantes reivindican la libre navegación frente a Moreno y Van Klaveren](src/content/events/2026/10/20261027-3.md) — 13 fuentes
 - [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 5 fuentes
 - [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 8 fuentes
@@ -1996,8 +1999,8 @@
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 6 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 6 fuentes
-- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 8 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 7 fuentes
+- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 10 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
@@ -2005,7 +2008,7 @@
 - [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 9 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
-- [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 17 fuentes
+- [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 18 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
 - [2026/10/20261030-4 - Fiscalía Centro Norte abre investigación contra Rabat y Silva por presunta prevaricación administrativa en las rebajas de condena](src/content/events/2026/10/20261030-4.md) — 7 fuentes
 - [2026/10/20261030-5 - Paro del aseo nocturno en Santiago: calles con basura, plan de contingencia municipal y reanudación del servicio tras 24 horas](src/content/events/2026/10/20261030-5.md) — 8 fuentes
@@ -2040,6 +2043,7 @@
 - [2026/11/20261113-2 - Doce ONG y una ofensiva parlamentaria contra las alertas de Meta a la PDI: piden el convenio, la cifra de detenciones y control judicial previo](src/content/events/2026/11/20261113-2.md) — 6 fuentes
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
 - [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 6 fuentes
+- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 5 fuentes
 
 ## 2025
 

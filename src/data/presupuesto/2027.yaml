@@ -615,6 +615,44 @@ movimientos:
     nivel_impacto: directo
     organizacion_id: ministerio_educacion
     nota: Anuncio del ministro Quiroz en Radio Infinita, anticipado por la ministra Arzola días antes; la Confech lo usó para convocar el paro nacional del 1 de octubre.
+  - tipo: revision_programas
+    descripcion: Aprobación en general del proyecto 2027 en la Cámara, con 6 mil indicaciones presentadas
+    fecha: '2026-11-09'
+    monto: null
+    monto_nota: Sin monto; aprobación de la idea de legislar, la discusión por partidas empezó el 10-nov
+    objetivo_declarado: null
+    evento_id: null
+    fuente: 24horas-2026-11-09-camara-aprueba-presupuesto-2027
+    partida: Proyecto de Ley de Presupuestos 2027
+    nivel_impacto: institucional
+    nota: El ministro Quiroz cifró en 6 mil las indicaciones y prometió atenderlas todas.
+  - tipo: revision_programas
+    descripcion: Rechazo de la partida del Ministerio del Interior en la Cámara
+    fecha: '2026-11-10'
+    monto: null
+    monto_nota: Sin monto publicado; la partida quedó pendiente para la negociación en el Senado
+    objetivo_declarado: null
+    evento_id: null
+    fuente: elmostrador-2026-11-12-camara-rechaza-educacion-interior
+    partida: Partida 05 · Interior
+    nivel_impacto: institucional
+    organizacion_id: ministerio_del_interior
+    nota: El revés del martes 10-nov se sumó al de Educación al día siguiente; la cobertura consignó además la aprobación de Justicia, Defensa, Obras Públicas y Agricultura.
+  - tipo: revision_programas
+    descripcion: Rechazo de la Partida 09 de Educación en la Cámara y empate 72-72 en la indicación sustitutiva
+    fecha: '2026-11-11'
+    monto: null
+    monto_nota: Sin monto nuevo; la indicación buscaba reponer becas TIC y Yo elijo mi PC, entre otros ítems
+    objetivo_declarado: Reponer los recursos de la partida rechazada en la Comisión Especial Mixta
+    evento_id: 20261111-3
+    fuente: emol-2026-11-11-camara-rechaza-educacion-72-72
+    fuentes_secundarias:
+      - radio-uchile-2026-11-11-confech-marcha-mineduc
+      - elmostrador-2026-11-12-camara-rechaza-educacion-interior
+    partida: Partida 09 · Educación
+    nivel_impacto: institucional
+    organizacion_id: ministerio_educacion
+    nota: De 217 propuestas de modificación solo 50 fueron declaradas admisibles y la Cámara aprobó 31 glosas de información; Quiroz prometió revisar la continuidad de Yo elijo mi PC en el Senado.
 orden_refs:
   - adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
   - latercera-2026-10-05-presupuesto-endeudamiento-us25000
@@ -692,3 +730,7 @@ orden_refs:
   - df-2026-09-30-presupuesto-2027-quiroz-defiende-alza
   - biobiochile-2026-09-30-oposicion-fustiga-presupuesto-recortes
   - latercera-2026-08-13-chomali-45-salud-2027
+  - 24horas-2026-11-09-camara-aprueba-presupuesto-2027
+  - elmostrador-2026-11-12-camara-rechaza-educacion-interior
+  - emol-2026-11-11-camara-rechaza-educacion-72-72
+  - radio-uchile-2026-11-11-confech-marcha-mineduc

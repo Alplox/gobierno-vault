@@ -25,6 +25,10 @@ const conRespaldoOficial = ejercicios.reduce(
   0,
 );
 const totalMovsGlobal = ejercicios.reduce((s, e) => s + e.movimientos.length, 0);
+const movsConEvento = ejercicios.reduce((s, e) => s + e.movimientos.filter((m) => m.evento_id).length, 0);
+const movsConVinculo = ejercicios.reduce((s, e) => s + e.movimientos.filter((m) => m.vinculos.length > 0).length, 0);
+const porFecha = (movs: (typeof ejercicios)[number]['movimientos']) =>
+  [...movs].sort((a, b) => (a.fecha ?? '9999').localeCompare(b.fecha ?? '9999') || a.orden - b.orden);
 const tieneTotales = (e: (typeof ejercicios)[number]) => Object.values(e.totales).some((t) => t.monto !== null);
 const notasTotales = (e: (typeof ejercicios)[number]) =>
   Object.values(e.totales)
@@ -46,7 +50,7 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
     <p class="text-xs text-base-content/50 mt-1 flex flex-wrap items-center gap-1.5">
       <Landmark class="h-3.5 w-3.5 shrink-0" />
       <span>
-        Monto inicial por ley, ejecucion y cambios por ejercicio. Cobertura parcial: {ejercicios.map((e) => e.ano).join(', ')}. {conRespaldoOficial} de {totalMovsGlobal} movimientos traen respaldo oficial además de prensa. Los estados describen lo publicado, sin calificar la decision.
+        Monto inicial por ley, ejecucion y cambios por ejercicio. Cobertura parcial: {ejercicios.map((e) => e.ano).join(', ')}. {conRespaldoOficial} de {totalMovsGlobal} movimientos traen respaldo oficial además de prensa; {movsConEvento} enlazan con un evento del vault y {movsConVinculo} comparten un atributo con otro movimiento. Los estados describen lo publicado, sin calificar la decision.
       </span>
     </p>
     <div class="mt-4">
@@ -70,15 +74,15 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
 
     <div class="grid grid-cols-1 sm:grid-cols-2 border-y border-base-300">
       <div class="px-5 sm:px-7 py-4 sm:border-r border-base-300">
-        <p class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-error">
-          <TrendingDown class="h-3.5 w-3.5" /> Retiros publicados
+        <p class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/70">
+          <TrendingDown class="h-3.5 w-3.5 text-error" aria-hidden="true" /> Retiros publicados
         </p>
         <p class="text-3xl sm:text-4xl font-bold tabular-nums text-base-content mt-1">{formatCLP(sankeyGlobal.totalRetiros)}</p>
         <p class="text-[11px] text-base-content/50 mt-0.5">{sankeyGlobal.retiros.length} movimientos con monto publicado</p>
       </div>
       <div class="px-5 sm:px-7 py-4">
-        <p class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-success">
-          <TrendingUp class="h-3.5 w-3.5" /> Inyecciones publicadas
+        <p class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/70">
+          <TrendingUp class="h-3.5 w-3.5 text-success" aria-hidden="true" /> Inyecciones publicadas
         </p>
         <p class="text-3xl sm:text-4xl font-bold tabular-nums text-base-content mt-1">{formatCLP(sankeyGlobal.totalInyecciones)}</p>
         <p class="text-[11px] text-base-content/50 mt-0.5">{sankeyGlobal.inyecciones.length} movimientos con monto publicado</p>
@@ -114,8 +118,11 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
       <dd class="text-2xl font-bold text-base-content tabular-nums order-1">{ejercicios.reduce((s, e) => s + e.movimientos.length, 0)}</dd>
     </div>
     <div class="flex flex-col">
-      <dt class="text-xs text-base-content/60 font-medium order-2">Sin objetivo publicado</dt>
-      <dd class="text-2xl font-bold text-warning tabular-nums order-1">{sinObjetivoGlobal}</dd>
+      <dt class="text-xs text-base-content/60 font-medium order-2 flex items-center gap-1.5">
+        <span class="h-2 w-2 rounded-full bg-warning" aria-hidden="true"></span>
+        Sin objetivo publicado
+      </dt>
+      <dd class="text-2xl font-bold text-base-content tabular-nums order-1">{sinObjetivoGlobal}</dd>
     </div>
     <div class="flex flex-col">
       <dt class="text-xs text-base-content/60 font-medium order-2">Con organismo identificado</dt>
@@ -197,12 +204,20 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
 
           {totalMovs > 0 && (
             <div class="px-5 py-5">
-              <h3 class="text-sm font-bold text-base-content mb-3 flex items-center gap-1.5">
-                <ArrowRightLeft class="h-4 w-4" /> Movimientos: en qué quedó el dinero
-                <span class="text-xs font-normal text-base-content/50">({totalMovs} · {e.movimientos.filter((m) => (m.fuentesSecundarias ?? []).some((f) => esFuenteOficial(f.medio))).length} con respaldo oficial)</span>
-              </h3>
-              <div class="grid grid-cols-1 xl:grid-cols-2 gap-3">
-                {e.movimientos.map((m) => (
+              <div class="flex flex-wrap items-baseline justify-between gap-x-3 gap-y-1 mb-1">
+                <h3 class="text-sm font-bold text-base-content flex items-center gap-1.5">
+                  <ArrowRightLeft class="h-4 w-4" aria-hidden="true" /> Línea de tiempo de movimientos
+                </h3>
+                <p class="text-[11px] text-base-content/50 tabular-nums">
+                  {totalMovs} movimientos · {e.movimientos.filter((m) => m.evento_id).length} con evento en el vault · {e.movimientos.filter((m) => m.vinculos.length > 0).length} con vínculo documentado
+                </p>
+              </div>
+              <p class="text-xs text-base-content/60 mb-4 max-w-3xl">
+                Ordenados por fecha de publicación. Cada fila muestra el monto, el evento del vault que la detalla y los
+                vínculos por atributo compartido (mismo evento, partida u organismo).
+              </p>
+              <ul class="pres-timeline space-y-3">
+                {porFecha(e.movimientos).map((m) => (
                   <BudgetMovementCard
                     mov={m}
                     ancla={`mov-${e.ano}-${m.orden}`}
@@ -213,7 +228,14 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                     secundarias={(m.fuentesSecundarias ?? []).map((f) => ({ fuente: f, ...secRef(e.ano, f.id, e.refs), oficial: esFuenteOficial(f.medio) }))}
                   />
                 ))}
-              </div>
+              </ul>
+              <p class="mt-4 text-[11px] text-base-content/50 flex items-start gap-1.5 max-w-3xl">
+                <MinusCircle class="h-3.5 w-3.5 shrink-0 mt-0.5" aria-hidden="true" />
+                <span>
+                  Cronología no es causalidad: los vínculos son atributos compartidos, no una cadena de derivación. Ninguna
+                  fuente del vault documenta que lo recortado en una partida se reasignara a otra.
+                </span>
+              </p>
 
               {sk.pendientes.length > 0 && (
                 <div class="mt-4 rounded-2xl bg-base-200/50 px-4 py-3">
@@ -248,7 +270,10 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                     <div class="bg-base-100 rounded-xl px-3 py-2.5">
                       <div class="flex flex-wrap items-center gap-2">
                         <span class="text-sm font-bold text-base-content tabular-nums">{v.variacion_texto}</span>
-                        <span class={`badge badge-sm badge-outline ml-auto ${v.nivel_impacto === 'directo' ? 'badge-primary' : v.nivel_impacto === 'indirecto' ? 'badge-secondary' : 'badge-ghost'}`}>{v.nivel_impacto}</span>
+                        <span class="badge badge-sm badge-outline ml-auto gap-1">
+                          <span class={`h-1.5 w-1.5 rounded-full ${v.nivel_impacto === 'directo' ? 'bg-primary' : v.nivel_impacto === 'indirecto' ? 'bg-secondary' : 'bg-base-300'}`} aria-hidden="true"></span>
+                          {v.nivel_impacto}
+                        </span>
                       </div>
                       <p class="text-sm text-base-content/80 mt-1">
                         {v.ministerio_id ? (

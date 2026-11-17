@@ -1,0 +1,88 @@
+# Ejercicio 2018 — Ley de Presupuestos 2018 (Ley 21.053), cerrado.
+# Aprobada por Bachelet II y ejecutada por Piñera II desde el 11-mar-2018.
+ # Convención del vault: `gobierno` registra a quien ejecuta (igual que 2022.yaml = Boric).
+# Fuente primaria: minuta de cierre ejecución fiscal 2018 de Dipres.
+ano: 2018
+gobierno: Piñera
+estado: cerrado
+estado_label: Cerrado (Dipres, cierre ejecución fiscal 2018)
+ley:
+  nombre: Ley de Presupuestos 2018
+  fuente: dipres-2017-12-27-ley-21053-presupuesto-2018
+  nota: "Ley N° 21.053, publicada el 27-dic-2017 bajo Bachelet II. Convención del vault: gobierno = ejecutor, Piñera II desde el 11-mar-2018 (igual que 2022.yaml usa Boric aunque la aprobó Piñera)."
+totales:
+  inicial: { monto: null, fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018, nota: "Monto de la Ley Aprobada 2018 no publicado en las fuentes consultadas; solo se informa la ejecución de 98,8% sobre la ley aprobada." }
+  vigente: { monto: null, fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018, nota: "Monto de la Ley Vigente 2018 no publicado; solo se informa la ejecución de 98,7% sobre la ley vigente." }
+  ejecutado: { monto: 44941195000000, fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018, nota: "Gasto del Gobierno Central Total 2018: $44.941.195 millones (23,5% del PIB, +3,4% real). Cifra entregada el 30-ene-2019, provisional previo al cierre de algunos Servicios Locales de Educación." }
+  saldo: { monto: null, fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018, nota: "Déficit efectivo de $3.161.687 millones (1,7% del PIB), menor al 2,8% de 2017. No se carga como monto porque assertMonto rechaza valores ≤ 0." }
+hitos:
+  - etiqueta: Déficit efectivo 2018
+    valor: $3.161.687 millones (1,7% del PIB), 35% menor que 2017 (2,8%)
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+  - etiqueta: Déficit estructural preliminar
+    valor: 1,5% del PIB, sobrecumplió la meta de 1,8%
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+  - etiqueta: Ingresos totales 2018
+    valor: $41.779.508 millones (21,9% del PIB, +8,8% real)
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+  - etiqueta: Tasa de ejecución
+    valor: 98,8% sobre ley aprobada y 98,7% sobre ley vigente
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+  - etiqueta: Deuda bruta del Gobierno Central
+    valor: 25,6% del PIB (US$70.247 millones)
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Recaudación de la gran minería privada (GMP10)
+    valor: $1.532.801 millones, +83,0% real
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+movimientos:
+  - tipo: ingreso
+    descripcion: Venta de acciones de SQM y recaudación tributaria asociada
+    fecha: '2018-01-01'
+    monto: null
+    monto_nota: "Pago de impuestos cercano a US$1.000 millones según la minuta de cierre; monto exacto en pesos no publicado"
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+    nivel_impacto: institucional
+    nota: "Ingreso extraordinario que incidió en el alza de 8,8% real de los ingresos totales."
+  - tipo: revision_programas
+    descripcion: Decreto de contención de gastos de mediados de 2018
+    monto: null
+    monto_nota: Monto no publicado en la minuta de cierre
+    objetivo_declarado: "Contención del gasto público, con crecimiento real del gasto total (3,4%) inferior al del PIB (4,0%)"
+    evento_id: null
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+    nivel_impacto: indirecto
+    nota: "La minuta de cierre menciona el decreto sin cuantificarlo; en junio de 2018 Dipres retiró un decreto cuestionado y aclaró que el ajuste era de acomodo y reasignación, no un recorte neto."
+  - tipo: aumento
+    descripcion: Extensión de la gratuidad en educación superior al sexto decil, Carrera Docente y Ley de Inclusión
+    monto: null
+    monto_nota: "No cuantificado en la minuta; gasto en subsidios y donaciones de Educación +3,7% real y personal +16,9% real"
+    objetivo_declarado: "Ampliar la gratuidad y fortalecer la carrera docente"
+    evento_id: null
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+    nivel_impacto: directo
+    organizacion_id: ministerio_educacion
+    nota: "Gasto corriente 2018 +4,0% real, incidido por Educación y Salud."
+  - tipo: aumento
+    descripcion: Refuerzo de personal y prestaciones en Salud (SIL, CCAF y especialistas)
+    monto: null
+    monto_nota: "No cuantificado; subsidios y donaciones en Salud +9,6% real, personal +9,3% real"
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: "Partida de Salud fue la única con sobre-ejecución en 2018 (112,9% ley inicial, 102,4% ley vigente)."
+variaciones:
+  - alcance: Gasto del Gobierno Central Total 2018 frente a 2017
+    variacion_texto: +3,4% real (23,5% del PIB), por debajo del crecimiento del PIB (4,0%)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+    evento_id: null
+    nota: "Esfuerzo de contención de la autoridad fiscal."
+orden_refs:
+  - dipres-2017-12-27-ley-21053-presupuesto-2018
+  - dipres-2019-02-01-cierre-ejecucion-fiscal-2018
+  - dipres-2021-03-04-ifp-cuarto-trimestre-2020

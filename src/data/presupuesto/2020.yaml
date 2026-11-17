@@ -1,0 +1,111 @@
+# Ejercicio 2020 — Ley de Presupuestos 2020 (Ley 21.192), cerrado.
+# Fuente primaria: IFP del cuarto trimestre de 2020 de Dipres (respuesta fiscal a la pandemia).
+ano: 2020
+gobierno: Piñera
+estado: cerrado
+estado_label: Cerrado (IFP cuarto trimestre 2020)
+ley:
+  nombre: Ley de Presupuestos 2020
+  fuente: bcn-2019-12-19-ley-21192-presupuesto-2020
+  nota: "Ley N° 21.192, publicada el 19-dic-2019. Gasto aprobado $51.183.623 millones (pesos de 2020, Cuadro II.4.1 del IFP 4T 2019). Meta de balance estructural -3,2% del PIB, finalmente -2,7%."
+totales:
+  inicial: { monto: 51183623000000, fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019, nota: "Ley de Presupuestos Aprobada 2020: $51.183.623 millones en pesos de 2020 (Cuadro II.4.1). El proyecto de septiembre era de $50.438.950 millones." }
+  vigente: { monto: null, fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020, nota: "Monto de la Ley Vigente 2020 con decretos no publicado en los IFP consultados; solo se informa la ejecución de 106,5% sobre la ley aprobada." }
+  ejecutado: { monto: 54512760000000, fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020, nota: "Gasto del Gobierno Central Total 2020: $54.512.760 millones (27,6% del PIB, +10,5% real). El IFP 4T 2021 revisó la cifra a $54.512.379 millones en pesos 2020." }
+  saldo: { monto: null, fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020, nota: "Déficit efectivo de $14.643.861 millones (7,4% del PIB), el mayor desde 1973; inferior al 8,2% proyectado en septiembre. No se carga como monto por assertMonto." }
+hitos:
+  - etiqueta: Déficit efectivo 2020
+    valor: $14.643.861 millones (7,4% del PIB), mayor registro desde 1973
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Balance estructural preliminar
+    valor: -2,7% del PIB, mejor que la meta de -3,2%
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Resultado sin medidas Covid
+    valor: Déficit de 3,7% del PIB
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Ingresos del Gobierno Central
+    valor: $39.868.900 millones (-8,4% real)
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Tasa de ejecución del gasto presupuestario
+    valor: "106,5% de la Ley Aprobada (promedio 2010-2019: 99,4%)"
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Medidas del Acuerdo Covid con efecto en gasto
+    valor: $3.830.387 millones (7,5% del presupuesto aprobado)
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - etiqueta: Deuda bruta y activos del Tesoro
+    valor: Deuda $65.167.462 millones (33,0% del PIB); activos US$23.504 millones (8,5% del PIB); PFN -24,5% del PIB
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+movimientos:
+  - tipo: aumento
+    descripcion: Medidas del Acuerdo Covid con efecto en el gasto (IFE, bonos, salud)
+    fecha: '2020-03-01'
+    monto: 3830387000000
+    monto_nota: "$3.830.387 millones, 7,5% del presupuesto aprobado total para el Gobierno Central Presupuestario 2020"
+    objetivo_declarado: "Controlar la pandemia y apoyar a las familias y empresas"
+    evento_id: null
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    fuentes_secundarias:
+      - bcn-2020-12-14-ley-21288-fet
+    nivel_impacto: directo
+    nota: "Explica la ejecución de 106,5% de la ley aprobada; el gasto total creció 10,5% real."
+  - tipo: ingreso
+    descripcion: Medidas de alivio tributario del Plan Económico de Emergencia y Acuerdo Covid
+    fecha: '2020-03-01'
+    monto: 2341874000000
+    monto_nota: "$2.341.874 millones de menores ingresos para el Fisco (Cuadro I.2.3 del IFP 4T 2020)"
+    objetivo_declarado: "Aliviar la carga tributaria de hogares y empresas durante la pandemia"
+    evento_id: null
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    nivel_impacto: indirecto
+    nota: "Contribuyó a la caída de 8,4% real de los ingresos totales."
+  - tipo: aumento
+    descripcion: Ingreso Familiar de Emergencia (IFE)
+    fecha: '2020-04-20'
+    monto: null
+    monto_nota: "Monto total del IFE 2020 no publicado en los IFP consultados"
+    objetivo_declarado: "Entregar un ingreso a los hogares del 60% más vulnerable"
+    evento_id: '20200420-1'
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    nivel_impacto: directo
+    nota: "El IFP 4T 2021 identifica el IFE como el principal componente del alza del gasto en subsidios y donaciones."
+  - tipo: aumento
+    descripcion: Préstamo Solidario y Bono Clase Media (Ley 21.252)
+    fecha: '2020-08-01'
+    monto: null
+    monto_nota: "Monto fiscal total no publicado en el IFP consultado"
+    objetivo_declarado: "Proteger los ingresos de la clase media afectada por la pandemia"
+    evento_id: '20200801-1'
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    nivel_impacto: directo
+    nota: "El IFP 4T 2021 lo menciona entre los subsidios del Ministerio del Trabajo."
+  - tipo: redistribucion
+    descripcion: Reasignación de ejecución de inversión hacia programas de apoyo a las familias
+    monto: null
+    monto_nota: "Monto reasignado no cuantificado; inversión pública cayó 8,9% real por cuarentenas"
+    objetivo_declarado: "Fortalecer los programas de apoyo a las familias"
+    evento_id: null
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    nivel_impacto: indirecto
+    nota: "La menor ejecución de proyectos por confinamiento se redestinó a transferencias."
+  - tipo: revision_programas
+    descripcion: Presupuesto Base Cero Ajustado para 2021 (anunciado en el cierre 2020)
+    monto: null
+    monto_nota: "Metodología de formulación, sin monto propio"
+    objetivo_declarado: "Revisar el gasto base para la formulación del Presupuesto 2021"
+    evento_id: null
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    nivel_impacto: institucional
+    nota: "Aplicado por primera vez en el Presupuesto 2021; marcó el retorno gradual del estímulo fiscal."
+variaciones:
+  - alcance: Gasto del Gobierno Central Total 2020 frente a 2019
+    variacion_texto: +10,5% real (27,6% del PIB)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020
+    evento_id: null
+    nota: "Impulso fiscal por pandemia; 0,6% menor a lo estimado en septiembre de 2020."
+orden_refs:
+  - bcn-2019-12-19-ley-21192-presupuesto-2020
+  - dipres-2020-01-30-ifp-cuarto-trimestre-2019
+  - dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - bcn-2020-12-14-ley-21288-fet

@@ -236,22 +236,22 @@ const desc = [
                     text-anchor="end"
                     font-size={G.FS}
                     fill="var(--color-base-content)"
-                    fill-opacity="0.85"
+                    fill-opacity="1"
                     class="gv-sk-label"
                   >
                     {ln}
                   </text>
                 ))}
-                <text x={labelLx} y={SHIFT + e.top + e.lines.length * G.LINE + G.FS * 0.9} text-anchor="end" font-size={G.FS * 0.94} font-weight="700" fill="var(--color-error)">
+                <text x={labelLx} y={SHIFT + e.top + e.lines.length * G.LINE + G.FS * 0.9} text-anchor="end" font-size={G.FS * 0.94} font-weight="700" fill="var(--color-base-content)">
                   {b.f.montoTexto}
                 </text>
                 <g class="gv-sk-tip" transform={`translate(${cx - G.TIP_W / 2}, ${tipY})`} aria-hidden="true">
                   <rect width={G.TIP_W} height={tipH} rx="7" fill="var(--color-base-100)" stroke="var(--color-base-300)" stroke-width="1" />
-                  <text x="9" y="14" font-size="10" font-weight="700" fill="var(--color-error)">
+                  <text x="9" y="14" font-size="10" font-weight="700" fill="var(--color-base-content)">
                     Retiro {b.f.ejercicio} - {b.f.montoTexto}
                   </text>
                   {tip.map((ln, j) => (
-                    <text x="9" y={27 + j * 11} font-size="9" fill="var(--color-base-content)" fill-opacity="0.75">
+                    <text x="9" y={27 + j * 11} font-size="9" fill="var(--color-base-content)" fill-opacity="1">
                       {ln}
                     </text>
                   ))}
@@ -297,22 +297,22 @@ const desc = [
                     text-anchor="start"
                     font-size={G.FS}
                     fill="var(--color-base-content)"
-                    fill-opacity="0.85"
+                    fill-opacity="1"
                     class="gv-sk-label"
                   >
                     {ln}
                   </text>
                 ))}
-                <text x={labelRx} y={SHIFT + e.top + e.lines.length * G.LINE + G.FS * 0.9} text-anchor="start" font-size={G.FS * 0.94} font-weight="700" fill="var(--color-success)">
+                <text x={labelRx} y={SHIFT + e.top + e.lines.length * G.LINE + G.FS * 0.9} text-anchor="start" font-size={G.FS * 0.94} font-weight="700" fill="var(--color-base-content)">
                   {b.f.montoTexto}
                 </text>
                 <g class="gv-sk-tip" transform={`translate(${cx - G.TIP_W / 2}, ${tipY})`} aria-hidden="true">
                   <rect width={G.TIP_W} height={tipH} rx="7" fill="var(--color-base-100)" stroke="var(--color-base-300)" stroke-width="1" />
-                  <text x="9" y="14" font-size="10" font-weight="700" fill="var(--color-success)">
+                  <text x="9" y="14" font-size="10" font-weight="700" fill="var(--color-base-content)">
                     Inyección {b.f.ejercicio} - {b.f.montoTexto}
                   </text>
                   {tip.map((ln, j) => (
-                    <text x="9" y={27 + j * 11} font-size="9" fill="var(--color-base-content)" fill-opacity="0.75">
+                    <text x="9" y={27 + j * 11} font-size="9" fill="var(--color-base-content)" fill-opacity="1">
                       {ln}
                     </text>
                   ))}
