@@ -1,13 +1,13 @@
 {
   "version": 1,
   "descripcion": "Catálogo de artículos de prensa extraído de los sitemaps de cada medio. Cada línea JSONL: {u: url, d: fecha ISO, t: título (si existe), s: fuente del título}. Título derivado del slug solo si el sitemap no lo provee.",
-  "actualizado": "2026-11-12T20:47:17.005Z",
+  "actualizado": "2026-11-16T20:25:30.786Z",
   "medios": {
     "cooperativa": {
       "nombre": "Cooperativa",
-      "ultima_sync": "2026-11-12T20:15:02.273Z",
-      "articulos": 5940,
-      "nuevos": 0,
+      "ultima_sync": "2026-11-16T20:25:13.045Z",
+      "articulos": 6310,
+      "nuevos": 370,
       "años": 1
     },
     "elclarin": {
@@ -19,7 +19,7 @@
     },
     "biobiochile": {
       "nombre": "Radio Bío Bío",
-      "ultima_sync": "2026-11-12T20:15:38.367Z",
+      "ultima_sync": "2026-11-16T20:25:12.642Z",
       "articulos": 1183412,
       "nuevos": 0,
       "años": 18
@@ -68,9 +68,9 @@
     },
     "latercera": {
       "nombre": "La Tercera",
-      "ultima_sync": "2026-11-12T20:16:32.756Z",
-      "articulos": 22188,
-      "nuevos": 96,
+      "ultima_sync": "2026-11-16T20:25:20.675Z",
+      "articulos": 22288,
+      "nuevos": 100,
       "años": 1
     },
     "cnnchile": {
@@ -89,7 +89,7 @@
     },
     "radio_uchile": {
       "nombre": "Radio Universidad de Chile",
-      "ultima_sync": "2026-11-12T20:16:41.244Z",
+      "ultima_sync": "2026-11-16T20:25:30.786Z",
       "articulos": 109255,
       "nuevos": 0,
       "años": 18
@@ -243,9 +243,9 @@
     },
     "emol": {
       "nombre": "Emol",
-      "ultima_sync": "2026-11-12T20:18:38.535Z",
-      "articulos": 1118834,
-      "nuevos": 153,
+      "ultima_sync": "2026-11-16T20:25:17.794Z",
+      "articulos": 1119117,
+      "nuevos": 283,
       "años": 27
     },
     "gob": {

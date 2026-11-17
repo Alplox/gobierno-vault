@@ -2039,6 +2039,7 @@
 - [2026/11/20261113-1 - El día después del acuerdo: Tohá critica el costo, Pérez defiende el trato y la entrevista deriva en cruce por el desembolso fiscal](src/content/events/2026/11/20261113-1.md) — 6 fuentes
 - [2026/11/20261113-2 - Doce ONG y una ofensiva parlamentaria contra las alertas de Meta a la PDI: piden el convenio, la cifra de detenciones y control judicial previo](src/content/events/2026/11/20261113-2.md) — 6 fuentes
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
+- [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 6 fuentes
 
 ## 2025
 
@@ -2097,6 +2098,8 @@
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
 - [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
+- [2025/11/20251116-3 - Matthei reconoce la derrota en primera vuelta y anuncia que felicitará a Kast en su comando](src/content/events/2025/11/20251116-3.md) — 12 fuentes
+- [2025/11/20251116-4 - Kast condiciona su continuidad política al resultado: 'Si no salgo para la segunda vuelta, será la última elección presidencial en la que participe'](src/content/events/2025/11/20251116-4.md) — 10 fuentes
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
 - [2025/11/20251120-1 - Municipalidad de Vitacura destituye a funcionarios grabados en video sexual tras sumario por falta grave a la probidad](src/content/events/2025/11/20251120-1.md) — 8 fuentes
 - [2025/11/20251121-1 - Contraloría recepciona denuncia por contrataciones de Christian Pino para charlas de actualidad en cinco municipalidades y tres corporaciones culturales](src/content/events/2025/11/20251121-1.md) — 6 fuentes
@@ -2212,6 +2215,7 @@
 - [2023/09/20230928-1 - Boric presenta el proyecto de presupuesto 2024 con un aumento del 3,5% del gasto público y foco en seguridad y probidad](src/content/events/2023/09/20230928-1.md) — 2 fuentes
 - [2023/10/20231018-1 - Fiscalía archivó sin culpables la causa por suplantación de identidad del carabinero infiltrado en Lo Hermida](src/content/events/2023/10/20231018-1.md) — 7 fuentes
 - [2023/11/20231114-1 - Caso Hermosilla: Ciper revela audio que destapa coimas al SII y la CMF y sacude al sistema judicial](src/content/events/2023/11/20231114-1.md) — 2 fuentes
+- [2023/11/20231116-1 - Boric confirma el término de su relación con Irina Karamanos y afirma que seguirá dedicado a gobernar](src/content/events/2023/11/20231116-1.md) — 8 fuentes
 - [2023/11/20231127-1 - El Mostrador analiza las cifras de la delincuencia: ingresos de causas +50%, homicidios +40% y secuestros +140% en una década](src/content/events/2023/11/20231127-1.md) — 1 fuente
 - [2023/12/20231217-1 - Plebiscito constitucional 2023: el En Contra gana con 55,76% y se cierra el segundo proceso constituyente](src/content/events/2023/12/20231217-1.md) — 3 fuentes
 

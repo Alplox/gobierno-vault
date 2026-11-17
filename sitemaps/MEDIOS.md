@@ -81,7 +81,7 @@
 | `contapapaya` | Contapapaya | `contapapaya.cl/sitemap_index.xml` | articleOnly (Yoast) | 421 | 1 |
 | `contingenciachile` | Contingencia Chile | `contingenciachile.cl/wp-sitemap.xml` | includeRe | 533 | 3 |
 | `contrapoderchile` | Contrapoder Chile | `contrapoderchile.cl/sitemap_index.xml` | articleOnly (Yoast) | 585 | 2 |
-| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 5.940 | 1 |
+| `cooperativa` | Cooperativa | `www.cooperativa.cl/robots.txt` | — | 6.310 | 1 |
 | `coquimbonoticias` | Coquimbo Noticias | `www.coquimbonoticias.cl/sitemap.xml` | includeRe | 6.880 | 9 |
 | `cr2` | CR2 | `cr2.cl/wp-sitemap.xml` | includeRe | 5.350 | 14 |
 | `cruzroja` | Cruz Roja Chile | `cruzroja.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.995 | 6 |
@@ -195,7 +195,7 @@
 | `elsoldeiquique` | El Sol de Iquique | `elsoldeiquique.cl/sitemap_index.xml` | articleOnly (Yoast) | 29.666 | 16 |
 | `eltirapiedras` | El Tirapiedras | `eltirapiedras.cl/sitemap_index.xml` | articleOnly (Yoast) | 2.424 | 7 |
 | `elvicuense` | El Vicuñense | `xn--elvicuense-y9a.cl/sitemap_index.xml` | articleOnly (Yoast) | 0 | 0 |
-| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.118.834 | 27 |
+| `emol` | Emol | `www.emol.com/robots.txt` | includeRe | 1.119.117 | 27 |
 | `enfoquedigital` | Enfoque Digital | `enfoquedigital.cl/sitemap_index.xml` | articleOnly (Yoast) | 4.675 | 3 |
 | `enfoquedigitalohiggins` | Enfoque Digital O'Higgins | `vi.cl/sitemap_index.xml` | articleOnly (Yoast) | 20.468 | 3 |
 | `enlalinea` | En La Línea | `enlalinea.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.964 | 4 |
@@ -271,7 +271,7 @@
 | `laserenaonline` | La Serena Online | `laserenaonline.cl/sitemap.xml` | includeRe | 40.132 | 11 |
 | `lasnoticiasdemalleco` | Las Noticias de Malleco | `lasnoticiasdemalleco.cl/sitemap_index.xml` | articleOnly (Yoast) | 7.840 | 5 |
 | `latendencia` | La Tendencia | `latendencia.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.608 | 3 |
-| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 22.188 | 1 |
+| `latercera` | La Tercera | `www.latercera.com/robots.txt` | — | 22.288 | 1 |
 | `latribunadecolchagua` | La Tribuna de Colchagua | `latribunadecolchagua.cl/sitemap_index.xml` | articleOnly (Yoast) | 1.059 | 4 |
 | `lavozdelosquesobran` | La Voz de los que Sobran | `www.lavozdelosquesobran.cl/sitemap_index.xml` | articleOnly (Yoast) | 12.166 | 7 |
 | `lavozdepucon` | La Voz de Pucón | `www.lavozdepucon.cl/wp-sitemap.xml` | includeRe | 4.782 | 9 |

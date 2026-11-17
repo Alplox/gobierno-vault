@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 12/11/2026, 17:47:17
+- **Última sincronización:** 16/11/2026, 17:25:30
 - **Medios registrados:** 568
-- **Artículos indexados:** 13.484.328
+- **Artículos indexados:** 13.485.081
 - **Canales de YouTube:** 30 (587.712 videos)
 
 ## Por medio
@@ -13,7 +13,7 @@
 | Medio | Artículos |
 | --- | --- |
 | Radio Bío Bío | 1.183.412 |
-| Emol | 1.118.834 |
+| Emol | 1.119.117 |
 | La Segunda | 903.546 |
 | Meganoticias | 438.975 |
 | RFI Español | 402.077 |
@@ -111,7 +111,7 @@
 | El Maipo | 22.922 |
 | Diario de Puerto Montt | 22.733 |
 | El Filtrador | 22.703 |
-| La Tercera | 22.188 |
+| La Tercera | 22.288 |
 | Maule Hoy | 22.073 |
 | La Nación | 21.545 |
 | El Clarín | 21.180 |
@@ -230,13 +230,13 @@
 | Colegio Médico de Chile | 6337 |
 | UTE USACH Noticias | 6332 |
 | UTE USACH Noticias | 6332 |
+| Cooperativa | 6310 |
 | Colegio de Profesores | 6178 |
 | Tus Noticias | 6177 |
 | USM | 6170 |
 | Reporte Agrícola | 6118 |
 | Pichilemu News | 6077 |
 | Los Lagos al Día | 6044 |
-| Cooperativa | 5940 |
 | Valparaíso Noticias | 5903 |
 | La Opinión de Chiloé | 5858 |
 | SERNATUR | 5829 |
