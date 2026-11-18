@@ -529,6 +529,7 @@
 - [2026/01/20260126-2 - Corte Suprema ratifica condena al capitán de Carabineros Tomás Rodríguez por disparar al rostro de la actriz María Paz Grandjean](src/content/events/2026/01/20260126-2.md) — 6 fuentes
 - [2026/01/20260131-1 - Undurraga anuncia que suspenderá el Pase Cultural por uso fraudulento; Boric y el ministerio lo defienden](src/content/events/2026/01/20260131-1.md) — 8 fuentes
 - [2026/01/20260131-2 - Aluvión en Las Condes: el desborde de la Quebrada Honda anega viviendas en San Carlos de Apoquindo](src/content/events/2026/01/20260131-2.md) — 7 fuentes
+- [2026/01/20260131-3 - Quilicura se convierte en IA humana por un día para visibilizar el consumo de agua de los data centers](src/content/events/2026/01/20260131-3.md) — 8 fuentes
 - [2026/02/20260204-1 - Kast envía comitiva de diputados evangélicos al Desayuno de Oración de Washington que encabeza Trump](src/content/events/2026/02/20260204-1.md) — 4 fuentes
 - [2026/02/20260206-1 - Health coach de Kast revela que conversaron instalar un gimnasio en La Moneda](src/content/events/2026/02/20260206-1.md) — 2 fuentes
 - [2026/02/20260206-2 - Los informes que advirtieron el aluvión de Las Condes: dos del montañista Carlos Valdivia Davidson y uno de Sernageomin, en poder del municipio y el GORE desde febrero](src/content/events/2026/02/20260206-2.md) — 5 fuentes
@@ -2047,14 +2048,16 @@
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
 - [2026/11/20261115-1 - Criteria: aprobación de Kast cae al 18% por primera vez y 79% rechaza que Rabat siga en Justicia](src/content/events/2026/11/20261115-1.md) — 5 fuentes
 - [2026/11/20261115-2 - Cadem: aprobación de Kast baja al 27% y 79% respalda el paro de camioneros](src/content/events/2026/11/20261115-2.md) — 6 fuentes
-- [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 10 fuentes
+- [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 11 fuentes
 - [2026/11/20261116-2 - Arenas en Tolerancia Cero: 'el octubrismo fracasó, pero no desapareció', defiende el acuerdo con camioneros y niega conocer la ley antibarricadas 2.0](src/content/events/2026/11/20261116-2.md) — 13 fuentes
 - [2026/11/20261116-3 - Jiles anuncia el voto del PDG a favor de la AC contra Rabat y la comisión revisora queda con mayoría opositora](src/content/events/2026/11/20261116-3.md) — 6 fuentes
 - [2026/11/20261116-4 - Elección del fiscal regional de Valparaíso se suspende tras recurso de candidata excluida, en medio del cuestionamiento a Silvana Donoso](src/content/events/2026/11/20261116-4.md) — 8 fuentes
 - [2026/11/20261116-5 - Labbé critica en Teletrece el congelamiento de combustibles, defiende la caja de marzo y cuestiona la recesión técnica por las cifras de Codelco](src/content/events/2026/11/20261116-5.md) — 10 fuentes
-- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 18 fuentes
-- [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 35 fuentes
+- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 22 fuentes
+- [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 39 fuentes
 - [2026/11/20261117-3 - Congreso despacha a ley la postergación de la Ley 21.719 de Datos Personales hasta el 15 de octubre de 2027](src/content/events/2026/11/20261117-3.md) — 8 fuentes
+- [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
+- [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión en La Moneda queda sin fecha](src/content/events/2026/11/20261118-2.md) — 15 fuentes
 
 ## 2025
 
