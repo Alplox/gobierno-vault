@@ -9,6 +9,7 @@ notas: >-
   Entrevista de CNN Chile Radio del 19-nov-2026. Winter critica la opacidad del
   MoU, afirma que las tecnológicas buscan datos de los Estados y vincula el
   acuerdo con la estrategia de hegemonía de EE.UU. Transcripción aportada por
-  el usuario; se citan solo las afirmaciones sobre el MoU, no las referencias a
-  TIAR o Peter Thiel, que corresponden a otros debates.
+  el usuario; las afirmaciones sobre el MoU se citan en el evento 20261119-2 y
+  la referencia al TIAR en el evento sobre la carta del 16-nov; las menciones a
+  Peter Thiel no se citan.
 ---
