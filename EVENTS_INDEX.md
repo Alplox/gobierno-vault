@@ -2030,6 +2030,7 @@
 - [2026/11/20261104-2 - Frutas de Chile cancela su participación en el lanzamiento de la temporada de cerezas y advierte que el bloqueo en San Antonio pone en riesgo las exportaciones](src/content/events/2026/11/20261104-2.md) — 5 fuentes
 - [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 10 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
+- [2026/11/20261106-2 - Chile y Bélgica unen candidaturas para la secretaría del Tratado de Alta Mar en Valparaíso y China cuestiona el acuerdo](src/content/events/2026/11/20261106-2.md) — 8 fuentes
 - [2026/11/20261109-1 - Kast limita a $40 el alza del 12 de noviembre y anuncia un proyecto para topar las alzas en $20 por 90 días; los camioneros rechazan la propuesta y convocan un paro nacional](src/content/events/2026/11/20261109-1.md) — 22 fuentes
 - [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
@@ -2038,7 +2039,7 @@
 - [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
-- [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 5 fuentes
+- [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 11 fuentes
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
 - [2026/11/20261112-2 - Cuarto día del paro: Fedequinta, Asoducam, pescadores y microbuseros se suman y el comercio advierte riesgo de abastecimiento](src/content/events/2026/11/20261112-2.md) — 8 fuentes
 - [2026/11/20261112-3 - Acuerdo con los camioneros: rebaja de $142 al diésel, techo hasta marzo de 2027 y disidencia](src/content/events/2026/11/20261112-3.md) — 6 fuentes
@@ -2048,18 +2049,25 @@
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
 - [2026/11/20261115-1 - Criteria: aprobación de Kast cae al 18% por primera vez y 79% rechaza que Rabat siga en Justicia](src/content/events/2026/11/20261115-1.md) — 11 fuentes
 - [2026/11/20261115-2 - Cadem: aprobación de Kast baja al 27% y 79% respalda el paro de camioneros](src/content/events/2026/11/20261115-2.md) — 6 fuentes
-- [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 11 fuentes
+- [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 12 fuentes
 - [2026/11/20261116-2 - Arenas en Tolerancia Cero: 'el octubrismo fracasó, pero no desapareció', defiende el acuerdo con camioneros y niega conocer la ley antibarricadas 2.0](src/content/events/2026/11/20261116-2.md) — 15 fuentes
 - [2026/11/20261116-3 - Jiles anuncia el voto del PDG a favor de la AC contra Rabat y la comisión revisora queda con mayoría opositora](src/content/events/2026/11/20261116-3.md) — 6 fuentes
 - [2026/11/20261116-4 - Elección del fiscal regional de Valparaíso se suspende tras recurso de candidata excluida, en medio del cuestionamiento a Silvana Donoso](src/content/events/2026/11/20261116-4.md) — 8 fuentes
 - [2026/11/20261116-5 - Labbé critica en Teletrece el congelamiento de combustibles, defiende la caja de marzo y cuestiona la recesión técnica por las cifras de Codelco](src/content/events/2026/11/20261116-5.md) — 10 fuentes
-- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 22 fuentes
-- [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 39 fuentes
+- [2026/11/20261116-6 - Jiles sentencia en Teletrece que el Gobierno 'se terminó en la práctica' a ocho meses y advierte que el desempleo aumentará](src/content/events/2026/11/20261116-6.md) — 9 fuentes
+- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 31 fuentes
+- [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 63 fuentes
 - [2026/11/20261117-3 - Congreso despacha a ley la postergación de la Ley 21.719 de Datos Personales hasta el 15 de octubre de 2027](src/content/events/2026/11/20261117-3.md) — 8 fuentes
 - [2026/11/20261117-4 - Arenas pide disculpas al PDG tras el 'cúmulo de deseos' y la bancada las rechaza en plena ofensiva por Rabat](src/content/events/2026/11/20261117-4.md) — 8 fuentes
 - [2026/11/20261117-5 - El Banco Central publica el IEF del segundo semestre: riesgos elevados por IA, deuda fiscal y ciberseguridad, y mantiene el colchón contracíclico en 1%](src/content/events/2026/11/20261117-5.md) — 7 fuentes
+- [2026/11/20261117-6 - SpaceXAI registró nueve audiencias de lobby con organismos del Estado para ofrecer IA, sin acuerdos y sin respuesta de la empresa](src/content/events/2026/11/20261117-6.md) — 7 fuentes
+- [2026/11/20261117-7 - Contraloría detecta 315 funcionarios con condenas vigentes que siguen en sus cargos y ordena activar la inhabilidad sobreviniente](src/content/events/2026/11/20261117-7.md) — 8 fuentes
+- [2026/11/20261117-8 - La comisión investigadora aprueba por 6-4 un informe que reprocha a Steinert y remite antecedentes al Ministerio Público](src/content/events/2026/11/20261117-8.md) — 10 fuentes
 - [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
-- [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión en La Moneda queda sin fecha](src/content/events/2026/11/20261118-2.md) — 15 fuentes
+- [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión en La Moneda queda sin fecha](src/content/events/2026/11/20261118-2.md) — 16 fuentes
+- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 36 fuentes
+- [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 6 fuentes
+- [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
 
 ## 2025
 
@@ -2483,6 +2491,10 @@
 - [2009/11/20091123-1 - Municipios e Intendencia de Santiago lanzan campaña de tenencia responsable para reducir los perros abandonados de la Región Metropolitana](src/content/events/2009/11/20091123-1.md) — 2 fuentes
 - [2009/12/20091220-1 - Frei invita al Partido Comunista a unirse a su campaña y el PC oficializa su apoyo para la segunda vuelta presidencial de 2009-2010](src/content/events/2009/12/20091220-1.md) — 3 fuentes
 - [2009/12/20091221-1 - Sence amonesta verbalmente a su directora en la X Región tras usar chapita de Frei en actividad pública](src/content/events/2009/12/20091221-1.md) — 2 fuentes
+
+## 2007
+
+- [2007/05/20070509-1 - Gobierno de Bachelet firma acuerdo marco con Microsoft y el proyecto Domicilio Digital naufraga tras la polémica por datos personales y neutralidad tecnológica](src/content/events/2007/05/20070509-1.md) — 9 fuentes
 
 ## 2006
 

@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 365
+**Total tareas:** 366
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 288 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 289 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 333 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 334 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -342,6 +342,7 @@
 | S-2026-277 | ⬜ | 2026-11-08 | Transparencia CPLT — seguimiento | Cumplimiento del plazo único y extraordinario de cinco días hábiles de la Resolución Exenta E438 (34 organismos; PDI rol C2267-26 por inconformidad, vencimiento 25-sep-2026): si el Consejo remitió los antecedentes a la Unidad de Sumarios, si abrió investigaciones sumarias o sumarios, a qué órganos y con qué resultado, y si algún afectado reclamó ante la Corte Suprema | `20260915-4` | Origen: <https://www.portaltransparencia.cl/PortalPdT/documents/10179/62801/Resolucion+Exenta+E438+sesi%C3%B3n+1632+de+01.09.26+Plazo.pdf/384ed64a-9aaf-4f3f-b73f-2609ba2e2a36> |
 | S-2026-280 | ⬜ | 2026-11-11 | Combustibles — seguimiento | Reingreso y votación del proyecto de tope de $20 por 90 días: texto final, votación y efecto en el precio del diésel | `20261109-1` `20261110-1` `20261111-1` | Origen: <https://www.camara.cl> |
 | S-2026-281 | ⬜ | 2026-11-17 | Mesa Permanente de Data Centers — seguimiento | Resultado de la primera sesión del comité técnico del 16-nov-2026 (sin acta ni comunicado público al 17-nov) y de la presentación de avances al Comité Económico de Ministros prevista para el 26-nov-2026 | `20261109-2` | Origen: <https://www.cnnchile.com/pais/ministra-lincolao-y-jorge-alessandri-anuncian-creacion-de-mesa-permanente-para-impulsar-los-data-centers-en-chile/> |
+| S-2026-282 | ⬜ | 2026-11-18 | SICH — respuesta a oficio | Oficio de Manouchehri a MinCiencia/ANID por la lista de socios de la SICH: verificado al 18-nov que la organización lo pidió y seguía sin respuesta, sin rastro de oficio enviado ni de respuesta formal sobre autoría del documento y base legal | `20261118-1` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/11/18/temor-a-represalias-y-presunta-vulneracion-de-datos-la-denuncia-de-investigadores-contra-lincolao.shtml> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

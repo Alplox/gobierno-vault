@@ -1,6 +1,7 @@
 ---
 nombre: EFE
+aliases: [Agencia EFE]
 tipo: medio_comunicacion
-pais: España
-notas: Agencia de noticias internacional española. Portal efe.com.
+pais: Internacional
+notas: Agencia de noticias española con amplia cobertura en América Latina.
 ---
