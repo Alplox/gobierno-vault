@@ -555,6 +555,7 @@
 - [2026/03/20260303-3 - CFR instruye que el gasto de representación equivale al 30% del sueldo base de la EUS y sigue vigente bajo el nuevo sistema de remuneraciones](src/content/events/2026/03/20260303-3.md) — 9 fuentes
 - [2026/03/20260304-1 - Transparencia revela que Capredena pagó más de $121 millones en pensiones a Krassnoff, Iturriaga, Corbalán y Herrera en un año](src/content/events/2026/03/20260304-1.md) — 2 fuentes
 - [2026/03/20260305-1 - Contraloría detecta que Camila Vallejo usó el auto fiscal con fines político-partidistas; Segegob asegura que envió antecedentes para subsanar](src/content/events/2026/03/20260305-1.md) — 4 fuentes
+- [2026/03/20260305-2 - Codelco y Microsoft firman un memorando de IA, analítica avanzada y ciberseguridad para la minería](src/content/events/2026/03/20260305-2.md) — 7 fuentes
 - [2026/03/20260307-1 - Kast participa en la cumbre política del Escudo de las Américas en Miami; Trump anuncia una coalición militar](src/content/events/2026/03/20260307-1.md) — 18 fuentes
 - [2026/03/20260308-1 - La Tercera publica análisis sobre cómo cambió el lenguaje del gobierno de Boric en cuatro años](src/content/events/2026/03/20260308-1.md) — 2 fuentes
 - [2026/03/20260309-1 - SERMIG Reporte 5: denuncias por paso no habilitado caen 48,3% desde el peak de 2021 y 33,8% en 2024](src/content/events/2026/03/20260309-1.md) — 3 fuentes
@@ -2066,7 +2067,7 @@
 - [2026/11/20261117-8 - La comisión investigadora aprueba por 6-4 un informe que reprocha a Steinert y remite antecedentes al Ministerio Público](src/content/events/2026/11/20261117-8.md) — 10 fuentes
 - [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
 - [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión se concreta esa noche](src/content/events/2026/11/20261118-2.md) — 17 fuentes
-- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 37 fuentes
+- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 38 fuentes
 - [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 7 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
 - [2026/11/20261119-1 - Carolina Rossi renuncia a la Subsecretaría de Ciencia tras semanas de tensión con Lincolao](src/content/events/2026/11/20261119-1.md) — 14 fuentes

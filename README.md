@@ -135,12 +135,12 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 > Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.
 
-**Total de eventos:** 1995
+**Total de eventos:** 1996
 
-**Cobertura de fuentes:** 1524 de 1995 eventos con 3+ fuentes (471 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 1525 de 1996 eventos con 3+ fuentes (471 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 1587
+- 2026: 1588
 - 2025: 90
 - 2024: 44
 - 2023: 35
@@ -197,16 +197,16 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - reaccion (187)
 - resultado (172)
 - publicacion (169)
-- anuncio (144)
+- anuncio (145)
 - fallo_judicial (129)
 - entrevista (58)
 - votacion (44)
 
 **Entidades registradas:**
-- Personas: 2941
+- Personas: 2944
 - Organizaciones: 1690
 - Cifras: 44
-- Fuentes: 11869
+- Fuentes: 11876
 - Temas: 82
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 
