@@ -2037,12 +2037,12 @@
 - [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
 - [2026/11/20261111-1 - Tercer día del paro nacional: el Gobierno retira el proyecto de tope a las alzas y los camioneros vuelven a La Moneda](src/content/events/2026/11/20261111-1.md) — 17 fuentes
-- [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 8 fuentes
+- [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 12 fuentes
 - [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
 - [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 11 fuentes
-- [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 42 fuentes
+- [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 77 fuentes
 - [2026/11/20261111-8 - Reportajes Teletrece reconstruye el chat de ministros por el 18-O: Arrau pide prudencia, Barros se opone a callar y Rincón advierte de 'autogoles'](src/content/events/2026/11/20261111-8.md) — 5 fuentes
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
 - [2026/11/20261112-2 - Cuarto día del paro: Fedequinta, Asoducam, pescadores y microbuseros se suman y el comercio advierte riesgo de abastecimiento](src/content/events/2026/11/20261112-2.md) — 8 fuentes
@@ -2073,7 +2073,7 @@
 - [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 46 fuentes
 - [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 7 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
-- [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 10 fuentes
+- [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
 - [2026/11/20261118-7 - Chile y Hong Kong firman un acuerdo Working Holiday en Shenzhen con 100 cupos anuales por parte](src/content/events/2026/11/20261118-7.md) — 6 fuentes
 - [2026/11/20261119-1 - Carolina Rossi renuncia a la Subsecretaría de Ciencia tras semanas de tensión con Lincolao](src/content/events/2026/11/20261119-1.md) — 40 fuentes
 - [2026/11/20261119-2 - Tras la reunión con Alvarado, Lincolao defiende el MoU con OpenAI y Kast descarta problemas internos](src/content/events/2026/11/20261119-2.md) — 23 fuentes
