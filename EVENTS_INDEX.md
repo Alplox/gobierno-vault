@@ -2037,7 +2037,7 @@
 - [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
 - [2026/11/20261111-1 - Tercer día del paro nacional: el Gobierno retira el proyecto de tope a las alzas y los camioneros vuelven a La Moneda](src/content/events/2026/11/20261111-1.md) — 17 fuentes
-- [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 7 fuentes
+- [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 8 fuentes
 - [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
@@ -2321,6 +2321,7 @@
 
 ## 2020
 
+- [2020/01/20200102-1 - Manifestaciones en Valparaíso en apoyo a Matías Orellana, profesor que perdió un ojo por una lacrimógena en Año Nuevo](src/content/events/2020/01/20200102-1.md) — 12 fuentes
 - [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — 1 fuente
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
@@ -2345,9 +2346,10 @@
 - [2020/08/20200813-1 - Formalizan a Sebastián Izquierdo y Roberto Belmar por agresiones en marchas del Rechazo; quedan con arresto domiciliario nocturno](src/content/events/2020/08/20200813-1.md) — 7 fuentes
 - [2020/08/20200828-1 - Paro de camioneros de agosto de 2020: bloqueos de rutas, desabastecimiento y rechazo a la Ley de Seguridad del Estado bajo Piñera](src/content/events/2020/08/20200828-1.md) — 4 fuentes
 - [2020/09/20200901-1 - Video de fiesta con alcohol y mujeres en plena ruta marca el sexto día del paro camionero: Gobierno anuncia querella, Fedesur lo desmarca y Fiscalía investiga](src/content/events/2020/09/20200901-1.md) — 11 fuentes
+- [2020/09/20200902-1 - Gobierno y camioneros llegan a acuerdo y suspenden el paro tras siete días](src/content/events/2020/09/20200902-1.md) — 11 fuentes
 - [2020/09/20200906-1 - El Mercurio porta la encuesta de Numen que proyectaba un triunfo del Rechazo; el gremio de encuestadores alerta por sondeos de 'fuentes no habituales'](src/content/events/2020/09/20200906-1.md) — 10 fuentes
 - [2020/09/20200910-1 - Tribunal prohíbe a Sebastián Izquierdo y Roberto Belmar participar en marchas y reuniones públicas](src/content/events/2020/09/20200910-1.md) — 5 fuentes
-- [2020/09/20200923-1 - Sebastián Izquierdo inicia huelga de hambre tras el rechazo de la apelación de la cautelar que le prohíbe asistir a marchas del Rechazo](src/content/events/2020/09/20200923-1.md) — 13 fuentes
+- [2020/09/20200923-1 - Sebastián Izquierdo inicia huelga de hambre tras el rechazo de la apelación de la cautelar que le prohíbe asistir a marchas del Rechazo](src/content/events/2020/09/20200923-1.md) — 14 fuentes
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
 - [2020/09/20200928-1 - La Pública accede por Ley de Transparencia a 200 minutos de cámaras corporales del GOPE de Carabineros del estallido: primera entrega de registros policiales](src/content/events/2020/09/20200928-1.md) — 3 fuentes
 - [2020/10/20201002-1 - Caso Pío Nono: carabinero lanza a un adolescente de 16 años desde un puente al río Mapocho y es formalizado por homicidio frustrado](src/content/events/2020/10/20201002-1.md) — 3 fuentes
@@ -2366,6 +2368,7 @@
 - [2020/12/20201218-1 - Caso Luminarias alcanza a Jadue: Fiscalía indaga donación de Itelecom por $50 millones a la Corporación Cultural de Recoleta](src/content/events/2020/12/20201218-1.md) — 1 fuente
 - [2020/12/20201220-1 - Forensic Architecture y No+Más Lacrimógenas publican investigación que mide la toxicidad del gas lacrimógeno en Plaza de la Dignidad](src/content/events/2020/12/20201220-1.md) — 4 fuentes
 - [2020/12/20201224-1 - Chile inicia la vacunación contra el COVID-19 en tres hospitales de Santiago](src/content/events/2020/12/20201224-1.md) — 2 fuentes
+- [2020/12/20201225-1 - Primeras vacunas contra el COVID-19 llegan a Temuco, Biobío y Magallanes y comienza la inoculación en regiones](src/content/events/2020/12/20201225-1.md) — 9 fuentes
 - [2020/12/20201231-1 - Karen Rojo es declarada culpable por fraude al fisco en el caso de la Corporación Municipal de Antofagasta](src/content/events/2020/12/20201231-1.md) — 1 fuente
 
 ## 2019
@@ -2401,7 +2404,7 @@
 - [2019/11/20191112-2 - Huelga general del 12 de noviembre marca cuarta semana de protestas con masiva participación](src/content/events/2019/11/20191112-2.md) — 24 fuentes
 - [2019/11/20191113-1 - Audio filtrado del general Mario Rozas ante suboficiales — "A nadie voy a dar de baja por procedimiento policial, aunque me obliguen"](src/content/events/2019/11/20191113-1.md) — 7 fuentes
 - [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 28 fuentes
-- [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 4 fuentes
+- [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 5 fuentes
 - [2019/11/20191115-2 - CIDH anuncia visita técnica a Chile entre el 18 y 21 de noviembre para evaluar la situación de derechos humanos](src/content/events/2019/11/20191115-2.md) — 5 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 5 fuentes
 - [2019/11/20191117-1 - Incendio destruye la sede del Partido Socialista en Valdivia: Bomberos sostiene la hipótesis de intencionalidad](src/content/events/2019/11/20191117-1.md) — 7 fuentes
@@ -2589,6 +2592,8 @@
 ## 1971
 
 - [1971/06/19710608-1 - Asesinato del exministro Edmundo Perez Zujovic por un comando de la VOP en Providencia](src/content/events/1971/06/19710608-1.md) — 6 fuentes
+- [1971/07/19710711-1 - Nacionalización de la gran minería del cobre por reforma constitucional](src/content/events/1971/07/19710711-1.md) — 9 fuentes
+- [1971/11/19711110-1 - Visita de Fidel Castro a Chile](src/content/events/1971/11/19711110-1.md) — 7 fuentes
 
 ## 1969
 
