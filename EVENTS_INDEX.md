@@ -1896,6 +1896,7 @@
 - [2026/10/20261005-5 - Presupuesto 2027 recorta 59% la línea climática NDC y deja a Escazú sin asignación en Medio Ambiente](src/content/events/2026/10/20261005-5.md) — 6 fuentes
 - [2026/10/20261005-6 - La resolución que contrató a Natalia Ducó como asesora senior en deportes fija honorarios brutos por $17,1 millones hasta diciembre](src/content/events/2026/10/20261005-6.md) — 7 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
+- [2026/10/20261006-10 - Fontaine responde oficio de la Cámara: renunció a la Fundación Ciudadanos en Acción en abril y no se inhabilitó en litio](src/content/events/2026/10/20261006-10.md) — 6 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 - [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 13 fuentes
 - [2026/10/20261006-4 - Primer tropiezo del Presupuesto 2027: la Cuarta Subcomisión Mixta rechaza la rebaja de 12% al Servel](src/content/events/2026/10/20261006-4.md) — 6 fuentes
@@ -1963,6 +1964,7 @@
 - [2026/10/20261022-3 - Dos tutores del CIP Coronel son sorprendidos fumando marihuana con internos: el seremi confirma la separación de funciones y los gremios exhiben después un test negativo](src/content/events/2026/10/20261022-3.md) — 9 fuentes
 - [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
 - [2026/10/20261023-10 - Lagos se incorpora al Segundo Piso como asesor de programación dos días después de dejar la Segegob y el oficialismo cuestiona el destino de las exautoridades](src/content/events/2026/10/20261023-10.md) — 10 fuentes
+- [2026/10/20261023-11 - Fiscal boliviano abre cuentas de Cerimedo en EEUU y Argentina por US$300.000; sigue sin verificarse la cuenta en Chile que mencionó Beller](src/content/events/2026/10/20261023-11.md) — 5 fuentes
 - [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 8 fuentes
 - [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 12 fuentes
 - [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 13 fuentes
@@ -1996,6 +1998,7 @@
 - [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 5 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
 - [2026/10/20261028-10 - Camioneros independientes de San Antonio inician un paro de siete días y bloquean los depósitos de contenedores](src/content/events/2026/10/20261028-10.md) — 20 fuentes
+- [2026/10/20261028-11 - Exsubsecretarios de Telecomunicaciones cuestionan el Plan Nacional Digital: versión final en diciembre y 336.000 conexiones 3G sin fecha de apagado](src/content/events/2026/10/20261028-11.md) — 8 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
