@@ -637,6 +637,7 @@
 - [2026/04/20260408-1 - Renuncia seremi del Trabajo de Arica Nataly Cruz tras 8 días por no acreditar experiencia](src/content/events/2026/04/20260408-1.md) — 3 fuentes
 - [2026/04/20260408-2 - Nombramiento de Jorge Ravelo como seremi de Energía de Los Lagos es revocado](src/content/events/2026/04/20260408-2.md) — 1 fuente
 - [2026/04/20260408-3 - Renuncia seremi de la Mujer de Antofagasta Ángel Colque por no tener título profesional](src/content/events/2026/04/20260408-3.md) — 1 fuente
+- [2026/04/20260408-4 - Estudiantes de la UACh agreden a la ministra Ximena Lincolao al salir de la inauguración del año académico en Valdivia](src/content/events/2026/04/20260408-4.md) — 12 fuentes
 - [2026/04/20260409-1 - Renuncia seremi de Desarrollo Social de Antofagasta Lizet Tapia por no tener título profesional](src/content/events/2026/04/20260409-1.md) — 1 fuente
 - [2026/04/20260409-2 - Ultimátum camionero del 8 y 9 de abril: la CNTC no descarta un paro nacional y la CNDC emplaza a generadores de carga ante una nueva alza](src/content/events/2026/04/20260409-2.md) — 7 fuentes
 - [2026/04/20260411-1 - Vuelven a circular los antecedentes de Ximena Lincolao en Washington: el informe del Inspector General y el rechazo de su nombramiento en 2009](src/content/events/2026/04/20260411-1.md) — 20 fuentes
