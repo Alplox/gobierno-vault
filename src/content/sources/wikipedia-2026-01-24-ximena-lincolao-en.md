@@ -14,7 +14,9 @@ notas: >-
   Parques y Recreacion en 2009, fundacion de Phone2Action en 2012 y de
   BuildWithin en 2022, y la agresion en la Universidad Austral el 8-abr-2026.
   Su sección Personal life consigna dos matrimonios, Hartsock el primero y
-  Gates el segundo, y la naturalización estadounidense. La referencia [8]/[10]
-  data el comunicado de AFGE en 13-nov-2014, fecha incompatible con el contenido
-  y con la lectura directa del documento (2-oct-2009). Fuente secundaria.
+  Gates el segundo, y la naturalización estadounidense. La edición en español
+  data el comunicado de AFGE en 13-nov-2014, fecha que coincide con el
+  article:published_time de la metadata del sitio de AFGE y no con una versión
+  distinta: el cuerpo del comunicado dice "FOR IMMEDIATE RELEASE October 02,
+  2009". Fuente secundaria.
 ---

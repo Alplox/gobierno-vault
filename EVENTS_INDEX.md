@@ -2001,6 +2001,7 @@
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
 - [2026/10/20261028-10 - Camioneros independientes de San Antonio inician un paro de siete días y bloquean los depósitos de contenedores](src/content/events/2026/10/20261028-10.md) — 20 fuentes
 - [2026/10/20261028-11 - Exsubsecretarios de Telecomunicaciones cuestionan el Plan Nacional Digital: versión final en diciembre y 336.000 conexiones 3G sin fecha de apagado](src/content/events/2026/10/20261028-11.md) — 8 fuentes
+- [2026/10/20261028-12 - Microsoft y CENIA firman una alianza de dos años para impulsar Latam GPT con US$250.000 en créditos de Azure](src/content/events/2026/10/20261028-12.md) — 6 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
@@ -2090,7 +2091,7 @@
 - [2026/11/20261120-2 - Renuncian la seremi de Salud y la directora del Senama del Biobío; Gobierno acumula 62 salidas](src/content/events/2026/11/20261120-2.md) — 11 fuentes
 - [2026/11/20261120-3 - Senado despacha el Presupuesto 2027 a la Cámara tras tres jornadas: rechaza la partida de Agricultura por doble empate y Campos se niega a disculparse](src/content/events/2026/11/20261120-3.md) — 8 fuentes
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
-- [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 13 fuentes
+- [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
 
 ## 2025
 
@@ -2258,6 +2259,7 @@
 - [2023/07/20230731-1 - Condenan a carabineros de la 43° Comisaría de Peñalolén por apremios reiterados contra detenidos del estallido](src/content/events/2023/07/20230731-1.md) — 3 fuentes
 - [2023/08/20230822-1 - Suprema confirma 15 años contra exagentes DINA por secuestros y torturas en la Venda Sexy](src/content/events/2023/08/20230822-1.md) — 5 fuentes
 - [2023/09/20230904-1 - Condenan a 6 años y 2 días a dos carabineros de La Serena por golpear a un niño de 13 años y falsificar el parte](src/content/events/2023/09/20230904-1.md) — 3 fuentes
+- [2023/09/20230907-1 - Boric y cuatro expresidentes firman el documento 'Compromiso: Por la democracia, siempre' por los 50 años del golpe](src/content/events/2023/09/20230907-1.md) — 5 fuentes
 - [2023/09/20230908-1 - Defensoría de la Niñez revela que 150 niños, niñas y adolescentes fueron ejecutados y 40 desaparecieron en dictadura](src/content/events/2023/09/20230908-1.md) — 5 fuentes
 - [2023/09/20230911-1 - CIPER documenta en los 'Papeles de la Dictadura' cómo el almirante Merino diseñó el cierre del régimen para conservar 'el principio de autoridad' militar sobre los civiles](src/content/events/2023/09/20230911-1.md) — 1 fuente
 - [2023/09/20230912-1 - TOP de La Serena condena al conscripto Carlos Robledo a 10 años por la muerte de Romario Veloz](src/content/events/2023/09/20230912-1.md) — 5 fuentes
@@ -2301,6 +2303,7 @@
 - [2022/10/20221012-1 - Kast en esRadio (Madrid): 'la primera dictadura en Chile fue la de Salvador Allende' y balance del plebiscito de salida](src/content/events/2022/10/20221012-1.md) — 6 fuentes
 - [2022/10/20221018-1 - Tercer aniversario del 18-O: manifestaciones en Santiago y discurso de Boric que reivindica el estallido social](src/content/events/2022/10/20221018-1.md) — 3 fuentes
 - [2022/11/20221112-1 - PDI detiene a hombre de 21 años que amenazó al Presidente Boric vía escribenos.presidencia.cl para evitar promulgación de Ley Papito Corazón](src/content/events/2022/11/20221112-1.md) — 6 fuentes
+- [2022/11/20221116-1 - MINSAL confirma el primer fallecido por viruela del mono en Chile](src/content/events/2022/11/20221116-1.md) — 7 fuentes
 - [2022/11/20221122-1 - Cámara aprueba resolución que rechaza categóricamente el uso de fake news en política: 37 diputados votan en contra, en su mayoría de Republicanos y Chile Vamos](src/content/events/2022/11/20221122-1.md) — 2 fuentes
 - [2022/11/20221125-1 - Corte Suprema condena a más de 7 años al capitán de Carabineros Hugo Navarro por homicidio frustrado de Benjamín Huerta en Ovalle](src/content/events/2022/11/20221125-1.md) — 4 fuentes
 - [2022/11/20221128-1 - Paro de camioneros: gobierno, gremios y la CPC firman acuerdo tras ocho días de movilizaciones](src/content/events/2022/11/20221128-1.md) — 13 fuentes
