@@ -523,7 +523,7 @@
 - [2026/01/20260121-6 - Mala Espina perfila a Judith Marín, la profesora evangélica de 30 años que será ministra de la Mujer de Kast: la integrante más joven del gabinete y su perfil conservador](src/content/events/2026/01/20260121-6.md) — 3 fuentes
 - [2026/01/20260121-7 - Entra en vigencia el DS 17/2025 del MMA que modifica el Reglamento del SEIA: nuevos umbrales de ingreso y fin del gatillo ambiental para data centers](src/content/events/2026/01/20260121-7.md) — 12 fuentes
 - [2026/01/20260122-1 - Mala Espina perfila a Francisca Toledo, la ingeniera de LyD que será ministra de Medio Ambiente de Kast: la crítica del royalty minero que llegó al equipo de La Moneda chica](src/content/events/2026/01/20260122-1.md) — 3 fuentes
-- [2026/01/20260122-2 - Mala Espina perfila a Ximena Lincolao, la primera ministra con ascendencia mapuche directa desde el retorno a la democracia: la emprendedora tecnológica que será ministra de Ciencia de Kast](src/content/events/2026/01/20260122-2.md) — 5 fuentes
+- [2026/01/20260122-2 - Mala Espina perfila a Ximena Lincolao, la primera ministra con ascendencia mapuche directa desde el retorno a la democracia: la emprendedora tecnológica que será ministra de Ciencia de Kast](src/content/events/2026/01/20260122-2.md) — 32 fuentes
 - [2026/01/20260124-1 - Kast realiza cuarta gira internacional por Centroamérica](src/content/events/2026/01/20260124-1.md) — 19 fuentes
 - [2026/01/20260126-1 - Gobierno de Boric enfrenta crisis de gobernabilidad por incendios](src/content/events/2026/01/20260126-1.md) — 1 fuente
 - [2026/01/20260126-2 - Corte Suprema ratifica condena al capitán de Carabineros Tomás Rodríguez por disparar al rostro de la actriz María Paz Grandjean](src/content/events/2026/01/20260126-2.md) — 6 fuentes
@@ -639,6 +639,7 @@
 - [2026/04/20260408-3 - Renuncia seremi de la Mujer de Antofagasta Ángel Colque por no tener título profesional](src/content/events/2026/04/20260408-3.md) — 1 fuente
 - [2026/04/20260409-1 - Renuncia seremi de Desarrollo Social de Antofagasta Lizet Tapia por no tener título profesional](src/content/events/2026/04/20260409-1.md) — 1 fuente
 - [2026/04/20260409-2 - Ultimátum camionero del 8 y 9 de abril: la CNTC no descarta un paro nacional y la CNDC emplaza a generadores de carga ante una nueva alza](src/content/events/2026/04/20260409-2.md) — 7 fuentes
+- [2026/04/20260411-1 - Vuelven a circular los antecedentes de Ximena Lincolao en Washington: el informe del Inspector General y el rechazo de su nombramiento en 2009](src/content/events/2026/04/20260411-1.md) — 20 fuentes
 - [2026/04/20260413-1 - Director de Migraciones defiende efectividad de la zanja fronteriza; detienen a dos bolivianos rellenándola con retroexcavadora](src/content/events/2026/04/20260413-1.md) — 5 fuentes
 - [2026/04/20260413-2 - Seremi de Trabajo de La Araucanía Francisco Farías renuncia por motivos personales](src/content/events/2026/04/20260413-2.md) — 5 fuentes
 - [2026/04/20260413-3 - Denuncian a la Contraloría almuerzo de Kast con excompañeros de la UC en La Moneda](src/content/events/2026/04/20260413-3.md) — 9 fuentes
@@ -1330,7 +1331,7 @@
 - [2026/08/20260813-8 - Ministro Barros: 'No somos el patio trasero de nadie' — Chile aún no se suscribe al 'Escudo de las Américas' tras el discurso de Hegseth](src/content/events/2026/08/20260813-8.md) — 3 fuentes
 - [2026/08/20260813-9 - Juzgado de Garantía de Valparaíso rechaza dos solicitudes de la defensa de Camila Flores en el caso cuota Flores y admite querella de Ymay Ortiz Pulgar](src/content/events/2026/08/20260813-9.md) — 2 fuentes
 - [2026/08/20260814-1 - Megarreforma (Ley de Reconstrucción Nacional y Desarrollo Económico y Social): registro textual de todo lo que propone](src/content/events/2026/08/20260814-1.md) — 22 fuentes
-- [2026/08/20260814-10 - Polémica por el menú del penal La Laguna de Talca: cazuela, guatitas y postres para reos de alta peligrosidad en contraste con la alimentación escolar y el BAES](src/content/events/2026/08/20260814-10.md) — 3 fuentes
+- [2026/08/20260814-10 - Polémica por el menú del penal La Laguna de Talca: cazuela, guatitas y postres para reos de alta peligrosidad en contraste con la alimentación escolar y el BAES](src/content/events/2026/08/20260814-10.md) — 6 fuentes
 - [2026/08/20260814-11 - Segegob pone fin al Fondo de Estudios sobre el Pluralismo: cancela la convocatoria 2026 del convenio con ANID y académicos advierten por la Ley de Prensa](src/content/events/2026/08/20260814-11.md) — 8 fuentes
 - [2026/08/20260814-12 - Encontrar trabajo en Chile se vuelve más difícil: los avisos laborales caen más de 20% y las vacantes por aviso más de 40% (2019-2025)](src/content/events/2026/08/20260814-12.md) — 1 fuente
 - [2026/08/20260814-13 - Denuncian al alcalde Mario Desbordes por el reiterado incumplimiento de un dictamen judicial: la abogada pide un nuevo apercibimiento y advierte por posible arresto de hasta dos meses](src/content/events/2026/08/20260814-13.md) — 1 fuente
@@ -2065,7 +2066,7 @@
 - [2026/11/20261116-7 - Chile y once países firman una carta ante la OEA para pedir la convocatoria del Órgano de Consulta del TIAR](src/content/events/2026/11/20261116-7.md) — 8 fuentes
 - [2026/11/20261116-8 - La OCDE sitúa a Chile a la cabeza de la caída del ingreso real por habitante en el segundo trimestre, con un 3,5%](src/content/events/2026/11/20261116-8.md) — 10 fuentes
 - [2026/11/20261116-9 - El Congreso despacha en un día la ley que topa las alzas de combustibles hasta abril de 2027 y rebaja el diésel en $100 adicionales](src/content/events/2026/11/20261116-9.md) — 9 fuentes
-- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 32 fuentes
+- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 34 fuentes
 - [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 64 fuentes
 - [2026/11/20261117-3 - Congreso despacha a ley la postergación de la Ley 21.719 de Datos Personales hasta el 15 de octubre de 2027](src/content/events/2026/11/20261117-3.md) — 8 fuentes
 - [2026/11/20261117-4 - Arenas pide disculpas al PDG tras el 'cúmulo de deseos' y la bancada las rechaza en plena ofensiva por Rabat](src/content/events/2026/11/20261117-4.md) — 8 fuentes
@@ -2077,17 +2078,18 @@
 - [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
 - [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión se concreta esa noche](src/content/events/2026/11/20261118-2.md) — 23 fuentes
 - [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 63 fuentes
-- [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 7 fuentes
+- [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 10 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
 - [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
 - [2026/11/20261118-7 - Chile y Hong Kong firman un acuerdo Working Holiday en Shenzhen con 100 cupos anuales por parte](src/content/events/2026/11/20261118-7.md) — 6 fuentes
 - [2026/11/20261119-1 - Carolina Rossi renuncia a la Subsecretaría de Ciencia tras semanas de tensión con Lincolao](src/content/events/2026/11/20261119-1.md) — 41 fuentes
 - [2026/11/20261119-2 - Tras la reunión con Alvarado, Lincolao defiende el MoU con OpenAI y Kast descarta problemas internos](src/content/events/2026/11/20261119-2.md) — 24 fuentes
 - [2026/11/20261119-3 - Presunta falsificación de firmas en el Senado por retiro de permisos de Órdenes y Espinoza abre investigación de la Fiscalía](src/content/events/2026/11/20261119-3.md) — 12 fuentes
-- [2026/11/20261120-1 - Tras la renuncia, Lincolao niega conflictos y Rossi atribuye su salida a visiones "muy distintas"](src/content/events/2026/11/20261120-1.md) — 11 fuentes
+- [2026/11/20261120-1 - Tras la renuncia, Lincolao niega conflictos y Rossi atribuye su salida a visiones "muy distintas"](src/content/events/2026/11/20261120-1.md) — 12 fuentes
 - [2026/11/20261120-2 - Renuncian la seremi de Salud y la directora del Senama del Biobío; Gobierno acumula 62 salidas](src/content/events/2026/11/20261120-2.md) — 11 fuentes
 - [2026/11/20261120-3 - Senado despacha el Presupuesto 2027 a la Cámara tras tres jornadas: rechaza la partida de Agricultura por doble empate y Campos se niega a disculparse](src/content/events/2026/11/20261120-3.md) — 8 fuentes
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
+- [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 13 fuentes
 
 ## 2025
 

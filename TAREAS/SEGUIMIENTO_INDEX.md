@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 364
+**Total tareas:** 363
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 287 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 286 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 332 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 331 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -248,7 +248,6 @@
 | S-2026-166 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | pendiente: confirmar si el trascendido de Mónica Pérez fue desmentido o confirmado por el Ejecutivo en los días sigui... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-167 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | pendiente: desenlace del requerimiento de inaplicabilidad de Carabineros ante el TC (¿fue acogido o rechazado?) · ver... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-168 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | pendiente: verificar si Humberto recibió ayudas concretas tras la polémica (la familia de damnificados) · desenlace d... | — | Origen: <https://example.com/pendiente-revisar> |
-| S-2026-169 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Menú del penal La Laguna vs alimentación escolar/BAES (20260814-10) — seguimiento: reacciones oficiales de Gendarmerí... | `20260814-10` | Origen: <https://www.diarioelcentro.cl/2026/08/14/polemica-por-menu-de-internos-de-la-carcel-la-laguna-de-talca-incluye-cazuela-chapsui-y-guatitas/> |
 | S-2026-170 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Conteo de salidas del gobierno de Kast (40/42/43) — conciliación: los eventos 20260813-2, 20260814-7 y 20260815-2 doc... | `20260813-2` `20260814-7` `20260815-2` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-171 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Ronda 16-ago (2ª tanda) — pendientes activos (eventos creados: 20260813-15, 20260814-11, 20260815-3, 20260815-4, 2026... | `20260813-15` `20260814-11` `20260815-3` `20260815-4` `20260816-1` `20260816-4` | Origen: <https://example.com/pendiente-revisar> |
 | S-2026-172 | ⬜ | 2026-08-27 | Patrón "decir y aclarar" — dichos de Kast que el g | Ronda 16-ago (4ª tanda) — pendientes activos (eventos creados: 20260815-6, 20260815-7, 20260816-9 a 20260816-12; ampl... | `20260815-6` `20260815-7` `20260816-9` `20260816-12` `20260813-1` `20260814-11` | Origen: <https://example.com/pendiente-revisar> |
