@@ -2129,6 +2129,7 @@
 - [2025/07/20250718-1 - Mario Marcel advierte que eliminar el tope de 11 años en las indemnizaciones por años de servicio podría generar más despidos](src/content/events/2025/07/20250718-1.md) — 4 fuentes
 - [2025/07/20250728-1 - Robo de $6.150 millones al Banco Itaú de Valparaíso: forado desde local colindante y oxicorte para vaciar la bóveda](src/content/events/2025/07/20250728-1.md) — 11 fuentes
 - [2025/07/20250728-2 - Evelyn Matthei anuncia querella contra el Partido Republicano por campañas de bots y fake news: 'Yo no mando a bots a decir las cosas'](src/content/events/2025/07/20250728-2.md) — 9 fuentes
+- [2025/07/20250730-1 - Contraloría ordena sumario en Melipeuco por contratos de familiares del alcalde Cuminao e irregularidades por $81 millones](src/content/events/2025/07/20250730-1.md) — 6 fuentes
 - [2025/08/20250806-1 - Confesiones de un creador de fake news del plebiscito 2022: guiones para desinformar en Rebaño Consultores, un operador de Copesa y visitas de diputados de derecha; su exdirector terminó contratado por la ANFP](src/content/events/2025/08/20250806-1.md) — 3 fuentes
 - [2025/08/20250812-1 - Santa Cruz dice que le doleria la guata gobernar con Kast y el republicano le receta viadil](src/content/events/2025/08/20250812-1.md) — 6 fuentes
 - [2025/08/20250813-1 - Kast no asiste a comisión investigadora por robo de cables de cobre](src/content/events/2025/08/20250813-1.md) — 17 fuentes
@@ -2146,6 +2147,7 @@
 - [2025/10/20251020-1 - Tribunal de Juicio Oral de Angol absuelve al alcalde de Collipulli Manuel Macaya del delito de desacato: 'No he cometido ningún delito'](src/content/events/2025/10/20251020-1.md) — 6 fuentes
 - [2025/10/20251022-1 - Boric lanza la Política Nacional de Seguridad Pública 2025-2031 a menos de cinco meses de dejar La Moneda](src/content/events/2025/10/20251022-1.md) — 4 fuentes
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — 2 fuentes
+- [2025/10/20251028-1 - Alcalde de Melipeuco despide a la pareja del funcionario que le arrancó la oreja y es denunciado por Ley Karin](src/content/events/2025/10/20251028-1.md) — 7 fuentes
 - [2025/10/20251030-1 - Providencia interpone querella contra tres estudiantes del Liceo Lastarria tras disturbios con bombas molotov y estudia su expulsión](src/content/events/2025/10/20251030-1.md) — 5 fuentes
 - [2025/11/20251105-1 - Operación Fortaleza 3: megaoperativo nacional de Carabineros y PDI deja 2.495 detenidos y 452 kilos de droga incautados bajo el gobierno de Boric](src/content/events/2025/11/20251105-1.md) — 5 fuentes
 - [2025/11/20251109-1 - Vocero de Kast dice que el comando 'no va a entrar' en el debate de DD.HH. e indultos, en plena polémica por Kaiser y Punta Peuco](src/content/events/2025/11/20251109-1.md) — 3 fuentes
@@ -2334,6 +2336,8 @@
 - [2021/10/20211016-1 - Absuelven del incendio a los acusados por la estación La Granja del Metro en el segundo juicio por el 18-O](src/content/events/2021/10/20211016-1.md) — 6 fuentes
 - [2021/11/20211109-1 - Cámara aprueba la admisibilidad de la acusación constitucional contra Piñera por el caso Dominga](src/content/events/2021/11/20211109-1.md) — 2 fuentes
 - [2021/11/20211114-1 - La Pública revela videos de cámaras corporales que registrarían el disparo a quemarropa contra Daniel Giraldo y que Carabineros se niega a entregar](src/content/events/2021/11/20211114-1.md) — 3 fuentes
+- [2021/11/20211115-1 - Registro Civil anula la licitación de pasaportes y cédulas ganada por Aisino y advierte riesgo para Visa Waiver](src/content/events/2021/11/20211115-1.md) — 5 fuentes
+- [2021/11/20211115-2 - Último debate presidencial ANATEL antes de la primera vuelta: seis candidatos y la ausencia de Parisi](src/content/events/2021/11/20211115-2.md) — 5 fuentes
 - [2021/11/20211116-1 - Senado rechaza la acusación constitucional contra Piñera por el caso Dominga al no alcanzar el quórum de 2/3](src/content/events/2021/11/20211116-1.md) — 2 fuentes
 - [2021/11/20211121-1 - Primera vuelta presidencial 2021: José Antonio Kast gana con 27,91% y disputará el balotaje con Gabriel Boric (25,82%)](src/content/events/2021/11/20211121-1.md) — 5 fuentes
 - [2021/11/20211125-1 - La Corte Suprema confirma la condena por el incendio de la estación Pedrero: única sentencia firme por quema de una estación del Metro en el 18-O](src/content/events/2021/11/20211125-1.md) — 6 fuentes
