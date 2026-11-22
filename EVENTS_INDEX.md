@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (471)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (469)
 
 <details>
-<summary>Ver lista (471 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (469 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -307,8 +307,6 @@
 - [2025/07/20250701-2 - SERMIG Reporte 4: cifras 2015-dic 2024 precede al reporte que fija el -48,3% desde 2021](src/content/events/2025/07/20250701-2.md) — **2 fuentes**
 - [2025/09/20250923-1 - Boric presenta la candidatura de Bachelet a la Secretaría General de la ONU](src/content/events/2025/09/20250923-1.md) — **2 fuentes**
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — **2 fuentes**
-- [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — **2 fuentes**
-- [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — **2 fuentes**
 - [2025/12/20251203-2 - Columna de El Líbero analiza la estrategia de Kast y su pinza con Kaiser de cara a la elección](src/content/events/2025/12/20251203-2.md) — **2 fuentes**
 - [2025/12/20251210-1 - Kast arremete contra Boric en campaña: 'El miedo no es inventado' y pregunta si sacaría a su guagua a las 2 de la mañana a Plaza Brasil](src/content/events/2025/12/20251210-1.md) — **2 fuentes**
 - [2025/12/20251216-1 - Columna de José Joaquín Brunner analiza la 'estrategia de ocultamiento valórico' de Kast y su pinza con Kaiser](src/content/events/2025/12/20251216-1.md) — **2 fuentes**
@@ -2134,6 +2132,7 @@
 - [2025/08/20250806-1 - Confesiones de un creador de fake news del plebiscito 2022: guiones para desinformar en Rebaño Consultores, un operador de Copesa y visitas de diputados de derecha; su exdirector terminó contratado por la ANFP](src/content/events/2025/08/20250806-1.md) — 3 fuentes
 - [2025/08/20250812-1 - Santa Cruz dice que le doleria la guata gobernar con Kast y el republicano le receta viadil](src/content/events/2025/08/20250812-1.md) — 6 fuentes
 - [2025/08/20250813-1 - Kast no asiste a comisión investigadora por robo de cables de cobre](src/content/events/2025/08/20250813-1.md) — 17 fuentes
+- [2025/08/20250813-2 - Incidentes con bombas molotov en el Liceo Lastarria: estudiante quemado, sangre en el establecimiento y municipalidad culpa a personas externas](src/content/events/2025/08/20250813-2.md) — 8 fuentes
 - [2025/08/20250817-1 - Kast minimiza al Congreso durante campaña ('no es tan relevante como ustedes se imaginan') y promete gobernar sin nuevas leyes: críticas de autoritarismo incluso dentro de Chile Vamos](src/content/events/2025/08/20250817-1.md) — 1 fuente
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md) — 10 fuentes
 - [2025/09/20250904-1 - Renuncia Patricio Góngora al directorio de Canal 13 tras reportaje de Chilevisión que lo vinculó a la cuenta troll 'Patito Verde'](src/content/events/2025/09/20250904-1.md) — 10 fuentes
@@ -2151,11 +2150,12 @@
 - [2025/11/20251110-1 - Fiscalía abre nueva causa por cohecho contra el alcalde de Río Bueno Luis Reyes tras separar las causas de delitos económicos](src/content/events/2025/11/20251110-1.md) — 3 fuentes
 - [2025/11/20251113-1 - CIPER revela DMs de Iván Poduje —del comando de Kast— con cuentas troll que atacaron a Matthei y Jara: 'Tenemos un café pendiente'](src/content/events/2025/11/20251113-1.md) — 6 fuentes
 - [2025/11/20251114-1 - Primer condenado por delito común ingresa al ex penal Punta Peuco](src/content/events/2025/11/20251114-1.md) — 1 fuente
-- [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 2 fuentes
-- [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
+- [2025/11/20251116-1 - Primera vuelta presidencial 2025: Jeannette Jara y José Antonio Kast pasan a segunda vuelta](src/content/events/2025/11/20251116-1.md) — 6 fuentes
+- [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 6 fuentes
 - [2025/11/20251116-3 - Matthei reconoce la derrota en primera vuelta y anuncia que felicitará a Kast en su comando](src/content/events/2025/11/20251116-3.md) — 12 fuentes
 - [2025/11/20251116-4 - Kast condiciona su continuidad política al resultado: 'Si no salgo para la segunda vuelta, será la última elección presidencial en la que participe'](src/content/events/2025/11/20251116-4.md) — 10 fuentes
 - [2025/11/20251116-5 - Fiscalía descarta nueva indagatoria contra Simpértigue y Vivanco acusa show mediático al votar en la primera vuelta](src/content/events/2025/11/20251116-5.md) — 9 fuentes
+- [2025/11/20251116-6 - Servicio de Salud Chiloé refuerza la vacunación contra la influenza ante el alza de virus respiratorios y habilita un nuevo vacunatorio en el Hospital de Castro](src/content/events/2025/11/20251116-6.md) — 6 fuentes
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
 - [2025/11/20251120-1 - Municipalidad de Vitacura destituye a funcionarios grabados en video sexual tras sumario por falta grave a la probidad](src/content/events/2025/11/20251120-1.md) — 8 fuentes
 - [2025/11/20251121-1 - Contraloría recepciona denuncia por contrataciones de Christian Pino para charlas de actualidad en cinco municipalidades y tres corporaciones culturales](src/content/events/2025/11/20251121-1.md) — 6 fuentes
