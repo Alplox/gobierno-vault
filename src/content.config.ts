@@ -141,6 +141,21 @@ const sources = defineCollection({
     fecha: z.coerce.date().optional(),
     url: z.string().url().optional().or(z.string().optional()),
     notas: z.string().optional(),
+    // Respaldo externo de la URL original (Wayback, archive.today, etc.).
+    // Array para permitir múltiples copias de la misma fuente sin tocar `url`
+    // ni `notas`. La automation usa `servicio` + `url` como clave de idempotencia.
+    respaldos: z
+      .array(
+        z.object({
+          servicio: z.string(),
+          url: z.string().url(),
+          fecha: z.string().optional(),
+          snapshot: z.string().optional(),
+          notas: z.string().optional(),
+        })
+      )
+      .optional()
+      .default([]),
   }),
 });
 

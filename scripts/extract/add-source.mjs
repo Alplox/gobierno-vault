@@ -15,6 +15,8 @@
  *   --mirror   Fuerza el uso del espejo r.jina.ai aunque el HTML directo responda *   --verify   Si el origen responde 404/410, exige confirmación para continuar
  *   --catalog-only  No hace fetch web: usa los datos del catálogo de sitemaps
  *                   (título/fecha/medio) si la URL está indexada
+ *   --no-archive    Omite el snapshot automático en Wayback (por defecto toda
+ *                   fuente nueva se crea con un respaldo en `respaldos[]`)
  *   --search <texto>  Busca en el catálogo local de sitemaps (título/URL/fecha)
  *                   y deja elegir un artículo; con --fecha y --medio filtra más
  *   --fecha YYYY-MM-DD  Filtro de fecha para --search
@@ -37,6 +39,7 @@ import { stdin as input, stdout as output } from 'node:process';
 import YAML from 'yaml';
 import { MEDIA, mediaHosts } from '../sitemaps/media.mjs';
 import { medioDir } from '../sitemaps/paths.mjs';
+import { archiveOne } from '../archive/archive-sources.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -527,7 +530,12 @@ function buildBlock(id, fields) {
   // Frontmatter plano para src/content/sources/<id>.md (mismo formato que --append).
   // El formato antiguo con prefijo `<id>:` era del monolito sources.yaml (eliminado) — no usar.
   void id;
-  const fm = YAML.stringify({ tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo, autor: fields.autor, fecha: fields.fecha, url: fields.url, ...(fields.notas ? { notas: fields.notas } : {}) }).trim();
+  const fm = YAML.stringify({
+    tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo,
+    autor: fields.autor, fecha: fields.fecha, url: fields.url,
+    ...(fields.notas ? { notas: fields.notas } : {}),
+    ...(fields.respaldos?.length ? { respaldos: fields.respaldos } : {}),
+  }).trim();
   return `---\n${fm}\n---`;
 }
 
@@ -678,6 +686,23 @@ async function main() {
   // Normalizar la URL a la del articulo original (nunca el espejo).
   if (/^https?:\/\//i.test(resolvedUrl)) url = resolvedUrl;
 
+  // --- Respaldo externo automático --------------------------------------
+  // Toda fuente nueva nace con su snapshot en Wayback. Si el servicio falla,
+  // se avisa pero la fuente se crea igual (se puede completar después con
+  // `pnpm run archive-sources -- --apply --since <fecha>`).
+  let respaldo = null;
+  if (!flags.has('--no-archive')) {
+    logInfo('Generando respaldo externo (Wayback)...');
+    const res = await archiveOne(url);
+    if (res?.error) {
+      logWarn(`No se pudo generar el snapshot: ${res.error}. La fuente se crea igual.`);
+    } else {
+      const { via, ...entry } = res;
+      respaldo = entry;
+      logOk(`Respaldo ${via === 'save' ? 'guardado' : 'reutilizado'}: ${res.url}`);
+    }
+  }
+
   // --- Medio ------------------------------------------------
   const domainMedio = buildDomainMedioMap();
   let medio = domainMedio[host] || (catalogHit ? CATALOG_MEDIO_NAMES[catalogHit.medio] : '') || '';
@@ -725,7 +750,7 @@ async function main() {
 
   const notas = (await ask('Notas (opcional, Enter para omitir)')) || undefined;
 
-  const fields = { tipo, medio, titulo, autor: autor || '', fecha, url, notas };
+  const fields = { tipo, medio, titulo, autor: autor || '', fecha, url, notas, respaldos: respaldo ? [respaldo] : [] };
   const block = buildBlock(id, fields);
 
   console.log('\n' + '='.repeat(64));
@@ -745,7 +770,12 @@ async function main() {
   if (flags.has('--append')) {
     if (await confirm(`Crear src/content/sources/${id}.md?`)) {
       mkdirSync(SOURCES_MD_DIR, { recursive: true });
-      const fm = YAML.stringify({ tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo, autor: fields.autor, fecha: fields.fecha, url: fields.url, ...(fields.notas ? { notas: fields.notas } : {}) }).trim();
+      const fm = YAML.stringify({
+        tipo: fields.tipo, medio: fields.medio, titulo: fields.titulo,
+        autor: fields.autor, fecha: fields.fecha, url: fields.url,
+        ...(fields.notas ? { notas: fields.notas } : {}),
+        ...(fields.respaldos?.length ? { respaldos: fields.respaldos } : {}),
+      }).trim();
       const md = `---\n${fm}\n---\n`;
       writeFileSync(mdPath, md, 'utf8');
       logOk(`FUENTE CREADA en ${mdPath}`);

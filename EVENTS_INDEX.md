@@ -870,7 +870,7 @@
 - [2026/07/20260723-3 - Camara aprueba proyecto que regula deepfakes con multas hasta $716 millones](src/content/events/2026/07/20260723-3.md) — 2 fuentes
 - [2026/07/20260723-4 - Ministra de Salud anuncia envio de 66 mil vacunas a zonas afectadas](src/content/events/2026/07/20260723-4.md) — 6 fuentes
 - [2026/07/20260723-5 - Gobierno buscara sanciones contra rescatados en Cajón del Maipo](src/content/events/2026/07/20260723-5.md) — 4 fuentes
-- [2026/07/20260723-6 - Aguas del Valle proyecta normalizar suministro en Coquimbo durante el fin de semana](src/content/events/2026/07/20260723-6.md) — 4 fuentes
+- [2026/07/20260723-6 - Aguas del Valle proyecta normalizar suministro en Coquimbo durante el fin de semana](src/content/events/2026/07/20260723-6.md) — 6 fuentes
 - [2026/07/20260723-7 - Gobierno confirma suspension de clases el jueves y viernes en regiones afectadas](src/content/events/2026/07/20260723-7.md) — 1 fuente
 - [2026/07/20260723-8 - 42 trabajadores de Pascua-Lama aislados mas de una semana en cordillera](src/content/events/2026/07/20260723-8.md) — 1 fuente
 - [2026/07/20260723-9 - Camara aprueba ley que regula deepfakes generados con IA](src/content/events/2026/07/20260723-9.md) — 4 fuentes
@@ -1435,7 +1435,7 @@
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
-- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errázuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — 4 fuentes
+- [2026/08/20260819-5 - BioBioChile revela que el proyecto NX Uno de Peine (Grupo Errázuriz) fue priorizado y aprobado tras 17 años y tres rechazos ambientales, pese a reparos de Sernageomin](src/content/events/2026/08/20260819-5.md) — 6 fuentes
 - [2026/08/20260819-6 - Centro de Estudiantes del Liceo Rayen Mapu denuncia que Carabineros obligó a dos alumnos a desvestirse frente a sus compañeros tras sospecha de robo de celular](src/content/events/2026/08/20260819-6.md) — 5 fuentes
 - [2026/08/20260819-7 - Kast cierra gira por el norte en mesa técnica en Iquique sin compromisos de inversión; gobernador Carvajal critica el resultado y pide zona de catástrofe](src/content/events/2026/08/20260819-7.md) — 5 fuentes
 - [2026/08/20260819-8 - Incidentes frente al Liceo Lastarria: 'overoles blancos' cortan avenida Providencia y lanzan bombas molotov contra Carabineros](src/content/events/2026/08/20260819-8.md) — 5 fuentes
@@ -1644,6 +1644,7 @@
 - [2026/09/20260907-13 - Irarrázaval debuta ante la comisión investigadora por la gestión de Steinert: descarta rol del Segundo Piso en la PDI y admite que el oficio debió consultarse](src/content/events/2026/09/20260907-13.md) — 5 fuentes
 - [2026/09/20260907-14 - INE informa alzas de 7,8% en remuneraciones y 8,7% en costos laborales en julio: el índice real sube 4,1% y los costos completan doce meses por sobre los sueldos](src/content/events/2026/09/20260907-14.md) — 6 fuentes
 - [2026/09/20260907-15 - Trabajadores del Colegio Calasanz inician la primera huelga en 75 años y el Centro de Estudiantes llama a asistir a clases en apoyo](src/content/events/2026/09/20260907-15.md) — 6 fuentes
+- [2026/09/20260907-16 - Ana María Stuven gana el Premio Nacional de Historia 2026 y es la segunda mujer en obtenerlo](src/content/events/2026/09/20260907-16.md) — 7 fuentes
 - [2026/09/20260907-2 - BioBio revela contrato de Eitan Bloch: $6,5 millones mensuales como asesor internacional de Kast en el Segundo Piso](src/content/events/2026/09/20260907-2.md) — 22 fuentes
 - [2026/09/20260907-3 - Partido Republicano atribuye a Kast el alza de la PGU a $250 mil que fijó la reforma previsional de Boric](src/content/events/2026/09/20260907-3.md) — 13 fuentes
 - [2026/09/20260907-4 - Fotos y registros migratorios exponen vínculos de Cerimedo con el entorno de Keiko Fujimori y líderes de la derecha regional](src/content/events/2026/09/20260907-4.md) — 8 fuentes
@@ -2579,6 +2580,10 @@
 
 - [1981/09/19810920-1 - El Ejército ejecuta a tres miristas en Remeco Alto, Neltume, en operativo presentado como enfrentamiento](src/content/events/1981/09/19810920-1.md) — 7 fuentes
 - [1981/12/19811211-1 - La CNI asesina a dos miristas en calle Rivadavia en un falso enfrentamiento con suicidio simulado](src/content/events/1981/12/19811211-1.md) — 6 fuentes
+
+## 1980
+
+- [1980/09/19800911-1 - Plebiscito del 11 de septiembre de 1980: el Sí aprueba la Constitución sin registro electoral](src/content/events/1980/09/19800911-1.md) — 8 fuentes
 
 ## 1977
 

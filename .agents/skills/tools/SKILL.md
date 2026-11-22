@@ -217,8 +217,21 @@ del evento muere con él. Herramientas para preservar y recuperar:
 desaparecer (breaking news, post de red social sujeto a borrado, nota de medio chico),
 snapshot a Wayback con Save Page Now: fetch a `<https://web.archive.org/save/<UR>L>`
 (~15 req/min anónimo; la URL canónica del snapshot queda en la URL final tras redirects).
-Anotar esa URL en el campo `notas` de la fuente — sin cambio de schema. La URL citada sigue
-siendo SIEMPRE la original.
+La referencia se guarda en el campo `respaldos[]` de la fuente (ver `data-yaml`): array de
+`{ servicio, url, fecha?, snapshot?, notas? }` que permite varias copias de la misma URL en
+distintos archivos (Wayback, archive.today, WACZ…). La URL citada sigue siendo SIEMPRE la original.
+
+**Script `pnpm run archive-sources`** (`scripts/archive/archive-sources.mjs`) automatiza esa
+convención en tandas incrementales: por defecto es DRY-RUN (solo lista, sin red); `--apply`
+chequea `archive.org/wayback/available?url=` y reutiliza snapshot existente (así recupera fuentes
+ya muertas), si no llama a Save Page Now, y agrega la entrada a `respaldos[]` con edición
+quirúrgica (respeta CRLF, idempotente por `servicio` + `url`). Para apuntar a una fuente
+registrada en particular: `--id <id>` (exacto, acepta `.md`, varios IDs separados por coma o
+flags `--id` repetibles, o el ID como argumento suelto); ignora fecha/límite y re-procesa aunque
+ya tenga respaldo. Flags: `--since`, `--all`, `--limit`, `--id`, `--medio`, `--include-backed-up`, `--delay` (default 4 s, ~15 req/min anónimo),
+`--self-test`, `--migrate-only` (mueve el marker legacy `Respaldo Wayback:` de `notas` a
+`respaldos[]`, sin red). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
+`--apply` tiene efectos de red y escritura: usarlo en tandas pequeñas.
 
 ### Archivado interactivo de redes sociales
 
@@ -421,9 +434,14 @@ en `src/content/sources/<id>.md`, junto con el ID `medio-YYYY-MM-DD-slug` y el w
 - El mapeo dominio → medio se precarga desde `src/content/sources/*.md` + un diccionario base en el script.
 - Consulta el catálogo de sitemaps antes del fetch (ver "Catálogo de sitemaps → Integración
   con add-source.mjs").
+- **Toda fuente nueva nace con snapshot**: `add-source` reutiliza `archiveOne()` de
+  `archive-sources.mjs` ( disponibilidad de Wayback → Save Page Now ) e incluye la entrada en
+  `respaldos[]` del bloque generado y del `.md` creado con `--append`. Si Wayback falla, avisa
+  pero la fuente se crea igual; se completa con `pnpm run archive-sources -- --apply --since <fecha>`.
+  `--no-archive` omite el snapshot (casos excepcionales). No reemplaza nunca la URL original.
 - Flags: `--append` (crea `src/content/sources/<id>.md` directo), `--mirror` (fuerza
   espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
-  el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra).
+  el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra), `--no-archive`.
 - `--append` es interactivo (confirma medio, autor, fecha, tipo, notas y creación): no acepta
   respuestas por pipe de forma fiable; para tandas, genera el bloque sin `--append` o crea el
   `.md` a mano con datos ya verificados por `fetch-content` (revisar `medio`/`fecha`/`autor` igual).
