@@ -2135,6 +2135,7 @@
 - [2025/08/20250813-2 - Incidentes con bombas molotov en el Liceo Lastarria: estudiante quemado, sangre en el establecimiento y municipalidad culpa a personas externas](src/content/events/2025/08/20250813-2.md) — 8 fuentes
 - [2025/08/20250817-1 - Kast minimiza al Congreso durante campaña ('no es tan relevante como ustedes se imaginan') y promete gobernar sin nuevas leyes: críticas de autoritarismo incluso dentro de Chile Vamos](src/content/events/2025/08/20250817-1.md) — 1 fuente
 - [2025/08/20250822-1 - Programa de Gobierno de Kast: 33 propuestas en 3 ejes de emergencia](src/content/events/2025/08/20250822-1.md) — 10 fuentes
+- [2025/08/20250825-1 - Encapuchados lanzan 31 molotovs desde el techo del Liceo Lastarria y Providencia anuncia acciones legales](src/content/events/2025/08/20250825-1.md) — 5 fuentes
 - [2025/09/20250904-1 - Renuncia Patricio Góngora al directorio de Canal 13 tras reportaje de Chilevisión que lo vinculó a la cuenta troll 'Patito Verde'](src/content/events/2025/09/20250904-1.md) — 10 fuentes
 - [2025/09/20250911-1 - Fact Check de La Tercera desmiente a ME-O: la tasa de homicidios no se duplicó en tres gobiernos](src/content/events/2025/09/20250911-1.md) — 1 fuente
 - [2025/09/20250915-1 - Santa Cruz dice que ya no tiene 'dolor de guata' y destaca cambio de ánimo en la campaña de Matthei](src/content/events/2025/09/20250915-1.md) — 5 fuentes
@@ -2145,6 +2146,7 @@
 - [2025/10/20251020-1 - Tribunal de Juicio Oral de Angol absuelve al alcalde de Collipulli Manuel Macaya del delito de desacato: 'No he cometido ningún delito'](src/content/events/2025/10/20251020-1.md) — 6 fuentes
 - [2025/10/20251022-1 - Boric lanza la Política Nacional de Seguridad Pública 2025-2031 a menos de cinco meses de dejar La Moneda](src/content/events/2025/10/20251022-1.md) — 4 fuentes
 - [2025/10/20251026-1 - Kast detalla en debate de Canal 13 el recorte de US$6.000 millones: 'no vamos a cortar ningún beneficio social que hoy exista'](src/content/events/2025/10/20251026-1.md) — 2 fuentes
+- [2025/10/20251030-1 - Providencia interpone querella contra tres estudiantes del Liceo Lastarria tras disturbios con bombas molotov y estudia su expulsión](src/content/events/2025/10/20251030-1.md) — 5 fuentes
 - [2025/11/20251105-1 - Operación Fortaleza 3: megaoperativo nacional de Carabineros y PDI deja 2.495 detenidos y 452 kilos de droga incautados bajo el gobierno de Boric](src/content/events/2025/11/20251105-1.md) — 5 fuentes
 - [2025/11/20251109-1 - Vocero de Kast dice que el comando 'no va a entrar' en el debate de DD.HH. e indultos, en plena polémica por Kaiser y Punta Peuco](src/content/events/2025/11/20251109-1.md) — 3 fuentes
 - [2025/11/20251110-1 - Fiscalía abre nueva causa por cohecho contra el alcalde de Río Bueno Luis Reyes tras separar las causas de delitos económicos](src/content/events/2025/11/20251110-1.md) — 3 fuentes
