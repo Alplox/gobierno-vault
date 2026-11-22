@@ -233,6 +233,19 @@ ya tenga respaldo. Flags: `--since`, `--all`, `--limit`, `--id`, `--medio`, `--i
 `respaldos[]`, sin red). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
 `--apply` tiene efectos de red y escritura: usarlo en tandas pequeñas.
 
+**`pnpm run archive-new -- --apply`** (= `archive-sources --new`) es el cierre obligatorio
+cuando las fuentes se escriben a mano en vez de con `add-source` (tanda con metadata ya
+verificada por `fetch-content`). `--new` selecciona por git las fuentes **sin commitear**;
+`--new-days N` incluye además las agregadas en los últimos N días (default 0: este repo
+commitea varias tandas por día y una ventana amplia convertiría una tanda pequeña en un
+trabajo de red enorme). En ambos casos **ignora `--since`**:
+una fuente creada hoy puede documentar un hecho de 2025, y un filtro por `fecha:` del hecho
+la dejaría fuera (caso real: 9 fuentes del 16-nov-2025 quedaron sin `respaldos[]` por este
+motivo). Sigue respetando `--medio`, `--limit` (default 200 con `--new`) y el salto de fuentes
+ya respaldadas. `validate` emite un aviso —no error— con el comando exacto si detecta fuentes
+nuevas sin respaldo. En PowerShell, la lista de `--id` va entre comillas: sin ellas pnpm
+convierte las comas en array y el script selecciona 0 fuentes.
+
 ### Archivado interactivo de redes sociales
 
 Para contenido dinámico, comentarios largos o posts que podrían desaparecer, una captura WACZ

@@ -2,6 +2,7 @@ import { readFileSync, readdirSync, statSync, existsSync } from 'node:fs';
 import { join, relative } from 'node:path';
 import YAML from 'yaml';
 import { buildPeopleIndex, findReplaceableMentions } from '../lib/proseNames.mjs';
+import { getNewSourceIds } from '../lib/newSources.mjs';
 
 const root = join(process.cwd(), 'src');
 const dataDir = join(root, 'data');
@@ -253,6 +254,21 @@ for (const id of referencedSources) {
     console.error(`✖ fuente citada sin registrar en src/content/sources/*.md: "[[sources/${id}]]"`);
     errors++;
   }
+}
+
+// Respaldo externo de fuentes nuevas (AGENTS.md regla 7). Aviso, no error: el
+// servicio puede fallar y la fuente se crea igual; lo importante es que el hueco
+// no pase desapercibido. `archive-new` calcula "nueva" con el mismo criterio git.
+const sinRespaldoNuevas = [...getNewSourceIds(0)].filter((id) => {
+  const fm = sourcesData[id];
+  if (!fm) return false;
+  const respaldos = Array.isArray(fm.respaldos) ? fm.respaldos : [];
+  return !respaldos.some((r) => r?.servicio === 'wayback') && !/Respaldo Wayback:/.test(String(fm.notas ?? ''));
+});
+if (sinRespaldoNuevas.length) {
+  const lista = sinRespaldoNuevas.slice(0, 8).join(', ');
+  console.warn(`⚠ ${sinRespaldoNuevas.length} fuente(s) nueva(s) sin respaldo externo: ${lista}${sinRespaldoNuevas.length > 8 ? '…' : ''}`);
+  console.warn('  Ejecuta: pnpm run archive-new -- --apply  (o pnpm run archive-sources -- --apply --id <id>)');
 }
 
 // Convención de medios: `medio:` debe ser `nombre`/`alias` de una org registrada

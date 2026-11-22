@@ -14,12 +14,18 @@
  *   pnpm run archive-sources -- --apply --all --limit 50      # tanda amplia
  *   pnpm run archive-sources -- --apply --id 24horas-2026-10-24-kast-burnham-malvinas
  *   pnpm run archive-sources -- --id a,b --id c               # varios IDs (o argumentos sueltos)
+ *   pnpm run archive-new -- --apply                            # solo fuentes sin commitear
+ *   pnpm run archive-sources -- --new --new-days 2             # plus las agregadas en los últimos 2 días
  *   pnpm run archive-sources -- --migrate-only --all          # mueve markers viejos de notas
  *   pnpm run archive-sources -- --self-test                   # tests sin red
  *
  * Flags:
  *   --apply             Ejecuta red + escritura. Sin esto es DRY-RUN (default).
  *   --migrate-only      Solo migra `Respaldo Wayback: ...` desde `notas` a `respaldos`, sin red.
+ *   --new               Solo fuentes nuevas según git: sin commitear. Con --new-days N
+ *                       también incluye las agregadas en los últimos N días.
+ *                       Ignora --since para no perder fuentes con fecha antigua escritas hoy.
+ *   --new-days N        Días de alta reciente para --new (default 0 = solo sin commitear).
  *   --since YYYY-MM-DD  Solo fuentes con fecha >= (default: últimos 30 días).
  *   --all               Todas las fechas.
  *   --limit N           Máximo de fuentes a procesar (default 20; se ignora con --id).
@@ -43,6 +49,7 @@ import { readFileSync, readdirSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import YAML from 'yaml';
+import { getNewSourceIds } from '../lib/newSources.mjs';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = join(__dirname, '../..');
@@ -65,7 +72,7 @@ const val = (f) => {
 };
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
-const VALUE_FLAGS = new Set(['--id', '--since', '--limit', '--medio', '--delay', '--check-delay', '--timeout']);
+const VALUE_FLAGS = new Set(['--id', '--since', '--limit', '--medio', '--delay', '--check-delay', '--timeout', '--new-days']);
 
 /** IDs pasados con `--id` (repetible o separados por coma) o como argumento suelto. */
 function explicitIds() {
@@ -314,6 +321,7 @@ function buildQueue() {
   const medio = (val('--medio') ?? '').toLowerCase();
   const ids = explicitIds();
   const explicit = ids.length > 0;
+  const newIds = has('--new') ? getNewSourceIds(newDays) : null;
   const queue = [];
   for (const f of files) {
     const path = join(SOURCES_DIR, f);
@@ -322,8 +330,10 @@ function buildQueue() {
     if (!fm?.url || typeof fm.url !== 'string' || !/^https?:\/\//.test(fm.url)) continue;
     const id = f.replace(/\.md$/, '');
     if (explicit && !ids.includes(id)) continue;
+    if (newIds && !newIds.has(id)) continue;
     const fecha = String(fm.fecha ?? '').slice(0, 10);
-    if (!explicit && !has('--all') && !has('--migrate-only') && fecha < since) continue;
+    // --new ignora --since: una fuente escrita hoy puede documentar un hecho de 2025.
+    if (!explicit && !newIds && !has('--all') && !has('--migrate-only') && fecha < since) continue;
     if (!explicit && medio && !`${fm.medio ?? ''} ${id}`.toLowerCase().includes(medio)) continue;
     const respaldos = (Array.isArray(fm.respaldos) ? fm.respaldos : []).map(normalizeRespaldo).filter(Boolean);
     const legacy = hasLegacyMarker(raw);
@@ -341,7 +351,8 @@ function buildQueue() {
 // ---------------------------------------------------------------------------
 
 const apply = has('--apply') || has('--migrate-only');
-const limit = parseInt(val('--limit') ?? '20', 10);
+const newDays = parseInt(val('--new-days') ?? '0', 10);
+const limit = parseInt(val('--limit') ?? (has('--new') ? '200' : '20'), 10);
 const since = val('--since') ?? new Date(Date.now() - 30 * 864e5).toISOString().slice(0, 10);
 const delaySave = parseInt(val('--delay') ?? '4000', 10);
 const delayCheck = parseInt(val('--check-delay') ?? '700', 10);
@@ -356,11 +367,13 @@ async function main() {
   const ids = explicitIds();
   console.log(ids.length
     ? `Filtro: id = ${ids.join(', ')} (explícito: ignora fecha/límite y re-procesa aunque ya tenga respaldo)\n`
-    : `Filtro: fecha >= ${since}${has('--all') || has('--migrate-only') ? ' (todas)' : ''}, medio = ${val('--medio') ?? '(todos)'}, limite = ${limit}\n`);
+    : has('--new')
+      ? `Filtro: fuentes nuevas según git (sin commitear${newDays > 0 ? ` o agregadas en los últimos ${newDays} días` : ''}), medio = ${val('--medio') ?? '(todos)'}, limite = ${limit}\n`
+      : `Filtro: fecha >= ${since}${has('--all') || has('--migrate-only') ? ' (todas)' : ''}, medio = ${val('--medio') ?? '(todos)'}, limite = ${limit}\n`);
 
   if (!apply) {
     for (const s of queue) console.log(`  ${s.id.padEnd(58)} ${s.url}${s.legacy ? '  [migrar notas]' : ''}${s.backedUp ? '  [ya tiene respaldo]' : ''}`);
-    console.log('\nPara ejecutar: pnpm run archive-sources -- --apply --id <id>  (o --id a,b --limit N / --since / --all / --migrate-only)');
+    console.log('\nPara ejecutar: pnpm run archive-new -- --apply  (solo nuevas)  |  pnpm run archive-sources -- --apply --id <id>  (o --id a,b --limit N / --since / --all / --new / --migrate-only)');
     return;
   }
 

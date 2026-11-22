@@ -1805,6 +1805,7 @@
 - [2026/09/20260923-5 - Contraloría exige a Presidencia acreditar en 10 días hábiles la calidad de experto de Romer Rubio, asesor del Segundo Piso sin título revalidado en Chile](src/content/events/2026/09/20260923-5.md) — 10 fuentes
 - [2026/09/20260923-6 - Cámara aprueba la Ley Antibarricadas 2.0 y la despacha al Senado con la indicación Leiva que exime protestas pacíficas: 89 a favor y revés parcial al Gobierno](src/content/events/2026/09/20260923-6.md) — 8 fuentes
 - [2026/09/20260923-7 - Data Influye de septiembre: aprobación de Kast cae 11 puntos a 25% y desaprobación llega a 62%, mínimo del mandato](src/content/events/2026/09/20260923-7.md) — 8 fuentes
+- [2026/09/20260923-8 - Trabajador muere en accidente en Minera Escondida y BHP suspende las operaciones del área mina](src/content/events/2026/09/20260923-8.md) — 11 fuentes
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 - [2026/09/20260924-10 - Caravana de conductores y gremios del transporte recorre Santiago en protesta por el costo del TAG y los peajes](src/content/events/2026/09/20260924-10.md) — 8 fuentes
 - [2026/09/20260924-11 - Cerimedo declara ante fiscales bolivianos y sostiene que puede demostrar el origen lícito del dinero incautado](src/content/events/2026/09/20260924-11.md) — 4 fuentes
@@ -2154,6 +2155,7 @@
 - [2025/11/20251116-2 - Boric felicita a Jara y Kast por pasar a segunda vuelta y los insta a 'un debate con altura de miras'](src/content/events/2025/11/20251116-2.md) — 2 fuentes
 - [2025/11/20251116-3 - Matthei reconoce la derrota en primera vuelta y anuncia que felicitará a Kast en su comando](src/content/events/2025/11/20251116-3.md) — 12 fuentes
 - [2025/11/20251116-4 - Kast condiciona su continuidad política al resultado: 'Si no salgo para la segunda vuelta, será la última elección presidencial en la que participe'](src/content/events/2025/11/20251116-4.md) — 10 fuentes
+- [2025/11/20251116-5 - Fiscalía descarta nueva indagatoria contra Simpértigue y Vivanco acusa show mediático al votar en la primera vuelta](src/content/events/2025/11/20251116-5.md) — 9 fuentes
 - [2025/11/20251119-1 - Camión boliviano derrama 25.000 litros de aceite de soya en el Lago Chungará](src/content/events/2025/11/20251119-1.md) — 4 fuentes
 - [2025/11/20251120-1 - Municipalidad de Vitacura destituye a funcionarios grabados en video sexual tras sumario por falta grave a la probidad](src/content/events/2025/11/20251120-1.md) — 8 fuentes
 - [2025/11/20251121-1 - Contraloría recepciona denuncia por contrataciones de Christian Pino para charlas de actualidad en cinco municipalidades y tres corporaciones culturales](src/content/events/2025/11/20251121-1.md) — 6 fuentes
