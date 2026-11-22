@@ -2165,6 +2165,7 @@
 - [2025/11/20251127-1 - Congreso despacha la Ley de Presupuestos 2026, la última de Boric: $86,2 billones con +1,7% y sin fondos para la Fundación Allende ni el PAIG](src/content/events/2025/11/20251127-1.md) — 5 fuentes
 - [2025/11/20251128-1 - Kast da ultimátum de 103 días a inmigrantes irregulares para salir de Chile y estalla crisis en la frontera con Perú](src/content/events/2025/11/20251128-1.md) — 9 fuentes
 - [2025/11/20251130-1 - La última Cadem publicable antes de la veda ratifica 58% para Kast y 42% para Jara; desde la medianoche rige la prohibición de difundir encuestas](src/content/events/2025/11/20251130-1.md) — 3 fuentes
+- [2025/11/20251130-2 - Reajuste del sector público 2025-2026: polémica por la norma de "amarres" y desenlace sin esa disposición en la Ley 21.806](src/content/events/2025/11/20251130-2.md) — 6 fuentes
 - [2025/12/20251203-1 - Atlas Network: la desinformacion como arma neoliberal](src/content/events/2025/12/20251203-1.md) — 4 fuentes
 - [2025/12/20251203-2 - Columna de El Líbero analiza la estrategia de Kast y su pinza con Kaiser de cara a la elección](src/content/events/2025/12/20251203-2.md) — 2 fuentes
 - [2025/12/20251203-3 - Jara y Kast protagonizan el debate ARCHI, el más cruzado de la campaña, con inédito protagonismo de sus barras](src/content/events/2025/12/20251203-3.md) — 1 fuente
