@@ -2325,11 +2325,14 @@
 
 - [2021/02/20210203-1 - Chile inicia la vacunación masiva contra el COVID-19: Ernestina Godoy, de 93 años, es la primera inoculada](src/content/events/2021/02/20210203-1.md) — 2 fuentes
 - [2021/02/20210212-1 - Consejo para la Transparencia ordena a Carabineros entregar registros de cámaras corporales de detenciones del estallido (rol C 8051-20)](src/content/events/2021/02/20210212-1.md) — 5 fuentes
+- [2021/02/20210217-1 - Reformalización de Sebastián Izquierdo: tribunal rechaza prisión preventiva y mantiene arresto domiciliario](src/content/events/2021/02/20210217-1.md) — 5 fuentes
 - [2021/03/20210323-1 - CIPER revela imágenes de agentes del Ejército que espiaban el despacho de la jueza Romy Rutherford: denuncia llega a la Fiscalía](src/content/events/2021/03/20210323-1.md) — 1 fuente
+- [2021/04/20210414-1 - Presidencia ordena compra de $35 millones en productos marinos para La Moneda y Cerro Castillo y niega que se compraran machas o erizos](src/content/events/2021/04/20210414-1.md) — 6 fuentes
 - [2021/05/20210515-1 - Elección de la Convención Constitucional: independientes y oposición dominan la asamblea que escribirá la nueva Constitución](src/content/events/2021/05/20210515-1.md) — 3 fuentes
 - [2021/05/20210517-1 - Caso San Ramón: Miguel Ángel Aguilera gana la reelección pese a que será formalizado por corrupción](src/content/events/2021/05/20210517-1.md) — 2 fuentes
 - [2021/07/20210724-1 - CDE se querella contra la ex intendenta de Coquimbo Lucía Pinto por fraude al Fisco en compra de terrenos por $9.800 millones](src/content/events/2021/07/20210724-1.md) — 1 fuente
 - [2021/07/20210726-1 - Formalizan a Miguel Ángel Aguilera y decretan prisión preventiva: el exalcalde de San Ramón queda preso por corrupción](src/content/events/2021/07/20210726-1.md) — 5 fuentes
+- [2021/08/20210803-1 - Hacienda modifica los parámetros del Mepco y baja las bencinas entre $19 y $26 por litro](src/content/events/2021/08/20210803-1.md) — 5 fuentes
 - [2021/08/20210806-1 - Fiscalía pide 15 años para Fuente-Alba y 10 años para su esposa por lavado de dinero del Milicogate](src/content/events/2021/08/20210806-1.md) — 5 fuentes
 - [2021/08/20210822-1 - Kast es proclamado candidato presidencial del Partido Republicano y promete rebajar su sueldo a la mitad](src/content/events/2021/08/20210822-1.md) — 3 fuentes
 - [2021/10/20211003-1 - Pandora Papers revelan que la familia Piñera vendió Minera Dominga a la familia Délano por US$152 millones](src/content/events/2021/10/20211003-1.md) — 4 fuentes
@@ -2344,6 +2347,7 @@
 - [2021/11/20211130-1 - El misterioso almuerzo de José Antonio Kast en Washington D.C. con ejecutivos de UnitedHealth y PepsiCo](src/content/events/2021/11/20211130-1.md) — 5 fuentes
 - [2021/12/20211204-1 - Sindicatos de Codelco Norte declaran a Kast 'persona no grata' en Calama; Kast insiste en que no privatizará Codelco](src/content/events/2021/12/20211204-1.md) — 4 fuentes
 - [2021/12/20211204-2 - La campaña partió en el norte: estrategias de Boric y Kast para ganar los votos de Parisi](src/content/events/2021/12/20211204-2.md) — 1 fuente
+- [2021/12/20211217-1 - Servel presenta querella contra Sebastián Izquierdo por llamar a objetar votos de Boric](src/content/events/2021/12/20211217-1.md) — 5 fuentes
 - [2021/12/20211219-1 - Gabriel Boric gana la segunda vuelta presidencial con 55,87% y se convierte en el presidente más votado de la historia de Chile](src/content/events/2021/12/20211219-1.md) — 2 fuentes
 
 ## 2020
@@ -2365,6 +2369,7 @@
 - [2020/05/20200527-1 - CIPER revela que el Registro Civil inscribió 63 muertes por Covid-19 más que las informadas por el Minsal y otras 316 como sospechosas](src/content/events/2020/05/20200527-1.md) — 1 fuente
 - [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — 2 fuentes
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — 1 fuente
+- [2020/06/20200613-1 - Renuncia de Jaime Mañalich y nombramiento de Enrique Paris como ministro de Salud](src/content/events/2020/06/20200613-1.md) — 5 fuentes
 - [2020/07/20200706-1 - Se conoce video de la GoPro de Carabineros con el diálogo "¿se la pitió, verdad?" que impide cerrar el sumario del caso Campillai](src/content/events/2020/07/20200706-1.md) — 9 fuentes
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — 1 fuente
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — 1 fuente
