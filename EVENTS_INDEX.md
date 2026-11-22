@@ -1102,7 +1102,7 @@
 - [2026/08/20260805-32 - Venta de autos usados roza las 650 mil unidades a julio: segundo mejor registro histórico del mercado](src/content/events/2026/08/20260805-32.md) — 2 fuentes
 - [2026/08/20260805-33 - Cenco Malls aumenta 27,9% su utilidad en el segundo trimestre impulsado por la expansión de superficie de ventas](src/content/events/2026/08/20260805-33.md) — 3 fuentes
 - [2026/08/20260805-34 - Corte de Apelaciones de Valparaíso ordena al IPS pronunciarse sobre 68 pensionados reparatorios (leyes Valech y Rettig) bloqueados para postular a la PGU](src/content/events/2026/08/20260805-34.md) — 3 fuentes
-- [2026/08/20260805-4 - Debate en r/chile tras la celebración de Quiroz: críticas a la megareforma, memes de colusión y teorías sobre el incendio de Quilicura](src/content/events/2026/08/20260805-4.md) — 7 fuentes
+- [2026/08/20260805-4 - Debate en r/chile tras la celebración de Quiroz: críticas a la megareforma, memes de colusión y teorías sobre el incendio de Quilicura](src/content/events/2026/08/20260805-4.md) — 9 fuentes
 - [2026/08/20260805-5 - Gobierno ingresa con urgencia proyecto que eleva a 6.000 UF el subsidio a la tasa hipotecaria y amplía de 50.000 a 80.000 los cupos](src/content/events/2026/08/20260805-5.md) — 6 fuentes
 - [2026/08/20260805-6 - Gobierno ingresa formalmente el veto supresivo a la megarreforma contra el olvido financiero, el anatocismo y el pago a 30 días a las pymes](src/content/events/2026/08/20260805-6.md) — 2 fuentes
 - [2026/08/20260805-7 - 48 gremios pyme respaldan el veto presidencial al cambio en el pago a 30 días y piden discutirlo en el futuro Estatuto Pyme 2.0](src/content/events/2026/08/20260805-7.md) — 3 fuentes
@@ -2048,7 +2048,7 @@
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
 - [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 11 fuentes
-- [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 77 fuentes
+- [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 79 fuentes
 - [2026/11/20261111-8 - Reportajes Teletrece reconstruye el chat de ministros por el 18-O: Arrau pide prudencia, Barros se opone a callar y Rincón advierte de 'autogoles'](src/content/events/2026/11/20261111-8.md) — 7 fuentes
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
 - [2026/11/20261112-2 - Cuarto día del paro: Fedequinta, Asoducam, pescadores y microbuseros se suman y el comercio advierte riesgo de abastecimiento](src/content/events/2026/11/20261112-2.md) — 8 fuentes
@@ -2389,11 +2389,16 @@
 
 ## 2019
 
+- [2019/01/20190123-1 - Francia rechaza extraditar a Chile a Ricardo Palma Salamanca, autor del homicidio del senador Jaime Guzmán](src/content/events/2019/01/20190123-1.md) — 6 fuentes
+- [2019/01/20190130-1 - Histórico: condenan a seis personas por el homicidio de Eduardo Frei Montalva, primera condena por magnicidio en Chile](src/content/events/2019/01/20190130-1.md) — 6 fuentes
+- [2019/02/20190207-1 - Procesan y detienen a Juan Emilio Cheyre por torturas a 24 personas en el Regimiento Arica de La Serena en 1973](src/content/events/2019/02/20190207-1.md) — 6 fuentes
 - [2019/02/20190214-1 - Ordenan la detención del excomandante en jefe del Ejército Juan Miguel Fuente-Alba por fraude al fisco](src/content/events/2019/02/20190214-1.md) — 8 fuentes
 - [2019/03/20190304-1 - La ministra Rutherford procesa al exjefe de finanzas del Ejército Jozo Santic Palomino por fraude al fisco](src/content/events/2019/03/20190304-1.md) — 2 fuentes
 - [2019/03/20190308-1 - Paro feminista del 8M 2019: una de las marchas más masivas del país y la polémica por la no participación de la ministra Plá](src/content/events/2019/03/20190308-1.md) — 2 fuentes
 - [2019/03/20190328-1 - Ministros de Piñera divididos ante la petición de separar el proyecto de reforma previsional](src/content/events/2019/03/20190328-1.md) — 2 fuentes
+- [2019/03/20190329-1 - La Contraloría toma razón del plan de descontaminación de Concón, Quintero y Puchuncaví y entra en vigencia](src/content/events/2019/03/20190329-1.md) — 6 fuentes
 - [2019/04/20190402-1 - La exministra Javiera Blanco es sobreseída en el caso Gendarmería por fraude al fisco y nombramiento ilegal](src/content/events/2019/04/20190402-1.md) — 2 fuentes
+- [2019/04/20190402-2 - El Octavo Juzgado de Garantía sobresee a Pablo Longueira por delitos tributarios en el caso SQM; la Fiscalía apelará](src/content/events/2019/04/20190402-2.md) — 6 fuentes
 - [2019/04/20190409-1 - La DC anuncia su apoyo a la idea de legislar en la reforma tributaria de Piñera y abre una grieta en la oposición](src/content/events/2019/04/20190409-1.md) — 2 fuentes
 - [2019/04/20190424-1 - TDLC sanciona a navieras por cartel del transporte marítimo de vehículos hacia Chile](src/content/events/2019/04/20190424-1.md) — 5 fuentes
 - [2019/05/20190520-1 - Johnny Olate, el estudiante de la UC que inventó la denuncia de abuso sexual contra el gremialista José Ignacio Palma, era seguidor del movimiento de José Antonio Kast](src/content/events/2019/05/20190520-1.md) — 5 fuentes
@@ -2422,6 +2427,7 @@
 - [2019/11/20191114-1 - 14 de noviembre: aniversario de Catrillanca, avance en acuerdo constitucional y nueva jornada de protestas](src/content/events/2019/11/20191114-1.md) — 28 fuentes
 - [2019/11/20191115-1 - Acuerdo por la Paz Social y la Nueva Constitución: oficialismo y oposición pactan el itinerario para una nueva Carta Magna](src/content/events/2019/11/20191115-1.md) — 5 fuentes
 - [2019/11/20191115-2 - CIDH anuncia visita técnica a Chile entre el 18 y 21 de noviembre para evaluar la situación de derechos humanos](src/content/events/2019/11/20191115-2.md) — 5 fuentes
+- [2019/11/20191115-3 - Mayor caída del dólar desde 2008 tras el Acuerdo por la Paz Social y la Nueva Constitución](src/content/events/2019/11/20191115-3.md) — 6 fuentes
 - [2019/11/20191116-1 - INDH anuncia denuncia por homicidio contra carabineros que habrían impedido atender a un manifestante con un ataque al corazón](src/content/events/2019/11/20191116-1.md) — 5 fuentes
 - [2019/11/20191117-1 - Incendio destruye la sede del Partido Socialista en Valdivia: Bomberos sostiene la hipótesis de intencionalidad](src/content/events/2019/11/20191117-1.md) — 7 fuentes
 - [2019/11/20191118-1 - Bioquímicos y científicos desmienten a Carabineros: el Mentholatum no alivia e incluso puede potenciar el efecto de los gases lacrimógenos](src/content/events/2019/11/20191118-1.md) — 4 fuentes
@@ -2475,7 +2481,7 @@
 
 - [2014/08/20140812-1 - Caso MOP-Gate: la Corte de Apelaciones confirma condenas por sobresueldos con contratos del Ministerio de Obras Públicas](src/content/events/2014/08/20140812-1.md) — 3 fuentes
 - [2014/09/20140902-1 - Caso Cascadas: la SVS aplica la mayor multa de su historia a Ponce Lerou y ejecutivos por el esquema bursátil de SQM](src/content/events/2014/09/20140902-1.md) — 9 fuentes
-- [2014/09/20140925-1 - TDLC condena a Agrosuper, Ariztía y Don Pollo por la colusión de los pollos y ordena disolver la APA](src/content/events/2014/09/20140925-1.md) — 5 fuentes
+- [2014/09/20140925-1 - TDLC condena a Agrosuper, Ariztía y Don Pollo por la colusión de los pollos y ordena disolver la APA](src/content/events/2014/09/20140925-1.md) — 6 fuentes
 - [2014/10/20141023-1 - Caso EFE: Corte ratifica condena contra Luis Ajenjo por fraude al fisco en la Empresa de Ferrocarriles del Estado](src/content/events/2014/10/20141023-1.md) — 8 fuentes
 - [2014/12/20141203-1 - Corte de Apelaciones de Santiago revoca absoluciones y condena a ocho ex ejecutivos de Inverlink a restituir $26.462 millones a Corfo](src/content/events/2014/12/20141203-1.md) — 5 fuentes
 - [2014/12/20141207-1 - Subsecretaría de Prevención del Delito revela que 1 de cada 4 reos indultados en 2012 (gobierno de Piñera) volvió a delinquir](src/content/events/2014/12/20141207-1.md) — 3 fuentes

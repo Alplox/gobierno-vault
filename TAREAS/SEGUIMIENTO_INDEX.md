@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 363
+**Total tareas:** 362
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 286 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 3 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 285 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 331 · V: 15 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 331 · V: 14 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -361,7 +361,6 @@
 | S-TRANS-018 | ⬜ | 2026-08-27 | ACOT — detalles de la Escuela de Carabineros (segu | Ingreso efectivo de los proyectos: cuáles de los 9-15 proyectos nuevos ingresan al Congreso en las próximas semanas y... | — | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Caso Johnny Lagos (amenazas a Kast y Quiroz) — desenlace judicial (evento 20260820-9): el imputado quedó en libertad ... | `20260820-9` | Origen: <https://www.cnnchile.com/pais/era-una-satira-de-humor-politico-imputado-por-amenazas-a-presidente-kast-y-ministro-quiroz-explica-sus-dichos-tras-quedar-con-medidas-cautelares/> |
 | V-2026-002 | 🟡 | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Alineamiento Chile-EE.UU.-China: los resultados de la gira del canciller Pérez Mackenna por China quedaron en el evento 20260822-4; siguen abiertos el desenlace de la negociación arancelaria con Washington y la visita de Kast a la APEC de noviembre | `20260817-5` `20260822-4` | Origen: <https://infogate.cl/2026/08/canciller-viaja-a-china-en-medio-de-negociaciones-por-aranceles-impuestos-por-eeuu/> |
-| V-2026-003 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Sanción a la APA en el caso pollos — conciliar cifras: el evento 20260805-4  menciona '20.000 UTA y disolución para l... | `20260805-4` `20140925-1` | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-004 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Agustín Iglesias y las contribuciones — seguimiento: (1) verificar la afirmación de Iglesias sobre el origen de la fo... | `20260806-3` | Origen: <https://example.com/pendiente-revisar> |
 | V-2026-005 | ⬜ | 2026-08-25 | Sugerencias pendientes (para no perderlas) | Megarreforma — TC: requerimiento del Gobierno por reconexión gratuita (artículo 31, medida R3): el TC rechazó por 9-1... | `20260825-1` `20260818-19` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/08/18/tc-admite-requerimiento-del-gobierno-por-norma-que-obliga-a-reconectar-gratis-servicios-en-emergencias.shtml> |
 | V-2026-006 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Operación Imperio Ámsterdam — seguimiento judicial (evento 20260819-1): la formalización se inició el 19-ago (BioBioC... | `20260819-1` | Origen: <https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2026/08/19/asi-operaba-red-que-trabajaba-marihuana-bajo-fachada-medicinal-y-que-aspiraba-a-ganar-us20-millones.shtml> |
