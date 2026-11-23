@@ -2365,8 +2365,10 @@
 - [2020/03/20200318-1 - Piñera decreta Estado de Excepción Constitucional de Catástrofe por 90 días ante el avance del COVID-19](src/content/events/2020/03/20200318-1.md) — 3 fuentes
 - [2020/03/20200319-1 - Partidos acuerdan postergar el plebiscito constitucional del 26 de abril al 25 de octubre por la pandemia](src/content/events/2020/03/20200319-1.md) — 2 fuentes
 - [2020/03/20200322-1 - Gobierno anuncia toque de queda nacional por COVID-19 desde las 22:00 horas](src/content/events/2020/03/20200322-1.md) — 1 fuente
+- [2020/04/20200406-1 - Se publica la Ley 21.227 de Protección del Empleo: suspensión temporal de contratos y acceso al seguro de cesantía por COVID-19](src/content/events/2020/04/20200406-1.md) — 7 fuentes
 - [2020/04/20200420-1 - Piñera anuncia el envío al Congreso del proyecto de Ingreso Familiar de Emergencia (IFE) para el 60% más vulnerable](src/content/events/2020/04/20200420-1.md) — 2 fuentes
 - [2020/05/20200503-1 - Cuarentena total de Santiago: Cerrillos, Recoleta, Quilicura y Santiago Centro entran en confinamiento](src/content/events/2020/05/20200503-1.md) — 2 fuentes
+- [2020/05/20200515-1 - Rige la cuarentena total en la provincia de Santiago y seis comunas de la RM ante el peak de la primera ola de COVID-19](src/content/events/2020/05/20200515-1.md) — 6 fuentes
 - [2020/05/20200523-1 - Nuevas protestas en plena pandemia: tropas disparan balines en Santiago mientras el desempleo y la falta de ayuda golpean a los barrios populares](src/content/events/2020/05/20200523-1.md) — 2 fuentes
 - [2020/05/20200527-1 - CIPER revela que el Registro Civil inscribió 63 muertes por Covid-19 más que las informadas por el Minsal y otras 316 como sospechosas](src/content/events/2020/05/20200527-1.md) — 1 fuente
 - [2020/06/20200601-1 - Carabinero dispara y deja gravemente herido a un conductor de Uber en Puerto Montt; el INDH sigue la causa](src/content/events/2020/06/20200601-1.md) — 2 fuentes
