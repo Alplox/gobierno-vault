@@ -461,7 +461,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {orgNombres.map((o) => (
-                <a href={`/organizations/${o.id}`} transition:name={`org-title-${o.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
+                <a href={`/organization?id=${o.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
                   <Building2 class="h-3 w-3 text-base-content/40" />
                   {o.nombre}
                 </a>

@@ -230,7 +230,7 @@ for (const e of relatedEvents) {
                 <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1.5 leading-relaxed">
                   {topOrgs.map(([id, count]) => (
                     <a
-                      href={`/organizations/${id}`}
+                      href={`/organization?id=${id}`}
                       title={`${count} evento(s)`}
                       class="text-base-content hover:text-primary hover:underline underline-offset-2 transition-colors"
                       style={`font-size:${cloudSize(count, maxOrgCount)}px`}

@@ -2,3 +2,5 @@
 /sources/ /events 301
 /sources/:id/ /source?id=:id 301
 /sources/:id /source?id=:id 301
+/organizations/:id/ /organization?id=:id 301
+/organizations/:id /organization?id=:id 301

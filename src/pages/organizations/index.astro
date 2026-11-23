@@ -5,16 +5,29 @@ import { Building2, Layers } from 'lucide-astro';
 
 const allOrgs = await getAllOrganizations();
 
+function norm(s: string) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
 const SSR_LIMIT = 40;
 const ssrOrgs = allOrgs.slice(0, SSR_LIMIT);
 const lazyOrgs = allOrgs.slice(SSR_LIMIT);
-const ssrIds = new Set(ssrOrgs.map((o) => o.id));
 
-const lazyData = lazyOrgs.map((o) => ({
-  id: o.id,
-  nombre: o.data.nombre,
-  tipo: o.data.tipo ?? null,
-}));
+const lazyData = lazyOrgs.map((o) => {
+  const nombre = o.data.nombre;
+  const tipo = o.data.tipo ?? '';
+  const pais = o.data.pais ?? '';
+  return {
+    id: o.id,
+    nombre,
+    tipo,
+    pais,
+    search: norm(`${nombre} ${tipo} ${pais}`),
+  };
+});
+
+const tipos = [...new Set(allOrgs.map((o) => o.data.tipo).filter((t): t is string => !!t))].sort((a, b) => a.localeCompare(b, 'es'));
+const paises = [...new Set(allOrgs.map((o) => o.data.pais).filter((p): p is string => !!p))].sort((a, b) => a.localeCompare(b, 'es'));
 ---
 
 <Base title="Organizaciones">
@@ -26,40 +39,70 @@ const lazyData = lazyOrgs.map((o) => ({
     <p class="text-base-content/60 text-sm">Ministerios, instituciones públicas, entidades y organismos referenciados.</p>
   </div>
 
-  <div id="orgs-index-root" class="grid gap-4 sm:grid-cols-2">
-    {ssrOrgs.map((org) => (
-      <a href={`/organizations/${org.id}`} class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out">
-        <div class="flex items-start justify-between gap-3">
-          <div class="min-w-0 flex-1">
-            <h3 transition:name={`org-title-${org.id}`} class="font-bold text-base-content text-base group-hover:text-primary transition-colors leading-snug">{org.data.nombre}</h3>
-            {org.data.tipo && (
-              <p class="flex items-center gap-1.5 text-xs text-base-content/70 font-medium mt-1">
-                <Layers class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
-                <span>{org.data.tipo}</span>
-              </p>
-            )}
-          </div>
-          <span class="text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1">›</span>
-        </div>
-      </a>
-    ))}
+  <div class="mb-6 bg-base-100 p-4 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <div class="flex flex-wrap items-end gap-3">
+      <label class="flex-1 min-w-[12rem]">
+        <span class="block text-[11px] font-semibold text-base-content/60 mb-1">Buscar</span>
+        <input id="org-q" type="search" autocomplete="off" placeholder="Nombre, tipo o país…" class="input input-bordered w-full input-sm" />
+      </label>
+      <label class="min-w-[10rem]">
+        <span class="block text-[11px] font-semibold text-base-content/60 mb-1">Tipo</span>
+        <select id="org-tipo" class="select select-bordered select-sm w-full">
+          <option value="">Todos</option>
+          {tipos.map((t) => <option value={t}>{t}</option>)}
+        </select>
+      </label>
+      <label class="min-w-[10rem]">
+        <span class="block text-[11px] font-semibold text-base-content/60 mb-1">País</span>
+        <select id="org-pais" class="select select-bordered select-sm w-full">
+          <option value="">Todos</option>
+          {paises.map((p) => <option value={p}>{p}</option>)}
+        </select>
+      </label>
+    </div>
+    <p id="org-count" class="text-xs text-base-content/50 mt-3">{allOrgs.length} organizaciones</p>
   </div>
 
-  {lazyOrgs.length > 0 && (
-    <div class="mt-6 flex justify-center">
-      <button
-        id="load-more-orgs"
-        class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-base-300 bg-base-100 px-5 py-2.5 text-sm font-semibold text-base-content/80 shadow-sm hover:bg-base-200"
-      >
-        <span class="org-more-label">Cargar más organizaciones ({lazyOrgs.length} restantes)</span>
-      </button>
-    </div>
-  )}
+  <div id="orgs-index-root" class="grid gap-4 sm:grid-cols-2">
+    {ssrOrgs.map((org) => {
+      const nombre = org.data.nombre;
+      const tipo = org.data.tipo ?? '';
+      const pais = org.data.pais ?? '';
+      return (
+        <a
+          data-org-card
+          data-id={org.id}
+          data-tipo={tipo}
+          data-pais={pais}
+          data-search={norm(`${nombre} ${tipo} ${pais}`)}
+          href={`/organization?id=${org.id}`}
+          class="org-card group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out"
+        >
+          <div class="flex items-start justify-between gap-3">
+            <div class="min-w-0 flex-1">
+              <h3 class="font-bold text-base-content text-base group-hover:text-primary transition-colors leading-snug">{nombre}</h3>
+              {tipo && (
+                <p class="flex items-center gap-1.5 text-xs text-base-content/70 font-medium mt-1">
+                  <Layers class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
+                  <span>{tipo}</span>
+                </p>
+              )}
+            </div>
+            <span class="text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1">›</span>
+          </div>
+        </a>
+      );
+    })}
+  </div>
+
+  <div id="orgs-sentinel" class="h-10" aria-hidden="true"></div>
 
   <script type="application/json" id="orgs-index-data" set:html={JSON.stringify(lazyData)} />
+  <script type="application/json" id="orgs-total" is:inline set:html={allOrgs.length} />
 
   <script>
     import { initOrgList } from '../../scripts/orgListClient.js';
     initOrgList();
+    document.addEventListener('astro:page-load', () => initOrgList());
   </script>
 </Base>

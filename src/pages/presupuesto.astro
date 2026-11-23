@@ -277,7 +277,7 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
                       </div>
                       <p class="text-sm text-base-content/80 mt-1">
                         {v.ministerio_id ? (
-                          <><a href={`/organizations/${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
+                          <><a href={`/organization?id=${v.ministerio_id}`} class="font-semibold hover:text-primary transition-colors">{v.ministerioNombre}</a>{' · '}</>
                         ) : null}{v.alcance}
                         <SourceRef id="" index={e.refs.indexOf(v.fuente) + 1} href={`#${anchor(e.ano, v.fuente, e.refs)}`} title={`${fuentes[v.fuente].medio} - ${fuentes[v.fuente].titulo}`} tip={`${fuentes[v.fuente].medio}\n${fuentes[v.fuente].titulo}`} />
                         {(v.fuentesSecundarias ?? []).map((f) => (

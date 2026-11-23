@@ -133,6 +133,16 @@ Para no exceder el límite de 20.000 archivos de Pages Free, no existen las ~12.
 - Algunas fuentes tienen `fecha` inválida: `new Date(...).toISOString()` revienta el build con `Invalid time value`; guardar con `Number.isNaN(d.getTime())`.
 - La ficha no lleva `ShareButtons` (la URL canónica SSG no incluye el query).
 
+## Ficha de organización — `/organization?id=` + índice `/organizations`
+
+Mismo patrón que fuentes, pero el índice **sí se conserva** y se mejoró:
+
+- `src/pages/organization.astro` renderiza en cliente desde `src/pages/data/organizations.json.ts` (~1 MB, bajo demanda; HTML ~52 KB). El payload incluye `bio` (HTML), `titulares` de `getCabinetByMinistry()` con `periodoDe()`, y IDs de eventos de `eventHasOrg`. Sin `ShareButtons` (query en URL canónica).
+- No quedan las 1.748 fichas `/organizations/[id]`. Enlaces internos actualizados en `organizations/index.astro`, `orgListClient.js`, `BudgetMovementCard.astro`, `topics/[id]`, `gabinete`, `presupuesto`, `people/[id]` y `events/[year]/[id]`; `public/_redirects` redirige las URLs viejas (301).
+- **Los filtros no dependen de las fichas**: `/organizations` filtra sobre `data-search`/`data-tipo`/`data-pais` de las tarjetas SSR y lazy. `q` (normalizado NFD), `tipo` y `pais` se combinan en AND; si hay filtro activo se fuerza el volcado completo (`forceFillAll`) y se actualiza la URL con `replaceState`. El contador muestra `visibles de total`.
+- Scroll infinito: sentinel `#orgs-sentinel` hermano **después** del grid, `IntersectionObserver` con `rootMargin: 800px`, batches de 40. Sin IO vuelca todo. SSR emite las primeras 40 tarjetas.
+- Guard de init: `script.__gvLoaded` se revisa **antes** de `cleanupFns` (page-load dispara también en la carga inicial); la página llama `initOrgList()` directo y en `astro:page-load`, y el cleanup destructa el observer y los listeners.
+
 ## Referencias inline compactas
 
 `SRef` conserva siempre el tooltip. En las fichas densas de `/sueldos`, envolver la referencia en `.sueldos-inline-ref` para neutralizar el `vertical-align: super` del `<sup>` y evitar que el número se monte sobre la línea anterior; el enlace y el scroll a `#ref-N` no cambian.

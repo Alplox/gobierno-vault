@@ -62,7 +62,7 @@ const anioFecha = fecha ? String(fecha[0]) : '—';
             {mov.monto !== null ? '$' + mov.monto.toLocaleString('es-CL') : 'Monto no publicado'}
           </p>
           {mov.organizacion_id && (
-            <a href={`/organizations/${mov.organizacion_id}`} class="text-xs font-semibold text-base-content/70 hover:text-primary transition-colors">
+            <a href={`/organization?id=${mov.organizacion_id}`} class="text-xs font-semibold text-base-content/70 hover:text-primary transition-colors">
               {mov.organizacionNombre}
             </a>
           )}
