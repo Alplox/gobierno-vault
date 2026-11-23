@@ -61,13 +61,13 @@ const enRevision = ejercicios
             <p class="text-xs font-semibold text-base-content/70 mb-1 tabular-nums">{b.ano}</p>
             <div class="space-y-1">
               <div class="flex items-center gap-2">
-                <span class="w-20 shrink-0 text-[11px] text-error text-right tabular-nums">{formatCLP(b.retiros)}</span>
+                <span class="w-20 shrink-0 text-[11px] text-base-content/70 text-right tabular-nums">{formatCLP(b.retiros)}</span>
                 <div class="flex-1 h-2.5 rounded-full bg-base-200 overflow-hidden">
                   <div class="h-full rounded-full bg-error/80" style={`width:${((b.retiros / maxBarra) * 100).toFixed(1)}%`} />
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <span class="w-20 shrink-0 text-[11px] text-success text-right tabular-nums">{formatCLP(b.inyecciones)}</span>
+                <span class="w-20 shrink-0 text-[11px] text-base-content/70 text-right tabular-nums">{formatCLP(b.inyecciones)}</span>
                 <div class="flex-1 h-2.5 rounded-full bg-base-200 overflow-hidden">
                   <div class="h-full rounded-full bg-success/80" style={`width:${((b.inyecciones / maxBarra) * 100).toFixed(1)}%`} />
                 </div>
@@ -94,7 +94,7 @@ const enRevision = ejercicios
         <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-primary/80 shrink-0" />{enFlujo} en el flujo (con monto publicado)</li>
         <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warning/80 shrink-0" />{sinMonto} sin monto publicado</li>
         <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-base-300 shrink-0" />{enRevision} recomendaciones en revisión</li>
-        <li class="flex items-center gap-1.5"><span class="badge badge-xs badge-success shrink-0">oficial</span>{conRespaldoOficial} de {totalMovs} con respaldo oficial además de prensa</li>
+        <li class="flex items-center gap-1.5"><span class="badge badge-xs badge-outline gap-1 shrink-0"><span class="h-1 w-1 rounded-full bg-success" aria-hidden="true"></span>oficial</span>{conRespaldoOficial} de {totalMovs} con respaldo oficial además de prensa</li>
       </ul>
     </div>
   </div>
@@ -109,7 +109,7 @@ const enRevision = ejercicios
               <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-primary transition-colors truncate">
                 <span class="badge badge-xs badge-outline mr-1.5 tabular-nums">{ano}</span>{m.descripcion}
               </a>
-              <span class="font-bold text-error tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
+              <span class="font-bold text-base-content tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
             </div>
             <div class="h-1.5 rounded-full bg-base-200 overflow-hidden mt-1">
               <div class="h-full rounded-full bg-error/70" style={`width:${((m.monto! / maxTop) * 100).toFixed(1)}%`} />
@@ -127,7 +127,7 @@ const enRevision = ejercicios
               <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-primary transition-colors truncate">
                 <span class="badge badge-xs badge-outline mr-1.5 tabular-nums">{ano}</span>{m.descripcion}
               </a>
-              <span class="font-bold text-success tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
+              <span class="font-bold text-base-content tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
             </div>
             <div class="h-1.5 rounded-full bg-base-200 overflow-hidden mt-1">
               <div class="h-full rounded-full bg-success/70" style={`width:${((m.monto! / maxTop) * 100).toFixed(1)}%`} />

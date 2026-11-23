@@ -1,0 +1,131 @@
+# Ejercicio 2021 — Ley de Presupuestos 2021 (Ley 21.289), cerrado.
+# Fuente primaria: IFP del cuarto trimestre de 2021 de Dipres (ejecución récord por el FET y el Covid).
+ano: 2021
+gobierno: Piñera
+estado: cerrado
+estado_label: Cerrado (IFP cuarto trimestre 2021)
+ley:
+  nombre: Ley de Presupuestos 2021
+  fuente: bcn-2020-12-16-ley-21289-presupuesto-2021
+  nota: "Ley N° 21.289, publicada el 16-dic-2020. Gasto aprobado $56.054.895 millones (Cuadro II.4.1 del IFP 4T 2020); el gasto real con FET y medidas extraordinarias llegó a $75.904.235 millones."
+totales:
+  inicial: { monto: 56054895000000, fuente: dipres-2021-03-04-ifp-cuarto-trimestre-2020, nota: "Ley de Presupuestos Aprobada 2021: $56.054.895 millones, $20.694 millones menor al informe de septiembre de 2020. El Gráfico II.4.1 del IFP 4T 2021 desglosa la ley aprobada 2021 en $55.414.009 millones regulares más $4.308.195 millones del FET, pero en pesos de 2022, por lo que no es comparable." }
+  vigente: { monto: null, fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021, nota: "Monto de la Ley Vigente 2021 con FET y decretos no publicado; solo se informa la ejecución de 135,4% sobre la ley aprobada con FET (146,0% sobre la ley regular)." }
+  ejecutado: { monto: 75904235000000, fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021, nota: "Gasto del Gobierno Central Total 2021: $75.904.235 millones (31,3% del PIB, +33,2% real), el mayor valor como porcentaje del PIB y tasa de crecimiento desde que existen registros comparables. Gasto presupuestario: $75.879.511 millones." }
+  saldo: { monto: null, fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021, nota: "Déficit efectivo de $18.497.666 millones (7,6% del PIB), el mayor de los últimos 30 años. No se carga como monto por assertMonto." }
+hitos:
+  - etiqueta: Déficit efectivo 2021
+    valor: $18.497.666 millones (7,6% del PIB), mayor en 30 años
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: Déficit estructural 2021
+    valor: "11,4% del PIB (-$27.647.361 millones), 0,1 pp menor al IFP 3T21: cláusula de escape de facto"
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: Ingresos del Gobierno Central
+    valor: $57.406.569 millones (+37,8% real, 23,7% del PIB)
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: Tasa de ejecución del gasto presupuestario
+    valor: 135,4% sobre ley aprobada con FET (146,0% ley regular), la mayor al menos desde 2000
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: Medidas del Acuerdo Covid con efecto en gasto
+    valor: $4.043.337 millones (7,2% del presupuesto aprobado)
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: Deuda bruta y posición financiera neta
+    valor: Deuda $87.262.776 millones (36,0% del PIB); PFN -30,8% del PIB
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: Activos consolidados del Tesoro Público
+    valor: US$14.899,9 millones (5,2% del PIB), desde 10,0% en 2018
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - etiqueta: IFE Universal
+    valor: Más de 16 millones de beneficiarios tras su extensión
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+movimientos:
+  - tipo: aumento
+    descripcion: Medidas del Acuerdo Covid con efecto en el gasto 2021
+    fecha: '2021-01-01'
+    monto: 4043337000000
+    monto_nota: "$4.043.337 millones, 7,2% del presupuesto aprobado total"
+    objetivo_declarado: "Mantener el control de la pandemia y apoyar la recuperación económica y el empleo"
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    fuentes_secundarias:
+      - bcn-2020-12-14-ley-21288-fet
+    nivel_impacto: directo
+    nota: "Explica la ejecución récord de 135,4% y el gasto total de $75.904.235 millones."
+  - tipo: aumento
+    descripcion: IFE Universal extendido
+    fecha: '2021-01-01'
+    monto: null
+    monto_nota: "Monto total no desagregado en el IFP; el IFE explica en gran medida el alza de 969,2% real del gasto en subsidios y donaciones del Ministerio del Trabajo"
+    objetivo_declarado: "Ampliar la protección social durante la pandemia"
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    nivel_impacto: directo
+    organizacion_id: ministerio_trabajo
+    nota: "Benefició a más de 16 millones de personas."
+  - tipo: aumento
+    descripcion: Fondo III de Salud para reforzar la estrategia Covid
+    fecha: '2021-01-01'
+    monto: null
+    monto_nota: "Más de $1,1 billones; cifra publicada como 'más de', no cargada como monto exacto"
+    objetivo_declarado: "Reforzar la implementación y desarrollo de estrategias Covid del Ministerio de Salud"
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: "Aprobado con posterioridad al IFP 3T21; explica en parte los $933.526 millones de diferencia entre el cierre preliminar y la proyección de septiembre."
+  - tipo: aumento
+    descripcion: Bono Clase Media y Bono Alivio Mype (Leyes 21.323 y 21.354)
+    fecha: '2021-01-01'
+    monto: null
+    monto_nota: "Montos totales no publicados en el IFP consultado"
+    objetivo_declarado: "Proteger los ingresos de la clase media y apoyar a las micro y pequeñas empresas"
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    fuentes_secundarias:
+      - bcn-leychile-ley-21323-bono-clase-media-2021
+    nivel_impacto: directo
+    nota: "Incluidos dentro del alza de subsidios y donaciones del Ministerio del Trabajo."
+  - tipo: ingreso
+    descripcion: Reversión de medidas tributarias del Plan Económico de Emergencia, Acuerdo Covid y apoyo a MiPymes
+    fecha: '2021-01-01'
+    monto: 280605000000
+    monto_nota: "$280.605 millones de mayores ingresos para el Fisco (Cuadro I.2.3 del IFP 4T 2021)"
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    nivel_impacto: institucional
+    nota: "Contribuyó al crecimiento de 37,8% real de los ingresos totales, junto con la recuperación de la actividad y el mayor precio del cobre."
+  - tipo: redistribucion
+    descripcion: Retiros extraordinarios del FEES y del FRP para complementar el financiamiento del presupuesto
+    fecha: '2021-01-01'
+    monto: null
+    monto_nota: "FEES: US$6.196,8 millones; FRP: US$2.959,8 millones retirados en 2021 (montos en dólares, no pesos)"
+    objetivo_declarado: "Complementar el financiamiento de la Ley de Presupuestos vigente y las obligaciones previsionales"
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    nivel_impacto: institucional
+    nota: "Los activos consolidados del Tesoro cayeron de 10,0% del PIB en 2018 a 5,2% en 2021."
+  - tipo: revision_programas
+    descripcion: Metodología de Presupuesto Base Cero Ajustado aplicada al gasto regular 2021
+    fecha: '2021-01-01'
+    monto: null
+    monto_nota: "Cambio metodológico, sin monto propio"
+    objetivo_declarado: "Revisar ampliamente el gasto base de los servicios públicos"
+    evento_id: null
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    nivel_impacto: institucional
+    nota: "Segundo año consecutivo de revisión amplia del gasto; convivió con el componente transitorio financiado por el FET."
+variaciones:
+  - alcance: Gasto del Gobierno Central Total 2021 frente a 2020
+    variacion_texto: +33,2% real (31,3% del PIB)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2022-02-04-ifp-cuarto-trimestre-2021
+    evento_id: null
+    nota: "Impulso fiscal pandémico; gasto presupuestario +33,3% real."
+orden_refs:
+  - bcn-2020-12-16-ley-21289-presupuesto-2021
+  - dipres-2021-03-04-ifp-cuarto-trimestre-2020
+  - dipres-2022-02-04-ifp-cuarto-trimestre-2021
+  - bcn-2020-12-14-ley-21288-fet
+  - bcn-leychile-ley-21323-bono-clase-media-2021

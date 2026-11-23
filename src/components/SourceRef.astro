@@ -4,7 +4,7 @@
 // .source-ref-tip. Así el sistema global de Base.astro (CSS + click handler)
 // da tooltip al hover y scroll+hightlight al hacer clic (#ref-N).
 // tip: texto del tooltip (p. ej. "medio\ntítulo"); si no se pasa, solo title.
-const { id = '', index, href = `/sources/${id}`, title = `Referencia ${index}`, tip } = Astro.props;
+const { id = '', index, href = `/source?id=${id}`, title = `Referencia ${index}`, tip } = Astro.props;
 ---
 
 <a href={href} class="source-ref" title={title}>

@@ -72,7 +72,7 @@ movimientos:
     monto: 543539000000
     monto_nota: $543.539 millones, baja el crecimiento de 2,7% a 2,0%
     objetivo_declarado: Marco de acuerdos para la última fase con gestión fiscal responsable
-    evento_id: null
+    evento_id: 20241108-1
     fuente: biobiochile-2024-11-08-marcel-acuerdo-presupuesto-2025
     fuentes_secundarias:
       - biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
@@ -85,7 +85,7 @@ movimientos:
     monto: 140000000
     monto_nota: De $540 a $400 millones
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20241108-1
     fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
     nivel_impacto: institucional
     organizacion_id: segegob
@@ -96,7 +96,7 @@ movimientos:
     monto: 7000000000
     monto_nota: $7.000 millones dentro del ajuste de $544.000 millones del año (rebaja preventiva de enero, mandato de la ley; distinta del recorte de $543.539 millones acordado en la tramitación de nov-2024)
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20250110-1
     fuente: biobiochile-2025-01-15-marcel-recorte-fiscalia
     nivel_impacto: directo
     organizacion_id: ministerio_publico
@@ -107,7 +107,7 @@ movimientos:
     monto: 17000000000
     monto_nota: $17.000 millones dentro de la rebaja preventiva de $544.000 millones
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20250110-1
     fuente: biobiochile-2025-01-14-corte-suprema-recorte-tribunales
     fuentes_secundarias:
       - biobiochile-2025-01-10-hacienda-recorte-us600-millones
@@ -120,7 +120,7 @@ movimientos:
     monto: 15968000000
     monto_nota: $15.968 millones dentro de la rebaja preventiva de $544.000 millones, pese al acuerdo que excluía a salud
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20250110-1
     fuente: senado-2025-01-15-recorte-salud-dipres
     nivel_impacto: directo
     organizacion_id: ministerio_salud
@@ -131,7 +131,7 @@ movimientos:
     monto: null
     monto_nota: Monto repuesto no publicado en la cobertura citada
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20241108-1
     fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
     fuentes_secundarias:
       - gob-cl-2024-11-27-aprobacion-presupuesto-2025
@@ -144,7 +144,7 @@ movimientos:
     monto: null
     monto_nota: Monto repuesto no publicado en la cobertura citada
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20241108-1
     fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
     fuentes_secundarias:
       - gob-cl-2024-11-27-aprobacion-presupuesto-2025
@@ -157,7 +157,7 @@ movimientos:
     monto: null
     monto_nota: Monto repuesto no publicado en la cobertura citada
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20241108-1
     fuente: biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
     fuentes_secundarias:
       - gob-cl-2024-11-27-aprobacion-presupuesto-2025
@@ -170,7 +170,7 @@ movimientos:
     monto: null
     monto_nota: Monto repuesto no publicado en la cobertura citada
     objetivo_declarado: null
-    evento_id: null
+    evento_id: 20241108-1
     fuente: biobiochile-2024-11-08-marcel-acuerdo-presupuesto-2025
     nivel_impacto: directo
     organizacion_id: subsecretaria_prevencion_delito
@@ -181,7 +181,7 @@ movimientos:
     monto: 73000000000
     monto_nota: $73.000 millones sujetos a la entrada en vigencia de la ley de licencias de grandes emisores
     objetivo_declarado: Reducción de casos en listas de espera de cirugía, procedimientos y especialistas
-    evento_id: null
+    evento_id: 20241108-1
     fuente: dipres-2024-11-07-compromisos-presupuesto-2025
     partida: Partida 16 · Salud
     nivel_impacto: directo
@@ -193,7 +193,7 @@ movimientos:
     monto: 500000000
     monto_nota: $500 millones vía reasignación durante el primer semestre de 2025
     objetivo_declarado: Recuperación del mérito y la excelencia académica
-    evento_id: null
+    evento_id: 20241108-1
     fuente: dipres-2024-11-07-compromisos-presupuesto-2025
     partida: Partida 09 · Educación
     nivel_impacto: directo
@@ -246,6 +246,35 @@ movimientos:
     nivel_impacto: indirecto
     organizacion_id: ministerio_economia
     nota: Compromiso sectorial del 27-nov-2024 con glosa de seguimiento al Plan Huachipato.
+  - tipo: recorte
+    descripcion: Nueva rebaja del 5% aplicada por Dipres a todos los Gobiernos Regionales en la Ley 2025
+    fecha: '2025-02-11'
+    monto: null
+    monto_nota: Más de $87.000 millones en el agregado nacional; $5.111 millones en O'Higgins, que pasó de $102.236.519 a $97.124.693 según el comunicado del GORE
+    objetivo_declarado: null
+    evento_id: null
+    fuente: goreohiggins-2025-02-11-rebaja-5-por-ciento
+    fuentes_secundarias:
+      - dipres-2025-01-10-rebaja-preventiva-544000
+      - ciper-2025-02-27-estrechez-fiscal-gore-223690
+    partida: Partida 31 · Gobiernos Regionales
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: La rebaja se aplicó en bienes y servicios, activos no financieros y transferencias de capital; el recorte del 2% en personal excluyó a los GORE. El gobernador Silva Amaya advirtió que era probable un segundo ajuste.
+  - tipo: aumento
+    descripcion: Transferencias de Dipres a los Gobiernos Regionales en enero de 2025 presentadas como pago de deuda flotante 2024
+    fecha: '2025-01-31'
+    monto: null
+    monto_nota: Dipres informó $270.050 millones transferidos en enero, pero no los presentó como reposición del recorte; cinco gobernaciones dijeron a CIPER que corresponden a remesas del presupuesto 2025. No hay cifra oficial de una reposición nacional
+    objetivo_declarado: Pago de la deuda flotante de 2024 según Dipres, versión disputada por los GORE
+    evento_id: null
+    fuente: ciper-2025-02-27-estrechez-fiscal-gore-223690
+    fuentes_secundarias:
+      - latercera-2024-12-14-tension-gobiernos-regionales-dipres
+    partida: Partida 31 · Gobiernos Regionales
+    nivel_impacto: institucional
+    organizacion_id: dipres
+    nota: La Tercera documentó reposiciones parciales y bilaterales sin identificar regiones ni total nacional. No debe interpretarse como una reposición confirmada del recorte de 2024.
 variaciones:
   - alcance: Ley 2025 frente a 2024
     variacion_texto: +2% (proyecto original +2,7% con recorte de US$500 millones; ley con US$600 millones)
@@ -355,3 +384,7 @@ orden_refs:
   - biobiochile-2024-11-27-senado-aprueba-presupuesto-2025
   - dipres-2026-02-13-ifp-cuarto-trimestre-2025
   - bcn-2024-12-13-ley-21722-presupuestos-2025
+  - goreohiggins-2025-02-11-rebaja-5-por-ciento
+  - dipres-2025-01-10-rebaja-preventiva-544000
+  - ciper-2025-02-27-estrechez-fiscal-gore-223690
+  - latercera-2024-12-14-tension-gobiernos-regionales-dipres

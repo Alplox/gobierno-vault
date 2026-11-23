@@ -1,0 +1,102 @@
+# Ejercicio 2019 — Ley de Presupuestos 2019 (Ley 21.125), cerrado.
+# Fuente primaria: IFP del cuarto trimestre de 2019 de Dipres.
+ano: 2019
+gobierno: Piñera
+estado: cerrado
+estado_label: Cerrado (IFP cuarto trimestre 2019)
+ley:
+  nombre: Ley de Presupuestos 2019
+  fuente: dipres-2018-12-28-ley-21125-presupuesto-2019
+  nota: "Ley N° 21.125, publicada el 28-dic-2018. Meta de déficit estructural de 1,6% del PIB, finalmente cumplida en 1,5%."
+totales:
+  inicial: { monto: null, fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019, nota: "Monto de la Ley Aprobada 2019 no publicado en el IFP 4T 2019 consultado; solo se informa la ejecución de 100,3% sobre la ley aprobada." }
+  vigente: { monto: null, fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019, nota: "Monto de la Ley Vigente 2019 no publicado en la fuente consultada." }
+  ejecutado: { monto: 47871075000000, fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019, nota: "Gasto del Gobierno Central Total 2019: $47.871.075 millones (24,1% del PIB, +4,2% real). $404.586 millones sobre lo estimado en septiembre por la Agenda Social y la Agenda de Recuperación Económica." }
+  saldo: { monto: null, fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019, nota: "Déficit efectivo de $5.618.728 millones (2,8% del PIB), superior al 2,2% proyectado en septiembre. No se carga como monto por assertMonto." }
+hitos:
+  - etiqueta: Déficit efectivo 2019
+    valor: $5.618.728 millones (2,8% del PIB)
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+  - etiqueta: Déficit estructural 2019
+    valor: 1,5% del PIB ($2.987.282 millones), menor a la meta de 1,6%
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+  - etiqueta: Ingresos del Gobierno Central
+    valor: $42.252.347 millones (21,3% del PIB, -1,1% real)
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+  - etiqueta: Tasa de ejecución del gasto presupuestario
+    valor: "100,3% de la Ley Aprobada (promedio 2010-2018: 99,3%)"
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+  - etiqueta: Deuda bruta del Gobierno Central
+    valor: $55.393.169 millones (27,9% del PIB)
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+  - etiqueta: Gasto de capital presupuestario
+    valor: +9,3% real, ejecución 98,7% de la ley aprobada
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+movimientos:
+  - tipo: aumento
+    descripcion: Agenda Social posterior al 18 de octubre — Ley Corta de Pensiones (Ley 21.190)
+    fecha: '2019-11-21'
+    monto: null
+    monto_nota: "No desagregado en el IFP; el gasto total 2019 superó en $404.586 millones la proyección de septiembre por Agenda Social y Agenda de Recuperación Económica"
+    objetivo_declarado: "Mejorar las pensiones y responder a las demandas sociales"
+    evento_id: '20191121-1'
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    nivel_impacto: directo
+    nota: "El IFP atribuye el mayor gasto 2019 a la Ley Corta de Pensiones, al Bono Extraordinario de Apoyo Familiar y al congelamiento de la tarifa del Transantiago."
+  - tipo: aumento
+    descripcion: Bono Extraordinario de Apoyo Familiar (Ley 21.195)
+    monto: null
+    monto_nota: Monto no publicado en el IFP consultado
+    objetivo_declarado: "Apoyo directo a hogares vulnerables"
+    evento_id: null
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    nivel_impacto: directo
+    nota: "Parte de la Agenda Social despachada tras el estallido social."
+  - tipo: redistribucion
+    descripcion: Congelamiento de la tarifa del Transantiago
+    monto: null
+    monto_nota: "Costo fiscal no publicado en el IFP consultado"
+    objetivo_declarado: "Contener el costo del transporte público"
+    evento_id: null
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    nivel_impacto: directo
+    nota: "Medida de la Agenda Social con efecto en el gasto 2019."
+  - tipo: aumento
+    descripcion: Agendas de Reactivación Económica de junio y agosto de 2019
+    monto: null
+    monto_nota: "No cuantificadas para 2019 en el IFP; explican el crecimiento de 9,3% real del gasto de capital"
+    objetivo_declarado: "Reactivar la economía y proteger el empleo"
+    evento_id: null
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    nivel_impacto: indirecto
+    nota: "Impulso al gasto de capital; Salud +50,8% real, Vivienda +17,2% real y Obras Públicas +5,5% real."
+  - tipo: ingreso
+    descripcion: Ingresos extraordinarios por la operación Tianqui (diciembre 2018)
+    monto: null
+    monto_nota: "No cuantificados; sin ellos los ingresos 2019 habrían crecido 0,6% real en vez de caer 1,1%"
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    nivel_impacto: institucional
+    nota: "Base de comparación desfavorable para la recaudación 2019."
+  - tipo: aumento
+    descripcion: Inyección de recursos para adelantar el programa habitacional (Agenda de Aceleración Económica)
+    monto: null
+    monto_nota: "No cuantificado; Vivienda registró +17,2% real en gasto de capital"
+    objetivo_declarado: "Adelantar la ejecución del programa habitacional"
+    evento_id: null
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    nivel_impacto: directo
+    organizacion_id: ministerio_vivienda
+    nota: "Detalle del crecimiento real del gasto de capital por ministerio en el Cuadro I.4.3 del IFP."
+variaciones:
+  - alcance: Gasto del Gobierno Central Total 2019 frente a 2018
+    variacion_texto: +4,2% real (24,1% del PIB)
+    ministerio_id: null
+    nivel_impacto: indirecto
+    fuente: dipres-2020-01-30-ifp-cuarto-trimestre-2019
+    evento_id: null
+    nota: "Superior al 3,2% estimado en septiembre de 2018 respecto de la Ley Vigente 2018."
+orden_refs:
+  - dipres-2018-12-28-ley-21125-presupuesto-2019
+  - dipres-2020-01-30-ifp-cuarto-trimestre-2019

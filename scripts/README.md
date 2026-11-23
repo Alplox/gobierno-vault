@@ -10,6 +10,7 @@
 |  | `generate/` | `generate-index.mjs`, `generate-seguimiento-index.mjs` |
 | **Catálogo sitemaps** | `sitemaps/` | `sync.mjs` (antes `sync-sitemaps.mjs`), `index.mjs`, `backup.mjs`, `resync.mjs`, `watchlist.mjs` |
 | **Extracción / fetching** | `extract/` | `fetch-content.mjs`, `fetch-impersonate.mjs`, `pdf-extract.mjs`, `doc-extract.mjs`, `ocr-extract.mjs`, `video-transcript.mjs`, `add-source.mjs` |
+| **Archivado de fuentes** | `archive/` | `archive-sources.mjs` (respaldo externo en Wayback; escribe entradas en `respaldos[]`, multi-servicio e idempotente) |
 | **Investigación social** | `social/` | `last30days-search.mjs` (wrapper portable y fijado; JSON, sin cookies/Store/publicación) |
 | **Auditoría de cobertura** | `coverage/` | `audit.mjs` (puntos ciegos: prensa del catálogo vs eventos del vault vs fuentes oficiales) |
 | **Respaldo** | `backup/` | `backup.mjs`, `restore.mjs`, `verify.mjs` |
@@ -58,7 +59,11 @@ pnpm run sitemaps-watchlist             # scripts/sitemaps/watchlist.mjs
 pnpm run coverage-audit -- --from 2026-10-01 --to 2026-10-03   # puntos ciegos del rango
 pnpm run social-search -- --setup        # instala last30days v3.25.0 en .tools/ (gitignored)
 pnpm run social-search -- "<tema>"       # Reddit + X + YouTube, salida JSON
-pnpm run add-source -- <URL>            # scripts/extract/add-source.mjs
+pnpm run add-source -- <URL>            # scripts/extract/add-source.mjs (snapshot automático en respaldos[]; --no-archive lo omite)
+pnpm run archive-sources -- --dry-run --limit 20   # lista qué fuentes se archivarían (default, sin red)
+pnpm run archive-sources -- --apply --since 2026-11-01  # Wayback → respaldos[] de la fuente
+pnpm run archive-sources -- --apply --id <id>           # una fuente concreta (varios: --id a,b)
+pnpm run archive-sources -- --migrate-only --all        # mueve marker legacy de notas a respaldos[]
 pnpm run pdf-extract -- <URL>           # scripts/extract/pdf-extract.mjs
 pnpm run doc-extract -- <URL>           # scripts/extract/doc-extract.mjs
 pnpm run fetch-impersonate -- <URL>     # scripts/extract/fetch-impersonate.mjs

@@ -64,7 +64,13 @@ Todo el panorama se deriva en build de `src/lib/personStats.ts` (índice inverti
 
 ## `/presupuesto` — poster con Sankey
 
-La página se lee como un diagrama, no como una tabla: `BudgetSankey.astro` (SVG estático, cero JS) + `BudgetMovementCard.astro` (tarjetas con el monto grande), y el detalle largo (variaciones, hitos, fuentes) dentro de `<details>`.
+Dos superficies con roles distintos: `BudgetSankey.astro` es el **panorama de magnitud** (SVG estático, cero JS) y la **línea de tiempo** es la superficie de lectura. `BudgetMovementCard.astro` emite una fila `<li>` con rail flex: fecha a la izquierda (`.pres-fecha`), punto semántico en una columna estrecha y tarjeta en `min-w-0 flex-1`; la envoltura es `.pres-timeline space-y-3`. El evento del vault y los vínculos son visibles; el detalle largo (nota, fuentes, trazabilidad) sigue en `<details>`. Variaciones/hitos/fuentes del ejercicio quedan al final, colapsados.
+
+- **No usar `timeline` de daisyUI aquí:** su grid reparte el ancho entre fecha y contenido, y la tarjeta quedaba en media columna (155 px a 390 px de viewport). El rail flex da el ancho completo en móvil sin CSS extra.
+
+- **Vínculos, no derivación:** `buildVinculos()` en `lib/presupuesto.ts` agrupa por `evento_id`, `partida` y `organizacion_id` sobre todos los ejercicios y guarda `Movimiento.vinculos[]` (grupos de 1 no generan vínculo). La UI los nombra como atributo compartido y añade la nota «cronología no es causalidad»: el vault no documenta reasignaciones entre partidas, así que **no se dibujan flechas de derivación**.
+- **Contraste entre 30 temas:** el texto de badges, montos y KPIs siempre usa `text-base-content`; el color va en rail (`h-1 bg-error|success|warning`), punto (`status-*`) o icono. Nunca `text-error`/`text-success`/`text-warning` sobre `base-100`, ni `badge-<color>` con `badge-outline`/`badge-ghost`: en temas como `cmyk`, `acid` o `lemonade` el par texto/fondo rompe 4.5:1. Lo mismo aplica al SVG del Sankey: etiquetas, montos y tooltips van en `fill="var(--color-base-content)"` con `fill-opacity="1"`; el sentido del movimiento ya lo dice la cinta y el eje. Medido: 12 textos por cinta caían bajo 4.5:1 en 6 de 8 temas con `fill=error/success` u `opacity 0.75/0.85`.
+- Las cintas del Sankey siguen enlazando a `#mov-AAAA-N`, que ahora es el `article` dentro de la fila del timeline: el interceptor `a[href^="#mov-"]` de la página sigue siendo obligatorio para abrir el panel de año antes del scroll.
 
 - **Un solo px-por-peso para las dos columnas**, tomado del lado mayor, para que el bloque de retiros y el de inyecciones se puedan comparar de verdad; la altura de cada eje es la suma de sus cintas (`PresupuestoSankey` en `src/lib/presupuesto.ts`). Las cintas bajo `MIN_H` (3 px) se dibujan a 3 px para no desaparecer: eso infla levemente el lado con más movimientos minúsculos (medido: ~3% en la razón dibujada) y **el pie del gráfico lo declara**; si cambia el mínimo, cambia el texto.
 - El abanico sale de la diferencia entre los dos extremos de la cinta: en el eje los tramos son contiguos y hacia afuera se abren con `BAND_GAP`. Nada de posiciones decorativas.
@@ -116,6 +122,27 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 - Cancelable (bandera `gvSynthCancel` entre trozos + `cancelSynthesis()`/`stopWorker()` que matan el worker; el wasm en curso no se aborta, su resultado se descarta), un solo motor a la vez (`gvStopAll` corta Piper + speech), resaltado por bloques `gvBlockParts`/`gvSplitLong` con `.gv-tts-active` + `scrollIntoView`. Al cancelar se limpian `gvCacheKey`/`gvChunkUrls` y se ocultan los controles de salto (quedan trozos parciales: la próxima reproducción los reutiliza del LRU).
 - El TTS ya no necesita aislamiento: si algún día vuelve `COOP`+`COEP` (site-wide o no), los embeds de video se rompen igual que antes y Piper pasaría a multihilo sin cambiar código (el worker ya no sombrea hilos).
 
+## Ficha de fuente — página única `/source?id=`
+
+Para no exceder el límite de 20.000 archivos de Pages Free, no existen las ~12.500 páginas `/sources/[id]` ni el índice `/sources`: hay **una sola** `src/pages/source.astro` que recibe `?id=` y renderiza en cliente. En SSG `Astro.url.searchParams` no existe en runtime, por eso el render es cliente con `astro:page-load` + llamada directa.
+
+- Los datos no van embebidos: `src/pages/data/sources.json.ts` genera **un** `/data/sources.json` (~5,7 MB) que la ficha descarga bajo demanda con `fetch()` (HTML de `/source` ~52 KB). El payload incluye registro de fuentes + `getSourceToEventsMap` + títulos de eventos, cacheado en el módulo con `pending`/`cached`.
+- Acceso: cada entrada de "Referencias y Fuentes" del detalle de evento lleva `Ficha de la fuente` → `/source?id=<id>` (usar `entities.fuentesAll[i]`, que se alinea 1:1 con `refs[i]` de `resolveReferences`). `SourceRef.astro` también apunta a `/source?id=`. El link "Fuentes" se quitó del footer (`Base.astro`).
+- `public/_redirects`: `/sources/:id` y `/sources/:id/` → `/source?id=:id` (301), y `/sources` → `/events`. Estáticos antes que dinámicos.
+- `getSourceToEventsMap()` devuelve IDs de evento **con ruta** (`2020/04/20200406-1`): normalizar con `split('/').pop()` antes de buscar en el mapa de títulos, o dan cero eventos relacionados.
+- Algunas fuentes tienen `fecha` inválida: `new Date(...).toISOString()` revienta el build con `Invalid time value`; guardar con `Number.isNaN(d.getTime())`.
+- La ficha no lleva `ShareButtons` (la URL canónica SSG no incluye el query).
+
+## Ficha de organización — `/organization?id=` + índice `/organizations`
+
+Mismo patrón que fuentes, pero el índice **sí se conserva** y se mejoró:
+
+- `src/pages/organization.astro` renderiza en cliente desde `src/pages/data/organizations.json.ts` (~1 MB, bajo demanda; HTML ~52 KB). El payload incluye `bio` (HTML), `titulares` de `getCabinetByMinistry()` con `periodoDe()`, y IDs de eventos de `eventHasOrg`. Sin `ShareButtons` (query en URL canónica).
+- No quedan las 1.748 fichas `/organizations/[id]`. Enlaces internos actualizados en `organizations/index.astro`, `orgListClient.js`, `BudgetMovementCard.astro`, `topics/[id]`, `gabinete`, `presupuesto`, `people/[id]` y `events/[year]/[id]`; `public/_redirects` redirige las URLs viejas (301).
+- **Los filtros no dependen de las fichas**: `/organizations` filtra sobre `data-search`/`data-tipo`/`data-pais` de las tarjetas SSR y lazy. `q` (normalizado NFD), `tipo` y `pais` se combinan en AND; si hay filtro activo se fuerza el volcado completo (`forceFillAll`) y se actualiza la URL con `replaceState`. El contador muestra `visibles de total`.
+- Scroll infinito: sentinel `#orgs-sentinel` hermano **después** del grid, `IntersectionObserver` con `rootMargin: 800px`, batches de 40. Sin IO vuelca todo. SSR emite las primeras 40 tarjetas.
+- Guard de init: `script.__gvLoaded` se revisa **antes** de `cleanupFns` (page-load dispara también en la carga inicial); la página llama `initOrgList()` directo y en `astro:page-load`, y el cleanup destructa el observer y los listeners.
+
 ## Referencias inline compactas
 
 `SRef` conserva siempre el tooltip. En las fichas densas de `/sueldos`, envolver la referencia en `.sueldos-inline-ref` para neutralizar el `vertical-align: super` del `<sup>` y evitar que el número se monte sobre la línea anterior; el enlace y el scroll a `#ref-N` no cambian.
@@ -134,7 +161,7 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 
 ## Botones de compartir
 
-`ShareButtons.astro` (`url` + `title` props) es la única pieza de compartir: botón nativo (`navigator.share`, oculto por defecto y revelado por JS si existe), "Copiar enlace" (clipboard con fallback `execCommand`, feedback `copy → check` con label y `role="status"`), y enlaces intents a X, Facebook, WhatsApp y Telegram. Va en las 9 páginas de ficha/sección: evento (en la fila de acciones, junto a "Ver en Markdown"), `/people/[id]`, `/organizations/[id]`, `/topics/[id]`, `/sources/[id]`, `/stats/[concepto]`, `/sueldos`, `/gabinete`, `/graph`.
+`ShareButtons.astro` (`url` + `title` props) es la única pieza de compartir: botón nativo (`navigator.share`, oculto por defecto y revelado por JS si existe), "Copiar enlace" (clipboard con fallback `execCommand`, feedback `copy → check` con label y `role="status"`), y enlaces intents a X, Facebook, WhatsApp y Telegram. Va en las 8 páginas de ficha/sección: evento (en la fila de acciones, junto a "Ver en Markdown"), `/people/[id]`, `/organizations/[id]`, `/topics/[id]`, `/stats/[concepto]`, `/sueldos`, `/gabinete`, `/graph`. La ficha de fuente ya no es una página propia (ver § "Ficha de fuente").
 
 - El `<script>` del componente usa delegación en `document` con guard `window.__gvShareInit` (el bundle corre una sola vez y ClientRouter reemplaza el DOM: nunca cachear nodos, buscar por `[data-share-*]` en cada evento).
 - URL canónica siempre absoluta y calculada en build: `new URL(Astro.url.pathname, Astro.site).href` (en páginas estáticas literales como `/sueldos`, `new URL('/sueldos', Astro.site)`), nunca `location.href` en el href SSR.

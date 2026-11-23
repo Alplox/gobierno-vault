@@ -11,7 +11,7 @@ ley:
   nota: Ley N° 21.640, publicada el 18-dic-2023. El proyecto se presentó con un aumento de 3,5% del gasto y se despachó con protocolos de acuerdo en Salud y Educación.
 totales:
   inicial: { monto: null, nota: Ley inicial 2024 con gasto -1,0% bajo ella según el IFP; cifra exacta no extraída del documento citado }
-  vigente: { monto: 76163870000, fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024, nota: Actualización del gasto del IFP 4T24, igual al cierre ejecutado }
+  vigente: { monto: 76163870000000, fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024, nota: Actualización del gasto del IFP 4T24, igual al cierre ejecutado }
   ejecutado: { monto: 76163870000000, fuente: dipres-2025-02-07-ifp-cuarto-trimestre-2024, nota: Gasto del Gobierno Central 2024 (+3,5% real, 24,8% del PIB y -1,0% frente a la ley inicial) }
   saldo: { monto: null, nota: Déficit efectivo de $8.880.648 millones (2,9% del PIB) }
 hitos:
@@ -36,6 +36,11 @@ hitos:
   - etiqueta: Gasto en seguridad 2024
     valor: 4,2 billones, tras 4 billones en 2023
     fuente: gobcl-2024-06-01-cuenta-publica-2024
+  - etiqueta: Recortes acumulados a los Gobiernos Regionales durante 2024
+    valor: $223.690 millones según tablas de ejecución de Dipres analizadas por CIPER, con bajas de 47% en Tarapacá, 33% en Antofagasta y 31% en Coquimbo
+    fuente: ciper-2025-02-27-estrechez-fiscal-gore-223690
+    fuentes_secundarias:
+      - emol-2024-12-10-error-calculo-gores-dipres
 movimientos:
   - tipo: recorte
     descripcion: Recorte a Bomberos en el proyecto de Presupuesto 2024
@@ -138,12 +143,13 @@ movimientos:
     descripcion: Rebaja de $10.000 millones al Gobierno Regional de Los Lagos decretada por Dipres
     fecha: '2024-11-14'
     monto: 10000000000
-    monto_nota: $10.000 millones decretados que el CORE redistribuyó postergando chatarrización de maquinaria y pagos a Saesa por zonas aisladas
+    monto_nota: $10.000 millones decretados que el CORE redistribuyó postergando chatarrización de maquinaria y pagos a Saesa por zonas aisladas; el CORE citó además el tramo de $116.000 a $106.000 millones en el presupuesto 2025 condicionado a esta rebaja
     objetivo_declarado: null
     evento_id: null
     fuente: elinsular-2024-11-14-ajuste-dipres-los-lagos
     fuentes_secundarias:
       - elhuemul-2024-11-15-ajuste-dipres-los-lagos
+      - fresiaahora-2024-12-recorte-dipres-los-lagos
     nivel_impacto: directo
     organizacion_id: dipres
     nota: Medida de alcance nacional por menor recaudación que también afectó a O’Higgins con otros $10.000 millones y priorizó obras en ejecución y proveedores.
@@ -171,6 +177,109 @@ movimientos:
     nivel_impacto: indirecto
     organizacion_id: ministerio_hacienda
     nota: Materializado durante el segundo semestre y calibrado según la ejecución presupuestaria.
+  - tipo: recorte
+    descripcion: Rebaja de $10.000 millones al Gobierno Regional de O'Higgins por un presunto error de cálculo de la Dipres
+    fecha: '2024-12-09'
+    monto: 10000000000
+    monto_nota: $10.000 millones según el gobernador Pablo Silva Amaya; el propio GORE habló después de $11.000 millones y CIPER sostiene que O'Higgins no fue recortada, sino que recibió un leve aumento
+    objetivo_declarado: null
+    evento_id: null
+    fuente: horadenoticias-2024-12-09-recorte-ohiggins-10-mil-millones
+    fuentes_secundarias:
+      - elrancaguino-2024-12-09-rebaja-presupuestaria-dipres
+      - eltipografo-2024-12-12-repercusiones-error-calculo-ohiggins
+      - emol-2024-12-10-error-calculo-gores-dipres
+    partida: Partida 31 · Gobiernos Regionales (Inversión Regional)
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: La rebaja afectó ocho proyectos municipales y pagos a contratistas. El error de cálculo fue afirmado por gobernadores y la ministra Tohá y negado por el ministro Marcel y la Dipres. Se anunció una transferencia parcial de $2.000 millones, sin relación con una reposición nacional.
+  - tipo: revision_programas
+    descripcion: Rechazo de la partida solicitada para la Subsecretaría de Derechos Humanos en la discusión del presupuesto 2024
+    fecha: '2023-10-27'
+    monto: null
+    monto_nota: El gobierno había pedido $5.809 millones para dotación, viáticos, Programa de Derechos Humanos y capacitación; es el monto solicitado y rechazado, no un recorte ejecutado sobre el presupuesto vigente
+    objetivo_declarado: null
+    evento_id: null
+    fuente: publimicro-2023-10-27-rechazo-partida-subsecretaria-ddhh
+    partida: Ministerio de Justicia y Derechos Humanos · Subsecretaría de Derechos Humanos
+    nivel_impacto: directo
+    organizacion_id: ministerio_justicia
+    nota: La tercera subcomisión mixta rechazó la partida en medio del hallazgo de osamentas en dependencias del Programa de Derechos Humanos.
+  - tipo: recorte
+    descripcion: Rebaja agregada nacional por decreto 1437 de la Provisión del Fondo Nacional de Desarrollo Regional
+    fecha: '2024-11-18'
+    monto: 39608752000
+    monto_nota: $39.608.752 miles de pesos según el PDF de Dipres, equivalentes a $39.608.752.000; agregado nacional del que los $10.000 millones a Los Lagos y O'Higgins son casos parciales
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-decretos-modificacion-transferencias-gore
+    fuentes_secundarias:
+      - elinsular-2024-11-14-ajuste-dipres-los-lagos
+      - elhuemul-2024-11-15-ajuste-dipres-los-lagos
+    partida: '050505 · Transferencias a Gobiernos Regionales · Provisión FNDR'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: "Decreto N° 1437 del 18-nov-2024. No duplica el movimiento regional de Los Lagos: es su agregado nacional."
+  - tipo: recorte
+    descripcion: Rebaja temprana por decreto 94 de la Provisión FNDR
+    fecha: '2024-02-29'
+    monto: 38792322000
+    monto_nota: $38.792.322 miles de pesos según el PDF de Dipres, equivalentes a $38.792.322.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales · Provisión FNDR'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Decreto N° 94 del 29-feb-2024; muestra que el ajuste a regiones empezó en febrero y no solo en noviembre.
+  - tipo: aumento
+    descripcion: Aporte por decreto 1326 para transferencias de emergencia de la Subsecretaría del Interior
+    fecha: '2024-11-06'
+    monto: 80000000000
+    monto_nota: $80.000.000 miles de pesos según el PDF de Dipres, con $73.676.658 miles en transferencias corrientes y $6.323.342 miles en transferencias de capital para atender situaciones de emergencia
+    objetivo_declarado: Atender situaciones de emergencia
+    evento_id: null
+    fuente: dipres-2024-decretos-modificacion-subsecretaria-interior
+    partida: Subsecretaría del Interior · Transferencias para emergencias
+    nivel_impacto: directo
+    organizacion_id: subsecretaria_interior
+    nota: Decreto N° 1326 del 06-nov-2024; contrapeso del recorte al FNDR registrado en el mismo periodo.
+  - tipo: recorte
+    descripcion: Rebaja por decreto 452 al Plan Nacional Contra el Crimen Organizado de la PDI
+    fecha: '2024-05-09'
+    monto: 2843243000
+    monto_nota: $2.843.243 miles de pesos según el PDF de Dipres, equivalentes a $2.843.243.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2024-decretos-modificacion-subsecretaria-interior
+    partida: Subsecretaría del Interior · Plan Nacional Contra el Crimen Organizado · PDI
+    nivel_impacto: directo
+    organizacion_id: subsecretaria_interior
+    nota: Decreto N° 452 del 09-may-2024; contrasta con el aumento en seguridad anunciado para el presupuesto 2023.
+  - tipo: aumento
+    descripcion: Aporte por decreto 270 a transferencias de emergencia de SENAPRED
+    fecha: '2024-04-10'
+    monto: 2036259000
+    monto_nota: $2.036.259 miles de pesos según el PDF de Dipres, con $705.570 miles en productos de habitabilidad, $410.226 miles a Bomberos de Chile y $920.463 miles a la emergencia del Maule de CONAF
+    objetivo_declarado: Responder a la emergencia en el Maule y reponer productos de habitabilidad
+    evento_id: null
+    fuente: dipres-2024-decretos-modificacion-senapred
+    partida: SENAPRED · Transferencias Corrientes · Emergencias
+    nivel_impacto: directo
+    organizacion_id: senapred
+    nota: "Decreto N° 270 del 10-abr-2024. No es el recorte a Bomberos ya cargado: es un aumento a transferencias con Bomberos como beneficiario."
+  - tipo: aumento
+    descripcion: Traspaso de $4.100 millones al Hospital Regional de Iquique
+    fecha: '2024-12-06'
+    monto: 4100000000
+    monto_nota: $4.100 millones confirmados por la delegada presidencial regional de Tarapacá, Ivonne Donoso Olivares
+    objetivo_declarado: Cubrir necesidades de insumos, medicamentos y continuidad del servicio del hospital regional
+    evento_id: null
+    fuente: tarapacaonline-2024-12-06-traspaso-4100-hospital-iquique
+    partida: Ministerio de Salud · Servicio de Salud Tarapacá · Hospital Regional Ernesto Torres Galdámez
+    nivel_impacto: directo
+    organizacion_id: ministerio_salud
+    nota: Prensa regional que cita a Soy Iquique y a la autoridad regional; no se encontró el decreto individual en el PDF de salud.
 variaciones:
   - alcance: Gasto del Gobierno Central 2024 frente a la ley inicial
     variacion_texto: "-1,0% real"
@@ -201,3 +310,14 @@ orden_refs:
   - elhuemul-2024-11-15-ajuste-dipres-los-lagos
   - diariotalca-2024-12-07-acuerdo-reajuste-sector-publico
   - diariolongino-2024-12-19-reajuste-sector-publico
+  - horadenoticias-2024-12-09-recorte-ohiggins-10-mil-millones
+  - elrancaguino-2024-12-09-rebaja-presupuestaria-dipres
+  - eltipografo-2024-12-12-repercusiones-error-calculo-ohiggins
+  - emol-2024-12-10-error-calculo-gores-dipres
+  - fresiaahora-2024-12-recorte-dipres-los-lagos
+  - ciper-2025-02-27-estrechez-fiscal-gore-223690
+  - publimicro-2023-10-27-rechazo-partida-subsecretaria-ddhh
+  - dipres-2024-decretos-modificacion-transferencias-gore
+  - dipres-2024-decretos-modificacion-subsecretaria-interior
+  - dipres-2024-decretos-modificacion-senapred
+  - tarapacaonline-2024-12-06-traspaso-4100-hospital-iquique

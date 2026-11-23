@@ -18,6 +18,8 @@
     "coverage-audit": "node scripts/coverage/audit.mjs",
     "social-search": "node scripts/social/last30days-search.mjs",
     "add-source": "node scripts/extract/add-source.mjs",
+    "archive-sources": "node scripts/archive/archive-sources.mjs",
+    "archive-new": "node scripts/archive/archive-sources.mjs --new",
     "pdf-extract": "node scripts/extract/pdf-extract.mjs",
     "doc-extract": "node scripts/extract/doc-extract.mjs",
     "fetch-impersonate": "node scripts/extract/fetch-impersonate.mjs",

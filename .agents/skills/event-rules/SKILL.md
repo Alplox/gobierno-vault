@@ -56,11 +56,18 @@ Sí válido: preposición o cargo que NO está en el nombre (`del [[organization
 
 ## Máximo de fuentes — agotar antes de descartar
 
-5 fuentes de medios distintos es el **mínimo, no el techo**. Ante un evento con cobertura amplia, agregar TODAS las que coincidan con el body. La redundancia NO es motivo de descarte: cada fuente extra es (1) una opción más para validar datos y (2) un punto de vista más para el carácter objetivo del hecho.
+5 fuentes de medios distintos es el **mínimo, no el techo**. Ante un evento con cobertura amplia, agregar TODAS las que coincidan con el body. La redundancia NO es motivo de descarte: cada fuente extra es (1) una opción más para validar datos y (2) un punto de vista más para el carácter objetivo del hecho. **El estado por defecto de todo candidato del catálogo es INCLUIR**; se excluye solo por un motivo de la lista cerrada de abajo, verificado con fetch previo. Llegar a 5 no cierra la búsqueda.
 
-- **Verificar body antes de crear:** fetch completo (`read_url`/mirrors/`fetch-content`) o snippet sustantivo con título+autor+fecha+texto; metadata obligatoria (`medio`, `titulo`, `autor`, `fecha`, `url`, `notas` sin `: ` interno).
+- **Verificar body antes de decidir:** fetch completo (`read_url`/mirrors/`fetch-content`) o snippet sustantivo con título+autor+fecha+texto; metadata obligatoria (`medio`, `titulo`, `autor`, `fecha`, `url`, `notas` sin `: ` interno). **Prohibido descartar un candidato sin haber fetcheado su cuerpo**: el titular del catálogo no basta para saber si sirve. Si el fetch falla, el motivo es ese fallo verificado, no el medio.
 - **Citar inline** donde respalda la afirmación, aunque duplique citas existentes; si aporta dato nuevo (ej. calificación jurídica, cautelar desestimada), agregarlo al body con su cita.
-- **Sí se descarta:** agregadores sin reportería propia (ej. MSN que replica), videos sin transcripción verificable o con datos contradictorios no confirmables, URLs no localizables (existe mención pero sin URL recuperable). Lo descartado y el motivo van al **resumen entregado al usuario**, nunca al body (regla 13).
+- **Lista cerrada de descarte** — solo estos motivos, siempre comprobados:
+  - **sin cuerpo verificable:** solo navegación, paywall sin mirror, soft-404 o texto generado por IA (ej. `nuevopoder.cl`);
+  - **agregador sin página propia:** MSN y similares que solo reenvían contenido, sin URL de artículo ni metadata verificable. **Un medio que publica el mismo cable o la misma declaración bajo su propia URL y con metadata NO es agregador**: se agrega aunque repita palabra por palabra a otro medio y aunque ya haya 5;
+  - **video sin transcripción verificable**, o dato contradictorio no confirmable;
+  - **URL no localizable:** existe la mención pero no se recupera la URL del artículo;
+  - **otro evento:** el artículo cubre un hecho distinto del evento (ej. una felicitación presidencial dentro del evento de una declaración de candidato).
+- **Motivos NO válidos** (son error de edición): "no aporta dato nuevo", "ya tenemos 5", "es réplica de otro medio", "es un medio chico o regional", "no cambia el ángulo". La redundancia es aporte, no ruido.
+- **Chequeo antes del resumen:** por cada fuente que vayas a reportar como descartada, contrasta el motivo con la lista cerrada. Si el motivo no está ahí o no lo verificaste con fetch, agrégala al evento. Lo descartado y su motivo van al **resumen entregado al usuario**, nunca al body (regla 13).
 - **Origen en red social nunca se descarta:** si el hecho noticioso ES una declaración publicada en red social (post, video, hilo) y la prensa solo la reproduce, el post original se agrega SIEMPRE como fuente complementaria (`tipo: redes`, ej. `20260910-3` con `twitter-2026-09-10-...`) citada junto a la prensa en la afirmación. Solo la fuente original fija el texto acreditado; la transcripción de prensa puede ser incorrecta. Si el post no es fetcheable (login wall), se consigna en `notas` contra qué medios se verificó la transcripción.
 
 ## Eventos internacionales y reacciones

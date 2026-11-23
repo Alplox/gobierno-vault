@@ -213,7 +213,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
         {orgIdPrincipal && (
           <p class="flex items-center gap-1.5 text-xs text-base-content/60 mt-1">
             <Building2 class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
-            <a href={`/organizations/${orgIdPrincipal}`} class="hover:text-primary transition-colors">{orgNombre(orgIdPrincipal)}</a>
+            <a href={`/organization?id=${orgIdPrincipal}`} class="hover:text-primary transition-colors">{orgNombre(orgIdPrincipal)}</a>
           </p>
         )}
         {person.data.tipo && (
@@ -309,7 +309,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
           {panorama.orgs.map((o) => (
             <li>
               <a
-                href={`/organizations/${o.id}`}
+                href={`/organization?id=${o.id}`}
                 class="inline-flex items-center gap-1.5 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 transition-colors hover:bg-primary/10 hover:text-primary"
                 title={`${n(o.n)} evento${o.n === 1 ? '' : 's'} en común con ${o.nombre}`}
               >
@@ -364,7 +364,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
               <div class="min-w-0">
                 <p class="font-semibold text-base-content text-sm">
                   {c.organizacion ? (
-                    <a href={`/organizations/${c.organizacion}`} class="hover:text-primary transition-colors">{c.cargo}</a>
+                    <a href={`/organization?id=${c.organizacion}`} class="hover:text-primary transition-colors">{c.cargo}</a>
                   ) : (
                     c.cargo
                   )}
@@ -382,7 +382,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
           );
         })}
       </ol>
-      <PersonCargoTimeline cargos={cargos} orgHref={(id) => `/organizations/${id}`} orgNombre={orgNombre} />
+      <PersonCargoTimeline cargos={cargos} orgHref={(id) => `/organization?id=${id}`} orgNombre={orgNombre} />
     </section>
   )}
 

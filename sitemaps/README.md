@@ -3,9 +3,9 @@
 > Este archivo se genera automáticamente con `pnpm run sitemaps-index`
 > Los datos crudos viven en `sitemaps/websites/<medio>/<año>.jsonl` y `sitemaps/youtube_channels/<slug>/<año>.jsonl` (una línea JSON por artículo/video).
 
-- **Última sincronización:** 12/11/2026, 17:47:17
+- **Última sincronización:** 19/11/2026, 15:31:58
 - **Medios registrados:** 568
-- **Artículos indexados:** 13.484.328
+- **Artículos indexados:** 13.494.052
 - **Canales de YouTube:** 30 (587.712 videos)
 
 ## Por medio
@@ -13,79 +13,79 @@
 | Medio | Artículos |
 | --- | --- |
 | Radio Bío Bío | 1.183.412 |
-| Emol | 1.118.834 |
+| Emol | 1.119.427 |
 | La Segunda | 903.546 |
 | Meganoticias | 438.975 |
-| RFI Español | 402.077 |
+| RFI Español | 402.791 |
 | Diario Financiero | 368.937 |
-| El Ciudadano | 308.171 |
+| El Ciudadano | 308.308 |
 | Radio Agricultura | 304.476 |
 | Chilevisión | 286.737 |
 | Voz de América | 254.425 |
-| El Dínamo | 253.829 |
-| France 24 | 243.246 |
+| El Dínamo | 254.059 |
+| France 24 | 243.887 |
 | CNN Chile | 230.860 |
 | Página 7 | 223.128 |
-| 24 Horas | 194.653 |
+| 24 Horas | 195.357 |
+| The Clinic | 194.663 |
 | El Pingüino | 194.424 |
-| The Clinic | 194.407 |
 | IPS Agencia de Noticias | 111.159 |
 | Radio Universidad de Chile | 109.255 |
 | Mediabanco | 108.161 |
 | PortalPortuario | 107.976 |
 | El Periódico de la Energía | 92.852 |
-| Epicentro Chile | 91.304 |
+| Epicentro Chile | 91.353 |
 | El Periodista | 87.877 |
 | AIT News | 79.452 |
 | El Observador | 77.818 |
 | El Líbero | 73.864 |
 | El Rancagüino | 70.968 |
 | TVN | 70.249 |
-| La Prensa Austral | 69.219 |
-| Noticias del Lago | 65.609 |
+| La Prensa Austral | 69.413 |
+| Noticias del Lago | 65.677 |
 | El Reportero de Iquique | 62.125 |
 | Radio Duna | 59.793 |
 | Nuevo Poder | 59.408 |
 | Diario de Valdivia | 59.270 |
 | Diario UACh | 58.672 |
-| Diario Futrono | 57.347 |
-| Diario Paillaco | 57.124 |
+| Diario Futrono | 57.443 |
+| Diario Paillaco | 57.211 |
 | Canal 9 | 55.524 |
 | Tierramarillano | 53.360 |
+| REDIMIN | 53.162 |
 | Está Pasando | 53.123 |
-| REDIMIN | 52.725 |
-| País Lobo | 52.625 |
-| Diario Lago Ranco | 51.913 |
+| País Lobo | 52.812 |
+| Diario Lago Ranco | 51.995 |
 | Chicureo Hoy | 49.133 |
-| Infogate | 48.778 |
+| Infogate | 48.892 |
+| VLN Radio | 48.576 |
 | La Unión | 48.513 |
-| VLN Radio | 48.260 |
-| La Hora | 47.426 |
-| MercoPress | 46.944 |
+| La Hora | 47.729 |
+| MercoPress | 46.976 |
 | Radio Activa | 46.461 |
 | Diario USACH | 43.912 |
-| Diario San José | 43.633 |
-| Terra Chile | 43.233 |
-| San Carlos On Line | 43.032 |
+| Diario San José | 43.710 |
+| Terra Chile | 43.255 |
+| San Carlos On Line | 43.091 |
 | Diario El Ranco | 42.740 |
 | UCSC | 41.889 |
 | Diálogo Sur | 41.506 |
 | Serena y Coquimbo | 41.034 |
 | Radio Paulina | 40.830 |
 | Mi Radio LS | 40.602 |
-| La Serena Online | 40.132 |
-| Capa9 | 37.516 |
+| La Serena Online | 40.220 |
+| Capa9 | 37.525 |
 | Diario Chañarcillo | 35.415 |
 | Publimicro | 34.822 |
 | El Calbucano | 34.703 |
 | Vilas Radio | 34.084 |
-| Sabes.cl | 33.722 |
-| Portal Minero | 33.674 |
+| Sabes.cl | 33.891 |
+| Portal Minero | 33.737 |
 | Radio Festival | 33.002 |
 | Radio Las Nieves | 32.618 |
-| Atacama Noticias | 32.342 |
+| Atacama Noticias | 32.499 |
 | Reuters | 31.542 |
-| Fundación Terram | 31.121 |
+| Fundación Terram | 31.151 |
 | Nostálgica | 31.115 |
 | Diario de Osorno | 30.722 |
 | Portal Frutícola | 30.437 |
@@ -95,33 +95,33 @@
 | El Contraste | 29.495 |
 | Radio Imagina | 29.227 |
 | Diario Antofagasta | 29.078 |
-| HolaNews | 28.550 |
-| UDLA | 27.859 |
-| Duplos | 27.434 |
+| HolaNews | 28.891 |
+| UDLA | 27.901 |
+| Duplos | 27.547 |
 | Edición Cero | 27.000 |
 | Clave 9 | 26.316 |
 | Vallenar Digital | 26.304 |
 | El Noticiero del Huasco | 26.208 |
-| Central Noticia | 25.958 |
-| Diario Regional Aysén | 25.926 |
+| Central Noticia | 26.041 |
+| Diario Regional Aysén | 25.993 |
 | Música y Noticias | 24.923 |
 | El Maule Informa | 24.079 |
-| El Diario de Santiago | 23.686 |
-| Ex-Ante | 23.032 |
+| El Diario de Santiago | 23.820 |
+| Ex-Ante | 23.062 |
 | El Maipo | 22.922 |
-| Diario de Puerto Montt | 22.733 |
+| Diario de Puerto Montt | 22.796 |
 | El Filtrador | 22.703 |
-| La Tercera | 22.188 |
+| La Tercera | 22.288 |
 | Maule Hoy | 22.073 |
 | La Nación | 21.545 |
 | El Clarín | 21.180 |
 | Diario Talca | 21.147 |
-| Alerta Noticias Temuco | 20.943 |
+| Alerta Noticias Temuco | 21.019 |
 | La Nación | 20.939 |
 | CauquenesNet | 20.478 |
 | Enfoque Digital O'Higgins | 20.468 |
 | Los Ríos al Día | 20.350 |
-| Diario Chiloé | 20.288 |
+| Diario Chiloé | 20.348 |
 | Timeline | 20.279 |
 | Linares en Línea | 20.151 |
 | Frontera Norte | 20.077 |
@@ -132,7 +132,7 @@
 | Diario El Pulso | 18.592 |
 | Araucanía Cuenta | 18.463 |
 | Hora de Noticias | 18.339 |
-| Diario El Centro | 18.168 |
+| Diario El Centro | 18.186 |
 | Radio Maray | 18.168 |
 | Diario Angamos | 18.061 |
 | El Marino (Pichilemu) | 18.029 |
@@ -141,16 +141,16 @@
 | Calama en Línea | 17.604 |
 | Senado de Chile | 17.512 |
 | Radio HVA | 16.510 |
-| Diario El Longino | 16.252 |
+| Diario El Longino | 16.325 |
 | Universidad Adolfo Ibáñez | 16.248 |
-| En Línea Maule | 15.982 |
-| Radio Comunicativa (Ovalle) | 15.873 |
+| En Línea Maule | 16.005 |
+| Radio Comunicativa (Ovalle) | 15.927 |
 | ITV Patagonia | 15.577 |
 | Libertad y Desarrollo | 15.460 |
 | Radio Nuevo Mundo | 14.998 |
 | Atacama en Línea | 14.852 |
 | Pontificia Universidad Católica de Valparaíso | 14.843 |
-| Chocale | 14.800 |
+| Chocale | 14.816 |
 | El América | 14.786 |
 | Radio Riquelme | 14.664 |
 | Prensa Ciudadana | 14.611 |
@@ -160,19 +160,19 @@
 | El Insular | 14.260 |
 | Cabrero en Línea | 14.119 |
 | Universidad de Concepción | 13.521 |
-| La Cuarta | 13.329 |
+| La Cuarta | 13.429 |
 | Portal Metropolitano | 13.130 |
 | Radio Universal | 13.000 |
-| En La Línea | 12.964 |
+| En La Línea | 12.999 |
+| El Periscopio | 12.628 |
 | Informa Al Minuto | 12.623 |
-| El Periscopio | 12.621 |
 | Portal RedSalud | 12.616 |
 | Arica Hoy | 12.540 |
 | Alerta Noticias | 12.445 |
 | La Voz de los que Sobran | 12.166 |
 | Radio Melodía | 12.042 |
 | Prensa Eventos | 11.862 |
-| Margamarga TV | 11.547 |
+| Margamarga TV | 11.614 |
 | Radio UdeC | 11.165 |
 | SENDA | 11.104 |
 | Novena Digital | 10.871 |
@@ -196,9 +196,9 @@
 | Radio Polar (Magallanes) | 8885 |
 | Gobierno Regional de Tarapacá | 8828 |
 | CIPER Chile | 8652 |
+| Chile País Minero | 8639 |
 | Mestizos Magazine | 8639 |
 | El Porteño | 8611 |
-| Chile País Minero | 8555 |
 | El Diario de La Araucanía | 8502 |
 | Futura FM (Talca) | 8255 |
 | aDiarioCR | 8244 |
@@ -207,6 +207,7 @@
 | Mala Espina | 7818 |
 | Diario Linares | 7799 |
 | Traiguén City | 7788 |
+| Radio La Señal | 7707 |
 | El Aconcagua | 7682 |
 | Diario Puerto Varas | 7660 |
 | Arica es Noticia | 7594 |
@@ -216,8 +217,7 @@
 | Radio Santa María | 7170 |
 | InfoSalmón | 7136 |
 | Revista NOS | 7129 |
-| Desenfoque | 7092 |
-| Radio La Señal | 7056 |
+| Desenfoque | 7110 |
 | Electrominería | 6956 |
 | Diario Cauquenes | 6887 |
 | Coquimbo Noticias | 6880 |
@@ -226,17 +226,17 @@
 | La Batalla de Maipú | 6809 |
 | La Fontana | 6707 |
 | Ecosistemas | 6635 |
-| Fast Check CL | 6400 |
+| Fast Check CL | 6425 |
 | Colegio Médico de Chile | 6337 |
 | UTE USACH Noticias | 6332 |
 | UTE USACH Noticias | 6332 |
+| Cooperativa | 6310 |
+| Reporte Agrícola | 6209 |
 | Colegio de Profesores | 6178 |
 | Tus Noticias | 6177 |
 | USM | 6170 |
-| Reporte Agrícola | 6118 |
 | Pichilemu News | 6077 |
 | Los Lagos al Día | 6044 |
-| Cooperativa | 5940 |
 | Valparaíso Noticias | 5903 |
 | La Opinión de Chiloé | 5858 |
 | SERNATUR | 5829 |
@@ -247,19 +247,20 @@
 | TV Canal 5 (Puerto Montt) | 5712 |
 | Disorder (magazine) | 5642 |
 | Sitio del Suceso | 5512 |
+| Diario El Día | 5489 |
 | Ministerio del Trabajo | 5424 |
+| Iquique Hoy | 5360 |
 | CR2 | 5350 |
-| Ñuble Digital | 5342 |
-| Iquique Hoy | 5335 |
+| Ñuble Digital | 5346 |
 | Ñuble Online | 5310 |
-| Diario El Día | 5274 |
 | Entérate Hoy | 5239 |
+| Enfoque Digital | 5238 |
 | Noticias Chiloé | 5184 |
 | Ministerio de Relaciones Exteriores | 5136 |
 | CEP Chile | 5079 |
 | Insular FM | 5058 |
 | El Coquimbano | 5005 |
-| Región Visual | 4983 |
+| Región Visual | 4988 |
 | Tarapacá Online | 4980 |
 | Gobierno UDD | 4922 |
 | Marketing4eCommerce Chile | 4913 |
@@ -269,7 +270,6 @@
 | Radio FM Centro | 4733 |
 | De Mar a Cordillera TV | 4725 |
 | Norte Online | 4704 |
-| Enfoque Digital | 4675 |
 | Chile Travel | 4559 |
 | Fresia Ahora | 4529 |
 | HDN | 4511 |
@@ -284,7 +284,7 @@
 | SUBTEL | 3857 |
 | PanoramicAysén | 3840 |
 | Ministerio de Economía | 3726 |
-| Sala de Prensa | 3699 |
+| Sala de Prensa | 3708 |
 | Diario Aconcagua | 3659 |
 | El Ovallino | 3561 |
 | Radio Puerta Norte | 3456 |
@@ -312,25 +312,25 @@
 | El Regionalista | 2126 |
 | Cuerpo de Bomberos de Santiago | 2113 |
 | Fundación Iguales | 2109 |
+| El Informador Chile | 2078 |
 | Consejo para la Transparencia | 2012 |
 | Espacio Público | 2000 |
 | Cruz Roja Chile | 1995 |
-| El Informador Chile | 1968 |
 | El Andacollino | 1932 |
 | El Cóndor | 1924 |
 | El Capo de Provincia | 1856 |
 | Defensoría de la Niñez | 1830 |
 | CONAF | 1825 |
+| Vértice TV (Puerto Montt) | 1781 |
 | Angol Noticias | 1740 |
-| Vértice TV (Puerto Montt) | 1730 |
 | MOP | 1716 |
 | ACERA | 1655 |
 | La Tendencia | 1608 |
+| Zona Zero | 1580 |
 | Diario Los Lagos | 1576 |
 | Ministerio de Bienes Nacionales | 1575 |
 | Museo Violeta Parra | 1572 |
 | Portal Informativo | 1567 |
-| Zona Zero | 1529 |
 | La Izquierda Diario | 1528 |
 | The Guardian | 1521 |
 | Colegio de Enfermeras | 1491 |
@@ -385,8 +385,8 @@
 | SENAPRED | 726 |
 | Agencia de Noticias | 703 |
 | Vergara 240 | 669 |
+| Publimetro | 630 |
 | Diario Estrategia | 605 |
-| Publimetro | 594 |
 | Contrapoder Chile | 585 |
 | ComunidadMujer | 567 |
 | El Desconcierto | 541 |

@@ -158,6 +158,80 @@ movimientos:
     nivel_impacto: indirecto
     organizacion_id: ministerio_economia
     nota: Ley N° 21.514 publicada el 3-dic-2022; anunciada en julio por Grau, Marcel y BancoEstado como parte del ecosistema Chile Apoya.
+  - tipo: recorte
+    descripcion: Anuncio del último presupuesto de Piñera con un recorte de 22,5% del gasto y US$700 millones de libre disposición
+    fecha: '2021-09-24'
+    monto: null
+    monto_nota: Total anunciado US$82.135 millones; -22,5% frente a la ejecución proyectada de 2021 y +3,7% frente a la ley 2021 original; déficit estructural proyectado de 11,5% a 3,9% del PIB. Sin monto en pesos del recorte
+    objetivo_declarado: Recuperar y volver a un cierto equilibrio fiscal
+    evento_id: null
+    fuente: terram-2021-09-24-legado-pinera-presupuesto-2022
+    fuentes_secundarias:
+      - dipres-2021-12-15-ley-21395-presupuesto-2022
+    partida: Tesoro Público
+    nivel_impacto: indirecto
+    organizacion_id: ministerio_hacienda
+    nota: Terram reproduce la cadena nacional y cita a El Mostrador (24-sep-2021). No confundir el total anunciado con el monto de la ley aprobada del ejercicio.
+  - tipo: recorte
+    descripcion: Rebaja por decreto 986 de la Provisión del Fondo Nacional de Desarrollo Regional
+    fecha: '2022-07-11'
+    monto: 1474804000
+    monto_nota: $1.474.804 miles de pesos según el PDF de Dipres, equivalentes a $1.474.804.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2022-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales · Provisión FNDR'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Decreto N° 986 del 11-jul-2022; primera de una serie de rebajas a la Provisión FNDR durante el ejercicio.
+  - tipo: recorte
+    descripcion: Rebaja por decreto 2025 de la Provisión FNDR vía Aporte Fiscal Libre
+    fecha: '2022-12-01'
+    monto: 11651035000
+    monto_nota: $11.651.035 miles de pesos según el PDF de Dipres, equivalentes a $11.651.035.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2022-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales · Provisión FNDR'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Decreto N° 2025, parte del ajuste de fin de ejercicio 2022.
+  - tipo: recorte
+    descripcion: Rebaja por decreto 2121 del Fondo de Apoyo Contingencia Regional
+    fecha: '2022-12-19'
+    monto: 12704675000
+    monto_nota: $12.704.675 miles de pesos según el PDF de Dipres, equivalentes a $12.704.675.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2022-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales · Fondo de Apoyo Contingencia Regional'
+    nivel_impacto: directo
+    organizacion_id: dipres
+    nota: Decreto N° 2121; contrasta con el decreto 1246, que había traspasado recursos al fondo en sentido inverso.
+  - tipo: redistribucion
+    descripcion: Reasignación por decreto 1246 desde el Fondo de Apoyo Contingencia Regional al Programa de Financiamiento Gobierno Regional
+    fecha: '2022-09-01'
+    monto: 21830067000
+    monto_nota: $21.830.067 miles al programa 020, con contrapartida exacta de -$21.830.067 miles en el Fondo de Apoyo Contingencia Regional. Monto neto cero
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2022-decretos-modificacion-transferencias-gore
+    partida: '050505 · Transferencias a Gobiernos Regionales'
+    nivel_impacto: institucional
+    organizacion_id: dipres
+    nota: Reasignación de monto neto cero; se registra fuera del flujo del Sankey para no contabilizar gasto nuevo.
+  - tipo: aumento
+    descripcion: Aporte por decreto 1604 para gastos en personal del Servicio de Gobierno Interior
+    fecha: '2022-10-20'
+    monto: 1495993000
+    monto_nota: $1.495.993 miles de pesos según el PDF de Dipres, equivalentes a $1.495.993.000
+    objetivo_declarado: null
+    evento_id: null
+    fuente: dipres-2022-decretos-modificacion-gobierno-interior
+    partida: '050201 · Servicio de Gobierno Interior · Gastos en Personal'
+    nivel_impacto: directo
+    organizacion_id: subsecretaria_interior
+    nota: Decreto N° 1604 del 20-oct-2022; el decreto 1173 del 03-ago había reasignado internamente $494.000 miles entre personal y transferencias.
 variaciones:
   - alcance: Gasto presupuestario 2022 frente a 2021
     variacion_texto: "-23,0% real (corriente -26,2%, capital +4,7%)"
@@ -186,3 +260,6 @@ orden_refs:
   - emol-2022-07-12-senado-estabilizacion-precios-luz
   - bcn-2022-12-03-ley-21514-fogape
   - emol-2022-07-14-anuncio-fogape-mipymes
+  - terram-2021-09-24-legado-pinera-presupuesto-2022
+  - dipres-2022-decretos-modificacion-transferencias-gore
+  - dipres-2022-decretos-modificacion-gobierno-interior

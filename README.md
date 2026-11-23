@@ -135,19 +135,19 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 
 > Generado por `pnpm run generate-index` (no editar a mano). Para el índice por evento ver `EVENTS_INDEX.md`.
 
-**Total de eventos:** 1927
+**Total de eventos:** 2052
 
-**Cobertura de fuentes:** 1456 de 1927 eventos con 3+ fuentes (471 requieren más fuentes para reducir sesgo)
+**Cobertura de fuentes:** 1583 de 2052 eventos con 3+ fuentes (469 requieren más fuentes para reducir sesgo)
 
 **Eventos por año:**
-- 2026: 1530
-- 2025: 84
-- 2024: 43
-- 2023: 34
-- 2022: 36
-- 2021: 20
-- 2020: 44
-- 2019: 46
+- 2026: 1613
+- 2025: 98
+- 2024: 44
+- 2023: 36
+- 2022: 37
+- 2021: 26
+- 2020: 52
+- 2019: 52
 - 2018: 5
 - 2017: 2
 - 2016: 5
@@ -158,6 +158,7 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - 2011: 5
 - 2010: 7
 - 2009: 6
+- 2007: 1
 - 2006: 3
 - 2005: 1
 - 2003: 1
@@ -169,43 +170,44 @@ Cada skill se auto-actualiza: si tocas su dominio, actualízala en la misma PR (
 - 1983: 1
 - 1982: 1
 - 1981: 2
+- 1980: 1
 - 1977: 1
 - 1976: 1
 - 1975: 5
 - 1973: 9
 - 1972: 1
-- 1971: 1
+- 1971: 3
 - 1969: 2
 
 **Temas más frecuentes (Top 10):**
-- Politica (683)
-- Justicia (546)
-- Economia (415)
-- Defensa y seguridad (363)
-- Derechos humanos (249)
-- Administración pública (238)
-- Gobierno y gestion presidencial (193)
-- Relaciones internacionales (191)
-- Proceso legislativo (178)
-- Finanzas publicas (170)
+- Politica (750)
+- Justicia (575)
+- Economia (440)
+- Defensa y seguridad (370)
+- Derechos humanos (265)
+- Administración pública (262)
+- Gobierno y gestion presidencial (238)
+- Relaciones internacionales (199)
+- Proceso legislativo (197)
+- Finanzas publicas (184)
 
 **Tipos de eventos más frecuentes (Top 10):**
-- accion (426)
-- declaracion (278)
-- investigacion (258)
-- reaccion (177)
-- resultado (170)
-- publicacion (164)
-- anuncio (138)
-- fallo_judicial (128)
-- entrevista (52)
-- votacion (44)
+- accion (458)
+- declaracion (292)
+- investigacion (270)
+- reaccion (189)
+- resultado (179)
+- publicacion (172)
+- anuncio (147)
+- fallo_judicial (133)
+- entrevista (60)
+- votacion (45)
 
 **Entidades registradas:**
-- Personas: 2886
-- Organizaciones: 1615
+- Personas: 2979
+- Organizaciones: 1747
 - Cifras: 44
-- Fuentes: 11156
+- Fuentes: 12491
 - Temas: 82
 <!-- AUTO-GENERATED:ESTADISTICAS:END -->
 

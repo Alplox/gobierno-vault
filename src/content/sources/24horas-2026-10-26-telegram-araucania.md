@@ -5,5 +5,9 @@ titulo: "Fiscalía abre investigación por grupos de Telegram que difundían fot
 autor: 24 Horas
 fecha: 2026-10-26
 url: https://www.24horas.cl/regiones/zona-sur/araucania/fiscalia-abre-investigacion-por-grupos-telegram-fotos-intimas-la-araucania
-notas: Nota regional sobre la apertura de la investigación por la difusión no consentida de imágenes íntimas de mujeres
+notas: "Nota regional sobre la apertura de la investigación por la difusión no consentida de imágenes íntimas de mujeres"
+respaldos:
+  - servicio: wayback
+    url: https://web.archive.org/web/20261109112555/https://www.24horas.cl/regiones/zona-sur/araucania/fiscalia-abre-investigacion-por-grupos-telegram-fotos-intimas-la-araucania
+    snapshot: "20261109112555"
 ---

@@ -118,6 +118,7 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 - BioBioChile: usa JS pesado; `defuddle.md` es el mejor método (no r.jina). Si defuddle falla, `browser` extrae el contenedor `article.post` limpio (~1.800 chars)
 - The Clinic: paywall suave; `paywallskip.com` o `r.jina.ai` funcionan para la portada. Para artículos con challenge, `browser-stealth --headed` pasa Turnstile y extrae el cuerpo; headless se queda en "Verificación de seguridad en curso"
 - El Ciudadano: rate-limit/WAF; `fetch-impersonate` o `archive.ph`. `browser-stealth --headed` pasa el bloqueo ("Sorry, you have been blocked"), `browser`/Puppeteer no. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
+- El Dínamo (`eldinamo.cl`): `read_url` devuelve solo navegación y el cuerpo no sale por los mirrors; la bajada (`meta description`) sí trae los datos del artículo (cifras, porcentajes), suficiente para verificar contra otros medios pero no para citar el cuerpo completo — para el contexto, usar la cobertura de otro medio
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
 - LUN (`lun.com`): las portadas históricas se leen con `https://www.lun.com/Pages/NewsDetail.aspx?dt=AAAA-MM-DD&SupplementId=0&PaginaId=1&EsAviso=0`. El `<title>` y la meta `description` listan el titular principal y los secundarios, y la cabecera del ejemplar trae la fecha impresa, así que sirve para verificar comparaciones virales de portadas sin OCR de la imagen
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
@@ -216,8 +217,34 @@ del evento muere con él. Herramientas para preservar y recuperar:
 desaparecer (breaking news, post de red social sujeto a borrado, nota de medio chico),
 snapshot a Wayback con Save Page Now: fetch a `<https://web.archive.org/save/<UR>L>`
 (~15 req/min anónimo; la URL canónica del snapshot queda en la URL final tras redirects).
-Anotar esa URL en el campo `notas` de la fuente — sin cambio de schema. La URL citada sigue
-siendo SIEMPRE la original.
+La referencia se guarda en el campo `respaldos[]` de la fuente (ver `data-yaml`): array de
+`{ servicio, url, fecha?, snapshot?, notas? }` que permite varias copias de la misma URL en
+distintos archivos (Wayback, archive.today, WACZ…). La URL citada sigue siendo SIEMPRE la original. `respaldos[].fecha` se escribe entre comillas: sin ellas YAML la convierte en Date y el build falla (`z.string()`); `archive-sources.mjs` ya las agrega.
+
+**Script `pnpm run archive-sources`** (`scripts/archive/archive-sources.mjs`) automatiza esa
+convención en tandas incrementales: por defecto es DRY-RUN (solo lista, sin red); `--apply`
+chequea `archive.org/wayback/available?url=` y reutiliza snapshot existente (así recupera fuentes
+ya muertas), si no llama a Save Page Now, y agrega la entrada a `respaldos[]` con edición
+quirúrgica (respeta CRLF, idempotente por `servicio` + `url`). Para apuntar a una fuente
+registrada en particular: `--id <id>` (exacto, acepta `.md`, varios IDs separados por coma o
+flags `--id` repetibles, o el ID como argumento suelto); ignora fecha/límite y re-procesa aunque
+ya tenga respaldo. Flags: `--since`, `--all`, `--limit`, `--id`, `--medio`, `--include-backed-up`, `--delay` (default 4 s, ~15 req/min anónimo),
+`--self-test`, `--migrate-only` (mueve el marker legacy `Respaldo Wayback:` de `notas` a
+`respaldos[]`, sin red). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
+`--apply` tiene efectos de red y escritura: usarlo en tandas pequeñas.
+
+**`pnpm run archive-new -- --apply`** (= `archive-sources --new`) es el cierre obligatorio
+cuando las fuentes se escriben a mano en vez de con `add-source` (tanda con metadata ya
+verificada por `fetch-content`). `--new` selecciona por git las fuentes **sin commitear**;
+`--new-days N` incluye además las agregadas en los últimos N días (default 0: este repo
+commitea varias tandas por día y una ventana amplia convertiría una tanda pequeña en un
+trabajo de red enorme). En ambos casos **ignora `--since`**:
+una fuente creada hoy puede documentar un hecho de 2025, y un filtro por `fecha:` del hecho
+la dejaría fuera (caso real: 9 fuentes del 16-nov-2025 quedaron sin `respaldos[]` por este
+motivo). Sigue respetando `--medio`, `--limit` (default 200 con `--new`) y el salto de fuentes
+ya respaldadas. `validate` emite un aviso —no error— con el comando exacto si detecta fuentes
+nuevas sin respaldo. En PowerShell, la lista de `--id` va entre comillas: sin ellas pnpm
+convierte las comas en array y el script selecciona 0 fuentes.
 
 ### Archivado interactivo de redes sociales
 
@@ -420,11 +447,16 @@ en `src/content/sources/<id>.md`, junto con el ID `medio-YYYY-MM-DD-slug` y el w
 - El mapeo dominio → medio se precarga desde `src/content/sources/*.md` + un diccionario base en el script.
 - Consulta el catálogo de sitemaps antes del fetch (ver "Catálogo de sitemaps → Integración
   con add-source.mjs").
+- **Toda fuente nueva nace con snapshot**: `add-source` reutiliza `archiveOne()` de
+  `archive-sources.mjs` ( disponibilidad de Wayback → Save Page Now ) e incluye la entrada en
+  `respaldos[]` del bloque generado y del `.md` creado con `--append`. Si Wayback falla, avisa
+  pero la fuente se crea igual; se completa con `pnpm run archive-sources -- --apply --since <fecha>`.
+  `--no-archive` omite el snapshot (casos excepcionales). No reemplaza nunca la URL original.
 - Flags: `--append` (crea `src/content/sources/<id>.md` directo), `--mirror` (fuerza
   espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
-  el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra).
+  el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra), `--no-archive`.
 - `--append` es interactivo (confirma medio, autor, fecha, tipo, notas y creación): no acepta
   respuestas por pipe de forma fiable; para tandas, genera el bloque sin `--append` o crea el
   `.md` a mano con datos ya verificados por `fetch-content` (revisar `medio`/`fecha`/`autor` igual).
 - Siempre imprime la URL del articulo original (nunca el mirror), y avisa si el ID ya existe.
-- Revisar siempre `medio`/`fecha`/`autor` del bloque generado antes de usar el wikilink: el mapeo por dominio falla con medios nuevos (`medio: ""`, caso sep-2026 `mediainfo.cl`/`quintavisionahora.cl`) y puede errar el medio (`eldinamo.cl` → La Segunda) o dejar `fecha: "null"` y filenames `*-null-*`; también limpiar entidades HTML en `titulo` (`&raquo;`, `&#36;` → `$`) y renombrar el `.md` al formato `medio-YYYY-MM-DD-slug` si el ID salió genérico.
+- Revisar siempre `medio`/`fecha`/`autor` del bloque generado antes de usar el wikilink: el mapeo por dominio falla con medios nuevos (`medio: ""`, caso sep-2026 `mediainfo.cl`/`quintavisionahora.cl`) y puede errar el medio (`eldinamo.cl` → La Segunda, `biobiochile.cl` → X (Twitter)), heredar una fecha falsa de migración (`radioagricultura.cl` → 2024-05-31; verificado nov-2026 contra un artículo con `/20250730/` en la URL y `Published Time` 30-jul-2025) o dejar `fecha: "null"` y filenames `*-null-*`; también limpiar entidades HTML en `titulo` (`&raquo;`, `&#36;` → `$`) y renombrar el `.md` al formato `medio-YYYY-MM-DD-slug` si el ID salió genérico.

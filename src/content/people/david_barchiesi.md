@@ -1,5 +1,6 @@
 ---
 nombre: David Antonio Barchiesi Chávez
+aliases: [Antonio Barchiesi]
 cargo: Asesor de comunicación estratégica de la Presidencia
 organizacion: presidencia_chile
 notas: Abogado UC (juró en 2017), nacido en Viña del Mar en 1990. Fundador del
