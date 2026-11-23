@@ -1,0 +1,4 @@
+/sources /events 301
+/sources/ /events 301
+/sources/:id/ /source?id=:id 301
+/sources/:id /source?id=:id 301

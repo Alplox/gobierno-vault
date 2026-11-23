@@ -122,6 +122,17 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 - Cancelable (bandera `gvSynthCancel` entre trozos + `cancelSynthesis()`/`stopWorker()` que matan el worker; el wasm en curso no se aborta, su resultado se descarta), un solo motor a la vez (`gvStopAll` corta Piper + speech), resaltado por bloques `gvBlockParts`/`gvSplitLong` con `.gv-tts-active` + `scrollIntoView`. Al cancelar se limpian `gvCacheKey`/`gvChunkUrls` y se ocultan los controles de salto (quedan trozos parciales: la próxima reproducción los reutiliza del LRU).
 - El TTS ya no necesita aislamiento: si algún día vuelve `COOP`+`COEP` (site-wide o no), los embeds de video se rompen igual que antes y Piper pasaría a multihilo sin cambiar código (el worker ya no sombrea hilos).
 
+## Ficha de fuente — página única `/source?id=`
+
+Para no exceder el límite de 20.000 archivos de Pages Free, no existen las ~12.500 páginas `/sources/[id]` ni el índice `/sources`: hay **una sola** `src/pages/source.astro` que recibe `?id=` y renderiza en cliente. En SSG `Astro.url.searchParams` no existe en runtime, por eso el render es cliente con `astro:page-load` + llamada directa.
+
+- Los datos no van embebidos: `src/pages/data/sources.json.ts` genera **un** `/data/sources.json` (~5,7 MB) que la ficha descarga bajo demanda con `fetch()` (HTML de `/source` ~52 KB). El payload incluye registro de fuentes + `getSourceToEventsMap` + títulos de eventos, cacheado en el módulo con `pending`/`cached`.
+- Acceso: cada entrada de "Referencias y Fuentes" del detalle de evento lleva `Ficha de la fuente` → `/source?id=<id>` (usar `entities.fuentesAll[i]`, que se alinea 1:1 con `refs[i]` de `resolveReferences`). `SourceRef.astro` también apunta a `/source?id=`. El link "Fuentes" se quitó del footer (`Base.astro`).
+- `public/_redirects`: `/sources/:id` y `/sources/:id/` → `/source?id=:id` (301), y `/sources` → `/events`. Estáticos antes que dinámicos.
+- `getSourceToEventsMap()` devuelve IDs de evento **con ruta** (`2020/04/20200406-1`): normalizar con `split('/').pop()` antes de buscar en el mapa de títulos, o dan cero eventos relacionados.
+- Algunas fuentes tienen `fecha` inválida: `new Date(...).toISOString()` revienta el build con `Invalid time value`; guardar con `Number.isNaN(d.getTime())`.
+- La ficha no lleva `ShareButtons` (la URL canónica SSG no incluye el query).
+
 ## Referencias inline compactas
 
 `SRef` conserva siempre el tooltip. En las fichas densas de `/sueldos`, envolver la referencia en `.sueldos-inline-ref` para neutralizar el `vertical-align: super` del `<sup>` y evitar que el número se monte sobre la línea anterior; el enlace y el scroll a `#ref-N` no cambian.
@@ -140,7 +151,7 @@ SSG sin `Astro.url.searchParams` en runtime — filtros se aplican en cliente so
 
 ## Botones de compartir
 
-`ShareButtons.astro` (`url` + `title` props) es la única pieza de compartir: botón nativo (`navigator.share`, oculto por defecto y revelado por JS si existe), "Copiar enlace" (clipboard con fallback `execCommand`, feedback `copy → check` con label y `role="status"`), y enlaces intents a X, Facebook, WhatsApp y Telegram. Va en las 9 páginas de ficha/sección: evento (en la fila de acciones, junto a "Ver en Markdown"), `/people/[id]`, `/organizations/[id]`, `/topics/[id]`, `/sources/[id]`, `/stats/[concepto]`, `/sueldos`, `/gabinete`, `/graph`.
+`ShareButtons.astro` (`url` + `title` props) es la única pieza de compartir: botón nativo (`navigator.share`, oculto por defecto y revelado por JS si existe), "Copiar enlace" (clipboard con fallback `execCommand`, feedback `copy → check` con label y `role="status"`), y enlaces intents a X, Facebook, WhatsApp y Telegram. Va en las 8 páginas de ficha/sección: evento (en la fila de acciones, junto a "Ver en Markdown"), `/people/[id]`, `/organizations/[id]`, `/topics/[id]`, `/stats/[concepto]`, `/sueldos`, `/gabinete`, `/graph`. La ficha de fuente ya no es una página propia (ver § "Ficha de fuente").
 
 - El `<script>` del componente usa delegación en `document` con guard `window.__gvShareInit` (el bundle corre una sola vez y ClientRouter reemplaza el DOM: nunca cachear nodos, buscar por `[data-share-*]` en cada evento).
 - URL canónica siempre absoluta y calculada en build: `new URL(Astro.url.pathname, Astro.site).href` (en páginas estáticas literales como `/sueldos`, `new URL('/sueldos', Astro.site)`), nunca `location.href` en el href SSR.
