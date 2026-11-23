@@ -2049,7 +2049,7 @@
 - [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
-- [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 11 fuentes
+- [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 12 fuentes
 - [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 101 fuentes
 - [2026/11/20261111-8 - Reportajes Teletrece reconstruye el chat de ministros por el 18-O: Arrau pide prudencia, Barros se opone a callar y Rincón advierte de 'autogoles'](src/content/events/2026/11/20261111-8.md) — 7 fuentes
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
@@ -2094,6 +2094,7 @@
 - [2026/11/20261120-3 - Senado despacha el Presupuesto 2027 a la Cámara tras tres jornadas: rechaza la partida de Agricultura por doble empate y Campos se niega a disculparse](src/content/events/2026/11/20261120-3.md) — 8 fuentes
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
+- [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 9 fuentes
 
 ## 2025
 
