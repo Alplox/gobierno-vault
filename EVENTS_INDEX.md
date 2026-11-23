@@ -2081,7 +2081,7 @@
 - [2026/11/20261117-9 - Comisión despacha a Sala el proyecto de Entornos Digitales Seguros que fija 14 años como edad mínima para redes sociales](src/content/events/2026/11/20261117-9.md) — 7 fuentes
 - [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
 - [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión se concreta esa noche](src/content/events/2026/11/20261118-2.md) — 23 fuentes
-- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 64 fuentes
+- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 70 fuentes
 - [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 10 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
 - [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
@@ -2356,6 +2356,7 @@
 
 - [2020/01/20200102-1 - Manifestaciones en Valparaíso en apoyo a Matías Orellana, profesor que perdió un ojo por una lacrimógena en Año Nuevo](src/content/events/2020/01/20200102-1.md) — 12 fuentes
 - [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — 1 fuente
+- [2020/01/20200129-1 - Muere Jorge Mora Herrera, hincha de Colo-Colo, atropellado por un camión de Carabineros a la salida del Estadio Monumental](src/content/events/2020/01/20200129-1.md) — 15 fuentes
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
 - [2020/03/20200306-1 - Muere Cristián Valdebenito, alcanzado por una bomba lacrimógena de Carabineros en Plaza Dignidad: primera víctima fatal del año en las protestas](src/content/events/2020/03/20200306-1.md) — 2 fuentes

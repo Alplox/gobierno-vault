@@ -244,7 +244,10 @@ la dejaría fuera (caso real: 9 fuentes del 16-nov-2025 quedaron sin `respaldos[
 motivo). Sigue respetando `--medio`, `--limit` (default 200 con `--new`) y el salto de fuentes
 ya respaldadas. `validate` emite un aviso —no error— con el comando exacto si detecta fuentes
 nuevas sin respaldo. En PowerShell, la lista de `--id` va entre comillas: sin ellas pnpm
-convierte las comas en array y el script selecciona 0 fuentes.
+convierte las comas en array y el script selecciona 0 fuentes. Save Page Now devuelve HTTP 523
+sin URL canónica para posts públicos de X e Instagram (sin snapshot previo en
+`archive.org/wayback/available?url=`); verificar el contenido con FxTwitter/oEmbed/r.jina.ai,
+anotar el fallo en `notas` de la fuente y dejar el aviso de `validate`.
 
 ### Archivado interactivo de redes sociales
 
