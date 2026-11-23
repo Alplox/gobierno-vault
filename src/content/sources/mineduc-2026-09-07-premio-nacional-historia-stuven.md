@@ -9,6 +9,6 @@ notas: "Comunicado del lunes 07-09-2026. Registra la decisión unánime del jura
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261004013122/https://www.mineduc.cl/ana-maria-stuven-vattier-es-reconocida-con-el-premio-nacional-de-historia-2026/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261004013122"
 ---

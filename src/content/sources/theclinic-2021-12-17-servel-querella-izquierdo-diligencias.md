@@ -8,6 +8,6 @@ url: https://www.theclinic.cl/2021/12/17/abogados-servel-prision-preventiva-seba
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20250218193436/https://www.theclinic.cl/2021/12/17/abogados-servel-prision-preventiva-sebastian-izquierdo/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20250218193436"
 ---

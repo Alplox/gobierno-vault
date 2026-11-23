@@ -9,6 +9,6 @@ notas: "Fecha verificada contra Published Time del artículo (16-nov-2021 23:50 
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122211307/https://www.cnnchile.com/elecciones2021/trastienda-debate-presidencial-anatel
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122211307"
 ---

@@ -9,6 +9,6 @@ notas: "Art√≠culo del minisitio Augusto Pinochet Ugarte, sin fecha de publicaci√
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261031004916/https://www.memoriachilena.gob.cl/602/w3-article-92403.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261031004916"
 ---

@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260516232124/https://www.lanacion.cl/alumno-del-liceo-lastarria-de-providencia-termino-quemado-luego-de-lanzar-molotov-en-incidentes/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260516232124"
 ---

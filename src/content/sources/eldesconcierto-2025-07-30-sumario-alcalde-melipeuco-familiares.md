@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260715035721/https://eldesconcierto.cl/2025/07/30/contraloria-inicia-sumario-contra-alcalde-de-melipeuco-tras-contratos-a-4-familiares-e-irregularidades-en-cuentas
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260715035721"
 ---

@@ -8,6 +8,6 @@ url: https://www.lanacion.cl/congreso-despacha-a-ley-reajuste-del-sector-publico
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260215052036/https://www.lanacion.cl/congreso-despacha-a-ley-reajuste-del-sector-publico-y-elimina-norma-de-amarre/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260215052036"
 ---

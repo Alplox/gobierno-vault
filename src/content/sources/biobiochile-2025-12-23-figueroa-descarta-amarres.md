@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251223155650/https://www.biobiochile.cl/noticias/nacional/chile/2025/12/23/figueroa-pc-descarta-amarres-y-acusa-exageracion-funcionarios-no-pueden-quedar-a-la-buena-de-dios.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251223155650"
 ---

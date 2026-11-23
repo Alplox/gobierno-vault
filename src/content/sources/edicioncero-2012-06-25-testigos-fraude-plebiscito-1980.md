@@ -9,6 +9,6 @@ notas: "Publicado 25-06-2012 reproduciendo el artículo de Cambio21. Suma las re
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260714130033/https://edicioncero.cl/2012/06/testigos-confirman-fraude-en-plebiscito-del-80-todo-estaba-manejado-hasta-resultado-final/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260714130033"
 ---

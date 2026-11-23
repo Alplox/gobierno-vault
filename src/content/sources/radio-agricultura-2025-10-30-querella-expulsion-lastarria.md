@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251031015048/https://www.radioagricultura.cl/noticias/nacional/providencia-anuncia-querella-y-posible-expulsion-tras-violentos-disturbios-en-liceo-lastarria_20251030/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251031015048"
 ---

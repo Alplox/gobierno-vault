@@ -157,7 +157,13 @@ export function upsertRespaldos(raw, entry) {
   if (added) items.push(newEntry);
   if (!added && !old.length) return { ok: true, changed: false, migrated: 0, raw };
 
-  const blockLines = YAML.stringify({ respaldos: items }, { lineWidth: 0 }).trim().split('\n');
+  // `respaldos[].fecha` es z.string() en content.config.ts, pero un YAML date
+  // sin comillas se parsea como Date y astro build falla. YAML.stringify no lo
+  // cita: forzar comillas para fechas ISO en la salida del bloque.
+  const blockLines = YAML.stringify({ respaldos: items }, { lineWidth: 0 })
+    .trim()
+    .split('\n')
+    .map((l) => l.replace(/^(\s*fecha:\s*)(\d{4}-\d{2}-\d{2})(\s*)$/, '$1"$2"$3'));
   const lines = fm.split(/\r?\n/);
   // Al quitar un marker legacy que era la última línea, queda un renglón vacío
   // colgando: se poda antes de insertar `respaldos:` para no dejar líneas huecas.

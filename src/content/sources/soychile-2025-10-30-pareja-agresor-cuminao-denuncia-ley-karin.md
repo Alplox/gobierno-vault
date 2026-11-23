@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251117205153/https://www.soychile.cl/temuco/sociedad/2025/10/30/926986/demandan-a-alcalde.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251117205153"
 ---

@@ -9,6 +9,6 @@ notas: "Declaraciones de Vivanco al llegar a votar al Colegio Las Condes;reitera
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251117000855/https://www.biobiochile.cl/noticias/nacional/chile/2025/11/16/exministra-angela-vivanco-acusa-show-mediatico-en-caso-muneca-bielorrusa-he-sido-maltratada.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251117000855"
 ---

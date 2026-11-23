@@ -9,6 +9,6 @@ notas: "Consigna la elección por unanimidad y transcribe las declaraciones de l
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260909014355/https://www.radioagricultura.cl/noticias/nacional/ana-maria-stuven-vattier-es-galardonada-con-el-premio-nacional-de-historia-2026_20260908/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260909014355"
 ---

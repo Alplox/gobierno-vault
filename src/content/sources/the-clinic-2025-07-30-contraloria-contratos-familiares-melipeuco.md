@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122210105/https://www.theclinic.cl/2025/07/30/contraloria-revela-que-alcalde-de-melipeuco-aprobo-renovar-contratos-de-la-madre-de-su-hija-y-su-cunado-con-millonarios-sueldos/amp/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122210105"
 ---

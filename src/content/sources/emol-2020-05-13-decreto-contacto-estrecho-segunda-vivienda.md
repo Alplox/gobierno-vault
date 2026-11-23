@@ -9,6 +9,6 @@ notas: "Nota del 13 de mayo de 2020 sobre el decreto publicado ese día en el Di
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20250412143138/https://www.emol.com/noticias/Nacional/2020/05/13/986001/Decreto-contacto-estrecho-segunda-vivienda.html
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20250412143138"
 ---

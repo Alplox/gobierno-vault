@@ -63,4 +63,4 @@ Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/s
 
 `/llm.txt` (alias `/llms.txt`) generado por `src/lib/llmIndex.ts` (`src/pages/llm.txt.ts`) con índice completo; `/events/AAAA/ID.md` sirve markdown fuente; `/data/{entities,sources,topics,colectivos,sectores}.yaml` sirve YAML crudo (`ALLOWED` en `src/pages/data/[name].yaml.ts`). Footer enlaza a `/llm.txt`.
 
-Si falla el build, revisar frontmatter YAML y wikilinks rotos (ver validación arriba).
+Si falla el build, revisar frontmatter YAML y wikilinks rotos (ver validación arriba). Para `InvalidContentEntryDataError`, `pnpm exec astro sync` valida solo los esquemas (~20s) sin el build completo: causas vistas son `respaldos[].fecha` sin comillas (YAML Date vs `z.string()`) y `autor:` vacío (`null` vs string); `pnpm run validate` no detecta ninguna de las dos.

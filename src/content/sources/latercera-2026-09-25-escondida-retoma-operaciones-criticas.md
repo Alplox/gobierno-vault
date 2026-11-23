@@ -9,6 +9,6 @@ notas: "Publicada el 25-sep-2026. Recoge el comunicado de BHP sobre la reanudaci
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260929072343/https://www.latercera.com/pulso/noticia/minera-escondida-avanza-en-retomar-operaciones-tras-accidente-fatal-y-trabajadores-critican-a-la-empresa/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260929072343"
 ---

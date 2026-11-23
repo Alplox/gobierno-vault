@@ -8,6 +8,6 @@ url: https://www.minsal.cl/presidente-de-la-republica-nombra-a-dr-enrique-paris-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20231201122210/https://www.minsal.cl/presidente-de-la-republica-nombra-a-dr-enrique-paris-como-ministro-de-salud/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20231201122210"
 ---

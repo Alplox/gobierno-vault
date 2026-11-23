@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122232427/https://www.bloomberglinea.com/latinoamerica/chile/crisis-de-codelco-reaviva-debate-sobre-la-entrada-de-capital-privado-a-la-minera-estatal-de-chile
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122232427"
 ---

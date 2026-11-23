@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122202322/https://www.cnnchile.com/pais/ministra-macarena-lobos-descarta-amarres-parece-mas-discurso-de-campana-que-de-gobierno-electo
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122202322"
 ---

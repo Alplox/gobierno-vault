@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122210153/https://surinformado.cl/alcalde-de-melipeuco-ley-karin/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122210153"
 ---

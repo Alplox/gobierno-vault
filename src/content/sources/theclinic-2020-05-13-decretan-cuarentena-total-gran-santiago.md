@@ -8,6 +8,6 @@ notas: "Cobertura del 13 de mayo de 2020 con el detalle de las medidas que rigen
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20210727131457/https://www.theclinic.cl/2020/05/13/decretan-cuarentena-total-en-el-gran-santiago-y-seis-comunas-aledanas-a-la-capital/
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20210727131457"
 ---

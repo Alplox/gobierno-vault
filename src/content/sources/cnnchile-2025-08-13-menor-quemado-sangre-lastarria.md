@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122194637/https://www.cnnchile.com/pais/menor-resulta-quemado-por-bomba-molotov-en-incidentes-en-el-liceo-lastarria-ademas-se-encontro-sangre-en-el-establecimiento
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122194637"
 ---

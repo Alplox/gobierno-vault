@@ -8,6 +8,6 @@ url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2025/08/1
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251003013140/https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2025/08/13/bellolio-por-incidentes-con-molotovs-en-el-liceo-lastarria-hay-grupos-anarquicos-de-ultraizquierda.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251003013140"
 ---

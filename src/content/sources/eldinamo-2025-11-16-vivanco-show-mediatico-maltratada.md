@@ -9,6 +9,6 @@ notas: "Vivanco habló al llegar a votar al Colegio Las Condes;Criticó el allan
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260121154149/https://www.eldinamo.cl/pais/2025/11/16/es-un-show-mediatico-los-descargos-de-angela-vivanco-por-trama-bielorrusa-donde-acusa-haber-sido-maltratada/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260121154149"
 ---

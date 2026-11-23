@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261113080538/https://www.eldinamo.cl/politica/2026/11/11/cancilleria-defiende-nombramiento-de-steinert-en-paraguay-es-la-persona-adecuada-para-combatir-el-crimen-organizado/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261113080538"
 ---

@@ -8,6 +8,6 @@ url: https://www.eldinamo.cl/pais/2021/08/03/gobierno-anuncio-modificaciones-al-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20250112203513/https://www.eldinamo.cl/pais/2021/08/03/gobierno-anuncio-modificaciones-al-mepco-por-alza-en-el-precio-de-las-gasolinas/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20250112203513"
 ---

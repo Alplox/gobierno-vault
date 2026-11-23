@@ -8,6 +8,6 @@ url: https://www.cnnchile.com/pais/sebastian-izquierdo-arresto-domiciliario-refo
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260513105200/https://www.cnnchile.com/pais/sebastian-izquierdo-arresto-domiciliario-reformalizacion/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260513105200"
 ---

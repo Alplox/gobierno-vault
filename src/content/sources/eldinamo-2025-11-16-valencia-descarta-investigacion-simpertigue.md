@@ -9,6 +9,6 @@ notas: "Valencia tras votar en las elecciones 2025;señala que el Ministerio Pú
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260114140244/https://www.eldinamo.cl/pais/2025/11/16/trama-bielorrusa-fiscal-angel-valencia-descarta-abrir-investigacion-de-oficio-contra-diego-simpertigue/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260114140244"
 ---

@@ -8,6 +8,6 @@ url: https://www.eldinamo.cl/politica/2021/12/17/servel-prepara-querella-contra-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20240223042503/https://www.eldinamo.cl/politica/2021/12/17/servel-prepara-querella-contra-sebastian-izquierdo-y-pedira-su-prision-preventiva/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20240223042503"
 ---

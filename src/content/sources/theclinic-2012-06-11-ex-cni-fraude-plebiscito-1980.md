@@ -9,6 +9,6 @@ notas: "Despacho de EFE del 11-06-2012. Relato de Jorgelino Vergara sobre la ord
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20220712030847/https://www.theclinic.cl/2012/06/11/ex-cni-revela-que-hubo-fraude-en-plebiscito-de-1980/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20220712030847"
 ---

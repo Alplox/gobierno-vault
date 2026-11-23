@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261112032044/https://www.latercera.com/politica/noticia/derecha-izquierda-y-el-pdg-rechazan-nombramiento-de-steinert-como-agregada-de-seguridad-en-paraguay/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261112032044"
 ---

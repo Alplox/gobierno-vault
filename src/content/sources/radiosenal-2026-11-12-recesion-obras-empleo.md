@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122221356/https://radiolasenal.cl/recesion-tecnica-economistas-proponen-acelerar-obras-publicas-y-subsidiar-el-empleo
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122221356"
 ---

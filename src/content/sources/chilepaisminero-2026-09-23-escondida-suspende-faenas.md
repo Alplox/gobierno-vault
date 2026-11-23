@@ -9,6 +9,6 @@ notas: "Nota del 23-sep-2026. Identifica al fallecido como Carlos Rodríguez Sot
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122184436/https://chilepaisminero.com/escondida-suspende-faenas-mina-tras-muerte-de-un-trabajador
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122184436"
 ---

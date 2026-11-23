@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122232503/https://regionalista.cl/2026/11/que-no-pase-gato-por-liebre-sindicato-chuquicamata-cuestiona-a-jorge-quiroz-por-sus-dichos-sobre-codelco
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122232503"
 ---

@@ -9,6 +9,6 @@ notas: "Comunicado del 31 de marzo de 2020 sobre el despacho del proyecto por el
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20221012202939/https://www.mintrab.gob.cl/congreso-aprueba-proyecto-de-proteccion-al-empleo-que-beneficiara-a-mas-de-47-millones-de-trabajadores/
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20221012202939"
 ---

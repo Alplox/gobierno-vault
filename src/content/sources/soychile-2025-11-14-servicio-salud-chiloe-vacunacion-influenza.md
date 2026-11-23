@@ -8,6 +8,6 @@ url: https://www.soychile.cl/chiloe/sociedad/2025/11/14/929004/servicio-salud-ch
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251227121951/https://www.soychile.cl/chiloe/sociedad/2025/11/14/929004/servicio-salud-chiloe-vacunacion-influenza.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251227121951"
 ---

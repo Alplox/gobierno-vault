@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251112150139/https://www.latercera.com/nacional/noticia/municipalidad-de-providencia-presenta-querella-criminal-contra-estudiantes-que-lanzaron-bombas-molotov-en-el-liceo-lastarria/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251112150139"
 ---

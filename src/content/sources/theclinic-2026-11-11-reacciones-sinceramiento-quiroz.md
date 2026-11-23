@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261112055427/https://www.theclinic.cl/2026/11/11/desde-peticiones-de-renuncia-hasta-demanda-por-medidas-reactivadoras-provoco-el-sinceramiento-de-quiroz-sobre-que-el-pais-esta-en-recesion/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261112055427"
 ---

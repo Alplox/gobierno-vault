@@ -9,6 +9,6 @@ notas: "PDF de 10 páginas, CVE 1748546, edición N° 42.625 del 6 de abril de 2
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20230203225305/https://www.diariooficial.interior.gob.cl/publicaciones/2020/04/06/42625/01/1748546.pdf
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20230203225305"
 ---

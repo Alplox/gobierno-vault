@@ -8,6 +8,6 @@ url: https://auroranoticias.cl/actualidad/disturbios-en-liceo-lastarria-estudian
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260515042907/https://auroranoticias.cl/actualidad/disturbios-en-liceo-lastarria-estudiante-resulto-quemado-con-molotov/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260515042907"
 ---

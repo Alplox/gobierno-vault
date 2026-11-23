@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251117154710/https://www.servel.cl/wp-content/uploads/2025/11/Boletin-Escrutinio-PR-251116-2030_M1.pdf
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251117154710"
 ---

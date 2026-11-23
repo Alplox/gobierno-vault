@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261112070357/https://www.biobiochile.cl/noticias/nacional/chile/2026/11/11/los-premios-de-consuelo-que-kast-critico-a-boric-y-que-hoy-le-reprochan-a-su-gobierno.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261112070357"
 ---

@@ -9,6 +9,6 @@ notas: "Fecha del artículo verificada contra Published Time (16-nov-2021 19:14 
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122210544/https://www.cnnchile.com/pais/registro-civil-licitacion-aisino-china
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122210544"
 ---

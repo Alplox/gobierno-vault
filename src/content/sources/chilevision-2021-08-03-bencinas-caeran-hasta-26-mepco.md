@@ -8,6 +8,6 @@ url: https://www.chilevision.cl/noticias/nacional/bencinas-caeran-hasta-26-por-l
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122211952/https://www.chilevision.cl/noticias/nacional/bencinas-caeran-hasta-26-por-litro-tras-modificacion-de-los-parametros-del-mepco
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122211952"
 ---

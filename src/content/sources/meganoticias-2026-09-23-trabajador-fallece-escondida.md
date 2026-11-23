@@ -9,6 +9,6 @@ notas: "Publicada a las 16:01 del 23-sep-2026. Confirma el despliegue del equipo
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122184600/https://www.meganoticias.cl/nacional/532338-trabajador-fallece-minera-escondida-norte-region-de-antofagasta-sernageomin-accidente-23-09-2026.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122184600"
 ---

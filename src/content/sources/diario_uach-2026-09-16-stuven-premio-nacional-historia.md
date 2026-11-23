@@ -9,6 +9,6 @@ notas: "Publicado 16-09-2026. Enfatiza el rol del rector de la Universidad Austr
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122182308/https://diario.uach.cl/ana-maria-stuven-vattier-es-reconocida-con-el-premio-nacional-de-historia-2026
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122182308"
 ---

@@ -8,6 +8,6 @@ url: https://www.eldinamo.cl/pais/2021/11/15/registro-civil-deja-sin-efecto-lici
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20211117190702/https://www.eldinamo.cl/pais/2021/11/15/registro-civil-deja-sin-efecto-licitacion-de-pasaportes-y-cedulas-adjudicada-a-firma-china/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20211117190702"
 ---

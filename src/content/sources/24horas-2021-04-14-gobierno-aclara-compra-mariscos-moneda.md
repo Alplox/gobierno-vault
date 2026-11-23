@@ -8,6 +8,6 @@ url: https://www.24horas.cl/nacional/gobierno-aclara-supuesta-compra-millonaria-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20210416011223/https://www.24horas.cl/nacional/gobierno-aclara-supuesta-compra-millonaria-de-mariscos-para-consumo-en-la-moneda-4732684
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20210416011223"
 ---

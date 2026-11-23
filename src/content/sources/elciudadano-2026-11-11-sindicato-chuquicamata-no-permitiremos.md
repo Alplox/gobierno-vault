@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261113060814/https://www.elciudadano.com/chile/no-vamos-a-permitir-que-privaticen-codelco-justificandose-en-los-errores-que-el-gobierno-ha-cometido-en-materia-economica-sindicato-chuquicamata/11/11/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261113060814"
 ---

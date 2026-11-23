@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260521012445/https://loslagosnoticias.cl/2025/11/03/servicio-de-salud-chilo-llama-a-reforzar-medidas-de-autocuidado-ante-aumento-de-enfermedades-respiratorias/32710
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260521012445"
 ---

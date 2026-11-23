@@ -8,6 +8,6 @@ notas: "Comunicación del 20 de mayo de 2020 que confirma que la cuarentena tota
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260512001921/https://www.subturismo.gob.cl/2020/05/20/gobierno-renueva-la-cuarentena-total-en-42-comunas-del-pais/
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20260512001921"
 ---

@@ -8,6 +8,6 @@ url: https://www.hacienda.cl/noticias-y-eventos/noticias/-ministerio-de-hacienda
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260716050611/https://www.hacienda.cl/noticias-y-eventos/noticias/-ministerio-de-hacienda-informa-modificacion-de-los-parametros-del-mepco-
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260716050611"
 ---

@@ -8,6 +8,6 @@ url: https://www.emol.com/noticias/Nacional/2025/10/30/1181951/lastarria-disturb
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251031164831/https://www.emol.com/noticias/Nacional/2025/10/30/1181951/lastarria-disturbios-querella-providencia.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251031164831"
 ---

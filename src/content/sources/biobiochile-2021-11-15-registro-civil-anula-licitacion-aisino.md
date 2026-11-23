@@ -8,6 +8,6 @@ url: https://www.biobiochile.cl/noticias/nacional/chile/2021/11/15/registro-civi
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260710201121/https://www.biobiochile.cl/noticias/nacional/chile/2021/11/15/registro-civil-anula-licitacion-ganada-por-empresa-china-para-nuevos-pasaportes-y-cedulas.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260710201121"
 ---

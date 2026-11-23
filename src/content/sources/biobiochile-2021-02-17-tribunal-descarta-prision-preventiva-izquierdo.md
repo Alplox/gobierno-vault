@@ -8,6 +8,6 @@ url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2021/02/1
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260717145831/https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2021/02/17/tribunal-descarta-prision-preventiva-para-sebastian-izquierdo-tras-audiencia-de-reformalizacion.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260717145831"
 ---

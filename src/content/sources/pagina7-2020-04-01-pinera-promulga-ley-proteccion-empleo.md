@@ -8,6 +8,6 @@ notas: "Crónica de la promulgación del 1 de abril de 2020 (Agencia Uno); repro
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261123011137/https://www.pagina7.cl/actualidad/sebastian-pinera-promulga-ley-de-proteccion-al-empleo-en-medio-de-pandemia-de-covid-19
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20261123011137"
 ---

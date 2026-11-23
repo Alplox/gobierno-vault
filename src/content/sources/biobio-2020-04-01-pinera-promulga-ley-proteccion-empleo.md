@@ -9,6 +9,6 @@ notas: "Crónica de la promulgación del 1 de abril de 2020; consigna la indicac
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260513074318/https://www.biobiochile.cl/noticias/economia/actualidad-economica/2020/04/01/presidente-pinera-promulga-ley-de-proteccion-al-empleo-ante-crisis-del-covid-19.shtml
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20260513074318"
 ---

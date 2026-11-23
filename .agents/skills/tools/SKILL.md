@@ -219,7 +219,7 @@ snapshot a Wayback con Save Page Now: fetch a `<https://web.archive.org/save/<UR
 (~15 req/min anónimo; la URL canónica del snapshot queda en la URL final tras redirects).
 La referencia se guarda en el campo `respaldos[]` de la fuente (ver `data-yaml`): array de
 `{ servicio, url, fecha?, snapshot?, notas? }` que permite varias copias de la misma URL en
-distintos archivos (Wayback, archive.today, WACZ…). La URL citada sigue siendo SIEMPRE la original.
+distintos archivos (Wayback, archive.today, WACZ…). La URL citada sigue siendo SIEMPRE la original. `respaldos[].fecha` se escribe entre comillas: sin ellas YAML la convierte en Date y el build falla (`z.string()`); `archive-sources.mjs` ya las agrega.
 
 **Script `pnpm run archive-sources`** (`scripts/archive/archive-sources.mjs`) automatiza esa
 convención en tandas incrementales: por defecto es DRY-RUN (solo lista, sin red); `--apply`

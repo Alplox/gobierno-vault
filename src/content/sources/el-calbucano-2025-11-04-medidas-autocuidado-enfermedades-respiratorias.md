@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251209023132/https://www.elcalbucano.cl/2025/11/servicio-de-salud-chiloe-llama-a-reforzar-medidas-de-autocuidado/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251209023132"
 ---

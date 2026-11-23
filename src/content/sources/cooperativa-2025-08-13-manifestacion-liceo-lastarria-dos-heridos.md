@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122195238/https://www.cooperativa.cl/noticias/pais/policial/manifestacion-en-liceo-lastarria-causo-dos-heridos/2025-08-13/130054.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122195238"
 ---

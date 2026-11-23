@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122221324/https://lahora.cl/cronica/2026/11/11/pueden-llamarlo-una-recesion-ministro-quiroz-asume-complejo-panorama-economico-del-pais
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122221324"
 ---

@@ -9,6 +9,6 @@ notas: "Publicado 12-06-2012 16:20 -04. Entrevista al periodista Javier Rebolled
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122182643/https://www.cnnchile.com/pais/libro-devela-irregularidades-del-plebiscito-de-1980-y-violaciones-a-los-ddhh
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122182643"
 ---

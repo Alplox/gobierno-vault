@@ -8,6 +8,6 @@ url: https://www.pagina7.cl/actualidad/gobierno-aclaro-polemica-compra-millonari
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122212750/https://www.pagina7.cl/actualidad/gobierno-aclaro-polemica-compra-millonaria-de-productos-del-mar-para-la-moneda
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122212750"
 ---

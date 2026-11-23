@@ -9,6 +9,6 @@ notas: "Comunicado oficial del 13 de mayo de 2020 con el anuncio del ministro Ja
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20231208131518/https://www.minsal.cl/ministerio-de-salud-decreta-cuarentena-total-para-la-ciudad-de-santiago-y-seis-comunas-aledanas/
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20231208131518"
 ---

@@ -8,6 +8,6 @@ url: https://www.cnnchile.com/pais/enrique-paris-nuevo-ministro-salud/
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122214644/https://www.cnnchile.com/pais/enrique-paris-nuevo-ministro-salud
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122214644"
 ---

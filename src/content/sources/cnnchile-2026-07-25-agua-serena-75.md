@@ -9,6 +9,6 @@ notas: "Publicado 25-07-2026 13:25 -04. Declaraciones del subsecretario de Obras
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260727092309/https://www.cnnchile.com/pais/gobierno-reporta-75-de-avance-en-reposicion-de-agua-potable-para-la-serena-y-coquimbo-tras-el-sistema-frontal/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260727092309"
 ---

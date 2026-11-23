@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251219195436/https://www.emol.com/noticias/Nacional/2025/12/19/1186360/gobierno-amarres-funcionarios.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251219195436"
 ---

@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251111203318/https://araucaniadiario.cl/contenido/30911/alcalde-alejandro-cuminao-desvincula-a-la-pareja-del-funcionario-que-le-cerceno-
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251111203318"
 ---

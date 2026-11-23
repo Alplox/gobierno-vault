@@ -8,6 +8,6 @@ url: https://www.latercera.com/nacional/noticia/contraloria-detecta-contratacion
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260515081647/https://www.latercera.com/nacional/noticia/contraloria-detecta-contratacion-de-familiares-de-alcalde-y-funcionarios-de-la-municipalidad-de-melipeuco/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260515081647"
 ---

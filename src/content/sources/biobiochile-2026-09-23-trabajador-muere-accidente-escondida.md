@@ -9,6 +9,6 @@ notas: "Publicada a las 15:29 del 23-sep-2026. Reproduce el mensaje de Sernageom
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261015144312/https://www.biobiochile.cl/noticias/nacional/region-de-antofagasta/2026/09/23/una-persona-muere-tras-accidente-ocurrido-en-minera-escondida.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261015144312"
 ---

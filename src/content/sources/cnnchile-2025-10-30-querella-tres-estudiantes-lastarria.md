@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122200502/https://www.cnnchile.com/pais/municipalidad-de-providencia-interpone-querella-criminal-contra-tres-estudiantes-del-liceo-lastarria-tras-incidentes
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122200502"
 ---

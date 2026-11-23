@@ -9,6 +9,6 @@ notas: "Nota del 24-sep-2026. Sitúa el accidente en la plataforma del ex-Chanca
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122184458/https://chilepaisminero.com/escondida-denuncias-de-seguridad-y-huelga-tensionan-faena
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122184458"
 ---

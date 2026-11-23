@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20250731150710/https://www.contraloria.cl/portalweb/web/cgr/-/contratacion-de-familiares-en-melipeuco
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20250731150710"
 ---

@@ -8,6 +8,6 @@ url: https://radio.uchile.cl/2021/12/17/izkia-siches-denuncia-campana-sucia-de-j
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20241110154427/https://radio.uchile.cl/2021/12/17/izkia-siches-denuncia-campana-sucia-de-jose-antonio-kast-luego-de-video-en-que-sebastian-izquierdo-llama-a-hacer-trampa/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20241110154427"
 ---

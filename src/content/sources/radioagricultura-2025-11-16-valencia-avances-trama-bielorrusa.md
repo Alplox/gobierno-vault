@@ -9,6 +9,6 @@ notas: "Valencia afirma que el caso 'no se ha detenido ni se va a detener';Simp√
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251116153742/https://www.radioagricultura.cl/noticias/fiscal-nacional-aclara-avances-en-trama-bielorrusa-detalla-rol-de-angela-vivanco-y-ministro-simpertigue_20251116/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251116153742"
 ---

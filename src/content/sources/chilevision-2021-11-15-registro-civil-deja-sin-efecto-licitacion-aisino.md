@@ -9,6 +9,6 @@ notas: "Fecha verificada contra Published Time del artículo (15-nov-2021 20:29 
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122210549/https://www.chilevision.cl/noticias/nacional/registro-civil-dejo-sin-efecto-licitacion-de-cedulas-de-identidad-y-pasaportes-por-inconsistencias-de-empresa-adjudicataria
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122210549"
 ---

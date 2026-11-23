@@ -8,6 +8,6 @@ url: https://www.chilevision.cl/noticias/presidente-del-servel-confirma-querella
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122212352/https://www.chilevision.cl/noticias/presidente-del-servel-confirma-querella-en-contra-de-sebastian-izquierdo-por-llamado-a-hacer-trampa-en-elecciones
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122212352"
 ---

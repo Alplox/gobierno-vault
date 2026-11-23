@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261113150132/https://www.cnnchile.com/negocios/maximo-pacheco-acusa-campana-de-desprestigio-contra-codelco-y-advierte-intentos-de-venderla-a-vil-precio/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261113150132"
 ---

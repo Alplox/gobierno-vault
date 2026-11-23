@@ -8,6 +8,6 @@ url: https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2025/10/3
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260710233306/https://www.biobiochile.cl/noticias/nacional/region-metropolitana/2025/10/30/overoles-blancos-realizan-nuevos-incidentes-con-bomba-molotov-afuera-del-liceo-lastarria.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260710233306"
 ---

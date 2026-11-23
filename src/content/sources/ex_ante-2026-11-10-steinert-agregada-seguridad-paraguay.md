@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122221247/https://www.ex-ante.cl/internacional/steinert-agregada-seguridad-paraguay
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122221247"
 ---

@@ -10,6 +10,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260614133538/https://www.biobiochile.cl/noticias/nacional/region-de-la-araucania/2025/10/28/alcalde-de-melipeuco-despide-a-pareja-de-quien-le-cerceno-oreja-funcionaria-lo-denuncio-por-ley-karin.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260614133538"
 ---

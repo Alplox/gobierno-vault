@@ -9,6 +9,6 @@ notas: "Texto oficial en LeyChile (idNorma 1144080); promulgación 01-ABR-2020, 
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261021105455/https://www.bcn.cl/leychile/navegar?idNorma=1144080
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20261021105455"
 ---

@@ -9,6 +9,6 @@ notas: "Publicado 07-09-2026 17:29. Precisa que fue la única mujer entre los po
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260908133706/https://www.emol.com/noticias/Espectaculos/2026/09/07/1210814/ana-maria-stuven-premio-historia.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260908133706"
 ---

@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122234514/https://www.emol.com/noticias/Nacional/2026/11/22/1217840/ximena-lincolao-ciencias-open-ia.html
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20261122234514"
 ---

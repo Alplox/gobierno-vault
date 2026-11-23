@@ -8,6 +8,6 @@ url: https://www.theclinic.cl/2025/11/16/presidente-boric-felicita-a-jeannette-j
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260102015027/https://www.theclinic.cl/2025/11/16/presidente-boric-felicita-a-jeannette-jara-y-jose-antonio-kast-tras-resultados-de-la-primera-vuelta-presidencial/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260102015027"
 ---

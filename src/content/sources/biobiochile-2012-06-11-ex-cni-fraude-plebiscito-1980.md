@@ -9,6 +9,6 @@ notas: "Publicado 11-06-2012. Atribuye la información a un despacho de EFE reco
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20221209223732/https://www.biobiochile.cl/noticias/2012/06/11/ex-cni-revela-que-recibieron-ordenes-para-cometer-fraude-en-plebiscito-de-constitucion-de-1980.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20221209223732"
 ---

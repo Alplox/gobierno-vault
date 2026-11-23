@@ -9,6 +9,6 @@ notas: "Comunicado citado por la prensa el 15-nov-2021; el sitio no entrega cuer
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20230922191039/https://www.registrocivil.cl/principal/ampliacion-de-contenido/el-servicio-de-registro-civil-e-identificacion-informa-a-la-opinion-publica-lo-siguiente
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20230922191039"
 ---

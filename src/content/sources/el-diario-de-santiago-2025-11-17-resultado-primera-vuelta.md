@@ -8,6 +8,6 @@ url: https://eldiariodesantiago.cl/2025/11/17/primeros-computos-oficiales-jara-s
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251215085724/https://eldiariodesantiago.cl/2025/11/17/primeros-computos-oficiales-jara-supera-por-escaso-margen-a-kast-parisi-tercero/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251215085724"
 ---

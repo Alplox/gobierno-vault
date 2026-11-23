@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261023091045/https://www.minciencia.gob.cl/noticias/chile-se-suma-a-nueva-agenda-cientifica-internacional-ministra-lincolao-adhiere-a-la-vision-de-kioto-para-una-edad-dorada-de-la-ciencia/
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20261023091045"
 ---

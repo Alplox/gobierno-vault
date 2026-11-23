@@ -12,6 +12,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261123004649/https://www.tvn.cl/exponencial/noticias/liderado-por-la-ministra-lincolao-chile-se-une-en-kioto-a-pacto-global
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20261123004649"
 ---

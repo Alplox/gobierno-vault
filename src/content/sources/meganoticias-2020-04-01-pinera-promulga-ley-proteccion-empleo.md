@@ -8,6 +8,6 @@ notas: "Declaraciones de Piñera en la promulgación del 1 de abril de 2020 sobr
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20210304162458/https://www.meganoticias.cl/nacional/297040-ley-proteccion-al-empleo-promulgada-pinera-coronavirus-seguro-de-desempleo.html
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20210304162458"
 ---

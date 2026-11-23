@@ -9,6 +9,6 @@ notas: "Publicada a las 16:19 del 23-sep-2026. Precisa que la primera comunicaci
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122184744/https://www.redimin.cl/una-persona-muere-en-minera-escondida-y-sernageomin-inicia-investigacion
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122184744"
 ---

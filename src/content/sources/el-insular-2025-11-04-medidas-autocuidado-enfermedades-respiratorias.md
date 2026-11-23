@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122191506/https://elinsular.cl/2025/11/04/llaman-a-reforzar-medidas-de-autocuidado-ante-aumento-de-enfermedades-respiratorias
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122191506"
 ---

@@ -9,6 +9,6 @@ notas: "Publicado 11-06-2012 12:28. Mismo despacho de EFE que The Clinic y El DÃ
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20250123204423/https://www.emol.com/noticias/nacional/2012/06/11/545007/revelan-fraude-en-plebiscito-que-refrendo-en-chile-la-constitucion-de-1980.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20250123204423"
 ---

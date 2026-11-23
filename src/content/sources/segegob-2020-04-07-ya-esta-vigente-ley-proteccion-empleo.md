@@ -9,6 +9,6 @@ notas: "Comunicación oficial del 7 de abril de 2020 que confirma la entrada en 
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260517122814/https://organizacionessociales.gob.cl/ya-esta-vigente-ley-de-proteccion-al-empleo-beneficiara-a-mas-de-45-millones-de-trabajadores/
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20260517122814"
 ---

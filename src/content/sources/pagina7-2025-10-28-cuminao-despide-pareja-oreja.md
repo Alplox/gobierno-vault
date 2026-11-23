@@ -8,6 +8,6 @@ url: https://www.pagina7.cl/actualidad/alcalde-de-melipeuco-despidio-a-pareja-de
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122210631/https://www.pagina7.cl/actualidad/alcalde-de-melipeuco-despidio-a-pareja-de-funcionario-que-le-cerceno-oreja-ella-tomo-radical-medida
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122210631"
 ---

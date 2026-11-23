@@ -9,6 +9,6 @@ notas: "Publicado el lunes 07-09-2026; el catálogo de sitemaps marca 2026-09-01
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260911192836/https://www.cnnchile.com/pais/ana-maria-stuven-gana-el-premio-nacional-de-historia-2026-es-la-segunda-mujer-en-obtenerlo/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260911192836"
 ---

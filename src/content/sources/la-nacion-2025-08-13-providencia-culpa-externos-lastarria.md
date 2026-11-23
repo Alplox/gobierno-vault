@@ -10,6 +10,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260611222503/https://www.lanacion.cl/providencia-culpa-a-personas-externas-por-graves-incidentes-en-lastarria/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260611222503"
 ---

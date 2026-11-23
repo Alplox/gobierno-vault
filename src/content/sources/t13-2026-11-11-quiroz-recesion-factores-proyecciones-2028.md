@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261112172605/https://www.t13.cl/noticia/ex-ante/politica/los-factores-detras-recesion-tecnica-reconocio-quiroz-sus-proyecciones-11-11-2026
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261112172605"
 ---

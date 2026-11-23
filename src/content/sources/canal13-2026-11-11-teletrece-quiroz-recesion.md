@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261114075947/https://www.youtube.com/watch?v=56ZYgKAAxfE
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261114075947"
 ---

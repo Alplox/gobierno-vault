@@ -16,6 +16,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261112000958/https://www.youtube.com/watch?si=XMdzDaU0nV9w6j_m&v=_lgn70F9LNM&feature=youtu.be
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261112000958"
 ---

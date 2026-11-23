@@ -11,6 +11,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20250730205334/https://www.radioagricultura.cl/noticias/nacional/contraloria-inicia-sumario-por-contratacion-de-familiares-en-la-municipalidad-de-melipeuco_20250730/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20250730205334"
 ---

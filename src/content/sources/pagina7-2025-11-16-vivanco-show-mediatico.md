@@ -9,6 +9,6 @@ notas: "Cobertura de las declaraciones de Vivanco al votar;sitúa el caso en los
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122184308/https://www.pagina7.cl/actualidad/angela-vivanco-acusa-show-mediatico-por-caso-muneca-bielorrusa-y-dice-que-ha-sido-maltratada
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122184308"
 ---

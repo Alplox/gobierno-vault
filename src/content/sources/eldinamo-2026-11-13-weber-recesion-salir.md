@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261117130119/https://www.eldinamo.cl/economia/2026/11/13/alejandro-weber-estamos-en-recesion-pero-vamos-a-salir/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261117130119"
 ---

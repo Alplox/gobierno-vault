@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261123003748/https://old.reddit.com/login
-    fecha: 2026-11-23
+    fecha: "2026-11-23"
     snapshot: "20261123003748"
 ---

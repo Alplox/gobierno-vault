@@ -9,6 +9,6 @@ notas: "Vivanco habla en su local de votación;repite que el proceso fue un 'sho
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260107043955/https://www.meganoticias.cl/nacional/505928-angela-vivanco-vota-maltratada-angela-vivanco-16-11-2025.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260107043955"
 ---

@@ -9,6 +9,6 @@ notas: "Ficha de Historia Política sin fecha de publicación; consultada el 22-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20260917202707/https://www.bcn.cl/historiapolitica/elecciones/detalle_eleccion?handle=10221.1/63186&periodo=1973-1990
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20260917202707"
 ---

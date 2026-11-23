@@ -9,6 +9,6 @@ notas: "Declaraciones de Ángel Valencia tras votar en la primera vuelta; descar
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20251127014118/https://www.biobiochile.cl/noticias/nacional/chile/2025/11/16/fiscal-nacional-descarta-investigacion-de-oficio-contra-simpertigue-por-trama-muneca-bielorrusa.shtml
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20251127014118"
 ---

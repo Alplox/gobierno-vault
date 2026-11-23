@@ -13,6 +13,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261025235320/https://www.bcn.cl/leychile/navegar?idNorma=1221118
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261025235320"
 ---

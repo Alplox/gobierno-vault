@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261118095849/https://www.elciudadano.com/chile/sindicato-chuquicamata-pide-a-ministro-quiroz-que-no-pase-gato-por-liebre-privatizar-codelco-jamas/11/09/
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261118095849"
 ---

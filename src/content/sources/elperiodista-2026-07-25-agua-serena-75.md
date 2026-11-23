@@ -9,6 +9,6 @@ notas: "Publicado 25-07-2026. Reporta el 75% de reposición informado por el MOP
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122182558/https://www.elperiodista.cl/2026/07/agua-potable-alcanza-75-de-reposicion-en-la-serena-y-coquimbo-tras-sistema-frontal
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122182558"
 ---

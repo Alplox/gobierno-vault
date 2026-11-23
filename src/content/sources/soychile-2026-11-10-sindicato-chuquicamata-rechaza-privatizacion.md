@@ -14,6 +14,6 @@ notas: >-
 respaldos:
   - servicio: wayback
     url: https://web.archive.org/web/20261122232539/https://www.soychile.cl/calama/sociedad/2026/11/10/972239/codelco-propuesta-privatizar.html
-    fecha: 2026-11-22
+    fecha: "2026-11-22"
     snapshot: "20261122232539"
 ---
