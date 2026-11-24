@@ -2357,12 +2357,13 @@
 - [2020/01/20200102-1 - Manifestaciones en Valparaíso en apoyo a Matías Orellana, profesor que perdió un ojo por una lacrimógena en Año Nuevo](src/content/events/2020/01/20200102-1.md) — 12 fuentes
 - [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — 1 fuente
 - [2020/01/20200129-1 - Muere Jorge Mora Herrera, hincha de Colo-Colo, atropellado por un camión de Carabineros a la salida del Estadio Monumental](src/content/events/2020/01/20200129-1.md) — 15 fuentes
-- [2020/01/20200129-2 - Carabineros golpean a Matías Soto frente al metro Protectora de la Infancia en Puente Alto y lo abandonan en la vía pública](src/content/events/2020/01/20200129-2.md) — 8 fuentes
+- [2020/01/20200129-2 - Carabineros golpean a Matías Soto frente al metro Protectora de la Infancia en Puente Alto y lo abandonan en la vía pública](src/content/events/2020/01/20200129-2.md) — 18 fuentes
 - [2020/01/20200131-1 - Muere Ariel Moreno por un postón recibido en una protesta frente a la subcomisaría de Padre Hurtado](src/content/events/2020/01/20200131-1.md) — 6 fuentes
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
 - [2020/03/20200306-1 - Muere Cristián Valdebenito, alcanzado por una bomba lacrimógena de Carabineros en Plaza Dignidad: primera víctima fatal del año en las protestas](src/content/events/2020/03/20200306-1.md) — 2 fuentes
 - [2020/03/20200308-1 - 8M 2020: la marcha feminista más multitudinaria de la historia de Chile reúne a más de un millón de personas en Santiago](src/content/events/2020/03/20200308-1.md) — 1 fuente
+- [2020/03/20200308-2 - Carabineros golpea a Patricio Bao, de 69 años, durante los incidentes posteriores a la marcha del 8M en Santiago](src/content/events/2020/03/20200308-2.md) — 17 fuentes
 - [2020/03/20200312-1 - Perfil de Sebastián Izquierdo: prontuario, denuncia de la UDI y desmarque del partido](src/content/events/2020/03/20200312-1.md) — 5 fuentes
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — 1 fuente
 - [2020/03/20200318-1 - Piñera decreta Estado de Excepción Constitucional de Catástrofe por 90 días ante el avance del COVID-19](src/content/events/2020/03/20200318-1.md) — 3 fuentes
