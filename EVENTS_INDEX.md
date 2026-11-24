@@ -1757,6 +1757,7 @@
 - [2026/09/20260915-3 - Minsal solicita la renuncia del seremi de Salud de La Araucanía, José Bravo Burgos, por comparar el cierre de ELEAM con un vertedero tras el incendio de Pitrufquén](src/content/events/2026/09/20260915-3.md) — 18 fuentes
 - [2026/09/20260915-4 - El CPLT abre la puerta a sumarios contra 34 organismos que no acataron sus órdenes de entrega de información, entre ellos la PDI, el SII y Santiago 2023](src/content/events/2026/09/20260915-4.md) — 5 fuentes
 - [2026/09/20260915-5 - Argentina acelera la Base Naval Integrada de Ushuaia para competir con Punta Arenas por la logística antártica](src/content/events/2026/09/20260915-5.md) — 7 fuentes
+- [2026/09/20260915-6 - Pía Adriasola cede su Toyota 4Runner en comodato gratuito a Presidencia, que asume mantención, seguro y gastos hasta 2030](src/content/events/2026/09/20260915-6.md) — 5 fuentes
 - [2026/09/20260916-1 - Quiroz repite en el ChileDay Londres la receta para cuadruplicar la inversión y cierra la gira europea con el Make Chile Great Again](src/content/events/2026/09/20260916-1.md) — 7 fuentes
 - [2026/09/20260916-2 - Kast inaugura las fondas del Parque O'Higgins con su primer pie de cueca y una paya junto a Desbordes](src/content/events/2026/09/20260916-2.md) — 10 fuentes
 - [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
@@ -1837,6 +1838,7 @@
 - [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 51 fuentes
 - [2026/09/20260928-6 - 28S en Santiago: pañuelazo en Baquedano y marcha por el aborto legal con carta de 35 colectividades al Congreso por el Presupuesto 2027](src/content/events/2026/09/20260928-6.md) — 8 fuentes
 - [2026/09/20260928-7 - Milei ordena arbitraje contra el Reino Unido por Sea Lion y acciones penales por vuelos entre Malvinas y Punta Arenas](src/content/events/2026/09/20260928-7.md) — 13 fuentes
+- [2026/09/20260928-8 - Gobierno confirma la salida del director nacional del Sernac Andrés Herrera tras un sumario por acoso laboral](src/content/events/2026/09/20260928-8.md) — 8 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 18 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 - [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 25 fuentes
