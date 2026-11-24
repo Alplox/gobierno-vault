@@ -2357,6 +2357,7 @@
 - [2020/01/20200102-1 - Manifestaciones en Valparaíso en apoyo a Matías Orellana, profesor que perdió un ojo por una lacrimógena en Año Nuevo](src/content/events/2020/01/20200102-1.md) — 12 fuentes
 - [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — 1 fuente
 - [2020/01/20200129-1 - Muere Jorge Mora Herrera, hincha de Colo-Colo, atropellado por un camión de Carabineros a la salida del Estadio Monumental](src/content/events/2020/01/20200129-1.md) — 15 fuentes
+- [2020/01/20200129-2 - Carabineros golpean a Matías Soto frente al metro Protectora de la Infancia en Puente Alto y lo abandonan en la vía pública](src/content/events/2020/01/20200129-2.md) — 8 fuentes
 - [2020/01/20200131-1 - Muere Ariel Moreno por un postón recibido en una protesta frente a la subcomisaría de Padre Hurtado](src/content/events/2020/01/20200131-1.md) — 6 fuentes
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
