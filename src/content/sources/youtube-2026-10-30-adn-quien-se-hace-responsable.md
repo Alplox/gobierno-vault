@@ -13,5 +13,10 @@ notas: >-
   Muñoz. Recoge el reconocimiento de Rabat sobre el vacío del procedimiento que
   no escucha a las víctimas, su cambio de criterio tras los primeros amparos y
   el debate sobre el alcance de las sentencias de la Corte Suprema.
-  Transcripción aportada por el usuario.
+  Transcripción aportada por el usuario; respaldo en Wayback no disponible tras reintentos (fetch failed), contenido cotejado con la prensa del día.
+respaldos:
+  - servicio: wayback
+    url: https://web.archive.org/web/20261124214651/https://www.youtube.com/watch?v=ObVtSLxkf7Y
+    fecha: "2026-11-24"
+    snapshot: "20261124214651"
 ---

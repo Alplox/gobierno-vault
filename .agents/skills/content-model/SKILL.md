@@ -158,7 +158,7 @@ Medios = organizaciones `tipo: medio_comunicacion` en `src/content/organizations
 
 - `nombre` canónico = lo que renderiza el wikilink (ej. `BioBioChile`, `El País (Chile)`). `src/content/sources/*.md:medio` debe usar el mismo nombre.
 - `tipo: red_social` para Reddit/X/YouTube — solo complementarias, nunca fuente única. Metodología en `social-media.md`.
-- ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `src/content/organizations/*.md` antes de crear (~1052 orgs, ~54 medios). Ojo: el filename no siempre es predecible (`24_horas.md` vs `24horas.md`): buscar además por `nombre:` con `grep` antes de crear.
+- ID `snake_case` del nombre (`el_pais`, `radio_universidad_chile`). Revisar `src/content/organizations/*.md` antes de crear (~1052 orgs, ~54 medios). Ojo: el filename no siempre es predecible (`24_horas.md` vs `24horas.md`, `adn_radio.md` vs `adnradio.md`, `canal_9.md` vs `canal9.md`): buscar además por `nombre:` con `grep` antes de crear; un ID erróneo no da aviso de "nombre no encontrado" sino `wikilink roto ... org no registrada` en `validate`.
 - Helper: `pnpm run add-source -- <URL>` mapea dominio → medio y genera `src/content/sources/<id>.md`.
 
 **Medio en prosa, además del número.** Todo `[[sources/...]]` renderiza `[N]` y el `[N]` no dice quién publicó el dato. Cuando la afirmación depende de **quién** la publica — discrepancias entre crónicas, cifras que difieren, atribuciones ("reveló X", "según Y"), versiones en disputa — el medio va nombrado en prosa con `[[organizations/id]]` antes de su `[[sources/...]]`. No basta el número.

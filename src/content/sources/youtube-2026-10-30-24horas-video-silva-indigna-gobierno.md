@@ -14,5 +14,10 @@ notas: >-
   Josefina Soto, la molestia del ministro del Interior, la investigación de la
   Fiscalía Centro Norte por prevaricación presentada por los diputados Cuello y
   Santana, y los tres avisos previos que habría recibido Rabat según La Tercera.
-  Transcripción aportada por el usuario.
+  Transcripción aportada por el usuario; respaldo en Wayback no disponible tras reintentos (fetch failed), contenido cotejado con la prensa del día.
+respaldos:
+  - servicio: wayback
+    url: https://web.archive.org/web/20261124214555/https://www.youtube.com/watch?v=vTh-s3VpM4s
+    fecha: "2026-11-24"
+    snapshot: "20261124214555"
 ---

@@ -13,5 +13,10 @@ notas: >-
   la intención de la presidenta del Senado Paulina Núñez de impulsar el proyecto
   del Ejecutivo junto al Presupuesto, la encuesta con 80% en contra de mantener
   a Rabat y la investigación de la Fiscalía por prevaricación. Transcripción
-  aportada por el usuario.
+  aportada por el usuario; respaldo en Wayback no disponible tras reintentos (fetch failed), contenido cotejado con la prensa del día.
+respaldos:
+  - servicio: wayback
+    url: https://web.archive.org/web/20261124214757/https://www.youtube.com/watch?v=8DmOA24WjHk
+    fecha: "2026-11-24"
+    snapshot: "20261124214757"
 ---
