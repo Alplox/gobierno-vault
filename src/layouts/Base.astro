@@ -640,13 +640,18 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       // Volver arriba: aparece tras superar la primera pantalla y se desplaza
       // sobre el FAB temporal cuando este sigue visible en pantallas mviles.
       let cleanupBackToTop: (() => void) | undefined;
+      let backToTopUpdate: (() => void) | null = null;
       function initBackToTop() {
         cleanupBackToTop?.();
         const button = document.getElementById('back-to-top') as HTMLButtonElement | null;
         if (!button) return;
 
         const update = () => {
-          const visible = window.scrollY > 480;
+          // El TOC móvil es una barra inferior; si está abierto se oculta el
+          // botón para no tapar el panel, y si existe se recoloca sobre él.
+          const tocBar = document.getElementById('gv-event-toc-mobile') as HTMLDetailsElement | null;
+          const tocOpen = !!tocBar?.open;
+          const visible = window.scrollY > 480 && !tocOpen;
           button.style.opacity = visible ? '1' : '0';
           button.style.transform = visible ? 'translateY(0)' : 'translateY(0.75rem)';
           button.style.pointerEvents = visible ? 'auto' : 'none';
@@ -656,7 +661,14 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
 
           const timelineFab = document.getElementById('timeline-fab');
           const overlapsTimeline = timelineFab && window.getComputedStyle(timelineFab).display !== 'none';
-          button.style.bottom = `calc(${overlapsTimeline ? '5.75rem' : '1.25rem'} + env(safe-area-inset-bottom))`;
+          // Cualquier barra inferior declarada (data-gv-bottom-nav) desplaza el
+          // botón; si mañana aparece otra navbar, basta marcarla con el atributo.
+          const navH = [...document.querySelectorAll('[data-gv-bottom-nav]')]
+            .filter((el) => window.getComputedStyle(el).display !== 'none')
+            .reduce((max, el) => Math.max(max, el.getBoundingClientRect().height), 0);
+          button.style.bottom = navH > 0
+            ? `calc(${Math.round(navH)}px + 0.6rem + env(safe-area-inset-bottom))`
+            : `calc(${overlapsTimeline ? '5.75rem' : '1.25rem'} + env(safe-area-inset-bottom))`;
         };
 
         const onClick = () => {
@@ -672,7 +684,9 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
           window.removeEventListener('resize', update);
           button.removeEventListener('click', onClick);
           cleanupBackToTop = undefined;
+          backToTopUpdate = null;
         };
+        backToTopUpdate = update;
         update();
       }
 
@@ -681,6 +695,15 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         document.addEventListener('astro:page-load', initBackToTop);
       }
       initBackToTop();
+
+      // El evento `toggle` de <details> no burbujea: escucha en captura para
+      // recolcular la altura de la barra inferior al abrir/cerrar el TOC.
+      if (!(window as any).__gvBackToTopToggleInit) {
+        (window as any).__gvBackToTopToggleInit = true;
+        document.addEventListener('toggle', (e) => {
+          if ((e.target as HTMLElement | null)?.id === 'gv-event-toc-mobile') backToTopUpdate?.();
+        }, true);
+      }
 
       if (!(window as any).__gvSoundInit) {
         (window as any).__gvSoundInit = true;

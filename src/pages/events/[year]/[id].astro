@@ -35,6 +35,9 @@ import {
   TriangleAlert,
   Bot,
   Bug,
+  ListTree,
+  ChevronUp,
+  ChevronDown,
 } from 'lucide-astro';
 import { TIPO_LABELS, TIPO_STYLES } from '../../../lib/eventTypes';
 
@@ -86,6 +89,8 @@ const refs = resolveReferences(entities.fuentesAll);
 const allEvents = await getAllEvents();
 const connectionIndex = buildConnectionIndex(allEvents);
 const connections = connectionIndex.get(filename) ?? { outgoing: [], incoming: [], inferred: [] };
+const hasTimeline = connections.outgoing.length > 0 || connections.incoming.length > 0;
+const hasConnections = hasTimeline || connections.inferred.length > 0;
 
 // Export markdown (SSG): base = el archivo .md fuente, más sección de referencias con URLs.
 const rawMd = readFileSync(join(process.cwd(), 'src', 'content', 'events', `${event.id}.md`), 'utf8');
@@ -220,7 +225,18 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 ---
 
 <Base title={titulo}>
-  <article class="max-w-3xl mx-auto">
+  <div id="gv-event-shell" class="gv-event-shell" data-has-timeline={hasTimeline ? '1' : ''}>
+    <aside class="gv-event-toc" aria-label="Índice de contenidos">
+      <div class="gv-event-toc-sticky not-prose">
+        <div class="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/60">
+          <ListTree class="h-3.5 w-3.5 shrink-0" />
+          En esta página
+        </div>
+        <nav id="gv-event-toc-list" class="gv-event-toc-list" aria-label="Secciones del evento"></nav>
+      </div>
+    </aside>
+
+    <div class="gv-event-body">
     <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-4">
         <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
@@ -273,7 +289,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       <span id="tts-msg" class="text-[11px] text-base-content/40 font-medium" role="status"></span>
     </div>
 
-    <section class="prose prose-gray max-w-none mb-10 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed text-base-content">
+    <section id="evento-body" class="prose prose-gray max-w-none mb-10 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed text-base-content">
       <Content />
 
       {(svg_backup?.archivo || svg_backup?.svg) && (
@@ -414,7 +430,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       </section>
     )}
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="entidades" data-toc-target="entidades" class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-20">
       <div class="flex items-center gap-2 mb-4">
         <Tag class="h-5 w-5 text-primary shrink-0" />
         <h2 class="text-base font-bold text-base-content">Entidades y Etiquetas</h2>
@@ -505,14 +521,29 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       </div>
     </section>
 
-    <EventTimelineConnector connections={connections} eventFecha={event.data.fecha} />
+    </div>
 
-    <EventConnections connections={connections} topicsMap={topicsMap}>
-      <EgoGraph event={event} connections={connections} slot="graph" />
-    </EventConnections>
+    <aside class="gv-event-rail" aria-label="Línea de tiempo de eventos relacionados">
+      {hasTimeline && (
+        <div class="gv-event-rail-sticky not-prose">
+          <div id="linea-tiempo" data-toc-target="linea-tiempo" class="scroll-mt-20">
+            <EventTimelineConnector connections={connections} eventFecha={event.data.fecha} />
+          </div>
+        </div>
+      )}
+    </aside>
+
+    <div class="gv-event-after">
+    {hasConnections && (
+      <div id="conexiones" data-toc-target="conexiones" class="scroll-mt-20">
+        <EventConnections connections={connections} topicsMap={topicsMap}>
+          <EgoGraph event={event} connections={connections} slot="graph" />
+        </EventConnections>
+      </div>
+    )}
 
     {refs.length > 0 && (
-      <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <section id="referencias" data-toc-target="referencias" class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-20">
         <div class="flex items-center gap-2 mb-4">
           <BookOpen class="h-5 w-5 text-primary shrink-0" />
           <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({refs.length})</h2>
@@ -562,7 +593,20 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       <Clock class="h-3.5 w-3.5 text-base-content/40" />
       <span>Creado: {creado.toLocaleDateString('es-ES')} · Actualizado: {actualizado.toLocaleDateString('es-ES')}</span>
     </footer>
-  </article>
+    </div>
+
+    <details id="gv-event-toc-mobile" class="gv-event-toc-mobile not-prose" data-gv-bottom-nav>
+      <summary>
+        <span class="inline-flex items-center gap-1.5">
+          <ListTree class="h-3.5 w-3.5 shrink-0" />
+          En esta página
+        </span>
+        <ChevronUp class="gv-chevron-up h-4 w-4 shrink-0 text-base-content/60" />
+        <ChevronDown class="gv-chevron-down hidden h-4 w-4 shrink-0 text-base-content/60" />
+      </summary>
+      <nav id="gv-event-toc-list-mobile" class="gv-event-toc-list" aria-label="Secciones del evento"></nav>
+    </details>
+  </div>
 </Base>
 
 <script>
@@ -1374,6 +1418,11 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     }
   }
   gvInitTts();
+</script>
+
+<script>
+  import { initEventToc } from '../../../scripts/eventTocClient.js';
+  initEventToc();
 </script>
 
 <style>

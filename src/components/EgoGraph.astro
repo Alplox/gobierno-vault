@@ -1,6 +1,7 @@
 ---
 import { TIPO_LABELS, TIPO_COLORS } from '../lib/eventTypes';
 import { RELATION_LABELS, type EventConnections } from '../lib/relations';
+import { GitFork, Maximize2, Minimize2 } from 'lucide-astro';
 
 interface Props {
   event: any;
@@ -8,10 +9,9 @@ interface Props {
 }
 
 const { event, connections } = Astro.props;
-const { outgoing, incoming } = connections;
+const { outgoing, incoming, inferred } = connections;
 
-// Solo conexiones explicitas; el listado textual (EventConnections) ya cubre inferred.
-if (outgoing.length === 0 && incoming.length === 0) return null;
+if (outgoing.length === 0 && incoming.length === 0 && inferred.length === 0) return null;
 
 const EDGE_COLORS: Record<string, string> = {
   contradice: '#ef4444', confirma: '#10b981', cumple: '#10b981',
@@ -21,122 +21,132 @@ const EDGE_COLORS: Record<string, string> = {
   actualiza: '#3b82f6', mismo_contexto: '#a8a29e',
 };
 
-const W = 760;
-const ROW = 52;
-const PAD_Y = 46;
-
-interface Neighbor {
-  id: string;
-  titulo: string;
-  tipo: string;
-  tipoLabel: string;
-  year: number;
-  relation: string;
-  relationLabel: string;
-}
-
-function trunc(s: string, n: number) {
-  return s.length > n ? s.slice(0, n) + '…' : s;
-}
-
-const rightCol: Neighbor[] = outgoing.map((edge) => ({
-  id: edge.eventId,
-  titulo: edge.titulo,
-  tipo: edge.tipo,
-  tipoLabel: '',
-  year: edge.year,
-  relation: edge.tipo,
-  relationLabel: RELATION_LABELS[edge.tipo] ?? edge.tipo,
-}));
-const leftCol: Neighbor[] = incoming.map((edge) => ({
-  id: edge.eventId,
-  titulo: edge.titulo,
-  tipo: edge.tipo,
-  tipoLabel: '',
-  year: edge.year,
-  relation: edge.tipo,
-  relationLabel: RELATION_LABELS[edge.tipo] ?? edge.tipo,
-}));
-
-const rows = Math.max(rightCol.length, leftCol.length, 1);
-const H = Math.max(rows * ROW + PAD_Y * 2, 170);
-const cx = W / 2;
-const cy = H / 2;
-const colRightX = W - 190;
-const colLeftX = 190;
-
-function rowY(i: number, total: number) {
-  return cy - ((total - 1) * ROW) / 2 + i * ROW;
-}
-
+const centerId = event.id.split('/').pop() ?? event.id;
 const centerColor = TIPO_COLORS[event.data.tipo] ?? '#6b7280';
 const centerTipo = TIPO_LABELS[event.data.tipo] || event.data.tipo;
-const fechaStr = new Date(event.data.fecha).toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' });
 
-const markers = [...new Set([...rightCol.map((n) => n.relation), ...leftCol.map((n) => n.relation)])];
+function trunc(s: string, n: number) {
+  return s.length > n ? `${s.slice(0, n)}…` : s;
+}
+function shortDate(d: Date) {
+  return d.toLocaleDateString('es-CL', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'America/Santiago' });
+}
+
+// Un vecino por ID: lo explícito gana sobre lo inferido.
+const neighbors = new Map<string, any>();
+for (const e of [...outgoing, ...incoming]) {
+  if (!neighbors.has(e.eventId)) {
+    neighbors.set(e.eventId, {
+      id: e.eventId,
+      label: e.titulo,
+      color: TIPO_COLORS[e.tipo] ?? '#6b7280',
+      tipoLabel: TIPO_LABELS[e.tipo] || e.tipo,
+      relation: RELATION_LABELS[e.tipo] ?? e.tipo,
+      relationTipo: e.tipo,
+      fecha: shortDate(e.fecha),
+      url: `/events/${e.year}/${e.eventId}`,
+      kind: e.direction === 'outgoing' ? 'outgoing' : 'incoming',
+    });
+  }
+}
+// "Mismo contexto" se limita a 10 para que el mini no se llene de nodos grises.
+for (const e of inferred.slice(0, 10)) {
+  if (!neighbors.has(e.eventId)) {
+    neighbors.set(e.eventId, {
+      id: e.eventId,
+      label: e.titulo,
+      color: '#a8a29e',
+      tipoLabel: 'Mismo contexto',
+      relation: 'Mismo contexto',
+      relationTipo: 'mismo_contexto',
+      fecha: shortDate(e.fecha),
+      url: `/events/${e.year}/${e.eventId}`,
+      kind: 'inferred',
+    });
+  }
+}
+
+const nodes = [
+  {
+    id: centerId,
+    label: event.data.titulo,
+    color: centerColor,
+    tipoLabel: centerTipo,
+    relation: 'Este evento',
+    fecha: shortDate(new Date(event.data.fecha)),
+    url: '',
+    kind: 'center',
+  },
+  ...neighbors.values(),
+];
+const links = [...neighbors.values()].map((n: any) => ({
+  source: centerId,
+  target: n.id,
+  tipo: n.relationTipo ?? 'deriva_en',
+  kind: n.kind,
+}));
+
+// SVG estático de respaldo (sin JS se ve igual de centrado; el cliente lo oculta
+// cuando el grafo interactivo está listo). Distribución radial compacta.
+const fallbackNodes = [...neighbors.values()].slice(0, 14);
+const fx = 160;
+const fy = 108;
+const radius = 58 + Math.min(24, fallbackNodes.length * 2);
+const fallbackPoints = fallbackNodes.map((n: any, i: number) => {
+  const angle = -Math.PI / 2 + (i * 2 * Math.PI) / Math.max(fallbackNodes.length, 1);
+  return { ...n, x: fx + Math.cos(angle) * radius, y: fy + Math.sin(angle) * radius };
+});
 ---
 
-<div class="mb-8 overflow-x-auto rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]">
-  <svg viewBox={`0 0 ${W} ${H}`} class="w-full min-w-[560px]" font-family="system-ui, -apple-system, sans-serif" role="img" aria-label="Grafo de conexiones del evento">
-    <defs>
-      {markers.map((tipo) => (
-        <marker id={`ego-arrow-${tipo}`} viewBox="0 0 10 6" refX="10" refY="3" markerWidth="8" markerHeight="6" orient="auto-start-reverse">
-          <path d="M0,0 L10,3 L0,6" fill={EDGE_COLORS[tipo] ?? '#78716c'} />
-        </marker>
+<div class="gv-ego-widget not-prose mb-8 overflow-hidden rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]" data-gv-ego-widget>
+  <div class="gv-ego-header flex items-center justify-between gap-2 border-b border-base-300 px-3 py-2">
+    <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content">
+      <GitFork class="h-3.5 w-3.5 shrink-0 text-primary" />
+      Grafo interactivo
+      <span class="font-normal text-base-content/50">· {neighbors.size} vínculos</span>
+    </span>
+    <span class="inline-flex items-center gap-1">
+      <button type="button" data-gv-ego-expand class="gv-ego-icon" title="Expandir grafo" aria-label="Expandir grafo">
+        <Maximize2 class="gv-ego-expand-in h-3.5 w-3.5" />
+        <Minimize2 class="gv-ego-expand-out h-3.5 w-3.5 hidden" />
+      </button>
+      <a href="/graph" class="gv-ego-icon" title="Ver grafo global" aria-label="Ver grafo global">
+        <GitFork class="h-3.5 w-3.5" />
+      </a>
+    </span>
+  </div>
+
+  <div data-gv-ego-stage class="gv-ego-stage relative h-[300px] sm:h-[340px]">
+    <svg data-gv-ego-fallback viewBox="0 0 320 216" class="h-full w-full" role="img" aria-label="Grafo de conexiones del evento" font-family="system-ui, -apple-system, sans-serif">
+      {fallbackPoints.map((n: any) => (
+        <line x1={fx} y1={fy} x2={n.x} y2={n.y} stroke={EDGE_COLORS[n.relationTipo] ?? '#78716c'} stroke-opacity="0.5" stroke-width="1.2" stroke-dasharray={n.kind === 'inferred' ? '3 3' : undefined} />
       ))}
-    </defs>
-
-    {/* Aristas */}
-    {rightCol.map((n, i) => {
-      const y = rowY(i, rightCol.length);
-      const color = EDGE_COLORS[n.relation] ?? '#78716c';
-      return (
-        <g>
-          <line x1={cx + 14} y1={cy} x2={colRightX - 16} y2={y} stroke={color} stroke-width="1.5" stroke-opacity="0.55" marker-end={`url(#ego-arrow-${n.relation})`} />
-          <text x={(cx + colRightX) / 2} y={(cy + y) / 2 - 4} text-anchor="middle" style={`fill: color-mix(in oklab, ${color} 65%, var(--color-base-content));`} font-size="9" font-weight="600">{n.relationLabel}</text>
-        </g>
-      );
-    })}
-    {leftCol.map((n, i) => {
-      const y = rowY(i, leftCol.length);
-      const color = EDGE_COLORS[n.relation] ?? '#78716c';
-      return (
-        <g>
-          <line x1={cx - 14} y1={cy} x2={colLeftX + 16} y2={y} stroke={color} stroke-width="1.5" stroke-opacity="0.55" marker-end={`url(#ego-arrow-${n.relation})`} />
-          <text x={(cx + colLeftX) / 2} y={(cy + y) / 2 - 4} text-anchor="middle" style={`fill: color-mix(in oklab, ${color} 65%, var(--color-base-content));`} font-size="9" font-weight="600">{n.relationLabel}</text>
-        </g>
-      );
-    })}
-
-    {/* Nodo central */}
-    <g>
-      <circle cx={cx} cy={cy} r="12" fill={centerColor} stroke="var(--color-base-100)" stroke-width="2.5" />
-      <text x={cx} y={cy + 30} text-anchor="middle" fill="var(--color-base-content)" font-size="11" font-weight="700">{trunc(event.data.titulo, 46)}</text>
-      <text x={cx} y={cy + 45} text-anchor="middle" fill="var(--color-base-content)" fill-opacity="0.55" font-size="9">{centerTipo} · {fechaStr}</text>
-    </g>
-
-    {/* Vecinos: desde este evento (derecha) */}
-    {rightCol.map((n, i) => {
-      const y = rowY(i, rightCol.length);
-      const color = TIPO_COLORS[n.tipo] ?? '#6b7280';
-      return (
-        <a href={`/events/${n.year}/${n.id}`} class="graph-ego-link">
-          <circle cx={colRightX} cy={y} r="9" fill={color} stroke="var(--color-base-100)" stroke-width="2" style="cursor: pointer;" />
-          <text x={colRightX + 15} y={y + 4} fill="var(--color-base-content)" font-size="10" font-weight="500" style="cursor: pointer;">{trunc(n.titulo, 34)}</text>
+      {fallbackPoints.map((n: any) => (
+        <a href={n.url}>
+          <circle cx={n.x} cy={n.y} r="6" fill={n.color} stroke="var(--color-base-100)" stroke-width="1.5" />
+          <title>{n.label} · {n.relation}</title>
         </a>
-      );
-    })}
-
-    {/* Vecinos: vinculado desde (izquierda) */}
-    {leftCol.map((n, i) => {
-      const y = rowY(i, leftCol.length);
-      const color = TIPO_COLORS[n.tipo] ?? '#6b7280';
-      return (
-        <a href={`/events/${n.year}/${n.id}`} class="graph-ego-link">
-          <circle cx={colLeftX} cy={y} r="9" fill={color} stroke="var(--color-base-100)" stroke-width="2" style="cursor: pointer;" />
-          <text x={colLeftX - 15} y={y + 4} text-anchor="end" fill="var(--color-base-content)" font-size="10" font-weight="500" style="cursor: pointer;">{trunc(n.titulo, 34)}</text>
-        </a>
-      );
-    })}
-  </svg>
+      ))}
+      <circle cx={fx} cy={fy} r="10" fill={centerColor} stroke="var(--color-base-100)" stroke-width="2" />
+      <text x={fx} y={fy + 24} text-anchor="middle" fill="var(--color-base-content)" font-size="8" font-weight="600">{trunc(event.data.titulo, 32)}</text>
+    </svg>
+  </div>
+  <div data-gv-ego-card class="gv-ego-card hidden border-t border-base-300 bg-base-200/60 px-3 py-2">
+    <div class="flex items-start justify-between gap-2">
+      <div class="min-w-0">
+        <p data-gv-ego-card-relation class="text-[10px] font-semibold uppercase tracking-wide text-primary"></p>
+        <p data-gv-ego-card-title class="mt-0.5 text-xs font-semibold leading-snug text-base-content"></p>
+      </div>
+      <button type="button" data-gv-ego-card-close class="gv-ego-icon shrink-0" aria-label="Cerrar detalle" title="Cerrar detalle">✕</button>
+    </div>
+    <a data-gv-ego-card-open href="#" class="mt-1.5 inline-flex text-[11px] font-semibold text-primary hover:underline">Abrir evento →</a>
+  </div>
+  <div data-gv-ego-tip class="gv-ego-tip pointer-events-none fixed z-50 hidden max-w-[15rem] rounded-lg border border-base-300 bg-base-100 px-2.5 py-1.5 text-xs text-base-content/80 shadow-lg"></div>
+  <p class="border-t border-base-300 px-3 py-1.5 text-[10px] text-base-content/50">Arrastra nodos · scroll para acercar · toca un nodo para ver su título</p>
+  <script type="application/json" data-gv-ego-data set:html={JSON.stringify({ nodes, links, colors: EDGE_COLORS })} />
 </div>
+
+<script>
+  import { initEgoGraph } from '../scripts/egoGraphWidget.js';
+  initEgoGraph();
+</script>
