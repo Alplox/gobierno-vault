@@ -1829,6 +1829,7 @@
 - [2026/09/20260927-2 - Alvarado en Estado Nacional: EE.UU. adelantó la firma del Escudo para aprovechar la ONU y Chile adhirió por convicción](src/content/events/2026/09/20260927-2.md) — 9 fuentes
 - [2026/09/20260927-3 - Pulso Ciudadano de septiembre: aprobación de Kast cae a 28,2% y desaprobación sube a 57,6%, con desconfianza en máximo histórico](src/content/events/2026/09/20260927-3.md) — 8 fuentes
 - [2026/09/20260927-4 - Barros aborda en Radio Polar la disputa por Malvinas y respalda el comercio entre Punta Arenas y las islas; Argentina lo tilda de confuso y Alvarado lo respalda](src/content/events/2026/09/20260927-4.md) — 13 fuentes
+- [2026/09/20260927-5 - Cabo segundo Christopher Aguilera muere tras ser baleado en Lo Espejo y el Gobierno decreta tres días de duelo](src/content/events/2026/09/20260927-5.md) — 7 fuentes
 - [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
 - [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
@@ -1856,7 +1857,7 @@
 - [2026/09/20260930-4 - Kast confirma al oficialismo alza de 1,5% para el Presupuesto 2027 y cadena nacional, y se abre el debate por la base de cálculo](src/content/events/2026/09/20260930-4.md) — 15 fuentes
 - [2026/09/20260930-5 - Kast reúne en Cerro Castillo a presidentes de comisiones y condiciona el retiro de la reforma de seguridad a un texto alternativo](src/content/events/2026/09/20260930-5.md) — 12 fuentes
 - [2026/09/20260930-6 - Operación Apocalipsis II: la PDI detiene en cuatro regiones a Álex Vega, exdirigente de la ANFUP, y a otras dos personas por corrupción en Santiago 1](src/content/events/2026/09/20260930-6.md) — 42 fuentes
-- [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 25 fuentes
+- [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 26 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 15 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
 - [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 110 fuentes
@@ -1922,6 +1923,7 @@
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
 - [2026/10/20261008-12 - Judd afirma que 'no hay una Antártica que pertenezca a Chile' y Cancillería reafirma que la soberanía está definida por tratados](src/content/events/2026/10/20261008-12.md) — 8 fuentes
 - [2026/10/20261008-13 - Inteligencia chilena califica como "evento crítico" el zarpe del Danstar a Malvinas y Liga Naval argentina amenaza con detenerlo](src/content/events/2026/10/20261008-13.md) — 11 fuentes
+- [2026/10/20261008-14 - CyberMonday 2026 cierra con récord de 5,3 millones de transacciones pero con el ticket promedio más bajo de su historia](src/content/events/2026/10/20261008-14.md) — 9 fuentes
 - [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 89 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
