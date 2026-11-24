@@ -1953,6 +1953,7 @@
 - [2026/10/20261014-2 - Fast Check desmiente que video de joven esnifando corresponda a la marcha por Palestina ni al Frente Amplio](src/content/events/2026/10/20261014-2.md) — 5 fuentes
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
 - [2026/10/20261016-1 - Kast realiza la primera visita de Estado de un presidente chileno a Bolivia en 71 años y firma cinco instrumentos con Paz](src/content/events/2026/10/20261016-1.md) — 10 fuentes
+- [2026/10/20261017-1 - BBCL Investiga reconstruye la fuga de Héctor Godoy Cortez, condenado a diez años por abusar de dos niñas y prófugo desde abril](src/content/events/2026/10/20261017-1.md) — 6 fuentes
 - [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
 - [2026/10/20261019-1 - SEA resuelve que el data center de Google en Cerrillos no debe ingresar al SEIA y OLCA y MOSACAT anuncian impugnación](src/content/events/2026/10/20261019-1.md) — 8 fuentes
 - [2026/10/20261019-2 - Gobierno ingresa proyecto que reforma el INDH: elimina la facultad de querellarse, reduce el Consejo de 11 a 5 y deja una sola sede en Santiago](src/content/events/2026/10/20261019-2.md) — 7 fuentes
@@ -1992,8 +1993,8 @@
 - [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 15 fuentes
 - [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 15 fuentes
 - [2026/10/20261027-3 - Revelan planes argentinos para detener, escoltar o multar el Danstar y exalmirantes reivindican la libre navegación frente a Moreno y Van Klaveren](src/content/events/2026/10/20261027-3.md) — 13 fuentes
-- [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 9 fuentes
-- [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 9 fuentes
+- [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 10 fuentes
+- [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 10 fuentes
 - [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 11 fuentes
 - [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 10 fuentes
 - [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
@@ -2008,7 +2009,7 @@
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 7 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 19 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 21 fuentes
 - [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 11 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
