@@ -22,6 +22,7 @@ import { ArrowLeft } from 'lucide-astro';
   type SourceItem = {
     id: string; titulo: string; medio: string; tipo: string; fecha: string;
     autor: string; url: string; eventIds: string[];
+    usos: { titulo: string; href: string }[];
   };
   type Payload = {
     data: SourceItem[];
@@ -141,10 +142,27 @@ import { ArrowLeft } from 'lucide-astro';
       grid.appendChild(a);
     }
     if (related.length === 0) {
-      grid.appendChild(el('p', 'text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', 'No hay eventos que citen directamente esta fuente.'));
+      grid.appendChild(el('p', 'text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', s.usos?.length
+        ? 'No hay eventos que citen directamente esta fuente. Sí aparece en las páginas de datos de abajo.'
+        : 'No hay eventos que citen directamente esta fuente.'));
     }
     section.appendChild(grid);
     root.appendChild(section);
+
+    const usos = s.usos ?? [];
+    if (usos.length) {
+      const usosSection = el('section', 'mt-8');
+      usosSection.appendChild(el('h2', 'text-lg font-bold text-base-content mb-1', `También se usa en otras páginas (${usos.length})`));
+      usosSection.appendChild(el('p', 'text-xs text-base-content/55 mb-3', 'Estas páginas la citan desde sus propios datos, no desde un evento del vault.'));
+      const usosGrid = el('div', 'grid gap-3 sm:grid-cols-2');
+      for (const u of usos) {
+        const a = el('a', 'block bg-base-100 p-4 rounded-xl border-0 shadow-[var(--shadow-border)] hover:shadow-md transition-shadow font-semibold text-base-content text-sm', u.titulo);
+        a.href = u.href;
+        usosGrid.appendChild(a);
+      }
+      usosSection.appendChild(usosGrid);
+      root.appendChild(usosSection);
+    }
   }
 
   render();

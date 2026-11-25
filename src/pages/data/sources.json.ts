@@ -2,6 +2,8 @@ import type { APIRoute } from 'astro';
 import { getAllEvents } from '../../lib/queries';
 import { getSourcesRegistry } from '../../lib/registry';
 import { getSourceToEventsMap } from '../../lib/extractEntities';
+import { getSueldos } from '../../lib/sueldos';
+import { getPresupuesto, refAnchor } from '../../lib/presupuesto';
 
 const tipoLabels: Record<string, string> = {
   oficial: 'Oficial', prensa: 'Prensa', agencia: 'Agencia',
@@ -24,6 +26,24 @@ export const GET: APIRoute = async () => {
     eventsById[id] = { titulo: e.data.titulo, href: `/events/${year}/${id}` };
   }
 
+  // /sueldos y /presupuesto citan fuentes desde YAML, no desde wikilinks:
+  // getSourceToEventsMap() no las ve. Indexar aparte los usos no-evento para
+  // que la ficha no parezca huérfana cuando solo aparece en esas páginas.
+  type Uso = { titulo: string; href: string };
+  const usos: Record<string, Uso[]> = {};
+  const addUso = (id: string, uso: Uso): void => {
+    const lista = (usos[id] ??= []);
+    if (!lista.some((u) => u.href === uso.href)) lista.push(uso);
+  };
+  getSueldos().ordenRefs.forEach((id, i) => {
+    addUso(id, { titulo: 'Sueldos y brecha salarial', href: `/sueldos#ref-${i + 1}` });
+  });
+  for (const e of getPresupuesto().ejercicios) {
+    e.refs.forEach((id) => {
+      addUso(id, { titulo: `Presupuesto ${e.ano}`, href: `/presupuesto#${refAnchor(e.ano, id, e.refs)}` });
+    });
+  }
+
   const data = Object.entries(registry).map(([id, s]) => {
     const d = s.fecha ? new Date(s.fecha) : null;
     return {
@@ -35,6 +55,7 @@ export const GET: APIRoute = async () => {
       autor: s.autor ?? '',
       url: s.url ?? '',
       eventIds: sourceToEvents.get(id) ?? [],
+      usos: usos[id] ?? [],
     };
   });
 

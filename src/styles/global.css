@@ -278,8 +278,21 @@
   font-size: 0.82rem;
 }
 .gv-event-toc-mobile .gv-event-toc-label { padding: 0 0.6rem 0.4rem; }
+/* La barra se aparta al bajar y vuelve al subir (eventTocClient.js). El
+   transform no altera su altura, así que el offset de "Volver arriba" sigue
+   midiéndose con getBoundingClientRect(). */
+.gv-event-toc-mobile { transition: transform 220ms ease-out; }
+.gv-event-toc-mobile.gv-bottom-nav-hidden { transform: translateY(100%); }
+@media (prefers-reduced-motion: reduce) {
+  .gv-event-toc-mobile { transition: none; }
+}
 @media (max-width: 75.99rem) {
   .gv-event-shell { padding-bottom: 4.5rem; }
+  /* El footer vive fuera del shell: sin este espacio su último renglón queda
+     debajo de la barra fija aunque el shell ya tenga su propio padding. */
+  body:has([data-gv-bottom-nav]) > footer {
+    padding-bottom: calc(2rem + 3.25rem + env(safe-area-inset-bottom));
+  }
 }
 .gv-event-shell.is-enhanced > .gv-event-toc-mobile { display: none; }
 @media (min-width: 76rem) {
