@@ -17,6 +17,8 @@ import { ArrowLeft } from 'lucide-astro';
 </Base>
 
 <script>
+  import { SOURCE_MIRRORS } from '../lib/sourceMirrors';
+
   type SourceItem = {
     id: string; titulo: string; medio: string; tipo: string; fecha: string;
     autor: string; url: string; eventIds: string[];
@@ -110,6 +112,17 @@ import { ArrowLeft } from 'lucide-astro';
       a.rel = 'noopener';
       a.innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
       wrap.appendChild(a);
+
+      const mirrors = el('span', 'flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-2');
+      for (const m of SOURCE_MIRRORS) {
+        const link = el('a', `text-[10px] font-medium text-base-content/40 ${m.hover} transition-colors`, m.label);
+        link.href = m.href(s.url);
+        link.title = m.title;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        mirrors.appendChild(link);
+      }
+      wrap.appendChild(mirrors);
       main.appendChild(wrap);
     }
     flex.appendChild(main);

@@ -1,27 +1,9 @@
 ---
 // Ficha de la fuente + fila de mirrors, compartida por el detalle de evento y
-// /sueldos. La lista vive solo aquí: agregar o retirar un mirror se hace una
-// vez y llega a todas las páginas que usan el componente. Espejo de lectura:
-// nunca sustituye la URL original citada en src/content/sources/*.md.
-interface Mirror {
-  label: string;
-  title: string;
-  hover: string;
-  href: (url: string) => string;
-}
-
-const MIRRORS: Mirror[] = [
-  { label: 'Archive', title: 'Wayback Machine', hover: 'hover:text-primary', href: (u) => `https://web.archive.org/web/${u}` },
-  { label: 'archive.ph', title: 'archive.ph', hover: 'hover:text-orange-500', href: (u) => `https://archive.ph/${u}` },
-  { label: 'Ghost', title: 'Ghostarchive', hover: 'hover:text-purple-500', href: (u) => `https://ghostarchive.org/search?term=${encodeURIComponent(u)}` },
-  { label: 'Memento', title: 'Memento Time Travel', hover: 'hover:text-teal-500', href: (u) => `https://timetravel.mementoweb.org/memento/${u}` },
-  { label: 'Cached', title: 'CachedView (Wayback + archive.today + LoC + Perma.cc)', hover: 'hover:text-cyan-500', href: (u) => `https://cachedview.nl/#${encodeURIComponent(u)}` },
-  { label: 'Reader', title: 'Versión Texto Limpio', hover: 'hover:text-green-500', href: (u) => `https://r.jina.ai/${u}` },
-  { label: 'Paywall', title: 'Paywall Skip', hover: 'hover:text-warning', href: (u) => `https://www.paywallskip.com/article?url=${encodeURIComponent(u)}` },
-  { label: 'NoPaywall', title: 'nopaywall.net (archivos abiertos / DOI)', hover: 'hover:text-lime-500', href: (u) => `https://www.nopaywall.net/read?url=${encodeURIComponent(u)}` },
-  { label: 'Defuddle', title: 'Defuddle', hover: 'hover:text-indigo-500', href: (u) => `https://defuddle.md/${u}` },
-  { label: 'MD', title: 'Markdown', hover: 'hover:text-pink-500', href: (u) => `https://markdown.new/${u}` },
-];
+// /sueldos. La lista vive en src/lib/sourceMirrors.ts, la misma que usa el
+// script de cliente de /source: un solo lugar para agregar o retirar espejos.
+// Los mirrors son de solo lectura, nunca sustituyen la URL original citada.
+import { SOURCE_MIRRORS } from '../lib/sourceMirrors';
 
 const { url = '', sourceId = '' } = Astro.props;
 ---
@@ -33,7 +15,7 @@ const { url = '', sourceId = '' } = Astro.props;
 )}
 {url && (
   <span class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
-    {MIRRORS.map((m) => (
+    {SOURCE_MIRRORS.map((m) => (
       <a href={m.href(url)} class={`text-[10px] font-medium text-base-content/40 ${m.hover} transition-colors`} target="_blank" rel="noopener" title={m.title}>{m.label}</a>
     ))}
   </span>
