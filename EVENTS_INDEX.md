@@ -1982,7 +1982,7 @@
 - [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 8 fuentes
 - [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 13 fuentes
 - [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 13 fuentes
-- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 12 fuentes
+- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 15 fuentes
 - [2026/10/20261023-6 - Interferencia publica los decretos de Casablanca y Petorca firmados por Rabat y Silva y la responsabilidad del Gobierno se desplaza hacia los mandos medios](src/content/events/2026/10/20261023-6.md) — 6 fuentes
 - [2026/10/20261023-7 - Corte de Apelaciones de Punta Arenas avala la desvinculación de una funcionaria del Registro Civil que acumuló 345 días de licencias médicas](src/content/events/2026/10/20261023-7.md) — 6 fuentes
 - [2026/10/20261023-8 - Exgeneral argentino Calandín plantea "eliminar Puerto Williams" cortándole el gas y autoridades chilenas responden que el suministro es propio](src/content/events/2026/10/20261023-8.md) — 12 fuentes
@@ -2007,21 +2007,21 @@
 - [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 11 fuentes
 - [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 10 fuentes
 - [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 12 fuentes
-- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 10 fuentes
+- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 11 fuentes
 - [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
 - [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 6 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
 - [2026/10/20261028-10 - Camioneros independientes de San Antonio inician un paro de siete días y bloquean los depósitos de contenedores](src/content/events/2026/10/20261028-10.md) — 20 fuentes
 - [2026/10/20261028-11 - Exsubsecretarios de Telecomunicaciones cuestionan el Plan Nacional Digital: versión final en diciembre y 336.000 conexiones 3G sin fecha de apagado](src/content/events/2026/10/20261028-11.md) — 8 fuentes
 - [2026/10/20261028-12 - Microsoft y CENIA firman una alianza de dos años para impulsar Latam GPT con US$250.000 en créditos de Azure](src/content/events/2026/10/20261028-12.md) — 6 fuentes
-- [2026/10/20261028-13 - T13 revela que Luis Silva firmó la rebaja de José Silva Olivares mientras su amparo aún se tramitaba en Valparaíso](src/content/events/2026/10/20261028-13.md) — 12 fuentes
+- [2026/10/20261028-13 - T13 revela que Luis Silva firmó la rebaja de José Silva Olivares mientras su amparo aún se tramitaba en Valparaíso](src/content/events/2026/10/20261028-13.md) — 14 fuentes
 - [2026/10/20261028-14 - Corte Suprema remueve al juez Daniel Urrutia por viajes con licencia médica y cierra la purga con 18 magistrados](src/content/events/2026/10/20261028-14.md) — 6 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
-- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 7 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 24 fuentes
+- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 9 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 35 fuentes
 - [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 11 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
@@ -2030,7 +2030,7 @@
 - [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 10 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
-- [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 23 fuentes
+- [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 24 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
 - [2026/10/20261030-4 - Fiscalía Centro Norte abre investigación contra Rabat y Silva por presunta prevaricación administrativa en las rebajas de condena](src/content/events/2026/10/20261030-4.md) — 8 fuentes
 - [2026/10/20261030-5 - Paro del aseo nocturno en Santiago: calles con basura, plan de contingencia municipal y reanudación del servicio tras 24 horas](src/content/events/2026/10/20261030-5.md) — 8 fuentes

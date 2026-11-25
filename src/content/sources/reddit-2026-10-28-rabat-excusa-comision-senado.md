@@ -12,7 +12,7 @@ notas: >-
   imagen. Recepción social complementaria del evento 20261028-7.
 respaldos:
   - servicio: wayback
-    url: https://web.archive.org/web/20261124225659/https://old.reddit.com/login
-    fecha: "2026-11-24"
-    snapshot: "20261124225659"
+    url: https://web.archive.org/web/20261125060016/https://www.reddit.com/r/chile/comments/1xhrc1z/rabat_se_excusa_de_asistir_a_comisi%C3%B3n_del_senado
+    fecha: "2026-11-25"
+    snapshot: "20261125060016"
 ---

@@ -13,7 +13,7 @@ notas: >-
   evento 20261028-6.
 respaldos:
   - servicio: wayback
-    url: https://web.archive.org/web/20261124225633/https://old.reddit.com/login
-    fecha: "2026-11-24"
-    snapshot: "20261124225633"
+    url: https://web.archive.org/web/20261125055817/https://www.reddit.com/r/chile/comments/1xhybfk/narco_de_la_mafia_italiana_y_neonazi_homicida
+    fecha: "2026-11-25"
+    snapshot: "20261125055817"
 ---

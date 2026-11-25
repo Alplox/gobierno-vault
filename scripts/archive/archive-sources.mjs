@@ -41,6 +41,11 @@
  *   1. Chequear `archive.org/wayback/available?url=...`. Si existe snapshot se reutiliza
  *      (así se respaldan también fuentes ya muertas).
  *   2. Si no, `web.archive.org/save/<URL>` y leer la URL canónica del redirect / Content-Location.
+ *      Para URLs `old.reddit.com` se prueba primero el equivalente `www.reddit.com`:
+ *      Save Page Now captura `old.reddit.com/login` en vez del hilo. Se rechaza
+ *      cualquier snapshot que caiga en `/login` o que no contenga la ruta original.
+ *      X devuelve HTTP 523 sin URL canónica y youtube.com falla en `save`; en ambos
+ *      casos `available` puede recuperar un snapshot previo (ver .agents/skills/tools).
  *   3. Insertar la entrada en `respaldos[]` con edición quirúrgica (respeta CRLF y bloques),
  *      idempotente por `servicio` + `url`.
  */
@@ -209,6 +214,17 @@ function selfTest() {
     r.migrated === 1 && fm.respaldos.length === 2 && !String(fm.notas).includes('Respaldo Wayback'));
   check('CRLF y url original intactos', '---\r\nurl: https://ejemplo.cl/x\r\nnotas: hola\r\n---\r\n', (out, r, fm) =>
     fm.url === 'https://ejemplo.cl/x' && !/(^|[^\r])\n/.test(out));
+  const redditOld = 'https://old.reddit.com/r/chile/comments/1abc/titulo/';
+  const redditWww = 'https://www.reddit.com/r/chile/comments/1abc/titulo/';
+  const loginSnap = 'https://web.archive.org/web/20261125000000/https://old.reddit.com/login';
+  const threadSnap = `https://web.archive.org/web/20261125000000/${redditWww}`;
+  const helperCases = [
+    ['reddit old -> www primero', archiveCandidates(redditOld)[0] === redditWww && archiveCandidates(redditOld)[1] === redditOld],
+    ['rechaza snapshot de login', usableSnapshot(redditOld, loginSnap) === false],
+    ['acepta snapshot del hilo', usableSnapshot(redditWww, threadSnap) === true],
+    ['acepta hilo borrado por moderador', usableSnapshot(redditOld, `https://web.archive.org/web/20261125000000/https://www.reddit.com/r/chile/comments/1abc/removed_by_moderator/`) === true],
+  ];
+  for (const [name, pass] of helperCases) cases.push({ name, pass });
 
   for (const c of cases) console.log(`  ${c.pass ? '✔' : '✖'} ${c.name}`);
   const failed = cases.filter((c) => !c.pass);
@@ -227,6 +243,41 @@ function normalizeSnapUrl(u) {
   return String(u).replace(/^http:\/\/web\.archive\.org\//i, 'https://web.archive.org/');
 }
 
+/**
+ * Variantes a probar para una fuente. `old.reddit.com` redirige a /login en
+ * Save Page Now, así que se intenta primero la misma ruta en www.reddit.com.
+ * La URL citada en `url:` nunca se modifica.
+ */
+function archiveCandidates(url) {
+  try {
+    const u = new URL(url);
+    if (u.hostname === 'old.reddit.com') {
+      const www = new URL(u.href);
+      www.hostname = 'www.reddit.com';
+      return [www.href, u.href];
+    }
+  } catch { /* URL inválida: se deja para el caller */ }
+  return [url];
+}
+
+/** Rechaza capturas de login y snapshots de otra ruta (común en Reddit). */
+function usableSnapshot(targetUrl, canonical) {
+  if (!canonical) return false;
+  const snapPath = String(canonical).split('/web/')[1]?.replace(/^\d+\//, '') ?? '';
+  if (/\/login\/?(\?|$)/i.test(snapPath)) return false;
+  try {
+    const original = new URL(targetUrl);
+    if (original.hostname.endsWith('reddit.com')) {
+      const path = original.pathname.replace(/\/$/, '');
+      // Un hilo borrado se captura como /comments/<id>/removed_by_moderator/.
+      const id = original.pathname.match(/\/comments\/([^/]+)\//)?.[1];
+      if (id) return snapPath.includes(`/comments/${id}/`);
+      return Boolean(path) && snapPath.includes(path);
+    }
+  } catch { /* sin comparación de ruta para otros hosts */ }
+  return true;
+}
+
 async function fetchTimed(url, opts, timeoutMs) {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), timeoutMs);
@@ -238,18 +289,22 @@ async function fetchTimed(url, opts, timeoutMs) {
 }
 
 async function checkSnapshot(url) {
-  const api = `https://archive.org/wayback/available?url=${encodeURIComponent(url)}`;
-  try {
-    const res = await fetchTimed(api, {}, 15000);
-    if (!res.ok) return null;
-    const data = await res.json();
-    const snap = data?.archived_snapshots?.closest;
-    // La API devuelve status HTTP como string ("200"), no "ok".
-    const usable = snap && snap.available !== false && /^(ok|2\d\d|3\d\d)$/i.test(String(snap.status ?? ''));
-    if (usable && snap.url) {
-      return { url: normalizeSnapUrl(snap.url), when: snap.timestamp ?? '', via: 'disponible' };
-    }
-  } catch { /* sin snapshot o red caída: se intenta guardar */ }
+  for (const candidate of archiveCandidates(url)) {
+    const api = `https://archive.org/wayback/available?url=${encodeURIComponent(candidate)}`;
+    try {
+      const res = await fetchTimed(api, {}, 15000);
+      if (!res.ok) continue;
+      const data = await res.json();
+      const snap = data?.archived_snapshots?.closest;
+      // La API devuelve status HTTP como string ("200"), no "ok".
+      const usable = snap && snap.available !== false && /^(ok|2\d\d|3\d\d)$/i.test(String(snap.status ?? ''));
+      if (usable && snap.url) {
+        const snapUrl = normalizeSnapUrl(snap.url);
+        if (!usableSnapshot(candidate, snapUrl)) continue;
+        return { url: snapUrl, when: snap.timestamp ?? '', via: 'disponible' };
+      }
+    } catch { /* sin snapshot o red caída: se prueba la siguiente variante */ }
+  }
   return null;
 }
 
@@ -268,22 +323,35 @@ function canonicalFromSave(res) {
 }
 
 async function saveSnapshot(url, timeoutMs) {
-  for (let attempt = 0; attempt < 2; attempt++) {
-    try {
-      const res = await fetchTimed(`https://web.archive.org/save/${url}`, { redirect: 'follow' }, timeoutMs);
-      const canonical = canonicalFromSave(res);
-      if (res.ok && canonical) return { url: canonical, via: 'save' };
-      if (res.status === 429 || res.status === 503) {
-        await sleep(2500 * (attempt + 1));
-        continue;
+  const errors = [];
+  for (const candidate of archiveCandidates(url)) {
+    for (let attempt = 0; attempt < 2; attempt++) {
+      try {
+        const res = await fetchTimed(`https://web.archive.org/save/${candidate}`, { redirect: 'follow' }, timeoutMs);
+        const canonical = canonicalFromSave(res);
+        if (res.ok && canonical && usableSnapshot(candidate, canonical)) {
+          return { url: canonical, via: 'save' };
+        }
+        if (res.ok && canonical && !usableSnapshot(candidate, canonical)) {
+          errors.push('captura en otra ruta o login');
+          break;
+        }
+        if (res.status === 429 || res.status === 503) {
+          await sleep(2500 * (attempt + 1));
+          continue;
+        }
+        errors.push(`HTTP ${res.status}${canonical ? '' : ' (sin URL canónica)'}`);
+        break;
+      } catch (e) {
+        if (attempt === 1) {
+          errors.push(e.name === 'AbortError' ? 'timeout' : e.message.slice(0, 100));
+        } else {
+          await sleep(1500);
+        }
       }
-      return { error: `HTTP ${res.status}${canonical ? '' : ' (sin URL canónica)'}` };
-    } catch (e) {
-      if (attempt === 1) return { error: e.name === 'AbortError' ? 'timeout' : e.message.slice(0, 100) };
-      await sleep(1500);
     }
   }
-  return { error: 'sin snapshot tras reintentos' };
+  return { error: errors[0] ?? 'sin snapshot tras reintentos' };
 }
 
 /**

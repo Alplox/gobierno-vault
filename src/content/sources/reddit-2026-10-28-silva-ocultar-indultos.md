@@ -14,7 +14,8 @@ notas: >-
   está verificado en el evento 20261028-8.
 respaldos:
   - servicio: wayback
-    url: https://web.archive.org/web/20261124225751/https://old.reddit.com/login
-    fecha: "2026-11-24"
-    snapshot: "20261124225751"
+    url: https://web.archive.org/web/20261125060227/https://www.reddit.com/r/chile/comments/1xhqk4g/removed_by_moderator
+    notas: Hilo eliminado; Wayback capturó la página removed_by_moderator
+    fecha: "2026-11-25"
+    snapshot: "20261125060227"
 ---

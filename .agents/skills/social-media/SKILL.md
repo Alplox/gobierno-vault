@@ -110,6 +110,8 @@ La regla depende del **estado editorial del hecho**, no de que el lead haya apar
 
 En TikTok y YouTube, el video por sí solo es fuente complementaria del hecho, no prueba una reacción comunitaria. Para documentar reacciones deben existir varias voces, textos literales verificables y URLs propias.
 
+**Respaldo externo de hilos y posts:** `old.reddit.com` captura `/login` en Save Page Now, así que `archive-sources.mjs` prueba primero `www.reddit.com` y conserva los parámetros `js_challenge` del snapshot (sin ellos Wayback sirve solo el envoltorio). X devuelve 523 y YouTube falla en `save` pero suele tener snapshot en `available`; el detalle y los casos por plataforma están en `.agents/skills/tools/SKILL.md` → «Archivado y recuperación de fuentes». Ningún respaldo reemplaza la URL original citada en la fuente.
+
 ### Verificacion de imagenes y audios virales (calibracion 2026)
 
 Cuando un evento documenta una imagen, screenshot o audio viral que circula en redes, verificar
