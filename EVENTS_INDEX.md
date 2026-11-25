@@ -1791,6 +1791,7 @@
 - [2026/09/20260920-1 - Agenda Criteria 20 de septiembre: aprobación de Kast cae a 29% y desaprobación sube a 59%, peor registro del mandato](src/content/events/2026/09/20260920-1.md) — 7 fuentes
 - [2026/09/20260920-2 - Lluvias dejan 105 viviendas afectadas en Concepción; en Juan Riquelme y Chaimávida el barro entra a las casas y la sede de la Junta de Vecinos queda inutilizada](src/content/events/2026/09/20260920-2.md) — 10 fuentes
 - [2026/09/20260920-3 - Denuncia ante Contraloría por irregularidades en Boulevard Montemar menciona a Víctor Quiroz, hermano del ministro](src/content/events/2026/09/20260920-3.md) — 6 fuentes
+- [2026/09/20260921-1 - El TOP de Cañete condena a 18 de los 19 acusados por el ataque al molino Grollmus y las penas suman más de mil años](src/content/events/2026/09/20260921-1.md) — 5 fuentes
 - [2026/09/20260922-1 - Kast debuta ante la Asamblea General de la ONU: Chile está de vuelta, crítica al organismo y tres propuestas de reforma](src/content/events/2026/09/20260922-1.md) — 62 fuentes
 - [2026/09/20260922-2 - Cámara rechaza por un voto la reforma que ampliaba la detención para expulsiones: 88 a favor con quórum de 89](src/content/events/2026/09/20260922-2.md) — 6 fuentes
 - [2026/09/20260922-3 - Chile anuncia adhesión al Escudo de las Américas tras cita con Trump, en medio de una discrepancia sobre su condición previa](src/content/events/2026/09/20260922-3.md) — 122 fuentes
@@ -2105,6 +2106,7 @@
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
 - [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
 - [2026/11/20261118-7 - Chile y Hong Kong firman un acuerdo Working Holiday en Shenzhen con 100 cupos anuales por parte](src/content/events/2026/11/20261118-7.md) — 6 fuentes
+- [2026/11/20261118-8 - Odesur designa al Biobío como sede de los XIV Juegos Suramericanos de 2030](src/content/events/2026/11/20261118-8.md) — 9 fuentes
 - [2026/11/20261119-1 - Carolina Rossi renuncia a la Subsecretaría de Ciencia tras semanas de tensión con Lincolao](src/content/events/2026/11/20261119-1.md) — 41 fuentes
 - [2026/11/20261119-2 - Tras la reunión con Alvarado, Lincolao defiende el MoU con OpenAI y Kast descarta problemas internos](src/content/events/2026/11/20261119-2.md) — 24 fuentes
 - [2026/11/20261119-3 - Presunta falsificación de firmas en el Senado por retiro de permisos de Órdenes y Espinoza abre investigación de la Fiscalía](src/content/events/2026/11/20261119-3.md) — 12 fuentes
