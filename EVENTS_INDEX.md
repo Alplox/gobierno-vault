@@ -2018,17 +2018,19 @@
 - [2026/10/20261028-14 - Corte Suprema remueve al juez Daniel Urrutia por viajes con licencia médica y cierra la purga con 18 magistrados](src/content/events/2026/10/20261028-14.md) — 6 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
-- [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
+- [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 7 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
-- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 9 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 35 fuentes
-- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 11 fuentes
+- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 11 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 37 fuentes
+- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 13 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
-- [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
+- [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 8 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
 - [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 10 fuentes
+- [2026/10/20261029-6 - Tres advertencias a Rabat entre febrero y mayo por el costo político de rebajar condenas y alertas que no llegaron a Kast](src/content/events/2026/10/20261029-6.md) — 7 fuentes
+- [2026/10/20261029-7 - Partido Republicano blinda a Rabat y Vicente Bruna relativiza la responsabilidad política: “no siempre se tiene que hacer valer”](src/content/events/2026/10/20261029-7.md) — 6 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
 - [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 24 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
@@ -2109,11 +2111,12 @@
 - [2026/11/20261120-3 - Senado despacha el Presupuesto 2027 a la Cámara tras tres jornadas: rechaza la partida de Agricultura por doble empate y Campos se niega a disculparse](src/content/events/2026/11/20261120-3.md) — 8 fuentes
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
-- [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 15 fuentes
+- [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 19 fuentes
 
 ## 2025
 
 - [2025/01/20250102-1 - Condenan a 8 años y 2 días al excabo de Carabineros Belisario Morales por disparar contra manifestante desde el balcón municipal de La Cisterna](src/content/events/2025/01/20250102-1.md) — 1 fuente
+- [2025/01/20250106-1 - Corte Suprema acoge recurso contra Worldcoin y ordena borrar el iris de una menor en 30 días](src/content/events/2025/01/20250106-1.md) — 7 fuentes
 - [2025/01/20250110-1 - Rebaja preventiva de $544.000 millones al presupuesto 2025: recortes a Ministerio Público, Poder Judicial y Salud](src/content/events/2025/01/20250110-1.md) — 8 fuentes
 - [2025/01/20250113-1 - Caso Factop y Audios: formalizan a 16 imputados, entre ellos ocho ejecutivos de LarrainVial, por lavado de activos y estafa](src/content/events/2025/01/20250113-1.md) — 3 fuentes
 - [2025/01/20250116-1 - Galdames responde en Mega por contratos millonarios y traspasos a entidades de familiares tras el apagón de Rinconada](src/content/events/2025/01/20250116-1.md) — 3 fuentes
@@ -2124,6 +2127,7 @@
 - [2025/01/20250131-1 - Tensión por 'suspensión' de relaciones diplomáticas con Venezuela: parlamentarios piden ruptura](src/content/events/2025/01/20250131-1.md) — 1 fuente
 - [2025/02/20250206-1 - Revelan que el patrimonio del exfiscal Guerra se disparó tras su llegada a la USS: de $280 a $485 millones entre 2019 y 2023](src/content/events/2025/02/20250206-1.md) — 6 fuentes
 - [2025/02/20250211-1 - TOP de Coyhaique condena al coronel retirado Capetillo y al capitán Fuentes por ocultar un video que exculpaba a un estudiante detenido en el estallido](src/content/events/2025/02/20250211-1.md) — 6 fuentes
+- [2025/02/20250213-1 - Corte Suprema condena a Worldcoin por captar el iris de un adolescente en Viña del Mar y ordena borrar sus datos](src/content/events/2025/02/20250213-1.md) — 6 fuentes
 - [2025/02/20250214-1 - Caso Factop: Álvaro Jalaff en prisión preventiva y su defensa recurre de amparo ante la Corte Suprema](src/content/events/2025/02/20250214-1.md) — 3 fuentes
 - [2025/03/20250327-1 - INE entrega los primeros resultados del Censo 2024: Chile tiene 18.480.432 habitantes](src/content/events/2025/03/20250327-1.md) — 2 fuentes
 - [2025/03/20250328-1 - Primera sentencia del caso Audios: exdirector de la PDI Sergio Muñoz acuerda tres años de libertad vigilada](src/content/events/2025/03/20250328-1.md) — 1 fuente
@@ -2218,6 +2222,7 @@
 - [2024/01/20240119-1 - Nora Cuevas, exalcaldesa de San Bernardo, es imputada por fraude al fisco y malversación por más de $20 mil millones](src/content/events/2024/01/20240119-1.md) — 1 fuente
 - [2024/02/20240202-1 - Megaincendio en Viña del Mar y Quilpué: el siniestro más letal de la historia de Chile, con 138 fallecidos oficiales y estado de excepción](src/content/events/2024/02/20240202-1.md) — 17 fuentes
 - [2024/02/20240221-1 - Secuestro y homicidio del exmilitar venezolano Ronald Ojeda: la Fiscalía vincula el crimen al Tren de Aragua](src/content/events/2024/02/20240221-1.md) — 3 fuentes
+- [2024/03/20240313-1 - Primeros recursos de protección contra Worldcoin en Chile por escaneo de iris a menores](src/content/events/2024/03/20240313-1.md) — 6 fuentes
 - [2024/03/20240315-1 - Renuncia el director general de la PDI, Sergio Muñoz, tras el allanamiento por el caso Audios](src/content/events/2024/03/20240315-1.md) — 3 fuentes
 - [2024/04/20240401-1 - Le Monde Diplomatique: 'El crimen organizado se hace evidente en Chile' — la paradoja de la baja delincuencia con temor récord](src/content/events/2024/04/20240401-1.md) — 1 fuente
 - [2024/04/20240405-1 - Ministerio de Ciencia publica la nómina pública de deudores de Becas Chile tras la auditoría de Contraloría a la ANID: 150 en incumplimiento declarado y 73 demandados](src/content/events/2024/04/20240405-1.md) — 3 fuentes
@@ -2248,6 +2253,7 @@
 - [2024/10/20241017-1 - Manuel Monsalve renuncia como subsecretario del Interior tras denuncia de abuso sexual](src/content/events/2024/10/20241017-1.md) — 2 fuentes
 - [2024/10/20241018-1 - A cinco años del 18-O, '¿quién quemó el Metro?' sigue sin respuesta completa: solo tres condenas por incendio y la tesis oficial descarta la coordinación](src/content/events/2024/10/20241018-1.md) — 8 fuentes
 - [2024/10/20241023-1 - Explosión de un cóctel molotov en el baño del INBA deja 35 estudiantes heridos, 15 de gravedad, cuando se preparaban para marchar en el aniversario del estallido](src/content/events/2024/10/20241023-1.md) — 2 fuentes
+- [2024/10/20241023-2 - Sernac pide suspender a Worldcoin tras 760 mil iris escaneados y anuncio de escaneo a domicilio](src/content/events/2024/10/20241023-2.md) — 8 fuentes
 - [2024/10/20241026-1 - Elecciones municipales y regionales 2024: Chile Vamos se impone y el oficialismo retrocede](src/content/events/2024/10/20241026-1.md) — 2 fuentes
 - [2024/10/20241027-1 - Juan Galdames es reelecto alcalde de Rinconada con 34,93% pese a la investigación por corrupción y el apagón durante el reportaje de Mega](src/content/events/2024/10/20241027-1.md) — 5 fuentes
 - [2024/11/20241108-1 - Tramitación de la Ley de Presupuestos 2025: acuerdo de $543.539 millones, reposiciones y despacho a ley](src/content/events/2024/11/20241108-1.md) — 10 fuentes
