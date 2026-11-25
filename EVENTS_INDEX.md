@@ -1886,6 +1886,7 @@
 - [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 30 fuentes
 - [2026/10/20261002-10 - Bancada UDI propone recortar el INDH y el gasto por licencias médicas para reponer "Yo elijo mi PC" y los Liceos Bicentenario](src/content/events/2026/10/20261002-10.md) — 7 fuentes
 - [2026/10/20261002-11 - Los cinco multifondos de pensiones cierran septiembre de 2026 en rojo y el Fondo E acumula una caída de 10,4%](src/content/events/2026/10/20261002-11.md) — 8 fuentes
+- [2026/10/20261002-12 - Peñalolén financiará con fondos municipales los computadores de Yo elijo mi PC tras quedar fuera del Presupuesto 2027](src/content/events/2026/10/20261002-12.md) — 5 fuentes
 - [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
 - [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 11 fuentes
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
