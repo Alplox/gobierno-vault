@@ -206,3 +206,214 @@
     scroll-behavior: smooth;
   }
 }
+
+/* Detalle de evento: índice lateral (izq.) + rail de línea de tiempo (der.).
+   Sin JS el shell sigue siendo una sola columna, igual que antes: el rail
+   aparece entre "Entidades" y "Conexiones" en el orden natural del DOM.
+   Con espacio horizontal se activan 3 columnas. El rail derecho abarca ambas
+   filas (todo el contenido), así que su tarjeta sticky flota junto al cuerpo
+   y se asienta sola en la columna al llegar al pie; al volver a subir se
+   suelta de nuevo. Cero JS para el flotado/acoplamiento. */
+.gv-event-shell {
+  width: 100%;
+  max-width: 48rem;
+  margin-inline: auto;
+}
+.gv-event-toc { display: none; }
+.gv-event-rail { min-width: 0; }
+
+/* TOC móvil: barra inferior flotante, dentro de la zona de pulgar. Queda fuera
+   del flujo (no empuja el cuerpo) y el scroll final tiene su propio padding.
+   "Volver arriba" lee [data-gv-bottom-nav] para no taparla. */
+.gv-event-toc-mobile {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  max-height: 75vh;
+  max-height: 75dvh;
+  overflow: hidden;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-content) 14%, transparent);
+  background-color: var(--color-base-100);
+  box-shadow: 0 -6px 24px color-mix(in oklab, var(--color-neutral) 25%, transparent);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.gv-event-toc-mobile > summary {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--color-base-content);
+}
+.gv-event-toc-mobile > summary::-webkit-details-marker { display: none; }
+.gv-event-toc-mobile[open] > summary {
+  border-bottom: 1px solid color-mix(in oklab, var(--color-base-content) 12%, transparent);
+}
+/* La hoja se despliega hacia arriba: cerrado apunta arriba, abierto abajo. */
+.gv-event-toc-mobile[open] .gv-chevron-up { display: none; }
+.gv-event-toc-mobile[open] .gv-chevron-down { display: block; }
+.gv-event-toc-mobile .gv-event-toc-list {
+  /* <details> mete su contenido en una caja interna que no es flex item:
+     limitar la lista con flex no basta, necesita su propio max-height para
+     scrollear y no dejar enlaces inalcanzables. */
+  flex: 1 1 auto;
+  min-height: 0;
+  max-height: calc(75vh - 3.5rem);
+  max-height: calc(75dvh - 3.5rem);
+  padding: 0.55rem 0.75rem 0.8rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+.gv-event-toc-mobile .gv-event-toc-list a {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.82rem;
+}
+.gv-event-toc-mobile .gv-event-toc-label { padding: 0 0.6rem 0.4rem; }
+@media (max-width: 75.99rem) {
+  .gv-event-shell { padding-bottom: 4.5rem; }
+}
+.gv-event-shell.is-enhanced > .gv-event-toc-mobile { display: none; }
+@media (min-width: 76rem) {
+  .gv-event-toc-mobile { display: none; }
+}
+
+.gv-event-shell.is-enhanced {
+  display: grid;
+  grid-template-columns: 11rem minmax(0, 40rem) 15rem;
+  column-gap: 1.25rem;
+  max-width: 68.5rem;
+}
+.gv-event-shell.is-enhanced > .gv-event-toc { display: block; grid-column: 1; grid-row: 1 / span 2; }
+.gv-event-shell.is-enhanced > .gv-event-body { grid-column: 2; grid-row: 1; min-width: 0; }
+.gv-event-shell.is-enhanced > .gv-event-rail { grid-column: 3; grid-row: 1 / span 2; min-width: 0; }
+.gv-event-shell.is-enhanced > .gv-event-after { grid-column: 2; grid-row: 2; min-width: 0; }
+
+/* Sin conexiones temporales no se reserva una columna vacía a la derecha. */
+.gv-event-shell.is-enhanced.no-timeline {
+  grid-template-columns: 11rem minmax(0, 44rem);
+  max-width: 56.25rem;
+}
+.gv-event-shell.is-enhanced.no-timeline > .gv-event-rail { display: none; }
+
+.gv-event-toc-sticky,
+.gv-event-rail-sticky {
+  position: sticky;
+  top: 5rem;
+  max-height: calc(100vh - 6.5rem);
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+}
+.gv-event-toc-list {
+  display: flex;
+  flex-direction: column;
+}
+.gv-event-toc-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+.gv-event-toc-group + .gv-event-toc-group {
+  margin-top: 0.65rem;
+  padding-top: 0.65rem;
+  border-top: 1px solid color-mix(in oklab, var(--color-base-content) 14%, transparent);
+}
+.gv-event-toc-label {
+  padding: 0 0.55rem 0.35rem;
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: color-mix(in oklab, var(--color-base-content) 48%, transparent);
+}
+.gv-event-toc-group:first-child .gv-event-toc-label {
+  color: var(--color-primary);
+}
+.gv-event-toc-list a {
+  display: block;
+  padding: 0.3rem 0.55rem;
+  border-radius: 0.375rem;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  color: color-mix(in oklab, var(--color-base-content) 68%, transparent);
+  text-decoration: none;
+  transition: background-color 0.15s, color 0.15s;
+}
+.gv-event-toc-list a:hover {
+  background-color: var(--color-base-200);
+  color: var(--color-base-content);
+}
+.gv-event-toc-list a[data-level='3'] {
+  padding-left: 1rem;
+  font-size: 0.72rem;
+}
+/* En escritorio la línea de tiempo ya está a la vista en el rail. */
+.gv-event-toc-list a[hidden] { display: none; }
+.gv-event-toc-list a.is-active {
+  background-color: color-mix(in oklab, var(--color-primary) 14%, transparent);
+  color: var(--color-primary);
+  font-weight: 600;
+}
+.gv-event-toc-list a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+.prose :is(h2, h3) { scroll-margin-top: 5rem; }
+
+/* Grafo ego interactivo del apartado Conexiones (widget compacto). */
+.gv-ego-icon {
+  display: inline-flex;
+  width: 1.75rem;
+  height: 1.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  color: color-mix(in oklab, var(--color-base-content) 60%, transparent);
+  transition: background-color 0.15s, color 0.15s;
+}
+.gv-ego-icon:hover {
+  background-color: var(--color-base-200);
+  color: var(--color-primary);
+}
+.gv-ego-icon:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+.gv-tl-focus:focus-visible { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+.gv-tl-offscreen { font-variant-numeric: tabular-nums; }
+
+/* Resaltado de vecinos: lo que no conecta con el nodo activo se atenúa. */
+.gv-ego-stage a,
+.gv-ego-stage line { transition: opacity 0.18s, stroke-opacity 0.18s, stroke-width 0.18s; }
+.gv-ego-stage a.is-dim { opacity: 0.16; }
+.gv-ego-stage line.is-dim { stroke-opacity: 0.06; }
+.gv-ego-stage line.is-lit { stroke-width: 2.6; stroke-opacity: 0.95; }
+.gv-ego-card { position: relative; z-index: 5; }
+.gv-ego-card.is-open { display: block; }
+.gv-ego-tip strong { font-weight: 600; }
+.gv-ego-widget.is-expanded {
+  position: fixed;
+  inset: 2rem;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  box-shadow: 0 24px 80px color-mix(in oklab, var(--color-neutral) 45%, transparent);
+}
+.gv-ego-widget.is-expanded > [data-gv-ego-stage] {
+  flex: 1 1 auto;
+  height: auto;
+}
+body.gv-ego-expanded { overflow: hidden; }
+@media (max-width: 640px) {
+  .gv-ego-widget.is-expanded { inset: 0.5rem; }
+}

@@ -3,10 +3,10 @@
 > Este archivo se genera automáticamente con `pnpm run generate-index`
 > Cada línea indica el número de **fuentes únicas** citadas en el evento (`N fuentes`), es decir, IDs `[[sources/...]]` distintos. Mínimo recomendado: 3 fuentes por evento para reducir sesgo.
 
-## ⚠️ Seguimiento: eventos con menos de 3 fuentes (469)
+## ⚠️ Seguimiento: eventos con menos de 3 fuentes (468)
 
 <details>
-<summary>Ver lista (469 eventos) — priorizar búsqueda de fuentes adicionales</summary>
+<summary>Ver lista (468 eventos) — priorizar búsqueda de fuentes adicionales</summary>
 
 - [2009/06/20090612-1 - Caso de asesores parlamentarios: Fiscalía formaliza a la diputada Claudia Nogueira por presunto fraude](src/content/events/2009/06/20090612-1.md) — **1 fuente**
 - [2010/01/20100108-1 - Municipio de Quillota entrega catastro de fondos concursables 2010 a organizaciones de la comuna](src/content/events/2010/01/20100108-1.md) — **1 fuente**
@@ -114,7 +114,6 @@
 - [2026/08/20260801-10 - Coyhaique instala aldea de emergencia para 200 personas ante la ola de frío y nevadas](src/content/events/2026/08/20260801-10.md) — **1 fuente**
 - [2026/08/20260801-11 - La 'batalla cultural' privatizadora: análisis de La Tercera sobre el impulso de Quiroz para abrir empresas públicas al capital privado](src/content/events/2026/08/20260801-11.md) — **1 fuente**
 - [2026/08/20260801-9 - Diputados RN piden al Gobierno poner urgencia a proyecto que permite apoyo de las Fuerzas Armadas a las policías](src/content/events/2026/08/20260801-9.md) — **1 fuente**
-- [2026/08/20260802-11 - Rabat adelanta la agenda de seguridad del Gobierno: agencia de bienes incautados, apoyo de FF.AA. a policías e indicaciones a la Ley RPA](src/content/events/2026/08/20260802-11.md) — **1 fuente**
 - [2026/08/20260802-5 - Matthei: 'Si TVN no transparenta contrato con Porcel TV, debe investigar Fiscalía'](src/content/events/2026/08/20260802-5.md) — **1 fuente**
 - [2026/08/20260802-7 - PPD busca ampliar proyecto del PDG sobre reembolso del IVA: suma alimentos, lentes y fórmulas lácteas](src/content/events/2026/08/20260802-7.md) — **1 fuente**
 - [2026/08/20260802-8 - El reservado proyecto de los bancos para lanzar el 'Pix chileno': pagos inmediatos interoperables con alias y QR](src/content/events/2026/08/20260802-8.md) — **1 fuente**
@@ -272,7 +271,6 @@
 - [2022/05/20220524-1 - Boric compromete desde Justicia una agenda de reparación para víctimas de violaciones a los DD.HH. del estallido social](src/content/events/2022/05/20220524-1.md) — **2 fuentes**
 - [2022/07/20220704-1 - Boric realiza una cadena nacional tras recibir la propuesta de nueva Constitución y convoca al plebiscito del 4 de septiembre](src/content/events/2022/07/20220704-1.md) — **2 fuentes**
 - [2022/08/20220803-1 - Boric presenta el Plan PACTO de reparación integral para víctimas de trauma ocular del 18-O](src/content/events/2022/08/20220803-1.md) — **2 fuentes**
-- [2022/09/20220904-1 - Plebiscito de salida: la opción Rechazo gana con 61,86% y la propuesta de nueva Constitución es derrotada](src/content/events/2022/09/20220904-1.md) — **2 fuentes**
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — **2 fuentes**
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — **2 fuentes**
 - [2022/11/20221122-1 - Cámara aprueba resolución que rechaza categóricamente el uso de fake news en política: 37 diputados votan en contra, en su mayoría de Republicanos y Chile Vamos](src/content/events/2022/11/20221122-1.md) — **2 fuentes**
@@ -389,6 +387,7 @@
 - [2026/08/20260801-3 - Diputado Agustín Romero defiende la agenda ideológica del oficialismo tras el llamado de atención de Kast](src/content/events/2026/08/20260801-3.md) — **2 fuentes**
 - [2026/08/20260801-5 - Ministro Arrau supervisa allanamiento en cárcel de Chillán: 40 armas blancas y ocho celulares incautados](src/content/events/2026/08/20260801-5.md) — **2 fuentes**
 - [2026/08/20260801-7 - Concejal de Lago Verde muere tras incendiarse el hotel donde se hospedaba con su delegación en Villa Amengual](src/content/events/2026/08/20260801-7.md) — **2 fuentes**
+- [2026/08/20260802-11 - Rabat adelanta la agenda de seguridad del Gobierno: agencia de bienes incautados, apoyo de FF.AA. a policías e indicaciones a la Ley RPA](src/content/events/2026/08/20260802-11.md) — **2 fuentes**
 - [2026/08/20260802-13 - FENADAJ respalda la denuncia ante la CIDH por los recortes presupuestarios y advierte riesgos para el acceso a la justicia](src/content/events/2026/08/20260802-13.md) — **2 fuentes**
 - [2026/08/20260802-4 - Gobierno de Kast pierde un seremi cada cuatro días: ya suma 32 salidas y 39 autoridades en total](src/content/events/2026/08/20260802-4.md) — **2 fuentes**
 - [2026/08/20260802-6 - Gobierno estudia vender participación del Estado en empresas sanitarias para recaudar recursos; Mas: 'ningún problema en achicar el Estado' si es más eficiente](src/content/events/2026/08/20260802-6.md) — **2 fuentes**
@@ -1017,7 +1016,7 @@
 - [2026/08/20260801-9 - Diputados RN piden al Gobierno poner urgencia a proyecto que permite apoyo de las Fuerzas Armadas a las policías](src/content/events/2026/08/20260801-9.md) — 1 fuente
 - [2026/08/20260802-1 - Balance Senapred por sistema frontal: 2 fallecidos, 25 viviendas destruidas y más de 6 mil aislados](src/content/events/2026/08/20260802-1.md) — 7 fuentes
 - [2026/08/20260802-10 - Cadem: desaprobación de Kast sube a 60% y un 76% cree que Chile está dividido por la política](src/content/events/2026/08/20260802-10.md) — 3 fuentes
-- [2026/08/20260802-11 - Rabat adelanta la agenda de seguridad del Gobierno: agencia de bienes incautados, apoyo de FF.AA. a policías e indicaciones a la Ley RPA](src/content/events/2026/08/20260802-11.md) — 1 fuente
+- [2026/08/20260802-11 - Rabat adelanta la agenda de seguridad del Gobierno: agencia de bienes incautados, apoyo de FF.AA. a policías e indicaciones a la Ley RPA](src/content/events/2026/08/20260802-11.md) — 2 fuentes
 - [2026/08/20260802-12 - Más de 100 alcaldes piden veto presidencial a la compensación por contribuciones; 162 oficialistas responden y llaman al Senado a aprobarla](src/content/events/2026/08/20260802-12.md) — 9 fuentes
 - [2026/08/20260802-13 - FENADAJ respalda la denuncia ante la CIDH por los recortes presupuestarios y advierte riesgos para el acceso a la justicia](src/content/events/2026/08/20260802-13.md) — 2 fuentes
 - [2026/08/20260802-2 - Pulso Ciudadano: aprobación de Kast cae a 25,6% y desaprobación llega a 58,9%, récord de su gobierno](src/content/events/2026/08/20260802-2.md) — 3 fuentes
@@ -1310,7 +1309,7 @@
 - [2026/08/20260812-7 - Junaeb anuncia la digitalización gradual de la TNE: licitación en 2026 y fin progresivo del plástico](src/content/events/2026/08/20260812-7.md) — 5 fuentes
 - [2026/08/20260812-8 - Cadem edición 680: cae a 40% la percepción de que la delincuencia ha aumentado, con cambio metodológico en la pregunta y un 2025 sin mediciones](src/content/events/2026/08/20260812-8.md) — 6 fuentes
 - [2026/08/20260812-9 - Frustran por falta de quórum la comisión mixta que debía destrabar la Ley de Incendios: faltaron 3 diputados oficialistas del Bío Bío](src/content/events/2026/08/20260812-9.md) — 4 fuentes
-- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 33 fuentes
+- [2026/08/20260813-1 - Operación Cancerbero: el Gobierno traslada reos de alta peligrosidad a la cárcel La Laguna de Talca en un operativo 'al estilo Bukele'](src/content/events/2026/08/20260813-1.md) — 34 fuentes
 - [2026/08/20260813-10 - Duras críticas al canal de TV del Senado por publicitar una entrevista a la senadora Camila Flores, investigada por fraude al fisco en el caso cuota Flores](src/content/events/2026/08/20260813-10.md) — 1 fuente
 - [2026/08/20260813-11 - Rabat encarga la Reforma Procesal Civil a Trinidad Zegers, abogada que juró hace 4 meses: críticas por falta de experiencia y defensa de la cartera](src/content/events/2026/08/20260813-11.md) — 11 fuentes
 - [2026/08/20260813-12 - Corte de Apelaciones confirma 15 años de cárcel a Miguel Krassnoff por la desaparición del estudiante Dignaldo Araneda Pizzini (1974): sus penas superan los mil años](src/content/events/2026/08/20260813-12.md) — 3 fuentes
@@ -1429,7 +1428,7 @@
 - [2026/08/20260819-11 - CGE ficha a Simón Boric como gerente de comunicaciones tras 12 años en la U. de Chile y enfrenta ola de críticas en redes](src/content/events/2026/08/20260819-11.md) — 7 fuentes
 - [2026/08/20260819-12 - Declaran admisible querella contra Luis Hermosilla por presunto tráfico de influencias en el caso Luchsinger-Mackay](src/content/events/2026/08/20260819-12.md) — 8 fuentes
 - [2026/08/20260819-13 - Se constituye la comisión mixta de Inteligencia Económica para destrabar el levantamiento del secreto bancario](src/content/events/2026/08/20260819-13.md) — 6 fuentes
-- [2026/08/20260819-14 - El matinal de Chilevisión llega a Caleta Buena antes que las autoridades y Eduardo de la Iglesia lanza: 'se les perdió el mapa'](src/content/events/2026/08/20260819-14.md) — 12 fuentes
+- [2026/08/20260819-14 - El matinal de Chilevisión llega a Caleta Buena antes que las autoridades y Eduardo de la Iglesia lanza: 'se les perdió el mapa'](src/content/events/2026/08/20260819-14.md) — 13 fuentes
 - [2026/08/20260819-2 - Frei defiende la agenda económica de Kast y ataca la 'permisología': 'Inventan la ranita, inventan todo para frenar proyectos'](src/content/events/2026/08/20260819-2.md) — 1 fuente
 - [2026/08/20260819-3 - Abogada RN recién titulada fue contratada como 'experta' en Migraciones con sueldo de $4,3 millones: cuarto caso de la 'generación sin currículum'](src/content/events/2026/08/20260819-3.md) — 2 fuentes
 - [2026/08/20260819-4 - Detienen en Peru a hermano del alcalde de Arica, Ricardo Vargas, por trafico ilicito de migrantes en el paso Santa Rosa](src/content/events/2026/08/20260819-4.md) — 1 fuente
@@ -1488,6 +1487,7 @@
 - [2026/08/20260823-4 - Declaran culpables a cuatro excarabineros por apremios a detenido en Alto Hospicio: suman seis condenados por el caso de violencia institucional](src/content/events/2026/08/20260823-4.md) — 2 fuentes
 - [2026/08/20260824-1 - Kast en Radio Infinita: su reforma de seguridad 'no es iliberal' y 'se puede cambiar', defiende las 43 salidas del gabinete y relativiza el cruce por el Convenio 169](src/content/events/2026/08/20260824-1.md) — 11 fuentes
 - [2026/08/20260824-10 - 'Lista negra' de bandas: Walker la califica de peligrosa, Longton rechaza que el Senado valide decisiones penales y Moreira la respalda con garantías mientras Arrau defiende el delito de pertenencia](src/content/events/2026/08/20260824-10.md) — 6 fuentes
+- [2026/08/20260824-11 - PDI detiene a estudiante de 19 años por amenaza de bomba en el DCC de la U. de Chile tras una alerta de Meta y queda con arraigo y firma quincenal](src/content/events/2026/08/20260824-11.md) — 5 fuentes
 - [2026/08/20260824-2 - Petro acusa en X que la elección de Kast fue manipulada 'mediante la mentira' y que cinco países fueron 'manipuladas por technofascismo', citando el caso Cerimedo: sin antecedentes y sin reacción oficial chilena documentada](src/content/events/2026/08/20260824-2.md) — 9 fuentes
 - [2026/08/20260824-4 - Minvu abre los llamados 2026 del DS27 por sobre 10,7 millones de UF: mejoramiento de viviendas y barrios con meta de casi 20 mil empleos](src/content/events/2026/08/20260824-4.md) — 2 fuentes
 - [2026/08/20260824-5 - Gobierno rebate el 'iliberalismo': Alvarado dice estar 'muy lejos' de lo señalado por Cruz-Coke y Arrau desafía a los 'opinólogos' a ir a las poblaciones](src/content/events/2026/08/20260824-5.md) — 3 fuentes
@@ -1730,10 +1730,10 @@
 - [2026/09/20260912-8 - Corte de Apelaciones de Santiago rechaza que Juan Manuel Aliste Vega cumpla su pena en casa por enfermedad terminal](src/content/events/2026/09/20260912-8.md) — 5 fuentes
 - [2026/09/20260912-9 - Ingresa la Ley Mariana: proyecto declara imprescriptibles homicidios, femicidios y parricidios tras el sobreseimiento del confeso](src/content/events/2026/09/20260912-9.md) — 8 fuentes
 - [2026/09/20260913-1 - Judd a La Tercera: seguirá siendo 'un tipo diferente de embajador' y si sus respuestas molestan 'es su problema'](src/content/events/2026/09/20260913-1.md) — 6 fuentes
-- [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 12 fuentes
+- [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 16 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
 - [2026/09/20260913-4 - Alcalde Concha responde a Undurraga por la medialuna: 'Es decadente que el gobierno termine respaldando prácticas clandestinas'](src/content/events/2026/09/20260913-4.md) — 5 fuentes
-- [2026/09/20260913-5 - Interno muere tras recibir disparo de centinela y caer desde muro de 8 metros en intento de fuga de la cárcel de Talca vestido de gendarme](src/content/events/2026/09/20260913-5.md) — 12 fuentes
+- [2026/09/20260913-5 - Interno muere tras recibir disparo de centinela y caer desde muro de 8 metros en intento de fuga de la cárcel de Talca vestido de gendarme](src/content/events/2026/09/20260913-5.md) — 19 fuentes
 - [2026/09/20260913-6 - Mara Sedini reaparece en el podcast de Felipe Kast y admite que no tuvo 'la fuerza' para defender su estilo de vocería](src/content/events/2026/09/20260913-6.md) — 8 fuentes
 - [2026/09/20260914-1 - Kast aborda los indultos y afirma que no corresponde que una persona muera en la cárcel, con revisión caso a caso](src/content/events/2026/09/20260914-1.md) — 13 fuentes
 - [2026/09/20260914-10 - Alvarado afirma que no hay definiciones ni decisiones finales sobre las más de 100 solicitudes de indulto y que se evaluarán caso a caso](src/content/events/2026/09/20260914-10.md) — 6 fuentes
@@ -1758,6 +1758,7 @@
 - [2026/09/20260915-3 - Minsal solicita la renuncia del seremi de Salud de La Araucanía, José Bravo Burgos, por comparar el cierre de ELEAM con un vertedero tras el incendio de Pitrufquén](src/content/events/2026/09/20260915-3.md) — 18 fuentes
 - [2026/09/20260915-4 - El CPLT abre la puerta a sumarios contra 34 organismos que no acataron sus órdenes de entrega de información, entre ellos la PDI, el SII y Santiago 2023](src/content/events/2026/09/20260915-4.md) — 5 fuentes
 - [2026/09/20260915-5 - Argentina acelera la Base Naval Integrada de Ushuaia para competir con Punta Arenas por la logística antártica](src/content/events/2026/09/20260915-5.md) — 7 fuentes
+- [2026/09/20260915-6 - Pía Adriasola cede su Toyota 4Runner en comodato gratuito a Presidencia, que asume mantención, seguro y gastos hasta 2030](src/content/events/2026/09/20260915-6.md) — 5 fuentes
 - [2026/09/20260916-1 - Quiroz repite en el ChileDay Londres la receta para cuadruplicar la inversión y cierra la gira europea con el Make Chile Great Again](src/content/events/2026/09/20260916-1.md) — 7 fuentes
 - [2026/09/20260916-2 - Kast inaugura las fondas del Parque O'Higgins con su primer pie de cueca y una paya junto a Desbordes](src/content/events/2026/09/20260916-2.md) — 10 fuentes
 - [2026/09/20260916-3 - Contraloría oficia al Servicio Civil por los antecedentes académicos de Lucy Depablos y la activista venezolana renuncia al gobierno de Kast](src/content/events/2026/09/20260916-3.md) — 15 fuentes
@@ -1796,6 +1797,7 @@
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
+- [2026/09/20260922-7 - Reacciones al debut de Kast en la ONU: de dar en el clavo a un exceso de retórica](src/content/events/2026/09/20260922-7.md) — 8 fuentes
 - [2026/09/20260923-1 - Senadores presentan proyecto para penalizar la omisión de medidas de seguridad en establecimientos de cuidado de adultos mayores](src/content/events/2026/09/20260923-1.md) — 6 fuentes
 - [2026/09/20260923-2 - Trump apoya evaluar una restricción a las exportaciones estadounidenses de diésel y Chile queda expuesto a un posible choque de suministro](src/content/events/2026/09/20260923-2.md) — 13 fuentes
 - [2026/09/20260923-3 - UAF advierte que el acceso a información bancaria protegida por secreto bancario tarda 28 días hábiles en promedio](src/content/events/2026/09/20260923-3.md) — 13 fuentes
@@ -1807,6 +1809,7 @@
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 - [2026/09/20260924-10 - Caravana de conductores y gremios del transporte recorre Santiago en protesta por el costo del TAG y los peajes](src/content/events/2026/09/20260924-10.md) — 8 fuentes
 - [2026/09/20260924-11 - Cerimedo declara ante fiscales bolivianos y sostiene que puede demostrar el origen lícito del dinero incautado](src/content/events/2026/09/20260924-11.md) — 4 fuentes
+- [2026/09/20260924-12 - Fiscalía allana Autopista Central por fraude en notificaciones de multas del TAG en el Juzgado de La Granja](src/content/events/2026/09/20260924-12.md) — 5 fuentes
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes
 - [2026/09/20260924-4 - Barros anuncia en Punta Arenas un plan de renovación de capacidades estratégicas para la zona suraustral: reemplazo de los F-5, renovación de los UH-1H y los Hércules, patrullaje de largo alcance, Leopard 1 y nuevas bases](src/content/events/2026/09/20260924-4.md) — 12 fuentes
@@ -1830,6 +1833,7 @@
 - [2026/09/20260927-2 - Alvarado en Estado Nacional: EE.UU. adelantó la firma del Escudo para aprovechar la ONU y Chile adhirió por convicción](src/content/events/2026/09/20260927-2.md) — 9 fuentes
 - [2026/09/20260927-3 - Pulso Ciudadano de septiembre: aprobación de Kast cae a 28,2% y desaprobación sube a 57,6%, con desconfianza en máximo histórico](src/content/events/2026/09/20260927-3.md) — 8 fuentes
 - [2026/09/20260927-4 - Barros aborda en Radio Polar la disputa por Malvinas y respalda el comercio entre Punta Arenas y las islas; Argentina lo tilda de confuso y Alvarado lo respalda](src/content/events/2026/09/20260927-4.md) — 13 fuentes
+- [2026/09/20260927-5 - Cabo segundo Christopher Aguilera muere tras ser baleado en Lo Espejo y el Gobierno decreta tres días de duelo](src/content/events/2026/09/20260927-5.md) — 7 fuentes
 - [2026/09/20260928-1 - García Ruminot reúne a timoneles en su casa y a jefes de bancada en La Moneda para recomponer la coordinación tras las derrotas legislativas](src/content/events/2026/09/20260928-1.md) — 5 fuentes
 - [2026/09/20260928-2 - Diputados de oposición llevan a Contraloría la adhesión al Escudo de las Américas y acusan un tratado internacional encubierto](src/content/events/2026/09/20260928-2.md) — 9 fuentes
 - [2026/09/20260928-3 - Cámara aprueba solicitar al presidente Kast explicar los alcances del Escudo de las Américas](src/content/events/2026/09/20260928-3.md) — 6 fuentes
@@ -1837,6 +1841,7 @@
 - [2026/09/20260928-5 - Kast presenta el plan Chile Despega por $1,3 billones para crear 100 mil empleos con cuatro ejes](src/content/events/2026/09/20260928-5.md) — 51 fuentes
 - [2026/09/20260928-6 - 28S en Santiago: pañuelazo en Baquedano y marcha por el aborto legal con carta de 35 colectividades al Congreso por el Presupuesto 2027](src/content/events/2026/09/20260928-6.md) — 8 fuentes
 - [2026/09/20260928-7 - Milei ordena arbitraje contra el Reino Unido por Sea Lion y acciones penales por vuelos entre Malvinas y Punta Arenas](src/content/events/2026/09/20260928-7.md) — 13 fuentes
+- [2026/09/20260928-8 - Gobierno confirma la salida del director nacional del Sernac Andrés Herrera tras un sumario por acoso laboral](src/content/events/2026/09/20260928-8.md) — 8 fuentes
 - [2026/09/20260929-1 - Kast firma proyecto que extiende bonos de combustibles hasta diciembre y capitaliza el Fogape](src/content/events/2026/09/20260929-1.md) — 18 fuentes
 - [2026/09/20260929-2 - Encuesta Chile Actual de Nodo XXI, 38,2% de quienes votaron por Kast en 2025 hoy cambiaría su voto](src/content/events/2026/09/20260929-2.md) — 10 fuentes
 - [2026/09/20260929-3 - Quiroz dice que el Presupuesto 2026 está lleno de errores y que el gasto 2027 crecerá sobre el 1% respecto del ejecutado, y Brito advierte recortes en regiones y programas](src/content/events/2026/09/20260929-3.md) — 25 fuentes
@@ -1857,7 +1862,7 @@
 - [2026/09/20260930-4 - Kast confirma al oficialismo alza de 1,5% para el Presupuesto 2027 y cadena nacional, y se abre el debate por la base de cálculo](src/content/events/2026/09/20260930-4.md) — 15 fuentes
 - [2026/09/20260930-5 - Kast reúne en Cerro Castillo a presidentes de comisiones y condiciona el retiro de la reforma de seguridad a un texto alternativo](src/content/events/2026/09/20260930-5.md) — 12 fuentes
 - [2026/09/20260930-6 - Operación Apocalipsis II: la PDI detiene en cuatro regiones a Álex Vega, exdirigente de la ANFUP, y a otras dos personas por corrupción en Santiago 1](src/content/events/2026/09/20260930-6.md) — 42 fuentes
-- [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 25 fuentes
+- [2026/09/20260930-7 - ENAP confirma la cuarta alza consecutiva: la parafina se descongela con +$281,8 por litro, el diésel sube $95 y las gasolinas $39,4 desde el 1 de octubre](src/content/events/2026/09/20260930-7.md) — 26 fuentes
 - [2026/09/20260930-8 - Quiroz justifica el alza de la parafina con un consumo mínimo por temperaturas altas y defiende la suspensión del Mepco con una cifra de US$2.900 millones](src/content/events/2026/09/20260930-8.md) — 15 fuentes
 - [2026/09/20260930-9 - El tercer seremi que renuncia en el día: Juan Carlos Meléndez deja Economía en O'Higgins con efecto inmediato y Sebastián Vargas Ibaceta asumirá el 1 de octubre](src/content/events/2026/09/20260930-9.md) — 11 fuentes
 - [2026/10/20261001-1 - Paro nacional y marcha de la Confech por la Alameda con 12 detenidos: Carabineros usa carros lanzaagua y lanzagases y el Colegio de Profesoras y Profesores denuncia gases y desmayos](src/content/events/2026/10/20261001-1.md) — 110 fuentes
@@ -1869,6 +1874,7 @@
 - [2026/10/20261001-15 - Imacec de agosto cae 1,0% anual por el desplome de 17,4% de la minería y suma el segundo mes consecutivo en rojo](src/content/events/2026/10/20261001-15.md) — 7 fuentes
 - [2026/10/20261001-16 - Presupuesto 2027 fija techos de horas docentes en los SLEP y abre flanco por 2.000 profesores menos](src/content/events/2026/10/20261001-16.md) — 7 fuentes
 - [2026/10/20261001-17 - Detienen en Bolivia al fiscal general que investigaba el caso Cerimedo, dos días después de que EE.UU. le cancelara la visa](src/content/events/2026/10/20261001-17.md) — 6 fuentes
+- [2026/10/20261001-18 - Naviera Cruz del Sur aplica desde el 1 de octubre un alza de hasta 1.000 pesos en los transbordos de Chiloé y Palena](src/content/events/2026/10/20261001-18.md) — 6 fuentes
 - [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 66 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 7 fuentes
@@ -1879,6 +1885,7 @@
 - [2026/10/20261001-9 - Escalada global del diesel: Trump mantiene en pie la prohibicion de exportaciones, Washington pide a Europa liberar 120 millones de barriles, China suspende sus envios y Rusia alarga su veto](src/content/events/2026/10/20261001-9.md) — 8 fuentes
 - [2026/10/20261002-1 - Presupuesto 2027 ingresa al Congreso y se conocen recortes en Educación: 83 mil horas SLEP, Liceos Bicentenario a la mitad y fin de Becas TIC](src/content/events/2026/10/20261002-1.md) — 30 fuentes
 - [2026/10/20261002-10 - Bancada UDI propone recortar el INDH y el gasto por licencias médicas para reponer "Yo elijo mi PC" y los Liceos Bicentenario](src/content/events/2026/10/20261002-10.md) — 7 fuentes
+- [2026/10/20261002-11 - Los cinco multifondos de pensiones cierran septiembre de 2026 en rojo y el Fondo E acumula una caída de 10,4%](src/content/events/2026/10/20261002-11.md) — 8 fuentes
 - [2026/10/20261002-2 - Contraloría detecta que 7.207 servidores públicos viajaron al extranjero con licencia médica en 2025, una baja de 63%](src/content/events/2026/10/20261002-2.md) — 7 fuentes
 - [2026/10/20261002-3 - Embajador Brandon Judd respalda la condena de Kast y advierte que quienes cometan delitos violentos en la marcha de la Confech no tienen derecho a viajar a EE.UU.](src/content/events/2026/10/20261002-3.md) — 11 fuentes
 - [2026/10/20261002-4 - TC cierra el control preventivo de la megarreforma: elimina la indemnización por RCA anuladas y dos normas municipales y deja la ley lista para promulgar](src/content/events/2026/10/20261002-4.md) — 7 fuentes
@@ -1900,6 +1907,7 @@
 - [2026/10/20261005-6 - La resolución que contrató a Natalia Ducó como asesora senior en deportes fija honorarios brutos por $17,1 millones hasta diciembre](src/content/events/2026/10/20261005-6.md) — 7 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
 - [2026/10/20261006-10 - Fontaine responde oficio de la Cámara: renunció a la Fundación Ciudadanos en Acción en abril y no se inhabilitó en litio](src/content/events/2026/10/20261006-10.md) — 6 fuentes
+- [2026/10/20261006-11 - Subsidio Unificado al Empleo entra en vigencia con más de 70 mil postulaciones y un beneficio que fusiona tres subsidios](src/content/events/2026/10/20261006-11.md) — 6 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 - [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 13 fuentes
 - [2026/10/20261006-4 - Primer tropiezo del Presupuesto 2027: la Cuarta Subcomisión Mixta rechaza la rebaja de 12% al Servel](src/content/events/2026/10/20261006-4.md) — 6 fuentes
@@ -1923,6 +1931,7 @@
 - [2026/10/20261008-11 - Presupuesto 2027 recorta 31,5% la inversión de Transportes y 78,5% el fondo de conectividad regional](src/content/events/2026/10/20261008-11.md) — 6 fuentes
 - [2026/10/20261008-12 - Judd afirma que 'no hay una Antártica que pertenezca a Chile' y Cancillería reafirma que la soberanía está definida por tratados](src/content/events/2026/10/20261008-12.md) — 8 fuentes
 - [2026/10/20261008-13 - Inteligencia chilena califica como "evento crítico" el zarpe del Danstar a Malvinas y Liga Naval argentina amenaza con detenerlo](src/content/events/2026/10/20261008-13.md) — 11 fuentes
+- [2026/10/20261008-14 - CyberMonday 2026 cierra con récord de 5,3 millones de transacciones pero con el ticket promedio más bajo de su historia](src/content/events/2026/10/20261008-14.md) — 9 fuentes
 - [2026/10/20261008-2 - Aluvión en San Carlos de Apoquindo (Las Condes): torrente de agua y barro arrastra vehículos y un bus a las 17:00; seis lesionados](src/content/events/2026/10/20261008-2.md) — 89 fuentes
 - [2026/10/20261008-3 - Senapred declara Alerta Roja para 10 comunas de cordillera y precordillera de la Región Metropolitana por remoción en masa](src/content/events/2026/10/20261008-3.md) — 4 fuentes
 - [2026/10/20261008-4 - Gobierno decreta zona de catástrofe en Las Condes tras el aluvión; Alvarado detalla alcances y FIBE](src/content/events/2026/10/20261008-4.md) — 12 fuentes
@@ -1953,7 +1962,9 @@
 - [2026/10/20261014-1 - Ruta comercial Punta Arenas-Malvinas: el gobierno defiende el zarpe privado del Danstar y el canciller argentino dice que Chile no dará logística](src/content/events/2026/10/20261014-1.md) — 8 fuentes
 - [2026/10/20261014-2 - Fast Check desmiente que video de joven esnifando corresponda a la marcha por Palestina ni al Frente Amplio](src/content/events/2026/10/20261014-2.md) — 5 fuentes
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
+- [2026/10/20261015-2 - Caso Ronald Ojeda: Segundo TOP condena a Maickel Villegas a 20 años de presidio por secuestro con homicidio](src/content/events/2026/10/20261015-2.md) — 9 fuentes
 - [2026/10/20261016-1 - Kast realiza la primera visita de Estado de un presidente chileno a Bolivia en 71 años y firma cinco instrumentos con Paz](src/content/events/2026/10/20261016-1.md) — 10 fuentes
+- [2026/10/20261017-1 - BBCL Investiga reconstruye la fuga de Héctor Godoy Cortez, condenado a diez años por abusar de dos niñas y prófugo desde abril](src/content/events/2026/10/20261017-1.md) — 6 fuentes
 - [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
 - [2026/10/20261019-1 - SEA resuelve que el data center de Google en Cerrillos no debe ingresar al SEIA y OLCA y MOSACAT anuncian impugnación](src/content/events/2026/10/20261019-1.md) — 8 fuentes
 - [2026/10/20261019-2 - Gobierno ingresa proyecto que reforma el INDH: elimina la facultad de querellarse, reduce el Consejo de 11 a 5 y deja una sola sede en Santiago](src/content/events/2026/10/20261019-2.md) — 7 fuentes
@@ -1962,16 +1973,16 @@
 - [2026/10/20261021-2 - Contraloría remite a la Fiscalía el viaje a Shanghái de Raúl Domínguez, exjefe de Fiscalización de la Subtel, por eventual cohecho](src/content/events/2026/10/20261021-2.md) — 10 fuentes
 - [2026/10/20261021-3 - Kast nombra a Gonzalo Arenas como subsecretario de la Segegob y vocero de Gobierno en reemplazo de José Francisco Lagos](src/content/events/2026/10/20261021-3.md) — 8 fuentes
 - [2026/10/20261021-4 - Renuncia Isabel Seoane, segunda jefa de gabinete de Iván Poduje en el Minvu](src/content/events/2026/10/20261021-4.md) — 6 fuentes
-- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 34 fuentes
+- [2026/10/20261022-1 - Las rebajas de condena cruzan a los tres poderes, dividen al oficialismo y llegan a Punta Peuco: la Suprema dice no tener información, la Defensoría las rechaza y el Congreso activa reformas](src/content/events/2026/10/20261022-1.md) — 39 fuentes
 - [2026/10/20261022-2 - PDI incauta en Lampa 739 kilos de droga de la Operación Tempestad traídos desde Arica, avaluados en $13.500 millones, y detiene a dos camioneros](src/content/events/2026/10/20261022-2.md) — 6 fuentes
 - [2026/10/20261022-3 - Dos tutores del CIP Coronel son sorprendidos fumando marihuana con internos: el seremi confirma la separación de funciones y los gremios exhiben después un test negativo](src/content/events/2026/10/20261022-3.md) — 9 fuentes
 - [2026/10/20261023-1 - Justicia suspende la tramitación de nuevas rebajas de condena y Rabat desliga a Kast de la decisión: "no estaba en conocimiento"](src/content/events/2026/10/20261023-1.md) — 9 fuentes
 - [2026/10/20261023-10 - Lagos se incorpora al Segundo Piso como asesor de programación dos días después de dejar la Segegob y el oficialismo cuestiona el destino de las exautoridades](src/content/events/2026/10/20261023-10.md) — 10 fuentes
 - [2026/10/20261023-11 - Fiscal boliviano abre cuentas de Cerimedo en EEUU y Argentina por US$300.000; sigue sin verificarse la cuenta en Chile que mencionó Beller](src/content/events/2026/10/20261023-11.md) — 5 fuentes
 - [2026/10/20261023-2 - Seis partidos de oposición exigen la salida de Rabat y alistan una acusación constitucional: convocan sesión especial para el 28 de octubre](src/content/events/2026/10/20261023-2.md) — 8 fuentes
-- [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 12 fuentes
+- [2026/10/20261023-3 - Larraín contradice a Rabat con la historia de la Ley 21.421 y el cruce con Squella por Paul Schäfer abre un flanco en el oficialismo](src/content/events/2026/10/20261023-3.md) — 13 fuentes
 - [2026/10/20261023-4 - Dos de los 56 beneficiados hablan y T13 identifica cuatro casos, entre ellos un médico con cerca de 20 denuncias: las víctimas no fueron notificadas](src/content/events/2026/10/20261023-4.md) — 13 fuentes
-- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 12 fuentes
+- [2026/10/20261023-5 - Arenas exhibe decretos de la administración Boric para equiparar las rebajas y el contraste con el criterio anterior abre un nuevo flanco](src/content/events/2026/10/20261023-5.md) — 15 fuentes
 - [2026/10/20261023-6 - Interferencia publica los decretos de Casablanca y Petorca firmados por Rabat y Silva y la responsabilidad del Gobierno se desplaza hacia los mandos medios](src/content/events/2026/10/20261023-6.md) — 6 fuentes
 - [2026/10/20261023-7 - Corte de Apelaciones de Punta Arenas avala la desvinculación de una funcionaria del Registro Civil que acumuló 345 días de licencias médicas](src/content/events/2026/10/20261023-7.md) — 6 fuentes
 - [2026/10/20261023-8 - Exgeneral argentino Calandín plantea "eliminar Puerto Williams" cortándole el gas y autoridades chilenas responden que el suministro es propio](src/content/events/2026/10/20261023-8.md) — 12 fuentes
@@ -1980,46 +1991,48 @@
 - [2026/10/20261024-2 - Rubilar pide a Kast reconocer un “error gravísimo” por las 56 rebajas y exige disculpas públicas de Rabat](src/content/events/2026/10/20261024-2.md) — 6 fuentes
 - [2026/10/20261024-3 - La comparación viral de dos portadas de LUN contrapone los 13 indultos de 2022 con una portada de farándula de 2026](src/content/events/2026/10/20261024-3.md) — 11 fuentes
 - [2026/10/20261024-4 - Kast y el primer ministro británico Burnham conversan por teléfono: defensa, comercio y autodeterminación de los isleños](src/content/events/2026/10/20261024-4.md) — 7 fuentes
-- [2026/10/20261025-1 - Rabat descarta renunciar y estudia dos vías para revertir las rebajas, admite que no revisó caso a caso y Cordero advierte un riesgo jurídico por la suspensión](src/content/events/2026/10/20261025-1.md) — 11 fuentes
+- [2026/10/20261025-1 - Rabat descarta renunciar y estudia dos vías para revertir las rebajas, admite que no revisó caso a caso y Cordero advierte un riesgo jurídico por la suspensión](src/content/events/2026/10/20261025-1.md) — 12 fuentes
 - [2026/10/20261025-2 - Ottone reedita “El segundo piso” y cuestiona el liderazgo de Kast y el rol de los asesores: “Es un liderazgo francamente muy pobre”](src/content/events/2026/10/20261025-2.md) — 7 fuentes
 - [2026/10/20261025-3 - Criteria: Kast iguala su mínimo con 27% de aprobación y 64% de desaprobación, y 73% duda de que el Gobierno enmiende el rumbo](src/content/events/2026/10/20261025-3.md) — 5 fuentes
-- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 10 fuentes
+- [2026/10/20261026-1 - Kast reconoce el "error" de las rebajas de condena, anuncia un proyecto para prohibirlas y ratifica a Rabat: "El Estado les falló"](src/content/events/2026/10/20261026-1.md) — 12 fuentes
 - [2026/10/20261026-2 - Identifican a los dos condenados por secuestro y torturas que salieron de Punta Peuco con rebajas firmadas por Rabat](src/content/events/2026/10/20261026-2.md) — 8 fuentes
-- [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 9 fuentes
+- [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 12 fuentes
 - [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 9 fuentes
-- [2026/10/20261026-5 - Bío Bío identifica a 33 de los 56 condenados por delitos sexuales beneficiados con rebajas: informes de Gendarmería advertían alto riesgo de reincidencia y las víctimas no fueron notificadas](src/content/events/2026/10/20261026-5.md) — 8 fuentes
-- [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 6 fuentes
-- [2026/10/20261026-7 - Superintendente eleva a más de US$10 mil millones las pérdidas valorizadas de los cinco multifondos y confirma alertas a las AFP desde 2024](src/content/events/2026/10/20261026-7.md) — 13 fuentes
-- [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 13 fuentes
-- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 13 fuentes
+- [2026/10/20261026-5 - Bío Bío identifica a 33 de los 56 condenados por delitos sexuales beneficiados con rebajas: informes de Gendarmería advertían alto riesgo de reincidencia y las víctimas no fueron notificadas](src/content/events/2026/10/20261026-5.md) — 11 fuentes
+- [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 9 fuentes
+- [2026/10/20261026-7 - Superintendente eleva a más de US$10 mil millones las pérdidas valorizadas de los cinco multifondos y confirma alertas a las AFP desde 2024](src/content/events/2026/10/20261026-7.md) — 14 fuentes
+- [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 18 fuentes
+- [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 15 fuentes
 - [2026/10/20261027-3 - Revelan planes argentinos para detener, escoltar o multar el Danstar y exalmirantes reivindican la libre navegación frente a Moreno y Van Klaveren](src/content/events/2026/10/20261027-3.md) — 13 fuentes
-- [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 5 fuentes
-- [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 8 fuentes
-- [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 11 fuentes
-- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 10 fuentes
+- [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 11 fuentes
+- [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 10 fuentes
+- [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 12 fuentes
+- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 11 fuentes
 - [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
-- [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 5 fuentes
+- [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 6 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
 - [2026/10/20261028-10 - Camioneros independientes de San Antonio inician un paro de siete días y bloquean los depósitos de contenedores](src/content/events/2026/10/20261028-10.md) — 20 fuentes
 - [2026/10/20261028-11 - Exsubsecretarios de Telecomunicaciones cuestionan el Plan Nacional Digital: versión final en diciembre y 336.000 conexiones 3G sin fecha de apagado](src/content/events/2026/10/20261028-11.md) — 8 fuentes
 - [2026/10/20261028-12 - Microsoft y CENIA firman una alianza de dos años para impulsar Latam GPT con US$250.000 en créditos de Azure](src/content/events/2026/10/20261028-12.md) — 6 fuentes
+- [2026/10/20261028-13 - T13 revela que Luis Silva firmó la rebaja de José Silva Olivares mientras su amparo aún se tramitaba en Valparaíso](src/content/events/2026/10/20261028-13.md) — 14 fuentes
+- [2026/10/20261028-14 - Corte Suprema remueve al juez Daniel Urrutia por viajes con licencia médica y cierra la purga con 18 magistrados](src/content/events/2026/10/20261028-14.md) — 6 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
-- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 6 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 7 fuentes
-- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 10 fuentes
+- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 9 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 35 fuentes
+- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 11 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 7 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
 - [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
-- [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 9 fuentes
+- [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 10 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
-- [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 18 fuentes
+- [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 24 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
-- [2026/10/20261030-4 - Fiscalía Centro Norte abre investigación contra Rabat y Silva por presunta prevaricación administrativa en las rebajas de condena](src/content/events/2026/10/20261030-4.md) — 7 fuentes
+- [2026/10/20261030-4 - Fiscalía Centro Norte abre investigación contra Rabat y Silva por presunta prevaricación administrativa en las rebajas de condena](src/content/events/2026/10/20261030-4.md) — 8 fuentes
 - [2026/10/20261030-5 - Paro del aseo nocturno en Santiago: calles con basura, plan de contingencia municipal y reanudación del servicio tras 24 horas](src/content/events/2026/10/20261030-5.md) — 8 fuentes
 - [2026/10/20261030-6 - Formalizan al director regional del Sernac de Valparaíso por maltrato habitual contra su cónyuge y el tribunal le prohíbe acercarse a la víctima](src/content/events/2026/10/20261030-6.md) — 7 fuentes
 - [2026/10/20261031-1 - Juzgado de Garantía de Linares declara ilegal la detención de una estudiante de 17 años por amenazas a Kast y la Fiscalía formaliza igualmente](src/content/events/2026/10/20261031-1.md) — 7 fuentes
@@ -2028,7 +2041,7 @@
 - [2026/11/20261101-1 - Criteria: Kast cae a 25% de aprobación, 65% de rechazo y 72% pide que Rabat deje Justicia](src/content/events/2026/11/20261101-1.md) — 5 fuentes
 - [2026/11/20261101-2 - Arenas defiende a Quiroz en Mesa Central: "Es mucho más razonable y más lúcido de lo que aparenta"](src/content/events/2026/11/20261101-2.md) — 4 fuentes
 - [2026/11/20261101-3 - Pulso Ciudadano de octubre: Kast cae a 22,1% de aprobación y 67,5% de desaprobación, con 74,2% pidiendo la salida de Rabat](src/content/events/2026/11/20261101-3.md) — 9 fuentes
-- [2026/11/20261101-4 - Cadem: Kast cae a 26% y acumula siete puntos de retroceso, con 70% en contra de mantener a Rabat y 78% de desaprobación al ministro](src/content/events/2026/11/20261101-4.md) — 7 fuentes
+- [2026/11/20261101-4 - Cadem: Kast cae a 26% y acumula siete puntos de retroceso, con 70% en contra de mantener a Rabat y 78% de desaprobación al ministro](src/content/events/2026/11/20261101-4.md) — 9 fuentes
 - [2026/11/20261102-1 - Oposición entrega en La Moneda una carta a Kast para exigir la renuncia de Rabat y lo declara "no interlocutor válido"](src/content/events/2026/11/20261102-1.md) — 7 fuentes
 - [2026/11/20261102-2 - Rabat descarta renunciar, anuncia una mesa de defensa a la víctima y Parisi alinea al PDG con la acusación constitucional](src/content/events/2026/11/20261102-2.md) — 11 fuentes
 - [2026/11/20261102-3 - Elizalde afirma que Rabat cometió infracciones legales y Gómez relata por qué rechazó decretos de rebaja en 2014](src/content/events/2026/11/20261102-3.md) — 7 fuentes
@@ -2040,6 +2053,7 @@
 - [2026/11/20261105-1 - Bill Gates recorre Chuquicamata en una visita privada y pide a Codelco mantenerla bajo 'estricta reserva'](src/content/events/2026/11/20261105-1.md) — 5 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 - [2026/11/20261106-2 - Chile y Bélgica unen candidaturas para la secretaría del Tratado de Alta Mar en Valparaíso y China cuestiona el acuerdo](src/content/events/2026/11/20261106-2.md) — 8 fuentes
+- [2026/11/20261107-1 - Gobierno decreta dos días de duelo oficial por la muerte de Sebastián Lelio y el cine chileno lo despide](src/content/events/2026/11/20261107-1.md) — 7 fuentes
 - [2026/11/20261109-1 - Kast limita a $40 el alza del 12 de noviembre y anuncia un proyecto para topar las alzas en $20 por 90 días; los camioneros rechazan la propuesta y convocan un paro nacional](src/content/events/2026/11/20261109-1.md) — 22 fuentes
 - [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
@@ -2047,7 +2061,7 @@
 - [2026/11/20261111-1 - Tercer día del paro nacional: el Gobierno retira el proyecto de tope a las alzas y los camioneros vuelven a La Moneda](src/content/events/2026/11/20261111-1.md) — 17 fuentes
 - [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 12 fuentes
 - [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
-- [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 7 fuentes
+- [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 9 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
 - [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 12 fuentes
 - [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 101 fuentes
@@ -2055,7 +2069,7 @@
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
 - [2026/11/20261112-2 - Cuarto día del paro: Fedequinta, Asoducam, pescadores y microbuseros se suman y el comercio advierte riesgo de abastecimiento](src/content/events/2026/11/20261112-2.md) — 8 fuentes
 - [2026/11/20261112-3 - Acuerdo con los camioneros: rebaja de $142 al diésel, techo hasta marzo de 2027 y disidencia](src/content/events/2026/11/20261112-3.md) — 6 fuentes
-- [2026/11/20261112-4 - La oposición ingresa la acusación constitucional contra Rabat: 189 páginas y tres capítulos](src/content/events/2026/11/20261112-4.md) — 9 fuentes
+- [2026/11/20261112-4 - La oposición ingresa la acusación constitucional contra Rabat: 189 páginas y tres capítulos](src/content/events/2026/11/20261112-4.md) — 11 fuentes
 - [2026/11/20261113-1 - El día después del acuerdo: Tohá critica el costo, Pérez defiende el trato y la entrevista deriva en cruce por el desembolso fiscal](src/content/events/2026/11/20261113-1.md) — 6 fuentes
 - [2026/11/20261113-2 - Doce ONG y una ofensiva parlamentaria contra las alertas de Meta a la PDI: piden el convenio, la cifra de detenciones y control judicial previo](src/content/events/2026/11/20261113-2.md) — 6 fuentes
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 5 fuentes
@@ -2070,7 +2084,8 @@
 - [2026/11/20261116-7 - Chile y once países firman una carta ante la OEA para pedir la convocatoria del Órgano de Consulta del TIAR](src/content/events/2026/11/20261116-7.md) — 8 fuentes
 - [2026/11/20261116-8 - La OCDE sitúa a Chile a la cabeza de la caída del ingreso real por habitante en el segundo trimestre, con un 3,5%](src/content/events/2026/11/20261116-8.md) — 10 fuentes
 - [2026/11/20261116-9 - El Congreso despacha en un día la ley que topa las alzas de combustibles hasta abril de 2027 y rebaja el diésel en $100 adicionales](src/content/events/2026/11/20261116-9.md) — 9 fuentes
-- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 34 fuentes
+- [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 37 fuentes
+- [2026/11/20261117-10 - La Suprema ordena a Rabat resolver una rebaja a un violador de niña y desarma su defensa ante la acusación constitucional](src/content/events/2026/11/20261117-10.md) — 7 fuentes
 - [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 64 fuentes
 - [2026/11/20261117-3 - Congreso despacha a ley la postergación de la Ley 21.719 de Datos Personales hasta el 15 de octubre de 2027](src/content/events/2026/11/20261117-3.md) — 8 fuentes
 - [2026/11/20261117-4 - Arenas pide disculpas al PDG tras el 'cúmulo de deseos' y la bancada las rechaza en plena ofensiva por Rabat](src/content/events/2026/11/20261117-4.md) — 8 fuentes
@@ -2081,7 +2096,7 @@
 - [2026/11/20261117-9 - Comisión despacha a Sala el proyecto de Entornos Digitales Seguros que fija 14 años como edad mínima para redes sociales](src/content/events/2026/11/20261117-9.md) — 7 fuentes
 - [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
 - [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión se concreta esa noche](src/content/events/2026/11/20261118-2.md) — 23 fuentes
-- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 63 fuentes
+- [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 70 fuentes
 - [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 10 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
 - [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
@@ -2094,7 +2109,7 @@
 - [2026/11/20261120-3 - Senado despacha el Presupuesto 2027 a la Cámara tras tres jornadas: rechaza la partida de Agricultura por doble empate y Campos se niega a disculparse](src/content/events/2026/11/20261120-3.md) — 8 fuentes
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
-- [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 9 fuentes
+- [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 15 fuentes
 
 ## 2025
 
@@ -2304,7 +2319,7 @@
 - [2022/08/20220803-1 - Boric presenta el Plan PACTO de reparación integral para víctimas de trauma ocular del 18-O](src/content/events/2022/08/20220803-1.md) — 2 fuentes
 - [2022/08/20220805-1 - Boric se refiere al insulto de "merluzo" y reflexiona sobre las cámaras de eco en redes sociales](src/content/events/2022/08/20220805-1.md) — 10 fuentes
 - [2022/09/20220901-1 - Tribunal Oral de San Bernardo declara culpable a Patricio Maturana, excapitán de Carabineros que dejó ciega a Fabiola Campillai](src/content/events/2022/09/20220901-1.md) — 1 fuente
-- [2022/09/20220904-1 - Plebiscito de salida: la opción Rechazo gana con 61,86% y la propuesta de nueva Constitución es derrotada](src/content/events/2022/09/20220904-1.md) — 2 fuentes
+- [2022/09/20220904-1 - Plebiscito de salida: la opción Rechazo gana con 61,86% y la propuesta de nueva Constitución es derrotada](src/content/events/2022/09/20220904-1.md) — 6 fuentes
 - [2022/09/20220905-1 - Ricardo Lagos propone imitar a Alessandri Palma con un comité de expertos para redactar nueva Constitución y se ofrece a integrarlo: 'yo quiero a Chile'](src/content/events/2022/09/20220905-1.md) — 4 fuentes
 - [2022/09/20220906-1 - Primer cambio de gabinete de Boric: Izkia Siches deja el Ministerio del Interior y asume Carolina Tohá](src/content/events/2022/09/20220906-1.md) — 2 fuentes
 - [2022/09/20220908-1 - Protestas estudiantiles del 8 de septiembre de 2022: tercer día consecutivo de movilización, dos buses quemados y represión policial](src/content/events/2022/09/20220908-1.md) — 2 fuentes
@@ -2356,10 +2371,14 @@
 
 - [2020/01/20200102-1 - Manifestaciones en Valparaíso en apoyo a Matías Orellana, profesor que perdió un ojo por una lacrimógena en Año Nuevo](src/content/events/2020/01/20200102-1.md) — 12 fuentes
 - [2020/01/20200106-1 - Corte Suprema confirma condena por colusión del papel: CMPC y SCA deben pagar millonaria multa](src/content/events/2020/01/20200106-1.md) — 1 fuente
+- [2020/01/20200129-1 - Muere Jorge Mora Herrera, hincha de Colo-Colo, atropellado por un camión de Carabineros a la salida del Estadio Monumental](src/content/events/2020/01/20200129-1.md) — 15 fuentes
+- [2020/01/20200129-2 - Carabineros golpean a Matías Soto frente al metro Protectora de la Infancia en Puente Alto y lo abandonan en la vía pública](src/content/events/2020/01/20200129-2.md) — 18 fuentes
+- [2020/01/20200131-1 - Muere Ariel Moreno por un postón recibido en una protesta frente a la subcomisaría de Padre Hurtado](src/content/events/2020/01/20200131-1.md) — 6 fuentes
 - [2020/02/20200212-1 - CIPER revela que Carabineros no realizó test de drogas durante el estallido y que oficiales con positivo a cocaína no fueron sancionados](src/content/events/2020/02/20200212-1.md) — 3 fuentes
 - [2020/03/20200303-1 - Chile confirma su primer caso de COVID-19: un médico de 33 años en la Región del Maule](src/content/events/2020/03/20200303-1.md) — 3 fuentes
 - [2020/03/20200306-1 - Muere Cristián Valdebenito, alcanzado por una bomba lacrimógena de Carabineros en Plaza Dignidad: primera víctima fatal del año en las protestas](src/content/events/2020/03/20200306-1.md) — 2 fuentes
 - [2020/03/20200308-1 - 8M 2020: la marcha feminista más multitudinaria de la historia de Chile reúne a más de un millón de personas en Santiago](src/content/events/2020/03/20200308-1.md) — 1 fuente
+- [2020/03/20200308-2 - Carabineros golpea a Patricio Bao, de 69 años, durante los incidentes posteriores a la marcha del 8M en Santiago](src/content/events/2020/03/20200308-2.md) — 17 fuentes
 - [2020/03/20200312-1 - Perfil de Sebastián Izquierdo: prontuario, denuncia de la UDI y desmarque del partido](src/content/events/2020/03/20200312-1.md) — 5 fuentes
 - [2020/03/20200316-1 - Chile entra en Fase 4 por la pandemia y el gobierno anuncia el cierre de fronteras](src/content/events/2020/03/20200316-1.md) — 1 fuente
 - [2020/03/20200318-1 - Piñera decreta Estado de Excepción Constitucional de Catástrofe por 90 días ante el avance del COVID-19](src/content/events/2020/03/20200318-1.md) — 3 fuentes
@@ -2375,6 +2394,7 @@
 - [2020/06/20200602-1 - JP Morgan estima desempleo en Chile bordeando el 20% y acusa al INE de minimizar las cifras](src/content/events/2020/06/20200602-1.md) — 1 fuente
 - [2020/06/20200613-1 - Renuncia de Jaime Mañalich y nombramiento de Enrique Paris como ministro de Salud](src/content/events/2020/06/20200613-1.md) — 5 fuentes
 - [2020/07/20200706-1 - Se conoce video de la GoPro de Carabineros con el diálogo "¿se la pitió, verdad?" que impide cerrar el sumario del caso Campillai](src/content/events/2020/07/20200706-1.md) — 9 fuentes
+- [2020/07/20200719-1 - Piñera presenta el plan "Paso a Paso Nos Cuidamos" de desconfinamiento gradual en cinco etapas](src/content/events/2020/07/20200719-1.md) — 10 fuentes
 - [2020/07/20200723-1 - El Congreso aprueba la reforma constitucional que permite el retiro del 10% de los fondos de pensiones pese al rechazo del Ejecutivo](src/content/events/2020/07/20200723-1.md) — 1 fuente
 - [2020/07/20200730-1 - Se publica la Ley 21.248 que permite el retiro excepcional del 10% de los fondos de pensiones](src/content/events/2020/07/20200730-1.md) — 1 fuente
 - [2020/08/20200801-1 - Se publica la Ley 21.252 del Préstamo Solidario y el Bono Clase Media: origen legislativo de la serie de ayudas de la pandemia de covid-19](src/content/events/2020/08/20200801-1.md) — 6 fuentes
@@ -2385,6 +2405,7 @@
 - [2020/09/20200902-1 - Gobierno y camioneros llegan a acuerdo y suspenden el paro tras siete días](src/content/events/2020/09/20200902-1.md) — 11 fuentes
 - [2020/09/20200906-1 - El Mercurio porta la encuesta de Numen que proyectaba un triunfo del Rechazo; el gremio de encuestadores alerta por sondeos de 'fuentes no habituales'](src/content/events/2020/09/20200906-1.md) — 10 fuentes
 - [2020/09/20200910-1 - Tribunal prohíbe a Sebastián Izquierdo y Roberto Belmar participar en marchas y reuniones públicas](src/content/events/2020/09/20200910-1.md) — 5 fuentes
+- [2020/09/20200917-1 - Concejales de San Ramón presentan requerimiento de destitución contra el alcalde Miguel Ángel Aguilera](src/content/events/2020/09/20200917-1.md) — 5 fuentes
 - [2020/09/20200923-1 - Sebastián Izquierdo inicia huelga de hambre tras el rechazo de la apelación de la cautelar que le prohíbe asistir a marchas del Rechazo](src/content/events/2020/09/20200923-1.md) — 14 fuentes
 - [2020/09/20200924-1 - Papaya Gate: la Unidad de Investigación de Radio Bío Bío revela el fraude al fisco por $9.800 millones en la Intendencia de Coquimbo](src/content/events/2020/09/20200924-1.md) — 1 fuente
 - [2020/09/20200928-1 - La Pública accede por Ley de Transparencia a 200 minutos de cámaras corporales del GOPE de Carabineros del estallido: primera entrega de registros policiales](src/content/events/2020/09/20200928-1.md) — 3 fuentes

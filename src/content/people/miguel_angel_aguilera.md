@@ -7,5 +7,7 @@ notas: Exalcalde de San Ramón (2012-2021) y exmilitante socialista. CIPER revel
   reclusión bajo libertad vigilada y multa de 200 UTM) y aumento patrimonial
   injustificado (multa de $246.918.500). En agosto de 2026 el Sexto Tribunal
   Oral en lo Penal de Santiago confirmó que la casa pasa al fisco. En 2021
-  demandó a CIPER por $1.700 millones por daño moral; abandonó el proceso.
+  demandó a CIPER por $1.700 millones por daño moral; abandonó el proceso. En julio
+  de 2023 el Tricel confirmó su inhabilitación por cinco años para ejercer cargos
+  públicos, en el proceso iniciado con el requerimiento de concejales de 2020.
 ---

@@ -254,6 +254,7 @@ function init() {
     line.setAttribute('marker-end', `url(#arrow-${l.tipo})`);
     gLinks.appendChild(line);
     edgeLines.push(line);
+    l._els = [line];
 
     if (!isMini) {
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
@@ -265,6 +266,7 @@ function init() {
       text.textContent = l.label;
       gLinks.appendChild(text);
       edgeLines.push(text);
+      l._els.push(text);
     }
   });
 
@@ -371,6 +373,38 @@ function init() {
         if (n._el) n._el.setAttribute('transform', `translate(${n.x},${n.y})`);
       });
     });
+
+  // Resaltado de vecinos (estilo Obsidian): al enfocar un nodo se atenúan los
+  // que no conectan directamente y se refuerzan sus aristas. Se limpia al salir.
+  const adjacency = new Map();
+  for (const l of links) {
+    const a = l.source.id ?? l.source;
+    const b = l.target.id ?? l.target;
+    if (!adjacency.has(a)) adjacency.set(a, new Set());
+    if (!adjacency.has(b)) adjacency.set(b, new Set());
+    adjacency.get(a).add(b);
+    adjacency.get(b).add(a);
+  }
+  function highlightNeighbors(id) {
+    const neighbors = id ? adjacency.get(id) ?? new Set() : null;
+    for (const n of nodes) {
+      if (!n._el) continue;
+      n._el.style.transition = 'opacity 0.18s';
+      n._el.style.opacity = (!id || n.id === id || neighbors.has(n.id)) ? '1' : '0.16';
+    }
+    for (const l of links) {
+      const lit = !!id && ((l.source.id ?? l.source) === id || (l.target.id ?? l.target) === id);
+      for (const node of l._els ?? []) {
+        node.style.transition = 'stroke-opacity 0.18s, stroke-width 0.18s, opacity 0.18s';
+        if (node.tagName === 'line') {
+          node.setAttribute('stroke-opacity', lit ? '0.95' : (id ? '0.06' : '0.5'));
+          node.setAttribute('stroke-width', lit ? '2.4' : '1.5');
+        } else {
+          node.setAttribute('opacity', lit ? '1' : (id ? '0.08' : '0.8'));
+        }
+      }
+    }
+  }
 
   // Interacción: Pointer Events unifican mouse y táctil (arrastrar nodos, pan con
   // un dedo, pinch-zoom con dos, tap para navegar). touch-action:none evita que el
@@ -577,12 +611,16 @@ function init() {
         tip.classList.remove('hidden');
         tip.style.left = e.clientX + 12 + 'px';
         tip.style.top = e.clientY - 10 + 'px';
+        highlightNeighbors(n.id);
       });
       n._el.addEventListener('mousemove', e => {
         tip.style.left = e.clientX + 12 + 'px';
         tip.style.top = e.clientY - 10 + 'px';
       });
-      n._el.addEventListener('mouseleave', () => tip.classList.add('hidden'));
+      n._el.addEventListener('mouseleave', () => {
+        tip.classList.add('hidden');
+        highlightNeighbors(null);
+      });
     });
   }
 

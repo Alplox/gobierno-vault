@@ -9,7 +9,7 @@ description: Extracción de contenido web, mirrors anti-paywall, navegador real 
 
 ## Índice
 
-- [Extraccion de contenido web](#extraccion-de-contenido-web) — fallbacks, `fetch-content`, escalera manual, poison pills
+- [Extraccion de contenido web](#extraccion-de-contenido-web) — fallbacks, `fetch-content`, escalera manual, bypass de paywall manual, poison pills
 - [Contenido web NO confiable](#contenido-web-no-confiable-higiene-anti-inyección) — anti-inyección
 - [APIs observadas](#apis-observadas-cuando-la-escalera-completa-falla-por-js) — DevTools XHR
 - [Archivado y recuperación](#archivado-y-recuperación-de-fuentes) — Wayback, Browsertrix, Auto Archiver
@@ -114,12 +114,31 @@ r.jina y defuddle no extrajeron contenido legible; el sitio requiere navegador r
 10. `pnpm run browser-stealth -- --url <URL>` — nodriver headless; añadir `--headed` si hay Turnstile
 11. `pnpm run add-source -- <URL>` — solo metadata
 
+### Bypass de paywall y agregadores de archivo (uso manual)
+
+Última revisión: 2026-11-25. Servicios de terceros y de solo lectura: **no entran en
+`fetch-content` ni en la cadena automática**. Sirven cuando la escalera falla y el agente puede
+verificar el resultado en el navegador. Nunca reemplazan la URL original ni son evidencia.
+
+| Servicio | Patrón | Uso y límite observado |
+| --- | --- | --- |
+| `nopaywall.net` (interfaz `/es`) | `https://www.nopaywall.net/read?url=<URL codificada>`; acepta DOI | Consulta índices de acceso abierto y archivos públicos; útil para preprint/DOI y paywall de prensa. JS-dependiente y lento: en una prueba con CIPER resolvió el titular pero el cuerpo quedó cargando. Verificar texto completo antes de citar |
+| `paywallremover.net` | Formulario en la home; sin endpoint de URL documentado | Prueba 16 opciones (print view, text reader, archive…) y las puntúa *High/Medium Chance*. Es triaje humano, no extractor: sus guías exigen cotechar fecha de captura, titular y final |
+| `cachedview.nl` | `https://cachedview.nl/#<URL>` (bookmarklet con hash) | Agrega en una sola vista Wayback, archive.today, Library of Congress, Perma.cc y screenshot en vivo. El hash es client-side: requiere navegador |
+| `unwall.app` | `https://unwall.app/<host>/<path>` | Ataca overlays/muros de anuncios, no paywalls duros. Acceso programático bloqueado («This API only serves the UnWall web app»): solo uso humano en navegador |
+| `removepaywall.com` | `https://www.removepaywall.com/search?url=<URL codificada>` | Solo lanza búsquedas en archive.is (`/newest/`, `/oldest/`). Su blog (nov-2024) recomienda servicios ya caídos; baja utilidad |
+
+Descartados: `12ft.io` / 12ft Ladder (retirado en jul-2025), Google Cache y Bing Cache (2024),
+Bibliogram, y cualquier proxy que exija login/cookies o evada un paywall duro de servidor.
+FMHY (`fmhy.pages.dev/internet-tools#archive-services`) sirve como índice de descubrimiento,
+no como garantía de disponibilidad.
+
 **Notas de plataforma:**
 - BioBioChile: usa JS pesado; `defuddle.md` es el mejor método (no r.jina). Si defuddle falla, `browser` extrae el contenedor `article.post` limpio (~1.800 chars)
 - The Clinic: paywall suave; `paywallskip.com` o `r.jina.ai` funcionan para la portada. Para artículos con challenge, `browser-stealth --headed` pasa Turnstile y extrae el cuerpo; headless se queda en "Verificación de seguridad en curso"
 - El Ciudadano: rate-limit/WAF; `fetch-impersonate` o `archive.ph`. `browser-stealth --headed` pasa el bloqueo ("Sorry, you have been blocked"), `browser`/Puppeteer no. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
 - El Dínamo (`eldinamo.cl`): `read_url` devuelve solo navegación y el cuerpo no sale por los mirrors; la bajada (`meta description`) sí trae los datos del artículo (cifras, porcentajes), suficiente para verificar contra otros medios pero no para citar el cuerpo completo — para el contexto, usar la cobertura de otro medio
-- CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan
+- CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan. Si fallan, ver "Bypass de paywall y agregadores de archivo (uso manual)" (`nopaywall.net`, `paywallremover.net`)
 - LUN (`lun.com`): las portadas históricas se leen con `https://www.lun.com/Pages/NewsDetail.aspx?dt=AAAA-MM-DD&SupplementId=0&PaginaId=1&EsAviso=0`. El `<title>` y la meta `description` listan el titular principal y los secundarios, y la cabecera del ejemplar trae la fecha impresa, así que sirve para verificar comparaciones virales de portadas sin OCR de la imagen
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
 - **`fecha` del catálogo ≠ día real** en los medios por shard (CNN, El Dínamo, El Periódista, 24 Horas): el `d` del JSONL es la fecha del shard del día de indexación, no la de publicación (sep-2026: CNN "puntos críticos 11S" con `d` 11-sep y `Published Time` 10-sep 22:27; El Dínamo `d` 11-sep con `/2026/09/10/` en la URL; El Periódista `d` 12-sep con `/2026/09/10/`). Fijar `fecha:` contra `defuddle parse <URL> -p published` o el `Published Time` de `fetch-content`, y anotar la discrepancia en `notas`
@@ -205,8 +224,11 @@ del evento muere con él. Herramientas para preservar y recuperar:
 | Servicio | Uso | Notas |
 | --- | --- | --- |
 | Wayback Machine | Lectura de snapshots históricos | Historial más profundo; API pública sin auth |
-| Archive.today (`archive.ph`) | Lectura de páginas bloqueadas/paywall | ⚠️ Estado 2026: FBI citó a su registrador (oct 2025) y Wikipedia dejó de aceptarla como fuente de cita (feb 2026). Útil como espejo de lectura, NO como almacén de evidencia de largo plazo |
+| Archive.today (`archive.ph`) | Lectura de páginas bloqueadas/paywall | ⚠️ Estado 2026: FBI citó a su registrador (oct 2025) y Wikipedia dejó de aceptarla como fuente de cita (feb 2026). Útil como espejo de lectura, NO como almacén de evidencia de largo plazo. La colección es compartida por `.is`, `.li`, `.ph`, `.vn`, `.fo`, `.md`: rotar el dominio ante 429 |
 | Memento Time Travel | Agrega múltiples archivos en una consulta | `timetravel.mementoweb.org/api/json/0/<URL>` |
+| CachedView | Vista única de Wayback + archive.today + Library of Congress + Perma.cc + screenshot | `cachedview.nl/#<URL>`; agregador de lectura, no evidencia |
+| Ghost Archive | Archivo remoto adicional, con búsqueda por URL | `ghostarchive.org`; cobertura de prensa chilena dudosa, solo como espejo de lectura |
+| Perma.cc | Permalinks para fuentes legales/académicas | Requiere cuenta; no sustituye el snapshot público de Wayback en `respaldos[]` |
 
 - Chequeo rápido de disponibilidad en Wayback: `<https://archive.org/wayback/available?url=<UR>L>` (JSON).
 - Snapshot directo: `<https://web.archive.org/web/<UR>L>` (último) o con timestamp `.../web/YYYYMMDDhhmmss/<URL>`.
@@ -244,7 +266,23 @@ la dejaría fuera (caso real: 9 fuentes del 16-nov-2025 quedaron sin `respaldos[
 motivo). Sigue respetando `--medio`, `--limit` (default 200 con `--new`) y el salto de fuentes
 ya respaldadas. `validate` emite un aviso —no error— con el comando exacto si detecta fuentes
 nuevas sin respaldo. En PowerShell, la lista de `--id` va entre comillas: sin ellas pnpm
-convierte las comas en array y el script selecciona 0 fuentes.
+convierte las comas en array y el script selecciona 0 fuentes. Save Page Now devuelve HTTP 523
+sin URL canónica para posts públicos de X e Instagram (sin snapshot previo en
+`archive.org/wayback/available?url=`); verificar el contenido con FxTwitter/oEmbed/r.jina.ai,
+anotar el fallo en `notas` de la fuente y dejar el aviso de `validate`.
+
+**Casos por plataforma al archivar** (comportamiento vigente en `archive-sources.mjs`, cubierto por `--self-test`):
+
+| Plataforma | Resultado de Save Page Now | Qué hace el script / qué hacer |
+| --- | --- | --- |
+| `old.reddit.com` | HTTP 200 pero captura `https://web.archive.org/web/<ts>/https://old.reddit.com/login`, sin el hilo | Prueba primero el equivalente `www.reddit.com` (misma ruta); rechaza snapshots que caigan en `/login` o que no contengan la ruta original. La `url:` citada se mantiene en `old.reddit.com`; solo cambia el `respaldos[].url` |
+| `www.reddit.com` | HTTP 200 con snapshot válido, pero la URL canónica lleva `?solution=…&js_challenge=1&jsc_token=…&jsc_orig_r=` | Conservar esos parámetros en `respaldos[].url`: al quitarlos, Wayback sirve solo el envoltorio «success/fail» sin el contenido del hilo |
+| Hilo borrado por moderadores | HTTP 200 con captura en `/comments/<id>/removed_by_moderator/` | El script la acepta porque conserva el ID del hilo; anotar en `respaldos[].notas` que el hilo fue eliminado |
+| X (`x.com`, `twitter.com`) | HTTP 523 sin URL canónica; `twitter.com` además falla de red desde esta red | No hay snapshot en `available`. No insistir: verificar texto y métricas con FxTwitter v2 u oEmbed oficial, anotar el fallo en `notas` y dejar el aviso de `validate` |
+| YouTube | `save` falla con `fetch failed` desde esta red | `available?url=` sí puede devolver un snapshot creado por otro crawler; el script lo reutiliza. Si no hay, verificar con oEmbed y anotar el fallo |
+
+Si ya se grabaron respaldos de `old.reddit.com/login`, borrar esa entrada antes de volver a correr
+`--id` (el dedupe es por `servicio` + `url` y dejaría ambas). La URL original de la fuente nunca se reemplaza.
 
 ### Archivado interactivo de redes sociales
 
