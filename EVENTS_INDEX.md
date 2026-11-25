@@ -2113,6 +2113,7 @@
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
 - [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 19 fuentes
+- [2026/11/20261123-1 - La comisión revisora recibe 1.886 decretos de rebaja y Rabat envía a su defensa en lugar de comparecer](src/content/events/2026/11/20261123-1.md) — 12 fuentes
 
 ## 2025
 
