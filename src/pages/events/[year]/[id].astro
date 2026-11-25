@@ -10,8 +10,7 @@ import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
 import { resolveReferences } from '../../../lib/registry';
-import { readFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { buildEventMarkdown, buildReferenceLines, readEventBody } from '../../../lib/eventMarkdown';
 import {
   ArrowLeft,
   Calendar,
@@ -93,22 +92,10 @@ const connections = connectionIndex.get(filename) ?? { outgoing: [], incoming: [
 const hasTimeline = connections.outgoing.length > 0 || connections.incoming.length > 0;
 const hasConnections = hasTimeline || connections.inferred.length > 0;
 
-// Export markdown (SSG): base = el archivo .md fuente, más sección de referencias con URLs.
-const rawMd = readFileSync(join(process.cwd(), 'src', 'content', 'events', `${event.id}.md`), 'utf8');
-const bodyMd = rawMd.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, '').trim();
-const refLines = refs
-  .map((r, i) => `- [${i + 1}] ${r.titulo}${r.url ? ` — ${r.url}` : ''}${r.medio ? ` (${r.medio}${r.autor ? `, ${r.autor}` : ''})` : ''}`)
-  .join('\n');
-const exportMd = [
-  `# ${titulo}`,
-  '',
-  `${bodyMd}`,
-  '',
-  `---`,
-  '',
-  `**Fuente (Gobierno Vault):** ${eventUrl}`,
-  refLines ? `**Referencias:**\n${refLines}` : '',
-].join('\n');
+// Markdown exportable: unico builder, compartido con /data/events-md/YYYYMM.md.
+const bodyMd = readEventBody(event.id);
+const exportMd = buildEventMarkdown({ titulo, eventUrl, refs, bodyMd });
+const refLines = buildReferenceLines(refs);
 // Contexto compacto para IAs: conserva nombres legibles de entidades y un extracto
 // acotado del cuerpo. La URL canónica permite verificar el evento en servicios con web.
 const aiEntityMaps: Record<string, Map<string, string>> = {
@@ -327,10 +314,15 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       <div class="mt-10 pt-5 border-t border-base-300/70 flex flex-wrap items-center gap-2.5 not-prose">
         <ShareButtons url={eventUrl} title={titulo} />
         <div class="inline-flex min-h-9 items-stretch overflow-hidden rounded-lg border border-primary/20 bg-primary/10 text-primary shadow-xs" role="group" aria-label="Acciones de Markdown">
-          <a href={`/events/${new Date(fecha).getFullYear()}/${filename}.md`} class="inline-flex min-h-9 items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary">
+          <button
+            id="btn-view-md"
+            type="button"
+            class="inline-flex min-h-9 items-center gap-1.5 px-3 py-1.5 text-xs font-semibold transition-colors hover:bg-primary/10 focus-visible:z-10 focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-primary"
+            title="Abrir el markdown de este evento en una pestaña nueva"
+          >
             <FileText class="h-4 w-4 shrink-0" />
             <span>Ver en Markdown</span>
-          </a>
+          </button>
           <button
             id="btn-copy-md"
             type="button"
@@ -624,6 +616,21 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     const target = e.target as HTMLElement;
     const exportEl = document.getElementById('event-export-data');
     const promptEl = document.getElementById('event-export-data');
+    // "Ver en Markdown" abre el markdown ya incrustado en la ficha: sin pagina
+    // .md por evento y sin depender del host (funciona en cualquier estatico).
+    if (target.closest('#btn-view-md')) {
+      const markdown = exportEl?.getAttribute('data-md') ?? '';
+      if (!markdown) return;
+      const url = URL.createObjectURL(new Blob([markdown], { type: 'text/plain;charset=utf-8' }));
+      const win = window.open(url, '_blank');
+      if (!win) {
+        URL.revokeObjectURL(url);
+      } else {
+        try { win.opener = null; } catch { /* noop */ }
+        window.setTimeout(() => URL.revokeObjectURL(url), 60_000);
+      }
+      return;
+    }
     if (target.closest('#btn-copy-md')) {
       const btn = target.closest<HTMLButtonElement>('#btn-copy-md');
       const markdown = exportEl?.getAttribute('data-md') ?? '';
