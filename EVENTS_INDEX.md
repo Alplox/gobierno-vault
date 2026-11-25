@@ -1733,7 +1733,7 @@
 - [2026/09/20260913-2 - Rabat cifra en más de 100 las solicitudes de indulto en trámite, la mayoría por hechos de 1973, y dice que Kast aún no las revisa](src/content/events/2026/09/20260913-2.md) — 16 fuentes
 - [2026/09/20260913-3 - Precios de fondas 2026: anticucho a $12 mil y empanada sobre $5 mil en la Chilenidad; fonderos proyectan mantener valores de 2025](src/content/events/2026/09/20260913-3.md) — 9 fuentes
 - [2026/09/20260913-4 - Alcalde Concha responde a Undurraga por la medialuna: 'Es decadente que el gobierno termine respaldando prácticas clandestinas'](src/content/events/2026/09/20260913-4.md) — 5 fuentes
-- [2026/09/20260913-5 - Interno muere tras recibir disparo de centinela y caer desde muro de 8 metros en intento de fuga de la cárcel de Talca vestido de gendarme](src/content/events/2026/09/20260913-5.md) — 12 fuentes
+- [2026/09/20260913-5 - Interno muere tras recibir disparo de centinela y caer desde muro de 8 metros en intento de fuga de la cárcel de Talca vestido de gendarme](src/content/events/2026/09/20260913-5.md) — 19 fuentes
 - [2026/09/20260913-6 - Mara Sedini reaparece en el podcast de Felipe Kast y admite que no tuvo 'la fuerza' para defender su estilo de vocería](src/content/events/2026/09/20260913-6.md) — 8 fuentes
 - [2026/09/20260914-1 - Kast aborda los indultos y afirma que no corresponde que una persona muera en la cárcel, con revisión caso a caso](src/content/events/2026/09/20260914-1.md) — 13 fuentes
 - [2026/09/20260914-10 - Alvarado afirma que no hay definiciones ni decisiones finales sobre las más de 100 solicitudes de indulto y que se evaluarán caso a caso](src/content/events/2026/09/20260914-10.md) — 6 fuentes
@@ -1809,6 +1809,7 @@
 - [2026/09/20260924-1 - Actualización PDI a agosto: caen 93,5% las detecciones en cinco puntos fronterizos y 32,7% los registros amplios](src/content/events/2026/09/20260924-1.md) — 12 fuentes
 - [2026/09/20260924-10 - Caravana de conductores y gremios del transporte recorre Santiago en protesta por el costo del TAG y los peajes](src/content/events/2026/09/20260924-10.md) — 8 fuentes
 - [2026/09/20260924-11 - Cerimedo declara ante fiscales bolivianos y sostiene que puede demostrar el origen lícito del dinero incautado](src/content/events/2026/09/20260924-11.md) — 4 fuentes
+- [2026/09/20260924-12 - Fiscalía allana Autopista Central por fraude en notificaciones de multas del TAG en el Juzgado de La Granja](src/content/events/2026/09/20260924-12.md) — 5 fuentes
 - [2026/09/20260924-2 - Senado acorda sesión especial para revisar la adhesión de Chile al Escudo de las Américas y citar a tres ministros](src/content/events/2026/09/20260924-2.md) — 7 fuentes
 - [2026/09/20260924-3 - Camioneros y la organización Uno Punto Cinco exigen al Gobierno un plan urgente de mitigación para el diésel](src/content/events/2026/09/20260924-3.md) — 6 fuentes
 - [2026/09/20260924-4 - Barros anuncia en Punta Arenas un plan de renovación de capacidades estratégicas para la zona suraustral: reemplazo de los F-5, renovación de los UH-1H y los Hércules, patrullaje de largo alcance, Leopard 1 y nuevas bases](src/content/events/2026/09/20260924-4.md) — 12 fuentes
@@ -1904,6 +1905,7 @@
 - [2026/10/20261005-6 - La resolución que contrató a Natalia Ducó como asesora senior en deportes fija honorarios brutos por $17,1 millones hasta diciembre](src/content/events/2026/10/20261005-6.md) — 7 fuentes
 - [2026/10/20261006-1 - Kast promulga la ampliación de la flagrancia de 12 a 24 horas y emplaza a la izquierda tras el asesinato del sargento Urrea](src/content/events/2026/10/20261006-1.md) — 8 fuentes
 - [2026/10/20261006-10 - Fontaine responde oficio de la Cámara: renunció a la Fundación Ciudadanos en Acción en abril y no se inhabilitó en litio](src/content/events/2026/10/20261006-10.md) — 6 fuentes
+- [2026/10/20261006-11 - Subsidio Unificado al Empleo entra en vigencia con más de 70 mil postulaciones y un beneficio que fusiona tres subsidios](src/content/events/2026/10/20261006-11.md) — 6 fuentes
 - [2026/10/20261006-2 - Presupuesto 2027 abre fractura oficialista y recorta 86% de la Ley Cholito y el cierre de Prodemu](src/content/events/2026/10/20261006-2.md) — 13 fuentes
 - [2026/10/20261006-3 - Presupuesto 2027 inicia su discusión en el Congreso con petición de endeudamiento por US$25.000 millones y Quiroz rebajando el crecimiento a 0,7%](src/content/events/2026/10/20261006-3.md) — 13 fuentes
 - [2026/10/20261006-4 - Primer tropiezo del Presupuesto 2027: la Cuarta Subcomisión Mixta rechaza la rebaja de 12% al Servel](src/content/events/2026/10/20261006-4.md) — 6 fuentes
