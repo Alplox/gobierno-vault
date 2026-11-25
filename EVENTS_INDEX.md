@@ -2052,6 +2052,7 @@
 - [2026/11/20261105-1 - Bill Gates recorre Chuquicamata en una visita privada y pide a Codelco mantenerla bajo 'estricta reserva'](src/content/events/2026/11/20261105-1.md) — 5 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 - [2026/11/20261106-2 - Chile y Bélgica unen candidaturas para la secretaría del Tratado de Alta Mar en Valparaíso y China cuestiona el acuerdo](src/content/events/2026/11/20261106-2.md) — 8 fuentes
+- [2026/11/20261107-1 - Gobierno decreta dos días de duelo oficial por la muerte de Sebastián Lelio y el cine chileno lo despide](src/content/events/2026/11/20261107-1.md) — 7 fuentes
 - [2026/11/20261109-1 - Kast limita a $40 el alza del 12 de noviembre y anuncia un proyecto para topar las alzas en $20 por 90 días; los camioneros rechazan la propuesta y convocan un paro nacional](src/content/events/2026/11/20261109-1.md) — 22 fuentes
 - [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
