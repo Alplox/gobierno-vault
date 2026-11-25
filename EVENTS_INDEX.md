@@ -1797,6 +1797,7 @@
 - [2026/09/20260922-4 - MINVU abre línea inédita de $5.900 millones para centros comunitarios de culto: 143.800 UF del DS27 en medio del déficit habitacional](src/content/events/2026/09/20260922-4.md) — 13 fuentes
 - [2026/09/20260922-5 - Reportajes T13 revela sobres, diligencia al SII por $228 millones y oficio por terreno de la madre en el caso cuota Flores](src/content/events/2026/09/20260922-5.md) — 6 fuentes
 - [2026/09/20260922-6 - Arrau rechaza levantar el secreto bancario sin orden judicial y advierte que abre una ‘puerta peligrosa’](src/content/events/2026/09/20260922-6.md) — 10 fuentes
+- [2026/09/20260922-7 - Reacciones al debut de Kast en la ONU: de dar en el clavo a un exceso de retórica](src/content/events/2026/09/20260922-7.md) — 8 fuentes
 - [2026/09/20260923-1 - Senadores presentan proyecto para penalizar la omisión de medidas de seguridad en establecimientos de cuidado de adultos mayores](src/content/events/2026/09/20260923-1.md) — 6 fuentes
 - [2026/09/20260923-2 - Trump apoya evaluar una restricción a las exportaciones estadounidenses de diésel y Chile queda expuesto a un posible choque de suministro](src/content/events/2026/09/20260923-2.md) — 13 fuentes
 - [2026/09/20260923-3 - UAF advierte que el acceso a información bancaria protegida por secreto bancario tarda 28 días hábiles en promedio](src/content/events/2026/09/20260923-3.md) — 13 fuentes
@@ -1957,6 +1958,7 @@
 - [2026/10/20261014-1 - Ruta comercial Punta Arenas-Malvinas: el gobierno defiende el zarpe privado del Danstar y el canciller argentino dice que Chile no dará logística](src/content/events/2026/10/20261014-1.md) — 8 fuentes
 - [2026/10/20261014-2 - Fast Check desmiente que video de joven esnifando corresponda a la marcha por Palestina ni al Frente Amplio](src/content/events/2026/10/20261014-2.md) — 5 fuentes
 - [2026/10/20261015-1 - CIPER revela que el superintendente del Medio Ambiente fue lobbista de seis empresas con procesos sancionatorios por faltas gravísimas abiertos por la SMA](src/content/events/2026/10/20261015-1.md) — 6 fuentes
+- [2026/10/20261015-2 - Caso Ronald Ojeda: Segundo TOP condena a Maickel Villegas a 20 años de presidio por secuestro con homicidio](src/content/events/2026/10/20261015-2.md) — 9 fuentes
 - [2026/10/20261016-1 - Kast realiza la primera visita de Estado de un presidente chileno a Bolivia en 71 años y firma cinco instrumentos con Paz](src/content/events/2026/10/20261016-1.md) — 10 fuentes
 - [2026/10/20261017-1 - BBCL Investiga reconstruye la fuga de Héctor Godoy Cortez, condenado a diez años por abusar de dos niñas y prófugo desde abril](src/content/events/2026/10/20261017-1.md) — 6 fuentes
 - [2026/10/20261018-1 - Kaiser emplaza a Kast a patrocinar el indulto general a carabineros en el séptimo aniversario del 18-O](src/content/events/2026/10/20261018-1.md) — 11 fuentes
