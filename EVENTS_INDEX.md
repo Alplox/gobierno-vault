@@ -1874,6 +1874,7 @@
 - [2026/10/20261001-15 - Imacec de agosto cae 1,0% anual por el desplome de 17,4% de la minería y suma el segundo mes consecutivo en rojo](src/content/events/2026/10/20261001-15.md) — 7 fuentes
 - [2026/10/20261001-16 - Presupuesto 2027 fija techos de horas docentes en los SLEP y abre flanco por 2.000 profesores menos](src/content/events/2026/10/20261001-16.md) — 7 fuentes
 - [2026/10/20261001-17 - Detienen en Bolivia al fiscal general que investigaba el caso Cerimedo, dos días después de que EE.UU. le cancelara la visa](src/content/events/2026/10/20261001-17.md) — 6 fuentes
+- [2026/10/20261001-18 - Naviera Cruz del Sur aplica desde el 1 de octubre un alza de hasta 1.000 pesos en los transbordos de Chiloé y Palena](src/content/events/2026/10/20261001-18.md) — 6 fuentes
 - [2026/10/20261001-2 - Agresión a estudiantes de Solidaridad UC y Movimiento Gremial en el frontis de la Pontificia Universidad Católica durante la marcha de la Confech: Pavez la condena y los movimientos exigen una condena de la Confech](src/content/events/2026/10/20261001-2.md) — 66 fuentes
 - [2026/10/20261001-3 - Trabajador muere en accidente en mina Radomiro Tomic de Codelco: Kast da condolencias y pide mayor atención en seguridad laboral](src/content/events/2026/10/20261001-3.md) — 11 fuentes
 - [2026/10/20261001-4 - Kast cierra gira por Antofagasta con primera piedra de la cuarta línea de Sierra Gorda por US$725 millones y 900 empleos](src/content/events/2026/10/20261001-4.md) — 7 fuentes
@@ -2013,6 +2014,7 @@
 - [2026/10/20261028-11 - Exsubsecretarios de Telecomunicaciones cuestionan el Plan Nacional Digital: versión final en diciembre y 336.000 conexiones 3G sin fecha de apagado](src/content/events/2026/10/20261028-11.md) — 8 fuentes
 - [2026/10/20261028-12 - Microsoft y CENIA firman una alianza de dos años para impulsar Latam GPT con US$250.000 en créditos de Azure](src/content/events/2026/10/20261028-12.md) — 6 fuentes
 - [2026/10/20261028-13 - T13 revela que Luis Silva firmó la rebaja de José Silva Olivares mientras su amparo aún se tramitaba en Valparaíso](src/content/events/2026/10/20261028-13.md) — 11 fuentes
+- [2026/10/20261028-14 - Corte Suprema remueve al juez Daniel Urrutia por viajes con licencia médica y cierra la purga con 18 magistrados](src/content/events/2026/10/20261028-14.md) — 6 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 6 fuentes
