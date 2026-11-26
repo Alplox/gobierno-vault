@@ -14,15 +14,22 @@ function init() {
   if (!current || !items.length) return () => {};
 
   // En escritorio el rail tiene scroll propio: la zona visible es la
-  // intersección entre el viewport y ese contenedor, no solo el viewport.
-  let scroller = stage?.parentElement ?? null;
-  while (scroller && !/(auto|scroll)/.test(getComputedStyle(scroller).overflowY)) {
-    scroller = scroller.parentElement;
+  // intersección entre el viewport y ese contenedor, no solo el viewport. En
+  // móvil no hay contenedor con overflow (ver .gv-event-rail-sticky en
+  // global.css) y se usa el viewport. Se resuelve en cada update porque
+  // `is-enhanced` lo aplica otro módulo en astro:page-load: si se calculase una
+  // sola vez al iniciar, dependería del orden de los scripts.
+  function findScroller() {
+    let node = stage?.parentElement ?? null;
+    while (node && !/(auto|scroll)/.test(getComputedStyle(node).overflowY)) {
+      node = node.parentElement;
+    }
+    return node;
   }
   let ticking = false;
   function update() {
     ticking = false;
-    const sr = scroller?.getBoundingClientRect();
+    const sr = findScroller()?.getBoundingClientRect();
     const top = Math.max(0, sr?.top ?? 0);
     const bottom = Math.min(window.innerHeight, sr?.bottom ?? window.innerHeight);
     let above = 0;

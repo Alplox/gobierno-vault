@@ -318,10 +318,18 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       html[data-gv-sound="0"] #btn-sound #icon-sound-off {
         opacity: 1; transform: scale(1); filter: blur(0);
       }
+      /* Navbar superior: se aparta al bajar y vuelve al subir, igual que la
+         barra inferior del TOC. El transform no cambia su caja sticky, así que
+         el contenido no salta cuando se oculta. */
+      #gv-main-nav { transition: transform 220ms ease-out; }
+      #gv-main-nav.gv-header-nav-hidden { transform: translateY(-100%); }
+      @media (prefers-reduced-motion: reduce) {
+        #gv-main-nav { transition: none; }
+      }
     </style>
   </head>
   <body class="bg-base-200/70 text-base-content min-h-screen antialiased flex flex-col">
-    <nav transition:persist class="bg-base-100/90 backdrop-blur-md border-b border-base-300 sticky top-0 z-20 shadow-sm">
+    <nav id="gv-main-nav" transition:persist class="bg-base-100/90 backdrop-blur-md border-b border-base-300 sticky top-0 z-20 shadow-sm">
       <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between gap-3">
         <a href="/" class="flex items-center gap-2 font-bold text-lg text-base-content transition-colors hover:text-base-content shrink-0">
           <Shield class="h-6 w-6 text-base-content shrink-0" />
@@ -699,6 +707,59 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
         document.addEventListener('astro:page-load', initBackToTop);
       }
       initBackToTop();
+
+      // Navbar superior: se oculta al bajar y vuelve al subir, igual que la
+      // barra inferior del TOC, para liberar espacio al leer. Se cablea una
+      // sola vez: el <nav> sobrevive a View Transitions (transition:persist)
+      // y este módulo se reevalúa en cada navegación. El nodo se busca por ID
+      // en cada actualización, nunca se conserva una referencia al inicial.
+      if (!(window as any).__gvHeaderNavInit) {
+        (window as any).__gvHeaderNavInit = true;
+        let lastY = window.scrollY;
+        let navHidden = false;
+        let navTicking = false;
+        const HIDE_AFTER = 160; // en el primer tramo el navbar queda fijo
+        const MIN_DELTA = 8;    // umbral contra el parpadeo de scroll mínimo
+
+        function setHeaderNavHidden(hidden: boolean) {
+          const nav = document.getElementById('gv-main-nav');
+          if (!nav || navHidden === hidden) return;
+          navHidden = hidden;
+          nav.classList.toggle('gv-header-nav-hidden', hidden);
+          // Oculto no debe recibir Tab ni clics «invisibles».
+          nav.inert = hidden;
+        }
+        function updateHeaderNav() {
+          navTicking = false;
+          const nav = document.getElementById('gv-main-nav');
+          if (!nav) return;
+          // Con un menú abierto o el foco dentro, el navbar se queda: el
+          // usuario lo está usando y ocultarlo dejaría el foco en un nodo inert.
+          if (nav.querySelector('details[open]') || nav.contains(document.activeElement) || window.scrollY < HIDE_AFTER) {
+            setHeaderNavHidden(false);
+            lastY = window.scrollY;
+            return;
+          }
+          const dy = window.scrollY - lastY;
+          if (Math.abs(dy) < MIN_DELTA) return;
+          setHeaderNavHidden(dy > 0);
+          lastY = window.scrollY;
+        }
+        const onHeaderScroll = () => {
+          if (navTicking) return;
+          navTicking = true;
+          requestAnimationFrame(updateHeaderNav);
+        };
+        window.addEventListener('scroll', onHeaderScroll, { passive: true });
+        window.addEventListener('resize', onHeaderScroll);
+        // Cada navegación SPA vuelve arriba: el navbar nace visible.
+        document.addEventListener('astro:page-load', () => {
+          lastY = window.scrollY;
+          setHeaderNavHidden(false);
+          updateHeaderNav();
+        });
+        updateHeaderNav();
+      }
 
       // El evento `toggle` de <details> no burbujea: escucha en captura para
       // recolcular la altura de la barra inferior al abrir/cerrar el TOC.

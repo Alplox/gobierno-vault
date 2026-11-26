@@ -323,8 +323,12 @@
 }
 .gv-event-shell.is-enhanced.no-timeline > .gv-event-rail { display: none; }
 
-.gv-event-toc-sticky,
-.gv-event-rail-sticky {
+/* El TOC y el rail solo flotan con scroll propio dentro del grid de escritorio
+   (is-enhanced, que eventTocClient aplica con matchMedia ≥76rem). En móvil la
+   línea de tiempo es una sección más del flujo: sin max-height ni overflow se
+   ve completa y no captura el scroll de la página. */
+.gv-event-shell.is-enhanced .gv-event-toc-sticky,
+.gv-event-shell.is-enhanced .gv-event-rail-sticky {
   position: sticky;
   top: 5rem;
   max-height: calc(100vh - 6.5rem);
