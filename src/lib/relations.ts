@@ -30,13 +30,13 @@ export const RELATION_CHIP_CLASS: Record<string, string> = {
   responde_a: 'rel-chip [--chip-hue:#8b5cf6]',
   deriva_en: 'rel-chip [--chip-hue:#6366f1]',
   provoca: 'rel-chip [--chip-hue:#f97316]',
-  cita: 'bg-base-200 text-base-content/70 ring-base-300',
+  cita: 'bg-base-200 text-base-content/80 ring-base-300',
   reemplaza: 'rel-chip [--chip-hue:#06b6d4]',
   actualiza: 'rel-chip [--chip-hue:#3b82f6]',
-  mismo_contexto: 'bg-base-200 text-base-content/70 ring-base-300',
+  mismo_contexto: 'bg-base-200 text-base-content/80 ring-base-300',
 };
 
-export const DEFAULT_RELATION_CHIP = 'bg-base-200 text-base-content/70 ring-base-300';
+export const DEFAULT_RELATION_CHIP = 'bg-base-200 text-base-content/80 ring-base-300';
 
 export type RelationEdge = {
   tipo: string;
@@ -45,6 +45,7 @@ export type RelationEdge = {
   fecha: Date;
   year: number;
   direction: 'outgoing' | 'incoming';
+  tipoEvento?: string;
 };
 
 export type InferredEdge = {
@@ -54,6 +55,7 @@ export type InferredEdge = {
   year: number;
   sharedTemas: string[];
   sharedEtiquetas: string[];
+  tipoEvento?: string;
 };
 
 export type EventConnections = {
@@ -95,6 +97,7 @@ function toEdge(
     fecha: target.data.fecha,
     year: eventYearFromDate(target.data.fecha),
     direction,
+    tipoEvento: target.data.tipo,
   };
 }
 
@@ -161,6 +164,7 @@ function scoreSharedContext(a: EventEntry, b: EventEntry): InferredEdge | null {
     year: eventYearFromDate(b.data.fecha),
     sharedTemas,
     sharedEtiquetas,
+    tipoEvento: b.data.tipo,
   };
 }
 

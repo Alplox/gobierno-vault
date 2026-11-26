@@ -27,7 +27,7 @@ src/
   lib/   registry.ts, queries.ts, extractEntities.ts, editorData.ts, eventTypes.ts, personStats.ts, remarkWikiLinks.mjs
   components/  EventCard, FilterBar, Timeline, SourceRef, RelationBadge, Person{ActivityChart,Network,StatTiles,TopicMix,CargoTimeline,QuoteItem,EventFilters}
   layouts/Base.astro   layout unico (nav + slot + footer + CSS global)
-  pages/  /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin, /llm.txt, /events/[year]/[id].md, /data/*.yaml
+  pages/  /, /events, /events/[year]/[id], /people, /organizations, /sources, /topics, /stats, /admin, /llm.txt, /data/events-md/YYYYMM.md, /data/*.yaml
 sitemaps/  catalogo local de prensa y YouTube (JSONL por medio/año en websites/ + youtube_channels/, no commiteado)
   .cache/  XML crudo (gitignored)  _manifest.json (estado, commiteado)  README.md (indice, commiteado)
 ```

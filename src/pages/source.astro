@@ -5,21 +5,24 @@ import { ArrowLeft } from 'lucide-astro';
 
 <Base title="Fuente">
   <div class="mb-6">
-    <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
+    <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content hover:text-base-content bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
       <ArrowLeft class="h-3.5 w-3.5" />
       <span>Volver a Eventos</span>
     </a>
   </div>
 
   <div id="source-detail" role="status" aria-live="polite">
-    <p class="text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-base-300 text-center">Cargando fuente…</p>
+    <p class="text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-base-300 text-center">Cargando fuente…</p>
   </div>
 </Base>
 
 <script>
+  import { SOURCE_MIRRORS } from '../lib/sourceMirrors';
+
   type SourceItem = {
     id: string; titulo: string; medio: string; tipo: string; fecha: string;
     autor: string; url: string; eventIds: string[];
+    usos: { titulo: string; href: string }[];
   };
   type Payload = {
     data: SourceItem[];
@@ -58,7 +61,7 @@ import { ArrowLeft } from 'lucide-astro';
       payload = await load();
     } catch {
       document.title = 'Fuente no disponible — Gobierno Vault';
-      root.replaceChildren(el('p', 'text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-base-300 text-center', 'No se pudo cargar el registro de fuentes. Intenta recargar la página.'));
+      root.replaceChildren(el('p', 'text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-base-300 text-center', 'No se pudo cargar el registro de fuentes. Intenta recargar la página.'));
       return;
     }
 
@@ -70,8 +73,8 @@ import { ArrowLeft } from 'lucide-astro';
       document.title = 'Fuente no encontrada — Gobierno Vault';
       const box = el('div', 'text-center bg-base-100 p-8 rounded-xl border border-base-300');
       box.appendChild(el('h1', 'text-xl font-bold mb-2', 'Fuente no encontrada'));
-      box.appendChild(el('p', 'text-sm text-base-content/70 mb-4', id ? `No hay una fuente registrada con el ID «${id}».` : 'No se indicó el ID de la fuente.'));
-      const a = el('a', 'text-sm font-semibold text-primary hover:underline', 'Volver a Eventos');
+      box.appendChild(el('p', 'text-sm text-base-content/80 mb-4', id ? `No hay una fuente registrada con el ID «${id}».` : 'No se indicó el ID de la fuente.'));
+      const a = el('a', 'text-sm font-semibold text-base-content hover:underline', 'Volver a Eventos');
       a.href = '/events';
       box.appendChild(a);
       root.appendChild(box);
@@ -81,14 +84,14 @@ import { ArrowLeft } from 'lucide-astro';
     document.title = `${s.titulo} — Gobierno Vault`;
     const header = el('header', 'mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]');
     const flex = el('div', 'flex items-start gap-4');
-    const icon = el('div', 'h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center shrink-0');
+    const icon = el('div', 'h-12 w-12 rounded-full bg-primary/15 text-base-content flex items-center justify-center shrink-0');
     icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>';
     flex.appendChild(icon);
     const main = el('div', 'min-w-0 flex-1');
-    main.appendChild(el('span', 'text-[11px] font-mono font-medium text-base-content/40 block mb-1', s.id));
+    main.appendChild(el('span', 'text-[11px] font-mono font-medium text-base-content/80 block mb-1', s.id));
     main.appendChild(el('h1', 'text-2xl sm:text-3xl font-bold text-base-content leading-tight', s.titulo));
 
-    const meta = el('div', 'flex flex-wrap items-center gap-3 mt-3 text-xs text-base-content/70');
+    const meta = el('div', 'flex flex-wrap items-center gap-3 mt-3 text-xs text-base-content/80');
     meta.appendChild(el('span', 'font-bold text-base-content', s.medio));
     meta.appendChild(el('span', '', '·'));
     meta.appendChild(el('span', 'inline-flex items-center rounded bg-base-200 px-2 py-0.5 font-medium text-base-content/80', payload.tipoLabels[s.tipo] ?? s.tipo));
@@ -110,6 +113,17 @@ import { ArrowLeft } from 'lucide-astro';
       a.rel = 'noopener';
       a.innerHTML += '<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
       wrap.appendChild(a);
+
+      const mirrors = el('span', 'flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-2');
+      for (const m of SOURCE_MIRRORS) {
+        const link = el('a', `text-[10px] font-medium text-base-content/80 ${m.hover} transition-colors`, m.label);
+        link.href = m.href(s.url);
+        link.title = m.title;
+        link.target = '_blank';
+        link.rel = 'noopener';
+        mirrors.appendChild(link);
+      }
+      wrap.appendChild(mirrors);
       main.appendChild(wrap);
     }
     flex.appendChild(main);
@@ -128,10 +142,27 @@ import { ArrowLeft } from 'lucide-astro';
       grid.appendChild(a);
     }
     if (related.length === 0) {
-      grid.appendChild(el('p', 'text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', 'No hay eventos que citen directamente esta fuente.'));
+      grid.appendChild(el('p', 'text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', s.usos?.length
+        ? 'No hay eventos que citen directamente esta fuente. Sí aparece en las páginas de datos de abajo.'
+        : 'No hay eventos que citen directamente esta fuente.'));
     }
     section.appendChild(grid);
     root.appendChild(section);
+
+    const usos = s.usos ?? [];
+    if (usos.length) {
+      const usosSection = el('section', 'mt-8');
+      usosSection.appendChild(el('h2', 'text-lg font-bold text-base-content mb-1', `También se usa en otras páginas (${usos.length})`));
+      usosSection.appendChild(el('p', 'text-xs text-base-content/80 mb-3', 'Estas páginas la citan desde sus propios datos, no desde un evento del vault.'));
+      const usosGrid = el('div', 'grid gap-3 sm:grid-cols-2');
+      for (const u of usos) {
+        const a = el('a', 'block bg-base-100 p-4 rounded-xl border-0 shadow-[var(--shadow-border)] hover:shadow-md transition-shadow font-semibold text-base-content text-sm', u.titulo);
+        a.href = u.href;
+        usosGrid.appendChild(a);
+      }
+      usosSection.appendChild(usosGrid);
+      root.appendChild(usosSection);
+    }
   }
 
   render();

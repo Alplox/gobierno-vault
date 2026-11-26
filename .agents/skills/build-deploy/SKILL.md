@@ -63,6 +63,6 @@ Resumido aquí por impacto en build; detalle de uso en `frontend.md`. CSS `src/s
 
 ## Formato LLM
 
-`/llm.txt` (alias `/llms.txt`) generado por `src/lib/llmIndex.ts` (`src/pages/llm.txt.ts`) con índice completo; `/events/AAAA/ID.md` sirve markdown fuente; `/data/{entities,sources,topics,colectivos,sectores}.yaml` sirve YAML crudo (`ALLOWED` en `src/pages/data/[name].yaml.ts`). Footer enlaza a `/llm.txt`.
+`/llm.txt` (alias `/llms.txt`) generado por `src/lib/llmIndex.ts` (`src/pages/llm.txt.ts`) con índice completo; `/data/events-md/YYYYMM.md` sirve markdown de los eventos del mes (sección `## ID`, ~95 KB por archivo, ~130 en vez de un `.md` por evento); `/data/{entities,sources,topics,colectivos,sectores}.yaml` sirve YAML crudo (`ALLOWED` en `src/pages/data/[name].yaml.ts`). Footer enlaza a `/llm.txt`. El markdown exportable se construye en `src/lib/eventMarkdown.ts` (única fuente, compartida con la ficha); la ficha abre "Ver en Markdown" desde el `data-md` incrustado vía Blob, sin archivo por evento y sin Functions.
 
 Si falla el build, revisar frontmatter YAML y wikilinks rotos (ver validación arriba). Para `InvalidContentEntryDataError`, `pnpm exec astro sync` valida solo los esquemas (~20s) sin el build completo: causas vistas son `respaldos[].fecha` sin comillas (YAML Date vs `z.string()`) y `autor:` vacío (`null` vs string); `pnpm run validate` no detecta ninguna de las dos.

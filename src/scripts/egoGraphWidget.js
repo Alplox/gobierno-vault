@@ -37,6 +37,7 @@ function init() {
   const tip = root.querySelector('[data-gv-ego-tip]');
   const expandBtn = root.querySelector('[data-gv-ego-expand]');
   const card = root.querySelector('[data-gv-ego-card]');
+  const moreBtn = root.querySelector('[data-gv-ego-more]');
   if (!stage || !dataEl) return;
 
   let data;
@@ -46,6 +47,11 @@ function init() {
     r: n.kind === 'center' ? 12 : n.kind === 'inferred' ? 5 : 8,
   }));
   const links = (data.links ?? []).map((l) => ({ ...l }));
+  // Nodos de segundo salto: vienen todos en el payload pero se revelan en
+  // tandas. Al agregarlos se mutan `nodes`/`links` (mismas referencias de la
+  // simulación) y se recalienta d3, sin reconstruir el SVG ni perder el estado.
+  const indirect = (data.indirect ?? []).map((n) => ({ ...n, r: 5.5 }));
+  const indirectLinks = data.indirectLinks ?? [];
   const colors = data.colors ?? {};
   if (nodes.length < 2) return;
 
@@ -84,23 +90,30 @@ function init() {
   g.append(gLinks, gNodes);
   svg.appendChild(g);
 
-  const linkEls = links.map((l) => {
+  const linkEls = [];
+  function addLinkEl(l) {
+    // Capturar los IDs antes de que forceLink los reemplace por referencias.
     const sid = l.source;
     const tid = l.target;
+    const inferred = l.kind === 'inferred';
+    const indirectLink = l.kind === 'indirect';
     const line = el('line', {
       stroke: colors[l.tipo] ?? '#78716c',
-      'stroke-width': l.kind === 'inferred' ? 1 : 1.6,
-      'stroke-opacity': l.kind === 'inferred' ? 0.45 : 0.65,
-      'stroke-dasharray': l.kind === 'inferred' ? '3 3' : undefined,
+      'stroke-width': indirectLink || inferred ? 1 : 1.6,
+      'stroke-opacity': indirectLink ? 0.32 : inferred ? 0.45 : 0.65,
+      'stroke-dasharray': indirectLink ? '2 4' : inferred ? '3 3' : undefined,
     });
     gLinks.appendChild(line);
-    return { l, line, sid, tid };
-  });
+    linkEls.push({ l, line, sid, tid });
+  }
+  for (const l of links) addLinkEl(l);
 
-  const nodeEls = nodes.map((n) => {
+  const nodeEls = [];
+  function addNodeEl(n) {
     const a = el('a', { href: n.url || '#', tabindex: '0' });
+    if (n.kind === 'indirect') a.classList.add('is-extra');
     a.dataset.nodeId = n.id;
-    a.setAttribute('aria-label', `${n.label} · ${n.relation}`);
+    a.setAttribute('aria-label', `${n.label} · ${n.relation}${n.depth === 2 && n.via ? ` vía ${trunc(n.via, 42)}` : ''}`);
     const circle = el('circle', {
       r: n.r,
       fill: n.color,
@@ -130,12 +143,16 @@ function init() {
     label.textContent = labelText;
     a.append(bg, circle, label);
     gNodes.appendChild(a);
-    return { n, a, circle };
-  });
+    nodeEls.push({ n, a, circle });
+    wireNode(a, n);
+  }
+  for (const n of nodes) addNodeEl(n);
 
+  const linkForce = forceLink(links).id((d) => d.id)
+    .distance((l) => (l.kind === 'inferred' ? 116 : l.kind === 'indirect' ? 96 : 78))
+    .strength((l) => (l.kind === 'indirect' ? 0.35 : 0.55));
   const sim = forceSimulation(nodes)
-    .force('link', forceLink(links).id((d) => d.id)
-      .distance((l) => (l.kind === 'inferred' ? 116 : 78)).strength(0.55))
+    .force('link', linkForce)
     .force('charge', forceManyBody().strength(-160))
     .force('collide', forceCollide().radius((d) => d.r + 18))
     .force('center', forceCenter(W / 2, H / 2))
@@ -191,14 +208,60 @@ function init() {
     }
   }
 
+  // Revela el segundo salto en tandas: se mutan las mismas referencias que
+  // usan d3-force y el tick, así que basta con recalentar la simulación.
+  const BATCH = 12;
+  let shownIndirect = 0;
+  function updateMoreButton() {
+    if (!moreBtn) return;
+    const remaining = indirect.length - shownIndirect;
+    moreBtn.classList.toggle('hidden', remaining <= 0);
+    moreBtn.textContent = `Cargar conexiones indirectas (+${remaining})`;
+  }
+  function loadMore() {
+    const batch = indirect.slice(shownIndirect, shownIndirect + BATCH);
+    if (!batch.length) return;
+    const batchIds = new Set(batch.map((n) => n.id));
+    for (const n of batch) {
+      nodes.push(n);
+      addNodeEl(n);
+      if (!adjacency.has(n.parentId)) adjacency.set(n.parentId, new Set());
+      if (!adjacency.has(n.id)) adjacency.set(n.id, new Set());
+      adjacency.get(n.parentId).add(n.id);
+      adjacency.get(n.id).add(n.parentId);
+    }
+    for (const l of indirectLinks) {
+      if (!batchIds.has(l.target)) continue;
+      links.push(l);
+      addLinkEl(l);
+    }
+    shownIndirect += batch.length;
+    sim.nodes(nodes);
+    linkForce.links(links);
+    sim.alpha(0.65).restart();
+    updateMoreButton();
+    highlight();
+  }
+  moreBtn?.addEventListener('click', loadMore);
+  offs.push(() => moreBtn?.removeEventListener('click', loadMore));
+  updateMoreButton();
+
   function showTip(n, x, y) {
     if (!tip) return;
     tip.replaceChildren();
     const strong = document.createElement('strong');
     strong.textContent = n.label;
     const small = document.createElement('span');
-    small.className = 'mt-0.5 block text-[11px] text-base-content/60';
-    small.textContent = `${n.relation} · ${n.tipoLabel} · ${n.fecha}`;
+    small.className = 'mt-0.5 block text-[11px] text-base-content/80';
+    // `relation` y `tipoLabel` son cosas distintas (vínculo vs. tipo de evento):
+    // si coinciden, o si llega una clave cruda, no repetir / no mostrar la clave.
+    const meta = [n.relation];
+    if (n.tipoLabel && n.tipoLabel !== n.relation && !/^[a-z_]+$/.test(n.tipoLabel)) {
+      meta.push(n.tipoLabel);
+    }
+    meta.push(n.fecha);
+    if (n.depth === 2 && n.via) meta.push(`vía ${trunc(n.via, 42)}`);
+    small.textContent = meta.filter(Boolean).join(' · ');
     tip.append(strong, small);
     tip.classList.remove('hidden');
     const pad = 12;
@@ -211,7 +274,7 @@ function init() {
 
   function showCard(n) {
     if (!card) return;
-    card.querySelector('[data-gv-ego-card-relation]').textContent = `${n.relation} · ${n.fecha}`;
+    card.querySelector('[data-gv-ego-card-relation]').textContent = `${n.relation}${n.depth === 2 && n.via ? ` · vía ${trunc(n.via, 42)}` : ''} · ${n.fecha}`;
     card.querySelector('[data-gv-ego-card-title]').textContent = n.label;
     const open = card.querySelector('[data-gv-ego-card-open]');
     open.href = n.url || '#';
@@ -236,7 +299,7 @@ function init() {
     a.remove();
   }
 
-  for (const { n, a } of nodeEls) {
+  function wireNode(a, n) {
     a.addEventListener('pointerdown', (e) => {
       e.stopPropagation();
       // Evita el click nativo del <a>: la navegación la decidimos aquí.

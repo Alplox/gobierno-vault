@@ -46,7 +46,7 @@ const enRevision = ejercicios
 <section class="rounded-3xl bg-base-100 shadow-[var(--shadow-border)] overflow-hidden mb-8" aria-labelledby="pres-stats">
   <div class="px-5 sm:px-7 pt-6 pb-2 max-w-2xl">
     <h2 id="pres-stats" class="text-lg sm:text-xl font-bold text-base-content">Estadísticas de los movimientos</h2>
-    <p class="text-xs text-base-content/60 mt-1">
+    <p class="text-xs text-base-content/80 mt-1">
       Lo mismo que muestran las tarjetas y el flujo, agregado: de dónde sale y a dónde entra por ejercicio,
       los mayores montos publicados y cuántos movimientos tienen respaldo oficial.
     </p>
@@ -58,16 +58,16 @@ const enRevision = ejercicios
       <ul class="space-y-3">
         {barras.map((b) => (
           <li>
-            <p class="text-xs font-semibold text-base-content/70 mb-1 tabular-nums">{b.ano}</p>
+            <p class="text-xs font-semibold text-base-content/80 mb-1 tabular-nums">{b.ano}</p>
             <div class="space-y-1">
               <div class="flex items-center gap-2">
-                <span class="w-20 shrink-0 text-[11px] text-base-content/70 text-right tabular-nums">{formatCLP(b.retiros)}</span>
+                <span class="w-20 shrink-0 text-[11px] text-base-content/80 text-right tabular-nums">{formatCLP(b.retiros)}</span>
                 <div class="flex-1 h-2.5 rounded-full bg-base-200 overflow-hidden">
                   <div class="h-full rounded-full bg-error/80" style={`width:${((b.retiros / maxBarra) * 100).toFixed(1)}%`} />
                 </div>
               </div>
               <div class="flex items-center gap-2">
-                <span class="w-20 shrink-0 text-[11px] text-base-content/70 text-right tabular-nums">{formatCLP(b.inyecciones)}</span>
+                <span class="w-20 shrink-0 text-[11px] text-base-content/80 text-right tabular-nums">{formatCLP(b.inyecciones)}</span>
                 <div class="flex-1 h-2.5 rounded-full bg-base-200 overflow-hidden">
                   <div class="h-full rounded-full bg-success/80" style={`width:${((b.inyecciones / maxBarra) * 100).toFixed(1)}%`} />
                 </div>
@@ -90,7 +90,7 @@ const enRevision = ejercicios
         <div class="h-full bg-warning/80" style={`width:${((sinMonto / Math.max(1, totalMovs)) * 100).toFixed(1)}%`} />
         <div class="h-full bg-base-300" style={`width:${((enRevision / Math.max(1, totalMovs)) * 100).toFixed(1)}%`} />
       </div>
-      <ul class="mt-2 space-y-1 text-xs text-base-content/70 tabular-nums">
+      <ul class="mt-2 space-y-1 text-xs text-base-content/80 tabular-nums">
         <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-primary/80 shrink-0" />{enFlujo} en el flujo (con monto publicado)</li>
         <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-warning/80 shrink-0" />{sinMonto} sin monto publicado</li>
         <li class="flex items-center gap-1.5"><span class="h-2 w-2 rounded-full bg-base-300 shrink-0" />{enRevision} recomendaciones en revisión</li>
@@ -106,7 +106,7 @@ const enRevision = ejercicios
         {topRecortes.map(({ m, ano }) => (
           <li>
             <div class="flex items-baseline justify-between gap-2 text-xs">
-              <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-primary transition-colors truncate">
+              <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-base-content transition-colors truncate">
                 <span class="badge badge-xs badge-outline mr-1.5 tabular-nums">{ano}</span>{m.descripcion}
               </a>
               <span class="font-bold text-base-content tabular-nums shrink-0">{formatCLP(m.monto!)}</span>
@@ -124,7 +124,7 @@ const enRevision = ejercicios
         {topAumentos.map(({ m, ano }) => (
           <li>
             <div class="flex items-baseline justify-between gap-2 text-xs">
-              <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-primary transition-colors truncate">
+              <a href={`#mov-${ano}-${m.orden}`} class="text-base-content/80 hover:text-base-content transition-colors truncate">
                 <span class="badge badge-xs badge-outline mr-1.5 tabular-nums">{ano}</span>{m.descripcion}
               </a>
               <span class="font-bold text-base-content tabular-nums shrink-0">{formatCLP(m.monto!)}</span>

@@ -31,24 +31,24 @@ const conceptos = [...byConcepto.entries()].sort((a, b) => b[1].entries.length -
   <article class="max-w-5xl mx-auto">
     <div class="mb-8">
       <div class="flex items-center gap-2 mb-1">
-        <BarChart3 class="h-6 w-6 text-primary shrink-0" />
+        <BarChart3 class="h-6 w-6 text-base-content shrink-0" />
         <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Estadísticas y Cifras Clave</h1>
       </div>
-      <p class="text-base-content/60 text-sm">Resumen cuantitativo de cifras extraídas de la base de eventos.</p>
+      <p class="text-base-content/80 text-sm">Resumen cuantitativo de cifras extraídas de la base de eventos.</p>
     </div>
 
     {conceptos.length > 0 ? (
       <section class="bg-base-100 rounded-2xl border-0 shadow-[var(--shadow-border)] p-6 overflow-hidden">
         <div class="flex items-center justify-between mb-4">
           <h2 class="text-base font-bold text-base-content flex items-center gap-2">
-            <TrendingUp class="h-5 w-5 text-primary" />
+            <TrendingUp class="h-5 w-5 text-base-content" />
             <span>Resumen por concepto</span>
           </h2>
         </div>
         <div class="overflow-x-auto">
           <table class="w-full text-sm border-collapse">
             <thead>
-              <tr class="border-b border-base-300 text-xs font-bold uppercase tracking-wider text-base-content/60 bg-base-200/50">
+              <tr class="border-b border-base-300 text-xs font-bold uppercase tracking-wider text-base-content/80 bg-base-200/50">
                 <th class="sticky left-0 z-10 bg-base-200 text-left py-3 px-4">Concepto</th>
                 {allYears.map((y) => (
                   <th class="text-right py-3 px-4">{y}</th>
@@ -63,20 +63,20 @@ const conceptos = [...byConcepto.entries()].sort((a, b) => b[1].entries.length -
                 return (
                   <tr class="hover:bg-primary/10 transition-colors">
                     <td class="sticky left-0 bg-base-100 py-3 px-4">
-                      <a href={`/stats/${concepto}`} class="inline-flex items-center gap-1.5 text-primary hover:text-primary font-semibold group">
+                      <a href={`/stats/${concepto}`} class="inline-flex items-center gap-1.5 text-base-content hover:text-base-content font-semibold group">
                         <span>{data.nombre}</span>
-                        <ChevronRight class="h-3.5 w-3.5 text-base-content/40 group-hover:text-primary transition-colors" />
+                        <ChevronRight class="h-3.5 w-3.5 text-base-content/40 group-hover:text-base-content transition-colors" />
                       </a>
                     </td>
                     {allYears.map((y) => (
-                      <td class="text-right py-3 px-4 text-base-content/70 tabular-nums font-mono text-xs">
+                      <td class="text-right py-3 px-4 text-base-content/80 tabular-nums font-mono text-xs">
                         {data.years.get(y) ? Math.round(data.years.get(y)!).toLocaleString('es-ES') : '—'}
                       </td>
                     ))}
                     <td class="text-right py-3 px-4 font-bold text-base-content tabular-nums font-mono">
                       {Math.round(total).toLocaleString('es-ES')}
                     </td>
-                    <td class="text-right py-3 px-4 text-base-content/60 font-medium">
+                    <td class="text-right py-3 px-4 text-base-content/80 font-medium">
                       <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-semibold bg-base-200 text-base-content/80">
                         {data.entries.length}
                       </span>
@@ -89,7 +89,7 @@ const conceptos = [...byConcepto.entries()].sort((a, b) => b[1].entries.length -
         </div>
       </section>
     ) : (
-      <p class="text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center">
+      <p class="text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center">
         Aún no hay cifras registradas en eventos.
       </p>
     )}

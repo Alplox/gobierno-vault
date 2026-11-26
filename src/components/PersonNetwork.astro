@@ -61,7 +61,7 @@ const totalCompartidos = nodes.reduce((s, x) => s + x.n, 0);
 
 {
   nodes.length === 0 ? (
-    <p class="text-sm text-base-content/60">
+    <p class="text-sm text-base-content/80">
       No hay co-apariciones registradas: esta persona aparece sola en los eventos del vault.
     </p>
   ) : radial ? (
@@ -165,9 +165,9 @@ const totalCompartidos = nodes.reduce((s, x) => s + x.n, 0);
         <li>
           <a
             href={`/people/${p.id}`}
-            class="inline-flex items-center gap-1.5 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 transition-colors hover:bg-primary/10 hover:text-primary"
+            class="inline-flex items-center gap-1.5 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 transition-colors hover:bg-primary/10 hover:text-base-content"
           >
-            <span class="font-semibold tabular-nums text-primary">{p.n}</span>
+            <span class="font-semibold tabular-nums text-base-content">{p.n}</span>
             <span class="max-w-[16rem] truncate">{p.nombre}</span>
             <span class="text-base-content/45">evento{p.n === 1 ? '' : 's'}</span>
           </a>

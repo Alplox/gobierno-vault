@@ -27,16 +27,16 @@ const LAYOUT = {
     data-gv-src={embed.embedUrl}
     data-gv-title={label ? `${embed.platform} — ${label}` : embed.platform}
   >
-    <summary class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary/80 cursor-pointer list-none [&::-webkit-details-marker]:hidden w-fit px-2 py-1 -ml-2 rounded-lg hover:bg-primary/10 transition-colors">
+    <summary class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content hover:text-base-content/80 cursor-pointer list-none [&::-webkit-details-marker]:hidden w-fit px-2 py-1 -ml-2 rounded-lg hover:bg-primary/10 transition-colors">
       <Play class="h-3.5 w-3.5" />
       <span>Reproducir aquí</span>
-      <span class="font-medium text-base-content/40 group-open:hidden">· {embed.platform}</span>
-      <span class="font-medium text-base-content/40 hidden group-open:inline">· cerrar</span>
+      <span class="font-medium text-base-content/80 group-open:hidden">· {embed.platform}</span>
+      <span class="font-medium text-base-content/80 hidden group-open:inline">· cerrar</span>
     </summary>
     <div class="mt-2">
       <div class={`overflow-hidden rounded-lg bg-base-300/60 border border-base-300 ${LAYOUT[embed.layout]}`} data-gv-slot></div>
       <noscript>
-        <a href={url} target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-primary hover:underline">
+        <a href={url} target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-base-content hover:underline">
           Abrir en {embed.platform}
         </a>
       </noscript>

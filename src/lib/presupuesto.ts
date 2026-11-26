@@ -281,6 +281,12 @@ function collectEventBasenames(): Set<string> {
   return out;
 }
 
+/** Anchor del ítem [N] de la bibliografía de un ejercicio. La usa también
+ * /data/sources.json para enlazar las fichas de fuente desde /source. */
+export function refAnchor(ano: number, id: string, refs: string[]): string {
+  return `pref-${ano}-${refs.indexOf(id) + 1}`;
+}
+
 let cache: { ejercicios: Ejercicio[]; fuentes: Record<string, PresupuestoFuente>; formatCLP: typeof formatCLP; sankeyGlobal: PresupuestoSankey } | null = null;
 
 function build() {

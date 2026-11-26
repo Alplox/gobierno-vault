@@ -129,15 +129,15 @@ const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioN
   >
     <div class="mb-2.5 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
       <div>
-        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-base-content/60">
+        <p class="text-xs font-semibold uppercase tracking-[0.12em] text-base-content/80">
           Periodo documentado
         </p>
-        <div class="mt-1 flex items-center gap-2 text-[11px] text-base-content/60" role="group" aria-label="Leyenda de la línea de tiempo">
+        <div class="mt-1 flex items-center gap-2 text-[11px] text-base-content/80" role="group" aria-label="Leyenda de la línea de tiempo">
           <span class="inline-flex items-center gap-1"><span class="h-1.5 w-3 rounded-full bg-primary" aria-hidden="true"></span> vigente</span>
           <span class="inline-flex items-center gap-1"><span class="h-1.5 w-3 rounded-full bg-primary/45" aria-hidden="true"></span> histórico</span>
         </div>
       </div>
-      <p class="text-xs font-medium tabular-nums text-base-content/55">
+      <p class="text-xs font-medium tabular-nums text-base-content/80">
         <span>{anioInicio}</span>
         <span aria-hidden="true" class="mx-1.5 text-base-content/25">—</span>
         <span>{titulares.length} {titulares.length === 1 ? 'mandato' : 'mandatos'}</span>
@@ -172,24 +172,24 @@ const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioN
       ></span>
     </div>
 
-    <div class="mt-1.5 flex items-center justify-between text-[11px] font-medium tabular-nums text-base-content/60" aria-hidden="true">
+    <div class="mt-1.5 flex items-center justify-between text-[11px] font-medium tabular-nums text-base-content/80" aria-hidden="true">
       <span>{anioInicio}</span>
-      <span class="font-bold text-primary" data-gv-cartera-hoy-label>corte: {fechaCorta(corte)}</span>
+      <span class="font-bold text-base-content" data-gv-cartera-hoy-label>corte: {fechaCorta(corte)}</span>
     </div>
   </div>
 )}
 
 {titulares.length > 0 && (
   <details class="gv-cartera-detalle group border-t border-base-300/80">
-    <summary class="flex min-h-11 cursor-pointer list-none items-center gap-2 px-5 py-3 text-sm font-semibold text-base-content/65 transition-colors hover:bg-base-200/60 hover:text-base-content">
+    <summary class="flex min-h-11 cursor-pointer list-none items-center gap-2 px-5 py-3 text-sm font-semibold text-base-content/80 transition-colors hover:bg-base-200/60 hover:text-base-content">
       <History class="h-4 w-4 shrink-0" aria-hidden="true" />
       <span>Titulares y duración</span>
-      <span class="rounded-full bg-base-200 px-2 py-0.5 text-xs tabular-nums text-base-content/60">{titulares.length}</span>
+      <span class="rounded-full bg-base-200 px-2 py-0.5 text-xs tabular-nums text-base-content/80">{titulares.length}</span>
       <ChevronDown class="ml-auto h-4 w-4 shrink-0 transition-transform group-open:rotate-180" aria-hidden="true" />
     </summary>
 
     <div class="px-5 pb-5 pt-1">
-      <p class="mb-4 text-xs leading-relaxed text-base-content/60">
+      <p class="mb-4 text-xs leading-relaxed text-base-content/80">
         Del más antiguo al más reciente. Las barras usan una escala común de 0 a 8 años; los mandatos muy breves se mantienen visibles y el texto conserva las fechas y la duración exactas.
       </p>
 
@@ -208,11 +208,11 @@ const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioN
                 <div class="flex flex-wrap items-start justify-between gap-x-4 gap-y-2">
                   <div class="min-w-0">
                     <div class="flex flex-wrap items-center gap-1.5">
-                      <a href={`/people/${a.personId}`} class="font-semibold leading-snug text-base-content hover:text-primary hover:underline">
+                      <a href={`/people/${a.personId}`} class="font-semibold leading-snug text-base-content hover:text-base-content hover:underline">
                         {a.nombre}
                       </a>
                       {actual && (
-                        <span class="rounded-full bg-primary/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-primary">Actual</span>
+                        <span class="rounded-full bg-primary/15 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-base-content">Actual</span>
                       )}
                       {a.biministro && (
                         <span class="rounded-full bg-warning/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-warning">Biministro</span>
@@ -221,22 +221,22 @@ const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioN
                         <span class="rounded-full bg-warning/20 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-warning">Subrogante</span>
                       )}
                     </div>
-                    <p class="mt-0.5 text-xs leading-relaxed text-base-content/50">{a.cargo}</p>
+                    <p class="mt-0.5 text-xs leading-relaxed text-base-content/80">{a.cargo}</p>
                   </div>
                   <span
                     data-gv-cartera-duracion
                     data-gv-cartera-desde={a.desde}
                     data-gv-cartera-vigente={!a.hasta ? '1' : undefined}
-                    class={`inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold tabular-nums ${actual ? 'bg-primary/15 text-primary' : 'bg-base-100 text-base-content/65 shadow-xs'}`}
+                    class={`inline-flex shrink-0 items-center gap-1.5 rounded-lg px-2 py-1 text-xs font-semibold tabular-nums ${actual ? 'bg-primary/15 text-base-content' : 'bg-base-100 text-base-content/80 shadow-xs'}`}
                   >
                     <Timer class="h-3.5 w-3.5" aria-hidden="true" />
                     <span data-gv-cartera-duracion-texto>{duracionLegible(a)}</span>
                   </span>
                 </div>
 
-                <div class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-relaxed text-base-content/55">
+                <div class="mt-3 flex flex-wrap items-center gap-x-2 gap-y-1 text-xs leading-relaxed text-base-content/80">
                   {gobierno && (
-                    <span class="inline-flex items-center gap-1 font-medium text-base-content/65">
+                    <span class="inline-flex items-center gap-1 font-medium text-base-content/80">
                       <Flag class="h-3 w-3 text-base-content/35" aria-hidden="true" />
                       {gobierno.presidente}
                     </span>
@@ -249,11 +249,11 @@ const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioN
                       {a.hasta ? (
                         <time datetime={a.hasta} title={fechaEs(a.hasta) ?? undefined} class="tabular-nums whitespace-nowrap">{fechaCorta(a.hasta)}</time>
                       ) : (
-                        <span class="font-semibold text-primary" data-gv-cartera-fin>corte: {fechaCorta(corte)}</span>
+                        <span class="font-semibold text-base-content" data-gv-cartera-fin>corte: {fechaCorta(corte)}</span>
                       )}
                     </>
                   )}
-                  {!a.desde && <span class="italic text-base-content/40">Periodo sin fechas registradas</span>}
+                  {!a.desde && <span class="italic text-base-content/80">Periodo sin fechas registradas</span>}
                 </div>
 
                 {dias !== null && (
@@ -271,7 +271,7 @@ const timelineLabel = `Línea de tiempo de los mandatos de ${cartera.ministerioN
                         style={`width:${anchoDuracion(dias).toFixed(2)}%;`}
                       ></div>
                     </div>
-                    <span data-gv-cartera-dias class="w-14 text-right text-xs font-medium tabular-nums text-base-content/60">{dias} días</span>
+                    <span data-gv-cartera-dias class="w-14 text-right text-xs font-medium tabular-nums text-base-content/80">{dias} días</span>
                   </div>
                 )}
               </article>

@@ -13,6 +13,12 @@ function fmtFecha(fecha: Date): string {
   return fecha.toISOString().slice(0, 10);
 }
 
+/** Un shard markdown por mes; el fragmento #ID localiza el evento dentro. */
+function mdUrl(eventId: string): string {
+  const id = eventId.split('/').pop() ?? eventId;
+  return `${SITE}/data/events-md/${id.slice(0, 6)}.md#${id}`;
+}
+
 /**
  * Genera el contenido de llm.txt / llms.txt (convención llmstxt.org adaptada):
  * guía de navegación + enlaces a páginas y a los formatos crudos (markdown/YAML).
@@ -40,9 +46,10 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('');
   lines.push('## Formatos crudos (recomendados para lectura por agentes)');
   lines.push('');
-  lines.push('Cada evento está disponible en **markdown fuente** (frontmatter + body con wikilinks):');
+  lines.push('Cada evento está disponible en **markdown** (cuerpo con wikilinks + referencias con URLs), agrupado en un archivo por mes:');
   lines.push('');
-  lines.push(`- Evento individual: \`${SITE}/events/AAAA/ID.md\` (ej. \`${SITE}/events/2026/20260814-2.md\`)`);
+  lines.push(`- Evento individual: \`${SITE}/data/events-md/YYYYMM.md#ID\` (ej. \`${SITE}/data/events-md/202608.md#20260814-2\`)`);
+  lines.push('- El fragmento `#ID` identifica la sección del evento dentro del shard del mes (~95 KB).');
   lines.push(`- Todos los eventos: ver el índice completo al final de este archivo.`);
   lines.push('');
   lines.push('Los registros de datos están disponibles como **YAML crudo**:');
@@ -78,14 +85,13 @@ export async function buildLlmIndex(): Promise<string> {
   lines.push('');
   lines.push(`## Índice completo de eventos (${events.length})`);
   lines.push('');
-  lines.push('Formato: `fecha | título | markdown crudo | página`.');
+  lines.push('Formato: `fecha | título | markdown mensual (#ID) | página`.');
   lines.push('');
 
   for (const event of events) {
     const id = event.id.split('/').pop() ?? event.id;
     const fecha = fmtFecha(new Date(event.data.fecha));
-    const md = `${eventUrl(event.id, new Date(event.data.fecha))}.md`;
-    lines.push(`- ${fecha} | ${event.data.titulo} | [.md](${md}) | [página](${eventUrl(event.id, new Date(event.data.fecha))})`);
+    lines.push(`- ${fecha} | ${event.data.titulo} | [.md](${mdUrl(event.id)}) | [página](${eventUrl(event.id, new Date(event.data.fecha))})`);
   }
 
   lines.push('');

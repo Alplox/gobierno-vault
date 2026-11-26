@@ -22,18 +22,18 @@ for (const s of sections) {
 
 const railLabelClass = (level?: string) =>
   level === 'decade'
-    ? 'text-xs font-bold text-base-content/60 hover:text-primary'
+    ? 'text-xs font-bold text-base-content/80 hover:text-base-content'
     : level === 'year'
-      ? 'text-[11px] font-semibold text-base-content/40 hover:text-primary'
-      : 'text-[10px] font-medium text-base-content/30 hover:text-primary';
+      ? 'text-[11px] font-semibold text-base-content/80 hover:text-base-content'
+      : 'text-[10px] font-medium text-base-content/30 hover:text-base-content';
 
 // Estilos del índice plano del bottom-sheet móvil (misma jerarquía que el rail de escritorio).
 const sheetLabelClass = (level?: string) =>
   level === 'decade'
     ? 'text-sm font-bold text-base-content'
     : level === 'year'
-      ? 'pl-5 text-[13px] font-semibold text-base-content/70'
-      : 'pl-10 text-xs font-medium text-base-content/60';
+      ? 'pl-5 text-[13px] font-semibold text-base-content/80'
+      : 'pl-10 text-xs font-medium text-base-content/80';
 ---
 
 {sections.length > 0 && (
@@ -71,11 +71,11 @@ const sheetLabelClass = (level?: string) =>
       <div class="relative mx-auto max-h-[70vh] w-full max-w-xl translate-y-full overflow-y-auto overscroll-contain rounded-t-2xl bg-base-100 p-4 pb-[calc(1.5rem_+_env(safe-area-inset-bottom))] shadow-2xl transition-transform duration-300">
         <div class="mb-2 flex items-center justify-between">
           <h3 class="text-sm font-bold text-base-content">Índice temporal</h3>
-          <button id="timeline-sheet-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-base-content/60 hover:bg-base-200" aria-label="Cerrar">
+          <button id="timeline-sheet-close" class="flex h-8 w-8 items-center justify-center rounded-lg text-base-content/80 hover:bg-base-200" aria-label="Cerrar">
             <X class="h-4 w-4" />
           </button>
         </div>
-        <p class="mb-2 text-[11px] text-base-content/40">Toca una fecha para desplazarte a esa sección.</p>
+        <p class="mb-2 text-[11px] text-base-content/80">Toca una fecha para desplazarte a esa sección.</p>
         <div class="space-y-px pb-1">
           {flatSections.map((s) => {
             // Inferir la jerarquía desde el prefijo del id cuando el caller no
@@ -89,7 +89,7 @@ const sheetLabelClass = (level?: string) =>
             return (
               <a
                 href={`#${s.id}`}
-                class={`timeline-sheet-link group flex w-full items-center rounded-lg py-1.5 pr-2 transition-colors hover:bg-base-200 hover:text-primary ${sheetLabelClass(level)}`}
+                class={`timeline-sheet-link group flex w-full items-center rounded-lg py-1.5 pr-2 transition-colors hover:bg-base-200 hover:text-base-content ${sheetLabelClass(level)}`}
                 data-target={s.id}
                 aria-label={s.label}
               >
@@ -253,7 +253,7 @@ const sheetLabelClass = (level?: string) =>
     const setActiveDot = (activeId: string | null) => {
       dots.forEach((label, id) => {
         const isActive = id === activeId;
-        label.classList.toggle('!text-primary', isActive);
+        label.classList.toggle('!text-base-content', isActive);
         label.classList.toggle('!bg-primary/10', isActive);
         label.classList.toggle('rounded', isActive);
       });

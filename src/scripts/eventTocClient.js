@@ -106,10 +106,46 @@ function build() {
   }
 
   const entries = [...eventEntries, ...pageEntries];
+  const mobileBar = document.getElementById('gv-event-toc-mobile');
+  let lastScrollY = window.scrollY;
+  let barHidden = false;
+
+  function setBarHidden(hidden) {
+    if (!mobileBar || barHidden === hidden) return;
+    barHidden = hidden;
+    mobileBar.classList.toggle('gv-bottom-nav-hidden', hidden);
+    // Fuera de pantalla no debe recibir Tab ni clics «invisibles».
+    mobileBar.inert = hidden;
+  }
+
+  // Al bajar la barra se aparta; al subir vuelve. Abierta o en escritorio
+  // permanece visible siempre (el usuario la está usando o no existe).
+  function updateBar() {
+    if (!mobileBar || mq.matches || mobileBar.open) {
+      setBarHidden(false);
+      lastScrollY = window.scrollY;
+      return;
+    }
+    const y = window.scrollY;
+    const dy = y - lastScrollY;
+    if (Math.abs(dy) < 8) return; // umbral: evita parpadeo en scroll mínimo
+    setBarHidden(dy > 0);
+    lastScrollY = y;
+  }
+
+  const onBarToggle = () => {
+    if (mobileBar?.open) {
+      setBarHidden(false);
+      lastScrollY = window.scrollY;
+    }
+  };
+  mobileBar?.addEventListener('toggle', onBarToggle);
+
   let targets = [];
   let ticking = false;
   function updateActive() {
     ticking = false;
+    updateBar();
     let active = targets[0]?.id ?? null;
     for (const el of targets) {
       if (!el.isConnected || el.getClientRects().length === 0) continue;
@@ -154,6 +190,7 @@ function build() {
     window.removeEventListener('scroll', onScroll);
     window.removeEventListener('resize', onScroll);
     mq.removeEventListener('change', applyMode);
+    mobileBar?.removeEventListener('toggle', onBarToggle);
   };
 }
 

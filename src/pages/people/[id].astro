@@ -173,7 +173,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
 
 <Base title={person.data.nombre} description={`Panorama de ${person.data.nombre}: ${n(panorama.total)} eventos, ${n(panorama.citas.length)} declaraciones y su red de apariciones en Gobierno Vault.`}>
   <div class="mb-6">
-    <a href="/people" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
+    <a href="/people" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content hover:text-base-content bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
       <ArrowLeft class="h-3.5 w-3.5" />
       <span>Volver a Personas</span>
     </a>
@@ -181,13 +181,13 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
 
   <header class="mb-6 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
     <div class="flex items-start gap-6">
-      <div class="h-16 w-16 rounded-full bg-primary/15 text-primary flex items-center justify-center font-bold text-2xl shrink-0" aria-hidden="true">
+      <div class="h-16 w-16 rounded-full bg-primary/15 text-base-content flex items-center justify-center font-bold text-2xl shrink-0" aria-hidden="true">
         {initials}
       </div>
       <div class="min-w-0 flex-1">
         <h1 transition:name={`person-title-${person.id}`} class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">{person.data.nombre}</h1>
         {aliases.length > 0 && (
-          <p class="text-xs text-base-content/50 mt-1">
+          <p class="text-xs text-base-content/80 mt-1">
             <span class="sr-only">También conocida como: </span>
             {aliases.map((a) => a).join(' · ')}
           </p>
@@ -197,7 +197,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
             <Briefcase class="h-4 w-4 text-base-content/40 shrink-0" />
             <span>{cargoPortada.ex ? 'Ex ' : ''}{cargoPortada.cargo}</span>
             {cargoPortada.desde && (
-              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-base-content/60 bg-base-200 rounded-full px-2 py-0.5">
+              <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-base-content/80 bg-base-200 rounded-full px-2 py-0.5">
                 {cargoPortada.hasta
                   ? `${fechaEs(cargoPortada.desde)} → ${fechaEs(cargoPortada.hasta)}`
                   : `desde ${fechaEs(cargoPortada.desde)}`}
@@ -211,13 +211,13 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
           </p>
         )}
         {orgIdPrincipal && (
-          <p class="flex items-center gap-1.5 text-xs text-base-content/60 mt-1">
+          <p class="flex items-center gap-1.5 text-xs text-base-content/80 mt-1">
             <Building2 class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
-            <a href={`/organization?id=${orgIdPrincipal}`} class="hover:text-primary transition-colors">{orgNombre(orgIdPrincipal)}</a>
+            <a href={`/organization?id=${orgIdPrincipal}`} class="hover:text-base-content transition-colors">{orgNombre(orgIdPrincipal)}</a>
           </p>
         )}
         {person.data.tipo && (
-          <p class="text-xs text-base-content/50 mt-1">{person.data.tipo}</p>
+          <p class="text-xs text-base-content/80 mt-1">{person.data.tipo}</p>
         )}
       </div>
     </div>
@@ -244,10 +244,10 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
     <section class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]" aria-labelledby="pv-chart-h">
       <div class="flex items-center justify-between gap-3 mb-4">
         <h2 id="pv-chart-h" class="text-lg font-bold text-base-content flex items-center gap-2">
-          <Calendar class="h-5 w-5 text-primary" />
+          <Calendar class="h-5 w-5 text-base-content" />
           <span>Actividad por año</span>
         </h2>
-        <a href="/events" class="inline-flex items-center gap-1 text-xs font-medium text-base-content/60 hover:text-primary transition-colors shrink-0">
+        <a href="/events" class="inline-flex items-center gap-1 text-xs font-medium text-base-content/80 hover:text-base-content transition-colors shrink-0">
           <span>Filtrar en /events</span>
           <ChevronRight class="h-3.5 w-3.5" />
         </a>
@@ -260,7 +260,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
   {panorama.porTipo.length > 1 && (
     <section id="reparto" class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-mix-h">
       <h2 id="pv-mix-h" class="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
-        <Layers class="h-5 w-5 text-primary" />
+        <Layers class="h-5 w-5 text-base-content" />
         <span>Reparto por tipo de evento</span>
       </h2>
       <PersonTopicMix panorama={panorama} slug={slug} />
@@ -272,10 +272,10 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
     {panorama.temas.length > 0 && (
       <section id="temas" class="bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-temas-h">
         <h2 id="pv-temas-h" class="text-base font-bold text-base-content flex items-center gap-2 mb-1">
-          <Tag class="h-4 w-4 text-primary" />
+          <Tag class="h-4 w-4 text-base-content" />
           <span>Temas en los que aparece</span>
         </h2>
-        <p class="text-xs text-base-content/55 mb-4">Cuántos de sus eventos tocan cada tema.</p>
+        <p class="text-xs text-base-content/80 mb-4">Cuántos de sus eventos tocan cada tema.</p>
         <ul class="space-y-2">
           {panorama.temas.map((t) => {
             const max = panorama.temas[0].n;
@@ -283,8 +283,8 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
               <li>
                 <a href={`/events?persona=${slug}&tema=${t.id}`} class="group block" title={`Ver los ${n(t.n)} eventos de ${t.nombre} linked a esta persona en /events`}>
                   <div class="flex items-baseline justify-between gap-3 text-xs mb-1">
-                    <span class="font-medium text-base-content/80 group-hover:text-primary transition-colors truncate">{t.nombre}</span>
-                    <span class="tabular-nums font-semibold text-base-content/60 shrink-0">{n(t.n)}</span>
+                    <span class="font-medium text-base-content/80 group-hover:text-base-content transition-colors truncate">{t.nombre}</span>
+                    <span class="tabular-nums font-semibold text-base-content/80 shrink-0">{n(t.n)}</span>
                   </div>
                   <div class="h-1.5 rounded-full bg-base-200 overflow-hidden">
                     <div class="h-full rounded-full bg-primary/70 group-hover:bg-primary transition-colors" style={`width:${Math.max(4, (t.n / max) * 100)}%`} />
@@ -301,20 +301,20 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
     {panorama.orgs.length > 0 && (
       <section id="organizaciones" class="bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-orgs-h">
         <h2 id="pv-orgs-h" class="text-base font-bold text-base-content flex items-center gap-2 mb-1">
-          <Building2 class="h-4 w-4 text-primary" />
+          <Building2 class="h-4 w-4 text-base-content" />
           <span>Organizaciones</span>
         </h2>
-        <p class="text-xs text-base-content/55 mb-4">Entidades mencionadas junto a esta persona.</p>
+        <p class="text-xs text-base-content/80 mb-4">Entidades mencionadas junto a esta persona.</p>
         <ul class="flex flex-wrap gap-1.5">
           {panorama.orgs.map((o) => (
             <li>
               <a
                 href={`/organization?id=${o.id}`}
-                class="inline-flex items-center gap-1.5 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 transition-colors hover:bg-primary/10 hover:text-primary"
+                class="inline-flex items-center gap-1.5 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 transition-colors hover:bg-primary/10 hover:text-base-content"
                 title={`${n(o.n)} evento${o.n === 1 ? '' : 's'} en común con ${o.nombre}`}
               >
                 <span class="max-w-[18rem] truncate">{o.nombre}</span>
-                <span class="tabular-nums font-semibold text-primary">{n(o.n)}</span>
+                <span class="tabular-nums font-semibold text-base-content">{n(o.n)}</span>
               </a>
             </li>
           ))}
@@ -328,7 +328,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
     <section id="red" class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-red-h">
       <div class="flex items-center justify-between gap-3 mb-1">
         <h2 id="pv-red-h" class="text-lg font-bold text-base-content flex items-center gap-2">
-          <Users class="h-5 w-5 text-primary" />
+          <Users class="h-5 w-5 text-base-content" />
           <span>Con quién aparece</span>
         </h2>
         {huerfanos > 0 && (
@@ -337,7 +337,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
           </span>
         )}
       </div>
-      <p class="text-xs text-base-content/55 mb-4">
+      <p class="text-xs text-base-content/80 mb-4">
         Figuras con las que comparte más eventos. El tamaño del nodo y el grosor del enlace
         siguen el número de apariciones en común.
       </p>
@@ -349,7 +349,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
   {cargos.length > 0 && (
     <section class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]" aria-labelledby="pv-cargos-h">
       <h2 id="pv-cargos-h" class="text-lg font-bold text-base-content flex items-center gap-2 mb-4">
-        <Briefcase class="h-5 w-5 text-primary" />
+        <Briefcase class="h-5 w-5 text-base-content" />
         <span>Cargos</span>
       </h2>
       <ol class="space-y-3 mb-5">
@@ -364,12 +364,12 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
               <div class="min-w-0">
                 <p class="font-semibold text-base-content text-sm">
                   {c.organizacion ? (
-                    <a href={`/organization?id=${c.organizacion}`} class="hover:text-primary transition-colors">{c.cargo}</a>
+                    <a href={`/organization?id=${c.organizacion}`} class="hover:text-base-content transition-colors">{c.cargo}</a>
                   ) : (
                     c.cargo
                   )}
                 </p>
-                <p class="text-xs text-base-content/60 mt-0.5">
+                <p class="text-xs text-base-content/80 mt-0.5">
                   {[org, desde && `desde ${desde}`, hasta && `hasta ${hasta}`].filter(Boolean).join(' · ')}
                 </p>
               </div>
@@ -391,7 +391,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
     <section id="declaraciones" class="mb-6 bg-base-100 p-5 sm:p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-24" aria-labelledby="pv-quotes-h">
       <div class="flex items-center justify-between gap-3 mb-1 flex-wrap">
         <h2 id="pv-quotes-h" class="text-lg font-bold text-base-content flex items-center gap-2">
-          <MessageSquareQuote class="h-5 w-5 text-primary" />
+          <MessageSquareQuote class="h-5 w-5 text-base-content" />
           <span>Declaraciones ({n(quotes.length)})</span>
         </h2>
         {quotes.length > 12 && (
@@ -410,7 +410,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
             <button
               type="button"
               data-quote-clear
-              class="hidden items-center gap-1 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/70 hover:bg-base-300 transition-colors"
+              class="hidden items-center gap-1 rounded-lg bg-base-200 px-2.5 py-1.5 text-xs font-medium text-base-content/80 hover:bg-base-300 transition-colors"
             >
               <X class="h-3 w-3" />
               <span>Limpiar</span>
@@ -418,7 +418,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
           </div>
         )}
       </div>
-      <p class="text-xs text-base-content/55 mb-4">
+      <p class="text-xs text-base-content/80 mb-4">
         Fragmentos citados textualmente en el vault, de más reciente a más antiguo.
         {citaYears.length > 1 && ` Presentes en ${citaYears.length} años distintos.`}
       </p>
@@ -438,7 +438,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
               type="button"
               data-quote-year={y}
               aria-pressed="false"
-              class="rounded-md px-2.5 py-1 text-xs font-medium bg-base-200 text-base-content/70 hover:bg-base-300 transition-colors"
+              class="rounded-md px-2.5 py-1 text-xs font-medium bg-base-200 text-base-content/80 hover:bg-base-300 transition-colors"
             >
               {y} <span class="tabular-nums opacity-60">({n(citasPorYear.get(y) ?? 0)})</span>
             </button>
@@ -453,7 +453,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
           </div>
         ))}
       </div>
-      <p data-quote-empty class="hidden text-sm text-base-content/60 text-center py-6 border border-dashed border-base-300 rounded-xl">
+      <p data-quote-empty class="hidden text-sm text-base-content/80 text-center py-6 border border-dashed border-base-300 rounded-xl">
         Ninguna declaración coincide con la búsqueda.
       </p>
       {lazyQuotes.length > 0 && (
@@ -473,22 +473,22 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
   <section id="eventos" class="mt-8 scroll-mt-24">
     <div class="mb-4 flex items-center justify-between gap-3 flex-wrap">
       <h2 class="text-lg font-bold text-base-content flex items-center gap-2">
-        <Calendar class="h-5 w-5 text-primary" />
+        <Calendar class="h-5 w-5 text-base-content" />
         <span>Eventos ({n(panorama.total)})</span>
         {quotes.length > 0 && (
-          <span class="text-sm font-medium text-base-content/60">· {n(quotes.length)} declaraciones</span>
+          <span class="text-sm font-medium text-base-content/80">· {n(quotes.length)} declaraciones</span>
         )}
       </h2>
       <a
         href={`/events?persona=${slug}`}
-        class="inline-flex items-center gap-1 text-xs font-medium text-base-content/60 hover:text-primary transition-colors shrink-0"
+        class="inline-flex items-center gap-1 text-xs font-medium text-base-content/80 hover:text-base-content transition-colors shrink-0"
       >
         <span>Ver en /events</span>
         <ChevronRight class="h-3.5 w-3.5" />
       </a>
     </div>
 
-    <p class="mb-4 text-xs text-base-content/55">
+    <p class="mb-4 text-xs text-base-content/80">
       Del más reciente al más antiguo. La lista se amplía sola al bajar; los filtros combinan
       año, tipo, tema y texto.
     </p>
@@ -527,9 +527,9 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
         );
       })}
       {relatedEvents.length === 0 && (
-        <p class="text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center">
+        <p class="text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center">
           No hay eventos registrados para esta persona.{' '}
-          <a href="/admin" class="text-primary hover:underline">Se documentan desde el editor de contenido.</a>
+          <a href="/admin" class="text-base-content hover:underline">Se documentan desde el editor de contenido.</a>
         </p>
       )}
     </div>
