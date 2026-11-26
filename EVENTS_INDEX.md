@@ -2003,7 +2003,7 @@
 - [2026/10/20261026-3 - La oposición da 48 horas tras el mea culpa de Kast, exige la salida de Rabat y Silva y mantiene la acusación constitucional mientras el oficialismo pide celeridad legislativa](src/content/events/2026/10/20261026-3.md) — 12 fuentes
 - [2026/10/20261026-4 - El reo de Punta Peuco liberado por decreto de Rabat habla: agradece a Kast, atribuye la demora a la negativa de Boric y niega ser torturador](src/content/events/2026/10/20261026-4.md) — 9 fuentes
 - [2026/10/20261026-5 - Bío Bío identifica a 33 de los 56 condenados por delitos sexuales beneficiados con rebajas: informes de Gendarmería advertían alto riesgo de reincidencia y las víctimas no fueron notificadas](src/content/events/2026/10/20261026-5.md) — 11 fuentes
-- [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 9 fuentes
+- [2026/10/20261026-6 - Interferencia publica los decretos que desmienten la “doctrina Rabat”: Justicia rechazó rebajas hasta el 18 de mayo y desde el 16 de junio las concede](src/content/events/2026/10/20261026-6.md) — 15 fuentes
 - [2026/10/20261026-7 - Superintendente eleva a más de US$10 mil millones las pérdidas valorizadas de los cinco multifondos y confirma alertas a las AFP desde 2024](src/content/events/2026/10/20261026-7.md) — 14 fuentes
 - [2026/10/20261027-1 - Rabat defiende las rebajas ante el Senado: cifra 375 casos entre ambos gobiernos y afirma que 36 de 54 decretos tenían amparo previo](src/content/events/2026/10/20261027-1.md) — 18 fuentes
 - [2026/10/20261027-2 - Interferencia revela que tres beneficiados por las rebajas eran extorsionadores de La Serena que se presentaban como Tren de Aragua](src/content/events/2026/10/20261027-2.md) — 15 fuentes
@@ -2011,7 +2011,7 @@
 - [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 11 fuentes
 - [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 10 fuentes
 - [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 12 fuentes
-- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 13 fuentes
+- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 14 fuentes
 - [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
 - [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 6 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
@@ -2025,17 +2025,17 @@
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 9 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 13 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 57 fuentes
-- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 13 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 69 fuentes
+- [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 14 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 8 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
-- [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 5 fuentes
+- [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 10 fuentes
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 10 fuentes
 - [2026/10/20261029-6 - Tres advertencias a Rabat entre febrero y mayo por el costo político de rebajar condenas y alertas que no llegaron a Kast](src/content/events/2026/10/20261029-6.md) — 8 fuentes
 - [2026/10/20261029-7 - Partido Republicano blinda a Rabat y Vicente Bruna relativiza la responsabilidad política: “no siempre se tiene que hacer valer”](src/content/events/2026/10/20261029-7.md) — 6 fuentes
-- [2026/10/20261029-8 - Tohá acusa que Rabat y el Gobierno convirtieron un problema en una catástrofe y pide enmendar](src/content/events/2026/10/20261029-8.md) — 5 fuentes
+- [2026/10/20261029-8 - Tohá acusa que Rabat y el Gobierno convirtieron un problema en una catástrofe y pide enmendar](src/content/events/2026/10/20261029-8.md) — 11 fuentes
 - [2026/10/20261029-9 - Hoffmann revela que Kast llamó a parlamentarios oficialistas para agradecer discursos y llamarles la atención](src/content/events/2026/10/20261029-9.md) — 7 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
 - [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 24 fuentes
