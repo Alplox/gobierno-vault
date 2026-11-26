@@ -10,7 +10,7 @@ export interface SourceMirror {
 }
 
 export const SOURCE_MIRRORS: SourceMirror[] = [
-  { label: 'Archive', title: 'Wayback Machine', hover: 'hover:text-primary', href: (u) => `https://web.archive.org/web/${u}` },
+  { label: 'Archive', title: 'Wayback Machine', hover: 'hover:text-base-content', href: (u) => `https://web.archive.org/web/${u}` },
   { label: 'archive.ph', title: 'archive.ph', hover: 'hover:text-orange-500', href: (u) => `https://archive.ph/${u}` },
   { label: 'Ghost', title: 'Ghostarchive', hover: 'hover:text-purple-500', href: (u) => `https://ghostarchive.org/search?term=${encodeURIComponent(u)}` },
   { label: 'Memento', title: 'Memento Time Travel', hover: 'hover:text-teal-500', href: (u) => `https://timetravel.mementoweb.org/memento/${u}` },

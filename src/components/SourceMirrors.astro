@@ -10,13 +10,13 @@ const { url = '', sourceId = '' } = Astro.props;
 
 {sourceId && (
   <p class="mt-1">
-    <a href={`/source?id=${sourceId}`} class="text-[10px] font-medium text-base-content/50 hover:text-primary transition-colors">Ficha de la fuente →</a>
+    <a href={`/source?id=${sourceId}`} class="text-[10px] font-medium text-base-content/80 hover:text-base-content transition-colors">Ficha de la fuente →</a>
   </p>
 )}
 {url && (
   <span class="flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-1">
     {SOURCE_MIRRORS.map((m) => (
-      <a href={m.href(url)} class={`text-[10px] font-medium text-base-content/40 ${m.hover} transition-colors`} target="_blank" rel="noopener" title={m.title}>{m.label}</a>
+      <a href={m.href(url)} class={`text-[10px] font-medium text-base-content/80 ${m.hover} transition-colors`} target="_blank" rel="noopener" title={m.title}>{m.label}</a>
     ))}
   </span>
 )}

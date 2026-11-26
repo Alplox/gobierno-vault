@@ -18,7 +18,7 @@ export const TIPO_STYLES: Record<string, string> = {
   fallo_judicial: 'rel-chip [--chip-hue:#f43f5e]',
   entrevista: 'rel-chip [--chip-hue:#14b8a6]',
   publicacion: 'rel-chip [--chip-hue:#06b6d4]',
-  documento: 'bg-base-200 text-base-content/70 ring-base-300',
+  documento: 'bg-base-200 text-base-content/80 ring-base-300',
   investigacion: 'rel-chip [--chip-hue:#f97316]',
   reaccion: 'rel-chip [--chip-hue:#ec4899]',
   resultado: 'rel-chip [--chip-hue:#10b981]',

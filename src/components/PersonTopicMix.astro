@@ -63,7 +63,7 @@ const pct = (t: { n: number }) => `${((t.n / total) * 100).toFixed(t.n / total <
       <li>
         <a
           href={`/events?persona=${slug}&tipo=${t.id}`}
-          class="inline-flex items-center gap-1.5 rounded-md px-1 py-0.5 text-[11px] text-base-content/70 transition-colors hover:bg-base-200 hover:text-primary"
+          class="inline-flex items-center gap-1.5 rounded-md px-1 py-0.5 text-[11px] text-base-content/80 transition-colors hover:bg-base-200 hover:text-base-content"
           title={`Ver los ${fmt(t.n)} eventos de tipo ${TIPO_LABELS[t.id] ?? t.id} en /events`}
         >
           <span class="h-2 w-2 rounded-sm shrink-0" style={`background:${TIPO_COLORS[t.id] ?? 'var(--color-base-content)'}`} aria-hidden="true" />

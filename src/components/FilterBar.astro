@@ -7,7 +7,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
 <form method="get" id="filter-form" data-filter-form class="flex flex-wrap gap-3 items-end p-4 bg-base-100 border-0 shadow-[var(--shadow-border)] rounded-xl mb-8">
   <div class="w-full min-w-[220px]">
     <label class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
-      <Search class="h-3.5 w-3.5 text-base-content/40" />
+      <Search class="h-3.5 w-3.5 text-base-content/80" />
       Búsqueda
     </label>
     <input
@@ -21,7 +21,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
   {topics.length > 0 && (
     <div class="flex-1 min-w-[140px]">
       <label class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
-        <Tag class="h-3.5 w-3.5 text-base-content/40" />
+        <Tag class="h-3.5 w-3.5 text-base-content/80" />
         Tema
       </label>
       <select name="tema" data-filter-select="tema" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-3 py-1.5 focus:bg-base-100 focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
@@ -33,7 +33,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
   {people.length > 0 && (
     <div class="flex-1 min-w-[140px]">
       <label class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
-        <User class="h-3.5 w-3.5 text-base-content/40" />
+        <User class="h-3.5 w-3.5 text-base-content/80" />
         Persona
       </label>
       <select name="persona" data-filter-select="persona" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-3 py-1.5 focus:bg-base-100 focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
@@ -45,7 +45,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
   {orgs.length > 0 && (
     <div class="flex-1 min-w-[140px]">
       <label class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
-        <Building2 class="h-3.5 w-3.5 text-base-content/40" />
+        <Building2 class="h-3.5 w-3.5 text-base-content/80" />
         Organización
       </label>
       <select name="org" data-filter-select="org" class="w-full text-sm bg-base-200 border border-base-300 rounded-lg px-3 py-1.5 focus:bg-base-100 focus:ring-2 focus:ring-primary focus:border-primary transition-colors">
@@ -57,7 +57,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
   {etiquetas.length > 0 && (
     <div class="flex-1 min-w-[160px]">
       <label class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
-        <Hash class="h-3.5 w-3.5 text-base-content/40" />
+        <Hash class="h-3.5 w-3.5 text-base-content/80" />
         Etiqueta
       </label>
       <input
@@ -91,7 +91,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
   {tipos.length > 0 && (
     <div class="w-full">
       <span class="flex items-center gap-1.5 text-xs font-semibold text-base-content/80 mb-1.5">
-        <Layers class="h-3.5 w-3.5 text-base-content/40" />
+        <Layers class="h-3.5 w-3.5 text-base-content/80" />
         Tipo (clic para mostrar/ocultar)
       </span>
       <div class="flex flex-wrap gap-1.5" data-tipo-chips role="group" aria-label="Filtrar por tipo de evento">
@@ -101,7 +101,7 @@ const { topics = [], people = [], orgs = [], tipos = [], etiquetas = [] } = Astr
             data-tipo-chip={t.id}
             data-style-on={t.style}
             aria-pressed="false"
-            class="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset bg-base-100 text-base-content/60 ring-base-300 hover:bg-base-200 transition-colors"
+            class="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset bg-base-100 text-base-content/80 ring-base-300 hover:bg-base-200 transition-colors"
           >
             {t.label}
           </button>

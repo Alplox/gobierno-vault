@@ -77,18 +77,18 @@ const tiles = [
   {tiles.map((t) => {
     const inner = (
       <>
-        <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/55">
+        <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/80">
           <t.icon class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
           <span class="truncate">{t.label}</span>
         </span>
         <span class="mt-1 block text-xl font-bold tabular-nums leading-none text-base-content">{t.value}</span>
-        <span class="mt-1 block truncate text-[11px] text-base-content/55" title={t.hint}>{t.hint}</span>
+        <span class="mt-1 block truncate text-[11px] text-base-content/80" title={t.hint}>{t.hint}</span>
       </>
     );
     return (
       <li class="rounded-xl bg-base-200/60 px-3.5 py-3">
         {t.href ? (
-          <a href={t.href} class="block transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded">
+          <a href={t.href} class="block transition-colors hover:text-base-content focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40 rounded">
             {inner}
           </a>
         ) : (

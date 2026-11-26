@@ -10,7 +10,7 @@ import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
 import { resolveReferences } from '../../../lib/registry';
-import { buildEventMarkdown, buildReferenceLines, readEventBody } from '../../../lib/eventMarkdown';
+import { buildEventMarkdown, buildReferenceLines, buildReferencesMarkdown, readEventBody } from '../../../lib/eventMarkdown';
 import {
   ArrowLeft,
   Calendar,
@@ -96,6 +96,7 @@ const hasConnections = hasTimeline || connections.inferred.length > 0;
 const bodyMd = readEventBody(event.id);
 const exportMd = buildEventMarkdown({ titulo, eventUrl, refs, bodyMd });
 const refLines = buildReferenceLines(refs);
+const refsMd = buildReferencesMarkdown(refs);
 // Contexto compacto para IAs: conserva nombres legibles de entidades y un extracto
 // acotado del cuerpo. La URL canónica permite verificar el evento en servicios con web.
 const aiEntityMaps: Record<string, Map<string, string>> = {
@@ -179,8 +180,8 @@ const aiTargets: Array<{ id: string; label: string; url: string; title: string; 
   {
     id: 'chatgpt',
     label: 'ChatGPT',
-    url: `https://chatgpt.com/?q=${encodedAiFallbackPrompt}`,
-    title: 'Abrir ChatGPT con el contexto. Funciona sin cuenta; el registro es opcional para guardar el historial.',
+    url: `https://chatgpt.com/?q=${encodedAiFallbackPrompt}&hints=search`,
+    title: 'Abrir ChatGPT con el contexto y búsqueda web activada (según plan). Funciona sin cuenta; el registro es opcional para guardar el historial.',
     noLogin: true,
   },
   {
@@ -204,8 +205,17 @@ const aiTargets: Array<{ id: string; label: string; url: string; title: string; 
     title: 'Abrir Duck.ai con el contexto. Funciona sin cuenta; DuckDuckGo anonimiza los metadatos de la solicitud.',
     noLogin: true,
   },
+  {
+    id: 'grok',
+    label: 'Grok',
+    url: `https://grok.com/?q=${encodedAiFallbackPrompt}`,
+    title: 'Abrir Grok con el prompt listo en el compositor; hay que pulsar Enviar. Requiere cuenta para responder.',
+    accountRequired: true,
+  },
 ];
-const aiActionClass = 'inline-flex items-center gap-1.5 whitespace-nowrap rounded-md border border-success/25 bg-base-100/70 px-2.5 py-1.5 text-xs font-medium text-success transition-colors hover:bg-success/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-success/40';
+// text-success/error/warning como texto daba 2,3:1 en cupcake: el color va en
+// borde y tinte, el texto en base-content (AAA con el fondo del tema).
+const aiActionClass = 'inline-flex min-h-9 items-center gap-1.5 whitespace-nowrap rounded-md border border-success/25 bg-base-100/70 px-2.5 py-1.5 text-xs font-medium text-base-content transition-colors hover:bg-success/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-base-content/50';
 // Reportar o sugerir: abre un issue de GitHub pre-rellenado con el evento y su URL.
 const reportUrl = `https://github.com/Alplox/gobierno-vault/issues/new?title=${encodeURIComponent(`[Evento] ${titulo}`)}&body=${encodeURIComponent(`Evento: ${eventUrl}
 
@@ -216,7 +226,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
   <div id="gv-event-shell" class="gv-event-shell" data-has-timeline={hasTimeline ? '1' : ''}>
     <aside class="gv-event-toc" aria-label="Índice de contenidos">
       <div class="gv-event-toc-sticky not-prose">
-        <div class="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/60">
+        <div class="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/80">
           <ListTree class="h-3.5 w-3.5 shrink-0" />
           En esta página
         </div>
@@ -227,54 +237,58 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     <div class="gv-event-body">
     <header class="mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-4">
-        <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
+        <a href="/events" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content hover:text-base-content bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
           <ArrowLeft class="h-3.5 w-3.5" />
           <span>Volver a Eventos</span>
         </a>
       </div>
       <h1 transition:name={`event-title-${filename}`} class="text-2xl sm:text-3xl font-bold text-base-content mb-4 leading-tight text-balance">{titulo}</h1>
-      <div class="flex flex-wrap items-center gap-3 text-xs text-base-content/70">
+      <div class="flex flex-wrap items-center gap-3 text-xs text-base-content/80">
         <span class={`inline-flex items-center gap-1 px-2.5 py-1 rounded-md font-semibold ring-1 ring-inset ${TIPO_STYLES[tipo] || 'bg-base-200 text-base-content/80 ring-base-300'}`}>
           <FileText class="h-3.5 w-3.5 shrink-0" />
           {TIPO_LABELS[tipo] || tipo}
         </span>
-        <time class="inline-flex items-center gap-1.5 text-base-content/60 font-medium bg-base-200 px-2.5 py-1 rounded-md border border-base-300/60">
+        <time class="inline-flex items-center gap-1.5 text-base-content/80 font-medium bg-base-200 px-2.5 py-1 rounded-md border border-base-300/60">
           <Calendar class="h-3.5 w-3.5 text-base-content/40 shrink-0" />
           {fechaStr}
         </time>
       </div>
     </header>
 
-    <div class="mb-5 flex flex-wrap items-center gap-2.5 not-prose">
-      <button id="btn-tts" type="button" title="Escuchar el evento en voz alta" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content/80 bg-base-200 hover:bg-base-300 px-3 py-1.5 rounded-lg transition-[color,background-color,box-shadow] duration-150 min-w-[9rem] justify-center">
-        <Play data-tts-icon="idle" class="h-4 w-4" />
-        <Square data-tts-icon="playing" class="h-4 w-4 hidden" fill="currentColor" />
-        <span data-tts-label>Escuchar</span>
-      </button>
-      {/* Controles de salto Piper: ocultos hasta que haya audio sintetizado */}
-      <button id="btn-tts-restart" type="button" class="hidden items-center p-2 text-base-content/70 bg-base-200 hover:bg-base-300 rounded-lg transition-colors" title="Reiniciar desde el inicio" aria-label="Reiniciar desde el inicio">
-        <RotateCcw class="h-4 w-4" />
-      </button>
-      <button id="btn-tts-prev" type="button" class="hidden items-center p-2 text-base-content/70 bg-base-200 hover:bg-base-300 rounded-lg transition-colors" title="Parrafo anterior" aria-label="Parrafo anterior">
-        <SkipBack class="h-4 w-4" />
-      </button>
-      <button id="btn-tts-next" type="button" class="hidden items-center p-2 text-base-content/70 bg-base-200 hover:bg-base-300 rounded-lg transition-colors" title="Siguiente parrafo" aria-label="Siguiente parrafo">
-        <SkipForward class="h-4 w-4" />
-      </button>
-      <label class="inline-flex items-center gap-1.5 text-xs font-medium text-base-content/60">
-        Voz
-        <select id="tts-voice" class="text-xs border border-base-300/70 rounded-lg bg-base-100 px-2 py-1.5 text-base-content/80 focus:outline-none focus:ring-1 focus:ring-primary max-w-[16rem]"></select>
+    {/* Móvil: grilla de etiqueta fija + control flexible para que los selects
+        queden cuadrados. Desde sm vuelve al flex original de una sola fila. */}
+    <div class="mb-5 grid grid-cols-[4.5rem_minmax(0,1fr)] items-center gap-x-3 gap-y-2 not-prose sm:flex sm:flex-wrap sm:items-center sm:gap-2.5">
+      <div class="col-span-2 flex items-center gap-2 sm:contents">
+        <button id="btn-tts" type="button" title="Escuchar el evento en voz alta" class="inline-flex min-h-9 flex-1 items-center justify-center gap-1.5 rounded-lg border border-base-300 bg-base-200 px-3 py-1.5 text-xs font-semibold text-base-content/80 shadow-xs transition-[color,background-color,box-shadow] duration-150 hover:bg-base-300 sm:min-w-[9rem] sm:flex-none">
+          <Play data-tts-icon="idle" class="h-4 w-4" />
+          <Square data-tts-icon="playing" class="h-4 w-4 hidden" fill="currentColor" />
+          <span data-tts-label>Escuchar</span>
+        </button>
+        {/* Controles de salto Piper: ocultos hasta que haya audio sintetizado */}
+        <button id="btn-tts-restart" type="button" class="hidden size-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/80 shadow-xs transition-colors hover:bg-base-300" title="Reiniciar desde el inicio" aria-label="Reiniciar desde el inicio">
+          <RotateCcw class="h-4 w-4" />
+        </button>
+        <button id="btn-tts-prev" type="button" class="hidden size-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/80 shadow-xs transition-colors hover:bg-base-300" title="Parrafo anterior" aria-label="Parrafo anterior">
+          <SkipBack class="h-4 w-4" />
+        </button>
+        <button id="btn-tts-next" type="button" class="hidden size-9 items-center justify-center rounded-lg border border-base-300 bg-base-200 text-base-content/80 shadow-xs transition-colors hover:bg-base-300" title="Siguiente parrafo" aria-label="Siguiente parrafo">
+          <SkipForward class="h-4 w-4" />
+        </button>
+      </div>
+      <label class="contents text-xs font-medium text-base-content/80 sm:inline-flex sm:items-center sm:gap-1.5">
+        <span>Voz</span>
+        <select id="tts-voice" class="w-full min-w-0 rounded-lg border border-base-300/70 bg-base-100 px-2 py-1.5 text-xs text-base-content/80 focus:outline-none focus:ring-1 focus:ring-primary sm:max-w-[16rem]"></select>
       </label>
-      <label class="inline-flex items-center gap-1.5 text-xs font-medium text-base-content/60">
-        Velocidad
-        <select id="tts-rate" aria-label="Velocidad de lectura" class="text-xs border border-base-300/70 rounded-lg bg-base-100 px-2 py-1.5 text-base-content/80 focus:outline-none focus:ring-1 focus:ring-primary">
+      <label class="contents text-xs font-medium text-base-content/80 sm:inline-flex sm:items-center sm:gap-1.5">
+        <span>Velocidad</span>
+        <select id="tts-rate" aria-label="Velocidad de lectura" class="w-full min-w-0 rounded-lg border border-base-300/70 bg-base-100 px-2 py-1.5 text-xs text-base-content/80 focus:outline-none focus:ring-1 focus:ring-primary sm:w-auto">
           <option value="0.9">0,9×</option>
           <option value="1" selected>1×</option>
           <option value="1.25">1,25×</option>
           <option value="1.5">1,5×</option>
         </select>
       </label>
-      <span id="tts-msg" class="text-[11px] text-base-content/40 font-medium" role="status"></span>
+      <span id="tts-msg" class="col-span-2 text-[11px] font-medium text-base-content/80 sm:col-auto" role="status"></span>
     </div>
 
     <section id="evento-body" class="prose prose-gray max-w-none mb-10 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)] leading-relaxed text-base-content">
@@ -283,7 +297,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       {(svg_backup?.archivo || svg_backup?.svg) && (
         <figure class="not-prose my-8 rounded-xl border border-base-300 bg-base-200/60 p-4 sm:p-6">
           <div class="mb-3 flex items-center gap-2">
-            <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-warning bg-warning/15 border border-warning/40 px-2.5 py-1 rounded-md">
+            <span class="inline-flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wider text-base-content bg-warning/15 border border-warning/40 px-2.5 py-1 rounded-md">
               <FileText class="h-3.5 w-3.5 shrink-0" />
               Respaldo ASCII de la imagen
             </span>
@@ -295,13 +309,13 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
               <div class="ascii-svg mx-auto" set:html={svg_backup.svg} />
             )}
           </div>
-          <figcaption class="mt-3 text-xs text-base-content/60 leading-relaxed">
+          <figcaption class="mt-3 text-xs text-base-content/80 leading-relaxed">
             Representación en arte ASCII de la imagen del evento, generada con una herramienta web externa
             {svg_backup.fuente ? (
               <> y guardada como respaldo verificable visualmente. Fuente de la imagen:{' '}
-                <a href={svg_backup.fuente} target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-medium text-primary hover:text-primary hover:underline">
+                <a href={svg_backup.fuente} target="_blank" rel="noopener" class="inline-flex items-center gap-1 font-medium text-base-content hover:text-base-content hover:underline">
                   <span class="break-all">{svg_backup.fuente}</span>
-                  <ExternalLink class="h-3 w-3 shrink-0 text-primary" />
+                  <ExternalLink class="h-3 w-3 shrink-0 text-base-content" />
                 </a>
               </>
             ) : (
@@ -313,7 +327,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 
       <div class="mt-10 pt-5 border-t border-base-300/70 flex flex-wrap items-center gap-2.5 not-prose">
         <ShareButtons url={eventUrl} title={titulo} />
-        <div class="inline-flex min-h-9 items-stretch overflow-hidden rounded-lg border border-primary/20 bg-primary/10 text-primary shadow-xs" role="group" aria-label="Acciones de Markdown">
+        <div class="inline-flex min-h-9 items-stretch overflow-hidden rounded-lg border border-primary/20 bg-primary/10 text-base-content shadow-xs" role="group" aria-label="Acciones de Markdown">
           <button
             id="btn-view-md"
             type="button"
@@ -342,12 +356,12 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
         </div>
         <!-- Consultas IA: el prefill incluye contexto; el botón conserva la versión completa. -->
         <div class="flex w-full flex-col gap-2 rounded-xl border border-success/30 bg-success/10 p-2 sm:w-auto sm:flex-row sm:items-center" role="group" aria-label="Consultar este evento con una IA usando el contexto de Gobierno Vault">
-          <span class="inline-flex shrink-0 flex-col gap-0.5 px-1 text-xs font-semibold text-success sm:border-r sm:border-success/25 sm:pr-3">
+          <span class="inline-flex shrink-0 flex-col gap-0.5 px-1 text-xs font-semibold text-base-content sm:border-r sm:border-success/25 sm:pr-3">
             <span class="inline-flex items-center gap-1.5">
               <Bot class="h-4 w-4 shrink-0" />
               <span>Consultar con IA</span>
             </span>
-            <span class="text-[10px] font-medium text-base-content/65">Contexto: Gobierno Vault</span>
+            <span class="text-[10px] font-medium text-base-content/80">Contexto: Gobierno Vault</span>
           </span>
           <div class="flex flex-wrap items-center gap-1.5">
             {aiTargets.map((target) => (
@@ -363,10 +377,10 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
               >
                 <span>{target.label}</span>
                 {target.noLogin && (
-                  <span class="rounded-full bg-base-200 px-1.5 py-0.5 text-[10px] font-medium text-base-content/60">sin cuenta</span>
+                  <span class="rounded-full bg-base-200 px-1.5 py-0.5 text-[10px] font-medium text-base-content/80">sin cuenta</span>
                 )}
                 {target.accountRequired && (
-                  <span class="rounded-full bg-base-200 px-1.5 py-0.5 text-[10px] font-medium text-base-content/60">requiere cuenta</span>
+                  <span class="rounded-full bg-base-200 px-1.5 py-0.5 text-[10px] font-medium text-base-content/80">requiere cuenta</span>
                 )}
               </a>
             ))}
@@ -390,7 +404,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
           </div>
         </div>
         <a href={reportUrl} target="_blank" rel="noopener"
-           class="inline-flex items-center gap-1.5 text-xs font-semibold text-error bg-error/10 hover:bg-error/15 border border-error/25 px-3 py-1.5 rounded-lg transition-colors"
+           class="inline-flex min-h-9 items-center gap-1.5 text-xs font-semibold text-base-content bg-error/10 hover:bg-error/15 border border-error/25 px-3 py-1.5 rounded-lg transition-colors"
            title="Reporta un error, propone una corrección o sugiere una fuente adicional para este evento vía GitHub">
           <Bug class="h-4 w-4 shrink-0" />
           <span>Reportar o sugerir</span>
@@ -398,7 +412,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       </div>
     </section>
 
-    <div id="event-export-data" class="hidden" data-md={exportMd} data-prompt={chatPrompt} data-ai-prefill={chatPrefill} aria-hidden="true"></div>
+    <div id="event-export-data" class="hidden" data-md={exportMd} data-refs={refsMd} data-prompt={chatPrompt} data-ai-prefill={chatPrefill} aria-hidden="true"></div>
 
     {impacto && (impacto.colectivos?.length > 0 || impacto.sectores?.length > 0) && (
       <section class="mb-8 bg-warning/10 border border-warning/40 rounded-2xl p-6">
@@ -410,13 +424,13 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
           {impacto.colectivos?.length > 0 && (
             <div>
               <span class="font-semibold text-base-content">Colectivos afectados: </span>
-              <span class="text-base-content/70">{impacto.colectivos.join(', ')}</span>
+              <span class="text-base-content/80">{impacto.colectivos.join(', ')}</span>
             </div>
           )}
           {impacto.sectores?.length > 0 && (
             <div>
               <span class="font-semibold text-base-content">Sectores involucrados: </span>
-              <span class="text-base-content/70">{impacto.sectores.join(', ')}</span>
+              <span class="text-base-content/80">{impacto.sectores.join(', ')}</span>
             </div>
           )}
         </div>
@@ -425,20 +439,20 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 
     <section id="entidades" data-toc-target="entidades" class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-20">
       <div class="flex items-center gap-2 mb-4">
-        <Tag class="h-5 w-5 text-primary shrink-0" />
+        <Tag class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-base font-bold text-base-content">Entidades y Etiquetas</h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 text-sm">
         <div>
-          <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
-            <Layers class="h-3.5 w-3.5 text-base-content/40" />
+          <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/80 mb-2">
+            <Layers class="h-3.5 w-3.5 text-base-content/80" />
             Temas
           </h3>
           <div class="flex gap-1.5 flex-wrap">
             {temaNombres.map((t) => (
               <a href={`/topics/${t.id}`} transition:name={`topic-title-${t.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
-                <Tag class="h-3 w-3 text-base-content/40" />
+                <Tag class="h-3 w-3 text-base-content/80" />
                 {t.nombre}
               </a>
             ))}
@@ -447,14 +461,14 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 
         {personaNombres.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
-              <User class="h-3.5 w-3.5 text-base-content/40" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/80 mb-2">
+              <User class="h-3.5 w-3.5 text-base-content/80" />
               Personas
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {personaNombres.map((p) => (
                 <a href={`/people/${p.id}`} transition:name={`person-title-${p.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
-                  <User class="h-3 w-3 text-base-content/40" />
+                  <User class="h-3 w-3 text-base-content/80" />
                   {p.nombre}
                 </a>
               ))}
@@ -464,14 +478,14 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 
         {orgNombres.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
-              <Building2 class="h-3.5 w-3.5 text-base-content/40" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/80 mb-2">
+              <Building2 class="h-3.5 w-3.5 text-base-content/80" />
               Organizaciones
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {orgNombres.map((o) => (
                 <a href={`/organization?id=${o.id}`} class="inline-flex items-center gap-1 text-xs bg-base-200 hover:bg-base-300 text-base-content/80 font-medium px-2.5 py-1 rounded-lg transition-colors">
-                  <Building2 class="h-3 w-3 text-base-content/40" />
+                  <Building2 class="h-3 w-3 text-base-content/80" />
                   {o.nombre}
                 </a>
               ))}
@@ -481,14 +495,14 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 
         {cifraConceptos.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
-              <TrendingUp class="h-3.5 w-3.5 text-primary" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/80 mb-2">
+              <TrendingUp class="h-3.5 w-3.5 text-base-content" />
               Cifras Destacadas
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {cifraConceptos.map((c) => (
-                <a href={`/stats/${c.concepto}`} class="inline-flex items-center gap-1 text-xs bg-primary/10 hover:bg-primary/15 text-primary font-medium px-2.5 py-1 rounded-lg transition-colors border border-primary/30/60">
-                  <TrendingUp class="h-3 w-3 text-primary" />
+                <a href={`/stats/${c.concepto}`} class="inline-flex items-center gap-1 text-xs bg-primary/10 hover:bg-primary/15 text-base-content font-medium px-2.5 py-1 rounded-lg transition-colors border border-primary/30/60">
+                  <TrendingUp class="h-3 w-3 text-base-content" />
                   {c.nombre}
                 </a>
               ))}
@@ -498,13 +512,13 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
 
         {etiquetas.length > 0 && (
           <div>
-            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/60 mb-2">
-              <Hash class="h-3.5 w-3.5 text-base-content/40" />
+            <h3 class="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-base-content/80 mb-2">
+              <Hash class="h-3.5 w-3.5 text-base-content/80" />
               Etiquetas libres
             </h3>
             <div class="flex gap-1.5 flex-wrap">
               {etiquetas.map((e) => (
-                <span class="inline-flex items-center text-xs bg-base-200/70 text-base-content/70 px-2 py-0.5 rounded-md font-mono">
+                <span class="inline-flex items-center text-xs bg-base-200/70 text-base-content/80 px-2 py-0.5 rounded-md font-mono">
                   #{e}
                 </span>
               ))}
@@ -530,7 +544,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     {hasConnections && (
       <div id="conexiones" data-toc-target="conexiones" class="scroll-mt-20">
         <EventConnections connections={connections} topicsMap={topicsMap}>
-          <EgoGraph event={event} connections={connections} slot="graph" />
+          <EgoGraph event={event} connections={connections} connectionIndex={connectionIndex} slot="graph" />
         </EventConnections>
       </div>
     )}
@@ -538,26 +552,42 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
     {refs.length > 0 && (
       <section id="referencias" data-toc-target="referencias" class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)] scroll-mt-20">
         <div class="flex items-center gap-2 mb-4">
-          <BookOpen class="h-5 w-5 text-primary shrink-0" />
+          <BookOpen class="h-5 w-5 text-base-content shrink-0" />
           <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({refs.length})</h2>
+          <button
+            id="btn-copy-refs"
+            type="button"
+            class="ml-auto inline-flex size-8 shrink-0 items-center justify-center rounded-lg border border-base-300/70 bg-base-200/60 text-base-content transition-[color,background-color,scale] duration-150 hover:bg-base-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base-content active:scale-[0.96]"
+            aria-label="Copiar referencias en Markdown"
+            title="Copiar todas las fuentes y enlaces en formato Markdown"
+            data-copy-success-message="Referencias copiadas al portapapeles."
+            data-copy-error-message="No se pudieron copiar las referencias."
+          >
+            <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
+              <span class="copy-icon" data-icon="idle"><Copy class="h-3.5 w-3.5 shrink-0" /></span>
+              <span class="copy-icon" data-icon="copied"><Check class="h-3.5 w-3.5 shrink-0" /></span>
+              <span class="copy-icon" data-icon="error"><TriangleAlert class="h-3.5 w-3.5 shrink-0" /></span>
+            </span>
+          </button>
+          <span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
         </div>
         <ol class="space-y-3 text-sm">
           {refs.map((ref, i) => (
             <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-base-content/80 scroll-mt-20 p-2.5 rounded-lg hover:bg-base-200 transition-colors border border-transparent hover:border-base-300/60">
-              <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-primary font-mono text-xs shrink-0 font-semibold mt-0.5">
+              <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-base-content font-mono text-xs shrink-0 font-semibold mt-0.5">
                 {i + 1}
               </span>
               <div class="min-w-0 flex-1">
                 {ref.url ? (
-                  <a href={ref.url} class="inline-flex items-center gap-1 font-semibold text-primary hover:text-primary hover:underline" target="_blank" rel="noopener">
+                  <a href={ref.url} class="inline-flex items-center gap-1 font-semibold text-base-content hover:text-base-content hover:underline" target="_blank" rel="noopener">
                     <span>{ref.titulo}</span>
-                    <ExternalLink class="h-3.5 w-3.5 shrink-0 text-primary" />
+                    <ExternalLink class="h-3.5 w-3.5 shrink-0 text-base-content" />
                   </a>
                 ) : (
                   <span class="font-semibold text-base-content">{ref.titulo}</span>
                 )}
                 <SourceMirrors url={ref.url} sourceId={entities.fuentesAll[i]} />
-                <p class="text-xs text-base-content/60 mt-0.5">
+                <p class="text-xs text-base-content/80 mt-0.5">
                   Medio: <span class="font-medium text-base-content/80">{ref.medio}</span> {ref.autor ? `· Autor: ${ref.autor}` : ''}
                 </p>
                 {ref.url && <VideoEmbed url={ref.url} label={ref.titulo} />}
@@ -568,8 +598,8 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       </section>
     )}
 
-    <footer class="flex items-center gap-2 text-xs text-base-content/40 border-t border-base-300/60 pt-4">
-      <Clock class="h-3.5 w-3.5 text-base-content/40" />
+    <footer class="flex items-center gap-2 text-xs text-base-content/80 border-t border-base-300/60 pt-4">
+      <Clock class="h-3.5 w-3.5 text-base-content/80" />
       <span>Creado: {creado.toLocaleDateString('es-ES')} · Actualizado: {actualizado.toLocaleDateString('es-ES')}</span>
     </footer>
     </div>
@@ -580,8 +610,8 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
           <ListTree class="h-3.5 w-3.5 shrink-0" />
           En esta página
         </span>
-        <ChevronUp class="gv-chevron-up h-4 w-4 shrink-0 text-base-content/60" />
-        <ChevronDown class="gv-chevron-down hidden h-4 w-4 shrink-0 text-base-content/60" />
+        <ChevronUp class="gv-chevron-up h-4 w-4 shrink-0 text-base-content/80" />
+        <ChevronDown class="gv-chevron-down hidden h-4 w-4 shrink-0 text-base-content/80" />
       </summary>
       <nav id="gv-event-toc-list-mobile" class="gv-event-toc-list" aria-label="Secciones del evento"></nav>
     </details>
@@ -640,6 +670,24 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
         return;
       }
       void navigator.clipboard.writeText(markdown).then(() => {
+        play('success');
+        gvSetCopyFeedback(btn, 'copied');
+      }).catch(() => {
+        gvSetCopyFeedback(btn, 'error');
+      });
+      return;
+    }
+    // "Copiar referencias" saca solo el bloque de fuentes, con el MISMO formato
+    // que llevan dentro del markdown completo del evento (buildReferencesMarkdown).
+    if (target.closest('#btn-copy-refs')) {
+      const btn = target.closest<HTMLButtonElement>('#btn-copy-refs');
+      const refsMarkdown = exportEl?.getAttribute('data-refs') ?? '';
+      if (!btn) return;
+      if (!navigator.clipboard || !refsMarkdown) {
+        gvSetCopyFeedback(btn, 'error');
+        return;
+      }
+      void navigator.clipboard.writeText(refsMarkdown).then(() => {
         play('success');
         gvSetCopyFeedback(btn, 'copied');
       }).catch(() => {

@@ -1561,10 +1561,11 @@
 - [2026/08/20260831-5 - Kast defiende en Cooperativa su asistencia al Foro Madrid ('¿Por qué no puedo ir?') en medio de críticas del oficialismo y la oposición](src/content/events/2026/08/20260831-5.md) — 10 fuentes
 - [2026/08/20260831-6 - La Tercera revela los financistas de Porcel TV: Golborne, exministro de Pinochet y exasesor de Kaiser entre los nuevos socios](src/content/events/2026/08/20260831-6.md) — 5 fuentes
 - [2026/08/20260831-7 - IPI cae 5,1% en julio por minería y manufacturas y analistas piden al Gobierno aterrizar la meta de crecimiento de 4%](src/content/events/2026/08/20260831-7.md) — 15 fuentes
-- [2026/08/20260831-8 - Alcalde Agustín Iglesias responde a Axel Kaiser en X por migración: 'Tu único acercamiento al fenómeno es el delivery'](src/content/events/2026/08/20260831-8.md) — 5 fuentes
+- [2026/08/20260831-8 - Alcalde Agustín Iglesias responde a Axel Kaiser en X por migración: 'Tu único acercamiento al fenómeno es el delivery'](src/content/events/2026/08/20260831-8.md) — 6 fuentes
 - [2026/08/20260831-9 - Kast blinda en Cooperativa el nuevo estado de excepción ('no es renunciable') y baja la urgencia de la reforma de suma a simple](src/content/events/2026/08/20260831-9.md) — 6 fuentes
 - [2026/09/20260901-1 - Bancada PS presenta 'ley Cerimedo' para transparentar gasto electoral digital y detectar bots](src/content/events/2026/09/20260901-1.md) — 4 fuentes
 - [2026/09/20260901-10 - Hacienda confirma test de drogas positivo de exseremi Vergara pero reserva el informe completo](src/content/events/2026/09/20260901-10.md) — 7 fuentes
+- [2026/09/20260901-11 - El Senado suspende la votación de Sala Cuna Universal tras gritos desde las tribunas y cierra las galerías](src/content/events/2026/09/20260901-11.md) — 5 fuentes
 - [2026/09/20260901-2 - Diputado Bassa (FA) propone tipificar como delito el uso de redes de bots para manipular elecciones](src/content/events/2026/09/20260901-2.md) — 6 fuentes
 - [2026/09/20260901-3 - Gobierno pide la renuncia al seremi de Transportes de Arica Patricio Löhr por presiones a la DGAC en favor de su empresa](src/content/events/2026/09/20260901-3.md) — 5 fuentes
 - [2026/09/20260901-4 - Imacec de julio cae 1,5%, su mayor retroceso desde marzo de 2023, y reabre debate por el punto de inflexión de Quiroz](src/content/events/2026/09/20260901-4.md) — 56 fuentes
@@ -2022,8 +2023,8 @@
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 7 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
-- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 11 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 37 fuentes
+- [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 13 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 39 fuentes
 - [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 13 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 8 fuentes
@@ -2054,18 +2055,19 @@
 - [2026/11/20261102-5 - Landerretche: sin un "big push" de corto plazo no hay reformas posibles y Chile sigue atrapado en un crecimiento de 2%](src/content/events/2026/11/20261102-5.md) — 5 fuentes
 - [2026/11/20261104-1 - Fenatrac anuncia un paro de pymes tolveras en la Región Metropolitana y transportistas de Antofagasta marchan y entregan un petitorio al Gobierno](src/content/events/2026/11/20261104-1.md) — 6 fuentes
 - [2026/11/20261104-2 - Frutas de Chile cancela su participación en el lanzamiento de la temporada de cerezas y advierte que el bloqueo en San Antonio pone en riesgo las exportaciones](src/content/events/2026/11/20261104-2.md) — 5 fuentes
-- [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 10 fuentes
+- [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 11 fuentes
 - [2026/11/20261105-1 - Bill Gates recorre Chuquicamata en una visita privada y pide a Codelco mantenerla bajo 'estricta reserva'](src/content/events/2026/11/20261105-1.md) — 5 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 - [2026/11/20261106-2 - Chile y Bélgica unen candidaturas para la secretaría del Tratado de Alta Mar en Valparaíso y China cuestiona el acuerdo](src/content/events/2026/11/20261106-2.md) — 8 fuentes
 - [2026/11/20261107-1 - Gobierno decreta dos días de duelo oficial por la muerte de Sebastián Lelio y el cine chileno lo despide](src/content/events/2026/11/20261107-1.md) — 7 fuentes
+- [2026/11/20261108-1 - Criteria: Kast baja a 24% de aprobación y 67% lo desaprueba, con 74% que descarta que sea el líder que Chile necesita](src/content/events/2026/11/20261108-1.md) — 6 fuentes
 - [2026/11/20261109-1 - Kast limita a $40 el alza del 12 de noviembre y anuncia un proyecto para topar las alzas en $20 por 90 días; los camioneros rechazan la propuesta y convocan un paro nacional](src/content/events/2026/11/20261109-1.md) — 22 fuentes
 - [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
 - [2026/11/20261110-2 - Steinert es nombrada agregada de seguridad en Paraguay y reabre el debate por los 'premios de consuelo' que Kast criticó](src/content/events/2026/11/20261110-2.md) — 9 fuentes
 - [2026/11/20261111-1 - Tercer día del paro nacional: el Gobierno retira el proyecto de tope a las alzas y los camioneros vuelven a La Moneda](src/content/events/2026/11/20261111-1.md) — 17 fuentes
 - [2026/11/20261111-2 - El Gobierno revierte el alza de combustibles y congela los precios hasta febrero de 2027; los gremios mantienen el paro](src/content/events/2026/11/20261111-2.md) — 12 fuentes
-- [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 7 fuentes
+- [2026/11/20261111-3 - La Confech se concentra frente al Mineduc por el Presupuesto 2027 y la Cámara rechaza la partida de Educación 72-72](src/content/events/2026/11/20261111-3.md) — 8 fuentes
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 9 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
 - [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 12 fuentes

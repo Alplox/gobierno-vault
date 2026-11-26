@@ -21,10 +21,10 @@ const lazyData = lazyPeople.map((p) => ({
 <Base title="Personas">
   <div class="mb-8">
     <div class="flex items-center gap-2 mb-1">
-      <Users class="h-6 w-6 text-primary shrink-0" />
+      <Users class="h-6 w-6 text-base-content shrink-0" />
       <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Personas</h1>
     </div>
-    <p class="text-base-content/60 text-sm">Figuras públicas, autoridades y actores mencionados en acontecimientos registrados.</p>
+    <p class="text-base-content/80 text-sm">Figuras públicas, autoridades y actores mencionados en acontecimientos registrados.</p>
   </div>
 
   <div id="people-index-root" class="grid gap-4 sm:grid-cols-2">
@@ -32,22 +32,22 @@ const lazyData = lazyPeople.map((p) => ({
         <a href={`/people/${person.id}`} class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out">
           <div class="flex items-start gap-4">
             <div class="h-16 w-12 rounded-lg bg-base-200 flex items-center justify-center shrink-0">
-              <Users class="h-5 w-5 text-base-content/40" />
+              <Users class="h-5 w-5 text-base-content/80" />
             </div>
             <div class="min-w-0 flex-1">
-              <h3 transition:name={`person-title-${person.id}`} class="font-bold text-base-content text-base group-hover:text-primary transition-colors leading-snug">{person.data.nombre}</h3>
+              <h3 transition:name={`person-title-${person.id}`} class="font-bold text-base-content text-base group-hover:text-base-content transition-colors leading-snug">{person.data.nombre}</h3>
               {person.data.cargo && (
-                <p class="flex items-center gap-1.5 text-xs text-base-content/70 font-medium mt-1">
+                <p class="flex items-center gap-1.5 text-xs text-base-content/80 font-medium mt-1">
                   <span>{person.data.cargo}</span>
                 </p>
               )}
               {person.data.organizacion && (
-                <p class="flex items-center gap-1.5 text-xs text-base-content/60 mt-0.5">
+                <p class="flex items-center gap-1.5 text-xs text-base-content/80 mt-0.5">
                   <span>{person.data.organizacion}</span>
                 </p>
               )}
             </div>
-            <span class="ml-auto text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1">›</span>
+            <span class="ml-auto text-base-content/30 group-hover:text-base-content group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1">›</span>
           </div>
         </a>
     ))}

@@ -37,7 +37,7 @@ const hayTemas = temas.length > 1;
   <div class="flex flex-wrap items-end gap-2">
     <div class="min-w-[13rem] flex-1">
       <label for="pv-event-search" class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
-        <Search class="h-3.5 w-3.5 text-base-content/40" />
+        <Search class="h-3.5 w-3.5 text-base-content/80" />
         Buscar en sus eventos
       </label>
       <div class="relative">
@@ -67,8 +67,8 @@ const hayTemas = temas.length > 1;
   {hayTipos && (
     <div>
       <span class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
-        <Layers class="h-3.5 w-3.5 text-base-content/40" />
-        Tipo <span class="font-normal text-base-content/50">(clic para combinar)</span>
+        <Layers class="h-3.5 w-3.5 text-base-content/80" />
+        Tipo <span class="font-normal text-base-content/80">(clic para combinar)</span>
       </span>
       <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filtrar eventos por tipo">
         {tipos.map((t) => (
@@ -77,7 +77,7 @@ const hayTemas = temas.length > 1;
             data-event-type={t.id}
             data-style-on={TIPO_STYLES[t.id] || ''}
             aria-pressed="false"
-            class={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset transition-colors ${TIPO_STYLES[t.id] || 'bg-base-200 text-base-content/70 ring-base-300'} bg-base-100 text-base-content/60 ring-base-300 hover:bg-base-200`}
+            class={`inline-flex items-center gap-1 rounded-md px-2 py-0.5 text-xs font-medium ring-1 ring-inset transition-colors ${TIPO_STYLES[t.id] || 'bg-base-200 text-base-content/80 ring-base-300'} bg-base-100 text-base-content/80 ring-base-300 hover:bg-base-200`}
           >
             {TIPO_LABELS[t.id] ?? t.id}
             <span class="tabular-nums opacity-60">{n(t.n)}</span>
@@ -91,7 +91,7 @@ const hayTemas = temas.length > 1;
   {hayTemas && (
     <div>
       <span class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
-        <Tag class="h-3.5 w-3.5 text-base-content/40" />
+        <Tag class="h-3.5 w-3.5 text-base-content/80" />
         Tema
       </span>
       <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filtrar eventos por tema">
@@ -108,7 +108,7 @@ const hayTemas = temas.length > 1;
             type="button"
             data-event-topic={t.id}
             aria-pressed="false"
-            class="rounded-md bg-base-200 px-2.5 py-1 text-xs font-medium text-base-content/70 transition-colors hover:bg-base-300"
+            class="rounded-md bg-base-200 px-2.5 py-1 text-xs font-medium text-base-content/80 transition-colors hover:bg-base-300"
           >
             {t.nombre} <span class="tabular-nums opacity-60">{n(t.n)}</span>
           </button>
@@ -121,7 +121,7 @@ const hayTemas = temas.length > 1;
   {hayAnios && (
     <div>
       <span class="mb-1.5 flex items-center gap-1.5 text-xs font-semibold text-base-content/80">
-        <Calendar class="h-3.5 w-3.5 text-base-content/40" />
+        <Calendar class="h-3.5 w-3.5 text-base-content/80" />
         Año
       </span>
       <div class="flex flex-wrap gap-1.5" role="group" aria-label="Filtrar eventos por año">
@@ -138,7 +138,7 @@ const hayTemas = temas.length > 1;
             type="button"
             data-event-year={g.year}
             aria-pressed="false"
-            class="rounded-md bg-base-200 px-2.5 py-1 text-xs font-medium text-base-content/70 transition-colors hover:bg-base-300"
+            class="rounded-md bg-base-200 px-2.5 py-1 text-xs font-medium text-base-content/80 transition-colors hover:bg-base-300"
           >
             {g.year} <span class="tabular-nums opacity-60">({n(g.events.length)})</span>
           </button>
@@ -147,13 +147,13 @@ const hayTemas = temas.length > 1;
     </div>
   )}
 
-  <p data-event-count data-total={panorama.total} class="text-xs text-base-content/60" role="status" aria-live="polite"></p>
+  <p data-event-count data-total={panorama.total} class="text-xs text-base-content/80" role="status" aria-live="polite"></p>
 
   <noscript>
-    <p class="text-xs text-base-content/60">
+    <p class="text-xs text-base-content/80">
       Los filtros y el desplazamiento infinito requieren JavaScript. Sin él se muestran los
       primeros {n(12)} eventos; el listado completo está en
-      <a href={`/events?persona=${slug}`} class="text-primary hover:underline">/events?persona={slug}</a>.
+      <a href={`/events?persona=${slug}`} class="text-base-content hover:underline">/events?persona={slug}</a>.
     </p>
   </noscript>
 </div>

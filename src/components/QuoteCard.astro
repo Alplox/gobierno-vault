@@ -80,14 +80,14 @@ const payload = {
 
 <div class="quote-card md:ml-5 border-l-2 border-primary/30 pl-4 pt-1 pb-2 min-w-0" data-quote-payload={JSON.stringify(payload)}>
   <div class="flex items-center justify-between mb-2">
-    <span class="text-[11px] font-semibold uppercase tracking-wide text-primary">
+    <span class="text-[11px] font-semibold uppercase tracking-wide text-base-content">
       Declaraciones ({quotes.length})
     </span>
     <div class="flex gap-1.5">
       <button
         type="button"
         data-copy="apa"
-        class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/70 bg-base-200 hover:bg-primary/15 hover:text-primary px-2 py-1 rounded-md transition-colors"
+        class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/80 bg-base-200 hover:bg-primary/15 hover:text-base-content px-2 py-1 rounded-md transition-colors"
         title="Copiar cita en formato APA"
       >
         <Copy class="h-3 w-3 shrink-0" />
@@ -96,7 +96,7 @@ const payload = {
       <button
         type="button"
         data-copy="md"
-        class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/70 bg-base-200 hover:bg-primary/15 hover:text-primary px-2 py-1 rounded-md transition-colors"
+        class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/80 bg-base-200 hover:bg-primary/15 hover:text-base-content px-2 py-1 rounded-md transition-colors"
         title="Copiar cita en formato markdown (wikilinks del vault)"
       >
         <Copy class="h-3 w-3 shrink-0" />
@@ -120,13 +120,13 @@ const payload = {
             href={s.url}
             target="_blank"
             rel="noopener"
-            class="inline-flex items-center gap-1 text-[10px] font-medium text-primary bg-primary/10 hover:bg-primary/15 px-2 py-0.5 rounded-md transition-colors max-w-full break-all"
+            class="inline-flex items-center gap-1 text-[10px] font-medium text-base-content bg-primary/10 hover:bg-primary/15 px-2 py-0.5 rounded-md transition-colors max-w-full break-all"
             title={s.titulo}
           >
             {s.id}
           </a>
         ) : (
-          <span class="text-[10px] font-medium text-base-content/60 bg-base-200 px-2 py-0.5 rounded-md max-w-full break-all">
+          <span class="text-[10px] font-medium text-base-content/80 bg-base-200 px-2 py-0.5 rounded-md max-w-full break-all">
             {s.id}
           </span>
         )

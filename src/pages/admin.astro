@@ -10,10 +10,10 @@ const data = getEditorData();
   <div class="flex flex-col gap-6">
     <header class="flex items-center justify-between bg-base-100 p-5 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2">
-        <Edit3 class="h-6 w-6 text-primary shrink-0" />
+        <Edit3 class="h-6 w-6 text-base-content shrink-0" />
         <h1 class="text-xl font-bold text-base-content">Editor de Eventos</h1>
       </div>
-      <span class="text-xs font-medium text-base-content/60 bg-base-200 px-3 py-1 rounded-full">Markdown interactivo</span>
+      <span class="text-xs font-medium text-base-content/80 bg-base-200 px-3 py-1 rounded-full">Markdown interactivo</span>
     </header>
 
     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -22,17 +22,17 @@ const data = getEditorData();
         <h2 class="font-semibold text-sm text-base-content/80 uppercase tracking-wide">Frontmatter</h2>
 
         <label class="flex flex-col gap-1">
-          <span class="text-xs font-medium text-base-content/70">Titulo *</span>
+          <span class="text-xs font-medium text-base-content/80">Titulo *</span>
           <input id="fm-titulo" type="text" required class="border rounded px-2 py-1.5 text-sm" placeholder="Titulo del evento" />
         </label>
 
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-base-content/70">Fecha *</span>
+            <span class="text-xs font-medium text-base-content/80">Fecha *</span>
             <input id="fm-fecha" type="datetime-local" required class="border rounded px-2 py-1.5 text-sm" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-base-content/70">Tipo *</span>
+            <span class="text-xs font-medium text-base-content/80">Tipo *</span>
             <select id="fm-tipo" required class="border rounded px-2 py-1.5 text-sm">
               <option value="">Seleccionar...</option>
               {data.eventTipos.map(t => <option value={t}>{t}</option>)}
@@ -41,60 +41,60 @@ const data = getEditorData();
         </div>
 
         <label class="flex flex-col gap-1">
-          <span class="text-xs font-medium text-base-content/70">Temas</span>
+          <span class="text-xs font-medium text-base-content/80">Temas</span>
           <select id="fm-tema" multiple class="border rounded px-2 py-1.5 text-sm h-24">
             {data.topics.map(t => <option value={t.id}>{t.nombre}</option>)}
           </select>
         </label>
 
         <label class="flex flex-col gap-1 relative">
-          <span class="text-xs font-medium text-base-content/70">Etiquetas</span>
+          <span class="text-xs font-medium text-base-content/80">Etiquetas</span>
           <input id="fm-etiquetas" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separadas por coma" autocomplete="off" />
           <div id="ac-etiquetas" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-base-100 border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
         </label>
 
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1 relative">
-            <span class="text-xs font-medium text-base-content/70">Colectivos</span>
+            <span class="text-xs font-medium text-base-content/80">Colectivos</span>
             <input id="fm-colectivos" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separados por coma" autocomplete="off" />
             <div id="ac-colectivos" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-base-100 border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
           </label>
           <label class="flex flex-col gap-1 relative">
-            <span class="text-xs font-medium text-base-content/70">Sectores</span>
+            <span class="text-xs font-medium text-base-content/80">Sectores</span>
             <input id="fm-sectores" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="Separados por coma" autocomplete="off" />
             <div id="ac-sectores" class="hidden absolute z-50 top-full left-0 right-0 mt-1 bg-base-100 border rounded shadow-lg max-h-40 overflow-y-auto text-sm"></div>
           </label>
         </div>
 
         <div id="fm-relaciones-container" class="flex flex-col gap-2">
-          <span class="text-xs font-medium text-base-content/70">Relaciones</span>
+          <span class="text-xs font-medium text-base-content/80">Relaciones</span>
           <div id="fm-relaciones-list" class="flex flex-col gap-2"></div>
-          <button id="add-relation" type="button" class="text-xs text-primary hover:underline self-start">+ Agregar relacion</button>
+          <button id="add-relation" type="button" class="text-xs text-base-content hover:underline self-start">+ Agregar relacion</button>
         </div>
 
         <div class="flex flex-col gap-2 border-t border-base-300 pt-3 mt-1">
-          <span class="text-xs font-medium text-base-content/70">Respaldo ASCII de imagen (svg_backup)</span>
+          <span class="text-xs font-medium text-base-content/80">Respaldo ASCII de imagen (svg_backup)</span>
           <label class="flex flex-col gap-1">
-            <span class="text-xs text-base-content/60">Fuente de la imagen original (URL)</span>
+            <span class="text-xs text-base-content/80">Fuente de la imagen original (URL)</span>
             <input id="fm-svg-fuente" type="url" class="border rounded px-2 py-1.5 text-sm" placeholder="https://.../imagen-original.png" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs text-base-content/60">Archivo .svg en public/img-to-ascii/ (recomendado — los SVGs reales pesan MBs)</span>
+            <span class="text-xs text-base-content/80">Archivo .svg en public/img-to-ascii/ (recomendado — los SVGs reales pesan MBs)</span>
             <input id="fm-svg-archivo" type="text" class="border rounded px-2 py-1.5 text-sm" placeholder="/img-to-ascii/20260809-8-zanja.svg" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs text-base-content/60">O SVG inline (solo artesanal pequeño ≤100K) — generado en la web y pegado tras CONFIRMAR visualmente que se ve correcto</span>
+            <span class="text-xs text-base-content/80">O SVG inline (solo artesanal pequeño ≤100K) — generado en la web y pegado tras CONFIRMAR visualmente que se ve correcto</span>
             <textarea id="fm-svg-backup" rows="4" class="border rounded px-2 py-1.5 text-sm font-mono resize-y" placeholder="<svg ...>...</svg>"></textarea>
           </label>
         </div>
 
         <div class="grid grid-cols-2 gap-3">
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-base-content/70">Creado</span>
+            <span class="text-xs font-medium text-base-content/80">Creado</span>
             <input id="fm-creado" type="date" class="border rounded px-2 py-1.5 text-sm" />
           </label>
           <label class="flex flex-col gap-1">
-            <span class="text-xs font-medium text-base-content/70">Actualizado</span>
+            <span class="text-xs font-medium text-base-content/80">Actualizado</span>
             <input id="fm-actualizado" type="date" class="border rounded px-2 py-1.5 text-sm" />
           </label>
         </div>
@@ -136,24 +136,24 @@ Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/1
 
         {/* Cifra builder */}
         <div id="cifra-builder" class="hidden bg-primary/10 border border-primary/30 rounded p-3 flex flex-col gap-2">
-          <span class="text-xs font-medium text-primary">Insertar Cifra</span>
+          <span class="text-xs font-medium text-base-content">Insertar Cifra</span>
           <div class="flex gap-2 items-end">
             <label class="flex flex-col gap-1 flex-1">
-              <span class="text-xs text-primary">Concepto</span>
+              <span class="text-xs text-base-content">Concepto</span>
               <select id="cifra-concept" class="border rounded px-2 py-1 text-sm">
                 {data.cifras.map(c => <option value={c.id}>{c.nombre}</option>)}
               </select>
             </label>
             <label class="flex flex-col gap-1 w-24">
-              <span class="text-xs text-primary">Valor</span>
+              <span class="text-xs text-base-content">Valor</span>
               <input id="cifra-value" type="text" class="border rounded px-2 py-1 text-sm" placeholder="5" />
             </label>
             <label class="flex flex-col gap-1 w-24">
-              <span class="text-xs text-primary">Unidad</span>
+              <span class="text-xs text-base-content">Unidad</span>
               <input id="cifra-unit" type="text" class="border rounded px-2 py-1 text-sm" placeholder="personas" />
             </label>
             <button id="cifra-insert" type="button" class="px-3 py-1 bg-primary text-primary-content text-sm rounded hover:bg-primary/90">Insertar</button>
-            <button id="cifra-cancel" type="button" class="px-3 py-1 text-sm text-base-content/60 hover:text-base-content/80">X</button>
+            <button id="cifra-cancel" type="button" class="px-3 py-1 text-sm text-base-content/80 hover:text-base-content/80">X</button>
           </div>
         </div>
       </section>
@@ -163,7 +163,7 @@ Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/1
     <section class="bg-base-100 rounded-lg border p-4">
       <div class="flex items-center justify-between mb-3">
         <h2 class="font-semibold text-sm text-base-content/80 uppercase tracking-wide">Vista Previa</h2>
-        <button id="toggle-preview" type="button" class="text-xs text-base-content/40 hover:text-base-content/70">ocultar</button>
+        <button id="toggle-preview" type="button" class="text-xs text-base-content/80 hover:text-base-content/80">ocultar</button>
       </div>
       <div id="preview-content" class="prose prose-sm max-w-none text-base-content/80"></div>
     </section>
@@ -178,7 +178,7 @@ Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/1
         </div>
       </div>
       <textarea id="output" readonly class="border rounded px-3 py-2 text-sm w-full h-48 font-mono bg-base-200 resize-y"></textarea>
-      <p id="output-filename" class="text-xs text-base-content/40 mt-2"></p>
+      <p id="output-filename" class="text-xs text-base-content/80 mt-2"></p>
     </section>
   </div>
 
@@ -373,7 +373,7 @@ Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/1
           <span class="text-base">${icons[item.type] || '•'}</span>
           <div class="flex flex-col">
             <span class="font-medium text-base-content">${item.label}</span>
-            <span class="text-xs text-base-content/40">${item.type}/${item.id}${item.desc ? ' — ' + item.desc : ''}</span>
+            <span class="text-xs text-base-content/80">${item.type}/${item.id}${item.desc ? ' — ' + item.desc : ''}</span>
           </div>
         </div>`;
       }).join('');
@@ -610,7 +610,7 @@ Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/1
         .replace(/^## (.+)$/gm, '<h2 class="text-lg font-bold mt-4 mb-2">$1</h2>')
         .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.+?)\*/g, '<em>$1</em>')
-        .replace(/^> (.+)$/gm, '<blockquote class="border-l-4 border-base-300 pl-3 italic text-base-content/70 my-2">$1</blockquote>')
+        .replace(/^> (.+)$/gm, '<blockquote class="border-l-4 border-base-300 pl-3 italic text-base-content/80 my-2">$1</blockquote>')
         .replace(/^- (.+)$/gm, '<li class="ml-4">$1</li>')
         .replace(/\[\[person\/([^\]]+)\]\]/g, (_, id) => {
           const p = people.find(x => x.id === id);
@@ -624,7 +624,7 @@ Segun el balance, hay [[cifras/fallecidos/5/personas]] y [[cifras/damnificados/1
           if (!sourceMap.has(id)) {
             sourceMap.set(id, ++sourceCounter);
           }
-          return `<sup class="text-primary font-mono text-[0.7rem]">[${sourceMap.get(id)}]</sup>`;
+          return `<sup class="text-base-content font-mono text-[0.7rem]">[${sourceMap.get(id)}]</sup>`;
         })
         .replace(/\[\[cifras\/([^\]]+)\/([^\]]+)\/([^\]]+)\]\]/g, (_, concept, val, unit) => {
           return `<span class="cifra-badge">${val}</span>`;

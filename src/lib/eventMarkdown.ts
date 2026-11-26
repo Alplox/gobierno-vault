@@ -24,8 +24,15 @@ export function buildReferenceLines(refs: SourceData[]): string {
     .join('\n');
 }
 
-export function buildEventMarkdown({ titulo, eventUrl, refs, bodyMd }: EventMarkdownInput): string {
+// Bloque de referencias tal como aparece en el markdown exportable. Lo usa el
+// boton "copiar referencias" de la ficha y el exportador completo: una sola
+// representacion canonica para no desfasar ambos formatos.
+export function buildReferencesMarkdown(refs: SourceData[]): string {
   const refLines = buildReferenceLines(refs);
+  return refLines ? `**Referencias:**\n${refLines}` : '';
+}
+
+export function buildEventMarkdown({ titulo, eventUrl, refs, bodyMd }: EventMarkdownInput): string {
   return [
     `# ${titulo}`,
     '',
@@ -34,6 +41,6 @@ export function buildEventMarkdown({ titulo, eventUrl, refs, bodyMd }: EventMark
     '---',
     '',
     `**Fuente (Gobierno Vault):** ${eventUrl}`,
-    refLines ? `**Referencias:**\n${refLines}` : '',
+    buildReferencesMarkdown(refs),
   ].join('\n');
 }

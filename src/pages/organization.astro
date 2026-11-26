@@ -5,14 +5,14 @@ import { ArrowLeft } from 'lucide-astro';
 
 <Base title="Organización">
   <div class="mb-6">
-    <a href="/organizations" class="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:text-primary bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
+    <a href="/organizations" class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content hover:text-base-content bg-primary/10 px-2.5 py-1 rounded-lg transition-colors">
       <ArrowLeft class="h-3.5 w-3.5" />
       <span>Volver a Organizaciones</span>
     </a>
   </div>
 
   <div id="org-detail" role="status" aria-live="polite">
-    <p class="text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-base-300 text-center">Cargando organización…</p>
+    <p class="text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-base-300 text-center">Cargando organización…</p>
   </div>
 </Base>
 
@@ -65,7 +65,7 @@ import { ArrowLeft } from 'lucide-astro';
       payload = await load();
     } catch {
       document.title = 'Organización no disponible — Gobierno Vault';
-      root.replaceChildren(el('p', 'text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-base-300 text-center', 'No se pudo cargar el registro de organizaciones. Intenta recargar la página.'));
+      root.replaceChildren(el('p', 'text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-base-300 text-center', 'No se pudo cargar el registro de organizaciones. Intenta recargar la página.'));
       return;
     }
 
@@ -77,8 +77,8 @@ import { ArrowLeft } from 'lucide-astro';
       document.title = 'Organización no encontrada — Gobierno Vault';
       const box = el('div', 'text-center bg-base-100 p-8 rounded-xl border border-base-300');
       box.appendChild(el('h1', 'text-xl font-bold mb-2', 'Organización no encontrada'));
-      box.appendChild(el('p', 'text-sm text-base-content/70 mb-4', id ? `No hay una organización registrada con el ID «${id}».` : 'No se indicó el ID de la organización.'));
-      const a = el('a', 'text-sm font-semibold text-primary hover:underline', 'Volver a Organizaciones');
+      box.appendChild(el('p', 'text-sm text-base-content/80 mb-4', id ? `No hay una organización registrada con el ID «${id}».` : 'No se indicó el ID de la organización.'));
+      const a = el('a', 'text-sm font-semibold text-base-content hover:underline', 'Volver a Organizaciones');
       a.href = '/organizations';
       box.appendChild(a);
       root.appendChild(box);
@@ -88,13 +88,13 @@ import { ArrowLeft } from 'lucide-astro';
     document.title = `${o.nombre} — Gobierno Vault`;
     const header = el('header', 'mb-8 bg-base-100 p-6 sm:p-8 rounded-2xl border-0 shadow-[var(--shadow-border)]');
     const flex = el('div', 'flex items-start gap-4');
-    const icon = el('div', 'h-12 w-12 rounded-full bg-primary/15 text-primary flex items-center justify-center shrink-0');
+    const icon = el('div', 'h-12 w-12 rounded-full bg-primary/15 text-base-content flex items-center justify-center shrink-0');
     icon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M16 10h.01M8 10h.01M12 14h.01M16 14h.01M8 14h.01"/></svg>';
     flex.appendChild(icon);
     const main = el('div', 'min-w-0 flex-1');
     main.appendChild(el('h1', 'text-2xl sm:text-3xl font-bold text-base-content leading-tight', o.nombre));
     if (o.tipo) main.appendChild(el('p', 'flex items-center gap-1.5 text-sm text-base-content/80 font-medium mt-1', o.tipo));
-    if (o.pais) main.appendChild(el('p', 'text-xs text-base-content/60 mt-1', `País: ${o.pais}`));
+    if (o.pais) main.appendChild(el('p', 'text-xs text-base-content/80 mt-1', `País: ${o.pais}`));
     flex.appendChild(main);
     header.appendChild(flex);
     root.appendChild(header);
@@ -114,14 +114,14 @@ import { ArrowLeft } from 'lucide-astro';
         li.appendChild(el('span', `mt-1.5 h-2.5 w-2.5 rounded-full shrink-0 ${a.actual ? 'bg-primary' : 'bg-base-300'}`));
         const div = el('div');
         const p = el('p', 'text-sm font-semibold text-base-content');
-        const link = el('a', 'hover:text-primary transition-colors', a.nombre);
+        const link = el('a', 'hover:text-base-content transition-colors', a.nombre);
         link.href = `/people/${a.personId}`;
         p.appendChild(link);
-        if (a.actual) p.appendChild(badge('En ejercicio', 'bg-primary/15 text-primary'));
+        if (a.actual) p.appendChild(badge('En ejercicio', 'bg-primary/15 text-base-content'));
         if (a.biministro) p.appendChild(badge('Biministro', 'bg-warning/20 text-warning'));
         if (a.subrogante) p.appendChild(badge('Subrogante', 'bg-warning/20 text-warning'));
         div.appendChild(p);
-        div.appendChild(el('p', 'text-xs text-base-content/60 mt-0.5', `${a.cargo} · ${a.periodo}`));
+        div.appendChild(el('p', 'text-xs text-base-content/80 mt-0.5', `${a.cargo} · ${a.periodo}`));
         li.appendChild(div);
         ul.appendChild(li);
       }
@@ -141,7 +141,7 @@ import { ArrowLeft } from 'lucide-astro';
       grid.appendChild(a);
     }
     if (related.length === 0) {
-      grid.appendChild(el('p', 'text-sm text-base-content/60 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', 'No hay eventos registrados para esta organización.'));
+      grid.appendChild(el('p', 'text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', 'No hay eventos registrados para esta organización.'));
     }
     section.appendChild(grid);
     root.appendChild(section);

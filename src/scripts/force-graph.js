@@ -607,7 +607,7 @@ function init() {
   if (tip) {
     nodes.forEach(n => {
       n._el.addEventListener('mouseenter', e => {
-        tip.innerHTML = `<div class="font-semibold text-base-content">${n.label}</div><div class="mt-0.5 text-[11px] text-base-content/60">${n.tipoLabel} · ${n.fecha}${n.connections > 0 ? ` · ${n.connections} vinculo(s)` : ''}</div>`;
+        tip.innerHTML = `<div class="font-semibold text-base-content">${n.label}</div><div class="mt-0.5 text-[11px] text-base-content/80">${n.tipoLabel} · ${n.fecha}${n.connections > 0 ? ` · ${n.connections} vinculo(s)` : ''}</div>`;
         tip.classList.remove('hidden');
         tip.style.left = e.clientX + 12 + 'px';
         tip.style.top = e.clientY - 10 + 'px';
@@ -656,7 +656,7 @@ function init() {
     if (box) {
       const token = Symbol();
       box.__gvLoad = token;
-      box.innerHTML = '<p class="text-xs text-base-content/50">Cargando evento…</p>';
+      box.innerHTML = '<p class="text-xs text-base-content/80">Cargando evento…</p>';
       fetch(n.url)
         .then((r) => r.text())
         .then((html) => {
@@ -681,7 +681,7 @@ function init() {
           if (refItems.length) {
             const refsWrap = document.createElement('div');
             refsWrap.className = 'mt-4 border-t border-base-300 pt-3';
-            refsWrap.innerHTML = '<p class="text-[11px] font-bold uppercase tracking-wider text-base-content/60 mb-2">Referencias</p>';
+            refsWrap.innerHTML = '<p class="text-[11px] font-bold uppercase tracking-wider text-base-content/80 mb-2">Referencias</p>';
             const ol = document.createElement('ol');
             ol.className = 'space-y-2';
             refItems.forEach((li) => {
@@ -731,7 +731,7 @@ function init() {
           <span class="shrink-0 font-semibold" style="color:${EDGE_COLORS[r.label] || '#78716c'}">${r.outgoing ? '→' : '←'} ${r.label}</span>
           <span class="truncate text-base-content/80">${r.neighbor.label}</span>
         </a>`).join('')
-      : '<p class="text-xs text-base-content/40">Sin conexiones explicitas.</p>';
+      : '<p class="text-xs text-base-content/80">Sin conexiones explicitas.</p>';
     dlg.querySelector('#graph-modal-open').setAttribute('href', n.url);
     dlg.showModal();
   }

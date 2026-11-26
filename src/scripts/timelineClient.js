@@ -14,7 +14,7 @@ const TIPO_STYLES = {
   proyecto: 'rel-chip [--chip-hue:#6366f1]', ley: 'rel-chip [--chip-hue:#3b82f6]',
   votacion: 'rel-chip [--chip-hue:#8b5cf6]', fallo_judicial: 'rel-chip [--chip-hue:#f43f5e]',
   entrevista: 'rel-chip [--chip-hue:#14b8a6]', publicacion: 'rel-chip [--chip-hue:#06b6d4]',
-  documento: 'bg-base-200 text-base-content/70 ring-base-300', investigacion: 'rel-chip [--chip-hue:#f97316]',
+  documento: 'bg-base-200 text-base-content/80 ring-base-300', investigacion: 'rel-chip [--chip-hue:#f97316]',
   reaccion: 'rel-chip [--chip-hue:#ec4899]', resultado: 'rel-chip [--chip-hue:#10b981]',
 };
 const RELATION_LABELS = {
@@ -31,31 +31,31 @@ function esc(s) {
 
 function eventRow(e) {
   const temas = (e.temas || [])
-    .map((t) => `<span class="inline-flex items-center gap-1 rounded-md bg-base-200 px-2 py-0.5 text-[11px] font-medium text-base-content/70"><span>${esc(t)}</span></span>`)
+    .map((t) => `<span class="inline-flex items-center gap-1 rounded-md bg-base-200 px-2 py-0.5 text-[11px] font-medium text-base-content/80"><span>${esc(t)}</span></span>`)
     .join('');
   const previews = (e.previews || [])
-    .map((p) => `<span class="inline-flex max-w-full items-center gap-1 rounded-md bg-base-200/80 px-2 py-0.5 text-[10px] font-medium text-base-content/70"><span class="shrink-0 font-semibold text-base-content/80">${esc(RELATION_LABELS[p.tipo] || p.tipo)}:</span><span class="truncate text-base-content/60">${esc(p.titulo)}</span></span>`)
+    .map((p) => `<span class="inline-flex max-w-full items-center gap-1 rounded-md bg-base-200/80 px-2 py-0.5 text-[10px] font-medium text-base-content/80"><span class="shrink-0 font-semibold text-base-content/80">${esc(RELATION_LABELS[p.tipo] || p.tipo)}:</span><span class="truncate text-base-content/80">${esc(p.titulo)}</span></span>`)
     .join('');
   const vinculo = e.links
-    ? `<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-primary ring-1 ring-inset ring-primary/30"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
+    ? `<span class="inline-flex items-center gap-1 rounded-full bg-primary/10 px-2 py-0.5 text-[10px] font-medium text-base-content ring-1 ring-inset ring-primary/30"><span>${e.links} ${e.links === 1 ? 'vinculo' : 'vinculos'}</span></span>`
     : '';
-  const hora = e.timeStr ? `<time class="inline-flex items-center gap-1 text-[11px] tabular-nums text-base-content/60"><span>${e.timeStr}</span></time>` : '';
+  const hora = e.timeStr ? `<time class="inline-flex items-center gap-1 text-[11px] tabular-nums text-base-content/80"><span>${e.timeStr}</span></time>` : '';
 
   return `<a href="/events/${e.year}/${e.id}" class="group flex gap-3 rounded-lg py-3 transition-colors hover:bg-base-200/80">
   <article class="min-w-0 flex-1">
     <div class="flex items-start justify-between gap-3">
       <div class="min-w-0 flex-1">
         <div class="mb-1.5 flex flex-wrap items-center gap-x-2 gap-y-1">
-          <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-base-200 text-base-content/70 ring-base-300'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
+          <span class="inline-flex items-center rounded-md px-2 py-0.5 text-[10px] font-semibold tracking-wide ring-1 ring-inset ${TIPO_STYLES[e.tipo] || 'bg-base-200 text-base-content/80 ring-base-300'}">${TIPO_LABELS[e.tipo] || e.tipo}</span>
           ${hora}
           ${vinculo}
         </div>
-        <h4 style="view-transition-name:event-title-${e.id}" class="text-sm font-semibold leading-snug text-base-content text-balance transition-colors group-hover:text-primary sm:text-[15px]">${esc(e.titulo)}</h4>
-        ${e.personas?.length ? `<p class="mt-1.5 flex items-center gap-1.5 truncate text-xs text-base-content/60"><span class="truncate">${esc(e.personas.join(', '))}</span></p>` : ''}
+        <h4 style="view-transition-name:event-title-${e.id}" class="text-sm font-semibold leading-snug text-base-content text-balance transition-colors group-hover:text-base-content sm:text-[15px]">${esc(e.titulo)}</h4>
+        ${e.personas?.length ? `<p class="mt-1.5 flex items-center gap-1.5 truncate text-xs text-base-content/80"><span class="truncate">${esc(e.personas.join(', '))}</span></p>` : ''}
         ${temas ? `<div class="mt-2 flex flex-wrap gap-1">${temas}</div>` : ''}
         ${previews ? `<div class="mt-2.5 flex flex-wrap gap-1.5">${previews}</div>` : ''}
       </div>
-      <span class="mt-5 h-4 w-4 shrink-0 text-base-content/30 transition-[translate,color] duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-primary">›</span>
+      <span class="mt-5 h-4 w-4 shrink-0 text-base-content/30 transition-[translate,color] duration-200 ease-out group-hover:translate-x-0.5 group-hover:text-base-content">›</span>
     </div>
   </article>
 </a>`;
@@ -68,8 +68,8 @@ function dayGroup(e, day) {
   <summary class="relative flex cursor-pointer list-none items-center gap-2.5 py-2 pl-24 [&::-webkit-details-marker]:hidden">
     <span class="pointer-events-none absolute left-[15px] top-0 h-full w-20 border-b-2 border-l-2 border-base-300 rounded-bl-[10px]" aria-hidden="true"></span>
     <span class="text-sm font-semibold tabular-nums text-base-content">${day.day} ${MESES[Number(e.month) - 1]}</span>
-    <span class="text-[11px] font-medium uppercase tracking-wide text-base-content/40">${esc(day.weekday)}</span>
-    <span class="ml-auto text-[11px] text-base-content/40">${day.events.length} ${day.events.length === 1 ? 'evento' : 'eventos'}</span>
+    <span class="text-[11px] font-medium uppercase tracking-wide text-base-content/80">${esc(day.weekday)}</span>
+    <span class="ml-auto text-[11px] text-base-content/80">${day.events.length} ${day.events.length === 1 ? 'evento' : 'eventos'}</span>
   </summary>
   <div class="ml-24 space-y-0.5 border-l-2 border-base-300 pl-4">${rows}</div>
 </details>`;

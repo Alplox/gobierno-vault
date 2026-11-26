@@ -68,16 +68,16 @@ function quoteHTML(q) {
       })
     )}'>` +
     `<div class="flex items-center justify-between mb-2">` +
-    `<span class="text-[11px] font-semibold uppercase tracking-wide text-primary">${esc(q.fechaLarga)}</span>` +
+    `<span class="text-[11px] font-semibold uppercase tracking-wide text-base-content">${esc(q.fechaLarga)}</span>` +
     `<div class="flex gap-1.5">` +
-    `<button type="button" data-copy="apa" class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/70 bg-base-200 hover:bg-primary/15 hover:text-primary px-2 py-1 rounded-md transition-colors" title="Copiar cita en formato APA"><svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copy-label">APA</span></button>` +
-    `<button type="button" data-copy="md" class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/70 bg-base-200 hover:bg-primary/15 hover:text-primary px-2 py-1 rounded-md transition-colors" title="Copiar cita en formato markdown (wikilinks del vault)"><svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copy-label">MD</span></button>` +
+    `<button type="button" data-copy="apa" class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/80 bg-base-200 hover:bg-primary/15 hover:text-base-content px-2 py-1 rounded-md transition-colors" title="Copiar cita en formato APA"><svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copy-label">APA</span></button>` +
+    `<button type="button" data-copy="md" class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/80 bg-base-200 hover:bg-primary/15 hover:text-base-content px-2 py-1 rounded-md transition-colors" title="Copiar cita en formato markdown (wikilinks del vault)"><svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copy-label">MD</span></button>` +
     `</div></div>` +
     `<div class="flex flex-col gap-2"><blockquote class="text-sm text-base-content/80 leading-relaxed italic border-l-2 border-primary/20 pl-3">&ldquo;${quoteParrafos(
       q.texto
     )}&rdquo;</blockquote></div>` +
     `</div>` +
-    `<a href="${esc(q.href)}" class="mt-1.5 flex items-baseline gap-1.5 text-xs text-base-content/55 hover:text-primary transition-colors group" title="${esc(
+    `<a href="${esc(q.href)}" class="mt-1.5 flex items-baseline gap-1.5 text-xs text-base-content/80 hover:text-base-content transition-colors group" title="${esc(
       q.titulo
     )}">${ICON}<span class="min-w-0"><span class="tabular-nums text-base-content/45">${esc(
       q.fechaCorta
@@ -87,7 +87,7 @@ function quoteHTML(q) {
 }
 
 const ON = ['bg-primary', 'text-primary-content'];
-const OFF = ['bg-base-200', 'text-base-content/70'];
+const OFF = ['bg-base-200', 'text-base-content/80'];
 
 function markPressed(btn, on) {
   btn.setAttribute('aria-pressed', String(on));
@@ -95,7 +95,7 @@ function markPressed(btn, on) {
   btn.classList.toggle(...OFF, !on);
 }
 
-const CHIP_OFF = ['bg-base-100', 'text-base-content/60', 'ring-base-300', 'hover:bg-base-200'];
+const CHIP_OFF = ['bg-base-100', 'text-base-content/80', 'ring-base-300', 'hover:bg-base-200'];
 
 /** Los chips de tipo llevan su estilo "encendido" en data-style-on (como /events). */
 function markChip(btn, on) {
