@@ -486,6 +486,7 @@
 - [2026/01/20260105-1 - Tricel proclama a José Antonio Kast como Presidente Electo de Chile](src/content/events/2026/01/20260105-1.md) — 4 fuentes
 - [2026/01/20260106-1 - Contraloría ordena a la exalcaldesa de Viña del Mar Virginia Reginato restituir más de $1.122 millones por perjuicio financiero](src/content/events/2026/01/20260106-1.md) — 5 fuentes
 - [2026/01/20260106-2 - Emol confirma que Jorge Quiroz será el ministro de Hacienda de Kast: el economista cuestionado por su rol en las colusiones](src/content/events/2026/01/20260106-2.md) — 7 fuentes
+- [2026/01/20260106-3 - Contraloría detecta 164 contrataciones de personas inhabilitadas para trabajar con menores en 72 organismos públicos](src/content/events/2026/01/20260106-3.md) — 9 fuentes
 - [2026/01/20260107-1 - Kast viaja a Perú en su primera gira internacional como Presidente Electo](src/content/events/2026/01/20260107-1.md) — 4 fuentes
 - [2026/01/20260108-1 - Termina el juicio del caso Gatica: los argumentos finales de defensores y acusadores de Claudio Crespo](src/content/events/2026/01/20260108-1.md) — 1 fuente
 - [2026/01/20260109-1 - Gobierno inicia histórico pago de beneficios del Seguro Social a más de 1,3 millones de pensionados](src/content/events/2026/01/20260109-1.md) — 4 fuentes
@@ -2010,7 +2011,7 @@
 - [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 11 fuentes
 - [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 10 fuentes
 - [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 12 fuentes
-- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 11 fuentes
+- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 13 fuentes
 - [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
 - [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 6 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
@@ -2021,10 +2022,10 @@
 - [2026/10/20261028-14 - Corte Suprema remueve al juez Daniel Urrutia por viajes con licencia médica y cierra la purga con 18 magistrados](src/content/events/2026/10/20261028-14.md) — 6 fuentes
 - [2026/10/20261028-2 - Kaiser pide a Grok que diga qué sector político propuso despenalizar la pedofilia y la respuesta reabre la polémica por la edad de consentimiento](src/content/events/2026/10/20261028-2.md) — 8 fuentes
 - [2026/10/20261028-3 - Neme exige en pantalla la renuncia de Rabat: "Es insostenible su permanencia en el Gobierno"](src/content/events/2026/10/20261028-3.md) — 6 fuentes
-- [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 7 fuentes
+- [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 9 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 13 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 39 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 54 fuentes
 - [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 13 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 8 fuentes
@@ -2034,6 +2035,8 @@
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 10 fuentes
 - [2026/10/20261029-6 - Tres advertencias a Rabat entre febrero y mayo por el costo político de rebajar condenas y alertas que no llegaron a Kast](src/content/events/2026/10/20261029-6.md) — 8 fuentes
 - [2026/10/20261029-7 - Partido Republicano blinda a Rabat y Vicente Bruna relativiza la responsabilidad política: “no siempre se tiene que hacer valer”](src/content/events/2026/10/20261029-7.md) — 6 fuentes
+- [2026/10/20261029-8 - Tohá acusa que Rabat y el Gobierno convirtieron un problema en una catástrofe y pide enmendar](src/content/events/2026/10/20261029-8.md) — 5 fuentes
+- [2026/10/20261029-9 - Hoffmann revela que Kast llamó a parlamentarios oficialistas para agradecer discursos y llamarles la atención](src/content/events/2026/10/20261029-9.md) — 7 fuentes
 - [2026/10/20261030-1 - Kast acepta la renuncia de Julio Anativia a la Delegación Presidencial del Bío Bío y Juan Pablo Mellado asume como subrogante](src/content/events/2026/10/20261030-1.md) — 8 fuentes
 - [2026/10/20261030-2 - Kast remueve al subsecretario de Justicia Luis Silva por el video que publicó sin avisar y nombra a Josefina Soto](src/content/events/2026/10/20261030-2.md) — 24 fuentes
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
@@ -2053,6 +2056,7 @@
 - [2026/11/20261102-3 - Elizalde afirma que Rabat cometió infracciones legales y Gómez relata por qué rechazó decretos de rebaja en 2014](src/content/events/2026/11/20261102-3.md) — 7 fuentes
 - [2026/11/20261102-4 - Imacec de septiembre crece 0,2%: la minería cae 12,1% y el Gobierno habla de estabilización](src/content/events/2026/11/20261102-4.md) — 6 fuentes
 - [2026/11/20261102-5 - Landerretche: sin un "big push" de corto plazo no hay reformas posibles y Chile sigue atrapado en un crecimiento de 2%](src/content/events/2026/11/20261102-5.md) — 5 fuentes
+- [2026/11/20261103-1 - Kast asume la responsabilidad política por las rebajas desde Roma y desafía a la oposición a presentar la acusación](src/content/events/2026/11/20261103-1.md) — 8 fuentes
 - [2026/11/20261104-1 - Fenatrac anuncia un paro de pymes tolveras en la Región Metropolitana y transportistas de Antofagasta marchan y entregan un petitorio al Gobierno](src/content/events/2026/11/20261104-1.md) — 6 fuentes
 - [2026/11/20261104-2 - Frutas de Chile cancela su participación en el lanzamiento de la temporada de cerezas y advierte que el bloqueo en San Antonio pone en riesgo las exportaciones](src/content/events/2026/11/20261104-2.md) — 5 fuentes
 - [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 11 fuentes
