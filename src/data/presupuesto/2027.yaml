@@ -61,6 +61,12 @@ hitos:
   - etiqueta: Defensa presidencial de los ajustes del proyecto
     valor: Kast sostiene que cada peso recuperado irá a los sectores más necesitados y anuncia cruces de datos contra pagos irregulares
     fuente: 24horas-2026-10-06-kast-defiende-recortes-presupuesto
+  - etiqueta: Despacho de la Comisión Especial Mixta del Presupuesto 2027
+    valor: Proyecto despachado a la Cámara en la madrugada del 6-nov; Educación rechazada 2-11-11 y Ciencia sin reponer; SENAPRED, Patrimonio y residencias con capítulos rechazados
+    fuente: hacienda-2026-11-06-despacho-presupuesto-2027-camara
+    fuentes_secundarias:
+      - senado-2026-11-06-informe-comision-mixta-presupuesto-2027
+      - elmostrador-2026-11-06-comision-mixta-despacha-presupuesto
 variaciones:
   - alcance: Partida 09 frente a 2026
     variacion_texto: +3,9% nominal (+0,78% real con inflación proyectada de 3,1%)
@@ -653,6 +659,19 @@ movimientos:
     nivel_impacto: institucional
     organizacion_id: ministerio_educacion
     nota: De 217 propuestas de modificación solo 50 fueron declaradas admisibles y la Cámara aprobó 31 glosas de información; Quiroz prometió revisar la continuidad de Yo elijo mi PC en el Senado.
+  - tipo: aumento
+    descripcion: Acuerdo con gobernadores para fortalecer la inversión regional (reemplazo de la Partida 31)
+    fecha: '2026-11-04'
+    monto: 94897000000
+    monto_nota: +$94.897 millones respecto del proyecto en trámite; presupuesto regional en $1,82 billones
+    objetivo_declarado: Fortalecer la inversión regional y elevar el fondo de emergencias de 2% a 4%
+    evento_id: 20261106-3
+    fuente: hacienda-2026-11-04-acuerdo-gobernadores-inversion-regional
+    fuentes_secundarias:
+      - agorechi-2026-11-06-acuerdo-hacienda-gobernadores
+      - biobiochile-2026-11-04-quiroz-acuerdo-gobernadores
+    nivel_impacto: directo
+    nota: Aprobado por unanimidad en la instancia que revisó la Partida 31 y refrendado por la Comisión Especial Mixta
 orden_refs:
   - adnradio-2026-09-30-quiroz-presupuesto-2027-mepco-2900
   - latercera-2026-10-05-presupuesto-endeudamiento-us25000
@@ -734,3 +753,9 @@ orden_refs:
   - elmostrador-2026-11-12-camara-rechaza-educacion-interior
   - emol-2026-11-11-camara-rechaza-educacion-72-72
   - radio-uchile-2026-11-11-confech-marcha-mineduc
+  - hacienda-2026-11-06-despacho-presupuesto-2027-camara
+  - senado-2026-11-06-informe-comision-mixta-presupuesto-2027
+  - elmostrador-2026-11-06-comision-mixta-despacha-presupuesto
+  - hacienda-2026-11-04-acuerdo-gobernadores-inversion-regional
+  - agorechi-2026-11-06-acuerdo-hacienda-gobernadores
+  - biobiochile-2026-11-04-quiroz-acuerdo-gobernadores
