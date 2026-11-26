@@ -2025,7 +2025,7 @@
 - [2026/10/20261028-4 - Revelan la mayor rebaja firmada por Rabat: 36 meses menos para un hombre condenado por violar a su hija de 11 años](src/content/events/2026/10/20261028-4.md) — 9 fuentes
 - [2026/10/20261028-5 - Expareja del delegado del Bío Bío Julio Anativia denuncia violencia intrafamiliar y el Gobierno lo aparta de las actividades de Kast](src/content/events/2026/10/20261028-5.md) — 7 fuentes
 - [2026/10/20261028-6 - Bío Bío identifica otras rebajas firmadas por Rabat y Silva: un narco italiano, un neonazi homicida y un femicida frustrado](src/content/events/2026/10/20261028-6.md) — 13 fuentes
-- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 54 fuentes
+- [2026/10/20261028-7 - La Cámara aprueba pedir la renuncia de Rabat, Silva y Mira y la oposición anuncia una acusación constitucional](src/content/events/2026/10/20261028-7.md) — 57 fuentes
 - [2026/10/20261028-8 - 24 Horas revela que Silva pidió tramitar de forma reservada el amparo de Acuña Luengo y los informes favorables a dos exagentes de la CNI](src/content/events/2026/10/20261028-8.md) — 13 fuentes
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 8 fuentes
@@ -2123,6 +2123,8 @@
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
 - [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 19 fuentes
 - [2026/11/20261123-1 - La comisión revisora recibe 1.886 decretos de rebaja y Rabat envía a su defensa en lugar de comparecer](src/content/events/2026/11/20261123-1.md) — 12 fuentes
+- [2026/11/20261125-1 - Jiles y Parisi presentan licencias médicas antes de la votación de la AC contra Rabat y Fast Check verifica el precedente de 2024](src/content/events/2026/11/20261125-1.md) — 12 fuentes
+- [2026/11/20261125-2 - Reportea denuncia que Justicia declaró reservados los decretos de rebaja y entregó versiones anonimizadas al Congreso](src/content/events/2026/11/20261125-2.md) — 6 fuentes
 
 ## 2025
 
