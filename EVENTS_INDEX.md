@@ -525,7 +525,7 @@
 - [2026/01/20260126-2 - Corte Suprema ratifica condena al capitán de Carabineros Tomás Rodríguez por disparar al rostro de la actriz María Paz Grandjean](src/content/events/2026/01/20260126-2.md) — 6 fuentes
 - [2026/01/20260131-1 - Undurraga anuncia que suspenderá el Pase Cultural por uso fraudulento; Boric y el ministerio lo defienden](src/content/events/2026/01/20260131-1.md) — 8 fuentes
 - [2026/01/20260131-2 - Aluvión en Las Condes: el desborde de la Quebrada Honda anega viviendas en San Carlos de Apoquindo](src/content/events/2026/01/20260131-2.md) — 7 fuentes
-- [2026/01/20260131-3 - Quilicura se convierte en IA humana por un día para visibilizar el consumo de agua de los data centers](src/content/events/2026/01/20260131-3.md) — 8 fuentes
+- [2026/01/20260131-3 - Quilicura se convierte en IA humana por un día para visibilizar el consumo de agua de los data centers](src/content/events/2026/01/20260131-3.md) — 12 fuentes
 - [2026/02/20260204-1 - Kast envía comitiva de diputados evangélicos al Desayuno de Oración de Washington que encabeza Trump](src/content/events/2026/02/20260204-1.md) — 4 fuentes
 - [2026/02/20260206-1 - Health coach de Kast revela que conversaron instalar un gimnasio en La Moneda](src/content/events/2026/02/20260206-1.md) — 2 fuentes
 - [2026/02/20260206-2 - Los informes que advirtieron el aluvión de Las Condes: dos del montañista Carlos Valdivia Davidson y uno de Sernageomin, en poder del municipio y el GORE desde febrero](src/content/events/2026/02/20260206-2.md) — 5 fuentes
@@ -880,7 +880,7 @@
 - [2026/07/20260724-15 - Sistema frontal: bajan desaparecidos a 15 pero persisten 120 mil clientes sin agua; costos superan US$700 millones](src/content/events/2026/07/20260724-15.md) — 2 fuentes
 - [2026/07/20260724-16 - Kast reúne a líderes oficialistas para evaluar emergencia climática y avance de megarreforma](src/content/events/2026/07/20260724-16.md) — 3 fuentes
 - [2026/07/20260724-17 - Cancillería confirma plan de acción tras nuevos aranceles de EEUU](src/content/events/2026/07/20260724-17.md) — 1 fuente
-- [2026/07/20260724-18 - SEA emite primer pronunciamiento que exime a un data center de la evaluación ambiental: Data Center Alto Jahuel, en Buin](src/content/events/2026/07/20260724-18.md) — 7 fuentes
+- [2026/07/20260724-18 - SEA emite primer pronunciamiento que exime a un data center de la evaluación ambiental: Data Center Alto Jahuel, en Buin](src/content/events/2026/07/20260724-18.md) — 9 fuentes
 - [2026/07/20260724-2 - Gobierno habilita tránsito en Ruta 5 con horario restringido y escolta militar para abastecimiento](src/content/events/2026/07/20260724-2.md) — 1 fuente
 - [2026/07/20260724-3 - Presidenta de Fundación Libera aclara que objetivo no es que Chile sea sancionado por EEUU](src/content/events/2026/07/20260724-3.md) — 5 fuentes
 - [2026/07/20260724-4 - Servel denunciará al PDG ante la Fiscalía por gastos no acreditados](src/content/events/2026/07/20260724-4.md) — 8 fuentes
@@ -2039,7 +2039,7 @@
 - [2026/10/20261029-10 - Barría (DC) alerta que eventuales recortes al PAE dejarían cesantes a manipuladoras mientras se investiga el caso SOSER](src/content/events/2026/10/20261029-10.md) — 11 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
-- [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 50 fuentes
+- [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 52 fuentes
 - [2026/10/20261029-5 - ENAP anota utilidades de US$1.112 millones a septiembre, un alza de 119%, y arde la crítica al "impuesto encubierto" en los combustibles](src/content/events/2026/10/20261029-5.md) — 10 fuentes
 - [2026/10/20261029-6 - Tres advertencias a Rabat entre febrero y mayo por el costo político de rebajar condenas y alertas que no llegaron a Kast](src/content/events/2026/10/20261029-6.md) — 8 fuentes
 - [2026/10/20261029-7 - Partido Republicano blinda a Rabat y Vicente Bruna relativiza la responsabilidad política: “no siempre se tiene que hacer valer”](src/content/events/2026/10/20261029-7.md) — 6 fuentes
@@ -2066,13 +2066,17 @@
 - [2026/11/20261102-3 - Elizalde afirma que Rabat cometió infracciones legales y Gómez relata por qué rechazó decretos de rebaja en 2014](src/content/events/2026/11/20261102-3.md) — 7 fuentes
 - [2026/11/20261102-4 - Imacec de septiembre crece 0,2%: la minería cae 12,1% y el Gobierno habla de estabilización](src/content/events/2026/11/20261102-4.md) — 6 fuentes
 - [2026/11/20261102-5 - Landerretche: sin un "big push" de corto plazo no hay reformas posibles y Chile sigue atrapado en un crecimiento de 2%](src/content/events/2026/11/20261102-5.md) — 5 fuentes
+- [2026/11/20261102-6 - El Mercurio: Chile perdió 141 mil estudiantes entre 2020 y 2026 y la baja natalidad amenaza con cerrar colegios](src/content/events/2026/11/20261102-6.md) — 10 fuentes
 - [2026/11/20261103-1 - Kast asume la responsabilidad política por las rebajas desde Roma y desafía a la oposición a presentar la acusación](src/content/events/2026/11/20261103-1.md) — 8 fuentes
 - [2026/11/20261103-2 - Peritaje del IDIF halla 1.108 audios en el celular de Cerimedo y la Fiscalía boliviana crea una dirección de cibercrimen](src/content/events/2026/11/20261103-2.md) — 5 fuentes
+- [2026/11/20261103-3 - De Gregorio afirma que Chile está en recesión y que es la primera no causada por fenómenos internacionales](src/content/events/2026/11/20261103-3.md) — 12 fuentes
 - [2026/11/20261104-1 - Fenatrac anuncia un paro de pymes tolveras en la Región Metropolitana y transportistas de Antofagasta marchan y entregan un petitorio al Gobierno](src/content/events/2026/11/20261104-1.md) — 6 fuentes
 - [2026/11/20261104-2 - Frutas de Chile cancela su participación en el lanzamiento de la temporada de cerezas y advierte que el bloqueo en San Antonio pone en riesgo las exportaciones](src/content/events/2026/11/20261104-2.md) — 5 fuentes
 - [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 11 fuentes
+- [2026/11/20261104-4 - Minuta del Banco Central: los cinco consejeros evaluaron subir la TPM a 4,75% en octubre, pero primó mantenerla en 4,5%](src/content/events/2026/11/20261104-4.md) — 8 fuentes
 - [2026/11/20261105-1 - Bill Gates recorre Chuquicamata en una visita privada y pide a Codelco mantenerla bajo 'estricta reserva'](src/content/events/2026/11/20261105-1.md) — 5 fuentes
 - [2026/11/20261105-2 - Kast descarta un cambio de gabinete desde Madrid y lo reitera en Cerro Castillo y Vietnam](src/content/events/2026/11/20261105-2.md) — 17 fuentes
+- [2026/11/20261105-3 - Encuesta UCEN-Qualiz: 92,7% cree que políticos y autoridades entienden poco o nada sus problemas](src/content/events/2026/11/20261105-3.md) — 7 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 - [2026/11/20261106-2 - Chile y Bélgica unen candidaturas para la secretaría del Tratado de Alta Mar en Valparaíso y China cuestiona el acuerdo](src/content/events/2026/11/20261106-2.md) — 8 fuentes
 - [2026/11/20261106-3 - La Comisión Especial Mixta despacha el Presupuesto 2027 con Educación y Ciencia rechazadas](src/content/events/2026/11/20261106-3.md) — 14 fuentes
@@ -2080,7 +2084,7 @@
 - [2026/11/20261108-1 - Criteria: Kast baja a 24% de aprobación y 67% lo desaprueba, con 74% que descarta que sea el líder que Chile necesita](src/content/events/2026/11/20261108-1.md) — 8 fuentes
 - [2026/11/20261108-2 - Cadem: aprobación de Kast sube tres puntos a 29% y desaprobación baja a 68% en la edición 703](src/content/events/2026/11/20261108-2.md) — 9 fuentes
 - [2026/11/20261109-1 - Kast limita a $40 el alza del 12 de noviembre y anuncia un proyecto para topar las alzas en $20 por 90 días; los camioneros rechazan la propuesta y convocan un paro nacional](src/content/events/2026/11/20261109-1.md) — 22 fuentes
-- [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 8 fuentes
+- [2026/11/20261109-2 - Gobierno y Cámara crean la Mesa Permanente de Data Centers para acelerar inversiones y reducir trabas burocráticas](src/content/events/2026/11/20261109-2.md) — 11 fuentes
 - [2026/11/20261110-1 - Paro nacional de camioneros: cortes en la Ruta 5, la Ruta 68 y el puerto de Iquique, y una reunión con el Gobierno que termina sin acuerdo](src/content/events/2026/11/20261110-1.md) — 28 fuentes
 - [2026/11/20261110-2 - Steinert es nombrada agregada de seguridad en Paraguay y reabre el debate por los 'premios de consuelo' que Kast criticó](src/content/events/2026/11/20261110-2.md) — 9 fuentes
 - [2026/11/20261111-1 - Tercer día del paro nacional: el Gobierno retira el proyecto de tope a las alzas y los camioneros vuelven a La Moneda](src/content/events/2026/11/20261111-1.md) — 17 fuentes
