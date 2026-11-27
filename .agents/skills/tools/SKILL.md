@@ -13,7 +13,9 @@ description: Extracción de contenido web, mirrors anti-paywall, navegador real 
 - [Contenido web NO confiable](#contenido-web-no-confiable-higiene-anti-inyección) — anti-inyección
 - [APIs observadas](#apis-observadas-cuando-la-escalera-completa-falla-por-js) — DevTools XHR
 - [Archivado y recuperación](#archivado-y-recuperación-de-fuentes) — Wayback, Browsertrix, Auto Archiver
-- [Defuddle CLI local](#defuddle-cli-local-alternativa-al-espejo-web)
+- [Respaldos en servicios online](#respaldos-en-servicios-online-fuera-del-proyecto) — waymore + lychee; todo dato local queda en tmp/
+- [Motores de obtención de datos](#motores-de-obtención-de-datos) — FMHY rescatado: selector / Crawl4AI / Scrapling / FlareSolverr / Scoop / urlwatch
+- [Defuddle CLI local](#defuddle-cli-local-al-espejo-web)
 - [Búsqueda con ripgrep](#búsqueda-local-con-ripgrep-rg--catálogo-y-repo)
 - [PDFs](#procesamiento-de-pdfs-lectura-de-documentos) — `pdf-extract`
 - [Office](#procesamiento-de-documentos-de-office-word-excel-powerpoint) — `doc-extract`
@@ -303,6 +305,51 @@ conserva HTML, recursos, capturas y estado de renderizado que Wayback suele perd
   siempre la URL original.
 - La matriz de plataformas, URLs, campos y límites vive en
   `.agents/skills/social-media/references/retrieval.md`.
+
+### Respaldos en servicios online (fuera del proyecto)
+
+El vault guarda **solo eventos y metadatos de fuentes**: la URL original en
+`src/content/sources/*.md`, que es donde el usuario va a leer/ver la fuente.
+**"Fuera del proyecto" son servicios online independientes del vault** — Wayback
+Machine, archive.today, Internet Archive, Perma.cc —, no carpetas del home ni
+otros discos. Sus referencias se guardan en `respaldos[]` de la fuente con
+`pnpm run archive-sources -- --apply`.
+
+**Toda escritura local queda dentro de la raíz del repo y bajo `tmp/`**
+(gitignored, transitoria), nunca en `src/`. Los scripts rechazan rutas fuera de
+la raíz o fuera de `tmp/`. Las herramientas se instalan en el sistema y no son
+dependencias de `package.json`.
+
+| Script | Herramienta | Qué hace | Salida local (transitoria, bajo `tmp/`) |
+| --- | --- | --- | --- |
+| `pnpm run archived-urls -- <dominio> [--from YYYY] [--to YYYY] [--keywords <regex>] [--limit-requests N] [--dry-run]` | [waymore](https://github.com/xnl-h4ck3r/waymore) (`pipx install git+https://github.com/xnl-h4ck3r/waymore.git`) | Enumera URLs archivadas del dominio en Wayback + Common Crawl + URLScan + GhostArchive. Fuerza `-mode U`: **no descarga respuestas**. Útil para artículos borrados/renombrados y para puntos ciegos | `tmp/research/waymore/<dominio>/urls-YYYY-MM-DD.txt` (solo metadato) |
+| `pnpm run links-check -- [--since YYYY-MM-DD] [--limit N] [--medio <texto>] [--include-respaldos] [--dry-run]` | [lychee](https://lychee.cli.rs/) (`winget install --id lycheeverse.lychee`; `scoop`/`brew`/`cargo binstall`) | Chequea las `url:` originales de las fuentes — `validate.mjs` no lo hace. 403/429/timeout se clasifican como "revisar a mano" (WAF/rate-limit documentados), no como fuente muerta | `tmp/research/links-check/YYYY-MM-DD.json` |
+
+- `archived-urls` excluye VirusTotal e IntelligenceX por default (API key de pago/academia) y acepta `-lr` para no agotar las APIs; la lista de URLs es metadato, nunca el contenido de las fuentes.
+- `links-check` usa `--method head,get`, concurrencia 2 por host y pausa de 500 ms; la lista temporal va en `tmp/` (gitignored) y se borra al terminar. No modifica `src/content/sources/*.md` ni guarda cuerpo alguno.
+- Si la herramienta falta, el script imprime el comando de instalación y termina con error: no finge éxito. `--self-test` valida argumentos, parseo CRLF y que ninguna ruta salga de la raíz del repo / de `tmp/`; `--dry-run` muestra el comando exacto sin escribir nada.
+- FMHY (`fmhy.pages.dev/internet-tools#web-archiving-tools` y `#search-tools`) sirve como índice de descubrimiento, no como garantía de disponibilidad. Las herramientas de obtención de datos también se rescatan (sección siguiente); las que evaden paywalls duros o exigen login/cookies siguen siendo **manuales y bajo responsabilidad del usuario**, nunca parte de la cadena automática de citas.
+
+### Motores de obtención de datos
+
+`pnpm run research-fetch -- <URL> [--engine ...] [--save nombre] [--out dir] [--dry-run]`
+(expuesto en `scripts/extract/research-fetch.mjs`). No reemplaza a `fetch-content`:
+es para investigación. Por default imprime a stdout; `--save`/`--out` escriben en
+`tmp/research/` (transitorio, se borra con `--clean`). Nunca escribe en `src/` ni
+fuera de la raíz del repo. Para conservar algo de forma duradera, se usa un
+servicio online y se registra en `respaldos[]`, no un archivo local.
+
+| Motor | Instalación (fuera del repo) | Uso |
+| --- | --- | --- |
+| `selector` (default) | ninguna — API `web.scraper.workers.dev` | `--selector 'article p' [--attr title]`: texto de nodos CSS. Sin JS |
+| `crawl4ai` | `pip install -U crawl4ai && crawl4ai-setup` | `crwl <URL> -o markdown`: markdown limpio con navegador propio; útil en páginas JS |
+| `scrapling` | `pip install "scrapling[shell,fetchers]" && scrapling install` | `scrapling extract get <URL> <archivo> [--css-selector ...]`; con `--stealth` usa `fetch --solve-cloudflare` |
+| `flaresolverr` | servicio Docker en `http://localhost:8191` | `POST /v1 {"cmd":"request.get","url":...}`: resuelve challenges de Cloudflare. `--endpoint` cambia la URL |
+| `scoop` | `npm install -g @harvard-lil/scoop` (Node 22+) | Captura WARC/WACZ de una sola página. **Solo UNIX/WSL**; en Windows el script da el comando WSL y sugiere Browsertrix |
+
+- `--dry-run` muestra el comando/request exacto sin ejecutar; `--self-test` valida motores y fronteras sin red. Si falta el binario, imprime cómo instalarlo y no finge éxito.
+- `--clean` borra `tmp/research/` (solo esa carpeta). Los WACZ con cookies/tokens quedan en `tmp/` y **nunca se commitean**; revisar su contenido antes de compartirlos (regla de Browsertrix/Auto Archiver).
+- **urlwatch** (seguimiento de cambios, para IDs `S-YYYY-NNN`): `pip install --user urlwatch`; configuración y `urls.txt` dentro de `tmp/research/urlwatch/` (una URL por línea, ej. `https://www.camara.cl/legislacion/sala_sesiones/votaciones.aspx`): `urlwatch --urls tmp/research/urlwatch/urls.txt --config tmp/research/urlwatch/config.yaml`. Exportar el diff con `urlwatch --text > tmp/research/cambio.txt`; nada en `src/`.
 
 ## Defuddle CLI local (alternativa al espejo web)
 

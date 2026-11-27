@@ -50,6 +50,7 @@ for (const e of [...outgoing, ...incoming]) {
       relation: RELATION_LABELS[e.tipo] ?? e.tipo,
       relationTipo: e.tipo,
       fecha: shortDate(e.fecha),
+      ts: new Date(e.fecha).getTime(),
       url: `/events/${e.year}/${e.eventId}`,
       kind: e.direction === 'outgoing' ? 'outgoing' : 'incoming',
     });
@@ -66,6 +67,7 @@ for (const e of inferred.slice(0, 10)) {
       relation: 'Mismo contexto',
       relationTipo: 'mismo_contexto',
       fecha: shortDate(e.fecha),
+      ts: new Date(e.fecha).getTime(),
       url: `/events/${e.year}/${e.eventId}`,
       kind: 'inferred',
     });
@@ -80,6 +82,7 @@ const nodes = [
     tipoLabel: centerTipo,
     relation: 'Este evento',
     fecha: shortDate(new Date(event.data.fecha)),
+    ts: new Date(event.data.fecha).getTime(),
     url: '',
     kind: 'center',
   },
@@ -129,6 +132,7 @@ for (let round = 0; round < MAX_PER_PARENT; round++) {
       relation: RELATION_LABELS[e.tipo] ?? e.tipo,
       relationTipo: e.tipo,
       fecha: shortDate(e.fecha),
+      ts: new Date(e.fecha).getTime(),
       url: `/events/${e.year}/${e.eventId}`,
       kind: 'indirect',
       depth: 2,
@@ -160,20 +164,30 @@ const fallbackPoints = fallbackNodes.map((n: any, i: number) => {
 ---
 
 <div class="gv-ego-widget not-prose mb-8 overflow-hidden rounded-xl border-0 bg-base-100 shadow-[var(--shadow-border)]" data-gv-ego-widget>
-  <div class="gv-ego-header flex items-center justify-between gap-2 border-b border-base-300 px-3 py-2">
+  <div class="gv-ego-header flex flex-wrap items-center justify-between gap-2 border-b border-base-300 px-3 py-2">
     <span class="inline-flex items-center gap-1.5 text-xs font-semibold text-base-content">
       <GitFork class="h-3.5 w-3.5 shrink-0 text-base-content" />
       Grafo interactivo
       <span class="font-normal text-base-content/80">· {neighbors.size} directos{indirect.length > 0 ? ` · +${indirect.length} indirectos` : ''}</span>
     </span>
-    <span class="inline-flex items-center gap-1">
-      <button type="button" data-gv-ego-expand class="gv-ego-icon" title="Expandir grafo" aria-label="Expandir grafo">
-        <Maximize2 class="gv-ego-expand-in h-3.5 w-3.5" />
-        <Minimize2 class="gv-ego-expand-out h-3.5 w-3.5 hidden" />
-      </button>
-      <a href="/graph" class="gv-ego-icon" title="Ver grafo global" aria-label="Ver grafo global">
-        <GitFork class="h-3.5 w-3.5" />
-      </a>
+    <span class="inline-flex items-center gap-2">
+      <label for="gv-ego-layout" class="flex items-center gap-1 text-[10px] font-medium text-base-content/80">
+        Orden
+        <select id="gv-ego-layout" data-gv-ego-layout class="gv-ego-select rounded border border-base-300 bg-base-200 px-1.5 py-0.5 text-[11px] text-base-content">
+          <option value="libre">Libre</option>
+          <option value="fecha-h">Fecha →</option>
+          <option value="fecha-v">Fecha ↓</option>
+        </select>
+      </label>
+      <span class="inline-flex items-center gap-1">
+        <a href="/graph" class="gv-ego-icon" title="Ver grafo global" aria-label="Ver grafo global">
+          <GitFork class="h-3.5 w-3.5" />
+        </a>
+        <button type="button" data-gv-ego-expand class="gv-ego-icon" title="Expandir grafo" aria-label="Expandir grafo">
+          <Maximize2 class="gv-ego-expand-in h-3.5 w-3.5" />
+          <Minimize2 class="gv-ego-expand-out h-3.5 w-3.5 hidden" />
+        </button>
+      </span>
     </span>
   </div>
 
@@ -210,7 +224,7 @@ const fallbackPoints = fallbackNodes.map((n: any, i: number) => {
     <a data-gv-ego-card-open href="#" class="mt-1.5 inline-flex text-[11px] font-semibold text-base-content underline decoration-base-300 underline-offset-2 hover:decoration-base-content">Abrir evento →</a>
   </div>
   <div data-gv-ego-tip class="gv-ego-tip pointer-events-none fixed z-50 hidden max-w-[15rem] rounded-lg border border-base-300 bg-base-100 px-2.5 py-1.5 text-xs text-base-content/80 shadow-lg"></div>
-  <p class="border-t border-base-300 px-3 py-1.5 text-[10px] text-base-content/80">Arrastra nodos · scroll para acercar · toca un nodo para ver su título</p>
+  <p class="border-t border-base-300 px-3 py-1.5 text-[10px] text-base-content/80">Arrastra nodos · scroll para acercar · toca un nodo para ver su título. «Fecha» ordena por cronología.</p>
   <script type="application/json" data-gv-ego-data set:html={JSON.stringify({ nodes, links, indirect, indirectLinks, colors: EDGE_COLORS })} />
 </div>
 

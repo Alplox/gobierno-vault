@@ -38,6 +38,20 @@ function init() {
   const expandBtn = root.querySelector('[data-gv-ego-expand]');
   const card = root.querySelector('[data-gv-ego-card]');
   const moreBtn = root.querySelector('[data-gv-ego-more]');
+  const layoutEl = root.querySelector('[data-gv-ego-layout]');
+  const LAYOUTS = ['libre', 'fecha-h', 'fecha-v'];
+  const readLayout = () => {
+    const v = layoutEl?.value || 'libre';
+    return LAYOUTS.includes(v) ? v : 'libre';
+  };
+  let layout = 'libre';
+  try {
+    const saved = localStorage.getItem('gv-ego-layout');
+    if (LAYOUTS.includes(saved)) layout = saved;
+  } catch { /* almacenamiento bloqueado */ }
+  if (layoutEl) layoutEl.value = layout;
+  const isDate = () => layout !== 'libre';
+  const isH = () => layout === 'fecha-h';
   if (!stage || !dataEl) return;
 
   let data;
@@ -141,9 +155,21 @@ function init() {
       'pointer-events': 'none',
     });
     label.textContent = labelText;
-    a.append(bg, circle, label);
+    const date = el('text', {
+      y: n.r + 22,
+      'text-anchor': 'middle',
+      fill: 'var(--color-base-content)',
+      'fill-opacity': 0.55,
+      'font-size': 7,
+      'pointer-events': 'none',
+    });
+    date.textContent = n.fecha ?? '';
+    // Los indirectos se crean después del primer applyLayout: nacer ya visibles
+    // en modo fecha evita que falte su fecha al pulsar «cargar más».
+    date.style.display = isDate() ? '' : 'none';
+    a.append(bg, circle, label, date);
     gNodes.appendChild(a);
-    nodeEls.push({ n, a, circle });
+    nodeEls.push({ n, a, circle, date });
     wireNode(a, n);
   }
   for (const n of nodes) addNodeEl(n);
@@ -161,8 +187,64 @@ function init() {
     .alphaDecay(0.045);
 
   const centerNode = nodes.find((n) => n.kind === 'center') ?? nodes[0];
-  centerNode.fx = W / 2;
-  centerNode.fy = H / 2;
+
+  // Orden por fecha: eje ORDINAL (un puesto por evento), no escala lineal —
+  // así un año con muchos eventos no se apila en el mismo punto. fx/fy fijan
+  // la coordenada del tiempo y forceCollide reparte la otra dimensión.
+  function rerank() {
+    const ordered = nodes
+      .map((n, i) => ({ n, i, ts: Number.isFinite(n.ts) ? n.ts : Infinity }))
+      .sort((a, b) => a.ts - b.ts || a.i - b.i);
+    ordered.forEach((o, rank) => { o.n.__rank = rank; });
+  }
+  function axisPos(n) {
+    const pad = 22;
+    const span = (isH() ? W : H) - pad * 2;
+    return pad + (n.__rank / Math.max(1, nodes.length - 1)) * span;
+  }
+  function placeOnAxis(n, scatter) {
+    const at = axisPos(n);
+    if (isH()) {
+      if (scatter) n.y = H / 2 + (((n.__rank * 0.61803398875) % 1) - 0.5) * H * 0.5;
+      n.x = at; n.fx = at; n.fy = null;
+    } else {
+      if (scatter) n.x = W / 2 + (((n.__rank * 0.61803398875) % 1) - 0.5) * W * 0.5;
+      n.y = at; n.fy = at; n.fx = null;
+    }
+  }
+  function applyForces() {
+    if (isDate()) {
+      sim.force('link', null)
+        .force('charge', null)
+        .force('x', null)
+        .force('y', null)
+        .force('center', null)
+        .force('collide', forceCollide().radius((d) => d.r + 10).strength(1).iterations(2));
+    } else {
+      sim.force('link', linkForce)
+        .force('charge', forceManyBody().strength(-160))
+        .force('collide', forceCollide().radius((d) => d.r + 18))
+        .force('center', forceCenter(W / 2, H / 2))
+        .force('x', forceX(W / 2).strength(0.045))
+        .force('y', forceY(H / 2).strength(0.045));
+    }
+  }
+  function applyLayout({ scatter = true, resetView = true } = {}) {
+    if (isDate()) {
+      rerank();
+      nodes.forEach((n) => placeOnAxis(n, scatter || n.__fresh === true));
+    }
+    for (const n of nodes) delete n.__fresh;
+    applyForces();
+    if (!isDate()) {
+      for (const n of nodes) { n.fx = null; n.fy = null; }
+      centerNode.fx = W / 2;
+      centerNode.fy = H / 2;
+    }
+    for (const e of nodeEls) e.date.style.display = isDate() ? '' : 'none';
+    if (resetView) { tx = 0; ty = 0; scale = 1; applyTransform(); }
+    sim.alpha(0.9).restart();
+  }
 
   sim.on('tick', () => {
     for (const { l, line } of linkEls) {
@@ -185,11 +267,16 @@ function init() {
     W = stage.clientWidth || 320;
     H = stage.clientHeight || 300;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    centerNode.fx = W / 2;
-    centerNode.fy = H / 2;
-    sim.force('center', forceCenter(W / 2, H / 2))
-      .force('x', forceX(W / 2).strength(0.045))
-      .force('y', forceY(H / 2).strength(0.045));
+    if (isDate()) {
+      rerank();
+      nodes.forEach((n) => placeOnAxis(n, false));
+    } else {
+      centerNode.fx = W / 2;
+      centerNode.fy = H / 2;
+      sim.force('center', forceCenter(W / 2, H / 2))
+        .force('x', forceX(W / 2).strength(0.045))
+        .force('y', forceY(H / 2).strength(0.045));
+    }
     tx = 0; ty = 0; scale = 1;
     applyTransform();
     sim.alpha(0.5).restart();
@@ -223,6 +310,7 @@ function init() {
     if (!batch.length) return;
     const batchIds = new Set(batch.map((n) => n.id));
     for (const n of batch) {
+      n.__fresh = true;
       nodes.push(n);
       addNodeEl(n);
       if (!adjacency.has(n.parentId)) adjacency.set(n.parentId, new Set());
@@ -238,6 +326,13 @@ function init() {
     shownIndirect += batch.length;
     sim.nodes(nodes);
     linkForce.links(links);
+    if (isDate()) {
+      // En modo fecha el rango de TODOS los nodos cambia al agregar indirectos:
+      // reasigna el eje y dispersa solo los recién llegados en la otra dimensión.
+      rerank();
+      nodes.forEach((n) => placeOnAxis(n, false));
+      for (const n of nodes) delete n.__fresh;
+    }
     sim.alpha(0.65).restart();
     updateMoreButton();
     highlight();
@@ -245,6 +340,15 @@ function init() {
   moreBtn?.addEventListener('click', loadMore);
   offs.push(() => moreBtn?.removeEventListener('click', loadMore));
   updateMoreButton();
+
+  const onLayoutChange = () => {
+    layout = readLayout();
+    try { localStorage.setItem('gv-ego-layout', layout); } catch { /* noop */ }
+    applyLayout();
+  };
+  layoutEl?.addEventListener('change', onLayoutChange);
+  offs.push(() => layoutEl?.removeEventListener('change', onLayoutChange));
+  applyLayout();
 
   function showTip(n, x, y) {
     if (!tip) return;
@@ -319,16 +423,22 @@ function init() {
         window.removeEventListener('pointermove', move);
         window.removeEventListener('pointerup', up);
         sim.alphaTarget(0);
-        if (n.kind !== 'center') {
+        if (isDate()) {
+          // Al soltar, la coordenada del tiempo vuelve a su fecha exacta; la
+          // perpendicular queda libre para que collide siga separando ramas.
+          const at = axisPos(n);
+          if (isH()) { n.fx = at; n.fy = null; }
+          else { n.fy = at; n.fx = null; }
+        } else if (n.kind !== 'center') {
           n.fx = null; n.fy = null;
-          if (!moved && n.url) {
-            if (pinnedId === n.id) navigate(n.url);
-            else {
-              pinnedId = n.id;
-              showCard(n);
-              highlight();
-              hideTip();
-            }
+        }
+        if (!moved && n.url && n.kind !== 'center') {
+          if (pinnedId === n.id) navigate(n.url);
+          else {
+            pinnedId = n.id;
+            showCard(n);
+            highlight();
+            hideTip();
           }
         }
       };

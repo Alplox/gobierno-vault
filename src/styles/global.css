@@ -426,7 +426,8 @@
 .gv-ego-stage line.is-lit { stroke-width: 2.6; stroke-opacity: 0.95; }
 /* Nodos de segundo salto: un poco más tenues que los vecinos directos. */
 .gv-ego-stage a.is-extra circle { fill-opacity: 0.85; }
-.gv-ego-more:focus-visible { outline: 2px solid var(--color-base-content); outline-offset: 1px; }
+.gv-ego-more:focus-visible,
+.gv-ego-select:focus-visible { outline: 2px solid var(--color-base-content); outline-offset: 1px; }
 .gv-ego-card { position: relative; z-index: 5; }
 .gv-ego-card.is-open { display: block; }
 .gv-ego-tip strong { font-weight: 600; }
