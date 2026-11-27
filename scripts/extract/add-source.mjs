@@ -17,6 +17,8 @@
  *                   (título/fecha/medio) si la URL está indexada
  *   --no-archive    Omite el snapshot automático en Wayback (por defecto toda
  *                   fuente nueva se crea con un respaldo en `respaldos[]`)
+ *   --force-save    Intenta Save Page Now también en X/Instagram/YouTube, donde
+ *                   por defecto solo se consulta `available?url=`
  *   --search <texto>  Busca en el catálogo local de sitemaps (título/URL/fecha)
  *                   y deja elegir un artículo; con --fecha y --medio filtra más
  *   --fecha YYYY-MM-DD  Filtro de fecha para --search
@@ -693,7 +695,7 @@ async function main() {
   let respaldo = null;
   if (!flags.has('--no-archive')) {
     logInfo('Generando respaldo externo (Wayback)...');
-    const res = await archiveOne(url);
+    const res = await archiveOne(url, { forceSave: flags.has('--force-save') });
     if (res?.error) {
       logWarn(`No se pudo generar el snapshot: ${res.error}. La fuente se crea igual.`);
     } else {

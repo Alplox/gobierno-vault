@@ -254,7 +254,8 @@ registrada en particular: `--id <id>` (exacto, acepta `.md`, varios IDs separado
 flags `--id` repetibles, o el ID como argumento suelto); ignora fecha/límite y re-procesa aunque
 ya tenga respaldo. Flags: `--since`, `--all`, `--limit`, `--id`, `--medio`, `--include-backed-up`, `--delay` (default 4 s, ~15 req/min anónimo),
 `--self-test`, `--migrate-only` (mueve el marker legacy `Respaldo Wayback:` de `notas` a
-`respaldos[]`, sin red). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
+`respaldos[]`, sin red), `--force-save` (intenta Save Page Now también en las plataformas
+omitidas por defecto). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
 `--apply` tiene efectos de red y escritura: usarlo en tandas pequeñas.
 
 **`pnpm run archive-new -- --apply`** (= `archive-sources --new`) es el cierre obligatorio
@@ -268,10 +269,12 @@ la dejaría fuera (caso real: 9 fuentes del 16-nov-2025 quedaron sin `respaldos[
 motivo). Sigue respetando `--medio`, `--limit` (default 200 con `--new`) y el salto de fuentes
 ya respaldadas. `validate` emite un aviso —no error— con el comando exacto si detecta fuentes
 nuevas sin respaldo. En PowerShell, la lista de `--id` va entre comillas: sin ellas pnpm
-convierte las comas en array y el script selecciona 0 fuentes. Save Page Now devuelve HTTP 523
-sin URL canónica para posts públicos de X e Instagram (sin snapshot previo en
-`archive.org/wayback/available?url=`); verificar el contenido con FxTwitter/oEmbed/r.jina.ai,
-anotar el fallo en `notas` de la fuente y dejar el aviso de `validate`.
+convierte las comas en array y el script selecciona 0 fuentes. En X, Instagram y YouTube el
+script consulta solo `available?url=` y **omite Save Page Now** (HTTP 523 sin URL canónica en
+X/Instagram; `fetch failed` en YouTube), con línea `OMITIDA` y sin contarla como error;
+`--force-save` lo intenta igual. En esos casos verificar el contenido con
+FxTwitter/oEmbed/r.jina.ai, anotar la ausencia de respaldo en `notas` de la fuente y dejar el
+aviso de `validate`.
 
 **Casos por plataforma al archivar** (comportamiento vigente en `archive-sources.mjs`, cubierto por `--self-test`):
 
@@ -280,8 +283,9 @@ anotar el fallo en `notas` de la fuente y dejar el aviso de `validate`.
 | `old.reddit.com` | HTTP 200 pero captura `https://web.archive.org/web/<ts>/https://old.reddit.com/login`, sin el hilo | Prueba primero el equivalente `www.reddit.com` (misma ruta); rechaza snapshots que caigan en `/login` o que no contengan la ruta original. La `url:` citada se mantiene en `old.reddit.com`; solo cambia el `respaldos[].url` |
 | `www.reddit.com` | HTTP 200 con snapshot válido, pero la URL canónica lleva `?solution=…&js_challenge=1&jsc_token=…&jsc_orig_r=` | Conservar esos parámetros en `respaldos[].url`: al quitarlos, Wayback sirve solo el envoltorio «success/fail» sin el contenido del hilo |
 | Hilo borrado por moderadores | HTTP 200 con captura en `/comments/<id>/removed_by_moderator/` | El script la acepta porque conserva el ID del hilo; anotar en `respaldos[].notas` que el hilo fue eliminado |
-| X (`x.com`, `twitter.com`) | HTTP 523 sin URL canónica; `twitter.com` además falla de red desde esta red | No hay snapshot en `available`. No insistir: verificar texto y métricas con FxTwitter v2 u oEmbed oficial, anotar el fallo en `notas` y dejar el aviso de `validate` |
-| YouTube | `save` falla con `fetch failed` desde esta red | `available?url=` sí puede devolver un snapshot creado por otro crawler; el script lo reutiliza. Si no hay, verificar con oEmbed y anotar el fallo |
+| X (`x.com`, `twitter.com`) | HTTP 523 sin URL canónica; `twitter.com` además falla de red desde esta red | `available` se consulta, `save` se omite por defecto (`OMITIDA`). Verificar texto y métricas con FxTwitter v2 u oEmbed oficial, anotar la ausencia de respaldo en `notas` y dejar el aviso de `validate`. `--force-save` lo intenta |
+| Instagram (`instagram.com`) | HTTP 523 sin URL canónica en posts públicos | Igual que X: solo `available`, sin `save`. Leer el caption con r.jina.ai / `markdown.new` y anotar en `notas`. `--force-save` lo intenta |
+| YouTube | `save` falla con `fetch failed` desde esta red | `available?url=` sí puede devolver un snapshot creado por otro crawler; el script lo reutiliza. Si no hay, `OMITIDA` (sin `save`): verificar con oEmbed y anotar el fallo. `--force-save` lo intenta |
 
 Si ya se grabaron respaldos de `old.reddit.com/login`, borrar esa entrada antes de volver a correr
 `--id` (el dedupe es por `servicio` + `url` y dejaría ambas). La URL original de la fuente nunca se reemplaza.
@@ -535,9 +539,11 @@ en `src/content/sources/<id>.md`, junto con el ID `medio-YYYY-MM-DD-slug` y el w
   con add-source.mjs").
 - **Toda fuente nueva nace con snapshot**: `add-source` reutiliza `archiveOne()` de
   `archive-sources.mjs` ( disponibilidad de Wayback → Save Page Now ) e incluye la entrada en
-  `respaldos[]` del bloque generado y del `.md` creado con `--append`. Si Wayback falla, avisa
-  pero la fuente se crea igual; se completa con `pnpm run archive-sources -- --apply --since <fecha>`.
-  `--no-archive` omite el snapshot (casos excepcionales). No reemplaza nunca la URL original.
+  `respaldos[]` del bloque generado y del `.md` creado con `--append`. Aplica el mismo filtro
+  de plataformas omitidas que `archive-sources`; si Wayback falla o se omite, avisa pero la
+  fuente se crea igual; se completa con `pnpm run archive-sources -- --apply --since <fecha>`.
+  `--no-archive` omite el snapshot (casos excepcionales) y `--force-save` fuerza el intento en
+  X/Instagram/YouTube. No reemplaza nunca la URL original.
 - Flags: `--append` (crea `src/content/sources/<id>.md` directo), `--mirror` (fuerza
   espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
   el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra), `--no-archive`.

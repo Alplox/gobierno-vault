@@ -1540,6 +1540,7 @@
 - [2026/08/20260828-14 - Atentado incendiario en faena forestal entre Traiguén y Los Sauces: queman excavadora y dos camionetas y roban un tercer vehículo](src/content/events/2026/08/20260828-14.md) — 6 fuentes
 - [2026/08/20260828-15 - Eduardo Artés difunde un video hecho con inteligencia artificial en que combate a 'sionistas' en la Patagonia y defiende la tesis del Plan Andinia](src/content/events/2026/08/20260828-15.md) — 6 fuentes
 - [2026/08/20260828-16 - Kast encabeza en Cerro Castillo el 7° Consejo de Gabinete: seguridad, presupuesto y Foro Madrid tras una semana de desorden oficialista](src/content/events/2026/08/20260828-16.md) — 8 fuentes
+- [2026/08/20260828-17 - Señal DF: empresas del IPSA recortaron 26.248 empleos desde 2019 mientras sus ventas por trabajador subían 26%](src/content/events/2026/08/20260828-17.md) — 5 fuentes
 - [2026/08/20260828-2 - INE: desocupación sube a 9,5% en mayo-julio, máximo en cinco años; Quiroz dice estar 'preocupados pero sobre todo ocupados' y descarta bajar la tasa](src/content/events/2026/08/20260828-2.md) — 20 fuentes
 - [2026/08/20260828-3 - Sermig embarga cuentas de JetSMART por 42 multas migratorias impagas ($781 millones, 10.820 UTM entre 2023-2025)](src/content/events/2026/08/20260828-3.md) — 9 fuentes
 - [2026/08/20260828-4 - Gobierno califica 'alto nivel de desempleo' en las 16 regiones y activa 25.000 cupos SENCE con bonificación de 50% y 60% del sueldo mínimo](src/content/events/2026/08/20260828-4.md) — 10 fuentes
@@ -2038,7 +2039,7 @@
 - [2026/10/20261028-9 - Exjefa del Programa de DD.HH. denuncia que la falta de alegatos del Estado permitió la salida anticipada de cinco condenados por lesa humanidad](src/content/events/2026/10/20261028-9.md) — 7 fuentes
 - [2026/10/20261029-1 - Víctimas identifican a militares y a un padre entre los usuarios de grupos de Telegram que difundían fotos íntimas de mujeres en La Araucanía](src/content/events/2026/10/20261029-1.md) — 8 fuentes
 - [2026/10/20261029-10 - Barría (DC) alerta que eventuales recortes al PAE dejarían cesantes a manipuladoras mientras se investiga el caso SOSER](src/content/events/2026/10/20261029-10.md) — 11 fuentes
-- [2026/10/20261029-11 - CMF: colocaciones bancarias vuelven a crecer y utilidades suben 2,78% a septiembre, con la mora al alza](src/content/events/2026/10/20261029-11.md) — 7 fuentes
+- [2026/10/20261029-11 - CMF: colocaciones bancarias vuelven a crecer y utilidades suben 2,78% a septiembre, con la mora al alza](src/content/events/2026/10/20261029-11.md) — 9 fuentes
 - [2026/10/20261029-2 - PDI detiene en Chillán a una mujer de 22 años por amenazas a Kast y el Juzgado de Garantía la deja libre sin cautelares](src/content/events/2026/10/20261029-2.md) — 21 fuentes
 - [2026/10/20261029-3 - Codelco despide a ocho ejecutivos y profesionales por las irregularidades en los registros de producción de 2024 y 2025](src/content/events/2026/10/20261029-3.md) — 7 fuentes
 - [2026/10/20261029-4 - INE: desempleo sube a 9,8% en el trimestre julio-septiembre y Chile supera el millón de desocupados](src/content/events/2026/10/20261029-4.md) — 52 fuentes
@@ -2076,13 +2077,15 @@
 - [2026/11/20261104-2 - Frutas de Chile cancela su participación en el lanzamiento de la temporada de cerezas y advierte que el bloqueo en San Antonio pone en riesgo las exportaciones](src/content/events/2026/11/20261104-2.md) — 5 fuentes
 - [2026/11/20261104-3 - Cruz-Coke admite que “no sabemos muy bien qué hace” el Segundo Piso y el oficialismo abre un frente contra los asesores de Kast](src/content/events/2026/11/20261104-3.md) — 11 fuentes
 - [2026/11/20261104-4 - Minuta del Banco Central: los cinco consejeros evaluaron subir la TPM a 4,75% en octubre, pero primó mantenerla en 4,5%](src/content/events/2026/11/20261104-4.md) — 8 fuentes
+- [2026/11/20261104-5 - Monitor de Confianza 3E: la economía desplaza a la delincuencia como preocupación y 61% prevé un país peor en un año](src/content/events/2026/11/20261104-5.md) — 5 fuentes
 - [2026/11/20261105-1 - Bill Gates recorre Chuquicamata en una visita privada y pide a Codelco mantenerla bajo 'estricta reserva'](src/content/events/2026/11/20261105-1.md) — 5 fuentes
 - [2026/11/20261105-2 - Kast descarta un cambio de gabinete desde Madrid y lo reitera en Cerro Castillo y Vietnam](src/content/events/2026/11/20261105-2.md) — 17 fuentes
 - [2026/11/20261105-3 - Encuesta UCEN-Qualiz: 92,7% cree que políticos y autoridades entienden poco o nada sus problemas](src/content/events/2026/11/20261105-3.md) — 7 fuentes
-- [2026/11/20261105-4 - Rau anuncia un paquete laboral de 10 u 11 medidas con nuevos contratos, bandas horarias y teletrabajo](src/content/events/2026/11/20261105-4.md) — 8 fuentes
+- [2026/11/20261105-4 - Rau anuncia un paquete laboral de 10 u 11 medidas con nuevos contratos, bandas horarias y teletrabajo](src/content/events/2026/11/20261105-4.md) — 9 fuentes
 - [2026/11/20261106-1 - El canal entre Meta y la PDI queda bajo escrutinio: Cibercrimen confirma ciberpatrullaje 24/7 y lectura de estados de WhatsApp, y dos organizaciones piden transparencia](src/content/events/2026/11/20261106-1.md) — 6 fuentes
 - [2026/11/20261106-2 - Chile y Bélgica unen candidaturas para la secretaría del Tratado de Alta Mar en Valparaíso y China cuestiona el acuerdo](src/content/events/2026/11/20261106-2.md) — 8 fuentes
 - [2026/11/20261106-3 - La Comisión Especial Mixta despacha el Presupuesto 2027 con Educación y Ciencia rechazadas](src/content/events/2026/11/20261106-3.md) — 14 fuentes
+- [2026/11/20261106-4 - IPC de octubre sube 0,5% y eleva la inflación anual a 4,5%, con los combustibles como principal motor](src/content/events/2026/11/20261106-4.md) — 6 fuentes
 - [2026/11/20261107-1 - Gobierno decreta dos días de duelo oficial por la muerte de Sebastián Lelio y el cine chileno lo despide](src/content/events/2026/11/20261107-1.md) — 7 fuentes
 - [2026/11/20261108-1 - Criteria: Kast baja a 24% de aprobación y 67% lo desaprueba, con 74% que descarta que sea el líder que Chile necesita](src/content/events/2026/11/20261108-1.md) — 8 fuentes
 - [2026/11/20261108-2 - Cadem: aprobación de Kast sube tres puntos a 29% y desaprobación baja a 68% en la edición 703](src/content/events/2026/11/20261108-2.md) — 9 fuentes
@@ -2096,7 +2099,7 @@
 - [2026/11/20261111-4 - Rabat entrega al Senado 308 decretos de rebaja: 291 con orden judicial y 17 firmados sin fallo de la Suprema](src/content/events/2026/11/20261111-4.md) — 9 fuentes
 - [2026/11/20261111-5 - AWS pone en marcha su región en Chile con inversión de US$4.000 millones y Kast afirma que el país entra a las grandes ligas](src/content/events/2026/11/20261111-5.md) — 8 fuentes
 - [2026/11/20261111-6 - MinCiencia y ElevenLabs firman un memorando para entregar hasta 44 millones de créditos de IA de voz a startups chilenas](src/content/events/2026/11/20261111-6.md) — 12 fuentes
-- [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 102 fuentes
+- [2026/11/20261111-7 - Quiroz reconoce por primera vez la recesión técnica ante Bloomberg y abre la puerta a más capital privado en Codelco](src/content/events/2026/11/20261111-7.md) — 105 fuentes
 - [2026/11/20261111-8 - Reportajes Teletrece reconstruye el chat de ministros por el 18-O: Arrau pide prudencia, Barros se opone a callar y Rincón advierte de 'autogoles'](src/content/events/2026/11/20261111-8.md) — 7 fuentes
 - [2026/11/20261111-9 - Contraloría fija en 2027 el primer aporte al Fondo Autónomo de Protección Previsional y Hacienda insiste en 2028](src/content/events/2026/11/20261111-9.md) — 15 fuentes
 - [2026/11/20261112-1 - Kast mantiene su gira a Asia en pleno paro de camioneros: La Moneda evaluó suspenderla y la oposición exige que se quede en Chile](src/content/events/2026/11/20261112-1.md) — 6 fuentes
@@ -2132,7 +2135,7 @@
 - [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 70 fuentes
 - [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 19 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
-- [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
+- [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 13 fuentes
 - [2026/11/20261118-7 - Chile y Hong Kong firman un acuerdo Working Holiday en Shenzhen con 100 cupos anuales por parte](src/content/events/2026/11/20261118-7.md) — 6 fuentes
 - [2026/11/20261118-8 - Odesur designa al Biobío como sede de los XIV Juegos Suramericanos de 2030](src/content/events/2026/11/20261118-8.md) — 9 fuentes
 - [2026/11/20261118-9 - Ipsos: el desempleo desplaza al crimen como principal preocupación en Chile por primera vez desde 2021](src/content/events/2026/11/20261118-9.md) — 8 fuentes
@@ -2146,12 +2149,14 @@
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
 - [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 19 fuentes
 - [2026/11/20261123-1 - La comisión revisora recibe 1.886 decretos de rebaja y Rabat envía a su defensa en lugar de comparecer](src/content/events/2026/11/20261123-1.md) — 16 fuentes
+- [2026/11/20261123-2 - Kast fija 100 días contra el desempleo en el décimo Consejo de Gabinete y Arenas detalla el plan en vocería](src/content/events/2026/11/20261123-2.md) — 8 fuentes
 - [2026/11/20261124-1 - Bassa se retracta de la 'red internacional de pedofilia' y dice que 'me expliqué mal'](src/content/events/2026/11/20261124-1.md) — 6 fuentes
+- [2026/11/20261124-2 - Arenas descarta cambios en el gabinete: 'el desempleo va a estar igual' y defiende el diseño que le acomoda al Presidente](src/content/events/2026/11/20261124-2.md) — 5 fuentes
 - [2026/11/20261125-1 - Jiles y Parisi presentan licencias médicas antes de la votación de la AC contra Rabat y Fast Check verifica el precedente de 2024](src/content/events/2026/11/20261125-1.md) — 19 fuentes
 - [2026/11/20261125-2 - Reportea denuncia que Justicia declaró reservados los decretos de rebaja y entregó versiones anonimizadas al Congreso](src/content/events/2026/11/20261125-2.md) — 6 fuentes
 - [2026/11/20261125-3 - La comisión revisora envía a Kast 20 preguntas sobre las rebajas, las víctimas y su respaldo a Rabat](src/content/events/2026/11/20261125-3.md) — 6 fuentes
 - [2026/11/20261126-1 - Hotuiti Teao pone en duda su respaldo a la AC contra Rabat y anticipa que por ahora se abstiene](src/content/events/2026/11/20261126-1.md) — 12 fuentes
-- [2026/11/20261127-1 - INE: desocupación sube a 10,0% en agosto-octubre y Chile registra dos dígitos por primera vez desde 2021](src/content/events/2026/11/20261127-1.md) — 15 fuentes
+- [2026/11/20261127-1 - INE: desocupación sube a 10,0% en agosto-octubre y Chile registra dos dígitos por primera vez desde 2021](src/content/events/2026/11/20261127-1.md) — 16 fuentes
 
 ## 2025
 
