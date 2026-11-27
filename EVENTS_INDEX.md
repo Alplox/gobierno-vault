@@ -2055,7 +2055,7 @@
 - [2026/10/20261031-2 - Las hijas del general Carlos Prats piden a Kast no indultar a condenados por lesa humanidad y derogar la facultad presidencial](src/content/events/2026/10/20261031-2.md) — 5 fuentes
 - [2026/10/20261031-3 - PDI detiene en Pitrufquén a un hombre por enviar fotos sexuales a dos adolescentes por Instagram e invitarlas a su casa](src/content/events/2026/10/20261031-3.md) — 5 fuentes
 - [2026/10/20261031-4 - OCEC-UDP: fuerza laboral venezolana cae 8% y acumula 11 meses a la baja, con cerca de 60 mil empleos formales menos](src/content/events/2026/10/20261031-4.md) — 10 fuentes
-- [2026/10/20261031-5 - ASOF alerta que ventas de ferias libres caen hasta 60% y riesgo para 400 mil empleos tras el desempleo de 9,8%](src/content/events/2026/10/20261031-5.md) — 8 fuentes
+- [2026/10/20261031-5 - ASOF alerta que ventas de ferias libres caen hasta 60% y riesgo para 400 mil empleos tras el desempleo de 9,8%](src/content/events/2026/10/20261031-5.md) — 12 fuentes
 - [2026/11/20261101-1 - Criteria: Kast cae a 25% de aprobación, 65% de rechazo y 72% pide que Rabat deje Justicia](src/content/events/2026/11/20261101-1.md) — 5 fuentes
 - [2026/11/20261101-2 - Arenas defiende a Quiroz en Mesa Central: "Es mucho más razonable y más lúcido de lo que aparenta"](src/content/events/2026/11/20261101-2.md) — 4 fuentes
 - [2026/11/20261101-3 - Pulso Ciudadano de octubre: Kast cae a 22,1% de aprobación y 67,5% de desaprobación, con 74,2% pidiendo la salida de Rabat](src/content/events/2026/11/20261101-3.md) — 9 fuentes
@@ -2128,6 +2128,7 @@
 - [2026/11/20261118-6 - Cuentas Nacionales del 3T: PIB cae 1,1% y la revisión deja atrás la recesión técnica, pero la inversión se desploma 6,7%](src/content/events/2026/11/20261118-6.md) — 12 fuentes
 - [2026/11/20261118-7 - Chile y Hong Kong firman un acuerdo Working Holiday en Shenzhen con 100 cupos anuales por parte](src/content/events/2026/11/20261118-7.md) — 6 fuentes
 - [2026/11/20261118-8 - Odesur designa al Biobío como sede de los XIV Juegos Suramericanos de 2030](src/content/events/2026/11/20261118-8.md) — 9 fuentes
+- [2026/11/20261118-9 - Ipsos: el desempleo desplaza al crimen como principal preocupación en Chile por primera vez desde 2021](src/content/events/2026/11/20261118-9.md) — 8 fuentes
 - [2026/11/20261119-1 - Carolina Rossi renuncia a la Subsecretaría de Ciencia tras semanas de tensión con Lincolao](src/content/events/2026/11/20261119-1.md) — 41 fuentes
 - [2026/11/20261119-2 - Tras la reunión con Alvarado, Lincolao defiende el MoU con OpenAI y Kast descarta problemas internos](src/content/events/2026/11/20261119-2.md) — 24 fuentes
 - [2026/11/20261119-3 - Presunta falsificación de firmas en el Senado por retiro de permisos de Órdenes y Espinoza abre investigación de la Fiscalía](src/content/events/2026/11/20261119-3.md) — 12 fuentes
