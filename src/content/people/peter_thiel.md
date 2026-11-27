@@ -16,4 +16,12 @@ notas: Cofundador de PayPal y Palantir Technologies. Inversionista en IA, datos
   la libertad con la democracia. En 2024 dijo que no donaría a ningún político
   y rechazó un pedido de 10 millones de Trump
   [[sources/cbsnews-2024-07-16-thiel-vance-benefactor]].
+
+  El 24 de septiembre de 2026 recibió el Axel Springer Award en Berlín, con
+  protestas de cientos de personas en las afueras. En la conversación MDMEETS
+  con Mathias Döpfner dijo que "si eres malvado, al menos eres competente",
+  aunque precisó que "es mejor ser bueno que malvado" y que el problema
+  central es la incompetencia generalizada; explicó además que su ensayo de
+  2009 lo escribió de prisa y que publicó una corrección dos semanas después
+  [[sources/snopes-2026-09-30-thiel-evil-contexto]].
 ---
