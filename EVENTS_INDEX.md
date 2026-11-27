@@ -1581,6 +1581,7 @@
 - [2026/09/20260902-11 - V Encuentro Regional del Foro Madrid en Santiago: sede Casa Piedra, programa con Milei y Kast y asistencia confirmada del Presidente en medio de tensiones oficialistas](src/content/events/2026/09/20260902-11.md) — 7 fuentes
 - [2026/09/20260902-12 - Movilh rechaza la realización en Chile del Foro Madrid por una agenda internacional contraria a los derechos humanos](src/content/events/2026/09/20260902-12.md) — 6 fuentes
 - [2026/09/20260902-13 - Seis excomandantes de la Armada advierten en carta que la paz con Argentina no puede costar soberanía y Pérez Mackenna responde que la confianza se construye](src/content/events/2026/09/20260902-13.md) — 9 fuentes
+- [2026/09/20260902-14 - Oposición, CUT y organizaciones sociales rechazan en Paseo Bulnes el Foro Madrid antes de su apertura](src/content/events/2026/09/20260902-14.md) — 6 fuentes
 - [2026/09/20260902-2 - Corte de Iquique revoca retorno del Clan Chen a Alto Hospicio y restituye a Gendarmería la potestad de traslados](src/content/events/2026/09/20260902-2.md) — 8 fuentes
 - [2026/09/20260902-3 - Ñuble suma 9 homicidios en 2026 (+80% interanual) y contradice balance del seremi que los daba a la baja tras crimen en San Carlos](src/content/events/2026/09/20260902-3.md) — 5 fuentes
 - [2026/09/20260902-4 - Comisión mixta de Inteligencia Económica inicia audiencias por secreto bancario con choque oposición-oficialismo y plan de cuatro sesiones de expertos](src/content/events/2026/09/20260902-4.md) — 8 fuentes
@@ -2014,7 +2015,7 @@
 - [2026/10/20261027-4 - Organizaciones feministas y de sobrevivientes marchan al Ministerio de Justicia y exigen la renuncia de Rabat y de los subsecretarios](src/content/events/2026/10/20261027-4.md) — 11 fuentes
 - [2026/10/20261027-5 - El reproche de Alvarado a Pavez por su foto en un avión de la FACH abre un nuevo flanco en La Moneda](src/content/events/2026/10/20261027-5.md) — 10 fuentes
 - [2026/10/20261027-6 - Alerta roja en 10 comunas de la RM, aluviones en Las Condes y Lo Barnechea y alcaldes que acusan avisos tardíos de Senapred](src/content/events/2026/10/20261027-6.md) — 12 fuentes
-- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 14 fuentes
+- [2026/10/20261027-7 - Bassa vincula las rebajas de condena con una "red de pedofilia internacional" y el oficialismo lo lleva a la Comisión de Ética](src/content/events/2026/10/20261027-7.md) — 15 fuentes
 - [2026/10/20261027-8 - Exministros y académicos advierten que revertir los decretos ya ejecutados es inviable y Solís afirma que no le ve solución](src/content/events/2026/10/20261027-8.md) — 6 fuentes
 - [2026/10/20261027-9 - Marlene Pérez pide en CNN Prime el paso al costado de Rabat, defiende su proyecto para revertir las rebajas y dice que no aceptará cuestionamientos a su postura](src/content/events/2026/10/20261027-9.md) — 6 fuentes
 - [2026/10/20261028-1 - Kast debuta en Enade 2026 con un balance de siete meses: "El empleo no lo crea el Estado, lo crean ustedes"](src/content/events/2026/10/20261028-1.md) — 12 fuentes
@@ -2046,7 +2047,7 @@
 - [2026/10/20261030-3 - Hallan muerto en Colina a Martín Pérez Burgos, el joven de 19 años secuestrado en Estación Central, y detienen a cinco personas por el crimen](src/content/events/2026/10/20261030-3.md) — 8 fuentes
 - [2026/10/20261030-4 - Fiscalía Centro Norte abre investigación contra Rabat y Silva por presunta prevaricación administrativa en las rebajas de condena](src/content/events/2026/10/20261030-4.md) — 8 fuentes
 - [2026/10/20261030-5 - Paro del aseo nocturno en Santiago: calles con basura, plan de contingencia municipal y reanudación del servicio tras 24 horas](src/content/events/2026/10/20261030-5.md) — 8 fuentes
-- [2026/10/20261030-6 - Formalizan al director regional del Sernac de Valparaíso por maltrato habitual contra su cónyuge y el tribunal le prohíbe acercarse a la víctima](src/content/events/2026/10/20261030-6.md) — 7 fuentes
+- [2026/10/20261030-6 - Formalizan al director regional del Sernac de Valparaíso por maltrato habitual contra su cónyuge y el tribunal le prohíbe acercarse a la víctima](src/content/events/2026/10/20261030-6.md) — 9 fuentes
 - [2026/10/20261031-1 - Juzgado de Garantía de Linares declara ilegal la detención de una estudiante de 17 años por amenazas a Kast y la Fiscalía formaliza igualmente](src/content/events/2026/10/20261031-1.md) — 7 fuentes
 - [2026/10/20261031-2 - Las hijas del general Carlos Prats piden a Kast no indultar a condenados por lesa humanidad y derogar la facultad presidencial](src/content/events/2026/10/20261031-2.md) — 5 fuentes
 - [2026/10/20261031-3 - PDI detiene en Pitrufquén a un hombre por enviar fotos sexuales a dos adolescentes por Instagram e invitarlas a su casa](src/content/events/2026/10/20261031-3.md) — 5 fuentes
@@ -2104,7 +2105,7 @@
 - [2026/11/20261116-9 - El Congreso despacha en un día la ley que topa las alzas de combustibles hasta abril de 2027 y rebaja el diésel en $100 adicionales](src/content/events/2026/11/20261116-9.md) — 9 fuentes
 - [2026/11/20261117-1 - Lincolao firma con OpenAI en San Francisco y Montalva cuestiona su segunda ausencia a la comisión Cerimedo](src/content/events/2026/11/20261117-1.md) — 37 fuentes
 - [2026/11/20261117-10 - La Suprema ordena a Rabat resolver una rebaja a un violador de niña y desarma su defensa ante la acusación constitucional](src/content/events/2026/11/20261117-10.md) — 7 fuentes
-- [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 64 fuentes
+- [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 67 fuentes
 - [2026/11/20261117-3 - Congreso despacha a ley la postergación de la Ley 21.719 de Datos Personales hasta el 15 de octubre de 2027](src/content/events/2026/11/20261117-3.md) — 8 fuentes
 - [2026/11/20261117-4 - Arenas pide disculpas al PDG tras el 'cúmulo de deseos' y la bancada las rechaza en plena ofensiva por Rabat](src/content/events/2026/11/20261117-4.md) — 8 fuentes
 - [2026/11/20261117-5 - El Banco Central publica el IEF del segundo semestre: riesgos elevados por IA, deuda fiscal y ciberseguridad, y mantiene el colchón contracíclico en 1%](src/content/events/2026/11/20261117-5.md) — 7 fuentes
@@ -2113,7 +2114,7 @@
 - [2026/11/20261117-8 - La comisión investigadora aprueba por 6-4 un informe que reprocha a Steinert y remite antecedentes al Ministerio Público](src/content/events/2026/11/20261117-8.md) — 10 fuentes
 - [2026/11/20261117-9 - Comisión despacha a Sala el proyecto de Entornos Digitales Seguros que fija 14 años como edad mínima para redes sociales](src/content/events/2026/11/20261117-9.md) — 7 fuentes
 - [2026/11/20261118-1 - SICH denuncia vulneración de la libertad de asociación y de datos tras la nómina de becarios que Lincolao dijo tener clasificada](src/content/events/2026/11/20261118-1.md) — 6 fuentes
-- [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión se concreta esa noche](src/content/events/2026/11/20261118-2.md) — 23 fuentes
+- [2026/11/20261118-2 - Lincolao niega haber sido citada por Alvarado, responde al vocero y la reunión se concreta esa noche](src/content/events/2026/11/20261118-2.md) — 24 fuentes
 - [2026/11/20261118-3 - Campaña #PaQuéFumas del Minsal: polémica por IA, $120 millones y un detrás de cámara que abre nuevas dudas](src/content/events/2026/11/20261118-3.md) — 70 fuentes
 - [2026/11/20261118-4 - Expertos cuestionan las cláusulas del acuerdo con OpenAI: confidencialidad, control de comunicaciones y riesgo de soberanía digital](src/content/events/2026/11/20261118-4.md) — 10 fuentes
 - [2026/11/20261118-5 - Marcha nacional Ni un peso menos de la CUT y el Frente Común contra los recortes del Presupuesto 2027: miles en la Alameda](src/content/events/2026/11/20261118-5.md) — 7 fuentes
@@ -2129,7 +2130,8 @@
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
 - [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 19 fuentes
-- [2026/11/20261123-1 - La comisión revisora recibe 1.886 decretos de rebaja y Rabat envía a su defensa en lugar de comparecer](src/content/events/2026/11/20261123-1.md) — 12 fuentes
+- [2026/11/20261123-1 - La comisión revisora recibe 1.886 decretos de rebaja y Rabat envía a su defensa en lugar de comparecer](src/content/events/2026/11/20261123-1.md) — 16 fuentes
+- [2026/11/20261124-1 - Bassa se retracta de la 'red internacional de pedofilia' y dice que 'me expliqué mal'](src/content/events/2026/11/20261124-1.md) — 6 fuentes
 - [2026/11/20261125-1 - Jiles y Parisi presentan licencias médicas antes de la votación de la AC contra Rabat y Fast Check verifica el precedente de 2024](src/content/events/2026/11/20261125-1.md) — 14 fuentes
 - [2026/11/20261125-2 - Reportea denuncia que Justicia declaró reservados los decretos de rebaja y entregó versiones anonimizadas al Congreso](src/content/events/2026/11/20261125-2.md) — 6 fuentes
 - [2026/11/20261125-3 - La comisión revisora envía a Kast 20 preguntas sobre las rebajas, las víctimas y su respaldo a Rabat](src/content/events/2026/11/20261125-3.md) — 6 fuentes
