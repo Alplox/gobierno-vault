@@ -529,6 +529,7 @@ automaticamente `titulo`, `autor` y `fecha` de la URL y genera el frontmatter li
 en `src/content/sources/<id>.md`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[sources/id]]`.
 
 - Fetch del HTML directo; si falla o no hay titulo, relega a `r.jina.ai`.
+- Revisar siempre `medio` y `titulo` del bloque generado: las meta etiquetas `twitter:` de una nota pueden hacer que el script infiera `X (Twitter)` y un título truncado en un artículo de prensa (caso BioBioChile oct-2026); corregir el frente antes de citarlo.
 - El mapeo dominio → medio se precarga desde `src/content/sources/*.md` + un diccionario base en el script.
 - Consulta el catálogo de sitemaps antes del fetch (ver "Catálogo de sitemaps → Integración
   con add-source.mjs").
