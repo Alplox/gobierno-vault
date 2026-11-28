@@ -323,6 +323,13 @@
 }
 .gv-event-shell.is-enhanced.no-timeline > .gv-event-rail { display: none; }
 
+/* /sueldos usa el mismo TOC que el evento pero sin rail de línea de tiempo:
+   dos columnas (índice + cuerpo) y el ancho de lectura de la página. */
+#gv-sueldos-shell.is-enhanced {
+  grid-template-columns: 11rem minmax(0, 48rem);
+  max-width: 62rem;
+}
+
 /* El TOC y el rail solo flotan con scroll propio dentro del grid de escritorio
    (is-enhanced, que eventTocClient aplica con matchMedia ≥76rem). En móvil la
    línea de tiempo es una sección más del flujo: sin max-height ni overflow se

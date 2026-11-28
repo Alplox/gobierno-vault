@@ -39,6 +39,7 @@ Sin cifras ni entidades hardcodeadas:
 - `segundo_piso.lectura_registro_julio` actualiza los 5 cargos a la última lectura mensual del Registro (misma fuente CFR); `otras_autoridades.filas[]` (`cargo`, `monto_modal`, `cobertura`, `detalle`) cubre Congreso, ministros, subsecretarios, SEREMIs, delegados, gobernadores, superintendentes y BancoEstado con la misma fuente.
 - `indicadores[]` usa `ipc_inicio`/`ipc_fin` y sus fechas; la variación se deriva entre endpoints, sin producto de tasas anuales. Para mandatos anteriores a la serie BDE publicada, los endpoints pueden ser `null`.
 - `ingresos_esi`, `costo_vida`, `imm_2026` y `casen_2024` conservan explícitamente año/periodo, unidad, definiciones y fuente. La página mantiene separados ingreso individual neto, ingreso de hogar, umbral por persona equivalente y remuneración bruta.
+- `reajustes_sector_publico` (`anterior` 3,4% / `vigente` 4,6% en dos `tramos`) y `remuneraciones_reales.puntos[]` (variación nominal/costos/real, media por hora y brecha de género) documentan los acuerdos y boletines ya registrados en el vault; toda `fuente` va en `orden_refs`. `ipc_cierres_anuales[]` y `pgu.montos[]`: el template no escribe cifras a mano, las saca de aquí. `eventos_relacionados[]` lleva `{ id, etiqueta }` con el ID sin extensión; la ruta se deriva con `id.slice(0,4)/id.slice(4,6)`.
 - YAML se sirve en `/data/sueldos.yaml`.
 
 Ver `src/data/sueldos.yaml`, `src/lib/sueldos.ts`.

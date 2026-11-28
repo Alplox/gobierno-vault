@@ -20,6 +20,8 @@ pnpm run generate-index  # regenera EVENTS_INDEX.md (ya no toca AGENTS.md)
 pnpm run sitemaps-index  # regenera sitemaps/README.md (ya no toca AGENTS.md)
 ```
 
+Tras cambiar un plugin remark/rehype (`remarkWikiLinks.mjs`, `rehypeTableWrap.mjs`), Astro reutiliza el HTML renderizado de los eventos que no cambiaron: borra `.astro/`, `node_modules/.astro/` y `dist/` antes de medir un build limpio. Un `dist/` huérfano tras un build fallido deja chunks viejos en `dist/.prerender/` (`ERR_MODULE_NOT_FOUND` al prerenderizar).
+
 `--experimental-global-customevent` se setea en `astro.config.mjs` (cross-platform).
 
 ## Validación temprana (`scripts/validate/validate.mjs`)

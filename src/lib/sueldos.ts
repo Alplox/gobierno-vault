@@ -180,6 +180,36 @@ type SueldosYaml = {
     promedio_ingreso_autonomo_per_capita_decil_x: number;
     nota: string;
   };
+  reajustes_sector_publico: {
+    anterior: { ano: number; porcentaje: number; fecha: string; fuente: string; nota: string };
+    vigente: {
+      periodo: string;
+      porcentaje: number;
+      fecha: string;
+      tramos: Array<{ momento: string; porcentaje: number }>;
+      organizaciones_acuerdo: string;
+      organizaciones_no_firmantes: number;
+      fuente: string;
+      nota: string;
+    };
+  };
+  remuneraciones_reales: {
+    unidad: string;
+    puntos: Array<{
+      periodo: string;
+      remuneraciones: number;
+      costos: number;
+      real: number;
+      acumulado_anio: number;
+      hora_ordinaria: number;
+      brecha_genero: number;
+      fuente: string;
+    }>;
+    nota: string;
+  };
+  ipc_cierres_anuales: Array<{ ano: number; variacion: number; fuente: string }>;
+  pgu: { periodo: string; montos: number[]; fuente: string };
+  eventos_relacionados: Array<{ id: string; etiqueta: string }>;
 };
 
 export type RatioGobierno = {
@@ -301,6 +331,11 @@ function build() {
   assertFuente(yaml.costo_vida.fuente, 'costo_vida.fuente');
   assertFuente(yaml.imm_2026.fuente, 'imm_2026.fuente');
   assertFuente(yaml.casen_2024.fuente, 'casen_2024.fuente');
+  assertFuente(yaml.reajustes_sector_publico.anterior.fuente, 'reajustes_sector_publico.anterior.fuente');
+  assertFuente(yaml.reajustes_sector_publico.vigente.fuente, 'reajustes_sector_publico.vigente.fuente');
+  assertFuente(yaml.pgu.fuente, 'pgu.fuente');
+  for (const p of yaml.remuneraciones_reales.puntos) assertFuente(p.fuente, `remuneraciones_reales ${p.periodo}`);
+  for (const c of yaml.ipc_cierres_anuales) assertFuente(c.fuente, `ipc_cierres_anuales ${c.ano}`);
 
   // --- Resolución de personas (src/content/people/*.md) ---
   const peopleById = new Map(getPeopleRegistry().map((p) => [p.id, p.data]));
@@ -332,6 +367,12 @@ function build() {
   if (!/^\d{4}-\d{2}$/.test(yaml.otras_autoridades.periodo)) throw new Error('sueldos.yaml: periodo inválido en otras_autoridades');
   for (const fila of yaml.otras_autoridades.filas) validarPositivo(fila.monto_modal, `otras_autoridades ${fila.cargo}`);
   validarPositivo(yaml.ipc.sep_2026, 'ipc.sep_2026');
+  for (const p of yaml.remuneraciones_reales.puntos) {
+    validarPositivo(p.remuneraciones, `remuneraciones_reales ${p.periodo}`);
+    validarPositivo(p.costos, `costos laborales ${p.periodo}`);
+    validarPositivo(p.hora_ordinaria, `hora ordinaria ${p.periodo}`);
+  }
+  for (const m of yaml.pgu.montos) validarPositivo(m, 'pgu.montos');
 
   const actual = yaml.presidentes.find((p) => p.gobierno === 'Kast');
   const boric = yaml.presidentes.find((p) => p.gobierno === 'Boric');
@@ -373,6 +414,7 @@ function build() {
   const ratioKast = ratios.find((r) => r.gobierno === 'Kast');
   const ratioBoric = ratios.find((r) => r.gobierno === 'Boric');
   const ratio2010s = ratios.filter((r) => ['Piñera II', 'Bachelet II', 'Piñera I'].includes(r.gobierno));
+  const ratio2010sOrdenados = [...ratio2010s].sort((a, b) => a.veces - b.veces);
   const ratioBacheletI = ratios.find((r) => r.gobierno === 'Bachelet I');
   if (!ratioKast || !ratioBoric || !ratioBacheletI) throw new Error('sueldos.yaml: faltan ratios históricos requeridos');
 
@@ -394,6 +436,29 @@ function build() {
   const costo_vida = { ...yaml.costo_vida, fuente: fuentesPorId(yaml.costo_vida.fuente) };
   const imm_2026 = { ...yaml.imm_2026, fuente: fuentesPorId(yaml.imm_2026.fuente) };
   const casen_2024 = { ...yaml.casen_2024, fuente: fuentesPorId(yaml.casen_2024.fuente) };
+
+  const reajustes_sector_publico = {
+    anterior: {
+      ...yaml.reajustes_sector_publico.anterior,
+      fuente: fuentesPorId(yaml.reajustes_sector_publico.anterior.fuente),
+    },
+    vigente: {
+      ...yaml.reajustes_sector_publico.vigente,
+      fuente: fuentesPorId(yaml.reajustes_sector_publico.vigente.fuente),
+    },
+  };
+  const remuneraciones_reales = {
+    ...yaml.remuneraciones_reales,
+    puntos: yaml.remuneraciones_reales.puntos.map((p) => ({
+      ...p,
+      fuente: fuentesPorId(p.fuente),
+    })),
+  };
+  const ipc_cierres_anuales = yaml.ipc_cierres_anuales.map((c) => ({
+    ...c,
+    fuente: fuentesPorId(c.fuente),
+  }));
+  const pgu = { ...yaml.pgu, fuente: fuentesPorId(yaml.pgu.fuente) };
 
   const actualTarjeta: TarjetaBrecha = {
     clave: 'presidente',
@@ -538,6 +603,11 @@ function build() {
     costo_vida,
     imm_2026,
     casen_2024,
+    reajustes_sector_publico,
+    remuneraciones_reales,
+    ipc_cierres_anuales,
+    pgu,
+    eventos_relacionados: yaml.eventos_relacionados,
     brecha,
     formatCLP,
     pctDiff,
@@ -554,9 +624,9 @@ function build() {
       ratioKastVecesRedondeado: Math.round(ratioKast.veces),
       ratioBoricVecesRedondeado: Math.round(ratioBoric.veces),
       ratio2010sTexto: {
-        min: Math.floor(Math.min(...ratio2010s.map((r) => r.veces))),
-        max: Math.round(Math.max(...ratio2010s.map((r) => r.veces))),
-        detalle: [ratio2010s[0], ratio2010s[2], ratio2010s[1]]
+        min: Math.floor(ratio2010sOrdenados[0].veces),
+        max: Math.round(ratio2010sOrdenados[ratio2010sOrdenados.length - 1].veces),
+        detalle: ratio2010sOrdenados
           .map((r) => `${r.gobierno} ${r.veces.toFixed(1).replace('.', ',')}`)
           .join('; '),
       },

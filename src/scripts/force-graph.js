@@ -885,9 +885,9 @@ function init() {
           // Links internos del preview en pestana nueva: navegar aqui perderia
           // el estado del grafo (la queja original del modal).
           box.querySelectorAll('a[href^="/"]').forEach((a) => a.setAttribute('target', '_blank'));
-          // Interceptar [N] → scroll dentro del modal en vez de
-          // navegar a /events#ref-N (hash del listado, sin destino).
-          box.querySelectorAll('a[href^="#ref-"]').forEach((a) => {
+          // Interceptar [N] y "volver a" → scroll dentro del modal en vez de
+          // navegar al hash de la pagina de fondo (sin ese destino / con otro evento).
+          box.querySelectorAll('a[href^="#ref-"], a[href^="#cite-"]').forEach((a) => {
             a.addEventListener('click', (e) => {
               e.preventDefault();
               e.stopPropagation();

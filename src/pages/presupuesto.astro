@@ -9,8 +9,10 @@ import SourceRef from '../components/SourceRef.astro';
 import BudgetSankey from '../components/BudgetSankey.astro';
 import BudgetMovementCard from '../components/BudgetMovementCard.astro';
 import BudgetStats from '../components/BudgetStats.astro';
-import { Wallet, ArrowRightLeft, Users, TrendingDown, TrendingUp, ChevronDown, MinusCircle, Landmark } from 'lucide-astro';
+import CopyRefsButton from '../components/CopyRefsButton.astro';
+import { Wallet, ArrowRightLeft, Users, TrendingDown, TrendingUp, ChevronDown, MinusCircle, Landmark, BookOpen } from 'lucide-astro';
 import { getPresupuesto, esFuenteOficial, refAnchor, type PresupuestoSankey } from '../lib/presupuesto';
+import { buildReferencesMarkdownFrom } from '../lib/eventMarkdown';
 
 const { ejercicios, fuentes, formatCLP, sankeyGlobal } = getPresupuesto();
 
@@ -148,6 +150,9 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
     const sk = e.sankey;
     const suma = sumaSk(sk);
     const totalMovs = e.movimientos.length;
+    const refsMd = buildReferencesMarkdownFrom(
+      e.refs.map((id) => ({ titulo: fuentes[id].titulo, url: fuentes[id].url, medio: fuentes[id].medio })),
+    );
     return (
       <section data-pres-panel={e.ano} class={i === 0 ? 'space-y-4 mb-12' : 'space-y-4 mb-12 hidden'}>
         <div class="rounded-3xl bg-base-100 shadow-[var(--shadow-border)] overflow-hidden">
@@ -320,14 +325,18 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
             <details class="group/fnt rounded-2xl bg-base-200/40 px-4 py-3">
               <summary class="flex items-center gap-1.5 cursor-pointer list-none text-sm font-bold text-base-content/80 hover:text-base-content transition-colors">
                 <ChevronDown class="h-4 w-4 transition-transform group-open/fnt:rotate-180" />
-                Fuentes del ejercicio {e.ano}
-                <span class="text-xs font-normal text-base-content/80">({e.refs.length})</span>
+                <BookOpen class="h-4 w-4 text-base-content shrink-0" />
+                Referencias y Fuentes ({e.refs.length})
               </summary>
-              <ol class="mt-3 space-y-1.5">
+              <div class="flex flex-wrap items-center gap-2 mt-3">
+                <span class="text-xs text-base-content/80">Fuentes del ejercicio {e.ano}</span>
+                <CopyRefsButton id={`btn-copy-refs-${e.ano}`} refsMd={refsMd} />
+              </div>
+              <ol data-ref-back-host class="mt-2 space-y-1.5">
                 {e.refs.map((id, n) => (
                   <li id={refAnchor(e.ano, id, e.refs)} class="text-xs text-base-content/80 scroll-mt-24">
                     <span class="font-bold text-base-content">[{n + 1}]</span> {fuentes[id].medio} ·{' '}
-                    <a href={fuentes[id].url} class="link link-primary" target="_blank" rel="noopener">{fuentes[id].titulo}</a>
+                    <a href={fuentes[id].url} class="font-semibold text-base-content hover:text-base-content hover:underline" target="_blank" rel="noopener">{fuentes[id].titulo}</a>
                   </li>
                 ))}
               </ol>
@@ -375,6 +384,9 @@ const sumaSk = (sk: PresupuestoSankey) => sk.totalRetiros + sk.totalInyecciones;
     presRevealHash();
   }
   document.addEventListener('hashchange', presRevealHash);
+  // Base.astro abre los <details> del destino; si el [N] vive en otro panel de
+  // año, pide aquí que se active ese panel antes del scroll.
+  document.addEventListener('gv:pres-reveal', (e) => presApply((e as CustomEvent).detail));
   document.addEventListener('click', (e) => {
     const target = e.target as HTMLElement | null;
     const btn = target?.closest?.('[data-pres-ano]');

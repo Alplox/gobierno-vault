@@ -167,7 +167,7 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
          daisyUI ningún hex fijo sirve. Layout/sombras quedan como están. */
       /* text-decoration en el ANCHOR: la decoración se propaga desde el <a>,
          no del <sup> interno (que pisa el underline de .prose con otro color) */
-      .source-ref { position: relative; cursor: help; text-decoration: none; }
+      .source-ref { position: relative; cursor: help; text-decoration: none; scroll-margin-top: 5rem; }
       .source-ref:hover { text-decoration: underline; text-decoration-color: var(--color-base-content); }
       /* El texto va en base-content: primary puede ser muy claro en temas como
          cupcake (1,4:1 sobre base-100). primary queda solo para decoración. */
@@ -216,11 +216,49 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       }
       .source-ref:hover > .source-ref-tip,
       .source-ref.open > .source-ref-tip { display: block; }
+      /* Los refs pueden vivir dentro de contenedores con overflow-x:auto (tablas
+         de /sueldos, .gv-table-scroll del markdown): allí overflow-y computable
+         pasa a auto y recorta cualquier position:absolute. Con JS se desactiva
+         el tooltip inline y se usa el nodo flotante de <body>; sin JS queda el
+         de arriba como fallback. */
+      .gv-float-tips .source-ref > .source-ref-tip { display: none !important; }
+      .source-ref-float {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        width: max-content;
+        max-width: 280px;
+        padding: 8px 10px;
+        border-radius: 6px;
+        background: var(--color-neutral);
+        color: var(--color-neutral-content);
+        font-size: 0.75rem;
+        line-height: 1.4;
+        text-align: left;
+        white-space: pre-wrap;
+        pointer-events: none;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      }
+      .source-ref-float::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: var(--gv-tip-arrow, 50%);
+        transform: translateX(-50%);
+        border: 6px solid transparent;
+        border-top-color: var(--color-neutral);
+      }
+      .source-ref-float.below::after {
+        top: auto;
+        bottom: 100%;
+        border-top-color: transparent;
+        border-bottom-color: var(--color-neutral);
+      }
       .prose { overflow: visible !important; }
       /* El modal del grafo reusa .prose pero su body DEBE scrollear (max-h-55vh):
          sin este override, el overflow visible global derrama el texto sobre la
-         sección Conexiones y el botón "Leer evento completo". Los tooltips de
-         fuente quedan recortados dentro del scroll: aceptable vs el solape. */
+         sección Conexiones y el botón "Leer evento completo". Los tooltips ya no
+         se recortan porque viven en el nodo flotante del body. */
       #graph-modal-content.prose { overflow-y: auto !important; }
       .cifra-badge {
         display: inline-flex;
@@ -325,6 +363,37 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
       #gv-main-nav.gv-header-nav-hidden { transform: translateY(-100%); }
       @media (prefers-reduced-motion: reduce) {
         #gv-main-nav { transition: none; }
+      }
+      /* Icono del botón "copiar referencias", compartido por evento, /sueldos y
+         /presupuesto (CopyRefsButton.astro). Antes vivía en el <style> del evento. */
+      .copy-icon-swap {
+        position: relative;
+        display: inline-grid;
+        width: 1rem;
+        height: 1rem;
+      }
+      .copy-icon-swap > .copy-icon {
+        grid-area: 1 / 1;
+        display: grid;
+        place-items: center;
+        opacity: 0;
+        filter: blur(4px);
+        transform: scale(0.25);
+        pointer-events: none;
+        transition:
+          opacity 200ms cubic-bezier(0.2, 0, 0, 1),
+          filter 200ms cubic-bezier(0.2, 0, 0, 1),
+          transform 200ms cubic-bezier(0.2, 0, 0, 1);
+      }
+      .copy-icon-swap[data-state='idle'] > [data-icon='idle'],
+      .copy-icon-swap[data-state='copied'] > [data-icon='copied'],
+      .copy-icon-swap[data-state='error'] > [data-icon='error'] {
+        opacity: 1;
+        filter: blur(0);
+        transform: scale(1);
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .copy-icon-swap > .copy-icon { transition: none; }
       }
     </style>
   </head>
@@ -542,16 +611,146 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
 
     <script>
       import { bind, play, setEnabled } from 'cuelume';
+      import { initRefBackLinks } from '../scripts/refBackLinksClient.js';
 
       if (!(window as any).__gvTooltipInit) {
         (window as any).__gvTooltipInit = true;
+
+        // Un solo nodo flotante en <body>: position:fixed escapa del overflow
+        // de las tablas y del modal del grafo, que recortaban el tooltip inline.
+        const tip = document.createElement('div');
+        tip.className = 'source-ref-float';
+        tip.setAttribute('role', 'tooltip');
+        tip.setAttribute('aria-hidden', 'true');
+        let hoverRef: HTMLAnchorElement | null = null;
+        let pinnedRef: HTMLAnchorElement | null = null;
+        const currentRef = () => pinnedRef ?? hoverRef;
+
+        const mount = () => {
+          // ClientRouter puede reemplazar <body>; document y window sobreviven.
+          if (!tip.isConnected) document.body.appendChild(tip);
+          document.documentElement.classList.add('gv-float-tips');
+        };
+        mount();
+        document.addEventListener('astro:page-load', mount);
+        document.addEventListener('astro:before-swap', () => {
+          pinnedRef = null;
+          hoverRef = null;
+          tip.style.display = 'none';
+        });
+
+        const place = () => {
+          const ref = currentRef();
+          if (!ref || tip.style.display !== 'block') return;
+          if (!ref.isConnected) { pinnedRef = null; hoverRef = null; tip.style.display = 'none'; return; }
+          const r = ref.getBoundingClientRect();
+          if (r.bottom < 0 || r.top > window.innerHeight || r.right < 0 || r.left > window.innerWidth) {
+            tip.style.display = 'none';
+            return;
+          }
+          const t = tip.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          const left = Math.max(8, Math.min(cx - t.width / 2, window.innerWidth - t.width - 8));
+          let top = r.top - t.height - 8;
+          const below = top < 8;
+          if (below) top = r.bottom + 8;
+          tip.style.left = `${Math.round(left)}px`;
+          tip.style.top = `${Math.round(top)}px`;
+          tip.style.setProperty('--gv-tip-arrow', `${Math.round(Math.max(12, Math.min(cx - left, t.width - 12)))}px`);
+          tip.classList.toggle('below', below);
+        };
+
+        const render = () => {
+          const ref = currentRef();
+          if (!ref || !ref.isConnected) { tip.style.display = 'none'; return; }
+          const span = ref.querySelector('.source-ref-tip');
+          const text = span?.textContent?.trim() || ref.getAttribute('title') || '';
+          tip.textContent = text;
+          tip.style.display = text ? 'block' : 'none';
+          place();
+        };
+
+        const setHover = (ref: HTMLAnchorElement) => {
+          if (pinnedRef || hoverRef === ref) return;
+          hoverRef = ref;
+          render();
+        };
+        const clearHover = (ref: HTMLAnchorElement) => {
+          if (pinnedRef || hoverRef !== ref) return;
+          hoverRef = null;
+          render();
+        };
+        const closeTip = () => {
+          pinnedRef?.classList.remove('open');
+          pinnedRef = null;
+          hoverRef = null;
+          render();
+        };
+        const refFrom = (node: EventTarget | null) =>
+          (node as HTMLElement | null)?.closest?.('.source-ref') as HTMLAnchorElement | null;
+
+        document.addEventListener('pointerover', (e) => {
+          const ref = refFrom(e.target);
+          if (ref) setHover(ref);
+        });
+        document.addEventListener('pointerout', (e) => {
+          const ref = refFrom(e.target);
+          if (ref && ref !== refFrom(e.relatedTarget)) clearHover(ref);
+        });
+        document.addEventListener('focusin', (e) => {
+          const ref = refFrom(e.target);
+          if (ref) setHover(ref);
+        });
+        document.addEventListener('focusout', (e) => {
+          const ref = refFrom(e.target);
+          if (ref) clearHover(ref);
+        });
+        // Captura: el scroll de una tabla (overflow-x:auto) no burbujea.
+        let repositioning = false;
+        const onScroll = () => {
+          if (repositioning || !currentRef()) return;
+          repositioning = true;
+          requestAnimationFrame(() => { repositioning = false; render(); });
+        };
+        window.addEventListener('scroll', onScroll, { capture: true, passive: true });
+        window.addEventListener('resize', onScroll);
+
         document.addEventListener('click', (e) => {
-          const target = e.target as HTMLElement | null;
-          const ref = target?.closest('.source-ref') as HTMLAnchorElement | null;
+          // "volver a" de Referencias → salto al [N] concreto del cuerpo, con
+          // el mismo pulso que la ida [N] → referencia. Los anclas inline ya
+          // llevan id propio (remarkWikiLinks.mjs), así cada aparición es
+          // destino independiente cuando una fuente se cita varias veces.
+          const back = (e.target as HTMLElement | null)?.closest?.('a[data-ref-back]') as HTMLAnchorElement | null;
+          if (back) {
+            e.preventDefault();
+            closeTip();
+            const id = decodeURIComponent((back.getAttribute('href') ?? '').slice(1));
+            const target = document.getElementById(id);
+            if (!target) return;
+            // En /presupuesto el [N] destino puede estar en un <details> cerrado
+            // o en un panel de año oculto: abrirlo antes de hacer scroll.
+            for (let el: HTMLElement | null = target.parentElement; el; el = el.parentElement) {
+              if (el instanceof HTMLDetailsElement) el.open = true;
+            }
+            const panel = target.closest<HTMLElement>('[data-pres-panel]');
+            if (panel?.classList.contains('hidden')) {
+              document.dispatchEvent(new CustomEvent('gv:pres-reveal', { detail: panel.dataset.presPanel }));
+            }
+            const hash = `#${id}`;
+            if (location.hash !== hash) history.replaceState(null, '', hash);
+            target.classList.remove('ref-highlight');
+            void target.offsetWidth;
+            target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            target.classList.add('ref-highlight');
+            target.addEventListener('animationend', () => target.classList.remove('ref-highlight'), { once: true });
+            return;
+          }
+          const ref = refFrom(e.target);
           if (ref) {
             const href = ref.getAttribute('href') ?? '';
             if (href.startsWith('#ref-')) {
               e.preventDefault();
+              closeTip();
               const li = document.getElementById(href.slice(1));
               if (!li) return;
               li.classList.remove('ref-highlight');
@@ -563,14 +762,58 @@ const GITHUB_URL = 'https://github.com/Alplox/gobierno-vault';
             }
             e.preventDefault();
             e.stopPropagation();
-            const wasOpen = ref.classList.contains('open');
-            document.querySelectorAll('.source-ref.open').forEach((el) => el.classList.remove('open'));
-            if (!wasOpen) ref.classList.add('open');
+            if (pinnedRef === ref) {
+              closeTip();
+            } else {
+              pinnedRef?.classList.remove('open');
+              pinnedRef = ref;
+              hoverRef = null;
+              ref.classList.add('open');
+              render();
+            }
             return;
           }
-          document.querySelectorAll('.source-ref.open').forEach((el) => el.classList.remove('open'));
+          closeTip();
         });
       }
+
+      // Botón "copiar referencias" de evento, /sueldos y /presupuesto: el mismo
+      // handler para los tres, con el markdown en data-refs-md de CopyRefsButton.
+      if (!(window as any).__gvCopyRefsInit) {
+        (window as any).__gvCopyRefsInit = true;
+        const copyTimers = new WeakMap<HTMLButtonElement, number>();
+        const copyFeedback = (button: HTMLButtonElement, state: 'copied' | 'error') => {
+          const swap = button.querySelector<HTMLElement>('[data-copy-swap]');
+          const status = button.parentElement?.querySelector<HTMLElement>(':scope > [data-copy-status]');
+          const previous = copyTimers.get(button);
+          if (previous) window.clearTimeout(previous);
+          if (swap) swap.dataset.state = state;
+          if (status) {
+            status.textContent = state === 'copied'
+              ? button.dataset.copySuccessMessage ?? 'Referencias copiadas al portapapeles.'
+              : button.dataset.copyErrorMessage ?? 'No se pudieron copiar las referencias.';
+          }
+          copyTimers.set(button, window.setTimeout(() => {
+            if (swap?.isConnected) swap.dataset.state = 'idle';
+            if (status?.isConnected) status.textContent = '';
+            copyTimers.delete(button);
+          }, state === 'copied' ? 2000 : 2500));
+        };
+        document.addEventListener('click', (e) => {
+          const button = (e.target as HTMLElement | null)?.closest?.('[data-copy-refs]') as HTMLButtonElement | null;
+          if (!button) return;
+          e.preventDefault();
+          const markdown = button.getAttribute('data-refs-md') ?? '';
+          if (!navigator.clipboard || !markdown) { copyFeedback(button, 'error'); return; }
+          void navigator.clipboard.writeText(markdown).then(() => {
+            play('success');
+            copyFeedback(button, 'copied');
+          }).catch(() => copyFeedback(button, 'error'));
+        });
+      }
+
+      // "volver a" de /sueldos y /presupuesto se arma desde el DOM real.
+      initRefBackLinks();
 
       // Resalta el link activo del nav tras cada navegación con View Transitions
       // (el nav persiste, así que el estado activo se recalcula en cliente).

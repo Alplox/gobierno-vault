@@ -2141,15 +2141,18 @@
 - [2026/11/20261118-9 - Ipsos: el desempleo desplaza al crimen como principal preocupación en Chile por primera vez desde 2021](src/content/events/2026/11/20261118-9.md) — 8 fuentes
 - [2026/11/20261119-1 - Carolina Rossi renuncia a la Subsecretaría de Ciencia tras semanas de tensión con Lincolao](src/content/events/2026/11/20261119-1.md) — 41 fuentes
 - [2026/11/20261119-2 - Tras la reunión con Alvarado, Lincolao defiende el MoU con OpenAI y Kast descarta problemas internos](src/content/events/2026/11/20261119-2.md) — 24 fuentes
-- [2026/11/20261119-3 - Presunta falsificación de firmas en el Senado por retiro de permisos de Órdenes y Espinoza abre investigación de la Fiscalía](src/content/events/2026/11/20261119-3.md) — 12 fuentes
+- [2026/11/20261119-3 - Presunta falsificación de firmas en el Senado por retiro de permisos de Órdenes y Espinoza abre investigación de la Fiscalía](src/content/events/2026/11/20261119-3.md) — 15 fuentes
 - [2026/11/20261120-1 - Tras la renuncia, Lincolao niega conflictos y Rossi atribuye su salida a visiones "muy distintas"](src/content/events/2026/11/20261120-1.md) — 12 fuentes
 - [2026/11/20261120-2 - Renuncian la seremi de Salud y la directora del Senama del Biobío; Gobierno acumula 62 salidas](src/content/events/2026/11/20261120-2.md) — 11 fuentes
 - [2026/11/20261120-3 - Senado despacha el Presupuesto 2027 a la Cámara tras tres jornadas: rechaza la partida de Agricultura por doble empate y Campos se niega a disculparse](src/content/events/2026/11/20261120-3.md) — 8 fuentes
 - [2026/11/20261120-4 - Desde Asia, Kast defiende a sus ministros y minimiza las ofensivas parlamentarias; en X se polariza el debate por la 'crisis' de su Gobierno](src/content/events/2026/11/20261120-4.md) — 5 fuentes
 - [2026/11/20261120-5 - Contraloría oficia a MinCiencia y da 10 días hábiles para explicar el acuerdo con OpenAI y los gastos del viaje de Lincolao](src/content/events/2026/11/20261120-5.md) — 14 fuentes
 - [2026/11/20261122-1 - Lincolao publica una columna en El Mercurio para defender el acuerdo con OpenAI y su diplomacia científico-tecnológica](src/content/events/2026/11/20261122-1.md) — 19 fuentes
+- [2026/11/20261122-2 - Criteria: aprobación de Kast sube cinco puntos al 23% y Rabat queda como el ministro peor evaluado](src/content/events/2026/11/20261122-2.md) — 5 fuentes
 - [2026/11/20261123-1 - La comisión revisora recibe 1.886 decretos de rebaja y Rabat envía a su defensa en lugar de comparecer](src/content/events/2026/11/20261123-1.md) — 16 fuentes
 - [2026/11/20261123-2 - Kast fija 100 días contra el desempleo en el décimo Consejo de Gabinete y Arenas detalla el plan en vocería](src/content/events/2026/11/20261123-2.md) — 8 fuentes
+- [2026/11/20261123-3 - Jiles afirma en Tolerancia Cero que los votos del PDG para la AC retrocedieron y que la decisión se define a último momento](src/content/events/2026/11/20261123-3.md) — 5 fuentes
+- [2026/11/20261123-4 - Estudio Nacional de Encuentro y Polarizaciones 2026: brecha política se mantiene y crece la disposición al diálogo](src/content/events/2026/11/20261123-4.md) — 5 fuentes
 - [2026/11/20261124-1 - Bassa se retracta de la 'red internacional de pedofilia' y dice que 'me expliqué mal'](src/content/events/2026/11/20261124-1.md) — 6 fuentes
 - [2026/11/20261124-2 - Arenas descarta cambios en el gabinete: 'el desempleo va a estar igual' y defiende el diseño que le acomoda al Presidente](src/content/events/2026/11/20261124-2.md) — 5 fuentes
 - [2026/11/20261125-1 - Jiles y Parisi presentan licencias médicas antes de la votación de la AC contra Rabat y Fast Check verifica el precedente de 2024](src/content/events/2026/11/20261125-1.md) — 19 fuentes

@@ -80,6 +80,8 @@ Cuerpo con wikilinks inline...
 
 Fuentes **inline** al final de la afirmacion, nunca en `## Referencias` separada. Detalle completo (medios en prosa, formato citas, `svg_backup`, cifras en disputa, votaciones con fuente oficial) en `.agents/skills/content-model/SKILL.md`.
 
+Citas **bidireccionales** en las 3 secciones de referencias (evento, `/sueldos`, `/presupuesto`): cada `[N]` salta a la lista final y la entrada correspondiente vuelve a cada ocurrencia con `↑1…↑k`. El prefijo `cite-` es común (`src/lib/citationAnchors.mjs`); el evento lo genera en SSR y las otras dos en cliente desde `[data-ref-back-host]` (`src/scripts/refBackLinksClient.js`). Las 3 comparten título "Referencias y Fuentes (N)", `CopyRefsButton.astro` y el estilo de mirrors (solo subrayado en hover). Detalle en `.agents/skills/frontend/SKILL.md` → "Referencias inline compactas".
+
 **Al escribir o leer código que parsee `.md`:** el corpus es mixto LF/CRLF (mayoría CRLF) y los wikilinks son **siempre en plural** (`[[people/]]`, `[[sources/]]`). Toda regex de frontmatter necesita `\r?` (`^---\r?\n([\s\S]*?)\r?\n---`) y todo regex de entidad acepta `[[(people|person)/…]]` + alias opcional `|Alias`. Un singular o un `\n` estricto no da error: **hace que el lector se salte el archivo en silencio** (dejó las 1.711 declaraciones del vault en 0). Detalle en `.agents/skills/data-yaml/SKILL.md` → "Lectura de archivos: CRLF y wikilinks".
 
 ## Reglas rapidas (detalle en `.agents/skills/event-rules/SKILL.md`)
