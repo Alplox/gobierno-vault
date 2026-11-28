@@ -79,6 +79,11 @@ orden_refs: [
   sii-uf-1994,
   sii-utm-1994,
   wikipedia-anexo-salario-minimo,
+  # Reajuste del sector público y evolución de las remuneraciones reales.
+  biobiochile-2025-12-17-acuerdo-reajuste-sector-publico,
+  elmostrador-2026-11-27-acuerdo-reajuste-46-contratas,
+  ine-2026-09-07-boletin-ir-icl-julio,
+  ine-2026-10-07-boletin-ir-icl-agosto,
 ]
 
 # ---------------------------------------------------------------------------
@@ -624,3 +629,84 @@ casen_2024:
     del trabajo, el ingreso autónomo y el ingreso monetario del hogar. El
     promedio del decil X es ingreso autónomo per cápita de ese subgrupo, no el
     sueldo de una persona ocupada.
+
+# ---------------------------------------------------------------------------
+# Reajuste del sector público. Los dos acuerdos se documentan en los eventos
+# 20251217-1 y 20261127-2; los tramos se transcriben tal como los publicó la
+# fuente, sin fijar días que el texto no precisa.
+reajustes_sector_publico:
+  anterior:
+    ano: 2026
+    porcentaje: 3.4
+    fecha: '2025-12-17'
+    fuente: biobiochile-2025-12-17-acuerdo-reajuste-sector-publico
+    nota: >-
+      Acuerdo de la Mesa del Sector Público con el gobierno saliente. El 3,4%
+      fue general, con 5% para las remuneraciones mínimas y bonos para los
+      trabajadores de menores ingresos.
+  vigente:
+    periodo: 2026–2027
+    porcentaje: 4.6
+    fecha: '2026-11-27'
+    tramos:
+      - { momento: diciembre de 2026, porcentaje: 2.3 }
+      - { momento: septiembre de 2027, porcentaje: 2.3 }
+    organizaciones_acuerdo: '13 de 16'
+    organizaciones_no_firmantes: 3
+    fuente: elmostrador-2026-11-27-acuerdo-reajuste-46-contratas
+    nota: >-
+      Acuerdo cerrado el 27 de noviembre de 2026 en plena negociación del
+      reajuste. El Ejecutivo se comprometió además a emitir una nueva circular
+      con criterios objetivos y a revisar individualmente las desvinculaciones
+      ya notificadas.
+
+# ---------------------------------------------------------------------------
+# Evolución reciente de las remuneraciones según los boletines del INE.
+# Todas las variaciones son en doce meses salvo `acumulado_anio`.
+remuneraciones_reales:
+  unidad: 'variación en doce meses'
+  puntos:
+    - periodo: julio de 2026
+      remuneraciones: 7.8
+      costos: 8.7
+      real: 4.1
+      acumulado_anio: 2.8
+      hora_ordinaria: 7599
+      brecha_genero: -4.9
+      fuente: ine-2026-09-07-boletin-ir-icl-julio
+    - periodo: agosto de 2026
+      remuneraciones: 7.6
+      costos: 8.3
+      real: 3.4
+      acumulado_anio: 2.2
+      hora_ordinaria: 7614
+      brecha_genero: -4.6
+      fuente: ine-2026-10-07-boletin-ir-icl-agosto
+  nota: >-
+    El Índice Real de Remuneraciones descuenta la variación del IPC. En agosto
+    los costos laborales volvieron a crecer más que las remuneraciones y el
+    índice real desaceleró desde el 4,1% de julio hasta el 3,4%.
+
+# Cierres anuales del IPC citados como contexto, no usados en los ratios.
+ipc_cierres_anuales:
+  - { ano: 2025, variacion: 3.5, fuente: ine-2026-01-08-ipc-diciembre-2025 }
+  - { ano: 2024, variacion: 4.5, fuente: latercera-pulso-ipc-diciembre-2024 }
+  - { ano: 2013, variacion: 3.0, fuente: eldinamo-2014-01-08-ipc-diciembre-2013 }
+  - { ano: 2009, variacion: -1.4, fuente: cooperativa-2010-01-07-ipc-2009-deflacion }
+
+# Topes de la Pensiones Básica Universal citados en la sección de costo de vida.
+pgu:
+  periodo: febrero de 2026
+  montos: [250275, 231732]
+  fuente: chileatiende-pgu-aumento-febrero-2026
+
+# Eventos del vault que amplían la lectura de esta página.
+eventos_relacionados:
+  - { id: '20251217-1', etiqueta: Reajuste 2026 (3,4%) }
+  - { id: '20260303-3', etiqueta: Gasto de representación }
+  - { id: '20260320-2', etiqueta: Topes de asesores de confianza }
+  - { id: '20260803-18', etiqueta: Funcionarios sobre la renta presidencial }
+  - { id: '20260907-14', etiqueta: Remuneraciones reales de julio de 2026 }
+  - { id: '20261007-10', etiqueta: Remuneraciones reales de agosto de 2026 }
+  - { id: '20260911-8', etiqueta: Contratación de jóvenes "expertos" }
+  - { id: '20261127-2', etiqueta: Acuerdo de reajuste 2026–2027 (4,6%) }

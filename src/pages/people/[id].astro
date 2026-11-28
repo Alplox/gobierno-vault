@@ -420,6 +420,7 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
       </div>
       <p class="text-xs text-base-content/80 mb-4">
         Fragmentos citados textualmente en el vault, de más reciente a más antiguo.
+        Desliza el panel: las demás se cargan solas al llegar al final.
         {citaYears.length > 1 && ` Presentes en ${citaYears.length} años distintos.`}
       </p>
 
@@ -446,26 +447,25 @@ const huerfanos = panorama.coPeople.filter((c) => !peopleRegistryIds.has(c.id)).
         </div>
       )}
 
-      <div id="pv-quote-list" class="space-y-4">
-        {ssrQuotes.map((q) => (
-          <div data-quote-group={yearOf(new Date(q.fecha))} data-year={yearOf(new Date(q.fecha))}>
-            <PersonQuoteItem quote={q} eventHref={quoteEventHref(q)} eventTitle={q.titulo} />
-          </div>
-        ))}
+      <div
+        id="pv-quote-viewport"
+        role="region"
+        aria-label="Lista de declaraciones"
+        tabindex="0"
+        class="max-h-[28rem] space-y-4 overflow-y-auto overscroll-contain pr-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+      >
+        <div id="pv-quote-list" class="space-y-4">
+          {ssrQuotes.map((q) => (
+            <div data-quote-group={yearOf(new Date(q.fecha))} data-year={yearOf(new Date(q.fecha))}>
+              <PersonQuoteItem quote={q} eventHref={quoteEventHref(q)} eventTitle={q.titulo} />
+            </div>
+          ))}
+        </div>
+        <div id="pv-quote-sentinel" class="h-px" aria-hidden="true"></div>
       </div>
       <p data-quote-empty class="hidden text-sm text-base-content/80 text-center py-6 border border-dashed border-base-300 rounded-xl">
         Ninguna declaración coincide con la búsqueda.
       </p>
-      {lazyQuotes.length > 0 && (
-        <div class="mt-4 flex justify-center">
-          <button
-            id="load-more-person-quotes"
-            class="inline-flex items-center gap-2 rounded-lg border border-base-300 bg-base-100 px-4 py-2 text-xs font-semibold text-base-content/75 hover:bg-base-200 transition-colors"
-          >
-            <span class="person-quote-more-label">Cargar más declaraciones ({n(lazyQuotes.length)} restantes)</span>
-          </button>
-        </div>
-      )}
     </section>
   )}
 

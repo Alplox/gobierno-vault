@@ -198,6 +198,10 @@ export function applyFilters() {
   if (clearBtn) clearBtn.classList.toggle('hidden', !active);
   const graph = document.getElementById('graph-container');
   if (graph) graph.style.display = active ? 'none' : '';
+  // La barra de «Orden» del mini es hermana del contenedor: sin esto quedaba
+  // visible con los filtros activos, cuando el grafo ya está oculto.
+  const graphToolbar = document.getElementById('graph-mini-toolbar');
+  if (graphToolbar) graphToolbar.style.display = active ? 'none' : '';
 
   const empty = document.getElementById('no-results');
   const root = document.getElementById('event-index-root');

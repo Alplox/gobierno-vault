@@ -116,7 +116,7 @@ import { ArrowLeft } from 'lucide-astro';
 
       const mirrors = el('span', 'flex flex-wrap items-center gap-x-1.5 gap-y-1 mt-2');
       for (const m of SOURCE_MIRRORS) {
-        const link = el('a', `text-[10px] font-medium text-base-content/80 ${m.hover} transition-colors`, m.label);
+        const link = el('a', 'text-[10px] font-medium text-base-content/80 hover:text-base-content hover:underline underline-offset-2 decoration-1 transition-colors', m.label);
         link.href = m.href(s.url);
         link.title = m.title;
         link.target = '_blank';

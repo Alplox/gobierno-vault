@@ -73,9 +73,11 @@ function quoteHTML(q) {
     `<button type="button" data-copy="apa" class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/80 bg-base-200 hover:bg-primary/15 hover:text-base-content px-2 py-1 rounded-md transition-colors" title="Copiar cita en formato APA"><svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copy-label">APA</span></button>` +
     `<button type="button" data-copy="md" class="copy-btn inline-flex items-center gap-1 text-[10px] font-medium text-base-content/80 bg-base-200 hover:bg-primary/15 hover:text-base-content px-2 py-1 rounded-md transition-colors" title="Copiar cita en formato markdown (wikilinks del vault)"><svg class="h-3 w-3 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect width="14" height="14" x="8" y="8" rx="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg><span class="copy-label">MD</span></button>` +
     `</div></div>` +
-    `<div class="flex flex-col gap-2"><blockquote class="text-sm text-base-content/80 leading-relaxed italic border-l-2 border-primary/20 pl-3">&ldquo;${quoteParrafos(
+    // quoteParrafos() ya pone las comillas dentro del primer y ultimo <p>:
+    // envolver aqui con &ldquo;/&rdquo; duplicaba el par en cada cita lazy.
+    `<div class="flex flex-col gap-2"><blockquote class="text-sm text-base-content/80 leading-relaxed italic border-l-2 border-primary/20 pl-3">${quoteParrafos(
       q.texto
-    )}&rdquo;</blockquote></div>` +
+    )}</blockquote></div>` +
     `</div>` +
     `<a href="${esc(q.href)}" class="mt-1.5 flex items-baseline gap-1.5 text-xs text-base-content/80 hover:text-base-content transition-colors group" title="${esc(
       q.titulo
@@ -87,12 +89,15 @@ function quoteHTML(q) {
 }
 
 const ON = ['bg-primary', 'text-primary-content'];
-const OFF = ['bg-base-200', 'text-base-content/80'];
+const OFF = ['bg-base-200', 'text-base-content/80', 'hover:bg-base-300'];
 
+// Ojo: classList.toggle(...ON, on) NO funciona con varias clases: el spread
+// pasa el segundo token como `force` y el estado se ignora (todos los botones
+// acababan con bg-primary). remove/add explícitos mantienen un solo estado.
 function markPressed(btn, on) {
   btn.setAttribute('aria-pressed', String(on));
-  btn.classList.toggle(...ON, on);
-  btn.classList.toggle(...OFF, !on);
+  btn.classList.remove(...ON, ...OFF);
+  btn.classList.add(...(on ? ON : OFF));
 }
 
 const CHIP_OFF = ['bg-base-100', 'text-base-content/80', 'ring-base-300', 'hover:bg-base-200'];
@@ -113,44 +118,91 @@ function mkEl(html) {
 
 // --- Declaraciones bajo demanda -------------------------------------------
 // El SSR pinta solo las primeras 12; el resto viaja en #person-quotes-data.
-// Buscar o filtrar por año vuelca el resto, porque si no el resultado
-// dependería de cuántas se hayan cargado.
+// El panel (#pv-quote-viewport) tiene altura fija: un IntersectionObserver con
+// root = panel carga tandas cuando el sentinel entra en su zona, sin botón y
+// sin que la sección crezca. Buscar o filtrar por año vuelca el resto, porque
+// si no el resultado dependería de cuántas se hayan cargado.
 //
-// El dataset se cachea por NODO, no solo por módulo: en la carga inicial el init
-// corre dos veces (llamada directa + astro:page-load) y en cada navegación con
-// View Transitions el <script> llega nuevo. Si se resetease el contador en cada
-// init, el segundo init volvería a pintar desde 0 y duplicaría las citas.
+// El dataset y el observer se cachean por NODO, no solo por módulo: en la carga
+// inicial el init corre dos veces (llamada directa + astro:page-load) y en cada
+// navegación con View Transitions el <script> y el sentinel llegan nuevos. Si se
+// resetease el contador en cada init, el segundo volvería a pintar desde 0.
 let quoteScript = null;
 let quoteData = null;
 let quotesPainted = 0;
+let quoteObserver = null;
+let quoteObserverNode = null;
+
+function ensureQuoteData() {
+  const script = document.getElementById('person-quotes-data');
+  if (script === quoteScript) return;
+  quoteScript = script;
+  try {
+    quoteData = script ? JSON.parse(script.textContent || '[]') : [];
+  } catch {
+    quoteData = [];
+  }
+  quotesPainted = 0;
+}
+
+function syncQuoteSentinel() {
+  ensureQuoteData();
+  const sentinel = document.getElementById('pv-quote-sentinel');
+  const done = quotesPainted >= (quoteData?.length ?? 0);
+  if (sentinel) {
+    sentinel.hidden = done;
+    sentinel.style.display = done ? 'none' : '';
+  }
+  if (done && quoteObserver) {
+    quoteObserver.disconnect();
+    quoteObserver = null;
+    quoteObserverNode = null;
+  }
+}
 
 function fillQuotes(all) {
   const list = document.getElementById('pv-quote-list');
   if (!list) return;
-  const script = document.getElementById('person-quotes-data');
-  if (script !== quoteScript) {
-    quoteScript = script;
-    try {
-      quoteData = script ? JSON.parse(script.textContent || '[]') : [];
-    } catch {
-      quoteData = [];
-    }
-    quotesPainted = 0;
-  }
+  ensureQuoteData();
   const BATCH = 12;
   const target = all ? quoteData.length : Math.min(quoteData.length, quotesPainted + BATCH);
-  if (target <= quotesPainted) return;
-  const frag = document.createDocumentFragment();
-  for (let i = quotesPainted; i < target; i++) frag.appendChild(mkEl(quoteHTML(quoteData[i])));
-  list.appendChild(frag);
-  quotesPainted = target;
-  const btn = document.getElementById('load-more-person-quotes');
-  if (btn) {
-    const done = quotesPainted >= quoteData.length;
-    btn.classList.toggle('hidden', done);
-    const label = btn.querySelector('.person-quote-more-label');
-    if (label) label.textContent = `Cargar más declaraciones (${quoteData.length - quotesPainted} restantes)`;
+  if (target > quotesPainted) {
+    const frag = document.createDocumentFragment();
+    for (let i = quotesPainted; i < target; i++) frag.appendChild(mkEl(quoteHTML(quoteData[i])));
+    list.appendChild(frag);
+    quotesPainted = target;
   }
+  syncQuoteSentinel();
+}
+
+function setupQuoteAutoLoad() {
+  const viewport = document.getElementById('pv-quote-viewport');
+  const sentinel = document.getElementById('pv-quote-sentinel');
+  if (!viewport || !sentinel) return;
+  if (quoteObserverNode === sentinel) return;
+  quoteObserver?.disconnect();
+  quoteObserver = null;
+  quoteObserverNode = sentinel;
+  syncQuoteSentinel();
+  if (quotesPainted >= (quoteData?.length ?? 0)) {
+    quoteObserverNode = null;
+    return;
+  }
+  if (typeof IntersectionObserver === 'undefined') {
+    fillQuotes(true);
+    repaintQuotes();
+    return;
+  }
+  quoteObserver = new IntersectionObserver(
+    (entries) => {
+      if (!entries.some((e) => e.isIntersecting)) return;
+      const painted = quotesPainted;
+      fillQuotes(false);
+      if (quotesPainted > painted) repaintQuotes();
+    },
+    { root: viewport, rootMargin: '200px 0px' }
+  );
+  quoteObserver.observe(sentinel);
 }
 
 /** Repinta las declaraciones aplicando año + búsqueda ya activos. */
@@ -355,14 +407,7 @@ function initQuoteFilters() {
     }
   }
 
-  // --- Botón "cargar más declaraciones" (las citas no usan scroll infinito:
-  //     son pocas y su carga es barata; el botón da control explícito) ---
-  const moreQuotes = document.getElementById('load-more-person-quotes');
-  if (moreQuotes && !moreQuotes.__gvWired) {
-    moreQuotes.__gvWired = true;
-    moreQuotes.addEventListener('click', () => {
-      fillQuotes(false);
-      repaintQuotes();
-    });
-  }
+  // Carga automática dentro del panel de altura fija. El guard por nodo evita
+  // dos observers en la carga inicial y los reconecta tras View Transitions.
+  setupQuoteAutoLoad();
 }

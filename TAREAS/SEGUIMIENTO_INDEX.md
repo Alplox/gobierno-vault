@@ -3,11 +3,11 @@
 > Generado por `pnpm run generate-seguimiento-index` desde `TAREAS/SEGUIMIENTO/*.md`. No editar a mano.
 > Para retomar: `rg "S-2026-042" TAREAS/SEGUIMIENTO_INDEX.md` o `read TAREAS/SEGUIMIENTO/2026.md`.
 
-**Total tareas:** 352
+**Total tareas:** 349
 
-**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 5 · 2021: 1 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 277 · 2027: 1 · TRANS: 20
+**Por año:** 2009: 3 · 2010: 2 · 2012: 1 · 2015: 2 · 2019: 15 · 2020: 1 · 2021: 1 · 2022: 3 · 2023: 3 · 2024: 4 · 2025: 15 · 2026: 278 · 2027: 1 · TRANS: 20
 
-**Por tipo:** A: 17 · S: 322 · V: 13 (S=seguimiento, A=ampliación, V=verificación)
+**Por tipo:** A: 17 · S: 319 · V: 13 (S=seguimiento, A=ampliación, V=verificación)
 
 | ID | Estado | Fecha | Bucket | Título | Evento(s) | Origen |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -51,10 +51,6 @@
 | S-2019-013 | ⬜ | 2026-08-27 | Eventos nov-2019 — diversificación de fuentes y án | Columnas de opinión (El Mostrador, The Clinic, CIPER, nov-2019): buscar columnas de analistas sobre la acusación cons... | — | Origen: catálogo de sitemaps (grep `'opinion' sitemaps/theclinic/2019.jsonl |
 | S-2019-015 | 🟡 | 2019-11-14 | Eventos nov-2019 — diversificación de fuentes y án | Acuerdo constitucional: debate por los 3 puntos (2019-11-14/26): el desacuerdo sobre composición del órgano constituy... | `20191126-1` | Origen: <https://example.com/pendiente-revisar> |
 | S-2019-016 | ⬜ | 2019-11-21 | Eventos nov-2019 — diversificación de fuentes y án | Perdigones con plomo: estudio de la U. Austral (2019-11-21): la confirmación científica de plomo en perdigones de Car... | — | Origen: <https://example.com/pendiente-revisar> |
-| S-2020-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Mutilados oculares — seguimiento: el documental de The Guardian (evento 20201019-1) documentó la búsqueda de justicia... | `20201019-1` | Origen: <https://example.com/pendiente-revisar> |
-| S-2020-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Protestas de mayo 2020 — contexto: el evento 20200523-1 cubre el rebrote de las movilizaciones en pandemia; falta ver... | `20200523-1` | Origen: <https://example.com/pendiente-revisar> |
-| S-2020-003 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Plebiscito de entrada (25-oct-2020) y Convención (2021): ya cubiertos (20201025-1, 20210515-1); falta registrar el pl... | `20201025-1` `20210515-1` | Origen: <https://example.com/pendiente-revisar> |
-| S-2020-004 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Paro de camioneros de agosto de 2020 (era Piñera) → evento creado 20200828-1 (bloqueos, rechazo a Ley de Seguridad de... | `20200828-1` | Origen: <https://example.com/pendiente-revisar> |
 | S-2020-005 | ⬜ | 2020-01-11 | Patrón "decir y aclarar" — dichos de Kast que el g | pendiente: días pico del canal sin evento propio (origen: <https://t.me/s/ArchivandoChile>, validar con prensa antes de... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-2021-001 | ⬜ | 2023-01-18 | Sugerencias pendientes (para no perderlas) | Incendios del Metro 18-O / dato Bassaletti — seguimiento (eventos 20211016-1, 20211125-1, 20220502-1, 20230118-1, 202... | `20211016-1` `20211125-1` `20220502-1` `20230118-1` `20241018-1` | Origen: <https://www.camara.cl/verDoc.aspx?prmID=71458&prmTipo=INFORME_COMISION> |
 | S-2022-002 | ⬜ | 2026-08-10 | Página /gabinete (9-ago-2026) — feature + gaps de | Casos de corrupción municipal pendientes de la lista de corrupcion_chile (sin evento aún, para tandas futuras): Virgi... | — | Origen: CSV de corrupcion_chile + investigación web (10-ago-2026). |
@@ -331,6 +327,7 @@
 | S-2026-277 | ⬜ | 2026-11-08 | Transparencia CPLT — seguimiento | Cumplimiento del plazo único y extraordinario de cinco días hábiles de la Resolución Exenta E438 (34 organismos; PDI rol C2267-26 por inconformidad, vencimiento 25-sep-2026): si el Consejo remitió los antecedentes a la Unidad de Sumarios, si abrió investigaciones sumarias o sumarios, a qué órganos y con qué resultado, y si algún afectado reclamó ante la Corte Suprema | `20260915-4` | Origen: <https://www.portaltransparencia.cl/PortalPdT/documents/10179/62801/Resolucion+Exenta+E438+sesi%C3%B3n+1632+de+01.09.26+Plazo.pdf/384ed64a-9aaf-4f3f-b73f-2609ba2e2a36> |
 | S-2026-281 | ⬜ | 2026-11-17 | Mesa Permanente de Data Centers — seguimiento | Resultado de la primera sesión del comité técnico del 16-nov-2026 (sin acta ni comunicado público al 17-nov) y de la presentación de avances al Comité Económico de Ministros prevista para el 26-nov-2026 | `20261109-2` | Origen: <https://www.cnnchile.com/pais/ministra-lincolao-y-jorge-alessandri-anuncian-creacion-de-mesa-permanente-para-impulsar-los-data-centers-en-chile/> |
 | S-2026-282 | ⬜ | 2026-11-18 | SICH — respuesta a oficio | Oficio de Manouchehri a MinCiencia/ANID por la lista de socios de la SICH: verificado al 18-nov que la organización lo pidió y seguía sin respuesta, sin rastro de oficio enviado ni de respuesta formal sobre autoría del documento y base legal | `20261118-1` | Origen: <https://www.biobiochile.cl/noticias/nacional/chile/2026/11/18/temor-a-represalias-y-presunta-vulneracion-de-datos-la-denuncia-de-investigadores-contra-lincolao.shtml> |
+| S-2026-284 | ⬜ | 2026-11-27 | Trauma ocular | Las siete condenas oculares sin ficha: la Fiscalía reportó 11 condenas por 230 víctimas con compromiso visual y solo cuatro están identificadas con nombre y pena | — | Origen: <https://www.biobiochile.cl/especial/bbcl-investiga/noticias/articulos/2026/08/20/11-condenas-por-230-victimas-oculares-las-cifras-de-fiscalia-por-violencia-institucional-en-estallido.shtml> |
 | S-2027-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Gremios y DDHH — seguimiento CIDH: verificar si la Comisión Interamericana adopta medidas cautelares o resoluciones t... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-001 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Indulto de Maturana — seguimiento: la respuesta oficial del Ejecutivo (Ministerio de Justicia) a la resolución de la ... | — | Origen: <https://example.com/pendiente-revisar> |
 | S-TRANS-002 | ⬜ | 2026-08-27 | Sugerencias pendientes (para no perderlas) | Comisión de Ética del Senado: el análisis del cruce Flores-Campillai puede terminar en sanción o admonición; registra... | — | Origen: <https://example.com/pendiente-revisar> |

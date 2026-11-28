@@ -17,9 +17,16 @@ import { ArrowLeft } from 'lucide-astro';
 </Base>
 
 <script>
+  import { TIPO_LABELS } from '../lib/eventTypes';
+
   type Titular = {
     nombre: string; personId: string; cargo: string; periodo: string;
     actual: boolean; biministro: boolean; subrogante: boolean;
+  };
+  type OrgEvent = {
+    id: string; titulo: string; href: string; ts: number;
+    year: number; month: number; fechaStr: string;
+    tipo: string; temas: string[]; etiquetas: string[]; search: string;
   };
   type Org = {
     id: string; nombre: string; tipo: string; pais: string; bio: string;
@@ -27,8 +34,15 @@ import { ArrowLeft } from 'lucide-astro';
   };
   type Payload = {
     data: Org[];
-    eventsById: Record<string, { titulo: string; href: string }>;
+    eventsById: Record<string, OrgEvent>;
+    topics: Record<string, string>;
   };
+  type State = { q: string; tipos: string[]; tema: string; year: string; order: 'desc' | 'asc' };
+
+  const MESES = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+  const FILTER_KEYS = ['q', 'tipo', 'tema', 'year', 'orden'];
+  const CHIP_ON = 'bg-primary text-primary-content';
+  const CHIP_OFF = 'bg-base-200 text-base-content/80 hover:bg-base-300';
 
   let cached: Payload | null = null;
   let pending: Promise<Payload> | null = null;
@@ -55,6 +69,271 @@ import { ArrowLeft } from 'lucide-astro';
 
   function badge(text: string, cls: string) {
     return el('span', `ml-2 text-[10px] font-bold uppercase tracking-wide px-1.5 py-0.5 rounded-full ${cls}`, text);
+  }
+
+  function norm(s: string) {
+    return String(s ?? '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  }
+
+  // SSG: Astro.url.searchParams no existe en runtime. El estado se lee de la URL
+  // al renderizar y se escribe con replaceState al cambiar cualquier control.
+  function readState(): State {
+    const p = new URLSearchParams(location.search);
+    return {
+      q: p.get('q') ?? '',
+      tipos: p.getAll('tipo'),
+      tema: p.get('tema') ?? '',
+      year: p.get('year') ?? '',
+      order: p.get('orden') === 'asc' ? 'asc' : 'desc',
+    };
+  }
+
+  function writeState(s: State) {
+    const p = new URLSearchParams(location.search);
+    for (const k of FILTER_KEYS) p.delete(k);
+    if (s.q.trim()) p.set('q', s.q.trim());
+    for (const t of s.tipos) p.append('tipo', t);
+    if (s.tema) p.set('tema', s.tema);
+    if (s.year) p.set('year', s.year);
+    if (s.order === 'asc') p.set('orden', 'asc');
+    const qs = p.toString();
+    history.replaceState(null, '', `${location.pathname}${qs ? `?${qs}` : ''}${location.hash}`);
+  }
+
+  function setPressed(b: HTMLButtonElement, on: boolean) {
+    b.setAttribute('aria-pressed', String(on));
+    b.className = `rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${on ? CHIP_ON : CHIP_OFF}`;
+  }
+
+  function chip(text: string, pressed: boolean, onClick: () => void) {
+    const b = el('button', `rounded-md px-2.5 py-1 text-xs font-medium transition-colors ${pressed ? CHIP_ON : CHIP_OFF}`, text) as HTMLButtonElement;
+    b.type = 'button';
+    b.setAttribute('aria-pressed', String(pressed));
+    b.addEventListener('click', onClick);
+    return b;
+  }
+
+  function mountEvents(root: HTMLElement, o: Org, payload: Payload) {
+    const events = (o.eventIds ?? [])
+      .map((eid) => payload.eventsById[eid.split('/').pop() ?? eid])
+      .filter((e): e is OrgEvent => Boolean(e))
+      .sort((a, b) => b.ts - a.ts);
+
+    const state = readState();
+    const section = el('section', 'mt-8');
+    const header = el('div', 'mb-4 flex items-center justify-between gap-3 flex-wrap');
+    header.appendChild(el('h2', 'text-lg font-bold text-base-content', `Eventos relacionados (${events.length})`));
+    const verEn = el('a', 'inline-flex items-center gap-1 text-xs font-medium text-base-content/80 hover:text-base-content transition-colors', 'Ver en /events');
+    verEn.href = `/events?org=${encodeURIComponent(o.id)}`;
+    header.appendChild(verEn);
+    section.appendChild(header);
+
+    if (!events.length) {
+      section.appendChild(el('p', 'text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', 'No hay eventos registrados para esta organización.'));
+      root.appendChild(section);
+      return;
+    }
+
+    section.appendChild(el('p', 'mb-4 text-xs text-base-content/80', 'Los filtros se combinan entre sí. Los años se pueden colapsar y el orden invierte la cronología.'));
+
+    const byTipo = new Map<string, number>();
+    const byTema = new Map<string, number>();
+    const byYear = new Map<string, number>();
+    for (const e of events) {
+      byTipo.set(e.tipo, (byTipo.get(e.tipo) ?? 0) + 1);
+      for (const t of e.temas) byTema.set(t, (byTema.get(t) ?? 0) + 1);
+      byYear.set(String(e.year), (byYear.get(String(e.year)) ?? 0) + 1);
+    }
+
+    const filters = el('div', 'mb-4 flex flex-col gap-3 rounded-xl bg-base-100 p-4 border-0 shadow-[var(--shadow-border)]');
+
+    // Búsqueda
+    const searchRow = el('div', 'flex flex-wrap items-end gap-2');
+    const searchCol = el('div', 'min-w-[13rem] flex-1');
+    const label = el('label', 'mb-1.5 block text-xs font-semibold text-base-content/80', 'Buscar en sus eventos');
+    label.htmlFor = 'org-event-search';
+    searchCol.appendChild(label);
+    const input = el('input', 'w-full rounded-lg border border-base-300 bg-base-200 px-3 py-1.5 text-sm transition-colors focus:border-primary focus:bg-base-100 focus:ring-2 focus:ring-primary') as HTMLInputElement;
+    input.type = 'search';
+    input.id = 'org-event-search';
+    input.placeholder = 'Título, tema, etiqueta o medio';
+    input.value = state.q;
+    searchCol.appendChild(input);
+    searchRow.appendChild(searchCol);
+    const reset = el('button', 'hidden items-center gap-1.5 rounded-lg bg-base-200 px-3 py-2 text-sm font-medium text-base-content/80 transition-colors hover:bg-base-300', 'Limpiar') as HTMLButtonElement;
+    reset.type = 'button';
+    searchRow.appendChild(reset);
+    filters.appendChild(searchRow);
+
+    // Tipo (multi-toggle)
+    const tipoButtons = new Map<string, HTMLButtonElement>();
+    if (byTipo.size) {
+      const block = el('div');
+      block.appendChild(el('span', 'mb-1.5 block text-xs font-semibold text-base-content/80', 'Tipo (clic para combinar)'));
+      const group = el('div', 'flex flex-wrap gap-1.5');
+      group.setAttribute('role', 'group');
+      group.setAttribute('aria-label', 'Filtrar eventos por tipo');
+      const tipos = [...byTipo.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      for (const [id, n] of tipos) {
+        const b = chip(`${TIPO_LABELS[id] ?? id} (${n})`, state.tipos.includes(id), () => {
+          const i = state.tipos.indexOf(id);
+          if (i >= 0) state.tipos.splice(i, 1);
+          else state.tipos.push(id);
+          apply();
+        });
+        tipoButtons.set(id, b);
+        group.appendChild(b);
+      }
+      block.appendChild(group);
+      filters.appendChild(block);
+    }
+
+    // Tema (unico)
+    const temaButtons = new Map<string, HTMLButtonElement>();
+    if (byTema.size) {
+      const block = el('div');
+      block.appendChild(el('span', 'mb-1.5 block text-xs font-semibold text-base-content/80', 'Tema'));
+      const group = el('div', 'flex flex-wrap gap-1.5');
+      group.setAttribute('role', 'group');
+      group.setAttribute('aria-label', 'Filtrar eventos por tema');
+      const all = chip('Todos', state.tema === '', () => { state.tema = ''; apply(); });
+      temaButtons.set('', all);
+      group.appendChild(all);
+      const temas = [...byTema.entries()].sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      for (const [id, n] of temas) {
+        const b = chip(`${payload.topics[id] ?? id} (${n})`, state.tema === id, () => { state.tema = id; apply(); });
+        temaButtons.set(id, b);
+        group.appendChild(b);
+      }
+      block.appendChild(group);
+      filters.appendChild(block);
+    }
+
+    // Año (unico)
+    const yearButtons = new Map<string, HTMLButtonElement>();
+    if (byYear.size) {
+      const block = el('div');
+      block.appendChild(el('span', 'mb-1.5 block text-xs font-semibold text-base-content/80', 'Año'));
+      const group = el('div', 'flex flex-wrap gap-1.5');
+      group.setAttribute('role', 'group');
+      group.setAttribute('aria-label', 'Filtrar eventos por año');
+      const all = chip('Todos', state.year === '', () => { state.year = ''; apply(); });
+      yearButtons.set('', all);
+      group.appendChild(all);
+      const years = [...byYear.entries()].sort((a, b) => b[0].localeCompare(a[0]));
+      for (const [year, n] of years) {
+        const b = chip(`${year} (${n})`, state.year === year, () => { state.year = year; apply(); });
+        yearButtons.set(year, b);
+        group.appendChild(b);
+      }
+      block.appendChild(group);
+      filters.appendChild(block);
+    }
+
+    // Orden
+    const orderLabel = el('label', 'flex items-center gap-2 text-xs font-semibold text-base-content/80', 'Orden');
+    const select = el('select', 'rounded-lg border border-base-300 bg-base-200 px-2 py-1 text-sm') as HTMLSelectElement;
+    for (const [value, text] of [['desc', 'Más recientes primero'], ['asc', 'Más antiguos primero']]) {
+      const opt = el('option', '', text) as HTMLOptionElement;
+      opt.value = value;
+      select.appendChild(opt);
+    }
+    select.value = state.order;
+    orderLabel.appendChild(select);
+    filters.appendChild(orderLabel);
+
+    const count = el('p', 'text-xs text-base-content/80', '') as HTMLParagraphElement;
+    count.setAttribute('role', 'status');
+    count.setAttribute('aria-live', 'polite');
+    filters.appendChild(count);
+    section.appendChild(filters);
+
+    const gridWrap = el('div', 'space-y-6');
+    const empty = el('p', 'hidden text-sm text-base-content/80 bg-base-100 p-12 rounded-xl border border-dashed border-base-300 text-center', 'No se encontraron eventos con los filtros seleccionados.');
+    section.appendChild(gridWrap);
+    section.appendChild(empty);
+
+    input.addEventListener('input', () => { state.q = input.value; apply(); });
+    select.addEventListener('change', () => { state.order = select.value === 'asc' ? 'asc' : 'desc'; apply(); });
+    reset.addEventListener('click', () => {
+      state.q = ''; state.tipos = []; state.tema = ''; state.year = ''; state.order = 'desc';
+      input.value = ''; select.value = 'desc';
+      apply();
+    });
+
+    function apply() {
+      const q = norm(state.q.trim());
+      const shown = events.filter((e) =>
+        (!q || e.search.includes(q)) &&
+        (state.tipos.length === 0 || state.tipos.includes(e.tipo)) &&
+        (!state.tema || e.temas.includes(state.tema)) &&
+        (!state.year || String(e.year) === state.year)
+      );
+
+      // Conserva qué años estaba abiertos antes de repintar.
+      const renderedYears = [...gridWrap.querySelectorAll<HTMLDetailsElement>('details[data-year]')];
+      const openYears = new Set(renderedYears.filter((d) => d.open).map((d) => d.dataset.year));
+      const openAll = renderedYears.length > 0 && openYears.size === renderedYears.length;
+      gridWrap.replaceChildren();
+      empty.classList.toggle('hidden', shown.length > 0);
+      count.textContent = `${shown.length} de ${events.length} eventos`;
+      reset.classList.toggle('hidden', !state.q && !state.tipos.length && !state.tema && !state.year);
+      for (const [id, b] of tipoButtons) setPressed(b, state.tipos.includes(id));
+      for (const [id, b] of temaButtons) setPressed(b, (state.tema || '') === id);
+      for (const [id, b] of yearButtons) setPressed(b, state.year === id);
+
+      const yearsMap = new Map<number, Map<number, OrgEvent[]>>();
+      for (const e of shown) {
+        let months = yearsMap.get(e.year);
+        if (!months) { months = new Map(); yearsMap.set(e.year, months); }
+        let arr = months.get(e.month);
+        if (!arr) { arr = []; months.set(e.month, arr); }
+        arr.push(e);
+      }
+      const asc = state.order === 'asc';
+      const yearKeys = [...yearsMap.keys()].sort((a, b) => (asc ? a - b : b - a));
+      for (const year of yearKeys) {
+        const months = yearsMap.get(year)!;
+        const total = [...months.values()].reduce((n, arr) => n + arr.length, 0);
+        const details = el('details', 'group/year') as HTMLDetailsElement;
+        details.dataset.year = String(year);
+        details.open = openAll || openYears.size === 0 || openYears.has(String(year));
+        const summary = el('summary', 'flex cursor-pointer list-none items-center gap-2 border-b-2 border-base-300 py-2 [&::-webkit-details-marker]:hidden');
+        const chevron = el('span', 'inline-flex h-4 w-4 shrink-0 text-base-content/40 transition-transform duration-200 group-open/year:rotate-180');
+        chevron.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>';
+        summary.appendChild(chevron);
+        summary.appendChild(el('span', 'text-lg font-bold tracking-tight text-base-content', String(year)));
+        summary.appendChild(el('span', 'text-xs text-base-content/80', `${total} ${total === 1 ? 'evento' : 'eventos'}`));
+        details.appendChild(summary);
+
+        const inner = el('div', 'pt-4');
+        const monthKeys = [...months.keys()].sort((a, b) => (asc ? a - b : b - a));
+        for (const month of monthKeys) {
+          const arr = months.get(month)!.sort((a, b) => (asc ? a.ts - b.ts : b.ts - a.ts));
+          const mSection = el('section', 'mb-8');
+          mSection.appendChild(el('h2', 'mb-3 flex items-center gap-2 text-sm font-semibold uppercase tracking-wide text-base-content/80',
+            `${MESES[month - 1] ?? ''} ${year} · ${arr.length} ${arr.length === 1 ? 'evento' : 'eventos'}`));
+          const mGrid = el('div', 'grid gap-4');
+          for (const e of arr) {
+            const a = el('a', 'block bg-base-100 p-4 rounded-xl border-0 shadow-[var(--shadow-border)] hover:shadow-md transition-shadow') as HTMLAnchorElement;
+            a.href = e.href;
+            if (e.fechaStr) a.appendChild(el('span', 'block text-xs text-base-content/80', e.fechaStr));
+            a.appendChild(el('span', 'block font-semibold text-base-content mt-0.5', e.titulo));
+            if (e.tipo) a.appendChild(el('span', 'inline-block mt-2 rounded-md bg-base-200 px-2 py-0.5 text-[10px] font-semibold text-base-content/80', TIPO_LABELS[e.tipo] ?? e.tipo));
+            mGrid.appendChild(a);
+          }
+          mSection.appendChild(mGrid);
+          inner.appendChild(mSection);
+        }
+        details.appendChild(inner);
+        gridWrap.appendChild(details);
+      }
+
+      writeState(state);
+    }
+
+    apply();
+    root.appendChild(section);
   }
 
   async function render() {
@@ -106,8 +385,8 @@ import { ArrowLeft } from 'lucide-astro';
     }
 
     if (o.titulares.length) {
-      const section = el('section', 'mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]');
-      section.appendChild(el('h2', 'text-lg font-bold text-base-content mb-4', 'Titulares de la organización'));
+      const titulares = el('section', 'mb-8 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]');
+      titulares.appendChild(el('h2', 'text-lg font-bold text-base-content mb-4', 'Titulares de la organización'));
       const ul = el('ul', 'space-y-3');
       for (const a of o.titulares) {
         const li = el('li', 'flex items-start gap-3');
@@ -125,26 +404,11 @@ import { ArrowLeft } from 'lucide-astro';
         li.appendChild(div);
         ul.appendChild(li);
       }
-      section.appendChild(ul);
-      root.appendChild(section);
+      titulares.appendChild(ul);
+      root.appendChild(titulares);
     }
 
-    const section = el('section', 'mt-8');
-    const related = (o.eventIds ?? [])
-      .map((eid) => payload.eventsById[eid.split('/').pop() ?? eid])
-      .filter(Boolean);
-    section.appendChild(el('h2', 'text-lg font-bold text-base-content mb-4', `Eventos relacionados (${related.length})`));
-    const grid = el('div', 'grid gap-4');
-    for (const ev of related) {
-      const a = el('a', 'block bg-base-100 p-4 rounded-xl border-0 shadow-[var(--shadow-border)] hover:shadow-md transition-shadow font-semibold text-base-content', ev.titulo);
-      a.href = ev.href;
-      grid.appendChild(a);
-    }
-    if (related.length === 0) {
-      grid.appendChild(el('p', 'text-sm text-base-content/80 bg-base-100 p-8 rounded-xl border border-dashed border-base-300 text-center', 'No hay eventos registrados para esta organización.'));
-    }
-    section.appendChild(grid);
-    root.appendChild(section);
+    mountEvents(root, o, payload);
   }
 
   render();

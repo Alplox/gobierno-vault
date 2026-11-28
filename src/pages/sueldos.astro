@@ -3,7 +3,9 @@ import Base from '../layouts/Base.astro';
 import SRef from '../components/sueldos/SRef.astro';
 import ShareButtons from '../components/ShareButtons.astro';
 import SourceMirrors from '../components/SourceMirrors.astro';
-import { DollarSign, Scale, TrendingUp, BookOpen, ExternalLink } from 'lucide-astro';
+import CopyRefsButton from '../components/CopyRefsButton.astro';
+import { buildReferencesMarkdownFrom } from '../lib/eventMarkdown';
+import { DollarSign, Scale, TrendingUp, BookOpen, ExternalLink, ListTree, ChevronUp, ChevronDown } from 'lucide-astro';
 import { getSueldos } from '../lib/sueldos';
 
 // Todos los datos viven en src/data/sueldos.yaml; los valores derivados (ratios,
@@ -19,6 +21,7 @@ const {
   serie_registro_publico,
 } = d;
 const { formatCLP, pctDiff } = d;
+const refsMd = buildReferencesMarkdownFrom(fuentes.map((f) => ({ titulo: f.titulo, url: f.url, medio: f.medio })));
 const {
   ratios,
   sueldosAjustados,
@@ -43,6 +46,12 @@ const esi = d.ingresos_esi;
 const costoVida = d.costo_vida;
 const imm = d.imm_2026;
 const casen = d.casen_2024;
+const reajustes = d.reajustes_sector_publico;
+const remuneracionesReales = d.remuneraciones_reales;
+const cierresAnuales = d.ipc_cierres_anuales;
+const pgu = d.pgu;
+const eventosRelacionados = d.eventos_relacionados;
+const boric = d.presidentes.find((p) => p.gobierno === 'Boric') ?? d.presidentes[0];
 const ipcDestino = d.ipc.mes_referencia;
 const [ipcYear, ipcMonth] = ipcDestino.split('-').map(Number);
 const MESES = [
@@ -116,7 +125,22 @@ const umbralesCostoVida = [
 ---
 
 <Base title="Sueldos y brecha salarial">
-  <article class="max-w-4xl mx-auto">
+  <div
+    id="gv-sueldos-shell"
+    class="gv-event-shell"
+    data-toc-contexto="topes,segundo-piso,segundo-piso-julio,autoridades,remuneraciones-reales,reajustes,legal,fuentes"
+  >
+    <aside class="gv-event-toc" aria-label="Índice de contenidos">
+      <div class="gv-event-toc-sticky not-prose">
+        <div class="mb-2 flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/80">
+          <ListTree class="h-3.5 w-3.5 shrink-0" />
+          En esta página
+        </div>
+        <nav id="gv-sueldos-toc-list" class="gv-event-toc-list" aria-label="Secciones de la página"></nav>
+      </div>
+    </aside>
+
+    <article class="gv-event-body max-w-4xl mx-auto">
     <header class="mb-8">
       <div class="flex items-center gap-2 mb-1">
         <DollarSign class="h-6 w-6 text-base-content shrink-0" />
@@ -131,7 +155,7 @@ const umbralesCostoVida = [
       <ShareButtons url={new URL('/sueldos', Astro.site).href} title="Sueldos y brecha salarial" />
     </div>
 
-    <section id="brecha" class="mb-10 bg-base-100 p-5 sm:p-6 rounded-2xl border border-primary/20 shadow-[var(--shadow-border)]">
+    <section id="brecha" class="mb-10 scroll-mt-20 bg-base-100 p-5 sm:p-6 rounded-2xl border border-primary/20 shadow-[var(--shadow-border)]">
       <div class="flex flex-wrap items-start justify-between gap-4 mb-5">
         <div class="max-w-2xl">
           <p class="text-xs font-semibold uppercase tracking-[0.18em] text-base-content mb-2">Brecha en una mirada</p>
@@ -189,7 +213,7 @@ const umbralesCostoVida = [
       </p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="presidentes" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <Scale class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Sueldo bruto del Presidente por gobierno</h2>
@@ -243,7 +267,7 @@ const umbralesCostoVida = [
       </p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="ratios" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">¿Cuántos ingresos mínimos contemporáneos?</h2>
@@ -270,20 +294,21 @@ const umbralesCostoVida = [
         })}
       </div>
       <div class="mt-4 p-3 rounded-lg bg-base-200 border border-base-300 text-sm text-base-content/80">
-        El último registro de Kast equivale a <span class="font-semibold">{fmtDecimal(brecha.presidente.veces_imm)} veces</span> el ingreso mínimo bruto de {formatCLP(imm.categorias[0].monto)} vigente desde {fmtFecha(imm.desde)}. La dieta legal ({formatCLP(legalDiet)}) habría sido {fmtDecimal(ratioLegalKast)} veces el mínimo vigente en marzo de 2026. La base observada de Boric (~$7 millones) equivalía a <span class="font-semibold">{ratioBoricVecesRedondeado} veces</span> el mínimo de 2025. En la década de 2010 el rango fue de {ratio2010sTexto.min} a {ratio2010sTexto.max} ({ratio2010sTexto.detalle}); en 2006–2010 llegó a {ratioBacheletITexto}.
+        El último registro de Kast equivale a <span class="font-semibold">{fmtDecimal(brecha.presidente.veces_imm)} veces</span> el ingreso mínimo bruto de {formatCLP(imm.categorias[0].monto)} vigente desde {fmtFecha(imm.desde)}. La dieta legal ({formatCLP(legalDiet)}) habría sido {fmtDecimal(ratioLegalKast)} veces el mínimo vigente en marzo de 2026. La base observada de Boric ({formatCLP(boric.sueldo)}) equivalía a <span class="font-semibold">{ratioBoricVecesRedondeado} veces</span> el mínimo de 2025. En la década de 2010 el rango fue de {ratio2010sTexto.min} a {ratio2010sTexto.max} ({ratio2010sTexto.detalle}); en 2006–2010 llegó a {ratioBacheletITexto}.
       </div>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="indicadores" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Indicadores de referencia por gobierno</h2>
       </div>
       <p class="text-sm text-base-content/80 mb-4">
-        UTM y UF corresponden a enero del primer año del mandato. Para los años 1994 y 2000 se contrastan con las series históricas del SII <SRef id="sii-utm-1994" /><SRef id="sii-uf-1994" />. El IPC se calcula entre dos índices mensuales del BDE, <em>(índice final ÷ índice inicial − 1)</em>; no es una suma de tasas anuales. La serie anual histórica del BDE se conserva como contexto, no como cálculo de los ratios <SRef id="bcentral-bde-ipc-varacion-anual-historica" /><SRef id="bcentral-bde-ipc-empalmado-base-2023" />.
+        UTM y UF corresponden a enero del primer año del mandato. Para los años 1994 y 2000 se contrastan con las series históricas del SII <SRef id="sii-utm-1994" /><SRef id="sii-uf-1994" />. El IPC se calcula entre dos índices mensuales del BDE, <em>(índice final ÷ índice inicial − 1)</em>. La serie anual histórica del BDE se conserva como contexto; los ratios usan los endpoints mensuales <SRef id="bcentral-bde-ipc-varacion-anual-historica" /><SRef id="bcentral-bde-ipc-empalmado-base-2023" />.
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">UTM, UF e IPC acumulado entre fechas por gobierno</caption>
           <thead>
             <tr class="border-b border-base-300">
               <th class="text-left py-2 px-3 font-medium text-base-content/80">Gobierno</th>
@@ -307,18 +332,18 @@ const umbralesCostoVida = [
         </table>
       </div>
       <p class="text-xs text-base-content/45 mt-3">
-        Como contexto, los cierres anuales publicados fueron 3,5% en 2025, 4,5% en 2024, 3,0% en 2013 y −1,4% en 2009. No se multiplican para calcular los cambios de la tabla, que usan endpoints mensuales del BDE. <SRef id="ine-2026-01-08-ipc-diciembre-2025" /><SRef id="latercera-pulso-ipc-diciembre-2024" /><SRef id="eldinamo-2014-01-08-ipc-diciembre-2013" /><SRef id="cooperativa-2010-01-07-ipc-2009-deflacion" />
+        Como contexto, los cierres anuales publicados fueron {cierresAnuales.map((c) => `${fmtPorcentaje(c.variacion)} en ${c.ano}`).join(', ')}. La tabla usa endpoints mensuales del BDE en lugar de esas tasas anuales. {cierresAnuales.map((c) => <SRef id={c.fuente.id} />)}
       </p>
       <p class="text-xs text-base-content/80 mt-3">Para convertir montos históricos se usa la serie empalmada del BDE, base {d.ipc.base}.</p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="ajuste-ipc" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Sueldo presidencial en pesos de hoy (ajuste por IPC)</h2>
       </div>
       <p class="text-sm text-base-content/80 mb-4">
-        Dietas expresadas en pesos de <strong>{ipcDestinoLabel}</strong>, mediante <em>sueldo × (IPC destino ÷ IPC del mes de referencia)</em> <SRef id="bcentral-bde-ipc-empalmado-base-2023" />. La calculadora del INE permite reproducir estas conversiones <SRef id="ine-calculadora-ipc" />. El ajuste conserva la magnitud de cada observación; no corrige diferencias de cobertura ni entre bruto y neto.
+        Dietas expresadas en pesos de <strong>{ipcDestinoLabel}</strong>, mediante <em>sueldo × (IPC destino ÷ IPC del mes de referencia)</em> <SRef id="bcentral-bde-ipc-empalmado-base-2023" />. La calculadora del INE permite reproducir estas conversiones <SRef id="ine-calculadora-ipc" />. El ajuste conserva la magnitud de cada observación. Las diferencias de cobertura y entre bruto y neto quedan fuera de esta conversión.
       </p>
       <div class="space-y-4">
         {sueldosAjustados.map((s) => {
@@ -357,7 +382,7 @@ const umbralesCostoVida = [
       </p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="serie" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <TrendingUp class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Bruta mensual del Presidente, mes a mes (Registro Público 38 bis)</h2>
@@ -409,13 +434,13 @@ const umbralesCostoVida = [
       </p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="imm" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <DollarSign class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Ingreso mínimo mensual por tramo</h2>
       </div>
       <p class="text-sm text-base-content/80 mb-3">
-        La Ley 21.830 fija tres categorías desde el {fmtFecha(imm.desde)}. Son montos brutos mensuales y no deben confundirse con un promedio de ingresos. <SRef id={imm.fuente.id} /> El anexo histórico de sueldos se conserva como referencia secundaria para contrastar la serie resumida desde 1994 <SRef id="wikipedia-anexo-salario-minimo" />.
+        La Ley 21.830 fija tres categorías desde el {fmtFecha(imm.desde)}. Son montos brutos mensuales fijados por ley; un promedio de ingresos mide otra cosa. <SRef id={imm.fuente.id} /> El anexo histórico de sueldos se conserva como referencia secundaria para contrastar la serie resumida desde 1994 <SRef id="wikipedia-anexo-salario-minimo" />.
       </p>
       <div class="grid gap-3 sm:grid-cols-3 mb-5">
         {imm.categorias.map((c) => (
@@ -429,6 +454,7 @@ const umbralesCostoVida = [
       <p class="text-xs text-base-content/80 mb-3">La tabla histórica cubre los tramos 1994–mayo de 2026; “gobierno” identifica el gobierno vigente cuando se fijó el tramo.</p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Series históricas del ingreso mínimo mensual para trabajadores de 18 a 65 años</caption>
           <thead>
             <tr class="border-b border-base-300">
               <th class="text-left py-2 px-3 font-medium text-base-content/80">Desde</th>
@@ -454,7 +480,7 @@ const umbralesCostoVida = [
       </p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="costo-vida" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <BookOpen class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Costo de vida y líneas de pobreza</h2>
@@ -472,17 +498,17 @@ const umbralesCostoVida = [
         ))}
       </div>
       <div class="mt-4 rounded-xl border border-base-300 bg-base-200/40 p-4 text-sm text-base-content/80">
-        {costoVida.nota} La línea de pobreza no arrendatario es la referencia usada en la tabla de brecha; la línea de arrendatario incluye el costo de arriendo y no es intercambiable con ella. Como referencia adicional, la PGU es una transferencia y no una remuneración: sus topes de febrero de 2026 fueron $250.275 y $231.732 <SRef id="chileatiende-pgu-aumento-febrero-2026" />.
+        {costoVida.nota} La línea de pobreza no arrendatario es la referencia usada en la tabla de brecha; la de arrendatario añade el costo de arriendo y corresponde a otro umbral. Como referencia adicional, la PGU es una transferencia: sus topes de {pgu.periodo} fueron {pgu.montos.map((m) => formatCLP(m)).join(' y ')} <SRef id={pgu.fuente.id} />.
       </div>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="casen" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-3">
         <BookOpen class="h-5 w-5 text-base-content shrink-0" />
         <h2 class="text-lg font-semibold text-base-content">Contexto de ingresos de hogares (CASEN 2024)</h2>
       </div>
       <p class="text-sm text-base-content/80 mb-4">
-        El informe oficial de {casen.periodo} publica promedios de ingresos de hogares y de subgrupos, no medianas. Se muestran separados para no confundirlos con una remuneración individual. <SRef id={casen.fuente.id} />
+        El informe oficial de {casen.periodo} publica promedios de ingresos de hogares y de subgrupos. Cada promedio corresponde al hogar; la remuneración individual se mide en la ESI. <SRef id={casen.fuente.id} />
       </p>
       <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
         <div class="rounded-xl border border-base-300 bg-base-200/40 p-4">
@@ -509,19 +535,19 @@ const umbralesCostoVida = [
       <p class="text-xs text-base-content/80 mt-3">{casen.nota}</p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="topes" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-semibold text-base-content mb-3">Topes salariales fijados por Dipres</h2>
       <p class="text-sm text-base-content/80 mb-3">
-        Instantánea publicada por The Clinic sobre el instructivo vigente desde {fmtFecha(d.topes_dipres.vigencia_desde)}. No es una serie de remuneraciones observadas cargo por cargo. <SRef id={topesFuenteId} />
+        Instantánea publicada por The Clinic sobre el instructivo vigente desde {fmtFecha(d.topes_dipres.vigencia_desde)}. La fuente publicada solo consigna los topes del gobierno actual.
+        <SRef id={topesFuenteId} />
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Topes salariales para asesores de confianza fijados por la Dirección de Presupuestos</caption>
           <thead>
             <tr class="border-b border-base-300">
               <th class="sticky left-0 z-10 bg-base-100 text-left py-2 px-3 font-medium text-base-content/80">Rango</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">Kast (tope)</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">Boric (tope)</th>
-              <th class="text-right py-2 px-3 font-medium text-base-content/80">Diferencia</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Tope vigente</th>
             </tr>
           </thead>
           <tbody>
@@ -529,8 +555,6 @@ const umbralesCostoVida = [
               <tr class="border-b border-base-300">
                 <td class="sticky left-0 bg-base-100 py-2 px-3 text-base-content">{t.rango}</td>
                 <td class="py-2 px-3 text-right tabular-nums font-medium">{formatCLP(t.tope_kast)}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-base-content/80">{t.tope_boric ? formatCLP(t.tope_boric) : '—'}</td>
-                <td class="py-2 px-3 text-right tabular-nums text-error font-medium">{t.tope_boric ? `+${pctDiff(t.tope_kast, t.tope_boric)}%` : '—'}</td>
               </tr>
             ))}
           </tbody>
@@ -538,11 +562,12 @@ const umbralesCostoVida = [
       </div>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="segundo-piso" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-semibold text-base-content mb-3">Comparación cargo a cargo ({d.segundo_piso.periodo_label})</h2>
       <p class="text-sm text-base-content/80 mb-3">{d.segundo_piso.nota} <SRef id={segundoPisoFuenteId} /></p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Comparación de remuneraciones del Segundo Piso entre Kast y Boric en abril de 2026</caption>
           <thead>
             <tr class="border-b border-base-300">
               <th class="sticky left-0 z-10 bg-base-100 text-left py-2 px-3 font-medium text-base-content/80">Cargo</th>
@@ -578,10 +603,14 @@ const umbralesCostoVida = [
       <p class="text-xs text-base-content/45 mt-3">
         El cambio del promedio de remuneraciones es {fmtPorcentaje(cambioPromedioSegundoPiso)}; el promedio de los cambios porcentuales individuales es {fmtPorcentaje(promedioCambiosSegundoPiso)}. Son métricas distintas y esta tabla es una instantánea de abril de 2026.
       </p>
-      <h3 class="text-sm font-semibold text-base-content mt-6 mb-2">Lectura del Registro a {segundoPisoJulio.periodo_label}</h3>
+    </section>
+
+    <section id="segundo-piso-julio" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <h2 class="text-lg font-semibold text-base-content mb-3">Lectura del Registro a {segundoPisoJulio.periodo_label}</h2>
       <p class="text-sm text-base-content/80 mb-3">{segundoPisoJulio.nota} <SRef id={segundoPisoJulio.fuente.id} /></p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Remuneraciones del Segundo Piso registradas en {segundoPisoJulio.periodo_label}</caption>
           <thead>
             <tr class="border-b border-base-300">
               <th class="sticky left-0 z-10 bg-base-100 text-left py-2 px-3 font-medium text-base-content/80">Cargo</th>
@@ -602,13 +631,14 @@ const umbralesCostoVida = [
       </div>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-semibold text-base-content mb-3">Congreso y otras autoridades ({otrasAutoridades.periodo_label})</h2>
       <p class="text-sm text-base-content/80 mb-3">
         Montos brutos del Registro Público. Se muestra el valor más frecuente por cargo y cuántos cargos traen monto. <SRef id={otrasAutoridades.fuente.id} />
       </p>
       <div class="overflow-x-auto">
         <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Montos modales del Registro Público para el Congreso y otras autoridades</caption>
           <thead>
             <tr class="border-b border-base-300">
               <th class="sticky left-0 z-10 bg-base-100 text-left py-2 px-3 font-medium text-base-content/80">Cargo</th>
@@ -635,35 +665,127 @@ const umbralesCostoVida = [
       </p>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="remuneraciones-reales" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <h2 class="text-lg font-semibold text-base-content mb-3">Remuneraciones reales: julio y agosto de 2026</h2>
+      <p class="text-sm text-base-content/80 mb-4">
+        Variaciones del INE para el total de la economía. El índice real descuenta el IPC; la media por hora y la brecha de género corresponden a la remuneración ordinaria.
+        <SRef id={remuneracionesReales.puntos[0].fuente.id} /><SRef id={remuneracionesReales.puntos[1].fuente.id} />
+      </p>
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <caption class="sr-only">Variación de remuneraciones y costos laborales en julio y agosto de 2026</caption>
+          <thead>
+            <tr class="border-b border-base-300">
+              <th class="text-left py-2 px-3 font-medium text-base-content/80">Periodo</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Remuneraciones</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Costos laborales</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Índice real</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Acumulado 2026</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Media / hora</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Brecha género</th>
+              <th class="text-right py-2 px-3 font-medium text-base-content/80">Fuente</th>
+            </tr>
+          </thead>
+          <tbody>
+            {remuneracionesReales.puntos.map((p) => (
+              <tr class="border-b border-base-300">
+                <td class="py-2 px-3 text-base-content whitespace-nowrap">{p.periodo}</td>
+                <td class="py-2 px-3 text-right tabular-nums">+{fmtPorcentaje(p.remuneraciones)}</td>
+                <td class="py-2 px-3 text-right tabular-nums">+{fmtPorcentaje(p.costos)}</td>
+                <td class="py-2 px-3 text-right tabular-nums font-semibold">+{fmtPorcentaje(p.real)}</td>
+                <td class="py-2 px-3 text-right tabular-nums">+{fmtPorcentaje(p.acumulado_anio)}</td>
+                <td class="py-2 px-3 text-right tabular-nums whitespace-nowrap">{formatCLP(p.hora_ordinaria)}</td>
+                <td class="py-2 px-3 text-right tabular-nums">{fmtPorcentaje(p.brecha_genero)}</td>
+                <td class="py-2 px-3 text-right"><span class="sueldos-inline-ref"><SRef id={p.fuente.id} /></span></td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      <p class="text-xs text-base-content/80 mt-3">{remuneracionesReales.nota}</p>
+    </section>
+
+    <section id="reajustes" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <h2 class="text-lg font-semibold text-base-content mb-3">Reajuste del sector público</h2>
+      <p class="text-sm text-base-content/80 mb-4">
+        El acuerdo de {reajustes.anterior.ano} fijó {fmtPorcentaje(reajustes.anterior.porcentaje)} general y el cerrado en {fmtFecha(reajustes.vigente.fecha)} fijó {fmtPorcentaje(reajustes.vigente.porcentaje)} en dos etapas. Ambos porcentajes se aplican a las remuneraciones del sector público.
+      </p>
+      <div class="grid gap-3 sm:grid-cols-2">
+        <article class="rounded-xl border border-base-300 bg-base-200/40 p-4">
+          <p class="text-xs text-base-content/80">Acuerdo anterior · {reajustes.anterior.ano}</p>
+          <p class="text-xl font-bold tabular-nums mt-1">{fmtPorcentaje(reajustes.anterior.porcentaje)}</p>
+          <p class="text-xs text-base-content/80 mt-2">{reajustes.anterior.nota} <SRef id={reajustes.anterior.fuente.id} /></p>
+        </article>
+        <article class="rounded-xl border border-primary/40 bg-primary/5 p-4">
+          <p class="text-xs text-base-content/80">Acuerdo vigente · {reajustes.vigente.periodo}</p>
+          <p class="text-xl font-bold tabular-nums mt-1">{fmtPorcentaje(reajustes.vigente.porcentaje)}</p>
+          <ul class="mt-2 space-y-1 text-xs text-base-content/80">
+            {reajustes.vigente.tramos.map((t) => <li>{fmtPorcentaje(t.porcentaje)} en {t.momento}</li>)}
+          </ul>
+          <p class="text-xs text-base-content/80 mt-2">Firmado por {reajustes.vigente.organizaciones_acuerdo} organizaciones; {reajustes.vigente.organizaciones_no_firmantes} no suscribieron. <SRef id={reajustes.vigente.fuente.id} /></p>
+        </article>
+      </div>
+      <p class="text-xs text-base-content/80 mt-3">{reajustes.vigente.nota}</p>
+    </section>
+
+    <section id="legal" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <h2 class="text-lg font-semibold text-base-content mb-3">Contexto legal e institucional</h2>
       <div class="prose prose-sm max-w-none text-base-content/80 space-y-3">
         <p>
           El Registro Público 38 bis es la fuente primaria para las remuneraciones efectivamente reportadas por las instituciones. La CFR señala que el registro contiene información reportada por cada organismo; por eso la página distingue entre la dieta legal y el monto reportado. La diferencia entre ambos corresponde al gasto de representación, que la Comisión mantiene vigente en el 30% del sueldo base de la Escala Única de Sueldos del grado de cada cargo. <SRef id="cfr-registro-publico-38bis" /><SRef id="cfr-oficio-i-n1-2026-beneficios" />
         </p>
-        <p>
-          Antes de la Ley 19.863, la referencia remuneratoria era la Escala Única de Sueldos del Decreto Ley 249. <SRef id="bcn-leychile-dl-249-1974" /> Las leyes de reajuste sectorial y la asignación de modernización formaron parte de ese marco <SRef id="bcn-leychile-ley-19007" /><SRef id="bcn-leychile-ley-19553" />. La Ley 19.863 fijó la dieta presidencial en 150% del grado máximo. <SRef id="bcn-leychile-ley-19863" /> La reforma sobre el estatuto de los ex Presidentes es la Ley 19.672 <SRef id="bcn-leychile-ley-19672" />. La Ley 21.233 creó el artículo 38 bis y el sistema de remuneraciones asociado. <SRef id="bcn-leychile-ley-21233" /> El sistema de la CFR entró en vigor en marzo de 2026. <SRef id="bcn-leychile-resolucion-5-2024-cfr" /> Las remuneraciones parlamentarias del período pueden contrastarse con el informe de transparencia del Senado de 2023 <SRef id="senado-informe-transparencia-2023" />.
-        </p>
+        <dl class="grid gap-x-6 gap-y-2 sm:grid-cols-2">
+          <div>
+            <dt class="text-xs font-semibold text-base-content/80">Decreto Ley 249 (1974)</dt>
+            <dd class="text-sm">Escala Única de Sueldos, referencia anterior a la Ley 19.863. <SRef id="bcn-leychile-dl-249-1974" /></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-base-content/80">Leyes 19.007 y 19.553</dt>
+            <dd class="text-sm">Reajustes sectoriales y asignación de modernización. <SRef id="bcn-leychile-ley-19007" /><SRef id="bcn-leychile-ley-19553" /></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-base-content/80">Ley 19.863 (2003)</dt>
+            <dd class="text-sm">Dieta presidencial en 150% del grado máximo. <SRef id="bcn-leychile-ley-19863" /></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-base-content/80">Ley 19.672</dt>
+            <dd class="text-sm">Estatuto de los ex Presidentes. <SRef id="bcn-leychile-ley-19672" /></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-base-content/80">Ley 21.233</dt>
+            <dd class="text-sm">Creó el artículo 38 bis y el sistema de remuneraciones asociado. <SRef id="bcn-leychile-ley-21233" /></dd>
+          </div>
+          <div>
+            <dt class="text-xs font-semibold text-base-content/80">Resolución N°5/2024</dt>
+            <dd class="text-sm">Sistema de la CFR, en vigor desde marzo de 2026. <SRef id="bcn-leychile-resolucion-5-2024-cfr" /></dd>
+          </div>
+          <div class="sm:col-span-2">
+            <dt class="text-xs font-semibold text-base-content/80">Transparencia parlamentaria</dt>
+            <dd class="text-sm">Informe del Senado de 2023 para contrastar las remuneraciones del período. <SRef id="senado-informe-transparencia-2023" /></dd>
+          </div>
+        </dl>
         <p>
           En abril de 2026, el Segundo Piso de Kast fue reportado con remuneraciones entre {formatCLP(Math.min(...cargos.map((c) => c.kast.sueldo)))} y {formatCLP(Math.max(...cargos.map((c) => c.kast.sueldo)))}. <SRef id={segundoPisoFuenteId} />
         </p>
         <p class="text-base-content/80 text-xs">
-          Eventos relacionados: <a href="/events/2026/20260320-2" class="text-base-content hover:underline">20260320-2</a>
-          · <a href="/events/2026/20260326-1" class="text-base-content hover:underline">20260326-1</a>
-          · <a href="/events/2026/20260803-18" class="text-base-content hover:underline">20260803-18</a>
+          Eventos relacionados:
+          {eventosRelacionados.map((e, i) => (
+            <><a href={`/events/${e.id.slice(0, 4)}/${e.id.slice(4, 6)}/${e.id}`} class="text-base-content hover:underline">{e.etiqueta}</a>{i < eventosRelacionados.length - 1 && <span aria-hidden="true"> · </span>}</>
+          ))}
         </p>
       </div>
     </section>
 
-    <section class="mb-10 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <section id="fuentes" class="mb-10 scroll-mt-20 bg-base-100 p-6 rounded-2xl border-0 shadow-[var(--shadow-border)]">
       <div class="flex items-center gap-2 mb-4">
         <BookOpen class="h-5 w-5 text-base-content shrink-0" />
-        <h2 class="text-base font-bold text-base-content">Fuentes ({fuentes.length})</h2>
+        <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({fuentes.length})</h2>
+        <CopyRefsButton refsMd={refsMd} />
       </div>
       <p class="text-sm text-base-content/80 mb-4">
         Los números <sup class="text-base-content font-mono text-xs">[N]</sup> apuntan a la fuente original. Las referencias se citan por ID para que reordenar la lista no cambie el sentido de una cita.
       </p>
-      <ol class="space-y-3 text-sm">
+      <ol data-ref-back-host class="space-y-3 text-sm">
         {fuentes.map((f, i) => (
           <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-base-content/80 scroll-mt-20 p-2.5 rounded-lg hover:bg-base-200 transition-colors border border-transparent hover:border-base-300/60">
             <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-base-content font-mono text-xs shrink-0 font-semibold mt-0.5">{i + 1}</span>
@@ -678,5 +800,23 @@ const umbralesCostoVida = [
         ))}
       </ol>
     </section>
-  </article>
+    </article>
+
+    <details id="gv-sueldos-toc-mobile" class="gv-event-toc-mobile not-prose" data-gv-bottom-nav>
+      <summary>
+        <span class="inline-flex items-center gap-1.5">
+          <ListTree class="h-3.5 w-3.5 shrink-0" />
+          En esta página
+        </span>
+        <ChevronUp class="gv-chevron-up h-4 w-4 shrink-0 text-base-content/80" />
+        <ChevronDown class="gv-chevron-down hidden h-4 w-4 shrink-0 text-base-content/80" />
+      </summary>
+      <nav id="gv-sueldos-toc-list-mobile" class="gv-event-toc-list" aria-label="Secciones de la página"></nav>
+    </details>
+  </div>
 </Base>
+
+<script>
+  import { initSueldosToc } from '../scripts/sueldosTocClient.js';
+  initSueldosToc();
+</script>

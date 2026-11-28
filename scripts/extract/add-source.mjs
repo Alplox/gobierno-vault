@@ -17,6 +17,8 @@
  *                   (título/fecha/medio) si la URL está indexada
  *   --no-archive    Omite el snapshot automático en Wayback (por defecto toda
  *                   fuente nueva se crea con un respaldo en `respaldos[]`)
+ *   --force-save    Intenta Save Page Now también en X/Instagram/YouTube, donde
+ *                   por defecto solo se consulta `available?url=`
  *   --search <texto>  Busca en el catálogo local de sitemaps (título/URL/fecha)
  *                   y deja elegir un artículo; con --fecha y --medio filtra más
  *   --fecha YYYY-MM-DD  Filtro de fecha para --search
@@ -535,7 +537,14 @@ function buildBlock(id, fields) {
     autor: fields.autor, fecha: fields.fecha, url: fields.url,
     ...(fields.notas ? { notas: fields.notas } : {}),
     ...(fields.respaldos?.length ? { respaldos: fields.respaldos } : {}),
-  }).trim();
+  }).trim()
+    // `respaldos[].fecha` es z.string() en content.config.ts: YAML.stringify
+    // la emite sin comillas, se parsea como Date y astro build falla con
+    // InvalidContentEntryDataError. Mismo fix que archive-sources.mjs.
+    // El `\s+` (no `*`) excluye la `fecha:` de primer nivel (z.coerce.date()).
+    .split('\n')
+    .map((l) => l.replace(/^(\s+fecha:\s*)(\d{4}-\d{2}-\d{2})(\s*)$/, '$1"$2"$3'))
+    .join('\n');
   return `---\n${fm}\n---`;
 }
 
@@ -693,7 +702,7 @@ async function main() {
   let respaldo = null;
   if (!flags.has('--no-archive')) {
     logInfo('Generando respaldo externo (Wayback)...');
-    const res = await archiveOne(url);
+    const res = await archiveOne(url, { forceSave: flags.has('--force-save') });
     if (res?.error) {
       logWarn(`No se pudo generar el snapshot: ${res.error}. La fuente se crea igual.`);
     } else {

@@ -33,6 +33,9 @@
  *                       Acepta con o sin `.md`. Ignora fecha/límite y la marca de "ya respaldada".
  *   --medio <texto>     Filtro por medio o ID (substring, insensible a mayúsculas; se ignora con --id).
  *   --include-backed-up Procesar fuentes que ya tienen respaldo del servicio.
+ *   --force-save        Intenta Save Page Now también en plataformas donde falla
+ *                       de forma documentada (X, Instagram, YouTube). Por defecto
+ *                       solo se consulta `available?url=` en esas URLs.
  *   --delay N           Pausa entre Save Page Now en ms (default 4000; anónimo ~15 req/min).
  *   --check-delay N     Pausa entre chequeos de disponibilidad en ms (default 700).
  *   --timeout N         Timeout de cada request en ms (default 60000 para save).
@@ -44,8 +47,10 @@
  *      Para URLs `old.reddit.com` se prueba primero el equivalente `www.reddit.com`:
  *      Save Page Now captura `old.reddit.com/login` en vez del hilo. Se rechaza
  *      cualquier snapshot que caiga en `/login` o que no contenga la ruta original.
- *      X devuelve HTTP 523 sin URL canónica y youtube.com falla en `save`; en ambos
- *      casos `available` puede recuperar un snapshot previo (ver .agents/skills/tools).
+ *      X e Instagram devuelven HTTP 523 sin URL canónica y youtube.com falla en
+ *      `save`; en esos hosts se omite el `save` por defecto (solo se consulta
+ *      `available`, que puede recuperar un snapshot de otro crawler). `--force-save`
+ *      lo intenta igual (ver .agents/skills/tools).
  *   3. Insertar la entrada en `respaldos[]` con edición quirúrgica (respeta CRLF y bloques),
  *      idempotente por `servicio` + `url`.
  */
@@ -223,6 +228,13 @@ function selfTest() {
     ['rechaza snapshot de login', usableSnapshot(redditOld, loginSnap) === false],
     ['acepta snapshot del hilo', usableSnapshot(redditWww, threadSnap) === true],
     ['acepta hilo borrado por moderador', usableSnapshot(redditOld, `https://web.archive.org/web/20261125000000/https://www.reddit.com/r/chile/comments/1abc/removed_by_moderator/`) === true],
+    ['omite x.com', saveUnsupported('https://x.com/user/status/123') === true],
+    ['omite twitter.com', saveUnsupported('https://twitter.com/user/status/123') === true],
+    ['omite instagram', saveUnsupported('https://www.instagram.com/p/abc/') === true],
+    ['omite youtube', saveUnsupported('https://www.youtube.com/watch?v=abc') === true],
+    ['omite youtu.be', saveUnsupported('https://youtu.be/abc') === true],
+    ['no omite prensa', saveUnsupported('https://www.eldinamo.cl/politica/2026/11/24/x/') === false],
+    ['no omite subdominio ajeno', saveUnsupported('https://x.com.ejemplo.cl/x') === false],
   ];
   for (const [name, pass] of helperCases) cases.push({ name, pass });
 
@@ -258,6 +270,24 @@ function archiveCandidates(url) {
     }
   } catch { /* URL inválida: se deja para el caller */ }
   return [url];
+}
+
+/**
+ * Hosts donde Save Page Now falla de forma documentada: X e Instagram responden
+ * HTTP 523 sin URL canónica y youtube.com falla con `fetch failed` desde esta red.
+ * `available?url=` se consulta igual (es barato y puede reutilizar un snapshot de
+ * otro crawler); lo que se evita es el `save` con timeout largo. `--force-save`
+ * desactiva el filtro para quien quiera intentarlo de todos modos.
+ */
+const SAVE_UNSUPPORTED_HOSTS = new Set(['x.com', 'twitter.com', 'instagram.com', 'youtube.com', 'youtu.be']);
+
+export function saveUnsupported(url) {
+  try {
+    const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+    return SAVE_UNSUPPORTED_HOSTS.has(host);
+  } catch {
+    return false;
+  }
 }
 
 /** Rechaza capturas de login y snapshots de otra ruta (común en Reddit). */
@@ -359,11 +389,14 @@ async function saveSnapshot(url, timeoutMs) {
  * y devuelve la entrada lista para `respaldos[]`. No escribe archivos.
  * Nunca lanza: si falla devuelve { error } para que la fuente se cree igual.
  */
-export async function archiveOne(url, { checkDelayMs = 0 } = {}) {
+export async function archiveOne(url, { checkDelayMs = 0, forceSave = false } = {}) {
   try {
     let found = await checkSnapshot(url);
     if (found) {
       await sleep(checkDelayMs);
+    } else if (saveUnsupported(url) && !forceSave) {
+      const host = new URL(url).hostname.toLowerCase().replace(/^www\./, '');
+      return { error: `sin snapshot; Save Page Now omitido en ${host} (usa --force-save para intentarlo)`, skipped: true };
     } else {
       found = await saveSnapshot(url, timeout);
     }
@@ -431,6 +464,7 @@ const since = val('--since') ?? new Date(Date.now() - 30 * 864e5).toISOString().
 const delaySave = parseInt(val('--delay') ?? '4000', 10);
 const delayCheck = parseInt(val('--check-delay') ?? '700', 10);
 const timeout = parseInt(val('--timeout') ?? '60000', 10);
+const forceSave = has('--force-save');
 
 async function main() {
   if (has('--self-test')) return selfTest();
@@ -451,12 +485,18 @@ async function main() {
     return;
   }
 
-  let ok = 0, migradas = 0, guardadas = 0, reutilizadas = 0, errores = 0, sinCambios = 0;
+  let ok = 0, migradas = 0, guardadas = 0, reutilizadas = 0, errores = 0, sinCambios = 0, omitidas = 0;
   for (const s of queue) {
     let result = null;
     if (!has('--migrate-only')) {
       result = await checkSnapshot(s.url);
       if (!result) {
+        if (saveUnsupported(s.url) && !forceSave) {
+          omitidas++;
+          const host = new URL(s.url).hostname.toLowerCase().replace(/^www\./, '');
+          console.log(`OMITIDA   ${s.id} — Save Page Now no soportado en ${host}; solo se consultó available (usa --force-save para intentarlo)`);
+          continue;
+        }
         await sleep(delaySave);
         result = await saveSnapshot(s.url, timeout);
       } else {
@@ -501,7 +541,7 @@ async function main() {
     }
   }
 
-  console.log(`\nResumen: escritas ${ok} (save ${guardadas} | reutilizadas ${reutilizadas} | migradas ${migradas}) | sin cambio ${sinCambios} | errores ${errores} | total ${queue.length}`);
+  console.log(`\nResumen: escritas ${ok} (save ${guardadas} | reutilizadas ${reutilizadas} | migradas ${migradas}) | sin cambio ${sinCambios} | omitidas ${omitidas} | errores ${errores} | total ${queue.length}`);
   if (errores) process.exitCode = 1;
 }
 

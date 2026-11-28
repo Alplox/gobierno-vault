@@ -1,0 +1,44 @@
+---
+// Botón "copiar referencias" compartido por el detalle de evento, /sueldos y
+// /presupuesto. El markdown viaja en data-refs-md y lo copia el handler global
+// de Base.astro ([data-copy-refs]); el estado visual es el mismo en las 3 páginas.
+import { Copy, Check, TriangleAlert } from 'lucide-astro';
+
+interface Props {
+  refsMd: string;
+  id?: string;
+  buttonClass?: string;
+  label?: string;
+  title?: string;
+  successMessage?: string;
+  errorMessage?: string;
+}
+const {
+  refsMd,
+  id = 'btn-copy-refs',
+  buttonClass = '',
+  label = 'Copiar referencias en Markdown',
+  title = 'Copiar todas las fuentes y enlaces en formato Markdown',
+  successMessage = 'Referencias copiadas al portapapeles.',
+  errorMessage = 'No se pudieron copiar las referencias.',
+} = Astro.props;
+---
+
+<button
+  id={id}
+  type="button"
+  data-copy-refs
+  data-refs-md={refsMd}
+  class={`ml-auto inline-flex size-8 shrink-0 items-center justify-center rounded-lg border border-base-300/70 bg-base-200/60 text-base-content transition-[color,background-color,scale] duration-150 hover:bg-base-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base-content active:scale-[0.96] ${buttonClass}`}
+  aria-label={label}
+  title={title}
+  data-copy-success-message={successMessage}
+  data-copy-error-message={errorMessage}
+>
+  <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
+    <span class="copy-icon" data-icon="idle"><Copy class="h-3.5 w-3.5 shrink-0" /></span>
+    <span class="copy-icon" data-icon="copied"><Check class="h-3.5 w-3.5 shrink-0" /></span>
+    <span class="copy-icon" data-icon="error"><TriangleAlert class="h-3.5 w-3.5 shrink-0" /></span>
+  </span>
+</button>
+<span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>

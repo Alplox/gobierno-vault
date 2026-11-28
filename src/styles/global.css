@@ -323,8 +323,19 @@
 }
 .gv-event-shell.is-enhanced.no-timeline > .gv-event-rail { display: none; }
 
-.gv-event-toc-sticky,
-.gv-event-rail-sticky {
+/* /sueldos usa el mismo TOC que el evento pero sin rail de línea de tiempo:
+   dos columnas (índice + cuerpo) y el ancho de lectura de la página. */
+#gv-sueldos-shell.is-enhanced {
+  grid-template-columns: 11rem minmax(0, 48rem);
+  max-width: 62rem;
+}
+
+/* El TOC y el rail solo flotan con scroll propio dentro del grid de escritorio
+   (is-enhanced, que eventTocClient aplica con matchMedia ≥76rem). En móvil la
+   línea de tiempo es una sección más del flujo: sin max-height ni overflow se
+   ve completa y no captura el scroll de la página. */
+.gv-event-shell.is-enhanced .gv-event-toc-sticky,
+.gv-event-shell.is-enhanced .gv-event-rail-sticky {
   position: sticky;
   top: 5rem;
   max-height: calc(100vh - 6.5rem);
@@ -422,7 +433,8 @@
 .gv-ego-stage line.is-lit { stroke-width: 2.6; stroke-opacity: 0.95; }
 /* Nodos de segundo salto: un poco más tenues que los vecinos directos. */
 .gv-ego-stage a.is-extra circle { fill-opacity: 0.85; }
-.gv-ego-more:focus-visible { outline: 2px solid var(--color-base-content); outline-offset: 1px; }
+.gv-ego-more:focus-visible,
+.gv-ego-select:focus-visible { outline: 2px solid var(--color-base-content); outline-offset: 1px; }
 .gv-ego-card { position: relative; z-index: 5; }
 .gv-ego-card.is-open { display: block; }
 .gv-ego-tip strong { font-weight: 600; }

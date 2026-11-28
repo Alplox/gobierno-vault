@@ -6,11 +6,13 @@ import EgoGraph from '../../../components/EgoGraph.astro';
 import ShareButtons from '../../../components/ShareButtons.astro';
 import VideoEmbed from '../../../components/VideoEmbed.astro';
 import SourceMirrors from '../../../components/SourceMirrors.astro';
+import CopyRefsButton from '../../../components/CopyRefsButton.astro';
 import { render } from 'astro:content';
 import { getAllEvents, getPeopleMap, getTopicsMap, getOrgsMap, getEventEntities, getCifrasRegistry } from '../../../lib/queries';
 import { getEventConnections, buildConnectionIndex } from '../../../lib/relations';
 import { resolveReferences } from '../../../lib/registry';
 import { buildEventMarkdown, buildReferenceLines, buildReferencesMarkdown, readEventBody } from '../../../lib/eventMarkdown';
+import { sourceAnchorsBySource } from '../../../lib/citationAnchors.mjs';
 import {
   ArrowLeft,
   Calendar,
@@ -94,6 +96,9 @@ const hasConnections = hasTimeline || connections.inferred.length > 0;
 
 // Markdown exportable: unico builder, compartido con /data/events-md/YYYYMM.md.
 const bodyMd = readEventBody(event.id);
+// Ancla de retorno por ocurrencia: los mismos ids que remarkWikiLinks.mjs pone
+// en los [N] inline, para que cada fuente pueda llevar al lector a cada uso.
+const anchorsPorFuente = sourceAnchorsBySource(bodyMd);
 const exportMd = buildEventMarkdown({ titulo, eventUrl, refs, bodyMd });
 const refLines = buildReferenceLines(refs);
 const refsMd = buildReferencesMarkdown(refs);
@@ -412,7 +417,7 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
       </div>
     </section>
 
-    <div id="event-export-data" class="hidden" data-md={exportMd} data-refs={refsMd} data-prompt={chatPrompt} data-ai-prefill={chatPrefill} aria-hidden="true"></div>
+    <div id="event-export-data" class="hidden" data-md={exportMd} data-prompt={chatPrompt} data-ai-prefill={chatPrefill} aria-hidden="true"></div>
 
     {impacto && (impacto.colectivos?.length > 0 || impacto.sectores?.length > 0) && (
       <section class="mb-8 bg-warning/10 border border-warning/40 rounded-2xl p-6">
@@ -554,46 +559,60 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
         <div class="flex items-center gap-2 mb-4">
           <BookOpen class="h-5 w-5 text-base-content shrink-0" />
           <h2 class="text-base font-bold text-base-content">Referencias y Fuentes ({refs.length})</h2>
-          <button
-            id="btn-copy-refs"
-            type="button"
-            class="ml-auto inline-flex size-8 shrink-0 items-center justify-center rounded-lg border border-base-300/70 bg-base-200/60 text-base-content transition-[color,background-color,scale] duration-150 hover:bg-base-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-base-content active:scale-[0.96]"
-            aria-label="Copiar referencias en Markdown"
-            title="Copiar todas las fuentes y enlaces en formato Markdown"
-            data-copy-success-message="Referencias copiadas al portapapeles."
-            data-copy-error-message="No se pudieron copiar las referencias."
-          >
-            <span class="copy-icon-swap" data-copy-swap data-state="idle" aria-hidden="true">
-              <span class="copy-icon" data-icon="idle"><Copy class="h-3.5 w-3.5 shrink-0" /></span>
-              <span class="copy-icon" data-icon="copied"><Check class="h-3.5 w-3.5 shrink-0" /></span>
-              <span class="copy-icon" data-icon="error"><TriangleAlert class="h-3.5 w-3.5 shrink-0" /></span>
-            </span>
-          </button>
-          <span data-copy-status class="sr-only" role="status" aria-live="polite" aria-atomic="true"></span>
+          <CopyRefsButton id="btn-copy-refs" refsMd={refsMd} />
         </div>
         <ol class="space-y-3 text-sm">
-          {refs.map((ref, i) => (
-            <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-base-content/80 scroll-mt-20 p-2.5 rounded-lg hover:bg-base-200 transition-colors border border-transparent hover:border-base-300/60">
-              <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-base-content font-mono text-xs shrink-0 font-semibold mt-0.5">
-                {i + 1}
-              </span>
-              <div class="min-w-0 flex-1">
-                {ref.url ? (
-                  <a href={ref.url} class="inline-flex items-center gap-1 font-semibold text-base-content hover:text-base-content hover:underline" target="_blank" rel="noopener">
-                    <span>{ref.titulo}</span>
-                    <ExternalLink class="h-3.5 w-3.5 shrink-0 text-base-content" />
-                  </a>
-                ) : (
-                  <span class="font-semibold text-base-content">{ref.titulo}</span>
-                )}
-                <SourceMirrors url={ref.url} sourceId={entities.fuentesAll[i]} />
-                <p class="text-xs text-base-content/80 mt-0.5">
-                  Medio: <span class="font-medium text-base-content/80">{ref.medio}</span> {ref.autor ? `· Autor: ${ref.autor}` : ''}
-                </p>
-                {ref.url && <VideoEmbed url={ref.url} label={ref.titulo} />}
-              </div>
-            </li>
-          ))}
+          {refs.map((ref, i) => {
+            const anclas = anchorsPorFuente.get(entities.fuentesAll[i]) ?? [];
+            return (
+              <li id={`ref-${i + 1}`} class="flex items-start gap-2.5 text-base-content/80 scroll-mt-20 p-2.5 rounded-lg hover:bg-base-200 transition-colors border border-transparent hover:border-base-300/60">
+                <span class="inline-flex items-center justify-center h-5 w-5 rounded-full bg-primary/15 text-base-content font-mono text-xs shrink-0 font-semibold mt-0.5">
+                  {i + 1}
+                </span>
+                <div class="min-w-0 flex-1">
+                  {ref.url ? (
+                    <a href={ref.url} class="inline-flex items-center gap-1 font-semibold text-base-content hover:text-base-content hover:underline" target="_blank" rel="noopener">
+                      <span>{ref.titulo}</span>
+                      <ExternalLink class="h-3.5 w-3.5 shrink-0 text-base-content" />
+                    </a>
+                  ) : (
+                    <span class="font-semibold text-base-content">{ref.titulo}</span>
+                  )}
+                  <SourceMirrors url={ref.url} sourceId={entities.fuentesAll[i]} />
+                  <p class="text-xs text-base-content/80 mt-0.5">
+                    Medio: <span class="font-medium text-base-content/80">{ref.medio}</span> {ref.autor ? `· Autor: ${ref.autor}` : ''}
+                  </p>
+                  {anclas.length > 0 && (
+                    <div class="mt-1.5 flex flex-wrap items-center gap-x-1.5 gap-y-1 text-[11px] text-base-content/70">
+                      {anclas.length === 1 ? (
+                        <a
+                          href={`#${anclas[0]}`}
+                          data-ref-back
+                          class="gv-ref-back inline-flex items-center gap-0.5 rounded px-1 py-0.5 font-mono transition-colors hover:bg-base-200 hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-base-content"
+                          aria-label={`Volver a la única aparición de la referencia ${i + 1} en el texto`}
+                          title="Volver al texto"
+                        >↑ volver al texto</a>
+                      ) : (
+                        <>
+                          <span class="opacity-70">volver a</span>
+                          {anclas.map((ancla, k) => (
+                            <a
+                              href={`#${ancla}`}
+                              data-ref-back
+                              class="gv-ref-back inline-flex items-center justify-center rounded px-1.5 py-0.5 font-mono font-semibold transition-colors hover:bg-base-200 hover:text-base-content focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-base-content"
+                              aria-label={`Volver a la aparición ${k + 1} de la referencia ${i + 1} en el texto`}
+                              title={`Volver a la aparición ${k + 1}`}
+                            >↑{k + 1}</a>
+                          ))}
+                        </>
+                      )}
+                    </div>
+                  )}
+                  {ref.url && <VideoEmbed url={ref.url} label={ref.titulo} />}
+                </div>
+              </li>
+            );
+          })}
         </ol>
       </section>
     )}
@@ -670,24 +689,6 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
         return;
       }
       void navigator.clipboard.writeText(markdown).then(() => {
-        play('success');
-        gvSetCopyFeedback(btn, 'copied');
-      }).catch(() => {
-        gvSetCopyFeedback(btn, 'error');
-      });
-      return;
-    }
-    // "Copiar referencias" saca solo el bloque de fuentes, con el MISMO formato
-    // que llevan dentro del markdown completo del evento (buildReferencesMarkdown).
-    if (target.closest('#btn-copy-refs')) {
-      const btn = target.closest<HTMLButtonElement>('#btn-copy-refs');
-      const refsMarkdown = exportEl?.getAttribute('data-refs') ?? '';
-      if (!btn) return;
-      if (!navigator.clipboard || !refsMarkdown) {
-        gvSetCopyFeedback(btn, 'error');
-        return;
-      }
-      void navigator.clipboard.writeText(refsMarkdown).then(() => {
         play('success');
         gvSetCopyFeedback(btn, 'copied');
       }).catch(() => {
@@ -1467,35 +1468,4 @@ Describe el error, la corrección, la sugerencia o la fuente adicional propuesta
   initEventToc();
 </script>
 
-<style>
-  .copy-icon-swap {
-    position: relative;
-    display: inline-grid;
-    width: 1rem;
-    height: 1rem;
-  }
-  .copy-icon-swap > .copy-icon {
-    grid-area: 1 / 1;
-    display: grid;
-    place-items: center;
-    opacity: 0;
-    filter: blur(4px);
-    transform: scale(0.25);
-    pointer-events: none;
-    transition:
-      opacity 200ms cubic-bezier(0.2, 0, 0, 1),
-      filter 200ms cubic-bezier(0.2, 0, 0, 1),
-      transform 200ms cubic-bezier(0.2, 0, 0, 1);
-  }
-  .copy-icon-swap[data-state='idle'] > [data-icon='idle'],
-  .copy-icon-swap[data-state='copied'] > [data-icon='copied'],
-  .copy-icon-swap[data-state='error'] > [data-icon='error'] {
-    opacity: 1;
-    filter: blur(0);
-    transform: scale(1);
-  }
-  @media (prefers-reduced-motion: reduce) {
-    .copy-icon-swap > .copy-icon { transition: none; }
-  }
-</style>
 

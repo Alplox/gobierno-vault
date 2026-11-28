@@ -32,6 +32,14 @@ function norm(s) {
   return (s || '').toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 }
 
+// Modo de distribución: 'libre' (fuerzas) o cronológico por eje. Es una vista,
+// no un filtro: "Limpiar" no lo resetea, pero sí viaja en la URL para compartir.
+const GRAPH_LAYOUTS = ['libre', 'fecha-h', 'fecha-v'];
+function readGraphLayout() {
+  const v = document.getElementById('graph-layout')?.value || 'libre';
+  return GRAPH_LAYOUTS.includes(v) ? v : 'libre';
+}
+
 function readGraphFilters() {
   const form = document.getElementById('graph-filters');
   if (!form) return null;
@@ -64,22 +72,40 @@ function syncGraphControlsFromURL() {
   set('graph-persona', sp.get('persona') || '');
   set('graph-org', sp.get('org') || '');
   set('graph-minconn', sp.get('minconn') || '0');
+  // Solo manda la URL: en /events el mini no escribe `layout` en el query (para
+  // no pisar los filtros del listado) y conserva la preferencia local.
+  if (sp.has('layout')) {
+    const layout = sp.get('layout');
+    set('graph-layout', GRAPH_LAYOUTS.includes(layout) ? layout : 'libre');
+  }
   const iso = document.getElementById('graph-include-isolated');
   if (iso) iso.checked = sp.get('aislados') === '1';
 }
 
 function writeGraphURL(f) {
-  const sp = new URLSearchParams();
-  if (f.q) sp.set('q', f.q);
-  if (f.tipo) sp.set('tipo', f.tipo);
-  if (f.year) sp.set('year', String(f.year));
-  if (f.tema) sp.set('tema', f.tema);
-  if (f.persona) sp.set('persona', f.persona);
-  if (f.org) sp.set('org', f.org);
-  if (f.minConn > 0) sp.set('minconn', String(f.minConn));
+  // Partir de la URL actual y reemplazar solo las claves del grafo: en /events
+  // el mini comparte query con los filtros del listado y no hay que borrarlos.
+  let sp;
+  try { sp = new URLSearchParams(location.search); } catch { sp = new URLSearchParams(); }
+  ['q', 'tipo', 'year', 'tema', 'persona', 'org', 'minconn', 'aislados', 'layout'].forEach(k => sp.delete(k));
+  if (f) {
+    if (f.q) sp.set('q', f.q);
+    if (f.tipo) sp.set('tipo', f.tipo);
+    if (f.year) sp.set('year', String(f.year));
+    if (f.tema) sp.set('tema', f.tema);
+    if (f.persona) sp.set('persona', f.persona);
+    if (f.org) sp.set('org', f.org);
+    if (f.minConn > 0) sp.set('minconn', String(f.minConn));
+  }
   if (document.getElementById('graph-include-isolated')?.checked) sp.set('aislados', '1');
+  const layout = readGraphLayout();
+  if (layout !== 'libre') sp.set('layout', layout);
   const qs = sp.toString();
   try { history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '')); } catch { /* noop */ }
+  // La URL recién escrita YA refleja los controles: sin marcarla, el siguiente
+  // init() releería el query y revertiría el cambio del usuario (fecha-h →
+  // fecha-v volvía a fecha-h) antes de aplicarlo.
+  window.__gvGraphURLSynced = qs ? '?' + qs : '';
 }
 
 function graphFiltersActive(f) {
@@ -93,9 +119,34 @@ function updateGraphUI(f, shown, total) {
   document.getElementById('graph-clear')?.classList.toggle('hidden', !graphFiltersActive(f));
 }
 
-// Cablea controles una sola vez por DOM (guard en el form: tras un swap de View
-// Transitions el form es nuevo y hay que re-cablear). Incluye el checkbox de
-// aislados, que vive en el header fuera del form.
+// Guard por nodo: tras un swap de View Transitions los controles son nuevos y
+// hay que re-cablearlos; el bundle en cambio se evalúa una sola vez.
+function wireOnce(el, type, handler) {
+  if (!el || el.__gvWired) return;
+  el.__gvWired = true;
+  el.addEventListener(type, handler);
+}
+
+// Controles del header/footer que viven FUERA del form (están también en la
+// ficha de tema, que no pasa `filters`). Antes el checkbox de aislados se
+// cableaba dentro de wireGraphFilters() y en /topics/[id] no respondía.
+function wireGraphViewControls() {
+  wireOnce(document.getElementById('graph-include-isolated'), 'change', init);
+  wireOnce(document.getElementById('graph-layout'), 'change', () => {
+    try { localStorage.setItem('gv-graph-layout', readGraphLayout()); } catch { /* noop */ }
+    init();
+  });
+  wireOnce(document.getElementById('graph-clear'), 'click', () => {
+    const form = document.getElementById('graph-filters');
+    if (form) form.reset();
+    const iso = document.getElementById('graph-include-isolated');
+    if (iso) iso.checked = false;
+    // El orden es una vista, no un filtro: "Limpiar" lo conserva.
+    init();
+  });
+}
+
+// Cablea el form de filtros una sola vez por DOM.
 function wireGraphFilters() {
   const form = document.getElementById('graph-filters');
   if (!form || form.__gvWired) return;
@@ -112,13 +163,6 @@ function wireGraphFilters() {
     // selects: los cubre 'change' (algunos navegadores disparan ambos).
   });
   form.addEventListener('change', () => init());
-  document.getElementById('graph-include-isolated')?.addEventListener('change', () => init());
-  document.getElementById('graph-clear')?.addEventListener('click', () => {
-    form.reset();
-    const iso = document.getElementById('graph-include-isolated');
-    if (iso) iso.checked = false;
-    init();
-  });
 }
 
 function init() {
@@ -141,6 +185,25 @@ function init() {
   const totalNodes = nodesData.length;
   const isMini = size === 'mini';
 
+  // El mini de /events no puede poner `layout` en la URL sin borrar los filtros
+  // del listado: su preferencia viaja en localStorage. La URL manda en /graph.
+  if (isMini) {
+    const layoutEl = document.getElementById('graph-layout');
+    if (layoutEl && !new URLSearchParams(location.search).has('layout')) {
+      try {
+        const saved = localStorage.getItem('gv-graph-layout');
+        if (GRAPH_LAYOUTS.includes(saved)) layoutEl.value = saved;
+      } catch { /* noop */ }
+    }
+  }
+
+  // Sincronizar URL → controles ANTES de leerlos (incluye el orden por fecha).
+  // El guard de sync es por query, así que una navegación VT con otra URL vuelve
+  // a aplicar los valores aunque el módulo ya estuviera evaluado.
+  syncGraphControlsFromURL();
+  wireGraphViewControls();
+  wireGraphFilters();
+
   // Toggle "Incluir sin conexiones" (solo full): por defecto se muestran solo los
   // eventos con conexiones explicitas — los aislados son ruido visual y encarecen
   // la simulacion en movil. El cambio del checkbox re-ejecuta init().
@@ -155,7 +218,6 @@ function init() {
   // toggle de aislados y recortan links a nodos visibles.
   let graphFilters = null;
   if (!isMini && document.getElementById('graph-filters')) {
-    syncGraphControlsFromURL();
     graphFilters = readGraphFilters();
     const q = norm(graphFilters.q);
     nodesData = nodesData.filter((n) =>
@@ -169,10 +231,9 @@ function init() {
     );
     const ids = new Set(nodesData.map((n) => n.id));
     linksData = linksData.filter((l) => ids.has(l.source) && ids.has(l.target));
-    writeGraphURL(graphFilters);
     updateGraphUI(graphFilters, nodesData.length, totalNodes);
   }
-  wireGraphFilters();
+  if (!isMini) writeGraphURL(graphFilters);
   if (!nodesData.length) {
     const skeletonEmpty = container.querySelector('[data-graph-skeleton]');
     if (skeletonEmpty) skeletonEmpty.style.display = 'none';
@@ -182,7 +243,11 @@ function init() {
   document.getElementById('graph-empty')?.classList.add('hidden');
   const W = parseInt(container.dataset.width) || (isMini ? 800 : 1200);
   const H = parseInt(container.dataset.height) || (isMini ? 280 : 600);
-  const R = isMini ? 6 : 8;
+  const layout = readGraphLayout();
+  const dateMode = layout !== 'libre';
+  // En fecha (full) el punto pequeño deja huecos entre nodos: con R=8 la banda
+  // se veía como un bloque sólido aunque geométricamente no se solaparan.
+  const R = isMini ? 6 : dateMode ? 4 : 8;
   const MAX_LABEL = isMini ? 28 : 42;
   const FONT_SIZE = isMini ? 9 : 11;
 
@@ -243,20 +308,115 @@ function init() {
     label: l.label,
   })).filter(l => l.source && l.target);
 
-  // Render edges
-  const edgeLines = [];
+  // Modo fecha: columnas por mes apiladas verticalmente. Los períodos con
+  // muchos eventos se ven altos y los vacíos bajos (densidad en el tiempo);
+  // el reparto por rango anterior daba un rectángulo uniforme e ilegible.
+  let axisAtNode = null;
+  if (dateMode) {
+    const pad = isMini ? 24 : 56;
+    const axisLen = (layout === 'fecha-h' ? W : H) - pad * 2;
+    const sep = R * 2 + 4;
+    const MAX_ROWS = isMini ? 8 : 20;
+    const bucketOf = (n) => {
+      if (!Number.isFinite(n.ts)) return -1;
+      const d = new Date(n.ts);
+      return d.getUTCFullYear() * 12 + d.getUTCMonth();
+    };
+    const buckets = new Map();
+    nodes.forEach((n) => {
+      const b = bucketOf(n);
+      n.__bucket = b;
+      if (!buckets.has(b)) buckets.set(b, []);
+      buckets.get(b).push(n);
+    });
+    const sortedBuckets = [...buckets.keys()].sort((a, b) => a - b);
+    const colStep = axisLen / Math.max(1, sortedBuckets.length - 1);
+    const columnOf = (b) => {
+      let lo = 0, hi = sortedBuckets.length;
+      while (lo < hi) {
+        const mid = (lo + hi) >> 1;
+        if (sortedBuckets[mid] < b) lo = mid + 1; else hi = mid;
+      }
+      return Math.min(lo, sortedBuckets.length - 1);
+    };
+    axisAtNode = (n) => n.__axisAt;
+    const axisAtTime = (t) => pad + columnOf(bucketOf({ ts: t })) * colStep;
+
+    const perpMax = layout === 'fecha-h' ? H : W;
+    nodes.forEach((n) => {
+      const col = columnOf(n.__bucket);
+      const row = buckets.get(n.__bucket).indexOf(n);
+      // Si un mes tiene más de MAX_ROWS eventos, se desborda en una
+      //subcolumna contigua en vez de hacerse una torre infinita.
+      const sub = Math.floor(row / MAX_ROWS);
+      const r = row % MAX_ROWS;
+      const along = pad + col * colStep + sub * sep;
+      n.__axisAt = along;
+      const off = (r - (MAX_ROWS - 1) / 2) * sep;
+      if (layout === 'fecha-h') { n.x = along; n.y = perpMax / 2 + off; n.fx = along; }
+      else { n.x = perpMax / 2 + off; n.y = along; n.fy = along; }
+    });
+
+    // Reglas de año: referencia temporal visible sin depender de las etiquetas.
+    const years = [...new Set(nodes.map(n => n.year).filter(y => Number.isFinite(y)))].sort((a, b) => a - b);
+    const axisMax = layout === 'fecha-h' ? W : H;
+    let lastLabelAt = -Infinity;
+    for (const y of years) {
+      const at = axisAtTime(Date.UTC(y, 0, 1));
+      if (at < 0 || at > axisMax) continue;
+      // Años consecutivos pueden caer a ~13px: la línea va siempre, la etiqueta
+      // solo si hay sitio para que no se pisen.
+      const showLabel = at - lastLabelAt >= (isMini ? 22 : 34);
+      if (showLabel) lastLabelAt = at;
+      const grid = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+      grid.setAttribute('stroke', 'var(--color-base-content)');
+      grid.setAttribute('stroke-opacity', '0.3');
+      grid.setAttribute('stroke-width', '1');
+      grid.setAttribute('stroke-dasharray', '3 5');
+      grid.style.pointerEvents = 'none';
+      if (layout === 'fecha-h') {
+        grid.setAttribute('x1', at); grid.setAttribute('x2', at);
+        grid.setAttribute('y1', 0); grid.setAttribute('y2', H);
+      } else {
+        grid.setAttribute('x1', 0); grid.setAttribute('x2', W);
+        grid.setAttribute('y1', at); grid.setAttribute('y2', at);
+      }
+      gLinks.appendChild(grid);
+      if (showLabel) {
+        const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        label.setAttribute('fill', 'var(--color-base-content)');
+        label.setAttribute('fill-opacity', '0.75');
+        label.setAttribute('font-size', isMini ? '9' : '11');
+        label.setAttribute('font-weight', '600');
+        label.style.pointerEvents = 'none';
+        label.textContent = String(y);
+        if (layout === 'fecha-h') {
+          label.setAttribute('x', at + 4); label.setAttribute('y', isMini ? 12 : 14);
+          label.setAttribute('text-anchor', 'start');
+        } else {
+          label.setAttribute('x', isMini ? 4 : 8); label.setAttribute('y', at - 4);
+          label.setAttribute('text-anchor', 'start');
+        }
+        gLinks.appendChild(label);
+      }
+    }
+  }
+
+  // Render edges. En modo fecha se omiten las etiquetas de relación: con el
+  // eje cronológico se apilan y tapan los nodos; el tooltip y el modal las dan.
+  const EDGE_IDLE_OPACITY = dateMode ? 0.14 : 0.5;
   links.forEach(l => {
     const color = EDGE_COLORS[l.tipo] || '#78716c';
     const line = document.createElementNS('http://www.w3.org/2000/svg', 'line');
     line.setAttribute('stroke', color);
-    line.setAttribute('stroke-width', '1.5');
-    line.setAttribute('stroke-opacity', '0.5');
+    line.setAttribute('stroke-width', dateMode ? '1' : '1.5');
+    line.setAttribute('stroke-opacity', String(EDGE_IDLE_OPACITY));
     line.setAttribute('marker-end', `url(#arrow-${l.tipo})`);
     gLinks.appendChild(line);
-    edgeLines.push(line);
+    l._line = line;
     l._els = [line];
 
-    if (!isMini) {
+    if (!isMini && !dateMode) {
       const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       text.setAttribute('text-anchor', 'middle');
       text.setAttribute('fill', color);
@@ -265,7 +425,7 @@ function init() {
       text.setAttribute('opacity', '0.8');
       text.textContent = l.label;
       gLinks.appendChild(text);
-      edgeLines.push(text);
+      l._text = text;
       l._els.push(text);
     }
   });
@@ -279,10 +439,10 @@ function init() {
     circle.setAttribute('r', R);
     circle.setAttribute('fill', n.color);
     circle.setAttribute('stroke', 'white');
-    circle.setAttribute('stroke-width', '2');
+    circle.setAttribute('stroke-width', dateMode && !isMini ? '1' : '2');
     group.appendChild(circle);
 
-    if (n.connections > 0 && !isMini) {
+    if (n.connections > 0 && !isMini && !dateMode) {
       const badge = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
       badge.setAttribute('cx', R + 4);
       badge.setAttribute('cy', -R - 2);
@@ -304,26 +464,32 @@ function init() {
       group.appendChild(badgeText);
     }
 
-    const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-    label.setAttribute('y', R + (isMini ? 12 : 14));
-    label.setAttribute('text-anchor', 'middle');
-    label.setAttribute('fill', 'var(--color-base-content)');
-    label.setAttribute('font-size', String(FONT_SIZE));
-    label.setAttribute('font-weight', '500');
-    label.style.pointerEvents = 'none';
-    label.textContent = n.label.length > MAX_LABEL ? n.label.slice(0, MAX_LABEL) + '...' : n.label;
-    group.appendChild(label);
+    // Con 2000 nodos, etiquetas de 42 caracteres se pisan aunque los círculos
+    // estén separados: la vista se lee como una masa. En fecha (full) solo va
+    // el punto; el título y la fecha los dan el tooltip y el modal al tocar.
+    const showText = !dateMode || isMini;
+    if (showText) {
+      const label = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      label.setAttribute('y', R + (isMini ? 12 : 14));
+      label.setAttribute('text-anchor', 'middle');
+      label.setAttribute('fill', 'var(--color-base-content)');
+      label.setAttribute('font-size', String(FONT_SIZE));
+      label.setAttribute('font-weight', '500');
+      label.style.pointerEvents = 'none';
+      label.textContent = n.label.length > MAX_LABEL ? n.label.slice(0, MAX_LABEL) + '...' : n.label;
+      group.appendChild(label);
 
-    if (!isMini) {
-      const dateText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-      dateText.setAttribute('y', R + 26);
-      dateText.setAttribute('text-anchor', 'middle');
-      dateText.setAttribute('fill', 'var(--color-base-content)');
-      dateText.setAttribute('fill-opacity', '0.55');
-      dateText.setAttribute('font-size', '9');
-      dateText.style.pointerEvents = 'none';
-      dateText.textContent = n.fecha;
-      group.appendChild(dateText);
+      if (!isMini || dateMode) {
+        const dateText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        dateText.setAttribute('y', R + (isMini ? 22 : 26));
+        dateText.setAttribute('text-anchor', 'middle');
+        dateText.setAttribute('fill', 'var(--color-base-content)');
+        dateText.setAttribute('fill-opacity', '0.55');
+        dateText.setAttribute('font-size', '9');
+        dateText.style.pointerEvents = 'none';
+        dateText.textContent = n.fecha;
+        group.appendChild(dateText);
+      }
     }
 
     gNodes.appendChild(group);
@@ -331,12 +497,23 @@ function init() {
     n._circle = circle;
   });
 
-  // Force simulation — adjust params for mini/full
-  const simulation = forceSimulation(nodes)
-    .force('link', forceLink(links).id(d => d.id).distance(isMini ? 80 : 120))
-    .force('charge', forceManyBody().strength(isMini ? -200 : -350))
-    .force('center', forceCenter(W / 2, H / 2))
-    .force('collide', forceCollide(R + (isMini ? 8 : 12)))
+  // Force simulation — adjust params for mini/full and layout
+  const simulation = forceSimulation(nodes);
+  if (dateMode) {
+    // Sin link/charge/center: fx/fy mantienen el eje cronológico exacto y
+    // collide reparte la dimensión perpendicular. Al soltar un nodo arrastrado
+    // se restaura solo la coordenada fijada (ver endPointer).
+    // El reparto por carriles ya garantiza la separación; este collide solo
+    // evita que un nodo arrastrado se quede encima de otro al soltarlo.
+    simulation.force('collide', forceCollide(R + 2).strength(1).iterations(2));
+  } else {
+    simulation
+      .force('link', forceLink(links).id(d => d.id).distance(isMini ? 80 : 120))
+      .force('charge', forceManyBody().strength(isMini ? -200 : -350))
+      .force('center', forceCenter(W / 2, H / 2))
+      .force('collide', forceCollide(R + (isMini ? 8 : 12)));
+  }
+  simulation
     // Deja de tickar antes: alphaMin mas alto = menos ticks = menos bateria/CPU
     // en movil. El encuadre automatico ocurre una sola vez, en el primer 'end'
     // (ver didFitOnce); los asentamientos posteriores (tras tap/drag) respetan
@@ -349,24 +526,21 @@ function init() {
       }
     })
     .on('tick', () => {
-      const edgeStep = isMini ? 1 : 2;
-      links.forEach((l, i) => {
+      links.forEach(l => {
         const dx = l.target.x - l.source.x;
         const dy = l.target.y - l.source.y;
         const d = Math.sqrt(dx * dx + dy * dy) || 1;
-        const line = edgeLines[i * edgeStep];
+        const line = l._line;
         if (line) {
           line.setAttribute('x1', l.source.x + dx / d * R);
           line.setAttribute('y1', l.source.y + dy / d * R);
           line.setAttribute('x2', l.target.x - dx / d * (R + 8));
           line.setAttribute('y2', l.target.y - dy / d * (R + 8));
         }
-        if (!isMini) {
-          const text = edgeLines[i * edgeStep + 1];
-          if (text) {
-            text.setAttribute('x', (l.source.x + l.target.x) / 2);
-            text.setAttribute('y', (l.source.y + l.target.y) / 2 - 4);
-          }
+        const text = l._text;
+        if (text) {
+          text.setAttribute('x', (l.source.x + l.target.x) / 2);
+          text.setAttribute('y', (l.source.y + l.target.y) / 2 - 4);
         }
       });
       nodes.forEach(n => {
@@ -397,7 +571,7 @@ function init() {
       for (const node of l._els ?? []) {
         node.style.transition = 'stroke-opacity 0.18s, stroke-width 0.18s, opacity 0.18s';
         if (node.tagName === 'line') {
-          node.setAttribute('stroke-opacity', lit ? '0.95' : (id ? '0.06' : '0.5'));
+          node.setAttribute('stroke-opacity', lit ? '0.95' : (id ? '0.06' : String(EDGE_IDLE_OPACITY)));
           node.setAttribute('stroke-width', lit ? '2.4' : '1.5');
         } else {
           node.setAttribute('opacity', lit ? '1' : (id ? '0.08' : '0.8'));
@@ -423,6 +597,14 @@ function init() {
   // simulacion y el 'end' deshacia el pan/zoom del usuario ~2s despues.
   let didFitOnce = false;
   let userMovedView = false;
+
+  if (dateMode) {
+    // El eje y los carriles ya están calculados: encuadra aquí mismo. Esperar
+    // al 'end' de d3 no funciona con la pestaña en segundo plano (d3-timer
+    // usa rAF) y el grafo aparecía sin transform, recortado y amontonado.
+    didFitOnce = true;
+    fitView();
+  }
 
   function applyTransform() {
     g.setAttribute('transform', `translate(${tx},${ty}) scale(${scale})`);
@@ -534,8 +716,16 @@ function init() {
           // del grafo). Si no hay modal (mini), navega directo como antes.
           openGraphModal(dragNode);
         }
-        dragNode.fx = null;
-        dragNode.fy = null;
+        if (dateMode) {
+          // Al soltar, la coordenada del tiempo vuelve a su fecha exacta; la
+          // perpendicular queda libre para que collide siga separando ramas.
+          const at = axisAtNode(dragNode);
+          if (layout === 'fecha-h') { dragNode.fx = at; dragNode.fy = null; }
+          else { dragNode.fy = at; dragNode.fx = null; }
+        } else {
+          dragNode.fx = null;
+          dragNode.fy = null;
+        }
         simulation.alphaTarget(0);
         dragNode = null;
       }
@@ -695,9 +885,9 @@ function init() {
           // Links internos del preview en pestana nueva: navegar aqui perderia
           // el estado del grafo (la queja original del modal).
           box.querySelectorAll('a[href^="/"]').forEach((a) => a.setAttribute('target', '_blank'));
-          // Interceptar [N] → scroll dentro del modal en vez de
-          // navegar a /events#ref-N (hash del listado, sin destino).
-          box.querySelectorAll('a[href^="#ref-"]').forEach((a) => {
+          // Interceptar [N] y "volver a" → scroll dentro del modal en vez de
+          // navegar al hash de la pagina de fondo (sin ese destino / con otro evento).
+          box.querySelectorAll('a[href^="#ref-"], a[href^="#cite-"]').forEach((a) => {
             a.addEventListener('click', (e) => {
               e.preventDefault();
               e.stopPropagation();

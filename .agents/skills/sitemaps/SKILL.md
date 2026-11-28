@@ -318,7 +318,7 @@ en `references/medios.md` — cargalo al trabajar con un medio concreto.
 | `pnpm run sitemaps-watchlist` | Regenera `TAREAS/tareas_sitemap.md` con el estado de cada sitio (✅ catálogo / 🟡 en uso / 🔒 sin sitemap / ⬜ pendiente) |
 | `pnpm run sitemaps-probe -- <dominio>...` | Sondea candidatos y avisa si el dominio ya está catalogado o ya fue descartado (ver alta de medio) |
 | `pnpm run sitemaps-backup` | Empaqueta el catálogo en `.gvault` (Brotli, compacto lossless) |
-| `pnpm run news-search -- "<query>"` | RSS de Google News con resolución por título contra el catálogo |
+| `pnpm run news-search -- "<query>"` | RSS de Google News: resuelve IDs cifrados por batchexecute, luego título contra catálogo/vault; `--window` rompe el techo de 100 |
 
 Flags de `sitemaps-sync`: `--all`, `--list`, `--fresh`, `--no-cache`, `--limit N`,
 `--stale N`, `--no-delay`, `--delay N`, `--incremental`, `--replace`, `--since-last-sync`,
@@ -373,17 +373,32 @@ desincroniza sola.
 Cuando el catálogo no cubre lo buscado (tema muy reciente, medio sin sitemap, JSONL
 atrasado), el paso siguiente no es el websearch genérico sino
 `pnpm run news-search -- "<query>"`: consulta el RSS de Google News (`hl=es-419&gl=CL`, sin
-API key) y resuelve la URL original **por coincidencia de título** contra el catálogo.
-Flags: `--since YYYY-MM-DD`, `--medio <subcadena>`, `--limit N` (8 es el máximo práctico),
-`--all`, `--json`. Los ítems resueltos traen la URL lista para `fetch-content`; los
-`[SIN RESOLVER]` traen el comando sugerido. Lo ya presente en el vault se oculta.
+API key). **El feed entrega 100 ítems por query y `start`/`count` se ignoran**; de esos 100
+solo ~54 son medios distintos y ~84 suelen concentrarse en los últimos 2 días.
+
+Orden de resolución de la URL original (nunca se guarda la URL de Google):
+
+1. `via:"google"` — ID `CBMi…`: GET al article page para `data-n-a-sg`/`data-n-a-ts`
+   (copiando `hl`/`gl`/`ceid` del item) y un POST de `batchexecute` por lote de 10.
+   Es por ID, no por título: en una query de 100 ítems resolvió 99/99.
+2. `via:"catalogo"` — coincidencia de título contra `sitemaps/*.jsonl`.
+3. `via:"vault"` — título contra `src/content/sources/*.md`.
+
+Flags: `--since YYYY-MM-DD`, `--from YYYY-MM-DD`, `--to YYYY-MM-DD`,
+`--window Nd|Nw|Nm`, `--medio <subcadena>`, `--limit N`, `--all`, `--json`,
+`--no-resolve` (salta el paso 1). `--window` lanza una query por ventana con
+`after:`/`before:` y dedupe por título+medio+fecha: es la forma de pasar del techo de 100
+sin API key (3 ventanas ≈ 300 títulos). El resumen va a stderr con nº de resultados,
+medios únicos, desglose de `via` y medios más repetidos; `--json` sigue siendo un array
+limpio con el campo `via` añadido. Los `[SIN RESOLVER]` traen el comando sugerido.
+Lo ya presente en el vault se oculta salvo con `--all`.
 
 Escalera cuando eso no basta, en orden:
 
-1. **`[RESUELTO]` puede apuntar al artículo equivocado**: la resolución es por título, no
-   por ID, así que un titular reutilizado devuelve la URL de otro mes. Contrastar siempre
-   la fecha del ítem con la del slug y con el `Published Time` del fetch. No calza → tratar
-   como no resuelto.
+1. **`via:"catalogo"` / `via:"vault"` pueden apuntar al artículo equivocado**: la resolución
+   es por título, así que un titular reutilizado devuelve la URL de otro mes. `via:"google"`
+   viene del ID y no tiene ese problema. En los dos primeros casos, contrastar la fecha del
+   ítem con la del slug y con el `Published Time` del fetch. No calza → tratar como no resuelto.
 2. **News-sitemap en vivo del medio** (cuando el JSONL local va atrasado): leer el endpoint
    que declara `robots.txt` y buscar el `<loc>` cuyo `<news:title>` coincida. Funciona
    aunque el slug no sea adivinable. Los sub-sitemaps suelen ordenar por fecha, así que las
@@ -409,8 +424,10 @@ Escalera cuando eso no basta, en orden:
    `sitemap_index.xml` lista los shards y hay que abrir los `post-sitemapN.xml`. Conviene
    filtrar por `/AAAA/MM/DD/` en los `<loc>` porque los shards también traen años anteriores.
 
-Límites conocidos: los links `rss/articles/CBMi…` van cifrados (doble base64, no
-decodificables localmente) y GDELT no responde desde esta red.
+Límites conocidos: el doble base64 de `rss/articles/CBMi…` no contiene la URL; se resuelve
+con la firma del article page vía `batchexecute`, con el `ceid` del item (si se usa otro,
+Google responde `null`). Si el endpoint cambia, `news-search` cae al match por título y deja
+`[SIN RESOLVER]`. GDELT no responde desde esta red.
 
 ---
 

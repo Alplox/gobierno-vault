@@ -1,25 +1,68 @@
 ---
 import Base from '../../layouts/Base.astro';
-import { getAllPeople } from '../../lib/queries';
-import { Users } from 'lucide-astro';
+import { getAllPeople, getOrgsMap } from '../../lib/queries';
+import { getPersonIndexStats, getPersonMentionsByYear } from '../../lib/personStats';
+import { Users, UserCheck, Flame, CalendarDays, Layers, Building2 } from 'lucide-astro';
 
 const allPeople = await getAllPeople();
+const stats = await getPersonIndexStats();
+const mentionsByYear = await getPersonMentionsByYear();
+const orgsMap = await getOrgsMap();
+
+const n = (v: number) => v.toLocaleString('es-CL');
+
+function norm(s: string) {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+const total = allPeople.length;
+const conEventos = allPeople.filter((p) => (stats.get(p.id)?.n ?? 0) > 0).length;
+const menciones = allPeople.reduce((acc, p) => acc + (stats.get(p.id)?.n ?? 0), 0);
+const conOrg = allPeople.filter((p) => !!p.data.organizacion).length;
+
+const top = allPeople
+  .filter((p) => (stats.get(p.id)?.n ?? 0) > 0)
+  .sort(
+    (a, b) =>
+      (stats.get(b.id)?.n ?? 0) - (stats.get(a.id)?.n ?? 0) ||
+      a.data.nombre.localeCompare(b.data.nombre, 'es')
+  )
+  .slice(0, 5);
+const maxTop = Math.max(1, ...top.map((p) => stats.get(p.id)?.n ?? 0));
+// 2026 concentra miles de menciones frente a decenas en el resto de los anos:
+// con escala lineal todas las demas barras quedaban planas.
+const maxYearLog = Math.log10(Math.max(1, ...mentionsByYear.map((y) => y.n)) + 1);
+
+const orgIds = [...new Set(allPeople.map((p) => p.data.organizacion).filter((o): o is string => !!o))].sort(
+  (a, b) => (orgsMap.get(a) ?? a).localeCompare(orgsMap.get(b) ?? b, 'es')
+);
+
+function personData(p: (typeof allPeople)[number], order: number) {
+  const st = stats.get(p.id);
+  const org = p.data.organizacion ?? '';
+  const orgNombre = org ? orgsMap.get(org) ?? org : '';
+  return {
+    id: p.id,
+    nombre: p.data.nombre,
+    cargo: p.data.cargo ?? '',
+    organizacion: org,
+    orgNombre,
+    aliases: p.data.aliases ?? [],
+    n: st?.n ?? 0,
+    last: st?.last ?? '',
+    order,
+    search: norm([p.data.nombre, p.data.cargo ?? '', orgNombre, ...(p.data.aliases ?? [])].join(' ')),
+  };
+}
 
 const SSR_LIMIT = 40;
 const ssrPeople = allPeople.slice(0, SSR_LIMIT);
 const lazyPeople = allPeople.slice(SSR_LIMIT);
-const ssrIds = new Set(ssrPeople.map((p) => p.id));
-
-const lazyData = lazyPeople.map((p) => ({
-  id: p.id,
-  nombre: p.data.nombre,
-  cargo: p.data.cargo ?? null,
-  organizacion: p.data.organizacion ?? null,
-}));
+const lazyData = lazyPeople.map((p, i) => personData(p, i + SSR_LIMIT));
 ---
 
 <Base title="Personas">
-  <div class="mb-8">
+  <div class="mb-6">
     <div class="flex items-center gap-2 mb-1">
       <Users class="h-6 w-6 text-base-content shrink-0" />
       <h1 class="text-2xl sm:text-3xl font-bold text-base-content leading-tight">Personas</h1>
@@ -27,47 +70,171 @@ const lazyData = lazyPeople.map((p) => ({
     <p class="text-base-content/80 text-sm">Figuras públicas, autoridades y actores mencionados en acontecimientos registrados.</p>
   </div>
 
+  <section aria-labelledby="people-stats-title" class="mb-6 grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(0,20rem)]">
+    <div class="bg-base-100 p-4 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <h2 id="people-stats-title" class="text-sm font-bold text-base-content mb-3">Panorama del índice</h2>
+      <ul class="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
+        <li class="rounded-xl bg-base-200/60 px-3.5 py-3">
+          <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/80"><Users class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />Personas</span>
+          <span class="mt-1 block text-xl font-bold tabular-nums leading-none text-base-content">{n(total)}</span>
+          <span class="mt-1 block text-[11px] text-base-content/80">en el índice</span>
+        </li>
+        <li class="rounded-xl bg-base-200/60 px-3.5 py-3">
+          <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/80"><UserCheck class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />Con eventos</span>
+          <span class="mt-1 block text-xl font-bold tabular-nums leading-none text-base-content">{n(conEventos)}</span>
+          <span class="mt-1 block text-[11px] text-base-content/80">{total ? Math.round((conEventos / total) * 100) : 0}% del índice</span>
+        </li>
+        <li class="rounded-xl bg-base-200/60 px-3.5 py-3">
+          <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/80"><Flame class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />Menciones</span>
+          <span class="mt-1 block text-xl font-bold tabular-nums leading-none text-base-content">{n(menciones)}</span>
+          <span class="mt-1 block text-[11px] text-base-content/80">eventos por persona</span>
+        </li>
+        <li class="rounded-xl bg-base-200/60 px-3.5 py-3">
+          <span class="flex items-center gap-1.5 text-[11px] font-semibold uppercase tracking-wide text-base-content/80"><Building2 class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />Con organismo</span>
+          <span class="mt-1 block text-xl font-bold tabular-nums leading-none text-base-content">{n(conOrg)}</span>
+          <span class="mt-1 block text-[11px] text-base-content/80">organización declarada</span>
+        </li>
+      </ul>
+
+      <div class="mt-4">
+        <h3 class="text-xs font-bold text-base-content/80 mb-2 flex items-center gap-1.5">
+          <CalendarDays class="h-3.5 w-3.5 shrink-0" aria-hidden="true" />Menciones por año
+          <span class="font-normal text-base-content/60">(escala logarítmica)</span>
+        </h3>
+        <div class="flex items-end gap-1.5 overflow-x-auto pb-1" role="img" aria-label="Menciones por año, escala logarítmica: {mentionsByYear.map((y) => `${y.year}, ${y.n}`).join('; ')}">
+          {mentionsByYear.map((y) => (
+            <div class="min-w-[2rem] flex-1 text-center" title={`${y.year}: ${n(y.n)} menciones`}>
+              <div class="h-14 flex items-end justify-center">
+                <div class="w-full rounded-t bg-primary/70 min-h-[2px]" style={`height:${Math.max(3, Math.round((Math.log10(y.n + 1) / maxYearLog) * 56))}px`}></div>
+              </div>
+              <span class="block text-[10px] tabular-nums text-base-content/80 mt-1">{String(y.year).slice(2)}</span>
+              <span class="block text-[10px] tabular-nums text-base-content/60">{n(y.n)}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-base-100 p-4 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+      <h2 class="text-sm font-bold text-base-content mb-3 flex items-center gap-1.5"><Flame class="h-4 w-4 shrink-0" aria-hidden="true" />Más mencionadas</h2>
+      {top.length ? (
+        <ol class="space-y-2.5">
+          {top.map((p, i) => {
+            const count = stats.get(p.id)?.n ?? 0;
+            return (
+              <li>
+                <a href={`/people/${p.id}`} class="group flex items-center gap-2 text-xs rounded focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40">
+                  <span class="w-4 shrink-0 tabular-nums text-base-content/50">{i + 1}.</span>
+                  <span class="min-w-0 flex-1">
+                    <span class="block truncate font-semibold text-base-content/90 group-hover:underline">{p.data.nombre}</span>
+                    <span class="block h-1 rounded-full bg-base-300 mt-1"><span class="block h-1 rounded-full bg-primary/70" style={`width:${Math.round((count / maxTop) * 100)}%`}></span></span>
+                  </span>
+                  <span class="shrink-0 tabular-nums text-base-content/80">{n(count)}</span>
+                </a>
+              </li>
+            );
+          })}
+        </ol>
+      ) : (
+        <p class="text-xs text-base-content/80">Sin eventos registrados.</p>
+      )}
+    </div>
+  </section>
+
+  <div class="mb-6 bg-base-100 p-4 rounded-2xl border-0 shadow-[var(--shadow-border)]">
+    <div class="flex flex-wrap items-end gap-3">
+      <label class="flex-1 min-w-[12rem]">
+        <span class="block text-[11px] font-semibold text-base-content/80 mb-1">Buscar</span>
+        <input id="people-q" type="search" autocomplete="off" placeholder="Nombre, cargo, organismo o alias…" class="input input-bordered w-full input-sm" />
+      </label>
+      <label class="min-w-[11rem] max-w-full flex-1 sm:flex-none">
+        <span class="block text-[11px] font-semibold text-base-content/80 mb-1">Organización</span>
+        <select id="people-org" class="select select-bordered select-sm w-full">
+          <option value="">Todas</option>
+          {orgIds.map((id) => <option value={id}>{orgsMap.get(id) ?? id}</option>)}
+        </select>
+      </label>
+      <label class="min-w-[10rem]">
+        <span class="block text-[11px] font-semibold text-base-content/80 mb-1">Ordenar</span>
+        <select id="people-sort" class="select select-bordered select-sm w-full">
+          <option value="nombre">Nombre (A–Z)</option>
+          <option value="n">Más mencionados</option>
+          <option value="last">Evento más reciente</option>
+        </select>
+      </label>
+      <label class="flex items-center gap-2 pb-1.5 cursor-pointer text-xs text-base-content/80">
+        <input id="people-active" type="checkbox" class="checkbox checkbox-sm" />
+        Solo con eventos
+      </label>
+    </div>
+    <div class="flex flex-wrap items-center gap-3 mt-3">
+      <p id="people-count" class="text-xs text-base-content/80" aria-live="polite">{n(total)} personas · {n(conEventos)} con eventos</p>
+      <button id="people-clear" type="button" class="text-xs font-semibold text-base-content/80 underline underline-offset-2 hover:text-base-content" hidden>Limpiar filtros</button>
+    </div>
+  </div>
+
   <div id="people-index-root" class="grid gap-4 sm:grid-cols-2">
-    {ssrPeople.map((person) => (
-        <a href={`/people/${person.id}`} class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out">
+    {ssrPeople.map((person, i) => {
+      const d = personData(person, i);
+      return (
+        <a
+          data-person-card
+          data-id={d.id}
+          data-org={d.organizacion}
+          data-n={d.n}
+          data-last={d.last}
+          data-order={d.order}
+          data-search={d.search}
+          href={`/people/${person.id}`}
+          class="group block rounded-xl p-5 bg-base-100 border-0 shadow-[var(--shadow-border)] hover:shadow-[var(--shadow-border-hover)] active:scale-[0.96] transition-[box-shadow,scale,border-color] duration-200 ease-out"
+        >
           <div class="flex items-start gap-4">
             <div class="h-16 w-12 rounded-lg bg-base-200 flex items-center justify-center shrink-0">
               <Users class="h-5 w-5 text-base-content/80" />
             </div>
             <div class="min-w-0 flex-1">
               <h3 transition:name={`person-title-${person.id}`} class="font-bold text-base-content text-base group-hover:text-base-content transition-colors leading-snug">{person.data.nombre}</h3>
-              {person.data.cargo && (
+              {d.cargo && (
                 <p class="flex items-center gap-1.5 text-xs text-base-content/80 font-medium mt-1">
-                  <span>{person.data.cargo}</span>
+                  <span>{d.cargo}</span>
                 </p>
               )}
-              {person.data.organizacion && (
+              {d.orgNombre && (
                 <p class="flex items-center gap-1.5 text-xs text-base-content/80 mt-0.5">
-                  <span>{person.data.organizacion}</span>
+                  <span>{d.orgNombre}</span>
+                </p>
+              )}
+              {d.n > 0 && (
+                <p class="flex items-center gap-1 text-[11px] text-base-content/60 mt-1.5 tabular-nums">
+                  <Layers class="h-3 w-3 shrink-0" aria-hidden="true" />
+                  <span>{n(d.n)} {d.n === 1 ? 'evento' : 'eventos'}</span>
+                  {d.last && <span>· hasta {d.last}</span>}
                 </p>
               )}
             </div>
             <span class="ml-auto text-base-content/30 group-hover:text-base-content group-hover:translate-x-0.5 transition-[translate,color] duration-200 ease-out shrink-0 mt-1">›</span>
           </div>
         </a>
-    ))}
+      );
+    })}
   </div>
 
-  {lazyPeople.length > 0 && (
-    <div class="mt-6 flex justify-center">
-      <button
-        id="load-more-people"
-        class="pointer-events-auto inline-flex items-center gap-2 rounded-lg border border-base-300 bg-base-100 px-5 py-2.5 text-sm font-semibold text-base-content/80 shadow-sm hover:bg-base-200"
-      >
-        <span class="person-more-label">Cargar más personas ({lazyPeople.length} restantes)</span>
-      </button>
-    </div>
-  )}
+  <div id="people-empty" class="hidden mt-4 bg-base-100 p-10 rounded-2xl border border-dashed border-base-300 text-center" role="status" aria-live="polite">
+    <p id="people-empty-msg" class="text-sm text-base-content/80">No se encontraron personas con los filtros actuales.</p>
+    <button type="button" id="people-empty-clear" class="mt-3 text-xs font-semibold text-base-content/80 underline underline-offset-2 hover:text-base-content">Limpiar filtros</button>
+  </div>
+
+  <div id="people-sentinel" class="h-12 flex items-center justify-center" aria-hidden="true">
+    <span class="text-xs text-base-content/60">Cargando más personas…</span>
+  </div>
 
   <script type="application/json" id="people-index-data" set:html={JSON.stringify(lazyData)} />
+  <script type="application/json" id="people-total" is:inline set:html={total} />
+  <script type="application/json" id="people-with-events" is:inline set:html={conEventos} />
 
   <script>
     import { initPersonList } from '../../scripts/personListClient.js';
     initPersonList();
+    document.addEventListener('astro:page-load', () => initPersonList());
   </script>
 </Base>

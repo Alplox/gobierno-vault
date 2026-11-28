@@ -1,6 +1,7 @@
 import { readFileSync, readdirSync, statSync } from 'node:fs';
 import { join } from 'node:path';
 import YAML from 'yaml';
+import { citationAnchorId } from './citationAnchors.mjs';
 
 function loadSources() {
   const dir = join(process.cwd(), 'src', 'content', 'sources');
@@ -117,14 +118,17 @@ function eventNode(id) {
   };
 }
 
-function sourceTooltipNode(id, sources, counter) {
+function sourceTooltipNode(id, sources, counter, occurrence) {
   const source = sources[id];
   const medio = escapeHtml(source?.medio ?? '');
   const titulo = escapeHtml(source?.titulo ?? id);
+  // Cada apparicion lleva su propia ancla: el "volver a" de Referencias puede
+  // apuntar a la instancia concreta cuando una fuente se cita varias veces.
+  const anchor = citationAnchorId(id, occurrence);
 
   return {
     type: 'html',
-    value: `<a href="#ref-${counter}" class="source-ref"><sup class="source-ref-num">[${counter}]</sup><span class="source-ref-tip">${medio}\n${titulo}</span></a>`,
+    value: `<a id="${anchor}" href="#ref-${counter}" class="source-ref scroll-mt-20"><sup class="source-ref-num">[${counter}]</sup><span class="source-ref-tip">${medio}\n${titulo}</span></a>`,
   };
 }
 
@@ -168,6 +172,7 @@ export default function remarkWikiLinks() {
 
   return (tree, file) => {
     const sourceNumbers = new Map();
+    const sourceOccurrences = new Map();
     let nextNum = 0;
     const missing = new Set();
 
@@ -195,7 +200,9 @@ export default function remarkWikiLinks() {
           if (type === 'source') {
             if (!sources[id]) missing.add(`[[${rawType}/${id}]]`);
             if (!sourceNumbers.has(id)) sourceNumbers.set(id, ++nextNum);
-            parts.push(sourceTooltipNode(id, sources, sourceNumbers.get(id)));
+            const occurrence = (sourceOccurrences.get(id) ?? 0) + 1;
+            sourceOccurrences.set(id, occurrence);
+            parts.push(sourceTooltipNode(id, sources, sourceNumbers.get(id), occurrence));
           } else if (type === 'person') {
             if (!peopleMap[id]) missing.add(`[[${rawType}/${id}]]`);
             parts.push(personNode(id, peopleMap));

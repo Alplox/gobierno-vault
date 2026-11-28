@@ -13,7 +13,9 @@ description: Extracción de contenido web, mirrors anti-paywall, navegador real 
 - [Contenido web NO confiable](#contenido-web-no-confiable-higiene-anti-inyección) — anti-inyección
 - [APIs observadas](#apis-observadas-cuando-la-escalera-completa-falla-por-js) — DevTools XHR
 - [Archivado y recuperación](#archivado-y-recuperación-de-fuentes) — Wayback, Browsertrix, Auto Archiver
-- [Defuddle CLI local](#defuddle-cli-local-alternativa-al-espejo-web)
+- [Respaldos en servicios online](#respaldos-en-servicios-online-fuera-del-proyecto) — waymore + lychee; todo dato local queda en tmp/
+- [Motores de obtención de datos](#motores-de-obtención-de-datos) — FMHY rescatado: selector / Crawl4AI / Scrapling / FlareSolverr / Scoop / urlwatch
+- [Defuddle CLI local](#defuddle-cli-local-al-espejo-web)
 - [Búsqueda con ripgrep](#búsqueda-local-con-ripgrep-rg--catálogo-y-repo)
 - [PDFs](#procesamiento-de-pdfs-lectura-de-documentos) — `pdf-extract`
 - [Office](#procesamiento-de-documentos-de-office-word-excel-powerpoint) — `doc-extract`
@@ -138,6 +140,7 @@ no como garantía de disponibilidad.
 - The Clinic: paywall suave; `paywallskip.com` o `r.jina.ai` funcionan para la portada. Para artículos con challenge, `browser-stealth --headed` pasa Turnstile y extrae el cuerpo; headless se queda en "Verificación de seguridad en curso"
 - El Ciudadano: rate-limit/WAF; `fetch-impersonate` o `archive.ph`. `browser-stealth --headed` pasa el bloqueo ("Sorry, you have been blocked"), `browser`/Puppeteer no. Ojo: URLs con fecha (`/08/29/`) pueden resolver a un PDF incrustado en vez del artículo — verificar el `Title` del fetch antes de citar
 - El Dínamo (`eldinamo.cl`): `read_url` devuelve solo navegación y el cuerpo no sale por los mirrors; la bajada (`meta description`) sí trae los datos del artículo (cifras, porcentajes), suficiente para verificar contra otros medios pero no para citar el cuerpo completo — para el contexto, usar la cobertura de otro medio
+- **r.jina.ai con PDF embebido**: si el `Title:` del espejo es un `archivo.pdf` y el `Final URL:` apunta a `/wp-content/uploads/...`, devolvió el PDF en vez de la nota. Verificar que el PDF contenga el hecho del titular; si no, repetir con `pnpm run fetch-content` (nov-2026: la nota de Diario El Centro sobre desempleo en el Maule dio primero el boletín nacional ENE N°337 y en la segunda pasada la crónica regional). Citar siempre la URL del artículo; el PDF solo se registra como fuente `documento` aparte si se usa.
 - CIPER: paywall; `paywallskip.com` o `r.jina.ai` a veces funcionan. Si fallan, ver "Bypass de paywall y agregadores de archivo (uso manual)" (`nopaywall.net`, `paywallremover.net`)
 - LUN (`lun.com`): las portadas históricas se leen con `https://www.lun.com/Pages/NewsDetail.aspx?dt=AAAA-MM-DD&SupplementId=0&PaginaId=1&EsAviso=0`. El `<title>` y la meta `description` listan el titular principal y los secundarios, y la cabecera del ejemplar trae la fecha impresa, así que sirve para verificar comparaciones virales de portadas sin OCR de la imagen
 - CNN Chile: la migración del sitio deja `fecha` falsa 2026-04-08 en artículos viejos (visto 3× sep-2026: 2014/2018/2023) — `add-source` la hereda; fijar siempre contra el `Published Time` del fetch
@@ -252,7 +255,8 @@ registrada en particular: `--id <id>` (exacto, acepta `.md`, varios IDs separado
 flags `--id` repetibles, o el ID como argumento suelto); ignora fecha/límite y re-procesa aunque
 ya tenga respaldo. Flags: `--since`, `--all`, `--limit`, `--id`, `--medio`, `--include-backed-up`, `--delay` (default 4 s, ~15 req/min anónimo),
 `--self-test`, `--migrate-only` (mueve el marker legacy `Respaldo Wayback:` de `notas` a
-`respaldos[]`, sin red). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
+`respaldos[]`, sin red), `--force-save` (intenta Save Page Now también en las plataformas
+omitidas por defecto). Nunca guarda contenido en el proyecto ni reemplaza la URL original.
 `--apply` tiene efectos de red y escritura: usarlo en tandas pequeñas.
 
 **`pnpm run archive-new -- --apply`** (= `archive-sources --new`) es el cierre obligatorio
@@ -266,10 +270,12 @@ la dejaría fuera (caso real: 9 fuentes del 16-nov-2025 quedaron sin `respaldos[
 motivo). Sigue respetando `--medio`, `--limit` (default 200 con `--new`) y el salto de fuentes
 ya respaldadas. `validate` emite un aviso —no error— con el comando exacto si detecta fuentes
 nuevas sin respaldo. En PowerShell, la lista de `--id` va entre comillas: sin ellas pnpm
-convierte las comas en array y el script selecciona 0 fuentes. Save Page Now devuelve HTTP 523
-sin URL canónica para posts públicos de X e Instagram (sin snapshot previo en
-`archive.org/wayback/available?url=`); verificar el contenido con FxTwitter/oEmbed/r.jina.ai,
-anotar el fallo en `notas` de la fuente y dejar el aviso de `validate`.
+convierte las comas en array y el script selecciona 0 fuentes. En X, Instagram y YouTube el
+script consulta solo `available?url=` y **omite Save Page Now** (HTTP 523 sin URL canónica en
+X/Instagram; `fetch failed` en YouTube), con línea `OMITIDA` y sin contarla como error;
+`--force-save` lo intenta igual. En esos casos verificar el contenido con
+FxTwitter/oEmbed/r.jina.ai, anotar la ausencia de respaldo en `notas` de la fuente y dejar el
+aviso de `validate`.
 
 **Casos por plataforma al archivar** (comportamiento vigente en `archive-sources.mjs`, cubierto por `--self-test`):
 
@@ -278,8 +284,9 @@ anotar el fallo en `notas` de la fuente y dejar el aviso de `validate`.
 | `old.reddit.com` | HTTP 200 pero captura `https://web.archive.org/web/<ts>/https://old.reddit.com/login`, sin el hilo | Prueba primero el equivalente `www.reddit.com` (misma ruta); rechaza snapshots que caigan en `/login` o que no contengan la ruta original. La `url:` citada se mantiene en `old.reddit.com`; solo cambia el `respaldos[].url` |
 | `www.reddit.com` | HTTP 200 con snapshot válido, pero la URL canónica lleva `?solution=…&js_challenge=1&jsc_token=…&jsc_orig_r=` | Conservar esos parámetros en `respaldos[].url`: al quitarlos, Wayback sirve solo el envoltorio «success/fail» sin el contenido del hilo |
 | Hilo borrado por moderadores | HTTP 200 con captura en `/comments/<id>/removed_by_moderator/` | El script la acepta porque conserva el ID del hilo; anotar en `respaldos[].notas` que el hilo fue eliminado |
-| X (`x.com`, `twitter.com`) | HTTP 523 sin URL canónica; `twitter.com` además falla de red desde esta red | No hay snapshot en `available`. No insistir: verificar texto y métricas con FxTwitter v2 u oEmbed oficial, anotar el fallo en `notas` y dejar el aviso de `validate` |
-| YouTube | `save` falla con `fetch failed` desde esta red | `available?url=` sí puede devolver un snapshot creado por otro crawler; el script lo reutiliza. Si no hay, verificar con oEmbed y anotar el fallo |
+| X (`x.com`, `twitter.com`) | HTTP 523 sin URL canónica; `twitter.com` además falla de red desde esta red | `available` se consulta, `save` se omite por defecto (`OMITIDA`). Verificar texto y métricas con FxTwitter v2 u oEmbed oficial, anotar la ausencia de respaldo en `notas` y dejar el aviso de `validate`. `--force-save` lo intenta |
+| Instagram (`instagram.com`) | HTTP 523 sin URL canónica en posts públicos | Igual que X: solo `available`, sin `save`. Leer el caption con r.jina.ai / `markdown.new` y anotar en `notas`. `--force-save` lo intenta |
+| YouTube | `save` falla con `fetch failed` desde esta red | `available?url=` sí puede devolver un snapshot creado por otro crawler; el script lo reutiliza. Si no hay, `OMITIDA` (sin `save`): verificar con oEmbed y anotar el fallo. `--force-save` lo intenta |
 
 Si ya se grabaron respaldos de `old.reddit.com/login`, borrar esa entrada antes de volver a correr
 `--id` (el dedupe es por `servicio` + `url` y dejaría ambas). La URL original de la fuente nunca se reemplaza.
@@ -303,6 +310,51 @@ conserva HTML, recursos, capturas y estado de renderizado que Wayback suele perd
   siempre la URL original.
 - La matriz de plataformas, URLs, campos y límites vive en
   `.agents/skills/social-media/references/retrieval.md`.
+
+### Respaldos en servicios online (fuera del proyecto)
+
+El vault guarda **solo eventos y metadatos de fuentes**: la URL original en
+`src/content/sources/*.md`, que es donde el usuario va a leer/ver la fuente.
+**"Fuera del proyecto" son servicios online independientes del vault** — Wayback
+Machine, archive.today, Internet Archive, Perma.cc —, no carpetas del home ni
+otros discos. Sus referencias se guardan en `respaldos[]` de la fuente con
+`pnpm run archive-sources -- --apply`.
+
+**Toda escritura local queda dentro de la raíz del repo y bajo `tmp/`**
+(gitignored, transitoria), nunca en `src/`. Los scripts rechazan rutas fuera de
+la raíz o fuera de `tmp/`. Las herramientas se instalan en el sistema y no son
+dependencias de `package.json`.
+
+| Script | Herramienta | Qué hace | Salida local (transitoria, bajo `tmp/`) |
+| --- | --- | --- | --- |
+| `pnpm run archived-urls -- <dominio> [--from YYYY] [--to YYYY] [--keywords <regex>] [--limit-requests N] [--dry-run]` | [waymore](https://github.com/xnl-h4ck3r/waymore) (`pipx install git+https://github.com/xnl-h4ck3r/waymore.git`) | Enumera URLs archivadas del dominio en Wayback + Common Crawl + URLScan + GhostArchive. Fuerza `-mode U`: **no descarga respuestas**. Útil para artículos borrados/renombrados y para puntos ciegos | `tmp/research/waymore/<dominio>/urls-YYYY-MM-DD.txt` (solo metadato) |
+| `pnpm run links-check -- [--since YYYY-MM-DD] [--limit N] [--medio <texto>] [--include-respaldos] [--dry-run]` | [lychee](https://lychee.cli.rs/) (`winget install --id lycheeverse.lychee`; `scoop`/`brew`/`cargo binstall`) | Chequea las `url:` originales de las fuentes — `validate.mjs` no lo hace. 403/429/timeout se clasifican como "revisar a mano" (WAF/rate-limit documentados), no como fuente muerta | `tmp/research/links-check/YYYY-MM-DD.json` |
+
+- `archived-urls` excluye VirusTotal e IntelligenceX por default (API key de pago/academia) y acepta `-lr` para no agotar las APIs; la lista de URLs es metadato, nunca el contenido de las fuentes.
+- `links-check` usa `--method head,get`, concurrencia 2 por host y pausa de 500 ms; la lista temporal va en `tmp/` (gitignored) y se borra al terminar. No modifica `src/content/sources/*.md` ni guarda cuerpo alguno.
+- Si la herramienta falta, el script imprime el comando de instalación y termina con error: no finge éxito. `--self-test` valida argumentos, parseo CRLF y que ninguna ruta salga de la raíz del repo / de `tmp/`; `--dry-run` muestra el comando exacto sin escribir nada.
+- FMHY (`fmhy.pages.dev/internet-tools#web-archiving-tools` y `#search-tools`) sirve como índice de descubrimiento, no como garantía de disponibilidad. Las herramientas de obtención de datos también se rescatan (sección siguiente); las que evaden paywalls duros o exigen login/cookies siguen siendo **manuales y bajo responsabilidad del usuario**, nunca parte de la cadena automática de citas.
+
+### Motores de obtención de datos
+
+`pnpm run research-fetch -- <URL> [--engine ...] [--save nombre] [--out dir] [--dry-run]`
+(expuesto en `scripts/extract/research-fetch.mjs`). No reemplaza a `fetch-content`:
+es para investigación. Por default imprime a stdout; `--save`/`--out` escriben en
+`tmp/research/` (transitorio, se borra con `--clean`). Nunca escribe en `src/` ni
+fuera de la raíz del repo. Para conservar algo de forma duradera, se usa un
+servicio online y se registra en `respaldos[]`, no un archivo local.
+
+| Motor | Instalación (fuera del repo) | Uso |
+| --- | --- | --- |
+| `selector` (default) | ninguna — API `web.scraper.workers.dev` | `--selector 'article p' [--attr title]`: texto de nodos CSS. Sin JS |
+| `crawl4ai` | `pip install -U crawl4ai && crawl4ai-setup` | `crwl <URL> -o markdown`: markdown limpio con navegador propio; útil en páginas JS |
+| `scrapling` | `pip install "scrapling[shell,fetchers]" && scrapling install` | `scrapling extract get <URL> <archivo> [--css-selector ...]`; con `--stealth` usa `fetch --solve-cloudflare` |
+| `flaresolverr` | servicio Docker en `http://localhost:8191` | `POST /v1 {"cmd":"request.get","url":...}`: resuelve challenges de Cloudflare. `--endpoint` cambia la URL |
+| `scoop` | `npm install -g @harvard-lil/scoop` (Node 22+) | Captura WARC/WACZ de una sola página. **Solo UNIX/WSL**; en Windows el script da el comando WSL y sugiere Browsertrix |
+
+- `--dry-run` muestra el comando/request exacto sin ejecutar; `--self-test` valida motores y fronteras sin red. Si falta el binario, imprime cómo instalarlo y no finge éxito.
+- `--clean` borra `tmp/research/` (solo esa carpeta). Los WACZ con cookies/tokens quedan en `tmp/` y **nunca se commitean**; revisar su contenido antes de compartirlos (regla de Browsertrix/Auto Archiver).
+- **urlwatch** (seguimiento de cambios, para IDs `S-YYYY-NNN`): `pip install --user urlwatch`; configuración y `urls.txt` dentro de `tmp/research/urlwatch/` (una URL por línea, ej. `https://www.camara.cl/legislacion/sala_sesiones/votaciones.aspx`): `urlwatch --urls tmp/research/urlwatch/urls.txt --config tmp/research/urlwatch/config.yaml`. Exportar el diff con `urlwatch --text > tmp/research/cambio.txt`; nada en `src/`.
 
 ## Defuddle CLI local (alternativa al espejo web)
 
@@ -482,14 +534,17 @@ automaticamente `titulo`, `autor` y `fecha` de la URL y genera el frontmatter li
 en `src/content/sources/<id>.md`, junto con el ID `medio-YYYY-MM-DD-slug` y el wikilink `[[sources/id]]`.
 
 - Fetch del HTML directo; si falla o no hay titulo, relega a `r.jina.ai`.
+- Revisar siempre `medio` y `titulo` del bloque generado: las meta etiquetas `twitter:` de una nota pueden hacer que el script infiera `X (Twitter)` y un título truncado en un artículo de prensa (caso BioBioChile oct-2026); corregir el frente antes de citarlo.
 - El mapeo dominio → medio se precarga desde `src/content/sources/*.md` + un diccionario base en el script.
 - Consulta el catálogo de sitemaps antes del fetch (ver "Catálogo de sitemaps → Integración
   con add-source.mjs").
 - **Toda fuente nueva nace con snapshot**: `add-source` reutiliza `archiveOne()` de
   `archive-sources.mjs` ( disponibilidad de Wayback → Save Page Now ) e incluye la entrada en
-  `respaldos[]` del bloque generado y del `.md` creado con `--append`. Si Wayback falla, avisa
-  pero la fuente se crea igual; se completa con `pnpm run archive-sources -- --apply --since <fecha>`.
-  `--no-archive` omite el snapshot (casos excepcionales). No reemplaza nunca la URL original.
+  `respaldos[]` del bloque generado y del `.md` creado con `--append`. Aplica el mismo filtro
+  de plataformas omitidas que `archive-sources`; si Wayback falla o se omite, avisa pero la
+  fuente se crea igual; se completa con `pnpm run archive-sources -- --apply --since <fecha>`.
+  `--no-archive` omite el snapshot (casos excepcionales) y `--force-save` fuerza el intento en
+  X/Instagram/YouTube. No reemplaza nunca la URL original.
 - Flags: `--append` (crea `src/content/sources/<id>.md` directo), `--mirror` (fuerza
   espejo), `--catalog-only` (sin fetch, solo datos del catálogo), `--search <texto>` (busca en
   el catálogo y deja elegir; con `--medio <slug>` y `--fecha YYYY-MM-DD` filtra), `--no-archive`.

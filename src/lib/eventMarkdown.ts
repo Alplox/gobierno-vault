@@ -32,6 +32,15 @@ export function buildReferencesMarkdown(refs: SourceData[]): string {
   return refLines ? `**Referencias:**\n${refLines}` : '';
 }
 
+// Mismo bloque para /sueldos y /presupuesto, cuyas fuentes viven en YAML y no
+// tienen `tipo`/`autor`: así el botón "copiar referencias" entrega idéntico
+// formato en las tres páginas.
+export function buildReferencesMarkdownFrom(
+  refs: Array<Pick<SourceData, 'titulo' | 'url' | 'medio' | 'autor'>>,
+): string {
+  return buildReferencesMarkdown(refs.map((r) => ({ ...r, tipo: '', fecha: new Date(0) })));
+}
+
 export function buildEventMarkdown({ titulo, eventUrl, refs, bodyMd }: EventMarkdownInput): string {
   return [
     `# ${titulo}`,
