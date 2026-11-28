@@ -537,7 +537,14 @@ function buildBlock(id, fields) {
     autor: fields.autor, fecha: fields.fecha, url: fields.url,
     ...(fields.notas ? { notas: fields.notas } : {}),
     ...(fields.respaldos?.length ? { respaldos: fields.respaldos } : {}),
-  }).trim();
+  }).trim()
+    // `respaldos[].fecha` es z.string() en content.config.ts: YAML.stringify
+    // la emite sin comillas, se parsea como Date y astro build falla con
+    // InvalidContentEntryDataError. Mismo fix que archive-sources.mjs.
+    // El `\s+` (no `*`) excluye la `fecha:` de primer nivel (z.coerce.date()).
+    .split('\n')
+    .map((l) => l.replace(/^(\s+fecha:\s*)(\d{4}-\d{2}-\d{2})(\s*)$/, '$1"$2"$3'))
+    .join('\n');
   return `---\n${fm}\n---`;
 }
 

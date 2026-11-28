@@ -56,6 +56,9 @@ export function initPersonList() {
   const activeEl = document.getElementById('people-active');
   const countEl = document.getElementById('people-count');
   const clearEl = document.getElementById('people-clear');
+  const emptyEl = document.getElementById('people-empty');
+  const emptyMsgEl = document.getElementById('people-empty-msg');
+  const emptyClearEl = document.getElementById('people-empty-clear');
   if (!script || !container) return;
 
   let data = [];
@@ -151,6 +154,17 @@ export function initPersonList() {
     }
     if (clearEl) clearEl.hidden = !hasFilter && sort === 'nombre';
 
+    // Sin este estado, unos filtros sin coincidencias dejaban solo el contador
+    // en cero y una grilla vacia, sin explicar que paso ni como salir.
+    if (emptyEl) {
+      emptyEl.classList.toggle('hidden', visible !== 0);
+      if (emptyMsgEl) {
+        emptyMsgEl.textContent = hasFilter
+          ? 'No se encontraron personas con los filtros actuales.'
+          : 'No hay personas registradas en el índice.';
+      }
+    }
+
     const params = new URLSearchParams(location.search);
     for (const [key, value] of [
       ['q', qEl?.value || ''],
@@ -193,16 +207,17 @@ export function initPersonList() {
     el.addEventListener('change', onChange);
     cleanupFns.push(() => el.removeEventListener('change', onChange));
   }
-  if (clearEl) {
-    const onClear = () => {
-      if (qEl) qEl.value = '';
-      if (orgEl) orgEl.value = '';
-      if (sortEl) sortEl.value = 'nombre';
-      if (activeEl) activeEl.checked = false;
-      applyState();
-    };
-    clearEl.addEventListener('click', onClear);
-    cleanupFns.push(() => clearEl.removeEventListener('click', onClear));
+  function clearFilters() {
+    if (qEl) qEl.value = '';
+    if (orgEl) orgEl.value = '';
+    if (sortEl) sortEl.value = 'nombre';
+    if (activeEl) activeEl.checked = false;
+    applyState();
+  }
+  for (const btn of [clearEl, emptyClearEl]) {
+    if (!btn) continue;
+    btn.addEventListener('click', clearFilters);
+    cleanupFns.push(() => btn.removeEventListener('click', clearFilters));
   }
 
   if (sentinel && typeof IntersectionObserver !== 'undefined') {

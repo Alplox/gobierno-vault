@@ -2109,7 +2109,7 @@
 - [2026/11/20261113-1 - El día después del acuerdo: Tohá critica el costo, Pérez defiende el trato y la entrevista deriva en cruce por el desembolso fiscal](src/content/events/2026/11/20261113-1.md) — 6 fuentes
 - [2026/11/20261113-2 - Doce ONG y una ofensiva parlamentaria contra las alertas de Meta a la PDI: piden el convenio, la cifra de detenciones y control judicial previo](src/content/events/2026/11/20261113-2.md) — 6 fuentes
 - [2026/11/20261114-1 - Reportea identifica 22 rebajas de condena a agentes de la dictadura sin orden judicial: 19 de Larraín y tres de Rabat](src/content/events/2026/11/20261114-1.md) — 6 fuentes
-- [2026/11/20261115-1 - Criteria: aprobación de Kast cae al 18% por primera vez y 79% rechaza que Rabat siga en Justicia](src/content/events/2026/11/20261115-1.md) — 11 fuentes
+- [2026/11/20261115-1 - Criteria: aprobación de Kast cae al 18% por primera vez y 79% rechaza que Rabat siga en Justicia](src/content/events/2026/11/20261115-1.md) — 14 fuentes
 - [2026/11/20261115-2 - Cadem: aprobación de Kast baja al 27% y 79% respalda el paro de camioneros](src/content/events/2026/11/20261115-2.md) — 6 fuentes
 - [2026/11/20261116-1 - Alvarado interviene en la crisis del Ministerio de Ciencia y cita a Lincolao tras el nuevo round por despidos](src/content/events/2026/11/20261116-1.md) — 12 fuentes
 - [2026/11/20261116-2 - Arenas en Tolerancia Cero: 'el octubrismo fracasó, pero no desapareció', defiende el acuerdo con camioneros y niega conocer la ley antibarricadas 2.0](src/content/events/2026/11/20261116-2.md) — 15 fuentes
@@ -2125,7 +2125,7 @@
 - [2026/11/20261117-2 - Araya e Ibáñez piden a Contraloría revisar el acuerdo con OpenAI, Yeomans oficia a la Cámara y MinCiencia se niega a publicar el texto](src/content/events/2026/11/20261117-2.md) — 67 fuentes
 - [2026/11/20261117-3 - Congreso despacha a ley la postergación de la Ley 21.719 de Datos Personales hasta el 15 de octubre de 2027](src/content/events/2026/11/20261117-3.md) — 8 fuentes
 - [2026/11/20261117-4 - Arenas pide disculpas al PDG tras el 'cúmulo de deseos' y la bancada las rechaza en plena ofensiva por Rabat](src/content/events/2026/11/20261117-4.md) — 8 fuentes
-- [2026/11/20261117-5 - El Banco Central publica el IEF del segundo semestre: riesgos elevados por IA, deuda fiscal y ciberseguridad, y mantiene el colchón contracíclico en 1%](src/content/events/2026/11/20261117-5.md) — 7 fuentes
+- [2026/11/20261117-5 - El Banco Central publica el IEF del segundo semestre: riesgos elevados por IA, deuda fiscal y ciberseguridad, y mantiene el colchón contracíclico en 1%](src/content/events/2026/11/20261117-5.md) — 9 fuentes
 - [2026/11/20261117-6 - SpaceXAI registró nueve audiencias de lobby con organismos del Estado para ofrecer IA, sin acuerdos y sin respuesta de la empresa](src/content/events/2026/11/20261117-6.md) — 7 fuentes
 - [2026/11/20261117-7 - Contraloría detecta 315 funcionarios con condenas vigentes que siguen en sus cargos y ordena activar la inhabilidad sobreviniente](src/content/events/2026/11/20261117-7.md) — 8 fuentes
 - [2026/11/20261117-8 - La comisión investigadora aprueba por 6-4 un informe que reprocha a Steinert y remite antecedentes al Ministerio Público](src/content/events/2026/11/20261117-8.md) — 10 fuentes
@@ -2159,8 +2159,10 @@
 - [2026/11/20261125-2 - Reportea denuncia que Justicia declaró reservados los decretos de rebaja y entregó versiones anonimizadas al Congreso](src/content/events/2026/11/20261125-2.md) — 6 fuentes
 - [2026/11/20261125-3 - La comisión revisora envía a Kast 20 preguntas sobre las rebajas, las víctimas y su respaldo a Rabat](src/content/events/2026/11/20261125-3.md) — 6 fuentes
 - [2026/11/20261126-1 - Hotuiti Teao pone en duda su respaldo a la AC contra Rabat y anticipa que por ahora se abstiene](src/content/events/2026/11/20261126-1.md) — 12 fuentes
+- [2026/11/20261126-2 - El PNL mantiene abierta la acusación constitucional contra Chomali y acuerda reunirse con la ministra por la hormonización de menores](src/content/events/2026/11/20261126-2.md) — 12 fuentes
 - [2026/11/20261127-1 - INE: desocupación sube a 10,0% en agosto-octubre y Chile registra dos dígitos por primera vez desde 2021](src/content/events/2026/11/20261127-1.md) — 82 fuentes
 - [2026/11/20261127-2 - Hacienda emite el Oficio Circular N° 26 sobre no renovación de contratas y la CUT exige rectificarlo en pleno reajuste del sector público](src/content/events/2026/11/20261127-2.md) — 9 fuentes
+- [2026/11/20261127-3 - La comisión revisora aprueba por 3-2 un informe favorable a la AC contra Rabat](src/content/events/2026/11/20261127-3.md) — 14 fuentes
 
 ## 2025
 
