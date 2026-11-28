@@ -2159,7 +2159,7 @@
 - [2026/11/20261125-2 - Reportea denuncia que Justicia declaró reservados los decretos de rebaja y entregó versiones anonimizadas al Congreso](src/content/events/2026/11/20261125-2.md) — 6 fuentes
 - [2026/11/20261125-3 - La comisión revisora envía a Kast 20 preguntas sobre las rebajas, las víctimas y su respaldo a Rabat](src/content/events/2026/11/20261125-3.md) — 6 fuentes
 - [2026/11/20261126-1 - Hotuiti Teao pone en duda su respaldo a la AC contra Rabat y anticipa que por ahora se abstiene](src/content/events/2026/11/20261126-1.md) — 12 fuentes
-- [2026/11/20261127-1 - INE: desocupación sube a 10,0% en agosto-octubre y Chile registra dos dígitos por primera vez desde 2021](src/content/events/2026/11/20261127-1.md) — 41 fuentes
+- [2026/11/20261127-1 - INE: desocupación sube a 10,0% en agosto-octubre y Chile registra dos dígitos por primera vez desde 2021](src/content/events/2026/11/20261127-1.md) — 82 fuentes
 - [2026/11/20261127-2 - Hacienda emite el Oficio Circular N° 26 sobre no renovación de contratas y la CUT exige rectificarlo en pleno reajuste del sector público](src/content/events/2026/11/20261127-2.md) — 9 fuentes
 
 ## 2025

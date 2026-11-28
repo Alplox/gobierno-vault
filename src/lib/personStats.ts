@@ -249,6 +249,44 @@ export async function getPersonEventCounts(): Promise<Map<string, number>> {
   return out;
 }
 
+export type PersonIndexStat = {
+  /** Eventos en que aparece la persona. */
+  n: number;
+  /** Fecha del evento mas reciente (America/Santiago, YYYY-MM-DD). */
+  last: string | null;
+};
+
+/**
+ * Datos livianos para el indice `/people`: no calcula el panorama completo
+ * (que incluye citas, temas, co-apariciones...) sino solo lo que necesitan
+ * las tarjetas, los filtros y las estadisticas de la pagina.
+ */
+export async function getPersonIndexStats(): Promise<Map<string, PersonIndexStat>> {
+  await primePersonIndex();
+  ensure();
+  const out = new Map<string, PersonIndexStat>();
+  for (const [pid, events] of _byPerson!) {
+    out.set(pid, {
+      n: events.length,
+      last: events.length ? ymd(events[0].data.fecha) : null,
+    });
+  }
+  return out;
+}
+
+/** Menciones por ano en todo el indice (suma de eventos por persona). */
+export async function getPersonMentionsByYear(): Promise<{ year: number; n: number }[]> {
+  await primePersonIndex();
+  ensure();
+  const counts = new Map<number, number>();
+  for (const events of _byPerson!.values()) {
+    for (const event of events) bump(counts, eventYearFromDate(event.data.fecha));
+  }
+  return [...counts.entries()]
+    .sort((a, b) => a[0] - b[0])
+    .map(([year, n]) => ({ year, n }));
+}
+
 /** Eventos agrupados por ano (descendente) para el listado filtrable. */
 export function groupEventsByYear(events: EventEntry[]): { year: number; events: EventEntry[] }[] {
   const map = new Map<number, EventEntry[]>();

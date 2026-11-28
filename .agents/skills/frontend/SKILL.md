@@ -32,6 +32,16 @@ description: Frontend Astro con View Transitions, TimelineNav/rail, grafo de rel
 
 `#back-to-top` vive en `Base.astro`: aparece sobre 480 px de scroll, usa scroll suave salvo `prefers-reduced-motion` y evita el FAB temporal mediante un offset inferior calculado al hacer scroll/resize. Reengancha estado y listeners en `astro:page-load`, limpiando la instancia anterior. El offset ya no es solo para el FAB: toma la altura máxima de los `[data-gv-bottom-nav]` visibles (barra inferior del TOC móvil, y cualquier navbar futura que se marque con ese atributo) y añade `env(safe-area-inset-bottom)`. Si el `<details>` del TOC está abierto, el botón se oculta para no tapar el panel; el recálculo se dispara con un listener `toggle` en **captura** (el evento no burbujea) que llama al `update` guardado en `backToTopUpdate`.
 
+## Índice `/people`
+
+Mismo patrón que `/organizations`, con datos derivados en build: `getPersonIndexStats()` y `getPersonMentionsByYear()` en `src/lib/personStats.ts` leen el índice invertido (no calculan panoramas completos) y alimentan los KPIs, la barra de años y el top de mencionadas. **`getAllPeople()` está ordenado por nombre**, así que el orden por defecto es A–Z sin costo. La barra de años va en **escala logarítmica etiquetada**: 2026 concentra ~9.000 menciones frente a decenas en el resto, y con escala lineal todas las demás barras quedaban planas.
+
+- SSR emite 40 tarjetas; el resto viaja en `#people-index-data`. Sentinel `#people-sentinel` hermano **después** del grid, `IntersectionObserver` `rootMargin: 800px`, batches de 40; sin IO vuelca todo. El sentinel se oculta con `hidden` **y** `style.display` (la clase `block` puede vencer a `[hidden]`).
+- Filtros en `personListClient.js`: `q` (normalizado NFD, sobre `data-search` = nombre + cargo + organismo + aliases), `org` (por ID), `solo` (`data-n > 0`) y orden (`nombre`/`n`/`last`). Se combinan en AND; cualquier filtro u orden distinto de `nombre` fuerza el volcado completo antes de contar. `data-order` conserva el orden original para restaurar A–Z.
+- `sortCards()` reordena **todas** las tarjetas del grid (incluidas las ocultas) solo cuando `needsSort` — lo marca cada `fill()`, y también el cambio de `lastSort`: si el dataset ya estaba completo, `fill()` retorna temprano y sin esa marca el nuevo orden nunca se aplica. Reordenar en cada pulsación con ~3.000 nodos es innecesario.
+- Estado en URL (`?q=&org=&sort=&con=1`, `replaceState`) y contador `visible de total`. El guard `script.__gvLoaded` va **antes** de `cleanup()` (page-load dispara también en la carga inicial); init directo + `astro:page-load`.
+- La tarjeta del cliente debe emitir los **mismos** `data-*` que el SSR (`id`, `org`, `n`, `last`, `order`, `search`); si divergen, el filtro por organización o el orden por fecha fallan en silencio.
+
 ## Ficha de persona (`/people/[id]`)
 
 Todo el panorama se deriva en build de `src/lib/personStats.ts` (índice invertido persona → eventos). **`primePersonIndex()` debe llamarse en `getStaticPaths()`**: sin él, `getAllEvents()` no está cacheado y el índice se construye vacío. Con ~2.500 fichas × 1.543 eventos, filtrar la lista completa por persona en cada página es inviable; el índice lo baja a O(1) por ficha.
